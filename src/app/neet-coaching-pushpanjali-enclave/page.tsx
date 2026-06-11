@@ -4,14 +4,14 @@ import { PushpanjaliEnclavePageContent } from './PushpanjaliEnclavePageContent'
 export const metadata: Metadata = {
   title: 'NEET Coaching Pushpanjali Enclave | Biology Classes Pitampura',
   description:
-    'Best NEET coaching for Pushpanjali Enclave students in Pitampura. 8-10 min from Rohini DC Chauk center. AIIMS faculty, 98% success rate. WhatsApp 88264-44334',
+    'Best NEET coaching for Pushpanjali Enclave students in Pitampura. 8-10 min from Rohini DC Chowk center. AIIMS faculty, 98% success rate. WhatsApp 88264-44334',
   keywords: [
     'NEET coaching pushpanjali enclave',
     'biology tuition pushpanjali pitampura',
     'NEET coaching Pitampura',
     'biology classes Pushpanjali Enclave',
     'NEET preparation Pushpanjali Enclave',
-    'DC Chauk biology coaching',
+    'DC Chowk biology coaching',
     'Rohini NEET coaching',
     'Dr Shekhar C Singh',
     'AIIMS trained faculty',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Coaching Pushpanjali Enclave | Biology Classes Pitampura',
     description:
-      'Best NEET coaching for Pushpanjali Enclave students in Pitampura. 8-10 min from Rohini DC Chauk center. AIIMS faculty, 98% success rate. WhatsApp 88264-44334',
+      'Best NEET coaching for Pushpanjali Enclave students in Pitampura. 8-10 min from Rohini DC Chowk center. AIIMS faculty, 98% success rate. WhatsApp 88264-44334',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-pushpanjali-enclave',
     type: 'website',
     siteName: 'Cerebrum Biology Academy',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NEET Coaching Pushpanjali Enclave | Biology Classes Pitampura',
     description:
-      'Best NEET coaching for Pushpanjali Enclave students. 8-10 min from DC Chauk Rohini. AIIMS faculty, 98% success rate.',
+      'Best NEET coaching for Pushpanjali Enclave students. 8-10 min from DC Chowk Rohini. AIIMS faculty, 98% success rate.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-pushpanjali-enclave',

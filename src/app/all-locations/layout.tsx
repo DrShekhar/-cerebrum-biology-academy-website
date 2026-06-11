@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Biology Classes Near You | Cerebrum Biology Academy Centers',
   description:
-    'Find Cerebrum Biology Academy coaching centers near you. 6 offline centers in Delhi NCR — South Extension, Rohini, Gurugram, Faridabad, Noida, Ghaziabad. Online classes for all India & NRI students.',
+    'Find Cerebrum Biology Academy coaching centers near you. 5 offline centres in Delhi NCR — South Extension, Rohini, Gurugram, Faridabad, Noida, Ghaziabad. Online classes for all India & NRI students.',
   keywords: [
     'biology classes near me',
     'NEET coaching centers Delhi NCR',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Biology Classes Near You | Cerebrum Biology Academy Centers',
     description:
-      'Find Cerebrum Biology Academy coaching centers near you. 6 offline centers in Delhi NCR.',
+      'Find Cerebrum Biology Academy coaching centers near you. 5 offline centres in Delhi NCR.',
     type: 'website',
     locale: 'en_IN',
   },

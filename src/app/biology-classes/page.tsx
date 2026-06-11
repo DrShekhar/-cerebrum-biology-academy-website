@@ -84,7 +84,7 @@ const centres = [
   {
     city: 'Rohini, New Delhi',
     tag: 'Sector 9',
-    address: '211 Vikas Surya Tower, DC Chauk, Rohini Sector 9, Delhi 110085',
+    address: '211 Vikas Surya Tower, DC Chowk, Rohini Sector 9, Delhi 110085',
     serves: 'Rohini Sectors 1 to 25, Pitampura, Shalimar Bagh, Paschim Vihar',
   },
 ]

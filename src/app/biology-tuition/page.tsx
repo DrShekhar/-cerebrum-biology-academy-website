@@ -207,7 +207,7 @@ const centers = [
   },
   {
     name: 'Rohini Center',
-    address: '211 Vikas Surya Tower, DC Chauk, Rohini, New Delhi',
+    address: '211 Vikas Surya Tower, DC Chowk, Rohini, New Delhi',
     areas: ['Rohini', 'Pitampura', 'Shalimar Bagh', 'Model Town', 'Ashok Vihar'],
   },
 ]
@@ -567,7 +567,7 @@ export default function BiologyTuitionPage() {
               },
               {
                 '@type': 'PostalAddress',
-                streetAddress: '211 Vikas Surya Tower, DC Chauk, Rohini',
+                streetAddress: '211 Vikas Surya Tower, DC Chowk, Rohini',
                 addressLocality: 'New Delhi',
                 addressRegion: 'Delhi',
                 postalCode: '110085',

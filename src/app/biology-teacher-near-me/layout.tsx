@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Biology Teacher Near Me | Delhi NCR & Online',
     description:
-      'Find expert biology teachers near you. 6 offline centers in Delhi NCR + online classes available.',
+      'Find expert biology teachers near you. 5 offline centres in Delhi NCR + online classes available.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/biology-teacher-near-me',

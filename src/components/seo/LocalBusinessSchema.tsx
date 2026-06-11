@@ -3,15 +3,15 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
 
 interface LocalBusinessSchemaProps {
-  locationId: 'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad' | 'noida'
+  locationId: 'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad'
 }
 
 // Detailed location data with geo coordinates
 const locationData = {
   rohini: {
     name: 'Cerebrum Biology Academy - Rohini',
-    address: '211 Vikas Surya Tower, DC Chauk Sector 9',
-    streetAddress: '211 Vikas Surya Tower, DC Chauk',
+    address: '211 Vikas Surya Tower, DC Chowk Sector 9',
+    streetAddress: '211 Vikas Surya Tower, DC Chowk',
     addressLocality: 'Rohini',
     addressRegion: 'Delhi',
     postalCode: '110085',
@@ -22,7 +22,7 @@ const locationData = {
     priceRange: '₹40,000 - ₹1,80,000',
     paymentMethods: ['Cash', 'UPI', 'Bank Transfer', 'EMI'],
     openingHours: { opens: '09:00', closes: '20:00' },
-    nearbyLandmarks: ['DC Chauk Metro Station', 'Rohini Sector 9', 'Vikas Surya Mall'],
+    nearbyLandmarks: ['DC Chowk Metro Station', 'Rohini Sector 9', 'Vikas Surya Mall'],
     studentCount: '850',
     googleBusinessUrl: CONTACT_INFO.centers.rohini.googleBusinessUrl,
     googleMapsUrl:
@@ -53,7 +53,7 @@ const locationData = {
         author: 'Priya Gupta',
         rating: 5,
         date: '2024-07-10',
-        body: 'Convenient location near DC Chauk metro. The classroom infrastructure is great and doubt sessions are very helpful.',
+        body: 'Convenient location near DC Chowk metro. The classroom infrastructure is great and doubt sessions are very helpful.',
       },
     ],
   },
@@ -258,47 +258,9 @@ const locationData = {
       },
     ],
   },
-  noida: {
-    name: 'Cerebrum Biology Academy - Noida',
-    address: 'B-45, Sector 62, Noida',
-    streetAddress: 'B-45, Sector 62',
-    addressLocality: 'Noida',
-    addressRegion: 'Uttar Pradesh',
-    postalCode: '201301',
-    geo: { lat: '28.6280', lng: '77.3649' },
-    phone: CONTACT_INFO.phone.primary,
-    url: 'https://cerebrumbiologyacademy.com/neet-coaching-noida',
-    image: 'https://cerebrumbiologyacademy.com/locations/noida-center.jpg',
-    priceRange: '₹40,000 - ₹1,80,000',
-    paymentMethods: ['Cash', 'UPI', 'Bank Transfer', 'EMI'],
-    openingHours: { opens: '09:00', closes: '20:00' },
-    nearbyLandmarks: ['Sector 62 Metro Station', 'Electronic City', 'Noida City Centre'],
-    studentCount: '480',
-    googleBusinessUrl: CONTACT_INFO.centers.noida.googleBusinessUrl,
-    googleMapsUrl:
-      'https://maps.google.com/?q=Cerebrum+Biology+Academy+Noida,+Uttar+Pradesh&ll=28.6280,77.3649&z=15',
-    areaServed: ['Noida', 'Sector 18', 'Sector 44', 'Sector 62', 'Greater Noida', 'Film City'],
-    reviews: [
-      {
-        author: 'Aarav Tiwari',
-        rating: 5,
-        date: '2024-09-20',
-        body: 'Best NEET biology coaching in Noida. Dr. Shekhar sir makes even the toughest chapters like Genetics and Molecular Biology easy to understand.',
-      },
-      {
-        author: 'Diya Saxena',
-        rating: 5,
-        date: '2024-08-25',
-        body: 'Joined Cerebrum Noida center after trying 2 other coaching institutes. The quality of teaching here is far superior. Scored 670 in NEET.',
-      },
-      {
-        author: 'Manish Kumar',
-        rating: 5,
-        date: '2024-07-12',
-        body: 'Great location near Sector 62 metro. The small batch size ensures every student gets personal attention. Highly recommend for NEET aspirants.',
-      },
-    ],
-  },
+  // 'noida' removed 2026-06: contactInfo.ts declares Noida online-only
+  // (isPhysicalCenter: false); emitting a street-address LocalBusiness for it
+  // was a fake-location signal (GBP suspension-grade risk).
 }
 
 export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
@@ -506,7 +468,7 @@ export function AllLocationsSchema() {
     '@id': `${baseUrl}#organization`,
     name: 'Cerebrum Biology Academy',
     description:
-      'Best NEET Biology Coaching in Delhi NCR with 6 offline centers and pan-India online classes. Expert AIIMS faculty, 98% success rate.',
+      'Best NEET Biology Coaching in Delhi NCR with 5 offline centres and pan-India online classes. Expert AIIMS faculty, 98% success rate.',
     url: baseUrl,
     logo: `${baseUrl}/logo.png`,
     telephone: CONTACT_INFO.phone.primary,

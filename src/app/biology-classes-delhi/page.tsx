@@ -68,9 +68,9 @@ const centers = [
   {
     id: 'rohini',
     name: 'Rohini Center',
-    address: '211 Vikas Surya Tower, DC Chauk, Sector 9, Rohini, Delhi 110085',
+    address: '211 Vikas Surya Tower, DC Chowk, Sector 9, Rohini, Delhi 110085',
     areas: ['Rohini', 'Pitampura', 'Shalimar Bagh', 'Model Town', 'Ashok Vihar', 'Prashant Vihar'],
-    metro: 'DC Chauk Metro Station (Red Line)',
+    metro: 'DC Chowk Metro Station (Red Line)',
     timings: 'Open 24/7',
     mapUrl: 'https://maps.google.com/?q=28.7143,77.1117',
     image: '/locations/rohini-center.jpg',
@@ -156,7 +156,7 @@ const faqs = [
   {
     question: 'Where are your biology coaching centers located in Delhi?',
     answer:
-      'We have 3 biology coaching centers in Delhi NCR: 1) Rohini - 211 Vikas Surya Tower, DC Chauk (near DC Chauk Metro), 2) South Delhi - D 35, South Extension Part 2 (near AIIMS Metro), 3) Gurugram - M2K Corporate Park, Sector 51. All centers are easily accessible by metro.',
+      'We have 3 biology coaching centers in Delhi NCR: 1) Rohini - 211 Vikas Surya Tower, DC Chowk (near DC Chowk Metro), 2) South Delhi - D 35, South Extension Part 2 (near AIIMS Metro), 3) Gurugram - M2K Corporate Park, Sector 51. All centers are easily accessible by metro.',
   },
   {
     question: 'What makes Cerebrum different from other biology coaching in Delhi?',
@@ -239,7 +239,7 @@ export default function BiologyClassesDelhiPage() {
     address: [
       {
         '@type': 'PostalAddress',
-        streetAddress: '211 Vikas Surya Tower, DC Chauk, Sector 9',
+        streetAddress: '211 Vikas Surya Tower, DC Chowk, Sector 9',
         addressLocality: 'Rohini',
         addressRegion: 'Delhi',
         postalCode: '110085',

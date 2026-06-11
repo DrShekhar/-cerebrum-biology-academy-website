@@ -39,7 +39,7 @@ const testimonials = [
     score: '678/720',
     college: 'AIIMS Delhi',
     quote:
-      "Living in Pushpanjali Enclave, I could reach DC Chauk center in just 8 minutes by metro or auto. Dr. Shekhar Sir's conceptual teaching helped me crack AIIMS in my first attempt.",
+      "Living in Pushpanjali Enclave, I could reach DC Chowk center in just 8 minutes by metro or auto. Dr. Shekhar Sir's conceptual teaching helped me crack AIIMS in my first attempt.",
     year: '2025',
   },
   {
@@ -119,17 +119,17 @@ const faqs = [
   {
     question: 'Where is the nearest NEET coaching center from Pushpanjali Enclave, Pitampura?',
     answer:
-      "Cerebrum Biology Academy's Rohini center at DC Chauk is just 8-10 minutes from Pushpanjali Enclave. Located at 211 Vikas Surya Tower, DC Chauk, Sector 9, Rohini, it is easily accessible from the Co-operative Housing Society area via auto-rickshaw, metro, or bike.",
+      "Cerebrum Biology Academy's Rohini center at DC Chowk is just 8-10 minutes from Pushpanjali Enclave. Located at 211 Vikas Surya Tower, DC Chowk, Sector 9, Rohini, it is easily accessible from the Co-operative Housing Society area via auto-rickshaw, metro, or bike.",
   },
   {
     question: 'Which is the best NEET coaching in Pushpanjali Enclave area?',
     answer:
-      'Cerebrum Biology Academy is the top choice for Pushpanjali Enclave students with 98% success rate, AIIMS-trained faculty led by Dr. Shekhar C Singh, and over 150+ students from Pitampura localities already enrolled. The DC Chauk Rohini center is the closest premium NEET coaching.',
+      'Cerebrum Biology Academy is the top choice for Pushpanjali Enclave students with 98% success rate, AIIMS-trained faculty led by Dr. Shekhar C Singh, and over 150+ students from Pitampura localities already enrolled. The DC Chowk Rohini center is the closest premium NEET coaching.',
   },
   {
     question: 'How far is Cerebrum Academy from Pushpanjali Enclave Co-operative Housing Society?',
     answer:
-      'The Pushpanjali Enclave Co-operative Housing Society is approximately 8 minutes away from our Rohini DC Chauk center. Students can easily commute by auto-rickshaw (Rs 30-40), metro (Rohini West station), or bike. The short distance means more time for studies!',
+      'The Pushpanjali Enclave Co-operative Housing Society is approximately 8 minutes away from our Rohini DC Chowk center. Students can easily commute by auto-rickshaw (Rs 30-40), metro (Rohini West station), or bike. The short distance means more time for studies!',
   },
   {
     question: 'What are the batch timings for Pushpanjali Enclave students at Rohini center?',
@@ -144,7 +144,7 @@ const faqs = [
   {
     question: 'Is online NEET coaching available for Pushpanjali Enclave students?',
     answer:
-      'Yes! We offer live interactive online classes for students who prefer studying from home. Online fees range from Rs 35,000 to Rs 60,000 per year. Many Pushpanjali Enclave students opt for hybrid mode - online regular classes with weekend offline sessions at DC Chauk.',
+      'Yes! We offer live interactive online classes for students who prefer studying from home. Online fees range from Rs 35,000 to Rs 60,000 per year. Many Pushpanjali Enclave students opt for hybrid mode - online regular classes with weekend offline sessions at DC Chowk.',
   },
 ]
 
@@ -155,7 +155,7 @@ const localBusinessSchema = {
   '@id': `${BASE_URL}/neet-coaching-pushpanjali-enclave#organization`,
   name: 'Cerebrum Biology Academy - Pushpanjali Enclave',
   description:
-    'Best NEET coaching for Pushpanjali Enclave, Pitampura students. 8-10 min from DC Chauk Rohini center. AIIMS faculty, 98% success rate.',
+    'Best NEET coaching for Pushpanjali Enclave, Pitampura students. 8-10 min from DC Chowk Rohini center. AIIMS faculty, 98% success rate.',
   url: `${BASE_URL}/neet-coaching-pushpanjali-enclave`,
   telephone: CONTACT_INFO.phone.primary,
   email: 'info@cerebrumbiologyacademy.com',
@@ -163,7 +163,7 @@ const localBusinessSchema = {
   priceRange: 'Rs Rs',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '211 Vikas Surya Tower, DC Chauk, Sector 9',
+    streetAddress: '211 Vikas Surya Tower, DC Chowk, Sector 9',
     addressLocality: 'Rohini',
     addressRegion: 'Delhi',
     postalCode: '110085',
@@ -210,7 +210,7 @@ const speakableSchema = {
   '@id': `${BASE_URL}/neet-coaching-pushpanjali-enclave`,
   name: 'NEET Coaching Pushpanjali Enclave | Biology Classes Pitampura | Cerebrum Academy',
   description:
-    'Best NEET coaching for Pushpanjali Enclave students in Pitampura. 8-10 min from Rohini DC Chauk center. AIIMS faculty, 98% success rate.',
+    'Best NEET coaching for Pushpanjali Enclave students in Pitampura. 8-10 min from Rohini DC Chowk center. AIIMS faculty, 98% success rate.',
   speakable: {
     '@type': 'SpeakableSpecification',
     cssSelector: ['.speakable-intro', '.speakable-location', '.speakable-cta'],
@@ -272,12 +272,12 @@ export function PushpanjaliEnclavePageContent() {
           </p>
           <p className="speakable-location">
             Pushpanjali Enclave is a well-known Co-operative Housing Society area in Pitampura. Our
-            Rohini DC Chauk center is just 8 to 10 minutes away, making it the most convenient NEET
+            Rohini DC Chowk center is just 8 to 10 minutes away, making it the most convenient NEET
             coaching option for students in this locality.
           </p>
           <p className="speakable-cta">
             To join the best NEET biology coaching near Pushpanjali Enclave, call 88264-44334 or
-            WhatsApp us. Book your free demo class today at our Rohini DC Chauk center.
+            WhatsApp us. Book your free demo class today at our Rohini DC Chowk center.
           </p>
         </div>
 
@@ -300,7 +300,7 @@ export function PushpanjaliEnclavePageContent() {
               <div className="mb-6 inline-flex items-center rounded-full bg-white/10 px-6 py-2 text-sm font-medium backdrop-blur-sm">
                 <MapPin className="mr-2 h-4 w-4 text-yellow-400" />
                 <Home className="mr-2 h-4 w-4 text-green-400" />
-                Co-operative Housing Society Area | 8-10 min from DC Chauk
+                Co-operative Housing Society Area | 8-10 min from DC Chowk
               </div>
 
               <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
@@ -310,7 +310,7 @@ export function PushpanjaliEnclavePageContent() {
 
               <p className="mb-8 text-xl text-slate-300 md:text-2xl">
                 Premium NEET coaching for the Co-operative Housing Society area. Just 8-10 minutes
-                from our Rohini DC Chauk center!
+                from our Rohini DC Chowk center!
               </p>
 
               {/* Trust Badges */}
@@ -410,7 +410,7 @@ export function PushpanjaliEnclavePageContent() {
                 </h2>
                 <p className="mx-auto max-w-2xl text-lg text-gray-600">
                   Pushpanjali Enclave is a well-established Co-operative Housing Society in
-                  Pitampura. Our Rohini DC Chauk center is conveniently located just 8-10 minutes
+                  Pitampura. Our Rohini DC Chowk center is conveniently located just 8-10 minutes
                   away, easily accessible via Rohini West Metro or auto.
                 </p>
               </div>
@@ -437,11 +437,11 @@ export function PushpanjaliEnclavePageContent() {
                   </div>
                   <div className="flex-1">
                     <h3 className="mb-2 text-2xl font-bold text-gray-900">
-                      Rohini DC Chauk Center
+                      Rohini DC Chowk Center
                     </h3>
                     <div className="mb-4 flex items-center gap-2 text-gray-600">
                       <MapPin className="h-5 w-5 text-green-600" />
-                      211 Vikas Surya Tower, DC Chauk, Sector 9, Rohini, Delhi 110085
+                      211 Vikas Surya Tower, DC Chowk, Sector 9, Rohini, Delhi 110085
                     </div>
                     <div className="mb-4 flex items-center gap-2 text-gray-600">
                       <Clock className="h-5 w-5 text-green-600" />
@@ -501,7 +501,7 @@ export function PushpanjaliEnclavePageContent() {
                 <div className="mb-2 text-2xl font-bold text-green-400">8-10 min</div>
                 <h3 className="mb-2 text-lg font-semibold">Close to Your Home</h3>
                 <p className="text-sm text-slate-400">
-                  DC Chauk Rohini center is the closest premium NEET coaching from Pushpanjali
+                  DC Chowk Rohini center is the closest premium NEET coaching from Pushpanjali
                   Enclave. No long commutes, more study time!
                 </p>
               </div>

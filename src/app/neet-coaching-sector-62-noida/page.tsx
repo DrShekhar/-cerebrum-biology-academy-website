@@ -327,7 +327,6 @@ export default function NEETCoachingSector62NoidaPage() {
       </section>
 
       {/* Schema Markup */}
-      <LocalBusinessSchema locationId="noida" />
       <FAQSchema questions={faqItems} pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-sector-62-noida" />
     </>
   )

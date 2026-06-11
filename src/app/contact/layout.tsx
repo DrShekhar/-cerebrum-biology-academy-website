@@ -35,7 +35,7 @@ const contactPageSchema = {
   email: 'info@cerebrumbiologyacademy.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'M-3, South Extension Part 2',
+    streetAddress: 'D 35, South Extension Part 2',
     addressLocality: 'New Delhi',
     addressRegion: 'Delhi',
     postalCode: '110049',
@@ -49,8 +49,8 @@ const contactPageSchema = {
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    opens: '00:00',
-    closes: '23:59',
+    opens: '09:00',
+    closes: '20:00',
   },
   contactPoint: {
     '@type': 'ContactPoint',

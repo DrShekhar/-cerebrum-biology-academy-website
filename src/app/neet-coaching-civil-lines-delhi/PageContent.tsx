@@ -170,7 +170,7 @@ export default function PageContent({ faqs }: PageContentProps) {
 
             <p className="hero-description text-lg md:text-xl opacity-80 mb-8 max-w-4xl mx-auto speakable-intro">
               Join Delhi's most trusted NEET Biology coaching. Civil Lines' ultra-premium families
-              trust us for academic excellence. Direct Yellow Line Metro to our Rohini DC Chauk
+              trust us for academic excellence. Direct Yellow Line Metro to our Rohini DC Chowk
               center - just 8 stops, 20 minutes! AIIMS faculty, 98% success rate, small batches of
               15-20 students.
             </p>
@@ -766,7 +766,7 @@ export default function PageContent({ faqs }: PageContentProps) {
                   placeholder={{
                     lat: 28.7041,
                     lng: 77.1025,
-                    address: '211 Vikas Surya Tower, DC Chauk, Rohini - Near Rohini West Metro',
+                    address: '211 Vikas Surya Tower, DC Chowk, Rohini - Near Rohini West Metro',
                   }}
                 />
               </div>
@@ -782,7 +782,7 @@ export default function PageContent({ faqs }: PageContentProps) {
                       <p className="text-gray-600 leading-relaxed">
                         Cerebrum Biology Academy
                         <br />
-                        211 Vikas Surya Tower, DC Chauk
+                        211 Vikas Surya Tower, DC Chowk
                         <br />
                         Sector 9, Rohini, Delhi - 110085
                       </p>
@@ -1028,7 +1028,7 @@ export default function PageContent({ faqs }: PageContentProps) {
             ],
             address: {
               '@type': 'PostalAddress',
-              streetAddress: '211 Vikas Surya Tower, DC Chauk, Sector 9, Rohini',
+              streetAddress: '211 Vikas Surya Tower, DC Chowk, Sector 9, Rohini',
               addressLocality: 'Delhi',
               addressRegion: 'Delhi',
               postalCode: '110085',

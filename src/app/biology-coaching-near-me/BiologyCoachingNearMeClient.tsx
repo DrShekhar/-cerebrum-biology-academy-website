@@ -36,7 +36,7 @@ const centers = [
   },
   {
     name: 'Rohini Center',
-    address: 'DC Chauk, Sector 9, Rohini',
+    address: 'DC Chowk, Sector 9, Rohini',
     areas: ['Rohini', 'Pitampura', 'Shalimar Bagh', 'Model Town', 'Ashok Vihar'],
     students: 380,
     rating: 4.8,

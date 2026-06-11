@@ -261,7 +261,7 @@ export function buildOnlineOfflineCityConfig(key: OnlineOfflineCityKey): BestVer
         question: `Does Cerebrum have an offline centre in ${city}?`,
         answer: p.hasCerebrumCentre
           ? `Yes — ${p.cerebrumCentreLine}. ${city} students can choose offline or online or hybrid (online weekday + offline weekend workshops).`
-          : `Not currently. Cerebrum's 6 offline centres are all in Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida). For ${city} students, online live is the recommended path — same AIIMS-trained faculty, same small-batch format, no relocation needed.`,
+          : `Not currently. Cerebrum's 5 offline centres are all in Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida). For ${city} students, online live is the recommended path — same AIIMS-trained faculty, same small-batch format, no relocation needed.`,
       },
       {
         question: 'What hardware / internet do I need for online coaching?',

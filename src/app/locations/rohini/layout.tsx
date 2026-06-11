@@ -12,7 +12,7 @@ function RohiniServiceSchema() {
     telephone: '+91-88264-44334',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '211 Vikas Surya Tower, DC Chauk, Sector 9',
+      streetAddress: '211 Vikas Surya Tower, DC Chowk, Sector 9',
       addressLocality: 'Rohini, Delhi',
       addressRegion: 'Delhi',
       postalCode: '110085',
@@ -29,8 +29,8 @@ function RohiniServiceSchema() {
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '00:00',
-        closes: '23:59',
+        opens: '09:00',
+        closes: '20:00',
       },
     ],
     areaServed: [
@@ -110,7 +110,7 @@ function RohiniEventSchema() {
           name: 'Cerebrum Biology Academy - Rohini',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: '211 Vikas Surya Tower, DC Chauk, Sector 9',
+            streetAddress: '211 Vikas Surya Tower, DC Chowk, Sector 9',
             addressLocality: 'Rohini, Delhi',
             addressRegion: 'Delhi',
             postalCode: '110085',
@@ -146,7 +146,7 @@ function RohiniEventSchema() {
           name: 'Cerebrum Biology Academy - Rohini',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: '211 Vikas Surya Tower, DC Chauk, Sector 9',
+            streetAddress: '211 Vikas Surya Tower, DC Chowk, Sector 9',
             addressLocality: 'Rohini, Delhi',
             addressRegion: 'Delhi',
             postalCode: '110085',
@@ -181,7 +181,7 @@ function RohiniEventSchema() {
           name: 'Cerebrum Biology Academy - Rohini',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: '211 Vikas Surya Tower, DC Chauk, Sector 9',
+            streetAddress: '211 Vikas Surya Tower, DC Chowk, Sector 9',
             addressLocality: 'Rohini, Delhi',
             addressRegion: 'Delhi',
             postalCode: '110085',

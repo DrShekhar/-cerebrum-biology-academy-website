@@ -69,12 +69,12 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: 'Which is the best NEET coaching in Civil Lines Delhi?',
-    answer: `Cerebrum Biology Academy is rated among the top NEET coaching institutes for Civil Lines Delhi students with ${CEREBRUM_METRICS.successRateText} success rate. Our Rohini DC Chauk center is easily accessible via Yellow Line Metro (Civil Lines to Rohini West, just 8 stops). We have AIIMS-trained faculty and a proven track record with students from Oberoi Apartments, Mittal Rishi Apartments, and other premium societies in Civil Lines.`,
+    answer: `Cerebrum Biology Academy is rated among the top NEET coaching institutes for Civil Lines Delhi students with ${CEREBRUM_METRICS.successRateText} success rate. Our Rohini DC Chowk center is easily accessible via Yellow Line Metro (Civil Lines to Rohini West, just 8 stops). We have AIIMS-trained faculty and a proven track record with students from Oberoi Apartments, Mittal Rishi Apartments, and other premium societies in Civil Lines.`,
   },
   {
     question: 'How do Civil Lines students reach Cerebrum Biology Academy?',
     answer:
-      'Civil Lines is excellently connected to our Rohini DC Chauk center via Yellow Line Metro. Take the metro from Civil Lines station to Rohini West (just 8 stops, 20 minutes), then a 2-minute walk to our center at 211 Vikas Surya Tower. The metro connectivity makes us the nearest premium NEET coaching for Civil Lines residents.',
+      'Civil Lines is excellently connected to our Rohini DC Chowk center via Yellow Line Metro. Take the metro from Civil Lines station to Rohini West (just 8 stops, 20 minutes), then a 2-minute walk to our center at 211 Vikas Surya Tower. The metro connectivity makes us the nearest premium NEET coaching for Civil Lines residents.',
   },
   {
     question: 'What is the fee for NEET coaching for Civil Lines students?',
@@ -179,7 +179,7 @@ const eventSchema = {
       name: 'Cerebrum Biology Academy - Rohini Center',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '211 Vikas Surya Tower, DC Chauk, Sector 9, Rohini',
+        streetAddress: '211 Vikas Surya Tower, DC Chowk, Sector 9, Rohini',
         addressLocality: 'Delhi',
         addressRegion: 'Delhi',
         postalCode: '110085',
@@ -279,7 +279,7 @@ const localBusinessSchema = {
   email: CEREBRUM_METRICS.email,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '211 Vikas Surya Tower, DC Chauk, Sector 9, Rohini',
+    streetAddress: '211 Vikas Surya Tower, DC Chowk, Sector 9, Rohini',
     addressLocality: 'Delhi',
     addressRegion: 'Delhi',
     postalCode: '110085',

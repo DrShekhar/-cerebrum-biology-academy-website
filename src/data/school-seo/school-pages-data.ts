@@ -436,7 +436,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     distance: '1-2 km',
     metaTitle: 'NEET Coaching for Bal Bharati Rohini Students | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Bal Bharati Rohini students. DC Chauk center just 5 mins away. After-school batches, AIIMS faculty. Join 70+ BBP students.',
+      'Best NEET coaching for Bal Bharati Rohini students. DC Chowk center just 5 mins away. After-school batches, AIIMS faculty. Join 70+ BBP students.',
     heroTitle: 'NEET Coaching for Bal Bharati Rohini Students',
     heroSubtitle:
       'Our Rohini center is the closest coaching for Bal Bharati students. Walk from school to coaching in just 5 minutes!',
@@ -449,7 +449,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     whyStudentsChoose: [
       {
         title: 'Extremely Close',
-        description: 'Our DC Chauk center is just 5 minutes walk from Bal Bharati.',
+        description: 'Our DC Chowk center is just 5 minutes walk from Bal Bharati.',
       },
       {
         title: 'BBP-Friendly Timing',
@@ -477,7 +477,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'How close is Cerebrum to Bal Bharati Rohini?',
         answer:
-          'Our Rohini center at DC Chauk is just 1-2 km from Bal Bharati Sector 14 campus. Students can walk in 5-7 minutes.',
+          'Our Rohini center at DC Chowk is just 1-2 km from Bal Bharati Sector 14 campus. Students can walk in 5-7 minutes.',
       },
       {
         question: 'What is the earliest batch for BBP students?',
@@ -497,7 +497,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     centerDetails: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       timing: 'Open 24/7',
       phone: '+91-88264-44334',
     },
@@ -511,10 +511,10 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     distance: '3-4 km',
     metaTitle: 'NEET Coaching for DPS Rohini Students | Cerebrum Biology Academy',
     metaDescription:
-      'Expert NEET coaching for DPS Rohini students. DC Chauk center, after-school batches. 55+ DPS Rohini students enrolled. Book free demo!',
+      'Expert NEET coaching for DPS Rohini students. DC Chowk center, after-school batches. 55+ DPS Rohini students enrolled. Book free demo!',
     heroTitle: 'NEET Coaching for DPS Rohini Students',
     heroSubtitle:
-      'Join 55+ DPS Rohini students preparing for NEET at our DC Chauk center. Designed around DPS schedule with convenient timing.',
+      'Join 55+ DPS Rohini students preparing for NEET at our DC Chowk center. Designed around DPS schedule with convenient timing.',
     schoolHighlights: [
       '55+ DPS Rohini students enrolled',
       '20+ alumni in AIIMS and top medical colleges',
@@ -524,7 +524,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     whyStudentsChoose: [
       {
         title: 'Rohini Location',
-        description: 'DC Chauk center is easily accessible from DPS Sector 24 campus.',
+        description: 'DC Chowk center is easily accessible from DPS Sector 24 campus.',
       },
       {
         title: 'DPS Network',
@@ -552,7 +552,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'Which center should DPS Rohini students choose?',
         answer:
-          'Our Rohini DC Chauk center is the most convenient, about 3-4 km from DPS Sector 24. The journey takes about 10-15 minutes.',
+          'Our Rohini DC Chowk center is the most convenient, about 3-4 km from DPS Sector 24. The journey takes about 10-15 minutes.',
       },
       {
         question: 'Do you have online options for DPS Rohini students?',
@@ -567,7 +567,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     centerDetails: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       timing: 'Open 24/7',
       phone: '+91-88264-44334',
     },
@@ -581,7 +581,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     distance: '2-3 km',
     metaTitle: 'NEET Coaching for Venkateshwar Rohini Students | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Venkateshwar International School Rohini students. DC Chauk center nearby. After-school batches available.',
+      'Best NEET coaching for Venkateshwar International School Rohini students. DC Chowk center nearby. After-school batches available.',
     heroTitle: 'NEET Coaching for Venkateshwar Rohini Students',
     heroSubtitle:
       'Our Rohini center is the perfect choice for Venkateshwar students. Close proximity and flexible timing options.',
@@ -594,7 +594,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     whyStudentsChoose: [
       {
         title: 'Close Location',
-        description: 'DC Chauk center is just 10 minutes from Venkateshwar campus.',
+        description: 'DC Chowk center is just 10 minutes from Venkateshwar campus.',
       },
       {
         title: 'Flexible Options',
@@ -621,7 +621,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'How far is Cerebrum from Venkateshwar Rohini?',
         answer:
-          'Our DC Chauk center is approximately 2-3 km from Venkateshwar International School Sector 18. Most students reach in 10 minutes.',
+          'Our DC Chowk center is approximately 2-3 km from Venkateshwar International School Sector 18. Most students reach in 10 minutes.',
       },
       {
         question: 'What batch options are available for VIS students?',
@@ -636,7 +636,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     centerDetails: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       timing: 'Open 24/7',
       phone: '+91-88264-44334',
     },
@@ -789,10 +789,10 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     distance: '1-2 km',
     metaTitle: 'NEET Coaching for Heritage School Rohini Students | Biology Classes',
     metaDescription:
-      'Best NEET coaching for Heritage School Rohini students. DC Chauk center very close to campus. 1:17 teacher-student ratio, experiential learning approach. After-school batches, free NEET tools.',
+      'Best NEET coaching for Heritage School Rohini students. DC Chowk center very close to campus. 1:17 teacher-student ratio, experiential learning approach. After-school batches, free NEET tools.',
     heroTitle: 'NEET Coaching for Heritage School Rohini Students',
     heroSubtitle:
-      'Our Rohini DC Chauk center is very close to Heritage School campus. Join 35+ Heritage School students preparing for NEET with personalized 1:17 teacher-student ratio.',
+      'Our Rohini DC Chowk center is very close to Heritage School campus. Join 35+ Heritage School students preparing for NEET with personalized 1:17 teacher-student ratio.',
     schoolHighlights: [
       '35+ Heritage School Rohini students enrolled',
       'Very close to Heritage School Sector 23 campus',
@@ -804,7 +804,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         title: 'Very Close to Campus',
         description:
-          'Our DC Chauk center is just 1-2 km from Heritage School - walk or reach in under 5 minutes by car.',
+          'Our DC Chowk center is just 1-2 km from Heritage School - walk or reach in under 5 minutes by car.',
       },
       {
         title: '1:17 Teacher-Student Ratio',
@@ -842,7 +842,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'How close is Cerebrum to Heritage School Rohini?',
         answer:
-          'Our Rohini center at DC Chauk is just 1-2 km from Heritage School Sector 23 campus. Students can walk in 5-7 minutes or reach by car in under 5 minutes. We are one of the closest NEET coaching centers to Heritage School.',
+          'Our Rohini center at DC Chowk is just 1-2 km from Heritage School Sector 23 campus. Students can walk in 5-7 minutes or reach by car in under 5 minutes. We are one of the closest NEET coaching centers to Heritage School.',
       },
       {
         question: 'What is the teacher-student ratio at Cerebrum?',
@@ -873,7 +873,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     centerDetails: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       timing: 'Open 24/7',
       phone: '+91-88264-44334',
     },
@@ -887,10 +887,10 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     distance: '2-3 km',
     metaTitle: 'NEET Coaching for GD Goenka Rohini Students | Biology Classes',
     metaDescription:
-      'Best NEET coaching for GD Goenka Public School Rohini (Sector 22) students. DC Chauk center just 10 mins away. Ranked #1 Most Elite School North Zone 2023. After-school batches, AIIMS faculty.',
+      'Best NEET coaching for GD Goenka Public School Rohini (Sector 22) students. DC Chowk center just 10 mins away. Ranked #1 Most Elite School North Zone 2023. After-school batches, AIIMS faculty.',
     heroTitle: 'NEET Coaching for GD Goenka Rohini Students',
     heroSubtitle:
-      'Our Rohini DC Chauk center is the perfect choice for GD Goenka Public School students. Join 45+ GD Goenka students preparing for NEET with AIIMS-quality teaching.',
+      'Our Rohini DC Chowk center is the perfect choice for GD Goenka Public School students. Join 45+ GD Goenka students preparing for NEET with AIIMS-quality teaching.',
     schoolHighlights: [
       '45+ GD Goenka Rohini students enrolled',
       '#1 Most Elite School North Zone 2023 students trust us',
@@ -902,7 +902,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         title: 'Very Close Location',
         description:
-          'Our DC Chauk center is just 10 minutes from GD Goenka Sector 22 campus - one of the closest NEET coaching options.',
+          'Our DC Chowk center is just 10 minutes from GD Goenka Sector 22 campus - one of the closest NEET coaching options.',
       },
       {
         title: 'Elite School Standards',
@@ -940,7 +940,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'How close is Cerebrum to GD Goenka Public School Rohini?',
         answer:
-          'Our Rohini center at DC Chauk is just 2-3 km from GD Goenka Public School Sector 22 campus. Students typically reach in 10 minutes by car or auto.',
+          'Our Rohini center at DC Chowk is just 2-3 km from GD Goenka Public School Sector 22 campus. Students typically reach in 10 minutes by car or auto.',
       },
       {
         question: 'What batch timings suit GD Goenka students best?',
@@ -970,7 +970,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     centerDetails: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       timing: 'Open 24/7',
       phone: '+91-88264-44334',
     },

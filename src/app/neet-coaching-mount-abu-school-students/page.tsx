@@ -30,10 +30,10 @@ const pageData = {
   distance: '2-3 km',
   metaTitle: 'NEET Coaching for Mount Abu School Students | Biology Classes Rohini',
   metaDescription:
-    'Best NEET coaching for Mount Abu School Rohini Sector 16 students. DC Chauk center just 10 mins away. After-school batches, AIIMS faculty. IB program support. Ranked #2 North Delhi school.',
+    'Best NEET coaching for Mount Abu School Rohini Sector 16 students. DC Chowk center just 10 mins away. After-school batches, AIIMS faculty. IB program support. Ranked #2 North Delhi school.',
   heroTitle: 'NEET Coaching for Mount Abu School Students',
   heroSubtitle:
-    'Join 45+ Mount Abu School students preparing for NEET at our Rohini DC Chauk center. Special support for IB program students transitioning to NEET.',
+    'Join 45+ Mount Abu School students preparing for NEET at our Rohini DC Chowk center. Special support for IB program students transitioning to NEET.',
   schoolHighlights: [
     '45+ Mount Abu School students enrolled',
     'Just 10 minutes from Sector 16 campus',
@@ -46,7 +46,7 @@ const pageData = {
     {
       title: 'Very Close Location',
       description:
-        'Our DC Chauk center is just 2-3 km from Mount Abu School Sector 16. Students reach in 10 minutes.',
+        'Our DC Chowk center is just 2-3 km from Mount Abu School Sector 16. Students reach in 10 minutes.',
     },
     {
       title: 'IB Program Support',
@@ -84,7 +84,7 @@ const pageData = {
     {
       question: 'How close is Cerebrum to Mount Abu School Rohini?',
       answer:
-        'Our Rohini center at DC Chauk (Sector 9) is just 2-3 km from Mount Abu School in Sector 16. Most students reach in 10 minutes by car or e-rickshaw. The route is straightforward via Sector 14-15.',
+        'Our Rohini center at DC Chowk (Sector 9) is just 2-3 km from Mount Abu School in Sector 16. Most students reach in 10 minutes by car or e-rickshaw. The route is straightforward via Sector 14-15.',
     },
     {
       question: 'Do you support IB program students for NEET?',
@@ -119,7 +119,7 @@ const pageData = {
   ],
   centerDetails: {
     name: 'Rohini Center',
-    address: '211 Vikas Surya Tower, DC Chauk, Sector 9, Rohini, New Delhi 110085',
+    address: '211 Vikas Surya Tower, DC Chowk, Sector 9, Rohini, New Delhi 110085',
     timing: '7 AM - 9 PM',
     phone: '+91-88264-44334',
   },
@@ -212,7 +212,7 @@ export default function NEETCoachingMountAbuSchoolPage() {
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '211 Vikas Surya Tower, DC Chauk, Sector 9',
+      streetAddress: '211 Vikas Surya Tower, DC Chowk, Sector 9',
       addressLocality: 'Rohini',
       addressRegion: 'Delhi',
       postalCode: '110085',
@@ -277,7 +277,7 @@ export default function NEETCoachingMountAbuSchoolPage() {
     telephone: CONTACT_INFO.phone.primary,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '211 Vikas Surya Tower, DC Chauk, Sector 9',
+      streetAddress: '211 Vikas Surya Tower, DC Chowk, Sector 9',
       addressLocality: 'Rohini, Delhi',
       addressRegion: 'Delhi',
       postalCode: '110085',
@@ -398,7 +398,7 @@ export default function NEETCoachingMountAbuSchoolPage() {
                     Just {pageData.distance} from {pageData.schoolName} (Sector 16)
                   </span>
                 </div>
-                <div className="mt-1 text-sm text-blue-200">{pageData.nearestCenter} - DC Chauk</div>
+                <div className="mt-1 text-sm text-blue-200">{pageData.nearestCenter} - DC Chowk</div>
               </div>
             </div>
           </div>

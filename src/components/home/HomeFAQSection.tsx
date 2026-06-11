@@ -25,7 +25,7 @@ const homepageFAQs: FAQ[] = [
   },
   {
     question: 'Where are Cerebrum Biology Academy centres located?',
-    answer: `We operate 6 offline centres across Delhi NCR: South Extension Part II (flagship), Rohini, Green Park, Gurugram, Faridabad, and Noida. We also offer pan-India online classes with the same AIIMS-trained faculty and curriculum, serving students from Mumbai, Bangalore, Hyderabad, Chennai, Kolkata, Pune, plus 14+ international countries (USA, UAE, UK, Canada, Singapore, Australia, etc.). Contact ${CONTACT_INFO.phone.display.primary} to find the centre nearest to you.`,
+    answer: `We operate 5 offline centres across Delhi NCR: South Extension Part II (flagship), Rohini, Green Park, Gurugram, Faridabad, and Noida. We also offer pan-India online classes with the same AIIMS-trained faculty and curriculum, serving students from Mumbai, Bangalore, Hyderabad, Chennai, Kolkata, Pune, plus 14+ international countries (USA, UAE, UK, Canada, Singapore, Australia, etc.). Contact ${CONTACT_INFO.phone.display.primary} to find the centre nearest to you.`,
   },
   {
     question: 'Do you offer online NEET Biology coaching?',

@@ -1401,7 +1401,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
-      address: '211 Vikas Surya Tower, DC Chauk, Rohini, Delhi',
+      address: '211 Vikas Surya Tower, DC Chowk, Rohini, Delhi',
       distance: '15-20 km from Ghaziabad',
     },
     localities: [
@@ -1457,8 +1457,8 @@ export const cityHubData: Record<string, CityHubData> = {
       'Premium NEET biology coaching for Indirapuram students. Learn from AIIMS faculty online or at our Delhi centers.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Rohini DC Chauk Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi',
+      name: 'Rohini DC Chowk Center',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi',
       distance: '15-18 km from Indirapuram',
     },
     localities: [
@@ -1519,8 +1519,8 @@ export const cityHubData: Record<string, CityHubData> = {
       'Premium NEET biology coaching for Crossings Republik students. Learn from AIIMS faculty online or at our Delhi centers.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Rohini DC Chauk Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi',
+      name: 'Rohini DC Chowk Center',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi',
       distance: '18-20 km from Crossings Republik',
     },
     localities: [
@@ -1775,7 +1775,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Where are the Cerebrum Delhi centres located?',
         answer:
-          'Three Delhi centres: (1) South Extension Flagship — Block D, South Extension Part 2, New Delhi 110049 — 5 min from South Extension Metro (Pink Line). (2) Rohini — 211 Vikas Surya Tower, DC Chauk, Sector 9, Delhi 110085 — close to Rohini West Metro (Red Line). (3) Green Park — B-113 FF Gulmohar Park, New Delhi 110049 — central South Delhi. Plus 3 NCR centres at Gurugram (Sector 51), Faridabad (Sector 17), and Noida (Sector 62).',
+          'Three Delhi centres: (1) South Extension Flagship — Block D, South Extension Part 2, New Delhi 110049 — 5 min from South Extension Metro (Pink Line). (2) Rohini — 211 Vikas Surya Tower, DC Chowk, Sector 9, Delhi 110085 — close to Rohini West Metro (Red Line). (3) Green Park — B-113 FF Gulmohar Park, New Delhi 110049 — central South Delhi. Plus 3 NCR centres at Gurugram (Sector 51), Faridabad (Sector 17), and Noida (Sector 62).',
       },
       {
         question: 'What is the fee for NEET biology coaching in Delhi?',
@@ -1941,16 +1941,16 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'rohini',
     cityName: 'Rohini',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Rohini | Best NEET Coaching DC Chauk | Cerebrum Biology Academy',
+    metaTitle: 'Biology Classes in Rohini | Best NEET Coaching DC Chowk | Cerebrum Biology Academy',
     metaDescription:
-      'Top biology classes in Rohini at Vikas Surya Tower, DC Chauk. AIIMS faculty, 98% success rate. Near Metro. Book free demo class!',
+      'Top biology classes in Rohini at Vikas Surya Tower, DC Chowk. AIIMS faculty, 98% success rate. Near Metro. Book free demo class!',
     heroTitle: 'Best Biology Classes in Rohini',
-    heroSubtitle: 'Our flagship center at DC Chauk, Sector 9. Right next to metro station!',
+    heroSubtitle: 'Our flagship center at DC Chowk, Sector 9. Right next to metro station!',
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: '211 Vikas Surya Tower, DC Chauk, Sector 9, Rohini, Delhi 110085',
-      distance: 'DC Chauk, Rohini',
+      address: '211 Vikas Surya Tower, DC Chowk, Sector 9, Rohini, Delhi 110085',
+      distance: 'DC Chowk, Rohini',
     },
     localities: [
       { name: 'Sector 9', url: '/biology-classes-rohini/sector-9' },
@@ -1972,7 +1972,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Where exactly is the Rohini biology coaching center?',
         answer:
-          'Our Rohini center is at 211 Vikas Surya Tower, DC Chauk, Sector 9, Rohini, Delhi 110085. It is right next to DC Chauk Metro Station (Red Line). Just exit the metro and walk 2 minutes to reach us!',
+          'Our Rohini center is at 211 Vikas Surya Tower, DC Chowk, Sector 9, Rohini, Delhi 110085. It is right next to DC Chowk Metro Station (Red Line). Just exit the metro and walk 2 minutes to reach us!',
       },
       {
         question: 'Why is Rohini center the most popular?',
@@ -2100,7 +2100,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
-      address: '211 Vikas Surya Tower, DC Chauk, Rohini',
+      address: '211 Vikas Surya Tower, DC Chowk, Rohini',
       distance: '5-10 km from Pitampura (Red Line)',
     },
     localities: [
@@ -2120,7 +2120,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Where is the nearest biology coaching center from Pitampura?',
         answer:
-          'Our Rohini center at DC Chauk is just 5-10 km from Pitampura, easily accessible via Red Line Metro. Many Pitampura students attend our Rohini center. Call 88264-44334 for directions.',
+          'Our Rohini center at DC Chowk is just 5-10 km from Pitampura, easily accessible via Red Line Metro. Many Pitampura students attend our Rohini center. Call 88264-44334 for directions.',
       },
       {
         question: 'What are the batch timings for Pitampura students?',
@@ -2150,14 +2150,14 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Delhi',
     metaTitle: 'NEET Coaching Prashant Vihar | Biology Classes Rohini | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Prashant Vihar students. Near Rohini DC Chauk center. AIIMS faculty, 98% success. WhatsApp 88264-44334',
+      'Best NEET coaching for Prashant Vihar students. Near Rohini DC Chowk center. AIIMS faculty, 98% success. WhatsApp 88264-44334',
     heroTitle: 'Best NEET Coaching in Prashant Vihar',
     heroSubtitle:
-      'Just 10 minutes from our Rohini DC Chauk center! Premium NEET biology coaching for Prashant Vihar students.',
+      'Just 10 minutes from our Rohini DC Chowk center! Premium NEET biology coaching for Prashant Vihar students.',
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
-      address: '211 Vikas Surya Tower, DC Chauk, Rohini',
+      address: '211 Vikas Surya Tower, DC Chowk, Rohini',
       distance: '5-10 km from Prashant Vihar',
     },
     localities: [
@@ -2177,7 +2177,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Where is the nearest NEET coaching center from Prashant Vihar?',
         answer:
-          'Our Rohini center at DC Chauk is just 5-10 km from Prashant Vihar, easily accessible via metro. Many Prashant Vihar students attend our flagship Rohini center. Call 88264-44334 for directions.',
+          'Our Rohini center at DC Chowk is just 5-10 km from Prashant Vihar, easily accessible via metro. Many Prashant Vihar students attend our flagship Rohini center. Call 88264-44334 for directions.',
       },
       {
         question: 'What are the batch timings for Prashant Vihar students?',
@@ -2192,7 +2192,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Why should Prashant Vihar students choose Cerebrum Biology Academy?',
         answer:
-          'With AIIMS-trained faculty, 98% success rate, and proximity to DC Chauk Rohini center, Cerebrum is the best choice for Prashant Vihar students. Our small batch sizes ensure personal attention.',
+          'With AIIMS-trained faculty, 98% success rate, and proximity to DC Chowk Rohini center, Cerebrum is the best choice for Prashant Vihar students. Our small batch sizes ensure personal attention.',
       },
     ],
     stats: {
@@ -2277,7 +2277,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
-      address: '211 Vikas Surya Tower, DC Chauk, Rohini',
+      address: '211 Vikas Surya Tower, DC Chowk, Rohini',
       distance: '15-20 km from Laxmi Nagar',
     },
     localities: [
@@ -2335,7 +2335,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
-      address: '211 Vikas Surya Tower, DC Chauk, Rohini',
+      address: '211 Vikas Surya Tower, DC Chowk, Rohini',
       distance: '20 km from Preet Vihar',
     },
     localities: [
@@ -2695,7 +2695,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
-      address: '211 Vikas Surya Tower, DC Chauk, Rohini',
+      address: '211 Vikas Surya Tower, DC Chowk, Rohini',
       distance: '8-10 km from Model Town',
     },
     localities: [
@@ -2714,7 +2714,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Where is the nearest biology coaching from Model Town?',
         answer:
-          'Our Rohini center at DC Chauk is just 8-10 km from Model Town. Easily accessible via Yellow Line Metro. Call 88264-44334 for directions.',
+          'Our Rohini center at DC Chowk is just 8-10 km from Model Town. Easily accessible via Yellow Line Metro. Call 88264-44334 for directions.',
       },
       {
         question: 'What courses are available for Model Town students?',
@@ -2746,7 +2746,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
-      address: '211 Vikas Surya Tower, DC Chauk, Rohini',
+      address: '211 Vikas Surya Tower, DC Chowk, Rohini',
       distance: '5 km from Shalimar Bagh',
     },
     localities: [
@@ -2765,7 +2765,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'How do I reach biology coaching from Shalimar Bagh?',
         answer:
-          'Our Rohini center is just 5 km from Shalimar Bagh. Take auto/cab to DC Chauk, or use Red Line Metro to Rohini West. Call 88264-44334 for directions.',
+          'Our Rohini center is just 5 km from Shalimar Bagh. Take auto/cab to DC Chowk, or use Red Line Metro to Rohini West. Call 88264-44334 for directions.',
       },
       {
         question: 'Many of my friends go to local coaching. Why Cerebrum?',
@@ -2797,7 +2797,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
-      address: '211 Vikas Surya Tower, DC Chauk, Rohini',
+      address: '211 Vikas Surya Tower, DC Chowk, Rohini',
       distance: '6-8 km from Ashok Vihar',
     },
     localities: [
@@ -2816,7 +2816,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Is there biology coaching near Ashok Vihar?',
         answer:
-          'Our Rohini center at DC Chauk is just 6-8 km from Ashok Vihar. Easily accessible by auto or metro. Call 88264-44334 for details.',
+          'Our Rohini center at DC Chowk is just 6-8 km from Ashok Vihar. Easily accessible by auto or metro. Call 88264-44334 for details.',
       },
       {
         question: 'What is the fee for Ashok Vihar students?',
@@ -8617,7 +8617,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Multiple Centers Across Delhi',
-      address: 'Rohini (DC Chauk), South Extension, Green Park - Choose your nearest center',
+      address: 'Rohini (DC Chowk), South Extension, Green Park - Choose your nearest center',
       distance: '4 centers across Delhi',
     },
     localities: [
@@ -9386,7 +9386,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       distance: '12 km from Punjabi Bagh',
     },
     localities: [
@@ -9445,7 +9445,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       distance: '10 km from Paschim Vihar',
     },
     localities: [
@@ -9503,7 +9503,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       distance: '14 km from Rajouri Garden',
     },
     localities: [
@@ -9682,7 +9682,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       distance: 'In DC Chowk',
     },
     localities: [
@@ -9699,7 +9699,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Where is the DC Chowk Rohini center located?',
         answer:
-          'Our Rohini center is located at DC Chauk, Sector 9, Rohini, New Delhi 110085. It is easily accessible from all Rohini sectors.',
+          'Our Rohini center is located at DC Chowk, Sector 9, Rohini, New Delhi 110085. It is easily accessible from all Rohini sectors.',
       },
       {
         question: 'What courses are available at DC Chowk center?',
@@ -9741,7 +9741,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       distance: '2 km from Rohini West',
     },
     localities: [
@@ -9799,7 +9799,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       distance: '2 km from Sector 3',
     },
     localities: [
@@ -9855,7 +9855,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       distance: '1.5 km from Sector 5',
     },
     localities: [
@@ -9910,7 +9910,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       distance: '1 km from Sector 7',
     },
     localities: [
@@ -9965,7 +9965,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       distance: '500m from Sector 8',
     },
     localities: [
@@ -10020,7 +10020,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       distance: '1.5 km from Sector 11',
     },
     localities: [
@@ -10076,7 +10076,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       distance: '2 km from Sector 13',
     },
     localities: [
@@ -10132,7 +10132,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       distance: '2.5 km from Sector 14',
     },
     localities: [
@@ -10188,7 +10188,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       distance: '3 km from Sector 15',
     },
     localities: [
@@ -10244,7 +10244,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       distance: '3.5 km from Sector 16',
     },
     localities: [
@@ -10300,7 +10300,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       distance: '5 km from Sector 22',
     },
     localities: [
@@ -10356,7 +10356,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi 110085',
       distance: '6 km from Sector 24',
     },
     localities: [
@@ -11312,11 +11312,11 @@ export const cityHubData: Record<string, CityHubData> = {
       'Best NEET coaching near Netaji Subhash Place (NSP) Delhi. 15-20 min from Rohini center via metro. AIIMS faculty, 98% success rate. WhatsApp 88264-44334!',
     heroTitle: 'Best NEET Coaching near Netaji Subhash Place',
     heroSubtitle:
-      'Top-rated NEET biology coaching for NSP students. Just 15-20 minutes from our Rohini DC Chauk center via Red Line Metro.',
+      'Top-rated NEET biology coaching for NSP students. Just 15-20 minutes from our Rohini DC Chowk center via Red Line Metro.',
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
-      address: '211 Vikas Surya Tower, DC Chauk, Rohini',
+      address: '211 Vikas Surya Tower, DC Chowk, Rohini',
       distance: '15-20 min via metro from NSP',
     },
     localities: [
@@ -11337,12 +11337,12 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Where is the nearest NEET coaching from Netaji Subhash Place?',
         answer:
-          'Our Rohini center at DC Chauk is just 15-20 minutes from NSP via Red Line Metro. Take the metro from NSP to Rohini West station, and our center is a short walk from there. Call 88264-44334 for directions.',
+          'Our Rohini center at DC Chowk is just 15-20 minutes from NSP via Red Line Metro. Take the metro from NSP to Rohini West station, and our center is a short walk from there. Call 88264-44334 for directions.',
       },
       {
         question: 'Do you offer NEET coaching for students near NSP metro station?',
         answer:
-          'Yes! Students from Netaji Subhash Place area can easily reach our Rohini DC Chauk center via Red Line Metro. We also offer online live classes with the same AIIMS-trained faculty. WhatsApp 88264-44334 for batch timings.',
+          'Yes! Students from Netaji Subhash Place area can easily reach our Rohini DC Chowk center via Red Line Metro. We also offer online live classes with the same AIIMS-trained faculty. WhatsApp 88264-44334 for batch timings.',
       },
       {
         question: 'What courses are available for NSP area students?',

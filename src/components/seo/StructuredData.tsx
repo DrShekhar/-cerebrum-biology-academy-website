@@ -49,7 +49,7 @@ export function OrganizationSchema() {
         name: 'Cerebrum Biology Academy - Rohini',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: '211 Vikas Surya Tower, DC Chauk, Rohini Sector 9',
+          streetAddress: '211 Vikas Surya Tower, DC Chowk, Rohini Sector 9',
           addressLocality: 'New Delhi',
           addressRegion: 'Delhi',
           postalCode: '110085',

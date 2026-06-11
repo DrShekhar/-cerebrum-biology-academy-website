@@ -17,16 +17,16 @@ export const centerSpecificFAQs: CenterFAQ[] = [
     centerId: 'rohini',
     centerName: 'Rohini Center',
     city: 'New Delhi',
-    address: '211, Vikas Surya Tower, DC Chauk, Rohini Sector 9, New Delhi 110085',
+    address: '211, Vikas Surya Tower, DC Chowk, Rohini Sector 9, New Delhi 110085',
     faqs: [
       {
         question: 'Where is the best NEET coaching in Rohini, New Delhi?',
-        answer: 'Cerebrum Biology Academy Rohini is one of the premier NEET coaching centers in Rohini, located in Vikas Surya Tower at DC Chauk, Rohini Sector 9. We provide expert faculty, personalized mentorship, and a proven track record of student success. Our curriculum is specifically designed to help students crack NEET with top scores.',
+        answer: 'Cerebrum Biology Academy Rohini is one of the premier NEET coaching centers in Rohini, located in Vikas Surya Tower at DC Chowk, Rohini Sector 9. We provide expert faculty, personalized mentorship, and a proven track record of student success. Our curriculum is specifically designed to help students crack NEET with top scores.',
         keywords: ['NEET coaching', 'Rohini', 'biology coaching', 'best coaching']
       },
       {
         question: 'How do I reach Cerebrum Rohini from Rohini Sector 9 Metro?',
-        answer: 'Our Rohini center is just 5-7 minutes walk from Rohini Sector 9 Metro Station. Exit from the metro, head towards DC Chauk area, and you\'ll find Vikas Surya Tower. Detailed direction maps and transport guides are available on our website cerebrumbiologyacademy.com. You can also call us at +91-8826444334 for precise directions.',
+        answer: 'Our Rohini center is just 5-7 minutes walk from Rohini Sector 9 Metro Station. Exit from the metro, head towards DC Chowk area, and you\'ll find Vikas Surya Tower. Detailed direction maps and transport guides are available on our website cerebrumbiologyacademy.com. You can also call us at +91-8826444334 for precise directions.',
         keywords: ['directions', 'metro', 'location', 'reach', 'transport']
       },
       {

@@ -4,7 +4,7 @@ import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 export const metadata: Metadata = {
   title: 'NEET Coaching Centre Near Me | Best NEET Coaching Centres in Delhi NCR',
   description:
-    'Find the best NEET coaching centre near you. 6 offline centers in Delhi NCR + online classes across India. AIIMS faculty, 98% success rate, affordable fees!',
+    'Find the best NEET coaching centre near you. 5 offline centres in Delhi NCR + online classes across India. AIIMS faculty, 98% success rate, affordable fees!',
   keywords: [
     'NEET coaching centre',
     'NEET coaching centre near me',

@@ -82,7 +82,6 @@ export const metadata: Metadata = {
 export default function NoidaCoachingLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <LocalBusinessSchema locationId="noida" />
       {children}
       <NearMeKeywordInjector
         location="Noida"

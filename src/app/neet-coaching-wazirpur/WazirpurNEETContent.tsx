@@ -44,7 +44,7 @@ const wazirpurData = {
   slug: 'wazirpur',
   nearestCenter: {
     name: 'Rohini Center',
-    address: '211 Vikas Surya Tower, DC Chauk, Rohini',
+    address: '211 Vikas Surya Tower, DC Chowk, Rohini',
     distance: '10-15 min drive from Wazirpur',
   },
   geoCoordinates: {

@@ -50,6 +50,7 @@ export function LocalitySchema({
   coordinates,
   faqs = [],
   skipCourseList = false,
+  country,
 }: LocalitySchemaProps) {
   const pageUrl = `${BASE_URL}/${slug}`
 
@@ -88,7 +89,9 @@ export function LocalitySchema({
         address: {
           '@type': 'PostalAddress',
           addressLocality: locality,
-          addressCountry: 'IN',
+          // Was hardcoded 'IN' — international pages using this component were
+          // telling Google they're in India.
+          addressCountry: country || 'IN',
         },
       }
     : null

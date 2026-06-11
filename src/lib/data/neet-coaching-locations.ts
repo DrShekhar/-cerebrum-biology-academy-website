@@ -149,14 +149,14 @@ const delhiNCRLocations: NEETCoachingLocation[] = [
     travelTime: 'Center Location',
     title: 'Best NEET Coaching in Rohini - Cerebrum Biology Academy',
     description:
-      'Premier NEET biology coaching in Rohini DC Chauk. AIIMS trained faculty, small batches, 98% success rate. Join now!',
+      'Premier NEET biology coaching in Rohini DC Chowk. AIIMS trained faculty, small batches, 98% success rate. Join now!',
     heroColor: 'green',
     studentCount: '1500+',
     successRate: '98%',
     topScore: '695',
     localities: [
       {
-        name: 'DC Chauk',
+        name: 'DC Chowk',
         slug: 'dc-chowk-rohini',
         students: '400+',
         highlight: 'Main Center',

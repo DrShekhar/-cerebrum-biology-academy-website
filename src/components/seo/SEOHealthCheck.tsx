@@ -149,8 +149,8 @@ function LocalBusinessSchema() {
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '00:00',
-        closes: '23:59',
+        opens: '09:00',
+        closes: '20:00',
       },
     ],
     // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.

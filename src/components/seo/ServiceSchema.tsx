@@ -36,7 +36,7 @@ const DEFAULT_SERVICES_BY_CENTER: Record<string, string[]> = {
     'NEET Coaching Institute Rajouri Garden',
     'NEET Biology Coaching in Punjabi Bagh',
     'Biology Tuition Near Netaji Subhash Place',
-    'NEET Biology Classes Near DC Chauk',
+    'NEET Biology Classes Near DC Chowk',
     'NEET Dropper Batch North Delhi',
     'NEET Biology Coaching in Prashant Vihar',
   ],

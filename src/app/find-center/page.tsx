@@ -10,7 +10,7 @@ export const revalidate = 3600
 export const metadata: Metadata = {
   title: 'Find Your Nearest Cerebrum Biology Academy Center - 6 Locations',
   description:
-    'Locate Cerebrum Biology Academy centers in Delhi NCR. 6 offline centers in Rohini, Gurugram, South Extension, Green Park, Faridabad, Noida. Visit us or book a demo class.',
+    'Locate Cerebrum Biology Academy centers in Delhi NCR. 5 offline centres in Rohini, Gurugram, South Extension, Green Park, Faridabad, Noida. Visit us or book a demo class.',
   keywords: [
     'cerebrum biology academy near me',
     'cerebrum center locations',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Find Your Nearest Cerebrum Biology Academy Center - 6 Locations',
-    description: 'Locate Cerebrum Biology Academy centers in Delhi NCR. 6 offline centers in Rohini, Gurugram, South Extension, Green Park, Faridabad, Noida. Visit us or book a demo class.',
+    description: 'Locate Cerebrum Biology Academy centers in Delhi NCR. 5 offline centres in Rohini, Gurugram, South Extension, Green Park, Faridabad, Noida. Visit us or book a demo class.',
   },
 }
 
@@ -40,9 +40,9 @@ const centers = [
   {
     id: 'rohini',
     name: 'Rohini',
-    address: '211 Vikas Surya Tower, DC Chauk Sector 9, Rohini, New Delhi - 110085',
+    address: '211 Vikas Surya Tower, DC Chowk Sector 9, Rohini, New Delhi - 110085',
     phone: CONTACT_INFO.phone.primary,
-    metro: 'DC Chauk Metro Station',
+    metro: 'DC Chowk Metro Station',
     nearbyAreas: ['Pitampura', 'Shalimar Bagh', 'Netaji Subhash Place'],
     distance: '25 km from Central Delhi',
     students: '850+',
@@ -324,7 +324,6 @@ export default function FindCenterPage() {
       <LocalBusinessSchema locationId="south-extension" />
       <LocalBusinessSchema locationId="green-park" />
       <LocalBusinessSchema locationId="faridabad" />
-      <LocalBusinessSchema locationId="noida" />
 
       {/* ItemList Schema for all centers */}
       <script

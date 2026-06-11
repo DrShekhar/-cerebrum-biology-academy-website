@@ -51,7 +51,7 @@ const faqs = [
   {
     question: 'Where is the nearest NEET coaching center from Wazirpur?',
     answer:
-      'Our Rohini center at DC Chauk (211 Vikas Surya Tower) is just 10-15 minutes drive from Wazirpur. You can reach via Netaji Subhash Place Metro or by road through Ashok Vihar. Many students from Wazirpur Industrial Area attend our Rohini center. Call 88264-44334 for directions.',
+      'Our Rohini center at DC Chowk (211 Vikas Surya Tower) is just 10-15 minutes drive from Wazirpur. You can reach via Netaji Subhash Place Metro or by road through Ashok Vihar. Many students from Wazirpur Industrial Area attend our Rohini center. Call 88264-44334 for directions.',
   },
   {
     question: 'What is the fee for NEET biology coaching for Wazirpur students?',
@@ -93,7 +93,7 @@ export default function WazirpurNEETCoachingPage() {
     priceRange: 'Rs Rs',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '211 Vikas Surya Tower, DC Chauk',
+      streetAddress: '211 Vikas Surya Tower, DC Chowk',
       addressLocality: 'Rohini',
       addressRegion: 'Delhi',
       postalCode: '110085',

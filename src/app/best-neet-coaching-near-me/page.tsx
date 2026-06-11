@@ -6,7 +6,7 @@ import { BestVerticalLanding, type BestVerticalConfig } from '@/components/seo/B
 export const metadata: Metadata = {
   title: 'Best NEET Coaching Near Me | 6 NCR Centres + Pan-India Online',
   description:
-    'Best NEET coaching near me — Cerebrum Biology Academy. 6 offline centres in Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) + online live classes pan-India. AIIMS faculty, 680+ medical college selections, 98% NEET qualification rate.',
+    'Best NEET coaching near me — Cerebrum Biology Academy. 5 offline centres in Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) + online live classes pan-India. AIIMS faculty, 680+ medical college selections, 98% NEET qualification rate.',
   keywords: [
     'best neet coaching near me',
     'neet coaching near me',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'Best NEET Coaching Near Me | 6 NCR Centres + Pan-India Online',
     description:
-      'Best NEET coaching near me — Cerebrum Biology Academy. 6 offline centres in Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) + online live classes pan-India. AIIMS facult...',
+      'Best NEET coaching near me — Cerebrum Biology Academy. 5 offline centres in Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) + online live classes pan-India. AIIMS facult...',
   },
 }
 
@@ -52,7 +52,7 @@ const centres = [
   },
   {
     name: 'Rohini',
-    address: '211 Vikas Surya Tower, DC Chauk, Sector 9, Delhi 110085',
+    address: '211 Vikas Surya Tower, DC Chowk, Sector 9, Delhi 110085',
     locality: 'North Delhi',
     geo: { lat: 28.7368, lng: 77.1268 },
     href: '/neet-coaching-rohini',
@@ -94,7 +94,7 @@ const config: BestVerticalConfig = {
   subheadline:
     'Find the closest Cerebrum centre — or join online live classes from anywhere in India.',
   intro:
-    'When you search "best NEET coaching near me" you want two things: faculty quality + proximity. Cerebrum Biology Academy operates 6 offline centres across Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) — one is almost certainly within 30 minutes of you. For students outside Delhi NCR, online live (not recorded) classes use the same AIIMS-trained faculty pan-India.',
+    'When you search "best NEET coaching near me" you want two things: faculty quality + proximity. Cerebrum Biology Academy operates 5 offline centres across Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) — one is almost certainly within 30 minutes of you. For students outside Delhi NCR, online live (not recorded) classes use the same AIIMS-trained faculty pan-India.',
   clusterSummary:
     '15–20 student batches · NCERT + PYQ curriculum · 680+ medical college selections · 98% NEET qualification rate.',
   credentials: [
@@ -204,7 +204,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Which is the best NEET coaching near me in Delhi NCR?',
       answer:
-        'Cerebrum Biology Academy operates 6 offline centres across Delhi NCR — South Extension, Rohini, Green Park, Gurugram (Sector 51), Faridabad (Sector 17) and Noida (Sector 62). For most NCR addresses, a centre is within 30 minutes. AIIMS-trained faculty, 15–20 student batches, 680+ medical college selections.',
+        'Cerebrum Biology Academy operates 5 offline centres across Delhi NCR — South Extension, Rohini, Green Park, Gurugram (Sector 51), Faridabad (Sector 17) and Noida (Sector 62). For most NCR addresses, a centre is within 30 minutes. AIIMS-trained faculty, 15–20 student batches, 680+ medical college selections.',
     },
     {
       question: "What is the best NEET coaching near me if I'm not in Delhi NCR?",

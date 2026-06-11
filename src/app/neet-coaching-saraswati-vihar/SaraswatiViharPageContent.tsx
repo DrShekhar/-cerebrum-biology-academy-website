@@ -39,7 +39,7 @@ const testimonials = [
     score: '685/720',
     college: 'AIIMS Delhi',
     quote:
-      'Living in Saraswati Vihar, I could reach DC Chauk center in just 8 minutes by auto. The proximity made it possible to attend evening batches after school without any stress.',
+      'Living in Saraswati Vihar, I could reach DC Chowk center in just 8 minutes by auto. The proximity made it possible to attend evening batches after school without any stress.',
     year: '2025',
   },
   {
@@ -120,17 +120,17 @@ const faqs = [
   {
     question: 'Where is the nearest NEET coaching center from Saraswati Vihar, Pitampura?',
     answer:
-      "Cerebrum Biology Academy's Rohini center at DC Chauk is just 5-10 minutes from Saraswati Vihar. Located at 211 Vikas Surya Tower, DC Chauk, Sector 9, Rohini, it is easily accessible from all blocks (A-E) of Saraswati Vihar via auto-rickshaw or bike.",
+      "Cerebrum Biology Academy's Rohini center at DC Chowk is just 5-10 minutes from Saraswati Vihar. Located at 211 Vikas Surya Tower, DC Chowk, Sector 9, Rohini, it is easily accessible from all blocks (A-E) of Saraswati Vihar via auto-rickshaw or bike.",
   },
   {
     question: 'Which is the best NEET coaching in Saraswati Vihar area?',
     answer:
-      'Cerebrum Biology Academy is the top choice for Saraswati Vihar students with 98% success rate, AIIMS-trained faculty led by Dr. Shekhar C Singh, and over 200+ students from Saraswati Vihar colony already enrolled. The DC Chauk Rohini center is the closest premium NEET coaching.',
+      'Cerebrum Biology Academy is the top choice for Saraswati Vihar students with 98% success rate, AIIMS-trained faculty led by Dr. Shekhar C Singh, and over 200+ students from Saraswati Vihar colony already enrolled. The DC Chowk Rohini center is the closest premium NEET coaching.',
   },
   {
     question: 'How far is Cerebrum Academy from different blocks of Saraswati Vihar?',
     answer:
-      'Block A is approximately 5 minutes away, Block B is 6 minutes, Block C is 7 minutes, Block D is 8 minutes, and Block E is about 10 minutes from our Rohini DC Chauk center. Students can easily commute by auto-rickshaw, bike, or even cycle.',
+      'Block A is approximately 5 minutes away, Block B is 6 minutes, Block C is 7 minutes, Block D is 8 minutes, and Block E is about 10 minutes from our Rohini DC Chowk center. Students can easily commute by auto-rickshaw, bike, or even cycle.',
   },
   {
     question: 'What are the batch timings for Saraswati Vihar students at Rohini center?',
@@ -156,7 +156,7 @@ const localBusinessSchema = {
   '@id': `${BASE_URL}/neet-coaching-saraswati-vihar#organization`,
   name: 'Cerebrum Biology Academy - Saraswati Vihar',
   description:
-    'Best NEET coaching for Saraswati Vihar, Pitampura students. 5-10 min from DC Chauk Rohini center. AIIMS faculty, 98% success rate.',
+    'Best NEET coaching for Saraswati Vihar, Pitampura students. 5-10 min from DC Chowk Rohini center. AIIMS faculty, 98% success rate.',
   url: `${BASE_URL}/neet-coaching-saraswati-vihar`,
   telephone: CONTACT_INFO.phone.primary,
   email: 'info@cerebrumbiologyacademy.com',
@@ -164,7 +164,7 @@ const localBusinessSchema = {
   priceRange: 'Rs Rs',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '211 Vikas Surya Tower, DC Chauk, Sector 9',
+    streetAddress: '211 Vikas Surya Tower, DC Chowk, Sector 9',
     addressLocality: 'Rohini',
     addressRegion: 'Delhi',
     postalCode: '110085',
@@ -212,7 +212,7 @@ const speakableSchema = {
   '@id': `${BASE_URL}/neet-coaching-saraswati-vihar`,
   name: 'NEET Coaching Saraswati Vihar | Biology Classes Pitampura | Cerebrum Academy',
   description:
-    'Best NEET coaching for Saraswati Vihar students in Pitampura. 5-10 min from Rohini DC Chauk center. AIIMS faculty, 98% success rate.',
+    'Best NEET coaching for Saraswati Vihar students in Pitampura. 5-10 min from Rohini DC Chowk center. AIIMS faculty, 98% success rate.',
   speakable: {
     '@type': 'SpeakableSpecification',
     cssSelector: ['.speakable-intro', '.speakable-location', '.speakable-cta'],
@@ -274,12 +274,12 @@ export function SaraswatiViharPageContent() {
           </p>
           <p className="speakable-location">
             Saraswati Vihar is the largest colony in Pitampura with Blocks A through E. Our Rohini
-            DC Chauk center is just 5 to 10 minutes away from all blocks of Saraswati Vihar, making
+            DC Chowk center is just 5 to 10 minutes away from all blocks of Saraswati Vihar, making
             it the most convenient NEET coaching option.
           </p>
           <p className="speakable-cta">
             To join the best NEET biology coaching near Saraswati Vihar, call 88264-44334 or
-            WhatsApp us. Book your free demo class today at our Rohini DC Chauk center.
+            WhatsApp us. Book your free demo class today at our Rohini DC Chowk center.
           </p>
         </div>
 
@@ -302,7 +302,7 @@ export function SaraswatiViharPageContent() {
               <div className="mb-6 inline-flex items-center rounded-full bg-white/10 px-6 py-2 text-sm font-medium backdrop-blur-sm">
                 <MapPin className="mr-2 h-4 w-4 text-yellow-400" />
                 <Home className="mr-2 h-4 w-4 text-green-400" />
-                Serving Saraswati Vihar Blocks A-E | 5-10 min from DC Chauk
+                Serving Saraswati Vihar Blocks A-E | 5-10 min from DC Chowk
               </div>
 
               <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
@@ -311,7 +311,7 @@ export function SaraswatiViharPageContent() {
 
               <p className="mb-8 text-xl text-slate-300 md:text-2xl">
                 The largest colony in Pitampura deserves the best NEET coaching. Just 5-10 minutes
-                from our Rohini DC Chauk center!
+                from our Rohini DC Chowk center!
               </p>
 
               {/* Trust Badges */}
@@ -411,7 +411,7 @@ export function SaraswatiViharPageContent() {
                 </h2>
                 <p className="mx-auto max-w-2xl text-lg text-gray-600">
                   Saraswati Vihar is the largest residential colony in Pitampura with Blocks A
-                  through E. Our Rohini DC Chauk center is conveniently located just 5-10 minutes
+                  through E. Our Rohini DC Chowk center is conveniently located just 5-10 minutes
                   from all blocks.
                 </p>
               </div>
@@ -438,11 +438,11 @@ export function SaraswatiViharPageContent() {
                   </div>
                   <div className="flex-1">
                     <h3 className="mb-2 text-2xl font-bold text-gray-900">
-                      Rohini DC Chauk Center
+                      Rohini DC Chowk Center
                     </h3>
                     <div className="mb-4 flex items-center gap-2 text-gray-600">
                       <MapPin className="h-5 w-5 text-green-600" />
-                      211 Vikas Surya Tower, DC Chauk, Sector 9, Rohini, Delhi 110085
+                      211 Vikas Surya Tower, DC Chowk, Sector 9, Rohini, Delhi 110085
                     </div>
                     <div className="mb-4 flex items-center gap-2 text-gray-600">
                       <Clock className="h-5 w-5 text-green-600" />
@@ -502,7 +502,7 @@ export function SaraswatiViharPageContent() {
                 <div className="mb-2 text-2xl font-bold text-green-400">5-10 min</div>
                 <h3 className="mb-2 text-lg font-semibold">Closest to Your Home</h3>
                 <p className="text-sm text-slate-400">
-                  DC Chauk Rohini center is the closest premium NEET coaching from Saraswati Vihar.
+                  DC Chowk Rohini center is the closest premium NEET coaching from Saraswati Vihar.
                   No long commutes, more study time!
                 </p>
               </div>

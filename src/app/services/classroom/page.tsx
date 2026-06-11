@@ -1025,7 +1025,7 @@ export default function ClassroomCoachingPage() {
                       Main Campus
                     </div>
                     <div className="text-xs sm:text-sm text-gray-600">
-                      DC Chauk, Sector 9, Rohini
+                      DC Chowk, Sector 9, Rohini
                       <br />
                       New Delhi - 110085
                     </div>

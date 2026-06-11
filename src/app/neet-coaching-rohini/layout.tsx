@@ -35,7 +35,7 @@ export default function NEETCoachingRohiniLayout({ children }: { children: React
       <NearMeKeywordInjector
         location="Rohini"
         parentLocation="Delhi NCR"
-        centerAddress="211 Vikas Surya Tower, DC Chauk, Rohini Sector 9, Delhi - 110085"
+        centerAddress="211 Vikas Surya Tower, DC Chowk, Rohini Sector 9, Delhi - 110085"
         centerPhone="+91-8826-444-334"
         nearbyAreas={['Sector 3', 'Sector 7', 'Sector 9', 'DC Chowk', 'Rohini West', 'Rohini East', 'Prashant Vihar', 'Pitampura']}
       />

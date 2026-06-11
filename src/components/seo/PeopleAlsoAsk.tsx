@@ -327,7 +327,7 @@ export const DELHI_NCR_PAA_QUESTIONS: PAQuestion[] = [
   {
     question: 'Is there NEET coaching in Rohini Delhi?',
     answer:
-      'Yes, Cerebrum Biology Academy has a dedicated center in Rohini at 211 Vikas Surya Tower, DC Chauk, Sector 9. It serves students from Rohini, Pitampura, Shalimar Bagh, Ashok Vihar, and North Delhi with the same expert AIIMS faculty as the flagship South Extension branch.',
+      'Yes, Cerebrum Biology Academy has a dedicated center in Rohini at 211 Vikas Surya Tower, DC Chowk, Sector 9. It serves students from Rohini, Pitampura, Shalimar Bagh, Ashok Vihar, and North Delhi with the same expert AIIMS faculty as the flagship South Extension branch.',
   },
   {
     question: 'What is the best NEET coaching in Gurugram?',

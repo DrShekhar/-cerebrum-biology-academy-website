@@ -317,7 +317,7 @@ export default function NEETCoachingWestDelhiPage() {
           hasOfflineCenter={true}
           centerInfo={{
             name: 'Cerebrum Biology Academy - Rohini',
-            address: '211 Vikas Surya Tower, DC Chauk, Sector 9, Rohini, Delhi',
+            address: '211 Vikas Surya Tower, DC Chowk, Sector 9, Rohini, Delhi',
             phone: '+918826444334',
             mapUrl: 'https://maps.google.com/maps?q=DC+Chowk+Rohini+Delhi',
             nearbyLandmark: 'Rohini West Metro (Red Line)',

@@ -42,7 +42,7 @@ const config: BestVerticalConfig = {
   subheadline:
     'Find an AIIMS-trained NEET biology tutor at the centre closest to you — or online from anywhere in India.',
   intro:
-    'When you search "NEET biology tutor near me" you want two things: AIIMS-grade pedagogy + proximity. Cerebrum Biology Academy has 6 offline centres across Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) — one is almost certainly within 30 minutes of you. Outside NCR? Online 1:1 sessions deliver the same faculty pan-India.',
+    'When you search "NEET biology tutor near me" you want two things: AIIMS-grade pedagogy + proximity. Cerebrum Biology Academy has 5 offline centres across Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) — one is almost certainly within 30 minutes of you. Outside NCR? Online 1:1 sessions deliver the same faculty pan-India.',
   clusterSummary:
     'AIIMS-trained 1:1 tutors · 15+ years pedagogy · 680+ medical college selections · WhatsApp same-day doubts.',
   credentials: [
@@ -149,7 +149,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Where can I find a NEET biology tutor near me in Delhi NCR?',
       answer:
-        'Cerebrum Biology Academy operates 6 offline centres across Delhi NCR — South Extension, Rohini, Green Park, Gurugram (Sector 51), Faridabad (Sector 17) and Noida (Sector 62). For most NCR addresses, a centre is within 30 minutes. AIIMS-trained tutors, 1:1 + small-batch options, 680+ medical college selections.',
+        'Cerebrum Biology Academy operates 5 offline centres across Delhi NCR — South Extension, Rohini, Green Park, Gurugram (Sector 51), Faridabad (Sector 17) and Noida (Sector 62). For most NCR addresses, a centre is within 30 minutes. AIIMS-trained tutors, 1:1 + small-batch options, 680+ medical college selections.',
     },
     {
       question: 'Is there a NEET biology tutor near me outside Delhi NCR?',

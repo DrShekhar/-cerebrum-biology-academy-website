@@ -4,14 +4,14 @@ import { SaraswatiViharPageContent } from './SaraswatiViharPageContent'
 export const metadata: Metadata = {
   title: 'NEET Coaching Saraswati Vihar | Biology Classes Pitampura',
   description:
-    'Best NEET coaching for Saraswati Vihar students in Pitampura. 5-10 min from Rohini DC Chauk center. AIIMS faculty, 98% success rate. WhatsApp 88264-44334',
+    'Best NEET coaching for Saraswati Vihar students in Pitampura. 5-10 min from Rohini DC Chowk center. AIIMS faculty, 98% success rate. WhatsApp 88264-44334',
   keywords: [
     'NEET coaching saraswati vihar',
     'biology tuition saraswati vihar pitampura',
     'NEET coaching Pitampura',
     'biology classes Saraswati Vihar',
     'NEET preparation Saraswati Vihar',
-    'DC Chauk biology coaching',
+    'DC Chowk biology coaching',
     'Rohini NEET coaching',
     'Dr Shekhar C Singh',
     'AIIMS trained faculty',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Coaching Saraswati Vihar | Biology Classes Pitampura',
     description:
-      'Best NEET coaching for Saraswati Vihar students in Pitampura. 5-10 min from Rohini DC Chauk center. AIIMS faculty, 98% success rate. WhatsApp 88264-44334',
+      'Best NEET coaching for Saraswati Vihar students in Pitampura. 5-10 min from Rohini DC Chowk center. AIIMS faculty, 98% success rate. WhatsApp 88264-44334',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-saraswati-vihar',
     type: 'website',
     siteName: 'Cerebrum Biology Academy',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NEET Coaching Saraswati Vihar | Biology Classes Pitampura',
     description:
-      'Best NEET coaching for Saraswati Vihar students. 5-10 min from DC Chauk Rohini. AIIMS faculty, 98% success rate.',
+      'Best NEET coaching for Saraswati Vihar students. 5-10 min from DC Chowk Rohini. AIIMS faculty, 98% success rate.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-saraswati-vihar',

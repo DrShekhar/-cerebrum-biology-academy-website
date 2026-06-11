@@ -825,7 +825,7 @@ export const localities: Locality[] = [
     id: 'del-06a',
     name: 'Rohini Sector 9',
     slug: 'rohini-sector-9',
-    displayName: 'Rohini Sector 9, DC Chauk',
+    displayName: 'Rohini Sector 9, DC Chowk',
     city: 'Delhi',
     citySlug: 'delhi',
     region: 'North West Delhi',
@@ -833,9 +833,9 @@ export const localities: Locality[] = [
     pincode: ['110085'],
 
     seo: {
-      title: 'Best NEET Biology Coaching at DC Chauk Rohini Sector 9 | Offline & Hybrid | ₹48K',
+      title: 'Best NEET Biology Coaching at DC Chowk Rohini Sector 9 | Offline & Hybrid | ₹48K',
       description:
-        'Premier NEET Biology coaching AT DC Chauk, Sector 9 Rohini. AIIMS-trained faculty, hybrid mode, small batches 12-20. Walking distance from 180+ gated societies (Kadambari, Neelgiri, Vinoba Kunj). Fees ₹48-98K. Call 88264-44334',
+        'Premier NEET Biology coaching AT DC Chowk, Sector 9 Rohini. AIIMS-trained faculty, hybrid mode, small batches 12-20. Walking distance from 180+ gated societies (Kadambari, Neelgiri, Vinoba Kunj). Fees ₹48-98K. Call 88264-44334',
       keywords: [
         'biology coaching sector 9 rohini',
         'NEET coaching DC chauk',
@@ -855,30 +855,30 @@ export const localities: Locality[] = [
         'bhagirathi apartments',
         'japanese park rohini',
       ],
-      h1: 'Best NEET Biology Coaching at DC Chauk, Sector 9 Rohini - Offline & Hybrid Mode',
+      h1: 'Best NEET Biology Coaching at DC Chowk, Sector 9 Rohini - Offline & Hybrid Mode',
       metaRobots: 'index,follow',
     },
 
     coordinates: { lat: 28.7311, lng: 77.1139 },
     centerAddress:
-      'DC Chauk, Sector 9 Rohini - Physical center with Offline, Online & Hybrid classes',
+      'DC Chowk, Sector 9 Rohini - Physical center with Offline, Online & Hybrid classes',
 
     nearbyLandmarks: [
-      'DC Chauk Shopping Complex',
+      'DC Chowk Shopping Complex',
       'CGHS Kadambari Apartments',
       'CGHS Neelgiri Apartments',
       'Vinoba Kunj',
       'Bhagirathi Apartments',
       'Rohini East Metro (17 min walk)',
       'Japanese Park',
-      'Amba Tower DC Chauk',
+      'Amba Tower DC Chowk',
     ],
 
     transportLinks: {
       metros: ['Rohini East Metro', 'Rohini West Metro'],
       buses: ['877', '883', '950', '985', '805'],
       accessibility:
-        'Excellent Red Line Metro connectivity, walking distance from Sector 9, 13 residential areas. DC Chauk central location accessible from all Rohini sectors.',
+        'Excellent Red Line Metro connectivity, walking distance from Sector 9, 13 residential areas. DC Chowk central location accessible from all Rohini sectors.',
     },
 
     demographics: {
@@ -893,7 +893,7 @@ export const localities: Locality[] = [
         'Bhagwan Parshuram Institute',
         'University of Delhi North Campus',
       ],
-      coachingHubs: ['DC Chauk coaching zone', 'Sector 6-9 corridor'],
+      coachingHubs: ['DC Chowk coaching zone', 'Sector 6-9 corridor'],
       populationType: 'student-heavy',
       economicProfile: 'upper-middle',
     },
@@ -906,7 +906,7 @@ export const localities: Locality[] = [
       ],
       avgFees: 85000,
       ourAdvantage: [
-        'AT DC Chauk Sector 9 - Zero travel for 180+ gated societies',
+        'AT DC Chowk Sector 9 - Zero travel for 180+ gated societies',
         '15-20 min closer than Sector 6 competitor for most Sector 9/13 residents',
         'Hybrid mode: Attend offline OR online based on schedule (unique flexibility)',
         'Smaller batches 12-20 students vs 30 at specialist competitor, 50-100 at big brands',
@@ -914,24 +914,24 @@ export const localities: Locality[] = [
         '75% more affordable - ₹48-98K vs ₹1.6-3.5L at the 2nd-largest national NEET chain',
         'Biology specialization vs general multi-subject coaching',
         '24/7 WhatsApp doubt clearing (not class-hours only)',
-        'Physical presence in DC Chauk - no need to travel to Sector 6 or Sector 10',
+        'Physical presence in DC Chowk - no need to travel to Sector 6 or Sector 10',
       ],
       marketGap:
-        'Sector 9 DC Chauk area has NO specialist biology-only coaching with premium positioning. Nearest specialist is in Sector 6 (students must travel). Big brands in Sector 10 are expensive. We fill this gap with LOCAL, AFFORDABLE, PREMIUM biology coaching AT DC Chauk with hybrid flexibility.',
+        'Sector 9 DC Chowk area has NO specialist biology-only coaching with premium positioning. Nearest specialist is in Sector 6 (students must travel). Big brands in Sector 10 are expensive. We fill this gap with LOCAL, AFFORDABLE, PREMIUM biology coaching AT DC Chowk with hybrid flexibility.',
     },
 
     content: {
-      heroTitle: 'Premier NEET Biology Coaching at DC Chauk, Sector 9 Rohini',
+      heroTitle: 'Premier NEET Biology Coaching at DC Chowk, Sector 9 Rohini',
       heroSubtitle:
         'AIIMS-trained faculty • Hybrid Mode • Small batches 12-20 • Walking distance from 180+ societies',
       valueProposition:
-        'Only specialist NEET Biology coaching AT DC Chauk. Save 30-40 min daily travel vs Sector 6/10. Hybrid mode perfect for gated society students.',
+        'Only specialist NEET Biology coaching AT DC Chowk. Save 30-40 min daily travel vs Sector 6/10. Hybrid mode perfect for gated society students.',
       urgencyMessage:
-        'DC Chauk Sector 9 batch starting soon! First 15 enrollments get ₹8K discount.',
+        'DC Chowk Sector 9 batch starting soon! First 15 enrollments get ₹8K discount.',
       localChallenge:
-        'Sector 9 students either travel to Sector 6 (waste 15-20 min each way) or Sector 10 (25+ min) or settle for general coaching. We solve this with PREMIUM specialist Biology coaching right AT DC Chauk.',
+        'Sector 9 students either travel to Sector 6 (waste 15-20 min each way) or Sector 10 (25+ min) or settle for general coaching. We solve this with PREMIUM specialist Biology coaching right AT DC Chowk.',
       successMetric:
-        '92% of DC Chauk area students improved Biology scores by 60+ marks. Zero travel time = more study time.',
+        '92% of DC Chowk area students improved Biology scores by 60+ marks. Zero travel time = more study time.',
     },
 
     socialProof: {
@@ -939,10 +939,10 @@ export const localities: Locality[] = [
       topScore: 356,
       testimonialIds: [],
       successStories: [
-        'Priya from CGHS Kadambari Apartments scored 345/360 in Biology, secured AIIMS Delhi. "Saved 2 hours daily with coaching at DC Chauk vs traveling to Sector 6."',
+        'Priya from CGHS Kadambari Apartments scored 345/360 in Biology, secured AIIMS Delhi. "Saved 2 hours daily with coaching at DC Chowk vs traveling to Sector 6."',
         'Rahul from Neelgiri Apartments improved from 210 to 338 in just 9 months with hybrid mode. Now at Maulana Azad Medical College. "Hybrid flexibility was game-changer."',
         'Ananya from Vinoba Kunj - Dropper batch, went from 245 to 332. "Small batch of 15 students gave me personal attention impossible at big 50-student institutes."',
-        'Rohan from Bhagirathi Apartments scored 340/360 while balancing CBSE Boards. "AIIMS-trained faculty at DC Chauk made all the difference. No need to go to expensive Sector 10 centers."',
+        'Rohan from Bhagirathi Apartments scored 340/360 while balancing CBSE Boards. "AIIMS-trained faculty at DC Chowk made all the difference. No need to go to expensive Sector 10 centers."',
       ],
     },
 
@@ -957,19 +957,19 @@ export const localities: Locality[] = [
 
     faqs: [
       {
-        question: 'Where exactly is your Rohini Sector 9 DC Chauk center located?',
+        question: 'Where exactly is your Rohini Sector 9 DC Chowk center located?',
         answer:
-          'Our center is located AT DC Chauk, Sector 9 Rohini - the central commercial hub. Walking distance (5-10 min) from CGHS Kadambari, Neelgiri, Vinoba Kunj, Bhagirathi, Mayur, Amba Enclave, and 180+ gated societies. Just 17 min walk from Rohini East Metro. Easy access from Sectors 8, 9, 11, 13, 14. Call +91-88264-44334 for exact directions.',
+          'Our center is located AT DC Chowk, Sector 9 Rohini - the central commercial hub. Walking distance (5-10 min) from CGHS Kadambari, Neelgiri, Vinoba Kunj, Bhagirathi, Mayur, Amba Enclave, and 180+ gated societies. Just 17 min walk from Rohini East Metro. Easy access from Sectors 8, 9, 11, 13, 14. Call +91-88264-44334 for exact directions.',
       },
       {
-        question: 'Do you offer offline classes at the Sector 9 DC Chauk center?',
+        question: 'Do you offer offline classes at the Sector 9 DC Chowk center?',
         answer:
-          'Yes! We offer three modes: (1) Offline classes at our DC Chauk physical center, (2) Online live classes, (3) Hybrid mode where you can switch between offline and online based on your schedule. This flexibility is unique and perfect for gated society students who want convenience.',
+          'Yes! We offer three modes: (1) Offline classes at our DC Chowk physical center, (2) Online live classes, (3) Hybrid mode where you can switch between offline and online based on your schedule. This flexibility is unique and perfect for gated society students who want convenience.',
       },
       {
         question: 'How are you different from the biology coaching in Sector 6?',
         answer:
-          'Key differences: (1) Location: We are AT DC Chauk Sector 9, saving 15-20 min travel each way vs Sector 6. (2) Batch size: 12-20 students vs 30+ at other places. (3) Faculty: Multiple AIIMS-trained doctors vs single-trainer model. (4) Hybrid mode: Available at our center, not elsewhere. (5) Doubt clearing: 24/7 WhatsApp access vs class-hours only. (6) Transparent pricing ₹48-98K.',
+          'Key differences: (1) Location: We are AT DC Chowk Sector 9, saving 15-20 min travel each way vs Sector 6. (2) Batch size: 12-20 students vs 30+ at other places. (3) Faculty: Multiple AIIMS-trained doctors vs single-trainer model. (4) Hybrid mode: Available at our center, not elsewhere. (5) Doubt clearing: 24/7 WhatsApp access vs class-hours only. (6) Transparent pricing ₹48-98K.',
       },
       {
         question: 'Which gated societies are walking distance from your center?',
@@ -979,7 +979,7 @@ export const localities: Locality[] = [
       {
         question: 'What are your fees and what do they include?',
         answer:
-          'Fees: Pursuit Series ₹48K-88K (Class 11-12), Ascent Series ₹58K-76K (most popular, NEET focused), Pinnacle Series ₹98K-1.8L (Dropper intensive). All include study material, tests, doubt sessions, hybrid mode access, 24/7 WhatsApp support. EMI options available. First 15 DC Chauk enrollments get ₹8K discount! 75% cheaper than the 2nd-largest national NEET chain Sector 10.',
+          'Fees: Pursuit Series ₹48K-88K (Class 11-12), Ascent Series ₹58K-76K (most popular, NEET focused), Pinnacle Series ₹98K-1.8L (Dropper intensive). All include study material, tests, doubt sessions, hybrid mode access, 24/7 WhatsApp support. EMI options available. First 15 DC Chowk enrollments get ₹8K discount! 75% cheaper than the 2nd-largest national NEET chain Sector 10.',
       },
       {
         question: 'Do you have AIIMS-trained faculty?',
@@ -994,7 +994,7 @@ export const localities: Locality[] = [
       {
         question: 'How do I enroll or book a free demo class?',
         answer:
-          'Call/WhatsApp +91-88264-44334 for immediate response. Visit our DC Chauk Sector 9 office (5 min from Kadambari/Neelgiri). Or fill form on cerebrumbiologyacademy.com/admissions. Free demo class available. Parents welcome to visit center before enrollment. First 15 DC Chauk enrollments get ₹8K additional discount!',
+          'Call/WhatsApp +91-88264-44334 for immediate response. Visit our DC Chowk Sector 9 office (5 min from Kadambari/Neelgiri). Or fill form on cerebrumbiologyacademy.com/admissions. Free demo class available. Parents welcome to visit center before enrollment. First 15 DC Chowk enrollments get ₹8K additional discount!',
       },
     ],
 

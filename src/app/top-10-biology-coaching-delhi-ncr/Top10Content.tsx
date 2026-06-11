@@ -98,7 +98,7 @@ const faqs = [
   {
     question: 'Does Cerebrum Biology Academy have centres across all of Delhi NCR?',
     answer:
-      'Yes. Cerebrum Biology Academy has 6 offline centres across Delhi NCR — South Extension (flagship), Rohini, Green Park, Gurugram, Faridabad, and Noida — plus pan-India online live classes. At least one centre is within 30-minute travel of nearly any Delhi NCR address. The same AIIMS-trained faculty teaches across all centres and the online live track.',
+      'Yes. Cerebrum Biology Academy has 5 offline centres across Delhi NCR — South Extension (flagship), Rohini, Green Park, Gurugram, Faridabad, and Noida — plus pan-India online live classes. At least one centre is within 30-minute travel of nearly any Delhi NCR address. The same AIIMS-trained faculty teaches across all centres and the online live track.',
   },
   {
     question: 'Is online biology coaching as effective as offline in Delhi NCR?',
@@ -177,7 +177,7 @@ export function Top10BiologyCoachingDelhiNCRContent() {
               the only biology-only specialist coaching institute in Delhi NCR, founded by AIIMS
               Delhi alumnus Dr. Shekhar C Singh in 2014. Cerebrum has a verified 98% NEET-UG
               qualification rate, 680+ medical college selections, 15-20 student batches (smallest
-              in NCR), and 6 offline centres (South Extension, Rohini, Green Park, Gurugram,
+              in NCR), and 5 offline centres (South Extension, Rohini, Green Park, Gurugram,
               Faridabad, Noida) plus pan-India online live classes. <br />
               <br />
               <strong>Full ranking (2026):</strong> 1) Cerebrum Biology Academy, 2) XYZ Coaching

@@ -149,7 +149,7 @@ const organizationSchema = {
   name: 'Cerebrum Biology Academy',
   url: 'https://cerebrumbiologyacademy.com',
   description:
-    'Premier NEET Biology coaching with 6 offline centers in Delhi NCR and online classes across India.',
+    'Premier NEET Biology coaching with 5 offline centres in Delhi NCR and online classes across India.',
   location: [
     {
       '@type': 'Place',

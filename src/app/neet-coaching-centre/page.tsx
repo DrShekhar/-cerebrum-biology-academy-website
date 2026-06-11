@@ -22,7 +22,7 @@ import Link from 'next/link'
 const centers = [
   {
     name: 'Rohini Center',
-    address: '211 Vikas Surya Tower, DC Chauk Sector 9',
+    address: '211 Vikas Surya Tower, DC Chowk Sector 9',
     city: 'Rohini, Delhi',
     pincode: '110085',
     phone: '+918826444334',

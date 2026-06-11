@@ -68,8 +68,8 @@ export const CONTACT_INFO = {
       postalCode: '110049',
       addressCountry: 'IN',
       geo: {
-        latitude: 28.5678,
-        longitude: 77.2234,
+        latitude: 28.5725,
+        longitude: 77.2217,
       },
       mapUrl: 'https://maps.google.com/maps?q=South+Extension+Part+2+Delhi',
       googleBusinessUrl: 'https://g.page/cerebrum-biology-academy',
@@ -82,14 +82,16 @@ export const CONTACT_INFO = {
     },
     rohini: {
       name: 'Cerebrum Biology Academy - Rohini',
-      streetAddress: '211 Vikas Surya Tower, DC Chauk, Sector 9',
+      streetAddress: '211 Vikas Surya Tower, DC Chowk, Sector 9',
       addressLocality: 'Rohini, Delhi',
       addressRegion: 'Delhi',
       postalCode: '110085',
       addressCountry: 'IN',
+      // Verified: DC Chowk, Rohini Sector 9 (previous value was the generic
+      // Delhi centroid — wrong by ~1.3km).
       geo: {
-        latitude: 28.7041,
-        longitude: 77.1025,
+        latitude: 28.7143,
+        longitude: 77.1117,
       },
       mapUrl: 'https://maps.google.com/maps?q=DC+Chowk+Rohini+Delhi',
       googleBusinessUrl: 'https://g.page/cerebrum-biology-academy-rohini',
@@ -319,7 +321,8 @@ export const CONTACT_INFO = {
       open: '10:00',
       close: '18:00',
     },
-    displayText: 'Mon–Sat: 9:00 AM – 8:00 PM · Sun: 10:00 AM – 6:00 PM (online sessions available outside these hours)',
+    displayText:
+      'Mon–Sat: 9:00 AM – 8:00 PM · Sun: 10:00 AM – 6:00 PM (online sessions available outside these hours)',
   },
 
   // Social media

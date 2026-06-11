@@ -26,7 +26,7 @@ export const offlineLocations: Location[] = [
   {
     id: 'rohini',
     name: 'Rohini Center',
-    address: '211, Vikas Surya Tower, DC Chauk, Rohini Sector 9',
+    address: '211, Vikas Surya Tower, DC Chowk, Rohini Sector 9',
     city: 'New Delhi',
     pincode: '110085',
     phone: ['+918826444334', '+919311946297'],
