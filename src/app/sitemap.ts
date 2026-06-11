@@ -5234,6 +5234,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.95,
     },
+    // Global hub — international audience anchor (Phase 3 of global repositioning)
+    {
+      url: `${baseUrl}/best-biology-tutor-global`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
     // neet-dropper-crash-course-2025 → redirects to /neet-crash-course
     // ===== City-specific dropper batch pages (Apr 2026 expansion) =====
     {

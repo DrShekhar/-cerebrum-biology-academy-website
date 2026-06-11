@@ -310,6 +310,13 @@ export default function DrShekharBiologyFacultyIndiaPage() {
             </div>
             <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-300">
               <Link
+                href="/best-biology-tutor-global"
+                className="underline underline-offset-2 hover:text-yellow-300"
+              >
+                Global students (any nationality) →
+              </Link>
+              <span>·</span>
+              <Link
                 href="/top-biology-faculty-india-2026"
                 className="underline underline-offset-2 hover:text-yellow-300"
               >
