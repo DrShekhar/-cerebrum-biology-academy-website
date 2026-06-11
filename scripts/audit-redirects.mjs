@@ -1,46 +1,10 @@
-import {
-  seoPageConsolidationRedirects,
-  neetCoachingLocationRedirects,
-  localAreaPageRedirects,
-  gsc404CleanupRedirects,
-  thinPageConsolidationRedirects,
-  gsc404CleanupBatch3Redirects,
-  hubPageConsolidationRedirects,
-  cannibalizationConsolidationRedirects,
-  areaConsolidationRedirects,
-  localPageConsolidationBatch2,
-  gurugramConsolidationRedirects,
-  noidaConsolidationRedirects,
-  faridabadConsolidationRedirects,
-  ghaziabadConsolidationRedirects,
-  rohiniConsolidationRedirects,
-  datGamsatSynonymRedirects,
-  usmleStep1SynonymRedirects,
-  neetUGBiologySynonymRedirects,
-  neetFoundationSynonymRedirects,
-} from '../src/config/seo-redirects.mjs'
+import * as redirectModule from '../src/config/seo-redirects.mjs'
 
-const arrays = {
-  seoPage: seoPageConsolidationRedirects,
-  neetLocation: neetCoachingLocationRedirects,
-  localArea: localAreaPageRedirects,
-  gsc404: gsc404CleanupRedirects,
-  thinPage: thinPageConsolidationRedirects,
-  batch3: gsc404CleanupBatch3Redirects,
-  hubPage: hubPageConsolidationRedirects,
-  cannibalization: cannibalizationConsolidationRedirects,
-  areaConsolidation: areaConsolidationRedirects,
-  localBatch2: localPageConsolidationBatch2,
-  gurugram: gurugramConsolidationRedirects,
-  noida: noidaConsolidationRedirects,
-  faridabad: faridabadConsolidationRedirects,
-  ghaziabad: ghaziabadConsolidationRedirects,
-  rohini: rohiniConsolidationRedirects,
-  datGamsatSynonym: datGamsatSynonymRedirects,
-  usmleStep1Synonym: usmleStep1SynonymRedirects,
-  neetUGBiologySynonym: neetUGBiologySynonymRedirects,
-  neetFoundationSynonym: neetFoundationSynonymRedirects,
-}
+// Dynamically pick up every exported redirect array so this audit can never
+// go stale when a new array is added to seo-redirects.mjs / next.config.mjs.
+const arrays = Object.fromEntries(
+  Object.entries(redirectModule).filter(([, v]) => Array.isArray(v))
+)
 
 // Collect all sources with their destinations and origin array
 const sourceMap = new Map()
