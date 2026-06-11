@@ -223,7 +223,7 @@ export function EnhancedCourseFinderQuiz({
           price: 98000,
           originalPrice: 108000,
           duration: '1 Year',
-          successRate: '94.8%',
+          successRate: '98%',
           features: [
             '10-12 students per batch',
             'Personal mentorship from Dr. Shekhar (AIIMS)',
@@ -233,7 +233,7 @@ export function EnhancedCourseFinderQuiz({
           ],
           highlights: [
             '15,000+ successful students',
-            '94.8% NEET success rate',
+            '98% NEET success rate',
             'Premium materials (₹15K value)',
           ],
           match: 98,
@@ -511,7 +511,10 @@ export function EnhancedCourseFinderQuiz({
 
   const handleEnrollNow = () => {
     if (recommendation) {
-      window.open(`https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20${encodeURIComponent(recommendation.primary.name)}%20(Rs%20${recommendation.primary.price}).%20Please%20share%20details.`, '_blank')
+      window.open(
+        `https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20${encodeURIComponent(recommendation.primary.name)}%20(Rs%20${recommendation.primary.price}).%20Please%20share%20details.`,
+        '_blank'
+      )
     }
   }
 
@@ -537,9 +540,7 @@ export function EnhancedCourseFinderQuiz({
 
   if (currentStep === 'recommendation' && recommendation) {
     return (
-      <div
-        className={`bg-white rounded-2xl p-6 max-w-2xl shadow-2xl ${className}`}
-      >
+      <div className={`bg-white rounded-2xl p-6 max-w-2xl shadow-2xl ${className}`}>
         <div className="text-center space-y-6">
           {/* Match Score */}
           <div className="flex items-center justify-center gap-2 text-blue-600 text-sm">
@@ -679,9 +680,7 @@ export function EnhancedCourseFinderQuiz({
   const currentStepData = quizFlow[currentStep]
 
   return (
-    <div
-      className={`bg-white rounded-2xl p-6 max-w-xl shadow-2xl ${className}`}
-    >
+    <div className={`bg-white rounded-2xl p-6 max-w-xl shadow-2xl ${className}`}>
       {/* Quiz Header */}
       <div className="text-center mb-4">
         <p className="text-sm text-blue-600 mb-1">Find your perfect course in 60 seconds</p>
@@ -700,27 +699,25 @@ export function EnhancedCourseFinderQuiz({
       </div>
 
       {/* Current Question */}
-<div
-          key={currentStep}
-         className="animate-fadeInUp">
-          <p className="text-gray-900 mb-4 font-medium text-center">{currentStepData.question}</p>
+      <div key={currentStep} className="animate-fadeInUp">
+        <p className="text-gray-900 mb-4 font-medium text-center">{currentStepData.question}</p>
 
-          <div className="grid gap-3">
-            {currentStepData.options.map((option, index) => (
-              <button
-                key={option.value}
-                onClick={() => handleAnswer(option.value)}
-                className="quiz-option bg-gray-50 hover:bg-gray-100 text-gray-900 p-4 rounded-lg transition-all duration-200 text-left group hover:ring-2 hover:ring-blue-600 border border-blue-100 animate-fadeInUp"
-              >
-                <div className="font-medium">{option.label}</div>
-                {option.description && (
-                  <div className="text-xs text-gray-600 mt-1">{option.description}</div>
-                )}
-              </button>
-            ))}
-          </div>
+        <div className="grid gap-3">
+          {currentStepData.options.map((option, index) => (
+            <button
+              key={option.value}
+              onClick={() => handleAnswer(option.value)}
+              className="quiz-option bg-gray-50 hover:bg-gray-100 text-gray-900 p-4 rounded-lg transition-all duration-200 text-left group hover:ring-2 hover:ring-blue-600 border border-blue-100 animate-fadeInUp"
+            >
+              <div className="font-medium">{option.label}</div>
+              {option.description && (
+                <div className="text-xs text-gray-600 mt-1">{option.description}</div>
+              )}
+            </button>
+          ))}
         </div>
-{/* Enhanced Progress Indicator */}
+      </div>
+      {/* Enhanced Progress Indicator */}
       <div className="mt-6">
         <QuizProgress
           totalSteps={Object.keys(quizFlow).length}

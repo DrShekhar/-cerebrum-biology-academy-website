@@ -21,10 +21,16 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Course Finder Quiz - Find Your Perfect NEET Biology Course',
-    description: 'Take our smart quiz to find the perfect NEET Biology course based on your class, experience, and study schedule. Get personalized recommendations in 60 seconds.',
+    description:
+      'Take our smart quiz to find the perfect NEET Biology course based on your class, experience, and study schedule. Get personalized recommendations in 60 seconds.',
   },
 
-  openGraph: { title: 'Course Finder Quiz - Find Your Perfect NEET Biology Course', description: 'Take our smart quiz to find the perfect NEET Biology course based on your class, experience, and study schedule. Get personalized recommendations in 60 seconds.', type: 'website' },
+  openGraph: {
+    title: 'Course Finder Quiz - Find Your Perfect NEET Biology Course',
+    description:
+      'Take our smart quiz to find the perfect NEET Biology course based on your class, experience, and study schedule. Get personalized recommendations in 60 seconds.',
+    type: 'website',
+  },
 }
 
 export default function CourseFinderPage() {
@@ -61,7 +67,7 @@ export default function CourseFinderPage() {
             <div className="flex items-center gap-2 bg-white rounded-full px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 shadow-sm border border-gray-200">
               <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse flex-shrink-0" />
               <span className="text-xs sm:text-sm font-medium text-gray-700 whitespace-nowrap">
-                94.8% Success
+                98% Success
               </span>
             </div>
             <div className="flex items-center gap-2 bg-white rounded-full px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 shadow-sm border border-gray-200">

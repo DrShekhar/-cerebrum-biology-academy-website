@@ -52,7 +52,7 @@ export function SimplifiedCourseCards({ className = '' }: SimplifiedCourseCardsP
       details: {
         duration: '2 Years',
         features: ['Complete NCERT', 'Advanced Problems', 'Regular Tests', 'Personal Mentoring'],
-        highlights: ['15,000+ Students', '94.8% Success Rate', 'Most Popular'],
+        highlights: ['15,000+ Students', '98% Success Rate', 'Most Popular'],
         description:
           'Complete 2-year NEET preparation program with comprehensive coverage of all topics and regular assessments.',
       },
@@ -138,76 +138,74 @@ export function SimplifiedCourseCards({ className = '' }: SimplifiedCourseCardsP
         </div>
 
         {/* Expandable Details */}
-{expandedCourse && (
-            <div
-              className="course-details bg-gray-50 rounded-xl p-6 overflow-hidden animate-fadeInUp"
-            >
-              {(() => {
-                const course = courses.find((c) => c.id === expandedCourse)
-                if (!course) return null
+        {expandedCourse && (
+          <div className="course-details bg-gray-50 rounded-xl p-6 overflow-hidden animate-fadeInUp">
+            {(() => {
+              const course = courses.find((c) => c.id === expandedCourse)
+              if (!course) return null
 
-                return (
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                        {course.title} Program Details
-                      </h3>
-                      <p className="text-gray-700 mb-6">{course.details.description}</p>
+              return (
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      {course.title} Program Details
+                    </h3>
+                    <p className="text-gray-700 mb-6">{course.details.description}</p>
 
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-3">Program Features:</h4>
-                        <ul className="space-y-2">
-                          {course.details.features.map((feature, index) => (
-                            <li key={index} className="flex items-center gap-2">
-                              <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0" />
-                              <span className="text-gray-700">{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-gray-900 mb-3">Program Features:</h4>
+                      <ul className="space-y-2">
+                        {course.details.features.map((feature, index) => (
+                          <li key={index} className="flex items-center gap-2">
+                            <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0" />
+                            <span className="text-gray-700">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
+                  </div>
 
-                    <div>
-                      <div className="bg-white rounded-lg p-6 shadow-sm">
-                        <h4 className="font-semibold text-gray-900 mb-4">Success Highlights:</h4>
-                        <div className="space-y-3 mb-6">
-                          {course.details.highlights.map((highlight, index) => (
-                            <div key={index} className="flex items-center gap-2">
-                              <Star className="h-5 w-5 text-yellow-500" />
-                              <span className="text-gray-700">{highlight}</span>
-                            </div>
-                          ))}
+                  <div>
+                    <div className="bg-white rounded-lg p-6 shadow-sm">
+                      <h4 className="font-semibold text-gray-900 mb-4">Success Highlights:</h4>
+                      <div className="space-y-3 mb-6">
+                        {course.details.highlights.map((highlight, index) => (
+                          <div key={index} className="flex items-center gap-2">
+                            <Star className="h-5 w-5 text-yellow-500" />
+                            <span className="text-gray-700">{highlight}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="border-t pt-4">
+                        <div className="text-sm text-gray-700 mb-2">Duration</div>
+                        <div className="text-lg font-semibold text-gray-900 mb-4">
+                          {course.details.duration}
                         </div>
 
-                        <div className="border-t pt-4">
-                          <div className="text-sm text-gray-700 mb-2">Duration</div>
-                          <div className="text-lg font-semibold text-gray-900 mb-4">
-                            {course.details.duration}
-                          </div>
-
-                          <div className="flex gap-3">
-                            <button
-                              onClick={() => handleExplore(course.id)}
-                              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-200"
-                            >
-                              View Full Details
-                            </button>
-                            <button
-                              onClick={() => router.push('/demo')}
-                              className="flex-1 border border-blue-600 text-blue-600 hover:bg-blue-50 py-2 px-4 rounded-lg transition-colors duration-200"
-                            >
-                              Book Demo
-                            </button>
-                          </div>
+                        <div className="flex gap-3">
+                          <button
+                            onClick={() => handleExplore(course.id)}
+                            className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-200"
+                          >
+                            View Full Details
+                          </button>
+                          <button
+                            onClick={() => router.push('/demo')}
+                            className="flex-1 border border-blue-600 text-blue-600 hover:bg-blue-50 py-2 px-4 rounded-lg transition-colors duration-200"
+                          >
+                            Book Demo
+                          </button>
                         </div>
                       </div>
                     </div>
                   </div>
-                )
-              })()}
-            </div>
-          )}
-</div>
+                </div>
+              )
+            })()}
+          </div>
+        )}
+      </div>
     </section>
   )
 }

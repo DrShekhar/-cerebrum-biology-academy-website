@@ -43,6 +43,56 @@ const PaymentOptionsDisplay = dynamic(
   { ssr: false }
 )
 
+// FAQ schema — /pricing is the top buyer-intent page and previously carried
+// no FAQPage markup at all ("how much does NEET coaching cost" is among the
+// highest-value AEO queries). Answers mirror the visible fee content below.
+const pricingFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How much does NEET Biology coaching cost at Cerebrum Biology Academy?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'NEET Biology courses range from ₹45,000 to ₹1,56,000 per year depending on class (11, 12, or dropper) and tier — Pursuit (larger batch), Ascent, or Pinnacle (smallest batch with maximum 1:1 time). EMI options are available, and every student can take a free demo class before paying.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between the Pursuit, Ascent and Pinnacle tiers?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'All tiers cover the full NEET Biology syllabus with AIIMS-trained faculty and weekly tests. They differ in batch size and personal attention: Pursuit is the value tier with larger batches, Ascent balances batch size and mentorship, and Pinnacle offers the smallest batches plus dedicated 1:1 doubt and mentorship time.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are EMI or installment options available?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Fees can be paid in installments or via EMI. Details are confirmed during counselling — call or WhatsApp +91-88264-44334.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How is pricing set for international students (IB, AP, MCAT, NEET from abroad)?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'International programmes are geo-priced per region and shown in local currency on each programme page — for example MCAT Bio/Biochem from $449, IB Biology 1:1 from $75/hour, GAMSAT Section III from £399, and NEET-NRI batches from roughly $300/month. A free trial class precedes any payment.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is there a free demo class before enrolling?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — every programme starts with a free demo class with no payment or commitment. Book it at cerebrumbiologyacademy.com/book-free-demo or on WhatsApp at +91-88264-44334.',
+      },
+    },
+  ],
+}
+
 // BreadcrumbList Schema for improved SERP display and CTR
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -380,6 +430,10 @@ export default function PricingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingFaqSchema) }}
+      />
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-x-hidden">
         {/* Hero Section with enhanced gradient */}
         <div className="relative bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-900 text-white py-8 sm:py-10 lg:py-12 overflow-hidden">
@@ -408,11 +462,13 @@ export default function PricingPage() {
                   With India&apos;s Best Faculty
                 </span>
               </h1>
-              <p className="text-sm sm:text-base md:text-lg text-blue-200 max-w-2xl mx-auto px-4 leading-relaxed">
-                Small batches, personalized attention, and proven results.
-                <span className="block mt-2 text-yellow-300 font-semibold">
-                  Courses starting from ₹45,000/year
-                </span>
+              <p
+                className="text-sm sm:text-base md:text-lg text-blue-200 max-w-2xl mx-auto px-4 leading-relaxed"
+                data-speakable="summary"
+              >
+                NEET Biology courses cost ₹45,000–₹1,56,000 per year across three tiers — Pursuit,
+                Ascent and Pinnacle — based on batch size and 1:1 time. EMI available, free demo
+                class before any payment.
               </p>
             </div>
 

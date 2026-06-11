@@ -105,7 +105,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
       originalPrice: 85000,
       features: ['Complete NCERT', 'Advanced Problems', 'Mock Tests', 'Personal Mentoring'],
       highlights: ['Comprehensive Coverage', 'Expert Faculty', 'Proven Methods'],
-      successRate: 94.8,
+      successRate: 98,
       studentsEnrolled: 1200,
       batchSize: 30,
       faculty: 'Dr. Rajesh Kumar',
@@ -256,14 +256,10 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1
-              className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp"
-            >
+            <h1 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
               Explore Our NEET Biology Courses
             </h1>
-            <p
-              className="text-xl text-gray-600 max-w-3xl mx-auto animate-fadeInUp"
-            >
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fadeInUp">
               Take your time to explore our comprehensive programs. Each course is designed for
               specific student needs and goals.
             </p>
@@ -430,14 +426,10 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1
-              className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp"
-            >
+            <h1 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
               Course Comparison
             </h1>
-            <p
-              className="text-xl text-gray-600 animate-fadeInUp"
-            >
+            <p className="text-xl text-gray-600 animate-fadeInUp">
               Compare features, pricing, and outcomes side by side
             </p>
           </div>
@@ -576,14 +568,10 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1
-              className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp"
-            >
+            <h1 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
               Real Success Stories
             </h1>
-            <p
-              className="text-xl text-gray-600 animate-fadeInUp"
-            >
+            <p className="text-xl text-gray-600 animate-fadeInUp">
               See how our students transformed their dreams into reality
             </p>
           </div>
@@ -591,9 +579,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
           {/* Success Stories */}
           <div className="space-y-8 mb-12">
             {successStories.map((story, index) => (
-              <div
-                key={story.id}
-               className="animate-fadeInUp">
+              <div key={story.id} className="animate-fadeInUp">
                 <PremiumCard variant="luxury" className="overflow-hidden">
                   <div className="p-8">
                     <div className="grid lg:grid-cols-3 gap-8">
@@ -730,14 +716,10 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1
-              className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp"
-            >
+            <h1 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
               Ready to Start Your Journey?
             </h1>
-            <p
-              className="text-xl text-gray-600 animate-fadeInUp"
-            >
+            <p className="text-xl text-gray-600 animate-fadeInUp">
               Book a free counseling session to discuss your personalized NEET preparation plan
             </p>
           </div>

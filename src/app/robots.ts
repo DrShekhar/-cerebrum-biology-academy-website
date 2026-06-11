@@ -113,6 +113,30 @@ export default function robots(): MetadataRoute.Robots {
         allow: ['/', '/llms.txt', '/humans.txt', '/ai.txt'],
         disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/'],
       },
+      // ClaudeBot is Anthropic's CURRENT crawler token (Claude-Web/Anthropic-AI
+      // are legacy); OAI-SearchBot powers ChatGPT search citations (distinct
+      // from GPTBot training); Perplexity-User is Perplexity's user-triggered
+      // fetcher; Applebot-Extended feeds Apple Intelligence.
+      {
+        userAgent: 'ClaudeBot',
+        allow: ['/', '/llms.txt', '/humans.txt', '/ai.txt'],
+        disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/'],
+      },
+      {
+        userAgent: 'OAI-SearchBot',
+        allow: ['/', '/llms.txt', '/humans.txt', '/ai.txt'],
+        disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/'],
+      },
+      {
+        userAgent: 'Perplexity-User',
+        allow: ['/', '/llms.txt', '/humans.txt', '/ai.txt'],
+        disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/'],
+      },
+      {
+        userAgent: 'Applebot-Extended',
+        allow: ['/', '/llms.txt', '/humans.txt', '/ai.txt'],
+        disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/'],
+      },
       {
         userAgent: 'Google-Extended',
         allow: ['/', '/llms.txt', '/humans.txt', '/ai.txt'],
