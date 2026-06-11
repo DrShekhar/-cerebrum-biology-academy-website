@@ -337,14 +337,14 @@ export default function CareersPage() {
     e.preventDefault()
     setIsSubmitting(true)
     try {
-      await fetch('/api/contact/inquiry', {
+      const res = await fetch('/api/contact/inquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: applicationForm.name,
           email: applicationForm.email,
           phone: applicationForm.phone,
-          course: 'career-application',
+          supportType: 'general',
           message: `Career application for: ${applicationForm.position}. Experience: ${applicationForm.experience}. Cover letter: ${applicationForm.coverLetter}`,
           source: 'careers-page',
         }),
@@ -357,7 +357,7 @@ export default function CareersPage() {
         Position: applicationForm.position,
         Experience: applicationForm.experience,
       })
-      setSubmitSuccess(true)
+      setSubmitSuccess(res.ok)
     } finally {
       setIsSubmitting(false)
     }
@@ -368,9 +368,7 @@ export default function CareersPage() {
       {/* Hero Section */}
       <section className="bg-blue-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <h1 className="text-5xl font-bold mb-6">
               Join Our Mission to Shape
               <span className="block text-yellow-300">Future Doctors</span>
@@ -405,9 +403,7 @@ export default function CareersPage() {
       {/* Company Values */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Values & Culture</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We foster an environment where passion meets purpose, and every team member
@@ -447,9 +443,7 @@ export default function CareersPage() {
       {/* Open Positions */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Open Positions</h2>
             <p className="text-xl text-gray-600">
               Find the perfect role to advance your career and make a meaningful impact
@@ -552,9 +546,7 @@ export default function CareersPage() {
       {/* Benefits & Perks */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Benefits & Perks</h2>
             <p className="text-xl text-gray-600">
               We invest in our team's growth, well-being, and happiness
@@ -579,18 +571,14 @@ export default function CareersPage() {
       {/* Application Form */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Ready to Join Us?</h2>
             <p className="text-xl text-gray-600">
               Submit your application and take the first step towards a rewarding career
             </p>
           </div>
 
-          <div
-            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
             <form onSubmit={handleApplicationSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 <div>

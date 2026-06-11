@@ -27,6 +27,7 @@ interface CityInlineEnquiryFormProps {
   // Optional copy overrides — let pages tune the form for their context.
   title?: string
   subtitle?: string
+  message?: string
 }
 
 export function CityInlineEnquiryForm({
@@ -34,6 +35,7 @@ export function CityInlineEnquiryForm({
   slug,
   title,
   subtitle,
+  message: messageOverride,
 }: CityInlineEnquiryFormProps) {
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
@@ -64,7 +66,9 @@ export function CityInlineEnquiryForm({
           name: name.trim(),
           phone,
           area: area.trim() || cityName,
-          message: `Looking for NEET / Biology coaching in ${cityName}.${area ? ` Area: ${area}.` : ''}`,
+          message:
+            messageOverride ||
+            `Looking for NEET / Biology coaching in ${cityName}.${area ? ` Area: ${area}.` : ''}`,
           source: `city-hub-inline:${slug}`,
           pageUrl: typeof window !== 'undefined' ? window.location.href : undefined,
         }),

@@ -13,12 +13,19 @@ const contactInquirySchema = z.object({
   phone: z
     .string()
     .regex(
-      /^[6-9]\d{9}$/,
-      'Please enter a valid 10-digit Indian mobile number (e.g., 8826444334). We accept formats like +91 88264 44334, 91-8826444334, or just 8826444334.'
+      /^\+?\d{8,15}$/,
+      'Please enter a valid phone number (8-15 digits). Indian numbers like 8826444334 and international numbers like +1 555 123 4567 are both accepted.'
     ),
-  email: z.string().email('Please enter a valid email address'),
+  email: z
+    .string()
+    .email('Please enter a valid email address')
+    .optional()
+    .or(z.literal(''))
+    .transform((v) => v || undefined),
   center: z.string().max(50).optional(),
-  supportType: z.enum(['academic', 'admission', 'technical', 'counseling', 'general']),
+  supportType: z
+    .enum(['academic', 'admission', 'technical', 'counseling', 'general'])
+    .default('general'),
   message: z.string().min(10).max(2000),
   timestamp: z.string().optional(),
   source: z.string().max(100).optional(),
@@ -34,7 +41,10 @@ type ContactInquiryInput = z.infer<typeof contactInquirySchema>
 export async function POST(request: NextRequest) {
   try {
     // Rate limit: 5 inquiries per hour per IP
-    const rateLimitResult = await rateLimit(request, { maxRequests: 1000, windowMs: 60 * 60 * 1000 })
+    const rateLimitResult = await rateLimit(request, {
+      maxRequests: 1000,
+      windowMs: 60 * 60 * 1000,
+    })
     if (!rateLimitResult.success) {
       return NextResponse.json(
         {
@@ -53,9 +63,18 @@ export async function POST(request: NextRequest) {
 
     const rawBody = await request.json()
 
-    // Normalize phone number (remove +91 prefix, spaces, etc.)
-    if (rawBody.phone) {
-      rawBody.phone = rawBody.phone.replace(/[^\d]/g, '').slice(-10)
+    // Normalize phone: keep a leading + (international), strip everything else.
+    // Indian numbers (with or without +91/91/0 prefix) collapse to bare 10 digits
+    // so existing follow-up tooling keeps working; other countries keep their
+    // country code so callbacks/WhatsApp reach them.
+    if (typeof rawBody.phone === 'string') {
+      const hasPlus = rawBody.phone.trim().startsWith('+')
+      const digits = rawBody.phone.replace(/[^\d]/g, '')
+      if (/^(91)?[6-9]\d{9}$/.test(digits) || /^0[6-9]\d{9}$/.test(digits)) {
+        rawBody.phone = digits.slice(-10)
+      } else {
+        rawBody.phone = (hasPlus ? '+' : '') + digits
+      }
     }
 
     // Validate with Zod
@@ -118,7 +137,7 @@ export async function POST(request: NextRequest) {
     const inquiry = await prisma.contact_inquiries.create({
       data: {
         name: data.name,
-        email: data.email,
+        email: data.email || '',
         phone: data.phone,
         center: data.center || null,
         supportType: data.supportType,
@@ -257,6 +276,7 @@ async function notifyDepartment(data: ContactInquiryInput, inquiryId: string) {
 }
 
 async function sendUserConfirmation(data: ContactInquiryInput, inquiryId: string) {
+  if (!data.email) return
   try {
     await emailService.send({
       to: data.email,

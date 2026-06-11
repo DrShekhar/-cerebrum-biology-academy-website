@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react'
 import Script from 'next/script'
 
-const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || ''
+const FB_PIXEL_ID =
+  process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || process.env.NEXT_PUBLIC_FB_PIXEL_ID || ''
 
 export default function FacebookPixel() {
   const [shouldLoad, setShouldLoad] = useState(false)

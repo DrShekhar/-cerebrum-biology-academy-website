@@ -45,7 +45,7 @@ interface AnalyticsConfig {
 
 const DEFAULT_CONFIG: AnalyticsConfig = {
   googleAnalyticsId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
-  facebookPixelId: process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID,
+  facebookPixelId: process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || process.env.NEXT_PUBLIC_FB_PIXEL_ID,
   microsoftClarityId: process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID,
   hubspotId: process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID,
   enableDebug: process.env.NODE_ENV === 'development',

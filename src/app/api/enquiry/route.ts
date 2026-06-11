@@ -4,13 +4,14 @@ import { z } from 'zod'
 import { emailService } from '@/lib/email/emailService'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
-// Accept any string with at least 10 digits after stripping non-digits.
-// Examples that now pass: 8826444334, +91 88264 44334, 91-8826444334,
-// (+91) 88264-44334. Server normalises to last-10-digits in cleanPhone.
-const phoneSchema = z.string().refine(
-  (val) => val.replace(/\D/g, '').length >= 10 && val.replace(/\D/g, '').length <= 15,
-  { message: 'Please enter a valid phone number (10–15 digits, with or without country code)' }
-)
+// Accept any string with 8-15 digits after stripping non-digits (some
+// countries, e.g. Singapore, use 8-digit numbers). Examples that pass:
+// 8826444334, +91 88264 44334, +1 555 123 4567, +65 8123 4567.
+const phoneSchema = z
+  .string()
+  .refine((val) => val.replace(/\D/g, '').length >= 8 && val.replace(/\D/g, '').length <= 15, {
+    message: 'Please enter a valid phone number (8–15 digits, with or without country code)',
+  })
 
 const enquirySchema = z.object({
   name: z
@@ -69,8 +70,13 @@ export async function POST(request: NextRequest) {
 
     const data = validationResult.data
 
-    // Clean phone number - keep only digits
-    const cleanPhone = data.phone.replace(/\D/g, '').slice(-10)
+    // Normalise phone. Indian numbers (with/without +91/91/0 prefix) collapse
+    // to bare 10 digits so existing follow-up tooling keeps working; other
+    // countries keep their full digit string (incl. country code) so the
+    // admin's callback/WhatsApp link reaches them.
+    const allDigits = data.phone.replace(/\D/g, '')
+    const isIndian = /^(91)?[6-9]\d{9}$/.test(allDigits) || /^0[6-9]\d{9}$/.test(allDigits)
+    const cleanPhone = isIndian ? allDigits.slice(-10) : allDigits
 
     // Get device type from user agent
     const userAgent = request.headers.get('user-agent') || ''
@@ -91,7 +97,6 @@ export async function POST(request: NextRequest) {
         updatedAt: new Date(),
       },
     })
-
 
     // Build the pre-filled WhatsApp message addressed to admin.
     // After the client redirects to this URL, the lead's own WhatsApp opens
@@ -177,6 +182,9 @@ async function sendAdminEmail(lead: {
   enquiryId: string
 }): Promise<void> {
   const adminEmail = process.env.ADMIN_LEAD_EMAIL || 'support@cerebrumbiologyacademy.com'
+  // 10-digit phones are Indian (normalised upstream); anything longer already
+  // carries its own country code.
+  const dialPhone = lead.phone.length === 10 ? `91${lead.phone}` : lead.phone
   const html = `
     <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 560px; margin: 0 auto;">
       <h2 style="color: #15803d; margin: 0 0 16px;">🆕 New Lead — Cerebrum Biology Academy</h2>
@@ -191,8 +199,8 @@ async function sendAdminEmail(lead: {
         <tr><td style="padding: 8px 0; color: #475569;">Lead ID</td><td style="padding: 8px 0; font-family: monospace; font-size: 12px;">${escapeHtml(lead.enquiryId)}</td></tr>
       </table>
       <div style="margin-top: 24px; padding: 16px; background: #f1f5f9; border-radius: 8px;">
-        <a href="tel:+91${escapeHtml(lead.phone)}" style="display: inline-block; padding: 10px 16px; background: #15803d; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600;">📞 Call Now</a>
-        <a href="https://wa.me/91${escapeHtml(lead.phone)}" style="display: inline-block; padding: 10px 16px; background: #25d366; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600; margin-left: 8px;">💬 WhatsApp</a>
+        <a href="tel:+${escapeHtml(dialPhone)}" style="display: inline-block; padding: 10px 16px; background: #15803d; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600;">📞 Call Now</a>
+        <a href="https://wa.me/${escapeHtml(dialPhone)}" style="display: inline-block; padding: 10px 16px; background: #25d366; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600; margin-left: 8px;">💬 WhatsApp</a>
       </div>
     </div>
   `
@@ -201,7 +209,7 @@ async function sendAdminEmail(lead: {
     `Name: ${lead.name}\nPhone: ${lead.phone}\nEmail: ${lead.email || '—'}\n` +
     `Area: ${lead.area || '—'}\nMessage: ${lead.message || '—'}\nSource: ${lead.source}\n` +
     `Page: ${lead.pageUrl || '—'}\nLead ID: ${lead.enquiryId}\n\n` +
-    `Call: +91${lead.phone}\nWhatsApp: https://wa.me/91${lead.phone}\n`
+    `Call: +${dialPhone}\nWhatsApp: https://wa.me/${dialPhone}\n`
 
   try {
     await emailService.send({

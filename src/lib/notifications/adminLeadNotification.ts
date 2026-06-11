@@ -258,7 +258,7 @@ export async function notifyAdminDemoBooking(data: {
  */
 export async function notifyAdminContactInquiry(data: {
   name: string
-  email: string
+  email?: string
   phone: string
   supportType: string
   message: string
@@ -309,9 +309,8 @@ export async function notifyAdminFormSubmission(
         .replace(/([A-Z])/g, ' $1')
         .replace(/^./, (s) => s.toUpperCase())
         .trim()
-      const displayValue = String(value).length > 150
-        ? String(value).slice(0, 150) + '...'
-        : String(value)
+      const displayValue =
+        String(value).length > 150 ? String(value).slice(0, 150) + '...' : String(value)
       message += `*${label}:* ${displayValue}\n`
     }
 

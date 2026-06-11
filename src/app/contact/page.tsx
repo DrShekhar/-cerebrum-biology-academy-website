@@ -21,6 +21,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { FAQDisplay } from '@/components/seo/FAQSchema'
+import { CityInlineEnquiryForm } from '@/components/seo/CityInlineEnquiryForm'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
@@ -306,6 +307,19 @@ export default function ContactPage() {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Contact Form */}
+        <section id="contact-form" className="py-12 sm:py-16 md:py-20 bg-gray-50">
+          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <CityInlineEnquiryForm
+              cityName="your city"
+              slug="contact-page"
+              title="Send Us a Message"
+              subtitle="Share your name and number — our counselors respond within 2 hours (9 AM – 9 PM IST)."
+              message="Contact form enquiry from the Contact page."
+            />
           </div>
         </section>
 

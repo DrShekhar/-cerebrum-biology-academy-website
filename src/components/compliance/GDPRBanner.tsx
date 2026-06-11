@@ -76,7 +76,8 @@ export const GDPRBanner = ({
     // container ID, double-firing pageviews + conversions.
 
     if (consentPreferences.marketing) {
-      const fbPixelId = process.env.NEXT_PUBLIC_FB_PIXEL_ID
+      const fbPixelId =
+        process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || process.env.NEXT_PUBLIC_FB_PIXEL_ID
       if (fbPixelId) {
         FacebookPixelService.initialize(fbPixelId)
       }
@@ -156,206 +157,204 @@ export const GDPRBanner = ({
   if (!isVisible) return null
 
   return (
-<div
-        className={bannerClasses}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {!showDetails ? (
-            // Main banner content
-            <div className="py-4">
-              <div className="flex items-start justify-between">
-                <div className="flex items-start space-x-3">
-                  <ShieldCheck className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    <h3 className="text-sm font-semibold mb-1">Privacy & Cookies Notice</h3>
-                    <p className="text-sm opacity-90 mb-3">
-                      We use cookies and similar technologies to enhance your experience, analyze
-                      our traffic, and for marketing purposes. Your privacy matters to us.
-                    </p>
+    <div className={bannerClasses}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {!showDetails ? (
+          // Main banner content
+          <div className="py-4">
+            <div className="flex items-start justify-between">
+              <div className="flex items-start space-x-3">
+                <ShieldCheck className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" />
+                <div className="flex-1">
+                  <h3 className="text-sm font-semibold mb-1">Privacy & Cookies Notice</h3>
+                  <p className="text-sm opacity-90 mb-3">
+                    We use cookies and similar technologies to enhance your experience, analyze our
+                    traffic, and for marketing purposes. Your privacy matters to us.
+                  </p>
 
-                    <div className="flex items-center space-x-2 text-xs">
-                      <a
-                        href={privacyPolicyUrl}
-                        className="underline hover:opacity-80"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Privacy Policy
-                      </a>
-                      <span>•</span>
-                      <a
-                        href={cookiePolicyUrl}
-                        className="underline hover:opacity-80"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Cookie Policy
-                      </a>
-                    </div>
+                  <div className="flex items-center space-x-2 text-xs">
+                    <a
+                      href={privacyPolicyUrl}
+                      className="underline hover:opacity-80"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Privacy Policy
+                    </a>
+                    <span>•</span>
+                    <a
+                      href={cookiePolicyUrl}
+                      className="underline hover:opacity-80"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Cookie Policy
+                    </a>
                   </div>
                 </div>
-
-                <button
-                  onClick={() => setIsVisible(false)}
-                  className="p-1 hover:opacity-70 transition-opacity"
-                  aria-label="Close banner"
-                >
-                  <X className="w-5 h-5" />
-                </button>
               </div>
 
-              <div className="mt-4 flex flex-wrap items-center gap-2">
-                <button
-                  onClick={handleAcceptAll}
-                  className="px-6 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Accept All
-                </button>
+              <button
+                onClick={() => setIsVisible(false)}
+                className="p-1 hover:opacity-70 transition-opacity"
+                aria-label="Close banner"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
 
-                <button
-                  onClick={handleRejectAll}
-                  className={`px-6 py-2 text-sm font-medium rounded-lg transition-colors ${
-                    theme === 'dark'
-                      ? 'bg-gray-700 text-white hover:bg-gray-600'
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                  }`}
-                >
-                  Reject All
-                </button>
+            <div className="mt-4 flex flex-wrap items-center gap-2">
+              <button
+                onClick={handleAcceptAll}
+                className="px-6 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Accept All
+              </button>
 
-                <button
-                  onClick={() => setShowDetails(true)}
-                  className="px-4 py-2 text-sm font-medium text-blue-500 hover:text-blue-400 transition-colors flex items-center space-x-1"
-                >
-                  <Settings className="w-4 h-4" />
-                  <span>Customize</span>
-                </button>
+              <button
+                onClick={handleRejectAll}
+                className={`px-6 py-2 text-sm font-medium rounded-lg transition-colors ${
+                  theme === 'dark'
+                    ? 'bg-gray-700 text-white hover:bg-gray-600'
+                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                }`}
+              >
+                Reject All
+              </button>
+
+              <button
+                onClick={() => setShowDetails(true)}
+                className="px-4 py-2 text-sm font-medium text-blue-500 hover:text-blue-400 transition-colors flex items-center space-x-1"
+              >
+                <Settings className="w-4 h-4" />
+                <span>Customize</span>
+              </button>
+            </div>
+          </div>
+        ) : (
+          // Detailed preferences
+          <div className="py-6">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-semibold">Cookie Preferences</h3>
+              <button
+                onClick={() => setShowDetails(false)}
+                className="p-1 hover:opacity-70 transition-opacity"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="space-y-4 mb-6">
+              {/* Necessary Cookies */}
+              <div className="flex items-start justify-between py-3 border-b border-opacity-20 border-gray-500">
+                <div className="flex-1">
+                  <h4 className="font-medium mb-1">Necessary Cookies</h4>
+                  <p className="text-sm opacity-80">
+                    Required for the website to function properly. Cannot be disabled.
+                  </p>
+                </div>
+                <div className="ml-4">
+                  <div className="w-12 h-6 bg-green-600 rounded-full relative">
+                    <div className="w-5 h-5 bg-white rounded-full absolute top-0.5 right-0.5"></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Analytics Cookies */}
+              <div className="flex items-start justify-between py-3 border-b border-opacity-20 border-gray-500">
+                <div className="flex-1">
+                  <h4 className="font-medium mb-1">Analytics Cookies</h4>
+                  <p className="text-sm opacity-80">
+                    Help us understand how visitors interact with our website.
+                  </p>
+                </div>
+                <div className="ml-4">
+                  <button
+                    onClick={() => handlePreferenceChange('analytics', !preferences.analytics)}
+                    className={`w-12 h-6 rounded-full relative transition-colors ${
+                      preferences.analytics ? 'bg-blue-600' : 'bg-gray-400'
+                    }`}
+                  >
+                    <div
+                      className={`w-5 h-5 bg-white rounded-full absolute top-0.5 transition-transform ${
+                        preferences.analytics ? 'translate-x-6' : 'translate-x-0.5'
+                      }`}
+                    ></div>
+                  </button>
+                </div>
+              </div>
+
+              {/* Marketing Cookies */}
+              <div className="flex items-start justify-between py-3 border-b border-opacity-20 border-gray-500">
+                <div className="flex-1">
+                  <h4 className="font-medium mb-1">Marketing Cookies</h4>
+                  <p className="text-sm opacity-80">
+                    Used to track visitors across websites for advertising purposes.
+                  </p>
+                </div>
+                <div className="ml-4">
+                  <button
+                    onClick={() => handlePreferenceChange('marketing', !preferences.marketing)}
+                    className={`w-12 h-6 rounded-full relative transition-colors ${
+                      preferences.marketing ? 'bg-blue-600' : 'bg-gray-400'
+                    }`}
+                  >
+                    <div
+                      className={`w-5 h-5 bg-white rounded-full absolute top-0.5 transition-transform ${
+                        preferences.marketing ? 'translate-x-6' : 'translate-x-0.5'
+                      }`}
+                    ></div>
+                  </button>
+                </div>
+              </div>
+
+              {/* Personalization Cookies */}
+              <div className="flex items-start justify-between py-3">
+                <div className="flex-1">
+                  <h4 className="font-medium mb-1">Personalization Cookies</h4>
+                  <p className="text-sm opacity-80">
+                    Enable personalized content and features based on your preferences.
+                  </p>
+                </div>
+                <div className="ml-4">
+                  <button
+                    onClick={() =>
+                      handlePreferenceChange('personalization', !preferences.personalization)
+                    }
+                    className={`w-12 h-6 rounded-full relative transition-colors ${
+                      preferences.personalization ? 'bg-blue-600' : 'bg-gray-400'
+                    }`}
+                  >
+                    <div
+                      className={`w-5 h-5 bg-white rounded-full absolute top-0.5 transition-transform ${
+                        preferences.personalization ? 'translate-x-6' : 'translate-x-0.5'
+                      }`}
+                    ></div>
+                  </button>
+                </div>
               </div>
             </div>
-          ) : (
-            // Detailed preferences
-            <div className="py-6">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold">Cookie Preferences</h3>
-                <button
-                  onClick={() => setShowDetails(false)}
-                  className="p-1 hover:opacity-70 transition-opacity"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
 
-              <div className="space-y-4 mb-6">
-                {/* Necessary Cookies */}
-                <div className="flex items-start justify-between py-3 border-b border-opacity-20 border-gray-500">
-                  <div className="flex-1">
-                    <h4 className="font-medium mb-1">Necessary Cookies</h4>
-                    <p className="text-sm opacity-80">
-                      Required for the website to function properly. Cannot be disabled.
-                    </p>
-                  </div>
-                  <div className="ml-4">
-                    <div className="w-12 h-6 bg-green-600 rounded-full relative">
-                      <div className="w-5 h-5 bg-white rounded-full absolute top-0.5 right-0.5"></div>
-                    </div>
-                  </div>
-                </div>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={handleSavePreferences}
+                className="px-6 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Save Preferences
+              </button>
 
-                {/* Analytics Cookies */}
-                <div className="flex items-start justify-between py-3 border-b border-opacity-20 border-gray-500">
-                  <div className="flex-1">
-                    <h4 className="font-medium mb-1">Analytics Cookies</h4>
-                    <p className="text-sm opacity-80">
-                      Help us understand how visitors interact with our website.
-                    </p>
-                  </div>
-                  <div className="ml-4">
-                    <button
-                      onClick={() => handlePreferenceChange('analytics', !preferences.analytics)}
-                      className={`w-12 h-6 rounded-full relative transition-colors ${
-                        preferences.analytics ? 'bg-blue-600' : 'bg-gray-400'
-                      }`}
-                    >
-                      <div
-                        className={`w-5 h-5 bg-white rounded-full absolute top-0.5 transition-transform ${
-                          preferences.analytics ? 'translate-x-6' : 'translate-x-0.5'
-                        }`}
-                      ></div>
-                    </button>
-                  </div>
-                </div>
-
-                {/* Marketing Cookies */}
-                <div className="flex items-start justify-between py-3 border-b border-opacity-20 border-gray-500">
-                  <div className="flex-1">
-                    <h4 className="font-medium mb-1">Marketing Cookies</h4>
-                    <p className="text-sm opacity-80">
-                      Used to track visitors across websites for advertising purposes.
-                    </p>
-                  </div>
-                  <div className="ml-4">
-                    <button
-                      onClick={() => handlePreferenceChange('marketing', !preferences.marketing)}
-                      className={`w-12 h-6 rounded-full relative transition-colors ${
-                        preferences.marketing ? 'bg-blue-600' : 'bg-gray-400'
-                      }`}
-                    >
-                      <div
-                        className={`w-5 h-5 bg-white rounded-full absolute top-0.5 transition-transform ${
-                          preferences.marketing ? 'translate-x-6' : 'translate-x-0.5'
-                        }`}
-                      ></div>
-                    </button>
-                  </div>
-                </div>
-
-                {/* Personalization Cookies */}
-                <div className="flex items-start justify-between py-3">
-                  <div className="flex-1">
-                    <h4 className="font-medium mb-1">Personalization Cookies</h4>
-                    <p className="text-sm opacity-80">
-                      Enable personalized content and features based on your preferences.
-                    </p>
-                  </div>
-                  <div className="ml-4">
-                    <button
-                      onClick={() =>
-                        handlePreferenceChange('personalization', !preferences.personalization)
-                      }
-                      className={`w-12 h-6 rounded-full relative transition-colors ${
-                        preferences.personalization ? 'bg-blue-600' : 'bg-gray-400'
-                      }`}
-                    >
-                      <div
-                        className={`w-5 h-5 bg-white rounded-full absolute top-0.5 transition-transform ${
-                          preferences.personalization ? 'translate-x-6' : 'translate-x-0.5'
-                        }`}
-                      ></div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <button
-                  onClick={handleSavePreferences}
-                  className="px-6 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Save Preferences
-                </button>
-
-                <button
-                  onClick={handleAcceptAll}
-                  className="px-6 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors"
-                >
-                  Accept All
-                </button>
-              </div>
+              <button
+                onClick={handleAcceptAll}
+                className="px-6 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors"
+              >
+                Accept All
+              </button>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
-)
+    </div>
+  )
 }
 
 export type { ConsentPreferences }

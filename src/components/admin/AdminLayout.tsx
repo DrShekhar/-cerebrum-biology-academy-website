@@ -133,6 +133,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           href: '/admin/students/active',
         },
         { id: 'leads', name: 'Leads', icon: Users, href: '/admin/students/leads' },
+        { id: 'inquiries', name: 'Inquiries', icon: Users, href: '/admin/inquiries' },
         { id: 'parents', name: 'Parents', icon: Users, href: '/admin/parents' },
       ],
     },
@@ -352,32 +353,30 @@ export function AdminLayout({ children }: AdminLayoutProps) {
         )}
 
         {hasChildren && isOpen && (
-              <div
-                className="overflow-hidden animate-fadeInUp"
-              >
-                <div className="py-2">
-                  {item.children!.map((child) => (
-                    <Link key={child.id} href={child.href}>
-                      <div
-                        className={`flex items-center px-8 py-2 text-sm transition-colors ${
-                          isActive(child.href)
-                            ? 'text-primary-700 bg-primary-50 border-r-2 border-primary-600'
-                            : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                        }`}
-                      >
-                        <child.icon className="w-4 h-4 mr-3" />
-                        <span>{child.name}</span>
-                        {child.badge && (
-                          <span className="ml-auto bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
-                            {child.badge}
-                          </span>
-                        )}
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
+          <div className="overflow-hidden animate-fadeInUp">
+            <div className="py-2">
+              {item.children!.map((child) => (
+                <Link key={child.id} href={child.href}>
+                  <div
+                    className={`flex items-center px-8 py-2 text-sm transition-colors ${
+                      isActive(child.href)
+                        ? 'text-primary-700 bg-primary-50 border-r-2 border-primary-600'
+                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                    }`}
+                  >
+                    <child.icon className="w-4 h-4 mr-3" />
+                    <span>{child.name}</span>
+                    {child.badge && (
+                      <span className="ml-auto bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
+                        {child.badge}
+                      </span>
+                    )}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     )
   }
@@ -387,16 +386,14 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       <Toaster />
       <div className="min-h-screen bg-gray-50 flex">
         {/* Mobile sidebar backdrop */}
-{sidebarOpen && (
-            <div
-              className="fixed inset-0 bg-black/50 z-40 lg:hidden animate-fadeInUp"
-              onClick={() => setSidebarOpen(false)}
-            />
-          )}
-{/* Sidebar */}
-        <aside
-          className="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-xl lg:relative lg:translate-x-0 lg:shadow-lg animate-fadeInUp"
-        >
+        {sidebarOpen && (
+          <div
+            className="fixed inset-0 bg-black/50 z-40 lg:hidden animate-fadeInUp"
+            onClick={() => setSidebarOpen(false)}
+          />
+        )}
+        {/* Sidebar */}
+        <aside className="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-xl lg:relative lg:translate-x-0 lg:shadow-lg animate-fadeInUp">
           <div className="flex h-full flex-col">
             {/* Logo */}
             <div className="flex items-center justify-between h-16 px-6 border-b border-gray-200">
@@ -446,29 +443,27 @@ export function AdminLayout({ children }: AdminLayoutProps) {
                     className={`w-4 h-4 transition-transform ${userMenuOpen ? 'rotate-180' : ''}`}
                   />
                 </button>
-{userMenuOpen && (
-                    <div
-                      className="absolute bottom-full left-0 right-0 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg py-1 animate-fadeInUp"
+                {userMenuOpen && (
+                  <div className="absolute bottom-full left-0 right-0 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg py-1 animate-fadeInUp">
+                    <button className="w-full flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <User className="w-4 h-4 mr-3" />
+                      Profile
+                    </button>
+                    <button className="w-full flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Settings className="w-4 h-4 mr-3" />
+                      Settings
+                    </button>
+                    <hr className="my-1" />
+                    <button
+                      onClick={handleLogout}
+                      className="w-full flex items-center px-4 py-2 text-sm text-red-600 hover:bg-red-50"
                     >
-                      <button className="w-full flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        <User className="w-4 h-4 mr-3" />
-                        Profile
-                      </button>
-                      <button className="w-full flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        <Settings className="w-4 h-4 mr-3" />
-                        Settings
-                      </button>
-                      <hr className="my-1" />
-                      <button
-                        onClick={handleLogout}
-                        className="w-full flex items-center px-4 py-2 text-sm text-red-600 hover:bg-red-50"
-                      >
-                        <LogOut className="w-4 h-4 mr-3" />
-                        Sign out
-                      </button>
-                    </div>
-                  )}
-</div>
+                      <LogOut className="w-4 h-4 mr-3" />
+                      Sign out
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </aside>

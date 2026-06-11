@@ -69,6 +69,9 @@ export default function BookFreeDemoPage() {
   const [classLevel, setClassLevel] = useState<ClassLevel>('Class 11')
   const [track, setTrack] = useState<Track>('NEET')
   const [mode, setMode] = useState<Mode>('Either')
+  const [name, setName] = useState('')
+  const [phone, setPhone] = useState('')
+  const [contactError, setContactError] = useState<string | null>(null)
 
   // Track which chips the user has actively confirmed vs. left as auto-default.
   // We use this to nudge the user with a subtle "tap to confirm" hint rather
@@ -122,6 +125,7 @@ export default function BookFreeDemoPage() {
     const lines = [
       `Hi! I want to book a free demo class at Cerebrum Biology Academy.`,
       ``,
+      ...(name.trim() ? [`Name: ${name.trim()}`] : []),
       `Class: ${classLevel}`,
       `Track: ${track === 'All-round' ? 'NEET + Boards + Olympiad foundation' : track}`,
       `Preferred mode: ${
@@ -135,9 +139,38 @@ export default function BookFreeDemoPage() {
       `Please confirm an available demo slot.`,
     ]
     return lines.join('\n')
-  }, [classLevel, track, mode])
+  }, [classLevel, track, mode, name])
 
   const handleWhatsApp = () => {
+    // Capture the lead server-side BEFORE the WhatsApp handoff. If the visitor
+    // bails at the WhatsApp composer (desktop without WhatsApp, app friction),
+    // we still have their name + number. The handoff itself is never blocked
+    // by the API call — fire and forget.
+    setContactError(null)
+    const digits = phone.replace(/\D/g, '')
+    if (name.trim().length < 2) {
+      setContactError('Please enter your name so the counsellor knows who to greet.')
+      return
+    }
+    if (digits.length < 8 || digits.length > 15) {
+      setContactError('Please enter a valid phone number (with country code if outside India).')
+      return
+    }
+
+    void fetch('/api/enquiry', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: name.trim(),
+        phone: phone.trim(),
+        message: `Free demo request — ${classLevel} · ${track} · ${mode}`,
+        source: 'book-free-demo-page',
+        pageUrl: typeof window !== 'undefined' ? window.location.href : undefined,
+      }),
+    }).catch(() => {
+      // swallow — the WhatsApp handoff below still carries the lead
+    })
+
     void trackAndOpenWhatsApp({
       source: 'book-free-demo-page',
       message,
@@ -284,6 +317,53 @@ export default function BookFreeDemoPage() {
             <p className="mt-5 text-center text-xs text-[#3d4d3d]/80">
               Tap the chips above to confirm your class, goal, and mode — we&apos;ll route you to
               the right counsellor.
+            </p>
+          )}
+
+          {/* Contact capture — the lead is saved server-side on tap, so a
+              visitor who bails at the WhatsApp composer is not lost. */}
+          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            <div>
+              <label
+                htmlFor="demo-name"
+                className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500"
+              >
+                <Users className="h-3.5 w-3.5 text-[#3d4d3d]" />
+                <span>Your name</span>
+              </label>
+              <input
+                id="demo-name"
+                type="text"
+                autoComplete="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Student or parent name"
+                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:border-[#3d4d3d] focus:outline-none focus:ring-2 focus:ring-[#3d4d3d]/20 sm:text-base"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="demo-phone"
+                className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500"
+              >
+                <Phone className="h-3.5 w-3.5 text-[#3d4d3d]" />
+                <span>WhatsApp number</span>
+              </label>
+              <input
+                id="demo-phone"
+                type="tel"
+                autoComplete="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                placeholder="98XXXXXXXX or +1 555 123 4567"
+                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:border-[#3d4d3d] focus:outline-none focus:ring-2 focus:ring-[#3d4d3d]/20 sm:text-base"
+              />
+            </div>
+          </div>
+
+          {contactError && (
+            <p className="mt-3 text-center text-xs font-medium text-red-600 sm:text-sm">
+              {contactError}
             </p>
           )}
 

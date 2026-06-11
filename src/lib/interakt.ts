@@ -78,12 +78,62 @@ interface WebhookEvent {
 // CORE API FUNCTIONS
 // ============================================
 
+// Country calling codes for markets Cerebrum serves (longest-prefix match).
+// A '+'-prefixed number outside this list falls back to +91 handling below.
+const COUNTRY_CALLING_CODES = [
+  '971',
+  '966',
+  '974',
+  '968',
+  '965',
+  '973',
+  '977',
+  '880',
+  '852',
+  '353',
+  '91',
+  '44',
+  '61',
+  '65',
+  '60',
+  '66',
+  '81',
+  '82',
+  '49',
+  '39',
+  '55',
+  '62',
+  '63',
+  '84',
+  '86',
+  '94',
+  '92',
+  '27',
+  '64',
+  '33',
+  '34',
+  '31',
+  '41',
+  '46',
+  '7',
+  '1',
+]
+
 /**
  * Format phone number to Interakt format
  */
 function formatPhoneNumber(phone: string): { countryCode: string; phoneNumber: string } {
   // Remove all non-digit characters except +
   const cleaned = phone.replace(/[^\d+]/g, '')
+
+  // International number with explicit country code
+  if (cleaned.startsWith('+') && !cleaned.startsWith('+91')) {
+    const digits = cleaned.slice(1)
+    const code = COUNTRY_CALLING_CODES.find((c) => digits.startsWith(c))
+    if (code && digits.length > code.length) {
+      return { countryCode: `+${code}`, phoneNumber: digits.slice(code.length) }
+    }
+  }
 
   // Handle different formats
   if (cleaned.startsWith('+91')) {

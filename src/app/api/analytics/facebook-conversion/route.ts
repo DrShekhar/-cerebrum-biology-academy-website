@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || ''
+const FB_PIXEL_ID =
+  process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || process.env.NEXT_PUBLIC_FB_PIXEL_ID || ''
 const FB_ACCESS_TOKEN = process.env.FACEBOOK_ACCESS_TOKEN || ''
 const FB_TEST_EVENT_CODE = process.env.FACEBOOK_TEST_EVENT_CODE
 

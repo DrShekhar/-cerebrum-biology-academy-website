@@ -366,13 +366,14 @@ For personalized guidance, our counselor team can help. In the meantime:
           break
 
         case 'phone':
-          if (!/^[6-9]\d{9}$/.test(input.replace(/\D/g, ''))) {
-            responseContent = `Hmm, that doesn't look like a valid Indian phone number. Please enter a 10-digit mobile number starting with 6-9.`
+          const phoneDigits = input.replace(/\D/g, '')
+          if (phoneDigits.length < 8 || phoneDigits.length > 15) {
+            responseContent = `Hmm, that doesn't look like a valid phone number. Please enter your mobile number — Indian (e.g. 8826444334) or international with country code (e.g. +1 555 123 4567).`
             nextStep = 'phone'
           } else {
             setLeadData((prev) => ({
               ...prev,
-              phone: input.replace(/\D/g, ''),
+              phone: (input.trim().startsWith('+') ? '+' : '') + phoneDigits,
               capturedAt: new Date(),
             }))
             responseContent = `Perfect! 📱\n\nOne last question - which class are you currently in?\n\n1️⃣ Class 11\n2️⃣ Class 12\n3️⃣ Dropper\n4️⃣ Parent of NEET aspirant`
@@ -469,8 +470,9 @@ For personalized guidance, our counselor team can help. In the meantime:
         body: JSON.stringify({
           name: data.name,
           phone: data.phone,
-          email: data.email,
+          email: data.email || undefined,
           class: data.class,
+          supportType: 'admission',
           source: 'ARIA_Sales_Agent',
           message: `Lead captured via ARIA chat. Score: ${data.score}\n\nConversation:\n${conversationSummary}`,
           ...trackingData,
@@ -534,235 +536,268 @@ For personalized guidance, our counselor team can help. In the meantime:
       </button>
 
       {/* Chat Window */}
-{isOpen && (
-          <div
-            className={`fixed z-[45] flex flex-col overflow-hidden border border-gray-200 bg-white shadow-2xl transition-all duration-300 ${
-              isFullscreen
-                ? 'inset-0 rounded-none'
-                : 'bottom-44 left-4 w-[calc(100vw-2rem)] max-h-[55dvh] max-h-[55vh] rounded-2xl sm:bottom-24 sm:left-6 sm:w-[400px] sm:max-h-[70dvh] sm:max-h-[70vh] md:w-[420px] lg:max-h-[75dvh] lg:max-h-[75vh] xl:w-[480px]'
-            }`}
-            style={isFullscreen ? {
-              paddingTop: 'env(safe-area-inset-top)',
-              paddingBottom: 'env(safe-area-inset-bottom)',
-              paddingLeft: 'env(safe-area-inset-left)',
-              paddingRight: 'env(safe-area-inset-right)',
-            } : undefined}
-          >
-            {/* Header */}
-            <div className={`bg-green-500 text-white ${isFullscreen ? 'p-4 sm:p-5' : 'p-4'}`}>
-              <div className="flex items-center gap-3">
-                <div className={`bg-white/20 rounded-full flex items-center justify-center ${isFullscreen ? 'w-12 h-12' : 'w-10 h-10'}`}>
-                  <Sparkles className={isFullscreen ? 'w-6 h-6' : 'w-5 h-5'} />
-                </div>
-                <div className="flex-1">
-                  <h3 className={`font-semibold ${isFullscreen ? 'text-lg' : 'text-base'}`}>{ARIA_PERSONALITY.name}</h3>
-                  <p className={`text-white/80 ${isFullscreen ? 'text-sm' : 'text-xs'}`}>{ARIA_PERSONALITY.tagline}</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="flex items-center gap-1 text-xs bg-white/20 px-2 py-1 rounded-full">
-                    <span className="w-2 h-2 bg-green-300 rounded-full animate-pulse" />
-                    Online
-                  </div>
-                  {/* Fullscreen Toggle */}
-                  <button
-                    onClick={() => setIsFullscreen(!isFullscreen)}
-                    className="p-2 hover:bg-white/20 rounded-full transition-colors"
-                    aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
-                  >
-                    {isFullscreen ? (
-                      <Minimize2 className="w-4 h-4" />
-                    ) : (
-                      <Maximize2 className="w-4 h-4" />
-                    )}
-                  </button>
-                  {/* Close button in fullscreen */}
-                  {isFullscreen && (
-                    <button
-                      onClick={() => setIsOpen(false)}
-                      className="p-2 hover:bg-white/20 rounded-full transition-colors"
-                      aria-label="Close chat"
-                    >
-                      <X className="w-5 h-5" />
-                    </button>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            {/* Messages */}
-            <div className={`flex-1 overflow-y-auto bg-gray-50 space-y-4 ${isFullscreen ? 'p-6 sm:p-8' : 'p-4'}`}>
-              {/* Fullscreen: center content with max-width for readability */}
-              <div className={isFullscreen ? 'max-w-3xl mx-auto' : ''}>
-                {messages.map((message) => (
-                  <div
-                    key={message.id}
-                    className={`flex mb-4 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
-                  >
-                    <div
-                      className={`rounded-2xl px-4 py-3 ${
-                        isFullscreen ? 'max-w-[75%]' : 'max-w-[85%]'
-                      } ${
-                        message.role === 'user'
-                          ? 'bg-green-600 text-white rounded-br-md'
-                          : 'bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-md'
-                      }`}
-                    >
-                      {/* Avatar for assistant */}
-                      {message.role === 'assistant' && (
-                        <div className="flex items-center gap-2 mb-2">
-                          <Bot className={`text-green-600 ${isFullscreen ? 'w-5 h-5' : 'w-4 h-4'}`} />
-                          <span className={`font-medium text-green-600 ${isFullscreen ? 'text-sm' : 'text-xs'}`}>ARIA</span>
-                        </div>
-                      )}
-
-                      {/* Message content with markdown-like formatting */}
-                      <div className={`whitespace-pre-wrap ${isFullscreen ? 'text-base leading-relaxed' : 'text-sm'}`}>
-                        {message.content.split('\n').map((line, i) => {
-                          // Handle bold text
-                          const boldRegex = /\*\*(.*?)\*\*/g
-                          const parts = line.split(boldRegex)
-
-                          return (
-                            <p key={i} className={i > 0 ? 'mt-2' : ''}>
-                              {parts.map((part, j) =>
-                                j % 2 === 1 ? <strong key={j}>{part}</strong> : part
-                              )}
-                            </p>
-                          )
-                        })}
-                      </div>
-
-                      {/* Quick actions */}
-                      {message.actions && message.actions.length > 0 && (
-                        <div className={`mt-4 flex flex-wrap gap-2 ${isFullscreen ? 'gap-3' : 'gap-2'}`}>
-                          {message.actions.map((action, i) => (
-                            <button
-                              key={i}
-                              onClick={() => handleQuickAction(action)}
-                              className={`inline-flex items-center gap-1.5 bg-green-50 hover:bg-green-100 text-green-700 rounded-full transition-colors ${
-                                isFullscreen ? 'text-sm px-4 py-2' : 'text-xs px-3 py-1.5'
-                              }`}
-                            >
-                              {action.icon}
-                              {action.label}
-                              <ChevronRight className={isFullscreen ? 'w-4 h-4' : 'w-3 h-3'} />
-                            </button>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                ))}
-
-              {/* Typing indicator */}
-                {isTyping && (
-                  <div className="flex justify-start mb-4">
-                    <div className={`bg-white rounded-2xl shadow-sm border border-gray-100 ${isFullscreen ? 'px-5 py-4' : 'px-4 py-3'}`}>
-                      <div className={`flex items-center ${isFullscreen ? 'gap-2' : 'gap-1'}`}>
-                        <span
-                          className={`bg-gray-400 rounded-full animate-bounce ${isFullscreen ? 'w-3 h-3' : 'w-2 h-2'}`}
-                          style={{ animationDelay: '0ms' }}
-                        />
-                        <span
-                          className={`bg-gray-400 rounded-full animate-bounce ${isFullscreen ? 'w-3 h-3' : 'w-2 h-2'}`}
-                          style={{ animationDelay: '150ms' }}
-                        />
-                        <span
-                          className={`bg-gray-400 rounded-full animate-bounce ${isFullscreen ? 'w-3 h-3' : 'w-2 h-2'}`}
-                          style={{ animationDelay: '300ms' }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                <div ref={messagesEndRef} />
-              </div>
-            </div>
-
-            {/* WhatsApp Connect CTA — shown after lead capture or 5+ messages */}
-            {(showWhatsAppCTA || messages.filter((m) => m.role === 'user').length >= 5) && (
-              <div className={`bg-green-50 border-t border-green-200 ${isFullscreen ? 'px-6 py-3' : 'px-4 py-2'}`}>
-                <button
-                  onClick={handleConnectWhatsApp}
-                  className={`w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-xl font-semibold transition-colors ${
-                    isFullscreen ? 'text-sm py-3' : 'text-xs py-2.5'
-                  }`}
-                >
-                  <MessageCircle className={isFullscreen ? 'w-5 h-5' : 'w-4 h-4'} />
-                  {isMobileDevice() ? 'Connect with Counselor on WhatsApp' : 'Scan QR to Chat on WhatsApp'}
-                </button>
-              </div>
-            )}
-
-            {/* Quick CTA buttons */}
-            <div className={`bg-white border-t border-gray-100 flex gap-2 ${isFullscreen ? 'px-6 py-3 max-w-3xl mx-auto' : 'px-4 py-2'}`}>
-              <button
-                onClick={() => sendMessage('I want to book a free demo class')}
-                className={`flex-1 flex items-center justify-center gap-2 bg-green-50 hover:bg-green-100 text-green-700 rounded-lg transition-colors ${
-                  isFullscreen ? 'text-sm py-3 px-4' : 'text-xs py-2 px-3'
-                }`}
+      {isOpen && (
+        <div
+          className={`fixed z-[45] flex flex-col overflow-hidden border border-gray-200 bg-white shadow-2xl transition-all duration-300 ${
+            isFullscreen
+              ? 'inset-0 rounded-none'
+              : 'bottom-44 left-4 w-[calc(100vw-2rem)] max-h-[55dvh] max-h-[55vh] rounded-2xl sm:bottom-24 sm:left-6 sm:w-[400px] sm:max-h-[70dvh] sm:max-h-[70vh] md:w-[420px] lg:max-h-[75dvh] lg:max-h-[75vh] xl:w-[480px]'
+          }`}
+          style={
+            isFullscreen
+              ? {
+                  paddingTop: 'env(safe-area-inset-top)',
+                  paddingBottom: 'env(safe-area-inset-bottom)',
+                  paddingLeft: 'env(safe-area-inset-left)',
+                  paddingRight: 'env(safe-area-inset-right)',
+                }
+              : undefined
+          }
+        >
+          {/* Header */}
+          <div className={`bg-green-500 text-white ${isFullscreen ? 'p-4 sm:p-5' : 'p-4'}`}>
+            <div className="flex items-center gap-3">
+              <div
+                className={`bg-white/20 rounded-full flex items-center justify-center ${isFullscreen ? 'w-12 h-12' : 'w-10 h-10'}`}
               >
-                <Calendar className={isFullscreen ? 'w-4 h-4' : 'w-3 h-3'} />
-                Free Demo
-              </button>
-              <button
-                onClick={() => sendMessage('I want someone to call me')}
-                className={`flex-1 flex items-center justify-center gap-2 bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-lg transition-colors ${
-                  isFullscreen ? 'text-sm py-3 px-4' : 'text-xs py-2 px-3'
-                }`}
-              >
-                <Phone className={isFullscreen ? 'w-4 h-4' : 'w-3 h-3'} />
-                Call Me
-              </button>
-            </div>
-
-            {/* Input */}
-            <form onSubmit={handleSubmit} className={`bg-white border-t border-gray-200 ${isFullscreen ? 'p-4' : 'p-3'}`}>
-              <div className={`flex gap-3 ${isFullscreen ? 'max-w-3xl mx-auto' : ''}`}>
-                <input
-                  ref={inputRef}
-                  type="text"
-                  value={inputValue}
-                  onChange={(e) => setInputValue(e.target.value)}
-                  placeholder={
-                    leadCaptureStep === 'name'
-                      ? 'Enter your name...'
-                      : leadCaptureStep === 'phone'
-                        ? 'Enter phone number...'
-                        : leadCaptureStep === 'class'
-                          ? 'Enter your class...'
-                          : 'Ask me anything...'
-                  }
-                  className={`flex-1 bg-gray-100 rounded-full px-4 focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                    isFullscreen ? 'py-3 text-base' : 'py-2 text-sm'
-                  }`}
-                />
+                <Sparkles className={isFullscreen ? 'w-6 h-6' : 'w-5 h-5'} />
+              </div>
+              <div className="flex-1">
+                <h3 className={`font-semibold ${isFullscreen ? 'text-lg' : 'text-base'}`}>
+                  {ARIA_PERSONALITY.name}
+                </h3>
+                <p className={`text-white/80 ${isFullscreen ? 'text-sm' : 'text-xs'}`}>
+                  {ARIA_PERSONALITY.tagline}
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1 text-xs bg-white/20 px-2 py-1 rounded-full">
+                  <span className="w-2 h-2 bg-green-300 rounded-full animate-pulse" />
+                  Online
+                </div>
+                {/* Fullscreen Toggle */}
                 <button
-                  type="submit"
-                  disabled={!inputValue.trim() || isTyping}
-                  className={`bg-green-600 hover:bg-green-700 disabled:bg-gray-300 text-white rounded-full transition-colors ${
-                    isFullscreen ? 'p-3' : 'p-2'
-                  }`}
+                  onClick={() => setIsFullscreen(!isFullscreen)}
+                  className="p-2 hover:bg-white/20 rounded-full transition-colors"
+                  aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
                 >
-                  {isTyping ? (
-                    <Loader2 className={`animate-spin ${isFullscreen ? 'w-6 h-6' : 'w-5 h-5'}`} />
+                  {isFullscreen ? (
+                    <Minimize2 className="w-4 h-4" />
                   ) : (
-                    <Send className={isFullscreen ? 'w-6 h-6' : 'w-5 h-5'} />
+                    <Maximize2 className="w-4 h-4" />
                   )}
                 </button>
+                {/* Close button in fullscreen */}
+                {isFullscreen && (
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="p-2 hover:bg-white/20 rounded-full transition-colors"
+                    aria-label="Close chat"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                )}
               </div>
-            </form>
-
-            {/* Footer */}
-            <div className={`bg-gray-50 border-t border-gray-100 text-center ${isFullscreen ? 'px-6 py-3' : 'px-4 py-2'}`}>
-              <p className={`text-gray-500 ${isFullscreen ? 'text-sm' : 'text-xs'}`}>
-                Powered by{' '}
-                <span className="font-medium text-green-600">Cerebrum Biology Academy</span>
-              </p>
             </div>
           </div>
-        )}
-</>
+
+          {/* Messages */}
+          <div
+            className={`flex-1 overflow-y-auto bg-gray-50 space-y-4 ${isFullscreen ? 'p-6 sm:p-8' : 'p-4'}`}
+          >
+            {/* Fullscreen: center content with max-width for readability */}
+            <div className={isFullscreen ? 'max-w-3xl mx-auto' : ''}>
+              {messages.map((message) => (
+                <div
+                  key={message.id}
+                  className={`flex mb-4 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
+                >
+                  <div
+                    className={`rounded-2xl px-4 py-3 ${
+                      isFullscreen ? 'max-w-[75%]' : 'max-w-[85%]'
+                    } ${
+                      message.role === 'user'
+                        ? 'bg-green-600 text-white rounded-br-md'
+                        : 'bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-md'
+                    }`}
+                  >
+                    {/* Avatar for assistant */}
+                    {message.role === 'assistant' && (
+                      <div className="flex items-center gap-2 mb-2">
+                        <Bot className={`text-green-600 ${isFullscreen ? 'w-5 h-5' : 'w-4 h-4'}`} />
+                        <span
+                          className={`font-medium text-green-600 ${isFullscreen ? 'text-sm' : 'text-xs'}`}
+                        >
+                          ARIA
+                        </span>
+                      </div>
+                    )}
+
+                    {/* Message content with markdown-like formatting */}
+                    <div
+                      className={`whitespace-pre-wrap ${isFullscreen ? 'text-base leading-relaxed' : 'text-sm'}`}
+                    >
+                      {message.content.split('\n').map((line, i) => {
+                        // Handle bold text
+                        const boldRegex = /\*\*(.*?)\*\*/g
+                        const parts = line.split(boldRegex)
+
+                        return (
+                          <p key={i} className={i > 0 ? 'mt-2' : ''}>
+                            {parts.map((part, j) =>
+                              j % 2 === 1 ? <strong key={j}>{part}</strong> : part
+                            )}
+                          </p>
+                        )
+                      })}
+                    </div>
+
+                    {/* Quick actions */}
+                    {message.actions && message.actions.length > 0 && (
+                      <div
+                        className={`mt-4 flex flex-wrap gap-2 ${isFullscreen ? 'gap-3' : 'gap-2'}`}
+                      >
+                        {message.actions.map((action, i) => (
+                          <button
+                            key={i}
+                            onClick={() => handleQuickAction(action)}
+                            className={`inline-flex items-center gap-1.5 bg-green-50 hover:bg-green-100 text-green-700 rounded-full transition-colors ${
+                              isFullscreen ? 'text-sm px-4 py-2' : 'text-xs px-3 py-1.5'
+                            }`}
+                          >
+                            {action.icon}
+                            {action.label}
+                            <ChevronRight className={isFullscreen ? 'w-4 h-4' : 'w-3 h-3'} />
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+
+              {/* Typing indicator */}
+              {isTyping && (
+                <div className="flex justify-start mb-4">
+                  <div
+                    className={`bg-white rounded-2xl shadow-sm border border-gray-100 ${isFullscreen ? 'px-5 py-4' : 'px-4 py-3'}`}
+                  >
+                    <div className={`flex items-center ${isFullscreen ? 'gap-2' : 'gap-1'}`}>
+                      <span
+                        className={`bg-gray-400 rounded-full animate-bounce ${isFullscreen ? 'w-3 h-3' : 'w-2 h-2'}`}
+                        style={{ animationDelay: '0ms' }}
+                      />
+                      <span
+                        className={`bg-gray-400 rounded-full animate-bounce ${isFullscreen ? 'w-3 h-3' : 'w-2 h-2'}`}
+                        style={{ animationDelay: '150ms' }}
+                      />
+                      <span
+                        className={`bg-gray-400 rounded-full animate-bounce ${isFullscreen ? 'w-3 h-3' : 'w-2 h-2'}`}
+                        style={{ animationDelay: '300ms' }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              <div ref={messagesEndRef} />
+            </div>
+          </div>
+
+          {/* WhatsApp Connect CTA — shown after lead capture or 5+ messages */}
+          {(showWhatsAppCTA || messages.filter((m) => m.role === 'user').length >= 5) && (
+            <div
+              className={`bg-green-50 border-t border-green-200 ${isFullscreen ? 'px-6 py-3' : 'px-4 py-2'}`}
+            >
+              <button
+                onClick={handleConnectWhatsApp}
+                className={`w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-xl font-semibold transition-colors ${
+                  isFullscreen ? 'text-sm py-3' : 'text-xs py-2.5'
+                }`}
+              >
+                <MessageCircle className={isFullscreen ? 'w-5 h-5' : 'w-4 h-4'} />
+                {isMobileDevice()
+                  ? 'Connect with Counselor on WhatsApp'
+                  : 'Scan QR to Chat on WhatsApp'}
+              </button>
+            </div>
+          )}
+
+          {/* Quick CTA buttons */}
+          <div
+            className={`bg-white border-t border-gray-100 flex gap-2 ${isFullscreen ? 'px-6 py-3 max-w-3xl mx-auto' : 'px-4 py-2'}`}
+          >
+            <button
+              onClick={() => sendMessage('I want to book a free demo class')}
+              className={`flex-1 flex items-center justify-center gap-2 bg-green-50 hover:bg-green-100 text-green-700 rounded-lg transition-colors ${
+                isFullscreen ? 'text-sm py-3 px-4' : 'text-xs py-2 px-3'
+              }`}
+            >
+              <Calendar className={isFullscreen ? 'w-4 h-4' : 'w-3 h-3'} />
+              Free Demo
+            </button>
+            <button
+              onClick={() => sendMessage('I want someone to call me')}
+              className={`flex-1 flex items-center justify-center gap-2 bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-lg transition-colors ${
+                isFullscreen ? 'text-sm py-3 px-4' : 'text-xs py-2 px-3'
+              }`}
+            >
+              <Phone className={isFullscreen ? 'w-4 h-4' : 'w-3 h-3'} />
+              Call Me
+            </button>
+          </div>
+
+          {/* Input */}
+          <form
+            onSubmit={handleSubmit}
+            className={`bg-white border-t border-gray-200 ${isFullscreen ? 'p-4' : 'p-3'}`}
+          >
+            <div className={`flex gap-3 ${isFullscreen ? 'max-w-3xl mx-auto' : ''}`}>
+              <input
+                ref={inputRef}
+                type="text"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                placeholder={
+                  leadCaptureStep === 'name'
+                    ? 'Enter your name...'
+                    : leadCaptureStep === 'phone'
+                      ? 'Enter phone number...'
+                      : leadCaptureStep === 'class'
+                        ? 'Enter your class...'
+                        : 'Ask me anything...'
+                }
+                className={`flex-1 bg-gray-100 rounded-full px-4 focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                  isFullscreen ? 'py-3 text-base' : 'py-2 text-sm'
+                }`}
+              />
+              <button
+                type="submit"
+                disabled={!inputValue.trim() || isTyping}
+                className={`bg-green-600 hover:bg-green-700 disabled:bg-gray-300 text-white rounded-full transition-colors ${
+                  isFullscreen ? 'p-3' : 'p-2'
+                }`}
+              >
+                {isTyping ? (
+                  <Loader2 className={`animate-spin ${isFullscreen ? 'w-6 h-6' : 'w-5 h-5'}`} />
+                ) : (
+                  <Send className={isFullscreen ? 'w-6 h-6' : 'w-5 h-5'} />
+                )}
+              </button>
+            </div>
+          </form>
+
+          {/* Footer */}
+          <div
+            className={`bg-gray-50 border-t border-gray-100 text-center ${isFullscreen ? 'px-6 py-3' : 'px-4 py-2'}`}
+          >
+            <p className={`text-gray-500 ${isFullscreen ? 'text-sm' : 'text-xs'}`}>
+              Powered by{' '}
+              <span className="font-medium text-green-600">Cerebrum Biology Academy</span>
+            </p>
+          </div>
+        </div>
+      )}
+    </>
   )
 }

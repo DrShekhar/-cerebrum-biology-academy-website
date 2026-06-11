@@ -73,7 +73,8 @@ export class MetaIntegration {
 
   constructor() {
     this.pixelConfig = {
-      pixelId: process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || '',
+      pixelId:
+        process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || process.env.NEXT_PUBLIC_FB_PIXEL_ID || '',
       accessToken: process.env.FACEBOOK_ACCESS_TOKEN || '',
       testEventCode: process.env.FACEBOOK_TEST_EVENT_CODE,
       conversions: {

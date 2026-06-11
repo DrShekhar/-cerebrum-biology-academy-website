@@ -21,7 +21,12 @@ interface OlympiadLeadFormProps {
   heading?: string
 }
 
-const COURSES = ['Olympiad Foundation (Grade 9-10)', 'Olympiad + IBO (Grade 11-12)', 'Pre-Med Foundation', 'Not sure yet']
+const COURSES = [
+  'Olympiad Foundation (Grade 9-10)',
+  'Olympiad + IBO (Grade 11-12)',
+  'Pre-Med Foundation',
+  'Not sure yet',
+]
 
 export function OlympiadLeadForm({ source, countryLabel, heading }: OlympiadLeadFormProps) {
   const [name, setName] = useState('')
@@ -78,6 +83,7 @@ export function OlympiadLeadForm({ source, countryLabel, heading }: OlympiadLead
           name: name.trim(),
           phone: phone.trim(),
           email: email.trim() || undefined,
+          supportType: 'admission',
           message: `[Olympiad lead] Track: ${course}${
             countryLabel ? ` · Country: ${countryLabel}` : ''
           }${message.trim() ? ` · Note: ${message.trim()}` : ''}`,
@@ -119,8 +125,8 @@ export function OlympiadLeadForm({ source, countryLabel, heading }: OlympiadLead
         <CheckCircle2 className="mx-auto mb-4 h-12 w-12 text-[#6B5DC6]" />
         <h3 className="text-xl font-bold text-[#2C2C2C]">Thanks, {name.split(' ')[0]}.</h3>
         <p className="mt-3 text-sm text-slate-600">
-          We&apos;ve opened WhatsApp with your details ready to send. Tap send there to confirm —
-          we usually respond within 15 minutes during working hours.
+          We&apos;ve opened WhatsApp with your details ready to send. Tap send there to confirm — we
+          usually respond within 15 minutes during working hours.
         </p>
         <button
           type="button"
