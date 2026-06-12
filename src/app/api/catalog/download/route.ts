@@ -79,19 +79,23 @@ export async function POST(request: NextRequest) {
     // Also create a CRM lead for follow-up
     try {
       // Find a default counselor
+      // NB: users has no `isActive` column — filtering on it threw and skipped
+      // the CRM lead. Round-robin to the least-loaded counselor/admin instead.
       const counselor = await prisma.users.findFirst({
-        where: {
-          role: { in: ['COUNSELOR', 'ADMIN'] },
-          isActive: true,
-        },
+        where: { role: { in: ['COUNSELOR', 'ADMIN'] } },
+        orderBy: { leads: { _count: 'asc' } },
         select: { id: true },
       })
 
       if (counselor) {
-        // Check if CRM lead already exists
+        // Check if CRM lead already exists — match last 10 phone digits so a
+        // bare-10 number matches legacy "+91…" rows.
         const existingCrmLead = await prisma.leads.findFirst({
           where: {
-            OR: [{ email: body.email }, { phone: normalizedPhone }],
+            OR: [
+              { email: body.email },
+              { phone: { endsWith: normalizedPhone.replace(/\D/g, '').slice(-10) } },
+            ],
           },
         })
 
@@ -105,7 +109,8 @@ export async function POST(request: NextRequest) {
               courseInterest: 'NEET Biology - Catalog Download',
               stage: 'NEW_LEAD',
               priority: 'WARM',
-              source: body.utm_source ? 'PAID_ADS' : 'WEBSITE_FORM',
+              source: body.utm_source ? 'ADVERTISEMENT' : 'WEBSITE',
+              sourceDetail: body.utm_source || 'catalog-download',
               assignedToId: counselor.id,
               updatedAt: new Date(),
             },

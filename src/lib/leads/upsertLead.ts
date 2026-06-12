@@ -75,9 +75,13 @@ export async function upsertLead(
     const email = input.email?.trim() || null
     const sourceDetail = input.source?.trim() || null
 
-    // Dedup by phone — one CRM lead per person.
+    // Dedup by phone — one CRM lead per person. Match on the last 10 digits so
+    // a bare-10 incoming Indian number matches a legacy row stored as
+    // "+919876543210" (15/18 existing rows use the +91 form). International
+    // numbers (>10 digits after normalize) match exactly.
+    const last10 = phone.slice(-10)
     const existing = await prisma.leads.findFirst({
-      where: { phone },
+      where: phone.length === 10 ? { phone: { endsWith: last10 } } : { phone },
       select: { id: true, studentName: true, email: true, assignedToId: true },
     })
 

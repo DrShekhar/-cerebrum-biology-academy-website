@@ -18,8 +18,8 @@ import { normalizePhone, validatePhone } from '@/lib/utils/phone'
 const DEPRECATION_HEADERS = {
   'X-Deprecated': 'true',
   'X-Deprecated-Message': 'This endpoint is deprecated. Use /api/demo-booking instead.',
-  'Deprecation': 'true',
-  'Sunset': '2026-06-01',
+  Deprecation: 'true',
+  Sunset: '2026-06-01',
 }
 
 // Use centralized phone validation from utils
@@ -79,26 +79,29 @@ function determineLeadSource(body: {
   utmSource?: string | null
   utmMedium?: string | null
   source?: string | null
-}): 'GOOGLE_ADS' | 'FACEBOOK_ADS' | 'SOCIAL_MEDIA' | 'WEBSITE' | 'REFERRAL' {
-  // GCLID is definitive proof of Google Ads
+}): 'SOCIAL_MEDIA' | 'WEBSITE' | 'REFERRAL' | 'ADVERTISEMENT' {
+  // These must be valid LeadSource enum values — returning a non-enum value
+  // (e.g. 'GOOGLE_ADS') threw on leads.create and, because the lead + booking
+  // share one transaction, ROLLED BACK the demo booking on paid-ad traffic.
+  // GCLID is definitive proof of (Google) Ads → ADVERTISEMENT.
   if (body.gclid) {
-    return 'GOOGLE_ADS'
+    return 'ADVERTISEMENT'
   }
 
   const source = (body.utmSource || body.source || '').toLowerCase()
   const medium = (body.utmMedium || '').toLowerCase()
 
-  // Check for Google Ads via UTM
+  // Paid search → ADVERTISEMENT
   if (
     (source === 'google' || source === 'googleads') &&
     (medium === 'cpc' || medium === 'ppc' || medium === 'paid')
   ) {
-    return 'GOOGLE_ADS'
+    return 'ADVERTISEMENT'
   }
 
-  // Check for Facebook Ads
+  // Paid social → ADVERTISEMENT
   if ((source === 'facebook' || source === 'fb' || source === 'instagram') && medium === 'cpc') {
-    return 'FACEBOOK_ADS'
+    return 'ADVERTISEMENT'
   }
 
   // Check for social media
@@ -355,12 +358,13 @@ export async function POST(request: NextRequest) {
     // Use serializable transaction to prevent duplicate lead creation race conditions
     const { demoBooking, lead } = await prisma.$transaction(
       async (tx) => {
-        // Check for existing lead by email or phone (case-insensitive)
+        // Check for existing lead by email or phone. Match the last 10 digits
+        // of the phone so a bare-10 number matches legacy "+91…" rows.
         const existingLead = await tx.leads.findFirst({
           where: {
             OR: [
               { email: { equals: normalizedEmail, mode: 'insensitive' } },
-              { phone: normalizedPhoneValue },
+              { phone: { endsWith: normalizedPhoneValue.replace(/\D/g, '').slice(-10) } },
             ],
           },
         })
@@ -555,7 +559,7 @@ export async function POST(request: NextRequest) {
     // Log deprecation warning
     logger.warn('Deprecated API /api/demo/book used', {
       studentEmail: body.email,
-      clientIp
+      clientIp,
     })
 
     return NextResponse.json(

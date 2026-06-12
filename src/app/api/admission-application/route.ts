@@ -79,31 +79,72 @@ export async function POST(request: NextRequest) {
       logger.info('Created new user for admission application', { userId: user.id })
     }
 
-    // Create lead for counselor follow-up
-    const lead = await prisma.leads.create({
-      data: {
-        name: `${personalInfo.firstName} ${personalInfo.lastName}`,
-        email: personalInfo.email,
-        phone: formattedPhone,
-        source: 'ADMISSION_FORM',
-        status: 'NEW',
-        course: courseSelection.selectedBatch,
-        preferredDate: new Date(),
-        notes: JSON.stringify({
-          personalInfo: {
-            dateOfBirth: personalInfo.dateOfBirth,
-            address: personalInfo.address,
-            city: personalInfo.city,
-            state: personalInfo.state,
-            pincode: personalInfo.pincode,
-          },
-          academicDetails,
-          courseSelection,
-        }),
-      },
-    })
+    // Create lead for counselor follow-up — real leads schema (the previous
+    // name/status/course/preferredDate/notes field set does not exist on the
+    // model and threw, 500-ing every admission submission).
+    const admissionAssignee =
+      (await prisma.users.findFirst({
+        where: { role: { in: ['COUNSELOR', 'ADMIN'] } },
+        orderBy: { leads: { _count: 'asc' } },
+        select: { id: true },
+      })) || (await prisma.users.findFirst({ where: { role: 'ADMIN' }, select: { id: true } }))
 
-    logger.info('Created admission lead', { leadId: lead.id, userId: user.id })
+    const admissionLast10 = formattedPhone.replace(/\D/g, '').slice(-10)
+    const existingAdmissionLead = admissionLast10
+      ? await prisma.leads.findFirst({
+          where: { phone: { endsWith: admissionLast10 } },
+          select: { id: true },
+        })
+      : null
+
+    const lead =
+      existingAdmissionLead ||
+      (admissionAssignee
+        ? await prisma.leads.create({
+            data: {
+              id: `lead_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
+              studentName: `${personalInfo.firstName} ${personalInfo.lastName}`,
+              email: personalInfo.email,
+              phone: formattedPhone,
+              courseInterest: `Admission — ${courseSelection.selectedBatch}`,
+              stage: 'NEW_LEAD',
+              priority: 'HOT',
+              source: 'WEBSITE',
+              sourceDetail: 'admission-form',
+              assignedToId: admissionAssignee.id,
+              nextFollowUpAt: new Date(Date.now() + 60 * 60 * 1000),
+              updatedAt: new Date(),
+            },
+          })
+        : null)
+
+    if (lead && admissionAssignee) {
+      await prisma.notes.create({
+        data: {
+          id: `note_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
+          leadId: lead.id,
+          content: `Admission application details:\n${JSON.stringify(
+            {
+              personalInfo: {
+                dateOfBirth: personalInfo.dateOfBirth,
+                address: personalInfo.address,
+                city: personalInfo.city,
+                state: personalInfo.state,
+                pincode: personalInfo.pincode,
+              },
+              academicDetails,
+              courseSelection,
+            },
+            null,
+            2
+          )}`,
+          createdById: admissionAssignee.id,
+          updatedAt: new Date(),
+        },
+      })
+    }
+
+    logger.info('Created admission lead', { leadId: lead?.id, userId: user.id })
 
     // Get course pricing
     const amount = batchPrices[courseSelection.selectedBatch] || 85000
@@ -153,7 +194,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      applicationId: lead.id,
+      applicationId: lead?.id ?? null,
       enrollmentId: enrollment.id,
       userId: user.id,
       message: 'Application submitted successfully. Our counselor will contact you shortly.',
@@ -198,11 +239,11 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       application: {
         id: lead.id,
-        name: lead.name,
+        name: lead.studentName,
         email: lead.email,
         phone: lead.phone,
-        course: lead.course,
-        status: lead.status,
+        course: lead.courseInterest,
+        status: lead.stage,
         createdAt: lead.createdAt,
       },
     })

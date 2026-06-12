@@ -6,40 +6,21 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const { source, blogTitle, blogSlug, neetChapter, timestamp } = body
 
-    // Get client IP and user agent for tracking
-    const ip =
-      request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown'
-    const userAgent = request.headers.get('user-agent') || 'unknown'
-
-    // Create or update lead in database
-    const lead = await prisma.leads.create({
-      data: {
-        source: source || 'blog_whatsapp_query',
-        status: 'NEW',
-        metadata: {
-          blogTitle,
-          blogSlug,
-          neetChapter,
-          queryTimestamp: timestamp,
-          ip,
-          userAgent,
-          channel: 'whatsapp',
-          qualificationLevel: 'WARM', // Blog readers are warm leads
-        },
-        notes: `WhatsApp query from blog: ${blogTitle}`,
-      },
-    })
-
-    // Log the interaction for analytics
+    // This endpoint fires when a reader taps "ask on WhatsApp" from a blog post.
+    // It carries NO contact details (no phone/name/email) — it is a click-
+    // tracking event, not a CRM lead, and previously wrote `leads` columns that
+    // don't exist (status/metadata/notes) so it always threw. Record it as an
+    // analytics event only; the actual lead is captured when the user sends the
+    // WhatsApp message (handled by the WhatsApp inbound flow).
     await prisma.analytics_events.create({
       data: {
         eventType: 'BLOG_WHATSAPP_QUERY',
         eventData: {
-          leadId: lead.id,
           blogTitle,
           blogSlug,
           neetChapter,
           timestamp,
+          source: source || 'blog_whatsapp_query',
         },
         source: 'blog',
         sessionId: `blog_${Date.now()}`,
@@ -48,8 +29,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: 'Lead captured successfully',
-      leadId: lead.id,
+      message: 'Query tracked',
     })
   } catch (error) {
     console.error('Error capturing blog lead:', error)

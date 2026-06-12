@@ -40,9 +40,10 @@ export async function POST(request: NextRequest) {
 
     const leadId = `aria_${Date.now()}_${Math.random().toString(36).substring(7)}`
 
-    // Check for existing lead
+    // Check for existing lead — match last 10 digits so a bare-10 number
+    // matches legacy rows stored as "+91…".
     const existingLead = await prisma.leads.findFirst({
-      where: { phone: normalizedPhone },
+      where: { phone: { endsWith: normalizedPhone } },
     })
 
     if (existingLead) {

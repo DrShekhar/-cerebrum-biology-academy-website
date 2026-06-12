@@ -471,7 +471,6 @@ export async function POST(request: NextRequest) {
     const sourceHeader = request.headers.get('x-lead-source') || body.source || 'other'
     const source = sourceHeader.toLowerCase() as LeadSource
 
-
     // Verify signature (if provided)
     const signature = request.headers.get('x-signature') || body.signature
     const timestamp = request.headers.get('x-timestamp') || body.timestamp
@@ -485,12 +484,10 @@ export async function POST(request: NextRequest) {
     const parser = parsers[source] || parsers.other
     const leadData = parser(body)
 
-
     // Check for duplicates
     const { isDuplicate, existingLead } = await checkDuplicate(leadData.phone, leadData.email)
 
     if (isDuplicate) {
-
       // Update existing lead with new information
       await prisma.leads.update({
         where: { id: existingLead.id },
@@ -505,6 +502,7 @@ export async function POST(request: NextRequest) {
       // Log activity
       await prisma.activities.create({
         data: {
+          id: `act_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
           userId: existingLead.assignedToId,
           leadId: existingLead.id,
           action: 'DUPLICATE_LEAD_DETECTED',
@@ -524,24 +522,32 @@ export async function POST(request: NextRequest) {
     // Assign counselor
     const counselor = await assignCounselor()
 
-    // Create new lead
+    // Create new lead. id + updatedAt are required (no DB default), and source
+    // must be a valid LeadSource enum (was free text → threw). Paid sources →
+    // ADVERTISEMENT, everything else → OTHER; raw source kept in sourceDetail.
+    const isPaid = source === 'google_ads' || source === 'meta_ads'
     const lead = await prisma.leads.create({
       data: {
+        id: `lead_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
         studentName: leadData.studentName,
         email: leadData.email,
         phone: leadData.phone,
         courseInterest: leadData.courseInterest || 'Biology Coaching',
         stage: 'NEW_LEAD',
-        priority: source === 'google_ads' || source === 'meta_ads' ? 'HOT' : 'WARM',
-        source: `${source}${leadData.metadata?.campaignName ? ` - ${leadData.metadata.campaignName}` : ''}`,
+        priority: isPaid ? 'HOT' : 'WARM',
+        source: isPaid ? 'ADVERTISEMENT' : 'OTHER',
+        sourceDetail: `${source}${leadData.metadata?.campaignName ? ` - ${leadData.metadata.campaignName}` : ''}`,
         assignedToId: counselor.id,
         nextFollowUpAt: new Date(Date.now() + 2 * 60 * 60 * 1000), // 2 hours
+        updatedAt: new Date(),
       },
     })
 
     // Create follow-up task
     const task = await prisma.tasks.create({
       data: {
+        id: `task_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
+        updatedAt: new Date(),
         title: `New lead from ${source} - ${leadData.studentName}`,
         description: `New lead received from ${source}.\n\nStudent: ${leadData.studentName}\nPhone: ${leadData.phone}\nEmail: ${leadData.email || 'Not provided'}\nCourse Interest: ${leadData.courseInterest}\nCity: ${leadData.city || 'Not provided'}\nGrade: ${leadData.grade || 'Not provided'}\n\nMessage: ${leadData.message || 'No message'}\n\nPlease contact within 2 hours for best conversion.`,
         type: 'FOLLOW_UP_CALL',
@@ -559,6 +565,7 @@ export async function POST(request: NextRequest) {
     // Log activity
     await prisma.activities.create({
       data: {
+        id: `act_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
         userId: counselor.id,
         leadId: lead.id,
         action: 'LEAD_CREATED',
@@ -597,7 +604,6 @@ export async function POST(request: NextRequest) {
           console.error(`📧 Email service error:`, error)
         })
     }
-
 
     return NextResponse.json({
       success: true,

@@ -144,59 +144,104 @@ const updateStudentSchema = z.object({
   tags: z.array(z.string()).optional(),
 })
 
+const LEAD_SOURCE_MAP: Record<
+  string,
+  'WEBSITE' | 'REFERRAL' | 'SOCIAL_MEDIA' | 'ADVERTISEMENT' | 'MANUAL_ENTRY'
+> = {
+  website: 'WEBSITE',
+  referral: 'REFERRAL',
+  social_media: 'SOCIAL_MEDIA',
+  advertisement: 'ADVERTISEMENT',
+  direct: 'MANUAL_ENTRY',
+}
+
 export async function POST(request: NextRequest) {
   try {
     // Verify admin authentication
-    await requireAdminAuth()
+    const session = await requireAdminAuth()
 
     const body = await request.json()
 
     // Validate request body
     const validatedData = addStudentSchema.parse(body)
 
-    // Create student in database
-    const student = await prisma.leads.create({
-      data: {
-        name: validatedData.studentName,
-        email: validatedData.email,
-        phone: validatedData.phone,
-        whatsappNumber: validatedData.whatsappNumber || null,
-        dateOfBirth: validatedData.dateOfBirth ? new Date(validatedData.dateOfBirth) : null,
-        class: validatedData.class,
-        school: validatedData.school,
-        city: validatedData.city,
-        state: validatedData.state,
-        courseInterest: validatedData.courseInterest,
-        leadSource: validatedData.leadSource,
-        priority: validatedData.priority,
-        parentName: validatedData.parentName || null,
-        parentPhone: validatedData.parentPhone || null,
-        notes: validatedData.notes || null,
-        status: 'NEW',
-        createdBy: 'admin',
-      },
-    })
+    // Resolve assignee — round-robin to the least-loaded counselor/admin.
+    const assignee = (await prisma.users.findFirst({
+      where: { role: { in: ['COUNSELOR', 'ADMIN'] } },
+      orderBy: { leads: { _count: 'asc' } },
+      select: { id: true },
+    })) || { id: session.user.id }
 
-    // Log activity
-    await prisma.activities.create({
-      data: {
-        entityType: 'lead',
-        entityId: student.id,
-        action: 'created',
-        description: `Student ${validatedData.studentName} added via admin panel`,
-        performedBy: 'admin',
-        metadata: {
-          source: 'admin_panel',
+    // Create the lead with the REAL leads schema (the previous field set —
+    // name/class/school/parentName/status/createdBy — does not exist on the
+    // model and threw on every submission). Rich details that have no column
+    // are folded into a linked note + courseInterest context.
+    const phone = validatedData.phone.replace(/\D/g, '').slice(-10) || validatedData.phone
+    const last10 = phone.replace(/\D/g, '').slice(-10)
+    const existing = last10
+      ? await prisma.leads.findFirst({
+          where: { phone: { endsWith: last10 } },
+          select: { id: true },
+        })
+      : null
+
+    const student =
+      existing ||
+      (await prisma.leads.create({
+        data: {
+          id: `lead_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
           studentName: validatedData.studentName,
           email: validatedData.email,
+          phone,
+          courseInterest: `${validatedData.courseInterest}${validatedData.class ? ` — Class ${validatedData.class}` : ''}`,
+          stage: 'NEW_LEAD',
+          priority: validatedData.priority,
+          source: LEAD_SOURCE_MAP[validatedData.leadSource] || 'MANUAL_ENTRY',
+          sourceDetail: 'admin-panel',
+          assignedToId: assignee.id,
+          updatedAt: new Date(),
         },
+      }))
+
+    // Capture the extra detail (school/city/state/parent/DOB/notes) as a note.
+    const noteLines = [
+      validatedData.school && `School: ${validatedData.school}`,
+      (validatedData.city || validatedData.state) &&
+        `Location: ${[validatedData.city, validatedData.state].filter(Boolean).join(', ')}`,
+      validatedData.dateOfBirth && `DOB: ${validatedData.dateOfBirth}`,
+      validatedData.whatsappNumber && `WhatsApp: ${validatedData.whatsappNumber}`,
+      validatedData.parentName && `Parent: ${validatedData.parentName}`,
+      validatedData.parentPhone && `Parent phone: ${validatedData.parentPhone}`,
+      validatedData.notes && `Notes: ${validatedData.notes}`,
+    ].filter(Boolean)
+    if (noteLines.length) {
+      await prisma.notes.create({
+        data: {
+          id: `note_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
+          leadId: student.id,
+          content: noteLines.join('\n'),
+          createdById: session.user.id,
+          updatedAt: new Date(),
+        },
+      })
+    }
+
+    // Log activity (real activities schema).
+    await prisma.activities.create({
+      data: {
+        id: `act_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
+        userId: session.user.id,
+        leadId: student.id,
+        action: 'LEAD_CREATED',
+        description: `Lead ${validatedData.studentName} added via admin panel`,
+        metadata: { source: 'admin_panel', email: validatedData.email },
       },
     })
 
     return NextResponse.json(
       {
         success: true,
-        message: 'Student added successfully',
+        message: existing ? 'Matched an existing lead by phone' : 'Student added successfully',
         data: student,
       },
       { status: 201 }

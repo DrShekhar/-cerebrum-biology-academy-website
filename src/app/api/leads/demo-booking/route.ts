@@ -27,6 +27,43 @@ export async function POST(request: NextRequest) {
     const source = body.source || 'google-ads-landing'
     const bookingId = `demo_${Date.now()}_${Math.random().toString(36).substring(7)}`
 
+    // Resolve a real assignee (assignedToId is a required FK) — round-robin to
+    // the least-loaded counselor/admin, fallback to any admin.
+    const assignee =
+      (await prisma.users.findFirst({
+        where: { role: { in: ['COUNSELOR', 'ADMIN'] } },
+        orderBy: { leads: { _count: 'asc' } },
+        select: { id: true },
+      })) || (await prisma.users.findFirst({ where: { role: 'ADMIN' }, select: { id: true } }))
+
+    if (!assignee) {
+      // No staff to own the lead — still save the booking so the prospect isn't
+      // lost; skip the CRM lead rather than FK-crash the transaction.
+      const booking = await prisma.demoBooking.create({
+        data: {
+          id: bookingId,
+          studentName: name,
+          phone: normalizedPhone,
+          preferredDate: new Date().toISOString().split('T')[0],
+          preferredTime: '09:00 AM - 08:00 PM',
+          message: `Landing page: ${body.landingPage || '/lp/neet-demo'}`,
+          status: 'PENDING',
+          source,
+          utmSource: body.utm_source || null,
+          utmMedium: body.utm_medium || null,
+          utmCampaign: body.utm_campaign || null,
+          updatedAt: new Date(),
+        },
+      })
+      notifyAdminFormSubmission('Demo Booking (Landing Page)', {
+        Name: name,
+        Phone: normalizedPhone,
+        Course: course,
+        Source: source,
+      }).catch(() => {})
+      return NextResponse.json({ success: true, bookingId: booking.id })
+    }
+
     const result = await prisma.$transaction(async (tx) => {
       const booking = await tx.demoBooking.create({
         data: {
@@ -53,7 +90,11 @@ export async function POST(request: NextRequest) {
           courseInterest: course,
           stage: 'DEMO_SCHEDULED',
           priority: 'HOT',
-          source: body.utm_source ? 'PAID_ADS' : 'WEBSITE_FORM',
+          // Valid LeadSource enum (was 'PAID_ADS'/'WEBSITE_FORM' — not in enum,
+          // threw and rolled back the booking).
+          source: body.utm_source ? 'ADVERTISEMENT' : 'WEBSITE',
+          sourceDetail: source,
+          assignedToId: assignee.id,
           demoBookingId: booking.id,
           updatedAt: new Date(),
         },

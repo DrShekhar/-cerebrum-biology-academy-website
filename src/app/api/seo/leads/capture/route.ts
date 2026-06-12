@@ -107,29 +107,43 @@ export async function POST(request: NextRequest) {
         })
 
         if (!lead) {
-          // Create new lead in leads table
-          lead = await prisma.leads.create({
-            data: {
-              id: `lead_${Date.now()}_${Math.random().toString(36).slice(2)}`,
-              studentName: validatedData.name,
-              email: validatedData.email || null,
-              phone: cleanPhone,
-              courseInterest: validatedData.topicSlug,
-              stage: 'NEW_LEAD',
-              source: validatedData.source as any,
-              assignedToId: 'system',
-              updatedAt: new Date(),
-            },
-          })
+          // Resolve a real assignee — 'system' was a magic string with no
+          // matching users row, so this create FK-crashed and the CRM lead was
+          // silently lost. source must also be a valid LeadSource enum.
+          const assignee =
+            (await prisma.users.findFirst({
+              where: { role: { in: ['COUNSELOR', 'ADMIN'] } },
+              orderBy: { leads: { _count: 'asc' } },
+              select: { id: true },
+            })) ||
+            (await prisma.users.findFirst({ where: { role: 'ADMIN' }, select: { id: true } }))
+
+          if (assignee) {
+            lead = await prisma.leads.create({
+              data: {
+                id: `lead_${Date.now()}_${Math.random().toString(36).slice(2)}`,
+                studentName: validatedData.name,
+                email: validatedData.email || null,
+                phone: cleanPhone,
+                courseInterest: validatedData.topicSlug || 'Biology coaching (topic page)',
+                stage: 'NEW_LEAD',
+                source: 'WEBSITE',
+                sourceDetail: validatedData.source,
+                assignedToId: assignee.id,
+                updatedAt: new Date(),
+              },
+            })
+          }
         }
 
         // Trigger form_submit behavioral action (starts welcome sequence)
-        await whatsappDripService.handleBehavioralTrigger(lead.id, 'form_submit', {
-          source: validatedData.source,
-          topicSlug: validatedData.topicSlug,
-          leadMagnetId: validatedData.leadMagnetId,
-        })
-
+        if (lead) {
+          await whatsappDripService.handleBehavioralTrigger(lead.id, 'form_submit', {
+            source: validatedData.source,
+            topicSlug: validatedData.topicSlug,
+            leadMagnetId: validatedData.leadMagnetId,
+          })
+        }
       } catch (dripError) {
         console.error('Failed to start drip sequence (non-blocking):', dripError)
       }
