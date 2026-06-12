@@ -128,6 +128,30 @@ const inlineRedirectPatterns: RegExp[] = [
   /^\/locations\/[^/]+\/[^/]+$/,
 ]
 
+// Doorway-consolidation Tier C (2026-06): the city-template intent pages
+// (neet-dropper-batch-{city}, online-neet-coaching-{city}) are noindexed —
+// they stay live for visitors but must not be submitted to Google
+// ("Submitted URL marked noindex"). Hand-written family members that remain
+// indexed are allowlisted here.
+const NOINDEXED_FAMILY_ALLOWLIST = new Set([
+  '/neet-dropper-batch-2025-26-gurugram',
+  '/neet-dropper-batch-online',
+  '/online-neet-coaching-faridabad',
+  '/online-neet-coaching-ghaziabad',
+  '/online-neet-coaching-greater-noida',
+  '/online-neet-coaching-india',
+  '/online-neet-coaching-pcb',
+])
+const NOINDEXED_FAMILY_PATTERNS = [
+  /^\/neet-dropper-batch-[a-z-]+$/,
+  /^\/online-neet-coaching-[a-z-]+$/,
+]
+
+function isNoindexedDoorway(urlPath: string): boolean {
+  if (NOINDEXED_FAMILY_ALLOWLIST.has(urlPath)) return false
+  return NOINDEXED_FAMILY_PATTERNS.some((re) => re.test(urlPath))
+}
+
 function isRedirectedPath(urlPath: string): boolean {
   if (exactRedirects.has(urlPath)) return true
   if (wildcardRegexes.some((re) => re.test(urlPath))) return true
@@ -8026,7 +8050,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return Array.from(urlMap.values())
     .filter((route) => {
       const path = route.url.replace(baseUrl, '')
-      return !isRedirectedPath(path)
+      return !isRedirectedPath(path) && !isNoindexedDoorway(path)
     })
     .map((route) => {
       const path = route.url.replace(baseUrl, '')

@@ -38,7 +38,12 @@ export const metadata: Metadata = city
         title: `NEET Coaching in ${city.displayName} · Cerebrum Biology Academy`,
         description: `Best NEET Biology coaching for ${city.displayName} students at Cerebrum.`,
       },
-      robots: 'index, follow, max-image-preview:large',
+      // noindex 2026-06 (doorway consolidation Tier C): this intent page shares
+      // ~96% of its rendered copy with its city siblings — Google's scaled-content
+      // policy territory. Page stays fully live for visitors and internal links
+      // (follow); the city's near-me page + city hub carry the indexable signal.
+      // Reversible: restore 'index, follow' when the page gets >=40% unique copy.
+      robots: 'noindex, follow',
     }
   : { title: 'City not found' }
 
@@ -110,10 +115,9 @@ export default function Page() {
             Online NEET Coaching in {city.displayName}
           </h1>
           <p className="text-xl text-slate-300 mb-6 max-w-3xl">
-            100% live online NEET Biology coaching for {city.displayName} ({city.state})
-            students. Same AIIMS-trained faculty and biology-specialist pedagogy as
-            Delhi NCR offline batches — delivered via Zoom in IST evening slots.
-            Designed for aspirants targeting{' '}
+            100% live online NEET Biology coaching for {city.displayName} ({city.state}) students.
+            Same AIIMS-trained faculty and biology-specialist pedagogy as Delhi NCR offline batches
+            — delivered via Zoom in IST evening slots. Designed for aspirants targeting{' '}
             <strong>{city.stateQuotaCollege}</strong>
             {city.otherStateMedicalColleges?.length ? (
               <> or {city.otherStateMedicalColleges[0]}</>
@@ -152,9 +156,7 @@ export default function Page() {
               </ul>
             </div>
             <div className="rounded-xl bg-slate-50 p-5">
-              <p className="text-sm font-semibold text-indigo-700">
-                Neighborhoods covered
-              </p>
+              <p className="text-sm font-semibold text-indigo-700">Neighborhoods covered</p>
               <ul className="mt-3 space-y-1.5 text-sm text-slate-700">
                 {city.majorAreas.map((a) => (
                   <li key={a}>• {a}</li>
@@ -173,16 +175,11 @@ export default function Page() {
           </h2>
           <div className="space-y-4">
             {faqs.map((f, i) => (
-              <details
-                key={i}
-                className="bg-white rounded-xl p-5 border border-slate-200"
-              >
+              <details key={i} className="bg-white rounded-xl p-5 border border-slate-200">
                 <summary className="text-base font-semibold text-slate-900 cursor-pointer">
                   {f.question}
                 </summary>
-                <p className="mt-3 text-sm text-slate-700 leading-relaxed">
-                  {f.answer}
-                </p>
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed">{f.answer}</p>
               </details>
             ))}
           </div>

@@ -9,7 +9,11 @@ const city = NEAR_ME_CITY_BY_SLUG[SLUG]
 export const metadata: Metadata = city
   ? {
       title: `NEET Dropper Batch 2026-27 ${city.displayName} | Biology Specialist Repeater Programme · Cerebrum`,
-      description: `NEET Dropper Batch 2026-27 for ${city.displayName} (${city.state}) students. Biology-specialist coaching for repeaters targeting ${city.stateQuotaCollege}${city.otherStateMedicalColleges?.length ? ' or ' + city.otherStateMedicalColleges[0] : ''}. AIIMS-trained faculty, 10-40 student batches, live online + study material shipped to ${city.majorAreas.slice(0, 3).join(', ')}. Pair with your existing ${city.localCoachingPresence.split(',')[0].trim().replace(/\\(.*\\)/, '').trim()} for PCM.`,
+      description: `NEET Dropper Batch 2026-27 for ${city.displayName} (${city.state}) students. Biology-specialist coaching for repeaters targeting ${city.stateQuotaCollege}${city.otherStateMedicalColleges?.length ? ' or ' + city.otherStateMedicalColleges[0] : ''}. AIIMS-trained faculty, 10-40 student batches, live online + study material shipped to ${city.majorAreas.slice(0, 3).join(', ')}. Pair with your existing ${city.localCoachingPresence
+        .split(',')[0]
+        .trim()
+        .replace(/\\(.*\\)/, '')
+        .trim()} for PCM.`,
       keywords: [
         `neet dropper batch ${city.displayName}`,
         `neet dropper batch ${SLUG}`,
@@ -38,7 +42,12 @@ export const metadata: Metadata = city
         title: `NEET Coaching in ${city.displayName} · Cerebrum Biology Academy`,
         description: `Best NEET Biology coaching for ${city.displayName} students at Cerebrum.`,
       },
-      robots: 'index, follow, max-image-preview:large',
+      // noindex 2026-06 (doorway consolidation Tier C): this intent page shares
+      // ~96% of its rendered copy with its city siblings — Google's scaled-content
+      // policy territory. Page stays fully live for visitors and internal links
+      // (follow); the city's near-me page + city hub carry the indexable signal.
+      // Reversible: restore 'index, follow' when the page gets >=40% unique copy.
+      robots: 'noindex, follow',
     }
   : { title: 'City not found' }
 
