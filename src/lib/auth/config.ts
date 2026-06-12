@@ -424,11 +424,11 @@ export async function validateUserSession(request: NextRequest): Promise<UserSes
         userId: payload.userId,
       },
       include: {
-        user: true,
+        users: true,
       },
     })
 
-    if (!session || !session.user) {
+    if (!session || !session.users) {
       return { valid: false }
     }
 
@@ -440,12 +440,12 @@ export async function validateUserSession(request: NextRequest): Promise<UserSes
 
     return {
       valid: true,
-      userId: session.user.id,
-      role: session.user.role,
-      email: session.user.email,
-      name: session.user.name,
+      userId: session.users.id,
+      role: session.users.role,
+      email: session.users.email,
+      name: session.users.name,
       expiresAt: session.expires,
-      permissions: getUserPermissions(session.user.role),
+      permissions: getUserPermissions(session.users.role),
     }
   } catch (error) {
     console.error('User authentication error:', error)
@@ -565,11 +565,11 @@ export class SessionManager {
         expires: { gt: new Date() },
       },
       include: {
-        user: true,
+        users: true,
       },
     })
 
-    if (!session || !session.user) {
+    if (!session || !session.users) {
       console.warn(`[Session] Session not found or expired: ${payload.sessionId}`)
       return null
     }
@@ -590,15 +590,15 @@ export class SessionManager {
 
     // Generate new tokens
     const newAccessToken = TokenUtils.generateAccessToken({
-      userId: session.user.id,
-      email: session.user.email,
-      role: session.user.role,
-      name: session.user.name,
+      userId: session.users.id,
+      email: session.users.email,
+      role: session.users.role,
+      name: session.users.name,
       sessionId: payload.sessionId,
     })
 
     const newRefreshToken = TokenUtils.generateRefreshToken({
-      userId: session.user.id,
+      userId: session.users.id,
       sessionId: payload.sessionId,
     })
 
@@ -873,7 +873,9 @@ export class AuthRateLimit {
     }
 
     if (cleaned > 0) {
-      console.log(`[AuthRateLimit] Cleaned up ${cleaned} expired entries. Current size: ${this.attempts.size}`)
+      console.log(
+        `[AuthRateLimit] Cleaned up ${cleaned} expired entries. Current size: ${this.attempts.size}`
+      )
     }
   }
 }

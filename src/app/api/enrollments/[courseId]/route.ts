@@ -2,10 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { courseId: string } }
-) {
+export async function GET(request: NextRequest, { params }: { params: { courseId: string } }) {
   try {
     const session = await auth()
     if (!session?.user?.id) {
@@ -36,19 +33,19 @@ export async function GET(
                   select: {
                     id: true,
                     title: true,
-                    sortOrder: true,
+                    orderIndex: true,
                   },
-                  orderBy: { sortOrder: 'asc' },
+                  orderBy: { orderIndex: 'asc' },
                 },
               },
-              orderBy: { sortOrder: 'asc' },
+              orderBy: { orderIndex: 'asc' },
             },
             study_materials: {
-              where: { isActive: true },
+              where: { isPublished: true },
               select: {
                 id: true,
                 title: true,
-                type: true,
+                materialType: true,
                 chapterId: true,
                 topicId: true,
               },
@@ -66,11 +63,9 @@ export async function GET(
     const modules = enrollment.courses.chapters.map((chapter) => ({
       id: chapter.id,
       title: chapter.title,
-      sortOrder: chapter.sortOrder,
+      sortOrder: chapter.orderIndex,
       topics: chapter.topics,
-      materials: enrollment.courses.study_materials.filter(
-        (m) => m.chapterId === chapter.id
-      ),
+      materials: enrollment.courses.study_materials.filter((m) => m.chapterId === chapter.id),
     }))
 
     return NextResponse.json({
@@ -92,7 +87,10 @@ export async function GET(
   } catch (error) {
     console.error('Error fetching course details:', error)
     return NextResponse.json(
-      { error: 'Failed to fetch course details', details: error instanceof Error ? error.message : 'Unknown error' },
+      {
+        error: 'Failed to fetch course details',
+        details: error instanceof Error ? error.message : 'Unknown error',
+      },
       { status: 500 }
     )
   }
