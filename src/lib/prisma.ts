@@ -280,7 +280,7 @@ class MockPrismaClient {
 }
 
 // Create Prisma client with enhanced error handling and WASM fallback
-function createPrismaClient() {
+function createPrismaClient(): PrismaClient {
   try {
     // Detect Edge Runtime and return mock client to avoid process.nextTick errors
     if (
@@ -292,7 +292,7 @@ function createPrismaClient() {
         runtime: 'edge',
         fallback: 'mock_client',
       })
-      return new MockPrismaClient() as any
+      return new MockPrismaClient() as unknown as PrismaClient
     }
 
     // Check if DATABASE_URL is available
@@ -300,7 +300,7 @@ function createPrismaClient() {
       logger.warn('DATABASE_URL not found, using mock Prisma client', {
         fallback: 'mock_client',
       })
-      return new MockPrismaClient() as any
+      return new MockPrismaClient() as unknown as PrismaClient
     }
 
     const client = new PrismaClient({
@@ -342,12 +342,12 @@ function createPrismaClient() {
       error,
       fallback: 'mock_client',
     })
-    return new MockPrismaClient() as any
+    return new MockPrismaClient() as unknown as PrismaClient
   }
 }
 
 // Lazy initialization of Prisma client with comprehensive error handling
-export const prisma = globalForPrisma.prisma ?? createPrismaClient()
+export const prisma: PrismaClient = globalForPrisma.prisma ?? createPrismaClient()
 
 // Prevent multiple instances of Prisma Client in development
 if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
