@@ -6,7 +6,6 @@ import {
   BookOpen,
   TrendingUp,
   Target,
-  Clock,
   Brain,
   BarChart3,
   MessageCircle,
@@ -48,6 +47,15 @@ interface TestAttempt {
   percentage: number
   timeSpent: number
   createdAt: string
+  strengthAreas?: string[] | null
+  weaknessAreas?: string[] | null
+}
+
+interface PerformanceSnapshot {
+  trend: { label: string; score: number }[]
+  changePct: number | null
+  strongAreas: string[]
+  focusAreas: string[]
 }
 
 interface RecentActivity {
@@ -75,6 +83,7 @@ export default function StudentDashboard() {
   const [testAttempts, setTestAttempts] = useState<TestAttempt[]>([])
   const [quickStats, setQuickStats] = useState<QuickStat[]>([])
   const [recentActivities, setRecentActivities] = useState<RecentActivity[]>([])
+  const [performance, setPerformance] = useState<PerformanceSnapshot | null>(null)
   const [currentDate, setCurrentDate] = useState(new Date())
   const [showUpgradeModal, setShowUpgradeModal] = useState(false)
 
@@ -127,13 +136,15 @@ export default function StudentDashboard() {
             scores.reduce((a: number, b: number) => a + b, 0) / scores.length
           )
 
-          // Calculate study streak (simplified)
+          // Calculate study streak (distinct days with at least one attempt)
           const dates = attempts.map((a: TestAttempt) => new Date(a.createdAt).toDateString())
           const uniqueDates = new Set(dates)
           const studyStreak = uniqueDates.size
 
-          // Calculate time until next class (mock data)
-          const nextClassHours = 3
+          // Best score across all attempts — real, useful, replaces the old
+          // hardcoded "Next Class" countdown (there is no schedule data source
+          // on this page, so showing a fabricated time was misleading).
+          const bestScore = Math.round(Math.max(...scores))
 
           // Build quick stats
           const stats: QuickStat[] = [
@@ -142,30 +153,62 @@ export default function StudentDashboard() {
               value: totalTests,
               icon: <Target className="w-5 h-5" />,
               color: 'text-blue-600 bg-blue-50',
-              trend: totalTests > 0 ? 10 : 0,
             },
             {
               label: 'Average Score',
               value: `${avgScore}%`,
               icon: <Trophy className="w-5 h-5" />,
               color: 'text-green-600 bg-green-50',
-              trend: avgScore >= 75 ? 5 : -3,
             },
             {
               label: 'Study Streak',
-              value: `${studyStreak} days`,
+              value: `${studyStreak} ${studyStreak === 1 ? 'day' : 'days'}`,
               icon: <Flame className="w-5 h-5" />,
               color: 'text-orange-600 bg-orange-50',
-              trend: studyStreak > 0 ? 1 : 0,
             },
             {
-              label: 'Next Class',
-              value: `${nextClassHours}h`,
-              icon: <Clock className="w-5 h-5" />,
+              label: 'Best Score',
+              value: `${bestScore}%`,
+              icon: <Crown className="w-5 h-5" />,
               color: 'text-purple-600 bg-purple-50',
             },
           ]
           setQuickStats(stats)
+
+          // Performance snapshot — computed from the real attempts (was a
+          // hardcoded [85,72,90,...] chart + fixed "Genetics, Cell Biology").
+          // Chronological order: API returns newest-first, so reverse.
+          const chrono = [...attempts].reverse()
+          const recent = chrono.slice(-7)
+          const trend = recent.map((a: TestAttempt) => ({
+            label: new Date(a.createdAt).toLocaleDateString('en-IN', {
+              day: 'numeric',
+              month: 'short',
+            }),
+            score: Math.round(a.percentage),
+          }))
+          // Change = newest attempt vs the one ~a week of activity earlier.
+          let changePct: number | null = null
+          if (trend.length >= 2) {
+            changePct = trend[trend.length - 1].score - trend[0].score
+          }
+          // Strong/focus areas: tally topic names across attempts, most-frequent first.
+          const tally = (key: 'strengthAreas' | 'weaknessAreas') => {
+            const counts = new Map<string, number>()
+            for (const a of attempts as TestAttempt[]) {
+              for (const t of a[key] ?? []) counts.set(t, (counts.get(t) ?? 0) + 1)
+            }
+            return [...counts.entries()]
+              .sort((a, b) => b[1] - a[1])
+              .slice(0, 3)
+              .map(([t]) => t)
+          }
+          setPerformance({
+            trend,
+            changePct,
+            strongAreas: tally('strengthAreas'),
+            focusAreas: tally('weaknessAreas'),
+          })
 
           // Build recent activities
           const activities: RecentActivity[] = attempts.slice(0, 5).map((attempt: TestAttempt) => ({
@@ -394,50 +437,93 @@ export default function StudentDashboard() {
               </div>
             </section>
 
-            {/* Performance Snapshot */}
+            {/* Performance Snapshot — computed from real test attempts */}
             <section>
               <h2 className="text-xl font-bold text-gray-900 mb-4">Performance Snapshot</h2>
               <Card>
                 <CardContent className="p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-600">7-Day Progress</span>
-                      <span className="text-sm font-medium text-green-600">+12%</span>
+                  {!performance || performance.trend.length === 0 ? (
+                    <div className="py-6 text-center">
+                      <p className="text-sm text-gray-600">
+                        Take a practice test to see your performance trend and your strong vs focus
+                        areas here.
+                      </p>
+                      <Button
+                        onClick={() => router.push('/mock-tests')}
+                        variant="secondary"
+                        className="mt-4"
+                      >
+                        Take a Test
+                      </Button>
                     </div>
+                  ) : (
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-600">
+                          Recent Progress ({performance.trend.length}{' '}
+                          {performance.trend.length === 1 ? 'test' : 'tests'})
+                        </span>
+                        {performance.changePct !== null && (
+                          <span
+                            className={cn(
+                              'text-sm font-medium',
+                              performance.changePct >= 0 ? 'text-green-600' : 'text-orange-600'
+                            )}
+                          >
+                            {performance.changePct >= 0 ? '+' : ''}
+                            {performance.changePct}%
+                          </span>
+                        )}
+                      </div>
 
-                    {/* Simple bar chart visualization */}
-                    <div className="space-y-2">
-                      {[85, 72, 90, 78, 88, 92, 95].map((score, index) => (
-                        <div key={index} className="flex items-center gap-2">
-                          <span className="text-xs text-gray-500 w-8">Day {index + 1}</span>
-                          <div className="flex-1 bg-gray-100 rounded-full h-2">
-                            <div
-                              className={cn(
-                                'h-2 rounded-full',
-                                score >= 90
-                                  ? 'bg-green-600'
-                                  : score >= 75
-                                    ? 'bg-blue-500'
-                                    : 'bg-orange-500'
-                              )}
-                            />
+                      {/* Bar chart — real per-attempt percentages */}
+                      <div className="space-y-2">
+                        {performance.trend.map((point, index) => (
+                          <div key={index} className="flex items-center gap-2">
+                            <span className="text-xs text-gray-500 w-12">{point.label}</span>
+                            <div className="flex-1 bg-gray-100 rounded-full h-2">
+                              <div
+                                className={cn(
+                                  'h-2 rounded-full',
+                                  point.score >= 90
+                                    ? 'bg-green-600'
+                                    : point.score >= 75
+                                      ? 'bg-blue-500'
+                                      : 'bg-orange-500'
+                                )}
+                                style={{ width: `${Math.max(point.score, 2)}%` }}
+                              />
+                            </div>
+                            <span className="text-xs font-medium text-gray-700 w-10">
+                              {point.score}%
+                            </span>
                           </div>
-                          <span className="text-xs font-medium text-gray-700 w-10">{score}%</span>
-                        </div>
-                      ))}
-                    </div>
+                        ))}
+                      </div>
 
-                    <div className="pt-4 border-t space-y-2">
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="text-gray-600">Strong Areas:</span>
-                        <span className="font-medium text-gray-900">Genetics, Cell Biology</span>
-                      </div>
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="text-gray-600">Focus Areas:</span>
-                        <span className="font-medium text-orange-600">Ecology, Evolution</span>
-                      </div>
+                      {(performance.strongAreas.length > 0 ||
+                        performance.focusAreas.length > 0) && (
+                        <div className="pt-4 border-t space-y-2">
+                          {performance.strongAreas.length > 0 && (
+                            <div className="flex items-center justify-between text-sm gap-3">
+                              <span className="text-gray-600 flex-shrink-0">Strong Areas:</span>
+                              <span className="font-medium text-gray-900 text-right">
+                                {performance.strongAreas.join(', ')}
+                              </span>
+                            </div>
+                          )}
+                          {performance.focusAreas.length > 0 && (
+                            <div className="flex items-center justify-between text-sm gap-3">
+                              <span className="text-gray-600 flex-shrink-0">Focus Areas:</span>
+                              <span className="font-medium text-orange-600 text-right">
+                                {performance.focusAreas.join(', ')}
+                              </span>
+                            </div>
+                          )}
+                        </div>
+                      )}
                     </div>
-                  </div>
+                  )}
                 </CardContent>
               </Card>
             </section>
