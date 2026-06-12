@@ -26,7 +26,7 @@ async function verifyAndConsumeToken(
   const result = await prisma.$transaction(
     async (tx) => {
       // Find valid token
-      const tokenRecord = await tx.rescheduleToken.findFirst({
+      const tokenRecord = await tx.reschedule_tokens.findFirst({
         where: {
           bookingId,
           token,
@@ -40,13 +40,13 @@ async function verifyAndConsumeToken(
       }
 
       // Mark token as used
-      await tx.rescheduleToken.update({
+      await tx.reschedule_tokens.update({
         where: { id: tokenRecord.id },
         data: { used: true },
       })
 
       // Get booking details
-      const booking = await tx.demoBooking.findUnique({
+      const booking = await tx.demo_bookings.findUnique({
         where: { id: bookingId },
       })
 

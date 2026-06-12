@@ -324,7 +324,7 @@ export async function POST(request: NextRequest) {
         async (tx) => {
           // DEMO-005: Check for slot conflict inside transaction (race condition prevention)
           // Even though we checked availability above, we need atomic verification
-          const conflictingBooking = await tx.demoBooking.findFirst({
+          const conflictingBooking = await tx.demo_bookings.findFirst({
             where: {
               preferredDate: data.preferredDate,
               preferredTime: {
@@ -341,7 +341,7 @@ export async function POST(request: NextRequest) {
           }
 
           // 1. Create the demo booking
-          const booking = await tx.demoBooking.create({
+          const booking = await tx.demo_bookings.create({
             data: {
               // Identity (no userId for guest bookings)
               userId: null, // Guest booking

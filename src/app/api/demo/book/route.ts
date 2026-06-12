@@ -369,7 +369,7 @@ export async function POST(request: NextRequest) {
         })
 
         // Step 2: Save DemoBooking to database
-        const booking = await tx.demoBooking.create({
+        const booking = await tx.demo_bookings.create({
           data: {
             studentName: body.studentName,
             email: normalizedEmail,

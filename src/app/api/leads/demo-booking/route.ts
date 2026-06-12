@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
     if (!assignee) {
       // No staff to own the lead — still save the booking so the prospect isn't
       // lost; skip the CRM lead rather than FK-crash the transaction.
-      const booking = await prisma.demoBooking.create({
+      const booking = await prisma.demo_bookings.create({
         data: {
           id: bookingId,
           studentName: name,
@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
     }
 
     const result = await prisma.$transaction(async (tx) => {
-      const booking = await tx.demoBooking.create({
+      const booking = await tx.demo_bookings.create({
         data: {
           id: bookingId,
           studentName: name,
