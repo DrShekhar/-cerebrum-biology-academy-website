@@ -35,6 +35,20 @@ interface MigrationResult {
 }
 
 async function handlePOST(request: NextRequest, session: ValidatedSession): Promise<NextResponse> {
+  // DISABLED 2026-06-12: this route reads content_leads fields that don't exist
+  // (whatsappPhone / engagementScore / captureType / articleSlug — the real
+  // column is whatsappNumber), so it would create phoneless, non-deduped junk
+  // leads. Superseded by POST /api/admin/leads/backfill, which reuses the
+  // upsertLead() helper (correct fields, phone dedup, round-robin assignment).
+  return NextResponse.json(
+    {
+      success: false,
+      error: 'This migrate endpoint is disabled. Use POST /api/admin/leads/backfill instead.',
+    },
+    { status: 410 }
+  )
+
+  // eslint-disable-next-line no-unreachable
   try {
     const body = await request.json()
     const validatedData = migrateSchema.parse(body)
