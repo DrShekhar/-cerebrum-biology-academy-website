@@ -184,12 +184,13 @@ export async function GET(request: NextRequest) {
       rel.child.enrollments.map((e) => e.courseId)
     )
 
-    const upcomingTests = await prisma.tests.findMany({
+    const upcomingTests = await prisma.test_assignments.findMany({
       where: {
         courseId: { in: enrolledCourseIds },
-        scheduledFor: { gte: new Date() },
+        dueDate: { gte: new Date() },
+        status: 'PUBLISHED',
       },
-      orderBy: { scheduledFor: 'asc' },
+      orderBy: { dueDate: 'asc' },
       take: 5,
     })
 
@@ -228,7 +229,7 @@ export async function GET(request: NextRequest) {
         upcomingTests: upcomingTests.map((test) => ({
           id: test.id,
           title: test.title,
-          date: test.scheduledFor?.toISOString(),
+          date: test.dueDate.toISOString(),
           totalMarks: test.totalMarks,
           duration: test.duration,
         })),

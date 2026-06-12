@@ -139,16 +139,14 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 
     const courseIds = enrollments.map((e) => e.courseId)
 
-    const upcomingTests = await prisma.tests.findMany({
+    const upcomingTests = await prisma.test_assignments.findMany({
       where: {
         courseId: { in: courseIds },
-        scheduledFor: { gte: new Date() },
+        dueDate: { gte: new Date() },
+        status: 'PUBLISHED',
       },
-      orderBy: { scheduledFor: 'asc' },
+      orderBy: { dueDate: 'asc' },
       take: 5,
-      include: {
-        course: { select: { id: true, name: true } },
-      },
     })
 
     // Calculate performance trend
@@ -168,8 +166,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         upcomingTests: upcomingTests.map((test) => ({
           id: test.id,
           title: test.title,
-          course: test.course,
-          scheduledFor: test.scheduledFor?.toISOString(),
+          courseId: test.courseId,
+          scheduledFor: test.dueDate.toISOString(),
           duration: test.duration,
           totalMarks: test.totalMarks,
           passingMarks: test.passingMarks,

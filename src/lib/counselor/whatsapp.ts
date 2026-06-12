@@ -4,8 +4,12 @@
  */
 
 import { WhatsAppBusinessService } from '@/lib/integrations/whatsappBusinessService'
-import { db } from '@/lib/db'
+import { prisma } from '@/lib/prisma'
 import type { LeadStage } from '@/app/counselor/leads/page'
+
+function commId() {
+  return `comm_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`
+}
 
 interface SendMessageParams {
   leadId: string
@@ -40,19 +44,18 @@ export class CounselorWhatsAppService {
       const result = await WhatsAppBusinessService.sendTextMessage(phone, message)
 
       // Track communication in database
-      await db.communication.create({
+      await prisma.crm_communications.create({
         data: {
+          id: commId(),
           leadId,
-          channel: 'WHATSAPP',
+          type: 'WHATSAPP',
           direction: 'OUTBOUND',
           message,
           status: 'SENT',
-          sentBy: counselorId,
+          sentById: counselorId,
           sentAt: new Date(),
-          metadata: {
-            whatsappMessageId: result.messages?.[0]?.id,
-            type,
-          },
+          whatsappMessageId: result.messages?.[0]?.id ?? null,
+          templateName: type === 'TEMPLATE' ? 'manual_template' : null,
         },
       })
 
@@ -61,15 +64,15 @@ export class CounselorWhatsAppService {
       console.error('WhatsApp send error:', error)
 
       // Log failed communication
-      await db.communication.create({
+      await prisma.crm_communications.create({
         data: {
+          id: commId(),
           leadId,
-          channel: 'WHATSAPP',
+          type: 'WHATSAPP',
           direction: 'OUTBOUND',
           message,
           status: 'FAILED',
-          sentBy: counselorId,
-          errorMessage: error instanceof Error ? error.message : 'Unknown error',
+          sentById: counselorId,
         },
       })
 
@@ -375,20 +378,18 @@ Continue your NEET journey with us! 🎯`
       )
 
       // Track communication
-      await db.communication.create({
+      await prisma.crm_communications.create({
         data: {
+          id: commId(),
           leadId,
-          channel: 'WHATSAPP',
+          type: 'WHATSAPP',
           direction: 'OUTBOUND',
           message: `Sent offer document for ${courseName}`,
           status: 'SENT',
-          sentBy: counselorId,
+          sentById: counselorId,
           sentAt: new Date(),
-          metadata: {
-            whatsappMessageId: result.messages?.[0]?.id,
-            documentUrl,
-            type: 'DOCUMENT',
-          },
+          whatsappMessageId: result.messages?.[0]?.id ?? null,
+          attachments: [documentUrl],
         },
       })
 
@@ -403,13 +404,13 @@ Continue your NEET journey with us! 🎯`
    * Get communication history for a lead
    */
   static async getLeadCommunications(leadId: string) {
-    return db.communication.findMany({
+    return prisma.crm_communications.findMany({
       where: {
         leadId,
-        channel: 'WHATSAPP',
+        type: 'WHATSAPP',
       },
       orderBy: {
-        createdAt: 'desc',
+        sentAt: 'desc',
       },
       take: 50,
     })
@@ -419,9 +420,9 @@ Continue your NEET journey with us! 🎯`
    * Mark lead as contacted (update lastContactedAt)
    */
   static async markLeadContacted(leadId: string) {
-    return db.lead.update({
+    return prisma.leads.update({
       where: { id: leadId },
-      data: { lastContactedAt: new Date() },
+      data: { lastContactedAt: new Date(), updatedAt: new Date() },
     })
   }
 }

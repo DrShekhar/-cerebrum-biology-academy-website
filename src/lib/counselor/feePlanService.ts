@@ -3,8 +3,12 @@
  * Handles creation of custom fee plans, discounts, and payment links for leads
  */
 
-import { db } from '@/lib/db'
+import { prisma } from '@/lib/prisma'
 import { RazorpayService } from '@/lib/payments/razorpayService'
+
+function genId(prefix: string) {
+  return `${prefix}_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`
+}
 
 interface CreateFeePlanParams {
   leadId: string
@@ -140,44 +144,49 @@ export class FeePlanService {
       })
 
       // Create fee plan in database
-      const feePlan = await db.feePlan.create({
+      const feePlan = await prisma.fee_plans.create({
         data: {
+          id: genId('feeplan'),
           leadId: params.leadId,
           courseName: params.courseName,
-          originalAmount: params.originalAmount,
-          discountPercent: params.discountPercent,
-          discountAmount: params.discountAmount,
-          finalAmount: params.finalAmount,
-          downPayment: params.downPayment,
-          installmentFrequency: params.installmentFrequency,
-          startDate: params.startDate,
+          baseFee: params.originalAmount,
+          discount: params.discountAmount,
+          discountType: 'PERCENTAGE',
+          totalFee: params.finalAmount,
+          amountPaid: 0,
+          amountDue: params.finalAmount,
+          planType: params.installmentFrequency,
+          numberOfInstallments: params.numberOfInstallments,
           status: 'PENDING',
-          notes: params.notes,
-          createdBy: params.counselorId,
+          createdById: params.counselorId,
+          updatedAt: new Date(),
         },
       })
 
       // Create installments
       const installments = await Promise.all(
         installmentSchedule.map((inst) =>
-          db.installment.create({
+          prisma.installments.create({
             data: {
+              id: genId('inst'),
               feePlanId: feePlan.id,
               installmentNumber: inst.installmentNumber,
               amount: inst.amount,
               dueDate: inst.dueDate,
               status: 'PENDING',
-              description: inst.description,
+              updatedAt: new Date(),
             },
           })
         )
       )
 
       // Create activity log
-      await db.activity.create({
+      await prisma.activities.create({
         data: {
+          id: genId('act'),
           leadId: params.leadId,
-          type: 'FEE_PLAN_CREATED',
+          userId: params.counselorId,
+          action: 'FEE_PLAN_CREATED',
           description: `Created fee plan: ${params.courseName} - ₹${params.finalAmount} (${params.numberOfInstallments + 1} installments)`,
           metadata: {
             feePlanId: feePlan.id,
@@ -185,7 +194,6 @@ export class FeePlanService {
             discount: params.discountAmount,
             finalAmount: params.finalAmount,
           },
-          performedBy: params.counselorId,
         },
       })
 
@@ -201,35 +209,42 @@ export class FeePlanService {
    */
   static async createOffer(params: CreateOfferParams) {
     try {
-      const offer = await db.offer.create({
+      const originalPrice = params.minAmount ?? 0
+      const offer = await prisma.offers.create({
         data: {
+          id: genId('offer'),
           leadId: params.leadId,
+          offerCode: `OFR-${Date.now().toString(36).toUpperCase()}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`,
           offerName: params.offerName,
-          description: params.description,
-          discountType: params.discountType,
+          courseName: params.coursesIncluded[0] || 'NEET Biology Course',
+          originalPrice,
+          discountType: params.discountType === 'PERCENTAGE' ? 'PERCENTAGE' : 'FIXED_AMOUNT',
           discountValue: params.discountValue,
+          finalPrice:
+            params.discountType === 'PERCENTAGE'
+              ? originalPrice - (originalPrice * params.discountValue) / 100
+              : Math.max(0, originalPrice - params.discountValue),
           validUntil: params.validUntil,
-          minAmount: params.minAmount,
-          maxDiscount: params.maxDiscount,
-          coursesIncluded: params.coursesIncluded,
-          termsAndConditions: params.termsAndConditions,
-          status: 'ACTIVE',
-          createdBy: params.counselorId,
+          termsConditions: params.termsAndConditions,
+          status: 'SENT',
+          isActive: true,
+          createdById: params.counselorId,
         },
       })
 
       // Create activity log
-      await db.activity.create({
+      await prisma.activities.create({
         data: {
+          id: genId('act'),
           leadId: params.leadId,
-          type: 'OFFER_SENT',
+          userId: params.counselorId,
+          action: 'OFFER_SENT',
           description: `Sent offer: ${params.offerName} - ${params.discountValue}${params.discountType === 'PERCENTAGE' ? '%' : '₹'} discount`,
           metadata: {
             offerId: offer.id,
             offerName: params.offerName,
             discount: params.discountValue,
           },
-          performedBy: params.counselorId,
         },
       })
 
@@ -251,12 +266,12 @@ export class FeePlanService {
   }) {
     try {
       // Get installment details
-      const installment = await db.installment.findUnique({
+      const installment = await prisma.installments.findUnique({
         where: { id: params.installmentId },
         include: {
-          feePlan: {
+          fee_plans: {
             include: {
-              lead: true,
+              leads: true,
             },
           },
         },
@@ -266,14 +281,16 @@ export class FeePlanService {
         throw new Error('Installment not found')
       }
 
+      const amount = Number(installment.amount)
+
       // Create Razorpay order
       const order = await RazorpayService.createOrder({
-        amount: installment.amount,
+        amount,
         receipt: `installment_${installment.id}`,
         notes: {
           installment_id: installment.id,
           fee_plan_id: installment.feePlanId,
-          lead_id: installment.feePlan.leadId,
+          lead_id: installment.fee_plans.leadId,
           student_name: params.studentName,
           student_email: params.studentEmail,
           student_phone: params.studentPhone,
@@ -282,7 +299,7 @@ export class FeePlanService {
       })
 
       // Store order ID in installment
-      await db.installment.update({
+      await prisma.installments.update({
         where: { id: installment.id },
         data: {
           razorpayOrderId: order.id,
@@ -292,14 +309,14 @@ export class FeePlanService {
       // Generate payment link
       const paymentLink = RazorpayService.generatePaymentLink(
         order.id,
-        installment.amount,
-        `${installment.description} - ${installment.feePlan.courseName}`
+        amount,
+        `Installment ${installment.installmentNumber} - ${installment.fee_plans.courseName}`
       )
 
       return {
         orderId: order.id,
         paymentLink,
-        amount: installment.amount,
+        amount,
         installmentNumber: installment.installmentNumber,
       }
     } catch (error) {
@@ -322,11 +339,11 @@ export class FeePlanService {
   }) {
     try {
       // Get offer details
-      const offer = await db.offer.findUnique({
+      const offer = await prisma.offers.findUnique({
         where: { id: params.offerId },
       })
 
-      if (!offer || offer.status !== 'ACTIVE') {
+      if (!offer || !offer.isActive || offer.status === 'EXPIRED' || offer.status === 'CANCELLED') {
         throw new Error('Offer is not valid or has expired')
       }
 
@@ -338,9 +355,8 @@ export class FeePlanService {
       // Calculate discount
       const { discountAmount, finalAmount } = this.calculateDiscount({
         originalAmount: params.originalAmount,
-        discountType: offer.discountType,
-        discountValue: offer.discountValue,
-        maxDiscount: offer.maxDiscount || undefined,
+        discountType: offer.discountType === 'PERCENTAGE' ? 'PERCENTAGE' : 'FLAT',
+        discountValue: Number(offer.discountValue),
       })
 
       // Calculate down payment
@@ -353,7 +369,7 @@ export class FeePlanService {
         originalAmount: params.originalAmount,
         discountPercent:
           offer.discountType === 'PERCENTAGE'
-            ? offer.discountValue
+            ? Number(offer.discountValue)
             : (discountAmount / params.originalAmount) * 100,
         discountAmount,
         finalAmount,
@@ -366,9 +382,9 @@ export class FeePlanService {
       })
 
       // Update offer status
-      await db.offer.update({
+      await prisma.offers.update({
         where: { id: offer.id },
-        data: { status: 'ACCEPTED' },
+        data: { status: 'ACCEPTED', acceptedAt: new Date() },
       })
 
       return result
@@ -382,16 +398,14 @@ export class FeePlanService {
    * Get fee plan with installments and payment status
    */
   static async getFeePlanDetails(feePlanId: string) {
-    return db.feePlan.findUnique({
+    return prisma.fee_plans.findUnique({
       where: { id: feePlanId },
       include: {
         installments: {
           orderBy: { installmentNumber: 'asc' },
-          include: {
-            payments: true,
-          },
         },
-        lead: {
+        fee_payments: true,
+        leads: {
           select: {
             id: true,
             studentName: true,
@@ -408,7 +422,7 @@ export class FeePlanService {
    * Get all fee plans for a lead
    */
   static async getLeadFeePlans(leadId: string) {
-    return db.feePlan.findMany({
+    return prisma.fee_plans.findMany({
       where: { leadId },
       include: {
         installments: {
@@ -428,7 +442,7 @@ export class FeePlanService {
    * Get all offers for a lead
    */
   static async getLeadOffers(leadId: string) {
-    return db.offer.findMany({
+    return prisma.offers.findMany({
       where: { leadId },
       orderBy: { createdAt: 'desc' },
     })
@@ -445,33 +459,45 @@ export class FeePlanService {
     method: string
   }) {
     try {
+      // Resolve the parent fee plan (fee_payments.feePlanId is required)
+      const target = await prisma.installments.findUnique({
+        where: { id: params.installmentId },
+        select: { feePlanId: true },
+      })
+      if (!target) {
+        throw new Error('Installment not found')
+      }
+
       // Create payment record
-      const payment = await db.feePayment.create({
+      const payment = await prisma.fee_payments.create({
         data: {
+          id: genId('pay'),
+          feePlanId: target.feePlanId,
           installmentId: params.installmentId,
           razorpayPaymentId: params.razorpayPaymentId,
           razorpayOrderId: params.razorpayOrderId,
           amount: params.amount,
-          method: params.method,
+          paymentMethod: params.method,
           status: 'SUCCESS',
           paidAt: new Date(),
         },
       })
 
       // Update installment status
-      await db.installment.update({
+      await prisma.installments.update({
         where: { id: params.installmentId },
         data: {
           status: 'PAID',
           paidAt: new Date(),
+          paidAmount: params.amount,
         },
       })
 
       // Check if all installments are paid
-      const installment = await db.installment.findUnique({
+      const installment = await prisma.installments.findUnique({
         where: { id: params.installmentId },
         include: {
-          feePlan: {
+          fee_plans: {
             include: {
               installments: true,
             },
@@ -480,21 +506,21 @@ export class FeePlanService {
       })
 
       if (installment) {
-        const allPaid = installment.feePlan.installments.every(
+        const allPaid = installment.fee_plans.installments.every(
           (inst) => inst.status === 'PAID' || inst.id === params.installmentId
         )
 
         if (allPaid) {
           // Mark fee plan as completed
-          await db.feePlan.update({
+          await prisma.fee_plans.update({
             where: { id: installment.feePlanId },
             data: { status: 'COMPLETED' },
           })
 
           // Update lead stage to ENROLLED
-          await db.lead.update({
-            where: { id: installment.feePlan.leadId },
-            data: { stage: 'ENROLLED' },
+          await prisma.leads.update({
+            where: { id: installment.fee_plans.leadId },
+            data: { stage: 'ENROLLED', updatedAt: new Date() },
           })
         }
       }

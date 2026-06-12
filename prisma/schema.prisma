@@ -1216,7 +1216,7 @@ model fee_payments {
 model fee_plans {
   id                   String         @id
   leadId               String
-  courseId             String
+  courseId             String?
   courseName           String
   baseFee              Decimal        @db.Decimal(10, 2)
   discount             Decimal        @default(0) @db.Decimal(10, 2)

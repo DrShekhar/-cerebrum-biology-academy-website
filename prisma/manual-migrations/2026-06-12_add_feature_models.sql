@@ -700,3 +700,8 @@ ALTER TABLE "public"."self_evaluations" ADD CONSTRAINT "self_evaluations_student
 -- AddForeignKey
 ALTER TABLE "public"."work_tracking" ADD CONSTRAINT "work_tracking_studentId_fkey" FOREIGN KEY ("studentId") REFERENCES "public"."users"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
+
+-- AlterColumn: relax fee_plans.courseId to nullable
+-- The counselor fee-plan flow is pre-enrollment (lead-based, free-text courseName),
+-- so there is no course FK yet. Additive/safe: relaxing NOT NULL never breaks existing rows.
+ALTER TABLE "public"."fee_plans" ALTER COLUMN "courseId" DROP NOT NULL;
