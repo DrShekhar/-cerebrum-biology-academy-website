@@ -1,28 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { upsertLead } from '@/lib/leads/upsertLead'
 import { z } from 'zod'
 
-const blogLeadSchema = z.object({
-  phone: z
-    .string()
-    .regex(/^[6-9]\d{9}$/, 'Please enter a valid 10-digit Indian mobile number')
-    .optional()
-    .or(z.literal('')),
-  email: z.string().email('Please enter a valid email').optional().or(z.literal('')),
-  name: z.string().max(100).optional(),
-  source: z.enum([
-    'blog_inline',
-    'blog_exit_intent',
-    'blog_sidebar',
-    'blog_whatsapp',
-    'blog_newsletter',
-  ]),
-  articleSlug: z.string().optional(),
-  articleTitle: z.string().optional(),
-}).refine(
-  (data) => (data.phone && data.phone.length > 0) || (data.email && data.email.length > 0),
-  { message: 'Either phone or email is required' }
-)
+const blogLeadSchema = z
+  .object({
+    phone: z
+      .string()
+      .regex(/^[6-9]\d{9}$/, 'Please enter a valid 10-digit Indian mobile number')
+      .optional()
+      .or(z.literal('')),
+    email: z.string().email('Please enter a valid email').optional().or(z.literal('')),
+    name: z.string().max(100).optional(),
+    source: z.enum([
+      'blog_inline',
+      'blog_exit_intent',
+      'blog_sidebar',
+      'blog_whatsapp',
+      'blog_newsletter',
+    ]),
+    articleSlug: z.string().optional(),
+    articleTitle: z.string().optional(),
+  })
+  .refine(
+    (data) => (data.phone && data.phone.length > 0) || (data.email && data.email.length > 0),
+    { message: 'Either phone or email is required' }
+  )
 
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>()
 
@@ -109,9 +112,10 @@ export async function POST(request: NextRequest) {
       if (existingLead) {
         return NextResponse.json({
           success: true,
-          message: source === 'blog_newsletter'
-            ? 'You are already subscribed! Check your inbox for weekly tips.'
-            : 'We already have your details. Our team will reach out soon!',
+          message:
+            source === 'blog_newsletter'
+              ? 'You are already subscribed! Check your inbox for weekly tips.'
+              : 'We already have your details. Our team will reach out soon!',
           duplicate: true,
         })
       }
@@ -138,11 +142,25 @@ export async function POST(request: NextRequest) {
       },
     })
 
+    // Also into the CRM (additive, deduped by phone, never blocks response).
+    // Only when a phone was given — newsletter-email-only signups have no
+    // phone, so they stay in the content_leads log (CRM dedups on phone).
+    if (phone) {
+      void upsertLead({
+        name,
+        phone,
+        email,
+        source: `${source}:${articleSlug || 'blog'}`,
+        courseInterest: articleTitle ? `Blog: ${articleTitle}` : 'NEET Biology (blog)',
+      }).catch(() => {})
+    }
+
     return NextResponse.json({
       success: true,
-      message: source === 'blog_newsletter'
-        ? 'You are now subscribed! Expect weekly NEET Biology tips in your inbox.'
-        : 'Thank you! We will send you the study materials on WhatsApp shortly.',
+      message:
+        source === 'blog_newsletter'
+          ? 'You are now subscribed! Expect weekly NEET Biology tips in your inbox.'
+          : 'Thank you! We will send you the study materials on WhatsApp shortly.',
       leadId,
     })
   } catch (error) {

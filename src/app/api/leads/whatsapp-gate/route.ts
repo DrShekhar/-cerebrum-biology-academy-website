@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { upsertLead } from '@/lib/leads/upsertLead'
 import { rateLimit } from '@/lib/rateLimit'
 import { processContentLead } from '@/lib/whatsapp/contentLeadFollowup'
 
@@ -76,6 +77,14 @@ export async function POST(request: NextRequest) {
     }).catch((err) => {
       console.error('WhatsApp gate lead processing failed (non-blocking):', err)
     })
+
+    // Also into the CRM (additive, deduped by phone, never blocks response).
+    void upsertLead({
+      name,
+      phone: cleanPhone,
+      source: `whatsapp-gate:${page || '/'}`,
+      courseInterest: 'WhatsApp content unlock',
+    }).catch(() => {})
 
     return NextResponse.json({
       success: true,
