@@ -16,6 +16,7 @@ import {
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import PDFViewer from '@/components/free-resources/PDFViewer'
+import { createSafeHtml } from '@/lib/security/htmlSanitizer'
 
 interface Resource {
   id: string
@@ -173,7 +174,7 @@ export default function ResourceViewPage({ params }: { params: Promise<{ id: str
               {resource.type === 'ANNOUNCEMENT' && resource.content ? (
                 <div
                   className="prose prose-green max-w-none"
-                  dangerouslySetInnerHTML={{ __html: resource.content }}
+                  dangerouslySetInnerHTML={createSafeHtml(resource.content, 'richText')}
                 />
               ) : resource.fileUrl ? (
                 <PDFViewer fileUrl={resource.fileUrl} title={resource.title} />

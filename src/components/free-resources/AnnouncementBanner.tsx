@@ -3,6 +3,7 @@
 import { Bell, X } from 'lucide-react'
 import { useState } from 'react'
 import Link from 'next/link'
+import { createSafeHtml } from '@/lib/security/htmlSanitizer'
 
 interface Announcement {
   id: string
@@ -53,7 +54,10 @@ export default function AnnouncementBanner({ announcements }: AnnouncementBanner
               {announcement.content && (
                 <div
                   className="text-sm text-yellow-800 mt-1 line-clamp-2 prose prose-sm prose-yellow"
-                  dangerouslySetInnerHTML={{ __html: announcement.content.slice(0, 200) }}
+                  dangerouslySetInnerHTML={createSafeHtml(
+                    announcement.content.slice(0, 200),
+                    'basic'
+                  )}
                 />
               )}
               {announcement.publishedAt && (

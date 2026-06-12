@@ -49,6 +49,24 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Booking not found for this order' }, { status: 404 })
     }
 
+    // Idempotency guard: if this order was already verified, return success
+    // without re-processing (protects against duplicate/replayed verify calls).
+    if (booking.paymentStatus === 'COMPLETED') {
+      return NextResponse.json({
+        success: true,
+        verified: true,
+        bookingId: booking.id,
+        message: 'Payment already verified',
+        booking: {
+          id: booking.id,
+          studentName: booking.studentName,
+          preferredDate: booking.preferredDate,
+          preferredTime: booking.preferredTime,
+          demoType: booking.demoType,
+        },
+      })
+    }
+
     const updatedBooking = await prisma.demo_bookings.update({
       where: { id: booking.id },
       data: {
@@ -58,7 +76,6 @@ export async function POST(request: NextRequest) {
         status: 'CONFIRMED',
       },
     })
-
 
     return NextResponse.json({
       success: true,

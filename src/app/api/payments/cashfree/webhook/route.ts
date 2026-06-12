@@ -69,9 +69,7 @@ export async function POST(request: NextRequest) {
     }
 
     if (eventType === 'PAYMENT_SUCCESS_WEBHOOK') {
-      const cfPaymentId = paymentData?.cf_payment_id
-        ? String(paymentData.cf_payment_id)
-        : null
+      const cfPaymentId = paymentData?.cf_payment_id ? String(paymentData.cf_payment_id) : null
 
       let paymentMethod: string = 'CASHFREE_UPI'
       if (paymentData?.payment_method) {
@@ -167,7 +165,11 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ status: 'ok' })
   } catch (error) {
+    // Signature is already validated above, so reaching here means processing
+    // (usually a DB write) failed for an authentic event. Return 5xx so Cashfree
+    // RETRIES the delivery — returning 200 here would permanently drop the
+    // enrollment/payment update for a captured payment.
     console.error('Cashfree webhook error:', error)
-    return NextResponse.json({ status: 'ok' })
+    return NextResponse.json({ status: 'error' }, { status: 500 })
   }
 }

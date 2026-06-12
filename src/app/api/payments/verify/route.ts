@@ -7,6 +7,7 @@ import { WebhookService } from '@/lib/webhooks/webhookService'
 import { validateUserSession } from '@/lib/auth/config'
 import { mapCourseToTier } from '@/lib/payments/tierMapping'
 import { logger } from '@/lib/logger'
+import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
 
 const paymentVerificationSchema = z.object({
   order_id: z.string().optional(),
@@ -264,13 +265,26 @@ export async function POST(request: NextRequest) {
           }
         }
       } catch (dbError) {
+        // CRITICAL: signature was valid (money captured) but enrollment activation
+        // failed. The Razorpay webhook (/api/payments/webhook) is the reliable
+        // backstop and will re-attempt activation, but alert ops so the gap is
+        // reconciled if the webhook also fails. Fire-and-forget — never block the
+        // response. We keep verified:true (the payment IS real) but signal
+        // enrollmentPending so the client shows "activating" rather than "enrolled".
         logger.error('Transaction error after payment verification:', dbError)
+        notifyAdminFormSubmission('⚠️ Payment captured but enrollment FAILED — reconcile', {
+          OrderId: orderId,
+          PaymentId: paymentId,
+          Error: dbError instanceof Error ? dbError.message : 'Unknown DB error',
+        }).catch(() => {})
         return NextResponse.json(
           {
             verified: true,
+            enrollmentPending: true,
             orderId,
             paymentId,
-            warning: 'Payment verified but database update failed. Please contact support.',
+            warning:
+              'Payment received. Your enrollment is being activated and will be ready shortly — our team has been notified.',
           },
           { status: 200 }
         )
