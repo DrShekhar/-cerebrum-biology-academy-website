@@ -65,10 +65,18 @@ and `LEAD_CONSOLIDATION_SCOPE.md`.
 - [x] **Counselor money features lost** — DONE (ea6acb83). feePlanService.ts + counselor/whatsapp.ts
       migrated off the InstantDB mock to Prisma (fee_plans/installments/offers/fee_payments/activities/
       crm_communications). Type-clean. Needs the migration applied (above) to persist at runtime.
-- [ ] **Payment masking** — payments/verify:265 + cashfree/webhook:169 return 200 on DB failure
-      (paid-not-enrolled, no retry); payment/verify:52 add idempotency guard.
-- [ ] **2 stored-XSS sinks** — sanitize free-resources AnnouncementBanner + [id]/page with the existing
-      `sanitizeHtml()`. Redact PII in logs (phone/email/payment objects).
+- [x] **Payment masking** — DONE (196d1b33). Cashfree webhook now returns 500 on processing failure
+      (so Cashfree retries instead of dropping a captured payment); Razorpay payments/verify fires an
+      admin reconciliation alert + flags enrollmentPending on post-signature DB failure (webhook backstops
+      activation); demo payment/verify got an idempotency guard.
+- [x] **2 stored-XSS sinks** — DONE (196d1b33). free-resources AnnouncementBanner + [id]/page now pipe
+      DB/admin HTML through createSafeHtml(). *(PII-in-logs redaction still TODO — see below.)*
+- [ ] **PII in logs** — redact phone/email/full-payment objects from error/warn logs (auth, razorpay).
+- [x] **251 broken internal links** — DONE (f472204e). 218 dead city-hub `url:` links now redirect to
+      real city/region hubs via `cityHubBrokenLinkRedirects` (audit: 0 conflicts/chains/shadows).
+      Detector: `scripts/find-broken-cityhub-links.mjs`. *(Remaining ~30 from the audit were seo-landing
+      `/resources//tools/` namespace + hard-coded JSX — separate, not city-hub data.)*
+- [x] **LeadCaptureForm** — DONE (298828a5). Enter-to-submit + real ref-based double-submit guard.
 - [ ] **251 broken internal links remain** — mostly `city-hub-data.ts` `url:` fields (190) +
       seo-landing `/resources//tools/` namespace mismatch (25) + hard-coded JSX (22, incl.
       BreadcrumbSchema `/glossary` in JSON-LD). 6 dead board-page WhatsApp CTAs (`<Button href>` no-op).
