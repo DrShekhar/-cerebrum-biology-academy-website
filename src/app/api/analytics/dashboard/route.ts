@@ -266,7 +266,10 @@ export async function GET(request: NextRequest) {
           // Realtime requires admin
           const realtimeCheck = await checkAuthAndRole(['ADMIN'])
           if (!realtimeCheck.authorized) {
-            return NextResponse.json({ error: realtimeCheck.error }, { status: realtimeCheck.status })
+            return NextResponse.json(
+              { error: realtimeCheck.error },
+              { status: realtimeCheck.status }
+            )
           }
           const realTimeDataLegacy = generateMockRealTimeData()
           return NextResponse.json(realTimeDataLegacy)
@@ -310,7 +313,7 @@ export async function POST(request: NextRequest) {
 
 async function getStudentDashboardMetrics(userId: string): Promise<DashboardMetrics> {
   // Get user's grade for class comparison
-  const user = await db.freeUser.findUnique({
+  const user = await db.free_users.findUnique({
     where: { id: userId },
     select: { grade: true },
   })
@@ -320,12 +323,12 @@ async function getStudentDashboardMetrics(userId: string): Promise<DashboardMetr
   }
 
   // Get total students in same grade
-  const totalStudents = await db.freeUser.count({
+  const totalStudents = await db.free_users.count({
     where: { grade: user.grade },
   })
 
   // Get completed tests for the user
-  const userTests = await db.testAttempt.findMany({
+  const userTests = await db.test_attempts.findMany({
     where: {
       freeUserId: userId,
       status: 'COMPLETED',
@@ -338,7 +341,7 @@ async function getStudentDashboardMetrics(userId: string): Promise<DashboardMetr
     totalTests > 0 ? userTests.reduce((sum, test) => sum + test.percentage, 0) / totalTests : 0
 
   // Get completion rate (completed vs started)
-  const startedTests = await db.testAttempt.count({
+  const startedTests = await db.test_attempts.count({
     where: { freeUserId: userId },
   })
   const completionRate = startedTests > 0 ? (totalTests / startedTests) * 100 : 0
@@ -347,7 +350,7 @@ async function getStudentDashboardMetrics(userId: string): Promise<DashboardMetr
   const thirtyDaysAgo = new Date()
   thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30)
 
-  const dailyTests = await db.testAttempt.findMany({
+  const dailyTests = await db.test_attempts.findMany({
     where: {
       freeUserId: userId,
       status: 'COMPLETED',
@@ -359,12 +362,12 @@ async function getStudentDashboardMetrics(userId: string): Promise<DashboardMetr
   const dailyActive = generateDailyActivity(dailyTests, 30)
 
   // Get top performers in same grade
-  const gradeTests = await db.testAttempt.findMany({
+  const gradeTests = await db.test_attempts.findMany({
     where: {
       status: 'COMPLETED',
-      freeUser: { grade: user.grade },
+      free_users: { grade: user.grade },
     },
-    include: { freeUser: true },
+    include: { free_users: true },
   })
 
   const topPerformers = calculateTopPerformers(gradeTests)
@@ -388,10 +391,10 @@ async function getStudentDashboardMetrics(userId: string): Promise<DashboardMetr
 
 async function getTeacherDashboardMetrics(grade: string): Promise<TeacherAnalytics> {
   // Get all students in the grade
-  const students = await db.freeUser.findMany({
+  const students = await db.free_users.findMany({
     where: { grade },
     include: {
-      testAttempts: {
+      test_attempts: {
         where: { status: 'COMPLETED' },
         orderBy: { submittedAt: 'desc' },
       },
@@ -401,7 +404,7 @@ async function getTeacherDashboardMetrics(grade: string): Promise<TeacherAnalyti
   const totalStudents = students.length
 
   // Calculate class metrics
-  const allTests = students.flatMap((s) => s.testAttempts)
+  const allTests = students.flatMap((s) => s.test_attempts)
   const classAverage =
     allTests.length > 0
       ? allTests.reduce((sum, test) => sum + test.percentage, 0) / allTests.length
@@ -427,7 +430,7 @@ async function getTeacherDashboardMetrics(grade: string): Promise<TeacherAnalyti
 
   // Get student progress
   const studentProgress = students.map((student) => {
-    const studentTests = student.testAttempts
+    const studentTests = student.test_attempts
     const avgScore =
       studentTests.length > 0
         ? studentTests.reduce((sum, test) => sum + test.percentage, 0) / studentTests.length
@@ -462,7 +465,7 @@ async function getTeacherDashboardMetrics(grade: string): Promise<TeacherAnalyti
   const sevenDaysAgo = new Date()
   sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7)
 
-  const activeStudents = await db.freeUser.count({
+  const activeStudents = await db.free_users.count({
     where: {
       grade,
       lastActiveDate: { gte: sevenDaysAgo },
@@ -470,11 +473,11 @@ async function getTeacherDashboardMetrics(grade: string): Promise<TeacherAnalyti
   })
 
   // Weekly test completion
-  const weeklyTests = await db.testAttempt.count({
+  const weeklyTests = await db.test_attempts.count({
     where: {
       status: 'COMPLETED',
       submittedAt: { gte: sevenDaysAgo },
-      freeUser: { grade },
+      free_users: { grade },
     },
   })
 
@@ -498,22 +501,22 @@ async function getTeacherDashboardMetrics(grade: string): Promise<TeacherAnalyti
 
 async function getAdminDashboardMetrics(): Promise<AdminAnalytics> {
   // System metrics
-  const totalUsers = await db.user.count()
-  const totalTeachers = await db.user.count({ where: { role: 'TEACHER' } })
-  const totalStudents = await db.freeUser.count()
+  const totalUsers = await db.users.count()
+  const totalTeachers = await db.users.count({ where: { role: 'TEACHER' } })
+  const totalStudents = await db.free_users.count()
 
   // Monthly growth
   const lastMonth = new Date()
   lastMonth.setMonth(lastMonth.getMonth() - 1)
 
-  const newUsersThisMonth = await db.freeUser.count({
+  const newUsersThisMonth = await db.free_users.count({
     where: { registrationDate: { gte: lastMonth } },
   })
 
   const previousMonth = new Date(lastMonth)
   previousMonth.setMonth(previousMonth.getMonth() - 1)
 
-  const newUsersLastMonth = await db.freeUser.count({
+  const newUsersLastMonth = await db.free_users.count({
     where: {
       registrationDate: {
         gte: previousMonth,
@@ -526,8 +529,8 @@ async function getAdminDashboardMetrics(): Promise<AdminAnalytics> {
     newUsersLastMonth > 0 ? ((newUsersThisMonth - newUsersLastMonth) / newUsersLastMonth) * 100 : 0
 
   // Content metrics
-  const totalQuestions = await db.question.count()
-  const totalTests = await db.testTemplate.count()
+  const totalQuestions = await db.questions.count()
+  const totalTests = await db.test_templates.count()
 
   // Performance metrics (mock data for now)
   const systemUptime = 99.9
@@ -595,7 +598,7 @@ function calculateTopPerformers(
     const userId = test.freeUserId
     if (!userStats[userId]) {
       userStats[userId] = {
-        name: test.freeUser.name || 'Anonymous',
+        name: test.free_users.name || 'Anonymous',
         totalScore: 0,
         testCount: 0,
       }

@@ -55,17 +55,21 @@ export async function GET(request: NextRequest) {
     }
 
     // Get all children for this parent
-    const childRelationships = await prisma.parent_child_relationships.findMany({
+    const rawRelationships = await prisma.parent_child_relationships.findMany({
       where: {
         parentId: parent.id,
         ...(childIdFilter && { childId: childIdFilter }),
       },
       include: {
-        child: {
-          select: { id: true, name: true, currentClass: true },
+        users_parent_child_relationships_childIdTousers: {
+          select: { id: true, name: true },
         },
       },
     })
+    const childRelationships = rawRelationships.map((r) => ({
+      ...r,
+      child: r.users_parent_child_relationships_childIdTousers,
+    }))
 
     if (childRelationships.length === 0) {
       return NextResponse.json({
@@ -131,7 +135,7 @@ export async function GET(request: NextRequest) {
         children: childRelationships.map((r) => ({
           id: r.child.id,
           name: r.child.name,
-          class: r.child.currentClass,
+          class: null,
         })),
       },
     })
@@ -228,18 +232,18 @@ async function generateChildAlerts(
     const pendingSubmissions = await prisma.assignment_submissions.findMany({
       where: {
         studentId: childId,
-        status: { in: ['NOT_SUBMITTED', 'PENDING'] },
-        assignment: {
+        status: { in: ['NOT_SUBMITTED'] },
+        assignments: {
           status: 'PUBLISHED',
         },
       },
       include: {
-        assignment: { select: { title: true, dueDate: true } },
+        assignments: { select: { title: true, dueDate: true } },
       },
     })
 
     // Overdue homework
-    const overdueHomework = pendingSubmissions.filter((s) => new Date(s.assignment.dueDate) < now)
+    const overdueHomework = pendingSubmissions.filter((s) => new Date(s.assignments.dueDate) < now)
 
     if (overdueHomework.length > 0) {
       alerts.push({
@@ -260,7 +264,7 @@ async function generateChildAlerts(
 
     // Upcoming deadlines (within 2 days)
     const upcomingDeadlines = pendingSubmissions.filter((s) => {
-      const dueDate = new Date(s.assignment.dueDate)
+      const dueDate = new Date(s.assignments.dueDate)
       const twoDaysFromNow = new Date(now)
       twoDaysFromNow.setDate(now.getDate() + 2)
       return dueDate >= now && dueDate <= twoDaysFromNow
@@ -293,19 +297,19 @@ async function generateChildAlerts(
         },
       },
       include: {
-        assignment: { select: { title: true, maxMarks: true } },
+        assignments: { select: { title: true, maxMarks: true } },
       },
     })
 
     recentlyGraded.forEach((sub) => {
-      const percentage = sub.grade !== null ? (sub.grade / sub.assignment.maxMarks) * 100 : 0
+      const percentage = sub.grade !== null ? (sub.grade / sub.assignments.maxMarks) * 100 : 0
       if (percentage < 50) {
         alerts.push({
           id: `homework-grade-low-${sub.id}`,
           type: 'warning',
           category: 'homework',
           title: 'Low Grade Alert',
-          message: `${childName} scored ${sub.grade}/${sub.assignment.maxMarks} (${Math.round(percentage)}%) on "${sub.assignment.title}". ${sub.feedback ? `Teacher's feedback: ${sub.feedback}` : ''}`,
+          message: `${childName} scored ${sub.grade}/${sub.assignments.maxMarks} (${Math.round(percentage)}%) on "${sub.assignments.title}". ${sub.feedback ? `Teacher's feedback: ${sub.feedback}` : ''}`,
           childId,
           childName,
           priority: 'medium',
@@ -414,22 +418,25 @@ async function generatePaymentAlerts(childIds: string[], now: Date): Promise<Ale
 
   // Get enrollments for all children
   const enrollments = await prisma.enrollments.findMany({
-    where: { studentId: { in: childIds } },
+    where: { userId: { in: childIds } },
     include: {
       payments: {
-        where: { status: { in: ['PENDING', 'OVERDUE'] } },
-        orderBy: { dueDate: 'asc' },
+        where: { status: { in: ['PENDING'] } },
+        orderBy: { createdAt: 'desc' },
       },
       courses: { select: { name: true } },
-      student: { select: { name: true } },
+      users: { select: { name: true } },
     },
   })
 
+  // payments are transaction records with no due-date column; due-date-based
+  // overdue/upcoming alerts simply don't fire from this source (no fabricated data).
   const pendingPayments = enrollments.flatMap((e) =>
     e.payments.map((p) => ({
       ...p,
+      dueDate: null as Date | null,
       courseName: e.courses.name,
-      studentName: e.student.name,
+      studentName: e.users.name,
     }))
   )
 

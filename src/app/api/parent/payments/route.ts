@@ -68,17 +68,22 @@ export async function GET(request: NextRequest) {
     }
 
     // Get all children for this parent
-    const childRelationships = await prisma.parent_child_relationships.findMany({
+    const rawRelationships = await prisma.parent_child_relationships.findMany({
       where: {
         parentId: parent.id,
         ...(childIdFilter && { childId: childIdFilter }),
       },
       include: {
-        child: {
+        users_parent_child_relationships_childIdTousers: {
           select: { id: true, name: true, email: true },
         },
       },
     })
+    // Alias the verbose relation name to `child` for readability downstream.
+    const childRelationships = rawRelationships.map((r) => ({
+      ...r,
+      child: r.users_parent_child_relationships_childIdTousers,
+    }))
 
     if (childRelationships.length === 0) {
       return NextResponse.json({
@@ -105,9 +110,9 @@ export async function GET(request: NextRequest) {
 
     // Fetch enrollment-based payments
     const enrollments = await prisma.enrollments.findMany({
-      where: { studentId: { in: childIds } },
+      where: { userId: { in: childIds } },
       include: {
-        student: { select: { id: true, name: true } },
+        users: { select: { id: true, name: true } },
         courses: { select: { name: true } },
         payments: {
           orderBy: { createdAt: 'desc' },
@@ -117,13 +122,12 @@ export async function GET(request: NextRequest) {
 
     enrollments.forEach((enrollment) => {
       enrollment.payments.forEach((payment) => {
-        const dueDate = payment.dueDate ? new Date(payment.dueDate) : null
+        // payments are transaction records (no due date); never "overdue".
+        const dueDate: Date | null = null
         let status: 'paid' | 'pending' | 'overdue' | 'partial' = 'pending'
 
-        if (payment.status === 'COMPLETED' || payment.status === 'PAID') {
+        if (payment.status === 'COMPLETED') {
           status = 'paid'
-        } else if (payment.status === 'PARTIAL') {
-          status = 'partial'
         } else if (dueDate && dueDate < now) {
           status = 'overdue'
         }
@@ -137,12 +141,12 @@ export async function GET(request: NextRequest) {
 
         payments.push({
           id: payment.id,
-          childId: enrollment.studentId,
-          childName: enrollment.student.name,
+          childId: enrollment.userId,
+          childName: enrollment.users.name,
           courseName: enrollment.courses.name,
           amount: payment.amount,
-          dueDate: payment.dueDate?.toISOString() || null,
-          paidAt: payment.paidAt?.toISOString() || null,
+          dueDate: null,
+          paidAt: payment.completedAt?.toISOString() || null,
           status,
           paymentMethod: payment.paymentMethod,
           transactionId: payment.transactionId || payment.razorpayPaymentId,
@@ -167,7 +171,7 @@ export async function GET(request: NextRequest) {
         include: {
           fee_plans: {
             include: {
-              leads: { select: { email: true, name: true } },
+              leads: { select: { email: true, studentName: true } },
             },
           },
         },
@@ -178,7 +182,8 @@ export async function GET(request: NextRequest) {
         const childRel = childRelationships.find((r) => r.child.email === fp.fee_plans.leads?.email)
         if (!childRel) return
 
-        const dueDate = fp.dueDate ? new Date(fp.dueDate) : null
+        // fee_payments are settled transactions (no due date).
+        const dueDate: Date | null = null
         let status: 'paid' | 'pending' | 'overdue' | 'partial' = 'pending'
 
         if (fp.status === 'COMPLETED' || fp.status === 'PAID') {
@@ -201,13 +206,13 @@ export async function GET(request: NextRequest) {
           childId: childRel.childId,
           childName: childRel.child.name,
           courseName: fp.fee_plans.courseName,
-          amount: fp.amount,
-          dueDate: fp.dueDate?.toISOString() || null,
+          amount: Number(fp.amount),
+          dueDate: null,
           paidAt: fp.paidAt?.toISOString() || null,
           status,
           paymentMethod: fp.paymentMethod,
           transactionId: fp.razorpayPaymentId,
-          installmentNumber: fp.installmentNumber,
+          installmentNumber: null,
           totalInstallments: null,
         })
       })
@@ -242,7 +247,7 @@ export async function GET(request: NextRequest) {
         include: {
           fee_plans: {
             include: {
-              leads: { select: { email: true, name: true } },
+              leads: { select: { email: true, studentName: true } },
             },
           },
         },
@@ -263,7 +268,7 @@ export async function GET(request: NextRequest) {
           childId: childRel.childId,
           childName: childRel.child.name,
           courseName: inst.fee_plans.courseName,
-          amount: inst.amount,
+          amount: Number(inst.amount),
           dueDate: inst.dueDate?.toISOString() || null,
           paidAt: null,
           status,

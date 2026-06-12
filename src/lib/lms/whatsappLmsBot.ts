@@ -10,7 +10,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
-import { LmsWhatsAppState } from '@/generated/prisma'
+import { LmsWhatsAppState, Prisma } from '@/generated/prisma'
 import { sendWhatsAppMessage } from '@/lib/interakt'
 
 interface BotMessage {
@@ -46,9 +46,11 @@ async function getSession(userId: string, phone: string) {
   if (!session) {
     session = await prisma.lms_whatsapp_sessions.create({
       data: {
+        id: `lms_wa_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         userId,
         phone,
         currentState: 'MAIN_MENU',
+        updatedAt: new Date(),
       },
     })
   }
@@ -74,7 +76,7 @@ async function updateSessionState(
     data: {
       previousState: session?.currentState,
       currentState: state,
-      contextData: contextData,
+      contextData: contextData as Prisma.InputJsonValue,
       lastInteractionAt: new Date(),
       totalInteractions: { increment: 1 },
     },
@@ -321,14 +323,14 @@ async function handleCourseDetailInput(
     const lastProgress = await prisma.video_progress.findFirst({
       where: {
         userId,
-        videoLecture: {
-          studyMaterial: { courseId },
+        video_lectures: {
+          study_materials: { courseId },
         },
         isCompleted: false,
       },
       orderBy: { lastWatchedAt: 'desc' },
       include: {
-        videoLecture: true,
+        video_lectures: true,
       },
     })
 
@@ -372,12 +374,12 @@ async function handleChapterList(userId: string, chapterId: string): Promise<Bot
       study_materials: {
         where: { materialType: 'VIDEO', isPublished: true },
         include: {
-          video_lecture: {
+          video_lectures: {
             select: {
               id: true,
               title: true,
               duration: true,
-              progress: {
+              video_progress: {
                 where: { userId },
                 select: { completionPercent: true, isCompleted: true },
               },
@@ -404,14 +406,18 @@ async function handleChapterList(userId: string, chapterId: string): Promise<Bot
   })
 
   const videos = chapter.study_materials
-    .filter((m) => m.video_lecture)
+    .filter((m) => m.video_lectures)
     .map((m, i) => {
-      const progress = m.video_lecture?.progress[0]
-      const status = progress?.isCompleted ? '✅' : progress?.completionPercent > 0 ? '🔄' : '⬜'
-      const duration = m.video_lecture?.duration
-        ? `(${Math.floor(m.video_lecture.duration / 60)}min)`
+      const progress = m.video_lectures?.video_progress[0]
+      const status = progress?.isCompleted
+        ? '✅'
+        : Number(progress?.completionPercent) > 0
+          ? '🔄'
+          : '⬜'
+      const duration = m.video_lectures?.duration
+        ? `(${Math.floor(m.video_lectures.duration / 60)}min)`
         : ''
-      return `${status} ${i + 1}. ${m.video_lecture?.title || m.title} ${duration}`
+      return `${status} ${i + 1}. ${m.video_lectures?.title || m.title} ${duration}`
     })
     .join('\n')
 
@@ -443,17 +449,17 @@ async function handleChapterListInput(
     include: {
       study_materials: {
         where: { materialType: 'VIDEO', isPublished: true },
-        include: { video_lecture: true },
+        include: { video_lectures: true },
         orderBy: { sortOrder: 'asc' },
       },
     },
   })
 
   const videoIndex = parseInt(input) - 1
-  const videos = chapter?.study_materials.filter((m) => m.video_lecture) || []
+  const videos = chapter?.study_materials.filter((m) => m.video_lectures) || []
 
   if (!isNaN(videoIndex) && videoIndex >= 0 && videoIndex < videos.length) {
-    const video = videos[videoIndex].video_lecture
+    const video = videos[videoIndex].video_lectures
     if (video) {
       return handleVideoDetail(userId, video.id)
     }
@@ -485,16 +491,16 @@ async function handleVideoDetail(userId: string, videoLectureId: string): Promis
   const video = await prisma.video_lectures.findUnique({
     where: { id: videoLectureId },
     include: {
-      studyMaterial: {
+      study_materials: {
         include: {
           chapters: true,
           courses: true,
         },
       },
-      progress: {
+      video_progress: {
         where: { userId },
       },
-      chapters: {
+      video_chapters: {
         orderBy: { orderIndex: 'asc' },
         take: 5,
       },
@@ -507,8 +513,8 @@ async function handleVideoDetail(userId: string, videoLectureId: string): Promis
 
   await updateSessionState(userId, 'VIDEO_DETAIL', {
     videoId: videoLectureId,
-    chapterId: video.studyMaterial?.chapterId,
-    courseId: video.studyMaterial?.courseId,
+    chapterId: video.study_materials?.chapterId,
+    courseId: video.study_materials?.courseId,
   })
 
   await prisma.lms_whatsapp_sessions.update({
@@ -516,15 +522,15 @@ async function handleVideoDetail(userId: string, videoLectureId: string): Promis
     data: { lastVideoId: videoLectureId },
   })
 
-  const progress = video.progress[0]
+  const progress = video.video_progress[0]
   const duration = Math.floor(video.duration / 60)
   const progressText = progress
     ? `Progress: ${Math.round(Number(progress.completionPercent))}% (${Math.floor(progress.lastPosition / 60)}/${duration} min)`
     : 'Not started'
 
   const chaptersText =
-    video.chapters.length > 0
-      ? `\n*Topics:*\n${video.chapters.map((c) => `• ${c.title} (${Math.floor(c.startTime / 60)}:${String(c.startTime % 60).padStart(2, '0')})`).join('\n')}`
+    video.video_chapters.length > 0
+      ? `\n*Topics:*\n${video.video_chapters.map((c) => `• ${c.title} (${Math.floor(c.startTime / 60)}:${String(c.startTime % 60).padStart(2, '0')})`).join('\n')}`
       : ''
 
   const playUrl = `${SITE_URL}/lms/watch/${videoLectureId}`
@@ -582,9 +588,9 @@ async function handleContinueWatching(userId: string, _input: string): Promise<B
     },
     orderBy: { lastWatchedAt: 'desc' },
     include: {
-      videoLecture: {
+      video_lectures: {
         include: {
-          studyMaterial: {
+          study_materials: {
             include: {
               courses: { select: { name: true } },
               chapters: { select: { title: true } },
@@ -607,14 +613,14 @@ You don't have any videos in progress. Start watching a course!`,
     }
   }
 
-  const video = lastProgress.videoLecture
+  const video = lastProgress.video_lectures
   const resumePosition = Math.floor(lastProgress.lastPosition / 60)
 
   return {
     text: `▶️ *Continue Watching*
 
-📖 ${video.studyMaterial?.courses?.name || 'Course'}
-📑 ${video.studyMaterial?.chapters?.title || 'Chapter'}
+📖 ${video.study_materials?.courses?.name || 'Course'}
+📑 ${video.study_materials?.chapters?.title || 'Chapter'}
 🎬 ${video.title}
 
 📊 Progress: ${Math.round(Number(lastProgress.completionPercent))}%
@@ -640,7 +646,7 @@ async function handleMyProgress(userId: string): Promise<BotMessage> {
     orderBy: { lastWatchedAt: 'desc' },
     take: 5,
     include: {
-      videoLecture: {
+      video_lectures: {
         select: { title: true },
       },
     },
@@ -648,7 +654,7 @@ async function handleMyProgress(userId: string): Promise<BotMessage> {
 
   const recentText =
     recentProgress.length > 0
-      ? `\n*Recent Activity:*\n${recentProgress.map((p) => `• ${p.videoLecture.title} - ${Math.round(Number(p.completionPercent))}%`).join('\n')}`
+      ? `\n*Recent Activity:*\n${recentProgress.map((p) => `• ${p.video_lectures.title} - ${Math.round(Number(p.completionPercent))}%`).join('\n')}`
       : ''
 
   return {
@@ -806,7 +812,7 @@ export async function sendStudyReminder(userId: string): Promise<void> {
     where: { userId, isCompleted: false },
     orderBy: { lastWatchedAt: 'desc' },
     include: {
-      videoLecture: {
+      video_lectures: {
         select: { title: true },
       },
     },
@@ -816,7 +822,7 @@ export async function sendStudyReminder(userId: string): Promise<void> {
 
   const message = `📚 *Study Reminder*
 
-Hey! You were watching "${lastProgress.videoLecture.title}" and you're ${Math.round(Number(lastProgress.completionPercent))}% done.
+Hey! You were watching "${lastProgress.video_lectures.title}" and you're ${Math.round(Number(lastProgress.completionPercent))}% done.
 
 Continue where you left off: ${SITE_URL}/lms/watch/${lastProgress.videoLectureId}
 
@@ -830,6 +836,7 @@ Reply "menu" to access your dashboard.`
   // Log notification
   await prisma.lms_progress_notifications.create({
     data: {
+      id: `lms_notif_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
       userId,
       notificationType: 'COURSE_REMINDER',
       title: 'Study Reminder',
@@ -877,6 +884,7 @@ Reply "menu" to see your courses.`
 
   await prisma.lms_progress_notifications.create({
     data: {
+      id: `lms_notif_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
       userId,
       notificationType: 'PROGRESS_MILESTONE',
       title: `${milestone}% Milestone`,

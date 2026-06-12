@@ -13,7 +13,7 @@
 import { prisma } from '@/lib/prisma'
 import { sendWhatsAppMessage, trackEvent } from '@/lib/interakt'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
-import { LeadStage } from '@/generated/prisma'
+import { LeadStage, Prisma } from '@/generated/prisma'
 
 // Drip sequence types
 export type DripSequenceType =
@@ -572,10 +572,7 @@ export class WhatsAppDripService {
       const lead = await prisma.leads.findUnique({
         where: { id: leadId },
         include: {
-          demo_bookings: {
-            orderBy: { createdAt: 'desc' },
-            take: 1,
-          },
+          demo_bookings: true,
         },
       })
 
@@ -584,7 +581,7 @@ export class WhatsAppDripService {
         return { success: false, scheduledCount: 0 }
       }
 
-      const latestDemo = lead.demo_bookings?.[0]
+      const latestDemo = lead.demo_bookings
       const demoDate = latestDemo
         ? parseDemoDateTime(latestDemo.preferredDate, latestDemo.preferredTime)
         : undefined
@@ -631,11 +628,12 @@ export class WhatsAppDripService {
       if (!rule) {
         rule = await prisma.followup_rules.create({
           data: {
+            id: `fr_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
             name: `drip_${sequenceType}`,
             description: `WhatsApp drip sequence: ${sequenceType}`,
             isActive: true,
             triggerType: 'STAGE_CHANGE',
-            triggerConditions: { sequenceType },
+            triggerConditions: { sequenceType } as Prisma.InputJsonValue,
             delayMinutes: 0,
             actionType: 'WHATSAPP',
             createdById: 'system',
@@ -676,6 +674,7 @@ export class WhatsAppDripService {
         // Schedule future actions
         await prisma.followup_queue.create({
           data: {
+            id: `fq_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
             leadId,
             ruleId: rule.id,
             scheduledFor,
@@ -689,7 +688,7 @@ export class WhatsAppDripService {
               skipIfStageChanged: step.skipIfStageChanged,
               originalStage: lead.stage,
               triggerData,
-            },
+            } as Prisma.InputJsonValue,
             updatedAt: new Date(),
           },
         })
@@ -753,6 +752,7 @@ export class WhatsAppDripService {
       // Record in history
       await prisma.followup_history.create({
         data: {
+          id: `fh_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           leadId: lead.id,
           action: 'WHATSAPP',
           channel: 'WHATSAPP',
@@ -763,7 +763,7 @@ export class WhatsAppDripService {
             stepId: step.id,
             stepName: step.name,
             templateName: step.templateName,
-          },
+          } as Prisma.InputJsonValue,
         },
       })
 
@@ -826,7 +826,7 @@ export class WhatsAppDripService {
           })
 
           // Check if stage changed and should skip
-          if (metadata.skipIfStageChanged && item.lead.stage !== metadata.originalStage) {
+          if (metadata.skipIfStageChanged && item.leads.stage !== metadata.originalStage) {
             await prisma.followup_queue.update({
               where: { id: item.id },
               data: {
@@ -839,14 +839,14 @@ export class WhatsAppDripService {
           }
 
           const leadData: LeadData = {
-            id: item.lead.id,
-            name: item.lead.studentName,
-            phone: item.lead.phone,
-            email: item.lead.email || undefined,
-            courseInterest: item.lead.courseInterest,
-            stage: item.lead.stage,
-            source: item.lead.source,
-            createdAt: item.lead.createdAt,
+            id: item.leads.id,
+            name: item.leads.studentName,
+            phone: item.leads.phone,
+            email: item.leads.email || undefined,
+            courseInterest: item.leads.courseInterest,
+            stage: item.leads.stage,
+            source: item.leads.source,
+            createdAt: item.leads.createdAt,
           }
 
           // Find the step configuration
@@ -926,10 +926,7 @@ export class WhatsAppDripService {
       const lead = await prisma.leads.findUnique({
         where: { id: leadId },
         include: {
-          demo_bookings: {
-            orderBy: { createdAt: 'desc' },
-            take: 1,
-          },
+          demo_bookings: true,
         },
       })
 
@@ -938,7 +935,7 @@ export class WhatsAppDripService {
         return false
       }
 
-      const latestDemo = lead.demo_bookings?.[0]
+      const latestDemo = lead.demo_bookings
       const demoDate = latestDemo
         ? parseDemoDateTime(latestDemo.preferredDate, latestDemo.preferredTime)
         : undefined
@@ -992,6 +989,7 @@ export class WhatsAppDripService {
       // Record in history
       await prisma.followup_history.create({
         data: {
+          id: `fh_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           leadId: lead.id,
           action: 'WHATSAPP',
           channel: 'WHATSAPP',
@@ -1001,7 +999,7 @@ export class WhatsAppDripService {
           metadata: {
             triggerType,
             triggerData,
-          },
+          } as Prisma.InputJsonValue,
         },
       })
 
@@ -1075,15 +1073,18 @@ export class WhatsAppDripService {
             const hasReminder = await this.hasReminderBeenSent(demo.id, reminderType)
             if (hasReminder) continue
 
+            const leadRecord = demo.leads
+            if (!leadRecord) continue
+
             const leadData: LeadData = {
-              id: demo.lead.id,
-              name: demo.lead.studentName,
-              phone: demo.lead.phone,
-              courseInterest: demo.lead.courseInterest,
-              stage: demo.lead.stage,
+              id: leadRecord.id,
+              name: leadRecord.studentName,
+              phone: leadRecord.phone,
+              courseInterest: leadRecord.courseInterest,
+              stage: leadRecord.stage,
               demoDate: demoDateTime,
-              source: demo.lead.source,
-              createdAt: demo.lead.createdAt,
+              source: leadRecord.source,
+              createdAt: leadRecord.createdAt,
             }
 
             let message: string
@@ -1096,13 +1097,13 @@ export class WhatsAppDripService {
             }
 
             const result = await sendWhatsAppMessage({
-              phone: demo.lead.phone,
+              phone: leadRecord.phone,
               message,
             })
 
             if (result.success) {
               stats.sent++
-              await this.recordReminderSent(demo.id, demo.leadId, reminderType, message)
+              await this.recordReminderSent(demo.id, leadRecord.id, reminderType, message)
             } else {
               stats.failed++
             }
@@ -1143,6 +1144,7 @@ export class WhatsAppDripService {
   ): Promise<void> {
     await prisma.followup_history.create({
       data: {
+        id: `fh_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         leadId,
         action: 'WHATSAPP',
         channel: 'WHATSAPP',
@@ -1152,7 +1154,7 @@ export class WhatsAppDripService {
         metadata: {
           demoId,
           reminderType,
-        },
+        } as Prisma.InputJsonValue,
       },
     })
   }
