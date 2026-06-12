@@ -4,6 +4,7 @@ import { rateLimit } from '@/lib/rateLimit'
 import { prisma } from '@/lib/prisma'
 import { logger } from '@/lib/utils/logger'
 import { notifyAdminContactInquiry } from '@/lib/notifications/adminLeadNotification'
+import { upsertLead } from '@/lib/leads/upsertLead'
 import { trackLeadConversion } from '@/lib/integrations/googleAdsConversion'
 import { emailService } from '@/lib/email/emailService'
 import { sendWhatsAppMessage } from '@/lib/interakt'
@@ -165,6 +166,24 @@ export async function POST(request: NextRequest) {
       supportType: data.supportType,
       priority: inquiry.priority,
     })
+
+    // ALSO drop the lead into the CRM (leads pipeline) — additive, deduped by
+    // phone, never blocks this response. The contact_inquiries row above and
+    // the admin notification below are unchanged. 'admission' inquiries are
+    // hottest, so map those to HOT priority.
+    void upsertLead({
+      name: data.name,
+      phone: data.phone,
+      email: data.email,
+      courseInterest: `Contact form — ${data.supportType}`,
+      source: source || `contact:${data.supportType}`,
+      message: data.message,
+      utmSource: data.utmSource,
+      utmMedium: data.utmMedium,
+      utmCampaign: data.utmCampaign,
+      gclid: data.gclid,
+      priority: data.supportType === 'admission' ? 'HOT' : 'WARM',
+    }).catch(() => {})
 
     // Send WhatsApp notification to admin about new lead
     notifyAdminContactInquiry({

@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import { emailService } from '@/lib/email/emailService'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { upsertLead } from '@/lib/leads/upsertLead'
 
 // Accept any string with 8-15 digits after stripping non-digits (some
 // countries, e.g. Singapore, use 8-digit numbers). Examples that pass:
@@ -97,6 +98,18 @@ export async function POST(request: NextRequest) {
         updatedAt: new Date(),
       },
     })
+
+    // ALSO drop the lead into the CRM (leads pipeline) — additive, deduped by
+    // phone, never blocks this response. The content_leads row above and the
+    // WhatsApp handoff below are unchanged.
+    void upsertLead({
+      name: data.name,
+      phone: cleanPhone,
+      email: data.email,
+      courseInterest: data.area ? `Biology coaching — ${data.area}` : undefined,
+      source: data.source || `enquiry:${data.pageUrl || 'website'}`,
+      message: data.message,
+    }).catch(() => {})
 
     // Build the pre-filled WhatsApp message addressed to admin.
     // After the client redirects to this URL, the lead's own WhatsApp opens
