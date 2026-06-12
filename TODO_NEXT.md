@@ -25,26 +25,30 @@ and `LEAD_CONSOLIDATION_SCOPE.md`.
 
 ## A2. FROM FULL AUDIT (Jun 12) — see FULL_AUDIT_2026_06_12.md — several CRITICAL
 
-- [ ] **~20 missing Prisma models** → whole features 500 (gamification, consultant, notices,
-      worksheets, wall-of-achievers, self_evaluations, **parent dashboard `tests`**, work_tracking,
-      pending_conversions). Add models + migrate, or noindex/disable those features.
+- [x] **~20 missing Prisma models** → BUILT (commits 9188fb53, ea6acb83, e2019f80). 18 new models
+      (gamification ×5, consultant/referral/commission/pending_conversion ×5, notices ×2, worksheets ×2,
+      wall_of_achievers ×2, self_evaluations, work_tracking) + payment_links. mcq_user_stats gained the
+      11 gamification columns. Counselor money + WhatsApp services migrated off the InstantDB mock to
+      Prisma. Parent dashboard `tests` → `test_assignments`. New-model feature code now type-clean.
+      **DEPLOY-CRITICAL**: tables don't exist in the live DB yet — apply
+      `prisma/manual-migrations/2026-06-12_add_feature_models.sql` (additive, 0 DROPs) via `prisma db push`
+      BEFORE these features work at runtime. Parent dashboard still has DEEPER pre-existing relation drift
+      (child user has no `test_attempts` relation; `student_attendance` aliased) — that's a feature-rebuild
+      in the drift batches below, NOT done.
 - [ ] **~133 creates omit `id`, ~65 omit `updatedAt`** (incl. `/api/enrollment/route.ts:62` — enrollment
       throws). One-shot fix: add `@default(cuid())` + `@updatedAt` to the relevant schema columns.
 - [x] **Type `prisma` as `PrismaClient`** — DONE (bd3dd4f4). Surfaced **1,205** real drift errors
-      (tsc clean baseline was 5). Cleared 32 so far (isActive staff-query bugs + dead migrate route,
-      477d5a75). **~1,173 remain**, split:
-      - **~187 errors = ~20 MISSING Prisma models** → DECISION NEEDED: build the model+migrate, or
-        delete/disable the feature. Affected features: gamification (xp/badges/streaks/goals ~87 errs),
-        consultant/commissions/referrals, notices, worksheets, wall-of-achievers, self-evaluations,
-        **parent dashboard `tests`**, work_tracking, pending_conversions. (Deleting unused ones erases
-        their errors + dead code in one move — far cheaper than field-by-field.)
-      - **~986 errors = field/relation-name drift** across ~140 files (e.g. `course`→`courses`,
+      (tsc clean baseline was 5). **Now at 967** (238 cleared): isActive staff bugs + dead migrate route,
+      the 18 missing models built, counselor money/WhatsApp remap, new-model field bugs.
+      - **~187 errors = missing models** → RESOLVED (built, see above).
+      - **~967 remaining = field/relation-name drift** across ~140 files (e.g. `course`→`courses`,
         `lead`→`leads`, non-existent columns). Mechanical but laborious; mostly low-traffic areas
         (LMS bot, analytics dashboard, teacher/parent panels). Work in prioritized batches.
       - NOTE: id/updatedAt omissions do NOT surface in tsc (Prisma marks them optional) — lower
         severity than the audit estimated.
-- [ ] **Counselor money features lost** — migrate feePlanService.ts + counselor/whatsapp.ts off the
-      InstantDB mock (`@/lib/db`) to Prisma (fee plans/offers/payments/WhatsApp not persisting).
+- [x] **Counselor money features lost** — DONE (ea6acb83). feePlanService.ts + counselor/whatsapp.ts
+      migrated off the InstantDB mock to Prisma (fee_plans/installments/offers/fee_payments/activities/
+      crm_communications). Type-clean. Needs the migration applied (above) to persist at runtime.
 - [ ] **Payment masking** — payments/verify:265 + cashfree/webhook:169 return 200 on DB failure
       (paid-not-enrolled, no retry); payment/verify:52 add idempotency guard.
 - [ ] **2 stored-XSS sinks** — sanitize free-resources AnnouncementBanner + [id]/page with the existing
