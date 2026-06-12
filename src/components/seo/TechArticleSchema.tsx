@@ -69,12 +69,19 @@ export function TechArticleSchema({
     image: featuredImage ? `${baseUrl}${featuredImage}` : `${baseUrl}/og-image.jpg`,
     author: {
       '@type': 'Person',
+      // Link to the canonical Person entity so Google merges article
+      // authorship with the site-wide Dr. Shekhar node (the heavily-invested
+      // #person @id) instead of treating each post's author as a new entity.
+      ...(/shekhar/i.test(author.name)
+        ? { '@id': `${baseUrl}/dr-shekhar-singh-neet-biology-faculty#person` }
+        : {}),
       name: author.name,
       jobTitle: author.role || 'NEET Biology Expert',
       url: author.url || `${baseUrl}/about`,
       image: author.image,
       worksFor: {
         '@type': 'EducationalOrganization',
+        '@id': `${baseUrl}/#organization`,
         name: 'Cerebrum Biology Academy',
       },
     },
