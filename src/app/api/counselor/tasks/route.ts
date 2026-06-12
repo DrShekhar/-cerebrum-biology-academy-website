@@ -7,6 +7,7 @@ const createTaskSchema = z.object({
   leadId: z.string().optional(),
   title: z.string().min(1, 'Title is required'),
   description: z.string().optional(),
+  // Accept the UI's labels; mapped to the real TaskType enum below.
   type: z.enum([
     'FOLLOW_UP',
     'DEMO_REMINDER',
@@ -22,10 +23,40 @@ const createTaskSchema = z.object({
 const updateTaskSchema = z.object({
   title: z.string().optional(),
   description: z.string().optional(),
-  status: z.enum(['TODO', 'IN_PROGRESS', 'COMPLETED', 'CANCELLED']).optional(),
+  status: z
+    .enum(['TODO', 'PENDING', 'IN_PROGRESS', 'COMPLETED', 'SNOOZED', 'CANCELLED'])
+    .optional(),
   priority: z.enum(['LOW', 'MEDIUM', 'HIGH', 'URGENT']).optional(),
   dueDate: z.string().optional(),
 })
+
+// Map UI labels → real Prisma enums (schema: TaskType / TaskPriority / TaskStatus).
+const TASK_TYPE_MAP: Record<
+  string,
+  | 'FOLLOW_UP_CALL'
+  | 'SEND_WHATSAPP'
+  | 'SEND_EMAIL'
+  | 'PAYMENT_REMINDER'
+  | 'DEMO_FOLLOWUP'
+  | 'CUSTOM'
+> = {
+  FOLLOW_UP: 'FOLLOW_UP_CALL',
+  DEMO_REMINDER: 'DEMO_FOLLOWUP',
+  PAYMENT_REMINDER: 'PAYMENT_REMINDER',
+  OFFER_EXPIRY: 'CUSTOM',
+  DOCUMENT_COLLECTION: 'CUSTOM',
+  OTHER: 'CUSTOM',
+}
+const mapTaskPriority = (p: string): 'HIGH' | 'MEDIUM' | 'LOW' =>
+  p === 'URGENT' || p === 'HIGH' ? 'HIGH' : p === 'LOW' ? 'LOW' : 'MEDIUM'
+const mapTaskStatus = (
+  s?: string
+): 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' | 'SNOOZED' | 'CANCELLED' | undefined =>
+  s === 'TODO'
+    ? 'PENDING'
+    : (s as 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' | 'SNOOZED' | 'CANCELLED' | undefined)
+
+const rand = (p: string) => `${p}_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`
 
 export async function GET(request: NextRequest) {
   try {
@@ -43,7 +74,7 @@ export async function GET(request: NextRequest) {
     }
 
     if (status) {
-      where.status = status
+      where.status = mapTaskStatus(status)
     }
 
     if (leadId) {
@@ -68,7 +99,8 @@ export async function GET(request: NextRequest) {
             stage: true,
           },
         },
-        users: {
+        // Real relation name (was `users` — doesn't exist → threw).
+        users_tasks_assignedToIdTousers: {
           select: {
             id: true,
             name: true,
@@ -135,10 +167,17 @@ export async function POST(request: NextRequest) {
 
     const task = await prisma.tasks.create({
       data: {
-        ...validatedData,
+        id: rand('task'),
+        leadId: validatedData.leadId,
+        title: validatedData.title,
+        description: validatedData.description,
+        type: TASK_TYPE_MAP[validatedData.type] || 'CUSTOM',
+        priority: mapTaskPriority(validatedData.priority),
         dueDate: new Date(validatedData.dueDate),
         assignedToId: session.userId,
-        status: 'TODO',
+        createdById: session.userId,
+        status: 'PENDING',
+        updatedAt: new Date(),
       },
       include: {
         leads: {
@@ -153,6 +192,7 @@ export async function POST(request: NextRequest) {
     if (validatedData.leadId) {
       await prisma.activities.create({
         data: {
+          id: rand('act'),
           userId: session.userId,
           leadId: validatedData.leadId,
           action: 'TASK_CREATED',

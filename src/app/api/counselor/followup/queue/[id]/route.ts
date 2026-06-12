@@ -67,8 +67,12 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     if ('error' in authResult) return authResult.error
     const { session } = authResult
 
+    // The queue UI sends { action, reason } in the request BODY; older callers
+    // used ?action=. Read the body once (it can only be parsed once) and accept
+    // either source.
+    const reqBody = await request.json().catch(() => ({}) as Record<string, unknown>)
     const { searchParams } = new URL(request.url)
-    const action = searchParams.get('action')
+    const action = (reqBody.action as string) || searchParams.get('action')
 
     if (!action || !['execute', 'cancel', 'skip'].includes(action)) {
       return NextResponse.json(
@@ -161,7 +165,9 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
 
           await prisma.activities.create({
             data: {
+              id: `act_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
               userId: session.userId,
+              leadId: queueItem.leadId,
               action: 'FOLLOWUP_EXECUTED',
               description: `Manually executed follow-up: ${queueItem.rule.name} for lead ${queueItem.lead.studentName}`,
             },
@@ -192,14 +198,15 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
         }
 
       case 'cancel':
-        const body = await request.json()
-        const reason = body.reason || 'Cancelled by counselor'
+        const reason = (reqBody.reason as string) || 'Cancelled by counselor'
 
         await cancelQueueItem(params.id, reason)
 
         await prisma.activities.create({
           data: {
+            id: `act_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
             userId: session.userId,
+            leadId: queueItem.leadId,
             action: 'FOLLOWUP_CANCELLED',
             description: `Cancelled follow-up: ${queueItem.rule.name} for lead ${queueItem.lead.studentName}. Reason: ${reason}`,
           },

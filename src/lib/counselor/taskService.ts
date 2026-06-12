@@ -39,6 +39,36 @@ interface TaskAutomationRule {
   }
 }
 
+// These local string types do NOT match the Prisma enums (TaskType:
+// FOLLOW_UP_CALL/SEND_WHATSAPP/SEND_EMAIL/PAYMENT_REMINDER/DEMO_FOLLOWUP/CUSTOM;
+// TaskPriority: HIGH/MEDIUM/LOW; TaskStatus: PENDING/IN_PROGRESS/COMPLETED/
+// SNOOZED/CANCELLED). Map before every write or Prisma throws.
+const PRISMA_TASK_TYPE: Record<
+  TaskType,
+  | 'FOLLOW_UP_CALL'
+  | 'SEND_WHATSAPP'
+  | 'SEND_EMAIL'
+  | 'PAYMENT_REMINDER'
+  | 'DEMO_FOLLOWUP'
+  | 'CUSTOM'
+> = {
+  FOLLOW_UP: 'FOLLOW_UP_CALL',
+  DEMO_REMINDER: 'DEMO_FOLLOWUP',
+  PAYMENT_REMINDER: 'PAYMENT_REMINDER',
+  OFFER_EXPIRY: 'CUSTOM',
+  DOCUMENT_COLLECTION: 'CUSTOM',
+  OTHER: 'CUSTOM',
+}
+const prismaTaskPriority = (p: TaskPriority): 'HIGH' | 'MEDIUM' | 'LOW' =>
+  p === 'URGENT' || p === 'HIGH' ? 'HIGH' : p === 'LOW' ? 'LOW' : 'MEDIUM'
+const prismaTaskStatus = (
+  s?: TaskStatus
+): 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' | 'SNOOZED' | 'CANCELLED' =>
+  s === 'TODO'
+    ? 'PENDING'
+    : ((s || 'PENDING') as 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' | 'SNOOZED' | 'CANCELLED')
+const tsRand = (p: string) => `${p}_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`
+
 export class TaskService {
   /**
    * Task automation rules based on lead stage
@@ -127,17 +157,20 @@ export class TaskService {
     try {
       const task = await prisma.tasks.create({
         data: {
+          id: tsRand('task'),
           leadId: params.leadId,
           title: params.title,
           description: params.description,
-          type: params.type,
-          priority: params.priority,
+          type: PRISMA_TASK_TYPE[params.type] || 'CUSTOM',
+          priority: prismaTaskPriority(params.priority),
           dueDate: params.dueDate,
           assignedToId: params.assignedToId,
-          status: 'TODO',
+          createdById: params.assignedToId,
+          status: 'PENDING',
+          updatedAt: new Date(),
         },
         include: {
-          lead: {
+          leads: {
             select: {
               id: true,
               studentName: true,
@@ -151,10 +184,11 @@ export class TaskService {
       if (params.leadId) {
         await prisma.activities.create({
           data: {
+            id: tsRand('act'),
             leadId: params.leadId,
-            type: 'TASK_CREATED',
+            userId: params.assignedToId,
+            action: 'TASK_CREATED',
             description: `Created task: ${params.title}`,
-            performedBy: params.assignedToId,
           },
         })
       }
@@ -220,17 +254,22 @@ export class TaskService {
     updates: Partial<CreateTaskParams> & { status?: TaskStatus }
   ) {
     try {
-      const updateData: any = { ...updates }
-
-      if (updates.status === 'COMPLETED') {
-        updateData.completedAt = new Date()
-      }
+      // Build the update explicitly, mapping the local string types to the
+      // Prisma enums (a raw `...updates` spread carried invalid enum values).
+      const updateData: Record<string, unknown> = { updatedAt: new Date() }
+      if (updates.title !== undefined) updateData.title = updates.title
+      if (updates.description !== undefined) updateData.description = updates.description
+      if (updates.dueDate !== undefined) updateData.dueDate = updates.dueDate
+      if (updates.type !== undefined) updateData.type = PRISMA_TASK_TYPE[updates.type] || 'CUSTOM'
+      if (updates.priority !== undefined) updateData.priority = prismaTaskPriority(updates.priority)
+      if (updates.status !== undefined) updateData.status = prismaTaskStatus(updates.status)
+      if (updates.status === 'COMPLETED') updateData.completedAt = new Date()
 
       const task = await prisma.tasks.update({
         where: { id: taskId },
         data: updateData,
         include: {
-          lead: {
+          leads: {
             select: {
               id: true,
               studentName: true,
@@ -242,10 +281,11 @@ export class TaskService {
       if (task.leadId) {
         await prisma.activities.create({
           data: {
+            id: tsRand('act'),
             leadId: task.leadId,
-            type: 'TASK_UPDATED',
+            userId: task.assignedToId,
+            action: 'TASK_UPDATED',
             description: `Updated task: ${task.title} - Status: ${task.status}`,
-            performedBy: task.assignedToId,
           },
         })
       }
