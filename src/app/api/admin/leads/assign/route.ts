@@ -45,7 +45,6 @@ async function handlePOST(request: NextRequest, session: ValidatedSession) {
       where: {
         id: validatedData.counselorId,
         role: { in: ['COUNSELOR', 'ADMIN'] },
-        isActive: true,
       },
       select: { id: true, name: true, email: true },
     })
@@ -200,7 +199,6 @@ async function handleGET(_request: NextRequest, _session: ValidatedSession) {
     const counselors = await prisma.users.findMany({
       where: {
         role: { in: ['COUNSELOR', 'ADMIN'] },
-        isActive: true,
       },
       select: {
         id: true,
@@ -277,7 +275,6 @@ async function handlePUT(request: NextRequest, session: ValidatedSession) {
     const counselors = await prisma.users.findMany({
       where: {
         role: { in: ['COUNSELOR', 'ADMIN'] },
-        isActive: true,
       },
       select: { id: true, name: true },
       orderBy: {

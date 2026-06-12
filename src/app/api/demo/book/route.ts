@@ -323,7 +323,6 @@ export async function POST(request: NextRequest) {
     const assignedCounselor = await prisma.users.findFirst({
       where: {
         role: { in: ['COUNSELOR', 'ADMIN'] },
-        isActive: true,
       },
       orderBy: {
         // Assign to counselor with fewest leads for load balancing

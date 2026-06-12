@@ -13,7 +13,6 @@ export async function GET(_request: NextRequest) {
     const counselors = await prisma.users.findMany({
       where: {
         role: { in: ['COUNSELOR', 'ADMIN'] },
-        isActive: true,
       },
       select: {
         id: true,

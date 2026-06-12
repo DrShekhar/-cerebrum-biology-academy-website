@@ -131,7 +131,6 @@ async function getDefaultCounselorId(tx: typeof prisma): Promise<string | null> 
   const counselor = await tx.users.findFirst({
     where: {
       role: { in: ['COUNSELOR', 'ADMIN'] },
-      isActive: true,
     },
     orderBy: {
       leads: {
@@ -274,7 +273,6 @@ export async function POST(request: NextRequest) {
             )
             validatedReferralCode = referralCodeRecord.code
             validatedReferralCodeId = referralCodeRecord.id
-
           }
         }
       } catch (referralError) {
@@ -330,12 +328,12 @@ export async function POST(request: NextRequest) {
             where: {
               preferredDate: data.preferredDate,
               preferredTime: {
-                startsWith: requestedTime
+                startsWith: requestedTime,
               },
               status: {
-                in: ['PENDING', 'CONFIRMED', 'RESCHEDULED']
-              }
-            }
+                in: ['PENDING', 'CONFIRMED', 'RESCHEDULED'],
+              },
+            },
           })
 
           if (conflictingBooking) {
@@ -477,7 +475,8 @@ export async function POST(request: NextRequest) {
         return NextResponse.json(
           {
             success: false,
-            error: 'This time slot was just booked by someone else. Please select a different time.',
+            error:
+              'This time slot was just booked by someone else. Please select a different time.',
             code: 'SLOT_CONFLICT',
           },
           { status: 409 }
@@ -954,17 +953,23 @@ const ADMIN_PHONE = process.env.ADMIN_PHONE_NUMBER || '8826444334'
 const SUPPORT_PHONE = process.env.SUPPORT_PHONE_NUMBER || '+91 88264 44334'
 
 // Notify admin when a demo booking fails - so no lead is lost!
-async function notifyAdminBookingFailure(leadData: {
-  name: string
-  email: string
-  phone: string
-  courseInterest: string[]
-  preferredDate?: string
-  preferredTime?: string
-  message?: string
-}, errorType: string, errorMessage: string) {
+async function notifyAdminBookingFailure(
+  leadData: {
+    name: string
+    email: string
+    phone: string
+    courseInterest: string[]
+    preferredDate?: string
+    preferredTime?: string
+    message?: string
+  },
+  errorType: string,
+  errorMessage: string
+) {
   if (!process.env.INTERAKT_API_KEY) {
-    console.warn('[Demo Booking] Cannot send failure notification - INTERAKT_API_KEY not configured')
+    console.warn(
+      '[Demo Booking] Cannot send failure notification - INTERAKT_API_KEY not configured'
+    )
     return
   }
 
