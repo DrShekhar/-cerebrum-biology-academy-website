@@ -30,8 +30,19 @@ and `LEAD_CONSOLIDATION_SCOPE.md`.
       pending_conversions). Add models + migrate, or noindex/disable those features.
 - [ ] **~133 creates omit `id`, ~65 omit `updatedAt`** (incl. `/api/enrollment/route.ts:62` — enrollment
       throws). One-shot fix: add `@default(cuid())` + `@updatedAt` to the relevant schema columns.
-- [ ] **Type `prisma` as `PrismaClient`** (remove mock-union `as any` in lib/prisma.ts:350) — surfaces
-      ~200 of these drift bugs at compile time. Highest-leverage single change.
+- [x] **Type `prisma` as `PrismaClient`** — DONE (bd3dd4f4). Surfaced **1,205** real drift errors
+      (tsc clean baseline was 5). Cleared 32 so far (isActive staff-query bugs + dead migrate route,
+      477d5a75). **~1,173 remain**, split:
+      - **~187 errors = ~20 MISSING Prisma models** → DECISION NEEDED: build the model+migrate, or
+        delete/disable the feature. Affected features: gamification (xp/badges/streaks/goals ~87 errs),
+        consultant/commissions/referrals, notices, worksheets, wall-of-achievers, self-evaluations,
+        **parent dashboard `tests`**, work_tracking, pending_conversions. (Deleting unused ones erases
+        their errors + dead code in one move — far cheaper than field-by-field.)
+      - **~986 errors = field/relation-name drift** across ~140 files (e.g. `course`→`courses`,
+        `lead`→`leads`, non-existent columns). Mechanical but laborious; mostly low-traffic areas
+        (LMS bot, analytics dashboard, teacher/parent panels). Work in prioritized batches.
+      - NOTE: id/updatedAt omissions do NOT surface in tsc (Prisma marks them optional) — lower
+        severity than the audit estimated.
 - [ ] **Counselor money features lost** — migrate feePlanService.ts + counselor/whatsapp.ts off the
       InstantDB mock (`@/lib/db`) to Prisma (fee plans/offers/payments/WhatsApp not persisting).
 - [ ] **Payment masking** — payments/verify:265 + cashfree/webhook:169 return 200 on DB failure
