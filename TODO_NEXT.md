@@ -23,6 +23,31 @@ and `LEAD_CONSOLIDATION_SCOPE.md`.
 - [ ] **Request GSC re-indexing** after deploy: homepage, `/global`, `/neet-coaching-delhi`,
       regional hubs; resubmit sitemap. Then wait 2–4 weeks.
 
+## A2. FROM FULL AUDIT (Jun 12) — see FULL_AUDIT_2026_06_12.md — several CRITICAL
+
+- [ ] **~20 missing Prisma models** → whole features 500 (gamification, consultant, notices,
+      worksheets, wall-of-achievers, self_evaluations, **parent dashboard `tests`**, work_tracking,
+      pending_conversions). Add models + migrate, or noindex/disable those features.
+- [ ] **~133 creates omit `id`, ~65 omit `updatedAt`** (incl. `/api/enrollment/route.ts:62` — enrollment
+      throws). One-shot fix: add `@default(cuid())` + `@updatedAt` to the relevant schema columns.
+- [ ] **Type `prisma` as `PrismaClient`** (remove mock-union `as any` in lib/prisma.ts:350) — surfaces
+      ~200 of these drift bugs at compile time. Highest-leverage single change.
+- [ ] **Counselor money features lost** — migrate feePlanService.ts + counselor/whatsapp.ts off the
+      InstantDB mock (`@/lib/db`) to Prisma (fee plans/offers/payments/WhatsApp not persisting).
+- [ ] **Payment masking** — payments/verify:265 + cashfree/webhook:169 return 200 on DB failure
+      (paid-not-enrolled, no retry); payment/verify:52 add idempotency guard.
+- [ ] **2 stored-XSS sinks** — sanitize free-resources AnnouncementBanner + [id]/page with the existing
+      `sanitizeHtml()`. Redact PII in logs (phone/email/payment objects).
+- [ ] **251 broken internal links remain** — mostly `city-hub-data.ts` `url:` fields (190) +
+      seo-landing `/resources//tools/` namespace mismatch (25) + hard-coded JSX (22, incl.
+      BreadcrumbSchema `/glossary` in JSON-LD). 6 dead board-page WhatsApp CTAs (`<Button href>` no-op).
+- [ ] **Content**: rating contradiction (5.0/38 vs 4.5–4.8 + 847/1247 reviews); "100% Selection"/
+      "Guaranteed admission" claims; "XYZ Coaching" placeholder in metrics.ts:365; AIIMS 67 vs 65 vs 85;
+      "NEET 2025" stale labels; identical testimonials on 11 pages; legal pages "last updated = today".
+- [ ] **UI/UX**: two overlapping mobile bottom bars; LeadCaptureForm Enter+double-submit; EnrollmentForm
+      a11y; mobile nav has no Menu entry; blog double-h1; carousel buttons no aria-label; parent/ portal
+      no loading/error boundary.
+
 ## B. CRM — finish making it fully usable (code; mostly small)
 
 - [ ] **Fix the follow-up crons** (`/api/cron/followup-queue` + `/api/cron/followup-triggers`):
