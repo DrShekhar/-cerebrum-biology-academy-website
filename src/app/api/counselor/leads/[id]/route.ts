@@ -6,10 +6,7 @@ import { inngest } from '@/inngest/client'
 export const dynamic = 'force-dynamic'
 
 // GET /api/counselor/leads/[id] - Get full lead detail
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
   try {
     const session = await auth()
     if (!session?.user) {
@@ -45,7 +42,7 @@ export async function GET(
           take: 20,
         },
         crm_communications: {
-          orderBy: { createdAt: 'desc' },
+          orderBy: { sentAt: 'desc' },
           take: 30,
         },
         fee_plans: {
@@ -91,9 +88,7 @@ export async function GET(
       updatedAt: lead.updatedAt,
       lostReason: lead.lostReason,
       demoBookingId: lead.demoBookingId,
-      assignedTo: lead.users
-        ? { name: lead.users.name, email: lead.users.email }
-        : null,
+      assignedTo: lead.users ? { name: lead.users.name, email: lead.users.email } : null,
       notes: lead.notes.map((n) => ({
         id: n.id,
         content: n.content,
@@ -111,10 +106,10 @@ export async function GET(
       communications: lead.crm_communications.map((c) => ({
         id: c.id,
         type: c.type,
-        channel: c.channel,
-        content: c.content,
+        channel: c.type,
+        content: c.message,
         status: c.status,
-        sentAt: c.createdAt,
+        sentAt: c.sentAt,
       })),
       feePlans: lead.fee_plans.map((fp) => ({
         id: fp.id,
@@ -154,10 +149,7 @@ export async function GET(
 }
 
 // PATCH /api/counselor/leads/[id] - Update lead fields
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {
   try {
     const session = await auth()
     if (!session?.user) {

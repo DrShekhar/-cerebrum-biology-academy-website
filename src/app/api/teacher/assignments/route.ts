@@ -48,25 +48,25 @@ export async function GET(request: NextRequest) {
       prisma.assignments.findMany({
         where,
         include: {
-          course: {
+          courses: {
             select: {
               id: true,
               name: true,
             },
           },
-          chapter: {
+          chapters: {
             select: {
               id: true,
               title: true,
             },
           },
-          topic: {
+          topics: {
             select: {
               id: true,
               title: true,
             },
           },
-          submissions: {
+          assignment_submissions: {
             select: {
               id: true,
               status: true,
@@ -103,12 +103,12 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       success: true,
       assignments: assignments.map((a) => {
-        const totalSubmissions = a.submissions.length
-        const submittedCount = a.submissions.filter(
+        const totalSubmissions = a.assignment_submissions.length
+        const submittedCount = a.assignment_submissions.filter(
           (s) => s.status === 'SUBMITTED' || s.status === 'LATE' || s.status === 'GRADED'
         ).length
-        const gradedCount = a.submissions.filter((s) => s.status === 'GRADED').length
-        const lateCount = a.submissions.filter((s) => s.isLate).length
+        const gradedCount = a.assignment_submissions.filter((s) => s.status === 'GRADED').length
+        const lateCount = a.assignment_submissions.filter((s) => s.isLate).length
 
         return {
           id: a.id,
@@ -125,9 +125,9 @@ export async function GET(request: NextRequest) {
           createdAt: a.createdAt,
           updatedAt: a.updatedAt,
           publishedAt: a.publishedAt,
-          course: a.course,
-          chapter: a.chapter,
-          topic: a.topic,
+          course: a.courses,
+          chapter: a.chapters,
+          topic: a.topics,
           submissionStats: {
             total: totalSubmissions,
             submitted: submittedCount,
@@ -193,6 +193,8 @@ export async function POST(request: NextRequest) {
 
     const assignment = await prisma.assignments.create({
       data: {
+        id: `asgn_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         teacherId,
         courseId: courseId || null,
         chapterId: chapterId || null,
@@ -210,19 +212,19 @@ export async function POST(request: NextRequest) {
         publishedAt: status === 'PUBLISHED' ? new Date() : null,
       },
       include: {
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
           },
         },
-        chapter: {
+        chapters: {
           select: {
             id: true,
             title: true,
           },
         },
-        topic: {
+        topics: {
           select: {
             id: true,
             title: true,
@@ -246,6 +248,8 @@ export async function POST(request: NextRequest) {
         enrolledStudents.map((enrollment) =>
           prisma.assignment_submissions.create({
             data: {
+              id: `asub_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+              updatedAt: new Date(),
               assignmentId: assignment.id,
               studentId: enrollment.userId,
               submittedFiles: [],

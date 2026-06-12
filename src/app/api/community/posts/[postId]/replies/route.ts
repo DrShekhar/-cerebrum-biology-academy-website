@@ -53,6 +53,7 @@ export async function POST(request: NextRequest, context: RouteContext) {
 
     const newReply = await prisma.forum_replies.create({
       data: {
+        id: `reply_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         postId,
         authorName,
         content,

@@ -26,27 +26,27 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
         teacherId,
       },
       include: {
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
           },
         },
-        chapter: {
+        chapters: {
           select: {
             id: true,
             title: true,
           },
         },
-        topic: {
+        topics: {
           select: {
             id: true,
             title: true,
           },
         },
-        submissions: {
+        assignment_submissions: {
           include: {
-            student: {
+            users: {
               select: {
                 id: true,
                 name: true,
@@ -67,16 +67,16 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     }
 
     const submissionStats = {
-      total: assignment.submissions.length,
-      submitted: assignment.submissions.filter(
+      total: assignment.assignment_submissions.length,
+      submitted: assignment.assignment_submissions.filter(
         (s) => s.status === 'SUBMITTED' || s.status === 'LATE' || s.status === 'GRADED'
       ).length,
-      graded: assignment.submissions.filter((s) => s.status === 'GRADED').length,
-      pending: assignment.submissions.filter((s) => s.status === 'NOT_SUBMITTED').length,
-      late: assignment.submissions.filter((s) => s.isLate).length,
+      graded: assignment.assignment_submissions.filter((s) => s.status === 'GRADED').length,
+      pending: assignment.assignment_submissions.filter((s) => s.status === 'NOT_SUBMITTED').length,
+      late: assignment.assignment_submissions.filter((s) => s.isLate).length,
     }
 
-    const gradedSubmissions = assignment.submissions.filter(
+    const gradedSubmissions = assignment.assignment_submissions.filter(
       (s) => s.status === 'GRADED' && s.grade !== null
     )
     const averageGrade =
@@ -163,19 +163,19 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
       },
       data: updateData,
       include: {
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
           },
         },
-        chapter: {
+        chapters: {
           select: {
             id: true,
             title: true,
           },
         },
-        topic: {
+        topics: {
           select: {
             id: true,
             title: true,
@@ -209,6 +209,8 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
               },
             },
             create: {
+              id: `asub_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+              updatedAt: new Date(),
               assignmentId: updatedAssignment.id,
               studentId: enrollment.userId,
               submittedFiles: [],
@@ -254,7 +256,7 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
         teacherId,
       },
       include: {
-        submissions: {
+        assignment_submissions: {
           where: {
             status: {
               in: ['SUBMITTED', 'LATE', 'GRADED'],
@@ -268,7 +270,7 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
       return NextResponse.json({ error: 'Assignment not found' }, { status: 404 })
     }
 
-    if (assignment.submissions.length > 0) {
+    if (assignment.assignment_submissions.length > 0) {
       return NextResponse.json(
         {
           error:

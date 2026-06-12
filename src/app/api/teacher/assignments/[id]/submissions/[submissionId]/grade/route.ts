@@ -53,7 +53,7 @@ export async function POST(
         assignmentId,
       },
       include: {
-        student: {
+        users: {
           select: {
             id: true,
             name: true,
@@ -85,14 +85,14 @@ export async function POST(
         gradedAt: new Date(),
       },
       include: {
-        assignment: {
+        assignments: {
           select: {
             id: true,
             title: true,
             maxMarks: true,
           },
         },
-        student: {
+        users: {
           select: {
             id: true,
             name: true,
@@ -102,10 +102,13 @@ export async function POST(
       },
     })
 
+    // Preserve the original response shape (student/assignment keys) after the
+    // relation accessors were renamed to the real schema names (users/assignments).
+    const { users, assignments, ...submissionRest } = updatedSubmission
     return NextResponse.json({
       success: true,
       message: 'Submission graded successfully',
-      submission: updatedSubmission,
+      submission: { ...submissionRest, student: users, assignment: assignments },
     })
   } catch (error) {
     console.error('Failed to grade submission:', error)

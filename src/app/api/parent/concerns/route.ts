@@ -76,17 +76,22 @@ export async function GET(request: NextRequest) {
     }
 
     // Get all children for this parent
-    const childRelationships = await prisma.parent_child_relationships.findMany({
+    const childRelationshipRows = await prisma.parent_child_relationships.findMany({
       where: {
         parentId: parent.id,
         ...(childIdFilter && { childId: childIdFilter }),
       },
       include: {
-        child: {
+        users_parent_child_relationships_childIdTousers: {
           select: { id: true, name: true, email: true },
         },
       },
     })
+
+    const childRelationships = childRelationshipRows.map((r) => ({
+      ...r,
+      child: r.users_parent_child_relationships_childIdTousers,
+    }))
 
     if (childRelationships.length === 0) {
       return NextResponse.json({
@@ -122,9 +127,9 @@ export async function GET(request: NextRequest) {
       const attendanceRecords = await prisma.student_attendance.findMany({
         where: {
           studentId: childId,
-          date: { gte: thirtyDaysAgo },
+          markedAt: { gte: thirtyDaysAgo },
         },
-        orderBy: { date: 'desc' },
+        orderBy: { markedAt: 'desc' },
       })
 
       if (attendanceRecords.length > 0) {
@@ -214,7 +219,7 @@ export async function GET(request: NextRequest) {
       // 2. ACADEMIC CONCERNS - Test Performance
       const testAttempts = await prisma.test_attempts.findMany({
         where: {
-          studentId: childId,
+          freeUserId: childId,
           submittedAt: { gte: thirtyDaysAgo },
         },
         orderBy: { submittedAt: 'desc' },
@@ -301,11 +306,11 @@ export async function GET(request: NextRequest) {
       // 3. HOMEWORK CONCERNS
       const assignments = await prisma.assignments.findMany({
         where: {
-          enrollments: { studentId: childId },
+          courses: { enrollments: { some: { userId: childId } } },
           dueDate: { gte: thirtyDaysAgo, lte: now },
         },
         include: {
-          homework_submissions: {
+          assignment_submissions: {
             where: { studentId: childId },
           },
         },
@@ -314,20 +319,20 @@ export async function GET(request: NextRequest) {
       if (assignments.length > 0) {
         const totalAssignments = assignments.length
         const submittedOnTime = assignments.filter((a) => {
-          const submission = a.homework_submissions[0]
+          const submission = a.assignment_submissions[0]
           return submission && submission.submittedAt && submission.submittedAt <= a.dueDate
         }).length
         const lateSubmissions = assignments.filter((a) => {
-          const submission = a.homework_submissions[0]
+          const submission = a.assignment_submissions[0]
           return submission && submission.submittedAt && submission.submittedAt > a.dueDate
         }).length
-        const notSubmitted = assignments.filter((a) => !a.homework_submissions[0]).length
+        const notSubmitted = assignments.filter((a) => !a.assignment_submissions[0]).length
         const completionRate = ((totalAssignments - notSubmitted) / totalAssignments) * 100
 
         // Check grades
         const gradedSubmissions = assignments
-          .filter((a) => a.homework_submissions[0]?.grade !== null)
-          .map((a) => a.homework_submissions[0])
+          .filter((a) => a.assignment_submissions[0]?.grade !== null)
+          .map((a) => a.assignment_submissions[0])
         const avgGrade =
           gradedSubmissions.length > 0
             ? gradedSubmissions.reduce((sum, s) => sum + (s?.grade || 0), 0) /
@@ -407,11 +412,12 @@ export async function GET(request: NextRequest) {
       // 4. PAYMENT CONCERNS
       const childEmail = rel.child.email
       if (childEmail) {
+        // NOTE: fee_payments has no dueDate column, so overdue filtering by date
+        // is not possible here; restricted to status only.
         const overduePayments = await prisma.fee_payments.count({
           where: {
             fee_plans: { leads: { email: childEmail } },
             status: { in: ['PENDING', 'OVERDUE'] },
-            dueDate: { lt: now },
           },
         })
 

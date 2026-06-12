@@ -82,12 +82,12 @@ export async function analyzeWeakAreas(
     const questionResponses = await prisma.user_question_responses.findMany({
       where: {
         [userField]: userId,
-        question: {
+        questions: {
           isActive: true,
         },
       },
       select: {
-        question: {
+        questions: {
           select: {
             topic: true,
             subtopic: true,
@@ -138,9 +138,9 @@ export async function analyzeWeakAreas(
 
     // Process question responses to fill gaps
     for (const response of questionResponses) {
-      const key = response.question.subtopic
-        ? `${response.question.topic}:${response.question.subtopic}`
-        : response.question.topic
+      const key = response.questions.subtopic
+        ? `${response.questions.topic}:${response.questions.subtopic}`
+        : response.questions.topic
 
       const existing = topicMap.get(key)
       if (existing) {
@@ -151,8 +151,8 @@ export async function analyzeWeakAreas(
       } else {
         // Create new entry if not in progress data
         const current = topicMap.get(key) || {
-          topic: response.question.topic,
-          subtopic: response.question.subtopic || undefined,
+          topic: response.questions.topic,
+          subtopic: response.questions.subtopic || undefined,
           correctAnswers: 0,
           incorrectAnswers: 0,
           totalQuestions: 0,
@@ -388,7 +388,7 @@ export async function getImprovementTrend(
     const responses = await prisma.user_question_responses.findMany({
       where: {
         [userField]: userId,
-        question: {
+        questions: {
           topic: topic,
           isActive: true,
         },

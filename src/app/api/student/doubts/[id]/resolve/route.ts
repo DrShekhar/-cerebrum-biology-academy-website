@@ -57,7 +57,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
         studentFeedback: validatedData.feedback,
       },
       include: {
-        instructor: {
+        users_doubt_tickets_instructorIdTousers: {
           select: {
             id: true,
             name: true,

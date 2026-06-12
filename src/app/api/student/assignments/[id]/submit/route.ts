@@ -97,7 +97,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
           gradedAt: null,
         },
         include: {
-          assignment: {
+          assignments: {
             select: {
               id: true,
               title: true,
@@ -117,6 +117,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
 
     const submission = await prisma.assignment_submissions.create({
       data: {
+        id: `as_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         assignmentId,
         studentId,
         submittedFiles,
@@ -124,9 +125,10 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
         status: isLate ? 'LATE' : 'SUBMITTED',
         submittedAt: now,
         isLate,
+        updatedAt: new Date(),
       },
       include: {
-        assignment: {
+        assignments: {
           select: {
             id: true,
             title: true,

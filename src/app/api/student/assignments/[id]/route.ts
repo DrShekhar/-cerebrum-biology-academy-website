@@ -37,32 +37,32 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
         OR: [{ courseId: { in: enrolledCourseIds } }, { courseId: null }],
       },
       include: {
-        teacher: {
+        users: {
           select: {
             id: true,
             name: true,
             email: true,
           },
         },
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
           },
         },
-        chapter: {
+        chapters: {
           select: {
             id: true,
             title: true,
           },
         },
-        topic: {
+        topics: {
           select: {
             id: true,
             title: true,
           },
         },
-        submissions: {
+        assignment_submissions: {
           where: {
             studentId,
           },
@@ -76,10 +76,10 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
 
     const isOverdue = new Date(assignment.dueDate) < new Date()
     const canSubmit =
-      assignment.submissions.length === 0 ||
+      assignment.assignment_submissions.length === 0 ||
       (assignment.allowResubmission &&
-        (assignment.submissions[0].status === 'GRADED' ||
-          assignment.submissions[0].status === 'RESUBMIT_REQUIRED'))
+        (assignment.assignment_submissions[0].status === 'GRADED' ||
+          assignment.assignment_submissions[0].status === 'RESUBMIT_REQUIRED'))
 
     return NextResponse.json({
       success: true,
@@ -98,11 +98,11 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
         createdAt: assignment.createdAt,
         updatedAt: assignment.updatedAt,
         publishedAt: assignment.publishedAt,
-        teacher: assignment.teacher,
-        course: assignment.course,
-        chapter: assignment.chapter,
-        topic: assignment.topic,
-        submission: assignment.submissions[0] || null,
+        teacher: assignment.users,
+        course: assignment.courses,
+        chapter: assignment.chapters,
+        topic: assignment.topics,
+        submission: assignment.assignment_submissions[0] || null,
         isOverdue,
         canSubmit: !isOverdue || assignment.allowLateSubmission ? canSubmit : false,
       },

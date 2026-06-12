@@ -231,10 +231,12 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
 
       if (studentIds.length > 0) {
         await prisma.test_assignment_submissions.createMany({
-          data: studentIds.map((studentId: string) => ({
+          data: studentIds.map((studentId: string, index: number) => ({
+            id: `tasub_${Date.now()}_${index}_${Math.random().toString(36).slice(2, 9)}`,
             testAssignmentId: id,
             studentId,
             status: 'NOT_STARTED',
+            updatedAt: new Date(),
           })),
           skipDuplicates: true,
         })

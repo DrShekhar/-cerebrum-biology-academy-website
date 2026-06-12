@@ -352,7 +352,7 @@ export class TaskService {
       const tasks = await prisma.tasks.findMany({
         where,
         include: {
-          lead: {
+          leads: {
             select: {
               id: true,
               studentName: true,
@@ -438,7 +438,7 @@ export class TaskService {
           where: { assignedToId: counselorId },
         }),
         prisma.tasks.count({
-          where: { assignedToId: counselorId, status: 'TODO' },
+          where: { assignedToId: counselorId, status: 'PENDING' },
         }),
         prisma.tasks.count({
           where: { assignedToId: counselorId, status: 'IN_PROGRESS' },
@@ -479,7 +479,7 @@ export class TaskService {
             lte: threeDaysFromNow,
           },
           fee_plans: {
-            lead: {
+            leads: {
               assignedToId: counselorId,
             },
           },
@@ -487,7 +487,7 @@ export class TaskService {
         include: {
           fee_plans: {
             include: {
-              lead: {
+              leads: {
                 select: {
                   id: true,
                   studentName: true,
@@ -519,11 +519,11 @@ export class TaskService {
           const task = await this.createTask({
             leadId: installment.fee_plans.leadId,
             title: `Payment Reminder - ${installment.fee_plans.courseName}`,
-            description: `Installment ${installment.installmentNumber} of ₹${installment.amount.toLocaleString('en-IN')} is due on ${installment.dueDate.toLocaleDateString()}. Send payment link to ${installment.fee_plans.lead.studentName}.`,
+            description: `Installment ${installment.installmentNumber} of ₹${Number(installment.amount).toLocaleString('en-IN')} is due on ${installment.dueDate.toLocaleDateString()}. Send payment link to ${installment.fee_plans.leads.studentName}.`,
             type: 'PAYMENT_REMINDER',
             priority: 'URGENT',
             dueDate: new Date(installment.dueDate),
-            assignedToId: installment.fee_plans.lead.assignedToId || counselorId,
+            assignedToId: installment.fee_plans.leads.assignedToId || counselorId,
           })
 
           createdTasks.push(task)
@@ -549,16 +549,16 @@ export class TaskService {
 
       const expiringOffers = await prisma.offers.findMany({
         where: {
-          status: 'ACTIVE',
+          status: 'SENT',
           validUntil: {
             lte: twoDaysFromNow,
           },
-          lead: {
+          leads: {
             assignedToId: counselorId,
           },
         },
         include: {
-          lead: {
+          leads: {
             select: {
               id: true,
               studentName: true,
@@ -574,7 +574,7 @@ export class TaskService {
         const existingTask = await prisma.tasks.findFirst({
           where: {
             leadId: offer.leadId,
-            type: 'OFFER_EXPIRY',
+            type: 'CUSTOM',
             status: {
               notIn: ['COMPLETED', 'CANCELLED'],
             },
@@ -588,11 +588,11 @@ export class TaskService {
           const task = await this.createTask({
             leadId: offer.leadId,
             title: `Offer Expiring Soon - ${offer.offerName}`,
-            description: `The offer "${offer.offerName}" for ${offer.lead.studentName} expires on ${offer.validUntil.toLocaleDateString()}. Follow up to encourage enrollment.`,
+            description: `The offer "${offer.offerName}" for ${offer.leads.studentName} expires on ${offer.validUntil.toLocaleDateString()}. Follow up to encourage enrollment.`,
             type: 'OFFER_EXPIRY',
             priority: 'HIGH',
             dueDate: new Date(offer.validUntil),
-            assignedToId: offer.lead.assignedToId || counselorId,
+            assignedToId: offer.leads.assignedToId || counselorId,
           })
 
           createdTasks.push(task)

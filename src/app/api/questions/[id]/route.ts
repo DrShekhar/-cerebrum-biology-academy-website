@@ -117,9 +117,9 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const question = await prisma.questions.findUnique({
       where: { id },
       include: {
-        testQuestions: {
+        test_questions: {
           select: {
-            testAttempt: {
+            test_attempts: {
               select: {
                 id: true,
                 title: true,
@@ -130,7 +130,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
           },
           take: 5, // Recent 5 test uses
         },
-        userResponses: {
+        user_question_responses: {
           select: {
             id: true,
             isCorrect: true,
@@ -166,26 +166,26 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         : 0
 
     const averageTime =
-      question.userResponses.length > 0
+      question.user_question_responses.length > 0
         ? Math.round(
-            question.userResponses.reduce((sum, r) => sum + (r.timeSpent || 0), 0) /
-              question.userResponses.length
+            question.user_question_responses.reduce((sum, r) => sum + (r.timeSpent || 0), 0) /
+              question.user_question_responses.length
           )
         : 0
 
     const userStats = {
-      totalAttempts: question.userResponses.length,
-      correctAttempts: question.userResponses.filter((r) => r.isCorrect).length,
+      totalAttempts: question.user_question_responses.length,
+      correctAttempts: question.user_question_responses.filter((r) => r.isCorrect).length,
       averageTime,
       bestTime:
-        question.userResponses.length > 0
+        question.user_question_responses.length > 0
           ? Math.min(
-              ...question.userResponses
+              ...question.user_question_responses
                 .map((r) => r.timeSpent || Infinity)
                 .filter((t) => t !== Infinity)
             )
           : 0,
-      lastAttempt: question.userResponses[0]?.answeredAt,
+      lastAttempt: question.user_question_responses[0]?.answeredAt,
     }
 
     // Prepare response data
@@ -239,11 +239,11 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       userProgress: userStats,
 
       // Recent test usage
-      recentUsage: question.testQuestions.map((tq) => ({
-        testId: tq.testAttempt.id,
-        testTitle: tq.testAttempt.title,
-        score: tq.testAttempt.score,
-        percentage: tq.testAttempt.percentage,
+      recentUsage: question.test_questions.map((tq) => ({
+        testId: tq.test_attempts.id,
+        testTitle: tq.test_attempts.title,
+        score: tq.test_attempts.score,
+        percentage: tq.test_attempts.percentage,
       })),
     }
 
@@ -480,9 +480,9 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
         totalAttempts: true,
         _count: {
           select: {
-            testQuestions: true,
-            userResponses: true,
-            questionBank: true,
+            test_questions: true,
+            user_question_responses: true,
+            question_bank_questions: true,
           },
         },
       },
@@ -501,9 +501,9 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
 
     // Check if question is in use
     const isInUse =
-      existingQuestion._count.testQuestions > 0 ||
-      existingQuestion._count.userResponses > 0 ||
-      existingQuestion._count.questionBank > 0
+      existingQuestion._count.test_questions > 0 ||
+      existingQuestion._count.user_question_responses > 0 ||
+      existingQuestion._count.question_bank_questions > 0
 
     if (isInUse && user.role !== 'ADMIN') {
       return NextResponse.json(
@@ -511,9 +511,9 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
           error: 'Cannot delete question that is in use. Contact admin for assistance.',
           code: 'QUESTION_IN_USE',
           details: {
-            testUsages: existingQuestion._count.testQuestions,
-            userResponses: existingQuestion._count.userResponses,
-            questionBanks: existingQuestion._count.questionBank,
+            testUsages: existingQuestion._count.test_questions,
+            userResponses: existingQuestion._count.user_question_responses,
+            questionBanks: existingQuestion._count.question_bank_questions,
           },
         },
         { status: 409 }

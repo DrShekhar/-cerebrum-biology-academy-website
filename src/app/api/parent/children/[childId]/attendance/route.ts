@@ -45,8 +45,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         childId: childId,
       },
       include: {
-        child: {
-          select: { id: true, name: true, email: true, currentClass: true },
+        users_parent_child_relationships_childIdTousers: {
+          select: { id: true, name: true, email: true },
         },
       },
     })
@@ -71,7 +71,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         },
       },
       include: {
-        session: {
+        class_sessions: {
           select: {
             id: true,
             title: true,
@@ -79,7 +79,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
             startTime: true,
             endTime: true,
             status: true,
-            course: { select: { id: true, name: true } },
+            courses: { select: { id: true, name: true } },
           },
         },
       },
@@ -95,12 +95,12 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       status: record.status,
       statusLabel: getStatusLabel(record.status),
       session: {
-        id: record.session.id,
-        title: record.session.title,
-        scheduledDate: record.session.scheduledDate.toISOString(),
-        startTime: record.session.startTime,
-        endTime: record.session.endTime,
-        course: record.session.course,
+        id: record.class_sessions.id,
+        title: record.class_sessions.title,
+        scheduledDate: record.class_sessions.scheduledDate.toISOString(),
+        startTime: record.class_sessions.startTime,
+        endTime: record.class_sessions.endTime,
+        course: record.class_sessions.courses,
       },
       checkInTime: record.checkInTime?.toISOString(),
       checkOutTime: record.checkOutTime?.toISOString(),
@@ -135,7 +135,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     return NextResponse.json({
       success: true,
       data: {
-        child: parentChildRelation.child,
+        child: parentChildRelation.users_parent_child_relationships_childIdTousers,
         attendance,
         stats,
         weeklyBreakdown,

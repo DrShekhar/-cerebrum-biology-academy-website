@@ -339,8 +339,11 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     // Calculate basic performance metrics
     const totalQuestions = testSession.user_question_responses.length
     const correctAnswers = testSession.user_question_responses.filter((r) => r.isCorrect).length
-    const totalMarks = testSession.user_question_responses.reduce((sum, r) => sum + r.marksAwarded, 0)
-    const maxPossibleMarks = testSession.testTemplate?.totalMarks || 0
+    const totalMarks = testSession.user_question_responses.reduce(
+      (sum, r) => sum + r.marksAwarded,
+      0
+    )
+    const maxPossibleMarks = testSession.test_templates?.totalMarks || 0
     const accuracy = totalQuestions > 0 ? (correctAnswers / totalQuestions) * 100 : 0
     const percentage = maxPossibleMarks > 0 ? (totalMarks / maxPossibleMarks) * 100 : 0
 
@@ -358,20 +361,20 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         rank: testSession.rank,
       },
       testDetails: {
-        title: testSession.testTemplate?.title,
-        description: testSession.testTemplate?.description,
-        type: testSession.testTemplate?.type,
-        category: testSession.testTemplate?.category,
-        difficulty: testSession.testTemplate?.difficulty,
-        topics: testSession.testTemplate?.topics,
-        curriculum: testSession.testTemplate?.curriculum,
-        grade: testSession.testTemplate?.grade,
-        subject: testSession.testTemplate?.subject,
-        timeLimit: testSession.testTemplate?.timeLimit,
-        totalQuestions: testSession.testTemplate?.totalQuestions,
-        totalMarks: testSession.testTemplate?.totalMarks,
-        passingMarks: testSession.testTemplate?.passingMarks,
-        negativeMarking: testSession.testTemplate?.negativeMarking,
+        title: testSession.test_templates?.title,
+        description: testSession.test_templates?.description,
+        type: testSession.test_templates?.type,
+        category: testSession.test_templates?.category,
+        difficulty: testSession.test_templates?.difficulty,
+        topics: testSession.test_templates?.topics,
+        curriculum: testSession.test_templates?.curriculum,
+        grade: testSession.test_templates?.grade,
+        subject: testSession.test_templates?.subject,
+        timeLimit: testSession.test_templates?.timeLimit,
+        totalQuestions: testSession.test_templates?.totalQuestions,
+        totalMarks: testSession.test_templates?.totalMarks,
+        passingMarks: testSession.test_templates?.passingMarks,
+        negativeMarking: testSession.test_templates?.negativeMarking,
       },
       performance: {
         totalQuestions,
@@ -385,7 +388,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         timeSpent: testSession.timeSpent || 0,
         averageTimePerQuestion:
           totalQuestions > 0 ? Math.round((testSession.timeSpent || 0) / totalQuestions) : 0,
-        isPassed: testSession.testTemplate?.passingMarks
+        isPassed: testSession.test_templates?.passingMarks
           ? totalMarks >= testSession.test_templates.passingMarks
           : percentage >= 40,
       },
@@ -393,7 +396,9 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 
     // Add detailed question analysis if requested
     if (includeQuestions) {
-      resultData.questionAnalysis = await generateQuestionAnalysis(testSession.user_question_responses)
+      resultData.questionAnalysis = await generateQuestionAnalysis(
+        testSession.user_question_responses
+      )
     }
 
     // Add comprehensive analytics if requested and available
@@ -419,7 +424,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     }
 
     // Add comparison data if requested
-    if (includeComparison && testSession.testTemplate) {
+    if (includeComparison && testSession.test_templates) {
       const comparisonData = await prisma.test_sessions.aggregate({
         where: {
           testTemplateId: testSession.test_templates.id,
@@ -454,8 +459,10 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       newAchievements: [], // Would be populated based on performance milestones
       progress: {
         testsCompleted: 1, // This would come from user's total test count
-        topicsStrength: testSession.test_analytics?.strengthTopics?.length || 0,
-        improvementAreas: testSession.test_analytics?.weaknessTopics?.length || 0,
+        topicsStrength:
+          (testSession.test_analytics?.strengthTopics as unknown[] | undefined)?.length || 0,
+        improvementAreas:
+          (testSession.test_analytics?.weaknessTopics as unknown[] | undefined)?.length || 0,
       },
     }
 

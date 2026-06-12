@@ -11,7 +11,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     const queueItem = await prisma.followup_queue.findUnique({
       where: { id: params.id },
       include: {
-        lead: {
+        leads: {
           select: {
             id: true,
             studentName: true,
@@ -21,7 +21,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
             assignedToId: true,
           },
         },
-        rule: {
+        followup_rules: {
           select: {
             id: true,
             name: true,
@@ -87,14 +87,14 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     const queueItem = await prisma.followup_queue.findUnique({
       where: { id: params.id },
       include: {
-        lead: {
+        leads: {
           include: {
             users: true,
           },
         },
-        rule: {
+        followup_rules: {
           include: {
-            template: true,
+            followup_templates: true,
           },
         },
       },
@@ -110,7 +110,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
       )
     }
 
-    if (queueItem.lead.assignedToId !== session.userId) {
+    if (queueItem.leads.assignedToId !== session.userId) {
       return NextResponse.json(
         {
           success: false,
@@ -147,10 +147,11 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
 
           await prisma.followup_history.create({
             data: {
+              id: `fh_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
               leadId: queueItem.leadId,
               ruleId: queueItem.ruleId,
-              action: queueItem.rule.actionType,
-              channel: queueItem.rule.actionType,
+              action: queueItem.followup_rules.actionType,
+              channel: queueItem.followup_rules.actionType,
               content: result.message,
               status: 'SENT',
               isAutomated: false,
@@ -169,7 +170,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
               userId: session.userId,
               leadId: queueItem.leadId,
               action: 'FOLLOWUP_EXECUTED',
-              description: `Manually executed follow-up: ${queueItem.rule.name} for lead ${queueItem.lead.studentName}`,
+              description: `Manually executed follow-up: ${queueItem.followup_rules.name} for lead ${queueItem.leads.studentName}`,
             },
           })
 
@@ -208,7 +209,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
             userId: session.userId,
             leadId: queueItem.leadId,
             action: 'FOLLOWUP_CANCELLED',
-            description: `Cancelled follow-up: ${queueItem.rule.name} for lead ${queueItem.lead.studentName}. Reason: ${reason}`,
+            description: `Cancelled follow-up: ${queueItem.followup_rules.name} for lead ${queueItem.leads.studentName}. Reason: ${reason}`,
           },
         })
 
@@ -225,9 +226,10 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
 
         await prisma.activities.create({
           data: {
+            id: `act_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
             userId: session.userId,
             action: 'FOLLOWUP_SKIPPED',
-            description: `Skipped follow-up: ${queueItem.rule.name} for lead ${queueItem.lead.studentName}. Reason: ${skipReason}`,
+            description: `Skipped follow-up: ${queueItem.followup_rules.name} for lead ${queueItem.leads.studentName}. Reason: ${skipReason}`,
           },
         })
 

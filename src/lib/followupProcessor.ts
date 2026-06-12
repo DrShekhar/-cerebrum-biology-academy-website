@@ -41,14 +41,14 @@ export async function processQueue(): Promise<void> {
         status: 'PENDING',
       },
       include: {
-        lead: {
+        leads: {
           include: {
             users: true,
           },
         },
-        rule: {
+        followup_rules: {
           include: {
-            template: true,
+            followup_templates: true,
           },
         },
       },
@@ -94,14 +94,14 @@ async function processQueueItem(queueItemId: string): Promise<void> {
     const queueItem = await prisma.followup_queue.findUnique({
       where: { id: queueItemId },
       include: {
-        lead: {
+        leads: {
           include: {
             users: true,
           },
         },
-        rule: {
+        followup_rules: {
           include: {
-            template: true,
+            followup_templates: true,
           },
         },
       },
@@ -126,8 +126,8 @@ async function processQueueItem(queueItemId: string): Promise<void> {
     }
 
     // Validate lead data
-    if (queueItem.lead) {
-      const leadValidation = validateLeadData(queueItem.lead)
+    if (queueItem.leads) {
+      const leadValidation = validateLeadData(queueItem.leads)
       if (!leadValidation.valid) {
         logWarning('processQueueItem', `Lead data validation warnings for ${queueItem.leadId}`, {
           errors: leadValidation.errors,
@@ -158,17 +158,18 @@ async function processQueueItem(queueItemId: string): Promise<void> {
       // Create history record
       await prisma.followup_history.create({
         data: {
+          id: `fh_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           leadId: queueItem.leadId,
           ruleId: queueItem.ruleId,
-          action: queueItem.rule.actionType,
-          channel: queueItem.rule.actionType,
+          action: queueItem.followup_rules.actionType,
+          channel: queueItem.followup_rules.actionType,
           content: result.message,
           status: 'SENT',
           isAutomated: true,
           metadata: {
             queueItemId: queueItem.id,
             deliveryId: result.deliveryId,
-            ruleTriggered: queueItem.rule.name,
+            ruleTriggered: queueItem.followup_rules.name,
           },
         },
       })
@@ -194,10 +195,11 @@ async function processQueueItem(queueItemId: string): Promise<void> {
 
         await prisma.followup_history.create({
           data: {
+            id: `fh_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
             leadId: queueItem.leadId,
             ruleId: queueItem.ruleId,
-            action: queueItem.rule.actionType,
-            channel: queueItem.rule.actionType,
+            action: queueItem.followup_rules.actionType,
+            channel: queueItem.followup_rules.actionType,
             content: result.message,
             status: 'FAILED',
             isAutomated: true,
@@ -268,7 +270,13 @@ async function processQueueItem(queueItemId: string): Promise<void> {
  */
 export async function executeFollowup(queueItem: any): Promise<ExecutionResult> {
   try {
-    const { lead, rule } = queueItem
+    const lead = queueItem.leads ?? queueItem.lead
+    const rule = queueItem.followup_rules ?? queueItem.rule
+    // Schema relation is `followup_templates`; keep downstream `rule.template`
+    // reads working after the relation rename.
+    if (rule && rule.template == null && rule.followup_templates != null) {
+      rule.template = rule.followup_templates
+    }
 
     if (!lead || !rule) {
       logError('executeFollowup', new FollowupValidationError('Lead or rule not found'), {
@@ -490,14 +498,16 @@ async function createCallTask(lead: any, rule: any, content: string): Promise<Ex
   try {
     await prisma.tasks.create({
       data: {
+        id: `task_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         title: `Follow-up Call: ${lead.studentName}`,
         description: content || `Call ${lead.studentName} regarding ${rule.name}`,
-        type: 'CALL',
+        type: 'FOLLOW_UP_CALL',
         priority: rule.priority,
         status: 'PENDING',
         dueDate: new Date(Date.now() + 24 * 60 * 60 * 1000),
-        userId: lead.assignedToId,
+        assignedToId: lead.assignedToId,
         leadId: lead.id,
+        updatedAt: new Date(),
       },
     })
 
@@ -589,16 +599,10 @@ async function createNotification(lead: any, rule: any, content: string): Promis
         id: notificationId,
         title,
         message,
-        type: 'FOLLOW_UP',
-        targetUserIds: lead.assignedToId ? [lead.assignedToId] : null,
-        isActive: true,
-        metadata: {
-          leadId: lead.id,
-          ruleId: rule.id,
-          ruleName: rule.name,
-          leadName: lead.studentName,
-          leadPhone: lead.phone,
-        },
+        type: 'CUSTOM',
+        targetUserIds: lead.assignedToId ? [lead.assignedToId] : undefined,
+        channels: [],
+        updatedAt: new Date(),
       },
     })
 
@@ -625,14 +629,16 @@ async function createTask(lead: any, rule: any, content: string): Promise<Execut
   try {
     await prisma.tasks.create({
       data: {
+        id: `task_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         title: `Follow-up: ${lead.studentName}`,
         description: content || `Follow up with ${lead.studentName} regarding ${rule.name}`,
-        type: 'FOLLOW_UP',
+        type: 'FOLLOW_UP_CALL',
         priority: rule.priority,
         status: 'PENDING',
         dueDate: new Date(Date.now() + 24 * 60 * 60 * 1000),
-        userId: lead.assignedToId,
+        assignedToId: lead.assignedToId,
         leadId: lead.id,
+        updatedAt: new Date(),
       },
     })
 

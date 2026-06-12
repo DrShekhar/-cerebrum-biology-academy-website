@@ -46,7 +46,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       prisma.test_assignment_submissions.findMany({
         where,
         include: {
-          student: {
+          users: {
             select: {
               id: true,
               name: true,
@@ -80,7 +80,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       success: true,
       submissions: submissions.map((s) => ({
         id: s.id,
-        student: s.student,
+        student: s.users,
         status: s.status,
         startedAt: s.startedAt,
         submittedAt: s.submittedAt,

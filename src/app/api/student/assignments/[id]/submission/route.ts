@@ -27,7 +27,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
         },
       },
       include: {
-        assignment: {
+        assignments: {
           select: {
             id: true,
             title: true,
@@ -81,7 +81,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
         },
       },
       include: {
-        assignment: true,
+        assignments: true,
       },
     })
 
@@ -94,10 +94,10 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
     }
 
     const now = new Date()
-    const dueDate = new Date(submission.assignment.dueDate)
+    const dueDate = new Date(submission.assignments.dueDate)
     const isLate = now > dueDate
 
-    if (isLate && !submission.assignment.allowLateSubmission) {
+    if (isLate && !submission.assignments.allowLateSubmission) {
       return NextResponse.json(
         { error: 'Cannot update submission after deadline' },
         { status: 400 }

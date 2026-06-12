@@ -15,14 +15,14 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     const doubt = await prisma.doubt_tickets.findUnique({
       where: { id: doubtId },
       include: {
-        student: {
+        users_doubt_tickets_studentIdTousers: {
           select: {
             id: true,
             name: true,
             email: true,
           },
         },
-        instructor: {
+        users_doubt_tickets_instructorIdTousers: {
           select: {
             id: true,
             name: true,
@@ -30,7 +30,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
             role: true,
           },
         },
-        category: {
+        doubt_categories: {
           select: {
             id: true,
             name: true,
@@ -38,27 +38,27 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
             color: true,
           },
         },
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
           },
         },
-        chapter: {
+        chapters: {
           select: {
             id: true,
             title: true,
           },
         },
-        topic: {
+        topics: {
           select: {
             id: true,
             title: true,
           },
         },
-        messages: {
+        doubt_messages: {
           include: {
-            sender: {
+            users: {
               select: {
                 id: true,
                 name: true,
@@ -120,12 +120,12 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
         description: doubt.description,
         priority: doubt.priority,
         status: doubt.status,
-        student: doubt.student,
-        instructor: doubt.instructor,
-        category: doubt.category,
-        course: doubt.course,
-        chapter: doubt.chapter,
-        topic: doubt.topic,
+        student: doubt.users_doubt_tickets_studentIdTousers,
+        instructor: doubt.users_doubt_tickets_instructorIdTousers,
+        category: doubt.doubt_categories,
+        course: doubt.courses,
+        chapter: doubt.chapters,
+        topic: doubt.topics,
         tags: doubt.tags,
         attachments: doubt.attachments,
         viewCount: doubt.viewCount + 1,
@@ -136,12 +136,12 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
         lastMessageAt: doubt.lastMessageAt,
         createdAt: doubt.createdAt,
         updatedAt: doubt.updatedAt,
-        messages: doubt.messages.map((msg) => ({
+        messages: doubt.doubt_messages.map((msg) => ({
           id: msg.id,
           message: msg.message,
           messageType: msg.messageType,
           attachments: msg.attachments,
-          sender: msg.sender,
+          sender: msg.users,
           isRead: msg.isRead,
           readAt: msg.readAt,
           createdAt: msg.createdAt,

@@ -29,6 +29,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
         studentId: true,
         instructorId: true,
         status: true,
+        createdAt: true,
       },
     })
 
@@ -57,14 +58,16 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
 
     const message = await prisma.doubt_messages.create({
       data: {
+        id: `dm_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         doubtId,
         senderId: userId,
         message: validatedData.message,
         messageType: validatedData.messageType,
         attachments: validatedData.attachments,
+        updatedAt: new Date(),
       },
       include: {
-        sender: {
+        users: {
           select: {
             id: true,
             name: true,
@@ -107,7 +110,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
         message: message.message,
         messageType: message.messageType,
         attachments: message.attachments,
-        sender: message.sender,
+        sender: message.users,
         isRead: message.isRead,
         createdAt: message.createdAt,
       },

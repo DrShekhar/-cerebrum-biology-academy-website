@@ -43,7 +43,7 @@ export async function GET(request: NextRequest) {
       }),
       prisma.doubt_messages.count({
         where: {
-          doubt: {
+          doubt_tickets: {
             studentId: userId,
           },
           senderId: {
@@ -72,7 +72,7 @@ export async function GET(request: NextRequest) {
           priority: true,
           createdAt: true,
           lastMessageAt: true,
-          category: {
+          doubt_categories: {
             select: {
               name: true,
               icon: true,
@@ -145,7 +145,7 @@ export async function GET(request: NextRequest) {
         subject: doubt.subject,
         status: doubt.status,
         priority: doubt.priority,
-        category: doubt.category,
+        category: doubt.doubt_categories,
         createdAt: doubt.createdAt,
         lastMessageAt: doubt.lastMessageAt,
       })),

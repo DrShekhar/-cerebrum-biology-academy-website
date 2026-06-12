@@ -43,8 +43,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         childId: childId,
       },
       include: {
-        child: {
-          select: { id: true, name: true, email: true, currentClass: true },
+        users_parent_child_relationships_childIdTousers: {
+          select: { id: true, name: true, email: true },
         },
       },
     })
@@ -65,7 +65,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         case 'completed':
           return { status: 'COMPLETED' as const }
         case 'pending':
-          return { status: 'NOT_STARTED' as const }
+          return { status: 'IN_PROGRESS' as const }
         case 'in_progress':
           return { status: 'IN_PROGRESS' as const }
         default:
@@ -133,7 +133,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 
     // Get upcoming tests from enrolled courses
     const enrollments = await prisma.enrollments.findMany({
-      where: { studentId: childId },
+      where: { userId: childId },
       select: { courseId: true },
     })
 
@@ -158,7 +158,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     return NextResponse.json({
       success: true,
       data: {
-        child: parentChildRelation.child,
+        child: parentChildRelation.users_parent_child_relationships_childIdTousers,
         tests,
         stats,
         performanceTrend,

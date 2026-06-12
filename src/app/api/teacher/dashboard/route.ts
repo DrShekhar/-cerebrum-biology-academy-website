@@ -35,7 +35,7 @@ export async function GET(request: NextRequest) {
       // Pending submissions (submitted but not graded)
       prisma.assignment_submissions.count({
         where: {
-          assignment: { teacherId },
+          assignments: { teacherId },
           status: 'SUBMITTED',
         },
       }),
@@ -43,8 +43,8 @@ export async function GET(request: NextRequest) {
       // Unanswered doubts for teacher's courses
       prisma.doubt_tickets.count({
         where: {
-          OR: [{ assignedTeacherId: teacherId }, { status: 'PENDING' }],
-          answeredAt: null,
+          OR: [{ instructorId: teacherId }, { status: 'OPEN' }],
+          resolvedAt: null,
         },
       }),
 
@@ -52,8 +52,8 @@ export async function GET(request: NextRequest) {
       prisma.enrollments.count({
         where: {
           courses: {
-            teachers: {
-              some: { id: teacherId },
+            class_sessions: {
+              some: { teacherId },
             },
           },
           status: 'ACTIVE',
@@ -63,12 +63,12 @@ export async function GET(request: NextRequest) {
       // Recent submissions (last 7 days)
       prisma.assignment_submissions.findMany({
         where: {
-          assignment: { teacherId },
+          assignments: { teacherId },
           submittedAt: { gte: weekAgo },
         },
         include: {
-          student: { select: { name: true } },
-          assignment: { select: { title: true } },
+          users: { select: { name: true } },
+          assignments: { select: { title: true } },
         },
         orderBy: { submittedAt: 'desc' },
         take: 5,
@@ -77,36 +77,35 @@ export async function GET(request: NextRequest) {
       // Recent doubts
       prisma.doubt_tickets.findMany({
         where: {
-          OR: [{ assignedTeacherId: teacherId }, { status: 'PENDING' }],
+          OR: [{ instructorId: teacherId }, { status: 'OPEN' }],
         },
         include: {
-          student: { select: { name: true } },
+          users_doubt_tickets_studentIdTousers: { select: { name: true } },
         },
         orderBy: { createdAt: 'desc' },
         take: 5,
       }),
 
       // Today's sessions
-      prisma.sessions.findMany({
+      prisma.class_sessions.findMany({
         where: {
           teacherId,
-          scheduledAt: {
+          scheduledDate: {
             gte: today,
             lt: tomorrow,
           },
         },
         include: {
-          course: { select: { name: true } },
-          batch: { select: { name: true, _count: { select: { students: true } } } },
+          courses: { select: { name: true } },
         },
-        orderBy: { scheduledAt: 'asc' },
+        orderBy: { scheduledDate: 'asc' },
         take: 5,
       }),
 
       // Calculate average score from graded submissions
       prisma.assignment_submissions.aggregate({
         where: {
-          assignment: { teacherId },
+          assignments: { teacherId },
           grade: { not: null },
         },
         _avg: { grade: true },
@@ -121,7 +120,8 @@ export async function GET(request: NextRequest) {
     const recentSubmissions = results[4].status === 'fulfilled' ? results[4].value : []
     const recentDoubts = results[5].status === 'fulfilled' ? results[5].value : []
     const upcomingSessions = results[6].status === 'fulfilled' ? results[6].value : []
-    const gradedSubmissions = results[7].status === 'fulfilled' ? results[7].value : { _avg: { grade: null } }
+    const gradedSubmissions =
+      results[7].status === 'fulfilled' ? results[7].value : { _avg: { grade: null } }
 
     // Log any failed queries for debugging
     results.forEach((result, index) => {
@@ -135,15 +135,15 @@ export async function GET(request: NextRequest) {
       ...recentSubmissions.map((sub) => ({
         id: sub.id,
         type: 'submission' as const,
-        title: `New submission for "${sub.assignment.title}"`,
-        studentName: sub.student.name,
+        title: `New submission for "${sub.assignments.title}"`,
+        studentName: sub.users.name,
         timestamp: sub.submittedAt?.toISOString() || new Date().toISOString(),
       })),
       ...recentDoubts.map((doubt) => ({
         id: doubt.id,
         type: 'doubt' as const,
-        title: doubt.question.substring(0, 50) + (doubt.question.length > 50 ? '...' : ''),
-        studentName: doubt.student?.name || 'Anonymous',
+        title: doubt.description.substring(0, 50) + (doubt.description.length > 50 ? '...' : ''),
+        studentName: doubt.users_doubt_tickets_studentIdTousers?.name || 'Anonymous',
         timestamp: doubt.createdAt.toISOString(),
       })),
     ]
@@ -153,13 +153,13 @@ export async function GET(request: NextRequest) {
     // Format upcoming classes
     const upcomingClasses = upcomingSessions.map((session) => ({
       id: session.id,
-      title: session.title || session.course.name,
-      batch: session.batch?.name || 'All Students',
-      time: new Date(session.scheduledAt).toLocaleTimeString('en-US', {
+      title: session.title || session.courses.name,
+      batch: 'All Students',
+      time: new Date(session.scheduledDate).toLocaleTimeString('en-US', {
         hour: '2-digit',
         minute: '2-digit',
       }),
-      studentsCount: session.batch?._count?.students || 0,
+      studentsCount: 0,
     }))
 
     // Calculate stats

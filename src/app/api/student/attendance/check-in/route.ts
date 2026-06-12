@@ -6,6 +6,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { Prisma } from '@/generated/prisma'
 
 export async function POST(req: NextRequest) {
   try {
@@ -45,7 +46,7 @@ export async function POST(req: NextRequest) {
     const classSession = await prisma.class_sessions.findUnique({
       where: { id: sessionId },
       include: {
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
@@ -59,7 +60,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'Session not found' }, { status: 404 })
     }
 
-    const attendanceSettings = classSession.course?.attendance_settings
+    const attendanceSettings = classSession.courses?.attendance_settings
     if (attendanceSettings && !attendanceSettings.allowSelfCheckIn) {
       return NextResponse.json(
         { success: false, error: 'Self check-in is not enabled for this course' },
@@ -111,7 +112,7 @@ export async function POST(req: NextRequest) {
           selfCheckIn: true,
           checkInMethod: 'manual',
           userAgent: req.headers.get('user-agent') || null,
-        },
+        } as Prisma.InputJsonValue,
       }
 
       let attendance
@@ -120,7 +121,7 @@ export async function POST(req: NextRequest) {
           where: { id: existingAttendance.id },
           data: attendanceData,
           include: {
-            session: {
+            class_sessions: {
               select: {
                 id: true,
                 title: true,
@@ -135,19 +136,21 @@ export async function POST(req: NextRequest) {
           where: {
             userId: studentId,
             courseId: classSession.courseId,
-            status: 'active',
+            status: 'ACTIVE',
           },
         })
 
         attendance = await prisma.student_attendance.create({
           data: {
+            id: `att_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+            updatedAt: new Date(),
             sessionId,
             studentId,
             enrollmentId: enrollment?.id || null,
             ...attendanceData,
           },
           include: {
-            session: {
+            class_sessions: {
               select: {
                 id: true,
                 title: true,
@@ -177,7 +180,7 @@ export async function POST(req: NextRequest) {
           isLate: attendance.isLate,
           lateBy: attendance.lateBy,
           status: attendance.status,
-          session: attendance.session,
+          session: attendance.class_sessions,
         },
       })
     }
@@ -216,10 +219,10 @@ export async function POST(req: NextRequest) {
             ...((existingAttendance.metadata as object) || {}),
             checkOutMethod: 'manual',
             checkOutUserAgent: req.headers.get('user-agent') || null,
-          },
+          } as Prisma.InputJsonValue,
         },
         include: {
-          session: {
+          class_sessions: {
             select: {
               id: true,
               title: true,
@@ -239,7 +242,7 @@ export async function POST(req: NextRequest) {
           checkOutTime: attendance.checkOutTime,
           duration: attendance.duration,
           status: attendance.status,
-          session: attendance.session,
+          session: attendance.class_sessions,
         },
       })
     }
@@ -287,17 +290,17 @@ export async function GET(req: NextRequest) {
         endTime: {
           gte: now,
         },
-        course: {
+        courses: {
           enrollments: {
             some: {
               userId: studentId,
-              status: 'active',
+              status: 'ACTIVE',
             },
           },
         },
       },
       include: {
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
@@ -309,13 +312,13 @@ export async function GET(req: NextRequest) {
             },
           },
         },
-        teacher: {
+        users: {
           select: {
             id: true,
             name: true,
           },
         },
-        attendance: {
+        student_attendance: {
           where: {
             studentId,
           },
@@ -335,8 +338,8 @@ export async function GET(req: NextRequest) {
     })
 
     const sessionsWithCheckInStatus = ongoingSessions.map((s) => {
-      const studentAttendance = s.attendance[0]
-      const allowSelfCheckIn = s.course?.attendance_settings?.allowSelfCheckIn ?? true
+      const studentAttendance = s.student_attendance[0]
+      const allowSelfCheckIn = s.courses?.attendance_settings?.allowSelfCheckIn ?? true
 
       return {
         id: s.id,
@@ -346,8 +349,8 @@ export async function GET(req: NextRequest) {
         startTime: s.startTime,
         endTime: s.endTime,
         status: s.status,
-        course: s.course,
-        teacher: s.teacher,
+        course: s.courses,
+        teacher: s.users,
         allowSelfCheckIn,
         attendance: studentAttendance
           ? {

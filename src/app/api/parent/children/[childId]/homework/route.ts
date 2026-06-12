@@ -35,17 +35,24 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const offset = parseInt(searchParams.get('offset') || '0')
 
     // Verify parent has access to this child
-    const parentChildRelation = await prisma.parent_child_relationships.findFirst({
+    const parentChildRelationRow = await prisma.parent_child_relationships.findFirst({
       where: {
         parentId: session.user.id,
         childId: childId,
       },
       include: {
-        child: {
-          select: { id: true, name: true, email: true, currentClass: true },
+        users_parent_child_relationships_childIdTousers: {
+          select: { id: true, name: true, email: true },
         },
       },
     })
+
+    const parentChildRelation = parentChildRelationRow
+      ? {
+          ...parentChildRelationRow,
+          child: parentChildRelationRow.users_parent_child_relationships_childIdTousers,
+        }
+      : null
 
     if (!parentChildRelation) {
       return NextResponse.json(
@@ -56,7 +63,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 
     // Get child's enrolled course IDs
     const enrollments = await prisma.enrollments.findMany({
-      where: { studentId: childId },
+      where: { userId: childId },
       select: { courseId: true },
     })
 
@@ -66,7 +73,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const statusFilter = (() => {
       switch (status) {
         case 'pending':
-          return { status: { in: ['NOT_SUBMITTED', 'PENDING'] as const } }
+          return { status: 'NOT_SUBMITTED' as const }
         case 'submitted':
           return { status: 'SUBMITTED' as const }
         case 'graded':
@@ -83,10 +90,10 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         status: 'PUBLISHED',
       },
       include: {
-        course: { select: { id: true, name: true } },
-        chapter: { select: { id: true, name: true } },
-        teacher: { select: { id: true, name: true } },
-        submissions: {
+        courses: { select: { id: true, name: true } },
+        chapters: { select: { id: true, title: true } },
+        users: { select: { id: true, name: true } },
+        assignment_submissions: {
           where: {
             studentId: childId,
             ...statusFilter,
@@ -100,7 +107,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 
     // Transform data for parent view
     const homework = assignments.map((assignment) => {
-      const submission = assignment.submissions[0]
+      const submission = assignment.assignment_submissions[0]
       const now = new Date()
       const dueDate = new Date(assignment.dueDate)
       const isOverdue = dueDate < now && (!submission || submission.status === 'NOT_SUBMITTED')
@@ -109,9 +116,9 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         id: assignment.id,
         title: assignment.title,
         description: assignment.description,
-        course: assignment.course,
-        chapter: assignment.chapter,
-        teacher: assignment.teacher,
+        course: assignment.courses,
+        chapter: assignment.chapters,
+        teacher: assignment.users,
         dueDate: assignment.dueDate.toISOString(),
         maxMarks: assignment.maxMarks,
         allowLateSubmission: assignment.allowLateSubmission,
@@ -147,14 +154,13 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         status: true,
         grade: true,
         isLate: true,
-        assignment: { select: { maxMarks: true } },
+        assignments: { select: { maxMarks: true } },
       },
     })
 
     const stats = {
       total: allSubmissions.length,
-      pending: allSubmissions.filter((s) => s.status === 'NOT_SUBMITTED' || s.status === 'PENDING')
-        .length,
+      pending: allSubmissions.filter((s) => s.status === 'NOT_SUBMITTED').length,
       submitted: allSubmissions.filter((s) => s.status === 'SUBMITTED').length,
       graded: allSubmissions.filter((s) => s.status === 'GRADED').length,
       late: allSubmissions.filter((s) => s.isLate).length,
@@ -201,7 +207,7 @@ function getStatusLabel(status: string, isOverdue: boolean): string {
 
 interface SubmissionWithGrade {
   grade: number | null
-  assignment: { maxMarks: number }
+  assignments: { maxMarks: number }
 }
 
 function calculateAverageScore(submissions: SubmissionWithGrade[]): number {
@@ -209,7 +215,7 @@ function calculateAverageScore(submissions: SubmissionWithGrade[]): number {
   if (gradedSubmissions.length === 0) return 0
 
   const totalPercentage = gradedSubmissions.reduce((acc, s) => {
-    const percentage = ((s.grade || 0) / s.assignment.maxMarks) * 100
+    const percentage = ((s.grade || 0) / s.assignments.maxMarks) * 100
     return acc + percentage
   }, 0)
 

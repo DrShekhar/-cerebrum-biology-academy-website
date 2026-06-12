@@ -43,14 +43,14 @@ export async function GET(request: NextRequest) {
       prisma.test_assignments.findMany({
         where,
         include: {
-          testTemplate: {
+          test_templates: {
             select: {
               id: true,
               title: true,
               type: true,
             },
           },
-          submissions: {
+          test_assignment_submissions: {
             select: {
               id: true,
               status: true,
@@ -59,7 +59,7 @@ export async function GET(request: NextRequest) {
               percentage: true,
             },
           },
-          questions: {
+          test_assignment_questions: {
             select: {
               id: true,
             },
@@ -95,16 +95,22 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       success: true,
       assignments: assignments.map((a) => {
-        const totalSubmissions = a.submissions.length
-        const submittedCount = a.submissions.filter(
+        const totalSubmissions = a.test_assignment_submissions.length
+        const submittedCount = a.test_assignment_submissions.filter(
           (s) => s.status === 'SUBMITTED' || s.status === 'GRADED'
         ).length
-        const gradedCount = a.submissions.filter((s) => s.status === 'GRADED').length
-        const inProgressCount = a.submissions.filter((s) => s.status === 'IN_PROGRESS').length
+        const gradedCount = a.test_assignment_submissions.filter(
+          (s) => s.status === 'GRADED'
+        ).length
+        const inProgressCount = a.test_assignment_submissions.filter(
+          (s) => s.status === 'IN_PROGRESS'
+        ).length
         const avgScore =
-          a.submissions.length > 0
-            ? a.submissions.reduce((acc, s) => acc + (Number(s.percentage) || 0), 0) /
-              a.submissions.length
+          a.test_assignment_submissions.length > 0
+            ? a.test_assignment_submissions.reduce(
+                (acc, s) => acc + (Number(s.percentage) || 0),
+                0
+              ) / a.test_assignment_submissions.length
             : 0
 
         return {
@@ -132,8 +138,8 @@ export async function GET(request: NextRequest) {
           useAI: a.useAI,
           createdAt: a.createdAt,
           updatedAt: a.updatedAt,
-          testTemplate: a.testTemplate,
-          questionsCount: a.questions.length,
+          testTemplate: a.test_templates,
+          questionsCount: a.test_assignment_questions.length,
           submissionStats: {
             total: a.totalAssigned,
             submitted: submittedCount,
@@ -226,6 +232,8 @@ export async function POST(request: NextRequest) {
 
     const assignment = await prisma.test_assignments.create({
       data: {
+        id: `ta_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         teacherId,
         testTemplateId: testTemplateId || null,
         title,
@@ -256,7 +264,7 @@ export async function POST(request: NextRequest) {
         totalAssigned,
       },
       include: {
-        testTemplate: {
+        test_templates: {
           select: {
             id: true,
             title: true,
@@ -268,6 +276,7 @@ export async function POST(request: NextRequest) {
     if (questions && questions.length > 0) {
       await prisma.test_assignment_questions.createMany({
         data: questions.map((q: any, index: number) => ({
+          id: `taq_${Date.now()}_${index}_${Math.random().toString(36).slice(2, 9)}`,
           testAssignmentId: assignment.id,
           questionId: q.questionId,
           orderIndex: index,
@@ -298,9 +307,11 @@ export async function POST(request: NextRequest) {
       if (studentIds.length > 0) {
         await prisma.test_assignment_submissions.createMany({
           data: studentIds.map((studentId: string) => ({
+            id: `tas_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+            updatedAt: new Date(),
             testAssignmentId: assignment.id,
             studentId,
-            status: 'NOT_STARTED',
+            status: 'NOT_STARTED' as const,
           })),
           skipDuplicates: true,
         })

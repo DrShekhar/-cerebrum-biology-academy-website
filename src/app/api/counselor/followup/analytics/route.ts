@@ -25,10 +25,10 @@ export async function GET(request: NextRequest) {
     startDate.setDate(startDate.getDate() - periodDays)
 
     const where: any = {
-      lead: {
+      leads: {
         assignedToId: session.userId,
       },
-      createdAt: {
+      sentAt: {
         gte: startDate,
       },
     }
@@ -41,7 +41,7 @@ export async function GET(request: NextRequest) {
       where.channel = actionType
     }
 
-    const [totalHistory, sentCount, failedCount, avgDeliveryTime] = await Promise.all([
+    const [totalHistory, sentCount, failedCount] = await Promise.all([
       prisma.followup_history.count({ where }),
       prisma.followup_history.count({
         where: { ...where, status: 'SENT' },
@@ -49,28 +49,19 @@ export async function GET(request: NextRequest) {
       prisma.followup_history.count({
         where: { ...where, status: 'FAILED' },
       }),
-      prisma.followup_history.aggregate({
-        where: {
-          ...where,
-          status: 'SENT',
-          metadata: {
-            path: ['deliveryTime'],
-            not: prisma.AnyNull,
-          },
-        },
-        _avg: {
-          id: true,
-        },
-      }),
     ])
+    // NOTE: followup_history has no numeric delivery-time column; the original
+    // `_avg: { id }` aggregate referenced metadata.deliveryTime (a Json path)
+    // which Prisma cannot average. Nulled to 0 until a real column exists.
+    const avgDeliveryTime = { _avg: { id: 0 } }
 
     const rulePerformance = await prisma.followup_history.groupBy({
       by: ['ruleId'],
       where: {
-        lead: {
+        leads: {
           assignedToId: session.userId,
         },
-        createdAt: {
+        sentAt: {
           gte: startDate,
         },
       },
@@ -88,8 +79,8 @@ export async function GET(request: NextRequest) {
           where: {
             ruleId: rp.ruleId,
             status: 'SENT',
-            lead: { assignedToId: session.userId },
-            createdAt: { gte: startDate },
+            leads: { assignedToId: session.userId },
+            sentAt: { gte: startDate },
           },
         })
 
@@ -97,8 +88,8 @@ export async function GET(request: NextRequest) {
           where: {
             ruleId: rp.ruleId,
             status: 'FAILED',
-            lead: { assignedToId: session.userId },
-            createdAt: { gte: startDate },
+            leads: { assignedToId: session.userId },
+            sentAt: { gte: startDate },
           },
         })
 
@@ -117,10 +108,10 @@ export async function GET(request: NextRequest) {
     const channelPerformance = await prisma.followup_history.groupBy({
       by: ['channel'],
       where: {
-        lead: {
+        leads: {
           assignedToId: session.userId,
         },
-        createdAt: {
+        sentAt: {
           gte: startDate,
         },
       },
@@ -133,8 +124,8 @@ export async function GET(request: NextRequest) {
           where: {
             channel: cp.channel,
             status: 'SENT',
-            lead: { assignedToId: session.userId },
-            createdAt: { gte: startDate },
+            leads: { assignedToId: session.userId },
+            sentAt: { gte: startDate },
           },
         })
 
@@ -142,8 +133,8 @@ export async function GET(request: NextRequest) {
           where: {
             channel: cp.channel,
             status: 'FAILED',
-            lead: { assignedToId: session.userId },
-            createdAt: { gte: startDate },
+            leads: { assignedToId: session.userId },
+            sentAt: { gte: startDate },
           },
         })
 
@@ -178,7 +169,7 @@ export async function GET(request: NextRequest) {
     const queueStats = await prisma.followup_queue.groupBy({
       by: ['status'],
       where: {
-        lead: {
+        leads: {
           assignedToId: session.userId,
         },
       },
@@ -188,10 +179,10 @@ export async function GET(request: NextRequest) {
     const leadEngagement = await prisma.followup_history.groupBy({
       by: ['leadId'],
       where: {
-        lead: {
+        leads: {
           assignedToId: session.userId,
         },
-        createdAt: {
+        sentAt: {
           gte: startDate,
         },
       },

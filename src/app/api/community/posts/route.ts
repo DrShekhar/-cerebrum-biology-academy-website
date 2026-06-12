@@ -24,7 +24,7 @@ export async function GET(request: NextRequest) {
     const posts = await prisma.forum_posts.findMany({
       where,
       include: {
-        freeUser: {
+        free_users: {
           select: {
             id: true,
             name: true,
@@ -33,7 +33,7 @@ export async function GET(request: NextRequest) {
             studyStreak: true,
           },
         },
-        replies: {
+        forum_replies: {
           select: {
             id: true,
           },
@@ -46,15 +46,18 @@ export async function GET(request: NextRequest) {
 
     const formattedPosts = posts.map((post) => {
       const timeAgo = getTimeAgo(post.createdAt)
-      const badge = getBadgeForUser(post.freeUser.totalPoints || 0, post.freeUser.studyStreak || 0)
+      const badge = getBadgeForUser(
+        post.free_users.totalPoints || 0,
+        post.free_users.studyStreak || 0
+      )
 
       return {
         id: post.id,
         author: {
-          name: post.freeUser.name || 'Anonymous',
+          name: post.free_users.name || 'Anonymous',
           avatar: '/avatars/default.jpg',
           badge,
-          points: post.freeUser.totalPoints || 0,
+          points: post.free_users.totalPoints || 0,
         },
         title: post.title,
         content: post.content,
@@ -62,7 +65,7 @@ export async function GET(request: NextRequest) {
         subject: 'Biology',
         chapter: post.topic,
         likes: post.upvotes,
-        replies: post.replies.length,
+        replies: post.forum_replies.length,
         timeAgo,
         isLiked: false,
         isBookmarked: false,
@@ -101,6 +104,8 @@ export async function POST(request: NextRequest) {
 
     const newPost = await prisma.forum_posts.create({
       data: {
+        id: `fpost_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         freeUserId: userId,
         title: inferredTitle,
         content,
@@ -108,7 +113,7 @@ export async function POST(request: NextRequest) {
         topic: inferredTopic,
       },
       include: {
-        freeUser: {
+        free_users: {
           select: {
             id: true,
             name: true,
@@ -121,17 +126,17 @@ export async function POST(request: NextRequest) {
 
     const timeAgo = getTimeAgo(newPost.createdAt)
     const badge = getBadgeForUser(
-      newPost.freeUser.totalPoints || 0,
-      newPost.freeUser.studyStreak || 0
+      newPost.free_users.totalPoints || 0,
+      newPost.free_users.studyStreak || 0
     )
 
     const formattedPost = {
       id: newPost.id,
       author: {
-        name: newPost.freeUser.name || 'Anonymous',
+        name: newPost.free_users.name || 'Anonymous',
         avatar: '/avatars/default.jpg',
         badge,
-        points: newPost.freeUser.totalPoints || 0,
+        points: newPost.free_users.totalPoints || 0,
       },
       title: newPost.title,
       content: newPost.content,

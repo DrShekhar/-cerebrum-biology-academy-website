@@ -60,7 +60,7 @@ export async function GET(request: NextRequest) {
       prisma.doubt_tickets.findMany({
         where,
         include: {
-          category: {
+          doubt_categories: {
             select: {
               id: true,
               name: true,
@@ -68,32 +68,32 @@ export async function GET(request: NextRequest) {
               color: true,
             },
           },
-          course: {
+          courses: {
             select: {
               id: true,
               name: true,
             },
           },
-          chapter: {
+          chapters: {
             select: {
               id: true,
               title: true,
             },
           },
-          topic: {
+          topics: {
             select: {
               id: true,
               title: true,
             },
           },
-          instructor: {
+          users_doubt_tickets_instructorIdTousers: {
             select: {
               id: true,
               name: true,
               email: true,
             },
           },
-          messages: {
+          doubt_messages: {
             select: {
               id: true,
               isRead: true,
@@ -116,7 +116,7 @@ export async function GET(request: NextRequest) {
 
     const unreadCount = await prisma.doubt_messages.count({
       where: {
-        doubt: {
+        doubt_tickets: {
           studentId: userId,
         },
         senderId: {
@@ -134,19 +134,19 @@ export async function GET(request: NextRequest) {
         description: doubt.description,
         priority: doubt.priority,
         status: doubt.status,
-        category: doubt.category,
-        course: doubt.course,
-        chapter: doubt.chapter,
-        topic: doubt.topic,
-        instructor: doubt.instructor,
+        category: doubt.doubt_categories,
+        course: doubt.courses,
+        chapter: doubt.chapters,
+        topic: doubt.topics,
+        instructor: doubt.users_doubt_tickets_instructorIdTousers,
         tags: doubt.tags,
         viewCount: doubt.viewCount,
         responseTime: doubt.responseTime,
         lastMessageAt: doubt.lastMessageAt,
         createdAt: doubt.createdAt,
         updatedAt: doubt.updatedAt,
-        hasUnreadMessages: doubt.messages.some((m) => !m.isRead),
-        messageCount: doubt.messages.length,
+        hasUnreadMessages: doubt.doubt_messages.some((m) => !m.isRead),
+        messageCount: doubt.doubt_messages.length,
       })),
       pagination: {
         page,
@@ -203,6 +203,8 @@ export async function POST(request: NextRequest) {
 
     const doubt = await prisma.doubt_tickets.create({
       data: {
+        id: `doubt_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         studentId: userId,
         subject: validatedData.subject,
         description: validatedData.description,
@@ -216,7 +218,7 @@ export async function POST(request: NextRequest) {
         attachments: validatedData.attachments,
       },
       include: {
-        category: {
+        doubt_categories: {
           select: {
             id: true,
             name: true,
@@ -224,19 +226,19 @@ export async function POST(request: NextRequest) {
             color: true,
           },
         },
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
           },
         },
-        chapter: {
+        chapters: {
           select: {
             id: true,
             title: true,
           },
         },
-        topic: {
+        topics: {
           select: {
             id: true,
             title: true,
@@ -247,6 +249,8 @@ export async function POST(request: NextRequest) {
 
     const initialMessage = await prisma.doubt_messages.create({
       data: {
+        id: `dmsg_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         doubtId: doubt.id,
         senderId: userId,
         message: validatedData.description,
@@ -263,10 +267,10 @@ export async function POST(request: NextRequest) {
         description: doubt.description,
         priority: doubt.priority,
         status: doubt.status,
-        category: doubt.category,
-        course: doubt.course,
-        chapter: doubt.chapter,
-        topic: doubt.topic,
+        category: doubt.doubt_categories,
+        course: doubt.courses,
+        chapter: doubt.chapters,
+        topic: doubt.topics,
         tags: doubt.tags,
         attachments: doubt.attachments,
         createdAt: doubt.createdAt,

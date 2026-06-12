@@ -40,16 +40,16 @@ export async function GET(req: NextRequest, { params }: { params: { sessionId: s
     const classSession = await prisma.class_sessions.findUnique({
       where: { id: params.sessionId },
       include: {
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
             class: true,
           },
         },
-        attendance: {
+        student_attendance: {
           include: {
-            student: {
+            users_student_attendance_studentIdTousers: {
               select: {
                 id: true,
                 name: true,
@@ -79,7 +79,7 @@ export async function GET(req: NextRequest, { params }: { params: { sessionId: s
         status: 'ACTIVE',
       },
       include: {
-        student: {
+        users: {
           select: {
             id: true,
             name: true,
@@ -91,12 +91,12 @@ export async function GET(req: NextRequest, { params }: { params: { sessionId: s
     })
 
     const studentsWithAttendance = enrolledStudents.map((enrollment) => {
-      const attendanceRecord = classSession.attendance.find(
-        (a) => a.studentId === enrollment.studentId
+      const attendanceRecord = classSession.student_attendance.find(
+        (a) => a.studentId === enrollment.userId
       )
 
       return {
-        ...enrollment.student,
+        ...enrollment.users,
         enrollmentId: enrollment.id,
         attendance: attendanceRecord || null,
       }
@@ -109,12 +109,12 @@ export async function GET(req: NextRequest, { params }: { params: { sessionId: s
         students: studentsWithAttendance,
         statistics: {
           totalStudents: studentsWithAttendance.length,
-          marked: classSession.attendance.length,
-          unmarked: studentsWithAttendance.length - classSession.attendance.length,
-          present: classSession.attendance.filter((a) => a.status === 'PRESENT').length,
-          absent: classSession.attendance.filter((a) => a.status === 'ABSENT').length,
-          late: classSession.attendance.filter((a) => a.status === 'LATE').length,
-          excused: classSession.attendance.filter((a) => a.status === 'EXCUSED').length,
+          marked: classSession.student_attendance.length,
+          unmarked: studentsWithAttendance.length - classSession.student_attendance.length,
+          present: classSession.student_attendance.filter((a) => a.status === 'PRESENT').length,
+          absent: classSession.student_attendance.filter((a) => a.status === 'ABSENT').length,
+          late: classSession.student_attendance.filter((a) => a.status === 'LATE').length,
+          excused: classSession.student_attendance.filter((a) => a.status === 'EXCUSED').length,
         },
       },
     })
@@ -170,6 +170,8 @@ export async function POST(req: NextRequest, { params }: { params: { sessionId: 
             },
           },
           create: {
+            id: `att_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+            updatedAt: new Date(),
             sessionId: params.sessionId,
             studentId: record.studentId,
             status: record.status,

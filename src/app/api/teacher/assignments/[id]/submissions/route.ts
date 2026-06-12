@@ -35,7 +35,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
         status: true,
         allowLateSubmission: true,
         allowResubmission: true,
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
@@ -57,7 +57,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     }
 
     if (searchQuery) {
-      where.student = {
+      where.users = {
         OR: [
           { name: { contains: searchQuery, mode: 'insensitive' } },
           { email: { contains: searchQuery, mode: 'insensitive' } },
@@ -79,7 +79,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
           resubmissionCount: true,
           submittedFiles: true,
           submittedText: true,
-          student: {
+          users: {
             select: {
               id: true,
               name: true,
@@ -121,10 +121,15 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
       },
     })
 
+    const formattedSubmissions = submissions.map(({ users, ...rest }) => ({
+      ...rest,
+      student: users,
+    }))
+
     return NextResponse.json({
       success: true,
       assignment,
-      submissions,
+      submissions: formattedSubmissions,
       statistics: {
         total: totalSubmissions,
         notSubmitted: statsMap.NOT_SUBMITTED || 0,
