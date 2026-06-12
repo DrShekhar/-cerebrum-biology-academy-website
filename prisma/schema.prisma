@@ -1770,7 +1770,7 @@ model mcq_practice_sessions {
 }
 
 model mcq_user_stats {
-  id                      String    @id
+  id                      String    @id @default(cuid())
   freeUserId              String?   @unique
   userId                  String?   @unique
   totalQuestions          Int       @default(0)
@@ -1800,7 +1800,7 @@ model mcq_user_stats {
   weeklyXp                Int       @default(0)
   monthlyXp               Int       @default(0)
   level                   Int       @default(1)
-  badgesEarned            Int       @default(0)
+  badgesEarned            String[]
   streakProtectedUntil    DateTime?
   streakRecoveryDeadline  DateTime?
   lastStreakBreak         DateTime?
@@ -1808,7 +1808,7 @@ model mcq_user_stats {
   isStreakAtRisk          Boolean   @default(false)
   subscriptionTier        String?
   createdAt               DateTime  @default(now())
-  updatedAt               DateTime
+  updatedAt               DateTime  @updatedAt
 
   @@index([currentStreak])
   @@index([totalXp])

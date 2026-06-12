@@ -78,14 +78,14 @@ export async function GET(request: NextRequest) {
             where: { status: { in: ['ACTIVE', 'PENDING'] } },
             select: {
               courseId: true,
-              batchId: true,
             },
           },
         },
       })
 
       const userCourseIds = user?.enrollments.map((e) => e.courseId).filter(Boolean) || []
-      const userBatchIds = user?.enrollments.map((e) => e.batchId).filter(Boolean) || []
+      // enrollments carry no batch FK in the schema; batch-targeted notices are unmatched.
+      const userBatchIds: string[] = []
 
       // Filter notices that target this user
       whereClause = {

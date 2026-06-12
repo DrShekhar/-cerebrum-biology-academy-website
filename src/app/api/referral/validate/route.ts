@@ -174,6 +174,7 @@ export async function PUT(request: NextRequest) {
       }),
       prisma.referral_redemptions.create({
         data: {
+          id: `refredeem_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           referralCodeId: referralCode.id,
           redeemedBy,
           redeemedByEmail,
@@ -182,7 +183,6 @@ export async function PUT(request: NextRequest) {
         },
       }),
     ])
-
 
     return NextResponse.json({
       success: true,

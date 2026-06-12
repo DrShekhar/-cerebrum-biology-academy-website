@@ -430,11 +430,11 @@ async function getStreakAtBreak(userId: string, breakDate: Date): Promise<number
   const sessions = await prisma.mcq_practice_sessions.findMany({
     where: {
       userId,
-      createdAt: { lt: breakDate },
+      startedAt: { lt: breakDate },
     },
-    orderBy: { createdAt: 'desc' },
+    orderBy: { startedAt: 'desc' },
     take: 365, // Max streak we'd track
-    select: { createdAt: true },
+    select: { startedAt: true },
   })
 
   if (sessions.length === 0) {
@@ -443,11 +443,11 @@ async function getStreakAtBreak(userId: string, breakDate: Date): Promise<number
 
   // Count consecutive days
   let streak = 1
-  let lastDate = new Date(sessions[0].createdAt)
+  let lastDate = new Date(sessions[0].startedAt)
   lastDate.setHours(0, 0, 0, 0)
 
   for (let i = 1; i < sessions.length; i++) {
-    const sessionDate = new Date(sessions[i].createdAt)
+    const sessionDate = new Date(sessions[i].startedAt)
     sessionDate.setHours(0, 0, 0, 0)
 
     const diffDays = Math.floor(

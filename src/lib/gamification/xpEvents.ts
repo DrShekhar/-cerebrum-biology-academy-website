@@ -10,6 +10,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
+import { Prisma } from '@/generated/prisma'
 import { XpEventType } from '@/types/prisma-enums'
 
 // XP Reward Constants
@@ -117,7 +118,7 @@ export async function recordXpEvent(params: RecordXpEventParams): Promise<XpEven
         eventType,
         xpAmount,
         description,
-        metadata,
+        metadata: metadata as Prisma.InputJsonValue,
         relatedEntityId,
         relatedEntityType,
       },

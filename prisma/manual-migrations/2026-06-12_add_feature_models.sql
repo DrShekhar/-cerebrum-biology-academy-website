@@ -5,7 +5,7 @@ CREATE TYPE "public"."PaymentLinkProvider" AS ENUM ('RAZORPAY', 'CASHFREE');
 CREATE TYPE "public"."PaymentLinkStatus" AS ENUM ('ACTIVE', 'PAID', 'PARTIALLY_PAID', 'EXPIRED', 'CANCELLED');
 
 -- AlterTable
-ALTER TABLE "public"."mcq_user_stats" ADD COLUMN     "badgesEarned" INTEGER NOT NULL DEFAULT 0,
+ALTER TABLE "public"."mcq_user_stats" ADD COLUMN     "badgesEarned" TEXT[],
 ADD COLUMN     "isStreakAtRisk" BOOLEAN NOT NULL DEFAULT false,
 ADD COLUMN     "lastStreakBreak" TIMESTAMP(3),
 ADD COLUMN     "level" INTEGER NOT NULL DEFAULT 1,

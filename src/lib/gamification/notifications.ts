@@ -10,6 +10,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
+import { Prisma } from '@/generated/prisma'
 import { GamificationNotificationType } from '@/types/prisma-enums'
 
 export type NotificationPriority = 'LOW' | 'NORMAL' | 'HIGH' | 'URGENT'
@@ -52,7 +53,7 @@ export async function createNotification(
       type,
       title,
       message,
-      metadata,
+      metadata: metadata as Prisma.InputJsonValue,
       priority,
       expiresAt,
     },

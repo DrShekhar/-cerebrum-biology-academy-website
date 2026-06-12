@@ -63,6 +63,7 @@ export async function POST(request: NextRequest) {
 
     const referralCode = await prisma.referral_codes.create({
       data: {
+        id: `refcode_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         code,
         userId: userId || null,
         userEmail: email,
@@ -70,7 +71,6 @@ export async function POST(request: NextRequest) {
         maxUses: 10,
       },
     })
-
 
     return NextResponse.json({
       success: true,
@@ -104,7 +104,7 @@ export async function GET(request: NextRequest) {
     const referralCode = await prisma.referral_codes.findFirst({
       where: { userEmail: email },
       include: {
-        redemptions: {
+        referral_redemptions: {
           orderBy: { createdAt: 'desc' },
           take: 10,
         },
@@ -127,7 +127,7 @@ export async function GET(request: NextRequest) {
       discount: referralCode.discount,
       uses: referralCode.uses,
       maxUses: referralCode.maxUses,
-      redemptions: referralCode.redemptions,
+      redemptions: referralCode.referral_redemptions,
       totalEarnings: referralCode.uses * referralCode.discount,
     })
   } catch (error) {
