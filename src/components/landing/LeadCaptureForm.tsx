@@ -2,7 +2,7 @@
 
 // window.gtag and window.dataLayer are declared globally in src/types/globals.d.ts.
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Image from 'next/image'
 import { Phone, MessageCircle, Star, Clock, Stethoscope } from 'lucide-react'
 
@@ -92,13 +92,19 @@ export function LeadCaptureForm({
     return lines.join('\n')
   }
 
+  // Synchronous re-entry guard: `submitting` state is set and cleared within the
+  // same handler, so the disabled attribute never actually blocks a fast double-tap.
+  const inFlightRef = useRef(false)
+
   const handleSubmit = (action: SubmitAction) => (e: React.FormEvent) => {
     e.preventDefault()
+    if (inFlightRef.current) return
     const err = validate()
     if (err) {
       setError(err)
       return
     }
+    inFlightRef.current = true
     setError(null)
     setSubmitting(true)
 
@@ -163,7 +169,11 @@ export function LeadCaptureForm({
             </a>
             <button
               type="button"
-              onClick={() => setSubmitted(false)}
+              onClick={() => {
+                inFlightRef.current = false
+                setSubmitting(false)
+                setSubmitted(false)
+              }}
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
             >
               Edit my details
@@ -199,7 +209,7 @@ export function LeadCaptureForm({
         <p className="mt-1 text-sm text-slate-600">{subheading}</p>
       </div>
 
-      <form className="space-y-4" noValidate>
+      <form className="space-y-4" noValidate onSubmit={handleSubmit('whatsapp')}>
         {/* Honeypot — hidden from users, catches bots */}
         <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px' }}>
           <label>
@@ -331,7 +341,6 @@ export function LeadCaptureForm({
         {/* Dominant WhatsApp CTA, secondary call as text link. */}
         <button
           type="submit"
-          onClick={handleSubmit('whatsapp')}
           disabled={submitting}
           className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-3.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-green-700 disabled:opacity-60"
         >
