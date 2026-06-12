@@ -16,14 +16,14 @@ async function getCertificates(studentId: string) {
       studentId,
     },
     include: {
-      course: {
+      courses: {
         select: {
           id: true,
           name: true,
           type: true,
         },
       },
-      enrollment: {
+      enrollments: {
         select: {
           id: true,
           status: true,

@@ -36,18 +36,26 @@ export async function GET(request: NextRequest) {
     if (status) where.status = status
     if (subjectType) where.subjectType = subjectType
 
-    const papers = await prisma.omr_papers.findMany({
+    const rawPapers = await prisma.omr_papers.findMany({
       where,
       include: {
         _count: {
           select: {
-            answerKeys: true,
-            submissions: true,
+            omr_answer_keys: true,
+            omr_submissions: true,
           },
         },
       },
       orderBy: { createdAt: 'desc' },
     })
+
+    const papers = rawPapers.map(({ _count, ...rest }) => ({
+      ...rest,
+      _count: {
+        answerKeys: _count.omr_answer_keys,
+        submissions: _count.omr_submissions,
+      },
+    }))
 
     return NextResponse.json({ success: true, papers })
   } catch (error) {
@@ -93,6 +101,8 @@ export async function POST(request: NextRequest) {
 
     const paper = await prisma.omr_papers.create({
       data: {
+        id: `omrp_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         paperCode: data.paperCode,
         title: data.title,
         description: data.description,

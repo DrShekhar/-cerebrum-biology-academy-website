@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
-import { OMRPaperStatus } from '@/generated/prisma'
+import { OMRPaperStatus, Prisma } from '@/generated/prisma'
 import { calculateOMRResult } from '@/lib/omr/calculator'
 import { SectionConfig, AnswerKey, SubmittedAnswers } from '@/lib/omr/types'
 
@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
     const paper = await prisma.omr_papers.findUnique({
       where: { id: data.paperId },
       include: {
-        answerKeys: true,
+        omr_answer_keys: true,
       },
     })
 
@@ -73,8 +73,8 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const sections = (paper.sections as SectionConfig[]) || []
-    const answerKeys: AnswerKey[] = paper.answerKeys.map((k) => ({
+    const sections = (paper.sections as unknown as SectionConfig[]) || []
+    const answerKeys: AnswerKey[] = paper.omr_answer_keys.map((k) => ({
       id: k.id,
       paperId: k.paperId,
       questionNo: k.questionNo,
@@ -107,6 +107,7 @@ export async function POST(request: NextRequest) {
 
     const submission = await prisma.omr_submissions.create({
       data: {
+        id: `omrs_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         paperId: data.paperId,
         studentName: data.studentName,
         studentPhone: data.studentPhone,
@@ -122,8 +123,8 @@ export async function POST(request: NextRequest) {
         marksObtained: result.marksObtained,
         maxMarks: result.maxMarks,
         percentage: result.percentage,
-        sectionResults: result.sectionResults,
-        questionResults: result.questionResults,
+        sectionResults: result.sectionResults as unknown as Prisma.InputJsonValue,
+        questionResults: result.questionResults as unknown as Prisma.InputJsonValue,
         ipAddress: ip,
         userAgent: userAgent,
       },

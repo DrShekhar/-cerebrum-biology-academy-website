@@ -66,14 +66,14 @@ export async function GET(request: NextRequest) {
     const rules = await prisma.followup_rules.findMany({
       where,
       include: {
-        template: {
+        followup_templates: {
           select: {
             id: true,
             name: true,
             channel: true,
           },
         },
-        user: {
+        users_followup_rules_createdByIdTousers: {
           select: {
             id: true,
             name: true,
@@ -104,8 +104,11 @@ export async function GET(request: NextRequest) {
           failed: queueStats.find((s) => s.status === 'FAILED')?._count || 0,
         }
 
+        const { followup_templates, users_followup_rules_createdByIdTousers, ...ruleRest } = rule
         return {
-          ...rule,
+          ...ruleRest,
+          template: followup_templates,
+          user: users_followup_rules_createdByIdTousers,
           stats,
         }
       })
@@ -169,18 +172,18 @@ export async function POST(request: NextRequest) {
         id: `rule_${Date.now()}_${Math.floor(Math.random() * 1000)}`,
         ...validatedData,
         priority: validatedData.priority || 'WARM',
-        createdBy: session.userId,
+        createdById: session.userId,
         updatedAt: new Date(),
       },
       include: {
-        template: {
+        followup_templates: {
           select: {
             id: true,
             name: true,
             channel: true,
           },
         },
-        user: {
+        users_followup_rules_createdByIdTousers: {
           select: {
             id: true,
             name: true,
@@ -192,16 +195,22 @@ export async function POST(request: NextRequest) {
 
     await prisma.activities.create({
       data: {
+        id: `act_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         userId: session.userId,
         action: 'FOLLOWUP_RULE_CREATED',
         description: `Created follow-up rule: ${rule.name}`,
       },
     })
 
+    const {
+      followup_templates: ruleTemplate,
+      users_followup_rules_createdByIdTousers: ruleUser,
+      ...ruleData
+    } = rule
     return NextResponse.json(
       {
         success: true,
-        data: rule,
+        data: { ...ruleData, template: ruleTemplate, user: ruleUser },
         message: 'Follow-up rule created successfully',
       },
       { status: 201 }

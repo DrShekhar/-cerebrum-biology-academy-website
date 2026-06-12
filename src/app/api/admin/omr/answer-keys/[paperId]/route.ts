@@ -120,7 +120,7 @@ export async function POST(
 
     const sections = paper.sections as { name: string; start: number; end: number }[] | null
 
-    const keysToCreate = keys.map((key) => {
+    const keysToCreate = keys.map((key, index) => {
       let section = key.section
       if (!section && sections) {
         const foundSection = sections.find(
@@ -130,6 +130,8 @@ export async function POST(
       }
 
       return {
+        id: `oak_${Date.now()}_${index}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         paperId,
         questionNo: key.questionNo,
         section,

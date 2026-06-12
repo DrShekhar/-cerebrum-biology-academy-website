@@ -128,6 +128,7 @@ export async function POST(request: NextRequest) {
     try {
       await prisma.analytics_events.create({
         data: {
+          id: `evt_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: user.id,
           eventType: 'auth',
           eventName: 'token_refreshed',
@@ -201,7 +202,7 @@ export async function GET(request: NextRequest) {
         expires: { gt: new Date() },
       },
       include: {
-        user: {
+        users: {
           select: {
             id: true,
             email: true,
@@ -214,7 +215,7 @@ export async function GET(request: NextRequest) {
       },
     })
 
-    if (!session || !session.user) {
+    if (!session || !session.users) {
       return addSecurityHeaders(
         NextResponse.json({
           valid: false,
@@ -227,7 +228,7 @@ export async function GET(request: NextRequest) {
       NextResponse.json({
         valid: true,
         message: 'Refresh token is valid',
-        user: session.user,
+        user: session.users,
         expiresAt: session.expires,
       })
     )

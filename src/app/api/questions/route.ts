@@ -426,6 +426,7 @@ export async function POST(request: NextRequest) {
     // Create the question
     const question = await prisma.questions.create({
       data: {
+        id: `q_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         ...validatedData,
         slug,
         isActive: true,

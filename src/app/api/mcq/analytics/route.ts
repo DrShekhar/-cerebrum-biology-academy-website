@@ -134,7 +134,7 @@ export async function GET(request: NextRequest) {
         answeredAt: { gte: startDate },
       },
       _count: { id: true },
-      _sum: { xpEarned: true },
+      _sum: { marksAwarded: true },
     })
 
     // Aggregate by day
@@ -170,7 +170,7 @@ export async function GET(request: NextRequest) {
         const existing = dailyMap.get(dateStr)
         if (existing) {
           existing.questionsAttempted += r._count.id
-          existing.xpEarned += r._sum.xpEarned || 0
+          existing.xpEarned += r._sum.marksAwarded || 0
         }
       }
     })

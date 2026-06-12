@@ -111,10 +111,7 @@ export async function POST(request: NextRequest) {
     const booking = tokenResult.booking
 
     if (!booking) {
-      return NextResponse.json(
-        { success: false, error: 'Booking not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Booking not found' }, { status: 404 })
     }
 
     // Check if already cancelled
@@ -126,7 +123,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Cancel Zoom meeting if it exists
-    const metadata = booking.metadata as any || {}
+    const metadata = (booking.notificationsSent as any) || {}
     if (metadata.zoomMeetingId) {
       await zoomService.cancelDemoMeeting(metadata.zoomMeetingId)
     }
@@ -136,11 +133,6 @@ export async function POST(request: NextRequest) {
       where: { id: bookingId },
       data: {
         status: 'CANCELLED',
-        metadata: {
-          ...metadata,
-          cancelledAt: new Date().toISOString(),
-          cancellationReason: reason || 'User requested cancellation',
-        },
         updatedAt: new Date(),
       },
     })
@@ -149,7 +141,7 @@ export async function POST(request: NextRequest) {
     await prisma.leads.updateMany({
       where: { demoBookingId: bookingId },
       data: {
-        stage: 'DEMO_CANCELLED',
+        stage: 'NEW_LEAD',
         updatedAt: new Date(),
       },
     })
@@ -158,6 +150,8 @@ export async function POST(request: NextRequest) {
     try {
       await prisma.activities.create({
         data: {
+          id: `act_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+          userId: booking.userId || 'system',
           action: 'DEMO_CANCELLED',
           description: `Demo booking cancelled by student. Reason: ${reason || 'Not specified'}`,
           metadata: {
@@ -235,10 +229,7 @@ export async function GET(request: NextRequest) {
     })
 
     if (!rateLimitResult.success) {
-      return NextResponse.json(
-        { success: false, error: 'Too many requests' },
-        { status: 429 }
-      )
+      return NextResponse.json({ success: false, error: 'Too many requests' }, { status: 429 })
     }
 
     const { searchParams } = new URL(request.url)
@@ -283,10 +274,7 @@ export async function GET(request: NextRequest) {
     })
 
     if (!booking) {
-      return NextResponse.json(
-        { success: false, error: 'Booking not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Booking not found' }, { status: 404 })
     }
 
     return NextResponse.json({

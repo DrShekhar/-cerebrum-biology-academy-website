@@ -90,7 +90,7 @@ export async function GET(req: NextRequest) {
     const sessions = await prisma.class_sessions.findMany({
       where,
       include: {
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
@@ -98,7 +98,7 @@ export async function GET(req: NextRequest) {
             class: true,
           },
         },
-        attendance: {
+        student_attendance: {
           select: {
             id: true,
             status: true,
@@ -111,6 +111,12 @@ export async function GET(req: NextRequest) {
       },
     })
 
+    const sessionsResponse = sessions.map(({ courses, student_attendance, ...rest }) => ({
+      ...rest,
+      course: courses,
+      attendance: student_attendance,
+    }))
+
     const statistics = {
       total: sessions.length,
       scheduled: sessions.filter((s) => s.status === 'SCHEDULED').length,
@@ -122,7 +128,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({
       success: true,
       data: {
-        sessions,
+        sessions: sessionsResponse,
         statistics,
       },
     })
@@ -173,6 +179,8 @@ export async function POST(req: NextRequest) {
     } else {
       const newSession = await prisma.class_sessions.create({
         data: {
+          id: `sess_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+          updatedAt: new Date(),
           courseId: validatedData.courseId,
           enrollmentId: validatedData.enrollmentId,
           title: validatedData.title,
@@ -193,7 +201,7 @@ export async function POST(req: NextRequest) {
           status: 'SCHEDULED',
         },
         include: {
-          course: {
+          courses: {
             select: {
               id: true,
               name: true,
@@ -204,10 +212,13 @@ export async function POST(req: NextRequest) {
         },
       })
 
+      const { courses: newCourses, ...newSessionRest } = newSession
+      const newSessionResponse = { ...newSessionRest, course: newCourses }
+
       return NextResponse.json({
         success: true,
         message: 'Session created successfully',
-        data: { session: newSession },
+        data: { session: newSessionResponse },
       })
     }
   } catch (error) {

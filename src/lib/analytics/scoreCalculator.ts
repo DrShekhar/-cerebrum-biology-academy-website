@@ -118,12 +118,12 @@ export async function calculateBiologyScore(
             totalQuestions: true,
           },
         },
-        responses: {
+        user_question_responses: {
           select: {
             isCorrect: true,
             selectedAnswer: true,
             marksAwarded: true,
-            question: {
+            questions: {
               select: {
                 subject: true,
                 marks: true,
@@ -160,8 +160,8 @@ export async function calculateBiologyScore(
       let correctAnswers = 0
       let incorrectAnswers = 0
 
-      for (const response of session.responses) {
-        const subject = response.question.subject.toLowerCase()
+      for (const response of session.user_question_responses) {
+        const subject = response.questions.subject.toLowerCase()
 
         if (subject === 'biology' || subject === 'zoology' || subject === 'botany') {
           if (response.selectedAnswer) {
@@ -170,7 +170,7 @@ export async function calculateBiologyScore(
 
           if (response.isCorrect) {
             correctAnswers++
-            const marks = response.marksAwarded || response.question.marks || 4
+            const marks = response.marksAwarded || response.questions.marks || 4
             biologyScore += marks
 
             if (subject === 'zoology') {
@@ -459,14 +459,14 @@ export async function getScoreByDifficulty(
     const responses = await prisma.user_question_responses.findMany({
       where: {
         [userField]: userId,
-        question: {
+        questions: {
           isActive: true,
         },
       },
       select: {
         isCorrect: true,
         marksAwarded: true,
-        question: {
+        questions: {
           select: {
             difficulty: true,
             marks: true,
@@ -489,8 +489,8 @@ export async function getScoreByDifficulty(
 
     // Calculate stats for each difficulty
     for (const response of responses) {
-      const difficulty = response.question.difficulty
-      const marks = response.marksAwarded || response.question.marks || 4
+      const difficulty = response.questions.difficulty
+      const marks = response.marksAwarded || response.questions.marks || 4
 
       difficultyStats[difficulty].total++
       if (response.isCorrect) {

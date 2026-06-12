@@ -297,7 +297,7 @@ export async function POST(request: NextRequest) {
           currency: normalizedCurrency,
           razorpayOrderId: order.id,
           status: 'PENDING',
-          paymentMethod: 'RAZORPAY',
+          paymentMethod: 'RAZORPAY_UPI',
           updatedAt: new Date(),
         },
       })

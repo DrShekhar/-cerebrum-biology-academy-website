@@ -32,7 +32,7 @@ export async function GET(req: NextRequest) {
     }
 
     if (courseId) {
-      where.session = {
+      where.class_sessions = {
         courseId: courseId,
       }
     }
@@ -44,7 +44,7 @@ export async function GET(req: NextRequest) {
     const attendanceRecords = await prisma.student_attendance.findMany({
       where,
       include: {
-        session: true,
+        class_sessions: true,
       },
       orderBy: {
         markedAt: 'desc',

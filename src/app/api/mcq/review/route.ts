@@ -321,6 +321,8 @@ export async function POST(request: NextRequest) {
         freeUserId_questionId: { freeUserId, questionId },
       },
       create: {
+        id: `qrs_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         freeUserId,
         questionId,
         easeFactor: nextSchedule.easeFactor,

@@ -6,7 +6,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { UpcomingPaymentsResponse } from '@/types/payment'
+import { UpcomingPaymentsResponse, PaymentInstallment } from '@/types/payment'
 
 export async function GET(request: NextRequest) {
   try {
@@ -90,15 +90,36 @@ export async function GET(request: NextRequest) {
       },
     })
 
+    // Normalize raw Prisma rows into PaymentInstallment shape
+    // (relation key remapped, Decimal amounts wrapped in Number()).
+    const normalizeInstallment = (i: (typeof upcomingInstallments)[number]): PaymentInstallment => {
+      const { fee_plans, ...rest } = i
+      return {
+        ...rest,
+        amount: Number(i.amount),
+        paidAmount: i.paidAmount !== null ? Number(i.paidAmount) : null,
+        feePlan: fee_plans
+          ? {
+              id: fee_plans.id,
+              courseName: fee_plans.courseName,
+              totalFee: Number(fee_plans.totalFee),
+            }
+          : undefined,
+      }
+    }
+
+    const normalizedUpcoming = upcomingInstallments.map(normalizeInstallment)
+    const normalizedOverdue = overdueInstallments.map(normalizeInstallment)
+
     // Get the next payment (earliest upcoming or overdue)
-    const allPendingInstallments = [...overdueInstallments, ...upcomingInstallments]
+    const allPendingInstallments = [...normalizedOverdue, ...normalizedUpcoming]
     const nextPayment = allPendingInstallments.length > 0 ? allPendingInstallments[0] : null
 
     const response: UpcomingPaymentsResponse = {
       success: true,
       data: {
-        upcoming: upcomingInstallments,
-        overdue: overdueInstallments,
+        upcoming: normalizedUpcoming,
+        overdue: normalizedOverdue,
         nextPayment,
       },
     }

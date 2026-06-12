@@ -213,18 +213,28 @@ export async function POST(request: Request) {
     const createdBatches = await prisma.batches.createMany({
       data: initialBatches.map((batch, index) => ({
         ...batch,
+        id: `batch_${Date.now()}_${index}_${Math.random().toString(36).slice(2, 9)}`,
         displayOrder: index,
+        updatedAt: new Date(),
       })),
     })
 
     // Seed NEET classes
     const createdNeetClasses = await prisma.neet_classes.createMany({
-      data: initialNeetClasses,
+      data: initialNeetClasses.map((neetClass, index) => ({
+        ...neetClass,
+        id: `neet_${Date.now()}_${index}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
+      })),
     })
 
     // Seed test schedules
     const createdTestSchedules = await prisma.test_schedules.createMany({
-      data: initialTestSchedules,
+      data: initialTestSchedules.map((testSchedule, index) => ({
+        ...testSchedule,
+        id: `tsch_${Date.now()}_${index}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
+      })),
     })
 
     return NextResponse.json({

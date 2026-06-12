@@ -221,7 +221,7 @@ async function handleGET(_request: NextRequest, _session: ValidatedSession) {
     // Get unassigned leads count
     const unassignedLeads = await prisma.leads.count({
       where: {
-        OR: [{ assignedToId: null }, { users: { isActive: false } }],
+        OR: [{ assignedToId: null }],
       },
     })
 

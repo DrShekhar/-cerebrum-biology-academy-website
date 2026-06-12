@@ -601,6 +601,7 @@ Identify the best upsell/cross-sell opportunities for this student.`
       for (const rec of recommendations) {
         await prisma.product_recommendations.create({
           data: {
+            id: `prec_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
             leadId,
             userId,
             courseId: rec.courseId,

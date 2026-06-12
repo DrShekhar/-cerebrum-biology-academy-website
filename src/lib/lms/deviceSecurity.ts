@@ -12,7 +12,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
-import { DeviceType, LmsSecurityEvent, SecuritySeverity } from '@/generated/prisma'
+import { DeviceType, LmsSecurityEvent, SecuritySeverity, Prisma } from '@/generated/prisma'
 import crypto from 'crypto'
 
 interface DeviceInfo {
@@ -117,6 +117,8 @@ export async function checkDeviceAccess(
     // Create default limits for new user
     limits = await prisma.user_device_limits.create({
       data: {
+        id: `devlimit_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         userId,
         maxDevices: 2,
         activeDevices: 0,
@@ -224,6 +226,8 @@ export async function checkDeviceAccess(
   const sessionToken = crypto.randomBytes(32).toString('hex')
   const newSession = await prisma.lms_device_sessions.create({
     data: {
+      id: `devsess_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+      updatedAt: new Date(),
       userId,
       deviceId: deviceInfo.fingerprint,
       deviceName: `${deviceInfo.browser} on ${deviceInfo.os}`,
@@ -379,6 +383,7 @@ export async function logSecurityEvent(data: {
 }): Promise<void> {
   await prisma.lms_security_events.create({
     data: {
+      id: `secevt_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
       userId: data.userId,
       videoLectureId: data.videoLectureId,
       deviceSessionId: data.deviceSessionId,
@@ -388,7 +393,7 @@ export async function logSecurityEvent(data: {
       ipAddress: data.ipAddress,
       userAgent: data.userAgent,
       deviceFingerprint: data.deviceFingerprint,
-      evidence: data.evidence,
+      evidence: data.evidence as Prisma.InputJsonValue,
     },
   })
 }

@@ -59,7 +59,7 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
     const classSession = await prisma.class_sessions.findUnique({
       where: { id: params.id },
       include: {
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
@@ -67,16 +67,16 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
             class: true,
           },
         },
-        teacher: {
+        users: {
           select: {
             id: true,
             name: true,
             email: true,
           },
         },
-        attendance: {
+        student_attendance: {
           include: {
-            student: {
+            users_student_attendance_studentIdTousers: {
               select: {
                 id: true,
                 name: true,
@@ -99,9 +99,22 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
       )
     }
 
+    const { courses, users, student_attendance, ...sessionRest } = classSession
+    const sessionResponse = {
+      ...sessionRest,
+      course: courses,
+      teacher: users,
+      attendance: student_attendance.map(
+        ({ users_student_attendance_studentIdTousers, ...att }) => ({
+          ...att,
+          student: users_student_attendance_studentIdTousers,
+        })
+      ),
+    }
+
     return NextResponse.json({
       success: true,
-      data: { session: classSession },
+      data: { session: sessionResponse },
     })
   } catch (error) {
     console.error('Error fetching session:', error)
@@ -174,7 +187,7 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
       where: { id: params.id },
       data: updateData,
       include: {
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
@@ -185,10 +198,13 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
       },
     })
 
+    const { courses: updatedCourses, ...updatedSessionRest } = updatedSession
+    const updatedSessionResponse = { ...updatedSessionRest, course: updatedCourses }
+
     return NextResponse.json({
       success: true,
       message: 'Session updated successfully',
-      data: { session: updatedSession },
+      data: { session: updatedSessionResponse },
     })
   } catch (error) {
     if (error instanceof z.ZodError) {
@@ -221,7 +237,7 @@ export async function DELETE(req: NextRequest, { params }: { params: { id: strin
     const existingSession = await prisma.class_sessions.findUnique({
       where: { id: params.id },
       include: {
-        attendance: true,
+        student_attendance: true,
       },
     })
 
@@ -236,7 +252,7 @@ export async function DELETE(req: NextRequest, { params }: { params: { id: strin
       )
     }
 
-    if (existingSession.attendance.length > 0) {
+    if (existingSession.student_attendance.length > 0) {
       await prisma.class_sessions.update({
         where: { id: params.id },
         data: {

@@ -19,7 +19,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
         studentId: session.user.id,
       },
       include: {
-        template: true,
+        certificate_templates: true,
       },
     })
 
@@ -60,7 +60,10 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     }
 
     const pdfStream = await CertificateGenerator.generateCertificatePDF(certificateData, {
-      template: certificate.template || undefined,
+      // Prisma row shape differs from the generator's CertificateTemplate input type;
+      // pass the real row through (runtime shape is compatible).
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      template: (certificate.certificate_templates as any) || undefined,
       includeQRCode: true,
     })
 

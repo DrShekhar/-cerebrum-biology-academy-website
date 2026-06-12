@@ -13,7 +13,7 @@
 
 import { prisma } from '@/lib/prisma'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
-import { LeadStage as PrismaLeadStage, FollowupAction } from '../../generated/prisma'
+import { LeadStage as PrismaLeadStage, FollowupAction, Prisma } from '../../generated/prisma'
 import {
   sendWhatsAppMessage,
   sendFollowUpMessage,
@@ -467,11 +467,12 @@ export class LeadNurturingService {
     if (!rule) {
       rule = await prisma.followup_rules.create({
         data: {
+          id: `frule_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           name: `auto_${lead.stage}`,
           description: `Automated follow-up rule for ${lead.stage} stage`,
           isActive: true,
           triggerType: 'STAGE_CHANGE',
-          triggerConditions: { stage: lead.stage },
+          triggerConditions: { stage: lead.stage } as Prisma.InputJsonValue,
           delayMinutes: 0,
           actionType: 'WHATSAPP',
           createdById: 'system',
@@ -487,6 +488,7 @@ export class LeadNurturingService {
 
       await prisma.followup_queue.create({
         data: {
+          id: `fqueue_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           leadId: lead.id,
           ruleId: rule.id,
           scheduledFor,
@@ -496,7 +498,7 @@ export class LeadNurturingService {
             templateName: action.templateName,
             message: action.message,
             params: action.params,
-          },
+          } as Prisma.InputJsonValue,
           updatedAt: new Date(),
         },
       })
@@ -557,6 +559,7 @@ export class LeadNurturingService {
       // Record in follow-up history
       await prisma.followup_history.create({
         data: {
+          id: `fhist_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           leadId: lead.id,
           action: this.mapActionType(action.type),
           channel: action.type.toUpperCase(),
@@ -567,7 +570,7 @@ export class LeadNurturingService {
             templateName: action.templateName,
             message: action.message,
             stage: lead.stage,
-          },
+          } as Prisma.InputJsonValue,
         },
       })
 
@@ -651,6 +654,7 @@ export class LeadNurturingService {
       // Record in history
       await prisma.followup_history.create({
         data: {
+          id: `fhist_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           leadId: lead.id,
           action: 'WHATSAPP',
           channel: 'WHATSAPP',
@@ -660,7 +664,7 @@ export class LeadNurturingService {
           metadata: {
             counselor: counselorName,
             bookingLink,
-          },
+          } as Prisma.InputJsonValue,
         },
       })
 
@@ -703,6 +707,7 @@ export class LeadNurturingService {
       // Record in history
       await prisma.followup_history.create({
         data: {
+          id: `fhist_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           leadId: lead.id,
           action: 'WHATSAPP',
           channel: 'WHATSAPP',
@@ -713,7 +718,7 @@ export class LeadNurturingService {
             promoCode,
             validityDate,
             offerDetails,
-          },
+          } as Prisma.InputJsonValue,
         },
       })
 
@@ -778,11 +783,12 @@ export class LeadNurturingService {
     if (!rule) {
       rule = await prisma.followup_rules.create({
         data: {
+          id: `frule_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           name: 'demo_no_show',
           description: 'Follow-up for missed demo classes',
           isActive: true,
           triggerType: 'DEMO_NO_SHOW',
-          triggerConditions: {},
+          triggerConditions: {} as Prisma.InputJsonValue,
           delayMinutes: 0,
           actionType: 'WHATSAPP',
           createdById: 'system',
@@ -795,6 +801,7 @@ export class LeadNurturingService {
       const scheduledFor = new Date(Date.now() + action.delayMinutes * 60 * 1000)
       await prisma.followup_queue.create({
         data: {
+          id: `fqueue_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           leadId,
           ruleId: rule.id,
           scheduledFor,
@@ -802,7 +809,7 @@ export class LeadNurturingService {
           metadata: {
             actionType: action.type,
             message: action.message,
-          },
+          } as Prisma.InputJsonValue,
           updatedAt: new Date(),
         },
       })

@@ -75,7 +75,7 @@ async function getRecentSessions(
       take: limit,
       skip: offset,
       include: {
-        testTemplate: {
+        test_templates: {
           select: {
             title: true,
             category: true,
@@ -98,8 +98,8 @@ async function getRecentSessions(
 
       // Extract chapter from topics or title
       let chapter: string | null = null
-      if (attempt.testTemplate?.topics && Array.isArray(attempt.testTemplate.topics)) {
-        const topics = attempt.testTemplate.topics as string[]
+      if (attempt.test_templates?.topics && Array.isArray(attempt.test_templates.topics)) {
+        const topics = attempt.test_templates.topics as string[]
         chapter = topics[0] || null
       } else if (attempt.topics && Array.isArray(attempt.topics)) {
         const topics = attempt.topics as string[]
@@ -113,8 +113,8 @@ async function getRecentSessions(
 
       return {
         id: attempt.id,
-        type: attempt.testTemplate?.category || attempt.difficulty || 'PRACTICE',
-        title: attempt.title || attempt.testTemplate?.title || 'Test',
+        type: attempt.test_templates?.category || attempt.difficulty || 'PRACTICE',
+        title: attempt.title || attempt.test_templates?.title || 'Test',
         chapter,
         duration: attempt.timeSpent || 0,
         score: attempt.score,

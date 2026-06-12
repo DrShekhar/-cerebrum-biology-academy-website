@@ -48,14 +48,14 @@ export async function GET(request: NextRequest) {
       prisma.doubt_tickets.findMany({
         where,
         include: {
-          student: {
+          users_doubt_tickets_studentIdTousers: {
             select: {
               id: true,
               name: true,
               email: true,
             },
           },
-          category: {
+          doubt_categories: {
             select: {
               id: true,
               name: true,
@@ -63,19 +63,19 @@ export async function GET(request: NextRequest) {
               color: true,
             },
           },
-          course: {
+          courses: {
             select: {
               id: true,
               name: true,
             },
           },
-          instructor: {
+          users_doubt_tickets_instructorIdTousers: {
             select: {
               id: true,
               name: true,
             },
           },
-          messages: {
+          doubt_messages: {
             select: {
               id: true,
               createdAt: true,
@@ -119,16 +119,16 @@ export async function GET(request: NextRequest) {
         description: doubt.description,
         priority: doubt.priority,
         status: doubt.status,
-        student: doubt.student,
-        category: doubt.category,
-        course: doubt.course,
-        instructor: doubt.instructor,
+        student: doubt.users_doubt_tickets_studentIdTousers,
+        category: doubt.doubt_categories,
+        course: doubt.courses,
+        instructor: doubt.users_doubt_tickets_instructorIdTousers,
         tags: doubt.tags,
         viewCount: doubt.viewCount,
         responseTime: doubt.responseTime,
         lastMessageAt: doubt.lastMessageAt,
         createdAt: doubt.createdAt,
-        messageCount: doubt.messages.length,
+        messageCount: doubt.doubt_messages.length,
       })),
       pagination: {
         page,

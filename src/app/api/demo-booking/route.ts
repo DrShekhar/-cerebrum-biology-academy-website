@@ -126,7 +126,9 @@ const rateLimitStoreFallback = new Map<string, { count: number; resetTime: numbe
 const spamDetectionStoreFallback = new Map<string, { submissions: number[]; blocked: boolean }>()
 
 // Helper: Get default counselor for auto-assignment (round-robin or least loaded)
-async function getDefaultCounselorId(tx: typeof prisma): Promise<string | null> {
+async function getDefaultCounselorId(
+  tx: Parameters<Parameters<typeof prisma.$transaction>[0]>[0]
+): Promise<string | null> {
   // Find active counselors ordered by least active leads
   const counselor = await tx.users.findFirst({
     where: {
@@ -343,6 +345,8 @@ export async function POST(request: NextRequest) {
           // 1. Create the demo booking
           const booking = await tx.demo_bookings.create({
             data: {
+              id: `demo_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+              updatedAt: new Date(),
               // Identity (no userId for guest bookings)
               userId: null, // Guest booking
               courseId: null, // Will be assigned later by admin
@@ -566,18 +570,8 @@ export async function POST(request: NextRequest) {
         previousKnowledge: '', // Optional
       })
 
-      // Update booking with Zoom meeting details
-      if (zoomMeeting) {
-        await prisma.demo_bookings.update({
-          where: { id: demoBooking.id },
-          data: {
-            zoomMeetingId: String(zoomMeeting.id),
-            zoomJoinUrl: zoomMeeting.join_url,
-            zoomStartUrl: zoomMeeting.start_url,
-            zoomPassword: zoomMeeting.password,
-          },
-        })
-      }
+      // Zoom meeting details are not persisted on demo_bookings (no columns exist);
+      // they are carried through the in-memory zoomMeeting object for notifications/response.
     } catch (zoomError) {
       // Log but don't fail the booking if Zoom creation fails
       console.error('Failed to create Zoom meeting (non-blocking):', zoomError)
@@ -1084,10 +1078,10 @@ async function handleGet(request: NextRequest, _session: UserSession) {
         skip: offset,
         orderBy: { createdAt: 'desc' },
         include: {
-          user: {
+          users: {
             select: { id: true, name: true, email: true },
           },
-          course: {
+          courses: {
             select: { id: true, name: true, type: true },
           },
         },
@@ -1114,8 +1108,8 @@ async function handleGet(request: NextRequest, _session: UserSession) {
         source: booking.source,
         createdAt: booking.createdAt.toISOString(),
         updatedAt: booking.updatedAt.toISOString(),
-        user: booking.user,
-        course: booking.course,
+        user: booking.users,
+        course: booking.courses,
       })),
       total,
       page: Math.floor(offset / limit) + 1,

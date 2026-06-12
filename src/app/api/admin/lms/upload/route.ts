@@ -139,6 +139,8 @@ export async function POST(request: NextRequest) {
     // Create database record
     const studyMaterial = await prisma.study_materials.create({
       data: {
+        id: `mat_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         title: metadata.title.trim(),
         description: metadata.description?.trim() || null,
         materialType: metadata.materialType as any,
@@ -157,19 +159,19 @@ export async function POST(request: NextRequest) {
         publishedAt: metadata.isPublished ? new Date() : null,
       },
       include: {
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
           },
         },
-        chapter: {
+        chapters: {
           select: {
             id: true,
             title: true,
           },
         },
-        topic: {
+        topics: {
           select: {
             id: true,
             title: true,
@@ -192,9 +194,9 @@ export async function POST(request: NextRequest) {
           fileUrl: studyMaterial.fileUrl,
           materialType: studyMaterial.materialType,
           isPublished: studyMaterial.isPublished,
-          course: studyMaterial.course,
-          chapter: studyMaterial.chapter,
-          topic: studyMaterial.topic,
+          course: studyMaterial.courses,
+          chapter: studyMaterial.chapters,
+          topic: studyMaterial.topics,
           createdAt: studyMaterial.createdAt,
         },
         warnings: fileValidation.warnings,

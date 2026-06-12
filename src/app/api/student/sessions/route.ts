@@ -81,7 +81,7 @@ export async function GET(req: NextRequest) {
     const sessions = await prisma.class_sessions.findMany({
       where,
       include: {
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
@@ -89,14 +89,14 @@ export async function GET(req: NextRequest) {
             class: true,
           },
         },
-        teacher: {
+        users: {
           select: {
             id: true,
             name: true,
             email: true,
           },
         },
-        attendance: {
+        student_attendance: {
           where: {
             studentId: session.user.id,
           },
@@ -115,11 +115,26 @@ export async function GET(req: NextRequest) {
       take: type === 'today' ? undefined : 20,
     })
 
-    const upcomingSessions = sessions.filter(
+    const remappedSessions = sessions.map((s) => {
+      const {
+        courses: sessionCourse,
+        users: sessionTeacher,
+        student_attendance: sessionAttendance,
+        ...rest
+      } = s
+      return {
+        ...rest,
+        course: sessionCourse,
+        teacher: sessionTeacher,
+        attendance: sessionAttendance,
+      }
+    })
+
+    const upcomingSessions = remappedSessions.filter(
       (s) => new Date(s.startTime) > now && (s.status === 'SCHEDULED' || s.status === 'ONGOING')
     )
 
-    const todaySessions = sessions.filter((s) => {
+    const todaySessions = remappedSessions.filter((s) => {
       const sessionDate = new Date(s.startTime)
       return sessionDate >= startOfToday && sessionDate <= endOfToday
     })
@@ -127,7 +142,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({
       success: true,
       data: {
-        sessions,
+        sessions: remappedSessions,
         upcoming: upcomingSessions.slice(0, 5),
         today: todaySessions,
       },

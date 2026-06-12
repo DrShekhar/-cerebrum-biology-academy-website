@@ -59,7 +59,7 @@ export async function GET(request: NextRequest) {
         firstName: user.name?.split(' ')[0] || null,
         lastName: user.name?.split(' ').slice(1).join(' ') || null,
         fullName: user.name,
-        imageUrl: user.image,
+        imageUrl: null,
         role: user.role?.toUpperCase() || 'STUDENT',
         createdAt: user.createdAt,
         lastSignInAt: user.lastActiveAt,

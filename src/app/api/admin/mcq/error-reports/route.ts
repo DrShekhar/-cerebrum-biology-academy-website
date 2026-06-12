@@ -31,7 +31,7 @@ export async function GET(request: NextRequest) {
         take: limit,
         skip: offset,
         include: {
-          communityQuestion: {
+          community_questions: {
             select: {
               question: true,
               options: true,
@@ -46,7 +46,9 @@ export async function GET(request: NextRequest) {
 
     // For official questions, we need to fetch them separately
     const reportsWithQuestions = await Promise.all(
-      reports.map(async (report) => {
+      reports.map(async (rawReport) => {
+        const { community_questions, ...rest } = rawReport
+        const report = { ...rest, communityQuestion: community_questions }
         if (report.questionId && !report.communityQuestionId) {
           const question = await prisma.questions.findUnique({
             where: { id: report.questionId },

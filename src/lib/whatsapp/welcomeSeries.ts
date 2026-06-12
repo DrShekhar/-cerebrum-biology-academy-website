@@ -144,7 +144,7 @@ export async function startWelcomeSeries(leadId: string): Promise<{
 
     const leadData: LeadData = {
       id: lead.id,
-      name: lead.name || '',
+      name: lead.studentName || '',
       phone: lead.phone,
       email: lead.email,
       source: lead.source || '',
@@ -174,18 +174,8 @@ export async function startWelcomeSeries(leadId: string): Promise<{
       scheduledMessages.push(message.templateName)
     }
 
-    // Update lead with welcome series status
-    await prisma.leads.update({
-      where: { id: leadId },
-      data: {
-        metadata: {
-          ...((lead.metadata as object) || {}),
-          welcomeSeriesStarted: new Date().toISOString(),
-          welcomeSeriesMessages: scheduledMessages,
-          firstMessageSent: immediateResult.success,
-        },
-      },
-    })
+    // NOTE: leads has no `metadata` column, so welcome-series status is not
+    // persisted to the lead record. Messages are still sent/scheduled above.
 
     return {
       success: true,
@@ -220,7 +210,7 @@ export async function sendWelcomeSeriesMessage(
 
     const leadData: LeadData = {
       id: lead.id,
-      name: lead.name || '',
+      name: lead.studentName || '',
       phone: lead.phone,
       email: lead.email,
       source: lead.source || '',
@@ -234,23 +224,8 @@ export async function sendWelcomeSeriesMessage(
       `welcome_series_${lead.id}_day${day}`
     )
 
-    if (result.success) {
-      // Update lead metadata
-      const metadata = (lead.metadata as Record<string, unknown>) || {}
-      const sentMessages = (metadata.welcomeSeriesSent as string[]) || []
-      sentMessages.push(`day${day}`)
-
-      await prisma.leads.update({
-        where: { id: leadId },
-        data: {
-          metadata: {
-            ...metadata,
-            welcomeSeriesSent: sentMessages,
-            [`day${day}SentAt`]: new Date().toISOString(),
-          },
-        },
-      })
-    }
+    // NOTE: leads has no `metadata` column, so per-message sent state is not
+    // persisted to the lead record.
 
     return result
   } catch (error) {
@@ -270,19 +245,14 @@ export async function processWelcomeSeriesQueue(): Promise<{
   const stats = { processed: 0, sent: 0, errors: 0 }
 
   try {
-    // Get leads that started welcome series but may need follow-up messages
+    // NOTE: leads has no `metadata` column to track welcome-series state, so
+    // this queue cannot filter or read prior progress and effectively no-ops.
     const leads = await prisma.leads.findMany({
-      where: {
-        metadata: {
-          path: ['welcomeSeriesStarted'],
-          not: undefined,
-        },
-      },
       take: 100,
     })
 
     for (const lead of leads) {
-      const metadata = (lead.metadata as Record<string, unknown>) || {}
+      const metadata = {} as Record<string, unknown>
       const startDate = metadata.welcomeSeriesStarted as string
 
       if (!startDate) continue

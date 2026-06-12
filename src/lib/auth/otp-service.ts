@@ -88,6 +88,7 @@ export async function sendOTP(
     // Store OTP in database
     await prisma.whatsapp_otp.create({
       data: {
+        id: `otp_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         phone: formattedPhone,
         otp,
         expiresAt,

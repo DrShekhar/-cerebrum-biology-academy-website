@@ -200,6 +200,7 @@ export async function POST(request: NextRequest) {
                 sectionTitle: point.title,
               },
               create: {
+                id: `pdfsync_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
                 videoLectureId,
                 videoTimestamp: point.timestamp,
                 pdfPage: point.page,
@@ -237,6 +238,8 @@ export async function POST(request: NextRequest) {
           const chapter = chapters[i]
           await prisma.video_chapters.create({
             data: {
+              id: `vidchap_${Date.now()}_${i}_${Math.random().toString(36).slice(2, 9)}`,
+              updatedAt: new Date(),
               videoLectureId,
               title: chapter.title,
               description: chapter.description,

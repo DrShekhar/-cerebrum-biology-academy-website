@@ -83,7 +83,7 @@ async function handleGET(req: NextRequest, session: any) {
       prisma.crm_communications.findMany({
         where,
         include: {
-          sentBy: {
+          users: {
             select: {
               id: true,
               name: true,
@@ -106,7 +106,7 @@ async function handleGET(req: NextRequest, session: any) {
 
     return NextResponse.json({
       success: true,
-      data: communications,
+      data: communications.map(({ users, ...rest }) => ({ ...rest, sentBy: users })),
       pagination: {
         page,
         limit,

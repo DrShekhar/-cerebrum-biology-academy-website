@@ -151,8 +151,8 @@ export async function upsertLead(
         source: mapLeadSource(input.source),
         sourceDetail,
         assignedToId: assignee.id,
-        utmSource: input.utmSource,
-        utmCampaign: input.utmCampaign,
+        // NOTE: leads model has no utmSource/utmCampaign columns; UTM data is
+        // preserved in the activities.metadata block below.
         gclid: input.gclid,
         nextFollowUpAt: new Date(Date.now() + 30 * 60 * 1000),
         lastContactedAt: new Date(),

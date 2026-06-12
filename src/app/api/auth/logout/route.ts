@@ -45,6 +45,7 @@ export async function POST(request: NextRequest) {
       try {
         await prisma.analytics_events.create({
           data: {
+            id: `evt_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
             userId: session.userId,
             eventType: 'auth',
             eventName: 'user_logout',
@@ -149,6 +150,7 @@ export async function DELETE(request: NextRequest) {
     try {
       await prisma.analytics_events.create({
         data: {
+          id: `evt_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: session.userId,
           eventType: 'auth',
           eventName: 'user_logout_all_devices',

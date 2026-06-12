@@ -34,11 +34,11 @@ export async function GET(request: NextRequest) {
       ]
     }
 
-    const [submissions, total] = await Promise.all([
+    const [rawSubmissions, total] = await Promise.all([
       prisma.omr_submissions.findMany({
         where,
         include: {
-          paper: {
+          omr_papers: {
             select: {
               paperCode: true,
               title: true,
@@ -54,6 +54,11 @@ export async function GET(request: NextRequest) {
       }),
       prisma.omr_submissions.count({ where }),
     ])
+
+    const submissions = rawSubmissions.map(({ omr_papers, ...rest }) => ({
+      ...rest,
+      paper: omr_papers,
+    }))
 
     const stats = await prisma.omr_submissions.aggregate({
       where,

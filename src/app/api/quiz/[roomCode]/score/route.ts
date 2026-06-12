@@ -124,7 +124,7 @@ export async function POST(
       )
     }
 
-    const rules = session.scoringRules as ScoringRules
+    const rules = session.scoringRules as unknown as ScoringRules
     const pointsChange = calculatePoints(
       body.outcome as RoundOutcome,
       rules,
@@ -245,7 +245,7 @@ export async function DELETE(
     const session = await prisma.quiz_sessions.findUnique({
       where: { id: authResult.session.id },
       include: {
-        rounds: {
+        quiz_rounds: {
           orderBy: { roundNumber: 'desc' },
           take: 1,
         },
@@ -264,11 +264,11 @@ export async function DELETE(
       )
     }
 
-    if (session.rounds.length === 0) {
+    if (session.quiz_rounds.length === 0) {
       return NextResponse.json({ success: false, error: 'No rounds to undo' }, { status: 400 })
     }
 
-    const lastRound = session.rounds[0]
+    const lastRound = session.quiz_rounds[0]
 
     // Verify round number matches to prevent race conditions
     if (lastRound.roundNumber !== session.currentRound) {

@@ -299,7 +299,7 @@ export async function getTopPerformers(
         userId: true,
         freeUserId: true,
         totalScore: true,
-        user: {
+        users: {
           select: { name: true },
         },
         free_users: {
@@ -323,7 +323,7 @@ export async function getTopPerformers(
     for (const session of sessions) {
       const userId = session.userId || session.freeUserId
       const userType = session.userId ? 'user' : 'freeUser'
-      const userName = session.user?.name || session.free_users?.name
+      const userName = session.users?.name || session.free_users?.name
 
       if (!userId) continue
 

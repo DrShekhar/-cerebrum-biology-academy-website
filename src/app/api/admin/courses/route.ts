@@ -64,8 +64,7 @@ export async function GET(request: NextRequest) {
           total,
           active: activeCount,
           totalEnrollments: enrollmentStats.reduce((s, e) => s + e._count, 0),
-          activeEnrollments:
-            enrollmentStats.find((e) => e.status === 'ACTIVE')?._count || 0,
+          activeEnrollments: enrollmentStats.find((e) => e.status === 'ACTIVE')?._count || 0,
         },
       },
     })
@@ -195,10 +194,10 @@ export async function PUT(request: NextRequest) {
       data: {
         id: uuidv4(),
         userId: 'admin',
-        courseId: updatedCourse.id,
         action: 'course_updated',
         description: `Course "${validatedData.name}" updated`,
         metadata: {
+          courseId: updatedCourse.id,
           changes: {
             from: {
               name: existingCourse.name,

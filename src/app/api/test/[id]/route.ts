@@ -98,6 +98,10 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
                     questionImage: true,
                     tags: true,
                     relatedConcepts: true,
+                    correctAnswer: true,
+                    explanation: true,
+                    explanationImage: true,
+                    videoExplanation: true,
                   },
                 },
               },
@@ -142,7 +146,9 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     // Prepare questions with user responses
     const questionsWithResponses =
       testSession.test_templates?.question_bank_questions?.map((qbq, index) => {
-        const userResponse = testSession.user_question_responses.find((r) => r.questionId === qbq.questions.id)
+        const userResponse = testSession.user_question_responses.find(
+          (r) => r.questionId === qbq.questions.id
+        )
 
         return {
           index: index + 1,
@@ -180,7 +186,10 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 
     // Calculate real-time statistics
     const correctAnswers = testSession.user_question_responses.filter((r) => r.isCorrect).length
-    const currentScore = testSession.user_question_responses.reduce((sum, r) => sum + r.marksAwarded, 0)
+    const currentScore = testSession.user_question_responses.reduce(
+      (sum, r) => sum + r.marksAwarded,
+      0
+    )
     const totalMarks = testSession.test_templates?.totalMarks || 0
     const accuracy = answeredQuestions > 0 ? (correctAnswers / answeredQuestions) * 100 : 0
 

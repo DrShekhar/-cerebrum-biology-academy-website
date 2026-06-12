@@ -26,10 +26,10 @@ export async function GET(request: NextRequest, { params }: { params: { orderId:
     const payment = await prisma.payments.findFirst({
       where: { razorpayOrderId: orderId },
       include: {
-        user: true,
-        enrollment: {
+        users: true,
+        enrollments: {
           include: {
-            course: true,
+            courses: true,
           },
         },
       },
@@ -57,10 +57,10 @@ export async function GET(request: NextRequest, { params }: { params: { orderId:
       receiptNumber: `CBA-${payment.id.substring(0, 8).toUpperCase()}`,
       date:
         payment.completedAt?.toLocaleDateString('en-IN') || new Date().toLocaleDateString('en-IN'),
-      customerName: payment.user.name,
-      customerEmail: payment.user.email,
-      customerPhone: payment.user.phone || 'N/A',
-      courseName: payment.enrollment?.course.name || 'Course',
+      customerName: payment.users.name,
+      customerEmail: payment.users.email,
+      customerPhone: payment.users.phone || 'N/A',
+      courseName: payment.enrollments?.courses.name || 'Course',
       orderId: payment.razorpayOrderId || 'N/A',
       paymentId: payment.razorpayPaymentId || 'N/A',
       amount: payment.amount / 100,

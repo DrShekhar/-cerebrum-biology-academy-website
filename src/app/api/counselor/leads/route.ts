@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { authenticateCounselor } from '@/lib/auth/counselor-auth'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
-import type { LeadStage, Priority } from '@/generated/prisma'
+import type { LeadStage, Priority, LeadSource } from '@/generated/prisma'
 import { AgentType } from '@/generated/prisma'
 import { AgentTaskManager } from '@/lib/crm-agents/base'
 import { WebhookService } from '@/lib/webhooks/webhookService'
@@ -153,9 +153,11 @@ export async function POST(request: NextRequest) {
       data: {
         id: `lead_${Date.now()}_${Math.floor(Math.random() * 1000)}`,
         ...validatedData,
+        source: validatedData.source ? (validatedData.source as LeadSource) : undefined,
         assignedToId: session.userId,
         stage: 'NEW_LEAD',
         priority: validatedData.priority || 'WARM',
+        updatedAt: new Date(),
       },
       include: {
         users: {

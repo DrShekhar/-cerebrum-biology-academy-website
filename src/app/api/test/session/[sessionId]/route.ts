@@ -169,6 +169,7 @@ export async function PUT(
         try {
           await prisma.analytics_events.create({
             data: {
+              id: `ae_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
               userId: session.userId,
               eventType: 'test',
               eventName: 'test_session_status_changed',
@@ -318,6 +319,7 @@ export async function POST(
           })
         : await prisma.user_question_responses.create({
             data: {
+              id: `uqr_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
               userId: session.userId,
               questionId,
               testSessionId: sessionId,
@@ -369,6 +371,7 @@ export async function POST(
       try {
         await prisma.analytics_events.create({
           data: {
+            id: `ae_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
             userId: session.userId,
             eventType: 'test',
             eventName: 'question_answered',
@@ -475,6 +478,8 @@ async function updateUserProgress(
       // Create new progress record
       await prisma.user_progress.create({
         data: {
+          id: `up_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+          updatedAt: new Date(),
           userId,
           topic: question.topic,
           subtopic: question.subtopic,

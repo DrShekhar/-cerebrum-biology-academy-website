@@ -19,7 +19,7 @@ async function getCertificate(id: string, studentId: string) {
       studentId,
     },
     include: {
-      course: {
+      courses: {
         select: {
           id: true,
           name: true,
@@ -27,7 +27,7 @@ async function getCertificate(id: string, studentId: string) {
           description: true,
         },
       },
-      enrollment: {
+      enrollments: {
         select: {
           id: true,
           status: true,
@@ -35,14 +35,14 @@ async function getCertificate(id: string, studentId: string) {
           currentProgress: true,
         },
       },
-      student: {
+      users: {
         select: {
           id: true,
           name: true,
           email: true,
         },
       },
-      template: true,
+      certificate_templates: true,
     },
   })
 
@@ -185,7 +185,7 @@ export default async function CertificateDetailPage({ params }: PageProps) {
                         <div className="space-y-1">
                           {certificate.instructorNames.map((name, index) => (
                             <p key={index} className="font-semibold text-gray-900">
-                              {name}
+                              {String(name)}
                             </p>
                           ))}
                         </div>
@@ -209,7 +209,7 @@ export default async function CertificateDetailPage({ params }: PageProps) {
                         className="inline-flex items-center gap-1 px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium"
                       >
                         <Award className="w-4 h-4" />
-                        {achievement}
+                        {String(achievement)}
                       </span>
                     ))}
                   </div>

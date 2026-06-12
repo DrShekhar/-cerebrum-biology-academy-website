@@ -111,6 +111,7 @@ export class SecurityAuditLogger {
 
       await prisma.security_audit_logs.create({
         data: {
+          id: `audit_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           eventType: event.eventType as any,
           userId: event.userId || null,
           userEmail: event.userEmail || null,

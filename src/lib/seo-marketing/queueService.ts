@@ -6,6 +6,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
+import { Prisma } from '@/generated/prisma'
 import { logger } from '@/lib/utils/logger'
 import type {
   ContentGenerationType,
@@ -82,6 +83,8 @@ export async function getOrCreateMonthlyLimits(): Promise<MonthlyLimits> {
   if (!limits) {
     limits = await prisma.content_generation_limits.create({
       data: {
+        id: `cglimit_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         month,
         maxMonthlyCostUsd: DEFAULT_MONTHLY_COST_LIMIT,
       },
@@ -196,6 +199,8 @@ export async function addToQueue(input: QueueAddInput): Promise<QueueItem | null
 
   const item = await prisma.content_generation_queue.create({
     data: {
+      id: `cgqueue_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+      updatedAt: new Date(),
       type,
       triggerSource,
       topic,
@@ -296,8 +301,12 @@ export async function updateQueueStatus(
       where: { id },
       data: {
         status,
+        updatedAt: new Date(),
         ...(iterationCount !== undefined && { iterationCount }),
         ...additionalData,
+        ...(additionalData?.generatedMeta !== undefined && {
+          generatedMeta: additionalData.generatedMeta as Prisma.InputJsonValue,
+        }),
       },
     })
 
@@ -358,6 +367,8 @@ export async function recordTokenUsage(
   await prisma.content_generation_limits.upsert({
     where: { month },
     create: {
+      id: `cglimit_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+      updatedAt: new Date(),
       month,
       tokensUsed: totalTokens,
       costUsd: cost,

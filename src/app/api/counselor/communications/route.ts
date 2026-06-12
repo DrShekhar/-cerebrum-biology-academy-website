@@ -150,6 +150,7 @@ export async function POST(request: NextRequest) {
     const communication = await prisma.crm_communications.create({
       data: {
         ...validatedData,
+        id: `comm_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         sentById: session.userId,
         status: 'SENT',
       },

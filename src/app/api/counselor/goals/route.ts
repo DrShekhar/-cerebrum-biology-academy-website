@@ -268,6 +268,7 @@ export async function POST(req: NextRequest) {
 
     const goal = await prisma.counselor_goals.create({
       data: {
+        id: `goal_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         counselorId: session.user.id,
         goalType: validatedData.goalType,
         period: validatedData.period,
@@ -275,6 +276,7 @@ export async function POST(req: NextRequest) {
         startDate,
         endDate,
         status: 'ACTIVE',
+        updatedAt: new Date(),
       },
     })
 

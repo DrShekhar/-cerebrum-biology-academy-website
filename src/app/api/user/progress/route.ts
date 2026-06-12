@@ -130,12 +130,12 @@ async function calculateUserProgress(userId: string): Promise<UserProgressRespon
     const user = await prisma.free_users.findUnique({
       where: { id: userId },
       include: {
-        testAttempts: {
+        test_attempts: {
           where: { status: 'COMPLETED' },
           orderBy: { submittedAt: 'desc' },
           take: 50,
         },
-        userProgress: true,
+        user_progress: true,
       },
     })
 
@@ -145,7 +145,7 @@ async function calculateUserProgress(userId: string): Promise<UserProgressRespon
     }
 
     // Calculate biology score (average of recent tests)
-    const recentTests = user.testAttempts.slice(0, 10)
+    const recentTests = user.test_attempts.slice(0, 10)
     const biologyTests = recentTests.filter((t) =>
       ['biology', 'botany', 'zoology'].includes(t.difficulty?.toLowerCase() || '')
     )
@@ -228,13 +228,13 @@ async function calculateUserProgress(userId: string): Promise<UserProgressRespon
     const syllabusPercentage = totalTopics > 0 ? (completedTopics / totalTopics) * 100 : 0
 
     // Study hours calculation
-    const totalTimeSpent = user.testAttempts.reduce((sum, t) => sum + (t.timeSpent || 0), 0)
+    const totalTimeSpent = user.test_attempts.reduce((sum, t) => sum + (t.timeSpent || 0), 0)
     const totalHours = Math.round(totalTimeSpent / 3600)
 
     // Calculate this week's study time
     const oneWeekAgo = new Date()
     oneWeekAgo.setDate(oneWeekAgo.getDate() - 7)
-    const thisWeekTests = user.testAttempts.filter(
+    const thisWeekTests = user.test_attempts.filter(
       (t) => t.submittedAt && t.submittedAt >= oneWeekAgo
     )
     const thisWeekTime = thisWeekTests.reduce((sum, t) => sum + (t.timeSpent || 0), 0)
@@ -248,7 +248,7 @@ async function calculateUserProgress(userId: string): Promise<UserProgressRespon
     }
 
     // Strong areas (topics with high mastery)
-    const strongAreas: StrongArea[] = user.userProgress
+    const strongAreas: StrongArea[] = user.user_progress
       .filter((p) => p.masteryScore >= 80 && p.accuracy >= 80)
       .sort((a, b) => b.masteryScore - a.masteryScore)
       .slice(0, 5)
@@ -259,7 +259,7 @@ async function calculateUserProgress(userId: string): Promise<UserProgressRespon
       }))
 
     // Weak areas (topics needing improvement)
-    const weakAreas: WeakArea[] = user.userProgress
+    const weakAreas: WeakArea[] = user.user_progress
       .filter((p) => p.masteryScore < 60 || p.accuracy < 70)
       .sort((a, b) => a.masteryScore - b.masteryScore)
       .slice(0, 5)

@@ -1035,6 +1035,8 @@ export async function POST() {
         const created = await prisma.biology_topics.create({
           data: {
             ...topic,
+            id: `topic_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+            updatedAt: new Date(),
             isPublished: true,
             publishedAt: new Date(),
           },

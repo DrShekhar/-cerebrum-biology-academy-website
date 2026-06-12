@@ -245,13 +245,13 @@ export class ExportService {
    * Export class analytics (for teachers)
    */
   async exportClassAnalytics(grade: string, options: ExportOptions): Promise<ExportData> {
-    const students = await db.freeUser.findMany({
+    const students = await db.free_users.findMany({
       where: {
         grade,
         ...(options.filters?.grade && { grade: options.filters.grade }),
       },
       include: {
-        testAttempts: {
+        test_attempts: {
           where: {
             status: 'COMPLETED',
             submittedAt: {
@@ -272,10 +272,10 @@ export class ExportService {
     const data: any[] = []
 
     // Class overview
-    const totalTests = students.reduce((sum, student) => sum + student.testAttempts.length, 0)
+    const totalTests = students.reduce((sum, student) => sum + student.test_attempts.length, 0)
     const totalScore = students.reduce(
       (sum, student) =>
-        sum + student.testAttempts.reduce((testSum, test) => testSum + test.percentage, 0),
+        sum + student.test_attempts.reduce((testSum, test) => testSum + test.percentage, 0),
       0
     )
     const classAverage = totalTests > 0 ? totalScore / totalTests : 0
@@ -300,7 +300,7 @@ export class ExportService {
 
     // Student-wise performance
     students.forEach((student) => {
-      const studentTests = student.testAttempts
+      const studentTests = student.test_attempts
       const studentAverage =
         studentTests.length > 0
           ? studentTests.reduce((sum, test) => sum + test.percentage, 0) / studentTests.length
@@ -618,11 +618,11 @@ export class ExportService {
     }
 
     students.forEach((student) => {
-      if (student.testAttempts.length === 0) return
+      if (student.test_attempts.length === 0) return
 
       const average =
-        student.testAttempts.reduce((sum: number, test: any) => sum + test.percentage, 0) /
-        student.testAttempts.length
+        student.test_attempts.reduce((sum: number, test: any) => sum + test.percentage, 0) /
+        student.test_attempts.length
 
       if (average <= 20) scoreRanges['0-20']++
       else if (average <= 40) scoreRanges['21-40']++

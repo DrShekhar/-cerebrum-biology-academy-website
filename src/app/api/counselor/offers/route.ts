@@ -21,7 +21,7 @@ async function handleGET(request: NextRequest, session: any) {
     const status = searchParams.get('status')
 
     const where: any = {
-      lead: {
+      leads: {
         assignedToId: session.userId,
       },
     }
@@ -37,7 +37,7 @@ async function handleGET(request: NextRequest, session: any) {
     const offers = await prisma.offers.findMany({
       where,
       include: {
-        lead: {
+        leads: {
           select: {
             id: true,
             studentName: true,
@@ -46,7 +46,7 @@ async function handleGET(request: NextRequest, session: any) {
             stage: true,
           },
         },
-        createdBy: {
+        users: {
           select: {
             id: true,
             name: true,
@@ -59,7 +59,11 @@ async function handleGET(request: NextRequest, session: any) {
 
     return NextResponse.json({
       success: true,
-      data: offers,
+      data: offers.map(({ leads, users, ...rest }) => ({
+        ...rest,
+        lead: leads,
+        createdBy: users,
+      })),
       count: offers.length,
     })
   } catch (error) {
@@ -121,18 +125,22 @@ async function handlePOST(request: NextRequest, session: any) {
 
     const offer = await prisma.offers.create({
       data: {
+        id: `offer_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         leadId: validatedData.leadId,
         offerCode: validatedData.offerCode,
+        offerName: validatedData.offerCode,
+        courseName: '',
+        originalPrice: new Decimal(0),
+        finalPrice: new Decimal(0),
         discountValue: new Decimal(validatedData.discountValue),
-        discountType: validatedData.discountType,
+        discountType: validatedData.discountType === 'FLAT' ? 'FIXED_AMOUNT' : 'PERCENTAGE',
         validUntil: new Date(validatedData.validUntil),
-        courseId: validatedData.courseId,
-        terms: validatedData.terms,
-        status: 'PENDING',
+        termsConditions: validatedData.terms,
+        status: 'SENT',
         createdById: session.userId,
       },
       include: {
-        lead: {
+        leads: {
           select: {
             id: true,
             studentName: true,
@@ -150,6 +158,7 @@ async function handlePOST(request: NextRequest, session: any) {
 
     await prisma.activities.create({
       data: {
+        id: `act_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         userId: session.userId,
         leadId: validatedData.leadId,
         action: 'OFFER_CREATED',
@@ -157,10 +166,11 @@ async function handlePOST(request: NextRequest, session: any) {
       },
     })
 
+    const { leads: offerLead, ...offerRest } = offer
     return NextResponse.json(
       {
         success: true,
-        data: offer,
+        data: { ...offerRest, lead: offerLead },
         message: 'Offer created successfully',
       },
       { status: 201 }

@@ -157,6 +157,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
     try {
       await prisma.analytics_events.create({
         data: {
+          id: `evt_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: session.userId,
           eventType: 'security',
           eventName: 'password_changed',

@@ -32,7 +32,7 @@ export async function GET(request: NextRequest, { params }: { params: { code: st
         revokedAt: true,
         revokeReason: true,
         qrCodeUrl: true,
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,

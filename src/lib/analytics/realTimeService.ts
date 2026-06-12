@@ -29,7 +29,7 @@ export class RealTimeAnalyticsService {
     this.activeSessions.set(sessionData.sessionId, updated)
 
     // Update database
-    await db.testSession
+    await db.test_sessions
       .update({
         where: { sessionToken: sessionData.sessionId },
         data: {
@@ -81,7 +81,7 @@ export class RealTimeAnalyticsService {
     const today = new Date()
     today.setHours(0, 0, 0, 0)
 
-    const todayTests = await db.testAttempt.findMany({
+    const todayTests = await db.test_attempts.findMany({
       where: {
         submittedAt: {
           gte: today,
@@ -97,16 +97,16 @@ export class RealTimeAnalyticsService {
         : 0
 
     // Get popular topics from recent sessions
-    const recentTests = await db.testAttempt.findMany({
+    const recentTests = await db.test_attempts.findMany({
       where: {
         startedAt: {
           gte: new Date(Date.now() - 24 * 60 * 60 * 1000), // Last 24 hours
         },
       },
       include: {
-        testQuestions: {
+        test_questions: {
           include: {
-            question: true,
+            questions: true,
           },
         },
       },
@@ -115,8 +115,8 @@ export class RealTimeAnalyticsService {
     const topicStats: Record<string, { attempts: number; totalScore: number }> = {}
 
     recentTests.forEach((test) => {
-      test.testQuestions.forEach((tq) => {
-        const topic = tq.question.topic
+      test.test_questions.forEach((tq) => {
+        const topic = tq.questions.topic
         if (!topicStats[topic]) {
           topicStats[topic] = { attempts: 0, totalScore: 0 }
         }
@@ -135,7 +135,7 @@ export class RealTimeAnalyticsService {
       .slice(0, 10)
 
     // Get overall performance metrics
-    const totalTests = await db.testAttempt.count({
+    const totalTests = await db.test_attempts.count({
       where: { status: 'COMPLETED' },
     })
 
@@ -254,7 +254,7 @@ export class RealTimeAnalyticsService {
     const today = new Date()
     today.setHours(0, 0, 0, 0)
 
-    const todayCompletions = await db.testAttempt.findMany({
+    const todayCompletions = await db.test_attempts.findMany({
       where: {
         submittedAt: {
           gte: today,
@@ -313,7 +313,7 @@ export class RealTimeAnalyticsService {
   async initialize(): Promise<void> {
     try {
       // Load active sessions from database
-      const activeSessions = await db.testSession.findMany({
+      const activeSessions = await db.test_sessions.findMany({
         where: {
           status: 'IN_PROGRESS',
           updatedAt: {

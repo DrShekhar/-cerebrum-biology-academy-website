@@ -162,6 +162,8 @@ export async function POST(request: NextRequest) {
     if (!testTemplateId) {
       const testTemplate = await prisma.test_templates.create({
         data: {
+          id: `tt_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+          updatedAt: new Date(),
           title: `${validatedData.topics.join(', ')} Test - ${validatedData.difficulty}`,
           description: `Auto-generated test for topics: ${validatedData.topics.join(', ')}`,
           slug: `test-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
@@ -188,6 +190,8 @@ export async function POST(request: NextRequest) {
     // Create test session
     const testSession = await prisma.test_sessions.create({
       data: {
+        id: `ts_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         userId: user.id,
         testTemplateId,
         sessionToken: `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -222,6 +226,8 @@ export async function POST(request: NextRequest) {
     // Create question bank for this test session
     const questionBank = await prisma.question_banks.create({
       data: {
+        id: `qb_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         name: `Test Session ${testSession.id} Questions`,
         description: `Questions for test session ${testSession.id}`,
         category: 'CUSTOM',
@@ -240,6 +246,7 @@ export async function POST(request: NextRequest) {
     // Add questions to the question bank
     await prisma.question_bank_questions.createMany({
       data: questions.map((question, index) => ({
+        id: `qbq_${Date.now()}_${index}_${Math.random().toString(36).slice(2, 9)}`,
         questionBankId: questionBank.id,
         questionId: question.id,
         testTemplateId: testTemplateId,

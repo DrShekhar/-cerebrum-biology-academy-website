@@ -34,7 +34,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
             },
           },
           orderBy: {
-            order: 'asc',
+            orderIndex: 'asc',
           },
         },
       },
@@ -64,8 +64,8 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
       passingMarks: test.passingMarks,
       isAdaptive: test.isAdaptive,
       instructions: test.instructions || [],
-      tags: test.tags || [],
-      syllabus: test.syllabus || [],
+      tags: [],
+      syllabus: [],
       questions: test.question_bank_questions.map((tq) => ({
         id: tq.questions.id,
         type: tq.questions.type,
@@ -74,10 +74,10 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
         options: tq.questions.options,
         topic: tq.questions.topic,
         subtopic: tq.questions.subtopic,
-        marks: tq.marks,
+        marks: tq.questions.marks,
         timeLimit: tq.questions.timeLimit,
         questionImage: tq.questions.questionImage,
-        order: tq.order,
+        order: tq.orderIndex,
       })),
     }
 

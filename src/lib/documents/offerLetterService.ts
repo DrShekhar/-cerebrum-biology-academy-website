@@ -38,7 +38,7 @@ class OfferLetterService {
       const lead = await prisma.leads.findUnique({
         where: { id: params.leadId },
         include: {
-          assignedTo: {
+          users: {
             select: {
               id: true,
               name: true,
@@ -234,7 +234,7 @@ class OfferLetterService {
         prisma.leads.findUnique({
           where: { id: leadId },
           include: {
-            assignedTo: {
+            users: {
               select: {
                 id: true,
                 name: true,
@@ -263,7 +263,7 @@ class OfferLetterService {
         }
       }
 
-      const counselor = lead.assignedTo
+      const counselor = lead.users
 
       const originalPrice = Number(offer.originalPrice)
       const discountValue = Number(offer.discountValue)

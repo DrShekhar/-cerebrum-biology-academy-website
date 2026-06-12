@@ -203,6 +203,9 @@ export class DemoBookingService {
         // Create new user
         user = await prisma.users.create({
           data: {
+            id: `user_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+            updatedAt: new Date(),
+            email: `${phoneNumber.replace(/[^0-9]/g, '')}@placeholder.cerebrum.app`,
             phone: phoneNumber,
             name: studentDetails.name || 'WhatsApp Student',
             role: 'STUDENT',
@@ -213,6 +216,8 @@ export class DemoBookingService {
       // Create demo booking
       const demoBooking = await prisma.demo_bookings.create({
         data: {
+          id: `demo_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+          updatedAt: new Date(),
           userId: user.id,
           studentName: studentDetails.name || user.name,
           phone: phoneNumber,
@@ -253,6 +258,7 @@ export class DemoBookingService {
       // Log to communication log
       await prisma.communication_logs.create({
         data: {
+          id: `comlog_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: user.id,
           demoBookingId: demoBooking.id,
           type: 'DEMO_CONFIRMATION',

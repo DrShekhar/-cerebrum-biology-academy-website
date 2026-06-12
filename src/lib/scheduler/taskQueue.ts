@@ -244,8 +244,10 @@ export class TaskScheduler {
       await prisma.demo_bookings.update({
         where: { id: bookingId },
         data: {
-          metadata: {
-            ...(booking.metadata as any),
+          // demo_bookings has no `metadata` column; `notificationsSent` (Json)
+          // is the schema field used to track sent notifications.
+          notificationsSent: {
+            ...(booking.notificationsSent as any),
             [`${type}Sent`]: new Date().toISOString(),
           },
         },

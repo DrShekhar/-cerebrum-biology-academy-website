@@ -50,8 +50,8 @@ export async function verifyHostToken(
   const session = await prisma.quiz_sessions.findUnique({
     where: { roomCode: roomCode.toUpperCase() },
     include: {
-      participants: true,
-      rounds: {
+      quiz_participants: true,
+      quiz_rounds: {
         orderBy: { roundNumber: 'desc' },
         take: 10,
       },

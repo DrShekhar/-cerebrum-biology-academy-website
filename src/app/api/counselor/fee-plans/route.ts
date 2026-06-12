@@ -44,7 +44,7 @@ async function handleGET(request: NextRequest, session: any) {
     const feePlans = await prisma.fee_plans.findMany({
       where,
       include: {
-        lead: {
+        leads: {
           select: {
             id: true,
             studentName: true,
@@ -53,7 +53,7 @@ async function handleGET(request: NextRequest, session: any) {
             stage: true,
           },
         },
-        createdBy: {
+        users: {
           select: {
             id: true,
             name: true,
@@ -63,13 +63,13 @@ async function handleGET(request: NextRequest, session: any) {
         installments: {
           orderBy: { dueDate: 'asc' },
         },
-        payments: {
+        fee_payments: {
           orderBy: { createdAt: 'desc' },
         },
         _count: {
           select: {
             installments: true,
-            payments: true,
+            fee_payments: true,
           },
         },
       },
@@ -78,7 +78,12 @@ async function handleGET(request: NextRequest, session: any) {
 
     return NextResponse.json({
       success: true,
-      data: feePlans,
+      data: feePlans.map(({ leads, users, fee_payments, ...rest }) => ({
+        ...rest,
+        lead: leads,
+        createdBy: users,
+        payments: fee_payments,
+      })),
       count: feePlans.length,
     })
   } catch (error) {
@@ -147,29 +152,33 @@ async function handlePOST(request: NextRequest, session: any) {
 
     const feePlan = await prisma.fee_plans.create({
       data: {
+        id: `feeplan_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         leadId: validatedData.leadId,
         courseId: validatedData.courseId,
         courseName: validatedData.courseName,
         baseFee: new Decimal(validatedData.baseFee),
         discount: new Decimal(validatedData.discount),
-        discountType: validatedData.discountType,
+        discountType: validatedData.discountType === 'FLAT' ? 'FIXED_AMOUNT' : 'PERCENTAGE',
         totalFee: new Decimal(totalFee),
         amountDue: new Decimal(totalFee),
         planType: validatedData.planType,
         numberOfInstallments: validatedData.numberOfInstallments,
         status: 'PENDING',
         createdById: session.userId,
+        updatedAt: new Date(),
         installments: {
           create: validatedData.installments.map((inst, index) => ({
+            id: `inst_${Date.now()}_${index}_${Math.random().toString(36).slice(2, 9)}`,
+            installmentNumber: index + 1,
             amount: new Decimal(inst.amount),
             dueDate: new Date(inst.dueDate),
-            status: index === 0 ? 'PENDING' : 'SCHEDULED',
-            remindersSent: [],
+            status: 'PENDING' as const,
+            updatedAt: new Date(),
           })),
         },
       },
       include: {
-        lead: {
+        leads: {
           select: {
             id: true,
             studentName: true,
@@ -190,6 +199,7 @@ async function handlePOST(request: NextRequest, session: any) {
 
     await prisma.activities.create({
       data: {
+        id: `act_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         userId: session.userId,
         leadId: validatedData.leadId,
         action: 'FEE_PLAN_CREATED',
@@ -197,10 +207,11 @@ async function handlePOST(request: NextRequest, session: any) {
       },
     })
 
+    const { leads: feePlanLead, ...feePlanRest } = feePlan
     return NextResponse.json(
       {
         success: true,
-        data: feePlan,
+        data: { ...feePlanRest, lead: feePlanLead },
         message: 'Fee plan created successfully',
       },
       { status: 201 }

@@ -111,7 +111,7 @@ async function calculateDashboardStats(userId: string): Promise<DashboardStatsRe
         take: 5,
         orderBy: { createdAt: 'asc' },
         include: {
-          testTemplate: {
+          test_templates: {
             select: {
               title: true,
             },
@@ -121,8 +121,18 @@ async function calculateDashboardStats(userId: string): Promise<DashboardStatsRe
     ])
 
     // Extract values with defaults for failed queries
-    const overallStats = results[0].status === 'fulfilled' ? results[0].value : { _count: { id: 0 }, _avg: { percentage: 0 }, _sum: { questionCount: 0, totalMarks: 0, score: 0, timeSpent: 0 } }
-    const thisWeekStats = results[1].status === 'fulfilled' ? results[1].value : { _count: { id: 0 }, _sum: { questionCount: 0, timeSpent: 0 } }
+    const overallStats =
+      results[0].status === 'fulfilled'
+        ? results[0].value
+        : {
+            _count: { id: 0 },
+            _avg: { percentage: 0 },
+            _sum: { questionCount: 0, totalMarks: 0, score: 0, timeSpent: 0 },
+          }
+    const thisWeekStats =
+      results[1].status === 'fulfilled'
+        ? results[1].value
+        : { _count: { id: 0 }, _sum: { questionCount: 0, timeSpent: 0 } }
     const recentTests = results[2].status === 'fulfilled' ? results[2].value : []
     const upcomingTestSessions = results[3].status === 'fulfilled' ? results[3].value : []
 
@@ -174,7 +184,7 @@ async function calculateDashboardStats(userId: string): Promise<DashboardStatsRe
 
     const upcomingTests = upcomingTestSessions.map((session) => ({
       id: session.id,
-      title: session.testTemplate?.title || 'Upcoming Test',
+      title: session.test_templates?.title || 'Upcoming Test',
       scheduledDate: session.createdAt,
     }))
 
@@ -275,8 +285,14 @@ export const GET = withOptionalAuth(async (request: NextRequest, session) => {
     ])
 
     // Extract values with defaults for failed queries
-    const lastWeekStatsResult = weeklyResults[0].status === 'fulfilled' ? weeklyResults[0].value : { _avg: { percentage: 0 }, _count: { id: 0 } }
-    const thisWeekStatsResult = weeklyResults[1].status === 'fulfilled' ? weeklyResults[1].value : { _avg: { percentage: 0 }, _count: { id: 0 } }
+    const lastWeekStatsResult =
+      weeklyResults[0].status === 'fulfilled'
+        ? weeklyResults[0].value
+        : { _avg: { percentage: 0 }, _count: { id: 0 } }
+    const thisWeekStatsResult =
+      weeklyResults[1].status === 'fulfilled'
+        ? weeklyResults[1].value
+        : { _avg: { percentage: 0 }, _count: { id: 0 } }
 
     const lastWeekAvg = lastWeekStatsResult._avg.percentage || 0
     const thisWeekAvg = thisWeekStatsResult._avg.percentage || 0

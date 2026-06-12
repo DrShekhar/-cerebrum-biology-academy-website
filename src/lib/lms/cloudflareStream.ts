@@ -402,6 +402,8 @@ export async function createVideoLecture(data: {
 }) {
   return prisma.video_lectures.create({
     data: {
+      id: `vidlec_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+      updatedAt: new Date(),
       studyMaterialId: data.studyMaterialId,
       cloudflareVideoId: data.cloudflareVideoId,
       title: data.title,
@@ -434,8 +436,8 @@ export async function getVideoForPlayback(
   const videoLecture = await prisma.video_lectures.findUnique({
     where: { id: videoLectureId },
     include: {
-      chapters: { orderBy: { orderIndex: 'asc' } },
-      progress: { where: { userId }, take: 1 },
+      video_chapters: { orderBy: { orderIndex: 'asc' } },
+      video_progress: { where: { userId }, take: 1 },
     },
   })
 
@@ -459,10 +461,12 @@ export async function getVideoForPlayback(
   }
 
   // Get or create progress record
-  let progress = videoLecture.progress[0]
+  let progress = videoLecture.video_progress[0]
   if (!progress) {
     progress = await prisma.video_progress.create({
       data: {
+        id: `vidprog_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         videoLectureId,
         userId,
         firstWatchedAt: new Date(),
@@ -481,7 +485,7 @@ export async function getVideoForPlayback(
     videoUrl,
     thumbnail: videoLecture.cloudflareThumbUrl || undefined,
     duration: videoLecture.duration,
-    chapters: videoLecture.chapters.map((c) => ({
+    chapters: videoLecture.video_chapters.map((c) => ({
       title: c.title,
       startTime: c.startTime,
     })),
@@ -531,6 +535,8 @@ export async function updateVideoProgress(
       ...(data.isCompleted && { completedAt: new Date() }),
     },
     create: {
+      id: `vidprog_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+      updatedAt: new Date(),
       videoLectureId,
       userId,
       lastPosition: data.currentPosition,

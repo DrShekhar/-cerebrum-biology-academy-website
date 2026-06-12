@@ -44,7 +44,7 @@ async function handlePOST(req: NextRequest, session: any) {
     const lead = await prisma.leads.findUnique({
       where: { id: leadId },
       include: {
-        communications: {
+        crm_communications: {
           orderBy: { sentAt: 'desc' },
           take: 5, // Last 5 communications for context
         },
@@ -57,7 +57,7 @@ async function handlePOST(req: NextRequest, session: any) {
           take: 3,
         },
         offers: {
-          where: { status: 'PENDING' },
+          where: { status: 'SENT' },
           orderBy: { createdAt: 'desc' },
           take: 1,
         },
@@ -71,14 +71,14 @@ async function handlePOST(req: NextRequest, session: any) {
     // Build lead context for AI
     const leadContext: LeadContext = {
       studentName: lead.studentName,
-      parentName: lead.parentName || undefined,
+      parentName: undefined,
       phone: lead.phone,
       email: lead.email || undefined,
       stage: lead.stage,
       priority: (lead.priority as 'HOT' | 'WARM' | 'COLD') || 'WARM',
       source: lead.source || undefined,
       lastContactedAt: lead.lastContactedAt || undefined,
-      communicationHistory: lead.communications.map((comm) => ({
+      communicationHistory: lead.crm_communications.map((comm) => ({
         type: comm.type,
         message: comm.message,
         sentAt: comm.sentAt,
@@ -105,10 +105,8 @@ async function handlePOST(req: NextRequest, session: any) {
       customInstructions: customInstructions,
     }
 
-
     // Generate message using AI service
     const result = await generateWhatsAppMessage(leadContext, options)
-
 
     return NextResponse.json({
       success: true,

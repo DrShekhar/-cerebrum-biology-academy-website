@@ -62,6 +62,7 @@ export async function POST(req: NextRequest) {
     // Create registration record with PENDING status
     const registration = await prisma.seminar_registrations.create({
       data: {
+        id: `sem_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         parentName,
         email,
         whatsappNumber: whatsappNumber.replace(/\D/g, ''), // Store only digits
@@ -83,6 +84,7 @@ export async function POST(req: NextRequest) {
         utmCampaign: req.headers.get('x-utm-campaign') || null,
         ipAddress: req.headers.get('x-forwarded-for')?.split(',')[0] || null,
         userAgent: req.headers.get('user-agent') || null,
+        updatedAt: new Date(),
       },
     })
 

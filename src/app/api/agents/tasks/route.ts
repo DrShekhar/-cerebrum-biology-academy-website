@@ -51,7 +51,7 @@ export async function GET(request: NextRequest) {
         take: limit,
         skip: offset,
         include: {
-          lead: {
+          leads: {
             select: {
               id: true,
               studentName: true,
@@ -63,13 +63,19 @@ export async function GET(request: NextRequest) {
       prisma.agent_tasks.count({ where }),
     ])
 
+    // Preserve the original `lead` response key after the relation rename.
+    const tasksWithLead = tasks.map(({ leads, ...rest }: any) => ({
+      ...rest,
+      lead: leads,
+    }))
+
     // Get stats
     const stats = await AgentTaskManager.getStats()
 
     return NextResponse.json({
       success: true,
       data: {
-        tasks,
+        tasks: tasksWithLead,
         pagination: {
           total,
           limit,

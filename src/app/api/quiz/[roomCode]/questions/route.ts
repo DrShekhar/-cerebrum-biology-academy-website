@@ -73,7 +73,7 @@ export async function GET(
       )
     }
 
-    const settings = session.scoringRules as QuizSettings
+    const settings = session.scoringRules as unknown as QuizSettings
     const chapters = settings?.chapters || []
     const classId = settings?.classId || 'class-11'
     const questionCount = settings?.questionCount || 20
@@ -170,7 +170,7 @@ export async function POST(
     }
     const session = authResult.session
 
-    const settings = session.scoringRules as QuizSettings
+    const settings = session.scoringRules as unknown as QuizSettings
     const chapters = settings?.chapters || []
     const classId = settings?.classId || 'class-11'
     const questionCount = settings?.questionCount || 20

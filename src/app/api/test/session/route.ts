@@ -79,6 +79,8 @@ export const POST = withAuth(async (request: NextRequest, session) => {
     // Create test session in database
     const testSession = await prisma.test_sessions.create({
       data: {
+        id: `ts_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         userId: session.userId,
         testTemplateId,
         sessionToken,
@@ -97,9 +99,9 @@ export const POST = withAuth(async (request: NextRequest, session) => {
       const template = await prisma.test_templates.findUnique({
         where: { id: testTemplateId },
         include: {
-          questionBank: {
+          question_bank_questions: {
             include: {
-              question: true,
+              questions: true,
             },
             take: questionCount,
             orderBy: { orderIndex: 'asc' },
@@ -108,7 +110,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
       })
 
       if (template) {
-        questions = template.questionBank.map((qb) => qb.question)
+        questions = template.question_bank_questions.map((qb) => qb.questions)
       }
     } else {
       // Generate questions based on criteria
@@ -135,6 +137,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
     // Create test attempt record
     const testAttempt = await prisma.test_attempts.create({
       data: {
+        id: `ta_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         freeUserId: session.userId, // Assuming both regular and free users
         testTemplateId,
         title,
@@ -155,6 +158,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
     for (let i = 0; i < questions.length; i++) {
       await prisma.test_questions.create({
         data: {
+          id: `tq_${Date.now()}_${i}_${Math.random().toString(36).slice(2, 9)}`,
           testAttemptId: testAttempt.id,
           questionId: questions[i].id,
           timeSpent: 0,
@@ -167,6 +171,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
     try {
       await prisma.analytics_events.create({
         data: {
+          id: `ae_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: session.userId,
           eventType: 'test',
           eventName: 'test_session_created',

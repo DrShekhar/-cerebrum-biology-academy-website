@@ -22,12 +22,12 @@ async function handlePOST(request: NextRequest, session: UserSession, { params }
     }
 
     const result = await prisma.$transaction(async (tx) => {
-      const installment = await tx.installment.findUnique({
+      const installment = await tx.installments.findUnique({
         where: { id: installmentId },
         include: {
-          feePlan: {
+          fee_plans: {
             include: {
-              lead: {
+              leads: {
                 select: {
                   id: true,
                   studentName: true,
@@ -52,7 +52,7 @@ async function handlePOST(request: NextRequest, session: UserSession, { params }
         throw new Error('Installment already marked as paid')
       }
 
-      const updatedInstallment = await tx.installment.update({
+      const updatedInstallment = await tx.installments.update({
         where: { id: installmentId },
         data: {
           status: 'PAID',
@@ -60,8 +60,10 @@ async function handlePOST(request: NextRequest, session: UserSession, { params }
         },
       })
 
-      const feePayment = await tx.feePayment.create({
+      const feePayment = await tx.fee_payments.create({
         data: {
+          id: `feepay_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+          feePlanId: installment.feePlanId,
           installmentId,
           amount: paidAmount,
           paymentMethod,
@@ -71,7 +73,7 @@ async function handlePOST(request: NextRequest, session: UserSession, { params }
         },
       })
 
-      const updatedFeePlan = await tx.feePlan.update({
+      const updatedFeePlan = await tx.fee_plans.update({
         where: { id: installment.feePlanId },
         data: {
           amountPaid: {
@@ -89,24 +91,26 @@ async function handlePOST(request: NextRequest, session: UserSession, { params }
       const allPaid = updatedFeePlan.installments.every((inst) => inst.status === 'PAID')
 
       if (allPaid) {
-        await tx.feePlan.update({
+        await tx.fee_plans.update({
           where: { id: updatedFeePlan.id },
           data: {
-            status: 'FULLY_PAID',
+            status: 'COMPLETED',
           },
         })
 
-        await tx.lead.update({
-          where: { id: installment.feePlan.leadId },
+        await tx.leads.update({
+          where: { id: installment.fee_plans.leadId },
           data: {
             stage: 'ENROLLED',
           },
         })
 
-        await tx.activity.create({
+        await tx.activities.create({
           data: {
-            type: 'PAYMENT_RECEIVED',
-            leadId: installment.feePlan.leadId,
+            id: `act_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+            userId: session.userId!,
+            action: 'PAYMENT_RECEIVED',
+            leadId: installment.fee_plans.leadId,
             description: `Payment of ₹${paidAmount} received. Fee plan fully paid - Student enrolled!`,
             metadata: {
               installmentId,
@@ -118,10 +122,12 @@ async function handlePOST(request: NextRequest, session: UserSession, { params }
           },
         })
       } else {
-        await tx.activity.create({
+        await tx.activities.create({
           data: {
-            type: 'PAYMENT_RECEIVED',
-            leadId: installment.feePlan.leadId,
+            id: `act_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+            userId: session.userId!,
+            action: 'PAYMENT_RECEIVED',
+            leadId: installment.fee_plans.leadId,
             description: `Payment of ₹${paidAmount} received for installment #${installment.installmentNumber}`,
             metadata: {
               installmentId,
@@ -139,7 +145,7 @@ async function handlePOST(request: NextRequest, session: UserSession, { params }
         payment: feePayment,
         feePlan: updatedFeePlan,
         enrolled: allPaid,
-        lead: installment.feePlan.lead,
+        lead: installment.fee_plans.leads,
       }
     })
 

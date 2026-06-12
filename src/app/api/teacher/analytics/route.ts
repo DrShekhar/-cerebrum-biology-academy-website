@@ -58,7 +58,7 @@ export async function GET(request: NextRequest) {
             id: true,
             status: true,
             maxMarks: true,
-            submissions: {
+            assignment_submissions: {
               select: {
                 status: true,
                 grade: true,
@@ -83,8 +83,10 @@ export async function GET(request: NextRequest) {
 
         prisma.enrollments.count({
           where: {
-            course: {
-              teacherId,
+            courses: {
+              class_sessions: {
+                some: { teacherId },
+              },
             },
             status: 'ACTIVE',
           },
@@ -92,7 +94,9 @@ export async function GET(request: NextRequest) {
 
         prisma.courses.findMany({
           where: {
-            teacherId,
+            class_sessions: {
+              some: { teacherId },
+            },
             isActive: true,
           },
           select: {
@@ -127,8 +131,8 @@ export async function GET(request: NextRequest) {
     let lateSubmissions = 0
 
     assignmentsData.forEach((assignment) => {
-      totalSubmissions += assignment.submissions.length
-      assignment.submissions.forEach((submission) => {
+      totalSubmissions += assignment.assignment_submissions.length
+      assignment.assignment_submissions.forEach((submission) => {
         if (submission.status === 'GRADED' && submission.grade !== null) {
           gradedSubmissions++
           totalGradePoints += submission.grade

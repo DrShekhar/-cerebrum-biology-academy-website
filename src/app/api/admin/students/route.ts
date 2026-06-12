@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import prisma from '@/lib/prisma'
 import { requireAdminAuth } from '@/lib/auth'
+import type { LeadStage, Priority } from '@/generated/prisma'
 
 export async function GET(request: NextRequest) {
   try {
@@ -295,7 +296,7 @@ export async function POST(request: NextRequest) {
 export async function PUT(request: NextRequest) {
   try {
     // Verify admin authentication
-    await requireAdminAuth()
+    const session = await requireAdminAuth()
 
     const body = await request.json()
 
@@ -317,38 +318,68 @@ export async function PUT(request: NextRequest) {
       )
     }
 
-    // Update student in database
+    // Map the form status/priority to the real LeadStage/Priority enums.
+    const STAGE_MAP: Record<string, LeadStage> = {
+      lead: 'NEW_LEAD',
+      active: 'ACTIVE_STUDENT',
+      enrolled: 'ENROLLED',
+      paused: 'ACTIVE_STUDENT',
+      completed: 'ACTIVE_STUDENT',
+      dropped: 'LOST',
+    }
+    const PRIORITY_MAP: Record<string, Priority> = {
+      high: 'HOT',
+      medium: 'WARM',
+      low: 'COLD',
+    }
+
+    // Update student in database (REAL leads schema). Fields with no column —
+    // whatsappNumber/dateOfBirth/class/school/city/state/parent*/notes/tags —
+    // are folded into a linked note below.
     const updatedStudent = await prisma.leads.update({
       where: { id: validatedData.id },
       data: {
-        name: validatedData.studentName,
+        studentName: validatedData.studentName,
         email: validatedData.email,
         phone: validatedData.phone,
-        whatsappNumber: validatedData.whatsappNumber || null,
-        dateOfBirth: validatedData.dateOfBirth ? new Date(validatedData.dateOfBirth) : null,
-        class: validatedData.class,
-        school: validatedData.school,
-        city: validatedData.city,
-        state: validatedData.state,
-        leadSource: validatedData.leadSource,
-        priority: validatedData.priority.toUpperCase() as any,
-        parentName: validatedData.parentName || null,
-        parentPhone: validatedData.parentPhone || null,
-        notes: validatedData.notes || null,
-        status: validatedData.status.toUpperCase() as any,
-        tags: validatedData.tags || [],
+        source: LEAD_SOURCE_MAP[validatedData.leadSource] || 'MANUAL_ENTRY',
+        priority: PRIORITY_MAP[validatedData.priority] || 'WARM',
+        stage: STAGE_MAP[validatedData.status] || 'NEW_LEAD',
         updatedAt: new Date(),
       },
     })
 
-    // Log activity
+    // Capture the extra detail (school/city/state/parent/DOB/notes) as a note.
+    const noteLines = [
+      validatedData.school && `School: ${validatedData.school}`,
+      (validatedData.city || validatedData.state) &&
+        `Location: ${[validatedData.city, validatedData.state].filter(Boolean).join(', ')}`,
+      validatedData.dateOfBirth && `DOB: ${validatedData.dateOfBirth}`,
+      validatedData.whatsappNumber && `WhatsApp: ${validatedData.whatsappNumber}`,
+      validatedData.parentName && `Parent: ${validatedData.parentName}`,
+      validatedData.parentPhone && `Parent phone: ${validatedData.parentPhone}`,
+      validatedData.notes && `Notes: ${validatedData.notes}`,
+    ].filter(Boolean)
+    if (noteLines.length) {
+      await prisma.notes.create({
+        data: {
+          id: `note_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
+          leadId: updatedStudent.id,
+          content: noteLines.join('\n'),
+          createdById: session.user.id,
+          updatedAt: new Date(),
+        },
+      })
+    }
+
+    // Log activity (real activities schema).
     await prisma.activities.create({
       data: {
-        entityType: 'lead',
-        entityId: updatedStudent.id,
-        action: 'updated',
+        id: `act_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
+        userId: session.user.id,
+        leadId: updatedStudent.id,
+        action: 'LEAD_UPDATED',
         description: `Student ${validatedData.studentName} updated via admin panel`,
-        performedBy: 'admin',
         metadata: {
           source: 'admin_panel',
           studentName: validatedData.studentName,

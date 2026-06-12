@@ -23,7 +23,7 @@ export async function GET(request: NextRequest) {
     if (leadId) {
       where.leadId = leadId
     } else {
-      where.lead = {
+      where.leads = {
         assignedToId: session.userId,
       }
     }
@@ -41,12 +41,12 @@ export async function GET(request: NextRequest) {
     }
 
     if (startDate || endDate) {
-      where.createdAt = {}
+      where.sentAt = {}
       if (startDate) {
-        where.createdAt.gte = new Date(startDate)
+        where.sentAt.gte = new Date(startDate)
       }
       if (endDate) {
-        where.createdAt.lte = new Date(endDate)
+        where.sentAt.lte = new Date(endDate)
       }
     }
 
@@ -54,7 +54,7 @@ export async function GET(request: NextRequest) {
       prisma.followup_history.findMany({
         where,
         include: {
-          lead: {
+          leads: {
             select: {
               id: true,
               studentName: true,
@@ -63,17 +63,8 @@ export async function GET(request: NextRequest) {
               stage: true,
             },
           },
-          rule: {
-            select: {
-              id: true,
-              name: true,
-              description: true,
-              actionType: true,
-              triggerType: true,
-            },
-          },
         },
-        orderBy: { createdAt: 'desc' },
+        orderBy: { sentAt: 'desc' },
         skip: (page - 1) * limit,
         take: limit,
       }),
@@ -83,7 +74,7 @@ export async function GET(request: NextRequest) {
     const statusCounts = await prisma.followup_history.groupBy({
       by: ['status'],
       where: {
-        lead: {
+        leads: {
           assignedToId: session.userId,
         },
       },
@@ -93,7 +84,7 @@ export async function GET(request: NextRequest) {
     const channelCounts = await prisma.followup_history.groupBy({
       by: ['channel'],
       where: {
-        lead: {
+        leads: {
           assignedToId: session.userId,
         },
       },
@@ -112,7 +103,7 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      data: historyItems,
+      data: historyItems.map(({ leads, ...rest }) => ({ ...rest, lead: leads, rule: null })),
       pagination: {
         page,
         limit,

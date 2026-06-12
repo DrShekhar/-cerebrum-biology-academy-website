@@ -14,15 +14,16 @@ export async function POST(request: NextRequest) {
     // WhatsApp message (handled by the WhatsApp inbound flow).
     await prisma.analytics_events.create({
       data: {
+        id: `evt_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         eventType: 'BLOG_WHATSAPP_QUERY',
-        eventData: {
+        eventName: 'blog_whatsapp_query',
+        properties: {
           blogTitle,
           blogSlug,
           neetChapter,
           timestamp,
           source: source || 'blog_whatsapp_query',
         },
-        source: 'blog',
         sessionId: `blog_${Date.now()}`,
       },
     })

@@ -225,7 +225,8 @@ async function handlePaymentSuccess(event: any) {
         })
 
         if (courseMaterials.length > 0) {
-          const materialAccessRecords = courseMaterials.map((material) => ({
+          const materialAccessRecords = courseMaterials.map((material, index) => ({
+            id: `matacc_${Date.now()}_${index}_${Math.random().toString(36).slice(2, 9)}`,
             materialId: material.id,
             userId: paymentRecord.userId,
             grantedBy: 'system',

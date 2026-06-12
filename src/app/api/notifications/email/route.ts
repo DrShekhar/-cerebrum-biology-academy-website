@@ -218,6 +218,7 @@ Thank you for choosing Cerebrum Biology Academy!
         // Create failed communication log
         await prisma.communication_logs.create({
           data: {
+            id: `comlog_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
             userId: enrollment.userId,
             type: 'ENROLLMENT_CONFIRMATION',
             channel: 'EMAIL',
@@ -241,6 +242,7 @@ Thank you for choosing Cerebrum Biology Academy!
       // Create communication log
       await prisma.communication_logs.create({
         data: {
+          id: `comlog_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: enrollment.userId,
           type: 'ENROLLMENT_CONFIRMATION',
           channel: 'EMAIL',
@@ -251,7 +253,6 @@ Thank you for choosing Cerebrum Biology Academy!
           emailMessageId: emailResult.messageId,
         },
       })
-
 
       return NextResponse.json({
         success: true,
@@ -265,6 +266,7 @@ Thank you for choosing Cerebrum Biology Academy!
       // Create failed communication log
       await prisma.communication_logs.create({
         data: {
+          id: `comlog_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: enrollment.userId,
           type: 'ENROLLMENT_CONFIRMATION',
           channel: 'EMAIL',

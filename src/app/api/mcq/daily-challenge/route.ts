@@ -101,7 +101,6 @@ export async function GET(request: NextRequest) {
     } catch (dbError) {
       // If daily_challenges table doesn't exist, return a mock challenge
       if (isTableNotExistError(dbError)) {
-
         // Get random question IDs from official questions
         const questions = await prisma.questions.findMany({
           where: { isActive: true },
@@ -318,6 +317,7 @@ async function createDailyChallenge(date: Date) {
 
   return prisma.daily_challenges.create({
     data: {
+      id: `dc_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
       date,
       questionCount: 5,
       questionIds: selectedIds,

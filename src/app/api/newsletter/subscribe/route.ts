@@ -50,22 +50,6 @@ export async function POST(request: NextRequest) {
 
       if (existingSubscriber) {
         if (existingSubscriber.status === 'active') {
-          // Update WhatsApp number if newly provided
-          if (normalizedWhatsApp && !existingSubscriber.whatsappNumber) {
-            await prisma.newsletterSubscriber.update({
-              where: { email: normalizedEmail },
-              data: {
-                whatsappNumber: normalizedWhatsApp,
-                sendWhatsAppUpdates: sendWhatsAppUpdates ?? false,
-                updatedAt: new Date(),
-              },
-            })
-            return NextResponse.json({
-              success: true,
-              message: 'You are already subscribed! WhatsApp number added for updates.',
-              alreadySubscribed: true,
-            })
-          }
           return NextResponse.json({
             success: true,
             message: 'You are already subscribed to our newsletter!',
@@ -77,8 +61,6 @@ export async function POST(request: NextRequest) {
           where: { email: normalizedEmail },
           data: {
             status: 'active',
-            whatsappNumber: normalizedWhatsApp,
-            sendWhatsAppUpdates: sendWhatsAppUpdates ?? false,
             updatedAt: new Date(),
           },
         })
@@ -91,9 +73,9 @@ export async function POST(request: NextRequest) {
 
       await prisma.newsletterSubscriber.create({
         data: {
+          id: `nws_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+          updatedAt: new Date(),
           email: normalizedEmail,
-          whatsappNumber: normalizedWhatsApp,
-          sendWhatsAppUpdates: sendWhatsAppUpdates ?? false,
           status: 'active',
           source: 'website_footer',
         },

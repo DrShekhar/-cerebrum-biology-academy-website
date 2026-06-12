@@ -41,6 +41,7 @@ export async function POST(request: NextRequest) {
     // Save chat message to database
     const chatHistory = await prisma.chat_history.create({
       data: {
+        id: `chat_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         sessionId: validatedData.sessionId,
         userId: validatedData.userId || null,
         freeUserId: validatedData.freeUserId || null,

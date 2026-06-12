@@ -33,7 +33,7 @@ export async function GET(request: NextRequest) {
       prisma.test_assignment_submissions.findMany({
         where,
         include: {
-          testAssignment: {
+          test_assignments: {
             select: {
               id: true,
               title: true,
@@ -50,7 +50,7 @@ export async function GET(request: NextRequest) {
               dueDate: true,
               availableFrom: true,
               status: true,
-              teacher: {
+              users: {
                 select: {
                   id: true,
                   name: true,
@@ -59,7 +59,7 @@ export async function GET(request: NextRequest) {
             },
           },
         },
-        orderBy: [{ status: 'asc' }, { testAssignment: { dueDate: 'asc' } }],
+        orderBy: [{ status: 'asc' }, { test_assignments: { dueDate: 'asc' } }],
         skip: (page - 1) * limit,
         take: limit,
       }),
@@ -85,7 +85,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       success: true,
       tests: submissions.map((s) => {
-        const assignment = s.testAssignment
+        const assignment = s.test_assignments
         const isAvailable = assignment.availableFrom
           ? new Date(assignment.availableFrom) <= now
           : true
@@ -110,7 +110,7 @@ export async function GET(request: NextRequest) {
           passingMarks: assignment.passingMarks,
           dueDate: assignment.dueDate,
           availableFrom: assignment.availableFrom,
-          teacher: assignment.teacher,
+          teacher: assignment.users,
           status: s.status,
           startedAt: s.startedAt,
           submittedAt: s.submittedAt,

@@ -32,7 +32,7 @@ async function handleGET(req: NextRequest, session: any) {
       where,
       orderBy: [{ usageCount: 'desc' }, { createdAt: 'desc' }],
       include: {
-        createdBy: {
+        users: {
           select: {
             id: true,
             name: true,
@@ -44,7 +44,7 @@ async function handleGET(req: NextRequest, session: any) {
 
     return NextResponse.json({
       success: true,
-      data: templates,
+      data: templates.map(({ users, ...rest }) => ({ ...rest, createdBy: users })),
     })
   } catch (error) {
     console.error('Error fetching templates:', error)
@@ -84,11 +84,13 @@ async function handlePOST(req: NextRequest, session: any) {
 
     const template = await prisma.message_templates.create({
       data: {
+        id: `msgtpl_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         name: validatedData.name,
         type: validatedData.type,
         subject: validatedData.subject || null,
         message: validatedData.message,
         createdById: session.userId,
+        updatedAt: new Date(),
       },
     })
 

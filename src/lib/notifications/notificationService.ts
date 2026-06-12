@@ -285,17 +285,13 @@ class NotificationService {
     try {
       await prisma.crm_communications.create({
         data: {
+          id: `crmcomm_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           leadId: request.leadId,
           type: this.getCommunicationType(request.type),
-          channel: this.getPrimaryChannel(result),
           direction: 'OUTBOUND',
-          content: this.getCommunicationContent(request),
+          message: this.getCommunicationContent(request),
           status: result.success ? 'SENT' : 'FAILED',
-          metadata: {
-            priority: request.priority,
-            channels: result.channels,
-            notificationType: request.type,
-          },
+          sentById: 'system',
         },
       })
     } catch (error) {

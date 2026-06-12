@@ -124,6 +124,7 @@ Happy Learning! 📚`
       // Create communication log
       await prisma.communication_logs.create({
         data: {
+          id: `comlog_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: enrollment.userId,
           type: 'ENROLLMENT_CONFIRMATION',
           channel: 'WHATSAPP',
@@ -153,13 +154,13 @@ Happy Learning! 📚`
           userId: enrollment.userId,
           type: 'ENROLLMENT_CONFIRMATION',
           channel: 'WHATSAPP',
+          id: `comlog_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           content: message,
           status: 'SENT',
           sentAt: new Date(),
           whatsappMessageId: whatsappResponse.messages?.[0]?.id,
         },
       })
-
 
       return NextResponse.json({
         success: true,
@@ -172,6 +173,7 @@ Happy Learning! 📚`
       // Create failed communication log
       await prisma.communication_logs.create({
         data: {
+          id: `comlog_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: enrollment.userId,
           type: 'ENROLLMENT_CONFIRMATION',
           channel: 'WHATSAPP',

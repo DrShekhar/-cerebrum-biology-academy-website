@@ -39,7 +39,7 @@ export async function GET(req: NextRequest) {
 
     const counselors = await prisma.users.findMany({
       where: {
-        role: 'counselor',
+        role: 'COUNSELOR',
       },
       select: {
         id: true,
@@ -134,10 +134,12 @@ export async function GET(req: NextRequest) {
             },
           },
           create: {
+            id: `lb_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
             counselorId: data.counselorId,
             period,
             periodStart,
             periodEnd,
+            updatedAt: new Date(),
             rank: data.rank,
             totalLeads: data.totalLeads,
             conversions: data.conversions,

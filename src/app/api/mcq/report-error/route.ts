@@ -85,18 +85,18 @@ export async function POST(request: NextRequest) {
 
     const freeUser = await prisma.free_users.findUnique({
       where: { id: freeUserId },
-      select: { name: true, phone: true, email: true },
+      select: { name: true, email: true },
     })
 
     if (freeUser) {
       reporterName = freeUser.name || reporterName
-      reporterPhone = freeUser.phone || reporterPhone
       reporterEmail = freeUser.email || reporterEmail
     }
 
     // Create the error report
     const errorReport = await prisma.answer_error_reports.create({
       data: {
+        id: `aer_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         questionId: questionId || null,
         communityQuestionId: communityQuestionId || null,
         reportedBy: freeUserId,

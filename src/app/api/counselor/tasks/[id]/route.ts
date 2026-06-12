@@ -24,7 +24,7 @@ async function handlePATCH(
     const existingTask = await prisma.tasks.findUnique({
       where: { id },
       include: {
-        lead: {
+        leads: {
           select: {
             id: true,
             studentName: true,
@@ -66,7 +66,7 @@ async function handlePATCH(
       where: { id },
       data: updateData,
       include: {
-        lead: {
+        leads: {
           select: {
             id: true,
             studentName: true,
@@ -78,6 +78,7 @@ async function handlePATCH(
     if (task.leadId) {
       await prisma.activities.create({
         data: {
+          id: `act_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: session.userId,
           leadId: task.leadId,
           action: 'TASK_UPDATED',
@@ -86,9 +87,10 @@ async function handlePATCH(
       })
     }
 
+    const { leads: taskLead, ...taskRest } = task
     return NextResponse.json({
       success: true,
-      data: task,
+      data: { ...taskRest, lead: taskLead },
       message: 'Task updated successfully',
     })
   } catch (error) {

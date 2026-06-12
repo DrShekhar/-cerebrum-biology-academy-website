@@ -322,6 +322,7 @@ export async function POST(request: NextRequest) {
         expiresAt: new Date(expiresAt),
         attempts: 0,
         verified: false,
+        updatedAt: new Date(),
       },
     })
 

@@ -358,7 +358,8 @@ export async function processPendingConversions(): Promise<{
         gclid: conversion.gclid,
         conversionAction: conversion.conversionAction as ConversionAction,
         conversionDateTime: conversion.conversionDateTime,
-        conversionValue: conversion.conversionValue || undefined,
+        conversionValue:
+          conversion.conversionValue != null ? Number(conversion.conversionValue) : undefined,
         currencyCode: conversion.currencyCode || undefined,
         orderId: conversion.orderId || undefined,
       })

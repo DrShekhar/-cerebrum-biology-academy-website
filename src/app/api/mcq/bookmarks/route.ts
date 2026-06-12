@@ -138,6 +138,7 @@ export async function POST(request: NextRequest) {
     // Create new bookmark
     const bookmark = await prisma.mcq_bookmarks.create({
       data: {
+        id: `mbk_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         freeUserId,
         questionId,
         note: note || null,

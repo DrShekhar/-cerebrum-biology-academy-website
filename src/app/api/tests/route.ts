@@ -49,12 +49,10 @@ export async function GET(request: NextRequest) {
         totalMarks: true,
         passingMarks: true,
         isAdaptive: true,
-        tags: true,
-        syllabus: true,
         createdAt: true,
         _count: {
           select: {
-            testSessions: true,
+            test_sessions: true,
           },
         },
       },
@@ -73,9 +71,9 @@ export async function GET(request: NextRequest) {
       totalMarks: test.totalMarks,
       passingMarks: test.passingMarks,
       isAdaptive: test.isAdaptive,
-      tags: test.tags || [],
-      syllabus: test.syllabus || [],
-      attemptsCount: test._count.testSessions,
+      tags: [],
+      syllabus: [],
+      attemptsCount: test._count.test_sessions,
       createdAt: test.createdAt.toISOString(),
     }))
 

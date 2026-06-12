@@ -23,20 +23,27 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
 
     const { id } = await params
 
-    const paper = await prisma.omr_papers.findUnique({
+    const rawPaper = await prisma.omr_papers.findUnique({
       where: { id },
       include: {
-        answerKeys: {
+        omr_answer_keys: {
           orderBy: { questionNo: 'asc' },
         },
         _count: {
-          select: { submissions: true },
+          select: { omr_submissions: true },
         },
       },
     })
 
-    if (!paper) {
+    if (!rawPaper) {
       return NextResponse.json({ success: false, error: 'Paper not found' }, { status: 404 })
+    }
+
+    const { omr_answer_keys, _count, ...paperRest } = rawPaper
+    const paper = {
+      ...paperRest,
+      answerKeys: omr_answer_keys,
+      _count: { submissions: _count.omr_submissions },
     }
 
     return NextResponse.json({ success: true, paper })
@@ -114,7 +121,7 @@ export async function DELETE(
     const existingPaper = await prisma.omr_papers.findUnique({
       where: { id },
       include: {
-        _count: { select: { submissions: true } },
+        _count: { select: { omr_submissions: true } },
       },
     })
 
@@ -122,7 +129,7 @@ export async function DELETE(
       return NextResponse.json({ success: false, error: 'Paper not found' }, { status: 404 })
     }
 
-    if (existingPaper._count.submissions > 0) {
+    if (existingPaper._count.omr_submissions > 0) {
       return NextResponse.json(
         {
           success: false,

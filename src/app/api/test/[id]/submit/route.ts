@@ -332,6 +332,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
             // Create new response
             await prisma.user_question_responses.create({
               data: {
+                id: `uqr_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
                 ...(session.role === 'STUDENT'
                   ? { userId: session.userId }
                   : { freeUserId: session.userId }),
@@ -399,6 +400,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
       if (analyticsData) {
         analytics = await tx.test_analytics.create({
           data: {
+            id: `tan_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
             testSessionId,
             ...analyticsData,
             percentileRank,

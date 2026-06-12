@@ -35,7 +35,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     const rule = await prisma.followup_rules.findUnique({
       where: { id: params.id },
       include: {
-        template: {
+        followup_templates: {
           select: {
             id: true,
             name: true,
@@ -43,7 +43,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
             content: true,
           },
         },
-        user: {
+        users_followup_rules_createdByIdTousers: {
           select: {
             id: true,
             name: true,
@@ -84,10 +84,17 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
       cancelled: queueStats.find((s) => s.status === 'CANCELLED')?._count || 0,
     }
 
+    const {
+      followup_templates: ruleTemplate,
+      users_followup_rules_createdByIdTousers: ruleUser,
+      ...ruleRest
+    } = rule
     return NextResponse.json({
       success: true,
       data: {
-        ...rule,
+        ...ruleRest,
+        template: ruleTemplate,
+        user: ruleUser,
         stats,
       },
     })
@@ -160,18 +167,18 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
       where: { id: params.id },
       data: {
         ...validatedData,
-        updatedBy: session.userId,
+        updatedById: session.userId,
         updatedAt: new Date(),
       },
       include: {
-        template: {
+        followup_templates: {
           select: {
             id: true,
             name: true,
             channel: true,
           },
         },
-        user: {
+        users_followup_rules_createdByIdTousers: {
           select: {
             id: true,
             name: true,
@@ -183,15 +190,21 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
 
     await prisma.activities.create({
       data: {
+        id: `act_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         userId: session.userId,
         action: 'FOLLOWUP_RULE_UPDATED',
         description: `Updated follow-up rule: ${updatedRule.name}`,
       },
     })
 
+    const {
+      followup_templates: updatedTemplate,
+      users_followup_rules_createdByIdTousers: updatedUser,
+      ...updatedRest
+    } = updatedRule
     return NextResponse.json({
       success: true,
-      data: updatedRule,
+      data: { ...updatedRest, template: updatedTemplate, user: updatedUser },
       message: 'Follow-up rule updated successfully',
     })
   } catch (error) {
@@ -252,13 +265,14 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
         where: { id: params.id },
         data: {
           isActive: false,
-          updatedBy: session.userId,
+          updatedById: session.userId,
           updatedAt: new Date(),
         },
       })
 
       await prisma.activities.create({
         data: {
+          id: `act_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: session.userId,
           action: 'FOLLOWUP_RULE_DEACTIVATED',
           description: `Deactivated follow-up rule: ${existingRule.name} (has existing queue items)`,
@@ -277,6 +291,7 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
 
       await prisma.activities.create({
         data: {
+          id: `act_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: session.userId,
           action: 'FOLLOWUP_RULE_DELETED',
           description: `Deleted follow-up rule: ${existingRule.name}`,

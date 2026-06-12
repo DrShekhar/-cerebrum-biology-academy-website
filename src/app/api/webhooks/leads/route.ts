@@ -7,6 +7,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { Prisma } from '@/generated/prisma'
 import { z } from 'zod'
 import crypto from 'crypto'
 import { emailService } from '@/lib/email/emailService'
@@ -401,7 +402,7 @@ async function checkDuplicate(
       OR: [{ phone }, email ? { email } : {}].filter(Boolean),
     },
     include: {
-      assignedTo: {
+      users: {
         select: {
           name: true,
           email: true,
@@ -411,9 +412,10 @@ async function checkDuplicate(
   })
 
   if (existingLead) {
+    const { users, ...rest } = existingLead
     return {
       isDuplicate: true,
-      existingLead: existingLead as ExistingLeadRecord,
+      existingLead: { ...rest, assignedTo: users } as ExistingLeadRecord,
     }
   }
 
@@ -430,7 +432,7 @@ async function assignCounselor() {
     include: {
       _count: {
         select: {
-          assignedLeads: {
+          leads: {
             where: {
               stage: {
                 notIn: ['ENROLLED', 'ACTIVE_STUDENT', 'LOST'],
@@ -447,6 +449,8 @@ async function assignCounselor() {
     // Create default counselor if none exists
     return await prisma.users.create({
       data: {
+        id: `user_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         email: 'counselor@cerebrumbiologyacademy.com',
         name: 'Default Counselor',
         role: 'COUNSELOR',
@@ -457,7 +461,7 @@ async function assignCounselor() {
 
   // Round-robin: assign to counselor with fewest active leads
   const counselor = counselors.reduce((prev, current) =>
-    prev._count.assignedLeads < current._count.assignedLeads ? prev : current
+    prev._count.leads < current._count.leads ? prev : current
   )
 
   return counselor
@@ -507,7 +511,7 @@ export async function POST(request: NextRequest) {
           leadId: existingLead.id,
           action: 'DUPLICATE_LEAD_DETECTED',
           description: `Duplicate lead submission from ${source}. Lead already exists with counselor ${existingLead.assignedTo.name}.`,
-          metadata: leadData.metadata,
+          metadata: leadData.metadata as Prisma.InputJsonValue,
         },
       })
 

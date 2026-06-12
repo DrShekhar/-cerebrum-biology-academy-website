@@ -72,18 +72,25 @@ export async function GET(req: NextRequest) {
         },
       }),
 
-      prisma.fee_plans.count({
+      prisma.fee_plans.findMany({
         where: {
           leads: {
             assignedToId: counselorId,
           },
           createdAt: { gte: startDate },
         },
+        select: {
+          totalFee: true,
+        },
       }),
 
-      prisma.fee_payments.count({
+      prisma.fee_payments.findMany({
         where: {
           createdAt: { gte: startDate },
+        },
+        select: {
+          amount: true,
+          status: true,
         },
       }),
 
@@ -128,10 +135,10 @@ export async function GET(req: NextRequest) {
       })
     )
 
-    const totalRevenue = feePlans.reduce((sum, fp) => sum + fp.finalAmount, 0)
+    const totalRevenue = feePlans.reduce((sum, fp) => sum + Number(fp.totalFee), 0)
     const paidRevenue = payments
       .filter((p) => p.status === 'SUCCESS')
-      .reduce((sum, p) => sum + p.amount, 0)
+      .reduce((sum, p) => sum + Number(p.amount), 0)
     const pendingRevenue = totalRevenue - paidRevenue
     const averageDealSize = feePlans.length > 0 ? Math.round(totalRevenue / feePlans.length) : 0
 

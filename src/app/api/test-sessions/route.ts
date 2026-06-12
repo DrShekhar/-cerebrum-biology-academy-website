@@ -47,13 +47,16 @@ export async function POST(request: NextRequest) {
     // Create test session
     const testSession = await prisma.test_sessions.create({
       data: {
+        id: `ts_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         testTemplateId,
         userId,
         freeUserId,
+        sessionToken: `tk_${Date.now()}_${Math.random().toString(36).slice(2, 12)}`,
         status: 'NOT_STARTED',
         timeSpent: 0,
         tabSwitchCount: 0,
         fullscreenExits: 0,
+        updatedAt: new Date(),
       },
       include: {
         test_templates: {
@@ -147,7 +150,7 @@ export async function GET(request: NextRequest) {
           id: ts.id,
           testTemplate: ts.test_templates,
           status: ts.status,
-          score: ts.score,
+          score: ts.totalScore,
           percentage: ts.percentage,
           timeSpent: ts.timeSpent,
           startedAt: ts.startedAt?.toISOString(),

@@ -148,7 +148,7 @@ async function verifySession(session: any): Promise<AdminVerificationResult> {
       }
     }
 
-    if (user.role !== 'ADMIN' && user.role !== 'SUPERADMIN') {
+    if (user.role !== 'ADMIN') {
       logger.warn('Non-admin user attempted admin access', { userId: user.id, email: user.email })
       return {
         authorized: false,

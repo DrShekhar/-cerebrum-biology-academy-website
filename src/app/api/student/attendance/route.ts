@@ -38,8 +38,8 @@ export async function GET(req: NextRequest) {
     }
 
     if (dateFrom || dateTo) {
-      where.session = {
-        ...where.session,
+      where.class_sessions = {
+        ...where.class_sessions,
         scheduledDate: {
           ...(dateFrom && { gte: new Date(dateFrom) }),
           ...(dateTo && { lte: new Date(dateTo) }),
@@ -48,15 +48,15 @@ export async function GET(req: NextRequest) {
     }
 
     if (sessionType && sessionType !== 'ALL') {
-      where.session = {
-        ...where.session,
+      where.class_sessions = {
+        ...where.class_sessions,
         sessionType: sessionType,
       }
     }
 
     if (courseId) {
-      where.session = {
-        ...where.session,
+      where.class_sessions = {
+        ...where.class_sessions,
         courseId: courseId,
       }
     }
@@ -64,9 +64,9 @@ export async function GET(req: NextRequest) {
     const attendanceRecords = await prisma.student_attendance.findMany({
       where,
       include: {
-        session: {
+        class_sessions: {
           include: {
-            course: {
+            courses: {
               select: {
                 id: true,
                 name: true,
@@ -74,7 +74,7 @@ export async function GET(req: NextRequest) {
                 class: true,
               },
             },
-            teacher: {
+            users: {
               select: {
                 id: true,
                 name: true,
@@ -83,7 +83,7 @@ export async function GET(req: NextRequest) {
             },
           },
         },
-        markedByUser: {
+        users_student_attendance_markedByTousers: {
           select: {
             id: true,
             name: true,
@@ -93,6 +93,20 @@ export async function GET(req: NextRequest) {
       orderBy: {
         markedAt: 'desc',
       },
+    })
+
+    const remappedAttendance = attendanceRecords.map((record) => {
+      const {
+        class_sessions: sessionRecord,
+        users_student_attendance_markedByTousers: markedByUser,
+        ...rest
+      } = record
+      const { courses: sessionCourse, users: sessionTeacher, ...sessionRest } = sessionRecord
+      return {
+        ...rest,
+        session: { ...sessionRest, course: sessionCourse, teacher: sessionTeacher },
+        markedByUser,
+      }
     })
 
     const statistics = {
@@ -115,7 +129,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({
       success: true,
       data: {
-        attendance: attendanceRecords,
+        attendance: remappedAttendance,
         statistics,
       },
     })

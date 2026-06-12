@@ -371,11 +371,13 @@ export async function POST(request: NextRequest) {
         // Step 2: Save DemoBooking to database
         const booking = await tx.demo_bookings.create({
           data: {
+            id: `demo_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+            updatedAt: new Date(),
             studentName: body.studentName,
             email: normalizedEmail,
             phone: body.phone,
             studentClass: body.studentClass as any,
-            preferredDate: new Date(body.preferredDate),
+            preferredDate: String(body.preferredDate),
             preferredTime: body.preferredTime,
             message: body.previousKnowledge,
             status: 'CONFIRMED',
@@ -411,6 +413,8 @@ export async function POST(request: NextRequest) {
           // Step 3: Create new Lead from DemoBooking with proper tracking
           leadRecord = await tx.leads.create({
             data: {
+              id: `lead_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+              updatedAt: new Date(),
               studentName: body.studentName,
               email: normalizedEmail,
               phone: normalizedPhoneValue,
@@ -419,9 +423,6 @@ export async function POST(request: NextRequest) {
               priority: 'HOT',
               source: leadSource,
               sourceDetail: sourceDetail,
-              utmSource: body.utmSource,
-              utmMedium: body.utmMedium,
-              utmCampaign: body.utmCampaign,
               utmContent: body.utmContent,
               gclid: body.gclid,
               assignedToId: assignedCounselor.id,
@@ -437,6 +438,8 @@ export async function POST(request: NextRequest) {
 
         await tx.tasks.create({
           data: {
+            id: `task_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+            updatedAt: new Date(),
             title: `Follow up on demo booking - ${body.studentName}`,
             description: `New demo class booked for ${body.studentName} (${body.courseInterest}). Demo scheduled for ${body.preferredDate} at ${body.preferredTime}. Please call to confirm attendance.`,
             type: 'FOLLOW_UP_CALL',
@@ -454,6 +457,7 @@ export async function POST(request: NextRequest) {
         // Step 5: Log activity for audit trail
         await tx.activities.create({
           data: {
+            id: `act_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
             userId: assignedCounselor.id,
             leadId: leadRecord.id,
             action: 'DEMO_BOOKED',

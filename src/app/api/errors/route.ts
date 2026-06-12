@@ -98,6 +98,8 @@ async function storeErrorReport(errorReport: any, clientIP: string) {
     } else {
       await prisma.error_reports.create({
         data: {
+          id: `err_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+          updatedAt: new Date(),
           fingerprint,
           message: errorReport.error.message,
           stack: errorReport.error.stack,
@@ -119,7 +121,6 @@ async function storeErrorReport(errorReport: any, clientIP: string) {
         clientIP,
       })
     }
-
   } catch (error) {
     console.error('Failed to store error report:', error)
   }

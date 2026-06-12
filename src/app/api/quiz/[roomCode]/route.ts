@@ -33,11 +33,11 @@ export async function GET(
     const session = await prisma.quiz_sessions.findUnique({
       where: { roomCode: roomCode.toUpperCase() },
       include: {
-        rounds: {
+        quiz_rounds: {
           orderBy: { roundNumber: 'desc' },
           take: 20,
         },
-        participants: {
+        quiz_participants: {
           orderBy: { joinedAt: 'desc' },
         },
       },
@@ -64,7 +64,7 @@ export async function GET(
           currentRound: session.currentRound,
           totalRounds: session.totalRounds,
           scoringRules: session.scoringRules,
-          rounds: session.rounds.map((r) => ({
+          rounds: session.quiz_rounds.map((r) => ({
             id: r.id,
             roundNumber: r.roundNumber,
             answeringTeam: r.answeringTeam,
@@ -73,7 +73,7 @@ export async function GET(
             note: r.note,
             createdAt: r.createdAt,
           })),
-          participants: session.participants.map((p) => ({
+          participants: session.quiz_participants.map((p) => ({
             id: p.id,
             name: p.name,
             team: p.team,

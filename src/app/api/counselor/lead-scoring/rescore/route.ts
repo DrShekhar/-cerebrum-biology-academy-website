@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
       },
       include: {
         crm_communications: {
-          orderBy: { createdAt: 'desc' },
+          orderBy: { sentAt: 'desc' },
           take: 20,
         },
         tasks: {
@@ -45,7 +45,12 @@ export async function POST(req: NextRequest) {
 
       // ── Behavioral signals ──
       if (lead.demo_bookings) {
-        if (lead.stage === 'DEMO_COMPLETED' || lead.stage === 'OFFER_SENT' || lead.stage === 'NEGOTIATING' || lead.stage === 'PAYMENT_PLAN_CREATED') {
+        if (
+          lead.stage === 'DEMO_COMPLETED' ||
+          lead.stage === 'OFFER_SENT' ||
+          lead.stage === 'NEGOTIATING' ||
+          lead.stage === 'PAYMENT_PLAN_CREATED'
+        ) {
           score += 30
           breakdown.push({ rule: 'Demo attended', points: 30 })
         } else if (lead.stage === 'DEMO_SCHEDULED') {
@@ -80,11 +85,11 @@ export async function POST(req: NextRequest) {
 
       // ── Engagement signals ──
       const recentComms = lead.crm_communications.filter(
-        (c) => differenceInDays(new Date(), new Date(c.createdAt)) <= 7
+        (c) => differenceInDays(new Date(), new Date(c.sentAt)) <= 7
       )
 
       const whatsappReplies = recentComms.filter(
-        (c) => c.channel === 'WHATSAPP' && c.type === 'INBOUND'
+        (c) => c.type === 'WHATSAPP' && c.direction === 'INBOUND'
       )
       if (whatsappReplies.length > 0) {
         const pts = Math.min(whatsappReplies.length * 10, 30)
@@ -93,7 +98,7 @@ export async function POST(req: NextRequest) {
       }
 
       const callsReceived = recentComms.filter(
-        (c) => c.channel === 'PHONE' && c.type === 'INBOUND'
+        (c) => c.type === 'CALL' && c.direction === 'INBOUND'
       )
       if (callsReceived.length > 0) {
         score += 25

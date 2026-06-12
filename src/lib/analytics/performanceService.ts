@@ -6,6 +6,7 @@ import type {
   ProgressTrend,
   ComparativeAnalytics,
   PerformanceMetrics,
+  Achievement,
 } from '@/lib/types/analytics'
 
 export class PerformanceAnalyticsService {
@@ -27,12 +28,12 @@ export class PerformanceAnalyticsService {
     }
 
     // Get test attempts with detailed analysis
-    const testAttempts = await db.testAttempt.findMany({
+    const testAttempts = await db.test_attempts.findMany({
       where: whereClause,
       include: {
-        testQuestions: {
+        test_questions: {
           include: {
-            question: true,
+            questions: true,
           },
         },
       },
@@ -40,11 +41,11 @@ export class PerformanceAnalyticsService {
     })
 
     // Get user profile
-    const user = await db.freeUser.findUnique({
+    const user = await db.free_users.findUnique({
       where: { id: userId },
       include: {
         achievements: true,
-        studyPlans: true,
+        study_plans: true,
       },
     })
 
@@ -62,8 +63,8 @@ export class PerformanceAnalyticsService {
     const topicPerformance: Record<string, TopicAnalytics> = {}
 
     testAttempts.forEach((attempt) => {
-      attempt.testQuestions.forEach((tq) => {
-        const topic = tq.question.topic
+      attempt.test_questions.forEach((tq) => {
+        const topic = tq.questions.topic
         if (!topicPerformance[topic]) {
           topicPerformance[topic] = {
             topic,
@@ -88,7 +89,7 @@ export class PerformanceAnalyticsService {
         }
 
         // Track difficulty-wise performance
-        const difficulty = tq.question.difficulty.toLowerCase() as 'easy' | 'medium' | 'hard'
+        const difficulty = tq.questions.difficulty.toLowerCase() as 'easy' | 'medium' | 'hard'
         if (topicPerformance[topic].difficulty[difficulty]) {
           topicPerformance[topic].difficulty[difficulty].total++
           if (tq.isCorrect) {
@@ -132,7 +133,7 @@ export class PerformanceAnalyticsService {
         title: a.title,
         earnedAt: a.earnedAt,
         points: a.points,
-      })),
+      })) as unknown as Achievement[],
       timeRange: timeRange || { from: new Date(0), to: new Date() },
     }
   }
@@ -141,15 +142,15 @@ export class PerformanceAnalyticsService {
    * Get test session analytics
    */
   async getTestSessionAnalytics(testAttemptId: string): Promise<TestSessionAnalytics> {
-    const testAttempt = await db.testAttempt.findUnique({
+    const testAttempt = await db.test_attempts.findUnique({
       where: { id: testAttemptId },
       include: {
-        testQuestions: {
+        test_questions: {
           include: {
-            question: true,
+            questions: true,
           },
         },
-        freeUser: true,
+        free_users: true,
       },
     })
 
@@ -157,26 +158,26 @@ export class PerformanceAnalyticsService {
       throw new Error('Test attempt not found')
     }
 
-    const totalQuestions = testAttempt.testQuestions.length
-    const correctAnswers = testAttempt.testQuestions.filter((tq) => tq.isCorrect).length
+    const totalQuestions = testAttempt.test_questions.length
+    const correctAnswers = testAttempt.test_questions.filter((tq) => tq.isCorrect).length
     const accuracy = totalQuestions > 0 ? (correctAnswers / totalQuestions) * 100 : 0
 
     // Question-wise analysis
-    const questionAnalysis = testAttempt.testQuestions.map((tq) => ({
+    const questionAnalysis = testAttempt.test_questions.map((tq) => ({
       questionId: tq.questionId,
-      topic: tq.question.topic,
-      difficulty: tq.question.difficulty,
+      topic: tq.questions.topic,
+      difficulty: tq.questions.difficulty,
       isCorrect: tq.isCorrect || false,
       timeSpent: tq.timeSpent || 0,
       selectedAnswer: tq.selectedAnswer,
-      correctAnswer: tq.question.correctAnswer,
-      explanation: tq.question.explanation,
+      correctAnswer: tq.questions.correctAnswer,
+      explanation: tq.questions.explanation,
     }))
 
     // Topic-wise breakdown
     const topicBreakdown: Record<string, any> = {}
-    testAttempt.testQuestions.forEach((tq) => {
-      const topic = tq.question.topic
+    testAttempt.test_questions.forEach((tq) => {
+      const topic = tq.questions.topic
       if (!topicBreakdown[topic]) {
         topicBreakdown[topic] = {
           topic,
@@ -217,20 +218,20 @@ export class PerformanceAnalyticsService {
    * Get topic-wise performance analysis
    */
   async getTopicAnalytics(userId: string, topic: string): Promise<TopicAnalytics> {
-    const testAttempts = await db.testAttempt.findMany({
+    const testAttempts = await db.test_attempts.findMany({
       where: {
         freeUserId: userId,
         topics: {
-          path: '$',
           array_contains: topic,
         },
       },
       include: {
-        testQuestions: {
+        test_questions: {
+          where: {
+            questions: { topic },
+          },
           include: {
-            question: {
-              where: { topic },
-            },
+            questions: true,
           },
         },
       },
@@ -250,7 +251,7 @@ export class PerformanceAnalyticsService {
     const trend: Array<{ date: Date; accuracy: number; timePerQuestion: number }> = []
 
     testAttempts.slice(0, 10).forEach((attempt) => {
-      const topicQuestions = attempt.testQuestions.filter((tq) => tq.question.topic === topic)
+      const topicQuestions = attempt.test_questions.filter((tq) => tq.questions.topic === topic)
       if (topicQuestions.length === 0) return
 
       const correct = topicQuestions.filter((tq) => tq.isCorrect).length
@@ -269,7 +270,7 @@ export class PerformanceAnalyticsService {
 
       // Track difficulty
       topicQuestions.forEach((tq) => {
-        const diff = tq.question.difficulty.toLowerCase() as 'easy' | 'medium' | 'hard'
+        const diff = tq.questions.difficulty.toLowerCase() as 'easy' | 'medium' | 'hard'
         if (difficulty[diff]) {
           difficulty[diff].total++
           if (tq.isCorrect) difficulty[diff].correct++
@@ -292,7 +293,7 @@ export class PerformanceAnalyticsService {
    * Get comparative analytics (user vs class average)
    */
   async getComparativeAnalytics(userId: string, grade: string): Promise<ComparativeAnalytics> {
-    const user = await db.freeUser.findUnique({
+    const user = await db.free_users.findUnique({
       where: { id: userId },
     })
 
@@ -304,13 +305,13 @@ export class PerformanceAnalyticsService {
     const userPerformance = await this.getUserPerformanceData(userId)
 
     // Get class average performance
-    const classUsers = await db.freeUser.findMany({
+    const classUsers = await db.free_users.findMany({
       where: {
         grade,
         id: { not: userId },
       },
       include: {
-        testAttempts: {
+        test_attempts: {
           where: { status: 'COMPLETED' },
         },
       },
@@ -327,7 +328,7 @@ export class PerformanceAnalyticsService {
 
     if (classUsers.length > 0) {
       const classStats = classUsers.map((classUser) => {
-        const completedTests = classUser.testAttempts.filter((t) => t.status === 'COMPLETED')
+        const completedTests = classUser.test_attempts.filter((t) => t.status === 'COMPLETED')
         const avgScore =
           completedTests.length > 0
             ? completedTests.reduce((sum, test) => sum + test.percentage, 0) / completedTests.length
@@ -364,7 +365,7 @@ export class PerformanceAnalyticsService {
     // Calculate user rank
     const userRank =
       classUsers.filter((classUser) => {
-        const completedTests = classUser.testAttempts.filter((t) => t.status === 'COMPLETED')
+        const completedTests = classUser.test_attempts.filter((t) => t.status === 'COMPLETED')
         const avgScore =
           completedTests.length > 0
             ? completedTests.reduce((sum, test) => sum + test.percentage, 0) / completedTests.length
@@ -414,7 +415,7 @@ export class PerformanceAnalyticsService {
         break
     }
 
-    const testAttempts = await db.testAttempt.findMany({
+    const testAttempts = await db.test_attempts.findMany({
       where: {
         freeUserId: userId,
         startedAt: {
@@ -423,18 +424,18 @@ export class PerformanceAnalyticsService {
         status: 'COMPLETED',
       },
       include: {
-        testQuestions: {
+        test_questions: {
           include: {
-            question: true,
+            questions: true,
           },
         },
       },
     })
 
     const totalTests = testAttempts.length
-    const totalQuestions = testAttempts.reduce((sum, test) => sum + test.testQuestions.length, 0)
+    const totalQuestions = testAttempts.reduce((sum, test) => sum + test.test_questions.length, 0)
     const correctAnswers = testAttempts.reduce(
-      (sum, test) => sum + test.testQuestions.filter((tq) => tq.isCorrect).length,
+      (sum, test) => sum + test.test_questions.filter((tq) => tq.isCorrect).length,
       0
     )
     const totalTime = testAttempts.reduce((sum, test) => sum + (test.timeSpent || 0), 0)
@@ -553,8 +554,8 @@ export class PerformanceAnalyticsService {
     const topicStats: Record<string, { correct: number; total: number }> = {}
 
     tests.forEach((test) => {
-      test.testQuestions.forEach((tq: any) => {
-        const topic = tq.question.topic
+      test.test_questions.forEach((tq: any) => {
+        const topic = tq.questions.topic
         if (!topicStats[topic]) {
           topicStats[topic] = { correct: 0, total: 0 }
         }
@@ -580,8 +581,8 @@ export class PerformanceAnalyticsService {
     const topicStats: Record<string, { correct: number; total: number }> = {}
 
     tests.forEach((test) => {
-      test.testQuestions.forEach((tq: any) => {
-        const topic = tq.question.topic
+      test.test_questions.forEach((tq: any) => {
+        const topic = tq.questions.topic
         if (!topicStats[topic]) {
           topicStats[topic] = { correct: 0, total: 0 }
         }

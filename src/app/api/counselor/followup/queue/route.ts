@@ -29,7 +29,7 @@ export async function GET(request: NextRequest) {
     if (leadId) {
       where.leadId = leadId
     } else {
-      where.lead = {
+      where.leads = {
         assignedToId: session.userId,
       }
     }
@@ -38,7 +38,7 @@ export async function GET(request: NextRequest) {
       prisma.followup_queue.findMany({
         where,
         include: {
-          lead: {
+          leads: {
             select: {
               id: true,
               studentName: true,
@@ -47,7 +47,7 @@ export async function GET(request: NextRequest) {
               stage: true,
             },
           },
-          rule: {
+          followup_rules: {
             select: {
               id: true,
               name: true,
@@ -66,7 +66,7 @@ export async function GET(request: NextRequest) {
     const statusCounts = await prisma.followup_queue.groupBy({
       by: ['status'],
       where: {
-        lead: {
+        leads: {
           assignedToId: session.userId,
         },
       },
@@ -85,7 +85,11 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      data: queueItems,
+      data: queueItems.map(({ leads, followup_rules, ...rest }) => ({
+        ...rest,
+        lead: leads,
+        rule: followup_rules,
+      })),
       pagination: {
         page,
         limit,

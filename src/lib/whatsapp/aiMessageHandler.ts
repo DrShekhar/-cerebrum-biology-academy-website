@@ -303,7 +303,7 @@ export class AIMessageHandler {
         include: {
           enrollments: {
             include: {
-              course: true,
+              courses: true,
             },
             where: {
               status: 'ACTIVE',
@@ -320,7 +320,7 @@ export class AIMessageHandler {
       let message = `👨‍🎓 *Your Enrollment Status*\n\nHi ${user.name}! You are enrolled in:\n\n`
 
       user.enrollments.forEach((enrollment, index) => {
-        message += `${index + 1}. ${enrollment.course.name}\n`
+        message += `${index + 1}. ${enrollment.courses.name}\n`
         message += `   📊 Progress: ${enrollment.currentProgress}%\n`
         message += `   💰 Payment: ₹${enrollment.paidAmount / 100} / ₹${enrollment.totalFees / 100}\n\n`
       })
@@ -420,6 +420,7 @@ export class AIMessageHandler {
 
       await prisma.communication_logs.create({
         data: {
+          id: `comlog_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: user?.id,
           type: type === 'command' ? 'CUSTOM_MESSAGE' : 'SUPPORT_MESSAGE',
           channel: 'WHATSAPP',

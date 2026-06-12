@@ -13,7 +13,7 @@ import {
   checkBadgeUnlock,
 } from '@/lib/mcq/gamification'
 import type { AnswerSubmission, AnswerResult, UserStats, QuestionType } from '@/lib/mcq/types'
-import type { DifficultyLevel } from '@/generated/prisma'
+import { Prisma, type DifficultyLevel } from '@/generated/prisma'
 
 // Helper to check if a table doesn't exist error
 function isTableNotExistError(error: unknown): boolean {
@@ -221,7 +221,15 @@ export async function POST(request: NextRequest) {
     let isCorrect: boolean
     let xpEarned: number
     let partialScore: number | undefined
-    let mtfDetails: { partialScore: number; correctStatements: string; userStatements: string; correctCount: number; totalStatements: number } | undefined
+    let mtfDetails:
+      | {
+          partialScore: number
+          correctStatements: string
+          userStatements: string
+          correctCount: number
+          totalStatements: number
+        }
+      | undefined
 
     if (isMTF) {
       const mtfResult = calculateMTFScore(selectedAnswer, correctAnswer)
@@ -339,7 +347,7 @@ export async function POST(request: NextRequest) {
             totalXp: newXp,
             currentLevel: getLevelProgress(newXp).currentLevel.level,
             levelProgress: getLevelProgress(newXp).progress,
-            topicMastery: updatedMastery,
+            topicMastery: updatedMastery as unknown as Prisma.InputJsonValue,
             weakTopics,
             strongTopics,
           },

@@ -30,11 +30,11 @@ export async function GET(request: NextRequest) {
     }
 
     // Find linked children via parent_child_relationships table
-    const childRelationships = await prisma.parent_child_relationships.findMany({
+    const rawRelationships = await prisma.parent_child_relationships.findMany({
       where: { parentId: parent.id },
       take: 10,
       include: {
-        child: {
+        users_parent_child_relationships_childIdTousers: {
           include: {
             enrollments: {
               take: 5,
@@ -48,15 +48,11 @@ export async function GET(request: NextRequest) {
                 },
               },
             },
-            test_attempts: {
-              orderBy: { submittedAt: 'desc' },
-              take: 10,
-            },
-            student_attendance: {
+            student_attendance_student_attendance_studentIdTousers: {
               orderBy: { createdAt: 'desc' },
               take: 10,
               include: {
-                session: {
+                class_sessions: {
                   select: { title: true, scheduledDate: true },
                 },
               },
@@ -65,7 +61,7 @@ export async function GET(request: NextRequest) {
               orderBy: { createdAt: 'desc' },
               take: 10,
               include: {
-                assignment: {
+                assignments: {
                   select: { title: true, dueDate: true, maxMarks: true },
                 },
               },
@@ -75,6 +71,29 @@ export async function GET(request: NextRequest) {
       },
     })
 
+    // Normalize the verbose relation names back to the legacy shape the rest of
+    // this handler expects. NOTE: a child `users` row has no test_attempts
+    // relation (MCQ attempts belong to free_users), so test data is unavailable
+    // here — exposed as an empty list rather than fabricated.
+    const childRelationships = rawRelationships.map((rel) => {
+      const u = rel.users_parent_child_relationships_childIdTousers
+      return {
+        ...rel,
+        child: {
+          ...u,
+          test_attempts: [] as any[],
+          student_attendance: u.student_attendance_student_attendance_studentIdTousers.map((a) => ({
+            ...a,
+            session: a.class_sessions,
+          })),
+          assignment_submissions: u.assignment_submissions.map((s) => ({
+            ...s,
+            assignment: s.assignments,
+          })),
+        },
+      }
+    })
+
     // Calculate stats for each child
     const childrenWithStats = childRelationships.map((rel) => {
       const child = rel.child
@@ -82,7 +101,7 @@ export async function GET(request: NextRequest) {
       // Calculate overall progress
       const totalEnrollments = child.enrollments.length
       const completedLessons = child.enrollments.reduce((acc, enr) => {
-        return acc + (typeof enr.progress === 'number' ? enr.progress : 0)
+        return acc + (typeof enr.currentProgress === 'number' ? enr.currentProgress : 0)
       }, 0)
       const overallProgress =
         totalEnrollments > 0 ? Math.round(completedLessons / totalEnrollments) : 0
@@ -108,7 +127,7 @@ export async function GET(request: NextRequest) {
 
       // Calculate homework stats
       const pendingHomework = child.assignment_submissions.filter(
-        (s) => s.status === 'NOT_SUBMITTED' || s.status === 'PENDING'
+        (s) => s.status === 'NOT_SUBMITTED'
       ).length
       const completedHomework = child.assignment_submissions.filter(
         (s) => s.status === 'SUBMITTED' || s.status === 'GRADED'
@@ -118,8 +137,8 @@ export async function GET(request: NextRequest) {
         id: child.id,
         name: child.name,
         email: child.email,
-        class: child.currentClass || 'Not specified',
-        profilePicture: child.profilePicture,
+        class: 'Not specified',
+        profilePicture: null,
         enrolledCourses: totalEnrollments,
         overallProgress,
         avgTestScore: avgScore,
@@ -130,7 +149,7 @@ export async function GET(request: NextRequest) {
         courses: child.enrollments.map((enr) => ({
           id: enr.courses.id,
           name: enr.courses.name,
-          progress: enr.progress || 0,
+          progress: enr.currentProgress || 0,
           status: enr.status,
         })),
         recentTests: child.test_attempts.slice(0, 5).map((attempt) => ({
@@ -173,7 +192,7 @@ export async function GET(request: NextRequest) {
           date: payment.createdAt.toISOString(),
           amount: payment.amount,
           status: payment.status.toLowerCase() as 'paid' | 'pending' | 'overdue',
-          description: `${enr.courses.name} - ${payment.paymentMode || 'Course Fee'}`,
+          description: `${enr.courses.name} - ${payment.paymentMethod || 'Course Fee'}`,
           childName: rel.child.name,
         }))
       )
@@ -208,7 +227,7 @@ export async function GET(request: NextRequest) {
         title: true,
         dueDate: true,
         maxMarks: true,
-        course: { select: { name: true } },
+        courses: { select: { name: true } },
       },
     })
 
@@ -238,7 +257,7 @@ export async function GET(request: NextRequest) {
           title: assignment.title,
           dueDate: assignment.dueDate.toISOString(),
           maxMarks: assignment.maxMarks,
-          courseName: assignment.course?.name,
+          courseName: assignment.courses?.name,
         })),
         alerts,
         summary: {

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { rateLimit } from '@/lib/rateLimit'
-import type { LeaderboardPeriod } from '@/generated/prisma'
+import { Prisma, type LeaderboardPeriod } from '@/generated/prisma'
 import type { Leaderboard, LeaderboardEntry } from '@/lib/mcq/types'
 
 // Helper to check if table doesn't exist
@@ -100,7 +100,7 @@ export async function GET(request: NextRequest) {
         cachedLeaderboard &&
         new Date().getTime() - cachedLeaderboard.createdAt.getTime() < 900000
       ) {
-        const rankings = cachedLeaderboard.rankings as LeaderboardEntry[]
+        const rankings = cachedLeaderboard.rankings as unknown as LeaderboardEntry[]
         let currentUserRank: number | undefined
 
         if (freeUserId) {
@@ -149,7 +149,7 @@ export async function GET(request: NextRequest) {
             .filter((id): id is string => id !== null)
 
           // Only query free_users if we have IDs
-          let userDetailsMap = new Map<string, { id: string; name: string | null; phone: string }>()
+          let userDetailsMap = new Map<string, { id: string; name: string | null }>()
 
           if (freeUserIds.length > 0) {
             const userDetails = await prisma.free_users.findMany({
@@ -159,7 +159,6 @@ export async function GET(request: NextRequest) {
               select: {
                 id: true,
                 name: true,
-                phone: true,
               },
             })
             userDetailsMap = new Map(userDetails.map((u) => [u.id, u]))
@@ -221,7 +220,7 @@ export async function GET(request: NextRequest) {
             .filter((id): id is string => id !== null)
 
           // Only query free_users if we have IDs
-          let userDetailsMap = new Map<string, { id: string; name: string | null; phone: string }>()
+          let userDetailsMap = new Map<string, { id: string; name: string | null }>()
 
           if (freeUserIds.length > 0) {
             const userDetails = await prisma.free_users.findMany({
@@ -231,7 +230,6 @@ export async function GET(request: NextRequest) {
               select: {
                 id: true,
                 name: true,
-                phone: true,
               },
             })
             userDetailsMap = new Map(userDetails.map((u) => [u.id, u]))
@@ -265,10 +263,11 @@ export async function GET(request: NextRequest) {
       try {
         await prisma.mcq_leaderboard.create({
           data: {
+            id: `lb_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
             period,
             periodStart,
             periodEnd,
-            rankings: rankings as unknown as object,
+            rankings: rankings as unknown as Prisma.InputJsonValue,
             totalParticipants: rankings.length,
             topScore: rankings[0]?.xp || 0,
             avgScore:

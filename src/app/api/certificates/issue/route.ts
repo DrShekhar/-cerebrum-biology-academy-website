@@ -102,8 +102,10 @@ export async function POST(request: NextRequest) {
       }
     )
 
-    const certificate = await prisma.certificates.create({
+    const certificateRecord = await prisma.certificates.create({
       data: {
+        id: `cert_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         studentId: validatedData.studentId,
         courseId: validatedData.courseId,
         enrollmentId: validatedData.enrollmentId,
@@ -125,14 +127,14 @@ export async function POST(request: NextRequest) {
         status: 'ISSUED',
       },
       include: {
-        student: {
+        users: {
           select: {
             id: true,
             name: true,
             email: true,
           },
         },
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
@@ -140,6 +142,9 @@ export async function POST(request: NextRequest) {
         },
       },
     })
+
+    const { users: certStudent, courses: certCourse, ...certRest } = certificateRecord
+    const certificate = { ...certRest, student: certStudent, course: certCourse }
 
     return NextResponse.json(
       {

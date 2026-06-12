@@ -176,7 +176,8 @@ export async function POST(request: NextRequest) {
 
             if (courseMaterials.length > 0) {
               // Create material access records for all published course materials
-              const materialAccessRecords = courseMaterials.map((material) => ({
+              const materialAccessRecords = courseMaterials.map((material, index) => ({
+                id: `macc_${Date.now()}_${index}_${Math.random().toString(36).slice(2, 9)}`,
                 materialId: material.id,
                 userId: payment.userId,
                 grantedBy: 'system',

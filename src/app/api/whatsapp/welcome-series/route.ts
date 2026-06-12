@@ -67,10 +67,9 @@ export async function GET(request: NextRequest) {
       where: { id: leadId },
       select: {
         id: true,
-        name: true,
+        studentName: true,
         phone: true,
         email: true,
-        metadata: true,
         createdAt: true,
       },
     })
@@ -79,11 +78,12 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Lead not found' }, { status: 404 })
     }
 
-    const metadata = (lead.metadata as Record<string, unknown>) || {}
+    // NOTE: leads has no `metadata` column; welcome-series state is not persisted here.
+    const metadata = {} as Record<string, unknown>
 
     return NextResponse.json({
       leadId: lead.id,
-      name: lead.name,
+      name: lead.studentName,
       welcomeSeriesStarted: metadata.welcomeSeriesStarted || null,
       welcomeSeriesSent: metadata.welcomeSeriesSent || [],
       firstMessageSent: metadata.firstMessageSent || false,

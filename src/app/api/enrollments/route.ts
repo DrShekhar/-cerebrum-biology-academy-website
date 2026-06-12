@@ -30,9 +30,9 @@ export async function GET(request: NextRequest) {
               select: {
                 id: true,
                 title: true,
-                sortOrder: true,
+                orderIndex: true,
               },
-              orderBy: { sortOrder: 'asc' },
+              orderBy: { orderIndex: 'asc' },
             },
           },
         },
@@ -63,7 +63,10 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error('Error fetching enrollments:', error)
     return NextResponse.json(
-      { error: 'Failed to fetch enrollments', details: error instanceof Error ? error.message : 'Unknown error' },
+      {
+        error: 'Failed to fetch enrollments',
+        details: error instanceof Error ? error.message : 'Unknown error',
+      },
       { status: 500 }
     )
   }

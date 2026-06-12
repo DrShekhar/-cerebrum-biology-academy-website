@@ -179,7 +179,6 @@ export async function POST(request: NextRequest) {
       console.error('Failed to send reschedule notifications:', err)
     )
 
-
     return NextResponse.json({
       success: true,
       message: 'Demo class rescheduled successfully',
@@ -276,7 +275,6 @@ async function sendRescheduleNotifications(booking: any, oldDate: string, oldTim
       month: 'long',
       day: 'numeric',
     })
-
 
     const notificationPromises: Promise<any>[] = []
 
@@ -375,7 +373,6 @@ async function sendRescheduleNotifications(booking: any, oldDate: string, oldTim
       Promise.allSettled(notificationPromises),
       new Promise((resolve) => setTimeout(resolve, 5000)), // 5 second timeout
     ])
-
   } catch (error) {
     console.error('Failed to send reschedule notifications:', error)
   }
@@ -424,6 +421,7 @@ async function handleGenerateRescheduleLink(request: NextRequest, session: UserS
 
     const rescheduleToken = await prisma.reschedule_tokens.create({
       data: {
+        id: `rtok_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         bookingId,
         token,
         expiresAt,

@@ -145,23 +145,23 @@ async function generatePredictions(userId: string): Promise<PredictionsResponse>
     const user = await prisma.free_users.findUnique({
       where: { id: userId },
       include: {
-        testAttempts: {
+        test_attempts: {
           where: { status: 'COMPLETED' },
           orderBy: { submittedAt: 'desc' },
           take: 30,
         },
-        userProgress: true,
+        user_progress: true,
       },
     })
 
     // Return default predictions for new users
-    if (!user || user.testAttempts.length === 0) {
+    if (!user || user.test_attempts.length === 0) {
       return getDefaultPredictions()
     }
 
     // Extract test scores and dates for prediction
-    const testScores = user.testAttempts.map((t) => t.percentage)
-    const testDates = user.testAttempts
+    const testScores = user.test_attempts.map((t) => t.percentage)
+    const testDates = user.test_attempts
       .map((t) => t.submittedAt)
       .filter((d): d is Date => d !== null)
 
@@ -175,13 +175,13 @@ async function generatePredictions(userId: string): Promise<PredictionsResponse>
     }
 
     // Calculate syllabus completion
-    const totalTopics = user.userProgress.length
-    const completedTopics = user.userProgress.filter((p) => p.masteryScore >= 80).length
+    const totalTopics = user.user_progress.length
+    const completedTopics = user.user_progress.filter((p) => p.masteryScore >= 80).length
     const syllabusCompletion = totalTopics > 0 ? (completedTopics / totalTopics) * 100 : 0
 
     // Calculate recent improvement
-    const recentTests = user.testAttempts.slice(0, 5)
-    const olderTests = user.testAttempts.slice(5, 10)
+    const recentTests = user.test_attempts.slice(0, 5)
+    const olderTests = user.test_attempts.slice(5, 10)
     const recentAvg =
       recentTests.length > 0
         ? recentTests.reduce((sum, t) => sum + t.percentage, 0) / recentTests.length
@@ -218,7 +218,7 @@ async function generatePredictions(userId: string): Promise<PredictionsResponse>
     )
 
     // Identify weak areas for recommended focus
-    const weakTopics = user.userProgress
+    const weakTopics = user.user_progress
       .filter((p) => p.masteryScore < 60 || p.accuracy < 70)
       .sort((a, b) => a.masteryScore - b.masteryScore)
       .slice(0, 5)

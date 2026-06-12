@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { rateLimit } from '@/lib/rateLimit'
 import type { QuestionSubmission } from '@/lib/mcq/types'
-import type { DifficultyLevel } from '@/generated/prisma'
+import { Prisma, type DifficultyLevel, type CommunityQuestionStatus } from '@/generated/prisma'
 import { screenQuestion, getScreeningDecision, type QuestionToScreen } from '@/lib/mcq/aiScreening'
 import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
 
@@ -104,20 +104,21 @@ export async function POST(request: NextRequest) {
 
     const freeUser = await prisma.free_users.findUnique({
       where: { id: freeUserId },
-      select: { name: true, phone: true, email: true },
+      select: { name: true, email: true },
     })
 
     if (freeUser) {
       submitterName = freeUser.name || submitterName
-      submitterPhone = freeUser.phone || submitterPhone
       submitterEmail = freeUser.email || submitterEmail
     }
 
     // Create the community question
     const communityQuestion = await prisma.community_questions.create({
       data: {
+        id: `cq_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         question,
-        options: options as unknown as object,
+        options: options as unknown as Prisma.InputJsonValue,
         correctAnswer,
         explanation,
         topic,
@@ -251,7 +252,7 @@ async function triggerAIScreening(
     const screeningResult = await screenQuestion(screeningData)
     const decision = getScreeningDecision(screeningResult)
 
-    let newStatus: string
+    let newStatus: CommunityQuestionStatus
     if (decision.autoApprove) {
       newStatus = 'AI_APPROVED'
     } else if (decision.autoReject) {
@@ -271,7 +272,6 @@ async function triggerAIScreening(
         rejectionReason: decision.autoReject ? decision.reason : null,
       },
     })
-
   } catch (error) {
     console.error(`AI Screening failed for question ${questionId}:`, error)
     await prisma.community_questions.update({

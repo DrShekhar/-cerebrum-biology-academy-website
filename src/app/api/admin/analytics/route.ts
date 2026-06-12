@@ -129,7 +129,7 @@ export async function GET(request: NextRequest) {
       prisma.payments.aggregate({
         _sum: { amount: true },
         where: {
-          status: 'SUCCESS',
+          status: 'COMPLETED',
           createdAt: { gte: startDate },
         },
       }),
@@ -138,7 +138,7 @@ export async function GET(request: NextRequest) {
       prisma.payments.aggregate({
         _sum: { amount: true },
         where: {
-          status: 'SUCCESS',
+          status: 'COMPLETED',
           createdAt: {
             gte: previousStartDate,
             lt: startDate,

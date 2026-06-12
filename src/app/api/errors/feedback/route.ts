@@ -54,6 +54,7 @@ async function storeFeedback(feedback: z.infer<typeof feedbackSchema>, clientIP:
   try {
     await prisma.error_feedback.create({
       data: {
+        id: `efb_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         errorId: feedback.errorId,
         description: feedback.feedback.description,
         email: feedback.feedback.email,
@@ -62,7 +63,6 @@ async function storeFeedback(feedback: z.infer<typeof feedbackSchema>, clientIP:
         createdAt: new Date(feedback.timestamp),
       },
     })
-
   } catch (error) {
     console.error('Failed to store feedback:', error)
     throw error

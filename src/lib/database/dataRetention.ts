@@ -74,35 +74,45 @@ export class DataRetentionService {
     try {
       deletedCounts.chatHistory = await this.cleanupChatHistory()
     } catch (error) {
-      errors.push(`Chat history cleanup failed: ${error instanceof Error ? error.message : 'Unknown error'}`)
+      errors.push(
+        `Chat history cleanup failed: ${error instanceof Error ? error.message : 'Unknown error'}`
+      )
     }
 
     // 2. Delete old analytics events
     try {
       deletedCounts.analyticsEvents = await this.cleanupAnalyticsEvents()
     } catch (error) {
-      errors.push(`Analytics events cleanup failed: ${error instanceof Error ? error.message : 'Unknown error'}`)
+      errors.push(
+        `Analytics events cleanup failed: ${error instanceof Error ? error.message : 'Unknown error'}`
+      )
     }
 
     // 3. Delete old communication logs
     try {
       deletedCounts.communicationLogs = await this.cleanupCommunicationLogs()
     } catch (error) {
-      errors.push(`Communication logs cleanup failed: ${error instanceof Error ? error.message : 'Unknown error'}`)
+      errors.push(
+        `Communication logs cleanup failed: ${error instanceof Error ? error.message : 'Unknown error'}`
+      )
     }
 
     // 4. Hard delete soft-deleted leads past retention period
     try {
       deletedCounts.softDeletedLeads = await this.hardDeleteSoftDeletedLeads()
     } catch (error) {
-      errors.push(`Soft-deleted leads cleanup failed: ${error instanceof Error ? error.message : 'Unknown error'}`)
+      errors.push(
+        `Soft-deleted leads cleanup failed: ${error instanceof Error ? error.message : 'Unknown error'}`
+      )
     }
 
     // 5. Clean up inactive free users (those who never logged in after registration)
     try {
       deletedCounts.freeUsers = await this.cleanupInactiveFreeUsers()
     } catch (error) {
-      errors.push(`Inactive users cleanup failed: ${error instanceof Error ? error.message : 'Unknown error'}`)
+      errors.push(
+        `Inactive users cleanup failed: ${error instanceof Error ? error.message : 'Unknown error'}`
+      )
     }
 
     const duration = Date.now() - startTime
@@ -196,24 +206,12 @@ export class DataRetentionService {
     const cutoffDate = new Date()
     cutoffDate.setDate(cutoffDate.getDate() - this.config.softDeletedRetentionDays)
 
-    if (this.dryRun) {
-      const count = await prisma.leads.count({
-        where: {
-          deletedAt: { lt: cutoffDate },
-        },
-      })
-      console.log(`[DataRetention] Would hard delete ${count} soft-deleted leads`)
-      return count
-    }
-
-    const result = await prisma.leads.deleteMany({
-      where: {
-        deletedAt: { lt: cutoffDate },
-      },
-    })
-
-    console.log(`[DataRetention] Hard deleted ${result.count} soft-deleted leads`)
-    return result.count
+    // NOTE: The `leads` model has no `deletedAt` (soft-delete) column in the
+    // current schema, so there are no soft-deleted leads to hard-delete.
+    // This routine is a no-op until a soft-delete column is added.
+    void cutoffDate
+    console.log('[DataRetention] Skipped: leads model has no soft-delete (deletedAt) column')
+    return 0
   }
 
   /**
@@ -232,7 +230,7 @@ export class DataRetentionService {
       const users = await prisma.free_users.findMany({
         where: {
           registrationDate: { lt: cutoffDate },
-          lastActiveAt: null,
+          lastActiveDate: null,
           test_attempts: { none: {} },
         },
         select: { id: true },
@@ -249,7 +247,7 @@ export class DataRetentionService {
       const usersToDelete = await prisma.free_users.findMany({
         where: {
           registrationDate: { lt: cutoffDate },
-          lastActiveAt: null,
+          lastActiveDate: null,
           test_attempts: { none: {} },
         },
         select: { id: true },
@@ -302,7 +300,7 @@ export class DataRetentionService {
           prisma.user_progress.deleteMany({ where: { userId } }),
           prisma.performance_reports.deleteMany({ where: { userId } }),
           prisma.communication_logs.deleteMany({ where: { userId } }),
-          prisma.notes.deleteMany({ where: { userId } }),
+          prisma.notes.deleteMany({ where: { createdById: userId } }),
           prisma.video_notes.deleteMany({ where: { userId } }),
           prisma.video_progress.deleteMany({ where: { userId } }),
           // Anonymize but keep financial records (required by law)

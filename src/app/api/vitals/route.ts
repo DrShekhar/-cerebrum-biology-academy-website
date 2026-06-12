@@ -65,6 +65,11 @@ export async function GET(request: NextRequest) {
     const startDate = new Date()
     startDate.setDate(startDate.getDate() - days)
 
+    const prisma = await getPrisma()
+    if (!prisma) {
+      return NextResponse.json({ success: false })
+    }
+
     const vitals = await prisma.webVital.groupBy({
       by: ['metricName', 'rating'],
       where: {
@@ -82,12 +87,21 @@ export async function GET(request: NextRequest) {
         if (!acc[v.metricName]) {
           acc[v.metricName] = { good: 0, needsImprovement: 0, poor: 0, avg: 0, count: 0 }
         }
-        acc[v.metricName][v.rating === 'good' ? 'good' : v.rating === 'needs-improvement' ? 'needsImprovement' : 'poor'] += v._count
+        acc[v.metricName][
+          v.rating === 'good'
+            ? 'good'
+            : v.rating === 'needs-improvement'
+              ? 'needsImprovement'
+              : 'poor'
+        ] += v._count
         acc[v.metricName].avg = v._avg.metricValue || 0
         acc[v.metricName].count += v._count
         return acc
       },
-      {} as Record<string, { good: number; needsImprovement: number; poor: number; avg: number; count: number }>
+      {} as Record<
+        string,
+        { good: number; needsImprovement: number; poor: number; avg: number; count: number }
+      >
     )
 
     return NextResponse.json({ success: true, data: summary, days })

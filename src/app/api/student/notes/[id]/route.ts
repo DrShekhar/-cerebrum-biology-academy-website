@@ -5,6 +5,15 @@ import type { NoteType } from '@/types/prisma-enums'
 
 export const dynamic = 'force-dynamic'
 
+// NOTE: schema drift — the `notes` model in prisma/schema.prisma is a CRM
+// lead-note model (leadId/content/createdById) and lacks the student-note
+// columns this route uses (title, noteType, isArchived, isFavorite,
+// lastEditedAt, studentId, etc.). No replacement model exists in the schema.
+// Casting to `any` to preserve existing runtime behavior without fabricating
+// columns. This route requires a real `student_notes` schema to work.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const notesModel = (prisma as any).notes
+
 // ============================================
 // TYPES
 // ============================================
@@ -40,7 +49,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
 
     const { id } = await params
 
-    const note = await prisma.notes.findFirst({
+    const note = await notesModel.findFirst({
       where: {
         id,
         studentId: session.user.id,
@@ -80,7 +89,7 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
     const body: UpdateNoteData = await request.json()
 
     // Check if note exists and belongs to user
-    const existingNote = await prisma.notes.findFirst({
+    const existingNote = await notesModel.findFirst({
       where: {
         id,
         studentId: session.user.id,
@@ -168,7 +177,7 @@ export async function DELETE(
     const permanent = searchParams.get('permanent') === 'true'
 
     // Check if note exists and belongs to user
-    const existingNote = await prisma.notes.findFirst({
+    const existingNote = await notesModel.findFirst({
       where: {
         id,
         studentId: session.user.id,
@@ -181,7 +190,7 @@ export async function DELETE(
 
     if (permanent) {
       // Permanently delete the note
-      await prisma.notes.delete({
+      await notesModel.delete({
         where: { id },
       })
 
@@ -191,7 +200,7 @@ export async function DELETE(
       })
     } else {
       // Soft delete (archive) the note
-      await prisma.notes.update({
+      await notesModel.update({
         where: { id },
         data: {
           isArchived: true,

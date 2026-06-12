@@ -91,6 +91,8 @@ export async function POST(request: NextRequest) {
 
     const resource = await prisma.free_resources.create({
       data: {
+        id: `fr_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         title,
         description: description || null,
         type,

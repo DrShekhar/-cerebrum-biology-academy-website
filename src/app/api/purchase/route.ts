@@ -64,14 +64,15 @@ export async function POST(request: NextRequest) {
 
         user = await prisma.users.create({
           data: {
+            id: `usr_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
             email: validatedData.email,
             phone: validatedData.phone,
             name: validatedData.name,
             passwordHash,
             role: 'STUDENT',
+            updatedAt: new Date(),
           },
         })
-
       }
 
       userId = user.id
@@ -134,6 +135,7 @@ export async function POST(request: NextRequest) {
       if (!enrollment) {
         enrollment = await tx.enrollments.create({
           data: {
+            id: `enr_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
             userId,
             courseId: validatedData.courseId,
             status: 'PENDING',
@@ -142,6 +144,7 @@ export async function POST(request: NextRequest) {
             pendingAmount: amountInPaise,
             paymentPlan: validatedData.planType,
             currentProgress: 0,
+            updatedAt: new Date(),
           },
         })
       } else {
@@ -175,6 +178,7 @@ export async function POST(request: NextRequest) {
       // Create payment record
       const payment = await tx.payments.create({
         data: {
+          id: `pay_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId,
           enrollmentId: enrollment.id,
           amount: amountInPaise,
@@ -182,9 +186,9 @@ export async function POST(request: NextRequest) {
           status: 'PENDING',
           paymentMethod: 'RAZORPAY_UPI', // Will be updated based on actual method used
           razorpayOrderId: razorpayOrder.id,
+          updatedAt: new Date(),
         },
       })
-
 
       return {
         enrollment,

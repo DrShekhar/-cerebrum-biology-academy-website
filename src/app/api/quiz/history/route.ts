@@ -33,8 +33,8 @@ export async function GET(request: NextRequest) {
       include: {
         _count: {
           select: {
-            rounds: true,
-            participants: true,
+            quiz_rounds: true,
+            quiz_participants: true,
           },
         },
       },
@@ -65,8 +65,8 @@ export async function GET(request: NextRequest) {
             teamBName: s.teamBName,
             teamAScore: s.teamAScore,
             teamBScore: s.teamBScore,
-            totalRounds: s._count.rounds,
-            participantCount: s._count.participants,
+            totalRounds: s._count.quiz_rounds,
+            participantCount: s._count.quiz_participants,
             duration:
               s.startedAt && s.endedAt
                 ? Math.floor((s.endedAt.getTime() - s.startedAt.getTime()) / 1000)

@@ -65,6 +65,7 @@ export async function POST(request: Request) {
 
     const batch = await prisma.batches.create({
       data: {
+        id: `batch_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         classType: classType as BatchClassType,
         batchNumber: parseInt(batchNumber, 10),
         days: Array.isArray(days) ? days : [days],
@@ -73,6 +74,7 @@ export async function POST(request: Request) {
         offlineLocation: offlineLocation as BatchLocation,
         hasOnline: hasOnline !== false,
         status: (status as BatchStatus) || 'AVAILABLE',
+        updatedAt: new Date(),
       },
     })
 

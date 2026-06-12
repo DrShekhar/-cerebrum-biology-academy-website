@@ -39,10 +39,10 @@ export async function POST(
     const session = await prisma.quiz_sessions.findUnique({
       where: { id: authResult.session.id },
       include: {
-        rounds: {
+        quiz_rounds: {
           orderBy: { roundNumber: 'asc' },
         },
-        participants: true,
+        quiz_participants: true,
       },
     })
 
@@ -71,10 +71,10 @@ export async function POST(
       },
     })
 
-    const teamACorrect = session.rounds.filter(
+    const teamACorrect = session.quiz_rounds.filter(
       (r) => r.answeringTeam === 'TEAM_A' && r.outcome === 'CORRECT'
     ).length
-    const teamBCorrect = session.rounds.filter(
+    const teamBCorrect = session.quiz_rounds.filter(
       (r) => r.answeringTeam === 'TEAM_B' && r.outcome === 'CORRECT'
     ).length
 
@@ -101,7 +101,7 @@ export async function POST(
           },
         },
         totalRounds: session.currentRound,
-        participantCount: session.participants.length,
+        participantCount: session.quiz_participants.length,
         duration: session.startedAt
           ? Math.floor((updated.endedAt!.getTime() - session.startedAt.getTime()) / 1000)
           : 0,

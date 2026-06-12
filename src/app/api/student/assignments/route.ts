@@ -92,32 +92,32 @@ export async function GET(request: NextRequest) {
       prisma.assignments.findMany({
         where,
         include: {
-          teacher: {
+          users: {
             select: {
               id: true,
               name: true,
               email: true,
             },
           },
-          course: {
+          courses: {
             select: {
               id: true,
               name: true,
             },
           },
-          chapter: {
+          chapters: {
             select: {
               id: true,
               title: true,
             },
           },
-          topic: {
+          topics: {
             select: {
               id: true,
               title: true,
             },
           },
-          submissions: {
+          assignment_submissions: {
             where: {
               studentId,
             },
@@ -141,7 +141,7 @@ export async function GET(request: NextRequest) {
 
     const filteredAssignments = submissionStatus
       ? assignments.filter((a) => {
-          const submission = a.submissions[0]
+          const submission = a.assignment_submissions[0]
           if (submissionStatus === 'NOT_SUBMITTED') {
             return !submission || submission.status === 'NOT_SUBMITTED'
           }
@@ -152,7 +152,7 @@ export async function GET(request: NextRequest) {
     const allSubmissions = await prisma.assignment_submissions.findMany({
       where: {
         studentId,
-        assignment: {
+        assignments: {
           status: 'PUBLISHED',
           courseId: { in: enrolledCourseIds },
         },
@@ -193,11 +193,11 @@ export async function GET(request: NextRequest) {
         createdAt: a.createdAt,
         updatedAt: a.updatedAt,
         publishedAt: a.publishedAt,
-        teacher: a.teacher,
-        course: a.course,
-        chapter: a.chapter,
-        topic: a.topic,
-        submission: a.submissions[0] || null,
+        teacher: a.users,
+        course: a.courses,
+        chapter: a.chapters,
+        topic: a.topics,
+        submission: a.assignment_submissions[0] || null,
         isOverdue: new Date(a.dueDate) < new Date(),
       })),
       pagination: {

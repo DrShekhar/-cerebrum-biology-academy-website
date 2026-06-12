@@ -70,22 +70,22 @@ export class CashfreeService {
     }
 
     const response = await cashfree.PGCreateOrder(request)
-    return response.data as CashfreeOrder
+    return response.data as unknown as CashfreeOrder
   }
 
   static async getOrderStatus(orderId: string): Promise<CashfreeOrder> {
     const response = await cashfree.PGFetchOrder(orderId)
-    return response.data as CashfreeOrder
+    return response.data as unknown as CashfreeOrder
   }
 
   static async getPaymentsForOrder(orderId: string): Promise<CashfreePaymentDetail[]> {
     const response = await cashfree.PGOrderFetchPayments(orderId)
-    return response.data as CashfreePaymentDetail[]
+    return response.data as unknown as CashfreePaymentDetail[]
   }
 
   static verifyWebhookSignature(signature: string, rawBody: string, timestamp: string): boolean {
     try {
-      Cashfree.PGVerifyWebhookSignature(signature, rawBody, timestamp)
+      ;(Cashfree as any).PGVerifyWebhookSignature(signature, rawBody, timestamp)
       return true
     } catch {
       return false
@@ -94,7 +94,13 @@ export class CashfreeService {
 
   static mapPaymentMethod(
     detail: CashfreePaymentDetail
-  ): 'CASHFREE_UPI' | 'CASHFREE_CARD' | 'CASHFREE_NETBANKING' | 'CASHFREE_WALLET' | 'CASHFREE_EMI' | 'CASHFREE_PAYLATER' {
+  ):
+    | 'CASHFREE_UPI'
+    | 'CASHFREE_CARD'
+    | 'CASHFREE_NETBANKING'
+    | 'CASHFREE_WALLET'
+    | 'CASHFREE_EMI'
+    | 'CASHFREE_PAYLATER' {
     const pm = detail.payment_method
     if (pm?.upi) return 'CASHFREE_UPI'
     if (pm?.card) return 'CASHFREE_CARD'

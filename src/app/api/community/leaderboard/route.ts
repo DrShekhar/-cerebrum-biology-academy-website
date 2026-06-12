@@ -21,7 +21,7 @@ export async function GET(request: NextRequest) {
         email: true,
         totalPoints: true,
         studyStreak: true,
-        createdAt: true,
+        registrationDate: true,
       },
       orderBy: [{ totalPoints: 'desc' }, { studyStreak: 'desc' }],
       take: limit,

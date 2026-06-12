@@ -70,7 +70,7 @@ export const GET = withAuth(async (request: NextRequest, session) => {
             id: true,
             status: true,
             enrollmentDate: true,
-            course: {
+            courses: {
               select: {
                 id: true,
                 name: true,
@@ -82,8 +82,8 @@ export const GET = withAuth(async (request: NextRequest, session) => {
         },
         _count: {
           select: {
-            testSessions: true,
-            userProgress: true,
+            test_sessions: true,
+            user_progress: true,
           },
         },
       },
@@ -104,11 +104,27 @@ export const GET = withAuth(async (request: NextRequest, session) => {
     // Calculate profile completion percentage
     const profileCompletion = calculateProfileCompletion(user)
 
+    // Remap renamed relation keys back to original response shape
+    const { enrollments, _count, ...userRest } = user
+    const responseUser = {
+      ...userRest,
+      enrollments: enrollments?.map(({ courses, ...e }: any) => ({
+        ...e,
+        course: courses,
+      })),
+      _count: _count
+        ? {
+            testSessions: _count.test_sessions,
+            userProgress: _count.user_progress,
+          }
+        : _count,
+    }
+
     return addSecurityHeaders(
       NextResponse.json({
         success: true,
         user: {
-          ...user,
+          ...responseUser,
           profileCompletion,
         },
       })
@@ -215,6 +231,7 @@ export const PUT = withAuth(async (request: NextRequest, session) => {
     try {
       await prisma.analytics_events.create({
         data: {
+          id: `evt_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: session.userId,
           eventType: 'profile',
           eventName: 'profile_updated',

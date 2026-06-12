@@ -59,6 +59,7 @@ export async function POST(request: NextRequest) {
 
     await prisma.whatsapp_otp.create({
       data: {
+        id: `wotp_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         phone: formattedPhone,
         otp,
         expiresAt,
@@ -73,7 +74,6 @@ export async function POST(request: NextRequest) {
     if (!result.success) {
       return NextResponse.json({ error: result.error || 'Failed to send OTP' }, { status: 500 })
     }
-
 
     return NextResponse.json({
       success: true,

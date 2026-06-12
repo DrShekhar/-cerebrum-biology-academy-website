@@ -239,8 +239,10 @@ export async function POST(req: NextRequest) {
         },
       },
       create: {
+        id: `kpi_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         counselorId: session.user.id,
         date: dateOnly,
+        updatedAt: new Date(),
         leadsCreated: validatedData.leadsCreated ?? existingLeads.length,
         leadsContacted: validatedData.leadsContacted ?? 0,
         leadsConverted: validatedData.leadsConverted ?? convertedLeads.length,

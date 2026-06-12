@@ -18,7 +18,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
         studentId: session.user.id,
       },
       include: {
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
@@ -26,7 +26,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
             description: true,
           },
         },
-        enrollment: {
+        enrollments: {
           select: {
             id: true,
             status: true,
@@ -34,14 +34,14 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
             currentProgress: true,
           },
         },
-        student: {
+        users: {
           select: {
             id: true,
             name: true,
             email: true,
           },
         },
-        template: true,
+        certificate_templates: true,
       },
     })
 
@@ -58,7 +58,22 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
       },
     })
 
-    return NextResponse.json({ certificate })
+    const {
+      courses: certCourse,
+      enrollments: certEnrollment,
+      users: certStudent,
+      certificate_templates: certTemplate,
+      ...certRest
+    } = certificate
+    const remappedCertificate = {
+      ...certRest,
+      course: certCourse,
+      enrollment: certEnrollment,
+      student: certStudent,
+      template: certTemplate,
+    }
+
+    return NextResponse.json({ certificate: remappedCertificate })
   } catch (error) {
     console.error('Error fetching certificate:', error)
     return NextResponse.json({ error: 'Failed to fetch certificate' }, { status: 500 })

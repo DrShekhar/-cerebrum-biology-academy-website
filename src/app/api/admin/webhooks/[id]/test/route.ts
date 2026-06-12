@@ -37,7 +37,21 @@ async function handlePOST(request: NextRequest, session: ValidatedSession): Prom
       },
     }
 
-    const result = await WebhookService.sendWebhook(webhook, testPayload, true)
+    const webhookConfig = {
+      id: webhook.id,
+      name: webhook.name,
+      url: webhook.url,
+      secret: webhook.secret,
+      headers: webhook.headers as Record<string, string> | null,
+      retryPolicy: webhook.retryPolicy as {
+        maxRetries?: number
+        retryDelayMs?: number
+      } | null,
+      isActive: webhook.isActive,
+      events: webhook.events,
+    }
+
+    const result = await WebhookService.sendWebhook(webhookConfig, testPayload, true)
 
     // Log activity
     await prisma.activities.create({

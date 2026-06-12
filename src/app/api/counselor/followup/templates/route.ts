@@ -50,7 +50,7 @@ export async function GET(request: NextRequest) {
     const templates = await prisma.followup_templates.findMany({
       where,
       include: {
-        user: {
+        users: {
           select: {
             id: true,
             name: true,
@@ -59,7 +59,7 @@ export async function GET(request: NextRequest) {
         },
         _count: {
           select: {
-            rules: true,
+            followup_rules: true,
           },
         },
       },
@@ -69,8 +69,10 @@ export async function GET(request: NextRequest) {
     const templatesWithValidation = templates.map((template) => {
       const validation = validateTemplate(template.content)
 
+      const { users, ...templateRest } = template
       return {
-        ...template,
+        ...templateRest,
+        user: users,
         validation: {
           valid: validation.valid,
           invalidPlaceholders: validation.invalidPlaceholders,
@@ -136,11 +138,11 @@ export async function POST(request: NextRequest) {
         id: `template_${Date.now()}_${Math.floor(Math.random() * 1000)}`,
         ...validatedData,
         variables: validatedData.variables || {},
-        createdBy: session.userId,
+        createdById: session.userId,
         updatedAt: new Date(),
       },
       include: {
-        user: {
+        users: {
           select: {
             id: true,
             name: true,
@@ -152,16 +154,18 @@ export async function POST(request: NextRequest) {
 
     await prisma.activities.create({
       data: {
+        id: `act_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         userId: session.userId,
         action: 'FOLLOWUP_TEMPLATE_CREATED',
         description: `Created follow-up template: ${template.name}`,
       },
     })
 
+    const { users: templateUser, ...templateData } = template
     return NextResponse.json(
       {
         success: true,
-        data: template,
+        data: { ...templateData, user: templateUser },
         message: 'Follow-up template created successfully',
       },
       { status: 201 }

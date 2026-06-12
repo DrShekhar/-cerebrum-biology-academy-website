@@ -4,6 +4,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { withAdmin, ValidatedSession } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
+import { Prisma } from '@/generated/prisma'
 import { z } from 'zod'
 
 const updateWebhookSchema = z.object({
@@ -136,6 +137,9 @@ async function handlePATCH(request: NextRequest, session: ValidatedSession): Pro
       where: { id },
       data: {
         ...validatedData,
+        headers: validatedData.headers as Prisma.InputJsonValue | undefined,
+        retryPolicy: validatedData.retryPolicy as Prisma.InputJsonValue | undefined,
+        metadata: validatedData.metadata as Prisma.InputJsonValue | undefined,
         updatedAt: new Date(),
       },
     })

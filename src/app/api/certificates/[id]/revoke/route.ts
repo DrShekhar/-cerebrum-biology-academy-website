@@ -50,7 +50,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
         revokeReason: reason,
       },
       include: {
-        student: {
+        users: {
           select: {
             id: true,
             name: true,
@@ -60,9 +60,12 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
       },
     })
 
+    const { users: revokeStudent, ...revokeRest } = updatedCertificate
+    const revokedCertificate = { ...revokeRest, student: revokeStudent }
+
     return NextResponse.json({
       message: 'Certificate revoked successfully',
-      certificate: updatedCertificate,
+      certificate: revokedCertificate,
     })
   } catch (error) {
     if (error instanceof z.ZodError) {

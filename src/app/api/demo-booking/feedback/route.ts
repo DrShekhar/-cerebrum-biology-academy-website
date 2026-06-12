@@ -55,7 +55,11 @@ function generateFeedbackToken(bookingId: string, timestamp?: number): string {
  * Verify feedback token with expiration check
  * Returns { valid: boolean, expired?: boolean }
  */
-function verifyFeedbackToken(bookingId: string, token: string, demoDate?: Date): { valid: boolean; expired?: boolean } {
+function verifyFeedbackToken(
+  bookingId: string,
+  token: string,
+  demoDate?: Date
+): { valid: boolean; expired?: boolean } {
   try {
     const [tsEncoded, hmac] = token.split('.')
     if (!tsEncoded || !hmac) {
@@ -151,10 +155,7 @@ export async function POST(request: NextRequest) {
     })
 
     if (!booking) {
-      return NextResponse.json(
-        { success: false, error: 'Booking not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Booking not found' }, { status: 404 })
     }
 
     // Parse demo date for expiration check
@@ -165,17 +166,15 @@ export async function POST(request: NextRequest) {
     // Verify token with expiration check
     const tokenResult = verifyFeedbackToken(bookingId, token, demoDate)
     if (!tokenResult.valid) {
-      return NextResponse.json(
-        { success: false, error: 'Invalid feedback token' },
-        { status: 401 }
-      )
+      return NextResponse.json({ success: false, error: 'Invalid feedback token' }, { status: 401 })
     }
 
     if (tokenResult.expired) {
       return NextResponse.json(
         {
           success: false,
-          error: 'Feedback link has expired. Please contact support if you still wish to provide feedback.',
+          error:
+            'Feedback link has expired. Please contact support if you still wish to provide feedback.',
         },
         { status: 410 } // 410 Gone - resource no longer available
       )
@@ -190,20 +189,12 @@ export async function POST(request: NextRequest) {
     }
 
     // Save feedback
-    const existingMetadata = (booking.metadata as any) || {}
     const updatedBooking = await prisma.demo_bookings.update({
       where: { id: bookingId },
       data: {
         demoRating: rating,
         demoFeedback: feedback || null,
         demoCompleted: true,
-        metadata: {
-          ...existingMetadata,
-          wouldRecommend,
-          topicsLiked,
-          improvementSuggestions,
-          feedbackSubmittedAt: new Date().toISOString(),
-        },
         updatedAt: new Date(),
       },
     })
@@ -212,6 +203,8 @@ export async function POST(request: NextRequest) {
     try {
       await prisma.activities.create({
         data: {
+          id: `act_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+          userId: booking.userId || 'system',
           action: 'DEMO_FEEDBACK_SUBMITTED',
           description: `Demo feedback submitted: ${rating}/5 stars`,
           metadata: {
@@ -261,10 +254,7 @@ async function handleGetFeedbackLink(request: NextRequest, _session: UserSession
     const bookingId = searchParams.get('id')
 
     if (!bookingId) {
-      return NextResponse.json(
-        { success: false, error: 'Booking ID is required' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Booking ID is required' }, { status: 400 })
     }
 
     // Check if booking exists (include preferredDate for expiry calculation)
@@ -281,10 +271,7 @@ async function handleGetFeedbackLink(request: NextRequest, _session: UserSession
     })
 
     if (!booking) {
-      return NextResponse.json(
-        { success: false, error: 'Booking not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Booking not found' }, { status: 404 })
     }
 
     // Generate feedback token with timestamp

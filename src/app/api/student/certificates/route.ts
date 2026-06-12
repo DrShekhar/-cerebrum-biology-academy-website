@@ -34,14 +34,14 @@ export async function GET(request: NextRequest) {
     const certificates = await prisma.certificates.findMany({
       where,
       include: {
-        course: {
+        courses: {
           select: {
             id: true,
             name: true,
             type: true,
           },
         },
-        enrollment: {
+        enrollments: {
           select: {
             id: true,
             status: true,
@@ -52,6 +52,11 @@ export async function GET(request: NextRequest) {
       orderBy: {
         issueDate: 'desc',
       },
+    })
+
+    const remappedCertificates = certificates.map((cert) => {
+      const { courses: certCourse, enrollments: certEnrollment, ...certRest } = cert
+      return { ...certRest, course: certCourse, enrollment: certEnrollment }
     })
 
     const stats = {
@@ -73,7 +78,7 @@ export async function GET(request: NextRequest) {
     }
 
     return NextResponse.json({
-      certificates,
+      certificates: remappedCertificates,
       stats,
     })
   } catch (error) {

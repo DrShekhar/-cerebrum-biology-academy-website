@@ -61,7 +61,7 @@ export const paymentLinkReminders = inngest.createFunction(
     let skipped = 0
 
     for (const link of due) {
-      const ageMs = now.getTime() - link.createdAt.getTime()
+      const ageMs = now.getTime() - new Date(link.createdAt).getTime()
       const ageHours = ageMs / (1000 * 60 * 60)
       const requiredHours = REMINDER_SCHEDULE_HOURS[link.remindersSent]
       if (ageHours < requiredHours) {
@@ -77,7 +77,7 @@ export const paymentLinkReminders = inngest.createFunction(
       )}`
       const expiresIn = Math.max(
         0,
-        Math.ceil((link.expiresAt.getTime() - now.getTime()) / (1000 * 60 * 60 * 24))
+        Math.ceil((new Date(link.expiresAt).getTime() - now.getTime()) / (1000 * 60 * 60 * 24))
       )
 
       const subject = `Reminder ${reminderNumber}/${MAX_REMINDERS}: complete your payment — Cerebrum Biology Academy`

@@ -127,7 +127,7 @@ export async function GET(
       orderBy: { createdAt: 'asc' },
       take: limit + 1, // Fetch one extra to check if there are more
       include: {
-        reactions: {
+        quiz_message_reactions: {
           select: {
             emoji: true,
             participantId: true,
@@ -150,7 +150,7 @@ export async function GET(
         data: returnMessages.map((m) => {
           // Aggregate reactions by emoji
           const reactionCounts: Record<string, { count: number; participantIds: string[] }> = {}
-          for (const r of m.reactions) {
+          for (const r of m.quiz_message_reactions) {
             if (!reactionCounts[r.emoji]) {
               reactionCounts[r.emoji] = { count: 0, participantIds: [] }
             }

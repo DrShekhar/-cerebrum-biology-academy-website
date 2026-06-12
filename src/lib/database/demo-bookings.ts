@@ -22,17 +22,17 @@ export async function createDemoBooking(data: {
 }) {
   return prisma.demo_bookings.create({
     data: {
+      id: `demo_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+      updatedAt: new Date(),
       userId: data.userId,
       courseId: data.courseId,
       studentName: data.studentName,
       email: data.email,
       phone: data.phone,
-      whatsappNumber: data.whatsappNumber,
       studentClass: data.studentClass,
       preferredDate: data.preferredDate,
       preferredTime: data.preferredTime,
       assignedTo: data.assignedTo,
-      notes: data.notes || data.message,
       message: data.message,
       source: data.source || 'website',
       utmSource: data.utmSource,
@@ -40,8 +40,8 @@ export async function createDemoBooking(data: {
       utmCampaign: data.utmCampaign,
     },
     include: {
-      user: true,
-      course: true,
+      users: true,
+      courses: true,
     },
   })
 }
@@ -83,9 +83,9 @@ export async function getDemoBookings(options: {
       take: limit,
       orderBy: { createdAt: 'desc' },
       include: {
-        user: true,
-        course: true,
-        communicationLog: {
+        users: true,
+        courses: true,
+        communication_logs: {
           orderBy: { createdAt: 'desc' },
           take: 5,
         },
@@ -124,8 +124,8 @@ export async function updateDemoBookingStatus(
     where: { id },
     data: updateData,
     include: {
-      user: true,
-      course: true,
+      users: true,
+      courses: true,
     },
   })
 }
@@ -142,6 +142,7 @@ export async function addDemoBookingCommunication(
 ) {
   return prisma.communication_logs.create({
     data: {
+      id: `comlog_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
       demoBookingId,
       type: data.type as any,
       channel: data.channel as any,

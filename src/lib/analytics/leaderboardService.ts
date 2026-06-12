@@ -11,7 +11,7 @@ export class LeaderboardService {
   ): Promise<Leaderboard> {
     const timeRange = this.getTimeRange(period)
 
-    const testAttempts = await db.testAttempt.findMany({
+    const testAttempts = await db.test_attempts.findMany({
       where: {
         status: 'COMPLETED',
         ...(timeRange && {
@@ -22,7 +22,7 @@ export class LeaderboardService {
         }),
       },
       include: {
-        freeUser: true,
+        free_users: true,
       },
     })
 
@@ -44,7 +44,7 @@ export class LeaderboardService {
       if (!userStats[userId]) {
         userStats[userId] = {
           userId,
-          name: attempt.freeUser.name || 'Anonymous',
+          name: attempt.free_users.name || 'Anonymous',
           totalScore: 0,
           testsCompleted: 0,
           totalTime: 0,
@@ -129,10 +129,10 @@ export class LeaderboardService {
   ): Promise<Leaderboard> {
     const timeRange = this.getTimeRange(period)
 
-    const testAttempts = await db.testAttempt.findMany({
+    const testAttempts = await db.test_attempts.findMany({
       where: {
         status: 'COMPLETED',
-        freeUser: {
+        free_users: {
           grade,
         },
         ...(timeRange && {
@@ -143,7 +143,7 @@ export class LeaderboardService {
         }),
       },
       include: {
-        freeUser: true,
+        free_users: true,
       },
     })
 
@@ -160,7 +160,7 @@ export class LeaderboardService {
   ): Promise<Leaderboard> {
     const timeRange = this.getTimeRange(period)
 
-    const testAttempts = await db.testAttempt.findMany({
+    const testAttempts = await db.test_attempts.findMany({
       where: {
         status: 'COMPLETED',
         ...(timeRange && {
@@ -171,14 +171,15 @@ export class LeaderboardService {
         }),
       },
       include: {
-        freeUser: true,
-        testQuestions: {
-          include: {
-            question: {
-              where: {
-                subject,
-              },
+        free_users: true,
+        test_questions: {
+          where: {
+            questions: {
+              subject,
             },
+          },
+          include: {
+            questions: true,
           },
         },
       },
@@ -186,7 +187,7 @@ export class LeaderboardService {
 
     // Filter attempts that have questions from the specified subject
     const filteredAttempts = testAttempts.filter((attempt) =>
-      attempt.testQuestions.some((tq) => tq.question?.subject === subject)
+      attempt.test_questions.some((tq) => tq.questions?.subject === subject)
     )
 
     return this.processLeaderboardData(filteredAttempts, 'subject', period, limit)
@@ -202,11 +203,10 @@ export class LeaderboardService {
   ): Promise<Leaderboard> {
     const timeRange = this.getTimeRange(period)
 
-    const testAttempts = await db.testAttempt.findMany({
+    const testAttempts = await db.test_attempts.findMany({
       where: {
         status: 'COMPLETED',
         topics: {
-          path: '$',
           array_contains: topic,
         },
         ...(timeRange && {
@@ -217,14 +217,15 @@ export class LeaderboardService {
         }),
       },
       include: {
-        freeUser: true,
-        testQuestions: {
-          include: {
-            question: {
-              where: {
-                topic,
-              },
+        free_users: true,
+        test_questions: {
+          where: {
+            questions: {
+              topic,
             },
+          },
+          include: {
+            questions: true,
           },
         },
       },
@@ -281,7 +282,7 @@ export class LeaderboardService {
     const lastWeek = new Date()
     lastWeek.setDate(lastWeek.getDate() - 7)
 
-    const previousWeekAttempts = await db.testAttempt.findMany({
+    const previousWeekAttempts = await db.test_attempts.findMany({
       where: {
         freeUserId: userId,
         status: 'COMPLETED',
@@ -346,7 +347,7 @@ export class LeaderboardService {
       if (!userStats[userId]) {
         userStats[userId] = {
           userId,
-          name: attempt.freeUser.name || 'Anonymous',
+          name: attempt.free_users.name || 'Anonymous',
           totalScore: 0,
           testsCompleted: 0,
           totalTime: 0,
@@ -460,7 +461,7 @@ export class LeaderboardService {
    * Get achievements for user
    */
   async getUserAchievements(userId: string): Promise<number> {
-    const achievements = await db.achievement.count({
+    const achievements = await db.achievements.count({
       where: {
         freeUserId: userId,
         isCompleted: true,
@@ -474,7 +475,7 @@ export class LeaderboardService {
    * Calculate user streak
    */
   async getUserStreak(userId: string): Promise<number> {
-    const user = await db.freeUser.findUnique({
+    const user = await db.free_users.findUnique({
       where: { id: userId },
       select: { studyStreak: true },
     })
@@ -519,7 +520,7 @@ export class LeaderboardService {
       return new Map()
     }
 
-    const previousAttempts = await db.testAttempt.findMany({
+    const previousAttempts = await db.test_attempts.findMany({
       where: {
         status: 'COMPLETED',
         submittedAt: {
@@ -528,7 +529,7 @@ export class LeaderboardService {
         },
       },
       include: {
-        freeUser: true,
+        free_users: true,
       },
     })
 

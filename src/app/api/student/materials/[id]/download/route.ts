@@ -67,6 +67,8 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
           status: 'DOWNLOADED',
         },
         create: {
+          id: `matprog_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+          updatedAt: new Date(),
           materialId,
           userId,
           status: 'DOWNLOADED',

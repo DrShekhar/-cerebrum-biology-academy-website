@@ -202,6 +202,7 @@ If you didn't request this password reset, please ignore this email.
     try {
       await prisma.analytics_events.create({
         data: {
+          id: `evt_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: user.id,
           eventType: 'security',
           eventName: 'password_reset_requested',

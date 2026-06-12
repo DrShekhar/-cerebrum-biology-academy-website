@@ -6,7 +6,9 @@ import { z } from 'zod'
 
 // Validation schema for OTP verification
 const verifyOtpSchema = z.object({
-  mobile: z.string().regex(/^\+?[1-9]\d{7,14}$/, 'Enter phone with country code (e.g. +1 415 555 0123)'),
+  mobile: z
+    .string()
+    .regex(/^\+?[1-9]\d{7,14}$/, 'Enter phone with country code (e.g. +1 415 555 0123)'),
   otp: z.string().length(6, 'OTP must be 6 digits'),
   otpId: z.string().uuid('Invalid OTP ID'),
   purpose: z.enum(['registration', 'login', 'password_reset', 'mobile_verification']),
@@ -197,6 +199,8 @@ export async function POST(request: NextRequest) {
       // Create new user
       user = await prisma.users.create({
         data: {
+          id: `usr_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+          updatedAt: new Date(),
           name,
           email: email || `${mobile}@temp.cerebrumbiologyacademy.com`,
           phone: mobile,
@@ -219,17 +223,16 @@ export async function POST(request: NextRequest) {
       // Update marketing lead status
       try {
         const lead = await prisma.leads.findFirst({
-          where: { mobile: mobile },
+          where: { phone: mobile },
         })
 
         if (lead) {
           await prisma.leads.update({
             where: { id: lead.id },
             data: {
-              name: name,
+              studentName: name,
               email: email,
-              whatsapp: whatsapp || mobile,
-              status: 'enrolled',
+              stage: 'ENROLLED',
             },
           })
         }
@@ -284,6 +287,7 @@ export async function POST(request: NextRequest) {
     try {
       await prisma.analytics_events.create({
         data: {
+          id: `evt_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: user.id,
           eventType: 'auth',
           eventName: purpose === 'registration' ? 'user_registered_otp' : 'user_login_otp',

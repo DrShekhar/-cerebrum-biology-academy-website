@@ -132,7 +132,7 @@ export async function GET(request: NextRequest, context: RouteContext) {
     const studyTimeSeconds = studyTimeResult._sum.timeSpent || 0
     const studyHours = studyTimeSeconds / 3600
 
-    const courseDuration = enrollment.course.duration
+    const courseDuration = enrollment.courses.duration
     const targetStudyHours = courseDuration * 40
 
     let materialProgress = 0
@@ -176,7 +176,7 @@ export async function GET(request: NextRequest, context: RouteContext) {
     return NextResponse.json({
       enrollmentId,
       courseId,
-      courseName: enrollment.course.name,
+      courseName: enrollment.courses.name,
       overallProgress,
       progressBreakdown,
       lastUpdated: new Date().toISOString(),

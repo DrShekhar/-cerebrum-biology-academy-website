@@ -152,6 +152,8 @@ export async function POST(request: NextRequest) {
     // Create new user
     const user = await prisma.users.create({
       data: {
+        id: `usr_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         name,
         email: email.toLowerCase(),
         phone,
@@ -173,6 +175,7 @@ export async function POST(request: NextRequest) {
     try {
       await prisma.analytics_events.create({
         data: {
+          id: `evt_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: user.id,
           eventType: 'auth',
           eventName: 'user_registered',

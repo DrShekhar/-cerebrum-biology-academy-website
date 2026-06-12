@@ -137,11 +137,11 @@ async function handleGET(request: NextRequest, _session: ValidatedSession): Prom
         id: lead.id,
         name: lead.name,
         email: lead.email,
-        phone: lead.whatsappPhone,
+        phone: lead.whatsappNumber,
         source: lead.source,
-        captureType: lead.captureType,
-        engagementScore: lead.engagementScore,
-        articleSlug: lead.articleSlug,
+        captureType: null,
+        engagementScore: lead.leadScore,
+        articleSlug: lead.topicSlug,
         createdAt: lead.createdAt.toISOString(),
       }))
     }

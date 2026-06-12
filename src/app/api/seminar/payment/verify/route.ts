@@ -51,8 +51,8 @@ export async function POST(req: NextRequest) {
     notifyAdminFormSubmission('🎓 Seminar Registration Payment', {
       Parent: registration.parentName,
       Email: registration.email,
-      'WhatsApp': registration.whatsappNumber || '-',
-      'Seminar Date': registration.seminarDate || '-',
+      WhatsApp: registration.whatsappNumber || '-',
+      'Seminar Date': registration.seminarDate?.toISOString() || '-',
       'Seminar Slot': registration.seminarSlot || '-',
       'Payment ID': razorpay_payment_id,
       Status: 'COMPLETED',

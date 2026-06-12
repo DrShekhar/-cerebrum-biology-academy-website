@@ -100,6 +100,8 @@ async function updateUserProgress(
       // Create new progress record
       await prisma.user_progress.create({
         data: {
+          id: `up_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+          updatedAt: new Date(),
           ...(freeUserId ? { freeUserId } : { userId }),
           topic: question.topic,
           subtopic: question.subtopic,
@@ -269,6 +271,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       // Create new response
       userResponse = await prisma.user_question_responses.create({
         data: {
+          id: `uqr_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           ...(session.role === 'STUDENT'
             ? { userId: session.userId }
             : { freeUserId: session.userId }),

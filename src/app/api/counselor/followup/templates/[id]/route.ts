@@ -22,14 +22,14 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     const template = await prisma.followup_templates.findUnique({
       where: { id: params.id },
       include: {
-        user: {
+        users: {
           select: {
             id: true,
             name: true,
             email: true,
           },
         },
-        rules: {
+        followup_rules: {
           select: {
             id: true,
             name: true,
@@ -53,10 +53,13 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
 
     const validation = validateTemplate(template.content)
 
+    const { users: templateUser, followup_rules: templateRules, ...templateRest } = template
     return NextResponse.json({
       success: true,
       data: {
-        ...template,
+        ...templateRest,
+        user: templateUser,
+        rules: templateRules,
         validation: {
           valid: validation.valid,
           invalidPlaceholders: validation.invalidPlaceholders,
@@ -163,14 +166,14 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
         updatedAt: new Date(),
       },
       include: {
-        user: {
+        users: {
           select: {
             id: true,
             name: true,
             email: true,
           },
         },
-        rules: {
+        followup_rules: {
           select: {
             id: true,
             name: true,
@@ -182,6 +185,7 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
 
     await prisma.activities.create({
       data: {
+        id: `act_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         userId: session.userId,
         action: 'FOLLOWUP_TEMPLATE_UPDATED',
         description: `Updated follow-up template: ${updatedTemplate.name}`,
@@ -190,10 +194,17 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
 
     const validation = validateTemplate(updatedTemplate.content)
 
+    const {
+      users: updatedTemplateUser,
+      followup_rules: updatedTemplateRules,
+      ...updatedTemplateRest
+    } = updatedTemplate
     return NextResponse.json({
       success: true,
       data: {
-        ...updatedTemplate,
+        ...updatedTemplateRest,
+        user: updatedTemplateUser,
+        rules: updatedTemplateRules,
         validation: {
           valid: validation.valid,
           invalidPlaceholders: validation.invalidPlaceholders,
@@ -237,7 +248,7 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
       include: {
         _count: {
           select: {
-            rules: true,
+            followup_rules: true,
           },
         },
       },
@@ -253,7 +264,7 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
       )
     }
 
-    const hasLinkedRules = existingTemplate._count.rules > 0
+    const hasLinkedRules = existingTemplate._count.followup_rules > 0
 
     if (hasLinkedRules) {
       await prisma.followup_templates.update({
@@ -266,6 +277,7 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
 
       await prisma.activities.create({
         data: {
+          id: `act_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: session.userId,
           action: 'FOLLOWUP_TEMPLATE_DEACTIVATED',
           description: `Deactivated follow-up template: ${existingTemplate.name} (has linked rules)`,
@@ -284,6 +296,7 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
 
       await prisma.activities.create({
         data: {
+          id: `act_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: session.userId,
           action: 'FOLLOWUP_TEMPLATE_DELETED',
           description: `Deleted follow-up template: ${existingTemplate.name}`,

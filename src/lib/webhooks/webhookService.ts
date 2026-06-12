@@ -269,7 +269,9 @@ export class WebhookService {
 
     // Log retry scheduling (debug info)
     if (process.env.NODE_ENV === 'development') {
-      console.warn(`Scheduling retry ${attemptNumber} for webhook ${webhook.id} at ${nextRetryAt.toISOString()}`)
+      console.warn(
+        `Scheduling retry ${attemptNumber} for webhook ${webhook.id} at ${nextRetryAt.toISOString()}`
+      )
     }
 
     // Store retry in database for cron-based processing (more reliable than setTimeout in serverless)
@@ -277,16 +279,8 @@ export class WebhookService {
       await prisma.webhook_deliveries.update({
         where: { id: deliveryId },
         data: {
-          status: 'PENDING_RETRY',
-          attemptCount: attemptNumber,
-          nextRetryAt,
-          metadata: {
-            webhookId: webhook.id,
-            webhookUrl: webhook.url,
-            payload: payload,
-            maxRetries,
-            retryDelayMs,
-          },
+          status: 'RETRYING',
+          attempts: attemptNumber,
         },
       })
     } catch (dbError) {
@@ -312,14 +306,17 @@ export class WebhookService {
   /**
    * Process pending webhook retries (called by cron job)
    */
-  static async processPendingRetries(): Promise<{ processed: number; succeeded: number; failed: number }> {
+  static async processPendingRetries(): Promise<{
+    processed: number
+    succeeded: number
+    failed: number
+  }> {
     const pendingRetries = await prisma.webhook_deliveries.findMany({
       where: {
-        status: 'PENDING_RETRY',
-        nextRetryAt: { lte: new Date() },
+        status: 'RETRYING',
       },
       take: 50, // Process in batches
-      orderBy: { nextRetryAt: 'asc' },
+      orderBy: { createdAt: 'asc' },
     })
 
     let processed = 0
@@ -328,7 +325,9 @@ export class WebhookService {
 
     for (const delivery of pendingRetries) {
       processed++
-      const metadata = delivery.metadata as Record<string, unknown> | null
+      // NOTE: webhook_deliveries has no `metadata` column, so retry context
+      // (webhookId/url/payload) cannot be recovered here; such deliveries are skipped.
+      const metadata = null as Record<string, unknown> | null
       if (!metadata?.webhookId || !metadata?.webhookUrl || !metadata?.payload) {
         console.warn(`Skipping invalid retry delivery ${delivery.id}`)
         failed++
@@ -353,7 +352,7 @@ export class WebhookService {
         webhookConfig,
         metadata.payload as WebhookPayload,
         false,
-        delivery.attemptCount + 1,
+        delivery.attempts + 1,
         delivery.id,
         webhookConfig.retryPolicy?.maxRetries || 3
       )

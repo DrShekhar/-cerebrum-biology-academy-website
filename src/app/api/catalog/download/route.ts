@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
     // Check for duplicate (rate limit per email/phone)
     const recentLead = await prisma.content_leads.findFirst({
       where: {
-        OR: [{ email: body.email }, { whatsappPhone: normalizedPhone }],
+        OR: [{ email: body.email }, { whatsappNumber: normalizedPhone }],
         createdAt: { gte: new Date(Date.now() - 5 * 60 * 1000) }, // Last 5 minutes
       },
     })
@@ -61,17 +61,15 @@ export async function POST(request: NextRequest) {
         id: leadId,
         name: body.name || null,
         email: body.email,
-        whatsappPhone: normalizedPhone,
+        whatsappNumber: normalizedPhone,
         source: body.source || 'catalog_download',
-        captureType: 'CATALOG_DOWNLOAD',
-        articleSlug: 'catalog-download',
         ipAddress: clientIp,
         deviceType: userAgent.includes('Mobile') ? 'MOBILE' : 'DESKTOP',
-        browserInfo: userAgent,
+        browser: userAgent,
         utmSource: body.utm_source || null,
         utmMedium: body.utm_medium || null,
         utmCampaign: body.utm_campaign || null,
-        engagementScore: 20, // Base score for catalog download
+        leadScore: 20, // Base score for catalog download
         updatedAt: new Date(),
       },
     })
@@ -188,7 +186,7 @@ export async function GET(request: NextRequest) {
 
     // Query from database
     const whereClause: Record<string, unknown> = {
-      captureType: 'CATALOG_DOWNLOAD',
+      source: 'catalog_download',
       createdAt: { gte: cutoffDate },
     }
 
@@ -203,7 +201,7 @@ export async function GET(request: NextRequest) {
         take: 100,
       }),
       prisma.content_leads.count({
-        where: { captureType: 'CATALOG_DOWNLOAD' },
+        where: { source: 'catalog_download' },
       }),
     ])
 
@@ -211,7 +209,7 @@ export async function GET(request: NextRequest) {
     const analytics = {
       totalDownloads: leads.length,
       uniqueEmails: new Set(leads.map((l) => l.email).filter(Boolean)).size,
-      uniquePhones: new Set(leads.map((l) => l.whatsappPhone)).size,
+      uniquePhones: new Set(leads.map((l) => l.whatsappNumber)).size,
       sourceBreakdown: leads.reduce(
         (acc, lead) => {
           const src = lead.source || 'unknown'
@@ -230,7 +228,7 @@ export async function GET(request: NextRequest) {
       recentLeads: leads.slice(0, 10).map((l) => ({
         id: l.id,
         email: l.email,
-        phone: l.whatsappPhone,
+        phone: l.whatsappNumber,
         source: l.source,
         createdAt: l.createdAt,
       })),

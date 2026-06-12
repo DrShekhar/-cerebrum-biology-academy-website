@@ -56,10 +56,7 @@ interface BatchMeta {
   totalQuestions?: number
 }
 
-function validateQuestion(
-  q: BatchQuestion,
-  index: number
-): { valid: boolean; errors: string[] } {
+function validateQuestion(q: BatchQuestion, index: number): { valid: boolean; errors: string[] } {
   const errors: string[] = []
 
   if (!q.question || q.question.trim().length < 10) {
@@ -112,20 +109,14 @@ export async function POST(request: NextRequest) {
 
     const session = await auth()
     if (!session?.user?.id || session.user.role?.toUpperCase() !== 'ADMIN') {
-      return NextResponse.json(
-        { error: 'Unauthorized - Admin access required' },
-        { status: 401 }
-      )
+      return NextResponse.json({ error: 'Unauthorized - Admin access required' }, { status: 401 })
     }
 
     const body = await request.json()
     const { batch, questions }: { batch: BatchMeta; questions: BatchQuestion[] } = body
 
     if (!batch?.name) {
-      return NextResponse.json(
-        { error: 'batch.name is required' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'batch.name is required' }, { status: 400 })
     }
     if (!Array.isArray(questions) || questions.length === 0) {
       return NextResponse.json(
@@ -134,10 +125,7 @@ export async function POST(request: NextRequest) {
       )
     }
     if (questions.length > 500) {
-      return NextResponse.json(
-        { error: 'Maximum 500 questions per batch' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'Maximum 500 questions per batch' }, { status: 400 })
     }
 
     const allErrors: string[] = []
@@ -182,6 +170,8 @@ export async function POST(request: NextRequest) {
       deduped.map((q) =>
         prisma.questions.create({
           data: {
+            id: `q_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+            updatedAt: new Date(),
             topic: q.topic.trim(),
             subtopic: q.subtopic?.trim() || null,
             curriculum: 'NCERT',

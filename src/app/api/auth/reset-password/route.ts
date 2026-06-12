@@ -1,11 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import {
-  addSecurityHeaders,
-  PasswordUtils,
-  AuthRateLimit,
-  getCorsOrigin,
-} from '@/lib/auth/config'
+import { addSecurityHeaders, PasswordUtils, AuthRateLimit, getCorsOrigin } from '@/lib/auth/config'
 import { z } from 'zod'
 import crypto from 'crypto'
 
@@ -187,6 +182,7 @@ export async function POST(request: NextRequest) {
     try {
       await prisma.analytics_events.create({
         data: {
+          id: `evt_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           userId: resetToken.userId,
           eventType: 'security',
           eventName: 'password_reset_completed',
@@ -201,7 +197,6 @@ export async function POST(request: NextRequest) {
     } catch (analyticsError) {
       console.error('Analytics tracking error:', analyticsError)
     }
-
 
     return addSecurityHeaders(
       NextResponse.json({

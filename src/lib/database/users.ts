@@ -15,12 +15,14 @@ export async function createUser(data: {
 
   return prisma.users.create({
     data: {
+      id: `usr_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
       email: data.email,
       name: data.name,
       phone: data.phone,
       role: data.role || 'STUDENT',
       passwordHash,
       profile: data.profile || {},
+      updatedAt: new Date(),
     },
   })
 }
@@ -32,11 +34,11 @@ export async function getUserByEmail(email: string) {
     include: {
       enrollments: {
         include: {
-          course: true,
+          courses: true,
           payments: true,
         },
       },
-      demoBookings: true,
+      demo_bookings: true,
     },
   })
 }
@@ -48,11 +50,11 @@ export async function getUserById(id: string) {
     include: {
       enrollments: {
         include: {
-          course: true,
+          courses: true,
           payments: true,
         },
       },
-      demoBookings: true,
+      demo_bookings: true,
     },
   })
 }
@@ -107,13 +109,13 @@ export async function getUsers(options: {
       include: {
         enrollments: {
           include: {
-            course: true,
+            courses: true,
           },
         },
         _count: {
           select: {
             enrollments: true,
-            demoBookings: true,
+            demo_bookings: true,
             payments: true,
           },
         },

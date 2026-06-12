@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
         where: { id: testSessionId },
         data: {
           status: 'COMPLETED',
-          score,
+          totalScore: score,
           percentage,
           submittedAt: new Date(),
           timeSpent: timeSpent || 0,
@@ -71,8 +71,12 @@ export async function POST(request: NextRequest) {
     // Create test attempt record
     const testAttempt = await prisma.test_attempts.create({
       data: {
+        id: `ta_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         freeUserId: freeUserId || userId,
         testTemplateId,
+        title: body.title ?? 'Test Attempt',
+        questionCount: body.questionCount ?? 0,
+        totalMarks: body.totalMarks ?? 0,
         score,
         percentage,
         topicWiseScore: topicsAnalyzed,
@@ -115,6 +119,7 @@ export async function POST(request: NextRequest) {
       if (attemptCount === 1) {
         await prisma.achievements.create({
           data: {
+            id: `ach_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
             freeUserId,
             type: 'FIRST_TEST',
             title: 'First Test Completed',
@@ -180,7 +185,7 @@ export async function GET(request: NextRequest) {
         freeUserId: freeUserId || userId,
       },
       include: {
-        testTemplate: {
+        test_templates: {
           select: {
             title: true,
             type: true,
@@ -192,7 +197,7 @@ export async function GET(request: NextRequest) {
         },
       },
       orderBy: {
-        createdAt: 'desc',
+        startedAt: 'desc',
       },
       take: 50,
     })
@@ -202,14 +207,14 @@ export async function GET(request: NextRequest) {
       data: {
         attempts: attempts.map((attempt) => ({
           id: attempt.id,
-          testTemplate: attempt.testTemplate,
+          testTemplate: attempt.test_templates,
           score: attempt.score,
           percentage: attempt.percentage,
           rank: attempt.rank,
           strengthAreas: attempt.strengthAreas,
           weaknessAreas: attempt.weaknessAreas,
           timeSpent: attempt.timeSpent,
-          createdAt: attempt.createdAt.toISOString(),
+          createdAt: attempt.startedAt.toISOString(),
         })),
         count: attempts.length,
       },

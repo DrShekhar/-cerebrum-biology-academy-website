@@ -6,7 +6,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
-import { LeadStage } from '@/generated/prisma'
+import { LeadStage, Prisma } from '@/generated/prisma'
 import { logError, logWarning, logInfo } from './followupErrorHandler'
 
 interface TriggerConditions {
@@ -43,13 +43,10 @@ export async function evaluateRule(leadId: string, ruleId: string): Promise<bool
             take: 1,
           },
           activities: {
-            orderBy: { timestamp: 'desc' },
+            orderBy: { createdAt: 'desc' },
             take: 1,
           },
-          demo_bookings: {
-            orderBy: { scheduledAt: 'desc' },
-            take: 1,
-          },
+          demo_bookings: true,
           offers: {
             orderBy: { createdAt: 'desc' },
             take: 1,
@@ -152,14 +149,16 @@ export async function processLeadRules(leadId: string): Promise<void> {
 
           await prisma.followup_queue.create({
             data: {
+              id: `fq_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
               leadId,
               ruleId: rule.id,
               scheduledFor,
               status: 'PENDING',
+              updatedAt: new Date(),
               metadata: {
                 triggeredAt: new Date().toISOString(),
                 triggerType: rule.triggerType,
-              },
+              } as Prisma.InputJsonValue,
             },
           })
 
@@ -284,7 +283,7 @@ function evaluateInactivity(lead: any, conditions: TriggerConditions): boolean {
 }
 
 function evaluateDemoNoShow(lead: any, conditions: TriggerConditions): boolean {
-  const latestDemo = lead.demo_bookings?.[0]
+  const latestDemo = lead.demo_bookings
   if (!latestDemo) return false
 
   if (latestDemo.status === 'SCHEDULED') {
@@ -299,7 +298,7 @@ function evaluateDemoNoShow(lead: any, conditions: TriggerConditions): boolean {
 }
 
 function evaluateDemoCompleted(lead: any, conditions: TriggerConditions): boolean {
-  const latestDemo = lead.demo_bookings?.[0]
+  const latestDemo = lead.demo_bookings
   if (!latestDemo) return false
 
   return latestDemo.status === 'COMPLETED'

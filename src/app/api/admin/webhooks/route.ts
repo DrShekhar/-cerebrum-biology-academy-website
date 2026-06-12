@@ -4,6 +4,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { withAdmin, ValidatedSession } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
+import { Prisma } from '@/generated/prisma'
 import { z } from 'zod'
 
 // Blocked hosts to prevent SSRF attacks
@@ -213,7 +214,7 @@ async function handlePOST(request: NextRequest, session: ValidatedSession): Prom
         secret,
         headers: validatedData.headers || {},
         retryPolicy: validatedData.retryPolicy || { maxRetries: 3, retryDelayMs: 5000 },
-        metadata: validatedData.metadata || {},
+        metadata: (validatedData.metadata || {}) as Prisma.InputJsonValue,
         createdById: session.userId,
         updatedAt: new Date(),
       },

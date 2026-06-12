@@ -6,7 +6,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { PaymentHistoryResponse, PaymentSummary, PaymentStats } from '@/types/payment'
+import {
+  PaymentHistoryResponse,
+  PaymentSummary,
+  PaymentStats,
+  StudentPayment,
+  FeePayment,
+  PaymentInstallment,
+} from '@/types/payment'
 
 export async function GET(request: NextRequest) {
   try {
@@ -135,13 +142,73 @@ export async function GET(request: NextRequest) {
       )
     }
 
+    // Normalize raw Prisma rows into the API's declared payment shapes
+    // (relation keys remapped, Decimal amounts wrapped in Number()).
+    const normalizedEnrollmentPayments: StudentPayment[] = filteredEnrollmentPayments.map((p) => {
+      const { enrollments, ...rest } = p
+      return {
+        ...rest,
+        amount: Number(p.amount),
+        enrollment: enrollments
+          ? {
+              id: enrollments.id,
+              courseId: enrollments.courseId,
+              course: enrollments.courses
+                ? {
+                    name: enrollments.courses.name,
+                    type: enrollments.courses.type,
+                  }
+                : undefined,
+            }
+          : null,
+      }
+    })
+
+    const normalizedFeePayments: FeePayment[] = filteredFeePayments.map((p) => {
+      const { fee_plans, ...rest } = p
+      return {
+        ...rest,
+        amount: Number(p.amount),
+        feePlan: fee_plans
+          ? {
+              id: fee_plans.id,
+              courseName: fee_plans.courseName,
+              totalFee: Number(fee_plans.totalFee),
+              amountPaid: Number(fee_plans.amountPaid),
+              amountDue: Number(fee_plans.amountDue),
+              planType: fee_plans.planType,
+              status: fee_plans.status,
+            }
+          : undefined,
+      }
+    })
+
+    const normalizedInstallments: PaymentInstallment[] = installments.map((i) => {
+      const { fee_plans, ...rest } = i
+      return {
+        ...rest,
+        amount: Number(i.amount),
+        paidAmount: i.paidAmount !== null ? Number(i.paidAmount) : null,
+        feePlan: fee_plans
+          ? {
+              id: fee_plans.id,
+              courseName: fee_plans.courseName,
+              totalFee: Number(fee_plans.totalFee),
+            }
+          : undefined,
+      }
+    })
+
     // Calculate summary
-    const allPayments = [...filteredEnrollmentPayments, ...filteredFeePayments]
+    const allPayments: (StudentPayment | FeePayment)[] = [
+      ...normalizedEnrollmentPayments,
+      ...normalizedFeePayments,
+    ]
     const completedPayments = allPayments.filter(
       (p) => p.status === 'COMPLETED' || p.status === 'PAID'
     )
     const pendingPayments = allPayments.filter((p) => p.status === 'PENDING')
-    const overdueInstallments = installments.filter(
+    const overdueInstallments = normalizedInstallments.filter(
       (i) => i.status === 'OVERDUE' || (i.status === 'PENDING' && new Date(i.dueDate) < new Date())
     )
 
@@ -157,7 +224,7 @@ export async function GET(request: NextRequest) {
       return sum + Number(i.amount)
     }, 0)
 
-    const nextPaymentDue = installments.find(
+    const nextPaymentDue = normalizedInstallments.find(
       (i) => i.status === 'PENDING' && new Date(i.dueDate) >= new Date()
     )
 
@@ -173,23 +240,23 @@ export async function GET(request: NextRequest) {
     }
 
     // Calculate stats
+    const firstCompleted = completedPayments[0]
     const stats: PaymentStats = {
       totalAmount: totalPaid + totalPending,
       totalPaid,
       totalPending,
       averagePayment: completedPayments.length > 0 ? totalPaid / completedPayments.length : 0,
       paymentCount: completedPayments.length,
-      lastPaymentDate:
-        completedPayments.length > 0
-          ? completedPayments[0].createdAt || completedPayments[0].paidAt
-          : null,
+      lastPaymentDate: firstCompleted
+        ? firstCompleted.createdAt || ('paidAt' in firstCompleted ? firstCompleted.paidAt : null)
+        : null,
     }
 
     const response: PaymentHistoryResponse = {
       success: true,
       data: {
         payments: allPayments,
-        installments,
+        installments: normalizedInstallments,
         summary,
         stats,
       },

@@ -210,6 +210,7 @@ export class AgentTaskManager {
   static async createTask(input: AgentTaskInput): Promise<string> {
     const task = await prisma.agent_tasks.create({
       data: {
+        id: `atask_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         agentType: input.agentType,
         leadId: input.leadId,
         communicationId: input.communicationId,
@@ -217,6 +218,7 @@ export class AgentTaskManager {
         input: input.input as object,
         scheduledAt: input.scheduledAt,
         metadata: input.metadata as object,
+        updatedAt: new Date(),
       },
     })
 

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { rateLimit } from '@/lib/rateLimit'
 import type { MCQQuestion, QuestionFilter, QuestionResponse } from '@/lib/mcq/types'
-import type { DifficultyLevel } from '@/generated/prisma'
+import type { DifficultyLevel, QuestionType } from '@/generated/prisma'
 
 // Helper to safely parse question options (JSON or array)
 function safeParseOptions(options: unknown): string[] {
@@ -309,7 +309,7 @@ export async function GET(request: NextRequest) {
 
         return {
           id: q.id,
-          type: (q.type as string) || 'MCQ',
+          type: (q.type as QuestionType) || ('MCQ' as QuestionType),
           question: q.question,
           options,
           correctAnswer: q.correctAnswer,
@@ -335,7 +335,7 @@ export async function GET(request: NextRequest) {
           diagrams: diagrams && diagrams.length > 0 ? diagrams : undefined,
           // Olympiad fields
           isOlympiad: q.isOlympiad || false,
-          olympiadLevel: q.olympiadLevel || undefined,
+          olympiadLevel: (q.olympiadLevel as MCQQuestion['olympiadLevel']) || undefined,
           campbellChapter: q.campbellChapter || undefined,
           campbellUnit: q.campbellUnit || undefined,
           conceptualDepth: q.conceptualDepth || undefined,
@@ -344,7 +344,7 @@ export async function GET(request: NextRequest) {
           experimentContext: q.experimentContext || undefined,
         }
       })
-      .filter((q): q is NonNullable<typeof q> => q !== null)
+      .filter((q): q is NonNullable<typeof q> => q !== null) as unknown as MCQQuestion[]
 
     const transformedCommunityQuestions: MCQQuestion[] = communityQuestions
       .map((q) => {
@@ -366,7 +366,7 @@ export async function GET(request: NextRequest) {
           sourceId: q.id,
         }
       })
-      .filter((q): q is MCQQuestion => q !== null)
+      .filter((q): q is NonNullable<typeof q> => q !== null)
 
     // Combine and shuffle questions
     const allQuestions = [...transformedOfficialQuestions, ...transformedCommunityQuestions]
@@ -482,7 +482,7 @@ async function fetchQuestionsByIds(ids: string[]) {
         if (options.length === 0) return null
         return {
           id: q.id,
-          type: (q.type as string) || 'MCQ',
+          type: (q.type as QuestionType) || ('MCQ' as QuestionType),
           question: q.question,
           options,
           correctAnswer: q.correctAnswer,
@@ -497,7 +497,7 @@ async function fetchQuestionsByIds(ids: string[]) {
           sourceId: q.id,
         }
       })
-      .filter((q): q is MCQQuestion => q !== null)
+      .filter((q): q is NonNullable<typeof q> => q !== null) as unknown as MCQQuestion[]
 
     const transformedCommunity: MCQQuestion[] = communityQuestions
       .map((q) => {
@@ -519,7 +519,7 @@ async function fetchQuestionsByIds(ids: string[]) {
           sourceId: q.id,
         }
       })
-      .filter((q): q is MCQQuestion => q !== null)
+      .filter((q): q is NonNullable<typeof q> => q !== null)
 
     const allQuestions = [...transformedOfficial, ...transformedCommunity]
 

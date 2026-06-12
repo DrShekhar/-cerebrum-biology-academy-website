@@ -137,6 +137,8 @@ export async function POST(request: NextRequest) {
     // Save to database using Prisma
     const inquiry = await prisma.contact_inquiries.create({
       data: {
+        id: `inq_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         name: data.name,
         email: data.email || '',
         phone: data.phone,

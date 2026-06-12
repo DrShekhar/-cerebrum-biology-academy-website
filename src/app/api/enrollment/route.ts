@@ -49,6 +49,8 @@ export async function POST(request: NextRequest) {
       } else {
         const newUser = await prisma.users.create({
           data: {
+            id: `usr_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+            updatedAt: new Date(),
             name: validatedData.studentName,
             email: validatedData.email,
             phone: validatedData.phone,
@@ -61,6 +63,8 @@ export async function POST(request: NextRequest) {
 
     const enrollment = await prisma.enrollments.create({
       data: {
+        id: `enr_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         userId,
         courseId: validatedData.courseId,
         status: 'PENDING',
