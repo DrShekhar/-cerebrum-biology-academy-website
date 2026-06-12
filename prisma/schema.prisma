@@ -1143,6 +1143,7 @@ model enrollments {
   payments            payments[]
   student_attendance  student_attendance[]
   video_progress      video_progress[]
+  referrals           referrals[]
 
   @@unique([userId, courseId])
   @@index([courseId, status])
@@ -1793,6 +1794,19 @@ model mcq_user_stats {
   weakTopics              Json?
   strongTopics            Json?
   badges                  Json?
+  // Gamification columns used by src/lib/gamification/* (streaks/XP/goals/badges)
+  // — read/written by code but never defined on the model.
+  totalPoints             Int       @default(0)
+  weeklyXp                Int       @default(0)
+  monthlyXp               Int       @default(0)
+  level                   Int       @default(1)
+  badgesEarned            Int       @default(0)
+  streakProtectedUntil    DateTime?
+  streakRecoveryDeadline  DateTime?
+  lastStreakBreak         DateTime?
+  streakFreezeCount       Int       @default(0)
+  isStreakAtRisk          Boolean   @default(false)
+  subscriptionTier        String?
   createdAt               DateTime  @default(now())
   updatedAt               DateTime
 
@@ -3110,6 +3124,20 @@ model users {
   coupon_redemptions                                                    coupon_redemptions[]
   email_verification_tokens                                             email_verification_tokens[]
   password_reset_tokens                                                 password_reset_tokens[]
+  gamification_xp_events                                                gamification_xp_events[]
+  gamification_user_badges                                              gamification_user_badges[]
+  gamification_goals                                                    gamification_goals[]
+  gamification_streak_protection                                        gamification_streak_protection[]
+  gamification_notifications                                            gamification_notifications[]
+  consultant                                                            consultants?
+  subscriptionTier                                                      String?
+  notices                                                               notices[]
+  notice_reads                                                          notice_reads[]
+  worksheet_submissions                                                 worksheet_submissions[]
+  wall_of_achievers                                                     wall_of_achievers[]
+  achiever_nominations                                                  achiever_nominations[]
+  self_evaluations                                                      self_evaluations[]
+  work_tracking                                                         work_tracking[]
 
   @@index([coachingTier])
   @@index([emailVerified])
@@ -4309,4 +4337,429 @@ model whatsapp_nurturing {
   @@index([phone])
   @@index([status])
   @@index([nextMessageAt])
+}
+
+// ============================================================================
+// Feature models added 2026-06-12 (were referenced by code but never defined,
+// causing runtime 500s). Reverse-engineered from usage. ids default to cuid()
+// because the feature code omits id on create.
+// ============================================================================
+
+model gamification_xp_events {
+  id                String   @id @default(cuid())
+  userId            String
+  eventType         String
+  xpAmount          Int
+  description       String
+  metadata          Json?
+  relatedEntityId   String?
+  relatedEntityType String?
+  createdAt         DateTime @default(now())
+  users             users    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, eventType])
+  @@index([userId, createdAt])
+  @@index([relatedEntityType])
+}
+
+model gamification_user_badges {
+  id               String   @id @default(cuid())
+  userId           String
+  badgeId          String
+  badgeName        String
+  badgeDescription String
+  rarity           String
+  category         String
+  iconUrl          String?
+  xpRewarded       Int
+  showcased        Boolean  @default(false)
+  earnedAt         DateTime @default(now())
+  users            users    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, badgeId])
+  @@index([userId, showcased])
+  @@index([earnedAt])
+}
+
+model gamification_goals {
+  id                     String    @id @default(cuid())
+  userId                 String
+  goalType               String
+  metric                 String
+  targetValue            Int
+  currentValue           Int       @default(0)
+  isCompleted            Boolean   @default(false)
+  completedAt            DateTime?
+  startDate              DateTime
+  endDate                DateTime
+  xpReward               Int
+  consecutiveCompletions Int       @default(0)
+  createdAt              DateTime  @default(now())
+  users                  users     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, goalType])
+  @@index([userId, metric, isCompleted])
+  @@index([userId, isCompleted, endDate])
+  @@index([completedAt])
+  @@index([endDate])
+}
+
+model gamification_streak_protection {
+  id                 String    @id @default(cuid())
+  userId             String
+  type               String
+  streakAtProtection Int
+  xpCost             Int       @default(0)
+  expiresAt          DateTime?
+  wasUsed            Boolean   @default(false)
+  usedAt             DateTime?
+  createdAt          DateTime  @default(now())
+  users              users     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, type])
+  @@index([userId, createdAt])
+}
+
+model gamification_notifications {
+  id        String    @id @default(cuid())
+  userId    String
+  type      String
+  title     String
+  message   String
+  metadata  Json?
+  isRead    Boolean   @default(false)
+  readAt    DateTime?
+  priority  String    @default("NORMAL")
+  expiresAt DateTime?
+  createdAt DateTime  @default(now())
+  users     users     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, isRead])
+  @@index([userId, priority, createdAt])
+  @@index([expiresAt])
+}
+
+model consultants {
+  id                  String           @id @default(cuid())
+  userId              String           @unique
+  consultantCode      String           @unique
+  displayName         String
+  phone               String?
+  email               String?
+  commissionRate      Decimal          @default(10) @db.Decimal(5, 2)
+  isActive            Boolean          @default(true)
+  totalReferrals      Int              @default(0)
+  successfulReferrals Int              @default(0)
+  totalCommission     Decimal          @default(0) @db.Decimal(10, 2)
+  paidCommission      Decimal          @default(0) @db.Decimal(10, 2)
+  pendingCommission   Decimal          @default(0) @db.Decimal(10, 2)
+  createdAt           DateTime         @default(now())
+  updatedAt           DateTime         @updatedAt
+  user                users            @relation(fields: [userId], references: [id])
+  commissions         commissions[]
+  referrals           referrals[]
+  referral_links      referral_links[]
+
+  @@index([consultantCode])
+  @@index([userId])
+  @@index([isActive])
+}
+
+model referral_links {
+  id              String      @id @default(cuid())
+  consultantId    String
+  code            String      @unique
+  name            String
+  description     String?
+  targetCourse    String?
+  targetCampaign  String?
+  isActive        Boolean     @default(true)
+  clickCount      Int         @default(0)
+  conversionCount Int         @default(0)
+  expiresAt       DateTime?
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  consultant      consultants @relation(fields: [consultantId], references: [id])
+  referrals       referrals[]
+
+  @@index([consultantId])
+  @@index([code])
+  @@index([consultantId, isActive])
+}
+
+model referrals {
+  id                String          @id @default(cuid())
+  consultantId      String
+  referralLinkId    String?
+  studentName       String
+  phone             String
+  email             String?
+  courseInterest    String?
+  status            String          @default("NEW_LEAD")
+  source            String?         @default("Direct")
+  notes             String?
+  enrollmentId      String?
+  demoScheduledAt   DateTime?
+  demoCompletedAt   DateTime?
+  offerSentAt       DateTime?
+  paymentReceivedAt DateTime?
+  enrolledAt        DateTime?
+  lostAt            DateTime?
+  lostReason        String?
+  totalFeeAmount    Decimal?        @db.Decimal(10, 2)
+  commissionEarned  Decimal?        @db.Decimal(10, 2)
+  metadata          Json?
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+  consultant        consultants     @relation(fields: [consultantId], references: [id])
+  referral_link     referral_links? @relation(fields: [referralLinkId], references: [id])
+  enrollment        enrollments?    @relation(fields: [enrollmentId], references: [id])
+  commissions       commissions[]
+
+  @@index([consultantId])
+  @@index([consultantId, status])
+  @@index([referralLinkId])
+  @@index([phone])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model commissions {
+  id           String      @id @default(cuid())
+  consultantId String
+  referralId   String?
+  amount       Decimal     @db.Decimal(10, 2)
+  percentage   Decimal     @db.Decimal(5, 2)
+  baseAmount   Decimal     @db.Decimal(10, 2)
+  status       String      @default("PENDING")
+  paidAt       DateTime?
+  paymentRef   String?
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  consultant   consultants @relation(fields: [consultantId], references: [id])
+  referral     referrals?  @relation(fields: [referralId], references: [id])
+
+  @@index([consultantId])
+  @@index([consultantId, status])
+  @@index([referralId])
+  @@index([status])
+  @@index([createdAt])
+  @@index([paidAt])
+}
+
+model pending_conversions {
+  id                 String    @id @default(cuid())
+  gclid              String
+  conversionAction   String
+  conversionDateTime DateTime
+  conversionValue    Decimal?  @db.Decimal(12, 2)
+  currencyCode       String?   @default("INR")
+  orderId            String?
+  status             String    @default("PENDING")
+  error              String?
+  uploadedAt         DateTime?
+  createdAt          DateTime  @default(now())
+
+  @@index([status])
+  @@index([gclid])
+  @@index([createdAt])
+}
+
+model notices {
+  id              String         @id @default(cuid())
+  title           String
+  content         String
+  category        String         @default("ANNOUNCEMENT")
+  targetType      String         @default("ALL")
+  targetCourseIds String[]       @default([])
+  targetBatchIds  String[]       @default([])
+  targetUserIds   String[]       @default([])
+  priority        Int            @default(0)
+  isPinned        Boolean        @default(false)
+  isActive        Boolean        @default(true)
+  attachments     Json?
+  viewCount       Int            @default(0)
+  publishedAt     DateTime?
+  expiresAt       DateTime?
+  createdById     String
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  createdBy       users          @relation(fields: [createdById], references: [id])
+  notice_reads    notice_reads[]
+
+  @@index([category])
+  @@index([isActive, publishedAt])
+  @@index([targetType])
+  @@index([createdById])
+  @@index([isPinned, priority, publishedAt])
+}
+
+model notice_reads {
+  id        String   @id @default(cuid())
+  noticeId  String
+  userId    String
+  readAt    DateTime @default(now())
+  createdAt DateTime @default(now())
+  notices   notices  @relation(fields: [noticeId], references: [id], onDelete: Cascade)
+  users     users    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([noticeId, userId])
+  @@index([userId])
+  @@index([noticeId])
+}
+
+model worksheets {
+  id                  String                  @id @default(cuid())
+  title               String
+  description         String?
+  courseId            String?
+  chapterId           String?
+  topicId             String?
+  content             Json?
+  instructions        String?
+  maxMarks            Int?
+  duration            Int?
+  difficulty          DifficultyLevel?
+  status              String                  @default("DRAFT")
+  dueDate             DateTime?
+  allowLateSubmission Boolean                 @default(false)
+  publishedAt         DateTime?
+  attachments         Json?
+  tags                String[]                @default([])
+  downloadCount       Int                     @default(0)
+  createdAt           DateTime                @default(now())
+  updatedAt           DateTime                @updatedAt
+  submissions         worksheet_submissions[]
+
+  @@index([status, publishedAt])
+  @@index([courseId])
+  @@index([difficulty])
+  @@index([dueDate])
+}
+
+model worksheet_submissions {
+  id          String     @id @default(cuid())
+  worksheetId String
+  studentId   String
+  status      String     @default("NOT_STARTED")
+  answers     Json?
+  attachments Json?
+  grade       Float?
+  feedback    String?
+  isLate      Boolean    @default(false)
+  timeSpent   Int?
+  startedAt   DateTime?
+  submittedAt DateTime?
+  gradedAt    DateTime?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  worksheets  worksheets @relation(fields: [worksheetId], references: [id], onDelete: Cascade)
+  users       users      @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@unique([worksheetId, studentId])
+  @@index([studentId])
+  @@index([worksheetId])
+  @@index([status])
+}
+
+model wall_of_achievers {
+  id            String                 @id @default(cuid())
+  studentId     String?
+  studentName   String
+  achievement   String
+  description   String?
+  category      String
+  score         Decimal?               @db.Decimal(10, 2)
+  rank          Int?
+  badgeUrl      String?
+  photoUrl      String?
+  courseId      String?
+  period        String?
+  featuredFrom  DateTime?
+  featuredUntil DateTime?
+  isActive      Boolean                @default(true)
+  viewCount     Int                    @default(0)
+  createdAt     DateTime               @default(now())
+  updatedAt     DateTime               @updatedAt
+  users         users?                 @relation(fields: [studentId], references: [id], onDelete: SetNull)
+  nominations   achiever_nominations[]
+
+  @@index([isActive, category])
+  @@index([isActive, period])
+  @@index([featuredFrom, featuredUntil])
+  @@index([studentId])
+}
+
+model achiever_nominations {
+  id             String            @id @default(cuid())
+  achieverId     String
+  nominatedById  String
+  nominationType String            @default("PEER")
+  reason         String?
+  isApproved     Boolean           @default(false)
+  createdAt      DateTime          @default(now())
+  achiever       wall_of_achievers @relation(fields: [achieverId], references: [id], onDelete: Cascade)
+  nominatedBy    users             @relation(fields: [nominatedById], references: [id], onDelete: Cascade)
+
+  @@unique([achieverId, nominatedById, nominationType])
+  @@index([nominatedById])
+  @@index([achieverId])
+}
+
+model self_evaluations {
+  id                 String   @id @default(cuid())
+  studentId          String
+  date               DateTime @db.Date
+  slot               String
+  courseId           String?
+  topicsCovered      String[] @default([])
+  conceptsLearned    String[] @default([])
+  questionsAttempted Int      @default(0)
+  questionsCorrect   Int      @default(0)
+  difficultyRating   Int?
+  confidenceLevel    Int?
+  studyHours         Float?
+  notes              String?
+  goals              String[] @default([])
+  achievements       String[] @default([])
+  struggles          String[] @default([])
+  nextDayPlan        String?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  users              users    @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@unique([studentId, date, slot])
+  @@index([studentId, date])
+}
+
+model work_tracking {
+  id                   String   @id @default(cuid())
+  studentId            String
+  courseId             String?
+  date                 DateTime @db.Date
+  assignmentsAssigned  Int      @default(0)
+  assignmentsSubmitted Int      @default(0)
+  assignmentsChecked   Int      @default(0)
+  testsAssigned        Int      @default(0)
+  testsAttempted       Int      @default(0)
+  testsChecked         Int      @default(0)
+  worksheetsAssigned   Int      @default(0)
+  worksheetsSubmitted  Int      @default(0)
+  worksheetsChecked    Int      @default(0)
+  classesScheduled     Int      @default(0)
+  classesAttended      Int      @default(0)
+  studyMinutes         Int      @default(0)
+  remarks              String?
+  specialNotes         String?
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+  users                users    @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@index([studentId, date])
+  @@index([courseId])
 }
