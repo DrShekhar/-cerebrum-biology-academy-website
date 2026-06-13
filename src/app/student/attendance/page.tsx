@@ -206,9 +206,7 @@ export default function AttendancePage() {
             ) : attendance.length > 0 ? (
               <div className="space-y-3">
                 {attendance.map((record, index) => (
-                  <div
-                    key={record.id}
-                   className="animate-fadeInUp">
+                  <div key={record.id} className="animate-fadeInUp">
                     <Card className="hover:shadow-md transition-shadow">
                       <CardContent className="p-4">
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">

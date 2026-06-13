@@ -536,49 +536,43 @@ const EnhancedTestGenerationInterface: React.FC = () => {
           >
             {/* Primary Content Area */}
             <div className="space-y-6 overflow-y-auto">
-{activeTab === 'configure' && (
-                  <div
-                    key="configure"
-                   className="animate-fadeInUp">
-                    <div className="bg-white rounded-xl p-6 border">
-                      <h3 className="text-lg font-semibold mb-4">Test Configuration</h3>
-                      {/* Basic configuration form would go here */}
-                      <p className="text-gray-600">
-                        Configure your test settings, duration, and basic parameters.
-                      </p>
-                    </div>
+              {activeTab === 'configure' && (
+                <div key="configure" className="animate-fadeInUp">
+                  <div className="bg-white rounded-xl p-6 border">
+                    <h3 className="text-lg font-semibold mb-4">Test Configuration</h3>
+                    {/* Basic configuration form would go here */}
+                    <p className="text-gray-600">
+                      Configure your test settings, duration, and basic parameters.
+                    </p>
                   </div>
-                )}
+                </div>
+              )}
 
-                {activeTab === 'templates' && (
-                  <div
-                    key="templates"
-                   className="animate-fadeInUp">
-                    <EnhancedTemplateManager
-                      onTemplateSelect={handleTemplateSelect}
-                      onTemplateCreate={() => setActiveTab('configure')}
-                      currentTemplate={null}
-                    />
-                  </div>
-                )}
+              {activeTab === 'templates' && (
+                <div key="templates" className="animate-fadeInUp">
+                  <EnhancedTemplateManager
+                    onTemplateSelect={handleTemplateSelect}
+                    onTemplateCreate={() => setActiveTab('configure')}
+                    currentTemplate={null}
+                  />
+                </div>
+              )}
 
-                {activeTab === 'bank' && (
-                  <div
-                    key="bank"
-                   className="animate-fadeInUp">
-                    <BatchOperationsPanel
-                      questions={questions}
-                      onQuestionsUpdate={(updatedQuestions: Question[]) =>
-                        setQuestions(updatedQuestions)
-                      }
-                      onBulkGenerate={handleBulkGenerate}
-                      isGenerating={isGenerating}
-                    />
-                  </div>
-                )}
+              {activeTab === 'bank' && (
+                <div key="bank" className="animate-fadeInUp">
+                  <BatchOperationsPanel
+                    questions={questions}
+                    onQuestionsUpdate={(updatedQuestions: Question[]) =>
+                      setQuestions(updatedQuestions)
+                    }
+                    onBulkGenerate={handleBulkGenerate}
+                    isGenerating={isGenerating}
+                  />
+                </div>
+              )}
 
-                {/* Add other tab content here */}
-</div>
+              {/* Add other tab content here */}
+            </div>
 
             {/* Preview Panel */}
             {uiSettings.showPreview && (
@@ -611,72 +605,70 @@ const EnhancedTestGenerationInterface: React.FC = () => {
       </div>
 
       {/* Notifications Panel */}
-{notifications.length > 0 && (
-          <div
-            className="fixed top-4 right-4 space-y-2 z-50 animate-fadeInUp"
-          >
-            {notifications.slice(0, 3).map((notification) => (
-              <div
-                key={notification.id}
-                className={`max-w-sm bg-white border rounded-lg p-4 shadow-lg ${
-                  notification.type === 'error'
-                    ? 'border-red-200'
-                    : notification.type === 'warning'
-                      ? 'border-yellow-200'
-                      : notification.type === 'success'
-                        ? 'border-green-200'
-                        : 'border-blue-200'
-                }`}
-              >
-                <div className="flex items-start gap-3">
-                  <div
-                    className={`mt-0.5 ${
-                      notification.type === 'error'
-                        ? 'text-red-500'
-                        : notification.type === 'warning'
-                          ? 'text-yellow-500'
-                          : notification.type === 'success'
-                            ? 'text-green-600'
-                            : 'text-blue-500'
-                    }`}
-                  >
-                    {notification.type === 'error' ? (
-                      <AlertTriangle className="w-5 h-5" />
-                    ) : notification.type === 'warning' ? (
-                      <AlertTriangle className="w-5 h-5" />
-                    ) : notification.type === 'success' ? (
-                      <CheckCircle2 className="w-5 h-5" />
-                    ) : (
-                      <Info className="w-5 h-5" />
-                    )}
-                  </div>
-
-                  <div className="flex-1 min-w-0">
-                    <h4 className="font-medium text-gray-800">{notification.title}</h4>
-                    <p className="text-sm text-gray-600 mt-1">{notification.message}</p>
-
-                    {notification.action && (
-                      <button
-                        onClick={notification.action.onClick}
-                        className="mt-2 text-sm text-blue-600 hover:text-blue-700 font-medium"
-                      >
-                        {notification.action.label}
-                      </button>
-                    )}
-                  </div>
-
-                  <button
-                    onClick={() => markNotificationAsRead(notification.id)}
-                    className="text-gray-400 hover:text-gray-600 transition-colors"
-                  >
-                    <X className="w-4 h-4" />
-                  </button>
+      {notifications.length > 0 && (
+        <div className="fixed top-4 right-4 space-y-2 z-50 animate-fadeInUp">
+          {notifications.slice(0, 3).map((notification) => (
+            <div
+              key={notification.id}
+              className={`max-w-sm bg-white border rounded-lg p-4 shadow-lg ${
+                notification.type === 'error'
+                  ? 'border-red-200'
+                  : notification.type === 'warning'
+                    ? 'border-yellow-200'
+                    : notification.type === 'success'
+                      ? 'border-green-200'
+                      : 'border-blue-200'
+              }`}
+            >
+              <div className="flex items-start gap-3">
+                <div
+                  className={`mt-0.5 ${
+                    notification.type === 'error'
+                      ? 'text-red-500'
+                      : notification.type === 'warning'
+                        ? 'text-yellow-500'
+                        : notification.type === 'success'
+                          ? 'text-green-600'
+                          : 'text-blue-500'
+                  }`}
+                >
+                  {notification.type === 'error' ? (
+                    <AlertTriangle className="w-5 h-5" />
+                  ) : notification.type === 'warning' ? (
+                    <AlertTriangle className="w-5 h-5" />
+                  ) : notification.type === 'success' ? (
+                    <CheckCircle2 className="w-5 h-5" />
+                  ) : (
+                    <Info className="w-5 h-5" />
+                  )}
                 </div>
+
+                <div className="flex-1 min-w-0">
+                  <h4 className="font-medium text-gray-800">{notification.title}</h4>
+                  <p className="text-sm text-gray-600 mt-1">{notification.message}</p>
+
+                  {notification.action && (
+                    <button
+                      onClick={notification.action.onClick}
+                      className="mt-2 text-sm text-blue-600 hover:text-blue-700 font-medium"
+                    >
+                      {notification.action.label}
+                    </button>
+                  )}
+                </div>
+
+                <button
+                  onClick={() => markNotificationAsRead(notification.id)}
+                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                >
+                  <X className="w-4 h-4" />
+                </button>
               </div>
-            ))}
-          </div>
-        )}
-</div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   )
 }
 

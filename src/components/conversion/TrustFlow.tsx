@@ -125,9 +125,7 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
 
       {/* Main Trust Flow Modal */}
       <div className="fixed inset-0 flex items-center justify-center p-4">
-        <div
-          className="bg-slate-900 rounded-2xl shadow-2xl max-w-full sm:max-w-2xl lg:max-w-4xl w-full mx-4 sm:mx-0 max-h-[90vh] overflow-hidden border border-slate-700 animate-fadeInUp"
-        >
+        <div className="bg-slate-900 rounded-2xl shadow-2xl max-w-full sm:max-w-2xl lg:max-w-4xl w-full mx-4 sm:mx-0 max-h-[90vh] overflow-hidden border border-slate-700 animate-fadeInUp">
           {/* Header */}
           <div className="flex justify-between items-center p-4 sm:p-6 border-b border-slate-700">
             <div>
@@ -145,209 +143,193 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
           </div>
 
           <div className="p-4 sm:p-6">
-{/* Step 0: Key Differentiators */}
-              {currentStep === 0 && (
-                <div
-                  key="differentiators"
-                  className="space-y-6 animate-fadeInUp"
-                >
-                  <div className="text-center mb-8">
-                    <h3 className="text-xl font-bold text-white mb-2">
-                      3 Key Reasons Students Choose Us
-                    </h3>
-                    <p className="text-gray-400">
-                      What sets us apart from other coaching institutes
-                    </p>
-                  </div>
+            {/* Step 0: Key Differentiators */}
+            {currentStep === 0 && (
+              <div key="differentiators" className="space-y-6 animate-fadeInUp">
+                <div className="text-center mb-8">
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    3 Key Reasons Students Choose Us
+                  </h3>
+                  <p className="text-gray-400">What sets us apart from other coaching institutes</p>
+                </div>
 
-                  <div className="grid gap-6">
-                    {differentiators.map((item, index) => (
-                      <div
-                        key={index}
-                        className="bg-slate-800 rounded-xl p-6 border border-slate-700 animate-fadeInUp"
-                      >
-                        <div className="flex items-start gap-4">
-                          <div className="bg-green-600/20 p-3 rounded-lg">
-                            <item.icon className="w-6 h-6 text-green-500" />
-                          </div>
-                          <div className="flex-1">
-                            <h4 className="text-lg font-semibold text-white mb-2">{item.title}</h4>
-                            <p className="text-gray-300 mb-3">{item.description}</p>
-                            <div className="text-green-500 font-bold text-lg">{item.stat}</div>
-                          </div>
+                <div className="grid gap-6">
+                  {differentiators.map((item, index) => (
+                    <div
+                      key={index}
+                      className="bg-slate-800 rounded-xl p-6 border border-slate-700 animate-fadeInUp"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="bg-green-600/20 p-3 rounded-lg">
+                          <item.icon className="w-6 h-6 text-green-500" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="text-lg font-semibold text-white mb-2">{item.title}</h4>
+                          <p className="text-gray-300 mb-3">{item.description}</p>
+                          <div className="text-green-500 font-bold text-lg">{item.stat}</div>
                         </div>
                       </div>
-                    ))}
-                  </div>
-
-                  <div className="flex justify-center pt-6">
-                    <button
-                      onClick={handleNext}
-                      className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2"
-                    >
-                      See Our Success Numbers
-                      <ArrowRight className="w-5 h-5" />
-                    </button>
-                  </div>
+                    </div>
+                  ))}
                 </div>
-              )}
 
-              {/* Step 1: Success Counter Animation */}
-              {currentStep === 1 && (
-                <div
-                  key="counters"
-                  className="text-center space-y-8 animate-fadeInUp"
-                >
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Our Success in Numbers</h3>
-                    <p className="text-gray-400">Real results from real students</p>
-                  </div>
-
-                  <div className="grid md:grid-cols-3 gap-8">
-                    <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
-                      <div className="text-4xl font-bold text-green-500 mb-2">
-                        {counters.students.toLocaleString()}+
-                      </div>
-                      <div className="text-white font-semibold">Students Taught</div>
-                      <div className="text-gray-400 text-sm">Across all batches</div>
-                    </div>
-
-                    <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
-                      <div className="text-4xl font-bold text-blue-400 mb-2">
-                        {counters.selections}
-                      </div>
-                      <div className="text-white font-semibold">AIIMS Selections</div>
-                      <div className="text-gray-400 text-sm">This year alone</div>
-                    </div>
-
-                    <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
-                      <div className="text-4xl font-bold text-yellow-400 mb-2">
-                        {counters.success}%
-                      </div>
-                      <div className="text-white font-semibold">Success Rate</div>
-                      <div className="text-gray-400 text-sm">NEET qualification</div>
-                    </div>
-                  </div>
-
-                  <div className="flex justify-center pt-6">
-                    <button
-                      onClick={handleNext}
-                      className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2"
-                    >
-                      Hear From Our Students
-                      <ArrowRight className="w-5 h-5" />
-                    </button>
-                  </div>
+                <div className="flex justify-center pt-6">
+                  <button
+                    onClick={handleNext}
+                    className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2"
+                  >
+                    See Our Success Numbers
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
                 </div>
-              )}
+              </div>
+            )}
 
-              {/* Step 2: Video Testimonial */}
-              {currentStep === 2 && (
-                <div
-                  key="testimonial"
-                  className="space-y-6 animate-fadeInUp"
-                >
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold text-white mb-2">Success Stories</h3>
-                    <p className="text-gray-400">Hear directly from our AIIMS-selected students</p>
+            {/* Step 1: Success Counter Animation */}
+            {currentStep === 1 && (
+              <div key="counters" className="text-center space-y-8 animate-fadeInUp">
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Our Success in Numbers</h3>
+                  <p className="text-gray-400">Real results from real students</p>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-8">
+                  <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                    <div className="text-4xl font-bold text-green-500 mb-2">
+                      {counters.students.toLocaleString()}+
+                    </div>
+                    <div className="text-white font-semibold">Students Taught</div>
+                    <div className="text-gray-400 text-sm">Across all batches</div>
                   </div>
 
                   <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
-                    <div className="aspect-video bg-slate-700 rounded-lg relative overflow-hidden mb-4 cursor-pointer group">
-                      <div className="absolute inset-0 bg-gradient-to-br from-green-600/20 to-blue-600/20" />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="bg-white/90 rounded-full p-4 group-hover:bg-white transition-colors">
-                          <Play className="w-8 h-8 text-slate-900 ml-1" />
-                        </div>
-                      </div>
-                      <div className="absolute bottom-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
-                        {testimonialVideo.duration}
+                    <div className="text-4xl font-bold text-blue-400 mb-2">
+                      {counters.selections}
+                    </div>
+                    <div className="text-white font-semibold">AIIMS Selections</div>
+                    <div className="text-gray-400 text-sm">This year alone</div>
+                  </div>
+
+                  <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                    <div className="text-4xl font-bold text-yellow-400 mb-2">
+                      {counters.success}%
+                    </div>
+                    <div className="text-white font-semibold">Success Rate</div>
+                    <div className="text-gray-400 text-sm">NEET qualification</div>
+                  </div>
+                </div>
+
+                <div className="flex justify-center pt-6">
+                  <button
+                    onClick={handleNext}
+                    className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2"
+                  >
+                    Hear From Our Students
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* Step 2: Video Testimonial */}
+            {currentStep === 2 && (
+              <div key="testimonial" className="space-y-6 animate-fadeInUp">
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-white mb-2">Success Stories</h3>
+                  <p className="text-gray-400">Hear directly from our AIIMS-selected students</p>
+                </div>
+
+                <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                  <div className="aspect-video bg-slate-700 rounded-lg relative overflow-hidden mb-4 cursor-pointer group">
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-600/20 to-blue-600/20" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="bg-white/90 rounded-full p-4 group-hover:bg-white transition-colors">
+                        <Play className="w-8 h-8 text-slate-900 ml-1" />
                       </div>
                     </div>
-
-                    <div className="space-y-2">
-                      <h4 className="text-lg font-semibold text-white">{testimonialVideo.title}</h4>
-                      <p className="text-green-500 font-medium">{testimonialVideo.student}</p>
-                      <p className="text-gray-400">{testimonialVideo.achievement}</p>
+                    <div className="absolute bottom-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
+                      {testimonialVideo.duration}
                     </div>
                   </div>
 
-                  <div className="flex justify-center pt-6">
+                  <div className="space-y-2">
+                    <h4 className="text-lg font-semibold text-white">{testimonialVideo.title}</h4>
+                    <p className="text-green-500 font-medium">{testimonialVideo.student}</p>
+                    <p className="text-gray-400">{testimonialVideo.achievement}</p>
+                  </div>
+                </div>
+
+                <div className="flex justify-center pt-6">
+                  <button
+                    onClick={handleNext}
+                    className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2"
+                  >
+                    Experience It Yourself
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* Step 3: Free Demo Offer & Lead Capture */}
+            {currentStep === 3 && (
+              <div key="demo" className="space-y-6 animate-fadeInUp">
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    Ready to Experience Excellence?
+                  </h3>
+                  <p className="text-gray-400">Book your free demo class and see the difference</p>
+                </div>
+
+                <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-xl p-6 border border-green-600/30">
+                  <div className="text-center mb-6">
+                    <div className="text-3xl font-bold text-white mb-2">FREE Demo Class</div>
+                    <div className="text-green-500 text-lg">Worth ₹2,000 - Absolutely Free!</div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-4 mb-6">
+                    <div className="flex items-center gap-3 text-white">
+                      <Calendar className="w-5 h-5 text-green-500" />
+                      <span>1-hour live biology class</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-white">
+                      <MessageCircle className="w-5 h-5 text-green-500" />
+                      <span>Doubt resolution session</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-white">
+                      <BookOpen className="w-5 h-5 text-green-500" />
+                      <span>Study material sample</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-white">
+                      <Award className="w-5 h-5 text-green-500" />
+                      <span>Personal counseling</span>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-4">
                     <button
-                      onClick={handleNext}
-                      className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2"
+                      onClick={() => handleAction('demo-class')}
+                      className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
                     >
-                      Experience It Yourself
-                      <ArrowRight className="w-5 h-5" />
+                      <Calendar className="w-5 h-5" />
+                      Book Free Demo
+                    </button>
+                    <button
+                      onClick={() => handleAction('counseling')}
+                      className="border border-green-600 text-green-500 hover:bg-green-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
+                    >
+                      <MessageCircle className="w-5 h-5" />
+                      Get Counseling
                     </button>
                   </div>
                 </div>
-              )}
 
-              {/* Step 3: Free Demo Offer & Lead Capture */}
-              {currentStep === 3 && (
-                <div
-                  key="demo"
-                  className="space-y-6 animate-fadeInUp"
-                >
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold text-white mb-2">
-                      Ready to Experience Excellence?
-                    </h3>
-                    <p className="text-gray-400">
-                      Book your free demo class and see the difference
-                    </p>
-                  </div>
-
-                  <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-xl p-6 border border-green-600/30">
-                    <div className="text-center mb-6">
-                      <div className="text-3xl font-bold text-white mb-2">FREE Demo Class</div>
-                      <div className="text-green-500 text-lg">Worth ₹2,000 - Absolutely Free!</div>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-4 mb-6">
-                      <div className="flex items-center gap-3 text-white">
-                        <Calendar className="w-5 h-5 text-green-500" />
-                        <span>1-hour live biology class</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-white">
-                        <MessageCircle className="w-5 h-5 text-green-500" />
-                        <span>Doubt resolution session</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-white">
-                        <BookOpen className="w-5 h-5 text-green-500" />
-                        <span>Study material sample</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-white">
-                        <Award className="w-5 h-5 text-green-500" />
-                        <span>Personal counseling</span>
-                      </div>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <button
-                        onClick={() => handleAction('demo-class')}
-                        className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
-                      >
-                        <Calendar className="w-5 h-5" />
-                        Book Free Demo
-                      </button>
-                      <button
-                        onClick={() => handleAction('counseling')}
-                        className="border border-green-600 text-green-500 hover:bg-green-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
-                      >
-                        <MessageCircle className="w-5 h-5" />
-                        Get Counseling
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="text-center text-sm text-gray-400">
-                    🔒 No spam, no obligations. Just pure learning experience.
-                  </div>
+                <div className="text-center text-sm text-gray-400">
+                  🔒 No spam, no obligations. Just pure learning experience.
                 </div>
-              )}
-</div>
+              </div>
+            )}
+          </div>
 
           {/* Enhanced Progress Indicator */}
           <div className="px-6 pb-6">
@@ -370,49 +352,47 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
       </div>
 
       {/* Exit Intent Modal */}
-{showExitIntent && (
-          <div className="fixed inset-0 z-60 flex items-center justify-center p-4">
-            <div
-              className="absolute inset-0 bg-black/80 animate-fadeInUp"
+      {showExitIntent && (
+        <div className="fixed inset-0 z-60 flex items-center justify-center p-4">
+          <div
+            className="absolute inset-0 bg-black/80 animate-fadeInUp"
+            onClick={() => setShowExitIntent(false)}
+          />
+
+          <div className="bg-slate-900 rounded-xl p-6 max-w-md w-full border border-red-500/50 relative animate-fadeInUp">
+            <button
               onClick={() => setShowExitIntent(false)}
-            />
-
-            <div
-              className="bg-slate-900 rounded-xl p-6 max-w-md w-full border border-red-500/50 relative animate-fadeInUp"
+              className="absolute top-4 right-4 text-gray-400 hover:text-white"
             >
-              <button
-                onClick={() => setShowExitIntent(false)}
-                className="absolute top-4 right-4 text-gray-400 hover:text-white"
-              >
-                <X className="w-5 h-5" />
-              </button>
+              <X className="w-5 h-5" />
+            </button>
 
-              <div className="text-center">
-                <div className="text-2xl mb-4">🎯</div>
-                <h3 className="text-xl font-bold text-white mb-2">Wait! Before You Go...</h3>
-                <p className="text-gray-300 mb-6">
-                  Get a FREE counseling session with our AIIMS faculty. Discover your perfect study
-                  plan for NEET success.
-                </p>
+            <div className="text-center">
+              <div className="text-2xl mb-4">🎯</div>
+              <h3 className="text-xl font-bold text-white mb-2">Wait! Before You Go...</h3>
+              <p className="text-gray-300 mb-6">
+                Get a FREE counseling session with our AIIMS faculty. Discover your perfect study
+                plan for NEET success.
+              </p>
 
-                <div className="space-y-3">
-                  <button
-                    onClick={handleExitIntentAction}
-                    className="w-full bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-                  >
-                    Get Free Counseling Session
-                  </button>
-                  <button
-                    onClick={() => setShowExitIntent(false)}
-                    className="w-full text-gray-400 hover:text-white transition-colors text-sm"
-                  >
-                    No thanks, I'll figure it out myself
-                  </button>
-                </div>
+              <div className="space-y-3">
+                <button
+                  onClick={handleExitIntentAction}
+                  className="w-full bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Get Free Counseling Session
+                </button>
+                <button
+                  onClick={() => setShowExitIntent(false)}
+                  className="w-full text-gray-400 hover:text-white transition-colors text-sm"
+                >
+                  No thanks, I'll figure it out myself
+                </button>
               </div>
             </div>
           </div>
-        )}
-</div>
+        </div>
+      )}
+    </div>
   )
 }

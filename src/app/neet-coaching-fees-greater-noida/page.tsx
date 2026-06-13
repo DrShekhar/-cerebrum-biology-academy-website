@@ -41,7 +41,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Fees in Greater Noida 2026 | Compare Coaching Fees',
-    description: 'Compare NEET coaching fees in Greater Noida 2026. Fee comparison of the 2nd-largest national NEET chain Greater Noida, WiseTurtle Academy vs Cerebrum Biology Academy. Best value with small batches....',
+    description:
+      'Compare NEET coaching fees in Greater Noida 2026. Fee comparison of the 2nd-largest national NEET chain Greater Noida, WiseTurtle Academy vs Cerebrum Biology Academy. Best value with small batches....',
   },
 }
 
@@ -160,7 +161,11 @@ export default function NEETCoachingFeesGreaterNoidaPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Greater Noida', 'NEET Biology Greater Noida', 'Medical entrance coaching Greater Noida']}
+        knowsAbout={[
+          'NEET Greater Noida',
+          'NEET Biology Greater Noida',
+          'Medical entrance coaching Greater Noida',
+        ]}
       />
       {/* Hero */}
       <section className="bg-gradient-to-br from-blue-700 to-blue-900 text-white py-16">
@@ -306,9 +311,7 @@ export default function NEETCoachingFeesGreaterNoidaPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-4">
-              What&apos;s Included in the Fee
-            </h2>
+            <h2 className="text-3xl font-bold text-center mb-4">What&apos;s Included in the Fee</h2>
             <p className="text-center text-gray-600 mb-12">
               No hidden charges. Everything you need for NEET Biology preparation.
             </p>
@@ -420,8 +423,8 @@ export default function NEETCoachingFeesGreaterNoidaPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your NEET Journey?</h2>
           <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-            Best quality at the most affordable fees for Greater Noida students. Small batches, AIIMS
-            faculty, proven results. Online + hybrid classes — no daily commute needed.
+            Best quality at the most affordable fees for Greater Noida students. Small batches,
+            AIIMS faculty, proven results. Online + hybrid classes — no daily commute needed.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -432,7 +435,9 @@ export default function NEETCoachingFeesGreaterNoidaPage() {
               Call Now: 99536-43938
             </a>
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition border border-white/30"
             >
               Book Free Demo

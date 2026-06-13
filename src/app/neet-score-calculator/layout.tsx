@@ -19,7 +19,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Score Calculator 2026 | Calculate Your Expected NEET Score',
-    description: 'Free NEET score calculator 2026. Calculate your expected NEET score based on correct, incorrect & unattempted questions. Instant results with rank prediction.',
+    description:
+      'Free NEET score calculator 2026. Calculate your expected NEET score based on correct, incorrect & unattempted questions. Instant results with rank prediction.',
   },
 }
 

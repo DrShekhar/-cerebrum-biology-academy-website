@@ -102,6 +102,7 @@ export default function Page() {
   return (
     <>
       <LocalitySchema
+        country="NZ"
         locality={locality}
         slug="neet-coaching-auckland-new-zealand"
         pageTitle="NEET Coaching in Auckland, New Zealand"

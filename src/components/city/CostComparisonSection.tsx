@@ -12,16 +12,61 @@ interface CostComparisonSectionProps {
 }
 
 const comparisonRows = [
-  { feature: 'Annual Fee', kota: 'Rs 1.5-3 Lakh', cerebrum: 'Rs 24,000-48,000', cerebrumWins: true },
-  { feature: 'Hostel + Food', kota: 'Rs 1-1.5 Lakh/year', cerebrum: 'Rs 0 (Stay at home)', cerebrumWins: true },
+  {
+    feature: 'Annual Fee',
+    kota: 'Rs 1.5-3 Lakh',
+    cerebrum: 'Rs 24,000-48,000',
+    cerebrumWins: true,
+  },
+  {
+    feature: 'Hostel + Food',
+    kota: 'Rs 1-1.5 Lakh/year',
+    cerebrum: 'Rs 0 (Stay at home)',
+    cerebrumWins: true,
+  },
   { feature: 'Travel Cost', kota: 'Rs 20-40K/year', cerebrum: 'Rs 0 (Online)', cerebrumWins: true },
-  { feature: 'Total Annual Cost', kota: 'Rs 3-5 Lakh', cerebrum: 'Rs 24,000-48,000', cerebrumWins: true },
-  { feature: 'Batch Size', kota: '100-500 students', cerebrum: '10-20 students', cerebrumWins: true },
-  { feature: 'Faculty Access', kota: 'Limited (large batches)', cerebrum: 'Direct (AIIMS faculty)', cerebrumWins: true },
-  { feature: 'Doubt Resolution', kota: 'Queue-based, delayed', cerebrum: 'Instant (live + WhatsApp)', cerebrumWins: true },
-  { feature: 'Family Support', kota: 'Away from family', cerebrum: 'With family at home', cerebrumWins: true },
-  { feature: 'Recorded Lectures', kota: 'Extra charge', cerebrum: 'Included free', cerebrumWins: true },
-  { feature: 'Progress Tracking', kota: 'Monthly (generic)', cerebrum: 'Weekly (personalized)', cerebrumWins: true },
+  {
+    feature: 'Total Annual Cost',
+    kota: 'Rs 3-5 Lakh',
+    cerebrum: 'Rs 24,000-48,000',
+    cerebrumWins: true,
+  },
+  {
+    feature: 'Batch Size',
+    kota: '100-500 students',
+    cerebrum: '10-20 students',
+    cerebrumWins: true,
+  },
+  {
+    feature: 'Faculty Access',
+    kota: 'Limited (large batches)',
+    cerebrum: 'Direct (AIIMS faculty)',
+    cerebrumWins: true,
+  },
+  {
+    feature: 'Doubt Resolution',
+    kota: 'Queue-based, delayed',
+    cerebrum: 'Instant (live + WhatsApp)',
+    cerebrumWins: true,
+  },
+  {
+    feature: 'Family Support',
+    kota: 'Away from family',
+    cerebrum: 'With family at home',
+    cerebrumWins: true,
+  },
+  {
+    feature: 'Recorded Lectures',
+    kota: 'Extra charge',
+    cerebrum: 'Included free',
+    cerebrumWins: true,
+  },
+  {
+    feature: 'Progress Tracking',
+    kota: 'Monthly (generic)',
+    cerebrum: 'Weekly (personalized)',
+    cerebrumWins: true,
+  },
 ]
 
 export function CostComparisonSection({ cityName, city }: CostComparisonSectionProps) {

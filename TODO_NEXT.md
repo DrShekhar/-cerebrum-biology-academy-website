@@ -44,24 +44,16 @@ and `LEAD_CONSOLIDATION_SCOPE.md`.
       whatsapp/automation, certificates, webhooks…). Most done by parallel sub-agents under a shared
       schema cheat sheet, verified centrally. parent/dashboard rebuilt (child relation aliased; test_attempts
       is empty since a users row has no such relation). **The prisma client is now type-checked end to end —
-      future schema drift fails compilation instead of 500ing at runtime.**
-      - ⚠️ **Runtime follow-ups flagged during the sweep** (compiled via stopgaps, but will FAIL at runtime
-        until modelled — owner decisions):
-        - **student-notes routes** (`/api/student/notes*`) target a student-notepad model that doesn't exist;
-          only a CRM lead-note `notes` model exists. Cast `as any` to compile. Needs a real `student_notes`
-          model + migration, or the feature disabled.
-        - **offers / fee-plan input schemas** don't collect required columns (offerName/courseName/
-          originalPrice/finalPrice) → those routes persist placeholder/empty values. Fix the input schemas.
-        - **welcome-series & webhook-retry** state has no column to persist to (`leads.metadata`,
-          `webhook_deliveries.nextRetryAt/metadata`) → those background loops effectively no-op.
-        - **free_users has no `phone`**, **users has no avatar/`currentClass`** → phone/avatar/class now
-          null or body-sourced in several routes.
-        - **followupProcessor** writes `rule.priority` (Priority enum) into `tasks.priority` (TaskPriority) —
-          latent invalid-enum write (not a tsc error; `rule` is `any`). Map HOT/WARM/COLD→HIGH/MEDIUM/LOW.
-        - A few `'system'` placeholder FKs in fire-and-forget activity/comm writes — need a real system user
-          or to be dropped.
-      - NOTE: id/updatedAt omissions did NOT surface in tsc (Prisma marks them optional) — supplied where a
-        create errored for other reasons; the broad set is benign (DB defaults / app-level).
+      future schema drift fails compilation instead of 500ing at runtime.** - ⚠️ **Runtime follow-ups flagged during the sweep** (compiled via stopgaps, but will FAIL at runtime
+      until modelled — owner decisions): - **student-notes routes** (`/api/student/notes*`) target a student-notepad model that doesn't exist;
+      only a CRM lead-note `notes` model exists. Cast `as any` to compile. Needs a real `student_notes`
+      model + migration, or the feature disabled. - **offers / fee-plan input schemas** don't collect required columns (offerName/courseName/
+      originalPrice/finalPrice) → those routes persist placeholder/empty values. Fix the input schemas. - **welcome-series & webhook-retry** state has no column to persist to (`leads.metadata`,
+      `webhook_deliveries.nextRetryAt/metadata`) → those background loops effectively no-op. - **free_users has no `phone`**, **users has no avatar/`currentClass`** → phone/avatar/class now
+      null or body-sourced in several routes. - **followupProcessor** writes `rule.priority` (Priority enum) into `tasks.priority` (TaskPriority) —
+      latent invalid-enum write (not a tsc error; `rule` is `any`). Map HOT/WARM/COLD→HIGH/MEDIUM/LOW. - A few `'system'` placeholder FKs in fire-and-forget activity/comm writes — need a real system user
+      or to be dropped. - NOTE: id/updatedAt omissions did NOT surface in tsc (Prisma marks them optional) — supplied where a
+      create errored for other reasons; the broad set is benign (DB defaults / app-level).
 - [x] **Counselor money features lost** — DONE (ea6acb83). feePlanService.ts + counselor/whatsapp.ts
       migrated off the InstantDB mock to Prisma (fee_plans/installments/offers/fee_payments/activities/
       crm_communications). Type-clean. Needs the migration applied (above) to persist at runtime.
@@ -70,15 +62,15 @@ and `LEAD_CONSOLIDATION_SCOPE.md`.
       admin reconciliation alert + flags enrollmentPending on post-signature DB failure (webhook backstops
       activation); demo payment/verify got an idempotency guard.
 - [x] **2 stored-XSS sinks** — DONE (196d1b33). free-resources AnnouncementBanner + [id]/page now pipe
-      DB/admin HTML through createSafeHtml(). *(PII-in-logs redaction still TODO — see below.)*
+      DB/admin HTML through createSafeHtml(). _(PII-in-logs redaction still TODO — see below.)_
 - [x] **PII in logs** — DONE (6095d97e). Wrapped the error-level logs that carried real PII (MSG91/Twilio
       provider responses echoing the phone; Resend error data; welcome-email address) with the existing
       redactObject/redactPII. removeConsole strips console.log in prod; only these error/warn sites leaked.
       No full-request-body logs found elsewhere.
 - [x] **251 broken internal links** — DONE (f472204e). 218 dead city-hub `url:` links now redirect to
       real city/region hubs via `cityHubBrokenLinkRedirects` (audit: 0 conflicts/chains/shadows).
-      Detector: `scripts/find-broken-cityhub-links.mjs`. *(Remaining ~30 from the audit were seo-landing
-      `/resources//tools/` namespace + hard-coded JSX — separate, not city-hub data.)*
+      Detector: `scripts/find-broken-cityhub-links.mjs`. _(Remaining ~30 from the audit were seo-landing
+      `/resources//tools/` namespace + hard-coded JSX — separate, not city-hub data.)_
 - [x] **LeadCaptureForm** — DONE (298828a5). Enter-to-submit + real ref-based double-submit guard.
 - [ ] **251 broken internal links remain** — mostly `city-hub-data.ts` `url:` fields (190) +
       seo-landing `/resources//tools/` namespace mismatch (25) + hard-coded JSX (22, incl.
@@ -94,19 +86,19 @@ and `LEAD_CONSOLIDATION_SCOPE.md`.
 
 - [ ] **Fix the follow-up crons** (`/api/cron/followup-queue` + `/api/cron/followup-triggers`):
       they only export POST, but Vercel Cron sends GET → 405 → `followup_queue` is written but
-      never processed. Add GET handlers (with `CRON_SECRET` check). *(I offered to do this next.)*
+      never processed. Add GET handlers (with `CRON_SECRET` check). _(I offered to do this next.)_
 - [ ] **Merge the 5 existing duplicate leads** — no tool exists. Write a small admin dedup
       endpoint/script (group by last-10 phone, keep oldest, move activities/tasks/notes, delete rest).
 - [ ] **Admin CRM UI wiring** (APIs exist, buttons don't): assign/reassign button → `/api/admin/leads/assign`;
       convert button + flow → `/api/admin/leads/convert`; an **admin lead-detail page** (none exists);
-      list **pager** (stuck on page-1/limit-20). *(from the crm-ui audit)*
+      list **pager** (stuck on page-1/limit-20). _(from the crm-ui audit)_
 - [ ] **Counselor lead-detail activity timeline** currently synthesizes from comms+tasks and never
       reads the real `activities` table — point it at `activities`.
 - [ ] **`counselor/whatsapp/send`** writes via the InstantDB mock (`@/lib/db`), not Prisma → throws.
       Repoint to the real Prisma `crm_communications` + Interakt send.
 - [ ] **Lead scoring**: wire `updateLeadScore(leadId)` into capture/demo/payment hooks (today 0 leads
       are ever scored; the "top leads" view is empty), or accept it as an on-demand admin tool.
-- [ ] **Auto-advance stage** on demo-completed and on payment (only demo-*scheduled* auto-advances now).
+- [ ] **Auto-advance stage** on demo-completed and on payment (only demo-_scheduled_ auto-advances now).
 - [ ] **Placeholder-email fix** in `/api/admin/leads/convert` (`{phone}@placeholder.cerebrum.app`) —
       require/collect a real email at conversion so converted students are reachable.
 
@@ -138,6 +130,7 @@ and `LEAD_CONSOLIDATION_SCOPE.md`.
 ---
 
 ### Done this session (for reference — do NOT redo)
+
 Funnel fixes · /global two-homepage · fake-review schema strip · 17 un-shadowed pages · sitemap
 (0 redirect/404) · 50+ broken links · AEO rebuild (llms.txt 6.5KB + fact block + crawler tokens) ·
 local SEO (hours/coords/NAP/Noida) · student dashboard real data · CRM auto-capture (all forms) ·

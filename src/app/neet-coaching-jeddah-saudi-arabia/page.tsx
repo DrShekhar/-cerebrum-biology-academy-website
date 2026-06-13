@@ -110,6 +110,7 @@ export default async function NEETCoachingJeddahPage() {
   return (
     <>
       <LocalitySchema
+        country="SA"
         locality="Jeddah"
         slug="neet-coaching-jeddah-saudi-arabia"
         pageTitle="Best NEET Coaching in Jeddah"

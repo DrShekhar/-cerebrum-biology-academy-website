@@ -6,11 +6,19 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Error Log Template | Track Mistakes | Free PDF',
-  description: 'Download free NEET Biology error log template. Track and eliminate repeated mistakes. Used by 680+ scorers. Printable mistake tracker by AIIMS faculty.',
-  keywords: ['NEET mistake tracker', 'NEET error log', 'NEET biology mistake analysis', 'track NEET mistakes', 'NEET wrong answer analysis'],
+  description:
+    'Download free NEET Biology error log template. Track and eliminate repeated mistakes. Used by 680+ scorers. Printable mistake tracker by AIIMS faculty.',
+  keywords: [
+    'NEET mistake tracker',
+    'NEET error log',
+    'NEET biology mistake analysis',
+    'track NEET mistakes',
+    'NEET wrong answer analysis',
+  ],
   openGraph: {
     title: 'NEET Biology Error Log Template | Track Mistakes | Free PDF',
-    description: 'Download free NEET Biology error log template. Track and eliminate repeated mistakes. Used by 680+ scorers. Printable mistake tracker by AIIMS faculty.',
+    description:
+      'Download free NEET Biology error log template. Track and eliminate repeated mistakes. Used by 680+ scorers. Printable mistake tracker by AIIMS faculty.',
     url: `${BASE_URL}/free-neet-biology-error-log-template`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -19,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Free NEET Biology Error Log Template',
-    description: 'Download free NEET Biology error log template. Track and eliminate repeated mistakes. Used by 680+ scorers. Printable mi',
+    description:
+      'Download free NEET Biology error log template. Track and eliminate repeated mistakes. Used by 680+ scorers. Printable mi',
   },
   alternates: { canonical: `${BASE_URL}/free-neet-biology-error-log-template` },
 }
@@ -58,7 +67,11 @@ const faqSchema = {
 export default function FreeNeetBiologyErrorLogTemplatePage() {
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <PageContent />
     </>
   )

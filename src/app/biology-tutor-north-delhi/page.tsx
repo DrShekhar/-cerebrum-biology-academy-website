@@ -111,7 +111,11 @@ export default function BiologyTutorNorthDelhiPage() {
   return (
     <div className="min-h-screen">
       <CerebrumPersonSchema
-        knowsAbout={['NEET North Delhi', 'NEET Biology North Delhi', 'Medical entrance coaching North Delhi']}
+        knowsAbout={[
+          'NEET North Delhi',
+          'NEET Biology North Delhi',
+          'Medical entrance coaching North Delhi',
+        ]}
       />
       <DelhiAreaSchema pageSlug="biology-tutor-north-delhi" />
       <script

@@ -274,227 +274,223 @@ export function MobileAccessibilityFeatures({
       </button>
 
       {/* Accessibility Panel */}
-{showPanel && (
+      {showPanel && (
+        <div className="fixed inset-0 z-50 animate-fadeInUp">
           <div
-            className="fixed inset-0 z-50 animate-fadeInUp"
-          >
-            <div
-              className="absolute inset-0 bg-black bg-opacity-50"
-              onClick={() => setShowPanel(false)}
-            />
-            <div
-              className="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl max-h-[80vh] overflow-y-auto animate-fadeInUp"
-            >
-              <div className="p-6">
-                {/* Header */}
-                <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-xl font-bold text-gray-900 flex items-center">
-                    <Accessibility className="w-6 h-6 mr-2" />
-                    Accessibility Options
-                  </h2>
-                  <div className="flex items-center space-x-2">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={resetSettings}
-                      className="text-red-600"
-                    >
-                      <RotateCcw className="w-4 h-4 mr-1" />
-                      Reset
-                    </Button>
-                    <Button variant="ghost" size="sm" onClick={() => setShowPanel(false)}>
-                      <EyeOff className="w-5 h-5" />
-                    </Button>
+            className="absolute inset-0 bg-black bg-opacity-50"
+            onClick={() => setShowPanel(false)}
+          />
+          <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl max-h-[80vh] overflow-y-auto animate-fadeInUp">
+            <div className="p-6">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-xl font-bold text-gray-900 flex items-center">
+                  <Accessibility className="w-6 h-6 mr-2" />
+                  Accessibility Options
+                </h2>
+                <div className="flex items-center space-x-2">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={resetSettings}
+                    className="text-red-600"
+                  >
+                    <RotateCcw className="w-4 h-4 mr-1" />
+                    Reset
+                  </Button>
+                  <Button variant="ghost" size="sm" onClick={() => setShowPanel(false)}>
+                    <EyeOff className="w-5 h-5" />
+                  </Button>
+                </div>
+              </div>
+
+              {/* Quick Actions */}
+              <div className="grid grid-cols-2 gap-3 mb-6">
+                <Button
+                  variant={isReading ? 'primary' : 'outline'}
+                  onClick={readPageContent}
+                  className="flex items-center justify-center h-12"
+                >
+                  {isReading ? (
+                    <Pause className="w-5 h-5 mr-2" />
+                  ) : (
+                    <Play className="w-5 h-5 mr-2" />
+                  )}
+                  {isReading ? 'Stop Reading' : 'Read Page'}
+                </Button>
+                <Button
+                  variant={settings.screenReader ? 'primary' : 'outline'}
+                  onClick={() => updateSetting('screenReader', !settings.screenReader)}
+                  className="flex items-center justify-center h-12"
+                >
+                  {settings.screenReader ? (
+                    <Volume2 className="w-5 h-5 mr-2" />
+                  ) : (
+                    <VolumeX className="w-5 h-5 mr-2" />
+                  )}
+                  Screen Reader
+                </Button>
+              </div>
+
+              {/* Font Size Control */}
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-700 mb-3">
+                  Font Size: {settings.fontSize}px
+                </label>
+                <div className="flex items-center space-x-3">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => updateSetting('fontSize', Math.max(12, settings.fontSize - 2))}
+                    disabled={settings.fontSize <= 12}
+                  >
+                    <ZoomOut className="w-4 h-4" />
+                  </Button>
+                  <div className="flex-1 bg-gray-200 rounded-full h-2">
+                    <div
+                      className="bg-blue-600 h-2 rounded-full transition-all"
+                      style={{
+                        width: `${((settings.fontSize - 12) / (24 - 12)) * 100}%`,
+                      }}
+                    />
                   </div>
-                </div>
-
-                {/* Quick Actions */}
-                <div className="grid grid-cols-2 gap-3 mb-6">
                   <Button
-                    variant={isReading ? 'primary' : 'outline'}
-                    onClick={readPageContent}
-                    className="flex items-center justify-center h-12"
+                    variant="outline"
+                    size="sm"
+                    onClick={() => updateSetting('fontSize', Math.min(24, settings.fontSize + 2))}
+                    disabled={settings.fontSize >= 24}
                   >
-                    {isReading ? (
-                      <Pause className="w-5 h-5 mr-2" />
-                    ) : (
-                      <Play className="w-5 h-5 mr-2" />
-                    )}
-                    {isReading ? 'Stop Reading' : 'Read Page'}
-                  </Button>
-                  <Button
-                    variant={settings.screenReader ? 'primary' : 'outline'}
-                    onClick={() => updateSetting('screenReader', !settings.screenReader)}
-                    className="flex items-center justify-center h-12"
-                  >
-                    {settings.screenReader ? (
-                      <Volume2 className="w-5 h-5 mr-2" />
-                    ) : (
-                      <VolumeX className="w-5 h-5 mr-2" />
-                    )}
-                    Screen Reader
+                    <ZoomIn className="w-4 h-4" />
                   </Button>
                 </div>
+              </div>
 
-                {/* Font Size Control */}
-                <div className="mb-6">
-                  <label className="block text-sm font-medium text-gray-700 mb-3">
-                    Font Size: {settings.fontSize}px
+              {/* Visual Settings */}
+              <div className="space-y-4 mb-6">
+                <h3 className="font-medium text-gray-900 flex items-center">
+                  <Eye className="w-4 h-4 mr-2" />
+                  Visual Settings
+                </h3>
+
+                <div className="space-y-3">
+                  <label className="flex items-center justify-between">
+                    <span className="text-sm text-gray-700">High Contrast Mode</span>
+                    <input
+                      type="checkbox"
+                      checked={settings.highContrast}
+                      onChange={(e) => updateSetting('highContrast', e.target.checked)}
+                      className="w-5 h-5 text-blue-600 rounded"
+                    />
                   </label>
-                  <div className="flex items-center space-x-3">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => updateSetting('fontSize', Math.max(12, settings.fontSize - 2))}
-                      disabled={settings.fontSize <= 12}
-                    >
-                      <ZoomOut className="w-4 h-4" />
-                    </Button>
-                    <div className="flex-1 bg-gray-200 rounded-full h-2">
-                      <div
-                        className="bg-blue-600 h-2 rounded-full transition-all"
-                        style={{
-                          width: `${((settings.fontSize - 12) / (24 - 12)) * 100}%`,
-                        }}
-                      />
-                    </div>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => updateSetting('fontSize', Math.min(24, settings.fontSize + 2))}
-                      disabled={settings.fontSize >= 24}
-                    >
-                      <ZoomIn className="w-4 h-4" />
-                    </Button>
-                  </div>
+
+                  <label className="flex items-center justify-between">
+                    <span className="text-sm text-gray-700">Color Blind Friendly</span>
+                    <input
+                      type="checkbox"
+                      checked={settings.colorBlindFriendly}
+                      onChange={(e) => updateSetting('colorBlindFriendly', e.target.checked)}
+                      className="w-5 h-5 text-blue-600 rounded"
+                    />
+                  </label>
+
+                  <label className="flex items-center justify-between">
+                    <span className="text-sm text-gray-700">Enhanced Focus Indicators</span>
+                    <input
+                      type="checkbox"
+                      checked={settings.focusIndicators}
+                      onChange={(e) => updateSetting('focusIndicators', e.target.checked)}
+                      className="w-5 h-5 text-blue-600 rounded"
+                    />
+                  </label>
                 </div>
+              </div>
 
-                {/* Visual Settings */}
-                <div className="space-y-4 mb-6">
-                  <h3 className="font-medium text-gray-900 flex items-center">
-                    <Eye className="w-4 h-4 mr-2" />
-                    Visual Settings
-                  </h3>
+              {/* Motor Settings */}
+              <div className="space-y-4 mb-6">
+                <h3 className="font-medium text-gray-900 flex items-center">
+                  <Hand className="w-4 h-4 mr-2" />
+                  Motor & Interaction
+                </h3>
 
-                  <div className="space-y-3">
-                    <label className="flex items-center justify-between">
-                      <span className="text-sm text-gray-700">High Contrast Mode</span>
-                      <input
-                        type="checkbox"
-                        checked={settings.highContrast}
-                        onChange={(e) => updateSetting('highContrast', e.target.checked)}
-                        className="w-5 h-5 text-blue-600 rounded"
-                      />
-                    </label>
+                <div className="space-y-3">
+                  <label className="flex items-center justify-between">
+                    <span className="text-sm text-gray-700">Large Click Targets</span>
+                    <input
+                      type="checkbox"
+                      checked={settings.largeClickTargets}
+                      onChange={(e) => updateSetting('largeClickTargets', e.target.checked)}
+                      className="w-5 h-5 text-blue-600 rounded"
+                    />
+                  </label>
 
-                    <label className="flex items-center justify-between">
-                      <span className="text-sm text-gray-700">Color Blind Friendly</span>
-                      <input
-                        type="checkbox"
-                        checked={settings.colorBlindFriendly}
-                        onChange={(e) => updateSetting('colorBlindFriendly', e.target.checked)}
-                        className="w-5 h-5 text-blue-600 rounded"
-                      />
-                    </label>
-
-                    <label className="flex items-center justify-between">
-                      <span className="text-sm text-gray-700">Enhanced Focus Indicators</span>
-                      <input
-                        type="checkbox"
-                        checked={settings.focusIndicators}
-                        onChange={(e) => updateSetting('focusIndicators', e.target.checked)}
-                        className="w-5 h-5 text-blue-600 rounded"
-                      />
-                    </label>
-                  </div>
+                  <label className="flex items-center justify-between">
+                    <span className="text-sm text-gray-700">Reduced Motion</span>
+                    <input
+                      type="checkbox"
+                      checked={settings.reducedMotion}
+                      onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
+                      className="w-5 h-5 text-blue-600 rounded"
+                    />
+                  </label>
                 </div>
+              </div>
 
-                {/* Motor Settings */}
-                <div className="space-y-4 mb-6">
-                  <h3 className="font-medium text-gray-900 flex items-center">
-                    <Hand className="w-4 h-4 mr-2" />
-                    Motor & Interaction
-                  </h3>
+              {/* Audio Settings */}
+              <div className="space-y-4 mb-6">
+                <h3 className="font-medium text-gray-900 flex items-center">
+                  <Volume2 className="w-4 h-4 mr-2" />
+                  Audio Settings
+                </h3>
 
-                  <div className="space-y-3">
-                    <label className="flex items-center justify-between">
-                      <span className="text-sm text-gray-700">Large Click Targets</span>
-                      <input
-                        type="checkbox"
-                        checked={settings.largeClickTargets}
-                        onChange={(e) => updateSetting('largeClickTargets', e.target.checked)}
-                        className="w-5 h-5 text-blue-600 rounded"
-                      />
-                    </label>
+                <div className="space-y-3">
+                  <label className="flex items-center justify-between">
+                    <span className="text-sm text-gray-700">Audio Descriptions</span>
+                    <input
+                      type="checkbox"
+                      checked={settings.audioDescriptions}
+                      onChange={(e) => updateSetting('audioDescriptions', e.target.checked)}
+                      className="w-5 h-5 text-blue-600 rounded"
+                    />
+                  </label>
 
-                    <label className="flex items-center justify-between">
-                      <span className="text-sm text-gray-700">Reduced Motion</span>
-                      <input
-                        type="checkbox"
-                        checked={settings.reducedMotion}
-                        onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
-                        className="w-5 h-5 text-blue-600 rounded"
-                      />
-                    </label>
-                  </div>
+                  <label className="flex items-center justify-between">
+                    <span className="text-sm text-gray-700">Captions</span>
+                    <input
+                      type="checkbox"
+                      checked={settings.captions}
+                      onChange={(e) => updateSetting('captions', e.target.checked)}
+                      className="w-5 h-5 text-blue-600 rounded"
+                    />
+                  </label>
+
+                  <label className="flex items-center justify-between">
+                    <span className="text-sm text-gray-700">Voice Navigation</span>
+                    <input
+                      type="checkbox"
+                      checked={settings.voiceNavigation}
+                      onChange={(e) => updateSetting('voiceNavigation', e.target.checked)}
+                      className="w-5 h-5 text-blue-600 rounded"
+                    />
+                  </label>
                 </div>
+              </div>
 
-                {/* Audio Settings */}
-                <div className="space-y-4 mb-6">
-                  <h3 className="font-medium text-gray-900 flex items-center">
-                    <Volume2 className="w-4 h-4 mr-2" />
-                    Audio Settings
-                  </h3>
-
-                  <div className="space-y-3">
-                    <label className="flex items-center justify-between">
-                      <span className="text-sm text-gray-700">Audio Descriptions</span>
-                      <input
-                        type="checkbox"
-                        checked={settings.audioDescriptions}
-                        onChange={(e) => updateSetting('audioDescriptions', e.target.checked)}
-                        className="w-5 h-5 text-blue-600 rounded"
-                      />
-                    </label>
-
-                    <label className="flex items-center justify-between">
-                      <span className="text-sm text-gray-700">Captions</span>
-                      <input
-                        type="checkbox"
-                        checked={settings.captions}
-                        onChange={(e) => updateSetting('captions', e.target.checked)}
-                        className="w-5 h-5 text-blue-600 rounded"
-                      />
-                    </label>
-
-                    <label className="flex items-center justify-between">
-                      <span className="text-sm text-gray-700">Voice Navigation</span>
-                      <input
-                        type="checkbox"
-                        checked={settings.voiceNavigation}
-                        onChange={(e) => updateSetting('voiceNavigation', e.target.checked)}
-                        className="w-5 h-5 text-blue-600 rounded"
-                      />
-                    </label>
-                  </div>
-                </div>
-
-                {/* Keyboard Shortcuts */}
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h3 className="font-medium text-gray-900 mb-3">Keyboard Shortcuts</h3>
-                  <div className="text-sm text-gray-600 space-y-1">
-                    <div>Alt + A: Open accessibility panel</div>
-                    <div>Alt + R: Start/stop reading page</div>
-                    <div>Tab: Navigate between elements</div>
-                    <div>Enter/Space: Activate buttons</div>
-                    <div>Esc: Close modals/panels</div>
-                  </div>
+              {/* Keyboard Shortcuts */}
+              <div className="bg-gray-50 rounded-lg p-4">
+                <h3 className="font-medium text-gray-900 mb-3">Keyboard Shortcuts</h3>
+                <div className="text-sm text-gray-600 space-y-1">
+                  <div>Alt + A: Open accessibility panel</div>
+                  <div>Alt + R: Start/stop reading page</div>
+                  <div>Tab: Navigate between elements</div>
+                  <div>Enter/Space: Activate buttons</div>
+                  <div>Esc: Close modals/panels</div>
                 </div>
               </div>
             </div>
           </div>
-        )}
-{/* Skip Links */}
+        </div>
+      )}
+      {/* Skip Links */}
       <div className="sr-only focus:not-sr-only">
         <a
           href="#main-content"

@@ -63,7 +63,7 @@ export function trackGoogleAdsConversion(
     conversionData.transaction_id = transactionId
   }
 
-  ;window.gtag('event', 'conversion', conversionData)
+  window.gtag('event', 'conversion', conversionData)
 }
 
 /**
@@ -74,7 +74,7 @@ export function trackPhoneCallConversion(phoneNumber?: string) {
 
   // Also track as GA4 event
   if (typeof window !== 'undefined' && window.gtag) {
-    ;window.gtag('event', 'generate_lead', {
+    window.gtag('event', 'generate_lead', {
       currency: 'INR',
       value: 0,
       lead_type: 'phone_call',
@@ -92,7 +92,7 @@ export function trackWhatsAppConversion(source?: string) {
 
   // Also track as GA4 event
   if (typeof window !== 'undefined' && window.gtag) {
-    ;window.gtag('event', 'generate_lead', {
+    window.gtag('event', 'generate_lead', {
       currency: 'INR',
       value: 0,
       lead_type: 'whatsapp',
@@ -125,7 +125,11 @@ export function trackDemoBookingConversion(courseType?: string) {
 /**
  * Track enrollment as GA4 purchase event (importable as Google Ads conversion)
  */
-export function trackEnrollmentConversion(value: number, courseType?: string, transactionId?: string) {
+export function trackEnrollmentConversion(
+  value: number,
+  courseType?: string,
+  transactionId?: string
+) {
   if (typeof window === 'undefined' || !window.gtag) return
 
   window.gtag('event', 'purchase', {

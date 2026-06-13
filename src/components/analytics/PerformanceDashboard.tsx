@@ -306,9 +306,7 @@ export function PerformanceDashboard({
           </div>
 
           {/* Performance Insights */}
-          <div
-            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Performance Insights</h2>
             <div className="space-y-4">
               {insights.map((insight, index) => (
@@ -346,9 +344,7 @@ export function PerformanceDashboard({
           </div>
 
           {/* Recent Test Performance */}
-          <div
-            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Recent Test Performance</h2>
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -411,9 +407,7 @@ export function PerformanceDashboard({
       {activeTab === 'performance' && (
         <div className="space-y-8">
           {/* Subject-wise Performance */}
-          <div
-            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Subject-wise Performance</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {subjectPerformance.map((subject, index) => (
@@ -448,9 +442,7 @@ export function PerformanceDashboard({
           </div>
 
           {/* Performance Distribution */}
-          <div
-            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Score Distribution</h2>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="bg-green-50 rounded-2xl p-6 text-center">
@@ -504,9 +496,7 @@ export function PerformanceDashboard({
       {activeTab === 'progress' && (
         <div className="space-y-8">
           {/* Progress Chart */}
-          <div
-            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Score Progression</h2>
             <div className="h-80 flex items-end justify-between space-x-2 bg-gray-50 rounded-2xl p-6">
               {progressData.map((point, index) => (
@@ -524,9 +514,7 @@ export function PerformanceDashboard({
           </div>
 
           {/* Achievements */}
-          <div
-            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Achievements</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {userHistory.achievements.map((achievement, index) => (
@@ -557,9 +545,7 @@ export function PerformanceDashboard({
       {activeTab === 'insights' && (
         <div className="space-y-8">
           {/* AI-Powered Insights */}
-          <div
-            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">AI-Powered Insights</h2>
             <div className="space-y-6">
               <div className="bg-gray-50 rounded-2xl p-6">
@@ -610,9 +596,7 @@ export function PerformanceDashboard({
           </div>
 
           {/* Peer Comparison */}
-          <div
-            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Peer Comparison (
               {userClass === 'class-11'

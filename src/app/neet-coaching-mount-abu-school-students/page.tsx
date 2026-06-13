@@ -20,7 +20,12 @@ import {
   Award,
   Globe,
 } from 'lucide-react'
-import { CONTACT_INFO, getPhoneLink, getDisplayPhone, getWhatsAppLink } from '@/lib/constants/contactInfo'
+import {
+  CONTACT_INFO,
+  getPhoneLink,
+  getDisplayPhone,
+  getWhatsAppLink,
+} from '@/lib/constants/contactInfo'
 
 const pageData = {
   slug: 'neet-coaching-mount-abu-school-students',
@@ -398,7 +403,9 @@ export default function NEETCoachingMountAbuSchoolPage() {
                     Just {pageData.distance} from {pageData.schoolName} (Sector 16)
                   </span>
                 </div>
-                <div className="mt-1 text-sm text-blue-200">{pageData.nearestCenter} - DC Chowk</div>
+                <div className="mt-1 text-sm text-blue-200">
+                  {pageData.nearestCenter} - DC Chowk
+                </div>
               </div>
             </div>
           </div>
@@ -432,7 +439,8 @@ export default function NEETCoachingMountAbuSchoolPage() {
             <div className="mb-10 text-center">
               <h2 className="mb-4 text-3xl font-bold text-gray-900">Free NEET Preparation Tools</h2>
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
-                Access our free resources to kickstart your NEET preparation. No registration required!
+                Access our free resources to kickstart your NEET preparation. No registration
+                required!
               </p>
             </div>
             <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -468,8 +476,8 @@ export default function NEETCoachingMountAbuSchoolPage() {
                 Perfect for {pageData.schoolName} Schedule
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
-                We understand the demands of {pageData.schoolName} and its prestigious IB program. Our
-                coaching is designed to complement your school academics.
+                We understand the demands of {pageData.schoolName} and its prestigious IB program.
+                Our coaching is designed to complement your school academics.
               </p>
             </div>
 
@@ -494,11 +502,14 @@ export default function NEETCoachingMountAbuSchoolPage() {
               <div>
                 <h3 className="mb-2 text-2xl font-bold">IB to NEET Bridge Program</h3>
                 <p className="text-indigo-200">
-                  Special curriculum covering CBSE-specific topics for IB students preparing for NEET
+                  Special curriculum covering CBSE-specific topics for IB students preparing for
+                  NEET
                 </p>
               </div>
               <a
-                href={getWhatsAppLink('Hi! I am an IB student from Mount Abu School. Please share details about your IB to NEET bridge program.')}
+                href={getWhatsAppLink(
+                  'Hi! I am an IB student from Mount Abu School. Please share details about your IB to NEET bridge program.'
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center rounded-lg bg-green-500 px-6 py-3 font-semibold text-white transition hover:bg-green-600"
@@ -564,7 +575,9 @@ export default function NEETCoachingMountAbuSchoolPage() {
                 <div className="mb-6 flex items-center gap-3">
                   <Building2 className="h-8 w-8 text-blue-600" />
                   <div>
-                    <div className="text-xl font-bold text-gray-900">{pageData.centerDetails.name}</div>
+                    <div className="text-xl font-bold text-gray-900">
+                      {pageData.centerDetails.name}
+                    </div>
                     <div className="text-sm text-gray-500">
                       Just {pageData.distance} from your school in Sector 16
                     </div>
@@ -697,8 +710,8 @@ export default function NEETCoachingMountAbuSchoolPage() {
               Ready to Join Other {pageData.schoolName} Students?
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-xl text-blue-100">
-              Book a free demo class and see why students from {pageData.schoolName} choose Cerebrum for
-              their NEET preparation. Special IB bridge program available!
+              Book a free demo class and see why students from {pageData.schoolName} choose Cerebrum
+              for their NEET preparation. Special IB bridge program available!
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link

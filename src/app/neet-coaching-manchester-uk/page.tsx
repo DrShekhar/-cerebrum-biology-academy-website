@@ -103,6 +103,7 @@ export default async function Page() {
   return (
     <>
       <LocalitySchema
+        country="GB"
         locality={locality}
         slug="neet-coaching-manchester-uk"
         pageTitle="NEET Coaching in Manchester, UK"

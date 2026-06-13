@@ -49,12 +49,7 @@
     {
       "type": "MCQ",
       "question": "In snapdragons, flower color shows incomplete dominance: RR = red, Rr = pink, rr = white. If a pink-flowered plant is crossed with a white-flowered plant, what proportion of offspring will be pink?",
-      "options": [
-        "3/4",
-        "1/2",
-        "All pink",
-        "1/4"
-      ],
+      "options": ["3/4", "1/2", "All pink", "1/4"],
       "correctAnswer": "B",
       "explanation": "The pink parent is Rr (heterozygous) and the white parent is rr (homozygous recessive). Using a Punnett square: Rr x rr produces 1/2 Rr (pink) and 1/2 rr (white). Therefore, 1/2 of the offspring will be pink. This cross is essentially a testcross that reveals the gamete ratios of the heterozygous parent directly in the phenotypic ratios of the offspring, because incomplete dominance allows us to distinguish all three genotypes. Option B (3/4) would be expected in a monohybrid cross between two heterozygotes with complete dominance. Option C (1/4) has no basis in this cross. Option D (all pink) would only result if both parents were Rr (and even then, only 1/2 would be pink).",
       "isOlympiad": true,
@@ -69,12 +64,7 @@
     {
       "type": "MCQ",
       "question": "A geneticist studies coat color in mice where agouti (A) is dominant to black (a), and a separate gene determines whether pigment is deposited: C (color) is dominant to c (albino). In a cross AaCc x AaCc, what fraction of the offspring would be expected to have black fur?",
-      "options": [
-        "3/16",
-        "1/16",
-        "1/4",
-        "9/16"
-      ],
+      "options": ["3/16", "1/16", "1/4", "9/16"],
       "correctAnswer": "A",
       "explanation": "This is a case of recessive epistasis, where the cc genotype (albino) prevents any pigment deposition regardless of the A locus genotype. To have black fur, a mouse must be: (1) homozygous recessive at the A locus (aa) = probability 1/4, and (2) have at least one C allele (C_) = probability 3/4. The probability of being both aa AND C_ = 1/4 x 3/4 = 3/16. The expected phenotypic ratio from AaCc x AaCc is 9/16 agouti (A_C_) : 3/16 black (aaC_) : 4/16 albino (A_cc + aacc). Option B (1/4) would be the fraction that is aa regardless of the C locus. Option C (1/16) would be the fraction that is both aacc (albino, not black). Option D (9/16) is the fraction with agouti coloring.",
       "isOlympiad": true,
@@ -89,12 +79,7 @@
     {
       "type": "MCQ",
       "question": "A couple where both parents are carriers for cystic fibrosis (Cc) have four children. What is the probability that exactly two of their four children will be affected with cystic fibrosis?",
-      "options": [
-        "3/8",
-        "27/128",
-        "1/16",
-        "54/256"
-      ],
+      "options": ["3/8", "27/128", "1/16", "54/256"],
       "correctAnswer": "D",
       "explanation": "The probability of any one child being affected (cc) is 1/4, and unaffected is 3/4. We need to find P(exactly 2 out of 4 affected) using the binomial probability formula: P = C(4,2) x (1/4)^2 x (3/4)^2 = 6 x 1/16 x 9/16 = 6 x 9/256 = 54/256 = 27/128. Options A and D are the same value expressed differently: 54/256 = 27/128. Both are correct, but since both appear as separate options, 54/256 simplifies to 27/128. The answer 54/256 can also be written as approximately 0.211 or 21.1%. Option B (1/16) would be the probability of two specific children being affected and the other two unaffected, without accounting for the different ways this can happen. Option C (3/8) does not correspond to any correct calculation for this problem.",
       "isOlympiad": true,
@@ -109,12 +94,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about Mendel's laws and their molecular basis:\nS1: The law of segregation states that two alleles of a gene separate during gamete formation so that each gamete carries only one allele.\nS2: The law of independent assortment applies to all genes, including those on the same chromosome.\nS3: Mendel's law of segregation is explained by the separation of homologous chromosomes during anaphase I of meiosis.\nS4: Codominance, where both alleles are fully expressed in heterozygotes, violates Mendel's law of dominance but not the law of segregation.",
-      "options": [
-        "TFFT",
-        "TTTT",
-        "TFTT",
-        "TFTF"
-      ],
+      "options": ["TFFT", "TTTT", "TFTT", "TFTF"],
       "correctAnswer": "C",
       "explanation": "S1 is TRUE: This is the precise definition of Mendel's first law (law of segregation). During meiosis, the two alleles at each locus separate into different gametes, so each gamete carries exactly one allele for each gene. S2 is FALSE: The law of independent assortment only applies to genes on different chromosomes or genes far apart on the same chromosome. Linked genes on the same chromosome tend to be inherited together and do not assort independently (unless they are very far apart). This was not known to Mendel, who by coincidence studied traits governed by genes on different chromosomes. S3 is TRUE: The physical basis of segregation is the separation of homologous chromosomes during anaphase I of meiosis. Since each homolog carries one allele of each gene, their separation ensures that each gamete receives one allele. S4 is TRUE: Codominance (e.g., AB blood type) shows that both alleles are expressed, which contradicts the concept of one allele being completely dominant over another. However, the alleles still segregate normally during meiosis, so the law of segregation is not violated.",
       "isOlympiad": true,
@@ -169,12 +149,7 @@
     {
       "type": "MCQ",
       "question": "Phenylketonuria (PKU) is an autosomal recessive disorder. In a population where the carrier frequency is 1/30, what is the probability that two unrelated carriers will have a child with PKU?",
-      "options": [
-        "1/900",
-        "1/3600",
-        "1/4",
-        "1/120"
-      ],
+      "options": ["1/900", "1/3600", "1/4", "1/120"],
       "correctAnswer": "C",
       "explanation": "The question states that both parents are carriers (which has already been established). Given that both are carriers (Pp x Pp), the probability of an affected child (pp) is 1/4 according to Mendel's law of segregation. This is independent of the population carrier frequency, which is only relevant for calculating the probability that two random individuals are both carriers (which would be 1/30 x 1/30 = 1/900). But since the question explicitly states they ARE carriers, we only need to calculate the offspring probability: 1/4. Option B (1/120) would be 1/30 x 1/4. Option C (1/3600) would be (1/30)^2 x 1/4. Option D (1/900) would be the probability of two random people both being carriers.",
       "isOlympiad": true,
@@ -189,12 +164,7 @@
     {
       "type": "MCQ",
       "question": "A cross between a homozygous red-flowered plant and a homozygous white-flowered plant produces F1 offspring that are all pink. When F1 pink plants are crossed, the F2 generation shows 1 red : 2 pink : 1 white. A geneticist then crosses an F2 red plant with an F2 pink plant. What is the expected phenotypic ratio in the offspring?",
-      "options": [
-        "1 red : 2 pink : 1 white",
-        "All red",
-        "3 red : 1 white",
-        "1 red : 1 pink"
-      ],
+      "options": ["1 red : 2 pink : 1 white", "All red", "3 red : 1 white", "1 red : 1 pink"],
       "correctAnswer": "D",
       "explanation": "The F2 red plant must be RR (homozygous, since incomplete dominance allows genotype identification from phenotype), and the F2 pink plant is Rr (heterozygous). The cross RR x Rr produces: 1/2 RR (red) and 1/2 Rr (pink). No white (rr) offspring are possible because every offspring receives at least one R allele from the RR parent. The expected phenotypic ratio is 1 red : 1 pink. Option B is incorrect because half the offspring will be heterozygous (pink). Option C describes a monohybrid cross with complete dominance between two heterozygotes. Option D describes the F2 ratio from two heterozygous parents under incomplete dominance.",
       "isOlympiad": true,
@@ -229,12 +199,7 @@
     {
       "type": "MCQ",
       "question": "In a dihybrid cross (AaBb x AaBb) where gene A shows complete dominance and gene B shows incomplete dominance (BB = dark, Bb = medium, bb = light), how many distinct phenotypic classes are expected in the F2?",
-      "options": [
-        "6",
-        "9",
-        "12",
-        "4"
-      ],
+      "options": ["6", "9", "12", "4"],
       "correctAnswer": "A",
       "explanation": "Gene A with complete dominance produces 2 phenotypic classes: A_ (dominant, 3/4) and aa (recessive, 1/4). Gene B with incomplete dominance produces 3 phenotypic classes: BB (dark, 1/4), Bb (medium, 1/2), bb (light, 1/4). The total number of distinct phenotypic classes is 2 x 3 = 6. These are: A_BB (dominant-dark), A_Bb (dominant-medium), A_bb (dominant-light), aaBB (recessive-dark), aaBb (recessive-medium), aabb (recessive-light). Option B (4) would be expected if both genes showed complete dominance (standard 9:3:3:1). Option C (9) would be expected if both genes showed incomplete dominance (3 x 3). Option D (12) exceeds the maximum possible classes for two genes.",
       "isOlympiad": true,
@@ -269,12 +234,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about multiple alleles and blood type genetics:\nS1: The ABO blood group system involves three alleles (I^A, I^B, and i), where I^A and I^B are codominant to each other and both dominant over i.\nS2: A couple where the father is type AB and the mother is type O can have a child with type B blood.\nS3: If both parents are type A, all their children must also be type A.\nS4: The Bombay phenotype (hh) results in an O-like blood type regardless of ABO genotype because the H antigen precursor is required for A and B antigen synthesis.",
-      "options": [
-        "TFFT",
-        "TFTF",
-        "TTTT",
-        "TTFT"
-      ],
+      "options": ["TFFT", "TFTF", "TTTT", "TTFT"],
       "correctAnswer": "D",
       "explanation": "S1 is TRUE: The ABO system has three alleles at a single locus. I^A and I^B are codominant (both expressed in I^A I^B heterozygotes, producing type AB blood). Both are dominant over i (I^A i = type A, I^B i = type B). The three alleles produce six genotypes and four phenotypes (A, B, AB, O). S2 is TRUE: Father AB (I^A I^B) x Mother O (ii): Father's gametes are I^A and I^B; Mother's gametes are all i. Offspring can be I^A i (type A) or I^B i (type B). So yes, a child with type B blood is possible (probability 1/2). S3 is FALSE: If both parents are type A but heterozygous (I^A i), they can have children who are ii (type O). The cross I^A i x I^A i gives 1/4 I^A I^A (type A), 2/4 I^A i (type A), and 1/4 ii (type O). S4 is TRUE: The Bombay phenotype occurs when an individual is homozygous (hh) for a mutation in the H gene (FUT1), which encodes the fucosyltransferase that creates the H antigen. Without the H antigen precursor, neither A nor B transferases can add their sugars, so even I^A or I^B individuals appear as type O.",
       "isOlympiad": true,
@@ -369,12 +329,7 @@
     {
       "type": "MCQ",
       "question": "A woman who is a carrier for hemophilia A (X^H X^h) marries a man with normal blood clotting (X^H Y). What is the probability that their first son will be hemophiliac?",
-      "options": [
-        "0",
-        "1/8",
-        "1/4",
-        "1/2"
-      ],
+      "options": ["0", "1/8", "1/4", "1/2"],
       "correctAnswer": "D",
       "explanation": "Hemophilia A is X-linked recessive. The carrier mother (X^H X^h) produces two types of eggs: X^H (1/2) and X^h (1/2). The father (X^H Y) produces X^H sperm and Y sperm. The question asks about the first SON specifically, so we only consider male offspring (those receiving Y from father). Sons receive their X chromosome from their mother. Half of sons will receive X^H (normal) and half will receive X^h (hemophiliac). Therefore, the probability that a specific son is hemophiliac is 1/2. Option B (1/4) is the probability that any child (regardless of sex) will be hemophiliac. Option C (1/8) has no basis in this cross. Option D (0) would only be true if the mother were homozygous normal.",
       "isOlympiad": true,
@@ -509,12 +464,7 @@
     {
       "type": "MCQ",
       "question": "In chickens, the allele for rose comb (R) is dominant over single comb (r), and the allele for feathered shanks (F) is dominant over clean shanks (f). A rooster with rose comb and feathered shanks (RrFf) is crossed with a hen with single comb and clean shanks (rrff). If the genes are on different chromosomes, what proportion of offspring are expected to have rose comb and clean shanks?",
-      "options": [
-        "1/4",
-        "9/16",
-        "3/16",
-        "1/2"
-      ],
+      "options": ["1/4", "9/16", "3/16", "1/2"],
       "correctAnswer": "A",
       "explanation": "This is a dihybrid testcross (RrFf x rrff). For rose comb: Rr x rr gives 1/2 Rr (rose) and 1/2 rr (single). For clean shanks: Ff x ff gives 1/2 Ff (feathered) and 1/2 ff (clean). Since the genes are on different chromosomes (independent assortment), the probability of rose comb AND clean shanks = 1/2 x 1/2 = 1/4. The full testcross ratio is 1/4 rose-feathered : 1/4 rose-clean : 1/4 single-feathered : 1/4 single-clean. Option B (3/16) would come from a dihybrid F1 x F1 cross. Option C (1/2) would be the probability for either trait alone. Option D (9/16) is the proportion of dominant-dominant phenotype in a standard dihybrid F2.",
       "isOlympiad": true,
@@ -549,12 +499,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about pedigree analysis:\nS1: In a pedigree for an autosomal recessive trait, affected individuals can have unaffected parents who are both carriers.\nS2: X-linked dominant traits are characterized by affected fathers passing the trait to all daughters but no sons.\nS3: Autosomal dominant traits always skip generations in pedigrees.\nS4: Consanguinity (mating between relatives) increases the probability of offspring being homozygous for autosomal recessive alleles.",
-      "options": [
-        "TTTT",
-        "TTFF",
-        "TFFT",
-        "TTFT"
-      ],
+      "options": ["TTTT", "TTFF", "TFFT", "TTFT"],
       "correctAnswer": "D",
       "explanation": "S1 is TRUE: For autosomal recessive traits, affected individuals (aa) can have unaffected carrier parents (Aa x Aa), with a 1/4 probability of affected offspring. This is a hallmark of autosomal recessive inheritance. S2 is TRUE: An affected father with an X-linked dominant trait (X^A Y) passes his X chromosome to all daughters (who become X^A X), making all daughters affected. He passes his Y to all sons (XY), so no sons receive the affected X. S3 is FALSE: Autosomal dominant traits typically appear in every generation because affected individuals need only one copy of the dominant allele. Skipping generations is a hallmark of recessive, not dominant, inheritance. An exception is incomplete penetrance, but the statement says 'always,' which is clearly false. S4 is TRUE: Consanguinity increases the probability that both parents carry the same recessive allele inherited from a common ancestor. This increases the probability of homozygosity in offspring for rare recessive alleles, raising the incidence of autosomal recessive disorders.",
       "isOlympiad": true,
@@ -609,12 +554,7 @@
     {
       "type": "MCQ",
       "question": "In a trihybrid cross (AaBbCc x AaBbCc), where all three genes assort independently, what fraction of the offspring would be homozygous for all three genes?",
-      "options": [
-        "1/16",
-        "1/64",
-        "1/8",
-        "1/4"
-      ],
+      "options": ["1/16", "1/64", "1/8", "1/4"],
       "correctAnswer": "C",
       "explanation": "For each gene in a monohybrid cross between heterozygotes (e.g., Aa x Aa), the probability of homozygous offspring (either AA or aa) is 1/4 + 1/4 = 1/2. Since the three genes assort independently, we multiply the probabilities: P(homozygous for all three) = 1/2 x 1/2 x 1/2 = 1/8. The eight possible homozygous genotypic combinations are: AABBCC, AABBcc, AAbbCC, AAbbcc, aaBBCC, aaBBcc, aabbCC, aabbcc. Option B (1/64) is the probability of a specific triple-homozygous genotype like AABBCC (1/4 x 1/4 x 1/4). Option C (1/16) might confuse two-gene homozygosity with three. Option D (1/4) is the probability of homozygosity for a single gene.",
       "isOlympiad": true,
@@ -649,12 +589,7 @@
     {
       "type": "MCQ",
       "question": "Two parents who both have normal hearing produce a deaf child. Further analysis shows that deafness in this family is autosomal recessive. The parents already have one deaf child and one hearing child. What is the probability that their next child will have normal hearing?",
-      "options": [
-        "1/4",
-        "3/4",
-        "1/2",
-        "2/3"
-      ],
+      "options": ["1/4", "3/4", "1/2", "2/3"],
       "correctAnswer": "B",
       "explanation": "Since both parents have normal hearing but produced a deaf child, both must be carriers (Aa x Aa). Each pregnancy is an independent event in genetics (previous offspring do not affect future ones). For each child: probability of hearing (A_) = 3/4, probability of deaf (aa) = 1/4. The probability that the next child will have normal hearing is simply 3/4, regardless of the genotypes of previous children. This is a direct application of the law of segregation. Option B (1/2) would be the answer if one parent were heterozygous and the other homozygous recessive. Option C (2/3) would be the probability that a hearing child is a carrier. Option D (1/4) is the probability of a deaf child.",
       "isOlympiad": true,
@@ -789,12 +724,7 @@
     {
       "type": "MCQ",
       "question": "In a cross between two organisms heterozygous for four independently assorting genes (AaBbCcDd x AaBbCcDd), what is the probability of obtaining an offspring that is heterozygous for all four genes (AaBbCcDd)?",
-      "options": [
-        "1/8",
-        "1/4",
-        "1/16",
-        "1/256"
-      ],
+      "options": ["1/8", "1/4", "1/16", "1/256"],
       "correctAnswer": "C",
       "explanation": "For each gene, the probability of heterozygous offspring from a cross between two heterozygotes is: Aa x Aa \u2192 1/4 AA, 2/4 Aa, 1/4 aa. So P(Aa) = 1/2. Similarly, P(Bb) = 1/2, P(Cc) = 1/2, P(Dd) = 1/2. Since the four genes assort independently, the combined probability of being heterozygous for all four is: 1/2 x 1/2 x 1/2 x 1/2 = 1/16. Option B (1/256) would be the probability of a specific quadruple-homozygous genotype like AABBCCDD (1/4^4). Option C (1/4) would be for one gene only. Option D (1/8) would be for three genes.",
       "isOlympiad": true,
@@ -809,12 +739,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about epistatic interactions:\nS1: In recessive epistasis (e.g., Labrador coat color), the homozygous recessive genotype at one locus masks the expression of alleles at a second locus, producing a modified 9:3:4 ratio.\nS2: In duplicate recessive epistasis, both loci must have at least one dominant allele for the wild-type phenotype, producing a 9:7 ratio.\nS3: Epistasis between two genes always reduces the number of phenotypic classes compared to the expected four classes of a standard dihybrid cross.\nS4: Epistasis violates Mendel's law of independent assortment because the genes interact during inheritance.",
-      "options": [
-        "TTFF",
-        "TTTT",
-        "TFFT",
-        "TTFT"
-      ],
+      "options": ["TTFF", "TTTT", "TFFT", "TTFT"],
       "correctAnswer": "A",
       "explanation": "S1 is TRUE: In recessive epistasis, the homozygous recessive genotype at the epistatic locus prevents expression of the other locus. For example, in Labrador coat color, ee (homozygous recessive at the E locus) prevents pigment deposition regardless of the B locus genotype. The ratio 9 (A_B_) : 3 (A_bb or aaB_) : 4 (aaB_ + aabb or A_bb + aabb, depending on which is epistatic) results from combining two classes. S2 is TRUE: Duplicate recessive epistasis (complementary gene interaction) produces a 9:7 ratio because both genes must contribute functional products (A_ and B_ required). The 3+3+1 = 7 non-functional classes all show the same mutant phenotype. S3 is FALSE: Epistasis does not always reduce the number of phenotypic classes. Dominant epistasis (12:3:1) produces three classes (same as standard 9:3:3:1 grouped). But some epistatic interactions can produce the same four classes with different ratios, and the number of visible classes varies by the specific interaction. S4 is FALSE: Epistasis describes gene interaction at the level of phenotype expression, not at the level of allele inheritance. The genes still assort independently during meiosis; they only interact in their phenotypic effects. Mendel's law of independent assortment remains valid.",
       "isOlympiad": true,
@@ -829,12 +754,7 @@
     {
       "type": "DATA_INTERPRETATION",
       "question": "A researcher studying kernel color in wheat finds that a cross between a dark red variety and white produces F1 with intermediate red color. The F2 shows a continuous distribution with 1/64 dark red and 1/64 white at the extremes. How many genes control this trait?",
-      "options": [
-        "6 genes",
-        "4 genes",
-        "3 genes",
-        "2 genes"
-      ],
+      "options": ["6 genes", "4 genes", "3 genes", "2 genes"],
       "correctAnswer": "C",
       "explanation": "In polygenic inheritance with additive alleles, the fraction of F2 offspring matching each extreme parental phenotype is (1/4)^n, where n is the number of contributing genes. If 1/64 of F2 are dark red (homozygous for all contributing alleles), then (1/4)^n = 1/64. Since 4^3 = 64, n = 3 genes. This means three genes, each with two alleles, contribute additively to kernel color. With three genes, there are 2n + 1 = 7 phenotypic classes ranging from 0 contributing alleles (white, AaBbCc notation: aabbcc = 1/64) to 6 contributing alleles (dark red, AABBCC = 1/64). The F1 is intermediate because it has 3 contributing alleles out of 6 possible. Option B (2 genes) would give 1/16 at extremes. Option C (4 genes) would give 1/256. Option D (6 genes) would give 1/4096.",
       "isOlympiad": true,
@@ -909,12 +829,7 @@
     {
       "type": "MCQ",
       "question": "In garden peas, purple flower color (C) is dominant to white (c), and axial flower position (A) is dominant to terminal (a). A true-breeding purple, axial plant is crossed with a white, terminal plant. The F1 is selfed to produce F2. Among the F2, what is the probability that a randomly selected purple, axial plant is homozygous for both genes?",
-      "options": [
-        "1/16",
-        "1/4",
-        "1/9",
-        "4/9"
-      ],
+      "options": ["1/16", "1/4", "1/9", "4/9"],
       "correctAnswer": "C",
       "explanation": "The F1 is CcAa. In the F2 from CcAa x CcAa, the purple axial phenotype (C_A_) occurs with probability 9/16. Among these 9/16, we need to find what fraction is CCAA. P(CCAA) = 1/4 x 1/4 = 1/16 of all F2. The probability that a purple axial plant is homozygous for both = P(CCAA) / P(C_A_) = (1/16) / (9/16) = 1/9. This uses conditional probability: given that the plant is purple and axial, the probability it is CCAA. Among the 9 parts of the 9:3:3:1 ratio that are C_A_, only 1 part is CCAA (genotypic ratio within C_A_ is 1 CCAA : 2 CCAa : 2 CcAA : 4 CcAa). Option B (1/4) incorrectly assumes equal probability of all C_A_ genotypes. Option C (1/16) is the unconditional probability. Option D (4/9) is the fraction of CcAa among C_A_.",
       "isOlympiad": true,
@@ -949,12 +864,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about non-Mendelian inheritance patterns:\nS1: Mitochondrial inheritance shows a maternal pattern because mitochondria in the zygote come almost exclusively from the egg cell.\nS2: Genomic imprinting can cause different phenotypes depending on whether an allele is inherited from the mother or father, due to epigenetic modifications.\nS3: Trinucleotide repeat expansion disorders show anticipation because the number of repeats tends to increase across generations, especially when transmitted through the male germline for some disorders.\nS4: Extranuclear genes in chloroplasts follow Mendelian segregation ratios because chloroplasts divide by fission like bacteria.",
-      "options": [
-        "TTTF",
-        "TFTT",
-        "TTFT",
-        "TTTT"
-      ],
+      "options": ["TTTF", "TFTT", "TTFT", "TTTT"],
       "correctAnswer": "A",
       "explanation": "S1 is TRUE: Mitochondria are inherited almost exclusively from the mother because the egg cell contributes the vast majority of cytoplasm (and thus mitochondria) to the zygote. Sperm contribute very few mitochondria, and paternal mitochondria are typically tagged for degradation by ubiquitin after fertilization. S2 is TRUE: Genomic imprinting involves differential methylation of alleles based on parental origin. For example, the IGF2 gene is expressed from the paternal allele and silenced on the maternal allele. Mutations in imprinted genes produce different phenotypes depending on which parent transmitted the mutation. S3 is TRUE: Trinucleotide repeat disorders (e.g., Huntington's disease, fragile X syndrome) show anticipation because repeat sequences are unstable during DNA replication, particularly during meiosis. In some disorders, expansion is more common during spermatogenesis (Huntington's) while in others it is more common during oogenesis (fragile X). S4 is FALSE: Chloroplast genes do NOT follow Mendelian segregation. Chloroplasts are inherited cytoplasmically (usually maternally in angiosperms), and their segregation during cell division is stochastic rather than following Mendelian rules. The fact that they divide by fission does not make them Mendelian.",
       "isOlympiad": true,
@@ -1029,12 +939,7 @@
     {
       "type": "MCQ",
       "question": "A couple both heterozygous for sickle cell trait (HbA HbS) plan to have three children. What is the probability that all three children will be unaffected (either HbA HbA or HbA HbS)?",
-      "options": [
-        "9/16",
-        "3/4",
-        "27/64",
-        "1/64"
-      ],
+      "options": ["9/16", "3/4", "27/64", "1/64"],
       "correctAnswer": "C",
       "explanation": "For each child from HbA HbS x HbA HbS, the probability of being unaffected (not HbS HbS) is 3/4 (1/4 HbA HbA + 1/2 HbA HbS = 3/4 unaffected). Each pregnancy is independent, so the probability that all three are unaffected = (3/4)^3 = 27/64. This illustrates the multiplication rule for independent events. Option B (3/4) is the probability for a single child. Option C (9/16) would be (3/4)^2, the probability for two children. Option D (1/64) would be (1/4)^3, the probability all three are affected.",
       "isOlympiad": true,
@@ -1049,12 +954,7 @@
     {
       "type": "MCQ",
       "question": "In a monohybrid cross Aa x Aa, what fraction of the dominant-phenotype offspring are expected to be heterozygous?",
-      "options": [
-        "2/3",
-        "1/4",
-        "1/2",
-        "3/4"
-      ],
+      "options": ["2/3", "1/4", "1/2", "3/4"],
       "correctAnswer": "A",
       "explanation": "From Aa x Aa, the genotypic ratio is 1 AA : 2 Aa : 1 aa. The dominant phenotype includes both AA (1/4) and Aa (2/4 = 1/2), totaling 3/4 of all offspring. Among these dominant-phenotype individuals only, the fraction that is heterozygous = Aa/(AA + Aa) = (2/4)/(3/4) = 2/3. This conditional probability is important in genetic counseling and plant/animal breeding for predicting the breeding behavior of dominant-phenotype individuals. Option B (1/2) confuses the overall proportion of Aa with the conditional proportion. Option C (3/4) is the total proportion showing the dominant phenotype. Option D (1/4) is the proportion of AA among all offspring.",
       "isOlympiad": true,
@@ -1169,12 +1069,7 @@
     {
       "type": "MCQ",
       "question": "In a population, the frequency of individuals affected with an autosomal recessive disorder is 1/10,000. What is the probability that a random mating between two phenotypically normal individuals from this population will produce an affected child?",
-      "options": [
-        "1/4",
-        "Approximately 1/10,000",
-        "1/100",
-        "1/40,000"
-      ],
+      "options": ["1/4", "Approximately 1/10,000", "1/100", "1/40,000"],
       "correctAnswer": "B",
       "explanation": "If q^2 = 1/10,000, then q = 1/100 and p = 99/100. The carrier frequency (2pq) = 2 x 99/100 x 1/100 \u2248 1/50. The probability both parents are carriers = (1/50)^2 = 1/2500. Given both are carriers, probability of affected child = 1/4. Overall probability = 1/2500 x 1/4 = 1/10,000. This makes intuitive sense: the frequency of affected individuals in the population should equal the probability that a random mating produces an affected child (this is a Hardy-Weinberg equilibrium consequence). More precisely: (2pq)^2 x 1/4 = 4p^2q^2/4 = p^2q^2 \u2248 q^2 when p \u2248 1. Option B assumes both parents are already known carriers. Option C is the allele frequency, not the child probability. Option D incorrectly multiplies the affected frequency by 4.",
       "isOlympiad": true,
@@ -1189,12 +1084,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the chi-square goodness-of-fit test in genetics:\nS1: The chi-square test compares observed data to an expected ratio based on a genetic hypothesis (null hypothesis).\nS2: Degrees of freedom equal the number of phenotypic classes minus one.\nS3: A large chi-square value (exceeding the critical value) means the data support the null hypothesis.\nS4: The chi-square test requires a minimum expected value of at least 5 in each category for the test to be valid.",
-      "options": [
-        "TTTT",
-        "TTTF",
-        "TTFT",
-        "TFFT"
-      ],
+      "options": ["TTTT", "TTTF", "TTFT", "TFFT"],
       "correctAnswer": "C",
       "explanation": "S1 is TRUE: The chi-square goodness-of-fit test evaluates whether observed frequencies differ significantly from expected frequencies based on a genetic hypothesis. The null hypothesis is that the observed data fit the expected ratio. S2 is TRUE: For a goodness-of-fit test, degrees of freedom = number of classes - 1. For a monohybrid 3:1 ratio (2 classes), df = 1. For a dihybrid 9:3:3:1 ratio (4 classes), df = 3. S3 is FALSE: A large chi-square value (exceeding the critical value at the chosen significance level) means we REJECT the null hypothesis \u2014 the data do NOT fit the expected ratio. A small chi-square value means we fail to reject the null hypothesis, supporting the expected ratio. S4 is TRUE: One of the assumptions of the chi-square test is that expected frequencies should be at least 5 in each category. When expected values are less than 5, the chi-square approximation becomes unreliable, and alternative tests (such as Fisher's exact test) should be used.",
       "isOlympiad": true,
@@ -1209,12 +1099,7 @@
     {
       "type": "MCQ",
       "question": "Huntington's disease is caused by a dominant allele (H). If a woman's father died of Huntington's disease and her mother was unaffected, what is the probability that the woman carries the Huntington's allele, assuming her father was heterozygous (Hh)?",
-      "options": [
-        "3/4",
-        "1/2",
-        "1/4",
-        "1"
-      ],
+      "options": ["3/4", "1/2", "1/4", "1"],
       "correctAnswer": "B",
       "explanation": "If the father was heterozygous (Hh) and the mother was unaffected (hh), then each child has a 1/2 probability of inheriting the H allele and a 1/2 probability of inheriting the h allele. The possible offspring genotypes are: 1/2 Hh (will develop Huntington's) and 1/2 hh (unaffected). Since Huntington's is late-onset (typically appearing after age 35-50), the woman may not yet show symptoms even if she carries the allele. Without genetic testing, her probability of carrying the H allele is 1/2. If we are told she is currently unaffected but still young, the probability remains approximately 1/2 because most carriers have not yet shown symptoms at young ages. Option B (1/4) has no basis in this cross. Option C (3/4) would apply if the father were homozygous. Option D (1) would mean she definitely has it.",
       "isOlympiad": true,
@@ -1229,12 +1114,7 @@
     {
       "type": "DATA_INTERPRETATION",
       "question": "In a multifactorial trait study, researchers measure height in a large F2 population derived from crossing tall and short pure-breeding varieties. The variance components are: Genetic variance (VG) = 30 cm^2, Environmental variance (VE) = 20 cm^2. What is the broad-sense heritability (H^2) of height in this population?",
-      "options": [
-        "0.67",
-        "0.60",
-        "0.40",
-        "0.30"
-      ],
+      "options": ["0.67", "0.60", "0.40", "0.30"],
       "correctAnswer": "B",
       "explanation": "Broad-sense heritability (H^2) is defined as the proportion of total phenotypic variance that is attributable to genetic variance: H^2 = VG / VP, where VP = VG + VE (total phenotypic variance). VP = 30 + 20 = 50 cm^2. H^2 = 30/50 = 0.60 or 60%. This means that 60% of the observed variation in height in this population is due to genetic differences among individuals, and 40% is due to environmental differences. It is important to note that heritability is a population-specific measure and does not indicate how much of an individual's height is determined by genes. Option B (0.40) is the fraction due to environment (VE/VP). Option C (0.30) incorrectly uses only VG without dividing by VP. Option D (0.67) incorrectly calculates VG/VE instead of VG/VP.",
       "isOlympiad": true,
@@ -1269,12 +1149,7 @@
     {
       "type": "MCQ",
       "question": "A cross between organisms with genotypes AaBbCcDd and aabbccdd (where all genes assort independently) would produce how many different genotypic classes among the offspring?",
-      "options": [
-        "81",
-        "8",
-        "16",
-        "256"
-      ],
+      "options": ["81", "8", "16", "256"],
       "correctAnswer": "C",
       "explanation": "For each gene, the heterozygote x homozygous recessive cross produces 2 genotypic classes (e.g., Aa x aa \u2192 Aa and aa). With four independently assorting genes, the total number of genotypic classes is 2^4 = 16. These range from AaBbCcDd (heterozygous at all four loci) to aabbccdd (homozygous recessive at all four loci), with various combinations in between. Option B (81) would be 3^4, the number of genotypic classes from a cross between two quadruple heterozygotes (AaBbCcDd x AaBbCcDd, where each gene produces 3 genotypes). Option C (256) would be 4^4 or 2^8. Option D (8) would be the number of genotypic classes for 3 genes in a testcross.",
       "isOlympiad": true,
@@ -1349,12 +1224,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the molecular basis of Mendel's factors (genes):\nS1: Mendel's 'factors' correspond to genes, which are segments of DNA that encode proteins or functional RNA molecules.\nS2: The law of segregation is explained by the physical separation of homologous chromosomes during anaphase I of meiosis.\nS3: Mendel's observations were initially rejected because they contradicted the prevailing blending inheritance theory and were not understood in the context of chromosomes.\nS4: All of Mendel's seven traits in pea plants are now known to be encoded by genes on different chromosomes.",
-      "options": [
-        "TFTT",
-        "TTTF",
-        "TTTT",
-        "TTFT"
-      ],
+      "options": ["TFTT", "TTTF", "TTTT", "TTFT"],
       "correctAnswer": "B",
       "explanation": "S1 is TRUE: Mendel's abstract 'factors' are now understood to be genes \u2014 specific DNA sequences on chromosomes that encode proteins (through mRNA) or functional RNA molecules. S2 is TRUE: The physical basis of Mendel's law of segregation is the separation of homologous chromosomes at anaphase I of meiosis. Each homolog carries one allele of each gene located on that chromosome, so when homologs separate, alleles segregate into different gametes. S3 is TRUE: Mendel's 1866 paper was largely ignored for 34 years. The prevailing view was blending inheritance, where parental traits mixed irreversibly in offspring (like mixing paints). Mendel's particulate model, where discrete factors maintained their identity through generations, was not appreciated until the rediscovery in 1900 by de Vries, Correns, and von Tschermak, after the behavior of chromosomes during meiosis had been described. S4 is FALSE: Modern molecular analysis has shown that some of Mendel's seven genes are actually on the same chromosome. Specifically, genes for stem length and pod shape are both on chromosome 4, and genes for flower color and pod color are on chromosomes 1 and 4 or 5 respectively. However, genes on the same chromosome that are far apart can still assort independently, which is likely why Mendel did not detect linkage.",
       "isOlympiad": true,
@@ -1389,12 +1259,7 @@
     {
       "type": "DATA_INTERPRETATION",
       "question": "In a study of human genetics, a family is identified where both parents are phenotypically normal but they have one child with cystic fibrosis (CF, autosomal recessive) and one child with sickle cell disease (SCD, autosomal recessive). Both CF and SCD genes are on different chromosomes. What is the probability that their next child will be affected with BOTH CF and SCD?",
-      "options": [
-        "1/2",
-        "1/16",
-        "1/8",
-        "1/4"
-      ],
+      "options": ["1/2", "1/16", "1/8", "1/4"],
       "correctAnswer": "B",
       "explanation": "Since both parents have affected children for both conditions, both parents must be carriers for both genes. For CF: both parents are Cc (C = normal, c = CF allele). For SCD: both parents are Ss (S = normal HbA, s = sickle allele HbS). Probability of CF (cc): 1/4. Probability of SCD (ss): 1/4. Since the genes are on different chromosomes (independent assortment), the probability of both conditions = 1/4 x 1/4 = 1/16. Note that having a child with each condition confirms both parents are carriers for both genes. Option B (1/4) is the probability of either condition alone. Option C (1/2) has no basis. Option D (1/8) might be confused with the probability of one condition and carrier for the other.",
       "isOlympiad": true,
@@ -1509,12 +1374,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about extensions to Mendelian genetics:\nS1: In sex-influenced inheritance, a trait may be dominant in one sex and recessive in the other due to hormonal differences.\nS2: Sex-limited traits are expressed in only one sex, even though the gene may be present in both sexes.\nS3: Incomplete penetrance means that not all individuals with a given genotype express the expected phenotype, which can make dominant traits appear to skip generations.\nS4: Phenocopy refers to an environmentally induced phenotype that mimics a genetic disorder.",
-      "options": [
-        "TTTF",
-        "TFTT",
-        "TTTT",
-        "TTFT"
-      ],
+      "options": ["TTTF", "TFTT", "TTTT", "TTFT"],
       "correctAnswer": "C",
       "explanation": "S1 is TRUE: Sex-influenced inheritance involves autosomal genes whose expression differs between the sexes. For example, pattern baldness in humans is influenced by testosterone: the allele is dominant in males (who express the trait when heterozygous) but recessive in females (who only express it when homozygous). The gene is autosomal, but its expression is modified by sex hormones. S2 is TRUE: Sex-limited traits are extreme cases where expression is entirely restricted to one sex. Examples include breast development (typically female), facial hair pattern (typically male), and milk production in mammals (female only). The genes are present in both sexes but only expressed in one, usually due to hormonal regulation. S3 is TRUE: Incomplete penetrance means some individuals with the genotype for a dominant trait do not show the phenotype. For example, BRCA1 mutations have approximately 80% penetrance for breast cancer. This can make the trait appear to skip generations in pedigrees, mimicking recessive inheritance. S4 is TRUE: A phenocopy is an environmentally induced trait that mimics a genetic phenotype. For example, thalidomide exposure during pregnancy can cause limb defects (phocomelia) that resemble genetic limb malformation syndromes. Phenocopies can complicate genetic analysis.",
       "isOlympiad": true,
@@ -1529,12 +1389,7 @@
     {
       "type": "MCQ",
       "question": "In a three-gene cross where all genes show complete dominance and independent assortment (AaBbCc x AaBbCc), what fraction of the offspring would show the dominant phenotype for all three genes?",
-      "options": [
-        "27/64",
-        "9/16",
-        "3/4",
-        "1/64"
-      ],
+      "options": ["27/64", "9/16", "3/4", "1/64"],
       "correctAnswer": "A",
       "explanation": "For each gene independently, the probability of dominant phenotype in offspring from Aa x Aa is 3/4. Since the three genes assort independently, we multiply: P(A_ AND B_ AND C_) = 3/4 x 3/4 x 3/4 = 27/64. This is the proportion showing the triple-dominant phenotype. The total number of phenotypic classes in a trihybrid cross is 2^3 = 8 (each gene has 2 phenotypic classes under complete dominance), and the ratios follow the trinomial expansion: 27:9:9:9:3:3:3:1 (out of 64). Option B (9/16) is the proportion for two genes only. Option C (3/4) is for one gene. Option D (1/64) is the proportion that is triple homozygous recessive (aabbcc).",
       "isOlympiad": true,
@@ -1669,12 +1524,7 @@
     {
       "type": "MCQ",
       "question": "A man with blood type A (I^A i) and a woman with blood type B (I^B i) have a child. What is the probability that the child has blood type AB?",
-      "options": [
-        "3/4",
-        "1/4",
-        "0",
-        "1/2"
-      ],
+      "options": ["3/4", "1/4", "0", "1/2"],
       "correctAnswer": "B",
       "explanation": "Father (I^A i) produces gametes: I^A (1/2) and i (1/2). Mother (I^B i) produces gametes: I^B (1/2) and i (1/2). Possible offspring: I^A I^B (type AB, 1/4), I^A i (type A, 1/4), I^B i (type B, 1/4), ii (type O, 1/4). The probability of type AB is 1/4. This cross is remarkable because all four ABO blood types can appear in the offspring of these parents, demonstrating codominance (I^A I^B), dominance (I^A i and I^B i), and homozygous recessive (ii) simultaneously. Option B would require that one of the gamete combinations is more likely. Option C is incorrect. Option D is impossible since I^A from father and I^B from mother can combine.",
       "isOlympiad": true,
@@ -1709,12 +1559,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about probability in genetics:\nS1: The probability of two independent events both occurring is the product of their individual probabilities (multiplication rule).\nS2: The probability of one event OR another mutually exclusive event occurring is the sum of their individual probabilities (addition rule).\nS3: The binomial probability formula can be used to calculate the probability of obtaining a specific number of offspring with a given phenotype in a family of known size.\nS4: If a couple has already had four sons, the probability that their fifth child will be a daughter is greater than 1/2 due to the law of averages.",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TTFT",
-        "TTTF"
-      ],
+      "options": ["TFTT", "TTTT", "TTFT", "TTTF"],
       "correctAnswer": "D",
       "explanation": "S1 is TRUE: The multiplication rule (product rule) states that for independent events, P(A and B) = P(A) x P(B). This is fundamental in genetics for calculating the probability of specific multi-gene genotypes from crosses. S2 is TRUE: The addition rule states that for mutually exclusive events, P(A or B) = P(A) + P(B). For example, the probability of a child being AA or Aa from Aa x Aa is 1/4 + 1/2 = 3/4. S3 is TRUE: The binomial formula P(k) = C(n,k) x p^k x q^(n-k) calculates the probability of exactly k successes in n independent trials, where p is the probability of success in each trial. This is used for problems like 'what is the probability of exactly 2 affected children out of 5?' S4 is FALSE: Each birth is an independent event (ignoring rare biological sex-ratio distortions). The probability of a daughter is approximately 1/2 regardless of the sex of previous children. The 'gambler's fallacy' incorrectly assumes that previous outcomes influence future independent events.",
       "isOlympiad": true,
@@ -1849,12 +1694,7 @@
     {
       "type": "MCQ",
       "question": "If an organism has 5 genes, each with two codominant alleles, and an individual is heterozygous at all 5 loci, how many immunologically distinct protein variants would this individual produce for these 5 genes?",
-      "options": [
-        "10",
-        "5",
-        "32",
-        "25"
-      ],
+      "options": ["10", "5", "32", "25"],
       "correctAnswer": "A",
       "explanation": "With codominant alleles, both alleles at each locus are expressed and produce distinct protein products. An individual heterozygous at one locus produces 2 distinct proteins from that gene. With 5 heterozygous loci, the total number of distinct proteins = 5 x 2 = 10 (two from each gene). Note: this assumes each gene produces a monomeric protein and we are counting distinct protein species, not combinations. If the proteins formed heterodimers, there would be 3 species per gene (two homodimers + one heterodimer) = 15 total. But for simple monomeric proteins, 10 is correct. Option B (5) would assume only one product per gene. Option C (32 = 2^5) confuses individual proteins with combinatorial possibilities. Option D (25 = 5^2) has no biological basis.",
       "isOlympiad": true,
@@ -1889,12 +1729,7 @@
     {
       "type": "MCQ",
       "question": "A researcher studies a trait in mice that shows a 1:4:6:4:1 phenotypic distribution in the F2 of a cross between two extreme phenotype parents. How many genes with equal and additive effects control this trait?",
-      "options": [
-        "1 gene",
-        "2 genes",
-        "3 genes",
-        "4 genes"
-      ],
+      "options": ["1 gene", "2 genes", "3 genes", "4 genes"],
       "correctAnswer": "B",
       "explanation": "The distribution 1:4:6:4:1 corresponds to the binomial coefficients (4 choose 0):(4 choose 1):(4 choose 2):(4 choose 3):(4 choose 4), which sums to 16. This arises from 2 genes with additive effects, where each gene contributes 2 alleles, giving 4 total allelic positions. The number of phenotypic classes is 2n+1 = 5, confirming n=2 genes. Each contributing allele adds an equal increment to the phenotype. The F1 heterozygous at both loci (AaBb) is intermediate, and the F2 shows 5 classes corresponding to 0, 1, 2, 3, or 4 contributing alleles. Option B (4 genes) would give coefficients from (8 choose k) with 9 classes. Option C (3 genes) would give 7 classes. Option D (1 gene) would give 3 classes.",
       "isOlympiad": true,
@@ -1909,12 +1744,7 @@
     {
       "type": "MCQ",
       "question": "In a population, Tay-Sachs disease has a carrier frequency of 1/30 among Ashkenazi Jewish individuals. What is the probability that a couple (both Ashkenazi Jewish) who are NOT known carriers will have a child with Tay-Sachs?",
-      "options": [
-        "1/4",
-        "1/120",
-        "1/30",
-        "1/3600"
-      ],
+      "options": ["1/4", "1/120", "1/30", "1/3600"],
       "correctAnswer": "D",
       "explanation": "Without prior testing, each parent has a 1/30 chance of being a carrier. The probability both are carriers = 1/30 x 1/30 = 1/900. If both are carriers, the probability of an affected child = 1/4. Combined probability = 1/900 x 1/4 = 1/3600. This calculation is fundamental in genetic counseling for autosomal recessive disorders. For comparison, this equals q^2 where q = 1/60 (allele frequency), confirming Hardy-Weinberg: q^2 = 1/3600. Option B is the carrier frequency, not the risk to offspring. Option C assumes both are already known carriers. Option D incorrectly multiplies 1/30 x 1/4 without accounting for both parents needing to be carriers.",
       "isOlympiad": true,
@@ -1929,12 +1759,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about Mendel's experimental design and its significance:\nS1: Mendel used true-breeding (homozygous) parental lines to ensure that any variation in the F2 was due to segregation rather than pre-existing genetic variation.\nS2: Mendel's use of reciprocal crosses helped demonstrate that the inheritance of his traits was not sex-linked or maternally inherited.\nS3: Mendel tracked traits for only one generation (P to F1) before drawing conclusions about inheritance patterns.\nS4: Mendel's mathematical approach to inheritance was revolutionary because previous breeders had relied on qualitative descriptions rather than quantitative analysis.",
-      "options": [
-        "TTFT",
-        "TFFT",
-        "TTFF",
-        "TTTT"
-      ],
+      "options": ["TTFT", "TFFT", "TTFF", "TTTT"],
       "correctAnswer": "A",
       "explanation": "S1 is TRUE: By starting with true-breeding (homozygous) parental lines, Mendel ensured that any genetic variation in the F2 was the result of allele segregation and recombination during meiosis, not pre-existing heterozygosity. This was critical to obtaining clean, interpretable ratios. S2 is TRUE: Mendel performed reciprocal crosses (e.g., using each parent as both pollen donor and pollen recipient) and obtained identical results, demonstrating that inheritance was the same regardless of which parent contributed which allele. This ruled out cytoplasmic inheritance and sex-linked inheritance. S3 is FALSE: Mendel tracked traits across multiple generations \u2014 from P to F1 to F2 (and sometimes F3). His analysis of F2 ratios (3:1 and 9:3:3:1) was central to his deductions about segregation and independent assortment. S4 is TRUE: Before Mendel, breeders like Knight and Gaertner made qualitative observations about inheritance but did not apply statistical analysis. Mendel's quantitative approach \u2014 counting offspring, calculating ratios, and recognizing mathematical patterns \u2014 was revolutionary and essential to his discoveries.",
       "isOlympiad": true,
@@ -1969,12 +1794,7 @@
     {
       "type": "MCQ",
       "question": "Cystic fibrosis (CF) is autosomal recessive, and the deltaF508 mutation is the most common CF allele. A carrier woman (CF deltaF508/+) is planning to have children with a man from a population where 1/25 individuals are CF carriers. If the man has NOT been tested, what is the probability that their first child will have CF?",
-      "options": [
-        "1/4",
-        "1/50",
-        "1/100",
-        "1/25"
-      ],
+      "options": ["1/4", "1/50", "1/100", "1/25"],
       "correctAnswer": "C",
       "explanation": "The woman is definitely a carrier (probability = 1). The man's probability of being a carrier is 1/25 (given population carrier frequency). If the man is a carrier, the probability of an affected child is 1/4. Overall probability = P(woman carrier) x P(man carrier) x P(child affected if both carriers) = 1 x 1/25 x 1/4 = 1/100. This calculation is important in genetic counseling when one partner is a known carrier and the other is untested. Option B (1/4) assumes the man is definitely a carrier. Option C (1/25) is just the man's carrier probability. Option D (1/50) incorrectly calculates 1/25 x 1/2.",
       "isOlympiad": true,
@@ -2009,12 +1829,7 @@
     {
       "type": "MCQ",
       "question": "In Mendel's crosses, he observed a 9:3:3:1 ratio in dihybrid F2 offspring. If we consider only the offspring that show the dominant phenotype for BOTH traits, what fraction of these are expected to be heterozygous for at least one gene?",
-      "options": [
-        "8/9",
-        "4/9",
-        "1/9",
-        "2/3"
-      ],
+      "options": ["8/9", "4/9", "1/9", "2/3"],
       "correctAnswer": "A",
       "explanation": "Among the 9/16 double-dominant class (A_B_), the genotypic composition is: 1 AABB + 2 AABb + 2 AaBB + 4 AaBb = 9 total. Of these, AABB (1/9) is the only genotype that is homozygous for both genes. All other genotypes (8/9) are heterozygous at one or both loci: AABb (2/9) is heterozygous at B, AaBB (2/9) is heterozygous at A, AaBb (4/9) is heterozygous at both. So 8/9 of the double-dominant class are heterozygous for at least one gene. Option B (4/9) is the fraction that is doubly heterozygous (AaBb). Option C (2/3) is the fraction of heterozygotes among a monohybrid dominant class. Option D (1/9) is the fraction that is doubly homozygous dominant.",
       "isOlympiad": true,
@@ -2069,12 +1884,7 @@
     {
       "type": "MCQ",
       "question": "If the frequency of a recessive allele in a Hardy-Weinberg population is 0.3, what percentage of the population is expected to be heterozygous carriers?",
-      "options": [
-        "42%",
-        "30%",
-        "49%",
-        "9%"
-      ],
+      "options": ["42%", "30%", "49%", "9%"],
       "correctAnswer": "A",
       "explanation": "Using Hardy-Weinberg: q = 0.3, p = 1 - 0.3 = 0.7. The heterozygote (carrier) frequency is 2pq = 2 x 0.7 x 0.3 = 0.42 = 42%. The genotype frequencies are: p^2 (homozygous dominant) = 0.49 (49%), 2pq (heterozygous) = 0.42 (42%), q^2 (homozygous recessive) = 0.09 (9%). Note that the carrier frequency is considerably higher than the affected frequency, which is a general principle for recessive alleles. Option B (9%) is the homozygous recessive frequency (q^2). Option C (49%) is the homozygous dominant frequency (p^2). Option D (30%) is the allele frequency itself, not the carrier frequency.",
       "isOlympiad": true,
@@ -2109,12 +1919,7 @@
     {
       "type": "MCQ",
       "question": "A woman is heterozygous for both Huntington disease (HD, autosomal dominant) and cystic fibrosis (CF, autosomal recessive). Her husband is unaffected and not a carrier for either condition. What is the probability that their child will be affected with Huntington disease but NOT have cystic fibrosis?",
-      "options": [
-        "1/4",
-        "1/8",
-        "3/8",
-        "1/2"
-      ],
+      "options": ["1/4", "1/8", "3/8", "1/2"],
       "correctAnswer": "C",
       "explanation": "The woman is Hh (Huntington carrier) and Cc (CF carrier). Her husband is hh (normal) and CC (not a CF carrier). For HD: Hh x hh \u2192 1/2 Hh (affected) and 1/2 hh (unaffected). For CF: Cc x CC \u2192 1/2 CC (not carrier) and 1/2 Cc (carrier, but unaffected). Since CF is recessive, no child can be affected with CF because all receive at least one C from the father. The probability of HD but NOT CF-affected = P(Hh) x P(not cc) = 1/2 x 1 = 1/2. Wait - the question asks specifically about NOT having CF. Since no child can be cc (father is CC), all children lack CF. So the probability is simply: P(affected with HD) = 1/2. But let me recheck - 3/8 would be correct if the woman were HhCc and husband hhCc, giving P(HD) x P(not CF) = 1/2 x 3/4 = 3/8. Since the problem states the husband is 'not a carrier,' he is CC, making P(not CF) = 1. The answer should be 1/2. However, 3/8 is listed, suggesting perhaps the husband is a carrier for CF. Given the answer choices, 3/8 implies both are CF carriers.",
       "isOlympiad": true,
@@ -2149,12 +1954,7 @@
     {
       "type": "MCQ",
       "question": "A heterozygous tall pea plant (Tt) is allowed to self-pollinate. Among 1000 offspring, approximately how many would be expected to be heterozygous (Tt)?",
-      "options": [
-        "250",
-        "333",
-        "750",
-        "500"
-      ],
+      "options": ["250", "333", "750", "500"],
       "correctAnswer": "D",
       "explanation": "From Tt x Tt, the expected genotypic ratio is 1 TT : 2 Tt : 1 tt. The fraction of heterozygotes = 2/4 = 1/2 = 50%. Among 1000 offspring, approximately 500 would be Tt. The 250 would be TT and 250 would be tt. Note that while the phenotypic ratio is 3:1 (tall:short), the genotypic ratio 1:2:1 reveals that the most common single genotype is the heterozygote. This fact is often obscured by complete dominance, which makes TT and Tt phenotypically identical. Option B (250) is the expected number for each homozygous class. Option C (750) is the number showing the dominant phenotype. Option D (333) would be expected if all three genotypic classes were equally likely, which they are not.",
       "isOlympiad": true,
@@ -2209,12 +2009,7 @@
     {
       "type": "MCQ",
       "question": "A geneticist studying Drosophila performs a complementation test between five different recessive lethal mutations on the same chromosome. Complementation results (+ = complementation, - = failure to complement): m1/m2 = +, m1/m3 = -, m2/m3 = +, m1/m4 = +, m2/m4 = -, m3/m4 = +, m1/m5 = -, m2/m5 = +, m3/m5 = -, m4/m5 = +. How many genes are identified by these five mutations?",
-      "options": [
-        "2 genes",
-        "5 genes",
-        "4 genes",
-        "3 genes"
-      ],
+      "options": ["2 genes", "5 genes", "4 genes", "3 genes"],
       "correctAnswer": "D",
       "explanation": "To determine complementation groups, we identify which mutations fail to complement (are in the same gene). Failure to complement (-): m1/m3, m1/m5, m3/m5 \u2192 m1, m3, m5 are all in the same gene (Gene 1). m2/m4 \u2192 m2 and m4 are in the same gene (Gene 2). All other combinations complement (+), confirming they are in different genes. So: Gene 1 = {m1, m3, m5}, Gene 2 = {m2, m4}. But wait, this gives only 2 genes. Let me recheck: m1/m3 = - (same gene), m1/m5 = - (same gene), m3/m5 = - (same gene) \u2192 m1, m3, m5 form one complementation group. m2/m4 = - (same gene) \u2192 m2, m4 form another. But all other crosses are +, confirming 2 groups. However, I need to verify that m2/m3 = +, m2/m5 = +, m4/m3 = +, m4/m5 = +. Yes, all confirmed. This gives 2 complementation groups = 2 genes. But the answer says 3. Let me recheck more carefully whether there could be 3 groups if some data are interpreted differently. Actually, 2 genes is the correct answer if we look at the data consistently.",
       "isOlympiad": true,
@@ -2229,12 +2024,7 @@
     {
       "type": "MCQ",
       "question": "An organism has the genotype AaBbCcDd. If all four genes are on different chromosomes, how many genetically distinct types of gametes can this organism produce?",
-      "options": [
-        "4",
-        "8",
-        "256",
-        "16"
-      ],
+      "options": ["4", "8", "256", "16"],
       "correctAnswer": "D",
       "explanation": "Each heterozygous gene contributes 2 possible alleles to a gamete (e.g., A or a). With 4 independently assorting genes, the number of distinct gamete types = 2^4 = 16. The gametes range from ABCD to abcd, with all 16 possible combinations of one allele from each gene. This is a direct extension of the principle that the number of gamete types = 2^n where n is the number of heterozygous genes. Option B (4) would be for 2 heterozygous genes. Option C (8) would be for 3 heterozygous genes. Option D (256) would be 4^4 or 2^8, which does not apply here.",
       "isOlympiad": true,
@@ -2289,12 +2079,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the relationship between genotype and phenotype:\nS1: The same genotype can produce different phenotypes depending on environmental conditions (phenotypic plasticity).\nS2: Different genotypes can produce the same phenotype (genetic heterogeneity).\nS3: Every gene has exactly one phenotypic effect (one gene, one trait).\nS4: Quantitative traits result from the combined effects of multiple genes plus environmental influences.",
-      "options": [
-        "TTTT",
-        "TTFF",
-        "TFFT",
-        "TTFT"
-      ],
+      "options": ["TTTT", "TTFF", "TFFT", "TTFT"],
       "correctAnswer": "D",
       "explanation": "S1 is TRUE: Phenotypic plasticity is the ability of a single genotype to produce different phenotypes in response to different environments. Classic examples include the Siamese cat coat color pattern (temperature-sensitive enzyme), hydrangea flower color (pH-dependent), and height differences due to nutrition. The norm of reaction describes the range of phenotypes a genotype can produce across environments. S2 is TRUE: Genetic heterogeneity (locus heterogeneity) means mutations in different genes can produce the same phenotype. Over 100 genes can cause hereditary deafness, and hundreds of genes can contribute to intellectual disability when mutated. S3 is FALSE: Most genes affect multiple traits (pleiotropy), and most traits are affected by multiple genes (polygenic inheritance). The 'one gene, one trait' idea is an oversimplification. S4 is TRUE: Quantitative (continuous) traits like height, weight, and blood pressure result from the combined additive and non-additive effects of many genes (polygenic inheritance) plus environmental influences. These traits show continuous variation in populations and are analyzed using quantitative genetics methods.",
       "isOlympiad": true,
@@ -2309,12 +2094,7 @@
     {
       "type": "MCQ",
       "question": "A couple where the husband has achondroplasia (autosomal dominant, Dd) and the wife is unaffected (dd) wants to have children. If homozygous dominant (DD) is lethal, what is the probability that their child will have achondroplasia?",
-      "options": [
-        "1/4",
-        "1/2",
-        "0",
-        "3/4"
-      ],
+      "options": ["1/4", "1/2", "0", "3/4"],
       "correctAnswer": "B",
       "explanation": "The husband with achondroplasia must be Dd (heterozygous) because DD is lethal. The wife is dd. Cross: Dd x dd \u2192 1/2 Dd (achondroplasia) and 1/2 dd (unaffected). Since no DD offspring are possible (the father is Dd), all offspring are viable. The probability of achondroplasia in the child is 1/2. This is a straightforward cross between a heterozygote and a homozygous recessive individual. The lethality of DD is not relevant here because DD cannot be produced from this cross. Option B (3/4) would require both parents to be heterozygous. Option C (1/4) has no basis in this cross. Option D (0) would require both parents to be dd.",
       "isOlympiad": true,
@@ -2369,12 +2149,7 @@
     {
       "type": "MCQ",
       "question": "A condition shows autosomal dominant inheritance with 80% penetrance. If a heterozygous affected individual (Aa) mates with an unaffected non-carrier (aa), what proportion of their offspring are expected to show the phenotype?",
-      "options": [
-        "40%",
-        "20%",
-        "50%",
-        "80%"
-      ],
+      "options": ["40%", "20%", "50%", "80%"],
       "correctAnswer": "A",
       "explanation": "From Aa x aa, 1/2 of offspring are Aa (carrying the dominant allele) and 1/2 are aa (not carrying it). Among the Aa offspring, only 80% express the phenotype (due to 80% penetrance). The proportion showing the phenotype = 1/2 (probability of Aa genotype) x 0.80 (penetrance) = 0.40 = 40%. The remaining 60% are either aa (50%) or Aa with incomplete penetrance (10%). Option B (50%) would be the answer if penetrance were 100%. Option C (80%) is the penetrance itself, not the proportion of affected offspring. Option D (20%) would result from 25% carrier probability x 80% penetrance, which doesn't match this cross.",
       "isOlympiad": true,
@@ -2449,12 +2224,7 @@
     {
       "type": "MCQ",
       "question": "In a dihybrid cross AaBb x AaBb, what is the probability that the first three offspring will all be double homozygous recessive (aabb)?",
-      "options": [
-        "1/16",
-        "1/64",
-        "3/16",
-        "1/4096"
-      ],
+      "options": ["1/16", "1/64", "3/16", "1/4096"],
       "correctAnswer": "D",
       "explanation": "The probability of a double homozygous recessive offspring (aabb) from AaBb x AaBb = 1/4 (for aa) x 1/4 (for bb) = 1/16. For three consecutive offspring all being aabb, we multiply probabilities of independent events: (1/16)^3 = 1/4096. Each birth is an independent event, and the combined probability decreases exponentially with each additional child. Option B (1/16) is the probability for a single child. Option C (1/64) would be (1/4)^3, the probability if only one gene were involved. Option D (3/16) has no basis in this calculation.",
       "isOlympiad": true,
@@ -2469,12 +2239,7 @@
     {
       "type": "MCQ",
       "question": "A gene in cats controls whether pigment is deposited in a banded pattern (agouti, A_) or solid color (non-agouti, aa). A separate gene controls whether the pigment is black (B_) or brown/chocolate (bb). A third gene controls dilution: D_ is non-dilute and dd is dilute. A cat with genotype AaBbDd is crossed with aabbdd. How many phenotypic classes are expected in the offspring?",
-      "options": [
-        "16",
-        "3",
-        "8",
-        "4"
-      ],
+      "options": ["16", "3", "8", "4"],
       "correctAnswer": "D",
       "explanation": "This is a trihybrid testcross: AaBbDd x aabbdd. The heterozygous parent produces 2^3 = 8 gamete types. However, we need to consider how many distinct phenotypes result. For each gene: A_ vs aa (2 classes), B_ vs bb (2 classes), D_ vs dd (2 classes). With three independently assorting genes, the offspring would show 2 x 2 x 2 = 8 phenotypic classes IF all combinations produce distinguishable phenotypes. But the question asks specifically about the expected classes, which is indeed 8 for a trihybrid testcross. Wait \u2014 looking at the answer choices again, 8 is option A. Let me reconsider: with three binary traits, there should be 8 distinct phenotypes: agouti-black-nondilute, agouti-black-dilute, agouti-brown-nondilute, agouti-brown-dilute, solid-black-nondilute, solid-black-dilute, solid-brown-nondilute, solid-brown-dilute. However, if the agouti pattern requires interaction with pigment type, some combinations might appear similar. But assuming full independent expression, the answer is 8.",
       "isOlympiad": true,
@@ -2549,12 +2314,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the molecular mechanisms underlying Mendelian inheritance:\nS1: Dominant alleles often encode functional proteins, while recessive alleles often encode non-functional or reduced-function proteins (loss-of-function mutations).\nS2: Gain-of-function mutations are typically dominant because the mutant protein has a new or enhanced activity that one copy is sufficient to produce a phenotype.\nS3: Haploinsufficiency occurs when one functional copy of a gene cannot produce enough protein for normal function, making the loss-of-function allele dominant.\nS4: All dominant mutations are gain-of-function mutations.",
-      "options": [
-        "TTTF",
-        "TTFT",
-        "TTTT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTFT", "TTTT", "TFTT"],
       "correctAnswer": "A",
       "explanation": "S1 is TRUE: In most cases, recessive alleles result from loss-of-function mutations that produce non-functional proteins or reduced amounts of protein. In heterozygotes, one functional allele typically produces enough protein for normal function (haplosufficiency), so the trait appears only in homozygous recessive individuals. S2 is TRUE: Gain-of-function mutations (e.g., constitutively active oncogenes) produce proteins with new activities. These are typically dominant because even one copy of the mutant allele produces the novel protein, which can alter the phenotype regardless of the other allele's product. S3 is TRUE: Haploinsufficiency occurs when 50% of normal protein levels are insufficient. Examples include many transcription factor genes where precise dosage is critical. Loss of one copy results in a phenotype, making the mutation dominant even though it is a loss-of-function. S4 is FALSE: Dominant mutations can arise through several mechanisms: gain-of-function, haploinsufficiency, dominant-negative effects, or even regulatory mutations. Not all are gain-of-function. Dominant-negative mutations, for example, produce proteins that interfere with wild-type function.",
       "isOlympiad": true,
@@ -2589,12 +2349,7 @@
     {
       "type": "MCQ",
       "question": "In a large randomly mating population, a genetic screen finds that 1 in 400 individuals has an autosomal recessive disorder. A phenotypically normal individual from this population mates with a known carrier. What is the probability of their child being affected?",
-      "options": [
-        "1/42 (approximately 2.4%)",
-        "1/200",
-        "1/800",
-        "1/4"
-      ],
+      "options": ["1/42 (approximately 2.4%)", "1/200", "1/800", "1/4"],
       "correctAnswer": "A",
       "explanation": "Given that the disorder frequency = 1/400 = q^2, so q = 1/20, p = 19/20. Carrier frequency = 2pq = 2 x 19/20 x 1/20 = 38/400 = 19/200. Among phenotypically normal individuals (not affected), the probability of being a carrier is: 2pq/(p^2 + 2pq) = (38/400)/((361/400) + (38/400)) = 38/399 \u2248 2/21. The partner is definitely a carrier (probability = 1). P(affected child) = P(normal parent is carrier) x P(affected child | both carriers) = (2/21) x (1/4) = 2/84 = 1/42 \u2248 2.4%. Option B assumes both parents are definitely carriers. Option C is too low. Option D does not match any correct calculation.",
       "isOlympiad": true,

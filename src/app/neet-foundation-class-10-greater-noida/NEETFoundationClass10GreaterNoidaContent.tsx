@@ -150,10 +150,7 @@ export default function NEETFoundationClass10GreaterNoidaContent({ faqs }: { faq
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <Link
-                href="/neet-coaching-noida"
-                className="text-gray-600 hover:text-teal-600"
-              >
+              <Link href="/neet-coaching-noida" className="text-gray-600 hover:text-teal-600">
                 NEET Coaching Greater Noida
               </Link>
             </li>
@@ -206,7 +203,11 @@ export default function NEETFoundationClass10GreaterNoidaContent({ faqs }: { faq
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Foundation%20Biology%20(Class%209%2F10)%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Foundation%20Biology%20(Class%209%2F10)%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -326,9 +327,7 @@ export default function NEETFoundationClass10GreaterNoidaContent({ faqs }: { faq
       <section className="py-16 bg-gradient-to-br from-blue-600 to-teal-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-8 animate-fadeInUp">
-            <h2 className="text-3xl font-bold mb-4">
-              Students from Premium Greater Noida Schools
-            </h2>
+            <h2 className="text-3xl font-bold mb-4">Students from Premium Greater Noida Schools</h2>
             <p className="text-blue-100">Trusted by students from top schools in Greater Noida</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
@@ -376,7 +375,12 @@ export default function NEETFoundationClass10GreaterNoidaContent({ faqs }: { faq
                   <span className="font-semibold">Online + Offline Support</span>
                 </div>
               </div>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Foundation%20Biology%20(Class%209%2F10)%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" className="block mt-6">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Foundation%20Biology%20(Class%209%2F10)%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block mt-6"
+              >
                 <Button className="w-full bg-blue-600 hover:bg-blue-700">Book Free Demo</Button>
               </Link>
             </div>
@@ -390,8 +394,8 @@ export default function NEETFoundationClass10GreaterNoidaContent({ faqs }: { faq
                 <strong>Address:</strong> B-45, Sector 62, Noida, UP 201301
               </p>
               <p className="text-gray-700 mb-4">
-                <strong>From Greater Noida:</strong> Aqua Line Metro → Blue Line → Sector 62
-                Metro Station
+                <strong>From Greater Noida:</strong> Aqua Line Metro → Blue Line → Sector 62 Metro
+                Station
               </p>
               <p className="text-gray-700 mb-6">
                 <strong>Online:</strong> Available from Greater Noida home
@@ -473,10 +477,7 @@ export default function NEETFoundationClass10GreaterNoidaContent({ faqs }: { faq
               <h3 className="font-semibold text-teal-600">Online Classes</h3>
               <p className="text-sm text-gray-600">From Greater Noida home</p>
             </Link>
-            <Link
-              href="/neet-coaching-noida"
-              className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
-            >
+            <Link href="/neet-coaching-noida" className="bg-gray-50 p-4 rounded-xl hover:shadow-md">
               <h3 className="font-semibold text-teal-600">Biology Classes Hub</h3>
               <p className="text-sm text-gray-600">All programs</p>
             </Link>
@@ -501,7 +502,11 @@ export default function NEETFoundationClass10GreaterNoidaContent({ faqs }: { faq
             Join Cerebrum Biology Academy and leverage the 40% syllabus overlap — online from home
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Foundation%20Biology%20(Class%209%2F10)%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Foundation%20Biology%20(Class%209%2F10)%20in%20Noida.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 size="xl"

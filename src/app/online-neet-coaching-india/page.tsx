@@ -42,7 +42,8 @@ const features = [
   {
     icon: Users,
     title: 'Small Batches (15-20)',
-    description: 'Personal attention unlike Kota/the largest national NEET chain batches of 200-400 students.',
+    description:
+      'Personal attention unlike Kota/the largest national NEET chain batches of 200-400 students.',
   },
   {
     icon: Award,
@@ -148,13 +149,17 @@ export default function OnlineNeetCoachingIndiaPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Join 15,000+ students from Rajasthan, UP, Maharashtra, Karnataka, Tamil Nadu,
-              Gujarat, Kerala and all Indian states. Quality coaching from home - no need to
-              relocate to Kota!
+              Join 15,000+ students from Rajasthan, UP, Maharashtra, Karnataka, Tamil Nadu, Gujarat,
+              Kerala and all Indian states. Quality coaching from home - no need to relocate to
+              Kota!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20neet%20coaching%20india.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20neet%20coaching%20india.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -347,7 +352,11 @@ export default function OnlineNeetCoachingIndiaPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20neet%20coaching%20india.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20neet%20coaching%20india.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -359,7 +368,11 @@ export default function OnlineNeetCoachingIndiaPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20online%20neet%20coaching%20india.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20online%20neet%20coaching%20india.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"

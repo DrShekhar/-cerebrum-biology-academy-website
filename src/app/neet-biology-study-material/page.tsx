@@ -28,10 +28,16 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Biology Study Material | Notes, MCQs, Practice Papers',
-    description: 'Comprehensive NEET Biology study material. Updated notes, 10,000+ MCQs, previous year papers. Download free sample. Call +91-88264-44334',
+    description:
+      'Comprehensive NEET Biology study material. Updated notes, 10,000+ MCQs, previous year papers. Download free sample. Call +91-88264-44334',
   },
 
-  openGraph: { title: 'NEET Biology Study Material | Notes, MCQs, Practice Papers', description: 'Comprehensive NEET Biology study material. Updated notes, 10,000+ MCQs, previous year papers. Download free sample. Call +91-88264-44334', type: 'website' },
+  openGraph: {
+    title: 'NEET Biology Study Material | Notes, MCQs, Practice Papers',
+    description:
+      'Comprehensive NEET Biology study material. Updated notes, 10,000+ MCQs, previous year papers. Download free sample. Call +91-88264-44334',
+    type: 'website',
+  },
 }
 
 const usps: USP[] = [

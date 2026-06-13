@@ -120,8 +120,7 @@ export function FeePlanForm({ onSuccess, onCancel }: FeePlanFormProps) {
   }
   totalFee = Math.max(0, Math.round(totalFee))
 
-  const installmentCount =
-    planType === 'QUARTERLY' ? 4 : planType === 'MONTHLY' ? 12 : 1
+  const installmentCount = planType === 'QUARTERLY' ? 4 : planType === 'MONTHLY' ? 12 : 1
   const installmentAmount = Math.ceil(totalFee / installmentCount)
 
   const onSubmit = async (data: FormData) => {
@@ -142,18 +141,14 @@ export function FeePlanForm({ onSuccess, onCancel }: FeePlanFormProps) {
       reset()
       onSuccess()
     } catch (error) {
-      toast.error(
-        error instanceof Error ? error.message : 'Failed to create fee plan'
-      )
+      toast.error(error instanceof Error ? error.message : 'Failed to create fee plan')
     }
   }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div className="space-y-4">
-        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">
-          Student & Course
-        </h3>
+        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">Student & Course</h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -186,9 +181,7 @@ export function FeePlanForm({ onSuccess, onCancel }: FeePlanFormProps) {
                 ))}
               </div>
             )}
-            {errors.leadId && (
-              <p className="text-sm text-red-600 mt-1">{errors.leadId.message}</p>
-            )}
+            {errors.leadId && <p className="text-sm text-red-600 mt-1">{errors.leadId.message}</p>}
           </div>
 
           <div>
@@ -216,9 +209,7 @@ export function FeePlanForm({ onSuccess, onCancel }: FeePlanFormProps) {
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">
-          Pricing
-        </h3>
+        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">Pricing</h3>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div>
@@ -234,9 +225,7 @@ export function FeePlanForm({ onSuccess, onCancel }: FeePlanFormProps) {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Discount Type
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Discount Type</label>
             <select
               {...register('discountType')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -259,9 +248,7 @@ export function FeePlanForm({ onSuccess, onCancel }: FeePlanFormProps) {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Plan Type
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Plan Type</label>
             <select
               {...register('planType')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -293,9 +280,7 @@ export function FeePlanForm({ onSuccess, onCancel }: FeePlanFormProps) {
         <div className="grid grid-cols-3 gap-4 text-sm">
           <div>
             <span className="text-blue-600">Total Fee:</span>
-            <p className="font-bold text-blue-900">
-              ₹{totalFee.toLocaleString('en-IN')}
-            </p>
+            <p className="font-bold text-blue-900">₹{totalFee.toLocaleString('en-IN')}</p>
           </div>
           <div>
             <span className="text-blue-600">Installments:</span>
@@ -303,20 +288,13 @@ export function FeePlanForm({ onSuccess, onCancel }: FeePlanFormProps) {
           </div>
           <div>
             <span className="text-blue-600">Per Installment:</span>
-            <p className="font-bold text-blue-900">
-              ~₹{installmentAmount.toLocaleString('en-IN')}
-            </p>
+            <p className="font-bold text-blue-900">~₹{installmentAmount.toLocaleString('en-IN')}</p>
           </div>
         </div>
       </div>
 
       <div className="flex items-center justify-end space-x-3 pt-4 border-t">
-        <Button
-          type="button"
-          variant="outline"
-          onClick={onCancel}
-          disabled={isSubmitting}
-        >
+        <Button type="button" variant="outline" onClick={onCancel} disabled={isSubmitting}>
           Cancel
         </Button>
         <Button

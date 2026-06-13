@@ -76,8 +76,7 @@ export default async function FacultyProfilePage({ params }: Props) {
       <section className="bg-indigo-500 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 text-center lg:text-left">
                 <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center mx-auto lg:mx-0 mb-6">
                   <GraduationCap className="w-16 h-16 text-white" />
@@ -96,7 +95,11 @@ export default async function FacultyProfilePage({ params }: Props) {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Cerebrum%20faculty.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                  <Link
+                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Cerebrum%20faculty.%20Please%20share%20available%20timings."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button
                       variant="outline"
                       size="lg"
@@ -120,9 +123,7 @@ export default async function FacultyProfilePage({ params }: Props) {
               </div>
             </div>
 
-            <div
-              className="space-y-6 animate-fadeInUp"
-            >
+            <div className="space-y-6 animate-fadeInUp">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                 <div className="flex items-center mb-4">
                   <Clock className="w-6 h-6 mr-3" />
@@ -162,18 +163,14 @@ export default async function FacultyProfilePage({ params }: Props) {
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-12">
               {/* Biography */}
-              <section
-                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-              >
+              <section className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">About {faculty.name}</h2>
                 <p className="text-lg text-gray-700 leading-relaxed">{faculty.bio}</p>
               </section>
 
               {/* Achievements */}
               {faculty.achievements && (
-                <section
-                  className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-                >
+                <section className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">
                     Achievements & Qualifications
                   </h2>
@@ -190,9 +187,7 @@ export default async function FacultyProfilePage({ params }: Props) {
 
               {/* Student Testimonial */}
               {faculty.studentTestimonial && (
-                <section
-                  className="bg-blue-50 rounded-3xl p-8 animate-fadeInUp"
-                >
+                <section className="bg-blue-50 rounded-3xl p-8 animate-fadeInUp">
                   <div className="flex items-center mb-6">
                     <Quote className="w-8 h-8 text-blue-600 mr-3" />
                     <h2 className="text-2xl font-bold text-gray-900">What Students Say</h2>
@@ -210,9 +205,7 @@ export default async function FacultyProfilePage({ params }: Props) {
               )}
 
               {/* Subject Expertise */}
-              <section
-                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-              >
+              <section className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Subject Expertise</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   {faculty.specialization.map((subject, index) => (
@@ -229,12 +222,14 @@ export default async function FacultyProfilePage({ params }: Props) {
             {/* Sidebar */}
             <div className="space-y-8">
               {/* Quick Contact */}
-              <div
-                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
                 <div className="space-y-4">
-                  <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Cerebrum%20faculty.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                  <Link
+                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Cerebrum%20faculty.%20Please%20share%20available%20timings."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button variant="primary" size="lg" className="w-full">
                       <Calendar className="w-5 h-5 mr-2" />
                       Book Demo Class
@@ -246,7 +241,11 @@ export default async function FacultyProfilePage({ params }: Props) {
                       Ask Doubts
                     </Button>
                   </Link>
-                  <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Cerebrum%20faculty.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                  <Link
+                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Cerebrum%20faculty.%20Please%20share%20available%20timings."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button variant="outline" size="lg" className="w-full">
                       <Video className="w-5 h-5 mr-2" />
                       Video Call
@@ -256,9 +255,7 @@ export default async function FacultyProfilePage({ params }: Props) {
               </div>
 
               {/* Faculty Stats */}
-              <div
-                className="bg-gradient-to-r from-green-600 to-blue-500 text-white rounded-3xl p-8 animate-fadeInUp"
-              >
+              <div className="bg-gradient-to-r from-green-600 to-blue-500 text-white rounded-3xl p-8 animate-fadeInUp">
                 <h3 className="text-2xl font-bold mb-6">Faculty Stats</h3>
                 <div className="space-y-6">
                   <div className="text-center">
@@ -279,9 +276,7 @@ export default async function FacultyProfilePage({ params }: Props) {
               </div>
 
               {/* Related Faculty */}
-              <div
-                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Other Faculty</h3>
                 <div className="space-y-4">
                   {relatedFaculty.map((relatedFac, index) => (
@@ -323,7 +318,11 @@ export default async function FacultyProfilePage({ params }: Props) {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Cerebrum%20faculty.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Cerebrum%20faculty.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="outline"
                 size="xl"

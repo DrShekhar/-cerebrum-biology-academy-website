@@ -312,9 +312,7 @@ export function PersonalizedLearningPath() {
 
         {/* Active Study Session */}
         {activeSession && (
-          <div
-            className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white mb-8 animate-fadeInUp"
-          >
+          <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white mb-8 animate-fadeInUp">
             <div className="text-center">
               <h2 className="text-2xl font-bold mb-4">
                 📚 Active Study Session: {activeSession.topic}

@@ -89,8 +89,7 @@ export async function GET(request: NextRequest) {
 
     const stats = {
       total: feePlans.length,
-      active: feePlans.filter((f) => f.status === 'PARTIAL' || f.status === 'PENDING')
-        .length,
+      active: feePlans.filter((f) => f.status === 'PARTIAL' || f.status === 'PENDING').length,
       overdueAmount: 0,
       collectedThisMonth: 0,
     }
@@ -155,11 +154,7 @@ export async function POST(request: NextRequest) {
     totalFee = Math.max(0, Math.round(totalFee))
 
     const startDate = new Date(validatedData.startDate)
-    const installmentSchedule = calculateInstallments(
-      totalFee,
-      validatedData.planType,
-      startDate
-    )
+    const installmentSchedule = calculateInstallments(totalFee, validatedData.planType, startDate)
 
     const feePlanId = uuidv4()
 

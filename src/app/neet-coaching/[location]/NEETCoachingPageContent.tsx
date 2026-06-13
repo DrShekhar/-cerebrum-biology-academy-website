@@ -86,7 +86,11 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
     { label: 'Success Rate', value: location.successRate, icon: Trophy },
     { label: 'Top Score 2024', value: location.topScore, icon: Star },
     { label: `${location.cityName} Students`, value: location.studentCount, icon: Users },
-    { label: location.type === 'city' ? 'Areas Covered' : 'Batches', value: location.localities?.length || '10+', icon: MapPin },
+    {
+      label: location.type === 'city' ? 'Areas Covered' : 'Batches',
+      value: location.localities?.length || '10+',
+      icon: MapPin,
+    },
   ]
 
   const handleWhatsAppClick = async () => {
@@ -100,15 +104,16 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className={`relative bg-gradient-to-br ${heroGradient} text-white py-20 overflow-hidden`}>
+      <section
+        className={`relative bg-gradient-to-br ${heroGradient} text-white py-20 overflow-hidden`}
+      >
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2" />
-              {location.state} | {location.metroAccessible ? 'Metro Accessible' : 'Online Classes Available'}
+              {location.state} |{' '}
+              {location.metroAccessible ? 'Metro Accessible' : 'Online Classes Available'}
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -117,18 +122,27 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
 
             {location.localities && location.localities.length > 0 && (
               <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-                {location.localities.slice(0, 5).map(l => l.name).join(' | ')}
+                {location.localities
+                  .slice(0, 5)
+                  .map((l) => l.name)
+                  .join(' | ')}
               </h2>
             )}
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Join Cerebrum Biology Academy for expert NEET Biology coaching in {location.cityName}.
-              AIIMS trained faculty, {location.successRate} success rate, and live interactive classes.
-              {location.metroAccessible && ` Easy metro access - ${location.travelTime || 'convenient commute'}.`}
+              AIIMS trained faculty, {location.successRate} success rate, and live interactive
+              classes.
+              {location.metroAccessible &&
+                ` Easy metro access - ${location.travelTime || 'convenient commute'}.`}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -170,9 +184,7 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
       {location.localities && location.localities.length > 0 && (
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
-            <div
-              className="text-center mb-16 animate-fadeInUp"
-            >
+            <div className="text-center mb-16 animate-fadeInUp">
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
                 NEET Coaching Across All {location.cityName} Areas
               </h2>
@@ -183,9 +195,7 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
 
             <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
               {location.localities.map((locality, index) => (
-                <div
-                  key={locality.slug}
-                 className="animate-fadeInUp">
+                <div key={locality.slug} className="animate-fadeInUp">
                   <div
                     className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer ${
                       locality.priority === 'high' ? `ring-2 ring-${location.heroColor}-600` : ''
@@ -195,10 +205,14 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
                       <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                       <MapPin className={`w-5 h-5 ${accentText}`} />
                     </div>
-                    <div className={`text-2xl font-bold ${accentText} mb-1`}>{locality.students}</div>
+                    <div className={`text-2xl font-bold ${accentText} mb-1`}>
+                      {locality.students}
+                    </div>
                     <div className="text-sm text-gray-500">{locality.highlight}</div>
                     {locality.priority === 'high' && (
-                      <div className={`mt-2 inline-flex items-center text-xs ${accentBg} ${accentText} px-2 py-1 rounded-full`}>
+                      <div
+                        className={`mt-2 inline-flex items-center text-xs ${accentBg} ${accentText} px-2 py-1 rounded-full`}
+                      >
                         <Star className="w-3 h-3 mr-1" />
                         High Demand
                       </div>
@@ -215,14 +229,13 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
       {location.medicalColleges && location.medicalColleges.length > 0 && (
         <section className={`py-20 ${accentBg.replace('bg-', 'bg-')}-50`}>
           <div className="max-w-7xl mx-auto px-4">
-            <div
-              className="text-center mb-16 animate-fadeInUp"
-            >
+            <div className="text-center mb-16 animate-fadeInUp">
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
                 Get Into Top Medical Colleges
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our coaching helps you secure seats in prestigious medical institutions across {location.state}.
+                Our coaching helps you secure seats in prestigious medical institutions across{' '}
+                {location.state}.
               </p>
             </div>
 
@@ -246,9 +259,7 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Cerebrum for NEET Coaching in {location.cityName}?
             </h2>
@@ -256,10 +267,7 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
-              >
+              <div key={feature.title} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <feature.icon className={`w-12 h-12 ${accentText} mb-4`} />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -293,9 +301,7 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions - NEET Coaching {location.cityName}
             </h2>
@@ -303,10 +309,7 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
 
           <div className="space-y-6">
             {location.faqs.map((faq, index) => (
-              <div
-                key={faq.question}
-                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
-              >
+              <div key={faq.question} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className={`w-6 h-6 mr-3 ${accentText} flex-shrink-0 mt-1`} />
                   {faq.question}
@@ -343,17 +346,21 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
       {/* CTA Section */}
       <section className={`py-20 bg-gradient-to-r ${heroGradient} text-white`}>
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Start Your NEET Journey from {location.cityName}
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              {location.successRate} success rate, AIIMS trained faculty, {location.studentCount} {location.cityName} students already enrolled!
+              {location.successRate} success rate, AIIMS trained faculty, {location.studentCount}{' '}
+              {location.cityName} students already enrolled!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -364,7 +371,11 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20coaching.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20coaching.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"

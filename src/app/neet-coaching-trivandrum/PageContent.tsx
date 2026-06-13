@@ -141,8 +141,7 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Trivandrum',
-  description:
-    'Best online NEET coaching for Trivandrum Kerala NRI families',
+  description: 'Best online NEET coaching for Trivandrum Kerala NRI families',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-trivandrum',
   telephone: '+91-88264-44334',
   address: {
@@ -199,12 +198,16 @@ export default function PageContent() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Online NEET coaching for Trivandrum, Kowdiar, Pattom & nearby areas. Learn from
-              <strong> AIIMS-trained faculty</strong> - comprehensive Kerala + CBSE curriculum
-              for 8,000+ annual aspirants from premium families.
+              <strong> AIIMS-trained faculty</strong> - comprehensive Kerala + CBSE curriculum for
+              8,000+ annual aspirants from premium families.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20trivandrum.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20trivandrum.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -382,7 +385,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20trivandrum.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20trivandrum.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -423,7 +430,6 @@ export default function PageContent() {
         </div>
       </section>
 
-
       <PricingSection cityName="Trivandrum" />
       <CostComparisonSection cityName="Trivandrum" />
       {/* Related */}
@@ -451,27 +457,35 @@ export default function PageContent() {
             </Link>
           </div>
         </div>
-      
-      {/* Schools Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Students from These Trivandrum Schools Trust Us
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Loyola School Trivandrum', 'Holy Angels ISC School', 'Kendriya Vidyalaya Pangode', 'Christ Nagar School', "St. Joseph's HSS Trivandrum", 'Carmel Girls Higher Secondary', 'Sarvodaya Vidyalaya', 'Chinmaya Vidyalaya Trivandrum'].map((school) => (
-              <div
-                key={school}
-                className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
-              >
-                {school}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-</section>
+        {/* Schools Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Students from These Trivandrum Schools Trust Us
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                'Loyola School Trivandrum',
+                'Holy Angels ISC School',
+                'Kendriya Vidyalaya Pangode',
+                'Christ Nagar School',
+                "St. Joseph's HSS Trivandrum",
+                'Carmel Girls Higher Secondary',
+                'Sarvodaya Vidyalaya',
+                'Chinmaya Vidyalaya Trivandrum',
+              ].map((school) => (
+                <div
+                  key={school}
+                  className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
+                >
+                  {school}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </section>
       <RelatedCityLinks currentCity="trivandrum" variant="default" />
     </div>
   )

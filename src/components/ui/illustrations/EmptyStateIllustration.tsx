@@ -78,8 +78,7 @@ export function EmptyStateIllustration({
     chat: (
       <svg className={className} viewBox="0 0 200 200" fill="none">
         {/* Left bubble (user) */}
-        <g
-        >
+        <g>
           <circle cx="60" cy="70" r="30" fill="#DBEAFE" />
           <path d="M 45 95 L 60 85 L 75 95" fill="#DBEAFE" />
           <circle cx="52" cy="65" r="3" fill="#3B82F6" />
@@ -88,8 +87,7 @@ export function EmptyStateIllustration({
         </g>
 
         {/* Right bubble (bot) */}
-        <g
-        >
+        <g>
           <circle cx="140" cy="120" r="35" fill="#D1FAE5" />
           <path d="M 120 150 L 140 140 L 160 150" fill="#D1FAE5" />
           <rect x="130" y="110" width="20" height="2" rx="1" fill="#10B981" />
@@ -98,8 +96,7 @@ export function EmptyStateIllustration({
         </g>
 
         {/* Sparkles */}
-        <g
-        >
+        <g>
           <circle cx="40" cy="50" r="2" fill="#FCD34D" />
           <circle cx="160" cy="90" r="2" fill="#FCD34D" />
         </g>
@@ -136,8 +133,7 @@ export function EmptyStateIllustration({
     search: (
       <svg className={className} viewBox="0 0 200 200" fill="none">
         {/* Magnifying glass */}
-        <g
-        >
+        <g>
           <circle
             cx="90"
             cy="90"
@@ -160,26 +156,15 @@ export function EmptyStateIllustration({
         </g>
 
         {/* Question marks */}
-        <g
-        >
+        <g>
           <text x="80" y="95" fontSize="24" fontWeight="bold" fill="#9CA3AF">
             ?
           </text>
         </g>
 
         {/* Small circles decoration */}
-        <circle
-          cx="50"
-          cy="60"
-          r="3"
-          fill="#FCD34D"
-        />
-        <circle
-          cx="140"
-          cy="70"
-          r="3"
-          fill="#FCD34D"
-        />
+        <circle cx="50" cy="60" r="3" fill="#FCD34D" />
+        <circle cx="140" cy="70" r="3" fill="#FCD34D" />
       </svg>
     ),
 

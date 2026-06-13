@@ -31,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Test Series in Noida | 50+ Mock Tests with Analysis',
-    description: 'Join our comprehensive NEET Biology test series in Noida. 50+ full-length mock tests, detailed analysis, rank prediction. Online and offline options. Starting ₹8,000.',
+    description:
+      'Join our comprehensive NEET Biology test series in Noida. 50+ full-length mock tests, detailed analysis, rank prediction. Online and offline options. Starting ₹8,000.',
   },
 }
 

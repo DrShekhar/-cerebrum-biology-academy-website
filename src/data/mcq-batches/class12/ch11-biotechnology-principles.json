@@ -14,21 +14,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "The term 'biotechnology' was coined by:",
-      "options": [
-        "Karl Ereky",
-        "Stanley Cohen",
-        "Alexander Fleming",
-        "Herbert Boyer"
-      ],
+      "options": ["Karl Ereky", "Stanley Cohen", "Alexander Fleming", "Herbert Boyer"],
       "correctAnswer": "A",
       "explanation": "Karl Ereky, a Hungarian engineer, coined the term 'biotechnology' in 1919. He used it to describe the industrial production of products from raw materials with the aid of living organisms.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biotechnology",
-        "history"
-      ],
+      "tags": ["biotechnology", "history"],
       "neetWeightage": "HIGH"
     },
     {
@@ -50,10 +42,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "restriction-enzymes",
-        "molecular-scissors"
-      ],
+      "tags": ["restriction-enzymes", "molecular-scissors"],
       "neetWeightage": "HIGH"
     },
     {
@@ -64,22 +53,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "EcoRI cuts the DNA between bases G and A on both strands of the palindromic sequence. This produces:",
-      "options": [
-        "Smooth ends",
-        "Blunt ends",
-        "Sticky ends",
-        "Rounded ends"
-      ],
+      "options": ["Smooth ends", "Blunt ends", "Sticky ends", "Rounded ends"],
       "correctAnswer": "C",
       "explanation": "EcoRI recognises the palindromic sequence 5'-GAATTC-3' and cuts between G and A on both strands. This staggered cut produces overhanging single-stranded stretches called sticky ends (cohesive ends), which can base-pair with complementary sticky ends.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "EcoRI",
-        "sticky-ends",
-        "restriction-enzymes"
-      ],
+      "tags": ["EcoRI", "sticky-ends", "restriction-enzymes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -90,21 +70,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "The first restriction endonuclease isolated was:",
-      "options": [
-        "BamHI",
-        "Sal I",
-        "EcoRI",
-        "Hind II"
-      ],
+      "options": ["BamHI", "Sal I", "EcoRI", "Hind II"],
       "correctAnswer": "D",
       "explanation": "Hind II was the first restriction endonuclease isolated by Hamilton Smith in 1970 from Haemophilus influenzae Rd. It always cuts DNA at a particular point by recognising a specific sequence of 6 base pairs. It produces blunt ends.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "restriction-enzymes",
-        "Hind-II"
-      ],
+      "tags": ["restriction-enzymes", "Hind-II"],
       "neetWeightage": "HIGH"
     },
     {
@@ -126,10 +98,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "restriction-enzymes",
-        "nomenclature"
-      ],
+      "tags": ["restriction-enzymes", "nomenclature"],
       "neetWeightage": "HIGH"
     },
     {
@@ -151,10 +120,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pBR322",
-        "cloning-vectors"
-      ],
+      "tags": ["pBR322", "cloning-vectors"],
       "neetWeightage": "HIGH"
     },
     {
@@ -176,10 +142,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "PCR",
-        "Taq-polymerase"
-      ],
+      "tags": ["PCR", "Taq-polymerase"],
       "neetWeightage": "HIGH"
     },
     {
@@ -190,21 +153,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "The enzyme used to join two DNA fragments is:",
-      "options": [
-        "Restriction endonuclease",
-        "DNA polymerase",
-        "DNA ligase",
-        "Exonuclease"
-      ],
+      "options": ["Restriction endonuclease", "DNA polymerase", "DNA ligase", "Exonuclease"],
       "correctAnswer": "C",
       "explanation": "DNA ligase acts as a molecular glue and joins two DNA fragments by forming phosphodiester bonds between the sugar-phosphate backbones. It is essential in rDNA technology for linking the gene of interest with the vector DNA after both have been cut with the same restriction enzyme.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "DNA-ligase",
-        "genetic-engineering"
-      ],
+      "tags": ["DNA-ligase", "genetic-engineering"],
       "neetWeightage": "HIGH"
     },
     {
@@ -215,21 +170,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Gel electrophoresis is used to separate DNA fragments based on their:",
-      "options": [
-        "Size",
-        "Base composition",
-        "Charge",
-        "Shape only"
-      ],
+      "options": ["Size", "Base composition", "Charge", "Shape only"],
       "correctAnswer": "A",
       "explanation": "In gel electrophoresis, DNA fragments are separated based on their size (molecular weight). Since DNA is negatively charged due to phosphate groups, all fragments move towards the anode. Smaller fragments move faster through the gel pores, while larger fragments move slower, resulting in size-based separation.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gel-electrophoresis",
-        "DNA-separation"
-      ],
+      "tags": ["gel-electrophoresis", "DNA-separation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -240,21 +187,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Which chemical is used to make bacterial cell walls porous for DNA uptake in genetic engineering?",
-      "options": [
-        "Calcium phosphate",
-        "Sodium chloride",
-        "Magnesium chloride",
-        "Calcium chloride"
-      ],
+      "options": ["Calcium phosphate", "Sodium chloride", "Magnesium chloride", "Calcium chloride"],
       "correctAnswer": "D",
       "explanation": "Calcium chloride (CaCl2) treatment is used to make bacterial cells competent. Bacteria are incubated with recombinant DNA on ice, followed by brief heat shock at 42°C. The divalent calcium ions help DNA enter through pores in the cell wall, facilitating transformation.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "competent-cells",
-        "transformation"
-      ],
+      "tags": ["competent-cells", "transformation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -276,10 +215,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "downstream-processing",
-        "bioreactor"
-      ],
+      "tags": ["downstream-processing", "bioreactor"],
       "neetWeightage": "HIGH"
     },
     {
@@ -301,10 +237,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bioreactor",
-        "stirred-tank"
-      ],
+      "tags": ["bioreactor", "stirred-tank"],
       "neetWeightage": "HIGH"
     },
     {
@@ -326,10 +259,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "palindromic-sequence",
-        "restriction-enzymes"
-      ],
+      "tags": ["palindromic-sequence", "restriction-enzymes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -340,21 +270,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "The technique of directly injecting recombinant DNA into the nucleus of an animal cell is called:",
-      "options": [
-        "Electroporation",
-        "Gene gun",
-        "Microinjection",
-        "Lipofection"
-      ],
+      "options": ["Electroporation", "Gene gun", "Microinjection", "Lipofection"],
       "correctAnswer": "C",
       "explanation": "Microinjection involves directly injecting recombinant DNA into the nucleus of an animal cell using a glass micropipette. This method is commonly used for creating transgenic animals. The cell is held by a holding pipette while the injection pipette delivers DNA into the pronucleus.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "microinjection",
-        "gene-transfer"
-      ],
+      "tags": ["microinjection", "gene-transfer"],
       "neetWeightage": "HIGH"
     },
     {
@@ -365,21 +287,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "In agarose gel electrophoresis, DNA fragments are visualised by staining with:",
-      "options": [
-        "Ethidium bromide",
-        "Safranin",
-        "Crystal violet",
-        "Methylene blue"
-      ],
+      "options": ["Ethidium bromide", "Safranin", "Crystal violet", "Methylene blue"],
       "correctAnswer": "A",
       "explanation": "Ethidium bromide is an intercalating dye that inserts between base pairs of DNA and fluoresces bright orange under UV light. After electrophoresis, the gel is stained with ethidium bromide and viewed under UV transilluminator to visualise the separated DNA bands.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ethidium-bromide",
-        "gel-electrophoresis"
-      ],
+      "tags": ["ethidium-bromide", "gel-electrophoresis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -390,21 +304,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Which of the following is NOT a step involved in PCR?",
-      "options": [
-        "Ligation",
-        "Annealing",
-        "Denaturation",
-        "Extension"
-      ],
+      "options": ["Ligation", "Annealing", "Denaturation", "Extension"],
       "correctAnswer": "A",
       "explanation": "PCR (Polymerase Chain Reaction) involves three repeated steps: denaturation (95°C, separating DNA strands), annealing (50-65°C, primers bind to template), and extension (72°C, Taq polymerase synthesises new strand). Ligation is the joining of DNA fragments, which is not a PCR step.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "PCR",
-        "steps"
-      ],
+      "tags": ["PCR", "steps"],
       "neetWeightage": "HIGH"
     },
     {
@@ -426,11 +332,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ori",
-        "cloning-vectors",
-        "replication"
-      ],
+      "tags": ["ori", "cloning-vectors", "replication"],
       "neetWeightage": "HIGH"
     },
     {
@@ -441,22 +343,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Gene gun or biolistics method is used for gene transfer in:",
-      "options": [
-        "Bacterial cells",
-        "Plant cells",
-        "Fungal cells only",
-        "Animal cells only"
-      ],
+      "options": ["Bacterial cells", "Plant cells", "Fungal cells only", "Animal cells only"],
       "correctAnswer": "B",
       "explanation": "The gene gun (biolistic method) is primarily used for introducing foreign DNA into plant cells. DNA-coated gold or tungsten microparticles are bombarded at high velocity into plant cells or tissues using a gene gun device. It can penetrate the cell wall barrier of plant cells.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gene-gun",
-        "biolistics",
-        "plant-cells"
-      ],
+      "tags": ["gene-gun", "biolistics", "plant-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -478,10 +371,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "insertional-inactivation",
-        "selection"
-      ],
+      "tags": ["insertional-inactivation", "selection"],
       "neetWeightage": "HIGH"
     },
     {
@@ -503,10 +393,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pBR322",
-        "selectable-markers"
-      ],
+      "tags": ["pBR322", "selectable-markers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -517,21 +404,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "The method of introducing alien DNA into host cells using electric impulses is called:",
-      "options": [
-        "Transformation",
-        "Transfection",
-        "Transduction",
-        "Electroporation"
-      ],
+      "options": ["Transformation", "Transfection", "Transduction", "Electroporation"],
       "correctAnswer": "D",
       "explanation": "Electroporation is a method where transient pores are formed in the cell membrane by applying short high-voltage electric pulses. This allows the recombinant DNA to enter the host cell through these temporary pores. It can be used for both prokaryotic and eukaryotic cells.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "electroporation",
-        "gene-transfer"
-      ],
+      "tags": ["electroporation", "gene-transfer"],
       "neetWeightage": "HIGH"
     },
     {
@@ -553,10 +432,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "E-coli",
-        "host-organism"
-      ],
+      "tags": ["E-coli", "host-organism"],
       "neetWeightage": "HIGH"
     },
     {
@@ -567,21 +443,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "The process of introducing recombinant DNA into a host bacterium using a vector is called:",
-      "options": [
-        "Transduction",
-        "Conjugation",
-        "Translation",
-        "Transformation"
-      ],
+      "options": ["Transduction", "Conjugation", "Translation", "Transformation"],
       "correctAnswer": "D",
       "explanation": "Transformation is the process by which a cell takes up a piece of DNA from outside the cell and incorporates it into its genome. In rDNA technology, competent host cells take up the recombinant vector DNA. This is different from transduction (phage-mediated) and conjugation (cell contact-mediated).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "transformation",
-        "gene-transfer"
-      ],
+      "tags": ["transformation", "gene-transfer"],
       "neetWeightage": "HIGH"
     },
     {
@@ -592,22 +460,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "In the vector pBR322, the recognition site for BamHI is present within:",
-      "options": [
-        "rop gene",
-        "tetR gene",
-        "ampR gene",
-        "ori sequence"
-      ],
+      "options": ["rop gene", "tetR gene", "ampR gene", "ori sequence"],
       "correctAnswer": "B",
       "explanation": "In pBR322, the BamHI recognition site is located within the tetracycline resistance gene (tetR). When foreign DNA is inserted at this site, the tetR gene gets inactivated (insertional inactivation). Recombinants are tetracycline-sensitive but ampicillin-resistant.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pBR322",
-        "BamHI",
-        "insertional-inactivation"
-      ],
+      "tags": ["pBR322", "BamHI", "insertional-inactivation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -629,10 +488,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "bioreactor",
-        "optimal-conditions"
-      ],
+      "tags": ["bioreactor", "optimal-conditions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -643,21 +499,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Which enzyme is used to remove RNA from a DNA preparation?",
-      "options": [
-        "DNase",
-        "Protease",
-        "RNase",
-        "Lipase"
-      ],
+      "options": ["DNase", "Protease", "RNase", "Lipase"],
       "correctAnswer": "C",
       "explanation": "RNase (ribonuclease) is used to digest RNA molecules present in a DNA preparation. During DNA isolation, proteins are removed by proteases, RNA by RNase, and other impurities by various purification methods to obtain pure DNA.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "RNase",
-        "DNA-isolation"
-      ],
+      "tags": ["RNase", "DNA-isolation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -679,10 +527,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "DNA-isolation",
-        "ethanol-precipitation"
-      ],
+      "tags": ["DNA-isolation", "ethanol-precipitation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -704,11 +549,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Agrobacterium",
-        "Ti-plasmid",
-        "plant-transformation"
-      ],
+      "tags": ["Agrobacterium", "Ti-plasmid", "plant-transformation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -719,21 +560,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "The recognition sequence of EcoRI is:",
-      "options": [
-        "5'-GAATTC-3'",
-        "5'-GGATCC-3'",
-        "5'-AAGCTT-3'",
-        "5'-GTCGAC-3'"
-      ],
+      "options": ["5'-GAATTC-3'", "5'-GGATCC-3'", "5'-AAGCTT-3'", "5'-GTCGAC-3'"],
       "correctAnswer": "A",
       "explanation": "EcoRI recognises the palindromic hexanucleotide sequence 5'-GAATTC-3' on one strand and 3'-CTTAAG-5' on the complementary strand. It cuts between G and A on both strands, producing sticky ends with 4-base 5' overhangs (AATT).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "EcoRI",
-        "recognition-sequence"
-      ],
+      "tags": ["EcoRI", "recognition-sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -755,10 +588,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "exonuclease",
-        "endonuclease"
-      ],
+      "tags": ["exonuclease", "endonuclease"],
       "neetWeightage": "HIGH"
     },
     {
@@ -769,21 +599,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "The separated DNA bands in gel electrophoresis can be cut out from the gel. This procedure is called:",
-      "options": [
-        "Extraction",
-        "Cloning",
-        "Transformation",
-        "Elution"
-      ],
+      "options": ["Extraction", "Cloning", "Transformation", "Elution"],
       "correctAnswer": "D",
       "explanation": "Elution is the process of extracting separated DNA fragments from the agarose gel. The desired band is cut from the gel and the DNA is extracted (eluted) using various methods. This purified DNA can then be used for cloning, sequencing, or other molecular biology applications.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "elution",
-        "gel-electrophoresis"
-      ],
+      "tags": ["elution", "gel-electrophoresis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -805,10 +627,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lysozyme",
-        "DNA-isolation"
-      ],
+      "tags": ["lysozyme", "DNA-isolation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -819,21 +638,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "The temperature used for denaturation step in PCR is:",
-      "options": [
-        "55°C",
-        "95°C",
-        "72°C",
-        "40°C"
-      ],
+      "options": ["55°C", "95°C", "72°C", "40°C"],
       "correctAnswer": "B",
       "explanation": "In PCR, the denaturation step occurs at approximately 95°C (94-98°C). At this temperature, the hydrogen bonds between complementary bases of the double-stranded DNA break, separating the two strands. This provides single-stranded templates for primer annealing.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "PCR",
-        "denaturation"
-      ],
+      "tags": ["PCR", "denaturation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -855,10 +666,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cloning-vectors",
-        "features"
-      ],
+      "tags": ["cloning-vectors", "features"],
       "neetWeightage": "HIGH"
     },
     {
@@ -880,10 +688,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "biotechnology",
-        "core-techniques"
-      ],
+      "tags": ["biotechnology", "core-techniques"],
       "neetWeightage": "HIGH"
     },
     {
@@ -894,21 +699,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Restriction endonucleases belong to a larger class of enzymes called:",
-      "options": [
-        "Ligases",
-        "Kinases",
-        "Nucleases",
-        "Polymerases"
-      ],
+      "options": ["Ligases", "Kinases", "Nucleases", "Polymerases"],
       "correctAnswer": "C",
       "explanation": "Restriction endonucleases belong to the larger class of enzymes called nucleases. Nucleases are enzymes that degrade nucleic acids. They are of two types: exonucleases (remove nucleotides from ends) and endonucleases (cut at specific internal positions within DNA).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "nucleases",
-        "restriction-enzymes"
-      ],
+      "tags": ["nucleases", "restriction-enzymes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -919,22 +716,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "In PCR, the extension of primers is carried out by Taq polymerase at:",
-      "options": [
-        "95°C",
-        "72°C",
-        "55°C",
-        "37°C"
-      ],
+      "options": ["95°C", "72°C", "55°C", "37°C"],
       "correctAnswer": "B",
       "explanation": "The extension step in PCR occurs at 72°C, which is the optimum temperature for Taq DNA polymerase activity. At this temperature, Taq polymerase extends the primers by adding dNTPs complementary to the template strand, synthesising new DNA strands in the 5'→3' direction.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "PCR",
-        "extension",
-        "Taq-polymerase"
-      ],
+      "tags": ["PCR", "extension", "Taq-polymerase"],
       "neetWeightage": "HIGH"
     },
     {
@@ -945,21 +733,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Stanley Cohen and Herbert Boyer constructed the first recombinant DNA molecule in:",
-      "options": [
-        "1990",
-        "1972",
-        "1963",
-        "1983"
-      ],
+      "options": ["1990", "1972", "1963", "1983"],
       "correctAnswer": "B",
       "explanation": "Stanley Cohen and Herbert Boyer accomplished the first controlled cloning experiment in 1972-73. They constructed the first recombinant DNA by linking an antibiotic resistance gene from a plasmid to a native plasmid of Salmonella typhimurium, creating the first artificial recombinant DNA molecule.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "rDNA-history",
-        "Cohen-Boyer"
-      ],
+      "tags": ["rDNA-history", "Cohen-Boyer"],
       "neetWeightage": "HIGH"
     },
     {
@@ -981,10 +761,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "restriction-enzymes",
-        "sticky-ends"
-      ],
+      "tags": ["restriction-enzymes", "sticky-ends"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1006,10 +783,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "plasmids",
-        "cloning-vectors"
-      ],
+      "tags": ["plasmids", "cloning-vectors"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1031,11 +805,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Taq-polymerase",
-        "PCR",
-        "thermostable"
-      ],
+      "tags": ["Taq-polymerase", "PCR", "thermostable"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1057,10 +827,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gel-electrophoresis",
-        "DNA-charge"
-      ],
+      "tags": ["gel-electrophoresis", "DNA-charge"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1082,10 +849,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "competent-cells",
-        "DNA-uptake"
-      ],
+      "tags": ["competent-cells", "DNA-uptake"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1107,11 +871,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pBR322",
-        "insertional-inactivation",
-        "BamHI"
-      ],
+      "tags": ["pBR322", "insertional-inactivation", "BamHI"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1133,10 +893,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "restriction-modification",
-        "methylation"
-      ],
+      "tags": ["restriction-modification", "methylation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1158,10 +915,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "bioreactor",
-        "shake-flask"
-      ],
+      "tags": ["bioreactor", "shake-flask"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1183,11 +937,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "restriction-enzymes",
-        "sticky-ends",
-        "ligation"
-      ],
+      "tags": ["restriction-enzymes", "sticky-ends", "ligation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1209,11 +959,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Agrobacterium",
-        "T-DNA",
-        "natural-genetic-engineer"
-      ],
+      "tags": ["Agrobacterium", "T-DNA", "natural-genetic-engineer"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1235,10 +981,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "downstream-processing",
-        "cost"
-      ],
+      "tags": ["downstream-processing", "cost"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1260,11 +1003,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "PCR",
-        "primers",
-        "specificity"
-      ],
+      "tags": ["PCR", "primers", "specificity"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1286,10 +1025,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blue-white-screening",
-        "lacZ"
-      ],
+      "tags": ["blue-white-screening", "lacZ"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1311,10 +1047,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "microinjection",
-        "animal-cells"
-      ],
+      "tags": ["microinjection", "animal-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1325,21 +1058,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Consider the following statements about restriction enzymes:\nI. They are produced by bacteria as a defence mechanism against bacteriophages.\nII. They always produce sticky ends.\nIII. They recognise specific palindromic sequences.\nIV. The first restriction enzyme isolated was EcoRI.\nWhich of the above statements are correct?",
-      "options": [
-        "All of the above",
-        "I, II and III",
-        "I and III only",
-        "I, III and IV"
-      ],
+      "options": ["All of the above", "I, II and III", "I and III only", "I, III and IV"],
       "correctAnswer": "C",
       "explanation": "Statements I and III are correct. Restriction enzymes are part of the bacterial defence system against phage DNA (I) and recognise specific palindromic sequences (III). Statement II is wrong as some restriction enzymes (like Hind II) produce blunt ends. Statement IV is wrong as the first was Hind II, not EcoRI.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "restriction-enzymes",
-        "statement-based"
-      ],
+      "tags": ["restriction-enzymes", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1350,21 +1075,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Which of the following statements about PCR is/are correct?\nI. It requires two sets of primers.\nII. Taq polymerase is thermolabile.\nIII. Denaturation is followed by annealing and then extension.\nIV. Each cycle doubles the amount of DNA.",
-      "options": [
-        "I, III and IV",
-        "All of the above",
-        "II and III only",
-        "I and IV only"
-      ],
+      "options": ["I, III and IV", "All of the above", "II and III only", "I and IV only"],
       "correctAnswer": "A",
       "explanation": "Statements I, III and IV are correct. PCR requires two primers (forward and reverse) that flank the target sequence (I). The steps are denaturation → annealing → extension (III). Each cycle doubles the DNA (IV). Statement II is wrong as Taq polymerase is thermostable (not thermolabile).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "PCR",
-        "statement-based"
-      ],
+      "tags": ["PCR", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1375,21 +1092,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Read the following statements about cloning vector pBR322:\nI. It was the first artificial cloning vector constructed.\nII. It contains ori, ampR and tetR genes.\nIII. pBR stands for plasmid Bolivar and Rodriguez.\nIV. It has recognition sites for Hind III within the ampR gene.\nSelect the correct statements:",
-      "options": [
-        "II, III and IV",
-        "I, II, III and IV",
-        "II and III only",
-        "I and II only"
-      ],
+      "options": ["II, III and IV", "I, II, III and IV", "II and III only", "I and II only"],
       "correctAnswer": "A",
       "explanation": "Statements II, III and IV are correct. pBR322 contains ori, ampR and tetR genes (II). pBR stands for the initials of its constructors Bolivar and Rodriguez (III). Hind III recognition site is within the ampR gene (IV). Statement I is incorrect as it was not the first artificial cloning vector.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pBR322",
-        "statement-based"
-      ],
+      "tags": ["pBR322", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1400,21 +1109,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Read the following statements about bioreactors:\nI. A stirred-tank bioreactor is commonly cylindrical.\nII. The stirrer facilitates mixing and oxygen availability.\nIII. Bioreactors can have volumes up to 100-1000 litres.\nIV. A bioreactor has a foam control system.\nHow many of the above statements are correct?",
-      "options": [
-        "All four",
-        "Only three",
-        "Only one",
-        "Only two"
-      ],
+      "options": ["All four", "Only three", "Only one", "Only two"],
       "correctAnswer": "A",
       "explanation": "All four statements are correct. A stirred-tank bioreactor is typically cylindrical (I), the agitator/stirrer ensures even mixing and oxygen distribution (II), bioreactors can operate at volumes of 100-1000 litres (III), and they are equipped with a foam control system to prevent overflow during fermentation (IV).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bioreactor",
-        "statement-based"
-      ],
+      "tags": ["bioreactor", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1425,22 +1126,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Consider the following statements regarding DNA isolation:\nI. Lysozyme is used to break open bacterial cells.\nII. Chitinase is used for breaking open fungal cells.\nIII. Cellulase is used for breaking open plant cells.\nIV. Protease is used to digest histone proteins.\nWhich of the above are correct?",
-      "options": [
-        "I and II only",
-        "II and III only",
-        "I, II, III and IV",
-        "I, II and III only"
-      ],
+      "options": ["I and II only", "II and III only", "I, II, III and IV", "I, II and III only"],
       "correctAnswer": "C",
       "explanation": "All four statements are correct. During DNA isolation, different enzymes break open different cell types: lysozyme for bacteria (peptidoglycan), chitinase for fungi (chitin), cellulase for plants (cellulose), and protease digests proteins (including histones) to release DNA from the nucleoprotein complex.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "DNA-isolation",
-        "enzymes",
-        "statement-based"
-      ],
+      "tags": ["DNA-isolation", "enzymes", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1451,21 +1143,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Which of the following statements about gel electrophoresis is/are INCORRECT?\nI. DNA fragments move from cathode to anode.\nII. Larger fragments move faster than smaller ones.\nIII. Ethidium bromide is used for staining.\nIV. Agarose gel is extracted from algae.",
-      "options": [
-        "II and IV",
-        "I only",
-        "II only",
-        "I and III"
-      ],
+      "options": ["II and IV", "I only", "II only", "I and III"],
       "correctAnswer": "C",
       "explanation": "Only statement II is incorrect. In gel electrophoresis, smaller DNA fragments move faster through the gel pores while larger fragments are retarded and move slower. Statements I (DNA moves from cathode to anode), III (ethidium bromide stains DNA), and IV (agarose is from seaweed/algae) are all correct.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gel-electrophoresis",
-        "statement-based"
-      ],
+      "tags": ["gel-electrophoresis", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1476,21 +1160,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Consider the following statements:\nI. Genetic engineering involves modification of DNA at the molecular level.\nII. Traditional hybridisation can produce desired gene combinations.\nIII. rDNA technology allows combining genes from different organisms.\nIV. Genetic engineering is faster and more precise than traditional breeding.\nWhich statements correctly differentiate genetic engineering from traditional hybridisation?",
-      "options": [
-        "All of the above",
-        "I and III only",
-        "I, III and IV",
-        "III and IV only"
-      ],
+      "options": ["All of the above", "I and III only", "I, III and IV", "III and IV only"],
       "correctAnswer": "C",
       "explanation": "Statements I, III and IV differentiate genetic engineering from traditional methods. Genetic engineering works at the molecular level (I), can combine genes across species barriers (III), and is faster and more precise (IV). Statement II describes traditional hybridisation, not a differentiating feature of genetic engineering.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "genetic-engineering",
-        "traditional-breeding"
-      ],
+      "tags": ["genetic-engineering", "traditional-breeding"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1501,22 +1177,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Study the following statements about methods of gene transfer:\nI. Microinjection is used for animal cells.\nII. Gene gun uses gold or tungsten microparticles.\nIII. CaCl2 treatment is used for making bacteria competent.\nIV. Electroporation uses UV light to create pores.\nSelect the incorrect statement(s):",
-      "options": [
-        "I and IV",
-        "III and IV",
-        "II and III",
-        "IV only"
-      ],
+      "options": ["I and IV", "III and IV", "II and III", "IV only"],
       "correctAnswer": "D",
       "explanation": "Only statement IV is incorrect. Electroporation uses electric impulses (not UV light) to create transient pores in the cell membrane. Statements I (microinjection for animal cells), II (gene gun uses gold/tungsten particles), and III (CaCl2 for bacterial competence) are all correct.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gene-transfer",
-        "methods",
-        "statement-based"
-      ],
+      "tags": ["gene-transfer", "methods", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1527,22 +1194,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Identify the correct statements regarding the origin of replication (ori):\nI. It is essential for replication of the linked DNA.\nII. It controls the copy number of the vector.\nIII. It is a selectable marker.\nIV. All vectors must have ori to replicate in host cells.",
-      "options": [
-        "I, II and IV",
-        "All of the above",
-        "I, II and III",
-        "I and II only"
-      ],
+      "options": ["I, II and IV", "All of the above", "I, II and III", "I and II only"],
       "correctAnswer": "A",
       "explanation": "Statements I, II and IV are correct. The ori is essential for autonomous replication of the vector DNA in the host cell (I), it determines how many copies of the vector are maintained per cell (II), and every vector must possess an ori for replication (IV). Statement III is incorrect as ori is not a selectable marker.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ori",
-        "cloning-vectors",
-        "statement-based"
-      ],
+      "tags": ["ori", "cloning-vectors", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1553,21 +1211,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Which of the following statements about recombinant DNA technology is/are correct?\nI. It involves cutting DNA from two different sources with the same restriction enzyme.\nII. The cut fragments are joined by DNA ligase.\nIII. The recombinant DNA is multiplied inside a host cell.\nIV. The technique was developed by Karry Mullis.",
-      "options": [
-        "II, III and IV",
-        "All of the above",
-        "I, II and III",
-        "I and II only"
-      ],
+      "options": ["II, III and IV", "All of the above", "I, II and III", "I and II only"],
       "correctAnswer": "C",
       "explanation": "Statements I, II and III are correct. rDNA technology involves cutting DNA from two sources with the same enzyme (I), joining them with ligase (II), and multiplying in a host (III). Statement IV is wrong as rDNA technology was pioneered by Stanley Cohen and Herbert Boyer; Karry Mullis invented PCR.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "rDNA-technology",
-        "statement-based"
-      ],
+      "tags": ["rDNA-technology", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1578,21 +1228,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Consider the following statements about cloning vectors:\nI. Plasmids can serve as vectors but bacteriophages cannot.\nII. Vectors must have at least one selectable marker.\nIII. Vectors should preferably have a unique restriction site.\nIV. The size of the vector should be small for easy manipulation.\nWhich statements are correct?",
-      "options": [
-        "All of the above",
-        "I, II and III",
-        "II, III and IV",
-        "I and IV only"
-      ],
+      "options": ["All of the above", "I, II and III", "II, III and IV", "I and IV only"],
       "correctAnswer": "C",
       "explanation": "Statements II, III and IV are correct. Vectors need at least one selectable marker for identifying transformants (II), preferably a unique restriction site for inserting foreign DNA (III), and should be small for easy handling (IV). Statement I is wrong as bacteriophages (like lambda phage) can also be used as vectors.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cloning-vectors",
-        "statement-based"
-      ],
+      "tags": ["cloning-vectors", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1603,22 +1245,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Read the following statements and select the correct option:\nI. Restriction enzymes are found in all living organisms.\nII. Over 900 restriction enzymes have been isolated from over 230 strains of bacteria.\nIII. Each restriction enzyme recognises a unique palindromic sequence.\nIV. Restriction enzymes were discovered by studying bacteriophage growth on E. coli.",
-      "options": [
-        "I, II and III",
-        "III and IV only",
-        "II, III and IV",
-        "I and II only"
-      ],
+      "options": ["I, II and III", "III and IV only", "II, III and IV", "I and II only"],
       "correctAnswer": "C",
       "explanation": "Statements II, III and IV are correct. Over 900 restriction enzymes have been isolated from 230+ bacterial strains (II), each recognises a specific palindromic sequence (III), and they were discovered while studying bacteriophage replication in E. coli (IV). Statement I is incorrect as restriction enzymes are found primarily in prokaryotes.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "restriction-enzymes",
-        "discovery",
-        "statement-based"
-      ],
+      "tags": ["restriction-enzymes", "discovery", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1629,21 +1262,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Select the correct statements about downstream processing:\nI. It includes separation and purification of the product.\nII. Formulation with preservatives is part of downstream processing.\nIII. Clinical trials are a part of downstream processing.\nIV. Quality control testing is performed during downstream processing.",
-      "options": [
-        "I, III and IV",
-        "I and IV only",
-        "I, II, III and IV",
-        "I, II and IV"
-      ],
+      "options": ["I, III and IV", "I and IV only", "I, II, III and IV", "I, II and IV"],
       "correctAnswer": "D",
       "explanation": "Statements I, II and IV are correct. Downstream processing involves separation and purification (I), formulation with suitable preservatives for storage (II), and quality control testing (IV). Statement III is wrong as clinical trials are a separate regulatory process that occurs after downstream processing.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "downstream-processing",
-        "statement-based"
-      ],
+      "tags": ["downstream-processing", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1654,21 +1279,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Consider the following statements about competent cells:\nI. They are cells made capable of taking up external DNA.\nII. Treatment with divalent cations like Ca2+ enhances DNA uptake.\nIII. Heat shock at 42°C facilitates DNA entry.\nIV. Competent cells are always derived from animal cells.\nWhich are correct?",
-      "options": [
-        "I and II only",
-        "II, III and IV",
-        "All of the above",
-        "I, II and III"
-      ],
+      "options": ["I and II only", "II, III and IV", "All of the above", "I, II and III"],
       "correctAnswer": "D",
       "explanation": "Statements I, II and III are correct. Competent cells are those treated to take up foreign DNA (I). Ca2+ ions create pores and facilitate DNA binding (II). Heat shock at 42°C for brief periods enables DNA entry (III). Statement IV is wrong as competent cells are typically bacterial cells (like E. coli), not animal cells.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "competent-cells",
-        "statement-based"
-      ],
+      "tags": ["competent-cells", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1690,11 +1307,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "enzymes",
-        "functions",
-        "match-the-following"
-      ],
+      "tags": ["enzymes", "functions", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1716,10 +1329,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "restriction-enzymes",
-        "source-organisms"
-      ],
+      "tags": ["restriction-enzymes", "source-organisms"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1730,22 +1340,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Match the following PCR steps with their temperatures:\nColumn I: (i) Denaturation (ii) Annealing (iii) Extension\nColumn II: (a) 72°C (b) 95°C (c) 50-65°C\nSelect the correct match:",
-      "options": [
-        "i-b, ii-c, iii-a",
-        "i-b, ii-a, iii-c",
-        "i-a, ii-b, iii-c",
-        "i-c, ii-a, iii-b"
-      ],
+      "options": ["i-b, ii-c, iii-a", "i-b, ii-a, iii-c", "i-a, ii-b, iii-c", "i-c, ii-a, iii-b"],
       "correctAnswer": "A",
       "explanation": "In PCR, denaturation occurs at 95°C where double-stranded DNA separates (i-b), annealing occurs at 50-65°C where primers bind to complementary sequences (ii-c), and extension occurs at 72°C which is optimal for Taq polymerase activity (iii-a).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "PCR",
-        "temperatures",
-        "match-the-following"
-      ],
+      "tags": ["PCR", "temperatures", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1767,11 +1368,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pBR322",
-        "features",
-        "match-the-following"
-      ],
+      "tags": ["pBR322", "features", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1793,11 +1390,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gene-transfer",
-        "methods",
-        "match-the-following"
-      ],
+      "tags": ["gene-transfer", "methods", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1819,11 +1412,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gene-transfer",
-        "types",
-        "match-the-following"
-      ],
+      "tags": ["gene-transfer", "types", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1845,11 +1434,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "restriction-enzymes",
-        "recognition-sequences",
-        "match-the-following"
-      ],
+      "tags": ["restriction-enzymes", "recognition-sequences", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1871,11 +1456,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "scientists",
-        "contributions",
-        "match-the-following"
-      ],
+      "tags": ["scientists", "contributions", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1897,11 +1478,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cloning-vectors",
-        "types",
-        "match-the-following"
-      ],
+      "tags": ["cloning-vectors", "types", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1923,10 +1500,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "DNA-terms",
-        "match-the-following"
-      ],
+      "tags": ["DNA-terms", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1948,11 +1522,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "bioreactor",
-        "components",
-        "match-the-following"
-      ],
+      "tags": ["bioreactor", "components", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1974,11 +1544,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "rDNA-technology",
-        "steps",
-        "match-the-following"
-      ],
+      "tags": ["rDNA-technology", "steps", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2000,10 +1566,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "screening-methods",
-        "match-the-following"
-      ],
+      "tags": ["screening-methods", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2025,11 +1588,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "DNA-isolation",
-        "enzymes",
-        "match-the-following"
-      ],
+      "tags": ["DNA-isolation", "enzymes", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2040,22 +1599,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "How many of the following are essential features of a cloning vector?\n(a) Origin of replication (b) Selectable marker (c) Restriction enzyme recognition sites (d) Promoter sequence (e) Telomeric sequence (f) Small size",
-      "options": [
-        "Five",
-        "Four",
-        "Three",
-        "Six"
-      ],
+      "options": ["Five", "Four", "Three", "Six"],
       "correctAnswer": "B",
       "explanation": "Four features are essential: (a) ori - for autonomous replication, (b) selectable marker - for identifying transformants, (c) restriction sites - for inserting foreign DNA, and (f) small size - for easy manipulation and transformation. A promoter (d) is needed for expression vectors, not basic cloning vectors. Telomeric sequences (e) are eukaryotic chromosome features.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cloning-vectors",
-        "features",
-        "counting"
-      ],
+      "tags": ["cloning-vectors", "features", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2066,23 +1616,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "How many of the following restriction enzymes produce sticky ends?\n(a) EcoRI (b) Hind II (c) BamHI (d) Hind III (e) Sal I (f) Pvu II",
-      "options": [
-        "Five",
-        "Three",
-        "Four",
-        "Two"
-      ],
+      "options": ["Five", "Three", "Four", "Two"],
       "correctAnswer": "C",
       "explanation": "Four enzymes produce sticky ends: (a) EcoRI, (c) BamHI, (d) Hind III, and (e) Sal I. These make staggered cuts on the two DNA strands creating single-stranded overhangs. Hind II (b) and Pvu II (f) produce blunt ends as they cut both strands at the same position.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "restriction-enzymes",
-        "sticky-ends",
-        "blunt-ends",
-        "counting"
-      ],
+      "tags": ["restriction-enzymes", "sticky-ends", "blunt-ends", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2093,22 +1633,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "How many of the following are methods used to introduce foreign DNA into host cells?\n(a) CaCl2 treatment and heat shock (b) Electroporation (c) Microinjection (d) Gene gun (e) Centrifugation (f) Gel electrophoresis",
-      "options": [
-        "Four",
-        "Two",
-        "Three",
-        "Five"
-      ],
+      "options": ["Four", "Two", "Three", "Five"],
       "correctAnswer": "A",
       "explanation": "Four methods are used for introducing foreign DNA: (a) CaCl2/heat shock for bacterial transformation, (b) electroporation using electric pulses, (c) microinjection for animal cells, and (d) gene gun/biolistics for plant cells. Centrifugation (e) separates cell components, and gel electrophoresis (f) separates DNA fragments - neither introduces DNA into cells.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gene-transfer",
-        "methods",
-        "counting"
-      ],
+      "tags": ["gene-transfer", "methods", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2119,22 +1650,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "How many of the following are required components for carrying out PCR?\n(a) Template DNA (b) Two primers (c) Taq polymerase (d) dNTPs (e) Restriction enzymes (f) DNA ligase",
-      "options": [
-        "Five",
-        "Four",
-        "Six",
-        "Three"
-      ],
+      "options": ["Five", "Four", "Six", "Three"],
       "correctAnswer": "B",
       "explanation": "Four components are essential for PCR: (a) template DNA to be amplified, (b) two oligonucleotide primers (forward and reverse), (c) Taq polymerase for synthesis, and (d) deoxynucleotide triphosphates (dNTPs) as building blocks. Restriction enzymes (e) cut DNA and ligase (f) joins DNA - neither is needed for PCR.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "PCR",
-        "components",
-        "counting"
-      ],
+      "tags": ["PCR", "components", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2145,22 +1667,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "How many of the following can be used as cloning vectors?\n(a) Plasmids (b) Bacteriophages (c) Cosmids (d) BACs (e) YACs (f) Ribosomes",
-      "options": [
-        "Three",
-        "Four",
-        "Six",
-        "Five"
-      ],
+      "options": ["Three", "Four", "Six", "Five"],
       "correctAnswer": "D",
       "explanation": "Five of the listed items can be used as cloning vectors: (a) plasmids, (b) bacteriophages, (c) cosmids (hybrid of plasmid and phage), (d) BACs (Bacterial Artificial Chromosomes), and (e) YACs (Yeast Artificial Chromosomes). Ribosomes (f) are cell organelles involved in translation and cannot serve as vectors.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cloning-vectors",
-        "types",
-        "counting"
-      ],
+      "tags": ["cloning-vectors", "types", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2171,22 +1684,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "How many of the following are correct about the palindromic sequence 5'-GAATTC-3'?\n(a) It is recognised by EcoRI (b) It has 6 base pairs (c) Its complementary strand reads 3'-CTTAAG-5' (d) EcoRI cuts between G and A (e) It produces blunt ends (f) It is a hexanucleotide sequence",
-      "options": [
-        "Six",
-        "Five",
-        "Four",
-        "Three"
-      ],
+      "options": ["Six", "Five", "Four", "Three"],
       "correctAnswer": "B",
       "explanation": "Five statements are correct: (a) 5'-GAATTC-3' is the EcoRI recognition site, (b) it consists of 6 base pairs, (c) the complementary strand is 3'-CTTAAG-5', (d) EcoRI cuts between G and A on both strands, and (f) it is a hexanucleotide. Statement (e) is wrong as EcoRI produces sticky ends, not blunt ends.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "EcoRI",
-        "palindromic-sequence",
-        "counting"
-      ],
+      "tags": ["EcoRI", "palindromic-sequence", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2197,22 +1701,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "How many of the following steps are involved in the process of recombinant DNA technology?\n(a) Isolation of the genetic material (b) Cutting of DNA at specific locations (c) Amplification of gene of interest (d) Ligation of DNA fragment into a vector (e) Transfer of rDNA into host (f) Screening of transformants (g) Downstream processing",
-      "options": [
-        "Seven",
-        "Five",
-        "Six",
-        "Four"
-      ],
+      "options": ["Seven", "Five", "Six", "Four"],
       "correctAnswer": "A",
       "explanation": "All seven steps are involved in rDNA technology: (a) DNA isolation from the source, (b) cutting with restriction enzymes, (c) amplification by PCR, (d) ligation into vector, (e) transfer into host cells, (f) screening to identify recombinants, and (g) downstream processing for product recovery and purification.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "rDNA-technology",
-        "steps",
-        "counting"
-      ],
+      "tags": ["rDNA-technology", "steps", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2223,22 +1718,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "How many of the following are control systems present in a stirred-tank bioreactor?\n(a) Agitator system (b) Oxygen delivery system (c) Foam control system (d) Temperature control system (e) pH control system (f) Gravity control system",
-      "options": [
-        "Three",
-        "Four",
-        "Five",
-        "Six"
-      ],
+      "options": ["Three", "Four", "Five", "Six"],
       "correctAnswer": "C",
       "explanation": "Five are actual control systems in a stirred-tank bioreactor: (a) agitator/impeller for mixing, (b) oxygen delivery via sparger, (c) foam control to prevent overflow, (d) temperature control via jacket/coils, and (e) pH control via acid/base addition. Gravity control (f) is not a bioreactor system.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "bioreactor",
-        "control-systems",
-        "counting"
-      ],
+      "tags": ["bioreactor", "control-systems", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2260,11 +1746,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "rDNA-technology",
-        "sequence",
-        "steps"
-      ],
+      "tags": ["rDNA-technology", "sequence", "steps"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2275,22 +1757,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Arrange the steps of PCR in the correct order as they occur in a single cycle:\n(i) Extension by Taq polymerase at 72°C\n(ii) Denaturation at 95°C\n(iii) Annealing of primers at 50-65°C",
-      "options": [
-        "i → ii → iii",
-        "ii → iii → i",
-        "iii → ii → i",
-        "ii → i → iii"
-      ],
+      "options": ["i → ii → iii", "ii → iii → i", "iii → ii → i", "ii → i → iii"],
       "correctAnswer": "B",
       "explanation": "In each PCR cycle: first, denaturation at 95°C separates double-stranded DNA into single strands (ii), then primers anneal to complementary sequences at 50-65°C (iii), and finally Taq polymerase extends the primers at 72°C synthesising new DNA strands (i).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "PCR",
-        "steps",
-        "sequence"
-      ],
+      "tags": ["PCR", "steps", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2312,11 +1785,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "DNA-isolation",
-        "steps",
-        "sequence"
-      ],
+      "tags": ["DNA-isolation", "steps", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2338,11 +1807,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gel-electrophoresis",
-        "steps",
-        "sequence"
-      ],
+      "tags": ["gel-electrophoresis", "steps", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2364,11 +1829,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biotechnology-history",
-        "chronology",
-        "sequence"
-      ],
+      "tags": ["biotechnology-history", "chronology", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2390,11 +1851,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "competent-cells",
-        "transformation",
-        "sequence"
-      ],
+      "tags": ["competent-cells", "transformation", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2416,11 +1873,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "downstream-processing",
-        "steps",
-        "sequence"
-      ],
+      "tags": ["downstream-processing", "steps", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2442,11 +1895,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pBR322",
-        "rop-gene",
-        "copy-number"
-      ],
+      "tags": ["pBR322", "rop-gene", "copy-number"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2457,21 +1906,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Which of the following is the correct recognition sequence of BamHI?",
-      "options": [
-        "5'-GGATCC-3'",
-        "5'-AAGCTT-3'",
-        "5'-CTGCAG-3'",
-        "5'-GAATTC-3'"
-      ],
+      "options": ["5'-GGATCC-3'", "5'-AAGCTT-3'", "5'-CTGCAG-3'", "5'-GAATTC-3'"],
       "correctAnswer": "A",
       "explanation": "BamHI (from Bacillus amyloliquefaciens H) recognises the palindromic sequence 5'-GGATCC-3'. It cuts between the two G residues on each strand, producing sticky ends with 4-base 5' overhangs. This is different from EcoRI (GAATTC), Hind III (AAGCTT), and PstI (CTGCAG).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "BamHI",
-        "recognition-sequence"
-      ],
+      "tags": ["BamHI", "recognition-sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2493,11 +1934,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gene-cloning",
-        "amplification",
-        "bacteria"
-      ],
+      "tags": ["gene-cloning", "amplification", "bacteria"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2508,22 +1945,13 @@
       "ncertChapter": 11,
       "ncertChapterName": "Biotechnology: Principles and Processes",
       "question": "Consider the following statements about the Ti plasmid of Agrobacterium:\nI. T-DNA of Ti plasmid integrates into the plant chromosome.\nII. Ti plasmid is modified for use as a vector by removing tumour-causing genes.\nIII. Ti plasmid can naturally infect monocot plants.\nIV. The virulence genes help in T-DNA transfer.\nWhich statements are correct?",
-      "options": [
-        "I and II only",
-        "I, III and IV",
-        "All of the above",
-        "I, II and IV"
-      ],
+      "options": ["I and II only", "I, III and IV", "All of the above", "I, II and IV"],
       "correctAnswer": "D",
       "explanation": "Statements I, II and IV are correct. T-DNA integrates into the plant genome (I), tumour genes are removed from Ti plasmid for use as a 'disarmed' vector (II), and vir genes on the Ti plasmid are essential for T-DNA transfer (IV). Statement III is wrong as Agrobacterium naturally infects dicots (not monocots).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Ti-plasmid",
-        "Agrobacterium",
-        "statement-based"
-      ],
+      "tags": ["Ti-plasmid", "Agrobacterium", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2545,11 +1973,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "nucleases",
-        "types",
-        "match-the-following"
-      ],
+      "tags": ["nucleases", "types", "match-the-following"],
       "neetWeightage": "HIGH"
     }
   ]

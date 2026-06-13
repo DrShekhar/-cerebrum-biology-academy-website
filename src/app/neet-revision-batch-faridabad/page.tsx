@@ -22,7 +22,8 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'NEET Revision Batch in Faridabad | 3-Month Final Revision',
-    description: 'Complete NCERT revision with high-yield topic focus. 2000+ MCQs, mock tests, and expert guidance.',
+    description:
+      'Complete NCERT revision with high-yield topic focus. 2000+ MCQs, mock tests, and expert guidance.',
     url: 'https://cerebrumbiologyacademy.com/neet-revision-batch-faridabad',
   },
   alternates: {
@@ -32,7 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Revision Batch in Faridabad | Final 3-Month Revision Program',
-    description: 'Join our intensive 3-month NEET Biology revision batch in Faridabad. Complete NCERT revision, high-yield topics focus, 2000+ MCQs, and mock tests. Starting ₹40,000.',
+    description:
+      'Join our intensive 3-month NEET Biology revision batch in Faridabad. Complete NCERT revision, high-yield topics focus, 2000+ MCQs, and mock tests. Starting ₹40,000.',
   },
 }
 
@@ -79,7 +81,8 @@ export default function NEETRevisionBatchFaridabadPage() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: 'NEET Biology Revision Batch - Faridabad',
-    description: '3-month intensive NEET Biology revision program with complete NCERT revision and 2000+ MCQ practice',
+    description:
+      '3-month intensive NEET Biology revision program with complete NCERT revision and 2000+ MCQ practice',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -122,20 +125,48 @@ export default function NEETRevisionBatchFaridabadPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Faridabad', item: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad' },
-      { '@type': 'ListItem', position: 3, name: 'Revision Batch', item: 'https://cerebrumbiologyacademy.com/neet-revision-batch-faridabad' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Faridabad',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Revision Batch',
+        item: 'https://cerebrumbiologyacademy.com/neet-revision-batch-faridabad',
+      },
     ],
   }
 
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+        knowsAbout={[
+          'NEET Faridabad',
+          'NEET Biology Faridabad',
+          'Medical entrance coaching Faridabad',
+        ]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <NEETRevisionBatchFaridabadContent faqs={faqs} />
     </>
   )

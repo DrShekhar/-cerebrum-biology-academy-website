@@ -67,7 +67,10 @@ export function LandingPageTemplate({ data }: LandingPageTemplateProps) {
     switch (type) {
       case 'hero':
         return (
-          <section key={index} className="py-12 md:py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+          <section
+            key={index}
+            className="py-12 md:py-20 bg-gradient-to-br from-blue-50 to-indigo-50"
+          >
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 {sectionTitle || heroTitle || title}
@@ -103,10 +106,11 @@ export function LandingPageTemplate({ data }: LandingPageTemplateProps) {
               )}
               <div className="grid md:grid-cols-3 gap-8">
                 {items.map((item, idx: number) => (
-                  <div key={idx} className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-                    {item.icon && (
-                      <div className="mb-4 text-blue-600 text-3xl">{item.icon}</div>
-                    )}
+                  <div
+                    key={idx}
+                    className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow"
+                  >
+                    {item.icon && <div className="mb-4 text-blue-600 text-3xl">{item.icon}</div>}
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                     <p className="text-gray-600">{item.description}</p>
                   </div>
@@ -154,10 +158,10 @@ export function LandingPageTemplate({ data }: LandingPageTemplateProps) {
                   "{quote || section.quote || 'Testimonial content goes here.'}"
                 </blockquote>
                 <div>
-                  <p className="font-semibold text-gray-900">{author || section.author || 'Student'}</p>
-                  {section.result && (
-                    <p className="text-gray-600 text-sm">{section.result}</p>
-                  )}
+                  <p className="font-semibold text-gray-900">
+                    {author || section.author || 'Student'}
+                  </p>
+                  {section.result && <p className="text-gray-600 text-sm">{section.result}</p>}
                 </div>
               </div>
             </div>
@@ -175,7 +179,10 @@ export function LandingPageTemplate({ data }: LandingPageTemplateProps) {
               )}
               <div className="space-y-4">
                 {items.map((item, idx: number) => (
-                  <details key={idx} className="border border-gray-200 rounded-lg p-4 cursor-pointer">
+                  <details
+                    key={idx}
+                    className="border border-gray-200 rounded-lg p-4 cursor-pointer"
+                  >
                     <summary className="font-semibold text-gray-900 flex justify-between items-center">
                       {item.title || item.question}
                       <span className="text-blue-600">+</span>
@@ -190,9 +197,14 @@ export function LandingPageTemplate({ data }: LandingPageTemplateProps) {
 
       case 'cta':
         return (
-          <section key={index} className="py-12 md:py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+          <section
+            key={index}
+            className="py-12 md:py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white"
+          >
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">{sectionTitle || 'Ready to Get Started?'}</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                {sectionTitle || 'Ready to Get Started?'}
+              </h2>
               {content && <p className="text-lg mb-8 opacity-90">{content}</p>}
               <button className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
                 {primaryCTA}
@@ -212,11 +224,7 @@ export function LandingPageTemplate({ data }: LandingPageTemplateProps) {
                   {sectionTitle}
                 </h2>
               )}
-              {content && (
-                <div className="prose prose-lg text-gray-600">
-                  {content}
-                </div>
-              )}
+              {content && <div className="prose prose-lg text-gray-600">{content}</div>}
             </div>
           </section>
         )
@@ -233,9 +241,7 @@ export function LandingPageTemplate({ data }: LandingPageTemplateProps) {
               {heroTitle || title}
             </h1>
             {heroSubtitle && (
-              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                {heroSubtitle}
-              </p>
+              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">{heroSubtitle}</p>
             )}
             {stats && (
               <div className="grid md:grid-cols-3 gap-8 mt-12">

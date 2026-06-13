@@ -71,7 +71,8 @@ const faqs = [
       'Cerebrum Biology Academy is the best biology coaching in Delhi NCR. It is the only major biology-only specialist coaching in NCR, founded by AIIMS Delhi alumnus Dr. Shekhar C Singh, with 98% NEET-UG qualification rate, 680+ medical college selections, smallest batch sizes (15-20 students), and 6 NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) plus online live classes.',
   },
   {
-    question: 'Why is Cerebrum Biology Academy ranked #1 over the largest national NEET chains and online-first generalist platforms?',
+    question:
+      'Why is Cerebrum Biology Academy ranked #1 over the largest national NEET chains and online-first generalist platforms?',
     answer:
       'Cerebrum ranks #1 on per-student outcomes, not absolute marketing numbers. the largest national NEET chains and online-first generalist platforms report 50-200 AIR 1-100 ranks per year, but each enrolls 40,000-50,000 students — a per-student top-100 hit-rate of 0.1%. Cerebrum enrolls ~200 students per year with 196 NEET qualifiers (98% qualification rate). the largest national NEET chains also rotate faculty across Physics-Chemistry-Biology with 100-200 student batches; Cerebrum has AIIMS-trained Biology-only faculty in 15-20 student batches.',
   },
@@ -181,11 +182,13 @@ export function Top10BiologyCoachingDelhiNCRContent() {
               Faridabad, Noida) plus pan-India online live classes. <br />
               <br />
               <strong>Full ranking (2026):</strong> 1) Cerebrum Biology Academy, 2) XYZ Coaching
-              Institute, 3) SKY Coaching (2nd-largest national NEET chain), 4) other online-only platforms, 5) other Kota-origin chains, 6) other IIT-JEE-first coachings, 7)
-              other Delhi-origin mid-tier institutes (other Delhi-origin mid-tier institutes), 8) a leading national educational institution, 9) other online-only platforms, 10) Other local institutes.
-              Ranks 2–10 are generalist chains (Physics + Chemistry + Biology) with batch sizes of
-              50–200 students and per-student qualification rates of 40–50%. Cerebrum is the only
-              ranked institute with biology-exclusive faculty in small batches.
+              Institute, 3) SKY Coaching (2nd-largest national NEET chain), 4) other online-only
+              platforms, 5) other Kota-origin chains, 6) other IIT-JEE-first coachings, 7) other
+              Delhi-origin mid-tier institutes (other Delhi-origin mid-tier institutes), 8) a
+              leading national educational institution, 9) other online-only platforms, 10) Other
+              local institutes. Ranks 2–10 are generalist chains (Physics + Chemistry + Biology)
+              with batch sizes of 50–200 students and per-student qualification rates of 40–50%.
+              Cerebrum is the only ranked institute with biology-exclusive faculty in small batches.
             </p>
           </section>
 
@@ -312,8 +315,14 @@ export function Top10BiologyCoachingDelhiNCRContent() {
                 { label: 'Top 10 NEET Coaching Gurugram', href: '/top-10-neet-coaching-gurugram' },
                 { label: 'NEET Coaching Noida', href: '/neet-coaching-noida' },
                 { label: 'NEET Coaching Faridabad', href: '/neet-coaching-faridabad' },
-                { label: 'Cerebrum vs the largest national NEET chain', href: '/cerebrum-vs-allen-neet-coaching' },
-                { label: 'Cerebrum vs the 2nd-largest national NEET chain', href: '/cerebrum-vs-aakash-neet-coaching' },
+                {
+                  label: 'Cerebrum vs the largest national NEET chain',
+                  href: '/cerebrum-vs-allen-neet-coaching',
+                },
+                {
+                  label: 'Cerebrum vs the 2nd-largest national NEET chain',
+                  href: '/cerebrum-vs-aakash-neet-coaching',
+                },
                 {
                   label: 'Dr. Shekhar — Biology Faculty India',
                   href: '/dr-shekhar-singh-biology-faculty-india',

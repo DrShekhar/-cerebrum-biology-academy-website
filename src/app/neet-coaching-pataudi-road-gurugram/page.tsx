@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Pataudi Road Gurugram | 20 Min Drive',
-    description: 'Best NEET coaching near Pataudi Road Gurugram (Gurgaon). Just 20 min drive to M2K Sector 51. Emerging residential area with affordable housing. AIIMS faculty, 98% success. Call 88264-44334!',
+    description:
+      'Best NEET coaching near Pataudi Road Gurugram (Gurgaon). Just 20 min drive to M2K Sector 51. Emerging residential area with affordable housing. AIIMS faculty, 98% success. Call 88264-44334!',
   },
 }
 
@@ -81,7 +82,11 @@ export default function NEETCoachingPataudiRoadGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-lime-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

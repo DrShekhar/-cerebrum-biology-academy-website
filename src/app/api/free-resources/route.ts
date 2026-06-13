@@ -62,14 +62,17 @@ export async function GET(request: NextRequest) {
     const announcements = resources.filter((r) => r.type === 'ANNOUNCEMENT' && r.priority > 0)
     const otherResources = resources.filter((r) => r.type !== 'ANNOUNCEMENT' || r.priority === 0)
 
-    return NextResponse.json({
-      success: true,
-      announcements,
-      resources: otherResources,
-      total: resources.length,
-    }, {
-      headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
-    })
+    return NextResponse.json(
+      {
+        success: true,
+        announcements,
+        resources: otherResources,
+        total: resources.length,
+      },
+      {
+        headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
+      }
+    )
   } catch (error) {
     console.error('Error fetching free resources:', error)
     return NextResponse.json(

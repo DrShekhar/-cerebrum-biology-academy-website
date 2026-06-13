@@ -1,6 +1,16 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MapPin, Monitor, Users, Trophy, Star, Building2, MessageCircle, CheckCircle } from 'lucide-react'
+import {
+  Phone,
+  MapPin,
+  Monitor,
+  Users,
+  Trophy,
+  Star,
+  Building2,
+  MessageCircle,
+  CheckCircle,
+} from 'lucide-react'
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 import { notFound } from 'next/navigation'
 
@@ -23,7 +33,8 @@ const societyData: Record<string, SocietyData> = {
     slug: 'godrej-woods',
     sector: '43',
     area: 'Noida',
-    description: 'Premium residential society in Sector 43 with excellent connectivity to Noida Expressway.',
+    description:
+      'Premium residential society in Sector 43 with excellent connectivity to Noida Expressway.',
     studentCount: '35+',
     coordinates: { lat: '28.5720', lng: '77.3560' },
     nearbyLandmarks: ['Noida Expressway', 'Sector 44 Metro', 'Gardens Galleria'],
@@ -31,15 +42,18 @@ const societyData: Record<string, SocietyData> = {
     faqs: [
       {
         question: 'Is there NEET coaching near Godrej Woods Noida?',
-        answer: 'We offer online NEET Biology classes for Godrej Woods residents. Live interactive sessions from home with instant doubt resolution. Our South Extension center is 45 minutes away for hybrid mode.',
+        answer:
+          'We offer online NEET Biology classes for Godrej Woods residents. Live interactive sessions from home with instant doubt resolution. Our South Extension center is 45 minutes away for hybrid mode.',
       },
       {
         question: 'What is the fee for NEET coaching for Godrej Woods students?',
-        answer: 'Online Biology classes: Rs 48,000/year. Hybrid mode (online + weekend offline): Rs 58,000/year. EMI options available.',
+        answer:
+          'Online Biology classes: Rs 48,000/year. Hybrid mode (online + weekend offline): Rs 58,000/year. EMI options available.',
       },
       {
         question: 'How many students from Godrej Woods are enrolled?',
-        answer: '35+ students from Godrej Woods and nearby Sector 43 societies are currently enrolled in our online NEET Biology program.',
+        answer:
+          '35+ students from Godrej Woods and nearby Sector 43 societies are currently enrolled in our online NEET Biology program.',
       },
     ],
   },
@@ -56,15 +70,18 @@ const societyData: Record<string, SocietyData> = {
     faqs: [
       {
         question: 'Is there NEET coaching near Mahagun Moderne?',
-        answer: 'Yes! We offer online NEET Biology classes for Mahagun Moderne residents. 55+ students already enrolled. Hybrid mode with weekend offline at South Extension available.',
+        answer:
+          'Yes! We offer online NEET Biology classes for Mahagun Moderne residents. 55+ students already enrolled. Hybrid mode with weekend offline at South Extension available.',
       },
       {
         question: 'What is the fee for NEET coaching for Mahagun Moderne students?',
-        answer: 'Online Biology classes: Rs 48,000/year. Hybrid mode: Rs 58,000/year. All include AIIMS faculty, study material, and doubt support.',
+        answer:
+          'Online Biology classes: Rs 48,000/year. Hybrid mode: Rs 58,000/year. All include AIIMS faculty, study material, and doubt support.',
       },
       {
         question: 'How do online classes work for Mahagun Moderne students?',
-        answer: 'Live interactive classes on Zoom, recorded lectures for revision, WhatsApp doubt support, AI-powered study tools. Study from your Mahagun Moderne home with no commute.',
+        answer:
+          'Live interactive classes on Zoom, recorded lectures for revision, WhatsApp doubt support, AI-powered study tools. Study from your Mahagun Moderne home with no commute.',
       },
     ],
   },
@@ -73,7 +90,8 @@ const societyData: Record<string, SocietyData> = {
     slug: 'supertech-eco-village',
     sector: '1',
     area: 'Greater Noida West',
-    description: 'Large residential complex in Greater Noida West (Noida Extension) with affordable housing.',
+    description:
+      'Large residential complex in Greater Noida West (Noida Extension) with affordable housing.',
     studentCount: '70+',
     coordinates: { lat: '28.5980', lng: '77.4380' },
     nearbyLandmarks: ['Gaur City', 'Pari Chowk', 'Greater Noida Expressway'],
@@ -81,15 +99,18 @@ const societyData: Record<string, SocietyData> = {
     faqs: [
       {
         question: 'Is there NEET coaching near Supertech Eco Village?',
-        answer: 'We offer online NEET Biology classes for Supertech Eco Village students. 70+ students from Greater Noida West are enrolled. Perfect for Noida Extension residents.',
+        answer:
+          'We offer online NEET Biology classes for Supertech Eco Village students. 70+ students from Greater Noida West are enrolled. Perfect for Noida Extension residents.',
       },
       {
         question: 'What is the fee for NEET coaching for Eco Village students?',
-        answer: 'Online Biology classes: Rs 48,000/year. This is the most affordable option for Greater Noida West students compared to traveling to Delhi/Noida.',
+        answer:
+          'Online Biology classes: Rs 48,000/year. This is the most affordable option for Greater Noida West students compared to traveling to Delhi/Noida.',
       },
       {
         question: 'Do you have any students from Supertech Eco Village?',
-        answer: 'Yes! 70+ students from Supertech Eco Village and nearby Greater Noida West societies are currently enrolled. Many have scored 650+ in NEET.',
+        answer:
+          'Yes! 70+ students from Supertech Eco Village and nearby Greater Noida West societies are currently enrolled. Many have scored 650+ in NEET.',
       },
     ],
   },
@@ -106,15 +127,18 @@ const societyData: Record<string, SocietyData> = {
     faqs: [
       {
         question: 'Is there NEET coaching near Logix Blossom County?',
-        answer: 'We offer online NEET Biology classes for Logix Blossom County residents in Sector 137. Live interactive sessions with AIIMS faculty.',
+        answer:
+          'We offer online NEET Biology classes for Logix Blossom County residents in Sector 137. Live interactive sessions with AIIMS faculty.',
       },
       {
         question: 'What is the fee for NEET coaching for Sector 137 students?',
-        answer: 'Online Biology classes: Rs 48,000/year. Hybrid mode with weekend offline at South Extension: Rs 58,000/year.',
+        answer:
+          'Online Biology classes: Rs 48,000/year. Hybrid mode with weekend offline at South Extension: Rs 58,000/year.',
       },
       {
         question: 'How many students from Logix Blossom County are enrolled?',
-        answer: '40+ students from Logix Blossom County and nearby Sector 137 societies are enrolled in our NEET Biology program.',
+        answer:
+          '40+ students from Logix Blossom County and nearby Sector 137 societies are enrolled in our NEET Biology program.',
       },
     ],
   },
@@ -131,15 +155,18 @@ const societyData: Record<string, SocietyData> = {
     faqs: [
       {
         question: 'Is there NEET coaching near Ace City Greater Noida?',
-        answer: 'We offer online NEET Biology classes for Ace City residents. 45+ students from Ace City and nearby societies are enrolled.',
+        answer:
+          'We offer online NEET Biology classes for Ace City residents. 45+ students from Ace City and nearby societies are enrolled.',
       },
       {
         question: 'What is the fee for NEET coaching for Ace City students?',
-        answer: 'Online Biology classes: Rs 48,000/year. Perfect for Greater Noida West students who want quality coaching without commuting.',
+        answer:
+          'Online Biology classes: Rs 48,000/year. Perfect for Greater Noida West students who want quality coaching without commuting.',
       },
       {
         question: 'Do online classes work well for Greater Noida West students?',
-        answer: 'Absolutely! 70% of our Greater Noida West students prefer online mode. Save 2-3 hours daily on commute and study from home.',
+        answer:
+          'Absolutely! 70% of our Greater Noida West students prefer online mode. Save 2-3 hours daily on commute and study from home.',
       },
     ],
   },
@@ -156,15 +183,18 @@ const societyData: Record<string, SocietyData> = {
     faqs: [
       {
         question: 'Is there NEET coaching near Gulshan Dynasty Sector 144?',
-        answer: 'We offer online NEET Biology classes for Gulshan Dynasty residents. Premium quality coaching from home.',
+        answer:
+          'We offer online NEET Biology classes for Gulshan Dynasty residents. Premium quality coaching from home.',
       },
       {
         question: 'What is the fee for NEET coaching for Sector 144 students?',
-        answer: 'Online Biology classes: Rs 48,000-98,000/year depending on batch tier. Premium Pinnacle batch available.',
+        answer:
+          'Online Biology classes: Rs 48,000-98,000/year depending on batch tier. Premium Pinnacle batch available.',
       },
       {
         question: 'How many students from Gulshan Dynasty are enrolled?',
-        answer: '25+ students from Gulshan Dynasty and nearby premium societies in Sector 144 area are enrolled.',
+        answer:
+          '25+ students from Gulshan Dynasty and nearby premium societies in Sector 144 area are enrolled.',
       },
     ],
   },
@@ -181,15 +211,18 @@ const societyData: Record<string, SocietyData> = {
     faqs: [
       {
         question: 'Is there NEET coaching near Eldeco Utopia Noida?',
-        answer: 'We offer online NEET Biology classes for Eldeco Utopia residents in Sector 93A. AIIMS faculty, small batches.',
+        answer:
+          'We offer online NEET Biology classes for Eldeco Utopia residents in Sector 93A. AIIMS faculty, small batches.',
       },
       {
         question: 'What is the fee for NEET coaching for Sector 93A students?',
-        answer: 'Online Biology classes: Rs 48,000/year. Hybrid mode with South Extension: Rs 58,000/year.',
+        answer:
+          'Online Biology classes: Rs 48,000/year. Hybrid mode with South Extension: Rs 58,000/year.',
       },
       {
         question: 'How many students from Eldeco Utopia are enrolled?',
-        answer: '30+ students from Eldeco Utopia and nearby Sector 93 societies are enrolled in our NEET Biology program.',
+        answer:
+          '30+ students from Eldeco Utopia and nearby Sector 93 societies are enrolled in our NEET Biology program.',
       },
     ],
   },
@@ -206,15 +239,18 @@ const societyData: Record<string, SocietyData> = {
     faqs: [
       {
         question: 'Is there NEET coaching near Paras Tierea Sector 137?',
-        answer: 'We offer online NEET Biology classes for Paras Tierea residents. Perfect for Sector 137 students.',
+        answer:
+          'We offer online NEET Biology classes for Paras Tierea residents. Perfect for Sector 137 students.',
       },
       {
         question: 'What is the fee for NEET coaching for Paras Tierea students?',
-        answer: 'Online Biology classes: Rs 48,000/year. All include AIIMS faculty, study material, and AI-powered tools.',
+        answer:
+          'Online Biology classes: Rs 48,000/year. All include AIIMS faculty, study material, and AI-powered tools.',
       },
       {
         question: 'How do online classes work for Paras Tierea students?',
-        answer: 'Live Zoom classes, recorded lectures, WhatsApp doubt support, weekly tests. Study from your Paras Tierea home.',
+        answer:
+          'Live Zoom classes, recorded lectures, WhatsApp doubt support, weekly tests. Study from your Paras Tierea home.',
       },
     ],
   },
@@ -231,15 +267,18 @@ const societyData: Record<string, SocietyData> = {
     faqs: [
       {
         question: 'Is there NEET coaching near Prateek Grand City?',
-        answer: 'We offer online NEET Biology classes for Prateek Grand City residents. 50+ students from NH-24 area are enrolled.',
+        answer:
+          'We offer online NEET Biology classes for Prateek Grand City residents. 50+ students from NH-24 area are enrolled.',
       },
       {
         question: 'What is the fee for NEET coaching for Prateek Grand City students?',
-        answer: 'Online Biology classes: Rs 48,000/year. Best option for NH-24 area students to avoid traffic.',
+        answer:
+          'Online Biology classes: Rs 48,000/year. Best option for NH-24 area students to avoid traffic.',
       },
       {
         question: 'Do you have students from Ghaziabad/NH-24 area?',
-        answer: 'Yes! 100+ students from Ghaziabad, Indirapuram, and NH-24 area are enrolled. Online mode is perfect for avoiding traffic.',
+        answer:
+          'Yes! 100+ students from Ghaziabad, Indirapuram, and NH-24 area are enrolled. Online mode is perfect for avoiding traffic.',
       },
     ],
   },
@@ -291,11 +330,7 @@ export async function generateMetadata({
   }
 }
 
-export default async function SocietyPage({
-  params,
-}: {
-  params: Promise<{ society: string }>
-}) {
+export default async function SocietyPage({ params }: { params: Promise<{ society: string }> }) {
   const { society } = await params
   const data = societyData[society]
 
@@ -310,14 +345,16 @@ export default async function SocietyPage({
         <div className="container mx-auto px-4 text-center">
           <span className="inline-flex items-center gap-2 bg-yellow-500 text-teal-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
             <Building2 className="w-4 h-4" />
-            {data.sector !== 'NH-24' ? `Sector ${data.sector}, ${data.area}` : `${data.sector} Area`}
+            {data.sector !== 'NH-24'
+              ? `Sector ${data.sector}, ${data.area}`
+              : `${data.sector} Area`}
           </span>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             NEET Coaching for {data.name} Students
           </h1>
           <p className="text-xl text-teal-100 mb-6 max-w-2xl mx-auto">
-            Online Biology classes from your {data.name} home. {data.studentCount} students enrolled.
-            Hybrid mode with South Extension available.
+            Online Biology classes from your {data.name} home. {data.studentCount} students
+            enrolled. Hybrid mode with South Extension available.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -406,7 +443,9 @@ export default async function SocietyPage({
             <div className="bg-white rounded-2xl p-6 border-2 border-teal-200 shadow-md">
               <Monitor className="w-10 h-10 text-teal-600 mb-4" />
               <h3 className="text-xl font-bold mb-2">100% Online</h3>
-              <p className="text-gray-600 mb-4">Live classes from your {data.name} home. Most popular.</p>
+              <p className="text-gray-600 mb-4">
+                Live classes from your {data.name} home. Most popular.
+              </p>
               <p className="text-2xl font-bold text-teal-700">Rs 48,000/year</p>
             </div>
             <div className="bg-yellow-400 rounded-2xl p-6 relative shadow-lg">
@@ -484,7 +523,10 @@ export default async function SocietyPage({
         breadcrumbs={[
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
           { name: data.area, url: `https://cerebrumbiologyacademy.com/locations/noida` },
-          { name: data.name, url: `https://cerebrumbiologyacademy.com/neet-coaching-noida-society/${data.slug}` },
+          {
+            name: data.name,
+            url: `https://cerebrumbiologyacademy.com/neet-coaching-noida-society/${data.slug}`,
+          },
         ]}
         customFAQs={data.faqs}
         coordinates={data.coordinates}

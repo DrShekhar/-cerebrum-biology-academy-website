@@ -235,9 +235,7 @@ export default function NEETBiologyPage() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <div
-              className="text-center max-w-4xl mx-auto animate-fadeInUp"
-            >
+            <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
                 <BookOpen className="w-5 h-5" />
                 <span className="font-medium">Complete NEET Biology Syllabus</span>
@@ -254,7 +252,9 @@ export default function NEETBiologyPage() {
 
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20biology.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
                 >
                   Start Free Demo
@@ -299,9 +299,7 @@ export default function NEETBiologyPage() {
         {/* Chapter List by Units */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 NEET Biology Chapters by Unit
               </h2>
@@ -356,9 +354,7 @@ export default function NEETBiologyPage() {
         {/* Why Choose Us */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Why Study NEET Biology with Cerebrum?
               </h2>
@@ -397,8 +393,7 @@ export default function NEETBiologyPage() {
         {/* CTA Section */}
         <section className="py-16 bg-[#4a5d4a] text-white">
           <div className="container mx-auto px-4 text-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl font-bold mb-4">Ready to Master NEET Biology?</h2>
               <p className="text-green-100 mb-8 max-w-2xl mx-auto">
                 Join Cerebrum Biology Academy and get expert guidance for all {totalChapters}{' '}
@@ -406,7 +401,9 @@ export default function NEETBiologyPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20biology.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
                 >
                   Book Free Demo Class

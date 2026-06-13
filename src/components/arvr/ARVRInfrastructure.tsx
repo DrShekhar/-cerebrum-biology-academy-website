@@ -476,9 +476,7 @@ const ARVRInfrastructure: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
-      <div
-        className="text-center space-y-4 animate-fadeInUp"
-      >
+      <div className="text-center space-y-4 animate-fadeInUp">
         <div className="flex items-center justify-center gap-3">
           <div className="p-3 bg-indigo-500 rounded-xl">
             <Glasses className="w-8 h-8 text-white" />
@@ -586,391 +584,378 @@ const ARVRInfrastructure: React.FC = () => {
       </div>
 
       {/* Content */}
-{/* Experiences Tab */}
-        {activeTab === 'experiences' && (
-          <div
-            key="experiences"
-            className="space-y-6 animate-fadeInUp"
-          >
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4">Available AR/VR Experiences</h3>
-              <div className="grid gap-6">
-                {experiences.map((experience) => (
-                  <div
-                    key={experience.id}
-                    className="border rounded-lg p-6 hover:shadow-md transition-all animate-fadeInUp"
-                  >
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        {getCategoryIcon(experience.category)}
-                        <div>
-                          <h4 className="font-semibold text-gray-800">{experience.title}</h4>
-                          <p className="text-sm text-gray-600">{experience.description}</p>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span
-                          className={`px-2 py-1 text-xs rounded-full ${getTypeColor(experience.type)}`}
-                        >
-                          {experience.type.toUpperCase()}
-                        </span>
-                        <span
-                          className={`px-2 py-1 text-xs rounded-full ${getDifficultyColor(experience.difficulty)}`}
-                        >
-                          {experience.difficulty}
-                        </span>
+      {/* Experiences Tab */}
+      {activeTab === 'experiences' && (
+        <div key="experiences" className="space-y-6 animate-fadeInUp">
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4">Available AR/VR Experiences</h3>
+            <div className="grid gap-6">
+              {experiences.map((experience) => (
+                <div
+                  key={experience.id}
+                  className="border rounded-lg p-6 hover:shadow-md transition-all animate-fadeInUp"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      {getCategoryIcon(experience.category)}
+                      <div>
+                        <h4 className="font-semibold text-gray-800">{experience.title}</h4>
+                        <p className="text-sm text-gray-600">{experience.description}</p>
                       </div>
                     </div>
+                    <div className="flex items-center gap-2">
+                      <span
+                        className={`px-2 py-1 text-xs rounded-full ${getTypeColor(experience.type)}`}
+                      >
+                        {experience.type.toUpperCase()}
+                      </span>
+                      <span
+                        className={`px-2 py-1 text-xs rounded-full ${getDifficultyColor(experience.difficulty)}`}
+                      >
+                        {experience.difficulty}
+                      </span>
+                    </div>
+                  </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                      <div>
-                        <h5 className="text-sm font-medium text-gray-700 mb-2">Features:</h5>
-                        <ul className="text-xs text-gray-600 space-y-1">
-                          {experience.features.slice(0, 3).map((feature, index) => (
-                            <li key={index}>• {feature}</li>
-                          ))}
-                        </ul>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                    <div>
+                      <h5 className="text-sm font-medium text-gray-700 mb-2">Features:</h5>
+                      <ul className="text-xs text-gray-600 space-y-1">
+                        {experience.features.slice(0, 3).map((feature, index) => (
+                          <li key={index}>• {feature}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h5 className="text-sm font-medium text-gray-700 mb-2">Interactions:</h5>
+                      <div className="space-y-1">
+                        {experience.interactions.slice(0, 3).map((interaction, index) => (
+                          <div key={index} className="flex items-center gap-2">
+                            <div
+                              className={`w-2 h-2 rounded-full ${interaction.supported ? 'bg-green-600' : 'bg-red-500'}`}
+                            />
+                            <span className="text-xs text-gray-600">{interaction.type}</span>
+                          </div>
+                        ))}
                       </div>
-                      <div>
-                        <h5 className="text-sm font-medium text-gray-700 mb-2">Interactions:</h5>
-                        <div className="space-y-1">
-                          {experience.interactions.slice(0, 3).map((interaction, index) => (
-                            <div key={index} className="flex items-center gap-2">
+                    </div>
+                    <div>
+                      <h5 className="text-sm font-medium text-gray-700 mb-2">Requirements:</h5>
+                      <div className="space-y-1">
+                        {experience.requiredCapabilities.map((capability, index) => (
+                          <div key={index} className="flex items-center gap-2">
+                            <CheckCircle className="w-3 h-3 text-green-600" />
+                            <span className="text-xs text-gray-600">{capability}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-600">
+                      Duration: {experience.duration} minutes • Size:{' '}
+                      {experience.assets.reduce((sum, asset) => sum + asset.size, 0).toFixed(1)} MB
+                    </div>
+                    <div className="flex items-center gap-2">
+                      {downloadProgress.get(experience.id) === 100 ? (
+                        <button
+                          onClick={() => startXRSession(experience)}
+                          disabled={!isXRSupported}
+                          className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50"
+                        >
+                          <Play className="w-4 h-4" />
+                          Launch
+                        </button>
+                      ) : (
+                        <button
+                          onClick={() => downloadExperience(experience)}
+                          disabled={isDownloading}
+                          className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50"
+                        >
+                          <Download className="w-4 h-4" />
+                          Download
+                        </button>
+                      )}
+
+                      {downloadProgress.has(experience.id) &&
+                        downloadProgress.get(experience.id)! < 100 && (
+                          <div className="flex items-center gap-2">
+                            <div className="w-24 bg-gray-200 rounded-full h-2">
                               <div
-                                className={`w-2 h-2 rounded-full ${interaction.supported ? 'bg-green-600' : 'bg-red-500'}`}
+                                className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                                style={{ width: `${downloadProgress.get(experience.id)}%` }}
                               />
-                              <span className="text-xs text-gray-600">{interaction.type}</span>
                             </div>
-                          ))}
-                        </div>
-                      </div>
-                      <div>
-                        <h5 className="text-sm font-medium text-gray-700 mb-2">Requirements:</h5>
-                        <div className="space-y-1">
-                          {experience.requiredCapabilities.map((capability, index) => (
-                            <div key={index} className="flex items-center gap-2">
-                              <CheckCircle className="w-3 h-3 text-green-600" />
-                              <span className="text-xs text-gray-600">{capability}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <div className="text-sm text-gray-600">
-                        Duration: {experience.duration} minutes • Size:{' '}
-                        {experience.assets.reduce((sum, asset) => sum + asset.size, 0).toFixed(1)}{' '}
-                        MB
-                      </div>
-                      <div className="flex items-center gap-2">
-                        {downloadProgress.get(experience.id) === 100 ? (
-                          <button
-                            onClick={() => startXRSession(experience)}
-                            disabled={!isXRSupported}
-                            className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50"
-                          >
-                            <Play className="w-4 h-4" />
-                            Launch
-                          </button>
-                        ) : (
-                          <button
-                            onClick={() => downloadExperience(experience)}
-                            disabled={isDownloading}
-                            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50"
-                          >
-                            <Download className="w-4 h-4" />
-                            Download
-                          </button>
+                            <span className="text-xs text-gray-600">
+                              {Math.round(downloadProgress.get(experience.id) || 0)}%
+                            </span>
+                          </div>
                         )}
-
-                        {downloadProgress.has(experience.id) &&
-                          downloadProgress.get(experience.id)! < 100 && (
-                            <div className="flex items-center gap-2">
-                              <div className="w-24 bg-gray-200 rounded-full h-2">
-                                <div
-                                  className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-                                  style={{ width: `${downloadProgress.get(experience.id)}%` }}
-                                />
-                              </div>
-                              <span className="text-xs text-gray-600">
-                                {Math.round(downloadProgress.get(experience.id) || 0)}%
-                              </span>
-                            </div>
-                          )}
-                      </div>
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
-        )}
+        </div>
+      )}
 
-        {/* Capabilities Tab */}
-        {activeTab === 'capabilities' && (
-          <div
-            key="capabilities"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-          >
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Brain className="w-5 h-5 text-purple-600" />
-                AR Capabilities
-              </h3>
+      {/* Capabilities Tab */}
+      {activeTab === 'capabilities' && (
+        <div key="capabilities" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Brain className="w-5 h-5 text-purple-600" />
+              AR Capabilities
+            </h3>
 
-              <div className="space-y-4">
-                {[
-                  {
-                    name: 'Marker-based AR',
-                    supported: true,
-                    description: 'Track QR codes and markers',
-                  },
-                  {
-                    name: 'Markerless AR',
-                    supported: isARSupported,
-                    description: 'Track real-world surfaces',
-                  },
-                  {
-                    name: 'Face tracking',
-                    supported: deviceCapabilities?.camera || false,
-                    description: 'Track facial features',
-                  },
-                  {
-                    name: 'Hand tracking',
-                    supported: false,
-                    description: 'Advanced hand gesture recognition',
-                  },
-                  {
-                    name: 'Occlusion handling',
-                    supported: true,
-                    description: 'Objects hide behind real objects',
-                  },
-                ].map((capability, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+            <div className="space-y-4">
+              {[
+                {
+                  name: 'Marker-based AR',
+                  supported: true,
+                  description: 'Track QR codes and markers',
+                },
+                {
+                  name: 'Markerless AR',
+                  supported: isARSupported,
+                  description: 'Track real-world surfaces',
+                },
+                {
+                  name: 'Face tracking',
+                  supported: deviceCapabilities?.camera || false,
+                  description: 'Track facial features',
+                },
+                {
+                  name: 'Hand tracking',
+                  supported: false,
+                  description: 'Advanced hand gesture recognition',
+                },
+                {
+                  name: 'Occlusion handling',
+                  supported: true,
+                  description: 'Objects hide behind real objects',
+                },
+              ].map((capability, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                >
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <div
+                        className={`w-3 h-3 rounded-full ${capability.supported ? 'bg-green-600' : 'bg-red-500'}`}
+                      />
+                      <span className="font-medium text-gray-800">{capability.name}</span>
+                    </div>
+                    <p className="text-sm text-gray-600 mt-1">{capability.description}</p>
+                  </div>
+                  <span
+                    className={`text-xs px-2 py-1 rounded ${capability.supported ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
                   >
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <div
-                          className={`w-3 h-3 rounded-full ${capability.supported ? 'bg-green-600' : 'bg-red-500'}`}
-                        />
-                        <span className="font-medium text-gray-800">{capability.name}</span>
-                      </div>
-                      <p className="text-sm text-gray-600 mt-1">{capability.description}</p>
-                    </div>
-                    <span
-                      className={`text-xs px-2 py-1 rounded ${capability.supported ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
-                    >
-                      {capability.supported ? 'Supported' : 'Not Supported'}
-                    </span>
-                  </div>
-                ))}
-              </div>
+                    {capability.supported ? 'Supported' : 'Not Supported'}
+                  </span>
+                </div>
+              ))}
             </div>
+          </div>
 
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Glasses className="w-5 h-5 text-blue-600" />
-                VR Capabilities
-              </h3>
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Glasses className="w-5 h-5 text-blue-600" />
+              VR Capabilities
+            </h3>
 
-              <div className="space-y-4">
-                {[
-                  {
-                    name: '6DOF Tracking',
-                    supported: isXRSupported,
-                    description: 'Full positional tracking',
-                  },
-                  {
-                    name: 'Room-scale VR',
-                    supported: isXRSupported,
-                    description: 'Move around in physical space',
-                  },
-                  {
-                    name: 'Controller input',
-                    supported: isXRSupported,
-                    description: 'VR controller support',
-                  },
-                  {
-                    name: 'Hand tracking',
-                    supported: false,
-                    description: 'Direct hand interaction',
-                  },
-                  { name: 'Eye tracking', supported: false, description: 'Gaze-based interaction' },
-                ].map((capability, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+            <div className="space-y-4">
+              {[
+                {
+                  name: '6DOF Tracking',
+                  supported: isXRSupported,
+                  description: 'Full positional tracking',
+                },
+                {
+                  name: 'Room-scale VR',
+                  supported: isXRSupported,
+                  description: 'Move around in physical space',
+                },
+                {
+                  name: 'Controller input',
+                  supported: isXRSupported,
+                  description: 'VR controller support',
+                },
+                {
+                  name: 'Hand tracking',
+                  supported: false,
+                  description: 'Direct hand interaction',
+                },
+                { name: 'Eye tracking', supported: false, description: 'Gaze-based interaction' },
+              ].map((capability, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                >
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <div
+                        className={`w-3 h-3 rounded-full ${capability.supported ? 'bg-green-600' : 'bg-red-500'}`}
+                      />
+                      <span className="font-medium text-gray-800">{capability.name}</span>
+                    </div>
+                    <p className="text-sm text-gray-600 mt-1">{capability.description}</p>
+                  </div>
+                  <span
+                    className={`text-xs px-2 py-1 rounded ${capability.supported ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
                   >
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <div
-                          className={`w-3 h-3 rounded-full ${capability.supported ? 'bg-green-600' : 'bg-red-500'}`}
-                        />
-                        <span className="font-medium text-gray-800">{capability.name}</span>
-                      </div>
-                      <p className="text-sm text-gray-600 mt-1">{capability.description}</p>
-                    </div>
-                    <span
-                      className={`text-xs px-2 py-1 rounded ${capability.supported ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
-                    >
-                      {capability.supported ? 'Supported' : 'Not Supported'}
-                    </span>
-                  </div>
-                ))}
-              </div>
+                    {capability.supported ? 'Supported' : 'Not Supported'}
+                  </span>
+                </div>
+              ))}
             </div>
+          </div>
 
-            <div className="lg:col-span-2 bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4">Performance Recommendations</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="p-4 bg-green-50 rounded-lg border border-green-200">
-                  <h4 className="font-medium text-green-800 mb-2">High Performance</h4>
-                  <ul className="text-sm text-green-700 space-y-1">
-                    <li>• All VR experiences</li>
-                    <li>• Ultra quality AR</li>
-                    <li>• Complex simulations</li>
-                    <li>• Multi-user sessions</li>
-                  </ul>
-                </div>
-                <div className="p-4 bg-yellow-50 rounded-lg border border-yellow-200">
-                  <h4 className="font-medium text-yellow-800 mb-2">Medium Performance</h4>
-                  <ul className="text-sm text-yellow-700 space-y-1">
-                    <li>• Basic VR experiences</li>
-                    <li>• Standard AR quality</li>
-                    <li>• Simple interactions</li>
-                    <li>• Single-user mode</li>
-                  </ul>
-                </div>
-                <div className="p-4 bg-red-50 rounded-lg border border-red-200">
-                  <h4 className="font-medium text-red-800 mb-2">Low Performance</h4>
-                  <ul className="text-sm text-red-700 space-y-1">
-                    <li>• AR experiences only</li>
-                    <li>• Low quality models</li>
-                    <li>• Basic interactions</li>
-                    <li>• Limited features</li>
-                  </ul>
-                </div>
+          <div className="lg:col-span-2 bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4">Performance Recommendations</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="p-4 bg-green-50 rounded-lg border border-green-200">
+                <h4 className="font-medium text-green-800 mb-2">High Performance</h4>
+                <ul className="text-sm text-green-700 space-y-1">
+                  <li>• All VR experiences</li>
+                  <li>• Ultra quality AR</li>
+                  <li>• Complex simulations</li>
+                  <li>• Multi-user sessions</li>
+                </ul>
+              </div>
+              <div className="p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+                <h4 className="font-medium text-yellow-800 mb-2">Medium Performance</h4>
+                <ul className="text-sm text-yellow-700 space-y-1">
+                  <li>• Basic VR experiences</li>
+                  <li>• Standard AR quality</li>
+                  <li>• Simple interactions</li>
+                  <li>• Single-user mode</li>
+                </ul>
+              </div>
+              <div className="p-4 bg-red-50 rounded-lg border border-red-200">
+                <h4 className="font-medium text-red-800 mb-2">Low Performance</h4>
+                <ul className="text-sm text-red-700 space-y-1">
+                  <li>• AR experiences only</li>
+                  <li>• Low quality models</li>
+                  <li>• Basic interactions</li>
+                  <li>• Limited features</li>
+                </ul>
               </div>
             </div>
           </div>
-        )}
+        </div>
+      )}
 
-        {/* Setup Guide Tab */}
-        {activeTab === 'setup' && (
-          <div
-            key="setup"
-            className="space-y-6 animate-fadeInUp"
-          >
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <BookOpen className="w-5 h-5 text-green-600" />
-                Getting Started with AR/VR Biology
-              </h3>
+      {/* Setup Guide Tab */}
+      {activeTab === 'setup' && (
+        <div key="setup" className="space-y-6 animate-fadeInUp">
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <BookOpen className="w-5 h-5 text-green-600" />
+              Getting Started with AR/VR Biology
+            </h3>
 
-              <div className="space-y-6">
-                <div className="border-l-4 border-blue-500 pl-4">
-                  <h4 className="font-semibold text-gray-800 mb-2">
-                    Step 1: Check Browser Compatibility
-                  </h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Use Chrome 79+ or Firefox 70+ for best WebXR support</li>
-                    <li>• Enable WebXR flags in browser settings</li>
-                    <li>• Allow camera and microphone permissions</li>
-                    <li>• Ensure hardware acceleration is enabled</li>
-                  </ul>
-                </div>
-
-                <div className="border-l-4 border-green-600 pl-4">
-                  <h4 className="font-semibold text-gray-800 mb-2">
-                    Step 2: Prepare Your Environment
-                  </h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Ensure good lighting for AR experiences</li>
-                    <li>• Clear physical space for VR (2m x 2m minimum)</li>
-                    <li>• Use headphones for better audio immersion</li>
-                    <li>• Stable internet connection for downloads</li>
-                  </ul>
-                </div>
-
-                <div className="border-l-4 border-purple-500 pl-4">
-                  <h4 className="font-semibold text-gray-800 mb-2">
-                    Step 3: Select Learning Experience
-                  </h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Start with beginner-level experiences</li>
-                    <li>• Download content for offline access</li>
-                    <li>• Check device performance recommendations</li>
-                    <li>• Review learning objectives before starting</li>
-                  </ul>
-                </div>
-
-                <div className="border-l-4 border-orange-500 pl-4">
-                  <h4 className="font-semibold text-gray-800 mb-2">Step 4: Safety Guidelines</h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Take breaks every 20-30 minutes</li>
-                    <li>• Stop if you feel motion sickness</li>
-                    <li>• Be aware of your physical surroundings</li>
-                    <li>• Keep emergency exit strategy ready</li>
-                  </ul>
-                </div>
+            <div className="space-y-6">
+              <div className="border-l-4 border-blue-500 pl-4">
+                <h4 className="font-semibold text-gray-800 mb-2">
+                  Step 1: Check Browser Compatibility
+                </h4>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Use Chrome 79+ or Firefox 70+ for best WebXR support</li>
+                  <li>• Enable WebXR flags in browser settings</li>
+                  <li>• Allow camera and microphone permissions</li>
+                  <li>• Ensure hardware acceleration is enabled</li>
+                </ul>
               </div>
-            </div>
 
-            {/* Troubleshooting */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4">Common Issues & Solutions</h3>
-              <div className="space-y-4">
-                {[
-                  {
-                    issue: 'AR not detecting surfaces',
-                    solution:
-                      'Ensure good lighting, move device slowly, point at textured surfaces',
-                  },
-                  {
-                    issue: 'VR tracking is jittery',
-                    solution: 'Clean device sensors, ensure stable lighting, restart browser',
-                  },
-                  {
-                    issue: 'Low performance/lag',
-                    solution:
-                      'Close other applications, reduce quality settings, check internet speed',
-                  },
-                  {
-                    issue: 'Content not loading',
-                    solution: 'Check internet connection, clear browser cache, disable ad blockers',
-                  },
-                ].map((item, index) => (
-                  <div key={index} className="p-3 bg-gray-50 rounded-lg">
-                    <h5 className="font-medium text-gray-800">{item.issue}</h5>
-                    <p className="text-sm text-gray-600 mt-1">{item.solution}</p>
-                  </div>
-                ))}
+              <div className="border-l-4 border-green-600 pl-4">
+                <h4 className="font-semibold text-gray-800 mb-2">
+                  Step 2: Prepare Your Environment
+                </h4>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Ensure good lighting for AR experiences</li>
+                  <li>• Clear physical space for VR (2m x 2m minimum)</li>
+                  <li>• Use headphones for better audio immersion</li>
+                  <li>• Stable internet connection for downloads</li>
+                </ul>
+              </div>
+
+              <div className="border-l-4 border-purple-500 pl-4">
+                <h4 className="font-semibold text-gray-800 mb-2">
+                  Step 3: Select Learning Experience
+                </h4>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Start with beginner-level experiences</li>
+                  <li>• Download content for offline access</li>
+                  <li>• Check device performance recommendations</li>
+                  <li>• Review learning objectives before starting</li>
+                </ul>
+              </div>
+
+              <div className="border-l-4 border-orange-500 pl-4">
+                <h4 className="font-semibold text-gray-800 mb-2">Step 4: Safety Guidelines</h4>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Take breaks every 20-30 minutes</li>
+                  <li>• Stop if you feel motion sickness</li>
+                  <li>• Be aware of your physical surroundings</li>
+                  <li>• Keep emergency exit strategy ready</li>
+                </ul>
               </div>
             </div>
           </div>
-        )}
-{/* Hidden canvas for XR rendering */}
+
+          {/* Troubleshooting */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4">Common Issues & Solutions</h3>
+            <div className="space-y-4">
+              {[
+                {
+                  issue: 'AR not detecting surfaces',
+                  solution: 'Ensure good lighting, move device slowly, point at textured surfaces',
+                },
+                {
+                  issue: 'VR tracking is jittery',
+                  solution: 'Clean device sensors, ensure stable lighting, restart browser',
+                },
+                {
+                  issue: 'Low performance/lag',
+                  solution:
+                    'Close other applications, reduce quality settings, check internet speed',
+                },
+                {
+                  issue: 'Content not loading',
+                  solution: 'Check internet connection, clear browser cache, disable ad blockers',
+                },
+              ].map((item, index) => (
+                <div key={index} className="p-3 bg-gray-50 rounded-lg">
+                  <h5 className="font-medium text-gray-800">{item.issue}</h5>
+                  <p className="text-sm text-gray-600 mt-1">{item.solution}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+      {/* Hidden canvas for XR rendering */}
       <canvas ref={canvasRef} className="hidden" />
 
       {/* Error Display */}
-{error && (
-          <div
-            className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center gap-3 animate-fadeInUp"
+      {error && (
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center gap-3 animate-fadeInUp">
+          <AlertCircle className="w-5 h-5 text-red-500" />
+          <span className="text-red-700">{error}</span>
+          <button
+            onClick={() => setError(null)}
+            className="ml-auto text-red-500 hover:text-red-700"
           >
-            <AlertCircle className="w-5 h-5 text-red-500" />
-            <span className="text-red-700">{error}</span>
-            <button
-              onClick={() => setError(null)}
-              className="ml-auto text-red-500 hover:text-red-700"
-            >
-              ×
-            </button>
-          </div>
-        )}
-</div>
+            ×
+          </button>
+        </div>
+      )}
+    </div>
   )
 }
 

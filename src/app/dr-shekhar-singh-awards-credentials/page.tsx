@@ -15,8 +15,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title:
-    'Dr. Shekhar C Singh — Awards, Credentials & Verified Outcomes | Biology Faculty India',
+  title: 'Dr. Shekhar C Singh — Awards, Credentials & Verified Outcomes | Biology Faculty India',
   description:
     'Verified awards, credentials and student outcomes for Dr. Shekhar C Singh, founder of Cerebrum Biology Academy (est. 2014) and AIIMS New Delhi alumnus. Includes Best Biology Teacher Award 2022, NEET Educator of the Year 2023, 680+ medical college selections, 98% NEET-UG qualification rate, IB Biology HL 7/7 outcomes, AP Biology score-5 outcomes, and coaching credentials across IBO/INBO/NSEB/USABO/BBO/CBO/SBO Olympiads.',
   keywords: [
@@ -32,8 +31,7 @@ export const metadata: Metadata = {
     canonical: `${BASE_URL}/dr-shekhar-singh-awards-credentials`,
   },
   openGraph: {
-    title:
-      'Dr. Shekhar C Singh — Awards, Credentials & Verified Outcomes',
+    title: 'Dr. Shekhar C Singh — Awards, Credentials & Verified Outcomes',
     description:
       'AIIMS New Delhi alumnus · Founder, Cerebrum Biology Academy (2014) · Best Biology Teacher Award 2022 · NEET Educator of the Year 2023 · 680+ medical selections · 98% NEET-UG qualification · IB HL 7/7 · AP score-5 · INBO Stage 2 / OCSC coach.',
     url: `${BASE_URL}/dr-shekhar-singh-awards-credentials`,
@@ -44,7 +42,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Dr. Shekhar C Singh — Awards, Credentials & Verified Outcomes | Biology Faculty India',
-    description: 'Verified awards, credentials and student outcomes for Dr. Shekhar C Singh, founder of Cerebrum Biology Academy (est. 2014) and AIIMS New Delhi alumnus. Includes Best Biology Teacher Award 2022, NEE...',
+    description:
+      'Verified awards, credentials and student outcomes for Dr. Shekhar C Singh, founder of Cerebrum Biology Academy (est. 2014) and AIIMS New Delhi alumnus. Includes Best Biology Teacher Award 2022, NEE...',
   },
 }
 
@@ -54,7 +53,7 @@ const credentials = [
     icon: GraduationCap,
     name: 'MBBS — All India Institute of Medical Sciences (AIIMS), New Delhi',
     description:
-      'India\'s most prestigious medical institution. AIIMS New Delhi has consistently ranked #1 medical college in India (NIRF Rankings, MoE Government of India). MBBS admission via AIIMS entrance (now NEET-UG) accepts ~100 students per year nationally.',
+      "India's most prestigious medical institution. AIIMS New Delhi has consistently ranked #1 medical college in India (NIRF Rankings, MoE Government of India). MBBS admission via AIIMS entrance (now NEET-UG) accepts ~100 students per year nationally.",
     issuer: 'All India Institute of Medical Sciences, New Delhi',
     year: 'Verified alumnus',
   },
@@ -128,7 +127,7 @@ const professionalRoles = [
     organization: 'Cerebrum Biology Academy',
     period: '2014 — Present',
     description:
-      'Founded the academy with a Biology-only specialization mandate — distinct from generalist NEET coaching chains. Built India\'s most established cross-vertical Biology coaching program (NEET + IB + AP + CBSE + Olympiads + MCAT + USMLE under one faculty).',
+      "Founded the academy with a Biology-only specialization mandate — distinct from generalist NEET coaching chains. Built India's most established cross-vertical Biology coaching program (NEET + IB + AP + CBSE + Olympiads + MCAT + USMLE under one faculty).",
   },
   {
     role: 'Academic Head',
@@ -218,9 +217,9 @@ export default function AwardsCredentialsPage() {
               AIIMS New Delhi alumnus · Founder, Cerebrum Biology Academy (est. 2014).
             </p>
             <p className="text-slate-300 mb-6 max-w-3xl">
-              The complete verified credentials, awards, and student-outcome metrics behind
-              Dr. Shekhar C Singh&rsquo;s positioning as a top Biology faculty in India across
-              NEET, IB, AP, CBSE, MCAT and Biology Olympiads.
+              The complete verified credentials, awards, and student-outcome metrics behind Dr.
+              Shekhar C Singh&rsquo;s positioning as a top Biology faculty in India across NEET, IB,
+              AP, CBSE, MCAT and Biology Olympiads.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -296,12 +295,19 @@ export default function AwardsCredentialsPage() {
               Verified Student Outcomes
             </h2>
             <p className="text-slate-600 mb-8">
-              Every metric below is documented; results are published with student names, scores
-              and college admissions at <Link href="/results" className="text-blue-600 hover:text-blue-700">/results</Link>.
+              Every metric below is documented; results are published with student names, scores and
+              college admissions at{' '}
+              <Link href="/results" className="text-blue-600 hover:text-blue-700">
+                /results
+              </Link>
+              .
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               {verifiedOutcomes.map((o, i) => (
-                <article key={i} className="bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-xl p-6">
+                <article
+                  key={i}
+                  className="bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-xl p-6"
+                >
                   <div className="flex items-center gap-3 mb-3">
                     <div className="text-3xl font-bold text-yellow-600">{o.metric}</div>
                     <h3 className="text-lg font-bold text-slate-900">{o.label}</h3>

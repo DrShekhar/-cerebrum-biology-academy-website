@@ -26,8 +26,8 @@ export function MTFCard({
   onReportError,
   freeUserId,
 }: MTFCardProps) {
-  const [selections, setSelections] = useState<(boolean | null)[]>(
-    () => question.options.map(() => null)
+  const [selections, setSelections] = useState<(boolean | null)[]>(() =>
+    question.options.map(() => null)
   )
   const [result, setResult] = useState<AnswerResult | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -133,7 +133,15 @@ export function MTFCard({
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [isAnswered, isSubmitting, selections, allSelected, handleToggle, handleSubmit, question.options.length])
+  }, [
+    isAnswered,
+    isSubmitting,
+    selections,
+    allSelected,
+    handleToggle,
+    handleSubmit,
+    question.options.length,
+  ])
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60)
@@ -244,9 +252,7 @@ export function MTFCard({
 
       <div className="mb-4">
         <p className="text-lg text-ink leading-relaxed font-medium">{question.question}</p>
-        <p className="text-xs text-stone-500 mt-1">
-          Mark each statement as True or False
-        </p>
+        <p className="text-xs text-stone-500 mt-1">Mark each statement as True or False</p>
       </div>
 
       <div className="space-y-2.5" role="group" aria-label="Statements to evaluate">

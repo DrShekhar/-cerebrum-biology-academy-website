@@ -51,12 +51,14 @@ export interface CBOCityTemplateProps {
 const cboPathway = [
   {
     stage: 'CBO Open / Qualifying Round',
-    detail: 'School-administered exam, typically in early spring. Qualifying score advances to the National round.',
+    detail:
+      'School-administered exam, typically in early spring. Qualifying score advances to the National round.',
     icon: BookOpen,
   },
   {
     stage: 'CBO National Round',
-    detail: 'Theory + applied biology. Top performers nationally are invited to the IBO selection camp.',
+    detail:
+      'Theory + applied biology. Top performers nationally are invited to the IBO selection camp.',
     icon: Microscope,
   },
   {
@@ -66,7 +68,8 @@ const cboPathway = [
   },
   {
     stage: 'IBO Team Canada',
-    detail: 'Top 4 represent Canada at the International Biology Olympiad alongside teams from 80+ countries.',
+    detail:
+      'Top 4 represent Canada at the International Biology Olympiad alongside teams from 80+ countries.',
     icon: Award,
   },
 ]
@@ -144,26 +147,65 @@ export default function CBOCityTemplate({
     url: pageUrl,
     inLanguage: 'en-CA',
     educationalLevel: 'Biology Olympiad',
-    provider: { '@type': 'EducationalOrganization', '@id': 'https://cerebrumbiologyacademy.com/#organization', name: 'Cerebrum Biology Academy' },
+    provider: {
+      '@type': 'EducationalOrganization',
+      '@id': 'https://cerebrumbiologyacademy.com/#organization',
+      name: 'Cerebrum Biology Academy',
+    },
     offers: [
-      { '@type': 'Offer', name: 'Pinnacle', price: '1125', priceCurrency: 'CAD', description: '12-month full CBO + IBO track', url: pageUrl },
-      { '@type': 'Offer', name: 'Ascent', price: '675', priceCurrency: 'CAD', description: '6-month intensive', url: pageUrl },
-      { '@type': 'Offer', name: 'Pursuit', price: '375', priceCurrency: 'CAD', description: '3-month qualifying-round prep', url: pageUrl },
+      {
+        '@type': 'Offer',
+        name: 'Pinnacle',
+        price: '1125',
+        priceCurrency: 'CAD',
+        description: '12-month full CBO + IBO track',
+        url: pageUrl,
+      },
+      {
+        '@type': 'Offer',
+        name: 'Ascent',
+        price: '675',
+        priceCurrency: 'CAD',
+        description: '6-month intensive',
+        url: pageUrl,
+      },
+      {
+        '@type': 'Offer',
+        name: 'Pursuit',
+        price: '375',
+        priceCurrency: 'CAD',
+        description: '3-month qualifying-round prep',
+        url: pageUrl,
+      },
     ],
   }
 
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
   }
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'CBO Coaching', item: 'https://cerebrumbiologyacademy.com/cbo-coaching' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'CBO Coaching',
+        item: 'https://cerebrumbiologyacademy.com/cbo-coaching',
+      },
       { '@type': 'ListItem', position: 3, name: cityName, item: pageUrl },
     ],
   }
@@ -173,7 +215,10 @@ export default function CBOCityTemplate({
     '@type': 'WebPage',
     name: `CBO Coaching for ${cityName} Students`,
     url: pageUrl,
-    speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="title"]', '[data-speakable="summary"]'] },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['[data-speakable="title"]', '[data-speakable="summary"]'],
+    },
   }
 
   const personSchema = {
@@ -186,18 +231,44 @@ export default function CBOCityTemplate({
     description: `AIIMS-trained biology faculty coaching CBO + IBO students from ${cityName}.`,
     url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
     image: 'https://cerebrumbiologyacademy.com/images/dr-shekhar-singh.webp',
-    affiliation: { '@type': 'EducationalOrganization', '@id': 'https://cerebrumbiologyacademy.com/#organization', name: 'Cerebrum Biology Academy' },
-    knowsAbout: ['CBO', 'IBO', 'Campbell Biology', 'Canadian Biology Olympiad', 'Biology Olympiad', 'CBO National Round'],
+    affiliation: {
+      '@type': 'EducationalOrganization',
+      '@id': 'https://cerebrumbiologyacademy.com/#organization',
+      name: 'Cerebrum Biology Academy',
+    },
+    knowsAbout: [
+      'CBO',
+      'IBO',
+      'Campbell Biology',
+      'Canadian Biology Olympiad',
+      'Biology Olympiad',
+      'CBO National Round',
+    ],
     sameAs: ['https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty'],
   }
 
   return (
     <main className="min-h-screen bg-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       <nav className="bg-gray-100 py-3 px-4">
         <div className="max-w-7xl mx-auto">
           <ol className="flex items-center flex-wrap gap-1 text-sm">
@@ -297,8 +368,8 @@ export default function CBOCityTemplate({
             ))}
           </div>
           <p className="text-xs text-slate-500 mt-4">
-            Don&apos;t see your school? We coach students from any Canadian high school — these
-            are the schools we have repeat enrolments from.
+            Don&apos;t see your school? We coach students from any Canadian high school — these are
+            the schools we have repeat enrolments from.
           </p>
         </div>
       </section>
@@ -325,10 +396,7 @@ export default function CBOCityTemplate({
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((f) => (
-              <div
-                key={f.title}
-                className="bg-slate-50 rounded-xl p-6 border border-slate-200"
-              >
+              <div key={f.title} className="bg-slate-50 rounded-xl p-6 border border-slate-200">
                 <f.icon className="w-8 h-8 text-teal-600 mb-3" />
                 <h3 className="font-semibold text-slate-900 mb-2">{f.title}</h3>
                 <p className="text-sm text-slate-600">{f.description}</p>
@@ -345,15 +413,12 @@ export default function CBOCityTemplate({
             The CBO → IBO pathway, explained
           </h2>
           <p className="text-slate-600 mb-8 max-w-3xl">
-            We coach all four stages — and we coach them with continuity. The same faculty who
-            run Open / Qualifying prep run National-round and IBO camp prep.
+            We coach all four stages — and we coach them with continuity. The same faculty who run
+            Open / Qualifying prep run National-round and IBO camp prep.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {cboPathway.map((p, i) => (
-              <div
-                key={p.stage}
-                className="bg-white rounded-xl p-5 border border-slate-200"
-              >
+              <div key={p.stage} className="bg-white rounded-xl p-5 border border-slate-200">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="w-7 h-7 rounded-full bg-yellow-500 text-slate-900 text-sm font-bold flex items-center justify-center">
                     {i + 1}
@@ -405,8 +470,8 @@ export default function CBOCityTemplate({
             Start preparing for CBO 2026 from {cityName}
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Book a free 30-minute counselling call. We&apos;ll review your school, current
-            biology level, and target stage (Open / National / IBO camp).
+            Book a free 30-minute counselling call. We&apos;ll review your school, current biology
+            level, and target stage (Open / National / IBO camp).
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

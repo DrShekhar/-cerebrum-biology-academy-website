@@ -39,10 +39,18 @@ export default function BlogError({
           </Link>
         </div>
         <div className="flex flex-wrap gap-3 justify-center text-sm">
-          <Link href="/courses" className="text-blue-600 hover:underline">Courses</Link>
-          <Link href="/free-resources" className="text-blue-600 hover:underline">Free Resources</Link>
-          <Link href="/neet-biology-mcq" className="text-blue-600 hover:underline">MCQ Practice</Link>
-          <Link href="/biology-notes-for-neet" className="text-blue-600 hover:underline">Biology Notes</Link>
+          <Link href="/courses" className="text-blue-600 hover:underline">
+            Courses
+          </Link>
+          <Link href="/free-resources" className="text-blue-600 hover:underline">
+            Free Resources
+          </Link>
+          <Link href="/neet-biology-mcq" className="text-blue-600 hover:underline">
+            MCQ Practice
+          </Link>
+          <Link href="/biology-notes-for-neet" className="text-blue-600 hover:underline">
+            Biology Notes
+          </Link>
         </div>
       </div>
     </div>

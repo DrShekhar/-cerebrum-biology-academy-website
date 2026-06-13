@@ -200,8 +200,7 @@ export default function NCERTBiologyClass11Page() {
               </div>
             </div>
 
-            <div className="hidden md:block animate-fadeInUp"
-            >
+            <div className="hidden md:block animate-fadeInUp">
               <BookStackIllustration className="w-full max-w-md mx-auto" />
             </div>
           </div>
@@ -211,8 +210,7 @@ export default function NCERTBiologyClass11Page() {
       {/* Book Info Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="max-w-4xl mx-auto animate-fadeInUp">
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <div className="p-8 md:p-10">
                 <div className="flex items-start gap-6">
@@ -267,8 +265,7 @@ export default function NCERTBiologyClass11Page() {
       {/* Chapter Breakdown */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Unit-wise Chapter Breakdown
             </h2>
@@ -326,8 +323,7 @@ export default function NCERTBiologyClass11Page() {
       {/* Why Study at Cerebrum */}
       <section className="py-16 bg-green-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Study Class 11 Biology at Cerebrum?
             </h2>
@@ -363,7 +359,9 @@ export default function NCERTBiologyClass11Page() {
                 color: 'blue',
               },
             ].map((feature, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow animate-fadeInUp"
+              <div
+                key={idx}
+                className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow animate-fadeInUp"
               >
                 <div
                   className={`w-12 h-12 bg-${feature.color}-100 rounded-xl flex items-center justify-center mb-4`}
@@ -381,8 +379,7 @@ export default function NCERTBiologyClass11Page() {
       {/* Related Books */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Recommended Reference Books
             </h2>
@@ -435,8 +432,7 @@ export default function NCERTBiologyClass11Page() {
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
@@ -444,7 +440,9 @@ export default function NCERTBiologyClass11Page() {
 
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-white rounded-xl shadow-sm overflow-hidden animate-fadeInUp"
+              <div
+                key={idx}
+                className="bg-white rounded-xl shadow-sm overflow-hidden animate-fadeInUp"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}

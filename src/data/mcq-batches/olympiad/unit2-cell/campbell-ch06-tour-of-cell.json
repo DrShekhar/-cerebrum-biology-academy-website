@@ -49,12 +49,7 @@
     {
       "type": "MCQ",
       "question": "In the endomembrane system, which coat protein complex mediates retrograde transport from the Golgi apparatus back to the endoplasmic reticulum?",
-      "options": [
-        "COPI",
-        "Clathrin with AP-2 adaptors",
-        "Clathrin with AP-1 adaptors",
-        "COPII"
-      ],
+      "options": ["COPI", "Clathrin with AP-2 adaptors", "Clathrin with AP-1 adaptors", "COPII"],
       "correctAnswer": "A",
       "explanation": "COPI coat proteins mediate retrograde transport from the Golgi back to the ER, retrieving ER-resident proteins that have escaped and recycling SNARE proteins and cargo receptors. COPII (A) mediates anterograde transport from the ER to the Golgi, which is the opposite direction. Clathrin with AP-1 adaptors (C) operates at the trans-Golgi network for sorting proteins to endosomes and lysosomes. Clathrin with AP-2 adaptors (D) functions at the plasma membrane during receptor-mediated endocytosis. Understanding the directionality and specificity of these coat proteins is essential for predicting how disruption of each pathway affects protein sorting.",
       "isOlympiad": true,
@@ -69,12 +64,7 @@
     {
       "type": "MCQ",
       "question": "A researcher discovers a novel single-celled organism that possesses a nucleus, mitochondria, and a cell wall composed of chitin. It lacks chloroplasts and has 80S ribosomes in its cytoplasm. This organism is most likely classified as a:",
-      "options": [
-        "Fungal cell",
-        "Bacterial cell",
-        "Plant cell",
-        "Archaeal cell"
-      ],
+      "options": ["Fungal cell", "Bacterial cell", "Plant cell", "Archaeal cell"],
       "correctAnswer": "A",
       "explanation": "The presence of a nucleus and mitochondria identifies this as a eukaryote, immediately ruling out bacteria (C) and archaea (D), which are prokaryotes lacking membrane-bound nuclei. The cell wall composed of chitin is diagnostic of fungi. Plant cells (A) have cell walls made of cellulose, not chitin, and typically possess chloroplasts. The 80S ribosomes confirm eukaryotic identity (prokaryotes have 70S). Chitin is a polymer of N-acetylglucosamine and is the defining structural polysaccharide of fungal cell walls, also found in arthropod exoskeletons but not in plant or animal cells.",
       "isOlympiad": true,
@@ -129,12 +119,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the endoplasmic reticulum:\nS1: Smooth ER is the primary site of phospholipid biosynthesis in eukaryotic cells\nS2: Rough ER ribosomes are permanently attached and cannot dissociate\nS3: The ER lumen is topologically equivalent to the extracellular space\nS4: Signal recognition particle (SRP) binds to the signal sequence after translation is complete",
-      "options": [
-        "TTTT",
-        "TFTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TTTT", "TFTT", "TFTF", "TFFT"],
       "correctAnswer": "TFTF",
       "explanation": "S1 is TRUE: The smooth ER is indeed the primary site of membrane phospholipid synthesis, where enzymes like flippases transfer newly synthesized phospholipids between leaflets. S2 is FALSE: Ribosomes associate with the rough ER only when translating mRNAs encoding proteins with ER signal sequences; free ribosomes and ER-bound ribosomes are interchangeable. S3 is TRUE: The ER lumen is continuous with the space between the two nuclear envelope membranes and topologically equivalent to the outside of the cell, which is why secretory proteins synthesized in the ER lumen are eventually released extracellularly. S4 is FALSE: SRP binds the signal sequence co-translationally as it emerges from the ribosome, not after translation is complete; SRP binding actually pauses translation until the ribosome-SRP complex docks with the SRP receptor on the ER membrane.",
       "isOlympiad": true,
@@ -249,12 +234,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the Golgi apparatus:\nS1: Proteins move from cis to trans cisternae exclusively via vesicular transport between stable compartments\nS2: N-linked glycosylation begins in the ER and is further modified in the Golgi\nS3: The Golgi sorts lysosomal enzymes by adding mannose-6-phosphate tags in the cis-Golgi\nS4: Plant cells lack a Golgi apparatus and instead use the ER for all secretory functions",
-      "options": [
-        "FTTT",
-        "FTFT",
-        "FTTF",
-        "TFTT"
-      ],
+      "options": ["FTTT", "FTFT", "FTTF", "TFTT"],
       "correctAnswer": "FTTF",
       "explanation": "S1 is FALSE: The cisternal maturation model, supported by substantial experimental evidence, proposes that Golgi cisternae themselves mature from cis to trans, with resident enzymes being recycled backward by COPI vesicles, rather than cargo moving forward through stable cisternae. S2 is TRUE: N-linked glycosylation is initiated in the ER by oligosaccharyltransferase transferring a 14-sugar precursor to asparagine residues, and the glycan is then extensively modified by trimming and addition of sugars in sequential Golgi compartments. S3 is TRUE: In the cis-Golgi network, GlcNAc-1-phosphotransferase recognizes lysosomal hydrolases and adds GlcNAc-phosphate to mannose residues; a second enzyme then removes GlcNAc to expose the mannose-6-phosphate signal. S4 is FALSE: Plant cells possess a fully functional Golgi apparatus that is particularly active in synthesizing cell wall polysaccharides like hemicellulose and pectin.",
       "isOlympiad": true,
@@ -389,12 +369,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the cytoskeleton:\nS1: Intermediate filaments are the most dynamic of the three cytoskeletal elements, undergoing rapid assembly and disassembly\nS2: Actin filaments exhibit treadmilling, where subunits are added at the plus end and removed from the minus end\nS3: Microtubule dynamic instability involves stochastic switching between growth and rapid shrinkage phases\nS4: All three cytoskeletal filament types are composed of globular protein subunits",
-      "options": [
-        "FTTT",
-        "FTTF",
-        "FTFT",
-        "TFTT"
-      ],
+      "options": ["FTTT", "FTTF", "FTFT", "TFTT"],
       "correctAnswer": "FTTF",
       "explanation": "S1 is FALSE: Intermediate filaments are actually the LEAST dynamic and most stable of the three cytoskeletal elements. They provide mechanical strength and resist tensile forces. Unlike microtubules and actin filaments, they do not exhibit polarity or rapid turnover under normal conditions. S2 is TRUE: Actin filament treadmilling occurs when the rate of ATP-actin monomer addition at the barbed (plus) end equals the rate of ADP-actin monomer loss at the pointed (minus) end, resulting in a filament that appears to move through the cytoplasm while maintaining constant length. S3 is TRUE: Dynamic instability is a hallmark of microtubules where individual microtubules stochastically switch between phases of growth and rapid depolymerization (catastrophe), with occasional rescue events. This is driven by GTP hydrolysis on beta-tubulin. S4 is FALSE: Intermediate filaments are composed of fibrous (not globular) protein subunits that form coiled-coil dimers, which assemble into tetramers and ultimately into ropelike filaments.",
       "isOlympiad": true,
@@ -529,12 +504,7 @@
     {
       "type": "MCQ",
       "question": "The extracellular matrix (ECM) of animal cells contains collagen, proteoglycans, and fibronectin. Through which transmembrane proteins does the ECM communicate mechanical signals to the intracellular cytoskeleton?",
-      "options": [
-        "Integrins",
-        "Selectins",
-        "Cadherins",
-        "Connexins"
-      ],
+      "options": ["Integrins", "Selectins", "Cadherins", "Connexins"],
       "correctAnswer": "A",
       "explanation": "Integrins are heterodimeric transmembrane receptors (composed of alpha and beta subunits) that serve as the primary mechanical link between the extracellular matrix and the intracellular actin cytoskeleton. Their extracellular domains bind ECM components like fibronectin, laminin, and collagen, while their cytoplasmic domains connect to the actin cytoskeleton through adaptor proteins (talin, vinculin, paxillin) at focal adhesion complexes. Integrins also mediate bidirectional signaling (outside-in and inside-out). Cadherins (A) mediate cell-cell adhesion, not cell-ECM adhesion. Connexins (C) form gap junctions for direct cell-cell communication. Selectins (D) mediate transient cell-cell adhesion in the immune system through carbohydrate recognition.",
       "isOlympiad": true,
@@ -569,12 +539,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about tight junctions:\nS1: Tight junctions form a continuous seal around the apical end of epithelial cells, preventing paracellular diffusion of solutes\nS2: Claudins and occludin are the major transmembrane proteins of tight junctions\nS3: Tight junctions are linked to the intermediate filament cytoskeleton\nS4: The number of tight junction strands correlates with the tightness of the epithelial barrier",
-      "options": [
-        "TTTT",
-        "TTFT",
-        "TTFF",
-        "TFTT"
-      ],
+      "options": ["TTTT", "TTFT", "TTFF", "TFTT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Tight junctions (zonula occludens) form a belt-like seal at the most apical end of lateral membranes of epithelial cells, creating a paracellular barrier that restricts the passage of ions and molecules between cells. S2 is TRUE: Claudins are the primary barrier-forming proteins of tight junctions, with over 27 family members that determine the selective permeability of different epithelia. Occludin is also present and contributes to junction formation. Both are tetra-spanning transmembrane proteins. S3 is FALSE: Tight junctions are linked to the ACTIN cytoskeleton, not intermediate filaments, through cytoplasmic scaffolding proteins ZO-1, ZO-2, and ZO-3. Desmosomes, not tight junctions, are linked to intermediate filaments. S4 is TRUE: Epithelia requiring tighter barriers (like kidney collecting duct) have more tight junction strands (up to 8-10), while leakier epithelia (like proximal tubule) have fewer strands (1-2).",
       "isOlympiad": true,
@@ -749,12 +714,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the centrosome and centrioles:\nS1: The centrosome is the primary microtubule-organizing center (MTOC) in animal cells\nS2: Centrioles are required for microtubule nucleation at the centrosome\nS3: Plant cells lack centrioles but still form mitotic spindles\nS4: Gamma-tubulin ring complexes at the centrosome serve as templates for microtubule nucleation",
-      "options": [
-        "TTTT",
-        "TFTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TTTT", "TFTT", "TFTF", "TFFT"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: The centrosome, consisting of two centrioles surrounded by pericentriolar material (PCM), is the main MTOC in animal cells and nucleates most cytoplasmic microtubules. S2 is FALSE: Centrioles are not required for microtubule nucleation. The PCM contains the actual nucleation machinery (gamma-tubulin ring complexes). Centrioles organize and recruit PCM but are not the nucleating agents themselves. Laser ablation of centrioles does not prevent microtubule nucleation as long as PCM remains. S3 is TRUE: Plant cells lack centrioles entirely but successfully form mitotic spindles using distributed MTOCs on the nuclear envelope and pre-prophase band, demonstrating that centrioles are not essential for spindle assembly. S4 is TRUE: Gamma-tubulin ring complexes (gamma-TuRCs) serve as templates that nucleate microtubule assembly, with the gamma-tubulin subunits matching the 13-protofilament architecture of the microtubule minus end.",
       "isOlympiad": true,
@@ -769,12 +729,7 @@
     {
       "type": "MCQ",
       "question": "Which organelle is responsible for the synthesis of most cellular lipids, including phospholipids that are then distributed to other organelles?",
-      "options": [
-        "Smooth endoplasmic reticulum",
-        "Peroxisomes",
-        "Golgi apparatus",
-        "Mitochondria"
-      ],
+      "options": ["Smooth endoplasmic reticulum", "Peroxisomes", "Golgi apparatus", "Mitochondria"],
       "correctAnswer": "A",
       "explanation": "The smooth endoplasmic reticulum (SER) is the primary site of phospholipid biosynthesis in eukaryotic cells. Enzymes on the cytosolic face of the ER membrane synthesize phospholipids from glycerol-3-phosphate, fatty acyl-CoA, and head group precursors. Flippases then transfer some newly synthesized phospholipids from the cytosolic to the luminal leaflet to maintain bilayer symmetry. These phospholipids are then distributed to other organelles via vesicular transport (to Golgi, plasma membrane, endosomes) or via lipid transfer proteins at membrane contact sites (to mitochondria, peroxisomes). The Golgi (A) modifies lipids (glycolipid synthesis, sphingomyelin synthesis) but is not the primary site of phospholipid production. Mitochondria (C) synthesize cardiolipin and PE but depend on the ER for most other lipids. Peroxisomes (D) synthesize plasmalogens but not bulk phospholipids.",
       "isOlympiad": true,
@@ -909,12 +864,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about lysosomes:\nS1: Lysosomal enzymes are acid hydrolases with optimal activity at pH 4.5-5.0\nS2: Lysosomes receive extracellular material through phagocytosis and intracellular material through autophagy\nS3: Lysosomal storage diseases result from deficiencies in lysosomal export proteins that fail to remove waste products\nS4: The lysosomal membrane contains highly glycosylated proteins (LAMPs) that protect it from self-digestion",
-      "options": [
-        "TTTT",
-        "TTFT",
-        "TTTF",
-        "TFTT"
-      ],
+      "options": ["TTTT", "TTFT", "TTTF", "TFTT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Lysosomal hydrolases (including proteases, lipases, glycosidases, phosphatases, and nucleases) function optimally at acidic pH (4.5-5.0), maintained by V-type H+-ATPases in the lysosomal membrane. This acidic environment also serves as a safety mechanism; if lysosomal contents leak into the neutral-pH cytosol, the enzymes become inactive. S2 is TRUE: Lysosomes are the convergence point for endocytic pathways (phagocytosis, receptor-mediated endocytosis) bringing extracellular material and autophagic pathways (macroautophagy, microautophagy, chaperone-mediated autophagy) delivering intracellular material for degradation. S3 is FALSE: Most lysosomal storage diseases (Tay-Sachs, Gaucher, Niemann-Pick) result from deficiencies in specific lysosomal hydrolases, not export proteins. Without functional enzymes, undigested substrates accumulate within lysosomes. S4 is TRUE: Lysosome-associated membrane proteins (LAMP-1 and LAMP-2) are heavily glycosylated on their luminal domains, forming a glycocalyx layer that protects the membrane from digestion by the resident hydrolases.",
       "isOlympiad": true,
@@ -1029,12 +979,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about cell junctions in animal tissues:\nS1: Adherens junctions are linked to actin filaments and form a continuous adhesion belt in epithelial cells\nS2: Gap junctions allow direct electrical coupling between cardiac muscle cells\nS3: Tight junctions are always completely impermeable to all ions and molecules\nS4: Desmosomes provide strong adhesion to resist mechanical stress in tissues like skin and heart",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFFT",
-        "TTTF"
-      ],
+      "options": ["TTFT", "TTTT", "TFFT", "TTTF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Adherens junctions (zonula adherens) form a continuous belt around epithelial cells, using E-cadherin as the adhesion molecule. The cytoplasmic domain of E-cadherin binds beta-catenin and p120-catenin, which connect via alpha-catenin to the circumferential actin belt. S2 is TRUE: Gap junctions between cardiac myocytes (at intercalated discs) allow passage of ions (Na+, K+, Ca2+) and small molecules, enabling rapid electrical impulse propagation that coordinates heart contraction. Connexin43 is the primary gap junction protein in ventricular cardiomyocytes. S3 is FALSE: Tight junctions are NOT completely impermeable. They exhibit selective permeability determined by which claudin isoforms are expressed. For example, claudin-2 forms cation-selective pores in leaky epithelia (proximal tubule), while claudin-4 and claudin-8 create tight barriers in collecting duct epithelia. S4 is TRUE: Desmosomes provide strong mechanical adhesion in tissues subject to shear stress, using desmosomal cadherins linked to intermediate filaments.",
       "isOlympiad": true,
@@ -1229,12 +1174,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about organelle inheritance during cell division:\nS1: Mitochondria are distributed to daughter cells by random partitioning during cytokinesis\nS2: The ER maintains continuity during mitosis and is distributed by association with the mitotic spindle\nS3: The Golgi apparatus fragments during prophase and reassembles in each daughter cell after mitosis\nS4: Centrosomes must be newly synthesized after each cell division since they cannot be inherited",
-      "options": [
-        "TTTT",
-        "FTTF",
-        "TTFF",
-        "FTTT"
-      ],
+      "options": ["TTTT", "FTTF", "TTFF", "FTTT"],
       "correctAnswer": "FTTF",
       "explanation": "S1 is FALSE: Mitochondrial distribution during cell division is not entirely random. While there is a stochastic component, mitochondria associate with cytoskeletal elements (particularly actin in yeast and microtubules in animal cells) that help ensure roughly equal partitioning. In budding yeast, specific mitochondrial transport mechanisms actively move mitochondria into the bud. S2 is TRUE: The ER network remains largely intact during mitosis (unlike the Golgi) and is partitioned to daughter cells in association with the spindle and through its connections to the nuclear envelope remnants. S3 is TRUE: The Golgi undergoes extensive fragmentation during prophase, driven by CDK1 and PLK1-mediated phosphorylation of Golgi structural proteins (GM130, GRASP55, GRASP65). The resulting Golgi fragments and vesicles are distributed and then reassemble through dephosphorylation in telophase. S4 is FALSE: Centrosomes are inherited; the mother cell's two centrioles each serve as templates for daughter centriole assembly during S phase (semi-conservative duplication), ensuring each daughter cell inherits one centrosome.",
       "isOlympiad": true,

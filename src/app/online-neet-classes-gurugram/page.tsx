@@ -36,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Online NEET Classes in Gurugram | Live Biology Classes from Home',
-    description: 'Join online NEET Biology classes from Gurugram (Gurgaon). Live interactive sessions, recorded lectures, doubt clearing. Same AIIMS faculty as offline. Starting ₹45,000/year.',
+    description:
+      'Join online NEET Biology classes from Gurugram (Gurgaon). Live interactive sessions, recorded lectures, doubt clearing. Same AIIMS faculty as offline. Starting ₹45,000/year.',
   },
 }
 
@@ -176,7 +177,11 @@ export default function OnlineNEETClassesGurugramPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="online-neet-classes-gurugram" />
       <script

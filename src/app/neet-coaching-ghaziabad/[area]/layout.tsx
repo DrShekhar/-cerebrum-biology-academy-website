@@ -1,8 +1,5 @@
 import type { Metadata } from 'next'
-import {
-  getAllGhaziabadAreaSlugs,
-  getGhaziabadAreaBySlug,
-} from '@/data/ghaziabad-areas'
+import { getAllGhaziabadAreaSlugs, getGhaziabadAreaBySlug } from '@/data/ghaziabad-areas'
 import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
 
 type Props = {

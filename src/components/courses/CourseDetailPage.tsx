@@ -79,8 +79,7 @@ export function CourseDetailPage({ course }: CourseDetailPageProps) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-12 items-center">
             <div className="lg:col-span-2">
-              <div
-               className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 {course.isPopular && (
                   <div className="inline-flex items-center bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-medium mb-4">
                     <TrendingUp className="w-4 h-4 mr-1" />
@@ -133,9 +132,7 @@ export function CourseDetailPage({ course }: CourseDetailPageProps) {
             </div>
 
             {/* Pricing Card */}
-            <div
-              className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 animate-fadeInUp"
-            >
+            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 animate-fadeInUp">
               <div className="text-center mb-6">
                 <div className="text-3xl font-bold mb-2">
                   ₹{discountedPrice.toLocaleString()}

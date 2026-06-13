@@ -162,9 +162,7 @@ export function NEETToppersShowcase({
     <section className="py-20 bg-gradient-to-br from-yellow-50 via-orange-50 to-red-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div
-          className="text-center mb-16 animate-fadeInUp"
-        >
+        <div className="text-center mb-16 animate-fadeInUp">
           <div className="inline-flex items-center bg-yellow-100 text-yellow-600 px-6 py-3 rounded-full text-sm font-medium mb-6">
             <Trophy className="w-5 h-5 mr-2" />
             Meet Our NEET Toppers - Real Success Stories
@@ -192,10 +190,7 @@ export function NEETToppersShowcase({
               },
               { icon: Award, label: '98%', sublabel: 'Success Rate', color: 'text-green-600' },
             ].map((metric, index) => (
-              <div
-                key={metric.label}
-                className="text-center animate-fadeInUp"
-              >
+              <div key={metric.label} className="text-center animate-fadeInUp">
                 <div
                   className={`w-12 h-12 ${metric.color} mx-auto mb-3 rounded-xl flex items-center justify-center bg-white shadow-lg`}
                 >
@@ -209,132 +204,127 @@ export function NEETToppersShowcase({
         </div>
 
         {/* Main Topper Showcase */}
-        <div
-          className="mb-16 animate-fadeInUp"
-        >
+        <div className="mb-16 animate-fadeInUp">
           <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
-<div
-                key={currentTopper}
-                className="p-8 md:p-12 animate-fadeInUp"
-              >
-                <div className="grid md:grid-cols-3 gap-8 items-center">
-                  {/* Topper Photo & Achievement */}
-                  <div className="text-center">
-                    <div className="relative inline-block mb-6">
-                      {/* Photo Placeholder with Achievement Colors */}
-                      <div className="w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-white shadow-2xl">
-                        <div className="text-center">
-                          <Trophy className="w-8 h-8 mx-auto mb-1" />
-                          <div className="text-lg font-bold">{currentTopperData.score}</div>
-                        </div>
-                      </div>
-
-                      {/* Achievement Badge */}
-                      <div className="absolute -bottom-2 -right-2 bg-[#4a5d4a] text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-                        Rank {currentTopperData.rank}
+            <div key={currentTopper} className="p-8 md:p-12 animate-fadeInUp">
+              <div className="grid md:grid-cols-3 gap-8 items-center">
+                {/* Topper Photo & Achievement */}
+                <div className="text-center">
+                  <div className="relative inline-block mb-6">
+                    {/* Photo Placeholder with Achievement Colors */}
+                    <div className="w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-white shadow-2xl">
+                      <div className="text-center">
+                        <Trophy className="w-8 h-8 mx-auto mb-1" />
+                        <div className="text-lg font-bold">{currentTopperData.score}</div>
                       </div>
                     </div>
 
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                      {currentTopperData.name}
-                    </h3>
-                    <p className="text-lg text-yellow-600 font-semibold mb-2">
-                      NEET {currentTopperData.year} - {currentTopperData.score} Marks
-                    </p>
-                    <p className="text-gray-600 mb-4">{currentTopperData.college}</p>
-
-                    {/* Video Play Button */}
-                    {showVideos && currentTopperData.videoUrl && (
-                      <Button
-                        variant="outline"
-                        size="lg"
-                        onClick={() => setShowVideo(true)}
-                        className="mb-4"
-                      >
-                        <Play className="w-5 h-5 mr-2" />
-                        Watch Success Story
-                      </Button>
-                    )}
-
-                    {/* Improvement Stats */}
-                    {currentTopperData.improvement && (
-                      <div className="inline-flex items-center bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
-                        <TrendingUp className="w-4 h-4 mr-2" />+{currentTopperData.improvement}{' '}
-                        marks improvement
-                      </div>
-                    )}
+                    {/* Achievement Badge */}
+                    <div className="absolute -bottom-2 -right-2 bg-[#4a5d4a] text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                      Rank {currentTopperData.rank}
+                    </div>
                   </div>
 
-                  {/* Success Story & Quote */}
-                  <div className="md:col-span-2">
-                    <div className="relative">
-                      <h4 className="text-xl font-bold text-gray-900 mb-4">
-                        {currentTopperData.achievement}
-                      </h4>
-                      <blockquote className="text-lg text-gray-700 leading-relaxed italic mb-6">
-                        "{currentTopperData.quote}"
-                      </blockquote>
-                    </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {currentTopperData.name}
+                  </h3>
+                  <p className="text-lg text-yellow-600 font-semibold mb-2">
+                    NEET {currentTopperData.year} - {currentTopperData.score} Marks
+                  </p>
+                  <p className="text-gray-600 mb-4">{currentTopperData.college}</p>
 
-                    {/* Achievement Details */}
-                    <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-6 mb-6">
-                      <h5 className="font-semibold text-gray-900 mb-3">Journey Highlights:</h5>
-                      <div className="grid md:grid-cols-2 gap-4 text-sm">
-                        <div>
-                          <span className="text-gray-600">NEET Score:</span>
-                          <span className="font-bold text-yellow-600 ml-2 text-lg">
-                            {currentTopperData.score}/720
-                          </span>
-                        </div>
-                        <div>
-                          <span className="text-gray-600">All India Rank:</span>
-                          <span className="font-bold text-orange-600 ml-2">
-                            {currentTopperData.rank}
-                          </span>
-                        </div>
-                        {currentTopperData.beforeScore && (
-                          <>
-                            <div>
-                              <span className="text-gray-600">Starting Score:</span>
-                              <span className="font-medium text-gray-700 ml-2">
-                                {currentTopperData.beforeScore}
-                              </span>
-                            </div>
-                            <div>
-                              <span className="text-gray-600">Improvement:</span>
-                              <span className="font-bold text-green-600 ml-2">
-                                +{currentTopperData.improvement} marks
-                              </span>
-                            </div>
-                          </>
-                        )}
-                        <div>
-                          <span className="text-gray-600">College:</span>
-                          <span className="font-medium text-gray-900 ml-2">
-                            {currentTopperData.college}
-                          </span>
-                        </div>
-                        <div>
-                          <span className="text-gray-600">Year:</span>
-                          <span className="font-medium text-gray-700 ml-2">
-                            NEET {currentTopperData.year}
-                          </span>
-                        </div>
+                  {/* Video Play Button */}
+                  {showVideos && currentTopperData.videoUrl && (
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      onClick={() => setShowVideo(true)}
+                      className="mb-4"
+                    >
+                      <Play className="w-5 h-5 mr-2" />
+                      Watch Success Story
+                    </Button>
+                  )}
+
+                  {/* Improvement Stats */}
+                  {currentTopperData.improvement && (
+                    <div className="inline-flex items-center bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+                      <TrendingUp className="w-4 h-4 mr-2" />+{currentTopperData.improvement} marks
+                      improvement
+                    </div>
+                  )}
+                </div>
+
+                {/* Success Story & Quote */}
+                <div className="md:col-span-2">
+                  <div className="relative">
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">
+                      {currentTopperData.achievement}
+                    </h4>
+                    <blockquote className="text-lg text-gray-700 leading-relaxed italic mb-6">
+                      "{currentTopperData.quote}"
+                    </blockquote>
+                  </div>
+
+                  {/* Achievement Details */}
+                  <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-6 mb-6">
+                    <h5 className="font-semibold text-gray-900 mb-3">Journey Highlights:</h5>
+                    <div className="grid md:grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <span className="text-gray-600">NEET Score:</span>
+                        <span className="font-bold text-yellow-600 ml-2 text-lg">
+                          {currentTopperData.score}/720
+                        </span>
+                      </div>
+                      <div>
+                        <span className="text-gray-600">All India Rank:</span>
+                        <span className="font-bold text-orange-600 ml-2">
+                          {currentTopperData.rank}
+                        </span>
+                      </div>
+                      {currentTopperData.beforeScore && (
+                        <>
+                          <div>
+                            <span className="text-gray-600">Starting Score:</span>
+                            <span className="font-medium text-gray-700 ml-2">
+                              {currentTopperData.beforeScore}
+                            </span>
+                          </div>
+                          <div>
+                            <span className="text-gray-600">Improvement:</span>
+                            <span className="font-bold text-green-600 ml-2">
+                              +{currentTopperData.improvement} marks
+                            </span>
+                          </div>
+                        </>
+                      )}
+                      <div>
+                        <span className="text-gray-600">College:</span>
+                        <span className="font-medium text-gray-900 ml-2">
+                          {currentTopperData.college}
+                        </span>
+                      </div>
+                      <div>
+                        <span className="text-gray-600">Year:</span>
+                        <span className="font-medium text-gray-700 ml-2">
+                          NEET {currentTopperData.year}
+                        </span>
                       </div>
                     </div>
+                  </div>
 
-                    {/* Success Quote Attribution */}
-                    <div className="flex items-center text-sm text-gray-500">
-                      <Star className="w-4 h-4 mr-2 text-yellow-500" />
-                      <span>Proud Cerebrum Student</span>
-                      <span className="mx-2">•</span>
-                      <Calendar className="w-4 h-4 mr-1" />
-                      <span>NEET {currentTopperData.year}</span>
-                    </div>
+                  {/* Success Quote Attribution */}
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Star className="w-4 h-4 mr-2 text-yellow-500" />
+                    <span>Proud Cerebrum Student</span>
+                    <span className="mx-2">•</span>
+                    <Calendar className="w-4 h-4 mr-1" />
+                    <span>NEET {currentTopperData.year}</span>
                   </div>
                 </div>
               </div>
-{/* Navigation Controls */}
+            </div>
+            {/* Navigation Controls */}
             <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
               <button
                 onClick={prevTopper}
@@ -380,9 +370,7 @@ export function NEETToppersShowcase({
         </div>
 
         {/* Toppers Grid */}
-        <div
-          className="mb-16 animate-fadeInUp"
-        >
+        <div className="mb-16 animate-fadeInUp">
           <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
             More Success Stories
           </h3>
@@ -422,9 +410,7 @@ export function NEETToppersShowcase({
         </div>
 
         {/* Call to Action */}
-        <div
-          className="text-center bg-gradient-to-br from-[#3d4d3d] to-[#2d3d2d] rounded-3xl p-12 text-white animate-fadeInUp"
-        >
+        <div className="text-center bg-gradient-to-br from-[#3d4d3d] to-[#2d3d2d] rounded-3xl p-12 text-white animate-fadeInUp">
           <h3 className="text-3xl font-bold mb-4">Your Success Story Starts Here</h3>
           <p className="text-xl mb-8 text-green-100">
             Join the ranks of NEET toppers! Transform your medical dreams into reality with Dr.

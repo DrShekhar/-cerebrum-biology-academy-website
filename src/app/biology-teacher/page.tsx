@@ -111,8 +111,7 @@ export default function BiologyTeacherPage() {
       <section className="relative bg-indigo-700 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <GraduationCap className="w-5 h-5 mr-2 text-yellow-300" />
               Expert Biology Teaching
@@ -133,7 +132,11 @@ export default function BiologyTeacherPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20teacher.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20teacher.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -171,8 +174,7 @@ export default function BiologyTeacherPage() {
       {/* Why Our Teaching Works */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Our Teaching Methodology
             </h2>
@@ -183,7 +185,10 @@ export default function BiologyTeacherPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teachingMethodology.map((method, index) => (
-              <div key={method.title} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow animate-fadeInUp">
+              <div
+                key={method.title}
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow animate-fadeInUp"
+              >
                 <method.icon className="w-12 h-12 text-indigo-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{method.title}</h3>
                 <p className="text-gray-600">{method.description}</p>
@@ -196,8 +201,7 @@ export default function BiologyTeacherPage() {
       {/* Teacher Credentials */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Our Teachers Stand Out
             </h2>
@@ -288,8 +292,7 @@ export default function BiologyTeacherPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -297,7 +300,10 @@ export default function BiologyTeacherPage() {
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div key={faq.question} className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp">
+              <div
+                key={faq.question}
+                className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp"
+              >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-indigo-600 flex-shrink-0 mt-1" />
                   {faq.question}
@@ -321,7 +327,11 @@ export default function BiologyTeacherPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20teacher.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20teacher.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -332,7 +342,11 @@ export default function BiologyTeacherPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20teacher.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20teacher.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"

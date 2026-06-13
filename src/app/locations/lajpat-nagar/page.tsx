@@ -21,10 +21,7 @@ import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
-import {
-  RelatedLocations,
-  getRelatedLocations,
-} from '@/components/locations/RelatedLocations'
+import { RelatedLocations, getRelatedLocations } from '@/components/locations/RelatedLocations'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import { areaDetails } from '@/data/south-delhi-areas'
@@ -86,15 +83,21 @@ export default function LajpatNagarPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/locations/lajpat-nagar"
         pageName="NEET Biology Coaching for Lajpat Nagar Students"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
-        personKnowsAbout={['NEET Lajpat Nagar', 'NEET Biology Lajpat Nagar', 'Medical entrance coaching Lajpat Nagar']}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
+        personKnowsAbout={[
+          'NEET Lajpat Nagar',
+          'NEET Biology Lajpat Nagar',
+          'Medical entrance coaching Lajpat Nagar',
+        ]}
         faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
       />
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-orange-900 via-red-800 to-orange-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center animate-fadeInUp"
-            >
+            <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-300 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Navigation className="w-4 h-4" />
                 Walking Distance from Metro
@@ -129,8 +132,7 @@ export default function LajpatNagarPage() {
         <section className="py-12 md:py-16 -mt-8">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-green-500 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-green-500 animate-fadeInUp">
                 <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white py-4 px-6">
                   <div className="flex items-center gap-3">
                     <Navigation className="w-8 h-8" />
@@ -233,8 +235,7 @@ export default function LajpatNagarPage() {
                 { icon: Trophy, title: '98% Success', desc: 'Proven results' },
                 { icon: Award, title: 'Biology Only', desc: '100% focused' },
               ].map((item, idx) => (
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
-                >
+                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp">
                   <div className="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-orange-600" />
                   </div>
@@ -337,8 +338,7 @@ export default function LajpatNagarPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((f, i) => (
-                <div key={i} className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
-                >
+                <div key={i} className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp">
                   <h3 className="font-semibold text-lg mb-2">{f.q}</h3>
                   <p className="text-gray-600">{f.a}</p>
                 </div>

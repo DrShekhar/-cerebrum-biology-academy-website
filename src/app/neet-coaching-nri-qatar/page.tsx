@@ -32,7 +32,14 @@ export const metadata: Metadata = {
     description:
       'NEET coaching for NRI students in Qatar. 12 CBSE schools, 700K Indian expatriates. Expert guidance for high-achieving students with 98% success rate.',
     creator: '@cerebrumbiology',
-    images: [{ url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-qatar.jpg', width: 1200, height: 630, alt: 'Neet Coaching Qatar — Cerebrum Biology Academy' }],
+    images: [
+      {
+        url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-qatar.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Neet Coaching Qatar — Cerebrum Biology Academy',
+      },
+    ],
   },
 }
 

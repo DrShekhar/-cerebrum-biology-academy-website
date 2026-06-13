@@ -31,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best NEET Biology Tutor for Class 11 | Botany Foundation + NCERT Mapped',
-    description: 'Best Class 11 NEET Biology tutor in India — Dr. Shekhar C Singh (AIIMS Delhi). Class 11 Botany (180 NEET marks): Plant Diversity, Cell Biology, Plant Physiology. NCERT line-by-line mapped, ₹40K–₹1....',
+    description:
+      'Best Class 11 NEET Biology tutor in India — Dr. Shekhar C Singh (AIIMS Delhi). Class 11 Botany (180 NEET marks): Plant Diversity, Cell Biology, Plant Physiology. NCERT line-by-line mapped, ₹40K–₹1....',
   },
 }
 

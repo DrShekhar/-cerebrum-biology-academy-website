@@ -233,10 +233,25 @@ export const class9BiologyTuitionOnline: SEOLandingContent = {
       },
     ],
     checklist: [
-      { item: 'Master the structure and function of all cell organelles', explanation: 'This directly maps to Class 11 Cell Biology, one of the highest NEET-weighted topics.' },
-      { item: 'Learn to draw and label tissue types from memory', explanation: 'Diagram skills built early prevent last-minute cramming in Class 11 and 12.' },
-      { item: 'Understand the five-kingdom classification framework', explanation: 'Provides the taxonomic vocabulary needed for Plant and Animal Kingdom in Class 11.' },
-      { item: 'Practice comparing biological processes in table format', explanation: 'Comparison tables are a major NEET question pattern that benefits from early practice.' },
+      {
+        item: 'Master the structure and function of all cell organelles',
+        explanation:
+          'This directly maps to Class 11 Cell Biology, one of the highest NEET-weighted topics.',
+      },
+      {
+        item: 'Learn to draw and label tissue types from memory',
+        explanation: 'Diagram skills built early prevent last-minute cramming in Class 11 and 12.',
+      },
+      {
+        item: 'Understand the five-kingdom classification framework',
+        explanation:
+          'Provides the taxonomic vocabulary needed for Plant and Animal Kingdom in Class 11.',
+      },
+      {
+        item: 'Practice comparing biological processes in table format',
+        explanation:
+          'Comparison tables are a major NEET question pattern that benefits from early practice.',
+      },
     ],
   },
 
@@ -428,11 +443,31 @@ export const neetFoundationClass9: SEOLandingContent = {
       },
     ],
     comparisonTable: [
-      { Aspect: 'Total Preparation Time', 'Start in Class 9': '4 years (48 months)', 'Start in Class 11': '2 years (24 months)' },
-      { Aspect: 'Daily Study Requirement', 'Start in Class 9': '1-1.5 hours initially, scaling up', 'Start in Class 11': '3-4 hours from day one' },
-      { Aspect: 'Concept Exposure Cycles', 'Start in Class 9': '4 exposures per topic', 'Start in Class 11': '1-2 exposures per topic' },
-      { Aspect: 'Stress Level During Class 12', 'Start in Class 9': 'Low to moderate', 'Start in Class 11': 'High to very high' },
-      { Aspect: 'Olympiad Participation', 'Start in Class 9': 'Built into the program', 'Start in Class 11': 'No time for additional exams' },
+      {
+        Aspect: 'Total Preparation Time',
+        'Start in Class 9': '4 years (48 months)',
+        'Start in Class 11': '2 years (24 months)',
+      },
+      {
+        Aspect: 'Daily Study Requirement',
+        'Start in Class 9': '1-1.5 hours initially, scaling up',
+        'Start in Class 11': '3-4 hours from day one',
+      },
+      {
+        Aspect: 'Concept Exposure Cycles',
+        'Start in Class 9': '4 exposures per topic',
+        'Start in Class 11': '1-2 exposures per topic',
+      },
+      {
+        Aspect: 'Stress Level During Class 12',
+        'Start in Class 9': 'Low to moderate',
+        'Start in Class 11': 'High to very high',
+      },
+      {
+        Aspect: 'Olympiad Participation',
+        'Start in Class 9': 'Built into the program',
+        'Start in Class 11': 'No time for additional exams',
+      },
     ],
   },
 
@@ -618,10 +653,25 @@ export const onlineBiologyClassesClass9: SEOLandingContent = {
       },
     ],
     checklist: [
-      { item: 'Use a laptop or tablet rather than a phone for classes', explanation: 'Larger screens allow proper viewing of 3D models and detailed biological diagrams.' },
-      { item: 'Keep a dedicated biology notebook with hand-drawn diagrams', explanation: 'Drawing reinforces spatial understanding of structures like cell organelles and tissue types.' },
-      { item: 'Participate in every in-class quiz and poll', explanation: 'Active recall during quizzes strengthens memory far more than passive watching.' },
-      { item: 'Review the recorded session within 24 hours of each class', explanation: 'Revisiting material within a day dramatically improves long-term retention.' },
+      {
+        item: 'Use a laptop or tablet rather than a phone for classes',
+        explanation:
+          'Larger screens allow proper viewing of 3D models and detailed biological diagrams.',
+      },
+      {
+        item: 'Keep a dedicated biology notebook with hand-drawn diagrams',
+        explanation:
+          'Drawing reinforces spatial understanding of structures like cell organelles and tissue types.',
+      },
+      {
+        item: 'Participate in every in-class quiz and poll',
+        explanation:
+          'Active recall during quizzes strengthens memory far more than passive watching.',
+      },
+      {
+        item: 'Review the recorded session within 24 hours of each class',
+        explanation: 'Revisiting material within a day dramatically improves long-term retention.',
+      },
     ],
   },
 

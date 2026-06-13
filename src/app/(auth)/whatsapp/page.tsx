@@ -55,17 +55,17 @@ export default function WhatsAppAuthPage() {
               <Loader2 className="w-8 h-8 text-green-600 animate-spin" />
             </div>
 
-            <h2 className="text-xl font-semibold text-slate-800 mb-2">
-              Redirecting to Login
-            </h2>
+            <h2 className="text-xl font-semibold text-slate-800 mb-2">Redirecting to Login</h2>
 
             <p className="text-slate-600 mb-6">
-              You&apos;ll be redirected to our secure login page where you can sign in with your phone number.
+              You&apos;ll be redirected to our secure login page where you can sign in with your
+              phone number.
             </p>
 
             <div className="bg-green-50 rounded-lg p-4 mb-6">
               <p className="text-sm text-green-800">
-                <strong>Quick Login:</strong> Enter your phone number and receive an OTP instantly via SMS.
+                <strong>Quick Login:</strong> Enter your phone number and receive an OTP instantly
+                via SMS.
               </p>
             </div>
 

@@ -155,9 +155,7 @@ export function HinglishFAQSection({ showEnglish = true, maxItems = 5 }: Hinglis
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">
-          अक्सर पूछे जाने वाले प्रश्न
-        </h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">अक्सर पूछे जाने वाले प्रश्न</h2>
         <p className="text-gray-600 mb-8">Frequently Asked Questions (Hinglish mein)</p>
 
         <div className="space-y-4">
@@ -169,13 +167,16 @@ export function HinglishFAQSection({ showEnglish = true, maxItems = 5 }: Hinglis
               <summary className="flex items-center justify-between cursor-pointer p-5 hover:bg-gray-50 transition-colors">
                 <div>
                   <h3 className="font-medium text-gray-900">{faq.question}</h3>
-                  {showEnglish && (
-                    <p className="text-sm text-gray-500 mt-1">{faq.questionEn}</p>
-                  )}
+                  {showEnglish && <p className="text-sm text-gray-500 mt-1">{faq.questionEn}</p>}
                 </div>
                 <span className="text-gray-500 group-open:rotate-180 transition-transform ml-4">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
                   </svg>
                 </span>
               </summary>

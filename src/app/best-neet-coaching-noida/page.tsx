@@ -22,8 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'Best NEET Coaching in Noida 2026 | Top Institutes Compared',
-    description:
-      'Compare top NEET coaching institutes in Noida. Fees, faculty, results compared.',
+    description: 'Compare top NEET coaching institutes in Noida. Fees, faculty, results compared.',
     url: 'https://cerebrumbiologyacademy.com/best-neet-coaching-noida',
   },
   alternates: {
@@ -33,7 +32,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best NEET Coaching in Noida 2026 | Top Institutes Compared',
-    description: 'Compare the best NEET coaching institutes in Noida for 2026. Fees, faculty, success rates, batch sizes compared. Find which coaching is right for you.',
+    description:
+      'Compare the best NEET coaching institutes in Noida for 2026. Fees, faculty, success rates, batch sizes compared. Find which coaching is right for you.',
   },
 }
 

@@ -1,12 +1,15 @@
-import { Metadata } from 'next';
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Dar es Salaam, Tanzania',
-  description: 'Expert NEET coaching in Dar es Salaam, Tanzania. 98% success rate. Biology-focused curriculum with Dr. Shekhar C Singh. Enroll now!',
-  keywords: 'NEET coaching Dar es Salaam, NEET classes Tanzania, biology tuition, medical entrance preparation',
+  description:
+    'Expert NEET coaching in Dar es Salaam, Tanzania. 98% success rate. Biology-focused curriculum with Dr. Shekhar C Singh. Enroll now!',
+  keywords:
+    'NEET coaching Dar es Salaam, NEET classes Tanzania, biology tuition, medical entrance preparation',
   openGraph: {
     title: 'NEET Coaching in Dar es Salaam, Tanzania',
-    description: 'Expert NEET coaching with 98% success rate. Personalized biology curriculum tailored for Tanzania students.',
+    description:
+      'Expert NEET coaching with 98% success rate. Personalized biology curriculum tailored for Tanzania students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-dar-es-salaam-tanzania',
     siteName: 'Cerebrum Biology Academy',
     images: [
@@ -29,12 +32,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-dar-es-salaam-tanzania',
   },
-};
+}
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="layout-neet-coaching-dar-es-salaam-tanzania">
-      {children}
-    </div>
-  );
+  return <div className="layout-neet-coaching-dar-es-salaam-tanzania">{children}</div>
 }

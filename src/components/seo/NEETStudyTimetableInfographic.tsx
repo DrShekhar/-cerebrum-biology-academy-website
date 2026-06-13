@@ -55,14 +55,54 @@ const fiveMonthPlan: MonthPlan[] = [
 ]
 
 const dailySchedule = [
-  { time: '6:00 - 8:00 AM', activity: 'Morning Revision', subject: 'Previous day topics', color: 'bg-green-100 text-green-700' },
-  { time: '8:00 - 9:00 AM', activity: 'Break', subject: 'Breakfast & light exercise', color: 'bg-gray-100 text-gray-600' },
-  { time: '9:00 - 12:00 PM', activity: 'New Concepts', subject: 'Biology Chapter Study', color: 'bg-blue-100 text-blue-700' },
-  { time: '12:00 - 2:00 PM', activity: 'Break', subject: 'Lunch & short nap', color: 'bg-gray-100 text-gray-600' },
-  { time: '2:00 - 5:00 PM', activity: 'Practice', subject: 'MCQs & Problem Solving', color: 'bg-purple-100 text-purple-700' },
-  { time: '5:00 - 6:00 PM', activity: 'Break', subject: 'Snacks & relax', color: 'bg-gray-100 text-gray-600' },
-  { time: '6:00 - 9:00 PM', activity: 'Physics/Chemistry', subject: 'Other subjects', color: 'bg-orange-100 text-orange-700' },
-  { time: '9:00 - 10:00 PM', activity: 'Night Revision', subject: 'Day summary & formulas', color: 'bg-teal-100 text-teal-700' },
+  {
+    time: '6:00 - 8:00 AM',
+    activity: 'Morning Revision',
+    subject: 'Previous day topics',
+    color: 'bg-green-100 text-green-700',
+  },
+  {
+    time: '8:00 - 9:00 AM',
+    activity: 'Break',
+    subject: 'Breakfast & light exercise',
+    color: 'bg-gray-100 text-gray-600',
+  },
+  {
+    time: '9:00 - 12:00 PM',
+    activity: 'New Concepts',
+    subject: 'Biology Chapter Study',
+    color: 'bg-blue-100 text-blue-700',
+  },
+  {
+    time: '12:00 - 2:00 PM',
+    activity: 'Break',
+    subject: 'Lunch & short nap',
+    color: 'bg-gray-100 text-gray-600',
+  },
+  {
+    time: '2:00 - 5:00 PM',
+    activity: 'Practice',
+    subject: 'MCQs & Problem Solving',
+    color: 'bg-purple-100 text-purple-700',
+  },
+  {
+    time: '5:00 - 6:00 PM',
+    activity: 'Break',
+    subject: 'Snacks & relax',
+    color: 'bg-gray-100 text-gray-600',
+  },
+  {
+    time: '6:00 - 9:00 PM',
+    activity: 'Physics/Chemistry',
+    subject: 'Other subjects',
+    color: 'bg-orange-100 text-orange-700',
+  },
+  {
+    time: '9:00 - 10:00 PM',
+    activity: 'Night Revision',
+    subject: 'Day summary & formulas',
+    color: 'bg-teal-100 text-teal-700',
+  },
 ]
 
 interface NEETStudyTimetableInfographicProps {
@@ -70,13 +110,14 @@ interface NEETStudyTimetableInfographicProps {
   className?: string
 }
 
-export function NEETStudyTimetableInfographic({ variant = 'full', className = '' }: NEETStudyTimetableInfographicProps) {
+export function NEETStudyTimetableInfographic({
+  variant = 'full',
+  className = '',
+}: NEETStudyTimetableInfographicProps) {
   return (
     <section className={`py-12 md:py-16 ${className}`}>
       <div className="container mx-auto px-4">
-        <div
-          className="text-center mb-10 animate-fadeInUp"
-        >
+        <div className="text-center mb-10 animate-fadeInUp">
           <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Calendar className="w-4 h-4" />
             Study Planner
@@ -85,8 +126,8 @@ export function NEETStudyTimetableInfographic({ variant = 'full', className = ''
             5-Month NEET Biology Study Timetable
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Comprehensive study plan designed by AIIMS faculty for NEET Biology aspirants.
-            Follow this schedule for optimal preparation.
+            Comprehensive study plan designed by AIIMS faculty for NEET Biology aspirants. Follow
+            this schedule for optimal preparation.
           </p>
         </div>
 
@@ -97,13 +138,19 @@ export function NEETStudyTimetableInfographic({ variant = 'full', className = ''
                 key={plan.month}
                 className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden animate-fadeInUp"
               >
-                <div className={`py-3 px-4 ${
-                  idx === 0 ? 'bg-green-500' :
-                  idx === 1 ? 'bg-blue-500' :
-                  idx === 2 ? 'bg-purple-500' :
-                  idx === 3 ? 'bg-orange-500' :
-                  'bg-red-500'
-                } text-white`}>
+                <div
+                  className={`py-3 px-4 ${
+                    idx === 0
+                      ? 'bg-green-500'
+                      : idx === 1
+                        ? 'bg-blue-500'
+                        : idx === 2
+                          ? 'bg-purple-500'
+                          : idx === 3
+                            ? 'bg-orange-500'
+                            : 'bg-red-500'
+                  } text-white`}
+                >
                   <h3 className="font-bold text-lg">{plan.month}</h3>
                   <p className="text-sm opacity-90">{plan.weeks}</p>
                 </div>
@@ -139,9 +186,7 @@ export function NEETStudyTimetableInfographic({ variant = 'full', className = ''
           </div>
 
           {variant === 'full' && (
-            <div
-              className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-6 md:p-8 text-white animate-fadeInUp"
-            >
+            <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-6 md:p-8 text-white animate-fadeInUp">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
                   <BookOpen className="w-6 h-6" />
@@ -159,7 +204,9 @@ export function NEETStudyTimetableInfographic({ variant = 'full', className = ''
                     className="bg-white/5 rounded-lg p-3 border border-white/10 animate-fadeInUp"
                   >
                     <div className="text-xs text-gray-400 mb-1">{slot.time}</div>
-                    <div className={`inline-block px-2 py-0.5 rounded text-xs font-medium mb-1 ${slot.color}`}>
+                    <div
+                      className={`inline-block px-2 py-0.5 rounded text-xs font-medium mb-1 ${slot.color}`}
+                    >
                       {slot.activity}
                     </div>
                     <div className="text-sm text-gray-300">{slot.subject}</div>
@@ -196,8 +243,8 @@ export function NEETStudyTimetableInfographic({ variant = 'full', className = ''
 
           <div className="mt-8 text-center">
             <p className="text-sm text-gray-500">
-              This study plan is designed by Dr. Shekhar C Singh and the Cerebrum Biology Academy faculty
-              based on 15+ years of NEET coaching experience.
+              This study plan is designed by Dr. Shekhar C Singh and the Cerebrum Biology Academy
+              faculty based on 15+ years of NEET coaching experience.
             </p>
           </div>
         </div>
@@ -210,7 +257,8 @@ export function NEETStudyTimetableInfographic({ variant = 'full', className = ''
             '@context': 'https://schema.org',
             '@type': 'HowTo',
             name: '5-Month NEET Biology Study Plan',
-            description: 'A comprehensive 5-month study timetable for NEET Biology preparation designed by AIIMS faculty.',
+            description:
+              'A comprehensive 5-month study timetable for NEET Biology preparation designed by AIIMS faculty.',
             totalTime: 'P150D',
             supply: [
               { '@type': 'HowToSupply', name: 'NCERT Biology Class 11 & 12' },

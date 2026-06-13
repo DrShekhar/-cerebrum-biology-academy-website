@@ -53,8 +53,7 @@ export const AcademicHeadline: React.FC<AcademicHeadlineProps> = ({
 
   if (animation) {
     return (
-      <div
-       className="animate-fadeInUp">
+      <div className="animate-fadeInUp">
         <Tag className={baseClasses}>{children}</Tag>
       </div>
     )
@@ -96,13 +95,7 @@ export const AcademicParagraph: React.FC<AcademicParagraphProps> = ({
   )
 
   if (animation) {
-    return (
-      <p
-        className={classes}
-      >
-        {children}
-      </p>
-    )
+    return <p className={classes}>{children}</p>
   }
 
   return <p className={classes}>{children}</p>
@@ -175,9 +168,7 @@ export const AcademicQuote: React.FC<AcademicQuoteProps> = ({
   )
 
   return (
-    <blockquote
-      className={quoteClasses}
-    >
+    <blockquote className={quoteClasses}>
       {variant !== 'research' && <div className="text-4xl text-blue-300 mb-4 font-serif">"</div>}
 
       <div
@@ -245,12 +236,7 @@ export const AcademicList: React.FC<AcademicListProps> = ({
   )
 
   if (animation) {
-    return (
-      <div
-       className="animate-fadeInUp">
-        {listContent}
-      </div>
-    )
+    return <div className="animate-fadeInUp">{listContent}</div>
   }
 
   return listContent

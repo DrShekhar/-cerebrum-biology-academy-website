@@ -30,7 +30,12 @@ export default async function OlympiadCountryPage({ params }: PageProps) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
       {
         '@type': 'ListItem',
         position: 2,
@@ -196,9 +201,9 @@ export default async function OlympiadCountryPage({ params }: PageProps) {
                 Book a free counselling call from {country.name}
               </h2>
               <p className="mt-3 text-base text-slate-700 md:text-lg">
-                We schedule the call in {country.timezone} so it fits your weekday evening. The
-                call covers your child&apos;s current biology level, school curriculum (IB / AP /
-                IGCSE etc.), and the most appropriate olympiad track + Pre-Med pathway.
+                We schedule the call in {country.timezone} so it fits your weekday evening. The call
+                covers your child&apos;s current biology level, school curriculum (IB / AP / IGCSE
+                etc.), and the most appropriate olympiad track + Pre-Med pathway.
               </p>
               <div className="mt-6 rounded-xl border border-slate-200 bg-white p-4">
                 <p className="text-sm text-slate-700">

@@ -118,8 +118,8 @@ export function TrialBanner({ trialStatus, onUpgradeClick, onDismiss }: TrialBan
   const Icon = config.icon
 
   return (
-<>
-{showAnimation && (
+    <>
+      {showAnimation && (
         <div
           className={`relative bg-gradient-to-r ${config.bgGradient} text-white overflow-hidden`}
           role="alert"
@@ -196,17 +196,15 @@ export function TrialBanner({ trialStatus, onUpgradeClick, onDismiss }: TrialBan
                   </span>
                 </div>
                 <div className="w-full bg-white/20 rounded-full h-2 overflow-hidden">
-                  <div
-                    className="h-full bg-white rounded-full animate-fadeInUp"
-                  />
+                  <div className="h-full bg-white rounded-full animate-fadeInUp" />
                 </div>
               </div>
             )}
           </div>
         </div>
       )}
-</>
-)
+    </>
+  )
 }
 
 export function useTrialBanner(freeUserId: string | null) {

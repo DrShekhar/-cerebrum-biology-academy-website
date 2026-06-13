@@ -20,8 +20,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/online-neet-coaching' },
   openGraph: {
     title: 'Online NEET Coaching | Cerebrum Biology Academy',
-    description:
-      'Live online biology classes from AIIMS faculty. NCERT-deep, 98% qualification.',
+    description: 'Live online biology classes from AIIMS faculty. NCERT-deep, 98% qualification.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/online-neet-coaching',

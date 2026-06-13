@@ -58,8 +58,7 @@ export function CourseSystemDemo() {
       {/* Header */}
       <div className="bg-blue-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
               <BookOpen className="w-4 h-4 mr-2" />
               Course System Components Demo

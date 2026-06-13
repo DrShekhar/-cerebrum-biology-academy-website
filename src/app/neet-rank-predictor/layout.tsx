@@ -19,7 +19,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Rank Predictor 2026 | Predict Your NEET AIR & College',
-    description: 'Free NEET rank predictor 2026. Predict your All India Rank based on expected score. See eligible medical colleges, cutoffs & admission chances. Instant results!',
+    description:
+      'Free NEET rank predictor 2026. Predict your All India Rank based on expected score. See eligible medical colleges, cutoffs & admission chances. Instant results!',
   },
 }
 

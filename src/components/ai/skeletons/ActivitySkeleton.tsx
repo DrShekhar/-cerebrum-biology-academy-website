@@ -113,7 +113,10 @@ export function LiveActivitySkeleton() {
       </div>
       <div className="space-y-3 max-h-96 overflow-y-auto">
         {[1, 2, 3, 4, 5].map((i) => (
-          <div key={i} className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg animate-fadeInUp">
+          <div
+            key={i}
+            className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg animate-fadeInUp"
+          >
             <div
               className="w-4 h-4 rounded flex-shrink-0 mt-0.5 animate-fadeInUp"
               style={{

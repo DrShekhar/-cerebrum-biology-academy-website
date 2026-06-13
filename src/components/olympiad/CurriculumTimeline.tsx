@@ -60,8 +60,8 @@ export function CurriculumTimeline() {
             </h2>
             <p className="mt-3 max-w-3xl text-base text-slate-600 md:text-lg">
               A 12-month programme built backwards from the IBO syllabus. The same depth that
-              produces national-team olympiad standing also produces an exceptionally strong
-              Pre-Med foundation — students don&apos;t need to choose between &quot;olympiad track&quot; and
+              produces national-team olympiad standing also produces an exceptionally strong Pre-Med
+              foundation — students don&apos;t need to choose between &quot;olympiad track&quot; and
               &quot;medical-school track.&quot;
             </p>
           </div>

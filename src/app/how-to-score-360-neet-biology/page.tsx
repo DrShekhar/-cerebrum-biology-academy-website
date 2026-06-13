@@ -61,7 +61,8 @@ export default function HowToScore360NEETBiologyPage() {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     name: 'How to Score 360/360 in NEET Biology',
-    description: 'Step-by-step strategy to achieve perfect score in NEET Biology. Expert tips from AIIMS faculty with proven results.',
+    description:
+      'Step-by-step strategy to achieve perfect score in NEET Biology. Expert tips from AIIMS faculty with proven results.',
     totalTime: 'P10M',
     estimatedCost: {
       '@type': 'MonetaryAmount',
@@ -130,9 +131,24 @@ export default function HowToScore360NEETBiologyPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Biology', item: 'https://cerebrumbiologyacademy.com/neet-biology-coaching' },
-      { '@type': 'ListItem', position: 3, name: 'Score 360 in Biology', item: 'https://cerebrumbiologyacademy.com/how-to-score-360-neet-biology' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Biology',
+        item: 'https://cerebrumbiologyacademy.com/neet-biology-coaching',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Score 360 in Biology',
+        item: 'https://cerebrumbiologyacademy.com/how-to-score-360-neet-biology',
+      },
     ],
   }
 

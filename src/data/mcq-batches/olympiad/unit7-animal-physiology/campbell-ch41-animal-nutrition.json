@@ -329,12 +329,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about digestive enzymes and their specificity:\nS1: Amylase hydrolyzes alpha-1,4-glycosidic bonds in starch but cannot cleave alpha-1,6 branch points, which require isomaltase.\nS2: Trypsin cleaves peptide bonds on the carboxyl side of basic amino acids (lysine, arginine), while chymotrypsin cleaves on the carboxyl side of hydrophobic amino acids (phenylalanine, tryptophan, tyrosine).\nS3: Lactase (beta-galactosidase) hydrolyzes the beta-1,4-glycosidic bond in lactose to produce glucose and fructose.\nS4: Pancreatic lipase requires colipase as a cofactor to access the lipid-water interface of emulsified fat droplets, because bile salts would otherwise exclude lipase from the droplet surface.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFTT",
-        "TTTF"
-      ],
+      "options": ["TTFT", "TTTT", "TFTT", "TTTF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Salivary and pancreatic amylase hydrolyze internal alpha-1,4-glycosidic bonds in amylose and amylopectin, producing maltose, maltotriose, and alpha-limit dextrins. The alpha-1,6 branch points in amylopectin require isomaltase (alpha-dextrinase) for hydrolysis. S2 is TRUE: Trypsin and chymotrypsin are both serine endopeptidases but have different substrate specificities determined by their active site geometry. Trypsin has a negatively charged aspartate in its specificity pocket, attracting positively charged lysine and arginine. Chymotrypsin has a hydrophobic specificity pocket, accommodating aromatic and hydrophobic residues. S3 is FALSE: Lactase cleaves the beta-1,4-glycosidic bond in lactose, but the products are glucose and GALACTOSE, not glucose and fructose. Sucrose (not lactose) yields glucose and fructose upon hydrolysis by sucrase. S4 is TRUE: Bile salts coat emulsified fat droplets, and their amphipathic nature tends to exclude the water-soluble lipase from the lipid interface. Colipase acts as an anchor, binding both the fat droplet and lipase, allowing lipase to access its substrate.",
       "isOlympiad": true,
@@ -349,12 +344,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about hormonal regulation of digestion:\nS1: Gastrin stimulates HCl secretion and is released from G-cells in the gastric antrum in response to stomach distension, peptides in the stomach, and vagal stimulation.\nS2: Secretin is released from S-cells in the duodenum in response to acidic chyme and stimulates pancreatic bicarbonate secretion to neutralize the acid.\nS3: GIP (glucose-dependent insulinotropic peptide, formerly gastric inhibitory peptide) is released in response to glucose and fat in the duodenum and enhances insulin secretion from pancreatic beta cells.\nS4: Motilin is released from the duodenum during feeding and stimulates gastric acid secretion to prepare for additional food intake.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TFTT",
-        "TTFF"
-      ],
+      "options": ["TTTF", "TTTT", "TFTT", "TTFF"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Gastrin is the primary hormonal stimulator of gastric acid secretion. G-cells release gastrin in response to three stimuli: mechanical distension of the antral wall, the presence of peptides and amino acids from protein digestion, and acetylcholine from vagal nerve endings (cephalic and gastric phases). Gastrin acts on CCK-B receptors on parietal cells and ECL cells. S2 is TRUE: Secretin was the first hormone ever discovered (Bayliss and Starling, 1902). S-cells in the duodenal mucosa release secretin when luminal pH drops below ~4.5. Secretin stimulates pancreatic duct cells to secrete HCO3--rich fluid, neutralizing acidic chyme. S3 is TRUE: GIP (also called glucose-dependent insulinotropic peptide) is an incretin hormone released by K-cells in the duodenum and jejunum. It potentiates glucose-stimulated insulin release from beta cells, explaining why oral glucose produces a greater insulin response than intravenous glucose (the incretin effect). S4 is FALSE: Motilin is released during fasting (not feeding) and stimulates the migrating motor complex (MMC), the 'housekeeping' waves that sweep residual material through the GI tract between meals. It does not stimulate gastric acid secretion.",
       "isOlympiad": true,
@@ -369,12 +359,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about essential nutrients:\nS1: Essential amino acids are those that cannot be synthesized by the organism and must be obtained from the diet.\nS2: All 20 standard amino acids are essential for humans because the human genome lacks genes for any amino acid biosynthetic pathways.\nS3: Essential fatty acids (linoleic acid and alpha-linolenic acid) are polyunsaturated fatty acids that serve as precursors for eicosanoids including prostaglandins and leukotrienes.\nS4: Water-soluble vitamins (B-complex and C) are generally not stored in significant quantities and must be consumed regularly, while fat-soluble vitamins (A, D, E, K) can be stored in liver and adipose tissue.",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TFFT",
-        "TFTF"
-      ],
+      "options": ["TFTT", "TTTT", "TFFT", "TFTF"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: Essential amino acids are defined as those an organism cannot synthesize de novo or cannot produce at sufficient rates to meet metabolic demands. For adult humans, there are 9 essential amino acids: histidine, isoleucine, leucine, lysine, methionine, phenylalanine, threonine, tryptophan, and valine. S2 is FALSE: Humans can synthesize 11 of the 20 standard amino acids (the non-essential amino acids) through various metabolic pathways. For example, alanine from pyruvate via transamination, glutamate from alpha-ketoglutarate, and serine from 3-phosphoglycerate. Only 9 are truly essential. S3 is TRUE: Linoleic acid (omega-6) and alpha-linolenic acid (omega-3) are essential because mammals lack the delta-12 and delta-15 desaturases needed to introduce double bonds beyond carbon 9. They serve as precursors for arachidonic acid and EPA/DHA, which are substrates for cyclooxygenase and lipoxygenase to produce prostaglandins, thromboxanes, and leukotrienes. S4 is TRUE: The distinction between water-soluble and fat-soluble vitamins has important practical implications for dietary requirements and toxicity risk.",
       "isOlympiad": true,
@@ -389,12 +374,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about comparative digestive adaptations:\nS1: Herbivore intestines are generally longer relative to body length than carnivore intestines, reflecting the greater difficulty of extracting nutrients from plant material.\nS2: The cecum is enlarged in hindgut fermenters (horses, rabbits) and serves as a fermentation chamber analogous to the rumen in ruminants.\nS3: Coprophagy (re-ingestion of feces) in rabbits allows a second passage through the digestive tract, enabling absorption of microbial vitamins and proteins produced during cecal fermentation.\nS4: Carnivores have a longer large intestine than herbivores to allow extended water absorption from their protein-rich, low-fiber diet.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Herbivores need longer intestines because plant cell walls (cellulose, hemicellulose, lignin) require extended processing time and more surface area for nutrient extraction. A sheep may have an intestine 25 times its body length, while a cat's is only about 4 times body length. S2 is TRUE: In hindgut fermenters, the cecum (and proximal colon) houses anaerobic microorganisms that ferment cellulose to volatile fatty acids, similar to rumen fermentation but occurring after the main absorptive regions of the small intestine. This is less efficient than foregut fermentation because microbial products cannot be absorbed in the small intestine. S3 is TRUE: Rabbits produce two types of fecal pellets: soft cecotropes (rich in microbial vitamins and proteins from cecal fermentation) consumed directly from the anus, and hard fecal pellets that are discarded. Coprophagy allows rabbits to recover nutrients from cecal fermentation that were not absorbed during the first pass. S4 is FALSE: Carnivores generally have a SHORTER large intestine relative to body size because their diet is highly digestible with little indigestible residue, requiring less colonic processing.",
       "isOlympiad": true,
@@ -509,12 +489,7 @@
     {
       "type": "MCQ",
       "question": "Which of the following vitamins functions as a coenzyme in the citric acid cycle as part of FAD?",
-      "options": [
-        "Thiamine (B1)",
-        "Riboflavin (B2)",
-        "Niacin (B3)",
-        "Pyridoxine (B6)"
-      ],
+      "options": ["Thiamine (B1)", "Riboflavin (B2)", "Niacin (B3)", "Pyridoxine (B6)"],
       "correctAnswer": "B",
       "explanation": "Riboflavin (vitamin B2) is the precursor for the coenzymes FAD (flavin adenine dinucleotide) and FMN (flavin mononucleotide). FAD is a critical electron carrier in the citric acid cycle, specifically serving as the prosthetic group of succinate dehydrogenase (Complex II), which catalyzes the oxidation of succinate to fumarate while reducing FAD to FADH2. FAD is also essential in fatty acid beta-oxidation and several other oxidative reactions. Option A (niacin/B3) is the precursor for NAD+ and NADP+, which are also citric acid cycle coenzymes but are different from FAD. Option C (thiamine/B1) forms thiamine pyrophosphate (TPP), a coenzyme for pyruvate dehydrogenase and alpha-ketoglutarate dehydrogenase. Option D (pyridoxine/B6) forms pyridoxal phosphate (PLP), primarily involved in amino acid metabolism (transamination, decarboxylation).",
       "isOlympiad": true,
@@ -629,12 +604,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the enteric nervous system (ENS):\nS1: The ENS contains approximately 200-600 million neurons, earning it the nickname 'the second brain,' and can coordinate digestive functions independently of CNS input.\nS2: The myenteric (Auerbach's) plexus lies between the circular and longitudinal muscle layers and primarily controls GI motility.\nS3: The submucosal (Meissner's) plexus lies within the submucosa and primarily controls secretion and blood flow.\nS4: The ENS communicates exclusively through serotonin (5-HT) as its sole neurotransmitter.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: The ENS is the largest division of the peripheral nervous system, containing 200-600 million neurons (comparable to the spinal cord). It can operate autonomously, coordinating peristalsis, segmentation, secretion, and local blood flow without input from the brain or spinal cord, though it normally receives modulatory input from the vagus nerve and sympathetic system. S2 is TRUE: The myenteric plexus (Auerbach's plexus) is located between the circular and longitudinal smooth muscle layers of the muscularis externa. It primarily coordinates GI motility, including peristalsis and the migrating motor complex, through excitatory (ACh, substance P) and inhibitory (NO, VIP) motor neurons. S3 is TRUE: The submucosal plexus (Meissner's plexus) is located within the submucosa, primarily in the small and large intestines. It regulates mucosal secretion (including electrolyte and water secretion), local blood flow, and absorption. S4 is FALSE: The ENS uses more than 30 neurotransmitters, including acetylcholine, norepinephrine, serotonin, dopamine, nitric oxide, VIP, substance P, and ATP. Serotonin is important (95% of body serotonin is in the gut) but is far from the sole neurotransmitter.",
       "isOlympiad": true,
@@ -649,12 +619,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about carbohydrate digestion:\nS1: Salivary amylase begins starch digestion in the mouth and continues working in the stomach until inactivated by gastric acid.\nS2: Pancreatic amylase is the primary enzyme for starch digestion in the small intestine, producing maltose, maltotriose, and alpha-limit dextrins.\nS3: The brush border enzymes maltase, sucrase, and lactase are located on the apical surface of enterocytes and hydrolyze disaccharides to monosaccharides for absorption.\nS4: Cellulose is digested by human pancreatic amylase because it contains the same glucose monomers as starch.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Salivary amylase (ptyalin) begins hydrolyzing starch in the mouth at its optimal pH of ~6.7. When the food bolus enters the stomach, amylase continues to work in the interior of the bolus before gastric acid penetrates and lowers the pH below 4, which denatures the enzyme. This can account for significant starch digestion during the meal. S2 is TRUE: Pancreatic alpha-amylase, secreted by acinar cells, is the major enzyme for luminal starch digestion. Like salivary amylase, it cleaves internal alpha-1,4-glycosidic bonds, but at its optimal pH of ~7.5. The products are the disaccharide maltose, the trisaccharide maltotriose, and alpha-limit dextrins (short-branched oligosaccharides). S3 is TRUE: These brush border enzymes complete carbohydrate digestion. Maltase cleaves maltose to two glucose molecules. Sucrase cleaves sucrose to glucose and fructose. Lactase cleaves lactose to glucose and galactose. S4 is FALSE: Cellulose contains beta-1,4-glycosidic bonds, which human amylase cannot cleave (amylase is specific for alpha bonds). This is why dietary fiber passes through the human GI tract largely undigested.",
       "isOlympiad": true,
@@ -829,12 +794,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the gastric mucosal barrier and protection mechanisms:\nS1: Goblet cells in the gastric mucosa secrete a mucus-bicarbonate barrier that maintains a pH gradient from ~1-2 in the lumen to ~7 at the epithelial surface.\nS2: Prostaglandins (PGE2 and PGI2) produced by the gastric mucosa stimulate mucus and bicarbonate secretion while inhibiting acid secretion, providing cytoprotection.\nS3: NSAIDs (nonsteroidal anti-inflammatory drugs) protect the stomach by enhancing prostaglandin production through COX-1 activation.\nS4: Helicobacter pylori undermines mucosal defense by producing urease, which generates ammonia to neutralize local acid, allowing the bacterium to colonize the gastric epithelium.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TTFF",
-        "TFTT"
-      ],
+      "options": ["TTFT", "TTTT", "TTFF", "TFTT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Gastric surface mucous cells (not goblet cells, which are in the intestine, but the concept is correct for gastric mucous cells) secrete a 0.2-0.6 mm thick mucus layer containing entrapped HCO3-. This creates a pH gradient from the hostile luminal pH of 1-2 to a near-neutral pH of 6-7 at the epithelial surface, protecting the cells from acid and pepsin. S2 is TRUE: Prostaglandins, particularly PGE2 and PGI2, are critical cytoprotective mediators. They stimulate mucus and bicarbonate secretion, maintain mucosal blood flow, promote epithelial cell proliferation, and inhibit acid secretion. These are produced constitutively by COX-1 in the gastric mucosa. S3 is FALSE: NSAIDs do the opposite. They INHIBIT cyclooxygenase (particularly COX-1), reducing prostaglandin synthesis and thereby compromising mucosal defense. This is why chronic NSAID use is a major risk factor for peptic ulcers and gastric bleeding. S4 is TRUE: H. pylori produces large amounts of urease, converting urea to ammonia and CO2. The ammonia neutralizes gastric acid in the bacterium's immediate microenvironment, allowing survival and colonization of the gastric mucosa. This chronic infection can cause gastritis, peptic ulcers, and gastric cancer.",
       "isOlympiad": true,
@@ -1109,12 +1069,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about digestive system evolution across animal phyla:\nS1: The gastrovascular cavity of cnidarians serves both digestive and circulatory functions, with a single opening serving as both mouth and anus.\nS2: The evolution of a complete digestive tract (mouth to anus) in bilaterian animals allowed specialization of different regions for different digestive functions.\nS3: All insects have a gastrovascular cavity similar to cnidarians because they evolved from cnidarian ancestors.\nS4: The evolution of jaws in vertebrates allowed the exploitation of a wider range of food types, contributing to adaptive radiation.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFFT",
-        "TTFF"
-      ],
+      "options": ["TTFT", "TTTT", "TFFT", "TTFF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: The cnidarian gastrovascular cavity is a blind sac with a single opening that functions as both mouth and anus. Food enters and waste exits through the same opening. The cavity distributes nutrients to all cells (circulatory function) as there is no dedicated circulatory system. S2 is TRUE: The complete digestive tract (alimentary canal) was a major evolutionary innovation. Having separate mouth and anus allows unidirectional food flow, enabling regional specialization: the anterior end can specialize in food processing (mouth, pharynx), middle regions in chemical digestion and absorption (stomach, intestine), and the posterior end in water reabsorption and waste compaction (colon, rectum). S3 is FALSE: Insects are protostome bilaterians (arthropods) with complete digestive tracts (foregut, midgut, hindgut), not gastrovascular cavities. They did not evolve from cnidarians; both trace back to ancient common ancestors. S4 is TRUE: The evolution of jaws (from modified gill arches in gnathostomes) was a key innovation allowing vertebrates to grasp, bite, tear, and crush diverse food types, enabling exploitation of new ecological niches.",
       "isOlympiad": true,
@@ -1129,12 +1084,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about appetite regulation:\nS1: The arcuate nucleus of the hypothalamus contains two opposing populations of neurons: orexigenic NPY/AgRP neurons that stimulate appetite, and anorexigenic POMC/CART neurons that suppress appetite.\nS2: PYY3-36 (peptide YY), released from L-cells in the ileum and colon after meals, reduces appetite by inhibiting NPY/AgRP neurons in the arcuate nucleus.\nS3: Insulin acts as an adiposity signal in the brain, with higher insulin levels (reflecting higher fat stores) suppressing appetite through hypothalamic receptors.\nS4: Cannabinoid CB1 receptor activation in the hypothalamus suppresses appetite, which is why cannabis use typically reduces food intake.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: The arcuate nucleus is the primary hypothalamic center for appetite regulation. NPY (neuropeptide Y) and AgRP (agouti-related peptide) are co-expressed in neurons that powerfully stimulate appetite. POMC (pro-opiomelanocortin) produces alpha-MSH, which activates MC4 receptors to suppress appetite, and CART (cocaine-and-amphetamine-regulated transcript) also suppresses appetite. These two populations integrate peripheral signals and provide opposing control. S2 is TRUE: PYY3-36 is released postprandially from intestinal L-cells and acts on Y2 receptors on NPY/AgRP neurons, inhibiting them and thereby reducing appetite. This is an important satiety signal. S3 is TRUE: Insulin crosses the blood-brain barrier and acts on insulin receptors in the arcuate nucleus, where it inhibits NPY/AgRP neurons and stimulates POMC neurons, functioning as a long-term adiposity signal alongside leptin. S4 is FALSE: Cannabinoid CB1 receptor activation STIMULATES appetite (the 'munchies' effect). THC and endocannabinoids (anandamide, 2-AG) activate CB1 receptors in the hypothalamus and limbic system, increasing food intake. This is why CB1 antagonists (rimonabant) were investigated as anti-obesity drugs.",
       "isOlympiad": true,
@@ -1249,12 +1199,7 @@
     {
       "type": "MCQ",
       "question": "Which mineral is a critical component of the enzyme carbonic anhydrase (important in gastric acid secretion and CO2 transport) and of more than 300 other enzymes including DNA polymerase?",
-      "options": [
-        "Zinc",
-        "Iron",
-        "Copper",
-        "Manganese"
-      ],
+      "options": ["Zinc", "Iron", "Copper", "Manganese"],
       "correctAnswer": "A",
       "explanation": "Zinc is an essential trace mineral that serves as a cofactor in over 300 enzymes, making it one of the most widely used metallic cofactors in biology. Carbonic anhydrase, which catalyzes the reversible hydration of CO2 (CO2 + H2O \u2194 H2CO3 \u2194 H+ + HCO3-), requires a zinc ion at its active site for catalysis. This enzyme is essential in parietal cells (providing H+ for gastric acid), red blood cells (CO2 transport), and kidneys (acid-base balance). Other zinc-dependent enzymes include DNA polymerase, RNA polymerase, alcohol dehydrogenase, superoxide dismutase (Cu/Zn-SOD), and matrix metalloproteinases. Zinc also plays structural roles in zinc finger transcription factors. Option A (iron) is important in hemoglobin and cytochromes but not carbonic anhydrase. Option C (copper) is a cofactor in ceruloplasmin and cytochrome c oxidase. Option D (manganese) is a cofactor in arginase and Mn-SOD.",
       "isOlympiad": true,
@@ -1469,12 +1414,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the large intestine (colon):\nS1: The primary function of the colon is to absorb water and electrolytes from undigested residue, compacting it into feces.\nS2: The colon harbors approximately 10^11 bacteria per gram of contents, making it the most densely populated microbial ecosystem in the human body.\nS3: The colon is the primary site of nutrient absorption, where most proteins, fats, and carbohydrates are absorbed.\nS4: Colonic bacteria produce vitamin K and some B vitamins (biotin, folate) as metabolic byproducts, which are absorbed and contribute to the host's nutritional status.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFFT",
-        "TTTF"
-      ],
+      "options": ["TTFT", "TTTT", "TFFT", "TTTF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: The colon absorbs approximately 1-1.5 liters of water and associated electrolytes (Na+, Cl-) from the 1.5 liters of chyme that enters from the ileum daily, producing 100-200 mL of semi-solid feces. S2 is TRUE: The colonic microbiome is extraordinarily dense, containing approximately 10^11 colony-forming units per gram of content. The total microbial biomass in the human colon is approximately 1-2 kg. S3 is FALSE: The small intestine (duodenum, jejunum, ileum) is the primary site of nutrient absorption, where >95% of proteins, fats, and carbohydrates are absorbed. The colon absorbs water, electrolytes, short-chain fatty acids, and some vitamins, but it is NOT the primary site for macronutrient absorption. S4 is TRUE: Colonic bacteria produce vitamin K2 (menaquinone) and several B vitamins as metabolic byproducts. These vitamins can be absorbed in the colon and contribute meaningfully to the host's requirements, particularly vitamin K, where bacterial production can supply up to 50% of daily needs.",
       "isOlympiad": true,

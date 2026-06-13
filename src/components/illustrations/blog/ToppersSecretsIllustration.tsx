@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function ToppersSecretsIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -113,8 +113,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
       </g>
 
       {/* Title Section */}
-      <g
-      >
+      <g>
         <rect x="175" y="15" width="350" height="55" rx="27" fill="#F59E0B" opacity="0.15" />
         <text x="350" y="45" fontSize="24" fill="#92400E" textAnchor="middle" fontWeight="bold">
           🏆 NEET Toppers Secrets
@@ -125,8 +124,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
       </g>
 
       {/* === LEFT SECTION: Trophy & Achievements === */}
-      <g
-      >
+      <g>
         <g filter="url(#toppersCardShadow)">
           <rect x="20" y="85" width="200" height="280" rx="16" fill="#FFFFFF" />
         </g>
@@ -136,8 +134,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
         </text>
 
         {/* Trophy illustration */}
-        <g
-        >
+        <g>
           {/* Trophy cup */}
           <path d="M90 130 L100 185 L140 185 L150 130 Z" fill="url(#trophyGrad)" />
           <ellipse cx="120" cy="130" r="30" ry="10" fill="#FDE047" />
@@ -155,14 +152,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
           <rect x="85" y="203" width="70" height="12" rx="3" fill="#92400E" />
 
           {/* Number 1 on trophy */}
-          <text
-            x="120"
-            y="168"
-            fontSize="28"
-            fill="#FFFFFF"
-            textAnchor="middle"
-            fontWeight="bold"
-          >
+          <text x="120" y="168" fontSize="28" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
             1
           </text>
         </g>
@@ -173,10 +163,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
             Recent AIR 1 Holders
           </text>
           {achievements.map((ach, i) => (
-            <g
-              key={i}
-              transform={`translate(0, ${18 + i * 35})`}
-            >
+            <g key={i} transform={`translate(0, ${18 + i * 35})`}>
               <rect x="0" y="0" width="170" height="30" rx="8" fill="#FEF3C7" />
               <text x="10" y="13" fontSize="8" fill="#92400E" fontWeight="bold">
                 {ach.rank}
@@ -190,12 +177,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
               <text x="60" y="24" fontSize="7" fill="#6B7280">
                 NEET {ach.year}
               </text>
-              <circle
-                cx="155"
-                cy="15"
-                r="8"
-                fill="#FCD34D"
-              />
+              <circle cx="155" cy="15" r="8" fill="#FCD34D" />
               <text x="155" y="18" fontSize="10" textAnchor="middle">
                 🥇
               </text>
@@ -205,8 +187,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
       </g>
 
       {/* === CENTER SECTION: 6 Secrets Grid === */}
-      <g
-      >
+      <g>
         <g filter="url(#toppersCardShadow)">
           <rect x="235" y="85" width="310" height="280" rx="16" fill="#FFFFFF" />
         </g>
@@ -218,10 +199,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
         {/* Secrets grid - 2 columns, 3 rows */}
         <g transform="translate(250, 120)">
           {secrets.map((secret, i) => (
-            <g
-              key={i}
-              transform={`translate(${(i % 2) * 145}, ${Math.floor(i / 2) * 80})`}
-            >
+            <g key={i} transform={`translate(${(i % 2) * 145}, ${Math.floor(i / 2) * 80})`}>
               {/* Secret card */}
               <rect
                 x="0"
@@ -261,23 +239,14 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
               </text>
 
               {/* Animated glow on hover effect */}
-              <rect
-                x="0"
-                y="0"
-                width="135"
-                height="70"
-                rx="10"
-                fill={secret.color}
-                opacity="0"
-              />
+              <rect x="0" y="0" width="135" height="70" rx="10" fill={secret.color} opacity="0" />
             </g>
           ))}
         </g>
       </g>
 
       {/* === RIGHT SECTION: Success Metrics === */}
-      <g
-      >
+      <g>
         <g filter="url(#toppersCardShadow)">
           <rect x="560" y="85" width="125" height="280" rx="16" fill="#FFFFFF" />
         </g>
@@ -289,10 +258,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
         {/* Metrics */}
         <g transform="translate(570, 125)">
           {metrics.map((metric, i) => (
-            <g
-              key={i}
-              transform={`translate(0, ${i * 85})`}
-            >
+            <g key={i} transform={`translate(0, ${i * 85})`}>
               <rect x="0" y="0" width="105" height="75" rx="10" fill={`${metric.color}15`} />
 
               <text
@@ -326,8 +292,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
       </g>
 
       {/* === BOTTOM SECTION: Daily Routine Timeline === */}
-      <g
-      >
+      <g>
         <g filter="url(#toppersCardShadow)">
           <rect x="20" y="380" width="665" height="125" rx="16" fill="#FFFFFF" />
         </g>
@@ -359,16 +324,8 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
             { time: '9-10 PM', activity: 'Analysis', icon: '🔍', x: 480 },
             { time: '10 PM', activity: 'Sleep', icon: '😴', x: 580 },
           ].map((point, i) => (
-            <g
-              key={i}
-              transform={`translate(${point.x}, 0)`}
-            >
-              <circle
-                cx="20"
-                cy="30"
-                r="12"
-                fill="#F59E0B"
-              />
+            <g key={i} transform={`translate(${point.x}, 0)`}>
+              <circle cx="20" cy="30" r="12" fill="#F59E0B" />
               <text x="20" y="34" fontSize="12" textAnchor="middle">
                 {point.icon}
               </text>
@@ -387,13 +344,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
       {animate && (
         <>
           {[...Array(5)].map((_, i) => (
-            <text
-              key={i}
-              x={30 + i * 160}
-              y={50 + (i % 2) * 430}
-              fontSize="16"
-              opacity="0.4"
-            >
+            <text key={i} x={30 + i * 160} y={50 + (i % 2) * 430} fontSize="16" opacity="0.4">
               ⭐
             </text>
           ))}

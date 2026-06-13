@@ -92,7 +92,11 @@ export default function NEETCoachingShadhdaraPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET East Delhi', 'NEET Biology East Delhi', 'Medical entrance coaching East Delhi']}
+        knowsAbout={[
+          'NEET East Delhi',
+          'NEET Biology East Delhi',
+          'Medical entrance coaching East Delhi',
+        ]}
       />
       <DelhiAreaSchema pageSlug="neet-coaching-shahdara-east-delhi" />
       <LocalitySchema

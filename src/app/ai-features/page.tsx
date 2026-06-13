@@ -19,10 +19,16 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'AI Features | Cerebrum Biology Academy',
-    description: 'AI-powered NEET Biology features: instant doubt resolution, personalized study paths, voice tutor.',
+    description:
+      'AI-powered NEET Biology features: instant doubt resolution, personalized study paths, voice tutor.',
   },
 
-  openGraph: { title: 'AI Features', description: 'AI-powered study tools including ClaudeChat, Voice Training, and study analytics for NEET Biology', type: 'website' },
+  openGraph: {
+    title: 'AI Features',
+    description:
+      'AI-powered study tools including ClaudeChat, Voice Training, and study analytics for NEET Biology',
+    type: 'website',
+  },
 }
 
 export default function AIFeaturesPage() {
@@ -30,8 +36,18 @@ export default function AIFeaturesPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'AI Features', item: 'https://cerebrumbiologyacademy.com/ai-features' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'AI Features',
+        item: 'https://cerebrumbiologyacademy.com/ai-features',
+      },
     ],
   }
 
@@ -39,7 +55,8 @@ export default function AIFeaturesPage() {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'AI-Powered Features - Cerebrum Biology Academy',
-    description: 'AI-powered study tools including ClaudeChat, Voice Training, and study analytics for NEET Biology preparation.',
+    description:
+      'AI-powered study tools including ClaudeChat, Voice Training, and study analytics for NEET Biology preparation.',
     url: 'https://cerebrumbiologyacademy.com/ai-features',
     isPartOf: {
       '@type': 'WebSite',
@@ -55,8 +72,14 @@ export default function AIFeaturesPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <AIFeaturesHub />
     </>
   )

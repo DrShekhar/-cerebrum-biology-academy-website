@@ -113,7 +113,6 @@ export async function POST(request: NextRequest) {
       where: { id: otpRecord.id },
     })
 
-
     return NextResponse.json({
       success: true,
       verificationToken,

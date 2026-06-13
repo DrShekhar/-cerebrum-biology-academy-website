@@ -104,6 +104,7 @@ export default async function Page() {
   return (
     <>
       <LocalitySchema
+        country="AU"
         locality={locality}
         slug="neet-coaching-brisbane-australia"
         pageTitle="NEET Coaching in Brisbane, Australia"

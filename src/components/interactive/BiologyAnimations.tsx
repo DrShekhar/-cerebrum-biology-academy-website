@@ -24,9 +24,7 @@ export const DNAHelixAnimation: React.FC<{ className?: string }> = ({ className 
 
   return (
     <div ref={ref} className={cn('relative w-64 h-96 mx-auto', className)}>
-      <div
-        className="absolute inset-0 animate-fadeInUp"
-      >
+      <div className="absolute inset-0 animate-fadeInUp">
         {/* DNA Strands */}
         {[...Array(12)].map((_, i) => (
           <div
@@ -36,9 +34,7 @@ export const DNAHelixAnimation: React.FC<{ className?: string }> = ({ className 
           >
             {/* Base Pairs */}
             <div className="w-4 h-4 bg-blue-500 rounded-full shadow-lg" />
-            <div
-              className="flex-1 h-0.5 bg-gradient-to-r from-blue-500 to-red-500 mx-2 animate-fadeInUp"
-            />
+            <div className="flex-1 h-0.5 bg-gradient-to-r from-blue-500 to-red-500 mx-2 animate-fadeInUp" />
             <div className="w-4 h-4 bg-red-500 rounded-full shadow-lg" />
           </div>
         ))}
@@ -83,37 +79,25 @@ export const CellDivisionAnimation: React.FC<{ className?: string }> = ({ classN
     switch (phase) {
       case 'interphase':
         return (
-          <div
-            className="w-32 h-32 border-4 border-blue-500 rounded-full relative animate-fadeInUp"
-          >
-            <div
-              className="w-8 h-8 bg-red-500 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-fadeInUp"
-            />
+          <div className="w-32 h-32 border-4 border-blue-500 rounded-full relative animate-fadeInUp">
+            <div className="w-8 h-8 bg-red-500 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-fadeInUp" />
           </div>
         )
       case 'telophase':
         return (
           <div className="flex gap-4">
-            <div
-              className="w-24 h-24 border-4 border-blue-500 rounded-full relative animate-fadeInUp"
-            >
+            <div className="w-24 h-24 border-4 border-blue-500 rounded-full relative animate-fadeInUp">
               <div className="w-6 h-6 bg-red-500 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
             </div>
-            <div
-              className="w-24 h-24 border-4 border-blue-500 rounded-full relative animate-fadeInUp"
-            >
+            <div className="w-24 h-24 border-4 border-blue-500 rounded-full relative animate-fadeInUp">
               <div className="w-6 h-6 bg-red-500 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
             </div>
           </div>
         )
       default:
         return (
-          <div
-            className="w-32 h-32 border-4 border-blue-500 rounded-full relative animate-fadeInUp"
-          >
-            <div
-              className="w-8 h-8 bg-red-500 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-fadeInUp"
-            />
+          <div className="w-32 h-32 border-4 border-blue-500 rounded-full relative animate-fadeInUp">
+            <div className="w-8 h-8 bg-red-500 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-fadeInUp" />
           </div>
         )
     }
@@ -122,12 +106,10 @@ export const CellDivisionAnimation: React.FC<{ className?: string }> = ({ classN
   return (
     <div ref={ref} className={cn('text-center', className)}>
       <div className="mb-8 h-40 flex items-center justify-center">
-<div
-            key={phase}
-           className="animate-fadeInUp">
-            {renderCell()}
-          </div>
-</div>
+        <div key={phase} className="animate-fadeInUp">
+          {renderCell()}
+        </div>
+      </div>
 
       <div className="mb-4">
         <div className="text-lg font-semibold text-gray-900 mb-2 capitalize">
@@ -175,15 +157,11 @@ export const HeartBeatAnimation: React.FC<{ className?: string }> = ({ className
 
   return (
     <div ref={ref} className={cn('text-center', className)}>
-      <div
-        className="relative w-48 h-48 mx-auto mb-8 animate-fadeInUp"
-      >
+      <div className="relative w-48 h-48 mx-auto mb-8 animate-fadeInUp">
         <Heart className="w-full h-full text-red-500 fill-current drop-shadow-lg" />
 
         {/* Pulse Wave */}
-        <div
-          className="absolute inset-0 border-2 border-red-300 rounded-full animate-fadeInUp"
-        />
+        <div className="absolute inset-0 border-2 border-red-300 rounded-full animate-fadeInUp" />
       </div>
 
       <div className="mb-4">
@@ -219,9 +197,7 @@ export const PhotosynthesisAnimation: React.FC<{ className?: string }> = ({ clas
   return (
     <div ref={ref} className={cn('relative w-full h-64', className)}>
       {/* Sun */}
-      <div
-        className="absolute top-4 right-4 w-16 h-16 animate-fadeInUp"
-      >
+      <div className="absolute top-4 right-4 w-16 h-16 animate-fadeInUp">
         <div className="w-full h-full bg-yellow-400 rounded-full relative">
           {[...Array(8)].map((_, i) => (
             <div
@@ -239,9 +215,7 @@ export const PhotosynthesisAnimation: React.FC<{ className?: string }> = ({ clas
       </div>
 
       {/* Light Rays */}
-      <div
-        className="absolute top-20 right-20 w-40 h-1 animate-fadeInUp"
-      >
+      <div className="absolute top-20 right-20 w-40 h-1 animate-fadeInUp">
         {[...Array(5)].map((_, i) => (
           <div
             key={i}
@@ -252,26 +226,18 @@ export const PhotosynthesisAnimation: React.FC<{ className?: string }> = ({ clas
       </div>
 
       {/* Leaf */}
-      <div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-fadeInUp"
-      >
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-fadeInUp">
         <Leaf className="w-32 h-32 text-green-600 fill-current" />
 
         {/* CO2 molecules */}
-        <div
-          className="absolute -left-8 top-8 w-4 h-4 bg-gray-400 rounded-full animate-fadeInUp"
-        />
+        <div className="absolute -left-8 top-8 w-4 h-4 bg-gray-400 rounded-full animate-fadeInUp" />
 
         {/* O2 molecules */}
-        <div
-          className="absolute -right-8 top-8 w-4 h-4 bg-blue-400 rounded-full animate-fadeInUp"
-        />
+        <div className="absolute -right-8 top-8 w-4 h-4 bg-blue-400 rounded-full animate-fadeInUp" />
       </div>
 
       {/* Water molecules */}
-      <div
-        className="absolute bottom-4 left-1/4 animate-fadeInUp"
-      >
+      <div className="absolute bottom-4 left-1/4 animate-fadeInUp">
         <Droplets className="w-6 h-6 text-blue-500" />
       </div>
 
@@ -312,26 +278,18 @@ export const NeuronFiringAnimation: React.FC<{ className?: string }> = ({ classN
   return (
     <div ref={ref} className={cn('relative w-full h-48', className)}>
       {/* Neuron Body */}
-      <div
-        className="absolute left-8 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-purple-500 rounded-full animate-fadeInUp"
-      >
+      <div className="absolute left-8 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-purple-500 rounded-full animate-fadeInUp">
         <Brain className="w-full h-full text-white p-2" />
       </div>
 
       {/* Axon */}
       <div className="absolute left-24 top-1/2 transform -translate-y-1/2 w-64 h-2 bg-purple-300 rounded-full">
         {/* Action Potential Wave */}
-{firing && (
-            <div
-              className="absolute inset-0 bg-yellow-400 rounded-full animate-fadeInUp"
-            />
-          )}
-</div>
+        {firing && <div className="absolute inset-0 bg-yellow-400 rounded-full animate-fadeInUp" />}
+      </div>
 
       {/* Synapse */}
-      <div
-        className="absolute right-8 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-green-600 rounded-full animate-fadeInUp"
-      >
+      <div className="absolute right-8 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-green-600 rounded-full animate-fadeInUp">
         <Zap className="w-full h-full text-white p-2" />
       </div>
 
@@ -443,16 +401,14 @@ export const BiologyConceptExplorer: React.FC<{ className?: string }> = ({ class
           <h3 className="text-2xl font-bold text-gray-900 mb-2">{selectedConcept.name}</h3>
           <p className="text-gray-600">{selectedConcept.description}</p>
         </div>
-<div
-            key={selectedConcept.id}
-           className="animate-fadeInUp">
-            {selectedConcept.id === 'dna' && <DNAHelixAnimation />}
-            {selectedConcept.id === 'cell' && <CellDivisionAnimation />}
-            {selectedConcept.id === 'heart' && <HeartBeatAnimation />}
-            {selectedConcept.id === 'photosynthesis' && <PhotosynthesisAnimation />}
-            {selectedConcept.id === 'neuron' && <NeuronFiringAnimation />}
-          </div>
-</div>
+        <div key={selectedConcept.id} className="animate-fadeInUp">
+          {selectedConcept.id === 'dna' && <DNAHelixAnimation />}
+          {selectedConcept.id === 'cell' && <CellDivisionAnimation />}
+          {selectedConcept.id === 'heart' && <HeartBeatAnimation />}
+          {selectedConcept.id === 'photosynthesis' && <PhotosynthesisAnimation />}
+          {selectedConcept.id === 'neuron' && <NeuronFiringAnimation />}
+        </div>
+      </div>
     </div>
   )
 }

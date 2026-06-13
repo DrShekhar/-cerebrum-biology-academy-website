@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function CellBiologyIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -104,9 +104,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
       </text>
 
       {/* NEET Badge */}
-      <g
-        filter="url(#cellGlow)"
-      >
+      <g filter="url(#cellGlow)">
         <circle cx="820" cy="40" r="28" fill="#FBBF24" />
         <text
           x="820"
@@ -158,9 +156,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           { year: '1839', name: 'Schwann', desc: 'Animal cells', y: 190 },
           { year: '1855', name: 'Virchow', desc: 'Cells from cells', y: 220 },
         ].map((item, i) => (
-          <g
-            key={`ct-${i}`}
-          >
+          <g key={`ct-${i}`}>
             <circle cx="55" cy={item.y} r="6" fill="#14B8A6" />
             <text x="70" y={item.y - 5} fontSize="9" fill="#0D9488" fontWeight="bold">
               {item.year}
@@ -297,26 +293,13 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           ))}
 
           {/* Integral protein */}
-          <rect
-            x="720"
-            y="130"
-            width="20"
-            height="70"
-            rx="10"
-            fill="#F472B6"
-          />
+          <rect x="720" y="130" width="20" height="70" rx="10" fill="#F472B6" />
           <text x="730" y="220" fontSize="7" fill="#BE185D" textAnchor="middle">
             Protein
           </text>
 
           {/* Cholesterol */}
-          <ellipse
-            cx="780"
-            cy="165"
-            rx="8"
-            ry="15"
-            fill="#FBBF24"
-          />
+          <ellipse cx="780" cy="165" rx="8" ry="15" fill="#FBBF24" />
         </g>
 
         {/* Legend */}
@@ -369,10 +352,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         <ellipse cx="240" cy="465" rx="170" ry="130" fill="url(#cytoplasmGrad)" />
 
         {/* Nucleus */}
-        <g
-          filter="url(#organelleShadow)"
-          style={{ transformOrigin: '240px 465px' }}
-        >
+        <g filter="url(#organelleShadow)" style={{ transformOrigin: '240px 465px' }}>
           <ellipse cx="240" cy="465" rx="50" ry="38" fill="url(#nucleusGrad)" />
           <ellipse
             cx="240"
@@ -404,10 +384,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         </text>
 
         {/* Mitochondria */}
-        <g
-          filter="url(#organelleShadow)"
-          style={{ transformOrigin: '110px 410px' }}
-        >
+        <g filter="url(#organelleShadow)" style={{ transformOrigin: '110px 410px' }}>
           <ellipse cx="110" cy="410" rx="32" ry="16" fill="url(#mitoGrad)" />
           <ellipse
             cx="110"
@@ -444,13 +421,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           />
           {/* Ribosomes on RER */}
           {[385, 415, 445].map((y, i) => (
-            <circle
-              key={`rer-${i}`}
-              cx={325 - i * 5}
-              cy={y}
-              r="4"
-              fill="#10B981"
-            />
+            <circle key={`rer-${i}`} cx={325 - i * 5} cy={y} r="4" fill="#10B981" />
           ))}
         </g>
         <text x="350" y="420" fontSize="8" fill="#1D4ED8" textAnchor="start" fontWeight="500">
@@ -470,9 +441,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         </text>
 
         {/* Golgi Apparatus */}
-        <g
-          filter="url(#organelleShadow)"
-        >
+        <g filter="url(#organelleShadow)">
           <path
             d="M340 530 Q370 522 340 514"
             stroke="#F59E0B"
@@ -503,8 +472,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         </text>
 
         {/* Lysosomes */}
-        <g
-        >
+        <g>
           <circle cx="150" cy="530" r="15" fill="#A78BFA" />
           <circle cx="150" cy="530" r="12" fill="#C4B5FD" />
           <text x="150" y="533" fontSize="6" fill="#5B21B6" textAnchor="middle" fontWeight="bold">
@@ -554,13 +522,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           { cx: 185, cy: 580 },
           { cx: 290, cy: 570 },
         ].map((pos, i) => (
-          <circle
-            key={`ribo-${i}`}
-            cx={pos.cx}
-            cy={pos.cy}
-            r="4"
-            fill="#10B981"
-          />
+          <circle key={`ribo-${i}`} cx={pos.cx} cy={pos.cy} r="4" fill="#10B981" />
         ))}
         <text x="190" y="360" fontSize="7" fill="#059669">
           Ribosomes (80S)
@@ -672,9 +634,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           },
           { name: 'ER', func: 'Protein/Lipid synthesis', color: '#2563EB', bg: '#DBEAFE', x: 760 },
         ].map((org, i) => (
-          <g
-            key={`org-${i}`}
-          >
+          <g key={`org-${i}`}>
             <rect x={org.x} y="505" width="125" height="50" rx="8" fill={org.bg} />
             <text
               x={org.x + 62}
@@ -709,9 +669,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           },
           { name: 'Ribosome', func: 'Protein synthesis', color: '#059669', bg: '#D1FAE5', x: 760 },
         ].map((org, i) => (
-          <g
-            key={`org2-${i}`}
-          >
+          <g key={`org2-${i}`}>
             <rect x={org.x} y="565" width="125" height="50" rx="8" fill={org.bg} />
             <text
               x={org.x + 62}

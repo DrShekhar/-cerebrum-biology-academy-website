@@ -215,7 +215,7 @@ export const NEET_BIOLOGY_PAA_QUESTIONS: PAQuestion[] = [
   {
     question: 'How many students get selected from Cerebrum Biology Academy?',
     answer:
-      '680+ students from Cerebrum Biology Academy have been selected into medical colleges including AIIMS, JIPMER, and government medical colleges. Our 2024 batch achieved a 98% success rate with an average Biology score of 340+/360.',
+      'Cerebrum Biology Academy has 680+ medical college selections (into AIIMS, JIPMER, and government medical colleges) from the 15,000+ students it has taught. Our 2024 batch achieved a 98% NEET-UG qualification rate with an average Biology score of 340+/360.',
   },
   {
     question: 'Does Cerebrum offer online NEET Biology classes?',
@@ -342,7 +342,7 @@ export const DELHI_NCR_PAA_QUESTIONS: PAQuestion[] = [
   {
     question: 'How much does NEET Biology coaching cost in Delhi NCR?',
     answer:
-      'NEET Biology coaching at Cerebrum costs between ₹45,000 to ₹1,80,000 depending on the course. The Pursuit batch starts at ₹45K, Ascent at ₹60K, and Pinnacle at ₹65K. EMI options and merit scholarships are available across all 6 Delhi NCR centers.',
+      'NEET Biology coaching at Cerebrum costs between ₹45,000 to ₹1,80,000 depending on the course. The Pursuit batch starts at ₹45K, Ascent at ₹60K, and Pinnacle at ₹65K. EMI options and merit scholarships are available across all 5 Delhi NCR centres.',
   },
   {
     question: 'Does Cerebrum have a center in Faridabad?',

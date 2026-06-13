@@ -72,9 +72,7 @@ export function LocationAwareHero({
   }
 
   return (
-    <section
-      className={`relative py-20 px-4 bg-blue-600 overflow-hidden ${className}`}
-    >
+    <section className={`relative py-20 px-4 bg-blue-600 overflow-hidden ${className}`}>
       {/* Background Effects */}
       <div className="absolute inset-0 bg-black/20" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
@@ -111,16 +109,12 @@ export function LocationAwareHero({
         )}
 
         {/* Main Title */}
-        <h1
-          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fadeInUp"
-        >
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fadeInUp">
           {content.title}
         </h1>
 
         {/* Subtitle */}
-        <p
-          className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90 leading-relaxed animate-fadeInUp"
-        >
+        <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90 leading-relaxed animate-fadeInUp">
           {content.subtitle}
         </p>
 
@@ -157,9 +151,7 @@ export function LocationAwareHero({
         </div>
 
         {/* CTA Buttons */}
-        <div
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fadeInUp"
-        >
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fadeInUp">
           <Button
             size="lg"
             className="bg-white text-gray-900 hover:bg-gray-100 text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 font-semibold"

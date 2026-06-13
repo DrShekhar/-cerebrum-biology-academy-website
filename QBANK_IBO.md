@@ -1,6 +1,7 @@
 # Biology Olympiad Question Bank — Progress Tracker
 
 ## Goal
+
 Build the most comprehensive Biology Olympiad prep resource: **3,000 questions** covering IBO, USABO, NSEB, INBO, and BBO with question types that match actual exam formats.
 
 ---
@@ -9,65 +10,69 @@ Build the most comprehensive Biology Olympiad prep resource: **3,000 questions**
 
 ### By Campbell Unit (IBO Weightage)
 
-| Unit | Name | Chapters | Target | Generated | Seeded | IBO Weight |
-|------|------|----------|--------|-----------|--------|------------|
-| 7 | Animal Form & Function | Ch 40-49 | 750 | 100 | 0 | 25% |
-| 2 | The Cell | Ch 6-12 | 600 | 175 | 0 | 20% |
-| 3 | Genetics | Ch 13-21 | 600 | 75 | 0 | 20% |
-| 6 | Plant Form & Function | Ch 35-39 | 375 | 25 | 0 | 12.5% |
-| 4 | Evolution | Ch 22-26 | 225 | 25 | 0 | 7.5% |
-| 8 | Ecology | Ch 52-56 | 225 | 25 | 0 | 7.5% |
-| 5 | Diversity of Life | Ch 27-34 | 150 | 25 | 0 | 5% |
-| 1 | Chemistry of Life | Ch 1-5 | 75 | 25 | 0 | 2.5% |
-| **Total** | | | **3,000** | **475** | **0** | |
+| Unit      | Name                   | Chapters | Target    | Generated | Seeded | IBO Weight |
+| --------- | ---------------------- | -------- | --------- | --------- | ------ | ---------- |
+| 7         | Animal Form & Function | Ch 40-49 | 750       | 100       | 0      | 25%        |
+| 2         | The Cell               | Ch 6-12  | 600       | 175       | 0      | 20%        |
+| 3         | Genetics               | Ch 13-21 | 600       | 75        | 0      | 20%        |
+| 6         | Plant Form & Function  | Ch 35-39 | 375       | 25        | 0      | 12.5%      |
+| 4         | Evolution              | Ch 22-26 | 225       | 25        | 0      | 7.5%       |
+| 8         | Ecology                | Ch 52-56 | 225       | 25        | 0      | 7.5%       |
+| 5         | Diversity of Life      | Ch 27-34 | 150       | 25        | 0      | 5%         |
+| 1         | Chemistry of Life      | Ch 1-5   | 75        | 25        | 0      | 2.5%       |
+| **Total** |                        |          | **3,000** | **475**   | **0**  |            |
 
 ### By Question Type
 
-| Type | Target | Generated | Seeded | Primary Use |
-|------|--------|-----------|--------|-------------|
-| MCQ (standard) | 1,200 (40%) | 0 | 0 | NSEB, USABO Open, BBO |
-| MTF | 750 (25%) | 0 | 0 | IBO, USABO Semi |
-| DATA_INTERPRETATION | 450 (15%) | 0 | 0 | All levels |
-| MULTIPLE_SELECT | 300 (10%) | 0 | 0 | NSEB Part A2, USABO Semi |
-| EXPERIMENTAL_DESIGN | 300 (10%) | 0 | 0 | IBO, USABO Semi |
+| Type                | Target      | Generated | Seeded | Primary Use              |
+| ------------------- | ----------- | --------- | ------ | ------------------------ |
+| MCQ (standard)      | 1,200 (40%) | 0         | 0      | NSEB, USABO Open, BBO    |
+| MTF                 | 750 (25%)   | 0         | 0      | IBO, USABO Semi          |
+| DATA_INTERPRETATION | 450 (15%)   | 0         | 0      | All levels               |
+| MULTIPLE_SELECT     | 300 (10%)   | 0         | 0      | NSEB Part A2, USABO Semi |
+| EXPERIMENTAL_DESIGN | 300 (10%)   | 0         | 0      | IBO, USABO Semi          |
 
 ### By Olympiad Level
 
-| Level | Target | Generated | Seeded | Difficulty |
-|-------|--------|-----------|--------|------------|
-| NSEB | 750 | 0 | 0 | HARD |
-| USABO_OPEN | 600 | 0 | 0 | HARD |
-| USABO_SEMI | 450 | 0 | 0 | EXPERT |
-| INBO | 450 | 0 | 0 | EXPERT |
-| BBO | 300 | 0 | 0 | HARD-EXPERT |
-| IBO | 450 | 0 | 0 | EXPERT |
+| Level      | Target | Generated | Seeded | Difficulty  |
+| ---------- | ------ | --------- | ------ | ----------- |
+| NSEB       | 750    | 0         | 0      | HARD        |
+| USABO_OPEN | 600    | 0         | 0      | HARD        |
+| USABO_SEMI | 450    | 0         | 0      | EXPERT      |
+| INBO       | 450    | 0         | 0      | EXPERT      |
+| BBO        | 300    | 0         | 0      | HARD-EXPERT |
+| IBO        | 450    | 0         | 0      | EXPERT      |
 
 ### By Source Textbook
 
-| Source | Target | Generated | Scope |
-|--------|--------|-----------|-------|
-| Campbell Biology 12e | 1,500 (50%) | 0 | Core syllabus |
-| Alberts — Mol Bio Cell | 600 (20%) | 0 | Signal transduction, protein sorting, gene regulation |
-| Lehninger — Biochemistry | 300 (10%) | 0 | Enzyme kinetics, metabolic regulation |
-| Lewin's Genes | 200 (6.7%) | 0 | Epigenetics, chromatin biology |
-| Eckert/Hill — Animal Phys | 200 (6.7%) | 0 | Comparative physiology, neurophysiology |
-| Raven — Plant Biology | 100 (3.3%) | 0 | Advanced plant physiology |
-| IBO/USABO Past Papers | 100 (3.3%) | 0 | All domains |
+| Source                    | Target      | Generated | Scope                                                 |
+| ------------------------- | ----------- | --------- | ----------------------------------------------------- |
+| Campbell Biology 12e      | 1,500 (50%) | 0         | Core syllabus                                         |
+| Alberts — Mol Bio Cell    | 600 (20%)   | 0         | Signal transduction, protein sorting, gene regulation |
+| Lehninger — Biochemistry  | 300 (10%)   | 0         | Enzyme kinetics, metabolic regulation                 |
+| Lewin's Genes             | 200 (6.7%)  | 0         | Epigenetics, chromatin biology                        |
+| Eckert/Hill — Animal Phys | 200 (6.7%)  | 0         | Comparative physiology, neurophysiology               |
+| Raven — Plant Biology     | 100 (3.3%)  | 0         | Advanced plant physiology                             |
+| IBO/USABO Past Papers     | 100 (3.3%)  | 0         | All domains                                           |
 
 ---
 
 ## Generation Waves
 
 ### Wave 1: Campbell Tier 1 (Cell + Animal Phys + Genetics)
+
 **Target**: ~1,200 questions
 **Status**: IN PROGRESS — 350/1,200 generated
+
 - [x] Unit 2: The Cell — 175 Qs generated (Ch6-7: 50, Ch8+10: 50, Ch9: 25, Ch11: 25, Ch12: 25)
 - [x] Unit 3: Genetics — 75 Qs generated (Ch13-14: 25, Ch15-17: 25, Ch18-21: 25)
 - [x] Unit 7: Animal Physiology — 100 Qs generated (Ch40-43: 25, Ch41: 25, Ch44-46: 25, Ch47-49: 25)
 
 ### Wave 2: Campbell Tier 2+3 + Data Interpretation
+
 **Target**: ~800 questions
 **Status**: IN PROGRESS — 125/800 generated
+
 - [x] Unit 4: Evolution (Ch22-26) — 25 Qs generated
 - [x] Unit 5: Diversity of Life (Ch27-34) — 25 Qs generated
 - [x] Unit 6: Plant Form & Function (Ch35-39) — 25 Qs generated
@@ -75,15 +80,19 @@ Build the most comprehensive Biology Olympiad prep resource: **3,000 questions**
 - [x] Unit 1: Chemistry of Life (Ch1-5) — 25 Qs generated
 
 ### Wave 3: Advanced Source Questions
+
 **Target**: ~600 questions
 **Status**: NOT STARTED
+
 - [ ] Alberts: Signal transduction, protein sorting — 200 MTF + 100 DATA_INTERPRETATION
 - [ ] Lehninger: Enzyme kinetics, metabolic regulation — 100 MTF + 50 DATA_INTERPRETATION
 - [ ] Lewin: Epigenetics, chromatin biology — 75 MTF + 75 DATA_INTERPRETATION
 
 ### Wave 4: Experimental Design + Past Papers
+
 **Target**: ~400 questions
 **Status**: NOT STARTED
+
 - [ ] Experimental Design questions across all units — 300
 - [ ] IBO/USABO Past Paper adaptations — 100
 
@@ -92,6 +101,7 @@ Build the most comprehensive Biology Olympiad prep resource: **3,000 questions**
 ## JSON Batch File Format
 
 ### Standard MCQ
+
 ```json
 {
   "type": "MCQ",
@@ -111,6 +121,7 @@ Build the most comprehensive Biology Olympiad prep resource: **3,000 questions**
 ```
 
 ### MTF (Multiple True/False)
+
 ```json
 {
   "type": "MTF",
@@ -134,6 +145,7 @@ Build the most comprehensive Biology Olympiad prep resource: **3,000 questions**
 ```
 
 ### DATA_INTERPRETATION
+
 ```json
 {
   "type": "DATA_INTERPRETATION",
@@ -149,6 +161,7 @@ Build the most comprehensive Biology Olympiad prep resource: **3,000 questions**
 ```
 
 ### EXPERIMENTAL_DESIGN
+
 ```json
 {
   "type": "EXPERIMENTAL_DESIGN",

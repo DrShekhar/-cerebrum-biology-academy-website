@@ -7,9 +7,9 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
-  title: 'Complement the largest national NEET chain Coaching with Cerebrum Biology | Gurugram',
+  title: 'Complement Allen Coaching with Cerebrum Biology | Gurugram',
   description:
-    'Boost your NEET Biology score while staying at the largest national NEET chain. Cerebrum offers weekend & evening Biology classes for the largest national NEET chain students. Same building, no extra travel.',
+    'Boost your NEET Biology score while staying at Allen. Cerebrum offers weekend & evening Biology classes for Allen students. Same building, no extra travel.',
   keywords: [
     'complement allen coaching gurugram',
     'allen coaching biology supplement',
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     locale: 'en_IN',
-    title: 'Complement the largest national NEET chain with Cerebrum Biology Coaching | Gurugram',
+    title: 'Complement Allen with Cerebrum Biology Coaching | Gurugram',
     description:
-      'Keep your the largest national NEET chain enrollment. Add focused Biology coaching from AIIMS faculty. Same building location.',
+      'Keep your Allen enrollment. Add focused Biology coaching from AIIMS faculty. Same building location.',
     url: 'https://cerebrumbiologyacademy.com/complement-allen-coaching-gurugram',
   },
   alternates: {
@@ -33,30 +33,31 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Complement the largest national NEET chain Coaching with Cerebrum Biology | Gurugram',
-    description: 'Boost your NEET Biology score while staying at the largest national NEET chain. Cerebrum offers weekend & evening Biology classes for the largest national NEET chain students. Same building, no ext...',
+    title: 'Complement Allen Coaching with Cerebrum Biology | Gurugram',
+    description:
+      'Boost your NEET Biology score while staying at Allen. Cerebrum offers weekend & evening Biology classes for Allen students. Same building, no ext...',
   },
 }
 
 const faqs = [
   {
-    question: 'Can I join Cerebrum without leaving the largest national NEET chain?',
+    question: 'Can I join Cerebrum without leaving Allen?',
     answer:
-      'Yes! Many the largest national NEET chain students join Cerebrum specifically for Biology coaching. We offer flexible weekend and evening batches that complement your the largest national NEET chain schedule perfectly.',
+      'Yes! Many Allen students join Cerebrum specifically for Biology coaching. We offer flexible weekend and evening batches that complement your Allen schedule perfectly.',
   },
   {
-    question: 'Why do the largest national NEET chain students need extra Biology coaching?',
+    question: 'Why do Allen students need extra Biology coaching?',
     answer:
-      'the largest national NEET chain covers all subjects, but Biology requires depth and personalized attention. With 100+ students per batch at the largest national NEET chain, individual doubt clearing is limited. Cerebrum fills this gap with specialized Biology focus.',
+      'Allen covers all subjects, but Biology requires depth and personalized attention. With 100+ students per batch at Allen, individual doubt clearing is limited. Cerebrum fills this gap with specialized Biology focus.',
   },
   {
-    question: 'How does the timing work with the largest national NEET chain classes?',
+    question: 'How does the timing work with Allen classes?',
     answer:
-      'We offer: 1) Weekend intensive batches (Saturday-Sunday) 2) Evening sessions (6-8 PM weekdays) 3) Flexible online sessions. Choose what fits your the largest national NEET chain schedule.',
+      'We offer: 1) Weekend intensive batches (Saturday-Sunday) 2) Evening sessions (6-8 PM weekdays) 3) Flexible online sessions. Choose what fits your Allen schedule.',
   },
   {
-    question: 'Is Cerebrum in the same building as the largest national NEET chain?',
-    answer: `Yes! We're located in the same M2K Corporate Park building as XYZ Coaching (largest national NEET chain) in Sector 51. Zero extra commute time for the largest national NEET chain students.`,
+    question: 'Is Cerebrum in the same building as Allen?',
+    answer: `Yes! We're located in the same M2K Corporate Park building as Allen in Sector 51. Zero extra commute time for Allen students.`,
   },
   {
     question: 'What topics can I focus on?',
@@ -69,9 +70,9 @@ const faqs = [
       'We offer special packages for students already enrolled elsewhere. Weekend-only batch starts at ₹30,000/year. Full supplementary program ranges from ₹45,000-90,000 depending on intensity.',
   },
   {
-    question: 'What results have the largest national NEET chain + Cerebrum students achieved?',
+    question: 'What results have Allen + Cerebrum students achieved?',
     answer:
-      'Students combining the largest national NEET chain + Cerebrum have seen an average 50-70 mark improvement in Biology specifically. Last year, 85% of combo students scored 320+ in Biology.',
+      'Students combining Allen + Cerebrum have seen an average 50-70 mark improvement in Biology specifically. Last year, 85% of combo students scored 320+ in Biology.',
   },
 ]
 
@@ -79,9 +80,9 @@ export default function ComplementAllenCoachingGurugramPage() {
   const courseSchema = {
     '@context': 'https://schema.org',
     '@type': 'Course',
-    name: 'Biology Coaching for the largest national NEET chain Students - Gurugram',
+    name: 'Biology Coaching for Allen Students - Gurugram',
     description:
-      'Supplementary NEET Biology coaching designed for students already enrolled at XYZ Coaching (largest national NEET chain)',
+      'Supplementary NEET Biology coaching designed for students already enrolled at Allen',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -132,7 +133,7 @@ export default function ComplementAllenCoachingGurugramPage() {
       {
         '@type': 'ListItem',
         position: 3,
-        name: 'Complement the largest national NEET chain Coaching',
+        name: 'Complement Allen Coaching',
         item: 'https://cerebrumbiologyacademy.com/complement-allen-coaching-gurugram',
       },
     ],
@@ -141,7 +142,11 @@ export default function ComplementAllenCoachingGurugramPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

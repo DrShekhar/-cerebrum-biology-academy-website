@@ -26,16 +26,10 @@ export async function POST(request: NextRequest) {
     ])
 
     if (!parent) {
-      return NextResponse.json(
-        { success: false, error: 'Parent not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Parent not found' }, { status: 404 })
     }
     if (!child) {
-      return NextResponse.json(
-        { success: false, error: 'Student not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Student not found' }, { status: 404 })
     }
 
     const existing = await prisma.parent_child_relationships.findUnique({
@@ -77,10 +71,7 @@ export async function POST(request: NextRequest) {
       )
     }
     console.error('Link parent-child error:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to create link' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to create link' }, { status: 500 })
   }
 }
 
@@ -96,10 +87,7 @@ export async function DELETE(request: NextRequest) {
     })
 
     if (!existing) {
-      return NextResponse.json(
-        { success: false, error: 'Relationship not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Relationship not found' }, { status: 404 })
     }
 
     await prisma.parent_child_relationships.delete({
@@ -121,9 +109,6 @@ export async function DELETE(request: NextRequest) {
       )
     }
     console.error('Unlink parent-child error:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to remove link' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to remove link' }, { status: 500 })
   }
 }

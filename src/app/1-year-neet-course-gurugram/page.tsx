@@ -45,7 +45,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: '1 Year NEET Course Gurugram 2026 | Class 12 + Dropper',
-    description: 'Join 1-year NEET course in Gurugram (Gurgaon) for Class 12 students & droppers. Complete syllabus in 12 months. M2K Sector 51. Intensive coaching. Call 88264-44334!',
+    description:
+      'Join 1-year NEET course in Gurugram (Gurgaon) for Class 12 students & droppers. Complete syllabus in 12 months. M2K Sector 51. Intensive coaching. Call 88264-44334!',
   },
 }
 
@@ -140,7 +141,11 @@ export default function OneYearNEETCourseGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-red-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="1-year-neet-course-gurugram" />
       {/* Hero Section */}

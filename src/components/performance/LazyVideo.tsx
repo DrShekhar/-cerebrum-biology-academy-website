@@ -92,10 +92,7 @@ export const LazyVideo = memo(function LazyVideo({
   }, [onLoad])
 
   return (
-    <div
-      ref={containerRef}
-      className={`relative overflow-hidden bg-gray-900 ${className}`}
-    >
+    <div ref={containerRef} className={`relative overflow-hidden bg-gray-900 ${className}`}>
       {/* Poster Image - Always render for fast LCP */}
       {!isPlaying && (
         <div className="absolute inset-0">

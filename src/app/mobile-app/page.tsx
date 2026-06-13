@@ -21,10 +21,16 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Mobile App - Study NEET Biology Anywhere',
-    description: 'Download our mobile app for NEET Biology preparation. Study anywhere, anytime with offline content, practice tests, and AI-powered doubt solving.',
+    description:
+      'Download our mobile app for NEET Biology preparation. Study anywhere, anytime with offline content, practice tests, and AI-powered doubt solving.',
   },
 
-  openGraph: { title: 'Mobile App - Study NEET Biology Anywhere', description: 'Download our mobile app for NEET Biology preparation. Study anywhere, anytime with offline content, practice tests, and AI-powered doubt solving.', type: 'website' },
+  openGraph: {
+    title: 'Mobile App - Study NEET Biology Anywhere',
+    description:
+      'Download our mobile app for NEET Biology preparation. Study anywhere, anytime with offline content, practice tests, and AI-powered doubt solving.',
+    type: 'website',
+  },
 }
 
 export default function MobileAppPage() {
@@ -44,7 +50,9 @@ export default function MobileAppPage() {
             Browse Courses
           </Link>
           <Link
-            href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20mobile%20app.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+            href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20mobile%20app.%20Please%20share%20available%20timings."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-6 py-3 rounded-lg border-2 border-green-600 text-green-600 font-semibold hover:bg-green-50 transition-colors"
           >
             Book a Free Demo

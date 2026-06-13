@@ -105,10 +105,18 @@ export default function PaymentsPage() {
   }
 
   const formatMethod = (method: string) =>
-    method.replace('RAZORPAY_', '').replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase())
+    method
+      .replace('RAZORPAY_', '')
+      .replace(/_/g, ' ')
+      .toLowerCase()
+      .replace(/\b\w/g, (c) => c.toUpperCase())
 
   const formatCurrency = (amount: number) =>
-    new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(amount)
+    new Intl.NumberFormat('en-IN', {
+      style: 'currency',
+      currency: 'INR',
+      maximumFractionDigits: 0,
+    }).format(amount)
 
   const completedCount = stats?.statusCounts?.COMPLETED?.count || 0
   const pendingCount = stats?.statusCounts?.PENDING?.count || 0
@@ -149,18 +157,27 @@ export default function PaymentsPage() {
         <div className="flex justify-between items-center">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Payment Management</h1>
-            <p className="text-gray-600 mt-2">Track payments, refunds, and financial transactions</p>
+            <p className="text-gray-600 mt-2">
+              Track payments, refunds, and financial transactions
+            </p>
           </div>
           <div className="flex space-x-3">
             <Button variant="outline" className="text-gray-700 border-gray-300">
               <Download className="w-4 h-4 mr-2" />
               Export
             </Button>
-            <Button variant="outline" className="text-gray-700 border-gray-300" onClick={fetchPayments}>
+            <Button
+              variant="outline"
+              className="text-gray-700 border-gray-300"
+              onClick={fetchPayments}
+            >
               <RefreshCw className="w-4 h-4 mr-2" />
               Sync
             </Button>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white" onClick={() => setIsAddPaymentModalOpen(true)}>
+            <Button
+              className="bg-blue-600 hover:bg-blue-700 text-white"
+              onClick={() => setIsAddPaymentModalOpen(true)}
+            >
               <Send className="w-4 h-4 mr-2" />
               Add Payment
             </Button>
@@ -179,7 +196,9 @@ export default function PaymentsPage() {
                   <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
                   {stat.sub && <p className="text-xs text-gray-500 mt-1">{stat.sub}</p>}
                 </div>
-                <div className={`h-12 w-12 rounded-lg flex items-center justify-center ${stat.color}`}>
+                <div
+                  className={`h-12 w-12 rounded-lg flex items-center justify-center ${stat.color}`}
+                >
                   <stat.icon className="h-6 w-6" />
                 </div>
               </div>
@@ -240,12 +259,24 @@ export default function PaymentsPage() {
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Transaction</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Student & Course</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount & Method</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Transaction
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Student & Course
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Amount & Method
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Status
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Date
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Actions
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
@@ -253,7 +284,9 @@ export default function PaymentsPage() {
                     <tr key={payment.id} className="hover:bg-gray-50">
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="text-sm font-medium text-gray-900">
-                          {payment.transactionId || payment.razorpayPaymentId || payment.id.slice(0, 12)}
+                          {payment.transactionId ||
+                            payment.razorpayPaymentId ||
+                            payment.id.slice(0, 12)}
                         </div>
                         {payment.installmentNumber && (
                           <div className="text-xs text-gray-500">
@@ -262,12 +295,18 @@ export default function PaymentsPage() {
                         )}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="text-sm font-medium text-gray-900">{payment.users.name}</div>
-                        <div className="text-sm text-gray-500">{payment.enrollments?.courses?.name || 'N/A'}</div>
+                        <div className="text-sm font-medium text-gray-900">
+                          {payment.users.name}
+                        </div>
+                        <div className="text-sm text-gray-500">
+                          {payment.enrollments?.courses?.name || 'N/A'}
+                        </div>
                         <div className="text-xs text-gray-400">{payment.users.email}</div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="text-sm font-medium text-gray-900">{formatCurrency(payment.amount)}</div>
+                        <div className="text-sm font-medium text-gray-900">
+                          {formatCurrency(payment.amount)}
+                        </div>
                         <div className="text-sm text-gray-500 flex items-center">
                           {getMethodIcon(payment.paymentMethod)}
                           <span className="ml-2">{formatMethod(payment.paymentMethod)}</span>
@@ -276,24 +315,38 @@ export default function PaymentsPage() {
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center">
                           {getStatusIcon(payment.status)}
-                          <span className={`ml-2 inline-flex px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(payment.status)}`}>
+                          <span
+                            className={`ml-2 inline-flex px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(payment.status)}`}
+                          >
                             {payment.status.charAt(0) + payment.status.slice(1).toLowerCase()}
                           </span>
                         </div>
                         {payment.refundAmount && payment.refundAmount > 0 && (
-                          <div className="text-xs text-purple-600 mt-1">Refunded: {formatCurrency(payment.refundAmount)}</div>
+                          <div className="text-xs text-purple-600 mt-1">
+                            Refunded: {formatCurrency(payment.refundAmount)}
+                          </div>
                         )}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="text-sm text-gray-900">{new Date(payment.createdAt).toLocaleDateString('en-IN')}</div>
-                        <div className="text-xs text-gray-500">{new Date(payment.createdAt).toLocaleTimeString('en-IN')}</div>
+                        <div className="text-sm text-gray-900">
+                          {new Date(payment.createdAt).toLocaleDateString('en-IN')}
+                        </div>
+                        <div className="text-xs text-gray-500">
+                          {new Date(payment.createdAt).toLocaleTimeString('en-IN')}
+                        </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                         <div className="flex items-center space-x-2">
-                          <button className="text-blue-600 hover:text-blue-900"><Eye className="w-4 h-4" /></button>
-                          <button className="text-gray-600 hover:text-gray-900"><Download className="w-4 h-4" /></button>
+                          <button className="text-blue-600 hover:text-blue-900">
+                            <Eye className="w-4 h-4" />
+                          </button>
+                          <button className="text-gray-600 hover:text-gray-900">
+                            <Download className="w-4 h-4" />
+                          </button>
                           {payment.status === 'FAILED' && (
-                            <button className="text-green-600 hover:text-green-900"><RefreshCw className="w-4 h-4" /></button>
+                            <button className="text-green-600 hover:text-green-900">
+                              <RefreshCw className="w-4 h-4" />
+                            </button>
                           )}
                         </div>
                       </td>

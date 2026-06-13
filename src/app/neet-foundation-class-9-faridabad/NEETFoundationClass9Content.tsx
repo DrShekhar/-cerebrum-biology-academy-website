@@ -177,7 +177,11 @@ export default function NEETFoundationClass9Content({ faqs }: { faqs: FAQ[] }) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Foundation%20Biology%20(Class%209%2F10)%20in%20Faridabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Foundation%20Biology%20(Class%209%2F10)%20in%20Faridabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -320,7 +324,12 @@ export default function NEETFoundationClass9Content({ faqs }: { faqs: FAQ[] }) {
                   <span className="font-semibold">Offline + Online Support</span>
                 </div>
               </div>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Foundation%20Biology%20(Class%209%2F10)%20in%20Faridabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" className="block mt-6">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Foundation%20Biology%20(Class%209%2F10)%20in%20Faridabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block mt-6"
+              >
                 <Button className="w-full bg-green-600 hover:bg-green-700">Book Free Demo</Button>
               </Link>
             </div>
@@ -441,7 +450,11 @@ export default function NEETFoundationClass9Content({ faqs }: { faqs: FAQ[] }) {
             Join Cerebrum Biology Academy Faridabad and get a 4-year head start
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Foundation%20Biology%20(Class%209%2F10)%20in%20Faridabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Foundation%20Biology%20(Class%209%2F10)%20in%20Faridabad.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 size="xl"

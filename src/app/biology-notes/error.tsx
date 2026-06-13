@@ -39,9 +39,15 @@ export default function BiologyNotesError({
           </Link>
         </div>
         <div className="flex flex-wrap gap-3 justify-center text-sm">
-          <Link href="/biology-notes-for-neet" className="text-blue-600 hover:underline">NEET Biology Notes</Link>
-          <Link href="/free-resources" className="text-blue-600 hover:underline">Free Resources</Link>
-          <Link href="/courses" className="text-blue-600 hover:underline">Courses</Link>
+          <Link href="/biology-notes-for-neet" className="text-blue-600 hover:underline">
+            NEET Biology Notes
+          </Link>
+          <Link href="/free-resources" className="text-blue-600 hover:underline">
+            Free Resources
+          </Link>
+          <Link href="/courses" className="text-blue-600 hover:underline">
+            Courses
+          </Link>
         </div>
       </div>
     </div>

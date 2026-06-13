@@ -45,7 +45,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Online NEET Coaching for Ghaziabad Students | Live & Hybrid Mode',
-    description: 'Online NEET Biology classes for Ghaziabad & Indirapuram students. Live interactive sessions from home. Hybrid mode with weekend offline at Sector 62 Noida. 800+ students. Call 99536-43938!',
+    description:
+      'Online NEET Biology classes for Ghaziabad & Indirapuram students. Live interactive sessions from home. Hybrid mode with weekend offline at Sector 62 Noida. 800+ students. Call 99536-43938!',
   },
 }
 
@@ -127,7 +128,11 @@ export default function OnlineNEETCoachingGhaziabadPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+        knowsAbout={[
+          'NEET Ghaziabad',
+          'NEET Biology Ghaziabad',
+          'Medical entrance coaching Ghaziabad',
+        ]}
       />
       {/* Hero */}
       <section className="bg-gradient-to-br from-indigo-900 to-purple-800 text-white py-16">

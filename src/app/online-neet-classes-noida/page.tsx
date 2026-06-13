@@ -1,6 +1,21 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MapPin, Monitor, Users, Trophy, Star, CheckCircle, ArrowRight, Building2, Clock, Wifi, Video, MessageCircle, BookOpen } from 'lucide-react'
+import {
+  Phone,
+  MapPin,
+  Monitor,
+  Users,
+  Trophy,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Building2,
+  Clock,
+  Wifi,
+  Video,
+  MessageCircle,
+  BookOpen,
+} from 'lucide-react'
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
@@ -20,7 +35,8 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'Online NEET Classes for Noida | Live Interactive Sessions',
-    description: 'Study NEET Biology from your Noida home. Live classes, instant doubts, recorded lectures. Hybrid mode available.',
+    description:
+      'Study NEET Biology from your Noida home. Live classes, instant doubts, recorded lectures. Hybrid mode available.',
     url: 'https://cerebrumbiologyacademy.com/online-neet-classes-noida',
   },
   alternates: {
@@ -30,7 +46,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Online NEET Classes for Noida Students | Live & Hybrid Mode',
-    description: 'Online NEET Biology classes for Noida & Greater Noida students. Live interactive sessions from home. Hybrid mode with weekend offline at South Extension. 1200+ students. Call 88264-44334!',
+    description:
+      'Online NEET Biology classes for Noida & Greater Noida students. Live interactive sessions from home. Hybrid mode with weekend offline at South Extension. 1200+ students. Call 88264-44334!',
   },
 }
 
@@ -44,10 +61,26 @@ const travelTimes = [
 ]
 
 const onlineFeatures = [
-  { icon: Video, title: 'Live Interactive Classes', desc: 'Real-time sessions with Dr. Shekhar C Singh. Ask questions instantly.' },
-  { icon: MessageCircle, title: '24/7 Doubt Resolution', desc: 'WhatsApp doubt support. Get answers within hours, not days.' },
-  { icon: BookOpen, title: 'Recorded Lectures', desc: 'Miss a class? Watch recordings anytime. Revise at your pace.' },
-  { icon: Wifi, title: 'Digital Study Material', desc: 'Notes, tests, question banks - all accessible online.' },
+  {
+    icon: Video,
+    title: 'Live Interactive Classes',
+    desc: 'Real-time sessions with Dr. Shekhar C Singh. Ask questions instantly.',
+  },
+  {
+    icon: MessageCircle,
+    title: '24/7 Doubt Resolution',
+    desc: 'WhatsApp doubt support. Get answers within hours, not days.',
+  },
+  {
+    icon: BookOpen,
+    title: 'Recorded Lectures',
+    desc: 'Miss a class? Watch recordings anytime. Revise at your pace.',
+  },
+  {
+    icon: Wifi,
+    title: 'Digital Study Material',
+    desc: 'Notes, tests, question banks - all accessible online.',
+  },
 ]
 
 const hybridBenefits = [
@@ -62,23 +95,28 @@ const hybridBenefits = [
 const faqs = [
   {
     question: 'How do online NEET classes work for Noida students?',
-    answer: 'Our online classes are live, interactive sessions conducted via Zoom/Google Meet. You attend from your Noida home, ask questions in real-time, and get instant feedback. Classes are also recorded for later revision. Most Noida students prefer this mode as it saves 2-3 hours of daily travel.',
+    answer:
+      'Our online classes are live, interactive sessions conducted via Zoom/Google Meet. You attend from your Noida home, ask questions in real-time, and get instant feedback. Classes are also recorded for later revision. Most Noida students prefer this mode as it saves 2-3 hours of daily travel.',
   },
   {
     question: 'What is hybrid mode for Noida students?',
-    answer: 'Hybrid mode combines online weekday classes with weekend offline sessions at our South Extension center. You attend 5-6 online classes per week from home, and visit South Extension on Saturdays/Sundays for mock tests, doubt sessions, and face-to-face interaction. Travel time is 45-60 minutes from most Noida locations.',
+    answer:
+      'Hybrid mode combines online weekday classes with weekend offline sessions at our South Extension center. You attend 5-6 online classes per week from home, and visit South Extension on Saturdays/Sundays for mock tests, doubt sessions, and face-to-face interaction. Travel time is 45-60 minutes from most Noida locations.',
   },
   {
     question: 'Which mode is better - online or hybrid?',
-    answer: 'For most Noida students, online mode works best due to zero travel time. However, if you need classroom environment motivation or struggle with self-discipline, hybrid mode provides weekly accountability. We recommend starting with online and upgrading to hybrid if needed.',
+    answer:
+      'For most Noida students, online mode works best due to zero travel time. However, if you need classroom environment motivation or struggle with self-discipline, hybrid mode provides weekly accountability. We recommend starting with online and upgrading to hybrid if needed.',
   },
   {
     question: 'Is online coaching as effective as offline?',
-    answer: 'Yes! Our online students consistently score 650+ in NEET. The key advantages: more study time (no travel), recorded lectures for revision, instant doubt resolution via WhatsApp, and comfortable home environment. 1200+ Noida students are currently enrolled in our online program.',
+    answer:
+      'Yes! Our online students consistently score 650+ in NEET. The key advantages: more study time (no travel), recorded lectures for revision, instant doubt resolution via WhatsApp, and comfortable home environment. 1200+ Noida students are currently enrolled in our online program.',
   },
   {
     question: 'What equipment do I need for online classes?',
-    answer: 'A laptop/tablet with stable internet connection (minimum 5 Mbps). A quiet study space at home. Headphones recommended for better audio. We provide all digital study materials - no need for physical books.',
+    answer:
+      'A laptop/tablet with stable internet connection (minimum 5 Mbps). A quiet study space at home. Headphones recommended for better audio. We provide all digital study materials - no need for physical books.',
   },
 ]
 
@@ -88,8 +126,15 @@ export default function OnlineNEETClassesNoidaPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/online-neet-classes-noida"
         pageName="Online NEET Classes for Noida Students"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
-        personKnowsAbout={['NEET Noida Students', 'NEET Biology Noida Students', 'Medical entrance coaching Noida Students']}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
+        personKnowsAbout={[
+          'NEET Noida Students',
+          'NEET Biology Noida Students',
+          'Medical entrance coaching Noida Students',
+        ]}
       />
       {/* Hero */}
       <section className="bg-gradient-to-br from-indigo-900 to-purple-800 text-white py-16">
@@ -103,14 +148,21 @@ export default function OnlineNEETClassesNoidaPage() {
               Online NEET Classes for Noida Students
             </h1>
             <p className="text-xl text-indigo-100 mb-6">
-              Study from your Noida home. Live interactive Biology classes with AIIMS faculty.
-              Save 2-3 hours daily on travel. Hybrid mode available for weekend offline sessions.
+              Study from your Noida home. Live interactive Biology classes with AIIMS faculty. Save
+              2-3 hours daily on travel. Hybrid mode available for weekend offline sessions.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="tel:+918826444334" className="inline-flex items-center gap-2 bg-yellow-500 text-indigo-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">
-                <Phone className="w-5 h-5" />Call 88264-44334
+              <a
+                href="tel:+918826444334"
+                className="inline-flex items-center gap-2 bg-yellow-500 text-indigo-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
+              >
+                <Phone className="w-5 h-5" />
+                Call 88264-44334
               </a>
-              <Link href="/free-neet-demo-class-gurugram" className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition">
+              <Link
+                href="/free-neet-demo-class-gurugram"
+                className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition"
+              >
                 Try Free Online Demo
               </Link>
             </div>
@@ -149,7 +201,9 @@ export default function OnlineNEETClassesNoidaPage() {
       {/* Travel Time Comparison */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Why Noida Students Love Online Classes</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Why Noida Students Love Online Classes
+          </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             No travel. No traffic. Study from your society. See how much time you save:
           </p>
@@ -168,7 +222,11 @@ export default function OnlineNEETClassesNoidaPage() {
                     <tr key={index} className="border-b border-green-100 last:border-0">
                       <td className="py-3 px-4 font-medium">{item.area}</td>
                       <td className="py-3 px-4 text-center">
-                        <span className={item.time === '0 min' ? 'text-green-600 font-bold' : 'text-gray-600'}>
+                        <span
+                          className={
+                            item.time === '0 min' ? 'text-green-600 font-bold' : 'text-gray-600'
+                          }
+                        >
                           {item.time}
                         </span>
                       </td>
@@ -209,20 +267,38 @@ export default function OnlineNEETClassesNoidaPage() {
                 <Monitor className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">100% Online</h3>
-              <p className="text-gray-600 mb-4">Study entirely from your Noida home. Zero travel.</p>
+              <p className="text-gray-600 mb-4">
+                Study entirely from your Noida home. Zero travel.
+              </p>
               <ul className="space-y-2 text-sm mb-6">
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" />Live interactive classes</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" />Recorded lectures</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" />WhatsApp doubt support</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" />Digital study material</li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  Live interactive classes
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  Recorded lectures
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  WhatsApp doubt support
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  Digital study material
+                </li>
               </ul>
-              <p className="text-2xl font-bold text-indigo-700">Rs 45,000<span className="text-sm font-normal text-gray-500">/year</span></p>
+              <p className="text-2xl font-bold text-indigo-700">
+                Rs 45,000<span className="text-sm font-normal text-gray-500">/year</span>
+              </p>
               <p className="text-sm text-green-600 mt-2">Most Popular - 70% students choose this</p>
             </div>
 
             {/* Hybrid - Recommended */}
             <div className="bg-yellow-400 rounded-2xl p-6 relative transform md:scale-105">
-              <span className="absolute top-0 right-0 bg-indigo-900 text-yellow-400 text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-xl">BEST VALUE</span>
+              <span className="absolute top-0 right-0 bg-indigo-900 text-yellow-400 text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-xl">
+                BEST VALUE
+              </span>
               <div className="w-14 h-14 bg-indigo-900 rounded-xl flex items-center justify-center mb-4">
                 <Building2 className="w-7 h-7 text-yellow-400" />
               </div>
@@ -230,10 +306,15 @@ export default function OnlineNEETClassesNoidaPage() {
               <p className="text-indigo-900 mb-4">Online + Weekend offline at South Extension.</p>
               <ul className="space-y-2 text-sm mb-6">
                 {hybridBenefits.slice(0, 4).map((benefit, index) => (
-                  <li key={index} className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-indigo-900" />{benefit}</li>
+                  <li key={index} className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-indigo-900" />
+                    {benefit}
+                  </li>
                 ))}
               </ul>
-              <p className="text-2xl font-bold text-indigo-900">Rs 55,000<span className="text-sm font-normal text-indigo-800">/year</span></p>
+              <p className="text-2xl font-bold text-indigo-900">
+                Rs 55,000<span className="text-sm font-normal text-indigo-800">/year</span>
+              </p>
               <p className="text-sm text-indigo-800 mt-2">Recommended for better accountability</p>
             </div>
 
@@ -245,12 +326,26 @@ export default function OnlineNEETClassesNoidaPage() {
               <h3 className="text-xl font-bold mb-2">Full Offline</h3>
               <p className="text-gray-600 mb-4">Daily classes at South Extension center.</p>
               <ul className="space-y-2 text-sm mb-6">
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-gray-600" />Classroom environment</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-gray-600" />Small batch (15 students)</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-gray-600" />Daily doubt classes</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-gray-600" />Library access</li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-gray-600" />
+                  Classroom environment
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-gray-600" />
+                  Small batch (15 students)
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-gray-600" />
+                  Daily doubt classes
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-gray-600" />
+                  Library access
+                </li>
               </ul>
-              <p className="text-2xl font-bold text-gray-700">Rs 65,000<span className="text-sm font-normal text-gray-500">/year</span></p>
+              <p className="text-2xl font-bold text-gray-700">
+                Rs 65,000<span className="text-sm font-normal text-gray-500">/year</span>
+              </p>
               <p className="text-sm text-gray-500 mt-2">45-60 min commute from Noida</p>
             </div>
           </div>
@@ -266,7 +361,9 @@ export default function OnlineNEETClassesNoidaPage() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-gray-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-gray-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>
@@ -279,12 +376,21 @@ export default function OnlineNEETClassesNoidaPage() {
       <section className="py-16 bg-indigo-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Start Online NEET Classes Today</h2>
-          <p className="text-xl text-indigo-200 mb-8">Join 1,200+ Noida students already learning online</p>
+          <p className="text-xl text-indigo-200 mb-8">
+            Join 1,200+ Noida students already learning online
+          </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+918826444334" className="inline-flex items-center gap-2 bg-yellow-500 text-indigo-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">
-              <Phone className="w-5 h-5" />Call 88264-44334
+            <a
+              href="tel:+918826444334"
+              className="inline-flex items-center gap-2 bg-yellow-500 text-indigo-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
+            >
+              <Phone className="w-5 h-5" />
+              Call 88264-44334
             </a>
-            <Link href="/neet-coaching-noida" className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/20 transition">
+            <Link
+              href="/neet-coaching-noida"
+              className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/20 transition"
+            >
               View All Noida Programs <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
@@ -299,8 +405,14 @@ export default function OnlineNEETClassesNoidaPage() {
         pageUrl="https://cerebrumbiologyacademy.com/online-neet-classes-noida"
         breadcrumbs={[
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-          { name: 'NEET Coaching Noida', url: 'https://cerebrumbiologyacademy.com/neet-coaching-noida' },
-          { name: 'Online Classes', url: 'https://cerebrumbiologyacademy.com/online-neet-classes-noida' },
+          {
+            name: 'NEET Coaching Noida',
+            url: 'https://cerebrumbiologyacademy.com/neet-coaching-noida',
+          },
+          {
+            name: 'Online Classes',
+            url: 'https://cerebrumbiologyacademy.com/online-neet-classes-noida',
+          },
         ]}
         customFAQs={faqs}
       />

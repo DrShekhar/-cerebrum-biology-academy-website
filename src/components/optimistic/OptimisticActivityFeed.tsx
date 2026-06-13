@@ -90,49 +90,49 @@ export function OptimisticActivityFeed({ initialActivities }: OptimisticActivity
       </div>
 
       <div className="space-y-3 max-h-96 overflow-y-auto">
-{rawItems.map((item, index) => {
-            const Icon = getIcon(item.data.type)
-            return (
+        {rawItems.map((item, index) => {
+          const Icon = getIcon(item.data.type)
+          return (
+            <div
+              key={item.id}
+              className={`flex items-start space-x-3 p-4 rounded-xl transition-all ${
+                item.isOptimistic
+                  ? 'bg-blue-50 border-2 border-blue-200'
+                  : 'bg-gray-50 border-2 border-transparent hover:bg-gray-100'
+              }`}
+            >
               <div
-                key={item.id}
-                className={`flex items-start space-x-3 p-4 rounded-xl transition-all ${
-                  item.isOptimistic
-                    ? 'bg-blue-50 border-2 border-blue-200'
-                    : 'bg-gray-50 border-2 border-transparent hover:bg-gray-100'
+                className={`w-10 h-10 bg-gradient-to-br ${getColor(item.data.type)} rounded-full flex items-center justify-center flex-shrink-0 shadow-md ${
+                  item.isOptimistic ? 'animate-pulse' : ''
                 }`}
               >
-                <div
-                  className={`w-10 h-10 bg-gradient-to-br ${getColor(item.data.type)} rounded-full flex items-center justify-center flex-shrink-0 shadow-md ${
-                    item.isOptimistic ? 'animate-pulse' : ''
-                  }`}
-                >
-                  {item.isPending ? (
-                    <Loader2 className="w-5 h-5 text-white animate-spin" />
-                  ) : (
-                    <Icon className="w-5 h-5 text-white" />
-                  )}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-gray-900 leading-snug">
-                    {item.data.message}
-                  </p>
-                  <div className="flex items-center space-x-2 mt-1">
-                    <span className="text-xs text-gray-500">{item.data.location}</span>
-                    <span className="text-xs text-gray-400">•</span>
-                    <span className="text-xs text-gray-500">
-                      {item.isOptimistic ? 'Posting...' : item.data.time}
-                    </span>
-                  </div>
-                  {item.error && (
-                    <div className="mt-2 p-2 bg-red-50 border border-red-200 rounded text-xs text-red-700">
-                      Failed to post. {item.error.message}
-                    </div>
-                  )}
-                </div>
+                {item.isPending ? (
+                  <Loader2 className="w-5 h-5 text-white animate-spin" />
+                ) : (
+                  <Icon className="w-5 h-5 text-white" />
+                )}
               </div>
-            )
-          })}
-</div>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-medium text-gray-900 leading-snug">
+                  {item.data.message}
+                </p>
+                <div className="flex items-center space-x-2 mt-1">
+                  <span className="text-xs text-gray-500">{item.data.location}</span>
+                  <span className="text-xs text-gray-400">•</span>
+                  <span className="text-xs text-gray-500">
+                    {item.isOptimistic ? 'Posting...' : item.data.time}
+                  </span>
+                </div>
+                {item.error && (
+                  <div className="mt-2 p-2 bg-red-50 border border-red-200 rounded text-xs text-red-700">
+                    Failed to post. {item.error.message}
+                  </div>
+                )}
+              </div>
+            </div>
+          )
+        })}
+      </div>
 
       <div className="mt-6 grid grid-cols-3 gap-4">
         <div className="text-center bg-green-50 rounded-xl p-3 shadow-sm">

@@ -12,7 +12,11 @@ const PAGE_URL = `https://cerebrumbiologyacademy.com/neet-coaching-${SLUG}`
 export const metadata: Metadata = city
   ? {
       title: `NEET Coaching in ${city.displayName} | Best Biology Coaching · Cerebrum`,
-      description: `Best NEET Biology coaching for ${city.displayName} (${city.state}) students — AIIMS-trained faculty, small online batches, NCERT-line-by-line. Serving ${city.majorAreas.slice(0, 4).join(', ')}. Targets ${city.stateQuotaCollege}${city.otherStateMedicalColleges?.length ? ' / ' + city.otherStateMedicalColleges[0] : ''}. Pair with your existing ${city.localCoachingPresence.split(',')[0].trim().replace(/\\(.*\\)/, '').trim()} for PCM.`,
+      description: `Best NEET Biology coaching for ${city.displayName} (${city.state}) students — AIIMS-trained faculty, small online batches, NCERT-line-by-line. Serving ${city.majorAreas.slice(0, 4).join(', ')}. Targets ${city.stateQuotaCollege}${city.otherStateMedicalColleges?.length ? ' / ' + city.otherStateMedicalColleges[0] : ''}. Pair with your existing ${city.localCoachingPresence
+        .split(',')[0]
+        .trim()
+        .replace(/\\(.*\\)/, '')
+        .trim()} for PCM.`,
       keywords: [
         `NEET coaching ${city.displayName}`,
         `NEET coaching ${SLUG}`,
@@ -103,7 +107,9 @@ export default function Page() {
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4">
           <nav className="text-sm text-slate-400 mb-6" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white">Home</Link>
+            <Link href="/" className="hover:text-white">
+              Home
+            </Link>
             <span className="mx-2">/</span>
             <span className="text-white">NEET Coaching {city.displayName}</span>
           </nav>
@@ -111,15 +117,15 @@ export default function Page() {
             NEET Coaching in {city.displayName}
           </h1>
           <p className="text-xl text-slate-300 mb-6 max-w-3xl">
-            Live online NEET Biology coaching for {city.displayName} ({city.state})
-            students — AIIMS-trained faculty, small batches (10-40), NCERT-line-by-line
-            curriculum, weekly tests with per-MCQ review. Serving{' '}
-            {city.majorAreas.slice(0, 4).join(', ')}. Designed to pair with your
-            existing {localCoaching} for the physics-chemistry side. Target:{' '}
+            Live online NEET Biology coaching for {city.displayName} ({city.state}) students —
+            AIIMS-trained faculty, small batches (10-40), NCERT-line-by-line curriculum, weekly
+            tests with per-MCQ review. Serving {city.majorAreas.slice(0, 4).join(', ')}. Designed to
+            pair with your existing {localCoaching} for the physics-chemistry side. Target:{' '}
             <strong>{city.stateQuotaCollege}</strong>
             {city.otherStateMedicalColleges?.length ? (
               <> or {city.otherStateMedicalColleges[0]}</>
-            ) : null}.
+            ) : null}
+            .
           </p>
           <a
             href={wa}
@@ -137,12 +143,12 @@ export default function Page() {
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
             NEET coaching in {city.displayName} — local landscape
           </h2>
-          <p className="mt-4 text-base text-slate-700 leading-relaxed">
-            {city.cityContext}
-          </p>
+          <p className="mt-4 text-base text-slate-700 leading-relaxed">{city.cityContext}</p>
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             <div className="rounded-xl bg-slate-50 p-5">
-              <p className="text-sm font-semibold text-indigo-700">Feeder schools in {city.displayName}</p>
+              <p className="text-sm font-semibold text-indigo-700">
+                Feeder schools in {city.displayName}
+              </p>
               <ul className="mt-3 space-y-1.5 text-sm text-slate-700">
                 {city.feederSchools.map((s) => (
                   <li key={s}>• {s}</li>
@@ -169,7 +175,9 @@ export default function Page() {
           <div className="space-y-4">
             {faqs.map((f, i) => (
               <details key={i} className="bg-white rounded-xl p-5 border border-slate-200">
-                <summary className="text-base font-semibold text-slate-900 cursor-pointer">{f.question}</summary>
+                <summary className="text-base font-semibold text-slate-900 cursor-pointer">
+                  {f.question}
+                </summary>
                 <p className="mt-3 text-sm text-slate-700 leading-relaxed">{f.answer}</p>
               </details>
             ))}

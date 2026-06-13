@@ -142,8 +142,7 @@ export default function NEETCoachingNearPage() {
         <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div className="text-center max-w-5xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <GraduationCap className="w-5 h-5 mr-2 text-yellow-300" />
               NEET Coaching for Top School Students
@@ -159,7 +158,11 @@ export default function NEETCoachingNearPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20near.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20near.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -188,8 +191,7 @@ export default function NEETCoachingNearPage() {
       {/* Schools Grid */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Find NEET Coaching Near Your School
             </h2>
@@ -232,8 +234,7 @@ export default function NEETCoachingNearPage() {
       {/* Why School-Specific */}
       <section className="py-16 md:py-20 bg-green-600 text-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why School-Specific NEET Coaching?
             </h2>
@@ -250,7 +251,10 @@ export default function NEETCoachingNearPage() {
               'Holiday batch options',
               'Online classes for exam periods',
             ].map((item, index) => (
-              <div key={item} className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4 animate-fadeInUp">
+              <div
+                key={item}
+                className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4 animate-fadeInUp"
+              >
                 <CheckCircle className="w-6 h-6 text-yellow-300 mr-3 flex-shrink-0" />
                 <span>{item}</span>
               </div>
@@ -279,7 +283,10 @@ export default function NEETCoachingNearPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {onlineRegions.map((region, index) => (
-                <div key={region.name} className="bg-white rounded-xl p-6 shadow-lg border border-blue-100 animate-fadeInUp">
+                <div
+                  key={region.name}
+                  className="bg-white rounded-xl p-6 shadow-lg border border-blue-100 animate-fadeInUp"
+                >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center">
                       <Wifi className="w-6 h-6 text-white" />
@@ -333,7 +340,11 @@ export default function NEETCoachingNearPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20near.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20near.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

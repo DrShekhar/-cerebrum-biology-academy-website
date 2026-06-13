@@ -294,10 +294,14 @@ export function AssertionReasonCard({
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <span className={`text-2xl ${result.isCorrect ? 'animate-confetti-burst' : 'animate-scale-in'}`}>
+                  <span
+                    className={`text-2xl ${result.isCorrect ? 'animate-confetti-burst' : 'animate-scale-in'}`}
+                  >
                     {result.isCorrect ? '🎉' : '😔'}
                   </span>
-                  <span className={`font-bold text-base ${result.isCorrect ? 'text-green-700' : 'text-red-700'}`}>
+                  <span
+                    className={`font-bold text-base ${result.isCorrect ? 'text-green-700' : 'text-red-700'}`}
+                  >
                     {result.isCorrect ? 'Correct!' : 'Incorrect'}
                   </span>
                 </div>

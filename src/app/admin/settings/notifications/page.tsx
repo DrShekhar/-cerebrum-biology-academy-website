@@ -158,9 +158,7 @@ export default function NotificationsSettingsPage() {
 
         {/* Success Alert */}
         {showSuccess && (
-          <div
-            className="mb-6 bg-green-50 border border-green-200 rounded-lg p-4 flex items-center animate-fadeInUp"
-          >
+          <div className="mb-6 bg-green-50 border border-green-200 rounded-lg p-4 flex items-center animate-fadeInUp">
             <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
             <p className="text-green-800 font-medium">Notification settings saved successfully!</p>
           </div>

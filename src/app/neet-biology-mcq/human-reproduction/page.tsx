@@ -32,7 +32,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Human Reproduction MCQ for NEET 2026 | Free Practice Questions',
-    description: 'Practice 400+ free Human Reproduction MCQs for NEET. Gametogenesis, fertilization, embryonic development, menstrual cycle questions. NCERT-based with detailed explanations.',
+    description:
+      'Practice 400+ free Human Reproduction MCQs for NEET. Gametogenesis, fertilization, embryonic development, menstrual cycle questions. NCERT-based with detailed explanations.',
   },
 }
 

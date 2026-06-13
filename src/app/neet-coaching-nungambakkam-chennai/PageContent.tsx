@@ -46,22 +46,20 @@ function useScrollAnimation(threshold = 0.1) {
 }
 
 const nungambakkamAreas = [
-{ name: 'Nungambakkam', distance: '17 km', landmark: 'Premium Residential' },
+  { name: 'Nungambakkam', distance: '17 km', landmark: 'Premium Residential' },
   { name: 'Teynampet', distance: '16 km', landmark: 'Business District' },
   { name: 'Chetpet', distance: '15 km', landmark: 'Residential' },
   { name: 'Alwarpet', distance: '14 km', landmark: 'Upmarket Area' },
   { name: 'Mylapore', distance: '18 km', landmark: 'Heritage Zone' },
   { name: 'Abiramapuram', distance: '19 km', landmark: 'Premium Area' },
   { name: 'Santhome', distance: '20 km', landmark: 'Heritage Enclave' },
-  { name: 'Cathedral Road', distance: '16 km', landmark: 'Premium Address' }
+  { name: 'Cathedral Road', distance: '16 km', landmark: 'Premium Address' },
 ]
 
-const whyChooseUs = [
-
-]
+const whyChooseUs = []
 
 const faqs = [
-{
+  {
     question: 'Why Nungambakkam families choose premium NEET coaching?',
     answer:
       "Nungambakkam is Chennai's most prestigious residential area. Families here expect white-glove service, world-class faculty, and results. Our premium coaching with AIIMS faculty meets these expectations.",
@@ -80,7 +78,7 @@ const faqs = [
     question: "How do you support Nungambakkam's prominent families?",
     answer:
       'Many Nungambakkam families are business leaders and prominent professionals. We understand their high expectations, provide exclusive service, and maintain confidentiality that they value.',
-  }
+  },
 ]
 
 const faqSchema = {
@@ -152,11 +150,17 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET coaching for Nungambakkam, business families & nearby premium areas. Learn from Dr. Shekhar C Singh, AIIMS Alumnus - trusted by Chennai's prominent families.
+              Premium NEET coaching for Nungambakkam, business families & nearby premium areas.
+              Learn from Dr. Shekhar C Singh, AIIMS Alumnus - trusted by Chennai's prominent
+              families.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chennai.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chennai.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -333,7 +337,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chennai.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chennai.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

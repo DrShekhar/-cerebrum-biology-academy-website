@@ -33,7 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best NEET Foundation Tutor for Class 9 & 10 Biology | AIIMS-Trained Dr. Shekhar',
-    description: 'Best NEET Foundation tutor for Class 9 and Class 10 — Dr. Shekhar C Singh (AIIMS Delhi). Early NEET pathway with biology + CBSE/ICSE board parallel track. ₹35K–₹95K/year, batches of 15–20, online +...',
+    description:
+      'Best NEET Foundation tutor for Class 9 and Class 10 — Dr. Shekhar C Singh (AIIMS Delhi). Early NEET pathway with biology + CBSE/ICSE board parallel track. ₹35K–₹95K/year, batches of 15–20, online +...',
   },
 }
 
@@ -75,7 +76,10 @@ const config: BestVerticalConfig = {
     { title: 'NEET Foundation Class 10 — Gurugram', href: '/neet-foundation-class-10-gurugram' },
     { title: 'NEET Foundation Class 9 — Noida', href: '/neet-foundation-class-9-noida' },
     { title: 'NEET Foundation Class 10 — Noida', href: '/neet-foundation-class-10-noida' },
-    { title: 'Cerebrum vs the 2nd-largest national NEET chain Foundation', href: '/cerebrum-vs-aakash-foundation' },
+    {
+      title: 'Cerebrum vs the 2nd-largest national NEET chain Foundation',
+      href: '/cerebrum-vs-aakash-foundation',
+    },
     { title: 'Biology Tuition Class 9-10', href: '/biology-tuition-class-9-10' },
     { title: 'NRI NEET Foundation Programme', href: '/nri-neet-foundation-program' },
   ],
@@ -176,7 +180,8 @@ const config: BestVerticalConfig = {
         'No — and this is one of the most common parent concerns. Cerebrum Foundation runs board + NEET in parallel, not as competing tracks. The same biology faculty teach to both objectives: CBSE / ICSE / State Board syllabus depth AND NEET-pattern MCQ drilling. Separate weekly tests in both formats. Class 10 board results from Cerebrum Foundation students consistently average 90%+ in biology, while simultaneously preparing them for NEET Class 11 entry. Many Cerebrum Foundation students score 95%+ in Class 10 boards.',
     },
     {
-      question: 'Should I choose Cerebrum Foundation or the 2nd-largest national NEET chain Scholastics for my Class 9 child?',
+      question:
+        'Should I choose Cerebrum Foundation or the 2nd-largest national NEET chain Scholastics for my Class 9 child?',
       answer:
         'For biology pedagogy specifically, Cerebrum is structurally different — biology-only specialist with 15-20 student batches led by Dr. Shekhar C Singh (AIIMS Delhi). the 2nd-largest national NEET chain Scholastics is generalist Foundation with 100-300 student batches covering combined PCB. For full PCB coverage under one brand at scale, the 2nd-largest national NEET chain has stronger physics-chemistry depth at Class 9-10 level. Many parents choose Cerebrum biology + the 2nd-largest national NEET chain Scholastics for PC (or self-study supplemented with school) — best of both worlds. See /cerebrum-vs-aakash-foundation for the full comparison.',
     },

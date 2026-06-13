@@ -263,12 +263,8 @@ export function getTestimonialsForCity(citySlug: CityKey): RealTestimonial[] {
 export function getTestimonialsForArea(citySlug: CityKey, areaSlug: string): RealTestimonial[] {
   const citySpecific = areaTestimonials[citySlug] || []
   const areaName = areaSlug.replace(/-/g, ' ')
-  const areaMatch = citySpecific.filter(
-    (t) => t.area && t.area.toLowerCase().includes(areaName)
-  )
-  const otherCity = citySpecific.filter(
-    (t) => !t.area || !t.area.toLowerCase().includes(areaName)
-  )
+  const areaMatch = citySpecific.filter((t) => t.area && t.area.toLowerCase().includes(areaName))
+  const otherCity = citySpecific.filter((t) => !t.area || !t.area.toLowerCase().includes(areaName))
   const featured = realTestimonials.filter((t) => t.isFeatured)
   return [...areaMatch, ...otherCity, ...featured]
 }

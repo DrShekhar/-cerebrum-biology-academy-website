@@ -5,10 +5,7 @@ import { auth } from '@/lib/auth'
 export const dynamic = 'force-dynamic'
 
 // GET /api/counselor/leads/[id]/notes - Get all notes for a lead
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
   try {
     const session = await auth()
     if (!session?.user) {
@@ -53,10 +50,7 @@ export async function GET(
 }
 
 // POST /api/counselor/leads/[id]/notes - Create a new note
-export async function POST(
-  request: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
   try {
     const session = await auth()
     if (!session?.user?.id) {

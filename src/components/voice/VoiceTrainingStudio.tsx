@@ -213,9 +213,7 @@ const VoiceTrainingStudio: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-6">
       {/* Header */}
-      <div
-        className="text-center animate-fadeInUp"
-      >
+      <div className="text-center animate-fadeInUp">
         <h1 className="text-3xl font-bold text-gray-800 mb-2">Shekhar Sir Voice Training Studio</h1>
         <p className="text-gray-600">
           Train and customize the AI voice to match Shekhar Sir's teaching style
@@ -223,9 +221,7 @@ const VoiceTrainingStudio: React.FC = () => {
       </div>
 
       {/* Progress Bar */}
-      <div
-        className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
-      >
+      <div className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-gray-800">Training Progress</h3>
           <span className="text-sm text-gray-600">
@@ -233,9 +229,7 @@ const VoiceTrainingStudio: React.FC = () => {
           </span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-3">
-          <div
-            className="bg-blue-500 h-3 rounded-full animate-fadeInUp"
-          />
+          <div className="bg-blue-500 h-3 rounded-full animate-fadeInUp" />
         </div>
         <p className="text-center text-sm text-gray-600 mt-2">
           {Math.round(trainingProgress)}% Complete
@@ -313,8 +307,7 @@ const VoiceTrainingStudio: React.FC = () => {
               {isSpeaking && (
                 <div className="mt-6 animate-fadeInUp">
                   <div className="flex items-center space-x-3 mb-2">
-                    <div
-                     className="animate-fadeInUp">
+                    <div className="animate-fadeInUp">
                       <Volume2 className="w-5 h-5 text-blue-500" />
                     </div>
                     <span className="text-sm text-gray-600">
@@ -322,9 +315,7 @@ const VoiceTrainingStudio: React.FC = () => {
                     </span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div
-                      className="bg-blue-500 h-2 rounded-full animate-fadeInUp"
-                    />
+                    <div className="bg-blue-500 h-2 rounded-full animate-fadeInUp" />
                   </div>
                 </div>
               )}
@@ -335,9 +326,7 @@ const VoiceTrainingStudio: React.FC = () => {
         {/* Settings Panel */}
         <div className="space-y-6">
           {/* Voice Settings */}
-          <div
-            className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-800">Voice Settings</h3>
               <Sliders className="w-5 h-5 text-gray-600" />
@@ -411,9 +400,7 @@ const VoiceTrainingStudio: React.FC = () => {
           </div>
 
           {/* Phrase List */}
-          <div
-            className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp">
             <h3 className="text-lg font-semibold text-gray-800 mb-4">Training Phrases</h3>
             <div className="space-y-2 max-h-64 overflow-y-auto">
               {trainingPhrases.map((phrase) => (
@@ -441,15 +428,13 @@ const VoiceTrainingStudio: React.FC = () => {
       </div>
 
       {/* Error Display */}
-{error && (
-          <div
-            className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center space-x-3 animate-fadeInUp"
-          >
-            <AlertCircle className="w-5 h-5 text-red-500" />
-            <span className="text-red-700">{error}</span>
-          </div>
-        )}
-</div>
+      {error && (
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center space-x-3 animate-fadeInUp">
+          <AlertCircle className="w-5 h-5 text-red-500" />
+          <span className="text-red-700">{error}</span>
+        </div>
+      )}
+    </div>
   )
 }
 

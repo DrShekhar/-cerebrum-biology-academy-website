@@ -1,6 +1,19 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MessageCircle, CheckCircle, Star, Monitor, Building2, ArrowRight, BookOpen, Target, Clock, Gift, GraduationCap } from 'lucide-react'
+import {
+  Phone,
+  MessageCircle,
+  CheckCircle,
+  Star,
+  Monitor,
+  Building2,
+  ArrowRight,
+  BookOpen,
+  Target,
+  Clock,
+  Gift,
+  GraduationCap,
+} from 'lucide-react'
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
@@ -20,7 +33,8 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'Class 12 Board Biology Noida | Score 95%+ in CBSE/ISC',
-    description: 'Expert coaching for Class 12 Board Biology exam. NCERT mastery + practical preparation.',
+    description:
+      'Expert coaching for Class 12 Board Biology exam. NCERT mastery + practical preparation.',
     url: 'https://cerebrumbiologyacademy.com/class-12-board-biology-noida',
   },
   alternates: {
@@ -30,7 +44,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Class 12 Board Exam Biology Coaching Noida 2026 | Score 95%+',
-    description: 'Class 12 Board exam Biology coaching in Noida. Score 95%+ in CBSE/ISC Biology. NCERT mastery, previous year papers, practical viva prep. Gaur City, Sector 150. Free demo!',
+    description:
+      'Class 12 Board exam Biology coaching in Noida. Score 95%+ in CBSE/ISC Biology. NCERT mastery, previous year papers, practical viva prep. Gaur City, Sector 150. Free demo!',
   },
 }
 
@@ -40,7 +55,12 @@ const courses = [
     duration: '12 months',
     mode: '30-40 students | 6 hrs/week',
     fee: '40,000',
-    features: ['Complete NCERT coverage', 'Previous year solutions', 'Basic mock tests', 'AI doubt bot'],
+    features: [
+      'Complete NCERT coverage',
+      'Previous year solutions',
+      'Basic mock tests',
+      'AI doubt bot',
+    ],
     popular: true,
   },
   {
@@ -48,7 +68,12 @@ const courses = [
     duration: '12 months',
     mode: '16-18 students | 8 hrs/week',
     fee: '58,000',
-    features: ['NCERT + Previous years', 'Practical viva preparation', 'Weekly group doubt sessions', 'Performance tracking'],
+    features: [
+      'NCERT + Previous years',
+      'Practical viva preparation',
+      'Weekly group doubt sessions',
+      'Performance tracking',
+    ],
     recommended: true,
   },
   {
@@ -56,7 +81,12 @@ const courses = [
     duration: '12 months',
     mode: '10-12 students | 10-12 hrs/week',
     fee: '68,000',
-    features: ['Personal mentorship', 'Complete practical preparation', 'Daily doubt sessions', 'Money-back guarantee'],
+    features: [
+      'Personal mentorship',
+      'Complete practical preparation',
+      'Daily doubt sessions',
+      'Money-back guarantee',
+    ],
   },
 ]
 
@@ -67,10 +97,26 @@ const freeTools = [
 ]
 
 const boardPrepFeatures = [
-  { title: 'NCERT Line-by-Line', description: 'Complete NCERT textbook coverage - every diagram, every definition', icon: BookOpen },
-  { title: 'Previous 10 Years', description: 'Solved papers with marking scheme and examiner insights', icon: Target },
-  { title: 'Practical & Viva', description: 'Lab record completion, specimen identification, viva practice', icon: GraduationCap },
-  { title: 'Sample Papers', description: 'CBSE sample papers + predicted questions for 2026', icon: Star },
+  {
+    title: 'NCERT Line-by-Line',
+    description: 'Complete NCERT textbook coverage - every diagram, every definition',
+    icon: BookOpen,
+  },
+  {
+    title: 'Previous 10 Years',
+    description: 'Solved papers with marking scheme and examiner insights',
+    icon: Target,
+  },
+  {
+    title: 'Practical & Viva',
+    description: 'Lab record completion, specimen identification, viva practice',
+    icon: GraduationCap,
+  },
+  {
+    title: 'Sample Papers',
+    description: 'CBSE sample papers + predicted questions for 2026',
+    icon: Star,
+  },
 ]
 
 const ncertChapters = [
@@ -94,19 +140,23 @@ const ncertChapters = [
 const faqs = [
   {
     question: 'How to score 95%+ in Class 12 Biology Board exam?',
-    answer: 'Focus on NCERT - read every line, memorize diagrams. Practice 10-year previous papers. Write answers in points with diagrams. Our coaching provides structured revision + weekly tests that guarantee improvement.',
+    answer:
+      'Focus on NCERT - read every line, memorize diagrams. Practice 10-year previous papers. Write answers in points with diagrams. Our coaching provides structured revision + weekly tests that guarantee improvement.',
   },
   {
     question: 'What is the fee for Class 12 Board Biology coaching in Noida?',
-    answer: 'Board-only course: Pursuit - Rs 40,000, Ascent - Rs 58,000, Pinnacle - Rs 68,000/year. For Board + NEET combo, fees range from Rs 70,000 to Rs 98,000/year. All include study material and test series.',
+    answer:
+      'Board-only course: Pursuit - Rs 40,000, Ascent - Rs 58,000, Pinnacle - Rs 68,000/year. For Board + NEET combo, fees range from Rs 70,000 to Rs 98,000/year. All include study material and test series.',
   },
   {
     question: 'Do you cover CBSE and ISC both?',
-    answer: 'Yes, we cover both CBSE and ISC (CISCE) boards. The core biology content is same. We provide board-specific sample papers and marking scheme guidance for each.',
+    answer:
+      'Yes, we cover both CBSE and ISC (CISCE) boards. The core biology content is same. We provide board-specific sample papers and marking scheme guidance for each.',
   },
   {
     question: 'How do you prepare for Biology practical exam?',
-    answer: 'We cover practical viva questions, specimen identification, lab record format, and experiment procedures. Weekend practical sessions available for hybrid students.',
+    answer:
+      'We cover practical viva questions, specimen identification, lab record format, and experiment procedures. Weekend practical sessions available for hybrid students.',
   },
 ]
 
@@ -122,7 +172,10 @@ export default function Class12BoardBiologyNoidaPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/class-12-board-biology-noida"
         pageName="Class 12 Board Biology Coaching in Noida"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
         personKnowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
       />
       {/* Hero Section */}
@@ -132,9 +185,12 @@ export default function Class12BoardBiologyNoidaPage() {
             <span className="inline-flex items-center gap-2 bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
               <GraduationCap className="w-4 h-4" /> Board Exam 2026
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Class 12 Board Biology Coaching in Noida</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Class 12 Board Biology Coaching in Noida
+            </h1>
             <p className="text-xl text-slate-300 mb-6">
-              Score 95%+ in CBSE/ISC Biology. NCERT mastery + Previous year papers + Practical preparation.
+              Score 95%+ in CBSE/ISC Biology. NCERT mastery + Previous year papers + Practical
+              preparation.
             </p>
 
             {/* Results Stats */}
@@ -142,7 +198,9 @@ export default function Class12BoardBiologyNoidaPage() {
               {results.map((result, index) => (
                 <div key={index} className="text-center">
                   <p className="text-3xl font-bold text-green-400">{result.count}</p>
-                  <p className="text-sm text-slate-300">{result.score} {result.label}</p>
+                  <p className="text-sm text-slate-300">
+                    {result.score} {result.label}
+                  </p>
                 </div>
               ))}
             </div>
@@ -194,7 +252,9 @@ export default function Class12BoardBiologyNoidaPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-4">Complete Board Exam Preparation</h2>
-          <p className="text-center text-gray-600 mb-12">Everything you need to score 95%+ in Biology</p>
+          <p className="text-center text-gray-600 mb-12">
+            Everything you need to score 95%+ in Biology
+          </p>
 
           <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {boardPrepFeatures.map((feature, index) => (
@@ -211,7 +271,9 @@ export default function Class12BoardBiologyNoidaPage() {
       {/* Course Cards */}
       <section className="py-16 bg-green-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Board Biology Courses for Noida Students</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Board Biology Courses for Noida Students
+          </h2>
           <p className="text-center text-gray-600 mb-12">Choose Board-only or Board + NEET combo</p>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -222,8 +284,8 @@ export default function Class12BoardBiologyNoidaPage() {
                   course.recommended
                     ? 'bg-yellow-400 shadow-xl scale-105'
                     : course.popular
-                    ? 'bg-white border-2 border-green-300'
-                    : 'bg-white border-2 border-gray-200'
+                      ? 'bg-white border-2 border-green-300'
+                      : 'bg-white border-2 border-gray-200'
                 }`}
               >
                 {course.recommended && (
@@ -236,16 +298,22 @@ export default function Class12BoardBiologyNoidaPage() {
                     BOARD FOCUSED
                   </span>
                 )}
-                <Monitor className={`w-10 h-10 mb-4 ${course.recommended ? 'text-slate-900' : 'text-green-600'}`} />
+                <Monitor
+                  className={`w-10 h-10 mb-4 ${course.recommended ? 'text-slate-900' : 'text-green-600'}`}
+                />
                 <h3 className="text-xl font-bold mb-2">{course.name}</h3>
-                <p className={`text-sm mb-2 ${course.recommended ? 'text-slate-700' : 'text-gray-500'}`}>{course.mode} | {course.duration}</p>
-                <p className="text-3xl font-bold mb-4">
-                  ₹{course.fee}
+                <p
+                  className={`text-sm mb-2 ${course.recommended ? 'text-slate-700' : 'text-gray-500'}`}
+                >
+                  {course.mode} | {course.duration}
                 </p>
+                <p className="text-3xl font-bold mb-4">₹{course.fee}</p>
                 <ul className="space-y-2 mb-6">
                   {course.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm">
-                      <CheckCircle className={`w-4 h-4 mt-0.5 ${course.recommended ? 'text-slate-900' : 'text-green-600'}`} />
+                      <CheckCircle
+                        className={`w-4 h-4 mt-0.5 ${course.recommended ? 'text-slate-900' : 'text-green-600'}`}
+                      />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -270,15 +338,22 @@ export default function Class12BoardBiologyNoidaPage() {
       {/* Chapter-wise Marks Distribution */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">CBSE Biology Chapter-wise Marks (Total: 70)</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            CBSE Biology Chapter-wise Marks (Total: 70)
+          </h2>
           <p className="text-center text-gray-600 mb-12">Focus on high-weightage chapters first</p>
 
           <div className="max-w-3xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {ncertChapters.map((chapter, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-3 flex justify-between items-center">
+                <div
+                  key={index}
+                  className="bg-gray-50 rounded-lg p-3 flex justify-between items-center"
+                >
                   <span className="text-sm">{chapter.name}</span>
-                  <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">{chapter.marks}M</span>
+                  <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">
+                    {chapter.marks}M
+                  </span>
                 </div>
               ))}
             </div>
@@ -295,7 +370,9 @@ export default function Class12BoardBiologyNoidaPage() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-green-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-green-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>
@@ -308,7 +385,9 @@ export default function Class12BoardBiologyNoidaPage() {
       <section className="py-16 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Score 95%+ in Board Biology!</h2>
-          <p className="text-xl text-slate-300 mb-8">Join Noida students who topped their schools</p>
+          <p className="text-xl text-slate-300 mb-8">
+            Join Noida students who topped their schools
+          </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <a
@@ -342,7 +421,10 @@ export default function Class12BoardBiologyNoidaPage() {
         breadcrumbs={[
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
           { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
-          { name: 'Class 12 Board Biology', url: 'https://cerebrumbiologyacademy.com/class-12-board-biology-noida' },
+          {
+            name: 'Class 12 Board Biology',
+            url: 'https://cerebrumbiologyacademy.com/class-12-board-biology-noida',
+          },
         ]}
         customFAQs={faqs}
       />

@@ -14,22 +14,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "The cell cycle was first described by:",
-      "options": [
-        "Mendel",
-        "Watson and Crick",
-        "Howard and Pelc",
-        "Schleiden and Schwann"
-      ],
+      "options": ["Mendel", "Watson and Crick", "Howard and Pelc", "Schleiden and Schwann"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, Howard and Pelc (1953) first described the cell cycle. They identified the different phases of the cell cycle using radioactive labelling techniques.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "howard-pelc",
-        "history"
-      ],
+      "tags": ["cell-cycle", "howard-pelc", "history"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -40,22 +31,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "DNA replication occurs during which phase of the cell cycle?",
-      "options": [
-        "S phase",
-        "G2 phase",
-        "G1 phase",
-        "M phase"
-      ],
+      "options": ["S phase", "G2 phase", "G1 phase", "M phase"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, DNA replication occurs during the S (Synthesis) phase of interphase. During this phase, the amount of DNA per cell doubles, but the chromosome number remains the same.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "S-phase",
-        "DNA-replication"
-      ],
+      "tags": ["cell-cycle", "S-phase", "DNA-replication"],
       "neetWeightage": "HIGH"
     },
     {
@@ -66,22 +48,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Which phase of the cell cycle is the longest?",
-      "options": [
-        "G2 phase",
-        "G1 phase",
-        "M phase",
-        "S phase"
-      ],
+      "options": ["G2 phase", "G1 phase", "M phase", "S phase"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the G1 phase (Gap 1 or first growth phase) is typically the longest phase of the cell cycle. During G1, the cell is metabolically active and grows but does not replicate its DNA.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "G1-phase",
-        "longest-phase"
-      ],
+      "tags": ["cell-cycle", "G1-phase", "longest-phase"],
       "neetWeightage": "HIGH"
     },
     {
@@ -92,22 +65,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Cells that do not divide further exit G1 and enter:",
-      "options": [
-        "M phase",
-        "G0 phase (quiescent stage)",
-        "S phase",
-        "G2 phase"
-      ],
+      "options": ["M phase", "G0 phase (quiescent stage)", "S phase", "G2 phase"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, cells that do not divide further exit the G1 phase and enter an inactive stage called the G0 phase (quiescent phase). These cells remain metabolically active but no longer proliferate (e.g., mature neurons).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "G0-phase",
-        "quiescent"
-      ],
+      "tags": ["cell-cycle", "G0-phase", "quiescent"],
       "neetWeightage": "HIGH"
     },
     {
@@ -118,22 +82,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "During which phase of mitosis do chromosomes align at the equatorial plate?",
-      "options": [
-        "Anaphase",
-        "Prophase",
-        "Metaphase",
-        "Telophase"
-      ],
+      "options": ["Anaphase", "Prophase", "Metaphase", "Telophase"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, during metaphase, chromosomes are aligned at the equatorial plate (metaphase plate). The centromeres of all chromosomes lie on the metaphase plate, with spindle fibres attached to the kinetochores.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "metaphase",
-        "equatorial-plate"
-      ],
+      "tags": ["mitosis", "metaphase", "equatorial-plate"],
       "neetWeightage": "HIGH"
     },
     {
@@ -144,22 +99,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "The centromere splits during which phase of mitosis?",
-      "options": [
-        "Telophase",
-        "Anaphase",
-        "Prophase",
-        "Metaphase"
-      ],
+      "options": ["Telophase", "Anaphase", "Prophase", "Metaphase"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, during anaphase, each centromere splits (divides), allowing the two sister chromatids to separate and move to opposite poles of the cell. This is driven by shortening of spindle fibres.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "anaphase",
-        "centromere-splitting"
-      ],
+      "tags": ["mitosis", "anaphase", "centromere-splitting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -170,22 +116,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Cytokinesis in plant cells occurs by:",
-      "options": [
-        "Budding",
-        "Fragmentation",
-        "Cell plate formation",
-        "Cleavage furrow formation"
-      ],
+      "options": ["Budding", "Fragmentation", "Cell plate formation", "Cleavage furrow formation"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, cytokinesis in plant cells occurs by formation of a cell plate. Vesicles from the Golgi apparatus fuse at the centre of the cell to form the cell plate, which grows outward to divide the cell.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cytokinesis",
-        "cell-plate",
-        "plant-cell"
-      ],
+      "tags": ["cytokinesis", "cell-plate", "plant-cell"],
       "neetWeightage": "HIGH"
     },
     {
@@ -196,22 +133,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Cytokinesis in animal cells occurs by:",
-      "options": [
-        "Cell plate formation",
-        "Fragmentation",
-        "Budding",
-        "Cleavage furrow formation"
-      ],
+      "options": ["Cell plate formation", "Fragmentation", "Budding", "Cleavage furrow formation"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, cytokinesis in animal cells occurs by the formation of a cleavage furrow. The plasma membrane constricts inward at the centre of the cell, eventually pinching the cell into two daughter cells.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cytokinesis",
-        "cleavage-furrow",
-        "animal-cell"
-      ],
+      "tags": ["cytokinesis", "cleavage-furrow", "animal-cell"],
       "neetWeightage": "HIGH"
     },
     {
@@ -222,22 +150,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Crossing over occurs during which stage of meiosis?",
-      "options": [
-        "Zygotene",
-        "Diplotene",
-        "Leptotene",
-        "Pachytene"
-      ],
+      "options": ["Zygotene", "Diplotene", "Leptotene", "Pachytene"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, crossing over (recombination) occurs during the pachytene stage of prophase I. It involves the exchange of genetic material between non-sister chromatids of homologous chromosomes at chiasmata.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "crossing-over",
-        "pachytene"
-      ],
+      "tags": ["meiosis", "crossing-over", "pachytene"],
       "neetWeightage": "HIGH"
     },
     {
@@ -248,23 +167,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Bivalent formation (synapsis) occurs during which stage of prophase I?",
-      "options": [
-        "Pachytene",
-        "Leptotene",
-        "Diakinesis",
-        "Zygotene"
-      ],
+      "options": ["Pachytene", "Leptotene", "Diakinesis", "Zygotene"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, synapsis (pairing of homologous chromosomes) occurs during zygotene stage of prophase I. The paired chromosomes are called bivalents or tetrads (as each bivalent has 4 chromatids).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "synapsis",
-        "zygotene",
-        "bivalent"
-      ],
+      "tags": ["meiosis", "synapsis", "zygotene", "bivalent"],
       "neetWeightage": "HIGH"
     },
     {
@@ -275,22 +184,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Chiasmata become visible during which stage of prophase I?",
-      "options": [
-        "Diakinesis",
-        "Pachytene",
-        "Zygotene",
-        "Diplotene"
-      ],
+      "options": ["Diakinesis", "Pachytene", "Zygotene", "Diplotene"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, chiasmata (X-shaped structures where crossing over occurred) become visible during the diplotene stage. During this stage, the synaptonemal complex dissolves and the homologous chromosomes begin to separate, but remain attached at chiasmata.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "chiasmata",
-        "diplotene"
-      ],
+      "tags": ["meiosis", "chiasmata", "diplotene"],
       "neetWeightage": "HIGH"
     },
     {
@@ -301,22 +201,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Terminalization of chiasmata occurs during:",
-      "options": [
-        "Metaphase I",
-        "Diakinesis",
-        "Diplotene",
-        "Pachytene"
-      ],
+      "options": ["Metaphase I", "Diakinesis", "Diplotene", "Pachytene"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, during diakinesis (the final stage of prophase I), terminalization of chiasmata occurs. The chiasmata move towards the ends (termini) of the chromosomes. The nuclear membrane and nucleolus also disappear during this stage.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "diakinesis",
-        "terminalization"
-      ],
+      "tags": ["meiosis", "diakinesis", "terminalization"],
       "neetWeightage": "HIGH"
     },
     {
@@ -338,11 +229,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "daughter-cells",
-        "haploid"
-      ],
+      "tags": ["meiosis", "daughter-cells", "haploid"],
       "neetWeightage": "HIGH"
     },
     {
@@ -353,22 +240,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "During which phase of mitosis does the nuclear envelope reappear?",
-      "options": [
-        "Prophase",
-        "Telophase",
-        "Anaphase",
-        "Metaphase"
-      ],
+      "options": ["Prophase", "Telophase", "Anaphase", "Metaphase"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, during telophase, the nuclear envelope reforms around the group of chromosomes at each pole. The chromosomes decondense, and the nucleolus reappears. These events are essentially the reverse of prophase.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "telophase",
-        "nuclear-envelope"
-      ],
+      "tags": ["mitosis", "telophase", "nuclear-envelope"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -379,22 +257,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "The synaptonemal complex is formed during:",
-      "options": [
-        "Pachytene",
-        "Zygotene",
-        "Leptotene",
-        "Diplotene"
-      ],
+      "options": ["Pachytene", "Zygotene", "Leptotene", "Diplotene"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the synaptonemal complex is formed during zygotene. It is a protein-rich structure that holds the homologous chromosomes together during synapsis. It dissolves during diplotene.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "synaptonemal-complex",
-        "zygotene"
-      ],
+      "tags": ["meiosis", "synaptonemal-complex", "zygotene"],
       "neetWeightage": "HIGH"
     },
     {
@@ -405,22 +274,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "In which type of cell division is the chromosome number reduced to half?",
-      "options": [
-        "Meiosis I",
-        "Mitosis",
-        "Amitosis",
-        "Meiosis II"
-      ],
+      "options": ["Meiosis I", "Mitosis", "Amitosis", "Meiosis II"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, meiosis I is the reductional division where the chromosome number is reduced to half. Homologous chromosomes separate during anaphase I. Meiosis II is equational (like mitosis) where sister chromatids separate.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "reductional-division",
-        "chromosome-number"
-      ],
+      "tags": ["meiosis", "reductional-division", "chromosome-number"],
       "neetWeightage": "HIGH"
     },
     {
@@ -442,11 +302,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "prophase",
-        "chromosome-condensation"
-      ],
+      "tags": ["mitosis", "prophase", "chromosome-condensation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -468,11 +324,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "G2-phase",
-        "protein-synthesis"
-      ],
+      "tags": ["cell-cycle", "G2-phase", "protein-synthesis"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -494,11 +346,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "significance",
-        "growth-repair"
-      ],
+      "tags": ["mitosis", "significance", "growth-repair"],
       "neetWeightage": "HIGH"
     },
     {
@@ -509,22 +357,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "The best stage to count the number of chromosomes in a cell is:",
-      "options": [
-        "Metaphase",
-        "Anaphase",
-        "Telophase",
-        "Prophase"
-      ],
+      "options": ["Metaphase", "Anaphase", "Telophase", "Prophase"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, metaphase is the best stage for studying chromosomes because they are maximally condensed, clearly visible, and aligned at the metaphase plate, making counting and morphological study easiest.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "metaphase",
-        "karyotyping"
-      ],
+      "tags": ["mitosis", "metaphase", "karyotyping"],
       "neetWeightage": "HIGH"
     },
     {
@@ -535,22 +374,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "During leptotene of prophase I, chromosomes appear as:",
-      "options": [
-        "Thin, long threads",
-        "Thick, short rods",
-        "Bivalents",
-        "Tetrads"
-      ],
+      "options": ["Thin, long threads", "Thick, short rods", "Bivalents", "Tetrads"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, during leptotene (the first stage of prophase I), chromosomes become visible as long, thin threads (lepto = thin, tene = thread). Compaction of chromosomes continues throughout prophase I.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "leptotene",
-        "prophase-I"
-      ],
+      "tags": ["meiosis", "leptotene", "prophase-I"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -561,22 +391,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "The spindle fibres attach to the chromosomes at the:",
-      "options": [
-        "Centromere",
-        "Kinetochore",
-        "Secondary constriction",
-        "Telomere"
-      ],
+      "options": ["Centromere", "Kinetochore", "Secondary constriction", "Telomere"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, spindle fibres attach to the chromosomes at the kinetochore, which is a disc-shaped protein structure located on the centromere. Each chromosome has two kinetochores, one on each sister chromatid.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "kinetochore",
-        "spindle-fibres"
-      ],
+      "tags": ["mitosis", "kinetochore", "spindle-fibres"],
       "neetWeightage": "HIGH"
     },
     {
@@ -587,22 +408,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "If a human cell has 46 chromosomes, after S phase the DNA content will be:",
-      "options": [
-        "92",
-        "46",
-        "23",
-        "Remains at 46 chromosomes but DNA content doubles"
-      ],
+      "options": ["92", "46", "23", "Remains at 46 chromosomes but DNA content doubles"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, during S phase, DNA replication occurs so the DNA content doubles. However, the chromosome number remains the same (46) because each chromosome now consists of two sister chromatids joined at the centromere.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "S-phase",
-        "DNA-content"
-      ],
+      "tags": ["cell-cycle", "S-phase", "DNA-content"],
       "neetWeightage": "HIGH"
     },
     {
@@ -624,11 +436,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis-II",
-        "equational-division",
-        "sister-chromatids"
-      ],
+      "tags": ["meiosis-II", "equational-division", "sister-chromatids"],
       "neetWeightage": "HIGH"
     },
     {
@@ -650,10 +458,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "interkinesis"
-      ],
+      "tags": ["meiosis", "interkinesis"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -675,11 +480,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "significance",
-        "genetic-variation"
-      ],
+      "tags": ["meiosis", "significance", "genetic-variation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -701,11 +502,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "anaphase-I",
-        "homologous-separation"
-      ],
+      "tags": ["meiosis", "anaphase-I", "homologous-separation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -716,22 +513,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "A cell with 20 chromosomes undergoes mitosis. How many chromosomes will be in each daughter cell?",
-      "options": [
-        "40",
-        "10",
-        "5",
-        "20"
-      ],
+      "options": ["40", "10", "5", "20"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, mitosis is an equational division that maintains the chromosome number. Each daughter cell will have the same number of chromosomes as the parent cell, which is 20.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "chromosome-number",
-        "equational"
-      ],
+      "tags": ["mitosis", "chromosome-number", "equational"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -742,22 +530,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "In meiosis, the number of DNA replications and cell divisions respectively are:",
-      "options": [
-        "Two and one",
-        "One and one",
-        "Two and two",
-        "One and two"
-      ],
+      "options": ["Two and one", "One and one", "Two and two", "One and two"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, in meiosis there is only ONE round of DNA replication (during the S phase before meiosis I) but TWO successive cell divisions (meiosis I and meiosis II), resulting in four haploid cells.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "DNA-replication",
-        "cell-division"
-      ],
+      "tags": ["meiosis", "DNA-replication", "cell-division"],
       "neetWeightage": "HIGH"
     },
     {
@@ -779,11 +558,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "G1-phase",
-        "cell-growth"
-      ],
+      "tags": ["cell-cycle", "G1-phase", "cell-growth"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -794,22 +569,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "The shortest phase of mitosis is:",
-      "options": [
-        "Telophase",
-        "Anaphase",
-        "Prophase",
-        "Metaphase"
-      ],
+      "options": ["Telophase", "Anaphase", "Prophase", "Metaphase"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, anaphase is the shortest phase of mitosis. During this phase, the centromeres split and chromatids move rapidly to opposite poles, making it a relatively brief event.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "anaphase",
-        "shortest-phase"
-      ],
+      "tags": ["mitosis", "anaphase", "shortest-phase"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -831,11 +597,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "colchicine",
-        "spindle-inhibitor"
-      ],
+      "tags": ["mitosis", "colchicine", "spindle-inhibitor"],
       "neetWeightage": "HIGH"
     },
     {
@@ -846,22 +608,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "During which substage of prophase I do homologous chromosomes begin to separate?",
-      "options": [
-        "Diplotene",
-        "Pachytene",
-        "Zygotene",
-        "Diakinesis"
-      ],
+      "options": ["Diplotene", "Pachytene", "Zygotene", "Diakinesis"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, during diplotene, the synaptonemal complex dissolves and the homologous chromosomes begin to separate (desynapsis). However, they remain connected at the points of crossing over (chiasmata).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "diplotene",
-        "desynapsis"
-      ],
+      "tags": ["meiosis", "diplotene", "desynapsis"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -872,22 +625,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "A recombinase enzyme that facilitates crossing over is called:",
-      "options": [
-        "Helicase",
-        "RecA",
-        "Topoisomerase",
-        "Ligase"
-      ],
+      "options": ["Helicase", "RecA", "Topoisomerase", "Ligase"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the enzyme recombinase (RecA in prokaryotes, Rad51/Dmc1 in eukaryotes) facilitates crossing over by catalysing the exchange of genetic material between non-sister chromatids of homologous chromosomes during pachytene.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "crossing-over",
-        "recombinase"
-      ],
+      "tags": ["meiosis", "crossing-over", "recombinase"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -898,22 +642,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "In a yeast cell, the cell cycle is completed in approximately:",
-      "options": [
-        "24 hours",
-        "20 minutes",
-        "90 minutes",
-        "12 hours"
-      ],
+      "options": ["24 hours", "20 minutes", "90 minutes", "12 hours"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the cell cycle duration varies in different organisms. In yeast, it takes approximately 90 minutes. In human cells, the cell cycle lasts about 24 hours.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "duration",
-        "yeast"
-      ],
+      "tags": ["cell-cycle", "duration", "yeast"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -924,22 +659,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "The longest phase of the cell cycle in a typical human cell is:",
-      "options": [
-        "G2 phase",
-        "Interphase",
-        "M phase",
-        "S phase"
-      ],
+      "options": ["G2 phase", "Interphase", "M phase", "S phase"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, interphase (comprising G1, S, and G2 phases) is the longest part of the cell cycle, occupying about 95% of the total cell cycle time. In a 24-hour human cell cycle, interphase lasts about 23 hours and M phase about 1 hour.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "interphase",
-        "duration"
-      ],
+      "tags": ["cell-cycle", "interphase", "duration"],
       "neetWeightage": "HIGH"
     },
     {
@@ -950,22 +676,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Which type of division results in genetic variation in organisms?",
-      "options": [
-        "Mitosis",
-        "Amitosis",
-        "Binary fission",
-        "Meiosis"
-      ],
+      "options": ["Mitosis", "Amitosis", "Binary fission", "Meiosis"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, meiosis introduces genetic variation through two mechanisms: (1) crossing over during pachytene of prophase I, and (2) random assortment of homologous chromosomes during anaphase I. This variation is important for evolution.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "genetic-variation",
-        "evolution"
-      ],
+      "tags": ["meiosis", "genetic-variation", "evolution"],
       "neetWeightage": "HIGH"
     },
     {
@@ -987,10 +704,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis-I",
-        "reductional-division"
-      ],
+      "tags": ["meiosis-I", "reductional-division"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1012,11 +726,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "crossing-over",
-        "genetic-variation",
-        "recombination"
-      ],
+      "tags": ["crossing-over", "genetic-variation", "recombination"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1038,11 +748,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "interphase",
-        "metabolic-activity",
-        "cell-cycle"
-      ],
+      "tags": ["interphase", "metabolic-activity", "cell-cycle"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1064,11 +770,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "equational-division",
-        "chromosome-number"
-      ],
+      "tags": ["mitosis", "equational-division", "chromosome-number"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1090,11 +792,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "interkinesis",
-        "DNA-replication"
-      ],
+      "tags": ["meiosis", "interkinesis", "DNA-replication"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1116,11 +814,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "colchicine",
-        "polyploidy",
-        "spindle-inhibition"
-      ],
+      "tags": ["colchicine", "polyploidy", "spindle-inhibition"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1142,11 +836,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "G0-phase",
-        "neurons",
-        "quiescent-cells"
-      ],
+      "tags": ["G0-phase", "neurons", "quiescent-cells"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1168,12 +858,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cytokinesis",
-        "plant-cell",
-        "animal-cell",
-        "cell-wall"
-      ],
+      "tags": ["cytokinesis", "plant-cell", "animal-cell", "cell-wall"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1195,11 +880,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis-II",
-        "haploid",
-        "chromatid-separation"
-      ],
+      "tags": ["meiosis-II", "haploid", "chromatid-separation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1221,11 +902,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "chromosome-constancy",
-        "fertilisation"
-      ],
+      "tags": ["meiosis", "chromosome-constancy", "fertilisation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1247,11 +924,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "prophase",
-        "longest-phase"
-      ],
+      "tags": ["mitosis", "prophase", "longest-phase"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1273,11 +946,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "metaphase",
-        "chromosome-counting"
-      ],
+      "tags": ["mitosis", "metaphase", "chromosome-counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1299,11 +968,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "phases",
-        "interphase"
-      ],
+      "tags": ["cell-cycle", "phases", "interphase"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1325,11 +990,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "prophase-I",
-        "stages"
-      ],
+      "tags": ["meiosis", "prophase-I", "stages"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1351,11 +1012,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "features",
-        "incorrect-statements"
-      ],
+      "tags": ["mitosis", "features", "incorrect-statements"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1366,23 +1023,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Read the following statements about anaphase:\n(i) In anaphase of mitosis, sister chromatids separate\n(ii) In anaphase I, homologous chromosomes separate\n(iii) In anaphase II, homologous chromosomes separate\n(iv) Anaphase is the shortest phase of mitosis\nHow many are correct?",
-      "options": [
-        "Two",
-        "One",
-        "Four",
-        "Three"
-      ],
+      "options": ["Two", "One", "Four", "Three"],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), and (iv) are correct = 3. Statement (iii) is incorrect; in anaphase II, sister chromatids separate (like mitosis), NOT homologous chromosomes. Homologous separation occurs only in anaphase I.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "anaphase",
-        "mitosis",
-        "meiosis",
-        "comparison"
-      ],
+      "tags": ["anaphase", "mitosis", "meiosis", "comparison"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1404,10 +1051,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "significance"
-      ],
+      "tags": ["meiosis", "significance"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1418,22 +1062,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Which of the following statements about telophase is/are correct?\n(i) Chromosomes decondense\n(ii) Nuclear envelope reforms\n(iii) Nucleolus reappears\n(iv) Spindle fibres form",
-      "options": [
-        "All of the above",
-        "(i) and (iii) only",
-        "(iv) only",
-        "(i), (ii), and (iii)"
-      ],
+      "options": ["All of the above", "(i) and (iii) only", "(iv) only", "(i), (ii), and (iii)"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, during telophase: chromosomes decondense back to chromatin, nuclear envelope reforms around each set of chromosomes, and nucleolus reappears. Statement (iv) is incorrect; spindle fibres form during prophase, not telophase. Spindle fibres disassemble during telophase.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "telophase",
-        "events"
-      ],
+      "tags": ["mitosis", "telophase", "events"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1455,11 +1090,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cytokinesis",
-        "centripetal",
-        "centrifugal"
-      ],
+      "tags": ["cytokinesis", "centripetal", "centrifugal"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1470,22 +1101,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "How many of the following events occur during prophase of mitosis?\n(a) Chromatin condensation (b) Nucleolus disappears (c) Centrioles move to poles (d) Spindle begins to form (e) Centromere splitting (f) Nuclear envelope breaks down",
-      "options": [
-        "Six",
-        "Three",
-        "Four",
-        "Five"
-      ],
+      "options": ["Six", "Three", "Four", "Five"],
       "correctAnswer": "D",
       "explanation": "Events during prophase: (a) chromatin condenses, (b) nucleolus disappears, (c) centrioles move to opposite poles, (d) spindle begins to form, and (f) nuclear envelope breaks down = 5 events. Centromere splitting (e) occurs during anaphase, not prophase.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "prophase",
-        "events"
-      ],
+      "tags": ["mitosis", "prophase", "events"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1507,11 +1129,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "meiosis",
-        "comparison"
-      ],
+      "tags": ["mitosis", "meiosis", "comparison"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1533,11 +1151,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "G0-phase",
-        "quiescent",
-        "cell-cycle"
-      ],
+      "tags": ["G0-phase", "quiescent", "cell-cycle"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1559,10 +1173,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "interkinesis",
-        "meiosis"
-      ],
+      "tags": ["interkinesis", "meiosis"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1584,11 +1195,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "phases",
-        "events"
-      ],
+      "tags": ["cell-cycle", "phases", "events"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1610,11 +1217,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "prophase-I",
-        "stages"
-      ],
+      "tags": ["meiosis", "prophase-I", "stages"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1636,11 +1239,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "phases",
-        "characteristics"
-      ],
+      "tags": ["mitosis", "phases", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1662,11 +1261,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-division",
-        "types",
-        "comparison"
-      ],
+      "tags": ["cell-division", "types", "comparison"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1688,11 +1283,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "terminology",
-        "definitions"
-      ],
+      "tags": ["meiosis", "terminology", "definitions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1714,12 +1305,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-division",
-        "cell-types",
-        "mitosis",
-        "meiosis"
-      ],
+      "tags": ["cell-division", "cell-types", "mitosis", "meiosis"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1741,11 +1327,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "DNA-content",
-        "meiosis"
-      ],
+      "tags": ["cell-cycle", "DNA-content", "meiosis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1767,11 +1349,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-division",
-        "structures",
-        "functions"
-      ],
+      "tags": ["cell-division", "structures", "functions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1793,10 +1371,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-division",
-        "terminology"
-      ],
+      "tags": ["cell-division", "terminology"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1818,11 +1393,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "duration",
-        "phases"
-      ],
+      "tags": ["cell-cycle", "duration", "phases"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1844,11 +1415,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "genetic-variation",
-        "terminology"
-      ],
+      "tags": ["meiosis", "genetic-variation", "terminology"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1870,11 +1437,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "phases",
-        "events"
-      ],
+      "tags": ["meiosis", "phases", "events"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1885,23 +1448,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "How many stages are there in prophase I of meiosis?",
-      "options": [
-        "Six",
-        "Three",
-        "Five",
-        "Four"
-      ],
+      "options": ["Six", "Three", "Five", "Four"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, prophase I of meiosis has 5 stages: Leptotene, Zygotene, Pachytene, Diplotene, and Diakinesis. This is the longest and most complex phase of meiosis.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "prophase-I",
-        "stages",
-        "counting"
-      ],
+      "tags": ["meiosis", "prophase-I", "stages", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1912,22 +1465,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "If a cell with 2n = 14 undergoes meiosis, how many chromatids will be present during metaphase I?",
-      "options": [
-        "56",
-        "7",
-        "28",
-        "14"
-      ],
+      "options": ["56", "7", "28", "14"],
       "correctAnswer": "C",
       "explanation": "At metaphase I, chromosomes are in bivalent form. With 2n = 14, there are 7 bivalents. Each chromosome has 2 chromatids (replicated during S phase), so total chromatids = 14 x 2 = 28 chromatids.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "chromatids",
-        "counting"
-      ],
+      "tags": ["meiosis", "chromatids", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1938,22 +1482,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "If 10 cells undergo meiosis, how many daughter cells will be produced?",
-      "options": [
-        "20",
-        "30",
-        "40",
-        "10"
-      ],
+      "options": ["20", "30", "40", "10"],
       "correctAnswer": "C",
       "explanation": "Each cell undergoing meiosis produces 4 haploid daughter cells. Therefore, 10 cells x 4 = 40 daughter cells.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "daughter-cells",
-        "counting"
-      ],
+      "tags": ["meiosis", "daughter-cells", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1964,22 +1499,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "How many bivalents will be formed during meiosis in a cell with 2n = 46?",
-      "options": [
-        "23",
-        "46",
-        "12",
-        "92"
-      ],
+      "options": ["23", "46", "12", "92"],
       "correctAnswer": "A",
       "explanation": "During meiosis I, homologous chromosomes pair to form bivalents. With 2n = 46 (23 pairs), there will be 23 bivalents (each bivalent = 1 pair of homologous chromosomes = 4 chromatids = tetrad).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "bivalents",
-        "counting"
-      ],
+      "tags": ["meiosis", "bivalents", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1990,23 +1516,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "How many of the following events are common to both mitosis and meiosis?\n(a) Chromosome condensation (b) Spindle formation (c) Crossing over (d) Cytokinesis (e) Synapsis (f) Centromere splitting",
-      "options": [
-        "Five",
-        "Four",
-        "Three",
-        "Two"
-      ],
+      "options": ["Five", "Four", "Three", "Two"],
       "correctAnswer": "B",
       "explanation": "Events common to both mitosis and meiosis: (a) chromosome condensation, (b) spindle formation, (d) cytokinesis, and (f) centromere splitting = 4 events. Crossing over and synapsis are exclusive to meiosis.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "meiosis",
-        "common-events",
-        "counting"
-      ],
+      "tags": ["mitosis", "meiosis", "common-events", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2017,22 +1533,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Count the total number of phases in the complete cell cycle:\nG1, S, G2, Prophase, Metaphase, Anaphase, Telophase, Cytokinesis",
-      "options": [
-        "Six",
-        "Five",
-        "Seven",
-        "Eight"
-      ],
+      "options": ["Six", "Five", "Seven", "Eight"],
       "correctAnswer": "D",
       "explanation": "The complete cell cycle includes 8 distinct phases/stages: G1 phase, S phase, G2 phase (interphase = 3), and Prophase, Metaphase, Anaphase, Telophase (mitosis = 4), plus Cytokinesis = 3 + 4 + 1 = 8 phases.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "cell-cycle",
-        "phases",
-        "counting"
-      ],
+      "tags": ["cell-cycle", "phases", "counting"],
       "neetWeightage": "LOW"
     },
     {
@@ -2043,22 +1550,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "How many of the following statements are correct about meiosis II?\n(a) It is equational division\n(b) Sister chromatids separate\n(c) Crossing over occurs\n(d) No DNA replication occurs before it\n(e) It produces haploid cells\n(f) Homologous chromosomes pair",
-      "options": [
-        "Five",
-        "Two",
-        "Four",
-        "Three"
-      ],
+      "options": ["Five", "Two", "Four", "Three"],
       "correctAnswer": "C",
       "explanation": "Correct statements about meiosis II: (a) equational division, (b) sister chromatids separate, (d) no DNA replication before it, and (e) produces haploid cells = 4. Statements (c) and (f) are features of meiosis I, not meiosis II.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis-II",
-        "features",
-        "counting"
-      ],
+      "tags": ["meiosis-II", "features", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2069,22 +1567,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "If a cell has 2n = 8 chromosomes, how many chromosomes will each daughter cell have after mitosis and meiosis respectively?",
-      "options": [
-        "4 and 2",
-        "4 and 4",
-        "8 and 8",
-        "8 and 4"
-      ],
+      "options": ["4 and 2", "4 and 4", "8 and 8", "8 and 4"],
       "correctAnswer": "D",
       "explanation": "After mitosis (equational division), each daughter cell will have the same number as the parent: 8 chromosomes (2n = 8). After meiosis (reductional), each daughter cell will have half: 4 chromosomes (n = 4).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "meiosis",
-        "chromosome-number"
-      ],
+      "tags": ["mitosis", "meiosis", "chromosome-number"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2106,11 +1595,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "prophase-I",
-        "sequence"
-      ],
+      "tags": ["meiosis", "prophase-I", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2132,11 +1617,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "phases",
-        "sequence"
-      ],
+      "tags": ["cell-cycle", "phases", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2158,11 +1639,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitosis",
-        "events",
-        "sequence"
-      ],
+      "tags": ["mitosis", "events", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2184,11 +1661,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis-I",
-        "events",
-        "sequence"
-      ],
+      "tags": ["meiosis-I", "events", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2210,11 +1683,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "duration",
-        "phases"
-      ],
+      "tags": ["cell-cycle", "duration", "phases"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2236,11 +1705,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "phases",
-        "sequence"
-      ],
+      "tags": ["meiosis", "phases", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2262,11 +1727,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "DNA-content",
-        "sequence"
-      ],
+      "tags": ["meiosis", "DNA-content", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2288,11 +1749,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "s-phase",
-        "dna-replication"
-      ],
+      "tags": ["cell-cycle", "s-phase", "dna-replication"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2314,11 +1771,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "crossing-over",
-        "recombination"
-      ],
+      "tags": ["meiosis", "crossing-over", "recombination"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2329,22 +1782,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Cytokinesis in animal cells occurs by:",
-      "options": [
-        "Cell plate formation",
-        "Cleavage (furrowing)",
-        "Budding",
-        "Fragmentation"
-      ],
+      "options": ["Cell plate formation", "Cleavage (furrowing)", "Budding", "Fragmentation"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, in animal cells, cytokinesis occurs by cleavage (furrowing) where a contractile ring of actin and myosin forms at the equator and progressively constricts the cell into two daughter cells. In plant cells, a cell plate forms from the centre outward.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cytokinesis",
-        "cleavage",
-        "animal-cells"
-      ],
+      "tags": ["cytokinesis", "cleavage", "animal-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2355,22 +1799,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "The synaptonemal complex is formed during which stage of meiosis?",
-      "options": [
-        "Leptotene",
-        "Zygotene",
-        "Pachytene",
-        "Diplotene"
-      ],
+      "options": ["Leptotene", "Zygotene", "Pachytene", "Diplotene"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, during zygotene, homologous chromosomes pair up (synapsis) and a complex structure called the synaptonemal complex is formed between them. This complex helps hold the homologous chromosomes together and facilitates crossing over in pachytene.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "synaptonemal-complex",
-        "zygotene"
-      ],
+      "tags": ["meiosis", "synaptonemal-complex", "zygotene"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2381,22 +1816,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Chiasmata become visible during which stage of meiosis I?",
-      "options": [
-        "Zygotene",
-        "Pachytene",
-        "Diplotene",
-        "Diakinesis"
-      ],
+      "options": ["Zygotene", "Pachytene", "Diplotene", "Diakinesis"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, during diplotene the synaptonemal complex dissolves and the homologous chromosomes begin to separate except at the points of crossing over called chiasmata. Chiasmata are X-shaped structures where recombination has occurred.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "chiasmata",
-        "diplotene"
-      ],
+      "tags": ["meiosis", "chiasmata", "diplotene"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2407,22 +1833,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Cells that do not divide further and exit the cell cycle enter which phase?",
-      "options": [
-        "G\u2080 phase (quiescent phase)",
-        "S phase",
-        "M phase",
-        "G\u2082 phase"
-      ],
+      "options": ["G\u2080 phase (quiescent phase)", "S phase", "M phase", "G\u2082 phase"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, cells that do not divide further (like mature neurons) exit the cell cycle and enter an inactive stage called G\u2080 phase (quiescent phase). These cells remain metabolically active but do not proliferate unless stimulated.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "g0-phase",
-        "quiescent"
-      ],
+      "tags": ["cell-cycle", "g0-phase", "quiescent"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2444,11 +1861,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "anaphase-i",
-        "disjunction"
-      ],
+      "tags": ["meiosis", "anaphase-i", "disjunction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2459,22 +1872,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "The longest phase of the cell cycle in a typical mammalian cell is:",
-      "options": [
-        "S phase",
-        "G\u2081 phase",
-        "G\u2082 phase",
-        "M phase"
-      ],
+      "options": ["S phase", "G\u2081 phase", "G\u2082 phase", "M phase"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the G\u2081 phase is typically the longest phase of the cell cycle. In a typical mammalian cell with a 24-hour cell cycle, the G\u2081 phase takes about 11 hours, S phase about 8 hours, G\u2082 about 4 hours, and M phase about 1 hour.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "g1-phase",
-        "duration"
-      ],
+      "tags": ["cell-cycle", "g1-phase", "duration"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2496,11 +1900,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-division",
-        "colchicine",
-        "spindle-inhibitor"
-      ],
+      "tags": ["cell-division", "colchicine", "spindle-inhibitor"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2511,23 +1911,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Bivalents (tetrads) are first seen during which stage of meiosis?",
-      "options": [
-        "Leptotene",
-        "Zygotene",
-        "Pachytene",
-        "Metaphase I"
-      ],
+      "options": ["Leptotene", "Zygotene", "Pachytene", "Metaphase I"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, during zygotene, homologous chromosomes pair up (synapsis) to form bivalents. Each bivalent consists of 4 chromatids and is also called a tetrad. This is the first time paired homologous chromosomes are visible.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "bivalent",
-        "zygotene",
-        "synapsis"
-      ],
+      "tags": ["meiosis", "bivalent", "zygotene", "synapsis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2538,22 +1928,13 @@
       "ncertChapter": 10,
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Terminalization of chiasmata occurs during:",
-      "options": [
-        "Pachytene",
-        "Diplotene",
-        "Diakinesis",
-        "Metaphase I"
-      ],
+      "options": ["Pachytene", "Diplotene", "Diakinesis", "Metaphase I"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, during diakinesis, the final stage of prophase I, chromosomes are fully condensed and chiasmata move towards the ends of the chromosomes (terminalization). The nucleolus disappears and the nuclear envelope breaks down.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "diakinesis",
-        "terminalization"
-      ],
+      "tags": ["meiosis", "diakinesis", "terminalization"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2575,11 +1956,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis-ii",
-        "equational-division",
-        "sister-chromatids"
-      ],
+      "tags": ["meiosis-ii", "equational-division", "sister-chromatids"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2601,11 +1978,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-cycle",
-        "checkpoint",
-        "g2-phase"
-      ],
+      "tags": ["cell-cycle", "checkpoint", "g2-phase"],
       "neetWeightage": "MEDIUM"
     }
   ]

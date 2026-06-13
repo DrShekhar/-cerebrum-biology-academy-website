@@ -371,9 +371,7 @@ export default function CourseDetailPage() {
             <h2 className="text-xl font-bold text-gray-900">Course Content</h2>
 
             {displayModules.map((module, index) => (
-              <div
-                key={module.id}
-               className="animate-fadeInUp">
+              <div key={module.id} className="animate-fadeInUp">
                 <Card className={cn(module.isLocked && 'opacity-75')}>
                   <CardContent className="p-0">
                     <button

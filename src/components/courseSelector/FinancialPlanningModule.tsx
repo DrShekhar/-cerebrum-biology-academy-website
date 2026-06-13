@@ -1089,144 +1089,131 @@ export default function FinancialPlanningModule({
 
       {/* Tab Content */}
       <div className="p-6">
-{activeTab === 'breakdown' && (
-            <div
-              key="breakdown"
-             className="animate-fadeInUp">
-              <FeeBreakdown course={course} appliedScholarships={appliedScholarships} />
-            </div>
-          )}
+        {activeTab === 'breakdown' && (
+          <div key="breakdown" className="animate-fadeInUp">
+            <FeeBreakdown course={course} appliedScholarships={appliedScholarships} />
+          </div>
+        )}
 
-          {activeTab === 'schedule' && (
-            <div
-              key="schedule"
-             className="animate-fadeInUp">
-              <div className="mb-4">
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    { id: 'single', label: 'Single Payment', discount: '10%' },
-                    { id: 'biannual', label: 'Half-Yearly', discount: '5%' },
-                    { id: 'quarterly', label: 'Quarterly', discount: '2%' },
-                    { id: 'monthly', label: 'Monthly', discount: '0%' },
-                  ].map((plan) => (
-                    <button
-                      key={plan.id}
-                      onClick={() => setPaymentPlan(plan.id as any)}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        paymentPlan === plan.id
-                          ? 'bg-blue-600 text-white'
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      }`}
-                    >
-                      {plan.label}
-                      {plan.discount !== '0%' && (
-                        <span className="ml-1 text-xs">({plan.discount} off)</span>
-                      )}
-                    </button>
-                  ))}
-                </div>
+        {activeTab === 'schedule' && (
+          <div key="schedule" className="animate-fadeInUp">
+            <div className="mb-4">
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { id: 'single', label: 'Single Payment', discount: '10%' },
+                  { id: 'biannual', label: 'Half-Yearly', discount: '5%' },
+                  { id: 'quarterly', label: 'Quarterly', discount: '2%' },
+                  { id: 'monthly', label: 'Monthly', discount: '0%' },
+                ].map((plan) => (
+                  <button
+                    key={plan.id}
+                    onClick={() => setPaymentPlan(plan.id as any)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      paymentPlan === plan.id
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {plan.label}
+                    {plan.discount !== '0%' && (
+                      <span className="ml-1 text-xs">({plan.discount} off)</span>
+                    )}
+                  </button>
+                ))}
               </div>
-              <InstallmentSchedule totalAmount={totalWithScholarships} planType={paymentPlan} />
             </div>
-          )}
+            <InstallmentSchedule totalAmount={totalWithScholarships} planType={paymentPlan} />
+          </div>
+        )}
 
-          {activeTab === 'savings' && (
-            <div
-              key="savings"
-              className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-            >
-              <div className="bg-white rounded-xl border border-gray-200 p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                  <PiggyBank className="w-5 h-5 text-green-600 mr-2" />
-                  Early Payment Savings
-                </h3>
-                <div className="space-y-4">
-                  {[
-                    { plan: 'Single Payment', discount: 10, savings: totalWithScholarships * 0.1 },
-                    { plan: 'Half-Yearly', discount: 5, savings: totalWithScholarships * 0.05 },
-                    { plan: 'Quarterly', discount: 2, savings: totalWithScholarships * 0.02 },
-                  ].map((option) => (
-                    <div
-                      key={option.plan}
-                      className="flex justify-between items-center p-3 bg-green-50 rounded-lg"
-                    >
-                      <span className="font-medium text-gray-900">{option.plan}</span>
-                      <div className="text-right">
-                        <div className="font-bold text-green-600">
-                          ₹{option.savings.toLocaleString()}
-                        </div>
-                        <div className="text-xs text-gray-600">{option.discount}% discount</div>
+        {activeTab === 'savings' && (
+          <div key="savings" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                <PiggyBank className="w-5 h-5 text-green-600 mr-2" />
+                Early Payment Savings
+              </h3>
+              <div className="space-y-4">
+                {[
+                  { plan: 'Single Payment', discount: 10, savings: totalWithScholarships * 0.1 },
+                  { plan: 'Half-Yearly', discount: 5, savings: totalWithScholarships * 0.05 },
+                  { plan: 'Quarterly', discount: 2, savings: totalWithScholarships * 0.02 },
+                ].map((option) => (
+                  <div
+                    key={option.plan}
+                    className="flex justify-between items-center p-3 bg-green-50 rounded-lg"
+                  >
+                    <span className="font-medium text-gray-900">{option.plan}</span>
+                    <div className="text-right">
+                      <div className="font-bold text-green-600">
+                        ₹{option.savings.toLocaleString()}
                       </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="bg-white rounded-xl border border-gray-200 p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                  <Zap className="w-5 h-5 text-blue-600 mr-2" />
-                  Additional Benefits
-                </h3>
-                <div className="space-y-3">
-                  <div className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5" />
-                    <div>
-                      <div className="font-medium text-gray-900">Priority Support</div>
-                      <div className="text-sm text-gray-600">
-                        24/7 dedicated support for advance payments
-                      </div>
+                      <div className="text-xs text-gray-600">{option.discount}% discount</div>
                     </div>
                   </div>
-                  <div className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5" />
-                    <div>
-                      <div className="font-medium text-gray-900">Free Material Upgrades</div>
-                      <div className="text-sm text-gray-600">
-                        Latest study materials at no extra cost
-                      </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                <Zap className="w-5 h-5 text-blue-600 mr-2" />
+                Additional Benefits
+              </h3>
+              <div className="space-y-3">
+                <div className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5" />
+                  <div>
+                    <div className="font-medium text-gray-900">Priority Support</div>
+                    <div className="text-sm text-gray-600">
+                      24/7 dedicated support for advance payments
                     </div>
                   </div>
-                  <div className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5" />
-                    <div>
-                      <div className="font-medium text-gray-900">Bonus Mock Tests</div>
-                      <div className="text-sm text-gray-600">
-                        Additional 10 mock tests worth ₹5,000
-                      </div>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5" />
+                  <div>
+                    <div className="font-medium text-gray-900">Free Material Upgrades</div>
+                    <div className="text-sm text-gray-600">
+                      Latest study materials at no extra cost
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5" />
+                  <div>
+                    <div className="font-medium text-gray-900">Bonus Mock Tests</div>
+                    <div className="text-sm text-gray-600">
+                      Additional 10 mock tests worth ₹5,000
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          )}
+          </div>
+        )}
 
-          {activeTab === 'scholarships' && (
-            <div
-              key="scholarships"
-             className="animate-fadeInUp">
-              <ScholarshipChecker course={course} onScholarshipSelect={setAppliedScholarships} />
-            </div>
-          )}
+        {activeTab === 'scholarships' && (
+          <div key="scholarships" className="animate-fadeInUp">
+            <ScholarshipChecker course={course} onScholarshipSelect={setAppliedScholarships} />
+          </div>
+        )}
 
-          {activeTab === 'comparison' && (
-            <div
-              key="comparison"
-             className="animate-fadeInUp">
-              <CompetitorComparison course={course} />
-            </div>
-          )}
+        {activeTab === 'comparison' && (
+          <div key="comparison" className="animate-fadeInUp">
+            <CompetitorComparison course={course} />
+          </div>
+        )}
 
-          {activeTab === 'affordability' && (
-            <div
-              key="affordability"
-             className="animate-fadeInUp">
-              <FamilyAffordabilityAssessment
-                totalAmount={totalWithScholarships}
-                familyProfile={familyProfile}
-              />
-            </div>
-          )}
-</div>
+        {activeTab === 'affordability' && (
+          <div key="affordability" className="animate-fadeInUp">
+            <FamilyAffordabilityAssessment
+              totalAmount={totalWithScholarships}
+              familyProfile={familyProfile}
+            />
+          </div>
+        )}
+      </div>
 
       {/* Action Footer */}
       <div className="bg-gray-50 border-t border-gray-200 p-6">

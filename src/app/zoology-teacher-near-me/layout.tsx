@@ -19,7 +19,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Zoology Teacher Near Me | Expert Zoology Classes for NEET',
-    description: 'Find expert zoology teachers near you at Cerebrum Biology Academy. Specialized zoology coaching for NEET, covering animal physiology, genetics, ecology. Book free demo!',
+    description:
+      'Find expert zoology teachers near you at Cerebrum Biology Academy. Specialized zoology coaching for NEET, covering animal physiology, genetics, ecology. Book free demo!',
   },
 }
 

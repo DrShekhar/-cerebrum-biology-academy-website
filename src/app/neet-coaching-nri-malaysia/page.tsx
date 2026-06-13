@@ -32,7 +32,14 @@ export const metadata: Metadata = {
     description:
       'NEET coaching for NRI students in Malaysia. 5 CBSE schools, 200K Indians. Affordable coaching with 98% success rate in KL and beyond.',
     creator: '@cerebrumbiology',
-    images: [{ url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-malaysia.jpg', width: 1200, height: 630, alt: 'Neet Coaching Malaysia — Cerebrum Biology Academy' }],
+    images: [
+      {
+        url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-malaysia.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Neet Coaching Malaysia — Cerebrum Biology Academy',
+      },
+    ],
   },
 }
 

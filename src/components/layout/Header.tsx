@@ -239,7 +239,9 @@ const Header = () => {
               ) : (
                 <>
                   {/* Free Demo - Ghost Button Style */}
-                  <ContextualWhatsAppLink target="_blank" rel="noopener noreferrer"
+                  <ContextualWhatsAppLink
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 border-2 border-green-600 text-green-600 hover:bg-green-50 hover:border-green-700 hover:text-green-700 hover:shadow-md whitespace-nowrap group"
                   >
                     <Play className="w-4 h-4 transition-transform group-hover:scale-110" />
@@ -340,7 +342,9 @@ const Header = () => {
                 ) : (
                   <>
                     {/* Free Demo - Ghost Style */}
-                    <ContextualWhatsAppLink target="_blank" rel="noopener noreferrer"
+                    <ContextualWhatsAppLink
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 border-2 border-green-600 text-green-600 px-6 py-4 rounded-full font-semibold hover:bg-green-50 hover:border-green-700 hover:text-green-700 transition-all duration-300 min-h-[52px]"
                     >
                       <Play className="w-5 h-5" />

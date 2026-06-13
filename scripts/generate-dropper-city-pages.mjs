@@ -22,61 +22,75 @@ const CITIES = [
     descSnippet: 'live online from our Delhi NCR faculty + study material shipped pan-Maharashtra',
     feederCenter: 'Delhi NCR',
     competitorCue: 'a focused alternative to Aakash Andheri and Allen Bandra-Kurla',
-    heroBlurb: "Mumbai droppers — whether you're in Andheri, Bandra, Powai, Thane, Navi Mumbai, or anywhere on the local rail network — can join our specialised 1-year dropper batch online. Same curriculum, same faculty, none of the commute.",
+    heroBlurb:
+      "Mumbai droppers — whether you're in Andheri, Bandra, Powai, Thane, Navi Mumbai, or anywhere on the local rail network — can join our specialised 1-year dropper batch online. Same curriculum, same faculty, none of the commute.",
   },
   {
     slug: 'bangalore',
     name: 'Bangalore',
     region: 'Karnataka',
-    descSnippet: 'live online — convenient for students across Koramangala, Whitefield, Indiranagar, Electronic City',
+    descSnippet:
+      'live online — convenient for students across Koramangala, Whitefield, Indiranagar, Electronic City',
     feederCenter: 'Delhi NCR',
     competitorCue: 'a Biology-specialist alternative to Aakash Jayanagar and Allen Bangalore',
-    heroBlurb: "Bangalore droppers from Koramangala, Indiranagar, Whitefield, Electronic City, HSR Layout, Jayanagar, or anywhere across the city can join our 1-year dropper batch online. NEET Biology-specialist faculty (AIIMS-trained) — the gap between attempt 1 and attempt 2 is exactly the depth of biology you need.",
+    heroBlurb:
+      'Bangalore droppers from Koramangala, Indiranagar, Whitefield, Electronic City, HSR Layout, Jayanagar, or anywhere across the city can join our 1-year dropper batch online. NEET Biology-specialist faculty (AIIMS-trained) — the gap between attempt 1 and attempt 2 is exactly the depth of biology you need.',
   },
   {
     slug: 'hyderabad',
     name: 'Hyderabad',
     region: 'Telangana',
-    descSnippet: 'live online for students across Hyderabad and Secunderabad — Banjara Hills, Jubilee Hills, Hitec City, Madhapur, Kukatpally',
+    descSnippet:
+      'live online for students across Hyderabad and Secunderabad — Banjara Hills, Jubilee Hills, Hitec City, Madhapur, Kukatpally',
     feederCenter: 'Delhi NCR',
     competitorCue: 'a Biology-specialist alternative to Sri Chaitanya, Narayana, Aakash Hyderabad',
-    heroBlurb: "Hyderabad droppers can move past last year's score with focused biology training. Whether you're from Banjara Hills, Jubilee Hills, Madhapur, Hitec City, Kukatpally, Secunderabad, or anywhere across the twin cities — join our 1-year dropper batch online.",
+    heroBlurb:
+      "Hyderabad droppers can move past last year's score with focused biology training. Whether you're from Banjara Hills, Jubilee Hills, Madhapur, Hitec City, Kukatpally, Secunderabad, or anywhere across the twin cities — join our 1-year dropper batch online.",
   },
   {
     slug: 'pune',
     name: 'Pune',
     region: 'Maharashtra',
-    descSnippet: 'live online — for Pune & PCMC students from Kothrud, Hinjewadi, Viman Nagar, Aundh, Baner, Kharadi',
+    descSnippet:
+      'live online — for Pune & PCMC students from Kothrud, Hinjewadi, Viman Nagar, Aundh, Baner, Kharadi',
     feederCenter: 'Delhi NCR',
     competitorCue: 'a Biology-specialist alternative to Aakash JM Road and Allen Pune',
-    heroBlurb: "Pune droppers from Kothrud, Hinjewadi, Viman Nagar, Aundh, Baner, Kharadi, or PCMC can join our 1-year dropper batch online. NEET Biology-focused — most droppers lose 30-40 marks specifically in biology, and that's exactly where we work.",
+    heroBlurb:
+      "Pune droppers from Kothrud, Hinjewadi, Viman Nagar, Aundh, Baner, Kharadi, or PCMC can join our 1-year dropper batch online. NEET Biology-focused — most droppers lose 30-40 marks specifically in biology, and that's exactly where we work.",
   },
   {
     slug: 'chennai',
     name: 'Chennai',
     region: 'Tamil Nadu',
-    descSnippet: 'live online for Chennai students from T. Nagar, Adyar, Velachery, Anna Nagar, OMR',
+    descSnippet:
+      'live online for Chennai students from T. Nagar, Adyar, Velachery, Anna Nagar, OMR',
     feederCenter: 'Delhi NCR',
     competitorCue: 'a Biology-specialist alternative to Aakash T Nagar and Sri Chaitanya Chennai',
-    heroBlurb: "Chennai droppers from T. Nagar, Adyar, Velachery, Anna Nagar, OMR, or anywhere across the city can join our specialised 1-year dropper batch online. We focus exclusively on NEET Biology — where most droppers lose the marks they need.",
+    heroBlurb:
+      'Chennai droppers from T. Nagar, Adyar, Velachery, Anna Nagar, OMR, or anywhere across the city can join our specialised 1-year dropper batch online. We focus exclusively on NEET Biology — where most droppers lose the marks they need.',
   },
   {
     slug: 'kolkata',
     name: 'Kolkata',
     region: 'West Bengal',
-    descSnippet: 'live online for Kolkata students from Park Street, Salt Lake, New Town, Howrah, Behala',
+    descSnippet:
+      'live online for Kolkata students from Park Street, Salt Lake, New Town, Howrah, Behala',
     feederCenter: 'Delhi NCR',
     competitorCue: 'a Biology-specialist alternative to Aakash Kolkata and FIITJEE',
-    heroBlurb: "Kolkata droppers from Park Street, Salt Lake, New Town, Howrah, Behala, or anywhere across the metropolitan area can join our 1-year dropper batch online — same curriculum and faculty as our Delhi NCR offline batches.",
+    heroBlurb:
+      'Kolkata droppers from Park Street, Salt Lake, New Town, Howrah, Behala, or anywhere across the metropolitan area can join our 1-year dropper batch online — same curriculum and faculty as our Delhi NCR offline batches.',
   },
   {
     slug: 'kota',
     name: 'Kota',
     region: 'Rajasthan',
-    descSnippet: 'live online — a Biology-focused alternative for Kota droppers seeking subject-specialist coaching',
+    descSnippet:
+      'live online — a Biology-focused alternative for Kota droppers seeking subject-specialist coaching',
     feederCenter: 'Delhi NCR',
-    competitorCue: 'a Biology-specialist supplement for Kota students already enrolled at Allen, Aakash, or Resonance who need targeted biology improvement',
-    heroBlurb: "Kota droppers — already in town for your second attempt? Add a NEET Biology specialist to your prep. Most Kota droppers come back strong in physics & chemistry but lose 30+ marks in biology. Our online dropper batch fills that gap without disrupting your existing coaching schedule.",
+    competitorCue:
+      'a Biology-specialist supplement for Kota students already enrolled at Allen, Aakash, or Resonance who need targeted biology improvement',
+    heroBlurb:
+      'Kota droppers — already in town for your second attempt? Add a NEET Biology specialist to your prep. Most Kota droppers come back strong in physics & chemistry but lose 30+ marks in biology. Our online dropper batch fills that gap without disrupting your existing coaching schedule.',
   },
 ]
 

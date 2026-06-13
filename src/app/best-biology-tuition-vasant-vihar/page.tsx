@@ -34,7 +34,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best Biology Tuition in Vasant Vihar | Premium Tutors South Delhi',
-    description: 'Best biology tuition in Vasant Vihar, South Delhi. Premium tutors for Vasant Valley School students. Class 11, 12 & NEET prep. Call 88264-44334.',
+    description:
+      'Best biology tuition in Vasant Vihar, South Delhi. Premium tutors for Vasant Valley School students. Class 11, 12 & NEET prep. Call 88264-44334.',
   },
 }
 

@@ -15,11 +15,19 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'IGCSE Biology Coaching | Cambridge Curriculum | International Standards | Cerebrum Biology Academy',
-    description: 'Expert IGCSE Biology coaching following Cambridge curriculum. International teaching standards, practical assessments, and global university preparation.',
+    title:
+      'IGCSE Biology Coaching | Cambridge Curriculum | International Standards | Cerebrum Biology Academy',
+    description:
+      'Expert IGCSE Biology coaching following Cambridge curriculum. International teaching standards, practical assessments, and global university preparation.',
   },
 
-  openGraph: { title: 'IGCSE Biology Coaching | Cambridge Curriculum | International Standards | Cerebrum Biology Academy', description: 'Expert IGCSE Biology coaching following Cambridge curriculum. International teaching standards, practical assessments, and global university preparation.', type: 'website' },
+  openGraph: {
+    title:
+      'IGCSE Biology Coaching | Cambridge Curriculum | International Standards | Cerebrum Biology Academy',
+    description:
+      'Expert IGCSE Biology coaching following Cambridge curriculum. International teaching standards, practical assessments, and global university preparation.',
+    type: 'website',
+  },
 }
 
 export default function IGCSEBiologyPage() {
@@ -149,7 +157,9 @@ export default function IGCSEBiologyPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20IGCSE%20Biology.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20IGCSE%20Biology.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
                 >
                   Enroll for IGCSE
@@ -416,7 +426,9 @@ export default function IGCSEBiologyPage() {
                 <p className="text-gray-600 mb-6">Complete 2-year IGCSE program</p>
                 <div className="space-y-2 sm:space-y-3">
                   <Link
-                    href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20IGCSE%20Biology.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+                    href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20IGCSE%20Biology.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
                   >
                     Enroll for IGCSE

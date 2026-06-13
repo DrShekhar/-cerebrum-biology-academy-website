@@ -258,8 +258,17 @@ export default function PageContent({ faqs }: PageContentProps) {
         </div>
       </section>
 
-            <USABOPathwayCallout cityName="DC / Northern Virginia" schools={["TJHSST","McLean HS","Langley HS","Walt Whitman HS","Winston Churchill HS","Bethesda-Chevy Chase"]} />
-
+      <USABOPathwayCallout
+        cityName="DC / Northern Virginia"
+        schools={[
+          'TJHSST',
+          'McLean HS',
+          'Langley HS',
+          'Walt Whitman HS',
+          'Winston Churchill HS',
+          'Bethesda-Chevy Chase',
+        ]}
+      />
 
       <RelatedCityLinks currentCity="washingtonDC" variant="default" />
     </div>

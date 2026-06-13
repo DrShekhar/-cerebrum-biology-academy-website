@@ -86,8 +86,7 @@ export function PaymentHistoryCard({ payment, index = 0 }: PaymentHistoryCardPro
   const isCompleted = payment.status === 'COMPLETED' || payment.status === 'PAID'
 
   return (
-    <div
-     className="animate-fadeInUp">
+    <div className="animate-fadeInUp">
       <Card className="hover:shadow-lg transition-shadow">
         <CardContent className="p-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">

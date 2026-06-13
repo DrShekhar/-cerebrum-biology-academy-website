@@ -169,8 +169,7 @@ export default function BiologyTeacherNearMePage() {
       {/* Location Modal - Premium Design */}
       {showLocationModal && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl animate-fadeInUp"
-          >
+          <div className="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl animate-fadeInUp">
             <div className="w-16 h-16 bg-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <MapPin className="w-8 h-8 text-white" />
             </div>
@@ -234,7 +233,11 @@ export default function BiologyTeacherNearMePage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20teacher%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                <Link
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20teacher%20near%20me.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button
                     size="xl"
                     className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-semibold shadow-lg hover:shadow-xl transition-all"
@@ -256,7 +259,10 @@ export default function BiologyTeacherNearMePage() {
               {/* Stats Grid - Glassmorphism */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {stats.map((stat, index) => (
-                  <div key={stat.label} className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 text-center border border-white/20 animate-fadeInUp">
+                  <div
+                    key={stat.label}
+                    className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 text-center border border-white/20 animate-fadeInUp"
+                  >
                     <div className="text-3xl font-bold text-white">{stat.value}</div>
                     <div className="text-sm text-white/90 font-medium">{stat.label}</div>
                     <div className="text-xs text-white/60">{stat.sublabel}</div>
@@ -266,8 +272,7 @@ export default function BiologyTeacherNearMePage() {
             </div>
 
             {/* Right - Illustration */}
-            <div className="hidden lg:block animate-fadeInUp"
-            >
+            <div className="hidden lg:block animate-fadeInUp">
               <LocationIllustration className="w-full max-w-lg mx-auto" />
             </div>
           </div>
@@ -278,8 +283,7 @@ export default function BiologyTeacherNearMePage() {
       {isInDelhiNCR !== false && (
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-16 animate-fadeInUp"
-            >
+            <div className="text-center mb-16 animate-fadeInUp">
               <div className="inline-flex items-center bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <MapPin className="w-4 h-4 mr-2" />4 Centers in Delhi NCR
               </div>
@@ -350,7 +354,12 @@ export default function BiologyTeacherNearMePage() {
                     </div>
 
                     <div className="flex gap-3">
-                      <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20teacher%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" className="flex-1">
+                      <Link
+                        href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20teacher%20near%20me.%20Please%20share%20available%20timings."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1"
+                      >
                         <Button
                           className={`w-full bg-gradient-to-r ${style.color} text-white hover:shadow-lg`}
                         >
@@ -406,7 +415,10 @@ export default function BiologyTeacherNearMePage() {
               {/* Feature Cards - Green accent like mock-tests page */}
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
                 {onlineFeatures.map((feature, index) => (
-                  <div key={feature.title} className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow animate-fadeInUp">
+                  <div
+                    key={feature.title}
+                    className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow animate-fadeInUp"
+                  >
                     <div className="flex items-start gap-3">
                       <div className="p-2 bg-green-50 rounded-xl">
                         <feature.icon className="w-5 h-5 text-green-600" />
@@ -420,7 +432,11 @@ export default function BiologyTeacherNearMePage() {
                 ))}
               </div>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20teacher%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20teacher%20near%20me.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button size="lg" className="bg-green-600 hover:bg-green-700">
                   <Video className="w-5 h-5 mr-2" />
                   Try Free Online Demo
@@ -429,8 +445,7 @@ export default function BiologyTeacherNearMePage() {
             </div>
 
             {/* Right - Illustration + Stats */}
-            <div className="relative animate-fadeInUp"
-            >
+            <div className="relative animate-fadeInUp">
               <OnlineClassIllustration className="w-full max-w-md mx-auto mb-8" />
 
               {/* Student Count Card */}
@@ -460,8 +475,7 @@ export default function BiologyTeacherNearMePage() {
       {/* Comparison Table */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Online vs Offline: What's Best for You?
             </h2>
@@ -512,8 +526,7 @@ export default function BiologyTeacherNearMePage() {
       {isInDelhiNCR === false && (
         <section className="py-20 bg-white">
           <div className="max-w-6xl mx-auto px-4">
-            <div className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Join Online from Your Region
               </h2>
@@ -524,7 +537,10 @@ export default function BiologyTeacherNearMePage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {onlineRegions.map((region, index) => (
-                <div key={region.id} className="bg-indigo-50 rounded-2xl p-6 hover:shadow-lg transition-all animate-fadeInUp">
+                <div
+                  key={region.id}
+                  className="bg-indigo-50 rounded-2xl p-6 hover:shadow-lg transition-all animate-fadeInUp"
+                >
                   <Globe className="w-10 h-10 text-indigo-600 mb-4" />
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{region.name}</h3>
                   <p className="text-gray-600 text-sm mb-4">{region.description}</p>
@@ -558,8 +574,7 @@ export default function BiologyTeacherNearMePage() {
       {/* FAQs Section - Accordion Style */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
@@ -567,7 +582,10 @@ export default function BiologyTeacherNearMePage() {
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={faq.question} className="bg-white rounded-2xl border border-gray-200 overflow-hidden animate-fadeInUp">
+              <div
+                key={faq.question}
+                className="bg-white rounded-2xl border border-gray-200 overflow-hidden animate-fadeInUp"
+              >
                 <button
                   onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
                   className="w-full p-6 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
@@ -606,7 +624,11 @@ export default function BiologyTeacherNearMePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20teacher%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20teacher%20near%20me.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   size="xl"
                   className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-semibold shadow-xl hover:shadow-2xl"

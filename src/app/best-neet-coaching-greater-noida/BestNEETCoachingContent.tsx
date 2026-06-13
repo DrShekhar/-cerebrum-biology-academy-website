@@ -172,10 +172,7 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <Link
-                href="/neet-coaching-noida"
-                className="text-gray-500 hover:text-gray-700"
-              >
+              <Link href="/neet-coaching-noida" className="text-gray-500 hover:text-gray-700">
                 NEET Coaching Greater Noida
               </Link>
             </li>
@@ -228,7 +225,11 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -456,7 +457,11 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
             Book a free demo class and experience why students call us the best for Biology
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 size="xl"
@@ -507,8 +512,12 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
               href="/aakash-alternative-greater-noida"
               className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
             >
-              <h3 className="font-semibold text-teal-600">the 2nd-largest national NEET chain Alternative</h3>
-              <p className="text-sm text-gray-600">Better than the 2nd-largest national NEET chain GN</p>
+              <h3 className="font-semibold text-teal-600">
+                the 2nd-largest national NEET chain Alternative
+              </h3>
+              <p className="text-sm text-gray-600">
+                Better than the 2nd-largest national NEET chain GN
+              </p>
             </Link>
           </div>
         </div>

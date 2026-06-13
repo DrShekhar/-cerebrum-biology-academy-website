@@ -23,7 +23,14 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'Velocity Institute Alternative in Faridabad | Small Batch NEET Biology',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Velocity Institute Alternative in Faridabad | Small Batch NEET Biology' }],
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Velocity Institute Alternative in Faridabad | Small Batch NEET Biology',
+      },
+    ],
     description:
       'Why Faridabad students choose Cerebrum over Velocity Institute for focused NEET Biology preparation.',
     url: 'https://cerebrumbiologyacademy.com/velocity-alternative-faridabad',
@@ -35,7 +42,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Velocity Institute Alternative in Faridabad | Small Batch NEET Biology',
-    description: 'Looking for Velocity Institute alternative in Faridabad? Cerebrum offers 15-20 student batches vs Velocity',
+    description:
+      'Looking for Velocity Institute alternative in Faridabad? Cerebrum offers 15-20 student batches vs Velocity',
   },
 }
 
@@ -131,7 +139,11 @@ export default function VelocityAlternativeFaridabadPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+        knowsAbout={[
+          'NEET Faridabad',
+          'NEET Biology Faridabad',
+          'Medical entrance coaching Faridabad',
+        ]}
       />
       <script
         type="application/ld+json"

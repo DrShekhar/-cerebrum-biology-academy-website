@@ -16,7 +16,7 @@ const sitemapContent = fs.readFileSync('src/app/sitemap.ts', 'utf8')
 // Extract all hardcoded URL paths from template literals
 // Pattern: url: `${baseUrl}/some-path`
 const urlMatches = [...sitemapContent.matchAll(/url:\s*`\$\{baseUrl\}([^`]*)`/g)]
-const hardcodedPaths = urlMatches.map(m => m[1] || '/')
+const hardcodedPaths = urlMatches.map((m) => m[1] || '/')
 
 // Also extract dynamic generation patterns
 // Look for map functions that generate URLs
@@ -55,7 +55,7 @@ function pageExists(urlPath) {
     path.join(APP_DIR, cleanPath, 'layout.tsx'),
   ]
 
-  return candidates.some(c => fs.existsSync(c))
+  return candidates.some((c) => fs.existsSync(c))
 }
 
 function isRedirected(urlPath) {
@@ -90,7 +90,7 @@ function isDynamicRoute(urlPath) {
 
     try {
       const entries = fs.readdirSync(dirPath)
-      const dynamicDirs = entries.filter(e => e.startsWith('[') && e.endsWith(']'))
+      const dynamicDirs = entries.filter((e) => e.startsWith('[') && e.endsWith(']'))
       for (const dynDir of dynamicDirs) {
         const dynPagePath = path.join(dirPath, dynDir, 'page.tsx')
         if (fs.existsSync(dynPagePath)) {

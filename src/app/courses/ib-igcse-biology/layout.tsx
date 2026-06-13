@@ -35,7 +35,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'IB & IGCSE Biology Tutor Delhi | Cambridge Biology Coaching',
-    description: 'Expert IB Biology and IGCSE Biology tutoring in Delhi NCR. IB DP HL/SL, IGCSE, Cambridge, A-Level Biology coaching.',
+    description:
+      'Expert IB Biology and IGCSE Biology tutoring in Delhi NCR. IB DP HL/SL, IGCSE, Cambridge, A-Level Biology coaching.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/courses/ib-igcse-biology',

@@ -14,9 +14,9 @@ import {
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
-  title: 'other online-only platforms Alternative Faridabad | Offline Expert Biology',
+  title: 'PhysicsWallah Alternative Faridabad | Offline Expert Biology',
   description:
-    'Need offline alternative to other online-only platforms in Faridabad? Cerebrum: Real classroom experience, AIIMS faculty, 98% success rate. Better than video lectures. Call 88264-44334!',
+    'Need offline alternative to PhysicsWallah in Faridabad? Cerebrum: Real classroom experience, AIIMS faculty, 98% success rate. Better than video lectures. Call 88264-44334!',
   keywords: [
     'physics wallah alternative faridabad',
     'offline neet coaching faridabad',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     locale: 'en_IN',
-    title: 'other online-only platforms Alternative Faridabad',
+    title: 'PhysicsWallah Alternative Faridabad',
     description:
       'Want real classroom interaction instead of video lectures? Experience offline NEET biology coaching.',
     url: 'https://cerebrumbiologyacademy.com/physics-wallah-alternative-faridabad',
@@ -41,8 +41,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'other online-only platforms Alternative Faridabad | Offline Expert Biology',
-    description: 'Need offline alternative to other online-only platforms in Faridabad? Cerebrum: Real classroom experience, AIIMS faculty, 98% success rate. Better than video lectures. Call 88264-44334!',
+    title: 'PhysicsWallah Alternative Faridabad | Offline Expert Biology',
+    description:
+      'Need offline alternative to PhysicsWallah in Faridabad? Cerebrum: Real classroom experience, AIIMS faculty, 98% success rate. Better than video lectures. Call 88264-44334!',
   },
 }
 
@@ -84,17 +85,17 @@ const comparisonData = [
 
 const faqs = [
   {
-    question: 'Why consider offline coaching over other online-only platforms?',
+    question: 'Why consider offline coaching over PhysicsWallah?',
     answer:
       'Key differences: 1) Real classroom interaction vs passive video watching, 2) Instant doubt resolution vs waiting for replies, 3) Structured discipline vs self-study challenges, 4) Peer learning environment, 5) Regular assessments with immediate feedback. Online works for some, but many need offline structure.',
   },
   {
-    question: 'How do other online-only platforms and Cerebrum compare for biology?',
+    question: 'How do PhysicsWallah and Cerebrum compare for biology?',
     answer:
       'PW: Video-based, low-cost (₹5-15K), 500+ students in batch, doubt resolution in 24-48 hrs. Cerebrum: Live offline classes, ₹45-75K, 25 students max, doubts cleared instantly. For biology (visual subject with diagrams), offline teaching is significantly more effective.',
   },
   {
-    question: 'Is other online-only platforms enough for NEET biology?',
+    question: 'Is PhysicsWallah enough for NEET biology?',
     answer:
       "PW content is good but biology needs visual learning - diagrams, specimen study, hands-on understanding. Video lectures can't replace: 1) Whiteboard diagram explanations, 2) Instant doubt clearing, 3) Peer discussions, 4) Regular tests with personal feedback. Many PW students supplement with offline coaching.",
   },
@@ -152,17 +153,21 @@ export default function PhysicsWallahAlternativeFaridabad() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+        knowsAbout={[
+          'NEET Faridabad',
+          'NEET Biology Faridabad',
+          'Medical entrance coaching Faridabad',
+        ]}
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-900 to-purple-700 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-block bg-yellow-500 text-purple-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
-              other online-only platforms Alternative in Faridabad
+              PhysicsWallah Alternative in Faridabad
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              other online-only platforms Alternative in Faridabad
+              PhysicsWallah Alternative in Faridabad
             </h1>
             <p className="text-xl text-purple-100 mb-8">
               Want real classroom interaction instead of video lectures? Experience offline NEET
@@ -223,7 +228,7 @@ export default function PhysicsWallahAlternativeFaridabad() {
             <div className="bg-white rounded-xl shadow-lg p-8 border-2 border-gray-200">
               <div className="flex items-center gap-3 mb-6">
                 <Monitor className="w-10 h-10 text-gray-500" />
-                <h3 className="text-2xl font-bold text-gray-700">other online-only platforms Online</h3>
+                <h3 className="text-2xl font-bold text-gray-700">PhysicsWallah Online</h3>
               </div>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -309,14 +314,14 @@ export default function PhysicsWallahAlternativeFaridabad() {
       <section className="py-16 bg-purple-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
-            other online-only platforms vs Cerebrum: Feature Comparison
+            PhysicsWallah vs Cerebrum: Feature Comparison
           </h2>
           <div className="max-w-4xl mx-auto overflow-x-auto">
             <table className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
               <thead className="bg-purple-900 text-white">
                 <tr>
                   <th className="px-6 py-4 text-left">Feature</th>
-                  <th className="px-6 py-4 text-center">other online-only platforms</th>
+                  <th className="px-6 py-4 text-center">PhysicsWallah</th>
                   <th className="px-6 py-4 text-center">Cerebrum</th>
                 </tr>
               </thead>

@@ -38,7 +38,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 10 in Delhi | Board + NEET Parallel · South Ex + Rohini',
-    description: 'NEET Foundation Class 10 in Delhi at Cerebrum Biology Academy — South Extension flagship, Rohini, Green Park. CBSE / ICSE boards + NEET parallel pedagogy. AIIMS-trained faculty, batches of 15-20. ₹...',
+    description:
+      'NEET Foundation Class 10 in Delhi at Cerebrum Biology Academy — South Extension flagship, Rohini, Green Park. CBSE / ICSE boards + NEET parallel pedagogy. AIIMS-trained faculty, batches of 15-20. ₹...',
   },
 }
 
@@ -59,7 +60,8 @@ const faqs = [
       'Class 10 Foundation in Delhi runs in 2-hour weekend-friendly slots: Saturday morning (10 AM - 12 PM IST), Sunday morning (10 AM - 12 PM), and a weekday evening 6 PM - 8 PM IST option. Most students attend twice weekly (4 hours total). Q4 (January - March) intensifies board exam preparation with weekly board-format mocks and additional Sunday-afternoon revision slots specifically for CBSE / ICSE Class 10 finals.',
   },
   {
-    question: 'How does Cerebrum Delhi compare to the 2nd-largest national NEET chain Scholastics in Delhi for Class 10?',
+    question:
+      'How does Cerebrum Delhi compare to the 2nd-largest national NEET chain Scholastics in Delhi for Class 10?',
     answer:
       'Three structural differences specifically for Class 10. (1) Subject focus: Cerebrum Delhi is biology-only specialist with AIIMS-trained Class 10 faculty; the 2nd-largest national NEET chain Scholastics is combined PCB Foundation with school-teacher-level Class 10 instructors. (2) Batch size: Cerebrum 15-20 students vs the 2nd-largest national NEET chain 200-300+. (3) Board strategy: Cerebrum runs separate weekly board-format mocks with examiner-aligned answer-writing standards; the 2nd-largest national NEET chain deprioritises boards in favour of NEET-only drilling. For students targeting 90%+ in Class 10 boards AND NEET-ready foundations, Cerebrum Delhi is structurally different.',
   },

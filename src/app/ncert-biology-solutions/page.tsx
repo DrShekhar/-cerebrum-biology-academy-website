@@ -22,7 +22,9 @@ export const metadata: Metadata = {
     title: 'NCERT Biology Solutions Class 11 & 12 | Free PDF Download',
     description:
       'Chapter-wise NCERT Biology solutions with detailed explanations for NEET 2026. Free PDF download available.',
-    images: ['/api/og?title=NCERT+Biology+Solutions&subtitle=Free+Chapter-wise+Solutions+for+Class+11+%26+12'],
+    images: [
+      '/api/og?title=NCERT+Biology+Solutions&subtitle=Free+Chapter-wise+Solutions+for+Class+11+%26+12',
+    ],
     type: 'website',
   },
   alternates: {
@@ -32,7 +34,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NCERT Biology Solutions for Class 11 & 12 | Free PDF Download 2025',
-    description: 'Free NCERT Biology solutions for Class 11 and Class 12 with chapter-wise answers, diagrams, and NEET preparation tips. Download PDF solutions by AIIMS faculty.',
+    description:
+      'Free NCERT Biology solutions for Class 11 and Class 12 with chapter-wise answers, diagrams, and NEET preparation tips. Download PDF solutions by AIIMS faculty.',
   },
 }
 
@@ -554,7 +557,9 @@ export default function NCERTBiologySolutionsPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NCERT%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NCERT%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 bg-white text-green-600 font-semibold rounded-lg hover:bg-green-50 transition-colors"
               >
                 Book Free Demo Class

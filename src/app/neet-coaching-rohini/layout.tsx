@@ -19,7 +19,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Coaching in Rohini | Cerebrum Biology Academy',
-    description: 'Best NEET coaching in Rohini. Expert AIIMS faculty, small batches, 98% success rate.',
+    description:
+      'Best NEET coaching in Rohini. Expert AIIMS faculty, small batches, 98% success rate.',
   },
   other: { 'article:modified_time': '2026-05-27' },
   alternates: {
@@ -37,7 +38,16 @@ export default function NEETCoachingRohiniLayout({ children }: { children: React
         parentLocation="Delhi NCR"
         centerAddress="211 Vikas Surya Tower, DC Chowk, Rohini Sector 9, Delhi - 110085"
         centerPhone="+91-8826-444-334"
-        nearbyAreas={['Sector 3', 'Sector 7', 'Sector 9', 'DC Chowk', 'Rohini West', 'Rohini East', 'Prashant Vihar', 'Pitampura']}
+        nearbyAreas={[
+          'Sector 3',
+          'Sector 7',
+          'Sector 9',
+          'DC Chowk',
+          'Rohini West',
+          'Rohini East',
+          'Prashant Vihar',
+          'Pitampura',
+        ]}
       />
     </>
   )

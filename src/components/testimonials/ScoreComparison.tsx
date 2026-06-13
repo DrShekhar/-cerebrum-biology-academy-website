@@ -144,9 +144,7 @@ export function ScoreComparison({
 
             {/* Arrow & Improvement */}
             <div className="text-center">
-              <div
-                className="flex items-center justify-center mb-4 animate-fadeInUp"
-              >
+              <div className="flex items-center justify-center mb-4 animate-fadeInUp">
                 <ArrowRight className="w-8 h-8 text-green-600" />
               </div>
               <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold inline-block">
@@ -215,10 +213,7 @@ export function ScoreComparison({
             const afterPercent = (afterScore[subject.key] / subject.maxScore) * 100
 
             return (
-              <div
-                key={subject.key}
-                className={`${colors.bg} rounded-2xl p-6`}
-              >
+              <div key={subject.key} className={`${colors.bg} rounded-2xl p-6`}>
                 <div className="flex items-center justify-between mb-4">
                   <h4 className={`text-lg font-bold ${colors.text}`}>{subject.name}</h4>
                   <div className="flex items-center space-x-4">
@@ -246,9 +241,7 @@ export function ScoreComparison({
                       <span>{beforePercent.toFixed(1)}%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div
-                        className="bg-gray-400 h-2 rounded-full animate-fadeInUp"
-                      />
+                      <div className="bg-gray-400 h-2 rounded-full animate-fadeInUp" />
                     </div>
                   </div>
 
@@ -258,9 +251,7 @@ export function ScoreComparison({
                       <span>{afterPercent.toFixed(1)}%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div
-                        className={`${colors.bar} h-2 rounded-full`}
-                      />
+                      <div className={`${colors.bar} h-2 rounded-full`} />
                     </div>
                   </div>
                 </div>

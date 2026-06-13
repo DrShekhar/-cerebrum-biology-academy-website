@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'ICSE & ISC Biology Coaching Delhi | Class 9-12',
-    description: 'Expert ICSE and ISC Biology coaching in Delhi. Class 9, 10 ICSE and Class 11, 12 ISC Biology tuition.',
+    description:
+      'Expert ICSE and ISC Biology coaching in Delhi. Class 9, 10 ICSE and Class 11, 12 ISC Biology tuition.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/courses/icse-isc-biology',

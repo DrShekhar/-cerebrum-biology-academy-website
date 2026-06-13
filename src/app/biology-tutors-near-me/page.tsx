@@ -155,9 +155,7 @@ export default function BiologyTutorsNearMePage() {
       {/* Location Prompt Modal */}
       {showLocationPrompt && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div
-            className="bg-white rounded-2xl p-8 max-w-lg w-full shadow-2xl animate-fadeInUp"
-          >
+          <div className="bg-white rounded-2xl p-8 max-w-lg w-full shadow-2xl animate-fadeInUp">
             <div className="text-center">
               <MapPin className="w-16 h-16 text-green-600 mx-auto mb-4" />
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Where are you located?</h2>
@@ -191,9 +189,7 @@ export default function BiologyTutorsNearMePage() {
       <section className="relative bg-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2 text-yellow-300" />
               Find Best Biology Tutors Near You
@@ -213,7 +209,11 @@ export default function BiologyTutorsNearMePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tutors%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tutors%20near%20me.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -245,9 +245,7 @@ export default function BiologyTutorsNearMePage() {
           {/* Offline Centers for Delhi NCR Users */}
           <section className="py-20 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4">
-              <div
-                className="text-center mb-16 animate-fadeInUp"
-              >
+              <div className="text-center mb-16 animate-fadeInUp">
                 <div className="inline-flex items-center bg-green-100 px-4 py-2 rounded-full text-green-700 font-medium mb-4">
                   <CheckCircle className="w-5 h-5 mr-2" />
                   Great! You&apos;re in Delhi NCR
@@ -318,7 +316,11 @@ export default function BiologyTutorsNearMePage() {
               </div>
 
               <div className="text-center mt-12">
-                <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tutors%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                <Link
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tutors%20near%20me.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button size="xl" className="bg-green-600 hover:bg-green-700">
                     <Play className="w-5 h-5 mr-2" />
                     Book Free Demo at Nearest Center
@@ -335,9 +337,7 @@ export default function BiologyTutorsNearMePage() {
           {/* Strong Relocation Pitch for Outside Delhi NCR Users */}
           <section className="py-20 bg-gradient-to-br from-amber-50 to-orange-50">
             <div className="max-w-7xl mx-auto px-4">
-              <div
-                className="text-center mb-16 animate-fadeInUp"
-              >
+              <div className="text-center mb-16 animate-fadeInUp">
                 <div className="inline-flex items-center bg-orange-100 px-4 py-2 rounded-full text-orange-700 font-medium mb-4">
                   <Plane className="w-5 h-5 mr-2" />
                   Top Rankers Chose to Relocate
@@ -373,10 +373,7 @@ export default function BiologyTutorsNearMePage() {
                 </h3>
                 <div className="grid md:grid-cols-3 gap-6">
                   {successStories.map((story, index) => (
-                    <div
-                      key={story.name}
-                      className="bg-orange-50 rounded-xl p-6 animate-fadeInUp"
-                    >
+                    <div key={story.name} className="bg-orange-50 rounded-xl p-6 animate-fadeInUp">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-12 h-12 bg-orange-200 rounded-full flex items-center justify-center">
                           <Trophy className="w-6 h-6 text-orange-600" />
@@ -393,7 +390,11 @@ export default function BiologyTutorsNearMePage() {
               </div>
 
               <div className="text-center space-y-4">
-                <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tutors%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                <Link
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tutors%20near%20me.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button size="xl" className="bg-orange-600 hover:bg-orange-700">
                     <Plane className="w-5 h-5 mr-2" />
                     Plan Your Relocation - Book Demo
@@ -409,9 +410,7 @@ export default function BiologyTutorsNearMePage() {
           {/* Online Regions for Non-Delhi Users */}
           <section className="py-20 bg-white">
             <div className="max-w-6xl mx-auto px-4">
-              <div
-                className="text-center mb-12 animate-fadeInUp"
-              >
+              <div className="text-center mb-12 animate-fadeInUp">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   Can&apos;t Relocate? Join Online from Your Region
                 </h2>
@@ -502,9 +501,7 @@ export default function BiologyTutorsNearMePage() {
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -530,8 +527,7 @@ export default function BiologyTutorsNearMePage() {
       {/* CTA Section */}
       <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Find the Best Biology Tutor Today
             </h2>
@@ -540,7 +536,11 @@ export default function BiologyTutorsNearMePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tutors%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tutors%20near%20me.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

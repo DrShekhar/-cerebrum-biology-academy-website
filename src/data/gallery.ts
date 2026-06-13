@@ -18,7 +18,8 @@ export const galleryImages: GalleryImage[] = [
     id: 'dean-south-city',
     url: '/images/gallery/shekhar-sir-dean-south-city.png',
     title: 'Academic Leadership at a leading national educational institution',
-    description: 'Dr. Shekhar Sir at a leading national educational institution e-techno School South City 2',
+    description:
+      'Dr. Shekhar Sir at a leading national educational institution e-techno School South City 2',
     category: 'faculty',
   },
   {

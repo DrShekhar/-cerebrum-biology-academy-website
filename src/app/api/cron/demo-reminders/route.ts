@@ -167,7 +167,9 @@ function parseDemoDateTime(dateStr: string, timeStr: string): Date | null {
     if (isAM && hours === 12) hours = 0
 
     // Create date object (dateStr is YYYY-MM-DD format)
-    const date = new Date(`${dateStr}T${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:00`)
+    const date = new Date(
+      `${dateStr}T${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:00`
+    )
 
     return isNaN(date.getTime()) ? null : date
   } catch {

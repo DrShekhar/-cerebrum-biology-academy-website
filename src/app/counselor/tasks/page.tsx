@@ -158,9 +158,7 @@ export default function TasksPage() {
         throw new Error(data.error || 'Failed to run automation')
       }
 
-      showToast.success(
-        `Automation complete! ${data.data.total} new tasks created`
-      )
+      showToast.success(`Automation complete! ${data.data.total} new tasks created`)
 
       fetchTasks()
     } catch (error) {

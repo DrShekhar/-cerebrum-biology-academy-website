@@ -2,7 +2,8 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 const PHONE = '88264-44334'
-const WA_LINK = 'https://wa.me/918826444334?text=Hi%2C%20I%20want%20to%20know%20about%20CBSE%20Biology%20Board%20coaching'
+const WA_LINK =
+  'https://wa.me/918826444334?text=Hi%2C%20I%20want%20to%20know%20about%20CBSE%20Biology%20Board%20coaching'
 
 export const metadata: Metadata = {
   title: 'Score 95+ in CBSE Biology Boards 2026 | Board Coaching by AIIMS Faculty',
@@ -65,7 +66,12 @@ const schema = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://cerebrumbiologyacademy.com',
+        },
         {
           '@type': 'ListItem',
           position: 2,
@@ -95,7 +101,8 @@ export default function CBSEBiologyBoardCoachingPage() {
             Your Child Can Score <span className="text-yellow-400">95+</span> in CBSE Biology Boards
           </h1>
           <p className="mb-8 text-lg text-slate-300">
-            Our students average <strong className="text-white">94%</strong> in Biology boards. Taught by AIIMS faculty with 15+ years of board exam expertise.
+            Our students average <strong className="text-white">94%</strong> in Biology boards.
+            Taught by AIIMS faculty with 15+ years of board exam expertise.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
@@ -120,14 +127,28 @@ export default function CBSEBiologyBoardCoachingPage() {
           <h2 className="mb-2 text-center text-3xl font-bold text-slate-900">
             68% of Class 12 Students Score Below 80 in Biology
           </h2>
-          <p className="mb-10 text-center text-lg text-slate-600">Here are the 3 mistakes they make:</p>
+          <p className="mb-10 text-center text-lg text-slate-600">
+            Here are the 3 mistakes they make:
+          </p>
           <div className="grid gap-6 md:grid-cols-3">
             {[
-              { title: 'Studying guides, not NCERT', desc: 'Board papers are set 100% from NCERT. Guides add confusion and miss key lines that examiners look for.' },
-              { title: 'Skipping diagrams', desc: 'Diagrams carry 15-20 marks. Most students draw rough sketches instead of labelled, exam-ready diagrams.' },
-              { title: 'No answer-writing practice', desc: 'Knowing the answer and writing a 5-mark answer with keywords are two different skills. Most never practice this.' },
+              {
+                title: 'Studying guides, not NCERT',
+                desc: 'Board papers are set 100% from NCERT. Guides add confusion and miss key lines that examiners look for.',
+              },
+              {
+                title: 'Skipping diagrams',
+                desc: 'Diagrams carry 15-20 marks. Most students draw rough sketches instead of labelled, exam-ready diagrams.',
+              },
+              {
+                title: 'No answer-writing practice',
+                desc: 'Knowing the answer and writing a 5-mark answer with keywords are two different skills. Most never practice this.',
+              },
             ].map((item) => (
-              <div key={item.title} className="rounded-xl border border-red-200 bg-white p-6 shadow-lg">
+              <div
+                key={item.title}
+                className="rounded-xl border border-red-200 bg-white p-6 shadow-lg"
+              >
                 <div className="mb-3 text-3xl">&#10060;</div>
                 <h3 className="mb-2 text-lg font-bold text-slate-900">{item.title}</h3>
                 <p className="text-slate-600">{item.desc}</p>
@@ -181,16 +202,30 @@ export default function CBSEBiologyBoardCoachingPage() {
           <div className="grid gap-6 md:grid-cols-3">
             {[
               { name: 'Rohit K.', school: 'DPS Dwarka', before: '62%', after: '94%' },
-              { name: 'Priya S.', school: 'Modern School, Barakhamba', before: '71%', after: '97%' },
-              { name: 'Ankit M.', school: 'Ryan International, Vasant Kunj', before: '58%', after: '91%' },
+              {
+                name: 'Priya S.',
+                school: 'Modern School, Barakhamba',
+                before: '71%',
+                after: '97%',
+              },
+              {
+                name: 'Ankit M.',
+                school: 'Ryan International, Vasant Kunj',
+                before: '58%',
+                after: '91%',
+              },
             ].map((s) => (
               <div key={s.name} className="rounded-xl bg-white p-6 text-center shadow-xl">
                 <p className="mb-1 text-lg font-bold text-slate-900">{s.name}</p>
                 <p className="mb-4 text-sm text-slate-500">{s.school}</p>
                 <div className="flex items-center justify-center gap-3">
-                  <span className="rounded-lg bg-red-100 px-4 py-2 text-xl font-bold text-red-600">{s.before}</span>
+                  <span className="rounded-lg bg-red-100 px-4 py-2 text-xl font-bold text-red-600">
+                    {s.before}
+                  </span>
                   <span className="text-2xl text-slate-400">&rarr;</span>
-                  <span className="rounded-lg bg-green-100 px-4 py-2 text-xl font-bold text-green-600">{s.after}</span>
+                  <span className="rounded-lg bg-green-100 px-4 py-2 text-xl font-bold text-green-600">
+                    {s.after}
+                  </span>
                 </div>
               </div>
             ))}
@@ -213,7 +248,10 @@ export default function CBSEBiologyBoardCoachingPage() {
               'Practical & viva preparation — covers the full 30 marks',
               'Daily doubt clearing — WhatsApp support till 10 PM',
             ].map((item) => (
-              <div key={item} className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <div
+                key={item}
+                className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4"
+              >
                 <span className="mt-0.5 text-xl text-green-500">&#10004;</span>
                 <p className="text-slate-700">{item}</p>
               </div>
@@ -249,7 +287,9 @@ export default function CBSEBiologyBoardCoachingPage() {
                   <tr key={feature} className="border-b border-slate-100 bg-white">
                     <td className="px-6 py-3 font-medium text-slate-900">{feature}</td>
                     <td className="px-6 py-3 text-center text-red-600">{tutor}</td>
-                    <td className="px-6 py-3 text-center font-semibold text-green-600">{cerebrum}</td>
+                    <td className="px-6 py-3 text-center font-semibold text-green-600">
+                      {cerebrum}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -263,7 +303,8 @@ export default function CBSEBiologyBoardCoachingPage() {
         <div className="mx-auto max-w-3xl px-4">
           <h2 className="mb-3 text-3xl font-bold">Board Exam: March 27, 2026</h2>
           <p className="mb-6 text-lg">
-            Next crash batch starts <strong>April 2026</strong>. Limited to <strong>15 seats</strong> per batch.
+            Next crash batch starts <strong>April 2026</strong>. Limited to{' '}
+            <strong>15 seats</strong> per batch.
           </p>
           <Link
             href="/book-free-demo"
@@ -279,7 +320,8 @@ export default function CBSEBiologyBoardCoachingPage() {
         <div className="mx-auto max-w-3xl px-4 text-center">
           <div className="rounded-xl bg-slate-50 p-10 shadow-lg">
             <p className="mb-4 text-xl italic text-slate-700">
-              &ldquo;My daughter went from 67% to 96% in Biology. I wish I had found Cerebrum earlier. The answer writing workshops alone are worth the fee.&rdquo;
+              &ldquo;My daughter went from 67% to 96% in Biology. I wish I had found Cerebrum
+              earlier. The answer writing workshops alone are worth the fee.&rdquo;
             </p>
             <p className="font-bold text-slate-900">Mrs. Sharma</p>
             <p className="text-sm text-slate-500">Parent, GK-II, New Delhi</p>
@@ -358,7 +400,10 @@ export default function CBSEBiologyBoardCoachingPage() {
           >
             WhatsApp
           </a>
-          <Link href="/book-free-demo" className="rounded-lg bg-blue-600 px-5 py-3 text-sm font-bold text-white">
+          <Link
+            href="/book-free-demo"
+            className="rounded-lg bg-blue-600 px-5 py-3 text-sm font-bold text-white"
+          >
             Free Demo
           </Link>
         </div>

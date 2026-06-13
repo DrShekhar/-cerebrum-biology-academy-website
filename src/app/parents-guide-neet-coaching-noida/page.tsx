@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Parents Guide to NEET Coaching in Noida 2026 | What to Know',
-    description: 'Complete parents guide to NEET coaching in Noida. How to choose an institute, red flags to avoid, fee benchmarks, mental-health tips, and how to support your child. WhatsApp 88264-44334.',
+    description:
+      'Complete parents guide to NEET coaching in Noida. How to choose an institute, red flags to avoid, fee benchmarks, mental-health tips, and how to support your child. WhatsApp 88264-44334.',
   },
 }
 
@@ -55,7 +56,7 @@ export default function ParentsGuideNoidaPage() {
             question:
               'My child is in DPS Noida / Amity / Lotus Valley / Ryan — should we pick a Noida coaching or commute to Delhi?',
             answer:
-              "Stay local. A 60-90 minute round trip to Delhi 5-6 times a week is 5-7 hours of weekly fatigue your child cannot afford during Class 11-12. Noida has strong coaching options including ours (online + Sunday offline at South Extension when needed). Reserve Delhi visits for the monthly parent-teacher meeting and the Sunday mock tests if your child wants to attend in person.",
+              'Stay local. A 60-90 minute round trip to Delhi 5-6 times a week is 5-7 hours of weekly fatigue your child cannot afford during Class 11-12. Noida has strong coaching options including ours (online + Sunday offline at South Extension when needed). Reserve Delhi visits for the monthly parent-teacher meeting and the Sunday mock tests if your child wants to attend in person.',
           },
         }}
       />

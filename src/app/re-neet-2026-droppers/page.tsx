@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'RE-NEET 2026 for Droppers | Intensive Crash for Repeaters After Cancellation',
-    description: 'RE-NEET 2026 coaching for NEET droppers / repeaters who took the cancelled 3 May 2026 paper. 6–8 week intensive crash by AIIMS-trained biology faculty. Double-density mocks, 1:1 mentoring, mental-h...',
+    description:
+      'RE-NEET 2026 coaching for NEET droppers / repeaters who took the cancelled 3 May 2026 paper. 6–8 week intensive crash by AIIMS-trained biology faculty. Double-density mocks, 1:1 mentoring, mental-h...',
   },
 }
 

@@ -14,22 +14,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "Which of the following is a defining property of all living organisms?",
-      "options": [
-        "Metabolism",
-        "Response to stimuli",
-        "Reproduction",
-        "Growth"
-      ],
+      "options": ["Metabolism", "Response to stimuli", "Reproduction", "Growth"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, metabolism is the defining feature of all living organisms. No non-living object shows metabolism. Growth and reproduction are not defining because non-living objects can also grow (e.g., crystals) and some organisms (mules, worker bees) do not reproduce.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "metabolism",
-        "properties-of-living"
-      ],
+      "tags": ["what-is-living", "metabolism", "properties-of-living"],
       "neetWeightage": "HIGH"
     },
     {
@@ -51,11 +42,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "growth",
-        "properties-of-living"
-      ],
+      "tags": ["what-is-living", "growth", "properties-of-living"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -77,10 +64,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "reproduction"
-      ],
+      "tags": ["what-is-living", "reproduction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -91,21 +75,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "The number of known and described species of living organisms on Earth is approximately:",
-      "options": [
-        "1.7-1.8 million",
-        "2.5 million",
-        "5 million",
-        "1.2 million"
-      ],
+      "options": ["1.7-1.8 million", "2.5 million", "5 million", "1.2 million"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, the number of species that are known and described ranges between 1.7-1.8 million. This refers to the biodiversity present on Earth.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biodiversity",
-        "classification"
-      ],
+      "tags": ["biodiversity", "classification"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -116,22 +92,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "Binomial nomenclature was introduced by:",
-      "options": [
-        "Theophrastus",
-        "John Ray",
-        "Aristotle",
-        "Carolus Linnaeus"
-      ],
+      "options": ["Theophrastus", "John Ray", "Aristotle", "Carolus Linnaeus"],
       "correctAnswer": "D",
       "explanation": "Carolus Linnaeus introduced the binomial system of nomenclature. As per NCERT, each organism is given a scientific name with two components — the generic name and the specific epithet.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "binomial-nomenclature",
-        "taxonomy",
-        "linnaeus"
-      ],
+      "tags": ["binomial-nomenclature", "taxonomy", "linnaeus"],
       "neetWeightage": "HIGH"
     },
     {
@@ -142,21 +109,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "In binomial nomenclature, the correct way to write the scientific name of mango is:",
-      "options": [
-        "mangifera Indica",
-        "mangifera indica",
-        "Mangifera indica",
-        "Mangifera Indica"
-      ],
+      "options": ["mangifera Indica", "mangifera indica", "Mangifera indica", "Mangifera Indica"],
       "correctAnswer": "C",
       "explanation": "As per NCERT rules of binomial nomenclature, the generic name (Mangifera) starts with a capital letter while the specific epithet (indica) starts with a small letter. Both words are italicized when printed.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "binomial-nomenclature",
-        "nomenclature-rules"
-      ],
+      "tags": ["binomial-nomenclature", "nomenclature-rules"],
       "neetWeightage": "HIGH"
     },
     {
@@ -178,11 +137,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "nomenclature",
-        "ICBN",
-        "taxonomy"
-      ],
+      "tags": ["nomenclature", "ICBN", "taxonomy"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -204,10 +159,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomical-aids",
-        "herbarium"
-      ],
+      "tags": ["taxonomical-aids", "herbarium"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -229,10 +181,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "taxonomic-categories"
-      ],
+      "tags": ["taxonomic-hierarchy", "taxonomic-categories"],
       "neetWeightage": "HIGH"
     },
     {
@@ -254,10 +203,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "systematics",
-        "taxonomy"
-      ],
+      "tags": ["systematics", "taxonomy"],
       "neetWeightage": "LOW"
     },
     {
@@ -279,10 +225,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomy",
-        "taxon"
-      ],
+      "tags": ["taxonomy", "taxon"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -293,22 +236,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "The taxonomic category 'Division' in plants corresponds to which category in animals?",
-      "options": [
-        "Kingdom",
-        "Order",
-        "Phylum",
-        "Class"
-      ],
+      "options": ["Kingdom", "Order", "Phylum", "Class"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the term 'Phylum' is used for animals while 'Division' is used for plants. Both represent the same level in the taxonomic hierarchy, placed between Class and Kingdom.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "phylum",
-        "division"
-      ],
+      "tags": ["taxonomic-hierarchy", "phylum", "division"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -319,21 +253,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "Which of the following is the most specific taxonomic category?",
-      "options": [
-        "Species",
-        "Genus",
-        "Order",
-        "Family"
-      ],
+      "options": ["Species", "Genus", "Order", "Family"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, species is the most basic or most specific unit of classification. It is defined as a group of individual organisms with fundamental similarities.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "species",
-        "taxonomic-categories"
-      ],
+      "tags": ["species", "taxonomic-categories"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -355,10 +281,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "taxonomical-aids",
-        "botanical-gardens"
-      ],
+      "tags": ["taxonomical-aids", "botanical-gardens"],
       "neetWeightage": "LOW"
     },
     {
@@ -380,10 +303,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomical-aids",
-        "monograph"
-      ],
+      "tags": ["taxonomical-aids", "monograph"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -394,22 +314,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "Which of the following pairs of organisms belong to the same family?",
-      "options": [
-        "Potato and wheat",
-        "Wheat and mango",
-        "Mango and potato",
-        "Potato and tomato"
-      ],
+      "options": ["Potato and wheat", "Wheat and mango", "Mango and potato", "Potato and tomato"],
       "correctAnswer": "D",
       "explanation": "Potato (Solanum tuberosum) and tomato (Solanum lycopersicum) both belong to the family Solanaceae. As per NCERT, a family groups together related genera with less number of similarities compared to genus and species.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "family",
-        "taxonomy",
-        "solanaceae"
-      ],
+      "tags": ["family", "taxonomy", "solanaceae"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -431,11 +342,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomical-aids",
-        "keys",
-        "identification"
-      ],
+      "tags": ["taxonomical-aids", "keys", "identification"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -446,21 +353,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "As we go from species towards kingdom in a taxonomic hierarchy, the number of common characteristics:",
-      "options": [
-        "Remains same",
-        "Decreases",
-        "Increases",
-        "First increases then decreases"
-      ],
+      "options": ["Remains same", "Decreases", "Increases", "First increases then decreases"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, as we go higher from species to kingdom, the number of common characteristics decreases. Species within a genus share more characteristics than genera within a family. Lower taxa share more characteristics than higher taxa.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "classification"
-      ],
+      "tags": ["taxonomic-hierarchy", "classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -482,10 +381,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "properties-of-living"
-      ],
+      "tags": ["what-is-living", "properties-of-living"],
       "neetWeightage": "HIGH"
     },
     {
@@ -507,10 +403,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomical-aids",
-        "flora"
-      ],
+      "tags": ["taxonomical-aids", "flora"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -521,21 +414,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "Awareness of surroundings is known as:",
-      "options": [
-        "Sensitivity",
-        "Responsiveness",
-        "Irritability",
-        "Consciousness"
-      ],
+      "options": ["Sensitivity", "Responsiveness", "Irritability", "Consciousness"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, all organisms from prokaryotes to the most complex eukaryotes are able to sense and respond to environmental cues. This awareness is called consciousness. Human beings have self-consciousness, which is an additional feature.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "consciousness"
-      ],
+      "tags": ["what-is-living", "consciousness"],
       "neetWeightage": "HIGH"
     },
     {
@@ -546,22 +431,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "Linnaeus published his classification system in:",
-      "options": [
-        "Species Plantarum",
-        "Historia Naturalis",
-        "Systema Naturae",
-        "Genera Plantarum"
-      ],
+      "options": ["Species Plantarum", "Historia Naturalis", "Systema Naturae", "Genera Plantarum"],
       "correctAnswer": "C",
       "explanation": "Linnaeus used 'Systema Naturae' as the title of his publication, which contained his systematic classification. As per NCERT, the word systematics is derived from the Latin word 'systema' and Linnaeus used this concept extensively.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "systematics",
-        "linnaeus",
-        "taxonomy"
-      ],
+      "tags": ["systematics", "linnaeus", "taxonomy"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -583,10 +459,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "taxonomical-aids",
-        "botanical-gardens"
-      ],
+      "tags": ["taxonomical-aids", "botanical-gardens"],
       "neetWeightage": "LOW"
     },
     {
@@ -608,10 +481,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "binomial-nomenclature",
-        "nomenclature-rules"
-      ],
+      "tags": ["binomial-nomenclature", "nomenclature-rules"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -633,10 +503,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "wheat-classification"
-      ],
+      "tags": ["taxonomic-hierarchy", "wheat-classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -647,21 +514,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "The sum total of all chemical reactions occurring in the body is called:",
-      "options": [
-        "Metabolism",
-        "Homeostasis",
-        "Catabolism",
-        "Anabolism"
-      ],
+      "options": ["Metabolism", "Homeostasis", "Catabolism", "Anabolism"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, all living organisms are made of chemicals. These chemicals are constantly being made and changed into some other biomolecules. These conversions (chemical reactions) are collectively called metabolism.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "metabolism"
-      ],
+      "tags": ["what-is-living", "metabolism"],
       "neetWeightage": "HIGH"
     },
     {
@@ -683,10 +542,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "growth"
-      ],
+      "tags": ["what-is-living", "growth"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -708,10 +564,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "taxonomical-aids",
-        "zoological-parks"
-      ],
+      "tags": ["taxonomical-aids", "zoological-parks"],
       "neetWeightage": "LOW"
     },
     {
@@ -722,21 +575,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "The biological concept of species was proposed by:",
-      "options": [
-        "Carolus Linnaeus",
-        "Charles Darwin",
-        "John Ray",
-        "Ernst Mayr"
-      ],
+      "options": ["Carolus Linnaeus", "Charles Darwin", "John Ray", "Ernst Mayr"],
       "correctAnswer": "D",
       "explanation": "Ernst Mayr proposed the biological species concept, defining species as groups of actually or potentially interbreeding natural populations that are reproductively isolated from other such groups. NCERT mentions species as a group of individual organisms with fundamental similarities.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "species-concept",
-        "taxonomy"
-      ],
+      "tags": ["species-concept", "taxonomy"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -758,10 +603,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "binomial-nomenclature",
-        "nomenclature-rules"
-      ],
+      "tags": ["binomial-nomenclature", "nomenclature-rules"],
       "neetWeightage": "HIGH"
     },
     {
@@ -772,21 +614,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "Which of the following has the most number of organisms sharing maximum similar characters?",
-      "options": [
-        "Family",
-        "Kingdom",
-        "Species",
-        "Genus"
-      ],
+      "options": ["Family", "Kingdom", "Species", "Genus"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, species is the lowest and most specific category. Organisms belonging to the same species share the maximum number of similar characters. As we move higher in the hierarchy, the number of shared characters decreases.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "species"
-      ],
+      "tags": ["taxonomic-hierarchy", "species"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -808,10 +642,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomical-aids",
-        "manual"
-      ],
+      "tags": ["taxonomical-aids", "manual"],
       "neetWeightage": "LOW"
     },
     {
@@ -833,11 +664,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "type-specimen",
-        "holotype",
-        "nomenclature"
-      ],
+      "tags": ["type-specimen", "holotype", "nomenclature"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -859,10 +686,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "taxonomical-aids",
-        "museums"
-      ],
+      "tags": ["taxonomical-aids", "museums"],
       "neetWeightage": "LOW"
     },
     {
@@ -884,10 +708,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "classification",
-        "taxonomy"
-      ],
+      "tags": ["classification", "taxonomy"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -898,21 +719,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "In a taxonomic key, each statement in the key is called:",
-      "options": [
-        "A category",
-        "A lead",
-        "A couplet",
-        "A taxon"
-      ],
+      "options": ["A category", "A lead", "A couplet", "A taxon"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, key is a taxonomic aid used for identification based on contrasting characters in a pair called couplet. Each statement in the key is called a lead.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomical-aids",
-        "keys"
-      ],
+      "tags": ["taxonomical-aids", "keys"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -934,11 +747,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "metabolism",
-        "in-vitro"
-      ],
+      "tags": ["what-is-living", "metabolism", "in-vitro"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -949,22 +758,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "The family Convolvulaceae belongs to the order:",
-      "options": [
-        "Polymoniales",
-        "Primales",
-        "Poales",
-        "Sapindales"
-      ],
+      "options": ["Polymoniales", "Primales", "Poales", "Sapindales"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, the family Convolvulaceae is placed under the order Polymoniales based on shared characteristics. Similarly, family Solanaceae also belongs to the same order Polymoniales.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "order",
-        "family"
-      ],
+      "tags": ["taxonomic-hierarchy", "order", "family"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -986,10 +786,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomy",
-        "definition"
-      ],
+      "tags": ["taxonomy", "definition"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1011,10 +808,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "reproduction"
-      ],
+      "tags": ["what-is-living", "reproduction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1036,10 +830,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "growth"
-      ],
+      "tags": ["what-is-living", "growth"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1061,10 +852,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "metabolism"
-      ],
+      "tags": ["what-is-living", "metabolism"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1086,10 +874,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "binomial-nomenclature",
-        "nomenclature-rules"
-      ],
+      "tags": ["binomial-nomenclature", "nomenclature-rules"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1111,10 +896,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "species-concept",
-        "taxonomy"
-      ],
+      "tags": ["species-concept", "taxonomy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1136,10 +918,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomical-aids",
-        "herbarium"
-      ],
+      "tags": ["taxonomical-aids", "herbarium"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1161,10 +940,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "classification"
-      ],
+      "tags": ["taxonomic-hierarchy", "classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1186,10 +962,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "consciousness"
-      ],
+      "tags": ["what-is-living", "consciousness"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1211,10 +984,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomy",
-        "systematics"
-      ],
+      "tags": ["taxonomy", "systematics"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1236,11 +1006,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "metabolism",
-        "in-vitro"
-      ],
+      "tags": ["what-is-living", "metabolism", "in-vitro"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1262,11 +1028,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "genus",
-        "taxonomy",
-        "solanaceae"
-      ],
+      "tags": ["genus", "taxonomy", "solanaceae"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1288,10 +1050,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biodiversity",
-        "classification"
-      ],
+      "tags": ["biodiversity", "classification"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1313,11 +1072,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "nomenclature",
-        "ICBN",
-        "ICZN"
-      ],
+      "tags": ["nomenclature", "ICBN", "ICZN"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1339,11 +1094,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "growth",
-        "meristems"
-      ],
+      "tags": ["what-is-living", "growth", "meristems"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1354,21 +1105,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "Consider the following statements about properties of living organisms:\n(i) Growth is an all-inclusive characteristic of living organisms\n(ii) Metabolism is the defining characteristic of all living organisms\n(iii) Consciousness is absent in lower organisms like prokaryotes\n(iv) Reproduction is not an all-inclusive characteristic of living organisms\nHow many of the above statements are correct?",
-      "options": [
-        "Four",
-        "One",
-        "Three",
-        "Two"
-      ],
+      "options": ["Four", "One", "Three", "Two"],
       "correctAnswer": "D",
       "explanation": "Statements (ii) and (iv) are correct. As per NCERT: (i) is incorrect because growth is not all-inclusive — non-living things also grow; (ii) is correct — metabolism is the defining feature; (iii) is incorrect — NCERT states that all organisms including prokaryotes have consciousness (ability to sense environment); (iv) is correct — mules and sterile worker bees cannot reproduce.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "properties-of-living"
-      ],
+      "tags": ["what-is-living", "properties-of-living"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1379,21 +1122,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "Consider the following statements about taxonomic categories:\n(i) Species is the most basic unit of classification\n(ii) Genus comprises a group of related species\n(iii) Family has more common features than Order\n(iv) Class includes related orders\n(v) Phylum is used for plants while Division is used for animals\nHow many of the above statements are correct?",
-      "options": [
-        "Five",
-        "Four",
-        "Two",
-        "Three"
-      ],
+      "options": ["Five", "Four", "Two", "Three"],
       "correctAnswer": "B",
       "explanation": "Statements (i), (ii), (iii), and (iv) are correct. As per NCERT: (i) Species is the most basic unit; (ii) Genus comprises related species; (iii) Family members share more features than Order members; (iv) Class includes related orders; (v) is incorrect — Phylum is used for animals and Division for plants (reversed in the statement).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "taxonomic-categories"
-      ],
+      "tags": ["taxonomic-hierarchy", "taxonomic-categories"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1415,10 +1150,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "binomial-nomenclature",
-        "nomenclature-rules"
-      ],
+      "tags": ["binomial-nomenclature", "nomenclature-rules"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1429,20 +1161,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "Consider the following statements about taxonomical aids:\n(i) Herbarium stores dried and pressed plant specimens\n(ii) Botanical gardens have collections of dead preserved plants\n(iii) Museums have collections of preserved specimens for study\n(iv) Zoological parks keep wild animals in protected environments\n(v) Keys are based on similarities rather than contrasting characters\nHow many of the above statements are INCORRECT?",
-      "options": [
-        "One",
-        "Three",
-        "Four",
-        "Two"
-      ],
+      "options": ["One", "Three", "Four", "Two"],
       "correctAnswer": "D",
       "explanation": "Statements (ii) and (v) are incorrect. As per NCERT: (i) Correct — herbarium stores dried and pressed specimens; (ii) Incorrect — botanical gardens have collections of LIVING plants, not dead ones; (iii) Correct — museums have preserved specimens; (iv) Correct — zoos keep wild animals in protected environments; (v) Incorrect — keys are based on CONTRASTING characters in pairs (couplets), not similarities.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomical-aids"
-      ],
+      "tags": ["taxonomical-aids"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1464,11 +1189,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomy",
-        "systematics",
-        "classification"
-      ],
+      "tags": ["taxonomy", "systematics", "classification"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1479,21 +1200,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "Consider the following pairs:\n(i) Wheat — Family Poaceae\n(ii) Potato — Family Solanaceae\n(iii) Man — Order Primata\n(iv) Housefly — Phylum Arthropoda\nHow many of the above pairs are correctly matched?",
-      "options": [
-        "Four",
-        "One",
-        "Two",
-        "Three"
-      ],
+      "options": ["Four", "One", "Two", "Three"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, all four pairs are correctly matched: (i) Wheat (Triticum aestivum) belongs to family Poaceae; (ii) Potato (Solanum tuberosum) belongs to family Solanaceae; (iii) Man (Homo sapiens) belongs to order Primata; (iv) Housefly (Musca domestica) belongs to phylum Arthropoda.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "classification-examples"
-      ],
+      "tags": ["taxonomic-hierarchy", "classification-examples"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1515,11 +1228,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "growth",
-        "reproduction"
-      ],
+      "tags": ["what-is-living", "growth", "reproduction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1530,21 +1239,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "How many of the following are characteristics of living organisms as per NCERT?\n(i) Growth\n(ii) Reproduction\n(iii) Metabolism\n(iv) Consciousness\n(v) Ability to sense environment\n(vi) Self-replication\n(vii) Locomotion",
-      "options": [
-        "Five",
-        "Four",
-        "Seven",
-        "Six"
-      ],
+      "options": ["Five", "Four", "Seven", "Six"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, characteristics (i) through (vi) are all mentioned as properties of living organisms — growth, reproduction, metabolism, consciousness, ability to sense environment, and self-replication. Locomotion (vii) is NOT mentioned as a defining characteristic of living organisms since many organisms like plants do not exhibit locomotion.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "properties-of-living"
-      ],
+      "tags": ["what-is-living", "properties-of-living"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1566,11 +1267,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biodiversity",
-        "classification",
-        "need-for-classification"
-      ],
+      "tags": ["biodiversity", "classification", "need-for-classification"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1581,22 +1278,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "Read the following statements about 'Fauna':\n(i) It refers to the animal species found in a particular region\n(ii) It is similar to Flora which deals with plant species\n(iii) Fauna includes information about habitat and distribution\n(iv) Fauna is a type of key used for identification\nHow many of the above statements are correct?",
-      "options": [
-        "Two",
-        "Three",
-        "One",
-        "Four"
-      ],
+      "options": ["Two", "Three", "One", "Four"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, statements (i), (ii), and (iii) are correct. Fauna refers to animal species of a particular region, similar to Flora which deals with plants. Both provide information on habitat and distribution. Statement (iv) is incorrect — Fauna is not a key; keys are separate taxonomical aids based on contrasting characters.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomical-aids",
-        "fauna",
-        "flora"
-      ],
+      "tags": ["taxonomical-aids", "fauna", "flora"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1618,10 +1306,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomical-aids",
-        "keys"
-      ],
+      "tags": ["taxonomical-aids", "keys"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1632,23 +1317,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "Consider the following statements:\n(i) Solanum tuberosum and Solanum nigrum belong to the same genus\n(ii) Solanum and Petunia belong to the same family (Solanaceae)\n(iii) Family Solanaceae and Convolvulaceae are placed in order Polymoniales\n(iv) Lion (Panthera leo) and leopard (Panthera pardus) belong to the same genus\nHow many of the above statements are correct?",
-      "options": [
-        "Two",
-        "Three",
-        "One",
-        "Four"
-      ],
+      "options": ["Two", "Three", "One", "Four"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, all four statements are correct: (i) Both Solanum tuberosum (potato) and Solanum nigrum belong to genus Solanum; (ii) Solanum and Petunia are both in family Solanaceae; (iii) Solanaceae and Convolvulaceae are placed in order Polymoniales; (iv) Lion and leopard share the genus Panthera.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "genus",
-        "family",
-        "order"
-      ],
+      "tags": ["taxonomic-hierarchy", "genus", "family", "order"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1659,20 +1334,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "How many of the following taxonomical aids help in studying organisms by maintaining living specimens?\n(i) Herbarium\n(ii) Botanical garden\n(iii) Museum\n(iv) Zoological park\n(v) Keys",
-      "options": [
-        "One",
-        "Four",
-        "Three",
-        "Two"
-      ],
+      "options": ["One", "Four", "Three", "Two"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, only botanical gardens and zoological parks maintain LIVING specimens. Herbarium stores dried and pressed specimens, museums have preserved (dead) specimens, and keys are analytical tools based on contrasting characters. So only (ii) and (iv) — two aids — maintain living specimens.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomical-aids"
-      ],
+      "tags": ["taxonomical-aids"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1694,10 +1362,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "growth"
-      ],
+      "tags": ["what-is-living", "growth"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1719,9 +1384,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomical-aids"
-      ],
+      "tags": ["taxonomical-aids"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1743,11 +1406,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "family",
-        "classification-examples"
-      ],
+      "tags": ["taxonomic-hierarchy", "family", "classification-examples"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1769,10 +1428,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "wheat-classification"
-      ],
+      "tags": ["taxonomic-hierarchy", "wheat-classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1794,10 +1450,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "binomial-nomenclature",
-        "scientific-names"
-      ],
+      "tags": ["binomial-nomenclature", "scientific-names"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1819,13 +1472,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomical-aids",
-        "flora",
-        "fauna",
-        "monograph",
-        "manual"
-      ],
+      "tags": ["taxonomical-aids", "flora", "fauna", "monograph", "manual"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1847,10 +1494,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "properties-of-living"
-      ],
+      "tags": ["what-is-living", "properties-of-living"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1872,10 +1516,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "human-classification"
-      ],
+      "tags": ["taxonomic-hierarchy", "human-classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1897,10 +1538,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "genus",
-        "classification-examples"
-      ],
+      "tags": ["genus", "classification-examples"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1922,11 +1560,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "nomenclature",
-        "ICBN",
-        "ICZN"
-      ],
+      "tags": ["nomenclature", "ICBN", "ICZN"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1948,10 +1582,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "classification"
-      ],
+      "tags": ["taxonomic-hierarchy", "classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1973,10 +1604,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "housefly-classification"
-      ],
+      "tags": ["taxonomic-hierarchy", "housefly-classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1998,12 +1626,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomy",
-        "systematics",
-        "classification",
-        "nomenclature"
-      ],
+      "tags": ["taxonomy", "systematics", "classification", "nomenclature"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2025,12 +1648,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "genus",
-        "family",
-        "order"
-      ],
+      "tags": ["taxonomic-hierarchy", "genus", "family", "order"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2052,11 +1670,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "taxonomical-aids",
-        "botanical-gardens",
-        "museums"
-      ],
+      "tags": ["taxonomical-aids", "botanical-gardens", "museums"],
       "neetWeightage": "LOW"
     },
     {
@@ -2067,20 +1681,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "How many of the following are taxonomical aids mentioned in NCERT?\n(a) Herbarium\n(b) Botanical gardens\n(c) Museums\n(d) Zoological parks\n(e) Keys\n(f) Flora and Fauna\n(g) Monographs and Manuals\n(h) Gene banks",
-      "options": [
-        "Eight",
-        "Five",
-        "Six",
-        "Seven"
-      ],
+      "options": ["Eight", "Five", "Six", "Seven"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, seven taxonomical aids are mentioned: (a) Herbarium, (b) Botanical gardens, (c) Museums, (d) Zoological parks, (e) Keys, (f) Flora and Fauna, and (g) Monographs and Manuals. Gene banks (h) are NOT mentioned as taxonomical aids in NCERT Chapter 1.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomical-aids"
-      ],
+      "tags": ["taxonomical-aids"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2091,21 +1698,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "How many of the following are characteristics that NCERT considers as defining properties of living organisms?\n(a) Growth\n(b) Reproduction\n(c) Metabolism\n(d) Cellular organization\n(e) Consciousness\n(f) Healing and repair\n(g) Interaction with environment\n(h) Locomotion",
-      "options": [
-        "Five",
-        "Four",
-        "Six",
-        "Three"
-      ],
+      "options": ["Five", "Four", "Six", "Three"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, five properties are specifically discussed as characteristics of living organisms: (a) Growth, (b) Reproduction, (c) Metabolism, (e) Consciousness, and (g) Interaction with environment. Cellular organization (d), healing and repair (f), and locomotion (h) are not specifically listed as defining properties in this NCERT chapter.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "properties-of-living"
-      ],
+      "tags": ["what-is-living", "properties-of-living"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2116,21 +1715,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "How many of the following taxonomic categories are obligatory (mandatory) in taxonomic hierarchy?\n(a) Species\n(b) Genus\n(c) Sub-family\n(d) Family\n(e) Order\n(f) Sub-class\n(g) Class\n(h) Phylum/Division\n(i) Kingdom",
-      "options": [
-        "Seven",
-        "Eight",
-        "Five",
-        "Six"
-      ],
+      "options": ["Seven", "Eight", "Five", "Six"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, the seven obligatory (mandatory) categories in taxonomic hierarchy are: (a) Species, (b) Genus, (d) Family, (e) Order, (g) Class, (h) Phylum/Division, and (i) Kingdom. Sub-family (c) and Sub-class (f) are intermediate/optional categories.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "taxonomic-categories"
-      ],
+      "tags": ["taxonomic-hierarchy", "taxonomic-categories"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2141,21 +1732,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "How many of the following rules apply to binomial nomenclature as per NCERT?\n(a) Generic name begins with a capital letter\n(b) Specific epithet begins with a capital letter\n(c) Biological names are generally in Latin\n(d) When printed, names are in italics\n(e) When handwritten, names are underlined separately\n(f) Name of the author appears after the specific epithet\n(g) Names should be in English",
-      "options": [
-        "Three",
-        "Four",
-        "Five",
-        "Six"
-      ],
+      "options": ["Three", "Four", "Five", "Six"],
       "correctAnswer": "C",
       "explanation": "Five rules are correct as per NCERT: (a) Generic name starts with capital letter; (c) Names are generally in Latin; (d) Printed names are in italics; (e) Handwritten names are underlined separately; (f) Author's name appears after specific epithet. (b) is incorrect — specific epithet starts with small letter; (g) is incorrect — names are in Latin, not English.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "binomial-nomenclature",
-        "nomenclature-rules"
-      ],
+      "tags": ["binomial-nomenclature", "nomenclature-rules"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2166,22 +1749,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "How many of the following organisms belong to the same genus Solanum?\n(a) Potato\n(b) Tomato\n(c) Brinjal\n(d) Petunia\n(e) Capsicum\n(f) Solanum nigrum",
-      "options": [
-        "Three",
-        "Two",
-        "Four",
-        "Five"
-      ],
+      "options": ["Three", "Two", "Four", "Five"],
       "correctAnswer": "C",
       "explanation": "As per NCERT and standard taxonomy, four organisms belong to genus Solanum: (a) Potato (Solanum tuberosum), (b) Tomato (Solanum lycopersicum), (c) Brinjal (Solanum melongena), and (f) Solanum nigrum. Petunia belongs to a different genus (Petunia), and Capsicum belongs to genus Capsicum, though both are in family Solanaceae.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "genus",
-        "solanaceae",
-        "taxonomy"
-      ],
+      "tags": ["genus", "solanaceae", "taxonomy"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2192,21 +1766,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "How many of the following statements about growth are correct as per NCERT?\n(a) Growth is increase in mass and number\n(b) Plants show indefinite growth\n(c) Animals show definite growth\n(d) Unicellular organisms grow by cell division\n(e) Non-living objects show intrinsic growth\n(f) Dead organisms do not grow",
-      "options": [
-        "Six",
-        "Three",
-        "Five",
-        "Four"
-      ],
+      "options": ["Six", "Three", "Five", "Four"],
       "correctAnswer": "C",
       "explanation": "Five statements are correct as per NCERT: (a) Growth is increase in mass and number; (b) Plants show indefinite/continuous growth; (c) Animals show definite growth up to a certain age; (d) Unicellular organisms grow by cell division; (f) Dead organisms do not grow. Statement (e) is incorrect — non-living objects show EXTRINSIC growth (accumulation on surface), not intrinsic growth.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "growth"
-      ],
+      "tags": ["what-is-living", "growth"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2217,22 +1783,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "How many of the following pairs of organisms share the same genus?\n(a) Lion and Tiger\n(b) Dog and Cat\n(c) Potato and Brinjal\n(d) Wheat and Rice\n(e) Man and Gorilla\n(f) Leopard and Lion",
-      "options": [
-        "Three",
-        "Five",
-        "Two",
-        "Four"
-      ],
+      "options": ["Three", "Five", "Two", "Four"],
       "correctAnswer": "A",
       "explanation": "Three pairs share the same genus: (a) Lion (Panthera leo) and Tiger (Panthera tigris) — genus Panthera; (c) Potato (Solanum tuberosum) and Brinjal (Solanum melongena) — genus Solanum; (f) Leopard (Panthera pardus) and Lion (Panthera leo) — genus Panthera. Dog (Canis) and Cat (Felis) have different genera; Wheat (Triticum) and Rice (Oryza) have different genera; Man (Homo) and Gorilla (Gorilla) have different genera.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "genus",
-        "taxonomy",
-        "classification-examples"
-      ],
+      "tags": ["genus", "taxonomy", "classification-examples"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2243,20 +1800,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "How many of the following provide information about living specimens?\n(a) Herbarium\n(b) Botanical garden\n(c) Museum\n(d) Zoological park\n(e) Flora\n(f) Monograph\n(g) Keys",
-      "options": [
-        "One",
-        "Four",
-        "Three",
-        "Two"
-      ],
+      "options": ["One", "Four", "Three", "Two"],
       "correctAnswer": "D",
       "explanation": "Only two taxonomical aids deal with living specimens: (b) Botanical gardens — which have collections of living plants for reference; and (d) Zoological parks — which keep wild animals alive in protected environments. Herbarium has dried/pressed specimens, museums have preserved specimens, and Flora, Monograph, and Keys are written documents/tools.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomical-aids"
-      ],
+      "tags": ["taxonomical-aids"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2278,10 +1828,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "taxonomic-categories"
-      ],
+      "tags": ["taxonomic-hierarchy", "taxonomic-categories"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2303,10 +1850,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "wheat-classification"
-      ],
+      "tags": ["taxonomic-hierarchy", "wheat-classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2328,10 +1872,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "human-classification"
-      ],
+      "tags": ["taxonomic-hierarchy", "human-classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2353,11 +1894,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomy",
-        "classification",
-        "nomenclature"
-      ],
+      "tags": ["taxonomy", "classification", "nomenclature"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2379,10 +1916,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "classification"
-      ],
+      "tags": ["taxonomic-hierarchy", "classification"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2404,10 +1938,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "housefly-classification"
-      ],
+      "tags": ["taxonomic-hierarchy", "housefly-classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2429,10 +1960,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "classification"
-      ],
+      "tags": ["taxonomic-hierarchy", "classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2454,11 +1982,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "order",
-        "family"
-      ],
+      "tags": ["taxonomic-hierarchy", "order", "family"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2480,11 +2004,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "what-is-living",
-        "consciousness",
-        "self-consciousness"
-      ],
+      "tags": ["what-is-living", "consciousness", "self-consciousness"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2495,21 +2015,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "The Living World",
       "question": "Consider the following statements about herbarium:\n(i) Herbarium sheets are arranged according to a universally accepted system of classification\n(ii) Herbarium specimens carry labels with information about date of collection, place of collection, and collector's name\n(iii) Herbarium contains living plant specimens\n(iv) Herbarium is useful for taxonomic studies\n(v) Each herbarium sheet has a single pressed plant specimen\nHow many of the above statements are correct?",
-      "options": [
-        "Four",
-        "Two",
-        "Three",
-        "Five"
-      ],
+      "options": ["Four", "Two", "Three", "Five"],
       "correctAnswer": "A",
       "explanation": "Statements (i), (ii), (iv), and (v) are correct. As per NCERT: (i) Herbarium sheets are systematically arranged; (ii) They carry information labels; (iii) is INCORRECT — herbarium has dried and pressed specimens, not living ones (botanical gardens have living specimens); (iv) They are useful for taxonomic study; (v) Each sheet carries one pressed specimen.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomical-aids",
-        "herbarium"
-      ],
+      "tags": ["taxonomical-aids", "herbarium"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2531,11 +2043,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "taxonomic-hierarchy",
-        "phylum",
-        "division"
-      ],
+      "tags": ["taxonomic-hierarchy", "phylum", "division"],
       "neetWeightage": "MEDIUM"
     }
   ]

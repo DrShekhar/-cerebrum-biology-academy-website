@@ -111,10 +111,10 @@ npm run dev
 ### Redirect Mappings
 
 | Source (biologyforneetug.com) | Destination (cerebrumbiologyacademy.com) |
-|-------------------------------|------------------------------------------|
-| `/` (homepage) | `/` |
-| `/shekhar-sir` | `/faculty` |
-| `/*` (all other paths) | `/` (catch-all) |
+| ----------------------------- | ---------------------------------------- |
+| `/` (homepage)                | `/`                                      |
+| `/shekhar-sir`                | `/faculty`                               |
+| `/*` (all other paths)        | `/` (catch-all)                          |
 
 ### Implementation Notes
 
@@ -128,7 +128,11 @@ npm run dev
 ```json
 {
   "redirects": [
-    { "source": "/shekhar-sir", "destination": "https://cerebrumbiologyacademy.com/faculty", "statusCode": 301 },
+    {
+      "source": "/shekhar-sir",
+      "destination": "https://cerebrumbiologyacademy.com/faculty",
+      "statusCode": 301
+    },
     { "source": "/(.*)", "destination": "https://cerebrumbiologyacademy.com/", "statusCode": 301 }
   ]
 }

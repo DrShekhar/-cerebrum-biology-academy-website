@@ -36,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best NEET Coaching in Faridabad 2026 | Top Institutes Compared',
-    description: 'Compare the best NEET coaching institutes in Faridabad for 2026. Fees, faculty, success rates, batch sizes compared. Find which coaching is right for you.',
+    description:
+      'Compare the best NEET coaching institutes in Faridabad for 2026. Fees, faculty, success rates, batch sizes compared. Find which coaching is right for you.',
   },
 }
 
@@ -165,7 +166,11 @@ export default function BestNEETCoachingFaridabadPage() {
     <>
       <LocalBusinessSchema />
       <CerebrumPersonSchema
-        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+        knowsAbout={[
+          'NEET Faridabad',
+          'NEET Biology Faridabad',
+          'Medical entrance coaching Faridabad',
+        ]}
       />
       <script
         type="application/ld+json"

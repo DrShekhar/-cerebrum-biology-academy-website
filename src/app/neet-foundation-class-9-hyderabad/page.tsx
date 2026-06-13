@@ -36,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 9 in Hyderabad | AIIMS-Trained Online Live',
-    description: 'NEET Foundation Class 9 in Hyderabad at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Telangana Board + NEET parallel. Ameerpet, Kukatpally, HITEC City,...',
+    description:
+      'NEET Foundation Class 9 in Hyderabad at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Telangana Board + NEET parallel. Ameerpet, Kukatpally, HITEC City,...',
   },
 }
 
@@ -220,13 +221,14 @@ export default function NEETFoundationClass9HyderabadPage() {
             Hyderabad Class 9 NEET Foundation — what we deliver
           </h2>
           <p>
-            Hyderabad has one of India&apos;s most competitive NEET coaching markets — Sri
-            other South-Indian chains, a leading national educational institution, the 2nd-largest national NEET chain, and the largest national NEET chain all run mass-batch coaching operations throughout
-            the city. Cerebrum&apos;s positioning in Hyderabad is structurally different —
-            biology-only specialist with 15-20 student online live batches led by AIIMS-trained
-            faculty (Dr. Shekhar C Singh). ~260+ Hyderabad students across Class 9-12 are actively
-            enrolled, particularly families targeting AIIMS / top-100 NEET ranks where pedagogy
-            depth matters more than mass-batch test series.
+            Hyderabad has one of India&apos;s most competitive NEET coaching markets — Sri other
+            South-Indian chains, a leading national educational institution, the 2nd-largest
+            national NEET chain, and the largest national NEET chain all run mass-batch coaching
+            operations throughout the city. Cerebrum&apos;s positioning in Hyderabad is structurally
+            different — biology-only specialist with 15-20 student online live batches led by
+            AIIMS-trained faculty (Dr. Shekhar C Singh). ~260+ Hyderabad students across Class 9-12
+            are actively enrolled, particularly families targeting AIIMS / top-100 NEET ranks where
+            pedagogy depth matters more than mass-batch test series.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">

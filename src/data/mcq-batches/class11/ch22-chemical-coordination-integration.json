@@ -14,21 +14,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "The pituitary gland is also called the:",
-      "options": [
-        "Emergency gland",
-        "Mixed gland",
-        "Pineal gland",
-        "Master gland"
-      ],
+      "options": ["Emergency gland", "Mixed gland", "Pineal gland", "Master gland"],
       "correctAnswer": "D",
       "explanation": "The pituitary gland is called the 'master gland' because it secretes hormones that regulate many other endocrine glands. It has two lobes: anterior (adenohypophysis) and posterior (neurohypophysis), and is controlled by the hypothalamus.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pituitary",
-        "master-gland"
-      ],
+      "tags": ["pituitary", "master-gland"],
       "neetWeightage": "HIGH"
     },
     {
@@ -39,21 +31,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Growth hormone (GH/somatotropin) is secreted by the:",
-      "options": [
-        "Posterior pituitary",
-        "Adrenal cortex",
-        "Thyroid gland",
-        "Anterior pituitary"
-      ],
+      "options": ["Posterior pituitary", "Adrenal cortex", "Thyroid gland", "Anterior pituitary"],
       "correctAnswer": "D",
       "explanation": "Growth hormone (GH/somatotropin) is secreted by the somatotroph cells of the anterior pituitary. It promotes growth of bones and tissues, stimulates protein synthesis, mobilizes fat, and increases blood glucose levels.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "growth-hormone",
-        "anterior-pituitary"
-      ],
+      "tags": ["growth-hormone", "anterior-pituitary"],
       "neetWeightage": "HIGH"
     },
     {
@@ -64,21 +48,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Excess GH secretion in adults causes:",
-      "options": [
-        "Gigantism",
-        "Dwarfism",
-        "Acromegaly",
-        "Cretinism"
-      ],
+      "options": ["Gigantism", "Dwarfism", "Acromegaly", "Cretinism"],
       "correctAnswer": "C",
       "explanation": "Excess GH in adults (after closure of epiphyseal plates) causes acromegaly, characterized by enlargement of extremities (hands, feet, jaw), thickening of skin, and enlarged internal organs. In children (before growth plates close), excess GH causes gigantism.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "acromegaly",
-        "GH-excess"
-      ],
+      "tags": ["acromegaly", "GH-excess"],
       "neetWeightage": "HIGH"
     },
     {
@@ -89,22 +65,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Oxytocin and vasopressin (ADH) are stored and released from the:",
-      "options": [
-        "Anterior pituitary",
-        "Adrenal medulla",
-        "Hypothalamus",
-        "Posterior pituitary"
-      ],
+      "options": ["Anterior pituitary", "Adrenal medulla", "Hypothalamus", "Posterior pituitary"],
       "correctAnswer": "D",
       "explanation": "Oxytocin and vasopressin (ADH) are synthesized in the hypothalamus but are stored and released from the posterior pituitary (neurohypophysis). They travel along the hypothalamo-hypophyseal tract to reach the posterior pituitary.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "posterior-pituitary",
-        "oxytocin",
-        "ADH"
-      ],
+      "tags": ["posterior-pituitary", "oxytocin", "ADH"],
       "neetWeightage": "HIGH"
     },
     {
@@ -115,21 +82,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Thyroid hormones T3 and T4 require which element for their synthesis?",
-      "options": [
-        "Calcium",
-        "Iodine",
-        "Zinc",
-        "Iron"
-      ],
+      "options": ["Calcium", "Iodine", "Zinc", "Iron"],
       "correctAnswer": "B",
       "explanation": "Iodine is essential for the synthesis of thyroid hormones T3 (triiodothyronine) and T4 (thyroxine). Iodine deficiency leads to hypothyroidism and goitre (enlargement of the thyroid gland due to overstimulation by TSH).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "iodine",
-        "thyroid-hormones"
-      ],
+      "tags": ["iodine", "thyroid-hormones"],
       "neetWeightage": "HIGH"
     },
     {
@@ -151,10 +110,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cretinism",
-        "hypothyroidism"
-      ],
+      "tags": ["cretinism", "hypothyroidism"],
       "neetWeightage": "HIGH"
     },
     {
@@ -165,21 +121,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Graves' disease (exophthalmic goitre) is caused by:",
-      "options": [
-        "Hyperadrenalism",
-        "Hyperthyroidism",
-        "Hypothyroidism",
-        "Hypoparathyroidism"
-      ],
+      "options": ["Hyperadrenalism", "Hyperthyroidism", "Hypothyroidism", "Hypoparathyroidism"],
       "correctAnswer": "B",
       "explanation": "Graves' disease is an autoimmune form of hyperthyroidism where antibodies mimic TSH and stimulate the thyroid gland. Symptoms include enlarged thyroid (goitre), bulging eyes (exophthalmos), weight loss, increased metabolic rate, nervousness, and rapid heartbeat.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "graves-disease",
-        "hyperthyroidism"
-      ],
+      "tags": ["graves-disease", "hyperthyroidism"],
       "neetWeightage": "HIGH"
     },
     {
@@ -201,10 +149,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "PTH",
-        "calcium-regulation"
-      ],
+      "tags": ["PTH", "calcium-regulation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -226,11 +171,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "calcitonin",
-        "C-cells",
-        "thyroid"
-      ],
+      "tags": ["calcitonin", "C-cells", "thyroid"],
       "neetWeightage": "HIGH"
     },
     {
@@ -252,10 +193,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "insulin",
-        "beta-cells"
-      ],
+      "tags": ["insulin", "beta-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -277,10 +215,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "glucagon",
-        "alpha-cells"
-      ],
+      "tags": ["glucagon", "alpha-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -291,21 +226,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "The fight-or-flight hormones adrenaline and noradrenaline are secreted by the:",
-      "options": [
-        "Thyroid gland",
-        "Adrenal medulla",
-        "Hypothalamus",
-        "Adrenal cortex"
-      ],
+      "options": ["Thyroid gland", "Adrenal medulla", "Hypothalamus", "Adrenal cortex"],
       "correctAnswer": "B",
       "explanation": "Adrenaline (epinephrine) and noradrenaline (norepinephrine) are catecholamines secreted by the adrenal medulla. They prepare the body for emergency 'fight or flight' responses: increasing heart rate, blood pressure, blood glucose, dilating bronchioles, and diverting blood to skeletal muscles.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "adrenaline",
-        "adrenal-medulla"
-      ],
+      "tags": ["adrenaline", "adrenal-medulla"],
       "neetWeightage": "HIGH"
     },
     {
@@ -327,10 +254,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "addisons-disease",
-        "adrenal-insufficiency"
-      ],
+      "tags": ["addisons-disease", "adrenal-insufficiency"],
       "neetWeightage": "HIGH"
     },
     {
@@ -352,10 +276,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cushings-syndrome",
-        "cortisol-excess"
-      ],
+      "tags": ["cushings-syndrome", "cortisol-excess"],
       "neetWeightage": "HIGH"
     },
     {
@@ -366,21 +287,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Melatonin is secreted by the:",
-      "options": [
-        "Pineal gland",
-        "Adrenal cortex",
-        "Thymus",
-        "Thyroid"
-      ],
+      "options": ["Pineal gland", "Adrenal cortex", "Thymus", "Thyroid"],
       "correctAnswer": "A",
       "explanation": "Melatonin is the primary hormone secreted by the pineal gland (pineal body/epiphysis cerebri). It regulates the sleep-wake cycle (circadian rhythm) and diurnal body rhythms. Melatonin secretion increases in darkness and decreases in light.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "melatonin",
-        "pineal-gland"
-      ],
+      "tags": ["melatonin", "pineal-gland"],
       "neetWeightage": "HIGH"
     },
     {
@@ -391,21 +304,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "The thymus gland secretes:",
-      "options": [
-        "Insulin",
-        "Thyroxine",
-        "Melatonin",
-        "Thymosin"
-      ],
+      "options": ["Insulin", "Thyroxine", "Melatonin", "Thymosin"],
       "correctAnswer": "D",
       "explanation": "The thymus gland secretes thymosin, which plays a critical role in the development and differentiation of T-lymphocytes (T cells) for cell-mediated immunity. The thymus is large in childhood and gradually degenerates (involutes) with age.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "thymosin",
-        "thymus"
-      ],
+      "tags": ["thymosin", "thymus"],
       "neetWeightage": "HIGH"
     },
     {
@@ -416,21 +321,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "The zona glomerulosa of the adrenal cortex secretes:",
-      "options": [
-        "Aldosterone (mineralocorticoids)",
-        "Adrenaline",
-        "Androgens",
-        "Cortisol"
-      ],
+      "options": ["Aldosterone (mineralocorticoids)", "Adrenaline", "Androgens", "Cortisol"],
       "correctAnswer": "A",
       "explanation": "The adrenal cortex has three zones: zona glomerulosa (outermost) secretes mineralocorticoids like aldosterone, zona fasciculata (middle) secretes glucocorticoids like cortisol, and zona reticularis (innermost) secretes small amounts of androgens.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "zona-glomerulosa",
-        "aldosterone"
-      ],
+      "tags": ["zona-glomerulosa", "aldosterone"],
       "neetWeightage": "HIGH"
     },
     {
@@ -452,10 +349,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "diabetes-type1",
-        "insulin-deficiency"
-      ],
+      "tags": ["diabetes-type1", "insulin-deficiency"],
       "neetWeightage": "HIGH"
     },
     {
@@ -466,21 +360,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "TSH (Thyroid Stimulating Hormone) is secreted by the:",
-      "options": [
-        "Thyroid gland",
-        "Posterior pituitary",
-        "Hypothalamus",
-        "Anterior pituitary"
-      ],
+      "options": ["Thyroid gland", "Posterior pituitary", "Hypothalamus", "Anterior pituitary"],
       "correctAnswer": "D",
       "explanation": "TSH (thyrotropin) is secreted by the thyrotroph cells of the anterior pituitary. It stimulates the thyroid gland to produce and release T3 and T4. TSH secretion is regulated by TRH from the hypothalamus and negative feedback from thyroid hormones.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "TSH",
-        "anterior-pituitary"
-      ],
+      "tags": ["TSH", "anterior-pituitary"],
       "neetWeightage": "HIGH"
     },
     {
@@ -502,10 +388,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "prolactin",
-        "lactation"
-      ],
+      "tags": ["prolactin", "lactation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -516,21 +399,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Erythropoietin (EPO) is produced by the:",
-      "options": [
-        "Spleen",
-        "Kidneys",
-        "Bone marrow",
-        "Liver"
-      ],
+      "options": ["Spleen", "Kidneys", "Bone marrow", "Liver"],
       "correctAnswer": "B",
       "explanation": "Erythropoietin (EPO) is a hormone produced primarily by the kidneys (also small amounts by the liver) in response to low blood oxygen levels (hypoxia). It stimulates the bone marrow to produce more red blood cells (erythropoiesis).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "erythropoietin",
-        "kidneys"
-      ],
+      "tags": ["erythropoietin", "kidneys"],
       "neetWeightage": "HIGH"
     },
     {
@@ -552,10 +427,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hypothalamus",
-        "releasing-hormones"
-      ],
+      "tags": ["hypothalamus", "releasing-hormones"],
       "neetWeightage": "HIGH"
     },
     {
@@ -577,10 +449,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "intracellular-receptors",
-        "steroid-hormones"
-      ],
+      "tags": ["intracellular-receptors", "steroid-hormones"],
       "neetWeightage": "HIGH"
     },
     {
@@ -591,21 +460,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "The second messenger in the action of many peptide hormones is:",
-      "options": [
-        "Ca2+",
-        "cAMP (cyclic AMP)",
-        "ATP",
-        "GTP"
-      ],
+      "options": ["Ca2+", "cAMP (cyclic AMP)", "ATP", "GTP"],
       "correctAnswer": "B",
       "explanation": "cAMP (cyclic adenosine monophosphate) is a common second messenger used by many water-soluble peptide hormones (e.g., adrenaline, glucagon, TSH, ACTH). The hormone binds to a membrane receptor, activating adenylyl cyclase, which converts ATP to cAMP, triggering a cascade of intracellular events.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cAMP",
-        "second-messenger"
-      ],
+      "tags": ["cAMP", "second-messenger"],
       "neetWeightage": "HIGH"
     },
     {
@@ -616,21 +477,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "ACTH (Adrenocorticotropic Hormone) is secreted by the:",
-      "options": [
-        "Hypothalamus",
-        "Anterior pituitary",
-        "Posterior pituitary",
-        "Adrenal cortex"
-      ],
+      "options": ["Hypothalamus", "Anterior pituitary", "Posterior pituitary", "Adrenal cortex"],
       "correctAnswer": "B",
       "explanation": "ACTH is secreted by corticotroph cells of the anterior pituitary under the influence of CRH (Corticotropin Releasing Hormone) from the hypothalamus. ACTH stimulates the adrenal cortex to secrete glucocorticoids (cortisol) and to a lesser extent, mineralocorticoids and androgens.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ACTH",
-        "anterior-pituitary"
-      ],
+      "tags": ["ACTH", "anterior-pituitary"],
       "neetWeightage": "HIGH"
     },
     {
@@ -652,10 +505,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "myxedema",
-        "hypothyroidism"
-      ],
+      "tags": ["myxedema", "hypothyroidism"],
       "neetWeightage": "HIGH"
     },
     {
@@ -666,21 +516,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Simple goitre (endemic goitre) is caused by:",
-      "options": [
-        "Excess iodine",
-        "Excess calcium",
-        "Vitamin D deficiency",
-        "Iodine deficiency"
-      ],
+      "options": ["Excess iodine", "Excess calcium", "Vitamin D deficiency", "Iodine deficiency"],
       "correctAnswer": "D",
       "explanation": "Simple/endemic goitre is caused by dietary iodine deficiency. Without sufficient iodine, the thyroid cannot produce adequate T3/T4. Low thyroid hormones fail to provide negative feedback, so TSH remains elevated, continuously stimulating the thyroid to enlarge.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "goitre",
-        "iodine-deficiency"
-      ],
+      "tags": ["goitre", "iodine-deficiency"],
       "neetWeightage": "HIGH"
     },
     {
@@ -691,21 +533,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "The number of parathyroid glands in humans is:",
-      "options": [
-        "Six",
-        "Four",
-        "Two",
-        "Eight"
-      ],
+      "options": ["Six", "Four", "Two", "Eight"],
       "correctAnswer": "B",
       "explanation": "Humans have four parathyroid glands (two pairs), embedded on the posterior surface of the thyroid gland (one pair on each lobe). They secrete parathormone (PTH) which increases blood calcium levels.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "parathyroid-glands",
-        "number"
-      ],
+      "tags": ["parathyroid-glands", "number"],
       "neetWeightage": "HIGH"
     },
     {
@@ -727,10 +561,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cortisol",
-        "glucocorticoid"
-      ],
+      "tags": ["cortisol", "glucocorticoid"],
       "neetWeightage": "HIGH"
     },
     {
@@ -752,10 +583,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "oxytocin",
-        "uterine-contractions"
-      ],
+      "tags": ["oxytocin", "uterine-contractions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -766,22 +594,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "FSH and LH are collectively called:",
-      "options": [
-        "Gonadotropins",
-        "Catecholamines",
-        "Thyroid hormones",
-        "Glucocorticoids"
-      ],
+      "options": ["Gonadotropins", "Catecholamines", "Thyroid hormones", "Glucocorticoids"],
       "correctAnswer": "A",
       "explanation": "FSH (Follicle Stimulating Hormone) and LH (Luteinizing Hormone) are called gonadotropins because they act on the gonads (ovaries and testes). FSH stimulates follicle development/spermatogenesis. LH triggers ovulation and stimulates testosterone production.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gonadotropins",
-        "FSH",
-        "LH"
-      ],
+      "tags": ["gonadotropins", "FSH", "LH"],
       "neetWeightage": "HIGH"
     },
     {
@@ -803,10 +622,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "somatostatin",
-        "delta-cells"
-      ],
+      "tags": ["somatostatin", "delta-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -828,10 +644,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "adrenal-gland",
-        "emergency-gland"
-      ],
+      "tags": ["adrenal-gland", "emergency-gland"],
       "neetWeightage": "HIGH"
     },
     {
@@ -853,10 +666,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "negative-feedback",
-        "thyroid-axis"
-      ],
+      "tags": ["negative-feedback", "thyroid-axis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -878,10 +688,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "testosterone",
-        "leydig-cells"
-      ],
+      "tags": ["testosterone", "leydig-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -892,21 +699,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Estrogen is primarily produced by:",
-      "options": [
-        "Testes",
-        "Adrenal medulla",
-        "Ovarian follicles",
-        "Corpus luteum only"
-      ],
+      "options": ["Testes", "Adrenal medulla", "Ovarian follicles", "Corpus luteum only"],
       "correctAnswer": "C",
       "explanation": "Estrogen (estradiol) is primarily produced by the ovarian follicles (granulosa cells) under the influence of FSH. It promotes development of female secondary sexual characteristics, regulates the menstrual cycle, and maintains the female reproductive system.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "estrogen",
-        "ovarian-follicles"
-      ],
+      "tags": ["estrogen", "ovarian-follicles"],
       "neetWeightage": "HIGH"
     },
     {
@@ -928,10 +727,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "MSH",
-        "pars-intermedia"
-      ],
+      "tags": ["MSH", "pars-intermedia"],
       "neetWeightage": "HIGH"
     },
     {
@@ -942,21 +738,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Atrial natriuretic factor (ANF) is secreted by the:",
-      "options": [
-        "Atrial wall of the heart",
-        "Kidneys",
-        "Hypothalamus",
-        "Adrenal cortex"
-      ],
+      "options": ["Atrial wall of the heart", "Kidneys", "Hypothalamus", "Adrenal cortex"],
       "correctAnswer": "A",
       "explanation": "ANF (also called ANP - atrial natriuretic peptide) is secreted by the atrial wall of the heart when blood pressure/volume increases. It causes vasodilation, inhibits NaCl reabsorption in the kidneys, and inhibits renin and aldosterone, resulting in decreased blood pressure.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ANF",
-        "heart"
-      ],
+      "tags": ["ANF", "heart"],
       "neetWeightage": "HIGH"
     },
     {
@@ -978,11 +766,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hypothalamus",
-        "pituitary",
-        "control"
-      ],
+      "tags": ["hypothalamus", "pituitary", "control"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1004,11 +788,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "insulin",
-        "glucagon",
-        "antagonistic"
-      ],
+      "tags": ["insulin", "glucagon", "antagonistic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1030,11 +810,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "goitre",
-        "iodine",
-        "TSH"
-      ],
+      "tags": ["goitre", "iodine", "TSH"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1056,10 +832,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "steroid-hormones",
-        "intracellular-receptors"
-      ],
+      "tags": ["steroid-hormones", "intracellular-receptors"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1081,11 +854,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "PTH",
-        "calcitonin",
-        "antagonistic"
-      ],
+      "tags": ["PTH", "calcitonin", "antagonistic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1107,11 +876,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "thymus",
-        "involution",
-        "aging"
-      ],
+      "tags": ["thymus", "involution", "aging"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1133,11 +898,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "adrenaline",
-        "emergency",
-        "fight-or-flight"
-      ],
+      "tags": ["adrenaline", "emergency", "fight-or-flight"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1159,11 +920,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "diabetes",
-        "glycosuria",
-        "hyperglycemia"
-      ],
+      "tags": ["diabetes", "glycosuria", "hyperglycemia"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1185,10 +942,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "peptide-hormones",
-        "second-messengers"
-      ],
+      "tags": ["peptide-hormones", "second-messengers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1210,10 +964,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "aldosterone",
-        "Na+-reabsorption"
-      ],
+      "tags": ["aldosterone", "Na+-reabsorption"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1235,10 +986,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "progesterone",
-        "pregnancy"
-      ],
+      "tags": ["progesterone", "pregnancy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1260,10 +1008,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "melatonin",
-        "circadian-rhythm"
-      ],
+      "tags": ["melatonin", "circadian-rhythm"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1285,10 +1030,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "anterior-pituitary",
-        "hormones"
-      ],
+      "tags": ["anterior-pituitary", "hormones"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1310,10 +1052,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "adrenal-gland",
-        "zones"
-      ],
+      "tags": ["adrenal-gland", "zones"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1335,9 +1074,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "thyroid-disorders"
-      ],
+      "tags": ["thyroid-disorders"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1359,10 +1096,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pancreas",
-        "islets-of-langerhans"
-      ],
+      "tags": ["pancreas", "islets-of-langerhans"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1384,10 +1118,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hormone-mechanisms",
-        "receptors"
-      ],
+      "tags": ["hormone-mechanisms", "receptors"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1409,9 +1140,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "GH-disorders"
-      ],
+      "tags": ["GH-disorders"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1433,10 +1162,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "insulin",
-        "effects"
-      ],
+      "tags": ["insulin", "effects"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1447,20 +1173,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Which of the following organs produce hormones but are NOT primarily endocrine glands?\n(i) Heart (ANF) (ii) Kidney (erythropoietin) (iii) GI tract (gastrin, secretin, CCK) (iv) Liver (angiotensinogen)\nHow many are correct?",
-      "options": [
-        "Four",
-        "Two",
-        "One",
-        "Three"
-      ],
+      "options": ["Four", "Two", "One", "Three"],
       "correctAnswer": "A",
       "explanation": "All four organs produce hormones but are not primarily endocrine glands: Heart produces ANF (i). Kidneys produce erythropoietin and calcitriol (ii). GI tract produces gastrin, secretin, CCK, GIP (iii). Liver produces angiotensinogen and IGFs (iv). These are examples of non-endocrine organs with endocrine functions.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "non-endocrine-hormones"
-      ],
+      "tags": ["non-endocrine-hormones"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1482,9 +1201,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "thyroid-hormone-actions"
-      ],
+      "tags": ["thyroid-hormone-actions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1506,10 +1223,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hormones",
-        "sources"
-      ],
+      "tags": ["hormones", "sources"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1531,10 +1245,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "causes"
-      ],
+      "tags": ["disorders", "causes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1545,22 +1256,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Match the adrenal cortex zone with its hormone:\n(P) Zona glomerulosa - (1) Cortisol\n(Q) Zona fasciculata - (2) Aldosterone\n(R) Zona reticularis - (3) Androgens",
-      "options": [
-        "P-2, Q-1, R-3",
-        "P-2, Q-3, R-1",
-        "P-3, Q-1, R-2",
-        "P-1, Q-2, R-3"
-      ],
+      "options": ["P-2, Q-1, R-3", "P-2, Q-3, R-1", "P-3, Q-1, R-2", "P-1, Q-2, R-3"],
       "correctAnswer": "A",
       "explanation": "Zona glomerulosa (outermost) secretes mineralocorticoids like aldosterone (P-2). Zona fasciculata (middle) secretes glucocorticoids like cortisol (Q-1). Zona reticularis (innermost) secretes small amounts of androgens (R-3). Mnemonic: GFR = Glomerulosa-Fasciculata-Reticularis; Salt-Sugar-Sex.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "adrenal-cortex",
-        "zones",
-        "hormones"
-      ],
+      "tags": ["adrenal-cortex", "zones", "hormones"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1582,10 +1284,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hormones",
-        "functions"
-      ],
+      "tags": ["hormones", "functions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1607,10 +1306,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tropic-hormones",
-        "targets"
-      ],
+      "tags": ["tropic-hormones", "targets"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1632,10 +1328,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hypothalamic-hormones",
-        "releasing-hormones"
-      ],
+      "tags": ["hypothalamic-hormones", "releasing-hormones"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1657,10 +1350,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pancreatic-cells",
-        "secretions"
-      ],
+      "tags": ["pancreatic-cells", "secretions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1682,10 +1372,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hormone-chemistry",
-        "types"
-      ],
+      "tags": ["hormone-chemistry", "types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1707,10 +1394,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "glands",
-        "locations"
-      ],
+      "tags": ["glands", "locations"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1721,20 +1405,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Match the antagonistic hormone pair:\n(P) Insulin - (1) Calcitonin\n(Q) PTH - (2) Glucagon\n(R) Sympathetic (adrenaline) - (3) Parasympathetic (ACh)",
-      "options": [
-        "P-2, Q-1, R-3",
-        "P-1, Q-2, R-3",
-        "P-3, Q-1, R-2",
-        "P-2, Q-3, R-1"
-      ],
+      "options": ["P-2, Q-1, R-3", "P-1, Q-2, R-3", "P-3, Q-1, R-2", "P-2, Q-3, R-1"],
       "correctAnswer": "A",
       "explanation": "Insulin and glucagon are antagonistic in blood glucose regulation (P-2). PTH and calcitonin are antagonistic in blood calcium regulation (Q-1). Sympathetic (adrenaline) and parasympathetic (ACh) have opposing effects on organs (R-3).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "antagonistic-hormones"
-      ],
+      "tags": ["antagonistic-hormones"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1745,21 +1422,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "How many hormones are secreted by the anterior pituitary?\n(a) GH (b) TSH (c) ACTH (d) FSH (e) LH (f) Prolactin (g) MSH (h) Oxytocin",
-      "options": [
-        "Five",
-        "Seven",
-        "Six",
-        "Eight"
-      ],
+      "options": ["Five", "Seven", "Six", "Eight"],
       "correctAnswer": "B",
       "explanation": "Seven hormones are from the anterior pituitary: (a) GH, (b) TSH, (c) ACTH, (d) FSH, (e) LH, (f) Prolactin, and (g) MSH. Oxytocin (h) is from the POSTERIOR pituitary (synthesized in hypothalamus), not the anterior pituitary.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "anterior-pituitary",
-        "hormone-count"
-      ],
+      "tags": ["anterior-pituitary", "hormone-count"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1770,21 +1439,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "How many parathyroid glands are present in a human body?",
-      "options": [
-        "Four",
-        "Two",
-        "Eight",
-        "Six"
-      ],
+      "options": ["Four", "Two", "Eight", "Six"],
       "correctAnswer": "A",
       "explanation": "There are four parathyroid glands in humans - two pairs (superior and inferior) embedded on the posterior surface of the thyroid gland. They secrete parathormone (PTH) which is a hypercalcemic hormone.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "parathyroid",
-        "number"
-      ],
+      "tags": ["parathyroid", "number"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1795,21 +1456,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "How many of the following are endocrine glands in the human body?\n(a) Pituitary (b) Thyroid (c) Parathyroid (d) Adrenal (e) Pancreas (islets) (f) Pineal (g) Thymus (h) Gonads",
-      "options": [
-        "Eight",
-        "Five",
-        "Seven",
-        "Six"
-      ],
+      "options": ["Eight", "Five", "Seven", "Six"],
       "correctAnswer": "A",
       "explanation": "All eight are endocrine glands: pituitary, thyroid, parathyroid, adrenal, pancreatic islets, pineal, thymus, and gonads (testes/ovaries). Additionally, the hypothalamus has endocrine function, and organs like the heart, kidneys, and GI tract also produce hormones.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "endocrine-glands",
-        "counting"
-      ],
+      "tags": ["endocrine-glands", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1820,21 +1473,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "How many zones does the adrenal cortex have?",
-      "options": [
-        "Five",
-        "Four",
-        "Two",
-        "Three"
-      ],
+      "options": ["Five", "Four", "Two", "Three"],
       "correctAnswer": "D",
       "explanation": "The adrenal cortex has three zones from outside to inside: (1) Zona glomerulosa (mineralocorticoids/aldosterone), (2) Zona fasciculata (glucocorticoids/cortisol), and (3) Zona reticularis (androgens). Mnemonic: GFR produces Salt, Sugar, Sex hormones.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "adrenal-cortex",
-        "zones"
-      ],
+      "tags": ["adrenal-cortex", "zones"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1845,20 +1490,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "How many of the following are hyperglycemic hormones?\n(a) Glucagon (b) Adrenaline (c) Cortisol (d) GH (e) Insulin (f) Thyroid hormones",
-      "options": [
-        "Five",
-        "Two",
-        "Three",
-        "Four"
-      ],
+      "options": ["Five", "Two", "Three", "Four"],
       "correctAnswer": "A",
       "explanation": "Five are hyperglycemic (raise blood glucose): (a) Glucagon (glycogenolysis), (b) Adrenaline (glycogenolysis), (c) Cortisol (gluconeogenesis), (d) GH (anti-insulin effect), and (f) Thyroid hormones (increase glucose absorption). Insulin (e) is the only HYPOglycemic hormone that lowers blood glucose.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hyperglycemic-hormones"
-      ],
+      "tags": ["hyperglycemic-hormones"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1869,21 +1507,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "How many types of cells are present in the islets of Langerhans?\n(a) Alpha cells (b) Beta cells (c) Delta cells (d) PP/F cells",
-      "options": [
-        "Four",
-        "Three",
-        "Five",
-        "Two"
-      ],
+      "options": ["Four", "Three", "Five", "Two"],
       "correctAnswer": "A",
       "explanation": "Four types of cells are present in the islets of Langerhans: (a) Alpha cells (~20%, secrete glucagon), (b) Beta cells (~70%, secrete insulin), (c) Delta cells (~5%, secrete somatostatin), and (d) PP/F cells (~5%, secrete pancreatic polypeptide).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "islets-of-langerhans",
-        "cell-types"
-      ],
+      "tags": ["islets-of-langerhans", "cell-types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1894,21 +1524,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "How many hormones are released from the posterior pituitary?",
-      "options": [
-        "Three",
-        "Four",
-        "One",
-        "Two"
-      ],
+      "options": ["Three", "Four", "One", "Two"],
       "correctAnswer": "D",
       "explanation": "Two hormones are released from the posterior pituitary: (1) Oxytocin (stimulates uterine contractions and milk ejection) and (2) ADH/Vasopressin (promotes water reabsorption in kidneys). Both are synthesized in the hypothalamus and transported to the posterior pituitary for storage and release.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "posterior-pituitary",
-        "hormones"
-      ],
+      "tags": ["posterior-pituitary", "hormones"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1919,21 +1541,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "How many of the following are symptoms/signs of diabetes mellitus?\n(a) Glycosuria (b) Polyuria (c) Polydipsia (d) Polyphagia (e) Hyperglycemia (f) Weight loss",
-      "options": [
-        "Five",
-        "Four",
-        "Three",
-        "Six"
-      ],
+      "options": ["Five", "Four", "Three", "Six"],
       "correctAnswer": "D",
       "explanation": "All six are symptoms/signs of diabetes mellitus: (a) Glycosuria (glucose in urine), (b) Polyuria (excessive urination), (c) Polydipsia (excessive thirst), (d) Polyphagia (excessive hunger), (e) Hyperglycemia (high blood sugar), and (f) Weight loss (especially in Type 1). The classic triad is polyuria, polydipsia, polyphagia.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "diabetes",
-        "symptoms"
-      ],
+      "tags": ["diabetes", "symptoms"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1955,10 +1569,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "HPT-axis",
-        "feedback"
-      ],
+      "tags": ["HPT-axis", "feedback"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1980,10 +1591,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "RAAS",
-        "sequence"
-      ],
+      "tags": ["RAAS", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2005,10 +1613,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cAMP-pathway",
-        "signal-transduction"
-      ],
+      "tags": ["cAMP-pathway", "signal-transduction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2030,11 +1635,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "adrenal-cortex",
-        "zones",
-        "sequence"
-      ],
+      "tags": ["adrenal-cortex", "zones", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2056,10 +1657,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "glucose-regulation",
-        "insulin"
-      ],
+      "tags": ["glucose-regulation", "insulin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2081,10 +1679,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "steroid-hormone-mechanism",
-        "gene-expression"
-      ],
+      "tags": ["steroid-hormone-mechanism", "gene-expression"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2106,10 +1701,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stress-response",
-        "HPA-axis"
-      ],
+      "tags": ["stress-response", "HPA-axis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2120,22 +1712,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Which hormone is known as the 'emergency hormone'?",
-      "options": [
-        "Insulin",
-        "Adrenaline (Epinephrine)",
-        "Thyroxine",
-        "Cortisol"
-      ],
+      "options": ["Insulin", "Adrenaline (Epinephrine)", "Thyroxine", "Cortisol"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, adrenaline (epinephrine), secreted by the adrenal medulla, is called the emergency hormone or 'fight or flight' hormone. It increases heart rate, blood pressure, and blood glucose levels during stress situations.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "adrenal-gland",
-        "adrenaline",
-        "emergency-hormone"
-      ],
+      "tags": ["adrenal-gland", "adrenaline", "emergency-hormone"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2146,22 +1729,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Cretinism in children is caused by deficiency of:",
-      "options": [
-        "Growth hormone",
-        "Insulin",
-        "Thyroid hormones",
-        "Parathyroid hormone"
-      ],
+      "options": ["Growth hormone", "Insulin", "Thyroid hormones", "Parathyroid hormone"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, deficiency of thyroid hormones during childhood causes cretinism, characterised by stunted growth, mental retardation, low intelligence, and abnormal skin. In adults, thyroid hormone deficiency causes myxoedema.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "thyroid",
-        "cretinism",
-        "hormone-deficiency"
-      ],
+      "tags": ["thyroid", "cretinism", "hormone-deficiency"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2172,22 +1746,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Diabetes insipidus is caused by deficiency of:",
-      "options": [
-        "Insulin",
-        "ADH (Vasopressin)",
-        "Aldosterone",
-        "Glucagon"
-      ],
+      "options": ["Insulin", "ADH (Vasopressin)", "Aldosterone", "Glucagon"],
       "correctAnswer": "B",
       "explanation": "Diabetes insipidus results from deficiency of ADH (antidiuretic hormone/vasopressin) from the posterior pituitary. It leads to excessive water loss through urine (polyuria) and excessive thirst (polydipsia). It is different from diabetes mellitus which involves insulin.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pituitary",
-        "adh",
-        "diabetes-insipidus"
-      ],
+      "tags": ["pituitary", "adh", "diabetes-insipidus"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2198,22 +1763,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "The islets of Langerhans are found in:",
-      "options": [
-        "Liver",
-        "Pancreas",
-        "Adrenal gland",
-        "Thyroid gland"
-      ],
+      "options": ["Liver", "Pancreas", "Adrenal gland", "Thyroid gland"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the islets of Langerhans are the endocrine part of the pancreas. They contain alpha cells (secrete glucagon) and beta cells (secrete insulin) that regulate blood glucose levels.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pancreas",
-        "islets-langerhans",
-        "endocrine"
-      ],
+      "tags": ["pancreas", "islets-langerhans", "endocrine"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2235,11 +1791,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ovary",
-        "corpus-luteum",
-        "progesterone"
-      ],
+      "tags": ["ovary", "corpus-luteum", "progesterone"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2250,22 +1802,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Addison's disease is caused by the hyposecretion of hormones from:",
-      "options": [
-        "Adrenal medulla",
-        "Adrenal cortex",
-        "Thyroid gland",
-        "Anterior pituitary"
-      ],
+      "options": ["Adrenal medulla", "Adrenal cortex", "Thyroid gland", "Anterior pituitary"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, Addison's disease results from hyposecretion of adrenal cortex hormones (glucocorticoids and mineralocorticoids). Symptoms include weakness, fatigue, hypotension, and darkening of the skin.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "adrenal-cortex",
-        "addisons-disease",
-        "hyposecretion"
-      ],
+      "tags": ["adrenal-cortex", "addisons-disease", "hyposecretion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2276,22 +1819,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Melatonin is secreted by:",
-      "options": [
-        "Thyroid gland",
-        "Pineal gland",
-        "Pituitary gland",
-        "Thymus gland"
-      ],
+      "options": ["Thyroid gland", "Pineal gland", "Pituitary gland", "Thymus gland"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, melatonin is secreted by the pineal gland. It plays a role in regulating the circadian rhythm (24-hour biological clock), sleep-wake cycle, and body temperature. Melatonin secretion increases in darkness.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pineal-gland",
-        "melatonin",
-        "circadian-rhythm"
-      ],
+      "tags": ["pineal-gland", "melatonin", "circadian-rhythm"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2302,22 +1836,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Graves' disease is associated with:",
-      "options": [
-        "Hypothyroidism",
-        "Hyperthyroidism",
-        "Hypoparathyroidism",
-        "Hypoadrenalism"
-      ],
+      "options": ["Hypothyroidism", "Hyperthyroidism", "Hypoparathyroidism", "Hypoadrenalism"],
       "correctAnswer": "B",
       "explanation": "Graves' disease is an autoimmune disorder that causes hyperthyroidism (overproduction of thyroid hormones). Symptoms include exophthalmos (bulging eyes), weight loss, increased metabolic rate, rapid heartbeat, and nervousness.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "thyroid",
-        "graves-disease",
-        "hyperthyroidism"
-      ],
+      "tags": ["thyroid", "graves-disease", "hyperthyroidism"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2339,11 +1864,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "heart",
-        "anf",
-        "blood-pressure"
-      ],
+      "tags": ["heart", "anf", "blood-pressure"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2354,22 +1875,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Erythropoietin, which stimulates red blood cell production, is primarily produced by:",
-      "options": [
-        "Liver",
-        "Spleen",
-        "Kidneys",
-        "Bone marrow"
-      ],
+      "options": ["Liver", "Spleen", "Kidneys", "Bone marrow"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the kidneys produce erythropoietin (EPO), a hormone that stimulates the production of red blood cells (erythropoiesis) in the bone marrow. EPO secretion increases in response to low oxygen levels (hypoxia).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "kidney",
-        "erythropoietin",
-        "rbc-production"
-      ],
+      "tags": ["kidney", "erythropoietin", "rbc-production"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2380,22 +1892,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Which hormone is responsible for the 'let-down' reflex during breastfeeding?",
-      "options": [
-        "Prolactin",
-        "Oxytocin",
-        "Estrogen",
-        "Progesterone"
-      ],
+      "options": ["Prolactin", "Oxytocin", "Estrogen", "Progesterone"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, oxytocin (from the posterior pituitary) acts on smooth muscles of the mammary glands causing milk ejection (let-down reflex). Prolactin (from the anterior pituitary) stimulates milk production but not its release.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pituitary",
-        "oxytocin",
-        "lactation"
-      ],
+      "tags": ["pituitary", "oxytocin", "lactation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2417,11 +1920,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "thyroid",
-        "calcitonin",
-        "calcium-regulation"
-      ],
+      "tags": ["thyroid", "calcitonin", "calcium-regulation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2443,11 +1942,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pituitary",
-        "growth-hormone",
-        "acromegaly"
-      ],
+      "tags": ["pituitary", "growth-hormone", "acromegaly"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2458,22 +1953,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Which of the following is a steroid hormone?",
-      "options": [
-        "Insulin",
-        "Thyroxine",
-        "Cortisol",
-        "Adrenaline"
-      ],
+      "options": ["Insulin", "Thyroxine", "Cortisol", "Adrenaline"],
       "correctAnswer": "C",
       "explanation": "Cortisol (a glucocorticoid from the adrenal cortex) is a steroid hormone derived from cholesterol. Insulin is a peptide hormone, thyroxine is an amino acid derivative, and adrenaline is a catecholamine (amino acid derivative).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hormone-types",
-        "steroid",
-        "cortisol"
-      ],
+      "tags": ["hormone-types", "steroid", "cortisol"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2484,22 +1970,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "The thymus gland is most active during:",
-      "options": [
-        "Old age",
-        "Childhood and adolescence",
-        "Pregnancy",
-        "Menopause"
-      ],
+      "options": ["Old age", "Childhood and adolescence", "Pregnancy", "Menopause"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the thymus gland plays a major role in immunity, especially during childhood. It secretes thymosins that promote T-cell differentiation. The thymus degenerates (involutes) with age, becoming smaller and less functional in adults.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "thymus",
-        "immunity",
-        "thymosins"
-      ],
+      "tags": ["thymus", "immunity", "thymosins"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2510,22 +1987,13 @@
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Glucocorticoids are secreted by which zone of the adrenal cortex?",
-      "options": [
-        "Zona glomerulosa",
-        "Zona fasciculata",
-        "Zona reticularis",
-        "Adrenal medulla"
-      ],
+      "options": ["Zona glomerulosa", "Zona fasciculata", "Zona reticularis", "Adrenal medulla"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the adrenal cortex has three zones: zona glomerulosa (secretes mineralocorticoids like aldosterone), zona fasciculata (secretes glucocorticoids like cortisol), and zona reticularis (secretes small amounts of androgens).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "adrenal-cortex",
-        "glucocorticoids",
-        "zona-fasciculata"
-      ],
+      "tags": ["adrenal-cortex", "glucocorticoids", "zona-fasciculata"],
       "neetWeightage": "HIGH"
     }
   ]

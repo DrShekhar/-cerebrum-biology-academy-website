@@ -18,8 +18,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Success Testimonials',
-    description:
-      '15,000+ students trained, 98% success rate, student transformation stories',
+    description: '15,000+ students trained, 98% success rate, student transformation stories',
     images: ['/og-image.jpg'],
   },
   alternates: {

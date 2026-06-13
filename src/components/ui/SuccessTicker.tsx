@@ -87,44 +87,40 @@ export function SuccessTicker({
   const scrollingText = [...successStories, ...successStories].join(' • ')
 
   return (
-<div
-        className="fixed bottom-16 sm:bottom-0 left-0 right-0 z-40 bg-blue-600 text-white shadow-lg border-t border-white/20 animate-fadeInUp"
-      >
-        <div className="relative overflow-hidden h-14 flex items-center">
-          {/* Icon */}
-          <div className="absolute left-4 z-10 flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-600/80 pr-4">
-            <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-              <TrendingUp className="w-4 h-4 text-white" />
-            </div>
-            <span className="text-sm font-semibold hidden sm:inline">Live Updates:</span>
+    <div className="fixed bottom-16 sm:bottom-0 left-0 right-0 z-40 bg-blue-600 text-white shadow-lg border-t border-white/20 animate-fadeInUp">
+      <div className="relative overflow-hidden h-14 flex items-center">
+        {/* Icon */}
+        <div className="absolute left-4 z-10 flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-600/80 pr-4">
+          <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+            <TrendingUp className="w-4 h-4 text-white" />
           </div>
-
-          {/* Scrolling Text */}
-          <div className="absolute left-0 right-0 flex items-center h-full pl-16 sm:pl-40 pr-16">
-            <div
-              className="flex items-center whitespace-nowrap animate-fadeInUp"
-            >
-              <span className="text-sm font-medium">{scrollingText}</span>
-            </div>
-          </div>
-
-          {/* Close Button */}
-          {showCloseButton && (
-            <button
-              onClick={handleDismiss}
-              className="absolute right-4 z-10 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors duration-200 backdrop-blur-sm"
-              aria-label="Close ticker"
-            >
-              <X className="w-4 h-4 text-white" />
-            </button>
-          )}
-
-          {/* Gradient Overlays for Fade Effect */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 sm:w-40 bg-gradient-to-r from-blue-600 to-transparent pointer-events-none z-20" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 sm:w-40 bg-gradient-to-l from-indigo-600 to-transparent pointer-events-none z-20" />
+          <span className="text-sm font-semibold hidden sm:inline">Live Updates:</span>
         </div>
+
+        {/* Scrolling Text */}
+        <div className="absolute left-0 right-0 flex items-center h-full pl-16 sm:pl-40 pr-16">
+          <div className="flex items-center whitespace-nowrap animate-fadeInUp">
+            <span className="text-sm font-medium">{scrollingText}</span>
+          </div>
+        </div>
+
+        {/* Close Button */}
+        {showCloseButton && (
+          <button
+            onClick={handleDismiss}
+            className="absolute right-4 z-10 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors duration-200 backdrop-blur-sm"
+            aria-label="Close ticker"
+          >
+            <X className="w-4 h-4 text-white" />
+          </button>
+        )}
+
+        {/* Gradient Overlays for Fade Effect */}
+        <div className="absolute left-0 top-0 bottom-0 w-32 sm:w-40 bg-gradient-to-r from-blue-600 to-transparent pointer-events-none z-20" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 sm:w-40 bg-gradient-to-l from-indigo-600 to-transparent pointer-events-none z-20" />
       </div>
-)
+    </div>
+  )
 }
 
 // Compact mobile ticker variant
@@ -196,9 +192,7 @@ export function CompactSuccessTicker() {
   if (!isVisible || isDismissed || !currentStory) return null
 
   return (
-    <div
-      className="lg:hidden fixed bottom-20 left-4 right-4 z-40 bg-[#4a5d4a] text-white p-3 rounded-lg shadow-lg animate-fadeInUp"
-    >
+    <div className="lg:hidden fixed bottom-20 left-4 right-4 z-40 bg-[#4a5d4a] text-white p-3 rounded-lg shadow-lg animate-fadeInUp">
       <div className="flex items-start gap-2">
         <div className="flex-shrink-0 mt-0.5">
           <Trophy className="w-4 h-4" />

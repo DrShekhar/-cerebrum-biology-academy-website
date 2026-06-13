@@ -148,7 +148,7 @@ const faqs = [
   {
     question: 'Which coaching has smaller batches?',
     answer:
-      'Aarambh has slightly smaller batches (10-15 students) compared to Cerebrum (15-20 students). However, both are far smaller than large institutes like the 2nd-largest national NEET chain (60-120) or the largest national NEET chain (80-150). The practical difference between 15 and 10 students per batch is minimal — both allow genuine personal attention.',
+      'Aarambh has slightly smaller batches (10-15 students) compared to Cerebrum (15-20 students). However, both are far smaller than large institutes like Aakash (60-120) or Allen (80-150). The practical difference between 15 and 10 students per batch is minimal — both allow genuine personal attention.',
   },
   {
     question: 'How do I decide between Cerebrum and Aarambh for NEET 2026?',
@@ -176,8 +176,7 @@ export default function CerebrumVsAarambhPage() {
     },
     datePublished: '2026-03-20',
     dateModified: '2026-06-08',
-    mainEntityOfPage:
-      'https://cerebrumbiologyacademy.com/blog/cerebrum-vs-aarambh-gurugram-2026',
+    mainEntityOfPage: 'https://cerebrumbiologyacademy.com/blog/cerebrum-vs-aarambh-gurugram-2026',
   }
 
   const faqSchema = {
@@ -221,7 +220,11 @@ export default function CerebrumVsAarambhPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <script
         type="application/ld+json"
@@ -286,9 +289,7 @@ export default function CerebrumVsAarambhPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-4">Quick Verdict</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white rounded-lg p-5 border border-green-200">
-                <div className="font-bold text-green-700 text-lg mb-2">
-                  Choose Cerebrum if...
-                </div>
+                <div className="font-bold text-green-700 text-lg mb-2">Choose Cerebrum if...</div>
                 <ul className="space-y-2 text-sm text-gray-700">
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-0.5 flex-shrink-0">✓</span>
@@ -309,9 +310,7 @@ export default function CerebrumVsAarambhPage() {
                 </ul>
               </div>
               <div className="bg-white rounded-lg p-5 border border-blue-200">
-                <div className="font-bold text-blue-700 text-lg mb-2">
-                  Choose Aarambh if...
-                </div>
+                <div className="font-bold text-blue-700 text-lg mb-2">Choose Aarambh if...</div>
                 <ul className="space-y-2 text-sm text-gray-700">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-500 mt-0.5 flex-shrink-0">✓</span>
@@ -406,9 +405,9 @@ export default function CerebrumVsAarambhPage() {
               Cerebrum charges ₹48,000-98,000 per year for Biology-focused NEET coaching, while
               Aarambh charges ₹60,000-1,20,000 for all-subject coaching. On the surface, Aarambh
               appears to offer more subjects for a slightly higher price. However, the per-subject
-              cost tells a different story: Aarambh&apos;s Biology teaching costs roughly ₹20,000-40,000
-              per subject, whereas Cerebrum dedicates the entire fee to Biology mastery with
-              AIIMS-level depth.
+              cost tells a different story: Aarambh&apos;s Biology teaching costs roughly
+              ₹20,000-40,000 per subject, whereas Cerebrum dedicates the entire fee to Biology
+              mastery with AIIMS-level depth.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Many students combine Cerebrum (₹48K-98K for Biology) with a separate
@@ -429,10 +428,10 @@ export default function CerebrumVsAarambhPage() {
               application.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Aarambh&apos;s faculty comes from IIT/NIT backgrounds, which is excellent for Physics and
-              Mathematics but not directly aligned with medical entrance Biology. For NEET, where
-              Biology is the highest-weightage subject (360/720 marks), having a faculty member who
-              has taught at India&apos;s top medical college is a significant advantage.
+              Aarambh&apos;s faculty comes from IIT/NIT backgrounds, which is excellent for Physics
+              and Mathematics but not directly aligned with medical entrance Biology. For NEET,
+              where Biology is the highest-weightage subject (360/720 marks), having a faculty
+              member who has taught at India&apos;s top medical college is a significant advantage.
             </p>
           </div>
 
@@ -442,8 +441,8 @@ export default function CerebrumVsAarambhPage() {
             <p className="text-gray-600 mb-4 leading-relaxed">
               Cerebrum follows an NCERT-first methodology, which is critical because 90%+ of NEET
               Biology questions come directly from NCERT. Each NCERT line is taught with AIIMS-level
-              depth, clinical examples, and previous year question mapping. This approach has resulted
-              in students consistently scoring 300+ in Biology.
+              depth, clinical examples, and previous year question mapping. This approach has
+              resulted in students consistently scoring 300+ in Biology.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Aarambh uses a concept-based approach rooted in IIT problem-solving methodology. While
@@ -460,8 +459,8 @@ export default function CerebrumVsAarambhPage() {
               Both institutes offer strong student support due to small batch sizes. Cerebrum
               provides daily 1-on-1 doubt-clearing sessions directly with faculty (not teaching
               assistants), weekly performance tracking, parent-teacher meetings, and personalized
-              study plans. Aarambh offers regular doubt sessions and mentoring. Both are far superior
-              to large institutes where students are just numbers.
+              study plans. Aarambh offers regular doubt sessions and mentoring. Both are far
+              superior to large institutes where students are just numbers.
             </p>
           </div>
 
@@ -484,9 +483,7 @@ export default function CerebrumVsAarambhPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Final Scorecard</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white rounded-xl p-6 border border-green-200 shadow-sm">
-                <h3 className="text-xl font-bold text-green-700 mb-4">
-                  Cerebrum Biology Academy
-                </h3>
+                <h3 className="text-xl font-bold text-green-700 mb-4">Cerebrum Biology Academy</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-gray-600">Biology Faculty</span>
@@ -646,7 +643,7 @@ export default function CerebrumVsAarambhPage() {
               href="/cerebrum-vs-aakash"
               className="block p-4 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 transition-colors"
             >
-              <div className="font-medium text-gray-900">Cerebrum vs the 2nd-largest national NEET chain</div>
+              <div className="font-medium text-gray-900">Cerebrum vs Aakash</div>
               <p className="text-sm text-gray-500 mt-1">Another head-to-head comparison</p>
             </Link>
           </div>

@@ -73,9 +73,7 @@ export default function BotanyTeacherPage() {
       <section className="relative overflow-hidden bg-green-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
-          <div
-            className="mx-auto max-w-4xl text-center animate-fadeInUp"
-          >
+          <div className="mx-auto max-w-4xl text-center animate-fadeInUp">
             <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <Leaf className="mr-1 inline h-4 w-4" />
               45% of NEET Biology = Botany
@@ -131,9 +129,7 @@ export default function BotanyTeacherPage() {
       {/* NEET Botany Breakdown */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">NEET Botany Topic Weightage</h2>
             <p className="text-lg text-gray-600">
               Our expert teachers focus on high-yield botany topics
@@ -143,10 +139,7 @@ export default function BotanyTeacherPage() {
           <div className="mx-auto max-w-4xl">
             <div className="rounded-xl bg-white p-6 shadow-lg">
               {botanyTopics.map((topic, index) => (
-                <div
-                  key={index}
-                  className="mb-4 last:mb-0 animate-fadeInUp"
-                >
+                <div key={index} className="mb-4 last:mb-0 animate-fadeInUp">
                   <div className="mb-2 flex justify-between">
                     <span className="font-medium text-gray-900">{topic.name}</span>
                     <span className="text-gray-600">
@@ -154,9 +147,7 @@ export default function BotanyTeacherPage() {
                     </span>
                   </div>
                   <div className="h-3 overflow-hidden rounded-full bg-gray-200">
-                    <div
-                      className={`h-full ${topic.color} rounded-full`}
-                    />
+                    <div className={`h-full ${topic.color} rounded-full`} />
                   </div>
                 </div>
               ))}
@@ -168,9 +159,7 @@ export default function BotanyTeacherPage() {
       {/* Why Choose Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Why Choose Our Botany Faculty</h2>
           </div>
 
@@ -207,10 +196,7 @@ export default function BotanyTeacherPage() {
                 desc: 'Analysis of 10+ years of NEET botany questions for pattern recognition.',
               },
             ].map((feature, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <feature.icon className="mb-4 h-10 w-10 text-green-600" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
@@ -223,18 +209,13 @@ export default function BotanyTeacherPage() {
       {/* FAQs */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
           </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>

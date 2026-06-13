@@ -221,13 +221,7 @@ export function OptimizedImage({
   // Progressive enhancement wrapper
   const ProgressiveWrapper = ({ children }: { children: React.ReactNode }) => {
     if (!shouldReduceAnimations) {
-      return (
-        <div
-          className="relative animate-fadeInUp"
-        >
-          {children}
-        </div>
-      )
+      return <div className="relative animate-fadeInUp">{children}</div>
     }
 
     return <div className="relative">{children}</div>

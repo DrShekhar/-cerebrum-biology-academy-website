@@ -142,16 +142,12 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
       <div className="relative bg-navy-900 text-white overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0">
-          <div
-            className="absolute top-1/4 left-1/6 w-96 h-96 bg-gradient-to-br from-green-500/15 to-green-600/10 rounded-full blur-3xl animate-fadeInUp"
-          />
+          <div className="absolute top-1/4 left-1/6 w-96 h-96 bg-gradient-to-br from-green-500/15 to-green-600/10 rounded-full blur-3xl animate-fadeInUp" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Live Stats Bar */}
-          <div
-            className="bg-white/10 backdrop-blur-sm rounded-lg px-4 sm:px-6 py-3 mb-6 sm:mb-8 animate-fadeInUp"
-          >
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 sm:px-6 py-3 mb-6 sm:mb-8 animate-fadeInUp">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 md:gap-8 text-xs sm:text-sm font-semibold">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
@@ -176,9 +172,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
 
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
             {/* Left Column - Value Proposition */}
-            <div
-              className="space-y-6 sm:space-y-8 animate-fadeInUp"
-            >
+            <div className="space-y-6 sm:space-y-8 animate-fadeInUp">
               <div className="space-y-4 sm:space-y-6">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   <span className="bg-gradient-to-r from-orange-300 via-yellow-300 to-green-300 bg-clip-text text-transparent">
@@ -256,9 +250,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
             </div>
 
             {/* Right Column - Quiz Component */}
-            <div
-              className="space-y-6 animate-fadeInUp"
-            >
+            <div className="space-y-6 animate-fadeInUp">
               <QuickQuizFlow onComplete={handleQuizComplete} />
 
               {/* Social Proof Testimonials */}
@@ -308,14 +300,14 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
       </div>
 
       {/* Instant Enrollment Modal */}
-{showEnrollment && quizResult && (
-          <InstantEnrollment
-            quizResult={quizResult}
-            onClose={() => setShowEnrollment(false)}
-            onSuccess={handleEnrollmentSuccess}
-          />
-        )}
-{/* Conversion Stats Section */}
+      {showEnrollment && quizResult && (
+        <InstantEnrollment
+          quizResult={quizResult}
+          onClose={() => setShowEnrollment(false)}
+          onSuccess={handleEnrollmentSuccess}
+        />
+      )}
+      {/* Conversion Stats Section */}
       <div className="py-10 sm:py-12 md:py-16 bg-navy-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
@@ -329,10 +321,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
               { value: '67+', label: 'AIIMS Selections', desc: 'Proven Results' },
               { value: '5000+', label: 'Students Enrolled', desc: 'Via Quick Quiz' },
             ].map((stat, index) => (
-              <div
-                key={index}
-                className="text-center animate-fadeInUp"
-              >
+              <div key={index} className="text-center animate-fadeInUp">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">
                   {stat.value}
                 </div>

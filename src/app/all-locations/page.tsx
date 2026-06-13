@@ -197,22 +197,11 @@ const organizationSchema = {
     },
     {
       '@type': 'Place',
-      name: 'Cerebrum Biology Academy - Noida',
+      name: 'Cerebrum Biology Academy - Green Park',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Sector 62',
-        addressLocality: 'Noida',
-        addressRegion: 'Uttar Pradesh',
-        addressCountry: 'IN',
-      },
-    },
-    {
-      '@type': 'Place',
-      name: 'Cerebrum Biology Academy - Ghaziabad',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Ghaziabad',
-        addressRegion: 'Uttar Pradesh',
+        addressLocality: 'Green Park, New Delhi',
+        addressRegion: 'Delhi',
         addressCountry: 'IN',
       },
     },
@@ -242,12 +231,12 @@ export default function AllLocationsPage() {
               Biology Classes <span className="text-yellow-400">Near You</span>
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-10">
-              6 offline coaching centers across Delhi NCR plus live online classes for students
+              5 offline coaching centers across Delhi NCR plus live online classes for students
               across India and 14+ countries worldwide
             </p>
             <div className="grid grid-cols-3 gap-4 sm:gap-8 max-w-xl mx-auto">
               <div>
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400">6</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400">5</div>
                 <div className="text-xs sm:text-sm text-slate-400 mt-1">Centers</div>
               </div>
               <div>
@@ -395,7 +384,13 @@ export default function AllLocationsPage() {
                 size="lg"
                 className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold min-h-[44px] px-8 rounded-xl shadow-lg hover:shadow-xl"
               >
-                <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20all%20locations.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">Book a Free Demo Class</Link>
+                <Link
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20all%20locations.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Book a Free Demo Class
+                </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="min-h-[44px] px-8 rounded-xl">
                 <Link href="/courses">Explore All Courses</Link>

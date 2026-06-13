@@ -89,9 +89,7 @@ export default function DashboardError({ error, reset }: ErrorProps) {
           )}
         </div>
 
-        <div
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fadeInUp"
-        >
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fadeInUp">
           <Button size="lg" onClick={handleReset}>
             <RefreshCw className="w-5 h-5 mr-2" />
             Reload Dashboard
@@ -104,9 +102,7 @@ export default function DashboardError({ error, reset }: ErrorProps) {
           </Link>
         </div>
 
-        <div
-          className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto mb-12 animate-fadeInUp"
-        >
+        <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto mb-12 animate-fadeInUp">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">Quick Access</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link
@@ -163,9 +159,7 @@ export default function DashboardError({ error, reset }: ErrorProps) {
           </div>
         </div>
 
-        <div
-          className="bg-gray-50 rounded-2xl p-8 max-w-2xl mx-auto animate-fadeInUp"
-        >
+        <div className="bg-gray-50 rounded-2xl p-8 max-w-2xl mx-auto animate-fadeInUp">
           <h3 className="text-xl font-semibold text-gray-900 mb-4">Need Assistance?</h3>
           <p className="text-gray-600 mb-6">
             If you continue to experience issues accessing your dashboard, our support team is here
@@ -192,9 +186,7 @@ export default function DashboardError({ error, reset }: ErrorProps) {
         </div>
 
         {error.digest && (
-          <div
-            className="mt-8 text-center animate-fadeInUp"
-          >
+          <div className="mt-8 text-center animate-fadeInUp">
             <div className="text-sm text-gray-500">
               Error ID:{' '}
               <code className="bg-gray-100 px-2 py-1 rounded text-xs font-mono">

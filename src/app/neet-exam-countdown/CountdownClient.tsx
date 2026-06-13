@@ -123,21 +123,41 @@ export function CountdownClient() {
       {/* Countdown Cards */}
       <div className="mx-auto mb-8 grid max-w-3xl grid-cols-4 gap-2 sm:gap-4">
         {[
-          { value: displayTime.days, label: 'Days', color: 'text-red-500', borderColor: 'border-t-red-500' },
-          { value: displayTime.hours, label: 'Hours', color: 'text-blue-500', borderColor: 'border-t-blue-500' },
-          { value: displayTime.minutes, label: 'Minutes', color: 'text-amber-500', borderColor: 'border-t-amber-500' },
-          { value: displayTime.seconds, label: 'Seconds', color: 'text-green-500', borderColor: 'border-t-green-500' },
+          {
+            value: displayTime.days,
+            label: 'Days',
+            color: 'text-red-500',
+            borderColor: 'border-t-red-500',
+          },
+          {
+            value: displayTime.hours,
+            label: 'Hours',
+            color: 'text-blue-500',
+            borderColor: 'border-t-blue-500',
+          },
+          {
+            value: displayTime.minutes,
+            label: 'Minutes',
+            color: 'text-amber-500',
+            borderColor: 'border-t-amber-500',
+          },
+          {
+            value: displayTime.seconds,
+            label: 'Seconds',
+            color: 'text-green-500',
+            borderColor: 'border-t-green-500',
+          },
         ].map((item) => (
           <div
             key={item.label}
             className={`rounded-2xl bg-white border border-gray-100 shadow-sm px-2 py-4 sm:p-4 md:p-6 border-t-4 ${item.borderColor}`}
           >
-            <div
-              className="text-3xl font-bold text-gray-900 md:text-4xl lg:text-5xl tabular-nums"
-            >
+            <div className="text-3xl font-bold text-gray-900 md:text-4xl lg:text-5xl tabular-nums">
               {item.value.toString().padStart(2, '0')}
             </div>
-            <div className={`mt-1 text-xs font-semibold uppercase tracking-wide ${item.color} md:text-sm`}>
+            <div
+              className={`mt-1 text-xs font-semibold uppercase tracking-wide ${item.color} md:text-sm`}
+            >
               {item.label}
             </div>
           </div>

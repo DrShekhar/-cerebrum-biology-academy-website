@@ -686,9 +686,7 @@ export default function StudentTestPage() {
         {/* Submit Confirmation Modal */}
         {showSubmitConfirm && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div
-              className="bg-white rounded-2xl p-6 max-w-md mx-4 w-full animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl p-6 max-w-md mx-4 w-full animate-fadeInUp">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Submit Test?</h3>
 
               <div className="space-y-3 mb-6">
@@ -740,9 +738,7 @@ export default function StudentTestPage() {
         {/* Exit Confirmation Modal */}
         {showExitConfirm && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div
-              className="bg-white rounded-2xl p-6 max-w-md mx-4 w-full animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl p-6 max-w-md mx-4 w-full animate-fadeInUp">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Exit Test?</h3>
               <p className="text-gray-600 mb-6">
                 Your progress will be saved. You can continue the test later.

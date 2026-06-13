@@ -6,11 +6,19 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'NEET Biology NCERT Notes | Chapter-wise Summary | Free PDF',
-  description: 'Download free NEET Biology NCERT chapter-wise quick revision notes. Concise summaries of all 38 chapters. Perfect for last-minute revision. By AIIMS faculty.',
-  keywords: ['NEET biology NCERT notes', 'NCERT biology summary', 'NEET revision notes', 'chapter wise biology notes NEET', 'NCERT quick revision biology'],
+  description:
+    'Download free NEET Biology NCERT chapter-wise quick revision notes. Concise summaries of all 38 chapters. Perfect for last-minute revision. By AIIMS faculty.',
+  keywords: [
+    'NEET biology NCERT notes',
+    'NCERT biology summary',
+    'NEET revision notes',
+    'chapter wise biology notes NEET',
+    'NCERT quick revision biology',
+  ],
   openGraph: {
     title: 'NEET Biology NCERT Notes | Chapter-wise Summary | Free PDF',
-    description: 'Download free NEET Biology NCERT chapter-wise quick revision notes. Concise summaries of all 38 chapters. Perfect for last-minute revision. By AIIMS faculty.',
+    description:
+      'Download free NEET Biology NCERT chapter-wise quick revision notes. Concise summaries of all 38 chapters. Perfect for last-minute revision. By AIIMS faculty.',
     url: `${BASE_URL}/free-neet-biology-ncert-notes`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -19,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Free NEET Biology NCERT Quick Notes',
-    description: 'Download free NEET Biology NCERT chapter-wise quick revision notes. Concise summaries of all 38 chapters. Perfect for la',
+    description:
+      'Download free NEET Biology NCERT chapter-wise quick revision notes. Concise summaries of all 38 chapters. Perfect for la',
   },
   alternates: { canonical: `${BASE_URL}/free-neet-biology-ncert-notes` },
 }
@@ -58,7 +67,11 @@ const faqSchema = {
 export default function FreeNeetBiologyNcertNotesPage() {
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <PageContent />
     </>
   )

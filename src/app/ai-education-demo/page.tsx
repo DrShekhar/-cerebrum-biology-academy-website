@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Ceri AI - Next-Gen NEET Biology Tutor',
-    description: 'Experience Ceri AI - the most advanced AI-powered Biology tutor for NEET preparation. 24/7 instant doubt resolution, visual explanations, voice interaction, and personalized learning.',
+    description:
+      'Experience Ceri AI - the most advanced AI-powered Biology tutor for NEET preparation. 24/7 instant doubt resolution, visual explanations, voice interaction, and personalized learning.',
   },
 }
 

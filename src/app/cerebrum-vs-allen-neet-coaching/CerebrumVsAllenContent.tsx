@@ -33,24 +33,79 @@ interface FAQ {
 
 const comparisonData = [
   { feature: 'Batch Size', cerebrum: '15-20 students', allen: '200+ students', winner: 'cerebrum' },
-  { feature: 'Faculty Background', cerebrum: 'AIIMS-trained (Dr. Shekhar)', allen: 'Mixed faculty pool', winner: 'cerebrum' },
-  { feature: 'Personal Attention', cerebrum: 'High - Every student known by name', allen: 'Low - Mass batches', winner: 'cerebrum' },
-  { feature: 'Subject Focus', cerebrum: 'Biology Specialized', allen: 'All subjects (Physics, Chemistry, Biology)', winner: 'tie' },
-  { feature: 'Doubt Clearing', cerebrum: 'Daily 1-on-1 sessions', allen: 'Crowded doubt counters', winner: 'cerebrum' },
-  { feature: 'Study Material', cerebrum: 'NCERT-focused, curated notes', allen: 'Comprehensive but bulky', winner: 'tie' },
-  { feature: 'Mock Tests', cerebrum: '50+ NEET-pattern Biology tests', allen: '30+ full-length tests', winner: 'cerebrum' },
-  { feature: 'Fee Structure', cerebrum: 'Rs 45K - Rs 1.56L/year', allen: 'Rs 1.2L - Rs 2L/year', winner: 'cerebrum' },
-  { feature: 'Biology Success Rate', cerebrum: '98% (300+ in Biology)', allen: '~85% (overall)', winner: 'cerebrum' },
-  { feature: 'Online + Offline', cerebrum: 'Full hybrid model', allen: 'Primarily offline', winner: 'cerebrum' },
-  { feature: 'Parent Updates', cerebrum: 'Weekly progress reports', allen: 'Periodic PTMs', winner: 'cerebrum' },
-  { feature: 'Test Analysis', cerebrum: 'AI-powered weakness detection', allen: 'Basic rank analysis', winner: 'cerebrum' },
+  {
+    feature: 'Faculty Background',
+    cerebrum: 'AIIMS-trained (Dr. Shekhar)',
+    allen: 'Mixed faculty pool',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Personal Attention',
+    cerebrum: 'High - Every student known by name',
+    allen: 'Low - Mass batches',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Subject Focus',
+    cerebrum: 'Biology Specialized',
+    allen: 'All subjects (Physics, Chemistry, Biology)',
+    winner: 'tie',
+  },
+  {
+    feature: 'Doubt Clearing',
+    cerebrum: 'Daily 1-on-1 sessions',
+    allen: 'Crowded doubt counters',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Study Material',
+    cerebrum: 'NCERT-focused, curated notes',
+    allen: 'Comprehensive but bulky',
+    winner: 'tie',
+  },
+  {
+    feature: 'Mock Tests',
+    cerebrum: '50+ NEET-pattern Biology tests',
+    allen: '30+ full-length tests',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Fee Structure',
+    cerebrum: 'Rs 45K - Rs 1.56L/year',
+    allen: 'Rs 1.2L - Rs 2L/year',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Biology Success Rate',
+    cerebrum: '98% (300+ in Biology)',
+    allen: '~85% (overall)',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Online + Offline',
+    cerebrum: 'Full hybrid model',
+    allen: 'Primarily offline',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Parent Updates',
+    cerebrum: 'Weekly progress reports',
+    allen: 'Periodic PTMs',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Test Analysis',
+    cerebrum: 'AI-powered weakness detection',
+    allen: 'Basic rank analysis',
+    winner: 'cerebrum',
+  },
 ]
 
 const reasonsToSwitch = [
   {
     title: 'Lost in Large Batches?',
     description:
-      'the largest national NEET chain\'s 200+ student batches make personal attention nearly impossible. At Cerebrum, with only 15-20 students, every doubt gets addressed and every student is tracked individually.',
+      "Allen's 200+ student batches make personal attention nearly impossible. At Cerebrum, with only 15-20 students, every doubt gets addressed and every student is tracked individually.",
     icon: Users,
   },
   {
@@ -68,7 +123,7 @@ const reasonsToSwitch = [
   {
     title: 'Value for Money',
     description:
-      'Get premium Biology coaching at 20-40% lower fees than the largest national NEET chain, with significantly better student-teacher ratio. Small investment, big returns.',
+      'Get premium Biology coaching at 20-40% lower fees than Allen, with significantly better student-teacher ratio. Small investment, big returns.',
     icon: IndianRupee,
   },
 ]
@@ -77,33 +132,33 @@ const successStories = [
   {
     name: 'Sadhna Sirin',
     score: '695/720',
-    previousInstitute: 'Ex-the largest national NEET chain Student',
+    previousInstitute: 'Ex-Allen Student',
     quote:
-      'After struggling in the largest national NEET chain\'s large batches, I joined Cerebrum for Biology. The personal attention and AIIMS faculty made all the difference. My Biology score jumped from 280 to 360!',
+      "After struggling in Allen's large batches, I joined Cerebrum for Biology. The personal attention and AIIMS faculty made all the difference. My Biology score jumped from 280 to 360!",
     improvement: '+80 in Biology',
   },
   {
     name: 'Rahul Sharma',
     score: '658/720',
-    previousInstitute: 'the largest national NEET chain + Cerebrum',
+    previousInstitute: 'Allen + Cerebrum',
     quote:
-      'I continued Physics/Chemistry at the largest national NEET chain but joined Cerebrum for Biology. Best decision ever - Biology became my strongest subject with 350+ marks.',
+      'I continued Physics/Chemistry at Allen but joined Cerebrum for Biology. Best decision ever - Biology became my strongest subject with 350+ marks.',
     improvement: 'Biology strongest subject',
   },
   {
     name: 'Priya Gupta',
     score: '642/720',
-    previousInstitute: 'Dropper (Previously the largest national NEET chain)',
+    previousInstitute: 'Dropper (Previously Allen)',
     quote:
-      'First attempt at the largest national NEET chain - 520. Joined Cerebrum for my drop year. The focused Biology coaching and personalized study plan helped me improve by 122 marks.',
+      'First attempt at Allen - 520. Joined Cerebrum for my drop year. The focused Biology coaching and personalized study plan helped me improve by 122 marks.',
     improvement: '+122 overall',
   },
 ]
 
 const complementBenefits = [
-  'Weekend batches that don\'t clash with the largest national NEET chain schedule',
+  "Weekend batches that don't clash with Allen schedule",
   'Evening sessions for extra Biology practice',
-  'Centers near major the largest national NEET chain locations in Delhi NCR',
+  'Centers near major Allen locations in Delhi NCR',
   'Focused Biology boost for weak areas',
   'Flexible online option for revision',
 ]
@@ -115,7 +170,7 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
     trackAndOpenWhatsApp({
       source: 'cerebrum-vs-allen-neet-coaching',
       message:
-        'Hi! I want to compare Cerebrum and the largest national NEET chain for NEET Biology coaching. Please share how Cerebrum is different and better for Biology preparation.',
+        'Hi! I want to compare Cerebrum and Allen for NEET Biology coaching. Please share how Cerebrum is different and better for Biology preparation.',
       campaign: 'cerebrum-vs-allen',
     })
   }
@@ -139,7 +194,7 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <span className="text-teal-700 font-medium">Cerebrum vs the largest national NEET chain</span>
+              <span className="text-teal-700 font-medium">Cerebrum vs Allen</span>
             </li>
           </ol>
         </div>
@@ -153,22 +208,20 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="max-w-4xl animate-fadeInUp"
-          >
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="w-4 h-4" />
               Honest Comparison for NEET 2026
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Cerebrum vs the largest national NEET chain
+              Cerebrum vs Allen
               <span className="block text-teal-400 mt-2">NEET Biology Coaching Comparison</span>
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              A fair, fact-based comparison to help you make the right choice for NEET Biology preparation.
-              See why 500+ students chose focused coaching over mass batches.
+              A fair, fact-based comparison to help you make the right choice for NEET Biology
+              preparation. See why 500+ students chose focused coaching over mass batches.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -187,7 +240,11 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20cerebrum%20vs%20allen%20neet%20coaching.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20cerebrum%20vs%20allen%20neet%20coaching.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -219,7 +276,7 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
             </div>
             <div>
               <p className="text-3xl font-bold text-orange-600">200+</p>
-              <p className="text-sm text-gray-600">the largest national NEET chain Batch Size</p>
+              <p className="text-sm text-gray-600">Allen Batch Size</p>
             </div>
             <div>
               <p className="text-3xl font-bold text-green-600">98%</p>
@@ -236,11 +293,9 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
       {/* Why Students Switch */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Why Students Switch from the largest national NEET chain to Cerebrum
+              Why Students Switch from Allen to Cerebrum
             </h2>
             <p className="text-xl text-slate-600">
               Common challenges that bring students to focused Biology coaching
@@ -267,11 +322,9 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
       {/* Detailed Comparison Table */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Cerebrum vs the largest national NEET chain: Detailed Comparison
+              Cerebrum vs Allen: Detailed Comparison
             </h2>
             <p className="text-xl text-slate-600">
               Side-by-side comparison of key factors for NEET Biology preparation
@@ -289,7 +342,7 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
                       Cerebrum
                     </span>
                   </th>
-                  <th className="px-6 py-4 text-center font-semibold">the largest national NEET chain</th>
+                  <th className="px-6 py-4 text-center font-semibold">Allen</th>
                 </tr>
               </thead>
               <tbody>
@@ -330,16 +383,12 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
       {/* Success Stories */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Award className="w-4 h-4" />
               Real Results
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Students Who Made the Switch
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Students Who Made the Switch</h2>
             <p className="text-xl text-slate-300">
               Real success stories from students who chose focused Biology coaching
             </p>
@@ -379,16 +428,16 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 bg-gradient-to-br from-blue-600 to-teal-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Don't Want to Leave the largest national NEET chain?
+                Don't Want to Leave Allen?
                 <br />
                 Complement Your Coaching!
               </h2>
               <p className="text-xl text-blue-100 mb-6">
-                Many students continue at the largest national NEET chain for Physics & Chemistry while joining Cerebrum
-                specifically for Biology. Get the best of both worlds without compromising on either.
+                Many students continue at Allen for Physics & Chemistry while joining Cerebrum
+                specifically for Biology. Get the best of both worlds without compromising on
+                either.
               </p>
               <ul className="space-y-3 mb-8">
                 {complementBenefits.map((benefit) => (
@@ -398,16 +447,18 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
                   </li>
                 ))}
               </ul>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20cerebrum%20vs%20allen%20neet%20coaching.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20cerebrum%20vs%20allen%20neet%20coaching.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button className="bg-white text-blue-600 hover:bg-blue-50">
                   Book a Free Trial Class <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
             </div>
 
-            <div
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp"
-            >
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
               <h3 className="text-2xl font-bold mb-6">The Winning Combination</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4 p-4 bg-white/10 rounded-xl">
@@ -415,7 +466,7 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
                     <span className="font-bold">A</span>
                   </div>
                   <div>
-                    <p className="font-semibold">the largest national NEET chain for Physics & Chemistry</p>
+                    <p className="font-semibold">Allen for Physics & Chemistry</p>
                     <p className="text-sm text-blue-200">Comprehensive preparation</p>
                   </div>
                 </div>
@@ -449,12 +500,10 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
       {/* FAQs */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4">
-          <div
-            className="text-center mb-8 animate-fadeInUp"
-          >
+          <div className="text-center mb-8 animate-fadeInUp">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-slate-600">
-              Common questions about Cerebrum vs the largest national NEET chain for NEET Biology
+              Common questions about Cerebrum vs Allen for NEET Biology
             </p>
           </div>
 
@@ -495,15 +544,15 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
               href="/allen-alternative-gurugram"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md transition-shadow"
             >
-              <h3 className="font-semibold text-teal-600">the largest national NEET chain Alternative Gurugram</h3>
+              <h3 className="font-semibold text-teal-600">Allen Alternative Gurugram</h3>
               <p className="text-sm text-gray-600">Compare options in Gurgaon</p>
             </Link>
             <Link
               href="/aakash-alternative-gurugram"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md transition-shadow"
             >
-              <h3 className="font-semibold text-teal-600">the 2nd-largest national NEET chain Alternative</h3>
-              <p className="text-sm text-gray-600">Compare with SKY Coaching (2nd-largest national NEET chain)</p>
+              <h3 className="font-semibold text-teal-600">Aakash Alternative</h3>
+              <p className="text-sm text-gray-600">Compare with Aakash</p>
             </Link>
             <Link
               href="/online-vs-offline-neet-coaching"
@@ -533,7 +582,11 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
             Join 500+ students who chose focused Biology coaching for better NEET results
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20cerebrum%20vs%20allen%20neet%20coaching.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20cerebrum%20vs%20allen%20neet%20coaching.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 size="xl"

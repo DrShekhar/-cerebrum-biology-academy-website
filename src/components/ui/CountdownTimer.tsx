@@ -87,7 +87,10 @@ export function CountdownTimer({
       <div className="flex items-center gap-2">
         {timeUnits.map((unit, index) => (
           <div key={unit.label} className="flex items-center">
-            <div className="bg-red-900 text-white rounded-lg px-3 py-2 min-w-[60px] text-center" suppressHydrationWarning>
+            <div
+              className="bg-red-900 text-white rounded-lg px-3 py-2 min-w-[60px] text-center"
+              suppressHydrationWarning
+            >
               <div className="text-2xl font-bold tabular-nums" suppressHydrationWarning>
                 {String(unit.value).padStart(2, '0')}
               </div>

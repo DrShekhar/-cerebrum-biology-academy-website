@@ -247,8 +247,7 @@ export function AppleCourseCard({ course, selectedTier = 'ascent' }: AppleCourse
 
             {/* Action buttons */}
             <div className="space-y-3">
-              <div
-               className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 <Link
                   href={`/enrollments?course=${course.id}&tier=${activeTier}`}
                   className={`

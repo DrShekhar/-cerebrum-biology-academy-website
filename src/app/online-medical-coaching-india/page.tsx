@@ -144,9 +144,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
       <section className="relative bg-gradient-to-br from-green-800 via-cyan-800 to-blue-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Stethoscope className="w-5 h-5 mr-2" />
               Your Path to MBBS Starts Here
@@ -167,7 +165,11 @@ export default function OnlineMedicalCoachingIndiaPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20medical%20coaching%20india.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20medical%20coaching%20india.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -210,9 +212,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
       {/* Medical Exams Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Medical Entrance Exams We Cover
             </h2>
@@ -223,10 +223,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {medicalExams.map((exam, index) => (
-              <div
-                key={exam.name}
-                className="bg-white rounded-xl shadow-lg p-8 animate-fadeInUp"
-              >
+              <div key={exam.name} className="bg-white rounded-xl shadow-lg p-8 animate-fadeInUp">
                 <div className="flex items-center mb-4">
                   <GraduationCap className="w-10 h-10 text-green-600 mr-3" />
                   <div>
@@ -245,9 +242,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Our Medical Coaching?
             </h2>
@@ -255,10 +250,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
-              >
+              <div key={feature.title} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <feature.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -271,9 +263,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
       {/* States Coverage Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Pan-India Coverage
             </h2>
@@ -298,9 +288,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -308,10 +296,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div
-                key={faq.question}
-                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
-              >
+              <div key={faq.question} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
@@ -326,8 +311,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 via-blue-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Start Your Journey to MBBS Today
             </h2>
@@ -337,7 +321,11 @@ export default function OnlineMedicalCoachingIndiaPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20medical%20coaching%20india.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20medical%20coaching%20india.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -349,7 +337,11 @@ export default function OnlineMedicalCoachingIndiaPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20online%20medical%20coaching%20india.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20online%20medical%20coaching%20india.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"

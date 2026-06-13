@@ -47,14 +47,10 @@ export function USPsSection({
     <section className="bg-gradient-to-b from-gray-50 to-white py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2
-            className="inline-block border-b-4 border-[#4a5d4a] pb-2 text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl animate-fadeInUp"
-          >
+          <h2 className="inline-block border-b-4 border-[#4a5d4a] pb-2 text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl animate-fadeInUp">
             {title}
           </h2>
-          <p
-            className="mx-auto mt-4 max-w-2xl text-lg text-slate-600 animate-fadeInUp"
-          >
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600 animate-fadeInUp">
             {subtitle}
           </p>
         </div>

@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Animal Kingdom MCQ for NEET 2026 | Free Practice Questions',
-    description: 'Practice 500+ free Animal Kingdom MCQs for NEET. Phylum, Chordata, Non-Chordata, body symmetry, coelom questions. NCERT-based with detailed explanations.',
+    description:
+      'Practice 500+ free Animal Kingdom MCQs for NEET. Phylum, Chordata, Non-Chordata, body symmetry, coelom questions. NCERT-based with detailed explanations.',
   },
 }
 

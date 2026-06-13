@@ -100,9 +100,7 @@ const NavigationDashboard: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-8">
       {/* Header */}
-      <div
-        className="text-center animate-fadeInUp"
-      >
+      <div className="text-center animate-fadeInUp">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">🚀 Platform Navigation Dashboard</h1>
         <p className="text-lg text-gray-600 mb-2">
           Central hub for all Cerebrum Biology Academy features and tools
@@ -117,9 +115,7 @@ const NavigationDashboard: React.FC = () => {
       </div>
 
       {/* Search and Filters */}
-      <div
-        className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
-      >
+      <div className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp">
         <div className="flex flex-col md:flex-row gap-4 items-center">
           {/* Search */}
           <div className="flex-1 relative">
@@ -185,9 +181,7 @@ const NavigationDashboard: React.FC = () => {
       </div>
 
       {/* Quick Access Cards */}
-      <div
-        className="grid grid-cols-1 md:grid-cols-3 gap-4 animate-fadeInUp"
-      >
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 animate-fadeInUp">
         <div
           className="bg-indigo-500 text-white p-6 rounded-xl cursor-pointer animate-fadeInUp"
           onClick={() => openUrl('/test-voice')}
@@ -214,8 +208,7 @@ const NavigationDashboard: React.FC = () => {
       </div>
 
       {/* Routes Grid/List */}
-      <div
-       className="animate-fadeInUp">
+      <div className="animate-fadeInUp">
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredRoutes.map((route, index) => (
@@ -274,9 +267,7 @@ const NavigationDashboard: React.FC = () => {
                   </div>
 
                   {copiedUrl === route.href && (
-                    <div
-                      className="mt-2 text-green-600 text-xs animate-fadeInUp"
-                    >
+                    <div className="mt-2 text-green-600 text-xs animate-fadeInUp">
                       ✓ URL copied to clipboard!
                     </div>
                   )}
@@ -340,9 +331,7 @@ const NavigationDashboard: React.FC = () => {
                   </div>
 
                   {copiedUrl === route.href && (
-                    <div
-                      className="mt-2 text-green-600 text-xs animate-fadeInUp"
-                    >
+                    <div className="mt-2 text-green-600 text-xs animate-fadeInUp">
                       ✓ URL copied to clipboard!
                     </div>
                   )}

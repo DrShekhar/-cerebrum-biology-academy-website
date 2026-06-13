@@ -9,48 +9,54 @@
 ## 3-Pillar Strategy
 
 ### Pillar 1: Rank for Enrollment-Intent Keywords
-| Action | URL | Priority | Status |
-|--------|-----|----------|--------|
-| "Best NEET Biology Coaching" comparison page | /best-neet-biology-coaching | HIGH | DONE |
-| Optimize Gurugram location page (2000+ words) | /neet-coaching-gurugram | HIGH | DONE |
-| NEET Coaching Fees transparency page | /neet-coaching-fees | HIGH | DONE |
-| Online NEET Coaching landing page | /online-neet-biology-coaching | HIGH | DONE |
+
+| Action                                        | URL                           | Priority | Status |
+| --------------------------------------------- | ----------------------------- | -------- | ------ |
+| "Best NEET Biology Coaching" comparison page  | /best-neet-biology-coaching   | HIGH     | DONE   |
+| Optimize Gurugram location page (2000+ words) | /neet-coaching-gurugram       | HIGH     | DONE   |
+| NEET Coaching Fees transparency page          | /neet-coaching-fees           | HIGH     | DONE   |
+| Online NEET Coaching landing page             | /online-neet-biology-coaching | HIGH     | DONE   |
 
 ### Pillar 2: Authority Content for Traffic
-| Action | URL | Priority | Status |
-|--------|-----|----------|--------|
-| Biology Notes hub (pillar page) | /biology-notes-for-neet | HIGH | DONE |
-| How to Score 360 in NEET Biology guide | /blog/how-to-score-360-in-neet-biology | HIGH | DONE |
-| Chapter-wise notes (19/19: MBI, PIV, Human Phys, Evolution, Ecology, Cell Biology, Biomolecules, Cell Division, Reproduction, Biotechnology, Bio Classification, Living World, Plant Kingdom, Animal Kingdom, Morphology of Flowering Plants, Anatomy of Flowering Plants, Structural Organisation in Animals, Plant Physiology) | /biology-notes-for-neet/[chapter] | MEDIUM | COMPLETE |
-| Previous Year Questions hub | /neet-previous-year-questions | MEDIUM | DONE |
-| Chapter-wise weightage cluster (11 articles: Human Physiology, Genetics, Ecology, Reproduction, Plant Physiology, Cell Biology, Biotechnology, Animal Kingdom, Evolution, Plant Morphology & Anatomy, Overview) | /blog/neet-[chapter]-weightage | MEDIUM | COMPLETE |
+
+| Action                                                                                                                                                                                                                                                                                                                           | URL                                    | Priority | Status   |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | -------- | -------- |
+| Biology Notes hub (pillar page)                                                                                                                                                                                                                                                                                                  | /biology-notes-for-neet                | HIGH     | DONE     |
+| How to Score 360 in NEET Biology guide                                                                                                                                                                                                                                                                                           | /blog/how-to-score-360-in-neet-biology | HIGH     | DONE     |
+| Chapter-wise notes (19/19: MBI, PIV, Human Phys, Evolution, Ecology, Cell Biology, Biomolecules, Cell Division, Reproduction, Biotechnology, Bio Classification, Living World, Plant Kingdom, Animal Kingdom, Morphology of Flowering Plants, Anatomy of Flowering Plants, Structural Organisation in Animals, Plant Physiology) | /biology-notes-for-neet/[chapter]      | MEDIUM   | COMPLETE |
+| Previous Year Questions hub                                                                                                                                                                                                                                                                                                      | /neet-previous-year-questions          | MEDIUM   | DONE     |
+| Chapter-wise weightage cluster (11 articles: Human Physiology, Genetics, Ecology, Reproduction, Plant Physiology, Cell Biology, Biotechnology, Animal Kingdom, Evolution, Plant Morphology & Anatomy, Overview)                                                                                                                  | /blog/neet-[chapter]-weightage         | MEDIUM   | COMPLETE |
 
 ### Pillar 3: Convert Traffic to Enrollments
-| Action | Scope | Priority | Status |
-|--------|-------|----------|--------|
-| Sticky WhatsApp CTA bar (mobile) | All pages | HIGH | DONE |
-| Exit-intent lead magnet on blog pages | Blog pages | HIGH | DONE |
-| Social proof sections on landing pages | Landing pages | MEDIUM | DONE |
-| "Book Free Demo" form above fold on course pages | Course pages | MEDIUM | DONE |
-| WhatsApp click tracking in GA4 | All pages | HIGH | DONE |
+
+| Action                                           | Scope         | Priority | Status |
+| ------------------------------------------------ | ------------- | -------- | ------ |
+| Sticky WhatsApp CTA bar (mobile)                 | All pages     | HIGH     | DONE   |
+| Exit-intent lead magnet on blog pages            | Blog pages    | HIGH     | DONE   |
+| Social proof sections on landing pages           | Landing pages | MEDIUM   | DONE   |
+| "Book Free Demo" form above fold on course pages | Course pages  | MEDIUM   | DONE   |
+| WhatsApp click tracking in GA4                   | All pages     | HIGH     | DONE   |
 
 ---
 
 ## Content Calendar
 
 ### Month 1: February 2026 — Quick Wins
+
 - **Week 1:** Best NEET Biology Coaching comparison page + Fees page + Sticky WhatsApp CTA
 - **Week 2:** Online coaching landing page + "How to Score 360" guide + WhatsApp tracking
 - **Week 3:** Gurugram location expansion + Biology Notes hub pillar page
 - **Week 4:** Notes: Molecular Basis of Inheritance + Human Physiology
 
 ### Month 2: March 2026 — Authority Building
+
 - **Week 5:** Notes: Genetics & Evolution + Ecology + NEET 2026 Syllabus guide
 - **Week 6:** Notes: Cell Biology + Chapter Weightage update
 - **Week 7:** PYQ hub page + PYQ: Molecular Biology
 - **Week 8:** Notes: Animal Kingdom + Dr. Shekhar expert profile
 
 ### Month 3: April 2026 — Scale + NEET Season
+
 - **Week 9:** Notes: Plant Physiology + Reproduction + "Last 60 Days" blog
 - **Week 10:** Notes: Biotechnology + Expected Cutoff analysis
 - **Week 11:** Location pages refresh (South Delhi, Noida, Faridabad) + PYQ: Ecology
@@ -84,15 +90,15 @@
 
 ## Technical SEO Status
 
-| Item | Status |
-|------|--------|
-| Core Web Vitals (Mobile) | FIXED ✅ |
-| @emotion/is-prop-valid | FIXED ✅ |
-| Redis env var whitespace | FIXED ✅ |
-| Schema markup | PASS ✅ |
-| Sitemap.xml | PASS ✅ |
-| Robots.txt | PASS ✅ |
-| Canonical tags | PASS ✅ |
-| Redirects (23+) | PASS ✅ |
+| Item                       | Status     |
+| -------------------------- | ---------- |
+| Core Web Vitals (Mobile)   | FIXED ✅   |
+| @emotion/is-prop-valid     | FIXED ✅   |
+| Redis env var whitespace   | FIXED ✅   |
+| Schema markup              | PASS ✅    |
+| Sitemap.xml                | PASS ✅    |
+| Robots.txt                 | PASS ✅    |
+| Canonical tags             | PASS ✅    |
+| Redirects (23+)            | PASS ✅    |
 | @next/swc version mismatch | WARNING ⚠️ |
-| Sentry auth token | WARNING ⚠️ |
+| Sentry auth token          | WARNING ⚠️ |

@@ -6,7 +6,10 @@ import { CheckCircle2, Phone, MessageSquare, Clock, FileText, CalendarDays } fro
 import { PremiumCard, PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import { trackPhoneCallConversion, trackDemoBookingConversion } from '@/lib/analytics/googleAdsConversions'
+import {
+  trackPhoneCallConversion,
+  trackDemoBookingConversion,
+} from '@/lib/analytics/googleAdsConversions'
 import { trackSignUpConversion } from '@/lib/ads/googleAdsConversion'
 
 function ThankYouContent() {
@@ -118,7 +121,10 @@ function ThankYouContent() {
   const handleBookCounseling = () => {
     ConversionTracker.trackDemoBooking()
     trackDemoBookingConversion('thank-you-page')
-    window.open('https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll.%20Please%20share%20details.', '_blank')
+    window.open(
+      'https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll.%20Please%20share%20details.',
+      '_blank'
+    )
   }
 
   const formatTime = (seconds: number) => {

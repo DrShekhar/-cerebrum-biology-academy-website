@@ -65,6 +65,7 @@ export default async function Page() {
   return (
     <>
       <LocalitySchema
+        country="NP"
         data={{
           ...localityData,
           phone: '+918826444334',

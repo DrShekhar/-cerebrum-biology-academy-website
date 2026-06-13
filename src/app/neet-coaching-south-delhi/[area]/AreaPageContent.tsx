@@ -23,8 +23,21 @@ function getNearbyAreas(currentSlug: string, currentType: string): string[] {
   const allSlugs = Object.keys(areaDetails)
   const typeMapping: Record<string, string[]> = {
     'coaching-hub': ['hauz-khas', 'kalu-sarai', 'malviya-nagar', 'karol-bagh', 'rajendra-nagar'],
-    posh: ['greater-kailash', 'defence-colony', 'vasant-vihar', 'panchsheel-park', 'east-of-kailash'],
-    residential: ['saket', 'green-park', 'new-friends-colony', 'cr-park', 'alaknanda', 'lajpat-nagar'],
+    posh: [
+      'greater-kailash',
+      'defence-colony',
+      'vasant-vihar',
+      'panchsheel-park',
+      'east-of-kailash',
+    ],
+    residential: [
+      'saket',
+      'green-park',
+      'new-friends-colony',
+      'cr-park',
+      'alaknanda',
+      'lajpat-nagar',
+    ],
     'govt-colony': ['rk-puram', 'sarojini-nagar', 'lodhi-colony', 'andrews-ganj', 'kidwai-nagar'],
     'ultra-premium': ['golf-links', 'jor-bagh', 'sunder-nagar', 'gulmohar-park', 'vasant-vihar'],
     'student-hub': ['munirka', 'ber-sarai', 'katwaria-sarai', 'kalu-sarai'],
@@ -36,10 +49,7 @@ function getNearbyAreas(currentSlug: string, currentType: string): string[] {
 
 // Convert metro name to slug
 function metroToSlug(metroName: string): string {
-  return metroName
-    .toLowerCase()
-    .replace(' metro', '')
-    .replace(/\s+/g, '-')
+  return metroName.toLowerCase().replace(' metro', '').replace(/\s+/g, '-')
 }
 
 interface AreaPageContentProps {
@@ -63,10 +73,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
   return (
     <div className="min-h-screen">
       {/* Visual Breadcrumb Navigation */}
-      <nav
-        className="bg-gray-100 py-3 px-4"
-        aria-label="Breadcrumb"
-      >
+      <nav className="bg-gray-100 py-3 px-4" aria-label="Breadcrumb">
         <div className="max-w-7xl mx-auto">
           <ol className="flex items-center flex-wrap gap-1 text-sm">
             <li className="flex items-center">
@@ -101,10 +108,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-5xl mx-auto animate-fadeInUp"
-          >
-
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2 text-yellow-300" />
               {area.fullName}
@@ -114,12 +118,18 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
               Best <span className="text-yellow-300">NEET Coaching in {area.name}</span>
             </h1>
 
-            <p className="hero-description text-lg md:text-xl opacity-90 mb-4">{area.description}</p>
+            <p className="hero-description text-lg md:text-xl opacity-90 mb-4">
+              {area.description}
+            </p>
 
             <p className="text-md opacity-80 mb-8 max-w-4xl mx-auto">{area.heroDescription}</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20South.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20South.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -161,9 +171,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
-            <div
-              className="bg-purple-50 rounded-xl p-6 animate-fadeInUp"
-            >
+            <div className="bg-purple-50 rounded-xl p-6 animate-fadeInUp">
               <div className="flex items-center mb-4">
                 <Train className="w-6 h-6 text-purple-600 mr-2" />
                 <h3 className="font-bold text-gray-900">Nearby Metro Stations</h3>
@@ -186,9 +194,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
               </ul>
             </div>
 
-            <div
-              className="bg-blue-50 rounded-xl p-6 animate-fadeInUp"
-            >
+            <div className="bg-blue-50 rounded-xl p-6 animate-fadeInUp">
               <div className="flex items-center mb-4">
                 <MapPin className="w-6 h-6 text-blue-600 mr-2" />
                 <h3 className="font-bold text-gray-900">Key Landmarks</h3>
@@ -203,9 +209,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
               </ul>
             </div>
 
-            <div
-              className="bg-green-50 rounded-xl p-6 animate-fadeInUp"
-            >
+            <div className="bg-green-50 rounded-xl p-6 animate-fadeInUp">
               <div className="flex items-center mb-4">
                 <GraduationCap className="w-6 h-6 text-green-600 mr-2" />
                 <h3 className="font-bold text-gray-900">Schools We Serve</h3>
@@ -235,9 +239,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
       {/* Course Options */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Courses for {area.name} Students
             </h2>
@@ -266,7 +268,11 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                       </li>
                     ))}
                   </ul>
-                  <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20South.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                  <Link
+                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20South.%20Please%20share%20available%20timings."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button className="w-full bg-purple-600 hover:bg-purple-700">Enroll Now</Button>
                   </Link>
                 </div>
@@ -279,9 +285,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
       {/* Why This Area */}
       <section className="py-16 md:py-20 bg-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Students from {area.name} Choose Us
             </h2>
@@ -314,9 +318,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
       {nearbyAreas.length > 0 && (
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <div
-              className="text-center mb-10 animate-fadeInUp"
-            >
+            <div className="text-center mb-10 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 NEET Coaching in Nearby Areas
               </h2>
@@ -330,9 +332,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                 const nearbyArea = areaDetails[slug]
                 if (!nearbyArea) return null
                 return (
-                  <div
-                    key={slug}
-                   className="animate-fadeInUp">
+                  <div key={slug} className="animate-fadeInUp">
                     <Link
                       href={`/neet-coaching-south-delhi/${slug}`}
                       className="block bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-purple-300 group"
@@ -344,9 +344,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                       <h3 className="font-bold text-gray-900 mb-2 group-hover:text-purple-700">
                         {nearbyArea.name}
                       </h3>
-                      <p className="text-sm text-gray-600 line-clamp-2">
-                        {nearbyArea.description}
-                      </p>
+                      <p className="text-sm text-gray-600 line-clamp-2">{nearbyArea.description}</p>
                       <div className="mt-3 flex flex-wrap gap-1">
                         {nearbyArea.highlights.slice(0, 2).map((h) => (
                           <span
@@ -376,11 +374,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
         </section>
       )}
 
-      <AreaTestimonials
-        citySlug="south-delhi"
-        areaName={area.name}
-        cityName="South Delhi"
-      />
+      <AreaTestimonials citySlug="south-delhi" areaName={area.name} cityName="South Delhi" />
 
       <HowToReachSection
         areaName={area.name}
@@ -393,17 +387,15 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
       {/* CTA */}
       <section className="py-16 md:py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Start Your NEET Journey from {area.name}?
             </h2>
             <p className="text-xl mb-4 opacity-90">
-              Join hundreds of successful students from {area.name}. Visit our South Extension center and book your free demo today!
+              Join hundreds of successful students from {area.name}. Visit our South Extension
+              center and book your free demo today!
             </p>
-            <p className="text-lg mb-8 opacity-80">
-              Online classes also available
-            </p>
+            <p className="text-lg mb-8 opacity-80">Online classes also available</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/demo-booking?center=south-delhi&area=${areaSlug}`}>

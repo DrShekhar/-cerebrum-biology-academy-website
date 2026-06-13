@@ -64,44 +64,11 @@ export function generateAggregateRatingSchema(reviews?: ReviewData[]) {
   return schema
 }
 
-// Sample reviews for rich snippets
-export const featuredReviews: ReviewData[] = [
-  {
-    author: 'Sadhna Sirin',
-    reviewBody:
-      "Dr. Shekhar Sir's conceptual teaching transformed my understanding of Biology. Scored 695/720 in NEET 2023 with perfect 360/360 in Biology!",
-    reviewRating: 5,
-    datePublished: '2023-07-15',
-  },
-  {
-    author: 'Rahul Sharma',
-    reviewBody:
-      'The small batch size meant I got personal attention whenever I was stuck. Best decision for my NEET preparation. Now at MAMC Delhi!',
-    reviewRating: 5,
-    datePublished: '2023-08-10',
-  },
-  {
-    author: 'Amit Verma',
-    reviewBody:
-      'Improved from 540 to 658 in one year! The doubt clearing sessions and daily practice questions made all the difference.',
-    reviewRating: 5,
-    datePublished: '2023-09-05',
-  },
-  {
-    author: 'Priya Gupta',
-    reviewBody:
-      'The dropper batch program is exceptional. The faculty understands the pressure and provides excellent support. JIPMER here I come!',
-    reviewRating: 5,
-    datePublished: '2023-09-20',
-  },
-  {
-    author: 'Neha Singh',
-    reviewBody:
-      'Online classes are just as effective as offline. The recorded lectures helped me revise before exams. Highly recommended!',
-    reviewRating: 5,
-    datePublished: '2023-10-15',
-  },
-]
+// Featured reviews removed 2026-06: self-serving schema-only review markup
+// (fabricated/unverifiable authors + ratings) violates Google's review snippet
+// policy. Real reviews must come from verified users on the Google Business
+// Profile. Kept as an empty export so existing importers stay valid.
+export const featuredReviews: ReviewData[] = []
 
 /**
  * Generate Course rating schema for individual courses
@@ -111,9 +78,6 @@ export function generateCourseRatingSchema(courseData: {
   description: string
   provider: string
   url: string
-  ratingValue: number
-  ratingCount: number
-  reviewCount: number
   price: number
   priceCurrency?: string
 }) {
@@ -146,9 +110,6 @@ export const courseRatings = {
       'Intensive 4-month NEET Biology preparation course with 200+ hours of live classes, complete study material, and 20 mock tests.',
     provider: 'Cerebrum Biology Academy',
     url: 'https://cerebrumbiologyacademy.com/courses/neet-crash-course',
-    ratingValue: 5.0,
-    ratingCount: 32,
-    reviewCount: 38,
     price: 78000,
   },
   twoYear: {
@@ -157,9 +118,6 @@ export const courseRatings = {
       'Comprehensive 2-year NEET Biology preparation for Class 11 students with integrated board exam preparation.',
     provider: 'Cerebrum Biology Academy',
     url: 'https://cerebrumbiologyacademy.com/courses/neet-complete',
-    ratingValue: 5.0,
-    ratingCount: 32,
-    reviewCount: 38,
     price: 58000,
   },
   dropper: {
@@ -168,9 +126,6 @@ export const courseRatings = {
       'Dedicated 1-year program for NEET repeaters with focused preparation, psychological support, and daily tests.',
     provider: 'Cerebrum Biology Academy',
     url: 'https://cerebrumbiologyacademy.com/courses/neet-dropper',
-    ratingValue: 5.0,
-    ratingCount: 32,
-    reviewCount: 38,
     price: 68000,
   },
   foundation: {
@@ -179,9 +134,6 @@ export const courseRatings = {
       'Early foundation course to build strong Biology fundamentals for future NEET aspirants.',
     provider: 'Cerebrum Biology Academy',
     url: 'https://cerebrumbiologyacademy.com/courses/foundation',
-    ratingValue: 5.0,
-    ratingCount: 32,
-    reviewCount: 38,
     price: 48000,
   },
 }

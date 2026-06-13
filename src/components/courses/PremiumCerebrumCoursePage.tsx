@@ -316,12 +316,9 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
       {/* Hero Section */}
       <section ref={heroRef} className="relative z-10 pt-32 pb-24 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             {/* Ultra-Premium Badge */}
-            <div
-              className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-2xl border border-white/30 text-white px-10 py-4 rounded-full text-sm font-bold mb-10 shadow-2xl animate-fadeInUp"
-            >
+            <div className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-2xl border border-white/30 text-white px-10 py-4 rounded-full text-sm font-bold mb-10 shadow-2xl animate-fadeInUp">
               <div className="w-10 h-10 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
                 <Crown className="w-6 h-6 text-white" />
               </div>
@@ -335,18 +332,14 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
             </div>
 
             {/* Hero Headline */}
-            <h1
-              className="text-7xl md:text-9xl font-black text-white mb-8 leading-none tracking-tight animate-fadeInUp"
-            >
+            <h1 className="text-7xl md:text-9xl font-black text-white mb-8 leading-none tracking-tight animate-fadeInUp">
               <span className="block">Master</span>
               <span className="block text-green-500 animate-pulse">NEET Biology</span>
               <span className="block text-6xl md:text-7xl mt-4 text-gold-500">Excellence</span>
             </h1>
 
             {/* Subtitle */}
-            <p
-              className="text-2xl md:text-3xl text-navy-300 max-w-5xl mx-auto leading-relaxed mb-12 font-light animate-fadeInUp"
-            >
+            <p className="text-2xl md:text-3xl text-navy-300 max-w-5xl mx-auto leading-relaxed mb-12 font-light animate-fadeInUp">
               Join India's most{' '}
               <span className="font-bold text-green-500">elite Biology coaching</span> with
               <span className="font-bold text-white"> Harvard-level pedagogy</span> and
@@ -354,30 +347,22 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
             </p>
 
             {/* CTA Buttons */}
-            <div
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 animate-fadeInUp"
-            >
-              <button
-                className="group relative bg-green-600 hover:bg-green-700 text-white px-12 py-6 rounded-2xl font-black text-xl shadow-2xl hover:shadow-green-600/50 transition-all duration-500 flex items-center gap-4 min-w-[280px] justify-center overflow-hidden animate-fadeInUp"
-              >
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 animate-fadeInUp">
+              <button className="group relative bg-green-600 hover:bg-green-700 text-white px-12 py-6 rounded-2xl font-black text-xl shadow-2xl hover:shadow-green-600/50 transition-all duration-500 flex items-center gap-4 min-w-[280px] justify-center overflow-hidden animate-fadeInUp">
                 <div className="absolute inset-0 bg-green-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <Play className="h-7 w-7 group-hover:scale-125 transition-transform relative z-10" />
                 <span className="relative z-10">Start Free Demo</span>
                 <ArrowRight className="h-6 w-6 group-hover:translate-x-2 transition-transform relative z-10" />
               </button>
 
-              <button
-                className="group bg-white/10 backdrop-blur-2xl border-2 border-white/40 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white/20 transition-all duration-500 flex items-center gap-4 min-w-[280px] justify-center animate-fadeInUp"
-              >
+              <button className="group bg-white/10 backdrop-blur-2xl border-2 border-white/40 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white/20 transition-all duration-500 flex items-center gap-4 min-w-[280px] justify-center animate-fadeInUp">
                 <Phone className="h-7 w-7 group-hover:rotate-12 transition-transform" />
                 <span>Call: {getDisplayPhone()}</span>
               </button>
             </div>
 
             {/* Success Metrics */}
-            <div
-              className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto animate-fadeInUp"
-            >
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto animate-fadeInUp">
               {[
                 {
                   number: '3000+',
@@ -419,9 +404,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
       {/* Course Cards Section */}
       <section ref={coursesRef} className="relative z-10 py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <div
-            className="text-center mb-20 animate-fadeInUp"
-          >
+          <div className="text-center mb-20 animate-fadeInUp">
             <h2 className="text-6xl md:text-7xl font-black text-white mb-8">
               Choose Your
               <span className="block text-green-500">Excellence Path</span>
@@ -541,10 +524,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                     <div className="text-lg font-bold text-white mb-4">Key Highlights:</div>
                     <div className="space-y-3">
                       {course.highlights.map((highlight, idx) => (
-                        <div
-                          key={idx}
-                          className="flex items-center gap-3 animate-fadeInUp"
-                        >
+                        <div key={idx} className="flex items-center gap-3 animate-fadeInUp">
                           <div className="w-6 h-6 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                             <Check className="h-4 w-4 text-white" />
                           </div>
@@ -581,9 +561,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
       {/* Why Biology Fee is Higher Section */}
       <section className="relative z-10 py-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <div
-            className="bg-navy-800/60 backdrop-blur-2xl rounded-3xl p-10 border border-white/30 text-white animate-fadeInUp"
-          >
+          <div className="bg-navy-800/60 backdrop-blur-2xl rounded-3xl p-10 border border-white/30 text-white animate-fadeInUp">
             <div className="text-center mb-10">
               <h3 className="text-4xl font-black mb-4">
                 Why is Biology Fee Higher than Physics or Chemistry?
@@ -642,9 +620,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
       {/* FAQ Section */}
       <section ref={faqRef} className="relative z-10 py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-5xl font-black text-white mb-6">
               Frequently Asked
               <span className="block text-green-500">Questions</span>
@@ -673,84 +649,80 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                     )}
                   </div>
                 </button>
-{expandedFAQ === faq.id && (
-                    <div
-                      className="overflow-hidden animate-fadeInUp"
-                    >
-                      <div className="px-8 pb-8 text-white/80 leading-relaxed text-lg">
-                        {faq.answer}
-                      </div>
+                {expandedFAQ === faq.id && (
+                  <div className="overflow-hidden animate-fadeInUp">
+                    <div className="px-8 pb-8 text-white/80 leading-relaxed text-lg">
+                      {faq.answer}
                     </div>
-                  )}
-</div>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Floating Help Widget */}
-{!showHelp && (
-          <button
-            onClick={() => setShowHelp(true)}
-            className="fixed bottom-8 right-8 w-16 h-16 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-2xl flex items-center justify-center z-50 hover:scale-110 transition-transform duration-300 animate-fadeInUp"
-          >
-            <HelpCircle className="h-8 w-8" />
-          </button>
-        )}
-{/* Premium Help Panel */}
-{showHelp && (
-          <div
-            className="fixed bottom-8 right-8 w-96 bg-black/80 backdrop-blur-2xl rounded-3xl border border-white/30 z-50 overflow-hidden animate-fadeInUp"
-          >
-            <div className="bg-green-600 text-white p-6 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <MessageCircle className="h-6 w-6" />
-                <span className="font-bold text-lg">Need Expert Help?</span>
-              </div>
-              <button
-                onClick={() => setShowHelp(false)}
-                className="p-2 hover:bg-white/20 rounded-lg transition-colors duration-200"
-              >
-                <X className="h-5 w-5" />
-              </button>
+      {!showHelp && (
+        <button
+          onClick={() => setShowHelp(true)}
+          className="fixed bottom-8 right-8 w-16 h-16 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-2xl flex items-center justify-center z-50 hover:scale-110 transition-transform duration-300 animate-fadeInUp"
+        >
+          <HelpCircle className="h-8 w-8" />
+        </button>
+      )}
+      {/* Premium Help Panel */}
+      {showHelp && (
+        <div className="fixed bottom-8 right-8 w-96 bg-black/80 backdrop-blur-2xl rounded-3xl border border-white/30 z-50 overflow-hidden animate-fadeInUp">
+          <div className="bg-green-600 text-white p-6 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <MessageCircle className="h-6 w-6" />
+              <span className="font-bold text-lg">Need Expert Help?</span>
             </div>
-
-            <div className="p-6 space-y-4">
-              <p className="text-white/90 mb-6 text-center">
-                Call our expert counselors at{' '}
-                <span className="font-bold text-blue-400">{getDisplayPhone()}</span> for
-                personalized course guidance!
-              </p>
-
-              <button
-                onClick={async () => {
-                  await trackAndOpenWhatsApp({
-                    source: 'premium-course-help-panel',
-                    message: 'Hi! I have questions about the premium course.',
-                    campaign: 'premium-course',
-                  })
-                }}
-                className="w-full bg-[#4a5d4a] text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105 cursor-pointer"
-              >
-                <MessageCircle className="h-5 w-5" />
-                WhatsApp Chat
-              </button>
-
-              <a
-                href={getPhoneLink()}
-                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105"
-              >
-                <Phone className="h-5 w-5" />
-                Call Now
-              </a>
-
-              <button className="w-full bg-white/10 backdrop-blur-xl border-2 border-white/30 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:bg-white/20">
-                <Calendar className="h-5 w-5" />
-                Book Demo Class
-              </button>
-            </div>
+            <button
+              onClick={() => setShowHelp(false)}
+              className="p-2 hover:bg-white/20 rounded-lg transition-colors duration-200"
+            >
+              <X className="h-5 w-5" />
+            </button>
           </div>
-        )}
-</div>
+
+          <div className="p-6 space-y-4">
+            <p className="text-white/90 mb-6 text-center">
+              Call our expert counselors at{' '}
+              <span className="font-bold text-blue-400">{getDisplayPhone()}</span> for personalized
+              course guidance!
+            </p>
+
+            <button
+              onClick={async () => {
+                await trackAndOpenWhatsApp({
+                  source: 'premium-course-help-panel',
+                  message: 'Hi! I have questions about the premium course.',
+                  campaign: 'premium-course',
+                })
+              }}
+              className="w-full bg-[#4a5d4a] text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105 cursor-pointer"
+            >
+              <MessageCircle className="h-5 w-5" />
+              WhatsApp Chat
+            </button>
+
+            <a
+              href={getPhoneLink()}
+              className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105"
+            >
+              <Phone className="h-5 w-5" />
+              Call Now
+            </a>
+
+            <button className="w-full bg-white/10 backdrop-blur-xl border-2 border-white/30 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 hover:bg-white/20">
+              <Calendar className="h-5 w-5" />
+              Book Demo Class
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
   )
 }

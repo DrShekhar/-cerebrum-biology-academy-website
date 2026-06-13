@@ -155,18 +155,23 @@ const DEFAULT_CROSS_LINKS: CrossLinkGroup[] = [
   },
 ]
 
-export function LocalSEOCrossLinks({ cityName, citySlug, className = '' }: LocalSEOCrossLinksProps) {
+export function LocalSEOCrossLinks({
+  cityName,
+  citySlug,
+  className = '',
+}: LocalSEOCrossLinksProps) {
   const groups = CITY_CROSS_LINKS[citySlug] || DEFAULT_CROSS_LINKS
 
   return (
     <section className={`py-10 bg-gray-50 ${className}`}>
       <div className="container mx-auto px-4">
-        <h2 className="text-xl font-bold text-gray-900 mb-6">
-          More NEET Resources in {cityName}
-        </h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-6">More NEET Resources in {cityName}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {groups.map((group) => (
-            <div key={group.title} className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+            <div
+              key={group.title}
+              className="bg-white rounded-xl p-5 shadow-sm border border-gray-100"
+            >
               <h3 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-green-600" />
                 {group.title}

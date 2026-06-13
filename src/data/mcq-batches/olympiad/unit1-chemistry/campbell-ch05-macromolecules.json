@@ -629,12 +629,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about protein structure levels:\nS1: Primary structure refers to the linear sequence of amino acids linked by peptide bonds, and it completely determines the three-dimensional structure of most proteins.\nS2: Secondary structure (\u03b1-helices and \u03b2-sheets) is stabilized by hydrogen bonds between backbone N-H and C=O groups, not by side chain interactions.\nS3: Tertiary structure involves the overall 3D folding of a single polypeptide chain, stabilized by hydrophobic interactions, hydrogen bonds, ionic bonds, and disulfide bridges between side chains.\nS4: Quaternary structure, the association of multiple polypeptide subunits, is found in ALL proteins without exception.",
-      "options": [
-        "T, T, T, F",
-        "T, T, F, T",
-        "T, F, T, F",
-        "F, T, T, T"
-      ],
+      "options": ["T, T, T, F", "T, T, F, T", "T, F, T, F", "F, T, T, T"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Anfinsen's experiment demonstrated that the amino acid sequence (primary structure) contains all necessary information for a protein to fold into its correct 3D structure. While chaperones assist kinetically, the thermodynamic folding endpoint is sequence-determined. S2 is TRUE: \u03b1-helix hydrogen bonds (i\u2192i+4) and \u03b2-sheet hydrogen bonds (between adjacent strands) involve only backbone N-H and C=O groups. Side chains project outward and do not participate in these secondary structure hydrogen bonds (though they influence which secondary structure is preferred). S3 is TRUE: Tertiary structure involves the complete 3D fold stabilized by multiple non-covalent interactions between side chains: hydrophobic core packing, hydrogen bonds, salt bridges (ionic bonds), and the covalent disulfide bonds between cysteine residues. S4 is FALSE: Quaternary structure requires multiple polypeptide chains. Many functional proteins are monomers (single chains) without quaternary structure \u2014 examples include myoglobin, lysozyme, ribonuclease A, and most enzymes.",
       "isOlympiad": true,
@@ -649,12 +644,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about nucleic acid structure:\nS1: The sugar-phosphate backbone of DNA runs in a 5'\u21923' direction, with the 5' end having a free phosphate group and the 3' end having a free hydroxyl group.\nS2: DNA polymerase synthesizes new DNA in the 5'\u21923' direction by adding nucleotides to the 3'-OH of the growing chain.\nS3: The two strands of double-stranded DNA run in the same direction (parallel) from 5' to 3'.\nS4: A-form DNA has a wider, shallower major groove compared to B-form DNA, and A-form is adopted by RNA-DNA hybrids and double-stranded RNA.",
-      "options": [
-        "T, T, F, T",
-        "T, T, T, F",
-        "F, T, F, T",
-        "T, F, T, T"
-      ],
+      "options": ["T, T, F, T", "T, T, T, F", "F, T, F, T", "T, F, T, T"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: The DNA backbone consists of deoxyribose sugars linked by phosphodiester bonds. The 5' carbon of each sugar is connected to the phosphate group, and the 3' carbon connects to the next phosphate. By convention, the 5' end has a free or modified phosphate, and the 3' end has a free hydroxyl. S2 is TRUE: All known DNA polymerases synthesize DNA exclusively in the 5'\u21923' direction, adding deoxyribonucleoside triphosphates (dNTPs) to the 3'-OH of the growing strand via nucleophilic attack. This directionality necessitates the Okazaki fragment mechanism on the lagging strand. S3 is FALSE: The two strands of DNA are antiparallel \u2014 one runs 5'\u21923' while the complementary strand runs 3'\u21925'. This antiparallel arrangement is essential for Watson-Crick base pairing geometry. S4 is TRUE: A-form DNA/RNA has a wider and shallower major groove and a narrower, deeper minor groove compared to B-form DNA. The 2'-OH in RNA sterically prevents B-form geometry, forcing RNA duplexes into A-form.",
       "isOlympiad": true,
@@ -669,12 +659,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about lipid structure and function:\nS1: Triacylglycerols (fats) contain three fatty acid chains esterified to a glycerol backbone and serve primarily as energy storage molecules, yielding approximately 9 kcal/g upon complete oxidation.\nS2: Phospholipids are amphipathic molecules that spontaneously form bilayers in aqueous solution, with the hydrophobic tails facing inward and hydrophilic heads facing outward.\nS3: Steroids like cholesterol, estrogen, and testosterone are derived from a common 4-ring fused hydrocarbon structure and function as signaling molecules and membrane components.\nS4: All lipids contain fatty acid chains as part of their structure.",
-      "options": [
-        "T, T, T, F",
-        "T, T, T, T",
-        "T, T, F, F",
-        "T, F, T, T"
-      ],
+      "options": ["T, T, T, F", "T, T, T, T", "T, T, F, F", "T, F, T, T"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: Triacylglycerols (triglycerides) consist of glycerol with three fatty acid chains attached via ester bonds. They are the most concentrated form of energy storage (9 kcal/g vs 4 kcal/g for carbohydrates and proteins), because fatty acid carbons are more reduced (more C-H bonds) than carbohydrate carbons, yielding more electrons for the electron transport chain upon oxidation. S2 is TRUE: Phospholipids have a hydrophilic head (phosphate + alcohol) and two hydrophobic fatty acid tails. In water, thermodynamic driving forces (hydrophobic effect) cause spontaneous bilayer self-assembly with tails sequestered in the interior. S3 is TRUE: All steroids share the 4-ring cyclopentanoperhydrophenanthrene (gonane) skeleton. Cholesterol is a membrane component and precursor to steroid hormones (cortisol, aldosterone, estradiol, testosterone), bile acids, and vitamin D. S4 is FALSE: Not all lipids contain fatty acids. Steroids (cholesterol, hormones) and terpenes (vitamins A, D, E, K) lack fatty acid chains.",
       "isOlympiad": true,
@@ -689,12 +674,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about carbohydrate structure and function:\nS1: Monosaccharides with 5 or more carbons exist predominantly in ring (cyclic) form in aqueous solution because intramolecular hemiacetal or hemiketal formation is thermodynamically favorable.\nS2: The glycocalyx (cell surface carbohydrate coating) functions in cell-cell recognition, immune response, and protection of the cell surface.\nS3: Lactose intolerance results from deficiency of the enzyme lactase, which hydrolyzes the \u03b2-1,4 glycosidic bond between galactose and glucose in lactose.\nS4: All polysaccharides are digestible by human enzymes.",
-      "options": [
-        "T, T, T, F",
-        "T, T, F, T",
-        "T, F, T, F",
-        "F, T, T, T"
-      ],
+      "options": ["T, T, T, F", "T, T, F, T", "T, F, T, F", "F, T, T, T"],
       "correctAnswer": "FTTT",
       "explanation": "S1 is TRUE: In aqueous solution, monosaccharides with \u22655 carbons undergo intramolecular nucleophilic addition, where a hydroxyl group attacks the carbonyl carbon, forming a cyclic hemiacetal (from aldoses) or hemiketal (from ketoses). For glucose at 25\u00b0C, >99% exists in the ring form (pyranose), with <0.003% in the open-chain form. This equilibrium favors ring closure because it reduces the strain of the open-chain form. S2 is TRUE: The glycocalyx consists of carbohydrate portions of glycoproteins, glycolipids, and proteoglycans on the cell surface. It mediates cell-cell recognition (blood type antigens, selectin binding), immune response (MHC glycosylation, pathogen recognition), and physical protection. S3 is TRUE: Lactase (\u03b2-galactosidase) cleaves the \u03b2-1,4 bond in lactose. Most adult humans (except those with lactase persistence, common in populations with long dairy-farming history) downregulate lactase after weaning. S4 is FALSE: Humans cannot digest cellulose (\u03b2-1,4 glucose) or chitin (\u03b2-1,4 NAG) because we lack \u03b2-glycosidases.",
       "isOlympiad": true,
@@ -1209,12 +1189,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about enzyme regulation:\nS1: Allosteric regulation involves binding of effector molecules at sites other than the active site, causing conformational changes that alter enzyme activity.\nS2: Feedback inhibition typically involves the end product of a metabolic pathway inhibiting the first enzyme in the pathway, preventing wasteful overproduction.\nS3: Covalent modification (e.g., phosphorylation by kinases, dephosphorylation by phosphatases) provides rapid, reversible regulation of enzyme activity.\nS4: Proteolytic activation (e.g., zymogens like trypsinogen \u2192 trypsin) is freely reversible \u2014 active enzymes can be converted back to their zymogen forms.",
-      "options": [
-        "T, T, T, F",
-        "T, T, F, T",
-        "T, F, T, F",
-        "F, T, T, T"
-      ],
+      "options": ["T, T, T, F", "T, T, F, T", "T, F, T, F", "F, T, T, T"],
       "correctAnswer": "TTFF",
       "explanation": "S1 is TRUE: Allosteric regulation is a fundamental mechanism where small molecule effectors bind to allosteric sites (regulatory sites distinct from the active site), causing conformational changes transmitted through the protein structure. Positive effectors (activators) stabilize the R (active) state; negative effectors (inhibitors) stabilize the T (inactive) state. S2 is TRUE: Feedback (end-product) inhibition is a common metabolic regulatory strategy. For example, isoleucine inhibits threonine deaminase (first enzyme in isoleucine biosynthesis). ATP inhibits PFK-1 (glycolysis). CTP inhibits ATCase (pyrimidine biosynthesis). S3 is TRUE: Phosphorylation by protein kinases and dephosphorylation by phosphatases provides rapid (<1 second), reversible regulation. The human genome encodes ~518 kinases and ~140 phosphatases, regulating thousands of proteins. S4 is FALSE: Proteolytic activation is IRREVERSIBLE. Once the proenzyme peptide bond is cleaved (e.g., trypsinogen \u2192 trypsin by removal of a hexapeptide), the enzyme cannot be converted back. New zymogen molecules must be synthesized.",
       "isOlympiad": true,
@@ -1229,12 +1204,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the structure of biological membranes:\nS1: Membrane lipid composition is asymmetric \u2014 the outer and inner leaflets have different phospholipid species, maintained by flippases, floppases, and scramblases.\nS2: Integral membrane proteins span the bilayer with \u03b1-helical or \u03b2-barrel transmembrane domains, and their orientation is fixed (they do not flip between leaflets).\nS3: Peripheral membrane proteins are loosely associated with the membrane surface through electrostatic interactions or lipid anchors and can be removed by high salt or pH changes.\nS4: All membrane proteins are free to diffuse laterally without any restriction, as originally proposed in the fluid mosaic model.",
-      "options": [
-        "T, T, T, F",
-        "T, T, F, T",
-        "T, F, T, F",
-        "F, T, T, T"
-      ],
+      "options": ["T, T, T, F", "T, T, F, T", "T, F, T, F", "F, T, T, T"],
       "correctAnswer": "TFFT",
       "explanation": "S1 is TRUE: Membrane leaflet asymmetry is actively maintained. In the plasma membrane: outer leaflet is enriched in phosphatidylcholine (PC) and sphingomyelin; inner leaflet is enriched in phosphatidylserine (PS) and phosphatidylethanolamine (PE). Flippases (P4-ATPases, ATP-dependent) move PS and PE inward; floppases (ABC transporters) move lipids outward; scramblases (Ca\u00b2\u207a-activated) randomize distribution. PS exposure on the outer leaflet is an 'eat me' signal for apoptosis. S2 is TRUE: Integral proteins span the bilayer, typically via hydrophobic \u03b1-helices (~20 amino acids cross ~30 \u00c5 of the lipid core) or \u03b2-barrels (porins). Their topology is fixed during synthesis and they do NOT flip. S3 is TRUE: Peripheral proteins associate with the membrane surface and can be extracted by high salt (disrupting electrostatic interactions), high pH (deprotonation), or chelation of divalent cations. S4 is FALSE: Modern understanding shows that protein diffusion is restricted by cytoskeletal fences (actin cortex), lipid rafts, protein crowding, and extracellular matrix interactions.",
       "isOlympiad": true,
@@ -1629,12 +1599,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about amino acid properties:\nS1: The 20 standard amino acids can be classified by their side chain properties: nonpolar/hydrophobic (Ala, Val, Leu, Ile, Pro, Phe, Trp, Met), polar uncharged (Ser, Thr, Cys, Tyr, Asn, Gln), positively charged at pH 7 (Lys, Arg, His), and negatively charged at pH 7 (Asp, Glu).\nS2: Proline is unique because its side chain forms a covalent bond with the backbone nitrogen, creating a cyclic structure that introduces rigid kinks and is found frequently in turns and in the collagen helix.\nS3: Glycine is the only amino acid without a chiral center (its \u03b1-carbon has two hydrogen substituents), making it optically inactive.\nS4: All 20 standard amino acids absorb visible light (400-700 nm), which is why proteins appear colored.",
-      "options": [
-        "T, T, T, F",
-        "T, T, F, T",
-        "T, F, T, F",
-        "F, T, T, T"
-      ],
+      "options": ["T, T, T, F", "T, T, F, T", "T, F, T, F", "F, T, T, T"],
       "correctAnswer": "TFTF",
       "explanation": "S1 is TRUE: This is the standard classification. At physiological pH (7.4): Lys (pKa ~10.5), Arg (pKa ~12.5), and His (pKa ~6.0, partially protonated) are positively charged. Asp (pKa ~3.65) and Glu (pKa ~4.25) are negatively charged. The hydrophobic amino acids have nonpolar side chains that tend to be buried in protein interiors. S2 is TRUE: Proline's cyclic pyrrolidine ring includes the backbone nitrogen, fixing the \u03c6 angle to approximately -63\u00b0 and eliminating the N-H hydrogen bond donor. This rigidity introduces kinks in \u03b1-helices (proline is a 'helix breaker') and is common in turns, loops, and the polyproline II helix of collagen. S3 is TRUE: Glycine (H-C\u03b1-NH\u2082-COOH) has two hydrogen atoms on its \u03b1-carbon, making it achiral. All other standard amino acids have four different substituents on C\u03b1 (R, H, NH\u2082, COOH) and are chiral. S4 is FALSE: Most proteins are colorless because amino acids absorb in the UV range (aromatic amino acids at 260-280 nm, peptide bonds at ~220 nm), not visible light. Colored proteins (hemoglobin, cytochromes, chlorophyll-binding proteins) owe their color to non-amino acid prosthetic groups.",
       "isOlympiad": true,
@@ -1649,12 +1614,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about nucleotide structure and function:\nS1: Nucleotides consist of three components: a nitrogenous base (purine or pyrimidine), a pentose sugar (ribose or deoxyribose), and one to three phosphate groups.\nS2: ATP's primary role as an energy currency is due to the high-energy phosphoanhydride bonds between its phosphate groups, with hydrolysis of the \u03b3-phosphate yielding \u0394G\u00b0' \u2248 -30.5 kJ/mol.\nS3: cAMP (3',5'-cyclic AMP) is a second messenger formed from ATP by adenylyl cyclase, and it activates protein kinase A in signal transduction cascades.\nS4: NAD\u207a and FAD are nucleotide-derived coenzymes, but they function primarily as structural components of the cell wall rather than as electron carriers in metabolism.",
-      "options": [
-        "T, T, T, F",
-        "T, T, F, T",
-        "T, F, T, F",
-        "F, T, T, T"
-      ],
+      "options": ["T, T, T, F", "T, T, F, T", "T, F, T, F", "F, T, T, T"],
       "correctAnswer": "FTFT",
       "explanation": "S1 is TRUE: Nucleotides have three components: (1) a nitrogenous base (purines: adenine, guanine \u2014 two rings; pyrimidines: cytosine, thymine/uracil \u2014 one ring); (2) a pentose sugar (ribose in RNA, 2'-deoxyribose in DNA); (3) 1-3 phosphate groups (NMP, NDP, NTP). Nucleosides lack the phosphate group. S2 is TRUE: ATP has two phosphoanhydride bonds (\u03b1-\u03b2 and \u03b2-\u03b3). Hydrolysis of the \u03b3-phosphate (ATP \u2192 ADP + Pi) releases \u0394G\u00b0' \u2248 -30.5 kJ/mol due to charge repulsion relief, resonance stabilization of products, increased entropy, and favorable hydration. S3 is TRUE: Adenylyl cyclase converts ATP to 3',5'-cyclic AMP (cAMP) by forming an intramolecular phosphoester. cAMP binds the regulatory subunits of protein kinase A (PKA), releasing and activating the catalytic subunits. This is a major signaling pathway downstream of G-protein coupled receptors (GPCRs). S4 is FALSE: NAD\u207a/NADH and FAD/FADH\u2082 are critical electron carriers in metabolism (dehydrogenase reactions, electron transport chain), not structural components.",
       "isOlympiad": true,
@@ -1969,12 +1929,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about protein denaturation:\nS1: Denaturation disrupts secondary, tertiary, and quaternary structure but does not break peptide bonds (primary structure is preserved).\nS2: Heat denatures proteins by increasing kinetic energy to the point where non-covalent interactions (hydrogen bonds, hydrophobic interactions, van der Waals forces) are overcome.\nS3: Extreme pH denatures proteins by altering the ionization states of charged amino acid side chains, disrupting salt bridges and hydrogen bonds.\nS4: All denatured proteins can be refolded to their native state simply by removing the denaturing agent.",
-      "options": [
-        "T, T, T, F",
-        "T, T, F, T",
-        "T, F, T, F",
-        "F, T, T, T"
-      ],
+      "options": ["T, T, T, F", "T, T, F, T", "T, F, T, F", "F, T, T, T"],
       "correctAnswer": "FFTT",
       "explanation": "S1 is TRUE: Denaturation unfolds the protein's 3D structure but preserves the covalent peptide bonds of the primary sequence. Disulfide bonds (covalent) may or may not be broken depending on conditions. S2 is TRUE: Thermal denaturation occurs because increasing temperature increases molecular kinetic energy. Above the melting temperature (Tm), the thermal energy exceeds the stabilizing energy of non-covalent interactions, and the protein unfolds. S3 is TRUE: Extreme pH changes the protonation state of ionizable groups (Asp, Glu, His, Lys, Arg, Cys, Tyr), disrupting salt bridges and hydrogen bonds that stabilize the fold. Very low pH protonates carboxylate groups (destroying Asp-/Glu- to Lys+/Arg+ salt bridges). Very high pH deprotonates ammonium groups. S4 is FALSE: While some small proteins (e.g., ribonuclease A) can refold spontaneously in vitro, many proteins aggregate irreversibly upon denaturation. Large, multi-domain proteins, membrane proteins, and proteins that require chaperones for initial folding often cannot refold spontaneously. Cooking an egg is irreversible denaturation.",
       "isOlympiad": true,

@@ -105,8 +105,7 @@ export function PracticeTab() {
         if (json.success && json.data) {
           setBookmarkData({
             total: json.data.total,
-            latestQuestion:
-              json.data.bookmarks?.[0]?.question?.question?.slice(0, 80) || undefined,
+            latestQuestion: json.data.bookmarks?.[0]?.question?.question?.slice(0, 80) || undefined,
           })
         }
       } catch {
@@ -136,9 +135,7 @@ export function PracticeTab() {
       {/* Your Review Queue */}
       {(bookmarkData.total > 0 || reviewDueCount > 0) && (
         <div className="bg-white rounded-xl shadow-lg border border-slate-200 p-4 sm:p-6">
-          <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3">
-            Your Review Queue
-          </h3>
+          <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3">Your Review Queue</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {bookmarkData.total > 0 && (
               <Link
@@ -179,9 +176,7 @@ export function PracticeTab() {
                     </span>
                     <ArrowRight className="w-3.5 h-3.5 text-purple-600 group-hover:translate-x-0.5 transition-transform" />
                   </div>
-                  <p className="text-xs text-gray-500 mt-0.5">
-                    Spaced repetition review
-                  </p>
+                  <p className="text-xs text-gray-500 mt-0.5">Spaced repetition review</p>
                 </div>
               </Link>
             )}
@@ -226,7 +221,9 @@ export function PracticeTab() {
               href={item.href}
               className="group bg-white rounded-xl shadow-lg border border-slate-200 p-4 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 min-h-[48px]"
             >
-              <div className={`w-10 h-10 ${item.bg} rounded-xl flex items-center justify-center mb-3`}>
+              <div
+                className={`w-10 h-10 ${item.bg} rounded-xl flex items-center justify-center mb-3`}
+              >
                 <item.icon className={`w-5 h-5 ${item.iconColor}`} />
               </div>
               <h4 className="text-sm sm:text-base font-semibold text-gray-900 mb-0.5 group-hover:text-blue-600 transition-colors">

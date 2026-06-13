@@ -253,7 +253,8 @@ export function buildOnlineOfflineCityConfig(key: OnlineOfflineCityKey): BestVer
           'Each class is LIVE (not pre-recorded) — but the live session is recorded and available within hours for revision. Students get unlimited rewatch access during the course period plus speed control (0.5x to 2x) for revision passes.',
       },
       {
-        question: 'How is Cerebrum online different from other online-only platforms / other multi-subject tutoring platforms?',
+        question:
+          'How is Cerebrum online different from other online-only platforms / other multi-subject tutoring platforms?',
         answer:
           'other online-only platforms and other multi-subject tutoring platforms operate at mass scale (300–2,000+ students per live class) at ₹4K–₹85K/year. Cerebrum operates at small-batch scale (15–20 students) at ₹40K–₹1.56L/year. Different value props: mass platforms win on affordability; Cerebrum wins on small-batch attention + biology-only AIIMS depth. Many students pair PW (Physics + Chemistry) with Cerebrum (Biology online).',
       },

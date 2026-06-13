@@ -22,8 +22,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-foundation-course' },
   openGraph: {
     title: 'NEET Foundation Course | Class 8-10 | Cerebrum',
-    description:
-      '4-year glide path to NEET 2028-2030 + olympiad pathway. AIIMS faculty.',
+    description: '4-year glide path to NEET 2028-2030 + olympiad pathway. AIIMS faculty.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/neet-foundation-course',

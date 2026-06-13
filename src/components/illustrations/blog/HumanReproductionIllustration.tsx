@@ -6,7 +6,7 @@ export function HumanReproductionIllustration({
   className = '',
   animate = true,
 }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -15,12 +15,7 @@ export function HumanReproductionIllustration({
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Background */}
       <rect x="10" y="10" width="380" height="280" rx="20" fill="#FCE7F3" />
 
@@ -30,8 +25,7 @@ export function HumanReproductionIllustration({
       </text>
 
       {/* Male symbol */}
-      <g
-      >
+      <g>
         <circle cx="100" cy="120" r="30" fill="#BFDBFE" stroke="#3B82F6" strokeWidth="3" />
         <line x1="120" y1="100" x2="145" y2="75" stroke="#3B82F6" strokeWidth="3" />
         <line x1="145" y1="75" x2="135" y2="75" stroke="#3B82F6" strokeWidth="3" />
@@ -42,8 +36,7 @@ export function HumanReproductionIllustration({
       </g>
 
       {/* Female symbol */}
-      <g
-      >
+      <g>
         <circle cx="300" cy="120" r="30" fill="#FBCFE8" stroke="#EC4899" strokeWidth="3" />
         <line x1="300" y1="150" x2="300" y2="180" stroke="#EC4899" strokeWidth="3" />
         <line x1="285" y1="165" x2="315" y2="165" stroke="#EC4899" strokeWidth="3" />
@@ -53,8 +46,7 @@ export function HumanReproductionIllustration({
       </g>
 
       {/* Connecting heart */}
-      <g
-      >
+      <g>
         <path
           d="M200 110 L190 100 Q175 90 175 105 Q175 120 200 140 Q225 120 225 105 Q225 90 210 100 Z"
           fill="#F472B6"
@@ -64,8 +56,7 @@ export function HumanReproductionIllustration({
       </g>
 
       {/* Gametogenesis boxes */}
-      <g
-      >
+      <g>
         <rect
           x="40"
           y="180"
@@ -87,8 +78,7 @@ export function HumanReproductionIllustration({
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <rect
           x="240"
           y="180"
@@ -111,8 +101,7 @@ export function HumanReproductionIllustration({
       </g>
 
       {/* Fertilization central */}
-      <g
-      >
+      <g>
         <ellipse
           cx="200"
           cy="210"
@@ -182,8 +171,7 @@ export function HumanReproductionIllustration({
       </text>
 
       {/* Questions badge */}
-      <g
-      >
+      <g>
         <circle cx="40" cy="260" r="18" fill="#EC4899" />
         <text x="40" y="257" fontSize="8" fill="#FFFFFF" textAnchor="middle">
           10-12

@@ -52,9 +52,23 @@ interface DashboardData {
 
 function getGreeting(): { text: string; icon: React.ReactNode; gradient: string } {
   const hour = new Date().getHours()
-  if (hour < 12) return { text: 'Good Morning', icon: <Sun className="w-6 h-6" />, gradient: 'from-amber-500 to-orange-500' }
-  if (hour < 17) return { text: 'Good Afternoon', icon: <Sun className="w-6 h-6" />, gradient: 'from-blue-500 to-indigo-500' }
-  return { text: 'Good Evening', icon: <Moon className="w-6 h-6" />, gradient: 'from-indigo-600 to-purple-600' }
+  if (hour < 12)
+    return {
+      text: 'Good Morning',
+      icon: <Sun className="w-6 h-6" />,
+      gradient: 'from-amber-500 to-orange-500',
+    }
+  if (hour < 17)
+    return {
+      text: 'Good Afternoon',
+      icon: <Sun className="w-6 h-6" />,
+      gradient: 'from-blue-500 to-indigo-500',
+    }
+  return {
+    text: 'Good Evening',
+    icon: <Moon className="w-6 h-6" />,
+    gradient: 'from-indigo-600 to-purple-600',
+  }
 }
 
 // ─── Quick Action Card ───────────────────────────────────────────────────────
@@ -95,13 +109,7 @@ function QuickAction({
 
 // ─── Task Item ───────────────────────────────────────────────────────────────
 
-function TaskItem({
-  task,
-  onComplete,
-}: {
-  task: any
-  onComplete: (id: string) => void
-}) {
+function TaskItem({ task, onComplete }: { task: any; onComplete: (id: string) => void }) {
   const isOverdue = isPast(new Date(task.dueDate)) && task.status !== 'COMPLETED'
   const priorityColors: Record<string, string> = {
     URGENT: 'bg-red-500',
@@ -111,7 +119,9 @@ function TaskItem({
   }
 
   return (
-    <div className={`flex items-center gap-3 py-3 border-b border-gray-100 last:border-0 ${isOverdue ? 'bg-red-50/50 -mx-3 px-3 rounded-lg' : ''}`}>
+    <div
+      className={`flex items-center gap-3 py-3 border-b border-gray-100 last:border-0 ${isOverdue ? 'bg-red-50/50 -mx-3 px-3 rounded-lg' : ''}`}
+    >
       <button
         onClick={() => onComplete(task.id)}
         className={`w-5 h-5 rounded-full border-2 flex-shrink-0 transition-colors hover:bg-green-100 ${
@@ -124,14 +134,21 @@ function TaskItem({
       </button>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2">
-          <div className={`w-1.5 h-1.5 rounded-full ${priorityColors[task.priority] || 'bg-gray-400'}`} />
-          <p className={`text-sm font-medium ${task.status === 'COMPLETED' ? 'line-through text-gray-400' : 'text-gray-900'} truncate`}>
+          <div
+            className={`w-1.5 h-1.5 rounded-full ${priorityColors[task.priority] || 'bg-gray-400'}`}
+          />
+          <p
+            className={`text-sm font-medium ${task.status === 'COMPLETED' ? 'line-through text-gray-400' : 'text-gray-900'} truncate`}
+          >
             {task.title}
           </p>
         </div>
         <div className="flex items-center gap-2 mt-0.5">
           {task.lead && (
-            <Link href={`/counselor/leads/${task.lead.id}`} className="text-xs text-indigo-600 hover:underline">
+            <Link
+              href={`/counselor/leads/${task.lead.id}`}
+              className="text-xs text-indigo-600 hover:underline"
+            >
               {task.lead.studentName}
             </Link>
           )}
@@ -158,12 +175,17 @@ function FollowUpCard({ lead }: { lead: any }) {
   const isOverdue = lead.nextFollowUpAt && isPast(new Date(lead.nextFollowUpAt))
 
   return (
-    <div className={`flex items-center gap-3 p-3 rounded-lg border ${isOverdue ? 'bg-red-50 border-red-200' : 'bg-white border-gray-200'}`}>
+    <div
+      className={`flex items-center gap-3 p-3 rounded-lg border ${isOverdue ? 'bg-red-50 border-red-200' : 'bg-white border-gray-200'}`}
+    >
       <div className="w-9 h-9 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
         {lead.studentName?.charAt(0).toUpperCase()}
       </div>
       <div className="flex-1 min-w-0">
-        <Link href={`/counselor/leads/${lead.id}`} className="text-sm font-medium text-gray-900 hover:text-indigo-600 truncate block">
+        <Link
+          href={`/counselor/leads/${lead.id}`}
+          className="text-sm font-medium text-gray-900 hover:text-indigo-600 truncate block"
+        >
           {lead.studentName}
         </Link>
         <p className={`text-xs ${isOverdue ? 'text-red-500 font-medium' : 'text-gray-400'}`}>
@@ -257,15 +279,26 @@ export default function CounselorDashboard() {
 
   const greeting = getGreeting()
   const todayTasks = tasks.filter((t) => isToday(new Date(t.dueDate)) && t.status !== 'COMPLETED')
-  const overdueTasks = tasks.filter((t) => isPast(new Date(t.dueDate)) && !isToday(new Date(t.dueDate)) && t.status !== 'COMPLETED')
-  const completedToday = tasks.filter((t) => isToday(new Date(t.dueDate)) && t.status === 'COMPLETED')
-  const overdueFollowUps = leads.filter((l: any) => l.nextFollowUpAt && isPast(new Date(l.nextFollowUpAt)))
+  const overdueTasks = tasks.filter(
+    (t) => isPast(new Date(t.dueDate)) && !isToday(new Date(t.dueDate)) && t.status !== 'COMPLETED'
+  )
+  const completedToday = tasks.filter(
+    (t) => isToday(new Date(t.dueDate)) && t.status === 'COMPLETED'
+  )
+  const overdueFollowUps = leads.filter(
+    (l: any) => l.nextFollowUpAt && isPast(new Date(l.nextFollowUpAt))
+  )
   const upcomingFollowUps = leads
     .filter((l: any) => l.nextFollowUpAt && !isPast(new Date(l.nextFollowUpAt)))
-    .sort((a: any, b: any) => new Date(a.nextFollowUpAt).getTime() - new Date(b.nextFollowUpAt).getTime())
+    .sort(
+      (a: any, b: any) =>
+        new Date(a.nextFollowUpAt).getTime() - new Date(b.nextFollowUpAt).getTime()
+    )
     .slice(0, 5)
   const newLeadsToday = leads.filter((l: any) => isToday(new Date(l.createdAt)))
-  const hotLeads = leads.filter((l: any) => l.priority === 'HOT' && l.stage !== 'ENROLLED' && l.stage !== 'LOST')
+  const hotLeads = leads.filter(
+    (l: any) => l.priority === 'HOT' && l.stage !== 'ENROLLED' && l.stage !== 'LOST'
+  )
 
   if (loading) {
     return (
@@ -289,8 +322,8 @@ export default function CounselorDashboard() {
               <h1 className="text-2xl font-bold">{greeting.text}!</h1>
             </div>
             <p className="text-white/80 text-sm">
-              {format(new Date(), 'EEEE, MMMM d, yyyy')} •{' '}
-              {todayTasks.length + overdueTasks.length} tasks pending
+              {format(new Date(), 'EEEE, MMMM d, yyyy')} • {todayTasks.length + overdueTasks.length}{' '}
+              tasks pending
               {overdueFollowUps.length > 0 && ` • ${overdueFollowUps.length} overdue follow-ups`}
             </p>
           </div>
@@ -358,7 +391,10 @@ export default function CounselorDashboard() {
                 ))}
               </div>
               {overdueTasks.length > 5 && (
-                <Link href="/counselor/tasks" className="text-xs text-red-600 hover:underline mt-2 inline-block">
+                <Link
+                  href="/counselor/tasks"
+                  className="text-xs text-red-600 hover:underline mt-2 inline-block"
+                >
                   View all {overdueTasks.length} overdue tasks →
                 </Link>
               )}
@@ -375,7 +411,10 @@ export default function CounselorDashboard() {
                   {todayTasks.length}
                 </span>
               </div>
-              <Link href="/counselor/tasks" className="text-xs text-indigo-600 hover:underline font-medium">
+              <Link
+                href="/counselor/tasks"
+                className="text-xs text-indigo-600 hover:underline font-medium"
+              >
                 View All →
               </Link>
             </div>
@@ -407,11 +446,15 @@ export default function CounselorDashboard() {
                   <p className="text-xs text-gray-500 mt-1">Calls Made</p>
                 </div>
                 <div className="p-3 bg-green-50 rounded-xl text-center">
-                  <p className="text-2xl font-bold text-green-700">{kpis.metrics.whatsappsSent || 0}</p>
+                  <p className="text-2xl font-bold text-green-700">
+                    {kpis.metrics.whatsappsSent || 0}
+                  </p>
                   <p className="text-xs text-gray-500 mt-1">WhatsApps</p>
                 </div>
                 <div className="p-3 bg-purple-50 rounded-xl text-center">
-                  <p className="text-2xl font-bold text-purple-700">{kpis.metrics.demosCompleted || 0}</p>
+                  <p className="text-2xl font-bold text-purple-700">
+                    {kpis.metrics.demosCompleted || 0}
+                  </p>
                   <p className="text-xs text-gray-500 mt-1">Demos Done</p>
                 </div>
                 <div className="p-3 bg-emerald-50 rounded-xl text-center">

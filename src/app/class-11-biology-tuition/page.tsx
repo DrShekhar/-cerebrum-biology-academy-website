@@ -28,10 +28,16 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Class 11 Biology Tuition Delhi | CBSE Board Coaching',
-    description: 'Best Class 11 Biology tuition in Delhi NCR. Expert CBSE board coaching. Score 95+. Book free demo. Call +91-88264-44334',
+    description:
+      'Best Class 11 Biology tuition in Delhi NCR. Expert CBSE board coaching. Score 95+. Book free demo. Call +91-88264-44334',
   },
 
-  openGraph: { title: 'Class 11 Biology Tuition Delhi | CBSE Board Coaching', description: 'Best Class 11 Biology tuition in Delhi NCR. Expert CBSE board coaching. Score 95+. Book free demo. Call +91-88264-44334', type: 'website' },
+  openGraph: {
+    title: 'Class 11 Biology Tuition Delhi | CBSE Board Coaching',
+    description:
+      'Best Class 11 Biology tuition in Delhi NCR. Expert CBSE board coaching. Score 95+. Book free demo. Call +91-88264-44334',
+    type: 'website',
+  },
 }
 
 const usps: USP[] = [

@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Is Coaching Necessary for NEET? Gurugram Expert Answer | 2026',
-    description: 'Is coaching necessary for NEET? Expert analysis from Gurugram (Gurgaon) NEET toppers. When coaching helps vs self-study works. Honest advice from AIIMS faculty. Call 88264-44334!',
+    description:
+      'Is coaching necessary for NEET? Expert analysis from Gurugram (Gurgaon) NEET toppers. When coaching helps vs self-study works. Honest advice from AIIMS faculty. Call 88264-44334!',
   },
 }
 
@@ -77,7 +78,11 @@ export default function IsCoachingNecessaryForNEET() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

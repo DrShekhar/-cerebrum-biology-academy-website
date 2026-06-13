@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   description:
     'Compare Cerebrum Biology Academy with other NEET coaching institutes. See batch size, faculty qualifications, success rates, and fees comparison. Make an informed decision.',
   keywords: [
-    'Cerebrum vs the 2nd-largest national NEET chain',
-    'Cerebrum vs the largest national NEET chain',
+    'Cerebrum vs Aakash',
+    'Cerebrum vs Allen',
     'small batch vs large batch NEET coaching',
     'best NEET Biology coaching comparison',
     'NEET coaching comparison Delhi',

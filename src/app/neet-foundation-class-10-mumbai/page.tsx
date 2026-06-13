@@ -36,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 10 in Mumbai | Board + NEET Parallel Online',
-    description: 'NEET Foundation Class 10 in Mumbai at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Maharashtra Board parallel with NEET-pattern pedagogy. ₹35K-95K/year.',
+    description:
+      'NEET Foundation Class 10 in Mumbai at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Maharashtra Board parallel with NEET-pattern pedagogy. ₹35K-95K/year.',
   },
 }
 
@@ -58,7 +59,8 @@ const faqs = [
       'CBSE/ICSE feeders: Dhirubhai Ambani International (BKC), Cathedral & John Connon (Fort), Bombay Scottish (Mahim), Jamnabai Narsee (Vile Parle), American School of Bombay (BKC), Oberoi International (Goregaon), Hill Spring International (Tardeo), Singapore International (Dahisar), JBCN International (Borivali), Mukesh Patel School (Bhandup), Hiranandani Foundation (Powai + Thane). Maharashtra Board feeders include Bombay Municipal Board English-medium Class 10 sections, Vidya Mandir networks, and aided Marathi-medium English-track schools.',
   },
   {
-    question: 'How does Cerebrum Mumbai compare to the 2nd-largest national NEET chain Scholastics / the largest national NEET chain Foundation Mumbai?',
+    question:
+      'How does Cerebrum Mumbai compare to the 2nd-largest national NEET chain Scholastics / the largest national NEET chain Foundation Mumbai?',
     answer:
       'the 2nd-largest national NEET chain Scholastics Mumbai operates ~12 centres with 150-300 student PCB Foundation batches. the largest national NEET chain Mumbai operates ~6 centres. Cerebrum is biology-only with 15-20 student online live batches and AIIMS-trained biology faculty (Dr. Shekhar C Singh) directly leading curriculum. For Class 10 specifically, Cerebrum runs separate board-format weekly mocks (the 2nd-largest national NEET chain deprioritises boards). Many Mumbai families pair Cerebrum biology (₹55K-75K Ascent) with the 2nd-largest national NEET chain / the largest national NEET chain for PC for total ₹1L-1.4L — comparable to single-shop pricing with materially better biology and board parallel pedagogy.',
   },

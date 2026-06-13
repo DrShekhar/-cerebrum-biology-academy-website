@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching for K R Mangalam World School Gurugram',
-    description: 'Best NEET coaching for K R Mangalam World School students. Multiple campus coverage - Sector 51 near GK-2, Vaishali near Sector 88. AIIMS faculty, 98% success. Call 88264-44334!',
+    description:
+      'Best NEET coaching for K R Mangalam World School students. Multiple campus coverage - Sector 51 near GK-2, Vaishali near Sector 88. AIIMS faculty, 98% success. Call 88264-44334!',
   },
 }
 
@@ -84,7 +85,11 @@ export default function NEETCoachingKRMangalamWorldSchool() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

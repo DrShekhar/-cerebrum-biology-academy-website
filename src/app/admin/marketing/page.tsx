@@ -102,9 +102,7 @@ export default function MarketingPage() {
         {!loading && !error && overview && (
           <>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-              <div
-                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500 animate-fadeInUp"
-              >
+              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500 animate-fadeInUp">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm font-medium text-gray-600">Total Campaigns</p>
@@ -116,9 +114,7 @@ export default function MarketingPage() {
                 </div>
               </div>
 
-              <div
-                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-600 animate-fadeInUp"
-              >
+              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-600 animate-fadeInUp">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm font-medium text-gray-600">Active Campaigns</p>
@@ -130,9 +126,7 @@ export default function MarketingPage() {
                 </div>
               </div>
 
-              <div
-                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-purple-500 animate-fadeInUp"
-              >
+              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-purple-500 animate-fadeInUp">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm font-medium text-gray-600">Total Reach</p>
@@ -144,9 +138,7 @@ export default function MarketingPage() {
                 </div>
               </div>
 
-              <div
-                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-orange-500 animate-fadeInUp"
-              >
+              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-orange-500 animate-fadeInUp">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm font-medium text-gray-600">Conversion Rate</p>

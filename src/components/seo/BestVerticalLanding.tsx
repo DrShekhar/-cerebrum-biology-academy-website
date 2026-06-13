@@ -462,7 +462,7 @@ export function BestVerticalLanding({ config }: { config: BestVerticalConfig }) 
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Verified Results</h2>
             <p className="text-lg text-slate-600">
-              485+ five-star reviews across platforms · 5.0/5 average.
+              5.0/5 average across 38 verified Google reviews.
             </p>
           </div>
           <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
@@ -516,7 +516,8 @@ export function BestVerticalLanding({ config }: { config: BestVerticalConfig }) 
             No obligation, no commitment — just an honest look at the teaching.
           </p>
           <p className="text-sm text-slate-400 mb-8">
-            680+ medical college admissions · 98% NEET qualification rate · 485+ five-star reviews
+            680+ medical college selections · 98% NEET-UG qualification rate · 5.0/5 from 38
+            verified Google reviews
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

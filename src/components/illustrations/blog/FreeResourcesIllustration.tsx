@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function FreeResourcesIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -12,12 +12,7 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Background */}
       <rect x="10" y="10" width="380" height="280" rx="20" fill="#EDE9FE" />
 
@@ -27,9 +22,7 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
       </text>
 
       {/* FREE badge */}
-      <g
-        style={{ transformOrigin: '55px 65px' }}
-      >
+      <g style={{ transformOrigin: '55px 65px' }}>
         <circle cx="55" cy="65" r="25" fill="#22C55E" />
         <text x="55" y="62" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           FREE
@@ -40,8 +33,7 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* Resource cards */}
-      <g
-      >
+      <g>
         <rect
           x="30"
           y="100"
@@ -64,8 +56,7 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <rect
           x="150"
           y="100"
@@ -88,8 +79,7 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <rect
           x="270"
           y="100"
@@ -127,8 +117,7 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
         More Free Resources
       </text>
 
-      <g
-      >
+      <g>
         <circle cx="70" cy="245" r="15" fill="#DCFCE7" />
         <text x="70" y="248" fontSize="7" fill="#166534" textAnchor="middle">
           NTA
@@ -138,8 +127,7 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <circle cx="140" cy="245" r="15" fill="#DBEAFE" />
         <text x="140" y="248" fontSize="6" fill="#1D4ED8" textAnchor="middle">
           Apps
@@ -149,8 +137,7 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <circle cx="210" cy="245" r="15" fill="#FEF3C7" />
         <text x="210" y="248" fontSize="6" fill="#B45309" textAnchor="middle">
           Notes
@@ -160,8 +147,7 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <circle cx="280" cy="245" r="15" fill="#FCE7F3" />
         <text x="280" y="248" fontSize="6" fill="#DB2777" textAnchor="middle">
           Podcasts
@@ -171,8 +157,7 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <circle cx="340" cy="245" r="15" fill="#E9D5FF" />
         <text x="340" y="248" fontSize="6" fill="#7C3AED" textAnchor="middle">
           Forums

@@ -150,7 +150,16 @@ const localBusinessSchema = {
     addressRegion: 'Uttar Pradesh',
     addressCountry: 'IN',
   },
-  areaServed: ['Nashik', 'College Road', 'Gangapur Road', 'Panchavati', 'CIDCO', 'Satpur', 'Deolali', 'Nashik Road'],
+  areaServed: [
+    'Nashik',
+    'College Road',
+    'Gangapur Road',
+    'Panchavati',
+    'CIDCO',
+    'Satpur',
+    'Deolali',
+    'Nashik Road',
+  ],
   priceRange: '$$',
 }
 
@@ -197,13 +206,18 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert online NEET classes for Nashik, College Road, Gangapur Road, and all nearby areas.
-              <strong> Strong competitive advantage</strong> in a weak NEET focus region. Proven results with
-              12000+ aspirants annually.
+              Expert online NEET classes for Nashik, College Road, Gangapur Road, and all nearby
+              areas.
+              <strong> Strong competitive advantage</strong> in a weak NEET focus region. Proven
+              results with 12000+ aspirants annually.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20nashik.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20nashik.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -376,11 +390,16 @@ export default function PageContent() {
               Nashik Students, Dominate NEET Online!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Premium online NEET coaching for wine country families - gain competitive advantage in Maharashtra
+              Premium online NEET coaching for wine country families - gain competitive advantage in
+              Maharashtra
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20nashik.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20nashik.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -421,7 +440,6 @@ export default function PageContent() {
         </div>
       </section>
 
-
       <PricingSection cityName="Nashik" />
       <CostComparisonSection cityName="Nashik" />
       {/* Related */}
@@ -449,27 +467,35 @@ export default function PageContent() {
             </Link>
           </div>
         </div>
-      
-      {/* Schools Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Students from These Nashik Schools Trust Us
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Fravashi Academy Nashik', 'Podar International Nashik', 'KTHM College', 'BYK College of Commerce', "St. Francis D'Assisi School", 'Delhi Public School Nashik', 'Trimurti International School', 'Boys Town School Nashik'].map((school) => (
-              <div
-                key={school}
-                className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
-              >
-                {school}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-</section>
+        {/* Schools Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Students from These Nashik Schools Trust Us
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                'Fravashi Academy Nashik',
+                'Podar International Nashik',
+                'KTHM College',
+                'BYK College of Commerce',
+                "St. Francis D'Assisi School",
+                'Delhi Public School Nashik',
+                'Trimurti International School',
+                'Boys Town School Nashik',
+              ].map((school) => (
+                <div
+                  key={school}
+                  className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
+                >
+                  {school}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </section>
       <RelatedCityLinks currentCity="nashik" variant="default" />
     </div>
   )

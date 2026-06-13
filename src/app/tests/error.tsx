@@ -39,9 +39,15 @@ export default function TestsError({
           </Link>
         </div>
         <div className="flex flex-wrap gap-3 justify-center text-sm">
-          <Link href="/neet-biology-mcq" className="text-blue-600 hover:underline">MCQ Practice</Link>
-          <Link href="/mock-tests" className="text-blue-600 hover:underline">Mock Tests</Link>
-          <Link href="/courses" className="text-blue-600 hover:underline">Courses</Link>
+          <Link href="/neet-biology-mcq" className="text-blue-600 hover:underline">
+            MCQ Practice
+          </Link>
+          <Link href="/mock-tests" className="text-blue-600 hover:underline">
+            Mock Tests
+          </Link>
+          <Link href="/courses" className="text-blue-600 hover:underline">
+            Courses
+          </Link>
         </div>
       </div>
     </div>

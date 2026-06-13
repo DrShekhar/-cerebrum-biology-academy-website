@@ -53,30 +53,28 @@ export function FloatingActionButton({
 
   return (
     <div className={`fixed z-50 ${positionClasses[position]} ${className}`}>
-{isOpen && actions.length > 0 && (
-          <div
-            className="absolute bottom-16 right-0 flex flex-col gap-3 mb-2 animate-fadeInUp"
-          >
-            {actions.map((action, index) => (
-              <button
-                key={action.id}
-                onClick={() => handleActionClick(action)}
-                aria-label={action.ariaLabel || action.label}
-                className={`flex items-center gap-3 px-4 py-3 rounded-full shadow-lg bg-white border border-gray-200 hover:shadow-xl transition-all min-h-[48px] touch-action-manipulation group`}
+      {isOpen && actions.length > 0 && (
+        <div className="absolute bottom-16 right-0 flex flex-col gap-3 mb-2 animate-fadeInUp">
+          {actions.map((action, index) => (
+            <button
+              key={action.id}
+              onClick={() => handleActionClick(action)}
+              aria-label={action.ariaLabel || action.label}
+              className={`flex items-center gap-3 px-4 py-3 rounded-full shadow-lg bg-white border border-gray-200 hover:shadow-xl transition-all min-h-[48px] touch-action-manipulation group`}
+            >
+              <div
+                className={`p-2 rounded-full ${action.color || 'bg-blue-100'} group-hover:scale-110 transition-transform`}
               >
-                <div
-                  className={`p-2 rounded-full ${action.color || 'bg-blue-100'} group-hover:scale-110 transition-transform`}
-                >
-                  <action.icon className="w-5 h-5 text-gray-700" />
-                </div>
-                <span className="text-sm font-medium text-gray-900 pr-2 whitespace-nowrap">
-                  {action.label}
-                </span>
-              </button>
-            ))}
-          </div>
-        )}
-<button
+                <action.icon className="w-5 h-5 text-gray-700" />
+              </div>
+              <span className="text-sm font-medium text-gray-900 pr-2 whitespace-nowrap">
+                {action.label}
+              </span>
+            </button>
+          ))}
+        </div>
+      )}
+      <button
         onClick={handleToggle}
         aria-label={mainLabel}
         aria-expanded={isOpen}
@@ -86,20 +84,16 @@ export function FloatingActionButton({
             : 'bg-gradient-to-r from-green-600 to-navy-700 hover:from-green-700 hover:to-navy-800'
         }`}
       >
-{isOpen ? (
-            <div
-              key="close"
-             className="animate-fadeInUp">
-              <X className="w-6 h-6 text-white" />
-            </div>
-          ) : (
-            <div
-              key="open"
-             className="animate-fadeInUp">
-              <MainIcon className="w-6 h-6 text-white" />
-            </div>
-          )}
-</button>
+        {isOpen ? (
+          <div key="close" className="animate-fadeInUp">
+            <X className="w-6 h-6 text-white" />
+          </div>
+        ) : (
+          <div key="open" className="animate-fadeInUp">
+            <MainIcon className="w-6 h-6 text-white" />
+          </div>
+        )}
+      </button>
 
       {isOpen && (
         <div

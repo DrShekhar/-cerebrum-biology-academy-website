@@ -170,9 +170,7 @@ export default function UsersSettingsPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <div
-            className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
-          >
+          <div className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Total Users</p>
@@ -182,9 +180,7 @@ export default function UsersSettingsPage() {
             </div>
           </div>
 
-          <div
-            className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
-          >
+          <div className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Active Users</p>
@@ -196,9 +192,7 @@ export default function UsersSettingsPage() {
             </div>
           </div>
 
-          <div
-            className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
-          >
+          <div className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Admins</p>
@@ -210,9 +204,7 @@ export default function UsersSettingsPage() {
             </div>
           </div>
 
-          <div
-            className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
-          >
+          <div className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Counselors</p>

@@ -27,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'West Bengal Biology Tuition Online | WBCHSE Board + NEET | AIIMS Faculty',
-    description: 'Best Biology tuition for West Bengal students. WBCHSE Board + NEET preparation. AIIMS faculty, online classes. Serving Kolkata, Siliguri, Durgapur, Asansol. 98% success rate.',
+    description:
+      'Best Biology tuition for West Bengal students. WBCHSE Board + NEET preparation. AIIMS faculty, online classes. Serving Kolkata, Siliguri, Durgapur, Asansol. 98% success rate.',
   },
 }
 

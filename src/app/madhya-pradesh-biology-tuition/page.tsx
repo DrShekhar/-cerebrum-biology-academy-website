@@ -27,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Madhya Pradesh Biology Tuition Online | MPBSE Board + NEET | AIIMS Faculty',
-    description: 'Best Biology tuition for Madhya Pradesh students. MPBSE Board + NEET preparation. AIIMS faculty, online classes. Serving Bhopal, Indore, Jabalpur, Gwalior. 98% success rate.',
+    description:
+      'Best Biology tuition for Madhya Pradesh students. MPBSE Board + NEET preparation. AIIMS faculty, online classes. Serving Bhopal, Indore, Jabalpur, Gwalior. 98% success rate.',
   },
 }
 

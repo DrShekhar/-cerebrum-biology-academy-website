@@ -3,6 +3,7 @@
 ## You're All Set! Here's What Changed:
 
 ### ✅ What Was Created:
+
 1. **`staging` branch** - Your new development branch
 2. **`DEPLOYMENT.md`** - Complete deployment guide
 3. **`scripts/pre-deploy-check.sh`** - Automated safety checks
@@ -34,11 +35,13 @@ git push origin staging
 ## 🚀 Weekly Deployment (Tuesday 9 PM IST)
 
 ### Simple Method (One Command):
+
 ```bash
 ./scripts/deploy-to-production.sh
 ```
 
 **That's it!** The script will:
+
 - ✅ Run all safety checks (TypeScript, lint, build)
 - ✅ Show you what will be deployed
 - ✅ Ask for confirmation
@@ -46,6 +49,7 @@ git push origin staging
 - ✅ Switch you back to staging
 
 ### Manual Method (If You Prefer):
+
 ```bash
 # 1. Run checks
 ./scripts/pre-deploy-check.sh
@@ -76,12 +80,14 @@ git log main..staging --oneline
 If something breaks in production:
 
 **Option 1: Vercel Dashboard (Fastest - 10 seconds)**
+
 1. Go to: https://vercel.com/dashboard
 2. Click "Deployments"
 3. Find previous working deployment
 4. Click "Promote to Production"
 
 **Option 2: Git Revert**
+
 ```bash
 git checkout main
 git revert HEAD
@@ -93,15 +99,18 @@ git push origin main
 ## ⚡ Pro Tips
 
 ### Check Current Branch:
+
 ```bash
 git branch
 # * staging  ← Green star = current branch
 ```
 
 ### See Vercel Preview URL:
+
 After pushing to staging, check your terminal or GitHub for the preview URL.
 
 ### Before Every Deploy:
+
 Read `DEPLOYMENT.md` for the complete checklist.
 
 ---
@@ -113,6 +122,7 @@ Read `DEPLOYMENT.md` for the complete checklist.
 **What:** Blog quality improvements currently on staging
 
 **Before deploying:**
+
 1. Test the Vercel preview URL thoroughly
 2. Run `./scripts/pre-deploy-check.sh`
 3. Review changes: `git log main..staging --oneline`
@@ -133,6 +143,7 @@ Read `DEPLOYMENT.md` for the complete checklist.
 ## 📞 Need Help?
 
 Check these files:
+
 - `DEPLOYMENT.md` - Complete workflow guide
 - `scripts/pre-deploy-check.sh` - What checks run before deploy
 - `scripts/deploy-to-production.sh` - Deployment automation

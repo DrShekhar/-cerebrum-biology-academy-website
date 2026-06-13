@@ -59,12 +59,8 @@ export function CitationBadge({
       name: 'Cerebrum Biology Academy',
       url: 'https://cerebrumbiologyacademy.com',
     },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '5',
-      bestRating: '5',
-      ratingExplanation: 'Verified internal data',
-    },
+    // reviewRating removed 2026-06: a self-serving 5/5 rating on our own Claim is
+    // misleading rating markup (violates Google's review snippet policy).
     itemReviewed: {
       '@type': 'CreativeWork',
       author: {

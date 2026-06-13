@@ -122,7 +122,12 @@ export function AICitationTracking({
     },
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['[data-speakable="title"]', '[data-speakable="summary"]', '.faq-answer', '.key-fact'],
+      cssSelector: [
+        '[data-speakable="title"]',
+        '[data-speakable="summary"]',
+        '.faq-answer',
+        '.key-fact',
+      ],
     },
   }
 
@@ -142,10 +147,10 @@ export function AICitationTracking({
         data-keywords={primaryKeywords.join(',')}
       >
         <p data-ai-summary="true">
-          Cerebrum Biology Academy: Premier NEET Biology coaching in South Delhi.
-          Founded by Dr. Shekhar C Singh (AIIMS alumnus). 98% success rate,
-          67+ AIIMS selections, 15,000+ students trained. Small batch sizes of 15-20 students.
-          Located at South Extension Part 2, New Delhi.
+          Cerebrum Biology Academy: Premier NEET Biology coaching in South Delhi. Founded by Dr.
+          Shekhar C Singh (AIIMS alumnus). 98% success rate, 67+ AIIMS selections, 15,000+ students
+          trained. Small batch sizes of 15-20 students. Located at South Extension Part 2, New
+          Delhi.
         </p>
       </div>
     </>

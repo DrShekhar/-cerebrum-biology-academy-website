@@ -51,9 +51,7 @@ export function CompactVideoLectures() {
     <section className="py-20 bg-navy-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div
-          className="text-center mb-12 animate-fadeInUp"
-        >
+        <div className="text-center mb-12 animate-fadeInUp">
           <div className="inline-flex items-center bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Play className="w-4 h-4 mr-2" />
             Cerebrum Video Lecture Library
@@ -76,10 +74,7 @@ export function CompactVideoLectures() {
               { icon: Users, label: '50K+', sublabel: 'Views' },
               { icon: Award, label: '98%', sublabel: 'Success' },
             ].map((stat, index) => (
-              <div
-                key={stat.label}
-                className="text-center animate-fadeInUp"
-              >
+              <div key={stat.label} className="text-center animate-fadeInUp">
                 <div className="w-10 h-10 bg-white rounded-lg shadow-md flex items-center justify-center mx-auto mb-2">
                   <stat.icon className="w-5 h-5 text-purple-600" />
                 </div>
@@ -93,10 +88,7 @@ export function CompactVideoLectures() {
         {/* Featured Videos Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {featuredLectures.map((lecture, index) => (
-            <div
-              key={lecture.id}
-              className="group animate-fadeInUp"
-            >
+            <div key={lecture.id} className="group animate-fadeInUp">
               <VideoShowcase
                 videoId={lecture.videoId}
                 title={lecture.title}
@@ -124,9 +116,7 @@ export function CompactVideoLectures() {
         </div>
 
         {/* CTA Section */}
-        <div
-          className="text-center bg-white rounded-2xl shadow-lg p-8 md:p-12 animate-fadeInUp"
-        >
+        <div className="text-center bg-white rounded-2xl shadow-lg p-8 md:p-12 animate-fadeInUp">
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             200+ More Lectures Available
           </h3>

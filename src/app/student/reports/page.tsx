@@ -339,10 +339,7 @@ export default function ReportsPage() {
                       </thead>
                       <tbody>
                         {data.dailyData.map((record, index) => (
-                          <tr
-                            key={record.date}
-                            className="border-b hover:bg-gray-50"
-                          >
+                          <tr key={record.date} className="border-b hover:bg-gray-50">
                             <td className="py-3 px-4 font-medium">{formatDate(record.date)}</td>
                             <td className="py-3 px-4 text-center">
                               <ProgressPill
@@ -412,9 +409,7 @@ function SummaryCard({
   color: string
 }) {
   return (
-    <div
-      className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
-    >
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp">
       <div className={cn('p-4 text-white', color)}>
         <div className="flex items-center justify-between">
           {icon}
@@ -470,9 +465,7 @@ function CategoryProgress({
         </span>
       </div>
       <div className="h-3 bg-gray-100 rounded-full overflow-hidden mb-2">
-        <div
-          className={cn('h-full rounded-full', getBarColor(rate))}
-        />
+        <div className={cn('h-full rounded-full', getBarColor(rate))} />
       </div>
       <div className="flex justify-between text-xs text-gray-500">
         <span>Assigned: {assigned}</span>

@@ -137,7 +137,8 @@ export default function MaharashtraHSCBiologyTuitionPage() {
   const handleWhatsAppClick = async () => {
     await trackAndOpenWhatsApp({
       source: 'maharashtra-hsc-biology-tuition',
-      message: 'Hi! I am interested in Maharashtra HSC Biology tuition. Please share details about your online coaching program.',
+      message:
+        'Hi! I am interested in Maharashtra HSC Biology tuition. Please share details about your online coaching program.',
       campaign: 'maharashtra-hsc-biology-tuition',
     })
   }
@@ -192,9 +193,7 @@ export default function MaharashtraHSCBiologyTuitionPage() {
       <section className="relative bg-gradient-to-br from-orange-600 via-orange-500 to-yellow-500 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2" />
               Maharashtra State Board | HSC + NEET Biology
@@ -226,7 +225,11 @@ export default function MaharashtraHSCBiologyTuitionPage() {
                 <span>WhatsApp Us Now</span>
               </Button>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Maharashtra%20HSC%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Maharashtra%20HSC%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -302,9 +305,7 @@ export default function MaharashtraHSCBiologyTuitionPage() {
       {/* Maharashtra Cities Coverage */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               HSC Biology Coaching Across Maharashtra
             </h2>
@@ -316,9 +317,7 @@ export default function MaharashtraHSCBiologyTuitionPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {maharashtraCities.map((city, index) => (
-              <div
-                key={city.name}
-               className="animate-fadeInUp">
+              <div key={city.name} className="animate-fadeInUp">
                 <div
                   className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all hover:-translate-y-1 ${
                     city.priority === 'high' ? 'ring-2 ring-orange-500' : ''
@@ -346,9 +345,7 @@ export default function MaharashtraHSCBiologyTuitionPage() {
       {/* HSC vs NEET Syllabus Comparison */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Maharashtra HSC vs NEET Syllabus
             </h2>
@@ -425,9 +422,7 @@ export default function MaharashtraHSCBiologyTuitionPage() {
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Maharashtra Students Choose Us
             </h2>
@@ -475,9 +470,7 @@ export default function MaharashtraHSCBiologyTuitionPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               FAQs - Maharashtra HSC Biology Tuition
             </h2>
@@ -512,14 +505,13 @@ export default function MaharashtraHSCBiologyTuitionPage() {
       {/* Final CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-600 via-orange-500 to-yellow-500 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Ready to Excel in HSC Biology & NEET?
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Join 1,200+ Maharashtra students. 98% success rate. AIIMS faculty. Start your
-              journey today!
+              Join 1,200+ Maharashtra students. 98% success rate. AIIMS faculty. Start your journey
+              today!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -533,7 +525,11 @@ export default function MaharashtraHSCBiologyTuitionPage() {
                 <span>WhatsApp Us Now</span>
               </Button>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Maharashtra%20HSC%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Maharashtra%20HSC%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

@@ -351,9 +351,7 @@ const AccessSettings: React.FC = () => {
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <div
-          className="flex items-center justify-center gap-3 animate-fadeInUp"
-        >
+        <div className="flex items-center justify-center gap-3 animate-fadeInUp">
           <div className="p-3 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl">
             <Shield className="w-8 h-8 text-white" />
           </div>
@@ -398,9 +396,7 @@ const AccessSettings: React.FC = () => {
 
       {/* Validation Errors */}
       {validationErrors.length > 0 && (
-        <div
-          className="bg-red-50 border border-red-200 rounded-lg p-4 animate-fadeInUp"
-        >
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4 animate-fadeInUp">
           <div className="flex items-center gap-2 mb-3">
             <AlertCircle className="w-5 h-5 text-red-600" />
             <h4 className="font-semibold text-red-800">Configuration Errors</h4>
@@ -417,1195 +413,1118 @@ const AccessSettings: React.FC = () => {
       )}
 
       {/* Content */}
-{/* Schedule Settings */}
-        {activeTab === 'schedule' && (
-          <div
-            key="schedule"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-          >
-            {/* Basic Schedule */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-green-600" />
-                Test Schedule
-              </h3>
+      {/* Schedule Settings */}
+      {activeTab === 'schedule' && (
+        <div key="schedule" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
+          {/* Basic Schedule */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Calendar className="w-5 h-5 text-green-600" />
+              Test Schedule
+            </h3>
 
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Start Date & Time
-                  </label>
-                  <input
-                    type="datetime-local"
-                    value={configuration.schedule.startDateTime}
-                    onChange={(e) =>
-                      setConfiguration((prev) => ({
-                        ...prev,
-                        schedule: { ...prev.schedule, startDateTime: e.target.value },
-                      }))
-                    }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    End Date & Time
-                  </label>
-                  <input
-                    type="datetime-local"
-                    value={configuration.schedule.endDateTime}
-                    onChange={(e) =>
-                      setConfiguration((prev) => ({
-                        ...prev,
-                        schedule: { ...prev.schedule, endDateTime: e.target.value },
-                      }))
-                    }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Timezone</label>
-                  <select
-                    value={configuration.schedule.timezone}
-                    onChange={(e) =>
-                      setConfiguration((prev) => ({
-                        ...prev,
-                        schedule: { ...prev.schedule, timezone: e.target.value },
-                      }))
-                    }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                  >
-                    <option value="Asia/Kolkata">Asia/Kolkata (IST)</option>
-                    <option value="America/New_York">America/New_York (EST)</option>
-                    <option value="Europe/London">Europe/London (GMT)</option>
-                    <option value="Asia/Tokyo">Asia/Tokyo (JST)</option>
-                    <option value="Australia/Sydney">Australia/Sydney (AEST)</option>
-                  </select>
-                </div>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Start Date & Time
+                </label>
+                <input
+                  type="datetime-local"
+                  value={configuration.schedule.startDateTime}
+                  onChange={(e) =>
+                    setConfiguration((prev) => ({
+                      ...prev,
+                      schedule: { ...prev.schedule, startDateTime: e.target.value },
+                    }))
+                  }
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                />
               </div>
-            </div>
 
-            {/* Advanced Schedule Options */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Clock className="w-5 h-5 text-blue-600" />
-                Advanced Options
-              </h3>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  End Date & Time
+                </label>
+                <input
+                  type="datetime-local"
+                  value={configuration.schedule.endDateTime}
+                  onChange={(e) =>
+                    setConfiguration((prev) => ({
+                      ...prev,
+                      schedule: { ...prev.schedule, endDateTime: e.target.value },
+                    }))
+                  }
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                />
+              </div>
 
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <label className="text-sm font-medium text-gray-700">Auto Start</label>
-                    <p className="text-xs text-gray-500">
-                      Automatically start test at scheduled time
-                    </p>
-                  </div>
-                  <button
-                    onClick={() =>
-                      setConfiguration((prev) => ({
-                        ...prev,
-                        schedule: { ...prev.schedule, autoStart: !prev.schedule.autoStart },
-                      }))
-                    }
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      configuration.schedule.autoStart ? 'bg-green-600' : 'bg-gray-200'
-                    }`}
-                  >
-                    <span
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        configuration.schedule.autoStart ? 'translate-x-6' : 'translate-x-1'
-                      }`}
-                    />
-                  </button>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div>
-                    <label className="text-sm font-medium text-gray-700">Auto End</label>
-                    <p className="text-xs text-gray-500">
-                      Automatically end test at scheduled time
-                    </p>
-                  </div>
-                  <button
-                    onClick={() =>
-                      setConfiguration((prev) => ({
-                        ...prev,
-                        schedule: { ...prev.schedule, autoEnd: !prev.schedule.autoEnd },
-                      }))
-                    }
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      configuration.schedule.autoEnd ? 'bg-green-600' : 'bg-gray-200'
-                    }`}
-                  >
-                    <span
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        configuration.schedule.autoEnd ? 'translate-x-6' : 'translate-x-1'
-                      }`}
-                    />
-                  </button>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Grace Period (minutes)
-                  </label>
-                  <input
-                    type="number"
-                    min="0"
-                    max="60"
-                    value={configuration.schedule.gracePeriod}
-                    onChange={(e) =>
-                      setConfiguration((prev) => ({
-                        ...prev,
-                        schedule: { ...prev.schedule, gracePeriod: parseInt(e.target.value) || 0 },
-                      }))
-                    }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Buffer Time (minutes)
-                  </label>
-                  <input
-                    type="number"
-                    min="0"
-                    max="120"
-                    value={configuration.schedule.bufferTime}
-                    onChange={(e) =>
-                      setConfiguration((prev) => ({
-                        ...prev,
-                        schedule: { ...prev.schedule, bufferTime: parseInt(e.target.value) || 0 },
-                      }))
-                    }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                  />
-                </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Timezone</label>
+                <select
+                  value={configuration.schedule.timezone}
+                  onChange={(e) =>
+                    setConfiguration((prev) => ({
+                      ...prev,
+                      schedule: { ...prev.schedule, timezone: e.target.value },
+                    }))
+                  }
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                >
+                  <option value="Asia/Kolkata">Asia/Kolkata (IST)</option>
+                  <option value="America/New_York">America/New_York (EST)</option>
+                  <option value="Europe/London">Europe/London (GMT)</option>
+                  <option value="Asia/Tokyo">Asia/Tokyo (JST)</option>
+                  <option value="Australia/Sydney">Australia/Sydney (AEST)</option>
+                </select>
               </div>
             </div>
           </div>
-        )}
 
-        {/* Student Groups */}
-        {activeTab === 'groups' && (
-          <div
-            key="groups"
-            className="space-y-6 animate-fadeInUp"
-          >
-            <div className="bg-white rounded-xl p-6 border">
-              <div className="flex justify-between items-center mb-6">
-                <h3 className="text-lg font-semibold flex items-center gap-2">
-                  <Users className="w-5 h-5 text-purple-600" />
-                  Student Groups ({configuration.studentGroups.length})
-                </h3>
+          {/* Advanced Schedule Options */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Clock className="w-5 h-5 text-blue-600" />
+              Advanced Options
+            </h3>
+
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <label className="text-sm font-medium text-gray-700">Auto Start</label>
+                  <p className="text-xs text-gray-500">
+                    Automatically start test at scheduled time
+                  </p>
+                </div>
                 <button
-                  onClick={addStudentGroup}
-                  className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2"
+                  onClick={() =>
+                    setConfiguration((prev) => ({
+                      ...prev,
+                      schedule: { ...prev.schedule, autoStart: !prev.schedule.autoStart },
+                    }))
+                  }
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                    configuration.schedule.autoStart ? 'bg-green-600' : 'bg-gray-200'
+                  }`}
                 >
-                  <Plus className="w-4 h-4" />
-                  Add Group
+                  <span
+                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                      configuration.schedule.autoStart ? 'translate-x-6' : 'translate-x-1'
+                    }`}
+                  />
                 </button>
               </div>
 
-              {configuration.studentGroups.length === 0 ? (
-                <div className="text-center py-12 text-gray-500">
-                  <Users className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-                  <p>No student groups created yet</p>
-                  <p className="text-sm">Create groups to organize your students</p>
+              <div className="flex items-center justify-between">
+                <div>
+                  <label className="text-sm font-medium text-gray-700">Auto End</label>
+                  <p className="text-xs text-gray-500">Automatically end test at scheduled time</p>
                 </div>
-              ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {configuration.studentGroups.map((group, index) => (
-                    <div
-                      key={group.id}
-                      className="border rounded-lg p-4 hover:shadow-md transition-shadow"
-                    >
-                      <div className="flex justify-between items-start mb-3">
-                        <h4 className="font-semibold text-gray-800">{group.name}</h4>
-                        <div className="flex gap-1">
-                          <button className="text-gray-500 hover:text-blue-600">
-                            <Edit3 className="w-4 h-4" />
-                          </button>
-                          <button className="text-gray-500 hover:text-red-600">
-                            <Trash2 className="w-4 h-4" />
-                          </button>
-                        </div>
+                <button
+                  onClick={() =>
+                    setConfiguration((prev) => ({
+                      ...prev,
+                      schedule: { ...prev.schedule, autoEnd: !prev.schedule.autoEnd },
+                    }))
+                  }
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                    configuration.schedule.autoEnd ? 'bg-green-600' : 'bg-gray-200'
+                  }`}
+                >
+                  <span
+                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                      configuration.schedule.autoEnd ? 'translate-x-6' : 'translate-x-1'
+                    }`}
+                  />
+                </button>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Grace Period (minutes)
+                </label>
+                <input
+                  type="number"
+                  min="0"
+                  max="60"
+                  value={configuration.schedule.gracePeriod}
+                  onChange={(e) =>
+                    setConfiguration((prev) => ({
+                      ...prev,
+                      schedule: { ...prev.schedule, gracePeriod: parseInt(e.target.value) || 0 },
+                    }))
+                  }
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Buffer Time (minutes)
+                </label>
+                <input
+                  type="number"
+                  min="0"
+                  max="120"
+                  value={configuration.schedule.bufferTime}
+                  onChange={(e) =>
+                    setConfiguration((prev) => ({
+                      ...prev,
+                      schedule: { ...prev.schedule, bufferTime: parseInt(e.target.value) || 0 },
+                    }))
+                  }
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Student Groups */}
+      {activeTab === 'groups' && (
+        <div key="groups" className="space-y-6 animate-fadeInUp">
+          <div className="bg-white rounded-xl p-6 border">
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-lg font-semibold flex items-center gap-2">
+                <Users className="w-5 h-5 text-purple-600" />
+                Student Groups ({configuration.studentGroups.length})
+              </h3>
+              <button
+                onClick={addStudentGroup}
+                className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2"
+              >
+                <Plus className="w-4 h-4" />
+                Add Group
+              </button>
+            </div>
+
+            {configuration.studentGroups.length === 0 ? (
+              <div className="text-center py-12 text-gray-500">
+                <Users className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                <p>No student groups created yet</p>
+                <p className="text-sm">Create groups to organize your students</p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {configuration.studentGroups.map((group, index) => (
+                  <div
+                    key={group.id}
+                    className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                  >
+                    <div className="flex justify-between items-start mb-3">
+                      <h4 className="font-semibold text-gray-800">{group.name}</h4>
+                      <div className="flex gap-1">
+                        <button className="text-gray-500 hover:text-blue-600">
+                          <Edit3 className="w-4 h-4" />
+                        </button>
+                        <button className="text-gray-500 hover:text-red-600">
+                          <Trash2 className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </div>
+
+                    <p className="text-sm text-gray-600 mb-3">
+                      {group.description || 'No description'}
+                    </p>
+
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="text-gray-500">{group.studentCount} students</span>
+                      <span className="text-gray-400">
+                        {new Date(group.createdDate).toLocaleDateString()}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Individual Assignments */}
+      {activeTab === 'individual' && (
+        <div key="individual" className="space-y-6 animate-fadeInUp">
+          <div className="bg-white rounded-xl p-6 border">
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-lg font-semibold flex items-center gap-2">
+                <UserCheck className="w-5 h-5 text-indigo-600" />
+                Individual Assignments ({configuration.individualAssignments.length})
+              </h3>
+              <button
+                onClick={addIndividualAssignment}
+                className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors flex items-center gap-2"
+              >
+                <Plus className="w-4 h-4" />
+                Add Assignment
+              </button>
+            </div>
+
+            {configuration.individualAssignments.length === 0 ? (
+              <div className="text-center py-12 text-gray-500">
+                <UserCheck className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                <p>No individual assignments created yet</p>
+                <p className="text-sm">Assign tests to specific students with custom settings</p>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                {configuration.individualAssignments.map((assignment, index) => (
+                  <div
+                    key={assignment.studentId}
+                    className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                  >
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
+                      <div>
+                        <p className="font-medium text-gray-800">
+                          {assignment.studentName || 'Unnamed Student'}
+                        </p>
+                        <p className="text-sm text-gray-500">{assignment.email}</p>
                       </div>
 
-                      <p className="text-sm text-gray-600 mb-3">
-                        {group.description || 'No description'}
-                      </p>
-
-                      <div className="flex justify-between items-center text-sm">
-                        <span className="text-gray-500">{group.studentCount} students</span>
-                        <span className="text-gray-400">
-                          {new Date(group.createdDate).toLocaleDateString()}
+                      <div className="text-sm">
+                        <span
+                          className={`px-2 py-1 rounded text-xs font-medium ${
+                            assignment.status === 'pending'
+                              ? 'bg-yellow-100 text-yellow-700'
+                              : assignment.status === 'active'
+                                ? 'bg-green-100 text-green-700'
+                                : assignment.status === 'completed'
+                                  ? 'bg-blue-100 text-blue-700'
+                                  : 'bg-gray-100 text-gray-700'
+                          }`}
+                        >
+                          {assignment.status}
                         </span>
                       </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-        )}
 
-        {/* Individual Assignments */}
-        {activeTab === 'individual' && (
-          <div
-            key="individual"
-            className="space-y-6 animate-fadeInUp"
-          >
-            <div className="bg-white rounded-xl p-6 border">
-              <div className="flex justify-between items-center mb-6">
-                <h3 className="text-lg font-semibold flex items-center gap-2">
-                  <UserCheck className="w-5 h-5 text-indigo-600" />
-                  Individual Assignments ({configuration.individualAssignments.length})
-                </h3>
+                      <div className="text-sm text-gray-500">
+                        Assigned: {new Date(assignment.assignedDate).toLocaleDateString()}
+                      </div>
+
+                      <div className="flex gap-2 justify-end">
+                        <button className="text-gray-500 hover:text-blue-600">
+                          <Edit3 className="w-4 h-4" />
+                        </button>
+                        <button className="text-gray-500 hover:text-red-600">
+                          <Trash2 className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Password Protection */}
+      {activeTab === 'password' && (
+        <div key="password" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
+          {/* Password Settings */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Lock className="w-5 h-5 text-red-600" />
+              Password Protection
+            </h3>
+
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <label className="text-sm font-medium text-gray-700">
+                    Enable Password Protection
+                  </label>
+                  <p className="text-xs text-gray-500">Require access code to start test</p>
+                </div>
                 <button
-                  onClick={addIndividualAssignment}
-                  className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors flex items-center gap-2"
+                  onClick={() =>
+                    setConfiguration((prev) => ({
+                      ...prev,
+                      passwordProtection: {
+                        ...prev.passwordProtection,
+                        enabled: !prev.passwordProtection.enabled,
+                      },
+                    }))
+                  }
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                    configuration.passwordProtection.enabled ? 'bg-red-600' : 'bg-gray-200'
+                  }`}
                 >
-                  <Plus className="w-4 h-4" />
-                  Add Assignment
+                  <span
+                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                      configuration.passwordProtection.enabled ? 'translate-x-6' : 'translate-x-1'
+                    }`}
+                  />
                 </button>
               </div>
 
-              {configuration.individualAssignments.length === 0 ? (
-                <div className="text-center py-12 text-gray-500">
-                  <UserCheck className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-                  <p>No individual assignments created yet</p>
-                  <p className="text-sm">Assign tests to specific students with custom settings</p>
-                </div>
-              ) : (
-                <div className="space-y-4">
-                  {configuration.individualAssignments.map((assignment, index) => (
-                    <div
-                      key={assignment.studentId}
-                      className="border rounded-lg p-4 hover:shadow-md transition-shadow"
-                    >
-                      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
-                        <div>
-                          <p className="font-medium text-gray-800">
-                            {assignment.studentName || 'Unnamed Student'}
-                          </p>
-                          <p className="text-sm text-gray-500">{assignment.email}</p>
-                        </div>
-
-                        <div className="text-sm">
-                          <span
-                            className={`px-2 py-1 rounded text-xs font-medium ${
-                              assignment.status === 'pending'
-                                ? 'bg-yellow-100 text-yellow-700'
-                                : assignment.status === 'active'
-                                  ? 'bg-green-100 text-green-700'
-                                  : assignment.status === 'completed'
-                                    ? 'bg-blue-100 text-blue-700'
-                                    : 'bg-gray-100 text-gray-700'
-                            }`}
-                          >
-                            {assignment.status}
-                          </span>
-                        </div>
-
-                        <div className="text-sm text-gray-500">
-                          Assigned: {new Date(assignment.assignedDate).toLocaleDateString()}
-                        </div>
-
-                        <div className="flex gap-2 justify-end">
-                          <button className="text-gray-500 hover:text-blue-600">
-                            <Edit3 className="w-4 h-4" />
-                          </button>
-                          <button className="text-gray-500 hover:text-red-600">
-                            <Trash2 className="w-4 h-4" />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Password Protection */}
-        {activeTab === 'password' && (
-          <div
-            key="password"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-          >
-            {/* Password Settings */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Lock className="w-5 h-5 text-red-600" />
-                Password Protection
-              </h3>
-
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
+              {configuration.passwordProtection.enabled && (
+                <>
                   <div>
-                    <label className="text-sm font-medium text-gray-700">
-                      Enable Password Protection
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Code Type
                     </label>
-                    <p className="text-xs text-gray-500">Require access code to start test</p>
+                    <select
+                      value={configuration.passwordProtection.codeType}
+                      onChange={(e) =>
+                        setConfiguration((prev) => ({
+                          ...prev,
+                          passwordProtection: {
+                            ...prev.passwordProtection,
+                            codeType: e.target.value as any,
+                          },
+                        }))
+                      }
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    >
+                      <option value="simple">Simple (6 characters)</option>
+                      <option value="complex">Complex (12+ characters)</option>
+                      <option value="time-based">Time-based</option>
+                    </select>
                   </div>
-                  <button
-                    onClick={() =>
-                      setConfiguration((prev) => ({
-                        ...prev,
-                        passwordProtection: {
-                          ...prev.passwordProtection,
-                          enabled: !prev.passwordProtection.enabled,
-                        },
-                      }))
-                    }
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      configuration.passwordProtection.enabled ? 'bg-red-600' : 'bg-gray-200'
-                    }`}
-                  >
-                    <span
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        configuration.passwordProtection.enabled ? 'translate-x-6' : 'translate-x-1'
-                      }`}
-                    />
-                  </button>
-                </div>
 
-                {configuration.passwordProtection.enabled && (
-                  <>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Code Type
-                      </label>
-                      <select
-                        value={configuration.passwordProtection.codeType}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Access Code
+                    </label>
+                    <div className="flex gap-2">
+                      <input
+                        type="text"
+                        value={configuration.passwordProtection.accessCode}
                         onChange={(e) =>
                           setConfiguration((prev) => ({
                             ...prev,
                             passwordProtection: {
                               ...prev.passwordProtection,
-                              codeType: e.target.value as any,
+                              accessCode: e.target.value,
                             },
                           }))
                         }
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        placeholder="Enter access code"
+                      />
+                      <button
+                        onClick={generateAccessCode}
+                        className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
                       >
-                        <option value="simple">Simple (6 characters)</option>
-                        <option value="complex">Complex (12+ characters)</option>
-                        <option value="time-based">Time-based</option>
-                      </select>
+                        Generate
+                      </button>
+                      <button
+                        onClick={() =>
+                          navigator.clipboard.writeText(configuration.passwordProtection.accessCode)
+                        }
+                        className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                      >
+                        <Copy className="w-4 h-4" />
+                      </button>
                     </div>
+                  </div>
 
+                  <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Access Code
-                      </label>
-                      <div className="flex gap-2">
-                        <input
-                          type="text"
-                          value={configuration.passwordProtection.accessCode}
-                          onChange={(e) =>
-                            setConfiguration((prev) => ({
-                              ...prev,
-                              passwordProtection: {
-                                ...prev.passwordProtection,
-                                accessCode: e.target.value,
-                              },
-                            }))
-                          }
-                          className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                          placeholder="Enter access code"
-                        />
-                        <button
-                          onClick={generateAccessCode}
-                          className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
-                        >
-                          Generate
-                        </button>
-                        <button
-                          onClick={() =>
-                            navigator.clipboard.writeText(
-                              configuration.passwordProtection.accessCode
-                            )
-                          }
-                          className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
-                        >
-                          <Copy className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Max Attempts
-                        </label>
-                        <input
-                          type="number"
-                          min="1"
-                          max="10"
-                          value={configuration.passwordProtection.maxAttempts}
-                          onChange={(e) =>
-                            setConfiguration((prev) => ({
-                              ...prev,
-                              passwordProtection: {
-                                ...prev.passwordProtection,
-                                maxAttempts: parseInt(e.target.value) || 1,
-                              },
-                            }))
-                          }
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Lockout Duration (minutes)
-                        </label>
-                        <input
-                          type="number"
-                          min="1"
-                          max="120"
-                          value={configuration.passwordProtection.lockoutDuration}
-                          onChange={(e) =>
-                            setConfiguration((prev) => ({
-                              ...prev,
-                              passwordProtection: {
-                                ...prev.passwordProtection,
-                                lockoutDuration: parseInt(e.target.value) || 1,
-                              },
-                            }))
-                          }
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                        />
-                      </div>
-                    </div>
-                  </>
-                )}
-              </div>
-            </div>
-
-            {/* Password Preview */}
-            {configuration.passwordProtection.enabled && (
-              <div className="bg-white rounded-xl p-6 border">
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <Eye className="w-5 h-5 text-blue-600" />
-                  Access Code Preview
-                </h3>
-
-                <div className="bg-gray-50 rounded-lg p-4 text-center">
-                  <div className="text-3xl font-mono font-bold text-gray-800 mb-2 tracking-wider">
-                    {configuration.passwordProtection.accessCode || 'NO CODE SET'}
-                  </div>
-                  <p className="text-sm text-gray-600">
-                    Students will need this code to access the test
-                  </p>
-
-                  <div className="mt-4 text-xs text-gray-500 space-y-1">
-                    <p>Type: {configuration.passwordProtection.codeType}</p>
-                    <p>Max attempts: {configuration.passwordProtection.maxAttempts}</p>
-                    <p>Lockout: {configuration.passwordProtection.lockoutDuration} minutes</p>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* IP Restrictions */}
-        {activeTab === 'ip' && (
-          <div
-            key="ip"
-            className="space-y-6 animate-fadeInUp"
-          >
-            <div className="bg-white rounded-xl p-6 border">
-              <div className="flex justify-between items-center mb-6">
-                <h3 className="text-lg font-semibold flex items-center gap-2">
-                  <Globe className="w-5 h-5 text-orange-600" />
-                  IP Restrictions ({configuration.ipRestrictions.length})
-                </h3>
-                <button
-                  onClick={addIPRestriction}
-                  className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors flex items-center gap-2"
-                >
-                  <Plus className="w-4 h-4" />
-                  Add IP Rule
-                </button>
-              </div>
-
-              {configuration.ipRestrictions.length === 0 ? (
-                <div className="text-center py-12 text-gray-500">
-                  <Globe className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-                  <p>No IP restrictions configured</p>
-                  <p className="text-sm">Control access based on IP addresses or ranges</p>
-                </div>
-              ) : (
-                <div className="space-y-4">
-                  {configuration.ipRestrictions.map((restriction, index) => (
-                    <div
-                      key={restriction.id}
-                      className="border rounded-lg p-4 hover:shadow-md transition-shadow"
-                    >
-                      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-center">
-                        <div>
-                          <p className="font-medium text-gray-800">{restriction.label}</p>
-                          <p className="text-sm text-gray-500">{restriction.description}</p>
-                        </div>
-
-                        <div className="font-mono text-sm bg-gray-100 px-2 py-1 rounded">
-                          {restriction.ipAddress}
-                        </div>
-
-                        <div>
-                          <span
-                            className={`px-2 py-1 rounded text-xs font-medium ${
-                              restriction.type === 'allow'
-                                ? 'bg-green-100 text-green-700'
-                                : 'bg-red-100 text-red-700'
-                            }`}
-                          >
-                            {restriction.type}
-                          </span>
-                        </div>
-
-                        <div>
-                          <span
-                            className={`px-2 py-1 rounded text-xs font-medium ${
-                              restriction.isActive
-                                ? 'bg-blue-100 text-blue-700'
-                                : 'bg-gray-100 text-gray-700'
-                            }`}
-                          >
-                            {restriction.isActive ? 'Active' : 'Inactive'}
-                          </span>
-                        </div>
-
-                        <div className="flex gap-2 justify-end">
-                          <button className="text-gray-500 hover:text-blue-600">
-                            <Edit3 className="w-4 h-4" />
-                          </button>
-                          <button className="text-gray-500 hover:text-red-600">
-                            <Trash2 className="w-4 h-4" />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Device Limitations */}
-        {activeTab === 'device' && (
-          <div
-            key="device"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-          >
-            {/* Device Settings */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Smartphone className="w-5 h-5 text-purple-600" />
-                Device Limitations
-              </h3>
-
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <label className="text-sm font-medium text-gray-700">
-                      Enable Device Restrictions
-                    </label>
-                    <p className="text-xs text-gray-500">Limit test access by device type</p>
-                  </div>
-                  <button
-                    onClick={() =>
-                      setConfiguration((prev) => ({
-                        ...prev,
-                        deviceLimitation: {
-                          ...prev.deviceLimitation,
-                          enabled: !prev.deviceLimitation.enabled,
-                        },
-                      }))
-                    }
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      configuration.deviceLimitation.enabled ? 'bg-purple-600' : 'bg-gray-200'
-                    }`}
-                  >
-                    <span
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        configuration.deviceLimitation.enabled ? 'translate-x-6' : 'translate-x-1'
-                      }`}
-                    />
-                  </button>
-                </div>
-
-                {configuration.deviceLimitation.enabled && (
-                  <>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Maximum Devices per Student
+                        Max Attempts
                       </label>
                       <input
                         type="number"
                         min="1"
                         max="10"
-                        value={configuration.deviceLimitation.maxDevices}
+                        value={configuration.passwordProtection.maxAttempts}
                         onChange={(e) =>
                           setConfiguration((prev) => ({
                             ...prev,
-                            deviceLimitation: {
-                              ...prev.deviceLimitation,
-                              maxDevices: parseInt(e.target.value) || 1,
-                            },
-                          }))
-                        }
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      />
-                    </div>
-
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Device Tracking</span>
-                        <button
-                          onClick={() =>
-                            setConfiguration((prev) => ({
-                              ...prev,
-                              deviceLimitation: {
-                                ...prev.deviceLimitation,
-                                deviceTracking: !prev.deviceLimitation.deviceTracking,
-                              },
-                            }))
-                          }
-                          className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                            configuration.deviceLimitation.deviceTracking
-                              ? 'bg-purple-600'
-                              : 'bg-gray-200'
-                          }`}
-                        >
-                          <span
-                            className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                              configuration.deviceLimitation.deviceTracking
-                                ? 'translate-x-5'
-                                : 'translate-x-1'
-                            }`}
-                          />
-                        </button>
-                      </div>
-
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Block Multiple Logins</span>
-                        <button
-                          onClick={() =>
-                            setConfiguration((prev) => ({
-                              ...prev,
-                              deviceLimitation: {
-                                ...prev.deviceLimitation,
-                                blockMultipleLogins: !prev.deviceLimitation.blockMultipleLogins,
-                              },
-                            }))
-                          }
-                          className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                            configuration.deviceLimitation.blockMultipleLogins
-                              ? 'bg-purple-600'
-                              : 'bg-gray-200'
-                          }`}
-                        >
-                          <span
-                            className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                              configuration.deviceLimitation.blockMultipleLogins
-                                ? 'translate-x-5'
-                                : 'translate-x-1'
-                            }`}
-                          />
-                        </button>
-                      </div>
-
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Device Fingerprinting</span>
-                        <button
-                          onClick={() =>
-                            setConfiguration((prev) => ({
-                              ...prev,
-                              deviceLimitation: {
-                                ...prev.deviceLimitation,
-                                deviceFingerprinting: !prev.deviceLimitation.deviceFingerprinting,
-                              },
-                            }))
-                          }
-                          className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                            configuration.deviceLimitation.deviceFingerprinting
-                              ? 'bg-purple-600'
-                              : 'bg-gray-200'
-                          }`}
-                        >
-                          <span
-                            className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                              configuration.deviceLimitation.deviceFingerprinting
-                                ? 'translate-x-5'
-                                : 'translate-x-1'
-                            }`}
-                          />
-                        </button>
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Session Timeout (minutes)
-                      </label>
-                      <input
-                        type="number"
-                        min="30"
-                        max="480"
-                        value={configuration.deviceLimitation.sessionTimeout}
-                        onChange={(e) =>
-                          setConfiguration((prev) => ({
-                            ...prev,
-                            deviceLimitation: {
-                              ...prev.deviceLimitation,
-                              sessionTimeout: parseInt(e.target.value) || 30,
-                            },
-                          }))
-                        }
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      />
-                    </div>
-                  </>
-                )}
-              </div>
-            </div>
-
-            {/* Browser & OS Restrictions */}
-            {configuration.deviceLimitation.enabled && (
-              <div className="bg-white rounded-xl p-6 border">
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <Settings className="w-5 h-5 text-blue-600" />
-                  Platform Restrictions
-                </h3>
-
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Allowed Browsers
-                    </label>
-                    <div className="space-y-2">
-                      {['Chrome', 'Firefox', 'Safari', 'Edge'].map((browser) => (
-                        <label key={browser} className="flex items-center gap-2">
-                          <input
-                            type="checkbox"
-                            checked={configuration.deviceLimitation.browserRestrictions.includes(
-                              browser
-                            )}
-                            onChange={(e) => {
-                              const browsers = configuration.deviceLimitation.browserRestrictions
-                              if (e.target.checked) {
-                                setConfiguration((prev) => ({
-                                  ...prev,
-                                  deviceLimitation: {
-                                    ...prev.deviceLimitation,
-                                    browserRestrictions: [...browsers, browser],
-                                  },
-                                }))
-                              } else {
-                                setConfiguration((prev) => ({
-                                  ...prev,
-                                  deviceLimitation: {
-                                    ...prev.deviceLimitation,
-                                    browserRestrictions: browsers.filter((b) => b !== browser),
-                                  },
-                                }))
-                              }
-                            }}
-                            className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
-                          />
-                          <span className="text-sm text-gray-700">{browser}</span>
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Allowed Operating Systems
-                    </label>
-                    <div className="space-y-2">
-                      {['Windows', 'macOS', 'Linux', 'iOS', 'Android'].map((os) => (
-                        <label key={os} className="flex items-center gap-2">
-                          <input
-                            type="checkbox"
-                            checked={configuration.deviceLimitation.operatingSystemRestrictions.includes(
-                              os
-                            )}
-                            onChange={(e) => {
-                              const systems =
-                                configuration.deviceLimitation.operatingSystemRestrictions
-                              if (e.target.checked) {
-                                setConfiguration((prev) => ({
-                                  ...prev,
-                                  deviceLimitation: {
-                                    ...prev.deviceLimitation,
-                                    operatingSystemRestrictions: [...systems, os],
-                                  },
-                                }))
-                              } else {
-                                setConfiguration((prev) => ({
-                                  ...prev,
-                                  deviceLimitation: {
-                                    ...prev.deviceLimitation,
-                                    operatingSystemRestrictions: systems.filter((s) => s !== os),
-                                  },
-                                }))
-                              }
-                            }}
-                            className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
-                          />
-                          <span className="text-sm text-gray-700">{os}</span>
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Attempt Limits */}
-        {activeTab === 'attempts' && (
-          <div
-            key="attempts"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-          >
-            {/* Attempt Configuration */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <RotateCcw className="w-5 h-5 text-green-600" />
-                Attempt Limits
-              </h3>
-
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <label className="text-sm font-medium text-gray-700">
-                      Enable Attempt Limits
-                    </label>
-                    <p className="text-xs text-gray-500">Restrict number of test attempts</p>
-                  </div>
-                  <button
-                    onClick={() =>
-                      setConfiguration((prev) => ({
-                        ...prev,
-                        attemptLimits: {
-                          ...prev.attemptLimits,
-                          enabled: !prev.attemptLimits.enabled,
-                        },
-                      }))
-                    }
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      configuration.attemptLimits.enabled ? 'bg-green-600' : 'bg-gray-200'
-                    }`}
-                  >
-                    <span
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        configuration.attemptLimits.enabled ? 'translate-x-6' : 'translate-x-1'
-                      }`}
-                    />
-                  </button>
-                </div>
-
-                {configuration.attemptLimits.enabled && (
-                  <>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Maximum Attempts
-                      </label>
-                      <input
-                        type="number"
-                        min="1"
-                        max="10"
-                        value={configuration.attemptLimits.maxAttempts}
-                        onChange={(e) =>
-                          setConfiguration((prev) => ({
-                            ...prev,
-                            attemptLimits: {
-                              ...prev.attemptLimits,
+                            passwordProtection: {
+                              ...prev.passwordProtection,
                               maxAttempts: parseInt(e.target.value) || 1,
                             },
                           }))
                         }
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                       />
                     </div>
 
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Reset Period
+                        Lockout Duration (minutes)
                       </label>
-                      <select
-                        value={configuration.attemptLimits.resetPeriod}
+                      <input
+                        type="number"
+                        min="1"
+                        max="120"
+                        value={configuration.passwordProtection.lockoutDuration}
                         onChange={(e) =>
                           setConfiguration((prev) => ({
                             ...prev,
-                            attemptLimits: {
-                              ...prev.attemptLimits,
-                              resetPeriod: e.target.value as any,
+                            passwordProtection: {
+                              ...prev.passwordProtection,
+                              lockoutDuration: parseInt(e.target.value) || 1,
                             },
                           }))
                         }
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                      >
-                        <option value="24h">24 Hours</option>
-                        <option value="7d">7 Days</option>
-                        <option value="30d">30 Days</option>
-                        <option value="never">Never</option>
-                      </select>
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      />
                     </div>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
 
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Lockout Behavior
-                      </label>
-                      <select
-                        value={configuration.attemptLimits.lockoutBehavior}
-                        onChange={(e) =>
-                          setConfiguration((prev) => ({
-                            ...prev,
-                            attemptLimits: {
-                              ...prev.attemptLimits,
-                              lockoutBehavior: e.target.value as any,
-                            },
-                          }))
-                        }
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                      >
-                        <option value="block">Block Access</option>
-                        <option value="reduce_time">Reduce Time</option>
-                        <option value="warning">Warning Only</option>
-                      </select>
-                    </div>
+          {/* Password Preview */}
+          {configuration.passwordProtection.enabled && (
+            <div className="bg-white rounded-xl p-6 border">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <Eye className="w-5 h-5 text-blue-600" />
+                Access Code Preview
+              </h3>
 
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Save Progress</span>
-                        <button
-                          onClick={() =>
-                            setConfiguration((prev) => ({
-                              ...prev,
-                              attemptLimits: {
-                                ...prev.attemptLimits,
-                                progressSaving: !prev.attemptLimits.progressSaving,
-                              },
-                            }))
-                          }
-                          className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                            configuration.attemptLimits.progressSaving
-                              ? 'bg-green-600'
-                              : 'bg-gray-200'
-                          }`}
-                        >
-                          <span
-                            className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                              configuration.attemptLimits.progressSaving
-                                ? 'translate-x-5'
-                                : 'translate-x-1'
-                            }`}
-                          />
-                        </button>
-                      </div>
+              <div className="bg-gray-50 rounded-lg p-4 text-center">
+                <div className="text-3xl font-mono font-bold text-gray-800 mb-2 tracking-wider">
+                  {configuration.passwordProtection.accessCode || 'NO CODE SET'}
+                </div>
+                <p className="text-sm text-gray-600">
+                  Students will need this code to access the test
+                </p>
 
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Allow Resume</span>
-                        <button
-                          onClick={() =>
-                            setConfiguration((prev) => ({
-                              ...prev,
-                              attemptLimits: {
-                                ...prev.attemptLimits,
-                                resumeEnabled: !prev.attemptLimits.resumeEnabled,
-                              },
-                            }))
-                          }
-                          className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                            configuration.attemptLimits.resumeEnabled
-                              ? 'bg-green-600'
-                              : 'bg-gray-200'
-                          }`}
-                        >
-                          <span
-                            className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                              configuration.attemptLimits.resumeEnabled
-                                ? 'translate-x-5'
-                                : 'translate-x-1'
-                            }`}
-                          />
-                        </button>
-                      </div>
-                    </div>
-                  </>
-                )}
+                <div className="mt-4 text-xs text-gray-500 space-y-1">
+                  <p>Type: {configuration.passwordProtection.codeType}</p>
+                  <p>Max attempts: {configuration.passwordProtection.maxAttempts}</p>
+                  <p>Lockout: {configuration.passwordProtection.lockoutDuration} minutes</p>
+                </div>
               </div>
             </div>
+          )}
+        </div>
+      )}
 
-            {/* Attempt Summary */}
-            {configuration.attemptLimits.enabled && (
-              <div className="bg-white rounded-xl p-6 border">
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-green-600" />
-                  Attempt Policy Summary
-                </h3>
+      {/* IP Restrictions */}
+      {activeTab === 'ip' && (
+        <div key="ip" className="space-y-6 animate-fadeInUp">
+          <div className="bg-white rounded-xl p-6 border">
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-lg font-semibold flex items-center gap-2">
+                <Globe className="w-5 h-5 text-orange-600" />
+                IP Restrictions ({configuration.ipRestrictions.length})
+              </h3>
+              <button
+                onClick={addIPRestriction}
+                className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors flex items-center gap-2"
+              >
+                <Plus className="w-4 h-4" />
+                Add IP Rule
+              </button>
+            </div>
 
-                <div className="space-y-4">
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <h4 className="font-medium text-gray-800 mb-2">Policy Overview</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      <li>
-                        • Students can attempt the test {configuration.attemptLimits.maxAttempts}{' '}
-                        time(s)
-                      </li>
-                      <li>
-                        • Attempts reset{' '}
-                        {configuration.attemptLimits.resetPeriod === 'never'
-                          ? 'never'
-                          : `every ${configuration.attemptLimits.resetPeriod}`}
-                      </li>
-                      <li>
-                        • When limit reached:{' '}
-                        {configuration.attemptLimits.lockoutBehavior.replace('_', ' ')}
-                      </li>
-                      <li>
-                        • Progress saving:{' '}
-                        {configuration.attemptLimits.progressSaving ? 'Enabled' : 'Disabled'}
-                      </li>
-                      <li>
-                        • Resume capability:{' '}
-                        {configuration.attemptLimits.resumeEnabled ? 'Enabled' : 'Disabled'}
-                      </li>
-                    </ul>
-                  </div>
+            {configuration.ipRestrictions.length === 0 ? (
+              <div className="text-center py-12 text-gray-500">
+                <Globe className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                <p>No IP restrictions configured</p>
+                <p className="text-sm">Control access based on IP addresses or ranges</p>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                {configuration.ipRestrictions.map((restriction, index) => (
+                  <div
+                    key={restriction.id}
+                    className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                  >
+                    <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-center">
+                      <div>
+                        <p className="font-medium text-gray-800">{restriction.label}</p>
+                        <p className="text-sm text-gray-500">{restriction.description}</p>
+                      </div>
 
-                  <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <AlertCircle className="w-4 h-4 text-yellow-600" />
-                      <h5 className="text-sm font-medium text-yellow-800">Important Notes</h5>
+                      <div className="font-mono text-sm bg-gray-100 px-2 py-1 rounded">
+                        {restriction.ipAddress}
+                      </div>
+
+                      <div>
+                        <span
+                          className={`px-2 py-1 rounded text-xs font-medium ${
+                            restriction.type === 'allow'
+                              ? 'bg-green-100 text-green-700'
+                              : 'bg-red-100 text-red-700'
+                          }`}
+                        >
+                          {restriction.type}
+                        </span>
+                      </div>
+
+                      <div>
+                        <span
+                          className={`px-2 py-1 rounded text-xs font-medium ${
+                            restriction.isActive
+                              ? 'bg-blue-100 text-blue-700'
+                              : 'bg-gray-100 text-gray-700'
+                          }`}
+                        >
+                          {restriction.isActive ? 'Active' : 'Inactive'}
+                        </span>
+                      </div>
+
+                      <div className="flex gap-2 justify-end">
+                        <button className="text-gray-500 hover:text-blue-600">
+                          <Edit3 className="w-4 h-4" />
+                        </button>
+                        <button className="text-gray-500 hover:text-red-600">
+                          <Trash2 className="w-4 h-4" />
+                        </button>
+                      </div>
                     </div>
-                    <ul className="text-xs text-yellow-700 space-y-1">
-                      <li>• Attempt counting starts when student begins the test</li>
-                      <li>• Technical failures may not count as attempts (configurable)</li>
-                      <li>• Administrators can reset individual student attempts</li>
-                    </ul>
                   </div>
-                </div>
+                ))}
               </div>
             )}
           </div>
-        )}
+        </div>
+      )}
 
-        {/* Grace Period */}
-        {activeTab === 'grace' && (
-          <div
-            key="grace"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-          >
-            {/* Grace Period Settings */}
+      {/* Device Limitations */}
+      {activeTab === 'device' && (
+        <div key="device" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
+          {/* Device Settings */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Smartphone className="w-5 h-5 text-purple-600" />
+              Device Limitations
+            </h3>
+
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <label className="text-sm font-medium text-gray-700">
+                    Enable Device Restrictions
+                  </label>
+                  <p className="text-xs text-gray-500">Limit test access by device type</p>
+                </div>
+                <button
+                  onClick={() =>
+                    setConfiguration((prev) => ({
+                      ...prev,
+                      deviceLimitation: {
+                        ...prev.deviceLimitation,
+                        enabled: !prev.deviceLimitation.enabled,
+                      },
+                    }))
+                  }
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                    configuration.deviceLimitation.enabled ? 'bg-purple-600' : 'bg-gray-200'
+                  }`}
+                >
+                  <span
+                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                      configuration.deviceLimitation.enabled ? 'translate-x-6' : 'translate-x-1'
+                    }`}
+                  />
+                </button>
+              </div>
+
+              {configuration.deviceLimitation.enabled && (
+                <>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Maximum Devices per Student
+                    </label>
+                    <input
+                      type="number"
+                      min="1"
+                      max="10"
+                      value={configuration.deviceLimitation.maxDevices}
+                      onChange={(e) =>
+                        setConfiguration((prev) => ({
+                          ...prev,
+                          deviceLimitation: {
+                            ...prev.deviceLimitation,
+                            maxDevices: parseInt(e.target.value) || 1,
+                          },
+                        }))
+                      }
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    />
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-700">Device Tracking</span>
+                      <button
+                        onClick={() =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            deviceLimitation: {
+                              ...prev.deviceLimitation,
+                              deviceTracking: !prev.deviceLimitation.deviceTracking,
+                            },
+                          }))
+                        }
+                        className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
+                          configuration.deviceLimitation.deviceTracking
+                            ? 'bg-purple-600'
+                            : 'bg-gray-200'
+                        }`}
+                      >
+                        <span
+                          className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
+                            configuration.deviceLimitation.deviceTracking
+                              ? 'translate-x-5'
+                              : 'translate-x-1'
+                          }`}
+                        />
+                      </button>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-700">Block Multiple Logins</span>
+                      <button
+                        onClick={() =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            deviceLimitation: {
+                              ...prev.deviceLimitation,
+                              blockMultipleLogins: !prev.deviceLimitation.blockMultipleLogins,
+                            },
+                          }))
+                        }
+                        className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
+                          configuration.deviceLimitation.blockMultipleLogins
+                            ? 'bg-purple-600'
+                            : 'bg-gray-200'
+                        }`}
+                      >
+                        <span
+                          className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
+                            configuration.deviceLimitation.blockMultipleLogins
+                              ? 'translate-x-5'
+                              : 'translate-x-1'
+                          }`}
+                        />
+                      </button>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-700">Device Fingerprinting</span>
+                      <button
+                        onClick={() =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            deviceLimitation: {
+                              ...prev.deviceLimitation,
+                              deviceFingerprinting: !prev.deviceLimitation.deviceFingerprinting,
+                            },
+                          }))
+                        }
+                        className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
+                          configuration.deviceLimitation.deviceFingerprinting
+                            ? 'bg-purple-600'
+                            : 'bg-gray-200'
+                        }`}
+                      >
+                        <span
+                          className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
+                            configuration.deviceLimitation.deviceFingerprinting
+                              ? 'translate-x-5'
+                              : 'translate-x-1'
+                          }`}
+                        />
+                      </button>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Session Timeout (minutes)
+                    </label>
+                    <input
+                      type="number"
+                      min="30"
+                      max="480"
+                      value={configuration.deviceLimitation.sessionTimeout}
+                      onChange={(e) =>
+                        setConfiguration((prev) => ({
+                          ...prev,
+                          deviceLimitation: {
+                            ...prev.deviceLimitation,
+                            sessionTimeout: parseInt(e.target.value) || 30,
+                          },
+                        }))
+                      }
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    />
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+
+          {/* Browser & OS Restrictions */}
+          {configuration.deviceLimitation.enabled && (
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Timer className="w-5 h-5 text-indigo-600" />
-                Grace Period Settings
+                <Settings className="w-5 h-5 text-blue-600" />
+                Platform Restrictions
               </h3>
 
               <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <label className="text-sm font-medium text-gray-700">Enable Grace Period</label>
-                    <p className="text-xs text-gray-500">Allow flexibility in test timing</p>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Allowed Browsers
+                  </label>
+                  <div className="space-y-2">
+                    {['Chrome', 'Firefox', 'Safari', 'Edge'].map((browser) => (
+                      <label key={browser} className="flex items-center gap-2">
+                        <input
+                          type="checkbox"
+                          checked={configuration.deviceLimitation.browserRestrictions.includes(
+                            browser
+                          )}
+                          onChange={(e) => {
+                            const browsers = configuration.deviceLimitation.browserRestrictions
+                            if (e.target.checked) {
+                              setConfiguration((prev) => ({
+                                ...prev,
+                                deviceLimitation: {
+                                  ...prev.deviceLimitation,
+                                  browserRestrictions: [...browsers, browser],
+                                },
+                              }))
+                            } else {
+                              setConfiguration((prev) => ({
+                                ...prev,
+                                deviceLimitation: {
+                                  ...prev.deviceLimitation,
+                                  browserRestrictions: browsers.filter((b) => b !== browser),
+                                },
+                              }))
+                            }
+                          }}
+                          className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                        />
+                        <span className="text-sm text-gray-700">{browser}</span>
+                      </label>
+                    ))}
                   </div>
-                  <button
-                    onClick={() =>
-                      setConfiguration((prev) => ({
-                        ...prev,
-                        gracePeriod: { ...prev.gracePeriod, enabled: !prev.gracePeriod.enabled },
-                      }))
-                    }
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      configuration.gracePeriod.enabled ? 'bg-indigo-600' : 'bg-gray-200'
-                    }`}
-                  >
-                    <span
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        configuration.gracePeriod.enabled ? 'translate-x-6' : 'translate-x-1'
-                      }`}
-                    />
-                  </button>
                 </div>
 
-                {configuration.gracePeriod.enabled && (
-                  <>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Before Start (minutes)
-                        </label>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Allowed Operating Systems
+                  </label>
+                  <div className="space-y-2">
+                    {['Windows', 'macOS', 'Linux', 'iOS', 'Android'].map((os) => (
+                      <label key={os} className="flex items-center gap-2">
                         <input
-                          type="number"
-                          min="0"
-                          max="60"
-                          value={configuration.gracePeriod.beforeStart}
-                          onChange={(e) =>
-                            setConfiguration((prev) => ({
-                              ...prev,
-                              gracePeriod: {
-                                ...prev.gracePeriod,
-                                beforeStart: parseInt(e.target.value) || 0,
-                              },
-                            }))
-                          }
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                          type="checkbox"
+                          checked={configuration.deviceLimitation.operatingSystemRestrictions.includes(
+                            os
+                          )}
+                          onChange={(e) => {
+                            const systems =
+                              configuration.deviceLimitation.operatingSystemRestrictions
+                            if (e.target.checked) {
+                              setConfiguration((prev) => ({
+                                ...prev,
+                                deviceLimitation: {
+                                  ...prev.deviceLimitation,
+                                  operatingSystemRestrictions: [...systems, os],
+                                },
+                              }))
+                            } else {
+                              setConfiguration((prev) => ({
+                                ...prev,
+                                deviceLimitation: {
+                                  ...prev.deviceLimitation,
+                                  operatingSystemRestrictions: systems.filter((s) => s !== os),
+                                },
+                              }))
+                            }
+                          }}
+                          className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                         />
-                      </div>
+                        <span className="text-sm text-gray-700">{os}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
 
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          After End (minutes)
-                        </label>
-                        <input
-                          type="number"
-                          min="0"
-                          max="60"
-                          value={configuration.gracePeriod.afterEnd}
-                          onChange={(e) =>
-                            setConfiguration((prev) => ({
-                              ...prev,
-                              gracePeriod: {
-                                ...prev.gracePeriod,
-                                afterEnd: parseInt(e.target.value) || 0,
-                              },
-                            }))
-                          }
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+      {/* Attempt Limits */}
+      {activeTab === 'attempts' && (
+        <div key="attempts" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
+          {/* Attempt Configuration */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <RotateCcw className="w-5 h-5 text-green-600" />
+              Attempt Limits
+            </h3>
+
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <label className="text-sm font-medium text-gray-700">Enable Attempt Limits</label>
+                  <p className="text-xs text-gray-500">Restrict number of test attempts</p>
+                </div>
+                <button
+                  onClick={() =>
+                    setConfiguration((prev) => ({
+                      ...prev,
+                      attemptLimits: {
+                        ...prev.attemptLimits,
+                        enabled: !prev.attemptLimits.enabled,
+                      },
+                    }))
+                  }
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                    configuration.attemptLimits.enabled ? 'bg-green-600' : 'bg-gray-200'
+                  }`}
+                >
+                  <span
+                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                      configuration.attemptLimits.enabled ? 'translate-x-6' : 'translate-x-1'
+                    }`}
+                  />
+                </button>
+              </div>
+
+              {configuration.attemptLimits.enabled && (
+                <>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Maximum Attempts
+                    </label>
+                    <input
+                      type="number"
+                      min="1"
+                      max="10"
+                      value={configuration.attemptLimits.maxAttempts}
+                      onChange={(e) =>
+                        setConfiguration((prev) => ({
+                          ...prev,
+                          attemptLimits: {
+                            ...prev.attemptLimits,
+                            maxAttempts: parseInt(e.target.value) || 1,
+                          },
+                        }))
+                      }
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Reset Period
+                    </label>
+                    <select
+                      value={configuration.attemptLimits.resetPeriod}
+                      onChange={(e) =>
+                        setConfiguration((prev) => ({
+                          ...prev,
+                          attemptLimits: {
+                            ...prev.attemptLimits,
+                            resetPeriod: e.target.value as any,
+                          },
+                        }))
+                      }
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                    >
+                      <option value="24h">24 Hours</option>
+                      <option value="7d">7 Days</option>
+                      <option value="30d">30 Days</option>
+                      <option value="never">Never</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Lockout Behavior
+                    </label>
+                    <select
+                      value={configuration.attemptLimits.lockoutBehavior}
+                      onChange={(e) =>
+                        setConfiguration((prev) => ({
+                          ...prev,
+                          attemptLimits: {
+                            ...prev.attemptLimits,
+                            lockoutBehavior: e.target.value as any,
+                          },
+                        }))
+                      }
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                    >
+                      <option value="block">Block Access</option>
+                      <option value="reduce_time">Reduce Time</option>
+                      <option value="warning">Warning Only</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-700">Save Progress</span>
+                      <button
+                        onClick={() =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            attemptLimits: {
+                              ...prev.attemptLimits,
+                              progressSaving: !prev.attemptLimits.progressSaving,
+                            },
+                          }))
+                        }
+                        className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
+                          configuration.attemptLimits.progressSaving
+                            ? 'bg-green-600'
+                            : 'bg-gray-200'
+                        }`}
+                      >
+                        <span
+                          className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
+                            configuration.attemptLimits.progressSaving
+                              ? 'translate-x-5'
+                              : 'translate-x-1'
+                          }`}
                         />
-                      </div>
+                      </button>
                     </div>
 
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-700">Allow Resume</span>
+                      <button
+                        onClick={() =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            attemptLimits: {
+                              ...prev.attemptLimits,
+                              resumeEnabled: !prev.attemptLimits.resumeEnabled,
+                            },
+                          }))
+                        }
+                        className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
+                          configuration.attemptLimits.resumeEnabled ? 'bg-green-600' : 'bg-gray-200'
+                        }`}
+                      >
+                        <span
+                          className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
+                            configuration.attemptLimits.resumeEnabled
+                              ? 'translate-x-5'
+                              : 'translate-x-1'
+                          }`}
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+
+          {/* Attempt Summary */}
+          {configuration.attemptLimits.enabled && (
+            <div className="bg-white rounded-xl p-6 border">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-green-600" />
+                Attempt Policy Summary
+              </h3>
+
+              <div className="space-y-4">
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h4 className="font-medium text-gray-800 mb-2">Policy Overview</h4>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>
+                      • Students can attempt the test {configuration.attemptLimits.maxAttempts}{' '}
+                      time(s)
+                    </li>
+                    <li>
+                      • Attempts reset{' '}
+                      {configuration.attemptLimits.resetPeriod === 'never'
+                        ? 'never'
+                        : `every ${configuration.attemptLimits.resetPeriod}`}
+                    </li>
+                    <li>
+                      • When limit reached:{' '}
+                      {configuration.attemptLimits.lockoutBehavior.replace('_', ' ')}
+                    </li>
+                    <li>
+                      • Progress saving:{' '}
+                      {configuration.attemptLimits.progressSaving ? 'Enabled' : 'Disabled'}
+                    </li>
+                    <li>
+                      • Resume capability:{' '}
+                      {configuration.attemptLimits.resumeEnabled ? 'Enabled' : 'Disabled'}
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <AlertCircle className="w-4 h-4 text-yellow-600" />
+                    <h5 className="text-sm font-medium text-yellow-800">Important Notes</h5>
+                  </div>
+                  <ul className="text-xs text-yellow-700 space-y-1">
+                    <li>• Attempt counting starts when student begins the test</li>
+                    <li>• Technical failures may not count as attempts (configurable)</li>
+                    <li>• Administrators can reset individual student attempts</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Grace Period */}
+      {activeTab === 'grace' && (
+        <div key="grace" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
+          {/* Grace Period Settings */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Timer className="w-5 h-5 text-indigo-600" />
+              Grace Period Settings
+            </h3>
+
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <label className="text-sm font-medium text-gray-700">Enable Grace Period</label>
+                  <p className="text-xs text-gray-500">Allow flexibility in test timing</p>
+                </div>
+                <button
+                  onClick={() =>
+                    setConfiguration((prev) => ({
+                      ...prev,
+                      gracePeriod: { ...prev.gracePeriod, enabled: !prev.gracePeriod.enabled },
+                    }))
+                  }
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                    configuration.gracePeriod.enabled ? 'bg-indigo-600' : 'bg-gray-200'
+                  }`}
+                >
+                  <span
+                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                      configuration.gracePeriod.enabled ? 'translate-x-6' : 'translate-x-1'
+                    }`}
+                  />
+                </button>
+              </div>
+
+              {configuration.gracePeriod.enabled && (
+                <>
+                  <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Late Submission Penalty (%)
+                        Before Start (minutes)
                       </label>
                       <input
                         type="number"
                         min="0"
-                        max="50"
-                        value={configuration.gracePeriod.lateSubmissionPenalty}
+                        max="60"
+                        value={configuration.gracePeriod.beforeStart}
                         onChange={(e) =>
                           setConfiguration((prev) => ({
                             ...prev,
                             gracePeriod: {
                               ...prev.gracePeriod,
-                              lateSubmissionPenalty: parseInt(e.target.value) || 0,
+                              beforeStart: parseInt(e.target.value) || 0,
                             },
                           }))
                         }
@@ -1613,34 +1532,183 @@ const AccessSettings: React.FC = () => {
                       />
                     </div>
 
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        After End (minutes)
+                      </label>
+                      <input
+                        type="number"
+                        min="0"
+                        max="60"
+                        value={configuration.gracePeriod.afterEnd}
+                        onChange={(e) =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            gracePeriod: {
+                              ...prev.gracePeriod,
+                              afterEnd: parseInt(e.target.value) || 0,
+                            },
+                          }))
+                        }
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Late Submission Penalty (%)
+                    </label>
+                    <input
+                      type="number"
+                      min="0"
+                      max="50"
+                      value={configuration.gracePeriod.lateSubmissionPenalty}
+                      onChange={(e) =>
+                        setConfiguration((prev) => ({
+                          ...prev,
+                          gracePeriod: {
+                            ...prev.gracePeriod,
+                            lateSubmissionPenalty: parseInt(e.target.value) || 0,
+                          },
+                        }))
+                      }
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    />
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <span className="text-sm font-medium text-gray-700">Auto Grade Penalty</span>
+                      <p className="text-xs text-gray-500">
+                        Automatically apply penalty to late submissions
+                      </p>
+                    </div>
+                    <button
+                      onClick={() =>
+                        setConfiguration((prev) => ({
+                          ...prev,
+                          gracePeriod: {
+                            ...prev.gracePeriod,
+                            autoGradePenalty: !prev.gracePeriod.autoGradePenalty,
+                          },
+                        }))
+                      }
+                      className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
+                        configuration.gracePeriod.autoGradePenalty ? 'bg-indigo-600' : 'bg-gray-200'
+                      }`}
+                    >
+                      <span
+                        className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
+                          configuration.gracePeriod.autoGradePenalty
+                            ? 'translate-x-5'
+                            : 'translate-x-1'
+                        }`}
+                      />
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+
+          {/* Emergency Extension */}
+          {configuration.gracePeriod.enabled && (
+            <div className="bg-white rounded-xl p-6 border">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <AlertCircle className="w-5 h-5 text-red-600" />
+                Emergency Extension
+              </h3>
+
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <span className="text-sm font-medium text-gray-700">
+                      Enable Emergency Extension
+                    </span>
+                    <p className="text-xs text-gray-500">Allow emergency time extensions</p>
+                  </div>
+                  <button
+                    onClick={() =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        gracePeriod: {
+                          ...prev.gracePeriod,
+                          emergencyExtension: {
+                            ...prev.gracePeriod.emergencyExtension,
+                            enabled: !prev.gracePeriod.emergencyExtension.enabled,
+                          },
+                        },
+                      }))
+                    }
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      configuration.gracePeriod.emergencyExtension.enabled
+                        ? 'bg-red-600'
+                        : 'bg-gray-200'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        configuration.gracePeriod.emergencyExtension.enabled
+                          ? 'translate-x-6'
+                          : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                {configuration.gracePeriod.emergencyExtension.enabled && (
+                  <>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Maximum Extension (minutes)
+                      </label>
+                      <input
+                        type="number"
+                        min="5"
+                        max="120"
+                        value={configuration.gracePeriod.emergencyExtension.maxExtension}
+                        onChange={(e) =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            gracePeriod: {
+                              ...prev.gracePeriod,
+                              emergencyExtension: {
+                                ...prev.gracePeriod.emergencyExtension,
+                                maxExtension: parseInt(e.target.value) || 5,
+                              },
+                            },
+                          }))
+                        }
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      />
+                    </div>
+
                     <div className="flex items-center justify-between">
-                      <div>
-                        <span className="text-sm font-medium text-gray-700">
-                          Auto Grade Penalty
-                        </span>
-                        <p className="text-xs text-gray-500">
-                          Automatically apply penalty to late submissions
-                        </p>
-                      </div>
+                      <span className="text-sm text-gray-700">Requires Approval</span>
                       <button
                         onClick={() =>
                           setConfiguration((prev) => ({
                             ...prev,
                             gracePeriod: {
                               ...prev.gracePeriod,
-                              autoGradePenalty: !prev.gracePeriod.autoGradePenalty,
+                              emergencyExtension: {
+                                ...prev.gracePeriod.emergencyExtension,
+                                requiresApproval:
+                                  !prev.gracePeriod.emergencyExtension.requiresApproval,
+                              },
                             },
                           }))
                         }
                         className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                          configuration.gracePeriod.autoGradePenalty
-                            ? 'bg-indigo-600'
+                          configuration.gracePeriod.emergencyExtension.requiresApproval
+                            ? 'bg-red-600'
                             : 'bg-gray-200'
                         }`}
                       >
                         <span
                           className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                            configuration.gracePeriod.autoGradePenalty
+                            configuration.gracePeriod.emergencyExtension.requiresApproval
                               ? 'translate-x-5'
                               : 'translate-x-1'
                           }`}
@@ -1649,139 +1717,31 @@ const AccessSettings: React.FC = () => {
                     </div>
                   </>
                 )}
-              </div>
-            </div>
 
-            {/* Emergency Extension */}
-            {configuration.gracePeriod.enabled && (
-              <div className="bg-white rounded-xl p-6 border">
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <AlertCircle className="w-5 h-5 text-red-600" />
-                  Emergency Extension
-                </h3>
-
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <span className="text-sm font-medium text-gray-700">
-                        Enable Emergency Extension
-                      </span>
-                      <p className="text-xs text-gray-500">Allow emergency time extensions</p>
-                    </div>
-                    <button
-                      onClick={() =>
-                        setConfiguration((prev) => ({
-                          ...prev,
-                          gracePeriod: {
-                            ...prev.gracePeriod,
-                            emergencyExtension: {
-                              ...prev.gracePeriod.emergencyExtension,
-                              enabled: !prev.gracePeriod.emergencyExtension.enabled,
-                            },
-                          },
-                        }))
-                      }
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        configuration.gracePeriod.emergencyExtension.enabled
-                          ? 'bg-red-600'
-                          : 'bg-gray-200'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          configuration.gracePeriod.emergencyExtension.enabled
-                            ? 'translate-x-6'
-                            : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-
-                  {configuration.gracePeriod.emergencyExtension.enabled && (
-                    <>
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Maximum Extension (minutes)
-                        </label>
-                        <input
-                          type="number"
-                          min="5"
-                          max="120"
-                          value={configuration.gracePeriod.emergencyExtension.maxExtension}
-                          onChange={(e) =>
-                            setConfiguration((prev) => ({
-                              ...prev,
-                              gracePeriod: {
-                                ...prev.gracePeriod,
-                                emergencyExtension: {
-                                  ...prev.gracePeriod.emergencyExtension,
-                                  maxExtension: parseInt(e.target.value) || 5,
-                                },
-                              },
-                            }))
-                          }
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                        />
-                      </div>
-
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Requires Approval</span>
-                        <button
-                          onClick={() =>
-                            setConfiguration((prev) => ({
-                              ...prev,
-                              gracePeriod: {
-                                ...prev.gracePeriod,
-                                emergencyExtension: {
-                                  ...prev.gracePeriod.emergencyExtension,
-                                  requiresApproval:
-                                    !prev.gracePeriod.emergencyExtension.requiresApproval,
-                                },
-                              },
-                            }))
-                          }
-                          className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                            configuration.gracePeriod.emergencyExtension.requiresApproval
-                              ? 'bg-red-600'
-                              : 'bg-gray-200'
-                          }`}
-                        >
-                          <span
-                            className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                              configuration.gracePeriod.emergencyExtension.requiresApproval
-                                ? 'translate-x-5'
-                                : 'translate-x-1'
-                            }`}
-                          />
-                        </button>
-                      </div>
-                    </>
-                  )}
-
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                    <h5 className="text-sm font-medium text-blue-800 mb-2">Grace Period Summary</h5>
-                    <ul className="text-xs text-blue-700 space-y-1">
-                      <li>
-                        • Early access: {configuration.gracePeriod.beforeStart} minutes before start
-                      </li>
-                      <li>
-                        • Late submission: {configuration.gracePeriod.afterEnd} minutes after end
-                      </li>
-                      <li>
-                        • Late penalty: {configuration.gracePeriod.lateSubmissionPenalty}% reduction
-                      </li>
-                      <li>
-                        • Emergency extension: up to{' '}
-                        {configuration.gracePeriod.emergencyExtension.maxExtension} minutes
-                      </li>
-                    </ul>
-                  </div>
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <h5 className="text-sm font-medium text-blue-800 mb-2">Grace Period Summary</h5>
+                  <ul className="text-xs text-blue-700 space-y-1">
+                    <li>
+                      • Early access: {configuration.gracePeriod.beforeStart} minutes before start
+                    </li>
+                    <li>
+                      • Late submission: {configuration.gracePeriod.afterEnd} minutes after end
+                    </li>
+                    <li>
+                      • Late penalty: {configuration.gracePeriod.lateSubmissionPenalty}% reduction
+                    </li>
+                    <li>
+                      • Emergency extension: up to{' '}
+                      {configuration.gracePeriod.emergencyExtension.maxExtension} minutes
+                    </li>
+                  </ul>
                 </div>
               </div>
-            )}
-          </div>
-        )}
-{/* Action Buttons */}
+            </div>
+          )}
+        </div>
+      )}
+      {/* Action Buttons */}
       <div className="flex justify-between items-center bg-white rounded-xl p-6 border">
         <div className="flex gap-3">
           <button

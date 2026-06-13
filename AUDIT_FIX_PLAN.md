@@ -1,8 +1,11 @@
 # Audit Fix Plan — Cerebrum Biology Academy
+
 ## Created: Feb 25, 2026
+
 ## Status: COMPLETE — 13/15 fixes done, 2 require user action
 
 ### Commits
+
 - `f35b1d62` — Batch 1: Critical fixes (broken links, Ghaziabad page, hours, conversion tracking)
 - `9da7fdae` — Batch 2: High priority (internal links, reviews, AEO activation)
 - `df7c389e` — Batch 3: Medium priority (AEO headings, citations, maps)
@@ -10,6 +13,7 @@
 ### TypeScript Check: PASS (all errors are pre-existing, none in modified files)
 
 ### Batch 1: CRITICAL (Fix Before Launch)
+
 - [x] 1. Fix 4 broken links in MobileFullscreenMenu.tsx
   - `/courses/neet` → `/courses/neet-complete`
   - `/courses/dropper` → `/courses/neet-dropper`
@@ -26,6 +30,7 @@
 - [x] 5. Add demo form conversion tracking (client-side after success)
 
 ### Batch 2: HIGH PRIORITY
+
 - [x] 6. Add internal links from best-neet-coaching page city cards to location pages
 - [ ] 7. Configure real Facebook Pixel, GTM, Razorpay, WhatsApp credentials → SKIP (need user credentials)
 - [x] 8. Activate AEO components on key pages (faq, courses, locations)
@@ -33,6 +38,7 @@
 - [x] 10. Vary review counts per location
 
 ### Batch 3: MEDIUM PRIORITY
+
 - [x] 11. Add H2 question headings for featured snippets/PAA on key pages
 - [x] 12. Add source citations (NCERT, NTA references)
 - [x] 13. Add Google Maps embeds to main location pages

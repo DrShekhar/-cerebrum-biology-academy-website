@@ -33,7 +33,14 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'Free NEET Demo Class Gurugram',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Free NEET Demo Class Gurugram | Book Now' }],
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Free NEET Demo Class Gurugram | Book Now',
+      },
+    ],
     description: 'Book your FREE NEET demo class. Experience our teaching before you decide.',
     url: 'https://cerebrumbiologyacademy.com/free-neet-demo-class-gurugram',
   },
@@ -44,7 +51,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Free NEET Demo Class Gurugram | Book Now',
-    description: 'Book your FREE NEET Biology demo class in Gurugram (Gurgaon). Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 88264-44334!',
+    description:
+      'Book your FREE NEET Biology demo class in Gurugram (Gurgaon). Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 88264-44334!',
   },
 }
 
@@ -110,7 +118,11 @@ export default function FreeNEETDemoClassGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="free-neet-demo-class-gurugram" />
       {/* Hero Section */}

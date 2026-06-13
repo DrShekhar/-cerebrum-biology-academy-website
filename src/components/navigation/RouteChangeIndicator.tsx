@@ -64,7 +64,12 @@ export function RouteChangeIndicator() {
       if (link) {
         const href = link.getAttribute('href')
         // Only trigger for internal navigation links (not external or anchor links)
-        if (href && href.startsWith('/') && !href.startsWith('/#') && href !== pathnameRef.current) {
+        if (
+          href &&
+          href.startsWith('/') &&
+          !href.startsWith('/#') &&
+          href !== pathnameRef.current
+        ) {
           handleNavigationStart()
         }
       }

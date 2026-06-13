@@ -19,7 +19,6 @@ async function handlePOST(request: NextRequest, session: UserSession) {
 
     const { installmentId, channels } = sendReminderSchema.parse(body)
 
-
     const sent = await paymentReminderService.sendManualReminder(
       installmentId,
       channels || ['whatsapp', 'email']

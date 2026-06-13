@@ -18,7 +18,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best Biology Tuition in Surat | NEET Coaching',
-    description: 'Best biology tuition & NEET coaching in Surat. 98% success rate. AIIMS faculty. Adajan, Vesu, Athwa, City Light.',
+    description:
+      'Best biology tuition & NEET coaching in Surat. 98% success rate. AIIMS faculty. Adajan, Vesu, Athwa, City Light.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-tuition-surat',

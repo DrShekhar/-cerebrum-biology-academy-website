@@ -606,7 +606,11 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                 <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
                 <span className="truncate">WhatsApp Us</span>
               </Button>
-              <ContextualWhatsAppLink target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <ContextualWhatsAppLink
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
                 <Button
                   variant="outline"
                   size="lg"

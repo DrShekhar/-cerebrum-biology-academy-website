@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function ExcretorySystemIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -125,8 +125,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
       </text>
 
       {/* KIDNEY CROSS-SECTION - Left side */}
-      <g
-      >
+      <g>
         <g transform="translate(25, 50)">
           {/* Kidney outline - bean shape */}
           <path
@@ -220,8 +219,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
       </g>
 
       {/* NEPHRON DIAGRAM - Center */}
-      <g
-      >
+      <g>
         <g transform="translate(240, 50)">
           {/* Nephron background card */}
           <rect
@@ -251,8 +249,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* Glomerulus */}
-          <g
-          >
+          <g>
             <circle cx="60" cy="55" r="15" fill="url(#glomerulusGrad)" filter="url(#nephronGlow)" />
             {/* Capillary loops inside */}
             <path
@@ -369,19 +366,12 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* Urine droplet at bottom */}
-          <ellipse
-            cx="155"
-            cy="248"
-            rx="5"
-            ry="7"
-            fill="url(#urineGrad)"
-          />
+          <ellipse cx="155" cy="248" rx="5" ry="7" fill="url(#urineGrad)" />
         </g>
       </g>
 
       {/* URINE FORMATION PROCESS - Right Top */}
-      <g
-      >
+      <g>
         <g transform="translate(470, 50)">
           <rect
             x="0"
@@ -397,8 +387,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* Step 1: Filtration */}
-          <g
-          >
+          <g>
             <circle cx="30" cy="50" r="15" fill="#FEE2E2" stroke="#EF4444" strokeWidth="2" />
             <text x="30" y="55" textAnchor="middle" fill="#DC2626" fontSize="10" fontWeight="bold">
               1
@@ -412,8 +401,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* Step 2: Reabsorption */}
-          <g
-          >
+          <g>
             <circle cx="30" cy="90" r="15" fill="#EDE9FE" stroke="#8B5CF6" strokeWidth="2" />
             <text x="30" y="95" textAnchor="middle" fill="#7C3AED" fontSize="10" fontWeight="bold">
               2
@@ -427,8 +415,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* Step 3: Secretion */}
-          <g
-          >
+          <g>
             <circle cx="30" cy="130" r="15" fill="#D1FAE5" stroke="#10B981" strokeWidth="2" />
             <text x="30" y="135" textAnchor="middle" fill="#059669" fontSize="10" fontWeight="bold">
               3
@@ -468,8 +455,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
       </g>
 
       {/* GFR & KEY STATS - Right Middle */}
-      <g
-      >
+      <g>
         <g transform="translate(470, 225)">
           <rect
             x="0"
@@ -490,13 +476,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             <text x="12" y="17" fill="#1D4ED8" fontSize="9" fontWeight="600">
               GFR:
             </text>
-            <text
-              x="100"
-              y="17"
-              fill="#1E40AF"
-              fontSize="10"
-              fontWeight="bold"
-            >
+            <text x="100" y="17" fill="#1E40AF" fontSize="10" fontWeight="bold">
               125 mL/min
             </text>
           </g>
@@ -526,8 +506,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
       </g>
 
       {/* HORMONAL REGULATION - Bottom Left */}
-      <g
-      >
+      <g>
         <g transform="translate(25, 375)">
           <rect
             x="0"
@@ -544,12 +523,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
 
           {/* ADH */}
           <g transform="translate(15, 35)">
-            <circle
-              cx="18"
-              cy="16"
-              r="14"
-              fill="#3B82F6"
-            />
+            <circle cx="18" cy="16" r="14" fill="#3B82F6" />
             <text x="18" y="20" textAnchor="middle" fill="white" fontSize="7" fontWeight="bold">
               ADH
             </text>
@@ -563,12 +537,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
 
           {/* Aldosterone */}
           <g transform="translate(15, 68)">
-            <circle
-              cx="18"
-              cy="16"
-              r="14"
-              fill="#F59E0B"
-            />
+            <circle cx="18" cy="16" r="14" fill="#F59E0B" />
             <text x="18" y="20" textAnchor="middle" fill="white" fontSize="6" fontWeight="bold">
               ALD
             </text>
@@ -582,12 +551,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
 
           {/* ANP */}
           <g transform="translate(15, 101)">
-            <circle
-              cx="18"
-              cy="16"
-              r="14"
-              fill="#10B981"
-            />
+            <circle cx="18" cy="16" r="14" fill="#10B981" />
             <text x="18" y="20" textAnchor="middle" fill="white" fontSize="6" fontWeight="bold">
               ANP
             </text>
@@ -602,8 +566,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
       </g>
 
       {/* TYPES OF ANIMALS - Bottom Center */}
-      <g
-      >
+      <g>
         <g transform="translate(250, 375)">
           <rect
             x="0"
@@ -681,8 +644,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
       </g>
 
       {/* COUNTERCURRENT INFO - Bottom Right */}
-      <g
-      >
+      <g>
         <g transform="translate(470, 375)">
           <rect
             x="0"

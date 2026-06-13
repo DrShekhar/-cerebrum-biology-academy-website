@@ -2,7 +2,7 @@
 
 **Date:** March 6, 2026  
 **Auditor:** Agent 4 (API Routes Team)  
-**Repository:** cerebrum-biology-academy-website  
+**Repository:** cerebrum-biology-academy-website
 
 ## Executive Summary
 
@@ -20,15 +20,15 @@
 
 These endpoints handle core business functions (demo bookings, contact inquiries, lead capture).
 
-| Endpoint | Method | Status | Saves To | Validation | Notes |
-|----------|--------|--------|----------|------------|-------|
-| `/api/demo-booking` | POST | ✅ WORKING | `demo_bookings` | Rate limit (5/hr), honeypot spam check, phone validation | Real-time notifications, Zoom integration |
-| `/api/contact/inquiry` | POST | ✅ WORKING | `contact_inquiries` | Rate limit (5/hr), Zod validation, email/phone check | Admin WhatsApp alert, email to department, user confirmation |
-| `/api/leads/whatsapp-gate` | POST | ✅ WORKING | `content_leads` | Rate limit (5/hr), phone normalization, 24hr duplicate check | Triggers follow-up processing, lead scoring (25 pts) |
-| `/api/leads/exit-intent` | POST | ✅ WORKING | `content_leads` | Rate limit (3/hr), email/phone required, 24hr duplicate check | Generates discount codes, WhatsApp processing |
-| `/api/newsletter/subscribe` | POST | ✅ WORKING | `newsletterSubscriber` | Email validation, phone normalization | Handles resubscription, updates WhatsApp preference |
-| `/api/referral/validate` | POST | ✅ WORKING | `referral_codes` (read-only) | Zod schema validation, rate limit (20/hr) | Checks expiry, usage limits, returns discount amount |
-| `/api/referral/validate` | PUT | ✅ WORKING | `referral_redemptions` + `referral_codes` | Transaction wrapper, duplicate check | Uses Prisma transaction for consistency |
+| Endpoint                    | Method | Status     | Saves To                                  | Validation                                                    | Notes                                                        |
+| --------------------------- | ------ | ---------- | ----------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------ |
+| `/api/demo-booking`         | POST   | ✅ WORKING | `demo_bookings`                           | Rate limit (5/hr), honeypot spam check, phone validation      | Real-time notifications, Zoom integration                    |
+| `/api/contact/inquiry`      | POST   | ✅ WORKING | `contact_inquiries`                       | Rate limit (5/hr), Zod validation, email/phone check          | Admin WhatsApp alert, email to department, user confirmation |
+| `/api/leads/whatsapp-gate`  | POST   | ✅ WORKING | `content_leads`                           | Rate limit (5/hr), phone normalization, 24hr duplicate check  | Triggers follow-up processing, lead scoring (25 pts)         |
+| `/api/leads/exit-intent`    | POST   | ✅ WORKING | `content_leads`                           | Rate limit (3/hr), email/phone required, 24hr duplicate check | Generates discount codes, WhatsApp processing                |
+| `/api/newsletter/subscribe` | POST   | ✅ WORKING | `newsletterSubscriber`                    | Email validation, phone normalization                         | Handles resubscription, updates WhatsApp preference          |
+| `/api/referral/validate`    | POST   | ✅ WORKING | `referral_codes` (read-only)              | Zod schema validation, rate limit (20/hr)                     | Checks expiry, usage limits, returns discount amount         |
+| `/api/referral/validate`    | PUT    | ✅ WORKING | `referral_redemptions` + `referral_codes` | Transaction wrapper, duplicate check                          | Uses Prisma transaction for consistency                      |
 
 **Assessment:** All tier 1 endpoints fully functional with proper input validation, rate limiting, and database persistence.
 
@@ -36,13 +36,13 @@ These endpoints handle core business functions (demo bookings, contact inquiries
 
 ## TIER 2: SECONDARY FORM & PAYMENT ENDPOINTS ✅
 
-| Endpoint | Method | Status | Saves To | Validation | Notes |
-|----------|--------|--------|----------|------------|-------|
-| `/api/enrollment/create-order` | POST | ✅ WORKING | Razorpay API + `enrollments` | Zod validation, session check | Creates order and enrollment record |
-| `/api/enrollment/verify` | POST | ✅ WORKING | `enrollments` | Razorpay signature verification | Completes enrollment after payment |
-| `/api/payment/create-order` | POST | ✅ WORKING | Razorpay API | Order amount validation | Duplicate order prevention |
-| `/api/payments/razorpay/create-order` | POST | ✅ WORKING | Razorpay API | Amount/user validation | Alternative endpoint, same functionality |
-| `/api/whatsapp/send` | POST | ✅ WORKING | Audit logs only | Admin auth required, phone regex | Text + template message support |
+| Endpoint                              | Method | Status     | Saves To                     | Validation                       | Notes                                    |
+| ------------------------------------- | ------ | ---------- | ---------------------------- | -------------------------------- | ---------------------------------------- |
+| `/api/enrollment/create-order`        | POST   | ✅ WORKING | Razorpay API + `enrollments` | Zod validation, session check    | Creates order and enrollment record      |
+| `/api/enrollment/verify`              | POST   | ✅ WORKING | `enrollments`                | Razorpay signature verification  | Completes enrollment after payment       |
+| `/api/payment/create-order`           | POST   | ✅ WORKING | Razorpay API                 | Order amount validation          | Duplicate order prevention               |
+| `/api/payments/razorpay/create-order` | POST   | ✅ WORKING | Razorpay API                 | Amount/user validation           | Alternative endpoint, same functionality |
+| `/api/whatsapp/send`                  | POST   | ✅ WORKING | Audit logs only              | Admin auth required, phone regex | Text + template message support          |
 
 ---
 
@@ -55,6 +55,7 @@ These endpoints handle core business functions (demo bookings, contact inquiries
 **Status:** PARTIAL STUB
 
 **Problems Found:**
+
 - ✅ Payment signature verification: WORKING
 - ✅ Database save: WORKING (`seminar_enrollments` created)
 - ❌ **Line 50:** `TODO: Trigger WhatsApp welcome message via Interakt` — NOT IMPLEMENTED
@@ -73,12 +74,14 @@ These endpoints handle core business functions (demo bookings, contact inquiries
 **Status:** STUB with warning logs
 
 **Problems Found:**
+
 - ✅ Webhook signature verification: WORKING
 - ✅ Event parsing: WORKING
 - ❌ **Line 542:** `TODO: Replace these with real database operations before going live with payments`
 - All helper functions (payment status update, subscription billing, etc.) are STUBS that log warnings
 
 **Stub Functions:**
+
 ```
 updatePaymentStatus()        → logs warning, does nothing
 updateSubscriptionStatus()   → logs warning, does nothing
@@ -87,18 +90,21 @@ sendPaymentConfirmation()    → logs warning, does nothing
 handleFailedSubscriptionPayment() → logs warning + TODO for dunning
 ```
 
-**Current Behavior:** 
+**Current Behavior:**
+
 - Webhooks are received and logged
 - No database updates occur
 - Users won't see enrollment status changes in real-time
 
-**Impact:** 
+**Impact:**
+
 - Payments processed but enrollments not confirmed
 - User dashboards won't reflect payment status
 - Returns 200 OK (appears successful to Razorpay) but doesn't persist data
 
-**Fix Required Before Launch:** 
+**Fix Required Before Launch:**
 Implement actual Prisma queries to:
+
 1. Update payment status in `enrollments` table
 2. Update subscription status if applicable
 3. Send email/WhatsApp confirmations
@@ -111,6 +117,7 @@ Implement actual Prisma queries to:
 The following routes were checked and confirmed working:
 
 ### Authentication
+
 - ✅ `/api/auth/signin` (POST)
 - ✅ `/api/auth/signup` (POST)
 - ✅ `/api/auth/logout` (POST)
@@ -122,6 +129,7 @@ The following routes were checked and confirmed working:
 - ✅ `/api/auth/reset-password` (POST)
 
 ### MCQ System
+
 - ✅ `/api/mcq/submit` (POST) — saves to `mcq_submissions`
 - ✅ `/api/mcq/bookmarks` (GET/POST) — manages `mcq_bookmarks`
 - ✅ `/api/mcq/report-error` (POST) — saves `error_reports`
@@ -129,17 +137,20 @@ The following routes were checked and confirmed working:
 - ✅ `/api/mcq/review` (GET) — fetches review data
 
 ### User Management
+
 - ✅ `/api/admin/students` (GET/POST) — manages students
 - ✅ `/api/admin/counselors` (GET/POST) — manages counselors
 - ✅ `/api/admin/enrollments` (GET/POST) — enrollment admin
 - ✅ `/api/admin/users` (GET) — user listing
 
 ### Analytics & Tracking
+
 - ✅ `/api/analytics/track` (POST) — event tracking
 - ✅ `/api/analytics/interactions` (POST) — user interactions
 - ✅ `/api/analytics/real-time` (GET) — live data
 
 ### Counselor Features
+
 - ✅ `/api/counselor/leads` (GET) — fetch leads with pagination
 - ✅ `/api/counselor/tasks` (GET/POST) — task management
 - ✅ `/api/counselor/sessions` (GET) — session scheduling
@@ -153,6 +164,7 @@ The following routes were checked and confirmed working:
 **Found:** ✅ 100% of referenced endpoints exist
 
 **Routes Referenced but Implementation Verified:**
+
 - `/api/test/heartbeat` → present and minimal (by design)
 - `/api/errors/feedback` → present (error reporting)
 - `/api/activities/create` → present (activity tracking)
@@ -166,6 +178,7 @@ The following routes were checked and confirmed working:
 While routes exist, some depend on external services that may not be initialized:
 
 ### Interakt WhatsApp Service
+
 - **Status:** Stub implementation found
 - **Routes Affected:** `/api/leads/whatsapp-gate`, `/api/leads/exit-intent`
 - **Current Behavior:** Non-blocking (errors caught, logged, execution continues)
@@ -173,11 +186,13 @@ While routes exist, some depend on external services that may not be initialized
 - **Recommendation:** Test WhatsApp delivery before launch; add monitoring alerts
 
 ### Email Service Integration
+
 - **Routes Affected:** `/api/contact/inquiry`, `/api/demo-booking`, `/api/seminar/payment/verify`
 - **Status:** Implemented via `emailService.send()`
 - **Verification Needed:** Check email provider credentials in `.env`
 
 ### Google Ads Conversion Tracking
+
 - **Routes Affected:** `/api/contact/inquiry`, `/api/demo-booking`
 - **Status:** Async (non-blocking), has error logging
 - **Risk:** Low (lead captured even if tracking fails)
@@ -189,6 +204,7 @@ While routes exist, some depend on external services that may not be initialized
 ### ✅ LAUNCH READINESS: **85/100**
 
 **Clear to Launch When:**
+
 1. ✅ Demo booking → fully functional
 2. ✅ Contact inquiry → fully functional
 3. ✅ Lead capture (WhatsApp gate, exit intent) → fully functional
@@ -196,10 +212,12 @@ While routes exist, some depend on external services that may not be initialized
 5. ✅ Referral system → fully functional
 
 **MUST FIX Before Launch:**
+
 1. ⚠️ `/api/webhooks/payments` — Replace stub functions with real Prisma updates
 2. ⚠️ `/api/seminar/payment/verify` — Add email + WhatsApp confirmations
 
 **SHOULD VERIFY Before Launch:**
+
 1. Interakt WhatsApp credentials and API connectivity
 2. Email service sender configuration
 3. Razorpay webhook endpoint registered in dashboard
@@ -241,4 +259,3 @@ While routes exist, some depend on external services that may not be initialized
 - **Estimated Fix Time:** 2-4 hours
 - **Risk Level:** Low (stubs already log warnings in production)
 - **Blocking Launch:** Yes (payment confirmations are critical for business)
-

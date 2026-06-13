@@ -5,7 +5,8 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'Rajasthan Board (RBSE) Biology to NEET',
-  description: 'Expert RBSE Biology coaching for Rajasthan students. NEET-integrated preparation from Kota, Jaipur, Jodhpur and across Rajasthan.',
+  description:
+    'Expert RBSE Biology coaching for Rajasthan students. NEET-integrated preparation from Kota, Jaipur, Jodhpur and across Rajasthan.',
   keywords: [
     'Rajasthan board biology',
     'RBSE biology coaching',
@@ -16,7 +17,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Rajasthan Board (RBSE) Biology to NEET',
-    description: 'Expert RBSE Biology coaching for Rajasthan students with seamless NEET integration.',
+    description:
+      'Expert RBSE Biology coaching for Rajasthan students with seamless NEET integration.',
     url: `${BASE_URL}/boards/rajasthan-board`,
     siteName: 'Cerebrum Biology Academy',
     type: 'website',
@@ -28,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Rajasthan Board (RBSE) Biology to NEET',
-    description: 'Expert RBSE Biology coaching for Rajasthan students. NEET-integrated preparation from Kota, Jaipur, Jodhpur and across Rajasthan.',
+    description:
+      'Expert RBSE Biology coaching for Rajasthan students. NEET-integrated preparation from Kota, Jaipur, Jodhpur and across Rajasthan.',
   },
 }
 

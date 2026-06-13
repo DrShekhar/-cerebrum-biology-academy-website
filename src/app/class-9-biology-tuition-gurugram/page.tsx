@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Class 9 Biology Tuition in Gurugram | CBSE, ICSE Coaching',
-    description: 'Best Class 9 Biology tuition in Gurugram (Gurgaon) for CBSE & ICSE boards. Experienced teachers, small batches, complete NCERT coverage at Sector 51 center.',
+    description:
+      'Best Class 9 Biology tuition in Gurugram (Gurgaon) for CBSE & ICSE boards. Experienced teachers, small batches, complete NCERT coverage at Sector 51 center.',
   },
 }
 
@@ -106,7 +107,11 @@ export default function Class9BiologyTuitionGurugramPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="class-9-biology-tuition-gurugram" />
       <script

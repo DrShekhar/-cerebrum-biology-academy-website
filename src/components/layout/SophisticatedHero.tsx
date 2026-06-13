@@ -95,12 +95,8 @@ export function SophisticatedHero({
       {/* Dynamic Background Effects */}
       <div className="absolute inset-0">
         {/* Animated Gradient Orbs */}
-        <div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-fadeInUp"
-        />
-        <div
-          className="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-br from-green-400/20 to-blue-500/20 rounded-full blur-3xl animate-fadeInUp"
-        />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-fadeInUp" />
+        <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-br from-green-400/20 to-blue-500/20 rounded-full blur-3xl animate-fadeInUp" />
 
         {/* DNA Helix Pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -127,9 +123,7 @@ export function SophisticatedHero({
           {/* Left Column - Content */}
           <div className="space-y-8">
             {/* Premium Badge */}
-            <div
-              className="inline-flex items-center gap-2 bg-navy-100 border border-green-400 rounded-full px-4 py-2 animate-fadeInUp"
-            >
+            <div className="inline-flex items-center gap-2 bg-navy-100 border border-green-400 rounded-full px-4 py-2 animate-fadeInUp">
               <Sparkles className="h-5 w-5 text-blue-600" />
               <span className="text-sm font-semibold text-blue-800">
                 Harvard-Caliber Biology Education • Silicon Valley Innovation
@@ -137,9 +131,7 @@ export function SophisticatedHero({
             </div>
 
             {/* Main Headline */}
-            <div
-              className="space-y-4 animate-fadeInUp"
-            >
+            <div className="space-y-4 animate-fadeInUp">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                 <span className="text-navy-900">Master Biology</span>
                 <br />
@@ -158,9 +150,7 @@ export function SophisticatedHero({
             </div>
 
             {/* Achievement Stats */}
-            <div
-              className="grid grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeInUp"
-            >
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeInUp">
               {achievements.map((achievement, index) => (
                 <PremiumCard key={index} variant="premium" size="sm" className="text-center">
                   <achievement.icon className="h-8 w-8 text-blue-600 mx-auto mb-2" />
@@ -176,9 +166,7 @@ export function SophisticatedHero({
             </div>
 
             {/* CTA Buttons */}
-            <div
-              className="flex flex-col sm:flex-row gap-4 animate-fadeInUp"
-            >
+            <div className="flex flex-col sm:flex-row gap-4 animate-fadeInUp">
               <PremiumButton
                 variant="medical"
                 size="lg"
@@ -202,9 +190,7 @@ export function SophisticatedHero({
             </div>
 
             {/* Trust Indicators */}
-            <div
-              className="flex flex-wrap items-center gap-6 text-sm text-gray-600 animate-fadeInUp"
-            >
+            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 animate-fadeInUp">
               <div className="flex items-center gap-2">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
@@ -225,56 +211,51 @@ export function SophisticatedHero({
           </div>
 
           {/* Right Column - Interactive Testimonials */}
-          <div
-            className="space-y-8 animate-fadeInUp"
-          >
+          <div className="space-y-8 animate-fadeInUp">
             {/* Featured Success Story */}
             <PremiumCard variant="luxury" size="lg" className="relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-yellow-400/20 to-orange-500/20 rounded-full blur-2xl" />
-<div
-                  key={currentTestimonial}
-                  className="relative space-y-6 animate-fadeInUp"
-                >
-                  <div className="flex items-center gap-4">
-                    <Image
-                      src={testimonials[currentTestimonial].image}
-                      alt={testimonials[currentTestimonial].name}
-                      width={64}
-                      height={64}
-                      className="w-16 h-16 rounded-full object-cover border-4 border-white shadow-lg"
-                    />
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900">
-                        {testimonials[currentTestimonial].name}
-                      </h3>
-                      <div className="flex items-center gap-3 text-sm">
-                        <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full font-semibold">
-                          {testimonials[currentTestimonial].score}
-                        </span>
-                        <span className="text-blue-700 font-medium">
-                          {testimonials[currentTestimonial].rank}
-                        </span>
-                        <span className="text-purple-700 font-medium">
-                          {testimonials[currentTestimonial].college}
-                        </span>
-                      </div>
+              <div key={currentTestimonial} className="relative space-y-6 animate-fadeInUp">
+                <div className="flex items-center gap-4">
+                  <Image
+                    src={testimonials[currentTestimonial].image}
+                    alt={testimonials[currentTestimonial].name}
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 rounded-full object-cover border-4 border-white shadow-lg"
+                  />
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">
+                      {testimonials[currentTestimonial].name}
+                    </h3>
+                    <div className="flex items-center gap-3 text-sm">
+                      <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full font-semibold">
+                        {testimonials[currentTestimonial].score}
+                      </span>
+                      <span className="text-blue-700 font-medium">
+                        {testimonials[currentTestimonial].rank}
+                      </span>
+                      <span className="text-purple-700 font-medium">
+                        {testimonials[currentTestimonial].college}
+                      </span>
                     </div>
-                  </div>
-
-                  <blockquote className="text-lg text-gray-700 leading-relaxed italic">
-                    "{testimonials[currentTestimonial].quote}"
-                  </blockquote>
-
-                  <div className="flex justify-between items-center">
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 text-yellow-400" />
-                      ))}
-                    </div>
-                    <div className="text-sm text-gray-500">NEET 2024 Success</div>
                   </div>
                 </div>
-{/* Testimonial Navigation */}
+
+                <blockquote className="text-lg text-gray-700 leading-relaxed italic">
+                  "{testimonials[currentTestimonial].quote}"
+                </blockquote>
+
+                <div className="flex justify-between items-center">
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400" />
+                    ))}
+                  </div>
+                  <div className="text-sm text-gray-500">NEET 2024 Success</div>
+                </div>
+              </div>
+              {/* Testimonial Navigation */}
               <div className="flex justify-center gap-2 mt-6">
                 {testimonials.map((_, index) => (
                   <button
@@ -307,9 +288,7 @@ export function SophisticatedHero({
       </div>
 
       {/* Scroll Indicator */}
-      <div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-fadeInUp"
-      >
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-fadeInUp">
         <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-gray-400 rounded-full mt-2" />
         </div>

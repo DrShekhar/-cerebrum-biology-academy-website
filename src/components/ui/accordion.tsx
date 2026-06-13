@@ -1,21 +1,21 @@
-"use client"
+'use client'
 
-import * as React from "react"
-import { cn } from "@/lib/utils"
+import * as React from 'react'
+import { cn } from '@/lib/utils'
 
 /* ------------------------------------------------------------------ */
 /*  Minimal Accordion (shadcn/ui-compatible API, no radix dependency) */
 /* ------------------------------------------------------------------ */
 
 interface AccordionContextValue {
-  type: "single" | "multiple"
+  type: 'single' | 'multiple'
   collapsible?: boolean
   value: string[]
   onValueChange: (value: string[]) => void
 }
 
 const AccordionContext = React.createContext<AccordionContextValue>({
-  type: "single",
+  type: 'single',
   collapsible: false,
   value: [],
   onValueChange: () => {},
@@ -24,7 +24,7 @@ const AccordionContext = React.createContext<AccordionContextValue>({
 /* ----- Accordion root ----- */
 
 interface AccordionProps extends React.HTMLAttributes<HTMLDivElement> {
-  type?: "single" | "multiple"
+  type?: 'single' | 'multiple'
   collapsible?: boolean
   defaultValue?: string | string[]
   value?: string | string[]
@@ -34,7 +34,7 @@ interface AccordionProps extends React.HTMLAttributes<HTMLDivElement> {
 const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
   (
     {
-      type = "single",
+      type = 'single',
       collapsible = false,
       defaultValue,
       value: controlledValue,
@@ -43,7 +43,7 @@ const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
       children,
       ...props
     },
-    ref,
+    ref
   ) => {
     const [internalValue, setInternalValue] = React.useState<string[]>(() => {
       if (defaultValue) return Array.isArray(defaultValue) ? defaultValue : [defaultValue]
@@ -60,22 +60,24 @@ const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
       (next: string[]) => {
         if (!controlledValue) setInternalValue(next)
         if (onValueChange) {
-          onValueChange(type === "single" ? (next[0] ?? "") : next)
+          onValueChange(type === 'single' ? (next[0] ?? '') : next)
         }
       },
-      [controlledValue, onValueChange, type],
+      [controlledValue, onValueChange, type]
     )
 
     return (
-      <AccordionContext.Provider value={{ type, collapsible, value, onValueChange: handleValueChange }}>
-        <div ref={ref} className={cn("divide-y divide-gray-200", className)} {...props}>
+      <AccordionContext.Provider
+        value={{ type, collapsible, value, onValueChange: handleValueChange }}
+      >
+        <div ref={ref} className={cn('divide-y divide-gray-200', className)} {...props}>
           {children}
         </div>
       </AccordionContext.Provider>
     )
-  },
+  }
 )
-Accordion.displayName = "Accordion"
+Accordion.displayName = 'Accordion'
 
 /* ----- AccordionItem ----- */
 
@@ -86,7 +88,7 @@ interface AccordionItemContextValue {
 }
 
 const AccordionItemContext = React.createContext<AccordionItemContextValue>({
-  value: "",
+  value: '',
   isOpen: false,
   toggle: () => {},
 })
@@ -101,7 +103,7 @@ const AccordionItem = React.forwardRef<HTMLDivElement, AccordionItemProps>(
     const isOpen = value.includes(itemValue)
 
     const toggle = React.useCallback(() => {
-      if (type === "single") {
+      if (type === 'single') {
         if (isOpen && collapsible) {
           onValueChange([])
         } else if (!isOpen) {
@@ -118,14 +120,14 @@ const AccordionItem = React.forwardRef<HTMLDivElement, AccordionItemProps>(
 
     return (
       <AccordionItemContext.Provider value={{ value: itemValue, isOpen, toggle }}>
-        <div ref={ref} className={cn("border-b", className)} {...props}>
+        <div ref={ref} className={cn('border-b', className)} {...props}>
           {children}
         </div>
       </AccordionItemContext.Provider>
     )
-  },
+  }
 )
-AccordionItem.displayName = "AccordionItem"
+AccordionItem.displayName = 'AccordionItem'
 
 /* ----- AccordionTrigger ----- */
 
@@ -142,9 +144,9 @@ const AccordionTrigger = React.forwardRef<HTMLButtonElement, AccordionTriggerPro
         aria-expanded={isOpen}
         onClick={toggle}
         className={cn(
-          "flex w-full items-center justify-between py-4 font-medium transition-all hover:underline [&>svg]:transition-transform",
-          isOpen && "[&>svg]:rotate-180",
-          className,
+          'flex w-full items-center justify-between py-4 font-medium transition-all hover:underline [&>svg]:transition-transform',
+          isOpen && '[&>svg]:rotate-180',
+          className
         )}
         {...props}
       >
@@ -165,9 +167,9 @@ const AccordionTrigger = React.forwardRef<HTMLButtonElement, AccordionTriggerPro
         </svg>
       </button>
     )
-  },
+  }
 )
-AccordionTrigger.displayName = "AccordionTrigger"
+AccordionTrigger.displayName = 'AccordionTrigger'
 
 /* ----- AccordionContent ----- */
 
@@ -181,18 +183,14 @@ const AccordionContent = React.forwardRef<HTMLDivElement, AccordionContentProps>
     if (!isOpen) return null
 
     return (
-      <div
-        ref={ref}
-        className={cn("overflow-hidden text-sm", className)}
-        {...props}
-      >
+      <div ref={ref} className={cn('overflow-hidden text-sm', className)} {...props}>
         <div ref={contentRef} className="pb-4 pt-0">
           {children}
         </div>
       </div>
     )
-  },
+  }
 )
-AccordionContent.displayName = "AccordionContent"
+AccordionContent.displayName = 'AccordionContent'
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }

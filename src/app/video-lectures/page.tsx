@@ -31,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Free Biology Video Lectures | Watch Demo Class | NEET & Board Exam | Cerebrum Academy',
-    description: 'Watch free Biology video lectures by Dr. Shekhar C Singh (AIIMS). Demo class, student success stories, and complete NEET Biology lecture library. Hinglish medium. Book FREE demo!',
+    description:
+      'Watch free Biology video lectures by Dr. Shekhar C Singh (AIIMS). Demo class, student success stories, and complete NEET Biology lecture library. Hinglish medium. Book FREE demo!',
   },
 }
 
@@ -48,15 +49,22 @@ const testimonialVideos = [
     title: 'Enjoying My NEET Journey at Cerebrum',
     badge: 'Success Story',
   },
-  { id: 'bk6wQCh6b9w', title: 'How Shekhar Sir Helped Me Score 695/720 in NEET — Sadhana Sirin, MBBS at Lady Hardinge Medical College', badge: 'NEET Topper' },
+  {
+    id: 'bk6wQCh6b9w',
+    title:
+      'How Shekhar Sir Helped Me Score 695/720 in NEET — Sadhana Sirin, MBBS at Lady Hardinge Medical College',
+    badge: 'NEET Topper',
+  },
   {
     id: 'Eim_y7yc5Y8',
-    title: 'Where Big Coachings Pushed Me to Fail, One Advice from Shekhar Sir Saved Me — Now at AFMC Pune',
+    title:
+      'Where Big Coachings Pushed Me to Fail, One Advice from Shekhar Sir Saved Me — Now at AFMC Pune',
     badge: 'Student Review',
   },
   {
     id: 't5F8RBuHITM',
-    title: 'Cerebrum Shaped My Career — Light Years Ahead of Other Coaching Institutes. I Could Not Have Done It Without Shekhar Sir',
+    title:
+      'Cerebrum Shaped My Career — Light Years Ahead of Other Coaching Institutes. I Could Not Have Done It Without Shekhar Sir',
     badge: 'Student Testimonial',
   },
 ]

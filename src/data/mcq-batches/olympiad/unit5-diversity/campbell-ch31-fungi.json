@@ -369,12 +369,7 @@
     {
       "type": "MCQ",
       "question": "Arbuscular mycorrhizal fungi (phylum Glomeromycota) form symbioses with approximately what percentage of plant species?",
-      "options": [
-        "Less than 5%",
-        "About 25%",
-        "Approximately 50%",
-        "Over 80%"
-      ],
+      "options": ["Less than 5%", "About 25%", "Approximately 50%", "Over 80%"],
       "correctAnswer": "D",
       "explanation": "Arbuscular mycorrhizal (AM) fungi form symbioses with over 80% of all land plant species, making this the most widespread plant-fungal mutualism on Earth. AM fungi penetrate root cortical cells and form highly branched arbuscules that dramatically increase the surface area for nutrient exchange. The fungus provides the plant with mineral nutrients (especially phosphorus, which has limited mobility in soil) and receives photosynthetically derived carbon (sugars and lipids) from the plant. This ancient partnership likely dates to the earliest colonization of land by plants (~450 MYA), and fossil evidence from the Rhynie Chert shows AM-like structures in early Devonian plants. The Glomeromycota are obligate symbionts that cannot complete their life cycle without a plant host, reflecting their deep evolutionary commitment to this mutualistic lifestyle.",
       "isOlympiad": true,
@@ -749,12 +744,7 @@
     {
       "type": "MCQ",
       "question": "Penicillium, the fungus that produces the antibiotic penicillin, belongs to which phylum?",
-      "options": [
-        "Basidiomycota",
-        "Zygomycota",
-        "Ascomycota",
-        "Chytridiomycota"
-      ],
+      "options": ["Basidiomycota", "Zygomycota", "Ascomycota", "Chytridiomycota"],
       "correctAnswer": "C",
       "explanation": "Penicillium is a member of the Ascomycota, the largest fungal phylum (~64,000 known species). The genus name refers to the brush-like arrangement (penicillus = 'little brush') of its conidiophores—specialized hyphae that bear chains of asexual spores (conidia). Alexander Fleming's 1928 discovery that Penicillium notatum (now P. rubens) inhibited bacterial growth led to the development of penicillin, one of the most important medical discoveries in history. Penicillin works by inhibiting bacterial cell wall synthesis (specifically the cross-linking of peptidoglycan by transpeptidase enzymes), and it does not affect fungi because fungal cell walls contain chitin rather than peptidoglycan. Other important Ascomycota include Saccharomyces (baker's/brewer's yeast), Aspergillus, Neurospora (bread mold, important model organism), and truffles.",
       "isOlympiad": true,

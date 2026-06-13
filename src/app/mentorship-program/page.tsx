@@ -27,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biology Mentorship Program | 1-on-1 with Dr. Shekhar (AIIMS) | Premium Guidance',
-    description: 'Premium Biology mentorship by Dr. Shekhar C Singh (AIIMS Delhi). 1-on-1 guidance for NEET toppers, Olympiad aspirants, and medical career planning. Limited seats.',
+    description:
+      'Premium Biology mentorship by Dr. Shekhar C Singh (AIIMS Delhi). 1-on-1 guidance for NEET toppers, Olympiad aspirants, and medical career planning. Limited seats.',
   },
 }
 

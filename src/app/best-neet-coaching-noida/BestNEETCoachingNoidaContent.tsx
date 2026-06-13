@@ -224,7 +224,11 @@ export default function BestNEETCoachingNoidaContent({ faqs }: { faqs: FAQ[] }) 
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -364,8 +368,8 @@ export default function BestNEETCoachingNoidaContent({ faqs }: { faqs: FAQ[] }) 
               Why Students Choose Cerebrum
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Discover why thousands of Noida students trust Cerebrum Biology Academy for their
-              NEET Biology preparation
+              Discover why thousands of Noida students trust Cerebrum Biology Academy for their NEET
+              Biology preparation
             </p>
           </div>
 
@@ -452,7 +456,11 @@ export default function BestNEETCoachingNoidaContent({ faqs }: { faqs: FAQ[] }) 
             Book a free demo class and experience why students call us the best for Biology
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 size="xl"

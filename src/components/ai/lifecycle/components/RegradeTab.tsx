@@ -18,10 +18,7 @@ export function RegradeTab({
   initiateRegrade,
 }: RegradeTabProps) {
   return (
-    <div
-      key="regrade"
-      className="space-y-6 animate-fadeInUp"
-    >
+    <div key="regrade" className="space-y-6 animate-fadeInUp">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-white rounded-xl p-6 border">
           <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">

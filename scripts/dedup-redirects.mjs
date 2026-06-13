@@ -67,10 +67,7 @@ for (const d of dupsInEarlier) {
 
 // Step 4: Generate the cleaned batch3 array code
 const lines = deduped
-  .map(
-    (r) =>
-      `  { source: '${r.source}', destination: '${r.destination}', permanent: true },`
-  )
+  .map((r) => `  { source: '${r.source}', destination: '${r.destination}', permanent: true },`)
   .join('\n')
 
 console.log(`\n=== Cleaned batch3 array (${deduped.length} entries) ===`)

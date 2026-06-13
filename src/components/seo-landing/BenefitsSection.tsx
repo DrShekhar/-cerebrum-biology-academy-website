@@ -73,9 +73,7 @@ export function BenefitsSection({ benefits }: BenefitsSectionProps) {
   return (
     <section className="bg-white py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div
-          className="text-center animate-fadeInUp"
-        >
+        <div className="text-center animate-fadeInUp">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">{benefits.title}</h2>
           {benefits.subtitle && (
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">{benefits.subtitle}</p>

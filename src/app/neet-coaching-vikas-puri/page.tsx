@@ -21,7 +21,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Vikas Puri | Biology Classes West Delhi',
-    description: 'Best NEET coaching in Vikas Puri, West Delhi. Expert AIIMS faculty, small batches, proven results. Serving all 9 blocks, KG apartments & DDA flats. 15-20 min from Rohini via metro.',
+    description:
+      'Best NEET coaching in Vikas Puri, West Delhi. Expert AIIMS faculty, small batches, proven results. Serving all 9 blocks, KG apartments & DDA flats. 15-20 min from Rohini via metro.',
   },
 }
 

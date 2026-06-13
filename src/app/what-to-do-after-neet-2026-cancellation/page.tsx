@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'What to Do After NEET 2026 Cancellation | Student & Parent Guide',
-    description: 'NEET-UG 2026 was cancelled on 12 May 2026. What to do next — refund timeline, RE-NEET registration, study plan for the 6–8 week window, mental health helplines (Tele-MANAS 14416, iCall, Vandrevala)...',
+    description:
+      'NEET-UG 2026 was cancelled on 12 May 2026. What to do next — refund timeline, RE-NEET registration, study plan for the 6–8 week window, mental health helplines (Tele-MANAS 14416, iCall, Vandrevala)...',
   },
 }
 
@@ -62,7 +63,8 @@ const config: BestVerticalConfig = {
     { title: 'RE-NEET Online Coaching', href: '/re-neet-2026-online-coaching' },
     { title: 'RE-NEET for Droppers', href: '/re-neet-2026-droppers' },
     {
-      title: 'Cerebrum vs the 2nd-largest national NEET chain vs other online-only platforms (RE-NEET)',
+      title:
+        'Cerebrum vs the 2nd-largest national NEET chain vs other online-only platforms (RE-NEET)',
       href: '/re-neet-2026-cerebrum-vs-aakash-vs-pw',
     },
     { title: 'RE-NEET Coaching in Kota', href: '/re-neet-2026-kota' },

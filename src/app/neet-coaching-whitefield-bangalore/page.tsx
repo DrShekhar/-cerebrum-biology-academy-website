@@ -41,7 +41,9 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-whitefield-bangalore' },
+    alternates: {
+      canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-whitefield-bangalore',
+    },
     description:
       'Premium online coaching - no ORR traffic. World-class teaching from your Whitefield home.',
   },
@@ -158,7 +160,8 @@ export default function NeetCoachingWhitefieldPage() {
     await trackAndOpenWhatsApp({
       source: 'neet-coaching-whitefield-bangalore',
       campaign: 'neet-coaching-whitefield-bangalore',
-      message: 'Hi! I am interested in NEET coaching in Whitefield Bangalore. Please share details.',
+      message:
+        'Hi! I am interested in NEET coaching in Whitefield Bangalore. Please share details.',
     })
   }
 
@@ -178,9 +181,7 @@ export default function NeetCoachingWhitefieldPage() {
       <section className="relative bg-gradient-to-br from-[#1e3a5f] via-[#2d5a87] to-[#3d7ab5] text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2" />
               Bangalore IT Corridor | Premium NEET Coaching
@@ -192,8 +193,8 @@ export default function NeetCoachingWhitefieldPage() {
               ITPL | Brookefield | Marathahalli | Kadugodi | Hoodi
             </h2>
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Whitefield&apos;s international schools. 98%
-              success rate, AIIMS faculty, zero traffic commute. Join 780+ students from Inventure,
+              Premium NEET Biology coaching for Whitefield&apos;s international schools. 98% success
+              rate, AIIMS faculty, zero traffic commute. Join 780+ students from Inventure,
               Greenwood High, TISB!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -206,7 +207,11 @@ export default function NeetCoachingWhitefieldPage() {
                 <MessageCircle className="w-6 h-6" />
                 <span>WhatsApp Us Now</span>
               </Button>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Bangalore.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Bangalore.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -281,9 +286,7 @@ export default function NeetCoachingWhitefieldPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {localities.map((locality, index) => (
-              <div
-                key={locality.name}
-               className="animate-fadeInUp">
+              <div key={locality.name} className="animate-fadeInUp">
                 <div
                   className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all hover:-translate-y-1 ${locality.priority === 'high' ? 'ring-2 ring-[#1e3a5f]' : ''}`}
                 >
@@ -418,7 +421,11 @@ export default function NeetCoachingWhitefieldPage() {
                 <MessageCircle className="w-6 h-6" />
                 <span>WhatsApp Us Now</span>
               </Button>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Bangalore.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Bangalore.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

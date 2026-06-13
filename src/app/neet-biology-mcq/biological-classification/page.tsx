@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biological Classification MCQ for NEET 2026 | Free Practice Questions',
-    description: 'Practice 350+ free Biological Classification MCQs for NEET. Five Kingdom Classification, Monera, Protista, Fungi, Viruses questions. NCERT-based with detailed explanations.',
+    description:
+      'Practice 350+ free Biological Classification MCQs for NEET. Five Kingdom Classification, Monera, Protista, Fungi, Viruses questions. NCERT-based with detailed explanations.',
   },
 }
 
@@ -88,7 +89,8 @@ export default function BiologicalClassificationPage() {
             answer: 'R.H. Whittaker (1969)',
           },
           {
-            question: 'Which kingdom includes organisms with both autotrophic and heterotrophic modes of nutrition?',
+            question:
+              'Which kingdom includes organisms with both autotrophic and heterotrophic modes of nutrition?',
             answer: 'Protista',
           },
           {

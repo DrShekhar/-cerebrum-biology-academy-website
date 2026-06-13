@@ -109,12 +109,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about mass extinctions in Earth's history:\n\nI. The end-Permian extinction (~252 Ma) was the largest mass extinction, eliminating approximately 96% of marine species.\nII. The end-Cretaceous extinction (~66 Ma) was caused primarily by an asteroid impact at Chicxulub, Mexico.\nIII. Mass extinctions have always been followed by rapid recovery of biodiversity within thousands of years.\nIV. The Big Five mass extinctions occurred in the Ordovician, Devonian, Permian, Triassic, and Cretaceous periods.",
-      "options": [
-        "TTFT",
-        "TTTF",
-        "TTFF",
-        "FTFT"
-      ],
+      "options": ["TTFT", "TTTF", "TTFF", "FTFT"],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE. The end-Permian extinction (also called the 'Great Dying') was the most devastating mass extinction in Earth's history, eliminating approximately 96% of marine species and 70% of terrestrial vertebrate species. The primary cause was massive volcanism in the Siberian Traps, which triggered: ocean acidification, global warming from CO2 and methane release, ocean anoxia, and ozone layer destruction. Statement II is TRUE. The end-Cretaceous extinction was triggered by a ~10 km asteroid striking the Yucatan Peninsula at Chicxulub. Evidence includes: the global iridium anomaly at the K-Pg boundary (iridium is rare on Earth but common in meteorites), shocked quartz, tektites, and the Chicxulub crater itself. The impact caused: a global winter from dust and soot blocking sunlight, acid rain, wildfires, and collapse of photosynthesis-based food chains. Statement III is FALSE. Recovery from mass extinctions typically takes millions to tens of millions of years, not thousands. After the end-Permian extinction, full recovery of marine biodiversity took approximately 10-15 million years. Recovery involves not just increasing species numbers but rebuilding complex ecological networks. Statement IV is TRUE. The Big Five are: end-Ordovician (~444 Ma), Late Devonian (~375-360 Ma), end-Permian (~252 Ma), end-Triassic (~201 Ma), and end-Cretaceous (~66 Ma).",
       "isOlympiad": true,
@@ -349,12 +344,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the timeline of life on Earth:\n\nI. Prokaryotes appeared before eukaryotes in the fossil record.\nII. Multicellular organisms appeared in the Archean eon, before 2.5 billion years ago.\nIII. The first land plants preceded the first land animals.\nIV. Flowering plants (angiosperms) first appeared during the Cretaceous period.",
-      "options": [
-        "TFTT",
-        "TFTF",
-        "TFFT",
-        "TTFT"
-      ],
+      "options": ["TFTT", "TFTF", "TFFT", "TTFT"],
       "correctAnswer": "C",
       "explanation": "Statement I is TRUE. The oldest evidence of prokaryotic life dates to ~3.5 billion years ago (stromatolites, microfossils in the Apex Chert and Strelley Pool Formation). Eukaryotes appear much later, with the earliest unambiguous eukaryotic fossils (acritarchs) dating to ~1.8-2.1 billion years ago, and molecular clock estimates suggesting eukaryotic origins around 1.8-2.0 Ga. Statement II is FALSE. The Archean eon spans from 4.0 to 2.5 Ga. While prokaryotic life existed during the Archean, multicellular organisms did not appear until the Proterozoic. Simple multicellular organisms (possibly colonial algae) appeared around 1.2-1.5 Ga, and complex multicellularity (Ediacaran biota) appeared around 575 Ma — all well within the Proterozoic eon (2.5-0.541 Ga). Statement III is FALSE. The first land plants appeared approximately 470 Ma (Ordovician), while the first land animals (arthropods — likely millipede-like organisms) appeared approximately 450 Ma (also Ordovician). Some evidence suggests arthropods colonized land before or nearly simultaneously with plants. The timing is debated, but the general consensus places plant colonization slightly before or concurrent with animal colonization. However, the oldest unambiguous evidence of terrestrial arthropods is from ~428 Ma (Silurian), while plant spores date to ~470 Ma. Statement IV is TRUE. Angiosperms first appear in the fossil record during the Early Cretaceous (~135-125 Ma), with rapid diversification throughout the Cretaceous.",
       "isOlympiad": true,
@@ -529,12 +519,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the origin of eukaryotic cells:\n\nI. The nuclear envelope likely evolved from infoldings of the prokaryotic plasma membrane.\nII. Mitochondria evolved from an endosymbiotic alpha-proteobacterium.\nIII. Chloroplasts evolved from an endosymbiotic cyanobacterium.\nIV. The endosymbiotic origin of mitochondria occurred after the origin of chloroplasts.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "FTTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "FTTT"],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE. The endomembrane hypothesis proposes that the nuclear envelope and endoplasmic reticulum evolved from invaginations (infoldings) of the ancestral prokaryotic plasma membrane. Evidence includes: (1) the nuclear envelope is a double membrane continuous with the ER, (2) some prokaryotes (like Planctomycetes) have internal membrane systems that may represent evolutionary intermediates, and (3) the topology of the nuclear envelope is consistent with plasma membrane infolding. Statement II is TRUE. Overwhelming evidence supports the endosymbiotic origin of mitochondria from an alpha-proteobacterium: mitochondrial genome sequences are most closely related to Rickettsiales (obligate intracellular alpha-proteobacteria), mitochondria have double membranes, 70S ribosomes, circular DNA, and divide by binary fission. Statement III is TRUE. Chloroplasts originated from endosymbiosis with a cyanobacterium: chloroplast genomes are phylogenetically nested within cyanobacteria, they have double membranes (primary endosymbiosis), their thylakoid structure resembles cyanobacterial photosynthetic membranes, and they contain 70S ribosomes. Statement IV is FALSE. The endosymbiotic origin of mitochondria PRECEDED the origin of chloroplasts. All eukaryotes either have mitochondria or have mitochondria-derived organelles (hydrogenosomes, mitosomes), indicating mitochondrial acquisition occurred in the common ancestor of all eukaryotes. Chloroplasts were acquired later, only in the lineage leading to plants, green algae, and red algae (Archaeplastida).",
       "isOlympiad": true,
@@ -749,12 +734,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about key evolutionary transitions:\n\nI. The evolution of multicellularity occurred only once in the history of life.\nII. Photosynthesis evolved before aerobic respiration.\nIII. The colonization of land by vertebrates occurred during the Devonian period.\nIV. The first cells were likely heterotrophic, obtaining energy from organic molecules in the primordial environment.",
-      "options": [
-        "FTTT",
-        "FTTF",
-        "TFTT",
-        "FTFT"
-      ],
+      "options": ["FTTT", "FTTF", "TFTT", "FTFT"],
       "correctAnswer": "A",
       "explanation": "Statement I is FALSE. Multicellularity evolved independently multiple times across the tree of life — at least 25 independent origins have been documented. These include: animals, plants, brown algae, red algae, green algae (multiple times), fungi, slime molds, and various other lineages. Each represents an independent transition from unicellular to multicellular organization. Statement II is TRUE. Photosynthesis evolved before aerobic respiration. Anoxygenic photosynthesis appeared by ~3.5 Ga, and oxygenic photosynthesis evolved in cyanobacteria by ~2.7-3.0 Ga. Aerobic respiration could not have been widespread before the Great Oxygenation Event (~2.4 Ga) because it requires molecular oxygen as the terminal electron acceptor. The oxygen produced by photosynthesis was the prerequisite for aerobic respiration to become viable. Statement III is TRUE. The first tetrapods (four-limbed vertebrates) evolved from lobe-finned fishes during the Late Devonian (~375-365 Ma). Transitional forms include Tiktaalik (~375 Ma), Acanthostega (~365 Ma), and Ichthyostega (~365 Ma). Statement IV is TRUE. The earliest cells were likely heterotrophic, consuming abiotically produced organic molecules available in the primordial environment (the 'primordial soup'). Autotrophic pathways (like photosynthesis and chemosynthesis) are metabolically complex and likely evolved later.",
       "isOlympiad": true,
@@ -1129,12 +1109,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the Cambrian explosion:\n\nI. The Cambrian explosion occurred approximately 541-530 million years ago.\nII. All modern animal phyla first appeared during the Cambrian explosion.\nIII. The evolution of eyes may have been a trigger for the Cambrian explosion by enabling predator-prey arms races.\nIV. The Cambrian explosion is recorded only in the Burgess Shale of Canada.",
-      "options": [
-        "TFTT",
-        "TFTF",
-        "TTFF",
-        "TFFT"
-      ],
+      "options": ["TFTT", "TFTF", "TTFF", "TFFT"],
       "correctAnswer": "B",
       "explanation": "Statement I is TRUE. The Cambrian explosion refers to the relatively rapid appearance of most major animal phyla in the fossil record, beginning near the base of the Cambrian period (~541 Ma) and occurring mainly within a span of approximately 10-20 million years. Statement II is FALSE. While most animal phyla have their first fossil appearances in or near the Cambrian, not all do. Some phyla appear in the fossil record later (e.g., Bryozoa first appear in the Ordovician). Additionally, molecular clock estimates suggest that many phyla actually diverged before the Cambrian (in the Ediacaran), but their earliest representatives were soft-bodied and not preserved as fossils. The Cambrian explosion may reflect the evolution of hard parts (biomineralization) rather than the origin of the phyla themselves. Statement III is TRUE. Andrew Parker's 'Light Switch' hypothesis proposes that the evolution of image-forming eyes (particularly in trilobites and anomalocaridids) triggered an ecological arms race. Once predators could see prey, selection strongly favored defensive adaptations (hard shells, spines, burrowing) and predatory refinements (claws, jaws, speed). This arms race may have driven the rapid diversification of body plans observed in the Cambrian. Statement IV is FALSE. The Cambrian explosion is documented at numerous sites worldwide, including: Burgess Shale (Canada, ~508 Ma), Chengjiang biota (China, ~518 Ma), Sirius Passet (Greenland, ~518 Ma), Emu Bay Shale (Australia, ~514 Ma), and many others with hard-bodied fossils globally.",
       "isOlympiad": true,
@@ -1389,12 +1364,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about evidence for the history of life:\n\nI. Fossils preserved in amber can retain three-dimensional soft tissue detail.\nII. Radiocarbon dating can accurately date fossils that are 500 million years old.\nIII. The law of faunal succession states that fossil species succeed each other in a definite, recognizable order.\nIV. Trace fossils (ichnofossils) such as burrows and footprints provide evidence of animal behavior.",
-      "options": [
-        "TFTT",
-        "TFTF",
-        "TTFT",
-        "TFFT"
-      ],
+      "options": ["TFTT", "TFTF", "TTFT", "TFFT"],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE. Amber (fossilized tree resin) is an exceptional preservation medium that can preserve organisms in three-dimensional detail, including soft tissues, internal organs, and even subcellular structures. Famous examples include: insects preserved with intact wings and color patterns, feathered dinosaur tails (a remarkable 2016 discovery from Myanmar amber), plant material with preserved cell structure, and even bacterial inclusions. Amber can preserve specimens from the Cretaceous (~100 Ma) to the present. Statement II is FALSE. Radiocarbon (14C) dating has a maximum effective range of approximately 50,000 years (about 9 half-lives of 14C, whose half-life is 5,730 years). After ~50,000 years, so little 14C remains that it cannot be reliably measured above background levels. For dating fossils 500 million years old, radiometric methods with much longer-lived isotopes (K-Ar, U-Pb, Rb-Sr) must be used. Statement III is TRUE. The law of faunal succession (also called the law of fossil succession), established by William Smith in the early 1800s, states that fossil organisms succeed each other in a specific, recognizable order that can be used to correlate and date sedimentary rocks. This principle is the foundation of biostratigraphy and was established empirically before Darwin provided the evolutionary explanation. Statement IV is TRUE. Trace fossils (ichnofossils) are indirect evidence of organismal activity: footprints, trackways, burrows, borings, coprolites (fossilized feces), and gastroliths (stomach stones). They provide information about behavior, locomotion, and ecology that body fossils alone cannot.",
       "isOlympiad": true,
@@ -1649,12 +1619,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about continental drift and biogeography:\n\nI. Australia's unique marsupial fauna is explained by its long isolation after separating from Antarctica ~35 Ma.\nII. The Himalayan mountain range formed when the Indian subcontinent collided with Asia.\nIII. Wallace's Line, separating Asian and Australian biogeographic realms, runs between Borneo and Sulawesi.\nIV. Plate tectonics has no influence on ocean circulation patterns or global climate.",
-      "options": [
-        "TTTF",
-        "TTFF",
-        "TFTT",
-        "FTTT"
-      ],
+      "options": ["TTTF", "TTFF", "TFTT", "FTTT"],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE. Australia separated from Antarctica approximately 35 million years ago, beginning a long period of isolation. During this isolation, Australia's marsupial mammals underwent adaptive radiation without competition from placental mammals, producing the diverse endemic fauna: kangaroos, koalas, wombats, Tasmanian devils, numbats, quolls, bandicoots, and many others. Australia's marsupials fill ecological roles occupied by placentals on other continents (e.g., the thylacine was a marsupial wolf). Statement II is TRUE. The Indian subcontinent was originally part of Gondwana and broke away approximately 120 Ma. It drifted northward across the Tethys Sea, colliding with the Asian plate beginning ~50-55 Ma. This ongoing collision created (and continues to elevate) the Himalayan mountain range, the highest mountains on Earth. The collision also uplifted the Tibetan Plateau, profoundly affecting Asian monsoon patterns and global climate. Statement III is TRUE. Wallace's Line, identified by Alfred Russel Wallace in 1859, is a biogeographic boundary running through the Malay Archipelago between Borneo (Asian fauna) and Sulawesi (transitional/Australian fauna), and between Bali (Asian) and Lombok (Australian). It reflects the deep-water strait (Makassar Strait) that persisted even during ice age low sea levels, preventing terrestrial animal migration. Statement IV is FALSE. Plate tectonics profoundly influences ocean circulation and climate: the closure of the Isthmus of Panama created the Gulf Stream, the opening of the Drake Passage enabled the Antarctic Circumpolar Current (cooling Antarctica), and the Tethys Sea closure altered global ocean chemistry.",
       "isOlympiad": true,

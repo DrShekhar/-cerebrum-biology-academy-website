@@ -135,7 +135,10 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ data: record })
   } catch (error) {
     if (error instanceof z.ZodError) {
-      return NextResponse.json({ error: 'Validation failed', details: error.flatten() }, { status: 400 })
+      return NextResponse.json(
+        { error: 'Validation failed', details: error.flatten() },
+        { status: 400 }
+      )
     }
     console.error('Payment link create error:', error)
     return NextResponse.json(

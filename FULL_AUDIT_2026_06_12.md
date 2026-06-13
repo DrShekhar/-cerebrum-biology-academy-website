@@ -4,6 +4,7 @@ Four parallel agents. This is the deepest pass and it found issues earlier sweep
 including two things I'd previously reported as fixed/working that are not.
 
 ## ⚠️ Two corrections to earlier reports
+
 1. **"Broken internal links fixed" was incomplete.** The earlier pass fixed `href=` props but NOT
    the `url:`-field links rendered from data files. **251 unique internal links still 404** — 190
    in `src/data/city-seo/city-hub-data.ts` alone (rendered by CityHubPage on 100+ city pages).
@@ -15,6 +16,7 @@ including two things I'd previously reported as fixed/working that are not.
 ## CRITICAL — deploy-blocking / data-loss (fix before relying on these features)
 
 ### Code / data integrity (the `prisma` mock-union type hides ALL of these from tsc)
+
 - **~20 Prisma models referenced by live code don't exist** → those endpoints 500:
   gamification (×5 models, 49 calls), consultant/commissions/referrals (×4, 49 calls), notices (×2),
   worksheets (×2), wall_of_achievers (×2), self_evaluations, **`tests` (parent dashboard + child tests)**,
@@ -32,11 +34,13 @@ including two things I'd previously reported as fixed/working that are not.
   earlier; these are OTHER call sites.)
 
 ### Payments — money-loss masking
+
 - **`payments/verify:265`** returns `verified:true` (200) after the DB transaction fails post-signature
   → student paid but not enrolled, no retry. **`payments/cashfree/webhook:169`** returns 200 in catch →
   Cashfree never retries. **`payment/verify:52`** has no idempotency guard (replay re-confirms).
 
 ### Security
+
 - **2 stored-XSS sinks**: `free-resources/AnnouncementBanner.tsx:56` + `free-resources/[id]/page.tsx:176`
   render admin/DB HTML via dangerouslySetInnerHTML with no sanitization — and the project already has
   `lib/security/htmlSanitizer.ts.sanitizeHtml()` unused. Pipe both through it.
@@ -48,6 +52,7 @@ including two things I'd previously reported as fixed/working that are not.
 ## HIGH
 
 ### Links (251 broken, full list in /tmp/realbroken.json from the agent run)
+
 - `city-hub-data.ts` (190): `localities`/`relatedCities` `url:` fields → dead routes (Punjab/Haryana
   area pages, sector pages). Rendered by CityHubPage.tsx:658,743 on 100+ pages.
 - `seo-landing/*` content (25): `/resources/*` + `/tools/*` namespace mismatch (real tools are
@@ -65,6 +70,7 @@ including two things I'd previously reported as fixed/working that are not.
 - 33 orphaned money pages (MCAT/DAT/USMLE/USABO/GAMSAT city pages, vertical pricing hubs) — no inbound links.
 
 ### Content
+
 - **Rating contradiction**: canonical 5.0/38 vs visible 4.8/4.7/4.5 and review counts 847 / 1,247 / 500+
   across ~20 pages. Schema/trust risk. Route all through CEREBRUM_METRICS.
 - **Non-compliant claims**: "100% Selection Rate" (IntensiveNEETBiologyPage:366), "Guaranteed admission"
@@ -79,6 +85,7 @@ including two things I'd previously reported as fixed/working that are not.
 - Indexable ~0-word stubs: `/curriculum`, `/about/media` ("coming soon"), biology-notes, usabo-past-papers.
 
 ### UI/UX & a11y
+
 - **Two fixed bottom bars overlap on mobile** site-wide (MobileBottomNav z-50 + Footer Call bar z-50).
 - **LeadCaptureForm** (high-traffic): no `<form onSubmit>` (Enter doesn't submit) + no real double-submit
   guard (double-taps open 2 WhatsApp tabs).
@@ -91,6 +98,7 @@ including two things I'd previously reported as fixed/working that are not.
 - 3 comparison tables crush (no min-w) at 375px instead of scrolling.
 
 ## MEDIUM / LOW
+
 - Dead/unmounted components with divergent nav (HeaderServer, MobileFullscreenMenu, StickyMobileCallBar,
   EmotionalHeroSection, etc.) — delete to prevent someone wiring a stale variant.
 - Duplicate utilities: phone-normalize reimplemented 9+ times (canonical lib/utils/phone.ts ignored);
@@ -102,6 +110,7 @@ including two things I'd previously reported as fixed/working that are not.
   gone, 0 raw <img>, analytics lazy).
 
 ## The root cause worth fixing once
+
 `src/lib/prisma.ts:350` exports `prisma` as a mock-union `as any` → **tsc cannot see any Prisma field/
 model/enum drift**. Properly typing the export as `PrismaClient` would surface ~200 of the runtime bugs
 above at compile time. Highest-leverage single change.

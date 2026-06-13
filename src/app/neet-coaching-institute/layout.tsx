@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best NEET Coaching Institute in Delhi NCR | Cerebrum Biology Academy',
-    description: 'Top-rated NEET coaching institute in Delhi NCR. 4 centers, AIIMS-trained faculty, 98% success rate, 67+ AIIMS selections. Affordable fees, small batches. Join now!',
+    description:
+      'Top-rated NEET coaching institute in Delhi NCR. 4 centers, AIIMS-trained faculty, 98% success rate, 67+ AIIMS selections. Affordable fees, small batches. Join now!',
   },
 }
 

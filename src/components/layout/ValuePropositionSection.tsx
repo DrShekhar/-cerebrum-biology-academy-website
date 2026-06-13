@@ -84,9 +84,7 @@ export function ValuePropositionSection() {
     <section className="py-20 bg-navy-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div
-          className="text-center mb-16 animate-fadeInUp"
-        >
+        <div className="text-center mb-16 animate-fadeInUp">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             {t('neetSuccessFramework')}
           </h2>
@@ -99,10 +97,7 @@ export function ValuePropositionSection() {
             {successFramework.map((step, index) => {
               const Icon = step.icon
               return (
-                <div
-                  key={step.step}
-                  className="relative animate-fadeInUp"
-                >
+                <div key={step.step} className="relative animate-fadeInUp">
                   {/* Connection Line */}
                   {index < successFramework.length - 1 && (
                     <div className="hidden lg:block absolute top-20 left-full w-full h-0.5 bg-gradient-to-r from-blue-200 to-green-200 z-10">
@@ -143,9 +138,7 @@ export function ValuePropositionSection() {
         </div>
 
         {/* Comparison Table */}
-        <div
-          className="mb-20 animate-fadeInUp"
-        >
+        <div className="mb-20 animate-fadeInUp">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
               {t('whyChooseOverTraditional')}
@@ -191,9 +184,7 @@ export function ValuePropositionSection() {
         </div>
 
         {/* Guarantees */}
-        <div
-          className="mb-12 animate-fadeInUp"
-        >
+        <div className="mb-12 animate-fadeInUp">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">{t('ourCommitment')}</h3>
             <p className="text-lg text-gray-600">{t('confidentInMethodology')}</p>
@@ -219,15 +210,15 @@ export function ValuePropositionSection() {
         </div>
 
         {/* CTA */}
-        <div
-          className="text-center animate-fadeInUp"
-        >
+        <div className="text-center animate-fadeInUp">
           <div className="bg-navy-900 rounded-2xl p-8 text-white">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               {t('readyExperienceDifference')}
             </h3>
             <p className="text-blue-100 mb-6 text-lg">{t('joinThousands')}</p>
-            <ContextualWhatsAppLink target="_blank" rel="noopener noreferrer"
+            <ContextualWhatsAppLink
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-green-600 text-white px-4 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-green-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg text-sm sm:text-base"
             >
               {t('bookFreeStrategy')}

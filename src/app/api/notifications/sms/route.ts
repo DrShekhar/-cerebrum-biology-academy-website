@@ -95,7 +95,6 @@ export async function POST(request: NextRequest) {
       throw new Error(result.message || `Interakt API error: ${response.status}`)
     }
 
-
     return NextResponse.json({
       success: true,
       messageId: result.result?.message_id || result.id,

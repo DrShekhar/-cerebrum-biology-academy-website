@@ -409,12 +409,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about glycolysis:\nS1: Glycolysis occurs in the cytoplasm and does not require oxygen\nS2: The net energy yield from glycolysis is 4 ATP and 2 NADH per glucose molecule\nS3: Phosphofructokinase-1 (PFK-1) is the committed step enzyme and primary regulatory point of glycolysis\nS4: Glycolysis consists of 10 enzymatic reactions divided into an energy-investment phase (reactions 1-5) and an energy-payoff phase (reactions 6-10)",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TFTF",
-        "TTFT"
-      ],
+      "options": ["TFTT", "TTTT", "TFTF", "TTFT"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: Glycolysis (from Greek 'glycos' = sweet, 'lysis' = splitting) is an ancient metabolic pathway that occurs entirely in the cytoplasm (cytosol) of the cell. It does not require oxygen and can function under both aerobic and anaerobic conditions. This is consistent with its evolution before atmospheric O2 accumulated. All 10 glycolytic enzymes are soluble cytoplasmic proteins (except for some that associate with the outer mitochondrial membrane or cytoskeletal elements). S2 is FALSE: While the energy-payoff phase produces 4 ATP (2 from phosphoglycerate kinase, 2 from pyruvate kinase) and 2 NADH (from glyceraldehyde-3-phosphate dehydrogenase), the energy-investment phase consumes 2 ATP (hexokinase and PFK-1). The NET yield is therefore 2 ATP and 2 NADH per glucose, not 4 ATP. The statement says 'net energy yield' of 4 ATP, which is incorrect. S3 is TRUE: PFK-1 catalyzes fructose-6-phosphate + ATP → fructose-1,6-bisphosphate + ADP. This is the first committed step of glycolysis (glucose-6-phosphate from hexokinase can enter other pathways like PPP or glycogen synthesis, but F-1,6-BP is committed to glycolysis). PFK-1 is the primary regulatory target, controlled by ATP (inhibitor), AMP (activator), citrate (inhibitor), and fructose-2,6-bisphosphate (most potent activator). S4 is TRUE: Glycolysis comprises 10 reactions in two phases. The investment phase (reactions 1-5) uses 2 ATP to phosphorylate glucose to fructose-1,6-bisphosphate and split it into two triose phosphates. The payoff phase (reactions 6-10) generates 4 ATP and 2 NADH from the two triose phosphate molecules.",
       "isOlympiad": true,
@@ -429,12 +424,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the citric acid cycle:\nS1: The TCA cycle produces 3 NADH, 1 FADH2, and 1 GTP (or ATP) per turn from one acetyl-CoA\nS2: Oxaloacetate is consumed stoichiometrically and must be continually resynthesized from dietary sources\nS3: Anaplerotic reactions such as pyruvate carboxylase (pyruvate + CO2 → oxaloacetate) replenish TCA cycle intermediates that are removed for biosynthesis\nS4: The TCA cycle operates exclusively in the mitochondrial matrix, with all enzymes being soluble proteins",
-      "options": [
-        "TFTT",
-        "TFTF",
-        "TTFF",
-        "TFFT"
-      ],
+      "options": ["TFTT", "TFTF", "TTFF", "TFFT"],
       "correctAnswer": "TFTF",
       "explanation": "S1 is TRUE: Each turn of the TCA cycle (from one acetyl-CoA) produces: 3 NADH (at isocitrate dehydrogenase, alpha-ketoglutarate dehydrogenase, and malate dehydrogenase), 1 FADH2 (at succinate dehydrogenase), and 1 GTP (at succinyl-CoA synthetase; in some tissues, ATP is produced instead). The overall equation per acetyl-CoA: acetyl-CoA + 3 NAD+ + FAD + GDP + Pi + 2 H2O → 2 CO2 + 3 NADH + FADH2 + GTP + CoA. S2 is FALSE: Oxaloacetate is NOT consumed stoichiometrically — it is regenerated with each turn of the cycle. The cycle begins when acetyl-CoA condenses with oxaloacetate to form citrate (citrate synthase), and after seven more reactions, oxaloacetate is regenerated. OAA is catalytic, not stoichiometric. It does not need to be continually resynthesized from diet — it is recycled. However, when TCA intermediates are withdrawn for biosynthesis (cataplerosis), anaplerotic reactions replenish them. S3 is TRUE: Anaplerotic reactions (Greek 'filling up') replenish TCA cycle intermediates. The most important is pyruvate carboxylase: pyruvate + CO2 + ATP → oxaloacetate + ADP + Pi. This biotin-dependent enzyme is activated by acetyl-CoA — when acetyl-CoA accumulates (from beta-oxidation or amino acid catabolism), it signals the need for more OAA to keep the cycle running. Other anaplerotic reactions include glutamate dehydrogenase (glutamate → alpha-ketoglutarate) and various transaminases. S4 is FALSE: While most TCA cycle enzymes are in the matrix, succinate dehydrogenase (Complex II) is an integral inner membrane protein, not a soluble matrix enzyme. Its FAD prosthetic group is covalently bound, and it directly interfaces with the ubiquinone pool of the ETC.",
       "isOlympiad": true,
@@ -449,12 +439,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about oxidative phosphorylation:\nS1: The inner mitochondrial membrane has a very low permeability to protons, which is essential for maintaining the proton gradient\nS2: Oligomycin inhibits ATP synthase by blocking the proton channel in the Fo subunit, preventing proton flow and stopping ATP synthesis\nS3: Under normal coupling conditions, inhibition of ATP synthase by oligomycin will also inhibit electron transport because the proton gradient builds up to a level that thermodynamically opposes further proton pumping\nS4: FCCP (carbonyl cyanide-p-trifluoromethoxyphenylhydrazone) is an ATP synthase activator that increases ATP production",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: The inner mitochondrial membrane has an exceptionally low proton permeability, approximately 10^6 times lower than typical biological membranes. This is essential because the proton-motive force (approximately 200 mV) would rapidly dissipate if protons could leak back freely. The membrane's high content of cardiolipin (a four-acyl-chain phospholipid unique to this membrane) contributes to its impermeability. Protons can only return to the matrix through specific channels — primarily ATP synthase (productive) or UCPs (for thermogenesis). S2 is TRUE: Oligomycin (a macrolide antibiotic from Streptomyces) binds to the c-subunits of the Fo channel, physically blocking proton translocation. Without proton flow, the F1 catalytic subunits cannot undergo the rotational conformational changes needed for ATP synthesis. Oligomycin is a classic experimental tool for studying chemiosmotic coupling. S3 is TRUE: This demonstrates the tight coupling between electron transport and ATP synthesis. When oligomycin blocks proton return through ATP synthase, protons pumped by the ETC accumulate in the IMS, increasing the pmf. As the pmf rises, it becomes thermodynamically more difficult (and eventually impossible) for the ETC complexes to pump additional protons against the larger gradient. Electron transport therefore slows and eventually stops. This respiratory control demonstrates that the ETC and ATP synthase are coupled through the proton gradient. S4 is FALSE: FCCP is NOT an ATP synthase activator — it is a chemical uncoupler (protonophore). FCCP is a lipophilic weak acid that carries protons across the inner membrane, short-circuiting the proton gradient and PREVENTING ATP synthesis. It dissipates the pmf as heat, similar to UCPs but in an unregulated manner.",
       "isOlympiad": true,
@@ -469,12 +454,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about fermentation and anaerobic metabolism:\nS1: Lactic acid fermentation in human muscle produces L-lactate (not D-lactate) via lactate dehydrogenase\nS2: Obligate aerobes can switch to fermentation when oxygen is depleted\nS3: In alcoholic fermentation, pyruvate is first decarboxylated to acetaldehyde (by pyruvate decarboxylase, requiring TPP), then acetaldehyde is reduced to ethanol (by alcohol dehydrogenase, oxidizing NADH to NAD+)\nS4: Fermentation pathways produce the same total ATP per glucose as aerobic respiration",
-      "options": [
-        "TFTT",
-        "TFTF",
-        "TTFF",
-        "TFFF"
-      ],
+      "options": ["TFTT", "TFTF", "TTFF", "TFFF"],
       "correctAnswer": "TFTF",
       "explanation": "S1 is TRUE: Human lactate dehydrogenase (LDH) is stereospecific, producing exclusively L-lactate (also called (S)-lactate). The enzyme catalyzes the reduction of pyruvate to L-lactate with concomitant oxidation of NADH to NAD+. D-lactate is produced by certain bacteria using D-specific LDH enzymes. The distinction is clinically relevant because D-lactate accumulation (D-lactic acidosis) can occur in short bowel syndrome from bacterial overgrowth. S2 is FALSE: Obligate aerobes (strict aerobes) CANNOT switch to fermentation — by definition, they require oxygen for growth and energy production. They lack the fermentation enzymes needed for anaerobic ATP production (or their metabolism is too dependent on oxidative phosphorylation). Examples include Mycobacterium tuberculosis and most mitochondria-containing eukaryotic cells (although many eukaryotes are actually facultative and can ferment). Organisms that CAN switch between aerobic respiration and fermentation are called facultative anaerobes (e.g., yeast, E. coli). S3 is TRUE: Alcoholic fermentation proceeds in two steps: (1) Pyruvate decarboxylase (requires TPP/thiamine pyrophosphate as cofactor) removes CO2 from pyruvate to yield acetaldehyde. (2) Alcohol dehydrogenase reduces acetaldehyde to ethanol using NADH as the reductant, regenerating NAD+. This NAD+ regeneration is the essential purpose of the pathway. S4 is FALSE: Fermentation yields only 2 ATP per glucose (net from glycolysis), while aerobic respiration yields approximately 30-32 ATP per glucose — a 15-16 fold difference in efficiency.",
       "isOlympiad": true,
@@ -829,12 +809,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the regulation of pyruvate dehydrogenase complex (PDC):\nS1: PDC is inactivated by phosphorylation (by PDH kinase) and reactivated by dephosphorylation (by PDH phosphatase)\nS2: PDH kinase is activated by high ratios of acetyl-CoA/CoA, NADH/NAD+, and ATP/ADP, reflecting energy sufficiency\nS3: Calcium ions activate PDH phosphatase, linking PDC activity to muscle contraction and hormonal signaling\nS4: PDC regulation is exclusively controlled by allosteric effectors with no covalent modification",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTF"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTF"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: PDC is regulated by a phosphorylation/dephosphorylation cycle on three serine residues of the E1-alpha subunit (Ser-264 is the primary site). PDH kinase (PDK, 4 isoforms PDK1-4) phosphorylates and INACTIVATES PDC. PDH phosphatase (PDP, 2 isoforms PDP1-2) dephosphorylates and REACTIVATES PDC. This is a classic example of interconvertible enzyme regulation. S2 is TRUE: PDH kinase activity is stimulated by the products of the PDC reaction and indicators of energy sufficiency: high acetyl-CoA/CoA ratio (product accumulation), high NADH/NAD+ ratio (excess reducing equivalents), and high ATP/ADP ratio (energy sufficiency). When these ratios are high, PDK is activated, phosphorylates PDC, and slows pyruvate oxidation. Conversely, when these ratios are low (energy depletion), PDK is inhibited, PDC remains dephosphorylated and active. Pyruvate itself also inhibits PDK, ensuring PDC activity when substrate is abundant. S3 is TRUE: Ca2+ directly activates PDP1 (PDH phosphatase 1) by binding to a specific site on the enzyme. During muscle contraction, cytoplasmic (and mitochondrial) Ca2+ levels rise, activating PDP1, which dephosphorylates and activates PDC, increasing acetyl-CoA production for the TCA cycle to meet increased energy demands. Insulin signaling also activates PDP through a separate mechanism. S4 is FALSE: PDC IS regulated by covalent modification (phosphorylation/dephosphorylation), as described in S1-S3. While it is also regulated allosterically by substrates and products, covalent modification is the primary regulatory mechanism.",
       "isOlympiad": true,
@@ -849,12 +824,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about mitochondrial structure and function:\nS1: The inner mitochondrial membrane is folded into cristae, which greatly increase the surface area available for the electron transport chain and ATP synthase\nS2: The mitochondrial matrix contains the enzymes of the TCA cycle, pyruvate dehydrogenase, and beta-oxidation, as well as mitochondrial DNA, ribosomes, and tRNAs\nS3: The outer mitochondrial membrane is freely permeable to all molecules up to approximately 5000 Da due to porins (VDAC)\nS4: Mitochondria replicate by binary fission independently of the cell cycle and are inherited exclusively from the paternal parent in mammals",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFF",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFF", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Cristae are invaginations of the inner mitochondrial membrane that dramatically increase the surface area (by approximately 5-10 fold) for oxidative phosphorylation. The ETC complexes and ATP synthase are embedded in the cristae membrane. Cristae morphology is dynamic and regulated — cells with high energy demand (cardiac muscle, neurons) have densely packed lamellar cristae, while cells with lower demand have fewer, tubular cristae. Cristae junctions (narrow openings where cristae connect to the inner boundary membrane) create distinct microcompartments within the IMS that concentrate protons near ATP synthase. S2 is TRUE: The mitochondrial matrix is a gel-like compartment containing: TCA cycle enzymes (all soluble except SDH), pyruvate dehydrogenase complex, beta-oxidation enzymes, amino acid catabolism enzymes, and the machinery for mitochondrial gene expression — mtDNA (circular, approximately 16.5 kb in humans), mitochondrial ribosomes (55S, smaller than cytoplasmic 80S), tRNAs, and aminoacyl-tRNA synthetases. S3 is TRUE: The outer mitochondrial membrane contains voltage-dependent anion channels (VDAC, also called mitochondrial porins) — large beta-barrel channels that allow free passage of molecules up to approximately 5000 Da, including ions, metabolites (ATP, ADP, pyruvate, fatty acyl-CoA), and small proteins. This makes the intermembrane space composition similar to the cytosol for small molecules. S4 is FALSE in two respects: While mitochondria do divide by fission (involving dynamin-related GTPases like Drp1), this process is coordinated with the cell cycle and cellular energy demands, not completely independent. More critically, in mammals, mitochondria are inherited almost exclusively from the MATERNAL parent (through the egg cytoplasm), not paternal. Paternal mitochondria from sperm are tagged with ubiquitin and degraded by autophagy after fertilization.",
       "isOlympiad": true,
@@ -1149,12 +1119,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the energetics of electron transport:\nS1: The standard reduction potential of the NAD+/NADH couple (-320 mV) is more negative than the O2/H2O couple (+816 mV), indicating that NADH is a strong reducing agent and electrons flow spontaneously from NADH to O2\nS2: The free energy released by electron transport from NADH to O2 is captured entirely as heat with no useful work\nS3: The electron transport chain is arranged in order of increasing reduction potential, ensuring thermodynamically favorable electron flow at each step\nS4: Each ETC complex has a unique standard reduction potential that determines where it sits in the electron transfer sequence",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TFTT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: The more negative the standard reduction potential (E'0), the stronger the reducing agent (greater tendency to donate electrons). NADH (E'0 = -320 mV) has a strong tendency to donate electrons, while O2 (E'0 = +816 mV) has a strong tendency to accept electrons. Electrons flow spontaneously from lower to higher reduction potential: delta-E'0 = +816 - (-320) = +1136 mV, corresponding to delta-G'0 = -219 kJ/mol (highly exergonic). S2 is FALSE: The energy released during electron transport is NOT captured entirely as heat. Instead, it is used to pump protons across the inner mitochondrial membrane, creating the proton-motive force. This stored energy then drives ATP synthesis by ATP synthase. Approximately 34% of the energy is captured as ATP; the remainder is dissipated as heat (consistent with the second law of thermodynamics). S3 is TRUE: The ETC components are arranged in order of increasing (more positive) reduction potential: NADH (-320 mV) → FMN (-300 mV) → Fe-S clusters → CoQ (+45 mV) → cytochrome b (+77 mV) → cytochrome c1 (+215 mV) → cytochrome c (+254 mV) → CuA (+245 mV) → cytochrome a (+290 mV) → CuB/cytochrome a3 (+800 mV) → O2 (+816 mV). Each transfer is thermodynamically favorable (electron moves to a higher potential). S4 is TRUE: Each complex contains multiple redox centers with specific reduction potentials. These potentials determine the thermodynamic favorability and sequence of electron transfer within and between complexes.",
       "isOlympiad": true,
@@ -1169,12 +1134,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the regulation of the citric acid cycle:\nS1: The three primary regulatory enzymes of the TCA cycle are citrate synthase, isocitrate dehydrogenase, and alpha-ketoglutarate dehydrogenase\nS2: All three regulatory enzymes catalyze reactions far from equilibrium (large negative delta-G) and are allosterically regulated\nS3: The TCA cycle rate is primarily determined by the availability of NAD+, which is regenerated by the electron transport chain\nS4: In muscle, increased Ca2+ during contraction activates only isocitrate dehydrogenase but not the other TCA cycle regulatory enzymes",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: The three primary control points of the TCA cycle are: (1) Citrate synthase: acetyl-CoA + OAA → citrate. Regulated by substrate availability (OAA, acetyl-CoA) and product/allosteric inhibition (citrate, NADH, succinyl-CoA, ATP). (2) Isocitrate dehydrogenase (NAD+-dependent, IDH3): isocitrate → alpha-KG. Activated by ADP, Ca2+; inhibited by ATP, NADH. (3) Alpha-ketoglutarate dehydrogenase: alpha-KG → succinyl-CoA. Inhibited by succinyl-CoA, NADH; activated by Ca2+. S2 is TRUE: All three catalyze essentially irreversible reactions with large negative delta-G values under cellular conditions: citrate synthase (approximately -32 kJ/mol standard, even more negative in vivo), isocitrate dehydrogenase (approximately -21 kJ/mol), alpha-KGDH (approximately -33 kJ/mol). Their far-from-equilibrium status means their flux is determined by enzyme regulation (kinetic control), not mass action (thermodynamic control). Each is subject to allosteric regulation by indicators of energy status. S3 is TRUE: NAD+ availability is a critical determinant of TCA cycle rate because three of the eight cycle reactions require NAD+ as a substrate (isocitrate DH, alpha-KGDH, malate DH). NAD+ is regenerated by the ETC when it reoxidizes NADH. When the ETC is inhibited or saturated (all NAD+ converted to NADH), the TCA cycle cannot proceed. This creates tight coupling between the TCA cycle and oxidative phosphorylation. S4 is FALSE: Ca2+ activates ALL THREE regulatory enzymes — citrate synthase (indirectly, through increased OAA availability via isocitrate DH acceleration), isocitrate dehydrogenase (directly), and alpha-ketoglutarate dehydrogenase (directly). This coordinate activation by Ca2+ during muscle contraction increases TCA cycle flux to meet the elevated ATP demand.",
       "isOlympiad": true,
@@ -1189,12 +1149,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about substrate-level phosphorylation vs oxidative phosphorylation:\nS1: Substrate-level phosphorylation produces ATP directly by transfer of a phosphoryl group from a high-energy substrate to ADP\nS2: Oxidative phosphorylation produces approximately 90% of the ATP generated during aerobic glucose oxidation\nS3: Substrate-level phosphorylation requires oxygen, while oxidative phosphorylation does not\nS4: Both substrate-level phosphorylation and oxidative phosphorylation occur in the mitochondria of eukaryotic cells",
-      "options": [
-        "TTFF",
-        "TTFT",
-        "TFFT",
-        "TFTF"
-      ],
+      "options": ["TTFF", "TTFT", "TFFT", "TFTF"],
       "correctAnswer": "TTFF",
       "explanation": "S1 is TRUE: Substrate-level phosphorylation involves direct transfer of a phosphoryl group from a phosphorylated substrate (with higher phosphoryl transfer potential than ATP) to ADP. Examples: (1) 1,3-BPG + ADP → 3-PG + ATP (phosphoglycerate kinase in glycolysis). (2) PEP + ADP → pyruvate + ATP (pyruvate kinase in glycolysis). (3) Succinyl-CoA + GDP + Pi → succinate + GTP (succinyl-CoA synthetase in TCA cycle). No electron transport chain or proton gradient is required. S2 is TRUE: Of the approximately 30-32 ATP produced per glucose: substrate-level phosphorylation produces 4 ATP (2 from glycolysis + 2 GTP from TCA cycle) = approximately 12.5% of total. Oxidative phosphorylation produces approximately 26-28 ATP (from 10 NADH x 2.5 + 2 FADH2 x 1.5 = 28 ATP, minus some for shuttle costs) = approximately 87.5% of total. So oxidative phosphorylation accounts for approximately 90% of total ATP. S3 is FALSE: This is REVERSED. Substrate-level phosphorylation does NOT require oxygen — it occurs in both glycolysis (cytoplasm, anaerobic) and the TCA cycle (matrix). Oxidative phosphorylation DOES require oxygen as the terminal electron acceptor at Complex IV. S4 is FALSE: Substrate-level phosphorylation occurs both in the cytoplasm (glycolysis: 2 ATP) and in the mitochondrial matrix (TCA cycle: 2 GTP). Oxidative phosphorylation occurs exclusively in mitochondria (at the inner membrane). The statement implies both occur only in mitochondria, which is incorrect for substrate-level phosphorylation.",
       "isOlympiad": true,
@@ -1209,12 +1164,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the pentose phosphate pathway (PPP) and its connection to cellular respiration:\nS1: The PPP produces NADPH (for reductive biosynthesis and antioxidant defense) and ribose-5-phosphate (for nucleotide synthesis)\nS2: The oxidative branch of the PPP is irreversible and regulated by glucose-6-phosphate dehydrogenase, which is inhibited by NADPH\nS3: The non-oxidative branch of the PPP can interchange 3-, 4-, 5-, 6-, and 7-carbon sugar phosphates, connecting the PPP to glycolysis\nS4: The PPP and glycolysis cannot operate simultaneously in the same cell",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TFTF",
-        "TTFF"
-      ],
+      "options": ["TTTF", "TTTT", "TFTF", "TTFF"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: The pentose phosphate pathway (also called hexose monophosphate shunt or phosphogluconate pathway) has two major products: (1) NADPH — produced in the oxidative branch (2 NADPH per glucose-6-phosphate, at glucose-6-phosphate dehydrogenase and 6-phosphogluconate dehydrogenase). NADPH is essential for reductive biosynthesis (fatty acid synthesis, cholesterol synthesis, amino acid synthesis), glutathione reduction (GSH maintenance for ROS detoxification), and NADPH oxidase (phagocyte respiratory burst). (2) Ribose-5-phosphate — the sugar backbone for nucleotide synthesis (DNA, RNA, ATP, CoA, NAD+, FAD). S2 is TRUE: The oxidative branch (glucose-6-phosphate → 6-phosphogluconate → ribulose-5-phosphate + 2 CO2 + 2 NADPH) is irreversible and tightly regulated. Glucose-6-phosphate dehydrogenase (G6PDH), the committed step enzyme, is allosterically inhibited by NADPH (product feedback). When NADPH/NADP+ ratio is high (biosynthetic demand met), the oxidative PPP slows. When NADPH is consumed (e.g., active fatty acid synthesis or oxidative stress), NADP+ accumulates and G6PDH is activated. G6PDH deficiency is the most common human enzyme deficiency, causing hemolytic anemia upon oxidative stress. S3 is TRUE: The non-oxidative branch contains transketolase and transaldolase, which catalyze reversible reactions interconverting sugar phosphates of different chain lengths (C3-C7). This allows ribulose-5-phosphate to be converted to glyceraldehyde-3-phosphate and fructose-6-phosphate (glycolytic intermediates), connecting the PPP to glycolysis. S4 is FALSE: The PPP and glycolysis operate simultaneously and are interconnected through shared intermediates (G6P, F6P, GAP). The relative flux through each pathway is determined by the cell's specific needs for ATP, NADPH, and ribose-5-phosphate.",
       "isOlympiad": true,
@@ -1549,12 +1499,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the complete oxidation of glucose:\nS1: The net equation for aerobic respiration is C6H12O6 + 6O2 → 6CO2 + 6H2O + approximately 30-32 ATP\nS2: All 6 oxygen atoms in the 6 CO2 molecules produced come from the original glucose molecule\nS3: The 12 hydrogen atoms from glucose are ultimately transferred to 10 NADH + 2 FADH2 carriers\nS4: The oxygen we breathe is used exclusively at Complex IV to accept electrons and form water",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TFTT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: The net equation for the complete aerobic oxidation of glucose is: C6H12O6 + 6O2 → 6CO2 + 6H2O + approximately 30-32 ATP. The 30-32 range accounts for the variable ATP yield from cytoplasmic NADH (depending on which shuttle system operates). S2 is FALSE: This is a common misconception. While some of the oxygen in CO2 comes from the original glucose, much of it comes from WATER. During the TCA cycle decarboxylation reactions, the CO2 released incorporates oxygen from water molecules used in the cycle's hydration reactions and from the carboxylate groups (which acquired oxygen from earlier water additions). The 6 O2 molecules we breathe provide the 12 oxygen atoms that appear in the 6 H2O molecules formed at Complex IV, NOT in the CO2. Isotopic labeling studies (using 18O2 and H218O) confirmed that the inhaled O2 ends up in H2O, not CO2. S3 is TRUE: Tracking the 12 pairs of hydrogen atoms (24 total H atoms) from glucose: Glycolysis produces 2 NADH (at GAPDH), pyruvate oxidation produces 2 NADH, and the TCA cycle produces 6 NADH + 2 FADH2. Total: 10 NADH + 2 FADH2, carrying 24 hydrogen equivalents. S4 is TRUE: Molecular oxygen (O2) serves as the terminal electron acceptor of the ETC, being reduced to H2O at the binuclear center of Complex IV (cytochrome c oxidase): O2 + 4e- + 4H+ → 2H2O. O2 is NOT directly used in any other reaction of cellular respiration.",
       "isOlympiad": true,
@@ -1569,12 +1514,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the Cori cycle:\nS1: The Cori cycle shuttles lactate from exercising muscle to the liver, where it is converted back to glucose\nS2: The Cori cycle is energy-neutral because glycolysis in muscle produces the same ATP that gluconeogenesis in liver consumes\nS3: The Cori cycle requires functional hepatic gluconeogenesis, which is activated during fasting and exercise by glucagon signaling\nS4: Lactate transport from muscle to liver occurs via monocarboxylate transporters (MCTs) in the blood",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TFTT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: The Cori cycle (Carl and Gerty Cori, 1947) describes the metabolic cooperation between muscle and liver: exercising muscle converts glucose to lactate (anaerobic glycolysis, producing 2 ATP per glucose). Lactate is exported to blood and taken up by the liver, where gluconeogenesis converts it back to glucose (consuming 6 ATP equivalents per glucose). The glucose is released into the blood and can return to muscle. S2 is FALSE: The Cori cycle is NOT energy-neutral — it is energy-expensive. Muscle glycolysis produces 2 ATP per glucose, but hepatic gluconeogenesis consumes 6 ATP equivalents (4 ATP + 2 GTP) per glucose synthesized from 2 lactate. This represents a net cost of 4 ATP equivalents per cycle, paid for by the liver's oxidative metabolism (fatty acid oxidation). The Cori cycle effectively transfers the metabolic burden of lactate recycling from muscle (which cannot perform gluconeogenesis) to the liver (which has the necessary enzymes and can generate ATP from fat oxidation even while performing gluconeogenesis). S3 is TRUE: Hepatic gluconeogenesis is activated by glucagon (during fasting) and epinephrine (during exercise). Glucagon activates cAMP-PKA signaling, which: (1) phosphorylates PFK-2, lowering F-2,6-BP, inhibiting glycolysis and activating gluconeogenesis; (2) induces transcription of PEPCK and G6Pase genes (via CREB). S4 is TRUE: Lactate crosses cell membranes via monocarboxylate transporters (MCT1-MCT4), which are H+/lactate symporters. MCT4 (high Km) mediates lactate export from glycolytic muscle. MCT1 (low Km) mediates lactate uptake by liver, heart, and oxidative muscle fibers.",
       "isOlympiad": true,
@@ -1589,12 +1529,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about ketone body metabolism:\nS1: Ketone bodies (acetoacetate, beta-hydroxybutyrate, acetone) are synthesized in liver mitochondria from acetyl-CoA during prolonged fasting or uncontrolled diabetes\nS2: The brain can utilize ketone bodies as a fuel source, and during prolonged starvation, ketone bodies can supply up to 75% of the brain's energy needs\nS3: Ketone bodies are directly synthesized from fatty acids without passing through the acetyl-CoA intermediate\nS4: The liver cannot oxidize ketone bodies because it lacks the enzyme succinyl-CoA:acetoacetate-CoA transferase (thiophorase)",
-      "options": [
-        "TTFT",
-        "TTTF",
-        "TTFF",
-        "TFTT"
-      ],
+      "options": ["TTFT", "TTTF", "TTFF", "TFTT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Ketogenesis occurs exclusively in liver mitochondria when acetyl-CoA accumulates faster than the TCA cycle can oxidize it. This happens during: (1) Prolonged fasting (high beta-oxidation, OAA diverted to gluconeogenesis). (2) Uncontrolled diabetes (high fatty acid mobilization from adipose, elevated beta-oxidation). (3) High-fat/low-carbohydrate diets. The pathway: 2 acetyl-CoA → acetoacetyl-CoA (thiolase) → HMG-CoA (HMG-CoA synthase) → acetoacetate + acetyl-CoA (HMG-CoA lyase). Acetoacetate can be reduced to beta-hydroxybutyrate (by beta-hydroxybutyrate dehydrogenase) or spontaneously decarboxylated to acetone. S2 is TRUE: Under normal conditions, the brain uses glucose exclusively (approximately 120 g/day). However, during prolonged fasting (>3-4 days), the brain adapts to use ketone bodies as a major fuel source, eventually deriving up to 60-75% of its energy from acetoacetate and beta-hydroxybutyrate. This adaptation is crucial for survival because it reduces the rate of gluconeogenesis (and therefore muscle protein breakdown to supply amino acid precursors for glucose synthesis). S3 is FALSE: Ketone bodies are synthesized from acetyl-CoA, not directly from fatty acids. Fatty acids must first undergo beta-oxidation to produce acetyl-CoA, which is then the substrate for ketogenesis. This distinction is important because not all acetyl-CoA comes from fatty acids — amino acid catabolism can also contribute. S4 is TRUE: The liver lacks succinyl-CoA:acetoacetate-CoA transferase (also called thiophorase or SCOT), the enzyme that activates acetoacetate for oxidation in extrahepatic tissues (by converting acetoacetate + succinyl-CoA → acetoacetyl-CoA + succinate). This enzyme's absence in liver ensures that the liver exports ketone bodies rather than oxidizing them, directing this fuel to other tissues (brain, heart, muscle, kidney).",
       "isOlympiad": true,
@@ -1889,12 +1824,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the integration of metabolic pathways during exercise:\nS1: During moderate aerobic exercise, fatty acid oxidation provides the majority of ATP, while during intense anaerobic exercise, glucose and glycogen provide most ATP\nS2: The respiratory exchange ratio (RER = CO2 produced / O2 consumed) equals 1.0 for pure carbohydrate oxidation and 0.7 for pure fat oxidation\nS3: AMPK activation during exercise simultaneously stimulates fatty acid synthesis and fatty acid oxidation to maximize energy production\nS4: Exercise-induced Ca2+ release in muscle activates the TCA cycle enzymes isocitrate dehydrogenase and alpha-ketoglutarate dehydrogenase, increasing TCA flux to match ATP demand",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TTTF",
-        "TFFT"
-      ],
+      "options": ["TTFT", "TTTT", "TTTF", "TFFT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: At low-moderate exercise intensities (< 65% VO2max), fatty acid beta-oxidation provides approximately 50-70% of ATP, supplemented by glucose oxidation. As exercise intensity increases above the lactate threshold (approximately 65-85% VO2max), the contribution shifts toward carbohydrate (glycogen and glucose), reaching nearly 100% during maximal anaerobic exercise. This crossover concept reflects the limitations of fatty acid oxidation rate (slower maximal flux compared to glycolysis) and the recruitment of fast-twitch (type II) muscle fibers that rely more on glycolysis. S2 is TRUE: RER reflects the stoichiometry of oxidation. For glucose: C6H12O6 + 6O2 → 6CO2 + 6H2O; RER = 6CO2/6O2 = 1.0. For palmitate: C16H32O2 + 23O2 → 16CO2 + 16H2O; RER = 16CO2/23O2 = 0.70. Mixed fuel oxidation gives intermediate RER values (typically 0.80-0.85 at rest). RER > 1.0 during intense exercise indicates anaerobic metabolism (excess CO2 from bicarbonate buffering of lactic acid). S3 is FALSE: AMPK activation during exercise INHIBITS fatty acid synthesis (by phosphorylating and inactivating acetyl-CoA carboxylase/ACC, lowering malonyl-CoA) while STIMULATING fatty acid oxidation (lower malonyl-CoA relieves CPT-I inhibition). These are reciprocal, not simultaneous — AMPK ensures that the cell oxidizes fat for energy rather than synthesizing it during energy stress. S4 is TRUE: Ca2+ released from the sarcoplasmic reticulum during muscle contraction enters mitochondria (via the mitochondrial calcium uniporter/MCU). Elevated mitochondrial Ca2+ directly activates isocitrate dehydrogenase (IDH3) and alpha-ketoglutarate dehydrogenase, increasing TCA cycle flux. Ca2+ also activates PDH phosphatase (PDP1), increasing PDC activity and pyruvate oxidation to acetyl-CoA. This Ca2+-mediated activation couples TCA cycle flux to contractile activity.",
       "isOlympiad": true,
@@ -1909,12 +1839,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about glycolytic intermediates as biosynthetic precursors:\nS1: Glucose-6-phosphate can be diverted to the pentose phosphate pathway for NADPH and ribose-5-phosphate production\nS2: 3-Phosphoglycerate is a precursor for serine biosynthesis, which in turn provides glycine and one-carbon units for nucleotide synthesis\nS3: Dihydroxyacetone phosphate (DHAP) is reduced to glycerol-3-phosphate for triglyceride and phospholipid synthesis\nS4: Pyruvate cannot serve as a biosynthetic precursor because it is always fully oxidized to CO2",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Glucose-6-phosphate sits at a metabolic branch point. It can continue through glycolysis (to PFK-1) or be diverted to the pentose phosphate pathway (to glucose-6-phosphate dehydrogenase/G6PDH). The PPP produces NADPH (for reductive biosynthesis and antioxidant defense) and ribose-5-phosphate (for nucleotide/nucleic acid synthesis). S2 is TRUE: 3-Phosphoglycerate (3-PG) branches from glycolysis into the serine biosynthesis pathway: 3-PG → 3-phosphohydroxypyruvate (by phosphoglycerate dehydrogenase, using NAD+) → 3-phosphoserine (by PSAT, using glutamate) → serine (by phosphoserine phosphatase). Serine then provides: (1) Glycine (by serine hydroxymethyltransferase, donating a one-carbon unit to THF). (2) One-carbon units (via THF) for purine ring synthesis and thymidylate synthesis. (3) Cysteine synthesis (via transsulfuration pathway). Serine biosynthesis is upregulated in many cancers. S3 is TRUE: DHAP (a glycolytic intermediate) is reduced to glycerol-3-phosphate by glycerol-3-phosphate dehydrogenase (cytoplasmic, NADH-dependent). Glycerol-3-phosphate serves as the backbone for triglyceride and phospholipid synthesis through the Kennedy pathway: glycerol-3-phosphate → lysophosphatidic acid → phosphatidic acid → diacylglycerol → triacylglycerol or phospholipids. S4 is FALSE: Pyruvate is a versatile biosynthetic precursor: (1) Alanine (via transamination). (2) Oxaloacetate (via pyruvate carboxylase — anaplerosis and gluconeogenesis). (3) Acetyl-CoA (via PDC — for fatty acid synthesis, ketone bodies). (4) Lactate (via LDH — NAD+ regeneration). Pyruvate is NOT always fully oxidized.",
       "isOlympiad": true,
@@ -1929,12 +1854,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the Crabtree effect:\nS1: The Crabtree effect describes the suppression of oxidative phosphorylation by high glucose concentrations in yeast and some cancer cells\nS2: In the Crabtree effect, excess glucose represses the transcription of nuclear genes encoding mitochondrial proteins, reducing mitochondrial biogenesis\nS3: The Crabtree effect is identical to the Pasteur effect and the two terms are interchangeable\nS4: The Crabtree effect explains why yeast preferentially ferments glucose to ethanol even in the presence of oxygen",
-      "options": [
-        "TFTF",
-        "TTFT",
-        "TTFF",
-        "TFFT"
-      ],
+      "options": ["TFTF", "TTFT", "TTFF", "TFFT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: The Crabtree effect (Herbert Crabtree, 1929) describes the observation that certain cells (including Saccharomyces cerevisiae yeast and many tumor cells) suppress mitochondrial respiration when glucose is abundant, even under aerobic conditions. High glucose concentrations cause these cells to favor glycolysis (fermentation) over oxidative phosphorylation, regardless of oxygen availability. S2 is TRUE: In yeast, the Crabtree effect involves glucose repression — a signal transduction pathway where high glucose activates signaling cascades (Ras-cAMP-PKA and others) that repress transcription of nuclear genes required for mitochondrial biogenesis and respiratory function. Genes encoding TCA cycle enzymes, ETC subunits, and mitochondrial transport proteins are downregulated. Mitochondrial volume decreases. This transcriptional regulation takes hours to fully develop, while the immediate metabolic shift occurs within minutes (via allosteric regulation of glycolytic and respiratory enzymes). S3 is FALSE: The Crabtree effect and Pasteur effect are OPPOSITE phenomena. Pasteur effect: OXYGEN suppresses glycolysis (aerobic conditions → decreased glucose consumption because OXPHOS is more efficient). Crabtree effect: GLUCOSE suppresses respiration (high glucose → decreased OXPHOS in favor of fermentation). They describe opposite regulatory relationships. S4 is TRUE: The Crabtree effect is the direct explanation for why Saccharomyces cerevisiae ferments glucose to ethanol in the presence of oxygen. Even with abundant O2, high glucose suppresses respiratory metabolism, and yeast preferentially uses the faster (but less ATP-efficient) glycolytic/fermentative pathway. This is the basis of brewing, winemaking, and bioethanol production.",
       "isOlympiad": true,
@@ -2209,12 +2129,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the malate-aspartate shuttle:\nS1: The shuttle transfers reducing equivalents from cytoplasmic NADH to the mitochondrial matrix by regenerating matrix NADH\nS2: The shuttle involves two membrane carriers: the malate/alpha-ketoglutarate antiporter and the glutamate/aspartate antiporter\nS3: The shuttle is reversible and can transfer reducing equivalents from mitochondria to the cytoplasm when needed\nS4: The shuttle is driven entirely by the concentration gradients of the transported metabolites with no energy input",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFF",
-        "TTFT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFF", "TTFT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: The malate-aspartate shuttle transfers the reducing equivalents of cytoplasmic NADH (produced by GAPDH in glycolysis) to the mitochondrial matrix, where they regenerate NADH for Complex I. The cytoplasmic reaction: OAA + NADH → malate + NAD+ (cytoplasmic malate DH). Malate enters the matrix. The matrix reaction: malate + NAD+ → OAA + NADH (mitochondrial malate DH). Net effect: cytoplasmic NADH → matrix NADH (preserved reducing power, P/O = 2.5). S2 is TRUE: Two antiporters on the inner membrane are essential: (1) Malate/alpha-ketoglutarate antiporter: Imports malate in exchange for alpha-KG. (2) Glutamate/aspartate antiporter: Imports glutamate in exchange for aspartate. These carriers move the substrates needed to complete the shuttle cycle. S3 is TRUE: The shuttle is thermodynamically reversible. Under certain conditions (e.g., gluconeogenesis in liver where cytoplasmic NADH is needed for the GAPDH reaction running in reverse), the shuttle can operate in the reverse direction, transferring reducing equivalents from the matrix to the cytoplasm. The direction depends on the NADH/NAD+ ratios in the two compartments. S4 is FALSE: The glutamate/aspartate antiporter is an ELECTROGENIC transport — it exchanges glutamate (charge -1) for aspartate (charge -1) plus a proton, effectively exporting one negative charge from the matrix. This antiport is driven by the membrane potential (delta-psi, matrix negative), meaning the shuttle consumes part of the proton-motive force. The malate/alpha-KG exchange is electroneutral but is also driven by concentration gradients that are ultimately maintained by the pmf.",
       "isOlympiad": true,

@@ -23,7 +23,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Near Noida Societies',
-    description: 'Find NEET Biology coaching near your Noida society. Online & hybrid classes for students in Godrej Woods, Mahagun Moderne, Supertech Eco Village, Logix Blossom County & more.',
+    description:
+      'Find NEET Biology coaching near your Noida society. Online & hybrid classes for students in Godrej Woods, Mahagun Moderne, Supertech Eco Village, Logix Blossom County & more.',
   },
 }
 
@@ -45,8 +46,15 @@ export default function NeetCoachingNoidaSocietyPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-noida-society"
         pageName="NEET Coaching by Noida Society"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
-        personKnowsAbout={['NEET NEET Coaching by Noida Society', 'NEET Biology NEET Coaching by Noida Society', 'Medical entrance coaching NEET Coaching by Noida Society']}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
+        personKnowsAbout={[
+          'NEET NEET Coaching by Noida Society',
+          'NEET Biology NEET Coaching by Noida Society',
+          'Medical entrance coaching NEET Coaching by Noida Society',
+        ]}
       />
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,8 +63,8 @@ export default function NeetCoachingNoidaSocietyPage() {
               NEET Biology Coaching Near Your Noida Society
             </h1>
             <p className="text-lg text-gray-300 mb-6">
-              Live online & hybrid NEET Biology classes for students across Noida.
-              Expert faculty from AIIMS & top medical colleges.
+              Live online & hybrid NEET Biology classes for students across Noida. Expert faculty
+              from AIIMS & top medical colleges.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -83,7 +91,8 @@ export default function NeetCoachingNoidaSocietyPage() {
           Find NEET Coaching Near Your Society
         </h2>
         <p className="text-gray-600 mb-8">
-          We serve students from 9+ major Noida societies with personalized online and hybrid coaching.
+          We serve students from 9+ major Noida societies with personalized online and hybrid
+          coaching.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -122,12 +131,10 @@ export default function NeetCoachingNoidaSocietyPage() {
 
       <section className="bg-blue-50 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Don&apos;t See Your Society?
-          </h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Don&apos;t See Your Society?</h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            We offer online NEET Biology coaching to students across all of Noida.
-            Contact us to learn about classes near your area.
+            We offer online NEET Biology coaching to students across all of Noida. Contact us to
+            learn about classes near your area.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

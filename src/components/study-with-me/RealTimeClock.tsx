@@ -100,9 +100,7 @@ export function RealTimeClock({
   }
 
   return (
-    <div
-      className={`bg-white rounded-xl shadow-xl p-6 ${className}`}
-    >
+    <div className={`bg-white rounded-xl shadow-xl p-6 ${className}`}>
       {/* Header with format toggle */}
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider">Current Time</h3>
@@ -122,19 +120,11 @@ export function RealTimeClock({
           <span className="text-5xl font-mono font-bold text-[#3d4d3d] tracking-tight">
             {hours}
           </span>
-          <span
-            className="text-5xl font-mono font-bold text-[#3d4d3d] animate-fadeInUp"
-          >
-            :
-          </span>
+          <span className="text-5xl font-mono font-bold text-[#3d4d3d] animate-fadeInUp">:</span>
           <span className="text-5xl font-mono font-bold text-[#3d4d3d] tracking-tight">
             {minutes}
           </span>
-          <span
-            className="text-5xl font-mono font-bold text-[#3d4d3d] animate-fadeInUp"
-          >
-            :
-          </span>
+          <span className="text-5xl font-mono font-bold text-[#3d4d3d] animate-fadeInUp">:</span>
           <span className="text-5xl font-mono font-bold text-gray-400 tracking-tight">
             {seconds}
           </span>

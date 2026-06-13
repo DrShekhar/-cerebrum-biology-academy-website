@@ -83,9 +83,7 @@ export function ParentTestimonialsSection({
     <section className="py-20 bg-navy-50 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div
-          className="text-center mb-16 animate-fadeInUp"
-        >
+        <div className="text-center mb-16 animate-fadeInUp">
           <div className="inline-flex items-center bg-green-100 text-green-600 px-6 py-3 rounded-full text-sm font-medium mb-6">
             <Heart className="w-5 h-5 mr-2" />
             Parent Testimonials - Real Stories of Trust
@@ -128,10 +126,7 @@ export function ParentTestimonialsSection({
                 color: 'text-yellow-600',
               },
             ].map((metric, index) => (
-              <div
-                key={metric.label}
-                className="text-center animate-fadeInUp"
-              >
+              <div key={metric.label} className="text-center animate-fadeInUp">
                 <div
                   className={`w-12 h-12 ${metric.color} mx-auto mb-3 rounded-xl flex items-center justify-center bg-white shadow-lg`}
                 >
@@ -145,117 +140,111 @@ export function ParentTestimonialsSection({
         </div>
 
         {/* Main Testimonial Showcase */}
-        <div
-          className="mb-16 overflow-hidden animate-fadeInUp"
-        >
+        <div className="mb-16 overflow-hidden animate-fadeInUp">
           <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
-<div
-                key={currentTestimonial}
-                className="p-4 sm:p-6 md:p-12 animate-fadeInUp"
-              >
-                <div className="grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-center">
-                  {/* Parent Info */}
-                  <div className="text-center md:text-left">
-                    <div className="relative inline-block mb-6">
-                      <div className="w-24 h-24 bg-navy-900 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg border-2 border-green-600">
-                        {currentTestimonialData.parentName
-                          .split(' ')
-                          .map((n) => n[0])
-                          .join('')}
-                      </div>
-                      <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center shadow-lg">
-                        <Verified className="w-5 h-5 text-white" />
-                      </div>
+            <div key={currentTestimonial} className="p-4 sm:p-6 md:p-12 animate-fadeInUp">
+              <div className="grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-center">
+                {/* Parent Info */}
+                <div className="text-center md:text-left">
+                  <div className="relative inline-block mb-6">
+                    <div className="w-24 h-24 bg-navy-900 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg border-2 border-green-600">
+                      {currentTestimonialData.parentName
+                        .split(' ')
+                        .map((n) => n[0])
+                        .join('')}
                     </div>
-
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {currentTestimonialData.parentName}
-                    </h3>
-                    <p className="text-gray-600 mb-2">{currentTestimonialData.parentOccupation}</p>
-                    <div className="flex items-center justify-center md:justify-start text-sm text-gray-500 mb-4">
-                      <MapPin className="w-4 h-4 mr-1" />
-                      {currentTestimonialData.location}
-                    </div>
-
-                    {/* Rating */}
-                    <div className="flex items-center justify-center md:justify-start mb-4">
-                      {renderStars(currentTestimonialData.rating)}
-                      <span className="ml-2 text-sm text-gray-600">
-                        ({currentTestimonialData.rating}/5)
-                      </span>
-                    </div>
-
-                    {/* Student Achievement Badge */}
-                    <div className="inline-flex items-center bg-gradient-to-r from-green-100 to-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
-                      <Award className="w-4 h-4 mr-2" />
-                      Child: {currentTestimonialData.studentAchievement}
+                    <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center shadow-lg">
+                      <Verified className="w-5 h-5 text-white" />
                     </div>
                   </div>
 
-                  {/* Testimonial Content */}
-                  <div className="md:col-span-2">
-                    <div className="relative">
-                      <Quote className="w-12 h-12 text-green-200 absolute -top-4 -left-4" />
-                      <blockquote className="text-lg text-gray-700 leading-relaxed italic mb-6 pl-8">
-                        "{currentTestimonialData.testimonial}"
-                      </blockquote>
-                    </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {currentTestimonialData.parentName}
+                  </h3>
+                  <p className="text-gray-600 mb-2">{currentTestimonialData.parentOccupation}</p>
+                  <div className="flex items-center justify-center md:justify-start text-sm text-gray-500 mb-4">
+                    <MapPin className="w-4 h-4 mr-1" />
+                    {currentTestimonialData.location}
+                  </div>
 
-                    {/* Student Details */}
-                    <div className="bg-green-50 rounded-xl p-6 mb-6 border border-green-100">
-                      <h4 className="font-semibold text-gray-900 mb-3">Success Story Details:</h4>
-                      <div className="grid md:grid-cols-2 gap-4 text-sm">
-                        <div>
-                          <span className="text-gray-600">Student:</span>
-                          <span className="font-medium text-gray-900 ml-2">
-                            {currentTestimonialData.studentName}
-                          </span>
-                        </div>
-                        <div>
-                          <span className="text-gray-600">College:</span>
-                          <span className="font-medium text-gray-900 ml-2">
-                            {currentTestimonialData.college}
-                          </span>
-                        </div>
-                        {currentTestimonialData.beforeScore &&
-                          currentTestimonialData.afterScore && (
-                            <>
-                              <div>
-                                <span className="text-gray-600">Score Improvement:</span>
-                                <span className="font-medium text-green-600 ml-2">
-                                  {currentTestimonialData.beforeScore} →{' '}
-                                  {currentTestimonialData.afterScore}
-                                </span>
-                              </div>
-                              <div>
-                                <span className="text-gray-600">Improvement:</span>
-                                <span className="font-bold text-green-600 ml-2">
-                                  +
-                                  {currentTestimonialData.afterScore -
-                                    currentTestimonialData.beforeScore}{' '}
-                                  marks
-                                </span>
-                              </div>
-                            </>
-                          )}
-                      </div>
-                    </div>
+                  {/* Rating */}
+                  <div className="flex items-center justify-center md:justify-start mb-4">
+                    {renderStars(currentTestimonialData.rating)}
+                    <span className="ml-2 text-sm text-gray-600">
+                      ({currentTestimonialData.rating}/5)
+                    </span>
+                  </div>
 
-                    {/* Key Highlights */}
-                    <div className="flex flex-wrap gap-2">
-                      {currentTestimonialData.highlights.map((highlight, index) => (
-                        <span
-                          key={index}
-                          className="inline-flex items-center bg-navy-100 text-navy-700 px-3 py-1 rounded-full text-xs font-medium"
-                        >
-                          {highlight}
+                  {/* Student Achievement Badge */}
+                  <div className="inline-flex items-center bg-gradient-to-r from-green-100 to-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+                    <Award className="w-4 h-4 mr-2" />
+                    Child: {currentTestimonialData.studentAchievement}
+                  </div>
+                </div>
+
+                {/* Testimonial Content */}
+                <div className="md:col-span-2">
+                  <div className="relative">
+                    <Quote className="w-12 h-12 text-green-200 absolute -top-4 -left-4" />
+                    <blockquote className="text-lg text-gray-700 leading-relaxed italic mb-6 pl-8">
+                      "{currentTestimonialData.testimonial}"
+                    </blockquote>
+                  </div>
+
+                  {/* Student Details */}
+                  <div className="bg-green-50 rounded-xl p-6 mb-6 border border-green-100">
+                    <h4 className="font-semibold text-gray-900 mb-3">Success Story Details:</h4>
+                    <div className="grid md:grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <span className="text-gray-600">Student:</span>
+                        <span className="font-medium text-gray-900 ml-2">
+                          {currentTestimonialData.studentName}
                         </span>
-                      ))}
+                      </div>
+                      <div>
+                        <span className="text-gray-600">College:</span>
+                        <span className="font-medium text-gray-900 ml-2">
+                          {currentTestimonialData.college}
+                        </span>
+                      </div>
+                      {currentTestimonialData.beforeScore && currentTestimonialData.afterScore && (
+                        <>
+                          <div>
+                            <span className="text-gray-600">Score Improvement:</span>
+                            <span className="font-medium text-green-600 ml-2">
+                              {currentTestimonialData.beforeScore} →{' '}
+                              {currentTestimonialData.afterScore}
+                            </span>
+                          </div>
+                          <div>
+                            <span className="text-gray-600">Improvement:</span>
+                            <span className="font-bold text-green-600 ml-2">
+                              +
+                              {currentTestimonialData.afterScore -
+                                currentTestimonialData.beforeScore}{' '}
+                              marks
+                            </span>
+                          </div>
+                        </>
+                      )}
                     </div>
+                  </div>
+
+                  {/* Key Highlights */}
+                  <div className="flex flex-wrap gap-2">
+                    {currentTestimonialData.highlights.map((highlight, index) => (
+                      <span
+                        key={index}
+                        className="inline-flex items-center bg-navy-100 text-navy-700 px-3 py-1 rounded-full text-xs font-medium"
+                      >
+                        {highlight}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
-{/* Navigation Controls */}
+            </div>
+            {/* Navigation Controls */}
             <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
               <button
                 onClick={prevTestimonial}
@@ -301,9 +290,7 @@ export function ParentTestimonialsSection({
         </div>
 
         {/* Additional Testimonials Grid */}
-        <div
-          className="mb-16 animate-fadeInUp"
-        >
+        <div className="mb-16 animate-fadeInUp">
           <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">More Parent Stories</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {parentTestimonials
@@ -351,9 +338,7 @@ export function ParentTestimonialsSection({
         </div>
 
         {/* Call to Action */}
-        <div
-          className="text-center bg-navy-900 rounded-3xl p-4 sm:p-8 md:p-12 text-white overflow-hidden animate-fadeInUp"
-        >
+        <div className="text-center bg-navy-900 rounded-3xl p-4 sm:p-8 md:p-12 text-white overflow-hidden animate-fadeInUp">
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
             Join the Cerebrum Family of Successful Parents
           </h3>

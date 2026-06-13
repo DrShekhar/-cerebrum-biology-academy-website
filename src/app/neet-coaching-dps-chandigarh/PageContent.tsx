@@ -1,6 +1,19 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import { Trophy, Users, MessageCircle, Star, GraduationCap, Target, Shield, ArrowRight, BookOpen, CheckCircle, Building, MapPin } from 'lucide-react'
+import {
+  Trophy,
+  Users,
+  MessageCircle,
+  Star,
+  GraduationCap,
+  Target,
+  Shield,
+  ArrowRight,
+  BookOpen,
+  CheckCircle,
+  Building,
+  MapPin,
+} from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
 import { PricingSection } from '@/components/city/PricingSection'
@@ -11,9 +24,12 @@ function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) setIsVisible(true)
-    }, { threshold: 0.1 })
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true)
+      },
+      { threshold: 0.1 }
+    )
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
   }, [])
@@ -47,7 +63,8 @@ export default function PageContent() {
             NEET Coaching for DPS Chandigarh Students
           </h1>
           <p className="text-xl text-teal-100 mb-8 max-w-2xl mx-auto">
-            Premium competitive NEET coaching for one of Chandigarh's top schools. Competitive batches with strong NEET culture and results.
+            Premium competitive NEET coaching for one of Chandigarh's top schools. Competitive
+            batches with strong NEET culture and results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button variant="primary" className="px-8 py-3 text-lg">
@@ -61,9 +78,18 @@ export default function PageContent() {
             </a>
           </div>
           <div className="grid grid-cols-3 gap-4 mt-12 text-white text-sm">
-            <div><Trophy className="w-6 h-6 mx-auto mb-2 text-yellow-300" /><p>98% Success Rate</p></div>
-            <div><Users className="w-6 h-6 mx-auto mb-2 text-yellow-300" /><p>Personal Batches</p></div>
-            <div><Star className="w-6 h-6 mx-auto mb-2 text-yellow-300" /><p>Expert Faculty</p></div>
+            <div>
+              <Trophy className="w-6 h-6 mx-auto mb-2 text-yellow-300" />
+              <p>98% Success Rate</p>
+            </div>
+            <div>
+              <Users className="w-6 h-6 mx-auto mb-2 text-yellow-300" />
+              <p>Personal Batches</p>
+            </div>
+            <div>
+              <Star className="w-6 h-6 mx-auto mb-2 text-yellow-300" />
+              <p>Expert Faculty</p>
+            </div>
           </div>
         </div>
       </section>
@@ -71,34 +97,43 @@ export default function PageContent() {
       {/* Why DPS Chandigarh Students Choose Cerebrum */}
       <section className="py-20 bg-gray-50 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Why DPS Chandigarh Students Choose Cerebrum</h2>
-          <div ref={featureAnimation.ref} className={`grid md:grid-cols-2 gap-8 transition-all duration-700 ${featureAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+            Why DPS Chandigarh Students Choose Cerebrum
+          </h2>
+          <div
+            ref={featureAnimation.ref}
+            className={`grid md:grid-cols-2 gap-8 transition-all duration-700 ${featureAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+          >
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
               <Target className="w-10 h-10 text-teal-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Competitive Excellence Culture</h3>
               <p className="text-gray-600">
-                DPS Chandigarh has strong NEET culture. Our coaching channels that competitive spirit into proven results.
+                DPS Chandigarh has strong NEET culture. Our coaching channels that competitive
+                spirit into proven results.
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
               <GraduationCap className="w-10 h-10 text-teal-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Peer Motivation Groups</h3>
               <p className="text-gray-600">
-                Learn with fellow DPS students who share competitive drive. Batches that motivate and inspire excellence.
+                Learn with fellow DPS students who share competitive drive. Batches that motivate
+                and inspire excellence.
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
               <Shield className="w-10 h-10 text-teal-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Top DPS School Track Record</h3>
               <p className="text-gray-600">
-                DPS Chandigarh is one of the top DPS schools in India. We deliver coaching matching that excellence level.
+                DPS Chandigarh is one of the top DPS schools in India. We deliver coaching matching
+                that excellence level.
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
               <BookOpen className="w-10 h-10 text-teal-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Strong CBSE Foundation</h3>
               <p className="text-gray-600">
-                DPS's CBSE curriculum excellence provides strong NEET foundation. We build on that systematically.
+                DPS's CBSE curriculum excellence provides strong NEET foundation. We build on that
+                systematically.
               </p>
             </div>
           </div>
@@ -108,26 +143,57 @@ export default function PageContent() {
       {/* Understanding Your Curriculum */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Understanding Your Curriculum</h2>
-          <div ref={curriculumAnimation.ref} className={`bg-gradient-to-r from-teal-50 to-teal-100 p-10 rounded-lg transition-all duration-700 ${curriculumAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h3 className="text-2xl font-bold mb-6 text-gray-900">DPS CBSE Excellence → NEET Dominance</h3>
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+            Understanding Your Curriculum
+          </h2>
+          <div
+            ref={curriculumAnimation.ref}
+            className={`bg-gradient-to-r from-teal-50 to-teal-100 p-10 rounded-lg transition-all duration-700 ${curriculumAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+          >
+            <h3 className="text-2xl font-bold mb-6 text-gray-900">
+              DPS CBSE Excellence → NEET Dominance
+            </h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-teal-900">Your School Advantage</h4>
                 <ul className="space-y-3">
-                  <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" /><span>Strong CBSE curriculum with high teaching standards</span></li>
-                  <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" /><span>Competitive peer group and NEET culture</span></li>
-                  <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" /><span>Excellent lab facilities and practical skills</span></li>
-                  <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" /><span>Top DPS school with proven NEET track record</span></li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <span>Strong CBSE curriculum with high teaching standards</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <span>Competitive peer group and NEET culture</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <span>Excellent lab facilities and practical skills</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <span>Top DPS school with proven NEET track record</span>
+                  </li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-bold text-lg mb-4 text-teal-900">NEET Bridge Strategy</h4>
                 <ul className="space-y-3">
-                  <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" /><span>Leverage CBSE strength for NEET depth</span></li>
-                  <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" /><span>Focused high-yield NEET topics</span></li>
-                  <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" /><span>Speed and accuracy optimization</span></li>
-                  <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" /><span>Comprehensive test series and mock exams</span></li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <span>Leverage CBSE strength for NEET depth</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <span>Focused high-yield NEET topics</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <span>Speed and accuracy optimization</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <span>Comprehensive test series and mock exams</span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -138,8 +204,13 @@ export default function PageContent() {
       {/* Success Stories */}
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Success Stories from DPS Chandigarh Students</h2>
-          <div ref={testimonialAnimation.ref} className={`grid md:grid-cols-3 gap-8 transition-all duration-700 ${testimonialAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+            Success Stories from DPS Chandigarh Students
+          </h2>
+          <div
+            ref={testimonialAnimation.ref}
+            className={`grid md:grid-cols-3 gap-8 transition-all duration-700 ${testimonialAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+          >
             <div className="bg-white p-8 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-teal-600 rounded-full mr-4"></div>
@@ -150,7 +221,8 @@ export default function PageContent() {
               </div>
               <p className="text-yellow-500 mb-3">★★★★★</p>
               <p className="text-gray-600">
-                "DPS's competitive culture pushed me hard. Cerebrum's coaching channeled that perfectly. Got AIR 134!"
+                "DPS's competitive culture pushed me hard. Cerebrum's coaching channeled that
+                perfectly. Got AIR 134!"
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg">
@@ -163,7 +235,8 @@ export default function PageContent() {
               </div>
               <p className="text-yellow-500 mb-3">★★★★★</p>
               <p className="text-gray-600">
-                "Studying with DPS peers in Cerebrum batch was incredibly motivating. Best decision for NEET prep!"
+                "Studying with DPS peers in Cerebrum batch was incredibly motivating. Best decision
+                for NEET prep!"
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg">
@@ -176,7 +249,8 @@ export default function PageContent() {
               </div>
               <p className="text-yellow-500 mb-3">★★★★★</p>
               <p className="text-gray-600">
-                "Faculty understood DPS's standards. Premium coaching matched our school's excellence. Excellent results!"
+                "Faculty understood DPS's standards. Premium coaching matched our school's
+                excellence. Excellent results!"
               </p>
             </div>
           </div>
@@ -186,36 +260,57 @@ export default function PageContent() {
       {/* FAQ */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Frequently Asked Questions</h2>
-          <div ref={faqAnimation.ref} className={`space-y-6 transition-all duration-700 ${faqAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+            Frequently Asked Questions
+          </h2>
+          <div
+            ref={faqAnimation.ref}
+            className={`space-y-6 transition-all duration-700 ${faqAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+          >
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">How does Cerebrum work with DPS's competitive culture?</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
+                How does Cerebrum work with DPS's competitive culture?
+              </h3>
               <p className="text-gray-600">
-                We embrace DPS's competitive spirit while ensuring it drives productive learning. Batches are structured to motivate rather than demotivate, maintaining healthy competition.
+                We embrace DPS's competitive spirit while ensuring it drives productive learning.
+                Batches are structured to motivate rather than demotivate, maintaining healthy
+                competition.
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Are there dedicated batches for DPS students?</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
+                Are there dedicated batches for DPS students?
+              </h3>
               <p className="text-gray-600">
-                Yes, we create DPS-specific batches when enrollment allows. Peer group with similar CBSE background and competitive NEET drive from your school.
+                Yes, we create DPS-specific batches when enrollment allows. Peer group with similar
+                CBSE background and competitive NEET drive from your school.
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">How do you leverage DPS's CBSE strength for NEET?</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
+                How do you leverage DPS's CBSE strength for NEET?
+              </h3>
               <p className="text-gray-600">
-                DPS provides solid CBSE foundation. We focus on NEET-specific angles, high-yield topics, and MCQ strategies while maintaining the conceptual depth from your school.
+                DPS provides solid CBSE foundation. We focus on NEET-specific angles, high-yield
+                topics, and MCQ strategies while maintaining the conceptual depth from your school.
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">What about timing and school commitments?</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
+                What about timing and school commitments?
+              </h3>
               <p className="text-gray-600">
-                We offer flexible batch timings including after-school classes and weekend batches. Work around your school activities and commitments.
+                We offer flexible batch timings including after-school classes and weekend batches.
+                Work around your school activities and commitments.
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">How do I enroll and book a demo?</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
+                How do I enroll and book a demo?
+              </h3>
               <p className="text-gray-600">
-                WhatsApp us at +91 88264 44334 or call 8826444334. Visit cerebrumbiologyacademy.com. We'll arrange a personalized demo session.
+                WhatsApp us at +91 88264 44334 or call 8826444334. Visit cerebrumbiologyacademy.com.
+                We'll arrange a personalized demo session.
               </p>
             </div>
           </div>
@@ -225,8 +320,13 @@ export default function PageContent() {
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-teal-600 to-teal-800">
         <div className="max-w-4xl mx-auto text-center text-white">
-          <h2 className="text-4xl font-bold mb-6">Achieve NEET Excellence at DPS Chandigarh Level</h2>
-          <p className="text-xl mb-8">Join DPS Chandigarh students who've achieved 98%+ success rates with Cerebrum Biology Academy.</p>
+          <h2 className="text-4xl font-bold mb-6">
+            Achieve NEET Excellence at DPS Chandigarh Level
+          </h2>
+          <p className="text-xl mb-8">
+            Join DPS Chandigarh students who've achieved 98%+ success rates with Cerebrum Biology
+            Academy.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="light" className="px-8 py-3 text-lg font-semibold">
               Start Your Free Demo <ArrowRight className="w-5 h-5 ml-2 inline" />
@@ -239,7 +339,10 @@ export default function PageContent() {
             </a>
           </div>
           <div className="mt-8 text-teal-100">
-            <p className="mb-2"><MapPin className="w-4 h-4 inline mr-2" />Sector 40, Chandigarh</p>
+            <p className="mb-2">
+              <MapPin className="w-4 h-4 inline mr-2" />
+              Sector 40, Chandigarh
+            </p>
             <p className="mb-2">Phone: {phone}</p>
             <p>Website: {website}</p>
           </div>

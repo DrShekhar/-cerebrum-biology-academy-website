@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching for Modern School Barakhamba Students | AIIMS Faculty | Cerebrum',
-    description: 'NEET biology coaching for Modern School Barakhamba Class 11–12 students. AIIMS-trained Dr. Shekhar C Singh, small batches of 15–20, NCERT line-by-line, weekly 1:1 doubt slots. 680+ medical college ...',
+    description:
+      'NEET biology coaching for Modern School Barakhamba Class 11–12 students. AIIMS-trained Dr. Shekhar C Singh, small batches of 15–20, NCERT line-by-line, weekly 1:1 doubt slots. 680+ medical college ...',
   },
 }
 
@@ -38,5 +39,5 @@ export default function FeederSchoolPage() {
       <DelhiAreaSchema pageSlug="neet-coaching-modern-school-barakhamba-delhi" />
       <BestVerticalLanding config={buildNEETFeederSchoolConfig('modern-school-barakhamba-delhi')} />
     </>
-    )
+  )
 }

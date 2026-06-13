@@ -31,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best NEET Biology Tutor for Class 12 | Zoology + Genetics + 180 NEET Marks',
-    description: 'Best Class 12 NEET Biology tutor in India — Dr. Shekhar C Singh (AIIMS Delhi). Class 12 Zoology (180 NEET marks): Human Physiology, Reproduction, Genetics, Biotechnology, Ecology. NCERT line-by-lin...',
+    description:
+      'Best Class 12 NEET Biology tutor in India — Dr. Shekhar C Singh (AIIMS Delhi). Class 12 Zoology (180 NEET marks): Human Physiology, Reproduction, Genetics, Biotechnology, Ecology. NCERT line-by-lin...',
   },
 }
 

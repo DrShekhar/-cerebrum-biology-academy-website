@@ -57,6 +57,7 @@ export default function NEETCoachingPageContent() {
   return (
     <>
       <LocalitySchema
+        country="US"
         locality="San Jose"
         slug="neet-coaching-san-jose-usa"
         pageTitle="NEET Coaching in San Jose / SF Bay Area"
@@ -306,8 +307,17 @@ export default function NEETCoachingPageContent() {
           </div>
         </section>
 
-              <USABOPathwayCallout cityName="the SF Bay Area" schools={["Monta Vista HS","Lynbrook HS","Mission San Jose","Saratoga HS","Cupertino HS","Fremont (Irvington/Mission)"]} />
-
+        <USABOPathwayCallout
+          cityName="the SF Bay Area"
+          schools={[
+            'Monta Vista HS',
+            'Lynbrook HS',
+            'Mission San Jose',
+            'Saratoga HS',
+            'Cupertino HS',
+            'Fremont (Irvington/Mission)',
+          ]}
+        />
 
         <RelatedCityLinks currentCity="sanJose" variant="default" />
       </div>

@@ -189,39 +189,39 @@ export function MobileChatInterface({
 
       {/* Messages Container */}
       <div className="flex-1 overflow-y-auto px-4 py-4 sm:py-6 space-y-4">
-{messages.map((message, index) => (
+        {messages.map((message, index) => (
+          <div
+            key={message.id}
+            className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
+          >
             <div
-              key={message.id}
-              className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
+              className={`max-w-[85%] sm:max-w-[75%] rounded-2xl px-4 py-3 sm:px-5 sm:py-4 ${
+                message.role === 'user'
+                  ? 'bg-indigo-500 text-white'
+                  : 'bg-white shadow-md text-gray-800'
+              }`}
             >
-              <div
-                className={`max-w-[85%] sm:max-w-[75%] rounded-2xl px-4 py-3 sm:px-5 sm:py-4 ${
-                  message.role === 'user'
-                    ? 'bg-indigo-500 text-white'
-                    : 'bg-white shadow-md text-gray-800'
+              <MessageWithLatex
+                content={message.content}
+                className={`text-sm sm:text-base leading-relaxed ${
+                  message.role === 'user' ? 'text-white' : 'text-gray-800'
                 }`}
+              />
+              {message.isStreaming && (
+                <span className="inline-block w-2 h-4 bg-current animate-pulse ml-1" />
+              )}
+              <p
+                className={`text-xs mt-2 ${message.role === 'user' ? 'text-blue-100' : 'text-gray-400'}`}
               >
-                <MessageWithLatex
-                  content={message.content}
-                  className={`text-sm sm:text-base leading-relaxed ${
-                    message.role === 'user' ? 'text-white' : 'text-gray-800'
-                  }`}
-                />
-                {message.isStreaming && (
-                  <span className="inline-block w-2 h-4 bg-current animate-pulse ml-1" />
-                )}
-                <p
-                  className={`text-xs mt-2 ${message.role === 'user' ? 'text-blue-100' : 'text-gray-400'}`}
-                >
-                  {message.timestamp.toLocaleTimeString([], {
-                    hour: '2-digit',
-                    minute: '2-digit',
-                  })}
-                </p>
-              </div>
+                {message.timestamp.toLocaleTimeString([], {
+                  hour: '2-digit',
+                  minute: '2-digit',
+                })}
+              </p>
             </div>
-          ))}
-<div ref={messagesEndRef} />
+          </div>
+        ))}
+        <div ref={messagesEndRef} />
       </div>
 
       {/* Input Area - Fixed at bottom */}

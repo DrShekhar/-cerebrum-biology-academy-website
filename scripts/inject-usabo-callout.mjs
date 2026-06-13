@@ -124,14 +124,18 @@ for (const entry of PAGES) {
   let modified = lines.join('\n')
 
   const schoolsArg =
-    entry.schools && entry.schools.length > 0
-      ? `schools={${JSON.stringify(entry.schools)}}`
-      : ''
+    entry.schools && entry.schools.length > 0 ? `schools={${JSON.stringify(entry.schools)}}` : ''
   const calloutJsx = `      <USABOPathwayCallout cityName="${entry.city}" ${schoolsArg} />\n\n      `
 
   // Try comment markers first (preserves them)
   let injected = false
-  for (const m of ['{/* Related Cities */}', '{/* Related Locations */}', '{/* Related */}', '{/* Related Pages */}', '{/* Related City Links */}']) {
+  for (const m of [
+    '{/* Related Cities */}',
+    '{/* Related Locations */}',
+    '{/* Related */}',
+    '{/* Related Pages */}',
+    '{/* Related City Links */}',
+  ]) {
     if (modified.includes(m)) {
       modified = modified.replace(m, calloutJsx + m)
       injected = true
@@ -143,7 +147,10 @@ for (const entry of PAGES) {
   if (!injected) {
     const rcRe = /(\s*)<RelatedCityLinks\b/
     if (rcRe.test(modified)) {
-      modified = modified.replace(rcRe, (full, ws) => `${ws}${calloutJsx.trimEnd()}\n${ws}<RelatedCityLinks`)
+      modified = modified.replace(
+        rcRe,
+        (full, ws) => `${ws}${calloutJsx.trimEnd()}\n${ws}<RelatedCityLinks`
+      )
       injected = true
     }
   }

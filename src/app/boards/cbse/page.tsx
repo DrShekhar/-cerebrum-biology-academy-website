@@ -25,10 +25,16 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'CBSE Biology Coaching | Class 11-12 NCERT | NEET Preparation',
-    description: 'Expert CBSE Biology coaching for Classes 11-12. NCERT-focused teaching, board exam excellence, and integrated NEET preparation. Score 90+ marks!',
+    description:
+      'Expert CBSE Biology coaching for Classes 11-12. NCERT-focused teaching, board exam excellence, and integrated NEET preparation. Score 90+ marks!',
   },
 
-  openGraph: { title: 'CBSE Biology Coaching | Class 11-12 NCERT | NEET Preparation', description: 'Expert CBSE Biology coaching for Classes 11-12. NCERT-focused teaching, board exam excellence, and integrated NEET preparation. Score 90+ marks!', type: 'website' },
+  openGraph: {
+    title: 'CBSE Biology Coaching | Class 11-12 NCERT | NEET Preparation',
+    description:
+      'Expert CBSE Biology coaching for Classes 11-12. NCERT-focused teaching, board exam excellence, and integrated NEET preparation. Score 90+ marks!',
+    type: 'website',
+  },
 }
 
 export default function CBSEBiologyPage() {
@@ -218,7 +224,9 @@ export default function CBSEBiologyPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-white text-blue-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center min-h-[44px] w-full sm:w-auto"
                 >
                   Enroll for CBSE
@@ -474,7 +482,9 @@ export default function CBSEBiologyPage() {
                 </p>
                 <div className="space-y-3">
                   <Link
-                    href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+                    href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block bg-blue-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors min-h-[44px] flex items-center justify-center"
                   >
                     Enroll for CBSE

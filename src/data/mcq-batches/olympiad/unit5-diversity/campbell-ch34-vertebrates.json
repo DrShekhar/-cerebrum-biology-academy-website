@@ -69,12 +69,7 @@
     {
       "type": "MTF",
       "question": "Regarding the characteristics of Urochordata (tunicates), mark each statement as True (T) or False (F):\n(I) Adult tunicates retain the notochord throughout their life\n(II) Tunicate larvae possess a post-anal tail with a notochord\n(III) Tunicates are the closest living relatives of vertebrates based on molecular phylogenetics\n(IV) The tunicate body is covered by a cellulose-containing structure called the tunic",
-      "options": [
-        "FTTT",
-        "FFTT",
-        "TFTT",
-        "FTTF"
-      ],
+      "options": ["FTTT", "FFTT", "TFTT", "FTTF"],
       "correctAnswer": "A",
       "explanation": "(I) FALSE — Adult tunicates undergo dramatic metamorphosis and lose the notochord, tail, and most neural structures. (II) TRUE — The free-swimming larva has a tail with a notochord, demonstrating chordate characteristics. (III) TRUE — Molecular phylogenetic analyses consistently place tunicates (not cephalochordates like lancelets) as the sister group to vertebrates, forming the clade Olfactores. (IV) TRUE — The tunic is a unique structure composed partly of tunicin, a cellulose-like polysaccharide, which is remarkable since cellulose production is extremely rare in animals.",
       "isOlympiad": true,
@@ -309,12 +304,7 @@
     {
       "type": "MTF",
       "question": "Regarding metamorphosis in anuran amphibians (frogs), mark each statement as True (T) or False (F):\n(I) Thyroid hormones (T3/T4) are the primary endocrine triggers of metamorphosis\n(II) The tail is resorbed through necrosis caused by bacterial infection\n(III) The lateral line system is lost during metamorphosis in most terrestrial species\n(IV) Larval hemoglobin is replaced by adult hemoglobin with different oxygen-binding properties",
-      "options": [
-        "TFTT",
-        "TTFT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TFTT", "TTFT", "TFTF", "TFFT"],
       "correctAnswer": "A",
       "explanation": "(I) TRUE — Thyroid hormones, particularly T3 (triiodothyronine), are the master regulators of amphibian metamorphosis, triggering virtually all metamorphic changes. (II) FALSE — Tail resorption occurs through programmed cell death (apoptosis), not bacterial necrosis. Thyroid hormones activate matrix metalloproteinases and apoptotic pathways in tail tissues. (III) TRUE — The lateral line system, which detects water movements, is lost during metamorphosis in species that transition to terrestrial life, as it is non-functional in air. (IV) TRUE — Tadpole hemoglobin has different oxygen-binding properties (higher affinity) than adult hemoglobin, and a hemoglobin switch occurs during metamorphosis, analogous to the fetal-to-adult hemoglobin switch in mammals.",
       "isOlympiad": true,
@@ -589,12 +579,7 @@
     {
       "type": "MTF",
       "question": "Regarding primate evolution and human characteristics, mark each statement as True (T) or False (F):\n(I) Humans and chimpanzees share approximately 99% DNA sequence identity\n(II) Bipedalism evolved before significant brain enlargement in the hominin lineage\n(III) Neanderthals (Homo neanderthalensis) are direct ancestors of modern Homo sapiens\n(IV) The genus Homo first appeared in Africa approximately 2.5 million years ago",
-      "options": [
-        "TTFT",
-        "TTFF",
-        "TFFT",
-        "TTTF"
-      ],
+      "options": ["TTFT", "TTFF", "TFFT", "TTTF"],
       "correctAnswer": "A",
       "explanation": "(I) TRUE — Humans and chimpanzees share approximately 98.8% DNA sequence identity (sometimes rounded to 99%), making chimpanzees our closest living relatives. (II) TRUE — Fossil evidence clearly shows that bipedalism evolved in early hominins (e.g., Ardipithecus, Australopithecus) 4-6 million years ago, well before significant brain enlargement, which occurred primarily in the genus Homo starting around 2 million years ago. (III) FALSE — Neanderthals are not direct ancestors of modern humans but rather a sister species. While there was limited interbreeding (1-4% of non-African modern human DNA is Neanderthal-derived), Neanderthals represent a separate lineage that went extinct. (IV) TRUE — The earliest Homo fossils (H. habilis) date to approximately 2.5-2.8 million years ago in East Africa.",
       "isOlympiad": true,
@@ -969,12 +954,7 @@
     {
       "type": "MTF",
       "question": "Regarding the diversity of mammalian reproductive strategies, mark each statement as True (T) or False (F):\n(I) Marsupials have a shorter gestation period than placental mammals of equivalent body size\n(II) In kangaroos, embryonic diapause allows a dormant blastocyst to pause development while an older joey is still nursing\n(III) Monotreme eggs are large, yolk-rich, and have a hard calcareous shell like bird eggs\n(IV) The placenta of eutherian mammals is derived from both fetal and maternal tissues",
-      "options": [
-        "TTFT",
-        "TTTF",
-        "TTTT",
-        "TFFT"
-      ],
+      "options": ["TTFT", "TTTF", "TTTT", "TFFT"],
       "correctAnswer": "A",
       "explanation": "(I) TRUE — Marsupials have much shorter gestation periods than equivalent-sized placentals. For example, a kangaroo joey is born after ~33 days and continues development in the pouch. (II) TRUE — Embryonic diapause is well-documented in kangaroos. A female can have a dormant blastocyst in the uterus, a joey in the pouch, and an older juvenile at foot simultaneously. (III) FALSE — Monotreme eggs are small (about 1-2 cm), have a leathery shell (not hard calcareous like birds), and contain moderate yolk. They are more similar to reptilian eggs. (IV) TRUE — The eutherian placenta is formed from fetal extraembryonic membranes (chorion) that interface with the maternal uterine endometrium, making it a composite of fetal and maternal tissues.",
       "isOlympiad": true,
@@ -1409,12 +1389,7 @@
     {
       "type": "MTF",
       "question": "Regarding adaptations of marine mammals, mark each statement as True (T) or False (F):\n(I) Whales achieve deep dives partly by collapsing their lungs at depth to prevent nitrogen narcosis\n(II) Pinnipeds (seals) have a higher blood volume per body mass than terrestrial mammals of similar size\n(III) Marine mammals maintain body temperature using blubber, which also functions as an energy reserve and buoyancy aid\n(IV) Dolphins echolocate using vocalizations produced by the larynx, similar to toothed whale sonar",
-      "options": [
-        "TTTT",
-        "TTTF",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "B",
       "explanation": "(I) TRUE — Deep-diving cetaceans allow their lungs to collapse at depth, pushing air into the rigid, non-absorptive airways (trachea, bronchi). This prevents nitrogen from dissolving into the blood at high pressure, avoiding nitrogen narcosis and decompression sickness. (II) TRUE — Pinnipeds have approximately 50% more blood volume per unit body mass than terrestrial mammals, and their blood has higher hemoglobin concentrations. This provides a larger oxygen reservoir for diving. (III) TRUE — Blubber serves multiple functions: thermal insulation, energy storage (lipid reserves), hydrodynamic streamlining, and buoyancy. (IV) FALSE — Dolphins and other toothed whales (odontocetes) produce echolocation clicks NOT with the larynx but with specialized phonic lips (monkey lips/dorsal bursae complex, MLDB) in the nasal passages. Sound is focused by the melon (a fatty acoustic lens in the forehead).",
       "isOlympiad": true,
@@ -1869,12 +1844,7 @@
     {
       "type": "MTF",
       "question": "Regarding the evolution of tetrapod limbs from fish fins, mark each statement as True (T) or False (F):\n(I) The bones of the tetrapod forelimb (humerus, radius, ulna) have clear homologs in the lobed fins of sarcopterygian fishes\n(II) Digits (fingers and toes) have direct homologs in fish fin rays\n(III) The Hox gene expression patterns that specify limb identity are conserved between fish fins and tetrapod limbs\n(IV) The apical ectodermal ridge (AER) that drives limb bud outgrowth is found only in tetrapods, not in fish fin development",
-      "options": [
-        "TFTT",
-        "TTFT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TFTT", "TTFT", "TFTF", "TFFT"],
       "correctAnswer": "C",
       "explanation": "(I) TRUE — The proximal elements of the tetrapod limb (stylopod: humerus/femur; zeugopod: radius+ulna/tibia+fibula) have clear homologs in the endoskeletal elements of sarcopterygian fish fins. Tiktaalik and Panderichthys show intermediate morphologies. (II) FALSE — Digits are a tetrapod novelty with no direct homolog in fish fin rays. The distal radials of fish fins are not homologous to digits; rather, digits evolved as a new structure through expansion of Hox gene expression domains. (III) TRUE — Hox gene expression patterns (particularly HoxA and HoxD clusters) that specify proximal-distal and anterior-posterior limb identity are remarkably conserved between fish fin buds and tetrapod limb buds, demonstrating deep homology. (IV) FALSE — An AER or AER-equivalent (apical ectodermal fold) is present in both fish fin buds and tetrapod limb buds, driving outgrowth through FGF signaling.",
       "isOlympiad": true,

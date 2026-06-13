@@ -69,12 +69,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about diatom biology:\nS1: Diatoms have silica-based cell walls (frustules) composed of two overlapping halves (thecae) that fit together like a petri dish.\nS2: During asexual reproduction, each daughter cell inherits one theca from the parent and synthesizes a new smaller theca that fits inside the inherited one, leading to progressive size reduction over generations.\nS3: Sexual reproduction involving auxospore formation restores diatoms to their maximum cell size after a period of vegetative size decrease.\nS4: Diatoms contribute negligibly to global primary productivity because they are restricted to freshwater environments.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFF",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFF", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
       "isOlympiad": true,
@@ -189,12 +184,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about ciliate genetics:\nS1: Ciliates possess two types of nuclei \u2014 a large, polyploid macronucleus that controls everyday cell functions and a small, diploid micronucleus that is the germline nucleus used in sexual reproduction.\nS2: During conjugation, two ciliates exchange micronuclei (haploid products of meiosis), which fuse with a resident haploid nucleus to form a new diploid micronucleus, from which a new macronucleus develops.\nS3: Macronuclear development involves chromosome fragmentation, amplification of gene-sized pieces, and elimination of internal eliminated sequences (IES), resulting in a highly processed genome.\nS4: Ciliates can only reproduce sexually through conjugation; they cannot divide asexually by binary fission.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFF",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFF", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
       "isOlympiad": true,
@@ -369,12 +359,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about malaria parasite biology:\nS1: The liver stage (exoerythrocytic schizogony) of Plasmodium vivax can include dormant hypnozoites that cause relapses months to years after the initial infection.\nS2: Gametocytes of Plasmodium are the sexual stages that are taken up by Anopheles mosquitoes during a blood meal and undergo fertilization in the mosquito midgut.\nS3: The sickle cell trait (HbAS heterozygotes) provides partial protection against severe P. falciparum malaria because the parasite grows poorly in sickle-hemoglobin-containing red blood cells.\nS4: Plasmodium can only infect humans and has no other vertebrate hosts.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFF",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFF", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
       "isOlympiad": true,
@@ -509,12 +494,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about protist diversity and evolutionary significance:\nS1: Protists are not a monophyletic group; the term encompasses all eukaryotes that are not plants, animals, or fungi, spanning multiple distantly related supergroups.\nS2: The SAR supergroup unites Stramenopiles (diatoms, brown algae, oomycetes), Alveolates (dinoflagellates, ciliates, apicomplexans), and Rhizaria (foraminifera, radiolarians, chlorarachniophytes) based on molecular phylogenetic evidence.\nS3: All protists are unicellular; no protist lineage has evolved multicellularity or tissue-level organization.\nS4: Protists play critical roles in global biogeochemical cycles, including carbon fixation (phytoplankton), carbon burial (foram/coccolithophore shells), and as the base of aquatic food webs.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TTFF",
-        "TFTF"
-      ],
+      "options": ["TTFT", "TTTT", "TTFF", "TFTF"],
       "correctAnswer": "TTFT",
       "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
       "isOlympiad": true,
@@ -689,12 +669,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about Plasmodium drug resistance:\nS1: Chloroquine resistance in P. falciparum is primarily mediated by mutations in the pfcrt gene (Plasmodium falciparum chloroquine resistance transporter), which encodes a protein in the digestive vacuole membrane that pumps chloroquine out of the vacuole.\nS2: Artemisinin resistance involves mutations in the kelch13 gene, leading to delayed parasite clearance by enhancing the parasite's ability to enter a quiescent ring-stage state that survives drug exposure.\nS3: Drug-resistant Plasmodium strains arose primarily through horizontal gene transfer from bacteria to the parasite.\nS4: Combination therapy (e.g., artemisinin-based combination therapy, ACT) is recommended to slow the emergence of resistance because mutations conferring resistance to two drugs simultaneously are much rarer than resistance to a single drug.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TTFF",
-        "TFTF"
-      ],
+      "options": ["TTFT", "TTTT", "TTFF", "TFTF"],
       "correctAnswer": "TTFT",
       "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
       "isOlympiad": true,
@@ -909,12 +884,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about protist endosymbiosis and chloroplast evolution:\nS1: Primary endosymbiosis occurred once, giving rise to the Archaeplastida (green algae/plants, red algae, glaucophytes), all of which have chloroplasts with two envelope membranes.\nS2: Secondary endosymbiosis involved a heterotrophic eukaryote engulfing a photosynthetic eukaryote; the resulting chloroplasts have 3-4 membranes.\nS3: Tertiary endosymbiosis has occurred in some dinoflagellates that replaced their original peridinin-containing chloroplast with chloroplasts from diatoms, haptophytes, or cryptophytes.\nS4: All eukaryotic chloroplasts trace their ancestry to a single cyanobacterial endosymbiotic event, though subsequent transfers between eukaryotic lineages (secondary/tertiary endosymbiosis) have spread plastids widely.",
-      "options": [
-        "TTTT",
-        "TTTF",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "A",
       "explanation": "S1 is TRUE: The current consensus supports a single primary endosymbiosis event where a heterotrophic eukaryote engulfed a cyanobacterium. The two resulting membranes are the inner (cyanobacterial plasma membrane) and outer (host phagosomal membrane) envelope membranes. All Archaeplastida share this characteristic. S2 is TRUE: Secondary endosymbiosis added membranes from the engulfed eukaryote's plasma membrane and the host's food vacuole membrane. Examples include euglenids (green algal endosymbiont), cryptophytes (red algal), and chlorarachniophytes (green algal). S3 is TRUE: Several dinoflagellate lineages have undergone serial endosymbiosis, replacing their ancestral peridinin-type plastid with plastids from other algal groups. For example, Karenia has haptophyte-derived chloroplasts, and Kryptoperidinium has diatom-derived chloroplasts. S4 is TRUE: Despite the diversity of plastids, phylogenetic evidence supports a single origin of primary plastids in the Archaeplastida ancestor, with subsequent lateral transfers through secondary and tertiary endosymbiosis.",
       "isOlympiad": true,
@@ -1069,12 +1039,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the ecological roles of protists:\nS1: Protist phytoplankton (diatoms, dinoflagellates, coccolithophores) are responsible for approximately 50% of global net primary production and produce about half of the atmospheric oxygen.\nS2: Heterotrophic protists (ciliates, flagellates, amoebae) form the 'microbial loop' in aquatic ecosystems, channeling bacterial biomass back into the food web by grazing on bacteria and being consumed by larger zooplankton.\nS3: Protist parasites cause some of the world's most devastating diseases including malaria (Plasmodium, ~600,000 deaths/year), African sleeping sickness (Trypanosoma), and amoebic dysentery (Entamoeba).\nS4: Protists have no role in nutrient cycling and only affect ecosystems as primary producers.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFF",
-        "TFTF"
-      ],
+      "options": ["TTTF", "TTTT", "TTFF", "TFTF"],
       "correctAnswer": "A",
       "explanation": "S1 is TRUE: Marine phytoplankton, dominated by diatoms, dinoflagellates, and coccolithophores, are responsible for approximately 50% of global net primary production (~50 Gt C/year), comparable to all terrestrial plants combined. S2 is TRUE: The microbial loop, described by Azam et al. (1983), is a fundamental concept in aquatic ecology. Heterotrophic nanoflagellates are the primary consumers of bacteria, and ciliates consume both bacteria and flagellates, converting dissolved organic matter and bacterial biomass into particulate organic matter accessible to larger organisms. S3 is TRUE: Protist parasites cause enormous human suffering. Plasmodium falciparum causes the most severe malaria, Trypanosoma brucei causes sleeping sickness, T. cruzi causes Chagas disease, Leishmania causes leishmaniasis, and Entamoeba histolytica causes amoebic dysentery. S4 is FALSE: Protists participate in nutrient cycling as decomposers, grazers, and symbiotic partners (e.g., zooxanthellae in coral, rumen ciliates in herbivores).",
       "isOlympiad": true,

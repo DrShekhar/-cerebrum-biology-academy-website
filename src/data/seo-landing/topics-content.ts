@@ -238,11 +238,31 @@ export const cellBiologyTuition: SEOLandingContent = {
       },
     ],
     comparisonTable: [
-      { 'Feature': 'Genetic Material', 'Prokaryotic Cell': 'Naked circular DNA in nucleoid', 'Eukaryotic Cell': 'Linear DNA with histones in nucleus' },
-      { 'Feature': 'Membrane-bound Organelles', 'Prokaryotic Cell': 'Absent', 'Eukaryotic Cell': 'Present (mitochondria, ER, Golgi, etc.)' },
-      { 'Feature': 'Ribosomes', 'Prokaryotic Cell': '70S (50S + 30S)', 'Eukaryotic Cell': '80S (60S + 40S)' },
-      { 'Feature': 'Cell Division', 'Prokaryotic Cell': 'Binary fission', 'Eukaryotic Cell': 'Mitosis and meiosis' },
-      { 'Feature': 'Cell Wall', 'Prokaryotic Cell': 'Peptidoglycan (in bacteria)', 'Eukaryotic Cell': 'Cellulose (plants) or absent (animals)' },
+      {
+        Feature: 'Genetic Material',
+        'Prokaryotic Cell': 'Naked circular DNA in nucleoid',
+        'Eukaryotic Cell': 'Linear DNA with histones in nucleus',
+      },
+      {
+        Feature: 'Membrane-bound Organelles',
+        'Prokaryotic Cell': 'Absent',
+        'Eukaryotic Cell': 'Present (mitochondria, ER, Golgi, etc.)',
+      },
+      {
+        Feature: 'Ribosomes',
+        'Prokaryotic Cell': '70S (50S + 30S)',
+        'Eukaryotic Cell': '80S (60S + 40S)',
+      },
+      {
+        Feature: 'Cell Division',
+        'Prokaryotic Cell': 'Binary fission',
+        'Eukaryotic Cell': 'Mitosis and meiosis',
+      },
+      {
+        Feature: 'Cell Wall',
+        'Prokaryotic Cell': 'Peptidoglycan (in bacteria)',
+        'Eukaryotic Cell': 'Cellulose (plants) or absent (animals)',
+      },
     ],
   },
 
@@ -453,10 +473,24 @@ export const molecularBiologyTuition: SEOLandingContent = {
       },
     ],
     checklist: [
-      { item: 'Memorize all enzymes involved in DNA replication with their specific roles', explanation: 'NEET frequently asks about specific enzymes like helicase, topoisomerase, and ligase.' },
-      { item: 'Draw the lac operon diagram from memory with all components labelled', explanation: 'Diagram-based operon questions appear in most NEET papers.' },
-      { item: 'Practice codon reading exercises with sample mRNA sequences', explanation: 'Translation of mRNA to amino acid sequence is a commonly tested skill.' },
-      { item: 'Create a comparison table of prokaryotic vs eukaryotic transcription', explanation: 'Differences in RNA polymerase types and post-transcriptional modifications are frequently tested.' },
+      {
+        item: 'Memorize all enzymes involved in DNA replication with their specific roles',
+        explanation:
+          'NEET frequently asks about specific enzymes like helicase, topoisomerase, and ligase.',
+      },
+      {
+        item: 'Draw the lac operon diagram from memory with all components labelled',
+        explanation: 'Diagram-based operon questions appear in most NEET papers.',
+      },
+      {
+        item: 'Practice codon reading exercises with sample mRNA sequences',
+        explanation: 'Translation of mRNA to amino acid sequence is a commonly tested skill.',
+      },
+      {
+        item: 'Create a comparison table of prokaryotic vs eukaryotic transcription',
+        explanation:
+          'Differences in RNA polymerase types and post-transcriptional modifications are frequently tested.',
+      },
     ],
   },
 
@@ -659,7 +693,7 @@ export const geneticsBiologyTuition: SEOLandingContent = {
     paragraphs: [
       {
         heading: 'Mendelian Genetics: Building Problem-Solving Skills for NEET',
-        body: 'Genetics is the highest-weightage chapter in NEET Biology, and Mendelian genetics forms its core. Mendel\'s three laws, the law of dominance, the law of segregation, and the law of independent assortment, govern inheritance patterns tested extensively in NEET. Problem-solving in genetics requires a systematic approach: identify the cross type (monohybrid or dihybrid), determine the genotypes of parents, construct a Punnett square, and calculate phenotypic and genotypic ratios. Beyond simple Mendelian crosses, NEET tests extensions including incomplete dominance (1:2:1 ratio), codominance (both alleles expressed), multiple allelism (ABO blood groups with three alleles), and epistasis. The ability to quickly recognise which inheritance pattern is being described in a question stem and apply the correct ratio is the key skill that separates high scorers from average students in genetics.',
+        body: "Genetics is the highest-weightage chapter in NEET Biology, and Mendelian genetics forms its core. Mendel's three laws, the law of dominance, the law of segregation, and the law of independent assortment, govern inheritance patterns tested extensively in NEET. Problem-solving in genetics requires a systematic approach: identify the cross type (monohybrid or dihybrid), determine the genotypes of parents, construct a Punnett square, and calculate phenotypic and genotypic ratios. Beyond simple Mendelian crosses, NEET tests extensions including incomplete dominance (1:2:1 ratio), codominance (both alleles expressed), multiple allelism (ABO blood groups with three alleles), and epistasis. The ability to quickly recognise which inheritance pattern is being described in a question stem and apply the correct ratio is the key skill that separates high scorers from average students in genetics.",
       },
       {
         heading: 'Pedigree Analysis and Sex-Linked Inheritance in NEET',
@@ -667,15 +701,35 @@ export const geneticsBiologyTuition: SEOLandingContent = {
       },
       {
         heading: 'Chromosomal Basis of Inheritance and Genetic Disorders',
-        body: 'The chromosomal theory of inheritance, linking and crossing over, and chromosomal disorders form the third pillar of NEET genetics. Thomas Hunt Morgan\'s work with Drosophila established sex-linked inheritance and gene linkage, concepts tested through questions about recombination frequency and genetic mapping. Crossing over during meiosis produces recombinant offspring, and the frequency of recombination is proportional to the distance between genes on a chromosome. Chromosomal disorders tested in NEET include Down syndrome (trisomy 21), Turner syndrome (45,X), and Klinefelter syndrome (47,XXY). Students must know the chromosomal basis, symptoms, and karyotype notation for each disorder. Our teaching connects these disorders to the meiotic errors that cause them, creating a deeper understanding that helps answer application-based questions rather than relying on rote memorization of symptoms alone.',
+        body: "The chromosomal theory of inheritance, linking and crossing over, and chromosomal disorders form the third pillar of NEET genetics. Thomas Hunt Morgan's work with Drosophila established sex-linked inheritance and gene linkage, concepts tested through questions about recombination frequency and genetic mapping. Crossing over during meiosis produces recombinant offspring, and the frequency of recombination is proportional to the distance between genes on a chromosome. Chromosomal disorders tested in NEET include Down syndrome (trisomy 21), Turner syndrome (45,X), and Klinefelter syndrome (47,XXY). Students must know the chromosomal basis, symptoms, and karyotype notation for each disorder. Our teaching connects these disorders to the meiotic errors that cause them, creating a deeper understanding that helps answer application-based questions rather than relying on rote memorization of symptoms alone.",
       },
     ],
     comparisonTable: [
-      { 'Disorder': 'Down Syndrome', 'Chromosomal Basis': 'Trisomy 21 (47 chromosomes)', 'Key Features': 'Intellectual disability, short stature, broad palm' },
-      { 'Disorder': 'Turner Syndrome', 'Chromosomal Basis': 'Monosomy X (45,X)', 'Key Features': 'Female, short stature, webbed neck, sterile' },
-      { 'Disorder': 'Klinefelter Syndrome', 'Chromosomal Basis': 'XXY (47 chromosomes)', 'Key Features': 'Male, gynaecomastia, tall, sterile' },
-      { 'Disorder': 'Colour Blindness', 'Chromosomal Basis': 'X-linked recessive', 'Key Features': 'Cannot distinguish red-green colours' },
-      { 'Disorder': 'Haemophilia', 'Chromosomal Basis': 'X-linked recessive', 'Key Features': 'Impaired blood clotting, excessive bleeding' },
+      {
+        Disorder: 'Down Syndrome',
+        'Chromosomal Basis': 'Trisomy 21 (47 chromosomes)',
+        'Key Features': 'Intellectual disability, short stature, broad palm',
+      },
+      {
+        Disorder: 'Turner Syndrome',
+        'Chromosomal Basis': 'Monosomy X (45,X)',
+        'Key Features': 'Female, short stature, webbed neck, sterile',
+      },
+      {
+        Disorder: 'Klinefelter Syndrome',
+        'Chromosomal Basis': 'XXY (47 chromosomes)',
+        'Key Features': 'Male, gynaecomastia, tall, sterile',
+      },
+      {
+        Disorder: 'Colour Blindness',
+        'Chromosomal Basis': 'X-linked recessive',
+        'Key Features': 'Cannot distinguish red-green colours',
+      },
+      {
+        Disorder: 'Haemophilia',
+        'Chromosomal Basis': 'X-linked recessive',
+        'Key Features': 'Impaired blood clotting, excessive bleeding',
+      },
     ],
   },
 
@@ -878,17 +932,29 @@ export const evolutionClass12: SEOLandingContent = {
     paragraphs: [
       {
         heading: 'Origin of Life and Chemical Evolution for NEET',
-        body: 'The Evolution chapter begins with the origin of life, covering theories from abiogenesis to the Oparin-Haldane hypothesis of chemical evolution. NEET tests the understanding that life originated from non-living matter through a gradual chemical process: simple inorganic molecules formed organic compounds in the reducing atmosphere of early Earth, which assembled into protocells capable of self-replication. Miller and Urey\'s 1953 experiment, which simulated early Earth conditions and produced amino acids from methane, ammonia, hydrogen, and water vapour, is a frequently tested experiment. Students must know the specific conditions used (electric discharge simulating lightning) and the products obtained (amino acids, sugars, and nitrogenous bases). The distinction between biogenesis (life from life) and abiogenesis (spontaneous generation) is another common question topic, with Pasteur\'s swan-neck flask experiment serving as the definitive disproof of spontaneous generation.',
+        body: "The Evolution chapter begins with the origin of life, covering theories from abiogenesis to the Oparin-Haldane hypothesis of chemical evolution. NEET tests the understanding that life originated from non-living matter through a gradual chemical process: simple inorganic molecules formed organic compounds in the reducing atmosphere of early Earth, which assembled into protocells capable of self-replication. Miller and Urey's 1953 experiment, which simulated early Earth conditions and produced amino acids from methane, ammonia, hydrogen, and water vapour, is a frequently tested experiment. Students must know the specific conditions used (electric discharge simulating lightning) and the products obtained (amino acids, sugars, and nitrogenous bases). The distinction between biogenesis (life from life) and abiogenesis (spontaneous generation) is another common question topic, with Pasteur's swan-neck flask experiment serving as the definitive disproof of spontaneous generation.",
       },
       {
         heading: 'Darwinism, Natural Selection, and Hardy-Weinberg Equilibrium',
-        body: 'Darwin\'s theory of evolution by natural selection remains the central concept in this chapter. NEET questions test the understanding of natural selection types: stabilising selection (reduces variation, favours intermediate forms), directional selection (shifts the mean towards one extreme), and disruptive selection (favours both extremes). Industrial melanism in peppered moths (Biston betularia) is the classic example of directional selection. The Hardy-Weinberg principle provides the mathematical foundation for population genetics: in the absence of evolutionary forces, allele frequencies remain constant across generations. The equation p-squared plus 2pq plus q-squared equals 1 allows calculation of genotype frequencies from allele frequencies. NEET numerical problems typically provide one frequency and ask students to calculate others. Five factors can disturb Hardy-Weinberg equilibrium: gene flow, genetic drift, mutation, natural selection, and non-random mating, each representing a mechanism of evolution.',
+        body: "Darwin's theory of evolution by natural selection remains the central concept in this chapter. NEET questions test the understanding of natural selection types: stabilising selection (reduces variation, favours intermediate forms), directional selection (shifts the mean towards one extreme), and disruptive selection (favours both extremes). Industrial melanism in peppered moths (Biston betularia) is the classic example of directional selection. The Hardy-Weinberg principle provides the mathematical foundation for population genetics: in the absence of evolutionary forces, allele frequencies remain constant across generations. The equation p-squared plus 2pq plus q-squared equals 1 allows calculation of genotype frequencies from allele frequencies. NEET numerical problems typically provide one frequency and ask students to calculate others. Five factors can disturb Hardy-Weinberg equilibrium: gene flow, genetic drift, mutation, natural selection, and non-random mating, each representing a mechanism of evolution.",
       },
     ],
     checklist: [
-      { item: 'Memorise the Miller-Urey experiment setup and products', explanation: 'Direct questions about experimental conditions and results appear frequently in NEET.' },
-      { item: 'Practice Hardy-Weinberg numerical problems with varied given values', explanation: 'Being comfortable calculating p, q, and genotype frequencies saves time in the exam.' },
-      { item: 'Know the human evolution timeline with key ancestor features', explanation: 'Brain volume, posture, and tool use for each ancestor species are commonly tested.' },
+      {
+        item: 'Memorise the Miller-Urey experiment setup and products',
+        explanation:
+          'Direct questions about experimental conditions and results appear frequently in NEET.',
+      },
+      {
+        item: 'Practice Hardy-Weinberg numerical problems with varied given values',
+        explanation:
+          'Being comfortable calculating p, q, and genotype frequencies saves time in the exam.',
+      },
+      {
+        item: 'Know the human evolution timeline with key ancestor features',
+        explanation:
+          'Brain volume, posture, and tool use for each ancestor species are commonly tested.',
+      },
     ],
   },
 
@@ -1099,11 +1165,36 @@ export const biodiversityConservationClass12: SEOLandingContent = {
       },
     ],
     comparisonTable: [
-      { 'Strategy': 'National Parks', 'Type': 'In-situ', 'Number in India': '106', 'Key Feature': 'Strictest protection, no human activity' },
-      { 'Strategy': 'Wildlife Sanctuaries', 'Type': 'In-situ', 'Number in India': '551', 'Key Feature': 'Some human activities permitted' },
-      { 'Strategy': 'Biosphere Reserves', 'Type': 'In-situ', 'Number in India': '18', 'Key Feature': 'Multiple zones including human settlement' },
-      { 'Strategy': 'Zoological Parks', 'Type': 'Ex-situ', 'Number in India': '60+', 'Key Feature': 'Captive breeding programs' },
-      { 'Strategy': 'Seed Banks', 'Type': 'Ex-situ', 'Number in India': 'Multiple', 'Key Feature': 'Preservation of plant genetic material' },
+      {
+        Strategy: 'National Parks',
+        Type: 'In-situ',
+        'Number in India': '106',
+        'Key Feature': 'Strictest protection, no human activity',
+      },
+      {
+        Strategy: 'Wildlife Sanctuaries',
+        Type: 'In-situ',
+        'Number in India': '551',
+        'Key Feature': 'Some human activities permitted',
+      },
+      {
+        Strategy: 'Biosphere Reserves',
+        Type: 'In-situ',
+        'Number in India': '18',
+        'Key Feature': 'Multiple zones including human settlement',
+      },
+      {
+        Strategy: 'Zoological Parks',
+        Type: 'Ex-situ',
+        'Number in India': '60+',
+        'Key Feature': 'Captive breeding programs',
+      },
+      {
+        Strategy: 'Seed Banks',
+        Type: 'Ex-situ',
+        'Number in India': 'Multiple',
+        'Key Feature': 'Preservation of plant genetic material',
+      },
     ],
   },
 
@@ -1313,9 +1404,21 @@ export const animalTissuesClass9: SEOLandingContent = {
       },
     ],
     checklist: [
-      { item: 'Draw and label all four tissue types from memory', explanation: 'Diagram-based identification questions test visual recall of tissue structures.' },
-      { item: 'Create a comparison table of the three muscle types', explanation: 'Distinguishing striated, smooth, and cardiac muscle is a frequent NEET question pattern.' },
-      { item: 'Learn the location of each tissue type in the human body', explanation: 'NEET questions often provide a location and ask which tissue type is found there.' },
+      {
+        item: 'Draw and label all four tissue types from memory',
+        explanation:
+          'Diagram-based identification questions test visual recall of tissue structures.',
+      },
+      {
+        item: 'Create a comparison table of the three muscle types',
+        explanation:
+          'Distinguishing striated, smooth, and cardiac muscle is a frequent NEET question pattern.',
+      },
+      {
+        item: 'Learn the location of each tissue type in the human body',
+        explanation:
+          'NEET questions often provide a location and ask which tissue type is found there.',
+      },
     ],
   },
 
@@ -1525,10 +1628,30 @@ export const plantPhysiologyClass11: SEOLandingContent = {
       },
     ],
     comparisonTable: [
-      { 'Feature': 'CO2 Fixation Enzyme', 'C3 Plants': 'RuBisCO only', 'C4 Plants': 'PEP carboxylase + RuBisCO', 'CAM Plants': 'PEP carboxylase (night) + RuBisCO (day)' },
-      { 'Feature': 'Kranz Anatomy', 'C3 Plants': 'Absent', 'C4 Plants': 'Present', 'CAM Plants': 'Absent' },
-      { 'Feature': 'Photorespiration', 'C3 Plants': 'High', 'C4 Plants': 'Negligible', 'CAM Plants': 'Low' },
-      { 'Feature': 'Example', 'C3 Plants': 'Wheat, Rice', 'C4 Plants': 'Maize, Sugarcane', 'CAM Plants': 'Cactus, Pineapple' },
+      {
+        Feature: 'CO2 Fixation Enzyme',
+        'C3 Plants': 'RuBisCO only',
+        'C4 Plants': 'PEP carboxylase + RuBisCO',
+        'CAM Plants': 'PEP carboxylase (night) + RuBisCO (day)',
+      },
+      {
+        Feature: 'Kranz Anatomy',
+        'C3 Plants': 'Absent',
+        'C4 Plants': 'Present',
+        'CAM Plants': 'Absent',
+      },
+      {
+        Feature: 'Photorespiration',
+        'C3 Plants': 'High',
+        'C4 Plants': 'Negligible',
+        'CAM Plants': 'Low',
+      },
+      {
+        Feature: 'Example',
+        'C3 Plants': 'Wheat, Rice',
+        'C4 Plants': 'Maize, Sugarcane',
+        'CAM Plants': 'Cactus, Pineapple',
+      },
     ],
   },
 
@@ -1938,7 +2061,7 @@ export const dnaBiologyTuition: SEOLandingContent = {
     paragraphs: [
       {
         heading: 'DNA Structure and Function: The Molecular Blueprint of Life',
-        body: 'DNA (deoxyribonucleic acid) is the hereditary material in most organisms, and understanding its structure is fundamental to scoring well in NEET Molecular Biology. Watson and Crick proposed the double helix model in 1953, building on X-ray crystallography data from Rosalind Franklin and Maurice Wilkins. The double helix consists of two antiparallel polynucleotide chains held together by hydrogen bonds between complementary base pairs: adenine with thymine (two hydrogen bonds) and guanine with cytosine (three hydrogen bonds). This base pairing rule, known as Chargaff\'s rule, means the amount of adenine equals thymine and guanine equals cytosine in any DNA molecule. NEET questions test structural details including the major and minor grooves, the sugar-phosphate backbone, 3-prime to 5-prime directionality, and the concept of DNA packaging through histones forming nucleosomes, which further coil into chromatin fibers and eventually condense into visible chromosomes during cell division.',
+        body: "DNA (deoxyribonucleic acid) is the hereditary material in most organisms, and understanding its structure is fundamental to scoring well in NEET Molecular Biology. Watson and Crick proposed the double helix model in 1953, building on X-ray crystallography data from Rosalind Franklin and Maurice Wilkins. The double helix consists of two antiparallel polynucleotide chains held together by hydrogen bonds between complementary base pairs: adenine with thymine (two hydrogen bonds) and guanine with cytosine (three hydrogen bonds). This base pairing rule, known as Chargaff's rule, means the amount of adenine equals thymine and guanine equals cytosine in any DNA molecule. NEET questions test structural details including the major and minor grooves, the sugar-phosphate backbone, 3-prime to 5-prime directionality, and the concept of DNA packaging through histones forming nucleosomes, which further coil into chromatin fibers and eventually condense into visible chromosomes during cell division.",
       },
       {
         heading: 'DNA Replication and Its Significance for NEET',
@@ -1946,9 +2069,20 @@ export const dnaBiologyTuition: SEOLandingContent = {
       },
     ],
     checklist: [
-      { item: 'Draw the DNA double helix with all structural features labelled', explanation: 'NEET tests structural details like antiparallel strands, base pairing, and groove types.' },
-      { item: 'Know all enzymes of replication with their specific functions', explanation: 'Enzyme-function matching questions are among the most common in molecular biology.' },
-      { item: 'Understand the Meselson-Stahl experiment step by step', explanation: 'This experiment proving semi-conservative replication is a NEET favourite.' },
+      {
+        item: 'Draw the DNA double helix with all structural features labelled',
+        explanation:
+          'NEET tests structural details like antiparallel strands, base pairing, and groove types.',
+      },
+      {
+        item: 'Know all enzymes of replication with their specific functions',
+        explanation:
+          'Enzyme-function matching questions are among the most common in molecular biology.',
+      },
+      {
+        item: 'Understand the Meselson-Stahl experiment step by step',
+        explanation: 'This experiment proving semi-conservative replication is a NEET favourite.',
+      },
     ],
   },
 
@@ -2341,9 +2475,21 @@ export const ecologyBiologyTuition: SEOLandingContent = {
       },
     ],
     checklist: [
-      { item: 'Memorise all species interaction types with NCERT examples', explanation: 'Direct questions matching interaction types to examples appear in most NEET papers.' },
-      { item: 'Understand the 10 percent energy transfer rule with calculations', explanation: 'Numerical questions on energy available at different trophic levels are common.' },
-      { item: 'Know the steps of carbon and nitrogen cycles with bacterial roles', explanation: 'Nitrification, denitrification, and ammonification bacteria are frequently tested.' },
+      {
+        item: 'Memorise all species interaction types with NCERT examples',
+        explanation:
+          'Direct questions matching interaction types to examples appear in most NEET papers.',
+      },
+      {
+        item: 'Understand the 10 percent energy transfer rule with calculations',
+        explanation:
+          'Numerical questions on energy available at different trophic levels are common.',
+      },
+      {
+        item: 'Know the steps of carbon and nitrogen cycles with bacterial roles',
+        explanation:
+          'Nitrification, denitrification, and ammonification bacteria are frequently tested.',
+      },
     ],
   },
 
@@ -2515,11 +2661,31 @@ export const humanPhysiologyTuition: SEOLandingContent = {
       },
     ],
     comparisonTable: [
-      { 'System': 'Circulation', 'NEET Questions': '5-6', 'Key Topics': 'ECG, cardiac cycle, blood groups, double circulation' },
-      { 'System': 'Excretion', 'NEET Questions': '3-4', 'Key Topics': 'Nephron function, urine formation, hormonal regulation' },
-      { 'System': 'Neural Control', 'NEET Questions': '4-5', 'Key Topics': 'Nerve impulse, brain structure, eye and ear' },
-      { 'System': 'Digestion', 'NEET Questions': '3-4', 'Key Topics': 'Enzyme specificity, absorption, GI tract anatomy' },
-      { 'System': 'Locomotion', 'NEET Questions': '2-3', 'Key Topics': 'Sliding filament theory, skeletal system' },
+      {
+        System: 'Circulation',
+        'NEET Questions': '5-6',
+        'Key Topics': 'ECG, cardiac cycle, blood groups, double circulation',
+      },
+      {
+        System: 'Excretion',
+        'NEET Questions': '3-4',
+        'Key Topics': 'Nephron function, urine formation, hormonal regulation',
+      },
+      {
+        System: 'Neural Control',
+        'NEET Questions': '4-5',
+        'Key Topics': 'Nerve impulse, brain structure, eye and ear',
+      },
+      {
+        System: 'Digestion',
+        'NEET Questions': '3-4',
+        'Key Topics': 'Enzyme specificity, absorption, GI tract anatomy',
+      },
+      {
+        System: 'Locomotion',
+        'NEET Questions': '2-3',
+        'Key Topics': 'Sliding filament theory, skeletal system',
+      },
     ],
   },
 
@@ -3042,11 +3208,41 @@ export const animalKingdomClass11: SEOLandingContent = {
       },
     ],
     comparisonTable: [
-      { 'Class': 'Chondrichthyes', 'Skeleton': 'Cartilaginous', 'Heart': '2-chambered', 'Respiration': 'Gills (5-7 pairs)', 'Example': 'Scoliodon (Shark)' },
-      { 'Class': 'Osteichthyes', 'Skeleton': 'Bony', 'Heart': '2-chambered', 'Respiration': 'Gills (4 pairs with operculum)', 'Example': 'Labeo (Rohu)' },
-      { 'Class': 'Amphibia', 'Skeleton': 'Bony', 'Heart': '3-chambered', 'Respiration': 'Lungs + skin', 'Example': 'Rana (Frog)' },
-      { 'Class': 'Reptilia', 'Skeleton': 'Bony', 'Heart': '3-chambered (incomplete septum)', 'Respiration': 'Lungs', 'Example': 'Hemidactylus (Gecko)' },
-      { 'Class': 'Mammalia', 'Skeleton': 'Bony', 'Heart': '4-chambered', 'Respiration': 'Lungs', 'Example': 'Homo sapiens' },
+      {
+        Class: 'Chondrichthyes',
+        Skeleton: 'Cartilaginous',
+        Heart: '2-chambered',
+        Respiration: 'Gills (5-7 pairs)',
+        Example: 'Scoliodon (Shark)',
+      },
+      {
+        Class: 'Osteichthyes',
+        Skeleton: 'Bony',
+        Heart: '2-chambered',
+        Respiration: 'Gills (4 pairs with operculum)',
+        Example: 'Labeo (Rohu)',
+      },
+      {
+        Class: 'Amphibia',
+        Skeleton: 'Bony',
+        Heart: '3-chambered',
+        Respiration: 'Lungs + skin',
+        Example: 'Rana (Frog)',
+      },
+      {
+        Class: 'Reptilia',
+        Skeleton: 'Bony',
+        Heart: '3-chambered (incomplete septum)',
+        Respiration: 'Lungs',
+        Example: 'Hemidactylus (Gecko)',
+      },
+      {
+        Class: 'Mammalia',
+        Skeleton: 'Bony',
+        Heart: '4-chambered',
+        Respiration: 'Lungs',
+        Example: 'Homo sapiens',
+      },
     ],
   },
 

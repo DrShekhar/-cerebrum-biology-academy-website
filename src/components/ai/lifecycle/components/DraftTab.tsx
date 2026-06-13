@@ -13,10 +13,7 @@ interface DraftTabProps {
 
 export function DraftTab({ draftSettings, setDraftSettings, saving, saveAsDraft }: DraftTabProps) {
   return (
-    <div
-      key="draft"
-      className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-    >
+    <div key="draft" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
       <div className="bg-white rounded-xl p-6 border">
         <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
           <Save className="w-5 h-5 text-gray-600" />

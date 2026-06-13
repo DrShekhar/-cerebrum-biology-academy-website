@@ -34,7 +34,10 @@ export function TrialBannerWrapper() {
     <TrialBanner
       trialStatus={trialStatus}
       onUpgradeClick={() => {
-        window.open('https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll.%20Please%20share%20details.', '_blank')
+        window.open(
+          'https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll.%20Please%20share%20details.',
+          '_blank'
+        )
       }}
       onDismiss={() => {
         console.log('Trial banner dismissed')

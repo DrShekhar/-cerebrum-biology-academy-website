@@ -10,7 +10,9 @@ export const metadata: Metadata = {
   keywords: content.keywords,
   openGraph: {
     title: content.title,
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Image — Cerebrum Biology Academy' }],
+    images: [
+      { url: '/og-image.jpg', width: 1200, height: 630, alt: 'Image — Cerebrum Biology Academy' },
+    ],
     description: content.metaDescription,
     type: 'website',
     url: `https://cerebrumbiologyacademy.com/${content.slug}`,

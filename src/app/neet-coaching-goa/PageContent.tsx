@@ -150,7 +150,16 @@ const localBusinessSchema = {
     addressRegion: 'Uttar Pradesh',
     addressCountry: 'IN',
   },
-  areaServed: ['Panaji', 'Margao', 'Vasco da Gama', 'Mapusa', 'Ponda', 'Porvorim', 'Dona Paula', 'Calangute'],
+  areaServed: [
+    'Panaji',
+    'Margao',
+    'Vasco da Gama',
+    'Mapusa',
+    'Ponda',
+    'Porvorim',
+    'Dona Paula',
+    'Calangute',
+  ],
   priceRange: '$$',
 }
 
@@ -198,11 +207,16 @@ export default function PageContent() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Expert live online NEET classes for Panaji, Margao, Vasco, and all of Goa. Perfect for
-              <strong> NRI and expat families</strong> - flexible timings, global-standard teaching, and proven results.
+              <strong> NRI and expat families</strong> - flexible timings, global-standard teaching,
+              and proven results.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20goa.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20goa.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -375,11 +389,16 @@ export default function PageContent() {
               Goa Students, Master NEET Online!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Premium online NEET coaching for Goa's discerning families - NRI-friendly, flexible, proven results
+              Premium online NEET coaching for Goa's discerning families - NRI-friendly, flexible,
+              proven results
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20goa.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20goa.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -420,7 +439,6 @@ export default function PageContent() {
         </div>
       </section>
 
-
       <PricingSection cityName="Goa (Panaji & Margao)" />
       <CostComparisonSection cityName="Goa (Panaji & Margao)" />
       {/* Related */}
@@ -448,27 +466,35 @@ export default function PageContent() {
             </Link>
           </div>
         </div>
-      
-      {/* Schools Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Students from These Goa Schools Trust Us
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Sharada Mandir School', "People's High School", 'Mushtifund Aryaan High School', 'Smt. Parvatibai Chowgule College', 'Don Bosco High School', 'Our Lady of Rosary School', 'Loyola High School', "GVM's SNJB High School"].map((school) => (
-              <div
-                key={school}
-                className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
-              >
-                {school}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-</section>
+        {/* Schools Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Students from These Goa Schools Trust Us
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                'Sharada Mandir School',
+                "People's High School",
+                'Mushtifund Aryaan High School',
+                'Smt. Parvatibai Chowgule College',
+                'Don Bosco High School',
+                'Our Lady of Rosary School',
+                'Loyola High School',
+                "GVM's SNJB High School",
+              ].map((school) => (
+                <div
+                  key={school}
+                  className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
+                >
+                  {school}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </section>
       <RelatedCityLinks currentCity="goa" variant="default" />
     </div>
   )

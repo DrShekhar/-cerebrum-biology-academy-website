@@ -6,7 +6,7 @@ export function SpecializedVsMassIllustration({
   className = '',
   animate = true,
 }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -80,8 +80,7 @@ export function SpecializedVsMassIllustration({
       <rect width="700" height="520" fill="url(#specVsMassBg)" rx="16" />
 
       {/* Title Section */}
-      <g
-      >
+      <g>
         <rect
           x="150"
           y="10"
@@ -100,8 +99,7 @@ export function SpecializedVsMassIllustration({
       </g>
 
       {/* Left Section - Specialized Coaching */}
-      <g
-      >
+      <g>
         <rect
           x="20"
           y="70"
@@ -119,13 +117,10 @@ export function SpecializedVsMassIllustration({
         </text>
 
         {/* DNA/Biology Icon */}
-        <g
-          style={{ transformOrigin: '130px 145px' }}
-        >
+        <g style={{ transformOrigin: '130px 145px' }}>
           <circle cx="130" cy="145" r="30" fill="#86EFAC" opacity="0.5" />
         </g>
-        <g
-        >
+        <g>
           {/* DNA Helix */}
           <path
             d="M115 130 Q130 125 145 130 Q130 140 115 145 Q130 155 145 160"
@@ -141,9 +136,7 @@ export function SpecializedVsMassIllustration({
 
         {/* Features list */}
         {specializedFeatures.map((feature, index) => (
-          <g
-            key={feature.text}
-          >
+          <g key={feature.text}>
             <rect
               x="35"
               y={185 + index * 40}
@@ -164,8 +157,7 @@ export function SpecializedVsMassIllustration({
         ))}
 
         {/* Success badge */}
-        <g
-        >
+        <g>
           <rect x="55" y="335" width="150" height="22" rx="11" fill="#22C55E" />
           <text x="130" y="350" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
             ✓ 40-50% Success Rate
@@ -174,8 +166,7 @@ export function SpecializedVsMassIllustration({
       </g>
 
       {/* Center Section - Comparison Metrics */}
-      <g
-      >
+      <g>
         <rect
           x="250"
           y="70"
@@ -192,9 +183,7 @@ export function SpecializedVsMassIllustration({
 
         {/* Comparison rows */}
         {comparisonMetrics.map((item, index) => (
-          <g
-            key={item.metric}
-          >
+          <g key={item.metric}>
             {/* Row background */}
             <rect
               x="260"
@@ -246,12 +235,7 @@ export function SpecializedVsMassIllustration({
             </text>
 
             {/* Winner indicator */}
-            <text
-              x="340"
-              y={151 + index * 60}
-              fontSize="10"
-              fill="#22C55E"
-            >
+            <text x="340" y={151 + index * 60} fontSize="10" fill="#22C55E">
               ✓
             </text>
           </g>
@@ -259,8 +243,7 @@ export function SpecializedVsMassIllustration({
       </g>
 
       {/* Right Section - Mass Coaching */}
-      <g
-      >
+      <g>
         <rect
           x="460"
           y="70"
@@ -278,8 +261,7 @@ export function SpecializedVsMassIllustration({
         </text>
 
         {/* Factory Building Icon */}
-        <g
-        >
+        <g>
           {/* Factory building */}
           <rect x="530" y="125" width="80" height="50" rx="4" fill="#FECACA" />
           <rect x="540" y="135" width="15" height="15" rx="2" fill="#FEE2E2" />
@@ -289,27 +271,13 @@ export function SpecializedVsMassIllustration({
           {/* Chimneys with smoke */}
           <rect x="545" y="110" width="12" height="20" fill="#DC2626" />
           <rect x="583" y="110" width="12" height="20" fill="#DC2626" />
-          <circle
-            cx="551"
-            cy="105"
-            r="5"
-            fill="#9CA3AF"
-            opacity="0.6"
-          />
-          <circle
-            cx="589"
-            cy="105"
-            r="5"
-            fill="#9CA3AF"
-            opacity="0.6"
-          />
+          <circle cx="551" cy="105" r="5" fill="#9CA3AF" opacity="0.6" />
+          <circle cx="589" cy="105" r="5" fill="#9CA3AF" opacity="0.6" />
         </g>
 
         {/* Drawbacks list */}
         {massDrawbacks.map((drawback, index) => (
-          <g
-            key={drawback.text}
-          >
+          <g key={drawback.text}>
             <rect
               x="475"
               y={185 + index * 40}
@@ -337,8 +305,7 @@ export function SpecializedVsMassIllustration({
       </g>
 
       {/* VS Badge */}
-      <g
-      >
+      <g>
         <circle cx="350" cy="380" r="28" fill="#1F2937" />
         <text x="350" y="386" fontSize="16" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           VS
@@ -346,8 +313,7 @@ export function SpecializedVsMassIllustration({
       </g>
 
       {/* Bottom Section - Final Verdict */}
-      <g
-      >
+      <g>
         <rect
           x="20"
           y="415"
@@ -424,29 +390,9 @@ export function SpecializedVsMassIllustration({
       </g>
 
       {/* Floating decorative elements */}
-      <circle
-        cx="15"
-        cy="55"
-        r="8"
-        fill="#22C55E"
-        opacity="0.3"
-      />
-      <circle
-        cx="685"
-        cy="45"
-        r="6"
-        fill="#EF4444"
-        opacity="0.3"
-      />
-      <rect
-        x="660"
-        y="400"
-        width="15"
-        height="10"
-        rx="2"
-        fill="#1F2937"
-        opacity="0.2"
-      />
+      <circle cx="15" cy="55" r="8" fill="#22C55E" opacity="0.3" />
+      <circle cx="685" cy="45" r="6" fill="#EF4444" opacity="0.3" />
+      <rect x="660" y="400" width="15" height="10" rx="2" fill="#1F2937" opacity="0.2" />
     </svg>
   )
 }

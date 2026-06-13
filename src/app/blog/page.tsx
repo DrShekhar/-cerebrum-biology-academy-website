@@ -54,7 +54,9 @@ export async function generateMetadata({
       title: 'NEET Biology Blog | Expert Study Tips & Strategies',
       description:
         'Master NEET Biology with expert tips, preparation strategies, and study guides by AIIMS faculty.',
-      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Image — Cerebrum Biology Academy' }],
+      images: [
+        { url: '/og-image.jpg', width: 1200, height: 630, alt: 'Image — Cerebrum Biology Academy' },
+      ],
     },
     alternates: {
       canonical,

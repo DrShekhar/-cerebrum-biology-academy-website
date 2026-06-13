@@ -43,7 +43,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Evening Batch Gurugram 2026 | After-School Classes 5-8 PM',
-    description: 'Join NEET evening batch in Gurugram (Gurgaon) - 5 PM to 8 PM classes after school. Perfect for Class 11-12 students. M2K Sector 51. Call 88264-44334!',
+    description:
+      'Join NEET evening batch in Gurugram (Gurgaon) - 5 PM to 8 PM classes after school. Perfect for Class 11-12 students. M2K Sector 51. Call 88264-44334!',
   },
 }
 
@@ -144,7 +145,11 @@ export default function NEETEveningBatchGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-evening-batch-gurugram" />
       {/* Hero Section */}

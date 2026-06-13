@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Top 5 IBO Coaching Globally 2026 | International Biology Olympiad Honest Ranking',
-    description: 'Honest 2026 global ranking of IBO (International Biology Olympiad) coaching. Cerebrum #1 across India / USA / UK / Singapore / Canada national-team selection funnels.',
+    description:
+      'Honest 2026 global ranking of IBO (International Biology Olympiad) coaching. Cerebrum #1 across India / USA / UK / Singapore / Canada national-team selection funnels.',
   },
 }
 

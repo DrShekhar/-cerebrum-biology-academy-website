@@ -41,7 +41,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'DAT Biology Tutor Bay Area | UCSF, Pacific, Berkeley, Stanford',
-    description: 'DAT Biology tutor for Bay Area pre-dental students — UC Berkeley, Stanford, UCSF, Pacific, San Jose State. AIIMS-trained biology specialists, PT evening slots. From $449.',
+    description:
+      'DAT Biology tutor for Bay Area pre-dental students — UC Berkeley, Stanford, UCSF, Pacific, San Jose State. AIIMS-trained biology specialists, PT evening slots. From $449.',
   },
 }
 
@@ -63,7 +64,8 @@ const faqs = [
       'Payment is in USD via card, ACH, or international wire. Faculty led by Dr. Shekhar C Singh (AIIMS Delhi); senior faculty fluent in English and Hindi (and several in Telugu, Tamil for South Indian families). All sessions online — no commute to a tutoring center. Parents typically attend the diagnostic and milestone check-ins; sessions otherwise direct student-tutor via Zoom + WhatsApp.',
   },
   {
-    question: 'How does Cerebrum compare to other generalist DAT brands or other generalist DAT prep platforms for a Bay Area pre-dental?',
+    question:
+      'How does Cerebrum compare to other generalist DAT brands or other generalist DAT prep platforms for a Bay Area pre-dental?',
     answer:
       'other generalist DAT brands is $2,599 — full-DAT generalist with rotating faculty. other generalist DAT prep platforms is $795 — primarily a question-bank platform. Cerebrum is a biology-only specialist — we cover the Biology section deeply ($1,399 1:1, $135/hr ad-hoc) and most Bay Area students pair us with other generalist DAT prep platforms for drill volume. For UCSF aspirants targeting 24+ Bio, 1:1 with senior faculty is the standard recommendation.',
   },

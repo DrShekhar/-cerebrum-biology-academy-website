@@ -248,7 +248,9 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
     let delay = initialDelay
 
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
-      console.log(`[PhoneSignIn] Session verification attempt ${attempt}/${maxRetries}, delay: ${delay}ms`)
+      console.log(
+        `[PhoneSignIn] Session verification attempt ${attempt}/${maxRetries}, delay: ${delay}ms`
+      )
 
       await new Promise((resolve) => setTimeout(resolve, delay))
 
@@ -259,7 +261,7 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
           cache: 'no-store',
           headers: {
             'Cache-Control': 'no-cache, no-store, must-revalidate',
-            'Pragma': 'no-cache',
+            Pragma: 'no-cache',
           },
         })
 
@@ -488,9 +490,7 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
             <p id="verifying-session-label" className="text-lg font-medium text-gray-900 mb-1">
               Verifying Session
             </p>
-            <p className="text-sm text-gray-600">
-              Please wait while we secure your login...
-            </p>
+            <p className="text-sm text-gray-600">Please wait while we secure your login...</p>
           </div>
         </div>
       )}

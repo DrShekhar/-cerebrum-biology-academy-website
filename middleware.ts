@@ -483,7 +483,11 @@ export default async function middleware(req: NextRequest) {
   }
 
   // Protected counselor routes - require COUNSELOR or ADMIN role
-  if (pathname.startsWith('/counselor') && pathname !== '/counselor-poc' && pathname !== '/counselor/login') {
+  if (
+    pathname.startsWith('/counselor') &&
+    pathname !== '/counselor-poc' &&
+    pathname !== '/counselor/login'
+  ) {
     if (!userId) {
       const loginUrl = new URL('/sign-in', req.url)
       loginUrl.searchParams.set('redirect_url', pathname)

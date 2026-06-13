@@ -129,10 +129,7 @@ for (const relPath of FILES) {
     const targetIdx = deck[deckIdx]
 
     if (currentIdx !== targetIdx) {
-      ;[q.options[currentIdx], q.options[targetIdx]] = [
-        q.options[targetIdx],
-        q.options[currentIdx],
-      ]
+      ;[q.options[currentIdx], q.options[targetIdx]] = [q.options[targetIdx], q.options[currentIdx]]
       q.correctAnswer = idxToLetter(targetIdx)
       swappedInFile++
     }
@@ -154,14 +151,14 @@ for (const relPath of FILES) {
 }
 
 // Print results table
-console.log(
-  `${'FILE'.padEnd(60)} ${'  N'} ${'BEFORE          '} ${'AFTER           '} ${'SWAP'}`
-)
+console.log(`${'FILE'.padEnd(60)} ${'  N'} ${'BEFORE          '} ${'AFTER           '} ${'SWAP'}`)
 console.log('-'.repeat(110))
 for (const s of fileSummary) {
   const beforeStr = `A${s.before.A} B${s.before.B} C${s.before.C} D${s.before.D}`.padEnd(16)
   const afterStr = `A${s.after.A} B${s.after.B} C${s.after.C} D${s.after.D}`.padEnd(16)
-  console.log(`${s.file.padEnd(60)} ${String(s.n).padStart(3)}  ${beforeStr} ${afterStr} ${s.swapped}`)
+  console.log(
+    `${s.file.padEnd(60)} ${String(s.n).padStart(3)}  ${beforeStr} ${afterStr} ${s.swapped}`
+  )
 }
 console.log('-'.repeat(110))
 console.log(

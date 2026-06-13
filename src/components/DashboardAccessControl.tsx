@@ -95,9 +95,7 @@ export function DashboardAccessControl({
 
       {/* Access Denied Screen */}
       <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-        <div
-          className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full overflow-hidden animate-fadeInUp"
-        >
+        <div className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full overflow-hidden animate-fadeInUp">
           {/* Header */}
           <div className="relative bg-blue-600 p-8 text-white">
             <div className="flex items-center gap-4 mb-4">

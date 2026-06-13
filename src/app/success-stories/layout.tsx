@@ -22,8 +22,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/success-stories' },
   openGraph: {
     title: 'NEET Success Stories | Cerebrum Biology Academy',
-    description:
-      '680+ medical college selections — AIIMS, JIPMER, MAMC, Manipal stories.',
+    description: '680+ medical college selections — AIIMS, JIPMER, MAMC, Manipal stories.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/success-stories',

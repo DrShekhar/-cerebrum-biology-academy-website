@@ -33,7 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best Biology Tuition in RK Puram | Tutors for DPS RKP Students',
-    description: 'Best biology tuition in RK Puram, Delhi. Expert tutors for DPS RK Puram students. Class 11, 12 & NEET preparation. Call 88264-44334 for demo.',
+    description:
+      'Best biology tuition in RK Puram, Delhi. Expert tutors for DPS RK Puram students. Class 11, 12 & NEET preparation. Call 88264-44334 for demo.',
   },
 }
 

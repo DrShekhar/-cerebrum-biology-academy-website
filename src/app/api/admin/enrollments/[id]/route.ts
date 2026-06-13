@@ -11,10 +11,7 @@ const updateEnrollmentSchema = z.object({
   paidAmount: z.number().min(0).optional(),
 })
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
+export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     await requireAdminAuth()
     const { id } = await params
@@ -49,10 +46,7 @@ export async function GET(
     })
 
     if (!enrollment) {
-      return NextResponse.json(
-        { success: false, error: 'Enrollment not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Enrollment not found' }, { status: 404 })
     }
 
     return NextResponse.json({ success: true, data: enrollment })
@@ -68,10 +62,7 @@ export async function GET(
   }
 }
 
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
+export async function PATCH(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     const session = await requireAdminAuth()
     const { id } = await params
@@ -81,10 +72,7 @@ export async function PATCH(
 
     const existing = await prisma.enrollments.findUnique({ where: { id } })
     if (!existing) {
-      return NextResponse.json(
-        { success: false, error: 'Enrollment not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Enrollment not found' }, { status: 404 })
     }
 
     const updateData: Record<string, unknown> = { updatedAt: new Date() }
@@ -99,16 +87,11 @@ export async function PATCH(
       updateData.paymentPlan = validatedData.paymentPlan
     }
     if (validatedData.endDate !== undefined) {
-      updateData.endDate = validatedData.endDate
-        ? new Date(validatedData.endDate)
-        : null
+      updateData.endDate = validatedData.endDate ? new Date(validatedData.endDate) : null
     }
     if (validatedData.paidAmount !== undefined) {
       updateData.paidAmount = validatedData.paidAmount
-      updateData.pendingAmount = Math.max(
-        0,
-        existing.totalFees - validatedData.paidAmount
-      )
+      updateData.pendingAmount = Math.max(0, existing.totalFees - validatedData.paidAmount)
     }
 
     const enrollment = await prisma.$transaction(async (tx) => {

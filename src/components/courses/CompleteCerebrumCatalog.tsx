@@ -395,11 +395,8 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
       {/* Hero Section */}
       <section ref={heroRef} className="relative z-10 pt-32 pb-16 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <div
-           className="animate-fadeInUp">
-            <div
-              className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-2xl border border-white/30 text-white px-10 py-4 rounded-full text-sm font-bold mb-10 shadow-2xl animate-fadeInUp"
-            >
+          <div className="animate-fadeInUp">
+            <div className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-2xl border border-white/30 text-white px-10 py-4 rounded-full text-sm font-bold mb-10 shadow-2xl animate-fadeInUp">
               <Crown className="w-8 h-8 text-yellow-400" />
               <span className="text-xl">Complete Course Catalog</span>
               <Sparkles className="w-6 h-6 text-blue-400" />
@@ -461,10 +458,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
             if (seriesCourses.length === 0 && selectedSeries !== 'all') return null
 
             return (
-              <div
-                key={seriesKey}
-                className="mb-20 animate-fadeInUp"
-              >
+              <div key={seriesKey} className="mb-20 animate-fadeInUp">
                 {/* Series Header */}
                 <div className="text-center mb-12">
                   <h2 className="text-5xl font-black text-white mb-4">
@@ -608,9 +602,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
           })}
 
           {/* Contact Section */}
-          <div
-            className="text-center mt-20 animate-fadeInUp"
-          >
+          <div className="text-center mt-20 animate-fadeInUp">
             <div className="bg-gradient-to-r from-purple-600/20 via-indigo-600/20 to-orange-600/20 backdrop-blur-2xl rounded-3xl p-10 border border-white/30">
               <h3 className="text-4xl font-black text-white mb-6">Need Help Choosing?</h3>
               <p className="text-xl text-white/80 mb-8">

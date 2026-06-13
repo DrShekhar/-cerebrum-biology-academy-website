@@ -54,7 +54,6 @@ export async function POST(request: NextRequest) {
 
     // Optionally verify questions using Archana Ma'am
     if (validated.includeVerification && generationResult.questions.length > 0) {
-
       verificationResult = await archanaMaam.verifyBatch(generationResult.questions)
     }
 

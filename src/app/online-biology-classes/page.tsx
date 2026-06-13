@@ -213,8 +213,7 @@ export default function OnlineBiologyClassesPage() {
                 </Link>
               </div>
             </div>
-            <div className="relative hidden lg:block animate-fadeInUp"
-            >
+            <div className="relative hidden lg:block animate-fadeInUp">
               <div className="relative h-[400px] w-full overflow-hidden rounded-2xl shadow-2xl">
                 <Image
                   src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop"
@@ -258,7 +257,9 @@ export default function OnlineBiologyClassesPage() {
               { icon: Video, value: '500+', label: 'Video Hours' },
               { icon: Star, value: '5.0/5', label: 'Student Rating' },
             ].map((stat, index) => (
-              <div key={index} className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
+              <div
+                key={index}
+                className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
               >
                 <stat.icon className="mx-auto mb-3 h-10 w-10 text-[#4a5d4a]" />
                 <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
@@ -283,8 +284,7 @@ export default function OnlineBiologyClassesPage() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {classOptions.map((option, index) => (
-              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <div className={`mb-4 h-2 w-full rounded-full ${option.color}`} />
                 <h3 className="mb-2 text-2xl font-bold text-gray-900">{option.class}</h3>
                 <p className="mb-3 font-semibold text-[#4a5d4a]">{option.focus}</p>
@@ -362,8 +362,7 @@ export default function OnlineBiologyClassesPage() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {onlineFeatures.map((feature, index) => (
-              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <feature.icon className="mb-4 h-10 w-10 text-[#4a5d4a]" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
@@ -462,8 +461,7 @@ export default function OnlineBiologyClassesPage() {
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>

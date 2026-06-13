@@ -1,64 +1,69 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
+'use client'
 
-import { useState } from "react";
-import { SmartWhatsAppCTA } from "@/components/conversion/SmartWhatsAppCTA";
-import { VideoTestimonialsSection } from "@/components/testimonials/VideoTestimonialsSection";
-import { PricingSection, CostComparisonSection } from "@/components/city";
-import { RelatedCityLinks } from "@/components/seo/RelatedCityLinks";
+import { useState } from 'react'
+import { SmartWhatsAppCTA } from '@/components/conversion/SmartWhatsAppCTA'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import { PricingSection, CostComparisonSection } from '@/components/city'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 interface FAQItem {
-  id: string;
-  question: string;
-  answer: string;
+  id: string
+  question: string
+  answer: string
 }
 
 const faqData: FAQItem[] = [
   {
-        id: "0",
-        question: "Can NEET score help with Canadian medical school applications?",
-        answer: "NEET demonstrates science excellence valued by Canadian medical schools. Combined with Ontario curriculum achievements, it strengthens your medical school application profile."
-      },
-      {
-        id: "1",
-        question: "What time slots work for Toronto students?",
-        answer: "Toronto batches: 7 AM - 10 AM IST (9:30 PM - 12:30 AM EST previous day) or 9 PM - 12 AM IST (11:30 AM - 2:30 PM EST) for your convenience."
-      },
-      {
-        id: "2",
-        question: "How does NEET prepare me for Ontario high school science?",
-        answer: "NEET curriculum comprehensively covers biology and chemistry at deeper levels than Ontario HSC requirements, making high school science easier."
-      },
-      {
-        id: "3",
-        question: "Are there Canadian NRI specific study materials?",
-        answer: "Yes! Our Canadian batch gets Ontario-aligned MCQ sets, Canada-focused case studies, and medical pathway guidance for both India and Canada."
-      },
-      {
-        id: "4",
-        question: "What percentage of your Toronto students get into Indian medical colleges?",
-        answer: "92% of our Toronto students secure admission to top AIIMS/NIT medical colleges with average NEET score of 625+."
-      },
-      {
-        id: "5",
-        question: "Do you help with medical school pathway after NEET?",
-        answer: "Absolutely! We guide on pursuing MD in India, US residency via USMLE, or Canadian medical schools with bridge programs."
-      }
-];
+    id: '0',
+    question: 'Can NEET score help with Canadian medical school applications?',
+    answer:
+      'NEET demonstrates science excellence valued by Canadian medical schools. Combined with Ontario curriculum achievements, it strengthens your medical school application profile.',
+  },
+  {
+    id: '1',
+    question: 'What time slots work for Toronto students?',
+    answer:
+      'Toronto batches: 7 AM - 10 AM IST (9:30 PM - 12:30 AM EST previous day) or 9 PM - 12 AM IST (11:30 AM - 2:30 PM EST) for your convenience.',
+  },
+  {
+    id: '2',
+    question: 'How does NEET prepare me for Ontario high school science?',
+    answer:
+      'NEET curriculum comprehensively covers biology and chemistry at deeper levels than Ontario HSC requirements, making high school science easier.',
+  },
+  {
+    id: '3',
+    question: 'Are there Canadian NRI specific study materials?',
+    answer:
+      'Yes! Our Canadian batch gets Ontario-aligned MCQ sets, Canada-focused case studies, and medical pathway guidance for both India and Canada.',
+  },
+  {
+    id: '4',
+    question: 'What percentage of your Toronto students get into Indian medical colleges?',
+    answer:
+      '92% of our Toronto students secure admission to top AIIMS/NIT medical colleges with average NEET score of 625+.',
+  },
+  {
+    id: '5',
+    question: 'Do you help with medical school pathway after NEET?',
+    answer:
+      'Absolutely! We guide on pursuing MD in India, US residency via USMLE, or Canadian medical schools with bridge programs.',
+  },
+]
 
 export function PageContent() {
-  const [expandedFaq, setExpandedFaq] = useState<string | null>(null);
+  const [expandedFaq, setExpandedFaq] = useState<string | null>(null)
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            NEET Coaching in Toronto, Canada
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">NEET Coaching in Toronto, Canada</h1>
           <p className="text-xl mb-6 text-blue-100">
-            Expert NEET preparation with 98% success rate. Dr. Shekhar C Singh&apos;s proven methodology.
+            Expert NEET preparation with 98% success rate. Dr. Shekhar C Singh&apos;s proven
+            methodology.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -109,19 +114,22 @@ export function PageContent() {
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold mb-2">Expert Mentorship</h3>
               <p className="text-gray-700">
-                Learn directly from Dr. Shekhar C Singh with 20+ years of medical education expertise.
+                Learn directly from Dr. Shekhar C Singh with 20+ years of medical education
+                expertise.
               </p>
             </div>
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold mb-2">Localized Curriculum</h3>
               <p className="text-gray-700">
-                Toronto-specific content aligned with local education boards and timezone optimization.
+                Toronto-specific content aligned with local education boards and timezone
+                optimization.
               </p>
             </div>
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold mb-2">Community Support</h3>
               <p className="text-gray-700">
-                Join a vibrant Toronto community of NEET aspirants with peer mentorship and study groups.
+                Join a vibrant Toronto community of NEET aspirants with peer mentorship and study
+                groups.
               </p>
             </div>
             <div className="border-l-4 border-blue-600 pl-6">
@@ -185,10 +193,10 @@ export function PageContent() {
           <div className="bg-white border border-gray-200 rounded-lg p-8">
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <li key="0">Upper Canada College</li>
-                  <li key="1">Crescent School</li>
-                  <li key="2">Ridley College</li>
-                  <li key="3">St. Andrew&apos;s College</li>
-                  <li key="4">Havergal College</li>
+              <li key="1">Crescent School</li>
+              <li key="2">Ridley College</li>
+              <li key="3">St. Andrew&apos;s College</li>
+              <li key="4">Havergal College</li>
             </ul>
           </div>
         </div>
@@ -221,8 +229,8 @@ export function PageContent() {
       {/* WhatsApp CTA 2 */}
       <section className="py-8 px-4">
         <div className="max-w-6xl mx-auto">
-          <SmartWhatsAppCTA 
-            title="Still Have Questions?" 
+          <SmartWhatsAppCTA
+            title="Still Have Questions?"
             message="Chat with our counselors on WhatsApp for instant guidance"
           />
         </div>
@@ -236,16 +244,13 @@ export function PageContent() {
           </h2>
           <div className="max-w-3xl mx-auto space-y-4">
             {faqData.map((item) => (
-              <div
-                key={item.id}
-                className="border border-gray-200 rounded-lg"
-              >
+              <div key={item.id} className="border border-gray-200 rounded-lg">
                 <button
                   onClick={() => setExpandedFaq(expandedFaq === item.id ? null : item.id)}
                   className="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center"
                 >
                   {item.question}
-                  <span className="text-blue-600">{expandedFaq === item.id ? "-" : "+"}</span>
+                  <span className="text-blue-600">{expandedFaq === item.id ? '-' : '+'}</span>
                 </button>
                 {expandedFaq === item.id && (
                   <div className="px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
@@ -261,8 +266,8 @@ export function PageContent() {
       {/* WhatsApp CTA 3 */}
       <section className="py-8 px-4 bg-blue-50">
         <div className="max-w-6xl mx-auto">
-          <SmartWhatsAppCTA 
-            title="Ready to Start Your NEET Journey?" 
+          <SmartWhatsAppCTA
+            title="Ready to Start Your NEET Journey?"
             message="Book your free counseling session now"
             variant="highlight"
           />
@@ -280,11 +285,10 @@ export function PageContent() {
       {/* Final CTA */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Join Our Successful NEET Students
-          </h2>
+          <h2 className="text-3xl font-bold mb-4">Join Our Successful NEET Students</h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Start your preparation with India&apos;s most trusted NEET coaching. Limited seats available in Toronto batch.
+            Start your preparation with India&apos;s most trusted NEET coaching. Limited seats
+            available in Toronto batch.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -303,5 +307,5 @@ export function PageContent() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -22,11 +22,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'website',
     },
     twitter: {
-    card: 'summary_large_image',
-    title: '${className} ${planName} Plan | NEET Biology Coaching',
-    description: '${planName} coaching plan for ${className} students. Expert AIIMS faculty, comprehensive NEET preparation.',
-  },
-  alternates: {
+      card: 'summary_large_image',
+      title: '${className} ${planName} Plan | NEET Biology Coaching',
+      description:
+        '${planName} coaching plan for ${className} students. Expert AIIMS faculty, comprehensive NEET preparation.',
+    },
+    alternates: {
       canonical: `https://cerebrumbiologyacademy.com/courses/series/${resolvedParams.class}/plan-${resolvedParams.plan}`,
     },
   }

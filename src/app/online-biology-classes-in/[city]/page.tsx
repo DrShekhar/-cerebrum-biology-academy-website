@@ -134,9 +134,7 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
       <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-blue-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
-          <div
-            className="max-w-4xl animate-fadeInUp"
-          >
+          <div className="max-w-4xl animate-fadeInUp">
             <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <MapPin className="h-4 w-4" />
               {city.studentCount} Students from {city.name}
@@ -147,7 +145,9 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
             <p className="mb-8 text-xl text-green-100">{city.heroSubtitle}</p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20biology%20classes%20in.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20biology%20classes%20in.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg bg-yellow-500 px-8 py-3 font-semibold text-black shadow-lg transition hover:bg-yellow-400"
               >
                 <Play className="h-5 w-5" />
@@ -191,9 +191,7 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
       {/* Local Challenges */}
       <section className="bg-red-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Challenges {city.name} Students Face with Offline Coaching
             </h2>
@@ -219,9 +217,7 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
       {/* Why Online Solution */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Why Online Classes Work Better for {city.name}
             </h2>
@@ -245,9 +241,7 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
       {/* Top Schools */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">{city.name} Schools We Serve</h2>
             <p className="text-lg text-gray-600">
               Students from these top {city.name} schools trust us
@@ -271,9 +265,7 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
       {/* Online Features */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">What {city.name} Students Get</h2>
             <p className="text-lg text-gray-600">
               Complete online learning ecosystem for NEET success
@@ -282,10 +274,7 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {onlineFeatures.map((feature, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <feature.icon className="mb-4 h-10 w-10 text-green-600" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
@@ -298,18 +287,13 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
       {/* FAQs */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">FAQs for {city.name} Students</h2>
           </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
@@ -352,7 +336,9 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20biology%20classes%20in.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20biology%20classes%20in.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg bg-yellow-500 px-8 py-3 font-semibold text-black shadow-lg transition hover:bg-yellow-400"
               >
                 <Play className="h-5 w-5" />

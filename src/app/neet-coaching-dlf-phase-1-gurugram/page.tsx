@@ -31,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching for DLF Phase 1 Gurugram | 15 Min from Your Home',
-    description: 'Best NEET coaching near DLF Phase 1 Gurugram (Gurgaon). Just 15 min drive to M2K Sector 51. AIIMS faculty, 98% success rate. Evening & weekend batches for DLF residents. Call 88264-44334!',
+    description:
+      'Best NEET coaching near DLF Phase 1 Gurugram (Gurgaon). Just 15 min drive to M2K Sector 51. AIIMS faculty, 98% success rate. Evening & weekend batches for DLF residents. Call 88264-44334!',
   },
 }
 
@@ -74,7 +75,11 @@ export default function NEETCoachingDLFPhase1Gurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

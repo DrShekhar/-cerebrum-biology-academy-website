@@ -42,7 +42,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Fees in Ghaziabad 2026 | Compare Coaching Fees',
-    description: 'Compare NEET coaching fees in Ghaziabad 2026. Fee comparison of the 2nd-largest national NEET chain Indirapuram, Smart Achievers, Gyanmudra vs Cerebrum Biology Academy. Best value with small batche...',
+    description:
+      'Compare NEET coaching fees in Ghaziabad 2026. Fee comparison of the 2nd-largest national NEET chain Indirapuram, Smart Achievers, Gyanmudra vs Cerebrum Biology Academy. Best value with small batche...',
   },
 }
 
@@ -162,7 +163,11 @@ export default function NEETCoachingFeesGhaziabadPage() {
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <LocalBusinessSchema />
       <CerebrumPersonSchema
-        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+        knowsAbout={[
+          'NEET Ghaziabad',
+          'NEET Biology Ghaziabad',
+          'Medical entrance coaching Ghaziabad',
+        ]}
       />
       {/* Hero */}
       <section className="bg-gradient-to-br from-blue-700 to-blue-900 text-white py-16">
@@ -305,9 +310,7 @@ export default function NEETCoachingFeesGhaziabadPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-4">
-              What&apos;s Included in the Fee
-            </h2>
+            <h2 className="text-3xl font-bold text-center mb-4">What&apos;s Included in the Fee</h2>
             <p className="text-center text-gray-600 mb-12">
               No hidden charges. Everything you need for NEET Biology preparation.
             </p>
@@ -431,7 +434,9 @@ export default function NEETCoachingFeesGhaziabadPage() {
               Call Now: 99536-43938
             </a>
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition border border-white/30"
             >
               Book Free Demo

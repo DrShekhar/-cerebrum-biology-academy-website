@@ -72,10 +72,13 @@ export function GalleryPageContent() {
             setTotalCount(filtered.length)
             setHasMore(false)
             const catCounts = Object.entries(
-              fallbackGalleryItems.reduce((acc, i) => {
-                acc[i.category] = (acc[i.category] || 0) + 1
-                return acc
-              }, {} as Record<string, number>)
+              fallbackGalleryItems.reduce(
+                (acc, i) => {
+                  acc[i.category] = (acc[i.category] || 0) + 1
+                  return acc
+                },
+                {} as Record<string, number>
+              )
             ).map(([cat, count]) => ({
               value: cat,
               label: CATEGORY_CONFIG[cat]?.label || cat,

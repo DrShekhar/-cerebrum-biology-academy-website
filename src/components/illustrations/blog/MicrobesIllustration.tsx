@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function MicrobesIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -12,12 +12,7 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Background */}
       <rect x="10" y="10" width="380" height="280" rx="20" fill="#F0FDF4" />
 
@@ -27,9 +22,7 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
       </text>
 
       {/* Bacteria */}
-      <g
-        style={{ transformOrigin: '70px 100px' }}
-      >
+      <g style={{ transformOrigin: '70px 100px' }}>
         <ellipse cx="70" cy="100" rx="30" ry="18" fill="#93C5FD" stroke="#3B82F6" strokeWidth="2" />
         <line x1="40" y1="95" x2="25" y2="85" stroke="#3B82F6" strokeWidth="2" />
         <line x1="40" y1="105" x2="25" y2="115" stroke="#3B82F6" strokeWidth="2" />
@@ -44,8 +37,7 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
       </g>
 
       {/* Yeast */}
-      <g
-      >
+      <g>
         <ellipse
           cx="170"
           cy="100"
@@ -66,8 +58,7 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
       </g>
 
       {/* Virus */}
-      <g
-      >
+      <g>
         <polygon
           points="270,75 250,100 270,125 290,100"
           fill="#FCA5A5"
@@ -88,8 +79,7 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
       </g>
 
       {/* Mushroom */}
-      <g
-      >
+      <g>
         <ellipse cx="360" cy="95" rx="25" ry="12" fill="#F9A8D4" stroke="#EC4899" strokeWidth="2" />
         <rect
           x="352"
@@ -123,8 +113,7 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
         Applications in Human Welfare
       </text>
 
-      <g
-      >
+      <g>
         {/* Application boxes */}
         <rect x="45" y="210" width="75" height="55" rx="6" fill="#DBEAFE" />
         <text x="82" y="228" fontSize="7" fill="#1D4ED8" textAnchor="middle" fontWeight="bold">

@@ -61,7 +61,17 @@ function normalizeUrl(
   includeTrailingSlash: boolean = false
 ): string {
   // Default params to exclude (tracking & analytics)
-  const defaultExcludeParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'fbclid', 'ms_clkid', '_ga']
+  const defaultExcludeParams = [
+    'utm_source',
+    'utm_medium',
+    'utm_campaign',
+    'utm_content',
+    'utm_term',
+    'gclid',
+    'fbclid',
+    'ms_clkid',
+    '_ga',
+  ]
 
   const paramsToExclude = [...defaultExcludeParams, ...excludeParams]
 
@@ -111,12 +121,7 @@ export function CanonicalManager({
     }
 
     // Generate canonical URL
-    const normalizedPath = normalizeUrl(
-      pathname,
-      searchParams,
-      excludeParams,
-      includeTrailingSlash
-    )
+    const normalizedPath = normalizeUrl(pathname, searchParams, excludeParams, includeTrailingSlash)
 
     // Ensure domain has no trailing slash for concat
     const cleanDomain = domain.endsWith('/') ? domain.slice(0, -1) : domain
@@ -170,12 +175,7 @@ export function useCanonicalUrl(
     return overrideCanonical
   }
 
-  const normalizedPath = normalizeUrl(
-    pathname,
-    searchParams,
-    excludeParams,
-    includeTrailingSlash
-  )
+  const normalizedPath = normalizeUrl(pathname, searchParams, excludeParams, includeTrailingSlash)
 
   const cleanDomain = domain.endsWith('/') ? domain.slice(0, -1) : domain
 

@@ -70,7 +70,10 @@ export function SwipeableCourseCarousel({ courses, onCourseSelect }: CourseCarou
     setIsDragging(true)
   }
 
-  const handlePanEnd = (event: any, info: { offset: { x: number; y: number }; velocity: { x: number; y: number } }) => {
+  const handlePanEnd = (
+    event: any,
+    info: { offset: { x: number; y: number }; velocity: { x: number; y: number } }
+  ) => {
     setIsDragging(false)
     const threshold = 100
 
@@ -83,9 +86,7 @@ export function SwipeableCourseCarousel({ courses, onCourseSelect }: CourseCarou
 
   return (
     <div className="course-carousel-container relative overflow-hidden">
-      <div
-        className="course-carousel swipeable animate-fadeInUp"
-      >
+      <div className="course-carousel swipeable animate-fadeInUp">
         {courses.map((course, index) => (
           <div
             key={course.id}
@@ -394,13 +395,19 @@ export function PullToRefresh({
     }
   }
 
-  const handlePan = (event: any, info: { offset: { x: number; y: number }; velocity: { x: number; y: number } }) => {
+  const handlePan = (
+    event: any,
+    info: { offset: { x: number; y: number }; velocity: { x: number; y: number } }
+  ) => {
     if (!useNative && isPulling && info.offset.y > 0) {
       setPullDistance(Math.min(info.offset.y, 100))
     }
   }
 
-  const handlePanEnd = (event: any, info: { offset: { x: number; y: number }; velocity: { x: number; y: number } }) => {
+  const handlePanEnd = (
+    event: any,
+    info: { offset: { x: number; y: number }; velocity: { x: number; y: number } }
+  ) => {
     if (!useNative && isPulling) {
       if (pullDistance > 60) {
         onRefresh()
@@ -434,14 +441,7 @@ export function PullToRefresh({
         )}
       </div>
 
-      {useNative ? (
-        children
-      ) : (
-        <div
-         className="animate-fadeInUp">
-          {children}
-        </div>
-      )}
+      {useNative ? children : <div className="animate-fadeInUp">{children}</div>}
     </div>
   )
 }

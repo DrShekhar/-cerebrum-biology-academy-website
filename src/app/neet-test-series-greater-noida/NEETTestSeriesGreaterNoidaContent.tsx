@@ -133,10 +133,7 @@ export default function NEETTestSeriesGreaterNoidaContent({ faqs }: { faqs: FAQ[
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <Link
-                href="/neet-coaching-noida"
-                className="text-gray-600 hover:text-teal-600"
-              >
+              <Link href="/neet-coaching-noida" className="text-gray-600 hover:text-teal-600">
                 NEET Coaching Greater Noida
               </Link>
             </li>
@@ -169,8 +166,8 @@ export default function NEETTestSeriesGreaterNoidaContent({ faqs }: { faqs: FAQ[
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
               Comprehensive test series for Greater Noida students with detailed analysis, rank
-              prediction, and personalized improvement suggestions. Take tests online from home or at
-              our Sector 62, Noida center.
+              prediction, and personalized improvement suggestions. Take tests online from home or
+              at our Sector 62, Noida center.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -347,14 +344,18 @@ export default function NEETTestSeriesGreaterNoidaContent({ faqs }: { faqs: FAQ[
                     <Clock className="w-6 h-6 text-purple-600" />
                     <div>
                       <p className="font-semibold">Offline Tests</p>
-                      <p className="text-sm text-slate-500">Every Sunday, 9 AM - 12 PM at Sector 62, Noida</p>
+                      <p className="text-sm text-slate-500">
+                        Every Sunday, 9 AM - 12 PM at Sector 62, Noida
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
                     <BarChart3 className="w-6 h-6 text-purple-600" />
                     <div>
                       <p className="font-semibold">Online Tests</p>
-                      <p className="text-sm text-slate-500">48-hour window, take anytime from Greater Noida</p>
+                      <p className="text-sm text-slate-500">
+                        48-hour window, take anytime from Greater Noida
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -471,10 +472,7 @@ export default function NEETTestSeriesGreaterNoidaContent({ faqs }: { faqs: FAQ[
               <h3 className="font-semibold text-teal-600">Affordable Coaching</h3>
               <p className="text-sm text-gray-600">Budget-friendly options</p>
             </Link>
-            <Link
-              href="/neet-coaching-noida"
-              className="bg-white p-4 rounded-xl hover:shadow-md"
-            >
+            <Link href="/neet-coaching-noida" className="bg-white p-4 rounded-xl hover:shadow-md">
               <h3 className="font-semibold text-teal-600">Biology Classes Hub</h3>
               <p className="text-sm text-gray-600">All programs</p>
             </Link>

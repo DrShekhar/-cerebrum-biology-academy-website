@@ -14,21 +14,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The functional unit of a muscle fibre is called:",
-      "options": [
-        "Myofibril",
-        "Sarcolemma",
-        "Sarcoplasm",
-        "Sarcomere"
-      ],
+      "options": ["Myofibril", "Sarcolemma", "Sarcoplasm", "Sarcomere"],
       "correctAnswer": "D",
       "explanation": "The sarcomere is the functional (contractile) unit of a muscle fibre (myofibril). It extends from one Z-line to the next Z-line and contains one complete A-band and two half I-bands. During contraction, the sarcomere shortens.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sarcomere",
-        "muscle-fibre"
-      ],
+      "tags": ["sarcomere", "muscle-fibre"],
       "neetWeightage": "HIGH"
     },
     {
@@ -39,21 +31,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The thin filaments in a sarcomere are made up of:",
-      "options": [
-        "Actin, troponin, and tropomyosin",
-        "Collagen",
-        "Elastin",
-        "Myosin"
-      ],
+      "options": ["Actin, troponin, and tropomyosin", "Collagen", "Elastin", "Myosin"],
       "correctAnswer": "A",
       "explanation": "Thin filaments consist of two helical strands of F-actin (polymerized G-actin monomers), tropomyosin (running along the groove of actin helix), and troponin (a complex of three subunits: TnC, TnI, TnT) that regulate muscle contraction.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "thin-filaments",
-        "actin"
-      ],
+      "tags": ["thin-filaments", "actin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -64,21 +48,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The thick filaments of the sarcomere are composed of:",
-      "options": [
-        "Troponin",
-        "Myosin",
-        "Actin",
-        "Tropomyosin"
-      ],
+      "options": ["Troponin", "Myosin", "Actin", "Tropomyosin"],
       "correctAnswer": "B",
       "explanation": "Thick filaments are composed of the protein myosin. Each myosin molecule has a tail (meromyosin rod) and a head (heavy meromyosin/HMM) with ATPase activity. The myosin heads form cross-bridges with actin during muscle contraction.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "thick-filaments",
-        "myosin"
-      ],
+      "tags": ["thick-filaments", "myosin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -89,21 +65,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "During muscle contraction, which of the following bands does NOT change its length?",
-      "options": [
-        "A-band",
-        "Both I-band and H-zone",
-        "H-zone",
-        "I-band"
-      ],
+      "options": ["A-band", "Both I-band and H-zone", "H-zone", "I-band"],
       "correctAnswer": "A",
       "explanation": "According to the sliding filament theory, the A-band (dark band/anisotropic band) does NOT change its length during contraction because it represents the length of thick myosin filaments. The I-band and H-zone both decrease in length as thin filaments slide over thick filaments.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "A-band",
-        "sliding-filament"
-      ],
+      "tags": ["A-band", "sliding-filament"],
       "neetWeightage": "HIGH"
     },
     {
@@ -125,10 +93,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sliding-filament-theory",
-        "Huxley-Hanson"
-      ],
+      "tags": ["sliding-filament-theory", "Huxley-Hanson"],
       "neetWeightage": "HIGH"
     },
     {
@@ -139,22 +104,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "Ca2+ ions during muscle contraction bind to:",
-      "options": [
-        "Tropomyosin",
-        "Actin",
-        "Troponin (TnC subunit)",
-        "Myosin"
-      ],
+      "options": ["Tropomyosin", "Actin", "Troponin (TnC subunit)", "Myosin"],
       "correctAnswer": "C",
       "explanation": "When a nerve impulse reaches the muscle, Ca2+ is released from the sarcoplasmic reticulum. Ca2+ binds to the TnC (troponin C) subunit of troponin, causing a conformational change that moves tropomyosin away from the active binding sites on actin, allowing myosin cross-bridge formation.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "calcium",
-        "troponin",
-        "contraction"
-      ],
+      "tags": ["calcium", "troponin", "contraction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -165,21 +121,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The sarcoplasmic reticulum stores:",
-      "options": [
-        "K+ ions",
-        "Mg2+ ions",
-        "Ca2+ ions",
-        "Na+ ions"
-      ],
+      "options": ["K+ ions", "Mg2+ ions", "Ca2+ ions", "Na+ ions"],
       "correctAnswer": "C",
       "explanation": "The sarcoplasmic reticulum (SR) is a specialized smooth endoplasmic reticulum in muscle fibres that stores Ca2+ ions. Upon stimulation, Ca2+ is released from the SR into the sarcoplasm, triggering muscle contraction. Ca2+ is pumped back by Ca-ATPase during relaxation.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sarcoplasmic-reticulum",
-        "calcium"
-      ],
+      "tags": ["sarcoplasmic-reticulum", "calcium"],
       "neetWeightage": "HIGH"
     },
     {
@@ -190,21 +138,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The total number of bones in an adult human skeleton is:",
-      "options": [
-        "200",
-        "300",
-        "206",
-        "212"
-      ],
+      "options": ["200", "300", "206", "212"],
       "correctAnswer": "C",
       "explanation": "An adult human skeleton has 206 bones. It is divided into the axial skeleton (80 bones: skull, vertebral column, ribs, sternum) and the appendicular skeleton (126 bones: limbs, girdles).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "skeleton",
-        "bone-count"
-      ],
+      "tags": ["skeleton", "bone-count"],
       "neetWeightage": "HIGH"
     },
     {
@@ -215,21 +155,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The knee joint is an example of:",
-      "options": [
-        "Hinge joint",
-        "Gliding joint",
-        "Pivot joint",
-        "Ball and socket joint"
-      ],
+      "options": ["Hinge joint", "Gliding joint", "Pivot joint", "Ball and socket joint"],
       "correctAnswer": "A",
       "explanation": "The knee joint is a hinge joint (ginglymus) that allows movement in one plane only (flexion and extension). It is the largest and most complex joint in the body, connecting the femur to the tibia.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "knee-joint",
-        "hinge-joint"
-      ],
+      "tags": ["knee-joint", "hinge-joint"],
       "neetWeightage": "HIGH"
     },
     {
@@ -240,21 +172,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The shoulder joint is an example of:",
-      "options": [
-        "Saddle joint",
-        "Hinge joint",
-        "Ball and socket joint",
-        "Pivot joint"
-      ],
+      "options": ["Saddle joint", "Hinge joint", "Ball and socket joint", "Pivot joint"],
       "correctAnswer": "C",
       "explanation": "The shoulder joint (glenohumeral joint) is a ball and socket joint where the round head of the humerus fits into the glenoid cavity of the scapula. It allows movement in all planes (multiaxial), providing maximum range of motion.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "shoulder-joint",
-        "ball-and-socket"
-      ],
+      "tags": ["shoulder-joint", "ball-and-socket"],
       "neetWeightage": "HIGH"
     },
     {
@@ -265,22 +189,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The Z-line bisects the:",
-      "options": [
-        "H-zone",
-        "A-band",
-        "M-line",
-        "I-band"
-      ],
+      "options": ["H-zone", "A-band", "M-line", "I-band"],
       "correctAnswer": "D",
       "explanation": "The Z-line (Z-disc or Krause's membrane) bisects the I-band (isotropic/light band). It serves as the boundary of each sarcomere, where the thin (actin) filaments are anchored. The distance between two successive Z-lines represents one sarcomere.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Z-line",
-        "I-band",
-        "sarcomere"
-      ],
+      "tags": ["Z-line", "I-band", "sarcomere"],
       "neetWeightage": "HIGH"
     },
     {
@@ -291,21 +206,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The M-line is found in the centre of the:",
-      "options": [
-        "Z-line",
-        "I-band",
-        "Sarcomere only",
-        "A-band"
-      ],
+      "options": ["Z-line", "I-band", "Sarcomere only", "A-band"],
       "correctAnswer": "D",
       "explanation": "The M-line (Mittellinie) is a thin dark line in the centre of the A-band (and the H-zone). It holds the thick myosin filaments together and represents the midpoint of the sarcomere. It is formed by proteins like myomesin and M-protein.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "M-line",
-        "A-band"
-      ],
+      "tags": ["M-line", "A-band"],
       "neetWeightage": "HIGH"
     },
     {
@@ -327,10 +234,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "rigor-mortis",
-        "ATP"
-      ],
+      "tags": ["rigor-mortis", "ATP"],
       "neetWeightage": "HIGH"
     },
     {
@@ -341,21 +245,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The neurotransmitter released at the neuromuscular junction is:",
-      "options": [
-        "Serotonin",
-        "Norepinephrine",
-        "Dopamine",
-        "Acetylcholine"
-      ],
+      "options": ["Serotonin", "Norepinephrine", "Dopamine", "Acetylcholine"],
       "correctAnswer": "D",
       "explanation": "Acetylcholine (ACh) is the neurotransmitter released at the neuromuscular junction (motor end plate). It binds to nicotinic receptors on the sarcolemma, generating an action potential that travels along the muscle fibre and triggers contraction.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "acetylcholine",
-        "neuromuscular-junction"
-      ],
+      "tags": ["acetylcholine", "neuromuscular-junction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -366,21 +262,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The vertebral column in humans consists of how many vertebrae?",
-      "options": [
-        "26",
-        "36",
-        "33",
-        "30"
-      ],
+      "options": ["26", "36", "33", "30"],
       "correctAnswer": "A",
       "explanation": "The adult human vertebral column has 26 bones: 7 cervical + 12 thoracic + 5 lumbar + 1 sacrum (5 fused) + 1 coccyx (4 fused). During embryonic development there are 33 individual vertebrae, but in adults the sacral and coccygeal vertebrae fuse.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vertebral-column",
-        "vertebrae"
-      ],
+      "tags": ["vertebral-column", "vertebrae"],
       "neetWeightage": "HIGH"
     },
     {
@@ -402,10 +290,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "osteoporosis",
-        "disorders"
-      ],
+      "tags": ["osteoporosis", "disorders"],
       "neetWeightage": "HIGH"
     },
     {
@@ -427,11 +312,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gout",
-        "uric-acid",
-        "disorders"
-      ],
+      "tags": ["gout", "uric-acid", "disorders"],
       "neetWeightage": "HIGH"
     },
     {
@@ -442,21 +323,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The smallest bone in the human body is:",
-      "options": [
-        "Stapes",
-        "Incus",
-        "Hyoid",
-        "Malleus"
-      ],
+      "options": ["Stapes", "Incus", "Hyoid", "Malleus"],
       "correctAnswer": "A",
       "explanation": "The stapes (stirrup bone) in the middle ear is the smallest bone in the human body, measuring about 3 mm. It is one of the three ear ossicles (malleus, incus, stapes) that transmit sound vibrations from the eardrum to the inner ear.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stapes",
-        "smallest-bone"
-      ],
+      "tags": ["stapes", "smallest-bone"],
       "neetWeightage": "HIGH"
     },
     {
@@ -467,21 +340,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "Red (slow-twitch) muscle fibres contain high amounts of:",
-      "options": [
-        "Creatine phosphate",
-        "Myoglobin",
-        "Lactate dehydrogenase",
-        "Glycogen"
-      ],
+      "options": ["Creatine phosphate", "Myoglobin", "Lactate dehydrogenase", "Glycogen"],
       "correctAnswer": "B",
       "explanation": "Red (slow-twitch/Type I) muscle fibres contain high amounts of myoglobin (an oxygen-storing protein that gives them their red colour), many mitochondria, and high capillary density. They are adapted for sustained aerobic activities like posture maintenance.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "red-muscle-fibres",
-        "myoglobin"
-      ],
+      "tags": ["red-muscle-fibres", "myoglobin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -503,11 +368,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "atlas",
-        "axis",
-        "cervical"
-      ],
+      "tags": ["atlas", "axis", "cervical"],
       "neetWeightage": "HIGH"
     },
     {
@@ -529,11 +390,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pectoral-girdle",
-        "clavicle",
-        "scapula"
-      ],
+      "tags": ["pectoral-girdle", "clavicle", "scapula"],
       "neetWeightage": "HIGH"
     },
     {
@@ -555,12 +412,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pelvic-girdle",
-        "ilium",
-        "ischium",
-        "pubis"
-      ],
+      "tags": ["pelvic-girdle", "ilium", "ischium", "pubis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -582,10 +434,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "myasthenia-gravis",
-        "autoimmune"
-      ],
+      "tags": ["myasthenia-gravis", "autoimmune"],
       "neetWeightage": "HIGH"
     },
     {
@@ -596,21 +445,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The number of pairs of ribs in humans is:",
-      "options": [
-        "12",
-        "14",
-        "24",
-        "10"
-      ],
+      "options": ["12", "14", "24", "10"],
       "correctAnswer": "A",
       "explanation": "Humans have 12 pairs (24 total) of ribs. The first 7 pairs are true ribs (attached directly to sternum). Pairs 8-10 are false ribs (attached to sternum via 7th rib cartilage). Pairs 11-12 are floating ribs (not attached to sternum).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ribs",
-        "thoracic-cage"
-      ],
+      "tags": ["ribs", "thoracic-cage"],
       "neetWeightage": "HIGH"
     },
     {
@@ -621,22 +462,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "Which mineral is stored in bones and is essential for muscle contraction?",
-      "options": [
-        "Sodium",
-        "Calcium",
-        "Iron",
-        "Potassium"
-      ],
+      "options": ["Sodium", "Calcium", "Iron", "Potassium"],
       "correctAnswer": "B",
       "explanation": "Calcium is stored in bones as calcium phosphate (hydroxyapatite) and is essential for muscle contraction. When released from the sarcoplasmic reticulum, Ca2+ binds to troponin, initiating the sliding filament mechanism of muscle contraction.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "calcium",
-        "bone",
-        "muscle-contraction"
-      ],
+      "tags": ["calcium", "bone", "muscle-contraction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -658,10 +490,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "atlanto-occipital",
-        "condyloid-joint"
-      ],
+      "tags": ["atlanto-occipital", "condyloid-joint"],
       "neetWeightage": "HIGH"
     },
     {
@@ -683,10 +512,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscular-dystrophy",
-        "disorders"
-      ],
+      "tags": ["muscular-dystrophy", "disorders"],
       "neetWeightage": "HIGH"
     },
     {
@@ -708,10 +534,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "H-zone",
-        "sarcomere"
-      ],
+      "tags": ["H-zone", "sarcomere"],
       "neetWeightage": "HIGH"
     },
     {
@@ -722,22 +545,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The fibrous joint found between the flat bones of the skull is called:",
-      "options": [
-        "Gomphosis",
-        "Suture",
-        "Symphysis",
-        "Syndesmosis"
-      ],
+      "options": ["Gomphosis", "Suture", "Symphysis", "Syndesmosis"],
       "correctAnswer": "B",
       "explanation": "Sutures are fibrous joints found between the flat bones of the skull. They are immovable (synarthrotic) joints where the bones are joined by dense fibrous connective tissue. They allow bone growth during childhood and fuse in adulthood.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "suture",
-        "fibrous-joint",
-        "skull"
-      ],
+      "tags": ["suture", "fibrous-joint", "skull"],
       "neetWeightage": "HIGH"
     },
     {
@@ -759,10 +573,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tetany",
-        "hypocalcemia"
-      ],
+      "tags": ["tetany", "hypocalcemia"],
       "neetWeightage": "HIGH"
     },
     {
@@ -773,21 +584,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The joint between the radius and ulna is a:",
-      "options": [
-        "Hinge joint",
-        "Ball and socket joint",
-        "Pivot joint",
-        "Gliding joint"
-      ],
+      "options": ["Hinge joint", "Ball and socket joint", "Pivot joint", "Gliding joint"],
       "correctAnswer": "C",
       "explanation": "The proximal radioulnar joint is a pivot joint where the head of the radius rotates within the radial notch of the ulna. This allows pronation and supination (rotation) of the forearm.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pivot-joint",
-        "radius-ulna"
-      ],
+      "tags": ["pivot-joint", "radius-ulna"],
       "neetWeightage": "HIGH"
     },
     {
@@ -798,21 +601,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The longest bone in the human body is:",
-      "options": [
-        "Fibula",
-        "Tibia",
-        "Femur",
-        "Humerus"
-      ],
+      "options": ["Fibula", "Tibia", "Femur", "Humerus"],
       "correctAnswer": "C",
       "explanation": "The femur (thigh bone) is the longest and strongest bone in the human body. It articulates with the acetabulum of the pelvic girdle (hip joint) proximally and with the tibia at the knee joint distally.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "femur",
-        "longest-bone"
-      ],
+      "tags": ["femur", "longest-bone"],
       "neetWeightage": "HIGH"
     },
     {
@@ -834,10 +629,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "smooth-muscles",
-        "visceral"
-      ],
+      "tags": ["smooth-muscles", "visceral"],
       "neetWeightage": "HIGH"
     },
     {
@@ -859,10 +651,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "osteoarthritis",
-        "cartilage-degeneration"
-      ],
+      "tags": ["osteoarthritis", "cartilage-degeneration"],
       "neetWeightage": "HIGH"
     },
     {
@@ -873,21 +662,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The synovial fluid in movable joints is secreted by:",
-      "options": [
-        "Ligaments",
-        "Synovial membrane",
-        "Articular cartilage",
-        "Periosteum"
-      ],
+      "options": ["Ligaments", "Synovial membrane", "Articular cartilage", "Periosteum"],
       "correctAnswer": "B",
       "explanation": "Synovial fluid is secreted by the synovial membrane that lines the inner surface of the joint capsule (except at articular cartilage surfaces). It lubricates the joint, reduces friction, provides nutrients to articular cartilage, and acts as a shock absorber.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "synovial-fluid",
-        "synovial-membrane"
-      ],
+      "tags": ["synovial-fluid", "synovial-membrane"],
       "neetWeightage": "HIGH"
     },
     {
@@ -909,10 +690,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ATP",
-        "muscle-contraction"
-      ],
+      "tags": ["ATP", "muscle-contraction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -923,21 +701,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The number of bones in the human skull is:",
-      "options": [
-        "14",
-        "22",
-        "8",
-        "29"
-      ],
+      "options": ["14", "22", "8", "29"],
       "correctAnswer": "B",
       "explanation": "The human skull has 22 bones: 8 cranial bones (frontal, 2 parietal, 2 temporal, occipital, sphenoid, ethmoid) and 14 facial bones. Additionally, there are 6 ear ossicles (3 in each ear) and 1 hyoid bone in the neck.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "skull",
-        "bones"
-      ],
+      "tags": ["skull", "bones"],
       "neetWeightage": "HIGH"
     },
     {
@@ -959,10 +729,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sarcolemma",
-        "muscle-fibre"
-      ],
+      "tags": ["sarcolemma", "muscle-fibre"],
       "neetWeightage": "HIGH"
     },
     {
@@ -984,10 +751,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sliding-filament",
-        "bands"
-      ],
+      "tags": ["sliding-filament", "bands"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1009,10 +773,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "calcium",
-        "muscle-contraction"
-      ],
+      "tags": ["calcium", "muscle-contraction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1034,10 +795,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "skeletal-muscles",
-        "voluntary"
-      ],
+      "tags": ["skeletal-muscles", "voluntary"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1059,10 +817,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cardiac-muscle",
-        "fatigue"
-      ],
+      "tags": ["cardiac-muscle", "fatigue"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1084,10 +839,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "osteoporosis",
-        "estrogen"
-      ],
+      "tags": ["osteoporosis", "estrogen"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1109,10 +861,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "skull",
-        "cranial-facial-bones"
-      ],
+      "tags": ["skull", "cranial-facial-bones"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1134,10 +883,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tendons",
-        "ligaments"
-      ],
+      "tags": ["tendons", "ligaments"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1159,10 +905,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "axial-skeleton",
-        "bones"
-      ],
+      "tags": ["axial-skeleton", "bones"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1184,10 +927,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "myosin-ATPase",
-        "cross-bridge"
-      ],
+      "tags": ["myosin-ATPase", "cross-bridge"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1209,10 +949,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "floating-ribs",
-        "thoracic-cage"
-      ],
+      "tags": ["floating-ribs", "thoracic-cage"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1234,10 +971,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "rheumatoid-arthritis",
-        "autoimmune"
-      ],
+      "tags": ["rheumatoid-arthritis", "autoimmune"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1259,10 +993,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sliding-filament",
-        "changes"
-      ],
+      "tags": ["sliding-filament", "changes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1284,10 +1015,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscle-types",
-        "properties"
-      ],
+      "tags": ["muscle-types", "properties"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1309,10 +1037,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscle-contraction",
-        "steps"
-      ],
+      "tags": ["muscle-contraction", "steps"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1334,10 +1059,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "joint-types",
-        "classification"
-      ],
+      "tags": ["joint-types", "classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1348,21 +1070,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "Consider the following about the components of a sarcomere:\n(i) Z-line forms the boundary.\n(ii) The A-band is the dark band containing thick filaments.\n(iii) The I-band is the light band containing only thin filaments.\n(iv) The H-zone contains only thick filaments.\nHow many are correct?",
-      "options": [
-        "One",
-        "Two",
-        "Four",
-        "Three"
-      ],
+      "options": ["One", "Two", "Four", "Three"],
       "correctAnswer": "C",
       "explanation": "All four statements are correct. The Z-line demarcates sarcomere boundaries (i). The A-band (anisotropic) is dark, containing thick filaments with overlapping thin filaments (ii). The I-band (isotropic) is light, with only thin filaments (iii). The H-zone is the central part of A-band with only thick filaments (iv).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sarcomere",
-        "components"
-      ],
+      "tags": ["sarcomere", "components"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1373,21 +1087,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "Which of the following statements about disorders of the skeletal/muscular system is/are INCORRECT?\n(i) Myasthenia gravis is caused by deficiency of acetylcholine.\n(ii) Gout results from deposition of calcium crystals in joints.\n(iii) Osteoarthritis involves degeneration of articular cartilage.\n(iv) Muscular dystrophy is a genetic disorder.",
-      "options": [
-        "(i) only",
-        "(iii) and (iv)",
-        "(i) and (ii) only",
-        "(ii) and (iii)"
-      ],
+      "options": ["(i) only", "(iii) and (iv)", "(i) and (ii) only", "(ii) and (iii)"],
       "correctAnswer": "C",
       "explanation": "Statements (i) and (ii) are incorrect. Myasthenia gravis is caused by autoimmune destruction of ACh RECEPTORS, not deficiency of ACh itself. Gout is caused by URIC ACID crystals (not calcium). Statements (iii) and (iv) are correct.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "incorrect-statements"
-      ],
+      "tags": ["disorders", "incorrect-statements"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1409,10 +1115,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vertebral-column",
-        "intervertebral-discs"
-      ],
+      "tags": ["vertebral-column", "intervertebral-discs"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1434,10 +1137,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "red-white-fibres",
-        "comparison"
-      ],
+      "tags": ["red-white-fibres", "comparison"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1459,11 +1159,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ATP",
-        "muscle-contraction",
-        "roles"
-      ],
+      "tags": ["ATP", "muscle-contraction", "roles"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1485,10 +1181,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "joint-types",
-        "examples"
-      ],
+      "tags": ["joint-types", "examples"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1510,10 +1203,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sarcomere",
-        "components"
-      ],
+      "tags": ["sarcomere", "components"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1535,10 +1225,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "causes"
-      ],
+      "tags": ["disorders", "causes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1560,10 +1247,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscle-proteins",
-        "roles"
-      ],
+      "tags": ["muscle-proteins", "roles"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1585,10 +1269,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bones",
-        "location"
-      ],
+      "tags": ["bones", "location"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1610,10 +1291,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vertebrae",
-        "counts"
-      ],
+      "tags": ["vertebrae", "counts"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1624,21 +1302,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "Match the muscle type with its characteristics:\n(P) Skeletal muscle - (1) Striated, involuntary, intercalated discs\n(Q) Cardiac muscle - (2) Striated, voluntary, multinucleated\n(R) Smooth muscle - (3) Non-striated, involuntary, spindle-shaped",
-      "options": [
-        "P-3, Q-1, R-2",
-        "P-2, Q-3, R-1",
-        "P-1, Q-2, R-3",
-        "P-2, Q-1, R-3"
-      ],
+      "options": ["P-3, Q-1, R-2", "P-2, Q-3, R-1", "P-1, Q-2, R-3", "P-2, Q-1, R-3"],
       "correctAnswer": "D",
       "explanation": "Skeletal muscle is striated, voluntary, multinucleated (P-2). Cardiac muscle is striated, involuntary, with intercalated discs (Q-1). Smooth muscle is non-striated, involuntary, spindle-shaped (R-3).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscle-types",
-        "characteristics"
-      ],
+      "tags": ["muscle-types", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1649,21 +1319,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "Match the rib type with its pair numbers:\n(P) True ribs - (1) Pairs 11-12\n(Q) False ribs - (2) Pairs 1-7\n(R) Floating ribs - (3) Pairs 8-10",
-      "options": [
-        "P-2, Q-1, R-3",
-        "P-1, Q-2, R-3",
-        "P-3, Q-1, R-2",
-        "P-2, Q-3, R-1"
-      ],
+      "options": ["P-2, Q-1, R-3", "P-1, Q-2, R-3", "P-3, Q-1, R-2", "P-2, Q-3, R-1"],
       "correctAnswer": "D",
       "explanation": "True ribs are pairs 1-7, directly attached to sternum via costal cartilages (P-2). False ribs are pairs 8-10, attached to sternum indirectly via 7th rib cartilage (Q-3). Floating ribs are pairs 11-12, not attached to sternum (R-1).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ribs",
-        "types"
-      ],
+      "tags": ["ribs", "types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1685,10 +1347,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "girdles",
-        "bones"
-      ],
+      "tags": ["girdles", "bones"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1710,10 +1369,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscle-terminology",
-        "definitions"
-      ],
+      "tags": ["muscle-terminology", "definitions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1724,21 +1380,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "How many bones are there in the axial skeleton of an adult human?",
-      "options": [
-        "206",
-        "126",
-        "60",
-        "80"
-      ],
+      "options": ["206", "126", "60", "80"],
       "correctAnswer": "D",
       "explanation": "The axial skeleton has 80 bones: skull (22 bones + 1 hyoid + 6 ear ossicles = 29), vertebral column (26 bones), sternum (1 bone), and ribs (24 bones). 29 + 26 + 1 + 24 = 80 bones.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "axial-skeleton",
-        "bone-count"
-      ],
+      "tags": ["axial-skeleton", "bone-count"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1749,21 +1397,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "How many bones are there in the appendicular skeleton?",
-      "options": [
-        "106",
-        "80",
-        "206",
-        "126"
-      ],
+      "options": ["106", "80", "206", "126"],
       "correctAnswer": "D",
       "explanation": "The appendicular skeleton has 126 bones: pectoral girdle (4: 2 clavicles + 2 scapulae), upper limbs (60: 2x30), pelvic girdle (2 hip bones), and lower limbs (60: 2x30). 4 + 60 + 2 + 60 = 126 bones.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "appendicular-skeleton",
-        "bone-count"
-      ],
+      "tags": ["appendicular-skeleton", "bone-count"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1774,21 +1414,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "How many of the following are types of synovial joints?\n(a) Ball and socket (b) Hinge (c) Pivot (d) Gliding (e) Saddle (f) Condyloid (ellipsoidal)",
-      "options": [
-        "Four",
-        "Three",
-        "Six",
-        "Five"
-      ],
+      "options": ["Four", "Three", "Six", "Five"],
       "correctAnswer": "C",
       "explanation": "All six are types of synovial (freely movable) joints: (a) Ball and socket (shoulder, hip), (b) Hinge (knee, elbow), (c) Pivot (atlas-axis), (d) Gliding (carpals, vertebral facets), (e) Saddle (thumb base), and (f) Condyloid/ellipsoidal (wrist, atlas-occipital).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "synovial-joints",
-        "types"
-      ],
+      "tags": ["synovial-joints", "types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1799,21 +1431,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "How many cervical vertebrae are present in humans?",
-      "options": [
-        "4",
-        "12",
-        "7",
-        "5"
-      ],
+      "options": ["4", "12", "7", "5"],
       "correctAnswer": "C",
       "explanation": "Humans have 7 cervical vertebrae (C1-C7), which is the same number found in almost all mammals (including giraffes). The first cervical vertebra is the atlas and the second is the axis.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cervical-vertebrae",
-        "number"
-      ],
+      "tags": ["cervical-vertebrae", "number"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1824,21 +1448,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "How many of the following are proteins found in thin filaments?\n(a) Actin (b) Myosin (c) Troponin (d) Tropomyosin (e) Titin (f) Nebulin",
-      "options": [
-        "Three",
-        "Four",
-        "Five",
-        "Two"
-      ],
+      "options": ["Three", "Four", "Five", "Two"],
       "correctAnswer": "A",
       "explanation": "Three proteins are found in thin filaments: (a) Actin (forms the backbone), (c) Troponin (regulatory protein complex), and (d) Tropomyosin (regulatory, blocks binding sites). Myosin (b) is in thick filaments. Titin (e) connects thick filaments to Z-line. Nebulin (f) is associated with thin filaments but is not a core component in the standard NCERT description.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "thin-filaments",
-        "proteins"
-      ],
+      "tags": ["thin-filaments", "proteins"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1849,21 +1465,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "How many cranial bones are there in the human skull?",
-      "options": [
-        "22",
-        "14",
-        "8",
-        "6"
-      ],
+      "options": ["22", "14", "8", "6"],
       "correctAnswer": "C",
       "explanation": "The human skull has 8 cranial bones: 1 frontal, 2 parietal, 2 temporal, 1 occipital, 1 sphenoid, and 1 ethmoid. These form the cranium that protects the brain.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cranial-bones",
-        "skull"
-      ],
+      "tags": ["cranial-bones", "skull"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1874,21 +1482,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "How many of the following are skeletal/muscular disorders?\n(a) Myasthenia gravis (b) Muscular dystrophy (c) Tetany (d) Gout (e) Osteoporosis (f) Osteoarthritis (g) Rheumatoid arthritis",
-      "options": [
-        "Seven",
-        "Five",
-        "Six",
-        "Four"
-      ],
+      "options": ["Seven", "Five", "Six", "Four"],
       "correctAnswer": "A",
       "explanation": "All seven are skeletal/muscular disorders: myasthenia gravis (autoimmune NMJ), muscular dystrophy (genetic muscle wasting), tetany (Ca2+ imbalance), gout (uric acid in joints), osteoporosis (bone loss), osteoarthritis (cartilage degeneration), rheumatoid arthritis (autoimmune joint inflammation).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "counting"
-      ],
+      "tags": ["disorders", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1910,10 +1510,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscle-contraction",
-        "sequence"
-      ],
+      "tags": ["muscle-contraction", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1935,10 +1532,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cross-bridge-cycle",
-        "sequence"
-      ],
+      "tags": ["cross-bridge-cycle", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1960,11 +1554,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "upper-limb",
-        "bones",
-        "sequence"
-      ],
+      "tags": ["upper-limb", "bones", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1986,10 +1576,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vertebral-column",
-        "regions"
-      ],
+      "tags": ["vertebral-column", "regions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2011,10 +1598,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscle-relaxation",
-        "sequence"
-      ],
+      "tags": ["muscle-relaxation", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2036,11 +1620,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lower-limb",
-        "bones",
-        "sequence"
-      ],
+      "tags": ["lower-limb", "bones", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2062,10 +1642,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscle-organization",
-        "hierarchy"
-      ],
+      "tags": ["muscle-organization", "hierarchy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2076,22 +1653,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The protein that masks the active binding sites on actin filaments is:",
-      "options": [
-        "Myosin",
-        "Tropomyosin",
-        "Meromyosin",
-        "Troponin"
-      ],
+      "options": ["Myosin", "Tropomyosin", "Meromyosin", "Troponin"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, tropomyosin is a protein that lies along the groove of F-actin filaments and masks the active binding sites for myosin. When calcium ions bind to troponin, tropomyosin moves, exposing the active sites for cross-bridge formation.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscle-contraction",
-        "tropomyosin",
-        "actin"
-      ],
+      "tags": ["muscle-contraction", "tropomyosin", "actin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2102,22 +1670,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The number of bones in the adult human skeleton is:",
-      "options": [
-        "200",
-        "206",
-        "210",
-        "218"
-      ],
+      "options": ["200", "206", "210", "218"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the adult human skeleton consists of 206 bones. These are divided into the axial skeleton (80 bones \u2014 skull, vertebral column, ribs, sternum) and the appendicular skeleton (126 bones \u2014 limbs and girdles).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "skeletal-system",
-        "bones",
-        "human-skeleton"
-      ],
+      "tags": ["skeletal-system", "bones", "human-skeleton"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2128,22 +1687,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "Which of the following is a ball and socket joint?",
-      "options": [
-        "Knee joint",
-        "Elbow joint",
-        "Hip joint",
-        "Atlas-axis joint"
-      ],
+      "options": ["Knee joint", "Elbow joint", "Hip joint", "Atlas-axis joint"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, ball and socket joints allow movement in all directions. The hip joint and shoulder joint are examples. Knee and elbow are hinge joints (movement in one plane), and the atlas-axis is a pivot joint.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "joints",
-        "ball-socket",
-        "hip-joint"
-      ],
+      "tags": ["joints", "ball-socket", "hip-joint"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2165,11 +1715,7 @@
       "difficulty": "HARD",
       "isNcertBased": false,
       "isNeetImportant": true,
-      "tags": [
-        "muscle-contraction",
-        "rigor-mortis",
-        "atp"
-      ],
+      "tags": ["muscle-contraction", "rigor-mortis", "atp"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2191,11 +1737,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "gout",
-        "uric-acid"
-      ],
+      "tags": ["disorders", "gout", "uric-acid"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2206,22 +1748,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The smallest bone in the human body is:",
-      "options": [
-        "Malleus",
-        "Incus",
-        "Stapes",
-        "Hyoid"
-      ],
+      "options": ["Malleus", "Incus", "Stapes", "Hyoid"],
       "correctAnswer": "C",
       "explanation": "The stapes (stirrup) is the smallest bone in the human body, located in the middle ear. The three ear ossicles (malleus, incus, and stapes) transmit sound vibrations from the tympanic membrane to the inner ear.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "skeletal-system",
-        "stapes",
-        "ear-ossicles"
-      ],
+      "tags": ["skeletal-system", "stapes", "ear-ossicles"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2243,11 +1776,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscle-contraction",
-        "calcium",
-        "troponin"
-      ],
+      "tags": ["muscle-contraction", "calcium", "troponin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2269,11 +1798,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "osteoporosis",
-        "bone"
-      ],
+      "tags": ["disorders", "osteoporosis", "bone"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2295,11 +1820,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sarcomere",
-        "h-zone",
-        "myosin"
-      ],
+      "tags": ["sarcomere", "h-zone", "myosin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2321,11 +1842,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscle-types",
-        "smooth-muscle",
-        "involuntary"
-      ],
+      "tags": ["muscle-types", "smooth-muscle", "involuntary"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2347,11 +1864,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "skeletal-system",
-        "pectoral-girdle",
-        "clavicle-scapula"
-      ],
+      "tags": ["skeletal-system", "pectoral-girdle", "clavicle-scapula"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2373,11 +1886,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "neuromuscular",
-        "motor-unit",
-        "innervation"
-      ],
+      "tags": ["neuromuscular", "motor-unit", "innervation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2388,22 +1897,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "During muscle contraction, which of the following bands remains unchanged in length?",
-      "options": [
-        "I-band",
-        "A-band",
-        "H-zone",
-        "Sarcomere"
-      ],
+      "options": ["I-band", "A-band", "H-zone", "Sarcomere"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, during muscle contraction, the A-band (dark band, containing myosin) does not change in length. The I-band (light band), H-zone, and overall sarcomere length all decrease as thin actin filaments slide over thick myosin filaments.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscle-contraction",
-        "a-band",
-        "sliding-filament"
-      ],
+      "tags": ["muscle-contraction", "a-band", "sliding-filament"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2425,11 +1925,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "myasthenia-gravis",
-        "autoimmune"
-      ],
+      "tags": ["disorders", "myasthenia-gravis", "autoimmune"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2451,11 +1947,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "joints",
-        "gliding-joint",
-        "carpals"
-      ],
+      "tags": ["joints", "gliding-joint", "carpals"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2477,12 +1969,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "tetany",
-        "calcium",
-        "muscle"
-      ],
+      "tags": ["disorders", "tetany", "calcium", "muscle"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2493,22 +1980,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The vertebral column in humans consists of how many vertebrae?",
-      "options": [
-        "24",
-        "26",
-        "30",
-        "33"
-      ],
+      "options": ["24", "26", "30", "33"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the human vertebral column consists of 26 vertebrae: 7 cervical, 12 thoracic, 5 lumbar, 1 sacral (5 fused), and 1 coccygeal (4 fused). The original count is 33 but sacral and coccygeal fuse to form 2 bones.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "skeletal-system",
-        "vertebral-column",
-        "vertebrae"
-      ],
+      "tags": ["skeletal-system", "vertebral-column", "vertebrae"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2519,22 +1997,13 @@
       "ncertChapter": 20,
       "ncertChapterName": "Locomotion and Movement",
       "question": "The neurotransmitter released at the neuromuscular junction is:",
-      "options": [
-        "Norepinephrine",
-        "Acetylcholine",
-        "Dopamine",
-        "Serotonin"
-      ],
+      "options": ["Norepinephrine", "Acetylcholine", "Dopamine", "Serotonin"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, acetylcholine (ACh) is the neurotransmitter released at the neuromuscular junction. When a nerve impulse reaches the motor end plate, ACh is released into the synaptic cleft, causing depolarisation of the muscle fibre and initiating contraction.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "neuromuscular-junction",
-        "acetylcholine",
-        "neurotransmitter"
-      ],
+      "tags": ["neuromuscular-junction", "acetylcholine", "neurotransmitter"],
       "neetWeightage": "HIGH"
     }
   ]

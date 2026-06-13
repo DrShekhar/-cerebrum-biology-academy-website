@@ -141,9 +141,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
     <div className={`py-20 bg-gradient-to-br from-slate-50 to-blue-50 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div
-          className="text-center mb-16 animate-fadeInUp"
-        >
+        <div className="text-center mb-16 animate-fadeInUp">
           <div className="inline-flex items-center gap-2 bg-indigo-100 border border-blue-200 rounded-full px-6 py-3 mb-6">
             <BookOpen className="h-6 w-6 text-blue-600" />
             <span className="font-semibold text-blue-800">Harvard-Stanford Caliber Curriculum</span>
@@ -189,7 +187,8 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
             <div
               key={module.id}
               onClick={() => setSelectedModule(selectedModule === module.id ? null : module.id)}
-             className="animate-fadeInUp">
+              className="animate-fadeInUp"
+            >
               <PremiumCard
                 variant="hover"
                 size="lg"
@@ -261,29 +260,25 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
                   </div>
 
                   {/* Expanded Content */}
-{selectedModule === module.id && (
-                      <div
-                        className="border-t pt-6 space-y-4 animate-fadeInUp"
-                      >
-                        <div className="bg-gray-50 rounded-lg p-4">
-                          <h4 className="font-semibold text-gray-900 mb-2">
-                            Key Learning Outcomes
-                          </h4>
-                          <ul className="text-sm text-gray-700 space-y-1">
-                            <li>• Master fundamental concepts with research-grade depth</li>
-                            <li>• Analyze current scientific literature and methodologies</li>
-                            <li>• Apply knowledge to NEET and AIIMS question patterns</li>
-                            <li>• Develop critical thinking for medical entrance success</li>
-                          </ul>
-                        </div>
-
-                        <PremiumButton variant="medical" size="md" className="w-full">
-                          <Play className="h-5 w-5 mr-2" />
-                          Start Learning Journey
-                        </PremiumButton>
+                  {selectedModule === module.id && (
+                    <div className="border-t pt-6 space-y-4 animate-fadeInUp">
+                      <div className="bg-gray-50 rounded-lg p-4">
+                        <h4 className="font-semibold text-gray-900 mb-2">Key Learning Outcomes</h4>
+                        <ul className="text-sm text-gray-700 space-y-1">
+                          <li>• Master fundamental concepts with research-grade depth</li>
+                          <li>• Analyze current scientific literature and methodologies</li>
+                          <li>• Apply knowledge to NEET and AIIMS question patterns</li>
+                          <li>• Develop critical thinking for medical entrance success</li>
+                        </ul>
                       </div>
-                    )}
-</div>
+
+                      <PremiumButton variant="medical" size="md" className="w-full">
+                        <Play className="h-5 w-5 mr-2" />
+                        Start Learning Journey
+                      </PremiumButton>
+                    </div>
+                  )}
+                </div>
               </PremiumCard>
             </div>
           ))}
@@ -291,9 +286,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
 
         {/* Research Integration Section */}
         {viewMode === 'research' && (
-          <div
-            className="mb-16 animate-fadeInUp"
-          >
+          <div className="mb-16 animate-fadeInUp">
             <PremiumCard variant="luxury" size="xl">
               <div className="text-center mb-8">
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
@@ -325,9 +318,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
         )}
 
         {/* Faculty Excellence Section */}
-        <div
-          className="text-center animate-fadeInUp"
-        >
+        <div className="text-center animate-fadeInUp">
           <PremiumCard variant="premium" size="xl" className="bg-gray-50">
             <div className="space-y-8">
               <div>

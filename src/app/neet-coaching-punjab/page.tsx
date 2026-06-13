@@ -70,7 +70,7 @@ const features = [
   {
     icon: Home,
     title: 'Study From Home',
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-punjab' },
+    alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-punjab' },
     description: 'No need to relocate to Chandigarh or Kota. Same quality coaching from your city.',
   },
   {
@@ -292,9 +292,7 @@ export default function NEETCoachingPunjabPage() {
       <section className="relative bg-gradient-to-br from-[#1e3a5f] via-[#2d5a87] to-[#3d7ab5] text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2" />
               Punjab State | No Relocation Needed
@@ -310,8 +308,8 @@ export default function NEETCoachingPunjabPage() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Premium online NEET Biology coaching for Punjab students. No need to relocate to
-              Chandigarh or Kota. AIIMS faculty, 98% success rate. Target DMC Ludhiana, GMC Amritsar,
-              GMC Patiala from your home!
+              Chandigarh or Kota. AIIMS faculty, 98% success rate. Target DMC Ludhiana, GMC
+              Amritsar, GMC Patiala from your home!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -324,7 +322,11 @@ export default function NEETCoachingPunjabPage() {
                 <MessageCircle className="w-6 h-6" />
                 <span>WhatsApp Us Now</span>
               </Button>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20punjab.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20punjab.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -419,9 +421,7 @@ export default function NEETCoachingPunjabPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {punjabCities.map((city, index) => (
               <Link href={city.url} key={city.name}>
-                <div
-                  className="bg-gray-50 rounded-xl p-6 hover:shadow-xl transition-all hover:-translate-y-1 border-2 border-transparent hover:border-[#1e3a5f] animate-fadeInUp"
-                >
+                <div className="bg-gray-50 rounded-xl p-6 hover:shadow-xl transition-all hover:-translate-y-1 border-2 border-transparent hover:border-[#1e3a5f] animate-fadeInUp">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-bold text-gray-900">{city.name}</h3>
                     <MapPin className="w-5 h-5 text-[#1e3a5f]" />
@@ -472,7 +472,9 @@ export default function NEETCoachingPunjabPage() {
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Target These Medical Colleges
             </h2>
-            <p className="text-lg text-gray-600">Punjab and nearby medical colleges for NEET 2026</p>
+            <p className="text-lg text-gray-600">
+              Punjab and nearby medical colleges for NEET 2026
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -586,8 +588,7 @@ export default function NEETCoachingPunjabPage() {
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-[#1e3a5f] via-[#2d5a87] to-[#3d7ab5] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Ready to Crack NEET from Punjab?
             </h2>
@@ -604,7 +605,11 @@ export default function NEETCoachingPunjabPage() {
                 <MessageCircle className="w-6 h-6" />
                 <span>WhatsApp Us Now</span>
               </Button>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20punjab.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20punjab.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

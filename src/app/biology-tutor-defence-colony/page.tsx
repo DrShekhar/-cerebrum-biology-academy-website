@@ -34,7 +34,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biology Tutor in Defence Colony Delhi | NEET & CBSE Coaching',
-    description: 'Best Biology tutor for Defence Colony, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET coaching with 67+ AIIMS selections. Transfer-friendly for defence families. Expert NEET & CBSE Bio...',
+    description:
+      'Best Biology tutor for Defence Colony, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET coaching with 67+ AIIMS selections. Transfer-friendly for defence families. Expert NEET & CBSE Bio...',
   },
 }
 
@@ -44,8 +45,15 @@ export default function BiologyTutorDefenceColonyPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/biology-tutor-defence-colony"
         pageName="Biology Tutor in Defence Colony"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
-        personKnowsAbout={['NEET Defence Colony', 'NEET Biology Defence Colony', 'Medical entrance coaching Defence Colony']}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
+        personKnowsAbout={[
+          'NEET Defence Colony',
+          'NEET Biology Defence Colony',
+          'Medical entrance coaching Defence Colony',
+        ]}
       />
       <LocalitySchema
         locality="Defence Colony"

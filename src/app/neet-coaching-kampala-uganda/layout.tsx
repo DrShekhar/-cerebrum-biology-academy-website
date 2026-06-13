@@ -1,12 +1,15 @@
-import { Metadata } from 'next';
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Kampala, Uganda',
-  description: 'Expert NEET coaching in Kampala, Uganda. 98% success rate. Biology-focused curriculum with Dr. Shekhar C Singh. Enroll now!',
-  keywords: 'NEET coaching Kampala, NEET classes Uganda, biology tuition, medical entrance preparation',
+  description:
+    'Expert NEET coaching in Kampala, Uganda. 98% success rate. Biology-focused curriculum with Dr. Shekhar C Singh. Enroll now!',
+  keywords:
+    'NEET coaching Kampala, NEET classes Uganda, biology tuition, medical entrance preparation',
   openGraph: {
     title: 'NEET Coaching in Kampala, Uganda',
-    description: 'Expert NEET coaching with 98% success rate. Personalized biology curriculum tailored for Uganda students.',
+    description:
+      'Expert NEET coaching with 98% success rate. Personalized biology curriculum tailored for Uganda students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-kampala-uganda',
     siteName: 'Cerebrum Biology Academy',
     images: [
@@ -29,12 +32,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-kampala-uganda',
   },
-};
+}
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="layout-neet-coaching-kampala-uganda">
-      {children}
-    </div>
-  );
+  return <div className="layout-neet-coaching-kampala-uganda">{children}</div>
 }

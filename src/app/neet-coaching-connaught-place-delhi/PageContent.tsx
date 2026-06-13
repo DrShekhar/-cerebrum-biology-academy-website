@@ -62,7 +62,7 @@ const whyChooseUs = [
     icon: Building,
     title: 'Premium School Catchment',
     description:
-      'Connaught Place serves premium schools like St. Columba\'s, Modern School Barakhamba, Convent of Jesus & Mary. We specialize in coaching their high-achieving students.',
+      "Connaught Place serves premium schools like St. Columba's, Modern School Barakhamba, Convent of Jesus & Mary. We specialize in coaching their high-achieving students.",
   },
   {
     icon: Target,
@@ -74,13 +74,13 @@ const whyChooseUs = [
     icon: GraduationCap,
     title: 'AIIMS Faculty Excellence',
     description:
-      'Dr. Shekhar C Singh brings AIIMS credentials and 15+ years experience. Perfect match for students from Central Delhi\'s top schools.',
+      "Dr. Shekhar C Singh brings AIIMS credentials and 15+ years experience. Perfect match for students from Central Delhi's top schools.",
   },
   {
     icon: Star,
     title: 'Top Results from Premium Schools',
     description:
-      'Students from St. Columba\'s, Modern School, and Convent of Jesus & Mary consistently score 680+ and secure top medical colleges.',
+      "Students from St. Columba's, Modern School, and Convent of Jesus & Mary consistently score 680+ and secure top medical colleges.",
   },
 ]
 
@@ -88,12 +88,12 @@ const faqs = [
   {
     question: 'Is Connaught Place a good location for NEET coaching?',
     answer:
-      'Absolutely. Connaught Place is Central Delhi\'s landmark with excellent connectivity. Many premium school students study in this area. Our online coaching is perfectly accessible from CP area, with optional offline sessions.',
+      "Absolutely. Connaught Place is Central Delhi's landmark with excellent connectivity. Many premium school students study in this area. Our online coaching is perfectly accessible from CP area, with optional offline sessions.",
   },
   {
     question: 'Which premium schools does Connaught Place serve?',
     answer:
-      'St. Columba\'s School, Modern School Barakhamba, Convent of Jesus & Mary, and several premium institutions serve the Connaught Place area. We have successfully coached students from all these schools.',
+      "St. Columba's School, Modern School Barakhamba, Convent of Jesus & Mary, and several premium institutions serve the Connaught Place area. We have successfully coached students from all these schools.",
   },
   {
     question: "How do your classes cater to Central Delhi\'s premium students?",
@@ -182,7 +182,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Connaught%20Place.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Connaught%20Place.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -359,7 +363,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Connaught%20Place.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Connaught%20Place.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

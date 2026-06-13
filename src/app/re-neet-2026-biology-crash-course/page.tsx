@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'RE-NEET 2026 Biology Crash Course | Biology-Only Specialist (360/720)',
-    description: 'RE-NEET 2026 biology crash course — biology-only AIIMS-trained specialist coaching. Biology = 360/720 NEET marks (50%). 6–8 week NCERT line-by-line revision, high-weightage chapter drill, daily moc...',
+    description:
+      'RE-NEET 2026 biology crash course — biology-only AIIMS-trained specialist coaching. Biology = 360/720 NEET marks (50%). 6–8 week NCERT line-by-line revision, high-weightage chapter drill, daily moc...',
   },
 }
 

@@ -44,9 +44,7 @@ function ProgressIndicator({
       {/* Progress Bar */}
       <div className="relative">
         <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-blue-500 animate-fadeInUp"
-          />
+          <div className="h-full bg-blue-500 animate-fadeInUp" />
         </div>
 
         {/* Step Indicators */}
@@ -112,9 +110,7 @@ function QuestionCard({
   }
 
   return (
-    <div
-      className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 animate-fadeInUp"
-    >
+    <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 animate-fadeInUp">
       <div className="mb-6">
         <h3 className="text-xl font-bold text-gray-900 mb-2">{question.question}</h3>
         {question.type === 'multiple' && (
@@ -230,9 +226,7 @@ function FeeCalculator({
   ]
 
   return (
-    <div
-      className={`${theme.bg} ${theme.border} border-2 rounded-xl p-6`}
-    >
+    <div className={`${theme.bg} ${theme.border} border-2 rounded-xl p-6`}>
       <div className="flex items-center mb-4">
         <Calculator className={`w-5 h-5 ${theme.accent} mr-2`} />
         <h4 className={`font-bold ${theme.text}`}>Fee Calculator</h4>
@@ -332,9 +326,7 @@ function SuccessIndicators({ seriesId }: { seriesId: string }) {
 
   return (
     <div className="grid grid-cols-2 gap-4">
-      <div
-        className={`${theme.bg} rounded-xl p-4 text-center ${theme.border} border`}
-      >
+      <div className={`${theme.bg} rounded-xl p-4 text-center ${theme.border} border`}>
         <div className="flex items-center justify-center mb-2">
           <TrendingUp className={`w-5 h-5 ${theme.accent} mr-1`} />
           <span className="text-2xl font-bold text-green-600">{metrics.successRate}%</span>
@@ -342,9 +334,7 @@ function SuccessIndicators({ seriesId }: { seriesId: string }) {
         <div className="text-xs text-gray-600">NEET Success Rate</div>
       </div>
 
-      <div
-        className={`${theme.bg} rounded-xl p-4 text-center ${theme.border} border`}
-      >
+      <div className={`${theme.bg} rounded-xl p-4 text-center ${theme.border} border`}>
         <div className="flex items-center justify-center mb-2">
           <Award className={`w-5 h-5 ${theme.accent} mr-1`} />
           <span className="text-lg font-bold text-gray-900">{metrics.avgRank}</span>
@@ -352,9 +342,7 @@ function SuccessIndicators({ seriesId }: { seriesId: string }) {
         <div className="text-xs text-gray-600">Average NEET Rank</div>
       </div>
 
-      <div
-        className={`${theme.bg} rounded-xl p-4 text-center ${theme.border} border`}
-      >
+      <div className={`${theme.bg} rounded-xl p-4 text-center ${theme.border} border`}>
         <div className="flex items-center justify-center mb-2">
           <Users className={`w-5 h-5 ${theme.accent} mr-1`} />
           <span className="text-lg font-bold text-gray-900">{metrics.students}</span>
@@ -362,9 +350,7 @@ function SuccessIndicators({ seriesId }: { seriesId: string }) {
         <div className="text-xs text-gray-600">Success Stories</div>
       </div>
 
-      <div
-        className={`${theme.bg} rounded-xl p-4 text-center ${theme.border} border`}
-      >
+      <div className={`${theme.bg} rounded-xl p-4 text-center ${theme.border} border`}>
         <div className="flex items-center justify-center mb-2">
           <Shield className={`w-5 h-5 ${theme.accent} mr-1`} />
           <span className="text-xs font-bold text-gray-900">{metrics.colleges}</span>
@@ -399,9 +385,7 @@ function RecommendationCard({
     ] || 58000
 
   return (
-    <div
-      className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100 animate-fadeInUp"
-    >
+    <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100 animate-fadeInUp">
       {/* Header */}
       <div className={`bg-gradient-to-r ${theme.gradient} text-white p-6 relative overflow-hidden`}>
         <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
@@ -442,10 +426,7 @@ function RecommendationCard({
           <h4 className="font-semibold text-gray-800 mb-3">Why This is Perfect for You</h4>
           <div className="space-y-2">
             {recommendation.reasoning.map((reason, index) => (
-              <div
-                key={index}
-                className="flex items-start text-sm text-gray-700 animate-fadeInUp"
-              >
+              <div key={index} className="flex items-start text-sm text-gray-700 animate-fadeInUp">
                 <Check className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                 <span>{reason}</span>
               </div>
@@ -578,9 +559,7 @@ export default function SmartCourseSelectorUI({
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 p-4">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div
-            className="text-center mb-8 animate-fadeInUp"
-          >
+          <div className="text-center mb-8 animate-fadeInUp">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">
               🎉 Your Perfect NEET Course Match!
             </h1>
@@ -611,9 +590,7 @@ export default function SmartCourseSelectorUI({
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 p-4">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
-        <div
-          className="text-center mb-8 animate-fadeInUp"
-        >
+        <div className="text-center mb-8 animate-fadeInUp">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Find Your Perfect NEET Course</h1>
           <p className="text-gray-600">
             Answer a few questions and get personalized course recommendations
@@ -628,23 +605,21 @@ export default function SmartCourseSelectorUI({
         />
 
         {/* Question Card */}
-{currentQuestion && (
-            <div
-              key={currentQuestion.id}
-             className="animate-fadeInUp">
-              <QuestionCard
-                question={currentQuestion}
-                selectedValue={(() => {
-                  const answer = answers[currentQuestion.id]
-                  if (answer === undefined) return currentQuestion.type === 'multiple' ? [] : ''
-                  if (typeof answer === 'number') return String(answer)
-                  return answer
-                })()}
-                onAnswerSelect={(answer) => handleAnswerSelect(currentQuestion.id, answer)}
-              />
-            </div>
-          )}
-{/* Navigation */}
+        {currentQuestion && (
+          <div key={currentQuestion.id} className="animate-fadeInUp">
+            <QuestionCard
+              question={currentQuestion}
+              selectedValue={(() => {
+                const answer = answers[currentQuestion.id]
+                if (answer === undefined) return currentQuestion.type === 'multiple' ? [] : ''
+                if (typeof answer === 'number') return String(answer)
+                return answer
+              })()}
+              onAnswerSelect={(answer) => handleAnswerSelect(currentQuestion.id, answer)}
+            />
+          </div>
+        )}
+        {/* Navigation */}
         <div className="flex justify-between items-center mt-8">
           <button
             onClick={goBack}

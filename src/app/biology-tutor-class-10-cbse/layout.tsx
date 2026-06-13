@@ -50,10 +50,6 @@ export const metadata: Metadata = {
   },
 }
 
-export default function BiologyTutorClass10CBSELayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function BiologyTutorClass10CBSELayout({ children }: { children: React.ReactNode }) {
   return children
 }

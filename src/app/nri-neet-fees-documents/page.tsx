@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NRI NEET Fees & Documents | NRI Quota MBBS Application Checklist',
-    description: 'Complete NRI NEET fees + documents checklist — NEET-UG registration fees for overseas candidates, NRI quota MBBS fee structure ($18K–$60K/year), parent employment certificate, sponsor affidavit, NR...',
+    description:
+      'Complete NRI NEET fees + documents checklist — NEET-UG registration fees for overseas candidates, NRI quota MBBS fee structure ($18K–$60K/year), parent employment certificate, sponsor affidavit, NR...',
   },
 }
 

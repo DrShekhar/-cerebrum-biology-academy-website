@@ -252,9 +252,7 @@ function TeachingHoursGraph({ courses }: { courses: CourseData[] }) {
                 <span className="font-semibold text-gray-900">{course.totalHours}h</span>
               </div>
               <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                <div
-                  className={`h-full bg-gradient-to-r ${theme.gradient}`}
-                />
+                <div className={`h-full bg-gradient-to-r ${theme.gradient}`} />
               </div>
               <div className="flex justify-between text-xs text-gray-500">
                 <span>{course.weeklyHours}h/week</span>
@@ -532,42 +530,40 @@ function CourseSelector({
           <span className="text-sm font-medium">Add Course to Compare</span>
         </div>
       </button>
-{showSelector && (
-          <div
-            className="absolute top-full left-0 right-0 z-10 bg-white border border-gray-200 rounded-lg shadow-lg mt-2 max-h-64 overflow-y-auto animate-fadeInUp"
-          >
-            {availableCourses
-              .filter((course) => !selectedCourses.find((sc) => sc.id === course.id))
-              .map((course) => {
-                const theme = getSeriesTheme(course.seriesId)
-                const IconComponent = theme.icon
+      {showSelector && (
+        <div className="absolute top-full left-0 right-0 z-10 bg-white border border-gray-200 rounded-lg shadow-lg mt-2 max-h-64 overflow-y-auto animate-fadeInUp">
+          {availableCourses
+            .filter((course) => !selectedCourses.find((sc) => sc.id === course.id))
+            .map((course) => {
+              const theme = getSeriesTheme(course.seriesId)
+              const IconComponent = theme.icon
 
-                return (
-                  <button
-                    key={course.id}
-                    onClick={() => {
-                      onCourseSelect(course)
-                      setShowSelector(false)
-                    }}
-                    className="w-full p-3 text-left hover:bg-gray-50 border-b border-gray-100 last:border-b-0 flex items-center"
+              return (
+                <button
+                  key={course.id}
+                  onClick={() => {
+                    onCourseSelect(course)
+                    setShowSelector(false)
+                  }}
+                  className="w-full p-3 text-left hover:bg-gray-50 border-b border-gray-100 last:border-b-0 flex items-center"
+                >
+                  <div
+                    className={`w-8 h-8 rounded-full bg-gradient-to-r ${theme.gradient} flex items-center justify-center mr-3`}
                   >
-                    <div
-                      className={`w-8 h-8 rounded-full bg-gradient-to-r ${theme.gradient} flex items-center justify-center mr-3`}
-                    >
-                      <IconComponent className="w-4 h-4 text-white" />
+                    <IconComponent className="w-4 h-4 text-white" />
+                  </div>
+                  <div className="flex-grow">
+                    <div className="font-medium text-gray-900 text-sm">{course.name}</div>
+                    <div className="text-xs text-gray-600">
+                      ₹{course.price.toLocaleString()} • {course.duration}
                     </div>
-                    <div className="flex-grow">
-                      <div className="font-medium text-gray-900 text-sm">{course.name}</div>
-                      <div className="text-xs text-gray-600">
-                        ₹{course.price.toLocaleString()} • {course.duration}
-                      </div>
-                    </div>
-                  </button>
-                )
-              })}
-          </div>
-        )}
-</div>
+                  </div>
+                </button>
+              )
+            })}
+        </div>
+      )}
+    </div>
   )
 }
 
@@ -711,8 +707,7 @@ export default function InteractiveComparisonMatrix({
 
           {/* Add Course Card */}
           {canAddMore && (
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <CourseSelector
                 availableCourses={availableCourses}
                 selectedCourses={selectedCourses}
@@ -724,18 +719,14 @@ export default function InteractiveComparisonMatrix({
 
         {/* Teaching Hours Comparison (when multiple courses selected) */}
         {selectedCourses.length > 1 && (
-          <div
-            className="mt-8 animate-fadeInUp"
-          >
+          <div className="mt-8 animate-fadeInUp">
             <TeachingHoursGraph courses={selectedCourses} />
           </div>
         )}
 
         {/* Summary Statistics */}
         {selectedCourses.length > 1 && (
-          <div
-            className="mt-8 bg-gray-50 rounded-xl p-6 animate-fadeInUp"
-          >
+          <div className="mt-8 bg-gray-50 rounded-xl p-6 animate-fadeInUp">
             <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">
               Quick Comparison Summary
             </h3>

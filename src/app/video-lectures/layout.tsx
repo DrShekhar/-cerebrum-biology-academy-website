@@ -19,7 +19,8 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     title: 'NEET Biology Video Lectures | Cerebrum',
-    description: 'Class 11+12 NCERT line-by-line video lectures with animations and MCQ walkthroughs.',
+    description:
+      'Class 11+12 NCERT line-by-line video lectures with animations and MCQ walkthroughs.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/video-lectures',

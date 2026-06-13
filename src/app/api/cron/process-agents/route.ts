@@ -27,9 +27,7 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-
     const result = await processPendingAgentTasks()
-
 
     return NextResponse.json({
       success: true,

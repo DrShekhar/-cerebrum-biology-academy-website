@@ -245,9 +245,7 @@ function StatCard({
   color: string
 }) {
   return (
-    <div
-      className="p-3 bg-white rounded-lg border hover:shadow-md transition-shadow animate-fadeInUp"
-    >
+    <div className="p-3 bg-white rounded-lg border hover:shadow-md transition-shadow animate-fadeInUp">
       <div className="flex items-center gap-2 mb-1">
         <div className={cn('p-1.5 rounded', color)}>{icon}</div>
       </div>

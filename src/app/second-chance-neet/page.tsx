@@ -119,7 +119,10 @@ export default function SecondChanceNEETPage() {
     trackDemoBookingConversion('second-chance-neet-counseling')
 
     // Redirect to booking page with source tracking
-    window.open('https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20the%20NEET%20repeater%20batch.%20Please%20share%20details.', '_blank')
+    window.open(
+      'https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20the%20NEET%20repeater%20batch.%20Please%20share%20details.',
+      '_blank'
+    )
   }
 
   const handleDownloadStories = () => {

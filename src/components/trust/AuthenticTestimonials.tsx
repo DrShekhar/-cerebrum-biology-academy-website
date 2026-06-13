@@ -166,14 +166,10 @@ export function AuthenticTestimonials() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2
-            className="text-3xl font-bold text-gray-900 mb-4 animate-fadeInUp"
-          >
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 animate-fadeInUp">
             {language === 'hi' ? 'सत्यापित सफलता की कहानियां' : 'Verified Success Stories'}
           </h2>
-          <p
-            className="text-xl text-gray-600 mb-8 animate-fadeInUp"
-          >
+          <p className="text-xl text-gray-600 mb-8 animate-fadeInUp">
             {language === 'hi'
               ? 'हमारे छात्रों की प्रामाणिक समीक्षाएं और उनकी सफलता'
               : 'Authentic reviews and success stories from our students'}
@@ -206,150 +202,150 @@ export function AuthenticTestimonials() {
 
         {/* Main Testimonial */}
         <div className="max-w-4xl mx-auto">
-<div
-              key={currentTestimonial.id}
-              className="bg-white rounded-3xl shadow-xl overflow-hidden animate-fadeInUp"
-            >
-              <div className="p-8 md:p-12">
-                {/* Student Info Header */}
-                <div className="flex items-center justify-between mb-8">
-                  <div className="flex items-center space-x-4">
-                    <div className="relative">
-                      <OptimizedImage
-                        src={currentTestimonial.photoUrl}
-                        alt={currentTestimonial.studentName}
-                        width={80}
-                        height={80}
-                        className="rounded-full object-cover"
-                      />
-                      <div className="absolute -bottom-1 -right-1 bg-green-600 border-2 border-white rounded-full p-1">
-                        <CheckCircle className="w-4 h-4 text-white" />
-                      </div>
-                    </div>
-
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900">
-                        {currentTestimonial.studentName}
-                      </h3>
-                      <div className="flex items-center space-x-2 text-gray-600 mb-1">
-                        <MapPin className="w-4 h-4" />
-                        <span>{currentTestimonial.location}</span>
-                      </div>
-                      <div className="flex items-center space-x-2 text-gray-600">
-                        <Calendar className="w-4 h-4" />
-                        <span>{currentTestimonial.course}</span>
-                      </div>
+          <div
+            key={currentTestimonial.id}
+            className="bg-white rounded-3xl shadow-xl overflow-hidden animate-fadeInUp"
+          >
+            <div className="p-8 md:p-12">
+              {/* Student Info Header */}
+              <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center space-x-4">
+                  <div className="relative">
+                    <OptimizedImage
+                      src={currentTestimonial.photoUrl}
+                      alt={currentTestimonial.studentName}
+                      width={80}
+                      height={80}
+                      className="rounded-full object-cover"
+                    />
+                    <div className="absolute -bottom-1 -right-1 bg-green-600 border-2 border-white rounded-full p-1">
+                      <CheckCircle className="w-4 h-4 text-white" />
                     </div>
                   </div>
 
-                  {/* Video Play Button */}
-                  {currentTestimonial.videoUrl && (
-                    <button
-                      onClick={() => setShowVideo(currentTestimonial.id)}
-                      className="flex items-center space-x-2 bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 transition-colors"
-                    >
-                      <Play className="w-4 h-4" />
-                      <span className="text-sm font-medium">
-                        {language === 'hi' ? 'वीडियो देखें' : 'Watch Video'}
-                      </span>
-                    </button>
-                  )}
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">
+                      {currentTestimonial.studentName}
+                    </h3>
+                    <div className="flex items-center space-x-2 text-gray-600 mb-1">
+                      <MapPin className="w-4 h-4" />
+                      <span>{currentTestimonial.location}</span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-gray-600">
+                      <Calendar className="w-4 h-4" />
+                      <span>{currentTestimonial.course}</span>
+                    </div>
+                  </div>
                 </div>
 
-                {/* Achievement Stats */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                  <div className="bg-green-50 rounded-xl p-4 text-center">
-                    <Award className="w-6 h-6 text-green-600 mx-auto mb-2" />
-                    <div className="text-2xl font-bold text-green-800">
-                      {currentTestimonial.neetScore}
-                    </div>
-                    <div className="text-sm text-green-600">NEET Score</div>
-                  </div>
-                  <div className="bg-blue-50 rounded-xl p-4 text-center">
-                    <Star className="w-6 h-6 text-blue-600 mx-auto mb-2" />
-                    <div className="text-2xl font-bold text-blue-800">
-                      {currentTestimonial.rank.toLocaleString()}
-                    </div>
-                    <div className="text-sm text-blue-600">AIR Rank</div>
-                  </div>
-                  <div className="bg-purple-50 rounded-xl p-4 text-center">
-                    <CheckCircle className="w-6 h-6 text-purple-600 mx-auto mb-2" />
-                    <div className="text-lg font-bold text-purple-800">
-                      {currentTestimonial.college}
-                    </div>
-                    <div className="text-sm text-purple-600">Admitted To</div>
-                  </div>
-                  {currentTestimonial.improvement && (
-                    <div className="bg-orange-50 rounded-xl p-4 text-center">
-                      <div className="text-2xl font-bold text-orange-800">
-                        +{currentTestimonial.improvement}
-                      </div>
-                      <div className="text-sm text-orange-600">Score Improvement</div>
-                    </div>
-                  )}
-                </div>
-
-                {/* Testimonial Quote */}
-                <div className="relative mb-8">
-                  <Quote className="absolute -top-2 -left-2 w-8 h-8 text-blue-200" />
-                  <blockquote className="text-lg text-gray-700 leading-relaxed pl-6 italic">
-                    "{currentTestimonial.testimonialText}"
-                  </blockquote>
-                </div>
-
-                {/* Rating */}
-                <div className="flex items-center space-x-2 mb-6">
-                  <div className="flex space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`w-5 h-5 ${
-                          i < currentTestimonial.rating
-                            ? 'text-yellow-400 fill-current'
-                            : 'text-gray-300'
-                        }`}
-                      />
-                    ))}
-                  </div>
-                  <span className="text-sm text-gray-600">
-                    {language === 'hi'
-                      ? `${currentTestimonial.rating}/5 - सत्यापित समीक्षा`
-                      : `${currentTestimonial.rating}/5 - Verified Review`}
-                  </span>
-                </div>
-
-                {/* Verification Badge */}
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2 text-sm text-green-600">
-                    <CheckCircle className="w-4 h-4" />
-                    <span>
-                      {language === 'hi' ? 'सत्यापित छात्र' : 'Verified Student'} • ID:{' '}
-                      {currentTestimonial.verificationId}
+                {/* Video Play Button */}
+                {currentTestimonial.videoUrl && (
+                  <button
+                    onClick={() => setShowVideo(currentTestimonial.id)}
+                    className="flex items-center space-x-2 bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 transition-colors"
+                  >
+                    <Play className="w-4 h-4" />
+                    <span className="text-sm font-medium">
+                      {language === 'hi' ? 'वीडियो देखें' : 'Watch Video'}
                     </span>
-                  </div>
+                  </button>
+                )}
+              </div>
 
-                  <div className="text-sm text-gray-500">
-                    {new Date(currentTestimonial.dateAdded).toLocaleDateString()}
+              {/* Achievement Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div className="bg-green-50 rounded-xl p-4 text-center">
+                  <Award className="w-6 h-6 text-green-600 mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-green-800">
+                    {currentTestimonial.neetScore}
                   </div>
+                  <div className="text-sm text-green-600">NEET Score</div>
                 </div>
-
-                {/* Parent Testimonial */}
-                {currentTestimonial.parentTestimonial && (
-                  <div className="mt-8 bg-gray-50 rounded-xl p-6">
-                    <h4 className="font-semibold text-gray-900 mb-2">
-                      {language === 'hi' ? 'अभिभावक की प्रतिक्रिया' : 'Parent Feedback'}
-                    </h4>
-                    <blockquote className="text-gray-700 italic mb-2">
-                      "{currentTestimonial.parentTestimonial.text}"
-                    </blockquote>
-                    <cite className="text-sm text-gray-600">
-                      - {currentTestimonial.parentTestimonial.parentName}
-                    </cite>
+                <div className="bg-blue-50 rounded-xl p-4 text-center">
+                  <Star className="w-6 h-6 text-blue-600 mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-blue-800">
+                    {currentTestimonial.rank.toLocaleString()}
+                  </div>
+                  <div className="text-sm text-blue-600">AIR Rank</div>
+                </div>
+                <div className="bg-purple-50 rounded-xl p-4 text-center">
+                  <CheckCircle className="w-6 h-6 text-purple-600 mx-auto mb-2" />
+                  <div className="text-lg font-bold text-purple-800">
+                    {currentTestimonial.college}
+                  </div>
+                  <div className="text-sm text-purple-600">Admitted To</div>
+                </div>
+                {currentTestimonial.improvement && (
+                  <div className="bg-orange-50 rounded-xl p-4 text-center">
+                    <div className="text-2xl font-bold text-orange-800">
+                      +{currentTestimonial.improvement}
+                    </div>
+                    <div className="text-sm text-orange-600">Score Improvement</div>
                   </div>
                 )}
               </div>
+
+              {/* Testimonial Quote */}
+              <div className="relative mb-8">
+                <Quote className="absolute -top-2 -left-2 w-8 h-8 text-blue-200" />
+                <blockquote className="text-lg text-gray-700 leading-relaxed pl-6 italic">
+                  "{currentTestimonial.testimonialText}"
+                </blockquote>
+              </div>
+
+              {/* Rating */}
+              <div className="flex items-center space-x-2 mb-6">
+                <div className="flex space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-5 h-5 ${
+                        i < currentTestimonial.rating
+                          ? 'text-yellow-400 fill-current'
+                          : 'text-gray-300'
+                      }`}
+                    />
+                  ))}
+                </div>
+                <span className="text-sm text-gray-600">
+                  {language === 'hi'
+                    ? `${currentTestimonial.rating}/5 - सत्यापित समीक्षा`
+                    : `${currentTestimonial.rating}/5 - Verified Review`}
+                </span>
+              </div>
+
+              {/* Verification Badge */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2 text-sm text-green-600">
+                  <CheckCircle className="w-4 h-4" />
+                  <span>
+                    {language === 'hi' ? 'सत्यापित छात्र' : 'Verified Student'} • ID:{' '}
+                    {currentTestimonial.verificationId}
+                  </span>
+                </div>
+
+                <div className="text-sm text-gray-500">
+                  {new Date(currentTestimonial.dateAdded).toLocaleDateString()}
+                </div>
+              </div>
+
+              {/* Parent Testimonial */}
+              {currentTestimonial.parentTestimonial && (
+                <div className="mt-8 bg-gray-50 rounded-xl p-6">
+                  <h4 className="font-semibold text-gray-900 mb-2">
+                    {language === 'hi' ? 'अभिभावक की प्रतिक्रिया' : 'Parent Feedback'}
+                  </h4>
+                  <blockquote className="text-gray-700 italic mb-2">
+                    "{currentTestimonial.parentTestimonial.text}"
+                  </blockquote>
+                  <cite className="text-sm text-gray-600">
+                    - {currentTestimonial.parentTestimonial.parentName}
+                  </cite>
+                </div>
+              )}
             </div>
-{/* Navigation */}
+          </div>
+          {/* Navigation */}
           <div className="flex items-center justify-between mt-8">
             <button
               onClick={prevTestimonial}
@@ -382,40 +378,40 @@ export function AuthenticTestimonials() {
         </div>
 
         {/* Video Modal */}
-{showVideo && (
+        {showVideo && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4 animate-fadeInUp"
+            onClick={() => setShowVideo(null)}
+          >
             <div
-              className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4 animate-fadeInUp"
-              onClick={() => setShowVideo(null)}
+              className="relative max-w-4xl w-full animate-fadeInUp"
+              onClick={(e) => e.stopPropagation()}
             >
-              <div
-                className="relative max-w-4xl w-full animate-fadeInUp"
-                onClick={(e) => e.stopPropagation()}
+              <LazyVideo
+                src={testimonialData.find((t) => t.id === showVideo)?.videoUrl || ''}
+                poster={testimonialData.find((t) => t.id === showVideo)?.photoUrl || ''}
+                controls
+                autoPlay
+                muted={false}
+                className="w-full aspect-video rounded-xl"
+              />
+              <button
+                onClick={() => setShowVideo(null)}
+                className="absolute -top-4 -right-4 bg-white rounded-full p-2 hover:bg-gray-100 transition-colors z-10"
               >
-                <LazyVideo
-                  src={testimonialData.find((t) => t.id === showVideo)?.videoUrl || ''}
-                  poster={testimonialData.find((t) => t.id === showVideo)?.photoUrl || ''}
-                  controls
-                  autoPlay
-                  muted={false}
-                  className="w-full aspect-video rounded-xl"
-                />
-                <button
-                  onClick={() => setShowVideo(null)}
-                  className="absolute -top-4 -right-4 bg-white rounded-full p-2 hover:bg-gray-100 transition-colors z-10"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </div>
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
             </div>
-          )}
-</div>
+          </div>
+        )}
+      </div>
     </section>
   )
 }
@@ -454,10 +450,7 @@ export function TestimonialStats() {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
       {stats.map((stat, index) => (
-        <div
-          key={stat.label}
-          className="text-center animate-fadeInUp"
-        >
+        <div key={stat.label} className="text-center animate-fadeInUp">
           <stat.icon className={`w-8 h-8 ${stat.color} mx-auto mb-2`} />
           <div className="text-2xl font-bold text-gray-900 mb-1">{stat.value}</div>
           <div className="text-sm text-gray-600">{stat.label}</div>

@@ -73,9 +73,18 @@ const config: BestVerticalConfig = {
     { title: 'Biology Classes for NEET (small batch)', href: '/biology-classes-for-neet' },
     { title: 'NEET Biology MCQ Practice', href: '/neet-biology-mcq' },
     { title: 'NEET Biology Chapter Weightage', href: '/neet-biology-chapter-weightage' },
-    { title: 'Cerebrum vs the 2nd-largest national NEET chain NEET Biology', href: '/cerebrum-vs-aakash-neet-biology' },
-    { title: 'Cerebrum vs the largest national NEET chain NEET Biology', href: '/cerebrum-vs-allen-neet-biology' },
-    { title: 'Cerebrum vs other online-only platforms NEET Biology', href: '/cerebrum-vs-unacademy-neet-biology' },
+    {
+      title: 'Cerebrum vs the 2nd-largest national NEET chain NEET Biology',
+      href: '/cerebrum-vs-aakash-neet-biology',
+    },
+    {
+      title: 'Cerebrum vs the largest national NEET chain NEET Biology',
+      href: '/cerebrum-vs-allen-neet-biology',
+    },
+    {
+      title: 'Cerebrum vs other online-only platforms NEET Biology',
+      href: '/cerebrum-vs-unacademy-neet-biology',
+    },
   ],
   pricing: [
     {
@@ -109,7 +118,8 @@ const config: BestVerticalConfig = {
         'Dr. Shekhar C Singh studied at AIIMS New Delhi and founded Cerebrum in 2014. Senior faculty are AIIMS-trained or PhD-level biology specialists with 8–15 years of NEET classroom experience. 680+ documented medical college selections (AIIMS / JIPMER / AFMC / state government colleges) since 2014, 98% NEET-UG qualification rate across enrolled cohorts.',
     },
     {
-      title: '15–20 Student Batches vs 150–400 at the largest national NEET chains / other online-only platforms',
+      title:
+        '15–20 Student Batches vs 150–400 at the largest national NEET chains / other online-only platforms',
       description:
         'the largest national NEET chains and online-first generalist platforms typically run 150–400+ student NEET batches; other multi-subject tutoring platforms and other online-only platforms run 50–200+ student live classes. Cerebrum runs 15–20 student batches across all tiers (Pursuit / Ascent / Pinnacle). This is structurally different — each student gets individual faculty attention, weakness identification happens in real time, and biology MCQ pattern drilling is calibrated to the cohort rather than averaged across hundreds of mixed-ability students.',
     },
@@ -164,7 +174,8 @@ const config: BestVerticalConfig = {
         "Cerebrum NEET Biology pricing runs ₹40,000–₹1,56,000/year across three tiers: Pursuit (small-batch 30-40 students, ₹40K-75K), Ascent (pro batch 16-25 students with weekly 1:1 doubt slots, ₹58K-90K), and Pinnacle (direct Dr. Shekhar micro-batch 10-12 students, ₹1.2L-1.56L). Ad-hoc 1:1 hourly tutoring is ₹2,500-4,500/hour. Compared to the largest national NEET chains full-NEET courses (~₹1.4L-1.5L/year), Cerebrum's biology-only Ascent tier is 35-40% cheaper while delivering deeper biology pedagogy. Compared to Kota relocation total cost (₹2L-2.5L including hostel and mess), Cerebrum Pinnacle is half the cost.",
     },
     {
-      question: 'How is Cerebrum different from the largest national NEET chains / other online-only platforms for NEET Biology?',
+      question:
+        'How is Cerebrum different from the largest national NEET chains / other online-only platforms for NEET Biology?',
       answer:
         'Three structural differences. (1) Subject specialisation — Cerebrum is biology-only; the major national NEET chains and online platforms cover Physics + Chemistry + Biology generally with rotating faculty. (2) Batch size — Cerebrum runs 15-20 student batches; the largest national NEET chains typically 150-400, other online-only platforms 300-2,000+ in live online classes. (3) Faculty — Cerebrum led by Dr. Shekhar C Singh (AIIMS Delhi); the largest national NEET chains / PW have rotating subject faculty without single-faculty continuity across the year. Most strategic pattern: students pair other online-only platforms (Physics + Chemistry) with Cerebrum (Biology) for the strongest combined coverage.',
     },

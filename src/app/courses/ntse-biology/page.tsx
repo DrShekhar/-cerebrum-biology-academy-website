@@ -85,9 +85,7 @@ export default function NTSEBiologyPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-orange-900 via-amber-800 to-orange-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div
-              className="max-w-4xl mx-auto text-center animate-fadeInUp"
-            >
+            <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-300 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <IndianRupee className="w-4 h-4" />
                 Rs 1.25 Lakh/Year Scholarship
@@ -145,10 +143,7 @@ export default function NTSEBiologyPage() {
             </h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {examStructure.map((section, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-2xl shadow-xl p-6 animate-fadeInUp"
-                >
+                <div key={idx} className="bg-white rounded-2xl shadow-xl p-6 animate-fadeInUp">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
                       {idx === 0 ? (
@@ -280,10 +275,7 @@ export default function NTSEBiologyPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((f, i) => (
-                <div
-                  key={i}
-                  className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
-                >
+                <div key={i} className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp">
                   <h3 className="font-semibold text-lg mb-2">{f.q}</h3>
                   <p className="text-gray-600">{f.a}</p>
                 </div>

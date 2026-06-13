@@ -109,69 +109,69 @@ export function LanguageSwitcher({
           className={`w-4 h-4 text-gray-500 transition-transform ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
-{isOpen && (
-          <>
-            {/* Backdrop for mobile */}
-            <div
-              className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden animate-fadeInUp"
-              onClick={() => setIsOpen(false)}
-            />
+      {isOpen && (
+        <>
+          {/* Backdrop for mobile */}
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden animate-fadeInUp"
+            onClick={() => setIsOpen(false)}
+          />
 
-            {/* Language options */}
-            <div
-              className={`
+          {/* Language options */}
+          <div
+            className={`
                 absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-lg z-50
                 md:left-auto md:right-0 md:w-48
               `}
-            >
-              <div className="py-2">
-                {availableLanguages.map((lang) => {
-                  const langInfo = languageInfo[lang as Language]
-                  const isSelected = lang === language
+          >
+            <div className="py-2">
+              {availableLanguages.map((lang) => {
+                const langInfo = languageInfo[lang as Language]
+                const isSelected = lang === language
 
-                  return (
-                    <button
-                      key={lang}
-                      onClick={() => handleLanguageChange(lang as Language)}
-                      className={`
+                return (
+                  <button
+                    key={lang}
+                    onClick={() => handleLanguageChange(lang as Language)}
+                    className={`
                         w-full flex items-center justify-between px-4 py-3 text-left hover:bg-gray-50 transition-colors
                         ${isSelected ? 'bg-blue-50' : ''}
                       `}
-                    >
-                      <div className="flex items-center space-x-3">
-                        {showFlag && (
-                          <span className="text-lg" role="img" aria-label={langInfo.name}>
-                            {langInfo.flag}
-                          </span>
-                        )}
-                        <div>
-                          <div
-                            className={`font-medium ${isSelected ? 'text-blue-900' : 'text-gray-900'}`}
-                          >
-                            {langInfo.nativeName}
-                          </div>
-                          <div className="text-sm text-gray-500">{langInfo.name}</div>
+                  >
+                    <div className="flex items-center space-x-3">
+                      {showFlag && (
+                        <span className="text-lg" role="img" aria-label={langInfo.name}>
+                          {langInfo.flag}
+                        </span>
+                      )}
+                      <div>
+                        <div
+                          className={`font-medium ${isSelected ? 'text-blue-900' : 'text-gray-900'}`}
+                        >
+                          {langInfo.nativeName}
                         </div>
+                        <div className="text-sm text-gray-500">{langInfo.name}</div>
                       </div>
-                      {isSelected && <Check className="w-4 h-4 text-blue-600" />}
-                    </button>
-                  )
-                })}
-              </div>
-
-              {/* Language help text */}
-              <div className="border-t border-gray-100 px-4 py-3">
-                <p className="text-xs text-gray-500 text-center">
-                  {language === 'hi' && 'भाषा बदलने के लिए टैप करें'}
-                  {language === 'ta' && 'மொழியை மாற்ற தட்டவும்'}
-                  {language === 'bn' && 'ভাষা পরিবর্তন করতে ট্যাপ করুন'}
-                  {language === 'en' && 'Tap to change language'}
-                </p>
-              </div>
+                    </div>
+                    {isSelected && <Check className="w-4 h-4 text-blue-600" />}
+                  </button>
+                )
+              })}
             </div>
-          </>
-        )}
-</div>
+
+            {/* Language help text */}
+            <div className="border-t border-gray-100 px-4 py-3">
+              <p className="text-xs text-gray-500 text-center">
+                {language === 'hi' && 'भाषा बदलने के लिए टैप करें'}
+                {language === 'ta' && 'மொழியை மாற்ற தட்டவும்'}
+                {language === 'bn' && 'ভাষা পরিবর্তন করতে ট্যাপ করুন'}
+                {language === 'en' && 'Tap to change language'}
+              </p>
+            </div>
+          </div>
+        </>
+      )}
+    </div>
   )
 }
 
@@ -199,34 +199,32 @@ function FloatingLanguageSwitcher({
         >
           <Globe className="w-5 h-5 text-gray-600" />
         </button>
-{isOpen && (
-            <div
-              className="absolute bottom-14 right-0 bg-white border border-gray-200 rounded-xl shadow-xl p-2 min-w-[160px] animate-fadeInUp"
-            >
-              {availableLanguages.map((lang: Language) => {
-                const langInfo = languageInfo[lang]
-                const isSelected = lang === language
+        {isOpen && (
+          <div className="absolute bottom-14 right-0 bg-white border border-gray-200 rounded-xl shadow-xl p-2 min-w-[160px] animate-fadeInUp">
+            {availableLanguages.map((lang: Language) => {
+              const langInfo = languageInfo[lang]
+              const isSelected = lang === language
 
-                return (
-                  <button
-                    key={lang}
-                    onClick={() => {
-                      onLanguageChange(lang)
-                      setIsOpen(false)
-                    }}
-                    className={`
+              return (
+                <button
+                  key={lang}
+                  onClick={() => {
+                    onLanguageChange(lang)
+                    setIsOpen(false)
+                  }}
+                  className={`
                       w-full flex items-center space-x-2 px-3 py-2 rounded-lg text-left transition-colors
                       ${isSelected ? 'bg-blue-50 text-blue-900' : 'hover:bg-gray-50'}
                     `}
-                  >
-                    <span className="text-sm">{langInfo.flag}</span>
-                    <span className="text-sm font-medium">{langInfo.code}</span>
-                  </button>
-                )
-              })}
-            </div>
-          )}
-</div>
+                >
+                  <span className="text-sm">{langInfo.flag}</span>
+                  <span className="text-sm font-medium">{langInfo.code}</span>
+                </button>
+              )
+            })}
+          </div>
+        )}
+      </div>
     </div>
   )
 }
@@ -253,35 +251,33 @@ function DesktopLanguageSwitcher({
           className={`w-3 h-3 text-gray-500 transition-transform ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
-{isOpen && (
-          <div
-            className="absolute top-full right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg py-1 z-50 min-w-[140px] animate-fadeInUp"
-          >
-            {availableLanguages.map((lang: Language) => {
-              const langInfo = languageInfo[lang]
-              const isSelected = lang === language
+      {isOpen && (
+        <div className="absolute top-full right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg py-1 z-50 min-w-[140px] animate-fadeInUp">
+          {availableLanguages.map((lang: Language) => {
+            const langInfo = languageInfo[lang]
+            const isSelected = lang === language
 
-              return (
-                <button
-                  key={lang}
-                  onClick={() => {
-                    onLanguageChange(lang)
-                    setIsOpen(false)
-                  }}
-                  className={`
+            return (
+              <button
+                key={lang}
+                onClick={() => {
+                  onLanguageChange(lang)
+                  setIsOpen(false)
+                }}
+                className={`
                     w-full flex items-center space-x-2 px-3 py-2 text-sm text-left hover:bg-gray-50 transition-colors
                     ${isSelected ? 'bg-blue-50 text-blue-900' : ''}
                   `}
-                >
-                  {showFlag && <span>{langInfo.flag}</span>}
-                  <span>{compact ? langInfo.code : langInfo.nativeName}</span>
-                  {isSelected && <Check className="w-3 h-3 ml-auto" />}
-                </button>
-              )
-            })}
-          </div>
-        )}
-</div>
+              >
+                {showFlag && <span>{langInfo.flag}</span>}
+                <span>{compact ? langInfo.code : langInfo.nativeName}</span>
+                {isSelected && <Check className="w-3 h-3 ml-auto" />}
+              </button>
+            )
+          })}
+        </div>
+      )}
+    </div>
   )
 }
 

@@ -91,10 +91,7 @@ export function UrgencySection() {
       key={value}
       className="bg-white rounded-xl p-4 shadow-lg border-2 border-red-200 text-center min-w-[80px] animate-fadeInUp"
     >
-      <div
-        key={value}
-        className="text-3xl md:text-4xl font-bold text-red-600 animate-fadeInUp"
-      >
+      <div key={value} className="text-3xl md:text-4xl font-bold text-red-600 animate-fadeInUp">
         {value.toString().padStart(2, '0')}
       </div>
       <div className="text-sm text-gray-600 font-medium uppercase tracking-wide">{label}</div>
@@ -105,9 +102,7 @@ export function UrgencySection() {
     <section className="py-16 bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 border-t-4 border-red-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Urgent Alert Banner */}
-        <div
-          className="bg-red-600 text-white rounded-2xl p-6 mb-12 shadow-xl animate-fadeInUp"
-        >
+        <div className="bg-red-600 text-white rounded-2xl p-6 mb-12 shadow-xl animate-fadeInUp">
           <div className="flex items-center justify-center space-x-3 mb-4">
             <AlertCircle className="w-8 h-8 animate-pulse" />
             <h2 className="text-2xl md:text-3xl font-bold">🔥 Limited Time Opportunity!</h2>
@@ -141,8 +136,7 @@ export function UrgencySection() {
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Urgency Factors */}
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h3 className="text-3xl font-bold text-gray-900 mb-8">
               Why You Need to Act <span className="text-red-600">Right Now</span>
             </h3>
@@ -176,9 +170,7 @@ export function UrgencySection() {
           </div>
 
           {/* Right: Live Activity & Seats Visualization */}
-          <div
-            className="space-y-8 animate-fadeInUp"
-          >
+          <div className="space-y-8 animate-fadeInUp">
             {/* Seats Visualization */}
             <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200">
               <h4 className="text-2xl font-bold text-gray-900 mb-6 text-center">
@@ -209,9 +201,7 @@ export function UrgencySection() {
                   seats filled
                 </p>
                 <div className="bg-gray-200 rounded-full h-3 overflow-hidden">
-                  <div
-                    className="bg-red-600 h-full rounded-full animate-fadeInUp"
-                  />
+                  <div className="bg-red-600 h-full rounded-full animate-fadeInUp" />
                 </div>
                 <p className="text-sm text-gray-600">Only {batchInfo.remainingSeats} seats left!</p>
               </div>
@@ -244,10 +234,7 @@ export function UrgencySection() {
                 </div>
 
                 <div className="text-center text-gray-600">
-                  <span
-                    key={recentEnrollments}
-                    className="font-semibold animate-fadeInUp"
-                  >
+                  <span key={recentEnrollments} className="font-semibold animate-fadeInUp">
                     {recentEnrollments} students enrolled today
                   </span>
                 </div>
@@ -256,7 +243,9 @@ export function UrgencySection() {
 
             {/* Urgent CTA */}
             <div className="animate-fadeInUp">
-              <ContextualWhatsAppLink target="_blank" rel="noopener noreferrer"
+              <ContextualWhatsAppLink
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block w-full bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-2xl p-6 text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
               >
                 <div className="flex items-center justify-center space-x-3 mb-2">

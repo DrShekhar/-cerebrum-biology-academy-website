@@ -179,9 +179,7 @@ export default function BiologyOlympiadCoachingPage() {
       <section className="relative bg-gradient-to-br from-green-800 via-cyan-800 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Globe className="w-5 h-5 mr-2 text-green-400" />
               Biology Olympiad Coaching
@@ -202,7 +200,11 @@ export default function BiologyOlympiadCoachingPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Biology%20Olympiad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Biology%20Olympiad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -254,9 +256,7 @@ export default function BiologyOlympiadCoachingPage() {
       {/* Olympiad Pathway Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Biology Olympiad Pathway
             </h2>
@@ -267,10 +267,7 @@ export default function BiologyOlympiadCoachingPage() {
 
           <div className="grid md:grid-cols-4 gap-6">
             {olympiadPathway.map((stage, index) => (
-              <div
-                key={stage.stage}
-                className="relative animate-fadeInUp"
-              >
+              <div key={stage.stage} className="relative animate-fadeInUp">
                 <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 border border-green-100 h-full">
                   <stage.icon className="w-12 h-12 text-green-600 mb-4" />
                   <div className="text-sm text-green-600 font-semibold mb-1">{stage.stage}</div>
@@ -292,9 +289,7 @@ export default function BiologyOlympiadCoachingPage() {
       {/* Syllabus Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Biology Olympiad Syllabus
             </h2>
@@ -305,10 +300,7 @@ export default function BiologyOlympiadCoachingPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {syllabus.map((unit, index) => (
-              <div
-                key={unit.unit}
-                className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={unit.unit} className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                     <unit.icon className="w-6 h-6 text-green-600" />
@@ -335,9 +327,7 @@ export default function BiologyOlympiadCoachingPage() {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               What You Get in Biology Olympiad Coaching
             </h2>
@@ -345,10 +335,7 @@ export default function BiologyOlympiadCoachingPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
-              >
+              <div key={feature.title} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <feature.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -361,9 +348,7 @@ export default function BiologyOlympiadCoachingPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -389,8 +374,7 @@ export default function BiologyOlympiadCoachingPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 via-blue-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Represent India at International Biology Olympiad
             </h2>
@@ -399,7 +383,11 @@ export default function BiologyOlympiadCoachingPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Biology%20Olympiad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Biology%20Olympiad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -410,7 +398,11 @@ export default function BiologyOlympiadCoachingPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20Biology%20Olympiad.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20Biology%20Olympiad.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"
@@ -430,15 +422,22 @@ export default function BiologyOlympiadCoachingPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Practice Olympiad MCQs Online</h2>
           <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-            Strengthen your NSEB &amp; INBO preparation with our free MCQ practice tool — 5,900+ Campbell
-            Biology level questions with instant answers and explanations.
+            Strengthen your NSEB &amp; INBO preparation with our free MCQ practice tool — 5,900+
+            Campbell Biology level questions with instant answers and explanations.
           </p>
           <Link
             href="/neet-biology-mcq?source=olympiad"
             className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl text-lg"
           >
             Start Olympiad Practice
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
           </Link>
         </div>
       </section>

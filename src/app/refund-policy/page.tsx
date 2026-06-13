@@ -13,7 +13,12 @@ export const metadata: Metadata = {
     description: 'Refund and cancellation policy for Cerebrum courses and services.',
   },
 
-  openGraph: { title: 'Refund Policy', description: 'Refund and cancellation policy for Cerebrum Biology Academy courses and services.', type: 'website' },
+  openGraph: {
+    title: 'Refund Policy',
+    description:
+      'Refund and cancellation policy for Cerebrum Biology Academy courses and services.',
+    type: 'website',
+  },
 }
 
 export default function RefundPolicyPage() {

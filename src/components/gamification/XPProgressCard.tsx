@@ -48,9 +48,7 @@ export function XPProgressCard({
           </span>
         </div>
         <div className="w-full bg-purple-800 bg-opacity-50 rounded-full h-4 overflow-hidden">
-          <div
-            className="bg-gradient-to-r from-yellow-400 to-yellow-200 h-4 rounded-full flex items-center justify-end px-2 animate-fadeInUp"
-          >
+          <div className="bg-gradient-to-r from-yellow-400 to-yellow-200 h-4 rounded-full flex items-center justify-end px-2 animate-fadeInUp">
             {levelProgress > 10 && (
               <span className="text-xs font-bold text-purple-900">{levelProgress}%</span>
             )}
@@ -83,9 +81,7 @@ export function XPProgressCard({
           {xpNeededForNextLevel - xpInCurrentLevel} XP needed to reach Level {currentLevel + 1}
         </div>
         {levelProgress >= 75 && (
-          <div
-            className="mt-2 inline-flex items-center space-x-1 bg-yellow-400 text-purple-900 px-3 py-1 rounded-full text-xs font-bold animate-fadeInUp"
-          >
+          <div className="mt-2 inline-flex items-center space-x-1 bg-yellow-400 text-purple-900 px-3 py-1 rounded-full text-xs font-bold animate-fadeInUp">
             <Zap className="w-3 h-3" />
             <span>Almost there! Keep going!</span>
           </div>

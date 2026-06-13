@@ -249,11 +249,12 @@ export async function generateMetadata({
     title: data.title,
     description: data.description,
     twitter: {
-    card: 'summary_large_image',
-    title: 'Best NEET Coaching Hauz Khas | Biology Classes Near IIT Delhi',
-    description: 'Top NEET coaching in Hauz Khas, South Delhi. Near IIT Delhi, expert AIIMS faculty, 98% success rate.',
-  },
-  alternates: {
+      card: 'summary_large_image',
+      title: 'Best NEET Coaching Hauz Khas | Biology Classes Near IIT Delhi',
+      description:
+        'Top NEET coaching in Hauz Khas, South Delhi. Near IIT Delhi, expert AIIMS faculty, 98% success rate.',
+    },
+    alternates: {
       canonical: data.canonical,
     },
     openGraph: {

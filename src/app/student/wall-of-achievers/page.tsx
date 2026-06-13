@@ -53,7 +53,10 @@ function AutoScrollBanner() {
         style={{ scrollBehavior: 'auto' }}
       >
         {doubledImages.map((src, i) => (
-          <div key={i} className="flex-shrink-0 w-48 h-32 md:w-64 md:h-40 relative rounded-lg overflow-hidden">
+          <div
+            key={i}
+            className="flex-shrink-0 w-48 h-32 md:w-64 md:h-40 relative rounded-lg overflow-hidden"
+          >
             <Image
               src={src}
               alt={`Cerebrum Academy moment ${(i % galleryImages.length) + 1}`}
@@ -80,11 +83,17 @@ function AchieverCard({ story }: { story: (typeof successStoriesData)[0] }) {
   const Icon = config.icon
 
   return (
-    <div className={`rounded-2xl border-2 p-6 transition-all hover:shadow-xl hover:-translate-y-1 ${config.bg}`}>
+    <div
+      className={`rounded-2xl border-2 p-6 transition-all hover:shadow-xl hover:-translate-y-1 ${config.bg}`}
+    >
       <div className="flex items-start gap-4">
         <div className="relative flex-shrink-0">
           <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center text-white text-xl font-bold shadow-lg">
-            {story.studentName.split(' ').map((n) => n[0]).join('').slice(0, 2)}
+            {story.studentName
+              .split(' ')
+              .map((n) => n[0])
+              .join('')
+              .slice(0, 2)}
           </div>
           {story.rank <= 500 && (
             <span className="absolute -top-1 -right-1 text-2xl">
@@ -97,11 +106,15 @@ function AchieverCard({ story }: { story: (typeof successStoriesData)[0] }) {
           <div className="flex items-center gap-2 mb-1">
             <h3 className="text-lg font-bold text-gray-900">{story.studentName}</h3>
             {story.featured && (
-              <span className="px-2 py-0.5 bg-yellow-400 text-yellow-900 text-xs font-bold rounded-full">STAR</span>
+              <span className="px-2 py-0.5 bg-yellow-400 text-yellow-900 text-xs font-bold rounded-full">
+                STAR
+              </span>
             )}
           </div>
           <p className="text-sm font-semibold text-blue-700 mb-1">{story.college}</p>
-          <p className="text-xs text-gray-500 mb-3">{story.school} | {story.year}</p>
+          <p className="text-xs text-gray-500 mb-3">
+            {story.school} | {story.year}
+          </p>
 
           <div className="grid grid-cols-3 gap-3 mb-3">
             <div className="text-center p-2 bg-white/70 rounded-xl">
@@ -179,13 +192,16 @@ export default function StudentWallOfAchieversPage() {
             Wall of <span className="text-yellow-400">Achievers</span>
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
-            Meet the students who turned their NEET dreams into reality with Cerebrum Biology Academy.
-            Every score, every rank — a story of dedication.
+            Meet the students who turned their NEET dreams into reality with Cerebrum Biology
+            Academy. Every score, every rank — a story of dedication.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
             {stats.map((stat) => (
-              <div key={stat.label} className="bg-white/10 backdrop-blur rounded-2xl p-4 text-center">
+              <div
+                key={stat.label}
+                className="bg-white/10 backdrop-blur rounded-2xl p-4 text-center"
+              >
                 <stat.icon className={`w-6 h-6 mx-auto mb-2 ${stat.color}`} />
                 <div className="text-2xl font-bold">{stat.value}</div>
                 <div className="text-xs text-gray-400">{stat.label}</div>
@@ -224,7 +240,9 @@ export default function StudentWallOfAchieversPage() {
                   }`}
                 >
                   <config.icon className="w-4 h-4" />
-                  <span className="capitalize">{cat}s ({count})</span>
+                  <span className="capitalize">
+                    {cat}s ({count})
+                  </span>
                 </button>
               )
             })}
@@ -255,7 +273,8 @@ export default function StudentWallOfAchieversPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Your Name Could Be Here Next</h2>
           <p className="text-lg text-white/80 mb-6 max-w-2xl mx-auto">
-            Join 680+ students who achieved their NEET dreams with Cerebrum. Start with a free demo class today.
+            Join 680+ students who achieved their NEET dreams with Cerebrum. Start with a free demo
+            class today.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

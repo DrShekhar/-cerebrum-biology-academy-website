@@ -20,24 +20,30 @@ export async function GET(request: NextRequest) {
     // Get high weightage chapters
     if (highWeightage === 'true') {
       const chapters = await ncertReader.getHighWeightageChapters()
-      return NextResponse.json({
-        success: true,
-        count: chapters.length,
-        chapters,
-      }, {
-        headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
-      })
+      return NextResponse.json(
+        {
+          success: true,
+          count: chapters.length,
+          chapters,
+        },
+        {
+          headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
+        }
+      )
     }
 
     // Get summary stats
     if (includeStats === 'true') {
       const stats = await ncertReader.getSummaryStats()
-      return NextResponse.json({
-        success: true,
-        stats,
-      }, {
-        headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
-      })
+      return NextResponse.json(
+        {
+          success: true,
+          stats,
+        },
+        {
+          headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
+        }
+      )
     }
 
     // Get specific chapter
@@ -57,12 +63,15 @@ export async function GET(request: NextRequest) {
         )
       }
 
-      return NextResponse.json({
-        success: true,
-        chapter,
-      }, {
-        headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
-      })
+      return NextResponse.json(
+        {
+          success: true,
+          chapter,
+        },
+        {
+          headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
+        }
+      )
     }
 
     // Get all chapters for a class
@@ -74,31 +83,37 @@ export async function GET(request: NextRequest) {
       }
 
       const chapters = await ncertReader.getChaptersForClass(ncertClass)
-      return NextResponse.json({
-        success: true,
-        class: ncertClass,
-        count: chapters.length,
-        chapters,
-      }, {
-        headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
-      })
+      return NextResponse.json(
+        {
+          success: true,
+          class: ncertClass,
+          count: chapters.length,
+          chapters,
+        },
+        {
+          headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
+        }
+      )
     }
 
     // Get all chapters (both classes)
     const index = await ncertReader.loadIndex()
-    return NextResponse.json({
-      success: true,
-      class11: {
-        totalChapters: index.class11.totalChapters,
-        chapters: index.class11.chapters,
+    return NextResponse.json(
+      {
+        success: true,
+        class11: {
+          totalChapters: index.class11.totalChapters,
+          chapters: index.class11.chapters,
+        },
+        class12: {
+          totalChapters: index.class12.totalChapters,
+          chapters: index.class12.chapters,
+        },
       },
-      class12: {
-        totalChapters: index.class12.totalChapters,
-        chapters: index.class12.chapters,
-      },
-    }, {
-      headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
-    })
+      {
+        headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
+      }
+    )
   } catch (error) {
     console.error('[NCERT API] Error:', error)
     return NextResponse.json(

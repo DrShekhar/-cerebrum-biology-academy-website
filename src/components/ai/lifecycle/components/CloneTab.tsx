@@ -13,10 +13,7 @@ interface CloneTabProps {
 
 export function CloneTab({ cloneSettings, setCloneSettings, loading, cloneTest }: CloneTabProps) {
   return (
-    <div
-      key="clone"
-      className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-    >
+    <div key="clone" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
       <div className="bg-white rounded-xl p-6 border">
         <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
           <Copy className="w-5 h-5 text-indigo-600" />

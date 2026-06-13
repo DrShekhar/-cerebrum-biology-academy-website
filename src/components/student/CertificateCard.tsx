@@ -76,9 +76,7 @@ export default function CertificateCard({
   }
 
   return (
-    <div
-      className="bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300 overflow-hidden group animate-fadeInUp"
-    >
+    <div className="bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300 overflow-hidden group animate-fadeInUp">
       <div className="p-6">
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">

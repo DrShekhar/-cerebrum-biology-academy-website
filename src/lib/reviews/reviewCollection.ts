@@ -5,7 +5,6 @@
  * Sends delayed WhatsApp messages asking for Google reviews
  */
 
-
 // Google Business Profile review link - UPDATE THIS with your actual link
 export const GOOGLE_REVIEW_LINK = 'https://g.page/r/cerebrum-biology-academy/review'
 
@@ -136,7 +135,7 @@ export function scheduleReviewRequest(data: ReviewRequestData): void {
 
   // Track scheduling
   if (window.gtag) {
-    ;window.gtag('event', 'review_request_scheduled', {
+    window.gtag('event', 'review_request_scheduled', {
       event_category: 'review_collection',
       event_label: data.eventType,
     })
@@ -185,7 +184,7 @@ export function trackReviewClick(source: string): void {
 
   // Track in analytics
   if (window.gtag) {
-    ;window.gtag('event', 'review_link_click', {
+    window.gtag('event', 'review_link_click', {
       event_category: 'review_collection',
       event_label: source,
       value: 1,
@@ -194,7 +193,7 @@ export function trackReviewClick(source: string): void {
 
   // Track in Facebook Pixel
   if (window.fbq) {
-    ;window.fbq('trackCustom', 'ReviewIntentClick', {
+    window.fbq('trackCustom', 'ReviewIntentClick', {
       source: source,
     })
   }

@@ -1,53 +1,59 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
+'use client'
 
-import { useState } from "react";
-import { SmartWhatsAppCTA } from "@/components/conversion/SmartWhatsAppCTA";
-import { VideoTestimonialsSection } from "@/components/testimonials/VideoTestimonialsSection";
-import { PricingSection, CostComparisonSection } from "@/components/city";
-import { RelatedCityLinks } from "@/components/seo/RelatedCityLinks";
+import { useState } from 'react'
+import { SmartWhatsAppCTA } from '@/components/conversion/SmartWhatsAppCTA'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import { PricingSection, CostComparisonSection } from '@/components/city'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 interface FAQItem {
-  id: string;
-  question: string;
-  answer: string;
+  id: string
+  question: string
+  answer: string
 }
 
 const faqData: FAQItem[] = [
   {
-        id: "0",
-        question: "How does NEET relate to VCE preparation?",
-        answer: "NEET biology/chemistry exceed VCE requirements significantly. Students find VCE exams easier while securing strong NEET scores for Indian medical colleges."
-      },
-      {
-        id: "1",
-        question: "What are the class timings for Melbourne?",
-        answer: "Melbourne batches: 4:30 AM - 7:30 AM IST (11 PM - 2 AM AEDT previous day) or 6:30 PM - 9:30 PM IST (9 AM - 12 PM AEDT)."
-      },
-      {
-        id: "2",
-        question: "Is Melbourne good for medical university pathway?",
-        answer: "Excellent! NEET + VCE excellence opens doors to top Indian medical colleges and international medical pathways via USMLE/FMGE."
-      },
-      {
-        id: "3",
-        question: "How's the Indian community support in Melbourne?",
-        answer: "100,000+ Indians in Melbourne provide excellent peer support. We organize monthly events, study groups, and mentorship with Melbourne doctors."
-      },
-      {
-        id: "4",
-        question: "What's your Melbourne batch success rate?",
-        answer: "98% success with average 620+ scores. 55+ students from Melbourne now in AIIMS/CMC/Manipal and other premier colleges."
-      },
-      {
-        id: "5",
-        question: "Do you offer VCE-NEET combo guidance?",
-        answer: "Yes! Our VCE-NEET integration program helps students balance both exams perfectly with subject-wise coordination."
-      }
-];
+    id: '0',
+    question: 'How does NEET relate to VCE preparation?',
+    answer:
+      'NEET biology/chemistry exceed VCE requirements significantly. Students find VCE exams easier while securing strong NEET scores for Indian medical colleges.',
+  },
+  {
+    id: '1',
+    question: 'What are the class timings for Melbourne?',
+    answer:
+      'Melbourne batches: 4:30 AM - 7:30 AM IST (11 PM - 2 AM AEDT previous day) or 6:30 PM - 9:30 PM IST (9 AM - 12 PM AEDT).',
+  },
+  {
+    id: '2',
+    question: 'Is Melbourne good for medical university pathway?',
+    answer:
+      'Excellent! NEET + VCE excellence opens doors to top Indian medical colleges and international medical pathways via USMLE/FMGE.',
+  },
+  {
+    id: '3',
+    question: "How's the Indian community support in Melbourne?",
+    answer:
+      '100,000+ Indians in Melbourne provide excellent peer support. We organize monthly events, study groups, and mentorship with Melbourne doctors.',
+  },
+  {
+    id: '4',
+    question: "What's your Melbourne batch success rate?",
+    answer:
+      '98% success with average 620+ scores. 55+ students from Melbourne now in AIIMS/CMC/Manipal and other premier colleges.',
+  },
+  {
+    id: '5',
+    question: 'Do you offer VCE-NEET combo guidance?',
+    answer:
+      'Yes! Our VCE-NEET integration program helps students balance both exams perfectly with subject-wise coordination.',
+  },
+]
 
 export function PageContent() {
-  const [expandedFaq, setExpandedFaq] = useState<string | null>(null);
+  const [expandedFaq, setExpandedFaq] = useState<string | null>(null)
 
   return (
     <div className="min-h-screen bg-white">
@@ -104,24 +110,29 @@ export function PageContent() {
       {/* Why Choose Us */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Why Choose Cerebrum for Melbourne?</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">
+            Why Choose Cerebrum for Melbourne?
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold mb-2">Expert Mentorship</h3>
               <p className="text-gray-700">
-                Learn directly from Dr. Shekhar C Singh with 20+ years of medical education expertise.
+                Learn directly from Dr. Shekhar C Singh with 20+ years of medical education
+                expertise.
               </p>
             </div>
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold mb-2">Localized Curriculum</h3>
               <p className="text-gray-700">
-                Melbourne-specific content aligned with local education boards and timezone optimization.
+                Melbourne-specific content aligned with local education boards and timezone
+                optimization.
               </p>
             </div>
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold mb-2">Community Support</h3>
               <p className="text-gray-700">
-                Join a vibrant Melbourne community of NEET aspirants with peer mentorship and study groups.
+                Join a vibrant Melbourne community of NEET aspirants with peer mentorship and study
+                groups.
               </p>
             </div>
             <div className="border-l-4 border-blue-600 pl-6">
@@ -185,10 +196,10 @@ export function PageContent() {
           <div className="bg-white border border-gray-200 rounded-lg p-8">
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <li key="0">Scotch College</li>
-                  <li key="1">Xavier College</li>
-                  <li key="2">Trinity Grammar School</li>
-                  <li key="3">Loreto Mandeville Hall</li>
-                  <li key="4">Methodist Ladies' College</li>
+              <li key="1">Xavier College</li>
+              <li key="2">Trinity Grammar School</li>
+              <li key="3">Loreto Mandeville Hall</li>
+              <li key="4">Methodist Ladies' College</li>
             </ul>
           </div>
         </div>
@@ -221,8 +232,8 @@ export function PageContent() {
       {/* WhatsApp CTA 2 */}
       <section className="py-8 px-4">
         <div className="max-w-6xl mx-auto">
-          <SmartWhatsAppCTA 
-            title="Still Have Questions?" 
+          <SmartWhatsAppCTA
+            title="Still Have Questions?"
             message="Chat with our counselors on WhatsApp for instant guidance"
           />
         </div>
@@ -236,16 +247,13 @@ export function PageContent() {
           </h2>
           <div className="max-w-3xl mx-auto space-y-4">
             {faqData.map((item) => (
-              <div
-                key={item.id}
-                className="border border-gray-200 rounded-lg"
-              >
+              <div key={item.id} className="border border-gray-200 rounded-lg">
                 <button
                   onClick={() => setExpandedFaq(expandedFaq === item.id ? null : item.id)}
                   className="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center"
                 >
                   {item.question}
-                  <span className="text-blue-600">{expandedFaq === item.id ? "-" : "+"}</span>
+                  <span className="text-blue-600">{expandedFaq === item.id ? '-' : '+'}</span>
                 </button>
                 {expandedFaq === item.id && (
                   <div className="px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
@@ -261,8 +269,8 @@ export function PageContent() {
       {/* WhatsApp CTA 3 */}
       <section className="py-8 px-4 bg-blue-50">
         <div className="max-w-6xl mx-auto">
-          <SmartWhatsAppCTA 
-            title="Ready to Start Your NEET Journey?" 
+          <SmartWhatsAppCTA
+            title="Ready to Start Your NEET Journey?"
             message="Book your free counseling session now"
             variant="highlight"
           />
@@ -280,11 +288,10 @@ export function PageContent() {
       {/* Final CTA */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Join Our Successful NEET Students
-          </h2>
+          <h2 className="text-3xl font-bold mb-4">Join Our Successful NEET Students</h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Start your preparation with India's most trusted NEET coaching. Limited seats available in Melbourne batch.
+            Start your preparation with India's most trusted NEET coaching. Limited seats available
+            in Melbourne batch.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -303,5 +310,5 @@ export function PageContent() {
         </div>
       </section>
     </div>
-  );
+  )
 }

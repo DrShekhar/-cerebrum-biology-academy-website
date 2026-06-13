@@ -285,9 +285,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
     <section className={`py-20 bg-gradient-to-br from-slate-50 to-blue-50 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div
-          className="text-center space-y-6 mb-16 animate-fadeInUp"
-        >
+        <div className="text-center space-y-6 mb-16 animate-fadeInUp">
           <div className="inline-flex items-center gap-2 bg-navy-100 border border-green-400 rounded-full px-4 py-2">
             <Trophy className="h-5 w-5 text-blue-600" />
             <span className="text-sm font-semibold text-blue-800">
@@ -311,9 +309,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
           </p>
 
           {/* Early Bird Discount Banner */}
-          <div
-            className="bg-red-600 text-white rounded-xl p-4 max-w-md mx-auto animate-fadeInUp"
-          >
+          <div className="bg-red-600 text-white rounded-xl p-4 max-w-md mx-auto animate-fadeInUp">
             <div className="flex items-center justify-center gap-3 mb-2">
               <Gift className="h-6 w-6" />
               <span className="font-bold text-lg">Early Bird Offer</span>
@@ -364,97 +360,90 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
         </div>
 
         {/* Course Packages Display */}
-{selectedView === 'cards' && (
-            <div
-              key="cards"
-              className="space-y-8 animate-fadeInUp"
-            >
-              {/* Mobile: Swipeable Cards */}
-              <div className="md:hidden">
-                <div className="relative">
-                  <PremiumCard
-                    variant="luxury"
-                    size="lg"
-                    className={getCategoryStyles(coursePackages[currentPackage].category)}
+        {selectedView === 'cards' && (
+          <div key="cards" className="space-y-8 animate-fadeInUp">
+            {/* Mobile: Swipeable Cards */}
+            <div className="md:hidden">
+              <div className="relative">
+                <PremiumCard
+                  variant="luxury"
+                  size="lg"
+                  className={getCategoryStyles(coursePackages[currentPackage].category)}
+                >
+                  <PackageCard
+                    package={coursePackages[currentPackage]}
+                    onBookDemo={handleBookDemo}
+                    featured={coursePackages[currentPackage].popular}
+                  />
+                </PremiumCard>
+
+                {/* Navigation */}
+                <div className="flex justify-between items-center mt-4">
+                  <button
+                    onClick={() => setCurrentPackage(Math.max(0, currentPackage - 1))}
+                    disabled={currentPackage === 0}
+                    className="p-2 rounded-full bg-white shadow-lg disabled:opacity-50"
                   >
-                    <PackageCard
-                      package={coursePackages[currentPackage]}
-                      onBookDemo={handleBookDemo}
-                      featured={coursePackages[currentPackage].popular}
-                    />
-                  </PremiumCard>
+                    <ChevronLeft className="h-6 w-6" />
+                  </button>
 
-                  {/* Navigation */}
-                  <div className="flex justify-between items-center mt-4">
-                    <button
-                      onClick={() => setCurrentPackage(Math.max(0, currentPackage - 1))}
-                      disabled={currentPackage === 0}
-                      className="p-2 rounded-full bg-white shadow-lg disabled:opacity-50"
-                    >
-                      <ChevronLeft className="h-6 w-6" />
-                    </button>
-
-                    <div className="flex gap-2">
-                      {coursePackages.map((_, index) => (
-                        <button
-                          key={index}
-                          onClick={() => setCurrentPackage(index)}
-                          className={`w-3 h-3 rounded-full transition-all ${
-                            index === currentPackage ? 'bg-blue-600 scale-125' : 'bg-gray-300'
-                          }`}
-                        />
-                      ))}
-                    </div>
-
-                    <button
-                      onClick={() =>
-                        setCurrentPackage(Math.min(coursePackages.length - 1, currentPackage + 1))
-                      }
-                      disabled={currentPackage === coursePackages.length - 1}
-                      className="p-2 rounded-full bg-white shadow-lg disabled:opacity-50"
-                    >
-                      <ChevronRight className="h-6 w-6" />
-                    </button>
+                  <div className="flex gap-2">
+                    {coursePackages.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentPackage(index)}
+                        className={`w-3 h-3 rounded-full transition-all ${
+                          index === currentPackage ? 'bg-blue-600 scale-125' : 'bg-gray-300'
+                        }`}
+                      />
+                    ))}
                   </div>
+
+                  <button
+                    onClick={() =>
+                      setCurrentPackage(Math.min(coursePackages.length - 1, currentPackage + 1))
+                    }
+                    disabled={currentPackage === coursePackages.length - 1}
+                    className="p-2 rounded-full bg-white shadow-lg disabled:opacity-50"
+                  >
+                    <ChevronRight className="h-6 w-6" />
+                  </button>
                 </div>
               </div>
+            </div>
 
-              {/* Tablet & Desktop: Grid Layout */}
-              <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-5 lg:gap-6">
-                {coursePackages.map((pkg, index) => (
-                  <div
-                    key={pkg.id}
-                    className={`relative ${pkg.popular ? 'lg:col-span-1 xl:col-span-2 lg:row-span-1' : ''}`}
+            {/* Tablet & Desktop: Grid Layout */}
+            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-5 lg:gap-6">
+              {coursePackages.map((pkg, index) => (
+                <div
+                  key={pkg.id}
+                  className={`relative ${pkg.popular ? 'lg:col-span-1 xl:col-span-2 lg:row-span-1' : ''}`}
+                >
+                  <PremiumCard
+                    variant={pkg.popular ? 'luxury' : 'premium'}
+                    size={pkg.popular ? 'lg' : 'md'}
+                    className={getCategoryStyles(pkg.category)}
                   >
-                    <PremiumCard
-                      variant={pkg.popular ? 'luxury' : 'premium'}
-                      size={pkg.popular ? 'lg' : 'md'}
-                      className={getCategoryStyles(pkg.category)}
-                    >
-                      <PackageCard
-                        package={pkg}
-                        onBookDemo={handleBookDemo}
-                        featured={pkg.popular}
-                        compact={!pkg.popular}
-                      />
-                    </PremiumCard>
-                  </div>
-                ))}
-              </div>
+                    <PackageCard
+                      package={pkg}
+                      onBookDemo={handleBookDemo}
+                      featured={pkg.popular}
+                      compact={!pkg.popular}
+                    />
+                  </PremiumCard>
+                </div>
+              ))}
             </div>
-          )}
+          </div>
+        )}
 
-          {selectedView === 'table' && (
-            <div
-              key="table"
-             className="animate-fadeInUp">
-              <ComparisonTable packages={coursePackages} onBookDemo={handleBookDemo} />
-            </div>
-          )}
-{/* Interactive Features */}
-        <div
-          className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeInUp"
-        >
+        {selectedView === 'table' && (
+          <div key="table" className="animate-fadeInUp">
+            <ComparisonTable packages={coursePackages} onBookDemo={handleBookDemo} />
+          </div>
+        )}
+        {/* Interactive Features */}
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeInUp">
           {/* EMI Calculator */}
           <PremiumCard variant="premium" size="md" className="text-center">
             <CalculatorIcon className="h-12 w-12 text-blue-600 mx-auto mb-4" />
@@ -502,9 +491,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
         </div>
 
         {/* Success Guarantee Banner */}
-        <div
-          className="mt-16 bg-green-600 rounded-2xl p-8 text-white text-center animate-fadeInUp"
-        >
+        <div className="mt-16 bg-green-600 rounded-2xl p-8 text-white text-center animate-fadeInUp">
           <div className="max-w-3xl mx-auto space-y-6">
             <Trophy className="h-16 w-16 mx-auto text-yellow-300" />
             <h3 className="text-3xl font-bold">Our Success Guarantee</h3>
@@ -699,10 +686,7 @@ function ComparisonTable({
         </thead>
         <tbody className="divide-y divide-gray-200">
           {packages.map((pkg, index) => (
-            <tr
-              key={pkg.id}
-              className={`hover:bg-gray-50 ${pkg.popular ? 'bg-blue-50' : ''}`}
-            >
+            <tr key={pkg.id} className={`hover:bg-gray-50 ${pkg.popular ? 'bg-blue-50' : ''}`}>
               <td className="px-6 py-4">
                 <div className="space-y-1">
                   <div className="font-semibold text-gray-900">{pkg.name}</div>

@@ -1,4 +1,5 @@
 # SEO Audit Report: Cerebrum Biology Academy
+
 **cerebrumbiologyacademy.com**
 
 **Report Date:** February 9, 2026
@@ -14,6 +15,7 @@
 Cerebrum Biology Academy demonstrates strong foundational SEO practices with comprehensive structured data implementation, robust sitemap coverage (1022+ URLs), and well-optimized metadata. However, several critical gaps exist that are preventing the site from achieving maximum search visibility and rich snippet eligibility.
 
 **Key Findings:**
+
 - ✅ Excellent: Structured data foundation, metadata, breadcrumbs, robots.txt
 - ⚠️ Good but needs work: Video schema coverage, internal linking strategy, AEO optimization
 - ❌ Gaps: Missing FAQPage schema on dedicated FAQ pages, limited alt text coverage, incomplete image schema
@@ -23,6 +25,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 ## 1. SEO Strengths (Top 10)
 
 ### 1. **Comprehensive Sitemap Implementation**
+
 - **1022+ URLs indexed** across 6 route categories (blog, SEO landing pages, local areas, static pages, biology notes)
 - Dynamic generation from MDX files, SEO slugs, and local area data
 - Proper priority weighting (1.0 for homepage, 0.9 for key pages, 0.6 for secondary pages)
@@ -30,6 +33,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 - File: `/src/app/sitemap.ts` (6,298 lines)
 
 ### 2. **Root Metadata & Open Graph Configuration**
+
 - Strong title template: `%s | Cerebrum Biology Academy`
 - Comprehensive meta description (165 characters, optimal range)
 - OG image properly configured (1200×630px)
@@ -38,6 +42,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 - File: `/src/app/layout.tsx` (lines 52-104)
 
 ### 3. **Advanced Robots.txt & Robots.ts Configuration**
+
 - Separate crawl rules for different bot types (Googlebot, Bingbot, AI crawlers)
 - AI crawler optimization (GPTBot, Claude-Web, PerplexityBot, Anthropic-AI allowed)
 - Proper disallow rules for API, admin, dashboard, analytics routes
@@ -46,6 +51,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 - Files: `/public/robots.txt`, `/src/app/robots.ts`
 
 ### 4. **Organization Schema Implementation**
+
 - Complete EducationalOrganization schema with 15+ key fields
 - Founder attribution (Dr. Shekhar C Singh with AIIMS background)
 - Multiple review embeddings (3+ real reviews with 5-star ratings)
@@ -55,6 +61,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 - File: `/src/components/seo/StructuredData.tsx` (lines 1-162)
 
 ### 5. **Breadcrumb Schema Saturation (111+ implementations)**
+
 - BreadcrumbSchema used across navigation and SEO pages
 - Proper hierarchy generation for course pages, location pages, blog posts
 - All breadcrumbs include proper JSON-LD formatting
@@ -62,6 +69,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 - File: `/src/components/seo/BreadcrumbSchema.tsx`
 
 ### 6. **Comprehensive Course Schema Across Categories**
+
 - Course-specific metadata on all course pages
 - 18+ course pages with individual metadata
 - Course pricing and availability included
@@ -70,6 +78,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 - File: Multiple course layout.tsx files
 
 ### 7. **Advanced Speakable Schema for Voice Search**
+
 - Voice search optimization implemented on homepage
 - CSS selector-based content extraction for voice queries
 - Homepage properly configured with headline, description, cssSelectors
@@ -77,6 +86,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 - File: `/src/components/seo/SpeakableSchema.tsx`
 
 ### 8. **AI-Friendly Content Optimization**
+
 - Dedicated `/llms.txt` and `/ai.txt` files for AI crawlers
 - Preferred citation format documented
 - Entity information clearly stated for AI model training
@@ -84,12 +94,14 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 - Files: `/public/llms.txt`, `/public/ai.txt`
 
 ### 9. **Canonical URLs Strategy**
+
 - Canonical URLs implemented in 10+ core pages
 - Prevents duplicate content issues
 - Properly formatted absolute URLs
 - Examples in: layout.tsx files across location pages, blog pages
 
 ### 10. **Performance-Optimized Image Configuration**
+
 - Next.js Image optimization with reduced variants (20 variants vs. 144+ default)
 - Quality optimization (3 quality levels: 75, 85, 95)
 - Remote patterns configured for CDN, Unsplash, cerebrumbiologyacademy.com
@@ -107,6 +119,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 **Impact:** High - FAQPage schema enables rich snippets with "People Also Ask" featured content
 
 **Finding:**
+
 - FAQSchema component exists (`/src/components/seo/FAQSchema.tsx`)
 - FAQDisplay component exists but is not implemented on dedicated FAQ pages
 - Homepage and multiple pages have FAQ sections BUT no FAQPage schema wrapping them
@@ -116,6 +129,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
   - Course pages with FAQ sections
 
 **Code Gap:**
+
 ```typescript
 // MISSING on FAQ pages:
 {
@@ -135,6 +149,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 ```
 
 **Recommendations:**
+
 1. Audit all pages with FAQ sections (run: `grep -r "faq\|FAQ" /src/app --include="*.tsx"`)
 2. Implement FAQPage schema wrapper on:
    - Homepage FAQSection component
@@ -145,6 +160,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 4. Wrap FAQ components with proper schema
 
 **Files to Update:**
+
 - `src/app/page.tsx` (HomePage with HomeFAQSection)
 - Any dedicated FAQ route
 - Course pages with FAQ content
@@ -159,6 +175,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 **Impact:** High - VideoObject schema enables video rich snippets, carousels, and video answers in search
 
 **Finding:**
+
 - VideoSchema component exists (`/src/components/seo/VideoSchema.tsx`)
 - VideoObject type mentioned in StructuredData but limited real implementation
 - Only 2 pages currently leverage VideoObject schema:
@@ -171,6 +188,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
   - `/src/components/layout/CompactVideoLectures.tsx`
 
 **Code Gap:**
+
 ```typescript
 // Current: Videos render without VideoObject schema
 <VideoTestimonialsSection /> // No schema
@@ -187,6 +205,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 ```
 
 **Recommendations:**
+
 1. **Immediate:** Wrap all `VideoLectureShowcase`, `VideoTestimonialsSection` components with VideoObject schema
 2. **Quick Win:** Generate VideoObject schema from testimonial video array in `/src/lib/seo/videoSchema.ts`
    - Pre-configured 4 testimonial videos exist (lines 43-80)
@@ -212,6 +231,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 **Impact:** Medium-High - AggregateRating in course schema enables star ratings in search results
 
 **Finding:**
+
 - Only 3 pages implement AggregateRating:
   - `/neet-score-calculator`
   - `/international-biology-tutor`
@@ -221,6 +241,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 - Organization schema has AggregateRating (5.0/5 with 32 reviews) but not propagated to courses
 
 **Code Gap:**
+
 ```typescript
 // MISSING in CourseDetailSchema:
 {
@@ -235,6 +256,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 ```
 
 **Recommendations:**
+
 1. Update `CourseDetailSchema` component to include aggregateRating
 2. Pull aggregate rating from organizational data (680+ selections, 98% success)
 3. Implement on all course pages:
@@ -256,6 +278,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 **Impact:** High - Internal linking improves crawlability, authority distribution, and user engagement
 
 **Findings:**
+
 - No `rel="nofollow"` or `rel="sponsored"` attributes found in codebase
 - Breadcrumbs present (111 implementations) but limited contextual linking
 - Missing strategic keyword anchor text linking between:
@@ -265,6 +288,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
   - FAQ answers to relevant course pages
 
 **Current State:**
+
 ```
 ✅ Breadcrumbs working
 ❌ No strategic contextual links
@@ -274,6 +298,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 ```
 
 **Recommendations:**
+
 1. **Create Internal Linking Component:**
    ```typescript
    // src/components/seo/InternalLinkCard.tsx
@@ -309,6 +334,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 **Impact:** Medium-High - HowTo schema enables step-by-step guides in search results
 
 **Finding:**
+
 - Some HowTo implementation exists:
   - `/how-to-score-340-in-neet-biology` (page title suggests content)
   - `/how-to-prepare-neet-noida` (uses NoidaHowToSchema)
@@ -320,6 +346,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
   - How to manage time during NEET prep
 
 **Recommendations:**
+
 1. Find all "how-to" pages: `find /src/app -name "*how*" -type d`
 2. Ensure each has HowToSchema with:
    - Minimum 5-7 steps
@@ -347,12 +374,14 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 **Impact:** Medium - Meta descriptions drive CTR from search results
 
 **Finding:**
+
 - Root layout has excellent descriptions
 - Only 18 course pages have custom metadata exports
 - Many pages likely missing or using generic descriptions
 - Blog posts might have insufficient description length
 
 **Recommendations:**
+
 1. Audit meta description coverage:
    ```bash
    find /src/app -name "page.tsx" | xargs grep -L "description:" | wc -l
@@ -377,6 +406,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 **Impact:** Medium - Alt text improves image SEO, accessibility, ADA compliance
 
 **Finding:**
+
 - No alt text attributes found in homepage audit
 - 998 total page.tsx files but limited Image component usage analyzed
 - Missing alt text on:
@@ -387,11 +417,13 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
   - Results/achievement images
 
 **Recommendations:**
+
 1. Audit all Next.js `<Image>` components:
    ```bash
    grep -r "<Image" /src/app --include="*.tsx" | grep -c "alt="
    ```
 2. Create alt text guidelines for team:
+
    ```
    Format: [Type] - [Description] - [Keyword]
 
@@ -400,6 +432,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
    - Results: "NEET Topper Priya Gupta - 695/720 Score at Cerebrum Academy"
    - Center: "Cerebrum Biology Academy Gurgaon Center - State-of-art Facility"
    ```
+
 3. Implement alt text on priority images:
    - Homepage hero image
    - Faculty section (all faculty photos)
@@ -416,6 +449,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 **Impact:** Medium - Hindi/Hinglish queries represent 30-40% of Indian educational searches
 
 **Finding:**
+
 - Hinglish components exist:
   - `HinglishKeywords` component with keywords and FAQs
   - `HinglishFAQSection` component
@@ -423,6 +457,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 - Alternative languages configured in hreflang but no `/hi` locale pages built
 
 **Recommendations:**
+
 1. **Immediate:** Check if Hindi version exists:
    ```bash
    ls -la /tmp/cerebrum-repo/src/app/hi/
@@ -450,6 +485,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 **Impact:** Medium - Event schema enables calendar integrations and event rich snippets
 
 **Finding:**
+
 - EventSchema component exists (`/src/components/seo/EventSchema.tsx`)
 - WebinarSchema exists
 - BUT no event pages found using this schema
@@ -460,6 +496,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
   - Enrollment seminars
 
 **Recommendations:**
+
 1. Create demo class scheduling page with Event schema:
    ```typescript
    <EventSchema
@@ -482,6 +519,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 **Impact:** Medium - Blog recap improves internal linking and content discovery
 
 **Finding:**
+
 - BlogRecapWidget component exists (`/src/components/seo/BlogRecapWidget.tsx`)
 - NOT implemented anywhere in codebase
 - Missing from:
@@ -490,6 +528,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
   - Location pages (should link to location-specific blog posts)
 
 **Recommendations:**
+
 1. Implement BlogRecapWidget on:
    - Course detail pages (footer section)
    - Location landing pages
@@ -509,41 +548,49 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 ## 3. Missing Schema Opportunities
 
 ### 1. **LocalBusinessSchema Not on Course Pages**
+
 - **Status:** Only in component library, not implemented
 - **Impact:** Local SEO visibility for geo-targeted keywords
 - **Fix:** Add LocalBusinessSchema to location-specific course pages
 
 ### 2. **Comparison Schema for Course Comparison**
+
 - **Status:** ComparisonSchema exists but limited use
 - **Impact:** Enable side-by-side comparison in search results
 - **Fix:** Fully implement on `/courses/compare` page
 
 ### 3. **State/Regional Schemas Not Published**
+
 - **Status:** StateSchema component exists with `INDIAN_STATES` data
 - **Impact:** State-level authority for SEO
 - **Fix:** Ensure state landing pages use StateSchema
 
 ### 4. **Service Schema for GMB**
+
 - **Status:** ServiceSchema exists (`/src/components/seo/ServiceSchema.tsx`)
 - **Impact:** Google My Business enhancement
 - **Fix:** Implement on center pages with local services listed
 
 ### 5. **OfferSchema for Pricing Tiers**
+
 - **Status:** CourseOfferSchema component exists
 - **Impact:** Enable pricing rich snippets
 - **Fix:** Add to pricing page with multiple course offers
 
 ### 6. **ItemListSchema for Results**
+
 - **Status:** ItemListSchema referenced in QAPageSchema
 - **Impact:** Enable ranking/results pages in search
 - **Fix:** Implement on `/neet-success-stories`, `/wall-of-achievers`
 
 ### 7. **NewsArticle vs TechArticle**
+
 - **Status:** TechArticleSchema exists, NewsArticle schema not found
 - **Impact:** Blog article classification
 - **Fix:** Use TechArticleSchema consistently on blog posts
 
 ### 8. **DefinedTermSchema for Glossary**
+
 - **Status:** DefinedTermSchema and DefinedTermListSchema exist
 - **Impact:** Enable glossary rich snippets
 - **Fix:** Create glossary page with biology terms
@@ -553,6 +600,7 @@ Cerebrum Biology Academy demonstrates strong foundational SEO practices with com
 ## 4. Internal Linking Gaps
 
 ### Current State Analysis
+
 - ✅ Breadcrumbs: 111 implementations (excellent coverage)
 - ❌ Contextual Links: 0 strategic anchor text linking found
 - ❌ Related Content: No "related courses" or "related blog posts" components
@@ -573,6 +621,7 @@ Each page links to pillar and related cluster pages with keyword anchors
 ```
 
 ### Quick Wins - Easy to Implement
+
 1. Add "Related Courses" section to each course page
 2. Add "Related Blog Posts" to blog post footers
 3. Add location cross-links (if in Gurgaon, link to similar courses in Noida)
@@ -583,6 +632,7 @@ Each page links to pillar and related cluster pages with keyword anchors
 ## 5. Page Speed Optimization Suggestions
 
 ### Current Implementation (Good)
+
 - ✅ Image variant reduction (20 vs 144+): 20-40% build time savings
 - ✅ Dynamic component lazy loading (7+ components)
 - ✅ Performance preconnection links configured
@@ -593,27 +643,32 @@ Each page links to pillar and related cluster pages with keyword anchors
 ### Remaining Opportunities
 
 #### 1. **Consider Web Font Subsetting**
+
 - Current: Full Google Fonts loading
 - Recommendation: Subset to Latin characters only (already configured)
 - Status: ✅ Already done
 
 #### 2. **Critical Rendering Path Optimization**
+
 - Current: 7 dynamic components below fold
 - Opportunity: Could reduce to 3-4 most critical
 - Files: `/src/app/page.tsx` (lines 17-70)
 - Action: Measure LCP impact of each dynamic component
 
 #### 3. **Image Optimization Deep Dive**
+
 - Current: 75, 85, 95 quality levels
 - Recommendation: Could reduce to 75, 90 (saves 10-15% image bytes)
 - Impact: Negligible quality loss, 10-15% bandwidth savings
 
 #### 4. **Third-Party Script Optimization**
+
 - Current: GTM, Analytics preconnects exist
 - Opportunity: Verify all third-party scripts use `lazyOnload` or `afterInteractive`
 - Check: Google Ads, Facebook Pixel, Razorpay, WhatsApp
 
 #### 5. **CSS-in-JS Performance**
+
 - Current: Framer Motion separated into own chunk
 - Status: ✅ Good (lines 77-79 next.config.mjs)
 - No further optimization needed
@@ -623,6 +678,7 @@ Each page links to pillar and related cluster pages with keyword anchors
 ## 6. Mobile Optimization Status
 
 ### Current Mobile Implementation
+
 - ✅ Viewport meta tag configured (width=device-width, initial-scale=1)
 - ✅ Mobile web app capable (Apple/Android PWA)
 - ✅ Responsive design (Tailwind CSS)
@@ -630,12 +686,14 @@ Each page links to pillar and related cluster pages with keyword anchors
 - ✅ Safe area support (viewport-fit=cover)
 
 ### Mobile SEO Considerations
+
 - ✅ Mobile-first indexing compatible
 - ✅ Touch-friendly UI (spacing, button sizes)
 - ⚠️ Recommend verifying mobile Core Web Vitals (LCP, FID, CLS)
 - ⚠️ Test mobile navigation (DynamicMobileNavigation exists but needs verification)
 
 ### Mobile Testing Recommendations
+
 1. Run Google PageSpeed Insights for mobile
 2. Test Core Web Vitals on mobile (LCP target: <2.5s)
 3. Verify mobile-specific CTAs are visible above fold
@@ -646,6 +704,7 @@ Each page links to pillar and related cluster pages with keyword anchors
 ## 7. Quick Win Recommendations (Implement This Week)
 
 ### 1. **Add FAQPage Schema (2-3 hours)**
+
 - Impact: High - Potential for featured snippets
 - Effort: Low
 - Files: Update `src/app/page.tsx` and any FAQ pages
@@ -661,27 +720,32 @@ Each page links to pillar and related cluster pages with keyword anchors
   ```
 
 ### 2. **Wrap Video Components with VideoObject Schema (1-2 hours)**
+
 - Impact: High - Potential for video rich snippets
 - Effort: Low
 - Files: Video component updates
 - Pre-configured videos exist in `/src/lib/seo/videoSchema.ts`
 
 ### 3. **Add AggregateRating to Course Schema (1 hour)**
+
 - Impact: Medium-High - Star ratings in search results
 - Effort: Very Low
 - Files: `CourseDetailSchema` update
 
 ### 4. **Implement Image Alt Text on Homepage (2-3 hours)**
+
 - Impact: Medium - Accessibility + Image SEO
 - Effort: Low
 - Files: `src/app/page.tsx` and component imports
 
 ### 5. **Create "Related Courses" Component (2 hours)**
+
 - Impact: Medium - Internal linking + SEO
 - Effort: Low
 - Create: `src/components/seo/RelatedCoursesCard.tsx`
 
 ### 6. **Enable Hinglish Content on Homepage (1-2 hours)**
+
 - Impact: Medium - Capture Hindi search queries
 - Effort: Low-Medium
 - Add: `HinglishFAQSection` to homepage or create Hinglish card
@@ -691,25 +755,30 @@ Each page links to pillar and related cluster pages with keyword anchors
 ## 8. Medium-Term Improvements (Implement Next Month)
 
 ### 1. **Comprehensive Internal Linking Strategy**
+
 - Create topic clusters for all major topics
 - Link blog posts to related courses
 - Cross-link location pages
 
 ### 2. **Expand VideoObject Coverage**
+
 - Audit all video content on site
 - Generate VideoObject schema for each
 - Add duration/thumbnail to all videos
 
 ### 3. **Create Glossary with DefinedTermSchema**
+
 - Biology terms glossary page
 - Each term links to related course content
 
 ### 4. **Implement Event Schema**
+
 - Demo class schedule page
 - Webinar announcements
 - Doubt-clearing session calendars
 
 ### 5. **Expand LocalBusiness Schema**
+
 - Apply to all 6 center locations
 - Include business hours, phone, address
 - Link to Google My Business profiles
@@ -718,24 +787,24 @@ Each page links to pillar and related cluster pages with keyword anchors
 
 ## 9. Technical SEO Checklist
 
-| Item | Status | Priority |
-|------|--------|----------|
-| XML Sitemap | ✅ Complete (1022 URLs) | - |
-| Robots.txt | ✅ Optimized | - |
-| Meta Robots Tags | ⚠️ Partial (3 pages noindex) | Medium |
-| Canonical URLs | ✅ Implemented | - |
-| Hreflang Tags | ✅ Configured | - |
-| Mobile Friendly | ✅ Yes | - |
-| SSL Certificate | ✅ HTTPS | - |
-| Google Search Console | ⚠️ Verify verification | Medium |
-| Google Analytics 4 | ✅ Configured | - |
-| Core Web Vitals | ⚠️ Needs testing | High |
-| Page Speed | ⚠️ Needs audit | High |
-| Structured Data | ⚠️ 75% coverage | High |
-| Internal Linking | ❌ Minimal | Critical |
-| Alt Text Coverage | ❌ 0% estimated | Medium |
-| FAQPage Schema | ❌ Missing | Critical |
-| VideoObject Schema | ⚠️ 2/1000+ pages | High |
+| Item                  | Status                       | Priority |
+| --------------------- | ---------------------------- | -------- |
+| XML Sitemap           | ✅ Complete (1022 URLs)      | -        |
+| Robots.txt            | ✅ Optimized                 | -        |
+| Meta Robots Tags      | ⚠️ Partial (3 pages noindex) | Medium   |
+| Canonical URLs        | ✅ Implemented               | -        |
+| Hreflang Tags         | ✅ Configured                | -        |
+| Mobile Friendly       | ✅ Yes                       | -        |
+| SSL Certificate       | ✅ HTTPS                     | -        |
+| Google Search Console | ⚠️ Verify verification       | Medium   |
+| Google Analytics 4    | ✅ Configured                | -        |
+| Core Web Vitals       | ⚠️ Needs testing             | High     |
+| Page Speed            | ⚠️ Needs audit               | High     |
+| Structured Data       | ⚠️ 75% coverage              | High     |
+| Internal Linking      | ❌ Minimal                   | Critical |
+| Alt Text Coverage     | ❌ 0% estimated              | Medium   |
+| FAQPage Schema        | ❌ Missing                   | Critical |
+| VideoObject Schema    | ⚠️ 2/1000+ pages             | High     |
 
 ---
 
@@ -753,24 +822,28 @@ Each page links to pillar and related cluster pages with keyword anchors
 ## 11. Content Audit Findings
 
 ### Blog Coverage
+
 - ✅ Blog posts dynamically generated (getAllPosts from MDX)
 - ✅ Blog priority set to 0.7-0.8 in sitemap
 - ❌ Article schema implementation needs verification
 - ❌ Internal linking from blog to courses missing
 
 ### Course Pages
+
 - ✅ 18+ course pages with metadata
 - ⚠️ Only course pages with custom metadata found: 18
 - ❌ Missing AggregateRating on most courses
 - ❌ Limited cross-course linking
 
 ### Location Pages
+
 - ✅ 1022+ URLs include location variants
 - ✅ Local area slugs dynamically generated
 - ⚠️ LocalBusinessSchema coverage unknown
 - ❌ Cross-location internal linking missing
 
 ### Static Pages
+
 - ✅ 40+ key static pages in sitemap
 - ✅ Priority weighting proper
 - ⚠️ FAQ pages need FAQPage schema
@@ -796,6 +869,7 @@ Each page links to pillar and related cluster pages with keyword anchors
 ## Summary & Action Plan
 
 ### Immediate Actions (This Week)
+
 1. ✅ Implement FAQPage schema (affects homepage, FAQ pages)
 2. ✅ Add VideoObject schema to testimonial/lecture videos
 3. ✅ Add AggregateRating to course schema
@@ -803,12 +877,14 @@ Each page links to pillar and related cluster pages with keyword anchors
 5. ✅ Create "Related Courses" component
 
 ### Short-Term (Next 2 Weeks)
+
 6. ✅ Enable Hinglish content
 7. ✅ Implement event schema for demo classes
 8. ✅ Create internal linking strategy document
 9. ✅ Audit and fix all noindex/nofollow attributes
 
 ### Medium-Term (Next Month)
+
 10. ✅ Full internal linking implementation
 11. ✅ Video schema expansion to all video content
 12. ✅ Create glossary with DefinedTermSchema
@@ -816,6 +892,7 @@ Each page links to pillar and related cluster pages with keyword anchors
 14. ✅ Core Web Vitals optimization
 
 ### Ongoing
+
 15. ✅ Monitor Google Search Console metrics
 16. ✅ Monthly content updates
 17. ✅ Regular structured data validation
@@ -833,6 +910,7 @@ Cerebrum Biology Academy has a **strong SEO foundation (78/100)** with excellent
 4. **Optimizing Core Web Vitals** → Potential +5-10% for mobile search rankings
 
 **Expected Impact of Implementing All Recommendations:**
+
 - Organic traffic improvement: 30-50% over 3 months
 - Average position improvement: 2-3 positions for target keywords
 - Featured snippet eligibility: 10-15 new featured positions

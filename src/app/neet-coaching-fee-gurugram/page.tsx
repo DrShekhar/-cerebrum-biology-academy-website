@@ -31,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Fee in Gurugram 2026 | Fee Comparison',
-    description: 'Complete NEET coaching fee comparison in Gurugram (Gurgaon) 2026. Fees range from Rs 45,000 to Rs 2,50,000. Compare the 2nd-largest national NEET chain, the largest national NEET chain, other onlin...',
+    description:
+      'Complete NEET coaching fee comparison in Gurugram (Gurgaon) 2026. Fees range from Rs 45,000 to Rs 2,50,000. Compare the 2nd-largest national NEET chain, the largest national NEET chain, other onlin...',
   },
 }
 
@@ -141,7 +142,11 @@ export default function NEETCoachingFeeGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-coaching-fee-gurugram" />
       <LocalBusinessSchema />
@@ -334,7 +339,9 @@ export default function NEETCoachingFeeGurugram() {
               className="bg-amber-50 p-4 rounded-lg hover:bg-amber-100 transition text-center"
             >
               <h3 className="font-semibold text-amber-800">Institute Comparison</h3>
-              <p className="text-sm text-gray-600">the 2nd-largest national NEET chain vs the largest national NEET chain vs others</p>
+              <p className="text-sm text-gray-600">
+                the 2nd-largest national NEET chain vs the largest national NEET chain vs others
+              </p>
             </Link>
           </div>
         </div>

@@ -150,7 +150,16 @@ const localBusinessSchema = {
     addressRegion: 'Uttar Pradesh',
     addressCountry: 'IN',
   },
-  areaServed: ['Cuttack', 'Badambadi', 'College Square', 'Buxi Bazaar', 'Cantonment', 'Naya Bazaar', 'Chauliaganj', 'Jagatpur'],
+  areaServed: [
+    'Cuttack',
+    'Badambadi',
+    'College Square',
+    'Buxi Bazaar',
+    'Cantonment',
+    'Naya Bazaar',
+    'Chauliaganj',
+    'Jagatpur',
+  ],
   priceRange: '$$',
 }
 
@@ -197,12 +206,18 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert online NEET classes for Cuttack, College Square, Badambadi, and all areas. Perfect for aspirants
-              <strong> near SCB Medical College</strong> - leverage the proximity advantage with our specialized coaching.
+              Expert online NEET classes for Cuttack, College Square, Badambadi, and all areas.
+              Perfect for aspirants
+              <strong> near SCB Medical College</strong> - leverage the proximity advantage with our
+              specialized coaching.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20cuttack.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20cuttack.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -375,11 +390,16 @@ export default function PageContent() {
               Cuttack Students, Master NEET with Purpose!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Premium online NEET coaching leveraging SCB Medical proximity - prepare to secure top medical colleges
+              Premium online NEET coaching leveraging SCB Medical proximity - prepare to secure top
+              medical colleges
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20cuttack.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20cuttack.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -420,7 +440,6 @@ export default function PageContent() {
         </div>
       </section>
 
-
       <PricingSection cityName="Cuttack" />
       <CostComparisonSection cityName="Cuttack" />
       {/* Related */}
@@ -448,27 +467,35 @@ export default function PageContent() {
             </Link>
           </div>
         </div>
-      
-      {/* Schools Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Students from These Cuttack Schools Trust Us
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Christ College Cuttack', 'Stewart School Cuttack', 'Ravenshaw Collegiate School', "St. Joseph's High School", 'DAV Public School Cuttack', 'Delhi Public School Cuttack', 'Prabhujee English Medium School', 'Kendriya Vidyalaya Cuttack'].map((school) => (
-              <div
-                key={school}
-                className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
-              >
-                {school}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-</section>
+        {/* Schools Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Students from These Cuttack Schools Trust Us
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                'Christ College Cuttack',
+                'Stewart School Cuttack',
+                'Ravenshaw Collegiate School',
+                "St. Joseph's High School",
+                'DAV Public School Cuttack',
+                'Delhi Public School Cuttack',
+                'Prabhujee English Medium School',
+                'Kendriya Vidyalaya Cuttack',
+              ].map((school) => (
+                <div
+                  key={school}
+                  className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
+                >
+                  {school}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </section>
       <RelatedCityLinks currentCity="cuttack" variant="default" />
     </div>
   )

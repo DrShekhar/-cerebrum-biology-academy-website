@@ -197,9 +197,7 @@ export default function PcbTuitionNearMePage() {
       <section className="relative bg-gradient-to-br from-orange-900 via-yellow-800 to-yellow-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <GraduationCap className="w-5 h-5 mr-2 text-yellow-300" />
               PCB Tuition {userLocation ? `in ${userLocation}` : 'Near You'}
@@ -220,7 +218,11 @@ export default function PcbTuitionNearMePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20pcb%20tuition%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20pcb%20tuition%20near%20me.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -258,9 +260,7 @@ export default function PcbTuitionNearMePage() {
       {/* PCB Subjects Overview */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Complete PCB for NEET (720 Marks)
             </h2>
@@ -288,9 +288,7 @@ export default function PcbTuitionNearMePage() {
       {/* Locations We Serve */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               PCB Tuition Locations
             </h2>
@@ -323,9 +321,7 @@ export default function PcbTuitionNearMePage() {
       {/* Why Our PCB Tuition */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Our PCB Tuition
             </h2>
@@ -352,9 +348,7 @@ export default function PcbTuitionNearMePage() {
       {/* What You Get */}
       <section className="py-20 bg-orange-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Complete PCB Package
             </h2>
@@ -390,9 +384,7 @@ export default function PcbTuitionNearMePage() {
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -419,9 +411,7 @@ export default function PcbTuitionNearMePage() {
       {isInDelhiNCR === false && (
         <section className="py-16 bg-gradient-to-br from-orange-50 to-yellow-50">
           <div className="max-w-7xl mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <div className="inline-flex items-center bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Wifi className="w-4 h-4 mr-2" />
                 Online PCB Classes Available
@@ -471,9 +461,7 @@ export default function PcbTuitionNearMePage() {
               ))}
             </div>
 
-            <div
-              className="text-center mt-10 animate-fadeInUp"
-            >
+            <div className="text-center mt-10 animate-fadeInUp">
               <a href={getWhatsAppEnquiryUrl(PAGE_KEYWORD, 'Online')}>
                 <Button size="xl" className="bg-orange-600 hover:bg-orange-700 text-white">
                   <MessageCircle className="w-5 h-5 mr-2" />
@@ -488,15 +476,18 @@ export default function PcbTuitionNearMePage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-600 via-yellow-600 to-yellow-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Start Your PCB Journey Today</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Complete NEET preparation with expert coaching in Physics, Chemistry & Biology!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20pcb%20tuition%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20pcb%20tuition%20near%20me.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -507,7 +498,11 @@ export default function PcbTuitionNearMePage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20pcb%20tuition%20near%20me.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20pcb%20tuition%20near%20me.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"

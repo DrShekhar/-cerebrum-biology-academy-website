@@ -27,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'ICSE/ISC Biology Coaching | Class 9-12 | Board + NEET Preparation',
-    description: 'Expert ICSE and ISC Biology coaching for Class 9-12. CISCE syllabus with NEET bridge. AIIMS faculty, small batches. Score 95%+ in Biology boards.',
+    description:
+      'Expert ICSE and ISC Biology coaching for Class 9-12. CISCE syllabus with NEET bridge. AIIMS faculty, small batches. Score 95%+ in Biology boards.',
   },
 }
 

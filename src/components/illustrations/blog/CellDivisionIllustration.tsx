@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function CellDivisionIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -119,20 +119,12 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
       <circle cx="350" cy="260" r="200" fill="#EC4899" opacity="0.03" />
 
       {/* Title */}
-      <text
-        x="350"
-        y="32"
-        textAnchor="middle"
-        fill="#1E293B"
-        fontSize="18"
-        fontWeight="700"
-      >
+      <text x="350" y="32" textAnchor="middle" fill="#1E293B" fontSize="18" fontWeight="700">
         Cell Division: Mitosis vs Meiosis
       </text>
 
       {/* MITOSIS SECTION (Left) */}
-      <g
-      >
+      <g>
         {/* Mitosis label card */}
         <rect
           x="20"
@@ -202,8 +194,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             filter="url(#cellShadow)"
           />
           {/* Chromosomes condensing */}
-          <g
-          >
+          <g>
             <path
               d="M45 42 L45 68"
               stroke="url(#chromoBlue)"
@@ -255,8 +246,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
           <line x1="20" y1="95" x2="60" y2="55" stroke="url(#spindleGrad)" strokeWidth="1.5" />
           <line x1="100" y1="95" x2="60" y2="55" stroke="url(#spindleGrad)" strokeWidth="1.5" />
           {/* Chromosomes at metaphase plate */}
-          <g
-          >
+          <g>
             <path
               d="M44 50 L44 60"
               stroke="url(#chromoBlue)"
@@ -314,8 +304,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
           <line x1="10" y1="55" x2="35" y2="55" stroke="url(#spindleGrad)" strokeWidth="1.5" />
           <line x1="85" y1="55" x2="110" y2="55" stroke="url(#spindleGrad)" strokeWidth="1.5" />
           {/* Chromosomes separating */}
-          <g
-          >
+          <g>
             <path
               d="M32 45 L32 65"
               stroke="url(#chromoBlue)"
@@ -329,8 +318,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
               strokeLinecap="round"
             />
           </g>
-          <g
-          >
+          <g>
             <path
               d="M78 45 L78 65"
               stroke="url(#chromoBlue)"
@@ -352,8 +340,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
         {/* Telophase/Cytokinesis - Two daughter cells */}
         <g transform="translate(50, 370)">
           {/* First daughter cell */}
-          <g
-          >
+          <g>
             <ellipse
               cx="55"
               cy="45"
@@ -379,8 +366,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             />
           </g>
           {/* Second daughter cell */}
-          <g
-          >
+          <g>
             <ellipse
               cx="165"
               cy="45"
@@ -428,8 +414,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
       />
 
       {/* MEIOSIS SECTION (Right) */}
-      <g
-      >
+      <g>
         {/* Meiosis label card */}
         <rect
           x="365"
@@ -460,9 +445,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             filter="url(#cellShadow)"
           />
           {/* Bivalents with crossing over */}
-          <g
-            style={{ transformOrigin: '55px 52px' }}
-          >
+          <g style={{ transformOrigin: '55px 52px' }}>
             {/* Homologous pair 1 with chiasma */}
             <path
               d="M38 35 L38 48 Q48 55 38 62 L38 70"
@@ -515,8 +498,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             filter="url(#cellShadow)"
           />
           {/* Bivalents aligned */}
-          <g
-          >
+          <g>
             <path
               d="M35 46 L35 58"
               stroke="url(#chromoBlue)"
@@ -569,8 +551,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             strokeWidth="3"
             filter="url(#cellShadow)"
           />
-          <g
-          >
+          <g>
             <path
               d="M25 40 L25 56"
               stroke="url(#chromoBlue)"
@@ -584,8 +565,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
               strokeLinecap="round"
             />
           </g>
-          <g
-          >
+          <g>
             <path
               d="M75 40 L75 56"
               stroke="url(#chromoRed)"
@@ -665,8 +645,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
         {/* Final result - Four haploid cells */}
         <g transform="translate(375, 370)">
           {/* Cell 1 */}
-          <g
-          >
+          <g>
             <ellipse
               cx="35"
               cy="40"
@@ -686,8 +665,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             />
           </g>
           {/* Cell 2 */}
-          <g
-          >
+          <g>
             <ellipse
               cx="100"
               cy="40"
@@ -707,8 +685,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             />
           </g>
           {/* Cell 3 */}
-          <g
-          >
+          <g>
             <ellipse
               cx="165"
               cy="40"
@@ -728,8 +705,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             />
           </g>
           {/* Cell 4 */}
-          <g
-          >
+          <g>
             <ellipse
               cx="230"
               cy="40"
@@ -758,8 +734,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Key differences box at bottom */}
-      <g
-      >
+      <g>
         <rect
           x="20"
           y="485"

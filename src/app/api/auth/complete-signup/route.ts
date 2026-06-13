@@ -53,7 +53,6 @@ export async function POST(request: NextRequest) {
       },
     })
 
-
     return addSecurityHeaders(
       NextResponse.json({
         success: true,

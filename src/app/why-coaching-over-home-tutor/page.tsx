@@ -42,7 +42,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Why Coaching Institute Beats Home Tutor for Biology | NEET + Board 2026',
-    description: 'Home tutor vs coaching for biology — honest comparison. Why 90% of NEET toppers choose coaching over private tutors. Small batch coaching from ₹4K/month. Call 88264-44334.',
+    description:
+      'Home tutor vs coaching for biology — honest comparison. Why 90% of NEET toppers choose coaching over private tutors. Small batch coaching from ₹4K/month. Call 88264-44334.',
   },
 }
 
@@ -207,7 +208,12 @@ export default function WhyCoachingOverHomeTutor() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
       {
         '@type': 'ListItem',
         position: 2,
@@ -257,7 +263,9 @@ export default function WhyCoachingOverHomeTutor() {
         <section className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-blue-900 py-16 text-white md:py-24">
           <div className="mx-auto max-w-6xl px-4">
             <nav className="mb-8 text-sm text-purple-200">
-              <Link href="/" className="hover:text-white">Home</Link>
+              <Link href="/" className="hover:text-white">
+                Home
+              </Link>
               <span className="mx-2">/</span>
               <span>Why Coaching Over Home Tutor</span>
             </nav>
@@ -265,8 +273,8 @@ export default function WhyCoachingOverHomeTutor() {
               Home Tutor vs Coaching Institute for Biology — The Truth
             </h1>
             <p className="mb-8 max-w-2xl text-lg text-purple-100">
-              An honest, data-backed comparison. We&apos;ll tell you when a home tutor makes sense too
-              — but for most NEET aspirants, small batch coaching is the clear winner.
+              An honest, data-backed comparison. We&apos;ll tell you when a home tutor makes sense
+              too — but for most NEET aspirants, small batch coaching is the clear winner.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -298,7 +306,10 @@ export default function WhyCoachingOverHomeTutor() {
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {tutorProblems.map((problem) => (
-                <div key={problem.title} className="rounded-xl border border-red-100 bg-red-50/50 p-6">
+                <div
+                  key={problem.title}
+                  className="rounded-xl border border-red-100 bg-red-50/50 p-6"
+                >
                   <h3 className="mb-2 flex items-center gap-2 text-lg font-semibold text-gray-900">
                     <AlertTriangle className="h-5 w-5 text-red-500" />
                     {problem.title}
@@ -317,13 +328,16 @@ export default function WhyCoachingOverHomeTutor() {
               Why 90% of NEET Toppers Choose Coaching
             </h2>
             <p className="mx-auto mb-12 max-w-2xl text-center text-gray-600">
-              Year after year, NEET toppers credit structured coaching for their success. Here&apos;s why
-              the coaching model works better for competitive exams.
+              Year after year, NEET toppers credit structured coaching for their success.
+              Here&apos;s why the coaching model works better for competitive exams.
             </p>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {topperReasons.map((reason) => (
-                <div key={reason.text} className="flex items-start gap-4 rounded-xl bg-white p-5 shadow-sm">
+                <div
+                  key={reason.text}
+                  className="flex items-start gap-4 rounded-xl bg-white p-5 shadow-sm"
+                >
                   <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-green-100">
                     <reason.icon className="h-5 w-5 text-green-700" />
                   </div>
@@ -350,9 +364,12 @@ export default function WhyCoachingOverHomeTutor() {
                 <thead>
                   <tr className="bg-gray-50">
                     <th className="px-4 py-3 text-left font-semibold text-gray-700">Parameter</th>
-                    <th className="px-4 py-3 text-center font-semibold text-gray-700">Home Tutor</th>
                     <th className="px-4 py-3 text-center font-semibold text-gray-700">
-                      Large Coaching (the 2nd-largest national NEET chain/the largest national NEET chain)
+                      Home Tutor
+                    </th>
+                    <th className="px-4 py-3 text-center font-semibold text-gray-700">
+                      Large Coaching (the 2nd-largest national NEET chain/the largest national NEET
+                      chain)
                     </th>
                     <th className="bg-green-50 px-4 py-3 text-center font-semibold text-green-800">
                       Cerebrum (Small Batch)
@@ -400,16 +417,17 @@ export default function WhyCoachingOverHomeTutor() {
                 <p className="mb-2 text-3xl font-bold text-green-700">₹4K</p>
                 <p className="mb-1 font-semibold text-gray-900">Per Month (Equivalent)</p>
                 <p className="text-sm text-gray-600">
-                  Less than a home tutor (₹5-8K) and much less than the 2nd-largest national NEET chain/the largest national NEET chain (₹8-15K). Everything
-                  included — no hidden costs.
+                  Less than a home tutor (₹5-8K) and much less than the 2nd-largest national NEET
+                  chain/the largest national NEET chain (₹8-15K). Everything included — no hidden
+                  costs.
                 </p>
               </div>
               <div className="rounded-xl bg-white p-6 shadow-sm">
                 <p className="mb-2 text-3xl font-bold text-green-700">AIIMS</p>
                 <p className="mb-1 font-semibold text-gray-900">Faculty for Every Lecture</p>
                 <p className="text-sm text-gray-600">
-                  Not B.Sc tutors, not junior faculty. Every biology lecture is taught by a doctor who
-                  cracked medical entrance exams themselves.
+                  Not B.Sc tutors, not junior faculty. Every biology lecture is taught by a doctor
+                  who cracked medical entrance exams themselves.
                 </p>
               </div>
             </div>
@@ -430,9 +448,7 @@ export default function WhyCoachingOverHomeTutor() {
                       <Award key={s} className="h-4 w-4 text-yellow-500" />
                     ))}
                   </div>
-                  <p className="mb-4 text-sm leading-relaxed text-gray-600">
-                    &quot;{t.text}&quot;
-                  </p>
+                  <p className="mb-4 text-sm leading-relaxed text-gray-600">&quot;{t.text}&quot;</p>
                   <p className="text-sm font-semibold text-gray-900">{t.name}</p>
                 </div>
               ))}
@@ -447,38 +463,45 @@ export default function WhyCoachingOverHomeTutor() {
               When a Home Tutor Makes Sense
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-center text-gray-600">
-              We believe in being fair. There are specific situations where a home tutor is the better
-              choice — but they are the exception, not the rule.
+              We believe in being fair. There are specific situations where a home tutor is the
+              better choice — but they are the exception, not the rule.
             </p>
 
             <div className="space-y-4">
               <div className="flex items-start gap-4 rounded-xl bg-white p-5 shadow-sm">
                 <Heart className="mt-0.5 h-5 w-5 flex-shrink-0 text-purple-500" />
                 <div>
-                  <p className="font-semibold text-gray-900">Very weak foundation (below 40% in Class 10 Biology)</p>
+                  <p className="font-semibold text-gray-900">
+                    Very weak foundation (below 40% in Class 10 Biology)
+                  </p>
                   <p className="text-sm text-gray-600">
-                    These students need 1-on-1 remedial teaching for 2-3 months before they can keep up
-                    in any batch setting. A home tutor can bridge this gap.
+                    These students need 1-on-1 remedial teaching for 2-3 months before they can keep
+                    up in any batch setting. A home tutor can bridge this gap.
                   </p>
                 </div>
               </div>
               <div className="flex items-start gap-4 rounded-xl bg-white p-5 shadow-sm">
                 <Heart className="mt-0.5 h-5 w-5 flex-shrink-0 text-purple-500" />
                 <div>
-                  <p className="font-semibold text-gray-900">Students with special learning needs</p>
+                  <p className="font-semibold text-gray-900">
+                    Students with special learning needs
+                  </p>
                   <p className="text-sm text-gray-600">
-                    Students who require specialized teaching approaches benefit from dedicated 1-on-1
-                    attention that only a home tutor can provide.
+                    Students who require specialized teaching approaches benefit from dedicated
+                    1-on-1 attention that only a home tutor can provide.
                   </p>
                 </div>
               </div>
               <div className="flex items-start gap-4 rounded-xl bg-white p-5 shadow-sm">
                 <Heart className="mt-0.5 h-5 w-5 flex-shrink-0 text-purple-500" />
                 <div>
-                  <p className="font-semibold text-gray-900">For everyone else — small batch coaching is better</p>
+                  <p className="font-semibold text-gray-900">
+                    For everyone else — small batch coaching is better
+                  </p>
                   <p className="text-sm text-gray-600">
-                    If your child scores above 40% and can learn in a group setting, structured coaching
-                    with 15-student batches will deliver better results at lower cost than any home tutor.
+                    If your child scores above 40% and can learn in a group setting, structured
+                    coaching with 15-student batches will deliver better results at lower cost than
+                    any home tutor.
                   </p>
                 </div>
               </div>

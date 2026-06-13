@@ -47,7 +47,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Find Best Biology Tutor in Delhi NCR 2026 | Class 11, 12 | NEET + Board',
-    description: 'Looking for a biology tutor in Delhi NCR? Compare home tutors vs coaching institutes. AIIMS faculty, 15-student batches, ₹4K/month. 4 centers + online. Call 88264-44334.',
+    description:
+      'Looking for a biology tutor in Delhi NCR? Compare home tutors vs coaching institutes. AIIMS faculty, 15-student batches, ₹4K/month. 4 centers + online. Call 88264-44334.',
   },
 }
 
@@ -215,7 +216,11 @@ export default function FindBiologyTutorDelhiNCR() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Delhi NCR', 'NEET Biology Delhi NCR', 'Medical entrance coaching Delhi NCR']}
+        knowsAbout={[
+          'NEET Delhi NCR',
+          'NEET Biology Delhi NCR',
+          'Medical entrance coaching Delhi NCR',
+        ]}
       />
       <DelhiAreaSchema pageSlug="find-biology-tutor-delhi-ncr" />
       <script

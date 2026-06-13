@@ -18,27 +18,29 @@ interface BookingData {
  * This fixes the "appendChild SyntaxError: Invalid or unexpected token" error
  */
 function sanitizeFilename(str: string): string {
-  return str
-    // Replace smart/curly quotes with nothing
-    .replace(/[\u2018\u2019\u201C\u201D]/g, '')
-    // Remove emojis and other Unicode symbols
-    .replace(/[\u{1F000}-\u{1FFFF}]/gu, '')
-    // Remove zero-width characters
-    .replace(/[\u200B-\u200D\uFEFF]/g, '')
-    // Remove other problematic Unicode
-    .replace(/[^\x00-\x7F]/g, '')
-    // Replace spaces and multiple hyphens with single hyphen
-    .replace(/\s+/g, '-')
-    // Remove any remaining special characters (keep only alphanumeric and hyphen)
-    .replace(/[^a-zA-Z0-9-]/g, '')
-    // Remove multiple consecutive hyphens
-    .replace(/-+/g, '-')
-    // Remove leading/trailing hyphens
-    .replace(/^-+|-+$/g, '')
-    // Convert to lowercase
-    .toLowerCase()
+  return (
+    str
+      // Replace smart/curly quotes with nothing
+      .replace(/[\u2018\u2019\u201C\u201D]/g, '')
+      // Remove emojis and other Unicode symbols
+      .replace(/[\u{1F000}-\u{1FFFF}]/gu, '')
+      // Remove zero-width characters
+      .replace(/[\u200B-\u200D\uFEFF]/g, '')
+      // Remove other problematic Unicode
+      .replace(/[^\x00-\x7F]/g, '')
+      // Replace spaces and multiple hyphens with single hyphen
+      .replace(/\s+/g, '-')
+      // Remove any remaining special characters (keep only alphanumeric and hyphen)
+      .replace(/[^a-zA-Z0-9-]/g, '')
+      // Remove multiple consecutive hyphens
+      .replace(/-+/g, '-')
+      // Remove leading/trailing hyphens
+      .replace(/^-+|-+$/g, '')
+      // Convert to lowercase
+      .toLowerCase() ||
     // Fallback if empty
-    || 'student'
+    'student'
+  )
 }
 
 function parseTime(timeStr: string): { hour: number; minute: number } {

@@ -6,7 +6,8 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'West Bengal HS Biology Coaching | NEET + WBJEE Dual Prep',
-  description: 'Expert West Bengal Higher Secondary Biology coaching with WBJEE overlap and NEET integration. Master WBCHSE curriculum with unique WB topics and Kolkata coaching expertise.',
+  description:
+    'Expert West Bengal Higher Secondary Biology coaching with WBJEE overlap and NEET integration. Master WBCHSE curriculum with unique WB topics and Kolkata coaching expertise.',
   keywords: [
     'West Bengal HS biology',
     'WBCHSE biology coaching',
@@ -18,7 +19,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'West Bengal HS Biology Coaching | NEET + WBJEE Dual Prep',
-    description: 'Expert West Bengal Higher Secondary Biology coaching with WBJEE overlap and NEET integration.',
+    description:
+      'Expert West Bengal Higher Secondary Biology coaching with WBJEE overlap and NEET integration.',
     url: `${BASE_URL}/boards/west-bengal-hs`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -27,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'West Bengal HS Biology Coaching | NEET + WBJEE Dual Prep',
-    description: 'Expert West Bengal Higher Secondary Biology coaching with WBJEE overlap and NEET integration.',
+    description:
+      'Expert West Bengal Higher Secondary Biology coaching with WBJEE overlap and NEET integration.',
   },
   alternates: {
     canonical: `${BASE_URL}/boards/west-bengal-hs`,

@@ -21,8 +21,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/igcse-biology-tutor' },
   openGraph: {
     title: 'IGCSE Biology Tutor | Cambridge 0610 + Edexcel | Cerebrum',
-    description:
-      'Cambridge + Edexcel IGCSE Biology specialists. Bridges into IB / A-Level / NEET.',
+    description: 'Cambridge + Edexcel IGCSE Biology specialists. Bridges into IB / A-Level / NEET.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/igcse-biology-tutor',

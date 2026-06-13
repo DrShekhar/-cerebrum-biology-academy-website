@@ -168,26 +168,65 @@ export default function USABOCityTemplate({
     url: pageUrl,
     inLanguage: 'en-US',
     educationalLevel: 'Biology Olympiad',
-    provider: { '@type': 'EducationalOrganization', '@id': 'https://cerebrumbiologyacademy.com/#organization', name: 'Cerebrum Biology Academy' },
+    provider: {
+      '@type': 'EducationalOrganization',
+      '@id': 'https://cerebrumbiologyacademy.com/#organization',
+      name: 'Cerebrum Biology Academy',
+    },
     offers: [
-      { '@type': 'Offer', name: 'Pinnacle', price: '6000', priceCurrency: 'USD', description: 'Full-year USABO + IBO track', url: pageUrl },
-      { '@type': 'Offer', name: 'Ascent', price: '4500', priceCurrency: 'USD', description: 'Semester-length intensive', url: pageUrl },
-      { '@type': 'Offer', name: 'Pursuit', price: '2500', priceCurrency: 'USD', description: 'Open-exam focused prep', url: pageUrl },
+      {
+        '@type': 'Offer',
+        name: 'Pinnacle',
+        price: '6000',
+        priceCurrency: 'USD',
+        description: 'Full-year USABO + IBO track',
+        url: pageUrl,
+      },
+      {
+        '@type': 'Offer',
+        name: 'Ascent',
+        price: '4500',
+        priceCurrency: 'USD',
+        description: 'Semester-length intensive',
+        url: pageUrl,
+      },
+      {
+        '@type': 'Offer',
+        name: 'Pursuit',
+        price: '2500',
+        priceCurrency: 'USD',
+        description: 'Open-exam focused prep',
+        url: pageUrl,
+      },
     ],
   }
 
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
   }
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'USABO Coaching', item: 'https://cerebrumbiologyacademy.com/usabo-coaching' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'USABO Coaching',
+        item: 'https://cerebrumbiologyacademy.com/usabo-coaching',
+      },
       { '@type': 'ListItem', position: 3, name: cityName, item: pageUrl },
     ],
   }
@@ -197,7 +236,10 @@ export default function USABOCityTemplate({
     '@type': 'WebPage',
     name: `USABO Coaching for ${cityName} Students`,
     url: pageUrl,
-    speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="title"]', '[data-speakable="summary"]'] },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['[data-speakable="title"]', '[data-speakable="summary"]'],
+    },
   }
 
   const personSchema = {
@@ -210,18 +252,44 @@ export default function USABOCityTemplate({
     description: `AIIMS-trained biology faculty coaching USABO + IBO students from ${cityName}.`,
     url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
     image: 'https://cerebrumbiologyacademy.com/images/dr-shekhar-singh.webp',
-    affiliation: { '@type': 'EducationalOrganization', '@id': 'https://cerebrumbiologyacademy.com/#organization', name: 'Cerebrum Biology Academy' },
-    knowsAbout: ['USABO', 'IBO', 'Campbell Biology', 'Biology Olympiad', 'USABO Open Exam', 'USABO Semifinal'],
+    affiliation: {
+      '@type': 'EducationalOrganization',
+      '@id': 'https://cerebrumbiologyacademy.com/#organization',
+      name: 'Cerebrum Biology Academy',
+    },
+    knowsAbout: [
+      'USABO',
+      'IBO',
+      'Campbell Biology',
+      'Biology Olympiad',
+      'USABO Open Exam',
+      'USABO Semifinal',
+    ],
     sameAs: ['https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty'],
   }
 
   return (
     <main className="min-h-screen bg-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       {/* Breadcrumb */}
       <nav className="bg-gray-100 py-3 px-4">
         <div className="max-w-7xl mx-auto">

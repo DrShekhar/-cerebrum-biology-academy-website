@@ -25,11 +25,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "typhoid",
-        "salmonella-typhi",
-        "bacterial-diseases"
-      ],
+      "tags": ["typhoid", "salmonella-typhi", "bacterial-diseases"],
       "neetWeightage": "HIGH"
     },
     {
@@ -40,22 +36,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "Widal test is used for the confirmation of which disease?",
-      "options": [
-        "AIDS",
-        "Malaria",
-        "Pneumonia",
-        "Typhoid"
-      ],
+      "options": ["AIDS", "Malaria", "Pneumonia", "Typhoid"],
       "correctAnswer": "D",
       "explanation": "Widal test is a serological test used for the diagnosis and confirmation of typhoid fever. It detects antibodies against Salmonella typhi in the patient's serum.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "widal-test",
-        "typhoid",
-        "diagnostic-tests"
-      ],
+      "tags": ["widal-test", "typhoid", "diagnostic-tests"],
       "neetWeightage": "HIGH"
     },
     {
@@ -77,11 +64,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "malaria",
-        "anopheles",
-        "vector-borne-diseases"
-      ],
+      "tags": ["malaria", "anopheles", "vector-borne-diseases"],
       "neetWeightage": "HIGH"
     },
     {
@@ -92,22 +75,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "The infective stage of Plasmodium that enters the human body is:",
-      "options": [
-        "Gametocyte",
-        "Merozoite",
-        "Sporozoite",
-        "Trophozoite"
-      ],
+      "options": ["Gametocyte", "Merozoite", "Sporozoite", "Trophozoite"],
       "correctAnswer": "C",
       "explanation": "Sporozoites are the infective stage of Plasmodium that are injected into the human body by the bite of an infected female Anopheles mosquito. They first infect liver cells before entering the erythrocytic cycle.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "malaria",
-        "plasmodium-life-cycle",
-        "sporozoite"
-      ],
+      "tags": ["malaria", "plasmodium-life-cycle", "sporozoite"],
       "neetWeightage": "HIGH"
     },
     {
@@ -129,11 +103,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "common-cold",
-        "rhinovirus",
-        "viral-diseases"
-      ],
+      "tags": ["common-cold", "rhinovirus", "viral-diseases"],
       "neetWeightage": "HIGH"
     },
     {
@@ -155,11 +125,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "elephantiasis",
-        "wuchereria",
-        "helminth-diseases"
-      ],
+      "tags": ["elephantiasis", "wuchereria", "helminth-diseases"],
       "neetWeightage": "HIGH"
     },
     {
@@ -170,22 +136,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "Which immunoglobulin is responsible for allergic reactions?",
-      "options": [
-        "IgG",
-        "IgA",
-        "IgE",
-        "IgM"
-      ],
+      "options": ["IgG", "IgA", "IgE", "IgM"],
       "correctAnswer": "C",
       "explanation": "IgE antibodies are responsible for allergic reactions. They are produced in response to allergens and bind to mast cells, causing the release of histamine and serotonin which lead to allergic symptoms.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "allergy",
-        "IgE",
-        "immunoglobulins"
-      ],
+      "tags": ["allergy", "IgE", "immunoglobulins"],
       "neetWeightage": "HIGH"
     },
     {
@@ -207,11 +164,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "AIDS",
-        "HIV",
-        "T-cells"
-      ],
+      "tags": ["AIDS", "HIV", "T-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -222,22 +175,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "Which of the following is a protozoan disease?",
-      "options": [
-        "Typhoid",
-        "Ringworm",
-        "Amoebiasis",
-        "Ascariasis"
-      ],
+      "options": ["Typhoid", "Ringworm", "Amoebiasis", "Ascariasis"],
       "correctAnswer": "C",
       "explanation": "Amoebiasis is caused by the protozoan Entamoeba histolytica. Ascariasis is a helminth disease, ringworm is a fungal disease, and typhoid is a bacterial disease.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "amoebiasis",
-        "protozoan-diseases",
-        "entamoeba"
-      ],
+      "tags": ["amoebiasis", "protozoan-diseases", "entamoeba"],
       "neetWeightage": "HIGH"
     },
     {
@@ -248,22 +192,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "Ringworm in humans is caused by:",
-      "options": [
-        "Virus",
-        "Nematode",
-        "Bacteria",
-        "Fungi"
-      ],
+      "options": ["Virus", "Nematode", "Bacteria", "Fungi"],
       "correctAnswer": "D",
       "explanation": "Ringworm is caused by fungi belonging to genera Microsporum, Trichophyton, and Epidermophyton. Despite the name, it is not caused by a worm. It appears as dry, scaly lesions on skin, nails, and scalp.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ringworm",
-        "fungal-diseases",
-        "microsporum"
-      ],
+      "tags": ["ringworm", "fungal-diseases", "microsporum"],
       "neetWeightage": "HIGH"
     },
     {
@@ -285,11 +220,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "B-cells",
-        "T-cells",
-        "immunity"
-      ],
+      "tags": ["B-cells", "T-cells", "immunity"],
       "neetWeightage": "HIGH"
     },
     {
@@ -311,11 +242,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pneumonia",
-        "bacterial-diseases",
-        "streptococcus"
-      ],
+      "tags": ["pneumonia", "bacterial-diseases", "streptococcus"],
       "neetWeightage": "HIGH"
     },
     {
@@ -326,22 +253,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "Which substance released by mast cells is responsible for allergic symptoms such as sneezing and watery eyes?",
-      "options": [
-        "Interferon",
-        "Histamine",
-        "Heparin",
-        "Collagen"
-      ],
+      "options": ["Interferon", "Histamine", "Heparin", "Collagen"],
       "correctAnswer": "B",
       "explanation": "Histamine and serotonin are released from mast cells in response to allergens binding to IgE antibodies. Histamine causes vasodilation and increased mucus secretion, leading to symptoms like sneezing, watery eyes, and running nose.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "allergy",
-        "histamine",
-        "mast-cells"
-      ],
+      "tags": ["allergy", "histamine", "mast-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -352,22 +270,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "Conversion of proto-oncogenes to oncogenes leads to:",
-      "options": [
-        "Immunodeficiency",
-        "Autoimmune disease",
-        "Allergic reaction",
-        "Cancer"
-      ],
+      "options": ["Immunodeficiency", "Autoimmune disease", "Allergic reaction", "Cancer"],
       "correctAnswer": "D",
       "explanation": "Proto-oncogenes are normal genes that control cell growth and differentiation. When mutated or activated abnormally, they become oncogenes that lead to uncontrolled cell division and cancer.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cancer",
-        "oncogenes",
-        "proto-oncogenes"
-      ],
+      "tags": ["cancer", "oncogenes", "proto-oncogenes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -378,22 +287,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "Which drug is obtained from the latex of Papaver somniferum?",
-      "options": [
-        "Marijuana",
-        "Morphine",
-        "Cocaine",
-        "LSD"
-      ],
+      "options": ["Marijuana", "Morphine", "Cocaine", "LSD"],
       "correctAnswer": "B",
       "explanation": "Morphine is an opioid drug obtained from the latex of the poppy plant Papaver somniferum. Other opioids derived from the same source include heroin (diacetylmorphine) and codeine.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "drug-abuse",
-        "opioids",
-        "morphine"
-      ],
+      "tags": ["drug-abuse", "opioids", "morphine"],
       "neetWeightage": "HIGH"
     },
     {
@@ -415,11 +315,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ELISA",
-        "AIDS",
-        "diagnostic-tests"
-      ],
+      "tags": ["ELISA", "AIDS", "diagnostic-tests"],
       "neetWeightage": "HIGH"
     },
     {
@@ -441,11 +337,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "innate-immunity",
-        "acquired-immunity",
-        "vaccination"
-      ],
+      "tags": ["innate-immunity", "acquired-immunity", "vaccination"],
       "neetWeightage": "HIGH"
     },
     {
@@ -456,22 +348,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "The__(A)__ test is used for confirming AIDS after a positive ELISA test. Choose the correct option:",
-      "options": [
-        "Mantoux test",
-        "Western blot",
-        "PCR",
-        "Widal test"
-      ],
+      "options": ["Mantoux test", "Western blot", "PCR", "Widal test"],
       "correctAnswer": "B",
       "explanation": "Western blot is the confirmatory test for HIV/AIDS after an initial positive ELISA test. It detects specific HIV proteins and has higher specificity than ELISA.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "AIDS",
-        "western-blot",
-        "diagnostic-tests"
-      ],
+      "tags": ["AIDS", "western-blot", "diagnostic-tests"],
       "neetWeightage": "HIGH"
     },
     {
@@ -493,11 +376,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cancer",
-        "metastasis",
-        "malignant-tumors"
-      ],
+      "tags": ["cancer", "metastasis", "malignant-tumors"],
       "neetWeightage": "HIGH"
     },
     {
@@ -519,11 +398,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "drug-abuse",
-        "cannabinoids",
-        "cannabis"
-      ],
+      "tags": ["drug-abuse", "cannabinoids", "cannabis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -545,11 +420,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "innate-immunity",
-        "non-specific-defense",
-        "barriers"
-      ],
+      "tags": ["innate-immunity", "non-specific-defense", "barriers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -571,11 +442,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "acquired-immunity",
-        "memory-cells",
-        "secondary-response"
-      ],
+      "tags": ["acquired-immunity", "memory-cells", "secondary-response"],
       "neetWeightage": "HIGH"
     },
     {
@@ -597,12 +464,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "AIDS",
-        "HIV",
-        "retrovirus",
-        "reverse-transcriptase"
-      ],
+      "tags": ["AIDS", "HIV", "retrovirus", "reverse-transcriptase"],
       "neetWeightage": "HIGH"
     },
     {
@@ -624,11 +486,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "passive-immunity",
-        "colostrum",
-        "IgA"
-      ],
+      "tags": ["passive-immunity", "colostrum", "IgA"],
       "neetWeightage": "HIGH"
     },
     {
@@ -650,11 +508,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cancer",
-        "benign-tumor",
-        "metastasis"
-      ],
+      "tags": ["cancer", "benign-tumor", "metastasis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -676,12 +530,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cancer",
-        "smoking",
-        "tobacco",
-        "carcinogens"
-      ],
+      "tags": ["cancer", "smoking", "tobacco", "carcinogens"],
       "neetWeightage": "HIGH"
     },
     {
@@ -703,11 +552,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "malaria",
-        "haemozoin",
-        "fever-cycle"
-      ],
+      "tags": ["malaria", "haemozoin", "fever-cycle"],
       "neetWeightage": "HIGH"
     },
     {
@@ -729,11 +574,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vaccination",
-        "immunological-memory",
-        "secondary-response"
-      ],
+      "tags": ["vaccination", "immunological-memory", "secondary-response"],
       "neetWeightage": "HIGH"
     },
     {
@@ -755,12 +596,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "AIDS",
-        "HIV",
-        "immunodeficiency",
-        "opportunistic-infections"
-      ],
+      "tags": ["AIDS", "HIV", "immunodeficiency", "opportunistic-infections"],
       "neetWeightage": "HIGH"
     },
     {
@@ -782,11 +618,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "innate-immunity",
-        "interferon",
-        "viral-defense"
-      ],
+      "tags": ["innate-immunity", "interferon", "viral-defense"],
       "neetWeightage": "HIGH"
     },
     {
@@ -808,11 +640,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "drug-abuse",
-        "cocaine",
-        "dopamine"
-      ],
+      "tags": ["drug-abuse", "cocaine", "dopamine"],
       "neetWeightage": "HIGH"
     },
     {
@@ -834,10 +662,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "autoimmunity",
-        "rheumatoid-arthritis"
-      ],
+      "tags": ["autoimmunity", "rheumatoid-arthritis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -859,11 +684,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "malaria",
-        "plasmodium-life-cycle",
-        "definitive-host"
-      ],
+      "tags": ["malaria", "plasmodium-life-cycle", "definitive-host"],
       "neetWeightage": "HIGH"
     },
     {
@@ -885,11 +706,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "ascariasis",
-        "helminth-diseases",
-        "children"
-      ],
+      "tags": ["ascariasis", "helminth-diseases", "children"],
       "neetWeightage": "HIGH"
     },
     {
@@ -911,11 +728,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bacterial-diseases",
-        "viral-diseases",
-        "malaria"
-      ],
+      "tags": ["bacterial-diseases", "viral-diseases", "malaria"],
       "neetWeightage": "HIGH"
     },
     {
@@ -926,22 +739,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "Consider the following statements about HIV:\n(i) HIV is an enveloped virus with two single-stranded RNA molecules.\n(ii) It has reverse transcriptase enzyme.\n(iii) HIV primarily infects cytotoxic T-cells.\n(iv) It can be transmitted through sharing food.\nHow many of the above statements are correct?",
-      "options": [
-        "One",
-        "Three",
-        "Two",
-        "Four"
-      ],
+      "options": ["One", "Three", "Two", "Four"],
       "correctAnswer": "C",
       "explanation": "Statements (i) and (ii) are correct. HIV is an enveloped retrovirus with two copies of ssRNA and reverse transcriptase. Statement (iii) is wrong: HIV primarily infects helper T-cells (CD4+), not cytotoxic T-cells. Statement (iv) is wrong: HIV is not transmitted through casual contact or sharing food.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "AIDS",
-        "HIV",
-        "retrovirus"
-      ],
+      "tags": ["AIDS", "HIV", "retrovirus"],
       "neetWeightage": "HIGH"
     },
     {
@@ -963,11 +767,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "active-immunity",
-        "passive-immunity",
-        "vaccination"
-      ],
+      "tags": ["active-immunity", "passive-immunity", "vaccination"],
       "neetWeightage": "HIGH"
     },
     {
@@ -978,23 +778,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "Which of the following statements about cancer is/are incorrect?\n(i) Contact inhibition is shown by cancer cells.\n(ii) Benign tumors show metastasis.\n(iii) Oncogenes are genes that promote cell growth and division.\n(iv) Tumor suppressor genes normally inhibit cell division.",
-      "options": [
-        "(i) only",
-        "(ii) and (iii) only",
-        "(i) and (ii) only",
-        "(iii) and (iv) only"
-      ],
+      "options": ["(i) only", "(ii) and (iii) only", "(i) and (ii) only", "(iii) and (iv) only"],
       "correctAnswer": "C",
       "explanation": "Statement (i) is incorrect: cancer cells lack contact inhibition, which is why they continue to divide uncontrollably. Statement (ii) is incorrect: benign tumors do NOT show metastasis; only malignant tumors do. Statements (iii) and (iv) are correct descriptions of oncogenes and tumor suppressor genes.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cancer",
-        "contact-inhibition",
-        "oncogenes",
-        "tumor-suppressor"
-      ],
+      "tags": ["cancer", "contact-inhibition", "oncogenes", "tumor-suppressor"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1016,12 +806,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "drug-abuse",
-        "opioids",
-        "cocaine",
-        "cannabinoids"
-      ],
+      "tags": ["drug-abuse", "opioids", "cocaine", "cannabinoids"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1032,22 +817,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "How many of the following statements are correct?\n(i) Ascaris lumbricoides is the causative organism of ascariasis.\n(ii) Internal symptoms of ascariasis include fever, anaemia, and blockage of intestinal passage.\n(iii) Amoebiasis is also called amoebic dysentery.\n(iv) Entamoeba histolytica is transmitted by houseflies acting as mechanical carriers.",
-      "options": [
-        "One",
-        "Four",
-        "Two",
-        "Three"
-      ],
+      "options": ["One", "Four", "Two", "Three"],
       "correctAnswer": "B",
       "explanation": "All four statements are correct. Ascaris lumbricoides causes ascariasis with symptoms including fever, anaemia, and intestinal blockage. Amoebiasis (caused by Entamoeba histolytica) is also called amoebic dysentery. Houseflies serve as mechanical carriers that transmit the parasite from faeces to food.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ascariasis",
-        "amoebiasis",
-        "helminth-diseases"
-      ],
+      "tags": ["ascariasis", "amoebiasis", "helminth-diseases"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1069,12 +845,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "malaria",
-        "plasmodium-life-cycle",
-        "sporozoite",
-        "merozoite"
-      ],
+      "tags": ["malaria", "plasmodium-life-cycle", "sporozoite", "merozoite"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1096,12 +867,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "drug-abuse",
-        "opioids",
-        "LSD",
-        "barbiturates"
-      ],
+      "tags": ["drug-abuse", "opioids", "LSD", "barbiturates"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1112,22 +878,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "How many of the following are transmitted by contaminated food and water?\n(i) Typhoid\n(ii) Amoebiasis\n(iii) Ascariasis\n(iv) Malaria\n(v) Elephantiasis",
-      "options": [
-        "Two",
-        "Five",
-        "Three",
-        "Four"
-      ],
+      "options": ["Two", "Five", "Three", "Four"],
       "correctAnswer": "C",
       "explanation": "Typhoid (Salmonella typhi), amoebiasis (Entamoeba histolytica), and ascariasis (Ascaris eggs) are transmitted through contaminated food and water. Malaria is transmitted by mosquito bites (female Anopheles), and elephantiasis is also vector-borne (transmitted by mosquitoes).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disease-transmission",
-        "contaminated-water",
-        "food-borne"
-      ],
+      "tags": ["disease-transmission", "contaminated-water", "food-borne"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1149,11 +906,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disease-pathogen-matching",
-        "bacterial-diseases",
-        "fungal-diseases"
-      ],
+      "tags": ["disease-pathogen-matching", "bacterial-diseases", "fungal-diseases"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1175,10 +928,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "drug-abuse",
-        "drug-sources"
-      ],
+      "tags": ["drug-abuse", "drug-sources"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1200,12 +950,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "immunity-types",
-        "vaccination",
-        "colostrum",
-        "T-cells"
-      ],
+      "tags": ["immunity-types", "vaccination", "colostrum", "T-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1227,12 +972,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "diagnostic-tests",
-        "widal-test",
-        "ELISA",
-        "western-blot"
-      ],
+      "tags": ["diagnostic-tests", "widal-test", "ELISA", "western-blot"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1254,11 +994,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disease-transmission",
-        "vectors",
-        "mosquito-borne"
-      ],
+      "tags": ["disease-transmission", "vectors", "mosquito-borne"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1280,12 +1016,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cancer",
-        "cancer-types",
-        "carcinoma",
-        "leukemia"
-      ],
+      "tags": ["cancer", "cancer-types", "carcinoma", "leukemia"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1296,21 +1027,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "How many of the following are bacterial diseases?\n(a) Typhoid (b) Pneumonia (c) Malaria (d) Common cold (e) Amoebiasis (f) Plague (g) Diphtheria (h) Ringworm",
-      "options": [
-        "Five",
-        "Four",
-        "Two",
-        "Three"
-      ],
+      "options": ["Five", "Four", "Two", "Three"],
       "correctAnswer": "B",
       "explanation": "The bacterial diseases in the list are: Typhoid (Salmonella typhi), Pneumonia (Streptococcus pneumoniae), Plague (Yersinia pestis), and Diphtheria (Corynebacterium diphtheriae). Malaria is protozoan, common cold is viral, amoebiasis is protozoan, and ringworm is fungal.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bacterial-diseases",
-        "disease-classification"
-      ],
+      "tags": ["bacterial-diseases", "disease-classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1321,22 +1044,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "How many of the following are components of innate immunity?\n(a) Skin (b) Mucus in respiratory tract (c) Acid in stomach (d) Antibodies (e) Tears containing lysozyme (f) Interferons (g) Memory B-cells (h) Neutrophils",
-      "options": [
-        "Four",
-        "Six",
-        "Seven",
-        "Five"
-      ],
+      "options": ["Four", "Six", "Seven", "Five"],
       "correctAnswer": "B",
       "explanation": "Components of innate immunity: Skin (physical barrier), mucus in respiratory tract (physical barrier), acid in stomach (chemical barrier), tears containing lysozyme (chemical barrier), interferons (cytokine barrier), and neutrophils (cellular barrier). Antibodies and memory B-cells are components of acquired/adaptive immunity.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "innate-immunity",
-        "barriers",
-        "non-specific-defense"
-      ],
+      "tags": ["innate-immunity", "barriers", "non-specific-defense"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1347,22 +1061,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "How many of the following are correct modes of HIV transmission?\n(a) Sexual contact with infected person\n(b) Transfusion of contaminated blood\n(c) Sharing injection needles\n(d) Sharing food with infected person\n(e) From infected mother to child through placenta\n(f) Mosquito bites\n(g) Handshake with infected person",
-      "options": [
-        "Six",
-        "Four",
-        "Three",
-        "Five"
-      ],
+      "options": ["Six", "Four", "Three", "Five"],
       "correctAnswer": "B",
       "explanation": "The correct modes of HIV transmission are: (a) sexual contact, (b) contaminated blood transfusion, (c) sharing needles, and (e) mother to child through placenta. HIV is NOT transmitted by sharing food, mosquito bites, or handshakes.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "AIDS",
-        "HIV",
-        "disease-transmission"
-      ],
+      "tags": ["AIDS", "HIV", "disease-transmission"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1384,11 +1089,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "malaria",
-        "plasmodium-life-cycle",
-        "sequence"
-      ],
+      "tags": ["malaria", "plasmodium-life-cycle", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1410,12 +1111,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "AIDS",
-        "HIV",
-        "replication-cycle",
-        "reverse-transcriptase"
-      ],
+      "tags": ["AIDS", "HIV", "replication-cycle", "reverse-transcriptase"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1437,12 +1133,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "allergy",
-        "IgE",
-        "histamine",
-        "mast-cells"
-      ],
+      "tags": ["allergy", "IgE", "histamine", "mast-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1464,11 +1155,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "malaria",
-        "plasmodium-falciparum",
-        "malignant-malaria"
-      ],
+      "tags": ["malaria", "plasmodium-falciparum", "malignant-malaria"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1479,22 +1166,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "Salmonella typhi first reaches which organ after ingestion through contaminated food?",
-      "options": [
-        "Liver",
-        "Stomach",
-        "Small intestine",
-        "Large intestine"
-      ],
+      "options": ["Liver", "Stomach", "Small intestine", "Large intestine"],
       "correctAnswer": "C",
       "explanation": "Salmonella typhi enters the body through contaminated food and water. It first reaches the small intestine through the intestinal wall and then migrates to other organs like the liver and spleen through the bloodstream.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "typhoid",
-        "salmonella-typhi",
-        "pathogenesis"
-      ],
+      "tags": ["typhoid", "salmonella-typhi", "pathogenesis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1505,22 +1183,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "Which type of cells are responsible for graft rejection in organ transplantation?",
-      "options": [
-        "B-lymphocytes",
-        "T-lymphocytes",
-        "Eosinophils",
-        "Basophils"
-      ],
+      "options": ["B-lymphocytes", "T-lymphocytes", "Eosinophils", "Basophils"],
       "correctAnswer": "B",
       "explanation": "T-lymphocytes are responsible for cell-mediated immunity, which plays a key role in graft rejection. They recognize foreign MHC markers on the transplanted tissue and mount an immune response to destroy the graft.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-mediated-immunity",
-        "T-cells",
-        "graft-rejection"
-      ],
+      "tags": ["cell-mediated-immunity", "T-cells", "graft-rejection"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1542,11 +1211,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "typhoid",
-        "symptoms",
-        "differential-diagnosis"
-      ],
+      "tags": ["typhoid", "symptoms", "differential-diagnosis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1568,11 +1233,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "malaria",
-        "plasmodium-life-cycle",
-        "schizogony"
-      ],
+      "tags": ["malaria", "plasmodium-life-cycle", "schizogony"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1583,22 +1244,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "Which of the following diseases is caused by a helminth that lives in the lymphatic vessels?",
-      "options": [
-        "Ascariasis",
-        "Amoebiasis",
-        "Elephantiasis",
-        "Ringworm"
-      ],
+      "options": ["Ascariasis", "Amoebiasis", "Elephantiasis", "Ringworm"],
       "correctAnswer": "C",
       "explanation": "Elephantiasis (filariasis) is caused by Wuchereria species (filarial worms) that live in the lymphatic vessels of the lower limbs. They block lymph drainage, causing chronic inflammation and swelling of limbs and genital organs.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "elephantiasis",
-        "lymphatic-system",
-        "helminth-diseases"
-      ],
+      "tags": ["elephantiasis", "lymphatic-system", "helminth-diseases"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1609,23 +1261,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "Which protein on the surface of HIV helps in attaching to the host cell receptor?",
-      "options": [
-        "gp120",
-        "gp41",
-        "p24",
-        "p17"
-      ],
+      "options": ["gp120", "gp41", "p24", "p17"],
       "correctAnswer": "A",
       "explanation": "The glycoprotein gp120 on the surface of HIV binds to the CD4 receptor on the surface of helper T-lymphocytes, macrophages, and monocytes. This is the first step of HIV infection.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "AIDS",
-        "HIV",
-        "gp120",
-        "viral-structure"
-      ],
+      "tags": ["AIDS", "HIV", "gp120", "viral-structure"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1647,12 +1289,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cancer",
-        "tumor-suppressor",
-        "p53",
-        "cell-division"
-      ],
+      "tags": ["cancer", "tumor-suppressor", "p53", "cell-division"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1674,11 +1311,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "drug-abuse",
-        "alcohol",
-        "liver-cirrhosis"
-      ],
+      "tags": ["drug-abuse", "alcohol", "liver-cirrhosis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1700,12 +1333,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "B-cells",
-        "plasma-cells",
-        "antibodies",
-        "humoral-immunity"
-      ],
+      "tags": ["B-cells", "plasma-cells", "antibodies", "humoral-immunity"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1727,11 +1355,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "typhoid",
-        "carrier",
-        "salmonella-typhi"
-      ],
+      "tags": ["typhoid", "carrier", "salmonella-typhi"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1753,12 +1377,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "antibodies",
-        "immunoglobulins",
-        "IgG",
-        "IgM"
-      ],
+      "tags": ["antibodies", "immunoglobulins", "IgG", "IgM"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1769,23 +1388,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "How many of the following statements about tobacco are correct?\n(i) Nicotine stimulates the adrenal gland to release adrenaline and noradrenaline.\n(ii) Smoking increases the carbon monoxide content in blood, reducing oxygen-carrying capacity.\n(iii) Tobacco chewing causes oral cancer.\n(iv) Smoking has no effect on the cardiovascular system.",
-      "options": [
-        "One",
-        "Two",
-        "Three",
-        "Four"
-      ],
+      "options": ["One", "Two", "Three", "Four"],
       "correctAnswer": "C",
       "explanation": "Statements (i), (ii), and (iii) are correct. Nicotine stimulates the adrenal gland to release adrenaline and noradrenaline, increasing blood pressure and heart rate. Smoking increases CO in blood. Tobacco chewing causes oral cancer. Statement (iv) is wrong: smoking severely affects the cardiovascular system.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "drug-abuse",
-        "tobacco",
-        "smoking",
-        "nicotine"
-      ],
+      "tags": ["drug-abuse", "tobacco", "smoking", "nicotine"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1807,11 +1416,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "ringworm",
-        "fungal-diseases",
-        "dermatophytes"
-      ],
+      "tags": ["ringworm", "fungal-diseases", "dermatophytes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1822,23 +1427,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "Consider the following statements:\n(i) Heroin binds to opioid receptors in the CNS and gastrointestinal tract.\n(ii) Heroin is a depressant that slows down body functions.\n(iii) Withdrawal symptoms of heroin include anxiety, sweating, and nausea.\n(iv) Heroin increases alertness and improves cognitive function.\nHow many of the above statements are correct?",
-      "options": [
-        "One",
-        "Two",
-        "Three",
-        "Four"
-      ],
+      "options": ["One", "Two", "Three", "Four"],
       "correctAnswer": "C",
       "explanation": "Statements (i), (ii), and (iii) are correct. Heroin (diacetylmorphine) binds to opioid receptors in the CNS and GI tract. It is a depressant that slows body functions. Withdrawal produces anxiety, sweating, nausea, and muscular cramps. Statement (iv) is wrong: heroin is a depressant, not a stimulant.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "drug-abuse",
-        "heroin",
-        "opioids",
-        "withdrawal"
-      ],
+      "tags": ["drug-abuse", "heroin", "opioids", "withdrawal"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1860,12 +1455,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disease-organs",
-        "typhoid",
-        "pneumonia",
-        "amoebiasis"
-      ],
+      "tags": ["disease-organs", "typhoid", "pneumonia", "amoebiasis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1887,12 +1477,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "drug-abuse",
-        "drug-effects",
-        "opioids",
-        "cocaine"
-      ],
+      "tags": ["drug-abuse", "drug-effects", "opioids", "cocaine"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1914,12 +1499,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "immune-cells",
-        "B-cells",
-        "T-cells",
-        "NK-cells"
-      ],
+      "tags": ["immune-cells", "B-cells", "T-cells", "NK-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1941,12 +1521,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "malaria",
-        "plasmodium-life-cycle",
-        "sporozoite",
-        "gametocyte"
-      ],
+      "tags": ["malaria", "plasmodium-life-cycle", "sporozoite", "gametocyte"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1968,10 +1543,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "autoimmunity",
-        "autoimmune-diseases"
-      ],
+      "tags": ["autoimmunity", "autoimmune-diseases"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1993,12 +1565,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "AIDS",
-        "HIV",
-        "viral-structure",
-        "gp120"
-      ],
+      "tags": ["AIDS", "HIV", "viral-structure", "gp120"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2009,22 +1576,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "How many of the following are features of malignant tumors?\n(a) Uncontrolled cell growth\n(b) Metastasis\n(c) Contact inhibition\n(d) Invasion of surrounding tissues\n(e) Loss of cell differentiation\n(f) Encapsulated growth",
-      "options": [
-        "Two",
-        "Three",
-        "Four",
-        "Five"
-      ],
+      "options": ["Two", "Three", "Four", "Five"],
       "correctAnswer": "C",
       "explanation": "Features of malignant tumors: uncontrolled cell growth (a), metastasis (b), invasion of surrounding tissues (d), and loss of cell differentiation (e). Contact inhibition (c) is a property of NORMAL cells, not malignant tumors. Encapsulated growth (f) is a feature of BENIGN tumors.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cancer",
-        "malignant-tumors",
-        "metastasis"
-      ],
+      "tags": ["cancer", "malignant-tumors", "metastasis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2035,21 +1593,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "How many of the following are physical barriers of innate immunity?\n(a) Skin\n(b) Mucus lining of respiratory tract\n(c) Acid in stomach\n(d) Tears\n(e) Saliva\n(f) Cilia in nasal passage",
-      "options": [
-        "Two",
-        "Three",
-        "Four",
-        "Five"
-      ],
+      "options": ["Two", "Three", "Four", "Five"],
       "correctAnswer": "B",
       "explanation": "Physical barriers of innate immunity include: skin (a), mucus lining of respiratory tract (b), and cilia in nasal passage (f). Acid in stomach (c), tears (d), and saliva (e) contain antimicrobial chemicals and are classified as chemical/physiological barriers rather than physical barriers.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "innate-immunity",
-        "physical-barriers"
-      ],
+      "tags": ["innate-immunity", "physical-barriers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2060,21 +1610,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "How many of the following diseases are caused by protozoans?\n(a) Malaria (b) Amoebiasis (c) Sleeping sickness (d) Kala-azar (e) Ringworm (f) Ascariasis (g) Typhoid (h) Leishmaniasis",
-      "options": [
-        "Three",
-        "Four",
-        "Five",
-        "Six"
-      ],
+      "options": ["Three", "Four", "Five", "Six"],
       "correctAnswer": "C",
       "explanation": "Protozoan diseases in the list: Malaria (Plasmodium), Amoebiasis (Entamoeba histolytica), Sleeping sickness (Trypanosoma), Kala-azar (Leishmania donovani), and Leishmaniasis (Leishmania). Ringworm is fungal, ascariasis is helminthic, and typhoid is bacterial.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "protozoan-diseases",
-        "disease-classification"
-      ],
+      "tags": ["protozoan-diseases", "disease-classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2085,22 +1627,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "How many of the following are carcinogens (cancer-causing agents)?\n(a) Ionizing radiation (b) UV radiation (c) Tobacco smoke chemicals (d) Certain viruses (e) Vitamin C (f) Physical irritants like asbestos",
-      "options": [
-        "Three",
-        "Four",
-        "Five",
-        "Six"
-      ],
+      "options": ["Three", "Four", "Five", "Six"],
       "correctAnswer": "C",
       "explanation": "Carcinogens include: ionizing radiation (a), UV radiation (b), tobacco smoke chemicals like benzopyrene (c), certain oncogenic viruses (d), and physical irritants like asbestos (f). Vitamin C (e) is an antioxidant and is NOT a carcinogen.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cancer",
-        "carcinogens",
-        "radiation"
-      ],
+      "tags": ["cancer", "carcinogens", "radiation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2122,12 +1655,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "humoral-immunity",
-        "B-cells",
-        "antibodies",
-        "immune-response"
-      ],
+      "tags": ["humoral-immunity", "B-cells", "antibodies", "immune-response"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2149,11 +1677,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cancer",
-        "metastasis",
-        "tumor-progression"
-      ],
+      "tags": ["cancer", "metastasis", "tumor-progression"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2175,11 +1699,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "AIDS",
-        "HIV",
-        "symptoms"
-      ],
+      "tags": ["AIDS", "HIV", "symptoms"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2201,11 +1721,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "active-immunity",
-        "passive-immunity",
-        "memory-cells"
-      ],
+      "tags": ["active-immunity", "passive-immunity", "memory-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2227,11 +1743,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "cancer",
-        "cancer-treatment",
-        "chemotherapy"
-      ],
+      "tags": ["cancer", "cancer-treatment", "chemotherapy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2253,12 +1765,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "AIDS",
-        "HIV",
-        "viral-genome",
-        "retrovirus"
-      ],
+      "tags": ["AIDS", "HIV", "viral-genome", "retrovirus"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2280,11 +1787,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "amoebiasis",
-        "disease-transmission",
-        "housefly"
-      ],
+      "tags": ["amoebiasis", "disease-transmission", "housefly"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2295,22 +1798,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "The toxic substance released upon rupture of RBCs in malaria is:",
-      "options": [
-        "Hemoglobin",
-        "Haemozoin",
-        "Histamine",
-        "Bilirubin"
-      ],
+      "options": ["Hemoglobin", "Haemozoin", "Histamine", "Bilirubin"],
       "correctAnswer": "B",
       "explanation": "When Plasmodium merozoites multiply inside RBCs and rupture them, they release a toxic substance called haemozoin. This is responsible for the recurring high fever and chills characteristic of malaria.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "malaria",
-        "haemozoin",
-        "RBC-rupture"
-      ],
+      "tags": ["malaria", "haemozoin", "RBC-rupture"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2332,11 +1826,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "elephantiasis",
-        "lymphatic-system",
-        "wuchereria"
-      ],
+      "tags": ["elephantiasis", "lymphatic-system", "wuchereria"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2358,12 +1848,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "T-cells",
-        "B-cells",
-        "lymphoid-organs",
-        "thymus"
-      ],
+      "tags": ["T-cells", "B-cells", "lymphoid-organs", "thymus"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2385,13 +1870,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "immunoglobulins",
-        "IgA",
-        "IgE",
-        "IgG",
-        "IgM"
-      ],
+      "tags": ["immunoglobulins", "IgA", "IgE", "IgG", "IgM"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2402,22 +1881,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "How many of the following are vector-borne diseases?\n(a) Malaria (b) Typhoid (c) Elephantiasis (d) Dengue (e) Pneumonia (f) Sleeping sickness (g) Amoebiasis",
-      "options": [
-        "Two",
-        "Three",
-        "Four",
-        "Five"
-      ],
+      "options": ["Two", "Three", "Four", "Five"],
       "correctAnswer": "C",
       "explanation": "Vector-borne diseases: Malaria (female Anopheles mosquito), Elephantiasis (female Culex mosquito), Dengue (Aedes mosquito), and Sleeping sickness (Tsetse fly). Typhoid and amoebiasis are waterborne, and pneumonia is airborne.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vector-borne-diseases",
-        "mosquito-borne",
-        "disease-classification"
-      ],
+      "tags": ["vector-borne-diseases", "mosquito-borne", "disease-classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2439,12 +1909,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "drug-abuse",
-        "addiction",
-        "tolerance",
-        "withdrawal"
-      ],
+      "tags": ["drug-abuse", "addiction", "tolerance", "withdrawal"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2466,11 +1931,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "typhoid",
-        "salmonella-typhi",
-        "pathogenesis"
-      ],
+      "tags": ["typhoid", "salmonella-typhi", "pathogenesis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2481,23 +1942,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "Alpha interferon is used in the treatment of which disease?",
-      "options": [
-        "Typhoid",
-        "Cancer",
-        "Malaria",
-        "Pneumonia"
-      ],
+      "options": ["Typhoid", "Cancer", "Malaria", "Pneumonia"],
       "correctAnswer": "B",
       "explanation": "Alpha interferon is one of the biological response modifiers used in the treatment of cancer. Interferons activate the immune system and help the body fight cancer cells. They are used in immunotherapy of certain cancers.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cancer",
-        "interferon",
-        "cancer-treatment",
-        "immunotherapy"
-      ],
+      "tags": ["cancer", "interferon", "cancer-treatment", "immunotherapy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2508,23 +1959,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "Which of the following organs is NOT a primary lymphoid organ?",
-      "options": [
-        "Bone marrow",
-        "Thymus",
-        "Spleen",
-        "Both A and B are primary lymphoid organs"
-      ],
+      "options": ["Bone marrow", "Thymus", "Spleen", "Both A and B are primary lymphoid organs"],
       "correctAnswer": "C",
       "explanation": "The spleen is a secondary lymphoid organ, not a primary one. Primary lymphoid organs are bone marrow and thymus, where immature lymphocytes differentiate into mature lymphocytes. Secondary lymphoid organs (spleen, lymph nodes, tonsils, Peyer's patches, MALT) are where lymphocytes interact with antigens.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lymphoid-organs",
-        "spleen",
-        "thymus",
-        "bone-marrow"
-      ],
+      "tags": ["lymphoid-organs", "spleen", "thymus", "bone-marrow"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2535,22 +1976,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "The larvae of Ascaris undergo migration through the body. This process is called:",
-      "options": [
-        "Sporulation",
-        "Encystation",
-        "Larval migration",
-        "Conjugation"
-      ],
+      "options": ["Sporulation", "Encystation", "Larval migration", "Conjugation"],
       "correctAnswer": "C",
       "explanation": "In ascariasis, the larvae of Ascaris undergo migration through the body. After hatching in the intestine, larvae penetrate the intestinal wall, travel through blood to the lungs, and return to the intestine. This larval migration causes symptoms like internal bleeding, muscular pain, fever, and anaemia.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "ascariasis",
-        "larval-migration",
-        "helminth-diseases"
-      ],
+      "tags": ["ascariasis", "larval-migration", "helminth-diseases"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2561,23 +1993,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Human Health and Disease",
       "question": "Which of the following viruses can cause cancer?",
-      "options": [
-        "Rhinovirus",
-        "Human Papillomavirus (HPV)",
-        "Influenza virus",
-        "Adenovirus"
-      ],
+      "options": ["Rhinovirus", "Human Papillomavirus (HPV)", "Influenza virus", "Adenovirus"],
       "correctAnswer": "B",
       "explanation": "Human Papillomavirus (HPV) is an oncogenic virus that can cause cervical cancer. Other cancer-causing viruses include Hepatitis B and C (liver cancer), Epstein-Barr virus (Burkitt's lymphoma), and HTLV-1 (T-cell leukemia). These are biological carcinogens.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cancer",
-        "oncogenic-viruses",
-        "HPV",
-        "carcinogens"
-      ],
+      "tags": ["cancer", "oncogenic-viruses", "HPV", "carcinogens"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2599,12 +2021,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "drug-abuse",
-        "dependence",
-        "tolerance",
-        "withdrawal"
-      ],
+      "tags": ["drug-abuse", "dependence", "tolerance", "withdrawal"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2626,12 +2043,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lymphoid-organs",
-        "thymus",
-        "spleen",
-        "bone-marrow"
-      ],
+      "tags": ["lymphoid-organs", "thymus", "spleen", "bone-marrow"],
       "neetWeightage": "HIGH"
     }
   ]

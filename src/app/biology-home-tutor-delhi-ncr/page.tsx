@@ -266,7 +266,11 @@ export default function BiologyHomeTutorDelhiNCRPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Delhi NCR', 'NEET Biology Delhi NCR', 'Medical entrance coaching Delhi NCR']}
+        knowsAbout={[
+          'NEET Delhi NCR',
+          'NEET Biology Delhi NCR',
+          'Medical entrance coaching Delhi NCR',
+        ]}
       />
       <DelhiAreaSchema pageSlug="biology-home-tutor-delhi-ncr" />
       <script

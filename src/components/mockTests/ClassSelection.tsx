@@ -134,14 +134,10 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
     <div className="max-w-7xl mx-auto px-6 py-12">
       {/* Header */}
       <div className="text-center mb-16">
-        <h2
-          className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp"
-        >
+        <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
           Choose Your Learning Path
         </h2>
-        <p
-          className="text-xl text-gray-600 max-w-3xl mx-auto animate-fadeInUp"
-        >
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fadeInUp">
           We customize test difficulty, question selection, and analytics based on your current
           class. This ensures optimal learning experience and better results.
         </p>
@@ -244,19 +240,14 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
       </div>
 
       {/* Benefits Section */}
-      <div
-        className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-      >
+      <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
         <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
           Why Class-Based Learning Works Better
         </h3>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="text-center animate-fadeInUp"
-            >
+            <div key={index} className="text-center animate-fadeInUp">
               <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <benefit.icon className="w-6 h-6 text-blue-600" />
               </div>
@@ -269,9 +260,7 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
 
       {/* Continue Button */}
       {selectedClass && (
-        <div
-          className="text-center mt-12 animate-fadeInUp"
-        >
+        <div className="text-center mt-12 animate-fadeInUp">
           <Button
             variant="primary"
             size="xl"

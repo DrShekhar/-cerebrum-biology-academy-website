@@ -46,7 +46,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'MCAT Biology Tutor Bay Area | Berkeley, Stanford, UCSF',
-    description: 'MCAT Bio/Biochem tutor for SF Bay Area pre-meds — UC Berkeley, Stanford, UCSF, Davis, San Jose State. Biology specialists, PT evening slots. From $449.',
+    description:
+      'MCAT Bio/Biochem tutor for SF Bay Area pre-meds — UC Berkeley, Stanford, UCSF, Davis, San Jose State. Biology specialists, PT evening slots. From $449.',
   },
 }
 
@@ -362,19 +363,19 @@ export default function MCATBiologyTutorBayAreaPage() {
               support.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem Ascent: $899</strong> for the full programme. Adds
-              weekly 2-hour live sessions with biology-specialist faculty, monthly section mocks,
-              peer Slack channel, senior faculty office hours.
+              <strong>MCAT Bio/Biochem Ascent: $899</strong> for the full programme. Adds weekly
+              2-hour live sessions with biology-specialist faculty, monthly section mocks, peer
+              Slack channel, senior faculty office hours.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem Pinnacle: $1,349</strong> for the full programme.
-              Adds weekly 90-minute 1:1 video sessions with AIIMS-trained senior faculty,
-              personalised study plan, custom passage drills, unlimited WhatsApp faculty access.
+              <strong>MCAT Bio/Biochem Pinnacle: $1,349</strong> for the full programme. Adds weekly
+              90-minute 1:1 video sessions with AIIMS-trained senior faculty, personalised study
+              plan, custom passage drills, unlimited WhatsApp faculty access.
             </li>
             <li>
               <strong>Ad-hoc 1:1 tutoring — $135/hour</strong> outside the packaged programme. For
-              students using other generalist MCAT brands / Blueprint / other generalist test-prep brands as the generalist provider and
-              wanting a biology specialist for gap-fill.
+              students using other generalist MCAT brands / Blueprint / other generalist test-prep
+              brands as the generalist provider and wanting a biology specialist for gap-fill.
             </li>
           </ul>
         </div>

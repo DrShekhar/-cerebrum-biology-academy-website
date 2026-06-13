@@ -77,8 +77,14 @@ export const delhiNCRLocalityCues: Record<DelhiNCRLocalityKey, LocalityCuesProps
       { name: 'Hauz Khas (interchange)', line: 'Yellow + Magenta Line' },
     ],
     localCompetitors: [
-      { brand: 'SKY Coaching (2nd-largest national NEET chain) South Delhi', note: 'Lajpat Nagar / Saket' },
-      { brand: 'XYZ Coaching (largest national NEET chain)', note: 'Punjabi Bagh + multiple Delhi' },
+      {
+        brand: 'SKY Coaching (2nd-largest national NEET chain) South Delhi',
+        note: 'Lajpat Nagar / Saket',
+      },
+      {
+        brand: 'XYZ Coaching (largest national NEET chain)',
+        note: 'Punjabi Bagh + multiple Delhi',
+      },
       { brand: 'other IIT-JEE-first coachings Kalu Sarai', note: '4 km · generalist' },
       { brand: 'other online-only platforms Vidyapeeth', note: 'Online + select offline' },
     ],
@@ -115,7 +121,10 @@ export const delhiNCRLocalityCues: Record<DelhiNCRLocalityKey, LocalityCuesProps
       { name: 'MG Road', line: 'Yellow Line · 5 km' },
     ],
     localCompetitors: [
-      { brand: 'SKY Coaching (2nd-largest national NEET chain) Gurugram', note: 'Sector 14 + Sector 56' },
+      {
+        brand: 'SKY Coaching (2nd-largest national NEET chain) Gurugram',
+        note: 'Sector 14 + Sector 56',
+      },
       { brand: 'XYZ Coaching (largest national NEET chain)', note: 'Sector 27 · large batches' },
       { brand: 'other IIT-JEE-first coachings Gurugram', note: 'Generalist NEET + JEE' },
       { brand: 'other Kota-origin chains Gurugram', note: 'Sector 14 area' },
@@ -152,7 +161,10 @@ export const delhiNCRLocalityCues: Record<DelhiNCRLocalityKey, LocalityCuesProps
       { name: 'Sector 18', line: 'Blue Line · 7 km' },
     ],
     localCompetitors: [
-      { brand: 'SKY Coaching (2nd-largest national NEET chain) Noida', note: 'Sector 50 + Sector 18' },
+      {
+        brand: 'SKY Coaching (2nd-largest national NEET chain) Noida',
+        note: 'Sector 50 + Sector 18',
+      },
       { brand: 'XYZ Coaching (largest national NEET chain)', note: 'Sector 18 · large batches' },
       { brand: 'other IIT-JEE-first coachings Noida', note: 'Sector 62 · generalist' },
       { brand: 'other online-only platforms Noida', note: 'Multiple sectors' },
@@ -190,7 +202,10 @@ export const delhiNCRLocalityCues: Record<DelhiNCRLocalityKey, LocalityCuesProps
       { name: 'Sant Surdas (Sihi)', line: 'Violet Line · Greater Fbd' },
     ],
     localCompetitors: [
-      { brand: 'SKY Coaching (2nd-largest national NEET chain) Faridabad', note: 'Sector 15 · 2 km' },
+      {
+        brand: 'SKY Coaching (2nd-largest national NEET chain) Faridabad',
+        note: 'Sector 15 · 2 km',
+      },
       { brand: 'XYZ Coaching (largest national NEET chain)', note: 'Sector 16A · generalist' },
       { brand: 'other IIT-JEE-first coachings Faridabad', note: 'NIT 1 · multi-subject' },
       { brand: 'Career Launcher', note: 'Sector 21' },

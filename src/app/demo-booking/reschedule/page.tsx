@@ -125,9 +125,7 @@ function RescheduleContent() {
   if (error && !booking) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br bg-red-50 p-4">
-        <div
-          className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center animate-fadeInUp"
-        >
+        <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center animate-fadeInUp">
           <XCircle className="w-16 h-16 text-red-500 mx-auto mb-4" />
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Unable to Load Booking</h1>
           <p className="text-gray-600 mb-6">{error}</p>
@@ -145,9 +143,7 @@ function RescheduleContent() {
   if (success) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-green-50 p-4">
-        <div
-          className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center animate-fadeInUp"
-        >
+        <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center animate-fadeInUp">
           <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Rescheduled Successfully!</h1>
           <p className="text-gray-600 mb-6">Your demo class has been rescheduled to:</p>
@@ -173,9 +169,7 @@ function RescheduleContent() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 py-12 px-4">
       <div className="max-w-2xl mx-auto">
-        <div
-          className="bg-white rounded-2xl shadow-xl overflow-hidden animate-fadeInUp"
-        >
+        <div className="bg-white rounded-2xl shadow-xl overflow-hidden animate-fadeInUp">
           <div className="bg-gradient-to-r from-blue-600 to-blue-600 p-8 text-white">
             <h1 className="text-3xl font-bold mb-2">Reschedule Demo Class</h1>
             <p className="text-blue-100">Choose a new date and time for your demo session</p>

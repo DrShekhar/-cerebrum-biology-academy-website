@@ -211,18 +211,14 @@ export const MultiStepForm = <T extends FormDataRecord = FormDataRecord>({
 
           {/* Progress bar */}
           <div className="mt-6 h-2 bg-gray-200 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-blue-600 rounded-full animate-fadeInUp"
-            />
+            <div className="h-full bg-blue-600 rounded-full animate-fadeInUp" />
           </div>
         </div>
       )}
 
       {/* Auto-save indicator */}
       {savedProgress && (
-        <div
-          className="mb-4 flex items-center justify-center text-sm text-green-600 animate-fadeInUp"
-        >
+        <div className="mb-4 flex items-center justify-center text-sm text-green-600 animate-fadeInUp">
           <Clock className="w-4 h-4 mr-1" />
           Progress saved automatically
         </div>
@@ -230,9 +226,7 @@ export const MultiStepForm = <T extends FormDataRecord = FormDataRecord>({
 
       {/* Error display */}
       {errors.length > 0 && (
-        <div
-          className="mb-6 bg-red-50 border border-red-200 rounded-lg p-4 animate-fadeInUp"
-        >
+        <div className="mb-6 bg-red-50 border border-red-200 rounded-lg p-4 animate-fadeInUp">
           <div className="text-red-800">
             <h3 className="font-medium mb-2">Please fix the following errors:</h3>
             <ul className="list-disc list-inside space-y-1">
@@ -256,18 +250,16 @@ export const MultiStepForm = <T extends FormDataRecord = FormDataRecord>({
         </div>
 
         <div className="p-6">
-<div
-              key={currentStep}
-             className="animate-fadeInUp">
-              <StepComponent
-                data={formData}
-                onNext={handleNext}
-                onPrevious={allowBackNavigation ? handlePrevious : undefined}
-                isLoading={isLoading}
-                errors={errors}
-              />
-            </div>
-</div>
+          <div key={currentStep} className="animate-fadeInUp">
+            <StepComponent
+              data={formData}
+              onNext={handleNext}
+              onPrevious={allowBackNavigation ? handlePrevious : undefined}
+              isLoading={isLoading}
+              errors={errors}
+            />
+          </div>
+        </div>
 
         {/* Navigation */}
         <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 flex items-center justify-between">

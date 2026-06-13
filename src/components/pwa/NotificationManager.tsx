@@ -185,9 +185,7 @@ export function NotificationManager({ className = '' }: NotificationManagerProps
               >
                 {isRequesting ? (
                   <>
-                    <div
-                      className="w-4 h-4 border-2 border-white border-t-transparent rounded-full mr-2 animate-fadeInUp"
-                    />
+                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full mr-2 animate-fadeInUp" />
                     Requesting Permission...
                   </>
                 ) : (
@@ -211,9 +209,7 @@ export function NotificationManager({ className = '' }: NotificationManagerProps
               </div>
 
               {settings.enabled && (
-                <div
-                  className="space-y-3 p-4 bg-gray-50 rounded-lg border animate-fadeInUp"
-                >
+                <div className="space-y-3 p-4 bg-gray-50 rounded-lg border animate-fadeInUp">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="text-xs text-gray-600">Morning Reminder</label>
@@ -303,72 +299,68 @@ export function NotificationManager({ className = '' }: NotificationManagerProps
       </Card>
 
       {/* Notification Examples */}
-{showSettings && permission === 'granted' && (
-          <div
-            className="mt-4 animate-fadeInUp"
-          >
-            <Card className="border border-gray-200">
-              <CardHeader>
-                <CardTitle className="flex items-center justify-between text-lg">
-                  Notification Examples
-                  <Button variant="ghost" size="sm" onClick={() => setShowSettings(false)}>
-                    <X className="w-4 h-4" />
-                  </Button>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                {/* Example notifications */}
-                <div className="space-y-3">
-                  <div className="p-3 bg-blue-50 rounded-lg border border-blue-200 flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-4 h-4 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-medium text-blue-900 text-sm">
-                        Morning Biology Revision 🌅
-                      </h4>
-                      <p className="text-xs text-blue-700">
-                        Start your day with NEET Biology concepts!
-                      </p>
-                      <p className="text-xs text-blue-600 mt-1">Daily at {settings.morningTime}</p>
-                    </div>
+      {showSettings && permission === 'granted' && (
+        <div className="mt-4 animate-fadeInUp">
+          <Card className="border border-gray-200">
+            <CardHeader>
+              <CardTitle className="flex items-center justify-between text-lg">
+                Notification Examples
+                <Button variant="ghost" size="sm" onClick={() => setShowSettings(false)}>
+                  <X className="w-4 h-4" />
+                </Button>
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {/* Example notifications */}
+              <div className="space-y-3">
+                <div className="p-3 bg-blue-50 rounded-lg border border-blue-200 flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-4 h-4 text-white" />
                   </div>
-
-                  <div className="p-3 bg-green-50 rounded-lg border border-green-200 flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <BookOpen className="w-4 h-4 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-medium text-green-900 text-sm">
-                        Live Class Starting Soon!
-                      </h4>
-                      <p className="text-xs text-green-700">
-                        Your Cell Biology class starts in 15 minutes
-                      </p>
-                      <p className="text-xs text-green-600 mt-1">Before live classes</p>
-                    </div>
-                  </div>
-
-                  <div className="p-3 bg-purple-50 rounded-lg border border-purple-200 flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Target className="w-4 h-4 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-medium text-purple-900 text-sm">
-                        New Mock Test Available
-                      </h4>
-                      <p className="text-xs text-purple-700">
-                        New Genetics mock test is now available
-                      </p>
-                      <p className="text-xs text-purple-600 mt-1">When new tests are published</p>
-                    </div>
+                  <div className="flex-1">
+                    <h4 className="font-medium text-blue-900 text-sm">
+                      Morning Biology Revision 🌅
+                    </h4>
+                    <p className="text-xs text-blue-700">
+                      Start your day with NEET Biology concepts!
+                    </p>
+                    <p className="text-xs text-blue-600 mt-1">Daily at {settings.morningTime}</p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
-        )}
-</div>
+
+                <div className="p-3 bg-green-50 rounded-lg border border-green-200 flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <BookOpen className="w-4 h-4 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-medium text-green-900 text-sm">
+                      Live Class Starting Soon!
+                    </h4>
+                    <p className="text-xs text-green-700">
+                      Your Cell Biology class starts in 15 minutes
+                    </p>
+                    <p className="text-xs text-green-600 mt-1">Before live classes</p>
+                  </div>
+                </div>
+
+                <div className="p-3 bg-purple-50 rounded-lg border border-purple-200 flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Target className="w-4 h-4 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-medium text-purple-900 text-sm">New Mock Test Available</h4>
+                    <p className="text-xs text-purple-700">
+                      New Genetics mock test is now available
+                    </p>
+                    <p className="text-xs text-purple-600 mt-1">When new tests are published</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      )}
+    </div>
   )
 }
 
@@ -415,9 +407,7 @@ export function QuickNotificationRequest() {
   }
 
   return (
-    <div
-      className="fixed bottom-6 right-6 z-40 max-w-sm animate-fadeInUp"
-    >
+    <div className="fixed bottom-6 right-6 z-40 max-w-sm animate-fadeInUp">
       <Card className="border-2 border-primary/20 shadow-lg bg-white">
         <CardContent className="p-4">
           <div className="flex items-start space-x-3">

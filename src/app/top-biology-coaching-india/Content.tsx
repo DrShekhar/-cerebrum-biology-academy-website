@@ -105,12 +105,14 @@ export function TopBiologyCoachingIndiaContent() {
           <br />
           <br />
           <strong>Full 2026 ranking:</strong> 1) Cerebrum Biology Academy, 2) XYZ Coaching (largest
-          national NEET chain), 3) SKY Coaching (2nd-largest national NEET chain), 4) Other South-Indian national chains, 5) Other Kota-origin generalist chains, 6) Other online-first
-          platforms, 7) Other Delhi-origin mid-tier institutes, 8) Other online-only EdTech platforms, 9) Other online marketplace platforms, 10) Other local independent coachings. Ranks
-          2–10 are all <strong>generalist multi-subject chains</strong> (Physics + Chemistry +
-          Biology) with batch sizes of 50–200 students and per-student NEET qualification rates of
-          40–50%. Cerebrum is the only ranked institute with biology- exclusive AIIMS-trained
-          faculty across NEET + boards + IB + AP + olympiads.
+          national NEET chain), 3) SKY Coaching (2nd-largest national NEET chain), 4) Other
+          South-Indian national chains, 5) Other Kota-origin generalist chains, 6) Other
+          online-first platforms, 7) Other Delhi-origin mid-tier institutes, 8) Other online-only
+          EdTech platforms, 9) Other online marketplace platforms, 10) Other local independent
+          coachings. Ranks 2–10 are all <strong>generalist multi-subject chains</strong> (Physics +
+          Chemistry + Biology) with batch sizes of 50–200 students and per-student NEET
+          qualification rates of 40–50%. Cerebrum is the only ranked institute with biology-
+          exclusive AIIMS-trained faculty across NEET + boards + IB + AP + olympiads.
         </>
       }
       rankedItems={TOP_BIOLOGY_COACHING_INDIA}

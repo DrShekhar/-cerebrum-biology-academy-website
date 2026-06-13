@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   title:
     'Biology Coaching in English Medium of Instruction — NEET · IB · AP · Olympiads · Cerebrum',
   description:
-    'India\'s biology-specialist coaching delivered entirely in English medium of instruction. NCERT NEET, IB Biology HL/SL, AP Biology, MCAT, USABO/IBO olympiads. Designed for NRI families, international-curriculum students, and English-medium school students worldwide. AIIMS-trained faculty.',
+    "India's biology-specialist coaching delivered entirely in English medium of instruction. NCERT NEET, IB Biology HL/SL, AP Biology, MCAT, USABO/IBO olympiads. Designed for NRI families, international-curriculum students, and English-medium school students worldwide. AIIMS-trained faculty.",
   keywords: [
     'biology coaching english medium',
     'english medium biology coaching',
@@ -100,25 +100,29 @@ const AUDIENCES = [
     title: 'NRI families (UAE / USA / UK / Canada / Saudi / Singapore / Australia)',
     description:
       'Children growing up in English-medium schools abroad — Indian School Dubai, GEMS Modern Academy, ASB Mumbai, ASD Dubai, UWCSEA Singapore, Stamford American — preparing for NEET / IB / AP / MCAT. All coaching, all study material, all assessments in English. Time-zone-matched live batches.',
-    examples: 'NEET aspirants in Gulf · IB DP students globally · AP Biology students in US · MCAT premed students',
+    examples:
+      'NEET aspirants in Gulf · IB DP students globally · AP Biology students in US · MCAT premed students',
   },
   {
     title: 'Regional-medium school students switching to NEET',
     description:
       'Students from Hindi-medium / Marathi-medium / Tamil-medium / Bengali-medium / Telugu-medium / Kannada-medium / Malayalam-medium / Gujarati-medium / Punjabi-medium / Assamese-medium schools who need to switch to English for NEET. We run an explicit 4-week NCERT terminology bridge in week 1-4 of every batch to make this transition smooth.',
-    examples: 'State-board students preparing for NEET-UG · Switch from regional medium for Class 11 / 12 / dropper',
+    examples:
+      'State-board students preparing for NEET-UG · Switch from regional medium for Class 11 / 12 / dropper',
   },
   {
     title: 'International curriculum students (IB / AP / IGCSE)',
     description:
-      'IB DP1/DP2, AP Biology, IGCSE / A-Level Biology students in international schools globally. The international curricula are taught in English; our biology programme directly supports each curriculum\'s specific syllabus + assessment style.',
-    examples: 'IB Biology HL students · AP Biology students preparing for May exam · IGCSE / A-Level students',
+      "IB DP1/DP2, AP Biology, IGCSE / A-Level Biology students in international schools globally. The international curricula are taught in English; our biology programme directly supports each curriculum's specific syllabus + assessment style.",
+    examples:
+      'IB Biology HL students · AP Biology students preparing for May exam · IGCSE / A-Level students',
   },
   {
     title: 'English-medium CBSE / ICSE / State-board students',
     description:
       'Students already in English-medium schools who want biology depth that their school + mass-coaching cannot provide. The Cerebrum specialist programme runs as an add-on layer to school + any existing PCM coaching.',
-    examples: 'CBSE / ICSE Class 11-12 students at DPS, La Martiniere, St. Xavier\'s, Pathways, etc.',
+    examples:
+      "CBSE / ICSE Class 11-12 students at DPS, La Martiniere, St. Xavier's, Pathways, etc.",
   },
 ]
 
@@ -131,10 +135,11 @@ const FAQS = [
   {
     question: 'Does Cerebrum teach in Hindi, Tamil, Telugu, or any regional language?',
     answer:
-      'No. All Cerebrum biology coaching is in English medium — this is by design, not by accident. NEET, NEET-PG, MCAT, USMLE, IB, AP, all biology olympiads use English as the medium of instruction. We standardise on English so students develop the exact terminology fluency they need for the exam they\'re targeting. For students from regional-medium schools, our first 4 weeks bridge from state-board / regional-medium framing to NCERT English terminology systematically.',
+      "No. All Cerebrum biology coaching is in English medium — this is by design, not by accident. NEET, NEET-PG, MCAT, USMLE, IB, AP, all biology olympiads use English as the medium of instruction. We standardise on English so students develop the exact terminology fluency they need for the exam they're targeting. For students from regional-medium schools, our first 4 weeks bridge from state-board / regional-medium framing to NCERT English terminology systematically.",
   },
   {
-    question: 'My child studied biology in Hindi-medium until Class 10. Can they switch to Cerebrum?',
+    question:
+      'My child studied biology in Hindi-medium until Class 10. Can they switch to Cerebrum?',
     answer:
       'Yes — this is exactly the case our 4-week bridge module is built for. Week 1-4 of every Class 11 batch (or dropper batch) explicitly covers NCERT English terminology with Hindi-language reference where it helps comprehension. By week 5 students are operating fully in English. We have current students who switched from Hindi-medium in Patna, Lucknow, Kanpur, Indore, Bhopal, and they scored 320+/360 biology on NEET 2024-2025.',
   },
@@ -152,12 +157,12 @@ const FAQS = [
     question:
       'My child is in IB Biology HL or AP Biology. Does the English medium of instruction angle still matter?',
     answer:
-      'It matters for the right reason — IB and AP are already English. The question is whether your biology coaching keeps the English at the depth IB/AP requires. Mass NEET coaching (Allen, Aakash, PW) teach biology in English-medium, but at NCERT-NEET depth, which doesn\'t reach IB HL command-term depth or AP rubric-pattern depth. Cerebrum\'s IB and AP tracks teach in English at the curriculum-specific depth those exams demand.',
+      "It matters for the right reason — IB and AP are already English. The question is whether your biology coaching keeps the English at the depth IB/AP requires. Mass NEET coaching (Allen, Aakash, PW) teach biology in English-medium, but at NCERT-NEET depth, which doesn't reach IB HL command-term depth or AP rubric-pattern depth. Cerebrum's IB and AP tracks teach in English at the curriculum-specific depth those exams demand.",
   },
   {
     question: 'How do I start?',
     answer:
-      'Free 60-minute trial class with Dr. Shekhar (or appropriate senior faculty for non-NEET programmes). Bring your child\'s last biology exam in whatever language they\'re currently studying — we work through it live and show you the English-medium transition path.',
+      "Free 60-minute trial class with Dr. Shekhar (or appropriate senior faculty for non-NEET programmes). Bring your child's last biology exam in whatever language they're currently studying — we work through it live and show you the English-medium transition path.",
   },
 ]
 
@@ -174,7 +179,7 @@ export default function BiologyCoachingEnglishMediumPage() {
     '@id': `${PAGE_URL}#course`,
     name: 'Biology Coaching in English Medium of Instruction',
     description:
-      'India\'s biology-specialist coaching delivered entirely in English medium. NEET, IB, AP, MCAT, Olympiads. For NRI, international-school, and English-medium students globally.',
+      "India's biology-specialist coaching delivered entirely in English medium. NEET, IB, AP, MCAT, Olympiads. For NRI, international-school, and English-medium students globally.",
     url: PAGE_URL,
     inLanguage: 'en',
     educationalLevel: 'Class 9-12 + dropper / international curriculum',
@@ -226,9 +231,7 @@ export default function BiologyCoachingEnglishMediumPage() {
               </Link>
             </li>
             <ChevronRight className="h-3.5 w-3.5" />
-            <li className="text-slate-700">
-              Biology Coaching English Medium of Instruction
-            </li>
+            <li className="text-slate-700">Biology Coaching English Medium of Instruction</li>
           </ol>
         </nav>
 
@@ -243,16 +246,13 @@ export default function BiologyCoachingEnglishMediumPage() {
             <span className="text-indigo-700">NEET, IB, AP, MCAT, Olympiads.</span>
           </h1>
           <p className="mt-5 text-lg text-slate-600 leading-relaxed max-w-4xl">
-            All Cerebrum biology coaching is delivered entirely in English
-            medium &mdash; the medium of instruction NEET, IB, AP, MCAT,
-            USMLE, and every biology olympiad operate in. Designed for
-            three audiences: NRI families whose children grew up in
-            English-medium schools abroad, international-curriculum students
-            (IB / AP / IGCSE), and regional-medium school students switching
-            to English for competitive exams. We don\&rsquo;t teach in Hindi,
-            Tamil, Telugu, Kannada, Malayalam, Marathi, Bengali, Gujarati, or
-            Punjabi &mdash; by design, because English is the exam\&rsquo;s
-            language.
+            All Cerebrum biology coaching is delivered entirely in English medium &mdash; the medium
+            of instruction NEET, IB, AP, MCAT, USMLE, and every biology olympiad operate in.
+            Designed for three audiences: NRI families whose children grew up in English-medium
+            schools abroad, international-curriculum students (IB / AP / IGCSE), and regional-medium
+            school students switching to English for competitive exams. We don\&rsquo;t teach in
+            Hindi, Tamil, Telugu, Kannada, Malayalam, Marathi, Bengali, Gujarati, or Punjabi &mdash;
+            by design, because English is the exam\&rsquo;s language.
           </p>
 
           <div className="mt-7 flex flex-col sm:flex-row gap-3">
@@ -283,17 +283,11 @@ export default function BiologyCoachingEnglishMediumPage() {
             </h2>
             <div className="mt-10 grid gap-5 md:grid-cols-2">
               {AUDIENCES.map((a) => (
-                <div
-                  key={a.title}
-                  className="rounded-2xl bg-white p-6 ring-1 ring-slate-200"
-                >
+                <div key={a.title} className="rounded-2xl bg-white p-6 ring-1 ring-slate-200">
                   <h3 className="text-base font-bold text-slate-900">{a.title}</h3>
-                  <p className="mt-3 text-sm text-slate-700 leading-relaxed">
-                    {a.description}
-                  </p>
+                  <p className="mt-3 text-sm text-slate-700 leading-relaxed">{a.description}</p>
                   <p className="mt-3 text-xs text-slate-500">
-                    <span className="font-semibold text-slate-700">Examples:</span>{' '}
-                    {a.examples}
+                    <span className="font-semibold text-slate-700">Examples:</span> {a.examples}
                   </p>
                 </div>
               ))}
@@ -307,48 +301,66 @@ export default function BiologyCoachingEnglishMediumPage() {
             The 4-week English-medium bridge for regional-medium students
           </h2>
           <p className="mt-4 text-base text-slate-700 leading-relaxed">
-            For students transitioning from regional-medium schools (Hindi,
-            Tamil, Telugu, Kannada, Malayalam, Marathi, Bengali, Gujarati,
-            Punjabi, Assamese, Bodo) into NEET English-medium preparation,
-            Cerebrum runs an explicit 4-week NCERT English terminology bridge
-            at the start of every Class 11 / dropper batch. The bridge covers:
+            For students transitioning from regional-medium schools (Hindi, Tamil, Telugu, Kannada,
+            Malayalam, Marathi, Bengali, Gujarati, Punjabi, Assamese, Bodo) into NEET English-medium
+            preparation, Cerebrum runs an explicit 4-week NCERT English terminology bridge at the
+            start of every Class 11 / dropper batch. The bridge covers:
           </p>
           <ul className="mt-6 space-y-3 text-sm text-slate-700">
             <li className="flex gap-3">
               <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600 mt-0.5" />
               <div>
-                <p className="font-semibold text-slate-900">Week 1: Cell biology + biomolecules terminology</p>
-                <p className="mt-1">English terms for organelles, cell types, biomolecule classes &mdash; with Hindi reference allowed when terminology comprehension is the blocker.</p>
+                <p className="font-semibold text-slate-900">
+                  Week 1: Cell biology + biomolecules terminology
+                </p>
+                <p className="mt-1">
+                  English terms for organelles, cell types, biomolecule classes &mdash; with Hindi
+                  reference allowed when terminology comprehension is the blocker.
+                </p>
               </div>
             </li>
             <li className="flex gap-3">
               <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600 mt-0.5" />
               <div>
-                <p className="font-semibold text-slate-900">Week 2: Plant physiology + transport vocabulary</p>
-                <p className="mt-1">Photosynthesis, respiration, transpiration, xylem / phloem &mdash; mapped from regional-language equivalents.</p>
+                <p className="font-semibold text-slate-900">
+                  Week 2: Plant physiology + transport vocabulary
+                </p>
+                <p className="mt-1">
+                  Photosynthesis, respiration, transpiration, xylem / phloem &mdash; mapped from
+                  regional-language equivalents.
+                </p>
               </div>
             </li>
             <li className="flex gap-3">
               <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600 mt-0.5" />
               <div>
-                <p className="font-semibold text-slate-900">Week 3: Human physiology + reproduction terminology</p>
-                <p className="mt-1">Digestion, respiration, circulation, excretion, neural, reproduction &mdash; the highest-weightage NEET chapters get terminology drilling.</p>
+                <p className="font-semibold text-slate-900">
+                  Week 3: Human physiology + reproduction terminology
+                </p>
+                <p className="mt-1">
+                  Digestion, respiration, circulation, excretion, neural, reproduction &mdash; the
+                  highest-weightage NEET chapters get terminology drilling.
+                </p>
               </div>
             </li>
             <li className="flex gap-3">
               <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600 mt-0.5" />
               <div>
-                <p className="font-semibold text-slate-900">Week 4: Genetics + evolution + ecology vocabulary</p>
-                <p className="mt-1">By end of week 4, students operate fully in NEET-pattern English-medium MCQ format.</p>
+                <p className="font-semibold text-slate-900">
+                  Week 4: Genetics + evolution + ecology vocabulary
+                </p>
+                <p className="mt-1">
+                  By end of week 4, students operate fully in NEET-pattern English-medium MCQ
+                  format.
+                </p>
               </div>
             </li>
           </ul>
 
           <p className="mt-6 text-sm text-slate-600 leading-relaxed">
-            This bridge is not extra — it\&rsquo;s built into the curriculum
-            for every batch. Students from English-medium schools accelerate
-            through it; students from regional-medium schools find it the
-            single most valuable part of the prep year.
+            This bridge is not extra — it\&rsquo;s built into the curriculum for every batch.
+            Students from English-medium schools accelerate through it; students from
+            regional-medium schools find it the single most valuable part of the prep year.
           </p>
         </section>
 
@@ -370,9 +382,7 @@ export default function BiologyCoachingEnglishMediumPage() {
               </div>
               <div>
                 <p className="text-3xl font-bold">4 weeks</p>
-                <p className="mt-1 text-sm text-indigo-200">
-                  Built-in regional → English bridge
-                </p>
+                <p className="mt-1 text-sm text-indigo-200">Built-in regional → English bridge</p>
               </div>
             </div>
           </div>
@@ -391,9 +401,7 @@ export default function BiologyCoachingEnglishMediumPage() {
                     <span>{f.question}</span>
                     <ChevronRight className="h-5 w-5 shrink-0 text-slate-400 transition-transform group-open:rotate-90" />
                   </summary>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-700">
-                    {f.answer}
-                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-700">{f.answer}</p>
                 </details>
               ))}
             </div>
@@ -408,9 +416,8 @@ export default function BiologyCoachingEnglishMediumPage() {
               Book a free trial with Dr. Shekhar
             </h2>
             <p className="mt-3 text-slate-300 max-w-2xl mx-auto">
-              60-minute live class. Bring your child\&rsquo;s last biology
-              exam in whatever language they currently study. We show you
-              the English-medium transition plan.
+              60-minute live class. Bring your child\&rsquo;s last biology exam in whatever language
+              they currently study. We show you the English-medium transition plan.
             </p>
             <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
               <a

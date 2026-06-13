@@ -202,9 +202,7 @@ export const BlogThumbnail = memo(function BlogThumbnail({
 
   // AutoIllustration fallback - beautiful, unique SVG for every post
   return (
-    <div
-      className={`relative w-full ${sizeClasses[size]} rounded-xl overflow-hidden ${className}`}
-    >
+    <div className={`relative w-full ${sizeClasses[size]} rounded-xl overflow-hidden ${className}`}>
       <AutoIllustration
         slug={slug}
         category={category}

@@ -133,9 +133,7 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
   const IconComponent = config.icon
 
   return (
-    <div
-      className="relative group animate-fadeInUp"
-    >
+    <div className="relative group animate-fadeInUp">
       {/* Shimmer effect overlay */}
       <div
         className={`absolute inset-0 rounded-3xl bg-gradient-to-r ${config.shimmer} opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl`}
@@ -148,9 +146,7 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
         {/* Premium badge for Pinnacle */}
         {series.id === 'pinnacle' && (
           <div className="absolute top-4 right-4 z-10">
-            <div
-              className="bg-gold-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1 animate-fadeInUp"
-            >
+            <div className="bg-gold-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1 animate-fadeInUp">
               <Crown className="w-3 h-3" />
               <span>ELITE</span>
             </div>
@@ -160,9 +156,7 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
         {/* Popular badge for Ascent */}
         {series.id === 'ascent' && (
           <div className="absolute top-4 right-4 z-10">
-            <div
-              className="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1 animate-fadeInUp"
-            >
+            <div className="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1 animate-fadeInUp">
               <Star className="w-3 h-3" />
               <span>POPULAR</span>
             </div>
@@ -176,9 +170,7 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
 
           <div className="relative z-10 text-center">
             {/* Icon with glow effect */}
-            <div
-              className="relative mx-auto mb-6 animate-fadeInUp"
-            >
+            <div className="relative mx-auto mb-6 animate-fadeInUp">
               <div
                 className={`w-24 h-24 mx-auto bg-gradient-to-br ${config.gradient} rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-shadow duration-300`}
               >
@@ -193,9 +185,7 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
 
             {/* Series branding */}
             <div className="mb-6">
-              <div
-                className="flex items-center justify-center space-x-3 mb-4 animate-fadeInUp"
-              >
+              <div className="flex items-center justify-center space-x-3 mb-4 animate-fadeInUp">
                 <span className="bg-white/60 backdrop-blur-sm text-gray-700 px-4 py-2 rounded-full text-sm font-semibold border border-white/30">
                   Class {classLevel}
                 </span>
@@ -228,30 +218,22 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
 
             {/* Course metrics with enhanced styling */}
             <div className="grid grid-cols-3 gap-4 mb-6">
-              <div
-                className="bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-white/30 animate-fadeInUp"
-              >
+              <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-white/30 animate-fadeInUp">
                 <div className="text-2xl font-bold text-gray-900">2Y</div>
                 <div className="text-sm text-gray-600 font-medium">Duration</div>
               </div>
-              <div
-                className="bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-white/30 animate-fadeInUp"
-              >
+              <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-white/30 animate-fadeInUp">
                 <div className="text-2xl font-bold text-gray-900">{series.weeklyHours}h</div>
                 <div className="text-sm text-gray-600 font-medium">Per Week</div>
               </div>
-              <div
-                className="bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-white/30 animate-fadeInUp"
-              >
+              <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-white/30 animate-fadeInUp">
                 <div className="text-2xl font-bold text-gray-900">{series.batchSize}</div>
                 <div className="text-sm text-gray-600 font-medium">Batch Size</div>
               </div>
             </div>
 
             {/* NEET focused badge with enhanced design */}
-            <div
-              className="inline-flex items-center space-x-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30 animate-fadeInUp"
-            >
+            <div className="inline-flex items-center space-x-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30 animate-fadeInUp">
               <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
               <span className="font-semibold text-gray-700">Board + NEET</span>
               <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
@@ -267,16 +249,16 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
 
           {/* Enhanced Plan Selection Tabs */}
           <div className="relative bg-white/60 backdrop-blur-sm rounded-2xl p-2 mb-6 border border-white/30">
-{selectedPlan && (
-                <div
-                  className={`absolute inset-y-2 bg-gradient-to-r ${config.gradient} rounded-xl`}
-                  style={{
-                    left: `${(series.plans.findIndex((p) => p.id === selectedPlan) * 100) / series.plans.length + 1}%`,
-                    width: `${100 / series.plans.length - 2}%`,
-                  }}
-                />
-              )}
-<div className="relative flex">
+            {selectedPlan && (
+              <div
+                className={`absolute inset-y-2 bg-gradient-to-r ${config.gradient} rounded-xl`}
+                style={{
+                  left: `${(series.plans.findIndex((p) => p.id === selectedPlan) * 100) / series.plans.length + 1}%`,
+                  width: `${100 / series.plans.length - 2}%`,
+                }}
+              />
+            )}
+            <div className="relative flex">
               {series.plans.map((plan) => (
                 <button
                   key={plan.id}
@@ -288,93 +270,80 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
                   }`}
                 >
                   Plan {plan.id}
-                  {plan.popular && (
-                    <span
-                      className="ml-1 text-xs animate-fadeInUp"
-                    >
-                      ⭐
-                    </span>
-                  )}
+                  {plan.popular && <span className="ml-1 text-xs animate-fadeInUp">⭐</span>}
                 </button>
               ))}
             </div>
           </div>
 
           {/* Selected Plan Details with enhanced animation */}
-{selectedPlan && (
-              <div
-                key={selectedPlan}
-                className="mb-6 animate-fadeInUp"
-              >
-                {(() => {
-                  const plan = series.plans.find((p) => p.id === selectedPlan)
-                  if (!plan) return null
+          {selectedPlan && (
+            <div key={selectedPlan} className="mb-6 animate-fadeInUp">
+              {(() => {
+                const plan = series.plans.find((p) => p.id === selectedPlan)
+                if (!plan) return null
 
-                  return (
-                    <div
-                      className={`relative p-6 rounded-2xl border-2 bg-gradient-to-br ${config.cardGradient} border-opacity-30`}
-                      style={{ borderColor: `var(--${config.accentColor}-400)` }}
-                    >
-                      {/* Plan header */}
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center gap-3">
-                          <div
-                            className={`w-3 h-3 bg-gradient-to-r ${config.gradient} rounded-full`}
-                          />
-                          <span className="font-bold text-gray-900 text-lg">
-                            Plan {plan.id} - {plan.name}
-                          </span>
-                        </div>
-                        {plan.popular && (
-                          <span
-                            className="bg-gold-600 text-white px-3 py-1 rounded-full text-xs font-bold animate-fadeInUp"
-                          >
-                            Most Popular
-                          </span>
-                        )}
-                      </div>
-
-                      {/* Plan details grid */}
-                      <div className="grid grid-cols-2 gap-4 mb-4">
-                        <div className="bg-white/50 backdrop-blur-sm rounded-xl p-3 border border-white/30">
-                          <span className="text-sm text-gray-600 font-medium">Duration</span>
-                          <div className="font-bold text-gray-900 text-lg">{plan.duration}</div>
-                        </div>
-                        <div className="bg-white/50 backdrop-blur-sm rounded-xl p-3 border border-white/30">
-                          <span className="text-sm text-gray-600 font-medium">Investment</span>
-                          <div className="font-bold text-gray-900 text-lg">
-                            ₹{plan.price.toLocaleString()}
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Features showcase */}
-                      <div className="space-y-2">
-                        <span className="text-sm font-semibold text-gray-700">
-                          What's Included:
+                return (
+                  <div
+                    className={`relative p-6 rounded-2xl border-2 bg-gradient-to-br ${config.cardGradient} border-opacity-30`}
+                    style={{ borderColor: `var(--${config.accentColor}-400)` }}
+                  >
+                    {/* Plan header */}
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div
+                          className={`w-3 h-3 bg-gradient-to-r ${config.gradient} rounded-full`}
+                        />
+                        <span className="font-bold text-gray-900 text-lg">
+                          Plan {plan.id} - {plan.name}
                         </span>
-                        <div className="flex flex-wrap gap-2">
-                          {plan.features.slice(0, 3).map((feature, index) => (
-                            <span
-                              key={feature}
-                              className="bg-white/60 backdrop-blur-sm text-gray-700 px-3 py-1 rounded-full text-xs font-semibold border border-white/30 animate-fadeInUp"
-                            >
-                              {feature}
-                            </span>
-                          ))}
-                          {plan.features.length > 3 && (
-                            <span className="text-gray-500 text-xs font-medium">
-                              +{plan.features.length - 3} more
-                            </span>
-                          )}
+                      </div>
+                      {plan.popular && (
+                        <span className="bg-gold-600 text-white px-3 py-1 rounded-full text-xs font-bold animate-fadeInUp">
+                          Most Popular
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Plan details grid */}
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                      <div className="bg-white/50 backdrop-blur-sm rounded-xl p-3 border border-white/30">
+                        <span className="text-sm text-gray-600 font-medium">Duration</span>
+                        <div className="font-bold text-gray-900 text-lg">{plan.duration}</div>
+                      </div>
+                      <div className="bg-white/50 backdrop-blur-sm rounded-xl p-3 border border-white/30">
+                        <span className="text-sm text-gray-600 font-medium">Investment</span>
+                        <div className="font-bold text-gray-900 text-lg">
+                          ₹{plan.price.toLocaleString()}
                         </div>
                       </div>
                     </div>
-                  )
-                })()}
-              </div>
-            )}
-{/* Enhanced Action Buttons */}
+
+                    {/* Features showcase */}
+                    <div className="space-y-2">
+                      <span className="text-sm font-semibold text-gray-700">What's Included:</span>
+                      <div className="flex flex-wrap gap-2">
+                        {plan.features.slice(0, 3).map((feature, index) => (
+                          <span
+                            key={feature}
+                            className="bg-white/60 backdrop-blur-sm text-gray-700 px-3 py-1 rounded-full text-xs font-semibold border border-white/30 animate-fadeInUp"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                        {plan.features.length > 3 && (
+                          <span className="text-gray-500 text-xs font-medium">
+                            +{plan.features.length - 3} more
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                )
+              })()}
+            </div>
+          )}
+          {/* Enhanced Action Buttons */}
           <div className="space-y-4">
             <div className="animate-fadeInUp">
               <Link
@@ -405,9 +374,7 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
               </Link>
             </div>
 
-            <button
-              className="w-full bg-white/60 backdrop-blur-sm text-gray-800 py-4 rounded-2xl font-bold border border-white/30 hover:bg-white/80 transition-all duration-300 animate-fadeInUp"
-            >
+            <button className="w-full bg-white/60 backdrop-blur-sm text-gray-800 py-4 rounded-2xl font-bold border border-white/30 hover:bg-white/80 transition-all duration-300 animate-fadeInUp">
               <span className="flex items-center justify-center space-x-2">
                 <span>Book Free Demo Class</span>
                 <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
@@ -416,9 +383,7 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
           </div>
 
           {/* Enhanced Quick Features */}
-          <div
-            className="mt-6 text-center animate-fadeInUp"
-          >
+          <div className="mt-6 text-center animate-fadeInUp">
             <div className="flex justify-center space-x-6">
               {[
                 { label: 'Live Classes', color: 'blue' },

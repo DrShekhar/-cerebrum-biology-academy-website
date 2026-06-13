@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function PlantKingdomIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -151,8 +151,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
         {/* Three types of Algae */}
         <g>
           {/* Chlorophyta */}
-          <g
-          >
+          <g>
             <rect
               x="30"
               y="175"
@@ -213,8 +212,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
           </g>
 
           {/* Phaeophyta */}
-          <g
-          >
+          <g>
             <rect
               x="115"
               y="175"
@@ -262,8 +260,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
           </g>
 
           {/* Rhodophyta */}
-          <g
-          >
+          <g>
             <rect
               x="200"
               y="175"
@@ -385,8 +382,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
         {/* Liverworts and Mosses */}
         <g>
           {/* Liverwort (Marchantia) */}
-          <g
-          >
+          <g>
             <rect
               x="325"
               y="175"
@@ -435,8 +431,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
           </g>
 
           {/* Mosses */}
-          <g
-          >
+          <g>
             <rect
               x="455"
               y="175"
@@ -547,9 +542,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
         </text>
 
         {/* Fern diagram */}
-        <g
-          style={{ transformOrigin: '745px 210px' }}
-        >
+        <g style={{ transformOrigin: '745px 210px' }}>
           {/* Fern fronds with circinate vernation */}
           <line x1="745" y1="245" x2="745" y2="195" stroke="#166534" strokeWidth="4" />
           {/* Left frond */}
@@ -671,8 +664,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
         {/* Cycas and Pinus */}
         <g>
           {/* Cycas */}
-          <g
-          >
+          <g>
             <rect
               x="30"
               y="375"
@@ -713,8 +705,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
           </g>
 
           {/* Pinus */}
-          <g
-          >
+          <g>
             <rect
               x="155"
               y="375"
@@ -820,8 +811,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
         {/* Dicot vs Monocot comparison */}
         <g>
           {/* Dicot */}
-          <g
-          >
+          <g>
             <rect
               x="325"
               y="375"
@@ -862,8 +852,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
           </g>
 
           {/* Monocot */}
-          <g
-          >
+          <g>
             <rect
               x="450"
               y="375"
@@ -1287,9 +1276,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* NEET Questions Badge */}
-      <g
-        filter="url(#pkGlow)"
-      >
+      <g filter="url(#pkGlow)">
         <circle cx="850" cy="50" r="35" fill="#15803D" />
         <text
           x="850"

@@ -24,7 +24,10 @@ function parseSequenceItems(question: MCQQuestion): {
   choices: string[]
 } {
   const text = question.question
-  const lines = text.split(/\n+/).map((l) => l.trim()).filter(Boolean)
+  const lines = text
+    .split(/\n+/)
+    .map((l) => l.trim())
+    .filter(Boolean)
 
   let prompt = ''
   const items: string[] = []
@@ -100,11 +103,20 @@ export function SequenceOrderCard({
     const handleKeyDown = (e: KeyboardEvent) => {
       if (selectedAnswer || isSubmitting || e.repeat) return
       const keyMap: Record<string, 'A' | 'B' | 'C' | 'D'> = {
-        '1': 'A', '2': 'B', '3': 'C', '4': 'D',
-        a: 'A', b: 'B', c: 'C', d: 'D',
+        '1': 'A',
+        '2': 'B',
+        '3': 'C',
+        '4': 'D',
+        a: 'A',
+        b: 'B',
+        c: 'C',
+        d: 'D',
       }
       const option = keyMap[e.key.toLowerCase()]
-      if (option) { e.preventDefault(); handleOptionClick(option) }
+      if (option) {
+        e.preventDefault()
+        handleOptionClick(option)
+      }
     }
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
@@ -239,9 +251,13 @@ export function SequenceOrderCard({
         <div className="flex items-center justify-center gap-2 mt-3 text-stone-400">
           <p className="text-xs">
             Press{' '}
-            <kbd className="px-1.5 py-0.5 bg-stone-100 rounded text-stone-600 font-mono text-xs">1-4</kbd>{' '}
+            <kbd className="px-1.5 py-0.5 bg-stone-100 rounded text-stone-600 font-mono text-xs">
+              1-4
+            </kbd>{' '}
             or{' '}
-            <kbd className="px-1.5 py-0.5 bg-stone-100 rounded text-stone-600 font-mono text-xs">A-D</kbd>{' '}
+            <kbd className="px-1.5 py-0.5 bg-stone-100 rounded text-stone-600 font-mono text-xs">
+              A-D
+            </kbd>{' '}
             to select
           </p>
         </div>
@@ -265,10 +281,14 @@ export function SequenceOrderCard({
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <span className={`text-2xl ${result.isCorrect ? 'animate-confetti-burst' : 'animate-scale-in'}`}>
+                  <span
+                    className={`text-2xl ${result.isCorrect ? 'animate-confetti-burst' : 'animate-scale-in'}`}
+                  >
                     {result.isCorrect ? '🎉' : '😔'}
                   </span>
-                  <span className={`font-bold text-base ${result.isCorrect ? 'text-green-700' : 'text-red-700'}`}>
+                  <span
+                    className={`font-bold text-base ${result.isCorrect ? 'text-green-700' : 'text-red-700'}`}
+                  >
                     {result.isCorrect ? 'Correct!' : 'Incorrect'}
                   </span>
                 </div>

@@ -34,60 +34,157 @@ export default function PageContent() {
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)
 
   const syllabusCoverage = [
-    { title: 'Cellular & Molecular Biology', topics: ['Cell Structure & Functions', 'Cell Division', 'Genetics Foundations', 'Photosynthesis & Respiration'] },
-    { title: 'Genetics & Biodiversity', topics: ['Mendel\'s Laws', 'Linkage & Mapping', 'Mutation', 'Evolution & Biodiversity'] },
-    { title: 'Physiology & Ecology', topics: ['Nutrition & Digestion', 'Circulation & Respiration', 'Nervous Coordination', 'Ecosystem Dynamics'] },
-    { title: 'Reproductive Biology', topics: ['Plant Reproduction', 'Animal Reproduction', 'Human Reproduction', 'Reproductive Health'] },
+    {
+      title: 'Cellular & Molecular Biology',
+      topics: [
+        'Cell Structure & Functions',
+        'Cell Division',
+        'Genetics Foundations',
+        'Photosynthesis & Respiration',
+      ],
+    },
+    {
+      title: 'Genetics & Biodiversity',
+      topics: ["Mendel's Laws", 'Linkage & Mapping', 'Mutation', 'Evolution & Biodiversity'],
+    },
+    {
+      title: 'Physiology & Ecology',
+      topics: [
+        'Nutrition & Digestion',
+        'Circulation & Respiration',
+        'Nervous Coordination',
+        'Ecosystem Dynamics',
+      ],
+    },
+    {
+      title: 'Reproductive Biology',
+      topics: [
+        'Plant Reproduction',
+        'Animal Reproduction',
+        'Human Reproduction',
+        'Reproductive Health',
+      ],
+    },
   ]
 
   const keralaNEETAdvantage = [
-    { aspect: 'Strong Foundation', description: 'Kerala HSE provides excellent conceptual foundation for NEET with well-structured practicals' },
-    { aspect: 'High Scorers', description: 'Kerala students consistently rank among top NEET scorers nationally with 650+ average scores' },
-    { aspect: 'Science Tradition', description: 'Kerala\'s education system emphasizes science depth - strong advantage for medical entrance exams' },
-    { aspect: 'KEAM + NEET', description: 'Dual preparation opportunity with Kerala\'s state entrance (KEAM) aligned with NEET requirements' },
-    { aspect: 'Lab Experience', description: 'Kerala HSE practicals provide experimental understanding crucial for NEET theory application' },
-    { aspect: 'Curriculum Quality', description: 'HSE curriculum has optimal breadth and depth for seamless NEET transition' },
+    {
+      aspect: 'Strong Foundation',
+      description:
+        'Kerala HSE provides excellent conceptual foundation for NEET with well-structured practicals',
+    },
+    {
+      aspect: 'High Scorers',
+      description:
+        'Kerala students consistently rank among top NEET scorers nationally with 650+ average scores',
+    },
+    {
+      aspect: 'Science Tradition',
+      description:
+        "Kerala's education system emphasizes science depth - strong advantage for medical entrance exams",
+    },
+    {
+      aspect: 'KEAM + NEET',
+      description:
+        "Dual preparation opportunity with Kerala's state entrance (KEAM) aligned with NEET requirements",
+    },
+    {
+      aspect: 'Lab Experience',
+      description:
+        'Kerala HSE practicals provide experimental understanding crucial for NEET theory application',
+    },
+    {
+      aspect: 'Curriculum Quality',
+      description: 'HSE curriculum has optimal breadth and depth for seamless NEET transition',
+    },
   ]
 
   const whyChooseUs = [
-    { icon: BookOpen, title: 'Kerala HSE Expertise', description: 'Deep understanding of Kerala HSE curriculum with expert guidance for maximum board scores' },
-    { icon: Target, title: 'NEET + KEAM Dual Focus', description: 'Simultaneous preparation for both national NEET and Kerala state KEAM entrance exams' },
-    { icon: Award, title: 'High Score Guarantee', description: 'Track record of Kerala students achieving 650+ NEET scores and KEAM excellence' },
-    { icon: Trophy, title: 'Science Excellence Culture', description: 'Foster Kerala\'s strong science tradition with expert mentorship and strategic guidance' },
-    { icon: Users, title: 'Kerala Faculty Expertise', description: 'Teachers trained in Kerala HSE standards with proven NEET conversion success' },
-    { icon: Microscope, title: 'Practical-to-Theory Bridge', description: 'Connect Kerala HSE lab practicals with NEET theoretical understanding seamlessly' },
+    {
+      icon: BookOpen,
+      title: 'Kerala HSE Expertise',
+      description:
+        'Deep understanding of Kerala HSE curriculum with expert guidance for maximum board scores',
+    },
+    {
+      icon: Target,
+      title: 'NEET + KEAM Dual Focus',
+      description:
+        'Simultaneous preparation for both national NEET and Kerala state KEAM entrance exams',
+    },
+    {
+      icon: Award,
+      title: 'High Score Guarantee',
+      description: 'Track record of Kerala students achieving 650+ NEET scores and KEAM excellence',
+    },
+    {
+      icon: Trophy,
+      title: 'Science Excellence Culture',
+      description:
+        "Foster Kerala's strong science tradition with expert mentorship and strategic guidance",
+    },
+    {
+      icon: Users,
+      title: 'Kerala Faculty Expertise',
+      description: 'Teachers trained in Kerala HSE standards with proven NEET conversion success',
+    },
+    {
+      icon: Microscope,
+      title: 'Practical-to-Theory Bridge',
+      description:
+        'Connect Kerala HSE lab practicals with NEET theoretical understanding seamlessly',
+    },
   ]
 
   const pricingPlans = [
-    { name: '1:1 Coaching', price: '₹46,999', description: 'Premium personalized coaching with HSE focus and NEET/KEAM integrated excellence' },
-    { name: 'Complete Program', price: '₹35,999', description: 'Full 2-year HSE + NEET/KEAM program with study materials and test series' },
-    { name: 'Group Batch', price: '₹25,999', description: 'Small group classes with HSE board excellence and NEET/KEAM preparation focus' },
+    {
+      name: '1:1 Coaching',
+      price: '₹46,999',
+      description:
+        'Premium personalized coaching with HSE focus and NEET/KEAM integrated excellence',
+    },
+    {
+      name: 'Complete Program',
+      price: '₹35,999',
+      description: 'Full 2-year HSE + NEET/KEAM program with study materials and test series',
+    },
+    {
+      name: 'Group Batch',
+      price: '₹25,999',
+      description: 'Small group classes with HSE board excellence and NEET/KEAM preparation focus',
+    },
   ]
 
   const faqs = [
     {
       question: 'Why do Kerala HSE students perform so well in NEET?',
-      answer: 'Kerala HSE curriculum emphasizes conceptual depth and practical understanding. This provides an excellent foundation for NEET\'s theoretical rigor. Additionally, Kerala\'s strong education culture and emphasis on science results in high motivation and preparation quality.',
+      answer:
+        "Kerala HSE curriculum emphasizes conceptual depth and practical understanding. This provides an excellent foundation for NEET's theoretical rigor. Additionally, Kerala's strong education culture and emphasis on science results in high motivation and preparation quality.",
     },
     {
       question: 'Can I prepare for both KEAM and NEET simultaneously?',
-      answer: 'Yes! KEAM and NEET have 85%+ overlapping syllabus. Our dual-focus program optimizes both simultaneously, ensuring you don\'t double-study while maximizing scores in both competitive exams.',
+      answer:
+        "Yes! KEAM and NEET have 85%+ overlapping syllabus. Our dual-focus program optimizes both simultaneously, ensuring you don't double-study while maximizing scores in both competitive exams.",
     },
     {
       question: 'What is the NEET success rate for Kerala HSE students?',
-      answer: 'Kerala HSE students show exceptional NEET success with 90%+ qualification rates and average scores of 650+. Many Kerala students rank in top 1% nationally, demonstrating the strength of HSE foundation when complemented with NEET-specific preparation.',
+      answer:
+        'Kerala HSE students show exceptional NEET success with 90%+ qualification rates and average scores of 650+. Many Kerala students rank in top 1% nationally, demonstrating the strength of HSE foundation when complemented with NEET-specific preparation.',
     },
     {
       question: 'How does Kerala HSE differ from CBSE in NEET preparation?',
-      answer: 'Kerala HSE has different chapter sequence and depth emphasis. We bridge this by mapping HSE topics to NEET, preventing over-study while ensuring complete coverage. HSE\'s practical focus is actually an advantage for conceptual NEET questions.',
+      answer:
+        "Kerala HSE has different chapter sequence and depth emphasis. We bridge this by mapping HSE topics to NEET, preventing over-study while ensuring complete coverage. HSE's practical focus is actually an advantage for conceptual NEET questions.",
     },
     {
       question: 'Do Kerala HSE practicals help in NEET preparation?',
-      answer: 'Absolutely! Kerala HSE practicals develop experimental thinking crucial for NEET\'s application-based questions. We connect these practical experiences to NEET theory, deepening conceptual clarity beyond theoretical learning alone.',
+      answer:
+        "Absolutely! Kerala HSE practicals develop experimental thinking crucial for NEET's application-based questions. We connect these practical experiences to NEET theory, deepening conceptual clarity beyond theoretical learning alone.",
     },
     {
       question: 'How long does NEET prep take after HSE completion?',
-      answer: 'With early start in HSE Class 11, targeted NEET focus for 8-10 months post-HSE completion is typically sufficient. Starting our integrated program in Class 11 ensures gradual depth building with consistent NEET preparation.',
+      answer:
+        'With early start in HSE Class 11, targeted NEET focus for 8-10 months post-HSE completion is typically sufficient. Starting our integrated program in Class 11 ensures gradual depth building with consistent NEET preparation.',
     },
   ]
 
@@ -103,9 +200,7 @@ export default function PageContent() {
       <FloatingWhatsAppButton />
 
       {/* Hero Section */}
-      <section
-        className="bg-gradient-to-br from-green-700 to-blue-800 text-white py-12 sm:py-20 animate-fadeInUp"
-      >
+      <section className="bg-gradient-to-br from-green-700 to-blue-800 text-white py-12 sm:py-20 animate-fadeInUp">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="animate-fadeInUp">
@@ -113,11 +208,14 @@ export default function PageContent() {
                 Kerala HSE to NEET & KEAM Excellence
               </h1>
               <p className="text-lg sm:text-xl text-green-100 mb-8">
-                Leverage Kerala's strong science education tradition with expert NEET and KEAM coaching. Join top NEET scorers from Kerala with HSE foundation excellence.
+                Leverage Kerala's strong science education tradition with expert NEET and KEAM
+                coaching. Join top NEET scorers from Kerala with HSE foundation excellence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center"
                 >
                   Enroll for Kerala HSE
@@ -180,10 +278,7 @@ export default function PageContent() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {syllabusCoverage.map((module, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                   <BookOpen className="w-6 h-6 text-green-600 mr-3" />
                   {module.title}
@@ -246,7 +341,9 @@ export default function PageContent() {
                 <div className="text-3xl font-bold text-green-600 mb-4">{plan.price}</div>
                 <p className="text-gray-600 mb-6">{plan.description}</p>
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block bg-green-600 text-white text-center py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors"
                 >
                   Enroll Now
@@ -267,7 +364,10 @@ export default function PageContent() {
           </div>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp">
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
+              >
                 <button
                   onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
                   className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
@@ -279,23 +379,19 @@ export default function PageContent() {
                     <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
                   )}
                 </button>
-{expandedFAQ === index && (
-                    <div
-                      className="border-t border-gray-200 bg-gray-50 animate-fadeInUp"
-                    >
-                      <p className="p-6 text-gray-700">{faq.answer}</p>
-                    </div>
-                  )}
-</div>
+                {expandedFAQ === index && (
+                  <div className="border-t border-gray-200 bg-gray-50 animate-fadeInUp">
+                    <p className="p-6 text-gray-700">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section
-        className="bg-gradient-to-r from-green-700 to-blue-800 text-white py-12 sm:py-16 md:py-20 animate-fadeInUp"
-      >
+      <section className="bg-gradient-to-r from-green-700 to-blue-800 text-white py-12 sm:py-16 md:py-20 animate-fadeInUp">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
             Excel in NEET & KEAM with Kerala HSE Excellence
@@ -305,7 +401,9 @@ export default function PageContent() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center"
             >
               Start Your Journey

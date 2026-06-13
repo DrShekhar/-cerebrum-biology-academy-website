@@ -411,9 +411,7 @@ export function SuccessStoriesSection({
     <section className={`py-20 bg-navy-50 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Banner */}
-        <div
-          className="text-center space-y-8 mb-16 animate-fadeInUp"
-        >
+        <div className="text-center space-y-8 mb-16 animate-fadeInUp">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-100 to-green-100 border border-green-200 rounded-full px-4 py-2">
             <Smile className="h-5 w-5 text-green-600" />
             <span className="text-sm font-semibold text-green-700">
@@ -457,10 +455,7 @@ export function SuccessStoriesSection({
               { value: 3, suffix: 'x', label: 'Failed Before Success', icon: Heart },
               { value: 100, suffix: '%', label: 'Biology Perfect Scores', icon: BarChart2 },
             ].map((stat, index) => (
-              <div
-                key={index}
-                className="text-center animate-fadeInUp"
-              >
+              <div key={index} className="text-center animate-fadeInUp">
                 <div className="bg-white rounded-lg p-4 shadow-lg">
                   <stat.icon className="h-8 w-8 text-blue-600 mx-auto mb-2" />
                   <div className="text-2xl font-bold text-gray-900">
@@ -474,9 +469,7 @@ export function SuccessStoriesSection({
         </div>
 
         {/* Category Filters */}
-        <div
-          className="mb-12 animate-fadeInUp"
-        >
+        <div className="mb-12 animate-fadeInUp">
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {categories.map((category) => (
               <button
@@ -548,49 +541,37 @@ export function SuccessStoriesSection({
         </div>
 
         {/* Success Stories Display */}
-{viewMode === 'grid' && (
-            <div
-              key="grid"
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fadeInUp"
-            >
-              {filteredStories.map((story, index) => (
-                <div
-                  key={story.id}
-                 className="animate-fadeInUp">
-                  <SuccessStoryCard
-                    story={story}
-                    onContactStudent={onContactStudent}
-                    onVideoPlay={onVideoPlay}
-                  />
-                </div>
-              ))}
-            </div>
-          )}
+        {viewMode === 'grid' && (
+          <div key="grid" className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fadeInUp">
+            {filteredStories.map((story, index) => (
+              <div key={story.id} className="animate-fadeInUp">
+                <SuccessStoryCard
+                  story={story}
+                  onContactStudent={onContactStudent}
+                  onVideoPlay={onVideoPlay}
+                />
+              </div>
+            ))}
+          </div>
+        )}
 
-          {viewMode === 'stories' && (
-            <div
-              key="stories"
-              className="max-w-4xl mx-auto animate-fadeInUp"
-            >
-              <InstagramStyleStories
-                stories={filteredStories}
-                currentIndex={currentStory}
-                onStoryChange={setCurrentStory}
-                onContactStudent={onContactStudent}
-              />
-            </div>
-          )}
-{/* Success Probability Calculator */}
-        <div
-          className="mt-20 animate-fadeInUp"
-        >
+        {viewMode === 'stories' && (
+          <div key="stories" className="max-w-4xl mx-auto animate-fadeInUp">
+            <InstagramStyleStories
+              stories={filteredStories}
+              currentIndex={currentStory}
+              onStoryChange={setCurrentStory}
+              onContactStudent={onContactStudent}
+            />
+          </div>
+        )}
+        {/* Success Probability Calculator */}
+        <div className="mt-20 animate-fadeInUp">
           <SuccessProbabilityCalculator stories={successStories} />
         </div>
 
         {/* Call to Action */}
-        <div
-          className="mt-16 text-center bg-navy-900 rounded-2xl p-8 text-white animate-fadeInUp"
-        >
+        <div className="mt-16 text-center bg-navy-900 rounded-2xl p-8 text-white animate-fadeInUp">
           <h3 className="text-3xl font-bold mb-4">Ready to Write Your Success Story?</h3>
           <p className="text-xl mb-6 text-blue-100">
             Join these successful students and transform your NEET failure into medical college
@@ -675,9 +656,7 @@ function SuccessStoryCard({
             <div className="flex-1 mx-4">
               <div className="relative">
                 <div className="h-2 bg-gray-200 rounded-full">
-                  <div
-                    className="h-2 bg-gradient-to-r from-red-500 to-green-600 rounded-full animate-fadeInUp"
-                  />
+                  <div className="h-2 bg-gradient-to-r from-red-500 to-green-600 rounded-full animate-fadeInUp" />
                 </div>
                 <ArrowRight className="h-5 w-5 text-blue-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-1" />
               </div>

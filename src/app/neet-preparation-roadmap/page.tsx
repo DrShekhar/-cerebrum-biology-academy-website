@@ -35,7 +35,7 @@ const faqQuestions = [
   {
     question: 'When should I start preparing for NEET 2026?',
     answer:
-      'The ideal time to start NEET preparation is at the beginning of class 11 (February onwards). This gives you 18-24 months to thoroughly cover the NCERT curriculum, practice numericals, and attempt mock tests. If you\'re starting late, focus on high-weightage chapters first and increase your daily study hours accordingly.',
+      "The ideal time to start NEET preparation is at the beginning of class 11 (February onwards). This gives you 18-24 months to thoroughly cover the NCERT curriculum, practice numericals, and attempt mock tests. If you're starting late, focus on high-weightage chapters first and increase your daily study hours accordingly.",
   },
   {
     question: 'How many hours per day should I study for NEET?',
@@ -77,14 +77,22 @@ const monthlyRoadmap = [
   {
     month: 'April',
     focus: 'Class 12 Introduction',
-    chapters: ['Reproduction in Organisms', 'Sexual Reproduction in Flowering Plants', 'Human Reproduction'],
+    chapters: [
+      'Reproduction in Organisms',
+      'Sexual Reproduction in Flowering Plants',
+      'Human Reproduction',
+    ],
     hoursPerDay: '5-6 hours',
     tips: 'Start class 12 syllabus. Create flowcharts for reproductive processes. Focus on gametogenesis.',
   },
   {
     month: 'May',
     focus: 'Genetics Foundation',
-    chapters: ['Principles of Inheritance', 'Molecular Basis of Inheritance', 'Chromosomal Disorders'],
+    chapters: [
+      'Principles of Inheritance',
+      'Molecular Basis of Inheritance',
+      'Chromosomal Disorders',
+    ],
     hoursPerDay: '5-6 hours',
     tips: 'Solve genetics problems daily. Practice Punnett squares and pedigree analysis.',
   },
@@ -105,7 +113,12 @@ const monthlyRoadmap = [
   {
     month: 'August',
     focus: 'Reproduction Complete',
-    chapters: ['Male & Female Reproductive Systems', 'Gametogenesis', 'Fertilization', 'Fetal Development'],
+    chapters: [
+      'Male & Female Reproductive Systems',
+      'Gametogenesis',
+      'Fertilization',
+      'Fetal Development',
+    ],
     hoursPerDay: '6-7 hours',
     tips: 'Master contraceptive methods and reproductive disorders. Study lactation and menopause.',
   },
@@ -193,8 +206,8 @@ export default function NEETPreparationRoadmapPage() {
                 NEET 2026 Preparation Roadmap
               </h1>
               <p className="text-xl md:text-2xl text-slate-200 mb-8 max-w-3xl mx-auto">
-                Comprehensive Month-by-Month Study Plan with Chapter-wise Timeline, Revision Strategy &
-                Mock Test Schedule
+                Comprehensive Month-by-Month Study Plan with Chapter-wise Timeline, Revision
+                Strategy & Mock Test Schedule
               </p>
               <p className="text-lg text-slate-300 mb-10">
                 Designed by Cerebrum Biology Academy experts to help you achieve 600+ scores
@@ -226,8 +239,8 @@ export default function NEETPreparationRoadmapPage() {
               12-Month Preparation Timeline
             </h2>
             <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-              A strategic month-by-month breakdown covering curriculum completion, deep learning, revision cycles, and
-              mock test practice
+              A strategic month-by-month breakdown covering curriculum completion, deep learning,
+              revision cycles, and mock test practice
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -281,8 +294,8 @@ export default function NEETPreparationRoadmapPage() {
               Biology Chapter-wise NEET Weightage & Priority
             </h2>
             <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
-              Strategic chapter prioritization based on NEET weightage analysis. Focus on high-priority chapters while
-              ensuring complete syllabus coverage.
+              Strategic chapter prioritization based on NEET weightage analysis. Focus on
+              high-priority chapters while ensuring complete syllabus coverage.
             </p>
 
             <div className="overflow-x-auto">
@@ -316,7 +329,9 @@ export default function NEETPreparationRoadmapPage() {
                           {item.priority}
                         </span>
                       </td>
-                      <td className="px-6 py-4 text-center text-slate-700 font-semibold">{item.weightage}</td>
+                      <td className="px-6 py-4 text-center text-slate-700 font-semibold">
+                        {item.weightage}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -328,16 +343,22 @@ export default function NEETPreparationRoadmapPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
                   <p className="text-red-700 font-semibold mb-1">High Priority: 40%</p>
-                  <p className="text-sm text-gray-600">12 chapters covering core concepts like Cell Biology, Genetics,
-                  Evolution, Physiology</p>
+                  <p className="text-sm text-gray-600">
+                    12 chapters covering core concepts like Cell Biology, Genetics, Evolution,
+                    Physiology
+                  </p>
                 </div>
                 <div>
                   <p className="text-yellow-700 font-semibold mb-1">Medium Priority: 35%</p>
-                  <p className="text-sm text-gray-600">6 chapters covering Reproduction, Ecology, Plant Physiology</p>
+                  <p className="text-sm text-gray-600">
+                    6 chapters covering Reproduction, Ecology, Plant Physiology
+                  </p>
                 </div>
                 <div>
                   <p className="text-blue-700 font-semibold mb-1">Low Priority: 25%</p>
-                  <p className="text-sm text-gray-600">5 chapters covering Microbes, Immunity, Biotechnology</p>
+                  <p className="text-sm text-gray-600">
+                    5 chapters covering Microbes, Immunity, Biotechnology
+                  </p>
                 </div>
               </div>
             </div>
@@ -423,7 +444,9 @@ export default function NEETPreparationRoadmapPage() {
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900">Revision Cycle 3</h3>
                 </div>
-                <p className="text-gray-600 mb-4 font-semibold">Late November & December (2-3 weeks)</p>
+                <p className="text-gray-600 mb-4 font-semibold">
+                  Late November & December (2-3 weeks)
+                </p>
 
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
@@ -455,7 +478,8 @@ export default function NEETPreparationRoadmapPage() {
               Mock Test Schedule & Strategy
             </h2>
             <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-              Strategic mock test plan to master exam pattern, build speed, and identify improvement areas
+              Strategic mock test plan to master exam pattern, build speed, and identify improvement
+              areas
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
@@ -569,18 +593,24 @@ export default function NEETPreparationRoadmapPage() {
             </div>
 
             <div className="bg-green-50 border border-green-200 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-slate-900 mb-4">Post-Mock Test Analysis Framework</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
+                Post-Mock Test Analysis Framework
+              </h3>
               <p className="text-gray-700 mb-6">
                 Every mock test should be followed by thorough analysis to maximize learning:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 <div className="bg-white rounded-lg p-4">
                   <p className="font-bold text-slate-900 mb-2">1. Score Analysis</p>
-                  <p className="text-sm text-gray-600">Track accuracy rate, correct/incorrect/skipped questions</p>
+                  <p className="text-sm text-gray-600">
+                    Track accuracy rate, correct/incorrect/skipped questions
+                  </p>
                 </div>
                 <div className="bg-white rounded-lg p-4">
                   <p className="font-bold text-slate-900 mb-2">2. Time Management</p>
-                  <p className="text-sm text-gray-600">Analyze time spent per section and question type</p>
+                  <p className="text-sm text-gray-600">
+                    Analyze time spent per section and question type
+                  </p>
                 </div>
                 <div className="bg-white rounded-lg p-4">
                   <p className="font-bold text-slate-900 mb-2">3. Error Patterns</p>
@@ -614,7 +644,12 @@ export default function NEETPreparationRoadmapPage() {
                   <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-slate-50 transition-colors">
                     <h3 className="font-semibold text-lg text-slate-900 pr-4">{item.question}</h3>
                     <span className="text-slate-500 group-open:rotate-180 transition-transform flex-shrink-0">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -624,7 +659,9 @@ export default function NEETPreparationRoadmapPage() {
                       </svg>
                     </span>
                   </summary>
-                  <div className="p-6 pt-0 text-gray-700 border-t border-slate-100">{item.answer}</div>
+                  <div className="p-6 pt-0 text-gray-700 border-t border-slate-100">
+                    {item.answer}
+                  </div>
                 </details>
               ))}
             </div>
@@ -638,8 +675,9 @@ export default function NEETPreparationRoadmapPage() {
               Ready to Master Your NEET 2026 Preparation?
             </h2>
             <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-              Get personalized guidance from Cerebrum Biology Academy experts. Book your free demo class today and learn
-              how our proven teaching methodology can help you achieve 600+ scores.
+              Get personalized guidance from Cerebrum Biology Academy experts. Book your free demo
+              class today and learn how our proven teaching methodology can help you achieve 600+
+              scores.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

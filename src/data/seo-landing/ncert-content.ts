@@ -240,15 +240,44 @@ export const ncertBiologyClass11: SEOLandingContent = {
       },
     ],
     comparisonTable: [
-      { 'Study Approach': 'Passive NCERT reading', 'Time Required': '40 hours/chapter', 'Retention After 30 Days': '20-30%', 'NEET Score Impact': 'Low' },
-      { 'Study Approach': 'Line-by-line with highlights', 'Time Required': '50 hours/chapter', 'Retention After 30 Days': '50-60%', 'NEET Score Impact': 'Moderate' },
-      { 'Study Approach': 'Line-by-line + MCQ practice + revision', 'Time Required': '60 hours/chapter', 'Retention After 30 Days': '75-85%', 'NEET Score Impact': 'High' },
+      {
+        'Study Approach': 'Passive NCERT reading',
+        'Time Required': '40 hours/chapter',
+        'Retention After 30 Days': '20-30%',
+        'NEET Score Impact': 'Low',
+      },
+      {
+        'Study Approach': 'Line-by-line with highlights',
+        'Time Required': '50 hours/chapter',
+        'Retention After 30 Days': '50-60%',
+        'NEET Score Impact': 'Moderate',
+      },
+      {
+        'Study Approach': 'Line-by-line + MCQ practice + revision',
+        'Time Required': '60 hours/chapter',
+        'Retention After 30 Days': '75-85%',
+        'NEET Score Impact': 'High',
+      },
     ],
     checklist: [
-      { item: 'Read every NCERT line, including figure captions', explanation: 'NEET questions frequently test information from figure descriptions and table footnotes.' },
-      { item: 'Practice drawing all NCERT diagrams from memory', explanation: 'Diagram-based questions carry 40-50 marks and require visual recall.' },
-      { item: 'Create comparison tables for similar concepts', explanation: 'Mitosis vs meiosis, C3 vs C4 pathways - comparison questions are NEET favourites.' },
-      { item: 'Solve NCERT in-text and back-exercise questions', explanation: 'These questions test the exact concepts NEET examiners target.' },
+      {
+        item: 'Read every NCERT line, including figure captions',
+        explanation:
+          'NEET questions frequently test information from figure descriptions and table footnotes.',
+      },
+      {
+        item: 'Practice drawing all NCERT diagrams from memory',
+        explanation: 'Diagram-based questions carry 40-50 marks and require visual recall.',
+      },
+      {
+        item: 'Create comparison tables for similar concepts',
+        explanation:
+          'Mitosis vs meiosis, C3 vs C4 pathways - comparison questions are NEET favourites.',
+      },
+      {
+        item: 'Solve NCERT in-text and back-exercise questions',
+        explanation: 'These questions test the exact concepts NEET examiners target.',
+      },
     ],
   },
 
@@ -445,11 +474,36 @@ export const ncertBiologyClass12: SEOLandingContent = {
       },
     ],
     comparisonTable: [
-      { 'Chapter': 'Genetics', 'NEET Questions': '8-10', 'Difficulty': 'Moderate-High', 'Best Strategy': 'Problem practice + NCERT reading' },
-      { 'Chapter': 'Molecular Biology', 'NEET Questions': '4-5', 'Difficulty': 'Moderate', 'Best Strategy': 'Process flowcharts + enzyme lists' },
-      { 'Chapter': 'Biotechnology', 'NEET Questions': '5-6', 'Difficulty': 'Moderate', 'Best Strategy': 'Step-by-step technique mastery' },
-      { 'Chapter': 'Ecology', 'NEET Questions': '6-8', 'Difficulty': 'Easy', 'Best Strategy': 'Direct NCERT line reading' },
-      { 'Chapter': 'Evolution', 'NEET Questions': '3-4', 'Difficulty': 'Easy-Moderate', 'Best Strategy': 'Concept clarity + timeline memorization' },
+      {
+        Chapter: 'Genetics',
+        'NEET Questions': '8-10',
+        Difficulty: 'Moderate-High',
+        'Best Strategy': 'Problem practice + NCERT reading',
+      },
+      {
+        Chapter: 'Molecular Biology',
+        'NEET Questions': '4-5',
+        Difficulty: 'Moderate',
+        'Best Strategy': 'Process flowcharts + enzyme lists',
+      },
+      {
+        Chapter: 'Biotechnology',
+        'NEET Questions': '5-6',
+        Difficulty: 'Moderate',
+        'Best Strategy': 'Step-by-step technique mastery',
+      },
+      {
+        Chapter: 'Ecology',
+        'NEET Questions': '6-8',
+        Difficulty: 'Easy',
+        'Best Strategy': 'Direct NCERT line reading',
+      },
+      {
+        Chapter: 'Evolution',
+        'NEET Questions': '3-4',
+        Difficulty: 'Easy-Moderate',
+        'Best Strategy': 'Concept clarity + timeline memorization',
+      },
     ],
   },
 
@@ -641,10 +695,25 @@ export const ncertFingertipsBiology: SEOLandingContent = {
       },
     ],
     checklist: [
-      { item: 'Complete chapter reading before attempting MCQs', explanation: 'MCQs are for testing understanding, not for learning new content.' },
-      { item: 'Mark and re-attempt wrong answers after 3 days', explanation: 'Spaced repetition of incorrect answers converts weak areas into strong recall.' },
-      { item: 'Track chapter-wise accuracy in a spreadsheet', explanation: 'Identifying consistently low-accuracy chapters helps prioritize revision time.' },
-      { item: 'Practice at least 50 MCQs daily from varied chapters', explanation: 'Mixing chapters in practice prevents the illusion of mastery from topic-focused sessions.' },
+      {
+        item: 'Complete chapter reading before attempting MCQs',
+        explanation: 'MCQs are for testing understanding, not for learning new content.',
+      },
+      {
+        item: 'Mark and re-attempt wrong answers after 3 days',
+        explanation:
+          'Spaced repetition of incorrect answers converts weak areas into strong recall.',
+      },
+      {
+        item: 'Track chapter-wise accuracy in a spreadsheet',
+        explanation:
+          'Identifying consistently low-accuracy chapters helps prioritize revision time.',
+      },
+      {
+        item: 'Practice at least 50 MCQs daily from varied chapters',
+        explanation:
+          'Mixing chapters in practice prevents the illusion of mastery from topic-focused sessions.',
+      },
     ],
   },
 
@@ -1025,9 +1094,24 @@ export const ncertBiologyNotesClass11: SEOLandingContent = {
       },
     ],
     comparisonTable: [
-      { 'Note Type': 'Handwritten summaries', 'Time to Create': 'Very High', 'Revision Speed': 'Slow', 'NEET Effectiveness': 'Low-Moderate' },
-      { 'Note Type': 'Highlighted NCERT', 'Time to Create': 'Low', 'Revision Speed': 'Moderate', 'NEET Effectiveness': 'Moderate' },
-      { 'Note Type': 'Structured notes (tables + diagrams)', 'Time to Create': 'None (provided)', 'Revision Speed': 'Fast', 'NEET Effectiveness': 'High' },
+      {
+        'Note Type': 'Handwritten summaries',
+        'Time to Create': 'Very High',
+        'Revision Speed': 'Slow',
+        'NEET Effectiveness': 'Low-Moderate',
+      },
+      {
+        'Note Type': 'Highlighted NCERT',
+        'Time to Create': 'Low',
+        'Revision Speed': 'Moderate',
+        'NEET Effectiveness': 'Moderate',
+      },
+      {
+        'Note Type': 'Structured notes (tables + diagrams)',
+        'Time to Create': 'None (provided)',
+        'Revision Speed': 'Fast',
+        'NEET Effectiveness': 'High',
+      },
     ],
   },
 
@@ -1219,9 +1303,21 @@ export const ncertBiologyNotesClass12: SEOLandingContent = {
       },
     ],
     checklist: [
-      { item: 'Complete first revision within one week of studying each chapter', explanation: 'The forgetting curve is steepest in the first week, making early revision critical.' },
-      { item: 'Use summary panels for second and third revisions', explanation: 'Shorter formats for later revisions save time while maintaining concept freshness.' },
-      { item: 'Solve 10 MCQs from each chapter after every revision cycle', explanation: 'Self-testing reveals whether revision is actually improving recall or just creating familiarity.' },
+      {
+        item: 'Complete first revision within one week of studying each chapter',
+        explanation:
+          'The forgetting curve is steepest in the first week, making early revision critical.',
+      },
+      {
+        item: 'Use summary panels for second and third revisions',
+        explanation:
+          'Shorter formats for later revisions save time while maintaining concept freshness.',
+      },
+      {
+        item: 'Solve 10 MCQs from each chapter after every revision cycle',
+        explanation:
+          'Self-testing reveals whether revision is actually improving recall or just creating familiarity.',
+      },
     ],
   },
 
@@ -1602,9 +1698,20 @@ export const ncertPunchBiology: SEOLandingContent = {
       },
     ],
     checklist: [
-      { item: 'Start punch point revision only after completing NCERT study', explanation: 'Punch points reinforce existing knowledge but cannot replace foundational understanding.' },
-      { item: 'Review 50-100 points daily in the final month', explanation: 'Consistent daily exposure maintains recall freshness across all chapters.' },
-      { item: 'Mark points you consistently forget for extra revision', explanation: 'Self-identified weak points need additional attention to prevent exam-day blanks.' },
+      {
+        item: 'Start punch point revision only after completing NCERT study',
+        explanation:
+          'Punch points reinforce existing knowledge but cannot replace foundational understanding.',
+      },
+      {
+        item: 'Review 50-100 points daily in the final month',
+        explanation: 'Consistent daily exposure maintains recall freshness across all chapters.',
+      },
+      {
+        item: 'Mark points you consistently forget for extra revision',
+        explanation:
+          'Self-identified weak points need additional attention to prevent exam-day blanks.',
+      },
     ],
   },
 

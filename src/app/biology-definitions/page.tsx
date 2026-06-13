@@ -35,7 +35,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biology Definitions for NEET | Important Terms & Concepts',
-    description: 'Master essential biology definitions for NEET 2026-27. Comprehensive glossary of 30+ important terms with examples, key points, and NEET relevance. Free study material by Dr. Shekhar C Singh.',
+    description:
+      'Master essential biology definitions for NEET 2026-27. Comprehensive glossary of 30+ important terms with examples, key points, and NEET relevance. Free study material by Dr. Shekhar C Singh.',
   },
 }
 
@@ -227,7 +228,9 @@ export default function BiologyDefinitionsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20definitions.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20definitions.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-yellow-400 text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold hover:bg-yellow-300 transition-colors text-center"
             >
               Book Free Demo

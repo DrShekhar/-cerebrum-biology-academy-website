@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function AnimalKingdomIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -12,12 +12,7 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Background */}
       <rect x="10" y="10" width="380" height="280" rx="20" fill="#FEF9C3" />
 
@@ -42,8 +37,7 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
       </text>
 
       {/* Jellyfish */}
-      <g
-      >
+      <g>
         <ellipse cx="55" cy="100" rx="15" ry="10" fill="#E879F9" />
         <path d="M45 110 Q55 120 65 110" stroke="#D946EF" strokeWidth="2" fill="none" />
         <text x="55" y="135" fontSize="6" fill="#A21CAF" textAnchor="middle">
@@ -52,9 +46,7 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* Earthworm */}
-      <g
-        style={{ transformOrigin: '107px 100px' }}
-      >
+      <g style={{ transformOrigin: '107px 100px' }}>
         <path
           d="M85 100 Q100 95 115 100 Q130 105 115 100"
           stroke="#D97706"
@@ -68,9 +60,7 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* Insect */}
-      <g
-        style={{ transformOrigin: '160px 100px' }}
-      >
+      <g style={{ transformOrigin: '160px 100px' }}>
         <ellipse cx="160" cy="100" rx="12" ry="8" fill="#84CC16" />
         <circle cx="148" cy="98" r="4" fill="#65A30D" />
         <line x1="155" y1="92" x2="150" y2="85" stroke="#84CC16" strokeWidth="1" />
@@ -104,8 +94,7 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
       </text>
 
       {/* Fish */}
-      <g
-      >
+      <g>
         <ellipse cx="235" cy="95" rx="15" ry="8" fill="#60A5FA" />
         <polygon points="250,95 260,88 260,102" fill="#3B82F6" />
         <circle cx="228" cy="93" r="2" fill="#1E293B" />
@@ -115,8 +104,7 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* Frog */}
-      <g
-      >
+      <g>
         <ellipse cx="275" cy="95" rx="12" ry="10" fill="#4ADE80" />
         <circle cx="270" cy="88" r="3" fill="#FFFFFF" stroke="#166534" strokeWidth="1" />
         <circle cx="280" cy="88" r="3" fill="#FFFFFF" stroke="#166534" strokeWidth="1" />
@@ -126,8 +114,7 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* Bird */}
-      <g
-      >
+      <g>
         <ellipse cx="315" cy="95" rx="10" ry="8" fill="#F472B6" />
         <polygon points="325,95 335,95 325,90" fill="#EC4899" />
         <circle cx="312" cy="93" r="2" fill="#1E293B" />
@@ -137,8 +124,7 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* Mammal */}
-      <g
-      >
+      <g>
         <ellipse cx="355" cy="95" rx="12" ry="10" fill="#FBBF24" />
         <circle cx="362" cy="90" r="5" fill="#F59E0B" />
         <text x="355" y="115" fontSize="5" fill="#B45309" textAnchor="middle">
@@ -178,8 +164,7 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
       </text>
 
       {/* Questions badge */}
-      <g
-      >
+      <g>
         <circle cx="360" cy="200" r="18" fill="#F59E0B" />
         <text x="360" y="197" fontSize="8" fill="#FFFFFF" textAnchor="middle">
           6-8

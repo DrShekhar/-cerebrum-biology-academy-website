@@ -246,9 +246,7 @@ export default function KotaVsOnlinePage() {
       <section className="relative bg-gradient-to-br from-orange-600 via-red-600 to-pink-700 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Target className="w-5 h-5 mr-2" />
               Data-Driven Comparison for Smart Parents
@@ -285,25 +283,19 @@ export default function KotaVsOnlinePage() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <div
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <DollarSign className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">₹2.5L+</div>
                 <div className="text-sm opacity-80">Average Annual Savings</div>
               </div>
 
-              <div
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <Trophy className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">85% vs 60%</div>
                 <div className="text-sm opacity-80">Higher Success Rate</div>
               </div>
 
-              <div
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <Home className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">Stay Home</div>
                 <div className="text-sm opacity-80">100% Safety Guarantee</div>
@@ -315,9 +307,7 @@ export default function KotaVsOnlinePage() {
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               The Complete Side-by-Side Comparison
             </h2>
@@ -380,9 +370,7 @@ export default function KotaVsOnlinePage() {
             </div>
           </div>
 
-          <div
-            className="text-center mt-12 animate-fadeInUp"
-          >
+          <div className="text-center mt-12 animate-fadeInUp">
             <div className="bg-gradient-to-r from-green-100 to-green-100 rounded-xl p-8 max-w-3xl mx-auto">
               <Star className="w-12 h-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -408,9 +396,7 @@ export default function KotaVsOnlinePage() {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <Calculator className="w-16 h-16 text-orange-600 mx-auto mb-6" />
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               The Hidden Costs of Kota Nobody Tells You
@@ -461,9 +447,7 @@ export default function KotaVsOnlinePage() {
             </div>
           </div>
 
-          <div
-            className="text-center mt-12 max-w-3xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center mt-12 max-w-3xl mx-auto animate-fadeInUp">
             <div className="bg-[#4a5d4a] text-white rounded-xl p-4 sm:p-6 md:p-8">
               <DollarSign className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-4" />
               <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">₹2,57,000</div>
@@ -487,9 +471,7 @@ export default function KotaVsOnlinePage() {
 
       <section className="py-20 bg-gradient-to-br bg-red-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <Heart className="w-16 h-16 text-red-600 mx-auto mb-6" />
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Mental Health Matters: The Kota Reality vs Home Safety
@@ -502,10 +484,7 @@ export default function KotaVsOnlinePage() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {mentalHealthStats.map((stat, index) => (
-              <div
-                key={stat.title}
-                className="bg-white rounded-xl shadow-lg p-8 animate-fadeInUp"
-              >
+              <div key={stat.title} className="bg-white rounded-xl shadow-lg p-8 animate-fadeInUp">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{stat.title}</h3>
                 <div className="flex justify-between items-center mb-4">
                   <div>
@@ -523,9 +502,7 @@ export default function KotaVsOnlinePage() {
             ))}
           </div>
 
-          <div
-            className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto animate-fadeInUp">
             <AlertCircle className="w-12 h-12 text-red-600 mb-4" />
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               The Kota Factory Reality: Not Just a Show
@@ -556,9 +533,7 @@ export default function KotaVsOnlinePage() {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <Star className="w-16 h-16 text-yellow-500 mx-auto mb-6" />
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Success Stories: Students Who Chose Online Over Kota
@@ -591,9 +566,7 @@ export default function KotaVsOnlinePage() {
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Questions Every Parent Asks
             </h2>
@@ -624,20 +597,30 @@ export default function KotaVsOnlinePage() {
       {/* Internal Links */}
       <section className="bg-gray-50 py-12">
         <div className="container mx-auto px-4">
-          <h3 className="mb-6 text-center text-xl font-semibold text-gray-900">
-            Explore More
-          </h3>
+          <h3 className="mb-6 text-center text-xl font-semibold text-gray-900">Explore More</h3>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/online-biology-classes" className="rounded-lg bg-green-100 px-4 py-2 text-green-700 transition hover:bg-green-200">
+            <Link
+              href="/online-biology-classes"
+              className="rounded-lg bg-green-100 px-4 py-2 text-green-700 transition hover:bg-green-200"
+            >
               Online Biology Classes
             </Link>
-            <Link href="/best-biology-teacher-online" className="rounded-lg bg-purple-100 px-4 py-2 text-purple-700 transition hover:bg-purple-200">
+            <Link
+              href="/best-biology-teacher-online"
+              className="rounded-lg bg-purple-100 px-4 py-2 text-purple-700 transition hover:bg-purple-200"
+            >
               Best Biology Teacher Online
             </Link>
-            <Link href="/neet-biology-important-questions" className="rounded-lg bg-blue-100 px-4 py-2 text-blue-700 transition hover:bg-blue-200">
+            <Link
+              href="/neet-biology-important-questions"
+              className="rounded-lg bg-blue-100 px-4 py-2 text-blue-700 transition hover:bg-blue-200"
+            >
               NEET Important Questions
             </Link>
-            <Link href="/courses" className="rounded-lg bg-orange-100 px-4 py-2 text-orange-700 transition hover:bg-orange-200">
+            <Link
+              href="/courses"
+              className="rounded-lg bg-orange-100 px-4 py-2 text-orange-700 transition hover:bg-orange-200"
+            >
               View All Courses
             </Link>
           </div>
@@ -646,8 +629,7 @@ export default function KotaVsOnlinePage() {
 
       <section className="py-20 bg-gradient-to-r from-orange-600 via-red-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Stay Home, Beat Kota - It's That Simple
             </h2>

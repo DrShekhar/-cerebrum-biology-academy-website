@@ -27,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Bihar Biology Tuition Online | BSEB Board + NEET | AIIMS Faculty',
-    description: 'Best Biology tuition for Bihar students. BSEB Board + NEET preparation. AIIMS faculty, online classes. Serving Patna, Gaya, Muzaffarpur, Bhagalpur. 98% success rate.',
+    description:
+      'Best Biology tuition for Bihar students. BSEB Board + NEET preparation. AIIMS faculty, online classes. Serving Patna, Gaya, Muzaffarpur, Bhagalpur. 98% success rate.',
   },
 }
 

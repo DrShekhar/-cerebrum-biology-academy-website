@@ -42,7 +42,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Free NEET Demo Class Faridabad | Book Now',
-    description: 'Book your FREE NEET Biology demo class in Faridabad. Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 88264-44334!',
+    description:
+      'Book your FREE NEET Biology demo class in Faridabad. Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 88264-44334!',
   },
 }
 
@@ -108,7 +109,11 @@ export default function FreeNEETDemoClassFaridabad() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+        knowsAbout={[
+          'NEET Faridabad',
+          'NEET Biology Faridabad',
+          'Medical entrance coaching Faridabad',
+        ]}
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-700 to-teal-600 text-white py-16">
@@ -145,7 +150,9 @@ export default function FreeNEETDemoClassFaridabad() {
                 Book Demo: 88264-44334
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-green-700 px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2 hover:bg-green-50 transition"
               >
                 Book Online

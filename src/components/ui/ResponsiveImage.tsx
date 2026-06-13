@@ -121,23 +121,21 @@ export function ResponsiveImage({
       style={{ aspectRatio: `${width}/${height}` }}
     >
       {/* Placeholder */}
-{!isLoaded && !hasError && (
-          <div
-            className="absolute inset-0 animate-fadeInUp"
-          >
-            {placeholder === 'skeleton' && (
-              <div className="w-full h-full bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-[length:200%_100%] animate-pulse" />
-            )}
-            {placeholder === 'blur' && blurDataURL && (
-              <img
-                src={blurDataURL}
-                alt=""
-                className="w-full h-full object-cover filter blur-sm scale-110"
-              />
-            )}
-          </div>
-        )}
-{/* Error State */}
+      {!isLoaded && !hasError && (
+        <div className="absolute inset-0 animate-fadeInUp">
+          {placeholder === 'skeleton' && (
+            <div className="w-full h-full bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-[length:200%_100%] animate-pulse" />
+          )}
+          {placeholder === 'blur' && blurDataURL && (
+            <img
+              src={blurDataURL}
+              alt=""
+              className="w-full h-full object-cover filter blur-sm scale-110"
+            />
+          )}
+        </div>
+      )}
+      {/* Error State */}
       {hasError && (
         <div className="absolute inset-0 bg-slate-100 flex items-center justify-center">
           <div className="text-center text-slate-500">

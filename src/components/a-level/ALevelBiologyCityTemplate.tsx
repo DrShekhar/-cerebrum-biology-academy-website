@@ -113,8 +113,19 @@ function ALevelSchemas({ city }: { city: ALevelCityConfig }) {
     description: `AIIMS-trained A-Level Biology educator covering Cambridge, Edexcel, AQA, and OCR exam boards for ${city.cityName} students.`,
     url: `${siteUrl}/dr-shekhar-singh-neet-biology-faculty`,
     image: `${siteUrl}/images/dr-shekhar-singh.webp`,
-    affiliation: { '@type': 'EducationalOrganization', '@id': `${siteUrl}/#organization`, name: 'Cerebrum Biology Academy' },
-    knowsAbout: ['A-Level Biology', 'Cambridge 9700', 'Edexcel IAL', 'AQA Biology', 'OCR Biology', 'UCAS Medicine Applications'],
+    affiliation: {
+      '@type': 'EducationalOrganization',
+      '@id': `${siteUrl}/#organization`,
+      name: 'Cerebrum Biology Academy',
+    },
+    knowsAbout: [
+      'A-Level Biology',
+      'Cambridge 9700',
+      'Edexcel IAL',
+      'AQA Biology',
+      'OCR Biology',
+      'UCAS Medicine Applications',
+    ],
     sameAs: [`${siteUrl}/dr-shekhar-singh-neet-biology-faculty`],
   }
 
@@ -196,10 +207,7 @@ export function ALevelBiologyCityTemplate({ city }: ALevelBiologyCityTemplatePro
             >
               A-Level Biology Tutor in {city.cityName}
             </h1>
-            <p
-              className="max-w-3xl text-lg text-green-100 sm:text-xl"
-              data-speakable="summary"
-            >
+            <p className="max-w-3xl text-lg text-green-100 sm:text-xl" data-speakable="summary">
               {city.heroBlurb}
             </p>
           </div>
@@ -216,11 +224,13 @@ export function ALevelBiologyCityTemplate({ city }: ALevelBiologyCityTemplatePro
                 const boardInfo: Record<string, { full: string; detail: string }> = {
                   AQA: {
                     full: 'AQA A-Level Biology',
-                    detail: '7402 specification. Topics 1-8 across AS and A2. Emphasis on practical skills and essay questions.',
+                    detail:
+                      '7402 specification. Topics 1-8 across AS and A2. Emphasis on practical skills and essay questions.',
                   },
                   OCR: {
                     full: 'OCR A-Level Biology A',
-                    detail: 'H420 specification. Modules 1-6 covering biological processes and biological diversity.',
+                    detail:
+                      'H420 specification. Modules 1-6 covering biological processes and biological diversity.',
                   },
                   Edexcel: {
                     full: 'Edexcel (Pearson) A-Level Biology',
@@ -228,19 +238,15 @@ export function ALevelBiologyCityTemplate({ city }: ALevelBiologyCityTemplatePro
                   },
                   CAIE: {
                     full: 'Cambridge International A-Level Biology',
-                    detail: '9700 specification. Papers 1-5 including practical skills and planning/analysis.',
+                    detail:
+                      '9700 specification. Papers 1-5 including practical skills and planning/analysis.',
                   },
                 }
                 const info = boardInfo[board]
                 return (
-                  <div
-                    key={board}
-                    className="rounded-2xl border border-green-200 bg-green-50 p-6"
-                  >
+                  <div key={board} className="rounded-2xl border border-green-200 bg-green-50 p-6">
                     <div className="mb-2 text-lg font-bold text-green-900">{board}</div>
-                    <div className="mb-2 text-sm font-medium text-green-800">
-                      {info.full}
-                    </div>
+                    <div className="mb-2 text-sm font-medium text-green-800">{info.full}</div>
                     <p className="text-sm text-green-700">{info.detail}</p>
                   </div>
                 )
@@ -256,8 +262,8 @@ export function ALevelBiologyCityTemplate({ city }: ALevelBiologyCityTemplatePro
               Schools We Support in {city.cityName}
             </h2>
             <p className="mb-8 text-gray-700">
-              Our tutors have coached A-Level Biology students from these {city.country} schools.
-              We adapt to each school&apos;s exam board, mock calendar, and practical schedule.
+              Our tutors have coached A-Level Biology students from these {city.country} schools. We
+              adapt to each school&apos;s exam board, mock calendar, and practical schedule.
             </p>
             <div className="grid gap-3 sm:grid-cols-2">
               {city.schools.map((school) => (
@@ -271,8 +277,8 @@ export function ALevelBiologyCityTemplate({ city }: ALevelBiologyCityTemplatePro
               ))}
             </div>
             <p className="mt-6 text-sm text-gray-600">
-              Not listed? Our programme supports every school offering A-Level Biology — contact
-              us and we will match you with a tutor familiar with your board and school calendar.
+              Not listed? Our programme supports every school offering A-Level Biology — contact us
+              and we will match you with a tutor familiar with your board and school calendar.
             </p>
           </div>
         </section>
@@ -284,8 +290,9 @@ export function ALevelBiologyCityTemplate({ city }: ALevelBiologyCityTemplatePro
               A-Level Biology Pricing
             </h2>
             <p className="mb-10 text-gray-700">
-              Three tiers to match your target grade and budget. All prices shown in GBP
-              with USD equivalents. Local currency pricing ({city.pricing.currencySymbol}) — contact us for a quote.
+              Three tiers to match your target grade and budget. All prices shown in GBP with USD
+              equivalents. Local currency pricing ({city.pricing.currencySymbol}) — contact us for a
+              quote.
             </p>
             <div className="grid gap-6 lg:grid-cols-3">
               {aLevelPricingTiers.map((tier) => (
@@ -375,9 +382,7 @@ export function ALevelBiologyCityTemplate({ city }: ALevelBiologyCityTemplatePro
         {/* Cross-links */}
         <section className="py-12">
           <div className="mx-auto max-w-5xl px-4 text-center sm:px-6">
-            <h2 className="mb-6 text-2xl font-bold text-gray-900">
-              Explore Other Programmes
-            </h2>
+            <h2 className="mb-6 text-2xl font-bold text-gray-900">Explore Other Programmes</h2>
             <div className="flex flex-wrap justify-center gap-3">
               <Link
                 href="/a-level-biology-tutor"
@@ -414,8 +419,8 @@ export function ALevelBiologyCityTemplate({ city }: ALevelBiologyCityTemplatePro
               Book a Free Demo for {city.cityName}
             </h2>
             <p className="mb-8 text-lg text-green-100">
-              30 minutes with an A-Level Biology tutor — discuss your target grade, exam board,
-              and a tailored study plan in {city.timezone}.
+              30 minutes with an A-Level Biology tutor — discuss your target grade, exam board, and
+              a tailored study plan in {city.timezone}.
             </p>
             <a
               href={wa}

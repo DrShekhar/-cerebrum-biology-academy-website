@@ -247,7 +247,12 @@ export function Top10NEETCoachingContent() {
                   <summary className="flex items-center justify-between cursor-pointer p-5 hover:bg-gray-50 transition-colors">
                     <h3 className="font-medium text-gray-900 pr-4">{faq.question}</h3>
                     <span className="text-gray-500 group-open:rotate-180 transition-transform">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -275,8 +280,14 @@ export function Top10NEETCoachingContent() {
               {[
                 { label: 'Best NEET Coaching Gurugram', href: '/best-neet-coaching-gurugram' },
                 { label: 'NEET Coaching Fees Gurugram', href: '/neet-coaching-fee-gurugram' },
-                { label: 'Cerebrum vs the 2nd-largest national NEET chain', href: '/cerebrum-vs-aakash-neet-coaching' },
-                { label: 'Cerebrum vs the largest national NEET chain', href: '/cerebrum-vs-allen-neet-coaching' },
+                {
+                  label: 'Cerebrum vs the 2nd-largest national NEET chain',
+                  href: '/cerebrum-vs-aakash-neet-coaching',
+                },
+                {
+                  label: 'Cerebrum vs the largest national NEET chain',
+                  href: '/cerebrum-vs-allen-neet-coaching',
+                },
                 { label: 'Online NEET Classes', href: '/online-neet-biology-classes' },
                 { label: 'NEET Dropper Batch', href: '/neet-dropper-batch-delhi' },
               ].map((link) => (

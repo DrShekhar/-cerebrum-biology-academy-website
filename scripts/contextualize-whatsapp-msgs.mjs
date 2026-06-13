@@ -48,26 +48,96 @@ function extractLocalityFromPath(p) {
 }
 
 function titleCase(s) {
-  return s.split(' ').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+  return s
+    .split(' ')
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ')
 }
 
 const CITY_KEYWORDS = [
-  'gurugram', 'gurgaon', 'noida', 'faridabad', 'ghaziabad', 'rohini',
-  'south-delhi', 'north-delhi', 'east-delhi', 'west-delhi', 'central-delhi',
-  'south-extension', 'lajpat-nagar', 'defence-colony', 'kalkaji', 'malviya-nagar',
-  'greater-kailash', 'cr-park', 'saket', 'green-park', 'hauz-khas',
-  'dwarka', 'pitampura', 'janakpuri', 'preet-vihar',
-  'mumbai', 'bangalore', 'bengaluru', 'hyderabad', 'chennai', 'kolkata', 'pune',
-  'kota', 'jaipur', 'lucknow', 'patna', 'gwalior', 'indore', 'bhopal', 'nagpur',
-  'chandigarh', 'amritsar', 'ludhiana', 'panchkula', 'mohali', 'ambala',
-  'dehradun', 'haridwar', 'rishikesh',
-  'delhi', 'delhi-ncr', 'greater-noida',
+  'gurugram',
+  'gurgaon',
+  'noida',
+  'faridabad',
+  'ghaziabad',
+  'rohini',
+  'south-delhi',
+  'north-delhi',
+  'east-delhi',
+  'west-delhi',
+  'central-delhi',
+  'south-extension',
+  'lajpat-nagar',
+  'defence-colony',
+  'kalkaji',
+  'malviya-nagar',
+  'greater-kailash',
+  'cr-park',
+  'saket',
+  'green-park',
+  'hauz-khas',
+  'dwarka',
+  'pitampura',
+  'janakpuri',
+  'preet-vihar',
+  'mumbai',
+  'bangalore',
+  'bengaluru',
+  'hyderabad',
+  'chennai',
+  'kolkata',
+  'pune',
+  'kota',
+  'jaipur',
+  'lucknow',
+  'patna',
+  'gwalior',
+  'indore',
+  'bhopal',
+  'nagpur',
+  'chandigarh',
+  'amritsar',
+  'ludhiana',
+  'panchkula',
+  'mohali',
+  'ambala',
+  'dehradun',
+  'haridwar',
+  'rishikesh',
+  'delhi',
+  'delhi-ncr',
+  'greater-noida',
   // NRI cities
-  'dubai', 'abu-dhabi', 'sharjah', 'doha', 'riyadh', 'jeddah',
-  'kuwait', 'manama', 'muscat', 'singapore', 'london', 'manchester',
-  'birmingham', 'leicester', 'new-york', 'houston', 'dallas', 'chicago',
-  'atlanta', 'boston', 'washington-dc', 'sf-bay', 'edison-nj',
-  'toronto', 'calgary', 'vancouver', 'sydney', 'melbourne', 'brisbane', 'auckland',
+  'dubai',
+  'abu-dhabi',
+  'sharjah',
+  'doha',
+  'riyadh',
+  'jeddah',
+  'kuwait',
+  'manama',
+  'muscat',
+  'singapore',
+  'london',
+  'manchester',
+  'birmingham',
+  'leicester',
+  'new-york',
+  'houston',
+  'dallas',
+  'chicago',
+  'atlanta',
+  'boston',
+  'washington-dc',
+  'sf-bay',
+  'edison-nj',
+  'toronto',
+  'calgary',
+  'vancouver',
+  'sydney',
+  'melbourne',
+  'brisbane',
+  'auckland',
 ]
 
 function extractCityFromPath(p) {
@@ -80,25 +150,25 @@ function extractCityFromPath(p) {
 
 const COURSE_KEYWORDS = {
   'a-level': 'A-Level Biology',
-  'cambridge': 'Cambridge Biology',
+  cambridge: 'Cambridge Biology',
   'ib-biology': 'IB Biology (HL/SL)',
   'ib-bio': 'IB Biology',
-  'igcse': 'IGCSE Biology',
+  igcse: 'IGCSE Biology',
   'ap-biology': 'AP Biology',
-  'gcse': 'GCSE Biology',
-  'olympiad': 'Biology Olympiad',
-  'usabo': 'USABO',
-  'ibo': 'IBO',
-  'bbo': 'British Biology Olympiad',
-  'inbo': 'INBO',
-  'cnbo': 'CNBO',
-  'sbo': 'Singapore Biology Olympiad',
-  'kbo': 'KBO',
-  'jbo': 'JBO',
-  'nseb': 'NSEB Olympiad',
-  'asob': 'ASOB',
-  'dropper': 'NEET Dropper batch',
-  'foundation': 'Foundation Biology (Class 9/10)',
+  gcse: 'GCSE Biology',
+  olympiad: 'Biology Olympiad',
+  usabo: 'USABO',
+  ibo: 'IBO',
+  bbo: 'British Biology Olympiad',
+  inbo: 'INBO',
+  cnbo: 'CNBO',
+  sbo: 'Singapore Biology Olympiad',
+  kbo: 'KBO',
+  jbo: 'JBO',
+  nseb: 'NSEB Olympiad',
+  asob: 'ASOB',
+  dropper: 'NEET Dropper batch',
+  foundation: 'Foundation Biology (Class 9/10)',
   'crash-course': 'NEET crash course',
   'mock-test': 'NEET mock test series',
   'class-9': 'Class 9 Biology',
@@ -114,7 +184,7 @@ const COURSE_KEYWORDS = {
   'biology-tutor-class': 'Biology tutoring',
   'board-exam-preparation': 'Board Exam Biology preparation',
   'biology-notes': 'NEET Biology notes',
-  'faculty': 'Cerebrum faculty',
+  faculty: 'Cerebrum faculty',
   'neet-coaching-institute': 'Cerebrum Biology Academy',
 }
 
@@ -143,7 +213,8 @@ function buildMessage(routePath, intent) {
   const course = extractCourseFromPath(routePath)
   const cityLabel = city ? titleCase(city) : null
 
-  const isNRI = /\/(nri|overseas|international|worldwide)\//.test(routePath) ||
+  const isNRI =
+    /\/(nri|overseas|international|worldwide)\//.test(routePath) ||
     /^\/(nri|overseas|international|worldwide)/.test(routePath) ||
     /-nri-|-overseas/.test(routePath)
 
@@ -188,21 +259,32 @@ function buildMessage(routePath, intent) {
 }
 
 // === sweep ===
-const GENERIC_DEMO_URLENC = 'Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings.'
-const GENERIC_ENROLL_URLENC = 'Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20fee%20structure%20and%20enrollment%20details.'
-const GENERIC_ENROLL_UK_URLENC = 'Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20fee%20structure%20and%20enrolment%20details.'
-const GENERIC_ENROLL_SHORT_URLENC = 'Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details.'
+const GENERIC_DEMO_URLENC =
+  'Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings.'
+const GENERIC_ENROLL_URLENC =
+  'Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20fee%20structure%20and%20enrollment%20details.'
+const GENERIC_ENROLL_UK_URLENC =
+  'Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20fee%20structure%20and%20enrolment%20details.'
+const GENERIC_ENROLL_SHORT_URLENC =
+  'Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details.'
 
 function listMatchingFiles() {
-  const patterns = [GENERIC_DEMO_URLENC, GENERIC_ENROLL_URLENC, GENERIC_ENROLL_UK_URLENC, GENERIC_ENROLL_SHORT_URLENC]
+  const patterns = [
+    GENERIC_DEMO_URLENC,
+    GENERIC_ENROLL_URLENC,
+    GENERIC_ENROLL_UK_URLENC,
+    GENERIC_ENROLL_SHORT_URLENC,
+  ]
   const all = new Set()
   for (const pattern of patterns) {
     try {
-      const out = execSync(
-        `grep -rl '${pattern}' src --include='*.tsx' --include='*.ts'`,
-        { encoding: 'utf8' }
-      )
-      out.split('\n').filter(Boolean).forEach((f) => all.add(path.join(PROJECT_ROOT, f)))
+      const out = execSync(`grep -rl '${pattern}' src --include='*.tsx' --include='*.ts'`, {
+        encoding: 'utf8',
+      })
+      out
+        .split('\n')
+        .filter(Boolean)
+        .forEach((f) => all.add(path.join(PROJECT_ROOT, f)))
     } catch (e) {
       // grep exits 1 on no match — ignore
     }
@@ -235,12 +317,18 @@ for (const file of files) {
   modified = modified.replace(enrollRegex, enrollMsg)
 
   // Replace enroll (long, UK spelling — emitted by an earlier run of this script)
-  const enrollUkRegex = new RegExp(GENERIC_ENROLL_UK_URLENC.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g')
+  const enrollUkRegex = new RegExp(
+    GENERIC_ENROLL_UK_URLENC.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
+    'g'
+  )
   const beforeEnrollUk = (modified.match(enrollUkRegex) || []).length
   modified = modified.replace(enrollUkRegex, enrollMsg)
 
   // Replace enroll (short)
-  const shortRegex = new RegExp(GENERIC_ENROLL_SHORT_URLENC.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g')
+  const shortRegex = new RegExp(
+    GENERIC_ENROLL_SHORT_URLENC.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
+    'g'
+  )
   const beforeShort = (modified.match(shortRegex) || []).length
   modified = modified.replace(shortRegex, enrollMsg)
 
@@ -249,7 +337,9 @@ for (const file of files) {
     writeFileSync(file, modified, 'utf8')
     totalReplacements += replacementsHere
     filesChanged++
-    console.log(`✓ ${path.relative(PROJECT_ROOT, file)} — ${replacementsHere} replacement(s) — route: ${route}`)
+    console.log(
+      `✓ ${path.relative(PROJECT_ROOT, file)} — ${replacementsHere} replacement(s) — route: ${route}`
+    )
   }
 }
 

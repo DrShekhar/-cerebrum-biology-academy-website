@@ -35,7 +35,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Exam Centres Abroad 2026 | 14 Overseas NTA Centres + Travel Guide',
-    description: 'NEET-UG exam centres outside India — 14 NTA-designated overseas centres in Dubai, Sharjah, Abu Dhabi, Doha, Kuwait City, Riyadh, Muscat, Manama, Singapore, Bangkok, Kuala Lumpur, Lagos, Colombo and...',
+    description:
+      'NEET-UG exam centres outside India — 14 NTA-designated overseas centres in Dubai, Sharjah, Abu Dhabi, Doha, Kuwait City, Riyadh, Muscat, Manama, Singapore, Bangkok, Kuala Lumpur, Lagos, Colombo and...',
   },
 }
 

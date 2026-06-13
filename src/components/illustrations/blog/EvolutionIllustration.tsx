@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function EvolutionIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -12,12 +12,7 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Background */}
       <rect x="10" y="10" width="380" height="280" rx="20" fill="#FDF4FF" />
 
@@ -27,8 +22,7 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
       </text>
 
       {/* Tree of Life */}
-      <g
-      >
+      <g>
         {/* Main trunk */}
         <rect x="95" y="220" width="10" height="60" fill="#8B4513" />
 
@@ -65,8 +59,7 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
       </text>
 
       {/* Darwin portrait placeholder */}
-      <g
-      >
+      <g>
         <circle cx="280" cy="90" r="35" fill="#E9D5FF" stroke="#A855F7" strokeWidth="2" />
         <circle cx="280" cy="80" r="15" fill="#FED7AA" />
         <ellipse cx="280" cy="105" rx="20" ry="15" fill="#1E293B" />
@@ -93,8 +86,7 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
         Key Concepts
       </text>
 
-      <g
-      >
+      <g>
         <text x="295" y="200" fontSize="7" fill="#374151" textAnchor="middle">
           • Natural Selection
         </text>
@@ -113,8 +105,7 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
       </g>
 
       {/* Human evolution silhouettes */}
-      <g
-      >
+      <g>
         <rect
           x="25"
           y="170"
@@ -138,8 +129,7 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
       </g>
 
       {/* Questions badge */}
-      <g
-      >
+      <g>
         <circle cx="360" cy="260" r="18" fill="#A855F7" />
         <text x="360" y="257" fontSize="8" fill="#FFFFFF" textAnchor="middle">
           6-8

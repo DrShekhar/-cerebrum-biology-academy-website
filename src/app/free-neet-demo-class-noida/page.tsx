@@ -42,7 +42,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Free NEET Demo Class Noida | Book Now',
-    description: 'Book your FREE NEET Biology demo class in Noida. Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 99536-43938!',
+    description:
+      'Book your FREE NEET Biology demo class in Noida. Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 99536-43938!',
   },
 }
 
@@ -118,9 +119,7 @@ export default function FreeNEETDemoClassNoida() {
               <Gift className="w-4 h-4" />
               100% Free | No Obligation
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Free NEET Demo Class in Noida
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Free NEET Demo Class in Noida</h1>
             <p className="text-xl text-green-100 mb-4">
               Experience our AIIMS faculty teaching before you decide. Book your free 60-minute demo
               class today!
@@ -145,7 +144,9 @@ export default function FreeNEETDemoClassNoida() {
                 Book Demo: 99536-43938
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-green-700 px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2 hover:bg-green-50 transition"
               >
                 Book Online

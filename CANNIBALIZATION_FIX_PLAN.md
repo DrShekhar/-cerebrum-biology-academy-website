@@ -1,4 +1,5 @@
 # SEO CANNIBALIZATION FIX PLAN
+
 ## Quick Reference for Implementation
 
 ---
@@ -6,6 +7,7 @@
 ## THE 3 CRITICAL ISSUES AT A GLANCE
 
 ### Issue #1: About Page Duplicate
+
 ```
 Current State:
   /about                           ← Primary (in navigation)
@@ -21,6 +23,7 @@ Effort: 5 minutes
 ---
 
 ### Issue #2: Biology Tuition vs Tutor (50+ pages)
+
 ```
 Current State:
   /biology-tuition/                    /biology-tutor/
@@ -44,6 +47,7 @@ Effort: 1-2 hours (B is easiest, A requires more redirects)
 ---
 
 ### Issue #3: Best/Top/Which/Affordable Coaching (22 pages - WORST)
+
 ```
 Current State per city:
   /best-neet-coaching-[city]           ← Keep this
@@ -75,6 +79,7 @@ Priority: DO FIRST
 ## STEP-BY-STEP IMPLEMENTATION
 
 ### Step 1: Decision Phase (1 day)
+
 ```
 Questions to answer:
 1. Keep /biology-tuition or /biology-tutor as primary?
@@ -96,6 +101,7 @@ Questions to answer:
 **Location**: `src/config/seo-redirects.mjs`
 
 **Structure**: Add new array before other arrays
+
 ```javascript
 // Cannibalization consolidation redirects
 export const cannibalizationConsolidationRedirects = [
@@ -117,44 +123,114 @@ export const cannibalizationConsolidationRedirects = [
   // Best/Top/Which/Affordable coaching consolidation
   // ============================================
   // Faridabad
-  { source: '/top-5-neet-coaching-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
-  { source: '/top-10-neet-coaching-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
-  { source: '/which-neet-coaching-is-best-in-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
-  { source: '/affordable-neet-coaching-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
+  {
+    source: '/top-5-neet-coaching-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/top-10-neet-coaching-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/which-neet-coaching-is-best-in-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/affordable-neet-coaching-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
 
   // Ghaziabad
-  { source: '/top-10-neet-coaching-ghaziabad', destination: '/best-neet-coaching-ghaziabad', permanent: true },
-  { source: '/which-neet-coaching-is-best-in-ghaziabad', destination: '/best-neet-coaching-ghaziabad', permanent: true },
-  { source: '/affordable-neet-coaching-ghaziabad', destination: '/best-neet-coaching-ghaziabad', permanent: true },
+  {
+    source: '/top-10-neet-coaching-ghaziabad',
+    destination: '/best-neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/which-neet-coaching-is-best-in-ghaziabad',
+    destination: '/best-neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/affordable-neet-coaching-ghaziabad',
+    destination: '/best-neet-coaching-ghaziabad',
+    permanent: true,
+  },
 
   // Gurugram
-  { source: '/top-5-neet-coaching-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
-  { source: '/top-10-neet-coaching-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
-  { source: '/which-neet-coaching-is-best-in-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
-  { source: '/affordable-neet-coaching-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
+  {
+    source: '/top-5-neet-coaching-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/top-10-neet-coaching-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/which-neet-coaching-is-best-in-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/affordable-neet-coaching-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
 
   // Greater Noida
-  { source: '/top-10-neet-coaching-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
-  { source: '/which-neet-coaching-is-best-in-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
-  { source: '/affordable-neet-coaching-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
+  {
+    source: '/top-10-neet-coaching-greater-noida',
+    destination: '/best-neet-coaching-greater-noida',
+    permanent: true,
+  },
+  {
+    source: '/which-neet-coaching-is-best-in-greater-noida',
+    destination: '/best-neet-coaching-greater-noida',
+    permanent: true,
+  },
+  {
+    source: '/affordable-neet-coaching-greater-noida',
+    destination: '/best-neet-coaching-greater-noida',
+    permanent: true,
+  },
 
   // Noida
-  { source: '/top-10-neet-coaching-noida', destination: '/best-neet-coaching-noida', permanent: true },
-  { source: '/which-neet-coaching-is-best-in-noida', destination: '/best-neet-coaching-noida', permanent: true },
-  { source: '/affordable-neet-coaching-noida', destination: '/best-neet-coaching-noida', permanent: true },
-];
+  {
+    source: '/top-10-neet-coaching-noida',
+    destination: '/best-neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/which-neet-coaching-is-best-in-noida',
+    destination: '/best-neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/affordable-neet-coaching-noida',
+    destination: '/best-neet-coaching-noida',
+    permanent: true,
+  },
+]
 ```
 
 ### Step 3: Register Redirects in next.config.mjs
+
 ```javascript
 // In next.config.mjs, add to redirects array:
 const allRedirects = [
   // existing redirects...
-  ...cannibalizationConsolidationRedirects,  // ← Add this
-];
+  ...cannibalizationConsolidationRedirects, // ← Add this
+]
 ```
 
 ### Step 4: Test & Verify (1 hour)
+
 ```bash
 # Run audit script to check for chains, conflicts, duplicates
 npm run audit:redirects
@@ -166,6 +242,7 @@ node scripts/audit-redirects.mjs
 ```
 
 ### Step 5: Deploy & Monitor (2-4 weeks)
+
 ```
 1. Commit and deploy to staging first
 2. Test all redirect paths in staging
@@ -182,6 +259,7 @@ node scripts/audit-redirects.mjs
 ## CITIES AFFECTED BY ISSUE #3
 
 Each city with multiple variants:
+
 - **Faridabad**: 5 pages → 4 redirects
 - **Ghaziabad**: 4 pages → 3 redirects
 - **Gurugram**: 5 pages → 4 redirects
@@ -197,14 +275,14 @@ Each city with multiple variants:
 
 ## ESTIMATED EFFORT
 
-| Task | Effort | Owner |
-|------|--------|-------|
-| Decision on tuition vs tutor | 1 day | Tech Lead |
-| Create redirect batch | 2-3 hours | Developer |
-| Test with audit script | 1 hour | QA |
-| Deploy to staging | 1 hour | DevOps |
-| Monitor & verify | 2-4 weeks | SEO Lead |
-| GSC re-indexing request | 15 min | SEO Lead |
+| Task                         | Effort    | Owner     |
+| ---------------------------- | --------- | --------- |
+| Decision on tuition vs tutor | 1 day     | Tech Lead |
+| Create redirect batch        | 2-3 hours | Developer |
+| Test with audit script       | 1 hour    | QA        |
+| Deploy to staging            | 1 hour    | DevOps    |
+| Monitor & verify             | 2-4 weeks | SEO Lead  |
+| GSC re-indexing request      | 15 min    | SEO Lead  |
 
 **Total active time**: ~1-2 days (most time is waiting for GSC to re-index)
 
@@ -213,9 +291,11 @@ Each city with multiple variants:
 ## ADDITIONAL SECONDARY FIXES
 
 ### Secondary Issue #4: Blog Navigation (LOW EFFORT)
+
 **File**: `src/data/navigationConfig.ts` (lines 241-263)
 
 **Current**:
+
 ```javascript
 {
   id: 'all-posts',
@@ -235,6 +315,7 @@ Each city with multiple variants:
 ```
 
 **Fix**: Either remove duplicate items, or use URLs with filters:
+
 ```javascript
 // Option A: Remove dupes (keep only "All Articles")
 // Option B: Use filters
@@ -257,6 +338,7 @@ Each city with multiple variants:
 ## MONITORING AFTER FIX
 
 ### Watch these metrics:
+
 1. **GSC Indexing Status**
    - Old URLs should go to "Excluded"
    - Canonical should stay "Live"
@@ -282,10 +364,11 @@ Each city with multiple variants:
 ## ROLLBACK PLAN (if needed)
 
 If issue detected after deployment:
+
 1. Remove all cannibalization redirects from next.config.mjs
 2. Re-deploy
 3. Wait 24 hours for Googlebot to re-crawl
-4. Investigate root cause (usually:  redirect chain, 404, or redirect to non-existent page)
+4. Investigate root cause (usually: redirect chain, 404, or redirect to non-existent page)
 
 ---
 

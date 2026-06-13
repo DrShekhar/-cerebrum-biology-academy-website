@@ -1,6 +1,21 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import { Trophy, Users, MessageCircle, Play, Headphones, MapPin, Star, GraduationCap, Target, Building, Shield, ArrowRight, BookOpen, CheckCircle } from 'lucide-react'
+import {
+  Trophy,
+  Users,
+  MessageCircle,
+  Play,
+  Headphones,
+  MapPin,
+  Star,
+  GraduationCap,
+  Target,
+  Building,
+  Shield,
+  ArrowRight,
+  BookOpen,
+  CheckCircle,
+} from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
 import { PricingSection } from '@/components/city/PricingSection'
@@ -11,7 +26,12 @@ function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => { if (entry.isIntersecting) setIsVisible(true) }, { threshold: 0.1 })
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true)
+      },
+      { threshold: 0.1 }
+    )
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
   }, [])
@@ -32,20 +52,24 @@ export default function PageContent() {
           <div className="absolute top-20 right-20 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
           <div className="absolute bottom-20 left-20 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
         </div>
-        
+
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8 inline-block">
-            <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-4 py-2 rounded-full">Central India Hub - Best NEET Coaching in Nagpur</span>
+            <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-4 py-2 rounded-full">
+              Central India Hub - Best NEET Coaching in Nagpur
+            </span>
           </div>
-          
+
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
-            Best NEET Coaching<br className="hidden sm:block" /> in <span className="text-blue-600">Nagpur</span>
+            Best NEET Coaching
+            <br className="hidden sm:block" /> in <span className="text-blue-600">Nagpur</span>
           </h1>
-          
+
           <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto font-light">
-            Top NEET Biology coaching in Central India. AIIMS faculty. 98% success rate. 695/720 top score.
+            Top NEET Biology coaching in Central India. AIIMS faculty. 98% success rate. 695/720 top
+            score.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <a href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
               <Button className="w-full sm:w-auto bg-green-500 hover:bg-green-600">
@@ -58,8 +82,11 @@ export default function PageContent() {
               Watch Demo Class
             </Button>
           </div>
-          
-          <div ref={stats.ref} className={`grid grid-cols-1 md:grid-cols-3 gap-8 bg-white/60 backdrop-blur-lg rounded-2xl p-8 transition-opacity duration-1000 ${stats.isVisible ? 'opacity-100' : 'opacity-0'}`}>
+
+          <div
+            ref={stats.ref}
+            className={`grid grid-cols-1 md:grid-cols-3 gap-8 bg-white/60 backdrop-blur-lg rounded-2xl p-8 transition-opacity duration-1000 ${stats.isVisible ? 'opacity-100' : 'opacity-0'}`}
+          >
             <div className="text-center">
               <div className="flex justify-center mb-3">
                 <Trophy className="w-8 h-8 text-yellow-500" />
@@ -87,9 +114,14 @@ export default function PageContent() {
 
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-gray-900 mb-16">Why Choose Cerebrum for NEET in Nagpur?</h2>
-          
-          <div ref={features.ref} className={`grid grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-1000 ${features.isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-gray-900 mb-16">
+            Why Choose Cerebrum for NEET in Nagpur?
+          </h2>
+
+          <div
+            ref={features.ref}
+            className={`grid grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-1000 ${features.isVisible ? 'opacity-100' : 'opacity-0'}`}
+          >
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
               <div className="flex items-start">
                 <div className="flex-shrink-0">
@@ -99,7 +131,9 @@ export default function PageContent() {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Central India Excellence</h3>
-                  <p className="text-gray-600">Perfect hub for Central India students. AIIMS faculty network strong here.</p>
+                  <p className="text-gray-600">
+                    Perfect hub for Central India students. AIIMS faculty network strong here.
+                  </p>
                 </div>
               </div>
             </div>
@@ -112,8 +146,12 @@ export default function PageContent() {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Maharashtra Board Integration</h3>
-                  <p className="text-gray-600">Seamless board + NEET curriculum integration. Expert guidance on both fronts.</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    Maharashtra Board Integration
+                  </h3>
+                  <p className="text-gray-600">
+                    Seamless board + NEET curriculum integration. Expert guidance on both fronts.
+                  </p>
                 </div>
               </div>
             </div>
@@ -126,8 +164,13 @@ export default function PageContent() {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Flexible Learning Options</h3>
-                  <p className="text-gray-600">Online + offline batches. Live interactive classes. Recorded content available 24x7.</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    Flexible Learning Options
+                  </h3>
+                  <p className="text-gray-600">
+                    Online + offline batches. Live interactive classes. Recorded content available
+                    24x7.
+                  </p>
                 </div>
               </div>
             </div>
@@ -141,7 +184,9 @@ export default function PageContent() {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Complete Study Resources</h3>
-                  <p className="text-gray-600">NCERT + advanced materials, chapter tests, 12 full mocks, career counseling.</p>
+                  <p className="text-gray-600">
+                    NCERT + advanced materials, chapter tests, 12 full mocks, career counseling.
+                  </p>
                 </div>
               </div>
             </div>
@@ -151,12 +196,31 @@ export default function PageContent() {
 
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-gray-900 mb-4">NEET Coaching in Nagpur Areas</h2>
-          <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">Coaching centers across prime localities in Nagpur, Maharashtra</p>
-          
-          <div ref={areas.ref} className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 transition-opacity duration-1000 ${areas.isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            {['Dharampeth', 'Ramdaspeth', 'Sadar', 'Itwari', 'Sitabuldi', 'Wardi', 'Central Avenue', 'Hanuman Nagar'].map((area) => (
-              <div key={area} className="flex items-center gap-3 bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-gray-900 mb-4">
+            NEET Coaching in Nagpur Areas
+          </h2>
+          <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+            Coaching centers across prime localities in Nagpur, Maharashtra
+          </p>
+
+          <div
+            ref={areas.ref}
+            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 transition-opacity duration-1000 ${areas.isVisible ? 'opacity-100' : 'opacity-0'}`}
+          >
+            {[
+              'Dharampeth',
+              'Ramdaspeth',
+              'Sadar',
+              'Itwari',
+              'Sitabuldi',
+              'Wardi',
+              'Central Avenue',
+              'Hanuman Nagar',
+            ].map((area) => (
+              <div
+                key={area}
+                className="flex items-center gap-3 bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow"
+              >
                 <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0" />
                 <span className="text-gray-700 font-medium">{area}</span>
               </div>
@@ -167,45 +231,52 @@ export default function PageContent() {
 
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-gray-900 mb-16">Frequently Asked Questions</h2>
-          
-          <div ref={faq.ref} className={`space-y-6 transition-opacity duration-1000 ${faq.isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-gray-900 mb-16">
+            Frequently Asked Questions
+          </h2>
+
+          <div
+            ref={faq.ref}
+            className={`space-y-6 transition-opacity duration-1000 ${faq.isVisible ? 'opacity-100' : 'opacity-0'}`}
+          >
             {[
               {
                 q: 'Is Nagpur good for NEET preparation?',
-                a: 'Excellent! Central India hub with peaceful environment, good colleges, and strong AIIMS faculty presence.'
+                a: 'Excellent! Central India hub with peaceful environment, good colleges, and strong AIIMS faculty presence.',
               },
               {
                 q: 'Do you have centers in Dharampeth/Sadar?',
-                a: 'Yes! Main center centrally located with online + offline batches available across Nagpur.'
+                a: 'Yes! Main center centrally located with online + offline batches available across Nagpur.',
               },
               {
                 q: 'How is Maharashtra board integration done?',
-                a: 'Dedicated curriculum bridging Maharashtra board with NEET. Students excel in both board exams and NEET.'
+                a: 'Dedicated curriculum bridging Maharashtra board with NEET. Students excel in both board exams and NEET.',
               },
               {
                 q: 'What is the mentoring approach?',
-                a: 'Small batches (15-20), personalized mentoring, weekly progress meetings, individual study plans.'
+                a: 'Small batches (15-20), personalized mentoring, weekly progress meetings, individual study plans.',
               },
               {
                 q: 'How many mock tests are conducted?',
-                a: 'Minimum 12 full-length NEET mocks annually with rank prediction and detailed performance analysis.'
+                a: 'Minimum 12 full-length NEET mocks annually with rank prediction and detailed performance analysis.',
               },
               {
                 q: 'Which medical colleges can Nagpur students target?',
-                a: 'Nagpur students can target Government Medical College Nagpur, AIIMS Nagpur, Indira Gandhi Government Medical College, NKP Salve Institute, and through strong NEET scores, top medical colleges across India.'
+                a: 'Nagpur students can target Government Medical College Nagpur, AIIMS Nagpur, Indira Gandhi Government Medical College, NKP Salve Institute, and through strong NEET scores, top medical colleges across India.',
               },
               {
                 q: 'What schools do Nagpur NEET students come from?',
-                a: 'Our Nagpur students attend Centre Point School, Bhavan\'s B.P. Vidya Mandir, Somalwar Nikalas, Sandipani School, Delhi Public School Nagpur, and other premier institutions across the city.'
+                a: "Our Nagpur students attend Centre Point School, Bhavan's B.P. Vidya Mandir, Somalwar Nikalas, Sandipani School, Delhi Public School Nagpur, and other premier institutions across the city.",
               },
               {
                 q: 'Do you cover Maharashtra state board for NEET?',
-                a: 'Yes, our NCERT-focused curriculum covers 100% of NEET. Maharashtra board students benefit fully since NEET is entirely NCERT-based. We seamlessly bridge any curriculum differences.'
+                a: 'Yes, our NCERT-focused curriculum covers 100% of NEET. Maharashtra board students benefit fully since NEET is entirely NCERT-based. We seamlessly bridge any curriculum differences.',
               },
-            
             ].map((item, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors">
+              <div
+                key={idx}
+                className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors"
+              >
                 <div className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-green-600 mr-4 flex-shrink-0 mt-1" />
                   <div className="flex-1">
@@ -221,9 +292,13 @@ export default function PageContent() {
 
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">Crack NEET from Nagpur!</h2>
-          <p className="text-xl text-blue-100 mb-8">Join Central India's premier NEET coaching. Excellence in preparation guaranteed.</p>
-          
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+            Crack NEET from Nagpur!
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Join Central India's premier NEET coaching. Excellence in preparation guaranteed.
+          </p>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
               <Button className="w-full sm:w-auto bg-white text-blue-600 hover:bg-gray-100 font-bold">
@@ -235,11 +310,11 @@ export default function PageContent() {
               Call: 8826444334
             </Button>
           </div>
-          
+
           <p className="text-blue-100 mt-8 text-sm">Website: cerebrumbiologyacademy.com</p>
         </div>
       </section>
-      
+
       {/* Schools Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
@@ -248,7 +323,16 @@ export default function PageContent() {
               Students from These Nagpur Schools Trust Us
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
-              {['Centre Point School', "Bhavan's B.P. Vidya Mandir", 'Somalwar Nikalas School', 'Sandipani School', 'Delhi Public School Nagpur', 'Saraswati Vidyalaya', 'Bishop Cotton School', 'Ryan International Nagpur'].map((school) => (
+              {[
+                'Centre Point School',
+                "Bhavan's B.P. Vidya Mandir",
+                'Somalwar Nikalas School',
+                'Sandipani School',
+                'Delhi Public School Nagpur',
+                'Saraswati Vidyalaya',
+                'Bishop Cotton School',
+                'Ryan International Nagpur',
+              ].map((school) => (
                 <span
                   key={school}
                   className="bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium"

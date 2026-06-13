@@ -54,7 +54,7 @@ export const faridabadMetroStations: Record<string, FaridabadMetroStation> = {
     description:
       'Mewala Maharajpur Metro serves Sectors 27 and 28. Students from industrial and residential areas near this station access our Sector 17 center easily.',
     walkingTime: '25 minutes from our center',
-    coordinates: { lat: 28.4611, lng: 77.3100 },
+    coordinates: { lat: 28.4611, lng: 77.31 },
   },
   'sector-28-metro': {
     name: 'Sector 28',
@@ -90,7 +90,7 @@ export const faridabadMetroStations: Record<string, FaridabadMetroStation> = {
     description:
       'Old Faridabad Metro serves the historic heart of the city. Students from business families and the old city area access our coaching center from this central station.',
     walkingTime: '12 minutes from our center',
-    coordinates: { lat: 28.4200, lng: 77.3200 },
+    coordinates: { lat: 28.42, lng: 77.32 },
   },
   'neelam-chowk-metro': {
     name: 'Neelam Chowk Ajronda',
@@ -114,7 +114,7 @@ export const faridabadMetroStations: Record<string, FaridabadMetroStation> = {
     description:
       'Bata Chowk Metro is the CLOSEST station to our Sector 17 center - just 5 minutes walk! Students from all over Faridabad use this station to reach us.',
     walkingTime: '5 minutes from our center',
-    coordinates: { lat: 28.4050, lng: 77.3150 },
+    coordinates: { lat: 28.405, lng: 77.315 },
   },
   'escorts-mujesar-metro': {
     name: 'Escorts Mujesar',
@@ -122,7 +122,12 @@ export const faridabadMetroStations: Record<string, FaridabadMetroStation> = {
     line: 'Violet',
     lineColor: '#9400D3',
     nearbyAreas: ['Ballabgarh', 'Mujesar', 'Greater Faridabad', 'Sector 75-89'],
-    landmarks: ['Escorts Factory', 'Mujesar Village', 'Ballabgarh Road', 'Greater Faridabad Junction'],
+    landmarks: [
+      'Escorts Factory',
+      'Mujesar Village',
+      'Ballabgarh Road',
+      'Greater Faridabad Junction',
+    ],
     description:
       'Escorts Mujesar Metro is the terminal station serving Ballabgarh and all of Greater Faridabad (Sectors 75-89). Students from BPTP, Omaxe, RPS, and other premium townships access our center from here.',
     walkingTime: '15 minutes from our center',

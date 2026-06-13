@@ -107,9 +107,7 @@ const AdaptiveTestingPage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="text-center space-y-8 animate-fadeInUp"
-          >
+          <div className="text-center space-y-8 animate-fadeInUp">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <div className="p-3 sm:p-4 bg-indigo-500 rounded-xl">
                 <Brain className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white" />
@@ -163,9 +161,7 @@ const AdaptiveTestingPage: React.FC = () => {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Adaptive Features</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Our system combines proven psychometric models with AI to deliver accurate and
@@ -282,9 +278,7 @@ const AdaptiveTestingPage: React.FC = () => {
       {/* Technology Stack */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Built with Advanced Psychometrics
             </h2>
@@ -416,9 +410,7 @@ const AdaptiveTestingPage: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Benefits for Students & Educators
             </h2>
@@ -541,9 +533,7 @@ const AdaptiveTestingPage: React.FC = () => {
       {/* Configuration Panel */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Customize Your Test Experience
             </h2>
@@ -733,9 +723,7 @@ const AdaptiveTestingPage: React.FC = () => {
       {/* Call to Action */}
       <section className="py-20 bg-indigo-500">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <div
-            className="space-y-8 animate-fadeInUp"
-          >
+          <div className="space-y-8 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-white">Ready to Experience Adaptive Testing?</h2>
             <p className="text-xl text-blue-100">
               Try our live demo to see how AI-powered adaptive assessment can transform your

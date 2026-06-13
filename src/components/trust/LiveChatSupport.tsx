@@ -263,227 +263,218 @@ const LiveChatSupport: React.FC = () => {
       </button>
 
       {/* Chat Widget */}
-{isOpen && (
-          <div
-            className="fixed bottom-6 right-6 z-50 w-96 bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate-fadeInUp"
-          >
-            {/* Header */}
-            <div className="bg-gradient-to-r from-green-600 to-blue-600 p-4 text-white">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="relative">
-                    <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-2xl">
-                      {currentAgent ? currentAgent.avatar : '🎓'}
-                    </div>
-                    {currentAgent && (
-                      <div
-                        className={`absolute -bottom-1 -right-1 w-4 h-4 ${getStatusColor(currentAgent.status)} rounded-full border-2 border-white`}
-                      />
-                    )}
+      {isOpen && (
+        <div className="fixed bottom-6 right-6 z-50 w-96 bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate-fadeInUp">
+          {/* Header */}
+          <div className="bg-gradient-to-r from-green-600 to-blue-600 p-4 text-white">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="relative">
+                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-2xl">
+                    {currentAgent ? currentAgent.avatar : '🎓'}
                   </div>
-                  <div>
-                    <div className="font-semibold">
-                      {currentAgent ? currentAgent.name : 'Cerebrum Support'}
-                    </div>
-                    <div className="text-xs text-green-100">
-                      {currentAgent
-                        ? `${currentAgent.role} • ${currentAgent.responseTime} response`
-                        : "We're here to help!"}
-                    </div>
-                  </div>
+                  {currentAgent && (
+                    <div
+                      className={`absolute -bottom-1 -right-1 w-4 h-4 ${getStatusColor(currentAgent.status)} rounded-full border-2 border-white`}
+                    />
+                  )}
                 </div>
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => setIsMinimized(!isMinimized)}
-                    className="p-1 hover:bg-white/20 rounded"
-                  >
-                    {isMinimized ? (
-                      <Maximize2 className="w-4 h-4" />
-                    ) : (
-                      <Minimize2 className="w-4 h-4" />
-                    )}
-                  </button>
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="p-1 hover:bg-white/20 rounded"
-                  >
-                    <X className="w-4 h-4" />
-                  </button>
+                <div>
+                  <div className="font-semibold">
+                    {currentAgent ? currentAgent.name : 'Cerebrum Support'}
+                  </div>
+                  <div className="text-xs text-green-100">
+                    {currentAgent
+                      ? `${currentAgent.role} • ${currentAgent.responseTime} response`
+                      : "We're here to help!"}
+                  </div>
                 </div>
               </div>
-
-              {currentAgent && !isMinimized && (
-                <div className="mt-3 flex flex-wrap gap-1">
-                  {currentAgent.expertise.map((skill, index) => (
-                    <span key={index} className="px-2 py-1 bg-white/20 rounded-full text-xs">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              )}
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setIsMinimized(!isMinimized)}
+                  className="p-1 hover:bg-white/20 rounded"
+                >
+                  {isMinimized ? (
+                    <Maximize2 className="w-4 h-4" />
+                  ) : (
+                    <Minimize2 className="w-4 h-4" />
+                  )}
+                </button>
+                <button onClick={() => setIsOpen(false)} className="p-1 hover:bg-white/20 rounded">
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
             </div>
 
-            {!isMinimized && (
-              <>
-                {/* Messages */}
-                <div className="h-96 overflow-y-auto p-4 space-y-4 bg-gray-50">
-                  {messages.length === 0 ? (
-                    <div className="text-center space-y-4">
-                      <div className="text-6xl">👋</div>
-                      <div>
-                        <h3 className="font-semibold text-gray-900">
-                          Welcome to Cerebrum Support!
-                        </h3>
-                        <p className="text-sm text-gray-600 mt-1">
-                          How can we help you today? Choose a quick action or type your question.
-                        </p>
+            {currentAgent && !isMinimized && (
+              <div className="mt-3 flex flex-wrap gap-1">
+                {currentAgent.expertise.map((skill, index) => (
+                  <span key={index} className="px-2 py-1 bg-white/20 rounded-full text-xs">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {!isMinimized && (
+            <>
+              {/* Messages */}
+              <div className="h-96 overflow-y-auto p-4 space-y-4 bg-gray-50">
+                {messages.length === 0 ? (
+                  <div className="text-center space-y-4">
+                    <div className="text-6xl">👋</div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900">Welcome to Cerebrum Support!</h3>
+                      <p className="text-sm text-gray-600 mt-1">
+                        How can we help you today? Choose a quick action or type your question.
+                      </p>
+                    </div>
+
+                    {showQuickActions && (
+                      <div className="grid grid-cols-2 gap-2 mt-4">
+                        {quickActions.map((action) => (
+                          <button
+                            key={action.id}
+                            onClick={() => handleQuickAction(action.id)}
+                            className="p-3 bg-white border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-400 transition-colors text-left"
+                          >
+                            <div className="text-lg mb-1">{action.icon}</div>
+                            <div className="text-xs font-medium text-gray-900">{action.text}</div>
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  messages.map((message) => (
+                    <div key={message.id} className="space-y-2">
+                      <div
+                        className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+                      >
+                        <div
+                          className={`max-w-xs lg:max-w-md px-4 py-2 rounded-2xl ${
+                            message.sender === 'user'
+                              ? 'bg-green-600 text-white'
+                              : 'bg-white border border-gray-200 text-gray-900'
+                          }`}
+                        >
+                          {message.sender === 'agent' && (
+                            <div className="text-xs text-gray-500 mb-1 font-medium">
+                              {message.agentName}
+                            </div>
+                          )}
+                          <div>{message.text}</div>
+                          <div
+                            className={`text-xs mt-1 ${
+                              message.sender === 'user' ? 'text-green-100' : 'text-gray-400'
+                            }`}
+                          >
+                            {formatTime(message.timestamp)}
+                          </div>
+                        </div>
                       </div>
 
-                      {showQuickActions && (
-                        <div className="grid grid-cols-2 gap-2 mt-4">
-                          {quickActions.map((action) => (
+                      {message.quickReplies && (
+                        <div className="flex flex-wrap gap-2 ml-4">
+                          {message.quickReplies.map((reply, index) => (
                             <button
-                              key={action.id}
-                              onClick={() => handleQuickAction(action.id)}
-                              className="p-3 bg-white border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-400 transition-colors text-left"
+                              key={index}
+                              onClick={() => handleQuickReply(reply)}
+                              className="px-3 py-1 bg-white border border-green-400 text-green-600 rounded-full text-xs hover:bg-green-50 transition-colors"
                             >
-                              <div className="text-lg mb-1">{action.icon}</div>
-                              <div className="text-xs font-medium text-gray-900">{action.text}</div>
+                              {reply}
                             </button>
                           ))}
                         </div>
                       )}
                     </div>
-                  ) : (
-                    messages.map((message) => (
-                      <div key={message.id} className="space-y-2">
+                  ))
+                )}
+
+                {isTyping && (
+                  <div className="flex justify-start">
+                    <div className="bg-white border border-gray-200 rounded-2xl px-4 py-2 max-w-xs">
+                      <div className="flex space-x-1">
+                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" />
                         <div
-                          className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-                        >
-                          <div
-                            className={`max-w-xs lg:max-w-md px-4 py-2 rounded-2xl ${
-                              message.sender === 'user'
-                                ? 'bg-green-600 text-white'
-                                : 'bg-white border border-gray-200 text-gray-900'
-                            }`}
-                          >
-                            {message.sender === 'agent' && (
-                              <div className="text-xs text-gray-500 mb-1 font-medium">
-                                {message.agentName}
-                              </div>
-                            )}
-                            <div>{message.text}</div>
-                            <div
-                              className={`text-xs mt-1 ${
-                                message.sender === 'user' ? 'text-green-100' : 'text-gray-400'
-                              }`}
-                            >
-                              {formatTime(message.timestamp)}
-                            </div>
-                          </div>
-                        </div>
-
-                        {message.quickReplies && (
-                          <div className="flex flex-wrap gap-2 ml-4">
-                            {message.quickReplies.map((reply, index) => (
-                              <button
-                                key={index}
-                                onClick={() => handleQuickReply(reply)}
-                                className="px-3 py-1 bg-white border border-green-400 text-green-600 rounded-full text-xs hover:bg-green-50 transition-colors"
-                              >
-                                {reply}
-                              </button>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ))
-                  )}
-
-                  {isTyping && (
-                    <div className="flex justify-start">
-                      <div className="bg-white border border-gray-200 rounded-2xl px-4 py-2 max-w-xs">
-                        <div className="flex space-x-1">
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" />
-                          <div
-                            className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                            style={{ animationDelay: '0.1s' }}
-                          />
-                          <div
-                            className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                            style={{ animationDelay: '0.2s' }}
-                          />
-                        </div>
+                          className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                          style={{ animationDelay: '0.1s' }}
+                        />
+                        <div
+                          className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                          style={{ animationDelay: '0.2s' }}
+                        />
                       </div>
                     </div>
-                  )}
+                  </div>
+                )}
 
-                  <div ref={messagesEndRef} />
+                <div ref={messagesEndRef} />
+              </div>
+
+              {/* Input */}
+              <div className="p-4 border-t border-gray-200 bg-white">
+                <div className="flex items-center gap-2">
+                  <div className="flex-1 relative">
+                    <input
+                      type="text"
+                      value={currentMessage}
+                      onChange={(e) => setCurrentMessage(e.target.value)}
+                      onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+                      placeholder="Type your message..."
+                      className="w-full px-4 py-2 border border-gray-300 rounded-full focus:ring-2 focus:ring-green-600 focus:border-green-600 pr-20"
+                    />
+                    <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex items-center gap-1">
+                      <button className="p-1 hover:bg-gray-100 rounded">
+                        <Paperclip className="w-4 h-4 text-gray-400" />
+                      </button>
+                      <button className="p-1 hover:bg-gray-100 rounded">
+                        <Smile className="w-4 h-4 text-gray-400" />
+                      </button>
+                    </div>
+                  </div>
+                  <button
+                    onClick={handleSendMessage}
+                    disabled={!currentMessage.trim()}
+                    className="p-2 bg-green-600 text-white rounded-full hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  >
+                    <Send className="w-4 h-4" />
+                  </button>
                 </div>
 
-                {/* Input */}
-                <div className="p-4 border-t border-gray-200 bg-white">
-                  <div className="flex items-center gap-2">
-                    <div className="flex-1 relative">
-                      <input
-                        type="text"
-                        value={currentMessage}
-                        onChange={(e) => setCurrentMessage(e.target.value)}
-                        onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                        placeholder="Type your message..."
-                        className="w-full px-4 py-2 border border-gray-300 rounded-full focus:ring-2 focus:ring-green-600 focus:border-green-600 pr-20"
-                      />
-                      <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex items-center gap-1">
-                        <button className="p-1 hover:bg-gray-100 rounded">
-                          <Paperclip className="w-4 h-4 text-gray-400" />
-                        </button>
-                        <button className="p-1 hover:bg-gray-100 rounded">
-                          <Smile className="w-4 h-4 text-gray-400" />
-                        </button>
-                      </div>
-                    </div>
-                    <button
-                      onClick={handleSendMessage}
-                      disabled={!currentMessage.trim()}
-                      className="p-2 bg-green-600 text-white rounded-full hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                    >
-                      <Send className="w-4 h-4" />
+                {/* Additional Actions */}
+                <div className="flex items-center justify-between mt-3 text-xs text-gray-500">
+                  <div className="flex items-center gap-4">
+                    <button className="flex items-center gap-1 hover:text-green-600">
+                      <Phone className="w-3 h-3" />
+                      Call
+                    </button>
+                    <button className="flex items-center gap-1 hover:text-green-600">
+                      <Video className="w-3 h-3" />
+                      Video
+                    </button>
+                    <button className="flex items-center gap-1 hover:text-green-600">
+                      <Mail className="w-3 h-3" />
+                      Email
                     </button>
                   </div>
-
-                  {/* Additional Actions */}
-                  <div className="flex items-center justify-between mt-3 text-xs text-gray-500">
-                    <div className="flex items-center gap-4">
-                      <button className="flex items-center gap-1 hover:text-green-600">
-                        <Phone className="w-3 h-3" />
-                        Call
-                      </button>
-                      <button className="flex items-center gap-1 hover:text-green-600">
-                        <Video className="w-3 h-3" />
-                        Video
-                      </button>
-                      <button className="flex items-center gap-1 hover:text-green-600">
-                        <Mail className="w-3 h-3" />
-                        Email
-                      </button>
+                  {connectionTime && (
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-3 h-3" />
+                      Connected {formatTime(connectionTime)}
                     </div>
-                    {connectionTime && (
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-3 h-3" />
-                        Connected {formatTime(connectionTime)}
-                      </div>
-                    )}
-                  </div>
+                  )}
                 </div>
-              </>
-            )}
-          </div>
-        )}
-{/* Offline Message */}
+              </div>
+            </>
+          )}
+        </div>
+      )}
+      {/* Offline Message */}
       {isOpen && !currentAgent && (
-        <div
-          className="fixed bottom-24 right-6 z-40 bg-yellow-100 border border-yellow-300 rounded-lg p-3 text-sm text-yellow-800 max-w-xs animate-fadeInUp"
-        >
+        <div className="fixed bottom-24 right-6 z-40 bg-yellow-100 border border-yellow-300 rounded-lg p-3 text-sm text-yellow-800 max-w-xs animate-fadeInUp">
           <div className="flex items-center gap-2">
             <AlertCircle className="w-4 h-4 flex-shrink-0" />
             <span>All agents are busy. Average wait time: 3-5 minutes</span>

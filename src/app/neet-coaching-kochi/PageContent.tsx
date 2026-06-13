@@ -203,7 +203,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20kochi.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20kochi.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -381,7 +385,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20kochi.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20kochi.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -422,8 +430,6 @@ export default function PageContent() {
         </div>
       </section>
 
-
-      
       {/* Schools Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
@@ -432,7 +438,16 @@ export default function PageContent() {
               Students from These Kochi Schools Trust Us
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
-              {['Choice School Kochi', 'Rajagiri Public School', 'Toc-H Public School', "Bhavan's Vidya Mandir", 'Chinmaya Vidyalaya', 'GEMS Our Own School', 'The International School Kochi', 'Gregorian Public School'].map((school) => (
+              {[
+                'Choice School Kochi',
+                'Rajagiri Public School',
+                'Toc-H Public School',
+                "Bhavan's Vidya Mandir",
+                'Chinmaya Vidyalaya',
+                'GEMS Our Own School',
+                'The International School Kochi',
+                'Gregorian Public School',
+              ].map((school) => (
                 <span
                   key={school}
                   className="bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium"

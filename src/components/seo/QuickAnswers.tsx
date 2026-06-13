@@ -46,13 +46,13 @@ export function QuickAnswers({ locality = 'South Delhi', className = '' }: Quick
   ]
 
   return (
-    <section className={`bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 md:p-8 ${className}`}>
+    <section
+      className={`bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 md:p-8 ${className}`}
+    >
       <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
         Quick Answers: NEET Coaching in {locality}
       </h2>
-      <p className="text-gray-600 mb-6">
-        Fast facts about Cerebrum Biology Academy
-      </p>
+      <p className="text-gray-600 mb-6">Fast facts about Cerebrum Biology Academy</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {quickAnswers.map((qa, index) => (
@@ -78,11 +78,7 @@ export function QuickAnswers({ locality = 'South Delhi', className = '' }: Quick
               </div>
             )}
 
-            <div
-              itemProp="acceptedAnswer"
-              itemScope
-              itemType="https://schema.org/Answer"
-            >
+            <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
               <p className="text-sm text-gray-700 leading-relaxed" itemProp="text">
                 {qa.answer}
               </p>
@@ -98,7 +94,10 @@ export function QuickAnswers({ locality = 'South Delhi', className = '' }: Quick
             <span className="text-green-500 font-bold">+</span>
             <div>
               <strong className="text-gray-900">Expert Faculty:</strong>
-              <span className="text-gray-600"> AIIMS/JIPMER trained with {CEREBRUM_METRICS.facultyExperienceText} experience</span>
+              <span className="text-gray-600">
+                {' '}
+                AIIMS/JIPMER trained with {CEREBRUM_METRICS.facultyExperienceText} experience
+              </span>
             </div>
           </div>
           <div className="flex items-start gap-3">
@@ -112,7 +111,10 @@ export function QuickAnswers({ locality = 'South Delhi', className = '' }: Quick
             <span className="text-green-500 font-bold">+</span>
             <div>
               <strong className="text-gray-900">Proven Results:</strong>
-              <span className="text-gray-600"> {CEREBRUM_METRICS.medicalSelectionsText} medical college selections</span>
+              <span className="text-gray-600">
+                {' '}
+                {CEREBRUM_METRICS.medicalSelectionsText} medical college selections
+              </span>
             </div>
           </div>
         </div>

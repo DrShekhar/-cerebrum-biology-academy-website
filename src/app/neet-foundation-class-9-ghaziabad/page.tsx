@@ -2,7 +2,8 @@ import { Metadata } from 'next'
 import NEETFoundationClass9GhaziabadContent from './NEETFoundationClass9GhaziabadContent'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
-const ghaziabadAddress = 'B-45, Sector 62, Noida, UP 201301 (20-25 min via Blue Line Metro from Vaishali/Kaushambi Ghaziabad)'
+const ghaziabadAddress =
+  'B-45, Sector 62, Noida, UP 201301 (20-25 min via Blue Line Metro from Vaishali/Kaushambi Ghaziabad)'
 
 export const metadata: Metadata = {
   title: 'NEET Foundation Class 9 in Ghaziabad | Early NEET Preparation',
@@ -32,7 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 9 in Ghaziabad | Early NEET Preparation',
-    description: 'Start NEET preparation from Class 9 in Ghaziabad. 4-year head start, NCERT foundation, board + NEET dual prep. Expert faculty at Sector 62 Noida center. Book free demo.',
+    description:
+      'Start NEET preparation from Class 9 in Ghaziabad. 4-year head start, NCERT foundation, board + NEET dual prep. Expert faculty at Sector 62 Noida center. Book free demo.',
   },
 }
 
@@ -146,7 +148,11 @@ export default function NEETFoundationClass9GhaziabadPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+        knowsAbout={[
+          'NEET Ghaziabad',
+          'NEET Biology Ghaziabad',
+          'Medical entrance coaching Ghaziabad',
+        ]}
       />
       <script
         type="application/ld+json"

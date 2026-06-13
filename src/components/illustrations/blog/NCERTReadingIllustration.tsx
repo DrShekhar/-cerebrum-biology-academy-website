@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function NCERTReadingIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -91,8 +91,7 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Title Section */}
-      <g
-      >
+      <g>
         <rect x="175" y="15" width="300" height="50" rx="25" fill="#14B8A6" opacity="0.1" />
         <text x="325" y="45" fontSize="20" fill="#0D9488" textAnchor="middle" fontWeight="bold">
           NCERT READING STRATEGY
@@ -103,8 +102,7 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* === LEFT SECTION: Class 11 Book Stack === */}
-      <g
-      >
+      <g>
         {/* Class 11 Book */}
         <g filter="url(#ncertBookShadow)">
           {/* Book spine */}
@@ -143,15 +141,7 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
         </text>
 
         {/* Book decoration */}
-        <rect
-          x="60"
-          y="200"
-          width="90"
-          height="6"
-          rx="3"
-          fill="#FFFFFF"
-          opacity="0.6"
-        />
+        <rect x="60" y="200" width="90" height="6" rx="3" fill="#FFFFFF" opacity="0.6" />
 
         {/* Chapter list for Class 11 */}
         <g transform="translate(20, 275)">
@@ -192,8 +182,7 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* === CENTER SECTION: Reading Strategy Flow === */}
-      <g
-      >
+      <g>
         {/* 3-Stage Reading Process */}
         <g transform="translate(210, 80)">
           <rect
@@ -215,17 +204,9 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
 
           {/* Reading stages */}
           {readingStages.map((stage, i) => (
-            <g
-              key={i}
-              transform={`translate(15, ${45 + i * 45})`}
-            >
+            <g key={i} transform={`translate(15, ${45 + i * 45})`}>
               {/* Stage circle */}
-              <circle
-                cx="20"
-                cy="18"
-                r="18"
-                fill={stage.color}
-              />
+              <circle cx="20" cy="18" r="18" fill={stage.color} />
               <text x="20" y="14" fontSize="10" fill="#FFFFFF" textAnchor="middle">
                 {stage.icon}
               </text>
@@ -275,8 +256,7 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
 
           {/* Stats */}
           <g transform="translate(15, 45)">
-            <g
-            >
+            <g>
               <circle cx="30" cy="25" r="28" fill="#10B981" />
               <text
                 x="30"
@@ -310,8 +290,7 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
           </g>
 
           {/* Tip badge */}
-          <g
-          >
+          <g>
             <rect x="60" y="105" width="110" height="20" rx="10" fill="#059669" />
             <text x="115" y="118" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
               Master NCERT First! 📖
@@ -321,8 +300,7 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* === RIGHT SECTION: Class 12 Book Stack === */}
-      <g
-      >
+      <g>
         {/* Class 12 Book */}
         <g filter="url(#ncertBookShadow)" transform="translate(455, 0)">
           {/* Book spine */}
@@ -361,15 +339,7 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
         </text>
 
         {/* Book decoration */}
-        <rect
-          x="515"
-          y="200"
-          width="90"
-          height="6"
-          rx="3"
-          fill="#FFFFFF"
-          opacity="0.6"
-        />
+        <rect x="515" y="200" width="90" height="6" rx="3" fill="#FFFFFF" opacity="0.6" />
 
         {/* Chapter list for Class 12 */}
         <g transform="translate(455, 275)">
@@ -410,30 +380,25 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* === BOTTOM SECTION: Highlighting Tools === */}
-      <g
-        transform="translate(20, 420)"
-      >
+      <g transform="translate(20, 420)">
         {/* Highlighter pens */}
         <g>
           {/* Yellow highlighter */}
-          <g
-          >
+          <g>
             <rect x="0" y="10" width="80" height="18" rx="4" fill="url(#highlightGrad)" />
             <rect x="75" y="13" width="20" height="12" rx="2" fill="#F59E0B" />
             <rect x="0" y="13" width="12" height="12" fill="#EAB308" rx="2" />
           </g>
 
           {/* Pink highlighter */}
-          <g
-          >
+          <g>
             <rect x="110" y="10" width="80" height="18" rx="4" fill="#F9A8D4" />
             <rect x="185" y="13" width="20" height="12" rx="2" fill="#EC4899" />
             <rect x="110" y="13" width="12" height="12" fill="#DB2777" rx="2" />
           </g>
 
           {/* Green highlighter */}
-          <g
-          >
+          <g>
             <rect x="220" y="10" width="80" height="18" rx="4" fill="#86EFAC" />
             <rect x="295" y="13" width="20" height="12" rx="2" fill="#22C55E" />
             <rect x="220" y="13" width="12" height="12" fill="#16A34A" rx="2" />
@@ -458,29 +423,9 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
       {/* Floating elements for visual interest */}
       {animate && (
         <>
-          <circle
-            cx="50"
-            cy="50"
-            r="8"
-            fill="#14B8A6"
-            opacity="0.3"
-          />
-          <circle
-            cx="600"
-            cy="60"
-            r="6"
-            fill="#8B5CF6"
-            opacity="0.3"
-          />
-          <rect
-            x="320"
-            y="440"
-            width="10"
-            height="10"
-            rx="2"
-            fill="#F59E0B"
-            opacity="0.4"
-          />
+          <circle cx="50" cy="50" r="8" fill="#14B8A6" opacity="0.3" />
+          <circle cx="600" cy="60" r="6" fill="#8B5CF6" opacity="0.3" />
+          <rect x="320" y="440" width="10" height="10" rx="2" fill="#F59E0B" opacity="0.4" />
         </>
       )}
     </svg>

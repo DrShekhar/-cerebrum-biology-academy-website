@@ -10,8 +10,7 @@
  * Set INDEXNOW_API_SECRET in .env.local or pass as env var.
  */
 
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://cerebrumbiologyacademy.com'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://cerebrumbiologyacademy.com'
 const API_URL = `${SITE_URL}/api/seo/indexnow`
 
 // Top priority pages to submit for reindexing
@@ -69,7 +68,9 @@ const secret = process.env.INDEXNOW_API_SECRET
 
 if (!secret && !isDryRun) {
   console.error('Error: INDEXNOW_API_SECRET environment variable is required')
-  console.error('Set it in .env.local or pass as: INDEXNOW_API_SECRET=xxx node scripts/submit-indexnow.mjs')
+  console.error(
+    'Set it in .env.local or pass as: INDEXNOW_API_SECRET=xxx node scripts/submit-indexnow.mjs'
+  )
   process.exit(1)
 }
 

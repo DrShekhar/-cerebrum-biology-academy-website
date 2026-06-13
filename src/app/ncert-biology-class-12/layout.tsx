@@ -22,8 +22,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/ncert-biology-class-12' },
   openGraph: {
     title: 'NCERT Biology Class 12 | 16 Chapters | Cerebrum',
-    description:
-      'All 16 chapters line-by-line with NEET high-weightage focus from AIIMS faculty.',
+    description: 'All 16 chapters line-by-line with NEET high-weightage focus from AIIMS faculty.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/ncert-biology-class-12',

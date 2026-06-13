@@ -166,7 +166,10 @@ export function MobileTestInterface({
 
   // Pan gesture for Framer Motion
   const handlePan = useCallback(
-    (event: any, info: { offset: { x: number; y: number }; velocity: { x: number; y: number } }) => {
+    (
+      event: any,
+      info: { offset: { x: number; y: number }; velocity: { x: number; y: number } }
+    ) => {
       const { offset, velocity } = info
 
       if (Math.abs(offset.x) > 100 && Math.abs(velocity.x) > 500) {
@@ -474,150 +477,140 @@ export function MobileTestInterface({
       </footer>
 
       {/* Side Menu */}
-{showMenu && (
+      {showMenu && (
+        <div className="fixed inset-0 z-50 animate-fadeInUp">
           <div
-            className="fixed inset-0 z-50 animate-fadeInUp"
-          >
-            <div
-              className="absolute inset-0 bg-black bg-opacity-50"
-              onClick={() => setShowMenu(false)}
-            />
-            <div
-              className="absolute top-0 left-0 h-full w-80 bg-white shadow-xl animate-fadeInUp"
-            >
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-lg font-bold">Test Menu</h3>
-                  <Button variant="ghost" size="sm" onClick={() => setShowMenu(false)}>
-                    <X className="w-5 h-5" />
-                  </Button>
+            className="absolute inset-0 bg-black bg-opacity-50"
+            onClick={() => setShowMenu(false)}
+          />
+          <div className="absolute top-0 left-0 h-full w-80 bg-white shadow-xl animate-fadeInUp">
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-lg font-bold">Test Menu</h3>
+                <Button variant="ghost" size="sm" onClick={() => setShowMenu(false)}>
+                  <X className="w-5 h-5" />
+                </Button>
+              </div>
+
+              <div className="space-y-4">
+                <Button
+                  variant="outline"
+                  className="w-full justify-start"
+                  onClick={() => {
+                    handleShakeToClear()
+                    setShowMenu(false)
+                  }}
+                >
+                  <RotateCcw className="w-5 h-5 mr-2" />
+                  Clear Current Answer
+                </Button>
+
+                <Button
+                  variant="outline"
+                  className="w-full justify-start"
+                  onClick={() => {
+                    setAudioEnabled(!audioEnabled)
+                    setShowMenu(false)
+                  }}
+                >
+                  {audioEnabled ? (
+                    <Volume2 className="w-5 h-5 mr-2" />
+                  ) : (
+                    <VolumeX className="w-5 h-5 mr-2" />
+                  )}
+                  {audioEnabled ? 'Disable Audio' : 'Enable Audio'}
+                </Button>
+
+                <Button
+                  variant="outline"
+                  className="w-full justify-start"
+                  onClick={() => {
+                    setShowQuestionPalette(true)
+                    setShowMenu(false)
+                  }}
+                >
+                  <Menu className="w-5 h-5 mr-2" />
+                  Question Palette
+                </Button>
+
+                <hr className="my-4" />
+
+                <Button
+                  variant="outline"
+                  className="w-full justify-start text-red-600 border-red-200 hover:bg-red-50"
+                  onClick={() => {
+                    if (
+                      confirm('Are you sure you want to exit the test? Your progress will be lost.')
+                    ) {
+                      onTestExit()
+                    }
+                  }}
+                >
+                  <X className="w-5 h-5 mr-2" />
+                  Exit Test
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      {/* Question Palette */}
+      {showQuestionPalette && (
+        <div className="fixed inset-0 z-50 animate-fadeInUp">
+          <div
+            className="absolute inset-0 bg-black bg-opacity-50"
+            onClick={() => setShowQuestionPalette(false)}
+          />
+          <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl max-h-96 overflow-y-auto animate-fadeInUp">
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-lg font-bold">Question Palette</h3>
+                <Button variant="ghost" size="sm" onClick={() => setShowQuestionPalette(false)}>
+                  <X className="w-5 h-5" />
+                </Button>
+              </div>
+
+              <div className="grid grid-cols-5 gap-2 mb-4">
+                {questions.map((_, index) => {
+                  const status = getQuestionStatus(index)
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => {
+                        setCurrentQuestionIndex(index)
+                        setShowQuestionPalette(false)
+                      }}
+                      className={`aspect-square rounded-lg text-sm font-medium touch-target transition-all ${getStatusColor(status)}`}
+                    >
+                      {index + 1}
+                    </button>
+                  )
+                })}
+              </div>
+
+              {/* Legend */}
+              <div className="grid grid-cols-2 gap-4 text-xs">
+                <div className="flex items-center">
+                  <div className="w-3 h-3 rounded bg-green-600 mr-2" />
+                  Answered
                 </div>
-
-                <div className="space-y-4">
-                  <Button
-                    variant="outline"
-                    className="w-full justify-start"
-                    onClick={() => {
-                      handleShakeToClear()
-                      setShowMenu(false)
-                    }}
-                  >
-                    <RotateCcw className="w-5 h-5 mr-2" />
-                    Clear Current Answer
-                  </Button>
-
-                  <Button
-                    variant="outline"
-                    className="w-full justify-start"
-                    onClick={() => {
-                      setAudioEnabled(!audioEnabled)
-                      setShowMenu(false)
-                    }}
-                  >
-                    {audioEnabled ? (
-                      <Volume2 className="w-5 h-5 mr-2" />
-                    ) : (
-                      <VolumeX className="w-5 h-5 mr-2" />
-                    )}
-                    {audioEnabled ? 'Disable Audio' : 'Enable Audio'}
-                  </Button>
-
-                  <Button
-                    variant="outline"
-                    className="w-full justify-start"
-                    onClick={() => {
-                      setShowQuestionPalette(true)
-                      setShowMenu(false)
-                    }}
-                  >
-                    <Menu className="w-5 h-5 mr-2" />
-                    Question Palette
-                  </Button>
-
-                  <hr className="my-4" />
-
-                  <Button
-                    variant="outline"
-                    className="w-full justify-start text-red-600 border-red-200 hover:bg-red-50"
-                    onClick={() => {
-                      if (
-                        confirm(
-                          'Are you sure you want to exit the test? Your progress will be lost.'
-                        )
-                      ) {
-                        onTestExit()
-                      }
-                    }}
-                  >
-                    <X className="w-5 h-5 mr-2" />
-                    Exit Test
-                  </Button>
+                <div className="flex items-center">
+                  <div className="w-3 h-3 rounded bg-yellow-500 mr-2" />
+                  Flagged
+                </div>
+                <div className="flex items-center">
+                  <div className="w-3 h-3 rounded bg-blue-500 mr-2" />
+                  Current
+                </div>
+                <div className="flex items-center">
+                  <div className="w-3 h-3 rounded bg-gray-200 mr-2" />
+                  Unanswered
                 </div>
               </div>
             </div>
           </div>
-        )}
-{/* Question Palette */}
-{showQuestionPalette && (
-          <div
-            className="fixed inset-0 z-50 animate-fadeInUp"
-          >
-            <div
-              className="absolute inset-0 bg-black bg-opacity-50"
-              onClick={() => setShowQuestionPalette(false)}
-            />
-            <div
-              className="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl max-h-96 overflow-y-auto animate-fadeInUp"
-            >
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-lg font-bold">Question Palette</h3>
-                  <Button variant="ghost" size="sm" onClick={() => setShowQuestionPalette(false)}>
-                    <X className="w-5 h-5" />
-                  </Button>
-                </div>
-
-                <div className="grid grid-cols-5 gap-2 mb-4">
-                  {questions.map((_, index) => {
-                    const status = getQuestionStatus(index)
-                    return (
-                      <button
-                        key={index}
-                        onClick={() => {
-                          setCurrentQuestionIndex(index)
-                          setShowQuestionPalette(false)
-                        }}
-                        className={`aspect-square rounded-lg text-sm font-medium touch-target transition-all ${getStatusColor(status)}`}
-                      >
-                        {index + 1}
-                      </button>
-                    )
-                  })}
-                </div>
-
-                {/* Legend */}
-                <div className="grid grid-cols-2 gap-4 text-xs">
-                  <div className="flex items-center">
-                    <div className="w-3 h-3 rounded bg-green-600 mr-2" />
-                    Answered
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-3 h-3 rounded bg-yellow-500 mr-2" />
-                    Flagged
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-3 h-3 rounded bg-blue-500 mr-2" />
-                    Current
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-3 h-3 rounded bg-gray-200 mr-2" />
-                    Unanswered
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-</div>
+        </div>
+      )}
+    </div>
   )
 }

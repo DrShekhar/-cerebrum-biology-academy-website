@@ -27,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Gujarat Biology Tuition Online | GSEB Board + NEET | AIIMS Faculty',
-    description: 'Best Biology tuition for Gujarat students. GSEB Board + NEET preparation. AIIMS faculty, online classes. Serving Ahmedabad, Surat, Vadodara, Rajkot. 98% success rate.',
+    description:
+      'Best Biology tuition for Gujarat students. GSEB Board + NEET preparation. AIIMS faculty, online classes. Serving Ahmedabad, Surat, Vadodara, Rajkot. 98% success rate.',
   },
 }
 

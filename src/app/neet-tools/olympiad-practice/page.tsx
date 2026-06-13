@@ -45,7 +45,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biology Olympiad Practice | NSEB, USABO, INBO, BBO, IBO',
-    description: 'Practice 3,000+ Biology Olympiad questions for NSEB, USABO, INBO, BBO, and IBO. MTF, Data Interpretation, Experimental Design — aligned to Campbell Biology with expert-level depth.',
+    description:
+      'Practice 3,000+ Biology Olympiad questions for NSEB, USABO, INBO, BBO, and IBO. MTF, Data Interpretation, Experimental Design — aligned to Campbell Biology with expert-level depth.',
   },
 }
 

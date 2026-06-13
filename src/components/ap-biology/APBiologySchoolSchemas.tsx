@@ -160,8 +160,18 @@ export function APBiologySchoolSchemas({ school }: APBiologySchoolSchemasProps) 
     description: `AIIMS-trained AP Biology educator. FRQ rubric mastery, College Board Units 1-8, tutoring students at ${school.shortName}.`,
     url: `${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`,
     image: `${SITE_URL}/images/dr-shekhar-singh.webp`,
-    affiliation: { '@type': 'EducationalOrganization', '@id': `${SITE_URL}/#organization`, name: 'Cerebrum Biology Academy' },
-    knowsAbout: ['AP Biology', 'AP Biology FRQ', 'College Board CED Units 1-8', 'USABO Bridge', 'Campbell Biology'],
+    affiliation: {
+      '@type': 'EducationalOrganization',
+      '@id': `${SITE_URL}/#organization`,
+      name: 'Cerebrum Biology Academy',
+    },
+    knowsAbout: [
+      'AP Biology',
+      'AP Biology FRQ',
+      'College Board CED Units 1-8',
+      'USABO Bridge',
+      'Campbell Biology',
+    ],
     sameAs: [`${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`],
   }
 

@@ -76,13 +76,11 @@ export function MotivationalQuotes({
   if (mode === 'obs' || mode === 'focus') {
     return (
       <div className={`text-center max-w-2xl mx-auto ${className}`}>
-<div
-            key={currentIndex}
-           className="animate-fadeInUp">
-            <p className="text-xl text-gray-200 italic leading-relaxed">"{currentQuote.text}"</p>
-            <p className="text-sm text-gray-400 mt-3">— {currentQuote.author}</p>
-          </div>
-</div>
+        <div key={currentIndex} className="animate-fadeInUp">
+          <p className="text-xl text-gray-200 italic leading-relaxed">"{currentQuote.text}"</p>
+          <p className="text-sm text-gray-400 mt-3">— {currentQuote.author}</p>
+        </div>
+      </div>
     )
   }
 
@@ -109,14 +107,11 @@ export function MotivationalQuotes({
 
       {/* Quote Display */}
       <div className="min-h-[120px] flex items-center justify-center">
-<div
-            key={currentIndex}
-            className="text-center animate-fadeInUp"
-          >
-            <p className="text-lg text-gray-700 leading-relaxed italic">"{currentQuote.text}"</p>
-            <p className="text-sm text-gray-500 mt-3 font-medium">— {currentQuote.author}</p>
-          </div>
-</div>
+        <div key={currentIndex} className="text-center animate-fadeInUp">
+          <p className="text-lg text-gray-700 leading-relaxed italic">"{currentQuote.text}"</p>
+          <p className="text-sm text-gray-500 mt-3 font-medium">— {currentQuote.author}</p>
+        </div>
+      </div>
 
       {/* Navigation */}
       <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-100">

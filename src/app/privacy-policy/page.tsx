@@ -17,7 +17,12 @@ export const metadata: Metadata = {
     description: 'How we collect, use, and protect your personal information.',
   },
 
-  openGraph: { title: 'Privacy Policy', description: 'Privacy Policy for Cerebrum Biology Academy - How we collect, use, and protect your personal information.', type: 'website' },
+  openGraph: {
+    title: 'Privacy Policy',
+    description:
+      'Privacy Policy for Cerebrum Biology Academy - How we collect, use, and protect your personal information.',
+    type: 'website',
+  },
 }
 
 export default function PrivacyPolicyPage() {

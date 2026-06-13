@@ -12,7 +12,7 @@ export async function GET(req: NextRequest) {
 
     // For now, store sequences as JSON in a settings table or return from whatsapp_nurturing
     // This is a simplified implementation using local storage pattern
-    const sequences = await prisma.$queryRaw`
+    const sequences = (await prisma.$queryRaw`
       SELECT DISTINCT source as triggerStage,
         COUNT(*) as totalEnrolled,
         COUNT(CASE WHEN status = 'ACTIVE' THEN 1 END) as active,
@@ -20,7 +20,7 @@ export async function GET(req: NextRequest) {
         COUNT(CASE WHEN status = 'STOPPED' THEN 1 END) as stopped
       FROM whatsapp_nurturing
       GROUP BY source
-    ` as any[]
+    `) as any[]
 
     return NextResponse.json({ data: sequences || [] })
   } catch (error) {

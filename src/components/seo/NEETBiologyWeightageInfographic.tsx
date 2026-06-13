@@ -48,13 +48,19 @@ interface NEETBiologyWeightageInfographicProps {
   className?: string
 }
 
-export function NEETBiologyWeightageInfographic({ className = '' }: NEETBiologyWeightageInfographicProps) {
+export function NEETBiologyWeightageInfographic({
+  className = '',
+}: NEETBiologyWeightageInfographicProps) {
   const getPriorityColor = (priority: string) => {
     switch (priority) {
-      case 'high': return 'bg-red-100 text-red-700 border-red-200'
-      case 'medium': return 'bg-yellow-100 text-yellow-700 border-yellow-200'
-      case 'low': return 'bg-green-100 text-green-700 border-green-200'
-      default: return 'bg-gray-100 text-gray-700'
+      case 'high':
+        return 'bg-red-100 text-red-700 border-red-200'
+      case 'medium':
+        return 'bg-yellow-100 text-yellow-700 border-yellow-200'
+      case 'low':
+        return 'bg-green-100 text-green-700 border-green-200'
+      default:
+        return 'bg-gray-100 text-gray-700'
     }
   }
 
@@ -63,9 +69,7 @@ export function NEETBiologyWeightageInfographic({ className = '' }: NEETBiologyW
   return (
     <section className={`py-12 md:py-16 ${className}`}>
       <div className="container mx-auto px-4">
-        <div
-          className="text-center mb-10 animate-fadeInUp"
-        >
+        <div className="text-center mb-10 animate-fadeInUp">
           <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <TrendingUp className="w-4 h-4" />
             Chapter Analysis
@@ -74,15 +78,14 @@ export function NEETBiologyWeightageInfographic({ className = '' }: NEETBiologyW
             NEET Biology Chapter-wise Weightage 2025
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Focus on high-weightage chapters for maximum marks. Based on analysis of last 10 years NEET papers.
+            Focus on high-weightage chapters for maximum marks. Based on analysis of last 10 years
+            NEET papers.
           </p>
         </div>
 
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 mb-10">
-            <div
-              className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden animate-fadeInUp">
               <div className="bg-gradient-to-r from-green-500 to-teal-500 text-white py-4 px-6">
                 <div className="flex items-center gap-3">
                   <BookOpen className="w-6 h-6" />
@@ -102,14 +105,19 @@ export function NEETBiologyWeightageInfographic({ className = '' }: NEETBiologyW
                       <div className="flex-1 bg-gray-100 rounded-full h-5 overflow-hidden">
                         <div
                           className={`h-full rounded-full ${
-                            ch.priority === 'high' ? 'bg-red-500' :
-                            ch.priority === 'medium' ? 'bg-yellow-500' : 'bg-green-500'
+                            ch.priority === 'high'
+                              ? 'bg-red-500'
+                              : ch.priority === 'medium'
+                                ? 'bg-yellow-500'
+                                : 'bg-green-500'
                           }`}
                           style={{ width: getBarWidth(ch.marks) }}
                         />
                       </div>
                       <div className="w-12 text-right text-sm font-medium">{ch.marks}m</div>
-                      <span className={`text-xs px-2 py-0.5 rounded border ${getPriorityColor(ch.priority)}`}>
+                      <span
+                        className={`text-xs px-2 py-0.5 rounded border ${getPriorityColor(ch.priority)}`}
+                      >
                         {ch.class === '11' ? 'XI' : 'XII'}
                       </span>
                     </div>
@@ -118,9 +126,7 @@ export function NEETBiologyWeightageInfographic({ className = '' }: NEETBiologyW
               </div>
             </div>
 
-            <div
-              className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden animate-fadeInUp">
               <div className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-4 px-6">
                 <div className="flex items-center gap-3">
                   <BookOpen className="w-6 h-6" />
@@ -140,14 +146,19 @@ export function NEETBiologyWeightageInfographic({ className = '' }: NEETBiologyW
                       <div className="flex-1 bg-gray-100 rounded-full h-5 overflow-hidden">
                         <div
                           className={`h-full rounded-full ${
-                            ch.priority === 'high' ? 'bg-red-500' :
-                            ch.priority === 'medium' ? 'bg-yellow-500' : 'bg-green-500'
+                            ch.priority === 'high'
+                              ? 'bg-red-500'
+                              : ch.priority === 'medium'
+                                ? 'bg-yellow-500'
+                                : 'bg-green-500'
                           }`}
                           style={{ width: getBarWidth(ch.marks) }}
                         />
                       </div>
                       <div className="w-12 text-right text-sm font-medium">{ch.marks}m</div>
-                      <span className={`text-xs px-2 py-0.5 rounded border ${getPriorityColor(ch.priority)}`}>
+                      <span
+                        className={`text-xs px-2 py-0.5 rounded border ${getPriorityColor(ch.priority)}`}
+                      >
                         {ch.class === '11' ? 'XI' : 'XII'}
                       </span>
                     </div>
@@ -157,9 +168,7 @@ export function NEETBiologyWeightageInfographic({ className = '' }: NEETBiologyW
             </div>
           </div>
 
-          <div
-            className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 md:p-8 border border-amber-200 animate-fadeInUp"
-          >
+          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 md:p-8 border border-amber-200 animate-fadeInUp">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center text-white">
                 <Star className="w-6 h-6" />
@@ -200,7 +209,8 @@ export function NEETBiologyWeightageInfographic({ className = '' }: NEETBiologyW
 
           <div className="mt-8 text-center">
             <p className="text-sm text-gray-500">
-              Analysis based on NEET 2015-2024 papers. Updated for NEET 2025 by Cerebrum Biology Academy.
+              Analysis based on NEET 2015-2024 papers. Updated for NEET 2025 by Cerebrum Biology
+              Academy.
             </p>
           </div>
         </div>
@@ -213,14 +223,20 @@ export function NEETBiologyWeightageInfographic({ className = '' }: NEETBiologyW
             '@context': 'https://schema.org',
             '@type': 'DataSet',
             name: 'NEET Biology Chapter-wise Weightage 2025',
-            description: 'Comprehensive analysis of NEET Biology chapter weightage based on previous 10 years papers.',
+            description:
+              'Comprehensive analysis of NEET Biology chapter weightage based on previous 10 years papers.',
             creator: {
               '@type': 'Organization',
               name: 'Cerebrum Biology Academy',
               url: 'https://cerebrumbiologyacademy.com',
             },
             dateModified: new Date().toISOString().split('T')[0],
-            keywords: ['NEET Biology', 'chapter weightage', 'NEET 2025', 'Biology marks distribution'],
+            keywords: [
+              'NEET Biology',
+              'chapter weightage',
+              'NEET 2025',
+              'Biology marks distribution',
+            ],
           }),
         }}
       />

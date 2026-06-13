@@ -1,6 +1,19 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MessageCircle, CheckCircle, Monitor, Building2, ArrowRight, BookOpen, Target, Clock, Gift, GraduationCap, FileText } from 'lucide-react'
+import {
+  Phone,
+  MessageCircle,
+  CheckCircle,
+  Monitor,
+  Building2,
+  ArrowRight,
+  BookOpen,
+  Target,
+  Clock,
+  Gift,
+  GraduationCap,
+  FileText,
+} from 'lucide-react'
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
@@ -30,7 +43,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'CBSE Biology Coaching in Noida 2026 | Class 11-12 | Score 95%+',
-    description: 'CBSE Biology coaching in Noida for Class 11 & 12. NCERT mastery, board exam prep, practical viva. AIIMS faculty, Rs 45,000/year. Gaur City, Sector 150. Free demo!',
+    description:
+      'CBSE Biology coaching in Noida for Class 11 & 12. NCERT mastery, board exam prep, practical viva. AIIMS faculty, Rs 45,000/year. Gaur City, Sector 150. Free demo!',
   },
 }
 
@@ -39,14 +53,24 @@ const courses = [
     name: 'CBSE Class 11 (Academic)',
     fee: '40,000 - 98,000',
     duration: '12 months',
-    features: ['Complete NCERT coverage', 'Chapter tests', '3 tier options (Pursuit/Ascent/Pinnacle)', 'AIIMS faculty'],
+    features: [
+      'Complete NCERT coverage',
+      'Chapter tests',
+      '3 tier options (Pursuit/Ascent/Pinnacle)',
+      'AIIMS faculty',
+    ],
     link: '/biology-class-11-noida',
   },
   {
     name: 'CBSE Class 12 (Board Only)',
     fee: '40,000 - 68,000',
     duration: '12 months',
-    features: ['NCERT + Previous years', 'Practical viva prep', 'Sample papers', 'Board exam strategy'],
+    features: [
+      'NCERT + Previous years',
+      'Practical viva prep',
+      'Sample papers',
+      'Board exam strategy',
+    ],
     link: '/class-12-board-biology-noida',
     popular: true,
   },
@@ -54,17 +78,38 @@ const courses = [
     name: 'CBSE + NEET Combo',
     fee: '70,000 - 98,000',
     duration: '12 months',
-    features: ['Board + NEET integrated', 'Competitive edge', '20-50+ mock tests', 'Personal mentoring options'],
+    features: [
+      'Board + NEET integrated',
+      'Competitive edge',
+      '20-50+ mock tests',
+      'Personal mentoring options',
+    ],
     link: '/neet-coaching-noida',
     recommended: true,
   },
 ]
 
 const ncertApproach = [
-  { title: 'Line-by-Line Reading', description: 'Every sentence of NCERT explained - no shortcuts', icon: BookOpen },
-  { title: 'Diagram Mastery', description: 'All NCERT diagrams practiced with labeling', icon: FileText },
-  { title: 'Previous 10 Years', description: 'All CBSE board questions sorted chapter-wise', icon: Target },
-  { title: 'Practical Preparation', description: 'Lab work, specimen ID, viva questions', icon: GraduationCap },
+  {
+    title: 'Line-by-Line Reading',
+    description: 'Every sentence of NCERT explained - no shortcuts',
+    icon: BookOpen,
+  },
+  {
+    title: 'Diagram Mastery',
+    description: 'All NCERT diagrams practiced with labeling',
+    icon: FileText,
+  },
+  {
+    title: 'Previous 10 Years',
+    description: 'All CBSE board questions sorted chapter-wise',
+    icon: Target,
+  },
+  {
+    title: 'Practical Preparation',
+    description: 'Lab work, specimen ID, viva questions',
+    icon: GraduationCap,
+  },
 ]
 
 const freeTools = [
@@ -74,27 +119,46 @@ const freeTools = [
 ]
 
 const cbseVsOthers = [
-  { board: 'CBSE', coverage: '100% NCERT', examPattern: 'Theory 70 + Practical 30', difficulty: 'Moderate' },
-  { board: 'ICSE/ISC', coverage: 'NCERT + Additional', examPattern: 'Theory 70 + Practical 30', difficulty: 'Slightly Higher' },
-  { board: 'State Boards', coverage: 'State Syllabus', examPattern: 'Varies', difficulty: 'Varies' },
+  {
+    board: 'CBSE',
+    coverage: '100% NCERT',
+    examPattern: 'Theory 70 + Practical 30',
+    difficulty: 'Moderate',
+  },
+  {
+    board: 'ICSE/ISC',
+    coverage: 'NCERT + Additional',
+    examPattern: 'Theory 70 + Practical 30',
+    difficulty: 'Slightly Higher',
+  },
+  {
+    board: 'State Boards',
+    coverage: 'State Syllabus',
+    examPattern: 'Varies',
+    difficulty: 'Varies',
+  },
 ]
 
 const faqs = [
   {
     question: 'Do you cover complete NCERT for CBSE Biology?',
-    answer: 'Yes, 100%! Our CBSE Biology coaching covers every line, diagram, and activity from NCERT textbooks. We also solve all NCERT exercises and previous year CBSE questions. NCERT is the Bible for CBSE boards.',
+    answer:
+      'Yes, 100%! Our CBSE Biology coaching covers every line, diagram, and activity from NCERT textbooks. We also solve all NCERT exercises and previous year CBSE questions. NCERT is the Bible for CBSE boards.',
   },
   {
     question: 'What is the fee for CBSE Biology coaching in Noida?',
-    answer: 'CBSE fees vary by tier (Pursuit/Ascent/Pinnacle): Class 11 Academic: Rs 40,000-98,000/year, Class 12 Board-Only: Rs 40,000-68,000/year, CBSE + NEET combo: Rs 70,000-98,000/year. Online mode available for all tiers.',
+    answer:
+      'CBSE fees vary by tier (Pursuit/Ascent/Pinnacle): Class 11 Academic: Rs 40,000-98,000/year, Class 12 Board-Only: Rs 40,000-68,000/year, CBSE + NEET combo: Rs 70,000-98,000/year. Online mode available for all tiers.',
   },
   {
     question: 'Can I prepare for both CBSE boards and NEET together?',
-    answer: 'Absolutely! In fact, we recommend it. NEET syllabus is 100% from NCERT (same as CBSE). Our CBSE + NEET combo course teaches at NEET depth, which automatically prepares you for 95%+ in boards.',
+    answer:
+      'Absolutely! In fact, we recommend it. NEET syllabus is 100% from NCERT (same as CBSE). Our CBSE + NEET combo course teaches at NEET depth, which automatically prepares you for 95%+ in boards.',
   },
   {
     question: 'Do you help with CBSE Biology practicals?',
-    answer: 'Yes! We cover all practical experiments, specimen identification, lab record format, and viva questions. Weekend practical sessions available for hybrid students.',
+    answer:
+      'Yes! We cover all practical experiments, specimen identification, lab record format, and viva questions. Weekend practical sessions available for hybrid students.',
   },
 ]
 
@@ -110,7 +174,10 @@ export default function CBSEBiologyCoachingNoidaPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/cbse-biology-coaching-noida"
         pageName="CBSE Biology Coaching in Noida"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
         personKnowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
       />
       {/* Hero Section */}
@@ -122,7 +189,8 @@ export default function CBSEBiologyCoachingNoidaPage() {
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">CBSE Biology Coaching in Noida</h1>
             <p className="text-xl text-slate-300 mb-6">
-              Master NCERT, score 95%+ in CBSE boards. AIIMS faculty, complete practical preparation.
+              Master NCERT, score 95%+ in CBSE boards. AIIMS faculty, complete practical
+              preparation.
             </p>
 
             {/* Results Stats */}
@@ -130,7 +198,9 @@ export default function CBSEBiologyCoachingNoidaPage() {
               {results.map((result, index) => (
                 <div key={index} className="text-center">
                   <p className="text-3xl font-bold text-blue-400">{result.count}</p>
-                  <p className="text-sm text-slate-300">{result.score} {result.label}</p>
+                  <p className="text-sm text-slate-300">
+                    {result.score} {result.label}
+                  </p>
                 </div>
               ))}
             </div>
@@ -199,7 +269,9 @@ export default function CBSEBiologyCoachingNoidaPage() {
       {/* Course Cards */}
       <section className="py-16 bg-blue-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">CBSE Biology Courses for Noida Students</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            CBSE Biology Courses for Noida Students
+          </h2>
           <p className="text-center text-gray-600 mb-12">Board exam focused preparation</p>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -210,8 +282,8 @@ export default function CBSEBiologyCoachingNoidaPage() {
                   course.recommended
                     ? 'bg-yellow-400 shadow-xl scale-105'
                     : course.popular
-                    ? 'bg-white border-2 border-blue-300'
-                    : 'bg-white border-2 border-gray-200'
+                      ? 'bg-white border-2 border-blue-300'
+                      : 'bg-white border-2 border-gray-200'
                 }`}
               >
                 {course.recommended && (
@@ -224,9 +296,15 @@ export default function CBSEBiologyCoachingNoidaPage() {
                     POPULAR
                   </span>
                 )}
-                <Monitor className={`w-10 h-10 mb-4 ${course.recommended ? 'text-slate-900' : 'text-blue-600'}`} />
+                <Monitor
+                  className={`w-10 h-10 mb-4 ${course.recommended ? 'text-slate-900' : 'text-blue-600'}`}
+                />
                 <h3 className="text-xl font-bold mb-2">{course.name}</h3>
-                <p className={`text-sm mb-2 ${course.recommended ? 'text-slate-700' : 'text-gray-500'}`}>{course.duration}</p>
+                <p
+                  className={`text-sm mb-2 ${course.recommended ? 'text-slate-700' : 'text-gray-500'}`}
+                >
+                  {course.duration}
+                </p>
                 <p className="text-3xl font-bold mb-4">
                   ₹{course.fee}
                   <span className="text-sm font-normal">/year</span>
@@ -234,7 +312,9 @@ export default function CBSEBiologyCoachingNoidaPage() {
                 <ul className="space-y-2 mb-6">
                   {course.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm">
-                      <CheckCircle className={`w-4 h-4 mt-0.5 ${course.recommended ? 'text-slate-900' : 'text-green-600'}`} />
+                      <CheckCircle
+                        className={`w-4 h-4 mt-0.5 ${course.recommended ? 'text-slate-900' : 'text-green-600'}`}
+                      />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -301,7 +381,9 @@ export default function CBSEBiologyCoachingNoidaPage() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-blue-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>
@@ -314,7 +396,9 @@ export default function CBSEBiologyCoachingNoidaPage() {
       <section className="py-16 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Master CBSE Biology with Expert Coaching</h2>
-          <p className="text-xl text-slate-300 mb-8">Join 200+ students who scored 95%+ in boards</p>
+          <p className="text-xl text-slate-300 mb-8">
+            Join 200+ students who scored 95%+ in boards
+          </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <a
@@ -348,7 +432,10 @@ export default function CBSEBiologyCoachingNoidaPage() {
         breadcrumbs={[
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
           { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
-          { name: 'CBSE Biology Coaching', url: 'https://cerebrumbiologyacademy.com/cbse-biology-coaching-noida' },
+          {
+            name: 'CBSE Biology Coaching',
+            url: 'https://cerebrumbiologyacademy.com/cbse-biology-coaching-noida',
+          },
         ]}
         customFAQs={faqs}
       />

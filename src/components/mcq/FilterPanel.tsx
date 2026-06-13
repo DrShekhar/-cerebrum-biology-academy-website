@@ -83,9 +83,7 @@ export function FilterPanel({
   const isOlympiad = contentSource === 'olympiad'
 
   // NCERT mode: topics → chapters
-  const ncertChapters = selectedTopic
-    ? BIOLOGY_CHAPTERS[selectedTopic as BiologyTopic] || []
-    : []
+  const ncertChapters = selectedTopic ? BIOLOGY_CHAPTERS[selectedTopic as BiologyTopic] || [] : []
 
   // Olympiad mode: units → chapters
   const campbellChapters = selectedTopic
@@ -95,9 +93,12 @@ export function FilterPanel({
   const availableChapters = isOlympiad ? campbellChapters : ncertChapters
   const topics = isOlympiad ? CAMPBELL_UNITS : BIOLOGY_TOPICS
 
-  const activeFiltersCount = [selectedTopic, selectedChapter, selectedDifficulty, selectedQuestionType].filter(
-    Boolean
-  ).length
+  const activeFiltersCount = [
+    selectedTopic,
+    selectedChapter,
+    selectedDifficulty,
+    selectedQuestionType,
+  ].filter(Boolean).length
 
   const clearAllFilters = () => {
     onTopicChange(null)
@@ -224,9 +225,7 @@ export function FilterPanel({
                         }
                       `}
                     >
-                      {selectedChapter === String(chapter.ch) && (
-                        <Check className="w-3.5 h-3.5" />
-                      )}
+                      {selectedChapter === String(chapter.ch) && <Check className="w-3.5 h-3.5" />}
                       <span className="font-mono text-xs text-stone-400 mr-0.5">
                         Ch {chapter.ch}
                       </span>

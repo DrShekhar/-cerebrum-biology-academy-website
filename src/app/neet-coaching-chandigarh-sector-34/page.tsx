@@ -30,14 +30,62 @@ import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimo
 import { CitySchema } from '@/components/seo/CitySchema'
 
 const nearbySectors = [
-  { name: 'Sector 34', students: '85+', highlight: 'Coaching Hub', priority: 'high', distance: '0 km' },
-  { name: 'Sector 35', students: '70+', highlight: 'Adjacent Sector', priority: 'high', distance: '1 km' },
-  { name: 'Sector 22', students: '65+', highlight: 'Commercial Hub', priority: 'high', distance: '2 km' },
-  { name: 'Sector 17', students: '80+', highlight: 'City Center', priority: 'high', distance: '3 km' },
-  { name: 'Sector 44', students: '55+', highlight: 'Premium Area', priority: 'medium', distance: '2 km' },
-  { name: 'Manimajra', students: '60+', highlight: 'Growing Hub', priority: 'medium', distance: '4 km' },
-  { name: 'Sector 43', students: '45+', highlight: 'Residential', priority: 'medium', distance: '1.5 km' },
-  { name: 'Sector 32', students: '40+', highlight: 'Near PGI', priority: 'medium', distance: '2 km' },
+  {
+    name: 'Sector 34',
+    students: '85+',
+    highlight: 'Coaching Hub',
+    priority: 'high',
+    distance: '0 km',
+  },
+  {
+    name: 'Sector 35',
+    students: '70+',
+    highlight: 'Adjacent Sector',
+    priority: 'high',
+    distance: '1 km',
+  },
+  {
+    name: 'Sector 22',
+    students: '65+',
+    highlight: 'Commercial Hub',
+    priority: 'high',
+    distance: '2 km',
+  },
+  {
+    name: 'Sector 17',
+    students: '80+',
+    highlight: 'City Center',
+    priority: 'high',
+    distance: '3 km',
+  },
+  {
+    name: 'Sector 44',
+    students: '55+',
+    highlight: 'Premium Area',
+    priority: 'medium',
+    distance: '2 km',
+  },
+  {
+    name: 'Manimajra',
+    students: '60+',
+    highlight: 'Growing Hub',
+    priority: 'medium',
+    distance: '4 km',
+  },
+  {
+    name: 'Sector 43',
+    students: '45+',
+    highlight: 'Residential',
+    priority: 'medium',
+    distance: '1.5 km',
+  },
+  {
+    name: 'Sector 32',
+    students: '40+',
+    highlight: 'Near PGI',
+    priority: 'medium',
+    distance: '2 km',
+  },
 ]
 
 const competitorInfo = [
@@ -77,13 +125,16 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-chandigarh-sector-34' },
+    alternates: {
+      canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-chandigarh-sector-34',
+    },
     description: 'Real-time online coaching. No need to sit in crowded Sector 34 classrooms.',
   },
   {
     icon: Users,
     title: 'Small Batches (10-15)',
-    description: 'Unlike 100+ student batches at the largest national NEET chains. Every doubt gets addressed.',
+    description:
+      'Unlike 100+ student batches at the largest national NEET chains. Every doubt gets addressed.',
   },
   {
     icon: Award,
@@ -130,9 +181,10 @@ const faqs = [
       'Sector 34 Chandigarh has the highest concentration of coaching institutes including the largest national NEET chain (SCO 350-352), the 2nd-largest national NEET chain, other online-only platforms, and 50+ smaller centers. However, this has led to overcrowding, parking issues, and inflated fees. Cerebrum offers the same quality education online without these hassles.',
   },
   {
-    question: 'Which is better for NEET - the largest national NEET chain Sector 34 or Cerebrum online?',
+    question:
+      'Which is better for NEET - the largest national NEET chain Sector 34 or Cerebrum online?',
     answer:
-      'the largest national NEET chain Sector 34 (SCO 350-352) has 60-100+ students per batch with fees of Rs 1.5-2.5 lakhs. Cerebrum has 10-15 students per batch with AIIMS faculty and fees of Rs 24K-68K. Our 98% success rate matches the largest national NEET chain\'s results. The key difference: personalized attention and no commute stress.',
+      "the largest national NEET chain Sector 34 (SCO 350-352) has 60-100+ students per batch with fees of Rs 1.5-2.5 lakhs. Cerebrum has 10-15 students per batch with AIIMS faculty and fees of Rs 24K-68K. Our 98% success rate matches the largest national NEET chain's results. The key difference: personalized attention and no commute stress.",
   },
   {
     question: 'Is the 2nd-largest national NEET chain Sector 34 worth the fees for NEET coaching?',
@@ -187,7 +239,7 @@ const faqs = [
   {
     question: 'Which schools in Sector 34 area send students to your coaching?',
     answer:
-      'Students from St. John\'s High School, Carmel Convent, DAV Sector 15, Government Model School Sector 35, Bhavan Vidyalaya, and schools from Sector 17, 22, 44, Manimajra join us. Our flexible online timings work with all school schedules.',
+      "Students from St. John's High School, Carmel Convent, DAV Sector 15, Government Model School Sector 35, Bhavan Vidyalaya, and schools from Sector 17, 22, 44, Manimajra join us. Our flexible online timings work with all school schedules.",
   },
   {
     question: 'Is online NEET coaching as effective as classroom coaching in Sector 34?',
@@ -225,7 +277,8 @@ export default function NEETCoachingSector34Page() {
   const handleWhatsAppClick = async () => {
     await trackAndOpenWhatsApp({
       source: 'neet-coaching-chandigarh-sector-34',
-      message: 'Hi! I am from Chandigarh Sector 34 and interested in NEET coaching. Please share details.',
+      message:
+        'Hi! I am from Chandigarh Sector 34 and interested in NEET coaching. Please share details.',
       campaign: 'neet-coaching-chandigarh-sector-34',
     })
   }
@@ -246,9 +299,7 @@ export default function NEETCoachingSector34Page() {
       <section className="relative bg-gradient-to-br from-[#1e3a5f] via-[#2d5a87] to-[#3d7ab5] text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2" />
               Sector 34 - Chandigarh&apos;s Coaching Hub
@@ -263,8 +314,9 @@ export default function NEETCoachingSector34Page() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Why fight for parking at SCO 350-352? Get better NEET coaching online. 98% success rate,
-              AIIMS faculty, batches of 10-15 students. Same quality as the largest national NEET chains at 1/4th the fees!
+              Why fight for parking at SCO 350-352? Get better NEET coaching online. 98% success
+              rate, AIIMS faculty, batches of 10-15 students. Same quality as the largest national
+              NEET chains at 1/4th the fees!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -277,7 +329,11 @@ export default function NEETCoachingSector34Page() {
                 <MessageCircle className="w-6 h-6" />
                 <span>WhatsApp Us Now</span>
               </Button>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -319,13 +375,13 @@ export default function NEETCoachingSector34Page() {
       {/* Problems with Sector 34 Coaching */}
       <section className="py-16 bg-red-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Problems with Sector 34 Coaching Centers
             </h2>
-            <p className="text-xl text-gray-600">What students face daily at crowded coaching institutes</p>
+            <p className="text-xl text-gray-600">
+              What students face daily at crowded coaching institutes
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -347,13 +403,13 @@ export default function NEETCoachingSector34Page() {
       {/* Cerebrum Solution */}
       <section className="py-16 bg-green-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               The Cerebrum Advantage
             </h2>
-            <p className="text-xl text-gray-600">Same quality, better attention, lower fees, no commute</p>
+            <p className="text-xl text-gray-600">
+              Same quality, better attention, lower fees, no commute
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -375,14 +431,13 @@ export default function NEETCoachingSector34Page() {
       {/* Competitor Comparison */}
       <section className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Sector 34 Coaching Centers vs Cerebrum
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              the largest national NEET chains and online-first generalist platforms - all have centers in Sector 34. See how we compare.
+              the largest national NEET chains and online-first generalist platforms - all have
+              centers in Sector 34. See how we compare.
             </p>
           </div>
 
@@ -416,9 +471,7 @@ export default function NEETCoachingSector34Page() {
           </div>
 
           {/* Cerebrum Comparison Card */}
-          <div
-            className="bg-gradient-to-r from-[#1e3a5f] to-[#2d5a87] rounded-2xl p-8 text-white animate-fadeInUp"
-          >
+          <div className="bg-gradient-to-r from-[#1e3a5f] to-[#2d5a87] rounded-2xl p-8 text-white animate-fadeInUp">
             <div className="text-center mb-8">
               <h3 className="text-2xl md:text-3xl font-bold mb-2">Cerebrum Biology Academy</h3>
               <p className="text-white/80">The smart alternative to Sector 34 coaching</p>
@@ -493,9 +546,7 @@ export default function NEETCoachingSector34Page() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {nearbySectors.map((sector, index) => (
-              <div
-                key={sector.name}
-               className="animate-fadeInUp">
+              <div key={sector.name} className="animate-fadeInUp">
                 <div
                   className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all hover:-translate-y-1 ${sector.priority === 'high' ? 'ring-2 ring-[#1e3a5f]' : ''}`}
                 >
@@ -562,9 +613,7 @@ export default function NEETCoachingSector34Page() {
       {/* Cost Comparison */}
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Save Rs 1-2.5 Lakhs Annually
             </h2>
@@ -573,9 +622,7 @@ export default function NEETCoachingSector34Page() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Sector 34 Costs */}
-            <div
-              className="bg-red-50 rounded-2xl p-8 animate-fadeInUp"
-            >
+            <div className="bg-red-50 rounded-2xl p-8 animate-fadeInUp">
               <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
                 <XCircle className="w-6 h-6 text-red-500 mr-2" />
                 Sector 34 Coaching (Annual)
@@ -605,9 +652,7 @@ export default function NEETCoachingSector34Page() {
             </div>
 
             {/* Cerebrum Costs */}
-            <div
-              className="bg-green-50 rounded-2xl p-8 animate-fadeInUp"
-            >
+            <div className="bg-green-50 rounded-2xl p-8 animate-fadeInUp">
               <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
                 <CheckCircle className="w-6 h-6 text-green-500 mr-2" />
                 Cerebrum Online (Annual)
@@ -637,9 +682,7 @@ export default function NEETCoachingSector34Page() {
             </div>
           </div>
 
-          <div
-            className="text-center mt-8 p-6 bg-[#1e3a5f] rounded-xl text-white animate-fadeInUp"
-          >
+          <div className="text-center mt-8 p-6 bg-[#1e3a5f] rounded-xl text-white animate-fadeInUp">
             <div className="text-3xl font-bold mb-2">You Save: Rs 1.2 - 3.5 Lakhs</div>
             <div className="text-white/80">Plus 300-500 hours of commute time for extra study!</div>
           </div>
@@ -685,8 +728,7 @@ export default function NEETCoachingSector34Page() {
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-[#1e3a5f] via-[#2d5a87] to-[#3d7ab5] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Skip Sector 34 Chaos. Get Better Results.
             </h2>
@@ -703,7 +745,11 @@ export default function NEETCoachingSector34Page() {
                 <MessageCircle className="w-6 h-6" />
                 <span>WhatsApp Us Now</span>
               </Button>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -732,9 +778,13 @@ export default function NEETCoachingSector34Page() {
       <section className="py-4 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">
           <nav className="text-sm text-gray-600">
-            <Link href="/" className="hover:text-[#1e3a5f]">Home</Link>
+            <Link href="/" className="hover:text-[#1e3a5f]">
+              Home
+            </Link>
             <span className="mx-2">/</span>
-            <Link href="/neet-coaching-chandigarh" className="hover:text-[#1e3a5f]">NEET Coaching Chandigarh</Link>
+            <Link href="/neet-coaching-chandigarh" className="hover:text-[#1e3a5f]">
+              NEET Coaching Chandigarh
+            </Link>
             <span className="mx-2">/</span>
             <span className="text-gray-900 font-medium">Sector 34</span>
           </nav>

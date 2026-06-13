@@ -29,9 +29,7 @@ export function useEnrollment() {
                 ? 'failed'
                 : 'pending',
           enrollmentDate: new Date(e.enrollmentDate).getTime(),
-          courseStartDate: e.startDate
-            ? new Date(e.startDate).toISOString().split('T')[0]
-            : '',
+          courseStartDate: e.startDate ? new Date(e.startDate).toISOString().split('T')[0] : '',
           batchAssigned: undefined,
         }))
         setEnrollments(mapped)
@@ -110,9 +108,7 @@ export function useEnrollment() {
 
       setEnrollments((prev) =>
         prev.map((enrollment) =>
-          enrollment.id === enrollmentId
-            ? { ...enrollment, paymentStatus }
-            : enrollment
+          enrollment.id === enrollmentId ? { ...enrollment, paymentStatus } : enrollment
         )
       )
     } catch (err) {

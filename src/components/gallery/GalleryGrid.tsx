@@ -47,15 +47,15 @@ export function GalleryGrid({ items, columns = 3 }: GalleryGridProps) {
   return (
     <>
       <div className={`grid ${gridCols[columns]} gap-4 md:gap-6`}>
-{items.map((item, index) => (
-            <GalleryCard
-              key={item.id}
-              item={item}
-              onClick={() => handleItemClick(index)}
-              priority={index < 6}
-            />
-          ))}
-</div>
+        {items.map((item, index) => (
+          <GalleryCard
+            key={item.id}
+            item={item}
+            onClick={() => handleItemClick(index)}
+            priority={index < 6}
+          />
+        ))}
+      </div>
 
       {/* Lightbox */}
       {lightboxOpen && (

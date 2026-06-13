@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function BiomoleculesIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -106,8 +106,7 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
       <circle cx="470" cy="350" r="90" fill="#8B5CF6" opacity="0.05" />
 
       {/* Center hexagon representing cell/biomolecule hub */}
-      <g
-      >
+      <g>
         <circle cx="260" cy="200" r="55" fill="url(#centerGlow)" filter="url(#biomolShadow)" />
         <circle cx="260" cy="200" r="50" fill="#FFFFFF" stroke="#E2E8F0" strokeWidth="2" />
         <text x="260" y="192" textAnchor="middle" fill="#1E293B" fontSize="11" fontWeight="700">
@@ -122,8 +121,7 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Carbohydrates - Top Left */}
-      <g
-      >
+      <g>
         {/* Card */}
         <rect
           x="30"
@@ -185,8 +183,7 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
       />
 
       {/* Proteins - Top Right */}
-      <g
-      >
+      <g>
         {/* Card */}
         <rect
           x="350"
@@ -272,8 +269,7 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
       />
 
       {/* Lipids - Bottom Left */}
-      <g
-      >
+      <g>
         {/* Card */}
         <rect
           x="30"
@@ -352,8 +348,7 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
       />
 
       {/* Nucleic Acids - Bottom Right */}
-      <g
-      >
+      <g>
         {/* Card */}
         <rect
           x="350"
@@ -458,8 +453,7 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
       />
 
       {/* Bottom info bar */}
-      <g
-      >
+      <g>
         <rect
           x="180"
           y="365"
@@ -475,14 +469,7 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Title */}
-      <text
-        x="260"
-        y="22"
-        textAnchor="middle"
-        fill="#1E293B"
-        fontSize="14"
-        fontWeight="700"
-      >
+      <text x="260" y="22" textAnchor="middle" fill="#1E293B" fontSize="14" fontWeight="700">
         The 4 Major Biomolecules
       </text>
     </svg>

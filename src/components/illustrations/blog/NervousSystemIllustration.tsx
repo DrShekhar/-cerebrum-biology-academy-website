@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function NervousSystemIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -124,8 +124,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
       </text>
 
       {/* NEURON STRUCTURE - Top Left */}
-      <g
-      >
+      <g>
         <g transform="translate(20, 50)">
           <rect
             x="0"
@@ -188,30 +187,9 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             <line x1="80" y1="40" x2="200" y2="40" stroke="url(#axonGrad)" strokeWidth="4" />
 
             {/* Myelin sheaths */}
-            <rect
-              x="85"
-              y="33"
-              width="25"
-              height="14"
-              rx="7"
-              fill="url(#myelinGrad)"
-            />
-            <rect
-              x="120"
-              y="33"
-              width="25"
-              height="14"
-              rx="7"
-              fill="url(#myelinGrad)"
-            />
-            <rect
-              x="155"
-              y="33"
-              width="25"
-              height="14"
-              rx="7"
-              fill="url(#myelinGrad)"
-            />
+            <rect x="85" y="33" width="25" height="14" rx="7" fill="url(#myelinGrad)" />
+            <rect x="120" y="33" width="25" height="14" rx="7" fill="url(#myelinGrad)" />
+            <rect x="155" y="33" width="25" height="14" rx="7" fill="url(#myelinGrad)" />
 
             {/* Nodes of Ranvier labels */}
             <circle cx="115" cy="40" r="2" fill="#6D28D9" />
@@ -219,13 +197,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             <circle cx="185" cy="40" r="2" fill="#6D28D9" />
 
             {/* Action potential traveling */}
-            <circle
-              cx="90"
-              cy="40"
-              r="4"
-              fill="#22C55E"
-              filter="url(#impulseGlow)"
-            />
+            <circle cx="90" cy="40" r="4" fill="#22C55E" filter="url(#impulseGlow)" />
 
             {/* Axon terminal */}
             <g transform="translate(195, 30)">
@@ -262,8 +234,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* ACTION POTENTIAL GRAPH - Top Right */}
-      <g
-      >
+      <g>
         <g transform="translate(350, 50)">
           <rect
             x="0"
@@ -377,8 +348,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* BRAIN REGIONS - Bottom Left */}
-      <g
-      >
+      <g>
         <g transform="translate(20, 250)">
           <rect
             x="0"
@@ -474,8 +444,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* SYNAPSE - Bottom Center */}
-      <g
-      >
+      <g>
         <g transform="translate(280, 250)">
           <rect
             x="0"
@@ -503,58 +472,22 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             </text>
 
             {/* Synaptic vesicles */}
-            <circle
-              cx="30"
-              cy="45"
-              r="6"
-              fill="url(#vesicleGrad)"
-            />
-            <circle
-              cx="50"
-              cy="40"
-              r="6"
-              fill="url(#vesicleGrad)"
-            />
-            <circle
-              cx="70"
-              cy="45"
-              r="6"
-              fill="url(#vesicleGrad)"
-            />
+            <circle cx="30" cy="45" r="6" fill="url(#vesicleGrad)" />
+            <circle cx="50" cy="40" r="6" fill="url(#vesicleGrad)" />
+            <circle cx="70" cy="45" r="6" fill="url(#vesicleGrad)" />
             <text x="50" y="60" textAnchor="middle" fill="#0891B2" fontSize="5">
               Vesicles
             </text>
 
             {/* Ca2+ entry */}
-            <text
-              x="85"
-              y="25"
-              fill="#22C55E"
-              fontSize="6"
-              fontWeight="bold"
-            >
+            <text x="85" y="25" fill="#22C55E" fontSize="6" fontWeight="bold">
               Ca²⁺
             </text>
 
             {/* Neurotransmitter release */}
-            <circle
-              cx="35"
-              cy="85"
-              r="3"
-              fill="#06B6D4"
-            />
-            <circle
-              cx="50"
-              cy="85"
-              r="3"
-              fill="#06B6D4"
-            />
-            <circle
-              cx="65"
-              cy="85"
-              r="3"
-              fill="#06B6D4"
-            />
+            <circle cx="35" cy="85" r="3" fill="#06B6D4" />
+            <circle cx="50" cy="85" r="3" fill="#06B6D4" />
+            <circle cx="65" cy="85" r="3" fill="#06B6D4" />
           </g>
 
           {/* Synaptic cleft */}
@@ -589,8 +522,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* NEUROTRANSMITTERS & ANS - Bottom Right */}
-      <g
-      >
+      <g>
         <g transform="translate(495, 250)">
           <rect
             x="0"
@@ -704,8 +636,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* Key values badge */}
-      <g
-      >
+      <g>
         <g transform="translate(565, 175)">
           <rect x="0" y="0" width="115" height="58" rx="10" fill="#1E293B" opacity="0.9" />
           <text x="57" y="17" textAnchor="middle" fill="white" fontSize="7" fontWeight="600">

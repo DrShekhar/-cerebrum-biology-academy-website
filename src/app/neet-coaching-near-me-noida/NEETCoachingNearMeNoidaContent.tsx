@@ -172,7 +172,11 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://maps.google.com/?q=B-45+Sector+62+Noida" target="_blank" rel="noopener">
+              <a
+                href="https://maps.google.com/?q=B-45+Sector+62+Noida"
+                target="_blank"
+                rel="noopener"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -318,7 +322,9 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
               </p>
               <p className="flex items-center gap-3">
                 <Train className="w-5 h-5 text-teal-600 flex-shrink-0" />
-                <span className="text-slate-700">Sector 62 Metro Station (Blue Line) - 5 min walk</span>
+                <span className="text-slate-700">
+                  Sector 62 Metro Station (Blue Line) - 5 min walk
+                </span>
               </p>
               <p className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-teal-600 flex-shrink-0" />
@@ -328,11 +334,17 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
               </p>
               <p className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-teal-600 flex-shrink-0" />
-                <span className="text-slate-700">Open 24/7 — Online Classes Available Globally</span>
+                <span className="text-slate-700">
+                  Open 24/7 — Online Classes Available Globally
+                </span>
               </p>
             </div>
             <div className="flex gap-4 mt-6">
-              <a href="https://maps.google.com/?q=B-45+Sector+62+Noida" target="_blank" rel="noopener">
+              <a
+                href="https://maps.google.com/?q=B-45+Sector+62+Noida"
+                target="_blank"
+                rel="noopener"
+              >
                 <Button>
                   <Navigation className="w-4 h-4 mr-2" />
                   Open in Maps
@@ -412,10 +424,7 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
               <h3 className="font-semibold text-teal-600">Dropper Batch</h3>
               <p className="text-sm text-gray-600">Repeater programs</p>
             </Link>
-            <Link
-              href="/neet-coaching-noida"
-              className="bg-white p-4 rounded-xl hover:shadow-md"
-            >
+            <Link href="/neet-coaching-noida" className="bg-white p-4 rounded-xl hover:shadow-md">
               <h3 className="font-semibold text-teal-600">All Noida Programs</h3>
               <p className="text-sm text-gray-600">View all options</p>
             </Link>
@@ -431,7 +440,11 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
             Book a free demo class and see our facility in person
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 size="xl"
@@ -441,7 +454,11 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
                 Book Free Demo
               </Button>
             </Link>
-            <a href="https://maps.google.com/?q=B-45+Sector+62+Noida" target="_blank" rel="noopener">
+            <a
+              href="https://maps.google.com/?q=B-45+Sector+62+Noida"
+              target="_blank"
+              rel="noopener"
+            >
               <Button
                 variant="outline"
                 size="xl"

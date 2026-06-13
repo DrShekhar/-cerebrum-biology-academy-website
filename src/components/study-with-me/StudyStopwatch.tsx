@@ -154,18 +154,14 @@ export function StudyStopwatch({
   }
 
   return (
-    <div
-      className={`bg-white rounded-xl shadow-xl p-6 ${className}`}
-    >
+    <div className={`bg-white rounded-xl shadow-xl p-6 ${className}`}>
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider">
           Study Session
         </h3>
         {isRunning && (
-          <span
-            className="flex items-center text-xs text-green-600 animate-fadeInUp"
-          >
+          <span className="flex items-center text-xs text-green-600 animate-fadeInUp">
             <span className="w-2 h-2 rounded-full bg-green-500 mr-2" />
             Recording
           </span>
@@ -178,11 +174,15 @@ export function StudyStopwatch({
           <span className="text-3xl sm:text-4xl md:text-6xl font-mono font-bold text-[#3d4d3d] tracking-tight">
             {hours}
           </span>
-          <span className="text-3xl sm:text-4xl md:text-6xl font-mono font-bold text-[#3d4d3d]">:</span>
+          <span className="text-3xl sm:text-4xl md:text-6xl font-mono font-bold text-[#3d4d3d]">
+            :
+          </span>
           <span className="text-3xl sm:text-4xl md:text-6xl font-mono font-bold text-[#3d4d3d] tracking-tight">
             {minutes}
           </span>
-          <span className="text-3xl sm:text-4xl md:text-6xl font-mono font-bold text-[#3d4d3d]">:</span>
+          <span className="text-3xl sm:text-4xl md:text-6xl font-mono font-bold text-[#3d4d3d]">
+            :
+          </span>
           <span className="text-3xl sm:text-4xl md:text-6xl font-mono font-bold text-green-500 tracking-tight">
             {seconds}
           </span>
@@ -226,29 +226,27 @@ export function StudyStopwatch({
       </div>
 
       {/* Lap Times */}
-{lapTimes.length > 0 && (
-          <div
-            className="mt-6 border-t border-gray-100 pt-4 animate-fadeInUp"
-          >
-            <h4 className="text-xs font-medium text-gray-400 uppercase mb-2">Lap Times</h4>
-            <div className="space-y-1 max-h-32 overflow-y-auto">
-              {lapTimes.map((lap, index) => {
-                const { hours: h, minutes: m, seconds: s } = formatTime(lap)
-                return (
-                  <div
-                    key={`${lap}-${index}`}
-                    className="flex items-center justify-between text-sm py-1 animate-fadeInUp"
-                  >
-                    <span className="text-gray-400">Lap {lapTimes.length - index}</span>
-                    <span className="font-mono text-gray-700">
-                      {h}:{m}:{s}
-                    </span>
-                  </div>
-                )
-              })}
-            </div>
+      {lapTimes.length > 0 && (
+        <div className="mt-6 border-t border-gray-100 pt-4 animate-fadeInUp">
+          <h4 className="text-xs font-medium text-gray-400 uppercase mb-2">Lap Times</h4>
+          <div className="space-y-1 max-h-32 overflow-y-auto">
+            {lapTimes.map((lap, index) => {
+              const { hours: h, minutes: m, seconds: s } = formatTime(lap)
+              return (
+                <div
+                  key={`${lap}-${index}`}
+                  className="flex items-center justify-between text-sm py-1 animate-fadeInUp"
+                >
+                  <span className="text-gray-400">Lap {lapTimes.length - index}</span>
+                  <span className="font-mono text-gray-700">
+                    {h}:{m}:{s}
+                  </span>
+                </div>
+              )
+            })}
           </div>
-        )}
-</div>
+        </div>
+      )}
+    </div>
   )
 }

@@ -20,8 +20,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best NEET Coaching in Dwarka',
-    description:
-      'Top NEET biology coaching in Dwarka. 98% success rate. All sectors covered.',
+    description: 'Top NEET biology coaching in Dwarka. 98% success rate. All sectors covered.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-dwarka',
@@ -38,7 +37,16 @@ export default function DwarkaCoachingLayout({ children }: { children: React.Rea
         parentLocation="Delhi NCR"
         centerAddress="211 Vikas Surya Tower, DC Chowk, Rohini Sector 9, Delhi - 110085"
         centerPhone="+91-8826-444-334"
-        nearbyAreas={['Sector 4', 'Sector 6', 'Sector 10', 'Sector 12', 'Sector 21', 'Sector 22', 'Palam', 'Uttam Nagar']}
+        nearbyAreas={[
+          'Sector 4',
+          'Sector 6',
+          'Sector 10',
+          'Sector 12',
+          'Sector 21',
+          'Sector 22',
+          'Palam',
+          'Uttam Nagar',
+        ]}
       />
     </>
   )

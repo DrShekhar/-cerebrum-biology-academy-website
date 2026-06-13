@@ -180,9 +180,7 @@ export default function FacultySettingsPage() {
 
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <div
-            className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
-          >
+          <div className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Total Faculty</p>
@@ -192,9 +190,7 @@ export default function FacultySettingsPage() {
             </div>
           </div>
 
-          <div
-            className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
-          >
+          <div className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Total Students</p>
@@ -204,9 +200,7 @@ export default function FacultySettingsPage() {
             </div>
           </div>
 
-          <div
-            className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
-          >
+          <div className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Avg Rating</p>
@@ -216,9 +210,7 @@ export default function FacultySettingsPage() {
             </div>
           </div>
 
-          <div
-            className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
-          >
+          <div className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Avg Experience</p>

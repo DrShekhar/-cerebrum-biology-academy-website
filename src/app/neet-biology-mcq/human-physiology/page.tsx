@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Human Physiology MCQ for NEET 2026 | Free Practice Questions',
-    description: 'Practice 800+ free Human Physiology MCQs for NEET. Digestive, Respiratory, Circulatory, Excretory, Nervous & Muscular system questions. NCERT-based with explanations.',
+    description:
+      'Practice 800+ free Human Physiology MCQs for NEET. Digestive, Respiratory, Circulatory, Excretory, Nervous & Muscular system questions. NCERT-based with explanations.',
   },
 }
 

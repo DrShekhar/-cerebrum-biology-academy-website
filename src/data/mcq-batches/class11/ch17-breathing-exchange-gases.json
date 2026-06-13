@@ -14,21 +14,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The tidal volume (TV) in a healthy adult is approximately:",
-      "options": [
-        "2500 mL",
-        "1000 mL",
-        "500 mL",
-        "150 mL"
-      ],
+      "options": ["2500 mL", "1000 mL", "500 mL", "150 mL"],
       "correctAnswer": "C",
       "explanation": "Tidal Volume (TV) is the volume of air inspired or expired during normal breathing and is approximately 500 mL in a healthy adult. Out of this, only about 350 mL reaches the alveoli; the remaining 150 mL remains in the dead space.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tidal-volume",
-        "lung-volumes"
-      ],
+      "tags": ["tidal-volume", "lung-volumes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -39,21 +31,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The inspiratory reserve volume (IRV) is approximately:",
-      "options": [
-        "500 mL",
-        "1000 mL",
-        "2500-3000 mL",
-        "1100 mL"
-      ],
+      "options": ["500 mL", "1000 mL", "2500-3000 mL", "1100 mL"],
       "correctAnswer": "C",
       "explanation": "Inspiratory Reserve Volume (IRV) is the additional volume of air that can be inspired forcibly after normal inspiration. It is approximately 2500-3000 mL in a healthy adult male.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "IRV",
-        "lung-volumes"
-      ],
+      "tags": ["IRV", "lung-volumes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -64,21 +48,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The residual volume (RV) of the lungs is approximately:",
-      "options": [
-        "2500 mL",
-        "3500 mL",
-        "1100-1200 mL",
-        "500 mL"
-      ],
+      "options": ["2500 mL", "3500 mL", "1100-1200 mL", "500 mL"],
       "correctAnswer": "C",
       "explanation": "Residual Volume (RV) is the volume of air remaining in the lungs after a forceful expiration. It is approximately 1100-1200 mL. This air cannot be expelled and prevents the lungs from collapsing.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "residual-volume",
-        "lung-volumes"
-      ],
+      "tags": ["residual-volume", "lung-volumes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -89,21 +65,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "Vital capacity (VC) is the sum of:",
-      "options": [
-        "TV + IRV",
-        "IRV + ERV + RV",
-        "TV + ERV",
-        "TV + IRV + ERV"
-      ],
+      "options": ["TV + IRV", "IRV + ERV + RV", "TV + ERV", "TV + IRV + ERV"],
       "correctAnswer": "D",
       "explanation": "Vital Capacity (VC) = TV + IRV + ERV. It is the maximum volume of air that can be breathed out after a forced inspiration, approximately 3500-4500 mL. It does not include residual volume.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vital-capacity",
-        "lung-capacities"
-      ],
+      "tags": ["vital-capacity", "lung-capacities"],
       "neetWeightage": "HIGH"
     },
     {
@@ -114,21 +82,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "Total Lung Capacity (TLC) is equal to:",
-      "options": [
-        "IRV + ERV",
-        "TV + IRV + ERV",
-        "VC + RV",
-        "TV + RV"
-      ],
+      "options": ["IRV + ERV", "TV + IRV + ERV", "VC + RV", "TV + RV"],
       "correctAnswer": "C",
       "explanation": "Total Lung Capacity (TLC) = Vital Capacity (VC) + Residual Volume (RV). It represents the total volume of air the lungs can accommodate after a forced inspiration, approximately 5800-6000 mL.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "TLC",
-        "lung-capacities"
-      ],
+      "tags": ["TLC", "lung-capacities"],
       "neetWeightage": "HIGH"
     },
     {
@@ -139,21 +99,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "Exchange of gases in the lungs occurs at the level of:",
-      "options": [
-        "Bronchioles",
-        "Bronchi",
-        "Trachea",
-        "Alveoli"
-      ],
+      "options": ["Bronchioles", "Bronchi", "Trachea", "Alveoli"],
       "correctAnswer": "D",
       "explanation": "Gas exchange occurs at the alveoli, which are thin-walled, highly vascularized sac-like structures at the terminal ends of the respiratory tree. The alveolar membrane is extremely thin (0.2 \u00b5m), facilitating rapid diffusion of O2 and CO2.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "alveoli",
-        "gas-exchange"
-      ],
+      "tags": ["alveoli", "gas-exchange"],
       "neetWeightage": "HIGH"
     },
     {
@@ -164,21 +116,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The partial pressure of oxygen (pO2) in alveolar air is approximately:",
-      "options": [
-        "159 mmHg",
-        "40 mmHg",
-        "95 mmHg",
-        "104 mmHg"
-      ],
+      "options": ["159 mmHg", "40 mmHg", "95 mmHg", "104 mmHg"],
       "correctAnswer": "D",
       "explanation": "The partial pressure of O2 in alveolar air is approximately 104 mmHg. This is lower than atmospheric pO2 (159 mmHg) because alveolar air is a mixture of fresh inspired air and residual air, and O2 is continuously being taken up by blood.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "partial-pressure",
-        "alveolar-air"
-      ],
+      "tags": ["partial-pressure", "alveolar-air"],
       "neetWeightage": "HIGH"
     },
     {
@@ -200,10 +144,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "oxygen-transport",
-        "oxyhaemoglobin"
-      ],
+      "tags": ["oxygen-transport", "oxyhaemoglobin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -225,10 +166,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bohr-effect",
-        "oxygen-dissociation"
-      ],
+      "tags": ["bohr-effect", "oxygen-dissociation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -250,10 +188,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "CO2-transport",
-        "bicarbonate"
-      ],
+      "tags": ["CO2-transport", "bicarbonate"],
       "neetWeightage": "HIGH"
     },
     {
@@ -264,21 +199,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The respiratory centre is located in the:",
-      "options": [
-        "Medulla oblongata",
-        "Cerebellum",
-        "Cerebrum",
-        "Hypothalamus"
-      ],
+      "options": ["Medulla oblongata", "Cerebellum", "Cerebrum", "Hypothalamus"],
       "correctAnswer": "A",
       "explanation": "The respiratory rhythm centre is located in the medulla oblongata of the brain. It is primarily responsible for the rhythmic pattern of breathing. The pneumotaxic centre in the pons modulates the rhythm.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "respiratory-centre",
-        "medulla"
-      ],
+      "tags": ["respiratory-centre", "medulla"],
       "neetWeightage": "HIGH"
     },
     {
@@ -289,21 +216,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The pneumotaxic centre is located in the:",
-      "options": [
-        "Pons",
-        "Cerebellum",
-        "Hypothalamus",
-        "Medulla oblongata"
-      ],
+      "options": ["Pons", "Cerebellum", "Hypothalamus", "Medulla oblongata"],
       "correctAnswer": "A",
       "explanation": "The pneumotaxic centre is located in the pons region of the brain. It can moderate the functions of the respiratory rhythm centre by limiting the duration of inspiration, thereby adjusting the rate and depth of breathing.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pneumotaxic-centre",
-        "pons"
-      ],
+      "tags": ["pneumotaxic-centre", "pons"],
       "neetWeightage": "HIGH"
     },
     {
@@ -325,10 +244,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "inspiration",
-        "diaphragm"
-      ],
+      "tags": ["inspiration", "diaphragm"],
       "neetWeightage": "HIGH"
     },
     {
@@ -339,21 +255,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The enzyme carbonic anhydrase is found in high concentration in:",
-      "options": [
-        "WBCs",
-        "Plasma",
-        "Platelets",
-        "RBCs"
-      ],
+      "options": ["WBCs", "Plasma", "Platelets", "RBCs"],
       "correctAnswer": "D",
       "explanation": "Carbonic anhydrase is present in high concentration in RBCs (red blood cells). It catalyzes the reversible reaction: CO2 + H2O \u21cc H2CO3 \u21cc H+ + HCO3-. This is essential for CO2 transport as bicarbonate ions.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "carbonic-anhydrase",
-        "RBCs"
-      ],
+      "tags": ["carbonic-anhydrase", "RBCs"],
       "neetWeightage": "HIGH"
     },
     {
@@ -375,10 +283,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chloride-shift",
-        "CO2-transport"
-      ],
+      "tags": ["chloride-shift", "CO2-transport"],
       "neetWeightage": "HIGH"
     },
     {
@@ -389,21 +294,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The oxygen-haemoglobin dissociation curve is:",
-      "options": [
-        "Hyperbolic",
-        "Linear",
-        "Sigmoid (S-shaped)",
-        "Exponential"
-      ],
+      "options": ["Hyperbolic", "Linear", "Sigmoid (S-shaped)", "Exponential"],
       "correctAnswer": "C",
       "explanation": "The oxygen-haemoglobin dissociation curve is sigmoid (S-shaped). This shape reflects the cooperative binding of O2 to haemoglobin - binding of the first O2 molecule increases the affinity for subsequent O2 molecules.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "oxygen-dissociation-curve",
-        "sigmoid"
-      ],
+      "tags": ["oxygen-dissociation-curve", "sigmoid"],
       "neetWeightage": "HIGH"
     },
     {
@@ -414,21 +311,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "100 mL of oxygenated blood can deliver approximately how much O2 to the tissues?",
-      "options": [
-        "3 mL",
-        "10 mL",
-        "20 mL",
-        "5 mL"
-      ],
+      "options": ["3 mL", "10 mL", "20 mL", "5 mL"],
       "correctAnswer": "D",
       "explanation": "Every 100 mL of oxygenated blood can deliver approximately 5 mL of O2 to the tissues. In the lungs, Hb binds about 20 mL O2/100 mL blood. At tissues, Hb releases about 5 mL, retaining about 14-15 mL (75% saturation at tissues).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "oxygen-delivery",
-        "quantitative"
-      ],
+      "tags": ["oxygen-delivery", "quantitative"],
       "neetWeightage": "HIGH"
     },
     {
@@ -439,21 +328,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "Surfactant in the lungs is secreted by:",
-      "options": [
-        "Type I pneumocytes",
-        "Goblet cells",
-        "Clara cells",
-        "Type II pneumocytes"
-      ],
+      "options": ["Type I pneumocytes", "Goblet cells", "Clara cells", "Type II pneumocytes"],
       "correctAnswer": "D",
       "explanation": "Pulmonary surfactant is a phospholipoprotein (mainly dipalmitoyl phosphatidylcholine) secreted by Type II alveolar epithelial cells (pneumocytes). It reduces surface tension at the air-liquid interface in alveoli, preventing alveolar collapse.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "surfactant",
-        "type-II-pneumocytes"
-      ],
+      "tags": ["surfactant", "type-II-pneumocytes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -475,10 +356,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "asthma",
-        "disorders"
-      ],
+      "tags": ["asthma", "disorders"],
       "neetWeightage": "HIGH"
     },
     {
@@ -500,10 +378,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "emphysema",
-        "disorders"
-      ],
+      "tags": ["emphysema", "disorders"],
       "neetWeightage": "HIGH"
     },
     {
@@ -525,10 +400,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "haldane-effect",
-        "gas-transport"
-      ],
+      "tags": ["haldane-effect", "gas-transport"],
       "neetWeightage": "HIGH"
     },
     {
@@ -539,21 +411,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The pleural space between the visceral and parietal pleura contains:",
-      "options": [
-        "Lymph",
-        "Blood",
-        "Pleural fluid",
-        "Air"
-      ],
+      "options": ["Lymph", "Blood", "Pleural fluid", "Air"],
       "correctAnswer": "C",
       "explanation": "The pleural space (pleural cavity) between the two pleurae contains a thin layer of pleural fluid. This fluid reduces friction during breathing movements and creates surface tension that helps the lungs expand with the thoracic wall.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pleura",
-        "pleural-fluid"
-      ],
+      "tags": ["pleura", "pleural-fluid"],
       "neetWeightage": "HIGH"
     },
     {
@@ -575,10 +439,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "regulation-of-breathing",
-        "CO2"
-      ],
+      "tags": ["regulation-of-breathing", "CO2"],
       "neetWeightage": "HIGH"
     },
     {
@@ -589,21 +450,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The pO2 of deoxygenated blood entering the lungs is approximately:",
-      "options": [
-        "95 mmHg",
-        "104 mmHg",
-        "159 mmHg",
-        "40 mmHg"
-      ],
+      "options": ["95 mmHg", "104 mmHg", "159 mmHg", "40 mmHg"],
       "correctAnswer": "D",
       "explanation": "The pO2 of deoxygenated blood in the pulmonary artery entering the lungs is approximately 40 mmHg. The pO2 of alveolar air is about 104 mmHg. This gradient of 64 mmHg drives O2 diffusion from alveoli into blood.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "partial-pressure",
-        "deoxygenated-blood"
-      ],
+      "tags": ["partial-pressure", "deoxygenated-blood"],
       "neetWeightage": "HIGH"
     },
     {
@@ -614,21 +467,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The right lung has how many lobes?",
-      "options": [
-        "Three",
-        "Four",
-        "Five",
-        "Two"
-      ],
+      "options": ["Three", "Four", "Five", "Two"],
       "correctAnswer": "A",
       "explanation": "The right lung has three lobes: superior, middle, and inferior, separated by horizontal and oblique fissures. The left lung has only two lobes (superior and inferior) due to the cardiac notch accommodating the heart.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lungs",
-        "anatomy"
-      ],
+      "tags": ["lungs", "anatomy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -639,21 +484,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "Occupational respiratory disorder caused by inhalation of coal dust is:",
-      "options": [
-        "Silicosis",
-        "Anthracosis",
-        "Asbestosis",
-        "Byssinosis"
-      ],
+      "options": ["Silicosis", "Anthracosis", "Asbestosis", "Byssinosis"],
       "correctAnswer": "B",
       "explanation": "Anthracosis (black lung disease) is caused by long-term inhalation of coal dust. Silicosis is caused by silica dust, asbestosis by asbestos fibres, and byssinosis by cotton fibre dust. All are occupational lung diseases (pneumoconioses).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "occupational-disorders",
-        "anthracosis"
-      ],
+      "tags": ["occupational-disorders", "anthracosis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -664,21 +501,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "Expiratory Reserve Volume (ERV) is approximately:",
-      "options": [
-        "2500 mL",
-        "1200 mL",
-        "500 mL",
-        "1000-1100 mL"
-      ],
+      "options": ["2500 mL", "1200 mL", "500 mL", "1000-1100 mL"],
       "correctAnswer": "D",
       "explanation": "Expiratory Reserve Volume (ERV) is the additional volume of air that can be expelled by forceful expiration after a normal expiration. It is approximately 1000-1100 mL in a healthy adult.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ERV",
-        "lung-volumes"
-      ],
+      "tags": ["ERV", "lung-volumes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -689,21 +518,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The C-shaped cartilaginous rings of the trachea are incomplete on the:",
-      "options": [
-        "Lateral side",
-        "Anterior side",
-        "Ventral side",
-        "Dorsal (posterior) side"
-      ],
+      "options": ["Lateral side", "Anterior side", "Ventral side", "Dorsal (posterior) side"],
       "correctAnswer": "D",
       "explanation": "The C-shaped cartilaginous rings of the trachea are incomplete on the dorsal (posterior) side, where the trachealis muscle is present. This allows the oesophagus (lying behind the trachea) to expand during swallowing of food bolus.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "trachea",
-        "anatomy"
-      ],
+      "tags": ["trachea", "anatomy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -714,21 +535,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The number of haem groups in one haemoglobin molecule is:",
-      "options": [
-        "2",
-        "1",
-        "4",
-        "6"
-      ],
+      "options": ["2", "1", "4", "6"],
       "correctAnswer": "C",
       "explanation": "Each haemoglobin molecule consists of 4 subunits (2 alpha and 2 beta chains), each containing one haem group with a central iron atom. Thus, each Hb molecule has 4 haem groups and can bind 4 molecules of O2.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "haemoglobin",
-        "haem-groups"
-      ],
+      "tags": ["haemoglobin", "haem-groups"],
       "neetWeightage": "HIGH"
     },
     {
@@ -739,21 +552,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The partial pressure of CO2 in alveolar air is approximately:",
-      "options": [
-        "95 mmHg",
-        "45 mmHg",
-        "0.3 mmHg",
-        "40 mmHg"
-      ],
+      "options": ["95 mmHg", "45 mmHg", "0.3 mmHg", "40 mmHg"],
       "correctAnswer": "D",
       "explanation": "The pCO2 in alveolar air is approximately 40 mmHg. The pCO2 of deoxygenated blood is about 45 mmHg. This pressure gradient of about 5 mmHg is sufficient for CO2 to diffuse from blood into alveoli because CO2 is about 20 times more soluble than O2.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "partial-pressure",
-        "CO2"
-      ],
+      "tags": ["partial-pressure", "CO2"],
       "neetWeightage": "HIGH"
     },
     {
@@ -764,21 +569,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The respiratory membrane consists of how many layers?",
-      "options": [
-        "Four",
-        "Two",
-        "Five",
-        "Three"
-      ],
+      "options": ["Four", "Two", "Five", "Three"],
       "correctAnswer": "D",
       "explanation": "The respiratory (diffusion) membrane consists of three major layers: (1) the thin squamous epithelium of alveoli, (2) the endothelium of alveolar capillaries, and (3) the fused basement membranes of both. The total thickness is about 0.2 \u00b5m, facilitating rapid gas diffusion.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "respiratory-membrane",
-        "diffusion"
-      ],
+      "tags": ["respiratory-membrane", "diffusion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -800,10 +597,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "carbon-monoxide",
-        "poisoning"
-      ],
+      "tags": ["carbon-monoxide", "poisoning"],
       "neetWeightage": "HIGH"
     },
     {
@@ -814,21 +608,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The functional residual capacity (FRC) is equal to:",
-      "options": [
-        "IRV + RV",
-        "TV + IRV",
-        "TV + ERV",
-        "ERV + RV"
-      ],
+      "options": ["IRV + RV", "TV + IRV", "TV + ERV", "ERV + RV"],
       "correctAnswer": "D",
       "explanation": "Functional Residual Capacity (FRC) = ERV + RV. It is the volume of air remaining in the lungs after a normal expiration. FRC = 1100 mL (ERV) + 1200 mL (RV) \u2248 2300 mL.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "FRC",
-        "lung-capacities"
-      ],
+      "tags": ["FRC", "lung-capacities"],
       "neetWeightage": "HIGH"
     },
     {
@@ -850,10 +636,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chemoreceptors",
-        "regulation"
-      ],
+      "tags": ["chemoreceptors", "regulation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -864,21 +647,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The inspiratory capacity (IC) is the sum of:",
-      "options": [
-        "TV + IRV",
-        "ERV + RV",
-        "IRV + ERV",
-        "TV + ERV"
-      ],
+      "options": ["TV + IRV", "ERV + RV", "IRV + ERV", "TV + ERV"],
       "correctAnswer": "A",
       "explanation": "Inspiratory Capacity (IC) = Tidal Volume (TV) + Inspiratory Reserve Volume (IRV). It is the total volume of air a person can inspire after normal expiration. IC = 500 mL + 2500-3000 mL \u2248 3000-3500 mL.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "IC",
-        "lung-capacities"
-      ],
+      "tags": ["IC", "lung-capacities"],
       "neetWeightage": "HIGH"
     },
     {
@@ -889,21 +664,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The voice box (larynx) is made of:",
-      "options": [
-        "Fibrous tissue only",
-        "Muscle only",
-        "Bone",
-        "Cartilage"
-      ],
+      "options": ["Fibrous tissue only", "Muscle only", "Bone", "Cartilage"],
       "correctAnswer": "D",
       "explanation": "The larynx (voice box) is made of cartilages, primarily the thyroid cartilage (Adam's apple), cricoid cartilage, arytenoid cartilages, and epiglottis. It contains the vocal cords and is responsible for sound production.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "larynx",
-        "anatomy"
-      ],
+      "tags": ["larynx", "anatomy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -925,10 +692,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "oxygen-dissociation",
-        "right-shift"
-      ],
+      "tags": ["oxygen-dissociation", "right-shift"],
       "neetWeightage": "HIGH"
     },
     {
@@ -939,21 +703,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "How many alveoli are present in each lung approximately?",
-      "options": [
-        "100 million",
-        "50 million",
-        "200 million",
-        "150 million"
-      ],
+      "options": ["100 million", "50 million", "200 million", "150 million"],
       "correctAnswer": "D",
       "explanation": "Each lung contains approximately 150 million alveoli (total of about 300 million in both lungs). They provide an enormous surface area of about 100 square metres for gas exchange.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "alveoli",
-        "number"
-      ],
+      "tags": ["alveoli", "number"],
       "neetWeightage": "HIGH"
     },
     {
@@ -975,10 +731,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "expiration",
-        "pressure-changes"
-      ],
+      "tags": ["expiration", "pressure-changes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1000,10 +753,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "CO2-diffusion",
-        "solubility"
-      ],
+      "tags": ["CO2-diffusion", "solubility"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1025,10 +775,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "O2-binding",
-        "partial-pressure"
-      ],
+      "tags": ["O2-binding", "partial-pressure"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1050,11 +797,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lungs",
-        "lobes",
-        "cardiac-notch"
-      ],
+      "tags": ["lungs", "lobes", "cardiac-notch"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1076,10 +819,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "residual-volume",
-        "lung-function"
-      ],
+      "tags": ["residual-volume", "lung-function"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1101,10 +841,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pneumotaxic-centre",
-        "pons"
-      ],
+      "tags": ["pneumotaxic-centre", "pons"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1126,10 +863,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "CO-poisoning",
-        "carboxyhaemoglobin"
-      ],
+      "tags": ["CO-poisoning", "carboxyhaemoglobin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1151,10 +885,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "exercise",
-        "ventilation"
-      ],
+      "tags": ["exercise", "ventilation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1176,10 +907,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "emphysema",
-        "barrel-chest"
-      ],
+      "tags": ["emphysema", "barrel-chest"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1201,10 +929,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "external-respiration",
-        "internal-respiration"
-      ],
+      "tags": ["external-respiration", "internal-respiration"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1226,10 +951,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "surfactant",
-        "surface-tension"
-      ],
+      "tags": ["surfactant", "surface-tension"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1251,10 +973,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "intrapleural-pressure",
-        "mechanics"
-      ],
+      "tags": ["intrapleural-pressure", "mechanics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1276,10 +995,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "altitude-sickness",
-        "hypoxia"
-      ],
+      "tags": ["altitude-sickness", "hypoxia"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1301,10 +1017,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "O2-transport",
-        "oxyhaemoglobin"
-      ],
+      "tags": ["O2-transport", "oxyhaemoglobin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1326,10 +1039,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "CO2-transport",
-        "percentages"
-      ],
+      "tags": ["CO2-transport", "percentages"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1351,10 +1061,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "breathing-mechanism",
-        "inspiration"
-      ],
+      "tags": ["breathing-mechanism", "inspiration"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1376,10 +1083,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vital-capacity",
-        "factors"
-      ],
+      "tags": ["vital-capacity", "factors"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1401,10 +1105,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bohr-effect",
-        "oxygen-dissociation"
-      ],
+      "tags": ["bohr-effect", "oxygen-dissociation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1415,20 +1116,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "Which of the following statements about respiratory disorders is/are INCORRECT?\n(i) Asthma causes difficulty in breathing due to bronchospasm.\n(ii) Emphysema involves destruction of alveolar walls.\n(iii) Silicosis is caused by inhaling cotton fibre dust.\n(iv) Occupational hazards can lead to pneumoconiosis.",
-      "options": [
-        "(i) and (ii)",
-        "(iii) only",
-        "(iii) and (iv)",
-        "(ii) and (iv)"
-      ],
+      "options": ["(i) and (ii)", "(iii) only", "(iii) and (iv)", "(ii) and (iv)"],
       "correctAnswer": "B",
       "explanation": "Only statement (iii) is incorrect. Silicosis is caused by inhaling silica dust, not cotton fibre dust. Cotton fibre dust causes byssinosis. Statements (i), (ii), and (iv) are all correct descriptions of respiratory disorders.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "respiratory-disorders"
-      ],
+      "tags": ["respiratory-disorders"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1450,10 +1144,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "respiratory-system",
-        "anatomy"
-      ],
+      "tags": ["respiratory-system", "anatomy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1464,21 +1155,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "Read the following statements about the regulation of breathing:\n(i) The respiratory rhythm centre in the medulla oblongata is the primary controller.\n(ii) The pneumotaxic centre in the pons moderates the respiratory rate.\n(iii) Central chemoreceptors respond primarily to changes in CO2/H+.\n(iv) A significant increase in CO2 concentration decreases the respiratory rate.\nSelect the incorrect statement(s):",
-      "options": [
-        "(iii) and (iv)",
-        "(i) and (ii)",
-        "(iv) only",
-        "None are incorrect"
-      ],
+      "options": ["(iii) and (iv)", "(i) and (ii)", "(iv) only", "None are incorrect"],
       "correctAnswer": "C",
       "explanation": "Statement (iv) is incorrect. An increase in CO2 INCREASES (not decreases) the respiratory rate and depth. CO2 is the primary chemical stimulus for breathing. Statements (i), (ii), and (iii) are all correct.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "regulation",
-        "respiratory-centre"
-      ],
+      "tags": ["regulation", "respiratory-centre"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1500,10 +1183,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "conducting-part",
-        "respiratory-part"
-      ],
+      "tags": ["conducting-part", "respiratory-part"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1525,10 +1205,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "haemoglobin",
-        "types"
-      ],
+      "tags": ["haemoglobin", "types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1550,10 +1227,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lung-volumes",
-        "lung-capacities"
-      ],
+      "tags": ["lung-volumes", "lung-capacities"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1564,21 +1238,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "Consider the following about chloride shift:\n(i) It occurs at the tissue level.\n(ii) Cl- ions move from plasma into RBCs.\n(iii) HCO3- ions move from RBCs into plasma.\n(iv) It helps maintain electrical neutrality.\nHow many of the above are correct?",
-      "options": [
-        "Two",
-        "Three",
-        "Four",
-        "One"
-      ],
+      "options": ["Two", "Three", "Four", "One"],
       "correctAnswer": "C",
       "explanation": "All four statements are correct. At tissue level, CO2 enters RBCs and is converted to HCO3- (via carbonic anhydrase). HCO3- moves out to plasma (iii), and to maintain charge balance (iv), Cl- moves in from plasma to RBCs (ii). This entire process (i) occurs at tissue capillaries.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chloride-shift",
-        "ion-exchange"
-      ],
+      "tags": ["chloride-shift", "ion-exchange"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1600,10 +1266,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gas-exchange",
-        "respiratory-membrane"
-      ],
+      "tags": ["gas-exchange", "respiratory-membrane"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1625,10 +1288,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lung-volumes",
-        "values"
-      ],
+      "tags": ["lung-volumes", "values"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1650,10 +1310,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "causes"
-      ],
+      "tags": ["disorders", "causes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1675,10 +1332,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gas-transport",
-        "percentages"
-      ],
+      "tags": ["gas-transport", "percentages"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1700,10 +1354,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "respiratory-centres",
-        "location"
-      ],
+      "tags": ["respiratory-centres", "location"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1725,10 +1376,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lung-capacities",
-        "formulas"
-      ],
+      "tags": ["lung-capacities", "formulas"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1750,10 +1398,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "effects",
-        "gas-transport"
-      ],
+      "tags": ["effects", "gas-transport"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1775,10 +1420,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "structures",
-        "functions"
-      ],
+      "tags": ["structures", "functions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1800,10 +1442,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "partial-pressures",
-        "locations"
-      ],
+      "tags": ["partial-pressures", "locations"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1825,10 +1464,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "occupational-diseases",
-        "pneumoconiosis"
-      ],
+      "tags": ["occupational-diseases", "pneumoconiosis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1850,10 +1486,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "breathing-mechanism",
-        "muscles"
-      ],
+      "tags": ["breathing-mechanism", "muscles"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1875,10 +1508,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "haemoglobin-forms",
-        "ligands"
-      ],
+      "tags": ["haemoglobin-forms", "ligands"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1889,21 +1519,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "How many of the following factors shift the O2-Hb dissociation curve to the right?\n(a) Increase in temperature (b) Increase in pCO2 (c) Decrease in pH (d) Increase in 2,3-DPG (e) Increase in pO2 (f) Decrease in temperature",
-      "options": [
-        "Two",
-        "Four",
-        "Five",
-        "Three"
-      ],
+      "options": ["Two", "Four", "Five", "Three"],
       "correctAnswer": "B",
       "explanation": "Four factors shift the curve to the right: (a) increased temperature, (b) increased pCO2, (c) decreased pH, and (d) increased 2,3-DPG. These conditions exist at active tissues and promote O2 release. Increased pO2 and decreased temperature shift it to the left.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "oxygen-dissociation",
-        "right-shift"
-      ],
+      "tags": ["oxygen-dissociation", "right-shift"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1914,21 +1536,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "How many lobes are present in total in both human lungs?",
-      "options": [
-        "Six",
-        "Four",
-        "Five",
-        "Three"
-      ],
+      "options": ["Six", "Four", "Five", "Three"],
       "correctAnswer": "C",
       "explanation": "The right lung has 3 lobes (superior, middle, inferior) and the left lung has 2 lobes (superior and inferior). Total = 3 + 2 = 5 lobes in both lungs combined.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lungs",
-        "lobes"
-      ],
+      "tags": ["lungs", "lobes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1939,21 +1553,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "How many of the following are lung capacities (not volumes)?\n(a) Tidal Volume (b) Vital Capacity (c) Inspiratory Capacity (d) Residual Volume (e) Functional Residual Capacity (f) Total Lung Capacity (g) Expiratory Reserve Volume (h) Inspiratory Reserve Volume",
-      "options": [
-        "Four",
-        "Two",
-        "Three",
-        "Five"
-      ],
+      "options": ["Four", "Two", "Three", "Five"],
       "correctAnswer": "A",
       "explanation": "Four are lung capacities: (b) Vital Capacity (VC), (c) Inspiratory Capacity (IC), (e) Functional Residual Capacity (FRC), and (f) Total Lung Capacity (TLC). The rest are lung volumes: TV, IRV, ERV, and RV. Capacities are combinations of two or more volumes.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lung-capacities",
-        "lung-volumes"
-      ],
+      "tags": ["lung-capacities", "lung-volumes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1964,21 +1570,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "How many O2 molecules can one haemoglobin molecule bind?",
-      "options": [
-        "8",
-        "1",
-        "2",
-        "4"
-      ],
+      "options": ["8", "1", "2", "4"],
       "correctAnswer": "D",
       "explanation": "One haemoglobin molecule has 4 subunits (2 alpha and 2 beta), each with one haem group containing one Fe2+ atom. Each haem group can bind one O2 molecule, so one Hb can bind a maximum of 4 O2 molecules.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "haemoglobin",
-        "O2-binding"
-      ],
+      "tags": ["haemoglobin", "O2-binding"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1989,21 +1587,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "How many of the following structures are part of the conducting portion of the respiratory system?\n(a) Nostrils (b) Pharynx (c) Larynx (d) Trachea (e) Bronchi (f) Bronchioles (g) Alveolar ducts (h) Alveoli",
-      "options": [
-        "Six",
-        "Eight",
-        "Four",
-        "Five"
-      ],
+      "options": ["Six", "Eight", "Four", "Five"],
       "correctAnswer": "A",
       "explanation": "Six structures belong to the conducting portion: (a) nostrils, (b) pharynx, (c) larynx, (d) trachea, (e) bronchi, and (f) bronchioles. Alveolar ducts (g) and alveoli (h) are part of the respiratory (exchange) portion where gas exchange actually occurs.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "conducting-portion",
-        "anatomy"
-      ],
+      "tags": ["conducting-portion", "anatomy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2014,21 +1604,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "How many layers make up the respiratory (diffusion) membrane across which gas exchange occurs in the alveoli?",
-      "options": [
-        "Three",
-        "Five",
-        "Two",
-        "Four"
-      ],
+      "options": ["Three", "Five", "Two", "Four"],
       "correctAnswer": "A",
       "explanation": "The respiratory membrane consists of three layers: (1) thin squamous alveolar epithelium, (2) fused basement membranes of alveolar epithelium and capillary endothelium, and (3) capillary endothelium. Total thickness is approximately 0.2 micrometres.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "respiratory-membrane",
-        "layers"
-      ],
+      "tags": ["respiratory-membrane", "layers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2039,21 +1621,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "How many of the following are respiratory disorders?\n(a) Asthma (b) Emphysema (c) Bronchitis (d) Pneumonia (e) Silicosis (f) Asbestosis (g) Tuberculosis (h) Occupational asthma",
-      "options": [
-        "Six",
-        "Eight",
-        "Seven",
-        "Five"
-      ],
+      "options": ["Six", "Eight", "Seven", "Five"],
       "correctAnswer": "B",
       "explanation": "All eight listed conditions are respiratory disorders. Asthma (allergic), emphysema (alveolar damage), bronchitis (bronchial inflammation), pneumonia (lung infection), silicosis and asbestosis (occupational), tuberculosis (mycobacterial), and occupational asthma are all disorders of the respiratory system.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "counting"
-      ],
+      "tags": ["disorders", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2075,10 +1649,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "air-passage",
-        "sequence"
-      ],
+      "tags": ["air-passage", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2100,11 +1671,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "inspiration",
-        "mechanism",
-        "sequence"
-      ],
+      "tags": ["inspiration", "mechanism", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2126,10 +1693,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "CO2-transport",
-        "sequence"
-      ],
+      "tags": ["CO2-transport", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2151,10 +1715,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bronchial-tree",
-        "sequence"
-      ],
+      "tags": ["bronchial-tree", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2176,10 +1737,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lung-volumes",
-        "comparison"
-      ],
+      "tags": ["lung-volumes", "comparison"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2201,10 +1759,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "neural-regulation",
-        "sequence"
-      ],
+      "tags": ["neural-regulation", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2226,10 +1781,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "O2-transport",
-        "sequence"
-      ],
+      "tags": ["O2-transport", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2240,22 +1792,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The partial pressure of oxygen (pO\u2082) in alveoli is approximately:",
-      "options": [
-        "40 mmHg",
-        "100 mmHg",
-        "104 mmHg",
-        "159 mmHg"
-      ],
+      "options": ["40 mmHg", "100 mmHg", "104 mmHg", "159 mmHg"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the partial pressure of oxygen in alveoli is approximately 104 mmHg. In deoxygenated blood entering the lungs, pO\u2082 is about 40 mmHg. This pressure gradient drives oxygen from alveoli into the blood.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gas-exchange",
-        "partial-pressure",
-        "oxygen"
-      ],
+      "tags": ["gas-exchange", "partial-pressure", "oxygen"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2277,11 +1820,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lung-volumes",
-        "tidal-volume",
-        "breathing"
-      ],
+      "tags": ["lung-volumes", "tidal-volume", "breathing"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2303,11 +1842,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "haemoglobin",
-        "bohr-effect",
-        "oxygen-dissociation"
-      ],
+      "tags": ["haemoglobin", "bohr-effect", "oxygen-dissociation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2329,11 +1864,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "carbon-monoxide",
-        "haemoglobin",
-        "poisoning"
-      ],
+      "tags": ["carbon-monoxide", "haemoglobin", "poisoning"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2355,11 +1886,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "co2-transport",
-        "bicarbonate",
-        "blood"
-      ],
+      "tags": ["co2-transport", "bicarbonate", "blood"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2370,22 +1897,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "Vital capacity is equal to:",
-      "options": [
-        "TV + IRV",
-        "TV + ERV",
-        "TV + IRV + ERV",
-        "TV + IRV + ERV + RV"
-      ],
+      "options": ["TV + IRV", "TV + ERV", "TV + IRV + ERV", "TV + IRV + ERV + RV"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, vital capacity (VC) = tidal volume (TV) + inspiratory reserve volume (IRV) + expiratory reserve volume (ERV). It represents the maximum volume of air a person can breathe in after maximum expiration (about 3400-4800 mL).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lung-volumes",
-        "vital-capacity",
-        "spirometry"
-      ],
+      "tags": ["lung-volumes", "vital-capacity", "spirometry"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2396,22 +1914,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "Oxygen is primarily transported in blood by binding to:",
-      "options": [
-        "Plasma proteins",
-        "White blood cells",
-        "Haemoglobin in RBCs",
-        "Platelets"
-      ],
+      "options": ["Plasma proteins", "White blood cells", "Haemoglobin in RBCs", "Platelets"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, about 97% of oxygen is transported bound to haemoglobin in red blood cells as oxyhaemoglobin. Only about 3% of oxygen is dissolved directly in plasma. Each haemoglobin molecule can bind 4 molecules of oxygen.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "oxygen-transport",
-        "haemoglobin",
-        "rbc"
-      ],
+      "tags": ["oxygen-transport", "haemoglobin", "rbc"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2433,11 +1942,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "respiratory-disorders",
-        "emphysema",
-        "alveoli"
-      ],
+      "tags": ["respiratory-disorders", "emphysema", "alveoli"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2448,22 +1953,13 @@
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "The respiratory centre is located in:",
-      "options": [
-        "Cerebrum",
-        "Cerebellum",
-        "Medulla oblongata",
-        "Hypothalamus"
-      ],
+      "options": ["Cerebrum", "Cerebellum", "Medulla oblongata", "Hypothalamus"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the respiratory rhythm centre is located in the medulla oblongata of the hindbrain. A pneumotaxic centre in the pons regulates the respiratory rhythm by sending signals to reduce the duration of inspiration.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "respiratory-centre",
-        "medulla",
-        "breathing-regulation"
-      ],
+      "tags": ["respiratory-centre", "medulla", "breathing-regulation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2485,11 +1981,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chloride-shift",
-        "co2-transport",
-        "rbc"
-      ],
+      "tags": ["chloride-shift", "co2-transport", "rbc"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2511,10 +2003,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lung-volumes",
-        "residual-volume"
-      ],
+      "tags": ["lung-volumes", "residual-volume"],
       "neetWeightage": "HIGH"
     }
   ]

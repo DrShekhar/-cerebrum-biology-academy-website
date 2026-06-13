@@ -41,9 +41,7 @@ export default function QuickEnrollPage() {
         </div>
 
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Quick Enroll</h1>
-        <p className="text-gray-600 mb-6">
-          Start your NEET Biology journey with Cerebrum Academy
-        </p>
+        <p className="text-gray-600 mb-6">Start your NEET Biology journey with Cerebrum Academy</p>
 
         <div className="grid grid-cols-3 gap-3 mb-6">
           <div className="bg-green-50 rounded-xl p-3">

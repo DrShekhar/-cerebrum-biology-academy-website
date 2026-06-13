@@ -113,10 +113,7 @@ export async function POST(request: NextRequest) {
     })
 
     if (!course) {
-      return NextResponse.json(
-        { success: false, error: 'Course not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Course not found' }, { status: 404 })
     }
 
     let userId = validatedData.userId

@@ -41,7 +41,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 9 in Delhi | South Extension + Rohini + Green Park',
-    description: 'NEET Foundation Class 9 in Delhi at Cerebrum Biology Academy — South Extension flagship, Rohini, Green Park. Board + NEET parallel, AIIMS-trained faculty, batches of 15-20. ₹35K-90K/year. Free demo...',
+    description:
+      'NEET Foundation Class 9 in Delhi at Cerebrum Biology Academy — South Extension flagship, Rohini, Green Park. Board + NEET parallel, AIIMS-trained faculty, batches of 15-20. ₹35K-90K/year. Free demo...',
   },
 }
 

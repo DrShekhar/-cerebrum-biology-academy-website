@@ -447,9 +447,7 @@ const AccessibilityHub: React.FC = () => {
     <AccessibilityContext.Provider value={{ settings, updateSettings, applyProfile }}>
       <div className="max-w-7xl mx-auto p-6 space-y-6">
         {/* Header */}
-        <div
-          className="text-center space-y-4 animate-fadeInUp"
-        >
+        <div className="text-center space-y-4 animate-fadeInUp">
           <div className="flex items-center justify-center gap-3">
             <div className="p-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl">
               <Accessibility className="w-8 h-8 text-white" />
@@ -536,610 +534,579 @@ const AccessibilityHub: React.FC = () => {
         </div>
 
         {/* Content */}
-{/* Profiles Tab */}
-          {activeTab === 'profiles' && (
-            <div
-              key="profiles"
-              className="space-y-6 animate-fadeInUp"
-            >
-              <div className="bg-white rounded-xl p-6 border">
-                <h3 className="text-lg font-semibold mb-4">Accessibility Profiles</h3>
-                <p className="text-gray-600 mb-6">
-                  Choose a pre-configured profile that matches your accessibility needs, or
-                  customize individual settings below.
-                </p>
+        {/* Profiles Tab */}
+        {activeTab === 'profiles' && (
+          <div key="profiles" className="space-y-6 animate-fadeInUp">
+            <div className="bg-white rounded-xl p-6 border">
+              <h3 className="text-lg font-semibold mb-4">Accessibility Profiles</h3>
+              <p className="text-gray-600 mb-6">
+                Choose a pre-configured profile that matches your accessibility needs, or customize
+                individual settings below.
+              </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {accessibilityProfiles.map((profile) => (
-                    <div
-                      key={profile.id}
-                      onClick={() => applyProfile(profile)}
-                      className={`p-4 border rounded-lg cursor-pointer transition-all ${
-                        activeProfile === profile.id
-                          ? 'border-indigo-500 bg-indigo-50'
-                          : 'border-gray-200 hover:border-gray-300'
-                      }`}
-                    >
-                      <div className="flex items-center gap-3 mb-3">
-                        <div
-                          className={`p-2 rounded-lg ${
-                            activeProfile === profile.id ? 'bg-indigo-100' : 'bg-gray-100'
-                          }`}
-                        >
-                          {profile.icon}
-                        </div>
-                        <h4 className="font-semibold text-gray-800">{profile.name}</h4>
-                      </div>
-                      <p className="text-sm text-gray-600 mb-3">{profile.description}</p>
-                      <div className="space-y-1">
-                        <span className="text-xs font-medium text-gray-700">Supports:</span>
-                        {profile.targetConditions.map((condition, index) => (
-                          <span
-                            key={index}
-                            className="inline-block text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded mr-1 mb-1"
-                          >
-                            {condition}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Settings Tab */}
-          {activeTab === 'settings' && (
-            <div
-              key="settings"
-              className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-            >
-              {/* Visual Settings */}
-              <div className="bg-white rounded-xl p-6 border">
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <Eye className="w-5 h-5 text-blue-600" />
-                  Visual Settings
-                </h3>
-
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">High Contrast Mode</label>
-                    <button
-                      onClick={() => updateSettings({ highContrast: !settings.highContrast })}
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.highContrast ? 'bg-indigo-600' : 'bg-gray-200'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.highContrast ? 'translate-x-6' : 'translate-x-1'
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {accessibilityProfiles.map((profile) => (
+                  <div
+                    key={profile.id}
+                    onClick={() => applyProfile(profile)}
+                    className={`p-4 border rounded-lg cursor-pointer transition-all ${
+                      activeProfile === profile.id
+                        ? 'border-indigo-500 bg-indigo-50'
+                        : 'border-gray-200 hover:border-gray-300'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3 mb-3">
+                      <div
+                        className={`p-2 rounded-lg ${
+                          activeProfile === profile.id ? 'bg-indigo-100' : 'bg-gray-100'
                         }`}
-                      />
-                    </button>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Font Size: {settings.fontSize}px
-                    </label>
-                    <input
-                      type="range"
-                      min="12"
-                      max="24"
-                      value={settings.fontSize}
-                      onChange={(e) => updateSettings({ fontSize: parseInt(e.target.value) })}
-                      className="w-full"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Magnification: {settings.magnification}x
-                    </label>
-                    <input
-                      type="range"
-                      min="1"
-                      max="3"
-                      step="0.1"
-                      value={settings.magnification}
-                      onChange={(e) =>
-                        updateSettings({ magnification: parseFloat(e.target.value) })
-                      }
-                      className="w-full"
-                    />
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">Reduced Motion</label>
-                    <button
-                      onClick={() => updateSettings({ reducedMotion: !settings.reducedMotion })}
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.reducedMotion ? 'bg-indigo-600' : 'bg-gray-200'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">
-                      Enhanced Focus Indicators
-                    </label>
-                    <button
-                      onClick={() => updateSettings({ focusIndicators: !settings.focusIndicators })}
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.focusIndicators ? 'bg-indigo-600' : 'bg-gray-200'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.focusIndicators ? 'translate-x-6' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Audio Settings */}
-              <div className="bg-white rounded-xl p-6 border">
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <Volume2 className="w-5 h-5 text-green-600" />
-                  Audio Settings
-                </h3>
-
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">Audio Descriptions</label>
-                    <button
-                      onClick={() =>
-                        updateSettings({ audioDescriptions: !settings.audioDescriptions })
-                      }
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.audioDescriptions ? 'bg-indigo-600' : 'bg-gray-200'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.audioDescriptions ? 'translate-x-6' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Audio Speed: {settings.audioSpeed}x
-                    </label>
-                    <input
-                      type="range"
-                      min="0.5"
-                      max="2"
-                      step="0.1"
-                      value={settings.audioSpeed}
-                      onChange={(e) => updateSettings({ audioSpeed: parseFloat(e.target.value) })}
-                      className="w-full"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Volume: {Math.round(settings.audioVolume * 100)}%
-                    </label>
-                    <input
-                      type="range"
-                      min="0"
-                      max="1"
-                      step="0.1"
-                      value={settings.audioVolume}
-                      onChange={(e) => updateSettings({ audioVolume: parseFloat(e.target.value) })}
-                      className="w-full"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Voice Gender
-                    </label>
-                    <select
-                      value={settings.voiceGender}
-                      onChange={(e) => updateSettings({ voiceGender: e.target.value as any })}
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                    >
-                      <option value="neutral">Neutral</option>
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                    </select>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">Sound Effects</label>
-                    <button
-                      onClick={() => updateSettings({ soundEffects: !settings.soundEffects })}
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.soundEffects ? 'bg-indigo-600' : 'bg-gray-200'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.soundEffects ? 'translate-x-6' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Cognitive Settings */}
-              <div className="bg-white rounded-xl p-6 border">
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <Brain className="w-5 h-5 text-purple-600" />
-                  Cognitive Settings
-                </h3>
-
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">
-                      Simplified Interface
-                    </label>
-                    <button
-                      onClick={() =>
-                        updateSettings({ simplifiedInterface: !settings.simplifiedInterface })
-                      }
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.simplifiedInterface ? 'bg-indigo-600' : 'bg-gray-200'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.simplifiedInterface ? 'translate-x-6' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">Extended Timeouts</label>
-                    <button
-                      onClick={() =>
-                        updateSettings({ extendedTimeouts: !settings.extendedTimeouts })
-                      }
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.extendedTimeouts ? 'bg-indigo-600' : 'bg-gray-200'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.extendedTimeouts ? 'translate-x-6' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">
-                      Distraction Reduction
-                    </label>
-                    <button
-                      onClick={() =>
-                        updateSettings({ distractionReduction: !settings.distractionReduction })
-                      }
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.distractionReduction ? 'bg-indigo-600' : 'bg-gray-200'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.distractionReduction ? 'translate-x-6' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">Memory Aids</label>
-                    <button
-                      onClick={() => updateSettings({ memoryAids: !settings.memoryAids })}
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.memoryAids ? 'bg-indigo-600' : 'bg-gray-200'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.memoryAids ? 'translate-x-6' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">Dyslexia Support</label>
-                    <button
-                      onClick={() => updateSettings({ dyslexiaSupport: !settings.dyslexiaSupport })}
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.dyslexiaSupport ? 'bg-indigo-600' : 'bg-gray-200'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.dyslexiaSupport ? 'translate-x-6' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">ADHD Support</label>
-                    <button
-                      onClick={() => updateSettings({ adhd_support: !settings.adhd_support })}
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.adhd_support ? 'bg-indigo-600' : 'bg-gray-200'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.adhd_support ? 'translate-x-6' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Language & Communication */}
-              <div className="bg-white rounded-xl p-6 border">
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <Languages className="w-5 h-5 text-orange-600" />
-                  Language & Communication
-                </h3>
-
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Primary Language
-                    </label>
-                    <select
-                      value={settings.primaryLanguage}
-                      onChange={(e) => updateSettings({ primaryLanguage: e.target.value as any })}
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                    >
-                      <option value="english">English</option>
-                      <option value="hindi">Hindi</option>
-                      <option value="regional">Regional Languages</option>
-                    </select>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">Translation Support</label>
-                    <button
-                      onClick={() =>
-                        updateSettings({ translationSupport: !settings.translationSupport })
-                      }
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.translationSupport ? 'bg-indigo-600' : 'bg-gray-200'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.translationSupport ? 'translate-x-6' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">
-                      Sign Language Support
-                    </label>
-                    <button
-                      onClick={() => updateSettings({ signLanguage: !settings.signLanguage })}
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.signLanguage ? 'bg-indigo-600' : 'bg-gray-200'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.signLanguage ? 'translate-x-6' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">Easy Read Format</label>
-                    <button
-                      onClick={() => updateSettings({ easyRead: !settings.easyRead })}
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.easyRead ? 'bg-indigo-600' : 'bg-gray-200'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.easyRead ? 'translate-x-6' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">Pictorial Support</label>
-                    <button
-                      onClick={() =>
-                        updateSettings({ pictorialSupport: !settings.pictorialSupport })
-                      }
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.pictorialSupport ? 'bg-indigo-600' : 'bg-gray-200'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settings.pictorialSupport ? 'translate-x-6' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Support Tab */}
-          {activeTab === 'support' && (
-            <div
-              key="support"
-              className="space-y-6 animate-fadeInUp"
-            >
-              <div className="bg-white rounded-xl p-6 border">
-                <h3 className="text-lg font-semibold mb-4">Learning Accommodations</h3>
-                <div className="grid gap-4">
-                  {accommodations.map((accommodation) => (
-                    <div
-                      key={accommodation.id}
-                      className="border rounded-lg p-4 animate-fadeInUp"
-                    >
-                      <div className="flex items-start justify-between mb-3">
-                        <div>
-                          <h4 className="font-semibold text-gray-800">{accommodation.title}</h4>
-                          <p className="text-sm text-gray-600">{accommodation.description}</p>
-                        </div>
-                        <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">
-                          {accommodation.type}
-                        </span>
-                      </div>
-
-                      <div className="space-y-2">
-                        <div>
-                          <span className="text-sm font-medium text-gray-700">Implementation:</span>
-                          <p className="text-sm text-gray-600">{accommodation.implementation}</p>
-                        </div>
-                        <div>
-                          <span className="text-sm font-medium text-gray-700">Benefits:</span>
-                          <ul className="text-sm text-gray-600 list-disc list-inside">
-                            {accommodation.benefits.map((benefit, index) => (
-                              <li key={index}>{benefit}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Support Resources */}
-              <div className="bg-white rounded-xl p-6 border">
-                <h3 className="text-lg font-semibold mb-4">Support Resources</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="p-4 bg-blue-50 rounded-lg">
-                    <h4 className="font-medium text-blue-800 mb-2">📞 Accessibility Helpline</h4>
-                    <p className="text-sm text-blue-700">
-                      Get immediate assistance with accessibility features
-                    </p>
-                    <button className="mt-2 text-sm text-blue-600 hover:text-blue-800">
-                      Contact Support
-                    </button>
-                  </div>
-                  <div className="p-4 bg-green-50 rounded-lg">
-                    <h4 className="font-medium text-green-800 mb-2">📖 User Guide</h4>
-                    <p className="text-sm text-green-700">
-                      Comprehensive guide to all accessibility features
-                    </p>
-                    <button className="mt-2 text-sm text-green-600 hover:text-green-800">
-                      Download Guide
-                    </button>
-                  </div>
-                  <div className="p-4 bg-purple-50 rounded-lg">
-                    <h4 className="font-medium text-purple-800 mb-2">🎥 Video Tutorials</h4>
-                    <p className="text-sm text-purple-700">Step-by-step video instructions</p>
-                    <button className="mt-2 text-sm text-purple-600 hover:text-purple-800">
-                      Watch Videos
-                    </button>
-                  </div>
-                  <div className="p-4 bg-orange-50 rounded-lg">
-                    <h4 className="font-medium text-orange-800 mb-2">💬 Community Forum</h4>
-                    <p className="text-sm text-orange-700">
-                      Connect with other users and share tips
-                    </p>
-                    <button className="mt-2 text-sm text-orange-600 hover:text-orange-800">
-                      Join Forum
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Testing Tab */}
-          {activeTab === 'testing' && (
-            <div
-              key="testing"
-              className="space-y-6 animate-fadeInUp"
-            >
-              <div className="bg-white rounded-xl p-6 border">
-                <h3 className="text-lg font-semibold mb-4">Accessibility Testing Suite</h3>
-                <p className="text-gray-600 mb-6">
-                  Test your current accessibility settings and discover areas for improvement.
-                </p>
-
-                <div className="grid gap-4">
-                  {[
-                    {
-                      id: 'contrast',
-                      name: 'Color Contrast Test',
-                      description: 'Check if text is readable with current settings',
-                    },
-                    {
-                      id: 'keyboard',
-                      name: 'Keyboard Navigation Test',
-                      description: 'Verify all elements are accessible via keyboard',
-                    },
-                    {
-                      id: 'screen-reader',
-                      name: 'Screen Reader Test',
-                      description: 'Test compatibility with screen reading software',
-                    },
-                    {
-                      id: 'font-size',
-                      name: 'Font Size Test',
-                      description: 'Ensure text is large enough to read comfortably',
-                    },
-                    {
-                      id: 'motion',
-                      name: 'Motion Sensitivity Test',
-                      description: 'Check for potentially problematic animations',
-                    },
-                  ].map((test) => (
-                    <div
-                      key={test.id}
-                      className="flex items-center justify-between p-4 border rounded-lg"
-                    >
-                      <div>
-                        <h4 className="font-medium text-gray-800">{test.name}</h4>
-                        <p className="text-sm text-gray-600">{test.description}</p>
-                      </div>
-                      <button
-                        onClick={() => testAccessibilityFeature(test.id)}
-                        disabled={isTestingMode}
-                        className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors disabled:opacity-50"
                       >
-                        {isTestingMode ? 'Testing...' : 'Run Test'}
-                      </button>
+                        {profile.icon}
+                      </div>
+                      <h4 className="font-semibold text-gray-800">{profile.name}</h4>
                     </div>
-                  ))}
+                    <p className="text-sm text-gray-600 mb-3">{profile.description}</p>
+                    <div className="space-y-1">
+                      <span className="text-xs font-medium text-gray-700">Supports:</span>
+                      {profile.targetConditions.map((condition, index) => (
+                        <span
+                          key={index}
+                          className="inline-block text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded mr-1 mb-1"
+                        >
+                          {condition}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Settings Tab */}
+        {activeTab === 'settings' && (
+          <div key="settings" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
+            {/* Visual Settings */}
+            <div className="bg-white rounded-xl p-6 border">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <Eye className="w-5 h-5 text-blue-600" />
+                Visual Settings
+              </h3>
+
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-medium text-gray-700">High Contrast Mode</label>
+                  <button
+                    onClick={() => updateSettings({ highContrast: !settings.highContrast })}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      settings.highContrast ? 'bg-indigo-600' : 'bg-gray-200'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        settings.highContrast ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Font Size: {settings.fontSize}px
+                  </label>
+                  <input
+                    type="range"
+                    min="12"
+                    max="24"
+                    value={settings.fontSize}
+                    onChange={(e) => updateSettings({ fontSize: parseInt(e.target.value) })}
+                    className="w-full"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Magnification: {settings.magnification}x
+                  </label>
+                  <input
+                    type="range"
+                    min="1"
+                    max="3"
+                    step="0.1"
+                    value={settings.magnification}
+                    onChange={(e) => updateSettings({ magnification: parseFloat(e.target.value) })}
+                    className="w-full"
+                  />
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-medium text-gray-700">Reduced Motion</label>
+                  <button
+                    onClick={() => updateSettings({ reducedMotion: !settings.reducedMotion })}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      settings.reducedMotion ? 'bg-indigo-600' : 'bg-gray-200'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-medium text-gray-700">
+                    Enhanced Focus Indicators
+                  </label>
+                  <button
+                    onClick={() => updateSettings({ focusIndicators: !settings.focusIndicators })}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      settings.focusIndicators ? 'bg-indigo-600' : 'bg-gray-200'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        settings.focusIndicators ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
                 </div>
               </div>
             </div>
-          )}
-{/* Status Indicator */}
+
+            {/* Audio Settings */}
+            <div className="bg-white rounded-xl p-6 border">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <Volume2 className="w-5 h-5 text-green-600" />
+                Audio Settings
+              </h3>
+
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-medium text-gray-700">Audio Descriptions</label>
+                  <button
+                    onClick={() =>
+                      updateSettings({ audioDescriptions: !settings.audioDescriptions })
+                    }
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      settings.audioDescriptions ? 'bg-indigo-600' : 'bg-gray-200'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        settings.audioDescriptions ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Audio Speed: {settings.audioSpeed}x
+                  </label>
+                  <input
+                    type="range"
+                    min="0.5"
+                    max="2"
+                    step="0.1"
+                    value={settings.audioSpeed}
+                    onChange={(e) => updateSettings({ audioSpeed: parseFloat(e.target.value) })}
+                    className="w-full"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Volume: {Math.round(settings.audioVolume * 100)}%
+                  </label>
+                  <input
+                    type="range"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    value={settings.audioVolume}
+                    onChange={(e) => updateSettings({ audioVolume: parseFloat(e.target.value) })}
+                    className="w-full"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Voice Gender
+                  </label>
+                  <select
+                    value={settings.voiceGender}
+                    onChange={(e) => updateSettings({ voiceGender: e.target.value as any })}
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  >
+                    <option value="neutral">Neutral</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-medium text-gray-700">Sound Effects</label>
+                  <button
+                    onClick={() => updateSettings({ soundEffects: !settings.soundEffects })}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      settings.soundEffects ? 'bg-indigo-600' : 'bg-gray-200'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        settings.soundEffects ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Cognitive Settings */}
+            <div className="bg-white rounded-xl p-6 border">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <Brain className="w-5 h-5 text-purple-600" />
+                Cognitive Settings
+              </h3>
+
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-medium text-gray-700">Simplified Interface</label>
+                  <button
+                    onClick={() =>
+                      updateSettings({ simplifiedInterface: !settings.simplifiedInterface })
+                    }
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      settings.simplifiedInterface ? 'bg-indigo-600' : 'bg-gray-200'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        settings.simplifiedInterface ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-medium text-gray-700">Extended Timeouts</label>
+                  <button
+                    onClick={() => updateSettings({ extendedTimeouts: !settings.extendedTimeouts })}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      settings.extendedTimeouts ? 'bg-indigo-600' : 'bg-gray-200'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        settings.extendedTimeouts ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-medium text-gray-700">Distraction Reduction</label>
+                  <button
+                    onClick={() =>
+                      updateSettings({ distractionReduction: !settings.distractionReduction })
+                    }
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      settings.distractionReduction ? 'bg-indigo-600' : 'bg-gray-200'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        settings.distractionReduction ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-medium text-gray-700">Memory Aids</label>
+                  <button
+                    onClick={() => updateSettings({ memoryAids: !settings.memoryAids })}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      settings.memoryAids ? 'bg-indigo-600' : 'bg-gray-200'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        settings.memoryAids ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-medium text-gray-700">Dyslexia Support</label>
+                  <button
+                    onClick={() => updateSettings({ dyslexiaSupport: !settings.dyslexiaSupport })}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      settings.dyslexiaSupport ? 'bg-indigo-600' : 'bg-gray-200'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        settings.dyslexiaSupport ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-medium text-gray-700">ADHD Support</label>
+                  <button
+                    onClick={() => updateSettings({ adhd_support: !settings.adhd_support })}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      settings.adhd_support ? 'bg-indigo-600' : 'bg-gray-200'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        settings.adhd_support ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Language & Communication */}
+            <div className="bg-white rounded-xl p-6 border">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <Languages className="w-5 h-5 text-orange-600" />
+                Language & Communication
+              </h3>
+
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Primary Language
+                  </label>
+                  <select
+                    value={settings.primaryLanguage}
+                    onChange={(e) => updateSettings({ primaryLanguage: e.target.value as any })}
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  >
+                    <option value="english">English</option>
+                    <option value="hindi">Hindi</option>
+                    <option value="regional">Regional Languages</option>
+                  </select>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-medium text-gray-700">Translation Support</label>
+                  <button
+                    onClick={() =>
+                      updateSettings({ translationSupport: !settings.translationSupport })
+                    }
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      settings.translationSupport ? 'bg-indigo-600' : 'bg-gray-200'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        settings.translationSupport ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-medium text-gray-700">Sign Language Support</label>
+                  <button
+                    onClick={() => updateSettings({ signLanguage: !settings.signLanguage })}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      settings.signLanguage ? 'bg-indigo-600' : 'bg-gray-200'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        settings.signLanguage ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-medium text-gray-700">Easy Read Format</label>
+                  <button
+                    onClick={() => updateSettings({ easyRead: !settings.easyRead })}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      settings.easyRead ? 'bg-indigo-600' : 'bg-gray-200'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        settings.easyRead ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-medium text-gray-700">Pictorial Support</label>
+                  <button
+                    onClick={() => updateSettings({ pictorialSupport: !settings.pictorialSupport })}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      settings.pictorialSupport ? 'bg-indigo-600' : 'bg-gray-200'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        settings.pictorialSupport ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Support Tab */}
+        {activeTab === 'support' && (
+          <div key="support" className="space-y-6 animate-fadeInUp">
+            <div className="bg-white rounded-xl p-6 border">
+              <h3 className="text-lg font-semibold mb-4">Learning Accommodations</h3>
+              <div className="grid gap-4">
+                {accommodations.map((accommodation) => (
+                  <div key={accommodation.id} className="border rounded-lg p-4 animate-fadeInUp">
+                    <div className="flex items-start justify-between mb-3">
+                      <div>
+                        <h4 className="font-semibold text-gray-800">{accommodation.title}</h4>
+                        <p className="text-sm text-gray-600">{accommodation.description}</p>
+                      </div>
+                      <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">
+                        {accommodation.type}
+                      </span>
+                    </div>
+
+                    <div className="space-y-2">
+                      <div>
+                        <span className="text-sm font-medium text-gray-700">Implementation:</span>
+                        <p className="text-sm text-gray-600">{accommodation.implementation}</p>
+                      </div>
+                      <div>
+                        <span className="text-sm font-medium text-gray-700">Benefits:</span>
+                        <ul className="text-sm text-gray-600 list-disc list-inside">
+                          {accommodation.benefits.map((benefit, index) => (
+                            <li key={index}>{benefit}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Support Resources */}
+            <div className="bg-white rounded-xl p-6 border">
+              <h3 className="text-lg font-semibold mb-4">Support Resources</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-4 bg-blue-50 rounded-lg">
+                  <h4 className="font-medium text-blue-800 mb-2">📞 Accessibility Helpline</h4>
+                  <p className="text-sm text-blue-700">
+                    Get immediate assistance with accessibility features
+                  </p>
+                  <button className="mt-2 text-sm text-blue-600 hover:text-blue-800">
+                    Contact Support
+                  </button>
+                </div>
+                <div className="p-4 bg-green-50 rounded-lg">
+                  <h4 className="font-medium text-green-800 mb-2">📖 User Guide</h4>
+                  <p className="text-sm text-green-700">
+                    Comprehensive guide to all accessibility features
+                  </p>
+                  <button className="mt-2 text-sm text-green-600 hover:text-green-800">
+                    Download Guide
+                  </button>
+                </div>
+                <div className="p-4 bg-purple-50 rounded-lg">
+                  <h4 className="font-medium text-purple-800 mb-2">🎥 Video Tutorials</h4>
+                  <p className="text-sm text-purple-700">Step-by-step video instructions</p>
+                  <button className="mt-2 text-sm text-purple-600 hover:text-purple-800">
+                    Watch Videos
+                  </button>
+                </div>
+                <div className="p-4 bg-orange-50 rounded-lg">
+                  <h4 className="font-medium text-orange-800 mb-2">💬 Community Forum</h4>
+                  <p className="text-sm text-orange-700">Connect with other users and share tips</p>
+                  <button className="mt-2 text-sm text-orange-600 hover:text-orange-800">
+                    Join Forum
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Testing Tab */}
+        {activeTab === 'testing' && (
+          <div key="testing" className="space-y-6 animate-fadeInUp">
+            <div className="bg-white rounded-xl p-6 border">
+              <h3 className="text-lg font-semibold mb-4">Accessibility Testing Suite</h3>
+              <p className="text-gray-600 mb-6">
+                Test your current accessibility settings and discover areas for improvement.
+              </p>
+
+              <div className="grid gap-4">
+                {[
+                  {
+                    id: 'contrast',
+                    name: 'Color Contrast Test',
+                    description: 'Check if text is readable with current settings',
+                  },
+                  {
+                    id: 'keyboard',
+                    name: 'Keyboard Navigation Test',
+                    description: 'Verify all elements are accessible via keyboard',
+                  },
+                  {
+                    id: 'screen-reader',
+                    name: 'Screen Reader Test',
+                    description: 'Test compatibility with screen reading software',
+                  },
+                  {
+                    id: 'font-size',
+                    name: 'Font Size Test',
+                    description: 'Ensure text is large enough to read comfortably',
+                  },
+                  {
+                    id: 'motion',
+                    name: 'Motion Sensitivity Test',
+                    description: 'Check for potentially problematic animations',
+                  },
+                ].map((test) => (
+                  <div
+                    key={test.id}
+                    className="flex items-center justify-between p-4 border rounded-lg"
+                  >
+                    <div>
+                      <h4 className="font-medium text-gray-800">{test.name}</h4>
+                      <p className="text-sm text-gray-600">{test.description}</p>
+                    </div>
+                    <button
+                      onClick={() => testAccessibilityFeature(test.id)}
+                      disabled={isTestingMode}
+                      className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors disabled:opacity-50"
+                    >
+                      {isTestingMode ? 'Testing...' : 'Run Test'}
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+        {/* Status Indicator */}
         {isScreenReaderActive && (
-          <div
-            className="fixed bottom-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg animate-fadeInUp"
-          >
+          <div className="fixed bottom-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg animate-fadeInUp">
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4" />
               <span className="text-sm">Screen Reader Detected</span>

@@ -31,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Biology Tutor Near Me | 6 NCR Centres + Pan-India Online',
-    description: 'NEET biology tutor near me — Cerebrum Biology Academy. AIIMS-trained tutor at 6 Delhi NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) + 1:1 online tutoring pan-India. ...',
+    description:
+      'NEET biology tutor near me — Cerebrum Biology Academy. AIIMS-trained tutor at 6 Delhi NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) + 1:1 online tutoring pan-India. ...',
   },
 }
 

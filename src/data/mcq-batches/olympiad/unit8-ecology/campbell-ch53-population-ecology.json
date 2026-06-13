@@ -269,12 +269,7 @@
     {
       "type": "MTF",
       "question": "Regarding the concept of carrying capacity (K), mark each statement as True (T) or False (F):\n(I) K is a fixed, unchanging property of a particular habitat\n(II) K may differ for the same species in different habitats depending on resource availability\n(III) Populations can temporarily exceed K (overshoot) before declining back toward it\n(IV) K is determined solely by food availability and is not influenced by other resources or interactions",
-      "options": [
-        "FTTT",
-        "FTTF",
-        "FTFT",
-        "TFTT"
-      ],
+      "options": ["FTTT", "FTTF", "FTFT", "TFTT"],
       "correctAnswer": "B",
       "explanation": "(I) FALSE — K is not a fixed constant. It varies over time with changes in resource availability, climate conditions, predator/competitor populations, disease prevalence, and human activities. A habitat's carrying capacity for a given species can increase (e.g., after nutrient enrichment) or decrease (e.g., after habitat degradation). (II) TRUE — Different habitats differ in resource levels, leading to different carrying capacities for the same species. A forest with abundant food will support more deer than one with sparse vegetation. (III) TRUE — Populations can overshoot K, especially when there is a time lag between population increase and resource depletion. The classic example is the Kaibab deer population, which overshoot K and then crashed due to overgrazing. (IV) FALSE — K is determined by whichever resource or factor is most limiting, which could be food, water, nesting sites, predation pressure, disease, or any combination of factors.",
       "isOlympiad": true,
@@ -309,12 +304,7 @@
     {
       "type": "MTF",
       "question": "Regarding density-dependent factors in population regulation, mark each statement as True (T) or False (F):\n(I) Density-dependent factors increase in intensity as population density increases\n(II) Competition, predation, and disease are all examples of density-dependent factors\n(III) Density-dependent factors can only reduce population growth, never increase it\n(IV) Density-dependent regulation is necessary for a population to have a stable equilibrium",
-      "options": [
-        "TTFT",
-        "TTTF",
-        "TTTT",
-        "TFFT"
-      ],
+      "options": ["TTFT", "TTTF", "TTTT", "TFFT"],
       "correctAnswer": "A",
       "explanation": "(I) TRUE — By definition, density-dependent factors are those whose per capita effects strengthen as population density increases. At higher densities, competition for resources is more intense, disease transmission is faster, and per capita predation may increase. (II) TRUE — Competition (for food, space, mates), predation (through aggregative and numerical responses), and disease (transmission rates increase with host density) are all classic density-dependent factors. (III) FALSE — While density-dependent factors typically reduce growth at high densities, Allee effects represent positive density dependence where low density reduces growth rate. Cooperative defense, mate-finding, and group foraging can all create positive density dependence at low population sizes. However, at higher densities, negative density dependence predominates. (IV) TRUE — Stable equilibrium requires negative feedback: when the population exceeds equilibrium, growth rate must decrease, and when below equilibrium, it must increase. Only density-dependent regulation provides this feedback.",
       "isOlympiad": true,
@@ -349,12 +339,7 @@
     {
       "type": "MTF",
       "question": "Regarding human population growth and its ecological implications, mark each statement as True (T) or False (F):\n(I) The global human population growth rate has been declining since the 1960s\n(II) Total fertility rate (TFR) is now below replacement level in most developed countries\n(III) Even with declining growth rates, the global population is still increasing in absolute numbers\n(IV) Earth's human carrying capacity has been reliably estimated at exactly 10 billion people",
-      "options": [
-        "TTTF",
-        "TTFT",
-        "TTFF",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTFT", "TTFF", "TFTT"],
       "correctAnswer": "A",
       "explanation": "(I) TRUE — The global population growth rate peaked at approximately 2.1% per year in 1968 and has declined steadily since, reaching approximately 0.9% in 2023. (II) TRUE — Most developed countries (Europe, Japan, South Korea, and increasingly China) have TFRs well below the replacement level of 2.1 children per woman. Some countries have TFRs below 1.3 (South Korea, Italy). (III) TRUE — Despite declining growth rates, the absolute number of people added each year remains substantial (~70+ million/year) because the growth rate is applied to an increasingly large base population. This is the distinction between exponential rate and absolute growth. (IV) FALSE — Earth's human carrying capacity has never been reliably estimated because it depends on technology, consumption patterns, dietary choices, energy systems, waste management, and social equity — all of which are variable and subject to human choice. Estimates range from 2 billion to over 15 billion depending on assumptions.",
       "isOlympiad": true,
@@ -649,12 +634,7 @@
     {
       "type": "MTF",
       "question": "Regarding population growth models, mark each statement as True (T) or False (F):\n(I) The exponential model assumes unlimited resources and no density dependence\n(II) The logistic model assumes that the effect of density on growth rate is linear\n(III) Both models assume discrete, non-overlapping generations\n(IV) The logistic model always produces stable equilibrium at K without oscillations",
-      "options": [
-        "TTFF",
-        "TTTF",
-        "TTFT",
-        "TFFF"
-      ],
+      "options": ["TTFF", "TTTF", "TTFT", "TFFF"],
       "correctAnswer": "A",
       "explanation": "(I) TRUE — The exponential model (dN/dt = rN) assumes constant per capita growth rate with no environmental resistance, implying unlimited resources and no density-dependent factors. (II) TRUE — The logistic model assumes that the negative effect of density on per capita growth rate is a linear function of N: the per capita growth rate r(1-N/K) decreases linearly from r (at N=0) to 0 (at N=K). In reality, the density-growth relationship may be nonlinear (e.g., theta-logistic models allow different shapes). (III) FALSE — The differential equation forms (dN/dt = rN and dN/dt = rN(1-N/K)) assume continuous, overlapping generations. Discrete-generation analogs exist but are separate models. (IV) FALSE — While the continuous-time logistic model always produces stable equilibrium at K, the discrete-time logistic model can produce oscillations and chaos at high r values.",
       "isOlympiad": true,
@@ -1069,12 +1049,7 @@
     {
       "type": "MTF",
       "question": "Regarding survivorship curves (Deevey curves), mark each statement as True (T) or False (F):\n(I) Type I curves show high survival rates throughout most of life with increased mortality at old age (typical of mammals)\n(II) Type III curves show high mortality early in life with high survival for the few individuals that survive to adulthood (typical of marine invertebrates)\n(III) Type II curves show constant mortality rate throughout life (typical of some bird species)\n(IV) All three survivorship types can occur within a single species in different environments",
-      "options": [
-        "TTTT",
-        "TTTF",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "A",
       "explanation": "(I) TRUE — Type I curves are convex, reflecting high survival through most of life with a sharp increase in mortality at old age. This pattern is typical of large mammals, including humans in developed countries, where parental care and modern medicine keep mortality low until physiological aging sets in. (II) TRUE — Type III curves are concave, reflecting extremely high mortality in early life stages (e.g., larvae, seeds, juveniles) with much higher survival for the relatively few individuals that reach adulthood. This is common in organisms that produce large numbers of offspring with little parental investment (marine invertebrates, many fish, plants). (III) TRUE — Type II curves are approximately linear on a log scale, indicating constant mortality rate across all ages. Some bird species and some reptile species approximate this pattern. (IV) TRUE — Environmental conditions can shift survivorship curves; for example, a species might show Type I survivorship in favorable habitats and Type III in harsh ones.",
       "isOlympiad": true,

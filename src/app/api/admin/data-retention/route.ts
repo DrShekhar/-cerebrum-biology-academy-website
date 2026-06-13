@@ -12,7 +12,10 @@ import { DataRetentionService, DataRetentionConfig } from '@/lib/database/dataRe
 async function handlePost(request: NextRequest, session: UserSession) {
   try {
     const body = await request.json().catch(() => ({}))
-    const { dryRun = false, config } = body as { dryRun?: boolean; config?: Partial<DataRetentionConfig> }
+    const { dryRun = false, config } = body as {
+      dryRun?: boolean
+      config?: Partial<DataRetentionConfig>
+    }
 
     // Verify cron secret for automated calls
     const cronSecret = request.headers.get('x-cron-secret')
@@ -23,12 +26,8 @@ async function handlePost(request: NextRequest, session: UserSession) {
     const isAdmin = session.role === 'ADMIN'
 
     if (!isAdmin && !isAuthorizedCron) {
-      return NextResponse.json(
-        { error: 'Unauthorized: Admin access required' },
-        { status: 403 }
-      )
+      return NextResponse.json({ error: 'Unauthorized: Admin access required' }, { status: 403 })
     }
-
 
     const retentionService = new DataRetentionService(config, dryRun)
     const result = await retentionService.runRetention()
@@ -44,10 +43,7 @@ async function handlePost(request: NextRequest, session: UserSession) {
     })
   } catch (error) {
     console.error('[DataRetention] API error:', error)
-    return NextResponse.json(
-      { error: 'Data retention cleanup failed' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Data retention cleanup failed' }, { status: 500 })
   }
 }
 
@@ -65,10 +61,7 @@ async function handleGet(request: NextRequest, session: UserSession) {
     })
   } catch (error) {
     console.error('[DataRetention] Status check error:', error)
-    return NextResponse.json(
-      { error: 'Failed to check retention status' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Failed to check retention status' }, { status: 500 })
   }
 }
 

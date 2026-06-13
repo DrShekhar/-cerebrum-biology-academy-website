@@ -108,9 +108,7 @@ export default function Error({ error, reset }: ErrorProps) {
         </div>
 
         {/* Action Buttons */}
-        <div
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fadeInUp"
-        >
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fadeInUp">
           <Button size="lg" onClick={handleReset}>
             <RefreshCw className="w-5 h-5 mr-2" />
             Try Again
@@ -128,9 +126,7 @@ export default function Error({ error, reset }: ErrorProps) {
         </div>
 
         {/* Quick Actions */}
-        <div
-          className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto mb-12 animate-fadeInUp"
-        >
+        <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto mb-12 animate-fadeInUp">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">Continue Your Learning</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link
@@ -147,7 +143,9 @@ export default function Error({ error, reset }: ErrorProps) {
             </Link>
 
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20error.tsx.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20error.tsx.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors group"
             >
               <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-green-200">
@@ -188,9 +186,7 @@ export default function Error({ error, reset }: ErrorProps) {
         </div>
 
         {/* Support Information */}
-        <div
-          className="bg-gray-50 rounded-2xl p-8 max-w-2xl mx-auto animate-fadeInUp"
-        >
+        <div className="bg-gray-50 rounded-2xl p-8 max-w-2xl mx-auto animate-fadeInUp">
           <h3 className="text-xl font-semibold text-gray-900 mb-4">Need Help?</h3>
           <p className="text-gray-600 mb-6">
             If this problem persists, please contact our technical support team. We're here to
@@ -222,9 +218,7 @@ export default function Error({ error, reset }: ErrorProps) {
 
         {/* Error ID for Support */}
         {error.digest && (
-          <div
-            className="mt-8 text-center animate-fadeInUp"
-          >
+          <div className="mt-8 text-center animate-fadeInUp">
             <div className="text-sm text-gray-500">
               Error ID:{' '}
               <code className="bg-gray-100 px-2 py-1 rounded text-xs font-mono">

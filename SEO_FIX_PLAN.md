@@ -1,14 +1,18 @@
 # Delhi NCR SEO Fix Plan
+
 ## Created: Feb 25, 2026
+
 ## Status: Batch 1+2 DONE, Batch 3 remaining
 
 ### Investigation Result
+
 All 126 planned SEO pages exist and are building correctly (2,978 pages in build).
 No blocking issues (robots.txt, middleware, noindex all clean).
 The audit agents missed programmatic pages generated via [localSlug] dynamic routes.
 Work needed is structural/schema fixes only.
 
 ### Commits
+
 - `b0e02dd3` — Batch 1+2: Schema fixes + cross-linking + center consistency
 - (pending) — Revert all hours to 24/7 (user serves global online students)
 

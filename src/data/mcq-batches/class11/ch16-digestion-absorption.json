@@ -14,21 +14,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "The innermost layer of the alimentary canal is:",
-      "options": [
-        "Serosa",
-        "Submucosa",
-        "Muscularis",
-        "Mucosa"
-      ],
+      "options": ["Serosa", "Submucosa", "Muscularis", "Mucosa"],
       "correctAnswer": "D",
       "explanation": "The mucosa is the innermost layer of the alimentary canal. It lines the lumen and is involved in absorption and secretion. It is made up of epithelium, lamina propria, and muscularis mucosae.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "alimentary-canal",
-        "histology"
-      ],
+      "tags": ["alimentary-canal", "histology"],
       "neetWeightage": "HIGH"
     },
     {
@@ -39,22 +31,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Ptyalin is secreted by which gland?",
-      "options": [
-        "Gastric glands",
-        "Liver",
-        "Salivary glands",
-        "Pancreas"
-      ],
+      "options": ["Gastric glands", "Liver", "Salivary glands", "Pancreas"],
       "correctAnswer": "C",
       "explanation": "Ptyalin (salivary amylase) is secreted by the salivary glands, particularly the parotid glands. It acts on starch and converts it into maltose at an optimum pH of 6.8.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "salivary-glands",
-        "enzymes",
-        "ptyalin"
-      ],
+      "tags": ["salivary-glands", "enzymes", "ptyalin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -65,21 +48,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "The pH of human saliva is approximately:",
-      "options": [
-        "2.0",
-        "4.0",
-        "8.0",
-        "6.8"
-      ],
+      "options": ["2.0", "4.0", "8.0", "6.8"],
       "correctAnswer": "D",
       "explanation": "The pH of human saliva is approximately 6.8, which is slightly acidic to neutral. This pH is optimal for the action of salivary amylase (ptyalin) on starch.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "saliva",
-        "pH"
-      ],
+      "tags": ["saliva", "pH"],
       "neetWeightage": "HIGH"
     },
     {
@@ -90,22 +65,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which cells of the gastric glands secrete hydrochloric acid?",
-      "options": [
-        "Mucus neck cells",
-        "Goblet cells",
-        "Chief cells",
-        "Oxyntic (parietal) cells"
-      ],
+      "options": ["Mucus neck cells", "Goblet cells", "Chief cells", "Oxyntic (parietal) cells"],
       "correctAnswer": "D",
       "explanation": "Oxyntic or parietal cells of the gastric glands secrete HCl. The HCl provides an acidic medium (pH 1.8) for pepsin activity and also kills bacteria in food.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gastric-glands",
-        "HCl",
-        "parietal-cells"
-      ],
+      "tags": ["gastric-glands", "HCl", "parietal-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -116,22 +82,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Pepsinogen is activated into pepsin by:",
-      "options": [
-        "Trypsin",
-        "Bile salts",
-        "Enterokinase",
-        "HCl"
-      ],
+      "options": ["Trypsin", "Bile salts", "Enterokinase", "HCl"],
       "correctAnswer": "D",
       "explanation": "Pepsinogen, the inactive proenzyme secreted by chief cells, is activated into pepsin by hydrochloric acid secreted by parietal cells. Once formed, pepsin also activates more pepsinogen (autocatalysis).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pepsin",
-        "activation",
-        "gastric-digestion"
-      ],
+      "tags": ["pepsin", "activation", "gastric-digestion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -142,22 +99,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "The bile is produced by the liver but stored and concentrated in the:",
-      "options": [
-        "Spleen",
-        "Duodenum",
-        "Gall bladder",
-        "Pancreas"
-      ],
+      "options": ["Spleen", "Duodenum", "Gall bladder", "Pancreas"],
       "correctAnswer": "C",
       "explanation": "Bile is continuously produced by the hepatocytes of the liver but is stored and concentrated in the gall bladder. It is released into the duodenum through the common bile duct.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bile",
-        "gall-bladder",
-        "liver"
-      ],
+      "tags": ["bile", "gall-bladder", "liver"],
       "neetWeightage": "HIGH"
     },
     {
@@ -168,22 +116,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Trypsinogen is activated into trypsin by:",
-      "options": [
-        "HCl",
-        "Pepsin",
-        "Enterokinase",
-        "Bile salts"
-      ],
+      "options": ["HCl", "Pepsin", "Enterokinase", "Bile salts"],
       "correctAnswer": "C",
       "explanation": "Trypsinogen, the inactive form of trypsin secreted by the pancreas, is activated into trypsin by the enzyme enterokinase (enteropeptidase) secreted by the intestinal mucosa.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "trypsin",
-        "enterokinase",
-        "pancreatic-digestion"
-      ],
+      "tags": ["trypsin", "enterokinase", "pancreatic-digestion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -194,22 +133,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which part of the small intestine receives the bile and pancreatic juice?",
-      "options": [
-        "Ileum",
-        "Pylorus",
-        "Jejunum",
-        "Duodenum"
-      ],
+      "options": ["Ileum", "Pylorus", "Jejunum", "Duodenum"],
       "correctAnswer": "D",
       "explanation": "The duodenum is the first part of the small intestine where the hepato-pancreatic duct opens. Both bile from the liver and pancreatic juice from the pancreas are released into the duodenum.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "duodenum",
-        "bile",
-        "pancreatic-juice"
-      ],
+      "tags": ["duodenum", "bile", "pancreatic-juice"],
       "neetWeightage": "HIGH"
     },
     {
@@ -220,21 +150,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "The largest gland in the human body is:",
-      "options": [
-        "Pituitary",
-        "Thyroid",
-        "Pancreas",
-        "Liver"
-      ],
+      "options": ["Pituitary", "Thyroid", "Pancreas", "Liver"],
       "correctAnswer": "D",
       "explanation": "The liver is the largest gland in the human body, weighing about 1.2-1.5 kg. It produces bile, stores glycogen, detoxifies substances, and performs over 500 vital functions.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "liver",
-        "digestive-glands"
-      ],
+      "tags": ["liver", "digestive-glands"],
       "neetWeightage": "HIGH"
     },
     {
@@ -245,21 +167,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "The enzyme lipase acts on:",
-      "options": [
-        "Carbohydrates",
-        "Proteins",
-        "Fats",
-        "Nucleic acids"
-      ],
+      "options": ["Carbohydrates", "Proteins", "Fats", "Nucleic acids"],
       "correctAnswer": "C",
       "explanation": "Lipase is a fat-digesting enzyme. Pancreatic lipase converts emulsified fats (triglycerides) into diglycerides, monoglycerides, fatty acids, and glycerol.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lipase",
-        "fat-digestion"
-      ],
+      "tags": ["lipase", "fat-digestion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -270,21 +184,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Brunner's glands are found in the:",
-      "options": [
-        "Stomach",
-        "Ileum",
-        "Duodenum",
-        "Oesophagus"
-      ],
+      "options": ["Stomach", "Ileum", "Duodenum", "Oesophagus"],
       "correctAnswer": "C",
       "explanation": "Brunner's glands are compound tubular submucosal glands found in the duodenum. They secrete an alkaline mucus that protects the duodenal wall from the acidic chyme and provides an alkaline medium for intestinal enzymes.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "brunners-glands",
-        "duodenum"
-      ],
+      "tags": ["brunners-glands", "duodenum"],
       "neetWeightage": "HIGH"
     },
     {
@@ -306,10 +212,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secretin",
-        "hormonal-regulation"
-      ],
+      "tags": ["secretin", "hormonal-regulation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -320,22 +223,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Cholecystokinin (CCK) stimulates the contraction of:",
-      "options": [
-        "Urinary bladder",
-        "Stomach",
-        "Gall bladder",
-        "Heart"
-      ],
+      "options": ["Urinary bladder", "Stomach", "Gall bladder", "Heart"],
       "correctAnswer": "C",
       "explanation": "Cholecystokinin (CCK) is secreted by the intestinal mucosa and stimulates contraction of the gall bladder, causing release of bile into the duodenum. It also stimulates secretion of pancreatic enzymes.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "CCK",
-        "gall-bladder",
-        "hormonal-regulation"
-      ],
+      "tags": ["CCK", "gall-bladder", "hormonal-regulation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -357,10 +251,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fat-absorption",
-        "lacteals"
-      ],
+      "tags": ["fat-absorption", "lacteals"],
       "neetWeightage": "HIGH"
     },
     {
@@ -371,21 +262,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "The Crypts of Lieberkuhn are found in:",
-      "options": [
-        "Small intestine",
-        "Oesophagus",
-        "Stomach",
-        "Pharynx"
-      ],
+      "options": ["Small intestine", "Oesophagus", "Stomach", "Pharynx"],
       "correctAnswer": "A",
       "explanation": "The Crypts of Lieberkuhn are tubular glands found between the bases of villi in the mucosa of the small intestine. They secrete intestinal juice (succus entericus) containing various digestive enzymes.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "crypts-of-lieberkuhn",
-        "intestinal-glands"
-      ],
+      "tags": ["crypts-of-lieberkuhn", "intestinal-glands"],
       "neetWeightage": "HIGH"
     },
     {
@@ -396,21 +279,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which of the following is not a component of bile?",
-      "options": [
-        "Cholesterol",
-        "Digestive enzymes",
-        "Bile salts",
-        "Bile pigments"
-      ],
+      "options": ["Cholesterol", "Digestive enzymes", "Bile salts", "Bile pigments"],
       "correctAnswer": "B",
       "explanation": "Bile does not contain any digestive enzymes. It contains bile salts, bile pigments (bilirubin and biliverdin), cholesterol, phospholipids, and electrolytes. Bile salts help in emulsification of fats.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bile",
-        "composition"
-      ],
+      "tags": ["bile", "composition"],
       "neetWeightage": "HIGH"
     },
     {
@@ -421,21 +296,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Gastric Inhibitory Peptide (GIP) is released from the:",
-      "options": [
-        "Liver",
-        "Duodenum",
-        "Stomach",
-        "Pancreas"
-      ],
+      "options": ["Liver", "Duodenum", "Stomach", "Pancreas"],
       "correctAnswer": "B",
       "explanation": "Gastric Inhibitory Peptide (GIP) is secreted by the duodenal mucosa. It inhibits gastric secretion and motility, thereby slowing gastric emptying when fats and glucose are present in the duodenum.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "GIP",
-        "hormonal-regulation"
-      ],
+      "tags": ["GIP", "hormonal-regulation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -457,10 +324,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sphincter-of-oddi",
-        "hepato-pancreatic-duct"
-      ],
+      "tags": ["sphincter-of-oddi", "hepato-pancreatic-duct"],
       "neetWeightage": "HIGH"
     },
     {
@@ -471,21 +335,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Rennin acts on:",
-      "options": [
-        "Starch",
-        "Fats",
-        "Casein (milk protein)",
-        "Nucleic acids"
-      ],
+      "options": ["Starch", "Fats", "Casein (milk protein)", "Nucleic acids"],
       "correctAnswer": "C",
       "explanation": "Rennin (chymosin) is a proteolytic enzyme found in the gastric juice of infants. It converts soluble casein of milk into insoluble paracasein (curdling of milk) in the presence of calcium ions.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "rennin",
-        "milk-protein"
-      ],
+      "tags": ["rennin", "milk-protein"],
       "neetWeightage": "HIGH"
     },
     {
@@ -496,21 +352,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which of the following disorders is characterized by inflammation of the intestinal lining?",
-      "options": [
-        "Jaundice",
-        "Inflammatory Bowel Disease (IBD)",
-        "Constipation",
-        "Vomiting"
-      ],
+      "options": ["Jaundice", "Inflammatory Bowel Disease (IBD)", "Constipation", "Vomiting"],
       "correctAnswer": "B",
       "explanation": "Inflammatory Bowel Disease (IBD) is characterized by chronic inflammation of the intestinal lining. It includes Crohn's disease and ulcerative colitis, causing symptoms like diarrhea, abdominal pain, and weight loss.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "IBD"
-      ],
+      "tags": ["disorders", "IBD"],
       "neetWeightage": "HIGH"
     },
     {
@@ -521,22 +369,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Peyer's patches are aggregated lymphoid tissue found in the:",
-      "options": [
-        "Duodenum",
-        "Ileum",
-        "Large intestine",
-        "Stomach"
-      ],
+      "options": ["Duodenum", "Ileum", "Large intestine", "Stomach"],
       "correctAnswer": "B",
       "explanation": "Peyer's patches are large aggregated lymphoid follicles found in the mucosa and submucosa of the ileum (last part of the small intestine). They are part of the gut-associated lymphoid tissue (GALT) and play a role in immune surveillance.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "peyers-patches",
-        "ileum",
-        "GALT"
-      ],
+      "tags": ["peyers-patches", "ileum", "GALT"],
       "neetWeightage": "HIGH"
     },
     {
@@ -558,10 +397,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "alimentary-canal",
-        "anatomy"
-      ],
+      "tags": ["alimentary-canal", "anatomy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -572,22 +408,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Starch is digested by salivary amylase into:",
-      "options": [
-        "Glucose",
-        "Maltose",
-        "Lactose",
-        "Sucrose"
-      ],
+      "options": ["Glucose", "Maltose", "Lactose", "Sucrose"],
       "correctAnswer": "B",
       "explanation": "Salivary amylase (ptyalin) hydrolyzes starch into maltose (a disaccharide). Maltose is further broken down into glucose by the enzyme maltase in the small intestine.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "starch-digestion",
-        "maltose",
-        "ptyalin"
-      ],
+      "tags": ["starch-digestion", "maltose", "ptyalin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -598,21 +425,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "The vermiform appendix arises from the:",
-      "options": [
-        "Ileum",
-        "Rectum",
-        "Caecum",
-        "Ascending colon"
-      ],
+      "options": ["Ileum", "Rectum", "Caecum", "Ascending colon"],
       "correctAnswer": "C",
       "explanation": "The vermiform appendix is a narrow, finger-like tubular projection that arises from the caecum. It is a vestigial organ in humans but contains lymphoid tissue that may play a minor role in immunity.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "appendix",
-        "caecum"
-      ],
+      "tags": ["appendix", "caecum"],
       "neetWeightage": "HIGH"
     },
     {
@@ -634,10 +453,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bile-salts",
-        "emulsification"
-      ],
+      "tags": ["bile-salts", "emulsification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -648,21 +464,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which of the following is NOT a part of the large intestine?",
-      "options": [
-        "Colon",
-        "Jejunum",
-        "Rectum",
-        "Caecum"
-      ],
+      "options": ["Colon", "Jejunum", "Rectum", "Caecum"],
       "correctAnswer": "B",
       "explanation": "The jejunum is the middle part of the small intestine, not the large intestine. The large intestine consists of the caecum, ascending colon, transverse colon, descending colon, sigmoid colon, rectum, and anal canal.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "large-intestine",
-        "anatomy"
-      ],
+      "tags": ["large-intestine", "anatomy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -673,21 +481,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Succus entericus refers to:",
-      "options": [
-        "Pancreatic juice",
-        "Gastric juice",
-        "Bile juice",
-        "Intestinal juice"
-      ],
+      "options": ["Pancreatic juice", "Gastric juice", "Bile juice", "Intestinal juice"],
       "correctAnswer": "D",
       "explanation": "Succus entericus is the intestinal juice secreted by the glands of the small intestine (Crypts of Lieberkuhn). It contains enzymes like maltase, lactase, sucrase, peptidases, lipases, and nucleotidases.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "succus-entericus",
-        "intestinal-juice"
-      ],
+      "tags": ["succus-entericus", "intestinal-juice"],
       "neetWeightage": "HIGH"
     },
     {
@@ -698,22 +498,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Intrinsic factor required for the absorption of vitamin B12 is secreted by:",
-      "options": [
-        "Parietal cells",
-        "Chief cells",
-        "Goblet cells",
-        "Argentaffin cells"
-      ],
+      "options": ["Parietal cells", "Chief cells", "Goblet cells", "Argentaffin cells"],
       "correctAnswer": "A",
       "explanation": "The intrinsic factor of Castle, a glycoprotein essential for the absorption of vitamin B12 in the ileum, is secreted by the parietal (oxyntic) cells of the gastric glands.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "intrinsic-factor",
-        "vitamin-B12",
-        "parietal-cells"
-      ],
+      "tags": ["intrinsic-factor", "vitamin-B12", "parietal-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -724,21 +515,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Chylomicrons are produced in the:",
-      "options": [
-        "Stomach",
-        "Liver",
-        "Intestinal epithelial cells",
-        "Pancreas"
-      ],
+      "options": ["Stomach", "Liver", "Intestinal epithelial cells", "Pancreas"],
       "correctAnswer": "C",
       "explanation": "Chylomicrons are lipoproteins formed in the intestinal epithelial cells. They consist of re-esterified triglycerides coated with proteins and are released into lacteals for transport through the lymphatic system.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chylomicrons",
-        "fat-absorption"
-      ],
+      "tags": ["chylomicrons", "fat-absorption"],
       "neetWeightage": "HIGH"
     },
     {
@@ -749,22 +532,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Jaundice is caused due to excess accumulation of:",
-      "options": [
-        "Haemoglobin",
-        "Biliverdin",
-        "Cholesterol",
-        "Bilirubin"
-      ],
+      "options": ["Haemoglobin", "Biliverdin", "Cholesterol", "Bilirubin"],
       "correctAnswer": "D",
       "explanation": "Jaundice is characterized by yellowing of the skin and eyes due to excessive accumulation of bilirubin in the blood. It can result from liver diseases, obstruction of bile duct, or excessive breakdown of RBCs.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "jaundice",
-        "bilirubin",
-        "disorders"
-      ],
+      "tags": ["jaundice", "bilirubin", "disorders"],
       "neetWeightage": "HIGH"
     },
     {
@@ -775,21 +549,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "The enzyme nucleotidase acts on:",
-      "options": [
-        "Proteins",
-        "Nucleotides",
-        "Fats",
-        "Starch"
-      ],
+      "options": ["Proteins", "Nucleotides", "Fats", "Starch"],
       "correctAnswer": "B",
       "explanation": "Nucleotidase is an intestinal enzyme that hydrolyzes nucleotides into nucleosides and phosphate groups. It is part of the nucleic acid digestion pathway in the small intestine.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "nucleotidase",
-        "nucleic-acid-digestion"
-      ],
+      "tags": ["nucleotidase", "nucleic-acid-digestion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -800,21 +566,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which of the following salivary glands produces entirely serous secretion?",
-      "options": [
-        "Parotid",
-        "Buccal",
-        "Sublingual",
-        "Submandibular"
-      ],
+      "options": ["Parotid", "Buccal", "Sublingual", "Submandibular"],
       "correctAnswer": "A",
       "explanation": "The parotid gland is a purely serous gland that produces watery saliva rich in salivary amylase (ptyalin). The submandibular is mixed (sero-mucous) and sublingual is predominantly mucous.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "salivary-glands",
-        "parotid"
-      ],
+      "tags": ["salivary-glands", "parotid"],
       "neetWeightage": "HIGH"
     },
     {
@@ -825,22 +583,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which vitamin is synthesized by bacteria in the large intestine?",
-      "options": [
-        "Vitamin K",
-        "Vitamin E",
-        "Vitamin A",
-        "Vitamin D"
-      ],
+      "options": ["Vitamin K", "Vitamin E", "Vitamin A", "Vitamin D"],
       "correctAnswer": "A",
       "explanation": "Vitamin K and some B-complex vitamins are synthesized by symbiotic bacteria (e.g., E. coli) residing in the large intestine. Vitamin K is essential for blood clotting and is absorbed from the colon.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vitamin-K",
-        "large-intestine",
-        "bacteria"
-      ],
+      "tags": ["vitamin-K", "large-intestine", "bacteria"],
       "neetWeightage": "HIGH"
     },
     {
@@ -851,21 +600,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "The dental formula of an adult human is:",
-      "options": [
-        "2122/2122",
-        "2132/2132",
-        "2123/2123",
-        "2133/2133"
-      ],
+      "options": ["2122/2122", "2132/2132", "2123/2123", "2133/2133"],
       "correctAnswer": "C",
       "explanation": "The dental formula of an adult human is 2123/2123, meaning each half of each jaw contains 2 incisors, 1 canine, 2 premolars, and 3 molars. This gives a total of 32 teeth (heterodont and thecodont dentition).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dental-formula",
-        "teeth"
-      ],
+      "tags": ["dental-formula", "teeth"],
       "neetWeightage": "HIGH"
     },
     {
@@ -876,21 +617,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "The wave-like muscular contractions that move food along the alimentary canal are called:",
-      "options": [
-        "Churning",
-        "Peristalsis",
-        "Segmentation",
-        "Pendular movements"
-      ],
+      "options": ["Churning", "Peristalsis", "Segmentation", "Pendular movements"],
       "correctAnswer": "B",
       "explanation": "Peristalsis consists of successive waves of involuntary muscular contractions along the alimentary canal that propel food from the oesophagus towards the anus. It involves coordinated contraction and relaxation of circular and longitudinal muscles.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "peristalsis",
-        "motility"
-      ],
+      "tags": ["peristalsis", "motility"],
       "neetWeightage": "HIGH"
     },
     {
@@ -901,21 +634,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Glucose and amino acids are absorbed in the intestine by:",
-      "options": [
-        "Active transport",
-        "Osmosis",
-        "Simple diffusion",
-        "Endocytosis"
-      ],
+      "options": ["Active transport", "Osmosis", "Simple diffusion", "Endocytosis"],
       "correctAnswer": "A",
       "explanation": "Glucose and amino acids are absorbed from the intestinal lumen into epithelial cells by active transport (requiring ATP). They are then transported to blood capillaries in the villi. Fructose, however, is absorbed by facilitated diffusion.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "absorption",
-        "active-transport"
-      ],
+      "tags": ["absorption", "active-transport"],
       "neetWeightage": "HIGH"
     },
     {
@@ -937,10 +662,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pancreas",
-        "mixed-gland"
-      ],
+      "tags": ["pancreas", "mixed-gland"],
       "neetWeightage": "HIGH"
     },
     {
@@ -951,22 +673,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Procarboxypeptidase is activated by:",
-      "options": [
-        "HCl",
-        "Trypsin",
-        "Pepsin",
-        "Enterokinase"
-      ],
+      "options": ["HCl", "Trypsin", "Pepsin", "Enterokinase"],
       "correctAnswer": "B",
       "explanation": "Procarboxypeptidase, an inactive pancreatic proenzyme, is activated into carboxypeptidase by trypsin. Trypsin itself is activated from trypsinogen by enterokinase and can then activate other pancreatic zymogens.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "procarboxypeptidase",
-        "trypsin",
-        "activation"
-      ],
+      "tags": ["procarboxypeptidase", "trypsin", "activation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -977,21 +690,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "The sigmoid colon is part of the:",
-      "options": [
-        "Small intestine",
-        "Large intestine",
-        "Stomach",
-        "Oesophagus"
-      ],
+      "options": ["Small intestine", "Large intestine", "Stomach", "Oesophagus"],
       "correctAnswer": "B",
       "explanation": "The sigmoid colon is the S-shaped terminal part of the descending colon that connects to the rectum. It is part of the large intestine and stores feces before defecation.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "sigmoid-colon",
-        "large-intestine"
-      ],
+      "tags": ["sigmoid-colon", "large-intestine"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1013,11 +718,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pepsinogen",
-        "zymogen",
-        "gastric-protection"
-      ],
+      "tags": ["pepsinogen", "zymogen", "gastric-protection"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1039,11 +740,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bile",
-        "liver",
-        "gall-bladder"
-      ],
+      "tags": ["bile", "liver", "gall-bladder"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1065,11 +762,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stomach-pH",
-        "HCl",
-        "parietal-cells"
-      ],
+      "tags": ["stomach-pH", "HCl", "parietal-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1091,11 +784,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "absorption",
-        "villi",
-        "microvilli"
-      ],
+      "tags": ["absorption", "villi", "microvilli"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1117,11 +806,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "enterokinase",
-        "trypsinogen",
-        "activation"
-      ],
+      "tags": ["enterokinase", "trypsinogen", "activation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1143,11 +828,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "absorption",
-        "fructose",
-        "facilitated-diffusion"
-      ],
+      "tags": ["absorption", "fructose", "facilitated-diffusion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1169,11 +850,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "salivary-amylase",
-        "pH",
-        "stomach"
-      ],
+      "tags": ["salivary-amylase", "pH", "stomach"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1195,11 +872,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cellulose",
-        "cellulase",
-        "roughage"
-      ],
+      "tags": ["cellulose", "cellulase", "roughage"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1221,11 +894,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fat-absorption",
-        "lacteals",
-        "chylomicrons"
-      ],
+      "tags": ["fat-absorption", "lacteals", "chylomicrons"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1247,11 +916,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pepsin",
-        "protein-digestion",
-        "pH"
-      ],
+      "tags": ["pepsin", "protein-digestion", "pH"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1273,10 +938,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "GIP",
-        "hormonal-regulation"
-      ],
+      "tags": ["GIP", "hormonal-regulation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1298,11 +960,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dentition",
-        "heterodont",
-        "thecodont"
-      ],
+      "tags": ["dentition", "heterodont", "thecodont"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1324,11 +982,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "kwashiorkor",
-        "malnutrition",
-        "disorders"
-      ],
+      "tags": ["kwashiorkor", "malnutrition", "disorders"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1350,11 +1004,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "enterogastrones",
-        "secretin",
-        "CCK"
-      ],
+      "tags": ["enterogastrones", "secretin", "CCK"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1376,10 +1026,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stomach",
-        "gastric-glands"
-      ],
+      "tags": ["stomach", "gastric-glands"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1401,11 +1048,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bile",
-        "bile-salts",
-        "bilirubin"
-      ],
+      "tags": ["bile", "bile-salts", "bilirubin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1427,10 +1070,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pancreatic-enzymes",
-        "peptidases"
-      ],
+      "tags": ["pancreatic-enzymes", "peptidases"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1452,10 +1092,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "absorption",
-        "alimentary-canal"
-      ],
+      "tags": ["absorption", "alimentary-canal"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1477,10 +1114,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "small-intestine",
-        "anatomy"
-      ],
+      "tags": ["small-intestine", "anatomy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1502,13 +1136,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "GI-hormones",
-        "gastrin",
-        "secretin",
-        "CCK",
-        "GIP"
-      ],
+      "tags": ["GI-hormones", "gastrin", "secretin", "CCK", "GIP"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1530,12 +1158,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "vomiting",
-        "diarrhoea",
-        "constipation"
-      ],
+      "tags": ["disorders", "vomiting", "diarrhoea", "constipation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1546,21 +1169,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which of the following statements about protein digestion is/are INCORRECT?\n(i) Protein digestion begins in the mouth.\n(ii) Pepsin converts proteins to polypeptides in the stomach.\n(iii) Trypsin and chymotrypsin act in the duodenum.\n(iv) Dipeptidases split dipeptides into amino acids.",
-      "options": [
-        "(i) only",
-        "(i) and (iv)",
-        "(ii) and (iii)",
-        "None of the above"
-      ],
+      "options": ["(i) only", "(i) and (iv)", "(ii) and (iii)", "None of the above"],
       "correctAnswer": "A",
       "explanation": "Only statement (i) is incorrect. Protein digestion does NOT begin in the mouth; it begins in the stomach with pepsin. Statements (ii), (iii), and (iv) are all correct descriptions of protein digestion.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "protein-digestion",
-        "enzymes"
-      ],
+      "tags": ["protein-digestion", "enzymes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1582,10 +1197,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "liver",
-        "hepatic-lobule"
-      ],
+      "tags": ["liver", "hepatic-lobule"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1607,11 +1219,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "saliva",
-        "lysozyme",
-        "composition"
-      ],
+      "tags": ["saliva", "lysozyme", "composition"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1633,11 +1241,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "alimentary-canal",
-        "histology",
-        "layers"
-      ],
+      "tags": ["alimentary-canal", "histology", "layers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1648,21 +1252,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Select the INCORRECT statement(s) about carbohydrate digestion:\n(i) Starch digestion begins in the mouth by ptyalin.\n(ii) Pancreatic amylase continues starch digestion in the duodenum.\n(iii) Sucrase converts sucrose into glucose and galactose.\n(iv) Lactase converts lactose into glucose and galactose.",
-      "options": [
-        "(iii) only",
-        "(iv) only",
-        "(iii) and (iv)",
-        "(i) and (ii)"
-      ],
+      "options": ["(iii) only", "(iv) only", "(iii) and (iv)", "(i) and (ii)"],
       "correctAnswer": "A",
       "explanation": "Statement (iii) is incorrect. Sucrase converts sucrose into glucose and FRUCTOSE (not galactose). Statements (i), (ii), and (iv) are all correct. Lactase correctly converts lactose into glucose and galactose.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "carbohydrate-digestion",
-        "disaccharidases"
-      ],
+      "tags": ["carbohydrate-digestion", "disaccharidases"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1673,21 +1269,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Consider the following about pancreatic juice:\n(i) It contains trypsinogen, chymotrypsinogen, and procarboxypeptidase.\n(ii) Pancreatic lipase requires bile salts for its action.\n(iii) Pancreatic amylase acts on starch.\n(iv) DNase and RNase in pancreatic juice digest nucleic acids.\nHow many statements are correct?",
-      "options": [
-        "Four",
-        "Three",
-        "Two",
-        "One"
-      ],
+      "options": ["Four", "Three", "Two", "One"],
       "correctAnswer": "A",
       "explanation": "All four statements are correct. Pancreatic juice contains inactive proenzymes (trypsinogen, chymotrypsinogen, procarboxypeptidase). Pancreatic lipase works on emulsified fats (bile salt-aided). Pancreatic amylase digests starch. DNase and RNase digest DNA and RNA respectively.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pancreatic-juice",
-        "enzymes"
-      ],
+      "tags": ["pancreatic-juice", "enzymes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1709,11 +1297,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "large-intestine",
-        "colon",
-        "haustrations"
-      ],
+      "tags": ["large-intestine", "colon", "haustrations"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1735,10 +1319,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "enzymes",
-        "substrates"
-      ],
+      "tags": ["enzymes", "substrates"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1760,10 +1341,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "GI-hormones",
-        "functions"
-      ],
+      "tags": ["GI-hormones", "functions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1785,10 +1363,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gastric-glands",
-        "cell-types"
-      ],
+      "tags": ["gastric-glands", "cell-types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1810,10 +1385,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "GI-tract",
-        "special-features"
-      ],
+      "tags": ["GI-tract", "special-features"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1835,10 +1407,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "proenzymes",
-        "activation"
-      ],
+      "tags": ["proenzymes", "activation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1849,21 +1418,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Match the disaccharide with its monosaccharide products:\n(P) Maltose - (1) Glucose + Galactose\n(Q) Sucrose - (2) Glucose + Glucose\n(R) Lactose - (3) Glucose + Fructose",
-      "options": [
-        "P-3, Q-1, R-2",
-        "P-2, Q-1, R-3",
-        "P-1, Q-2, R-3",
-        "P-2, Q-3, R-1"
-      ],
+      "options": ["P-3, Q-1, R-2", "P-2, Q-1, R-3", "P-1, Q-2, R-3", "P-2, Q-3, R-1"],
       "correctAnswer": "D",
       "explanation": "Maltose is hydrolyzed into two glucose molecules (P-2). Sucrose is hydrolyzed into glucose and fructose (Q-3). Lactose is hydrolyzed into glucose and galactose (R-1).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disaccharides",
-        "monosaccharides"
-      ],
+      "tags": ["disaccharides", "monosaccharides"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1885,10 +1446,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "digestive-glands",
-        "location"
-      ],
+      "tags": ["digestive-glands", "location"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1910,10 +1468,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "definitions"
-      ],
+      "tags": ["disorders", "definitions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1935,10 +1490,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "absorption",
-        "transport-mechanisms"
-      ],
+      "tags": ["absorption", "transport-mechanisms"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1960,10 +1512,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sphincters",
-        "anatomy"
-      ],
+      "tags": ["sphincters", "anatomy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1985,10 +1534,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "nerve-plexus",
-        "alimentary-canal"
-      ],
+      "tags": ["nerve-plexus", "alimentary-canal"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2010,10 +1556,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "teeth",
-        "functions"
-      ],
+      "tags": ["teeth", "functions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2035,10 +1578,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "end-products",
-        "digestion"
-      ],
+      "tags": ["end-products", "digestion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2049,21 +1589,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "How many of the following are components of gastric juice?\n(a) HCl (b) Pepsinogen (c) Mucus (d) Prorenin (e) Lipase (f) Trypsinogen (g) Intrinsic factor (h) Gelatinase",
-      "options": [
-        "Seven",
-        "Six",
-        "Four",
-        "Five"
-      ],
+      "options": ["Seven", "Six", "Four", "Five"],
       "correctAnswer": "A",
       "explanation": "Seven of the listed components are found in gastric juice: (a) HCl - from parietal cells, (b) Pepsinogen - from chief cells, (c) Mucus - from mucus neck cells, (d) Prorenin - in infants, (e) Lipase - gastric lipase, (g) Intrinsic factor - from parietal cells, (h) Gelatinase. Trypsinogen (f) is a pancreatic enzyme, not gastric.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gastric-juice",
-        "components"
-      ],
+      "tags": ["gastric-juice", "components"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2074,21 +1606,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "How many of the following enzymes are present in pancreatic juice?\n(a) Trypsinogen (b) Chymotrypsinogen (c) Procarboxypeptidase (d) Pancreatic amylase (e) Pancreatic lipase (f) DNase (g) RNase (h) Proelastase",
-      "options": [
-        "Five",
-        "Eight",
-        "Six",
-        "Seven"
-      ],
+      "options": ["Five", "Eight", "Six", "Seven"],
       "correctAnswer": "B",
       "explanation": "All eight listed enzymes/proenzymes are present in pancreatic juice: trypsinogen, chymotrypsinogen, procarboxypeptidase (proteolytic proenzymes), pancreatic amylase (starch digestion), pancreatic lipase (fat digestion), DNase, RNase (nucleic acid digestion), and proelastase (elastin digestion).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pancreatic-juice",
-        "enzymes"
-      ],
+      "tags": ["pancreatic-juice", "enzymes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2099,21 +1623,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "How many pairs of salivary glands are present in humans?",
-      "options": [
-        "Four",
-        "Three",
-        "Two",
-        "Five"
-      ],
+      "options": ["Four", "Three", "Two", "Five"],
       "correctAnswer": "B",
       "explanation": "Humans have three pairs of salivary glands: (1) Parotid glands (largest, serous), (2) Submandibular/submaxillary glands (mixed), and (3) Sublingual glands (smallest, primarily mucous). Together they produce about 1-1.5 litres of saliva daily.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "salivary-glands",
-        "counting"
-      ],
+      "tags": ["salivary-glands", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2124,21 +1640,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "How many of the following are absorbed by active transport in the intestine?\n(a) Glucose (b) Amino acids (c) Fructose (d) Electrolytes like Na+ (e) Water (f) Fatty acids",
-      "options": [
-        "Three",
-        "Two",
-        "Five",
-        "Four"
-      ],
+      "options": ["Three", "Two", "Five", "Four"],
       "correctAnswer": "A",
       "explanation": "Three substances are absorbed by active transport: (a) Glucose, (b) Amino acids, and (d) Na+ (and other electrolytes). Fructose is absorbed by facilitated diffusion. Water by osmosis. Fatty acids enter as chylomicrons into lacteals.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "absorption",
-        "active-transport"
-      ],
+      "tags": ["absorption", "active-transport"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2149,21 +1657,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "How many of the following are parts of the small intestine?\n(a) Duodenum (b) Jejunum (c) Ileum (d) Caecum (e) Colon (f) Rectum",
-      "options": [
-        "Six",
-        "Four",
-        "Two",
-        "Three"
-      ],
+      "options": ["Six", "Four", "Two", "Three"],
       "correctAnswer": "D",
       "explanation": "Three of the listed structures are parts of the small intestine: (a) Duodenum, (b) Jejunum, and (c) Ileum. Caecum, colon, and rectum are parts of the large intestine.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "small-intestine",
-        "anatomy"
-      ],
+      "tags": ["small-intestine", "anatomy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2174,21 +1674,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "How many of the following layers are present in the wall of the alimentary canal?\n(a) Mucosa (b) Submucosa (c) Muscularis (d) Serosa (e) Adventitia",
-      "options": [
-        "Five",
-        "Four",
-        "Two",
-        "Three"
-      ],
+      "options": ["Five", "Four", "Two", "Three"],
       "correctAnswer": "B",
       "explanation": "The alimentary canal wall has four basic layers: (a) Mucosa (innermost), (b) Submucosa, (c) Muscularis, and (d) Serosa (outermost). Adventitia is present in the oesophagus instead of serosa but is not a standard separate layer of the typical GI tract wall described in NCERT.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "alimentary-canal",
-        "histology"
-      ],
+      "tags": ["alimentary-canal", "histology"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2199,21 +1691,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "How many of the following are digestive disorders mentioned in NCERT?\n(a) Jaundice (b) Vomiting (c) Diarrhoea (d) Constipation (e) Indigestion (f) PEM (Protein Energy Malnutrition) (g) Appendicitis",
-      "options": [
-        "Six",
-        "Seven",
-        "Five",
-        "Four"
-      ],
+      "options": ["Six", "Seven", "Five", "Four"],
       "correctAnswer": "B",
       "explanation": "All seven are digestive disorders/conditions discussed in NCERT: jaundice (liver disorder), vomiting (reflex), diarrhoea (frequent loose stools), constipation (irregular bowel), indigestion/dyspepsia, PEM (marasmus and kwashiorkor), and appendicitis (inflammation of appendix).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "counting"
-      ],
+      "tags": ["disorders", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2224,21 +1708,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "How many teeth are present in the permanent dentition of an adult human?",
-      "options": [
-        "20",
-        "28",
-        "32",
-        "36"
-      ],
+      "options": ["20", "28", "32", "36"],
       "correctAnswer": "C",
       "explanation": "An adult human has 32 permanent teeth: 8 incisors, 4 canines, 8 premolars, and 12 molars (including 4 wisdom teeth). The dental formula is 2123/2123 for each half of upper and lower jaw.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "teeth",
-        "dental-formula"
-      ],
+      "tags": ["teeth", "dental-formula"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2260,10 +1736,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "protein-digestion",
-        "sequence"
-      ],
+      "tags": ["protein-digestion", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2285,11 +1758,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fat-digestion",
-        "absorption",
-        "sequence"
-      ],
+      "tags": ["fat-digestion", "absorption", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2311,10 +1780,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "alimentary-canal",
-        "sequence"
-      ],
+      "tags": ["alimentary-canal", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2336,10 +1802,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "starch-digestion",
-        "sequence"
-      ],
+      "tags": ["starch-digestion", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2361,11 +1824,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "enzyme-activation",
-        "cascade",
-        "sequence"
-      ],
+      "tags": ["enzyme-activation", "cascade", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2387,11 +1846,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "alimentary-canal",
-        "layers",
-        "sequence"
-      ],
+      "tags": ["alimentary-canal", "layers", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2413,11 +1868,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "deglutition",
-        "swallowing",
-        "sequence"
-      ],
+      "tags": ["deglutition", "swallowing", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2428,22 +1879,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "The enzyme enterokinase is secreted by:",
-      "options": [
-        "Stomach",
-        "Pancreas",
-        "Intestinal mucosa",
-        "Liver"
-      ],
+      "options": ["Stomach", "Pancreas", "Intestinal mucosa", "Liver"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, enterokinase (enteropeptidase) is secreted by the intestinal mucosa (duodenal mucosa). It activates trypsinogen to trypsin, which then activates other pancreatic proenzymes.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "digestion",
-        "enterokinase",
-        "intestine"
-      ],
+      "tags": ["digestion", "enterokinase", "intestine"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2454,23 +1896,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Bile salts help in the digestion of fats by:",
-      "options": [
-        "Hydrolysing fats",
-        "Emulsifying fats",
-        "Absorbing fats",
-        "Synthesising fats"
-      ],
+      "options": ["Hydrolysing fats", "Emulsifying fats", "Absorbing fats", "Synthesising fats"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, bile salts (produced by the liver and stored in the gallbladder) emulsify fats, breaking large fat globules into smaller droplets. This increases the surface area for lipase action. Bile does not contain any digestive enzymes.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "digestion",
-        "bile",
-        "emulsification",
-        "fats"
-      ],
+      "tags": ["digestion", "bile", "emulsification", "fats"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2481,22 +1913,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "The largest gland in the human body is:",
-      "options": [
-        "Pancreas",
-        "Thyroid",
-        "Liver",
-        "Salivary gland"
-      ],
+      "options": ["Pancreas", "Thyroid", "Liver", "Salivary gland"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the liver is the largest gland in the human body, weighing about 1.2-1.5 kg. It produces bile, stores glycogen, detoxifies blood, produces plasma proteins, and plays a major role in metabolism.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "liver",
-        "largest-gland",
-        "digestive-system"
-      ],
+      "tags": ["liver", "largest-gland", "digestive-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2507,22 +1930,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "Kwashiorkor in children is caused by deficiency of:",
-      "options": [
-        "Calories only",
-        "Proteins",
-        "Vitamins",
-        "Minerals"
-      ],
+      "options": ["Calories only", "Proteins", "Vitamins", "Minerals"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, kwashiorkor is caused by protein deficiency in children. It is characterised by oedema (swelling), wasting of muscles, thinning of limbs, enlarged belly, and mental changes. Marasmus is caused by deficiency of both protein and calories.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "malnutrition",
-        "kwashiorkor",
-        "protein-deficiency"
-      ],
+      "tags": ["malnutrition", "kwashiorkor", "protein-deficiency"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2533,23 +1947,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
       "question": "The pH of gastric juice is approximately:",
-      "options": [
-        "1.0-2.0",
-        "4.0-5.0",
-        "7.0",
-        "8.0-9.0"
-      ],
+      "options": ["1.0-2.0", "4.0-5.0", "7.0", "8.0-9.0"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, the gastric juice has a very low pH of about 1.0-2.0 due to the presence of hydrochloric acid (HCl) secreted by oxyntic (parietal) cells. This acidic environment activates pepsinogen to pepsin and kills most bacteria.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stomach",
-        "gastric-juice",
-        "ph",
-        "hcl"
-      ],
+      "tags": ["stomach", "gastric-juice", "ph", "hcl"],
       "neetWeightage": "HIGH"
     }
   ]

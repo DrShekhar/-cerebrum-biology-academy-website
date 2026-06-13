@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Sushant Lok Gurugram | 15 Min Drive',
-    description: 'Best NEET coaching near Sushant Lok Gurugram (Gurgaon). Just 15 min drive to M2K Sector 51. AIIMS faculty, 98% success rate. Perfect for Sushant Lok 1, 2, 3 residents. Call 88264-44334!',
+    description:
+      'Best NEET coaching near Sushant Lok Gurugram (Gurgaon). Just 15 min drive to M2K Sector 51. AIIMS faculty, 98% success rate. Perfect for Sushant Lok 1, 2, 3 residents. Call 88264-44334!',
   },
 }
 
@@ -72,7 +73,11 @@ export default function NEETCoachingSushantLokGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Sushant Lok', 'NEET Biology Sushant Lok', 'Medical entrance coaching Sushant Lok']}
+        knowsAbout={[
+          'NEET Sushant Lok',
+          'NEET Biology Sushant Lok',
+          'Medical entrance coaching Sushant Lok',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

@@ -143,9 +143,12 @@ export function throttleRAF<T extends (...args: any[]) => any>(
  */
 export function deferredEffect(effect: () => void | (() => void)): () => void {
   let cleanup: void | (() => void)
-  const idleId = runWhenIdle(() => {
-    cleanup = effect()
-  }, { timeout: 1000 })
+  const idleId = runWhenIdle(
+    () => {
+      cleanup = effect()
+    },
+    { timeout: 1000 }
+  )
 
   return () => {
     cancelIdleRun(idleId)

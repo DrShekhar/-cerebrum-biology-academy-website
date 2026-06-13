@@ -96,9 +96,7 @@ export default function CBSEBiologyPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-green-900 via-teal-800 to-green-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div
-              className="max-w-4xl mx-auto text-center animate-fadeInUp"
-            >
+            <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <GraduationCap className="w-4 h-4" />
                 Board + NEET Integrated
@@ -158,9 +156,7 @@ export default function CBSEBiologyPage() {
               CBSE Biology Syllabus Coverage
             </h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <div
-                className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
-              >
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp">
                 <div className="bg-green-600 text-white py-3 px-6">
                   <h3 className="font-bold text-lg flex items-center gap-2">
                     <Microscope className="w-5 h-5" />
@@ -179,9 +175,7 @@ export default function CBSEBiologyPage() {
                 </div>
               </div>
 
-              <div
-                className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
-              >
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp">
                 <div className="bg-teal-600 text-white py-3 px-6">
                   <h3 className="font-bold text-lg flex items-center gap-2">
                     <Microscope className="w-5 h-5" />
@@ -233,10 +227,7 @@ export default function CBSEBiologyPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
-                >
+                <div key={idx} className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp">
                   <h3 className="font-semibold text-lg mb-2">{faq.q}</h3>
                   <p className="text-gray-600">{faq.a}</p>
                 </div>

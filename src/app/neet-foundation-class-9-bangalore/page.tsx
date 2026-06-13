@@ -36,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 9 in Bangalore | AIIMS-Trained Online Live',
-    description: 'NEET Foundation Class 9 in Bangalore at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Karnataka Board + NEET parallel. Koramangala, Indiranagar, Whitefi...',
+    description:
+      'NEET Foundation Class 9 in Bangalore at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Karnataka Board + NEET parallel. Koramangala, Indiranagar, Whitefi...',
   },
 }
 
@@ -239,11 +240,12 @@ export default function NEETFoundationClass9BangalorePage() {
           <p>
             Cerebrum&apos;s biology-only specialist positioning with AIIMS-trained faculty (Dr.
             Shekhar C Singh) and 15-20 student online live batches resonates with all three pockets
-            because the structural alternative — the 2nd-largest national NEET chain Scholastics 8 centres with 200-student PCB
-            Foundation batches, the largest national NEET chain 4 centres similar, BYJU&apos;s NEET Foundation primarily
-            recorded-video — does not match the depth-first preference of Bangalore tech-academic
-            families. Karnataka SSLC parallel pedagogy additionally serves families maintaining
-            state-board pathway optionality for KCET / state quota seats.
+            because the structural alternative — the 2nd-largest national NEET chain Scholastics 8
+            centres with 200-student PCB Foundation batches, the largest national NEET chain 4
+            centres similar, BYJU&apos;s NEET Foundation primarily recorded-video — does not match
+            the depth-first preference of Bangalore tech-academic families. Karnataka SSLC parallel
+            pedagogy additionally serves families maintaining state-board pathway optionality for
+            KCET / state quota seats.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">

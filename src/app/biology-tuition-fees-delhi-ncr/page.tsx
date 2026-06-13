@@ -45,7 +45,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biology Tuition Fees in Delhi NCR 2026 | ₹3K-8K/Month | Compare & Save',
-    description: 'Compare biology tuition fees across Delhi NCR. Home tutors ₹5-8K/month, online ₹3-5K/month, Cerebrum ₹4K/month with AIIMS faculty + test series included. Call 88264-44334.',
+    description:
+      'Compare biology tuition fees across Delhi NCR. Home tutors ₹5-8K/month, online ₹3-5K/month, Cerebrum ₹4K/month with AIIMS faculty + test series included. Call 88264-44334.',
   },
 }
 
@@ -203,7 +204,11 @@ export default function BiologyTuitionFeesDelhiNCR() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Delhi NCR', 'NEET Biology Delhi NCR', 'Medical entrance coaching Delhi NCR']}
+        knowsAbout={[
+          'NEET Delhi NCR',
+          'NEET Biology Delhi NCR',
+          'Medical entrance coaching Delhi NCR',
+        ]}
       />
       <DelhiAreaSchema pageSlug="biology-tuition-fees-delhi-ncr" />
       <script

@@ -118,9 +118,7 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
 
   if (!quizStarted) {
     return (
-      <div
-        className={cn('bg-white rounded-3xl shadow-xl p-8 text-center', className)}
-      >
+      <div className={cn('bg-white rounded-3xl shadow-xl p-8 text-center', className)}>
         <div className="mb-8">
           <Brain className="w-16 h-16 text-blue-600 mx-auto mb-4" />
           <h2 className="text-3xl font-bold text-gray-900 mb-4">{title}</h2>
@@ -166,9 +164,7 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
     const percentage = (score / questions.length) * 100
 
     return (
-      <div
-        className={cn('bg-white rounded-3xl shadow-xl p-8 text-center', className)}
-      >
+      <div className={cn('bg-white rounded-3xl shadow-xl p-8 text-center', className)}>
         <div className="mb-8">
           <Trophy className="w-20 h-20 text-yellow-500 mx-auto mb-6" />
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Quiz Completed!</h2>
@@ -239,9 +235,7 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
 
         {showProgress && (
           <div className="w-full bg-white/20 rounded-full h-2">
-            <div
-              className="bg-white h-2 rounded-full animate-fadeInUp"
-            />
+            <div className="bg-white h-2 rounded-full animate-fadeInUp" />
           </div>
         )}
 
@@ -332,42 +326,40 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
         </div>
 
         {/* Explanation */}
-{showExplanation && (
+        {showExplanation && (
+          <div className="overflow-hidden animate-fadeInUp">
             <div
-              className="overflow-hidden animate-fadeInUp"
+              className={cn(
+                'rounded-2xl p-6 mb-6',
+                isCorrect
+                  ? 'bg-green-50 border border-green-200'
+                  : 'bg-red-50 border border-red-200'
+              )}
             >
-              <div
-                className={cn(
-                  'rounded-2xl p-6 mb-6',
-                  isCorrect
-                    ? 'bg-green-50 border border-green-200'
-                    : 'bg-red-50 border border-red-200'
+              <div className="flex items-center gap-2 mb-3">
+                {isCorrect ? (
+                  <CheckCircle className="w-6 h-6 text-green-600" />
+                ) : (
+                  <XCircle className="w-6 h-6 text-red-600" />
                 )}
-              >
-                <div className="flex items-center gap-2 mb-3">
-                  {isCorrect ? (
-                    <CheckCircle className="w-6 h-6 text-green-600" />
-                  ) : (
-                    <XCircle className="w-6 h-6 text-red-600" />
-                  )}
-                  <span
-                    className={cn('font-semibold', isCorrect ? 'text-green-800' : 'text-red-800')}
-                  >
-                    {isCorrect ? 'Correct!' : 'Incorrect'}
-                  </span>
-                </div>
-
-                <p className="text-gray-700 mb-3">{currentQ.explanation}</p>
-
-                {currentQ.researchReference && (
-                  <div className="text-sm text-blue-600 italic">
-                    Reference: {currentQ.researchReference}
-                  </div>
-                )}
+                <span
+                  className={cn('font-semibold', isCorrect ? 'text-green-800' : 'text-red-800')}
+                >
+                  {isCorrect ? 'Correct!' : 'Incorrect'}
+                </span>
               </div>
+
+              <p className="text-gray-700 mb-3">{currentQ.explanation}</p>
+
+              {currentQ.researchReference && (
+                <div className="text-sm text-blue-600 italic">
+                  Reference: {currentQ.researchReference}
+                </div>
+              )}
             </div>
-          )}
-{/* Navigation */}
+          </div>
+        )}
+        {/* Navigation */}
         <div className="flex justify-between items-center">
           <div className="text-sm text-gray-500">
             {selectedAnswers.filter((a) => a !== null).length} of {questions.length} answered

@@ -38,7 +38,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching for Pathways World School Gurugram',
-    description: 'Best NEET coaching for Pathways World School Aravali students. Just 18 min from campus. IB/IGCSE to NEET transition support. AIIMS faculty, 98% success. Call 88264-44334!',
+    description:
+      'Best NEET coaching for Pathways World School Aravali students. Just 18 min from campus. IB/IGCSE to NEET transition support. AIIMS faculty, 98% success. Call 88264-44334!',
   },
 }
 
@@ -95,7 +96,11 @@ export default function NEETCoachingPathwaysWorldSchool() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

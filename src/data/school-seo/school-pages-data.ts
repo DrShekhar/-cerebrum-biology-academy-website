@@ -2047,13 +2047,11 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       },
       {
         title: 'Small Batches',
-        description:
-          'Limited seats per batch mean your doubts never go unanswered in a crowd.',
+        description: 'Limited seats per batch mean your doubts never go unanswered in a crowd.',
       },
       {
         title: 'AIIMS Faculty',
-        description:
-          'Our teachers come from AIIMS backgrounds and know exactly what NEET demands.',
+        description: 'Our teachers come from AIIMS backgrounds and know exactly what NEET demands.',
       },
       {
         title: 'MCQ Practice Bank',
@@ -2222,8 +2220,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     locality: 'Sector 126, Noida',
     nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
     distance: '7 km',
-    metaTitle:
-      'NEET Coaching for Lotus Valley International Students | Cerebrum Biology Academy',
+    metaTitle: 'NEET Coaching for Lotus Valley International Students | Cerebrum Biology Academy',
     metaDescription:
       'Top NEET biology coaching for Lotus Valley International School Noida students. 7 km from Sector 126, AIIMS faculty, small batches, 19,000+ MCQ bank.',
     heroTitle: 'NEET Biology Coaching for Lotus Valley International Students',
@@ -2752,8 +2749,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
         name: 'Shreya Pandey',
         batch: 'DPS Indirapuram, Class of 2024',
         result: 'NEET Score: 654',
-        quote:
-          'The 8 km drive to Cerebrum was the best investment of my NEET preparation year.',
+        quote: 'The 8 km drive to Cerebrum was the best investment of my NEET preparation year.',
       },
       {
         name: 'Aditya Mishra',
@@ -2810,8 +2806,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     locality: 'Indirapuram, Ghaziabad',
     nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
     distance: '8 km',
-    metaTitle:
-      'NEET Coaching for Cambridge School Ghaziabad Students | Cerebrum Biology Academy',
+    metaTitle: 'NEET Coaching for Cambridge School Ghaziabad Students | Cerebrum Biology Academy',
     metaDescription:
       'Top NEET biology coaching for Cambridge School Indirapuram Ghaziabad students. 8 km to Noida Sector 62. AIIMS faculty, small batches, 19,000+ MCQs.',
     heroTitle: 'NEET Biology Coaching for Cambridge School Ghaziabad Students',
@@ -2832,13 +2827,11 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       },
       {
         title: 'Small Batches',
-        description:
-          'Max 15 students per batch for individualized attention and doubt resolution.',
+        description: 'Max 15 students per batch for individualized attention and doubt resolution.',
       },
       {
         title: 'Comprehensive MCQ Bank',
-        description:
-          '19,000+ NEET-focused MCQs covering every chapter and previous year patterns.',
+        description: '19,000+ NEET-focused MCQs covering every chapter and previous year patterns.',
       },
       {
         title: 'Structured Program',
@@ -2935,8 +2928,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       },
       {
         title: 'MCQ Practice',
-        description:
-          '19,000+ carefully curated MCQs ensure exhaustive NEET exam preparation.',
+        description: '19,000+ carefully curated MCQs ensure exhaustive NEET exam preparation.',
       },
       {
         title: 'Proven Track Record',
@@ -3007,8 +2999,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     locality: 'Vaishali, Ghaziabad',
     nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
     distance: '5 km',
-    metaTitle:
-      'NEET Coaching for KR Mangalam Ghaziabad Students | Cerebrum Biology Academy',
+    metaTitle: 'NEET Coaching for KR Mangalam Ghaziabad Students | Cerebrum Biology Academy',
     metaDescription:
       'Specialized NEET biology coaching for KR Mangalam World School Vaishali Ghaziabad students. Only 5 km to Sector 62 Noida. AIIMS faculty, small batches.',
     heroTitle: 'NEET Biology Coaching for K.R. Mangalam World School Students',
@@ -3138,8 +3129,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       },
       {
         title: 'Largest MCQ Bank',
-        description:
-          '19,000+ NEET MCQs for comprehensive chapter and full-syllabus practice.',
+        description: '19,000+ NEET MCQs for comprehensive chapter and full-syllabus practice.',
       },
     ],
     successStories: [

@@ -294,8 +294,7 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
         </div>
 
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Find Your Perfect
               <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
@@ -312,30 +311,22 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
 
           {/* Stats */}
           <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <div
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 animate-fadeInUp"
-            >
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 animate-fadeInUp">
               <BookOpen className="w-8 h-8 text-blue-300 mx-auto mb-2" />
               <div className="text-3xl font-bold">{coursePrograms.length}+</div>
               <div className="text-blue-100">Expert Courses</div>
             </div>
-            <div
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 animate-fadeInUp"
-            >
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 animate-fadeInUp">
               <Users className="w-8 h-8 text-green-300 mx-auto mb-2" />
               <div className="text-3xl font-bold">10,000+</div>
               <div className="text-blue-100">Active Students</div>
             </div>
-            <div
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 animate-fadeInUp"
-            >
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 animate-fadeInUp">
               <Award className="w-8 h-8 text-yellow-300 mx-auto mb-2" />
               <div className="text-3xl font-bold">98%</div>
               <div className="text-blue-100">NEET Success Rate</div>
             </div>
-            <div
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 animate-fadeInUp"
-            >
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 animate-fadeInUp">
               <Sparkles className="w-8 h-8 text-purple-300 mx-auto mb-2" />
               <div className="text-3xl font-bold">₹25L+</div>
               <div className="text-blue-100">Scholarships Given</div>
@@ -348,9 +339,7 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6">
           {/* Search and Filter Section */}
-          <div
-            className="mb-8 animate-fadeInUp"
-          >
+          <div className="mb-8 animate-fadeInUp">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Find Your Perfect Course</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
@@ -392,9 +381,7 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
           </div>
 
           {/* Results Summary */}
-          <div
-            className="mb-8 text-center animate-fadeInUp"
-          >
+          <div className="mb-8 text-center animate-fadeInUp">
             <p className="text-gray-600">
               {selectedClass !== 'all' ? (
                 <>
@@ -423,89 +410,78 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
           </div>
 
           {/* Course Grid */}
-{selectedClass !== 'all' ? (
-              // Show Series Cards when specific class is selected
-              seriesData.length > 0 ? (
-                <div
-                  key={`series-${selectedClass}`}
-                  className="grid lg:grid-cols-3 gap-8 animate-fadeInUp"
-                >
-                  {seriesData.map((series, index) => (
-                    <div
-                      key={series.id}
-                     className="animate-fadeInUp">
-                      <EnhancedSeriesCard
-                        series={series}
-                        classLevel={selectedClass}
-                        onBookDemo={() => {
-                          // Create a mock course for demo booking
-                          const mockCourse: Partial<CourseProgram> = {
-                            id: `${series.id}-${selectedClass}`,
-                            name: `${series.name} - Class ${selectedClass}`,
-                            targetClass: selectedClass as ClassLevel,
-                            isFeatured: series.id === 'ascent',
-                            isPopular: series.id === 'ascent',
-                          }
-                          setSelectedCourse(mockCourse as CourseProgram)
-                          setShowDemoModal(true)
-                        }}
-                      />
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div
-                  key={`no-series-${selectedClass}`}
-                  className="text-center py-16 animate-fadeInUp"
-                >
-                  <div className="text-6xl mb-4">📚</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">No Series Found</h3>
-                  <p className="text-gray-600">
-                    No series data available for Class {selectedClass}
-                  </p>
-                </div>
-              )
-            ) : filteredCourses.length > 0 ? (
-              // Show Course Cards when 'all' is selected
+          {selectedClass !== 'all' ? (
+            // Show Series Cards when specific class is selected
+            seriesData.length > 0 ? (
               <div
-                key="all-courses"
-                className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 animate-fadeInUp"
+                key={`series-${selectedClass}`}
+                className="grid lg:grid-cols-3 gap-8 animate-fadeInUp"
               >
-                {filteredCourses.map((course, index) => (
-                  <div
-                    key={course.id}
-                   className="animate-fadeInUp">
-                    <CourseCard course={course} />
+                {seriesData.map((series, index) => (
+                  <div key={series.id} className="animate-fadeInUp">
+                    <EnhancedSeriesCard
+                      series={series}
+                      classLevel={selectedClass}
+                      onBookDemo={() => {
+                        // Create a mock course for demo booking
+                        const mockCourse: Partial<CourseProgram> = {
+                          id: `${series.id}-${selectedClass}`,
+                          name: `${series.name} - Class ${selectedClass}`,
+                          targetClass: selectedClass as ClassLevel,
+                          isFeatured: series.id === 'ascent',
+                          isPopular: series.id === 'ascent',
+                        }
+                        setSelectedCourse(mockCourse as CourseProgram)
+                        setShowDemoModal(true)
+                      }}
+                    />
                   </div>
                 ))}
               </div>
             ) : (
               <div
-                key="no-courses"
+                key={`no-series-${selectedClass}`}
                 className="text-center py-16 animate-fadeInUp"
               >
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">No Courses Found</h3>
-                <p className="text-gray-600 mb-8">
-                  {searchQuery
-                    ? `No courses match your search "${searchQuery}"`
-                    : `No courses available for the selected filters`}
-                </p>
-                <button
-                  onClick={() => {
-                    setSearchQuery('')
-                    setSelectedClass('all')
-                  }}
-                  className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
-                >
-                  Clear Filters
-                </button>
+                <div className="text-6xl mb-4">📚</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">No Series Found</h3>
+                <p className="text-gray-600">No series data available for Class {selectedClass}</p>
               </div>
-            )}
-{/* CTA Section */}
-          <div
-            className="mt-16 text-center bg-indigo-500 rounded-3xl p-12 text-white animate-fadeInUp"
-          >
+            )
+          ) : filteredCourses.length > 0 ? (
+            // Show Course Cards when 'all' is selected
+            <div
+              key="all-courses"
+              className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 animate-fadeInUp"
+            >
+              {filteredCourses.map((course, index) => (
+                <div key={course.id} className="animate-fadeInUp">
+                  <CourseCard course={course} />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div key="no-courses" className="text-center py-16 animate-fadeInUp">
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">No Courses Found</h3>
+              <p className="text-gray-600 mb-8">
+                {searchQuery
+                  ? `No courses match your search "${searchQuery}"`
+                  : `No courses available for the selected filters`}
+              </p>
+              <button
+                onClick={() => {
+                  setSearchQuery('')
+                  setSelectedClass('all')
+                }}
+                className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
+              >
+                Clear Filters
+              </button>
+            </div>
+          )}
+          {/* CTA Section */}
+          <div className="mt-16 text-center bg-indigo-500 rounded-3xl p-12 text-white animate-fadeInUp">
             <h3 className="text-3xl font-bold mb-4">Ready to Start Your NEET Journey?</h3>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Join thousands of successful students who have achieved their medical dreams with our

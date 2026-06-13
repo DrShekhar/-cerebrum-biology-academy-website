@@ -66,7 +66,6 @@ export async function POST(request: NextRequest) {
     // 3. Trigger email notifications
     // 4. Send WhatsApp messages
 
-
     // Simulate database save
     // await prisma.lead.create({ data: leadData })
 

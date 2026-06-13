@@ -95,24 +95,27 @@ export async function GET(request: NextRequest) {
       _count: undefined,
     }))
 
-    return NextResponse.json({
-      success: true,
-      data: {
-        achievers: transformedAchievers,
-        filters: {
-          categories: categories.map((c) => c.category),
-          periods: periods.map((p) => p.period).filter(Boolean),
-        },
-        pagination: {
-          total,
-          limit,
-          offset,
-          hasMore: offset + achievers.length < total,
+    return NextResponse.json(
+      {
+        success: true,
+        data: {
+          achievers: transformedAchievers,
+          filters: {
+            categories: categories.map((c) => c.category),
+            periods: periods.map((p) => p.period).filter(Boolean),
+          },
+          pagination: {
+            total,
+            limit,
+            offset,
+            hasMore: offset + achievers.length < total,
+          },
         },
       },
-    }, {
-      headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
-    })
+      {
+        headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
+      }
+    )
   } catch (error) {
     console.error('Error fetching wall of achievers:', error)
     return NextResponse.json(

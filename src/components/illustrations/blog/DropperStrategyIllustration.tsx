@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function DropperStrategyIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -12,12 +12,7 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Background gradient */}
       <rect x="10" y="10" width="380" height="280" rx="20" fill="#FDF2F8" />
 
@@ -28,8 +23,7 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
 
       {/* Before vs After comparison */}
       {/* First attempt - faded */}
-      <g
-      >
+      <g>
         <rect
           x="30"
           y="60"
@@ -53,8 +47,7 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
       </g>
 
       {/* Arrow */}
-      <g
-      >
+      <g>
         <line x1="190" y1="110" x2="220" y2="110" stroke="#8B5CF6" strokeWidth="3" />
         <polygon points="220,110 210,105 210,115" fill="#8B5CF6" />
         <text x="205" y="100" fontSize="6" fill="#8B5CF6" textAnchor="middle">
@@ -63,8 +56,7 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
       </g>
 
       {/* Second attempt - bright */}
-      <g
-      >
+      <g>
         <rect
           x="230"
           y="60"
@@ -102,8 +94,7 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
         Dropper Strategy Keys
       </text>
 
-      <g
-      >
+      <g>
         <rect x="45" y="205" width="100" height="55" rx="6" fill="#DBEAFE" />
         <text x="95" y="223" fontSize="7" fill="#1D4ED8" textAnchor="middle" fontWeight="bold">
           Identify Weak
@@ -116,8 +107,7 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <rect x="155" y="205" width="100" height="55" rx="6" fill="#FEF3C7" />
         <text x="205" y="223" fontSize="7" fill="#B45309" textAnchor="middle" fontWeight="bold">
           Dedicated
@@ -130,8 +120,7 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <rect x="265" y="205" width="100" height="55" rx="6" fill="#DCFCE7" />
         <text x="315" y="223" fontSize="7" fill="#16A34A" textAnchor="middle" fontWeight="bold">
           Regular

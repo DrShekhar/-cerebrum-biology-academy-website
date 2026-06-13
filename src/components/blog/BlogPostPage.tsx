@@ -512,10 +512,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
               />
 
               {/* Newsletter Signup - Email-first capture */}
-              <BlogNewsletterSignup
-                articleSlug={meta.slug}
-                category={meta.category}
-              />
+              <BlogNewsletterSignup articleSlug={meta.slug} category={meta.category} />
 
               {/* Tags */}
               <div className="mt-12 pt-8 border-t border-gray-200 animate-fade-in">

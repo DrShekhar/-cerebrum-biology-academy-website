@@ -64,7 +64,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-dharamshala' },
+    alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-dharamshala' },
     description: 'Real-time sessions. Perfect for RPGMC Tanda and IGMC Shimla preparation.',
   },
   {
@@ -108,9 +108,9 @@ const dharamshalaSchools = [
   'Govt. Sr. Sec. School Dharamshala',
   'TCV School McLeodGanj',
   'Kangra Valley School',
-  'Dr. Graham\'s Homes Palampur',
+  "Dr. Graham's Homes Palampur",
   'Govt. College Dharamshala',
-  'Saupin\'s School Palampur',
+  "Saupin's School Palampur",
   'JNV Kangra',
 ]
 
@@ -172,7 +172,7 @@ const faqs = [
   {
     question: 'Can I prepare for NEET while managing family tourism business?',
     answer:
-      'Yes! Many Dharamshala students help with family hotels/guesthouses. Our flexible batch timings (morning/evening) and recorded lectures let you balance work and studies. Tourism season doesn\'t affect your NEET preparation.',
+      "Yes! Many Dharamshala students help with family hotels/guesthouses. Our flexible batch timings (morning/evening) and recorded lectures let you balance work and studies. Tourism season doesn't affect your NEET preparation.",
   },
 ]
 
@@ -196,8 +196,7 @@ export default function NEETCoachingDharamshala() {
 
           <div className="mx-auto max-w-7xl">
             <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div
-               className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-teal-100 px-4 py-2 text-teal-800">
                   <Mountain className="h-4 w-4" />
                   <span className="text-sm font-medium">
@@ -213,8 +212,8 @@ export default function NEETCoachingDharamshala() {
                 </h1>
 
                 <p className="mb-4 text-xl text-gray-600">
-                  <strong>Little Lhasa</strong> now has AIIMS-level NEET coaching. Prepare for
-                  RPGMC Tanda from your Himalayan home.
+                  <strong>Little Lhasa</strong> now has AIIMS-level NEET coaching. Prepare for RPGMC
+                  Tanda from your Himalayan home.
                 </p>
 
                 <p className="mb-8 text-lg text-gray-600">
@@ -249,9 +248,7 @@ export default function NEETCoachingDharamshala() {
                 </div>
               </div>
 
-              <div
-                className="relative animate-fadeInUp"
-              >
+              <div className="relative animate-fadeInUp">
                 <div className="rounded-2xl bg-white p-8 shadow-xl">
                   <h3 className="mb-6 text-center text-xl font-bold text-gray-900">
                     Kangra District Success Metrics
@@ -278,9 +275,7 @@ export default function NEETCoachingDharamshala() {
         {/* Why Online Section */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Dharamshala Students Choose Online NEET Coaching
               </h2>
@@ -321,9 +316,7 @@ export default function NEETCoachingDharamshala() {
         {/* Areas Section */}
         <section className="bg-teal-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 NEET Coaching for Entire Kangra District
               </h2>
@@ -363,9 +356,7 @@ export default function NEETCoachingDharamshala() {
         {/* Features */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Cerebrum is Best for Dharamshala Students
               </h2>
@@ -391,9 +382,7 @@ export default function NEETCoachingDharamshala() {
         {/* Schools */}
         <section className="bg-teal-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Trusted by Students from Top Kangra Schools
               </h2>
@@ -416,9 +405,7 @@ export default function NEETCoachingDharamshala() {
         {/* Medical Colleges */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Target Medical Colleges for Kangra Students
               </h2>
@@ -429,28 +416,46 @@ export default function NEETCoachingDharamshala() {
               <table className="w-full">
                 <thead className="bg-teal-50">
                   <tr>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Medical College</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Distance</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Seats</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Quota</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                      Medical College
+                    </th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                      Distance
+                    </th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                      Seats
+                    </th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                      Quota
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
                   {medicalColleges.map((college, index) => (
-                    <tr key={index} className={`hover:bg-gray-50 ${college.name === 'RPGMC Tanda' ? 'bg-teal-50' : ''}`}>
+                    <tr
+                      key={index}
+                      className={`hover:bg-gray-50 ${college.name === 'RPGMC Tanda' ? 'bg-teal-50' : ''}`}
+                    >
                       <td className="px-6 py-4 font-medium text-gray-900">
                         {college.name}
                         {college.name === 'RPGMC Tanda' && (
-                          <span className="ml-2 rounded-full bg-teal-500 px-2 py-0.5 text-xs text-white">Nearest</span>
+                          <span className="ml-2 rounded-full bg-teal-500 px-2 py-0.5 text-xs text-white">
+                            Nearest
+                          </span>
                         )}
                       </td>
                       <td className="px-6 py-4 text-gray-600">{college.distance}</td>
                       <td className="px-6 py-4 text-gray-600">{college.seats}</td>
                       <td className="px-6 py-4">
-                        <span className={`rounded-full px-3 py-1 text-sm font-medium ${
-                          college.quota.includes('HP') ? 'bg-teal-100 text-teal-700' :
-                          college.quota.includes('All India') ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'
-                        }`}>
+                        <span
+                          className={`rounded-full px-3 py-1 text-sm font-medium ${
+                            college.quota.includes('HP')
+                              ? 'bg-teal-100 text-teal-700'
+                              : college.quota.includes('All India')
+                                ? 'bg-green-100 text-green-700'
+                                : 'bg-gray-100 text-gray-700'
+                          }`}
+                        >
                           {college.quota}
                         </span>
                       </td>
@@ -468,9 +473,7 @@ export default function NEETCoachingDharamshala() {
         {/* Cost Comparison */}
         <section className="bg-teal-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Cost Comparison: Plains vs Online for Dharamshala Students
               </h2>
@@ -480,28 +483,56 @@ export default function NEETCoachingDharamshala() {
               <div className="rounded-xl border-2 border-red-200 bg-white p-6">
                 <h3 className="mb-4 text-xl font-bold text-red-600">Going to Delhi/Chandigarh</h3>
                 <div className="space-y-3">
-                  <div className="flex justify-between"><span>Coaching Fees</span><span className="font-semibold">Rs 1,50,000 - 2,50,000</span></div>
-                  <div className="flex justify-between"><span>Hostel (12 months)</span><span className="font-semibold">Rs 1,20,000 - 1,80,000</span></div>
-                  <div className="flex justify-between"><span>Food & Living</span><span className="font-semibold">Rs 60,000 - 84,000</span></div>
-                  <div className="flex justify-between"><span>Travel (Hill to plains)</span><span className="font-semibold">Rs 30,000 - 50,000</span></div>
+                  <div className="flex justify-between">
+                    <span>Coaching Fees</span>
+                    <span className="font-semibold">Rs 1,50,000 - 2,50,000</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Hostel (12 months)</span>
+                    <span className="font-semibold">Rs 1,20,000 - 1,80,000</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Food & Living</span>
+                    <span className="font-semibold">Rs 60,000 - 84,000</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Travel (Hill to plains)</span>
+                    <span className="font-semibold">Rs 30,000 - 50,000</span>
+                  </div>
                   <div className="border-t pt-3">
                     <div className="flex justify-between text-lg font-bold text-red-600">
-                      <span>Total Cost</span><span>Rs 3,60,000 - 5,64,000</span>
+                      <span>Total Cost</span>
+                      <span>Rs 3,60,000 - 5,64,000</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="rounded-xl border-2 border-green-300 bg-white p-6">
-                <h3 className="mb-4 text-xl font-bold text-green-600">Cerebrum Online (From Dharamshala)</h3>
+                <h3 className="mb-4 text-xl font-bold text-green-600">
+                  Cerebrum Online (From Dharamshala)
+                </h3>
                 <div className="space-y-3">
-                  <div className="flex justify-between"><span>Complete NEET Program</span><span className="font-semibold">Rs 45,000 - 85,000</span></div>
-                  <div className="flex justify-between"><span>Stay in beautiful hills</span><span className="font-semibold text-green-600">Rs 0</span></div>
-                  <div className="flex justify-between"><span>Home food</span><span className="font-semibold text-green-600">Rs 0 extra</span></div>
-                  <div className="flex justify-between"><span>No dangerous travel</span><span className="font-semibold text-green-600">Rs 0</span></div>
+                  <div className="flex justify-between">
+                    <span>Complete NEET Program</span>
+                    <span className="font-semibold">Rs 45,000 - 85,000</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Stay in beautiful hills</span>
+                    <span className="font-semibold text-green-600">Rs 0</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Home food</span>
+                    <span className="font-semibold text-green-600">Rs 0 extra</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>No dangerous travel</span>
+                    <span className="font-semibold text-green-600">Rs 0</span>
+                  </div>
                   <div className="border-t pt-3">
                     <div className="flex justify-between text-lg font-bold text-green-600">
-                      <span>Total Cost</span><span>Rs 45,000 - 85,000</span>
+                      <span>Total Cost</span>
+                      <span>Rs 45,000 - 85,000</span>
                     </div>
                   </div>
                 </div>
@@ -516,9 +547,7 @@ export default function NEETCoachingDharamshala() {
         {/* FAQs */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 FAQs: NEET Coaching in Dharamshala
               </h2>
@@ -533,7 +562,9 @@ export default function NEETCoachingDharamshala() {
                   <details className="group">
                     <summary className="flex cursor-pointer items-center justify-between p-6 font-semibold text-gray-900">
                       {faq.question}
-                      <span className="ml-4 text-teal-600 transition-transform group-open:rotate-180">▼</span>
+                      <span className="ml-4 text-teal-600 transition-transform group-open:rotate-180">
+                        ▼
+                      </span>
                     </summary>
                     <div className="px-6 pb-6 text-gray-600">{faq.answer}</div>
                   </details>
@@ -561,7 +592,11 @@ export default function NEETCoachingDharamshala() {
                   </Button>
                 </Link>
                 <Link href="/online-neet-coaching">
-                  <Button size="lg" variant="outline" className="gap-2 border-white text-white hover:bg-white/10">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="gap-2 border-white text-white hover:bg-white/10"
+                  >
                     View All Programs
                     <ArrowRight className="h-4 w-4" />
                   </Button>

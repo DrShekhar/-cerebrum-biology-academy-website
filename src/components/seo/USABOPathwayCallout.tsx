@@ -40,16 +40,15 @@ export function USABOPathwayCallout({ cityName, schools }: USABOPathwayCalloutPr
             Considering the USABO + IBO pathway too?
           </h2>
           <p className="text-slate-700 mb-4">
-            Many NEET aspirants{cityClause} are also strong USA Biology Olympiad (USABO)
-            candidates. AP-5 students sit roughly six weeks of focused prep away from a USABO
-            Semifinalist score — a national-tier credential that materially strengthens college
-            applications to Ivy / MIT / Stanford / JHU STEM programmes.
+            Many NEET aspirants{cityClause} are also strong USA Biology Olympiad (USABO) candidates.
+            AP-5 students sit roughly six weeks of focused prep away from a USABO Semifinalist score
+            — a national-tier credential that materially strengthens college applications to Ivy /
+            MIT / Stanford / JHU STEM programmes.
           </p>
           <p className="text-slate-700 mb-6">
-            {schoolClause}{' '}
-            Our coaching is taught by AIIMS-trained faculty using the same depth-first,
-            biology-only methodology that produces Indian top performers — adapted to US time
-            zones and the USABO Open Exam (February) and Semifinal (March) format.
+            {schoolClause} Our coaching is taught by AIIMS-trained faculty using the same
+            depth-first, biology-only methodology that produces Indian top performers — adapted to
+            US time zones and the USABO Open Exam (February) and Semifinal (March) format.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link

@@ -178,19 +178,17 @@ export function EnhancedTouchInterface({
         </div>
 
         {/* Secondary Actions - Collapsible */}
-<div
-            className="border-t border-gray-100 animate-fadeInUp"
-          >
-            <div className="grid grid-cols-2 gap-2 p-3">
-              {touchActions
-                .filter((action) => action.priority === 'medium')
-                .map((action) => (
-                  <button
-                    key={action.id}
-                    onTouchStart={() => handleTouchStart(action.id)}
-                    onTouchEnd={handleTouchEnd}
-                    onClick={() => handleAction(action)}
-                    className={`
+        <div className="border-t border-gray-100 animate-fadeInUp">
+          <div className="grid grid-cols-2 gap-2 p-3">
+            {touchActions
+              .filter((action) => action.priority === 'medium')
+              .map((action) => (
+                <button
+                  key={action.id}
+                  onTouchStart={() => handleTouchStart(action.id)}
+                  onTouchEnd={handleTouchEnd}
+                  onClick={() => handleAction(action)}
+                  className={`
                     ${action.color}
                     text-white font-semibold py-3 px-4 rounded-lg
                     flex items-center justify-center gap-2
@@ -200,30 +198,28 @@ export function EnhancedTouchInterface({
                     min-h-[48px] touch-manipulation
                     text-sm
                   `}
-                  >
-                    <action.icon className="h-4 w-4" />
-                    <span>{showHindi && action.hindi ? action.hindi : action.label}</span>
-                  </button>
-                ))}
-            </div>
+                >
+                  <action.icon className="h-4 w-4" />
+                  <span>{showHindi && action.hindi ? action.hindi : action.label}</span>
+                </button>
+              ))}
           </div>
-{/* Safe area padding for newer iPhones */}
+        </div>
+        {/* Safe area padding for newer iPhones */}
         <div className="h-2" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }} />
       </div>
 
       {/* Floating Success Stories Ticker for Trust Building */}
-<div
-          className="absolute bottom-full left-4 right-4 mb-2 animate-fadeInUp"
-        >
-          <div className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-yellow-900 px-4 py-2 rounded-lg shadow-lg">
-            <div className="text-xs font-medium text-center">
-              {showHindi
-                ? '🎉 राहुल शर्मा ने NEET में 355/360 स्कोर किया - AIIMS दिल्ली में एडमिशन!'
-                : '🎉 Rahul Sharma scored 355/360 in NEET - Admitted to AIIMS Delhi!'}
-            </div>
+      <div className="absolute bottom-full left-4 right-4 mb-2 animate-fadeInUp">
+        <div className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-yellow-900 px-4 py-2 rounded-lg shadow-lg">
+          <div className="text-xs font-medium text-center">
+            {showHindi
+              ? '🎉 राहुल शर्मा ने NEET में 355/360 स्कोर किया - AIIMS दिल्ली में एडमिशन!'
+              : '🎉 Rahul Sharma scored 355/360 in NEET - Admitted to AIIMS Delhi!'}
           </div>
         </div>
-</div>
+      </div>
+    </div>
   )
 }
 

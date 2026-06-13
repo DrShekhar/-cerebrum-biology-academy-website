@@ -163,9 +163,7 @@ export function TestInterface({ test }: TestInterfaceProps) {
       {/* Hero Section */}
       <section className="bg-indigo-500 text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="max-w-4xl animate-fadeInUp"
-          >
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="flex items-center space-x-3 mb-4">
               <span
                 className={`px-3 py-1 rounded-full text-sm font-semibold ${
@@ -229,9 +227,7 @@ export function TestInterface({ test }: TestInterfaceProps) {
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-8">
               {/* Topics Covered */}
-              <div
-                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Topics Covered</h2>
                 <div className="flex flex-wrap gap-3">
                   {test.topics.map((topic, index) => (
@@ -246,9 +242,7 @@ export function TestInterface({ test }: TestInterfaceProps) {
               </div>
 
               {/* Instructions */}
-              <div
-                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Test Instructions</h2>
                 <ul className="space-y-4">
                   {test.instructions.map((instruction, index) => (
@@ -262,9 +256,7 @@ export function TestInterface({ test }: TestInterfaceProps) {
 
               {/* Class-specific Information */}
               {selectedClass && (
-                <div
-                  className="bg-blue-50 rounded-3xl p-8 animate-fadeInUp"
-                >
+                <div className="bg-blue-50 rounded-3xl p-8 animate-fadeInUp">
                   <h2 className="text-2xl font-bold text-blue-900 mb-6">
                     Personalized for{' '}
                     {selectedClass === 'class-11'
@@ -296,9 +288,7 @@ export function TestInterface({ test }: TestInterfaceProps) {
             {/* Sidebar */}
             <div className="space-y-8">
               {/* Start Test Card */}
-              <div
-                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
                 <h3 className="text-xl font-bold text-gray-900 mb-6">Ready to Begin?</h3>
 
                 {!selectedClass ? (
@@ -356,9 +346,7 @@ export function TestInterface({ test }: TestInterfaceProps) {
               </div>
 
               {/* Test Stats */}
-              <div
-                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
                 <h3 className="text-xl font-bold text-gray-900 mb-6">Test Statistics</h3>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
@@ -388,9 +376,7 @@ export function TestInterface({ test }: TestInterfaceProps) {
               </div>
 
               {/* Similar Tests */}
-              <div
-                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
                 <h3 className="text-xl font-bold text-gray-900 mb-6">Related Tests</h3>
                 <div className="space-y-4">
                   <div className="p-4 bg-gray-50 rounded-2xl">

@@ -109,12 +109,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about molecular clocks:\nS1: Molecular clocks assume that nucleotide substitutions accumulate at a roughly constant rate over time in a given gene.\nS2: The neutral theory of molecular evolution provides the theoretical basis for molecular clocks, as most substitutions are selectively neutral and accumulate by genetic drift at rates determined by mutation rates.\nS3: Molecular clocks tick at exactly the same rate across all genes and all lineages, making any gene suitable for dating any divergence event.\nS4: Calibration of molecular clocks requires at least one independent estimate of divergence time, typically from the fossil record or biogeographic events.",
-      "options": [
-        "TTTT",
-        "TTFT",
-        "TFFT",
-        "FTFT"
-      ],
+      "options": ["TTTT", "TTFT", "TFFT", "FTFT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: The fundamental assumption of molecular clocks is that substitutions accumulate at an approximately constant rate within a given lineage and gene, allowing divergence times to be estimated from sequence differences. S2 is TRUE: Kimura's neutral theory predicts that the rate of neutral substitution equals the mutation rate, independent of population size, providing the mechanistic basis for clock-like behavior. S3 is FALSE: Different genes evolve at vastly different rates (e.g., histones evolve slowly while fibrinopeptides evolve rapidly), and rate variation exists among lineages (e.g., rodents evolve faster than primates). Relaxed molecular clock methods were developed specifically to accommodate this rate heterogeneity. S4 is TRUE: Without at least one calibration point from an independent source such as the fossil record, molecular sequence divergence can only provide relative timing, not absolute dates.",
       "isOlympiad": true,
@@ -249,12 +244,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about homology and analogy in phylogenetic analysis:\nS1: Homologous structures are inherited from a common ancestor and may have diverged in form and function through descent with modification.\nS2: Analogous structures arise through convergent evolution in unrelated lineages and can mislead phylogenetic analyses if incorrectly coded as homologous.\nS3: The wings of bats and the wings of birds are homologous as forelimbs but analogous as flight structures.\nS4: Molecular sequence similarity between two species always indicates homology and never arises through convergent evolution.",
-      "options": [
-        "TTTT",
-        "TTTF",
-        "TTFF",
-        "TFTF"
-      ],
+      "options": ["TTTT", "TTTF", "TTFF", "TFTF"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Homology refers to features inherited from a common ancestor. The forelimbs of all tetrapods are homologous, though they have diverged into arms, wings, flippers, and legs. S2 is TRUE: Analogous structures (e.g., wings of insects and birds) result from convergent evolution and can produce erroneous phylogenetic groupings if treated as synapomorphies. S3 is TRUE: Bat and bird wings are homologous as tetrapod forelimbs (derived from the same ancestral limb structure) but analogous as flight adaptations because powered flight evolved independently in these lineages, with different structural modifications (membrane stretched between elongated fingers in bats vs. feathered arms in birds). S4 is FALSE: Molecular convergence does occur, particularly at the amino acid level, when similar selective pressures drive the same substitutions in unrelated lineages (e.g., lysozyme convergence in foregut fermenters like ruminants and colobine monkeys).",
       "isOlympiad": true,
@@ -449,12 +439,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about maximum likelihood (ML) phylogenetic analysis:\nS1: ML evaluates the probability of observing the data (sequence alignment) given a specific tree topology, branch lengths, and substitution model.\nS2: ML requires specification of a nucleotide substitution model (e.g., GTR, HKY) that describes the rates and probabilities of different types of base changes.\nS3: ML always produces the same tree as maximum parsimony because both methods minimize the number of evolutionary changes.\nS4: ML is generally considered more robust to long-branch attraction than parsimony because it explicitly models multiple substitutions at the same site.",
-      "options": [
-        "TTTT",
-        "TTFT",
-        "TFFT",
-        "FTTT"
-      ],
+      "options": ["TTTT", "TTFT", "TFFT", "FTTT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: ML calculates L(D|T,M) \u2014 the likelihood of the data (D) given the tree (T) and model (M). The tree topology, branch lengths, and model parameters that maximize this likelihood are selected. S2 is TRUE: ML requires an explicit substitution model specifying base frequencies, transition/transversion ratios, and rate parameters. Model selection (e.g., via AIC or BIC) is an important preliminary step. S3 is FALSE: ML and parsimony use fundamentally different optimality criteria. Parsimony minimizes the total number of character changes without a model, while ML maximizes the probability of the data under a model. They can and often do produce different trees, especially when rate variation among lineages is high. S4 is TRUE: By modeling the substitution process, ML can account for multiple substitutions at the same site (back-mutations, parallel substitutions), which parsimony cannot. This makes ML more resistant to long-branch attraction, though it is not immune to it.",
       "isOlympiad": true,
@@ -609,12 +594,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about phylogenetic tree interpretation:\nS1: The order in which terminal taxa (tips) appear from left to right on a phylogenetic tree reflects their evolutionary advancement, with more derived taxa on the right.\nS2: Rotating branches around an internal node changes the relationships depicted in the tree.\nS3: The length of branches in a phylogram represents the amount of evolutionary change (substitutions or morphological changes) along that lineage.\nS4: Two taxa that are adjacent on a tree are not necessarily more closely related to each other than either is to a non-adjacent taxon; sister-group relationships are determined by shared internal nodes, not tip proximity.",
-      "options": [
-        "TFFT",
-        "FFTT",
-        "FFTF",
-        "FTFT"
-      ],
+      "options": ["TFFT", "FFTT", "FFTF", "FTFT"],
       "correctAnswer": "FFTT",
       "explanation": "S1 is FALSE: The left-to-right order of taxa on a phylogenetic tree is arbitrary and carries no information about evolutionary advancement. Branches can be rotated around any node without changing the tree's topology or evolutionary relationships. S2 is FALSE: Rotating branches around an internal node does not change the relationships depicted \u2014 the resulting tree is topologically identical. The key information is which taxa share more recent common ancestors (internal nodes), not their visual arrangement. S3 is TRUE: In a phylogram, branch lengths are proportional to the amount of evolutionary change (e.g., nucleotide substitutions per site), providing information about the rate and amount of divergence along each lineage. S4 is TRUE: Sister-group relationships are defined by shared internal nodes. Two taxa that appear adjacent may be separated by several internal nodes, while taxa that appear far apart may be true sister groups.",
       "isOlympiad": true,
@@ -749,12 +729,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the application of phylogenetics to real-world problems:\nS1: Phylogenetic analysis of viral sequences can be used to trace the source and transmission dynamics of disease outbreaks.\nS2: DNA barcoding uses short standardized gene regions (e.g., COI in animals) to identify species by matching unknown specimens to reference sequences in a phylogenetic framework.\nS3: Phylogenetic diversity indices are used in conservation biology to prioritize protection of lineages that represent the greatest amount of unique evolutionary history.\nS4: Phylogenetic methods cannot be applied to non-biological systems such as language evolution or manuscript transmission.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFF",
-        "TFTF"
-      ],
+      "options": ["TTTF", "TTTT", "TTFF", "TFTF"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Phylogenetic analysis of rapidly evolving pathogens (HIV, influenza, SARS-CoV-2) can reconstruct transmission chains, identify outbreak sources, and inform public health responses. The phylogenetic placement of new sequences reveals their origin and spread patterns. S2 is TRUE: DNA barcoding uses standardized markers (COI for animals, rbcL/matK for plants, ITS for fungi) to identify species by comparing unknown sequences to curated reference databases using phylogenetic and distance-based methods. S3 is TRUE: Phylogenetic diversity (PD) measures the total branch length connecting a set of taxa. Conservation efforts use PD to identify species or areas that maximize the preservation of evolutionary history, prioritizing phylogenetically distinct lineages (e.g., tuatara) over species with many close relatives. S4 is FALSE: Phylogenetic methods have been successfully applied to language evolution (constructing language family trees), manuscript stemmatology (tracing copying errors in manuscripts), and even cultural evolution.",
       "isOlympiad": true,
@@ -929,12 +904,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the domain Archaea and its phylogenetic relationship to other domains:\nS1: The Asgard archaea (Lokiarchaeota and related lineages) are the closest known prokaryotic relatives of eukaryotes, supporting the two-domain (Eocyte) hypothesis.\nS2: Archaea and bacteria are more closely related to each other than either is to eukaryotes based on ribosomal RNA phylogenies.\nS3: The eukaryotic cell likely arose through a symbiotic event between an archaeal host (related to Asgard archaea) and an alpha-proteobacterial endosymbiont that became the mitochondrion.\nS4: Archaea are exclusively extremophiles found only in extreme environments such as hot springs, salt lakes, and deep-sea hydrothermal vents.",
-      "options": [
-        "TFTF",
-        "TFTT",
-        "TTFF",
-        "TFTF"
-      ],
+      "options": ["TFTF", "TFTT", "TTFF", "TFTF"],
       "correctAnswer": "TFTF",
       "explanation": "S1 is TRUE: Phylogenomic analyses have placed the Asgard archaea (including Lokiarchaeota, Thorarchaeota, Odinarchaeota, and Heimdallarchaeota) as the closest prokaryotic relatives of eukaryotes. These archaea possess genes encoding proteins previously thought to be unique to eukaryotes, including components of the cytoskeleton and membrane trafficking systems, supporting the two-domain hypothesis where eukaryotes arose from within Archaea. S2 is FALSE: Based on ribosomal RNA phylogenies (Woese's three-domain tree), archaea are more closely related to eukaryotes than to bacteria. The informational machinery (transcription, translation) of archaea more closely resembles that of eukaryotes. S3 is TRUE: Current models of eukaryogenesis propose that an archaeal host cell (likely related to Asgard archaea) engulfed an alpha-proteobacterium, which became the mitochondrion through endosymbiosis. S4 is FALSE: While archaea were originally discovered in extreme environments, they are now known to be ubiquitous, inhabiting soil, ocean water, human gut, and other moderate environments.",
       "isOlympiad": true,
@@ -1249,12 +1219,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about gene tree/species tree reconciliation:\nS1: A gene tree can differ from the species tree due to deep coalescence (incomplete lineage sorting), gene duplication and loss, and horizontal gene transfer.\nS2: The multispecies coalescent model provides a statistical framework for estimating the species tree from a collection of discordant gene trees.\nS3: If a gene tree matches the species tree perfectly, this proves that no incomplete lineage sorting occurred for that gene.\nS4: Species tree estimation methods such as ASTRAL use the frequencies of gene tree quartets (four-taxon subtrees) to infer the species tree topology.",
-      "options": [
-        "TTTT",
-        "TTFT",
-        "TFFT",
-        "TTFF"
-      ],
+      "options": ["TTTT", "TTFT", "TFFT", "TTFF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Gene trees can differ from species trees through three main processes: (1) deep coalescence/ILS, where ancestral polymorphisms sort differently than the species branching order; (2) gene duplication and loss, creating paralogs with different histories; (3) horizontal gene transfer, especially in prokaryotes. S2 is TRUE: The multispecies coalescent explicitly models the process of gene lineage sorting within species tree branches, predicting the expected distribution of gene tree topologies given branch lengths and effective population sizes. S3 is FALSE: A gene tree that matches the species tree is consistent with, but does not prove the absence of, ILS. Under ILS, the most probable gene tree topology matches the species tree (assuming the species tree is in the most common topology zone). A matching gene tree could occur with or without ILS \u2014 ILS is a probabilistic process. S4 is TRUE: ASTRAL (Accurate Species TRee ALgorithm) works by decomposing input gene trees into quartet (four-taxon) subtrees and finding the species tree that satisfies the maximum number of quartets.",
       "isOlympiad": true,
@@ -1509,12 +1474,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about phylogenetic diversity and conservation:\nS1: Faith's phylogenetic diversity (PD) metric calculates the total branch length connecting all species in a community on a phylogenetic tree.\nS2: A region with high species richness always has high phylogenetic diversity.\nS3: The EDGE (Evolutionarily Distinct and Globally Endangered) framework prioritizes species for conservation based on both their phylogenetic uniqueness and their extinction risk.\nS4: Phylogenetic community ecology uses the phylogenetic structure of species assemblages to infer community assembly processes such as environmental filtering and competitive exclusion.",
-      "options": [
-        "TFTF",
-        "TFTT",
-        "TTTT",
-        "TFFT"
-      ],
+      "options": ["TFTF", "TFTT", "TTTT", "TFFT"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: Faith's PD sums the branch lengths of the minimum spanning path connecting all species in a set on a phylogenetic tree. Higher PD indicates more evolutionary history represented. S2 is FALSE: A region could have many closely related species (e.g., a species flock of cichlids) with high richness but low phylogenetic diversity, because the species diverged recently and share most of their evolutionary history. Conversely, a region with fewer but phylogenetically distant species (e.g., a tuatara, a kiwi, and a fern) could have higher PD. S3 is TRUE: The EDGE framework combines evolutionary distinctiveness (a measure of how much unique evolutionary history a species represents) with global endangerment status, prioritizing species like the aye-aye, pangolins, and Chinese giant salamander that are both evolutionary unique and highly threatened. S4 is TRUE: If a community contains species that are more closely related than expected by chance (phylogenetic clustering), environmental filtering may be selecting for conserved traits; if species are more distantly related than expected (phylogenetic overdispersion), competitive exclusion of similar species may be operating.",
       "isOlympiad": true,
@@ -1769,12 +1729,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the use of whole-genome data in phylogenetics:\nS1: Whole-genome phylogenetics can use both coding and non-coding regions, with non-coding regions often providing better signal for resolving closely related species.\nS2: Genome-scale datasets eliminate all phylogenetic uncertainty because they contain enough data to resolve any evolutionary relationship.\nS3: Phylogenomic analyses can be affected by systematic errors including base composition bias, heterotachy, and model violations that persist even with large datasets.\nS4: The transition from single-gene to phylogenomic datasets has generally increased confidence in many higher-level phylogenetic relationships but has also revealed unexpected complexity in some groups.",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TFTT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: Non-coding regions (introns, intergenic regions, UCE flanking sequences) often evolve faster than coding regions and are subject to fewer selective constraints, making them informative for resolving relationships among closely related species where coding regions show insufficient variation. S2 is FALSE: Increased data do not eliminate systematic error. When a model is misspecified, adding more data can actually increase confidence in an incorrect tree (statistical inconsistency). The anomaly zone demonstrates that even with infinite data, certain methods produce wrong results under specific conditions. Systematic errors like compositional bias and long-branch attraction persist or worsen with more data if the underlying model is inadequate. S3 is TRUE: Base composition heterogeneity (different lineages evolving toward different equilibrium base frequencies), heterotachy (rate variation across sites that changes among lineages), and model violations all represent systematic errors that can mislead phylogenomic analyses regardless of dataset size. S4 is TRUE: Phylogenomics has resolved many previously contentious relationships but has also revealed unexpected complexity.",
       "isOlympiad": true,

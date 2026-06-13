@@ -19,7 +19,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Coaching in North Delhi | Rohini, Pitampura, Model Town',
-    description: 'Best NEET coaching for North Delhi students from Rohini, Pitampura, Model Town, Shalimar Bagh, Ashok Vihar.',
+    description:
+      'Best NEET coaching for North Delhi students from Rohini, Pitampura, Model Town, Shalimar Bagh, Ashok Vihar.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-north-delhi',
@@ -36,7 +37,16 @@ export default function NEETCoachingNorthDelhiLayout({ children }: { children: R
         parentLocation="Delhi NCR"
         centerAddress="211 Vikas Surya Tower, DC Chowk, Rohini Sector 9, Delhi - 110085"
         centerPhone="+91-8826-444-334"
-        nearbyAreas={['Rohini', 'Pitampura', 'Model Town', 'Shalimar Bagh', 'Ashok Vihar', 'Civil Lines', 'Wazirpur', 'Kohat Enclave']}
+        nearbyAreas={[
+          'Rohini',
+          'Pitampura',
+          'Model Town',
+          'Shalimar Bagh',
+          'Ashok Vihar',
+          'Civil Lines',
+          'Wazirpur',
+          'Kohat Enclave',
+        ]}
       />
     </>
   )

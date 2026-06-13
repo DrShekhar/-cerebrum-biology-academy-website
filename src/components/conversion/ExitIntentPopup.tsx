@@ -480,150 +480,148 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
   }
 
   return (
-<div
-        className={`fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm z-50 flex ${getPositionClasses()} p-4`}
-        onClick={handleClose}
+    <div
+      className={`fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm z-50 flex ${getPositionClasses()} p-4`}
+      onClick={handleClose}
+    >
+      <div
+        className="relative max-w-lg w-full mx-4 sm:mx-0 bg-white rounded-2xl shadow-2xl overflow-hidden animate-fadeInUp"
+        onClick={(e) => e.stopPropagation()}
       >
-        <div
-          className="relative max-w-lg w-full mx-4 sm:mx-0 bg-white rounded-2xl shadow-2xl overflow-hidden animate-fadeInUp"
-          onClick={(e) => e.stopPropagation()}
+        {/* Close button */}
+        <button
+          onClick={handleClose}
+          className="absolute top-4 right-4 z-10 p-2 bg-white/80 rounded-full hover:bg-white transition-colors"
         >
-          {/* Close button */}
-          <button
-            onClick={handleClose}
-            className="absolute top-4 right-4 z-10 p-2 bg-white/80 rounded-full hover:bg-white transition-colors"
-          >
-            <X className="w-5 h-5 text-gray-600" />
-          </button>
+          <X className="w-5 h-5 text-gray-600" />
+        </button>
 
-          {/* Header with solid indigo */}
-          <div className="bg-indigo-500 p-4 sm:p-6 text-white relative overflow-hidden">
-            <div className="relative z-10">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 bg-white/20 rounded-full">{selectedOffer.visual.icon}</div>
-                <div>
-                  <h2 className="text-2xl font-bold leading-tight">{selectedOffer.headline}</h2>
-                </div>
+        {/* Header with solid indigo */}
+        <div className="bg-indigo-500 p-4 sm:p-6 text-white relative overflow-hidden">
+          <div className="relative z-10">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-3 bg-white/20 rounded-full">{selectedOffer.visual.icon}</div>
+              <div>
+                <h2 className="text-2xl font-bold leading-tight">{selectedOffer.headline}</h2>
               </div>
-
-              <p className="text-lg text-white/90 leading-relaxed">{selectedOffer.subheadline}</p>
-
-              {/* Urgency indicator */}
-              {selectedOffer.urgencyLevel === 'critical' && (
-                <div className="flex items-center gap-2 mt-3 bg-white/20 rounded-lg p-2">
-                  <Timer className={`w-4 h-4 ${getUrgencyAnimation()}`} />
-                  <span className="text-sm font-medium">
-                    {selectedOffer.offerDetails.urgencyMessage}
-                  </span>
-                </div>
-              )}
             </div>
 
-            {/* Background decoration */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16" />
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12" />
+            <p className="text-lg text-white/90 leading-relaxed">{selectedOffer.subheadline}</p>
+
+            {/* Urgency indicator */}
+            {selectedOffer.urgencyLevel === 'critical' && (
+              <div className="flex items-center gap-2 mt-3 bg-white/20 rounded-lg p-2">
+                <Timer className={`w-4 h-4 ${getUrgencyAnimation()}`} />
+                <span className="text-sm font-medium">
+                  {selectedOffer.offerDetails.urgencyMessage}
+                </span>
+              </div>
+            )}
           </div>
 
-          {/* Content */}
-          <div className="p-6 space-y-6">
-            {/* Offer details */}
-            <div className="text-center">
-              {selectedOffer.offerDetails.discount && (
-                <div className="mb-4">
-                  <div className="text-4xl font-bold text-gray-900 mb-1">
-                    {selectedOffer.offerDetails.discount}% OFF
-                  </div>
-                  <div className="text-lg text-gray-600">
-                    Save ₹
-                    {Math.floor(
-                      (75000 * selectedOffer.offerDetails.discount) / 100
-                    ).toLocaleString()}
-                  </div>
-                </div>
-              )}
+          {/* Background decoration */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16" />
+          <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12" />
+        </div>
 
-              {selectedOffer.offerDetails.bonusValue && (
-                <div className="text-2xl font-bold text-green-600 mb-2">
-                  {selectedOffer.offerDetails.bonusValue}
+        {/* Content */}
+        <div className="p-6 space-y-6">
+          {/* Offer details */}
+          <div className="text-center">
+            {selectedOffer.offerDetails.discount && (
+              <div className="mb-4">
+                <div className="text-4xl font-bold text-gray-900 mb-1">
+                  {selectedOffer.offerDetails.discount}% OFF
                 </div>
-              )}
+                <div className="text-lg text-gray-600">
+                  Save ₹
+                  {Math.floor((75000 * selectedOffer.offerDetails.discount) / 100).toLocaleString()}
+                </div>
+              </div>
+            )}
 
-              {selectedOffer.offerDetails.consultationDetails && (
-                <div className="text-lg text-gray-700 mb-2">
-                  {selectedOffer.offerDetails.consultationDetails}
-                </div>
-              )}
+            {selectedOffer.offerDetails.bonusValue && (
+              <div className="text-2xl font-bold text-green-600 mb-2">
+                {selectedOffer.offerDetails.bonusValue}
+              </div>
+            )}
+
+            {selectedOffer.offerDetails.consultationDetails && (
+              <div className="text-lg text-gray-700 mb-2">
+                {selectedOffer.offerDetails.consultationDetails}
+              </div>
+            )}
+          </div>
+
+          {/* Personalized elements */}
+          <div className="space-y-2">
+            {selectedOffer.personalizedElements.map((element, index) => (
+              <div key={index} className="flex items-center gap-2 text-gray-700">
+                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                <span>{element}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Social proof */}
+          <div className="bg-gray-50 rounded-lg p-4 text-center">
+            <div className="flex items-center justify-center gap-2 text-gray-700">
+              <Users className="w-5 h-5 text-green-600" />
+              <span className="font-semibold">
+                {selectedOffer.socialProof.count.toLocaleString()}
+              </span>
+              <span>{selectedOffer.socialProof.message}</span>
             </div>
+          </div>
 
-            {/* Personalized elements */}
+          {/* Risk reversal */}
+          <div>
+            <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+              <Shield className="w-5 h-5 text-green-600" />
+              100% Risk-Free Guarantee
+            </h4>
             <div className="space-y-2">
-              {selectedOffer.personalizedElements.map((element, index) => (
-                <div key={index} className="flex items-center gap-2 text-gray-700">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span>{element}</span>
+              {selectedOffer.riskReversal.map((item, index) => (
+                <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
+                  <span>{item}</span>
                 </div>
               ))}
             </div>
+          </div>
 
-            {/* Social proof */}
-            <div className="bg-gray-50 rounded-lg p-4 text-center">
-              <div className="flex items-center justify-center gap-2 text-gray-700">
-                <Users className="w-5 h-5 text-green-600" />
-                <span className="font-semibold">
-                  {selectedOffer.socialProof.count.toLocaleString()}
-                </span>
-                <span>{selectedOffer.socialProof.message}</span>
-              </div>
-            </div>
+          {/* Action buttons */}
+          <div className="space-y-3">
+            <button
+              onClick={handlePrimaryAction}
+              className="w-full py-4 px-6 bg-gray-900 hover:bg-gray-300 text-white hover:text-gray-900 font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 animate-fadeInUp"
+            >
+              {selectedOffer.visual.icon}
+              {selectedOffer.cta.primary}
+              <ArrowRight className="w-5 h-5" />
+            </button>
 
-            {/* Risk reversal */}
-            <div>
-              <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                <Shield className="w-5 h-5 text-green-600" />
-                100% Risk-Free Guarantee
-              </h4>
-              <div className="space-y-2">
-                {selectedOffer.riskReversal.map((item, index) => (
-                  <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Action buttons */}
-            <div className="space-y-3">
+            {selectedOffer.cta.secondary && (
               <button
-                onClick={handlePrimaryAction}
-                className="w-full py-4 px-6 bg-gray-900 hover:bg-gray-300 text-white hover:text-gray-900 font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 animate-fadeInUp"
+                onClick={handleSecondaryAction}
+                className="w-full py-3 px-6 text-gray-600 hover:text-gray-800 font-medium transition-colors"
               >
-                {selectedOffer.visual.icon}
-                {selectedOffer.cta.primary}
-                <ArrowRight className="w-5 h-5" />
+                {selectedOffer.cta.secondary}
               </button>
+            )}
+          </div>
 
-              {selectedOffer.cta.secondary && (
-                <button
-                  onClick={handleSecondaryAction}
-                  className="w-full py-3 px-6 text-gray-600 hover:text-gray-800 font-medium transition-colors"
-                >
-                  {selectedOffer.cta.secondary}
-                </button>
-              )}
-            </div>
-
-            {/* Validity */}
-            <div className="text-center">
-              <div className="inline-flex items-center gap-2 text-sm text-gray-500 bg-gray-100 rounded-full px-4 py-2">
-                <Clock className="w-4 h-4" />
-                <span>Valid for {selectedOffer.validFor}</span>
-              </div>
+          {/* Validity */}
+          <div className="text-center">
+            <div className="inline-flex items-center gap-2 text-sm text-gray-500 bg-gray-100 rounded-full px-4 py-2">
+              <Clock className="w-4 h-4" />
+              <span>Valid for {selectedOffer.validFor}</span>
             </div>
           </div>
         </div>
       </div>
-)
+    </div>
+  )
 }
 
 export default ExitIntentPopup

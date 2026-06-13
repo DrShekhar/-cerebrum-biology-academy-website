@@ -99,15 +99,13 @@ for (const city of CITIES) {
 
   // 2. Add OG locale if missing
   if (!content.match(/locale:\s*'en_IN'/)) {
-    content = content.replace(
-      /openGraph:\s*\{[\s\S]*?type:\s*'website',?\s*\},/m,
-      (match) =>
-        match.replace(
-          /type:\s*'website',?\s*/,
-          `type: 'website',
+    content = content.replace(/openGraph:\s*\{[\s\S]*?type:\s*'website',?\s*\},/m, (match) =>
+      match.replace(
+        /type:\s*'website',?\s*/,
+        `type: 'website',
     locale: 'en_IN',
     `
-        )
+      )
     )
   }
 
@@ -125,10 +123,7 @@ ${match}`
     }
 
     // Then add the prop in the JSX
-    content = content.replace(
-      /<DropperBatchTemplate/,
-      `<DropperBatchTemplate`
-    )
+    content = content.replace(/<DropperBatchTemplate/, `<DropperBatchTemplate`)
     content = content.replace(
       /faqs={faqs}\s*\/>/,
       `cityContext={cityContext}

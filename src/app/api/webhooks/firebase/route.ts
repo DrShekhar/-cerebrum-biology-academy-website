@@ -76,7 +76,6 @@ export async function POST(request: NextRequest) {
     const payload: FirebaseWebhookPayload = JSON.parse(rawBody)
     const { event, uid, phoneNumber } = payload
 
-
     switch (event) {
       case 'user.deleted': {
         // Find and handle user deletion
@@ -109,7 +108,6 @@ export async function POST(request: NextRequest) {
               },
             },
           })
-
         }
 
         return addSecurityHeaders(
@@ -148,7 +146,6 @@ export async function POST(request: NextRequest) {
               where: { id: user.id },
               data: { phone: normalizedPhone },
             })
-
           }
         }
 

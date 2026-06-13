@@ -202,9 +202,7 @@ export function BlogRecapWidget({ variant = 'full', category }: BlogRecapWidgetP
                       {post.title}
                     </h3>
 
-                    <p className="text-gray-600 text-sm mb-4 flex-1 line-clamp-2">
-                      {post.excerpt}
-                    </p>
+                    <p className="text-gray-600 text-sm mb-4 flex-1 line-clamp-2">{post.excerpt}</p>
 
                     {/* Footer */}
                     <div className="flex items-center justify-between pt-4 border-t border-gray-100">

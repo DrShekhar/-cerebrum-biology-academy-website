@@ -36,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 9 in Chennai | AIIMS-Trained Online Live',
-    description: 'NEET Foundation Class 9 in Chennai at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Tamil Nadu Samacheer Kalvi + NEET parallel. T. Nagar, Adyar, Anna Na...',
+    description:
+      'NEET Foundation Class 9 in Chennai at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Tamil Nadu Samacheer Kalvi + NEET parallel. T. Nagar, Adyar, Anna Na...',
   },
 }
 
@@ -221,13 +222,13 @@ export default function NEETFoundationClass9ChennaiPage() {
           <p>
             Chennai has uniquely strong local NEET infrastructure — Velammal Group runs integrated
             school-plus-NEET coaching from Class 9 onwards, claiming 2,800+ NEET selections
-            annually. the 2nd-largest national NEET chain Chennai operates ~5 centres. Local players P. Obul Reddy Hall, T.I.M.E.
-            (NEET division), other Kota-origin chains Chennai round out the market. Cerebrum&apos;s positioning
-            in Chennai is biology-only specialist with 15-20 student online live batches led by
-            AIIMS-trained faculty — structurally different from local mass-batch coaching. The
-            Chennai differentiator: Tamil Nadu&apos;s state government medical college quota system
-            (TNMSC) weights Tamil Nadu Class 12 board marks alongside NEET, making state board
-            parallel pedagogy uniquely important here.
+            annually. the 2nd-largest national NEET chain Chennai operates ~5 centres. Local players
+            P. Obul Reddy Hall, T.I.M.E. (NEET division), other Kota-origin chains Chennai round out
+            the market. Cerebrum&apos;s positioning in Chennai is biology-only specialist with 15-20
+            student online live batches led by AIIMS-trained faculty — structurally different from
+            local mass-batch coaching. The Chennai differentiator: Tamil Nadu&apos;s state
+            government medical college quota system (TNMSC) weights Tamil Nadu Class 12 board marks
+            alongside NEET, making state board parallel pedagogy uniquely important here.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">

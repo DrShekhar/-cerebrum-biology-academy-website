@@ -11,13 +11,7 @@ import toast from 'react-hot-toast'
 const composeAlertSchema = z.object({
   subject: z.string().min(1, 'Subject is required').max(200),
   message: z.string().min(1, 'Message is required').max(5000),
-  recipientType: z.enum([
-    'ALL_STUDENTS',
-    'BY_TIER',
-    'BY_COURSE',
-    'ALL_PARENTS',
-    'CUSTOM',
-  ]),
+  recipientType: z.enum(['ALL_STUDENTS', 'BY_TIER', 'BY_COURSE', 'ALL_PARENTS', 'CUSTOM']),
   tierFilter: z.string().optional(),
   courseId: z.string().optional(),
   priority: z.enum(['LOW', 'MEDIUM', 'HIGH', 'URGENT']),
@@ -115,9 +109,7 @@ export function ComposeAlertForm({ onSuccess, onCancel }: ComposeAlertFormProps)
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div className="space-y-4">
-        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">
-          Recipients
-        </h3>
+        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">Recipients</h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -137,9 +129,7 @@ export function ComposeAlertForm({ onSuccess, onCancel }: ComposeAlertFormProps)
 
           {recipientType === 'BY_TIER' && (
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Tier
-              </label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Tier</label>
               <select
                 {...register('tierFilter')}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -153,9 +143,7 @@ export function ComposeAlertForm({ onSuccess, onCancel }: ComposeAlertFormProps)
 
           {recipientType === 'BY_COURSE' && (
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Course
-              </label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Course</label>
               <select
                 {...register('courseId')}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -173,9 +161,7 @@ export function ComposeAlertForm({ onSuccess, onCancel }: ComposeAlertFormProps)
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">
-          Channels & Priority
-        </h3>
+        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">Channels & Priority</h3>
 
         <div className="flex flex-wrap gap-6">
           <label className="flex items-center gap-2">
@@ -205,9 +191,7 @@ export function ComposeAlertForm({ onSuccess, onCancel }: ComposeAlertFormProps)
         </div>
 
         <div className="max-w-xs">
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Priority
-          </label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Priority</label>
           <select
             {...register('priority')}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -221,9 +205,7 @@ export function ComposeAlertForm({ onSuccess, onCancel }: ComposeAlertFormProps)
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">
-          Message
-        </h3>
+        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">Message</h3>
 
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -235,9 +217,7 @@ export function ComposeAlertForm({ onSuccess, onCancel }: ComposeAlertFormProps)
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="Alert subject..."
           />
-          {errors.subject && (
-            <p className="text-sm text-red-600 mt-1">{errors.subject.message}</p>
-          )}
+          {errors.subject && <p className="text-sm text-red-600 mt-1">{errors.subject.message}</p>}
         </div>
 
         <div>
@@ -250,19 +230,12 @@ export function ComposeAlertForm({ onSuccess, onCancel }: ComposeAlertFormProps)
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="Write your message here..."
           />
-          {errors.message && (
-            <p className="text-sm text-red-600 mt-1">{errors.message.message}</p>
-          )}
+          {errors.message && <p className="text-sm text-red-600 mt-1">{errors.message.message}</p>}
         </div>
       </div>
 
       <div className="flex items-center justify-end space-x-3 pt-4 border-t">
-        <Button
-          type="button"
-          variant="outline"
-          onClick={onCancel}
-          disabled={isSubmitting}
-        >
+        <Button type="button" variant="outline" onClick={onCancel} disabled={isSubmitting}>
           Cancel
         </Button>
         <Button

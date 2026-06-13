@@ -27,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Affordable Biology Tutor Online | Quality Coaching from Rs 3,333/month',
-    description: 'Affordable online Biology tutoring starting Rs 3,333/month (Rs 40,000/year). AIIMS faculty, small batches, 98% success rate. Cheaper than Preply/Superprof with better results.',
+    description:
+      'Affordable online Biology tutoring starting Rs 3,333/month (Rs 40,000/year). AIIMS faculty, small batches, 98% success rate. Cheaper than Preply/Superprof with better results.',
   },
 }
 

@@ -63,7 +63,7 @@ export const LazyGoogleMap = memo(function LazyGoogleMap({
     }
 
     // Default to Delhi coordinates
-    return { lat: 28.6139, lng: 77.2090 }
+    return { lat: 28.6139, lng: 77.209 }
   }, [embedUrl, placeholder])
 
   const coordinates = getCoordinates()

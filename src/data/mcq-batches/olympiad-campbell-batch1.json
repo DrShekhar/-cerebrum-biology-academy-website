@@ -71,12 +71,7 @@
       "campbellEdition": 12,
       "conceptualDepth": "expert",
       "question": "A buffer solution has a pKa of 6.8. If the ratio of conjugate base to weak acid [A\u207b]/[HA] is 10:1, what is the pH of the solution?",
-      "options": [
-        "5.8",
-        "6.8",
-        "8.8",
-        "7.8"
-      ],
+      "options": ["5.8", "6.8", "8.8", "7.8"],
       "correctAnswer": "D",
       "explanation": "Using the Henderson-Hasselbalch equation: pH = pKa + log([A\u207b]/[HA]). pH = 6.8 + log(10/1) = 6.8 + log(10) = 6.8 + 1 = 7.8. This equation is fundamental to understanding biological buffer systems. When the ratio of conjugate base to acid is 10:1, the pH is exactly one unit above the pKa. Campbell Ch 3.",
       "tags": ["buffer", "Henderson-Hasselbalch", "pH", "pKa"]
@@ -346,12 +341,7 @@
       "campbellEdition": 12,
       "conceptualDepth": "advanced",
       "question": "In an organism with 2n = 8, how many different combinations of maternal and paternal chromosomes are possible in the gametes produced by independent assortment alone (excluding crossing over)?",
-      "options": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
+      "options": ["8", "16", "32", "64"],
       "correctAnswer": "B",
       "explanation": "The number of possible combinations from independent assortment is 2^n, where n is the haploid number. With 2n = 8, n = 4, so 2^4 = 16 different chromosome combinations are possible in gametes. This calculation assumes no crossing over; when crossing over is included, the actual number of genetically distinct gametes is virtually unlimited. For humans (n = 23), it's 2^23 = approximately 8.4 million combinations. Campbell Ch 13.",
       "tags": ["meiosis", "independent-assortment", "genetic-variation", "gametes"]
@@ -396,12 +386,7 @@
       "campbellEdition": 12,
       "conceptualDepth": "expert",
       "question": "In Drosophila, genes A and B are linked on the same chromosome with a recombination frequency of 12%. Gene C is on the same chromosome with recombination frequencies of 7% with A and 5% with B. What is the most likely gene order?",
-      "options": [
-        "C - A - B",
-        "A - B - C",
-        "A - C - B",
-        "B - A - C"
-      ],
+      "options": ["C - A - B", "A - B - C", "A - C - B", "B - A - C"],
       "correctAnswer": "C",
       "explanation": "In chromosome mapping, the distances between genes should be additive. A-B = 12%, A-C = 7%, C-B = 5%. Since 7 + 5 = 12, gene C must be between A and B. The order is A - C - B (or equivalently B - C - A). If C were outside A and B, the distances would not add up correctly. This three-point test cross principle is fundamental to genetic mapping. Campbell Ch 15.",
       "tags": ["gene-mapping", "linkage", "recombination-frequency", "chromosome-mapping"]
@@ -446,12 +431,7 @@
       "campbellEdition": 12,
       "conceptualDepth": "expert",
       "question": "A pre-mRNA molecule undergoes alternative splicing. The primary transcript contains 5 exons (E1-E5). If the mature mRNA can include any combination of internal exons as long as E1 is always at the 5' end and E5 is always at the 3' end, what is the maximum number of different mRNA variants possible?",
-      "options": [
-        "6",
-        "8",
-        "10",
-        "12"
-      ],
+      "options": ["6", "8", "10", "12"],
       "correctAnswer": "B",
       "explanation": "E1 and E5 are always present (first and last). The variable exons are E2, E3, and E4 \u2014 each can either be included or excluded independently. This gives 2^3 = 8 possible combinations (E1E5, E1E2E5, E1E3E5, E1E4E5, E1E2E3E5, E1E2E4E5, E1E3E4E5, E1E2E3E4E5). Note that the order of exons is fixed \u2014 alternative splicing changes which exons are included, not their order. This mechanism allows one gene to produce multiple protein variants (isoforms). Campbell Ch 17.",
       "tags": ["alternative-splicing", "mRNA-processing", "exons", "gene-expression"]
@@ -571,12 +551,7 @@
       "campbellEdition": 12,
       "conceptualDepth": "advanced",
       "question": "In a population of 1000 individuals, 160 show the recessive phenotype (aa). Assuming Hardy-Weinberg equilibrium, what is the expected number of heterozygous (Aa) carriers in the population?",
-      "options": [
-        "320",
-        "360",
-        "240",
-        "480"
-      ],
+      "options": ["320", "360", "240", "480"],
       "correctAnswer": "D",
       "explanation": "If q\u00b2 = 160/1000 = 0.16, then q = 0.4 and p = 1 - 0.4 = 0.6. The frequency of heterozygotes is 2pq = 2(0.6)(0.4) = 0.48, or 48%. In a population of 1000, this gives 480 heterozygous individuals. Hardy-Weinberg calculations are fundamental to population genetics and Olympiad problems. Campbell Ch 23.",
       "tags": ["Hardy-Weinberg", "population-genetics", "allele-frequency", "heterozygote"]
@@ -679,7 +654,12 @@
       ],
       "correctAnswer": "C",
       "explanation": "Homologous structures share a common anatomical origin (inherited from a common tetrapod ancestor) but have been modified by natural selection for different functions: flight (bat), swimming (whale), running (cat), manipulation (human). In contrast, analogous structures serve similar functions but have different evolutionary origins. The presence of identical bones in the same relative positions, despite wildly different functions, strongly argues for common ancestry. Campbell Ch 22.",
-      "tags": ["homologous-structures", "comparative-anatomy", "common-ancestry", "evidence-for-evolution"]
+      "tags": [
+        "homologous-structures",
+        "comparative-anatomy",
+        "common-ancestry",
+        "evidence-for-evolution"
+      ]
     },
     {
       "type": "MCQ",
@@ -754,7 +734,12 @@
       ],
       "correctAnswer": "D",
       "explanation": "The alternation of generations shows a clear evolutionary trend: bryophytes have a dominant gametophyte, ferns have a dominant sporophyte, and seed plants have a highly reduced gametophyte. Statement II provides valid evolutionary explanations: diploidy masks harmful recessive alleles, and the sporophyte developed vascular tissue enabling larger size and better competition. Campbell Ch 29.",
-      "tags": ["alternation-of-generations", "sporophyte-dominance", "plant-evolution", "bryophytes"]
+      "tags": [
+        "alternation-of-generations",
+        "sporophyte-dominance",
+        "plant-evolution",
+        "bryophytes"
+      ]
     },
     {
       "type": "MCQ",
@@ -996,12 +981,7 @@
       "campbellEdition": 12,
       "conceptualDepth": "advanced",
       "question": "An ectothermic lizard has Q10 = 2.5. If metabolic rate at 20\u00b0C is 2 mL O2/hr, what is it at 30\u00b0C?",
-      "options": [
-        "4.0 mL O2/hr",
-        "5.0 mL O2/hr",
-        "2.5 mL O2/hr",
-        "7.5 mL O2/hr"
-      ],
+      "options": ["4.0 mL O2/hr", "5.0 mL O2/hr", "2.5 mL O2/hr", "7.5 mL O2/hr"],
       "correctAnswer": "B",
       "explanation": "Q10 = R(T+10)/R(T). With Q10 = 2.5 and R(20\u00b0C) = 2, R(30\u00b0C) = 2 \u00d7 2.5 = 5.0 mL O2/hr. This relationship is fundamental to ectotherm physiology. Most biological Q10 values fall between 2 and 3. Campbell Ch 40.",
       "tags": ["Q10", "ectotherm", "metabolic-rate", "thermoregulation"]
@@ -1054,7 +1034,12 @@
       ],
       "correctAnswer": "B",
       "explanation": "Antibody diversity comes from: (1) V(D)J recombination \u2014 random joining of V, D, J gene segments; (2) Combinatorial pairing of heavy and light chains; (3) Junctional diversity \u2014 imprecise joining plus random nucleotide addition by TdT; (4) Somatic hypermutation in germinal centers, followed by affinity maturation. RAG1/RAG2 recombinases drive V(D)J recombination. Campbell Ch 43.",
-      "tags": ["antibody-diversity", "VDJ-recombination", "somatic-hypermutation", "clonal-selection"]
+      "tags": [
+        "antibody-diversity",
+        "VDJ-recombination",
+        "somatic-hypermutation",
+        "clonal-selection"
+      ]
     },
     {
       "type": "STATEMENT_BASED",
@@ -1171,12 +1156,7 @@
       "campbellEdition": 12,
       "conceptualDepth": "advanced",
       "question": "A deer population has K = 500 and rmax = 0.5/year. At N = 250, what is the per capita growth rate under the logistic model?",
-      "options": [
-        "0.50 per year",
-        "0.125 per year",
-        "0.25 per year",
-        "0.375 per year"
-      ],
+      "options": ["0.50 per year", "0.125 per year", "0.25 per year", "0.375 per year"],
       "correctAnswer": "C",
       "explanation": "Per capita growth rate = rmax \u00d7 (1 - N/K) = 0.5 \u00d7 (1 - 250/500) = 0.5 \u00d7 0.5 = 0.25/year. At N = K/2, the population has maximum absolute growth rate (dN/dt), but per capita rate is half of rmax. As N approaches K, per capita rate approaches zero. Campbell Ch 53.",
       "tags": ["logistic-growth", "carrying-capacity", "population-ecology", "per-capita-growth"]
@@ -1246,12 +1226,7 @@
       "campbellEdition": 12,
       "conceptualDepth": "advanced",
       "question": "Using the species-area curve (S = cA^z) with z = 0.3, if habitat is reduced to 10% of original area, approximately what percentage of species go extinct?",
-      "options": [
-        "About 10%",
-        "About 30%",
-        "About 90%",
-        "About 50%"
-      ],
+      "options": ["About 10%", "About 30%", "About 90%", "About 50%"],
       "correctAnswer": "D",
       "explanation": "New species = S_original \u00d7 0.1^0.3 = S_original \u00d7 10^(-0.3) \u2248 S_original \u00d7 0.50. About 50% of species remain, so ~50% go extinct. This equation is fundamental to conservation biology. Higher z-values predict more dramatic losses from habitat reduction. Campbell Ch 56.",
       "tags": ["species-area-curve", "conservation-biology", "habitat-loss", "extinction"]

@@ -70,7 +70,8 @@ export function CourseDetailSchema({
         courseSchedule: {
           '@type': 'Schedule',
           repeatFrequency: 'P1W',
-          repeatCount: duration === 'P1Y' ? 52 : duration === 'P6M' ? 26 : duration === 'P2Y' ? 104 : 52,
+          repeatCount:
+            duration === 'P1Y' ? 52 : duration === 'P6M' ? 26 : duration === 'P2Y' ? 104 : 52,
         },
         instructor: [
           {

@@ -105,7 +105,8 @@ const config: BestVerticalConfig = {
   ],
   whyBest: [
     {
-      title: 'Biology-Only Specialist (Distinct from other generalist test-prep brands, UWorld, other USMLE generalist brands)',
+      title:
+        'Biology-Only Specialist (Distinct from other generalist test-prep brands, UWorld, other USMLE generalist brands)',
       description:
         'UWorld and AMBOSS are question banks — they tell you the answer but the explanation only works if you already understand the underlying biology. other USMLE generalist brands and other USMLE generalist brands are generalist agencies with rotating faculty across all Step 1 disciplines. Cerebrum follows the same single-section specialist pattern that Jack Westin owns for MCAT CARS — biology-foundations depth from medical-school-trained faculty, not breadth from rotating instructors.',
     },
@@ -170,7 +171,8 @@ const config: BestVerticalConfig = {
         'Cerebrum Biology Academy is widely cited as the best fit for IMG (International Medical Graduate) Step 1 candidates — particularly Indian, Pakistani, Nepali, and Caribbean medical school graduates preparing for ECFMG certification. AIIMS-trained faculty resonate structurally with IMGs who trained in AIIMS-pattern medical education, biology-only depth is calibrated for students with strong basic-sciences foundations from international medical school, and pricing (30–40% below other USMLE generalist brands) suits IMG budgets paid in USD.',
     },
     {
-      question: 'How much does Cerebrum USMLE Step 1 coaching cost vs other USMLE generalist brands?',
+      question:
+        'How much does Cerebrum USMLE Step 1 coaching cost vs other USMLE generalist brands?',
       answer:
         "Cerebrum's full Step 1 biology-foundations programme at $2,499 is priced 30–40% below full-course other USMLE generalist brands ($3,499+) and other USMLE generalist brands ($3,200+). At $175/hour 1:1, Cerebrum is priced below other generalist MCAT brands tutoring ($230/hour) and other USMLE generalist brands tutoring ($200/hour). Self-Paced is $799; Small-Batch is $1,599.",
     },

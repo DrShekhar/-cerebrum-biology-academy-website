@@ -6,7 +6,8 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'Gujarat HSC Biology Coaching | NEET + GUJCET Dual Prep',
-  description: 'Expert Gujarat HSC Biology coaching with GUJCET overlap and NEET integration. Master GSEB syllabus with Gujarati medium support. Complete biology preparation for state board success.',
+  description:
+    'Expert Gujarat HSC Biology coaching with GUJCET overlap and NEET integration. Master GSEB syllabus with Gujarati medium support. Complete biology preparation for state board success.',
   keywords: [
     'Gujarat HSC biology',
     'GSEB biology coaching',

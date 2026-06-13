@@ -45,7 +45,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Online NEET Coaching for Faridabad Students | Live & Hybrid Mode',
-    description: 'Online NEET Biology classes for Faridabad & Greater Faridabad students. Live interactive sessions from home. Hybrid mode with weekend offline at Sector 17. 800+ students. Call 88264-44334!',
+    description:
+      'Online NEET Biology classes for Faridabad & Greater Faridabad students. Live interactive sessions from home. Hybrid mode with weekend offline at Sector 17. 800+ students. Call 88264-44334!',
   },
 }
 
@@ -122,7 +123,11 @@ export default function OnlineNEETCoachingFaridabadPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+        knowsAbout={[
+          'NEET Faridabad',
+          'NEET Biology Faridabad',
+          'Medical entrance coaching Faridabad',
+        ]}
       />
       {/* Hero */}
       <section className="bg-gradient-to-br from-indigo-900 to-purple-800 text-white py-16">
@@ -149,7 +154,9 @@ export default function OnlineNEETCoachingFaridabadPage() {
                 Call 88264-44334
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition"
               >
                 Try Free Online Demo

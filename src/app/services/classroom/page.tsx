@@ -48,11 +48,19 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Classroom Coaching for NEET Biology | Traditional Face-to-Face Teaching | Cerebrum Biology Academy',
-    description: 'Experience the power of traditional classroom coaching for NEET Biology. Small batches, personal attention, practical lab work, and direct faculty interaction. Starting ₹25,999.',
+    title:
+      'Classroom Coaching for NEET Biology | Traditional Face-to-Face Teaching | Cerebrum Biology Academy',
+    description:
+      'Experience the power of traditional classroom coaching for NEET Biology. Small batches, personal attention, practical lab work, and direct faculty interaction. Starting ₹25,999.',
   },
 
-  openGraph: { title: 'Classroom Coaching for NEET Biology | Traditional Face-to-Face Teaching | Cerebrum Biology Academy', description: 'Experience the power of traditional classroom coaching for NEET Biology. Small batches, personal attention, practical lab work, and direct faculty interaction. Starting ₹25,999.', type: 'website' },
+  openGraph: {
+    title:
+      'Classroom Coaching for NEET Biology | Traditional Face-to-Face Teaching | Cerebrum Biology Academy',
+    description:
+      'Experience the power of traditional classroom coaching for NEET Biology. Small batches, personal attention, practical lab work, and direct faculty interaction. Starting ₹25,999.',
+    type: 'website',
+  },
 }
 
 export default function ClassroomCoachingPage() {
@@ -497,7 +505,9 @@ export default function ClassroomCoachingPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12">
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20services.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20services.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center text-base sm:text-lg min-h-[44px] w-full sm:w-auto"
               >
                 Book Campus Visit
@@ -890,7 +900,9 @@ export default function ClassroomCoachingPage() {
                   </div>
 
                   <Link
-                    href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20services.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+                    href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20services.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`block w-full text-center py-3 rounded-lg font-semibold transition-colors text-sm sm:text-base min-h-[44px] ${
                       tier.popular
                         ? 'bg-green-600 text-white hover:bg-green-700'
@@ -1145,7 +1157,9 @@ export default function ClassroomCoachingPage() {
 
             <div className="space-y-3 sm:space-y-4">
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20services.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20services.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block w-full bg-white text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors text-base sm:text-lg min-h-[44px]"
               >
                 Secure Your Seat - Limited Admissions Open

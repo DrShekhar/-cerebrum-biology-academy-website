@@ -1749,12 +1749,7 @@
     {
       "type": "MCQ",
       "question": "A DNA molecule has the following sequence on one strand: 5'-ATGCCGTA-3'. What is the sequence of the complementary strand, written in the conventional 5'-to-3' direction?",
-      "options": [
-        "3'-TACGGCAT-5'",
-        "5'-ATGCCGTA-3'",
-        "5'-UACGGCAU-3'",
-        "5'-TACGGCAT-3'"
-      ],
+      "options": ["3'-TACGGCAT-5'", "5'-ATGCCGTA-3'", "5'-UACGGCAU-3'", "5'-TACGGCAT-3'"],
       "correctAnswer": "D",
       "explanation": "To determine the complementary strand, apply Watson-Crick base pairing rules (A pairs with T, G pairs with C) and the antiparallel orientation of DNA strands. The given strand is 5'-ATGCCGTA-3'. The complementary strand, written 3'-to-5', would be: 3'-TACGGCAT-5'. Convention dictates writing sequences in the 5'-to-3' direction, so we reverse this: 5'-TACGGCAT-3'. Step by step: A(5')→T, T→A, G→C, C→G, C→G, G→C, T→A, A(3')→T, giving 3'-TACGGCAT-5', which when written 5'-to-3' is 5'-TACGGCAT-3'. This is a fundamental skill in molecular biology—reading sequences in the correct orientation. Note that option D would be RNA (containing U instead of T) and is therefore incorrect for a DNA complementary strand. Option C is technically the complementary strand but written in the 3'-to-5' direction, which is non-standard. Always write sequences 5'-to-3' unless explicitly stated otherwise.",
       "isOlympiad": true,

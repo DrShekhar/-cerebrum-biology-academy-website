@@ -39,7 +39,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'GAMSAT Biology Tutor Sydney | USyd, UNSW, Macquarie, Western Sydney',
-    description: 'GAMSAT Section III biology tutor for Sydney graduate medicine applicants — Sydney Medical School, UNSW, Macquarie, Western Sydney, Notre Dame Sydney. AIIMS-trained biology specialists, AEST/AEDT ev...',
+    description:
+      'GAMSAT Section III biology tutor for Sydney graduate medicine applicants — Sydney Medical School, UNSW, Macquarie, Western Sydney, Notre Dame Sydney. AIIMS-trained biology specialists, AEST/AEDT ev...',
   },
 }
 

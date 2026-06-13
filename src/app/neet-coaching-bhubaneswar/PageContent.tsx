@@ -60,7 +60,7 @@ const bhubaneswarAreas = [
 const whyChooseUs = [
   {
     icon: BookOpen,
-    title: "Odisha Education Hub",
+    title: 'Odisha Education Hub',
     description:
       "Bhubaneswar is Odisha's premier education hub. Our NEET coaching serves students from top schools like DAV Public, SAI International, and KIIT International.",
   },
@@ -150,7 +150,16 @@ const localBusinessSchema = {
     addressRegion: 'Uttar Pradesh',
     addressCountry: 'IN',
   },
-  areaServed: ['Bhubaneswar', 'Saheed Nagar', 'Jaydev Vihar', 'Patia', 'Nayapalli', 'Chandrasekharpur', 'Khandagiri', 'Unit-9'],
+  areaServed: [
+    'Bhubaneswar',
+    'Saheed Nagar',
+    'Jaydev Vihar',
+    'Patia',
+    'Nayapalli',
+    'Chandrasekharpur',
+    'Khandagiri',
+    'Unit-9',
+  ],
   priceRange: '$$',
 }
 
@@ -197,12 +206,18 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert online NEET classes for Bhubaneswar, Jaydev Vihar, Nayapalli, Patia, and all nearby areas.
-              <strong> 13000+ Odisha aspirants</strong> prepare with us for national medical entrance exams.
+              Expert online NEET classes for Bhubaneswar, Jaydev Vihar, Nayapalli, Patia, and all
+              nearby areas.
+              <strong> 13000+ Odisha aspirants</strong> prepare with us for national medical
+              entrance exams.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20bhubaneswar.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20bhubaneswar.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -375,11 +390,16 @@ export default function PageContent() {
               Bhubaneswar Students, Excel in NEET!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Premium online NEET coaching from Odisha education hub - compete nationally with confidence
+              Premium online NEET coaching from Odisha education hub - compete nationally with
+              confidence
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20bhubaneswar.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20bhubaneswar.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -420,7 +440,6 @@ export default function PageContent() {
         </div>
       </section>
 
-
       <PricingSection cityName="Bhubaneswar" />
       <CostComparisonSection cityName="Bhubaneswar" />
       {/* Related */}
@@ -448,27 +467,35 @@ export default function PageContent() {
             </Link>
           </div>
         </div>
-      
-      {/* Schools Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Students from These Bhubaneswar Schools Trust Us
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['DAV Public School Bhubaneswar', 'DPS Kalinga', 'SAI International School', 'Kiit International School', 'ODM Public School', 'Mothers Public School', "St. Xavier's School", 'Delhi Public School Bhubaneswar'].map((school) => (
-              <div
-                key={school}
-                className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
-              >
-                {school}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-</section>
+        {/* Schools Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Students from These Bhubaneswar Schools Trust Us
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                'DAV Public School Bhubaneswar',
+                'DPS Kalinga',
+                'SAI International School',
+                'Kiit International School',
+                'ODM Public School',
+                'Mothers Public School',
+                "St. Xavier's School",
+                'Delhi Public School Bhubaneswar',
+              ].map((school) => (
+                <div
+                  key={school}
+                  className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
+                >
+                  {school}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </section>
       <RelatedCityLinks currentCity="bhubaneswar" variant="default" />
     </div>
   )

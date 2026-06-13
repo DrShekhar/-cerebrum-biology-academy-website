@@ -336,113 +336,105 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
         </div>
 
         {/* Quick Actions Dropdown */}
-{showQuickActions && (
-            <div
-              className="absolute right-4 top-16 bg-white border rounded-lg shadow-lg z-50 w-48 animate-fadeInUp"
-            >
-              <div className="py-2">
-                <button
-                  onClick={onPreview}
-                  className="w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center gap-3"
-                >
-                  <Eye className="w-4 h-4" />
-                  Preview Test
-                </button>
-                <button
-                  onClick={onSave}
-                  className="w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center gap-3"
-                >
-                  <Save className="w-4 h-4" />
-                  Save Draft
-                </button>
-                <div className="border-t my-2"></div>
-                <button className="w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center gap-3">
-                  <Download className="w-4 h-4" />
-                  Export Configuration
-                </button>
-                <button className="w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center gap-3">
-                  <Upload className="w-4 h-4" />
-                  Import Configuration
-                </button>
-              </div>
+        {showQuickActions && (
+          <div className="absolute right-4 top-16 bg-white border rounded-lg shadow-lg z-50 w-48 animate-fadeInUp">
+            <div className="py-2">
+              <button
+                onClick={onPreview}
+                className="w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center gap-3"
+              >
+                <Eye className="w-4 h-4" />
+                Preview Test
+              </button>
+              <button
+                onClick={onSave}
+                className="w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center gap-3"
+              >
+                <Save className="w-4 h-4" />
+                Save Draft
+              </button>
+              <div className="border-t my-2"></div>
+              <button className="w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center gap-3">
+                <Download className="w-4 h-4" />
+                Export Configuration
+              </button>
+              <button className="w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center gap-3">
+                <Upload className="w-4 h-4" />
+                Import Configuration
+              </button>
             </div>
-          )}
-</div>
+          </div>
+        )}
+      </div>
 
       <div className="flex flex-1 overflow-hidden">
         {/* Mobile Navigation Sidebar */}
-{(showMobileMenu || !isMobile) && (
-            <div
-              className={`${isMobile ? 'fixed inset-y-0 left-0 z-30' : 'relative'} w-70 bg-white border-r overflow-y-auto`}
-            >
-              <div className="p-4 space-y-4">
-                {tabGroups.map((group) => (
-                  <div key={group.id} className="space-y-2">
-                    <button
-                      onClick={() => toggleTabGroup(group.id)}
-                      className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                    >
-                      <div className="flex items-center gap-3">
-                        <div
-                          className={`p-2 bg-gradient-to-r ${group.color} rounded-lg text-white`}
-                        >
-                          {group.icon}
-                        </div>
-                        <span className="font-medium text-gray-800">{group.name}</span>
+        {(showMobileMenu || !isMobile) && (
+          <div
+            className={`${isMobile ? 'fixed inset-y-0 left-0 z-30' : 'relative'} w-70 bg-white border-r overflow-y-auto`}
+          >
+            <div className="p-4 space-y-4">
+              {tabGroups.map((group) => (
+                <div key={group.id} className="space-y-2">
+                  <button
+                    onClick={() => toggleTabGroup(group.id)}
+                    className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className={`p-2 bg-gradient-to-r ${group.color} rounded-lg text-white`}>
+                        {group.icon}
                       </div>
-                      {group.isExpanded ? (
-                        <ChevronUp className="w-4 h-4" />
-                      ) : (
-                        <ChevronDown className="w-4 h-4" />
-                      )}
-                    </button>
-{group.isExpanded && (
-                        <div
-                          className="overflow-hidden ml-4 space-y-1 animate-fadeInUp"
+                      <span className="font-medium text-gray-800">{group.name}</span>
+                    </div>
+                    {group.isExpanded ? (
+                      <ChevronUp className="w-4 h-4" />
+                    ) : (
+                      <ChevronDown className="w-4 h-4" />
+                    )}
+                  </button>
+                  {group.isExpanded && (
+                    <div className="overflow-hidden ml-4 space-y-1 animate-fadeInUp">
+                      {group.tabs.map((tab) => (
+                        <button
+                          key={tab.id}
+                          onClick={() => handleTabChange(tab.id)}
+                          className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
+                            activeTab === tab.id
+                              ? 'bg-blue-50 border border-blue-200 text-blue-700'
+                              : 'hover:bg-gray-50'
+                          }`}
                         >
-                          {group.tabs.map((tab) => (
-                            <button
-                              key={tab.id}
-                              onClick={() => handleTabChange(tab.id)}
-                              className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
-                                activeTab === tab.id
-                                  ? 'bg-blue-50 border border-blue-200 text-blue-700'
-                                  : 'hover:bg-gray-50'
-                              }`}
-                            >
-                              <div className="flex items-center gap-3">
-                                {tab.icon}
-                                <span className={`text-sm ${isMobile ? tab.shortName : tab.name}`}>
-                                  {isMobile ? tab.shortName : tab.name}
-                                </span>
-                              </div>
+                          <div className="flex items-center gap-3">
+                            {tab.icon}
+                            <span className={`text-sm ${isMobile ? tab.shortName : tab.name}`}>
+                              {isMobile ? tab.shortName : tab.name}
+                            </span>
+                          </div>
 
-                              <div className="flex items-center gap-1">
-                                {tab.hasErrors && <AlertCircle className="w-4 h-4 text-red-500" />}
-                                {tab.isCompleted && <Check className="w-4 h-4 text-green-600" />}
-                              </div>
-                            </button>
-                          ))}
-                        </div>
-                      )}
-</div>
-                ))}
-              </div>
+                          <div className="flex items-center gap-1">
+                            {tab.hasErrors && <AlertCircle className="w-4 h-4 text-red-500" />}
+                            {tab.isCompleted && <Check className="w-4 h-4 text-green-600" />}
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
-          )}
-{/* Main Content Area */}
+          </div>
+        )}
+        {/* Main Content Area */}
         <div className="flex-1 flex flex-col overflow-hidden">
           {/* Tab Content */}
           <div className="flex-1 overflow-y-auto">
             <div
               className={`p-4 ${viewMode === 'mobile' ? 'max-w-sm mx-auto' : viewMode === 'tablet' ? 'max-w-3xl mx-auto' : ''}`}
             >
-<div
-                  key={activeTab}
-                 className="animate-fadeInUp">
-                  {getCurrentTab().content}
-                </div>
-</div>
+              <div key={activeTab} className="animate-fadeInUp">
+                {getCurrentTab().content}
+              </div>
+            </div>
           </div>
 
           {/* Mobile Navigation Footer */}

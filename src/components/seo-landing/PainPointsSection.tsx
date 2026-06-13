@@ -60,9 +60,7 @@ export function PainPointsSection({ painPoints }: PainPointsSectionProps) {
   return (
     <section className="bg-gray-50 py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div
-          className="text-center animate-fadeInUp"
-        >
+        <div className="text-center animate-fadeInUp">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">{painPoints.title}</h2>
         </div>
 

@@ -189,18 +189,13 @@ export default function BestBiologyBooksPage() {
       {/* Hero Section */}
       <section className="relative bg-indigo-600 text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div
-            className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-fadeInUp"
-          />
-          <div
-            className="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-400/20 rounded-full blur-3xl animate-fadeInUp"
-          />
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-fadeInUp" />
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-400/20 rounded-full blur-3xl animate-fadeInUp" />
         </div>
 
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
                 <Medal className="w-4 h-4 text-yellow-300" />
                 <span className="text-sm font-medium">Complete Guide 2026</span>
@@ -245,9 +240,7 @@ export default function BestBiologyBooksPage() {
               </div>
             </div>
 
-            <div
-              className="hidden md:block animate-fadeInUp"
-            >
+            <div className="hidden md:block animate-fadeInUp">
               <BookStackIllustration className="w-full max-w-md mx-auto" />
             </div>
           </div>
@@ -270,9 +263,7 @@ export default function BestBiologyBooksPage() {
       {/* Book Rankings */}
       <section id="books" className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Top 6 Biology Books for NEET
             </h2>
@@ -403,9 +394,7 @@ export default function BestBiologyBooksPage() {
       {/* Study Plan */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Recommended Study Plan
             </h2>
@@ -416,10 +405,7 @@ export default function BestBiologyBooksPage() {
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {studyPlan.map((phase, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl shadow-lg p-6 animate-fadeInUp"
-              >
+              <div key={idx} className="bg-white rounded-2xl shadow-lg p-6 animate-fadeInUp">
                 <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-xl mb-4">
                   {idx + 1}
                 </div>
@@ -448,9 +434,7 @@ export default function BestBiologyBooksPage() {
       {/* Expert Tips */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Expert Tips from AIIMS Faculty
             </h2>
@@ -497,9 +481,7 @@ export default function BestBiologyBooksPage() {
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
@@ -536,8 +518,7 @@ export default function BestBiologyBooksPage() {
       {/* CTA */}
       <section className="py-16 bg-indigo-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Books + Expert Guidance = Success
             </h2>

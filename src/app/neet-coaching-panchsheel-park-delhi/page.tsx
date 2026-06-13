@@ -33,7 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching in Panchsheel Park Delhi | Medical Entrance Biology',
-    description: 'Best NEET coaching for Panchsheel Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers premium online NEET biology coaching with 67+ AIIMS selections. Join today.',
+    description:
+      'Best NEET coaching for Panchsheel Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers premium online NEET biology coaching with 67+ AIIMS selections. Join today.',
   },
 }
 
@@ -76,7 +77,11 @@ export default function NEETCoachingPanchsheelParkPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Panchsheel Park', 'NEET Biology Panchsheel Park', 'Medical entrance coaching Panchsheel Park']}
+        knowsAbout={[
+          'NEET Panchsheel Park',
+          'NEET Biology Panchsheel Park',
+          'Medical entrance coaching Panchsheel Park',
+        ]}
       />
       <DelhiAreaSchema pageSlug="neet-coaching-panchsheel-park-delhi" />
       <LocalitySchema

@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching for Presidium School Gurugram',
-    description: 'Best NEET coaching for Presidium School Gurugram (Gurgaon) students. Multiple campuses covered - Sector 49, 57. Just 10-15 min drive. AIIMS faculty, 98% success. Call 88264-44334!',
+    description:
+      'Best NEET coaching for Presidium School Gurugram (Gurgaon) students. Multiple campuses covered - Sector 49, 57. Just 10-15 min drive. AIIMS faculty, 98% success. Call 88264-44334!',
   },
 }
 
@@ -84,7 +85,11 @@ export default function NEETCoachingPresidiumSchool() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

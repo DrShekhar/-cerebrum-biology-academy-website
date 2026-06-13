@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Study With Me | Cerebrum Biology',
-    description: 'Live study-with-me Pomodoro sessions for NEET Biology students. Community accountability.',
+    description:
+      'Live study-with-me Pomodoro sessions for NEET Biology students. Community accountability.',
   },
 }
 

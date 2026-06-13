@@ -155,7 +155,11 @@ function PaymentLinkRow({ link }: { link: PaymentLink }) {
             title="Copy link"
             className="p-1.5 text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 rounded"
           >
-            {copied ? <Check className="w-3.5 h-3.5 text-green-600" /> : <Copy className="w-3.5 h-3.5" />}
+            {copied ? (
+              <Check className="w-3.5 h-3.5 text-green-600" />
+            ) : (
+              <Copy className="w-3.5 h-3.5" />
+            )}
           </button>
           <a
             href={link.shortUrl}
@@ -338,9 +342,7 @@ function CreatePaymentLinkModal({
             </label>
           </div>
 
-          {error && (
-            <p className="text-xs text-red-600 bg-red-50 rounded px-2 py-1.5">{error}</p>
-          )}
+          {error && <p className="text-xs text-red-600 bg-red-50 rounded px-2 py-1.5">{error}</p>}
         </div>
 
         <div className="flex justify-end gap-2 mt-5">

@@ -41,6 +41,34 @@ interface LocalitySchemaProps {
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
+// Normalize common non-ISO country inputs to ISO 3166-1 alpha-2 codes so
+// schema.org addressCountry is always valid. Anything already alpha-2 (or
+// unrecognized) is upper-cased and passed through unchanged.
+const COUNTRY_ALIASES: Record<string, string> = {
+  UK: 'GB',
+  'UNITED KINGDOM': 'GB',
+  USA: 'US',
+  'UNITED STATES': 'US',
+  UAE: 'AE',
+  CANADA: 'CA',
+  AUSTRALIA: 'AU',
+  SINGAPORE: 'SG',
+  QATAR: 'QA',
+  KUWAIT: 'KW',
+  'SAUDI ARABIA': 'SA',
+  OMAN: 'OM',
+  BAHRAIN: 'BH',
+  NEPAL: 'NP',
+  MALAYSIA: 'MY',
+  INDIA: 'IN',
+}
+
+function toIsoCountry(country?: string): string {
+  if (!country) return 'IN'
+  const key = country.trim().toUpperCase()
+  return COUNTRY_ALIASES[key] || key
+}
+
 export function LocalitySchema({
   locality,
   slug,
@@ -90,8 +118,10 @@ export function LocalitySchema({
           '@type': 'PostalAddress',
           addressLocality: locality,
           // Was hardcoded 'IN' — international pages using this component were
-          // telling Google they're in India.
-          addressCountry: country || 'IN',
+          // telling Google they're in India. Now derived from the caller's
+          // `country` prop (normalized to ISO 3166-1 alpha-2); defaults to 'IN'
+          // only for the India NCR locality callers that pass no country.
+          addressCountry: toIsoCountry(country),
         },
       }
     : null

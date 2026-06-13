@@ -119,10 +119,7 @@ export default function ClaudeChatStandalone() {
       }}
     >
       {/* Header */}
-      <div
-        className="p-6 text-center animate-fadeInUp"
-        style={neomorphStyles.shadowNeomorphSoft}
-      >
+      <div className="p-6 text-center animate-fadeInUp" style={neomorphStyles.shadowNeomorphSoft}>
         <div className="flex items-center justify-center space-x-4 mb-4">
           <div
             className="w-16 h-16 rounded-full flex items-center justify-center"
@@ -165,46 +162,44 @@ export default function ClaudeChatStandalone() {
             ...neomorphStyles.shadowNeomorphInset,
           }}
         >
-{messages.map((message) => (
+          {messages.map((message) => (
+            <div
+              key={message.id}
+              className={`mb-4 flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+            >
               <div
-                key={message.id}
-                className={`mb-4 flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+                className={`max-w-xs lg:max-w-md px-4 py-3 rounded-2xl ${
+                  message.type === 'user' ? 'text-white' : 'text-gray-800'
+                }`}
+                style={{
+                  background:
+                    message.type === 'user'
+                      ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+                      : 'linear-gradient(145deg, #f8f9fa, #e9ecef)',
+                  ...neomorphStyles.shadowNeomorphSoft,
+                }}
               >
-                <div
-                  className={`max-w-xs lg:max-w-md px-4 py-3 rounded-2xl ${
-                    message.type === 'user' ? 'text-white' : 'text-gray-800'
-                  }`}
-                  style={{
-                    background:
-                      message.type === 'user'
-                        ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
-                        : 'linear-gradient(145deg, #f8f9fa, #e9ecef)',
-                    ...neomorphStyles.shadowNeomorphSoft,
-                  }}
-                >
-                  <p className="text-sm leading-relaxed">{message.content}</p>
-                  <div className="flex items-center justify-between mt-2">
-                    <span className="text-xs opacity-70">
-                      {message.timestamp.toLocaleTimeString()}
-                    </span>
-                    {message.hasVoice && message.type === 'ai' && (
-                      <button
-                        onClick={() =>
-                          handleVoicePlayback(message.content, message.language || 'english')
-                        }
-                        className="text-xs px-2 py-1 rounded-lg bg-white bg-opacity-20 hover:bg-opacity-30 transition-all"
-                      >
-                        🔊 Play
-                      </button>
-                    )}
-                  </div>
+                <p className="text-sm leading-relaxed">{message.content}</p>
+                <div className="flex items-center justify-between mt-2">
+                  <span className="text-xs opacity-70">
+                    {message.timestamp.toLocaleTimeString()}
+                  </span>
+                  {message.hasVoice && message.type === 'ai' && (
+                    <button
+                      onClick={() =>
+                        handleVoicePlayback(message.content, message.language || 'english')
+                      }
+                      className="text-xs px-2 py-1 rounded-lg bg-white bg-opacity-20 hover:bg-opacity-30 transition-all"
+                    >
+                      🔊 Play
+                    </button>
+                  )}
                 </div>
               </div>
-            ))}
-{isThinking && (
-            <div
-              className="mb-4 flex justify-start animate-fadeInUp"
-            >
+            </div>
+          ))}
+          {isThinking && (
+            <div className="mb-4 flex justify-start animate-fadeInUp">
               <div
                 className="px-4 py-3 rounded-2xl text-gray-800"
                 style={{

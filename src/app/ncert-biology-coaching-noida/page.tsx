@@ -1,6 +1,20 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MessageCircle, CheckCircle, Star, Trophy, Monitor, Building2, ArrowRight, BookOpen, Target, Clock, Gift, Book } from 'lucide-react'
+import {
+  Phone,
+  MessageCircle,
+  CheckCircle,
+  Star,
+  Trophy,
+  Monitor,
+  Building2,
+  ArrowRight,
+  BookOpen,
+  Target,
+  Clock,
+  Gift,
+  Book,
+} from 'lucide-react'
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
@@ -29,7 +43,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NCERT Biology Coaching in Noida 2026 | Class 11 & 12',
-    description: 'NCERT Biology coaching for Class 11 & 12 in Noida. Complete NCERT coverage for NEET + Boards. AIIMS faculty, Rs 48,000-98,000/year. Gaur City, Sector 150.',
+    description:
+      'NCERT Biology coaching for Class 11 & 12 in Noida. Complete NCERT coverage for NEET + Boards. AIIMS faculty, Rs 48,000-98,000/year. Gaur City, Sector 150.',
   },
 }
 
@@ -39,7 +54,12 @@ const coachingPlans = [
     batchSize: '30-40 students',
     hours: '6 hrs/week',
     fee: '48,000 - 70,000',
-    features: ['Complete NCERT coverage', 'Line-by-line analysis', '3,000+ NCERT MCQs', 'AI doubt bot access'],
+    features: [
+      'Complete NCERT coverage',
+      'Line-by-line analysis',
+      '3,000+ NCERT MCQs',
+      'AI doubt bot access',
+    ],
     popular: true,
   },
   {
@@ -47,7 +67,12 @@ const coachingPlans = [
     batchSize: '16-18 students',
     hours: '8 hrs/week',
     fee: '76,000',
-    features: ['Deep NCERT analysis', '5,000+ NCERT-based questions', 'Weekly doubt sessions', 'Performance tracking'],
+    features: [
+      'Deep NCERT analysis',
+      '5,000+ NCERT-based questions',
+      'Weekly doubt sessions',
+      'Performance tracking',
+    ],
     recommended: true,
   },
   {
@@ -55,7 +80,12 @@ const coachingPlans = [
     batchSize: '10-12 students',
     hours: '10-12 hrs/week',
     fee: '98,000',
-    features: ['1-on-1 NCERT mentorship', '7,000+ practice questions', 'Weekly personal doubts', 'Money-back guarantee'],
+    features: [
+      '1-on-1 NCERT mentorship',
+      '7,000+ practice questions',
+      'Weekly personal doubts',
+      'Money-back guarantee',
+    ],
   },
 ]
 
@@ -67,7 +97,8 @@ const ncertChapters = [
 const whyNcert = [
   {
     title: '95% NEET Questions from NCERT',
-    description: 'NEET Biology is almost entirely NCERT-based. Every line, diagram, and example matters.',
+    description:
+      'NEET Biology is almost entirely NCERT-based. Every line, diagram, and example matters.',
     icon: Target,
   },
   {
@@ -91,19 +122,23 @@ const freeTools = [
 const faqs = [
   {
     question: 'Why is NCERT so important for NEET Biology?',
-    answer: 'NEET Biology is 95%+ NCERT-based! The NTA explicitly states NCERT as the primary source. Even NEET toppers recommend reading NCERT 10+ times. Our coaching ensures you master every line, diagram, and example from NCERT.',
+    answer:
+      'NEET Biology is 95%+ NCERT-based! The NTA explicitly states NCERT as the primary source. Even NEET toppers recommend reading NCERT 10+ times. Our coaching ensures you master every line, diagram, and example from NCERT.',
   },
   {
     question: 'Do you teach only NCERT or additional books too?',
-    answer: 'We focus 90% on NCERT with supplementary materials only for practice questions. NCERT is sufficient for 650+ in NEET Biology. We provide 5,000+ NCERT-based MCQs that test every concept from the textbook.',
+    answer:
+      'We focus 90% on NCERT with supplementary materials only for practice questions. NCERT is sufficient for 650+ in NEET Biology. We provide 5,000+ NCERT-based MCQs that test every concept from the textbook.',
   },
   {
     question: 'What is the fee for NCERT Biology coaching in Noida?',
-    answer: 'NCERT Biology coaching fees: Pursuit (30-40 students) - Rs 48,000-70,000/year, Ascent (16-18 students) - Rs 76,000/year, Pinnacle (10-12 students) - Rs 98,000/year. All include complete NCERT coverage.',
+    answer:
+      'NCERT Biology coaching fees: Pursuit (30-40 students) - Rs 48,000-70,000/year, Ascent (16-18 students) - Rs 76,000/year, Pinnacle (10-12 students) - Rs 98,000/year. All include complete NCERT coverage.',
   },
   {
     question: 'How many times do you cover NCERT in a year?',
-    answer: 'We complete NCERT 3 times: First reading for understanding, second for deep analysis, third for revision and retention. This ensures you remember every important line for the exam.',
+    answer:
+      'We complete NCERT 3 times: First reading for understanding, second for deep analysis, third for revision and retention. This ensures you remember every important line for the exam.',
   },
 ]
 
@@ -113,7 +148,10 @@ export default function NcertBiologyCoachingNoidaPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/ncert-biology-coaching-noida"
         pageName="NCERT Biology Coaching in Noida"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
         personKnowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
       />
       {/* Hero Section */}
@@ -191,7 +229,9 @@ export default function NcertBiologyCoachingNoidaPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-4">Why NCERT is the NEET Bible</h2>
-          <p className="text-center text-gray-600 mb-12">Understanding why NCERT mastery = NEET success</p>
+          <p className="text-center text-gray-600 mb-12">
+            Understanding why NCERT mastery = NEET success
+          </p>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {whyNcert.map((item, index) => (
@@ -216,14 +256,25 @@ export default function NcertBiologyCoachingNoidaPage() {
               <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
                 <h3 className="text-2xl font-bold text-emerald-600 mb-4">{item.class}</h3>
                 <div className="space-y-2">
-                  <p className="flex justify-between"><span>Units:</span><span className="font-semibold">{item.units}</span></p>
-                  <p className="flex justify-between"><span>Chapters:</span><span className="font-semibold">{item.chapters}</span></p>
-                  <p className="flex justify-between"><span>Content:</span><span className="font-semibold">{item.pages}</span></p>
+                  <p className="flex justify-between">
+                    <span>Units:</span>
+                    <span className="font-semibold">{item.units}</span>
+                  </p>
+                  <p className="flex justify-between">
+                    <span>Chapters:</span>
+                    <span className="font-semibold">{item.chapters}</span>
+                  </p>
+                  <p className="flex justify-between">
+                    <span>Content:</span>
+                    <span className="font-semibold">{item.pages}</span>
+                  </p>
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-center text-gray-600 mt-8">Total: 10 Units, 38 Chapters, ~550 pages covered 3 times!</p>
+          <p className="text-center text-gray-600 mt-8">
+            Total: 10 Units, 38 Chapters, ~550 pages covered 3 times!
+          </p>
         </div>
       </section>
 
@@ -231,7 +282,9 @@ export default function NcertBiologyCoachingNoidaPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-4">NCERT Biology Coaching Plans</h2>
-          <p className="text-center text-gray-600 mb-12">Every plan includes complete NCERT coverage</p>
+          <p className="text-center text-gray-600 mb-12">
+            Every plan includes complete NCERT coverage
+          </p>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {coachingPlans.map((plan, index) => (
@@ -241,8 +294,8 @@ export default function NcertBiologyCoachingNoidaPage() {
                   plan.recommended
                     ? 'bg-yellow-400 shadow-xl scale-105'
                     : plan.popular
-                    ? 'bg-emerald-50 border-2 border-emerald-300'
-                    : 'bg-gray-50 border-2 border-gray-200'
+                      ? 'bg-emerald-50 border-2 border-emerald-300'
+                      : 'bg-gray-50 border-2 border-gray-200'
                 }`}
               >
                 {plan.recommended && (
@@ -255,9 +308,13 @@ export default function NcertBiologyCoachingNoidaPage() {
                     BUDGET FRIENDLY
                   </span>
                 )}
-                <Monitor className={`w-10 h-10 mb-4 ${plan.recommended ? 'text-slate-900' : 'text-emerald-600'}`} />
+                <Monitor
+                  className={`w-10 h-10 mb-4 ${plan.recommended ? 'text-slate-900' : 'text-emerald-600'}`}
+                />
                 <h3 className="text-xl font-bold mb-1">{plan.name}</h3>
-                <p className={`text-sm ${plan.recommended ? 'text-slate-700' : 'text-gray-500'}`}>{plan.batchSize} | {plan.hours}</p>
+                <p className={`text-sm ${plan.recommended ? 'text-slate-700' : 'text-gray-500'}`}>
+                  {plan.batchSize} | {plan.hours}
+                </p>
                 <p className="text-3xl font-bold my-4">
                   ₹{plan.fee}
                   <span className="text-sm font-normal">/year</span>
@@ -265,7 +322,9 @@ export default function NcertBiologyCoachingNoidaPage() {
                 <ul className="space-y-2 mb-6">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm">
-                      <CheckCircle className={`w-4 h-4 mt-0.5 ${plan.recommended ? 'text-slate-900' : 'text-green-600'}`} />
+                      <CheckCircle
+                        className={`w-4 h-4 mt-0.5 ${plan.recommended ? 'text-slate-900' : 'text-green-600'}`}
+                      />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -296,7 +355,9 @@ export default function NcertBiologyCoachingNoidaPage() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-emerald-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>
@@ -309,7 +370,9 @@ export default function NcertBiologyCoachingNoidaPage() {
       <section className="py-16 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Master NCERT Biology Today!</h2>
-          <p className="text-xl text-slate-300 mb-8">Join our students who scored 650+ with our NCERT-focused approach</p>
+          <p className="text-xl text-slate-300 mb-8">
+            Join our students who scored 650+ with our NCERT-focused approach
+          </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <a
@@ -343,7 +406,10 @@ export default function NcertBiologyCoachingNoidaPage() {
         breadcrumbs={[
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
           { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
-          { name: 'NCERT Biology Coaching', url: 'https://cerebrumbiologyacademy.com/ncert-biology-coaching-noida' },
+          {
+            name: 'NCERT Biology Coaching',
+            url: 'https://cerebrumbiologyacademy.com/ncert-biology-coaching-noida',
+          },
         ]}
         customFAQs={faqs}
       />

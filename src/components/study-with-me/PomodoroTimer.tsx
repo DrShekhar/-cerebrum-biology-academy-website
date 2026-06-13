@@ -329,9 +329,7 @@ export function PomodoroTimer({
   const playIconSize = compact ? 'w-5 h-5' : 'w-6 h-6'
 
   return (
-    <div
-      className={`bg-white rounded-xl shadow-xl ${compact ? 'p-4' : 'p-6'} ${className}`}
-    >
+    <div className={`bg-white rounded-xl shadow-xl ${compact ? 'p-4' : 'p-6'} ${className}`}>
       {/* Header */}
       <div className={`flex items-center justify-between ${compact ? 'mb-3' : 'mb-4'}`}>
         <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider">Pomodoro</h3>

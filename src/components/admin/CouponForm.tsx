@@ -94,9 +94,7 @@ export function CouponForm({ onSuccess, onCancel }: CouponFormProps) {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div className="space-y-4">
-        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">
-          Coupon Details
-        </h3>
+        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">Coupon Details</h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -118,15 +116,11 @@ export function CouponForm({ onSuccess, onCancel }: CouponFormProps) {
                 <RefreshCw className="w-4 h-4" />
               </Button>
             </div>
-            {errors.code && (
-              <p className="text-sm text-red-600 mt-1">{errors.code.message}</p>
-            )}
+            {errors.code && <p className="text-sm text-red-600 mt-1">{errors.code.message}</p>}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Description
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
             <input
               type="text"
               {...register('description')}
@@ -138,15 +132,11 @@ export function CouponForm({ onSuccess, onCancel }: CouponFormProps) {
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">
-          Discount
-        </h3>
+        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">Discount</h3>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Discount Type
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Discount Type</label>
             <select
               {...register('discountType')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -199,15 +189,11 @@ export function CouponForm({ onSuccess, onCancel }: CouponFormProps) {
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">
-          Limits & Dates
-        </h3>
+        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">Limits & Dates</h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Max Total Uses
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Max Total Uses</label>
             <input
               type="number"
               {...register('maxUses', { valueAsNumber: true })}
@@ -231,9 +217,7 @@ export function CouponForm({ onSuccess, onCancel }: CouponFormProps) {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Start Date
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Start Date</label>
             <input
               type="datetime-local"
               {...register('startsAt')}
@@ -242,9 +226,7 @@ export function CouponForm({ onSuccess, onCancel }: CouponFormProps) {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Expiry Date
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Expiry Date</label>
             <input
               type="datetime-local"
               {...register('expiresAt')}
@@ -255,12 +237,7 @@ export function CouponForm({ onSuccess, onCancel }: CouponFormProps) {
       </div>
 
       <div className="flex items-center justify-end space-x-3 pt-4 border-t">
-        <Button
-          type="button"
-          variant="outline"
-          onClick={onCancel}
-          disabled={isSubmitting}
-        >
+        <Button type="button" variant="outline" onClick={onCancel} disabled={isSubmitting}>
           Cancel
         </Button>
         <Button

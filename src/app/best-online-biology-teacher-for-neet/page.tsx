@@ -133,8 +133,7 @@ export default function BestOnlineBiologyTeacherNEETPage() {
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
                 <Target className="mr-1 inline h-4 w-4" />
                 NEET 2026/2026 Preparation
@@ -162,9 +161,7 @@ export default function BestOnlineBiologyTeacherNEETPage() {
                 </Link>
               </div>
             </div>
-            <div
-              className="relative hidden lg:block animate-fadeInUp"
-            >
+            <div className="relative hidden lg:block animate-fadeInUp">
               <div className="relative h-[400px] w-full overflow-hidden rounded-2xl shadow-2xl">
                 <Image
                   src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop"
@@ -213,9 +210,7 @@ export default function BestOnlineBiologyTeacherNEETPage() {
       {/* Topic Weightage */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">NEET Biology Topic Weightage</h2>
             <p className="text-lg text-gray-600">
               Our teaching focuses on high-weightage topics for maximum marks
@@ -262,19 +257,14 @@ export default function BestOnlineBiologyTeacherNEETPage() {
       {/* Results */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Our NEET Biology Results</h2>
             <p className="text-lg text-gray-600">Consistent results year after year</p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {neetResults.map((result, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <div className="mb-4 text-center">
                   <span className="rounded-full bg-purple-100 px-4 py-2 text-lg font-bold text-purple-600">
                     NEET {result.year}
@@ -295,9 +285,7 @@ export default function BestOnlineBiologyTeacherNEETPage() {
       {/* Batch Options */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Choose Your NEET Batch</h2>
           </div>
 
@@ -353,18 +341,13 @@ export default function BestOnlineBiologyTeacherNEETPage() {
       {/* FAQs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
           </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>

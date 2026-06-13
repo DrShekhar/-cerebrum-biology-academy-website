@@ -1,14 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import {
-  CreditCard,
-  Search,
-  Plus,
-  AlertTriangle,
-  Clock,
-  DollarSign,
-} from 'lucide-react'
+import { CreditCard, Search, Plus, AlertTriangle, Clock, DollarSign } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
@@ -90,9 +83,7 @@ export default function FeePlansPage() {
   const filteredPlans = searchTerm
     ? feePlans.filter(
         (fp) =>
-          fp.leads?.studentName
-            ?.toLowerCase()
-            .includes(searchTerm.toLowerCase()) ||
+          fp.leads?.studentName?.toLowerCase().includes(searchTerm.toLowerCase()) ||
           fp.courseName.toLowerCase().includes(searchTerm.toLowerCase())
       )
     : feePlans
@@ -150,9 +141,7 @@ export default function FeePlansPage() {
         <div className="flex justify-between items-center">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Fee Plans</h1>
-            <p className="text-gray-600 mt-2">
-              Manage student fee plans and installment schedules
-            </p>
+            <p className="text-gray-600 mt-2">Manage student fee plans and installment schedules</p>
           </div>
           <Button
             className="bg-blue-600 hover:bg-blue-700 text-white"
@@ -210,9 +199,7 @@ export default function FeePlansPage() {
           </div>
         </div>
 
-        <div
-          className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-fadeInUp"
-        >
+        <div className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-fadeInUp">
           {loading ? (
             <div className="text-center py-12 text-gray-500">Loading...</div>
           ) : (
@@ -249,9 +236,7 @@ export default function FeePlansPage() {
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
                           {fp.courseName}
-                          <span className="text-xs text-gray-400 ml-1">
-                            ({fp.planType})
-                          </span>
+                          <span className="text-xs text-gray-400 ml-1">({fp.planType})</span>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                           ₹{fp.totalFee.toLocaleString('en-IN')}
@@ -283,12 +268,8 @@ export default function FeePlansPage() {
               {filteredPlans.length === 0 && !loading && (
                 <div className="text-center py-12">
                   <CreditCard className="mx-auto h-12 w-12 text-gray-400" />
-                  <h3 className="mt-2 text-sm font-medium text-gray-900">
-                    No fee plans found
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500">
-                    Create a fee plan to get started.
-                  </p>
+                  <h3 className="mt-2 text-sm font-medium text-gray-900">No fee plans found</h3>
+                  <p className="mt-1 text-sm text-gray-500">Create a fee plan to get started.</p>
                 </div>
               )}
             </>

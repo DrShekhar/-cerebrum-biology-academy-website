@@ -194,8 +194,7 @@ export default function DrShekharSinghPage() {
     jobTitle: 'Director & Chief Educator',
     description:
       'AIIMS faculty with 15+ years of experience, mentored 15,000+ NEET aspirants with 98% success rate',
-    image:
-      '/images/faculty/dr-shekhar-portrait.jpg',
+    image: '/images/faculty/dr-shekhar-portrait.jpg',
     worksFor: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -308,9 +307,7 @@ export default function DrShekharSinghPage() {
           </div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div
-              className="grid md:grid-cols-2 gap-12 items-center animate-fadeInUp"
-            >
+            <div className="grid md:grid-cols-2 gap-12 items-center animate-fadeInUp">
               <div className="space-y-6">
                 <div className="relative w-64 h-64 mx-auto md:mx-0">
                   <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-xl">
@@ -408,7 +405,9 @@ export default function DrShekharSinghPage() {
 
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6" role="group">
                   <Link
-                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20dr%20shekhar%20singh.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20dr%20shekhar%20singh.%20Please%20share%20available%20timings."
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-[#3d4d3d]/20 transition-all min-h-[48px] focus:outline-none focus:ring-2 focus:ring-[#3d4d3d] focus:ring-offset-2"
                     aria-label="Book a demo class with Dr. Shekhar C Singh"
                   >
@@ -455,9 +454,7 @@ export default function DrShekharSinghPage() {
           aria-labelledby="teaching-philosophy-heading"
         >
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div
-              className="bg-[#e8ede8] rounded-3xl p-8 md:p-12 border border-[#3d4d3d]/10 animate-fadeInUp"
-            >
+            <div className="bg-[#e8ede8] rounded-3xl p-8 md:p-12 border border-[#3d4d3d]/10 animate-fadeInUp">
               <div className="flex items-start space-x-4 mb-6">
                 <Quote className="w-12 h-12 text-[#3d4d3d] flex-shrink-0" aria-hidden="true" />
                 <div>
@@ -533,9 +530,7 @@ export default function DrShekharSinghPage() {
           aria-labelledby="achievements-heading"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <div className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <Trophy className="w-4 h-4 mr-2" aria-hidden="true" />
                 Remarkable Achievements
@@ -594,9 +589,7 @@ export default function DrShekharSinghPage() {
 
         <section className="py-16 bg-white" role="region" aria-labelledby="credentials-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <div className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <Shield className="w-4 h-4 mr-2" aria-hidden="true" />
                 Credentials & Recognition
@@ -613,9 +606,7 @@ export default function DrShekharSinghPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div
-                className="bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 text-center animate-fadeInUp"
-              >
+              <div className="bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 text-center animate-fadeInUp">
                 <div className="w-20 h-20 bg-[#3d4d3d] rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <GraduationCap className="w-10 h-10 text-white" />
                 </div>
@@ -625,19 +616,17 @@ export default function DrShekharSinghPage() {
                 </p>
               </div>
 
-              <div
-                className="bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 text-center animate-fadeInUp"
-              >
+              <div className="bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 text-center animate-fadeInUp">
                 <div className="w-20 h-20 bg-[#4a5d4a] rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Award className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Academic Leadership</h3>
-                <p className="text-gray-600">Former Academic Head at a leading national educational institution</p>
+                <p className="text-gray-600">
+                  Former Academic Head at a leading national educational institution
+                </p>
               </div>
 
-              <div
-                className="bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 text-center animate-fadeInUp"
-              >
+              <div className="bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 text-center animate-fadeInUp">
                 <div className="w-20 h-20 bg-[#5a6d5a] rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Trophy className="w-10 h-10 text-white" />
                 </div>
@@ -646,9 +635,7 @@ export default function DrShekharSinghPage() {
               </div>
             </div>
 
-            <div
-              className="bg-[#e8ede8] rounded-2xl p-8 border border-[#3d4d3d]/10 animate-fadeInUp"
-            >
+            <div className="bg-[#e8ede8] rounded-2xl p-8 border border-[#3d4d3d]/10 animate-fadeInUp">
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   Recognition & Achievements
@@ -709,9 +696,7 @@ export default function DrShekharSinghPage() {
           aria-labelledby="student-results-heading"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <div className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <CheckCircle2 className="w-4 h-4 mr-2" aria-hidden="true" />
                 Recent Success Stories
@@ -765,9 +750,7 @@ export default function DrShekharSinghPage() {
               ))}
             </div>
 
-            <div
-              className="mt-12 bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 animate-fadeInUp"
-            >
+            <div className="mt-12 bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 animate-fadeInUp">
               <div className="text-center">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                   {trustBadges.map((badge, index) => (
@@ -787,9 +770,7 @@ export default function DrShekharSinghPage() {
 
         <section className="py-16 bg-white" role="region" aria-labelledby="testimonials-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <div className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Quote className="w-4 h-4 mr-2" aria-hidden="true" />
                 Student Testimonials
@@ -891,9 +872,7 @@ export default function DrShekharSinghPage() {
 
         <section className="py-16 bg-[#e8ede8]" role="region" aria-labelledby="journey-heading">
           <div className="max-w-5xl mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <div className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <TrendingUp className="w-4 h-4 mr-2" aria-hidden="true" />
                 Professional Journey
@@ -971,8 +950,7 @@ export default function DrShekharSinghPage() {
           aria-labelledby="contact-heading"
         >
           <div className="max-w-6xl mx-auto px-4">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="text-center mb-12">
                 <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold mb-6">
                   Ready to Start Your NEET Journey?
@@ -990,9 +968,7 @@ export default function DrShekharSinghPage() {
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 mb-12">
-                <div
-                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all animate-fadeInUp"
-                >
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all animate-fadeInUp">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-[#4a5d4a] rounded-xl flex items-center justify-center mr-4">
                       <Calendar className="w-6 h-6 text-white" />
@@ -1007,7 +983,9 @@ export default function DrShekharSinghPage() {
                     slots available.
                   </p>
                   <Link
-                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20dr%20shekhar%20singh.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20dr%20shekhar%20singh.%20Please%20share%20available%20timings."
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full bg-white hover:bg-gray-100 text-[#3d4d3d] font-bold px-6 py-3 rounded-xl shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-white/50"
                   >
                     <Calendar className="w-5 h-5 mr-2" />
@@ -1015,9 +993,7 @@ export default function DrShekharSinghPage() {
                   </Link>
                 </div>
 
-                <div
-                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all animate-fadeInUp"
-                >
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all animate-fadeInUp">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-[#4a5d4a] rounded-xl flex items-center justify-center mr-4">
                       <MessageCircle className="w-6 h-6 text-white" />
@@ -1050,7 +1026,9 @@ export default function DrShekharSinghPage() {
 
               <div className="text-center mb-8">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20dr%20shekhar%20singh.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20dr%20shekhar%20singh.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-[#3d4d3d] font-bold px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl shadow-2xl transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 text-base sm:text-lg w-full sm:w-auto"
                 >
                   <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 flex-shrink-0" />
@@ -1093,11 +1071,11 @@ export default function DrShekharSinghPage() {
         </section>
 
         {showFloatingCTA && (
-          <div
-            className="fixed bottom-8 right-8 z-50 animate-fadeInUp"
-          >
+          <div className="fixed bottom-8 right-8 z-50 animate-fadeInUp">
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20dr%20shekhar%20singh.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20dr%20shekhar%20singh.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-3 bg-[#4a5d4a] text-white px-6 py-4 rounded-full shadow-2xl hover:shadow-3xl transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 group"
               aria-label="Book a demo class"
             >

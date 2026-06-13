@@ -65,7 +65,7 @@ export function StudyHeatmap({ sessions }: StudyHeatmapProps) {
     let total = 0
 
     for (let w = 0; w < weeks; w++) {
-      const week: typeof gridData[0] = []
+      const week: (typeof gridData)[0] = []
       for (let d = 0; d < 7; d++) {
         const cellDate = new Date(startDate)
         cellDate.setDate(cellDate.getDate() + w * 7 + d)
@@ -122,7 +122,10 @@ export function StudyHeatmap({ sessions }: StudyHeatmapProps) {
       </div>
 
       <div className="overflow-x-auto -mx-2 px-2">
-        <div className="relative" style={{ minWidth: grid.length * (cellSize + gap) + leftPadding }}>
+        <div
+          className="relative"
+          style={{ minWidth: grid.length * (cellSize + gap) + leftPadding }}
+        >
           {/* Month Labels */}
           <div className="flex" style={{ paddingLeft: leftPadding, marginBottom: 4 }}>
             {monthLabels.map((label, idx) => (
@@ -158,9 +161,7 @@ export function StudyHeatmap({ sessions }: StudyHeatmapProps) {
                   <div
                     key={cell.date}
                     className={`rounded-sm transition-colors ${
-                      cell.level === -1
-                        ? 'bg-gray-50'
-                        : INTENSITY_COLORS[cell.level]
+                      cell.level === -1 ? 'bg-gray-50' : INTENSITY_COLORS[cell.level]
                     } ${cell.level >= 0 ? 'cursor-pointer hover:ring-1 hover:ring-gray-400' : ''}`}
                     style={{ width: cellSize, height: cellSize }}
                     onMouseEnter={(e) => {

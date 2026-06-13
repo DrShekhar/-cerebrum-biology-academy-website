@@ -236,9 +236,7 @@ export default function WhatsAppAnalyticsPage() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-fadeInUp">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <Target className="w-5 h-5 text-blue-600" />
                   Top Click Sources
@@ -270,9 +268,7 @@ export default function WhatsAppAnalyticsPage() {
                 </div>
               </div>
 
-              <div
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-fadeInUp">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-purple-600" />
                   Top Pages
@@ -306,9 +302,7 @@ export default function WhatsAppAnalyticsPage() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-fadeInUp">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <Smartphone className="w-5 h-5 text-orange-600" />
                   Device Breakdown
@@ -348,9 +342,7 @@ export default function WhatsAppAnalyticsPage() {
                 </div>
               </div>
 
-              <div
-                className="lg:col-span-2 bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-fadeInUp"
-              >
+              <div className="lg:col-span-2 bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-fadeInUp">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <Clock className="w-5 h-5 text-blue-600" />
                   Clicks by Hour (IST)
@@ -380,9 +372,7 @@ export default function WhatsAppAnalyticsPage() {
               </div>
             </div>
 
-            <div
-              className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-fadeInUp">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Clicks</h3>
               <div className="overflow-x-auto">
                 <table className="w-full">

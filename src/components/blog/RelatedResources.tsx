@@ -12,25 +12,28 @@ interface RelatedResourcesProps {
 // Map NEET chapters to specific course pages for targeted CTAs
 const chapterToCourse: Record<string, { slug: string; label: string }> = {
   'Human Physiology': { slug: '/courses/class-12', label: 'Class 12 NEET Biology' },
-  'Genetics': { slug: '/courses/class-12', label: 'Class 12 Genetics Module' },
+  Genetics: { slug: '/courses/class-12', label: 'Class 12 Genetics Module' },
   'Molecular Biology': { slug: '/courses/class-12', label: 'Class 12 Molecular Biology' },
-  'Reproduction': { slug: '/courses/class-12', label: 'Class 12 Reproduction Module' },
-  'Ecology': { slug: '/courses/class-12', label: 'Class 12 Ecology Module' },
-  'Evolution': { slug: '/courses/class-12', label: 'Class 12 Evolution Module' },
+  Reproduction: { slug: '/courses/class-12', label: 'Class 12 Reproduction Module' },
+  Ecology: { slug: '/courses/class-12', label: 'Class 12 Ecology Module' },
+  Evolution: { slug: '/courses/class-12', label: 'Class 12 Evolution Module' },
   'Plant Physiology': { slug: '/courses/class-11', label: 'Class 11 Plant Biology' },
   'Cell Biology': { slug: '/courses/class-11', label: 'Class 11 Cell Biology' },
   'Plant Kingdom': { slug: '/courses/class-11', label: 'Class 11 Plant Kingdom' },
   'Animal Kingdom': { slug: '/courses/class-11', label: 'Class 11 Animal Kingdom' },
-  'Biomolecules': { slug: '/courses/class-11', label: 'Class 11 Biomolecules' },
-  'Structural Organisation': { slug: '/courses/class-11', label: 'Class 11 Structural Organisation' },
+  Biomolecules: { slug: '/courses/class-11', label: 'Class 11 Biomolecules' },
+  'Structural Organisation': {
+    slug: '/courses/class-11',
+    label: 'Class 11 Structural Organisation',
+  },
 }
 
 // Map blog categories to specific course pages
 const categoryToCourse: Record<string, { slug: string; label: string }> = {
   'chapter-guides': { slug: '/courses', label: 'Chapter-wise Courses' },
   'ncert-analysis': { slug: '/courses', label: 'NCERT-based Courses' },
-  'mnemonics': { slug: '/free-resources', label: 'Free Study Materials' },
-  'olympiad': { slug: '/olympiad-coaching', label: 'Olympiad Coaching Program' },
+  mnemonics: { slug: '/free-resources', label: 'Free Study Materials' },
+  olympiad: { slug: '/olympiad-coaching', label: 'Olympiad Coaching Program' },
 }
 
 // Hub pages that should receive internal links
@@ -132,9 +135,7 @@ export function RelatedResources({ category, neetChapter, tags }: RelatedResourc
       // Match by chapter
       if (neetChapter) {
         if (page.matchChapters.includes('all')) return true
-        if (
-          page.matchChapters.some((ch) => neetChapter.toLowerCase().includes(ch.toLowerCase()))
-        )
+        if (page.matchChapters.some((ch) => neetChapter.toLowerCase().includes(ch.toLowerCase())))
           return true
       }
 

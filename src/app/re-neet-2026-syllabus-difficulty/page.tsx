@@ -31,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'RE-NEET 2026 Syllabus & Difficulty | Will the Reconduct Be Tougher?',
-    description: 'Will RE-NEET 2026 syllabus change? Will the reconduct exam be tougher? NTA confirmed: same NCERT Class 11 + 12 syllabus. Analyst consensus: difficulty may be slightly higher. Strategy for biology a...',
+    description:
+      'Will RE-NEET 2026 syllabus change? Will the reconduct exam be tougher? NTA confirmed: same NCERT Class 11 + 12 syllabus. Analyst consensus: difficulty may be slightly higher. Strategy for biology a...',
   },
 }
 

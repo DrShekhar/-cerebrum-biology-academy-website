@@ -191,9 +191,7 @@ export function EnrollmentForm({ course, onSuccess }: EnrollmentFormProps) {
 
   if (success) {
     return (
-      <div
-        className="p-8 bg-green-50 rounded-xl border border-green-200 animate-fadeInUp"
-      >
+      <div className="p-8 bg-green-50 rounded-xl border border-green-200 animate-fadeInUp">
         <div className="text-center mb-6">
           <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
           <h3 className="text-2xl font-bold text-green-800 mb-2">Enrollment Successful!</h3>

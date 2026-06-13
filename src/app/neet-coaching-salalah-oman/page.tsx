@@ -103,6 +103,7 @@ export default async function NEETCoachingSalalahPage() {
   return (
     <>
       <LocalitySchema
+        country="OM"
         locality={locality}
         slug="neet-coaching-salalah-oman"
         pageTitle="NEET Coaching in Salalah, Oman"

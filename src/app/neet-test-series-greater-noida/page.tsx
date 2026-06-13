@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Test Series in Greater Noida | 50+ Mock Tests with Analysis',
-    description: 'Join our comprehensive NEET Biology test series in Greater Noida. 50+ full-length mock tests, detailed analysis, rank prediction. Online and offline options. Starting ₹8,000.',
+    description:
+      'Join our comprehensive NEET Biology test series in Greater Noida. 50+ full-length mock tests, detailed analysis, rank prediction. Online and offline options. Starting ₹8,000.',
   },
 }
 
@@ -144,7 +145,11 @@ export default function NEETTestSeriesGreaterNoidaPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Greater Noida', 'NEET Biology Greater Noida', 'Medical entrance coaching Greater Noida']}
+        knowsAbout={[
+          'NEET Greater Noida',
+          'NEET Biology Greater Noida',
+          'Medical entrance coaching Greater Noida',
+        ]}
       />
       <script
         type="application/ld+json"

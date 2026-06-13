@@ -104,9 +104,7 @@ export default function Class910BiologyFoundationPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-indigo-900 via-purple-800 to-indigo-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div
-              className="max-w-4xl mx-auto text-center animate-fadeInUp"
-            >
+            <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <GraduationCap className="w-4 h-4" />
                 Foundation Course
@@ -183,10 +181,7 @@ export default function Class910BiologyFoundationPage() {
                   desc: 'Early exposure to biological concepts develops analytical and reasoning skills.',
                 },
               ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
-                >
+                <div key={idx} className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp">
                   <div className="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
                     <item.icon className="w-7 h-7 text-indigo-600" />
                   </div>
@@ -260,10 +255,7 @@ export default function Class910BiologyFoundationPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
-                >
+                <div key={idx} className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp">
                   <h3 className="font-semibold text-lg mb-2">{faq.q}</h3>
                   <p className="text-gray-600">{faq.a}</p>
                 </div>

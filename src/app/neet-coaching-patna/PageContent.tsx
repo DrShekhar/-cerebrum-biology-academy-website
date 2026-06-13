@@ -1,6 +1,21 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import { Trophy, Users, MessageCircle, Play, Headphones, MapPin, Star, GraduationCap, Target, Building, Shield, ArrowRight, BookOpen, CheckCircle } from 'lucide-react'
+import {
+  Trophy,
+  Users,
+  MessageCircle,
+  Play,
+  Headphones,
+  MapPin,
+  Star,
+  GraduationCap,
+  Target,
+  Building,
+  Shield,
+  ArrowRight,
+  BookOpen,
+  CheckCircle,
+} from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
 import { PricingSection } from '@/components/city/PricingSection'
@@ -11,7 +26,12 @@ function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => { if (entry.isIntersecting) setIsVisible(true) }, { threshold: 0.1 })
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true)
+      },
+      { threshold: 0.1 }
+    )
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
   }, [])
@@ -32,20 +52,24 @@ export default function PageContent() {
           <div className="absolute top-20 right-20 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
           <div className="absolute bottom-20 left-20 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
         </div>
-        
+
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8 inline-block">
-            <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-4 py-2 rounded-full">Bihar's NEET Hub - Best Coaching in Patna</span>
+            <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-4 py-2 rounded-full">
+              Bihar's NEET Hub - Best Coaching in Patna
+            </span>
           </div>
-          
+
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
-            Best NEET Coaching<br className="hidden sm:block" /> in <span className="text-blue-600">Patna</span>
+            Best NEET Coaching
+            <br className="hidden sm:block" /> in <span className="text-blue-600">Patna</span>
           </h1>
-          
+
           <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto font-light">
-            Bihar's premier NEET biology coaching. AIIMS faculty-led. 15,000+ students trained. 98% success rate. Beat Kota competition!
+            Bihar's premier NEET biology coaching. AIIMS faculty-led. 15,000+ students trained. 98%
+            success rate. Beat Kota competition!
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <a href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
               <Button className="w-full sm:w-auto bg-green-500 hover:bg-green-600">
@@ -58,9 +82,12 @@ export default function PageContent() {
               Watch Demo Class
             </Button>
           </div>
-          
+
           {/* Stats */}
-          <div ref={stats.ref} className={`grid grid-cols-1 md:grid-cols-3 gap-8 bg-white/60 backdrop-blur-lg rounded-2xl p-8 transition-opacity duration-1000 ${stats.isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <div
+            ref={stats.ref}
+            className={`grid grid-cols-1 md:grid-cols-3 gap-8 bg-white/60 backdrop-blur-lg rounded-2xl p-8 transition-opacity duration-1000 ${stats.isVisible ? 'opacity-100' : 'opacity-0'}`}
+          >
             <div className="text-center">
               <div className="flex justify-center mb-3">
                 <Trophy className="w-8 h-8 text-yellow-500" />
@@ -89,9 +116,14 @@ export default function PageContent() {
       {/* Why Choose Us */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-gray-900 mb-16">Why Choose Cerebrum for NEET in Patna?</h2>
-          
-          <div ref={features.ref} className={`grid grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-1000 ${features.isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-gray-900 mb-16">
+            Why Choose Cerebrum for NEET in Patna?
+          </h2>
+
+          <div
+            ref={features.ref}
+            className={`grid grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-1000 ${features.isVisible ? 'opacity-100' : 'opacity-0'}`}
+          >
             {/* Feature 1 */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
               <div className="flex items-start">
@@ -102,7 +134,10 @@ export default function PageContent() {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">AIIMS Faculty Network</h3>
-                  <p className="text-gray-600">Delhi & Mumbai AIIMS doctors mentor students with real medical education insights and NEET strategies.</p>
+                  <p className="text-gray-600">
+                    Delhi & Mumbai AIIMS doctors mentor students with real medical education
+                    insights and NEET strategies.
+                  </p>
                 </div>
               </div>
             </div>
@@ -116,8 +151,13 @@ export default function PageContent() {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Kota Alternative Strategy</h3>
-                  <p className="text-gray-600">Same quality, better environment. No relocation needed. Superior local support and personalized mentoring.</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    Kota Alternative Strategy
+                  </h3>
+                  <p className="text-gray-600">
+                    Same quality, better environment. No relocation needed. Superior local support
+                    and personalized mentoring.
+                  </p>
                 </div>
               </div>
             </div>
@@ -132,7 +172,10 @@ export default function PageContent() {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Hybrid Learning Model</h3>
-                  <p className="text-gray-600">Live in-center + online batches. Interactive doubt sessions. Home tuition available in Boring Road.</p>
+                  <p className="text-gray-600">
+                    Live in-center + online batches. Interactive doubt sessions. Home tuition
+                    available in Boring Road.
+                  </p>
                 </div>
               </div>
             </div>
@@ -147,7 +190,10 @@ export default function PageContent() {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Competitive NEET Battle</h3>
-                  <p className="text-gray-600">Designed for Bihar's tough competition. 10+ full-length mocks, advanced material, strategic counseling.</p>
+                  <p className="text-gray-600">
+                    Designed for Bihar's tough competition. 10+ full-length mocks, advanced
+                    material, strategic counseling.
+                  </p>
                 </div>
               </div>
             </div>
@@ -158,12 +204,31 @@ export default function PageContent() {
       {/* Areas Served */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-gray-900 mb-4">NEET Coaching in Patna Areas</h2>
-          <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">Coaching centers and home tuition across prime locations in Patna, Bihar</p>
-          
-          <div ref={areas.ref} className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 transition-opacity duration-1000 ${areas.isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            {['Boring Road', 'Kankarbagh', 'Patliputra', 'Rajendra Nagar', 'Nala Road', 'Buddha Colony', 'Ashok Rajpath', 'Saguna More'].map((area) => (
-              <div key={area} className="flex items-center gap-3 bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-gray-900 mb-4">
+            NEET Coaching in Patna Areas
+          </h2>
+          <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+            Coaching centers and home tuition across prime locations in Patna, Bihar
+          </p>
+
+          <div
+            ref={areas.ref}
+            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 transition-opacity duration-1000 ${areas.isVisible ? 'opacity-100' : 'opacity-0'}`}
+          >
+            {[
+              'Boring Road',
+              'Kankarbagh',
+              'Patliputra',
+              'Rajendra Nagar',
+              'Nala Road',
+              'Buddha Colony',
+              'Ashok Rajpath',
+              'Saguna More',
+            ].map((area) => (
+              <div
+                key={area}
+                className="flex items-center gap-3 bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow"
+              >
                 <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0" />
                 <span className="text-gray-700 font-medium">{area}</span>
               </div>
@@ -175,32 +240,40 @@ export default function PageContent() {
       {/* FAQ Section */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-gray-900 mb-16">Frequently Asked Questions</h2>
-          
-          <div ref={faq.ref} className={`space-y-6 transition-opacity duration-1000 ${faq.isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-gray-900 mb-16">
+            Frequently Asked Questions
+          </h2>
+
+          <div
+            ref={faq.ref}
+            className={`space-y-6 transition-opacity duration-1000 ${faq.isVisible ? 'opacity-100' : 'opacity-0'}`}
+          >
             {[
               {
                 q: 'How is Cerebrum better than Kota coaching institutes?',
-                a: 'Same faculty quality, personalized attention, no relocation, flexible schedules, and local support. Plus, better hostel culture!'
+                a: 'Same faculty quality, personalized attention, no relocation, flexible schedules, and local support. Plus, better hostel culture!',
               },
               {
                 q: 'Do you have centers near Boring Road and Kankarbagh?',
-                a: 'Yes! Our main center is strategically located in Boring Road with branch in Kankarbagh. Easy accessibility for all students.'
+                a: 'Yes! Our main center is strategically located in Boring Road with branch in Kankarbagh. Easy accessibility for all students.',
               },
               {
                 q: 'What is special about your Bihar board integration?',
-                a: 'We bridge Bihar board curriculum with NEET syllabus perfectly. Most students come from Bihar schools - we understand local needs.'
+                a: 'We bridge Bihar board curriculum with NEET syllabus perfectly. Most students come from Bihar schools - we understand local needs.',
               },
               {
                 q: 'How many mock tests do you conduct annually?',
-                a: 'Minimum 24 full-length NEET mocks (2 per month) + 100+ chapter-wise tests. Each includes detailed rank analysis.'
+                a: 'Minimum 24 full-length NEET mocks (2 per month) + 100+ chapter-wise tests. Each includes detailed rank analysis.',
               },
               {
                 q: 'Is home tuition available in Patna?',
-                a: 'Yes! One-on-one home tuition with specialized AIIMS faculty available across prime areas. Flexible timing options.'
-              }
+                a: 'Yes! One-on-one home tuition with specialized AIIMS faculty available across prime areas. Flexible timing options.',
+              },
             ].map((item, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors">
+              <div
+                key={idx}
+                className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors"
+              >
                 <div className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-green-600 mr-4 flex-shrink-0 mt-1" />
                   <div className="flex-1">
@@ -218,8 +291,11 @@ export default function PageContent() {
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">Ace NEET from Patna!</h2>
-          <p className="text-xl text-blue-100 mb-8">Join Bihar's best NEET students. Local coaching, global standards. Free career counseling included.</p>
-          
+          <p className="text-xl text-blue-100 mb-8">
+            Join Bihar's best NEET students. Local coaching, global standards. Free career
+            counseling included.
+          </p>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
               <Button className="w-full sm:w-auto bg-white text-blue-600 hover:bg-gray-100 font-bold">
@@ -231,7 +307,7 @@ export default function PageContent() {
               Call: 8826444334
             </Button>
           </div>
-          
+
           <p className="text-blue-100 mt-8 text-sm">Website: cerebrumbiologyacademy.com</p>
         </div>
       </section>

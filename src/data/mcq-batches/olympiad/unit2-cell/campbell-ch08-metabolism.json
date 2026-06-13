@@ -9,12 +9,7 @@
     {
       "type": "MCQ",
       "question": "An enzyme has a Km of 5 mM for its substrate. At a substrate concentration of 5 mM, the reaction rate is 50 micromol/min. What is the Vmax of this enzyme?",
-      "options": [
-        "50 micromol/min",
-        "100 micromol/min",
-        "25 micromol/min",
-        "200 micromol/min"
-      ],
+      "options": ["50 micromol/min", "100 micromol/min", "25 micromol/min", "200 micromol/min"],
       "correctAnswer": "B",
       "explanation": "According to the Michaelis-Menten equation, v = Vmax[S]/(Km + [S]). When [S] = Km, this simplifies to v = Vmax/2. If v = 50 micromol/min when [S] = Km = 5 mM, then 50 = Vmax/2, so Vmax = 100 micromol/min. The Km is defined as the substrate concentration at which the reaction rate is exactly half the maximal rate. This is a fundamental concept in enzyme kinetics: at [S] = Km, half of the enzyme active sites are occupied by substrate at any given moment. Below Km, the rate increases nearly linearly with [S] (first-order kinetics); above Km, the rate plateaus as the enzyme approaches saturation (zero-order kinetics). Understanding Km and Vmax is essential for predicting enzyme behavior in vivo and for designing enzyme inhibitors as drugs.",
       "isOlympiad": true,
@@ -69,12 +64,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about enzyme regulation:\nS1: Allosteric activators bind to the active site and increase substrate affinity\nS2: Phosphorylation can either activate or inhibit enzymes depending on the specific enzyme\nS3: Feedback inhibition occurs when the end product of a metabolic pathway inhibits an enzyme early in the pathway\nS4: Zymogens (proenzymes) are inactive precursors that require proteolytic cleavage for activation",
-      "options": [
-        "FTTT",
-        "TTTT",
-        "TFTT",
-        "FTTF"
-      ],
+      "options": ["FTTT", "TTTT", "TFTT", "FTTF"],
       "correctAnswer": "FTTT",
       "explanation": "S1 is FALSE: Allosteric regulators (both activators and inhibitors) bind to allosteric sites (regulatory sites) DIFFERENT from the active site. Allosteric activators bind to the allosteric site and induce a conformational change in the enzyme that increases substrate affinity at the active site (shifting the equilibrium from T-state to R-state in the concerted model). If they bound the active site, they would be substrates or competitive inhibitors, not allosteric regulators. S2 is TRUE: Phosphorylation is a versatile regulatory mechanism. For example, phosphorylation activates glycogen phosphorylase (triggering glycogen breakdown) but inhibits glycogen synthase (halting glycogen synthesis). CDKs are activated by cyclin binding and then regulated by both activating and inhibitory phosphorylations. S3 is TRUE: Feedback (end-product) inhibition is a fundamental regulatory strategy. The classic example is isoleucine inhibiting threonine deaminase, the first enzyme in the isoleucine biosynthetic pathway. This prevents wasteful overproduction. S4 is TRUE: Zymogens include pepsinogen (cleaved to pepsin by HCl), trypsinogen (cleaved to trypsin by enterokinase), and caspase zymogens (procaspases) in apoptosis.",
       "isOlympiad": true,
@@ -229,12 +219,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about metabolic pathways:\nS1: Catabolic pathways break down complex molecules and are generally exergonic\nS2: Anabolic pathways build complex molecules from simpler ones and require energy input\nS3: ATP serves as the primary energy currency coupling exergonic to endergonic reactions\nS4: All metabolic reactions in cells are at thermodynamic equilibrium",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Catabolic pathways (like glycolysis, the citric acid cycle, beta-oxidation) break down complex organic molecules (glucose, fatty acids, amino acids) into simpler products (CO2, H2O, NH3), releasing free energy that can be captured in ATP and NADH. The overall delta G is negative (exergonic). S2 is TRUE: Anabolic pathways (like gluconeogenesis, fatty acid synthesis, protein synthesis) assemble complex molecules from simpler precursors, requiring energy input (endergonic, positive delta G). This energy comes from ATP hydrolysis and reducing equivalents (NADPH). S3 is TRUE: ATP is the universal energy currency. Exergonic reactions (catabolism) phosphorylate ADP to ATP; endergonic reactions (anabolism) are driven by ATP hydrolysis. This ATP cycle (Lipmann's concept of the energy currency) couples energy-releasing and energy-requiring processes with remarkable efficiency. S4 is FALSE: Most metabolic reactions in living cells are maintained FAR from equilibrium. Near-equilibrium reactions allow rapid flux in either direction, while reactions far from equilibrium (catalyzed by regulatory enzymes like PFK-1, pyruvate kinase) serve as committed steps that make pathways effectively irreversible and provide regulatory control points.",
       "isOlympiad": true,
@@ -429,12 +414,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about ATP:\nS1: ATP stores energy in its phosphoanhydride bonds between the phosphate groups\nS2: The energy released during ATP hydrolysis comes from the relief of electrostatic repulsion between negatively charged phosphate groups and the greater resonance stabilization of the products (ADP + Pi)\nS3: ATP is the only high-energy phosphate compound used in cellular metabolism\nS4: The ATP/ADP cycle acts as a shuttle, transferring free energy from exergonic reactions to endergonic reactions",
-      "options": [
-        "FTTT",
-        "FTTF",
-        "FTFT",
-        "TTTT"
-      ],
+      "options": ["FTTT", "FTTF", "FTFT", "TTTT"],
       "correctAnswer": "FTFT",
       "explanation": "S1 is FALSE (misleading): While commonly stated, ATP does not store energy 'in' its bonds. Energy is RELEASED when a bond is broken because the products are more stable than the reactants. The free energy change comes from the difference in total free energy between reactants and products, not from the bond itself. Bond breaking always requires energy; it is the overall reaction (including bond formation in products and solvation effects) that is exergonic. S2 is TRUE: The large negative delta G of ATP hydrolysis is due to multiple factors: (1) relief of electrostatic repulsion between the clustered negative charges on the triphosphate chain; (2) greater resonance stabilization of Pi (orthophosphate has more resonance forms than the terminal phosphate of ATP); (3) favorable solvation of the products; (4) entropy increase from producing two molecules from one. S3 is FALSE: Other high-energy phosphate compounds include GTP, phosphoenolpyruvate (PEP, delta G = -61.9 kJ/mol), 1,3-bisphosphoglycerate, creatine phosphate, and acetyl phosphate. PEP has a MORE negative delta G than ATP! S4 is TRUE: The ATP/ADP cycle continuously transfers chemical energy between catabolic and anabolic pathways.",
       "isOlympiad": true,
@@ -589,12 +569,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about enzyme kinetics:\nS1: The turnover number (kcat) represents the maximum number of substrate molecules converted to product per enzyme molecule per second when the enzyme is fully saturated\nS2: An enzyme with a lower Km has a higher affinity for its substrate\nS3: Vmax is independent of enzyme concentration\nS4: The Michaelis-Menten equation assumes steady-state conditions where the concentration of the enzyme-substrate complex remains approximately constant",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TTFT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: kcat (catalytic constant or turnover number) = Vmax/[E_total]. It represents the number of catalytic events per enzyme molecule per unit time at substrate saturation. Values range from ~1 s^-1 (slow enzymes like lysozyme) to ~4 x 10^7 s^-1 (catalase, one of the fastest enzymes). S2 is TRUE: Km is an inverse measure of substrate affinity. A lower Km means the enzyme achieves half-maximal velocity at a lower substrate concentration, indicating tighter binding. For example, hexokinase (Km for glucose ~0.1 mM) has much higher glucose affinity than glucokinase (Km ~10 mM), allowing hexokinase to function at low blood glucose levels. S3 is FALSE: Vmax = kcat x [E_total]. Vmax is directly proportional to enzyme concentration — doubling the amount of enzyme doubles Vmax. This is why enzyme amount regulation (transcriptional control, proteolytic degradation) is a powerful regulatory mechanism. S4 is TRUE: The Briggs-Haldane derivation of the Michaelis-Menten equation assumes d[ES]/dt = 0 (steady-state approximation), meaning ES forms and breaks down at equal rates after an initial transient phase.",
       "isOlympiad": true,
@@ -609,12 +584,7 @@
     {
       "type": "MCQ",
       "question": "An enzyme obeys Michaelis-Menten kinetics with a Km of 10 mM and a Vmax of 200 micromol/min. At a substrate concentration of 30 mM, what is the reaction velocity?",
-      "options": [
-        "200 micromol/min",
-        "50 micromol/min",
-        "100 micromol/min",
-        "150 micromol/min"
-      ],
+      "options": ["200 micromol/min", "50 micromol/min", "100 micromol/min", "150 micromol/min"],
       "correctAnswer": "D",
       "explanation": "Using the Michaelis-Menten equation: v = Vmax x [S] / (Km + [S]) = 200 x 30 / (10 + 30) = 200 x 30/40 = 200 x 0.75 = 150 micromol/min. At [S] = 30 mM (3x Km), the enzyme is operating at 75% of Vmax. This calculation illustrates important kinetic relationships: at [S] = Km, v = 50% Vmax; at [S] = 3Km, v = 75% Vmax; at [S] = 9Km, v = 90% Vmax; at [S] = 99Km, v = 99% Vmax. This shows that reaching near-maximal velocity requires substrate concentrations far above Km. In physiological settings, most enzymes operate at [S] = 0.1Km to 10Km, where changes in substrate concentration have significant effects on reaction rate. Only at very high [S]/Km ratios does the rate become insensitive to substrate concentration (zero-order kinetics). Options A (50), B (100), and D (200) represent 25%, 50%, and 100% of Vmax respectively.",
       "isOlympiad": true,
@@ -729,12 +699,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about covalent modification as an enzyme regulatory mechanism:\nS1: Phosphorylation by kinases and dephosphorylation by phosphatases are the most common reversible covalent modifications in metabolic regulation\nS2: Ubiquitination targets proteins exclusively for proteasomal degradation\nS3: Acetylation of histones by histone acetyltransferases (HATs) is an example of covalent modification regulating gene expression\nS4: Covalent modification can alter an enzyme's Km, Vmax, or both",
-      "options": [
-        "TFTF",
-        "TFTT",
-        "TTTT",
-        "TFFT"
-      ],
+      "options": ["TFTF", "TFTT", "TTTT", "TFFT"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: Protein phosphorylation (primarily on serine, threonine, and tyrosine residues) is the most prevalent reversible covalent modification in metabolic regulation. The human genome encodes ~518 kinases and ~150 phosphatases, and it is estimated that >70% of all human proteins can be phosphorylated. Major examples include phosphorylation of glycogen phosphorylase (activation) and glycogen synthase (inhibition) by kinase cascades downstream of glucagon and epinephrine. S2 is FALSE: While K48-linked polyubiquitination is the canonical signal for 26S proteasomal degradation, ubiquitin has many non-degradative roles. Monoubiquitination regulates endocytosis (EGFR), histone function, and DNA repair. K63-linked polyubiquitination regulates NF-kB signaling, DNA damage response, and autophagy. Linear (M1-linked) ubiquitin chains regulate innate immunity signaling. S3 is TRUE: Histone acetylation by HATs neutralizes positive lysine charges, loosening histone-DNA interactions, opening chromatin, and facilitating transcription. Deacetylation by HDACs reverses this, compacting chromatin and silencing genes. S4 is TRUE: Covalent modifications (especially phosphorylation) can change enzyme conformation, altering Km, Vmax, or both depending on how the modification affects substrate binding and/or catalytic rate.",
       "isOlympiad": true,
@@ -869,12 +834,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about metabolic regulation:\nS1: Allosteric regulation provides rapid, second-to-second control of enzyme activity\nS2: Transcriptional regulation of enzyme levels provides long-term adaptation over hours to days\nS3: Compartmentalization separates competing metabolic pathways into different organelles\nS4: All enzymes in a metabolic pathway are regulated with equal importance",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Allosteric regulation is one of the fastest regulatory mechanisms, operating on the timescale of milliseconds to seconds. When an allosteric effector binds, the resulting conformational change immediately alters enzyme activity. This allows cells to respond rapidly to changes in metabolite concentrations. Examples include ATP inhibition of PFK-1 and acetyl-CoA activation of pyruvate carboxylase. S2 is TRUE: Transcriptional regulation involves changes in gene expression that alter the amount of enzyme protein. This requires mRNA synthesis and translation, typically taking hours to days for significant changes. Examples include SREBP-mediated upregulation of cholesterol biosynthetic enzymes and glucocorticoid induction of gluconeogenic enzymes (PEPCK, G6Pase). S3 is TRUE: Compartmentalization is a fundamental strategy in eukaryotic metabolism. Beta-oxidation occurs in mitochondria (and peroxisomes) while fatty acid synthesis occurs in the cytosol, using different enzymes and cofactors (FAD/NAD+ vs. NADPH) and preventing futile cycling. The citric acid cycle (matrix), oxidative phosphorylation (inner membrane), and glycolysis (cytosol) are spatially separated. S4 is FALSE: Metabolic pathways are typically regulated at a few key control points — usually the first committed step and other irreversible reactions catalyzed by allosteric enzymes. Most enzymes in a pathway operate near equilibrium and are not primary regulatory targets.",
       "isOlympiad": true,
@@ -1109,12 +1069,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about enzyme cofactors and coenzymes:\nS1: NAD+ is a coenzyme derived from niacin (vitamin B3) that participates in oxidation-reduction reactions by accepting hydride ions\nS2: Coenzymes are permanently altered during catalysis and must be replaced after each reaction cycle\nS3: Metal ion cofactors such as Zn2+ in carbonic anhydrase can stabilize transition states through Lewis acid catalysis\nS4: Prosthetic groups are tightly bound cofactors that remain associated with the enzyme through multiple catalytic cycles",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TFTF",
-        "TTFT"
-      ],
+      "options": ["TFTT", "TTTT", "TFTF", "TTFT"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: NAD+ (nicotinamide adenine dinucleotide) is indeed derived from niacin (vitamin B3, nicotinic acid or nicotinamide). It functions as a two-electron carrier, accepting a hydride ion (H-) at the C-4 position of the nicotinamide ring during oxidation reactions catalyzed by dehydrogenases. The reaction is: substrate-H2 + NAD+ → substrate + NADH + H+. S2 is FALSE: Coenzymes are transiently altered during catalysis (they accept or donate chemical groups) but are subsequently regenerated — either by the same enzyme or by a different enzyme. For example, NADH produced in glycolysis is reoxidized to NAD+ by the electron transport chain or by lactate dehydrogenase. This regeneration is essential because coenzymes are present in catalytic (not stoichiometric) amounts. S3 is TRUE: Zn2+ in carbonic anhydrase acts as a Lewis acid, polarizing the O-H bond of a bound water molecule to generate a hydroxide ion (OH-) nucleophile at physiological pH. This zinc-bound hydroxide then attacks CO2 to form bicarbonate. Metal ion cofactors in other enzymes serve similar Lewis acid roles (e.g., Mg2+ in kinases stabilizes the negative charges of ATP phosphates). S4 is TRUE: Prosthetic groups are cofactors that are tightly (often covalently) bound to the enzyme and remain associated through multiple turnovers. Examples include heme in cytochromes, FAD in succinate dehydrogenase, biotin in carboxylases, and pyridoxal phosphate in aminotransferases.",
       "isOlympiad": true,
@@ -1129,12 +1084,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about energy coupling in biological systems:\nS1: Phosphorylation cascades amplify signals because each kinase can phosphorylate many substrate molecules\nS2: The energy released from ATP hydrolysis in vivo is always exactly -30.5 kJ/mol regardless of cellular conditions\nS3: Creatine phosphate serves as an energy buffer in muscle cells, rapidly regenerating ATP from ADP during intense activity\nS4: GTP hydrolysis by signaling G-proteins serves primarily as an energy source to power transmembrane transport",
-      "options": [
-        "TFTT",
-        "TFTF",
-        "TTFF",
-        "TFFF"
-      ],
+      "options": ["TFTT", "TFTF", "TTFF", "TFFF"],
       "correctAnswer": "TFTF",
       "explanation": "S1 is TRUE: Phosphorylation cascades (e.g., MAP kinase cascades, cAMP-PKA pathways) achieve signal amplification because each activated kinase molecule can phosphorylate many substrate molecules before being deactivated. For example, one molecule of activated PKA can phosphorylate hundreds of phosphorylase kinase molecules, each of which can then activate thousands of glycogen phosphorylase molecules. This catalytic amplification at each tier of the cascade allows a few molecules of extracellular signal to produce a massive intracellular response. S2 is FALSE: The standard free energy change (delta-G-zero-prime = -30.5 kJ/mol) is measured under standard conditions (1M concentrations, pH 7.0, 25 degrees C). In living cells, the actual delta-G is significantly more negative (typically -50 to -54 kJ/mol) because cells maintain [ATP]/[ADP][Pi] ratios far from equilibrium. The actual delta-G depends on the mass action ratio: delta-G = delta-G-zero-prime + RT ln([ADP][Pi]/[ATP]). S3 is TRUE: Creatine phosphate (phosphocreatine) serves as an energy buffer in muscle cells. The creatine kinase reaction (PCr + ADP ↔ ATP + Cr) operates near equilibrium and can rapidly regenerate ATP during the first 8-10 seconds of intense exercise before oxidative phosphorylation ramps up sufficiently. This phosphagen system is critical for maintaining ATP levels during burst activities like sprinting. S4 is FALSE: GTP hydrolysis by signaling G-proteins does NOT primarily power transmembrane transport. Instead, GTP hydrolysis serves as a molecular timer/switch mechanism — GTP-bound G-proteins are active, and hydrolysis to GDP causes conformational change to the inactive state. The energy of hydrolysis drives the conformational change for signal termination, not transport.",
       "isOlympiad": true,
@@ -1149,12 +1099,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about thermodynamics in metabolism:\nS1: The equilibrium constant Keq of a reaction is related to the standard free energy change by delta-G-zero-prime = -RT ln Keq\nS2: A reaction with a large positive delta-G-zero-prime can still proceed in the forward direction if the mass action ratio [products]/[reactants] is kept very low by rapid consumption of products\nS3: Exergonic reactions always proceed rapidly without enzyme catalysis\nS4: The free energy change of a reaction at steady state in a metabolic pathway is typically zero",
-      "options": [
-        "TTFF",
-        "TTFT",
-        "TTTF",
-        "TFFF"
-      ],
+      "options": ["TTFF", "TTFT", "TTTF", "TFFF"],
       "correctAnswer": "TTFF",
       "explanation": "S1 is TRUE: This is the fundamental relationship between thermodynamics and equilibrium. delta-G-zero-prime = -RT ln Keq, where R is the gas constant (8.314 J/(mol*K)) and T is absolute temperature. A reaction with Keq > 1 has negative delta-G-zero-prime (products favored under standard conditions), while Keq < 1 gives positive delta-G-zero-prime. For example, ATP hydrolysis with Keq approximately 10^5.5 gives delta-G-zero-prime = -30.5 kJ/mol. S2 is TRUE: The actual free energy change is delta-G = delta-G-zero-prime + RT ln Q, where Q is the mass action ratio ([products]/[reactants]). Even if delta-G-zero-prime is positive, keeping Q very low (by rapidly removing products through subsequent metabolic reactions) can make the RT ln Q term sufficiently negative to give an overall negative delta-G. This is precisely how many near-equilibrium reactions in metabolic pathways proceed in the forward direction — they are pulled forward by subsequent reactions. S3 is FALSE: Thermodynamic favorability (negative delta-G) tells us nothing about kinetic rate. Many exergonic reactions have high activation energy barriers and proceed extremely slowly without catalysis. For example, glucose oxidation (delta-G-zero-prime = -2870 kJ/mol) is extremely exergonic but glucose is kinetically stable at room temperature. Enzymes lower the activation energy barrier without affecting delta-G. S4 is FALSE: At steady state, the concentrations of pathway intermediates remain constant (rate of formation = rate of consumption), but the free energy change for each reaction is NOT zero. A delta-G of zero would mean equilibrium, not steady state. In steady-state metabolism, irreversible reactions maintain significant negative delta-G values, which is what drives net flux through the pathway.",
       "isOlympiad": true,
@@ -1429,12 +1374,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about enzyme mechanisms and catalytic strategies:\nS1: Serine proteases (e.g., chymotrypsin, trypsin) use a catalytic triad of Ser-His-Asp residues that work together through a charge-relay system\nS2: Induced fit occurs when the enzyme active site is rigid and pre-shaped to exactly match the substrate geometry\nS3: Proximity and orientation effects can accelerate reaction rates by factors of 10^3 to 10^5 by bringing reactants together in the optimal geometry for bond formation\nS4: Covalent catalysis involves formation of a transient covalent bond between the enzyme and substrate, creating a more reactive intermediate",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TFTF",
-        "FTTT"
-      ],
+      "options": ["TFTT", "TTTT", "TFTF", "FTTT"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: The catalytic triad (Ser-His-Asp) in serine proteases is one of the best-characterized catalytic mechanisms. Asp-102 orients and polarizes His-57 through a hydrogen bond, enhancing its ability to act as a general base. His-57 then abstracts a proton from Ser-195, activating the serine hydroxyl as a powerful nucleophile that attacks the peptide bond's carbonyl carbon. This charge-relay system (also called the proton shuttle) enables Ser-195 to perform nucleophilic catalysis that would otherwise be impossibly slow. The mechanism proceeds through an acyl-enzyme intermediate and a tetrahedral oxyanion intermediate stabilized by the oxyanion hole. S2 is FALSE: Induced fit, proposed by Daniel Koshland (1958), describes the opposite — the active site is NOT rigid and pre-shaped. Instead, both the enzyme and substrate undergo conformational changes upon binding, optimizing complementarity. The lock-and-key model (Fischer, 1894) describes rigid complementarity; induced fit superseded this model. Examples include hexokinase (which closes its active-site cleft around glucose, excluding water) and carboxypeptidase A. S3 is TRUE: By binding substrates in close proximity and correct orientation, enzymes can achieve effective concentrations far exceeding what is achievable in free solution. The proximity effect brings reactive groups within bonding distance, while the orientation effect ensures they approach at the correct angle for orbital overlap. Together, these effects can accelerate reactions by 10^3 to 10^5-fold. S4 is TRUE: In covalent catalysis, the enzyme forms a transient covalent bond with the substrate or a portion of it. This creates an intermediate that is more reactive toward subsequent chemical steps than the original substrate. Examples include the Schiff base (imine) formed between pyridoxal phosphate and amino acid substrates in transaminases, and the acyl-enzyme intermediate in serine proteases.",
       "isOlympiad": true,
@@ -1449,12 +1389,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about metabolic pathway organization:\nS1: Anabolic pathways generally require energy input (ATP, NADPH) and build complex molecules from simpler precursors\nS2: Catabolic and anabolic pathways always use exactly the same enzymes running in reverse\nS3: Amphibolic pathways such as the citric acid cycle serve dual roles in both catabolism and anabolism\nS4: Futile cycles (substrate cycles) always waste cellular energy without providing any regulatory benefit",
-      "options": [
-        "TFTF",
-        "TFTT",
-        "TTFF",
-        "TFFT"
-      ],
+      "options": ["TFTF", "TFTT", "TTFF", "TFFT"],
       "correctAnswer": "TFTF",
       "explanation": "S1 is TRUE: Anabolic (biosynthetic) pathways construct complex molecules from simpler precursors and are thermodynamically endergonic processes that require energy input. ATP provides the phosphoryl transfer potential and NADPH provides the reducing equivalents. Examples: gluconeogenesis (building glucose from pyruvate using 6 ATP equivalents), fatty acid synthesis (requiring ATP and NADPH), and amino acid biosynthesis. S2 is FALSE: Catabolic and anabolic pathways typically share some near-equilibrium enzymes but differ at key irreversible regulatory steps. For example, glycolysis and gluconeogenesis share 7 of 10 reactions but differ at the three irreversible steps (hexokinase/glucokinase vs. glucose-6-phosphatase; PFK-1 vs. fructose-1,6-bisphosphatase; pyruvate kinase vs. pyruvate carboxylase + PEPCK). Using different enzymes at these control points allows independent regulation of the two opposing pathways and prevents futile cycling. S3 is TRUE: The citric acid cycle is the classic amphibolic pathway, serving dual roles in both catabolism (complete oxidation of acetyl-CoA to CO2 with NADH/FADH2 production) and anabolism (providing biosynthetic precursors: oxaloacetate for gluconeogenesis, alpha-ketoglutarate for amino acid synthesis, succinyl-CoA for heme synthesis, and citrate exported for fatty acid synthesis). When intermediates are removed for biosynthesis, anaplerotic reactions (e.g., pyruvate carboxylase) replenish them. S4 is FALSE: The statement claims futile cycles 'always waste energy without providing any regulatory benefit.' While substrate cycles do consume ATP (e.g., the fructose-6-phosphate/fructose-1,6-bisphosphate cycle consumes 1 ATP per turn), they provide important regulatory benefits: (1) signal amplification — small changes in effector concentration produce large changes in net flux, (2) increased sensitivity (ultrasensitivity) of metabolic flux control, and (3) thermogenesis — as in brown adipose tissue. The word 'always' and 'without any regulatory benefit' makes this statement definitively false.",
       "isOlympiad": true,
@@ -1469,12 +1404,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about enzyme inhibition in pharmacology:\nS1: Methotrexate is a structural analog of folic acid that competitively inhibits dihydrofolate reductase (DHFR), blocking thymidylate synthesis\nS2: Suicide inhibitors (mechanism-based inhibitors) are initially unreactive prodrugs that are converted to reactive species by the target enzyme's own catalytic mechanism\nS3: Reversible inhibitors form covalent bonds with their target enzymes\nS4: Allopurinol, used to treat gout, is a suicide inhibitor of xanthine oxidase that is first oxidized by the enzyme to alloxanthine, which remains tightly bound to the molybdenum cofactor",
-      "options": [
-        "TTFT",
-        "TFFT",
-        "TTTF",
-        "TTFF"
-      ],
+      "options": ["TTFT", "TFFT", "TTTF", "TTFF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Methotrexate (MTX) is a folate analog where the 4-OH group of folic acid is replaced by 4-NH2 and an N-methyl group is added. This structural similarity allows MTX to bind the active site of dihydrofolate reductase (DHFR) with approximately 1000-fold higher affinity than the natural substrate dihydrofolate. By competitively inhibiting DHFR, MTX blocks the regeneration of tetrahydrofolate (THF), which is essential for thymidylate synthase to convert dUMP to dTMP. This depletes the cell of dTMP, inhibiting DNA synthesis and cell proliferation. MTX is used clinically as an anti-cancer drug and immunosuppressant. S2 is TRUE: Suicide inhibitors (also called mechanism-based inactivators) are stable, relatively unreactive molecules that resemble the normal substrate. The target enzyme binds and begins to process the inhibitor through its normal catalytic mechanism. However, the catalytic transformation generates a highly reactive intermediate (often an electrophilic species) that forms an irreversible covalent bond with an active-site residue, permanently inactivating the enzyme. This 'Trojan horse' strategy ensures high specificity because only enzymes that catalyze the specific reaction will be inactivated. S3 is FALSE: By definition, reversible inhibitors bind through non-covalent interactions (hydrogen bonds, hydrophobic interactions, ionic interactions, van der Waals forces). Covalent bond formation is characteristic of irreversible inhibitors. This is the defining distinction between the two classes. S4 is TRUE: Allopurinol is a classic suicide inhibitor. Xanthine oxidase oxidizes allopurinol (a hypoxanthine analog) to alloxanthine (oxypurinol), which remains tightly bound to the reduced molybdenum (Mo-IV) center of the enzyme, effectively inactivating it. This prevents the oxidation of hypoxanthine and xanthine to uric acid, reducing uric acid levels and preventing gout.",
       "isOlympiad": true,

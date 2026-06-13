@@ -42,8 +42,7 @@ export async function POST(request: NextRequest) {
           retryOptions: {
             maxRetries: 3,
             initialDelayMs: 1000,
-            onRetry: (attempt, error) => {
-            },
+            onRetry: (attempt, error) => {},
           },
         }
       )
@@ -95,8 +94,7 @@ Format your response for text-to-speech conversion with natural pauses and empha
         retryOptions: {
           maxRetries: 3,
           initialDelayMs: 1000,
-          onRetry: (attempt, error) => {
-          },
+          onRetry: (attempt, error) => {},
         },
       })
 
@@ -130,8 +128,7 @@ Format your response for text-to-speech conversion with natural pauses and empha
           retryOptions: {
             maxRetries: 3,
             initialDelayMs: 1000,
-            onRetry: (attempt, error) => {
-            },
+            onRetry: (attempt, error) => {},
           },
         })
 

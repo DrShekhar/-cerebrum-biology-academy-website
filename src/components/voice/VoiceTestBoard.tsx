@@ -98,9 +98,7 @@ const VoiceTestBoard: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-8">
       {/* Header */}
-      <div
-        className="text-center animate-fadeInUp"
-      >
+      <div className="text-center animate-fadeInUp">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">🎯 Shekhar Sir Voice Test</h1>
         <p className="text-lg text-gray-600 mb-6">
           Test the AI voice feature in Hindi, English, and Hinglish
@@ -121,8 +119,7 @@ const VoiceTestBoard: React.FC = () => {
 
           {isSpeaking && (
             <div className="flex items-center space-x-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full">
-              <div
-               className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 <Mic className="w-5 h-5" />
               </div>
               <span className="font-medium">Speaking... {Math.round(progress)}%</span>
@@ -132,9 +129,7 @@ const VoiceTestBoard: React.FC = () => {
       </div>
 
       {/* Language Selector */}
-      <div
-        className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
-      >
+      <div className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp">
         <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
           <Settings className="w-5 h-5 mr-2" />
           Language Settings
@@ -157,9 +152,7 @@ const VoiceTestBoard: React.FC = () => {
       </div>
 
       {/* Sample Texts */}
-      <div
-        className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
-      >
+      <div className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp">
         <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
           <BookOpen className="w-5 h-5 mr-2" />
           Quick Test Phrases
@@ -194,9 +187,7 @@ const VoiceTestBoard: React.FC = () => {
       </div>
 
       {/* Biology Topics */}
-      <div
-        className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
-      >
+      <div className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp">
         <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
           <Brain className="w-5 h-5 mr-2" />
           Biology Topic Explanations
@@ -232,9 +223,7 @@ const VoiceTestBoard: React.FC = () => {
       </div>
 
       {/* Custom Text Input */}
-      <div
-        className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
-      >
+      <div className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp">
         <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
           <Star className="w-5 h-5 mr-2" />
           Custom Text Test
@@ -265,9 +254,7 @@ const VoiceTestBoard: React.FC = () => {
 
             {progress > 0 && (
               <div className="flex-1 bg-gray-200 rounded-full h-2">
-                <div
-                  className="bg-blue-500 h-2 rounded-full animate-fadeInUp"
-                />
+                <div className="bg-blue-500 h-2 rounded-full animate-fadeInUp" />
               </div>
             )}
           </div>
@@ -276,9 +263,7 @@ const VoiceTestBoard: React.FC = () => {
 
       {/* Error Display */}
       {error && (
-        <div
-          className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center space-x-3 animate-fadeInUp"
-        >
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center space-x-3 animate-fadeInUp">
           <VolumeX className="w-5 h-5 text-red-500" />
           <span className="text-red-700">Voice Error: {error}</span>
         </div>

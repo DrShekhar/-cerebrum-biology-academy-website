@@ -233,17 +233,53 @@ export const neetDropperBatchOnline: SEOLandingContent = {
       },
     ],
     comparisonTable: [
-      { 'Factor': 'Batch Size', 'Large Coaching': '100-200 students', 'Cerebrum Dropper Batch': '10-12 students' },
-      { 'Factor': 'Doubt Resolution', 'Large Coaching': 'Queue-based, delayed', 'Cerebrum Dropper Batch': 'Instant, direct faculty access' },
-      { 'Factor': 'Mock Test Analysis', 'Large Coaching': 'Generic rank report', 'Cerebrum Dropper Batch': 'Chapter-wise gap analysis with strategy call' },
-      { 'Factor': 'Mental Wellness', 'Large Coaching': 'Not included', 'Cerebrum Dropper Batch': 'Weekly sessions + counselor access' },
-      { 'Factor': 'Fee', 'Large Coaching': '1.2-1.5 Lakh', 'Cerebrum Dropper Batch': '80,000 with EMI' },
+      {
+        Factor: 'Batch Size',
+        'Large Coaching': '100-200 students',
+        'Cerebrum Dropper Batch': '10-12 students',
+      },
+      {
+        Factor: 'Doubt Resolution',
+        'Large Coaching': 'Queue-based, delayed',
+        'Cerebrum Dropper Batch': 'Instant, direct faculty access',
+      },
+      {
+        Factor: 'Mock Test Analysis',
+        'Large Coaching': 'Generic rank report',
+        'Cerebrum Dropper Batch': 'Chapter-wise gap analysis with strategy call',
+      },
+      {
+        Factor: 'Mental Wellness',
+        'Large Coaching': 'Not included',
+        'Cerebrum Dropper Batch': 'Weekly sessions + counselor access',
+      },
+      {
+        Factor: 'Fee',
+        'Large Coaching': '1.2-1.5 Lakh',
+        'Cerebrum Dropper Batch': '80,000 with EMI',
+      },
     ],
     checklist: [
-      { item: 'Complete diagnostic test on Day 1', explanation: 'Identifies exact weak chapters and question types from your previous attempt.' },
-      { item: 'Set monthly score improvement targets', explanation: 'Break the overall target into achievable monthly milestones to track progress.' },
-      { item: 'Maintain an error log after every mock test', explanation: 'Recording and categorizing mistakes prevents repeating them in the actual exam.' },
-      { item: 'Schedule weekly mental wellness check-ins', explanation: 'Proactive stress management keeps motivation high throughout the twelve-month journey.' },
+      {
+        item: 'Complete diagnostic test on Day 1',
+        explanation:
+          'Identifies exact weak chapters and question types from your previous attempt.',
+      },
+      {
+        item: 'Set monthly score improvement targets',
+        explanation:
+          'Break the overall target into achievable monthly milestones to track progress.',
+      },
+      {
+        item: 'Maintain an error log after every mock test',
+        explanation:
+          'Recording and categorizing mistakes prevents repeating them in the actual exam.',
+      },
+      {
+        item: 'Schedule weekly mental wellness check-ins',
+        explanation:
+          'Proactive stress management keeps motivation high throughout the twelve-month journey.',
+      },
     ],
   },
 
@@ -432,9 +468,18 @@ export const neetRepeaterCourse2027: SEOLandingContent = {
       },
     ],
     checklist: [
-      { item: 'Analyze previous NEET scorecard chapter-wise', explanation: 'Quantify exactly where marks were lost to create a targeted study plan.' },
-      { item: 'Prioritize weak chapters in the first three months', explanation: 'Fixing foundational gaps early leaves more time for practice and mock tests.' },
-      { item: 'Attempt at least 40 full-length mock tests', explanation: 'Regular full-length practice builds stamina and reduces exam-day anxiety.' },
+      {
+        item: 'Analyze previous NEET scorecard chapter-wise',
+        explanation: 'Quantify exactly where marks were lost to create a targeted study plan.',
+      },
+      {
+        item: 'Prioritize weak chapters in the first three months',
+        explanation: 'Fixing foundational gaps early leaves more time for practice and mock tests.',
+      },
+      {
+        item: 'Attempt at least 40 full-length mock tests',
+        explanation: 'Regular full-length practice builds stamina and reduces exam-day anxiety.',
+      },
     ],
   },
 
@@ -626,11 +671,36 @@ export const neetDropperBiologyCoaching: SEOLandingContent = {
       },
     ],
     comparisonTable: [
-      { 'Biology Area': 'Human Physiology', 'NEET Marks': '25-30', 'Improvement Potential': 'Very High', 'Key Strategy': 'Process flowcharts + diagram mastery' },
-      { 'Biology Area': 'Genetics + Molecular Biology', 'NEET Marks': '15-20', 'Improvement Potential': 'High', 'Key Strategy': 'Problem-solving practice + cross ratios' },
-      { 'Biology Area': 'Ecology', 'NEET Marks': '10-12', 'Improvement Potential': 'High', 'Key Strategy': 'NCERT line-by-line reading' },
-      { 'Biology Area': 'Plant Physiology', 'NEET Marks': '10-15', 'Improvement Potential': 'Moderate', 'Key Strategy': 'Pathway diagrams + comparison tables' },
-      { 'Biology Area': 'Diversity of Life', 'NEET Marks': '10-12', 'Improvement Potential': 'Moderate', 'Key Strategy': 'Classification tables + examples' },
+      {
+        'Biology Area': 'Human Physiology',
+        'NEET Marks': '25-30',
+        'Improvement Potential': 'Very High',
+        'Key Strategy': 'Process flowcharts + diagram mastery',
+      },
+      {
+        'Biology Area': 'Genetics + Molecular Biology',
+        'NEET Marks': '15-20',
+        'Improvement Potential': 'High',
+        'Key Strategy': 'Problem-solving practice + cross ratios',
+      },
+      {
+        'Biology Area': 'Ecology',
+        'NEET Marks': '10-12',
+        'Improvement Potential': 'High',
+        'Key Strategy': 'NCERT line-by-line reading',
+      },
+      {
+        'Biology Area': 'Plant Physiology',
+        'NEET Marks': '10-15',
+        'Improvement Potential': 'Moderate',
+        'Key Strategy': 'Pathway diagrams + comparison tables',
+      },
+      {
+        'Biology Area': 'Diversity of Life',
+        'NEET Marks': '10-12',
+        'Improvement Potential': 'Moderate',
+        'Key Strategy': 'Classification tables + examples',
+      },
     ],
   },
 
@@ -820,11 +890,31 @@ export const bestCoachingNeetDroppers: SEOLandingContent = {
       },
     ],
     checklist: [
-      { item: 'Verify the coaching success rate among droppers specifically', explanation: 'Overall success rates can be misleading if they include first-time students with higher base scores.' },
-      { item: 'Check the faculty-to-student ratio', explanation: 'Batches larger than 15 students make personal attention and doubt resolution impractical.' },
-      { item: 'Ask for verifiable testimonials with score cards', explanation: 'Genuine coaching institutes can provide real student results with before-and-after scores.' },
-      { item: 'Confirm that mental wellness support is included', explanation: 'Drop year stress directly impacts performance, so psychological support is not optional.' },
-      { item: 'Ensure mock tests include detailed chapter-wise analysis', explanation: 'A rank alone is useless; what matters is knowing exactly which chapters need more work.' },
+      {
+        item: 'Verify the coaching success rate among droppers specifically',
+        explanation:
+          'Overall success rates can be misleading if they include first-time students with higher base scores.',
+      },
+      {
+        item: 'Check the faculty-to-student ratio',
+        explanation:
+          'Batches larger than 15 students make personal attention and doubt resolution impractical.',
+      },
+      {
+        item: 'Ask for verifiable testimonials with score cards',
+        explanation:
+          'Genuine coaching institutes can provide real student results with before-and-after scores.',
+      },
+      {
+        item: 'Confirm that mental wellness support is included',
+        explanation:
+          'Drop year stress directly impacts performance, so psychological support is not optional.',
+      },
+      {
+        item: 'Ensure mock tests include detailed chapter-wise analysis',
+        explanation:
+          'A rank alone is useless; what matters is knowing exactly which chapters need more work.',
+      },
     ],
   },
 
@@ -1237,10 +1327,26 @@ export const neetRepeaters2026: SEOLandingContent = {
       },
     ],
     comparisonTable: [
-      { 'Factor': 'First Attempt Score', 'Unstructured Drop Year': '+50-80 marks avg', 'Cerebrum 2026 Batch': '+100-150 marks avg' },
-      { 'Factor': 'Study Plan', 'Unstructured Drop Year': 'Generic syllabus repeat', 'Cerebrum 2026 Batch': 'Personalized gap-based roadmap' },
-      { 'Factor': 'Mock Tests', 'Unstructured Drop Year': '10-15 self-purchased', 'Cerebrum 2026 Batch': '50+ with detailed chapter analysis' },
-      { 'Factor': 'Peer Support', 'Unstructured Drop Year': 'Studying alone', 'Cerebrum 2026 Batch': 'Community of 200+ motivated repeaters' },
+      {
+        Factor: 'First Attempt Score',
+        'Unstructured Drop Year': '+50-80 marks avg',
+        'Cerebrum 2026 Batch': '+100-150 marks avg',
+      },
+      {
+        Factor: 'Study Plan',
+        'Unstructured Drop Year': 'Generic syllabus repeat',
+        'Cerebrum 2026 Batch': 'Personalized gap-based roadmap',
+      },
+      {
+        Factor: 'Mock Tests',
+        'Unstructured Drop Year': '10-15 self-purchased',
+        'Cerebrum 2026 Batch': '50+ with detailed chapter analysis',
+      },
+      {
+        Factor: 'Peer Support',
+        'Unstructured Drop Year': 'Studying alone',
+        'Cerebrum 2026 Batch': 'Community of 200+ motivated repeaters',
+      },
     ],
   },
 
@@ -1349,32 +1455,38 @@ export const neetDropperBatch: SEOLandingContent = {
       {
         icon: 'search',
         title: 'Diagnostic Gap Analysis',
-        description: 'Day-one assessment pinpoints weak chapters. Your study plan is built around YOUR gaps, not a generic syllabus.',
+        description:
+          'Day-one assessment pinpoints weak chapters. Your study plan is built around YOUR gaps, not a generic syllabus.',
       },
       {
         icon: 'map-pin',
         title: 'Online + Offline Flexibility',
-        description: 'Attend classes at South Extension, Gurugram or Noida centers or join the online batch. Switch modes anytime.',
+        description:
+          'Attend classes at South Extension, Gurugram or Noida centers or join the online batch. Switch modes anytime.',
       },
       {
         icon: 'calendar',
         title: 'Intensive 6-Day Schedule',
-        description: 'Complete Class 11 + 12 revision in a structured year-long program. No school distractions — 100% NEET focus.',
+        description:
+          'Complete Class 11 + 12 revision in a structured year-long program. No school distractions — 100% NEET focus.',
       },
       {
         icon: 'bar-chart',
         title: '50+ Full-Length Mock Tests',
-        description: 'Weekly NEET-pattern tests with detailed analysis. Track your improvement every single week.',
+        description:
+          'Weekly NEET-pattern tests with detailed analysis. Track your improvement every single week.',
       },
       {
         icon: 'heart',
         title: 'Mental Wellness Support',
-        description: 'Drop year stress is real. Weekly motivation sessions, peer groups, and one-on-one counseling keep you on track.',
+        description:
+          'Drop year stress is real. Weekly motivation sessions, peer groups, and one-on-one counseling keep you on track.',
       },
       {
         icon: 'user-check',
         title: 'Personal Mentorship by Dr. Shekhar',
-        description: 'AIIMS alumnus Dr. Shekhar personally mentors every dropper student. Strategy calls, doubt sessions, and career guidance.',
+        description:
+          'AIIMS alumnus Dr. Shekhar personally mentors every dropper student. Strategy calls, doubt sessions, and career guidance.',
       },
     ],
   },
@@ -1414,7 +1526,8 @@ export const neetDropperBatch: SEOLandingContent = {
 
   cta: {
     title: 'Your Drop Year. Your Comeback.',
-    subtitle: 'Join 1,200+ droppers who turned their second chance into AIIMS, JIPMER, and top medical colleges.',
+    subtitle:
+      'Join 1,200+ droppers who turned their second chance into AIIMS, JIPMER, and top medical colleges.',
     primaryButton: {
       text: 'Enroll in 2026 Dropper Batch',
       link: '/enrollment',
@@ -1441,9 +1554,21 @@ export const neetDropperBatch: SEOLandingContent = {
       },
     ],
     checklist: [
-      { item: 'Visit the nearest center for a free counseling session', explanation: 'Meet the faculty, see the classroom setup, and get a personalized study plan before enrolling.' },
-      { item: 'Take the free diagnostic assessment', explanation: 'Understand your exact weak areas before deciding between online and offline mode.' },
-      { item: 'Compare batch sizes before choosing a coaching institute', explanation: 'Smaller batches directly correlate with higher improvement rates for dropper students.' },
+      {
+        item: 'Visit the nearest center for a free counseling session',
+        explanation:
+          'Meet the faculty, see the classroom setup, and get a personalized study plan before enrolling.',
+      },
+      {
+        item: 'Take the free diagnostic assessment',
+        explanation:
+          'Understand your exact weak areas before deciding between online and offline mode.',
+      },
+      {
+        item: 'Compare batch sizes before choosing a coaching institute',
+        explanation:
+          'Smaller batches directly correlate with higher improvement rates for dropper students.',
+      },
     ],
   },
 

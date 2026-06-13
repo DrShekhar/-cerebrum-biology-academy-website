@@ -296,7 +296,10 @@ export function PageContent() {
         </div>
       </section>
 
-            <USABOPathwayCallout cityName="Houston" schools={["Clements HS","Memorial HS","BASIS Houston","Cinco Ranch HS"]} />
+      <USABOPathwayCallout
+        cityName="Houston"
+        schools={['Clements HS', 'Memorial HS', 'BASIS Houston', 'Cinco Ranch HS']}
+      />
 
       {/* Related Cities */}
       <section className="py-16 px-4">

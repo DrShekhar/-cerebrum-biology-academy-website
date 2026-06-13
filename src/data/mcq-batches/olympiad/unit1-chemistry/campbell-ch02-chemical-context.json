@@ -69,12 +69,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about chemical bonds in biological systems:\nS1: Covalent bonds involve the sharing of electron pairs between atoms and are generally stronger than noncovalent interactions.\nS2: Ionic bonds in biological systems are typically weaker in aqueous solution than in a vacuum because water molecules solvate the ions.\nS3: Van der Waals interactions are individually strong but rare in biological molecules.\nS4: Hydrogen bonds form when a hydrogen atom covalently bonded to an electronegative atom (N, O, F) interacts with another electronegative atom.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TTFT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE because covalent bonds (typical bond energy 150-950 kJ/mol) involve shared electron pairs and are generally much stronger than noncovalent interactions (hydrogen bonds ~20 kJ/mol, van der Waals ~1-5 kJ/mol). S2 is TRUE because in aqueous solution, water molecules form hydration shells around ions (solvation), which weakens electrostatic interactions between oppositely charged ions compared to a vacuum where no dielectric medium exists. The dielectric constant of water (~80) substantially reduces electrostatic force. S3 is FALSE because van der Waals interactions are individually WEAK (not strong), but they are extremely COMMON (not rare) in biological molecules — they occur between all atoms in close proximity and collectively contribute significantly to protein folding and membrane stability. S4 is TRUE because hydrogen bonds require a hydrogen bond donor (H covalently bonded to N, O, or F) and a hydrogen bond acceptor (another electronegative atom with a lone pair).",
       "isOlympiad": true,
@@ -109,12 +104,7 @@
     {
       "type": "DATA_INTERPRETATION",
       "question": "A student measures the electronegativity values for elements commonly found in biological molecules:\n\nElement | Electronegativity (Pauling)\nH       | 2.20\nC       | 2.55\nN       | 3.04\nO       | 3.44\nS       | 2.58\nP       | 2.19\n\nBased on these values, which bond would be MOST polar?",
-      "options": [
-        "C-H (ΔEN = 0.35)",
-        "C-N (ΔEN = 0.49)",
-        "C-S (ΔEN = 0.03)",
-        "O-H (ΔEN = 1.24)"
-      ],
+      "options": ["C-H (ΔEN = 0.35)", "C-N (ΔEN = 0.49)", "C-S (ΔEN = 0.03)", "O-H (ΔEN = 1.24)"],
       "correctAnswer": "D",
       "explanation": "Bond polarity is directly proportional to the difference in electronegativity (ΔEN) between the bonded atoms. The O-H bond has the largest electronegativity difference (3.44 - 2.20 = 1.24), making it the most polar bond among the options. This high polarity is why water is such an effective polar solvent and why O-H groups are excellent hydrogen bond donors. Option A (C-H, ΔEN = 0.35) has a small electronegativity difference and is considered essentially nonpolar. Option B (C-N, ΔEN = 0.49) is moderately polar but much less so than O-H. Option C (C-S, ΔEN = 0.03) has a negligible difference, making it essentially nonpolar — this is why thiol groups are less polar than hydroxyl groups.",
       "isOlympiad": true,
@@ -329,12 +319,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about weak interactions in biological systems:\nS1: Hydrogen bonds typically have energies of 10-30 kJ/mol, making them individually weaker than covalent bonds but collectively significant for molecular stability.\nS2: Hydrophobic interactions are driven by the entropy gain of water molecules released from ordered cages around nonpolar molecules.\nS3: Van der Waals forces can only occur between molecules that carry permanent dipoles.\nS4: The cumulative effect of many weak interactions is crucial for protein folding, DNA double helix stability, and enzyme-substrate recognition.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFFT",
-        "TFTF"
-      ],
+      "options": ["TTFT", "TTTT", "TFFT", "TFTF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE because hydrogen bonds (10-30 kJ/mol) are significantly weaker than typical covalent bonds (150-950 kJ/mol) but are numerous in biological systems, and their cumulative effect is critical for molecular structure and function. S2 is TRUE because the hydrophobic effect is primarily entropy-driven. When nonpolar molecules are exposed to water, water molecules form ordered 'cages' (clathrate structures) around them, reducing water entropy. When nonpolar groups aggregate, these ordered water molecules are released to bulk solvent, increasing overall entropy (ΔS > 0), which drives the process (ΔG = ΔH - TΔS becomes more negative). S3 is FALSE because van der Waals forces include London dispersion forces, which occur between ALL atoms and molecules — even nonpolar ones — due to transient, induced dipoles from fluctuating electron clouds. S4 is TRUE because protein folding relies on collective hydrogen bonds, hydrophobic interactions, and van der Waals forces; DNA stability depends on hydrogen bonds between bases and stacking interactions; enzyme-substrate recognition depends on complementary weak interactions.",
       "isOlympiad": true,
@@ -469,12 +454,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the role of water as a solvent in biological systems:\nS1: Water dissolves ionic compounds by surrounding individual ions with hydration shells, where the partial charges on water molecules interact with the ion charges.\nS2: Nonpolar molecules like fats dissolve readily in water because water can form hydrogen bonds with their C-H bonds.\nS3: The high dielectric constant of water weakens electrostatic interactions between ions in solution compared to a vacuum.\nS4: Amphipathic molecules (having both polar and nonpolar regions) orient themselves at water-air interfaces with their polar regions in the water phase.",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TFTT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE because when ionic compounds dissolve in water, the partially negative oxygen atoms of water molecules orient toward cations (positive ions) while the partially positive hydrogen atoms orient toward anions (negative ions), forming hydration shells that stabilize the ions in solution and prevent them from reassociating. S2 is FALSE because nonpolar molecules like fats do NOT dissolve readily in water — they are hydrophobic ('water-fearing'). Water cannot form hydrogen bonds with C-H bonds because carbon is not sufficiently electronegative. Instead, nonpolar molecules are excluded from water and aggregate together (hydrophobic effect). S3 is TRUE because water's high dielectric constant (~80 at 25°C) reduces the electrostatic force between ions by a factor of ~80 compared to a vacuum (Coulomb's law: F = kq₁q₂/εr²). This is why NaCl dissociates in water but not in air. S4 is TRUE because amphipathic molecules (e.g., phospholipids, detergents) have dual character and orient at interfaces with polar regions in the aqueous phase and nonpolar regions away from water.",
       "isOlympiad": true,
@@ -729,12 +709,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the biological importance of trace elements:\nS1: Iron is required for oxygen transport in hemoglobin, where it is bound within the heme prosthetic group.\nS2: Zinc is a cofactor in over 300 enzymes, including carbonic anhydrase and DNA polymerase.\nS3: Fluorine is the most abundant trace element in the human body and is essential for protein synthesis.\nS4: Copper is required for the activity of cytochrome c oxidase, the terminal enzyme of the electron transport chain.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TTFT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE because iron (Fe²⁺) is at the center of the heme group in hemoglobin, where it reversibly binds oxygen. Each hemoglobin molecule contains four heme groups, each with one iron atom, enabling oxygen transport from lungs to tissues. S2 is TRUE because zinc is one of the most versatile catalytic metal ions in biology, serving as a cofactor in over 300 enzymes including carbonic anhydrase (CO₂ hydration), alcohol dehydrogenase, DNA polymerase (structural zinc fingers), and matrix metalloproteinases. S3 is FALSE because fluorine is NOT the most abundant trace element (iron is more abundant), and fluorine is NOT essential for protein synthesis. Fluorine's main biological role is in strengthening tooth enamel (as fluoroapatite), which is why it is added to toothpaste and water supplies. S4 is TRUE because cytochrome c oxidase (Complex IV) contains copper centers (CuA and CuB) that are essential for its function in accepting electrons and reducing O₂ to H₂O.",
       "isOlympiad": true,
@@ -1229,12 +1204,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about radioactive isotopes in biology:\nS1: Carbon-14 dating works because the ratio of ¹⁴C to ¹²C in organisms remains constant during life but decreases after death as ¹⁴C decays.\nS2: ³²P is commonly used to label DNA in molecular biology experiments because phosphorus is part of the DNA backbone.\nS3: Radioactive isotopes are chemically different from their stable counterparts, forming different types of bonds.\nS4: PET (Positron Emission Tomography) scans use radioactive tracers like ¹⁸F-fluorodeoxyglucose to image metabolic activity in tissues.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TTFT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE because living organisms constantly exchange carbon with the environment (through photosynthesis and respiration), maintaining a ¹⁴C/¹²C ratio equal to the atmospheric ratio. After death, this exchange stops, and ¹⁴C decays with a half-life of ~5,730 years while ¹²C remains stable, causing the ratio to decrease predictably. S2 is TRUE because ³²P (radioactive phosphorus) is incorporated into the phosphodiester backbone of DNA and RNA during replication/transcription, making it an excellent label for nucleic acid experiments (Southern blots, kinase assays). S3 is FALSE because radioactive isotopes have identical chemical properties to their stable counterparts — they form the same bonds and participate in the same reactions. Only the nuclear stability differs. This is precisely why radioisotopes are useful as tracers: they behave identically to stable isotopes but can be detected. S4 is TRUE because ¹⁸F-FDG is taken up by metabolically active cells (especially glucose-avid cells like brain and tumor cells) and emits positrons that are detected by PET scanners.",
       "isOlympiad": true,

@@ -20,8 +20,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/test-series-schedule' },
   openGraph: {
     title: 'NEET Test Series Schedule 2026 | Cerebrum',
-    description:
-      'Weekly + full-length 720-mark mocks. AIIMS-faculty papers + rank projection.',
+    description: 'Weekly + full-length 720-mark mocks. AIIMS-faculty papers + rank projection.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/test-series-schedule',

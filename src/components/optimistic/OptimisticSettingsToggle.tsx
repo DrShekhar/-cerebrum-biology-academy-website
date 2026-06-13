@@ -147,9 +147,7 @@ export function OptimisticSettingsToggle({
                     isEnabled ? colors[setting.color as keyof typeof colors] : 'bg-gray-300'
                   } ${isLoading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
                 >
-                  <div
-                    className="absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center animate-fadeInUp"
-                  >
+                  <div className="absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center animate-fadeInUp">
                     {isEnabled && <Check className="w-4 h-4 text-green-600" />}
                   </div>
                 </button>

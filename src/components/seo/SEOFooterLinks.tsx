@@ -13,7 +13,7 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
     heading: 'NEET Coaching Centers',
     links: [
       { label: 'South Extension', href: '/neet-coaching-south-extension' },
-      { label: 'Gurugram', href: '/neet-coaching-dlf-gurgaon' },
+      { label: 'Gurugram', href: '/neet-coaching-gurugram' },
       { label: 'Rohini', href: '/neet-coaching-rohini' },
       { label: 'Green Park', href: '/neet-coaching-green-park-delhi' },
       { label: 'Faridabad', href: '/neet-coaching-faridabad' },

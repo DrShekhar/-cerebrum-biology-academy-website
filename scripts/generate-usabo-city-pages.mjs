@@ -136,9 +136,9 @@ const CITIES = [
       'Canyon Crest Academy',
     ],
     heroBlurb:
-      "Greater LA and San Diego host the second-largest USABO talent pool on the West Coast. The San Gabriel Valley schools — Pasadena, San Marino, La Cañada, Arcadia — together with the Orange County prep cluster (Troy, University HS Irvine, Diamond Bar) and Torrey Pines / Canyon Crest in San Diego, consistently send students to Semifinals. PT-evening live classes work for all three sub-regions.",
+      'Greater LA and San Diego host the second-largest USABO talent pool on the West Coast. The San Gabriel Valley schools — Pasadena, San Marino, La Cañada, Arcadia — together with the Orange County prep cluster (Troy, University HS Irvine, Diamond Bar) and Torrey Pines / Canyon Crest in San Diego, consistently send students to Semifinals. PT-evening live classes work for all three sub-regions.',
     rigourBlurb:
-      "LA and San Diego families weighing options between Curie Learning, individual tutors, and online platforms come to Cerebrum for AIIMS-trained, biology-only faculty teaching at olympiad depth. The Indian small-batch tradition — weekly written feedback, retrieval-heavy methodology, max 12 students per cohort — is exactly what high-achieving STEM students at Pasadena, San Marino, Troy, and Torrey Pines need to convert AP-5 trajectory into Semifinalist standing.",
+      'LA and San Diego families weighing options between Curie Learning, individual tutors, and online platforms come to Cerebrum for AIIMS-trained, biology-only faculty teaching at olympiad depth. The Indian small-batch tradition — weekly written feedback, retrieval-heavy methodology, max 12 students per cohort — is exactly what high-achieving STEM students at Pasadena, San Marino, Troy, and Torrey Pines need to convert AP-5 trajectory into Semifinalist standing.',
   },
   {
     slug: 'usabo-coaching-new-jersey',
@@ -158,7 +158,7 @@ const CITIES = [
       'Holmdel HS',
     ],
     heroBlurb:
-      "Central New Jersey is one of the densest USABO markets per capita — driven by the West Windsor-Plainsboro / Princeton / Montgomery / J.P. Stevens cluster and the strong Indian-American academic community across Middlesex and Mercer counties. ET-evening live classes are scheduled around the heavy AP / dual-enrolment workload these schools run.",
+      'Central New Jersey is one of the densest USABO markets per capita — driven by the West Windsor-Plainsboro / Princeton / Montgomery / J.P. Stevens cluster and the strong Indian-American academic community across Middlesex and Mercer counties. ET-evening live classes are scheduled around the heavy AP / dual-enrolment workload these schools run.',
     rigourBlurb:
       "New Jersey families come to Cerebrum because the local landscape is over-saturated with all-subject tutoring and under-served on biology specialisation. AIIMS-trained, biology-only faculty teaching with weekly written feedback on every past-paper attempt is structurally different from US AP tutoring — it's the depth that converts AP-5 students at WW-P, Princeton, and Montgomery into national-tier USABO standing.",
   },
@@ -224,7 +224,7 @@ const CITIES = [
       'McCallum HS (Austin)',
     ],
     heroBlurb:
-      "The Plano / Frisco / Allen corridor in North Texas plus the Westlake / Westwood / LASA cluster in Austin together form a strong Texas USABO presence. Plano West, TAG Magnet, LASA, and Westlake are repeat Semifinalist producers — the Indian-American and East-Asian-American academic communities across both metros drive consistent representation. CT-evening live classes work for both Dallas and Austin time zones.",
+      'The Plano / Frisco / Allen corridor in North Texas plus the Westlake / Westwood / LASA cluster in Austin together form a strong Texas USABO presence. Plano West, TAG Magnet, LASA, and Westlake are repeat Semifinalist producers — the Indian-American and East-Asian-American academic communities across both metros drive consistent representation. CT-evening live classes work for both Dallas and Austin time zones.',
     rigourBlurb:
       "Dallas and Austin families come to Cerebrum for biology-specialist olympiad coaching that local Texas tutoring centres don't offer at this depth. AIIMS-trained faculty, max 12 students per batch, weekly written feedback on every past-paper — the Indian small-batch coaching tradition adapted to CT evenings. Plano West, LASA, and Westlake students already have the AP-5 foundation; what we add is olympiad-shaped depth.",
   },
@@ -248,7 +248,7 @@ const CITIES = [
     heroBlurb:
       "Atlanta's North Fulton and Forsyth corridor — Walton, Roswell, Alpharetta, Northview, Lambert — produces the South-East's strongest USABO concentration outside Houston. The Indian-American academic community across Alpharetta, Johns Creek, Cumming, and Suwanee drives consistent Semifinalist representation each year. ET-evening live classes fit AP and dual-enrolment workloads.",
     rigourBlurb:
-      "Atlanta families come to Cerebrum because local options are scarce on biology-specialist olympiad coaching — and AIIMS-trained, biology-only faculty teaching with weekly written feedback is genuinely differentiated. The Indian small-batch tradition produces national-tier biology depth; for students at Walton, Northview, Lambert, and Westminster aiming at Emory / Duke / Hopkins / Stanford for STEM, USABO Semifinalist standing is a meaningful credential.",
+      'Atlanta families come to Cerebrum because local options are scarce on biology-specialist olympiad coaching — and AIIMS-trained, biology-only faculty teaching with weekly written feedback is genuinely differentiated. The Indian small-batch tradition produces national-tier biology depth; for students at Walton, Northview, Lambert, and Westminster aiming at Emory / Duke / Hopkins / Stanford for STEM, USABO Semifinalist standing is a meaningful credential.',
   },
 ]
 

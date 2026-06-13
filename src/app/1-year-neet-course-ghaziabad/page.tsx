@@ -44,7 +44,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: '1 Year NEET Course Ghaziabad 2026 | Class 12 + Dropper',
-    description: 'Join 1-year NEET course for Ghaziabad students. Class 12 & droppers. Complete syllabus in 12 months. Sector 62 Noida center, accessible via Blue Line Metro. Call 99536-43938!',
+    description:
+      'Join 1-year NEET course for Ghaziabad students. Class 12 & droppers. Complete syllabus in 12 months. Sector 62 Noida center, accessible via Blue Line Metro. Call 99536-43938!',
   },
 }
 
@@ -139,7 +140,11 @@ export default function OneYearNEETCourseGhaziabad() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-red-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+        knowsAbout={[
+          'NEET Ghaziabad',
+          'NEET Biology Ghaziabad',
+          'Medical entrance coaching Ghaziabad',
+        ]}
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-red-700 to-red-600 text-white py-16">

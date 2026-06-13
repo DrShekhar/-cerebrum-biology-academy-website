@@ -84,34 +84,37 @@ export async function GET(request: NextRequest) {
       where: { isNcertBased: true, isActive: true },
     })
 
-    return NextResponse.json({
-      success: true,
-      data: {
-        chapters: {
-          class9: class9Chapters,
-          class10: class10Chapters,
-          class11: class11Chapters,
-          class12: class12Chapters,
-          all: chapters,
-        },
-        statistics: {
-          totalNcertQuestions,
-          class9Questions: class9Chapters.reduce((sum, ch) => sum + ch.questionCount, 0),
-          class10Questions: class10Chapters.reduce((sum, ch) => sum + ch.questionCount, 0),
-          class11Questions: class11Chapters.reduce((sum, ch) => sum + ch.questionCount, 0),
-          class12Questions: class12Chapters.reduce((sum, ch) => sum + ch.questionCount, 0),
-          byWeightage: Object.fromEntries(
-            weightageStats.map((w) => [w.neetWeightage || 'UNKNOWN', w._count.id])
-          ),
-        },
-        filters: {
-          classes: [9, 10, 11, 12],
-          weightages: ['HIGH', 'MEDIUM', 'LOW'],
+    return NextResponse.json(
+      {
+        success: true,
+        data: {
+          chapters: {
+            class9: class9Chapters,
+            class10: class10Chapters,
+            class11: class11Chapters,
+            class12: class12Chapters,
+            all: chapters,
+          },
+          statistics: {
+            totalNcertQuestions,
+            class9Questions: class9Chapters.reduce((sum, ch) => sum + ch.questionCount, 0),
+            class10Questions: class10Chapters.reduce((sum, ch) => sum + ch.questionCount, 0),
+            class11Questions: class11Chapters.reduce((sum, ch) => sum + ch.questionCount, 0),
+            class12Questions: class12Chapters.reduce((sum, ch) => sum + ch.questionCount, 0),
+            byWeightage: Object.fromEntries(
+              weightageStats.map((w) => [w.neetWeightage || 'UNKNOWN', w._count.id])
+            ),
+          },
+          filters: {
+            classes: [9, 10, 11, 12],
+            weightages: ['HIGH', 'MEDIUM', 'LOW'],
+          },
         },
       },
-    }, {
-      headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
-    })
+      {
+        headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
+      }
+    )
   } catch (error) {
     console.error('Error fetching NCERT chapters:', error)
     return NextResponse.json(

@@ -290,9 +290,7 @@ function ProgressRow({
         </span>
       </div>
       <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-        <div
-          className={cn('h-full rounded-full', getBarColor(rate))}
-        />
+        <div className={cn('h-full rounded-full', getBarColor(rate))} />
       </div>
     </div>
   )

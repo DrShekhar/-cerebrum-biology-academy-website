@@ -26,10 +26,6 @@ export const metadata: Metadata = {
   },
 }
 
-export default function BiologyTuitionFaridabadLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function BiologyTuitionFaridabadLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>
 }

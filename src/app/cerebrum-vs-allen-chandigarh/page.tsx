@@ -29,64 +29,66 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 const faqs = [
   {
-    question: 'How is Cerebrum different from the largest national NEET chain Chandigarh for NEET Biology?',
+    question: 'How is Cerebrum different from Allen Chandigarh for NEET Biology?',
     answer:
-      'Cerebrum offers small batches of 10-15 students compared to the largest national NEET chain Chandigarh\'s 60-100+ students per batch. Our faculty is exclusively AIIMS-trained, while the largest national NEET chain has mixed faculty backgrounds. You get daily 1-on-1 doubt sessions vs crowded doubt counters. Fees are Rs 24K-68K vs Rs 1.5-2.5 Lakhs at the largest national NEET chain. Our 98% success rate competes with the largest national NEET chain\'s results but with far better personalized attention.',
+      "Cerebrum offers small batches of 10-15 students compared to Allen Chandigarh's 60-100+ students per batch. Our faculty is exclusively AIIMS-trained, while Allen has mixed faculty backgrounds. You get daily 1-on-1 doubt sessions vs crowded doubt counters. Fees are Rs 24K-68K vs Rs 1.5-2.5 Lakhs at Allen. Our 98% success rate competes with Allen's results but with far better personalized attention.",
   },
   {
-    question: 'Where is the largest national NEET chain Chandigarh located and how does Cerebrum compare for Tricity students?',
+    question:
+      'Where is Allen Chandigarh located and how does Cerebrum compare for Tricity students?',
     answer:
-      'the largest national NEET chain Chandigarh is located at Sector 34A, Industrial Area Phase 2. Students from Panchkula and Mohali spend 1-2 hours daily commuting to Sector 34. Cerebrum offers live online classes, eliminating commute entirely. Same quality teaching, zero travel time - study from the comfort of your home in any Tricity location.',
+      'Allen Chandigarh is located at Sector 34A, Industrial Area Phase 2. Students from Panchkula and Mohali spend 1-2 hours daily commuting to Sector 34. Cerebrum offers live online classes, eliminating commute entirely. Same quality teaching, zero travel time - study from the comfort of your home in any Tricity location.',
   },
   {
-    question: 'What are the largest national NEET chain Chandigarh fees compared to Cerebrum for NEET 2026?',
+    question: 'What are Allen Chandigarh fees compared to Cerebrum for NEET 2026?',
     answer:
-      'the largest national NEET chain Chandigarh fees range from Rs 1.5-2.5 Lakhs per year depending on the program. Cerebrum offers NEET Biology coaching at Rs 24,000-68,000 per year. Despite being 60-75% more affordable, Cerebrum provides smaller batches (10-15 vs 60-100+), AIIMS faculty, and dedicated Biology focus. Annual savings of Rs 80,000-1.8 Lakhs!',
+      'Allen Chandigarh fees range from Rs 1.5-2.5 Lakhs per year depending on the program. Cerebrum offers NEET Biology coaching at Rs 24,000-68,000 per year. Despite being 60-75% more affordable, Cerebrum provides smaller batches (10-15 vs 60-100+), AIIMS faculty, and dedicated Biology focus. Annual savings of Rs 80,000-1.8 Lakhs!',
   },
   {
-    question: 'Did the largest national NEET chain Chandigarh produce AIR 7 in NEET 2025?',
+    question: 'Did Allen Chandigarh produce AIR 7 in NEET 2025?',
     answer:
-      'Yes, Keshav Mittal (AIR 7 in NEET 2025) is from the largest national NEET chain Chandigarh. the largest national NEET chain has proven results in top ranks. However, their model works for self-driven students who can handle large batch sizes. If you need personalized attention and are specifically weak in Biology, Cerebrum\'s specialized approach with AIIMS faculty may suit you better.',
+      "Yes, Keshav Mittal (AIR 7 in NEET 2025) is from Allen Chandigarh. Allen has proven results in top ranks. However, their model works for self-driven students who can handle large batch sizes. If you need personalized attention and are specifically weak in Biology, Cerebrum's specialized approach with AIIMS faculty may suit you better.",
   },
   {
-    question: 'Can I join Cerebrum for Biology while continuing at the largest national NEET chain Chandigarh for Physics/Chemistry?',
+    question:
+      'Can I join Cerebrum for Biology while continuing at Allen Chandigarh for Physics/Chemistry?',
     answer:
-      'Absolutely! This is a popular combination among Tricity students. Continue the largest national NEET chain for Physics and Chemistry, but boost your Biology with Cerebrum\'s specialized coaching. Our flexible evening and weekend batches don\'t clash with the largest national NEET chain\'s schedule. Many students who took this approach improved their Biology scores by 50-80 marks.',
+      "Absolutely! This is a popular combination among Tricity students. Continue Allen for Physics and Chemistry, but boost your Biology with Cerebrum's specialized coaching. Our flexible evening and weekend batches don't clash with Allen's schedule. Many students who took this approach improved their Biology scores by 50-80 marks.",
   },
   {
-    question: 'Why do students switch from the largest national NEET chain Chandigarh to Cerebrum?',
+    question: 'Why do students switch from Allen Chandigarh to Cerebrum?',
     answer:
       'Common reasons include: 1) Large batch sizes (60-100+) making personal attention impossible, 2) Long wait times at doubt counters, 3) Difficulty keeping up in crowded classes, 4) High fees with limited Biology depth, 5) Commute stress from Panchkula/Mohali to Sector 34. Students switching to Cerebrum report better understanding and improved confidence.',
   },
   {
-    question: 'What is the batch size comparison between Cerebrum and the largest national NEET chain Chandigarh?',
+    question: 'What is the batch size comparison between Cerebrum and Allen Chandigarh?',
     answer:
-      'the largest national NEET chain Chandigarh operates with 60-100+ students per batch in their regular programs. Cerebrum strictly limits batches to 10-15 students. This 6-8x smaller batch size means every student gets individual attention, personalized feedback on tests, and guaranteed time with faculty for doubt clearing.',
+      'Allen Chandigarh operates with 60-100+ students per batch in their regular programs. Cerebrum strictly limits batches to 10-15 students. This 6-8x smaller batch size means every student gets individual attention, personalized feedback on tests, and guaranteed time with faculty for doubt clearing.',
   },
   {
-    question: 'Is online coaching from Cerebrum as effective as the largest national NEET chain Chandigarh offline classes?',
+    question: 'Is online coaching from Cerebrum as effective as Allen Chandigarh offline classes?',
     answer:
       'Our 98% success rate proves online coaching effectiveness. Benefits include: live interactive classes (not recorded), instant screen sharing for doubt clearing, 7am-11pm WhatsApp support, recorded sessions for revision, no commute stress. Many students prefer our online model over spending 2 hours daily traveling to Sector 34.',
   },
   {
-    question: 'How does faculty qualification compare between Cerebrum and the largest national NEET chain Chandigarh?',
+    question: 'How does faculty qualification compare between Cerebrum and Allen Chandigarh?',
     answer:
-      'Cerebrum faculty is exclusively from AIIMS (Dr. Shekhar C Singh leads our team). the largest national NEET chain Chandigarh has a larger faculty pool with varied backgrounds - some excellent, some average. Our AIIMS-trained teachers bring real medical perspective to Biology, making concepts clinically relevant and easier to remember.',
+      'Cerebrum faculty is exclusively from AIIMS (Dr. Shekhar C Singh leads our team). Allen Chandigarh has a larger faculty pool with varied backgrounds - some excellent, some average. Our AIIMS-trained teachers bring real medical perspective to Biology, making concepts clinically relevant and easier to remember.',
   },
   {
-    question: 'What study material does Cerebrum provide compared to the largest national NEET chain Chandigarh?',
+    question: 'What study material does Cerebrum provide compared to Allen Chandigarh?',
     answer:
-      'the largest national NEET chain provides comprehensive but bulky material covering all subjects. Cerebrum provides focused Biology material: NCERT-aligned notes, 15,000+ MCQ bank, previous year papers (2015-2025), 50+ topic-wise tests, AI-powered weakness analysis. Quality over quantity - our material is specifically designed for Biology mastery.',
+      'Allen provides comprehensive but bulky material covering all subjects. Cerebrum provides focused Biology material: NCERT-aligned notes, 15,000+ MCQ bank, previous year papers (2015-2025), 50+ topic-wise tests, AI-powered weakness analysis. Quality over quantity - our material is specifically designed for Biology mastery.',
   },
   {
-    question: 'How much can I save by choosing Cerebrum over the largest national NEET chain Chandigarh?',
+    question: 'How much can I save by choosing Cerebrum over Allen Chandigarh?',
     answer:
       'Direct fee savings: Rs 80,000 to Rs 1.8 Lakhs per year. Additional savings: No commute costs (Rs 2,000-5,000/month for Panchkula/Mohali students), no hostel fees for outstation students, no food expenses during long coaching hours. Total annual savings can exceed Rs 2.5 Lakhs for some families.',
   },
   {
-    question: 'Does Cerebrum have a physical center in Chandigarh like the largest national NEET chain?',
+    question: 'Does Cerebrum have a physical center in Chandigarh like Allen?',
     answer:
-      'Cerebrum operates primarily through live online classes for Chandigarh Tricity. the largest national NEET chain has a physical center at Sector 34A. Our online model provides advantages: no commute, flexible timing, recorded sessions for revision, same AIIMS faculty teaching every batch. Students from Sector 17 to Zirakpur get identical quality coaching.',
+      'Cerebrum operates primarily through live online classes for Chandigarh Tricity. Allen has a physical center at Sector 34A. Our online model provides advantages: no commute, flexible timing, recorded sessions for revision, same AIIMS faculty teaching every batch. Students from Sector 17 to Zirakpur get identical quality coaching.',
   },
 ]
 
@@ -169,7 +171,7 @@ const reasonsToSwitch = [
   {
     title: 'Lost in 60-100+ Student Batches?',
     description:
-      "the largest national NEET chain Chandigarh's large batches mean teachers can't know every student. At Cerebrum, with 10-15 students, you're not just a roll number - you're personally mentored by AIIMS faculty.",
+      "Allen Chandigarh's large batches mean teachers can't know every student. At Cerebrum, with 10-15 students, you're not just a roll number - you're personally mentored by AIIMS faculty.",
     icon: Users,
   },
   {
@@ -181,13 +183,13 @@ const reasonsToSwitch = [
   {
     title: 'Tired of Sector 34 Commute?',
     description:
-      'Panchkula, Mohali, Zirakpur students spend 1-2 hours daily traveling to the largest national NEET chain. Our online classes save this time for actual studying. Same quality, zero commute.',
+      'Panchkula, Mohali, Zirakpur students spend 1-2 hours daily traveling to Allen. Our online classes save this time for actual studying. Same quality, zero commute.',
     icon: Clock,
   },
   {
     title: 'Save Rs 1+ Lakh Annually',
     description:
-      'the largest national NEET chain fees of Rs 1.5-2.5 Lakhs vs Cerebrum Rs 24K-68K. Same success rate, better attention, massive savings. Use the difference for medical college expenses.',
+      'Allen fees of Rs 1.5-2.5 Lakhs vs Cerebrum Rs 24K-68K. Same success rate, better attention, massive savings. Use the difference for medical college expenses.',
     icon: IndianRupee,
   },
 ]
@@ -196,34 +198,39 @@ const successStories = [
   {
     name: 'Ananya Sharma',
     score: '678/720',
-    previousInstitute: 'Ex-the largest national NEET chain Chandigarh',
+    previousInstitute: 'Ex-Allen Chandigarh',
     location: 'Panchkula',
     quote:
-      "Switched from the largest national NEET chain after Class 11 because I couldn't get my doubts cleared in their large batches. Cerebrum's small batch and AIIMS faculty transformed my Biology preparation. Improved from 260 to 350 in Biology!",
+      "Switched from Allen after Class 11 because I couldn't get my doubts cleared in their large batches. Cerebrum's small batch and AIIMS faculty transformed my Biology preparation. Improved from 260 to 350 in Biology!",
     improvement: '+90 in Biology',
   },
   {
     name: 'Rohan Gupta',
     score: '652/720',
-    previousInstitute: 'the largest national NEET chain + Cerebrum',
+    previousInstitute: 'Allen + Cerebrum',
     location: 'Mohali',
     quote:
-      'I continued Physics/Chemistry at the largest national NEET chain Sector 34 but joined Cerebrum for Biology. The specialized attention made Biology my strongest subject. No regrets about this combination!',
+      'I continued Physics/Chemistry at Allen Sector 34 but joined Cerebrum for Biology. The specialized attention made Biology my strongest subject. No regrets about this combination!',
     improvement: 'Biology strongest subject',
   },
   {
     name: 'Priya Verma',
     score: '635/720',
-    previousInstitute: 'Dropper (Ex-the largest national NEET chain)',
+    previousInstitute: 'Dropper (Ex-Allen)',
     location: 'Chandigarh Sec 35',
     quote:
-      "After failing to qualify in my first attempt with the largest national NEET chain, I needed personalized guidance. Cerebrum's dropper batch with daily mentoring helped me improve by 95 marks.",
+      "After failing to qualify in my first attempt with Allen, I needed personalized guidance. Cerebrum's dropper batch with daily mentoring helped me improve by 95 marks.",
     improvement: '+95 overall',
   },
 ]
 
 const savingsBreakdown = [
-  { item: 'Course Fee Difference', cerebrum: 'Rs 68,000', allen: 'Rs 2,00,000', savings: 'Rs 1,32,000' },
+  {
+    item: 'Course Fee Difference',
+    cerebrum: 'Rs 68,000',
+    allen: 'Rs 2,00,000',
+    savings: 'Rs 1,32,000',
+  },
   { item: 'Annual Commute Cost', cerebrum: 'Rs 0', allen: 'Rs 30,000', savings: 'Rs 30,000' },
   { item: 'Hostel (Outstation)', cerebrum: 'Rs 0', allen: 'Rs 1,20,000', savings: 'Rs 1,20,000' },
   { item: 'Food During Coaching', cerebrum: 'Rs 0', allen: 'Rs 24,000', savings: 'Rs 24,000' },
@@ -237,7 +244,7 @@ export default function CerebrumVsAllenChandigarhPage() {
     trackAndOpenWhatsApp({
       source: 'cerebrum-vs-allen-chandigarh',
       message:
-        'Hi! I am comparing Cerebrum vs the largest national NEET chain Chandigarh for NEET Biology coaching. Please share how Cerebrum is better for Tricity students.',
+        'Hi! I am comparing Cerebrum vs Allen Chandigarh for NEET Biology coaching. Please share how Cerebrum is better for Tricity students.',
       campaign: 'allen-chandigarh-comparison',
     })
   }
@@ -250,9 +257,9 @@ export default function CerebrumVsAllenChandigarhPage() {
   const comparisonSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Cerebrum vs the largest national NEET chain Chandigarh NEET Coaching Comparison',
+    name: 'Cerebrum vs Allen Chandigarh NEET Coaching Comparison',
     description:
-      'Detailed comparison of Cerebrum Biology Academy vs the largest national NEET chain Chandigarh for NEET Biology preparation in Chandigarh Tricity',
+      'Detailed comparison of Cerebrum Biology Academy vs Allen Chandigarh for NEET Biology preparation in Chandigarh Tricity',
     mainEntity: {
       '@type': 'ItemList',
       itemListElement: [
@@ -266,7 +273,7 @@ export default function CerebrumVsAllenChandigarhPage() {
         {
           '@type': 'EducationalOrganization',
           position: 2,
-          name: 'XYZ Coaching (largest national NEET chain) Chandigarh',
+          name: 'Allen Chandigarh',
           address: {
             '@type': 'PostalAddress',
             streetAddress: 'Sector 34A, Industrial Area Phase 2',
@@ -294,7 +301,12 @@ export default function CerebrumVsAllenChandigarhPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
       {
         '@type': 'ListItem',
         position: 2,
@@ -304,7 +316,7 @@ export default function CerebrumVsAllenChandigarhPage() {
       {
         '@type': 'ListItem',
         position: 3,
-        name: 'Cerebrum vs the largest national NEET chain Chandigarh',
+        name: 'Cerebrum vs Allen Chandigarh',
         item: 'https://cerebrumbiologyacademy.com/cerebrum-vs-allen-chandigarh',
       },
     ],
@@ -342,7 +354,7 @@ export default function CerebrumVsAllenChandigarhPage() {
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <span className="text-[#1e3a5f] font-medium">Cerebrum vs the largest national NEET chain</span>
+              <span className="text-[#1e3a5f] font-medium">Cerebrum vs Allen</span>
             </li>
           </ol>
         </div>
@@ -356,16 +368,14 @@ export default function CerebrumVsAllenChandigarhPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="max-w-4xl animate-fadeInUp"
-          >
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-4 h-4" />
               Chandigarh Tricity Comparison 2026
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Cerebrum vs the largest national NEET chain Chandigarh
+              Cerebrum vs Allen Chandigarh
               <span className="block text-[#4ade80] mt-2">NEET Biology Coaching Comparison</span>
             </h1>
 
@@ -390,7 +400,11 @@ export default function CerebrumVsAllenChandigarhPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -422,7 +436,7 @@ export default function CerebrumVsAllenChandigarhPage() {
             </div>
             <div>
               <p className="text-3xl font-bold text-orange-600">60-100+</p>
-              <p className="text-sm text-gray-600">the largest national NEET chain Chandigarh Batch</p>
+              <p className="text-sm text-gray-600">Allen Chandigarh Batch</p>
             </div>
             <div>
               <p className="text-3xl font-bold text-green-600">Rs 1.3L+</p>
@@ -439,11 +453,9 @@ export default function CerebrumVsAllenChandigarhPage() {
       {/* Why Students Switch */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Why Chandigarh Students Switch from the largest national NEET chain to Cerebrum
+              Why Chandigarh Students Switch from Allen to Cerebrum
             </h2>
             <p className="text-xl text-slate-600">
               Common challenges that bring Tricity students to personalized Biology coaching
@@ -470,11 +482,9 @@ export default function CerebrumVsAllenChandigarhPage() {
       {/* Detailed Comparison Table */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Cerebrum vs the largest national NEET chain Chandigarh: Detailed Comparison
+              Cerebrum vs Allen Chandigarh: Detailed Comparison
             </h2>
             <p className="text-xl text-slate-600">
               Side-by-side comparison for NEET Biology preparation in Chandigarh Tricity
@@ -492,7 +502,7 @@ export default function CerebrumVsAllenChandigarhPage() {
                       Cerebrum
                     </span>
                   </th>
-                  <th className="px-6 py-4 text-center font-semibold">the largest national NEET chain Chandigarh</th>
+                  <th className="px-6 py-4 text-center font-semibold">Allen Chandigarh</th>
                 </tr>
               </thead>
               <tbody>
@@ -533,15 +543,13 @@ export default function CerebrumVsAllenChandigarhPage() {
       {/* Cost Savings Calculator */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-green-50 to-emerald-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Calculator className="w-4 h-4" />
               Annual Savings Calculator
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              How Much Can You Save vs the largest national NEET chain Chandigarh?
+              How Much Can You Save vs Allen Chandigarh?
             </h2>
             <p className="text-xl text-slate-600">
               Complete cost comparison including hidden expenses
@@ -555,7 +563,7 @@ export default function CerebrumVsAllenChandigarhPage() {
                   <tr>
                     <th className="px-6 py-4 text-left">Expense Item</th>
                     <th className="px-6 py-4 text-center">Cerebrum</th>
-                    <th className="px-6 py-4 text-center">the largest national NEET chain Chandigarh</th>
+                    <th className="px-6 py-4 text-center">Allen Chandigarh</th>
                     <th className="px-6 py-4 text-center bg-green-600">You Save</th>
                   </tr>
                 </thead>
@@ -606,9 +614,7 @@ export default function CerebrumVsAllenChandigarhPage() {
       {/* Success Stories */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-[#1e3a5f] to-[#2d5a87] text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Award className="w-4 h-4" />
               Real Chandigarh Success Stories
@@ -656,20 +662,19 @@ export default function CerebrumVsAllenChandigarhPage() {
       <section className="py-16 bg-gradient-to-br from-blue-600 to-[#1e3a5f] text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Don't Want to Leave the largest national NEET chain Chandigarh?
+                Don't Want to Leave Allen Chandigarh?
                 <br />
                 Complement Your Biology!
               </h2>
               <p className="text-xl text-blue-100 mb-6">
-                Continue at the largest national NEET chain Sector 34 for Physics & Chemistry while boosting Biology with
-                Cerebrum. Our flexible timing works perfectly with the largest national NEET chain's schedule.
+                Continue at Allen Sector 34 for Physics & Chemistry while boosting Biology with
+                Cerebrum. Our flexible timing works perfectly with Allen's schedule.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
-                  'Evening batches after the largest national NEET chain classes',
+                  'Evening batches after Allen classes',
                   'Weekend intensive sessions',
                   'Online format - no extra commute',
                   'Focus on Biology weak areas',
@@ -681,16 +686,18 @@ export default function CerebrumVsAllenChandigarhPage() {
                   </li>
                 ))}
               </ul>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button className="bg-white text-[#1e3a5f] hover:bg-blue-50">
                   Try a Free Biology Class <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
             </div>
 
-            <div
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp"
-            >
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
               <h3 className="text-2xl font-bold mb-6">The Winning Chandigarh Combination</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4 p-4 bg-white/10 rounded-xl">
@@ -698,7 +705,7 @@ export default function CerebrumVsAllenChandigarhPage() {
                     <span className="font-bold">A</span>
                   </div>
                   <div>
-                    <p className="font-semibold">the largest national NEET chain Sector 34 for P & C</p>
+                    <p className="font-semibold">Allen Sector 34 for P & C</p>
                     <p className="text-sm text-blue-200">Physics & Chemistry preparation</p>
                   </div>
                 </div>
@@ -723,29 +730,25 @@ export default function CerebrumVsAllenChandigarhPage() {
         </div>
       </section>
 
-      {/* the largest national NEET chain Chandigarh Info */}
+      {/* Allen Chandigarh Info */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              About XYZ Coaching (largest national NEET chain) Chandigarh
-            </h2>
-            <p className="text-lg text-slate-600">Fair overview of the largest national NEET chain's Chandigarh center</p>
+          <div className="text-center mb-12 animate-fadeInUp">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">About Allen Chandigarh</h2>
+            <p className="text-lg text-slate-600">Fair overview of Allen's Chandigarh center</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <h3 className="text-xl font-bold text-[#1e3a5f] mb-4 flex items-center gap-2">
                 <MapPin className="w-5 h-5" />
-                the largest national NEET chain Chandigarh Location
+                Allen Chandigarh Location
               </h3>
               <p className="text-slate-600 mb-4">
                 <strong>Address:</strong> Sector 34A, Industrial Area Phase 2, Chandigarh
               </p>
               <p className="text-slate-600 mb-4">
-                the largest national NEET chain Chandigarh is one of the prominent coaching centers in the Tricity region,
+                Allen Chandigarh is one of the prominent coaching centers in the Tricity region,
                 located in the Industrial Area. Students from across Chandigarh, Panchkula, and
                 Mohali commute to this center for NEET and JEE preparation.
               </p>
@@ -760,7 +763,7 @@ export default function CerebrumVsAllenChandigarhPage() {
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <h3 className="text-xl font-bold text-[#1e3a5f] mb-4 flex items-center gap-2">
                 <Award className="w-5 h-5" />
-                the largest national NEET chain Chandigarh Strengths
+                Allen Chandigarh Strengths
               </h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -808,12 +811,10 @@ export default function CerebrumVsAllenChandigarhPage() {
       {/* FAQs */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4">
-          <div
-            className="text-center mb-8 animate-fadeInUp"
-          >
+          <div className="text-center mb-8 animate-fadeInUp">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-slate-600">
-              Common questions about Cerebrum vs the largest national NEET chain Chandigarh for NEET Biology
+              Common questions about Cerebrum vs Allen Chandigarh for NEET Biology
             </p>
           </div>
 
@@ -854,8 +855,8 @@ export default function CerebrumVsAllenChandigarhPage() {
               href="/cerebrum-vs-aakash-chandigarh"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md transition-shadow"
             >
-              <h3 className="font-semibold text-[#1e3a5f]">Cerebrum vs the 2nd-largest national NEET chain Chandigarh</h3>
-              <p className="text-sm text-gray-600">Compare with SKY Coaching (2nd-largest national NEET chain)</p>
+              <h3 className="font-semibold text-[#1e3a5f]">Cerebrum vs Aakash Chandigarh</h3>
+              <p className="text-sm text-gray-600">Compare with Aakash</p>
             </Link>
             <Link
               href="/neet-coaching-chandigarh"
@@ -875,7 +876,7 @@ export default function CerebrumVsAllenChandigarhPage() {
               href="/cerebrum-vs-allen-neet-coaching"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md transition-shadow"
             >
-              <h3 className="font-semibold text-[#1e3a5f]">Cerebrum vs the largest national NEET chain (National)</h3>
+              <h3 className="font-semibold text-[#1e3a5f]">Cerebrum vs Allen (National)</h3>
               <p className="text-sm text-gray-600">Pan-India comparison</p>
             </Link>
           </div>
@@ -893,7 +894,11 @@ export default function CerebrumVsAllenChandigarhPage() {
             results
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 size="xl"

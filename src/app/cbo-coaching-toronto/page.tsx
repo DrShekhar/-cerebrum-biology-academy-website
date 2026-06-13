@@ -3,7 +3,8 @@ import CBOCityTemplate from '@/components/cbo/CBOCityTemplate'
 
 const cityName = 'Toronto & GTA'
 const citySlug = 'toronto'
-const region = 'Greater Toronto Area + adjacent Ontario (Mississauga, Brampton, Markham, Vaughan, Oakville, Burlington)'
+const region =
+  'Greater Toronto Area + adjacent Ontario (Mississauga, Brampton, Markham, Vaughan, Oakville, Burlington)'
 const timezone = 'ET (Eastern)'
 const url = 'https://cerebrumbiologyacademy.com/cbo-coaching-toronto'
 
@@ -53,7 +54,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'CBO Coaching for Toronto Students | AIIMS-Trained Biology Olympiad Tutors',
-    description: 'Canadian Biology Olympiad (CBO + IBO) coaching for Toronto and GTA students. Live online classes in ET, AIIMS-trained biology specialist faculty, small batches. Schools served include UTS, Marc Gar...',
+    description:
+      'Canadian Biology Olympiad (CBO + IBO) coaching for Toronto and GTA students. Live online classes in ET, AIIMS-trained biology specialist faculty, small batches. Schools served include UTS, Marc Gar...',
   },
 }
 
@@ -102,7 +104,7 @@ const faqs = [
   {
     question: 'How does CBO standing weigh in Canadian university admissions?',
     answer:
-      'Strong CBO standing is a meaningful credential for Life Sciences and Med-track applications to UofT, McGill, UBC, Waterloo, Western, and Queen\'s. Selection-camp invitees are highly visible in admissions decisions, particularly for competitive direct-entry medicine programmes (McMaster Health Sciences, Western IMS, McGill Med-P) and for strong Bachelor of Health Sciences / Biology / Medical Sciences programmes. CBO Team Canada members carry an elite credential comparable to top USAMO performers.',
+      "Strong CBO standing is a meaningful credential for Life Sciences and Med-track applications to UofT, McGill, UBC, Waterloo, Western, and Queen's. Selection-camp invitees are highly visible in admissions decisions, particularly for competitive direct-entry medicine programmes (McMaster Health Sciences, Western IMS, McGill Med-P) and for strong Bachelor of Health Sciences / Biology / Medical Sciences programmes. CBO Team Canada members carry an elite credential comparable to top USAMO performers.",
   },
   {
     question: 'How is your CBO coaching different from local Toronto tutoring?',
@@ -123,7 +125,12 @@ export default function CBOToronto() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
       {
         '@type': 'ListItem',
         position: 2,

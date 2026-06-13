@@ -289,12 +289,7 @@
     {
       "type": "MTF",
       "question": "Which of the following are examples of mutualistic interactions? (I) Mycorrhizal fungi providing phosphorus to plant roots in exchange for photosynthetic carbon. (II) Cleaner wrasse removing parasites from larger fish. (III) Brood parasitism by cuckoos in warbler nests. (IV) Fig wasps pollinating fig flowers while laying eggs inside fig fruits.",
-      "options": [
-        "I and II only",
-        "I, II, and IV only",
-        "II and III only",
-        "I, II, III, and IV"
-      ],
+      "options": ["I and II only", "I, II, and IV only", "II and III only", "I, II, III, and IV"],
       "correctAnswer": "B",
       "explanation": "Evaluating each interaction: (I) MUTUALISM: Mycorrhizae are among the most widespread mutualisms on Earth. Plants provide up to 20% of photosynthetic carbon to fungal partners; fungi provide phosphorus, nitrogen, water, and pathogen protection. ~90% of plant species form mycorrhizal associations. (II) MUTUALISM: Cleaner wrasse (Labroides dimidiatus) remove ectoparasites from client fish. Both benefit: cleaner gets food, client gets parasite removal. Experimental removal of cleaners increases parasite loads and decreases reef fish diversity. (III) NOT MUTUALISM—this is parasitism: Cuckoo brood parasitism is an antagonistic interaction where cuckoos lay eggs in host nests, and the cuckoo chick typically ejects host eggs/chicks. The host suffers reduced fitness while the cuckoo benefits. (IV) MUTUALISM: Fig-fig wasp mutualism is an obligate mutualism with >750 species pairs. Female wasps pollinate figs while ovipositing; fig provides brood site for wasp larvae. Each fig species is typically pollinated by one wasp species (extreme specificity). Therefore I, II, and IV are mutualistic.",
       "isOlympiad": true,
@@ -1169,12 +1164,7 @@
     {
       "type": "MTF",
       "question": "Regarding species interactions and their effects on community structure, mark each statement as True (T) or False (F):\n(I) Keystone species have effects disproportionate to their abundance\n(II) Dominant species are always the most abundant species in a community\n(III) Foundation species create habitat structure used by many other species\n(IV) Invasive species always reduce native biodiversity in every community they enter",
-      "options": [
-        "TFTT",
-        "TFTF",
-        "TTTT",
-        "TFFF"
-      ],
+      "options": ["TFTT", "TFTF", "TTTT", "TFFF"],
       "correctAnswer": "B",
       "explanation": "(I) TRUE — By definition, keystone species have a disproportionately large effect on community structure or diversity relative to their abundance or biomass. (II) FALSE — Dominant species are defined by having the highest biomass or abundance, but sometimes the most abundant species is not the most ecologically influential. However, 'dominant' can also mean the species that exerts the greatest competitive influence, which may or may not be the most numerically abundant. The statement is false because dominance is typically measured by biomass, not just numerical abundance, and the most abundant (by count) species may not be the ecological dominant. (III) TRUE — Foundation species (ecosystem engineers) create physical habitat structure. Examples: coral reefs, kelp forests, large trees. (IV) FALSE — While many invasive species reduce native biodiversity, some have neutral or even positive effects on certain native species. The impact depends on the specific invader, recipient community, and ecological context.",
       "isOlympiad": true,
@@ -1189,12 +1179,7 @@
     {
       "type": "MTF",
       "question": "Regarding ecological succession, mark each statement as True (T) or False (F):\n(I) Facilitation occurs when early-successional species modify the environment in ways that benefit later-successional species\n(II) Inhibition occurs when early colonists prevent the establishment of later-successional species through competition or allelopathy\n(III) The climax community represents a permanent, unchanging endpoint that will persist indefinitely without disturbance\n(IV) Tolerance describes when later-successional species can grow despite the presence of early colonists but are not helped by them",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TTTF",
-        "TFFT"
-      ],
+      "options": ["TTFT", "TTTT", "TTTF", "TFFT"],
       "correctAnswer": "A",
       "explanation": "(I) TRUE — Facilitation was identified by Connell and Slatyer as one of three mechanisms of succession. Early species modify the environment (e.g., fixing nitrogen, adding organic matter, providing shade) in ways that make conditions more suitable for later species. Example: nitrogen-fixing Dryas on glacial moraines facilitating spruce establishment. (II) TRUE — Inhibition occurs when established species resist invasion by later species through space occupancy, allelopathy (chemical inhibition), or resource preemption. Succession proceeds only when early colonists die or are damaged. This model explains why succession can be very slow. (III) FALSE — The concept of a permanent, static climax community has been largely abandoned. Modern ecology recognizes that communities are always changing due to disturbance, climate change, and stochastic events. The 'climax' is better viewed as a dynamic quasi-equilibrium. (IV) TRUE — In the tolerance model, later species neither benefit from nor are inhibited by early species but can establish and grow in their presence, eventually outcompeting them through superior competitive ability in mature conditions.",
       "isOlympiad": true,
@@ -1269,12 +1254,7 @@
     {
       "type": "MTF",
       "question": "Regarding predator-prey coevolution, mark each statement as True (T) or False (F):\n(I) The Red Queen hypothesis proposes that predators and prey must continuously evolve just to maintain their relative fitness\n(II) Aposematic coloration (warning colors) evolves in palatable species to scare predators\n(III) Predator-prey arms races can lead to escalation of both offensive and defensive adaptations over evolutionary time\n(IV) Cryptic coloration (camouflage) is an anti-predator adaptation that reduces detection probability",
-      "options": [
-        "TFTT",
-        "FTTT",
-        "TTTT",
-        "TFFT"
-      ],
+      "options": ["TFTT", "FTTT", "TTTT", "TFFT"],
       "correctAnswer": "A",
       "explanation": "(I) TRUE — The Red Queen hypothesis proposes that organisms must continuously evolve to maintain fitness relative to coevolving antagonists. For predators and prey, this means prey must evolve better defenses as predators evolve better attack strategies, and vice versa — an endless evolutionary arms race. (II) FALSE — Aposematic coloration evolves in UNPALATABLE or dangerous species, not palatable ones. The bright warning colors (red, orange, yellow + black) honestly signal toxicity, venom, or distastefulness to visual predators. Palatable species that resemble aposematic ones are Batesian mimics. (III) TRUE — Arms races produce escalating adaptations: thicker shells in prey, stronger jaws in predators; faster prey, faster predators; more potent toxins, greater toxin resistance. The fossil record shows clear escalation patterns. (IV) TRUE — Crypsis (camouflage) reduces the probability that a prey organism is detected by a visual predator, including background matching, disruptive coloration, countershading, and masquerading as inedible objects.",
       "isOlympiad": true,
@@ -1409,12 +1389,7 @@
     {
       "type": "MTF",
       "question": "Regarding interspecific interactions, mark each statement as True (T) or False (F):\n(I) Commensalism benefits one species while the other is unaffected (+/0)\n(II) Amensalism harms one species while the other is unaffected (-/0)\n(III) All interspecific interactions are coevolutionary, with reciprocal genetic changes in both species\n(IV) Facilitation (positive interactions between species) can be important in harsh environments where one species ameliorates abiotic stress for another",
-      "options": [
-        "TTFT",
-        "TTTF",
-        "TTTT",
-        "TFFT"
-      ],
+      "options": ["TTFT", "TTTF", "TTTT", "TFFT"],
       "correctAnswer": "A",
       "explanation": "(I) TRUE — Commensalism is defined as a +/0 interaction where one species benefits and the other is neither helped nor harmed. Classic examples include epiphytes growing on trees (the epiphyte benefits from the elevated position; the tree is unaffected) and cattle egrets feeding on insects disturbed by grazing cattle. (II) TRUE — Amensalism is a -/0 interaction where one species is harmed and the other is unaffected. Example: large trees shading small herbs beneath them — the herbs are harmed by light reduction, but the tree is unaffected by the herbs. (III) FALSE — Not all interspecific interactions involve coevolution. Coevolution requires reciprocal genetic changes in both species. Many interactions are one-sided (amensalism, commensalism) or involve ecological responses without genetic change. (IV) TRUE — Facilitation (positive species interactions) is particularly important in stressful environments. Nurse plants in deserts shade seedlings from lethal heat; salt marsh plants stabilize substrate for colonization by other species.",
       "isOlympiad": true,

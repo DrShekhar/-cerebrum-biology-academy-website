@@ -204,8 +204,7 @@ function CourseCard({ course, index }: { course: EnrolledCourse; index: number }
   )
 
   return (
-    <div
-     className="animate-fadeInUp">
+    <div className="animate-fadeInUp">
       <Card className={cn('h-full hover:shadow-lg transition-shadow', isExpired && 'opacity-75')}>
         <CardContent className="p-6">
           {/* Course Header */}

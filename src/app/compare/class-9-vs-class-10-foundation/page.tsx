@@ -289,9 +289,7 @@ export default function Class9VsClass10Page() {
       <section className="relative bg-indigo-600 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Target className="w-5 h-5 mr-2" />
               Research-Backed Comparison for Smart Parents
@@ -332,25 +330,19 @@ export default function Class9VsClass10Page() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <div
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <Trophy className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">65%</div>
                 <div className="text-sm opacity-80">Higher Success with Class 9 Start</div>
               </div>
 
-              <div
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <Clock className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">4 vs 3 Years</div>
                 <div className="text-sm opacity-80">Preparation Timeline Comparison</div>
               </div>
 
-              <div
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <Brain className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">95% vs 70%</div>
                 <div className="text-sm opacity-80">Long-term Concept Retention</div>
@@ -362,9 +354,7 @@ export default function Class9VsClass10Page() {
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               The Complete Factor-by-Factor Comparison
             </h2>
@@ -429,9 +419,7 @@ export default function Class9VsClass10Page() {
             </div>
           </div>
 
-          <div
-            className="text-center mt-12 animate-fadeInUp"
-          >
+          <div className="text-center mt-12 animate-fadeInUp">
             <div className="bg-gradient-to-r from-green-100 to-green-100 rounded-xl p-8 max-w-3xl mx-auto">
               <Star className="w-12 h-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -456,9 +444,7 @@ export default function Class9VsClass10Page() {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <BarChart className="w-16 h-16 text-purple-600 mx-auto mb-6" />
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Early Start Matters: The Science Behind Success
@@ -483,9 +469,7 @@ export default function Class9VsClass10Page() {
             ))}
           </div>
 
-          <div
-            className="mt-12 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-xl p-8 max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="mt-12 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-xl p-8 max-w-4xl mx-auto animate-fadeInUp">
             <Lightbulb className="w-12 h-12 text-purple-600 mb-4" />
             <h3 className="text-2xl font-bold text-gray-900 mb-4">The Power of Spaced Learning</h3>
             <p className="text-lg text-gray-700 mb-4">
@@ -506,9 +490,7 @@ export default function Class9VsClass10Page() {
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <Clock className="w-16 h-16 text-blue-600 mx-auto mb-6" />
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Timeline Visualization: 4 Years vs 3 Years
@@ -619,9 +601,7 @@ export default function Class9VsClass10Page() {
             </div>
           </div>
 
-          <div
-            className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto animate-fadeInUp">
             <AlertCircle className="w-12 h-12 text-orange-600 mb-4" />
             <h3 className="text-2xl font-bold text-gray-900 mb-4">The Stress Factor</h3>
             <p className="text-lg text-gray-700 mb-4">
@@ -642,9 +622,7 @@ export default function Class9VsClass10Page() {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <Target className="w-16 h-16 text-green-600 mx-auto mb-6" />
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Should Your Child Start from Class 9? Decision Framework
@@ -695,10 +673,7 @@ export default function Class9VsClass10Page() {
             </h3>
             <div className="space-y-6">
               {decisionFramework.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50 rounded-xl p-6 shadow-md animate-fadeInUp"
-                >
+                <div key={index} className="bg-gray-50 rounded-xl p-6 shadow-md animate-fadeInUp">
                   <div className="font-bold text-gray-900 mb-4 text-lg">{item.question}</div>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-white rounded-lg p-4 border-2 border-green-300">
@@ -721,8 +696,7 @@ export default function Class9VsClass10Page() {
 
       <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Make the Smart Choice Based on Data, Not Guesswork
             </h2>

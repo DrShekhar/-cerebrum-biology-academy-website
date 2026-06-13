@@ -45,9 +45,7 @@ export function UrgencyBanner({
   return (
     <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
       {/* Seats Remaining */}
-      <div
-        className="flex items-center justify-center gap-2 rounded-full border-2 border-red-500 bg-red-50 px-4 py-2 sm:px-6 sm:py-3 animate-fadeInUp"
-      >
+      <div className="flex items-center justify-center gap-2 rounded-full border-2 border-red-500 bg-red-50 px-4 py-2 sm:px-6 sm:py-3 animate-fadeInUp">
         <AlertCircle className="h-5 w-5 text-red-600" />
         <span className="text-sm font-bold text-red-700 sm:text-base">
           Only {seatsRemaining} seats left!
@@ -56,18 +54,14 @@ export function UrgencyBanner({
 
       {/* Batch Starting */}
       {showCountdown && (
-        <div
-          className="flex items-center justify-center gap-2 rounded-full bg-blue-600 px-4 py-2 text-white sm:px-6 sm:py-3 animate-fadeInUp"
-        >
+        <div className="flex items-center justify-center gap-2 rounded-full bg-blue-600 px-4 py-2 text-white sm:px-6 sm:py-3 animate-fadeInUp">
           <Clock className="h-5 w-5" />
           <span className="text-sm font-semibold sm:text-base">Batch starts: {batchStartDate}</span>
         </div>
       )}
 
       {/* Seats Filled Progress */}
-      <div
-        className="flex items-center justify-center gap-2 rounded-full bg-yellow-100 px-4 py-2 sm:px-6 sm:py-3 animate-fadeInUp"
-      >
+      <div className="flex items-center justify-center gap-2 rounded-full bg-yellow-100 px-4 py-2 sm:px-6 sm:py-3 animate-fadeInUp">
         <Users className="h-5 w-5 text-yellow-800" />
         <span className="text-sm font-semibold text-slate-900 sm:text-base">
           <span className="font-bold text-[#ea4335]">
@@ -135,8 +129,8 @@ export function SocialProofNotifications() {
   }, [])
 
   return (
-<>
-{currentActivity && (
+    <>
+      {currentActivity && (
         <div
           key={currentActivity.id}
           className="fixed bottom-24 left-4 z-50 max-w-sm rounded-xl border border-slate-200 bg-white p-4 shadow-2xl sm:bottom-8 sm:left-8 animate-fadeInUp"
@@ -166,6 +160,6 @@ export function SocialProofNotifications() {
           </div>
         </div>
       )}
-</>
-)
+    </>
+  )
 }

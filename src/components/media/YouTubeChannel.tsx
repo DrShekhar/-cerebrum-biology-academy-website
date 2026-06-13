@@ -150,9 +150,7 @@ export function YouTubeChannel({
       <VideoListSchema videos={videosToShow} channelName={channelName} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          className="text-center mb-12 animate-fadeInUp"
-        >
+        <div className="text-center mb-12 animate-fadeInUp">
           <div className="flex items-center justify-center mb-4">
             <Youtube className="w-12 h-12 text-red-600 mr-3" />
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">{channelName}</h2>
@@ -171,9 +169,7 @@ export function YouTubeChannel({
         </div>
 
         {showStats && (
-          <div
-            className="grid md:grid-cols-3 gap-6 mb-12 animate-fadeInUp"
-          >
+          <div className="grid md:grid-cols-3 gap-6 mb-12 animate-fadeInUp">
             <div className="bg-white rounded-3xl shadow-xl p-8 text-center hover:shadow-2xl transition-shadow">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-red-600" />
@@ -201,8 +197,7 @@ export function YouTubeChannel({
         )}
 
         {showRecentVideos && videosToShow.length > 0 && (
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
               Recent Success Stories
             </h3>
@@ -222,9 +217,7 @@ export function YouTubeChannel({
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                      <div
-                        className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg animate-fadeInUp"
-                      >
+                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg animate-fadeInUp">
                         <Play className="w-8 h-8 text-red-600 ml-1" />
                       </div>
                     </div>

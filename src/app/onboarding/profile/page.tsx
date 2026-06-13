@@ -153,9 +153,7 @@ export default function OnboardingProfilePage() {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <div
-            className="inline-flex items-center justify-center w-16 h-16 bg-indigo-500 rounded-full mb-4 animate-fadeInUp"
-          >
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-500 rounded-full mb-4 animate-fadeInUp">
             <Brain className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome to Cerebrum!</h1>
@@ -191,9 +189,7 @@ export default function OnboardingProfilePage() {
 
         {/* Step 1: Track Selection */}
         {step === 1 && (
-          <div
-            className="space-y-6 animate-fadeInUp"
-          >
+          <div className="space-y-6 animate-fadeInUp">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-2">What are you preparing for?</h2>
               <p className="text-gray-600">Choose your learning path to get started</p>
@@ -238,9 +234,7 @@ export default function OnboardingProfilePage() {
 
         {/* Step 2: Goal & Details */}
         {step === 2 && selectedTrackOption && (
-          <div
-            className="space-y-6 animate-fadeInUp"
-          >
+          <div className="space-y-6 animate-fadeInUp">
             <div className="text-center mb-8">
               <div
                 className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br ${selectedTrackOption.color} text-white mb-4`}
@@ -332,9 +326,7 @@ export default function OnboardingProfilePage() {
 
         {/* Step 3: Target Score (NEET only) */}
         {step === 3 && selectedTrack === 'NEET' && (
-          <div
-            className="space-y-6 animate-fadeInUp"
-          >
+          <div className="space-y-6 animate-fadeInUp">
             <div className="text-center mb-8">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-indigo-500 text-white mb-4">
                 <Target className="w-8 h-8" />

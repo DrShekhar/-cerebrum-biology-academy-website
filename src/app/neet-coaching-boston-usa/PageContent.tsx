@@ -258,8 +258,10 @@ export default function PageContent({ faqs }: PageContentProps) {
         </div>
       </section>
 
-            <USABOPathwayCallout cityName="Greater Boston" schools={["Lexington HS","Acton-Boxborough","Newton South","Belmont HS"]} />
-
+      <USABOPathwayCallout
+        cityName="Greater Boston"
+        schools={['Lexington HS', 'Acton-Boxborough', 'Newton South', 'Belmont HS']}
+      />
 
       <RelatedCityLinks currentCity="boston" variant="default" />
     </div>

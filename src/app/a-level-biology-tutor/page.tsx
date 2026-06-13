@@ -738,17 +738,31 @@ export default function ALevelBiologyTutorPage() {
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-xl font-bold text-slate-900 mb-4">Compare & Explore</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            <Link href="/a-level-biology-vs-igcse-biology" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/a-level-biology-vs-igcse-biology"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">A-Level vs IGCSE</span>
             </Link>
-            <Link href="/ap-biology-vs-ib-biology" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/ap-biology-vs-ib-biology"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">AP vs IB Biology</span>
             </Link>
-            <Link href="/ib-biology-tutor" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/ib-biology-tutor"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">IB Biology</span>
             </Link>
-            <Link href="/gamsat-section-3-biology-prep" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
-              <span className="font-medium text-slate-900 text-sm">GAMSAT (UK Graduate Medicine)</span>
+            <Link
+              href="/gamsat-section-3-biology-prep"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">
+                GAMSAT (UK Graduate Medicine)
+              </span>
             </Link>
           </div>
         </div>

@@ -392,7 +392,6 @@ export async function GET(
       },
     }
 
-
     return NextResponse.json(results)
   } catch (error) {
     console.error('Error fetching test results:', error)

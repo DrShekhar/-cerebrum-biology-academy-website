@@ -48,7 +48,6 @@ export async function GET(request: NextRequest) {
     const token = searchParams.get('hub.verify_token')
     const challenge = searchParams.get('hub.challenge')
 
-
     // Check if verification token matches
     if (mode === 'subscribe' && token === process.env.WHATSAPP_VERIFY_TOKEN) {
       return new Response(challenge, { status: 200 })
@@ -85,7 +84,6 @@ export async function POST(request: NextRequest) {
     }
 
     const { from, text, messageId, name, phoneNumberId } = messageData
-
 
     // Check for duplicate messages
     if (isDuplicateMessage(messageId)) {

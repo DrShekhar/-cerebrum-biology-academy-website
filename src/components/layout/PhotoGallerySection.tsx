@@ -112,9 +112,7 @@ export function PhotoGallerySection({
     <section className="py-20 bg-navy-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div
-          className="text-center mb-16 animate-fadeInUp"
-        >
+        <div className="text-center mb-16 animate-fadeInUp">
           <div className="inline-flex items-center bg-blue-100 text-blue-600 px-6 py-3 rounded-full text-sm font-medium mb-6">
             <Camera className="w-5 h-5 mr-2" />
             Cerebrum Photo Gallery - Real Moments, Real Success
@@ -158,10 +156,7 @@ export function PhotoGallerySection({
                 color: 'text-yellow-600',
               },
             ].map((stat, index) => (
-              <div
-                key={stat.label}
-                className="text-center animate-fadeInUp"
-              >
+              <div key={stat.label} className="text-center animate-fadeInUp">
                 <div
                   className={`w-12 h-12 ${stat.color} mx-auto mb-3 rounded-xl flex items-center justify-center bg-white shadow-lg`}
                 >
@@ -176,9 +171,7 @@ export function PhotoGallerySection({
 
         {/* Search and Filters */}
         {showSearch && (
-          <div
-            className="mb-12 animate-fadeInUp"
-          >
+          <div className="mb-12 animate-fadeInUp">
             {/* Search Bar */}
             <div className="relative max-w-md mx-auto mb-8">
               <Search className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
@@ -226,9 +219,7 @@ export function PhotoGallerySection({
         )}
 
         {/* Photo Grid */}
-        <div
-          className="mb-16 animate-fadeInUp"
-        >
+        <div className="mb-16 animate-fadeInUp">
           {isLoading ? (
             // Loading Skeleton
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -237,91 +228,91 @@ export function PhotoGallerySection({
               ))}
             </div>
           ) : (
-<div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {filteredPhotos.map((photo, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {filteredPhotos.map((photo, index) => (
+                <div
+                  key={photo.id}
+                  className="group relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer animate-fadeInUp"
+                  onClick={() => openLightbox(photo, index)}
+                >
+                  {/* Photo Placeholder with Category Color */}
                   <div
-                    key={photo.id}
-                    className="group relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer animate-fadeInUp"
-                    onClick={() => openLightbox(photo, index)}
-                  >
-                    {/* Photo Placeholder with Category Color */}
-                    <div
-                      className={`w-full h-full bg-gradient-to-br ${
-                        photo.category === 'classroom'
-                          ? 'from-blue-400 to-blue-600'
-                          : photo.category === 'celebrations'
+                    className={`w-full h-full bg-gradient-to-br ${
+                      photo.category === 'classroom'
+                        ? 'from-blue-400 to-blue-600'
+                        : photo.category === 'celebrations'
+                          ? 'bg-[#4a5d4a]'
+                          : photo.category === 'seminars'
                             ? 'bg-[#4a5d4a]'
-                            : photo.category === 'seminars'
-                              ? 'bg-[#4a5d4a]'
-                              : photo.category === 'awards'
-                                ? 'from-yellow-400 to-yellow-600'
-                                : photo.category === 'mentoring'
-                                  ? 'from-navy-400 to-navy-600'
-                                  : 'from-gray-400 to-gray-600'
-                      } flex items-center justify-center text-white`}
-                    >
-                      <div className="text-center p-4">
-                        <Camera className="w-12 h-12 mx-auto mb-3 opacity-60" />
-                        <p className="text-sm font-medium text-white/90">{photo.title}</p>
-                        <p className="text-xs opacity-70 mt-1">{photo.date}</p>
-                      </div>
+                            : photo.category === 'awards'
+                              ? 'from-yellow-400 to-yellow-600'
+                              : photo.category === 'mentoring'
+                                ? 'from-navy-400 to-navy-600'
+                                : 'from-gray-400 to-gray-600'
+                    } flex items-center justify-center text-white`}
+                  >
+                    <div className="text-center p-4">
+                      <Camera className="w-12 h-12 mx-auto mb-3 opacity-60" />
+                      <p className="text-sm font-medium text-white/90">{photo.title}</p>
+                      <p className="text-xs opacity-70 mt-1">{photo.date}</p>
                     </div>
-
-                    {/* Overlay with Info */}
-                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4">
-                      <div>
-                        <div className="flex items-center justify-between mb-2">
-                          <span
-                            className={`px-2 py-1 rounded-full text-xs font-medium ${
-                              photo.category === 'classroom'
-                                ? 'bg-blue-100 text-blue-700'
-                                : photo.category === 'celebrations'
-                                  ? 'bg-green-100 text-green-700'
-                                  : photo.category === 'seminars'
-                                    ? 'bg-green-100 text-green-700'
-                                    : photo.category === 'awards'
-                                      ? 'bg-yellow-100 text-yellow-700'
-                                      : photo.category === 'mentoring'
-                                        ? 'bg-navy-100 text-navy-700'
-                                        : 'bg-gray-100 text-gray-700'
-                            }`}
-                          >
-                            {photo.category.replace('_', ' ')}
-                          </span>
-                          <ZoomIn className="w-4 h-4 text-white" />
-                        </div>
-                        <h3 className="text-white font-semibold text-sm mb-1">{photo.title}</h3>
-                        <p className="text-white/80 text-xs line-clamp-2">{photo.description}</p>
-                      </div>
-
-                      <div className="space-y-2">
-                        {photo.achievement && (
-                          <div className="flex items-center text-white/80 text-xs">
-                            <Trophy className="w-3 h-3 mr-1" />
-                            <span className="line-clamp-1">{photo.achievement}</span>
-                          </div>
-                        )}
-                        <div className="flex items-center text-white/80 text-xs">
-                          <MapPin className="w-3 h-3 mr-1" />
-                          <span>{photo.location}</span>
-                        </div>
-                        <div className="flex items-center text-white/80 text-xs">
-                          <Calendar className="w-3 h-3 mr-1" />
-                          <span>{new Date(photo.date).toLocaleDateString()}</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Featured Badge */}
-                    {photo.featured && (
-                      <div className="absolute top-3 left-3 bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-bold">
-                        Featured
-                      </div>
-                    )}
                   </div>
-                ))}
-              </div>
-)}
+
+                  {/* Overlay with Info */}
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4">
+                    <div>
+                      <div className="flex items-center justify-between mb-2">
+                        <span
+                          className={`px-2 py-1 rounded-full text-xs font-medium ${
+                            photo.category === 'classroom'
+                              ? 'bg-blue-100 text-blue-700'
+                              : photo.category === 'celebrations'
+                                ? 'bg-green-100 text-green-700'
+                                : photo.category === 'seminars'
+                                  ? 'bg-green-100 text-green-700'
+                                  : photo.category === 'awards'
+                                    ? 'bg-yellow-100 text-yellow-700'
+                                    : photo.category === 'mentoring'
+                                      ? 'bg-navy-100 text-navy-700'
+                                      : 'bg-gray-100 text-gray-700'
+                          }`}
+                        >
+                          {photo.category.replace('_', ' ')}
+                        </span>
+                        <ZoomIn className="w-4 h-4 text-white" />
+                      </div>
+                      <h3 className="text-white font-semibold text-sm mb-1">{photo.title}</h3>
+                      <p className="text-white/80 text-xs line-clamp-2">{photo.description}</p>
+                    </div>
+
+                    <div className="space-y-2">
+                      {photo.achievement && (
+                        <div className="flex items-center text-white/80 text-xs">
+                          <Trophy className="w-3 h-3 mr-1" />
+                          <span className="line-clamp-1">{photo.achievement}</span>
+                        </div>
+                      )}
+                      <div className="flex items-center text-white/80 text-xs">
+                        <MapPin className="w-3 h-3 mr-1" />
+                        <span>{photo.location}</span>
+                      </div>
+                      <div className="flex items-center text-white/80 text-xs">
+                        <Calendar className="w-3 h-3 mr-1" />
+                        <span>{new Date(photo.date).toLocaleDateString()}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Featured Badge */}
+                  {photo.featured && (
+                    <div className="absolute top-3 left-3 bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                      Featured
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
 
           {/* No Results Message */}
           {!isLoading && filteredPhotos.length === 0 && (
@@ -334,99 +325,97 @@ export function PhotoGallerySection({
         </div>
 
         {/* Lightbox Modal */}
-{lightboxPhoto && enableLightbox && (
+        {lightboxPhoto && enableLightbox && (
+          <div
+            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 animate-fadeInUp"
+            onClick={closeLightbox}
+          >
             <div
-              className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 animate-fadeInUp"
-              onClick={closeLightbox}
+              className="relative max-w-4xl w-full max-h-full"
+              onClick={(e) => e.stopPropagation()}
             >
-              <div
-                className="relative max-w-4xl w-full max-h-full"
-                onClick={(e) => e.stopPropagation()}
+              {/* Close Button */}
+              <button
+                onClick={closeLightbox}
+                className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center z-10 hover:bg-white/30 transition-colors"
               >
-                {/* Close Button */}
-                <button
-                  onClick={closeLightbox}
-                  className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center z-10 hover:bg-white/30 transition-colors"
-                >
-                  <X className="w-6 h-6 text-white" />
-                </button>
+                <X className="w-6 h-6 text-white" />
+              </button>
 
-                {/* Navigation Buttons */}
-                <button
-                  onClick={prevPhoto}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center z-10 hover:bg-white/30 transition-colors"
-                >
-                  <ChevronLeft className="w-6 h-6 text-white" />
-                </button>
-                <button
-                  onClick={nextPhoto}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center z-10 hover:bg-white/30 transition-colors"
-                >
-                  <ChevronRight className="w-6 h-6 text-white" />
-                </button>
+              {/* Navigation Buttons */}
+              <button
+                onClick={prevPhoto}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center z-10 hover:bg-white/30 transition-colors"
+              >
+                <ChevronLeft className="w-6 h-6 text-white" />
+              </button>
+              <button
+                onClick={nextPhoto}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center z-10 hover:bg-white/30 transition-colors"
+              >
+                <ChevronRight className="w-6 h-6 text-white" />
+              </button>
 
-                {/* Photo */}
-                <div className="aspect-video bg-gradient-to-br from-green-500 to-navy-600 rounded-lg flex items-center justify-center mb-4">
-                  <div className="text-center text-white p-8">
-                    <Camera className="w-20 h-20 mx-auto mb-4 opacity-60" />
-                    <h3 className="text-2xl font-bold mb-2">{lightboxPhoto.title}</h3>
-                    <p className="text-lg text-white/90">{lightboxPhoto.description}</p>
-                  </div>
+              {/* Photo */}
+              <div className="aspect-video bg-gradient-to-br from-green-500 to-navy-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="text-center text-white p-8">
+                  <Camera className="w-20 h-20 mx-auto mb-4 opacity-60" />
+                  <h3 className="text-2xl font-bold mb-2">{lightboxPhoto.title}</h3>
+                  <p className="text-lg text-white/90">{lightboxPhoto.description}</p>
                 </div>
+              </div>
 
-                {/* Photo Details */}
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-white">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h3 className="text-xl font-bold mb-4">{lightboxPhoto.title}</h3>
-                      <p className="text-white/80 mb-4">{lightboxPhoto.description}</p>
-                      <div className="space-y-2 text-sm">
-                        <div className="flex items-center">
-                          <Calendar className="w-4 h-4 mr-2" />
-                          <span>{new Date(lightboxPhoto.date).toLocaleDateString()}</span>
-                        </div>
-                        <div className="flex items-center">
-                          <MapPin className="w-4 h-4 mr-2" />
-                          <span>{lightboxPhoto.location}</span>
-                        </div>
-                        {lightboxPhoto.achievement && (
-                          <div className="flex items-center">
-                            <Trophy className="w-4 h-4 mr-2" />
-                            <span>{lightboxPhoto.achievement}</span>
-                          </div>
-                        )}
+              {/* Photo Details */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-white">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="text-xl font-bold mb-4">{lightboxPhoto.title}</h3>
+                    <p className="text-white/80 mb-4">{lightboxPhoto.description}</p>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-center">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        <span>{new Date(lightboxPhoto.date).toLocaleDateString()}</span>
                       </div>
-                    </div>
-                    <div>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {lightboxPhoto.tags.map((tag, index) => (
-                          <span
-                            key={index}
-                            className="inline-flex items-center bg-white/20 text-white px-3 py-1 rounded-full text-xs font-medium"
-                          >
-                            <Tag className="w-3 h-3 mr-1" />
-                            {tag}
-                          </span>
-                        ))}
+                      <div className="flex items-center">
+                        <MapPin className="w-4 h-4 mr-2" />
+                        <span>{lightboxPhoto.location}</span>
                       </div>
-                      {lightboxPhoto.students && (
-                        <div>
-                          <h4 className="font-semibold mb-2">Students Featured:</h4>
-                          <div className="text-sm text-white/80">
-                            {lightboxPhoto.students.join(', ')}
-                          </div>
+                      {lightboxPhoto.achievement && (
+                        <div className="flex items-center">
+                          <Trophy className="w-4 h-4 mr-2" />
+                          <span>{lightboxPhoto.achievement}</span>
                         </div>
                       )}
                     </div>
                   </div>
+                  <div>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {lightboxPhoto.tags.map((tag, index) => (
+                        <span
+                          key={index}
+                          className="inline-flex items-center bg-white/20 text-white px-3 py-1 rounded-full text-xs font-medium"
+                        >
+                          <Tag className="w-3 h-3 mr-1" />
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    {lightboxPhoto.students && (
+                      <div>
+                        <h4 className="font-semibold mb-2">Students Featured:</h4>
+                        <div className="text-sm text-white/80">
+                          {lightboxPhoto.students.join(', ')}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
-          )}
-{/* Call to Action */}
-        <div
-          className="text-center bg-navy-900 rounded-3xl p-6 sm:p-8 md:p-12 text-white animate-fadeInUp"
-        >
+          </div>
+        )}
+        {/* Call to Action */}
+        <div className="text-center bg-navy-900 rounded-3xl p-6 sm:p-8 md:p-12 text-white animate-fadeInUp">
           <h3 className="text-3xl font-bold mb-4">Be Part of the Next Success Story</h3>
           <p className="text-xl mb-8 text-blue-100">
             Join Dr. Shekhar's classes and create your own success memories at Cerebrum Biology

@@ -80,7 +80,7 @@ const whyChooseUs = [
     icon: Star,
     title: 'Results for Ambitious Families',
     description:
-      'Students score 680+, with ambitious young professionals supporting their kids\' NEET dreams with modern coaching methods.',
+      "Students score 680+, with ambitious young professionals supporting their kids' NEET dreams with modern coaching methods.",
   },
 ]
 
@@ -103,7 +103,7 @@ const faqs = [
   {
     question: 'How does your platform support young, modern families?',
     answer:
-      'We use modern technology - live interactive classes, AI-powered doubt resolution, mobile-friendly platform, real-time analytics, and progress dashboards. Young parents in HSR Layout appreciate transparency and data-driven insights into their child\'s preparation.',
+      "We use modern technology - live interactive classes, AI-powered doubt resolution, mobile-friendly platform, real-time analytics, and progress dashboards. Young parents in HSR Layout appreciate transparency and data-driven insights into their child's preparation.",
   },
 ]
 
@@ -176,13 +176,17 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET coaching for HSR Layout, Bommanahalli, Sunkenahalli & nearby areas.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by startup
-              families and young professionals.
+              Premium NEET coaching for HSR Layout, Bommanahalli, Sunkenahalli & nearby areas. Learn
+              from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by startup families
+              and young professionals.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Bangalore.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Bangalore.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -359,7 +363,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Bangalore.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Bangalore.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

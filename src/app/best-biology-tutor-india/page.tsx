@@ -31,10 +31,9 @@ const CANONICAL = '/best-biology-tutor-india'
 const PAGE_URL = `${SITE_URL}${CANONICAL}`
 
 export const metadata: Metadata = {
-  title:
-    'Best Biology Tutor in India — 1:1 & Micro-Batch Mentoring · NEET · IB · AP · Olympiads',
+  title: 'Best Biology Tutor in India — 1:1 & Micro-Batch Mentoring · NEET · IB · AP · Olympiads',
   description:
-    'India\'s top biology tutor — Dr. Shekhar C Singh (AIIMS New Delhi alumnus). 1:1 Solo and 6-12 student micro-batch tutoring across NEET, IB, AP, MCAT, USABO/IBO Olympiads. Named mentor for the long arc. Live online globally + 4 NCR offline centres. Free trial.',
+    "India's top biology tutor — Dr. Shekhar C Singh (AIIMS New Delhi alumnus). 1:1 Solo and 6-12 student micro-batch tutoring across NEET, IB, AP, MCAT, USABO/IBO Olympiads. Named mentor for the long arc. Live online globally + 4 NCR offline centres. Free trial.",
   keywords: [
     'best biology tutor',
     'best biology tutor india',
@@ -75,7 +74,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best Biology Tutor in India — 1:1 & Micro-Batch Mentoring · NEET · IB · AP · Olympiads',
-    description: '1:1 Solo and 6-12 student micro-batch biology tutoring with Dr. Shekhar C Singh (AIIMS alumnus). NEET, IB, AP, MCAT, Olympiads.',
+    description:
+      '1:1 Solo and 6-12 student micro-batch biology tutoring with Dr. Shekhar C Singh (AIIMS alumnus). NEET, IB, AP, MCAT, Olympiads.',
   },
   robots: 'index, follow, max-image-preview:large',
 }
@@ -106,12 +106,12 @@ const TIERS = [
 
 const FAQS = [
   {
-    question: 'What\'s the difference between a tutor and coaching?',
+    question: "What's the difference between a tutor and coaching?",
     answer:
       'A tutor knows your child specifically — their reasoning gaps, learning style, target college, time-zone constraints. A coaching center runs a curriculum at scale. Cerebrum delivers the tutor experience even in the small-batch tiers because Dr. Shekhar personally reviews curriculum and assessment for every batch, and the small batch size makes per-student depth possible.',
   },
   {
-    question: 'Why is Dr. Shekhar considered one of India\'s best biology tutors?',
+    question: "Why is Dr. Shekhar considered one of India's best biology tutors?",
     answer:
       'Three reasons. (1) AIIMS New Delhi alumnus — credibility in the highest-tier medical education context in India. (2) 15+ years exclusively teaching biology — no PCM faculty rotation, no general-track distractions. (3) Track record: 680+ medical college selections among his cohorts, 67+ to AIIMS Delhi specifically, multiple students with 100 percentile in NEET biology, multiple INBO/USABO/BBO/CBO qualifiers, IB HL 7/7 outcomes, AP score-5 outcomes. Same tutor across 12 years, same depth, same outcomes.',
   },
@@ -123,7 +123,7 @@ const FAQS = [
   {
     question: 'What programmes does the tutor cover?',
     answer:
-      'Same seven verticals as Cerebrum\'s coaching offering: NEET-UG Biology (Class 11 / 12 / dropper), IB Biology HL & SL, AP Biology, MCAT Biology + Biochemistry, USMLE Step 1 Biology, Biology Olympiads (NSEB/INBO/IBO/USABO/BBO/CBO/SBO), CBSE/ICSE Class 11-12 Biology. The tutor delivery is the personalisation layer; the curriculum spans all seven.',
+      "Same seven verticals as Cerebrum's coaching offering: NEET-UG Biology (Class 11 / 12 / dropper), IB Biology HL & SL, AP Biology, MCAT Biology + Biochemistry, USMLE Step 1 Biology, Biology Olympiads (NSEB/INBO/IBO/USABO/BBO/CBO/SBO), CBSE/ICSE Class 11-12 Biology. The tutor delivery is the personalisation layer; the curriculum spans all seven.",
   },
   {
     question:
@@ -132,14 +132,15 @@ const FAQS = [
       'Often yes for IB HL students because IB IA (Internal Assessment) and EE (Extended Essay) are inherently individual projects that need named-mentor supervision. A tutor relationship is structurally better for IB than a classroom coaching format. We have current IB HL students globally on the Pinnacle ZA Micro-Batch tier specifically for this reason.',
   },
   {
-    question: 'I\'m in the UAE / USA / UK / Canada / Saudi. Can my child have an India-based biology tutor?',
+    question:
+      "I'm in the UAE / USA / UK / Canada / Saudi. Can my child have an India-based biology tutor?",
     answer:
       'Yes — Cerebrum tutors students globally via Zoom. Time-zone-matched slots for Gulf, India, Southeast Asia, UK, US East/West, Canada, Australia. Active NRI cohorts in 30+ countries. Printed study material shipped to your address.',
   },
   {
     question: 'How does pricing work for tutoring?',
     answer:
-      'We don\'t publish prices because they depend on tier (1:1 Solo, Pinnacle ZA Micro-Batch, Ascent Pro Batch), programme (NEET vs IB vs MCAT vs Olympiad), currency (INR / USD / AED / GBP / CAD / SAR), and any sibling discount. Send a WhatsApp with your child\'s class + programme + country — we share the tier matrix and quote in conversation. Free trial class with Dr. Shekhar comes first.',
+      "We don't publish prices because they depend on tier (1:1 Solo, Pinnacle ZA Micro-Batch, Ascent Pro Batch), programme (NEET vs IB vs MCAT vs Olympiad), currency (INR / USD / AED / GBP / CAD / SAR), and any sibling discount. Send a WhatsApp with your child's class + programme + country — we share the tier matrix and quote in conversation. Free trial class with Dr. Shekhar comes first.",
   },
   {
     question: 'How do I start?',
@@ -161,7 +162,7 @@ export default function BestBiologyTutorIndiaPage() {
     '@id': `${PAGE_URL}#course`,
     name: 'Best Biology Tutor in India — 1:1 and Micro-Batch',
     description:
-      'India\'s best biology tutor service — Dr. Shekhar C Singh and senior faculty. 1:1 Solo and 6-12 student micro-batch across NEET, IB, AP, MCAT, Olympiads.',
+      "India's best biology tutor service — Dr. Shekhar C Singh and senior faculty. 1:1 Solo and 6-12 student micro-batch across NEET, IB, AP, MCAT, Olympiads.",
     url: PAGE_URL,
     inLanguage: 'en-IN',
     educationalLevel: 'Class 9-12 + dropper + international curriculum',
@@ -225,13 +226,11 @@ export default function BestBiologyTutorIndiaPage() {
             <span className="text-indigo-700">named mentor, not a lecture hall.</span>
           </h1>
           <p className="mt-5 text-lg text-slate-600 leading-relaxed max-w-4xl">
-            Dr. Shekhar C Singh &mdash; AIIMS New Delhi alumnus, founder of
-            Cerebrum (2014), 15+ years of biology-specialist tutoring. 1:1
-            Solo tier for the most demanding cases (OCSC, USABO Finals, IBO).
-            Pinnacle ZA Micro-Batch (6-12 students, direct Dr. Shekhar weekly
-            review) for 95% of tutor-seeking families. Across NEET, IB, AP,
-            MCAT, USMLE Step 1, and every biology olympiad &mdash; same
-            personalisation layer.
+            Dr. Shekhar C Singh &mdash; AIIMS New Delhi alumnus, founder of Cerebrum (2014), 15+
+            years of biology-specialist tutoring. 1:1 Solo tier for the most demanding cases (OCSC,
+            USABO Finals, IBO). Pinnacle ZA Micro-Batch (6-12 students, direct Dr. Shekhar weekly
+            review) for 95% of tutor-seeking families. Across NEET, IB, AP, MCAT, USMLE Step 1, and
+            every biology olympiad &mdash; same personalisation layer.
           </p>
 
           <div className="mt-7 flex flex-col sm:flex-row gap-3">
@@ -276,11 +275,29 @@ export default function BestBiologyTutorIndiaPage() {
                       Most popular
                     </span>
                   )}
-                  <h3 className={`mt-3 text-lg font-bold ${idx === 1 ? 'text-white' : 'text-slate-900'}`}>{t.name}</h3>
-                  <p className={`text-sm font-semibold ${idx === 1 ? 'text-amber-300' : 'text-indigo-700'}`}>{t.students}</p>
-                  <p className={`mt-3 text-sm leading-relaxed ${idx === 1 ? 'text-indigo-100' : 'text-slate-700'}`}>{t.angle}</p>
-                  <p className={`mt-4 text-xs uppercase tracking-wide font-semibold ${idx === 1 ? 'text-amber-300' : 'text-slate-500'}`}>Best for</p>
-                  <p className={`mt-1 text-sm ${idx === 1 ? 'text-indigo-100' : 'text-slate-700'}`}>{t.bestFor}</p>
+                  <h3
+                    className={`mt-3 text-lg font-bold ${idx === 1 ? 'text-white' : 'text-slate-900'}`}
+                  >
+                    {t.name}
+                  </h3>
+                  <p
+                    className={`text-sm font-semibold ${idx === 1 ? 'text-amber-300' : 'text-indigo-700'}`}
+                  >
+                    {t.students}
+                  </p>
+                  <p
+                    className={`mt-3 text-sm leading-relaxed ${idx === 1 ? 'text-indigo-100' : 'text-slate-700'}`}
+                  >
+                    {t.angle}
+                  </p>
+                  <p
+                    className={`mt-4 text-xs uppercase tracking-wide font-semibold ${idx === 1 ? 'text-amber-300' : 'text-slate-500'}`}
+                  >
+                    Best for
+                  </p>
+                  <p className={`mt-1 text-sm ${idx === 1 ? 'text-indigo-100' : 'text-slate-700'}`}>
+                    {t.bestFor}
+                  </p>
                 </div>
               ))}
             </div>
@@ -293,29 +310,42 @@ export default function BestBiologyTutorIndiaPage() {
             Why a named mentor matters — and what most coaching gets wrong
           </h2>
           <p className="mt-4 text-base text-slate-700 leading-relaxed">
-            At Allen, Aakash, or PW your child sees rotating biology faculty
-            across the year. Each teacher knows only the slice of curriculum
-            they teach. Nobody has the full picture of your child\&rsquo;s
-            specific reasoning gaps, learning trajectory, or target. That
-            architectural limitation is why mass-coaching biology scores
-            plateau at 280-300 for so many students.
+            At Allen, Aakash, or PW your child sees rotating biology faculty across the year. Each
+            teacher knows only the slice of curriculum they teach. Nobody has the full picture of
+            your child\&rsquo;s specific reasoning gaps, learning trajectory, or target. That
+            architectural limitation is why mass-coaching biology scores plateau at 280-300 for so
+            many students.
           </p>
           <p className="mt-4 text-base text-slate-700 leading-relaxed">
-            A named mentor solves this. Dr. Shekhar (or one of our senior
-            tutors) follows your child across the full prep year &mdash;
-            knows their first attempt, their reasoning failure modes, the
-            topics they accelerated on, the topics they keep losing marks
-            on. Each week\&rsquo;s teaching is calibrated to that specific
-            history. That feedback loop is the entire mechanism behind
-            tutor-led outcomes.
+            A named mentor solves this. Dr. Shekhar (or one of our senior tutors) follows your child
+            across the full prep year &mdash; knows their first attempt, their reasoning failure
+            modes, the topics they accelerated on, the topics they keep losing marks on. Each
+            week\&rsquo;s teaching is calibrated to that specific history. That feedback loop is the
+            entire mechanism behind tutor-led outcomes.
           </p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {[
-              { icon: <Target className="h-5 w-5 text-indigo-600" />, title: 'Personal reasoning-gap diagnosis', text: 'Tutor watches attempts live and identifies exact reasoning failure modes — not just "this is wrong" but "this conflates depolarisation with hyperpolarisation directions".' },
-              { icon: <Sparkles className="h-5 w-5 text-indigo-600" />, title: 'Customised week-on-week plan', text: 'No two students follow identical curriculum cadence. Topic depth allocation varies by individual.' },
-              { icon: <Award className="h-5 w-5 text-indigo-600" />, title: 'Accountability that self-study lacks', text: 'Weekly tutor sessions create accountability. You complete the Campbell chapter because the tutor will ask about it.' },
-              { icon: <GraduationCap className="h-5 w-5 text-indigo-600" />, title: 'Same mentor for the long arc', text: 'Olympiad / NEET prep is a 1-2 year arc. Named mentor across that timeframe means deep familiarity with strengths + gaps.' },
+              {
+                icon: <Target className="h-5 w-5 text-indigo-600" />,
+                title: 'Personal reasoning-gap diagnosis',
+                text: 'Tutor watches attempts live and identifies exact reasoning failure modes — not just "this is wrong" but "this conflates depolarisation with hyperpolarisation directions".',
+              },
+              {
+                icon: <Sparkles className="h-5 w-5 text-indigo-600" />,
+                title: 'Customised week-on-week plan',
+                text: 'No two students follow identical curriculum cadence. Topic depth allocation varies by individual.',
+              },
+              {
+                icon: <Award className="h-5 w-5 text-indigo-600" />,
+                title: 'Accountability that self-study lacks',
+                text: 'Weekly tutor sessions create accountability. You complete the Campbell chapter because the tutor will ask about it.',
+              },
+              {
+                icon: <GraduationCap className="h-5 w-5 text-indigo-600" />,
+                title: 'Same mentor for the long arc',
+                text: 'Olympiad / NEET prep is a 1-2 year arc. Named mentor across that timeframe means deep familiarity with strengths + gaps.',
+              },
             ].map((c) => (
               <div key={c.title} className="rounded-xl border border-slate-200 p-5">
                 {c.icon}
@@ -339,9 +369,7 @@ export default function BestBiologyTutorIndiaPage() {
                     <span>{f.question}</span>
                     <ChevronRight className="h-5 w-5 shrink-0 text-slate-400 transition-transform group-open:rotate-90" />
                   </summary>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-700">
-                    {f.answer}
-                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-700">{f.answer}</p>
                 </details>
               ))}
             </div>
@@ -352,11 +380,12 @@ export default function BestBiologyTutorIndiaPage() {
         <section className="bg-slate-900 py-14 text-white">
           <div className="mx-auto max-w-3xl px-4 text-center">
             <Award className="h-10 w-10 text-amber-300 mx-auto" />
-            <h2 className="mt-4 text-2xl md:text-3xl font-bold">Book a free trial with Dr. Shekhar</h2>
+            <h2 className="mt-4 text-2xl md:text-3xl font-bold">
+              Book a free trial with Dr. Shekhar
+            </h2>
             <p className="mt-3 text-slate-300 max-w-2xl mx-auto">
-              60 minutes, live, with the founder. Bring one biology question
-              your child has struggled with. You see the tutor-style depth
-              before committing.
+              60 minutes, live, with the founder. Bring one biology question your child has
+              struggled with. You see the tutor-style depth before committing.
             </p>
             <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
               <a

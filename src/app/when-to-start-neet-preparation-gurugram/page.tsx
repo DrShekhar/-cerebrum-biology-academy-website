@@ -37,7 +37,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'When to Start NEET Preparation? Best Time Guide 2025 | Gurugram',
-    description: 'When should you start NEET preparation? Expert guide on ideal timing - Class 9, 10, 11, or 12. Month-wise strategy and what to do if starting late. Call 88264-44334!',
+    description:
+      'When should you start NEET preparation? Expert guide on ideal timing - Class 9, 10, 11, or 12. Month-wise strategy and what to do if starting late. Call 88264-44334!',
   },
 }
 
@@ -125,7 +126,11 @@ export default function WhenToStartNEETPreparation() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

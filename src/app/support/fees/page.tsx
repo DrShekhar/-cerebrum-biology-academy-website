@@ -184,21 +184,15 @@ export default function FeesPage() {
       <section className="bg-indigo-500 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
-            <h1
-              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 animate-fadeInUp"
-            >
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 animate-fadeInUp">
               Fee Structure & Payment Options
             </h1>
-            <p
-              className="text-base sm:text-lg md:text-xl text-purple-100 max-w-3xl mx-auto mb-6 sm:mb-8 animate-fadeInUp"
-            >
+            <p className="text-base sm:text-lg md:text-xl text-purple-100 max-w-3xl mx-auto mb-6 sm:mb-8 animate-fadeInUp">
               Transparent pricing with flexible payment options. No hidden charges, multiple EMI
               plans, and scholarship opportunities available.
             </p>
 
-            <div
-              className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp"
-            >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp">
               <Button
                 variant="outline"
                 size="lg"
@@ -301,9 +295,7 @@ export default function FeesPage() {
           </div>
 
           {selectedCourse && (
-            <div
-              className="bg-gray-50 rounded-3xl p-8 animate-fadeInUp"
-            >
+            <div className="bg-gray-50 rounded-3xl p-8 animate-fadeInUp">
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   EMI Plans for {selectedCourse.title}
@@ -429,8 +421,7 @@ export default function FeesPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">What's Included in Your Fee</h2>
               <p className="text-xl text-gray-600 mb-8">
                 Comprehensive NEET preparation with everything you need for success
@@ -438,10 +429,7 @@ export default function FeesPage() {
 
               <div className="space-y-4">
                 {includedServices.map((service, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center animate-fadeInUp"
-                  >
+                  <div key={index} className="flex items-center animate-fadeInUp">
                     <CheckCircle className="w-6 h-6 text-green-600 mr-4 flex-shrink-0" />
                     <span className="text-gray-700 font-medium">{service}</span>
                   </div>
@@ -449,9 +437,7 @@ export default function FeesPage() {
               </div>
             </div>
 
-            <div
-              className="bg-blue-500 rounded-3xl p-8 text-white animate-fadeInUp"
-            >
+            <div className="bg-blue-500 rounded-3xl p-8 text-white animate-fadeInUp">
               <h3 className="text-2xl font-bold mb-8">Value for Money</h3>
 
               <div className="space-y-6">

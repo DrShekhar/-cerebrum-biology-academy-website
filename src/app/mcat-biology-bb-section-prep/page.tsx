@@ -361,12 +361,12 @@ export default function MCATBBSectionPrepPage() {
               Why biology specialists handle this section differently
             </h2>
             <p className="text-slate-700 leading-relaxed mb-4">
-              Generalist test-prep agencies (other generalist MCAT brands, other generalist MCAT brands) build
-              their products around a single instructor or small team covering all four MCAT
-              sections. That model works for CARS and for the chemistry-heavy C/P section because
-              they reward a consistent test-taking framework. It works less well for B/B because the
-              integrative biology passages reward depth that generalist teaching cannot provide
-              across the breadth of MCAT content.
+              Generalist test-prep agencies (other generalist MCAT brands, other generalist MCAT
+              brands) build their products around a single instructor or small team covering all
+              four MCAT sections. That model works for CARS and for the chemistry-heavy C/P section
+              because they reward a consistent test-taking framework. It works less well for B/B
+              because the integrative biology passages reward depth that generalist teaching cannot
+              provide across the breadth of MCAT content.
             </p>
             <p className="text-slate-700 leading-relaxed mb-4">
               A typical hard B/B passage might combine an unfamiliar enzyme&apos;s kinetics, a

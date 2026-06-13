@@ -175,7 +175,11 @@ export default function NEETCoachingNearMeGhaziabadContent({ faqs }: { faqs: FAQ
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://maps.google.com/?q=B-45+Sector+62+Noida" target="_blank" rel="noopener">
+              <a
+                href="https://maps.google.com/?q=B-45+Sector+62+Noida"
+                target="_blank"
+                rel="noopener"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -246,14 +250,16 @@ export default function NEETCoachingNearMeGhaziabadContent({ faqs }: { faqs: FAQ
             <div className="space-y-6">
               <div className="bg-white rounded-2xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-slate-900 mb-4">Address</h3>
-                <p className="text-slate-600 mb-4">
-                  B-45, Sector 62, Noida, UP 201301
-                </p>
+                <p className="text-slate-600 mb-4">B-45, Sector 62, Noida, UP 201301</p>
                 <p className="text-slate-500 text-sm mb-4">
                   Nearest Metro: Sector 62 Station (Blue Line) — 5 min walk
                 </p>
                 <div className="flex gap-4">
-                  <a href="https://maps.google.com/?q=B-45+Sector+62+Noida" target="_blank" rel="noopener">
+                  <a
+                    href="https://maps.google.com/?q=B-45+Sector+62+Noida"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <Button>
                       <Navigation className="w-4 h-4 mr-2" />
                       Open in Google Maps
@@ -319,7 +325,9 @@ export default function NEETCoachingNearMeGhaziabadContent({ faqs }: { faqs: FAQ
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">How to Reach Us from Ghaziabad</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              How to Reach Us from Ghaziabad
+            </h2>
             <p className="text-xl text-slate-600">Multiple transport options available</p>
           </div>
 
@@ -451,7 +459,11 @@ export default function NEETCoachingNearMeGhaziabadContent({ faqs }: { faqs: FAQ
             Book a free demo class and see our facility in person
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 size="xl"
@@ -461,7 +473,11 @@ export default function NEETCoachingNearMeGhaziabadContent({ faqs }: { faqs: FAQ
                 Book Free Demo
               </Button>
             </Link>
-            <a href="https://maps.google.com/?q=B-45+Sector+62+Noida" target="_blank" rel="noopener">
+            <a
+              href="https://maps.google.com/?q=B-45+Sector+62+Noida"
+              target="_blank"
+              rel="noopener"
+            >
               <Button
                 variant="outline"
                 size="xl"

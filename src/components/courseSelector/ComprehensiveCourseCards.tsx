@@ -444,9 +444,7 @@ const PlanCard = ({
   const [showAllFeatures, setShowAllFeatures] = useState(false)
 
   return (
-    <div
-      className="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md transition-all duration-300 animate-fadeInUp"
-    >
+    <div className="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md transition-all duration-300 animate-fadeInUp">
       {/* Plan Header */}
       <div className="flex justify-between items-start mb-3">
         <div>

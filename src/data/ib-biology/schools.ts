@@ -57,9 +57,39 @@ export interface IBBiologySchool {
   /** IANA timezone string for schema.org */
   timezoneIana: string
   /** ISO-3166 alpha-2 country code */
-  countryCode: 'SG' | 'AE' | 'TH' | 'IN' | 'CN' | 'HK' | 'CH' | 'DE' | 'NL' | 'SE' | 'IE' | 'JP' | 'KR' | 'CA' | 'GB'
+  countryCode:
+    | 'SG'
+    | 'AE'
+    | 'TH'
+    | 'IN'
+    | 'CN'
+    | 'HK'
+    | 'CH'
+    | 'DE'
+    | 'NL'
+    | 'SE'
+    | 'IE'
+    | 'JP'
+    | 'KR'
+    | 'CA'
+    | 'GB'
   /** BCP-47 language tag for schema.org `inLanguage` */
-  inLanguage: 'en-SG' | 'en-AE' | 'en-TH' | 'en-IN' | 'en-CN' | 'en-HK' | 'en-CH' | 'en-DE' | 'en-NL' | 'en-SE' | 'en-IE' | 'en-JP' | 'en-KR' | 'en-CA' | 'en-GB'
+  inLanguage:
+    | 'en-SG'
+    | 'en-AE'
+    | 'en-TH'
+    | 'en-IN'
+    | 'en-CN'
+    | 'en-HK'
+    | 'en-CH'
+    | 'en-DE'
+    | 'en-NL'
+    | 'en-SE'
+    | 'en-IE'
+    | 'en-JP'
+    | 'en-KR'
+    | 'en-CA'
+    | 'en-GB'
   /** School category (drives hero badge copy) */
   schoolType:
     | 'International (IB World School)'
@@ -3223,28 +3253,29 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'International (IB World School)',
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
-      'Founded in 1924 to serve League of Nations families, Ecolint is the world\'s first international school and home to the original IB Diploma Programme pilot. Its three campuses — La Grande Boissière, La Châtaigneraie, and Campus des Nations — collectively enrol over 4,500 students from 130+ nationalities, making it one of Europe\'s largest IB World Schools.',
-      'IB Biology is offered at both HL and SL across all three campuses. The school\'s proximity to CERN, WHO, and the University of Geneva\'s Faculty of Medicine gives Biology students direct access to guest lectures, field visits, and IA project mentors working in active research environments.',
+      "Founded in 1924 to serve League of Nations families, Ecolint is the world's first international school and home to the original IB Diploma Programme pilot. Its three campuses — La Grande Boissière, La Châtaigneraie, and Campus des Nations — collectively enrol over 4,500 students from 130+ nationalities, making it one of Europe's largest IB World Schools.",
+      "IB Biology is offered at both HL and SL across all three campuses. The school's proximity to CERN, WHO, and the University of Geneva's Faculty of Medicine gives Biology students direct access to guest lectures, field visits, and IA project mentors working in active research environments.",
       'Ecolint graduates regularly matriculate to UK Russell Group medical schools (UCL, Edinburgh, Imperial), Swiss federal universities (EPFL, ETH), and US Ivy League life-science programmes. The school reports a median IB Diploma score consistently above the global average.',
     ],
     reputationBullets: [
-      'World\'s first international school — founded 1924 for League of Nations',
+      "World's first international school — founded 1924 for League of Nations",
       '4,500+ students across 3 Geneva campuses, 130+ nationalities',
       'Birthplace of the IB Diploma Programme (pilot school)',
       'Median IB Diploma score consistently above global average',
       'Direct CERN, WHO, and University of Geneva research access for IA projects',
     ],
     diplomaContext:
-      'Ecolint\'s three campuses collectively graduate 200+ IB Diploma candidates annually. The school has publicly reported median IB scores above the global average for over a decade. Biology HL is one of the most popular Group 4 choices, per the school\'s annual DP report.',
+      "Ecolint's three campuses collectively graduate 200+ IB Diploma candidates annually. The school has publicly reported median IB scores above the global average for over a decade. Biology HL is one of the most popular Group 4 choices, per the school's annual DP report.",
     collegeContext:
-      'Ecolint graduates matriculate to UK Russell Group medical schools (UCL, Edinburgh, Imperial), Swiss universities (University of Geneva Medicine, EPFL, ETH Zurich), US Ivy League and top-50 programmes (Harvard, Yale, Stanford), and leading EU institutions. The school\'s university counselling office reports a strong track record in pre-medical admissions.',
+      "Ecolint graduates matriculate to UK Russell Group medical schools (UCL, Edinburgh, Imperial), Swiss universities (University of Geneva Medicine, EPFL, ETH Zurich), US Ivy League and top-50 programmes (Harvard, Yale, Stanford), and leading EU institutions. The school's university counselling office reports a strong track record in pre-medical admissions.",
     paceAlignment:
-      'Our tutoring syncs with Ecolint\'s DP1/DP2 calendar (August start, May exams). We align paper-by-paper prep with each campus\'s internal assessment cycle and accommodate the mid-year exam week. IA mentorship begins in DP1 Term 2, targeting the school\'s February draft deadline.',
+      "Our tutoring syncs with Ecolint's DP1/DP2 calendar (August start, May exams). We align paper-by-paper prep with each campus's internal assessment cycle and accommodate the mid-year exam week. IA mentorship begins in DP1 Term 2, targeting the school's February draft deadline.",
     faqs: [
       {
-        question: 'Which Ecolint campus do you support — LGB, La Châtaigneraie, or Campus des Nations?',
+        question:
+          'Which Ecolint campus do you support — LGB, La Châtaigneraie, or Campus des Nations?',
         answer:
-          'All three. The IB Biology syllabus is identical across campuses, but internal pacing and IA deadlines differ slightly between LGB and La Châtaigneraie. We calibrate session plans to whichever campus your child attends, matching their specific teacher\'s unit order and mock schedule.',
+          "All three. The IB Biology syllabus is identical across campuses, but internal pacing and IA deadlines differ slightly between LGB and La Châtaigneraie. We calibrate session plans to whichever campus your child attends, matching their specific teacher's unit order and mock schedule.",
       },
       {
         question: 'Can you help with IB Biology IA projects using CERN or WHO data?',
@@ -3252,9 +3283,9 @@ export const ibBiologySchools: IBBiologySchool[] = [
           'Yes — several of our Ecolint students have used publicly available CERN radiation-biology datasets and WHO epidemiological data for their IAs. We guide topic selection, experimental design, and statistical analysis to hit the 22+/24 IA band.',
       },
       {
-        question: 'How do your CET evening sessions fit an Ecolint student\'s schedule?',
+        question: "How do your CET evening sessions fit an Ecolint student's schedule?",
         answer:
-          'We offer 5–8 PM CET slots on weekdays, which is after the typical 3:30 PM Ecolint dismissal. Weekend morning sessions are also available for students with heavy extracurricular commitments. Session times flex around Ecolint\'s exam and Model UN calendar.',
+          "We offer 5–8 PM CET slots on weekdays, which is after the typical 3:30 PM Ecolint dismissal. Weekend morning sessions are also available for students with heavy extracurricular commitments. Session times flex around Ecolint's exam and Model UN calendar.",
       },
       {
         question: 'Do you tutor in French as well as English?',
@@ -3281,12 +3312,12 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'IB Continuum School',
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
-      'Zurich International School was founded in 1963 in Kilchberg overlooking Lake Zurich, serving the corporate expat community of Switzerland\'s financial capital. Today ZIS operates two campuses — Upper School in Adliswil and Lower/Middle School in Wädenswil — enrolling approximately 1,400 students from 55+ countries.',
+      "Zurich International School was founded in 1963 in Kilchberg overlooking Lake Zurich, serving the corporate expat community of Switzerland's financial capital. Today ZIS operates two campuses — Upper School in Adliswil and Lower/Middle School in Wädenswil — enrolling approximately 1,400 students from 55+ countries.",
       'ZIS offers IB Biology at both HL and SL within a full IB Continuum (PYP → MYP → DP). The school is known for strong sciences — its lab facilities in the Upper School Adliswil campus were purpose-built for IB practicals. ZIS Biology students benefit from field-trip access to ETH Zurich research labs and the University of Zurich Institute of Molecular Life Sciences.',
-      'ZIS graduates pursue medicine and life sciences at top universities globally, with strong placement at UK Russell Group (Imperial, UCL, King\'s), US T20, and Swiss federal institutions (ETH, University of Zurich).',
+      "ZIS graduates pursue medicine and life sciences at top universities globally, with strong placement at UK Russell Group (Imperial, UCL, King's), US T20, and Swiss federal institutions (ETH, University of Zurich).",
     ],
     reputationBullets: [
-      'Founded 1963 — Zurich\'s longest-established international school',
+      "Founded 1963 — Zurich's longest-established international school",
       '1,400+ students, 55+ nationalities across two campuses',
       'Full IB Continuum: PYP → MYP → DP',
       'Purpose-built DP science labs in Upper School Adliswil',
@@ -3297,15 +3328,16 @@ export const ibBiologySchools: IBBiologySchool[] = [
     collegeContext:
       'ZIS university counselling reports strong placements at UK Russell Group medical schools, ETH Zurich, University of Zurich, and US top-30 institutions. The school hosts regular admissions visits from Imperial College London, UCL, and Ivy League representatives.',
     paceAlignment:
-      'Our tutoring aligns with ZIS Upper School\'s DP calendar (mid-August start, internal mocks in February DP2, May final exams). IA mentorship begins October DP1 to match ZIS\'s early IA topic-selection timeline, which precedes many other IB schools by one term.',
+      "Our tutoring aligns with ZIS Upper School's DP calendar (mid-August start, internal mocks in February DP2, May final exams). IA mentorship begins October DP1 to match ZIS's early IA topic-selection timeline, which precedes many other IB schools by one term.",
     faqs: [
       {
-        question: 'How do you align with ZIS\'s DP Biology unit ordering?',
+        question: "How do you align with ZIS's DP Biology unit ordering?",
         answer:
-          'We request your child\'s ZIS Biology unit schedule at onboarding and build session plans to stay 1–2 weeks ahead. ZIS Upper School typically starts with Cell Biology and Molecular Biology in DP1 Term 1, and we match that sequence precisely.',
+          "We request your child's ZIS Biology unit schedule at onboarding and build session plans to stay 1–2 weeks ahead. ZIS Upper School typically starts with Cell Biology and Molecular Biology in DP1 Term 1, and we match that sequence precisely.",
       },
       {
-        question: 'Can you help ZIS students targeting ETH Zurich or University of Zurich Medicine?',
+        question:
+          'Can you help ZIS students targeting ETH Zurich or University of Zurich Medicine?',
         answer:
           'Absolutely. Swiss medical school admission requires the Eignungstest für das Medizinstudium (EMS) in addition to a strong IB score. We coach Biology HL for the Level 7 target and advise on EMS preparation pathways alongside the IB.',
       },
@@ -3317,12 +3349,12 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'What time slots are available for ZIS students?',
         answer:
-          'Weekday sessions from 5–8 PM CET fit cleanly after ZIS\'s 3:15 PM Upper School dismissal. Saturday morning slots are available for students with competitive sports or music commitments during the week.',
+          "Weekday sessions from 5–8 PM CET fit cleanly after ZIS's 3:15 PM Upper School dismissal. Saturday morning slots are available for students with competitive sports or music commitments during the week.",
       },
       {
         question: 'When should a ZIS student start IB Biology HL tutoring?',
         answer:
-          'For Level 7 targeting: September of DP1, to build momentum before ZIS\'s early IA timeline. For Level 6 maintenance or SL students: DP1 Term 2 (January) is still comfortable. Late DP2 starters (January–March) can target 1–2 level improvement with intensive twice-weekly sessions.',
+          "For Level 7 targeting: September of DP1, to build momentum before ZIS's early IA timeline. For Level 6 maintenance or SL students: DP1 Term 2 (January) is still comfortable. Late DP2 starters (January–March) can target 1–2 level improvement with intensive twice-weekly sessions.",
       },
     ],
   },
@@ -3339,23 +3371,23 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'IB Continuum School',
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
-      'ISZL was founded in 1961 to serve the corporate expat community in Zug — Switzerland\'s tax-efficient hub for commodity trading, biotech, and cryptocurrency firms. The school operates across campuses in Hünenberg (Lower School), Walterswil (Middle School), and the main Upper School campus, enrolling approximately 1,300 students from 60+ countries.',
-      'ISZL offers IB Biology at HL and SL with a strong focus on data-driven practicals. The school\'s Upper School science wing was refurbished in 2019 with dedicated Biology labs. ISZL Biology teachers have historically included published researchers who bring current biotech and pharmaceutical-industry relevance to the IB curriculum.',
-      'ISZL graduates matriculate to top Swiss, UK, US, and European universities. The school\'s proximity to the Roche Innovation Center Kaiseraugst and Novartis in Basel creates opportunities for Biology-related internships and IA project mentors.',
+      "ISZL was founded in 1961 to serve the corporate expat community in Zug — Switzerland's tax-efficient hub for commodity trading, biotech, and cryptocurrency firms. The school operates across campuses in Hünenberg (Lower School), Walterswil (Middle School), and the main Upper School campus, enrolling approximately 1,300 students from 60+ countries.",
+      "ISZL offers IB Biology at HL and SL with a strong focus on data-driven practicals. The school's Upper School science wing was refurbished in 2019 with dedicated Biology labs. ISZL Biology teachers have historically included published researchers who bring current biotech and pharmaceutical-industry relevance to the IB curriculum.",
+      "ISZL graduates matriculate to top Swiss, UK, US, and European universities. The school's proximity to the Roche Innovation Center Kaiseraugst and Novartis in Basel creates opportunities for Biology-related internships and IA project mentors.",
     ],
     reputationBullets: [
-      'Founded 1961 — Zug canton\'s premier international school',
+      "Founded 1961 — Zug canton's premier international school",
       '1,300+ students, 60+ nationalities',
       'Full IB Continuum with dedicated Upper School Biology labs',
-      'Located in Switzerland\'s corporate-HQ corridor (commodity trading, biotech)',
+      "Located in Switzerland's corporate-HQ corridor (commodity trading, biotech)",
       'Proximity to Roche and Novartis for IA/internship access',
     ],
     diplomaContext:
       'ISZL graduates approximately 100 IB Diploma candidates annually. Sciences are a strength area; Biology HL enrolment is consistently strong, driven by the biotech/pharmaceutical industry parent community.',
     collegeContext:
-      'ISZL reports strong placements at ETH Zurich, University of Zurich, UK Russell Group (Imperial, Edinburgh, King\'s), and US T20 universities. Medical-school aspirants from ISZL typically apply to Swiss, UK, and Eastern European medical programmes.',
+      "ISZL reports strong placements at ETH Zurich, University of Zurich, UK Russell Group (Imperial, Edinburgh, King's), and US T20 universities. Medical-school aspirants from ISZL typically apply to Swiss, UK, and Eastern European medical programmes.",
     paceAlignment:
-      'We sync with ISZL\'s Upper School DP calendar (mid-August start, February mocks, May exams). Our IA mentorship timeline aligns with ISZL\'s November DP1 topic-selection deadline. Sessions are scheduled around ISZL\'s Wednesday afternoon CAS block.',
+      "We sync with ISZL's Upper School DP calendar (mid-August start, February mocks, May exams). Our IA mentorship timeline aligns with ISZL's November DP1 topic-selection deadline. Sessions are scheduled around ISZL's Wednesday afternoon CAS block.",
     faqs: [
       {
         question: 'How do you support ISZL students targeting biotech or pharma careers?',
@@ -3363,14 +3395,14 @@ export const ibBiologySchools: IBBiologySchool[] = [
           'We emphasise the molecular biology and genetics strands that are directly relevant to the Zug/Basel pharma corridor. For IAs, we can help students design projects using publicly available Roche or Novartis research methodologies, which strengthens both the IA and university applications.',
       },
       {
-        question: 'Can you accommodate ISZL\'s Wednesday CAS block schedule?',
+        question: "Can you accommodate ISZL's Wednesday CAS block schedule?",
         answer:
-          'Yes — we avoid scheduling during ISZL\'s Wednesday afternoon CAS commitment. Most ISZL students take sessions on Monday/Thursday evenings (5–7 PM CET) or Saturday mornings.',
+          "Yes — we avoid scheduling during ISZL's Wednesday afternoon CAS commitment. Most ISZL students take sessions on Monday/Thursday evenings (5–7 PM CET) or Saturday mornings.",
       },
       {
         question: 'What IA topics work well for ISZL students?',
         answer:
-          'ISZL students often do well with enzyme-kinetics, microbiome, or plant-physiology IAs that use the school\'s lab equipment. We guide topic refinement to ensure the research question is both scientifically valid and achievable within the school\'s lab access window.',
+          "ISZL students often do well with enzyme-kinetics, microbiome, or plant-physiology IAs that use the school's lab equipment. We guide topic refinement to ensure the research question is both scientifically valid and achievable within the school's lab access window.",
       },
       {
         question: 'Do you offer group sessions for ISZL Biology students?',
@@ -3399,10 +3431,10 @@ export const ibBiologySchools: IBBiologySchool[] = [
     historyParagraphs: [
       'International School Basel is located in Reinach, south of Basel, serving the pharmaceutical and life-sciences expat community that defines the Basel region. Novartis, Roche, Lonza, and Syngenta are all headquartered within 20 km, and ISB enrols over 1,400 students from 50+ nationalities.',
       'ISB offers IB Biology at HL and SL with a distinctive life-sciences emphasis driven by the local industry context. Many ISB parents work in drug discovery, clinical research, or biotechnology, which creates a school culture where Biology HL is a prestige subject. The school hosts an annual Science Week with guest lectures from Basel pharma researchers.',
-      'ISB graduates regularly place at Swiss federal universities, UK medical schools, and US research universities. The school\'s Science Department collaborates with the Biozentrum (University of Basel) for extended essay supervision and IA project mentorship.',
+      "ISB graduates regularly place at Swiss federal universities, UK medical schools, and US research universities. The school's Science Department collaborates with the Biozentrum (University of Basel) for extended essay supervision and IA project mentorship.",
     ],
     reputationBullets: [
-      '1,400+ students in the heart of Europe\'s pharma capital',
+      "1,400+ students in the heart of Europe's pharma capital",
       'Biology HL is among the most popular Group 4 choices',
       'Annual Science Week with Novartis / Roche / Lonza guest researchers',
       'Biozentrum (University of Basel) collaboration for EE + IA projects',
@@ -3413,12 +3445,12 @@ export const ibBiologySchools: IBBiologySchool[] = [
     collegeContext:
       'ISB reports strong placements at University of Basel Medicine, ETH Zurich, UK Russell Group medical schools (Imperial, UCL, Edinburgh), and US T30 universities. The pharma-corridor connection gives ISB biology graduates distinctive application narratives.',
     paceAlignment:
-      'We match ISB\'s DP calendar with sessions calibrated to their internal assessment milestones. IA mentorship starts in DP1 to leverage the school\'s Biozentrum partnership for research-design guidance.',
+      "We match ISB's DP calendar with sessions calibrated to their internal assessment milestones. IA mentorship starts in DP1 to leverage the school's Biozentrum partnership for research-design guidance.",
     faqs: [
       {
-        question: 'How does tutoring complement ISB\'s pharma-industry Science Week?',
+        question: "How does tutoring complement ISB's pharma-industry Science Week?",
         answer:
-          'We use ISB\'s Science Week themes (drug discovery, clinical-trial design, biotech ethics) as springboards for IA topic brainstorming. Students who connect their IA to an industry-relevant question typically score 20+/24 because the research context is genuinely novel.',
+          "We use ISB's Science Week themes (drug discovery, clinical-trial design, biotech ethics) as springboards for IA topic brainstorming. Students who connect their IA to an industry-relevant question typically score 20+/24 because the research context is genuinely novel.",
       },
       {
         question: 'Can you help with University of Basel Medicine applications?',
@@ -3438,7 +3470,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When is the best time for ISB students to start tutoring?',
         answer:
-          'September DP1 for Level 7 targeting. ISB\'s internal Biology mocks typically fall in February DP2 — students who start by October DP1 have two full mock cycles to refine technique before the May finals.',
+          "September DP1 for Level 7 targeting. ISB's internal Biology mocks typically fall in February DP2 — students who start by October DP1 have two full mock cycles to refine technique before the May finals.",
       },
     ],
   },
@@ -3456,27 +3488,27 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       'Collège du Léman (CDL) is a private international boarding and day school in Versoix, on the shores of Lake Geneva. Founded in 1960, CDL offers multiple diploma tracks including the IB Diploma, French Baccalauréat, and Swiss Maturité. The school enrols approximately 1,900 students from 120+ countries, making it one of the largest international schools in Switzerland.',
-      'The IB stream at CDL offers Biology at both HL and SL. CDL\'s boarding population — drawn from diplomatic, UN, and multinational-corporate families — creates a diverse student cohort with strong university ambitions. The school\'s lakeside campus includes modern science laboratories and a dedicated research library.',
-      'CDL graduates pursue medicine and life sciences at Swiss, UK, US, and European universities. The school\'s bilingual French-English environment and Geneva location provide natural connections to WHO, UNAIDS, and Médecins Sans Frontières for biology-adjacent career exploration.',
+      "The IB stream at CDL offers Biology at both HL and SL. CDL's boarding population — drawn from diplomatic, UN, and multinational-corporate families — creates a diverse student cohort with strong university ambitions. The school's lakeside campus includes modern science laboratories and a dedicated research library.",
+      "CDL graduates pursue medicine and life sciences at Swiss, UK, US, and European universities. The school's bilingual French-English environment and Geneva location provide natural connections to WHO, UNAIDS, and Médecins Sans Frontières for biology-adjacent career exploration.",
     ],
     reputationBullets: [
-      '1,900+ students, 120+ nationalities — one of Switzerland\'s largest international schools',
+      "1,900+ students, 120+ nationalities — one of Switzerland's largest international schools",
       'Multiple diploma tracks: IB DP, French Bac, Swiss Maturité',
       'Boarding + day school with lakeside campus in Versoix',
       'Geneva UN/WHO corridor for biology-related career exposure',
       'Founded 1960 with strong tradition in sciences',
     ],
     diplomaContext:
-      'CDL\'s IB stream graduates approximately 80 IB Diploma candidates annually. The school runs both IB and French Bac tracks, so IB cohort sizes are moderate. Biology HL is a popular Group 4 choice among pre-medical and life-science candidates.',
+      "CDL's IB stream graduates approximately 80 IB Diploma candidates annually. The school runs both IB and French Bac tracks, so IB cohort sizes are moderate. Biology HL is a popular Group 4 choice among pre-medical and life-science candidates.",
     collegeContext:
-      'CDL graduates matriculate to Swiss universities (Geneva, Lausanne, ETH), UK medical schools (UCL, King\'s, Edinburgh), US T50, and French grandes écoles. The school\'s bilingual programme supports applications to both Anglophone and Francophone university systems.',
+      "CDL graduates matriculate to Swiss universities (Geneva, Lausanne, ETH), UK medical schools (UCL, King's, Edinburgh), US T50, and French grandes écoles. The school's bilingual programme supports applications to both Anglophone and Francophone university systems.",
     paceAlignment:
-      'We sync with CDL\'s IB DP calendar and accommodate the school\'s bilingual scheduling. Sessions are timed after CDL\'s afternoon activities slot, with flexibility around the boarding students\' evening study-hall schedule.',
+      "We sync with CDL's IB DP calendar and accommodate the school's bilingual scheduling. Sessions are timed after CDL's afternoon activities slot, with flexibility around the boarding students' evening study-hall schedule.",
     faqs: [
       {
-        question: 'Do you support CDL\'s boarding students as well as day students?',
+        question: "Do you support CDL's boarding students as well as day students?",
         answer:
-          'Yes — our online tutoring is ideal for boarding students who cannot travel off-campus for in-person tuition. We schedule sessions during CDL\'s approved study-hall windows (typically 7–9 PM CET) or weekend mornings.',
+          "Yes — our online tutoring is ideal for boarding students who cannot travel off-campus for in-person tuition. We schedule sessions during CDL's approved study-hall windows (typically 7–9 PM CET) or weekend mornings.",
       },
       {
         question: 'Can you help a CDL student who switched from French Bac to IB DP?',
@@ -3486,7 +3518,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'How do CDL IB Biology results compare to the global average?',
         answer:
-          'We don\'t cite school-specific results without the school\'s published data. However, CDL\'s IB cohort is academically selective — students must meet entry criteria for the IB track — which correlates with above-average Group 4 outcomes.',
+          "We don't cite school-specific results without the school's published data. However, CDL's IB cohort is academically selective — students must meet entry criteria for the IB track — which correlates with above-average Group 4 outcomes.",
       },
       {
         question: 'What is the pricing for CDL families?',
@@ -3516,12 +3548,12 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'IB Continuum School',
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
-      'Frankfurt International School (FIS) was founded in 1961 in Oberursel, north of Frankfurt, to serve the banking and corporate expat community in Germany\'s financial capital. FIS enrols approximately 1,800 students from 60+ countries across its Oberursel and Wiesbaden campuses, making it one of the largest international schools in Germany.',
-      'FIS offers IB Biology at both HL and SL within a full IB Continuum. The school\'s Upper School in Oberursel has purpose-built science labs and a strong tradition in Group 4 sciences. FIS Biology HL is a popular choice among pre-medical students, driven by the financial-sector parent community\'s emphasis on competitive university placements.',
+      "Frankfurt International School (FIS) was founded in 1961 in Oberursel, north of Frankfurt, to serve the banking and corporate expat community in Germany's financial capital. FIS enrols approximately 1,800 students from 60+ countries across its Oberursel and Wiesbaden campuses, making it one of the largest international schools in Germany.",
+      "FIS offers IB Biology at both HL and SL within a full IB Continuum. The school's Upper School in Oberursel has purpose-built science labs and a strong tradition in Group 4 sciences. FIS Biology HL is a popular choice among pre-medical students, driven by the financial-sector parent community's emphasis on competitive university placements.",
       'FIS graduates matriculate to UK medical schools, US Ivy League programmes, and German universities (including post-2025 IB recognition pathways to Goethe University Frankfurt Medicine). The school hosts regular university fairs with 50+ institutions represented.',
     ],
     reputationBullets: [
-      '1,800+ students — one of Germany\'s largest international schools',
+      "1,800+ students — one of Germany's largest international schools",
       'Full IB Continuum across Oberursel + Wiesbaden campuses',
       'Purpose-built Upper School science labs in Oberursel',
       'Financial-sector expat feeder — ECB, Deutsche Bank, Commerzbank families',
@@ -3530,9 +3562,9 @@ export const ibBiologySchools: IBBiologySchool[] = [
     diplomaContext:
       'FIS graduates approximately 150 IB Diploma candidates annually — one of the largest DP cohorts in Germany. Biology HL is among the top Group 4 choices. The school reports strong Group 4 averages across examination sessions.',
     collegeContext:
-      'FIS reports strong placements at UK Russell Group (Imperial, UCL, Edinburgh), US T30, and — increasingly post-2025 — German universities including Goethe University Frankfurt, Heidelberg, and LMU Munich. The 2025 German IB recognition uplift has expanded FIS graduates\' domestic medical-school options significantly.',
+      "FIS reports strong placements at UK Russell Group (Imperial, UCL, Edinburgh), US T30, and — increasingly post-2025 — German universities including Goethe University Frankfurt, Heidelberg, and LMU Munich. The 2025 German IB recognition uplift has expanded FIS graduates' domestic medical-school options significantly.",
     paceAlignment:
-      'Our tutoring aligns with FIS\'s DP calendar (late August start, February mocks, May exams). We calibrate to FIS\'s internal unit ordering and accommodate the school\'s Wednesday afternoon enrichment block.',
+      "Our tutoring aligns with FIS's DP calendar (late August start, February mocks, May exams). We calibrate to FIS's internal unit ordering and accommodate the school's Wednesday afternoon enrichment block.",
     faqs: [
       {
         question: 'How does the 2025 German IB recognition change affect FIS students?',
@@ -3547,7 +3579,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'What time slots work for FIS students?',
         answer:
-          'Weekday sessions from 5–7:30 PM CET fit after FIS Oberursel\'s 3:30 PM dismissal. We avoid Wednesday afternoons (enrichment block). Saturday morning slots are available for students with sports commitments.',
+          "Weekday sessions from 5–7:30 PM CET fit after FIS Oberursel's 3:30 PM dismissal. We avoid Wednesday afternoons (enrichment block). Saturday morning slots are available for students with sports commitments.",
       },
       {
         question: 'Do you accept EUR payment?',
@@ -3557,7 +3589,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should an FIS student start IB Biology tutoring?',
         answer:
-          'September DP1 for Level 7 targeting. FIS\'s large DP cohort (~150 students) means Biology HL classes can be fast-paced — early tutoring prevents gaps from compounding. Late starters (January DP2) can still target a 1–2 level improvement with intensive sessions.',
+          "September DP1 for Level 7 targeting. FIS's large DP cohort (~150 students) means Biology HL classes can be fast-paced — early tutoring prevents gaps from compounding. Late starters (January DP2) can still target a 1–2 level improvement with intensive sessions.",
       },
     ],
   },
@@ -3574,7 +3606,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'IB Continuum School',
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
-      'Munich International School (MIS) was founded in 1966 in Starnberg, south of Munich, on the shores of Lake Starnberg. MIS enrols approximately 1,200 students from 65+ countries. The school\'s lakeside campus includes dedicated science facilities and outdoor education spaces.',
+      "Munich International School (MIS) was founded in 1966 in Starnberg, south of Munich, on the shores of Lake Starnberg. MIS enrols approximately 1,200 students from 65+ countries. The school's lakeside campus includes dedicated science facilities and outdoor education spaces.",
       'MIS offers IB Biology at both HL and SL. The school serves the BMW, Siemens, Allianz, and Munich Re corporate expat community, as well as diplomatic families and the significant Indian tech-sector diaspora in the Munich region. Biology HL is a popular choice, with many MIS families targeting UK and German medical-school pathways.',
       'MIS graduates matriculate to LMU Munich, TU Munich, UK Russell Group, US T50, and European medical programmes. The 2025 German IB recognition uplift has made LMU Munich Medical School directly accessible to MIS IB graduates with strong Biology HL results.',
     ],
@@ -3590,7 +3622,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     collegeContext:
       'MIS reports placements at LMU Munich, TU Munich, UK Russell Group medical schools (Imperial, Edinburgh), Heidelberg, and US top-50 universities. Post-2025 IB recognition, MIS graduates now have a direct domestic pathway to German medical schools.',
     paceAlignment:
-      'We align with MIS\'s DP calendar (September start, internal mocks February, May finals). IA mentorship starts October DP1 to match MIS\'s early IA planning timeline.',
+      "We align with MIS's DP calendar (September start, internal mocks February, May finals). IA mentorship starts October DP1 to match MIS's early IA planning timeline.",
     faqs: [
       {
         question: 'Can you help MIS students targeting LMU Munich Medicine?',
@@ -3605,12 +3637,12 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'What time slots work for MIS Starnberg students?',
         answer:
-          'Weekday sessions from 5–7:30 PM CET after MIS\'s typical 3:15 PM dismissal. The Starnberg campus\'s S-Bahn commute to Munich takes 30–40 minutes, so students commuting home before sessions should allow for travel time.',
+          "Weekday sessions from 5–7:30 PM CET after MIS's typical 3:15 PM dismissal. The Starnberg campus's S-Bahn commute to Munich takes 30–40 minutes, so students commuting home before sessions should allow for travel time.",
       },
       {
         question: 'Do you offer trial sessions for MIS families?',
         answer:
-          'Yes — we offer a single 60-minute diagnostic session at no commitment. This session assesses the student\'s current IB Biology standing, identifies specific gaps, and proposes a tailored tutoring plan aligned with MIS\'s upcoming unit schedule.',
+          "Yes — we offer a single 60-minute diagnostic session at no commitment. This session assesses the student's current IB Biology standing, identifies specific gaps, and proposes a tailored tutoring plan aligned with MIS's upcoming unit schedule.",
       },
       {
         question: 'When should an MIS student start IB Biology HL tutoring?',
@@ -3633,7 +3665,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       'Bavarian International School (BIS) was founded in 1991 in Haimhausen, north of Munich. BIS operates two campuses — Haimhausen (Upper School) and Schwabing (City Campus) — enrolling approximately 1,100 students from 60+ countries. The Haimhausen campus sits on a 6-hectare green site with modern science facilities.',
-      'BIS offers IB Biology at both HL and SL with emphasis on practical, inquiry-based learning. The school\'s rural Haimhausen setting provides opportunities for ecology fieldwork IAs — a distinctive advantage for IB Biology students. BIS Biology faculty have included published environmental scientists.',
+      "BIS offers IB Biology at both HL and SL with emphasis on practical, inquiry-based learning. The school's rural Haimhausen setting provides opportunities for ecology fieldwork IAs — a distinctive advantage for IB Biology students. BIS Biology faculty have included published environmental scientists.",
       'BIS graduates matriculate to German, UK, US, and European universities. The school reports a median IB Diploma score above the global average. Post-2025 IB recognition, BIS graduates can access LMU Munich, TU Munich, and Heidelberg medical programmes directly.',
     ],
     reputationBullets: [
@@ -3644,16 +3676,16 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Post-2025: direct German university medical pathways for IB graduates',
     ],
     diplomaContext:
-      'BIS graduates approximately 80 IB Diploma candidates annually. The school emphasises inquiry-based practicals in Group 4 sciences. Biology HL students benefit from the Haimhausen campus\'s ecology fieldwork opportunities.',
+      "BIS graduates approximately 80 IB Diploma candidates annually. The school emphasises inquiry-based practicals in Group 4 sciences. Biology HL students benefit from the Haimhausen campus's ecology fieldwork opportunities.",
     collegeContext:
-      'BIS reports placements at LMU Munich, TU Munich, UK Russell Group (Imperial, UCL), Heidelberg, and US top-50 universities. The school\'s environmental-science strength translates into distinctive university-application narratives.',
+      "BIS reports placements at LMU Munich, TU Munich, UK Russell Group (Imperial, UCL), Heidelberg, and US top-50 universities. The school's environmental-science strength translates into distinctive university-application narratives.",
     paceAlignment:
-      'We align with BIS\'s DP calendar and leverage the school\'s ecology-fieldwork emphasis by recommending field-based IA topics that play to BIS students\' strengths. Sessions are timed around the Haimhausen campus schedule.',
+      "We align with BIS's DP calendar and leverage the school's ecology-fieldwork emphasis by recommending field-based IA topics that play to BIS students' strengths. Sessions are timed around the Haimhausen campus schedule.",
     faqs: [
       {
         question: 'Can you help BIS students with ecology-focused IB Biology IAs?',
         answer:
-          'Absolutely — this is where BIS students have a natural advantage. The Haimhausen campus\'s green surroundings support quadrat sampling, biodiversity indices, and plant-physiology field experiments. We guide IA design to make the most of BIS\'s unique setting.',
+          "Absolutely — this is where BIS students have a natural advantage. The Haimhausen campus's green surroundings support quadrat sampling, biodiversity indices, and plant-physiology field experiments. We guide IA design to make the most of BIS's unique setting.",
       },
       {
         question: 'How do you handle BIS students on the Schwabing City Campus?',
@@ -3673,7 +3705,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a BIS student start IB Biology tutoring?',
         answer:
-          'September DP1 for Level 7 ambition. BIS\'s inquiry-based approach means students who struggle with exam technique (Paper 1 MCQ speed, Paper 2 extended-response structure) benefit most from early tutoring that complements the school\'s practical-first teaching style.',
+          "September DP1 for Level 7 ambition. BIS's inquiry-based approach means students who struggle with exam technique (Paper 1 MCQ speed, Paper 2 extended-response structure) benefit most from early tutoring that complements the school's practical-first teaching style.",
       },
     ],
   },
@@ -3691,37 +3723,37 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       'Berlin Brandenburg International School (BBIS) was founded in 1990, shortly after German reunification, on a lakeside campus in Kleinmachnow / Kladow, southwest of Berlin. BBIS enrols approximately 700 students from 70+ countries — one of the most nationally diverse IB schools in Europe.',
-      'BBIS offers IB Biology at both HL and SL. The school\'s smaller cohort sizes (compared to FIS or MIS) mean that Biology HL classes are intimate (12–20 students), allowing more lab time per student. BBIS has invested in modern science labs and a maker space that supports cross-disciplinary Group 4 projects.',
-      'BBIS graduates matriculate to Charité – Universitätsmedizin Berlin (one of Europe\'s largest teaching hospitals), UK Russell Group, US top-50, and European research universities. Post-2025 IB recognition, BBIS graduates can now apply to Charité and Humboldt University on equal terms with Abitur holders.',
+      "BBIS offers IB Biology at both HL and SL. The school's smaller cohort sizes (compared to FIS or MIS) mean that Biology HL classes are intimate (12–20 students), allowing more lab time per student. BBIS has invested in modern science labs and a maker space that supports cross-disciplinary Group 4 projects.",
+      "BBIS graduates matriculate to Charité – Universitätsmedizin Berlin (one of Europe's largest teaching hospitals), UK Russell Group, US top-50, and European research universities. Post-2025 IB recognition, BBIS graduates can now apply to Charité and Humboldt University on equal terms with Abitur holders.",
     ],
     reputationBullets: [
       '700 students, 70+ nationalities — highly diverse for its size',
       'Intimate Biology HL classes: 12–20 students',
       'Lakeside Kladow campus with modern science labs',
       'Post-2025: direct pathway to Charité Berlin Medicine for IB graduates',
-      'Founded 1990 after reunification — Berlin\'s first international school',
+      "Founded 1990 after reunification — Berlin's first international school",
     ],
     diplomaContext:
       'BBIS graduates approximately 60 IB Diploma candidates annually. The smaller cohort enables personalised science instruction. Biology HL classes are typically 12–20 students.',
     collegeContext:
-      'BBIS reports placements at Charité Berlin, Humboldt University, FU Berlin, UK Russell Group (Imperial, King\'s, Edinburgh), and US top-50 universities. The Charité pathway is the dominant local medical-school target for BBIS pre-med students.',
+      "BBIS reports placements at Charité Berlin, Humboldt University, FU Berlin, UK Russell Group (Imperial, King's, Edinburgh), and US top-50 universities. The Charité pathway is the dominant local medical-school target for BBIS pre-med students.",
     paceAlignment:
-      'We align with BBIS\'s DP calendar. BBIS\'s smaller cohort means teachers may adjust unit pacing mid-year — we adapt accordingly. IA mentorship starts in DP1 Term 1, matching BBIS\'s early IA planning cycle.',
+      "We align with BBIS's DP calendar. BBIS's smaller cohort means teachers may adjust unit pacing mid-year — we adapt accordingly. IA mentorship starts in DP1 Term 1, matching BBIS's early IA planning cycle.",
     faqs: [
       {
         question: 'Can you help BBIS students targeting Charité Berlin Medicine?',
         answer:
-          'Yes — Charité is one of Europe\'s most competitive medical schools. Post-2025 IB recognition, BBIS graduates with Biology HL Level 7 and a strong overall IB score (38+) are competitive for Charité. We coach for Level 7 and advise on the German TMS aptitude test.',
+          "Yes — Charité is one of Europe's most competitive medical schools. Post-2025 IB recognition, BBIS graduates with Biology HL Level 7 and a strong overall IB score (38+) are competitive for Charité. We coach for Level 7 and advise on the German TMS aptitude test.",
       },
       {
-        question: 'How does BBIS\'s small cohort size affect your tutoring approach?',
+        question: "How does BBIS's small cohort size affect your tutoring approach?",
         answer:
           'BBIS Biology HL classes are small enough that students get more lab time and teacher attention. Our tutoring complements this by providing exam-technique drilling (Paper 1 MCQ speed, Paper 2 command-term precision) that lab-focused classroom teaching may not emphasise as heavily.',
       },
       {
         question: 'Do you support BBIS boarding students?',
         answer:
-          'BBIS is primarily a day school, but some students board with host families. Our online sessions accommodate any location — we schedule around the student\'s after-school routine, typically 5–7:30 PM CET on weekdays.',
+          "BBIS is primarily a day school, but some students board with host families. Our online sessions accommodate any location — we schedule around the student's after-school routine, typically 5–7:30 PM CET on weekdays.",
       },
       {
         question: 'What makes BBIS students different from FIS or MIS students?',
@@ -3731,7 +3763,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a BBIS student start IB Biology HL tutoring?',
         answer:
-          'September DP1 for Level 7. BBIS\'s small classes mean students who fall behind can be identified quickly by teachers — and also by us. Early intervention prevents the DP1 Term 2 molecular biology gap that commonly affects Level 5–6 students.',
+          "September DP1 for Level 7. BBIS's small classes mean students who fall behind can be identified quickly by teachers — and also by us. Early intervention prevents the DP1 Term 2 molecular biology gap that commonly affects Level 5–6 students.",
       },
     ],
   },
@@ -3748,13 +3780,13 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'IB Continuum School',
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
-      'International School of Düsseldorf (ISD) was founded in 1968 in Kaiserswerth, a residential district on the Rhine, north of Düsseldorf. ISD enrols approximately 900 students from 50+ countries. The school is one of Germany\'s longest-established international schools and holds IB World School authorisation across all three IB programmes.',
-      'ISD offers IB Biology at both HL and SL. The Kaiserswerth campus features modern science labs refurbished in 2020. Düsseldorf\'s Japanese and Korean expat communities — the largest in Germany, centred on the city\'s Japantown (Immermannstraße corridor) — are significant ISD feeders, alongside the broader European corporate expat base.',
-      'ISD graduates matriculate to UK Russell Group, Dutch, German, and US universities. The school\'s Rhine-Ruhr location gives access to Heinrich Heine University Düsseldorf Medical School and the Cologne-Bonn university cluster.',
+      "International School of Düsseldorf (ISD) was founded in 1968 in Kaiserswerth, a residential district on the Rhine, north of Düsseldorf. ISD enrols approximately 900 students from 50+ countries. The school is one of Germany's longest-established international schools and holds IB World School authorisation across all three IB programmes.",
+      "ISD offers IB Biology at both HL and SL. The Kaiserswerth campus features modern science labs refurbished in 2020. Düsseldorf's Japanese and Korean expat communities — the largest in Germany, centred on the city's Japantown (Immermannstraße corridor) — are significant ISD feeders, alongside the broader European corporate expat base.",
+      "ISD graduates matriculate to UK Russell Group, Dutch, German, and US universities. The school's Rhine-Ruhr location gives access to Heinrich Heine University Düsseldorf Medical School and the Cologne-Bonn university cluster.",
     ],
     reputationBullets: [
       '900 students, 50+ nationalities in Kaiserswerth, Düsseldorf',
-      'One of Germany\'s longest-established international schools (1968)',
+      "One of Germany's longest-established international schools (1968)",
       'Significant Japanese + Korean expat community feeder',
       'Modern science labs refurbished 2020',
       'Rhine-Ruhr corridor: access to HHU Düsseldorf and Cologne-Bonn universities',
@@ -3764,10 +3796,10 @@ export const ibBiologySchools: IBBiologySchool[] = [
     collegeContext:
       'ISD reports placements at UK Russell Group (Imperial, UCL, Edinburgh), Dutch universities (Leiden, Amsterdam, Maastricht Medicine), German universities (HHU Düsseldorf, Cologne), and US top-50. The Dutch border proximity makes Maastricht Medicine a popular local medical target.',
     paceAlignment:
-      'We align with ISD\'s DP calendar (late August start, February mocks, May exams). Our sessions accommodate ISD\'s Wednesday afternoon CAS block and the East Asian community\'s Saturday Japanese/Korean school schedules.',
+      "We align with ISD's DP calendar (late August start, February mocks, May exams). Our sessions accommodate ISD's Wednesday afternoon CAS block and the East Asian community's Saturday Japanese/Korean school schedules.",
     faqs: [
       {
-        question: 'How do you accommodate ISD\'s Japanese and Korean families?',
+        question: "How do you accommodate ISD's Japanese and Korean families?",
         answer:
           'Many ISD families attend Saturday Japanese school (Japanische Internationale Schule) or Korean supplementary school. We schedule around these commitments — weekday evenings (Mon/Thu 5–7 PM CET) are most popular for ISD East Asian families.',
       },
@@ -3789,7 +3821,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should an ISD student start IB Biology tutoring?',
         answer:
-          'September DP1 for Level 7 targeting. ISD\'s moderate cohort size (~70 DP candidates) means pacing can adjust mid-year — we flex with it. Late starters (DP2 January) can still target a meaningful improvement with twice-weekly sessions.',
+          "September DP1 for Level 7 targeting. ISD's moderate cohort size (~70 DP candidates) means pacing can adjust mid-year — we flex with it. Late starters (DP2 January) can still target a meaningful improvement with twice-weekly sessions.",
       },
     ],
   },
@@ -3810,7 +3842,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       'The British School in the Netherlands (BSN) is the largest international school in the Netherlands, operating across four campuses in The Hague, Voorschoten, and Leidschenveen. BSN enrols over 2,000 students from 80+ nationalities. The school follows the British National Curriculum through IGCSE, then offers the IB Diploma Programme for Years 12–13.',
-      'BSN offers IB Biology at both HL and SL. The school\'s Senior School campus in Voorschoten has dedicated Biology labs and a strong IGCSE-to-IB science transition programme. BSN\'s diplomatic and international-organisation parent community (ICC, ICJ, OPCW, Shell, Unilever) drives consistent demand for competitive university-track sciences.',
+      "BSN offers IB Biology at both HL and SL. The school's Senior School campus in Voorschoten has dedicated Biology labs and a strong IGCSE-to-IB science transition programme. BSN's diplomatic and international-organisation parent community (ICC, ICJ, OPCW, Shell, Unilever) drives consistent demand for competitive university-track sciences.",
       'BSN graduates matriculate to UK Russell Group, Dutch, US, and European universities. The school is consistently among the top IB schools in the Netherlands by average Diploma score. UK medical-school applications are particularly strong from BSN — the British curriculum foundation gives students a natural advantage in UCAS applications.',
     ],
     reputationBullets: [
@@ -3821,11 +3853,11 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Strong UK Russell Group medical-school placement track record',
     ],
     diplomaContext:
-      'BSN graduates approximately 130 IB Diploma candidates annually — one of the largest DP cohorts in the Netherlands. The school\'s IGCSE foundation means students enter the IB with strong practical-assessment skills.',
+      "BSN graduates approximately 130 IB Diploma candidates annually — one of the largest DP cohorts in the Netherlands. The school's IGCSE foundation means students enter the IB with strong practical-assessment skills.",
     collegeContext:
-      'BSN reports strong UK Russell Group placements (Imperial, UCL, Edinburgh, King\'s), Dutch universities (Leiden, Amsterdam, Erasmus MC), and US top-50. UK medical-school applications are a BSN strength — the school\'s British curriculum heritage aligns naturally with UCAS personal-statement and interview expectations.',
+      "BSN reports strong UK Russell Group placements (Imperial, UCL, Edinburgh, King's), Dutch universities (Leiden, Amsterdam, Erasmus MC), and US top-50. UK medical-school applications are a BSN strength — the school's British curriculum heritage aligns naturally with UCAS personal-statement and interview expectations.",
     paceAlignment:
-      'We align with BSN\'s IB DP calendar (September start, February mocks, May exams). The IGCSE-to-IB transition in September Year 12 is a critical window — we offer bridge sessions in August to prepare students for the step-up in pace and depth.',
+      "We align with BSN's IB DP calendar (September start, February mocks, May exams). The IGCSE-to-IB transition in September Year 12 is a critical window — we offer bridge sessions in August to prepare students for the step-up in pace and depth.",
     faqs: [
       {
         question: 'How do you support BSN students transitioning from IGCSE to IB Biology?',
@@ -3845,7 +3877,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'What time slots work for BSN students?',
         answer:
-          'Weekday sessions from 4:30–7:30 PM CET after BSN\'s typical 3:15 PM dismissal. BSN students often have sports (hockey, rugby, swimming) on specific weekday afternoons — we schedule around these commitments.',
+          "Weekday sessions from 4:30–7:30 PM CET after BSN's typical 3:15 PM dismissal. BSN students often have sports (hockey, rugby, swimming) on specific weekday afternoons — we schedule around these commitments.",
       },
       {
         question: 'Do you accept EUR payment?',
@@ -3867,9 +3899,9 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'IB Continuum School',
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
-      'International School of Amsterdam (ISA) was founded in 1964 in Amstelveen, south of Amsterdam. ISA enrols approximately 1,200 students from 50+ countries and is authorised for the full IB Continuum (PYP, MYP, DP). The school\'s Amstelveen campus, adjacent to the Amsterdamse Bos, includes modern science laboratories.',
-      'ISA offers IB Biology at both HL and SL. The school serves Amsterdam\'s tech, finance, and creative-industry expat communities (Booking.com, Adyen, ING, Philips alumni). ISA Biology teachers have historically emphasised data analysis and experimental design, preparing students well for the IA and Paper 2 data-response questions.',
-      'ISA graduates matriculate to Dutch, UK, US, and European universities. The University of Amsterdam (UvA) and Vrije Universiteit (VU) Medical Centres are the primary local medical-school targets. ISA\'s IB Diploma average has been consistently strong.',
+      "International School of Amsterdam (ISA) was founded in 1964 in Amstelveen, south of Amsterdam. ISA enrols approximately 1,200 students from 50+ countries and is authorised for the full IB Continuum (PYP, MYP, DP). The school's Amstelveen campus, adjacent to the Amsterdamse Bos, includes modern science laboratories.",
+      "ISA offers IB Biology at both HL and SL. The school serves Amsterdam's tech, finance, and creative-industry expat communities (Booking.com, Adyen, ING, Philips alumni). ISA Biology teachers have historically emphasised data analysis and experimental design, preparing students well for the IA and Paper 2 data-response questions.",
+      "ISA graduates matriculate to Dutch, UK, US, and European universities. The University of Amsterdam (UvA) and Vrije Universiteit (VU) Medical Centres are the primary local medical-school targets. ISA's IB Diploma average has been consistently strong.",
     ],
     reputationBullets: [
       '1,200+ students, 50+ nationalities in Amstelveen',
@@ -3879,14 +3911,14 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'UvA and VU Medical Centre pathways for pre-med graduates',
     ],
     diplomaContext:
-      'ISA graduates approximately 100 IB Diploma candidates per year. Biology HL is a popular Group 4 choice. The school\'s data-analysis emphasis in sciences prepares students well for the IB\'s practical-assessment strand.',
+      "ISA graduates approximately 100 IB Diploma candidates per year. Biology HL is a popular Group 4 choice. The school's data-analysis emphasis in sciences prepares students well for the IB's practical-assessment strand.",
     collegeContext:
-      'ISA reports placements at UvA, VU Amsterdam, Leiden, UK Russell Group (Imperial, UCL, King\'s), and US top-50 universities. Dutch medical-school applications are a growing pathway — UvA AMC and VU Medical Centre accept IB Biology HL directly.',
+      "ISA reports placements at UvA, VU Amsterdam, Leiden, UK Russell Group (Imperial, UCL, King's), and US top-50 universities. Dutch medical-school applications are a growing pathway — UvA AMC and VU Medical Centre accept IB Biology HL directly.",
     paceAlignment:
-      'We sync with ISA\'s IB DP calendar (late August start, mock exams February, May finals). ISA\'s strong data-analysis culture means our tutoring can focus more on content depth and exam technique, building on the school\'s existing experimental-skills foundation.',
+      "We sync with ISA's IB DP calendar (late August start, mock exams February, May finals). ISA's strong data-analysis culture means our tutoring can focus more on content depth and exam technique, building on the school's existing experimental-skills foundation.",
     faqs: [
       {
-        question: 'How do you complement ISA\'s data-analysis-heavy Biology teaching?',
+        question: "How do you complement ISA's data-analysis-heavy Biology teaching?",
         answer:
           'ISA Biology is strong on experimental design and data interpretation. Our tutoring adds depth in content recall, Paper 1 MCQ speed, and Paper 2 extended-response command-term precision — the areas where ISA students most commonly lose marks.',
       },
@@ -3908,7 +3940,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should an ISA student start IB Biology tutoring?',
         answer:
-          'September DP1 for Level 7 ambition. ISA\'s strong MYP science foundation means most students enter DP Biology well-prepared — but the DP depth and IA requirement are a step-change. Early tutoring builds confidence before the first mock cycle.',
+          "September DP1 for Level 7 ambition. ISA's strong MYP science foundation means most students enter DP Biology well-prepared — but the DP depth and IA requirement are a step-change. Early tutoring builds confidence before the first mock cycle.",
       },
     ],
   },
@@ -3926,7 +3958,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       'American School of The Hague (ASH) was founded in 1953 to serve the American diplomatic and military community in The Hague. Today ASH enrols approximately 1,200 students from 80+ countries across its Wassenaar campus. The school follows an American curriculum through Grade 10, then offers the IB Diploma Programme for Grades 11–12.',
-      'ASH offers IB Biology at both HL and SL. The Wassenaar campus — an affluent residential enclave between The Hague and Leiden — includes dedicated Biology labs and greenhouse facilities. ASH\'s American-curriculum foundation means students enter the IB with strong AP-style analytical skills, which translates well to IB Paper 2.',
+      "ASH offers IB Biology at both HL and SL. The Wassenaar campus — an affluent residential enclave between The Hague and Leiden — includes dedicated Biology labs and greenhouse facilities. ASH's American-curriculum foundation means students enter the IB with strong AP-style analytical skills, which translates well to IB Paper 2.",
       'ASH graduates matriculate to US top-50 universities, UK Russell Group, and Dutch medical schools. The school has a strong US-university counselling programme, and many ASH Biology HL students pursue pre-medical tracks at US colleges.',
     ],
     reputationBullets: [
@@ -3941,12 +3973,13 @@ export const ibBiologySchools: IBBiologySchool[] = [
     collegeContext:
       'ASH reports strong US top-50 placements (including Ivy League), UK Russell Group (Imperial, UCL, Edinburgh), and Dutch universities (Leiden, Erasmus MC). Pre-medical university applications via both the US college and UK UCAS systems are common.',
     paceAlignment:
-      'We align with ASH\'s IB DP calendar and support the Grade 10 → IB DP transition in August. ASH students entering IB Biology from the American curriculum benefit from our bridge sessions that preview IB-specific assessment formats (Paper 1 MCQ, IA).',
+      "We align with ASH's IB DP calendar and support the Grade 10 → IB DP transition in August. ASH students entering IB Biology from the American curriculum benefit from our bridge sessions that preview IB-specific assessment formats (Paper 1 MCQ, IA).",
     faqs: [
       {
-        question: 'How do you support ASH students transitioning from the American curriculum to IB?',
+        question:
+          'How do you support ASH students transitioning from the American curriculum to IB?',
         answer:
-          'The American curriculum → IB transition in Grade 11 is a shift in assessment style, not just content. We offer August bridge sessions that introduce IB Biology command terms, Paper 1 MCQ format, and IA expectations — skills that the US curriculum doesn\'t emphasise.',
+          "The American curriculum → IB transition in Grade 11 is a shift in assessment style, not just content. We offer August bridge sessions that introduce IB Biology command terms, Paper 1 MCQ format, and IA expectations — skills that the US curriculum doesn't emphasise.",
       },
       {
         question: 'Can you help ASH students targeting US pre-med university tracks?',
@@ -3984,7 +4017,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       'International School Eindhoven (ISE) was founded in 1967 to serve the Philips corporate expat community. Today ISE enrols approximately 600 students from 40+ nationalities, primarily drawn from the Brainport Eindhoven tech ecosystem — ASML, NXP Semiconductors, Philips, and the TU/e (Eindhoven University of Technology) research community.',
-      'ISE offers IB Biology at both HL and SL. The school\'s tech-industry parent demographic creates a STEM-focused culture where sciences are highly valued. ISE\'s smaller size means Biology HL classes are intimate (8–15 students), allowing substantial lab time per student. The school\'s proximity to TU/e provides field-trip and research-access opportunities.',
+      "ISE offers IB Biology at both HL and SL. The school's tech-industry parent demographic creates a STEM-focused culture where sciences are highly valued. ISE's smaller size means Biology HL classes are intimate (8–15 students), allowing substantial lab time per student. The school's proximity to TU/e provides field-trip and research-access opportunities.",
       'ISE graduates matriculate to Dutch, UK, and US universities. TU/e Biomedical Engineering and Leiden/Maastricht Medicine are popular local targets. The strong Indian tech-diaspora at ASML means some ISE families also consider NEET as a parallel pathway.',
     ],
     reputationBullets: [
@@ -3995,11 +4028,11 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'TU/e Biomedical Engineering as primary local STEM target',
     ],
     diplomaContext:
-      'ISE graduates approximately 50 IB Diploma candidates annually — one of the smaller Dutch IB cohorts. The school\'s STEM-focused culture means Group 4 sciences receive strong institutional support. Biology HL classes are typically 8–15 students.',
+      "ISE graduates approximately 50 IB Diploma candidates annually — one of the smaller Dutch IB cohorts. The school's STEM-focused culture means Group 4 sciences receive strong institutional support. Biology HL classes are typically 8–15 students.",
     collegeContext:
       'ISE reports placements at TU/e, Leiden, Maastricht, UK Russell Group, and US top-50 universities. TU/e Biomedical Engineering and Maastricht Medicine are the dominant local pathways. Some Indian-origin ISE families pursue dual IB + NEET tracks.',
     paceAlignment:
-      'We align with ISE\'s DP calendar and leverage the small class sizes by coordinating with teachers when possible. ISE\'s STEM emphasis means students arrive with strong quantitative skills — our tutoring adds content depth and IB-specific exam technique.',
+      "We align with ISE's DP calendar and leverage the small class sizes by coordinating with teachers when possible. ISE's STEM emphasis means students arrive with strong quantitative skills — our tutoring adds content depth and IB-specific exam technique.",
     faqs: [
       {
         question: 'Do you support ISE students whose families are at ASML?',
@@ -4009,12 +4042,12 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Can you help ISE students targeting TU/e Biomedical Engineering?',
         answer:
-          'Absolutely. TU/e BME values strong IB Biology and Mathematics HL. We coach Biology HL for Level 6–7 and can coordinate with the student\'s Mathematics HL preparation to ensure both Group 4 and Group 5 targets are aligned.',
+          "Absolutely. TU/e BME values strong IB Biology and Mathematics HL. We coach Biology HL for Level 6–7 and can coordinate with the student's Mathematics HL preparation to ensure both Group 4 and Group 5 targets are aligned.",
       },
       {
-        question: 'How do ISE\'s small class sizes affect your tutoring approach?',
+        question: "How do ISE's small class sizes affect your tutoring approach?",
         answer:
-          'ISE Biology HL classes of 8–15 students mean each student gets more teacher time than at larger IB schools. Our tutoring complements this by focusing on exam-technique drilling (MCQ timing, command-term precision) and IA optimisation — areas the school\'s classroom teaching may deprioritise in favour of lab practicals.',
+          "ISE Biology HL classes of 8–15 students mean each student gets more teacher time than at larger IB schools. Our tutoring complements this by focusing on exam-technique drilling (MCQ timing, command-term precision) and IA optimisation — areas the school's classroom teaching may deprioritise in favour of lab practicals.",
       },
       {
         question: 'What payment methods do you accept?',
@@ -4024,7 +4057,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should an ISE student start IB Biology HL tutoring?',
         answer:
-          'September DP1 for Level 7. ISE\'s small cohort means pacing can be adjusted by the teacher — we calibrate to the actual unit schedule rather than a fixed assumption. Early starts are especially valuable for students targeting competitive medical-school pathways.',
+          "September DP1 for Level 7. ISE's small cohort means pacing can be adjusted by the teacher — we calibrate to the actual unit schedule rather than a fixed assumption. Early starts are especially valuable for students targeting competitive medical-school pathways.",
       },
     ],
   },
@@ -4044,23 +4077,23 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'International (IB World School)',
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
-      'Stockholm International School (SIS) was founded in 1951 on the island of Djurgården, making it one of Scandinavia\'s oldest international schools. SIS enrols approximately 600 students from 60+ countries. The school\'s historic Djurgården campus — adjacent to the Nordic Museum and Skansen — provides a distinctive, culturally-rich setting for international education.',
-      'SIS offers IB Biology at both HL and SL. Sweden\'s strong life-sciences sector (AstraZeneca, Karolinska Institutet, KTH Royal Institute of Technology) creates a school culture that values biology and biomedical sciences. SIS Biology students benefit from field-trip access to Karolinska Institutet laboratories and Stockholm\'s extensive archipelago ecology for fieldwork IAs.',
-      'SIS graduates target Karolinska Institutet (consistently ranked among the world\'s top 10 medical universities), UK Russell Group medical schools, and US top-50 institutions. The Karolinska Medical Programme accepts IB Biology HL as the Biology 2 equivalent entry requirement.',
+      "Stockholm International School (SIS) was founded in 1951 on the island of Djurgården, making it one of Scandinavia's oldest international schools. SIS enrols approximately 600 students from 60+ countries. The school's historic Djurgården campus — adjacent to the Nordic Museum and Skansen — provides a distinctive, culturally-rich setting for international education.",
+      "SIS offers IB Biology at both HL and SL. Sweden's strong life-sciences sector (AstraZeneca, Karolinska Institutet, KTH Royal Institute of Technology) creates a school culture that values biology and biomedical sciences. SIS Biology students benefit from field-trip access to Karolinska Institutet laboratories and Stockholm's extensive archipelago ecology for fieldwork IAs.",
+      "SIS graduates target Karolinska Institutet (consistently ranked among the world's top 10 medical universities), UK Russell Group medical schools, and US top-50 institutions. The Karolinska Medical Programme accepts IB Biology HL as the Biology 2 equivalent entry requirement.",
     ],
     reputationBullets: [
-      'Founded 1951 — one of Scandinavia\'s oldest international schools',
+      "Founded 1951 — one of Scandinavia's oldest international schools",
       '600 students, 60+ nationalities on Djurgården island',
       'Full IB Continuum with strong life-sciences culture',
       'Karolinska Institutet partnership: field trips + IA mentorship access',
       'Swedish life-sciences ecosystem: AstraZeneca, KTH proximity',
     ],
     diplomaContext:
-      'SIS graduates approximately 50 IB Diploma candidates per year. Biology HL is one of the most popular Group 4 choices, driven by the Karolinska medical-school pathway. Sweden\'s high English proficiency (91%+ EF EPI) means online English-medium tutoring integrates seamlessly.',
+      "SIS graduates approximately 50 IB Diploma candidates per year. Biology HL is one of the most popular Group 4 choices, driven by the Karolinska medical-school pathway. Sweden's high English proficiency (91%+ EF EPI) means online English-medium tutoring integrates seamlessly.",
     collegeContext:
       'SIS reports strong placements at Karolinska Institutet, KTH, Uppsala, Lund, UK Russell Group (Imperial, UCL, Edinburgh), and US top-50 universities. The Karolinska Medical Programme is the dominant local target for pre-medical students.',
     paceAlignment:
-      'We align with SIS\'s DP calendar (late August start, mock exams February, May finals). Sweden\'s long winter darkness (November–February) means after-school tutoring sessions need to be engaging and well-paced — we factor this into session design.',
+      "We align with SIS's DP calendar (late August start, mock exams February, May finals). Sweden's long winter darkness (November–February) means after-school tutoring sessions need to be engaging and well-paced — we factor this into session design.",
     faqs: [
       {
         question: 'Can you help SIS students targeting Karolinska Institutet Medicine?',
@@ -4068,9 +4101,9 @@ export const ibBiologySchools: IBBiologySchool[] = [
           'Yes — Karolinska accepts IB Biology HL as the Biology 2 entry requirement. We coach for Level 7 and advise on the Swedish HP (högskoleprovet) university aptitude test, which supplements the IB score in Swedish medical admissions.',
       },
       {
-        question: 'How do you accommodate SIS\'s Djurgården campus schedule?',
+        question: "How do you accommodate SIS's Djurgården campus schedule?",
         answer:
-          'Weekday sessions from 5–7:30 PM CET fit after SIS\'s 3:30 PM dismissal. The Djurgården location means some students commute via ferry or bus — we allow a 30-minute buffer after school dismissal for transit.',
+          "Weekday sessions from 5–7:30 PM CET fit after SIS's 3:30 PM dismissal. The Djurgården location means some students commute via ferry or bus — we allow a 30-minute buffer after school dismissal for transit.",
       },
       {
         question: 'Do you accept SEK payment?',
@@ -4078,14 +4111,14 @@ export const ibBiologySchools: IBBiologySchool[] = [
           'Yes — SEK via Swish or Swedish bank transfer (Handelsbanken, SEB, Nordea, Swedbank). Also EUR, GBP, or USD via international card. Annual packages can be split across two SEK payments.',
       },
       {
-        question: 'Can you help with ecology-focused IAs using Stockholm\'s archipelago?',
+        question: "Can you help with ecology-focused IAs using Stockholm's archipelago?",
         answer:
-          'Absolutely — the Stockholm archipelago (30,000 islands) is a world-class ecology fieldwork site. We\'ve guided SIS students through marine-ecology, biodiversity, and water-quality IAs that use publicly accessible archipelago sampling sites. These IAs consistently score 20+/24.',
+          "Absolutely — the Stockholm archipelago (30,000 islands) is a world-class ecology fieldwork site. We've guided SIS students through marine-ecology, biodiversity, and water-quality IAs that use publicly accessible archipelago sampling sites. These IAs consistently score 20+/24.",
       },
       {
         question: 'When should an SIS student start IB Biology HL tutoring?',
         answer:
-          'September DP1 for Level 7 targeting. SIS\'s smaller cohort means early support has an outsized impact. For Karolinska-track students, the full DP1-to-DP2 arc is essential — Karolinska\'s admission cutoff is competitive and every IB point counts.',
+          "September DP1 for Level 7 targeting. SIS's smaller cohort means early support has an outsized impact. For Karolinska-track students, the full DP1-to-DP2 arc is essential — Karolinska's admission cutoff is competitive and every IB point counts.",
       },
     ],
   },
@@ -4102,8 +4135,8 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'International (IB World School)',
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
-      'ISGR was founded in 1997 to serve the corporate expat community in Sweden\'s second city. Operating from a campus in Guldheden, ISGR enrols approximately 500 students from 45+ countries. The school\'s parent community is anchored by Volvo, AstraZeneca, SKF, and the University of Gothenburg research ecosystem.',
-      'ISGR offers IB Biology at both HL and SL. AstraZeneca\'s biotech R&D campus in nearby Mölndal adds a distinctive life-sciences flavour to the school\'s science culture. ISGR Biology students have access to guest lectures from AstraZeneca researchers and the Sahlgrenska Academy (University of Gothenburg Medical School).',
+      "ISGR was founded in 1997 to serve the corporate expat community in Sweden's second city. Operating from a campus in Guldheden, ISGR enrols approximately 500 students from 45+ countries. The school's parent community is anchored by Volvo, AstraZeneca, SKF, and the University of Gothenburg research ecosystem.",
+      "ISGR offers IB Biology at both HL and SL. AstraZeneca's biotech R&D campus in nearby Mölndal adds a distinctive life-sciences flavour to the school's science culture. ISGR Biology students have access to guest lectures from AstraZeneca researchers and the Sahlgrenska Academy (University of Gothenburg Medical School).",
       'ISGR graduates matriculate to Swedish, UK, and European universities. Sahlgrenska Academy (Gothenburg Medical School), Karolinska, and UK Russell Group are the primary medical-school targets. The AstraZeneca connection makes biotech and pharmaceutical-science career paths particularly visible to ISGR students.',
     ],
     reputationBullets: [
@@ -4111,19 +4144,19 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Volvo / AstraZeneca / SKF corporate expat feeder',
       'AstraZeneca Mölndal R&D campus: guest lectures + IA mentorship',
       'Sahlgrenska Academy medical-school pathway',
-      'Full IB Continuum in Sweden\'s second city',
+      "Full IB Continuum in Sweden's second city",
     ],
     diplomaContext:
       'ISGR graduates approximately 40 IB Diploma candidates per year — an intimate cohort. Biology HL classes are typically 6–12 students, allowing extensive lab time. The AstraZeneca parent community drives high Biology HL uptake.',
     collegeContext:
       'ISGR reports placements at Sahlgrenska Academy (Gothenburg Medicine), Karolinska, Chalmers University of Technology, UK Russell Group, and European universities. The AstraZeneca ecosystem makes biotech and pharma-career university pathways particularly well-represented.',
     paceAlignment:
-      'We align with ISGR\'s DP calendar (August start, February mocks, May finals). The school\'s small cohort means we can closely track individual student progress. Sessions scheduled around ISGR\'s afternoon CAS/sports block.',
+      "We align with ISGR's DP calendar (August start, February mocks, May finals). The school's small cohort means we can closely track individual student progress. Sessions scheduled around ISGR's afternoon CAS/sports block.",
     faqs: [
       {
-        question: 'How does AstraZeneca\'s proximity benefit ISGR Biology students?',
+        question: "How does AstraZeneca's proximity benefit ISGR Biology students?",
         answer:
-          'ISGR students can access AstraZeneca Mölndal guest lectures and, in some cases, shadowing opportunities through parent connections. We help students leverage this for IA topics — drug-design or pharmacology IAs grounded in AstraZeneca\'s publicly reported research areas consistently score well.',
+          "ISGR students can access AstraZeneca Mölndal guest lectures and, in some cases, shadowing opportunities through parent connections. We help students leverage this for IA topics — drug-design or pharmacology IAs grounded in AstraZeneca's publicly reported research areas consistently score well.",
       },
       {
         question: 'Can you help ISGR students targeting Sahlgrenska Medical School?',
@@ -4143,7 +4176,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should an ISGR student start IB Biology tutoring?',
         answer:
-          'September DP1 for Level 7 targeting. ISGR\'s small cohort means early intervention has maximum impact. For students targeting Sahlgrenska or Karolinska medicine, starting in DP1 gives two full mock cycles to refine technique before May finals.',
+          "September DP1 for Level 7 targeting. ISGR's small cohort means early intervention has maximum impact. For students targeting Sahlgrenska or Karolinska medicine, starting in DP1 gives two full mock cycles to refine technique before May finals.",
       },
     ],
   },
@@ -4164,8 +4197,8 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       'Nord Anglia International School Dublin (NAIS Dublin) is part of the global Nord Anglia Education network, which operates 80+ schools worldwide. NAIS Dublin opened in 2018 in Leopardstown, South Dublin, and has grown rapidly to serve the tech-sector expat community drawn to Dublin by Google, Meta, Apple, Microsoft, and Pfizer. The school enrols approximately 500 students from 50+ countries.',
-      'NAIS Dublin offers IB Biology at both HL and SL. As a newer IB school, NAIS Dublin benefits from Nord Anglia\'s global curriculum resources and MIT/Juilliard collaborations. The school\'s science programme emphasises STEAM integration and project-based learning.',
-      'NAIS Dublin graduates target Irish medical schools (RCSI, Trinity College Dublin, UCD), UK Russell Group, and US universities. Ireland\'s distinctive medical-school landscape — RCSI\'s strong Indian-student admission track and Trinity/UCD\'s CAO points system — creates specific coaching needs for IB Biology HL students.',
+      "NAIS Dublin offers IB Biology at both HL and SL. As a newer IB school, NAIS Dublin benefits from Nord Anglia's global curriculum resources and MIT/Juilliard collaborations. The school's science programme emphasises STEAM integration and project-based learning.",
+      "NAIS Dublin graduates target Irish medical schools (RCSI, Trinity College Dublin, UCD), UK Russell Group, and US universities. Ireland's distinctive medical-school landscape — RCSI's strong Indian-student admission track and Trinity/UCD's CAO points system — creates specific coaching needs for IB Biology HL students.",
     ],
     reputationBullets: [
       'Part of Nord Anglia Education global network (80+ schools)',
@@ -4177,14 +4210,14 @@ export const ibBiologySchools: IBBiologySchool[] = [
     diplomaContext:
       'NAIS Dublin is a newer IB school (first DP graduates ~2022) with a growing DP cohort of approximately 30–40 candidates per year. Biology HL is popular among the growing Indian and South Asian parent community targeting medical-school pathways.',
     collegeContext:
-      'NAIS Dublin graduates apply to RCSI (which has strong Indian-student admission preference), Trinity College Dublin Medicine, UCD Medicine, UK Russell Group, and US universities. The school\'s Nord Anglia network provides university-counselling support leveraging global alumni data.',
+      "NAIS Dublin graduates apply to RCSI (which has strong Indian-student admission preference), Trinity College Dublin Medicine, UCD Medicine, UK Russell Group, and US universities. The school's Nord Anglia network provides university-counselling support leveraging global alumni data.",
     paceAlignment:
-      'We align with NAIS Dublin\'s IB DP calendar (September start, mock exams February, May finals). Our GMT evening sessions (5–8 PM Dublin time) fit cleanly after the school day. We support the school\'s STEAM emphasis by helping students connect Biology IA projects to the school\'s project-based learning framework.',
+      "We align with NAIS Dublin's IB DP calendar (September start, mock exams February, May finals). Our GMT evening sessions (5–8 PM Dublin time) fit cleanly after the school day. We support the school's STEAM emphasis by helping students connect Biology IA projects to the school's project-based learning framework.",
     faqs: [
       {
         question: 'Can you help NAIS Dublin students targeting RCSI Medicine?',
         answer:
-          'Yes — RCSI (Royal College of Surgeons in Ireland) accepts IB Diploma directly and has a strong Indian-student admission tradition. We coach Biology HL for Level 7 and advise on RCSI\'s specific entry requirements, including the HPAT (Health Professions Admission Test).',
+          "Yes — RCSI (Royal College of Surgeons in Ireland) accepts IB Diploma directly and has a strong Indian-student admission tradition. We coach Biology HL for Level 7 and advise on RCSI's specific entry requirements, including the HPAT (Health Professions Admission Test).",
       },
       {
         question: 'How do you support Indian families at NAIS Dublin?',
@@ -4194,12 +4227,12 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Is NAIS Dublin a new IB school — does that matter?',
         answer:
-          'NAIS Dublin is newer than established IB schools like Ecolint or FIS, but it benefits from Nord Anglia\'s global IB curriculum resources and teacher training. Our tutoring adds consistent external exam-preparation depth that complements the school\'s still-maturing DP programme.',
+          "NAIS Dublin is newer than established IB schools like Ecolint or FIS, but it benefits from Nord Anglia's global IB curriculum resources and teacher training. Our tutoring adds consistent external exam-preparation depth that complements the school's still-maturing DP programme.",
       },
       {
         question: 'What time slots work for NAIS Dublin students?',
         answer:
-          'Weekday sessions from 4:30–7:30 PM GMT (5:30–8:30 PM CET) after NAIS Dublin\'s typical 3:15 PM dismissal. Ireland is one hour behind continental Europe — our scheduling accommodates this.',
+          "Weekday sessions from 4:30–7:30 PM GMT (5:30–8:30 PM CET) after NAIS Dublin's typical 3:15 PM dismissal. Ireland is one hour behind continental Europe — our scheduling accommodates this.",
       },
       {
         question: 'Do you accept EUR payment?',
@@ -4224,12 +4257,12 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'International (IB World School)',
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
-      'American School in Japan (ASIJ) was founded in 1902 in Chofu, western Tokyo. It is Japan\'s oldest and largest international school, enrolling approximately 1,600 students from 50+ countries. ASIJ follows an American curriculum through high school and offers the IB Diploma Programme alongside AP courses for Grades 11–12.',
-      'ASIJ offers IB Biology at both HL and SL. The school\'s Chofu campus includes modern science labs and a dedicated STEM centre. ASIJ\'s strong AP and IB dual-track system means students can combine AP and IB credits — a distinctive feature that appeals to families targeting US university admissions. Biology HL is popular among pre-medical applicants.',
-      'ASIJ graduates matriculate to US Ivy League and top-50 universities, UK Russell Group, and Japanese universities (Keio, Waseda, University of Tokyo\'s English-language programmes). The school has one of the strongest US-university counselling programmes in Asia.',
+      "American School in Japan (ASIJ) was founded in 1902 in Chofu, western Tokyo. It is Japan's oldest and largest international school, enrolling approximately 1,600 students from 50+ countries. ASIJ follows an American curriculum through high school and offers the IB Diploma Programme alongside AP courses for Grades 11–12.",
+      "ASIJ offers IB Biology at both HL and SL. The school's Chofu campus includes modern science labs and a dedicated STEM centre. ASIJ's strong AP and IB dual-track system means students can combine AP and IB credits — a distinctive feature that appeals to families targeting US university admissions. Biology HL is popular among pre-medical applicants.",
+      "ASIJ graduates matriculate to US Ivy League and top-50 universities, UK Russell Group, and Japanese universities (Keio, Waseda, University of Tokyo's English-language programmes). The school has one of the strongest US-university counselling programmes in Asia.",
     ],
     reputationBullets: [
-      'Japan\'s oldest international school — founded 1902',
+      "Japan's oldest international school — founded 1902",
       '1,600 students, 50+ nationalities in Chofu, western Tokyo',
       'Dual AP + IB Diploma track — unique in Japan',
       'Top US-university counselling programme in Asia',
@@ -4238,24 +4271,24 @@ export const ibBiologySchools: IBBiologySchool[] = [
     diplomaContext:
       'ASIJ graduates approximately 130 students annually, with a significant portion taking the IB Diploma alongside AP courses. Biology HL is among the most popular Group 4 options for pre-medical candidates.',
     collegeContext:
-      'ASIJ reports strong US Ivy League and top-50 placements (Harvard, Stanford, MIT, Yale), UK Russell Group (Imperial, UCL), and Japanese English-programme universities (Keio PEARL, Waseda SILS, ICU). The school\'s US-curriculum heritage makes UCAS and Common App counselling exceptionally strong.',
+      "ASIJ reports strong US Ivy League and top-50 placements (Harvard, Stanford, MIT, Yale), UK Russell Group (Imperial, UCL), and Japanese English-programme universities (Keio PEARL, Waseda SILS, ICU). The school's US-curriculum heritage makes UCAS and Common App counselling exceptionally strong.",
     paceAlignment:
-      'We align with ASIJ\'s academic calendar (late August start, semester exams December/May). JST evening sessions (6–9 PM) fit after ASIJ\'s 3:30 PM dismissal and typical after-school activities. We accommodate students doing both AP and IB Biology simultaneously.',
+      "We align with ASIJ's academic calendar (late August start, semester exams December/May). JST evening sessions (6–9 PM) fit after ASIJ's 3:30 PM dismissal and typical after-school activities. We accommodate students doing both AP and IB Biology simultaneously.",
     faqs: [
       {
         question: 'How do you support ASIJ students doing both AP and IB Biology?',
         answer:
-          'ASIJ\'s dual-track system means some students take AP Biology and IB Biology HL concurrently. The content overlap is significant (~70%), but the assessment formats differ. We coach exam technique for both formats — AP FRQ rubric precision and IB Paper 1/Paper 2 command terms — in an integrated session plan.',
+          "ASIJ's dual-track system means some students take AP Biology and IB Biology HL concurrently. The content overlap is significant (~70%), but the assessment formats differ. We coach exam technique for both formats — AP FRQ rubric precision and IB Paper 1/Paper 2 command terms — in an integrated session plan.",
       },
       {
         question: 'Can you help ASIJ students targeting US pre-med university tracks?',
         answer:
-          'Absolutely. ASIJ has one of Asia\'s strongest US-university pipelines. We coach Biology HL for Level 7 (college credit at many US universities) and help students develop the biology narrative for Common App essays and pre-med supplemental applications.',
+          "Absolutely. ASIJ has one of Asia's strongest US-university pipelines. We coach Biology HL for Level 7 (college credit at many US universities) and help students develop the biology narrative for Common App essays and pre-med supplemental applications.",
       },
       {
         question: 'What time slots work for ASIJ students in Tokyo?',
         answer:
-          'Weekday sessions from 6–9 PM JST fit after ASIJ\'s school day and after-school activities. Saturday morning sessions (10 AM–12 PM JST) are available for students with weekday cram-school (juku) commitments.',
+          "Weekday sessions from 6–9 PM JST fit after ASIJ's school day and after-school activities. Saturday morning sessions (10 AM–12 PM JST) are available for students with weekday cram-school (juku) commitments.",
       },
       {
         question: 'Do you accept JPY payment?',
@@ -4265,7 +4298,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should an ASIJ student start IB Biology HL tutoring?',
         answer:
-          'September of DP1 (Grade 11) for Level 7 targeting. ASIJ\'s dual AP+IB workload is demanding — early tutoring prevents Biology from becoming a low-priority subject amid the busy junior-year schedule.',
+          "September of DP1 (Grade 11) for Level 7 targeting. ASIJ's dual AP+IB workload is demanding — early tutoring prevents Biology from becoming a low-priority subject amid the busy junior-year schedule.",
       },
     ],
   },
@@ -4283,8 +4316,8 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP'],
     historyParagraphs: [
       'Nishimachi International School was founded in 1949 in Minato-ku, central Tokyo (Azabu/Roppongi area). Nishimachi is a K–9 school enrolling approximately 450 students from 40+ countries. The school is known for its bilingual Japanese-English programme and its strong emphasis on cultural literacy and global citizenship.',
-      'Nishimachi offers PYP and MYP but not the DP — students graduate after Grade 9 and typically transfer to ASIJ, Saint Maur, K. International, or other IB DP schools for Grades 10–12. This makes Nishimachi a critical feeder school for Tokyo\'s IB Biology pipeline. Students who build strong science foundations in Nishimachi\'s MYP programme transition smoothly into DP Biology HL.',
-      'Nishimachi graduates — once they complete DP at a partner school — matriculate to US top-50, UK Russell Group, and Japanese universities. The school\'s bilingual programme gives graduates a distinctive application profile.',
+      "Nishimachi offers PYP and MYP but not the DP — students graduate after Grade 9 and typically transfer to ASIJ, Saint Maur, K. International, or other IB DP schools for Grades 10–12. This makes Nishimachi a critical feeder school for Tokyo's IB Biology pipeline. Students who build strong science foundations in Nishimachi's MYP programme transition smoothly into DP Biology HL.",
+      "Nishimachi graduates — once they complete DP at a partner school — matriculate to US top-50, UK Russell Group, and Japanese universities. The school's bilingual programme gives graduates a distinctive application profile.",
     ],
     reputationBullets: [
       'Founded 1949 in Azabu, Minato-ku — central Tokyo',
@@ -4294,16 +4327,16 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'MYP programme builds strong science foundations for DP Biology',
     ],
     diplomaContext:
-      'Nishimachi is a K–9 school and does not offer the IB DP directly. However, it is Tokyo\'s most significant MYP-to-DP feeder. Students transferring to DP schools for Biology HL benefit from the rigorous MYP science programme at Nishimachi.',
+      "Nishimachi is a K–9 school and does not offer the IB DP directly. However, it is Tokyo's most significant MYP-to-DP feeder. Students transferring to DP schools for Biology HL benefit from the rigorous MYP science programme at Nishimachi.",
     collegeContext:
       'Nishimachi alumni complete IB DP at partner schools and matriculate to US top-50 (including Ivy League), UK Russell Group, and Japanese universities. The bilingual profile is a distinctive university-application strength.',
     paceAlignment:
       'Our tutoring for Nishimachi students focuses on the MYP-to-DP transition: building Grade 9 science skills that directly prepare for DP Biology HL. We offer summer bridge programmes between Nishimachi graduation and DP1 at the receiving school.',
     faqs: [
       {
-        question: 'Why does Nishimachi appear in your IB Biology school list if it\'s K–9?',
+        question: "Why does Nishimachi appear in your IB Biology school list if it's K–9?",
         answer:
-          'Nishimachi is Tokyo\'s most important MYP-to-DP feeder. Students transferring from Nishimachi to ASIJ, Saint Maur, or K. International for DP often need tutoring to bridge the MYP science level to DP Biology HL demands. We start in Grade 9 at Nishimachi and continue through DP.',
+          "Nishimachi is Tokyo's most important MYP-to-DP feeder. Students transferring from Nishimachi to ASIJ, Saint Maur, or K. International for DP often need tutoring to bridge the MYP science level to DP Biology HL demands. We start in Grade 9 at Nishimachi and continue through DP.",
       },
       {
         question: 'Do you offer a summer bridge programme for Nishimachi graduates entering DP?',
@@ -4313,12 +4346,12 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Can you help Nishimachi Grade 9 students strengthen MYP science?',
         answer:
-          'Absolutely. We offer MYP Science tutoring for Nishimachi Grades 7–9 that emphasises the biology strand — cell biology, genetics, ecology — to build a strong foundation for DP Biology HL. Sessions are scheduled after Nishimachi\'s 3:15 PM dismissal.',
+          "Absolutely. We offer MYP Science tutoring for Nishimachi Grades 7–9 that emphasises the biology strand — cell biology, genetics, ecology — to build a strong foundation for DP Biology HL. Sessions are scheduled after Nishimachi's 3:15 PM dismissal.",
       },
       {
         question: 'Which DP school do most Nishimachi graduates attend?',
         answer:
-          'ASIJ (Chofu) and Saint Maur (Yokohama) are the most common destinations for Nishimachi graduates entering the IB DP. We have experience tutoring students at both schools and can advise on which school\'s Biology HL pacing suits the student better.',
+          "ASIJ (Chofu) and Saint Maur (Yokohama) are the most common destinations for Nishimachi graduates entering the IB DP. We have experience tutoring students at both schools and can advise on which school's Biology HL pacing suits the student better.",
       },
       {
         question: 'What payment methods do you accept?',
@@ -4341,22 +4374,22 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       'Saint Maur International School was founded in 1872 in Yokohama — making it one of the oldest international schools in the world and the oldest in Japan. The school enrols approximately 500 students from 45+ countries on its hillside campus overlooking Yokohama harbour in the Yamate (Bluff) area.',
-      'Saint Maur offers IB Biology at both HL and SL within a full IB Continuum. The school\'s smaller size means Biology HL classes are intimate (10–18 students), with strong lab access. Saint Maur\'s long history in the Yokohama international community creates a school culture that values academic rigour and global perspective.',
-      'Saint Maur graduates matriculate to US top-50, UK Russell Group, Japanese, and European universities. The school has strong alumni networks in medicine, law, and diplomacy. Tokyo University\'s PEAK (Programs in English at Komaba) and Keio PEARL programmes are popular local targets.',
+      "Saint Maur offers IB Biology at both HL and SL within a full IB Continuum. The school's smaller size means Biology HL classes are intimate (10–18 students), with strong lab access. Saint Maur's long history in the Yokohama international community creates a school culture that values academic rigour and global perspective.",
+      "Saint Maur graduates matriculate to US top-50, UK Russell Group, Japanese, and European universities. The school has strong alumni networks in medicine, law, and diplomacy. Tokyo University's PEAK (Programs in English at Komaba) and Keio PEARL programmes are popular local targets.",
     ],
     reputationBullets: [
-      'Japan\'s oldest international school — founded 1872',
+      "Japan's oldest international school — founded 1872",
       '500 students, 45+ nationalities on Yokohama Yamate hillside',
       'Full IB Continuum with intimate Biology HL classes (10–18)',
       'Strong alumni networks in medicine and diplomacy',
-      'Yokohama harbour campus — one of Asia\'s most historic school settings',
+      "Yokohama harbour campus — one of Asia's most historic school settings",
     ],
     diplomaContext:
       'Saint Maur graduates approximately 50 IB Diploma candidates per year. Biology HL classes are typically 10–18 students — small enough for individual attention but large enough for meaningful peer discussion.',
     collegeContext:
-      'Saint Maur reports placements at US top-50 (Ivy League, Stanford, MIT), UK Russell Group (Imperial, UCL, Edinburgh), Tokyo University PEAK, Keio PEARL, and European universities. The school\'s 150+ year history creates distinctive alumni connections for university recommendations.',
+      "Saint Maur reports placements at US top-50 (Ivy League, Stanford, MIT), UK Russell Group (Imperial, UCL, Edinburgh), Tokyo University PEAK, Keio PEARL, and European universities. The school's 150+ year history creates distinctive alumni connections for university recommendations.",
     paceAlignment:
-      'We align with Saint Maur\'s DP calendar (September start, mock exams February, May finals). The Yokohama location means students commuting from central Tokyo need sessions timed carefully — we offer 6:30–8:30 PM JST slots for post-commute scheduling.',
+      "We align with Saint Maur's DP calendar (September start, mock exams February, May finals). The Yokohama location means students commuting from central Tokyo need sessions timed carefully — we offer 6:30–8:30 PM JST slots for post-commute scheduling.",
     faqs: [
       {
         question: 'How do you accommodate Saint Maur students commuting from central Tokyo?',
@@ -4366,10 +4399,10 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Can you help Saint Maur students targeting Tokyo University PEAK?',
         answer:
-          'Yes — PEAK (Programs in English at Komaba) accepts IB Diploma directly and values strong Group 4 sciences. We coach Biology HL for Level 7 and advise on PEAK\'s application essay, which benefits from a clear biology/science narrative.',
+          "Yes — PEAK (Programs in English at Komaba) accepts IB Diploma directly and values strong Group 4 sciences. We coach Biology HL for Level 7 and advise on PEAK's application essay, which benefits from a clear biology/science narrative.",
       },
       {
-        question: 'How does Saint Maur\'s small Biology HL class size affect tutoring?',
+        question: "How does Saint Maur's small Biology HL class size affect tutoring?",
         answer:
           'With 10–18 students per class, Saint Maur Biology HL teachers provide more individual feedback than larger IB schools. Our tutoring complements this by providing systematic exam-technique drilling (Paper 1 MCQ timing, Paper 2 extended-response structure) that small-class instruction may not emphasise.',
       },
@@ -4381,7 +4414,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a Saint Maur student start IB Biology tutoring?',
         answer:
-          'September DP1 for Level 7 targeting. Saint Maur\'s smaller cohort means teachers detect struggling students early — but proactive tutoring prevents gaps from forming in the first place. For Nishimachi feeders entering Saint Maur, the summer bridge programme is especially valuable.',
+          "September DP1 for Level 7 targeting. Saint Maur's smaller cohort means teachers detect struggling students early — but proactive tutoring prevents gaps from forming in the first place. For Nishimachi feeders entering Saint Maur, the summer bridge programme is especially valuable.",
       },
     ],
   },
@@ -4399,27 +4432,27 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       'Yokohama International School (YIS) was founded in 1924 and is located in Naka-ku, Yokohama. YIS enrols approximately 700 students from 50+ countries and is authorized for the full IB Continuum (PYP, MYP, DP). The school is a member of the East Asia Regional Council of Schools (EARCOS) and holds CIS accreditation.',
-      'YIS offers IB Biology at both HL and SL. The school\'s science department emphasises inquiry-based learning and data-driven practicals. YIS Biology students benefit from Yokohama\'s marine environment for ecology fieldwork IAs — the harbour and Sankeien Garden provide accessible sampling sites.',
-      'YIS graduates matriculate to US, UK, Canadian, Australian, and Japanese universities. The school\'s EARCOS membership facilitates university-fair access across Asia. Yokohama City University Medical School and Keio University School of Medicine are local medical-school targets.',
+      "YIS offers IB Biology at both HL and SL. The school's science department emphasises inquiry-based learning and data-driven practicals. YIS Biology students benefit from Yokohama's marine environment for ecology fieldwork IAs — the harbour and Sankeien Garden provide accessible sampling sites.",
+      "YIS graduates matriculate to US, UK, Canadian, Australian, and Japanese universities. The school's EARCOS membership facilitates university-fair access across Asia. Yokohama City University Medical School and Keio University School of Medicine are local medical-school targets.",
     ],
     reputationBullets: [
-      'Founded 1924 — one of Japan\'s oldest international schools',
+      "Founded 1924 — one of Japan's oldest international schools",
       '700 students, 50+ nationalities in Naka-ku, Yokohama',
       'Full IB Continuum with strong inquiry-based science programme',
       'EARCOS member + CIS accredited',
       'Marine-environment ecology fieldwork for IB Biology IAs',
     ],
     diplomaContext:
-      'YIS graduates approximately 60 IB Diploma candidates per year. Biology HL is a popular Group 4 choice, supported by the school\'s strong inquiry-based science tradition and Yokohama\'s marine-ecology fieldwork opportunities.',
+      "YIS graduates approximately 60 IB Diploma candidates per year. Biology HL is a popular Group 4 choice, supported by the school's strong inquiry-based science tradition and Yokohama's marine-ecology fieldwork opportunities.",
     collegeContext:
-      'YIS reports placements at US top-50, UK Russell Group, Canadian (UBC, Toronto, McGill), Australian (Melbourne, Sydney), and Japanese universities (Keio, Waseda, ICU, Tokyo University PEAK). The school\'s global alumni network spans Asia-Pacific.',
+      "YIS reports placements at US top-50, UK Russell Group, Canadian (UBC, Toronto, McGill), Australian (Melbourne, Sydney), and Japanese universities (Keio, Waseda, ICU, Tokyo University PEAK). The school's global alumni network spans Asia-Pacific.",
     paceAlignment:
-      'We sync with YIS\'s IB DP calendar (August start, mock exams February, May finals). Sessions are timed for after-school (5:30–8 PM JST). We support marine-ecology IA projects leveraging Yokohama harbour and coastal sampling sites.',
+      "We sync with YIS's IB DP calendar (August start, mock exams February, May finals). Sessions are timed for after-school (5:30–8 PM JST). We support marine-ecology IA projects leveraging Yokohama harbour and coastal sampling sites.",
     faqs: [
       {
         question: 'Can you help YIS students with marine-ecology IB Biology IAs?',
         answer:
-          'Yes — Yokohama\'s harbour and coastal environment is excellent for ecology IAs. We\'ve guided YIS students through water-quality, biodiversity-index, and intertidal-zone IAs using publicly accessible Yokohama sampling sites. These field-based IAs consistently score 20+/24.',
+          "Yes — Yokohama's harbour and coastal environment is excellent for ecology IAs. We've guided YIS students through water-quality, biodiversity-index, and intertidal-zone IAs using publicly accessible Yokohama sampling sites. These field-based IAs consistently score 20+/24.",
       },
       {
         question: 'How do you support YIS students targeting Japanese universities?',
@@ -4429,7 +4462,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'What time slots work for YIS students?',
         answer:
-          'Weekday sessions from 5:30–8 PM JST after YIS\'s 3:15 PM dismissal. Saturday morning slots available for students with sports or cultural commitments during the week.',
+          "Weekday sessions from 5:30–8 PM JST after YIS's 3:15 PM dismissal. Saturday morning slots available for students with sports or cultural commitments during the week.",
       },
       {
         question: 'Do you support students transferring from Nishimachi to YIS?',
@@ -4439,7 +4472,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a YIS student start IB Biology tutoring?',
         answer:
-          'August DP1 for Level 7. YIS\'s inquiry-based approach means students are strong on experimental design but may need support with content depth and exam technique — tutoring from DP1 builds both skills in parallel.',
+          "August DP1 for Level 7. YIS's inquiry-based approach means students are strong on experimental design but may need support with content depth and exam technique — tutoring from DP1 builds both skills in parallel.",
       },
     ],
   },
@@ -4457,8 +4490,8 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       'Aoba-Japan International School (A-JIS) operates campuses in Meguro (central Tokyo) and Hikarigaoka (northern Tokyo). The school enrols approximately 600 students from 50+ countries and is authorized for the full IB Continuum. Aoba-Japan is known for its progressive, technology-integrated approach to the IB curriculum.',
-      'Aoba-Japan offers IB Biology at both HL and SL. The school\'s STEAM-focused culture integrates technology into science instruction — Biology students use digital microscopy, bioinformatics databases, and data-visualization tools alongside traditional lab practicals. The Meguro campus houses modern science labs.',
-      'Aoba-Japan graduates matriculate to US, UK, Canadian, and Japanese universities. The school\'s growing reputation and STEAM emphasis attract families from the Tokyo tech and startup ecosystem. University of Tokyo PEAK, Keio PEARL, and US top-50 are common targets.',
+      "Aoba-Japan offers IB Biology at both HL and SL. The school's STEAM-focused culture integrates technology into science instruction — Biology students use digital microscopy, bioinformatics databases, and data-visualization tools alongside traditional lab practicals. The Meguro campus houses modern science labs.",
+      "Aoba-Japan graduates matriculate to US, UK, Canadian, and Japanese universities. The school's growing reputation and STEAM emphasis attract families from the Tokyo tech and startup ecosystem. University of Tokyo PEAK, Keio PEARL, and US top-50 are common targets.",
     ],
     reputationBullets: [
       '600 students, 50+ nationalities across Meguro + Hikarigaoka campuses',
@@ -4468,16 +4501,16 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Progressive, technology-forward approach to IB sciences',
     ],
     diplomaContext:
-      'Aoba-Japan graduates approximately 45 IB Diploma candidates per year. The school\'s STEAM emphasis means Group 4 sciences receive strong institutional support. Biology HL classes benefit from technology-enhanced lab facilities.',
+      "Aoba-Japan graduates approximately 45 IB Diploma candidates per year. The school's STEAM emphasis means Group 4 sciences receive strong institutional support. Biology HL classes benefit from technology-enhanced lab facilities.",
     collegeContext:
-      'Aoba-Japan reports placements at US top-50, UK Russell Group, Canadian universities (UBC, Toronto), Japanese universities (Tokyo PEAK, Keio PEARL, Waseda), and Australian institutions. The school\'s STEAM profile supports strong science-application narratives.',
+      "Aoba-Japan reports placements at US top-50, UK Russell Group, Canadian universities (UBC, Toronto), Japanese universities (Tokyo PEAK, Keio PEARL, Waseda), and Australian institutions. The school's STEAM profile supports strong science-application narratives.",
     paceAlignment:
-      'We align with Aoba-Japan\'s DP calendar and leverage the school\'s technology-forward approach by incorporating bioinformatics and data-analysis skills into our tutoring. Sessions scheduled after school hours (5:30–8 PM JST) at either campus.',
+      "We align with Aoba-Japan's DP calendar and leverage the school's technology-forward approach by incorporating bioinformatics and data-analysis skills into our tutoring. Sessions scheduled after school hours (5:30–8 PM JST) at either campus.",
     faqs: [
       {
-        question: 'How do you complement Aoba-Japan\'s STEAM-integrated Biology teaching?',
+        question: "How do you complement Aoba-Japan's STEAM-integrated Biology teaching?",
         answer:
-          'Aoba-Japan\'s Biology programme is strong on technology integration (digital microscopy, bioinformatics). Our tutoring adds depth in content recall, Paper 1 MCQ speed, and Paper 2 command-term precision — the exam-technique layer that STEAM-focused classroom instruction may deprioritise.',
+          "Aoba-Japan's Biology programme is strong on technology integration (digital microscopy, bioinformatics). Our tutoring adds depth in content recall, Paper 1 MCQ speed, and Paper 2 command-term precision — the exam-technique layer that STEAM-focused classroom instruction may deprioritise.",
       },
       {
         question: 'Which Aoba-Japan campus do you support — Meguro or Hikarigaoka?',
@@ -4487,7 +4520,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Can you help Aoba-Japan students with bioinformatics-themed IAs?',
         answer:
-          'Yes — bioinformatics IAs (using BLAST, UniProt, or PDB databases for protein-structure or sequence-analysis investigations) are a natural fit for Aoba-Japan\'s tech culture. We guide the statistical-analysis and biological-interpretation components that make these IAs score well.',
+          "Yes — bioinformatics IAs (using BLAST, UniProt, or PDB databases for protein-structure or sequence-analysis investigations) are a natural fit for Aoba-Japan's tech culture. We guide the statistical-analysis and biological-interpretation components that make these IAs score well.",
       },
       {
         question: 'Do you accept JPY payment?',
@@ -4497,7 +4530,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should an Aoba-Japan student start IB Biology HL tutoring?',
         answer:
-          'September DP1 for Level 7. Aoba-Japan\'s smaller DP cohort (~45 students) means early intervention has high impact. For students planning bioinformatics or STEAM-themed university applications, a strong Biology HL result is strategically important.',
+          "September DP1 for Level 7. Aoba-Japan's smaller DP cohort (~45 students) means early intervention has high impact. For students planning bioinformatics or STEAM-themed university applications, a strong Biology HL result is strategically important.",
       },
     ],
   },
@@ -4517,23 +4550,23 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'International (IB World School)',
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
-      'Korea International School (KIS) was founded in 1999 and operates campuses in Pangyo (Seongnam, south of Seoul) and Gaepo (Gangnam). KIS enrols approximately 2,100 students from 30+ countries, making it one of South Korea\'s largest international schools. The school follows an American curriculum and offers the IB Diploma for Grades 11–12.',
+      "Korea International School (KIS) was founded in 1999 and operates campuses in Pangyo (Seongnam, south of Seoul) and Gaepo (Gangnam). KIS enrols approximately 2,100 students from 30+ countries, making it one of South Korea's largest international schools. The school follows an American curriculum and offers the IB Diploma for Grades 11–12.",
       'KIS offers IB Biology at both HL and SL. The Pangyo campus — located in South Korea\'s "Silicon Valley" tech corridor (Naver, Kakao, Samsung SDS, NCSoft) — houses state-of-the-art science labs. Biology HL is popular among KIS students targeting US pre-medical tracks, given the strong Korean-American university pipeline.',
-      'KIS graduates matriculate to US Ivy League and top-50 universities, UK Russell Group, and Korean universities (Yonsei, Korea University, KAIST). The school\'s Korean-American student body and strong US-university counselling create a competitive pre-medical and life-sciences pipeline.',
+      "KIS graduates matriculate to US Ivy League and top-50 universities, UK Russell Group, and Korean universities (Yonsei, Korea University, KAIST). The school's Korean-American student body and strong US-university counselling create a competitive pre-medical and life-sciences pipeline.",
     ],
     reputationBullets: [
-      '2,100 students — one of Korea\'s largest international schools',
+      "2,100 students — one of Korea's largest international schools",
       'Pangyo campus in Korea\'s "Silicon Valley" tech corridor',
       'American curriculum → IB DP pathway',
       'Strong US Ivy League and top-50 placement track',
       'Korean-American student body with competitive pre-med pipeline',
     ],
     diplomaContext:
-      'KIS graduates approximately 180 IB Diploma candidates annually — one of the largest DP cohorts in East Asia. Biology HL is heavily subscribed, driven by the pre-medical university track. The school\'s American curriculum foundation means students enter IB with strong AP-style analytical skills.',
+      "KIS graduates approximately 180 IB Diploma candidates annually — one of the largest DP cohorts in East Asia. Biology HL is heavily subscribed, driven by the pre-medical university track. The school's American curriculum foundation means students enter IB with strong AP-style analytical skills.",
     collegeContext:
       'KIS reports strong US Ivy League placements (Harvard, Yale, Stanford, Cornell), UK Russell Group (Imperial, UCL, Edinburgh), and Korean universities (Yonsei Medicine, Korea University, KAIST). Pre-medical applications dominate the science cohort.',
     paceAlignment:
-      'We align with KIS\'s academic calendar (late August start, January/May semesters). KST evening sessions (6–9 PM) fit after KIS Pangyo\'s 3:30 PM dismissal and typical hagwon (private academy) commitments.',
+      "We align with KIS's academic calendar (late August start, January/May semesters). KST evening sessions (6–9 PM) fit after KIS Pangyo's 3:30 PM dismissal and typical hagwon (private academy) commitments.",
     faqs: [
       {
         question: 'How do you accommodate KIS students who also attend hagwon?',
@@ -4558,7 +4591,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a KIS student start IB Biology HL tutoring?',
         answer:
-          'August DP1 (Grade 11). KIS\'s large DP cohort (~180 students) means Biology HL classes can be fast-paced and competitive. Early tutoring builds the foundation before the demanding junior-year workload peaks.',
+          "August DP1 (Grade 11). KIS's large DP cohort (~180 students) means Biology HL classes can be fast-paced and competitive. Early tutoring builds the foundation before the demanding junior-year workload peaks.",
       },
     ],
   },
@@ -4576,8 +4609,8 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       'Dwight School Seoul is part of the global Dwight School network (New York, London, Shanghai, Dubai, Seoul). The Seoul campus, located in Mapo-gu, enrols approximately 350 students from 40+ countries. Dwight Seoul offers the full IB Continuum and emphasises personalised learning through the school\'s "Spark of Genius" programme.',
-      'Dwight Seoul offers IB Biology at both HL and SL. As part of the Dwight global network, the school benefits from shared curriculum resources and cross-campus faculty collaboration. The school\'s intimate size means Biology HL classes are small (8–15 students), with strong lab access and individualised teacher feedback.',
-      'Dwight Seoul graduates matriculate to US top-50, UK Russell Group, and Korean universities. The Dwight network\'s New York headquarters facilitates strong US East Coast university connections, particularly for pre-medical applicants.',
+      "Dwight Seoul offers IB Biology at both HL and SL. As part of the Dwight global network, the school benefits from shared curriculum resources and cross-campus faculty collaboration. The school's intimate size means Biology HL classes are small (8–15 students), with strong lab access and individualised teacher feedback.",
+      "Dwight Seoul graduates matriculate to US top-50, UK Russell Group, and Korean universities. The Dwight network's New York headquarters facilitates strong US East Coast university connections, particularly for pre-medical applicants.",
     ],
     reputationBullets: [
       'Part of Dwight global network (NYC, London, Shanghai, Dubai, Seoul)',
@@ -4587,14 +4620,14 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Strong US East Coast university connections via Dwight NYC',
     ],
     diplomaContext:
-      'Dwight Seoul graduates approximately 30 IB Diploma candidates per year — an intimate cohort. Biology HL classes of 8–15 students enable personalised instruction. The school\'s global network provides cross-campus enrichment opportunities.',
+      "Dwight Seoul graduates approximately 30 IB Diploma candidates per year — an intimate cohort. Biology HL classes of 8–15 students enable personalised instruction. The school's global network provides cross-campus enrichment opportunities.",
     collegeContext:
       'Dwight Seoul reports placements at US top-50 (leveraging the Dwight NYC network), UK Russell Group, and Korean universities (Yonsei, Korea University). The Dwight brand carries recognition in US university admissions offices.',
     paceAlignment:
-      'We align with Dwight Seoul\'s DP calendar and leverage the small cohort for closely-tracked progress. Sessions are scheduled after school hours (5:30–8 PM KST). The school\'s personalised-learning culture aligns well with our 1:1 tutoring approach.',
+      "We align with Dwight Seoul's DP calendar and leverage the small cohort for closely-tracked progress. Sessions are scheduled after school hours (5:30–8 PM KST). The school's personalised-learning culture aligns well with our 1:1 tutoring approach.",
     faqs: [
       {
-        question: 'How does Dwight Seoul\'s small cohort size affect your tutoring?',
+        question: "How does Dwight Seoul's small cohort size affect your tutoring?",
         answer:
           'With only 8–15 Biology HL students, Dwight Seoul teachers provide detailed individual feedback. Our tutoring adds systematic exam-technique drilling and IA optimisation — the exam-preparation layer that a small-school environment may deprioritise in favour of inquiry-based learning.',
       },
@@ -4606,17 +4639,17 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'What time slots work for Dwight Seoul students?',
         answer:
-          'Weekday sessions from 5:30–8 PM KST after Dwight Seoul\'s typical 3:15 PM dismissal. The Mapo-gu campus is well-connected by Seoul Metro — students commuting home have ample time before evening sessions.',
+          "Weekday sessions from 5:30–8 PM KST after Dwight Seoul's typical 3:15 PM dismissal. The Mapo-gu campus is well-connected by Seoul Metro — students commuting home have ample time before evening sessions.",
       },
       {
         question: 'Do you accept KRW payment?',
         answer:
-          'Yes — KRW via Korean bank transfer or international Visa/Mastercard. USD available for families with US banking. The Dwight network\'s international families often prefer USD invoicing.',
+          "Yes — KRW via Korean bank transfer or international Visa/Mastercard. USD available for families with US banking. The Dwight network's international families often prefer USD invoicing.",
       },
       {
         question: 'When should a Dwight Seoul student start IB Biology tutoring?',
         answer:
-          'September DP1 for Level 7. Dwight Seoul\'s small cohort means early support has maximum impact. For students targeting US medical or life-science programmes, the full DP1-to-DP2 arc provides the strongest outcomes.',
+          "September DP1 for Level 7. Dwight Seoul's small cohort means early support has maximum impact. For students targeting US medical or life-science programmes, the full DP1-to-DP2 arc provides the strongest outcomes.",
       },
     ],
   },
@@ -4634,7 +4667,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       'Yongsan International School of Seoul (YISS) was founded in 1990 in Yongsan-gu, central Seoul — historically the US military base district, now a rapidly-developing mixed-use area. YISS enrols approximately 700 students from 35+ countries. The school offers an American curriculum with the IB Diploma for Grades 11–12.',
-      'YISS offers IB Biology at both HL and SL. The school\'s Christian ethos and American-curriculum foundation create a distinctive school culture. Biology HL is popular among pre-medical students, with many YISS families targeting US and Korean medical pathways. The school\'s science labs were upgraded in 2021.',
+      "YISS offers IB Biology at both HL and SL. The school's Christian ethos and American-curriculum foundation create a distinctive school culture. Biology HL is popular among pre-medical students, with many YISS families targeting US and Korean medical pathways. The school's science labs were upgraded in 2021.",
       'YISS graduates matriculate to US top-50 universities, Korean universities (Yonsei, Korea University, KAIST), and UK Russell Group. The school has particular strength in US Midwest and West Coast university placements.',
     ],
     reputationBullets: [
@@ -4645,26 +4678,27 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Central Seoul location near Itaewon international district',
     ],
     diplomaContext:
-      'YISS graduates approximately 80 IB Diploma candidates per year. Biology HL is a popular Group 4 choice, driven by the pre-medical pipeline. The school\'s American curriculum provides strong analytical-writing foundations for IB Paper 2.',
+      "YISS graduates approximately 80 IB Diploma candidates per year. Biology HL is a popular Group 4 choice, driven by the pre-medical pipeline. The school's American curriculum provides strong analytical-writing foundations for IB Paper 2.",
     collegeContext:
       'YISS reports placements at US top-50 (including Ivy League and UC system), Korean universities (Yonsei Medicine, Korea University, Sungkyunkwan), and UK Russell Group. US university counselling is a YISS strength, with particular expertise in financial aid for Korean-American students.',
     paceAlignment:
-      'We align with YISS\'s DP calendar (August start, semester system). KST evening sessions fit after YISS\'s school day. We accommodate the American-to-IB transition that YISS students experience in Grade 11.',
+      "We align with YISS's DP calendar (August start, semester system). KST evening sessions fit after YISS's school day. We accommodate the American-to-IB transition that YISS students experience in Grade 11.",
     faqs: [
       {
-        question: 'How do you support YISS students transitioning from the American curriculum to IB?',
+        question:
+          'How do you support YISS students transitioning from the American curriculum to IB?',
         answer:
           'YISS students enter the IB DP from an American curriculum foundation. The transition involves new assessment formats (Paper 1 MCQ, IA, command-term precision). We offer August bridge sessions that preview IB Biology expectations before the school year starts.',
       },
       {
         question: 'Can you help YISS students targeting Yonsei Medicine?',
         answer:
-          'Yes — Yonsei University College of Medicine accepts IB Diploma. We coach Biology HL for Level 7 and advise on Yonsei\'s specific entry requirements, including the Korean-language science interview component for some programmes.',
+          "Yes — Yonsei University College of Medicine accepts IB Diploma. We coach Biology HL for Level 7 and advise on Yonsei's specific entry requirements, including the Korean-language science interview component for some programmes.",
       },
       {
         question: 'What time slots work for YISS students?',
         answer:
-          'Weekday sessions from 5:30–8 PM KST. YISS\'s central Yongsan-gu location means most students can reach home quickly after school. Weekend morning sessions available for students with church or community commitments.',
+          "Weekday sessions from 5:30–8 PM KST. YISS's central Yongsan-gu location means most students can reach home quickly after school. Weekend morning sessions available for students with church or community commitments.",
       },
       {
         question: 'Do you accept KRW payment?',
@@ -4692,8 +4726,8 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       'Chadwick International is located in Songdo International City, a purpose-built smart city within Incheon Free Economic Zone, 40 km west of central Seoul. The school is a sister campus of Chadwick School (Palos Verdes, California, founded 1935). Chadwick International opened in 2010 and enrols approximately 1,200 students from 40+ countries across a state-of-the-art campus.',
-      'Chadwick International offers IB Biology at both HL and SL within a full IB Continuum. The school\'s Songdo campus features purpose-built STEM facilities including advanced Biology labs, a greenhouse, and a marine-ecology observation deck overlooking the Songdo tidal flat (Incheon Bay). The school\'s California heritage drives a strong emphasis on environmental science and sustainability.',
-      'Chadwick International graduates matriculate to US top-50 (leveraging the Chadwick California connection), UK Russell Group, and Korean universities. The school\'s IB programme has matured rapidly since 2010 and now produces consistently strong DP results.',
+      "Chadwick International offers IB Biology at both HL and SL within a full IB Continuum. The school's Songdo campus features purpose-built STEM facilities including advanced Biology labs, a greenhouse, and a marine-ecology observation deck overlooking the Songdo tidal flat (Incheon Bay). The school's California heritage drives a strong emphasis on environmental science and sustainability.",
+      "Chadwick International graduates matriculate to US top-50 (leveraging the Chadwick California connection), UK Russell Group, and Korean universities. The school's IB programme has matured rapidly since 2010 and now produces consistently strong DP results.",
     ],
     reputationBullets: [
       '1,200 students in Songdo smart city — purpose-built campus',
@@ -4703,21 +4737,21 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Strong environmental-science and sustainability emphasis',
     ],
     diplomaContext:
-      'Chadwick International graduates approximately 100 IB Diploma candidates per year. Biology HL benefits from the school\'s advanced lab facilities and marine-ecology access. The DP programme has matured to produce consistently strong Group 4 results since the school\'s first DP cohort graduated in 2014.',
+      "Chadwick International graduates approximately 100 IB Diploma candidates per year. Biology HL benefits from the school's advanced lab facilities and marine-ecology access. The DP programme has matured to produce consistently strong Group 4 results since the school's first DP cohort graduated in 2014.",
     collegeContext:
       'Chadwick International reports placements at US top-50 (Ivy League, Stanford, UC system — leveraging the Chadwick California network), UK Russell Group (Imperial, UCL), and Korean universities (KAIST, Yonsei, POSTECH). The California sister-school connection provides distinctive US-university counselling depth.',
     paceAlignment:
-      'We sync with Chadwick\'s DP calendar and leverage the marine-ecology resources (Songdo tidal flat, greenhouse) by recommending field-based IA topics. Sessions are timed for after school (5:30–8 PM KST), accounting for the Songdo campus\'s distance from central Seoul.',
+      "We sync with Chadwick's DP calendar and leverage the marine-ecology resources (Songdo tidal flat, greenhouse) by recommending field-based IA topics. Sessions are timed for after school (5:30–8 PM KST), accounting for the Songdo campus's distance from central Seoul.",
     faqs: [
       {
         question: 'Can you help Chadwick students with marine-ecology IAs using Songdo tidal flat?',
         answer:
-          'Absolutely — the Songdo tidal flat is a world-class ecology fieldwork site. We\'ve guided Chadwick students through intertidal-zonation, water-quality, and biodiversity IAs using the school\'s marine-ecology observation deck access. These field-based IAs score consistently well.',
+          "Absolutely — the Songdo tidal flat is a world-class ecology fieldwork site. We've guided Chadwick students through intertidal-zonation, water-quality, and biodiversity IAs using the school's marine-ecology observation deck access. These field-based IAs score consistently well.",
       },
       {
         question: 'How does the Chadwick California connection benefit Biology students?',
         answer:
-          'Chadwick\'s sister-school relationship with Palos Verdes provides cross-campus enrichment, shared curriculum resources, and US-university counselling expertise. For pre-medical applicants, the California connection strengthens applications to UC system and Stanford.',
+          "Chadwick's sister-school relationship with Palos Verdes provides cross-campus enrichment, shared curriculum resources, and US-university counselling expertise. For pre-medical applicants, the California connection strengthens applications to UC system and Stanford.",
       },
       {
         question: 'Is Songdo campus far from central Seoul?',
@@ -4732,7 +4766,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a Chadwick student start IB Biology HL tutoring?',
         answer:
-          'September DP1 for Level 7 targeting. Chadwick\'s strong STEM facilities mean students have excellent lab access — our tutoring adds exam-technique depth and IA optimisation that complements the school\'s practical-first approach.',
+          "September DP1 for Level 7 targeting. Chadwick's strong STEM facilities mean students have excellent lab access — our tutoring adds exam-technique depth and IA optimisation that complements the school's practical-first approach.",
       },
     ],
   },
@@ -4749,8 +4783,8 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'IB Continuum School',
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
-      'Branksome Hall Asia (BHA) is the sister school of Branksome Hall Toronto (founded 1903, one of Canada\'s premier girls\' schools). BHA opened in 2012 on Jeju Island, South Korea\'s subtropical resort island and UNESCO World Natural Heritage site. The school is co-educational and enrols approximately 1,000 students from 30+ countries, including a significant boarding population.',
-      'BHA offers IB Biology at both HL and SL within a full IB Continuum. Jeju Island\'s unique volcanic geology and subtropical ecosystem provide unparalleled ecology fieldwork opportunities for Biology students. The school\'s campus includes modern science labs, outdoor learning spaces, and access to Jeju\'s Hallasan National Park and coastal UNESCO Biosphere Reserve.',
+      "Branksome Hall Asia (BHA) is the sister school of Branksome Hall Toronto (founded 1903, one of Canada's premier girls' schools). BHA opened in 2012 on Jeju Island, South Korea's subtropical resort island and UNESCO World Natural Heritage site. The school is co-educational and enrols approximately 1,000 students from 30+ countries, including a significant boarding population.",
+      "BHA offers IB Biology at both HL and SL within a full IB Continuum. Jeju Island's unique volcanic geology and subtropical ecosystem provide unparalleled ecology fieldwork opportunities for Biology students. The school's campus includes modern science labs, outdoor learning spaces, and access to Jeju's Hallasan National Park and coastal UNESCO Biosphere Reserve.",
       'BHA graduates matriculate to Canadian (UBC, Toronto, McGill), US top-50, UK Russell Group, and Korean universities. The Branksome Hall Toronto connection provides strong Canadian-university counselling and alumni networks.',
     ],
     reputationBullets: [
@@ -4761,21 +4795,21 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Strong Canadian university pipeline via Toronto sister school',
     ],
     diplomaContext:
-      'BHA graduates approximately 80 IB Diploma candidates per year. Biology HL benefits from Jeju Island\'s extraordinary biodiversity — subtropical forests, volcanic landscapes, and marine ecosystems are all within fieldwork range of the campus.',
+      "BHA graduates approximately 80 IB Diploma candidates per year. Biology HL benefits from Jeju Island's extraordinary biodiversity — subtropical forests, volcanic landscapes, and marine ecosystems are all within fieldwork range of the campus.",
     collegeContext:
-      'BHA reports placements at Canadian universities (UBC, Toronto, McGill, Queen\'s), US top-50 (Ivy League, Stanford), UK Russell Group (Imperial, UCL, Edinburgh), and Korean universities (Yonsei, Korea University). The Branksome Hall Toronto heritage provides exceptional Canadian-university counselling.',
+      "BHA reports placements at Canadian universities (UBC, Toronto, McGill, Queen's), US top-50 (Ivy League, Stanford), UK Russell Group (Imperial, UCL, Edinburgh), and Korean universities (Yonsei, Korea University). The Branksome Hall Toronto heritage provides exceptional Canadian-university counselling.",
     paceAlignment:
-      'We sync with BHA\'s DP calendar. Jeju\'s subtropical climate means ecology fieldwork is possible year-round — we recommend IA topics that leverage this unique advantage. Boarding students have structured evening study time that accommodates tutoring sessions.',
+      "We sync with BHA's DP calendar. Jeju's subtropical climate means ecology fieldwork is possible year-round — we recommend IA topics that leverage this unique advantage. Boarding students have structured evening study time that accommodates tutoring sessions.",
     faqs: [
       {
         question: 'Can you help BHA students with Jeju-specific ecology IAs?',
         answer:
-          'Yes — Jeju Island is one of the world\'s best IB Biology ecology IA sites. We\'ve guided students through volcanic-soil microbiology, subtropical-forest biodiversity, coastal-intertidal, and Hallasan altitudinal-gradient IAs. These Jeju-specific IAs produce distinctive, high-scoring work.',
+          "Yes — Jeju Island is one of the world's best IB Biology ecology IA sites. We've guided students through volcanic-soil microbiology, subtropical-forest biodiversity, coastal-intertidal, and Hallasan altitudinal-gradient IAs. These Jeju-specific IAs produce distinctive, high-scoring work.",
       },
       {
         question: 'Do you support BHA boarding students?',
         answer:
-          'Absolutely — our online tutoring is ideal for boarding students. We schedule sessions during BHA\'s approved evening study blocks (7–9 PM KST) or weekend mornings. The boarding schedule provides consistent tutoring time that day-school students often lack.',
+          "Absolutely — our online tutoring is ideal for boarding students. We schedule sessions during BHA's approved evening study blocks (7–9 PM KST) or weekend mornings. The boarding schedule provides consistent tutoring time that day-school students often lack.",
       },
       {
         question: 'Can you help BHA students targeting Canadian medical schools?',
@@ -4785,12 +4819,12 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Is Jeju Island isolated for IB Biology tutoring?',
         answer:
-          'Not at all — our online format makes geography irrelevant. Jeju\'s location is actually an advantage: the island\'s UNESCO-designated biodiversity and volcanic ecology give BHA students IA opportunities that mainland Seoul schools cannot match.',
+          "Not at all — our online format makes geography irrelevant. Jeju's location is actually an advantage: the island's UNESCO-designated biodiversity and volcanic ecology give BHA students IA opportunities that mainland Seoul schools cannot match.",
       },
       {
         question: 'When should a BHA student start IB Biology HL tutoring?',
         answer:
-          'September DP1 for Level 7. BHA\'s boarding structure provides consistent daily routines — students who start early build habits that carry through the demanding DP2 year. For ecology-focused IAs, starting in DP1 Term 1 allows for multi-season fieldwork data collection on Jeju.',
+          "September DP1 for Level 7. BHA's boarding structure provides consistent daily routines — students who start early build habits that carry through the demanding DP2 year. For ecology-focused IAs, starting in DP1 Term 1 allows for multi-season fieldwork data collection on Jeju.",
       },
     ],
   },
@@ -4810,26 +4844,49 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'IB Diploma Programme',
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
-      'Upper Canada College (UCC) was founded in 1829 and is one of Canada\'s oldest and most prestigious independent boys\' schools. Located in the Forest Hill neighbourhood of Toronto, UCC enrols approximately 1,200 students from Junior Kindergarten through Grade 12. The school offers the IB Diploma Programme for Grades 11–12 alongside the Ontario Secondary School Diploma.',
-      'UCC offers IB Biology at both HL and SL. The school\'s science department is exceptionally well-resourced, with dedicated Biology labs and a strong tradition of university-bound science students. UCC Biology students benefit from proximity to the University of Toronto\'s Faculty of Medicine and the MaRS Discovery District for research exposure.',
-      'UCC graduates matriculate to Canadian medical schools (U of T, McMaster, Queen\'s, Western), US Ivy League, and UK Russell Group. The school\'s university counselling is among the strongest in Canada, with particular depth in pre-medical and life-science pathways.',
+      "Upper Canada College (UCC) was founded in 1829 and is one of Canada's oldest and most prestigious independent boys' schools. Located in the Forest Hill neighbourhood of Toronto, UCC enrols approximately 1,200 students from Junior Kindergarten through Grade 12. The school offers the IB Diploma Programme for Grades 11–12 alongside the Ontario Secondary School Diploma.",
+      "UCC offers IB Biology at both HL and SL. The school's science department is exceptionally well-resourced, with dedicated Biology labs and a strong tradition of university-bound science students. UCC Biology students benefit from proximity to the University of Toronto's Faculty of Medicine and the MaRS Discovery District for research exposure.",
+      "UCC graduates matriculate to Canadian medical schools (U of T, McMaster, Queen's, Western), US Ivy League, and UK Russell Group. The school's university counselling is among the strongest in Canada, with particular depth in pre-medical and life-science pathways.",
     ],
     reputationBullets: [
-      'Founded 1829 — one of Canada\'s oldest independent schools',
+      "Founded 1829 — one of Canada's oldest independent schools",
       '1,200 students in Forest Hill, Toronto',
       'IB Diploma alongside Ontario curriculum',
       'Proximity to University of Toronto Medicine + MaRS Discovery District',
       'Strong pre-medical and Ivy League placement track record',
     ],
-    diplomaContext: 'UCC graduates approximately 60 IB Diploma candidates per year. Biology HL is popular among pre-medical students. The school reports consistently strong IB results.',
-    collegeContext: 'UCC reports placements at U of T, McGill, Queen\'s, Western (Canadian medical pathway), US Ivy League (Harvard, Yale, Princeton), and UK universities (Imperial, UCL). The school has exceptional university counselling for both Canadian and international applications.',
-    paceAlignment: 'Our tutoring aligns with UCC\'s IB DP calendar (September start, mock exams February, May finals). ET evening sessions (5–8 PM Toronto) fit after UCC\'s 3:30 PM dismissal. We coordinate with UCC\'s IA timeline.',
+    diplomaContext:
+      'UCC graduates approximately 60 IB Diploma candidates per year. Biology HL is popular among pre-medical students. The school reports consistently strong IB results.',
+    collegeContext:
+      "UCC reports placements at U of T, McGill, Queen's, Western (Canadian medical pathway), US Ivy League (Harvard, Yale, Princeton), and UK universities (Imperial, UCL). The school has exceptional university counselling for both Canadian and international applications.",
+    paceAlignment:
+      "Our tutoring aligns with UCC's IB DP calendar (September start, mock exams February, May finals). ET evening sessions (5–8 PM Toronto) fit after UCC's 3:30 PM dismissal. We coordinate with UCC's IA timeline.",
     faqs: [
-      { question: 'Can you help UCC students targeting U of T Medicine?', answer: 'Yes — University of Toronto Faculty of Medicine accepts IB Diploma. We coach Biology HL for Level 7 and advise on the supplementary application components. Many UCC families target Canadian medical schools as their primary pathway.' },
-      { question: 'How do ET sessions fit a UCC student\'s schedule?', answer: 'Weekday sessions from 5–8 PM ET fit after UCC\'s school day. Weekend morning slots available for students with sports commitments. UCC\'s Forest Hill location means most students are home by 4:30 PM.' },
-      { question: 'Do you accept CAD payment?', answer: 'Yes — CAD via Canadian bank transfer (TD, RBC, Scotiabank, BMO, CIBC) or international Visa/Mastercard. Annual packages can be split across two CAD payments.' },
-      { question: 'Does UCC\'s Ontario curriculum overlap with IB?', answer: 'UCC offers IB DP alongside the Ontario curriculum. There is significant overlap in Biology content, but IB assessment (Paper 1 MCQ, Paper 2 extended response, IA) differs from Ontario evaluations. Our coaching focuses on the IB-specific exam technique.' },
-      { question: 'When should a UCC student start IB Biology tutoring?', answer: 'September of DP1 (Grade 11) for Level 7 targeting. UCC\'s strong science department means students enter DP with solid foundations — our coaching adds exam technique and IA optimisation.' },
+      {
+        question: 'Can you help UCC students targeting U of T Medicine?',
+        answer:
+          'Yes — University of Toronto Faculty of Medicine accepts IB Diploma. We coach Biology HL for Level 7 and advise on the supplementary application components. Many UCC families target Canadian medical schools as their primary pathway.',
+      },
+      {
+        question: "How do ET sessions fit a UCC student's schedule?",
+        answer:
+          "Weekday sessions from 5–8 PM ET fit after UCC's school day. Weekend morning slots available for students with sports commitments. UCC's Forest Hill location means most students are home by 4:30 PM.",
+      },
+      {
+        question: 'Do you accept CAD payment?',
+        answer:
+          'Yes — CAD via Canadian bank transfer (TD, RBC, Scotiabank, BMO, CIBC) or international Visa/Mastercard. Annual packages can be split across two CAD payments.',
+      },
+      {
+        question: "Does UCC's Ontario curriculum overlap with IB?",
+        answer:
+          'UCC offers IB DP alongside the Ontario curriculum. There is significant overlap in Biology content, but IB assessment (Paper 1 MCQ, Paper 2 extended response, IA) differs from Ontario evaluations. Our coaching focuses on the IB-specific exam technique.',
+      },
+      {
+        question: 'When should a UCC student start IB Biology tutoring?',
+        answer:
+          "September of DP1 (Grade 11) for Level 7 targeting. UCC's strong science department means students enter DP with solid foundations — our coaching adds exam technique and IA optimisation.",
+      },
     ],
   },
   {
@@ -4846,8 +4903,8 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       'Ridley College was founded in 1889 in St. Catharines, Ontario, on a 107-acre lakeside campus overlooking Lake Ontario. Ridley is a co-educational boarding and day school enrolling approximately 750 students from 60+ countries. The school is authorized for the full IB Continuum (PYP, MYP, DP) — one of only a handful of Canadian schools with all three programmes.',
-      'Ridley offers IB Biology at both HL and SL. The school\'s boarding environment creates a structured study culture that benefits IB students. Ridley\'s science labs were refurbished in 2019, and the school\'s proximity to the Niagara region provides ecology fieldwork opportunities for Biology IAs.',
-      'Ridley graduates matriculate to Canadian, US, UK, and international universities. The school has strong placements at Queen\'s, Western, McGill, U of T, and US liberal arts colleges. Boarding families from Asia and the Middle East often target North American medical pathways.',
+      "Ridley offers IB Biology at both HL and SL. The school's boarding environment creates a structured study culture that benefits IB students. Ridley's science labs were refurbished in 2019, and the school's proximity to the Niagara region provides ecology fieldwork opportunities for Biology IAs.",
+      "Ridley graduates matriculate to Canadian, US, UK, and international universities. The school has strong placements at Queen's, Western, McGill, U of T, and US liberal arts colleges. Boarding families from Asia and the Middle East often target North American medical pathways.",
     ],
     reputationBullets: [
       'Founded 1889 — 107-acre lakeside campus in St. Catharines',
@@ -4856,15 +4913,38 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Refurbished science labs (2019)',
       'Niagara region ecology fieldwork for Biology IAs',
     ],
-    diplomaContext: 'Ridley graduates approximately 80 IB Diploma candidates annually. Biology HL benefits from the boarding structure (consistent evening study time) and Niagara ecology access.',
-    collegeContext: 'Ridley reports placements at Queen\'s, Western, McGill, U of T, US universities (including Ivy League), and UK institutions. Boarding families often target dual Canadian/US applications.',
-    paceAlignment: 'Our tutoring aligns with Ridley\'s DP calendar. Boarding students have structured evening study time (7–9 PM ET) that accommodates online tutoring sessions seamlessly.',
+    diplomaContext:
+      'Ridley graduates approximately 80 IB Diploma candidates annually. Biology HL benefits from the boarding structure (consistent evening study time) and Niagara ecology access.',
+    collegeContext:
+      "Ridley reports placements at Queen's, Western, McGill, U of T, US universities (including Ivy League), and UK institutions. Boarding families often target dual Canadian/US applications.",
+    paceAlignment:
+      "Our tutoring aligns with Ridley's DP calendar. Boarding students have structured evening study time (7–9 PM ET) that accommodates online tutoring sessions seamlessly.",
     faqs: [
-      { question: 'Do you support Ridley boarding students?', answer: 'Yes — online tutoring is ideal for boarding students. We schedule during Ridley\'s approved evening study blocks (7–9 PM ET). The boarding schedule provides consistent tutoring time.' },
-      { question: 'Can you help with Niagara ecology IAs?', answer: 'Absolutely — the Niagara region provides excellent ecology fieldwork sites. We\'ve guided students through water-quality, biodiversity, and vine-ecology IAs using publicly accessible Niagara sampling sites.' },
-      { question: 'How does Ridley\'s IB Continuum help Biology HL?', answer: 'Students who completed MYP at Ridley have strong science foundations entering DP. Our coaching extends MYP skills to DP Biology depth — particularly exam technique and IA methodology.' },
-      { question: 'Do you accept CAD payment?', answer: 'Yes — CAD via Canadian bank transfer or international Visa/Mastercard. Boarding families from overseas can pay in USD or home currency.' },
-      { question: 'When should a Ridley student start?', answer: 'September DP1 for Level 7. Ridley\'s boarding structure makes consistent weekly tutoring easy to maintain throughout the DP cycle.' },
+      {
+        question: 'Do you support Ridley boarding students?',
+        answer:
+          "Yes — online tutoring is ideal for boarding students. We schedule during Ridley's approved evening study blocks (7–9 PM ET). The boarding schedule provides consistent tutoring time.",
+      },
+      {
+        question: 'Can you help with Niagara ecology IAs?',
+        answer:
+          "Absolutely — the Niagara region provides excellent ecology fieldwork sites. We've guided students through water-quality, biodiversity, and vine-ecology IAs using publicly accessible Niagara sampling sites.",
+      },
+      {
+        question: "How does Ridley's IB Continuum help Biology HL?",
+        answer:
+          'Students who completed MYP at Ridley have strong science foundations entering DP. Our coaching extends MYP skills to DP Biology depth — particularly exam technique and IA methodology.',
+      },
+      {
+        question: 'Do you accept CAD payment?',
+        answer:
+          'Yes — CAD via Canadian bank transfer or international Visa/Mastercard. Boarding families from overseas can pay in USD or home currency.',
+      },
+      {
+        question: 'When should a Ridley student start?',
+        answer:
+          "September DP1 for Level 7. Ridley's boarding structure makes consistent weekly tutoring easy to maintain throughout the DP cycle.",
+      },
     ],
   },
   {
@@ -4880,25 +4960,44 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'IB Diploma Programme',
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
-      'Ashbury College was founded in 1891 in Ottawa\'s Rockcliffe Park neighbourhood — one of Canada\'s most prestigious residential areas, home to embassies, the Governor General\'s residence, and senior government officials. Ashbury enrols approximately 700 students and offers the IB Diploma Programme for Grades 11–12.',
-      'Ashbury offers IB Biology at both HL and SL. Ottawa\'s unique position as Canada\'s capital means Ashbury\'s parent community includes diplomats, senior civil servants, and professionals from the National Research Council, Health Canada, and the Public Health Agency of Canada — creating a school culture where science and public policy intersect.',
-      'Ashbury graduates matriculate to Canadian universities (Ottawa, Queen\'s, McGill, U of T), US universities, and UK institutions. The school\'s diplomatic community drives applications to international programmes.',
+      "Ashbury College was founded in 1891 in Ottawa's Rockcliffe Park neighbourhood — one of Canada's most prestigious residential areas, home to embassies, the Governor General's residence, and senior government officials. Ashbury enrols approximately 700 students and offers the IB Diploma Programme for Grades 11–12.",
+      "Ashbury offers IB Biology at both HL and SL. Ottawa's unique position as Canada's capital means Ashbury's parent community includes diplomats, senior civil servants, and professionals from the National Research Council, Health Canada, and the Public Health Agency of Canada — creating a school culture where science and public policy intersect.",
+      "Ashbury graduates matriculate to Canadian universities (Ottawa, Queen's, McGill, U of T), US universities, and UK institutions. The school's diplomatic community drives applications to international programmes.",
     ],
     reputationBullets: [
       'Founded 1891 in Rockcliffe Park, Ottawa',
       '700 students — diplomatic/government community',
       'IB Diploma Programme with strong sciences',
       'Proximity to Health Canada, NRC, PHAC for science context',
-      'Governor General\'s neighbourhood — elite residential setting',
+      "Governor General's neighbourhood — elite residential setting",
     ],
-    diplomaContext: 'Ashbury graduates approximately 50 IB Diploma candidates annually. The diplomatic community drives diverse university targets across Canadian, US, UK, and European systems.',
-    collegeContext: 'Ashbury reports placements at University of Ottawa, Queen\'s, McGill, U of T, and international universities. The school\'s diplomatic heritage provides strong recommendation networks.',
-    paceAlignment: 'Our tutoring aligns with Ashbury\'s DP calendar. ET evening sessions (5–8 PM Ottawa) fit the standard school schedule.',
+    diplomaContext:
+      'Ashbury graduates approximately 50 IB Diploma candidates annually. The diplomatic community drives diverse university targets across Canadian, US, UK, and European systems.',
+    collegeContext:
+      "Ashbury reports placements at University of Ottawa, Queen's, McGill, U of T, and international universities. The school's diplomatic heritage provides strong recommendation networks.",
+    paceAlignment:
+      "Our tutoring aligns with Ashbury's DP calendar. ET evening sessions (5–8 PM Ottawa) fit the standard school schedule.",
     faqs: [
-      { question: 'Can you help Ashbury students from diplomatic families?', answer: 'Yes — several Ashbury families are diplomats who may relocate mid-DP. Our online tutoring continues seamlessly regardless of relocation. We maintain the same IB Biology curriculum progression even if the student changes countries.' },
-      { question: 'Do Ottawa students have health-science research access?', answer: 'Ottawa is unique: Health Canada, PHAC, and the NRC are all within the city. Some Ashbury students access research opportunities for IA projects. We help students design IAs that leverage these connections.' },
-      { question: 'Do you accept CAD payment?', answer: 'Yes — CAD via Canadian bank transfer or international card. Diplomatic families can pay in USD or home currency.' },
-      { question: 'When should an Ashbury student start?', answer: 'September DP1 for Level 7 targeting. Ashbury\'s smaller cohort means early support has high impact.' },
+      {
+        question: 'Can you help Ashbury students from diplomatic families?',
+        answer:
+          'Yes — several Ashbury families are diplomats who may relocate mid-DP. Our online tutoring continues seamlessly regardless of relocation. We maintain the same IB Biology curriculum progression even if the student changes countries.',
+      },
+      {
+        question: 'Do Ottawa students have health-science research access?',
+        answer:
+          'Ottawa is unique: Health Canada, PHAC, and the NRC are all within the city. Some Ashbury students access research opportunities for IA projects. We help students design IAs that leverage these connections.',
+      },
+      {
+        question: 'Do you accept CAD payment?',
+        answer:
+          'Yes — CAD via Canadian bank transfer or international card. Diplomatic families can pay in USD or home currency.',
+      },
+      {
+        question: 'When should an Ashbury student start?',
+        answer:
+          "September DP1 for Level 7 targeting. Ashbury's smaller cohort means early support has high impact.",
+      },
     ],
   },
   {
@@ -4914,26 +5013,48 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'IB Diploma Programme',
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
-      'Crofton House School was founded in 1898 in Vancouver\'s Kerrisdale neighbourhood. It is one of British Columbia\'s most respected independent girls\' schools, enrolling approximately 900 students from Junior Kindergarten through Grade 12. Crofton House offers the IB Diploma Programme for Grades 11–12.',
-      'Crofton House offers IB Biology at both HL and SL. The school\'s all-girls environment and strong STEM programme encourage high Biology HL enrolment. Vancouver\'s marine and forest ecosystems provide excellent ecology fieldwork for IAs — the school is 15 minutes from Pacific Spirit Regional Park and the UBC campus.',
+      "Crofton House School was founded in 1898 in Vancouver's Kerrisdale neighbourhood. It is one of British Columbia's most respected independent girls' schools, enrolling approximately 900 students from Junior Kindergarten through Grade 12. Crofton House offers the IB Diploma Programme for Grades 11–12.",
+      "Crofton House offers IB Biology at both HL and SL. The school's all-girls environment and strong STEM programme encourage high Biology HL enrolment. Vancouver's marine and forest ecosystems provide excellent ecology fieldwork for IAs — the school is 15 minutes from Pacific Spirit Regional Park and the UBC campus.",
       'Crofton House graduates matriculate to UBC, McGill, U of T, US universities, and UK institutions. The school has particular strength in science-track university placements, with many graduates pursuing medicine, dentistry, and life sciences.',
     ],
     reputationBullets: [
-      'Founded 1898 — one of BC\'s top independent girls\' schools',
+      "Founded 1898 — one of BC's top independent girls' schools",
       '900 students in Kerrisdale, Vancouver',
       'IB Diploma with strong STEM emphasis',
       'Pacific Spirit Park + UBC proximity for ecology IAs',
       'Strong science-track university placements',
     ],
-    diplomaContext: 'Crofton House graduates approximately 60 IB Diploma candidates per year. Biology HL enrolment is proportionally higher than co-ed schools, reflecting the all-girls STEM culture.',
-    collegeContext: 'Crofton House reports placements at UBC, McGill, U of T, Queen\'s, US top-50, and UK Russell Group. Pre-medical and life-science pathways are well-represented.',
-    paceAlignment: 'Our tutoring aligns with Crofton House\'s DP calendar. PT evening sessions (5–8 PM Vancouver) fit after the school day. Weekend sessions available for students with extracurricular commitments.',
+    diplomaContext:
+      'Crofton House graduates approximately 60 IB Diploma candidates per year. Biology HL enrolment is proportionally higher than co-ed schools, reflecting the all-girls STEM culture.',
+    collegeContext:
+      "Crofton House reports placements at UBC, McGill, U of T, Queen's, US top-50, and UK Russell Group. Pre-medical and life-science pathways are well-represented.",
+    paceAlignment:
+      "Our tutoring aligns with Crofton House's DP calendar. PT evening sessions (5–8 PM Vancouver) fit after the school day. Weekend sessions available for students with extracurricular commitments.",
     faqs: [
-      { question: 'Can you help with marine-ecology IAs using Pacific Spirit Park?', answer: 'Yes — Pacific Spirit Regional Park and the UBC campus are excellent IA sites. We\'ve guided Vancouver students through forest-ecology, marine-intertidal, and water-quality IAs using these accessible locations.' },
-      { question: 'Do you support students targeting UBC Medicine?', answer: 'Yes — UBC Faculty of Medicine accepts IB Diploma. We coach Biology HL for Level 7 and advise on UBC\'s specific supplementary requirements. UBC Medicine is the primary local target for Crofton House pre-med students.' },
-      { question: 'PT sessions for Vancouver students?', answer: 'Weekday sessions from 5–8 PM PT. Weekend: 9–11 AM PT. Crofton House\'s Kerrisdale location means students are home by 4:30 PM, allowing ample time before evening sessions.' },
-      { question: 'Do you accept CAD payment?', answer: 'Yes — CAD via Canadian bank transfer or international Visa/Mastercard.' },
-      { question: 'When should a Crofton House student start?', answer: 'September DP1 for Level 7. Crofton House\'s strong STEM culture means students enter DP Biology with excellent foundations — our coaching adds exam technique and IA optimisation.' },
+      {
+        question: 'Can you help with marine-ecology IAs using Pacific Spirit Park?',
+        answer:
+          "Yes — Pacific Spirit Regional Park and the UBC campus are excellent IA sites. We've guided Vancouver students through forest-ecology, marine-intertidal, and water-quality IAs using these accessible locations.",
+      },
+      {
+        question: 'Do you support students targeting UBC Medicine?',
+        answer:
+          "Yes — UBC Faculty of Medicine accepts IB Diploma. We coach Biology HL for Level 7 and advise on UBC's specific supplementary requirements. UBC Medicine is the primary local target for Crofton House pre-med students.",
+      },
+      {
+        question: 'PT sessions for Vancouver students?',
+        answer:
+          "Weekday sessions from 5–8 PM PT. Weekend: 9–11 AM PT. Crofton House's Kerrisdale location means students are home by 4:30 PM, allowing ample time before evening sessions.",
+      },
+      {
+        question: 'Do you accept CAD payment?',
+        answer: 'Yes — CAD via Canadian bank transfer or international Visa/Mastercard.',
+      },
+      {
+        question: 'When should a Crofton House student start?',
+        answer:
+          "September DP1 for Level 7. Crofton House's strong STEM culture means students enter DP Biology with excellent foundations — our coaching adds exam technique and IA optimisation.",
+      },
     ],
   },
   {
@@ -4949,26 +5070,49 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'IB Continuum School',
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
-      'Branksome Hall was founded in 1903 in Toronto\'s Rosedale neighbourhood. It is one of Canada\'s premier independent girls\' schools, enrolling approximately 900 students. Branksome Hall is authorized for the full IB Continuum (PYP, MYP, DP) and is the sister school of Branksome Hall Asia (Jeju, South Korea) — the only IB Continuum school pair spanning two continents.',
-      'Branksome Hall offers IB Biology at both HL and SL. The school\'s all-girls IB Continuum from PYP through DP creates exceptionally well-prepared Biology HL students who have been in the IB system since elementary school. The school\'s Toronto location provides access to the University of Toronto\'s research ecosystem and the MaRS Discovery District for IA project context.',
-      'Branksome Hall graduates matriculate to U of T, McGill, Queen\'s, Western, US Ivy League, and UK universities. The school has a strong track record in pre-medical and life-science placements. The Branksome Hall Asia connection facilitates cross-campus exchanges.',
+      "Branksome Hall was founded in 1903 in Toronto's Rosedale neighbourhood. It is one of Canada's premier independent girls' schools, enrolling approximately 900 students. Branksome Hall is authorized for the full IB Continuum (PYP, MYP, DP) and is the sister school of Branksome Hall Asia (Jeju, South Korea) — the only IB Continuum school pair spanning two continents.",
+      "Branksome Hall offers IB Biology at both HL and SL. The school's all-girls IB Continuum from PYP through DP creates exceptionally well-prepared Biology HL students who have been in the IB system since elementary school. The school's Toronto location provides access to the University of Toronto's research ecosystem and the MaRS Discovery District for IA project context.",
+      "Branksome Hall graduates matriculate to U of T, McGill, Queen's, Western, US Ivy League, and UK universities. The school has a strong track record in pre-medical and life-science placements. The Branksome Hall Asia connection facilitates cross-campus exchanges.",
     ],
     reputationBullets: [
-      'Founded 1903 — one of Canada\'s premier girls\' schools',
+      "Founded 1903 — one of Canada's premier girls' schools",
       '900 students in Rosedale, Toronto',
       'Full IB Continuum: PYP → MYP → DP',
       'Sister school of Branksome Hall Asia (Jeju, South Korea)',
       'U of T research ecosystem + MaRS Discovery District access',
     ],
-    diplomaContext: 'Branksome Hall graduates approximately 80 IB Diploma candidates per year. Biology HL benefits from the full IB Continuum — students who started in PYP have the deepest IB preparation of any Canadian school.',
-    collegeContext: 'Branksome Hall reports placements at U of T, McGill, Queen\'s, Western (Canadian medical pathway), US Ivy League, and UK Russell Group. Pre-medical applications are a strength — the school\'s IB Continuum heritage gives students distinctive application profiles.',
-    paceAlignment: 'Our tutoring aligns with Branksome Hall\'s DP calendar. ET evening sessions fit after the school day. We support cross-campus students who spend time at Branksome Hall Asia (Jeju) with timezone-flexible scheduling.',
+    diplomaContext:
+      'Branksome Hall graduates approximately 80 IB Diploma candidates per year. Biology HL benefits from the full IB Continuum — students who started in PYP have the deepest IB preparation of any Canadian school.',
+    collegeContext:
+      "Branksome Hall reports placements at U of T, McGill, Queen's, Western (Canadian medical pathway), US Ivy League, and UK Russell Group. Pre-medical applications are a strength — the school's IB Continuum heritage gives students distinctive application profiles.",
+    paceAlignment:
+      "Our tutoring aligns with Branksome Hall's DP calendar. ET evening sessions fit after the school day. We support cross-campus students who spend time at Branksome Hall Asia (Jeju) with timezone-flexible scheduling.",
     faqs: [
-      { question: 'How does the Branksome Hall IB Continuum help Biology HL?', answer: 'Students who completed PYP and MYP at Branksome Hall have the deepest IB preparation possible — 13+ years in the system. Our coaching extends this exceptional foundation with DP-specific exam technique and IA mentorship.' },
-      { question: 'Can you support students who split time between Toronto and Jeju?', answer: 'Yes — some Branksome Hall students participate in cross-campus exchanges with Branksome Hall Asia Jeju. Our online tutoring accommodates both ET (Toronto) and KST (Jeju) timezones seamlessly.' },
-      { question: 'Do you help Branksome Hall students targeting Canadian med schools?', answer: 'Yes — U of T, McMaster, Queen\'s, and Western medical schools all accept IB Diploma. We coach Biology HL for Level 7 and advise on the Canadian medical school application process.' },
-      { question: 'Do you accept CAD payment?', answer: 'Yes — CAD via Canadian bank transfer or international Visa/Mastercard. Annual packages can be split across two payments.' },
-      { question: 'When should a Branksome Hall student start?', answer: 'September DP1. Branksome Hall students are among the best-prepared IB students in Canada — our coaching adds the exam-technique and IA-optimisation layer that pushes Level 6 to Level 7.' },
+      {
+        question: 'How does the Branksome Hall IB Continuum help Biology HL?',
+        answer:
+          'Students who completed PYP and MYP at Branksome Hall have the deepest IB preparation possible — 13+ years in the system. Our coaching extends this exceptional foundation with DP-specific exam technique and IA mentorship.',
+      },
+      {
+        question: 'Can you support students who split time between Toronto and Jeju?',
+        answer:
+          'Yes — some Branksome Hall students participate in cross-campus exchanges with Branksome Hall Asia Jeju. Our online tutoring accommodates both ET (Toronto) and KST (Jeju) timezones seamlessly.',
+      },
+      {
+        question: 'Do you help Branksome Hall students targeting Canadian med schools?',
+        answer:
+          "Yes — U of T, McMaster, Queen's, and Western medical schools all accept IB Diploma. We coach Biology HL for Level 7 and advise on the Canadian medical school application process.",
+      },
+      {
+        question: 'Do you accept CAD payment?',
+        answer:
+          'Yes — CAD via Canadian bank transfer or international Visa/Mastercard. Annual packages can be split across two payments.',
+      },
+      {
+        question: 'When should a Branksome Hall student start?',
+        answer:
+          'September DP1. Branksome Hall students are among the best-prepared IB students in Canada — our coaching adds the exam-technique and IA-optimisation layer that pushes Level 6 to Level 7.',
+      },
     ],
   },
   // ──────────────────────────────────────────────────────────────────────────
@@ -4987,26 +5131,49 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'International (IB World School)',
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
-      'Wellington College was founded in 1859 as a memorial to the Duke of Wellington. Located in Crowthorne, Berkshire (50 minutes from central London), Wellington is one of Britain\'s leading co-educational boarding and day schools, enrolling approximately 1,100 students. The school offers the IB Diploma alongside A-Levels.',
-      'Wellington offers IB Biology at both HL and SL. The school\'s science facilities include purpose-built laboratories and a dedicated Science Centre. Wellington\'s dual IB/A-Level track means some students take IB Biology HL while others take A-Level Biology — our coaching serves both.',
-      'Wellington graduates matriculate to UK Russell Group (Oxford, Cambridge, Imperial, UCL), US Ivy League, and international universities. The school\'s medical-school placement record is strong, with BMAT/UCAT preparation integrated into the sixth-form programme.',
+      "Wellington College was founded in 1859 as a memorial to the Duke of Wellington. Located in Crowthorne, Berkshire (50 minutes from central London), Wellington is one of Britain's leading co-educational boarding and day schools, enrolling approximately 1,100 students. The school offers the IB Diploma alongside A-Levels.",
+      "Wellington offers IB Biology at both HL and SL. The school's science facilities include purpose-built laboratories and a dedicated Science Centre. Wellington's dual IB/A-Level track means some students take IB Biology HL while others take A-Level Biology — our coaching serves both.",
+      "Wellington graduates matriculate to UK Russell Group (Oxford, Cambridge, Imperial, UCL), US Ivy League, and international universities. The school's medical-school placement record is strong, with BMAT/UCAT preparation integrated into the sixth-form programme.",
     ],
     reputationBullets: [
-      'Founded 1859 — one of Britain\'s great public schools',
+      "Founded 1859 — one of Britain's great public schools",
       '1,100 students, major boarding school in Berkshire',
       'Dual IB Diploma + A-Level track',
       'Purpose-built Science Centre with dedicated Biology labs',
       'Strong Oxbridge and UK medical school placements',
     ],
-    diplomaContext: 'Wellington graduates approximately 80 IB Diploma candidates annually alongside the A-Level cohort. Biology HL is popular among pre-medical candidates.',
-    collegeContext: 'Wellington reports strong placements at Oxford, Cambridge, Imperial, UCL, Edinburgh, and US universities. Medical school applications (via BMAT/UCAT) are a strength.',
-    paceAlignment: 'Our tutoring aligns with Wellington\'s IB DP calendar. GMT evening sessions (5–8 PM) fit after the boarding school day. We accommodate both IB and A-Level Biology students.',
+    diplomaContext:
+      'Wellington graduates approximately 80 IB Diploma candidates annually alongside the A-Level cohort. Biology HL is popular among pre-medical candidates.',
+    collegeContext:
+      'Wellington reports strong placements at Oxford, Cambridge, Imperial, UCL, Edinburgh, and US universities. Medical school applications (via BMAT/UCAT) are a strength.',
+    paceAlignment:
+      "Our tutoring aligns with Wellington's IB DP calendar. GMT evening sessions (5–8 PM) fit after the boarding school day. We accommodate both IB and A-Level Biology students.",
     faqs: [
-      { question: 'Do you support Wellington students doing IB or A-Level Biology?', answer: 'Yes — Wellington offers both tracks. Our IB coaching covers Paper 1, Paper 2, and IA. For A-Level students, we offer separate A-Level Biology coaching aligned to AQA/Edexcel/OCR specifications. Some Wellington students do both IB HL and A-Level simultaneously.' },
-      { question: 'Can you help Wellington students targeting UK medical schools?', answer: 'Yes — we coach Biology HL for Level 7 and advise on BMAT/UCAT preparation. Many Wellington pre-med students apply to Imperial, UCL, Edinburgh, and Oxbridge medicine.' },
-      { question: 'Do boarding students have time for tutoring?', answer: 'Wellington boarding students have structured evening study time (7–9 PM GMT) that accommodates online tutoring seamlessly. Weekend morning slots also available.' },
-      { question: 'Do you accept GBP payment?', answer: 'Yes — GBP via UK bank transfer (Barclays, HSBC, Lloyds, NatWest) or international card.' },
-      { question: 'When should a Wellington student start?', answer: 'September of DP1 (Lower Sixth) for Level 7 targeting. Wellington\'s strong science department means students enter DP with solid foundations — our coaching adds exam technique and IA optimisation.' },
+      {
+        question: 'Do you support Wellington students doing IB or A-Level Biology?',
+        answer:
+          'Yes — Wellington offers both tracks. Our IB coaching covers Paper 1, Paper 2, and IA. For A-Level students, we offer separate A-Level Biology coaching aligned to AQA/Edexcel/OCR specifications. Some Wellington students do both IB HL and A-Level simultaneously.',
+      },
+      {
+        question: 'Can you help Wellington students targeting UK medical schools?',
+        answer:
+          'Yes — we coach Biology HL for Level 7 and advise on BMAT/UCAT preparation. Many Wellington pre-med students apply to Imperial, UCL, Edinburgh, and Oxbridge medicine.',
+      },
+      {
+        question: 'Do boarding students have time for tutoring?',
+        answer:
+          'Wellington boarding students have structured evening study time (7–9 PM GMT) that accommodates online tutoring seamlessly. Weekend morning slots also available.',
+      },
+      {
+        question: 'Do you accept GBP payment?',
+        answer:
+          'Yes — GBP via UK bank transfer (Barclays, HSBC, Lloyds, NatWest) or international card.',
+      },
+      {
+        question: 'When should a Wellington student start?',
+        answer:
+          "September of DP1 (Lower Sixth) for Level 7 targeting. Wellington's strong science department means students enter DP with solid foundations — our coaching adds exam technique and IA optimisation.",
+      },
     ],
   },
   {
@@ -5023,24 +5190,42 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       'Sevenoaks School was founded in 1432 and is one of the oldest schools in England. Located in Sevenoaks, Kent (30 minutes from London), the school enrols approximately 1,100 students and was the first school in the UK to adopt the IB Diploma Programme (1978) — replacing A-Levels entirely.',
-      'Sevenoaks is unique among UK independent schools: it offers ONLY the IB Diploma, not A-Levels. This full commitment means the school\'s IB pedagogy is exceptionally well-developed. IB Biology at HL and SL is taught by specialist teachers with deep IB experience. The school consistently achieves among the highest average IB scores in the UK.',
-      'Sevenoaks graduates matriculate to Oxbridge, UK Russell Group, US Ivy League, and international universities. The school\'s IB-only status means university counselling is entirely IB-focused — a significant advantage for medical school applications.',
+      "Sevenoaks is unique among UK independent schools: it offers ONLY the IB Diploma, not A-Levels. This full commitment means the school's IB pedagogy is exceptionally well-developed. IB Biology at HL and SL is taught by specialist teachers with deep IB experience. The school consistently achieves among the highest average IB scores in the UK.",
+      "Sevenoaks graduates matriculate to Oxbridge, UK Russell Group, US Ivy League, and international universities. The school's IB-only status means university counselling is entirely IB-focused — a significant advantage for medical school applications.",
     ],
     reputationBullets: [
-      'Founded 1432 — one of England\'s oldest schools',
+      "Founded 1432 — one of England's oldest schools",
       'First UK school to adopt IB Diploma (1978) — IB ONLY, no A-Levels',
       'Among the highest average IB scores in the UK',
       '1,100 students in Sevenoaks, Kent (30 min from London)',
       'Full IB commitment = deepest IB pedagogy in Britain',
     ],
-    diplomaContext: 'Sevenoaks graduates 100% IB Diploma students — approximately 200 candidates annually. The school reports average IB scores consistently 3-4 points above the global mean. Biology HL is one of the most popular Group 4 choices.',
-    collegeContext: 'Sevenoaks reports exceptional placements at Oxford, Cambridge, Imperial, UCL, Edinburgh, St Andrews, US Ivy League, and European universities. Medical school acceptance is a strength — the IB-only profile is well-understood by UK medical admissions.',
-    paceAlignment: 'Our tutoring aligns with Sevenoaks\' IB DP calendar. The school\'s IB-only culture means pacing is optimised for IB — we match it precisely. GMT evening sessions (5–8 PM) fit the Kent commuter schedule.',
+    diplomaContext:
+      'Sevenoaks graduates 100% IB Diploma students — approximately 200 candidates annually. The school reports average IB scores consistently 3-4 points above the global mean. Biology HL is one of the most popular Group 4 choices.',
+    collegeContext:
+      'Sevenoaks reports exceptional placements at Oxford, Cambridge, Imperial, UCL, Edinburgh, St Andrews, US Ivy League, and European universities. Medical school acceptance is a strength — the IB-only profile is well-understood by UK medical admissions.',
+    paceAlignment:
+      "Our tutoring aligns with Sevenoaks' IB DP calendar. The school's IB-only culture means pacing is optimised for IB — we match it precisely. GMT evening sessions (5–8 PM) fit the Kent commuter schedule.",
     faqs: [
-      { question: 'Sevenoaks is IB-only — does that help or hurt for UK medicine?', answer: 'It helps significantly. UK medical schools (Imperial, UCL, Edinburgh, King\'s) are very familiar with IB from Sevenoaks — the school has decades of IB medical-school placements. The IB HL Level 7 is well-understood as equivalent to A* at A-Level.' },
-      { question: 'How do Sevenoaks students compare to A-Level students?', answer: 'Sevenoaks IB students typically have stronger research and analytical skills (from the IA and EE) than A-Level-only students. Our coaching leverages this by focusing on exam technique — the area where even strong Sevenoaks students can improve.' },
-      { question: 'Do you accept GBP payment?', answer: 'Yes — GBP via UK bank transfer or international card.' },
-      { question: 'When should a Sevenoaks student start?', answer: 'September Lower Sixth for Level 7. Sevenoaks\' IB-only environment means students are well-prepared — our coaching adds the marginal exam-technique edge for 7 vs 6.' },
+      {
+        question: 'Sevenoaks is IB-only — does that help or hurt for UK medicine?',
+        answer:
+          "It helps significantly. UK medical schools (Imperial, UCL, Edinburgh, King's) are very familiar with IB from Sevenoaks — the school has decades of IB medical-school placements. The IB HL Level 7 is well-understood as equivalent to A* at A-Level.",
+      },
+      {
+        question: 'How do Sevenoaks students compare to A-Level students?',
+        answer:
+          'Sevenoaks IB students typically have stronger research and analytical skills (from the IA and EE) than A-Level-only students. Our coaching leverages this by focusing on exam technique — the area where even strong Sevenoaks students can improve.',
+      },
+      {
+        question: 'Do you accept GBP payment?',
+        answer: 'Yes — GBP via UK bank transfer or international card.',
+      },
+      {
+        question: 'When should a Sevenoaks student start?',
+        answer:
+          "September Lower Sixth for Level 7. Sevenoaks' IB-only environment means students are well-prepared — our coaching adds the marginal exam-technique edge for 7 vs 6.",
+      },
     ],
   },
   {
@@ -5057,24 +5242,43 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       'Dulwich College was founded in 1619 by Edward Alleyn in south London. The school enrols approximately 1,800 students and offers the IB Diploma alongside A-Levels for Sixth Form. Dulwich is part of the Dulwich College International family, with sister schools in Singapore, Shanghai, Beijing, Seoul, and Yangon.',
-      'Dulwich offers IB Biology at both HL and SL. The school\'s south London campus includes modern science facilities and strong links to King\'s College London and Guy\'s Hospital for clinical exposure. The international Dulwich network means some students transfer between campuses — our coaching supports continuity.',
-      'Dulwich graduates matriculate to Oxbridge, UK Russell Group, US universities, and — via the international network — Asian universities. Medical school placements are strong, with particular depth in London medical schools (King\'s, SGUL, Barts).',
+      "Dulwich offers IB Biology at both HL and SL. The school's south London campus includes modern science facilities and strong links to King's College London and Guy's Hospital for clinical exposure. The international Dulwich network means some students transfer between campuses — our coaching supports continuity.",
+      "Dulwich graduates matriculate to Oxbridge, UK Russell Group, US universities, and — via the international network — Asian universities. Medical school placements are strong, with particular depth in London medical schools (King's, SGUL, Barts).",
     ],
     reputationBullets: [
       'Founded 1619 — historic south London school',
       '1,800 students with international sister school network',
       'Dual IB Diploma + A-Level in Sixth Form',
-      'King\'s College London + Guy\'s Hospital proximity',
+      "King's College London + Guy's Hospital proximity",
       'Global Dulwich network: Singapore, Shanghai, Beijing, Seoul',
     ],
-    diplomaContext: 'Dulwich graduates approximately 70 IB Diploma candidates annually alongside A-Level students. The international network means some students arrive from Dulwich Singapore/Shanghai with MYP foundations.',
-    collegeContext: 'Dulwich reports placements at Oxbridge, Imperial, UCL, King\'s, Edinburgh, US top-50, and Asian universities (NUS, HKU). London medical school applications (King\'s, SGUL, Barts) are a particular strength.',
-    paceAlignment: 'Our tutoring aligns with Dulwich\'s IB calendar. GMT evening sessions (5–8 PM) fit south London commute patterns. We support students transferring from Dulwich International campuses.',
+    diplomaContext:
+      'Dulwich graduates approximately 70 IB Diploma candidates annually alongside A-Level students. The international network means some students arrive from Dulwich Singapore/Shanghai with MYP foundations.',
+    collegeContext:
+      "Dulwich reports placements at Oxbridge, Imperial, UCL, King's, Edinburgh, US top-50, and Asian universities (NUS, HKU). London medical school applications (King's, SGUL, Barts) are a particular strength.",
+    paceAlignment:
+      "Our tutoring aligns with Dulwich's IB calendar. GMT evening sessions (5–8 PM) fit south London commute patterns. We support students transferring from Dulwich International campuses.",
     faqs: [
-      { question: 'Do you support Dulwich students who transferred from Dulwich Singapore/Shanghai?', answer: 'Yes — students transferring between Dulwich International campuses may have MYP foundations. Our coaching bridges any curriculum gaps and calibrates to the London campus\'s IB Biology pacing.' },
-      { question: 'Can you help with London medical school applications?', answer: 'Yes — King\'s, SGUL, Barts, and UCL are the primary London medical targets for Dulwich students. We coach Biology HL for Level 7 and advise on UCAT/BMAT preparation.' },
-      { question: 'Do you accept GBP payment?', answer: 'Yes — GBP via UK bank transfer or international card.' },
-      { question: 'When should a Dulwich student start?', answer: 'September Lower Sixth for Level 7. Students from Dulwich International campuses should start in August to bridge any MYP-to-DP gaps before term begins.' },
+      {
+        question:
+          'Do you support Dulwich students who transferred from Dulwich Singapore/Shanghai?',
+        answer:
+          "Yes — students transferring between Dulwich International campuses may have MYP foundations. Our coaching bridges any curriculum gaps and calibrates to the London campus's IB Biology pacing.",
+      },
+      {
+        question: 'Can you help with London medical school applications?',
+        answer:
+          "Yes — King's, SGUL, Barts, and UCL are the primary London medical targets for Dulwich students. We coach Biology HL for Level 7 and advise on UCAT/BMAT preparation.",
+      },
+      {
+        question: 'Do you accept GBP payment?',
+        answer: 'Yes — GBP via UK bank transfer or international card.',
+      },
+      {
+        question: 'When should a Dulwich student start?',
+        answer:
+          'September Lower Sixth for Level 7. Students from Dulwich International campuses should start in August to bridge any MYP-to-DP gaps before term begins.',
+      },
     ],
   },
   {
@@ -5090,24 +5294,38 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'IB Diploma Programme',
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
-      'King\'s College School Wimbledon (KCS) was founded in 1829 as the junior department of King\'s College London. Located in Wimbledon, south-west London, KCS enrols approximately 900 students and offers the IB Diploma alongside A-Levels in the Sixth Form.',
-      'KCS offers IB Biology at both HL and SL. The school is known for academic excellence — it consistently ranks among the top 10 independent schools in the UK by exam results. The King\'s College London heritage provides strong university connections, particularly for medical and life-science applications.',
+      "King's College School Wimbledon (KCS) was founded in 1829 as the junior department of King's College London. Located in Wimbledon, south-west London, KCS enrols approximately 900 students and offers the IB Diploma alongside A-Levels in the Sixth Form.",
+      "KCS offers IB Biology at both HL and SL. The school is known for academic excellence — it consistently ranks among the top 10 independent schools in the UK by exam results. The King's College London heritage provides strong university connections, particularly for medical and life-science applications.",
       'KCS graduates matriculate to Oxbridge (typically 30+ offers per year), UK Russell Group, and US top universities. Medical school placements are exceptionally strong — the school has one of the highest Oxbridge medicine acceptance rates in London.',
     ],
     reputationBullets: [
-      'Founded 1829 — King\'s College London heritage',
+      "Founded 1829 — King's College London heritage",
       '900 students in Wimbledon, south-west London',
       'Top 10 UK independent school by exam results',
       '30+ Oxbridge offers per year',
       'Exceptional medical school placement rate',
     ],
-    diplomaContext: 'KCS graduates approximately 50 IB Diploma candidates alongside a larger A-Level cohort. The school\'s academic selectivity means IB Biology HL students enter with very strong foundations.',
-    collegeContext: 'KCS reports 30+ Oxbridge offers annually, with strong placements at Imperial, UCL, Edinburgh, and US universities. Medical school acceptance is a hallmark — many KCS students target Oxbridge medicine.',
-    paceAlignment: 'Our tutoring aligns with KCS\'s IB calendar. GMT evening sessions (5–8 PM) fit Wimbledon commute patterns.',
+    diplomaContext:
+      "KCS graduates approximately 50 IB Diploma candidates alongside a larger A-Level cohort. The school's academic selectivity means IB Biology HL students enter with very strong foundations.",
+    collegeContext:
+      'KCS reports 30+ Oxbridge offers annually, with strong placements at Imperial, UCL, Edinburgh, and US universities. Medical school acceptance is a hallmark — many KCS students target Oxbridge medicine.',
+    paceAlignment:
+      "Our tutoring aligns with KCS's IB calendar. GMT evening sessions (5–8 PM) fit Wimbledon commute patterns.",
     faqs: [
-      { question: 'KCS students targeting Oxbridge medicine — how does coaching help?', answer: 'Oxbridge medicine requires IB 39+ with Biology HL 7. Our coaching targets the Level 7 with exam-technique precision — KCS students already have strong content knowledge, so the marginal gain is in Paper 1 MCQ speed and Paper 2 command-term accuracy.' },
-      { question: 'Do you accept GBP payment?', answer: 'Yes — GBP via UK bank transfer or international card.' },
-      { question: 'When should a KCS student start?', answer: 'September Lower Sixth. KCS\'s academic rigour means students are well-prepared — early tutoring prevents the DP1 Term 2 molecular biology gap that affects even top students.' },
+      {
+        question: 'KCS students targeting Oxbridge medicine — how does coaching help?',
+        answer:
+          'Oxbridge medicine requires IB 39+ with Biology HL 7. Our coaching targets the Level 7 with exam-technique precision — KCS students already have strong content knowledge, so the marginal gain is in Paper 1 MCQ speed and Paper 2 command-term accuracy.',
+      },
+      {
+        question: 'Do you accept GBP payment?',
+        answer: 'Yes — GBP via UK bank transfer or international card.',
+      },
+      {
+        question: 'When should a KCS student start?',
+        answer:
+          "September Lower Sixth. KCS's academic rigour means students are well-prepared — early tutoring prevents the DP1 Term 2 molecular biology gap that affects even top students.",
+      },
     ],
   },
   {
@@ -5123,25 +5341,43 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'IB Diploma Programme',
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
-      'North London Collegiate School (NLCS) was founded in 1850 by Frances Mary Buss and is one of Britain\'s leading independent girls\' schools. Located in Edgware, north London, NLCS enrols approximately 1,100 students and offers the IB Diploma in the Sixth Form. The school has sister schools in Jeju (South Korea), Dubai, and Singapore.',
-      'NLCS offers IB Biology at both HL and SL. The school\'s all-girls environment and strong STEM culture drive high Biology HL enrolment. NLCS consistently achieves among the highest average IB scores in the UK — typically 40+ average (vs 30 global mean). The international NLCS network means some students transfer between campuses.',
-      'NLCS graduates matriculate to Oxbridge (typically 25+ offers per year), UK Russell Group, US Ivy League, and international universities. Medical and veterinary school placements are strong — the school\'s IB results give students competitive profiles.',
+      "North London Collegiate School (NLCS) was founded in 1850 by Frances Mary Buss and is one of Britain's leading independent girls' schools. Located in Edgware, north London, NLCS enrols approximately 1,100 students and offers the IB Diploma in the Sixth Form. The school has sister schools in Jeju (South Korea), Dubai, and Singapore.",
+      "NLCS offers IB Biology at both HL and SL. The school's all-girls environment and strong STEM culture drive high Biology HL enrolment. NLCS consistently achieves among the highest average IB scores in the UK — typically 40+ average (vs 30 global mean). The international NLCS network means some students transfer between campuses.",
+      "NLCS graduates matriculate to Oxbridge (typically 25+ offers per year), UK Russell Group, US Ivy League, and international universities. Medical and veterinary school placements are strong — the school's IB results give students competitive profiles.",
     ],
     reputationBullets: [
-      'Founded 1850 — pioneering girls\' education',
+      "Founded 1850 — pioneering girls' education",
       '1,100 students in Edgware, north London',
       'Average IB score 40+ (vs 30 global mean)',
       'Sister schools in Jeju, Dubai, Singapore',
       '25+ Oxbridge offers annually',
     ],
-    diplomaContext: 'NLCS graduates approximately 100 IB Diploma candidates annually. The school\'s average IB score of 40+ is among the highest in the world. Biology HL is popular in the strong STEM culture.',
-    collegeContext: 'NLCS reports 25+ Oxbridge offers annually, with strong placements at Imperial, UCL, Edinburgh, and US top universities. Medical, veterinary, and life-science pathways are well-represented.',
-    paceAlignment: 'Our tutoring aligns with NLCS\'s IB calendar. GMT evening sessions (5–8 PM) fit north London commute patterns. We support students from NLCS Jeju/Dubai/Singapore who transfer to the London campus.',
+    diplomaContext:
+      "NLCS graduates approximately 100 IB Diploma candidates annually. The school's average IB score of 40+ is among the highest in the world. Biology HL is popular in the strong STEM culture.",
+    collegeContext:
+      'NLCS reports 25+ Oxbridge offers annually, with strong placements at Imperial, UCL, Edinburgh, and US top universities. Medical, veterinary, and life-science pathways are well-represented.',
+    paceAlignment:
+      "Our tutoring aligns with NLCS's IB calendar. GMT evening sessions (5–8 PM) fit north London commute patterns. We support students from NLCS Jeju/Dubai/Singapore who transfer to the London campus.",
     faqs: [
-      { question: 'NLCS averages 40+ IB — does tutoring still help?', answer: 'At NLCS\'s level, the difference between Level 6 and Level 7 is exam technique, not content knowledge. Our coaching provides the specific Paper 1/Paper 2/IA optimisation that pushes NLCS students from 6 to 7 — the marginal gain that matters for Oxbridge medicine.' },
-      { question: 'Do you support NLCS students from Jeju/Dubai/Singapore campuses?', answer: 'Yes — students transferring from NLCS international campuses may have different curriculum pacing. Our online coaching adjusts to whichever campus the student is at, with timezone flexibility.' },
-      { question: 'Do you accept GBP payment?', answer: 'Yes — GBP via UK bank transfer or international card.' },
-      { question: 'When should an NLCS student start?', answer: 'September Lower Sixth. NLCS\'s exceptional teaching means the coaching focus is almost entirely on exam technique — content depth is rarely the gap.' },
+      {
+        question: 'NLCS averages 40+ IB — does tutoring still help?',
+        answer:
+          "At NLCS's level, the difference between Level 6 and Level 7 is exam technique, not content knowledge. Our coaching provides the specific Paper 1/Paper 2/IA optimisation that pushes NLCS students from 6 to 7 — the marginal gain that matters for Oxbridge medicine.",
+      },
+      {
+        question: 'Do you support NLCS students from Jeju/Dubai/Singapore campuses?',
+        answer:
+          'Yes — students transferring from NLCS international campuses may have different curriculum pacing. Our online coaching adjusts to whichever campus the student is at, with timezone flexibility.',
+      },
+      {
+        question: 'Do you accept GBP payment?',
+        answer: 'Yes — GBP via UK bank transfer or international card.',
+      },
+      {
+        question: 'When should an NLCS student start?',
+        answer:
+          "September Lower Sixth. NLCS's exceptional teaching means the coaching focus is almost entirely on exam technique — content depth is rarely the gap.",
+      },
     ],
   },
 ]

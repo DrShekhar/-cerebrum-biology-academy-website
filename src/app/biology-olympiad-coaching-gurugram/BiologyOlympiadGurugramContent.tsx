@@ -244,7 +244,9 @@ const courseOptions = [
   },
 ]
 
-export default function BiologyOlympiadGurugramContent({ faqs }: BiologyOlympiadGurugramContentProps) {
+export default function BiologyOlympiadGurugramContent({
+  faqs,
+}: BiologyOlympiadGurugramContentProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
   const handleWhatsAppEnquiry = () => {
@@ -302,9 +304,7 @@ export default function BiologyOlympiadGurugramContent({ faqs }: BiologyOlympiad
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="max-w-4xl animate-fadeInUp"
-          >
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Trophy className="w-4 h-4" />
               NSEB | INBO | IBO Preparation
@@ -317,8 +317,8 @@ export default function BiologyOlympiadGurugramContent({ faqs }: BiologyOlympiad
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
               Expert coaching to help you excel at National &amp; International Biology Olympiads.
-              Comprehensive preparation from NSEB to IBO level with practical training at our
-              Sector 51, Gurugram center.
+              Comprehensive preparation from NSEB to IBO level with practical training at our Sector
+              51, Gurugram center.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -337,7 +337,11 @@ export default function BiologyOlympiadGurugramContent({ faqs }: BiologyOlympiad
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Biology%20Olympiad%20in%20Gurugram.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Biology%20Olympiad%20in%20Gurugram.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -366,9 +370,7 @@ export default function BiologyOlympiadGurugramContent({ faqs }: BiologyOlympiad
       {/* Olympiad Pathway */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Your Path to International Biology Olympiad
             </h2>
@@ -379,10 +381,7 @@ export default function BiologyOlympiadGurugramContent({ faqs }: BiologyOlympiad
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {olympiadPathway.map((stage, index) => (
-              <div
-                key={stage.stage}
-                className="relative animate-fadeInUp"
-              >
+              <div key={stage.stage} className="relative animate-fadeInUp">
                 <div className="bg-white rounded-2xl p-6 shadow-lg h-full border-2 border-transparent hover:border-yellow-400 transition-colors">
                   <div
                     className={`w-12 h-12 ${stage.color} rounded-xl flex items-center justify-center mb-4`}
@@ -408,9 +407,7 @@ export default function BiologyOlympiadGurugramContent({ faqs }: BiologyOlympiad
       {/* Syllabus Coverage */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Complete Olympiad Syllabus Coverage
             </h2>
@@ -449,9 +446,7 @@ export default function BiologyOlympiadGurugramContent({ faqs }: BiologyOlympiad
       {/* Why Choose Us */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Why Choose Our Olympiad Coaching in Gurugram?
             </h2>
@@ -480,9 +475,7 @@ export default function BiologyOlympiadGurugramContent({ faqs }: BiologyOlympiad
       {/* Course Options */}
       <section className="py-16 md:py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Olympiad Course Options
             </h2>
@@ -514,7 +507,11 @@ export default function BiologyOlympiadGurugramContent({ faqs }: BiologyOlympiad
                       </li>
                     ))}
                   </ul>
-                  <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Biology%20Olympiad%20in%20Gurugram.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                  <Link
+                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Biology%20Olympiad%20in%20Gurugram.%20Please%20share%20available%20timings."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button className="w-full bg-teal-600 hover:bg-teal-700">Enroll Now</Button>
                   </Link>
                 </div>
@@ -527,9 +524,7 @@ export default function BiologyOlympiadGurugramContent({ faqs }: BiologyOlympiad
       {/* Location Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-8 animate-fadeInUp"
-          >
+          <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-8 animate-fadeInUp">
             <div className="flex items-center mb-6">
               <MapPin className="w-8 h-8 text-teal-600 mr-3" />
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
@@ -544,7 +539,8 @@ export default function BiologyOlympiadGurugramContent({ faqs }: BiologyOlympiad
                   {CONTACT_INFO.location.gurugram.postalCode}
                 </p>
                 <p className="text-gray-700 mb-4">
-                  <strong>Landmark:</strong> Same building as XYZ Coaching (largest national NEET chain)
+                  <strong>Landmark:</strong> Same building as XYZ Coaching (largest national NEET
+                  chain)
                 </p>
                 <p className="text-gray-700 mb-4">
                   <strong>Metro Access:</strong> Sector 55-56 Rapid Metro (5 min walk)
@@ -603,9 +599,7 @@ export default function BiologyOlympiadGurugramContent({ faqs }: BiologyOlympiad
       {/* FAQs */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Frequently Asked Questions
             </h2>
@@ -616,10 +610,7 @@ export default function BiologyOlympiadGurugramContent({ faqs }: BiologyOlympiad
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-xl overflow-hidden animate-fadeInUp"
-              >
+              <div key={index} className="bg-gray-50 rounded-xl overflow-hidden animate-fadeInUp">
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   className="w-full flex items-center justify-between p-6 text-left"
@@ -680,8 +671,7 @@ export default function BiologyOlympiadGurugramContent({ faqs }: BiologyOlympiad
       {/* Final CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-teal-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Start Your Olympiad Journey in Gurugram?
             </h2>
@@ -690,7 +680,11 @@ export default function BiologyOlympiadGurugramContent({ faqs }: BiologyOlympiad
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Biology%20Olympiad%20in%20Gurugram.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Biology%20Olympiad%20in%20Gurugram.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

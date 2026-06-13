@@ -611,15 +611,12 @@ export class RazorpayService {
     if (!this.keyId || !this.keySecret) {
       throw new Error('Razorpay credentials not configured')
     }
-    const response = await fetch(
-      `https://api.razorpay.com/v1/payment_links/${linkId}/cancel`,
-      {
-        method: 'POST',
-        headers: {
-          Authorization: `Basic ${Buffer.from(`${this.keyId}:${this.keySecret}`).toString('base64')}`,
-        },
-      }
-    )
+    const response = await fetch(`https://api.razorpay.com/v1/payment_links/${linkId}/cancel`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Basic ${Buffer.from(`${this.keyId}:${this.keySecret}`).toString('base64')}`,
+      },
+    })
     if (!response.ok) {
       const data = await response.json().catch(() => ({}))
       throw new Error(

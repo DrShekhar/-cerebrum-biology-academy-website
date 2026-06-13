@@ -90,9 +90,7 @@ export default function PurchaseError({ error, reset }: ErrorProps) {
           )}
         </div>
 
-        <div
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fadeInUp"
-        >
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fadeInUp">
           <Button size="lg" onClick={handleReset}>
             <RefreshCw className="w-5 h-5 mr-2" />
             Try Payment Again
@@ -111,9 +109,7 @@ export default function PurchaseError({ error, reset }: ErrorProps) {
           </Link>
         </div>
 
-        <div
-          className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto mb-12 animate-fadeInUp"
-        >
+        <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto mb-12 animate-fadeInUp">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">What You Can Do</h2>
           <div className="grid grid-cols-1 gap-4 text-left">
             <div className="p-4 border border-gray-200 rounded-lg">
@@ -149,9 +145,7 @@ export default function PurchaseError({ error, reset }: ErrorProps) {
           </div>
         </div>
 
-        <div
-          className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8 max-w-2xl mx-auto mb-12 animate-fadeInUp"
-        >
+        <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8 max-w-2xl mx-auto mb-12 animate-fadeInUp">
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
             <span className="text-2xl mr-2">⚠️</span>
             Important Notice
@@ -169,9 +163,7 @@ export default function PurchaseError({ error, reset }: ErrorProps) {
           </p>
         </div>
 
-        <div
-          className="bg-gray-50 rounded-2xl p-8 max-w-2xl mx-auto animate-fadeInUp"
-        >
+        <div className="bg-gray-50 rounded-2xl p-8 max-w-2xl mx-auto animate-fadeInUp">
           <h3 className="text-xl font-semibold text-gray-900 mb-4">Get Immediate Help</h3>
           <p className="text-gray-600 mb-6">
             Our payment support team is here to assist you 24/7. We'll help you complete your
@@ -202,9 +194,7 @@ export default function PurchaseError({ error, reset }: ErrorProps) {
         </div>
 
         {error.digest && (
-          <div
-            className="mt-8 text-center animate-fadeInUp"
-          >
+          <div className="mt-8 text-center animate-fadeInUp">
             <div className="text-sm text-gray-500">
               Payment Error ID:{' '}
               <code className="bg-gray-100 px-2 py-1 rounded text-xs font-mono">

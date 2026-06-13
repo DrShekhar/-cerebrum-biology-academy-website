@@ -158,9 +158,7 @@ export default function HomeTuitionBiologyPage() {
       <section className="relative bg-gradient-to-br from-purple-900 via-violet-800 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Home className="w-5 h-5 mr-2 text-yellow-300" />
               Better Than Home Tuition
@@ -181,7 +179,11 @@ export default function HomeTuitionBiologyPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20home%20tuition%20for%20biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20home%20tuition%20for%20biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -219,9 +221,7 @@ export default function HomeTuitionBiologyPage() {
       {/* Why Our Online Tuition is Better */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Us Over Local Home Tutors
             </h2>
@@ -248,18 +248,14 @@ export default function HomeTuitionBiologyPage() {
       {/* Comparison Table */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Home Tutor vs Cerebrum Academy
             </h2>
             <p className="text-xl text-gray-600">See the clear advantage</p>
           </div>
 
-          <div
-            className="overflow-x-auto animate-fadeInUp"
-          >
+          <div className="overflow-x-auto animate-fadeInUp">
             <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-purple-600 text-white">
@@ -295,9 +291,7 @@ export default function HomeTuitionBiologyPage() {
       {/* What You Get */}
       <section className="py-20 bg-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Everything Included in Your Home Tuition
             </h2>
@@ -333,9 +327,7 @@ export default function HomeTuitionBiologyPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -361,8 +353,7 @@ export default function HomeTuitionBiologyPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Upgrade Your Home Tuition Experience Today
             </h2>
@@ -371,7 +362,11 @@ export default function HomeTuitionBiologyPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20home%20tuition%20for%20biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20home%20tuition%20for%20biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -382,7 +377,11 @@ export default function HomeTuitionBiologyPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20home%20tuition%20for%20biology.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20home%20tuition%20for%20biology.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"

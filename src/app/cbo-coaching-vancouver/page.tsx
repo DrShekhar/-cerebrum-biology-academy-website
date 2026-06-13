@@ -3,7 +3,8 @@ import CBOCityTemplate from '@/components/cbo/CBOCityTemplate'
 
 const cityName = 'Vancouver & Lower Mainland'
 const citySlug = 'vancouver'
-const region = 'Greater Vancouver + Lower Mainland (Burnaby, Richmond, Surrey, Coquitlam, North Vancouver, West Vancouver)'
+const region =
+  'Greater Vancouver + Lower Mainland (Burnaby, Richmond, Surrey, Coquitlam, North Vancouver, West Vancouver)'
 const timezone = 'PT (Pacific)'
 const url = 'https://cerebrumbiologyacademy.com/cbo-coaching-vancouver'
 
@@ -54,7 +55,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'CBO Coaching for Vancouver Students | AIIMS-Trained Biology Olympiad Tutors',
-    description: 'Canadian Biology Olympiad (CBO + IBO) coaching for Vancouver and Lower Mainland students. Live online classes in PT, AIIMS-trained biology specialist faculty. Schools served include University Hill...',
+    description:
+      'Canadian Biology Olympiad (CBO + IBO) coaching for Vancouver and Lower Mainland students. Live online classes in PT, AIIMS-trained biology specialist faculty. Schools served include University Hill...',
   },
 }
 
@@ -62,7 +64,7 @@ const heroBlurb =
   "Vancouver and the Lower Mainland host one of the strongest Canadian Biology Olympiad concentrations on the West Coast — driven by University Hill SS, Eric Hamber, Sir Winston Churchill, David Thompson, and the strong independent-school cluster (York House, Crofton House, St. George's). The South Asian and East Asian academic communities across Burnaby, Richmond, Surrey, and West Vancouver further densify the CBO talent pool. Our PT-evening live classes are calibrated to fit AP / IB workloads at these schools."
 
 const rigourBlurb =
-  "Vancouver-area Indian-Canadian families come to Cerebrum because the local biology-coaching market is thin on olympiad depth — most options are AP / IB exam tutoring, not olympiad-grade. AIIMS-trained, biology-only faculty teaching with weekly written feedback on every past-paper attempt is structurally different. The same Indian small-batch coaching tradition that produces consistent IBO performance, run on PT evenings to fit cleanly inside University Hill / Eric Hamber / Churchill / Crofton House calendars."
+  'Vancouver-area Indian-Canadian families come to Cerebrum because the local biology-coaching market is thin on olympiad depth — most options are AP / IB exam tutoring, not olympiad-grade. AIIMS-trained, biology-only faculty teaching with weekly written feedback on every past-paper attempt is structurally different. The same Indian small-batch coaching tradition that produces consistent IBO performance, run on PT evenings to fit cleanly inside University Hill / Eric Hamber / Churchill / Crofton House calendars.'
 
 const schools = [
   'University Hill Secondary School',
@@ -76,7 +78,7 @@ const schools = [
   'Burnaby North Secondary',
   'Steveston-London Secondary (Richmond)',
   'Richmond Secondary',
-  "Mulgrave (West Vancouver)",
+  'Mulgrave (West Vancouver)',
 ]
 
 const faqs = [
@@ -103,12 +105,12 @@ const faqs = [
   {
     question: 'How does CBO standing weigh in Canadian university admissions?',
     answer:
-      "Strong CBO standing is a meaningful credential for Life Sciences and Med-track applications to UBC, UofT, McGill, Waterloo, and Western. UBC Sauder (for biotech / med-bio interests), UBC Faculty of Science (Honours Biology / Microbiology / Cell Biology), and the BC-cluster of direct-entry medicine pathways all recognise CBO selection-camp invitees in admissions decisions. CBO Team Canada members carry an elite credential comparable to top USAMO performers.",
+      'Strong CBO standing is a meaningful credential for Life Sciences and Med-track applications to UBC, UofT, McGill, Waterloo, and Western. UBC Sauder (for biotech / med-bio interests), UBC Faculty of Science (Honours Biology / Microbiology / Cell Biology), and the BC-cluster of direct-entry medicine pathways all recognise CBO selection-camp invitees in admissions decisions. CBO Team Canada members carry an elite credential comparable to top USAMO performers.',
   },
   {
     question: 'How is your CBO coaching different from local Vancouver tutoring?',
     answer:
-      "Three differences. (1) Biology only, taught by AIIMS-trained faculty — depth, not breadth. (2) Faculty-led live classes, not a video library — the same instructor for the year, with weekly written feedback on past papers. (3) Indian small-batch coaching tradition: max 12 students per batch, retrieval-heavy methodology. Most Vancouver biology tutoring is AP / IB exam shaped; ours is olympiad-shaped from day one.",
+      'Three differences. (1) Biology only, taught by AIIMS-trained faculty — depth, not breadth. (2) Faculty-led live classes, not a video library — the same instructor for the year, with weekly written feedback on past papers. (3) Indian small-batch coaching tradition: max 12 students per batch, retrieval-heavy methodology. Most Vancouver biology tutoring is AP / IB exam shaped; ours is olympiad-shaped from day one.',
   },
   {
     question: 'My child is already strong in AP Biology / IB HL Biology — is CBO worth pursuing?',
@@ -124,14 +126,24 @@ export default function CBOVancouver() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'CBO Coaching',
         item: 'https://cerebrumbiologyacademy.com/cbo-coaching',
       },
-      { '@type': 'ListItem', position: 3, name: 'CBO Coaching — Vancouver & Lower Mainland', item: url },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'CBO Coaching — Vancouver & Lower Mainland',
+        item: url,
+      },
     ],
   }
 

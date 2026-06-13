@@ -21,7 +21,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching in Hyderabad | Online Biology Classes by Cerebrum Academy',
-    description: 'Best online NEET biology coaching for Hyderabad students. AIIMS-trained faculty, live interactive classes, 98% success rate. Join Cerebrum Academy from Hyderabad!',
+    description:
+      'Best online NEET biology coaching for Hyderabad students. AIIMS-trained faculty, live interactive classes, 98% success rate. Join Cerebrum Academy from Hyderabad!',
   },
 }
 

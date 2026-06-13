@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 10 in Noida | 2-Year Head Start',
-    description: 'NEET Foundation for Class 10 students in Noida. 2-year head start, 40% NEET syllabus overlap with boards. Expert faculty at Sector 62 center.',
+    description:
+      'NEET Foundation for Class 10 students in Noida. 2-year head start, 40% NEET syllabus overlap with boards. Expert faculty at Sector 62 center.',
   },
 }
 

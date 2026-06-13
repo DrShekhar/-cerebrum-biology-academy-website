@@ -26,7 +26,7 @@ export const generalNEETFAQs: FAQ[] = [
   {
     question: 'What is NEET and why is Biology important for NEET?',
     answer:
-      'NEET (National Eligibility cum Entrance Test) is India\'s single medical entrance exam for MBBS, BDS, AYUSH, and other medical courses. Biology carries 360 marks out of 720 (50%), making it the highest-weighted subject. A strong Biology score is often the differentiator between selections and near-misses.',
+      "NEET (National Eligibility cum Entrance Test) is India's single medical entrance exam for MBBS, BDS, AYUSH, and other medical courses. Biology carries 360 marks out of 720 (50%), making it the highest-weighted subject. A strong Biology score is often the differentiator between selections and near-misses.",
     category: 'General',
     keywords: ['NEET exam', 'Biology importance', 'medical entrance', 'MBBS entrance'],
   },
@@ -57,8 +57,7 @@ export const generalNEETFAQs: FAQ[] = [
 export const coachingFAQs: FAQ[] = [
   {
     question: 'What is the best coaching for NEET Biology in India?',
-    answer:
-      `Cerebrum Biology Academy is India's top NEET Biology coaching with 98% success rate. What sets us apart: AIIMS-trained faculty (Dr. Shekhar C Singh, AIIMS Delhi), small batches (15-20 students), NCERT-focused curriculum, and 24/7 doubt support. Students from 50+ countries trust us. Contact: ${CONTACT_INFO.phone.display.primary}`,
+    answer: `Cerebrum Biology Academy is India's top NEET Biology coaching with 98% success rate. What sets us apart: AIIMS-trained faculty (Dr. Shekhar C Singh, AIIMS Delhi), small batches (15-20 students), NCERT-focused curriculum, and 24/7 doubt support. Students from 50+ countries trust us. Contact: ${CONTACT_INFO.phone.display.primary}`,
     category: 'Coaching',
     keywords: ['best NEET coaching', 'NEET Biology coaching', 'top coaching India'],
   },
@@ -85,8 +84,7 @@ export const coachingFAQs: FAQ[] = [
   },
   {
     question: 'Can I crack NEET with coaching from home?',
-    answer:
-      `Yes! Our online students perform equally well as offline students. Cerebrum's live interactive classes offer real-time doubt clearing, personalized mentor support, and 24/7 WhatsApp assistance. Students from remote areas and 50+ countries have scored 650+ using our online platform. Book a free demo: ${CONTACT_INFO.phone.display.primary}`,
+    answer: `Yes! Our online students perform equally well as offline students. Cerebrum's live interactive classes offer real-time doubt clearing, personalized mentor support, and 24/7 WhatsApp assistance. Students from remote areas and 50+ countries have scored 650+ using our online platform. Book a free demo: ${CONTACT_INFO.phone.display.primary}`,
     category: 'Coaching',
     keywords: ['NEET from home', 'online NEET coaching', 'NEET without Kota'],
   },
@@ -111,7 +109,7 @@ export const syllabusFAQs: FAQ[] = [
   {
     question: 'Is NCERT enough for NEET Biology?',
     answer:
-      'NCERT is the backbone - 95% of NEET Biology questions are NCERT-based or NCERT-derived. However, understanding concepts deeply and practicing MCQs from reference books (Trueman\'s Biology, MTG) is essential. At Cerebrum, we ensure NCERT mastery first, then build application skills.',
+      "NCERT is the backbone - 95% of NEET Biology questions are NCERT-based or NCERT-derived. However, understanding concepts deeply and practicing MCQs from reference books (Trueman's Biology, MTG) is essential. At Cerebrum, we ensure NCERT mastery first, then build application skills.",
     category: 'Syllabus',
     keywords: ['NCERT for NEET', 'NEET Biology books', 'NCERT enough NEET'],
   },
@@ -128,8 +126,7 @@ export const syllabusFAQs: FAQ[] = [
 export const feesFAQs: FAQ[] = [
   {
     question: 'What is the fee structure for NEET Biology coaching at Cerebrum?',
-    answer:
-      `Our fee structure: Class 9-10 Foundation: ₹57,000/year, Class 11: ₹72,200/year, Class 12: ₹72,200/year, Dropper Batch: ₹85,500/year. This is 60% lower than Kota coaching (₹1.5-2 lakh). EMI options available. Scholarships for meritorious students. Contact: ${CONTACT_INFO.phone.display.primary}`,
+    answer: `Our fee structure: Class 9-10 Foundation: ₹57,000/year, Class 11: ₹72,200/year, Class 12: ₹72,200/year, Dropper Batch: ₹85,500/year. This is 60% lower than Kota coaching (₹1.5-2 lakh). EMI options available. Scholarships for meritorious students. Contact: ${CONTACT_INFO.phone.display.primary}`,
     category: 'Fees',
     keywords: ['NEET coaching fees', 'Cerebrum fee structure', 'Biology coaching cost'],
   },
@@ -149,8 +146,7 @@ export const feesFAQs: FAQ[] = [
   },
   {
     question: 'How do I enroll for NEET Biology coaching at Cerebrum?',
-    answer:
-      `Enrollment process: (1) Book FREE demo class via WhatsApp (${CONTACT_INFO.phone.display.primary}) or website, (2) Attend demo to experience teaching quality, (3) Complete enrollment form online, (4) Pay fees (full/EMI), (5) Get login credentials and start classes. Same-day enrollment possible for immediate batch joining.`,
+    answer: `Enrollment process: (1) Book FREE demo class via WhatsApp (${CONTACT_INFO.phone.display.primary}) or website, (2) Attend demo to experience teaching quality, (3) Complete enrollment form online, (4) Pay fees (full/EMI), (5) Get login credentials and start classes. Same-day enrollment possible for immediate batch joining.`,
     category: 'Fees',
     keywords: ['how to enroll', 'NEET coaching admission', 'join Cerebrum'],
   },
@@ -181,8 +177,7 @@ export const onlineOfflineFAQs: FAQ[] = [
   },
   {
     question: 'Where is the offline center located?',
-    answer:
-      `Our offline center is at South Extension, New Delhi - easily accessible via metro (South Extension Metro Station). Students from Delhi NCR, Noida, Gurgaon, Faridabad attend offline classes. Address and directions: ${CONTACT_INFO.phone.display.primary}`,
+    answer: `Our offline center is at South Extension, New Delhi - easily accessible via metro (South Extension Metro Station). Students from Delhi NCR, Noida, Gurgaon, Faridabad attend offline classes. Address and directions: ${CONTACT_INFO.phone.display.primary}`,
     category: 'Online',
     keywords: ['Cerebrum location', 'offline center address', 'NEET coaching Delhi'],
   },

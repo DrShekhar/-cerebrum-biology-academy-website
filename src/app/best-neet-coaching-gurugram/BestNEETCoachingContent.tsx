@@ -2,16 +2,33 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
-  Users, Clock, BookOpen, Star, Shield, X, Check,
-  GraduationCap, Building, Trophy,
+import {
+  ChevronRight,
+  ChevronDown,
+  MapPin,
+  Phone,
+  Play,
+  Home,
+  Users,
+  Clock,
+  BookOpen,
+  Star,
+  Shield,
+  X,
+  Check,
+  GraduationCap,
+  Building,
+  Trophy,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { UrgencyBanner } from '@/components/landing-pages/UrgencyBanner'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
-interface FAQ { question: string; answer: string }
+interface FAQ {
+  question: string
+  answer: string
+}
 
 const coachingComparison = [
   {
@@ -24,7 +41,13 @@ const coachingComparison = [
     fees: '₹60,000/year',
     successRate: '98%',
     experience: '15+ years',
-    features: ['AIIMS-trained faculty', 'Small batches', 'Personalized attention', 'Biology specialist', 'Gurugram-based'],
+    features: [
+      'AIIMS-trained faculty',
+      'Small batches',
+      'Personalized attention',
+      'Biology specialist',
+      'Gurugram-based',
+    ],
     cons: ['Biology only (refer partners for PCM)'],
     rating: 5.0,
     reviews: 400,
@@ -40,7 +63,12 @@ const coachingComparison = [
     successRate: '85% (claimed)',
     experience: '30+ years',
     features: ['All subjects covered', 'Brand recognition', 'Pan-India presence'],
-    cons: ['Large batches', 'Less personal attention', 'Higher fees', 'Travel to Delhi often needed'],
+    cons: [
+      'Large batches',
+      'Less personal attention',
+      'Higher fees',
+      'Travel to Delhi often needed',
+    ],
     rating: 4.3,
     reviews: 2500,
   },
@@ -77,12 +105,37 @@ const coachingComparison = [
 ]
 
 const whyChooseCerebrum = [
-  { title: 'AIIMS Faculty', description: 'Dr. Shekhar C Singh is an AIIMS New Delhi alumnus with 15+ years teaching experience', icon: GraduationCap },
-  { title: 'Small Batches', description: 'Only 15-20 students per batch ensures personalized attention and doubt clearing', icon: Users },
-  { title: 'Biology Specialist', description: 'We focus exclusively on Biology - the highest scoring subject in NEET (360/720)', icon: BookOpen },
-  { title: 'Local Convenience', description: 'Gurugram-based center saves 2-3 hours daily commute to Delhi', icon: MapPin },
-  { title: '98% Success Rate', description: 'Verified results with students in top medical colleges across India', icon: Trophy },
-  { title: 'Affordable Fees', description: 'Premium coaching at ₹60,000/year - less than half of big brands', icon: Shield },
+  {
+    title: 'AIIMS Faculty',
+    description:
+      'Dr. Shekhar C Singh is an AIIMS New Delhi alumnus with 15+ years teaching experience',
+    icon: GraduationCap,
+  },
+  {
+    title: 'Small Batches',
+    description: 'Only 15-20 students per batch ensures personalized attention and doubt clearing',
+    icon: Users,
+  },
+  {
+    title: 'Biology Specialist',
+    description: 'We focus exclusively on Biology - the highest scoring subject in NEET (360/720)',
+    icon: BookOpen,
+  },
+  {
+    title: 'Local Convenience',
+    description: 'Gurugram-based center saves 2-3 hours daily commute to Delhi',
+    icon: MapPin,
+  },
+  {
+    title: '98% Success Rate',
+    description: 'Verified results with students in top medical colleges across India',
+    icon: Trophy,
+  },
+  {
+    title: 'Affordable Fees',
+    description: 'Premium coaching at ₹60,000/year - less than half of big brands',
+    icon: Shield,
+  },
 ]
 
 const successStats = [
@@ -97,7 +150,8 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
 
   const handleWhatsApp = () => {
     trackAndOpenWhatsApp({
-      message: 'Hi! I want to compare NEET coaching options in Gurugram. Can you help me understand why Cerebrum is the best choice for Biology preparation?',
+      message:
+        'Hi! I want to compare NEET coaching options in Gurugram. Can you help me understand why Cerebrum is the best choice for Biology preparation?',
       source: 'best-neet-coaching-gurugram',
       page: 'comparison-page',
     })
@@ -109,9 +163,22 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
       <nav className="bg-gray-50 border-b">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <ol className="flex items-center text-sm flex-wrap">
-            <li><Link href="/" className="text-gray-500 hover:text-gray-700 flex items-center"><Home className="w-4 h-4 mr-1" />Home</Link></li>
-            <li className="flex items-center"><ChevronRight className="w-4 h-4 text-gray-400 mx-1" /><Link href="/neet-coaching-gurugram" className="text-gray-500 hover:text-gray-700">NEET Coaching Gurugram</Link></li>
-            <li className="flex items-center"><ChevronRight className="w-4 h-4 text-gray-400 mx-1" /><span className="text-green-700 font-medium">Best NEET Coaching</span></li>
+            <li>
+              <Link href="/" className="text-gray-500 hover:text-gray-700 flex items-center">
+                <Home className="w-4 h-4 mr-1" />
+                Home
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
+              <Link href="/neet-coaching-gurugram" className="text-gray-500 hover:text-gray-700">
+                NEET Coaching Gurugram
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
+              <span className="text-green-700 font-medium">Best NEET Coaching</span>
+            </li>
           </ol>
         </div>
       </nav>
@@ -136,8 +203,9 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Unbiased comparison of top NEET coaching institutes in Gurugram.
-              Fees, faculty credentials, batch sizes, and success rates - everything you need to make the right choice.
+              Unbiased comparison of top NEET coaching institutes in Gurugram. Fees, faculty
+              credentials, batch sizes, and success rates - everything you need to make the right
+              choice.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -156,18 +224,35 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
-                <Button variant="secondary" size="xl" className="bg-yellow-500 text-slate-900 hover:bg-yellow-400 font-bold">
-                  <Play className="w-5 h-5 mr-2" />Book Free Demo at Cerebrum
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="secondary"
+                  size="xl"
+                  className="bg-yellow-500 text-slate-900 hover:bg-yellow-400 font-bold"
+                >
+                  <Play className="w-5 h-5 mr-2" />
+                  Book Free Demo at Cerebrum
                 </Button>
               </Link>
-              <button onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
-                <Phone className="w-5 h-5" />Get Personalized Guidance
+              <button
+                onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
+              >
+                <Phone className="w-5 h-5" />
+                Get Personalized Guidance
               </button>
             </div>
 
-            <UrgencyBanner batchStartDate="Feb 10, 2026" seatsTotal={20} seatsFilled={15} showCountdown={true} />
+            <UrgencyBanner
+              batchStartDate="Feb 10, 2026"
+              seatsTotal={20}
+              seatsFilled={15}
+              showCountdown={true}
+            />
           </div>
         </div>
       </section>
@@ -176,9 +261,12 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Compare Top NEET Coaching Institutes</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Compare Top NEET Coaching Institutes
+            </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Side-by-side comparison of leading coaching centers in Gurugram. Make an informed decision for your NEET journey.
+              Side-by-side comparison of leading coaching centers in Gurugram. Make an informed
+              decision for your NEET journey.
             </p>
           </div>
 
@@ -202,11 +290,18 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
                         <p className="text-sm text-gray-500 mb-2">{institute.location}</p>
                         <div className="flex items-center gap-1 mb-2">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className={`w-4 h-4 ${i < Math.floor(institute.rating) ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} />
+                            <Star
+                              key={i}
+                              className={`w-4 h-4 ${i < Math.floor(institute.rating) ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
+                            />
                           ))}
-                          <span className="text-sm text-gray-600 ml-1">{institute.rating} ({institute.reviews}+)</span>
+                          <span className="text-sm text-gray-600 ml-1">
+                            {institute.rating} ({institute.reviews}+)
+                          </span>
                         </div>
-                        <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${institute.highlight ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'}`}>
+                        <span
+                          className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${institute.highlight ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'}`}
+                        >
                           {institute.specialty}
                         </span>
                       </div>
@@ -269,9 +364,12 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Students Choose Cerebrum</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Students Choose Cerebrum
+            </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Discover why thousands of Gurugram students trust Cerebrum Biology Academy for their NEET Biology preparation
+              Discover why thousands of Gurugram students trust Cerebrum Biology Academy for their
+              NEET Biology preparation
             </p>
           </div>
 
@@ -316,8 +414,12 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-lg text-gray-600">Common questions about choosing NEET coaching in Gurugram</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-gray-600">
+              Common questions about choosing NEET coaching in Gurugram
+            </p>
           </div>
 
           <div className="space-y-4">
@@ -331,7 +433,9 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
                   className="w-full flex items-center justify-between p-6 text-left"
                 >
                   <span className="font-semibold text-gray-900 pr-4">{faq.question}</span>
-                  <ChevronDown className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform ${openFaq === index ? 'rotate-180' : ''}`}
+                  />
                 </button>
                 {openFaq === index && (
                   <div className="px-6 pb-6">
@@ -348,16 +452,30 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Choose the Best?</h2>
-          <p className="text-xl mb-8 opacity-90">Book a free demo class and experience why students call us the best for Biology</p>
+          <p className="text-xl mb-8 opacity-90">
+            Book a free demo class and experience why students call us the best for Biology
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
-              <Button variant="secondary" size="xl" className="bg-white text-green-600 hover:bg-gray-100 font-bold">
-                <Play className="w-5 h-5 mr-2" />Book Free Demo
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="secondary"
+                size="xl"
+                className="bg-white text-green-600 hover:bg-gray-100 font-bold"
+              >
+                <Play className="w-5 h-5 mr-2" />
+                Book Free Demo
               </Button>
             </Link>
-            <button onClick={handleWhatsApp}
-              className="inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
-              <Phone className="w-5 h-5" />WhatsApp Us
+            <button
+              onClick={handleWhatsApp}
+              className="inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
+            >
+              <Phone className="w-5 h-5" />
+              WhatsApp Us
             </button>
           </div>
         </div>
@@ -368,19 +486,31 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Explore More</h2>
           <div className="grid md:grid-cols-4 gap-4">
-            <Link href="/neet-coaching-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow">
+            <Link
+              href="/neet-coaching-gurugram"
+              className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
               <h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3>
               <p className="text-sm text-gray-600">All Gurugram programs</p>
             </Link>
-            <Link href="/cbse-neet-coaching-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow">
+            <Link
+              href="/cbse-neet-coaching-gurugram"
+              className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
               <h3 className="font-semibold text-teal-600">CBSE NEET Coaching</h3>
               <p className="text-sm text-gray-600">Board-aligned program</p>
             </Link>
-            <Link href="/online-neet-classes-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow">
+            <Link
+              href="/online-neet-classes-gurugram"
+              className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
               <h3 className="font-semibold text-teal-600">Online Classes</h3>
               <p className="text-sm text-gray-600">Learn from home</p>
             </Link>
-            <Link href="/neet-study-material-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow">
+            <Link
+              href="/neet-study-material-gurugram"
+              className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
               <h3 className="font-semibold text-teal-600">Study Material</h3>
               <p className="text-sm text-gray-600">Notes, MCQs, tests</p>
             </Link>

@@ -96,7 +96,7 @@ const reasons = [
   {
     title: 'Lost in the Crowd?',
     description:
-      "the largest national NEET chain's 100+ student batches mean less individual attention. At Cerebrum, every student is known by name.",
+      "Allen's 100+ student batches mean less individual attention. At Cerebrum, every student is known by name.",
     icon: Users,
   },
   {
@@ -112,9 +112,9 @@ const reasons = [
     icon: Zap,
   },
   {
-    title: 'No the largest national NEET chain Center in Ghaziabad',
+    title: 'No Allen Center in Ghaziabad',
     description:
-      'the largest national NEET chain has no dedicated Ghaziabad center. Cerebrum at Sector 62 Noida is just 15-20 min via Blue Line Metro.',
+      'Allen has no dedicated Ghaziabad center. Cerebrum at Sector 62 Noida is just 15-20 min via Blue Line Metro.',
     icon: Target,
   },
 ]
@@ -123,23 +123,23 @@ const testimonials = [
   {
     name: 'Ananya R.',
     score: '658/720',
-    previous: 'Ex-the largest national NEET chain Online Student',
+    previous: 'Ex-Allen Online Student',
     quote:
       'Switched to Cerebrum in Class 12. The personal attention made all the difference. Biology score jumped from 280 to 340.',
   },
   {
     name: 'Rohit M.',
     score: '615/720',
-    previous: 'the largest national NEET chain + Cerebrum',
+    previous: 'Allen + Cerebrum',
     quote:
-      'Continued the largest national NEET chain online for Physics/Chemistry but joined Cerebrum for Biology. Best decision - Biology became my strongest subject.',
+      'Continued Allen online for Physics/Chemistry but joined Cerebrum for Biology. Best decision - Biology became my strongest subject.',
   },
   {
     name: 'Priya S.',
     score: '642/720',
-    previous: 'Dropper from the largest national NEET chain',
+    previous: 'Dropper from Allen',
     quote:
-      "After a disappointing first attempt with the largest national NEET chain, Cerebrum's focused approach helped me improve by 120 marks.",
+      "After a disappointing first attempt with Allen, Cerebrum's focused approach helped me improve by 120 marks.",
   },
 ]
 
@@ -150,7 +150,7 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
     trackAndOpenWhatsApp({
       source: 'allen-alternative-ghaziabad',
       message:
-        'Hi! I am currently at the largest national NEET chain/considering the largest national NEET chain and want to know about Cerebrum as an alternative for NEET Biology. I am from Ghaziabad. Please share details.',
+        'Hi! I am currently at Allen/considering Allen and want to know about Cerebrum as an alternative for NEET Biology. I am from Ghaziabad. Please share details.',
       campaign: 'allen-alternative-ghaziabad',
     })
   }
@@ -173,7 +173,7 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <span className="text-teal-700 font-medium">the largest national NEET chain Alternative</span>
+              <span className="text-teal-700 font-medium">Allen Alternative</span>
             </li>
           </ol>
         </div>
@@ -190,18 +190,18 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
           <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-red-500/20 text-red-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="w-4 h-4" />
-              the largest national NEET chain Has No Ghaziabad Center — We Do
+              Allen Has No Ghaziabad Center — We Do
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Looking for an
-              <span className="block text-yellow-400 mt-2">the largest national NEET chain Alternative in Ghaziabad?</span>
+              <span className="block text-yellow-400 mt-2">Allen Alternative in Ghaziabad?</span>
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              XYZ Coaching (largest national NEET chain) has no dedicated center in Ghaziabad. Cerebrum Biology Academy
-              at Sector 62, Noida is just 15-20 min from Ghaziabad via Blue Line Metro. Smaller
-              batches, AIIMS faculty, 98% success rate.
+              Allen has no dedicated center in Ghaziabad. Cerebrum Biology Academy at Sector 62,
+              Noida is just 15-20 min from Ghaziabad via Blue Line Metro. Smaller batches, AIIMS
+              faculty, 98% success rate.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -220,7 +220,11 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -235,7 +239,7 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
               >
                 <Phone className="w-5 h-5" />
-                Compare with the largest national NEET chain Expert
+                Compare with Allen Expert
               </button>
             </div>
           </div>
@@ -247,7 +251,7 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Why Students Switch from the largest national NEET chain
+              Why Students Switch from Allen
             </h2>
             <p className="text-xl text-slate-600">
               Common pain points that bring students to Cerebrum
@@ -276,7 +280,7 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Cerebrum vs the largest national NEET chain: Head-to-Head
+              Cerebrum vs Allen: Head-to-Head
             </h2>
             <p className="text-xl text-slate-600">See why focused coaching beats mass batches</p>
           </div>
@@ -287,7 +291,7 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
                 <tr>
                   <th className="px-6 py-4 text-left">Feature</th>
                   <th className="px-6 py-4 text-center bg-teal-700">Cerebrum</th>
-                  <th className="px-6 py-4 text-center">the largest national NEET chain</th>
+                  <th className="px-6 py-4 text-center">Allen</th>
                 </tr>
               </thead>
               <tbody>
@@ -322,18 +326,18 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Don&apos;t Want to Leave the largest national NEET chain?
+                Don&apos;t Want to Leave Allen?
                 <br />
                 Complement Your Coaching!
               </h2>
               <p className="text-xl text-blue-100 mb-6">
-                Many Ghaziabad students continue with the largest national NEET chain online for Physics &amp; Chemistry while
+                Many Ghaziabad students continue with Allen online for Physics &amp; Chemistry while
                 joining Cerebrum specifically for Biology. Get the best of both worlds.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  Weekend batches that don&apos;t clash with the largest national NEET chain
+                  Weekend batches that don&apos;t clash with Allen
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
@@ -350,7 +354,7 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
               </ul>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
-              <h3 className="text-2xl font-bold mb-6">Success Stories: the largest national NEET chain + Cerebrum</h3>
+              <h3 className="text-2xl font-bold mb-6">Success Stories: Allen + Cerebrum</h3>
               {testimonials.slice(1, 2).map((t) => (
                 <div key={t.name} className="mb-6">
                   <p className="text-blue-100 italic">&ldquo;{t.quote}&rdquo;</p>
@@ -372,12 +376,12 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
         </div>
       </section>
 
-      {/* Testimonials from the largest national NEET chain Switchers */}
+      {/* Testimonials from Allen Switchers */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              From the largest national NEET chain Students Who Switched
+              From Allen Students Who Switched
             </h2>
             <p className="text-xl text-slate-600">Real results from students who made the change</p>
           </div>
@@ -414,8 +418,8 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
                   Conveniently Located at Sector 62, Noida
                 </h2>
                 <p className="text-slate-600 mb-6">
-                  Our center is at <strong>B-45, Sector 62, Noida</strong>. Ghaziabad students
-                  reach us in just 15-20 min via Blue Line Metro (Vaishali/Kaushambi to Sector 62).
+                  Our center is at <strong>B-45, Sector 62, Noida</strong>. Ghaziabad students reach
+                  us in just 15-20 min via Blue Line Metro (Vaishali/Kaushambi to Sector 62).
                   Whether you&apos;re switching or complementing, easily accessible from all parts
                   of Ghaziabad.
                 </p>
@@ -518,8 +522,8 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
               href="/aakash-alternative-ghaziabad"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
-              <h3 className="font-semibold text-teal-600">the 2nd-largest national NEET chain Alternative</h3>
-              <p className="text-sm text-gray-600">Compare with the 2nd-largest national NEET chain</p>
+              <h3 className="font-semibold text-teal-600">Aakash Alternative</h3>
+              <p className="text-sm text-gray-600">Compare with Aakash</p>
             </Link>
             <Link
               href="/best-neet-coaching-ghaziabad"
@@ -553,10 +557,14 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
             Ready to Experience the Difference?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join students from Ghaziabad who switched from the largest national NEET chain for better Biology coaching
+            Join students from Ghaziabad who switched from Allen for better Biology coaching
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 size="xl"

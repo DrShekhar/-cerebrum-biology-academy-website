@@ -61,8 +61,7 @@ export function StudentStudyingIllustration({ className = '', animate = true }: 
       <rect x="302" y="156" width="48" height="12" rx="2" fill="#F97316" />
 
       {/* Floating elements */}
-      <g
-      >
+      <g>
         <circle cx="50" cy="80" r="8" fill="#14B8A6" opacity="0.6" />
         <circle cx="350" cy="150" r="6" fill="#8B5CF6" opacity="0.6" />
         <circle cx="70" cy="200" r="5" fill="#F97316" opacity="0.5" />
@@ -80,7 +79,7 @@ export function StudentStudyingIllustration({ className = '', animate = true }: 
 
 // Teacher with whiteboard - for teaching/faculty pages
 export function TeacherIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, x: -20 },
         animate: { opacity: 1, x: 0 },
@@ -89,12 +88,7 @@ export function TeacherIllustration({ className = '', animate = true }: Illustra
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Background */}
       <rect x="50" y="30" width="300" height="200" rx="12" fill="#F0FDFA" />
 
@@ -168,24 +162,17 @@ export function TeacherIllustration({ className = '', animate = true }: Illustra
       <ellipse cx="200" cy="270" rx="160" ry="15" fill="#E8F4FC" />
 
       {/* Floating elements */}
-      <g
-      >
+      <g>
         <path d="M60 60 L70 50 L80 60 L70 70 Z" fill="#14B8A6" opacity="0.5" />
       </g>
-      <circle
-        cx="350"
-        cy="40"
-        r="8"
-        fill="#F97316"
-        opacity="0.5"
-      />
+      <circle cx="350" cy="40" r="8" fill="#F97316" opacity="0.5" />
     </svg>
   )
 }
 
 // Books stack - for NCERT/reference book pages
 export function BookStackIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -194,18 +181,12 @@ export function BookStackIllustration({ className = '', animate = true }: Illust
     : {}
 
   return (
-    <svg
-      viewBox="0 0 300 250"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 300 250" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Shadow */}
       <ellipse cx="150" cy="230" rx="100" ry="15" fill="#E8F4FC" />
 
       {/* Book 1 - Bottom (NCERT Green) */}
-      <g
-      >
+      <g>
         <rect x="60" y="170" width="180" height="30" rx="4" fill="#14B8A6" />
         <rect x="65" y="175" width="5" height="20" fill="#0D9488" />
         <text x="90" y="190" fontSize="10" fill="#FFFFFF" fontWeight="bold">
@@ -214,8 +195,7 @@ export function BookStackIllustration({ className = '', animate = true }: Illust
       </g>
 
       {/* Book 2 - Blue */}
-      <g
-      >
+      <g>
         <rect x="70" y="140" width="170" height="28" rx="4" fill="#3B82F6" />
         <rect x="75" y="145" width="5" height="18" fill="#2563EB" />
         <text x="95" y="158" fontSize="9" fill="#FFFFFF" fontWeight="bold">
@@ -224,8 +204,7 @@ export function BookStackIllustration({ className = '', animate = true }: Illust
       </g>
 
       {/* Book 3 - Purple */}
-      <g
-      >
+      <g>
         <rect x="65" y="112" width="175" height="26" rx="4" fill="#8B5CF6" />
         <rect x="70" y="117" width="5" height="16" fill="#7C3AED" />
         <text x="90" y="129" fontSize="9" fill="#FFFFFF" fontWeight="bold">
@@ -234,8 +213,7 @@ export function BookStackIllustration({ className = '', animate = true }: Illust
       </g>
 
       {/* Book 4 - Orange (Fingertips) */}
-      <g
-      >
+      <g>
         <rect x="75" y="86" width="165" height="24" rx="4" fill="#F97316" />
         <rect x="80" y="90" width="5" height="16" fill="#EA580C" />
         <text x="100" y="102" fontSize="8" fill="#FFFFFF" fontWeight="bold">
@@ -244,8 +222,7 @@ export function BookStackIllustration({ className = '', animate = true }: Illust
       </g>
 
       {/* Book 5 - Top (Red) */}
-      <g
-      >
+      <g>
         <rect x="80" y="62" width="155" height="22" rx="4" fill="#EF4444" />
         <rect x="85" y="66" width="5" height="14" fill="#DC2626" />
         <text x="105" y="77" fontSize="8" fill="#FFFFFF" fontWeight="bold">
@@ -254,18 +231,8 @@ export function BookStackIllustration({ className = '', animate = true }: Illust
       </g>
 
       {/* Decorative elements */}
-      <circle
-        cx="250"
-        cy="100"
-        r="20"
-        fill="#F0FDFA"
-      />
-      <circle
-        cx="50"
-        cy="130"
-        r="15"
-        fill="#EDE9FE"
-      />
+      <circle cx="250" cy="100" r="20" fill="#F0FDFA" />
+      <circle cx="50" cy="130" r="15" fill="#EDE9FE" />
 
       {/* Bookmark */}
       <path d="M200 62 L200 40 L210 50 L220 40 L220 62" fill="#FCD34D" />
@@ -280,7 +247,7 @@ export function BookStackIllustration({ className = '', animate = true }: Illust
 
 // Location/Map illustration - for "near me" pages
 export function LocationIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, y: 20 },
         animate: { opacity: 1, y: 0 },
@@ -289,12 +256,7 @@ export function LocationIllustration({ className = '', animate = true }: Illustr
     : {}
 
   return (
-    <svg
-      viewBox="0 0 350 280"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 350 280" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Map background */}
       <rect x="30" y="40" width="290" height="180" rx="20" fill="#E8F4FC" />
 
@@ -359,8 +321,7 @@ export function LocationIllustration({ className = '', animate = true }: Illustr
       </text>
 
       {/* Location pins */}
-      <g
-      >
+      <g>
         <path
           d="M90 55 C90 40 75 35 75 50 C75 60 90 70 90 70 C90 70 105 60 105 50 C105 35 90 40 90 55"
           fill="#14B8A6"
@@ -368,8 +329,7 @@ export function LocationIllustration({ className = '', animate = true }: Illustr
         <circle cx="90" cy="50" r="5" fill="#FFFFFF" />
       </g>
 
-      <g
-      >
+      <g>
         <path
           d="M260 55 C260 40 245 35 245 50 C245 60 260 70 260 70 C260 70 275 60 275 50 C275 35 260 40 260 55"
           fill="#8B5CF6"
@@ -377,8 +337,7 @@ export function LocationIllustration({ className = '', animate = true }: Illustr
         <circle cx="260" cy="50" r="5" fill="#FFFFFF" />
       </g>
 
-      <g
-      >
+      <g>
         <path
           d="M90 140 C90 125 75 120 75 135 C75 145 90 155 90 155 C90 155 105 145 105 135 C105 120 90 125 90 140"
           fill="#F97316"
@@ -386,8 +345,7 @@ export function LocationIllustration({ className = '', animate = true }: Illustr
         <circle cx="90" cy="135" r="5" fill="#FFFFFF" />
       </g>
 
-      <g
-      >
+      <g>
         <path
           d="M260 140 C260 125 245 120 245 135 C245 145 260 155 260 155 C260 155 275 145 275 135 C275 120 260 125 260 140"
           fill="#3B82F6"
@@ -396,8 +354,7 @@ export function LocationIllustration({ className = '', animate = true }: Illustr
       </g>
 
       {/* Central marker - main location */}
-      <g
-      >
+      <g>
         <circle cx="175" cy="130" r="25" fill="#EF4444" opacity="0.2" />
         <circle cx="175" cy="130" r="15" fill="#EF4444" opacity="0.4" />
         <circle cx="175" cy="130" r="8" fill="#EF4444" />
@@ -443,7 +400,7 @@ export function LocationIllustration({ className = '', animate = true }: Illustr
 
 // Online class illustration - split screen teacher/student
 export function OnlineClassIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0 },
         animate: { opacity: 1 },
@@ -452,12 +409,7 @@ export function OnlineClassIllustration({ className = '', animate = true }: Illu
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 280"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Left side - Lavender background */}
       <rect x="0" y="0" width="200" height="280" fill="#EDE9FE" />
 
@@ -476,8 +428,7 @@ export function OnlineClassIllustration({ className = '', animate = true }: Illu
       <path d="M96 136 Q100 140 104 136" stroke="#1E293B" strokeWidth="1.5" fill="none" />
 
       {/* Speech bubble from teacher */}
-      <g
-      >
+      <g>
         <rect x="130" y="80" width="50" height="30" rx="8" fill="#FFFFFF" />
         <polygon points="135,110 145,110 140,120" fill="#FFFFFF" />
         <text x="140" y="92" fontSize="6" fill="#6366F1" textAnchor="middle">
@@ -509,8 +460,7 @@ export function OnlineClassIllustration({ className = '', animate = true }: Illu
       <rect x="334" y="185" width="32" height="45" rx="3" fill="#3B82F6" />
 
       {/* Speech bubble from student */}
-      <g
-      >
+      <g>
         <ellipse cx="250" cy="100" rx="30" ry="20" fill="#FFFFFF" />
         <polygon points="265,118 275,118 270,128" fill="#FFFFFF" />
         <text x="250" y="98" fontSize="6" fill="#14B8A6" textAnchor="middle">

@@ -97,127 +97,125 @@ export function LiveChatWidget({
       </button>
 
       {/* Chat Modal */}
-{isOpen && (
-          <div
-            className="fixed bottom-20 sm:bottom-24 right-4 sm:right-6 w-[calc(100%-2rem)] max-w-[calc(100vw-2rem)] sm:w-96 sm:max-w-96 bg-white rounded-2xl shadow-2xl z-50 overflow-hidden animate-fadeInUp"
-            style={{ maxHeight: 'calc(100vh - 200px)' }}
-          >
-            {/* Header */}
-            <div className="bg-indigo-500 text-white p-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                    <MessageCircle className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold">Quick Help</h3>
-                    <p className="text-xs text-blue-100">Get instant answers</p>
-                  </div>
+      {isOpen && (
+        <div
+          className="fixed bottom-20 sm:bottom-24 right-4 sm:right-6 w-[calc(100%-2rem)] max-w-[calc(100vw-2rem)] sm:w-96 sm:max-w-96 bg-white rounded-2xl shadow-2xl z-50 overflow-hidden animate-fadeInUp"
+          style={{ maxHeight: 'calc(100vh - 200px)' }}
+        >
+          {/* Header */}
+          <div className="bg-indigo-500 text-white p-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                  <MessageCircle className="w-5 h-5" />
                 </div>
-                <button
-                  onClick={() => {
-                    setIsOpen(false)
-                    setSelectedFAQ(null)
-                  }}
-                  className="text-white/80 hover:text-white"
-                >
-                  <X className="w-5 h-5" />
-                </button>
+                <div>
+                  <h3 className="font-bold">Quick Help</h3>
+                  <p className="text-xs text-blue-100">Get instant answers</p>
+                </div>
               </div>
-            </div>
-
-            {/* Content */}
-            <div className="p-4 max-h-[400px] overflow-y-auto">
-              {selectedFAQ ? (
-                <div className="animate-fadeInUp">
-                  <button
-                    onClick={() => setSelectedFAQ(null)}
-                    className="text-blue-600 text-sm mb-3 flex items-center gap-1 hover:underline"
-                  >
-                    <ChevronRight className="w-4 h-4 rotate-180" />
-                    Back to questions
-                  </button>
-
-                  <div className="bg-blue-50 rounded-xl p-4 mb-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        {selectedFAQ.icon}
-                      </div>
-                      <div>
-                        <p className="font-medium text-gray-900 text-sm mb-2">
-                          {selectedFAQ.question}
-                        </p>
-                        <p className="text-gray-700 text-sm leading-relaxed">
-                          {selectedFAQ.answer}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <p className="text-xs text-gray-500 mb-3">Need more details?</p>
-                  <button
-                    onClick={() =>
-                      handleWhatsAppRedirect(`Hi, I have a question about: ${selectedFAQ.question}`)
-                    }
-                    className="w-full bg-green-600 hover:bg-green-600 text-white py-3 rounded-xl font-medium flex items-center justify-center gap-2 transition-colors"
-                  >
-                    <MessageCircle className="w-5 h-5" />
-                    Chat on WhatsApp
-                  </button>
-                </div>
-              ) : (
-                <>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Select a question or chat with us on WhatsApp
-                  </p>
-
-                  <div className="space-y-2 mb-4">
-                    {faqs.map((faq) => (
-                      <button
-                        key={faq.id}
-                        onClick={() => {
-                          setSelectedFAQ(faq)
-                          trackChatWidget.faqClicked(faq.id)
-                        }}
-                        className="w-full text-left p-3 bg-gray-50 hover:bg-blue-50 rounded-xl transition-colors flex items-center gap-3 group"
-                      >
-                        <div className="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-blue-200 transition-colors">
-                          {faq.icon}
-                        </div>
-                        <span className="text-sm text-gray-700 flex-1">{faq.question}</span>
-                        <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors" />
-                      </button>
-                    ))}
-                  </div>
-
-                  <div className="border-t pt-4">
-                    <p className="text-xs text-gray-500 mb-3">Can't find your answer?</p>
-                    <div className="grid grid-cols-1 xs:grid-cols-2 gap-2">
-                      <button
-                        onClick={() => {
-                          handleWhatsAppRedirect()
-                          trackWhatsAppClick('chat_widget')
-                        }}
-                        className="bg-green-600 hover:bg-green-600 text-white py-2.5 rounded-xl text-sm font-medium flex items-center justify-center gap-2 transition-colors"
-                      >
-                        <MessageCircle className="w-4 h-4" />
-                        WhatsApp
-                      </button>
-                      <a
-                        href={`tel:${whatsappNumber}`}
-                        onClick={() => trackPhoneClick('chat_widget')}
-                        className="bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-xl text-sm font-medium flex items-center justify-center gap-2 transition-colors"
-                      >
-                        <Phone className="w-4 h-4" />
-                        Call Now
-                      </a>
-                    </div>
-                  </div>
-                </>
-              )}
+              <button
+                onClick={() => {
+                  setIsOpen(false)
+                  setSelectedFAQ(null)
+                }}
+                className="text-white/80 hover:text-white"
+              >
+                <X className="w-5 h-5" />
+              </button>
             </div>
           </div>
-        )}
-</>
+
+          {/* Content */}
+          <div className="p-4 max-h-[400px] overflow-y-auto">
+            {selectedFAQ ? (
+              <div className="animate-fadeInUp">
+                <button
+                  onClick={() => setSelectedFAQ(null)}
+                  className="text-blue-600 text-sm mb-3 flex items-center gap-1 hover:underline"
+                >
+                  <ChevronRight className="w-4 h-4 rotate-180" />
+                  Back to questions
+                </button>
+
+                <div className="bg-blue-50 rounded-xl p-4 mb-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      {selectedFAQ.icon}
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-900 text-sm mb-2">
+                        {selectedFAQ.question}
+                      </p>
+                      <p className="text-gray-700 text-sm leading-relaxed">{selectedFAQ.answer}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-xs text-gray-500 mb-3">Need more details?</p>
+                <button
+                  onClick={() =>
+                    handleWhatsAppRedirect(`Hi, I have a question about: ${selectedFAQ.question}`)
+                  }
+                  className="w-full bg-green-600 hover:bg-green-600 text-white py-3 rounded-xl font-medium flex items-center justify-center gap-2 transition-colors"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Chat on WhatsApp
+                </button>
+              </div>
+            ) : (
+              <>
+                <p className="text-sm text-gray-600 mb-4">
+                  Select a question or chat with us on WhatsApp
+                </p>
+
+                <div className="space-y-2 mb-4">
+                  {faqs.map((faq) => (
+                    <button
+                      key={faq.id}
+                      onClick={() => {
+                        setSelectedFAQ(faq)
+                        trackChatWidget.faqClicked(faq.id)
+                      }}
+                      className="w-full text-left p-3 bg-gray-50 hover:bg-blue-50 rounded-xl transition-colors flex items-center gap-3 group"
+                    >
+                      <div className="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-blue-200 transition-colors">
+                        {faq.icon}
+                      </div>
+                      <span className="text-sm text-gray-700 flex-1">{faq.question}</span>
+                      <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors" />
+                    </button>
+                  ))}
+                </div>
+
+                <div className="border-t pt-4">
+                  <p className="text-xs text-gray-500 mb-3">Can't find your answer?</p>
+                  <div className="grid grid-cols-1 xs:grid-cols-2 gap-2">
+                    <button
+                      onClick={() => {
+                        handleWhatsAppRedirect()
+                        trackWhatsAppClick('chat_widget')
+                      }}
+                      className="bg-green-600 hover:bg-green-600 text-white py-2.5 rounded-xl text-sm font-medium flex items-center justify-center gap-2 transition-colors"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      WhatsApp
+                    </button>
+                    <a
+                      href={`tel:${whatsappNumber}`}
+                      onClick={() => trackPhoneClick('chat_widget')}
+                      className="bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-xl text-sm font-medium flex items-center justify-center gap-2 transition-colors"
+                    >
+                      <Phone className="w-4 h-4" />
+                      Call Now
+                    </a>
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+    </>
   )
 }

@@ -55,9 +55,7 @@ export function AchievementsDisplay({
       {/* Progress Bar */}
       <div className="mb-6">
         <div className="w-full bg-gray-200 rounded-full h-3">
-          <div
-            className="bg-gradient-to-r from-yellow-400 to-yellow-600 h-3 rounded-full animate-fadeInUp"
-          />
+          <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 h-3 rounded-full animate-fadeInUp" />
         </div>
       </div>
 

@@ -62,7 +62,8 @@ const whyDelhiNCR = [
   {
     icon: Building,
     title: 'Former a leading national educational institution Head',
-    description: 'Academic Head experience at a leading national educational institution, bringing proven methodologies.',
+    description:
+      'Academic Head experience at a leading national educational institution, bringing proven methodologies.',
   },
   {
     icon: Trophy,
@@ -159,7 +160,8 @@ export default function BestNEETBiologyTutorDelhiNCRPage() {
             founder: {
               '@type': 'Person',
               name: 'Dr. Shekhar C Singh',
-              description: 'AIIMS Alumnus, Former Academic Head at a leading national educational institution',
+              description:
+                'AIIMS Alumnus, Former Academic Head at a leading national educational institution',
             },
           }),
         }}
@@ -190,8 +192,11 @@ export default function BestNEETBiologyTutorDelhiNCRPage() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Get top NEET Biology coaching from{' '}
-              <strong>Dr. Shekhar C Singh, AIIMS Alumnus and former Academic Head at a leading national educational institution</strong>.
-              The best NEET Biology tutor accessible to all of Delhi NCR.
+              <strong>
+                Dr. Shekhar C Singh, AIIMS Alumnus and former Academic Head at a leading national
+                educational institution
+              </strong>
+              . The best NEET Biology tutor accessible to all of Delhi NCR.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

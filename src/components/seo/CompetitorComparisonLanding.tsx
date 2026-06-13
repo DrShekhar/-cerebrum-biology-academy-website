@@ -406,7 +406,8 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
             No obligation, no commitment — experience biology-only specialisation for yourself.
           </p>
           <p className="text-sm text-slate-400 mb-8">
-            680+ medical college admissions · 98% NEET qualification rate · 485+ five-star reviews
+            680+ medical college selections · 98% NEET-UG qualification rate · 5.0/5 from 38
+            verified Google reviews
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

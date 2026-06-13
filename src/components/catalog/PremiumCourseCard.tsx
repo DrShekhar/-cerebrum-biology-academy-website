@@ -115,9 +115,7 @@ export function PremiumCourseCard({ course, onSelect, className = '' }: PremiumC
   const savingsPercentage = Math.round((savings / course.originalPrice) * 100)
 
   return (
-    <div
-      className={`relative group cursor-pointer ${className}`}
-    >
+    <div className={`relative group cursor-pointer ${className}`}>
       {/* Main Card */}
       <div
         className="relative overflow-hidden rounded-3xl shadow-2xl transition-all duration-500"
@@ -275,30 +273,21 @@ export function PremiumCourseCard({ course, onSelect, className = '' }: PremiumC
                 <ChevronDown className={`h-4 w-4 ${design.accentColor}`} />
               )}
             </button>
-{isExpanded && (
-                <div
-                  className="overflow-hidden animate-fadeInUp"
-                >
-                  <div
-                    className={`${design.glassColor} rounded-xl p-4 mt-2 border border-white/20`}
-                  >
-                    <div className="grid gap-2">
-                      {course.features.map((feature, index) => (
-                        <div
-                          key={index}
-                          className="flex items-start gap-2 animate-fadeInUp"
-                        >
-                          <Check className={`h-3 w-3 ${design.accentColor} mt-1 flex-shrink-0`} />
-                          <span className={`${design.textColor} text-sm opacity-90`}>
-                            {feature}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
+            {isExpanded && (
+              <div className="overflow-hidden animate-fadeInUp">
+                <div className={`${design.glassColor} rounded-xl p-4 mt-2 border border-white/20`}>
+                  <div className="grid gap-2">
+                    {course.features.map((feature, index) => (
+                      <div key={index} className="flex items-start gap-2 animate-fadeInUp">
+                        <Check className={`h-3 w-3 ${design.accentColor} mt-1 flex-shrink-0`} />
+                        <span className={`${design.textColor} text-sm opacity-90`}>{feature}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              )}
-</div>
+              </div>
+            )}
+          </div>
 
           {/* Silicon Valley CTA */}
           <button

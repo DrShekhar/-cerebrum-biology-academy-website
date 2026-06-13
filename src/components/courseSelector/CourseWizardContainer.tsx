@@ -408,19 +408,17 @@ const CourseWizardContainer: React.FC = () => {
                 <span className="ml-3 text-gray-600">Processing your preferences...</span>
               </div>
             ) : (
-<div
-                  key={currentStepData.id}
-                 className="animate-fadeInUp">
-                  <StepComponent
-                    data={selectionData}
-                    onUpdate={(data) => handleDataUpdate(currentStepData.id, data)}
-                    onNext={handleNext}
-                    onPrev={handlePrev}
-                    isValid={isStepValid(currentStep)}
-                    variant={(variant as 'default' | 'compact' | 'detailed') || 'default'}
-                  />
-                </div>
-)}
+              <div key={currentStepData.id} className="animate-fadeInUp">
+                <StepComponent
+                  data={selectionData}
+                  onUpdate={(data) => handleDataUpdate(currentStepData.id, data)}
+                  onNext={handleNext}
+                  onPrev={handlePrev}
+                  isValid={isStepValid(currentStep)}
+                  variant={(variant as 'default' | 'compact' | 'detailed') || 'default'}
+                />
+              </div>
+            )}
           </div>
 
           {/* Navigation Footer */}

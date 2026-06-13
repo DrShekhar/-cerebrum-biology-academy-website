@@ -79,7 +79,14 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 3,
     questionsPerYear: '2-3',
     difficulty: 'Moderate',
-    keyTopics: ['Algae', 'Bryophytes', 'Pteridophytes', 'Gymnosperms', 'Angiosperms', 'Alternation of generations'],
+    keyTopics: [
+      'Algae',
+      'Bryophytes',
+      'Pteridophytes',
+      'Gymnosperms',
+      'Angiosperms',
+      'Alternation of generations',
+    ],
     icon: <TreePine className="w-5 h-5" />,
     available: true,
   },
@@ -91,7 +98,12 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 5,
     questionsPerYear: '3-4',
     difficulty: 'Hard',
-    keyTopics: ['Phylum classification', 'Chordates vs Non-chordates', 'Basis of classification', 'Examples'],
+    keyTopics: [
+      'Phylum classification',
+      'Chordates vs Non-chordates',
+      'Basis of classification',
+      'Examples',
+    ],
     icon: <Bug className="w-5 h-5" />,
     available: true,
   },
@@ -103,7 +115,13 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 3,
     questionsPerYear: '2-3',
     difficulty: 'Moderate',
-    keyTopics: ['Root system', 'Stem modifications', 'Leaf venation', 'Flower parts', 'Fruit types'],
+    keyTopics: [
+      'Root system',
+      'Stem modifications',
+      'Leaf venation',
+      'Flower parts',
+      'Fruit types',
+    ],
     icon: <Leaf className="w-5 h-5" />,
     available: true,
   },
@@ -115,7 +133,12 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 2,
     questionsPerYear: '1-2',
     difficulty: 'Moderate',
-    keyTopics: ['Tissue systems', 'Dicot vs Monocot anatomy', 'Secondary growth', 'Vascular bundles'],
+    keyTopics: [
+      'Tissue systems',
+      'Dicot vs Monocot anatomy',
+      'Secondary growth',
+      'Vascular bundles',
+    ],
     icon: <Microscope className="w-5 h-5" />,
     available: true,
   },
@@ -127,7 +150,13 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 2,
     questionsPerYear: '1-2',
     difficulty: 'Easy',
-    keyTopics: ['Epithelial tissue', 'Connective tissue', 'Muscle tissue', 'Neural tissue', 'Cockroach morphology'],
+    keyTopics: [
+      'Epithelial tissue',
+      'Connective tissue',
+      'Muscle tissue',
+      'Neural tissue',
+      'Cockroach morphology',
+    ],
     icon: <Bug className="w-5 h-5" />,
     available: true,
   },
@@ -139,7 +168,12 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 4,
     questionsPerYear: '2-3',
     difficulty: 'Moderate',
-    keyTopics: ['Cell theory', 'Prokaryotic vs Eukaryotic', 'Cell organelles', 'Endomembrane system'],
+    keyTopics: [
+      'Cell theory',
+      'Prokaryotic vs Eukaryotic',
+      'Cell organelles',
+      'Endomembrane system',
+    ],
     icon: <Microscope className="w-5 h-5" />,
     available: true,
   },
@@ -151,7 +185,14 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 4,
     questionsPerYear: '2-3',
     difficulty: 'Hard',
-    keyTopics: ['Proteins', 'Enzymes', 'Carbohydrates', 'Lipids', 'Nucleic acids', 'Enzyme classification'],
+    keyTopics: [
+      'Proteins',
+      'Enzymes',
+      'Carbohydrates',
+      'Lipids',
+      'Nucleic acids',
+      'Enzyme classification',
+    ],
     icon: <FlaskConical className="w-5 h-5" />,
     available: true,
   },
@@ -175,7 +216,13 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 3,
     questionsPerYear: '2-3',
     difficulty: 'Hard',
-    keyTopics: ['Light reactions', 'Calvin cycle', 'C3 vs C4 plants', 'Photorespiration', 'Factors affecting'],
+    keyTopics: [
+      'Light reactions',
+      'Calvin cycle',
+      'C3 vs C4 plants',
+      'Photorespiration',
+      'Factors affecting',
+    ],
     icon: <Leaf className="w-5 h-5" />,
     available: false,
   },
@@ -223,7 +270,15 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 30,
     questionsPerYear: '15-18',
     difficulty: 'Hard',
-    keyTopics: ['Digestion', 'Respiration', 'Circulation', 'Excretion', 'Locomotion', 'Nervous System', 'Endocrine System'],
+    keyTopics: [
+      'Digestion',
+      'Respiration',
+      'Circulation',
+      'Excretion',
+      'Locomotion',
+      'Nervous System',
+      'Endocrine System',
+    ],
     icon: <Heart className="w-5 h-5" />,
     available: true,
   },
@@ -247,7 +302,12 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 3,
     questionsPerYear: '2-3',
     difficulty: 'Moderate',
-    keyTopics: ['Respiratory organs', 'Mechanism of breathing', 'Gas transport', 'Respiratory volumes'],
+    keyTopics: [
+      'Respiratory organs',
+      'Mechanism of breathing',
+      'Gas transport',
+      'Respiratory volumes',
+    ],
     icon: <Heart className="w-5 h-5" />,
     available: false,
   },
@@ -283,7 +343,13 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 3,
     questionsPerYear: '2-3',
     difficulty: 'Moderate',
-    keyTopics: ['Types of movement', 'Skeletal system', 'Joints', 'Muscle contraction', 'Disorders'],
+    keyTopics: [
+      'Types of movement',
+      'Skeletal system',
+      'Joints',
+      'Muscle contraction',
+      'Disorders',
+    ],
     icon: <Heart className="w-5 h-5" />,
     available: false,
   },
@@ -321,7 +387,14 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 15,
     questionsPerYear: '8-10',
     difficulty: 'Hard',
-    keyTopics: ['Asexual & sexual reproduction', 'Flowering plant reproduction', 'Male & female reproductive systems', 'Menstrual cycle', 'Fertilisation & embryo development', 'Reproductive health & ART'],
+    keyTopics: [
+      'Asexual & sexual reproduction',
+      'Flowering plant reproduction',
+      'Male & female reproductive systems',
+      'Menstrual cycle',
+      'Fertilisation & embryo development',
+      'Reproductive health & ART',
+    ],
     icon: <Baby className="w-5 h-5" />,
     available: true,
   },
@@ -345,7 +418,13 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 5,
     questionsPerYear: '3-4',
     difficulty: 'Hard',
-    keyTopics: ['Microsporogenesis', 'Megasporogenesis', 'Pollination', 'Double fertilisation', 'Endosperm'],
+    keyTopics: [
+      'Microsporogenesis',
+      'Megasporogenesis',
+      'Pollination',
+      'Double fertilisation',
+      'Endosperm',
+    ],
     icon: <Leaf className="w-5 h-5" />,
     available: false,
   },
@@ -357,7 +436,13 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 5,
     questionsPerYear: '3-4',
     difficulty: 'Hard',
-    keyTopics: ['Male reproductive system', 'Female reproductive system', 'Gametogenesis', 'Menstrual cycle', 'Embryo development'],
+    keyTopics: [
+      'Male reproductive system',
+      'Female reproductive system',
+      'Gametogenesis',
+      'Menstrual cycle',
+      'Embryo development',
+    ],
     icon: <Baby className="w-5 h-5" />,
     available: false,
   },
@@ -381,7 +466,14 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 8,
     questionsPerYear: '5-6',
     difficulty: 'Hard',
-    keyTopics: ['Mendel laws', 'Incomplete dominance', 'Co-dominance', 'Linkage', 'Pedigree analysis', 'Chromosomal disorders'],
+    keyTopics: [
+      'Mendel laws',
+      'Incomplete dominance',
+      'Co-dominance',
+      'Linkage',
+      'Pedigree analysis',
+      'Chromosomal disorders',
+    ],
     icon: <Dna className="w-5 h-5" />,
     available: true,
   },
@@ -393,7 +485,14 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 8,
     questionsPerYear: '5-6',
     difficulty: 'Hard',
-    keyTopics: ['DNA structure', 'Replication', 'Transcription', 'Translation', 'Lac operon', 'Human Genome Project'],
+    keyTopics: [
+      'DNA structure',
+      'Replication',
+      'Transcription',
+      'Translation',
+      'Lac operon',
+      'Human Genome Project',
+    ],
     icon: <Dna className="w-5 h-5" />,
     available: true,
   },
@@ -405,7 +504,13 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 4,
     questionsPerYear: '2-3',
     difficulty: 'Moderate',
-    keyTopics: ['Origin of life', 'Evidences of evolution', 'Hardy-Weinberg', 'Adaptive radiation', 'Human evolution'],
+    keyTopics: [
+      'Origin of life',
+      'Evidences of evolution',
+      'Hardy-Weinberg',
+      'Adaptive radiation',
+      'Human evolution',
+    ],
     icon: <TrendingUp className="w-5 h-5" />,
     available: true,
   },
@@ -441,7 +546,13 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 3,
     questionsPerYear: '2-3',
     difficulty: 'Easy',
-    keyTopics: ['Household products', 'Industrial products', 'Sewage treatment', 'Biogas', 'Biocontrol agents'],
+    keyTopics: [
+      'Household products',
+      'Industrial products',
+      'Sewage treatment',
+      'Biogas',
+      'Biocontrol agents',
+    ],
     icon: <Microscope className="w-5 h-5" />,
     available: false,
   },
@@ -453,7 +564,13 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 7,
     questionsPerYear: '4-6',
     difficulty: 'Hard',
-    keyTopics: ['Restriction enzymes & vectors', 'rDNA technology & PCR', 'Bt crops & RNAi', 'Gene therapy & diagnostics', 'Bioethics & biopiracy'],
+    keyTopics: [
+      'Restriction enzymes & vectors',
+      'rDNA technology & PCR',
+      'Bt crops & RNAi',
+      'Gene therapy & diagnostics',
+      'Bioethics & biopiracy',
+    ],
     icon: <FlaskConical className="w-5 h-5" />,
     available: true,
   },
@@ -465,7 +582,13 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 4,
     questionsPerYear: '2-3',
     difficulty: 'Hard',
-    keyTopics: ['Restriction enzymes', 'Cloning vectors', 'rDNA technology', 'PCR', 'Gel electrophoresis'],
+    keyTopics: [
+      'Restriction enzymes',
+      'Cloning vectors',
+      'rDNA technology',
+      'PCR',
+      'Gel electrophoresis',
+    ],
     icon: <FlaskConical className="w-5 h-5" />,
     available: false,
   },
@@ -489,7 +612,14 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 18,
     questionsPerYear: '10-12',
     difficulty: 'Moderate',
-    keyTopics: ['Population interactions', 'Ecosystem & energy flow', 'Ecological pyramids', 'Nutrient cycling', 'Biodiversity & conservation', 'Species-Area relationship'],
+    keyTopics: [
+      'Population interactions',
+      'Ecosystem & energy flow',
+      'Ecological pyramids',
+      'Nutrient cycling',
+      'Biodiversity & conservation',
+      'Species-Area relationship',
+    ],
     icon: <TreePine className="w-5 h-5" />,
     available: true,
   },
@@ -513,7 +643,13 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 3,
     questionsPerYear: '2-3',
     difficulty: 'Moderate',
-    keyTopics: ['Energy flow', 'Food chains', 'Ecological pyramids', 'Nutrient cycling', 'Ecological succession'],
+    keyTopics: [
+      'Energy flow',
+      'Food chains',
+      'Ecological pyramids',
+      'Nutrient cycling',
+      'Ecological succession',
+    ],
     icon: <TreePine className="w-5 h-5" />,
     available: false,
   },
@@ -525,7 +661,12 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 3,
     questionsPerYear: '2-3',
     difficulty: 'Easy',
-    keyTopics: ['Types of biodiversity', 'Biodiversity patterns', 'Loss of biodiversity', 'Conservation strategies'],
+    keyTopics: [
+      'Types of biodiversity',
+      'Biodiversity patterns',
+      'Loss of biodiversity',
+      'Conservation strategies',
+    ],
     icon: <TreePine className="w-5 h-5" />,
     available: false,
   },
@@ -537,7 +678,13 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     weightage: 3,
     questionsPerYear: '2-3',
     difficulty: 'Easy',
-    keyTopics: ['Air pollution', 'Water pollution', 'Ozone depletion', 'Deforestation', 'Solid waste management'],
+    keyTopics: [
+      'Air pollution',
+      'Water pollution',
+      'Ozone depletion',
+      'Deforestation',
+      'Solid waste management',
+    ],
     icon: <TreePine className="w-5 h-5" />,
     available: false,
   },
@@ -567,9 +714,7 @@ function DifficultyBadge({ level }: { level: Chapter['difficulty'] }) {
     Hard: 'bg-red-100 text-red-700',
   }
   return (
-    <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${colors[level]}`}>
-      {level}
-    </span>
+    <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${colors[level]}`}>{level}</span>
   )
 }
 
@@ -594,9 +739,7 @@ function WeightageBar({ value, max = 8 }: { value: number; max?: number }) {
 
 function ChapterCard({ chapter, index }: { chapter: Chapter; index: number }) {
   return (
-    <div
-      className="group bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-blue-300 transition-all duration-300 animate-fadeInUp"
-    >
+    <div className="group bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-blue-300 transition-all duration-300 animate-fadeInUp">
       <div className="flex items-start justify-between mb-3">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-100 transition-colors">
@@ -614,7 +757,10 @@ function ChapterCard({ chapter, index }: { chapter: Chapter; index: number }) {
 
       <div className="mt-3 flex flex-wrap gap-1.5">
         {chapter.keyTopics.slice(0, 3).map((topic) => (
-          <span key={topic} className="text-[11px] bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">
+          <span
+            key={topic}
+            className="text-[11px] bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full"
+          >
             {topic}
           </span>
         ))}
@@ -643,7 +789,15 @@ function ChapterCard({ chapter, index }: { chapter: Chapter; index: number }) {
 
 /* ─────────────── Unit Section ─────────────── */
 
-function UnitSection({ unit, chapters, startIndex }: { unit: string; chapters: Chapter[]; startIndex: number }) {
+function UnitSection({
+  unit,
+  chapters,
+  startIndex,
+}: {
+  unit: string
+  chapters: Chapter[]
+  startIndex: number
+}) {
   const totalWeightage = chapters.reduce((sum, c) => sum + c.weightage, 0)
 
   return (
@@ -735,7 +889,12 @@ export default function BiologyNotesForNEETPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
       {
         '@type': 'ListItem',
         position: 2,
@@ -749,7 +908,8 @@ export default function BiologyNotesForNEETPage() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: 'NEET Biology Notes — Complete Chapter-wise Study Material',
-    description: 'Free NEET biology notes for all 38 chapters with diagrams, mnemonics, and PYQ analysis. Written by AIIMS faculty.',
+    description:
+      'Free NEET biology notes for all 38 chapters with diagrams, mnemonics, and PYQ analysis. Written by AIIMS faculty.',
     provider: {
       '@type': 'Organization',
       name: 'Cerebrum Biology Academy',
@@ -773,9 +933,18 @@ export default function BiologyNotesForNEETPage() {
   return (
     <>
       {/* Schema Markup */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
 
       <main className="min-h-screen bg-gray-50">
         {/* ─── Hero ─── */}
@@ -787,7 +956,9 @@ export default function BiologyNotesForNEETPage() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
             {/* Breadcrumb */}
             <nav className="mb-6 text-sm text-blue-200">
-              <Link href="/" className="hover:text-white">Home</Link>
+              <Link href="/" className="hover:text-white">
+                Home
+              </Link>
               <span className="mx-2">/</span>
               <span className="text-white font-medium">Biology Notes for NEET</span>
             </nav>
@@ -799,18 +970,18 @@ export default function BiologyNotesForNEETPage() {
                 </span>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
                   Biology Notes for NEET
-                  <span className="block text-blue-300 mt-1">All 38 Chapters — Free PDF Download</span>
+                  <span className="block text-blue-300 mt-1">
+                    All 38 Chapters — Free PDF Download
+                  </span>
                 </h1>
                 <p className="text-lg text-blue-100 leading-relaxed mb-6">
                   Comprehensive chapter-wise biology notes prepared by Dr. Shekhar (AIIMS faculty).
-                  Each chapter includes diagrams, flowcharts, comparison tables, mnemonics, and previous
-                  year question analysis to help you score 340+ in NEET Biology.
+                  Each chapter includes diagrams, flowcharts, comparison tables, mnemonics, and
+                  previous year question analysis to help you score 340+ in NEET Biology.
                 </p>
               </div>
 
-              <div
-                className="flex flex-wrap gap-3 animate-fadeInUp"
-              >
+              <div className="flex flex-wrap gap-3 animate-fadeInUp">
                 <a
                   href="#class-12-notes"
                   className="inline-flex items-center gap-2 bg-white text-blue-900 font-semibold px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors"
@@ -833,8 +1004,16 @@ export default function BiologyNotesForNEETPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <StatCard icon={<BookOpen className="w-6 h-6" />} value="38" label="Chapters Covered" />
             <StatCard icon={<FileText className="w-6 h-6" />} value="Free" label="PDF Download" />
-            <StatCard icon={<Target className="w-6 h-6" />} value="15+" label="Years PYQ Analysis" />
-            <StatCard icon={<GraduationCap className="w-6 h-6" />} value="AIIMS" label="Faculty Author" />
+            <StatCard
+              icon={<Target className="w-6 h-6" />}
+              value="15+"
+              label="Years PYQ Analysis"
+            />
+            <StatCard
+              icon={<GraduationCap className="w-6 h-6" />}
+              value="AIIMS"
+              label="Faculty Author"
+            />
           </div>
         </section>
 
@@ -845,8 +1024,8 @@ export default function BiologyNotesForNEETPage() {
               Why Students Trust Our NEET Biology Notes
             </h2>
             <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
-              These notes are not generic summaries. Each chapter is prepared after analysing 15+ years
-              of NEET papers to focus on what actually gets asked.
+              These notes are not generic summaries. Each chapter is prepared after analysing 15+
+              years of NEET papers to focus on what actually gets asked.
             </p>
           </div>
 
@@ -904,7 +1083,8 @@ export default function BiologyNotesForNEETPage() {
               NEET 2026 Biology Chapter Weightage
             </h2>
             <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
-              Based on analysis of NEET 2019-2025 papers. Total: 90 questions, 360 marks. Focus on high-weightage units first.
+              Based on analysis of NEET 2019-2025 papers. Total: 90 questions, 360 marks. Focus on
+              high-weightage units first.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -923,10 +1103,15 @@ export default function BiologyNotesForNEETPage() {
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-1">
                       <span className="font-medium text-gray-900 text-sm">{item.unit}</span>
-                      <span className="text-sm font-semibold text-gray-700">{item.marks} marks</span>
+                      <span className="text-sm font-semibold text-gray-700">
+                        {item.marks} marks
+                      </span>
                     </div>
                     <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-                      <div className={`h-full ${item.color} rounded-full`} style={{ width: `${item.pct * 5}%` }} />
+                      <div
+                        className={`h-full ${item.color} rounded-full`}
+                        style={{ width: `${item.pct * 5}%` }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -952,7 +1137,14 @@ export default function BiologyNotesForNEETPage() {
             return class12Units.map((group) => {
               const start = idx
               idx += group.chapters.length
-              return <UnitSection key={group.unit} unit={group.unit} chapters={group.chapters} startIndex={start} />
+              return (
+                <UnitSection
+                  key={group.unit}
+                  unit={group.unit}
+                  chapters={group.chapters}
+                  startIndex={start}
+                />
+              )
             })
           })()}
         </section>
@@ -964,18 +1156,27 @@ export default function BiologyNotesForNEETPage() {
               <div className="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center">
                 <BookOpen className="w-6 h-6" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Class 11 Biology Notes</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                Class 11 Biology Notes
+              </h2>
             </div>
             <p className="text-gray-600 mb-8 ml-13">
-              19 chapters covering Diversity, Cell Biology, Plant &amp; Human Physiology.
-              Class 11 contributes ~45% of NEET Biology questions — do not skip these.
+              19 chapters covering Diversity, Cell Biology, Plant &amp; Human Physiology. Class 11
+              contributes ~45% of NEET Biology questions — do not skip these.
             </p>
             {(() => {
               let idx = 0
               return class11Units.map((group) => {
                 const start = idx
                 idx += group.chapters.length
-                return <UnitSection key={group.unit} unit={group.unit} chapters={group.chapters} startIndex={start} />
+                return (
+                  <UnitSection
+                    key={group.unit}
+                    unit={group.unit}
+                    chapters={group.chapters}
+                    startIndex={start}
+                  />
+                )
               })
             })()}
           </div>
@@ -1028,7 +1229,9 @@ export default function BiologyNotesForNEETPage() {
               Frequently Asked Questions
             </h2>
             <div className="space-y-4">
-              {(faqSchema.mainEntity as Array<{ name: string; acceptedAnswer: { text: string } }>).map((faq, i) => (
+              {(
+                faqSchema.mainEntity as Array<{ name: string; acceptedAnswer: { text: string } }>
+              ).map((faq, i) => (
                 <details
                   key={i}
                   className="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden"
@@ -1088,7 +1291,10 @@ export default function BiologyNotesForNEETPage() {
               <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
                 How to Score 360/360 in NEET Biology
               </h3>
-              <p className="text-sm text-gray-600">Complete strategy guide with study plan, chapter prioritisation, and tips from toppers.</p>
+              <p className="text-sm text-gray-600">
+                Complete strategy guide with study plan, chapter prioritisation, and tips from
+                toppers.
+              </p>
             </Link>
             <Link
               href="/best-neet-biology-coaching"
@@ -1097,7 +1303,9 @@ export default function BiologyNotesForNEETPage() {
               <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
                 Best NEET Biology Coaching Comparison
               </h3>
-              <p className="text-sm text-gray-600">Honest comparison of top coaching institutes with fees, batch size, and results.</p>
+              <p className="text-sm text-gray-600">
+                Honest comparison of top coaching institutes with fees, batch size, and results.
+              </p>
             </Link>
             <Link
               href="/online-neet-biology-coaching"
@@ -1106,7 +1314,10 @@ export default function BiologyNotesForNEETPage() {
               <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
                 Online NEET Biology Coaching
               </h3>
-              <p className="text-sm text-gray-600">Live online classes with AIIMS faculty. Small batches, doubt clearing, and test series.</p>
+              <p className="text-sm text-gray-600">
+                Live online classes with AIIMS faculty. Small batches, doubt clearing, and test
+                series.
+              </p>
             </Link>
           </div>
         </section>

@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching for Vega School Gurugram',
-    description: 'Best NEET coaching for Vega Schools students. Progressive education to NEET transition. Just 15 min from campus. AIIMS faculty, 98% success rate. Call 88264-44334!',
+    description:
+      'Best NEET coaching for Vega Schools students. Progressive education to NEET transition. Just 15 min from campus. AIIMS faculty, 98% success rate. Call 88264-44334!',
   },
 }
 
@@ -86,7 +87,11 @@ export default function NEETCoachingVegaSchool() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-violet-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

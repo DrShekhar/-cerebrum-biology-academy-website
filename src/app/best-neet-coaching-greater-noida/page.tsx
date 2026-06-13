@@ -34,7 +34,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best NEET Coaching in Greater Noida 2026 | Top Institutes Compared',
-    description: 'Compare the best NEET coaching institutes for Greater Noida students for 2026. Fees, faculty, success rates, batch sizes compared. Only biology-specialist coaching serving Greater Noida with online...',
+    description:
+      'Compare the best NEET coaching institutes for Greater Noida students for 2026. Fees, faculty, success rates, batch sizes compared. Only biology-specialist coaching serving Greater Noida with online...',
   },
 }
 
@@ -162,7 +163,11 @@ export default function BestNEETCoachingGreaterNoidaPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Greater Noida', 'NEET Biology Greater Noida', 'Medical entrance coaching Greater Noida']}
+        knowsAbout={[
+          'NEET Greater Noida',
+          'NEET Biology Greater Noida',
+          'Medical entrance coaching Greater Noida',
+        ]}
       />
       <script
         type="application/ld+json"

@@ -30,9 +30,7 @@ function MessageBubble({
   const isStreaming = message.metadata?.isStreaming
 
   return (
-    <div
-      className={`flex gap-2 ${isBot ? 'justify-start' : 'justify-end'}`}
-    >
+    <div className={`flex gap-2 ${isBot ? 'justify-start' : 'justify-end'}`}>
       {isBot && (
         <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-green-500">
           <Bot className="h-4 w-4 text-white" />
@@ -50,8 +48,7 @@ function MessageBubble({
           <div className="whitespace-pre-wrap break-words">
             {message.text || (
               <span className="inline-flex items-center gap-1 text-slate-400">
-                <span
-                 className="animate-fadeInUp">
+                <span className="animate-fadeInUp">
                   <Sparkles className="h-3 w-3" />
                 </span>
                 {getTranslation('thinking', language)}
@@ -60,9 +57,7 @@ function MessageBubble({
           </div>
 
           {isStreaming && message.text && (
-            <span
-              className="ml-0.5 inline-block h-3 w-0.5 bg-slate-400 animate-fadeInUp"
-            />
+            <span className="ml-0.5 inline-block h-3 w-0.5 bg-slate-400 animate-fadeInUp" />
           )}
         </div>
 
@@ -93,23 +88,15 @@ function MessageBubble({
 
 function TypingIndicator({ language }: { language: Language }) {
   return (
-    <div
-      className="flex items-center gap-2 animate-fadeInUp"
-    >
+    <div className="flex items-center gap-2 animate-fadeInUp">
       <div className="flex h-7 w-7 items-center justify-center rounded-full bg-green-500">
         <Bot className="h-4 w-4 text-white" />
       </div>
       <div className="rounded-2xl rounded-tl-sm bg-slate-100 px-3 py-2">
         <div className="flex items-center gap-1">
-          <div
-            className="h-2 w-2 rounded-full bg-slate-400 animate-fadeInUp"
-          />
-          <div
-            className="h-2 w-2 rounded-full bg-slate-400 animate-fadeInUp"
-          />
-          <div
-            className="h-2 w-2 rounded-full bg-slate-400 animate-fadeInUp"
-          />
+          <div className="h-2 w-2 rounded-full bg-slate-400 animate-fadeInUp" />
+          <div className="h-2 w-2 rounded-full bg-slate-400 animate-fadeInUp" />
+          <div className="h-2 w-2 rounded-full bg-slate-400 animate-fadeInUp" />
         </div>
       </div>
     </div>
@@ -146,21 +133,21 @@ export function AriaChat({ messages, isStreaming, language, onQuickActionClick }
       className="flex-1 space-y-3 overflow-y-auto px-3 py-4"
       style={{ scrollBehavior: 'smooth' }}
     >
-{messages.map((message) => (
-          <MessageBubble
-            key={message.id}
-            message={message}
-            language={language}
-            onQuickActionClick={onQuickActionClick}
-          />
-        ))}
+      {messages.map((message) => (
+        <MessageBubble
+          key={message.id}
+          message={message}
+          language={language}
+          onQuickActionClick={onQuickActionClick}
+        />
+      ))}
 
-        {/* Show typing indicator only when streaming with no text yet */}
-        {isStreaming &&
-          messages.length > 0 &&
-          messages[messages.length - 1].sender === 'bot' &&
-          !messages[messages.length - 1].text && <TypingIndicator language={language} />}
-{/* Empty state */}
+      {/* Show typing indicator only when streaming with no text yet */}
+      {isStreaming &&
+        messages.length > 0 &&
+        messages[messages.length - 1].sender === 'bot' &&
+        !messages[messages.length - 1].text && <TypingIndicator language={language} />}
+      {/* Empty state */}
       {messages.length === 0 && (
         <div className="flex h-full flex-col items-center justify-center text-center">
           <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-green-500">

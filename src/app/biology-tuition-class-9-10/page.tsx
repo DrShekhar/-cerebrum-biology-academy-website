@@ -120,9 +120,7 @@ export default function BiologyClass910Page() {
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-5xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Sparkles className="w-5 h-5 mr-2 text-yellow-200" />
               Early NEET Foundation
@@ -141,7 +139,11 @@ export default function BiologyClass910Page() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%209%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%209%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -188,9 +190,7 @@ export default function BiologyClass910Page() {
       {/* Why Start Early */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Start Biology Preparation from Class 9-10?
             </h2>
@@ -217,9 +217,7 @@ export default function BiologyClass910Page() {
       {/* Programs */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Class 9 &amp; Class 10 Biology Programs
             </h2>
@@ -255,7 +253,11 @@ export default function BiologyClass910Page() {
                       <div className="text-sm text-gray-500">{program.duration}</div>
                       <div className="text-2xl font-bold text-orange-600">{program.fee}</div>
                     </div>
-                    <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%209%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                    <Link
+                      href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%209%20Biology.%20Please%20share%20available%20timings."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Button className="bg-orange-600 hover:bg-orange-700">Enroll Now</Button>
                     </Link>
                   </div>
@@ -269,9 +271,7 @@ export default function BiologyClass910Page() {
       {/* What's Included */}
       <section className="py-16 md:py-20 bg-orange-600 text-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">What Your Child Gets</h2>
           </div>
 
@@ -301,9 +301,7 @@ export default function BiologyClass910Page() {
       {/* FAQs */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Class 9 &amp; 10 Biology - FAQs
             </h2>
@@ -311,10 +309,7 @@ export default function BiologyClass910Page() {
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
-              >
+              <div key={index} className="bg-gray-50 rounded-xl p-6 animate-fadeInUp">
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
                 <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
               </div>
@@ -326,8 +321,7 @@ export default function BiologyClass910Page() {
       {/* CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-amber-500 via-orange-500 to-yellow-500 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Give Your Child the Head Start They Deserve
             </h2>
@@ -336,7 +330,11 @@ export default function BiologyClass910Page() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%209%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%209%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

@@ -944,202 +944,196 @@ export function IntelligentChatbot() {
         role="button"
         tabIndex={0}
       >
-{chatState.isOpen ? (
-            <div
-              key="close"
-             className="animate-fadeInUp">
-              <X className="w-6 h-6" />
-            </div>
-          ) : (
-            <div
-              key="open"
-             className="animate-fadeInUp">
-              <MessageCircle className="w-6 h-6" />
-            </div>
-          )}
-</button>
-
-      {/* Chat Window */}
-{chatState.isOpen && (
-          <div
-            className="fixed bottom-32 left-4 right-4 md:left-6 md:right-auto md:w-96 lg:bottom-24 h-[70vh] md:h-[32rem] max-h-[600px] bg-white rounded-2xl shadow-2xl border border-gray-200 z-40 flex flex-col animate-fadeInUp"
-            role="dialog"
-            aria-labelledby="chat-title"
-            aria-describedby="chat-description"
-            aria-modal="true"
-          >
-            {/* Chat Header */}
-            <div className="bg-indigo-500 text-white p-3 sm:p-4 rounded-t-2xl">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center">
-                    <Bot className="w-4 h-4 sm:w-6 sm:h-6" />
-                  </div>
-                  <div>
-                    <h3 id="chat-title" className="font-semibold text-sm sm:text-base">
-                      Ceri AI
-                    </h3>
-                    <p id="chat-description" className="text-xs sm:text-sm text-blue-100">
-                      Your Biology Assistant • Online
-                    </p>
-                  </div>
-                </div>
-                <button
-                  onClick={toggleChat}
-                  className="sm:hidden text-white/80 hover:text-white focus:text-white focus:ring-2 focus:ring-white/50 focus:outline-none rounded p-1"
-                  aria-label="Close Ceri AI chat"
-                  tabIndex={0}
-                >
-                  <X className="w-5 h-5" aria-hidden="true" />
-                </button>
-              </div>
-            </div>
-
-            {/* Messages */}
-            <div
-              className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4"
-              role="log"
-              aria-label="Chat conversation history"
-              aria-live="polite"
-            >
-              {chatState.messages.map((message) => (
-                <div
-                  key={message.id}
-                  className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-                >
-                  <div
-                    className={`max-w-[80%] sm:max-w-xs lg:max-w-md px-3 sm:px-4 py-2 rounded-2xl ${
-                      message.type === 'user'
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-100 text-gray-900'
-                    }`}
-                  >
-                    <div className="flex items-start space-x-2">
-                      {message.type === 'bot' && <Bot className="w-4 h-4 mt-1 text-blue-600" />}
-                      <div className="whitespace-pre-line text-sm">{message.content}</div>
-                    </div>
-
-                    {/* Suggestions */}
-                    {message.suggestions && (
-                      <div className="mt-3 space-y-1">
-                        {message.suggestions.map((suggestion, index) => (
-                          <button
-                            key={index}
-                            onClick={() => handleSuggestionClick(suggestion)}
-                            className="block w-full text-left text-xs sm:text-sm bg-white/10 hover:bg-white/20 focus:bg-white/30 focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-1.5 rounded border border-white/20 transition-colors"
-                            aria-label={`Quick reply: ${suggestion}`}
-                            tabIndex={0}
-                          >
-                            {suggestion}
-                          </button>
-                        ))}
-                      </div>
-                    )}
-
-                    {/* Actions */}
-                    {message.actions && (
-                      <div className="mt-3 space-y-1">
-                        {message.actions.map((action, index) => (
-                          <button
-                            key={index}
-                            onClick={() => handleActionClick(action)}
-                            className="flex items-center space-x-2 w-full text-left text-xs sm:text-sm bg-blue-600 hover:bg-blue-700 focus:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none text-white px-3 py-2 rounded-lg transition-colors"
-                            aria-label={`Action: ${action.label}`}
-                            tabIndex={0}
-                          >
-                            {action.type === 'book_demo' && (
-                              <Calendar className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
-                            )}
-                            {action.type === 'call_request' && (
-                              <Phone className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
-                            )}
-                            {action.type === 'download_brochure' && (
-                              <Download className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
-                            )}
-                            {action.type === 'view_course' && (
-                              <BookOpen className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
-                            )}
-                            <span className="truncate">{action.label}</span>
-                          </button>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              ))}
-
-              {/* Streaming Message or Typing Indicator */}
-              {(chatState.isTyping || streamingMessage) && (
-                <div className="flex justify-start">
-                  <div className="max-w-[80%] sm:max-w-xs lg:max-w-md bg-gray-100 px-3 sm:px-4 py-2 rounded-2xl">
-                    <div className="flex items-start space-x-2">
-                      <Bot className="w-4 h-4 mt-1 text-blue-600 flex-shrink-0" />
-                      {streamingMessage ? (
-                        <div className="whitespace-pre-line text-sm text-gray-900">
-                          {streamingMessage}
-                          <span className="inline-block w-2 h-4 bg-blue-600 ml-1 animate-pulse" />
-                        </div>
-                      ) : (
-                        <div className="flex space-x-1 py-1">
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                          <div
-                            className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                            style={{ animationDelay: '0.1s' }}
-                          ></div>
-                          <div
-                            className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                            style={{ animationDelay: '0.2s' }}
-                          ></div>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              <div ref={messagesEndRef} />
-            </div>
-
-            {/* Input */}
-            <div className="p-3 sm:p-4 border-t border-gray-200">
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault()
-                  handleSendMessage()
-                }}
-                className="flex space-x-2"
-              >
-                <label htmlFor="chat-input" className="sr-only">
-                  Type your biology question for Ceri AI
-                </label>
-                <input
-                  id="chat-input"
-                  type="text"
-                  value={inputValue}
-                  onChange={(e) => setInputValue(e.target.value)}
-                  placeholder="Ask Ceri AI about biology..."
-                  className="flex-1 border border-gray-300 rounded-full px-3 sm:px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:outline-none text-sm"
-                  aria-describedby="chat-input-help"
-                  autoComplete="off"
-                  maxLength={500}
-                />
-                <button
-                  type="submit"
-                  disabled={!inputValue.trim()}
-                  className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 focus:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors flex-shrink-0"
-                  aria-label="Send message to Ceri AI"
-                  tabIndex={0}
-                >
-                  <Send className="w-4 h-4" aria-hidden="true" />
-                </button>
-              </form>
-              <div id="chat-input-help" className="sr-only">
-                Press Enter or click send to ask Ceri AI your biology question. Maximum 500
-                characters.
-              </div>
-            </div>
+        {chatState.isOpen ? (
+          <div key="close" className="animate-fadeInUp">
+            <X className="w-6 h-6" />
+          </div>
+        ) : (
+          <div key="open" className="animate-fadeInUp">
+            <MessageCircle className="w-6 h-6" />
           </div>
         )}
-</AIErrorBoundary>
+      </button>
+
+      {/* Chat Window */}
+      {chatState.isOpen && (
+        <div
+          className="fixed bottom-32 left-4 right-4 md:left-6 md:right-auto md:w-96 lg:bottom-24 h-[70vh] md:h-[32rem] max-h-[600px] bg-white rounded-2xl shadow-2xl border border-gray-200 z-40 flex flex-col animate-fadeInUp"
+          role="dialog"
+          aria-labelledby="chat-title"
+          aria-describedby="chat-description"
+          aria-modal="true"
+        >
+          {/* Chat Header */}
+          <div className="bg-indigo-500 text-white p-3 sm:p-4 rounded-t-2xl">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center">
+                  <Bot className="w-4 h-4 sm:w-6 sm:h-6" />
+                </div>
+                <div>
+                  <h3 id="chat-title" className="font-semibold text-sm sm:text-base">
+                    Ceri AI
+                  </h3>
+                  <p id="chat-description" className="text-xs sm:text-sm text-blue-100">
+                    Your Biology Assistant • Online
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={toggleChat}
+                className="sm:hidden text-white/80 hover:text-white focus:text-white focus:ring-2 focus:ring-white/50 focus:outline-none rounded p-1"
+                aria-label="Close Ceri AI chat"
+                tabIndex={0}
+              >
+                <X className="w-5 h-5" aria-hidden="true" />
+              </button>
+            </div>
+          </div>
+
+          {/* Messages */}
+          <div
+            className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4"
+            role="log"
+            aria-label="Chat conversation history"
+            aria-live="polite"
+          >
+            {chatState.messages.map((message) => (
+              <div
+                key={message.id}
+                className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+              >
+                <div
+                  className={`max-w-[80%] sm:max-w-xs lg:max-w-md px-3 sm:px-4 py-2 rounded-2xl ${
+                    message.type === 'user' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-900'
+                  }`}
+                >
+                  <div className="flex items-start space-x-2">
+                    {message.type === 'bot' && <Bot className="w-4 h-4 mt-1 text-blue-600" />}
+                    <div className="whitespace-pre-line text-sm">{message.content}</div>
+                  </div>
+
+                  {/* Suggestions */}
+                  {message.suggestions && (
+                    <div className="mt-3 space-y-1">
+                      {message.suggestions.map((suggestion, index) => (
+                        <button
+                          key={index}
+                          onClick={() => handleSuggestionClick(suggestion)}
+                          className="block w-full text-left text-xs sm:text-sm bg-white/10 hover:bg-white/20 focus:bg-white/30 focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-1.5 rounded border border-white/20 transition-colors"
+                          aria-label={`Quick reply: ${suggestion}`}
+                          tabIndex={0}
+                        >
+                          {suggestion}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Actions */}
+                  {message.actions && (
+                    <div className="mt-3 space-y-1">
+                      {message.actions.map((action, index) => (
+                        <button
+                          key={index}
+                          onClick={() => handleActionClick(action)}
+                          className="flex items-center space-x-2 w-full text-left text-xs sm:text-sm bg-blue-600 hover:bg-blue-700 focus:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none text-white px-3 py-2 rounded-lg transition-colors"
+                          aria-label={`Action: ${action.label}`}
+                          tabIndex={0}
+                        >
+                          {action.type === 'book_demo' && (
+                            <Calendar className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
+                          )}
+                          {action.type === 'call_request' && (
+                            <Phone className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
+                          )}
+                          {action.type === 'download_brochure' && (
+                            <Download className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
+                          )}
+                          {action.type === 'view_course' && (
+                            <BookOpen className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
+                          )}
+                          <span className="truncate">{action.label}</span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+
+            {/* Streaming Message or Typing Indicator */}
+            {(chatState.isTyping || streamingMessage) && (
+              <div className="flex justify-start">
+                <div className="max-w-[80%] sm:max-w-xs lg:max-w-md bg-gray-100 px-3 sm:px-4 py-2 rounded-2xl">
+                  <div className="flex items-start space-x-2">
+                    <Bot className="w-4 h-4 mt-1 text-blue-600 flex-shrink-0" />
+                    {streamingMessage ? (
+                      <div className="whitespace-pre-line text-sm text-gray-900">
+                        {streamingMessage}
+                        <span className="inline-block w-2 h-4 bg-blue-600 ml-1 animate-pulse" />
+                      </div>
+                    ) : (
+                      <div className="flex space-x-1 py-1">
+                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                        <div
+                          className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                          style={{ animationDelay: '0.1s' }}
+                        ></div>
+                        <div
+                          className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                          style={{ animationDelay: '0.2s' }}
+                        ></div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            <div ref={messagesEndRef} />
+          </div>
+
+          {/* Input */}
+          <div className="p-3 sm:p-4 border-t border-gray-200">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault()
+                handleSendMessage()
+              }}
+              className="flex space-x-2"
+            >
+              <label htmlFor="chat-input" className="sr-only">
+                Type your biology question for Ceri AI
+              </label>
+              <input
+                id="chat-input"
+                type="text"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                placeholder="Ask Ceri AI about biology..."
+                className="flex-1 border border-gray-300 rounded-full px-3 sm:px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:outline-none text-sm"
+                aria-describedby="chat-input-help"
+                autoComplete="off"
+                maxLength={500}
+              />
+              <button
+                type="submit"
+                disabled={!inputValue.trim()}
+                className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 focus:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors flex-shrink-0"
+                aria-label="Send message to Ceri AI"
+                tabIndex={0}
+              >
+                <Send className="w-4 h-4" aria-hidden="true" />
+              </button>
+            </form>
+            <div id="chat-input-help" className="sr-only">
+              Press Enter or click send to ask Ceri AI your biology question. Maximum 500
+              characters.
+            </div>
+          </div>
+        </div>
+      )}
+    </AIErrorBoundary>
   )
 }

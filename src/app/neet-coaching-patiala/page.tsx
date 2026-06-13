@@ -35,7 +35,12 @@ const patialaAreas = [
   { name: 'Leela Bhawan', students: '65+', highlight: 'Central Location', priority: 'high' },
   { name: 'Urban Estate', students: '55+', highlight: 'Educational Hub', priority: 'high' },
   { name: 'Tripuri', students: '45+', highlight: 'Growing Area', priority: 'medium' },
-  { name: 'Punjabi University Area', students: '40+', highlight: 'Student Hub', priority: 'medium' },
+  {
+    name: 'Punjabi University Area',
+    students: '40+',
+    highlight: 'Student Hub',
+    priority: 'medium',
+  },
   { name: 'Rajpura', students: '35+', highlight: 'Industrial Town', priority: 'medium' },
   { name: 'Nabha', students: '25+', highlight: 'Historic Town', priority: 'low' },
   { name: 'Samana', students: '20+', highlight: 'Nearby Town', priority: 'low' },
@@ -63,7 +68,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-patiala' },
+    alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-patiala' },
     description: 'Real-time sessions with expert teaching. Perfect for GMC Patiala aspirants.',
   },
   {
@@ -131,12 +136,12 @@ const faqs = [
   {
     question: 'Is there good NEET coaching in Patiala for GMC Patiala preparation?',
     answer:
-      'While Patiala has coaching centers, they lack the specialized AIIMS-level faculty needed for competitive NEET scores. Cerebrum Academy\'s online coaching brings expert teachers to Patiala - 35+ of our students have secured admission in GMC Patiala.',
+      "While Patiala has coaching centers, they lack the specialized AIIMS-level faculty needed for competitive NEET scores. Cerebrum Academy's online coaching brings expert teachers to Patiala - 35+ of our students have secured admission in GMC Patiala.",
   },
   {
     question: 'What are NEET coaching fees for Patiala students?',
     answer:
-      'Cerebrum Academy\'s NEET coaching fees for Patiala students are Rs 45,000-85,000 per year. This is much lower than Chandigarh coaching (Rs 1.5-2 lakhs) plus hostel (Rs 1 lakh). You save significantly while getting better faculty.',
+      "Cerebrum Academy's NEET coaching fees for Patiala students are Rs 45,000-85,000 per year. This is much lower than Chandigarh coaching (Rs 1.5-2 lakhs) plus hostel (Rs 1 lakh). You save significantly while getting better faculty.",
   },
   {
     question: 'How to get admission in GMC Patiala?',
@@ -146,7 +151,7 @@ const faqs = [
   {
     question: 'Is Patiala good for medical studies?',
     answer:
-      'Patiala is excellent for medical studies with GMC Patiala being one of Punjab\'s best government medical colleges. The city has a rich educational heritage with Punjabi University. Our coaching helps you get into GMC Patiala from your hometown.',
+      "Patiala is excellent for medical studies with GMC Patiala being one of Punjab's best government medical colleges. The city has a rich educational heritage with Punjabi University. Our coaching helps you get into GMC Patiala from your hometown.",
   },
   {
     question: 'Can Punjabi University students join NEET coaching?',
@@ -195,8 +200,7 @@ export default function NEETCoachingPatiala() {
 
           <div className="mx-auto max-w-7xl">
             <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div
-               className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-rose-100 px-4 py-2 text-rose-800">
                   <Crown className="h-4 w-4" />
                   <span className="text-sm font-medium">
@@ -248,9 +252,7 @@ export default function NEETCoachingPatiala() {
                 </div>
               </div>
 
-              <div
-                className="relative animate-fadeInUp"
-              >
+              <div className="relative animate-fadeInUp">
                 <div className="rounded-2xl bg-white p-8 shadow-xl">
                   <h3 className="mb-6 text-center text-xl font-bold text-gray-900">
                     Patiala Students Success Metrics
@@ -277,9 +279,7 @@ export default function NEETCoachingPatiala() {
         {/* Why Patiala Students Choose Online */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Patiala Families Choose Online NEET Coaching
               </h2>
@@ -323,9 +323,7 @@ export default function NEETCoachingPatiala() {
         {/* Patiala Areas We Serve */}
         <section className="bg-rose-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 NEET Coaching for Patiala & Nearby Areas
               </h2>
@@ -365,9 +363,7 @@ export default function NEETCoachingPatiala() {
         {/* Features */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Cerebrum is Best for Patiala Students
               </h2>
@@ -393,9 +389,7 @@ export default function NEETCoachingPatiala() {
         {/* Schools Section */}
         <section className="bg-rose-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Trusted by Students from Top Patiala Schools
               </h2>
@@ -418,9 +412,7 @@ export default function NEETCoachingPatiala() {
         {/* Medical Colleges */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Target Medical Colleges for Patiala Students
               </h2>
@@ -488,9 +480,7 @@ export default function NEETCoachingPatiala() {
         {/* Cost Comparison */}
         <section className="bg-rose-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Cost Comparison: Chandigarh vs Online for Patiala Students
               </h2>
@@ -568,9 +558,7 @@ export default function NEETCoachingPatiala() {
         {/* FAQs */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 FAQs: NEET Coaching in Patiala
               </h2>
@@ -600,8 +588,7 @@ export default function NEETCoachingPatiala() {
         {/* Final CTA */}
         <section className="bg-gradient-to-r from-rose-600 to-pink-600 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
                 Ready to Join GMC Patiala from Your Hometown?
               </h2>

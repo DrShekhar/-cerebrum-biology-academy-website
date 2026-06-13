@@ -92,9 +92,7 @@ Perfect for NEET Biology preparation! 📚`
   }
 
   return (
-    <div
-      className="bg-gradient-to-r from-purple-50 via-pink-50 to-purple-50 rounded-xl p-6 border-2 border-purple-200 animate-fadeInUp"
-    >
+    <div className="bg-gradient-to-r from-purple-50 via-pink-50 to-purple-50 rounded-xl p-6 border-2 border-purple-200 animate-fadeInUp">
       <div className="flex items-center gap-2 mb-3">
         <Gift className="w-6 h-6 text-purple-600" />
         <h3 className="font-bold text-gray-900 text-lg">Share & Earn ₹500!</h3>

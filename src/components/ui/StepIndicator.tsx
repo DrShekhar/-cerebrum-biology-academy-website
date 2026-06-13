@@ -139,7 +139,7 @@ export function StepIndicator({
       sizes.spacing
     )
 
-        return (
+    return (
       <div
         key={step.id}
         className={cn(
@@ -174,17 +174,13 @@ export function StepIndicator({
           </p>
 
           {step.description && (
-            <p
-              className={cn('text-slate-500 mt-1', size === 'sm' ? 'text-xs' : 'text-xs')}
-            >
+            <p className={cn('text-slate-500 mt-1', size === 'sm' ? 'text-xs' : 'text-xs')}>
               {step.description}
             </p>
           )}
 
           {step.error && status === 'error' && (
-            <p
-              className={cn('text-red-500 mt-1', size === 'sm' ? 'text-xs' : 'text-xs')}
-            >
+            <p className={cn('text-red-500 mt-1', size === 'sm' ? 'text-xs' : 'text-xs')}>
               {step.error}
             </p>
           )}
@@ -203,9 +199,7 @@ export function StepIndicator({
       return (
         <div className={cn('flex-1 mx-2 relative', size === 'sm' ? 'min-w-8' : 'min-w-12')}>
           <div className={cn('bg-slate-200 rounded-full', sizes.connector)}>
-            <div
-              className={cn('rounded-full', colors.connector, sizes.connector)}
-            />
+            <div className={cn('rounded-full', colors.connector, sizes.connector)} />
           </div>
         </div>
       )
@@ -216,9 +210,7 @@ export function StepIndicator({
         className={cn('ml-4 my-1 relative', size === 'sm' ? 'h-6' : size === 'md' ? 'h-8' : 'h-10')}
       >
         <div className={cn('bg-slate-200 rounded-full h-full', sizes.connector)}>
-          <div
-            className={cn('rounded-full', colors.connector, sizes.connector)}
-          />
+          <div className={cn('rounded-full', colors.connector, sizes.connector)} />
         </div>
       </div>
     )

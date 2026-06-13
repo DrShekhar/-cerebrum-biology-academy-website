@@ -18,7 +18,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best NEET Coaching in Patiala',
-    description: 'Top NEET biology coaching in Patiala, Punjab. 98% success rate. The Mall, Rajpura Road.',
+    description:
+      'Top NEET biology coaching in Patiala, Punjab. 98% success rate. The Mall, Rajpura Road.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-patiala',

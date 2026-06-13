@@ -134,18 +134,13 @@ export default function NCERTBiologyClass12Page() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700 text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div
-            className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-fadeInUp"
-          />
-          <div
-            className="absolute -bottom-40 -left-40 w-96 h-96 bg-violet-400/20 rounded-full blur-3xl animate-fadeInUp"
-          />
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-fadeInUp" />
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-violet-400/20 rounded-full blur-3xl animate-fadeInUp" />
         </div>
 
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
                 <BookOpen className="w-4 h-4" />
                 <span className="text-sm font-medium">NCERT Textbook Series</span>
@@ -196,9 +191,7 @@ export default function NCERTBiologyClass12Page() {
               </div>
             </div>
 
-            <div
-              className="hidden md:block animate-fadeInUp"
-            >
+            <div className="hidden md:block animate-fadeInUp">
               <BookStackIllustration className="w-full max-w-md mx-auto" />
             </div>
           </div>
@@ -208,9 +201,7 @@ export default function NCERTBiologyClass12Page() {
       {/* Book Info */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div
-            className="max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="max-w-4xl mx-auto animate-fadeInUp">
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <div className="p-8 md:p-10">
                 <div className="flex items-start gap-6">
@@ -265,9 +256,7 @@ export default function NCERTBiologyClass12Page() {
       {/* Chapter Breakdown */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Unit-wise Chapter Breakdown
             </h2>
@@ -325,9 +314,7 @@ export default function NCERTBiologyClass12Page() {
       {/* High-scoring Topics */}
       <section className="py-16 bg-gradient-to-br from-purple-50 to-violet-50">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               High-Scoring Topics in Class 12
             </h2>
@@ -372,10 +359,7 @@ export default function NCERTBiologyClass12Page() {
                 color: 'emerald',
               },
             ].map((topic, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={idx} className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
                 <div
                   className={`w-14 h-14 bg-${topic.color}-100 rounded-xl flex items-center justify-center mb-4`}
                 >
@@ -406,9 +390,7 @@ export default function NCERTBiologyClass12Page() {
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
@@ -445,9 +427,7 @@ export default function NCERTBiologyClass12Page() {
       {/* Related Pages */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Continue Your Preparation
             </h2>
@@ -476,9 +456,7 @@ export default function NCERTBiologyClass12Page() {
                 color: 'blue-600',
               },
             ].map((link, idx) => (
-              <div
-                key={idx}
-               className="animate-fadeInUp">
+              <div key={idx} className="animate-fadeInUp">
                 <Link href={link.href}>
                   <div
                     className={`bg-gradient-to-br ${link.color} rounded-xl p-5 text-white text-center hover:shadow-lg transition-shadow`}
@@ -496,8 +474,7 @@ export default function NCERTBiologyClass12Page() {
       {/* CTA */}
       <section className="py-16 bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Master Class 12 Biology with Expert Guidance
             </h2>

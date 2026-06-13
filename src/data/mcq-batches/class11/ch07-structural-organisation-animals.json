@@ -14,22 +14,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "The blood of cockroach is called:",
-      "options": [
-        "Haemolymph",
-        "Plasma",
-        "Coelomic fluid",
-        "Haemocyanin"
-      ],
+      "options": ["Haemolymph", "Plasma", "Coelomic fluid", "Haemocyanin"],
       "correctAnswer": "A",
       "explanation": "The blood of cockroach is called haemolymph. It is colourless due to the absence of haemoglobin. It contains colourless plasma and haemocytes (blood cells). It does not transport oxygen.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "haemolymph",
-        "blood"
-      ],
+      "tags": ["cockroach", "haemolymph", "blood"],
       "neetWeightage": "HIGH"
     },
     {
@@ -40,22 +31,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "Malpighian tubules in cockroach are organs of:",
-      "options": [
-        "Digestion",
-        "Respiration",
-        "Reproduction",
-        "Excretion"
-      ],
+      "options": ["Digestion", "Respiration", "Reproduction", "Excretion"],
       "correctAnswer": "D",
       "explanation": "Malpighian tubules are the excretory organs of cockroach. They are thin, yellow, filamentous tubules that open into the junction of midgut and hindgut. They help in removal of nitrogenous waste (uric acid).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "malpighian-tubules",
-        "excretion"
-      ],
+      "tags": ["cockroach", "malpighian-tubules", "excretion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -66,22 +48,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "How many pairs of spiracles are present in cockroach?",
-      "options": [
-        "8 pairs",
-        "6 pairs",
-        "12 pairs",
-        "10 pairs"
-      ],
+      "options": ["8 pairs", "6 pairs", "12 pairs", "10 pairs"],
       "correctAnswer": "D",
       "explanation": "Cockroach has 10 pairs of spiracles (2 pairs in the thorax and 8 pairs in the abdomen). These are small openings on the lateral side of the body through which air enters the tracheal system.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "spiracles",
-        "respiration"
-      ],
+      "tags": ["cockroach", "spiracles", "respiration"],
       "neetWeightage": "HIGH"
     },
     {
@@ -103,10 +76,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "body-divisions"
-      ],
+      "tags": ["cockroach", "body-divisions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -128,11 +98,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "compound-eyes",
-        "mosaic-vision"
-      ],
+      "tags": ["cockroach", "compound-eyes", "mosaic-vision"],
       "neetWeightage": "HIGH"
     },
     {
@@ -143,22 +109,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "In earthworm, which of the following is the excretory organ?",
-      "options": [
-        "Nephridia",
-        "Flame cells",
-        "Malpighian tubules",
-        "Green glands"
-      ],
+      "options": ["Nephridia", "Flame cells", "Malpighian tubules", "Green glands"],
       "correctAnswer": "A",
       "explanation": "In earthworm (Pheretima), nephridia are the excretory organs. There are three types: septal nephridia, integumentary nephridia, and pharyngeal nephridia. They help in osmoregulation and excretion of nitrogenous waste.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "earthworm",
-        "nephridia",
-        "excretion"
-      ],
+      "tags": ["earthworm", "nephridia", "excretion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -180,11 +137,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "gizzard",
-        "digestive-system"
-      ],
+      "tags": ["cockroach", "gizzard", "digestive-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -206,10 +159,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "epithelial-tissue",
-        "squamous"
-      ],
+      "tags": ["epithelial-tissue", "squamous"],
       "neetWeightage": "HIGH"
     },
     {
@@ -220,21 +170,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "Clitellum in earthworm is found in segments:",
-      "options": [
-        "20-22",
-        "14-16",
-        "10-13",
-        "17-19"
-      ],
+      "options": ["20-22", "14-16", "10-13", "17-19"],
       "correctAnswer": "B",
       "explanation": "The clitellum is a prominent band of glandular tissue found in segments 14, 15, and 16 of the earthworm. It secretes a cocoon in which eggs are deposited for fertilization and development.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "earthworm",
-        "clitellum"
-      ],
+      "tags": ["earthworm", "clitellum"],
       "neetWeightage": "HIGH"
     },
     {
@@ -245,21 +187,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "Which type of connective tissue has a fluid matrix?",
-      "options": [
-        "Tendon",
-        "Cartilage",
-        "Bone",
-        "Blood"
-      ],
+      "options": ["Tendon", "Cartilage", "Bone", "Blood"],
       "correctAnswer": "D",
       "explanation": "Blood is a fluid connective tissue with a liquid matrix called plasma. The cellular components include RBCs, WBCs, and platelets suspended in the plasma.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "connective-tissue",
-        "blood"
-      ],
+      "tags": ["connective-tissue", "blood"],
       "neetWeightage": "HIGH"
     },
     {
@@ -281,11 +215,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "hepatic-caecae",
-        "digestive-system"
-      ],
+      "tags": ["cockroach", "hepatic-caecae", "digestive-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -307,10 +237,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscular-tissue",
-        "smooth-muscle"
-      ],
+      "tags": ["muscular-tissue", "smooth-muscle"],
       "neetWeightage": "HIGH"
     },
     {
@@ -321,21 +248,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "In cockroach, the head is formed by the fusion of how many segments?",
-      "options": [
-        "Five",
-        "Seven",
-        "Four",
-        "Six"
-      ],
+      "options": ["Five", "Seven", "Four", "Six"],
       "correctAnswer": "D",
       "explanation": "The head of cockroach is formed by the fusion of six segments. It bears a pair of compound eyes, a pair of antennae, and appendages forming the biting and chewing type of mouthparts.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "head"
-      ],
+      "tags": ["cockroach", "head"],
       "neetWeightage": "HIGH"
     },
     {
@@ -346,22 +265,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "Intercalated discs are characteristic of:",
-      "options": [
-        "Smooth muscle",
-        "Cardiac muscle",
-        "Nervous tissue",
-        "Skeletal muscle"
-      ],
+      "options": ["Smooth muscle", "Cardiac muscle", "Nervous tissue", "Skeletal muscle"],
       "correctAnswer": "B",
       "explanation": "Intercalated discs are specialized cell junctions found between adjacent cardiac muscle cells. They allow rapid conduction of electrical impulses between cells, enabling synchronized contraction of the heart.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscular-tissue",
-        "cardiac-muscle",
-        "intercalated-discs"
-      ],
+      "tags": ["muscular-tissue", "cardiac-muscle", "intercalated-discs"],
       "neetWeightage": "HIGH"
     },
     {
@@ -372,21 +282,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "The number of segments in the thorax of cockroach is:",
-      "options": [
-        "Five",
-        "Four",
-        "Two",
-        "Three"
-      ],
+      "options": ["Five", "Four", "Two", "Three"],
       "correctAnswer": "D",
       "explanation": "The thorax of cockroach has three segments: prothorax, mesothorax, and metathorax. Each segment bears a pair of walking legs. The mesothorax and metathorax each bear a pair of wings.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "thorax"
-      ],
+      "tags": ["cockroach", "thorax"],
       "neetWeightage": "HIGH"
     },
     {
@@ -408,10 +310,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "epithelial-tissue",
-        "ciliated"
-      ],
+      "tags": ["epithelial-tissue", "ciliated"],
       "neetWeightage": "HIGH"
     },
     {
@@ -433,10 +332,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "male-reproductive-system"
-      ],
+      "tags": ["cockroach", "male-reproductive-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -458,11 +354,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "earthworm",
-        "typhlosole",
-        "digestive-system"
-      ],
+      "tags": ["earthworm", "typhlosole", "digestive-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -484,10 +376,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "epithelial-tissue",
-        "compound-epithelium"
-      ],
+      "tags": ["epithelial-tissue", "compound-epithelium"],
       "neetWeightage": "HIGH"
     },
     {
@@ -509,11 +398,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "earthworm",
-        "spermathecae",
-        "reproductive-system"
-      ],
+      "tags": ["earthworm", "spermathecae", "reproductive-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -524,21 +409,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "The respiratory organ of frog is/are:",
-      "options": [
-        "Skin only",
-        "Gills only",
-        "Buccal cavity, skin, and lungs",
-        "Lungs only"
-      ],
+      "options": ["Skin only", "Gills only", "Buccal cavity, skin, and lungs", "Lungs only"],
       "correctAnswer": "C",
       "explanation": "Frog respires through three organs: (1) Buccal respiration through the lining of the buccal cavity, (2) Cutaneous respiration through the moist skin (major mode when in water), and (3) Pulmonary respiration through lungs (when on land).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "frog",
-        "respiration"
-      ],
+      "tags": ["frog", "respiration"],
       "neetWeightage": "HIGH"
     },
     {
@@ -560,11 +437,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "abdomen",
-        "segments"
-      ],
+      "tags": ["cockroach", "abdomen", "segments"],
       "neetWeightage": "HIGH"
     },
     {
@@ -575,21 +448,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "Which of the following connective tissues connects bones to bones?",
-      "options": [
-        "Cartilage",
-        "Adipose tissue",
-        "Tendon",
-        "Ligament"
-      ],
+      "options": ["Cartilage", "Adipose tissue", "Tendon", "Ligament"],
       "correctAnswer": "D",
       "explanation": "Ligaments are dense connective tissues that connect bones to bones at joints. They are made of yellow elastic fibres and provide elasticity to the joints. Tendons connect muscles to bones.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "connective-tissue",
-        "ligament"
-      ],
+      "tags": ["connective-tissue", "ligament"],
       "neetWeightage": "HIGH"
     },
     {
@@ -600,22 +465,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "The type of circulatory system in cockroach is:",
-      "options": [
-        "Double circulation",
-        "Open type",
-        "No circulatory system",
-        "Closed type"
-      ],
+      "options": ["Double circulation", "Open type", "No circulatory system", "Closed type"],
       "correctAnswer": "B",
       "explanation": "Cockroach has an open circulatory system. The blood (haemolymph) flows in open spaces called sinuses (haemocoel) rather than in closed blood vessels. The heart is tubular, 13-chambered, and lies along the mid-dorsal line.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "circulatory-system",
-        "open-type"
-      ],
+      "tags": ["cockroach", "circulatory-system", "open-type"],
       "neetWeightage": "HIGH"
     },
     {
@@ -637,11 +493,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "frog",
-        "heart",
-        "three-chambered"
-      ],
+      "tags": ["frog", "heart", "three-chambered"],
       "neetWeightage": "HIGH"
     },
     {
@@ -663,11 +515,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "anal-cerci",
-        "external-features"
-      ],
+      "tags": ["cockroach", "anal-cerci", "external-features"],
       "neetWeightage": "HIGH"
     },
     {
@@ -689,11 +537,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "epithelial-tissue",
-        "goblet-cells",
-        "mucus"
-      ],
+      "tags": ["epithelial-tissue", "goblet-cells", "mucus"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -704,22 +548,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "The testes in cockroach are present in which abdominal segments?",
-      "options": [
-        "8th-9th",
-        "6th-7th",
-        "4th-6th",
-        "2nd-3rd"
-      ],
+      "options": ["8th-9th", "6th-7th", "4th-6th", "2nd-3rd"],
       "correctAnswer": "C",
       "explanation": "In male cockroach, testes are a pair of structures lying one on each side of the 4th-6th abdominal segments. Each testis consists of a group of testicular lobes.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "testes",
-        "male-reproductive"
-      ],
+      "tags": ["cockroach", "testes", "male-reproductive"],
       "neetWeightage": "HIGH"
     },
     {
@@ -741,11 +576,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "nervous-system",
-        "brain"
-      ],
+      "tags": ["cockroach", "nervous-system", "brain"],
       "neetWeightage": "HIGH"
     },
     {
@@ -756,22 +587,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "Setae in earthworm help in:",
-      "options": [
-        "Respiration",
-        "Reproduction",
-        "Locomotion",
-        "Digestion"
-      ],
+      "options": ["Respiration", "Reproduction", "Locomotion", "Digestion"],
       "correctAnswer": "C",
       "explanation": "Setae are S-shaped chitinous structures embedded in the body wall of earthworm. They help in locomotion by anchoring the body to the soil surface. Earthworm has setae arranged segmentally (except the first, last, and clitellar segments).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "earthworm",
-        "setae",
-        "locomotion"
-      ],
+      "tags": ["earthworm", "setae", "locomotion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -793,11 +615,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "colleterial-glands",
-        "female-reproductive"
-      ],
+      "tags": ["cockroach", "colleterial-glands", "female-reproductive"],
       "neetWeightage": "HIGH"
     },
     {
@@ -808,22 +626,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "The Haversian system is characteristic of:",
-      "options": [
-        "Cartilage",
-        "Spongy bone",
-        "Compact bone",
-        "Ligament"
-      ],
+      "options": ["Cartilage", "Spongy bone", "Compact bone", "Ligament"],
       "correctAnswer": "C",
       "explanation": "The Haversian system (osteon) is the functional unit of compact bone. It consists of a central Haversian canal surrounded by concentric lamellae of bone matrix. Osteocytes are present in lacunae between the lamellae.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "connective-tissue",
-        "bone",
-        "haversian-system"
-      ],
+      "tags": ["connective-tissue", "bone", "haversian-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -834,22 +643,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "How many pairs of walking legs are present in cockroach?",
-      "options": [
-        "Two",
-        "Three",
-        "Five",
-        "Four"
-      ],
+      "options": ["Two", "Three", "Five", "Four"],
       "correctAnswer": "B",
       "explanation": "Cockroach has three pairs of walking legs, one pair on each thoracic segment (prothorax, mesothorax, and metathorax). Each leg consists of coxa, trochanter, femur, tibia, and tarsus.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "legs",
-        "thorax"
-      ],
+      "tags": ["cockroach", "legs", "thorax"],
       "neetWeightage": "HIGH"
     },
     {
@@ -871,11 +671,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "frog",
-        "nictitating-membrane",
-        "eyes"
-      ],
+      "tags": ["frog", "nictitating-membrane", "eyes"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -886,22 +682,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "Anal styles in cockroach are found in:",
-      "options": [
-        "Only males",
-        "Both males and females",
-        "Only females",
-        "Neither sex"
-      ],
+      "options": ["Only males", "Both males and females", "Only females", "Neither sex"],
       "correctAnswer": "A",
       "explanation": "Anal styles are a pair of short, unjointed structures found only in male cockroach. They are present near the anal cerci and are absent in females. This is an important sexually dimorphic character.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "anal-styles",
-        "sexual-dimorphism"
-      ],
+      "tags": ["cockroach", "anal-styles", "sexual-dimorphism"],
       "neetWeightage": "HIGH"
     },
     {
@@ -912,21 +699,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "In earthworm, blood glands are found in segments:",
-      "options": [
-        "1st-3rd",
-        "4th, 5th, and 6th",
-        "10th-13th",
-        "7th-9th"
-      ],
+      "options": ["1st-3rd", "4th, 5th, and 6th", "10th-13th", "7th-9th"],
       "correctAnswer": "B",
       "explanation": "Blood glands in earthworm are present in the 4th, 5th, and 6th segments. They produce blood cells (haemocytes) and haemoglobin, which is dissolved in the plasma (not in RBCs).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "earthworm",
-        "blood-glands"
-      ],
+      "tags": ["earthworm", "blood-glands"],
       "neetWeightage": "HIGH"
     },
     {
@@ -948,10 +727,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscular-tissue",
-        "cardiac-muscle"
-      ],
+      "tags": ["muscular-tissue", "cardiac-muscle"],
       "neetWeightage": "HIGH"
     },
     {
@@ -962,22 +738,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "The number of chambers in the heart of cockroach is:",
-      "options": [
-        "8",
-        "10",
-        "13",
-        "4"
-      ],
+      "options": ["8", "10", "13", "4"],
       "correctAnswer": "C",
       "explanation": "The heart of cockroach is a tubular, 13-chambered structure lying along the mid-dorsal line beneath the terga. Each chamber has a pair of ostia (valvular openings) for entry of haemolymph.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "heart",
-        "chambers"
-      ],
+      "tags": ["cockroach", "heart", "chambers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -999,11 +766,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "haemolymph",
-        "tracheal-system"
-      ],
+      "tags": ["cockroach", "haemolymph", "tracheal-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1025,10 +788,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "earthworm",
-        "soil-fertility"
-      ],
+      "tags": ["earthworm", "soil-fertility"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1050,11 +810,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "sense-organs",
-        "anal-cerci"
-      ],
+      "tags": ["cockroach", "sense-organs", "anal-cerci"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1076,11 +832,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscular-tissue",
-        "cardiac-muscle",
-        "myogenic"
-      ],
+      "tags": ["muscular-tissue", "cardiac-muscle", "myogenic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1102,11 +854,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "excretion",
-        "uricotelic"
-      ],
+      "tags": ["cockroach", "excretion", "uricotelic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1128,11 +876,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "earthworm",
-        "hermaphrodite",
-        "cross-fertilization"
-      ],
+      "tags": ["earthworm", "hermaphrodite", "cross-fertilization"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1154,10 +898,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "frog",
-        "sexual-dimorphism"
-      ],
+      "tags": ["frog", "sexual-dimorphism"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1179,11 +920,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "connective-tissue",
-        "tendon",
-        "ligament"
-      ],
+      "tags": ["connective-tissue", "tendon", "ligament"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1205,10 +942,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "nervous-system"
-      ],
+      "tags": ["cockroach", "nervous-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1230,11 +964,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "frog",
-        "poikilothermic",
-        "cold-blooded"
-      ],
+      "tags": ["frog", "poikilothermic", "cold-blooded"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1256,11 +986,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "ootheca",
-        "reproduction"
-      ],
+      "tags": ["cockroach", "ootheca", "reproduction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1271,21 +997,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "Consider the following statements about cockroach anatomy:\n(i) The body is covered by a hard, brown exoskeleton made of chitin.\n(ii) The head is hypognathous (mouthparts directed downward).\n(iii) It has two pairs of wings.\n(iv) The tegmina (forewings) are used for flight.\nHow many statements are correct?",
-      "options": [
-        "Three",
-        "Two",
-        "One",
-        "Four"
-      ],
+      "options": ["Three", "Two", "One", "Four"],
       "correctAnswer": "A",
       "explanation": "Statements (i), (ii), and (iii) are correct. Statement (iv) is incorrect; the tegmina (forewings/mesothoracic wings) are not used for flight. They are dark, opaque, and serve as protective covers. The hind wings (metathoracic) are membranous and are used for flight.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "external-features"
-      ],
+      "tags": ["cockroach", "external-features"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1296,21 +1014,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "Which of the following statements about epithelial tissue is INCORRECT?\n(i) Epithelial cells rest on a basement membrane.\n(ii) Epithelial tissue has abundant blood supply.\n(iii) Epithelial tissue lacks intercellular spaces.\n(iv) Epithelial tissue covers body surfaces and lines body cavities.",
-      "options": [
-        "(ii) and (iv)",
-        "(i) and (iii)",
-        "(iii) only",
-        "(ii) only"
-      ],
+      "options": ["(ii) and (iv)", "(i) and (iii)", "(iii) only", "(ii) only"],
       "correctAnswer": "D",
       "explanation": "Statement (ii) is incorrect. Epithelial tissue is avascular (lacks its own blood supply). It gets nutrients from the underlying connective tissue by diffusion through the basement membrane.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "epithelial-tissue",
-        "characteristics"
-      ],
+      "tags": ["epithelial-tissue", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1332,11 +1042,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "earthworm",
-        "respiration",
-        "circulation"
-      ],
+      "tags": ["earthworm", "respiration", "circulation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1347,21 +1053,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "How many of the following statements about the digestive system of cockroach are correct?\n(i) The foregut includes mouth, pharynx, oesophagus, crop, and gizzard.\n(ii) Hepatic caecae are at the junction of foregut and midgut.\n(iii) Malpighian tubules are at the junction of midgut and hindgut.\n(iv) The hindgut includes ileum, colon, and rectum.",
-      "options": [
-        "Four",
-        "Two",
-        "Three",
-        "One"
-      ],
+      "options": ["Four", "Two", "Three", "One"],
       "correctAnswer": "A",
       "explanation": "All four statements are correct. The foregut includes mouth, pharynx, oesophagus, crop, and gizzard. Hepatic caecae are at the foregut-midgut junction. Malpighian tubules are at the midgut-hindgut junction. The hindgut has ileum, colon, and rectum.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "digestive-system"
-      ],
+      "tags": ["cockroach", "digestive-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1383,10 +1081,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "connective-tissue",
-        "characteristics"
-      ],
+      "tags": ["connective-tissue", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1397,21 +1092,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "Which of the following statements about frog anatomy is INCORRECT?\n(i) Frog has a three-chambered heart.\n(ii) Frog has no ribs.\n(iii) Frog excretes urea (ureotelic).\n(iv) Frog has a four-chambered stomach.",
-      "options": [
-        "(ii) and (iv)",
-        "(ii) only",
-        "(iv) only",
-        "(i) and (iii)"
-      ],
+      "options": ["(ii) and (iv)", "(ii) only", "(iv) only", "(i) and (iii)"],
       "correctAnswer": "C",
       "explanation": "Statement (iv) is incorrect. Frog does not have a four-chambered stomach. It has a simple stomach. Statements (i), (ii), and (iii) are all correct. Frog has a 3-chambered heart, no ribs, and is ureotelic.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "frog",
-        "anatomy"
-      ],
+      "tags": ["frog", "anatomy"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1433,10 +1120,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "mouthparts"
-      ],
+      "tags": ["cockroach", "mouthparts"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1447,21 +1131,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "How many of the following are differences between male and female cockroach?\n(i) Anal styles present only in males\n(ii) Males have 9 visible sternites, females have 7\n(iii) Males have colleterial glands\n(iv) Females have a brood pouch\n(v) Both sexes have anal cerci",
-      "options": [
-        "Three",
-        "Five",
-        "Two",
-        "Four"
-      ],
+      "options": ["Three", "Five", "Two", "Four"],
       "correctAnswer": "A",
       "explanation": "Differences (i), (ii), and (iv) are actual differences between sexes. Statement (iii) is incorrect as colleterial glands are found in females, not males. Statement (v) is a similarity, not a difference.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "sexual-dimorphism"
-      ],
+      "tags": ["cockroach", "sexual-dimorphism"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1483,10 +1159,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "neural-tissue",
-        "neurons"
-      ],
+      "tags": ["neural-tissue", "neurons"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1508,10 +1181,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "epithelial-tissue",
-        "locations"
-      ],
+      "tags": ["epithelial-tissue", "locations"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1533,11 +1203,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "organs",
-        "functions"
-      ],
+      "tags": ["cockroach", "organs", "functions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1559,10 +1225,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "connective-tissue",
-        "matrix"
-      ],
+      "tags": ["connective-tissue", "matrix"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1573,22 +1236,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "Match the muscle types with their characteristics:\nColumn I: (a) Skeletal muscle (b) Smooth muscle (c) Cardiac muscle\nColumn II: (i) Involuntary, non-striated, spindle-shaped (ii) Voluntary, striated, multinucleate (iii) Involuntary, striated, branched with intercalated discs",
-      "options": [
-        "a-ii, b-i, c-iii",
-        "a-iii, b-i, c-ii",
-        "a-i, b-ii, c-iii",
-        "a-ii, b-iii, c-i"
-      ],
+      "options": ["a-ii, b-i, c-iii", "a-iii, b-i, c-ii", "a-i, b-ii, c-iii", "a-ii, b-iii, c-i"],
       "correctAnswer": "A",
       "explanation": "Skeletal muscle is voluntary, striated, and multinucleate. Smooth muscle is involuntary, non-striated, and spindle-shaped. Cardiac muscle is involuntary, striated, and branched with intercalated discs.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "muscular-tissue",
-        "types",
-        "characteristics"
-      ],
+      "tags": ["muscular-tissue", "types", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1610,11 +1264,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "earthworm",
-        "segments",
-        "reproductive-openings"
-      ],
+      "tags": ["earthworm", "segments", "reproductive-openings"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1636,10 +1286,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "excretory-organs",
-        "animals"
-      ],
+      "tags": ["excretory-organs", "animals"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1661,11 +1308,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "body-parts",
-        "numbers"
-      ],
+      "tags": ["cockroach", "body-parts", "numbers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1687,11 +1330,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "glands",
-        "functions"
-      ],
+      "tags": ["cockroach", "glands", "functions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1713,11 +1352,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "connective-tissue",
-        "types",
-        "features"
-      ],
+      "tags": ["connective-tissue", "types", "features"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1728,22 +1363,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "Match the type of nephridia in earthworm with their location:\nColumn I: (a) Septal nephridia (b) Integumentary nephridia (c) Pharyngeal nephridia\nColumn II: (i) Attached to body wall (ii) Present on both sides of the septa (iii) Present as tufts in 4th, 5th, 6th segments",
-      "options": [
-        "a-iii, b-i, c-ii",
-        "a-ii, b-iii, c-i",
-        "a-ii, b-i, c-iii",
-        "a-i, b-ii, c-iii"
-      ],
+      "options": ["a-iii, b-i, c-ii", "a-ii, b-iii, c-i", "a-ii, b-i, c-iii", "a-i, b-ii, c-iii"],
       "correctAnswer": "C",
       "explanation": "Septal nephridia are present on both sides of the intersegmental septa (from segment 15 onwards). Integumentary nephridia are attached to the body wall. Pharyngeal nephridia are found as tufts in the 4th, 5th, and 6th segments.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "earthworm",
-        "nephridia",
-        "types"
-      ],
+      "tags": ["earthworm", "nephridia", "types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1754,21 +1380,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "How many pairs of walking legs does a cockroach have?",
-      "options": [
-        "Four",
-        "Three",
-        "Two",
-        "Five"
-      ],
+      "options": ["Four", "Three", "Two", "Five"],
       "correctAnswer": "B",
       "explanation": "Cockroach has 3 pairs of walking legs (one pair per thoracic segment). The first pair is from prothorax, second from mesothorax, and third from metathorax.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "legs"
-      ],
+      "tags": ["cockroach", "legs"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1779,21 +1397,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "How many of the following are types of animal tissues?\n(i) Epithelial tissue (ii) Connective tissue (iii) Muscular tissue (iv) Neural tissue (v) Meristematic tissue",
-      "options": [
-        "Four",
-        "Two",
-        "Five",
-        "Three"
-      ],
+      "options": ["Four", "Two", "Five", "Three"],
       "correctAnswer": "A",
       "explanation": "There are four types of animal tissues: epithelial, connective, muscular, and neural. Meristematic tissue is a plant tissue, not an animal tissue.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "animal-tissues",
-        "types"
-      ],
+      "tags": ["animal-tissues", "types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1804,22 +1414,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "How many segments fuse to form the head of cockroach?",
-      "options": [
-        "Seven",
-        "Five",
-        "Six",
-        "Four"
-      ],
+      "options": ["Seven", "Five", "Six", "Four"],
       "correctAnswer": "C",
       "explanation": "The head of cockroach is formed by the fusion of six segments. It is triangular in shape and lies at right angles to the long axis of the body.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "head",
-        "segments"
-      ],
+      "tags": ["cockroach", "head", "segments"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1830,21 +1431,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "How many types of nephridia are found in earthworm?",
-      "options": [
-        "Three",
-        "Two",
-        "Four",
-        "One"
-      ],
+      "options": ["Three", "Two", "Four", "One"],
       "correctAnswer": "A",
       "explanation": "Earthworm has three types of nephridia: (1) Septal nephridia (on septa from segment 15), (2) Integumentary nephridia (on body wall from segment 3), and (3) Pharyngeal nephridia (in segments 4, 5, 6).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "earthworm",
-        "nephridia"
-      ],
+      "tags": ["earthworm", "nephridia"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1855,22 +1448,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "How many ommatidia are approximately present in each compound eye of cockroach?",
-      "options": [
-        "About 5000",
-        "About 500",
-        "About 2000",
-        "About 200"
-      ],
+      "options": ["About 5000", "About 500", "About 2000", "About 200"],
       "correctAnswer": "C",
       "explanation": "Each compound eye of cockroach has about 2000 ommatidia. Each ommatidium is a visual unit that produces a portion of the overall mosaic image perceived by the cockroach.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "compound-eyes",
-        "ommatidia"
-      ],
+      "tags": ["cockroach", "compound-eyes", "ommatidia"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1881,22 +1465,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "How many eggs are present in each ootheca of cockroach?",
-      "options": [
-        "10-12",
-        "6-8",
-        "18-20",
-        "14-16"
-      ],
+      "options": ["10-12", "6-8", "18-20", "14-16"],
       "correctAnswer": "D",
       "explanation": "Each ootheca (egg case) of Periplaneta americana contains 14-16 eggs arranged in two rows. The female drops the ootheca after its formation. The nymphs hatch after about 6 weeks.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "ootheca",
-        "eggs"
-      ],
+      "tags": ["cockroach", "ootheca", "eggs"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1907,22 +1482,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "How many visible sternites are present in male cockroach?",
-      "options": [
-        "Eight",
-        "Seven",
-        "Nine",
-        "Ten"
-      ],
+      "options": ["Eight", "Seven", "Nine", "Ten"],
       "correctAnswer": "C",
       "explanation": "In male cockroach, 9 sternites are visible on the ventral side. In females, only 7 sternites are visible because the 7th sternum together with 8th and 9th forms a brood or genital pouch.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "sternites",
-        "sexual-dimorphism"
-      ],
+      "tags": ["cockroach", "sternites", "sexual-dimorphism"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1944,11 +1510,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "alimentary-canal",
-        "sequence"
-      ],
+      "tags": ["cockroach", "alimentary-canal", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1970,10 +1532,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "structural-organisation",
-        "levels"
-      ],
+      "tags": ["structural-organisation", "levels"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1995,11 +1554,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "leg",
-        "segments"
-      ],
+      "tags": ["cockroach", "leg", "segments"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2021,11 +1576,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "nervous-system",
-        "ganglia"
-      ],
+      "tags": ["cockroach", "nervous-system", "ganglia"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2047,11 +1598,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "mouthparts",
-        "sequence"
-      ],
+      "tags": ["cockroach", "mouthparts", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2073,11 +1620,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "development",
-        "incomplete-metamorphosis"
-      ],
+      "tags": ["cockroach", "development", "incomplete-metamorphosis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2099,11 +1642,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "earthworm",
-        "body-wall",
-        "layers"
-      ],
+      "tags": ["earthworm", "body-wall", "layers"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2114,22 +1653,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "The hepatic portal system in frog carries blood from:",
-      "options": [
-        "Liver to heart",
-        "Kidneys to liver",
-        "Heart to liver",
-        "Intestine to liver"
-      ],
+      "options": ["Liver to heart", "Kidneys to liver", "Heart to liver", "Intestine to liver"],
       "correctAnswer": "D",
       "explanation": "The hepatic portal system in frog carries nutrient-rich blood from the intestine (alimentary canal) to the liver via the hepatic portal vein. This allows the liver to process nutrients before they enter general circulation.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "frog",
-        "hepatic-portal-system",
-        "circulation"
-      ],
+      "tags": ["frog", "hepatic-portal-system", "circulation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2140,21 +1670,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "Transitional epithelium is found in:",
-      "options": [
-        "Trachea",
-        "Urinary bladder",
-        "Intestine",
-        "Blood vessels"
-      ],
+      "options": ["Trachea", "Urinary bladder", "Intestine", "Blood vessels"],
       "correctAnswer": "B",
       "explanation": "Transitional epithelium (urothelium) is a type of stratified epithelium found lining the urinary bladder, ureters, and renal pelvis. It can stretch to accommodate changes in volume of the organ.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "epithelial-tissue",
-        "transitional"
-      ],
+      "tags": ["epithelial-tissue", "transitional"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2176,10 +1698,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "fat-body"
-      ],
+      "tags": ["cockroach", "fat-body"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2190,22 +1709,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "In frog, the tympanic membrane is associated with:",
-      "options": [
-        "Hearing",
-        "Balance",
-        "Vision",
-        "Olfaction"
-      ],
+      "options": ["Hearing", "Balance", "Vision", "Olfaction"],
       "correctAnswer": "A",
       "explanation": "The tympanic membrane (tympanum/eardrum) in frog is a circular disc-like membrane that receives sound vibrations and transmits them to the inner ear through the columella (stapes). It is located behind each eye.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "frog",
-        "tympanum",
-        "hearing"
-      ],
+      "tags": ["frog", "tympanum", "hearing"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2216,22 +1726,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "Chondrocytes are found in:",
-      "options": [
-        "Blood",
-        "Tendon",
-        "Bone",
-        "Cartilage"
-      ],
+      "options": ["Blood", "Tendon", "Bone", "Cartilage"],
       "correctAnswer": "D",
       "explanation": "Chondrocytes are the cells of cartilage. They are enclosed in small spaces called lacunae within the matrix of chondroitin sulphate. Cartilage is semi-rigid and provides support and flexibility.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "connective-tissue",
-        "cartilage",
-        "chondrocytes"
-      ],
+      "tags": ["connective-tissue", "cartilage", "chondrocytes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2253,11 +1754,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "gizzard",
-        "chitinous-plates"
-      ],
+      "tags": ["cockroach", "gizzard", "chitinous-plates"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2279,10 +1776,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "connective-tissue",
-        "areolar-tissue"
-      ],
+      "tags": ["connective-tissue", "areolar-tissue"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2293,22 +1787,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "In earthworm, the blood vascular system is:",
-      "options": [
-        "Closed type",
-        "Open type",
-        "Partially open",
-        "Absent"
-      ],
+      "options": ["Closed type", "Open type", "Partially open", "Absent"],
       "correctAnswer": "A",
       "explanation": "Earthworm has a closed circulatory system, meaning blood flows in closed blood vessels. It has a dorsal blood vessel (carrying blood anteriorly), ventral vessel (carrying blood posteriorly), and 4 pairs of 'hearts' (lateral hearts in segments 7, 9, 12, 13).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "earthworm",
-        "circulatory-system",
-        "closed-type"
-      ],
+      "tags": ["earthworm", "circulatory-system", "closed-type"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2319,22 +1804,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "Which structure in cockroach stores food temporarily?",
-      "options": [
-        "Gizzard",
-        "Crop",
-        "Rectum",
-        "Midgut"
-      ],
+      "options": ["Gizzard", "Crop", "Rectum", "Midgut"],
       "correctAnswer": "B",
       "explanation": "The crop is a thin-walled, sac-like structure in the foregut of cockroach that temporarily stores food. The food is then passed to the gizzard for grinding.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "crop",
-        "digestive-system"
-      ],
+      "tags": ["cockroach", "crop", "digestive-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2356,10 +1832,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "connective-tissue",
-        "bone"
-      ],
+      "tags": ["connective-tissue", "bone"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2381,11 +1854,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "metamorphosis",
-        "development"
-      ],
+      "tags": ["cockroach", "metamorphosis", "development"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2396,21 +1865,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "How many of the following statements about cartilage are correct?\n(i) Cartilage has a solid but pliable matrix.\n(ii) Chondrocytes are enclosed in lacunae.\n(iii) Cartilage has abundant blood supply.\n(iv) Cartilage is found in the nose tip, ear pinna, and tracheal rings.",
-      "options": [
-        "Three",
-        "Four",
-        "Two",
-        "One"
-      ],
+      "options": ["Three", "Four", "Two", "One"],
       "correctAnswer": "A",
       "explanation": "Statements (i), (ii), and (iv) are correct. Statement (iii) is incorrect because cartilage is avascular (lacks blood supply); it receives nutrients by diffusion. This is why cartilage injuries heal slowly.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "connective-tissue",
-        "cartilage"
-      ],
+      "tags": ["connective-tissue", "cartilage"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2421,22 +1882,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "Which of the following statements about the tracheal system of cockroach is correct?\n(i) Air enters through spiracles.\n(ii) The tracheal tubes branch into tracheoles.\n(iii) Tracheoles carry oxygen directly to the tissues.\n(iv) Blood carries oxygen from tracheae to tissues.",
-      "options": [
-        "(iv) only",
-        "(i), (ii) and (iii) only",
-        "All four",
-        "(i) and (ii) only"
-      ],
+      "options": ["(iv) only", "(i), (ii) and (iii) only", "All four", "(i) and (ii) only"],
       "correctAnswer": "B",
       "explanation": "Statements (i), (ii), and (iii) are correct. Statement (iv) is incorrect because in cockroach, the tracheal system directly delivers oxygen to the tissues through tracheoles. Blood (haemolymph) does not carry oxygen.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "tracheal-system",
-        "respiration"
-      ],
+      "tags": ["cockroach", "tracheal-system", "respiration"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2458,10 +1910,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "frog",
-        "organ-systems"
-      ],
+      "tags": ["frog", "organ-systems"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2472,21 +1921,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "Match the following types of glandular epithelium:\nColumn I: (a) Unicellular gland (b) Multicellular exocrine (c) Endocrine gland\nColumn II: (i) Secrete hormones into blood (ii) Goblet cells (iii) Salivary glands",
-      "options": [
-        "a-iii, b-ii, c-i",
-        "a-ii, b-i, c-iii",
-        "a-i, b-iii, c-ii",
-        "a-ii, b-iii, c-i"
-      ],
+      "options": ["a-iii, b-ii, c-i", "a-ii, b-i, c-iii", "a-i, b-iii, c-ii", "a-ii, b-iii, c-i"],
       "correctAnswer": "D",
       "explanation": "Goblet cells are unicellular glands. Salivary glands are multicellular exocrine glands (secrete via ducts). Endocrine glands secrete hormones directly into blood (ductless).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "epithelial-tissue",
-        "glands"
-      ],
+      "tags": ["epithelial-tissue", "glands"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2497,21 +1938,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "How many pairs of spermathecae are present in earthworm?",
-      "options": [
-        "Five",
-        "Four",
-        "Two",
-        "Three"
-      ],
+      "options": ["Five", "Four", "Two", "Three"],
       "correctAnswer": "B",
       "explanation": "Earthworm has four pairs of spermathecae, located in segments 6-7, 7-8, 8-9, and 9-10. They receive and store spermatozoa from the partner during copulation.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "earthworm",
-        "spermathecae"
-      ],
+      "tags": ["earthworm", "spermathecae"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2533,11 +1966,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cockroach",
-        "tracheal-system",
-        "air-pathway"
-      ],
+      "tags": ["cockroach", "tracheal-system", "air-pathway"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2548,21 +1977,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Structural Organisation in Animals",
       "question": "The type of coelom present in earthworm is:",
-      "options": [
-        "Pseudocoelom",
-        "True coelom (schizocoel)",
-        "Haemocoel",
-        "Acoelom"
-      ],
+      "options": ["Pseudocoelom", "True coelom (schizocoel)", "Haemocoel", "Acoelom"],
       "correctAnswer": "B",
       "explanation": "Earthworm is a true coelomate. The coelom is a body cavity lined by mesoderm on both sides (schizocoelous type). The coelomic fluid serves in locomotion and provides a hydrostatic skeleton.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "earthworm",
-        "coelom"
-      ],
+      "tags": ["earthworm", "coelom"],
       "neetWeightage": "MEDIUM"
     }
   ]

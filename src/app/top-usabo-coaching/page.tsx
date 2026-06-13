@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Top 5 USABO Coaching / Coaches USA 2026 | Honest Ranking',
-    description: 'Honest 2026 ranking of the top USABO (USA Biology Olympiad) coaching. Cerebrum #1 with documented Open / Semifinal / National Finals qualifiers and Campbell + CSO + research-paper integration.',
+    description:
+      'Honest 2026 ranking of the top USABO (USA Biology Olympiad) coaching. Cerebrum #1 with documented Open / Semifinal / National Finals qualifiers and Campbell + CSO + research-paper integration.',
   },
 }
 

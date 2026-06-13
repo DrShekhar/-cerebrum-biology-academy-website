@@ -144,7 +144,7 @@
 
   "display_override": ["window-controls-overlay", "minimal-ui", "standalone"],
   "prefer_related_applications": false,
-  
+
   "protocol_handlers": [
     {
       "protocol": "mailto",

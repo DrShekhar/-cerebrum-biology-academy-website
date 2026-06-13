@@ -8,9 +8,7 @@ export default function Portal() {
     <div className="min-h-screen bg-gradient-to-br from-primary-50 via-primary-100 to-indigo-100 flex items-center justify-center p-4">
       <div className="max-w-4xl w-full">
         {/* Header */}
-        <div
-          className="text-center mb-12 animate-fadeInUp"
-        >
+        <div className="text-center mb-12 animate-fadeInUp">
           <div className="w-20 h-20 bg-gradient-to-r from-primary-600 to-purple-600 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg">
             <BookOpen className="w-10 h-10 text-white" />
           </div>
@@ -22,8 +20,7 @@ export default function Portal() {
         {/* Portal Cards */}
         <div className="grid md:grid-cols-2 gap-6">
           {/* Admin Portal Card */}
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <Link href="/admin/login">
               <div className="bg-white rounded-3xl shadow-2xl p-8 hover:shadow-3xl transition-all duration-300 cursor-pointer group h-full">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -56,8 +53,7 @@ export default function Portal() {
           </div>
 
           {/* Counselor Portal Card */}
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <Link href="/counselor/login">
               <div className="bg-white rounded-3xl shadow-2xl p-8 hover:shadow-3xl transition-all duration-300 cursor-pointer group h-full">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -92,9 +88,7 @@ export default function Portal() {
         </div>
 
         {/* Back to Home Link */}
-        <div
-          className="text-center mt-8 animate-fadeInUp"
-        >
+        <div className="text-center mt-8 animate-fadeInUp">
           <Link
             href="/"
             className="text-gray-600 hover:text-gray-900 transition-colors duration-300 font-medium inline-flex items-center"
@@ -105,9 +99,7 @@ export default function Portal() {
         </div>
 
         {/* Security Notice */}
-        <div
-          className="mt-8 p-6 bg-white rounded-2xl shadow-lg animate-fadeInUp"
-        >
+        <div className="mt-8 p-6 bg-white rounded-2xl shadow-lg animate-fadeInUp">
           <div className="flex items-start">
             <Shield className="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" />
             <div className="text-sm text-gray-700">

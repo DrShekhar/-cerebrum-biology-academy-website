@@ -27,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Parents Guide to NEET Coaching in Delhi 2026 | What to Know',
-    description: 'Complete parents guide to NEET coaching in Delhi. How to choose an institute, red flags to avoid, fee benchmarks, mental-health tips, and how to support your child. WhatsApp 88264-44334.',
+    description:
+      'Complete parents guide to NEET coaching in Delhi. How to choose an institute, red flags to avoid, fee benchmarks, mental-health tips, and how to support your child. WhatsApp 88264-44334.',
   },
 }
 
@@ -50,7 +51,8 @@ export default function ParentsGuideDelhiPage() {
           cityShortAside:
             'Our South Extension (Green Park) and Rohini centres serve Delhi families across South, Central, and North Delhi — most students reach within 25 minutes by metro.',
           cityFaq: {
-            question: 'Should I pick a Delhi coaching or look at NCR options like Gurugram or Noida?',
+            question:
+              'Should I pick a Delhi coaching or look at NCR options like Gurugram or Noida?',
             answer:
               "Delhi has the deepest faculty bench and the largest peer cohort. NCR centres (Gurugram, Noida, Faridabad) work well only if your home is in that micro-market — daily inter-city commutes drain a child's energy and study hours. If you live in South Delhi, our South Extension centre is the right pick; if North Delhi, Rohini. We also run online + hybrid batches for families who prefer to skip the commute entirely.",
           },

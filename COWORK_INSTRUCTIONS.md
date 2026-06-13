@@ -15,6 +15,7 @@ git pull origin cowork
 ## What to Work On (Cowork Branch)
 
 ✅ **YES - Work on these:**
+
 - New features (enrollment pages, dashboards, etc.)
 - UI/UX improvements
 - Component development (`src/components/`)
@@ -25,6 +26,7 @@ git pull origin cowork
 - Authentication updates
 
 ❌ **NO - Don't touch these:**
+
 - Blog content (`content/blog/`)
 - Blog images (`public/blog/`)
 - SEO optimization (handled in Terminal/CLI)
@@ -62,6 +64,7 @@ git push origin cowork
 ## Deployment
 
 **When ready to deploy:**
+
 1. Test thoroughly on Vercel preview URL
 2. Coordinate with Terminal/CLI session
 3. Deploy on Friday 9 PM IST (or discuss timing)
@@ -89,21 +92,25 @@ git checkout cowork
 ## Quick Reference
 
 **Check branch:**
+
 ```bash
 git branch
 ```
 
 **Switch to cowork:**
+
 ```bash
 git checkout cowork
 ```
 
 **See what changed:**
+
 ```bash
 git diff main..cowork
 ```
 
 **Sync with production:**
+
 ```bash
 git pull origin main
 ```

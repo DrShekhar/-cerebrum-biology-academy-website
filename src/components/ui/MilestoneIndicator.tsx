@@ -83,9 +83,7 @@ export function MilestoneIndicator({
 
       <div className="relative">
         <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div
-            className={`h-full bg-gradient-to-r ${selectedColor.gradient} rounded-full`}
-          />
+          <div className={`h-full bg-gradient-to-r ${selectedColor.gradient} rounded-full`} />
         </div>
 
         <div className="relative mt-6 flex justify-between">
@@ -107,16 +105,14 @@ export function MilestoneIndicator({
               >
                 <div className="relative -top-[34px]">
                   {isAchieved ? (
-                    <div
-                     className="animate-fadeInUp">
+                    <div className="animate-fadeInUp">
                       <CheckCircle
                         className={`w-6 h-6 ${selectedColor.text} ${selectedColor.bg} rounded-full`}
                         fill="white"
                       />
                     </div>
                   ) : isCurrent ? (
-                    <div
-                     className="animate-fadeInUp">
+                    <div className="animate-fadeInUp">
                       <Target className={`w-6 h-6 ${selectedColor.text}`} />
                     </div>
                   ) : (

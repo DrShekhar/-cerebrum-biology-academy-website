@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 10 in Ghaziabad | 2-Year Head Start',
-    description: 'NEET Foundation for Class 10 students in Ghaziabad. 2-year head start, 40% NEET syllabus overlap with boards. Expert faculty at Sector 62 Noida center, accessible via Blue Line Metro.',
+    description:
+      'NEET Foundation for Class 10 students in Ghaziabad. 2-year head start, 40% NEET syllabus overlap with boards. Expert faculty at Sector 62 Noida center, accessible via Blue Line Metro.',
   },
 }
 
@@ -118,7 +119,11 @@ export default function NEETFoundationClass10GhaziabadPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+        knowsAbout={[
+          'NEET Ghaziabad',
+          'NEET Biology Ghaziabad',
+          'Medical entrance coaching Ghaziabad',
+        ]}
       />
       <script
         type="application/ld+json"

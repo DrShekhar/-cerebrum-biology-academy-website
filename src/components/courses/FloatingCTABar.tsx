@@ -92,7 +92,13 @@ export function FloatingCTABar({ course }: FloatingCTABarProps) {
               size="sm"
               variant="outline"
               className="hidden sm:flex items-center gap-2 border-blue-600 text-blue-600 hover:bg-blue-50"
-              onClick={() => trackAndOpenWhatsApp({ source: 'floating-demo-' + course.id, message: 'Hi! I want to book a FREE demo class for ' + course.name + '.', campaign: 'floating-demo' })}
+              onClick={() =>
+                trackAndOpenWhatsApp({
+                  source: 'floating-demo-' + course.id,
+                  message: 'Hi! I want to book a FREE demo class for ' + course.name + '.',
+                  campaign: 'floating-demo',
+                })
+              }
             >
               <Play className="h-4 w-4" />
               Demo Class
@@ -148,7 +154,6 @@ Please share:
           </div>
         </div>
       </div>
-
     </div>
   )
 }

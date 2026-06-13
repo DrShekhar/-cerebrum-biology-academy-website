@@ -238,31 +238,23 @@ export function CourseFinder({
         className={`bg-gradient-to-br from-green-50 to-blue-50 border border-green-200 rounded-3xl p-8 ${className}`}
       >
         <div className="text-center mb-8">
-          <div
-            className="inline-flex items-center gap-3 bg-green-100 text-green-800 px-6 py-3 rounded-full mb-6 animate-fadeInUp"
-          >
+          <div className="inline-flex items-center gap-3 bg-green-100 text-green-800 px-6 py-3 rounded-full mb-6 animate-fadeInUp">
             <CheckCircle className="h-6 w-6" />
             <span className="font-bold">Perfect Match Found!</span>
           </div>
 
-          <h2
-            className="text-3xl font-bold text-gray-900 mb-4 animate-fadeInUp"
-          >
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 animate-fadeInUp">
             Recommended Course for You
           </h2>
 
-          <p
-            className="text-gray-600 max-w-2xl mx-auto animate-fadeInUp"
-          >
+          <p className="text-gray-600 max-w-2xl mx-auto animate-fadeInUp">
             Based on your preferences, we've found the perfect course that matches your academic
             goals and learning style
           </p>
         </div>
 
         {/* Course Recommendation Card */}
-        <div
-          className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 mb-8 animate-fadeInUp"
-        >
+        <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 mb-8 animate-fadeInUp">
           <div className="flex items-start gap-6 mb-6">
             <div className="text-5xl">
               {recommendedCourse.series === 'Foundation'
@@ -366,9 +358,7 @@ export function CourseFinder({
         </div>
 
         {/* Action Buttons */}
-        <div
-          className="flex flex-col sm:flex-row gap-4 animate-fadeInUp"
-        >
+        <div className="flex flex-col sm:flex-row gap-4 animate-fadeInUp">
           <button
             onClick={() => onCourseRecommended?.(recommendedCourse)}
             className="flex-1 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
@@ -426,9 +416,7 @@ export function CourseFinder({
 
         {/* Progress Bar */}
         <div className="w-full bg-white/20 rounded-full h-2">
-          <div
-            className="bg-white rounded-full h-2 animate-fadeInUp"
-          />
+          <div className="bg-white rounded-full h-2 animate-fadeInUp" />
         </div>
         <div className="text-right text-sm text-blue-100 mt-1">
           {Math.round(progressPercentage)}% complete
@@ -437,61 +425,57 @@ export function CourseFinder({
 
       {/* Question Content */}
       <div className="p-8">
-<div
-            key={currentStep}
-           className="animate-fadeInUp">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">{currentQuestion.title}</h3>
-              <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                {currentQuestion.subtitle}
-              </p>
-            </div>
-
-            {/* Options */}
-            <div className="grid gap-4 max-w-3xl mx-auto">
-              {currentQuestion.options.map((option, index) => (
-                <button
-                  key={option.value}
-                  onClick={() => handleAnswer(option.value, option.label)}
-                  className={`group relative bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-2xl p-6 text-left transition-all duration-300 ${
-                    selectedOption === option.value
-                      ? 'bg-blue-50 border-blue-400 scale-[0.98]'
-                      : 'hover:scale-[1.02]'
-                  }`}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="text-3xl flex-shrink-0">{option.icon}</div>
-                    <div className="flex-1">
-                      <h4 className="font-bold text-gray-900 mb-2 group-hover:text-blue-900 transition-colors">
-                        {option.label}
-                      </h4>
-                      <p className="text-gray-600 mb-3 leading-relaxed">{option.description}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {option.benefits.map((benefit, idx) => (
-                          <span
-                            key={idx}
-                            className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full"
-                          >
-                            {benefit}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
-                  </div>
-
-                  {selectedOption === option.value && (
-                    <div
-                      className="absolute top-4 right-4 bg-blue-600 text-white rounded-full p-1 animate-fadeInUp"
-                    >
-                      <CheckCircle className="h-4 w-4" />
-                    </div>
-                  )}
-                </button>
-              ))}
-            </div>
+        <div key={currentStep} className="animate-fadeInUp">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">{currentQuestion.title}</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              {currentQuestion.subtitle}
+            </p>
           </div>
-</div>
+
+          {/* Options */}
+          <div className="grid gap-4 max-w-3xl mx-auto">
+            {currentQuestion.options.map((option, index) => (
+              <button
+                key={option.value}
+                onClick={() => handleAnswer(option.value, option.label)}
+                className={`group relative bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-2xl p-6 text-left transition-all duration-300 ${
+                  selectedOption === option.value
+                    ? 'bg-blue-50 border-blue-400 scale-[0.98]'
+                    : 'hover:scale-[1.02]'
+                }`}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl flex-shrink-0">{option.icon}</div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-gray-900 mb-2 group-hover:text-blue-900 transition-colors">
+                      {option.label}
+                    </h4>
+                    <p className="text-gray-600 mb-3 leading-relaxed">{option.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {option.benefits.map((benefit, idx) => (
+                        <span
+                          key={idx}
+                          className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full"
+                        >
+                          {benefit}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+                </div>
+
+                {selectedOption === option.value && (
+                  <div className="absolute top-4 right-4 bg-blue-600 text-white rounded-full p-1 animate-fadeInUp">
+                    <CheckCircle className="h-4 w-4" />
+                  </div>
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

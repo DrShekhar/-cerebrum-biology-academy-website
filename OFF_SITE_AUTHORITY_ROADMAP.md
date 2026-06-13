@@ -6,14 +6,14 @@ Last measured: May 21, 2026. Re-measure quarterly.
 
 ## Current state (measured via WebSearch, May 21, 2026)
 
-| Vertical | Current AI/SERP state | Top dominators (must displace or join) |
-|---|---|---|
-| NEET Biology | ✅ Dr. Shekhar #1 with name in query | biologyforneetug.com (verify ownership), Cerebrum |
-| Biology Olympiad (INBO/IBO/USABO) | ✅ Cerebrum #1 organic | Cerebrum, Biolympiads, Vedantu |
-| **IB Biology** | ❌ Cerebrum absent | IB Elite Tutor, Baccalaureate Classes, IB Teach, Advika Institute |
-| **AP Biology** | ❌ Cerebrum absent | TeacherOn, MEB, Wyzant, Varsity Tutors |
-| **CBSE Class 12** | ❌ Cerebrum absent | PW, BYJU'S, Misostudy, AhaGuru, Ignescent Gurukul, Top Notch Tutorials |
-| **CBSE Class 11** | ❌ Cerebrum absent | TeacherOn, Adda247 (Shivani Aggarwal), Unacademy, LearnoHub |
+| Vertical                          | Current AI/SERP state                | Top dominators (must displace or join)                                 |
+| --------------------------------- | ------------------------------------ | ---------------------------------------------------------------------- |
+| NEET Biology                      | ✅ Dr. Shekhar #1 with name in query | biologyforneetug.com (verify ownership), Cerebrum                      |
+| Biology Olympiad (INBO/IBO/USABO) | ✅ Cerebrum #1 organic               | Cerebrum, Biolympiads, Vedantu                                         |
+| **IB Biology**                    | ❌ Cerebrum absent                   | IB Elite Tutor, Baccalaureate Classes, IB Teach, Advika Institute      |
+| **AP Biology**                    | ❌ Cerebrum absent                   | TeacherOn, MEB, Wyzant, Varsity Tutors                                 |
+| **CBSE Class 12**                 | ❌ Cerebrum absent                   | PW, BYJU'S, Misostudy, AhaGuru, Ignescent Gurukul, Top Notch Tutorials |
+| **CBSE Class 11**                 | ❌ Cerebrum absent                   | TeacherOn, Adda247 (Shivani Aggarwal), Unacademy, LearnoHub            |
 
 **Score: 2 of 6 verticals satisfied. On-site code work cannot move the other 4.**
 
@@ -22,6 +22,7 @@ Last measured: May 21, 2026. Re-measure quarterly.
 ## Why on-site work cannot fix the 4 failing verticals
 
 The failing verticals are dominated by:
+
 - **Aggregator platforms** (TeacherOn, Wyzant, Varsity Tutors, IB Elite Tutor) — DA 70-90+
 - **EdTech giants** (PW, BYJU'S, Unacademy, Adda247) — DA 80-85+
 - **Listicle/comparison sites** with curated rankings
@@ -99,6 +100,7 @@ Each piece creates a high-DA backlink and provides a third-party citation Wikipe
 LearnoHub ranks for CBSE Class 11 with 9,000+ videos. Cerebrum needs comparable scale.
 
 Target output (per vertical):
+
 - [ ] 50 NEET Biology concept videos
 - [ ] 50 CBSE Class 11 chapter walkthroughs (NCERT)
 - [ ] 50 CBSE Class 12 chapter walkthroughs (NCERT)
@@ -113,6 +115,7 @@ Total: ~240 videos. AI engines train on YouTube transcripts; Google's video caro
 Requires Tier 3 PR placements as the citation foundation. Without ~5 independent reliable-source mentions, a Wikipedia article on Dr. Shekhar Singh fails notability review and gets speedy-deleted.
 
 Sequence:
+
 1. Wait for Tier 3 to produce 5+ press placements
 2. Wikidata entry first (lower bar)
 3. Wikipedia article draft with proper citations
@@ -125,6 +128,7 @@ Sequence:
 Quora answers rank on Google AND feed AI training data.
 
 Target questions (search Quora):
+
 - "Who is the best NEET Biology teacher in India?"
 - "Best IB Biology tutor in India?"
 - "Best AP Biology tutor in India?"
@@ -139,6 +143,7 @@ Goal: 100+ answers over 60 days under a verified handle. Each answer should be e
 ## Tier 7 — Reddit organic presence
 
 Subreddits to engage:
+
 - r/NEET (250K+ members)
 - r/IBO (IB students)
 - r/APStudents (AP students)
@@ -171,7 +176,7 @@ For reference — these are the on-site moves shipped by the May 2026 cross-vert
 - ✅ Comparison page `/top-biology-faculty-india-2026` (ItemList schema, Dr. Shekhar at position 1)
 - ✅ Awards & credentials page `/dr-shekhar-singh-awards-credentials`
 - ✅ CerebrumPersonSchema: 33 knowsAbout entries, 10 sameAs, 8 awards, hasOccupation, Speakable
-- ✅ Person schema propagated to 30+ hub pages (master + /about + /faculty + /faq + 20 best-* via template + 5 CBSE/ICSE/NEET pages)
+- ✅ Person schema propagated to 30+ hub pages (master + /about + /faculty + /faq + 20 best-\* via template + 5 CBSE/ICSE/NEET pages)
 - ✅ llms.txt: 6 vertical-specific Q&A canonical blocks + citation URLs
 - ✅ ai.txt: top-of-file canonical answer block
 - ✅ humans.txt: cross-vertical role line

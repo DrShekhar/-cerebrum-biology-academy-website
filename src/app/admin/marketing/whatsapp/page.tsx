@@ -208,7 +208,10 @@ export default function WhatsAppAnalyticsPage() {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Top Pages</h3>
               <div className="space-y-3">
                 {(data.topPages || []).slice(0, 10).map((page, i) => (
-                  <div key={i} className="flex items-center justify-between py-2 border-b border-gray-100 last:border-0">
+                  <div
+                    key={i}
+                    className="flex items-center justify-between py-2 border-b border-gray-100 last:border-0"
+                  >
                     <div className="flex items-center space-x-2">
                       <ExternalLink className="w-4 h-4 text-gray-400" />
                       <span className="text-sm text-gray-700 truncate max-w-[400px]">

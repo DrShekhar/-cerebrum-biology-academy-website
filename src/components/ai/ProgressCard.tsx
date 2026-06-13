@@ -149,34 +149,22 @@ export function ProgressCard({
         boxShadow: '0 8px 32px rgba(79, 70, 229, 0.12)',
       }}
     >
-      <div
-        className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br opacity-20 rounded-full blur-3xl -mr-16 -mt-16 animate-fadeInUp"
-      />
+      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br opacity-20 rounded-full blur-3xl -mr-16 -mt-16 animate-fadeInUp" />
 
       {isCelebrating && (
-        <div
-          className="absolute inset-0 flex items-center justify-center pointer-events-none animate-fadeInUp"
-        >
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none animate-fadeInUp">
           <Sparkles className={`w-12 h-12 text-yellow-400`} />
         </div>
       )}
 
       <div className="relative z-10">
-        <div
-          className="flex items-start justify-between mb-4 sm:mb-6 lg:mb-8 animate-fadeInUp"
-        >
+        <div className="flex items-start justify-between mb-4 sm:mb-6 lg:mb-8 animate-fadeInUp">
           <div className="flex-1 min-w-0 pr-3 sm:pr-4">
-            <h3
-              className="text-base sm:text-lg lg:text-xl font-semibold text-gray-800 mb-1 sm:mb-2 animate-fadeInUp"
-            >
+            <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-800 mb-1 sm:mb-2 animate-fadeInUp">
               {title}
             </h3>
             {subtitle && (
-              <p
-                className="text-xs sm:text-sm text-gray-600 animate-fadeInUp"
-              >
-                {subtitle}
-              </p>
+              <p className="text-xs sm:text-sm text-gray-600 animate-fadeInUp">{subtitle}</p>
             )}
           </div>
 
@@ -187,9 +175,7 @@ export function ProgressCard({
           </div>
         </div>
 
-        <div
-          className="flex items-center justify-between mb-4 sm:mb-6 lg:mb-8 animate-fadeInUp"
-        >
+        <div className="flex items-center justify-between mb-4 sm:mb-6 lg:mb-8 animate-fadeInUp">
           <div className="flex-1 min-w-0">
             <div className="flex items-baseline space-x-1 sm:space-x-2">
               <AnimatedCounter
@@ -198,20 +184,15 @@ export function ProgressCard({
                 formatLargeNumbers={variant === 'study-hours'}
               />
               {maxValue > 0 && variant !== 'streak' && (
-                <span
-                  className="text-base sm:text-lg lg:text-xl text-gray-500 animate-fadeInUp"
-                >
+                <span className="text-base sm:text-lg lg:text-xl text-gray-500 animate-fadeInUp">
                   / {maxValue}
                 </span>
               )}
             </div>
 
             {change && (
-              <div
-                className="flex items-center mt-2 sm:mt-3 animate-fadeInUp"
-              >
-                <div
-                 className="animate-fadeInUp">
+              <div className="flex items-center mt-2 sm:mt-3 animate-fadeInUp">
+                <div className="animate-fadeInUp">
                   <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 mr-1" />
                 </div>
                 <span className="text-xs sm:text-sm text-green-600 font-medium">{change}</span>
@@ -220,11 +201,8 @@ export function ProgressCard({
             )}
 
             {variant === 'streak' && streak !== undefined && (
-              <div
-                className="mt-2 sm:mt-3 inline-flex items-center space-x-1 sm:space-x-1.5 bg-orange-100 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full animate-fadeInUp"
-              >
-                <div
-                 className="animate-fadeInUp">
+              <div className="mt-2 sm:mt-3 inline-flex items-center space-x-1 sm:space-x-1.5 bg-orange-100 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full animate-fadeInUp">
+                <div className="animate-fadeInUp">
                   <Flame className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-orange-500" />
                 </div>
                 <span className="text-xs sm:text-sm font-bold text-orange-700">
@@ -234,9 +212,7 @@ export function ProgressCard({
             )}
           </div>
 
-          <div
-            className="ml-3 sm:ml-4 lg:ml-6 flex-shrink-0 animate-fadeInUp"
-          >
+          <div className="ml-3 sm:ml-4 lg:ml-6 flex-shrink-0 animate-fadeInUp">
             <ProgressRing
               value={value}
               max={maxValue}
@@ -250,9 +226,7 @@ export function ProgressCard({
         </div>
 
         {showMilestones && milestones && milestones.length > 0 && (
-          <div
-            className="mt-4 sm:mt-6 pt-4 sm:pt-5 border-t border-gray-200 animate-fadeInUp"
-          >
+          <div className="mt-4 sm:mt-6 pt-4 sm:pt-5 border-t border-gray-200 animate-fadeInUp">
             <MilestoneIndicator
               current={value}
               milestones={milestones}

@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'RE-NEET 2026 Coaching in Kota | Online Crash Course — No Relocation',
-    description: 'RE-NEET 2026 coaching for Kota students after the 12 May NEET cancellation. Online biology-only AIIMS-trained crash course — no need to keep paying hostel + mess for the reconduct window. 6–8 week ...',
+    description:
+      'RE-NEET 2026 coaching for Kota students after the 12 May NEET cancellation. Online biology-only AIIMS-trained crash course — no need to keep paying hostel + mess for the reconduct window. 6–8 week ...',
   },
 }
 

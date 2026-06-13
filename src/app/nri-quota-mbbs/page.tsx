@@ -33,7 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NRI Quota MBBS in India 2026 | NEET-UG Pathway for NRI/OCI Students',
-    description: 'NRI quota MBBS admission guide — 15% reserved seats at eligible Indian medical colleges. NEET-UG cutoffs, eligible colleges (deemed + private), application timeline, parent employment documentation...',
+    description:
+      'NRI quota MBBS admission guide — 15% reserved seats at eligible Indian medical colleges. NEET-UG cutoffs, eligible colleges (deemed + private), application timeline, parent employment documentation...',
   },
 }
 

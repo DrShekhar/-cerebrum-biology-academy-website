@@ -98,9 +98,7 @@ export function LiveStudentCount({
       <div
         className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-100 ${className}`}
       >
-        <div
-          className="w-2 h-2 rounded-full bg-green-500 animate-fadeInUp"
-        />
+        <div className="w-2 h-2 rounded-full bg-green-500 animate-fadeInUp" />
         <Users className="w-3.5 h-3.5 text-green-600" />
         <span className="text-sm font-semibold text-green-700">{displayCount}</span>
       </div>
@@ -111,9 +109,7 @@ export function LiveStudentCount({
   if (mode === 'obs' || mode === 'focus') {
     return (
       <div className={`flex items-center space-x-3 ${className}`}>
-        <div
-          className="w-3 h-3 rounded-full bg-green-500 animate-fadeInUp"
-        />
+        <div className="w-3 h-3 rounded-full bg-green-500 animate-fadeInUp" />
         <span className="text-2xl font-bold text-white">{displayCount}</span>
         <span className="text-lg text-gray-400">students studying</span>
       </div>
@@ -121,34 +117,25 @@ export function LiveStudentCount({
   }
 
   return (
-    <div
-      className={`bg-white rounded-xl shadow-xl p-5 ${className}`}
-    >
+    <div className={`bg-white rounded-xl shadow-xl p-5 ${className}`}>
       <div className="flex items-center space-x-4">
         {/* Animated Icon */}
         <div className="relative">
-          <div
-            className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center animate-fadeInUp"
-          >
+          <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center animate-fadeInUp">
             <Users className="w-6 h-6 text-green-600" />
           </div>
 
           {/* Live indicator */}
-          <span
-            className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-green-500 border-2 border-white animate-fadeInUp"
-          />
+          <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-green-500 border-2 border-white animate-fadeInUp" />
         </div>
 
         {/* Count and Text */}
         <div>
           <div className="flex items-baseline space-x-2">
-<span
-                key={displayCount}
-                className="text-3xl font-bold text-[#3d4d3d] animate-fadeInUp"
-              >
-                {displayCount}
-              </span>
-<span className="text-gray-600">students</span>
+            <span key={displayCount} className="text-3xl font-bold text-[#3d4d3d] animate-fadeInUp">
+              {displayCount}
+            </span>
+            <span className="text-gray-600">students</span>
           </div>
           <p className="text-sm text-gray-500">studying with you right now</p>
         </div>
@@ -156,9 +143,7 @@ export function LiveStudentCount({
 
       {/* Subtle activity bar */}
       <div className="mt-4 h-1 bg-gray-100 rounded-full overflow-hidden">
-        <div
-          className="h-full bg-gradient-to-r from-green-400 to-green-500 rounded-full animate-fadeInUp"
-        />
+        <div className="h-full bg-gradient-to-r from-green-400 to-green-500 rounded-full animate-fadeInUp" />
       </div>
     </div>
   )

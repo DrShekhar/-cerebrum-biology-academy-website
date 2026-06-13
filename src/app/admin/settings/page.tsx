@@ -104,9 +104,7 @@ export default function SettingsPage() {
         {/* Settings Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {settingsCards.map((card, index) => (
-            <div
-              key={card.id}
-             className="animate-fadeInUp">
+            <div key={card.id} className="animate-fadeInUp">
               <Link
                 href={card.href}
                 className="block bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-200 group"

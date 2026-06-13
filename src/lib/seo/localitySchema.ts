@@ -30,26 +30,6 @@ interface LocalBusinessSchema {
     name: string
   }>
   priceRange: string
-  aggregateRating?: {
-    '@type': string
-    ratingValue: string
-    bestRating: string
-    worstRating: string
-    ratingCount: string
-  }
-  review?: Array<{
-    '@type': string
-    author: {
-      '@type': string
-      name: string
-    }
-    reviewRating: {
-      '@type': string
-      ratingValue: string
-      bestRating: string
-    }
-    reviewBody: string
-  }>
 }
 
 interface FAQSchema {
@@ -149,19 +129,9 @@ export function generateLocalBusinessSchema(
       name: nearbySlug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
     })),
     priceRange: '₹40,000 - ₹1,80,000',
-    review: locality.socialProof.successStories.slice(0, 3).map((story, index) => ({
-      '@type': 'Review',
-      author: {
-        '@type': 'Person',
-        name: story.split(' ')[0], // Extract first name from success story
-      },
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '5',
-        bestRating: '5',
-      },
-      reviewBody: story,
-    })),
+    // review[] removed 2026-06: authors were fabricated (story.split(' ')[0]) with
+    // hardcoded ratingValue 5 — self-serving schema-only review markup violates
+    // Google's review snippet policy. Real reviews belong on the Google Business Profile.
   }
 }
 

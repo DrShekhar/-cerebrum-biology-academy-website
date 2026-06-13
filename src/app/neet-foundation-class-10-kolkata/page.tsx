@@ -36,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 10 in Kolkata | Madhyamik + ICSE + CBSE Parallel',
-    description: 'NEET Foundation Class 10 in Kolkata at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / West Bengal Board Madhyamik + NEET parallel. Ballygunge, Salt Lake,...',
+    description:
+      'NEET Foundation Class 10 in Kolkata at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / West Bengal Board Madhyamik + NEET parallel. Ballygunge, Salt Lake,...',
   },
 }
 

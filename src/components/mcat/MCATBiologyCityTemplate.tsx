@@ -38,9 +38,30 @@ function buildSchemas(metro: MCATMetroConfig) {
       courseWorkload: 'PT2H',
       location: { '@type': 'VirtualLocation', url: pageUrl },
       offers: [
-        { '@type': 'Offer', name: 'MCAT Bio/Biochem Self-Paced', price: '499', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: pageUrl },
-        { '@type': 'Offer', name: 'MCAT Bio/Biochem Small-Batch (4–6 students)', price: '999', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: pageUrl },
-        { '@type': 'Offer', name: 'MCAT Bio/Biochem 1:1 Senior Faculty', price: '1499', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: pageUrl },
+        {
+          '@type': 'Offer',
+          name: 'MCAT Bio/Biochem Self-Paced',
+          price: '499',
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+          url: pageUrl,
+        },
+        {
+          '@type': 'Offer',
+          name: 'MCAT Bio/Biochem Small-Batch (4–6 students)',
+          price: '999',
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+          url: pageUrl,
+        },
+        {
+          '@type': 'Offer',
+          name: 'MCAT Bio/Biochem 1:1 Senior Faculty',
+          price: '1499',
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+          url: pageUrl,
+        },
       ],
     },
   }
@@ -60,7 +81,12 @@ function buildSchemas(metro: MCATMetroConfig) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'MCAT Biology Preparation', item: `${SITE_URL}/mcat-biology-preparation` },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'MCAT Biology Preparation',
+        item: `${SITE_URL}/mcat-biology-preparation`,
+      },
       { '@type': 'ListItem', position: 3, name: metro.city, item: pageUrl },
     ],
   }
@@ -86,8 +112,20 @@ function buildSchemas(metro: MCATMetroConfig) {
     description: `AIIMS-trained biology educator specialising in MCAT Bio/Biochem preparation for ${metro.city} pre-med students. Campbell + Lehninger curriculum mapped to AAMC content categories.`,
     url: `${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`,
     image: `${SITE_URL}/images/dr-shekhar-singh.webp`,
-    affiliation: { '@type': 'EducationalOrganization', '@id': `${SITE_URL}/#organization`, name: 'Cerebrum Biology Academy' },
-    knowsAbout: ['MCAT Biology', 'MCAT Biochemistry', 'MCAT B/B Section', 'Campbell Biology', 'Lehninger Biochemistry', 'AAMC Content Categories', 'Pre-Medical Education'],
+    affiliation: {
+      '@type': 'EducationalOrganization',
+      '@id': `${SITE_URL}/#organization`,
+      name: 'Cerebrum Biology Academy',
+    },
+    knowsAbout: [
+      'MCAT Biology',
+      'MCAT Biochemistry',
+      'MCAT B/B Section',
+      'Campbell Biology',
+      'Lehninger Biochemistry',
+      'AAMC Content Categories',
+      'Pre-Medical Education',
+    ],
     sameAs: [`${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`],
   }
 
@@ -95,7 +133,8 @@ function buildSchemas(metro: MCATMetroConfig) {
 }
 
 export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroConfig }) {
-  const { courseSchema, faqSchema, breadcrumbSchema, speakableSchema, personSchema } = buildSchemas(metro)
+  const { courseSchema, faqSchema, breadcrumbSchema, speakableSchema, personSchema } =
+    buildSchemas(metro)
 
   const wa =
     'https://wa.me/918826444334?text=' +
@@ -105,18 +144,37 @@ export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroCon
 
   return (
     <main className="min-h-screen bg-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
 
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4">
           <nav className="text-sm text-slate-400 mb-6" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white">Home</Link>
+            <Link href="/" className="hover:text-white">
+              Home
+            </Link>
             <span className="mx-2">/</span>
-            <Link href="/mcat-biology-preparation" className="hover:text-white">MCAT Biology Preparation</Link>
+            <Link href="/mcat-biology-preparation" className="hover:text-white">
+              MCAT Biology Preparation
+            </Link>
             <span className="mx-2">/</span>
             <span className="text-white">{metro.city}</span>
           </nav>
@@ -186,8 +244,8 @@ export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroCon
           <p>
             <strong>Weekly small-batch sessions</strong> (4–6 students max, grouped by target band),
             2 hours each, plus monthly Bio/Biochem section mocks.{' '}
-            <strong>Ad-hoc 1:1 sessions</strong> at $135/hour for gap-fill — most {metro.city} students
-            book 6–10 of these in the final 6 weeks.
+            <strong>Ad-hoc 1:1 sessions</strong> at $135/hour for gap-fill — most {metro.city}{' '}
+            students book 6–10 of these in the final 6 weeks.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
@@ -200,14 +258,14 @@ export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroCon
               outline mapping, 300+ practice passages, recorded library, WhatsApp doubt support.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem — Ascent: $899</strong> for the full programme. Adds
-              weekly 2-hour live sessions, monthly section mocks, peer Slack channel, senior faculty
-              office hours.
+              <strong>MCAT Bio/Biochem — Ascent: $899</strong> for the full programme. Adds weekly
+              2-hour live sessions, monthly section mocks, peer Slack channel, senior faculty office
+              hours.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem — Pinnacle: $1,349</strong> for the full programme.
-              Adds weekly 90-minute 1:1 video sessions with AIIMS-trained senior faculty,
-              personalised study plan, custom passage drills, unlimited WhatsApp faculty access.
+              <strong>MCAT Bio/Biochem — Pinnacle: $1,349</strong> for the full programme. Adds
+              weekly 90-minute 1:1 video sessions with AIIMS-trained senior faculty, personalised
+              study plan, custom passage drills, unlimited WhatsApp faculty access.
             </li>
             <li>
               <strong>Ad-hoc 1:1 tutoring — $135/hour</strong> outside the packaged programme. For
@@ -219,7 +277,9 @@ export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroCon
 
       <section className="py-16 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">FAQs from {metro.city} families</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">
+            FAQs from {metro.city} families
+          </h2>
           <div className="space-y-6">
             {metro.faqs.map((f, i) => (
               <details key={i} className="bg-white rounded-xl p-6 border border-slate-200 group">
@@ -237,19 +297,31 @@ export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroCon
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Related Biology Programmes</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link href="/mcat-biology-preparation" className="block p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow transition">
+            <Link
+              href="/mcat-biology-preparation"
+              className="block p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow transition"
+            >
               <p className="font-semibold text-slate-900">MCAT Biology Hub</p>
               <p className="text-sm text-slate-500">Full programme overview</p>
             </Link>
-            <Link href="/best-mcat-biology-tutor" className="block p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow transition">
+            <Link
+              href="/best-mcat-biology-tutor"
+              className="block p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow transition"
+            >
               <p className="font-semibold text-slate-900">Best MCAT Biology Tutor</p>
               <p className="text-sm text-slate-500">Why Cerebrum for MCAT Bio</p>
             </Link>
-            <Link href="/usmle-step-1-biology-preparation" className="block p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow transition">
+            <Link
+              href="/usmle-step-1-biology-preparation"
+              className="block p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow transition"
+            >
               <p className="font-semibold text-slate-900">USMLE Step 1 Biology</p>
               <p className="text-sm text-slate-500">Post-MCAT medical licensing</p>
             </Link>
-            <Link href="/cerebrum-vs-kaplan-mcat" className="block p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow transition">
+            <Link
+              href="/cerebrum-vs-kaplan-mcat"
+              className="block p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow transition"
+            >
               <p className="font-semibold text-slate-900">Cerebrum vs Kaplan MCAT</p>
               <p className="text-sm text-slate-500">Specialist vs generalist</p>
             </Link>

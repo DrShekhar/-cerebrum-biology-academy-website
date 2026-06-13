@@ -36,17 +36,46 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     timezone: 'GMT (UTC+0)',
     istOffset: -5.5,
     indianCommunitySize: '~15,000 Indian-origin residents (long-standing business community)',
-    indianSchools: ['DPS International Ghana', 'Lincoln Community School Accra', 'Ghana International School', 'Cambridge International School', 'Tema International School', 'Galaxy International School'],
+    indianSchools: [
+      'DPS International Ghana',
+      'Lincoln Community School Accra',
+      'Ghana International School',
+      'Cambridge International School',
+      'Tema International School',
+      'Galaxy International School',
+    ],
     localBatchSlot: 'GMT 12:00 PM – 2:30 PM (IST 5:30 PM – 8:00 PM)',
-    pricingNote: 'NRI fees in USD: ~$1,800-3,600/year depending on tier. Sibling discounts available.',
+    pricingNote:
+      'NRI fees in USD: ~$1,800-3,600/year depending on tier. Sibling discounts available.',
     cityContext:
-      'Accra hosts one of West Africa\'s most established Indian business communities — generations of Gujarati and Sindhi families have built trading houses serving Ghana since the 1950s. Indian-origin teenagers preparing for NEET typically attend DPS International Ghana, Lincoln Community School, or Ghana International School, all of which use Cambridge IGCSE / A-Level frameworks. Direct NEET-aligned NCERT coaching is non-existent locally, making online live coaching from Cerebrum the only viable path to Indian medical college admissions. NRI quota at AIIMS, JIPMER, and select state colleges gives Accra-based Indian aspirants substantial competitive advantage.',
+      "Accra hosts one of West Africa's most established Indian business communities — generations of Gujarati and Sindhi families have built trading houses serving Ghana since the 1950s. Indian-origin teenagers preparing for NEET typically attend DPS International Ghana, Lincoln Community School, or Ghana International School, all of which use Cambridge IGCSE / A-Level frameworks. Direct NEET-aligned NCERT coaching is non-existent locally, making online live coaching from Cerebrum the only viable path to Indian medical college admissions. NRI quota at AIIMS, JIPMER, and select state colleges gives Accra-based Indian aspirants substantial competitive advantage.",
     faqs: [
-      { question: 'What NEET options does an Indian-origin Class 12 student in Accra have?', answer: 'Two paths: (1) NRI quota at AIIMS Delhi / JIPMER Puducherry / select state colleges (15% of seats reserved for NRIs at most colleges), (2) all-India NEET quota competing as any other Indian aspirant. We coach both — biology cut-off targets calibrated to which path you\'re aiming for.' },
-      { question: 'My child attends DPS International Ghana / Lincoln. Is there an IGCSE/A-Level + NEET clash?', answer: 'No — we run a parallel track. IGCSE / A-Level Biology is broader; NEET is NCERT-deep. Our Class 11-12 programme bridges from IGCSE / A-Level framing to NCERT line-by-line in the first 4-6 weeks. Students typically manage both syllabi.' },
-      { question: 'What\'s the time-zone schedule from Accra (GMT)?', answer: 'GMT 12:00 PM – 2:30 PM matches IST 5:30 PM – 8:00 PM (our India evening batch). 3 days a week + weekend tests. Recordings available for any session.' },
-      { question: 'How is study material shipped to Accra?', answer: 'DHL / FedEx tracked courier to Accra address. 10-14 days delivery. Customs duty (if any) is buyer-side per Ghana import regulations.' },
-      { question: 'How do we pay from Ghana — INR or USD?', answer: 'USD via international wire / TransferWise / SWIFT. We provide invoice in USD. EMI available 3/6/12 months.' },
+      {
+        question: 'What NEET options does an Indian-origin Class 12 student in Accra have?',
+        answer:
+          "Two paths: (1) NRI quota at AIIMS Delhi / JIPMER Puducherry / select state colleges (15% of seats reserved for NRIs at most colleges), (2) all-India NEET quota competing as any other Indian aspirant. We coach both — biology cut-off targets calibrated to which path you're aiming for.",
+      },
+      {
+        question:
+          'My child attends DPS International Ghana / Lincoln. Is there an IGCSE/A-Level + NEET clash?',
+        answer:
+          'No — we run a parallel track. IGCSE / A-Level Biology is broader; NEET is NCERT-deep. Our Class 11-12 programme bridges from IGCSE / A-Level framing to NCERT line-by-line in the first 4-6 weeks. Students typically manage both syllabi.',
+      },
+      {
+        question: "What's the time-zone schedule from Accra (GMT)?",
+        answer:
+          'GMT 12:00 PM – 2:30 PM matches IST 5:30 PM – 8:00 PM (our India evening batch). 3 days a week + weekend tests. Recordings available for any session.',
+      },
+      {
+        question: 'How is study material shipped to Accra?',
+        answer:
+          'DHL / FedEx tracked courier to Accra address. 10-14 days delivery. Customs duty (if any) is buyer-side per Ghana import regulations.',
+      },
+      {
+        question: 'How do we pay from Ghana — INR or USD?',
+        answer:
+          'USD via international wire / TransferWise / SWIFT. We provide invoice in USD. EMI available 3/6/12 months.',
+      },
     ],
   },
   'nairobi-kenya': {
@@ -56,18 +85,47 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'Africa',
     timezone: 'EAT (UTC+3)',
     istOffset: -2.5,
-    indianCommunitySize: '~80,000 Indian-origin residents (East Africa\'s largest Indian diaspora)',
-    indianSchools: ['Oshwal Academy Nairobi', 'Visa Oshwal Education', 'Premier Academy', 'Brookhouse School', 'Aga Khan Academy Nairobi', 'Hillcrest International School', 'Braeburn International School'],
+    indianCommunitySize: "~80,000 Indian-origin residents (East Africa's largest Indian diaspora)",
+    indianSchools: [
+      'Oshwal Academy Nairobi',
+      'Visa Oshwal Education',
+      'Premier Academy',
+      'Brookhouse School',
+      'Aga Khan Academy Nairobi',
+      'Hillcrest International School',
+      'Braeburn International School',
+    ],
     localBatchSlot: 'EAT 3:00 PM – 5:30 PM (IST 5:30 PM – 8:00 PM)',
-    pricingNote: 'NRI fees in USD: ~$1,800-3,600/year. Kenya-based families benefit from substantial sibling discounts.',
+    pricingNote:
+      'NRI fees in USD: ~$1,800-3,600/year. Kenya-based families benefit from substantial sibling discounts.',
     cityContext:
-      'Nairobi has East Africa\'s largest Indian-origin community — generations of Gujarati Patidar, Punjabi, Goan, and Sindhi families have lived in Kenya since pre-independence. Oshwal Academy, Visa Oshwal Education, and Premier Academy are the dominant feeders for Indian medical aspirants. Many Nairobi NEET students target NRI quota seats at AIIMS Delhi, JIPMER Puducherry, and Karnataka private colleges (Manipal, KMC) where their Kenyan-Indian background opens specific reservation pools. Local coaching options are limited; online live from Cerebrum is the established path.',
+      "Nairobi has East Africa's largest Indian-origin community — generations of Gujarati Patidar, Punjabi, Goan, and Sindhi families have lived in Kenya since pre-independence. Oshwal Academy, Visa Oshwal Education, and Premier Academy are the dominant feeders for Indian medical aspirants. Many Nairobi NEET students target NRI quota seats at AIIMS Delhi, JIPMER Puducherry, and Karnataka private colleges (Manipal, KMC) where their Kenyan-Indian background opens specific reservation pools. Local coaching options are limited; online live from Cerebrum is the established path.",
     faqs: [
-      { question: 'What medical college pathways are open to Indian-origin Nairobi students?', answer: 'Three: (1) NRI quota at AIIMS Delhi / JIPMER / Manipal / KMC Mangalore (15% reservation), (2) all-India quota competing with Indian aspirants, (3) Kenyan domicile path at Kenya medical colleges if OCI status allows. We focus on (1) and (2) — biology cut-off ~330-345/360 for NRI quota at premium colleges.' },
-      { question: 'My child is at Oshwal Academy / Premier Academy. Schedule fit?', answer: 'EAT 3:00 PM – 5:30 PM batch slot. School dismissal at Oshwal is typically 3 PM, so 30-min buffer. Premier Academy similar. Works cleanly.' },
-      { question: 'How does the time difference work for live classes?', answer: 'EAT is IST minus 2.5 hours. Our India evening batch (5:30-8 PM IST) is 3:00-5:30 PM Nairobi time. Perfect after-school window.' },
-      { question: 'Will study material shipping to Nairobi work?', answer: 'Yes — DHL / FedEx tracked courier, 10-12 days. Many current Cerebrum students in Nairobi receive material reliably.' },
-      { question: 'NRI quota for Karnataka private medical colleges?', answer: 'KMC Mangalore, Manipal MMMC, JSS Mysuru all reserve NRI seats. Biology cut-off ~325-345/360. Cerebrum biology programme targets 340+/360 to give families options.' },
+      {
+        question: 'What medical college pathways are open to Indian-origin Nairobi students?',
+        answer:
+          'Three: (1) NRI quota at AIIMS Delhi / JIPMER / Manipal / KMC Mangalore (15% reservation), (2) all-India quota competing with Indian aspirants, (3) Kenyan domicile path at Kenya medical colleges if OCI status allows. We focus on (1) and (2) — biology cut-off ~330-345/360 for NRI quota at premium colleges.',
+      },
+      {
+        question: 'My child is at Oshwal Academy / Premier Academy. Schedule fit?',
+        answer:
+          'EAT 3:00 PM – 5:30 PM batch slot. School dismissal at Oshwal is typically 3 PM, so 30-min buffer. Premier Academy similar. Works cleanly.',
+      },
+      {
+        question: 'How does the time difference work for live classes?',
+        answer:
+          'EAT is IST minus 2.5 hours. Our India evening batch (5:30-8 PM IST) is 3:00-5:30 PM Nairobi time. Perfect after-school window.',
+      },
+      {
+        question: 'Will study material shipping to Nairobi work?',
+        answer:
+          'Yes — DHL / FedEx tracked courier, 10-12 days. Many current Cerebrum students in Nairobi receive material reliably.',
+      },
+      {
+        question: 'NRI quota for Karnataka private medical colleges?',
+        answer:
+          'KMC Mangalore, Manipal MMMC, JSS Mysuru all reserve NRI seats. Biology cut-off ~325-345/360. Cerebrum biology programme targets 340+/360 to give families options.',
+      },
     ],
   },
   'kampala-uganda': {
@@ -77,15 +135,29 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'Africa',
     timezone: 'EAT (UTC+3)',
     istOffset: -2.5,
-    indianCommunitySize: '~15,000 Indian-origin residents (rebuilding community post-1972 expulsion)',
-    indianSchools: ['International School of Uganda', 'Aga Khan Academy Kampala', 'Galaxy International School', 'GEMS Cambridge International School', 'Kabira International School'],
+    indianCommunitySize:
+      '~15,000 Indian-origin residents (rebuilding community post-1972 expulsion)',
+    indianSchools: [
+      'International School of Uganda',
+      'Aga Khan Academy Kampala',
+      'Galaxy International School',
+      'GEMS Cambridge International School',
+      'Kabira International School',
+    ],
     localBatchSlot: 'EAT 3:00 PM – 5:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$1,800-3,600/year.',
     cityContext:
-      'Uganda\'s Indian community is rebuilding after the 1972 expulsion under Idi Amin. The post-2000 wave of Indian business families in Kampala has grown to ~15,000, concentrated around the Kampala business district, Bugolobi, and Naguru. Children typically attend International School of Uganda, Aga Khan Academy, or Galaxy International. NEET aspirants from Kampala target NRI quota seats and increasingly use online specialist coaching to compensate for local options being limited.',
+      "Uganda's Indian community is rebuilding after the 1972 expulsion under Idi Amin. The post-2000 wave of Indian business families in Kampala has grown to ~15,000, concentrated around the Kampala business district, Bugolobi, and Naguru. Children typically attend International School of Uganda, Aga Khan Academy, or Galaxy International. NEET aspirants from Kampala target NRI quota seats and increasingly use online specialist coaching to compensate for local options being limited.",
     faqs: [
-      { question: 'Indian community medical-college pathway from Kampala?', answer: 'NRI quota at AIIMS Delhi, JIPMER, Manipal, KMC, plus all-India quota. Biology cut-off ~330-345 for NRI quota premium colleges.' },
-      { question: 'Aga Khan Academy / ISU schedule fit with Cerebrum?', answer: 'EAT 3-5:30 PM batch works after Kampala school dismissals.' },
+      {
+        question: 'Indian community medical-college pathway from Kampala?',
+        answer:
+          'NRI quota at AIIMS Delhi, JIPMER, Manipal, KMC, plus all-India quota. Biology cut-off ~330-345 for NRI quota premium colleges.',
+      },
+      {
+        question: 'Aga Khan Academy / ISU schedule fit with Cerebrum?',
+        answer: 'EAT 3-5:30 PM batch works after Kampala school dismissals.',
+      },
       { question: 'Will printed material reach Kampala?', answer: 'Yes — DHL 10-14 days.' },
       { question: 'How do we handle payment in Uganda?', answer: 'USD wire or TransferWise.' },
     ],
@@ -98,16 +170,32 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     timezone: 'EAT (UTC+3)',
     istOffset: -2.5,
     indianCommunitySize: '~50,000 Indian-origin residents (long-standing community)',
-    indianSchools: ['HH The Aga Khan Mzizima Secondary School', 'International School of Tanganyika', 'Hindu Mandal Academy', 'Loyola High School', 'Feza Boys Secondary School'],
+    indianSchools: [
+      'HH The Aga Khan Mzizima Secondary School',
+      'International School of Tanganyika',
+      'Hindu Mandal Academy',
+      'Loyola High School',
+      'Feza Boys Secondary School',
+    ],
     localBatchSlot: 'EAT 3:00 PM – 5:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$1,800-3,600/year.',
     cityContext:
-      'Dar es Salaam has one of East Africa\'s largest Indian-origin communities — primarily Gujarati and Goan families with roots going back to British East Africa era. Hindu Mandal Academy and Aga Khan Mzizima are the dominant feeders for Indian medical aspirants. Tanzania-based Indian students often target NRI quota seats at AIIMS, JIPMER, and Mangalore / Manipal colleges.',
+      "Dar es Salaam has one of East Africa's largest Indian-origin communities — primarily Gujarati and Goan families with roots going back to British East Africa era. Hindu Mandal Academy and Aga Khan Mzizima are the dominant feeders for Indian medical aspirants. Tanzania-based Indian students often target NRI quota seats at AIIMS, JIPMER, and Mangalore / Manipal colleges.",
     faqs: [
-      { question: 'Pathway from Dar es Salaam to Indian medical college?', answer: 'NRI quota (15% reservation) at AIIMS / JIPMER / private deemed universities; all-India quota; OCI-based Tanzania medical college pathway.' },
-      { question: 'Hindu Mandal / Aga Khan Mzizima schedule fit?', answer: 'EAT afternoon batch (3-5:30 PM) fits after-school cleanly.' },
+      {
+        question: 'Pathway from Dar es Salaam to Indian medical college?',
+        answer:
+          'NRI quota (15% reservation) at AIIMS / JIPMER / private deemed universities; all-India quota; OCI-based Tanzania medical college pathway.',
+      },
+      {
+        question: 'Hindu Mandal / Aga Khan Mzizima schedule fit?',
+        answer: 'EAT afternoon batch (3-5:30 PM) fits after-school cleanly.',
+      },
       { question: 'Will material reach Dar es Salaam?', answer: 'Yes via DHL, 10-12 days.' },
-      { question: 'Pricing in Tanzanian shilling?', answer: 'We invoice in USD; pay via international wire.' },
+      {
+        question: 'Pricing in Tanzanian shilling?',
+        answer: 'We invoice in USD; pay via international wire.',
+      },
     ],
   },
   'al-wakrah-qatar': {
@@ -118,16 +206,34 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     timezone: 'AST (UTC+3)',
     istOffset: -2.5,
     indianCommunitySize: '~700,000 Indian-origin residents in Qatar (largest expat community)',
-    indianSchools: ['Birla Public School', 'DPS Modern Indian School', 'Ideal Indian School', 'MES Indian School', 'Bhavan\'s Public School', 'Olive International School'],
+    indianSchools: [
+      'Birla Public School',
+      'DPS Modern Indian School',
+      'Ideal Indian School',
+      'MES Indian School',
+      "Bhavan's Public School",
+      'Olive International School',
+    ],
     localBatchSlot: 'AST 3:00 PM – 5:30 PM (IST 5:30 PM – 8:00 PM)',
-    pricingNote: 'NRI fees in USD: ~$1,800-3,600/year. Most Qatari Indian families have substantial coaching budget.',
+    pricingNote:
+      'NRI fees in USD: ~$1,800-3,600/year. Most Qatari Indian families have substantial coaching budget.',
     cityContext:
-      'Al Wakrah is Qatar\'s third-largest city and growing rapidly as Doha satellite. Indian community in Al Wakrah has grown alongside Qatar\'s 700,000+ Indian expat population — concentrated families work in oil + construction + services. Birla Public School, DPS Modern Indian School, MES Indian School, and Bhavan\'s are the dominant CBSE feeders. NEET aspirants from Al Wakrah typically target NRI quota seats at AIIMS / JIPMER / private deemed universities, with substantial coaching investment expected.',
+      "Al Wakrah is Qatar's third-largest city and growing rapidly as Doha satellite. Indian community in Al Wakrah has grown alongside Qatar's 700,000+ Indian expat population — concentrated families work in oil + construction + services. Birla Public School, DPS Modern Indian School, MES Indian School, and Bhavan's are the dominant CBSE feeders. NEET aspirants from Al Wakrah typically target NRI quota seats at AIIMS / JIPMER / private deemed universities, with substantial coaching investment expected.",
     faqs: [
-      { question: 'Birla Public School Al Wakrah student NEET pathway?', answer: 'CBSE / NCERT-aligned schools make NEET transition smooth. NRI quota at AIIMS Delhi / JIPMER / private colleges; all-India quota.' },
-      { question: 'AST time zone — class schedule?', answer: 'AST 3-5:30 PM batch matches IST 5:30-8 PM. Excellent after-school fit.' },
+      {
+        question: 'Birla Public School Al Wakrah student NEET pathway?',
+        answer:
+          'CBSE / NCERT-aligned schools make NEET transition smooth. NRI quota at AIIMS Delhi / JIPMER / private colleges; all-India quota.',
+      },
+      {
+        question: 'AST time zone — class schedule?',
+        answer: 'AST 3-5:30 PM batch matches IST 5:30-8 PM. Excellent after-school fit.',
+      },
       { question: 'Material shipping to Al Wakrah?', answer: 'DHL Qatar 5-7 days delivery.' },
-      { question: 'Currency for payment?', answer: 'USD via wire, or QAR equivalent. Sibling discounts available.' },
+      {
+        question: 'Currency for payment?',
+        answer: 'USD via wire, or QAR equivalent. Sibling discounts available.',
+      },
     ],
   },
   'al-khobar-saudi-arabia': {
@@ -138,16 +244,34 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     timezone: 'AST (UTC+3)',
     istOffset: -2.5,
     indianCommunitySize: '~2.5 million Indian-origin residents in Saudi Arabia',
-    indianSchools: ['International Indian School Dammam', 'Bharatiya Vidya Bhavan', 'Yara International School', 'DPS Modern Indian School Dammam', 'MES Indian School Saudi'],
+    indianSchools: [
+      'International Indian School Dammam',
+      'Bharatiya Vidya Bhavan',
+      'Yara International School',
+      'DPS Modern Indian School Dammam',
+      'MES Indian School Saudi',
+    ],
     localBatchSlot: 'AST 3:00 PM – 5:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$1,800-3,600/year.',
     cityContext:
-      'Al Khobar is Saudi Arabia\'s Eastern Province hub with substantial Indian community linked to oil + IT + medical services. International Indian School Dammam (which serves Al Khobar families) and Bhavan\'s are the dominant CBSE feeders. Saudi Indian families historically have very high medical-career aspiration; many target NRI quota at AIIMS Delhi and JIPMER Puducherry.',
+      "Al Khobar is Saudi Arabia's Eastern Province hub with substantial Indian community linked to oil + IT + medical services. International Indian School Dammam (which serves Al Khobar families) and Bhavan's are the dominant CBSE feeders. Saudi Indian families historically have very high medical-career aspiration; many target NRI quota at AIIMS Delhi and JIPMER Puducherry.",
     faqs: [
-      { question: 'Pathway from Al Khobar to AIIMS Delhi?', answer: 'NRI quota at AIIMS Delhi requires NEET biology ~340-355/360. Available to children of Saudi-based Indians with documented OCI / NRI status. Cerebrum biology programme calibrates to this.' },
-      { question: 'Schedule for International Indian School Dammam student?', answer: 'AST 3-5:30 PM batch (IST 5:30-8 PM). After school dismissal at 2 PM typical. Excellent fit.' },
+      {
+        question: 'Pathway from Al Khobar to AIIMS Delhi?',
+        answer:
+          'NRI quota at AIIMS Delhi requires NEET biology ~340-355/360. Available to children of Saudi-based Indians with documented OCI / NRI status. Cerebrum biology programme calibrates to this.',
+      },
+      {
+        question: 'Schedule for International Indian School Dammam student?',
+        answer:
+          'AST 3-5:30 PM batch (IST 5:30-8 PM). After school dismissal at 2 PM typical. Excellent fit.',
+      },
       { question: 'Material delivery to Al Khobar?', answer: 'DHL / Saudi Post 5-7 days.' },
-      { question: 'Ramadan schedule adjustment?', answer: 'Yes — Ramadan months we shift to 1.5 hour earlier slot accommodating fasting + Iftar.' },
+      {
+        question: 'Ramadan schedule adjustment?',
+        answer:
+          'Yes — Ramadan months we shift to 1.5 hour earlier slot accommodating fasting + Iftar.',
+      },
     ],
   },
   'ho-chi-minh-vietnam': {
@@ -158,14 +282,26 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     timezone: 'ICT (UTC+7)',
     istOffset: 1.5,
     indianCommunitySize: '~10,000 Indian-origin residents (growing IT + business expat community)',
-    indianSchools: ['British International School HCMC', 'International School Ho Chi Minh City', 'European International School', 'Saigon South International School'],
+    indianSchools: [
+      'British International School HCMC',
+      'International School Ho Chi Minh City',
+      'European International School',
+      'Saigon South International School',
+    ],
     localBatchSlot: 'ICT 7:00 PM – 9:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$1,800-3,600/year.',
     cityContext:
-      'Ho Chi Minh City\'s Indian community has grown significantly post-2010 as Indian IT companies and import-export businesses expanded into Vietnam. Children typically attend British International School HCMC or International School Ho Chi Minh City. NEET aspirants from HCMC pursue both NRI quota and all-India quota — Cerebrum live online via Zoom is the established path.',
+      "Ho Chi Minh City's Indian community has grown significantly post-2010 as Indian IT companies and import-export businesses expanded into Vietnam. Children typically attend British International School HCMC or International School Ho Chi Minh City. NEET aspirants from HCMC pursue both NRI quota and all-India quota — Cerebrum live online via Zoom is the established path.",
     faqs: [
-      { question: 'NRI quota access from Vietnam?', answer: 'Yes — Indian-origin Vietnam-resident families qualify for 15% NRI quota at AIIMS / JIPMER / private deemed universities, plus all-India quota.' },
-      { question: 'British International School / ISHCMC schedule fit?', answer: 'ICT 7-9:30 PM batch matches IST 5:30-8 PM. Fits after school activity end.' },
+      {
+        question: 'NRI quota access from Vietnam?',
+        answer:
+          'Yes — Indian-origin Vietnam-resident families qualify for 15% NRI quota at AIIMS / JIPMER / private deemed universities, plus all-India quota.',
+      },
+      {
+        question: 'British International School / ISHCMC schedule fit?',
+        answer: 'ICT 7-9:30 PM batch matches IST 5:30-8 PM. Fits after school activity end.',
+      },
       { question: 'Material delivery to HCMC?', answer: 'DHL Vietnam 7-9 days.' },
       { question: 'Currency for payment?', answer: 'USD via wire transfer.' },
     ],
@@ -178,16 +314,32 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     timezone: 'WIB (UTC+7)',
     istOffset: 1.5,
     indianCommunitySize: '~25,000 Indian-origin residents',
-    indianSchools: ['Gandhi Memorial International School Jakarta', 'British International School Jakarta', 'Australian International School', 'Singapore Intercultural School', 'Jakarta Intercultural School'],
+    indianSchools: [
+      'Gandhi Memorial International School Jakarta',
+      'British International School Jakarta',
+      'Australian International School',
+      'Singapore Intercultural School',
+      'Jakarta Intercultural School',
+    ],
     localBatchSlot: 'WIB 7:00 PM – 9:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$1,800-3,600/year.',
     cityContext:
       'Jakarta has a substantial Indian community with strong Sindhi business roots dating back generations + a newer wave of Indian IT and corporate expats. Gandhi Memorial International School is the legacy Indian-curriculum school; British and Australian International Schools serve the more recent expat wave. NEET aspirants pursue NRI quota at AIIMS, JIPMER, Manipal, and KMC.',
     faqs: [
-      { question: 'Pathway from Jakarta to Indian medical college?', answer: 'NRI quota at AIIMS / JIPMER / private deemed universities; all-India quota. Biology cut-off ~330-345/360 for NRI quota.' },
-      { question: 'Gandhi Memorial / BIS Jakarta schedule fit?', answer: 'WIB evening (7-9:30 PM) matches IST evening batch.' },
+      {
+        question: 'Pathway from Jakarta to Indian medical college?',
+        answer:
+          'NRI quota at AIIMS / JIPMER / private deemed universities; all-India quota. Biology cut-off ~330-345/360 for NRI quota.',
+      },
+      {
+        question: 'Gandhi Memorial / BIS Jakarta schedule fit?',
+        answer: 'WIB evening (7-9:30 PM) matches IST evening batch.',
+      },
       { question: 'Material shipping?', answer: 'DHL 7-9 days to Jakarta.' },
-      { question: 'Time zone for tests?', answer: 'All exams in WIB (Jakarta) time; recordings available.' },
+      {
+        question: 'Time zone for tests?',
+        answer: 'All exams in WIB (Jakarta) time; recordings available.',
+      },
     ],
   },
   'manila-philippines': {
@@ -198,16 +350,32 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     timezone: 'PHT (UTC+8)',
     istOffset: 2.5,
     indianCommunitySize: '~20,000 Indian-origin residents',
-    indianSchools: ['Brent International School Manila', 'International School Manila', 'Faith Academy', 'Beacon School'],
+    indianSchools: [
+      'Brent International School Manila',
+      'International School Manila',
+      'Faith Academy',
+      'Beacon School',
+    ],
     localBatchSlot: 'PHT 8:00 PM – 10:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$1,800-3,600/year.',
     cityContext:
-      'Manila\'s Indian community is concentrated in Makati and Bonifacio Global City, primarily IT and finance professionals. Children attend International School Manila, Brent International, or Faith Academy. Some Manila Indian families also consider direct admission to Philippines medical colleges (which accept international applicants), but for those returning to India for MBBS, Cerebrum NEET coaching with NRI quota access is the path.',
+      "Manila's Indian community is concentrated in Makati and Bonifacio Global City, primarily IT and finance professionals. Children attend International School Manila, Brent International, or Faith Academy. Some Manila Indian families also consider direct admission to Philippines medical colleges (which accept international applicants), but for those returning to India for MBBS, Cerebrum NEET coaching with NRI quota access is the path.",
     faqs: [
-      { question: 'NEET vs Philippines MBBS direct admission?', answer: 'Both valid paths. Philippines medical colleges accept international applicants; NEET path opens AIIMS / JIPMER / Indian state colleges. We coach for NEET specifically — families assess both based on their preference for India vs Philippines medical practice.' },
-      { question: 'Manila evening schedule clash?', answer: 'PHT 8-10:30 PM batch matches IST 5:30-8 PM. After-dinner slot.' },
+      {
+        question: 'NEET vs Philippines MBBS direct admission?',
+        answer:
+          'Both valid paths. Philippines medical colleges accept international applicants; NEET path opens AIIMS / JIPMER / Indian state colleges. We coach for NEET specifically — families assess both based on their preference for India vs Philippines medical practice.',
+      },
+      {
+        question: 'Manila evening schedule clash?',
+        answer: 'PHT 8-10:30 PM batch matches IST 5:30-8 PM. After-dinner slot.',
+      },
       { question: 'Material to Makati / BGC?', answer: 'DHL Philippines 7-9 days.' },
-      { question: 'How is the all-India NEET attempt managed from Manila?', answer: 'Family typically travels to nearest NEET center in India during exam (May). We coordinate exam-week logistics.' },
+      {
+        question: 'How is the all-India NEET attempt managed from Manila?',
+        answer:
+          'Family typically travels to nearest NEET center in India during exam (May). We coordinate exam-week logistics.',
+      },
     ],
   },
   'kathmandu-nepal': {
@@ -217,17 +385,41 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'Southeast Asia',
     timezone: 'NPT (UTC+5:45)',
     istOffset: 0.25,
-    indianCommunitySize: '~600,000 Nepalese students target Indian medical colleges annually under foreign-national + open-quota seats',
-    indianSchools: ['Rato Bangala School', 'Lincoln School Kathmandu', 'British School Kathmandu', 'Ullens School', 'Premier International School', 'Modern Indian School Kathmandu'],
+    indianCommunitySize:
+      '~600,000 Nepalese students target Indian medical colleges annually under foreign-national + open-quota seats',
+    indianSchools: [
+      'Rato Bangala School',
+      'Lincoln School Kathmandu',
+      'British School Kathmandu',
+      'Ullens School',
+      'Premier International School',
+      'Modern Indian School Kathmandu',
+    ],
     localBatchSlot: 'NPT 5:45 PM – 8:15 PM (IST 5:30 PM – 8:00 PM)',
-    pricingNote: 'NRI fees in USD: ~$1,800-3,600/year. Nepalese students also have foreign-national category seats at AIIMS / JIPMER.',
+    pricingNote:
+      'NRI fees in USD: ~$1,800-3,600/year. Nepalese students also have foreign-national category seats at AIIMS / JIPMER.',
     cityContext:
       'Kathmandu is the largest source of Nepalese students applying for MBBS in India — both NRI quota (for Indian-origin Kathmandu residents) and the foreign-national + Open Merit quota (for Nepalese citizens). Rato Bangala, Lincoln School, Premier International, and Modern Indian School Kathmandu are the dominant feeders. Nepalese students typically target KMC Mangalore (which has a large Nepalese alumni network), MMMC Manipal, BLDE Vijayapura, AIIMS Delhi, JIPMER Puducherry, and other deemed universities.',
     faqs: [
-      { question: 'Pathway from Kathmandu to MBBS in India?', answer: 'Three: (1) Nepalese citizens via foreign-national / SAARC quota at AIIMS, JIPMER, Maulana Azad; (2) Indian-origin Kathmandu residents via 15% NRI quota at deemed universities; (3) all-India quota via NEET. Cerebrum biology coaching prepares all three pathways.' },
-      { question: 'NPT time zone — batch schedule?', answer: 'NPT is IST + 15 minutes. Our India evening batch (5:30-8 PM IST) is 5:45-8:15 PM Nepal time — essentially identical.' },
-      { question: 'KMC Mangalore preference among Nepalese students?', answer: 'KMC Mangalore has the largest Nepalese alumni network and is the most aspirational destination. NEET biology cut-off ~330-345/360 for Nepalese applicants.' },
-      { question: 'Material delivery to Kathmandu?', answer: 'DHL Nepal 7-10 days. Customs duty as per Nepal import regulations.' },
+      {
+        question: 'Pathway from Kathmandu to MBBS in India?',
+        answer:
+          'Three: (1) Nepalese citizens via foreign-national / SAARC quota at AIIMS, JIPMER, Maulana Azad; (2) Indian-origin Kathmandu residents via 15% NRI quota at deemed universities; (3) all-India quota via NEET. Cerebrum biology coaching prepares all three pathways.',
+      },
+      {
+        question: 'NPT time zone — batch schedule?',
+        answer:
+          'NPT is IST + 15 minutes. Our India evening batch (5:30-8 PM IST) is 5:45-8:15 PM Nepal time — essentially identical.',
+      },
+      {
+        question: 'KMC Mangalore preference among Nepalese students?',
+        answer:
+          'KMC Mangalore has the largest Nepalese alumni network and is the most aspirational destination. NEET biology cut-off ~330-345/360 for Nepalese applicants.',
+      },
+      {
+        question: 'Material delivery to Kathmandu?',
+        answer: 'DHL Nepal 7-10 days. Customs duty as per Nepal import regulations.',
+      },
     ],
   },
   'kuala-lumpur-malaysia': {
@@ -237,16 +429,36 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'Southeast Asia',
     timezone: 'MYT (UTC+8)',
     istOffset: 2.5,
-    indianCommunitySize: '~2 million Indian-origin Malaysians (significant Tamil + Malayali + Telugu + Punjabi population)',
-    indianSchools: ['Global Indian International School KL', 'International Indian School Malaysia', 'Garden International School', 'IGB International School', 'British International School Kuala Lumpur', 'Sayfol International School'],
+    indianCommunitySize:
+      '~2 million Indian-origin Malaysians (significant Tamil + Malayali + Telugu + Punjabi population)',
+    indianSchools: [
+      'Global Indian International School KL',
+      'International Indian School Malaysia',
+      'Garden International School',
+      'IGB International School',
+      'British International School Kuala Lumpur',
+      'Sayfol International School',
+    ],
     localBatchSlot: 'MYT 8:00 PM – 10:30 PM (IST 5:30 PM – 8:00 PM)',
-    pricingNote: 'NRI fees in USD: ~$1,800-3,600/year. Large Malaysian-Indian community has long-established medical-career tradition.',
+    pricingNote:
+      'NRI fees in USD: ~$1,800-3,600/year. Large Malaysian-Indian community has long-established medical-career tradition.',
     cityContext:
-      'Kuala Lumpur is home to one of Southeast Asia\'s largest Indian-origin communities — primarily Tamil but also Malayali, Telugu, and Punjabi. Global Indian International School KL and International Indian School Malaysia run the dominant CBSE / NCERT feeders for NEET aspirants; Garden International, IGB, BISKL serve those on IB / Cambridge tracks. Malaysian-Indian families have a strong medical-career tradition with many targeting MMMC Manipal, KMC Mangalore, Karpaga Vinayaga, BLDE Vijayapura, plus NRI quota at premium colleges.',
+      "Kuala Lumpur is home to one of Southeast Asia's largest Indian-origin communities — primarily Tamil but also Malayali, Telugu, and Punjabi. Global Indian International School KL and International Indian School Malaysia run the dominant CBSE / NCERT feeders for NEET aspirants; Garden International, IGB, BISKL serve those on IB / Cambridge tracks. Malaysian-Indian families have a strong medical-career tradition with many targeting MMMC Manipal, KMC Mangalore, Karpaga Vinayaga, BLDE Vijayapura, plus NRI quota at premium colleges.",
     faqs: [
-      { question: 'Pathway from KL to MBBS in India?', answer: 'NRI quota at AIIMS / JIPMER / Manipal / KMC / private deemed; all-India quota via NEET. Malaysian-Indian families also consider Manipal Melaka campus (which feeds into Manipal University clinical years).' },
-      { question: 'GIIS KL / IISM schedule fit?', answer: 'MYT 8-10:30 PM evening batch matches IST evening. After-dinner slot.' },
-      { question: 'Tamil-medium school background — NCERT bridge?', answer: 'We run a 4-6 week NCERT terminology bridge module for students from regional-language / Tamil-medium backgrounds before mainstream NEET coaching starts.' },
+      {
+        question: 'Pathway from KL to MBBS in India?',
+        answer:
+          'NRI quota at AIIMS / JIPMER / Manipal / KMC / private deemed; all-India quota via NEET. Malaysian-Indian families also consider Manipal Melaka campus (which feeds into Manipal University clinical years).',
+      },
+      {
+        question: 'GIIS KL / IISM schedule fit?',
+        answer: 'MYT 8-10:30 PM evening batch matches IST evening. After-dinner slot.',
+      },
+      {
+        question: 'Tamil-medium school background — NCERT bridge?',
+        answer:
+          'We run a 4-6 week NCERT terminology bridge module for students from regional-language / Tamil-medium backgrounds before mainstream NEET coaching starts.',
+      },
       { question: 'Material delivery to KL?', answer: 'DHL Malaysia 5-7 days.' },
     ],
   },
@@ -257,17 +469,42 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'Southeast Asia',
     timezone: 'SGT (UTC+8)',
     istOffset: 2.5,
-    indianCommunitySize: '~700,000 Indian-origin residents (~9% of population, largest non-Chinese minority)',
-    indianSchools: ['UWCSEA Dover + East', 'Global Indian International School Singapore', 'NPS International School', 'Singapore Indian Education Trust schools', 'Stamford American International School', 'Tanglin Trust School', 'Dulwich College Singapore'],
+    indianCommunitySize:
+      '~700,000 Indian-origin residents (~9% of population, largest non-Chinese minority)',
+    indianSchools: [
+      'UWCSEA Dover + East',
+      'Global Indian International School Singapore',
+      'NPS International School',
+      'Singapore Indian Education Trust schools',
+      'Stamford American International School',
+      'Tanglin Trust School',
+      'Dulwich College Singapore',
+    ],
     localBatchSlot: 'SGT 8:00 PM – 10:30 PM (IST 5:30 PM – 8:00 PM)',
-    pricingNote: 'NRI fees in USD: ~$2,500-4,500/year. Singapore-Indian families typically pay premium tier.',
+    pricingNote:
+      'NRI fees in USD: ~$2,500-4,500/year. Singapore-Indian families typically pay premium tier.',
     cityContext:
-      'Singapore has one of Asia\'s wealthiest and most education-focused Indian diaspora communities — concentrated in finance, IT, and biomedical sectors. UWCSEA, GIIS Singapore, NPS International, Stamford American, and Tanglin Trust are the dominant feeders. Most Singapore-Indian students target either US premed pathway (with AP Biology and SAT II) OR Indian medical colleges via NRI quota at AIIMS Delhi, JIPMER, MMMC Manipal, KMC Mangalore, deemed universities. Some also target Australian / UK medical pathways.',
+      "Singapore has one of Asia's wealthiest and most education-focused Indian diaspora communities — concentrated in finance, IT, and biomedical sectors. UWCSEA, GIIS Singapore, NPS International, Stamford American, and Tanglin Trust are the dominant feeders. Most Singapore-Indian students target either US premed pathway (with AP Biology and SAT II) OR Indian medical colleges via NRI quota at AIIMS Delhi, JIPMER, MMMC Manipal, KMC Mangalore, deemed universities. Some also target Australian / UK medical pathways.",
     faqs: [
-      { question: 'Pathway from Singapore to MBBS — India vs US vs Australia?', answer: 'Three competing pathways: (1) Indian medical college via NRI quota + NEET (we coach), (2) US premed → MD via MCAT (we offer separate MCAT Biology track), (3) Australian / UK undergraduate medicine. Family chooses based on long-term residence intent.' },
-      { question: 'UWCSEA / GIIS Singapore IB student NCERT bridge?', answer: 'IB Biology HL / SL is broader but less NCERT-line-by-line than NEET requires. We run a 4-6 week IB-to-NCERT bridge module in first month.' },
-      { question: 'SGT schedule fit?', answer: 'SGT 8-10:30 PM matches IST 5:30-8 PM evening batch. After-school + dinner-time slot.' },
-      { question: 'Material delivery to Singapore?', answer: 'DHL Singapore 3-5 days — fastest in our network.' },
+      {
+        question: 'Pathway from Singapore to MBBS — India vs US vs Australia?',
+        answer:
+          'Three competing pathways: (1) Indian medical college via NRI quota + NEET (we coach), (2) US premed → MD via MCAT (we offer separate MCAT Biology track), (3) Australian / UK undergraduate medicine. Family chooses based on long-term residence intent.',
+      },
+      {
+        question: 'UWCSEA / GIIS Singapore IB student NCERT bridge?',
+        answer:
+          'IB Biology HL / SL is broader but less NCERT-line-by-line than NEET requires. We run a 4-6 week IB-to-NCERT bridge module in first month.',
+      },
+      {
+        question: 'SGT schedule fit?',
+        answer:
+          'SGT 8-10:30 PM matches IST 5:30-8 PM evening batch. After-school + dinner-time slot.',
+      },
+      {
+        question: 'Material delivery to Singapore?',
+        answer: 'DHL Singapore 3-5 days — fastest in our network.',
+      },
     ],
   },
   'sydney-australia': {
@@ -277,17 +514,43 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'East Asia',
     timezone: 'AEDT (UTC+11) / AEST (UTC+10)',
     istOffset: 4.5,
-    indianCommunitySize: '~700,000 Indian-origin Australians, fastest-growing demographic (Sydney has largest concentration)',
-    indianSchools: ['The Scots College', 'Sydney Grammar School', 'St Andrew\'s Cathedral School', 'Cranbrook School', 'Reddam House', 'Wenona School', 'Knox Grammar', 'Sydney Boys/Girls High'],
+    indianCommunitySize:
+      '~700,000 Indian-origin Australians, fastest-growing demographic (Sydney has largest concentration)',
+    indianSchools: [
+      'The Scots College',
+      'Sydney Grammar School',
+      "St Andrew's Cathedral School",
+      'Cranbrook School',
+      'Reddam House',
+      'Wenona School',
+      'Knox Grammar',
+      'Sydney Boys/Girls High',
+    ],
     localBatchSlot: 'AEDT 10:30 PM – 1:00 AM next day (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year. Australia-Indian families pay premium tier.',
     cityContext:
-      'Sydney has Australia\'s largest Indian-origin community — concentrated in Parramatta, Strathfield, Westmead, Pennant Hills, North Shore, Hornsby. Many Australian-Indian Class 12 students consider both Australian undergraduate medicine (UNSW Medicine, USyd MD, Macquarie) AND Indian medical college via NRI quota + NEET. Cerebrum coaches NEET specifically — families assess based on long-term residence intent. UMAT / UCAT separate; NEET is for the India pathway.',
+      "Sydney has Australia's largest Indian-origin community — concentrated in Parramatta, Strathfield, Westmead, Pennant Hills, North Shore, Hornsby. Many Australian-Indian Class 12 students consider both Australian undergraduate medicine (UNSW Medicine, USyd MD, Macquarie) AND Indian medical college via NRI quota + NEET. Cerebrum coaches NEET specifically — families assess based on long-term residence intent. UMAT / UCAT separate; NEET is for the India pathway.",
     faqs: [
-      { question: 'Sydney medical pathway — Australia vs India MBBS?', answer: 'Two competing pathways: (1) Australian undergraduate medicine via UCAT + ATAR (we don\'t coach this), (2) Indian medical college via NRI quota at AIIMS / JIPMER / Manipal / KMC + NEET (we coach biology). Many Sydney-Indian families pursue both as parallel options.' },
-      { question: 'AEDT time zone — class schedule clash?', answer: 'AEDT is IST + 4.5 hours. Our India evening batch (5:30-8 PM IST) is 10:30 PM – 1 AM AEDT. Most students prefer recorded sessions + live weekend doubt batches. Saturday morning weekend batch available at 9-11:30 AM AEDT.' },
-      { question: 'NEET vs UCAT — which subject overlaps?', answer: 'NEET tests Class 11 + 12 NCERT biology depth. UCAT is aptitude (no biology content). Australian Year 11-12 Biology IS aligned with NEET biology but lighter on NCERT line-by-line — we bridge that gap.' },
-      { question: 'Material delivery to Sydney?', answer: 'Australia Post Express 7-10 days. Customs duty applies to physical books over AUD 1,000 cumulative.' },
+      {
+        question: 'Sydney medical pathway — Australia vs India MBBS?',
+        answer:
+          "Two competing pathways: (1) Australian undergraduate medicine via UCAT + ATAR (we don't coach this), (2) Indian medical college via NRI quota at AIIMS / JIPMER / Manipal / KMC + NEET (we coach biology). Many Sydney-Indian families pursue both as parallel options.",
+      },
+      {
+        question: 'AEDT time zone — class schedule clash?',
+        answer:
+          'AEDT is IST + 4.5 hours. Our India evening batch (5:30-8 PM IST) is 10:30 PM – 1 AM AEDT. Most students prefer recorded sessions + live weekend doubt batches. Saturday morning weekend batch available at 9-11:30 AM AEDT.',
+      },
+      {
+        question: 'NEET vs UCAT — which subject overlaps?',
+        answer:
+          'NEET tests Class 11 + 12 NCERT biology depth. UCAT is aptitude (no biology content). Australian Year 11-12 Biology IS aligned with NEET biology but lighter on NCERT line-by-line — we bridge that gap.',
+      },
+      {
+        question: 'Material delivery to Sydney?',
+        answer:
+          'Australia Post Express 7-10 days. Customs duty applies to physical books over AUD 1,000 cumulative.',
+      },
     ],
   },
   'melbourne-australia': {
@@ -297,17 +560,37 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'East Asia',
     timezone: 'AEDT (UTC+11) / AEST (UTC+10)',
     istOffset: 4.5,
-    indianCommunitySize: '~250,000 Indian-origin residents (second-largest in Australia after Sydney)',
-    indianSchools: ['Scotch College Melbourne', 'Geelong Grammar School', 'Melbourne Grammar School', 'Caulfield Grammar', 'Wesley College', 'Methodist Ladies\' College', 'Carey Baptist Grammar'],
+    indianCommunitySize:
+      '~250,000 Indian-origin residents (second-largest in Australia after Sydney)',
+    indianSchools: [
+      'Scotch College Melbourne',
+      'Geelong Grammar School',
+      'Melbourne Grammar School',
+      'Caulfield Grammar',
+      'Wesley College',
+      "Methodist Ladies' College",
+      'Carey Baptist Grammar',
+    ],
     localBatchSlot: 'AEDT 10:30 PM – 1:00 AM next day (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year.',
     cityContext:
-      'Melbourne hosts Australia\'s second-largest Indian community — concentrated in Wyndham, Casey, Hume, Whittlesea, Dandenong. Many Melbourne-Indian Class 12 students target University of Melbourne MD (postgraduate medicine), Monash MBBS, or Indian medical college via NRI quota at AIIMS / JIPMER / Manipal. Saturday weekend batch (9-11:30 AM AEDT) available for time-zone-friendly live classes.',
+      "Melbourne hosts Australia's second-largest Indian community — concentrated in Wyndham, Casey, Hume, Whittlesea, Dandenong. Many Melbourne-Indian Class 12 students target University of Melbourne MD (postgraduate medicine), Monash MBBS, or Indian medical college via NRI quota at AIIMS / JIPMER / Manipal. Saturday weekend batch (9-11:30 AM AEDT) available for time-zone-friendly live classes.",
     faqs: [
-      { question: 'Melbourne medical pathway options?', answer: 'Australian MD pathway (postgrad medicine after BSc) via Melbourne / Monash + GAMSAT, OR Indian MBBS via NRI quota + NEET. We coach NEET biology + GAMSAT Section 3 Biology (separate track).' },
-      { question: 'AEDT class schedule?', answer: 'Weekday evening batch is 10:30 PM – 1 AM AEDT (IST 5:30-8 PM). Weekend Saturday 9-11:30 AM AEDT batch is local-time friendly.' },
+      {
+        question: 'Melbourne medical pathway options?',
+        answer:
+          'Australian MD pathway (postgrad medicine after BSc) via Melbourne / Monash + GAMSAT, OR Indian MBBS via NRI quota + NEET. We coach NEET biology + GAMSAT Section 3 Biology (separate track).',
+      },
+      {
+        question: 'AEDT class schedule?',
+        answer:
+          'Weekday evening batch is 10:30 PM – 1 AM AEDT (IST 5:30-8 PM). Weekend Saturday 9-11:30 AM AEDT batch is local-time friendly.',
+      },
       { question: 'Material delivery to Melbourne?', answer: 'Australia Post Express 7-10 days.' },
-      { question: 'Currency for payment?', answer: 'USD via international wire, or AUD equivalent via direct deposit.' },
+      {
+        question: 'Currency for payment?',
+        answer: 'USD via international wire, or AUD equivalent via direct deposit.',
+      },
     ],
   },
   'toronto-canada': {
@@ -318,15 +601,36 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     timezone: 'EST (UTC-5) / EDT (UTC-4)',
     istOffset: -10.5,
     indianCommunitySize: '~1 million Indian-origin Canadians in Greater Toronto Area (GTA)',
-    indianSchools: ['Upper Canada College', 'Branksome Hall', 'Havergal College', 'Toronto French School', 'St. Michael\'s College School', 'Royal St. George\'s', 'Crescent School', 'Bayview Glen'],
+    indianSchools: [
+      'Upper Canada College',
+      'Branksome Hall',
+      'Havergal College',
+      'Toronto French School',
+      "St. Michael's College School",
+      "Royal St. George's",
+      'Crescent School',
+      'Bayview Glen',
+    ],
     localBatchSlot: 'EST 7:00 AM – 9:30 AM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year. Canadian-Indian families pay premium.',
     cityContext:
-      'Greater Toronto Area (GTA) — including Mississauga, Brampton, Markham, Scarborough — has Canada\'s largest Indian-origin community (~1M strong). Many Toronto-Indian Class 12 students target Canadian undergraduate medicine (McMaster, U of T, Queen\'s, Western) which requires undergrad first + MCAT, OR Indian MBBS via NRI quota at AIIMS / JIPMER / Manipal. We coach NEET biology + MCAT B/B section (separate track).',
+      "Greater Toronto Area (GTA) — including Mississauga, Brampton, Markham, Scarborough — has Canada's largest Indian-origin community (~1M strong). Many Toronto-Indian Class 12 students target Canadian undergraduate medicine (McMaster, U of T, Queen's, Western) which requires undergrad first + MCAT, OR Indian MBBS via NRI quota at AIIMS / JIPMER / Manipal. We coach NEET biology + MCAT B/B section (separate track).",
     faqs: [
-      { question: 'Toronto medical pathway — Canada MD vs India MBBS?', answer: 'Canadian MD is postgraduate (BSc + MCAT + MD), so Indian MBBS via NRI quota + NEET is faster (5.5 yrs vs 8+ yrs). We coach NEET specifically; families weigh based on long-term residence.' },
-      { question: 'EST time zone — early morning batch?', answer: 'EST is IST – 10.5 hours. Our India evening batch (5:30-8 PM IST) is 7:00-9:30 AM Toronto time. Saturday morning weekend batch also available.' },
-      { question: 'GTA neighbourhood support?', answer: 'Online live works from Mississauga, Brampton, Markham, Vaughan, Oakville, Scarborough. Most Cerebrum-GTA students are from Brampton + Mississauga.' },
+      {
+        question: 'Toronto medical pathway — Canada MD vs India MBBS?',
+        answer:
+          'Canadian MD is postgraduate (BSc + MCAT + MD), so Indian MBBS via NRI quota + NEET is faster (5.5 yrs vs 8+ yrs). We coach NEET specifically; families weigh based on long-term residence.',
+      },
+      {
+        question: 'EST time zone — early morning batch?',
+        answer:
+          'EST is IST – 10.5 hours. Our India evening batch (5:30-8 PM IST) is 7:00-9:30 AM Toronto time. Saturday morning weekend batch also available.',
+      },
+      {
+        question: 'GTA neighbourhood support?',
+        answer:
+          'Online live works from Mississauga, Brampton, Markham, Vaughan, Oakville, Scarborough. Most Cerebrum-GTA students are from Brampton + Mississauga.',
+      },
       { question: 'Material delivery to Toronto?', answer: 'Canada Post Expedited 5-8 days.' },
     ],
   },
@@ -338,15 +642,35 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     timezone: 'PST (UTC-8) / PDT (UTC-7)',
     istOffset: -13.5,
     indianCommunitySize: '~300,000 Indian-origin residents in Greater Vancouver Area',
-    indianSchools: ['York House School', 'Crofton House School', 'St. George\'s School', 'Vancouver College', 'West Point Grey Academy', 'Mulgrave School', 'Stratford Hall'],
+    indianSchools: [
+      'York House School',
+      'Crofton House School',
+      "St. George's School",
+      'Vancouver College',
+      'West Point Grey Academy',
+      'Mulgrave School',
+      'Stratford Hall',
+    ],
     localBatchSlot: 'PST 4:00 AM – 6:30 AM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year.',
     cityContext:
-      'Greater Vancouver — including Surrey, Burnaby, Richmond, Coquitlam — has Canada\'s second-largest Indian community (~300K), heavily concentrated in Surrey (largest Indian-origin city in North America by per-capita). Vancouver-Indian Class 12 students consider Canadian MD pathway (UBC) OR Indian MBBS via NRI quota at AIIMS / JIPMER / Manipal + NEET. Cerebrum coaches NEET biology — PST evening recordings + Saturday morning weekend live preferred over IST early-morning batch.',
+      "Greater Vancouver — including Surrey, Burnaby, Richmond, Coquitlam — has Canada's second-largest Indian community (~300K), heavily concentrated in Surrey (largest Indian-origin city in North America by per-capita). Vancouver-Indian Class 12 students consider Canadian MD pathway (UBC) OR Indian MBBS via NRI quota at AIIMS / JIPMER / Manipal + NEET. Cerebrum coaches NEET biology — PST evening recordings + Saturday morning weekend live preferred over IST early-morning batch.",
     faqs: [
-      { question: 'Vancouver medical pathway?', answer: 'UBC Medicine is postgraduate (BSc + MCAT + MD). Indian MBBS via NRI quota + NEET is alternative + faster (5.5 yrs). Many Vancouver-Indian families pursue both options in parallel.' },
-      { question: 'PST 13.5 hour offset — class schedule?', answer: 'PST is IST – 13.5 hours. Our India evening batch (5:30-8 PM IST) is 4:00-6:30 AM Vancouver. Most students prefer recorded weekday sessions + Saturday morning live weekend batch at 9-11:30 AM PST.' },
-      { question: 'Surrey / Burnaby / Richmond / Coquitlam support?', answer: 'Yes — online live works equally well from any Greater Vancouver neighbourhood. Surrey has the largest concentration of Cerebrum-Vancouver students.' },
+      {
+        question: 'Vancouver medical pathway?',
+        answer:
+          'UBC Medicine is postgraduate (BSc + MCAT + MD). Indian MBBS via NRI quota + NEET is alternative + faster (5.5 yrs). Many Vancouver-Indian families pursue both options in parallel.',
+      },
+      {
+        question: 'PST 13.5 hour offset — class schedule?',
+        answer:
+          'PST is IST – 13.5 hours. Our India evening batch (5:30-8 PM IST) is 4:00-6:30 AM Vancouver. Most students prefer recorded weekday sessions + Saturday morning live weekend batch at 9-11:30 AM PST.',
+      },
+      {
+        question: 'Surrey / Burnaby / Richmond / Coquitlam support?',
+        answer:
+          'Yes — online live works equally well from any Greater Vancouver neighbourhood. Surrey has the largest concentration of Cerebrum-Vancouver students.',
+      },
       { question: 'Material delivery to Vancouver?', answer: 'Canada Post Expedited 5-8 days.' },
     ],
   },
@@ -357,17 +681,42 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'East Asia',
     timezone: 'CST (UTC-6) / CDT (UTC-5)',
     istOffset: -11.5,
-    indianCommunitySize: '~300,000 Indian-origin in Greater Chicago (Naperville, Schaumburg, Aurora, Bartlett, Hoffman Estates)',
-    indianSchools: ['Naperville North High', 'Neuqua Valley HS', 'Stevenson HS', 'New Trier HS', 'Glenbrook North HS', 'Hinsdale Central HS', 'Lake Forest HS', 'Maine South HS'],
+    indianCommunitySize:
+      '~300,000 Indian-origin in Greater Chicago (Naperville, Schaumburg, Aurora, Bartlett, Hoffman Estates)',
+    indianSchools: [
+      'Naperville North High',
+      'Neuqua Valley HS',
+      'Stevenson HS',
+      'New Trier HS',
+      'Glenbrook North HS',
+      'Hinsdale Central HS',
+      'Lake Forest HS',
+      'Maine South HS',
+    ],
     localBatchSlot: 'CST 6:00 AM – 8:30 AM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year. US-Indian families pay premium tier.',
     cityContext:
-      'Greater Chicago hosts one of America\'s largest Indian-origin communities — heavily concentrated in DuPage County (Naperville, Aurora, Bartlett, Hoffman Estates) and northern suburbs (Schaumburg, Glenview, Northbrook). Many Chicago-Indian Class 12 students pursue US premed (AP Biology + MCAT B/B + 4-year BSc + MD), but a substantial minority targets Indian medical college via NRI quota at AIIMS Delhi / JIPMER / MMMC Manipal + NEET. Cerebrum offers both NEET and MCAT B/B tracks.',
+      "Greater Chicago hosts one of America's largest Indian-origin communities — heavily concentrated in DuPage County (Naperville, Aurora, Bartlett, Hoffman Estates) and northern suburbs (Schaumburg, Glenview, Northbrook). Many Chicago-Indian Class 12 students pursue US premed (AP Biology + MCAT B/B + 4-year BSc + MD), but a substantial minority targets Indian medical college via NRI quota at AIIMS Delhi / JIPMER / MMMC Manipal + NEET. Cerebrum offers both NEET and MCAT B/B tracks.",
     faqs: [
-      { question: 'Chicago medical pathway — US premed vs India MBBS?', answer: 'Two paths: (1) US premed (4-year BSc → MCAT → 4-year MD = 8+ yrs), (2) Indian MBBS via NRI quota + NEET (5.5 yrs). Indian-origin Chicago families weighing economics + practice intent. We coach NEET biology + MCAT B/B Section (separate track).' },
-      { question: 'CST 11.5-hour offset — class schedule?', answer: 'Our India evening batch (5:30-8 PM IST) is 6:00-8:30 AM Chicago time. Most students prefer recorded weekday + Saturday morning live (9-11:30 AM CST).' },
-      { question: 'AP Biology + NEET — same prep?', answer: 'AP Biology covers more cellular + molecular depth, less NCERT line-by-line. We run a 4-6 week NCERT bridge for AP-track students transitioning to NEET prep.' },
-      { question: 'Material delivery to Chicago?', answer: 'USPS Priority 5-7 days. Customs duty waived for educational books under $200.' },
+      {
+        question: 'Chicago medical pathway — US premed vs India MBBS?',
+        answer:
+          'Two paths: (1) US premed (4-year BSc → MCAT → 4-year MD = 8+ yrs), (2) Indian MBBS via NRI quota + NEET (5.5 yrs). Indian-origin Chicago families weighing economics + practice intent. We coach NEET biology + MCAT B/B Section (separate track).',
+      },
+      {
+        question: 'CST 11.5-hour offset — class schedule?',
+        answer:
+          'Our India evening batch (5:30-8 PM IST) is 6:00-8:30 AM Chicago time. Most students prefer recorded weekday + Saturday morning live (9-11:30 AM CST).',
+      },
+      {
+        question: 'AP Biology + NEET — same prep?',
+        answer:
+          'AP Biology covers more cellular + molecular depth, less NCERT line-by-line. We run a 4-6 week NCERT bridge for AP-track students transitioning to NEET prep.',
+      },
+      {
+        question: 'Material delivery to Chicago?',
+        answer: 'USPS Priority 5-7 days. Customs duty waived for educational books under $200.',
+      },
     ],
   },
   'dallas-usa': {
@@ -377,16 +726,39 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'East Asia',
     timezone: 'CST (UTC-6) / CDT (UTC-5)',
     istOffset: -11.5,
-    indianCommunitySize: '~250,000 Indian-origin in Dallas-Fort Worth metroplex (Plano, Frisco, Irving, Carrollton)',
-    indianSchools: ['Plano West Senior HS', 'Plano East Senior HS', 'Frisco HS', 'Liberty HS Frisco', 'Hebron HS Carrollton', 'Coppell HS', 'Highland Park HS', 'Allen HS', 'Jasper HS Plano'],
+    indianCommunitySize:
+      '~250,000 Indian-origin in Dallas-Fort Worth metroplex (Plano, Frisco, Irving, Carrollton)',
+    indianSchools: [
+      'Plano West Senior HS',
+      'Plano East Senior HS',
+      'Frisco HS',
+      'Liberty HS Frisco',
+      'Hebron HS Carrollton',
+      'Coppell HS',
+      'Highland Park HS',
+      'Allen HS',
+      'Jasper HS Plano',
+    ],
     localBatchSlot: 'CST 6:00 AM – 8:30 AM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year.',
     cityContext:
-      'Dallas-Fort Worth has one of America\'s fastest-growing Indian-origin communities — concentrated in Plano, Frisco, Irving, Carrollton, Coppell, Allen. Many DFW-Indian Class 12 students target US premed via UT Austin / UT Dallas / UTSW / Baylor pathway, but a substantial group considers Indian MBBS via NRI quota at AIIMS / JIPMER / MMMC Manipal + NEET. Cerebrum offers parallel NEET + MCAT B/B coaching.',
+      "Dallas-Fort Worth has one of America's fastest-growing Indian-origin communities — concentrated in Plano, Frisco, Irving, Carrollton, Coppell, Allen. Many DFW-Indian Class 12 students target US premed via UT Austin / UT Dallas / UTSW / Baylor pathway, but a substantial group considers Indian MBBS via NRI quota at AIIMS / JIPMER / MMMC Manipal + NEET. Cerebrum offers parallel NEET + MCAT B/B coaching.",
     faqs: [
-      { question: 'DFW medical pathway?', answer: 'US premed (4-year BSc → MCAT → 4-year MD = 8+ yrs) OR Indian MBBS via NRI quota + NEET (5.5 yrs). Many families pursue both as parallel options.' },
-      { question: 'CST class schedule?', answer: 'Our India evening batch (5:30-8 PM IST) is 6:00-8:30 AM Dallas. Most prefer recorded + Saturday morning live (9-11:30 AM CST).' },
-      { question: 'Plano / Frisco / Coppell community support?', answer: 'Online live works equally well from any DFW neighbourhood. Most Cerebrum-Dallas students are from Plano + Frisco + Coppell.' },
+      {
+        question: 'DFW medical pathway?',
+        answer:
+          'US premed (4-year BSc → MCAT → 4-year MD = 8+ yrs) OR Indian MBBS via NRI quota + NEET (5.5 yrs). Many families pursue both as parallel options.',
+      },
+      {
+        question: 'CST class schedule?',
+        answer:
+          'Our India evening batch (5:30-8 PM IST) is 6:00-8:30 AM Dallas. Most prefer recorded + Saturday morning live (9-11:30 AM CST).',
+      },
+      {
+        question: 'Plano / Frisco / Coppell community support?',
+        answer:
+          'Online live works equally well from any DFW neighbourhood. Most Cerebrum-Dallas students are from Plano + Frisco + Coppell.',
+      },
       { question: 'Material delivery to DFW?', answer: 'USPS Priority 4-6 days.' },
     ],
   },
@@ -398,15 +770,37 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     timezone: 'PST (UTC-8) / PDT (UTC-7)',
     istOffset: -13.5,
     indianCommunitySize: '~200,000 Indian-origin in Greater Bay Area / Silicon Valley',
-    indianSchools: ['Lynbrook HS', 'Monta Vista HS Cupertino', 'Mission San Jose HS Fremont', 'Saratoga HS', 'Gunn HS Palo Alto', 'Henry M. Gunn HS', 'Harker School San Jose', 'Bellarmine College Prep'],
+    indianSchools: [
+      'Lynbrook HS',
+      'Monta Vista HS Cupertino',
+      'Mission San Jose HS Fremont',
+      'Saratoga HS',
+      'Gunn HS Palo Alto',
+      'Henry M. Gunn HS',
+      'Harker School San Jose',
+      'Bellarmine College Prep',
+    ],
     localBatchSlot: 'PST 4:00 AM – 6:30 AM (IST 5:30 PM – 8:00 PM)',
-    pricingNote: 'NRI fees in USD: ~$3,000-5,000/year. Bay Area Indian-origin families pay top-tier.',
+    pricingNote:
+      'NRI fees in USD: ~$3,000-5,000/year. Bay Area Indian-origin families pay top-tier.',
     cityContext:
-      'San Jose + Greater Bay Area (Cupertino, Fremont, Sunnyvale, Mountain View, Palo Alto, Milpitas) has Silicon Valley\'s densest Indian-origin community — heavily IT and biomedical workforce. Bay Area-Indian Class 12 students compete for top-30 US premed (Stanford, UC Berkeley, UCLA, UCSD) + MCAT pathway, with a minority targeting Indian medical college via NRI quota + NEET. Cerebrum runs Saturday morning weekend live batch (PST 9-11:30 AM) as the time-zone-friendly option.',
+      "San Jose + Greater Bay Area (Cupertino, Fremont, Sunnyvale, Mountain View, Palo Alto, Milpitas) has Silicon Valley's densest Indian-origin community — heavily IT and biomedical workforce. Bay Area-Indian Class 12 students compete for top-30 US premed (Stanford, UC Berkeley, UCLA, UCSD) + MCAT pathway, with a minority targeting Indian medical college via NRI quota + NEET. Cerebrum runs Saturday morning weekend live batch (PST 9-11:30 AM) as the time-zone-friendly option.",
     faqs: [
-      { question: 'Bay Area medical pathway?', answer: 'Most Bay Area-Indian students pursue Stanford / UC system premed → MCAT → MD. A subset pursues Indian MBBS via NRI quota + NEET (5.5 yrs vs 8+ yrs). We coach both NEET and MCAT B/B Section.' },
-      { question: 'PST 13.5-hour offset — class schedule?', answer: 'Our India evening batch (5:30-8 PM IST) is 4:00-6:30 AM Bay Area. Most students prefer recorded weekday + Saturday morning live (9-11:30 AM PST).' },
-      { question: 'Lynbrook / Monta Vista / Mission San Jose schedule fit?', answer: 'These are competitive Bay Area schools with high homework load. Most students use recorded sessions + once-weekend live + chat doubt-clearing.' },
+      {
+        question: 'Bay Area medical pathway?',
+        answer:
+          'Most Bay Area-Indian students pursue Stanford / UC system premed → MCAT → MD. A subset pursues Indian MBBS via NRI quota + NEET (5.5 yrs vs 8+ yrs). We coach both NEET and MCAT B/B Section.',
+      },
+      {
+        question: 'PST 13.5-hour offset — class schedule?',
+        answer:
+          'Our India evening batch (5:30-8 PM IST) is 4:00-6:30 AM Bay Area. Most students prefer recorded weekday + Saturday morning live (9-11:30 AM PST).',
+      },
+      {
+        question: 'Lynbrook / Monta Vista / Mission San Jose schedule fit?',
+        answer:
+          'These are competitive Bay Area schools with high homework load. Most students use recorded sessions + once-weekend live + chat doubt-clearing.',
+      },
       { question: 'Material delivery to Bay Area?', answer: 'USPS Priority 4-6 days.' },
     ],
   },
@@ -417,16 +811,36 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'East Asia',
     timezone: 'EST (UTC-5) / EDT (UTC-4)',
     istOffset: -10.5,
-    indianCommunitySize: '~600,000 Indian-origin in Brampton (~52% of city population, largest concentration in North America)',
-    indianSchools: ['Turner Fenton Secondary School', 'Mayfield Secondary School', 'Heart Lake Secondary', 'Bramalea Secondary', 'Central Peel Secondary', 'Chinguacousy Secondary', 'David Suzuki Secondary'],
+    indianCommunitySize:
+      '~600,000 Indian-origin in Brampton (~52% of city population, largest concentration in North America)',
+    indianSchools: [
+      'Turner Fenton Secondary School',
+      'Mayfield Secondary School',
+      'Heart Lake Secondary',
+      'Bramalea Secondary',
+      'Central Peel Secondary',
+      'Chinguacousy Secondary',
+      'David Suzuki Secondary',
+    ],
     localBatchSlot: 'EST 7:00 AM – 9:30 AM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year.',
     cityContext:
-      'Brampton is North America\'s most Indian city — 52% of the population is Indian-origin (~600K), predominantly Sikh and Punjabi families with strong Indian medical-career tradition. Many Brampton-Indian Class 12 students target Indian MBBS via NRI quota + NEET (5.5 yrs to physician) as a faster alternative to Canadian MD pathway (8+ yrs via BSc + MCAT + MD). Cerebrum has its largest GTA student concentration in Brampton.',
+      "Brampton is North America's most Indian city — 52% of the population is Indian-origin (~600K), predominantly Sikh and Punjabi families with strong Indian medical-career tradition. Many Brampton-Indian Class 12 students target Indian MBBS via NRI quota + NEET (5.5 yrs to physician) as a faster alternative to Canadian MD pathway (8+ yrs via BSc + MCAT + MD). Cerebrum has its largest GTA student concentration in Brampton.",
     faqs: [
-      { question: 'Brampton Indian community — NEET vs Canadian MD?', answer: 'NEET via NRI quota is the dominant choice — 5.5 yrs to physician + India residency option + faster economics vs Canadian MD\'s 8+ years. Many Brampton families also explore Manipal Melaka (Malaysia campus that feeds Manipal University clinicals).' },
-      { question: 'EST 7-9:30 AM batch fit for Brampton students?', answer: 'Yes — clean before-school slot. Saturday morning live also at 9-11:30 AM EST.' },
-      { question: 'Turner Fenton / Mayfield / Heart Lake Secondary school support?', answer: 'Yes — most Cerebrum-Brampton students attend these or Chinguacousy / Central Peel. NCERT-aligned coaching alongside Ontario Grade 11-12 Biology.' },
+      {
+        question: 'Brampton Indian community — NEET vs Canadian MD?',
+        answer:
+          "NEET via NRI quota is the dominant choice — 5.5 yrs to physician + India residency option + faster economics vs Canadian MD's 8+ years. Many Brampton families also explore Manipal Melaka (Malaysia campus that feeds Manipal University clinicals).",
+      },
+      {
+        question: 'EST 7-9:30 AM batch fit for Brampton students?',
+        answer: 'Yes — clean before-school slot. Saturday morning live also at 9-11:30 AM EST.',
+      },
+      {
+        question: 'Turner Fenton / Mayfield / Heart Lake Secondary school support?',
+        answer:
+          'Yes — most Cerebrum-Brampton students attend these or Chinguacousy / Central Peel. NCERT-aligned coaching alongside Ontario Grade 11-12 Biology.',
+      },
       { question: 'Material delivery to Brampton?', answer: 'Canada Post Expedited 5-7 days.' },
     ],
   },
@@ -438,16 +852,41 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     timezone: 'GMT (UTC+0) / BST (UTC+1)',
     istOffset: -5.5,
     indianCommunitySize: '~600,000 Indian-origin Londoners (largest concentration in UK)',
-    indianSchools: ['Harrow School', 'Westminster School', 'St Paul\'s School', 'University College School', 'Habs Boys', 'North London Collegiate School', 'City of London School', 'Latymer Upper'],
+    indianSchools: [
+      'Harrow School',
+      'Westminster School',
+      "St Paul's School",
+      'University College School',
+      'Habs Boys',
+      'North London Collegiate School',
+      'City of London School',
+      'Latymer Upper',
+    ],
     localBatchSlot: 'GMT 12:00 PM – 2:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year. London-Indian families pay premium.',
     cityContext:
-      'London has the UK\'s largest Indian-origin community — concentrated in Harrow, Southall, Wembley, Ilford, Hounslow, Croydon, Brent. Many London-Indian Class 12 students pursue UK undergraduate medicine via UCAT + A-Level Biology pathway (5-year MBBS at Imperial, KCL, UCL, Barts, Cambridge, Oxford), but a substantial number consider Indian medical college via NRI quota + NEET (5.5 yrs) as an alternative. Cerebrum coaches NEET biology with an A-Level Biology to NCERT bridge module for transition.',
+      "London has the UK's largest Indian-origin community — concentrated in Harrow, Southall, Wembley, Ilford, Hounslow, Croydon, Brent. Many London-Indian Class 12 students pursue UK undergraduate medicine via UCAT + A-Level Biology pathway (5-year MBBS at Imperial, KCL, UCL, Barts, Cambridge, Oxford), but a substantial number consider Indian medical college via NRI quota + NEET (5.5 yrs) as an alternative. Cerebrum coaches NEET biology with an A-Level Biology to NCERT bridge module for transition.",
     faqs: [
-      { question: 'London medical pathway — UK MBBS vs India MBBS?', answer: 'UK MBBS via UCAT + A-Level + 5-year programme at Imperial / KCL / UCL / Barts / Cambridge / Oxford. Alternative: Indian MBBS via NRI quota + NEET at AIIMS / JIPMER / Manipal / KMC. Many London families pursue both as parallel options. We coach NEET biology + offer A-Level Biology track separately.' },
-      { question: 'GMT class schedule?', answer: 'GMT 12-2:30 PM batch matches IST 5:30-8 PM evening. Excellent after-school slot for London students.' },
-      { question: 'A-Level Biology to NEET bridge?', answer: 'A-Level Biology covers more topics but less NCERT line-by-line depth. We run a 4-6 week NCERT bridge for A-Level-track students.' },
-      { question: 'Harrow / Southall / Wembley / Ilford support?', answer: 'Online live works equally well from any London Indian-community area. Most Cerebrum-London students are from Harrow + Wembley + Ilford.' },
+      {
+        question: 'London medical pathway — UK MBBS vs India MBBS?',
+        answer:
+          'UK MBBS via UCAT + A-Level + 5-year programme at Imperial / KCL / UCL / Barts / Cambridge / Oxford. Alternative: Indian MBBS via NRI quota + NEET at AIIMS / JIPMER / Manipal / KMC. Many London families pursue both as parallel options. We coach NEET biology + offer A-Level Biology track separately.',
+      },
+      {
+        question: 'GMT class schedule?',
+        answer:
+          'GMT 12-2:30 PM batch matches IST 5:30-8 PM evening. Excellent after-school slot for London students.',
+      },
+      {
+        question: 'A-Level Biology to NEET bridge?',
+        answer:
+          'A-Level Biology covers more topics but less NCERT line-by-line depth. We run a 4-6 week NCERT bridge for A-Level-track students.',
+      },
+      {
+        question: 'Harrow / Southall / Wembley / Ilford support?',
+        answer:
+          'Online live works equally well from any London Indian-community area. Most Cerebrum-London students are from Harrow + Wembley + Ilford.',
+      },
     ],
   },
   'birmingham-uk': {
@@ -458,16 +897,38 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     timezone: 'GMT (UTC+0) / BST (UTC+1)',
     istOffset: -5.5,
     indianCommunitySize: '~200,000 Indian-origin in Birmingham (second-largest UK concentration)',
-    indianSchools: ['King Edward\'s School Birmingham', 'King Edward VI Camp Hill', 'Solihull School', 'Edgbaston High School', 'King Edward VI Five Ways', 'Bishop Vesey\'s Grammar', 'Bromsgrove School'],
+    indianSchools: [
+      "King Edward's School Birmingham",
+      'King Edward VI Camp Hill',
+      'Solihull School',
+      'Edgbaston High School',
+      'King Edward VI Five Ways',
+      "Bishop Vesey's Grammar",
+      'Bromsgrove School',
+    ],
     localBatchSlot: 'GMT 12:00 PM – 2:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year.',
     cityContext:
-      'Birmingham has the UK\'s second-largest Indian-origin community — concentrated in Handsworth, Smethwick, Solihull, Sparkhill, Erdington. Significant Punjabi, Gujarati, and Sindhi families. Birmingham-Indian Class 12 students target Aston Medical, Birmingham Medical (UK MBBS via UCAT + A-Level), OR Indian MBBS via NRI quota + NEET at AIIMS / JIPMER / Manipal / KMC. Cerebrum runs GMT 12-2:30 PM batch matching IST evening.',
+      "Birmingham has the UK's second-largest Indian-origin community — concentrated in Handsworth, Smethwick, Solihull, Sparkhill, Erdington. Significant Punjabi, Gujarati, and Sindhi families. Birmingham-Indian Class 12 students target Aston Medical, Birmingham Medical (UK MBBS via UCAT + A-Level), OR Indian MBBS via NRI quota + NEET at AIIMS / JIPMER / Manipal / KMC. Cerebrum runs GMT 12-2:30 PM batch matching IST evening.",
     faqs: [
-      { question: 'Birmingham medical pathway?', answer: 'UK MBBS via UCAT + A-Level + 5-year Aston / Birmingham / Coventry / Leicester programme. Alternative: Indian MBBS via NRI quota + NEET. We coach NEET biology + A-Level Biology bridge.' },
-      { question: 'GMT class schedule?', answer: 'GMT 12-2:30 PM batch matches IST 5:30-8 PM evening. After-school Birmingham slot.' },
-      { question: 'King Edward\'s / Solihull / Edgbaston High schedule fit?', answer: 'Yes — these grammar/independent schools have competitive timetables; our GMT 12-2:30 PM matches their late-afternoon free period.' },
-      { question: 'Material delivery to Birmingham?', answer: 'Royal Mail Tracked 24/48 from India 7-10 days.' },
+      {
+        question: 'Birmingham medical pathway?',
+        answer:
+          'UK MBBS via UCAT + A-Level + 5-year Aston / Birmingham / Coventry / Leicester programme. Alternative: Indian MBBS via NRI quota + NEET. We coach NEET biology + A-Level Biology bridge.',
+      },
+      {
+        question: 'GMT class schedule?',
+        answer: 'GMT 12-2:30 PM batch matches IST 5:30-8 PM evening. After-school Birmingham slot.',
+      },
+      {
+        question: "King Edward's / Solihull / Edgbaston High schedule fit?",
+        answer:
+          'Yes — these grammar/independent schools have competitive timetables; our GMT 12-2:30 PM matches their late-afternoon free period.',
+      },
+      {
+        question: 'Material delivery to Birmingham?',
+        answer: 'Royal Mail Tracked 24/48 from India 7-10 days.',
+      },
     ],
   },
   'manchester-uk': {
@@ -477,17 +938,41 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'East Asia',
     timezone: 'GMT (UTC+0) / BST (UTC+1)',
     istOffset: -5.5,
-    indianCommunitySize: '~100,000 Indian-origin in Greater Manchester (significant Gujarati, Punjabi, Tamil communities)',
-    indianSchools: ['Manchester Grammar School', 'Withington Girls\' School', 'Bury Grammar School', 'Cheadle Hulme School', 'Bolton School', 'Stockport Grammar School', 'Altrincham Grammar', 'Loreto Grammar'],
+    indianCommunitySize:
+      '~100,000 Indian-origin in Greater Manchester (significant Gujarati, Punjabi, Tamil communities)',
+    indianSchools: [
+      'Manchester Grammar School',
+      "Withington Girls' School",
+      'Bury Grammar School',
+      'Cheadle Hulme School',
+      'Bolton School',
+      'Stockport Grammar School',
+      'Altrincham Grammar',
+      'Loreto Grammar',
+    ],
     localBatchSlot: 'GMT 12:00 PM – 2:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year.',
     cityContext:
       'Greater Manchester hosts a significant Indian-origin community — concentrated in Bolton, Stockport, Bury, Trafford, Cheadle, Altrincham, and central Manchester. Strong Gujarati, Punjabi, and Tamil populations. Manchester-Indian Class 12 students target University of Manchester Medical School, Lancaster, or Liverpool (UK MBBS via UCAT + A-Level Biology) OR Indian MBBS via NRI quota + NEET. Cerebrum runs GMT 12-2:30 PM batch matching IST evening.',
     faqs: [
-      { question: 'Manchester medical pathway?', answer: 'UK MBBS via UCAT + A-Level + 5-year Manchester / Lancaster / Liverpool programme. Alternative: Indian MBBS via NRI quota + NEET. We coach NEET biology + A-Level Biology bridge.' },
-      { question: 'GMT class schedule?', answer: 'GMT 12-2:30 PM batch matches IST 5:30-8 PM evening. After-school Manchester slot.' },
-      { question: 'Manchester Grammar / Withington / Bury Grammar fit?', answer: 'Independent schools have flexible afternoon timetables; our 12-2:30 PM GMT often works as a late-afternoon study block.' },
-      { question: 'Material delivery to Manchester?', answer: 'Royal Mail Tracked 24/48 from India 7-10 days.' },
+      {
+        question: 'Manchester medical pathway?',
+        answer:
+          'UK MBBS via UCAT + A-Level + 5-year Manchester / Lancaster / Liverpool programme. Alternative: Indian MBBS via NRI quota + NEET. We coach NEET biology + A-Level Biology bridge.',
+      },
+      {
+        question: 'GMT class schedule?',
+        answer: 'GMT 12-2:30 PM batch matches IST 5:30-8 PM evening. After-school Manchester slot.',
+      },
+      {
+        question: 'Manchester Grammar / Withington / Bury Grammar fit?',
+        answer:
+          'Independent schools have flexible afternoon timetables; our 12-2:30 PM GMT often works as a late-afternoon study block.',
+      },
+      {
+        question: 'Material delivery to Manchester?',
+        answer: 'Royal Mail Tracked 24/48 from India 7-10 days.',
+      },
     ],
   },
   'leicester-uk': {
@@ -497,17 +982,39 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'East Asia',
     timezone: 'GMT (UTC+0) / BST (UTC+1)',
     istOffset: -5.5,
-    indianCommunitySize: '~140,000 Indian-origin in Leicester (~33% of city — UK\'s most Indian city per-capita)',
-    indianSchools: ['Leicester Grammar School', 'Loughborough Grammar School', 'Loughborough High School', 'Stoneygate School', 'Ratcliffe College', 'Beauchamp College'],
+    indianCommunitySize:
+      "~140,000 Indian-origin in Leicester (~33% of city — UK's most Indian city per-capita)",
+    indianSchools: [
+      'Leicester Grammar School',
+      'Loughborough Grammar School',
+      'Loughborough High School',
+      'Stoneygate School',
+      'Ratcliffe College',
+      'Beauchamp College',
+    ],
     localBatchSlot: 'GMT 12:00 PM – 2:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year.',
     cityContext:
-      'Leicester is the UK\'s most Indian city by percentage — ~33% of the population is Indian-origin (~140,000), making it the largest concentration outside London. Strong Gujarati, Punjabi, and East African Indian community (post-Uganda expulsion). Leicester-Indian Class 12 students target University of Leicester Medical School (UK MBBS via UCAT + A-Level), De Montfort, Nottingham, OR Indian MBBS via NRI quota + NEET at AIIMS / JIPMER / Manipal / KMC.',
+      "Leicester is the UK's most Indian city by percentage — ~33% of the population is Indian-origin (~140,000), making it the largest concentration outside London. Strong Gujarati, Punjabi, and East African Indian community (post-Uganda expulsion). Leicester-Indian Class 12 students target University of Leicester Medical School (UK MBBS via UCAT + A-Level), De Montfort, Nottingham, OR Indian MBBS via NRI quota + NEET at AIIMS / JIPMER / Manipal / KMC.",
     faqs: [
-      { question: 'Leicester medical pathway?', answer: 'UK MBBS via UCAT + A-Level + 5-year Leicester / Nottingham / De Montfort + Lincoln HYMS programme. Alternative: Indian MBBS via NRI quota + NEET. We coach NEET biology + A-Level Biology bridge.' },
-      { question: 'GMT class schedule?', answer: 'GMT 12-2:30 PM batch matches IST 5:30-8 PM evening. After-school Leicester slot.' },
-      { question: 'Leicester / Loughborough Grammar schedule fit?', answer: 'Yes — these grammar schools have afternoon study periods; our 12-2:30 PM GMT fits cleanly.' },
-      { question: 'Material delivery to Leicester?', answer: 'Royal Mail Tracked 24/48 from India 7-10 days.' },
+      {
+        question: 'Leicester medical pathway?',
+        answer:
+          'UK MBBS via UCAT + A-Level + 5-year Leicester / Nottingham / De Montfort + Lincoln HYMS programme. Alternative: Indian MBBS via NRI quota + NEET. We coach NEET biology + A-Level Biology bridge.',
+      },
+      {
+        question: 'GMT class schedule?',
+        answer: 'GMT 12-2:30 PM batch matches IST 5:30-8 PM evening. After-school Leicester slot.',
+      },
+      {
+        question: 'Leicester / Loughborough Grammar schedule fit?',
+        answer:
+          'Yes — these grammar schools have afternoon study periods; our 12-2:30 PM GMT fits cleanly.',
+      },
+      {
+        question: 'Material delivery to Leicester?',
+        answer: 'Royal Mail Tracked 24/48 from India 7-10 days.',
+      },
     ],
   },
   'boston-usa': {
@@ -517,16 +1024,38 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'East Asia',
     timezone: 'EST (UTC-5) / EDT (UTC-4)',
     istOffset: -10.5,
-    indianCommunitySize: '~120,000 Indian-origin in Greater Boston (concentrated in MIT/Harvard corridor + biotech)',
-    indianSchools: ['Boston Latin School', 'Lexington HS', 'Acton-Boxborough HS', 'Newton North HS', 'Westford Academy', 'Wellesley HS', 'Concord-Carlisle HS', 'Belmont HS'],
+    indianCommunitySize:
+      '~120,000 Indian-origin in Greater Boston (concentrated in MIT/Harvard corridor + biotech)',
+    indianSchools: [
+      'Boston Latin School',
+      'Lexington HS',
+      'Acton-Boxborough HS',
+      'Newton North HS',
+      'Westford Academy',
+      'Wellesley HS',
+      'Concord-Carlisle HS',
+      'Belmont HS',
+    ],
     localBatchSlot: 'EST 7:00 AM – 9:30 AM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year.',
     cityContext:
       'Greater Boston hosts a sophisticated Indian-origin community heavily concentrated in academic + biotech / pharma sectors — Lexington, Acton, Westford, Newton, Wellesley, Concord, Belmont. Boston-Indian Class 12 students are unusually competitive given Harvard / MIT / Tufts proximity; most pursue US premed (BSc + MCAT + MD = 8+ yrs), but a substantial group considers Indian MBBS via NRI quota + NEET at AIIMS / JIPMER / Manipal as a faster alternative. Cerebrum coaches both NEET biology and MCAT B/B Section.',
     faqs: [
-      { question: 'Boston medical pathway?', answer: 'US premed via Harvard / MIT / Tufts / BU / Northeastern + MCAT + MD = 8+ years. Alternative: Indian MBBS via NRI quota + NEET = 5.5 years. We coach both NEET and MCAT B/B.' },
-      { question: 'EST 7-9:30 AM batch fit?', answer: 'Yes — clean before-school slot for Lexington / Acton / Newton students. Saturday morning live also at 9-11:30 AM EST.' },
-      { question: 'Lexington / Acton-Boxborough / Westford schedule fit?', answer: 'These competitive suburban schools have heavy AP loads; recorded weekday + Saturday live works best for most students.' },
+      {
+        question: 'Boston medical pathway?',
+        answer:
+          'US premed via Harvard / MIT / Tufts / BU / Northeastern + MCAT + MD = 8+ years. Alternative: Indian MBBS via NRI quota + NEET = 5.5 years. We coach both NEET and MCAT B/B.',
+      },
+      {
+        question: 'EST 7-9:30 AM batch fit?',
+        answer:
+          'Yes — clean before-school slot for Lexington / Acton / Newton students. Saturday morning live also at 9-11:30 AM EST.',
+      },
+      {
+        question: 'Lexington / Acton-Boxborough / Westford schedule fit?',
+        answer:
+          'These competitive suburban schools have heavy AP loads; recorded weekday + Saturday live works best for most students.',
+      },
       { question: 'Material delivery to Boston?', answer: 'USPS Priority 4-6 days.' },
     ],
   },
@@ -537,17 +1066,43 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'East Asia',
     timezone: 'CST (UTC-6) / CDT (UTC-5)',
     istOffset: -11.5,
-    indianCommunitySize: '~150,000 Indian-origin in Greater Houston (Sugar Land, Pearland, Katy, Cypress, Spring)',
-    indianSchools: ['Clements HS Sugar Land', 'Dulles HS', 'Stephen F. Austin HS Sugar Land', 'Cinco Ranch HS Katy', 'Seven Lakes HS', 'Memorial HS', 'Bellaire HS', 'Westside HS'],
+    indianCommunitySize:
+      '~150,000 Indian-origin in Greater Houston (Sugar Land, Pearland, Katy, Cypress, Spring)',
+    indianSchools: [
+      'Clements HS Sugar Land',
+      'Dulles HS',
+      'Stephen F. Austin HS Sugar Land',
+      'Cinco Ranch HS Katy',
+      'Seven Lakes HS',
+      'Memorial HS',
+      'Bellaire HS',
+      'Westside HS',
+    ],
     localBatchSlot: 'CST 6:00 AM – 8:30 AM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year.',
     cityContext:
-      'Greater Houston has one of America\'s largest and fastest-growing Indian-origin communities — concentrated in Sugar Land (Fort Bend County), Pearland, Katy, Cypress, Spring, Missouri City. Strong oil/gas + medical sector workforce. Houston-Indian Class 12 students target US premed via UT Austin / Rice / Baylor pathway with MCAT, OR Indian MBBS via NRI quota + NEET at AIIMS / JIPMER / Manipal. Sugar Land has particularly high Indian density (~33% in some neighborhoods).',
+      "Greater Houston has one of America's largest and fastest-growing Indian-origin communities — concentrated in Sugar Land (Fort Bend County), Pearland, Katy, Cypress, Spring, Missouri City. Strong oil/gas + medical sector workforce. Houston-Indian Class 12 students target US premed via UT Austin / Rice / Baylor pathway with MCAT, OR Indian MBBS via NRI quota + NEET at AIIMS / JIPMER / Manipal. Sugar Land has particularly high Indian density (~33% in some neighborhoods).",
     faqs: [
-      { question: 'Houston medical pathway?', answer: 'US premed via UT Austin / Rice / Baylor / Texas A&M + MCAT + MD = 8+ years. Alternative: Indian MBBS via NRI quota + NEET = 5.5 years. We coach both NEET and MCAT B/B.' },
-      { question: 'CST 6-8:30 AM batch?', answer: 'Yes — before-school slot for Sugar Land / Pearland / Katy / Cypress students. Saturday morning live at 9-11:30 AM CST.' },
-      { question: 'Clements / Dulles / Cinco Ranch / Seven Lakes schedule fit?', answer: 'Yes — these competitive suburban Houston schools have AP-heavy timetables; recorded weekday + Saturday live works for most.' },
-      { question: 'Sugar Land Indian community support?', answer: 'Most Cerebrum-Houston students are from Sugar Land + Pearland. Online live works equally well from any Houston neighbourhood.' },
+      {
+        question: 'Houston medical pathway?',
+        answer:
+          'US premed via UT Austin / Rice / Baylor / Texas A&M + MCAT + MD = 8+ years. Alternative: Indian MBBS via NRI quota + NEET = 5.5 years. We coach both NEET and MCAT B/B.',
+      },
+      {
+        question: 'CST 6-8:30 AM batch?',
+        answer:
+          'Yes — before-school slot for Sugar Land / Pearland / Katy / Cypress students. Saturday morning live at 9-11:30 AM CST.',
+      },
+      {
+        question: 'Clements / Dulles / Cinco Ranch / Seven Lakes schedule fit?',
+        answer:
+          'Yes — these competitive suburban Houston schools have AP-heavy timetables; recorded weekday + Saturday live works for most.',
+      },
+      {
+        question: 'Sugar Land Indian community support?',
+        answer:
+          'Most Cerebrum-Houston students are from Sugar Land + Pearland. Online live works equally well from any Houston neighbourhood.',
+      },
     ],
   },
   'new-york-usa': {
@@ -557,17 +1112,44 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'East Asia',
     timezone: 'EST (UTC-5) / EDT (UTC-4)',
     istOffset: -10.5,
-    indianCommunitySize: '~700,000 Indian-origin in NYC metro (NYC + NJ + Long Island + Westchester)',
-    indianSchools: ['Stuyvesant HS', 'Bronx Science', 'Brooklyn Tech', 'Hunter College HS', 'Edison HS NJ', 'Bergen County Academies', 'Princeton HS', 'Livingston HS NJ', 'West Windsor-Plainsboro HS'],
+    indianCommunitySize:
+      '~700,000 Indian-origin in NYC metro (NYC + NJ + Long Island + Westchester)',
+    indianSchools: [
+      'Stuyvesant HS',
+      'Bronx Science',
+      'Brooklyn Tech',
+      'Hunter College HS',
+      'Edison HS NJ',
+      'Bergen County Academies',
+      'Princeton HS',
+      'Livingston HS NJ',
+      'West Windsor-Plainsboro HS',
+    ],
     localBatchSlot: 'EST 7:00 AM – 9:30 AM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year.',
     cityContext:
-      'NYC metro hosts America\'s largest Indian-origin community spanning New York City (Queens, Brooklyn, Manhattan), New Jersey (Edison, Iselin, Jersey City, Princeton), Long Island, and Westchester — ~700,000 total. Many NYC-Indian Class 12 students compete for top-tier US premed (Cornell, Columbia, NYU, Rutgers, Princeton) + MCAT pathway, while a substantial number pursue Indian MBBS via NRI quota + NEET. Cerebrum coaches NEET biology + MCAT B/B Section as parallel tracks.',
+      "NYC metro hosts America's largest Indian-origin community spanning New York City (Queens, Brooklyn, Manhattan), New Jersey (Edison, Iselin, Jersey City, Princeton), Long Island, and Westchester — ~700,000 total. Many NYC-Indian Class 12 students compete for top-tier US premed (Cornell, Columbia, NYU, Rutgers, Princeton) + MCAT pathway, while a substantial number pursue Indian MBBS via NRI quota + NEET. Cerebrum coaches NEET biology + MCAT B/B Section as parallel tracks.",
     faqs: [
-      { question: 'NYC medical pathway?', answer: 'US premed via Columbia / Cornell / NYU / Rutgers / Princeton + MCAT + MD = 8+ years. Alternative: Indian MBBS via NRI quota + NEET = 5.5 years. We coach both NEET and MCAT B/B.' },
-      { question: 'EST 7-9:30 AM batch?', answer: 'Yes — before-school slot for NYC / NJ / Westchester students. Saturday morning live also at 9-11:30 AM EST.' },
-      { question: 'Stuyvesant / Bronx Science / Brooklyn Tech NEET pathway?', answer: 'These specialized NYC public HSs have heavy AP loads — most students use recorded weekday sessions + Saturday live + chat doubt-clearing.' },
-      { question: 'NJ feeder schools (Edison, Bergen, Princeton)?', answer: 'Edison HS, Bergen County Academies, Princeton HS, Livingston HS, West Windsor-Plainsboro all have large Indian-origin student bodies. Most NJ-based Cerebrum students enroll alongside NJ peers.' },
+      {
+        question: 'NYC medical pathway?',
+        answer:
+          'US premed via Columbia / Cornell / NYU / Rutgers / Princeton + MCAT + MD = 8+ years. Alternative: Indian MBBS via NRI quota + NEET = 5.5 years. We coach both NEET and MCAT B/B.',
+      },
+      {
+        question: 'EST 7-9:30 AM batch?',
+        answer:
+          'Yes — before-school slot for NYC / NJ / Westchester students. Saturday morning live also at 9-11:30 AM EST.',
+      },
+      {
+        question: 'Stuyvesant / Bronx Science / Brooklyn Tech NEET pathway?',
+        answer:
+          'These specialized NYC public HSs have heavy AP loads — most students use recorded weekday sessions + Saturday live + chat doubt-clearing.',
+      },
+      {
+        question: 'NJ feeder schools (Edison, Bergen, Princeton)?',
+        answer:
+          'Edison HS, Bergen County Academies, Princeton HS, Livingston HS, West Windsor-Plainsboro all have large Indian-origin student bodies. Most NJ-based Cerebrum students enroll alongside NJ peers.',
+      },
     ],
   },
   'atlanta-usa': {
@@ -577,16 +1159,38 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'East Asia',
     timezone: 'EST (UTC-5) / EDT (UTC-4)',
     istOffset: -10.5,
-    indianCommunitySize: '~150,000 Indian-origin in Greater Atlanta (Fulton / Cobb / Gwinnett / North suburbs)',
-    indianSchools: ['Walton HS', 'Lambert HS', 'Northview HS', 'Pope HS', 'Chattahoochee HS', 'Centennial HS Roswell', 'Johns Creek HS', 'Mountain View HS Marietta'],
+    indianCommunitySize:
+      '~150,000 Indian-origin in Greater Atlanta (Fulton / Cobb / Gwinnett / North suburbs)',
+    indianSchools: [
+      'Walton HS',
+      'Lambert HS',
+      'Northview HS',
+      'Pope HS',
+      'Chattahoochee HS',
+      'Centennial HS Roswell',
+      'Johns Creek HS',
+      'Mountain View HS Marietta',
+    ],
     localBatchSlot: 'EST 7:00 AM – 9:30 AM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year.',
     cityContext:
       'Greater Atlanta has a substantial Indian-origin community concentrated in North Fulton (Sandy Springs, Roswell, Alpharetta, Johns Creek), Cobb (East Cobb), and Gwinnett counties — particularly around the Tech Corridor. Atlanta-Indian Class 12 students target US premed via Emory / Georgia Tech / UGA + MCAT pathway, OR Indian MBBS via NRI quota + NEET at AIIMS / JIPMER / Manipal. Cerebrum runs EST 7-9:30 AM before-school batch + Saturday morning live.',
     faqs: [
-      { question: 'Atlanta medical pathway?', answer: 'US premed via Emory / Georgia Tech / UGA / Mercer + MCAT + MD = 8+ years. Alternative: Indian MBBS via NRI quota + NEET = 5.5 years. We coach both NEET and MCAT B/B.' },
-      { question: 'EST class schedule?', answer: 'EST 7-9:30 AM batch (before-school) + Saturday morning live (9-11:30 AM EST) for Atlanta students.' },
-      { question: 'Walton / Lambert / Northview / Johns Creek schedule fit?', answer: 'These competitive North Atlanta suburban HSs have heavy AP loads; recorded weekday + Saturday live works best for most.' },
+      {
+        question: 'Atlanta medical pathway?',
+        answer:
+          'US premed via Emory / Georgia Tech / UGA / Mercer + MCAT + MD = 8+ years. Alternative: Indian MBBS via NRI quota + NEET = 5.5 years. We coach both NEET and MCAT B/B.',
+      },
+      {
+        question: 'EST class schedule?',
+        answer:
+          'EST 7-9:30 AM batch (before-school) + Saturday morning live (9-11:30 AM EST) for Atlanta students.',
+      },
+      {
+        question: 'Walton / Lambert / Northview / Johns Creek schedule fit?',
+        answer:
+          'These competitive North Atlanta suburban HSs have heavy AP loads; recorded weekday + Saturday live works best for most.',
+      },
       { question: 'Material delivery to Atlanta?', answer: 'USPS Priority 4-6 days.' },
     ],
   },
@@ -598,16 +1202,41 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     timezone: 'EST (UTC-5) / EDT (UTC-4)',
     istOffset: -10.5,
     indianCommunitySize: '~200,000 Indian-origin in DC Metro (Northern Virginia + Maryland + DC)',
-    indianSchools: ['Thomas Jefferson HSST', 'Langley HS McLean', 'McLean HS', 'Oakton HS', 'Marshall HS', 'Madison HS', 'Walt Whitman HS Bethesda', 'Winston Churchill HS Potomac'],
+    indianSchools: [
+      'Thomas Jefferson HSST',
+      'Langley HS McLean',
+      'McLean HS',
+      'Oakton HS',
+      'Marshall HS',
+      'Madison HS',
+      'Walt Whitman HS Bethesda',
+      'Winston Churchill HS Potomac',
+    ],
     localBatchSlot: 'EST 7:00 AM – 9:30 AM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year.',
     cityContext:
-      'DC Metro (Northern Virginia + Suburban Maryland + Washington DC proper) has one of America\'s wealthiest and most education-focused Indian-origin communities — heavily concentrated in Fairfax County (McLean, Vienna, Reston, Herndon, Centreville, Chantilly) and Montgomery County (Bethesda, Potomac, Rockville, Gaithersburg, Germantown). DC-Indian Class 12 students compete for top-tier US premed (Georgetown, Johns Hopkins, UVA, UMD) + MCAT pathway. A subset targets Indian MBBS via NRI quota + NEET.',
+      "DC Metro (Northern Virginia + Suburban Maryland + Washington DC proper) has one of America's wealthiest and most education-focused Indian-origin communities — heavily concentrated in Fairfax County (McLean, Vienna, Reston, Herndon, Centreville, Chantilly) and Montgomery County (Bethesda, Potomac, Rockville, Gaithersburg, Germantown). DC-Indian Class 12 students compete for top-tier US premed (Georgetown, Johns Hopkins, UVA, UMD) + MCAT pathway. A subset targets Indian MBBS via NRI quota + NEET.",
     faqs: [
-      { question: 'DC Metro medical pathway?', answer: 'US premed via Johns Hopkins / Georgetown / UVA / UMD / W&M + MCAT + MD = 8+ years. Alternative: Indian MBBS via NRI quota + NEET = 5.5 years. We coach both NEET and MCAT B/B.' },
-      { question: 'EST 7-9:30 AM batch?', answer: 'Yes — before-school slot for NoVA / Maryland students. Saturday morning live also at 9-11:30 AM EST.' },
-      { question: 'TJHSST / Langley / Oakton / Walt Whitman schedule fit?', answer: 'These competitive DC-area magnets and suburban HSs have heavy AP / IB loads; recorded weekday + Saturday live works for most.' },
-      { question: 'NoVA vs Maryland student concentration?', answer: 'Most Cerebrum-DC students are from Northern Virginia (Fairfax County). Bethesda / Potomac Maryland students also represented.' },
+      {
+        question: 'DC Metro medical pathway?',
+        answer:
+          'US premed via Johns Hopkins / Georgetown / UVA / UMD / W&M + MCAT + MD = 8+ years. Alternative: Indian MBBS via NRI quota + NEET = 5.5 years. We coach both NEET and MCAT B/B.',
+      },
+      {
+        question: 'EST 7-9:30 AM batch?',
+        answer:
+          'Yes — before-school slot for NoVA / Maryland students. Saturday morning live also at 9-11:30 AM EST.',
+      },
+      {
+        question: 'TJHSST / Langley / Oakton / Walt Whitman schedule fit?',
+        answer:
+          'These competitive DC-area magnets and suburban HSs have heavy AP / IB loads; recorded weekday + Saturday live works for most.',
+      },
+      {
+        question: 'NoVA vs Maryland student concentration?',
+        answer:
+          'Most Cerebrum-DC students are from Northern Virginia (Fairfax County). Bethesda / Potomac Maryland students also represented.',
+      },
     ],
   },
   'calgary-canada': {
@@ -617,16 +1246,38 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'East Asia',
     timezone: 'MST (UTC-7) / MDT (UTC-6)',
     istOffset: -12.5,
-    indianCommunitySize: '~90,000 Indian-origin in Greater Calgary (Martindale, Saddle Ridge, Falconridge, Taradale)',
-    indianSchools: ['Western Canada HS', 'Sir Winston Churchill HS', 'Centennial HS Calgary', 'Bowness HS', 'Henry Wise Wood HS', 'Lord Beaverbrook HS', 'James Fowler HS', 'William Aberhart HS'],
+    indianCommunitySize:
+      '~90,000 Indian-origin in Greater Calgary (Martindale, Saddle Ridge, Falconridge, Taradale)',
+    indianSchools: [
+      'Western Canada HS',
+      'Sir Winston Churchill HS',
+      'Centennial HS Calgary',
+      'Bowness HS',
+      'Henry Wise Wood HS',
+      'Lord Beaverbrook HS',
+      'James Fowler HS',
+      'William Aberhart HS',
+    ],
     localBatchSlot: 'MST 5:00 AM – 7:30 AM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year.',
     cityContext:
       'Calgary has a growing Indian-origin community concentrated in NE Calgary — Martindale, Saddle Ridge, Falconridge, Taradale, Castleridge, Coral Springs. Significant Sikh and Punjabi population. Calgary-Indian Class 12 students target University of Calgary Medicine (Canadian MD via BSc + MCAT pathway, 8+ yrs) OR Indian MBBS via NRI quota + NEET (5.5 yrs). Cerebrum runs MST 5-7:30 AM before-school batch + Saturday morning live (9-11:30 AM MST).',
     faqs: [
-      { question: 'Calgary medical pathway?', answer: 'U of Calgary Medicine via BSc + MCAT + MD = 8+ years. Alternative: Indian MBBS via NRI quota + NEET = 5.5 years. Many families pursue both as parallel options. We coach NEET biology + MCAT B/B Section.' },
-      { question: 'MST 5-7:30 AM batch?', answer: 'Yes — early-morning slot for NE Calgary students. Saturday morning live at 9-11:30 AM MST also available.' },
-      { question: 'Martindale / Saddle Ridge / Falconridge support?', answer: 'Most Cerebrum-Calgary students are from NE Calgary. Online live works equally well from any Calgary neighbourhood.' },
+      {
+        question: 'Calgary medical pathway?',
+        answer:
+          'U of Calgary Medicine via BSc + MCAT + MD = 8+ years. Alternative: Indian MBBS via NRI quota + NEET = 5.5 years. Many families pursue both as parallel options. We coach NEET biology + MCAT B/B Section.',
+      },
+      {
+        question: 'MST 5-7:30 AM batch?',
+        answer:
+          'Yes — early-morning slot for NE Calgary students. Saturday morning live at 9-11:30 AM MST also available.',
+      },
+      {
+        question: 'Martindale / Saddle Ridge / Falconridge support?',
+        answer:
+          'Most Cerebrum-Calgary students are from NE Calgary. Online live works equally well from any Calgary neighbourhood.',
+      },
       { question: 'Material delivery to Calgary?', answer: 'Canada Post Expedited 6-9 days.' },
     ],
   },
@@ -637,36 +1288,78 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'East Asia',
     timezone: 'AEST (UTC+10)',
     istOffset: 4.5,
-    indianCommunitySize: '~50,000 Indian-origin in Greater Brisbane (Sunnybank, Calamvale, Runcorn, Stretton)',
-    indianSchools: ['Brisbane Grammar School', 'Brisbane Boys\' College', 'Brisbane State HS', 'Mansfield SHS', 'Sunnybank SHS', 'Indooroopilly SHS', 'Cavendish Road SHS', 'Anglican Church Grammar School'],
+    indianCommunitySize:
+      '~50,000 Indian-origin in Greater Brisbane (Sunnybank, Calamvale, Runcorn, Stretton)',
+    indianSchools: [
+      'Brisbane Grammar School',
+      "Brisbane Boys' College",
+      'Brisbane State HS',
+      'Mansfield SHS',
+      'Sunnybank SHS',
+      'Indooroopilly SHS',
+      'Cavendish Road SHS',
+      'Anglican Church Grammar School',
+    ],
     localBatchSlot: 'AEST 10:00 PM – 12:30 AM next day (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year.',
     cityContext:
       'Brisbane has a growing Indian-origin community concentrated in Sunnybank, Calamvale, Runcorn, Stretton, Kuraby, MacGregor. Brisbane-Indian Class 12 students target University of Queensland Medicine (postgraduate MD via BSc + GAMSAT or undergrad MBBS at Bond / Griffith) OR Indian MBBS via NRI quota + NEET. We coach NEET biology + GAMSAT Section 3 Biology.',
     faqs: [
-      { question: 'Brisbane medical pathway?', answer: 'U of Queensland MD (postgrad, 8+ yrs), Bond / Griffith MBBS, OR Indian MBBS via NRI quota + NEET (5.5 yrs). We coach NEET biology + GAMSAT Section 3 Biology separately.' },
-      { question: 'AEST class schedule?', answer: 'Weekday evening batch (10 PM – 12:30 AM AEST) matches IST evening. Saturday morning live (9-11:30 AM AEST) is the local-time-friendly option preferred by most students.' },
-      { question: 'Sunnybank / Calamvale / Runcorn support?', answer: 'Most Cerebrum-Brisbane students are from Sunnybank cluster. Online live works equally well from any Brisbane neighbourhood.' },
+      {
+        question: 'Brisbane medical pathway?',
+        answer:
+          'U of Queensland MD (postgrad, 8+ yrs), Bond / Griffith MBBS, OR Indian MBBS via NRI quota + NEET (5.5 yrs). We coach NEET biology + GAMSAT Section 3 Biology separately.',
+      },
+      {
+        question: 'AEST class schedule?',
+        answer:
+          'Weekday evening batch (10 PM – 12:30 AM AEST) matches IST evening. Saturday morning live (9-11:30 AM AEST) is the local-time-friendly option preferred by most students.',
+      },
+      {
+        question: 'Sunnybank / Calamvale / Runcorn support?',
+        answer:
+          'Most Cerebrum-Brisbane students are from Sunnybank cluster. Online live works equally well from any Brisbane neighbourhood.',
+      },
       { question: 'Material delivery to Brisbane?', answer: 'Australia Post Express 7-10 days.' },
     ],
   },
-  'bahrain': {
+  bahrain: {
     slug: 'bahrain',
     city: 'Manama',
     country: 'Bahrain',
     region: 'Gulf',
     timezone: 'AST (UTC+3)',
     istOffset: -2.5,
-    indianCommunitySize: '~350,000 Indian-origin in Bahrain (~25% of population, largest expat community)',
-    indianSchools: ['Indian School Bahrain', 'Bahrain Indian School', 'New Indian School Bahrain', 'Asian School Bahrain', 'St Christopher\'s School', 'Pakistan Urdu School and College'],
+    indianCommunitySize:
+      '~350,000 Indian-origin in Bahrain (~25% of population, largest expat community)',
+    indianSchools: [
+      'Indian School Bahrain',
+      'Bahrain Indian School',
+      'New Indian School Bahrain',
+      'Asian School Bahrain',
+      "St Christopher's School",
+      'Pakistan Urdu School and College',
+    ],
     localBatchSlot: 'AST 3:00 PM – 5:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$1,800-3,600/year.',
     cityContext:
-      'Bahrain has one of the Gulf\'s most established Indian communities — ~350,000 strong (~25% of population), concentrated in Manama, Muharraq, Riffa, Saar, Janabiyah. Many Bahrain-Indian families are second/third generation, mostly Malayali, Tamil, Punjabi. Indian School Bahrain (ISB) is the dominant CBSE feeder for NEET aspirants. NEET path typically targets NRI quota at AIIMS / JIPMER / MMMC Manipal / KMC Mangalore + all-India quota.',
+      "Bahrain has one of the Gulf's most established Indian communities — ~350,000 strong (~25% of population), concentrated in Manama, Muharraq, Riffa, Saar, Janabiyah. Many Bahrain-Indian families are second/third generation, mostly Malayali, Tamil, Punjabi. Indian School Bahrain (ISB) is the dominant CBSE feeder for NEET aspirants. NEET path typically targets NRI quota at AIIMS / JIPMER / MMMC Manipal / KMC Mangalore + all-India quota.",
     faqs: [
-      { question: 'Pathway from Bahrain to Indian medical college?', answer: 'NRI quota at AIIMS / JIPMER / private deemed universities; all-India quota via NEET. Biology cut-off ~330-345/360 for NRI premium colleges.' },
-      { question: 'Indian School Bahrain (ISB) student schedule fit?', answer: 'AST 3-5:30 PM batch (IST 5:30-8 PM) fits cleanly after ISB / NIS / Asian School dismissal at 2:30 PM.' },
-      { question: 'NEET exam centre availability?', answer: 'Yes — Bahrain is one of the official NTA overseas NEET exam centres. Manama hosts the exam annually in May.' },
+      {
+        question: 'Pathway from Bahrain to Indian medical college?',
+        answer:
+          'NRI quota at AIIMS / JIPMER / private deemed universities; all-India quota via NEET. Biology cut-off ~330-345/360 for NRI premium colleges.',
+      },
+      {
+        question: 'Indian School Bahrain (ISB) student schedule fit?',
+        answer:
+          'AST 3-5:30 PM batch (IST 5:30-8 PM) fits cleanly after ISB / NIS / Asian School dismissal at 2:30 PM.',
+      },
+      {
+        question: 'NEET exam centre availability?',
+        answer:
+          'Yes — Bahrain is one of the official NTA overseas NEET exam centres. Manama hosts the exam annually in May.',
+      },
       { question: 'Material delivery to Manama?', answer: 'DHL Bahrain 5-7 days.' },
     ],
   },
@@ -677,16 +1370,38 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'Gulf',
     timezone: 'AST (UTC+3)',
     istOffset: -2.5,
-    indianCommunitySize: '~1 million Indian-origin in Kuwait (~21% of population, largest expat community)',
-    indianSchools: ['Indian Community School Kuwait', 'Indian Public School Kuwait', 'Gulf Indian School Kuwait', 'New English School Kuwait', 'Don Bosco School Kuwait', 'United Indian School Kuwait', 'Carmel School Kuwait'],
+    indianCommunitySize:
+      '~1 million Indian-origin in Kuwait (~21% of population, largest expat community)',
+    indianSchools: [
+      'Indian Community School Kuwait',
+      'Indian Public School Kuwait',
+      'Gulf Indian School Kuwait',
+      'New English School Kuwait',
+      'Don Bosco School Kuwait',
+      'United Indian School Kuwait',
+      'Carmel School Kuwait',
+    ],
     localBatchSlot: 'AST 3:00 PM – 5:30 PM (IST 5:30 PM – 8:00 PM)',
-    pricingNote: 'NRI fees in USD: ~$1,800-3,600/year. Kuwait-Indian families have substantial coaching budget.',
+    pricingNote:
+      'NRI fees in USD: ~$1,800-3,600/year. Kuwait-Indian families have substantial coaching budget.',
     cityContext:
-      'Kuwait has the Gulf\'s largest Indian-origin community (~1 million, ~21% of population) concentrated in Salmiya, Hawalli, Farwaniya, Mahboula, Mangaf, Abbasiya. Indian Community School (ICSK), Indian Public School (IPS), and Gulf Indian School are the dominant CBSE feeders. NEET aspirants typically target NRI quota at AIIMS / JIPMER / MMMC Manipal / KMC Mangalore.',
+      "Kuwait has the Gulf's largest Indian-origin community (~1 million, ~21% of population) concentrated in Salmiya, Hawalli, Farwaniya, Mahboula, Mangaf, Abbasiya. Indian Community School (ICSK), Indian Public School (IPS), and Gulf Indian School are the dominant CBSE feeders. NEET aspirants typically target NRI quota at AIIMS / JIPMER / MMMC Manipal / KMC Mangalore.",
     faqs: [
-      { question: 'Pathway from Kuwait to Indian medical college?', answer: 'NRI quota at AIIMS / JIPMER / Manipal / KMC / private deemed; all-India quota via NEET. Biology cut-off ~330-345/360 for NRI premium colleges.' },
-      { question: 'ICSK / IPS / Gulf Indian School schedule fit?', answer: 'AST 3-5:30 PM batch matches IST 5:30-8 PM evening. After-school slot for major Kuwait CBSE schools.' },
-      { question: 'NEET exam centre in Kuwait?', answer: 'Yes — Kuwait City is an official NTA overseas NEET exam centre. Annual May exam at designated venue.' },
+      {
+        question: 'Pathway from Kuwait to Indian medical college?',
+        answer:
+          'NRI quota at AIIMS / JIPMER / Manipal / KMC / private deemed; all-India quota via NEET. Biology cut-off ~330-345/360 for NRI premium colleges.',
+      },
+      {
+        question: 'ICSK / IPS / Gulf Indian School schedule fit?',
+        answer:
+          'AST 3-5:30 PM batch matches IST 5:30-8 PM evening. After-school slot for major Kuwait CBSE schools.',
+      },
+      {
+        question: 'NEET exam centre in Kuwait?',
+        answer:
+          'Yes — Kuwait City is an official NTA overseas NEET exam centre. Annual May exam at designated venue.',
+      },
       { question: 'Material delivery to Kuwait?', answer: 'DHL Kuwait 5-7 days.' },
     ],
   },
@@ -698,15 +1413,35 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     timezone: 'GST (UTC+4)',
     istOffset: -1.5,
     indianCommunitySize: '~700,000 Indian-origin in Oman (~16% of population)',
-    indianSchools: ['Indian School Muscat (Wadi Kabir)', 'Indian School Al Ghubra', 'Indian School Al Wadi Al Kabir', 'Indian School Sohar', 'Indian School Salalah', 'Indian School Bousher', 'Sultan\'s School', 'American International School Muscat'],
+    indianSchools: [
+      'Indian School Muscat (Wadi Kabir)',
+      'Indian School Al Ghubra',
+      'Indian School Al Wadi Al Kabir',
+      'Indian School Sohar',
+      'Indian School Salalah',
+      'Indian School Bousher',
+      "Sultan's School",
+      'American International School Muscat',
+    ],
     localBatchSlot: 'GST 4:00 PM – 6:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$1,800-3,600/year.',
     cityContext:
-      'Oman has one of the Gulf\'s most established Indian-origin communities — ~700,000 strong (~16% of population), concentrated in Muscat (Ruwi, Mutrah, Wadi Kabir, Al Khoud, Bousher, Al Ghubra, Qurum). Indian School Muscat (Wadi Kabir, the original), Indian School Al Ghubra, Indian School Al Wadi Al Kabir, Indian School Bousher serve the Muscat NEET aspirants. NEET typically targets NRI quota at AIIMS / JIPMER / Manipal / KMC.',
+      "Oman has one of the Gulf's most established Indian-origin communities — ~700,000 strong (~16% of population), concentrated in Muscat (Ruwi, Mutrah, Wadi Kabir, Al Khoud, Bousher, Al Ghubra, Qurum). Indian School Muscat (Wadi Kabir, the original), Indian School Al Ghubra, Indian School Al Wadi Al Kabir, Indian School Bousher serve the Muscat NEET aspirants. NEET typically targets NRI quota at AIIMS / JIPMER / Manipal / KMC.",
     faqs: [
-      { question: 'Pathway from Muscat to Indian medical college?', answer: 'NRI quota at AIIMS / JIPMER / private deemed universities; all-India quota via NEET. Biology cut-off ~330-345/360 for NRI premium colleges.' },
-      { question: 'Indian School Muscat (Wadi Kabir / Al Ghubra / Bousher / AWK) schedule fit?', answer: 'GST 4-6:30 PM batch matches IST 5:30-8 PM evening. After-school slot for all Muscat Indian Schools.' },
-      { question: 'NEET exam centre in Muscat?', answer: 'Yes — Muscat is an official NTA overseas NEET exam centre. Annual May exam.' },
+      {
+        question: 'Pathway from Muscat to Indian medical college?',
+        answer:
+          'NRI quota at AIIMS / JIPMER / private deemed universities; all-India quota via NEET. Biology cut-off ~330-345/360 for NRI premium colleges.',
+      },
+      {
+        question: 'Indian School Muscat (Wadi Kabir / Al Ghubra / Bousher / AWK) schedule fit?',
+        answer:
+          'GST 4-6:30 PM batch matches IST 5:30-8 PM evening. After-school slot for all Muscat Indian Schools.',
+      },
+      {
+        question: 'NEET exam centre in Muscat?',
+        answer: 'Yes — Muscat is an official NTA overseas NEET exam centre. Annual May exam.',
+      },
       { question: 'Material delivery to Muscat?', answer: 'DHL Oman 5-7 days.' },
     ],
   },
@@ -717,16 +1452,34 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'Gulf',
     timezone: 'GST (UTC+4)',
     istOffset: -1.5,
-    indianCommunitySize: '~50,000 Indian-origin in Ajman (part of UAE\'s 3.5M Indian community)',
-    indianSchools: ['Indian School Ajman', 'Ajman Academy', 'Habitat School Ajman', 'India International School Ajman', 'Bukhatir Education Advancement & Management International (BEAM)', 'GEMS Westminster School Ajman'],
+    indianCommunitySize: "~50,000 Indian-origin in Ajman (part of UAE's 3.5M Indian community)",
+    indianSchools: [
+      'Indian School Ajman',
+      'Ajman Academy',
+      'Habitat School Ajman',
+      'India International School Ajman',
+      'Bukhatir Education Advancement & Management International (BEAM)',
+      'GEMS Westminster School Ajman',
+    ],
     localBatchSlot: 'GST 4:00 PM – 6:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$1,800-3,600/year.',
     cityContext:
       'Ajman is the smallest UAE emirate but has a growing Indian-origin community connected to broader UAE diaspora. Indian School Ajman is the dominant CBSE feeder. Many Ajman-Indian students travel to Sharjah or Dubai for NEET exam centres. NEET path targets NRI quota at AIIMS / JIPMER / Manipal / KMC + all-India quota.',
     faqs: [
-      { question: 'Pathway from Ajman to Indian medical college?', answer: 'NRI quota at AIIMS / JIPMER / private deemed universities; all-India quota. NEET exam taken at Sharjah or Dubai NTA centres.' },
-      { question: 'Indian School Ajman / Habitat School schedule fit?', answer: 'GST 4-6:30 PM batch matches IST 5:30-8 PM evening. After-school slot.' },
-      { question: 'Where do Ajman students take the NEET exam?', answer: 'Sharjah or Dubai NTA NEET centres (Ajman has no dedicated centre). 30-60 min commute from Ajman.' },
+      {
+        question: 'Pathway from Ajman to Indian medical college?',
+        answer:
+          'NRI quota at AIIMS / JIPMER / private deemed universities; all-India quota. NEET exam taken at Sharjah or Dubai NTA centres.',
+      },
+      {
+        question: 'Indian School Ajman / Habitat School schedule fit?',
+        answer: 'GST 4-6:30 PM batch matches IST 5:30-8 PM evening. After-school slot.',
+      },
+      {
+        question: 'Where do Ajman students take the NEET exam?',
+        answer:
+          'Sharjah or Dubai NTA NEET centres (Ajman has no dedicated centre). 30-60 min commute from Ajman.',
+      },
       { question: 'Material delivery to Ajman?', answer: 'DHL UAE 3-5 days.' },
     ],
   },
@@ -738,15 +1491,32 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     timezone: 'AST (UTC+3)',
     istOffset: -2.5,
     indianCommunitySize: '~2.5 million Indian-origin in Saudi Arabia (Eastern Province has 600K+)',
-    indianSchools: ['International Indian School Dammam (IISD)', 'International Indian School Riyadh (IISR) Dammam branch', 'Bharatiya Vidya Bhavan Saudi Arabia', 'Manarat Al Sharqiya International School', 'Al Manar International School Dammam', 'Najd International School'],
+    indianSchools: [
+      'International Indian School Dammam (IISD)',
+      'International Indian School Riyadh (IISR) Dammam branch',
+      'Bharatiya Vidya Bhavan Saudi Arabia',
+      'Manarat Al Sharqiya International School',
+      'Al Manar International School Dammam',
+      'Najd International School',
+    ],
     localBatchSlot: 'AST 3:00 PM – 5:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$1,800-3,600/year.',
     cityContext:
-      'Dammam is Saudi Arabia\'s Eastern Province capital, hub of the oil + petrochemical industry with one of the Gulf\'s largest Indian-origin communities. International Indian School Dammam (IISD) is the flagship CBSE feeder serving 6,000+ Indian-origin students. Strong tradition of medical career aspiration — most Dammam-Indian families target NRI quota at AIIMS Delhi / JIPMER Puducherry / Manipal.',
+      "Dammam is Saudi Arabia's Eastern Province capital, hub of the oil + petrochemical industry with one of the Gulf's largest Indian-origin communities. International Indian School Dammam (IISD) is the flagship CBSE feeder serving 6,000+ Indian-origin students. Strong tradition of medical career aspiration — most Dammam-Indian families target NRI quota at AIIMS Delhi / JIPMER Puducherry / Manipal.",
     faqs: [
-      { question: 'IISD student NEET pathway?', answer: 'IISD\'s CBSE / NCERT curriculum aligns well with NEET. NRI quota at AIIMS / JIPMER / Manipal / KMC + all-India quota. Biology cut-off ~330-355/360.' },
-      { question: 'Eastern Province / Dammam schedule fit?', answer: 'AST 3-5:30 PM batch matches IST 5:30-8 PM evening. After-IISD-dismissal slot.' },
-      { question: 'Ramadan schedule adjustment?', answer: 'During Ramadan we shift 1.5 hours earlier accommodating fasting + Iftar timings.' },
+      {
+        question: 'IISD student NEET pathway?',
+        answer:
+          "IISD's CBSE / NCERT curriculum aligns well with NEET. NRI quota at AIIMS / JIPMER / Manipal / KMC + all-India quota. Biology cut-off ~330-355/360.",
+      },
+      {
+        question: 'Eastern Province / Dammam schedule fit?',
+        answer: 'AST 3-5:30 PM batch matches IST 5:30-8 PM evening. After-IISD-dismissal slot.',
+      },
+      {
+        question: 'Ramadan schedule adjustment?',
+        answer: 'During Ramadan we shift 1.5 hours earlier accommodating fasting + Iftar timings.',
+      },
       { question: 'Material delivery to Dammam?', answer: 'DHL / Saudi Post 5-7 days.' },
     ],
   },
@@ -757,16 +1527,33 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'Gulf',
     timezone: 'GST (UTC+4)',
     istOffset: -1.5,
-    indianCommunitySize: '~100,000 Indian-origin in Al Ain (part of UAE\'s 3.5M Indian community)',
-    indianSchools: ['Our Own English High School Al Ain', 'Al Ain Indian School (AIS)', 'Indian School Al Ain', 'GEMS Wellington Academy Al Ain', 'Choithram\'s Indian School Al Ain', 'Glendale International School Al Ain'],
+    indianCommunitySize: "~100,000 Indian-origin in Al Ain (part of UAE's 3.5M Indian community)",
+    indianSchools: [
+      'Our Own English High School Al Ain',
+      'Al Ain Indian School (AIS)',
+      'Indian School Al Ain',
+      'GEMS Wellington Academy Al Ain',
+      "Choithram's Indian School Al Ain",
+      'Glendale International School Al Ain',
+    ],
     localBatchSlot: 'GST 4:00 PM – 6:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$1,800-3,600/year.',
     cityContext:
       'Al Ain is UAE\'s "Garden City" — Abu Dhabi emirate\'s inland oasis with a substantial Indian-origin community connected to UAE University and the oil sector. Our Own English High School Al Ain (OOEHS, part of GEMS) and Al Ain Indian School are the dominant CBSE feeders. NEET path targets NRI quota at AIIMS / JIPMER / Manipal / KMC.',
     faqs: [
-      { question: 'Pathway from Al Ain to Indian medical college?', answer: 'NRI quota at AIIMS / JIPMER / private deemed universities; all-India quota via NEET. Biology cut-off ~330-345/360 for NRI premium colleges.' },
-      { question: 'OOEHS / Al Ain Indian School schedule fit?', answer: 'GST 4-6:30 PM batch matches IST 5:30-8 PM evening. After-school slot.' },
-      { question: 'NEET exam centre for Al Ain students?', answer: 'Abu Dhabi NTA NEET centre (1.5-hour drive from Al Ain).' },
+      {
+        question: 'Pathway from Al Ain to Indian medical college?',
+        answer:
+          'NRI quota at AIIMS / JIPMER / private deemed universities; all-India quota via NEET. Biology cut-off ~330-345/360 for NRI premium colleges.',
+      },
+      {
+        question: 'OOEHS / Al Ain Indian School schedule fit?',
+        answer: 'GST 4-6:30 PM batch matches IST 5:30-8 PM evening. After-school slot.',
+      },
+      {
+        question: 'NEET exam centre for Al Ain students?',
+        answer: 'Abu Dhabi NTA NEET centre (1.5-hour drive from Al Ain).',
+      },
       { question: 'Material delivery to Al Ain?', answer: 'DHL UAE 3-5 days.' },
     ],
   },
@@ -777,17 +1564,48 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'Gulf',
     timezone: 'GST (UTC+4)',
     istOffset: -1.5,
-    indianCommunitySize: '~2.6 million Indian-origin in UAE — Dubai hosts the largest concentration (~1.5M)',
-    indianSchools: ['Our Own English High School (GEMS) Dubai', 'GEMS Modern Academy Dubai', 'Indian High School Dubai (IHS)', 'GEMS Our Own Indian School', 'JSS International School Dubai', 'Delhi Private School Dubai', 'GEMS Wellington International', 'New Indian Model School', 'Springdales School Dubai', 'GEMS Legacy School', 'GEMS Winchester School', 'Delhi Public School Dubai', 'Ambassador Indian School Dubai'],
+    indianCommunitySize:
+      '~2.6 million Indian-origin in UAE — Dubai hosts the largest concentration (~1.5M)',
+    indianSchools: [
+      'Our Own English High School (GEMS) Dubai',
+      'GEMS Modern Academy Dubai',
+      'Indian High School Dubai (IHS)',
+      'GEMS Our Own Indian School',
+      'JSS International School Dubai',
+      'Delhi Private School Dubai',
+      'GEMS Wellington International',
+      'New Indian Model School',
+      'Springdales School Dubai',
+      'GEMS Legacy School',
+      'GEMS Winchester School',
+      'Delhi Public School Dubai',
+      'Ambassador Indian School Dubai',
+    ],
     localBatchSlot: 'GST 4:00 PM – 6:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,000-4,500/year. Dubai-Indian families pay top-tier.',
     cityContext:
-      'Dubai is the world\'s most Indian non-Indian city — ~1.5M Indian-origin residents make up ~28% of Dubai\'s population. Concentrated in Bur Dubai, Karama, Deira, Jumeirah, JBR, Business Bay, JLT, Dubai Marina, International City, Dubai Silicon Oasis. Indian-curriculum schools dominate: GEMS group (Our Own English HS, Modern Academy, Wellington, Legacy, Winchester, Our Own Indian School), Indian High School Dubai (IHS — Asia\'s largest school with 12,000+ students), JSS International, Delhi Private School, Springdales, Ambassador. NEET path targets NRI quota at AIIMS / JIPMER / Manipal / KMC + all-India quota.',
+      "Dubai is the world's most Indian non-Indian city — ~1.5M Indian-origin residents make up ~28% of Dubai's population. Concentrated in Bur Dubai, Karama, Deira, Jumeirah, JBR, Business Bay, JLT, Dubai Marina, International City, Dubai Silicon Oasis. Indian-curriculum schools dominate: GEMS group (Our Own English HS, Modern Academy, Wellington, Legacy, Winchester, Our Own Indian School), Indian High School Dubai (IHS — Asia's largest school with 12,000+ students), JSS International, Delhi Private School, Springdales, Ambassador. NEET path targets NRI quota at AIIMS / JIPMER / Manipal / KMC + all-India quota.",
     faqs: [
-      { question: 'Pathway from Dubai to Indian medical college?', answer: 'NRI quota at AIIMS / JIPMER / Manipal / KMC / private deemed universities (15% reservation); all-India quota via NEET. Biology cut-off ~330-355/360 for NRI premium colleges.' },
-      { question: 'GEMS / IHS / JSS / DPS Dubai student schedule fit?', answer: 'GST 4-6:30 PM batch matches IST 5:30-8 PM evening. After-school slot for all Dubai Indian schools (typical dismissal 2:30-3:00 PM).' },
-      { question: 'Dubai NEET exam centre?', answer: 'Yes — Dubai is the largest NTA overseas NEET exam centre with the highest applicant count outside India. Annual May exam.' },
-      { question: 'NRI quota AIIMS Delhi from Dubai — what\'s required?', answer: 'OCI / Indian passport + NRI category documentation (parents in UAE for 3+ years); NEET biology 340-355/360 typical for AIIMS Delhi NRI quota selection.' },
+      {
+        question: 'Pathway from Dubai to Indian medical college?',
+        answer:
+          'NRI quota at AIIMS / JIPMER / Manipal / KMC / private deemed universities (15% reservation); all-India quota via NEET. Biology cut-off ~330-355/360 for NRI premium colleges.',
+      },
+      {
+        question: 'GEMS / IHS / JSS / DPS Dubai student schedule fit?',
+        answer:
+          'GST 4-6:30 PM batch matches IST 5:30-8 PM evening. After-school slot for all Dubai Indian schools (typical dismissal 2:30-3:00 PM).',
+      },
+      {
+        question: 'Dubai NEET exam centre?',
+        answer:
+          'Yes — Dubai is the largest NTA overseas NEET exam centre with the highest applicant count outside India. Annual May exam.',
+      },
+      {
+        question: "NRI quota AIIMS Delhi from Dubai — what's required?",
+        answer:
+          'OCI / Indian passport + NRI category documentation (parents in UAE for 3+ years); NEET biology 340-355/360 typical for AIIMS Delhi NRI quota selection.',
+      },
       { question: 'Material delivery to Dubai?', answer: 'DHL UAE 3-5 days.' },
     ],
   },
@@ -798,16 +1616,38 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'Gulf',
     timezone: 'GST (UTC+4)',
     istOffset: -1.5,
-    indianCommunitySize: '~700,000 Indian-origin in Sharjah (UAE\'s third-largest Indian community)',
-    indianSchools: ['Delhi Private School Sharjah (DPS Sharjah)', 'GEMS Millennium School Sharjah', 'Indian School Al Khaleej Sharjah', 'New Indian Model School Sharjah', 'Bukhatir Education Advancement & Management (BEAM)', 'Sharjah Indian School', 'GEMS Modern Academy Sharjah', 'Wisdom International School', 'Sharjah English School'],
+    indianCommunitySize: "~700,000 Indian-origin in Sharjah (UAE's third-largest Indian community)",
+    indianSchools: [
+      'Delhi Private School Sharjah (DPS Sharjah)',
+      'GEMS Millennium School Sharjah',
+      'Indian School Al Khaleej Sharjah',
+      'New Indian Model School Sharjah',
+      'Bukhatir Education Advancement & Management (BEAM)',
+      'Sharjah Indian School',
+      'GEMS Modern Academy Sharjah',
+      'Wisdom International School',
+      'Sharjah English School',
+    ],
     localBatchSlot: 'GST 4:00 PM – 6:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$1,800-3,600/year.',
     cityContext:
-      'Sharjah hosts UAE\'s third-largest Indian community (~700K), bridging Dubai and Ajman. Lower cost of living than Dubai means many Dubai-working Indian families live in Sharjah. Concentrated in Al Nahda, Al Majaz, Al Qasimia, Al Khan, Muweilah, Al Nasserya. Delhi Private School Sharjah (DPS Sharjah) and GEMS Millennium School are the flagship CBSE feeders. NEET path targets NRI quota at AIIMS / JIPMER / Manipal / KMC.',
+      "Sharjah hosts UAE's third-largest Indian community (~700K), bridging Dubai and Ajman. Lower cost of living than Dubai means many Dubai-working Indian families live in Sharjah. Concentrated in Al Nahda, Al Majaz, Al Qasimia, Al Khan, Muweilah, Al Nasserya. Delhi Private School Sharjah (DPS Sharjah) and GEMS Millennium School are the flagship CBSE feeders. NEET path targets NRI quota at AIIMS / JIPMER / Manipal / KMC.",
     faqs: [
-      { question: 'Pathway from Sharjah to Indian medical college?', answer: 'NRI quota at AIIMS / JIPMER / private deemed universities; all-India quota via NEET. Biology cut-off ~330-345/360 for NRI premium colleges.' },
-      { question: 'DPS Sharjah / GEMS Millennium / Indian School Al Khaleej schedule fit?', answer: 'GST 4-6:30 PM batch matches IST 5:30-8 PM evening. After-school slot for all major Sharjah Indian schools.' },
-      { question: 'Sharjah NEET exam centre?', answer: 'Yes — Sharjah is an official NTA overseas NEET exam centre. Also serves Ajman / UAQ / Fujairah / RAK students.' },
+      {
+        question: 'Pathway from Sharjah to Indian medical college?',
+        answer:
+          'NRI quota at AIIMS / JIPMER / private deemed universities; all-India quota via NEET. Biology cut-off ~330-345/360 for NRI premium colleges.',
+      },
+      {
+        question: 'DPS Sharjah / GEMS Millennium / Indian School Al Khaleej schedule fit?',
+        answer:
+          'GST 4-6:30 PM batch matches IST 5:30-8 PM evening. After-school slot for all major Sharjah Indian schools.',
+      },
+      {
+        question: 'Sharjah NEET exam centre?',
+        answer:
+          'Yes — Sharjah is an official NTA overseas NEET exam centre. Also serves Ajman / UAQ / Fujairah / RAK students.',
+      },
       { question: 'Material delivery to Sharjah?', answer: 'DHL UAE 3-5 days.' },
     ],
   },
@@ -818,16 +1658,41 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'Gulf',
     timezone: 'AST (UTC+3)',
     istOffset: -2.5,
-    indianCommunitySize: '~700,000 Indian-origin in Qatar (largest expat community at ~25% of population)',
-    indianSchools: ['DPS Modern Indian School Doha', 'Birla Public School Doha', 'Ideal Indian School Doha', 'MES Indian School Doha', 'Bhavan\'s Public School Doha', 'New Indian Model School Doha', 'Olive International School Doha', 'Asian School Doha', 'Doha Academy', 'Cambridge International School Doha', 'DPS-MIS Doha'],
+    indianCommunitySize:
+      '~700,000 Indian-origin in Qatar (largest expat community at ~25% of population)',
+    indianSchools: [
+      'DPS Modern Indian School Doha',
+      'Birla Public School Doha',
+      'Ideal Indian School Doha',
+      'MES Indian School Doha',
+      "Bhavan's Public School Doha",
+      'New Indian Model School Doha',
+      'Olive International School Doha',
+      'Asian School Doha',
+      'Doha Academy',
+      'Cambridge International School Doha',
+      'DPS-MIS Doha',
+    ],
     localBatchSlot: 'AST 3:00 PM – 5:30 PM (IST 5:30 PM – 8:00 PM)',
-    pricingNote: 'NRI fees in USD: ~$2,000-4,500/year. Doha-Indian families typically pay premium tier.',
+    pricingNote:
+      'NRI fees in USD: ~$2,000-4,500/year. Doha-Indian families typically pay premium tier.',
     cityContext:
-      'Doha hosts Qatar\'s largest expat community — ~700,000 Indian-origin residents (~25% of Qatar\'s population), concentrated in Al Sadd, Bin Mahmoud, Al Mansoura, Wakra, Al Wukair, Al Khor. DPS Modern Indian School (DPS-MIS Doha), Birla Public School Doha, MES Indian School, Bhavan\'s Public School, and Ideal Indian School are the dominant CBSE feeders. NEET path targets NRI quota at AIIMS / JIPMER / Manipal / KMC + all-India quota.',
+      "Doha hosts Qatar's largest expat community — ~700,000 Indian-origin residents (~25% of Qatar's population), concentrated in Al Sadd, Bin Mahmoud, Al Mansoura, Wakra, Al Wukair, Al Khor. DPS Modern Indian School (DPS-MIS Doha), Birla Public School Doha, MES Indian School, Bhavan's Public School, and Ideal Indian School are the dominant CBSE feeders. NEET path targets NRI quota at AIIMS / JIPMER / Manipal / KMC + all-India quota.",
     faqs: [
-      { question: 'Pathway from Doha to Indian medical college?', answer: 'NRI quota at AIIMS / JIPMER / private deemed universities (15% reservation); all-India quota via NEET. Biology cut-off ~330-355/360 for NRI premium colleges.' },
-      { question: 'DPS Modern Indian School / Birla Public School / MES / Bhavan\'s schedule fit?', answer: 'AST 3-5:30 PM batch matches IST 5:30-8 PM evening. After-school slot for all major Doha Indian schools.' },
-      { question: 'Doha NEET exam centre?', answer: 'Yes — Doha is one of the largest NTA overseas NEET exam centres. Annual May exam.' },
+      {
+        question: 'Pathway from Doha to Indian medical college?',
+        answer:
+          'NRI quota at AIIMS / JIPMER / private deemed universities (15% reservation); all-India quota via NEET. Biology cut-off ~330-355/360 for NRI premium colleges.',
+      },
+      {
+        question: "DPS Modern Indian School / Birla Public School / MES / Bhavan's schedule fit?",
+        answer:
+          'AST 3-5:30 PM batch matches IST 5:30-8 PM evening. After-school slot for all major Doha Indian schools.',
+      },
+      {
+        question: 'Doha NEET exam centre?',
+        answer: 'Yes — Doha is one of the largest NTA overseas NEET exam centres. Annual May exam.',
+      },
       { question: 'Material delivery to Doha?', answer: 'DHL Qatar 5-7 days.' },
     ],
   },
@@ -838,17 +1703,41 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'Gulf',
     timezone: 'AST (UTC+3)',
     istOffset: -2.5,
-    indianCommunitySize: '~2.5M Indian-origin in Saudi Arabia (Riyadh has 800K+, largest Saudi concentration)',
-    indianSchools: ['International Indian School Riyadh (IISR)', 'Bharatiya Vidya Bhavan Riyadh', 'Najran Indian International School', 'Indian Embassy School Riyadh', 'Al Yasmin International School Riyadh', 'Manarat Al Riyadh International School'],
+    indianCommunitySize:
+      '~2.5M Indian-origin in Saudi Arabia (Riyadh has 800K+, largest Saudi concentration)',
+    indianSchools: [
+      'International Indian School Riyadh (IISR)',
+      'Bharatiya Vidya Bhavan Riyadh',
+      'Najran Indian International School',
+      'Indian Embassy School Riyadh',
+      'Al Yasmin International School Riyadh',
+      'Manarat Al Riyadh International School',
+    ],
     localBatchSlot: 'AST 3:00 PM – 5:30 PM (IST 5:30 PM – 8:00 PM)',
-    pricingNote: 'NRI fees in USD: ~$2,000-4,500/year. Riyadh-Indian families typically pay premium tier.',
+    pricingNote:
+      'NRI fees in USD: ~$2,000-4,500/year. Riyadh-Indian families typically pay premium tier.',
     cityContext:
-      'Riyadh hosts Saudi Arabia\'s capital city + largest Indian-origin concentration (800,000+). Indian community heavily concentrated in Al Olaya, Al Malaz, Diplomatic Quarter, Al Rabwa, Al Khaleej. International Indian School Riyadh (IISR) is the flagship CBSE feeder with 13,000+ students — one of the largest schools globally. Bharatiya Vidya Bhavan Riyadh is the secondary feeder. NEET path strongly oriented toward NRI quota at AIIMS Delhi / JIPMER / Manipal / KMC.',
+      "Riyadh hosts Saudi Arabia's capital city + largest Indian-origin concentration (800,000+). Indian community heavily concentrated in Al Olaya, Al Malaz, Diplomatic Quarter, Al Rabwa, Al Khaleej. International Indian School Riyadh (IISR) is the flagship CBSE feeder with 13,000+ students — one of the largest schools globally. Bharatiya Vidya Bhavan Riyadh is the secondary feeder. NEET path strongly oriented toward NRI quota at AIIMS Delhi / JIPMER / Manipal / KMC.",
     faqs: [
-      { question: 'IISR student NEET pathway?', answer: 'IISR\'s CBSE / NCERT curriculum aligns well with NEET. NRI quota at AIIMS / JIPMER / Manipal / KMC + all-India quota. Biology cut-off ~330-355/360 for NRI premium colleges.' },
-      { question: 'Riyadh schedule fit?', answer: 'AST 3-5:30 PM batch matches IST 5:30-8 PM evening. After-IISR-dismissal slot at 2:30 PM.' },
-      { question: 'Ramadan schedule adjustment?', answer: 'During Ramadan we shift 1.5 hours earlier accommodating fasting + Iftar timings.' },
-      { question: 'Riyadh NEET exam centre?', answer: 'Yes — Riyadh is one of the largest NTA overseas NEET exam centres. Annual May exam.' },
+      {
+        question: 'IISR student NEET pathway?',
+        answer:
+          "IISR's CBSE / NCERT curriculum aligns well with NEET. NRI quota at AIIMS / JIPMER / Manipal / KMC + all-India quota. Biology cut-off ~330-355/360 for NRI premium colleges.",
+      },
+      {
+        question: 'Riyadh schedule fit?',
+        answer:
+          'AST 3-5:30 PM batch matches IST 5:30-8 PM evening. After-IISR-dismissal slot at 2:30 PM.',
+      },
+      {
+        question: 'Ramadan schedule adjustment?',
+        answer: 'During Ramadan we shift 1.5 hours earlier accommodating fasting + Iftar timings.',
+      },
+      {
+        question: 'Riyadh NEET exam centre?',
+        answer:
+          'Yes — Riyadh is one of the largest NTA overseas NEET exam centres. Annual May exam.',
+      },
       { question: 'Material delivery to Riyadh?', answer: 'DHL / Saudi Post 5-7 days.' },
     ],
   },
@@ -859,17 +1748,39 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'Gulf',
     timezone: 'AST (UTC+3)',
     istOffset: -2.5,
-    indianCommunitySize: '~2.5M Indian-origin in Saudi Arabia (Jeddah has 500K+, second-largest concentration)',
-    indianSchools: ['International Indian School Jeddah (IISJ)', 'Bharatiya Vidya Bhavan Jeddah', 'Saudi Arabian International School Jeddah', 'Al Manar International School Jeddah', 'British International School Jeddah', 'American International School Jeddah'],
+    indianCommunitySize:
+      '~2.5M Indian-origin in Saudi Arabia (Jeddah has 500K+, second-largest concentration)',
+    indianSchools: [
+      'International Indian School Jeddah (IISJ)',
+      'Bharatiya Vidya Bhavan Jeddah',
+      'Saudi Arabian International School Jeddah',
+      'Al Manar International School Jeddah',
+      'British International School Jeddah',
+      'American International School Jeddah',
+    ],
     localBatchSlot: 'AST 3:00 PM – 5:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,000-4,500/year.',
     cityContext:
-      'Jeddah is Saudi Arabia\'s west coast commercial hub and Mecca gateway, with 500,000+ Indian-origin residents. Concentrated in Al Naseem, Al Faisaliyah, Al Salama, Al Andalus, Al Hamra, Al Rawda. International Indian School Jeddah (IISJ) is the flagship CBSE feeder serving 5,000+ Indian-origin students. Bharatiya Vidya Bhavan Jeddah is the secondary feeder. Many Jeddah-Indian families have strong Hyderabadi / Kerala roots. NEET path targets NRI quota at AIIMS / JIPMER / Manipal / KMC.',
+      "Jeddah is Saudi Arabia's west coast commercial hub and Mecca gateway, with 500,000+ Indian-origin residents. Concentrated in Al Naseem, Al Faisaliyah, Al Salama, Al Andalus, Al Hamra, Al Rawda. International Indian School Jeddah (IISJ) is the flagship CBSE feeder serving 5,000+ Indian-origin students. Bharatiya Vidya Bhavan Jeddah is the secondary feeder. Many Jeddah-Indian families have strong Hyderabadi / Kerala roots. NEET path targets NRI quota at AIIMS / JIPMER / Manipal / KMC.",
     faqs: [
-      { question: 'IISJ student NEET pathway?', answer: 'IISJ\'s CBSE / NCERT curriculum aligns well with NEET. NRI quota at AIIMS / JIPMER / Manipal / KMC + all-India quota. Biology cut-off ~330-355/360 for NRI premium colleges.' },
-      { question: 'Jeddah schedule fit?', answer: 'AST 3-5:30 PM batch matches IST 5:30-8 PM evening. After-IISJ-dismissal slot at 2:30 PM.' },
-      { question: 'Ramadan schedule adjustment?', answer: 'During Ramadan we shift 1.5 hours earlier accommodating fasting + Iftar timings.' },
-      { question: 'Jeddah NEET exam centre?', answer: 'Yes — Jeddah is an official NTA overseas NEET exam centre. Annual May exam.' },
+      {
+        question: 'IISJ student NEET pathway?',
+        answer:
+          "IISJ's CBSE / NCERT curriculum aligns well with NEET. NRI quota at AIIMS / JIPMER / Manipal / KMC + all-India quota. Biology cut-off ~330-355/360 for NRI premium colleges.",
+      },
+      {
+        question: 'Jeddah schedule fit?',
+        answer:
+          'AST 3-5:30 PM batch matches IST 5:30-8 PM evening. After-IISJ-dismissal slot at 2:30 PM.',
+      },
+      {
+        question: 'Ramadan schedule adjustment?',
+        answer: 'During Ramadan we shift 1.5 hours earlier accommodating fasting + Iftar timings.',
+      },
+      {
+        question: 'Jeddah NEET exam centre?',
+        answer: 'Yes — Jeddah is an official NTA overseas NEET exam centre. Annual May exam.',
+      },
       { question: 'Material delivery to Jeddah?', answer: 'DHL / Saudi Post 5-7 days.' },
     ],
   },
@@ -880,16 +1791,38 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'Gulf',
     timezone: 'GST (UTC+4)',
     istOffset: -1.5,
-    indianCommunitySize: '~500,000 Indian-origin in Abu Dhabi emirate (UAE\'s capital, 2nd-largest UAE concentration after Dubai)',
-    indianSchools: ['Abu Dhabi Indian School (ADIS) — 13,000+ students', 'GEMS Our Own Indian School Abu Dhabi', 'Indian Islahi Islamic School', 'The Indian Academy Abu Dhabi', 'Global English School Abu Dhabi', 'Sunrise English Private School', 'Bright Riders School', 'Cambridge High School Abu Dhabi'],
+    indianCommunitySize:
+      "~500,000 Indian-origin in Abu Dhabi emirate (UAE's capital, 2nd-largest UAE concentration after Dubai)",
+    indianSchools: [
+      'Abu Dhabi Indian School (ADIS) — 13,000+ students',
+      'GEMS Our Own Indian School Abu Dhabi',
+      'Indian Islahi Islamic School',
+      'The Indian Academy Abu Dhabi',
+      'Global English School Abu Dhabi',
+      'Sunrise English Private School',
+      'Bright Riders School',
+      'Cambridge High School Abu Dhabi',
+    ],
     localBatchSlot: 'GST 4:00 PM – 6:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,000-4,500/year.',
     cityContext:
-      'Abu Dhabi is UAE\'s capital with ~500,000 Indian-origin residents — second largest UAE concentration after Dubai. Concentrated in Khalidiya, Tourist Club Area, Mussafah, Hamdan Street, Mohammed Bin Zayed City, Shahama, Khalifa City. Abu Dhabi Indian School (ADIS) is the flagship CBSE feeder with 13,000+ students — one of the largest schools globally. GEMS Our Own Indian School Abu Dhabi is the secondary feeder. NEET path targets NRI quota at AIIMS / JIPMER / Manipal / KMC.',
+      "Abu Dhabi is UAE's capital with ~500,000 Indian-origin residents — second largest UAE concentration after Dubai. Concentrated in Khalidiya, Tourist Club Area, Mussafah, Hamdan Street, Mohammed Bin Zayed City, Shahama, Khalifa City. Abu Dhabi Indian School (ADIS) is the flagship CBSE feeder with 13,000+ students — one of the largest schools globally. GEMS Our Own Indian School Abu Dhabi is the secondary feeder. NEET path targets NRI quota at AIIMS / JIPMER / Manipal / KMC.",
     faqs: [
-      { question: 'ADIS student NEET pathway?', answer: 'ADIS\'s CBSE / NCERT curriculum aligns directly with NEET. NRI quota at AIIMS / JIPMER / Manipal / KMC + all-India quota. Biology cut-off ~330-355/360 for NRI premium colleges.' },
-      { question: 'Abu Dhabi schedule fit?', answer: 'GST 4-6:30 PM batch matches IST 5:30-8 PM evening. After-ADIS-dismissal slot at 2:30 PM.' },
-      { question: 'Abu Dhabi NEET exam centre?', answer: 'Yes — Abu Dhabi is an official NTA overseas NEET exam centre. Also serves Al Ain students (1.5-hour drive).' },
+      {
+        question: 'ADIS student NEET pathway?',
+        answer:
+          "ADIS's CBSE / NCERT curriculum aligns directly with NEET. NRI quota at AIIMS / JIPMER / Manipal / KMC + all-India quota. Biology cut-off ~330-355/360 for NRI premium colleges.",
+      },
+      {
+        question: 'Abu Dhabi schedule fit?',
+        answer:
+          'GST 4-6:30 PM batch matches IST 5:30-8 PM evening. After-ADIS-dismissal slot at 2:30 PM.',
+      },
+      {
+        question: 'Abu Dhabi NEET exam centre?',
+        answer:
+          'Yes — Abu Dhabi is an official NTA overseas NEET exam centre. Also serves Al Ain students (1.5-hour drive).',
+      },
       { question: 'Material delivery to Abu Dhabi?', answer: 'DHL UAE 3-5 days.' },
     ],
   },
@@ -900,17 +1833,36 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'Gulf',
     timezone: 'GST (UTC+4)',
     istOffset: -1.5,
-    indianCommunitySize: '~50,000 Indian-origin in Salalah (Oman\'s second city, Dhofar region)',
-    indianSchools: ['Indian School Salalah', 'Indian Social Club School Salalah', 'Salalah Indian School', 'American International School Salalah'],
+    indianCommunitySize: "~50,000 Indian-origin in Salalah (Oman's second city, Dhofar region)",
+    indianSchools: [
+      'Indian School Salalah',
+      'Indian Social Club School Salalah',
+      'Salalah Indian School',
+      'American International School Salalah',
+    ],
     localBatchSlot: 'GST 4:00 PM – 6:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$1,800-3,600/year.',
     cityContext:
-      'Salalah is Oman\'s second city + capital of Dhofar region with ~50,000 Indian-origin residents working in fishing, agriculture, and the Port of Salalah container hub. Indian School Salalah is the dominant CBSE feeder. Many Salalah-Indian families are Malayali (Kerala). NEET path targets NRI quota at AIIMS / JIPMER / Manipal / KMC.',
+      "Salalah is Oman's second city + capital of Dhofar region with ~50,000 Indian-origin residents working in fishing, agriculture, and the Port of Salalah container hub. Indian School Salalah is the dominant CBSE feeder. Many Salalah-Indian families are Malayali (Kerala). NEET path targets NRI quota at AIIMS / JIPMER / Manipal / KMC.",
     faqs: [
-      { question: 'Pathway from Salalah to Indian medical college?', answer: 'NRI quota at AIIMS / JIPMER / private deemed universities; all-India quota. Biology cut-off ~330-345/360 for NRI premium colleges.' },
-      { question: 'Indian School Salalah schedule fit?', answer: 'GST 4-6:30 PM batch matches IST 5:30-8 PM evening. After-school slot.' },
-      { question: 'Where do Salalah students take NEET exam?', answer: 'Muscat NTA NEET exam centre (1 hour flight or 12-hour drive). We coordinate travel/accommodation timing.' },
-      { question: 'Material delivery to Salalah?', answer: 'DHL Oman 7-10 days (Salalah is more remote than Muscat).' },
+      {
+        question: 'Pathway from Salalah to Indian medical college?',
+        answer:
+          'NRI quota at AIIMS / JIPMER / private deemed universities; all-India quota. Biology cut-off ~330-345/360 for NRI premium colleges.',
+      },
+      {
+        question: 'Indian School Salalah schedule fit?',
+        answer: 'GST 4-6:30 PM batch matches IST 5:30-8 PM evening. After-school slot.',
+      },
+      {
+        question: 'Where do Salalah students take NEET exam?',
+        answer:
+          'Muscat NTA NEET exam centre (1 hour flight or 12-hour drive). We coordinate travel/accommodation timing.',
+      },
+      {
+        question: 'Material delivery to Salalah?',
+        answer: 'DHL Oman 7-10 days (Salalah is more remote than Muscat).',
+      },
     ],
   },
   'auckland-new-zealand': {
@@ -920,17 +1872,43 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'East Asia',
     timezone: 'NZST (UTC+12) / NZDT (UTC+13)',
     istOffset: 6.5,
-    indianCommunitySize: '~240,000 Indian-origin in Auckland (~14% of city population, largest NZ Indian community)',
-    indianSchools: ['Mt Albert Grammar School', 'Auckland Grammar School', 'Epsom Girls Grammar', 'Macleans College', 'Westlake Boys/Girls HS', 'Rangitoto College', 'Avondale College', 'Auckland International College', 'Mount Roskill Grammar'],
+    indianCommunitySize:
+      '~240,000 Indian-origin in Auckland (~14% of city population, largest NZ Indian community)',
+    indianSchools: [
+      'Mt Albert Grammar School',
+      'Auckland Grammar School',
+      'Epsom Girls Grammar',
+      'Macleans College',
+      'Westlake Boys/Girls HS',
+      'Rangitoto College',
+      'Avondale College',
+      'Auckland International College',
+      'Mount Roskill Grammar',
+    ],
     localBatchSlot: 'NZST 12:30 AM – 3:00 AM next day (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year.',
     cityContext:
-      'Auckland has New Zealand\'s largest Indian-origin community — ~240,000 (~14% of city population), concentrated in Papatoetoe, Mount Roskill, Sandringham, Otahuhu, Manukau, Botany Downs, Howick. Strong Indo-Fijian + Punjabi + Gujarati communities. Auckland-Indian Class 12 students target University of Auckland Medicine (NCEA + UCAT pathway, 6-year MBChB) OR Indian medical college via NRI quota + NEET (5.5 yrs). Cerebrum runs Saturday morning weekend live batch (9-11:30 AM NZST/NZDT) as the time-zone-friendly option.',
+      "Auckland has New Zealand's largest Indian-origin community — ~240,000 (~14% of city population), concentrated in Papatoetoe, Mount Roskill, Sandringham, Otahuhu, Manukau, Botany Downs, Howick. Strong Indo-Fijian + Punjabi + Gujarati communities. Auckland-Indian Class 12 students target University of Auckland Medicine (NCEA + UCAT pathway, 6-year MBChB) OR Indian medical college via NRI quota + NEET (5.5 yrs). Cerebrum runs Saturday morning weekend live batch (9-11:30 AM NZST/NZDT) as the time-zone-friendly option.",
     faqs: [
-      { question: 'Auckland medical pathway — NZ MBChB vs India MBBS?', answer: 'NZ undergraduate MBChB via UCAT + NCEA Level 3 at University of Auckland or Otago = 6 years. Alternative: Indian MBBS via NRI quota + NEET = 5.5 years. We coach NEET biology specifically — many families pursue both options in parallel.' },
-      { question: 'NZST 6.5-hour offset — class schedule?', answer: 'Our India evening batch (5:30-8 PM IST) is 12:30-3 AM Auckland time. Most students prefer recorded weekday + Saturday morning live (9-11:30 AM NZST) at local-friendly time.' },
-      { question: 'Mt Albert / Auckland Grammar / Macleans / Westlake schedule fit?', answer: 'Recorded weekday + Saturday morning live works best for top Auckland Grammar / Macleans / Westlake students with heavy NCEA load.' },
-      { question: 'Material delivery to Auckland?', answer: 'NZ Post Tracked 10-14 days (longer than Sydney due to NZ remoteness).' },
+      {
+        question: 'Auckland medical pathway — NZ MBChB vs India MBBS?',
+        answer:
+          'NZ undergraduate MBChB via UCAT + NCEA Level 3 at University of Auckland or Otago = 6 years. Alternative: Indian MBBS via NRI quota + NEET = 5.5 years. We coach NEET biology specifically — many families pursue both options in parallel.',
+      },
+      {
+        question: 'NZST 6.5-hour offset — class schedule?',
+        answer:
+          'Our India evening batch (5:30-8 PM IST) is 12:30-3 AM Auckland time. Most students prefer recorded weekday + Saturday morning live (9-11:30 AM NZST) at local-friendly time.',
+      },
+      {
+        question: 'Mt Albert / Auckland Grammar / Macleans / Westlake schedule fit?',
+        answer:
+          'Recorded weekday + Saturday morning live works best for top Auckland Grammar / Macleans / Westlake students with heavy NCEA load.',
+      },
+      {
+        question: 'Material delivery to Auckland?',
+        answer: 'NZ Post Tracked 10-14 days (longer than Sydney due to NZ remoteness).',
+      },
     ],
   },
   'edmonton-canada': {
@@ -940,16 +1918,38 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     region: 'East Asia',
     timezone: 'MST (UTC-7) / MDT (UTC-6)',
     istOffset: -12.5,
-    indianCommunitySize: '~80,000 Indian-origin in Edmonton (Alberta\'s 2nd-largest Indian community after Calgary)',
-    indianSchools: ['Old Scona Academic', 'Strathcona HS', 'Ross Sheppard HS', 'Lillian Osborne HS', 'Harry Ainlay HS', 'Jasper Place HS', 'Archbishop MacDonald HS', 'Bev Facey Community HS'],
+    indianCommunitySize:
+      "~80,000 Indian-origin in Edmonton (Alberta's 2nd-largest Indian community after Calgary)",
+    indianSchools: [
+      'Old Scona Academic',
+      'Strathcona HS',
+      'Ross Sheppard HS',
+      'Lillian Osborne HS',
+      'Harry Ainlay HS',
+      'Jasper Place HS',
+      'Archbishop MacDonald HS',
+      'Bev Facey Community HS',
+    ],
     localBatchSlot: 'MST 5:00 AM – 7:30 AM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$2,500-4,500/year.',
     cityContext:
-      'Edmonton has Alberta\'s second-largest Indian-origin community — ~80,000, concentrated in Mill Woods, Castle Downs, Beverly, Riverbend, Whitemud, and around University of Alberta campus area. Significant Sikh / Punjabi + Hindu / Gujarati communities. Edmonton-Indian Class 12 students target University of Alberta Medicine (Canadian MD via BSc + MCAT pathway, 8+ yrs) OR Indian MBBS via NRI quota + NEET (5.5 yrs). Cerebrum runs MST 5-7:30 AM before-school batch + Saturday morning live.',
+      "Edmonton has Alberta's second-largest Indian-origin community — ~80,000, concentrated in Mill Woods, Castle Downs, Beverly, Riverbend, Whitemud, and around University of Alberta campus area. Significant Sikh / Punjabi + Hindu / Gujarati communities. Edmonton-Indian Class 12 students target University of Alberta Medicine (Canadian MD via BSc + MCAT pathway, 8+ yrs) OR Indian MBBS via NRI quota + NEET (5.5 yrs). Cerebrum runs MST 5-7:30 AM before-school batch + Saturday morning live.",
     faqs: [
-      { question: 'Edmonton medical pathway?', answer: 'U of Alberta Medicine via BSc + MCAT + MD = 8+ years. Alternative: Indian MBBS via NRI quota + NEET = 5.5 years. We coach NEET biology + MCAT B/B Section.' },
-      { question: 'MST 5-7:30 AM batch?', answer: 'Yes — early-morning slot for Edmonton students. Saturday morning live at 9-11:30 AM MST also available.' },
-      { question: 'Mill Woods / Castle Downs / Beverly support?', answer: 'Online live works equally well from any Edmonton neighbourhood. Most Cerebrum-Edmonton students are from Mill Woods area.' },
+      {
+        question: 'Edmonton medical pathway?',
+        answer:
+          'U of Alberta Medicine via BSc + MCAT + MD = 8+ years. Alternative: Indian MBBS via NRI quota + NEET = 5.5 years. We coach NEET biology + MCAT B/B Section.',
+      },
+      {
+        question: 'MST 5-7:30 AM batch?',
+        answer:
+          'Yes — early-morning slot for Edmonton students. Saturday morning live at 9-11:30 AM MST also available.',
+      },
+      {
+        question: 'Mill Woods / Castle Downs / Beverly support?',
+        answer:
+          'Online live works equally well from any Edmonton neighbourhood. Most Cerebrum-Edmonton students are from Mill Woods area.',
+      },
       { question: 'Material delivery to Edmonton?', answer: 'Canada Post Expedited 6-9 days.' },
     ],
   },
@@ -961,16 +1961,34 @@ export const NRI_INTERNATIONAL_CITIES: Record<string, NRIInternationalCity> = {
     timezone: 'WAT (UTC+1)',
     istOffset: -4.5,
     indianCommunitySize: '~50,000 Indian-origin residents in Nigeria',
-    indianSchools: ['Indian Language School Ikoyi', 'Lekki British International School', 'Greensprings School', 'Day Waterman College'],
+    indianSchools: [
+      'Indian Language School Ikoyi',
+      'Lekki British International School',
+      'Greensprings School',
+      'Day Waterman College',
+    ],
     localBatchSlot: 'WAT 1:00 PM – 3:30 PM (IST 5:30 PM – 8:00 PM)',
     pricingNote: 'NRI fees in USD: ~$1,800-3,600/year.',
     cityContext:
-      'Lagos has one of West Africa\'s largest Indian communities — generations of Gujarati, Sindhi, and Punjabi families have built businesses across textiles, pharmaceuticals, and steel. Indian Language School Ikoyi is the legacy Indian-curriculum school; Lekki British International serves both Indian and other expat families. NEET aspirants pursue NRI quota at AIIMS, JIPMER, Manipal, KMC, and private deemed universities.',
+      "Lagos has one of West Africa's largest Indian communities — generations of Gujarati, Sindhi, and Punjabi families have built businesses across textiles, pharmaceuticals, and steel. Indian Language School Ikoyi is the legacy Indian-curriculum school; Lekki British International serves both Indian and other expat families. NEET aspirants pursue NRI quota at AIIMS, JIPMER, Manipal, KMC, and private deemed universities.",
     faqs: [
-      { question: 'Pathway from Lagos to Indian medical college?', answer: 'NRI quota at AIIMS / JIPMER / private deemed universities; all-India quota. Biology cut-off ~330-345/360 for NRI premium colleges.' },
-      { question: 'Indian Language School Ikoyi / Lekki British schedule fit?', answer: 'WAT 1-3:30 PM batch (IST 5:30-8 PM) fits after-school cleanly.' },
-      { question: 'Material delivery to Lagos?', answer: 'DHL / FedEx 12-14 days to Lagos. Customs duty paid by recipient.' },
-      { question: 'Travel for NEET exam day?', answer: 'NEET India test centers; we coordinate timing 4-6 weeks in advance.' },
+      {
+        question: 'Pathway from Lagos to Indian medical college?',
+        answer:
+          'NRI quota at AIIMS / JIPMER / private deemed universities; all-India quota. Biology cut-off ~330-345/360 for NRI premium colleges.',
+      },
+      {
+        question: 'Indian Language School Ikoyi / Lekki British schedule fit?',
+        answer: 'WAT 1-3:30 PM batch (IST 5:30-8 PM) fits after-school cleanly.',
+      },
+      {
+        question: 'Material delivery to Lagos?',
+        answer: 'DHL / FedEx 12-14 days to Lagos. Customs duty paid by recipient.',
+      },
+      {
+        question: 'Travel for NEET exam day?',
+        answer: 'NEET India test centers; we coordinate timing 4-6 weeks in advance.',
+      },
     ],
   },
 }

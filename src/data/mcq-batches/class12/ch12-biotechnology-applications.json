@@ -14,22 +14,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Bt toxin produced by Bacillus thuringiensis is coded by which gene?",
-      "options": [
-        "nif gene",
-        "hGH gene",
-        "lac operon",
-        "cryIAc gene"
-      ],
+      "options": ["nif gene", "hGH gene", "lac operon", "cryIAc gene"],
       "correctAnswer": "D",
       "explanation": "The Bt toxin is encoded by cry genes (crystal protein genes) of Bacillus thuringiensis. cryIAc and cryIIAb are specific cry genes that produce toxin proteins effective against cotton bollworm. The toxin exists as an inactive protoxin that becomes active only in the alkaline pH of the insect gut.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Bt-toxin",
-        "cry-genes",
-        "Bt-cotton"
-      ],
+      "tags": ["Bt-toxin", "cry-genes", "Bt-cotton"],
       "neetWeightage": "HIGH"
     },
     {
@@ -51,11 +42,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Bt-toxin",
-        "protoxin",
-        "mechanism"
-      ],
+      "tags": ["Bt-toxin", "protoxin", "mechanism"],
       "neetWeightage": "HIGH"
     },
     {
@@ -66,22 +53,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Bt cotton is resistant to:",
-      "options": [
-        "Fungal diseases",
-        "Bacterial blight",
-        "Viral infections",
-        "Bollworm"
-      ],
+      "options": ["Fungal diseases", "Bacterial blight", "Viral infections", "Bollworm"],
       "correctAnswer": "D",
       "explanation": "Bt cotton has been genetically modified to express the cry gene from Bacillus thuringiensis, making it resistant to cotton bollworm (Helicoverpa armigera). The Bt toxin specifically kills lepidopteran insects (moths and butterflies) including the bollworm, which is the most destructive pest of cotton.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Bt-cotton",
-        "bollworm",
-        "pest-resistance"
-      ],
+      "tags": ["Bt-cotton", "bollworm", "pest-resistance"],
       "neetWeightage": "HIGH"
     },
     {
@@ -103,11 +81,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "RNAi",
-        "nematode",
-        "gene-silencing"
-      ],
+      "tags": ["RNAi", "nematode", "gene-silencing"],
       "neetWeightage": "HIGH"
     },
     {
@@ -118,22 +92,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Gene therapy was first used to treat which disease?",
-      "options": [
-        "Sickle cell anaemia",
-        "ADA deficiency (SCID)",
-        "Cystic fibrosis",
-        "Haemophilia"
-      ],
+      "options": ["Sickle cell anaemia", "ADA deficiency (SCID)", "Cystic fibrosis", "Haemophilia"],
       "correctAnswer": "B",
       "explanation": "The first clinical gene therapy was performed in 1990 on a 4-year-old girl with adenosine deaminase (ADA) deficiency, a form of Severe Combined Immunodeficiency (SCID). Lymphocytes from the patient were cultured, transfected with a functional ADA gene using a retroviral vector, and returned to the patient.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gene-therapy",
-        "ADA-deficiency",
-        "SCID"
-      ],
+      "tags": ["gene-therapy", "ADA-deficiency", "SCID"],
       "neetWeightage": "HIGH"
     },
     {
@@ -155,11 +120,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "insulin",
-        "recombinant",
-        "proinsulin"
-      ],
+      "tags": ["insulin", "recombinant", "proinsulin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -181,10 +142,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ELISA",
-        "molecular-diagnostics"
-      ],
+      "tags": ["ELISA", "molecular-diagnostics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -206,10 +164,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "transgenic-animals",
-        "definition"
-      ],
+      "tags": ["transgenic-animals", "definition"],
       "neetWeightage": "HIGH"
     },
     {
@@ -220,22 +175,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Golden rice is genetically modified to produce:",
-      "options": [
-        "Vitamin C",
-        "Iron",
-        "Omega-3 fatty acids",
-        "Beta-carotene (provitamin A)"
-      ],
+      "options": ["Vitamin C", "Iron", "Omega-3 fatty acids", "Beta-carotene (provitamin A)"],
       "correctAnswer": "D",
       "explanation": "Golden rice is a transgenic rice variety engineered to produce beta-carotene (provitamin A) in the edible endosperm. It was developed to combat vitamin A deficiency, which causes blindness in millions of children in developing countries. The golden colour comes from the accumulated beta-carotene.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "golden-rice",
-        "beta-carotene",
-        "GM-foods"
-      ],
+      "tags": ["golden-rice", "beta-carotene", "GM-foods"],
       "neetWeightage": "HIGH"
     },
     {
@@ -257,10 +203,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biopiracy",
-        "bioethics"
-      ],
+      "tags": ["biopiracy", "bioethics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -271,22 +214,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "The cry gene cryIAb is effective against:",
-      "options": [
-        "Cotton bollworm",
-        "Corn borer",
-        "Mosquito larvae",
-        "Nematodes"
-      ],
+      "options": ["Cotton bollworm", "Corn borer", "Mosquito larvae", "Nematodes"],
       "correctAnswer": "B",
       "explanation": "The cryIAb gene produces a toxin protein effective against the corn borer (a lepidopteran pest of maize). Different cry genes target different insect groups: cryIAc targets cotton bollworm (lepidopteran), cryIIAb targets corn borer (lepidopteran), and cryIVA targets mosquitoes (dipteran).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cry-genes",
-        "cryIAb",
-        "corn-borer"
-      ],
+      "tags": ["cry-genes", "cryIAb", "corn-borer"],
       "neetWeightage": "HIGH"
     },
     {
@@ -297,22 +231,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "In gene therapy for ADA deficiency, the functional ADA gene is introduced into:",
-      "options": [
-        "Bone marrow cells",
-        "Liver cells",
-        "Lymphocytes of the patient",
-        "Neurons"
-      ],
+      "options": ["Bone marrow cells", "Liver cells", "Lymphocytes of the patient", "Neurons"],
       "correctAnswer": "C",
       "explanation": "In the first gene therapy for ADA deficiency, lymphocytes were isolated from the patient's blood, cultured in vitro, and a functional ADA gene was introduced into them using a retroviral vector. These genetically corrected lymphocytes were then infused back into the patient's body.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gene-therapy",
-        "ADA-deficiency",
-        "lymphocytes"
-      ],
+      "tags": ["gene-therapy", "ADA-deficiency", "lymphocytes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -334,11 +259,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "insulin",
-        "structure",
-        "polypeptide-chains"
-      ],
+      "tags": ["insulin", "structure", "polypeptide-chains"],
       "neetWeightage": "HIGH"
     },
     {
@@ -360,11 +281,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "RNAi",
-        "nematode-resistance",
-        "tobacco"
-      ],
+      "tags": ["RNAi", "nematode-resistance", "tobacco"],
       "neetWeightage": "HIGH"
     },
     {
@@ -386,11 +303,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "GEAC",
-        "bioethics",
-        "GM-regulation"
-      ],
+      "tags": ["GEAC", "bioethics", "GM-regulation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -412,10 +325,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "PCR",
-        "molecular-diagnostics"
-      ],
+      "tags": ["PCR", "molecular-diagnostics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -437,11 +347,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "transgenic-animals",
-        "Rosie",
-        "alpha-lactalbumin"
-      ],
+      "tags": ["transgenic-animals", "Rosie", "alpha-lactalbumin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -463,10 +369,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ADA-deficiency",
-        "bone-marrow-transplant"
-      ],
+      "tags": ["ADA-deficiency", "bone-marrow-transplant"],
       "neetWeightage": "HIGH"
     },
     {
@@ -488,11 +391,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biopiracy",
-        "neem",
-        "traditional-knowledge"
-      ],
+      "tags": ["biopiracy", "neem", "traditional-knowledge"],
       "neetWeightage": "HIGH"
     },
     {
@@ -514,11 +413,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "insulin",
-        "Eli-Lilly",
-        "recombinant-DNA"
-      ],
+      "tags": ["insulin", "Eli-Lilly", "recombinant-DNA"],
       "neetWeightage": "HIGH"
     },
     {
@@ -540,10 +435,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Bt-toxin",
-        "mechanism-of-action"
-      ],
+      "tags": ["Bt-toxin", "mechanism-of-action"],
       "neetWeightage": "HIGH"
     },
     {
@@ -565,10 +457,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "transgenic-animals",
-        "applications"
-      ],
+      "tags": ["transgenic-animals", "applications"],
       "neetWeightage": "HIGH"
     },
     {
@@ -590,11 +479,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "RNAi",
-        "gene-silencing",
-        "dsRNA"
-      ],
+      "tags": ["RNAi", "gene-silencing", "dsRNA"],
       "neetWeightage": "HIGH"
     },
     {
@@ -616,10 +501,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "proinsulin",
-        "structure"
-      ],
+      "tags": ["proinsulin", "structure"],
       "neetWeightage": "HIGH"
     },
     {
@@ -641,11 +523,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Flavr-Savr",
-        "GM-foods",
-        "tomato"
-      ],
+      "tags": ["Flavr-Savr", "GM-foods", "tomato"],
       "neetWeightage": "HIGH"
     },
     {
@@ -667,11 +545,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cryIAc",
-        "lepidoptera",
-        "cotton-bollworm"
-      ],
+      "tags": ["cryIAc", "lepidoptera", "cotton-bollworm"],
       "neetWeightage": "HIGH"
     },
     {
@@ -682,22 +556,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "In gene therapy, the genes are delivered into the patient's cells most commonly using:",
-      "options": [
-        "Liposomes",
-        "Retroviruses as vectors",
-        "Direct injection",
-        "Gene gun"
-      ],
+      "options": ["Liposomes", "Retroviruses as vectors", "Direct injection", "Gene gun"],
       "correctAnswer": "B",
       "explanation": "Retroviruses are the most commonly used vectors in gene therapy because they can integrate their DNA into the host cell genome, ensuring long-term expression of the therapeutic gene. The pathogenic genes of the retrovirus are removed and replaced with the therapeutic gene before delivery into target cells.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gene-therapy",
-        "retrovirus",
-        "vector"
-      ],
+      "tags": ["gene-therapy", "retrovirus", "vector"],
       "neetWeightage": "HIGH"
     },
     {
@@ -719,11 +584,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ADA-deficiency",
-        "T-lymphocytes",
-        "immune-system"
-      ],
+      "tags": ["ADA-deficiency", "T-lymphocytes", "immune-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -745,11 +606,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biopiracy",
-        "turmeric",
-        "patent"
-      ],
+      "tags": ["biopiracy", "turmeric", "patent"],
       "neetWeightage": "HIGH"
     },
     {
@@ -760,22 +617,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Which of the following is an example of a cry gene that codes for protein toxic to coleopteran insects?",
-      "options": [
-        "cryIAc",
-        "cryIIAb",
-        "cryIIIBb",
-        "cryIVD"
-      ],
+      "options": ["cryIAc", "cryIIAb", "cryIIIBb", "cryIVD"],
       "correctAnswer": "C",
       "explanation": "cryIIIBb codes for a protein that is toxic to coleopteran insects (beetles). The cry gene classification reflects target specificity: cryI genes target Lepidoptera, cryII targets Lepidoptera and Diptera, cryIII targets Coleoptera (beetles), and cryIV targets Diptera (flies and mosquitoes).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cry-genes",
-        "coleoptera",
-        "cryIII"
-      ],
+      "tags": ["cry-genes", "coleoptera", "cryIII"],
       "neetWeightage": "HIGH"
     },
     {
@@ -797,11 +645,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "insulin",
-        "animal-source",
-        "history"
-      ],
+      "tags": ["insulin", "animal-source", "history"],
       "neetWeightage": "HIGH"
     },
     {
@@ -812,22 +656,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Transgenic mice are used in testing the safety of:",
-      "options": [
-        "Vaccines",
-        "Fertilizers",
-        "Pesticides only",
-        "Food additives only"
-      ],
+      "options": ["Vaccines", "Fertilizers", "Pesticides only", "Food additives only"],
       "correctAnswer": "A",
       "explanation": "Transgenic mice are widely used for testing vaccine safety before human trials. They are engineered to be more susceptible to certain diseases, making them ideal models for testing vaccines. They are also used for testing drug toxicity, studying gene function, and understanding disease mechanisms.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "transgenic-animals",
-        "vaccine-testing",
-        "mice"
-      ],
+      "tags": ["transgenic-animals", "vaccine-testing", "mice"],
       "neetWeightage": "HIGH"
     },
     {
@@ -849,11 +684,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "insulin-production",
-        "C-peptide",
-        "rDNA"
-      ],
+      "tags": ["insulin-production", "C-peptide", "rDNA"],
       "neetWeightage": "HIGH"
     },
     {
@@ -875,11 +706,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "RNAi",
-        "Meloidogyne-incognita",
-        "nematode"
-      ],
+      "tags": ["RNAi", "Meloidogyne-incognita", "nematode"],
       "neetWeightage": "HIGH"
     },
     {
@@ -901,10 +728,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "bioethics",
-        "definition"
-      ],
+      "tags": ["bioethics", "definition"],
       "neetWeightage": "HIGH"
     },
     {
@@ -926,10 +750,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gene-therapy",
-        "definition"
-      ],
+      "tags": ["gene-therapy", "definition"],
       "neetWeightage": "HIGH"
     },
     {
@@ -940,22 +761,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Insulin A chain has how many amino acids?",
-      "options": [
-        "30",
-        "51",
-        "11",
-        "21"
-      ],
+      "options": ["30", "51", "11", "21"],
       "correctAnswer": "D",
       "explanation": "Insulin A chain consists of 21 amino acids, while the B chain has 30 amino acids. Together, mature insulin has 51 amino acids. The A and B chains are connected by two inter-chain disulphide bridges (A7-B7 and A20-B19), and the A chain has one intra-chain disulphide bridge (A6-A11).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "insulin",
-        "A-chain",
-        "amino-acids"
-      ],
+      "tags": ["insulin", "A-chain", "amino-acids"],
       "neetWeightage": "HIGH"
     },
     {
@@ -977,11 +789,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Bt-toxin",
-        "safety",
-        "human-health"
-      ],
+      "tags": ["Bt-toxin", "safety", "human-health"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1003,11 +811,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Bt-toxin",
-        "protoxin",
-        "activation"
-      ],
+      "tags": ["Bt-toxin", "protoxin", "activation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1029,10 +833,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "recombinant-insulin",
-        "allergic-reactions"
-      ],
+      "tags": ["recombinant-insulin", "allergic-reactions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1054,11 +855,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gene-therapy",
-        "ADA-deficiency",
-        "limitation"
-      ],
+      "tags": ["gene-therapy", "ADA-deficiency", "limitation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1080,11 +877,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ELISA",
-        "antigen-antibody",
-        "diagnostics"
-      ],
+      "tags": ["ELISA", "antigen-antibody", "diagnostics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1106,11 +899,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "RNAi",
-        "defence-mechanism",
-        "viruses"
-      ],
+      "tags": ["RNAi", "defence-mechanism", "viruses"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1132,11 +921,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "transgenic-animals",
-        "Rosie",
-        "biological-products"
-      ],
+      "tags": ["transgenic-animals", "Rosie", "biological-products"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1158,10 +943,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biopiracy",
-        "developing-countries"
-      ],
+      "tags": ["biopiracy", "developing-countries"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1183,11 +965,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Bt-cotton",
-        "cry-protein",
-        "bollworm"
-      ],
+      "tags": ["Bt-cotton", "cry-protein", "bollworm"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1209,11 +987,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "PCR",
-        "early-detection",
-        "molecular-diagnostics"
-      ],
+      "tags": ["PCR", "early-detection", "molecular-diagnostics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1235,11 +1009,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "animal-insulin",
-        "allergic-reactions",
-        "structural-difference"
-      ],
+      "tags": ["animal-insulin", "allergic-reactions", "structural-difference"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1261,11 +1031,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "golden-rice",
-        "vitamin-A",
-        "beta-carotene"
-      ],
+      "tags": ["golden-rice", "vitamin-A", "beta-carotene"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1287,11 +1053,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "RNAi",
-        "nematode-resistance",
-        "dsRNA"
-      ],
+      "tags": ["RNAi", "nematode-resistance", "dsRNA"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1313,11 +1075,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "biopiracy",
-        "Indian-Patent-Bill",
-        "legislation"
-      ],
+      "tags": ["biopiracy", "Indian-Patent-Bill", "legislation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1328,22 +1086,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Consider the following statements about Bt cotton:\nI. It contains cryIAc gene from Bacillus thuringiensis.\nII. The Bt toxin is active inside the bacterial cell.\nIII. Bt toxin creates pores in the midgut of insect larvae.\nIV. Bt toxin is effective against all types of insects.\nWhich of the above statements are correct?",
-      "options": [
-        "I, II and III",
-        "I, III and IV",
-        "I and III only",
-        "All of the above"
-      ],
+      "options": ["I, II and III", "I, III and IV", "I and III only", "All of the above"],
       "correctAnswer": "C",
       "explanation": "Statements I and III are correct. Bt cotton contains the cryIAc gene (I) and the activated toxin creates pores in insect midgut cells (III). Statement II is wrong as the toxin is INACTIVE (protoxin) inside the bacterium. Statement IV is wrong as different cry proteins target specific insect orders, not all insects.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Bt-cotton",
-        "cry-gene",
-        "statement-based"
-      ],
+      "tags": ["Bt-cotton", "cry-gene", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1354,21 +1103,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Which of the following statements about gene therapy are correct?\nI. It involves correction of a genetic defect by delivering a normal gene.\nII. ADA deficiency was the first disease treated by gene therapy.\nIII. Gene therapy using lymphocytes provides a permanent cure.\nIV. Retroviruses are commonly used as vectors in gene therapy.",
-      "options": [
-        "I and II only",
-        "II, III and IV",
-        "All of the above",
-        "I, II and IV"
-      ],
+      "options": ["I and II only", "II, III and IV", "All of the above", "I, II and IV"],
       "correctAnswer": "D",
       "explanation": "Statements I, II and IV are correct. Gene therapy delivers normal genes to compensate for defective ones (I), ADA deficiency was the first disease treated (II), and retroviruses are common vectors (IV). Statement III is wrong as lymphocyte-based gene therapy is NOT permanent since lymphocytes have a limited lifespan.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gene-therapy",
-        "statement-based"
-      ],
+      "tags": ["gene-therapy", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1379,22 +1120,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Read the following statements about human insulin production:\nI. Eli Lilly produced the first recombinant insulin in 1983.\nII. Insulin A chain has 30 amino acids.\nIII. The C-peptide is removed during maturation of proinsulin.\nIV. The two chains are held together by disulphide bridges.\nSelect the correct statements:",
-      "options": [
-        "I and IV only",
-        "I, III and IV",
-        "II, III and IV",
-        "All of the above"
-      ],
+      "options": ["I and IV only", "I, III and IV", "II, III and IV", "All of the above"],
       "correctAnswer": "B",
       "explanation": "Statements I, III and IV are correct. Eli Lilly prepared Humulin in 1983 (I), C-peptide is removed during proinsulin maturation (III), and A and B chains are linked by disulphide bridges (IV). Statement II is wrong as the A chain has 21 amino acids (not 30); the B chain has 30 amino acids.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "insulin",
-        "production",
-        "statement-based"
-      ],
+      "tags": ["insulin", "production", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1405,22 +1137,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Consider the following statements about transgenic animals:\nI. They are used for testing vaccine safety.\nII. They help in understanding normal gene function.\nIII. They are used only for food production.\nIV. They can produce biological products like human proteins in milk.\nWhich statements are correct?",
-      "options": [
-        "I and III only",
-        "II and IV only",
-        "I, II and IV",
-        "All of the above"
-      ],
+      "options": ["I and III only", "II and IV only", "I, II and IV", "All of the above"],
       "correctAnswer": "C",
       "explanation": "Statements I, II and IV are correct. Transgenic animals are used for vaccine safety testing (I), studying gene regulation and normal physiology (II), and producing valuable biological products (IV). Statement III is wrong as transgenic animals are used for multiple purposes including research, medicine, and biotechnology, not just food production.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "transgenic-animals",
-        "applications",
-        "statement-based"
-      ],
+      "tags": ["transgenic-animals", "applications", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1431,21 +1154,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Which of the following statements about biopiracy are INCORRECT?\nI. It involves authorised use of biological resources.\nII. Neem, turmeric, and basmati rice patents are examples of biopiracy.\nIII. Only developed countries face biopiracy.\nIV. India has enacted legislation to prevent biopiracy.",
-      "options": [
-        "I only",
-        "I and III only",
-        "III and IV",
-        "II and III"
-      ],
+      "options": ["I only", "I and III only", "III and IV", "II and III"],
       "correctAnswer": "B",
       "explanation": "Statements I and III are incorrect. Biopiracy involves UNAUTHORISED (not authorised) use of biological resources (I is wrong). Developing countries (not developed) are the primary victims of biopiracy (III is wrong). Statements II (neem/turmeric/basmati patents) and IV (Indian Patent Bill) are correct.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biopiracy",
-        "statement-based"
-      ],
+      "tags": ["biopiracy", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1456,22 +1171,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Consider the following statements about RNAi:\nI. It involves dsRNA that silences gene expression.\nII. It was discovered in the nematode C. elegans.\nIII. RNAi leads to activation of the target gene.\nIV. It has applications in pest management.\nIdentify the correct statements:",
-      "options": [
-        "I, II and III",
-        "II, III and IV",
-        "I, II and IV",
-        "All of the above"
-      ],
+      "options": ["I, II and III", "II, III and IV", "I, II and IV", "All of the above"],
       "correctAnswer": "C",
       "explanation": "Statements I, II and IV are correct. RNAi uses dsRNA to silence gene expression (I), was discovered in C. elegans by Fire and Mello (II), and is used in pest management like nematode-resistant tobacco (IV). Statement III is wrong as RNAi SILENCES (not activates) gene expression by degrading the target mRNA.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "RNAi",
-        "gene-silencing",
-        "statement-based"
-      ],
+      "tags": ["RNAi", "gene-silencing", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1482,23 +1188,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Study the following statements about molecular diagnostics:\nI. ELISA and PCR are commonly used techniques.\nII. ELISA is based on antigen-antibody interaction.\nIII. PCR cannot detect genetic disorders.\nIV. Autoradiography can detect mutations in genes.\nWhich are correct?",
-      "options": [
-        "I and II only",
-        "I, III and IV",
-        "All of the above",
-        "I, II and IV"
-      ],
+      "options": ["I and II only", "I, III and IV", "All of the above", "I, II and IV"],
       "correctAnswer": "D",
       "explanation": "Statements I, II and IV are correct. ELISA and PCR are common molecular diagnostic tools (I), ELISA uses antigen-antibody interactions (II), and autoradiography with DNA probes can detect gene mutations (IV). Statement III is wrong as PCR CAN detect genetic disorders by amplifying specific gene regions for analysis.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "molecular-diagnostics",
-        "ELISA",
-        "PCR",
-        "statement-based"
-      ],
+      "tags": ["molecular-diagnostics", "ELISA", "PCR", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1509,23 +1205,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Consider the following statements about GM crops:\nI. They can be made more tolerant to abiotic stresses.\nII. They can have enhanced nutritional value.\nIII. They have no potential risks to the environment.\nIV. They can reduce dependence on chemical pesticides.\nSelect the correct statements:",
-      "options": [
-        "I, II and III",
-        "I, II and IV",
-        "II, III and IV",
-        "All of the above"
-      ],
+      "options": ["I, II and III", "I, II and IV", "II, III and IV", "All of the above"],
       "correctAnswer": "B",
       "explanation": "Statements I, II and IV are correct. GM crops can be engineered for stress tolerance (I), improved nutrition like golden rice (II), and reduced pesticide use like Bt crops (IV). Statement III is incorrect as GM crops do have potential environmental risks such as gene flow to wild relatives, effects on non-target organisms, and development of resistance.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "GM-crops",
-        "applications",
-        "risks",
-        "statement-based"
-      ],
+      "tags": ["GM-crops", "applications", "risks", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1536,22 +1222,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Which of the following statements about cry genes are correct?\nI. cry stands for crystal protein gene.\nII. All cry genes produce the same toxin.\nIII. cryIAc is used in Bt cotton.\nIV. cryIIAb is effective against corn borer.\nV. cry genes are chromosomal genes of Bacillus thuringiensis.",
-      "options": [
-        "I, II, III and IV",
-        "I, III, IV and V",
-        "I, III and IV",
-        "All of the above"
-      ],
+      "options": ["I, II, III and IV", "I, III, IV and V", "I, III and IV", "All of the above"],
       "correctAnswer": "C",
       "explanation": "Statements I, III and IV are correct. Cry stands for crystal protein (I), cryIAc is used in Bt cotton for bollworm resistance (III), and cryIIAb targets corn borer (IV). Statement II is wrong as different cry genes produce different toxins with different specificities. Statement V is also incorrect as many cry genes are located on plasmids, not chromosomes.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cry-genes",
-        "specificity",
-        "statement-based"
-      ],
+      "tags": ["cry-genes", "specificity", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1562,22 +1239,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Read the following statements about ADA deficiency:\nI. ADA stands for adenosine deaminase.\nII. ADA deficiency affects the immune system.\nIII. It can be treated by enzyme replacement therapy as a temporary measure.\nIV. Bone marrow transplant from a matched donor provides permanent cure.\nHow many statements are correct?",
-      "options": [
-        "Two",
-        "Three",
-        "Four",
-        "One"
-      ],
+      "options": ["Two", "Three", "Four", "One"],
       "correctAnswer": "C",
       "explanation": "All four statements are correct. ADA stands for adenosine deaminase (I). ADA deficiency causes SCID by affecting T-lymphocyte function (II). Enzyme replacement therapy provides temporary relief but requires repeated injections (III). Bone marrow transplant from a matched donor can permanently cure the condition as stem cells continuously produce lymphocytes with the ADA gene (IV).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ADA-deficiency",
-        "treatment",
-        "statement-based"
-      ],
+      "tags": ["ADA-deficiency", "treatment", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1599,11 +1267,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cry-genes",
-        "target-insects",
-        "match-the-following"
-      ],
+      "tags": ["cry-genes", "target-insects", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1625,10 +1289,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biotechnology-applications",
-        "match-the-following"
-      ],
+      "tags": ["biotechnology-applications", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1650,11 +1311,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "GM-organisms",
-        "modifications",
-        "match-the-following"
-      ],
+      "tags": ["GM-organisms", "modifications", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1676,11 +1333,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biopiracy",
-        "traditional-knowledge",
-        "match-the-following"
-      ],
+      "tags": ["biopiracy", "traditional-knowledge", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1702,11 +1355,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "insulin",
-        "structure",
-        "match-the-following"
-      ],
+      "tags": ["insulin", "structure", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1728,11 +1377,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "transgenic-animals",
-        "uses",
-        "match-the-following"
-      ],
+      "tags": ["transgenic-animals", "uses", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1754,12 +1399,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Bt-toxin",
-        "mechanism",
-        "sequence",
-        "match-the-following"
-      ],
+      "tags": ["Bt-toxin", "mechanism", "sequence", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1781,11 +1421,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "diagnostics",
-        "techniques",
-        "match-the-following"
-      ],
+      "tags": ["diagnostics", "techniques", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1807,11 +1443,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "bioethics",
-        "ethical-concerns",
-        "match-the-following"
-      ],
+      "tags": ["bioethics", "ethical-concerns", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1833,11 +1465,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biotech-applications",
-        "problems-solutions",
-        "match-the-following"
-      ],
+      "tags": ["biotech-applications", "problems-solutions", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1848,22 +1476,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "How many of the following are applications of transgenic animals?\n(a) Normal physiology and development studies (b) Study of disease (c) Biological products (d) Vaccine safety testing (e) Chemical safety testing (f) Increasing crop yield",
-      "options": [
-        "Three",
-        "Four",
-        "Five",
-        "Six"
-      ],
+      "options": ["Three", "Four", "Five", "Six"],
       "correctAnswer": "C",
       "explanation": "Five are correct applications of transgenic animals: (a) studying normal physiology and development, (b) studying disease mechanisms, (c) producing biological products like human proteins in milk, (d) testing vaccine safety, and (e) testing chemical/drug safety and toxicity. (f) Increasing crop yield is a plant biotechnology application, not transgenic animal application.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "transgenic-animals",
-        "applications",
-        "counting"
-      ],
+      "tags": ["transgenic-animals", "applications", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1874,22 +1493,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "How many of the following are correct statements about the Bt toxin mechanism?\n(a) Bt toxin is inactive as protoxin (b) It is activated by alkaline pH in insect gut (c) Gut proteases cleave the protoxin (d) Active toxin binds to midgut receptors (e) It creates pores in midgut cells (f) It is equally effective in acidic conditions",
-      "options": [
-        "Three",
-        "Four",
-        "Five",
-        "Six"
-      ],
+      "options": ["Three", "Four", "Five", "Six"],
       "correctAnswer": "C",
       "explanation": "Five statements are correct: (a) Bt toxin exists as inactive protoxin, (b) alkaline pH solubilises the crystal, (c) gut proteases cleave protoxin to active form, (d) active toxin binds to specific midgut receptors, and (e) it creates pores causing cell lysis. Statement (f) is wrong as Bt toxin requires alkaline conditions (not acidic) for activation.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Bt-toxin",
-        "mechanism",
-        "counting"
-      ],
+      "tags": ["Bt-toxin", "mechanism", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1900,23 +1510,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "How many of the following are examples of biopiracy from India?\n(a) Neem (b) Turmeric (c) Basmati rice (d) Penicillin (e) Yoga practices (f) Insulin",
-      "options": [
-        "Two",
-        "Three",
-        "Four",
-        "Five"
-      ],
+      "options": ["Two", "Three", "Four", "Five"],
       "correctAnswer": "B",
       "explanation": "Three are well-documented examples of biopiracy from India: (a) neem (pesticidal and medicinal properties), (b) turmeric (wound healing), and (c) basmati rice (aromatic rice variety). Penicillin (d) was discovered by Fleming, yoga practices (e) are cultural not biological products, and insulin (f) was discovered by Banting and Best - none are biopiracy cases.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biopiracy",
-        "India",
-        "examples",
-        "counting"
-      ],
+      "tags": ["biopiracy", "India", "examples", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1927,22 +1527,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "How many of the following are benefits of GM crops?\n(a) Increased nutritional value (b) Pest resistance (c) Herbicide tolerance (d) Improved shelf life (e) Drought resistance (f) Guaranteed elimination of all plant diseases",
-      "options": [
-        "Three",
-        "Four",
-        "Five",
-        "Six"
-      ],
+      "options": ["Three", "Four", "Five", "Six"],
       "correctAnswer": "C",
       "explanation": "Five are legitimate benefits of GM crops: (a) increased nutritional value (e.g., golden rice), (b) pest resistance (e.g., Bt crops), (c) herbicide tolerance (e.g., Roundup Ready soybean), (d) improved shelf life (e.g., Flavr Savr tomato), and (e) drought/stress resistance. Statement (f) is wrong as GM technology cannot guarantee elimination of ALL plant diseases.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "GM-crops",
-        "benefits",
-        "counting"
-      ],
+      "tags": ["GM-crops", "benefits", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1953,22 +1544,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "How many of the following are correct about human insulin structure?\n(a) A chain has 21 amino acids (b) B chain has 30 amino acids (c) Total 51 amino acids in mature insulin (d) Two inter-chain disulphide bridges (e) One intra-chain disulphide bridge in A chain (f) C-peptide is present in mature insulin",
-      "options": [
-        "Three",
-        "Four",
-        "Five",
-        "Six"
-      ],
+      "options": ["Three", "Four", "Five", "Six"],
       "correctAnswer": "C",
       "explanation": "Five statements are correct: (a) A chain has 21 amino acids, (b) B chain has 30 amino acids, (c) mature insulin has 51 amino acids total, (d) two inter-chain disulphide bridges connect A and B chains, and (e) A chain has one intra-chain disulphide bridge. Statement (f) is wrong as C-peptide is removed during maturation; it is present only in proinsulin.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "insulin",
-        "structure",
-        "counting"
-      ],
+      "tags": ["insulin", "structure", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1979,22 +1561,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "How many of the following concerns are associated with GM organisms?\n(a) Allergenicity (b) Gene transfer to non-target species (c) Antibiotic resistance markers entering food chain (d) Loss of biodiversity (e) Development of super weeds (f) Reduced production cost",
-      "options": [
-        "Three",
-        "Four",
-        "Five",
-        "Six"
-      ],
+      "options": ["Three", "Four", "Five", "Six"],
       "correctAnswer": "C",
       "explanation": "Five are valid concerns about GMOs: (a) allergenicity from new proteins, (b) horizontal gene transfer to wild species, (c) antibiotic resistance marker genes entering the food chain, (d) potential loss of biodiversity, and (e) creation of herbicide-resistant super weeds. Statement (f) 'reduced production cost' is a benefit, not a concern.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "GMO-concerns",
-        "risks",
-        "counting"
-      ],
+      "tags": ["GMO-concerns", "risks", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2005,22 +1578,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "How many of the following can be diagnosed using molecular diagnostic techniques like PCR and ELISA?\n(a) HIV/AIDS (b) Hepatitis B (c) Genetic disorders (d) Cancer mutations (e) Tuberculosis (f) Bone fractures",
-      "options": [
-        "Three",
-        "Four",
-        "Five",
-        "Six"
-      ],
+      "options": ["Three", "Four", "Five", "Six"],
       "correctAnswer": "C",
       "explanation": "Five can be diagnosed by molecular techniques: (a) HIV/AIDS by ELISA and PCR, (b) hepatitis B by ELISA, (c) genetic disorders by PCR and DNA probes, (d) cancer mutations by PCR-based sequencing, and (e) tuberculosis by PCR. Bone fractures (f) are diagnosed by X-rays and imaging, not molecular techniques.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "molecular-diagnostics",
-        "diseases",
-        "counting"
-      ],
+      "tags": ["molecular-diagnostics", "diseases", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2031,22 +1595,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "How many of the following are correct about RNAi in nematode-resistant tobacco?\n(a) dsRNA complementary to nematode gene is produced in plant (b) Both sense and antisense RNA are produced (c) The nematode ingests the dsRNA when feeding (d) siRNA is formed from dsRNA (e) Target mRNA of nematode is silenced (f) The nematode genome is permanently altered",
-      "options": [
-        "Three",
-        "Four",
-        "Five",
-        "Six"
-      ],
+      "options": ["Three", "Four", "Five", "Six"],
       "correctAnswer": "C",
       "explanation": "Five statements are correct: (a) the plant produces dsRNA complementary to a nematode gene, (b) both sense and antisense RNA strands are produced, (c) nematode ingests dsRNA while feeding, (d) dsRNA is processed into siRNA, and (e) the target mRNA is silenced. Statement (f) is wrong as RNAi silences gene expression post-transcriptionally without altering the genome.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "RNAi",
-        "nematode-resistance",
-        "counting"
-      ],
+      "tags": ["RNAi", "nematode-resistance", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2068,11 +1623,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Bt-toxin",
-        "mechanism",
-        "sequence"
-      ],
+      "tags": ["Bt-toxin", "mechanism", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2094,12 +1645,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gene-therapy",
-        "ADA-deficiency",
-        "steps",
-        "sequence"
-      ],
+      "tags": ["gene-therapy", "ADA-deficiency", "steps", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2121,11 +1667,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "insulin-production",
-        "rDNA",
-        "sequence"
-      ],
+      "tags": ["insulin-production", "rDNA", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2147,11 +1689,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "RNAi",
-        "nematode-resistance",
-        "sequence"
-      ],
+      "tags": ["RNAi", "nematode-resistance", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2173,11 +1711,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ELISA",
-        "steps",
-        "sequence"
-      ],
+      "tags": ["ELISA", "steps", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2199,12 +1733,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "proinsulin",
-        "processing",
-        "insulin",
-        "sequence"
-      ],
+      "tags": ["proinsulin", "processing", "insulin", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2226,11 +1755,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biotechnology-milestones",
-        "chronology",
-        "sequence"
-      ],
+      "tags": ["biotechnology-milestones", "chronology", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2252,10 +1777,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "molecular-diagnostics",
-        "advantages"
-      ],
+      "tags": ["molecular-diagnostics", "advantages"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2266,22 +1788,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "The Indian government established which organisation to specifically approve the commercial release of GM crops?",
-      "options": [
-        "ICAR",
-        "CSIR",
-        "GEAC (Genetic Engineering Appraisal Committee)",
-        "DBT"
-      ],
+      "options": ["ICAR", "CSIR", "GEAC (Genetic Engineering Appraisal Committee)", "DBT"],
       "correctAnswer": "C",
       "explanation": "GEAC (Genetic Engineering Appraisal Committee) was established under the Ministry of Environment, Forest and Climate Change as the apex regulatory body to approve commercial release of GM organisms in India. It evaluates environmental and health safety data before granting approval for large-scale field trials and commercial cultivation.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "GEAC",
-        "GM-regulation",
-        "India"
-      ],
+      "tags": ["GEAC", "GM-regulation", "India"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2303,11 +1816,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Bt-toxin",
-        "protoxin",
-        "safety"
-      ],
+      "tags": ["Bt-toxin", "protoxin", "safety"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2329,11 +1838,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ADA-deficiency",
-        "bone-marrow-transplant",
-        "permanent-cure"
-      ],
+      "tags": ["ADA-deficiency", "bone-marrow-transplant", "permanent-cure"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2344,22 +1849,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Consider the following statements about Flavr Savr tomato:\nI. It was the first commercially grown GM food crop.\nII. An antisense RNA was used to block polygalacturonase production.\nIII. It was developed to increase the vitamin content.\nIV. Reduced polygalacturonase delays fruit softening.\nWhich are correct?",
-      "options": [
-        "I, II and IV",
-        "I and II only",
-        "II, III and IV",
-        "All of the above"
-      ],
+      "options": ["I, II and IV", "I and II only", "II, III and IV", "All of the above"],
       "correctAnswer": "A",
       "explanation": "Statements I, II and IV are correct. Flavr Savr was the first GM food crop approved in 1994 (I), it used antisense RNA to suppress polygalacturonase (II), and reduced polygalacturonase delays cell wall degradation and fruit softening (IV). Statement III is wrong as the purpose was to delay ripening and extend shelf life, not increase vitamins.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Flavr-Savr",
-        "tomato",
-        "statement-based"
-      ],
+      "tags": ["Flavr-Savr", "tomato", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2370,22 +1866,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Which of the following statements about Rosie the transgenic cow are correct?\nI. Rosie was the first transgenic cow.\nII. Her milk contained human alpha-lactalbumin at 2.4 g/litre.\nIII. The milk was nutritionally more balanced for human babies.\nIV. She was produced in 1997.\nSelect the correct statements:",
-      "options": [
-        "I and II only",
-        "I, II and III",
-        "I, II, III and IV",
-        "II and III only"
-      ],
+      "options": ["I and II only", "I, II and III", "I, II, III and IV", "II and III only"],
       "correctAnswer": "C",
       "explanation": "All four statements are correct. Rosie was indeed the first transgenic cow (I), her milk contained 2.4 g/litre of human alpha-lactalbumin (II), which made the milk more nutritionally suitable for human infants compared to normal cow's milk (III), and she was produced in 1997 (IV).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Rosie",
-        "transgenic-cow",
-        "statement-based"
-      ],
+      "tags": ["Rosie", "transgenic-cow", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2396,22 +1883,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Read the following statements about GEAC:\nI. It stands for Genetic Engineering Appraisal Committee.\nII. It functions under the Ministry of Health.\nIII. It reviews the safety of GM organisms.\nIV. It decides the validity of GM research.\nWhich are correct?",
-      "options": [
-        "I, III and IV",
-        "I and III only",
-        "I, II, III and IV",
-        "II, III and IV"
-      ],
+      "options": ["I, III and IV", "I and III only", "I, II, III and IV", "II, III and IV"],
       "correctAnswer": "A",
       "explanation": "Statements I, III and IV are correct. GEAC stands for Genetic Engineering Appraisal Committee (I), it reviews safety aspects of introducing GM organisms (III), and it validates GM research (IV). Statement II is wrong as GEAC functions under the Ministry of Environment, Forest and Climate Change (not Ministry of Health).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "GEAC",
-        "regulation",
-        "statement-based"
-      ],
+      "tags": ["GEAC", "regulation", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2422,22 +1900,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Consider the following statements about the applications of biotechnology in agriculture:\nI. Bt crops reduce dependence on chemical pesticides.\nII. GM crops can be developed for enhanced nutritional quality.\nIII. RNAi can be used for developing pest-resistant plants.\nIV. All GM crops are approved for commercial cultivation worldwide.\nWhich statements are correct?",
-      "options": [
-        "I, II and III",
-        "I, III and IV",
-        "II, III and IV",
-        "All of the above"
-      ],
+      "options": ["I, II and III", "I, III and IV", "II, III and IV", "All of the above"],
       "correctAnswer": "A",
       "explanation": "Statements I, II and III are correct. Bt crops reduce pesticide use (I), golden rice exemplifies nutritional enhancement (II), and RNAi has been used for nematode-resistant tobacco (III). Statement IV is wrong as GM crop approval varies by country, and many nations have restrictions or outright bans on GM cultivation.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biotech-agriculture",
-        "applications",
-        "statement-based"
-      ],
+      "tags": ["biotech-agriculture", "applications", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2448,22 +1917,13 @@
       "ncertChapter": 12,
       "ncertChapterName": "Biotechnology and Its Applications",
       "question": "Which of the following statements about the production of recombinant insulin are INCORRECT?\nI. Proinsulin has three polypeptide chains.\nII. A chain and B chain are produced separately in E. coli.\nIII. C-peptide is needed for the biological activity of mature insulin.\nIV. Disulphide bridges connect the A and B chains.",
-      "options": [
-        "I and III only",
-        "I only",
-        "III and IV",
-        "II and III"
-      ],
+      "options": ["I and III only", "I only", "III and IV", "II and III"],
       "correctAnswer": "A",
       "explanation": "Statements I and III are incorrect. Proinsulin is a SINGLE polypeptide chain (not three separate chains) containing A, C, and B regions (I is wrong). The C-peptide is NOT needed for insulin's biological activity and is removed during maturation (III is wrong). Statements II (separate expression) and IV (disulphide bridges) are correct.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "insulin",
-        "proinsulin",
-        "statement-based"
-      ],
+      "tags": ["insulin", "proinsulin", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2485,11 +1945,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Bt-crops",
-        "target-pests",
-        "match-the-following"
-      ],
+      "tags": ["Bt-crops", "target-pests", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2511,11 +1967,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gene-therapy",
-        "types",
-        "match-the-following"
-      ],
+      "tags": ["gene-therapy", "types", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2537,11 +1989,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "RNAi",
-        "mechanism",
-        "match-the-following"
-      ],
+      "tags": ["RNAi", "mechanism", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2563,11 +2011,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biotech-products",
-        "organisms",
-        "match-the-following"
-      ],
+      "tags": ["biotech-products", "organisms", "match-the-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2589,11 +2033,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "genetic-disorders",
-        "treatment",
-        "match-the-following"
-      ],
+      "tags": ["genetic-disorders", "treatment", "match-the-following"],
       "neetWeightage": "HIGH"
     }
   ]

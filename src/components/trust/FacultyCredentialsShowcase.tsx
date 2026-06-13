@@ -392,9 +392,7 @@ function FacultyCard({ faculty }: { faculty: FacultyMember }) {
   }
 
   return (
-    <div
-      className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden animate-fadeInUp"
-    >
+    <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden animate-fadeInUp">
       {/* Header */}
       <div className="bg-indigo-500 text-white p-6 relative">
         {/* Video intro button */}
@@ -479,230 +477,219 @@ function FacultyCard({ faculty }: { faculty: FacultyMember }) {
 
       {/* Tab Content */}
       <div className="p-6">
-{activeTab === 'overview' && (
-            <div
-              key="overview"
-              className="space-y-4 animate-fadeInUp"
-            >
-              {/* Bio */}
-              <div>
-                <p className={`text-gray-700 ${showFullBio ? '' : 'line-clamp-3'}`}>
-                  {faculty.bio}
-                </p>
-                <button
-                  onClick={() => setShowFullBio(!showFullBio)}
-                  className="text-blue-600 hover:text-blue-700 text-sm mt-2 font-medium"
-                >
-                  {showFullBio ? 'Show less' : 'Read more'}
-                </button>
-              </div>
-
-              {/* Personal Quote */}
-              <div className="bg-blue-50 border-l-4 border-blue-500 p-4 italic">
-                <p className="text-gray-700">"{faculty.personalQuote}"</p>
-              </div>
-
-              {/* Key Achievements Grid */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-green-50 rounded-lg p-4 text-center">
-                  <TrendingUp className="w-6 h-6 text-green-600 mx-auto mb-2" />
-                  <div className="text-lg font-bold text-green-900">
-                    {faculty.achievements.topRanksProduced}
-                  </div>
-                  <div className="text-sm text-green-700">Top Ranks Produced</div>
-                </div>
-
-                {faculty.achievements.publicationsCount && (
-                  <div className="bg-blue-50 rounded-lg p-4 text-center">
-                    <BookOpen className="w-6 h-6 text-blue-600 mx-auto mb-2" />
-                    <div className="text-lg font-bold text-blue-900">
-                      {faculty.achievements.publicationsCount}
-                    </div>
-                    <div className="text-sm text-blue-700">Research Publications</div>
-                  </div>
-                )}
-
-                <div className="bg-purple-50 rounded-lg p-4 text-center">
-                  <Award className="w-6 h-6 text-purple-600 mx-auto mb-2" />
-                  <div className="text-lg font-bold text-purple-900">
-                    {faculty.achievements.awardsCount}
-                  </div>
-                  <div className="text-sm text-purple-700">Awards Received</div>
-                </div>
-
-                <div className="bg-orange-50 rounded-lg p-4 text-center">
-                  <Clock className="w-6 h-6 text-orange-600 mx-auto mb-2" />
-                  <div className="text-lg font-bold text-orange-900">
-                    {faculty.experience.totalYears}
-                  </div>
-                  <div className="text-sm text-orange-700">Years Experience</div>
-                </div>
-              </div>
-
-              {/* Current Role */}
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                  <Briefcase className="w-4 h-4 mr-2" />
-                  Current Responsibilities
-                </h4>
-                <ul className="space-y-1">
-                  {faculty.currentRole.responsibilities.map((responsibility, index) => (
-                    <li key={index} className="text-sm text-gray-700 flex items-start">
-                      <span className="text-blue-600 mr-2">•</span>
-                      {responsibility}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+        {activeTab === 'overview' && (
+          <div key="overview" className="space-y-4 animate-fadeInUp">
+            {/* Bio */}
+            <div>
+              <p className={`text-gray-700 ${showFullBio ? '' : 'line-clamp-3'}`}>{faculty.bio}</p>
+              <button
+                onClick={() => setShowFullBio(!showFullBio)}
+                className="text-blue-600 hover:text-blue-700 text-sm mt-2 font-medium"
+              >
+                {showFullBio ? 'Show less' : 'Read more'}
+              </button>
             </div>
-          )}
 
-          {activeTab === 'credentials' && (
-            <div
-              key="credentials"
-              className="space-y-6 animate-fadeInUp"
-            >
-              {/* Education */}
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                  <GraduationCap className="w-4 h-4 mr-2" />
-                  Education
-                </h4>
-                <div className="space-y-3">
-                  {faculty.education.map((edu, index) => (
-                    <div key={index} className="border rounded-lg p-3">
-                      <div className="font-medium text-gray-900">{edu.degree}</div>
-                      <div className="text-sm text-gray-600">{edu.institution}</div>
-                      <div className="flex justify-between items-center mt-1">
-                        <span className="text-sm text-gray-500">{edu.year}</span>
-                        {edu.rank && (
-                          <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">
-                            Rank {edu.rank}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  ))}
+            {/* Personal Quote */}
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 italic">
+              <p className="text-gray-700">"{faculty.personalQuote}"</p>
+            </div>
+
+            {/* Key Achievements Grid */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-green-50 rounded-lg p-4 text-center">
+                <TrendingUp className="w-6 h-6 text-green-600 mx-auto mb-2" />
+                <div className="text-lg font-bold text-green-900">
+                  {faculty.achievements.topRanksProduced}
                 </div>
+                <div className="text-sm text-green-700">Top Ranks Produced</div>
               </div>
 
-              {/* Certifications */}
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                  <Medal className="w-4 h-4 mr-2" />
-                  Certifications
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  {faculty.credentials.certifications.map((cert, index) => (
-                    <span
-                      key={index}
-                      className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
-                    >
-                      {cert}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Professional Memberships */}
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                  <Users className="w-4 h-4 mr-2" />
-                  Professional Memberships
-                </h4>
-                <ul className="space-y-1">
-                  {faculty.credentials.memberships.map((membership, index) => (
-                    <li key={index} className="text-sm text-gray-700 flex items-center">
-                      <span className="w-2 h-2 bg-green-600 rounded-full mr-2"></span>
-                      {membership}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Patents (if any) */}
-              {faculty.credentials.patents && (
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                    <Trophy className="w-4 h-4 mr-2" />
-                    Patents & Innovations
-                  </h4>
-                  <ul className="space-y-1">
-                    {faculty.credentials.patents.map((patent, index) => (
-                      <li key={index} className="text-sm text-gray-700 flex items-center">
-                        <span className="text-purple-600 mr-2">🔬</span>
-                        {patent}
-                      </li>
-                    ))}
-                  </ul>
+              {faculty.achievements.publicationsCount && (
+                <div className="bg-blue-50 rounded-lg p-4 text-center">
+                  <BookOpen className="w-6 h-6 text-blue-600 mx-auto mb-2" />
+                  <div className="text-lg font-bold text-blue-900">
+                    {faculty.achievements.publicationsCount}
+                  </div>
+                  <div className="text-sm text-blue-700">Research Publications</div>
                 </div>
               )}
 
-              {/* Social Links */}
-              <div className="flex space-x-3">
-                {faculty.socialProof.linkedIn && (
-                  <a
-                    href={faculty.socialProof.linkedIn}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-1" />
-                    LinkedIn
-                  </a>
-                )}
-                {faculty.socialProof.googleScholar && (
-                  <a
-                    href={faculty.socialProof.googleScholar}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-green-600 hover:text-green-700 text-sm font-medium"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-1" />
-                    Google Scholar
-                  </a>
-                )}
+              <div className="bg-purple-50 rounded-lg p-4 text-center">
+                <Award className="w-6 h-6 text-purple-600 mx-auto mb-2" />
+                <div className="text-lg font-bold text-purple-900">
+                  {faculty.achievements.awardsCount}
+                </div>
+                <div className="text-sm text-purple-700">Awards Received</div>
+              </div>
+
+              <div className="bg-orange-50 rounded-lg p-4 text-center">
+                <Clock className="w-6 h-6 text-orange-600 mx-auto mb-2" />
+                <div className="text-lg font-bold text-orange-900">
+                  {faculty.experience.totalYears}
+                </div>
+                <div className="text-sm text-orange-700">Years Experience</div>
               </div>
             </div>
-          )}
 
-          {activeTab === 'testimonials' && (
-            <div
-              key="testimonials"
-              className="space-y-4 animate-fadeInUp"
-            >
-              {faculty.testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-4">
-                  <p className="text-gray-700 italic mb-3">"{testimonial.studentQuote}"</p>
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <div className="font-medium text-gray-900">{testimonial.studentName}</div>
-                      <div className="text-sm text-gray-600">NEET Student</div>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-lg font-bold text-blue-600">
-                        #{testimonial.studentRank}
-                      </div>
-                      <div className="text-sm text-gray-600">NEET Rank</div>
+            {/* Current Role */}
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
+                <Briefcase className="w-4 h-4 mr-2" />
+                Current Responsibilities
+              </h4>
+              <ul className="space-y-1">
+                {faculty.currentRole.responsibilities.map((responsibility, index) => (
+                  <li key={index} className="text-sm text-gray-700 flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    {responsibility}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'credentials' && (
+          <div key="credentials" className="space-y-6 animate-fadeInUp">
+            {/* Education */}
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                <GraduationCap className="w-4 h-4 mr-2" />
+                Education
+              </h4>
+              <div className="space-y-3">
+                {faculty.education.map((edu, index) => (
+                  <div key={index} className="border rounded-lg p-3">
+                    <div className="font-medium text-gray-900">{edu.degree}</div>
+                    <div className="text-sm text-gray-600">{edu.institution}</div>
+                    <div className="flex justify-between items-center mt-1">
+                      <span className="text-sm text-gray-500">{edu.year}</span>
+                      {edu.rank && (
+                        <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">
+                          Rank {edu.rank}
+                        </span>
+                      )}
                     </div>
                   </div>
-                </div>
-              ))}
-
-              {/* Overall student feedback */}
-              <div className="bg-blue-50 rounded-lg p-4 text-center">
-                <Star className="w-8 h-8 text-yellow-500 mx-auto mb-2 fill-current" />
-                <div className="text-2xl font-bold text-gray-900">
-                  {faculty.achievements.successRate}%
-                </div>
-                <div className="text-sm text-gray-600">Student Success Rate</div>
-                <div className="text-xs text-gray-500 mt-1">
-                  Based on {faculty.achievements.studentsGuided}+ students guided
-                </div>
+                ))}
               </div>
             </div>
-          )}
-</div>
+
+            {/* Certifications */}
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                <Medal className="w-4 h-4 mr-2" />
+                Certifications
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {faculty.credentials.certifications.map((cert, index) => (
+                  <span
+                    key={index}
+                    className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+                  >
+                    {cert}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Professional Memberships */}
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                <Users className="w-4 h-4 mr-2" />
+                Professional Memberships
+              </h4>
+              <ul className="space-y-1">
+                {faculty.credentials.memberships.map((membership, index) => (
+                  <li key={index} className="text-sm text-gray-700 flex items-center">
+                    <span className="w-2 h-2 bg-green-600 rounded-full mr-2"></span>
+                    {membership}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Patents (if any) */}
+            {faculty.credentials.patents && (
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                  <Trophy className="w-4 h-4 mr-2" />
+                  Patents & Innovations
+                </h4>
+                <ul className="space-y-1">
+                  {faculty.credentials.patents.map((patent, index) => (
+                    <li key={index} className="text-sm text-gray-700 flex items-center">
+                      <span className="text-purple-600 mr-2">🔬</span>
+                      {patent}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Social Links */}
+            <div className="flex space-x-3">
+              {faculty.socialProof.linkedIn && (
+                <a
+                  href={faculty.socialProof.linkedIn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium"
+                >
+                  <ExternalLink className="w-4 h-4 mr-1" />
+                  LinkedIn
+                </a>
+              )}
+              {faculty.socialProof.googleScholar && (
+                <a
+                  href={faculty.socialProof.googleScholar}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-green-600 hover:text-green-700 text-sm font-medium"
+                >
+                  <ExternalLink className="w-4 h-4 mr-1" />
+                  Google Scholar
+                </a>
+              )}
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'testimonials' && (
+          <div key="testimonials" className="space-y-4 animate-fadeInUp">
+            {faculty.testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-4">
+                <p className="text-gray-700 italic mb-3">"{testimonial.studentQuote}"</p>
+                <div className="flex justify-between items-center">
+                  <div>
+                    <div className="font-medium text-gray-900">{testimonial.studentName}</div>
+                    <div className="text-sm text-gray-600">NEET Student</div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-lg font-bold text-blue-600">
+                      #{testimonial.studentRank}
+                    </div>
+                    <div className="text-sm text-gray-600">NEET Rank</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            {/* Overall student feedback */}
+            <div className="bg-blue-50 rounded-lg p-4 text-center">
+              <Star className="w-8 h-8 text-yellow-500 mx-auto mb-2 fill-current" />
+              <div className="text-2xl font-bold text-gray-900">
+                {faculty.achievements.successRate}%
+              </div>
+              <div className="text-sm text-gray-600">Student Success Rate</div>
+              <div className="text-xs text-gray-500 mt-1">
+                Based on {faculty.achievements.studentsGuided}+ students guided
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
 
       {/* Footer */}
       <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">

@@ -54,14 +54,18 @@
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.4);
   transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
   opacity: 0;
 }
 
 .ripple-effect:active::before {
   transform: translate(-50%, -50%) scale(3);
   opacity: 1;
-  transition: transform 0s, opacity 0s;
+  transition:
+    transform 0s,
+    opacity 0s;
 }
 
 /* Thumb Zone Optimization */
@@ -661,7 +665,6 @@ button,
   select {
     font-size: 16px !important; /* Prevents zoom on iOS */
   }
-
 }
 
 /* PWA Install Prompt Animation */

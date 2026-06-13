@@ -98,7 +98,7 @@ const faqs = [
   {
     question: 'Which schools do your Versova and Andheri students attend?',
     answer:
-      'We have students from Cathedral School Mumbai, Bombay Scottish, Jamnabai Narsee, Ecole Mondiale, and other top institutions in Andheri West and nearby premium areas. These schools\' rigorous academics align perfectly with our NEET preparation.',
+      "We have students from Cathedral School Mumbai, Bombay Scottish, Jamnabai Narsee, Ecole Mondiale, and other top institutions in Andheri West and nearby premium areas. These schools' rigorous academics align perfectly with our NEET preparation.",
   },
   {
     question: 'How do you support working parents in Andheri?',
@@ -121,7 +121,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Versova',
-  description: 'Best NEET Coaching for Versova & Andheri West - Premium coaching for premium families',
+  description:
+    'Best NEET Coaching for Versova & Andheri West - Premium coaching for premium families',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-versova-mumbai',
   telephone: '+91-88264-44334',
   address: {
@@ -182,7 +183,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Mumbai.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Mumbai.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -359,7 +364,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Mumbai.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Mumbai.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

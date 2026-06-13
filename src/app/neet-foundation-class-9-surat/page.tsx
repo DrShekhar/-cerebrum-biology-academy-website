@@ -20,64 +20,144 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Foundation Class 9 Surat | Cerebrum',
     description: 'NEET Foundation Class 9 in Surat. AIIMS-trained faculty, online live.',
-    url: PAGE_URL, locale: 'en_IN', type: 'website',
+    url: PAGE_URL,
+    locale: 'en_IN',
+    type: 'website',
   },
 
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 9 in Surat | AIIMS-Trained Online Live',
-    description: 'NEET Foundation Class 9 in Surat — AIIMS-trained faculty, online live. CBSE / ICSE / State Board + NEET parallel. Serving Adajan, Vesu, Piplod, Athwa. From Rs 35,000/year.',
+    description:
+      'NEET Foundation Class 9 in Surat — AIIMS-trained faculty, online live. CBSE / ICSE / State Board + NEET parallel. Serving Adajan, Vesu, Piplod, Athwa. From Rs 35,000/year.',
   },
 }
 
-const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I want to enroll my child (Class 9) in NEET Foundation from Surat. Please share batch details and demo timings.")
+const wa =
+  'https://wa.me/918826444334?text=' +
+  encodeURIComponent(
+    'Hi — I want to enroll my child (Class 9) in NEET Foundation from Surat. Please share batch details and demo timings.'
+  )
 
 const faqs = [
-  { question: 'Is Class 9 too early to start NEET preparation in Surat?', answer: 'No — Class 9 is the ideal time to build the Biology foundation that NEET demands. NCERT Class 9 Biology (cell biology, tissues, diversity in organisms) directly maps to NEET syllabus. Starting early gives Surat students a 2-3 year advantage over those who start in Class 11.' },
-  { question: 'How does NEET Foundation work alongside CBSE / ICSE / State Board?', answer: 'Our Foundation programme runs parallel to school. Live online sessions in IST evening slots (5-7 PM weekdays, 10 AM-12 PM weekends). Content covers CBSE / ICSE / State Board Biology syllabus plus NEET-specific extensions. No conflict with school schedule.' },
-  { question: 'What does NEET Foundation Class 9 cost in Surat?', answer: 'Foundation Pursuit: Rs 35,000/year. Foundation Ascent: Rs 50,000/year (bi-weekly 1:1). Foundation Pinnacle: Rs 70,000/year (weekly 1:1). Same pricing pan-India for online live.' },
-  { question: 'Which Surat schools send students to Cerebrum Foundation?', answer: 'Students from CBSE, ICSE, and state board schools across Adajan, Vesu, Piplod, Athwa. The Foundation programme bridges school biology to NEET-level depth.' },
+  {
+    question: 'Is Class 9 too early to start NEET preparation in Surat?',
+    answer:
+      'No — Class 9 is the ideal time to build the Biology foundation that NEET demands. NCERT Class 9 Biology (cell biology, tissues, diversity in organisms) directly maps to NEET syllabus. Starting early gives Surat students a 2-3 year advantage over those who start in Class 11.',
+  },
+  {
+    question: 'How does NEET Foundation work alongside CBSE / ICSE / State Board?',
+    answer:
+      'Our Foundation programme runs parallel to school. Live online sessions in IST evening slots (5-7 PM weekdays, 10 AM-12 PM weekends). Content covers CBSE / ICSE / State Board Biology syllabus plus NEET-specific extensions. No conflict with school schedule.',
+  },
+  {
+    question: 'What does NEET Foundation Class 9 cost in Surat?',
+    answer:
+      'Foundation Pursuit: Rs 35,000/year. Foundation Ascent: Rs 50,000/year (bi-weekly 1:1). Foundation Pinnacle: Rs 70,000/year (weekly 1:1). Same pricing pan-India for online live.',
+  },
+  {
+    question: 'Which Surat schools send students to Cerebrum Foundation?',
+    answer:
+      'Students from CBSE, ICSE, and state board schools across Adajan, Vesu, Piplod, Athwa. The Foundation programme bridges school biology to NEET-level depth.',
+  },
 ]
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
-      <CerebrumPersonSchema knowsAbout={['NEET Foundation Surat', 'Class 9 Biology Surat', 'Early NEET preparation Gujarat']} />
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'NEET Foundation Surat',
+          'Class 9 Biology Surat',
+          'Early NEET preparation Gujarat',
+        ]}
+      />
       <FAQSchema questions={faqs} pageUrl={PAGE_URL} />
 
       <section className="bg-gradient-to-br from-emerald-900 to-green-800 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4">
           <nav className="text-sm text-emerald-300 mb-6" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white">Home</Link><span className="mx-2">/</span>
-            <Link href="/best-neet-foundation-tutor" className="hover:text-white">NEET Foundation</Link><span className="mx-2">/</span>
+            <Link href="/" className="hover:text-white">
+              Home
+            </Link>
+            <span className="mx-2">/</span>
+            <Link href="/best-neet-foundation-tutor" className="hover:text-white">
+              NEET Foundation
+            </Link>
+            <span className="mx-2">/</span>
             <span className="text-white">Class 9 Surat</span>
           </nav>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">NEET Foundation Class 9 in Surat</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            NEET Foundation Class 9 in Surat
+          </h1>
           <p className="text-xl text-emerald-200 mb-6 max-w-3xl">
-            Start NEET preparation early from Surat. AIIMS-trained faculty, CBSE / ICSE / State Board + NEET parallel, online live sessions. Serving Adajan, Vesu, Piplod, Athwa. Foundation from Rs 35,000/year.
+            Start NEET preparation early from Surat. AIIMS-trained faculty, CBSE / ICSE / State
+            Board + NEET parallel, online live sessions. Serving Adajan, Vesu, Piplod, Athwa.
+            Foundation from Rs 35,000/year.
           </p>
-          <a href={wa} className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold" target="_blank" rel="noopener noreferrer">WhatsApp +91 88264-44334</a>
+          <a
+            href={wa}
+            className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp +91 88264-44334
+          </a>
         </div>
       </section>
 
       <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 prose prose-slate max-w-none">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Why start NEET Foundation in Class 9 from Surat?</h2>
-          <p>Class 9 is the ideal entry point for NEET preparation. NCERT Class 9 Biology covers foundational concepts (cell biology, tissues, diversity in living organisms, motion, force) that directly map to high-weightage NEET chapters. Students in Surat who start in Class 9 have a 2-3 year head start over those who begin in Class 11 — this compounds into 50-100 marks of advantage on exam day.</p>
-          <p>Our Foundation programme runs parallel to CBSE / ICSE / State Board school curriculum. No conflict — we cover school syllabus plus NEET-specific extensions (MCQ technique, assertion-reason, diagram-based questions) in evening/weekend online live sessions.</p>
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">
+            Why start NEET Foundation in Class 9 from Surat?
+          </h2>
+          <p>
+            Class 9 is the ideal entry point for NEET preparation. NCERT Class 9 Biology covers
+            foundational concepts (cell biology, tissues, diversity in living organisms, motion,
+            force) that directly map to high-weightage NEET chapters. Students in Surat who start in
+            Class 9 have a 2-3 year head start over those who begin in Class 11 — this compounds
+            into 50-100 marks of advantage on exam day.
+          </p>
+          <p>
+            Our Foundation programme runs parallel to CBSE / ICSE / State Board school curriculum.
+            No conflict — we cover school syllabus plus NEET-specific extensions (MCQ technique,
+            assertion-reason, diagram-based questions) in evening/weekend online live sessions.
+          </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">Foundation pricing</h2>
           <ul>
-            <li><strong>Foundation — Pursuit: Rs 35,000/year.</strong> Group batch, monthly 1:1 check-in.</li>
-            <li><strong>Foundation — Ascent: Rs 50,000/year.</strong> Smaller batch, bi-weekly 1:1.</li>
-            <li><strong>Foundation — Pinnacle: Rs 70,000/year.</strong> Premium, weekly 1:1 mentor.</li>
+            <li>
+              <strong>Foundation — Pursuit: Rs 35,000/year.</strong> Group batch, monthly 1:1
+              check-in.
+            </li>
+            <li>
+              <strong>Foundation — Ascent: Rs 50,000/year.</strong> Smaller batch, bi-weekly 1:1.
+            </li>
+            <li>
+              <strong>Foundation — Pinnacle: Rs 70,000/year.</strong> Premium, weekly 1:1 mentor.
+            </li>
           </ul>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">Related pages</h2>
           <ul>
-            <li><Link href="/neet-coaching-surat" className="text-blue-600 hover:underline">NEET Coaching Surat</Link></li>
-            <li><Link href="/neet-foundation-class-10-surat" className="text-blue-600 hover:underline">Foundation Class 10 Surat</Link></li>
-            <li><Link href="/best-neet-foundation-tutor" className="text-blue-600 hover:underline">Best NEET Foundation Tutor</Link></li>
+            <li>
+              <Link href="/neet-coaching-surat" className="text-blue-600 hover:underline">
+                NEET Coaching Surat
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/neet-foundation-class-10-surat"
+                className="text-blue-600 hover:underline"
+              >
+                Foundation Class 10 Surat
+              </Link>
+            </li>
+            <li>
+              <Link href="/best-neet-foundation-tutor" className="text-blue-600 hover:underline">
+                Best NEET Foundation Tutor
+              </Link>
+            </li>
           </ul>
         </div>
       </section>
@@ -88,7 +168,9 @@ export default function Page() {
           <div className="space-y-6">
             {faqs.map((f, i) => (
               <details key={i} className="bg-white rounded-xl p-6 border border-slate-200">
-                <summary className="text-lg font-semibold text-slate-900 cursor-pointer">{f.question}</summary>
+                <summary className="text-lg font-semibold text-slate-900 cursor-pointer">
+                  {f.question}
+                </summary>
                 <p className="mt-4 text-slate-700 leading-relaxed">{f.answer}</p>
               </details>
             ))}
@@ -99,7 +181,14 @@ export default function Page() {
       <section className="py-16 bg-gradient-to-br from-emerald-600 to-green-600">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start NEET Foundation from Surat</h2>
-          <a href={wa} className="inline-flex items-center gap-2 bg-white text-emerald-700 px-8 py-4 rounded-xl font-semibold text-lg" target="_blank" rel="noopener noreferrer">WhatsApp +91 88264-44334</a>
+          <a
+            href={wa}
+            className="inline-flex items-center gap-2 bg-white text-emerald-700 px-8 py-4 rounded-xl font-semibold text-lg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp +91 88264-44334
+          </a>
         </div>
       </section>
     </main>

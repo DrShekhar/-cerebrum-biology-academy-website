@@ -25,10 +25,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "microsporangium",
-        "wall-layers"
-      ],
+      "tags": ["microsporangium", "wall-layers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -50,10 +47,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tapetum",
-        "pollen-development"
-      ],
+      "tags": ["tapetum", "pollen-development"],
       "neetWeightage": "HIGH"
     },
     {
@@ -64,22 +58,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "The hard outer layer of pollen grain made of sporopollenin is called:",
-      "options": [
-        "Tapetum",
-        "Exine",
-        "Endothecium",
-        "Intine"
-      ],
+      "options": ["Tapetum", "Exine", "Endothecium", "Intine"],
       "correctAnswer": "B",
       "explanation": "The exine is the hard outer layer of the pollen grain wall made up of sporopollenin, which is one of the most resistant organic materials known. It can withstand high temperatures, strong acids, and alkali.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "exine",
-        "sporopollenin",
-        "pollen-grain"
-      ],
+      "tags": ["exine", "sporopollenin", "pollen-grain"],
       "neetWeightage": "HIGH"
     },
     {
@@ -90,21 +75,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "A mature pollen grain in most angiosperms at the time of shedding is:",
-      "options": [
-        "Three-celled",
-        "One-celled",
-        "Four-celled",
-        "Two-celled"
-      ],
+      "options": ["Three-celled", "One-celled", "Four-celled", "Two-celled"],
       "correctAnswer": "D",
       "explanation": "A mature pollen grain at the time of shedding is generally two-celled, containing a vegetative cell and a generative cell. In about 60% of angiosperms, pollen is shed at 2-celled stage. In the remaining, the generative cell divides to form two male gametes before shedding (3-celled stage).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollen-grain",
-        "two-celled"
-      ],
+      "tags": ["pollen-grain", "two-celled"],
       "neetWeightage": "HIGH"
     },
     {
@@ -115,21 +92,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Double fertilisation was discovered by:",
-      "options": [
-        "Robert Brown",
-        "S.G. Nawaschin",
-        "Strasburger",
-        "Leeuwenhoek"
-      ],
+      "options": ["Robert Brown", "S.G. Nawaschin", "Strasburger", "Leeuwenhoek"],
       "correctAnswer": "B",
       "explanation": "Double fertilisation in angiosperms was discovered by S.G. Nawaschin in 1898 in Lilium and Fritillaria. It involves two fusions: one male gamete fuses with the egg (syngamy) and the other fuses with the polar nuclei (triple fusion).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "double-fertilisation",
-        "nawaschin"
-      ],
+      "tags": ["double-fertilisation", "nawaschin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -140,21 +109,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "The number of nuclei present in a typical mature embryo sac is:",
-      "options": [
-        "5",
-        "7",
-        "8",
-        "16"
-      ],
+      "options": ["5", "7", "8", "16"],
       "correctAnswer": "B",
       "explanation": "A typical mature embryo sac (Polygonum type) has 7 cells and 8 nuclei. It contains 3 antipodals, 2 synergids, 1 egg cell, and 1 central cell with 2 polar nuclei. The central cell has 2 nuclei, making the total 8 nuclei in 7 cells.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "embryo-sac",
-        "nuclei"
-      ],
+      "tags": ["embryo-sac", "nuclei"],
       "neetWeightage": "HIGH"
     },
     {
@@ -165,21 +126,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "In angiosperms, the endosperm is:",
-      "options": [
-        "Tetraploid",
-        "Triploid",
-        "Diploid",
-        "Haploid"
-      ],
+      "options": ["Tetraploid", "Triploid", "Diploid", "Haploid"],
       "correctAnswer": "B",
       "explanation": "In angiosperms, the endosperm is triploid (3n). It is formed by triple fusion where one male gamete (n) fuses with the two polar nuclei (n+n) in the central cell of the embryo sac, resulting in the primary endosperm nucleus (3n).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "endosperm",
-        "triploid"
-      ],
+      "tags": ["endosperm", "triploid"],
       "neetWeightage": "HIGH"
     },
     {
@@ -190,22 +143,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Which of the following is an example of wind-pollinated plant?",
-      "options": [
-        "Jasmine",
-        "Maize",
-        "Rose",
-        "Salvia"
-      ],
+      "options": ["Jasmine", "Maize", "Rose", "Salvia"],
       "correctAnswer": "B",
       "explanation": "Maize (corn) is a wind-pollinated (anemophilous) plant. Wind-pollinated flowers are characterised by light, non-sticky pollen, well-exposed stamens, feathery stigma, and lack of colour, nectar, and fragrance.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "wind-pollination",
-        "anemophily",
-        "maize"
-      ],
+      "tags": ["wind-pollination", "anemophily", "maize"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -216,21 +160,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "The filiform apparatus is characteristic of:",
-      "options": [
-        "Antipodal cells",
-        "Synergids",
-        "Egg cell",
-        "Central cell"
-      ],
+      "options": ["Antipodal cells", "Synergids", "Egg cell", "Central cell"],
       "correctAnswer": "B",
       "explanation": "The filiform apparatus is a special thickening at the micropylar end of the synergids in the embryo sac. It plays an important role in guiding the pollen tube into the embryo sac.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "filiform-apparatus",
-        "synergids"
-      ],
+      "tags": ["filiform-apparatus", "synergids"],
       "neetWeightage": "HIGH"
     },
     {
@@ -252,10 +188,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "apomixis",
-        "seed-formation"
-      ],
+      "tags": ["apomixis", "seed-formation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -266,21 +199,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Polyembryony is commonly observed in:",
-      "options": [
-        "Capsella",
-        "Brassica",
-        "Citrus",
-        "Mango"
-      ],
+      "options": ["Capsella", "Brassica", "Citrus", "Mango"],
       "correctAnswer": "C",
       "explanation": "Polyembryony (occurrence of more than one embryo in a seed) is commonly observed in Citrus. The extra embryos arise from the nucellus cells (nucellar embryony). Mango also shows polyembryony.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "polyembryony",
-        "citrus"
-      ],
+      "tags": ["polyembryony", "citrus"],
       "neetWeightage": "HIGH"
     },
     {
@@ -291,21 +216,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "In a typical angiosperm embryo sac, the egg apparatus is located at:",
-      "options": [
-        "Both ends",
-        "Centre of embryo sac",
-        "Chalazal end",
-        "Micropylar end"
-      ],
+      "options": ["Both ends", "Centre of embryo sac", "Chalazal end", "Micropylar end"],
       "correctAnswer": "D",
       "explanation": "The egg apparatus consisting of one egg cell and two synergids is located at the micropylar end of the embryo sac. The three antipodal cells are located at the chalazal end.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "egg-apparatus",
-        "micropylar-end"
-      ],
+      "tags": ["egg-apparatus", "micropylar-end"],
       "neetWeightage": "HIGH"
     },
     {
@@ -327,10 +244,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "self-incompatibility",
-        "outbreeding"
-      ],
+      "tags": ["self-incompatibility", "outbreeding"],
       "neetWeightage": "HIGH"
     },
     {
@@ -352,10 +266,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollen-tube",
-        "synergid-entry"
-      ],
+      "tags": ["pollen-tube", "synergid-entry"],
       "neetWeightage": "HIGH"
     },
     {
@@ -377,10 +288,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sporopollenin",
-        "resistance"
-      ],
+      "tags": ["sporopollenin", "resistance"],
       "neetWeightage": "HIGH"
     },
     {
@@ -391,21 +299,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Which part of the flower develops into the fruit after fertilisation?",
-      "options": [
-        "Corolla",
-        "Calyx",
-        "Style",
-        "Ovary"
-      ],
+      "options": ["Corolla", "Calyx", "Style", "Ovary"],
       "correctAnswer": "D",
       "explanation": "After fertilisation, the ovary develops into the fruit. The wall of the ovary becomes the pericarp (fruit wall), and the ovules develop into seeds.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fruit-development",
-        "ovary"
-      ],
+      "tags": ["fruit-development", "ovary"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -416,21 +316,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "The functional megaspore in an ovule develops into:",
-      "options": [
-        "Pollen grain",
-        "Embryo sac",
-        "Endosperm",
-        "Seed coat"
-      ],
+      "options": ["Pollen grain", "Embryo sac", "Endosperm", "Seed coat"],
       "correctAnswer": "B",
       "explanation": "The functional megaspore develops into the female gametophyte or embryo sac. Out of four megaspores formed after meiosis, three degenerate and one functional megaspore undergoes three successive mitotic divisions to form the 7-celled, 8-nucleate embryo sac.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "megaspore",
-        "embryo-sac"
-      ],
+      "tags": ["megaspore", "embryo-sac"],
       "neetWeightage": "HIGH"
     },
     {
@@ -452,10 +344,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "emasculation",
-        "artificial-hybridisation"
-      ],
+      "tags": ["emasculation", "artificial-hybridisation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -477,10 +366,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "geitonogamy",
-        "pollination"
-      ],
+      "tags": ["geitonogamy", "pollination"],
       "neetWeightage": "HIGH"
     },
     {
@@ -491,21 +377,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Pollen grains of which plant can cause severe allergies and bronchial problems?",
-      "options": [
-        "Mango",
-        "Parthenium",
-        "Maize",
-        "Rose"
-      ],
+      "options": ["Mango", "Parthenium", "Maize", "Rose"],
       "correctAnswer": "B",
       "explanation": "Pollen grains of Parthenium (carrot grass) are a major cause of pollen allergies, causing severe bronchial problems and respiratory difficulties in humans. It is an invasive weed introduced into India.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollen-allergy",
-        "parthenium"
-      ],
+      "tags": ["pollen-allergy", "parthenium"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -516,21 +394,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "The innermost wall layer of the pollen grain is called:",
-      "options": [
-        "Exine",
-        "Endothecium",
-        "Tapetum",
-        "Intine"
-      ],
+      "options": ["Exine", "Endothecium", "Tapetum", "Intine"],
       "correctAnswer": "D",
       "explanation": "Intine is the inner thin wall layer of the pollen grain made of cellulose and pectin. It is continuous unlike the exine which has germ pores. The outer hard layer is the exine made of sporopollenin.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "intine",
-        "pollen-wall"
-      ],
+      "tags": ["intine", "pollen-wall"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -552,10 +422,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "scutellum",
-        "monocot-embryo"
-      ],
+      "tags": ["scutellum", "monocot-embryo"],
       "neetWeightage": "HIGH"
     },
     {
@@ -577,10 +444,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chasmogamous",
-        "flower-types"
-      ],
+      "tags": ["chasmogamous", "flower-types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -591,22 +455,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Perisperm is the persistent nucellus found in seeds of:",
-      "options": [
-        "Pea",
-        "Wheat",
-        "Maize",
-        "Black pepper"
-      ],
+      "options": ["Pea", "Wheat", "Maize", "Black pepper"],
       "correctAnswer": "D",
       "explanation": "Perisperm is the remnant of the nucellus that persists in the mature seed. It is found in seeds like black pepper and beet. In most seeds, the nucellus is consumed during seed development.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "perisperm",
-        "nucellus",
-        "black-pepper"
-      ],
+      "tags": ["perisperm", "nucellus", "black-pepper"],
       "neetWeightage": "HIGH"
     },
     {
@@ -617,21 +472,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Cleistogamous flowers are seen in:",
-      "options": [
-        "Commelina",
-        "Rosa",
-        "Hibiscus",
-        "Brassica"
-      ],
+      "options": ["Commelina", "Rosa", "Hibiscus", "Brassica"],
       "correctAnswer": "A",
       "explanation": "Cleistogamous flowers (flowers that do not open) are seen in Commelina, Viola, and Oxalis. These flowers ensure self-pollination as the flower never opens, guaranteeing seed set even in absence of pollinators.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cleistogamous",
-        "commelina"
-      ],
+      "tags": ["cleistogamous", "commelina"],
       "neetWeightage": "HIGH"
     },
     {
@@ -642,21 +489,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Which of the following fruits is parthenocarpic?",
-      "options": [
-        "Mango",
-        "Banana",
-        "Papaya",
-        "Apple"
-      ],
+      "options": ["Mango", "Banana", "Papaya", "Apple"],
       "correctAnswer": "B",
       "explanation": "Banana is a naturally parthenocarpic fruit that develops without fertilisation and is seedless. Parthenocarpy can also be induced artificially by application of growth hormones like auxins.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "parthenocarpy",
-        "banana"
-      ],
+      "tags": ["parthenocarpy", "banana"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -667,22 +506,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "The outermost and innermost integuments of an ovule develop into:",
-      "options": [
-        "Endosperm",
-        "Testa and tegmen respectively",
-        "Pericarp",
-        "Embryo"
-      ],
+      "options": ["Endosperm", "Testa and tegmen respectively", "Pericarp", "Embryo"],
       "correctAnswer": "B",
       "explanation": "After fertilisation, the outer integument of the ovule develops into testa (outer seed coat) and the inner integument develops into tegmen (inner seed coat). These layers protect the developing embryo.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "testa",
-        "tegmen",
-        "seed-coat"
-      ],
+      "tags": ["testa", "tegmen", "seed-coat"],
       "neetWeightage": "HIGH"
     },
     {
@@ -693,21 +523,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "How many meiotic divisions are required to produce 100 pollen grains?",
-      "options": [
-        "50",
-        "200",
-        "25",
-        "100"
-      ],
+      "options": ["50", "200", "25", "100"],
       "correctAnswer": "C",
       "explanation": "Each meiotic division of a pollen mother cell (microspore mother cell) produces 4 pollen grains (a tetrad of microspores). Therefore, to produce 100 pollen grains, 100/4 = 25 meiotic divisions are required.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "pollen-formation"
-      ],
+      "tags": ["meiosis", "pollen-formation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -729,10 +551,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bagging",
-        "hybridisation"
-      ],
+      "tags": ["bagging", "hybridisation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -743,22 +562,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "The coleoptile and coleorhiza are protective sheaths found in:",
-      "options": [
-        "Monocot embryo",
-        "Pteridophyte embryo",
-        "Dicot embryo",
-        "Gymnosperm embryo"
-      ],
+      "options": ["Monocot embryo", "Pteridophyte embryo", "Dicot embryo", "Gymnosperm embryo"],
       "correctAnswer": "A",
       "explanation": "Coleoptile (covering the plumule) and coleorhiza (covering the radicle) are protective sheaths found in monocot embryos like maize and wheat. These are absent in dicot embryos.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "coleoptile",
-        "coleorhiza",
-        "monocot"
-      ],
+      "tags": ["coleoptile", "coleorhiza", "monocot"],
       "neetWeightage": "HIGH"
     },
     {
@@ -769,21 +579,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Non-albuminous seeds lack:",
-      "options": [
-        "Cotyledons",
-        "Seed coat",
-        "Endosperm",
-        "Embryo"
-      ],
+      "options": ["Cotyledons", "Seed coat", "Endosperm", "Embryo"],
       "correctAnswer": "C",
       "explanation": "Non-albuminous (exalbuminous) seeds lack endosperm in the mature seed as it is completely consumed during embryo development. Examples include pea, bean, and groundnut. In these seeds, food is stored in cotyledons.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "non-albuminous",
-        "endosperm"
-      ],
+      "tags": ["non-albuminous", "endosperm"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -805,10 +607,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "xenogamy",
-        "cross-pollination"
-      ],
+      "tags": ["xenogamy", "cross-pollination"],
       "neetWeightage": "HIGH"
     },
     {
@@ -819,21 +618,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "The entry of pollen tube through the chalazal end of ovule is called:",
-      "options": [
-        "Mesogamy",
-        "Chalazogamy",
-        "Syngamy",
-        "Porogamy"
-      ],
+      "options": ["Mesogamy", "Chalazogamy", "Syngamy", "Porogamy"],
       "correctAnswer": "B",
       "explanation": "Chalazogamy is the entry of the pollen tube through the chalazal end of the ovule. Porogamy is entry through the micropyle (most common), and mesogamy is entry through the integuments.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chalazogamy",
-        "pollen-tube-entry"
-      ],
+      "tags": ["chalazogamy", "pollen-tube-entry"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -844,21 +635,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Pollen banks are used for storing pollen grains in liquid nitrogen at:",
-      "options": [
-        "0\u00b0C",
-        "-273\u00b0C",
-        "-196\u00b0C",
-        "-100\u00b0C"
-      ],
+      "options": ["0\u00b0C", "-273\u00b0C", "-196\u00b0C", "-100\u00b0C"],
       "correctAnswer": "C",
       "explanation": "Pollen banks store pollen grains in liquid nitrogen at -196\u00b0C for long periods. This cryopreservation technique maintains the viability of pollen for use in crop breeding programmes.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollen-bank",
-        "cryopreservation"
-      ],
+      "tags": ["pollen-bank", "cryopreservation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -869,21 +652,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "In a dicot embryo, the portion of embryonal axis above the cotyledons is called:",
-      "options": [
-        "Epicotyl",
-        "Radicle",
-        "Hypocotyl",
-        "Plumule"
-      ],
+      "options": ["Epicotyl", "Radicle", "Hypocotyl", "Plumule"],
       "correctAnswer": "A",
       "explanation": "In a dicot embryo, the epicotyl is the portion of the embryonal axis above the level of cotyledons which terminates in the plumule (shoot tip). The hypocotyl is below the cotyledons and terminates in the radicle (root tip).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "epicotyl",
-        "dicot-embryo"
-      ],
+      "tags": ["epicotyl", "dicot-embryo"],
       "neetWeightage": "HIGH"
     },
     {
@@ -905,10 +680,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cleistogamy",
-        "autogamy"
-      ],
+      "tags": ["cleistogamy", "autogamy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -930,10 +702,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "endosperm",
-        "embryo-development"
-      ],
+      "tags": ["endosperm", "embryo-development"],
       "neetWeightage": "HIGH"
     },
     {
@@ -955,10 +724,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "geitonogamy",
-        "autogamy"
-      ],
+      "tags": ["geitonogamy", "autogamy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -980,10 +746,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "wind-pollination",
-        "ovule"
-      ],
+      "tags": ["wind-pollination", "ovule"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1005,10 +768,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sporopollenin",
-        "germ-pores"
-      ],
+      "tags": ["sporopollenin", "germ-pores"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1030,11 +790,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "false-fruit",
-        "apple",
-        "cashew"
-      ],
+      "tags": ["false-fruit", "apple", "cashew"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1056,10 +812,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tapetum",
-        "multinucleate"
-      ],
+      "tags": ["tapetum", "multinucleate"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1081,10 +834,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "emasculation",
-        "unisexual-flowers"
-      ],
+      "tags": ["emasculation", "unisexual-flowers"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1106,10 +856,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "triple-fusion",
-        "PEN"
-      ],
+      "tags": ["triple-fusion", "PEN"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1131,9 +878,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "double-fertilisation"
-      ],
+      "tags": ["double-fertilisation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1155,9 +900,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollen-viability"
-      ],
+      "tags": ["pollen-viability"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1168,21 +911,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Consider the following statements about the embryo sac:\n(i) It has 7 cells and 8 nuclei.\n(ii) It is the female gametophyte.\n(iii) Antipodal cells are at the micropylar end.\n(iv) The central cell has two polar nuclei.\nHow many statements are correct?",
-      "options": [
-        "One",
-        "Three",
-        "Four",
-        "Two"
-      ],
+      "options": ["One", "Three", "Four", "Two"],
       "correctAnswer": "B",
       "explanation": "Three statements are correct: (i), (ii), and (iv). Statement (iii) is incorrect because antipodal cells are at the chalazal end, not the micropylar end. The egg apparatus (egg + 2 synergids) is at the micropylar end.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "embryo-sac",
-        "structure"
-      ],
+      "tags": ["embryo-sac", "structure"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1193,21 +928,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Which of the following statements about wind-pollinated flowers is INCORRECT?\n(i) They produce large, colourful petals.\n(ii) Pollen grains are light and non-sticky.\n(iii) Stigma is feathery.\n(iv) They produce nectar to attract pollinators.",
-      "options": [
-        "(i) and (iv) only",
-        "(ii) and (iii) only",
-        "(i), (ii), and (iv)",
-        "(i) only"
-      ],
+      "options": ["(i) and (iv) only", "(ii) and (iii) only", "(i), (ii), and (iv)", "(i) only"],
       "correctAnswer": "A",
       "explanation": "Statements (i) and (iv) are incorrect. Wind-pollinated flowers do NOT have large, colourful petals and do NOT produce nectar. They have small, inconspicuous flowers with light, non-sticky pollen and feathery/exposed stigmas.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "wind-pollination",
-        "characteristics"
-      ],
+      "tags": ["wind-pollination", "characteristics"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1229,11 +956,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "albuminous",
-        "non-albuminous",
-        "seeds"
-      ],
+      "tags": ["albuminous", "non-albuminous", "seeds"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1255,9 +978,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "microsporogenesis"
-      ],
+      "tags": ["microsporogenesis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1279,9 +1000,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollination-types"
-      ],
+      "tags": ["pollination-types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1303,10 +1022,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "megasporogenesis",
-        "functional-megaspore"
-      ],
+      "tags": ["megasporogenesis", "functional-megaspore"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1328,10 +1044,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fertilisation-events",
-        "match"
-      ],
+      "tags": ["fertilisation-events", "match"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1353,10 +1066,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollination-agents",
-        "match"
-      ],
+      "tags": ["pollination-agents", "match"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1378,10 +1088,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "seed-development",
-        "match"
-      ],
+      "tags": ["seed-development", "match"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1403,10 +1110,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollination-types",
-        "match"
-      ],
+      "tags": ["pollination-types", "match"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1428,11 +1132,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "embryo-sac",
-        "cells",
-        "match"
-      ],
+      "tags": ["embryo-sac", "cells", "match"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1454,10 +1154,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "monocot-embryo",
-        "match"
-      ],
+      "tags": ["monocot-embryo", "match"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1479,10 +1176,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "outbreeding-devices",
-        "match"
-      ],
+      "tags": ["outbreeding-devices", "match"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1493,21 +1187,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "How many of the following are outbreeding devices (mechanisms to prevent self-pollination)?\nDichogamy, Self-incompatibility, Production of unisexual flowers, Cleistogamy, Herkogamy, Heterostyly",
-      "options": [
-        "Five",
-        "Four",
-        "Three",
-        "Six"
-      ],
+      "options": ["Five", "Four", "Three", "Six"],
       "correctAnswer": "A",
       "explanation": "Five are outbreeding devices: Dichogamy, Self-incompatibility, Production of unisexual flowers, Herkogamy, and Heterostyly. Cleistogamy is NOT an outbreeding device; it promotes self-pollination (inbreeding).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "outbreeding-devices",
-        "counting"
-      ],
+      "tags": ["outbreeding-devices", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1518,21 +1204,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "How many of the following are characteristics of insect-pollinated flowers?\nLarge, colourful petals; Fragrance; Nectar; Light pollen; Feathery stigma; Sticky pollen",
-      "options": [
-        "Five",
-        "Four",
-        "Three",
-        "Six"
-      ],
+      "options": ["Five", "Four", "Three", "Six"],
       "correctAnswer": "B",
       "explanation": "Four are characteristics of insect-pollinated flowers: Large colourful petals, Fragrance, Nectar, and Sticky pollen. Light pollen and Feathery stigma are characteristics of wind-pollinated flowers.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "insect-pollination",
-        "counting"
-      ],
+      "tags": ["insect-pollination", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1543,21 +1221,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "How many mitotic divisions does the functional megaspore undergo to form the embryo sac?",
-      "options": [
-        "One",
-        "Three",
-        "Four",
-        "Two"
-      ],
+      "options": ["One", "Three", "Four", "Two"],
       "correctAnswer": "B",
       "explanation": "The functional megaspore undergoes three successive free nuclear mitotic divisions to form 8 nuclei, which then organise into the 7-celled, 8-nucleate embryo sac (Polygonum type).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "megaspore",
-        "mitotic-divisions"
-      ],
+      "tags": ["megaspore", "mitotic-divisions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1568,21 +1238,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "How many cells constitute the egg apparatus in a typical embryo sac?",
-      "options": [
-        "Two",
-        "Three",
-        "Four",
-        "One"
-      ],
+      "options": ["Two", "Three", "Four", "One"],
       "correctAnswer": "B",
       "explanation": "The egg apparatus consists of three cells: one egg cell and two synergids. These are located at the micropylar end of the embryo sac. The synergids have the filiform apparatus that guides the pollen tube.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "egg-apparatus",
-        "counting"
-      ],
+      "tags": ["egg-apparatus", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1593,21 +1255,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "How many of the following are examples of albuminous seeds?\nRice, Wheat, Maize, Castor, Coconut, Pea, Groundnut, Bean",
-      "options": [
-        "Four",
-        "Three",
-        "Six",
-        "Five"
-      ],
+      "options": ["Four", "Three", "Six", "Five"],
       "correctAnswer": "D",
       "explanation": "Five are albuminous seeds: Rice, Wheat, Maize, Castor, and Coconut. These retain endosperm in the mature seed. Pea, Groundnut, and Bean are non-albuminous seeds where the endosperm is consumed during development.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "albuminous-seeds",
-        "counting"
-      ],
+      "tags": ["albuminous-seeds", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1618,21 +1272,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "In a typical angiosperm, how many pollen grains will be produced from 25 microspore mother cells?",
-      "options": [
-        "75",
-        "50",
-        "100",
-        "25"
-      ],
+      "options": ["75", "50", "100", "25"],
       "correctAnswer": "C",
       "explanation": "Each microspore mother cell undergoes meiosis to produce 4 microspores (pollen grains). Therefore, 25 microspore mother cells will produce 25 x 4 = 100 pollen grains.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollen-grains",
-        "counting"
-      ],
+      "tags": ["pollen-grains", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1643,21 +1289,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "How many of the following are parts of a typical ovule?\nInteguments, Nucellus, Hilum, Micropyle, Funicle, Chalaza, Embryo sac",
-      "options": [
-        "Five",
-        "Six",
-        "Seven",
-        "Four"
-      ],
+      "options": ["Five", "Six", "Seven", "Four"],
       "correctAnswer": "C",
       "explanation": "All seven are parts of a typical ovule: Integuments (protective covering), Nucellus (mass of cells), Hilum (junction of funicle and body), Micropyle (small opening), Funicle (stalk), Chalaza (basal part), and Embryo sac (female gametophyte).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ovule-parts",
-        "counting"
-      ],
+      "tags": ["ovule-parts", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1679,10 +1317,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "microsporogenesis",
-        "sequence"
-      ],
+      "tags": ["microsporogenesis", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1704,10 +1339,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollination-to-seed",
-        "sequence"
-      ],
+      "tags": ["pollination-to-seed", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1729,10 +1361,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "embryo-sac-development",
-        "sequence"
-      ],
+      "tags": ["embryo-sac-development", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1754,10 +1383,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "artificial-hybridisation",
-        "sequence"
-      ],
+      "tags": ["artificial-hybridisation", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1779,10 +1405,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "anther-wall",
-        "sequence"
-      ],
+      "tags": ["anther-wall", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1804,10 +1427,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollen-development",
-        "sequence"
-      ],
+      "tags": ["pollen-development", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1818,21 +1438,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "In the embryo sac, the central cell after triple fusion becomes:",
-      "options": [
-        "Zygote",
-        "Antipodal cell",
-        "Primary endosperm cell (PEC)",
-        "Synergid"
-      ],
+      "options": ["Zygote", "Antipodal cell", "Primary endosperm cell (PEC)", "Synergid"],
       "correctAnswer": "C",
       "explanation": "After triple fusion, the central cell becomes the primary endosperm cell (PEC) with a triploid (3n) primary endosperm nucleus. This cell divides repeatedly to form the endosperm that nourishes the embryo.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "primary-endosperm-cell",
-        "triple-fusion"
-      ],
+      "tags": ["primary-endosperm-cell", "triple-fusion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1843,21 +1455,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Pollen grains of Vallisneria are pollinated by:",
-      "options": [
-        "Birds",
-        "Insects",
-        "Wind",
-        "Water"
-      ],
+      "options": ["Birds", "Insects", "Wind", "Water"],
       "correctAnswer": "D",
       "explanation": "Vallisneria is a freshwater plant that exhibits hydrophily (water pollination). Male flowers are released on the water surface where they come in contact with female flowers for pollination.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hydrophily",
-        "vallisneria"
-      ],
+      "tags": ["hydrophily", "vallisneria"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1868,21 +1472,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Which of the following is an example of a true fruit?",
-      "options": [
-        "Mango",
-        "Apple",
-        "Cashew",
-        "Strawberry"
-      ],
+      "options": ["Mango", "Apple", "Cashew", "Strawberry"],
       "correctAnswer": "A",
       "explanation": "Mango is a true fruit as it develops entirely from the ovary. Apple (thalamus), Strawberry (thalamus), and Cashew (pedicel) are false fruits where edible parts develop from accessory floral parts other than the ovary.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "true-fruit",
-        "mango"
-      ],
+      "tags": ["true-fruit", "mango"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1904,10 +1500,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "suspensor",
-        "embryo-development"
-      ],
+      "tags": ["suspensor", "embryo-development"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1918,22 +1511,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Which of the following shows adventive embryony as a type of apomixis?",
-      "options": [
-        "Pea",
-        "Rice",
-        "Citrus",
-        "Wheat"
-      ],
+      "options": ["Pea", "Rice", "Citrus", "Wheat"],
       "correctAnswer": "C",
       "explanation": "Citrus shows adventive embryony where embryos develop from diploid cells of the nucellus or integuments without involving meiosis or fertilisation. This is a form of apomixis that produces genetically identical offspring.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "adventive-embryony",
-        "apomixis",
-        "citrus"
-      ],
+      "tags": ["adventive-embryony", "apomixis", "citrus"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1955,10 +1539,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "apomixis",
-        "hybrid-vigour"
-      ],
+      "tags": ["apomixis", "hybrid-vigour"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1980,10 +1561,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollen-grain",
-        "structure"
-      ],
+      "tags": ["pollen-grain", "structure"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2005,10 +1583,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "seed-types",
-        "match"
-      ],
+      "tags": ["seed-types", "match"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2030,10 +1605,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "generative-cell",
-        "male-gametes"
-      ],
+      "tags": ["generative-cell", "male-gametes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2044,21 +1616,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Which of the following is NOT an outbreeding device?",
-      "options": [
-        "Self-incompatibility",
-        "Cleistogamy",
-        "Heterostyly",
-        "Dichogamy"
-      ],
+      "options": ["Self-incompatibility", "Cleistogamy", "Heterostyly", "Dichogamy"],
       "correctAnswer": "B",
       "explanation": "Cleistogamy is NOT an outbreeding device. It ensures self-pollination as the flowers never open. Dichogamy, self-incompatibility, and heterostyly are all outbreeding devices that promote cross-pollination.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "outbreeding",
-        "cleistogamy"
-      ],
+      "tags": ["outbreeding", "cleistogamy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2069,21 +1633,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "The process of transfer of pollen grains from anther to stigma of a flower is called:",
-      "options": [
-        "Syngamy",
-        "Germination",
-        "Pollination",
-        "Fertilisation"
-      ],
+      "options": ["Syngamy", "Germination", "Pollination", "Fertilisation"],
       "correctAnswer": "C",
       "explanation": "Pollination is the process of transfer of pollen grains from the anther to the stigma of a flower. It is a pre-fertilisation event and can occur by various agents like wind, water, insects, and birds.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollination",
-        "definition"
-      ],
+      "tags": ["pollination", "definition"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2105,10 +1661,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "coconut-water",
-        "endosperm"
-      ],
+      "tags": ["coconut-water", "endosperm"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2130,11 +1683,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "microsporogenesis",
-        "megasporogenesis",
-        "meiosis"
-      ],
+      "tags": ["microsporogenesis", "megasporogenesis", "meiosis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2145,21 +1694,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Which layer of the anther wall helps in dehiscence of the anther?",
-      "options": [
-        "Epidermis",
-        "Tapetum",
-        "Endothecium",
-        "Middle layers"
-      ],
+      "options": ["Epidermis", "Tapetum", "Endothecium", "Middle layers"],
       "correctAnswer": "C",
       "explanation": "The endothecium has fibrous thickenings (hygroscopic bands) that help in anther dehiscence. As the anther matures, the cells of the endothecium develop these thickenings which help in splitting open the anther to release pollen.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "endothecium",
-        "anther-dehiscence"
-      ],
+      "tags": ["endothecium", "anther-dehiscence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2181,10 +1722,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "polyembryony",
-        "citrus"
-      ],
+      "tags": ["polyembryony", "citrus"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2206,10 +1744,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollen-fossils",
-        "sporopollenin"
-      ],
+      "tags": ["pollen-fossils", "sporopollenin"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2231,10 +1766,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "double-fertilisation",
-        "angiosperms"
-      ],
+      "tags": ["double-fertilisation", "angiosperms"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2256,9 +1788,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollination-types"
-      ],
+      "tags": ["pollination-types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2280,9 +1810,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "anther-structure"
-      ],
+      "tags": ["anther-structure"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2304,10 +1832,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollen-tube-entry",
-        "match"
-      ],
+      "tags": ["pollen-tube-entry", "match"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2318,21 +1843,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Match Column I (Endosperm type) with Column II (Characteristic):\nColumn I: (P) Nuclear endosperm, (Q) Cellular endosperm, (R) Helobial endosperm\nColumn II: (i) Cell wall formation after each division, (ii) Free nuclear divisions followed by cellularisation, (iii) Combination of nuclear and cellular types",
-      "options": [
-        "P-ii, Q-i, R-iii",
-        "P-i, Q-ii, R-iii",
-        "P-iii, Q-i, R-ii",
-        "P-ii, Q-iii, R-i"
-      ],
+      "options": ["P-ii, Q-i, R-iii", "P-i, Q-ii, R-iii", "P-iii, Q-i, R-ii", "P-ii, Q-iii, R-i"],
       "correctAnswer": "A",
       "explanation": "Nuclear endosperm has free nuclear divisions without cell wall formation initially (ii). Cellular endosperm forms cell walls after each nuclear division (i). Helobial endosperm is a combination of both types (iii).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "endosperm-types",
-        "match"
-      ],
+      "tags": ["endosperm-types", "match"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2343,21 +1860,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "How many pollen grains will be produced from 10 pollen mother cells?",
-      "options": [
-        "20",
-        "40",
-        "80",
-        "10"
-      ],
+      "options": ["20", "40", "80", "10"],
       "correctAnswer": "B",
       "explanation": "Each pollen mother cell undergoes meiosis to produce 4 microspores (pollen grains). Therefore, 10 pollen mother cells will produce 10 x 4 = 40 pollen grains.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollen-mother-cell",
-        "counting"
-      ],
+      "tags": ["pollen-mother-cell", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2379,10 +1888,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "seed-development",
-        "sequence"
-      ],
+      "tags": ["seed-development", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2393,21 +1899,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "Which of the following is NOT a water-pollinated plant?",
-      "options": [
-        "Hydrilla",
-        "Salvia",
-        "Vallisneria",
-        "Zostera"
-      ],
+      "options": ["Hydrilla", "Salvia", "Vallisneria", "Zostera"],
       "correctAnswer": "B",
       "explanation": "Salvia is insect-pollinated (entomophilous) with a lever mechanism for pollination. Vallisneria, Zostera, and Hydrilla are all water-pollinated (hydrophilous) plants.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hydrophily",
-        "salvia"
-      ],
+      "tags": ["hydrophily", "salvia"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2429,10 +1927,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dicot-embryo",
-        "plumule"
-      ],
+      "tags": ["dicot-embryo", "plumule"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2443,21 +1938,13 @@
       "ncertChapter": 2,
       "ncertChapterName": "Sexual Reproduction in Flowering Plants",
       "question": "What is the ploidy of the cells of the nucellus?",
-      "options": [
-        "Tetraploid",
-        "Haploid",
-        "Triploid",
-        "Diploid"
-      ],
+      "options": ["Tetraploid", "Haploid", "Triploid", "Diploid"],
       "correctAnswer": "D",
       "explanation": "The nucellus is a mass of parenchymatous cells that forms the body of the ovule. It is a sporophytic tissue and hence diploid (2n). The megaspore mother cell is also diploid and develops within the nucellus.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "nucellus",
-        "ploidy"
-      ],
+      "tags": ["nucellus", "ploidy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2479,10 +1966,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "protandry",
-        "dichogamy"
-      ],
+      "tags": ["protandry", "dichogamy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2504,11 +1988,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "double-fertilisation",
-        "triple-fusion",
-        "endosperm"
-      ],
+      "tags": ["double-fertilisation", "triple-fusion", "endosperm"],
       "neetWeightage": "HIGH"
     }
   ]

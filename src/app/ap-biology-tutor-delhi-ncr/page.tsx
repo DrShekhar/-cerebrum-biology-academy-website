@@ -57,7 +57,11 @@ export default function APBiologyTutorDelhiNCRPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Delhi NCR', 'NEET Biology Delhi NCR', 'Medical entrance coaching Delhi NCR']}
+        knowsAbout={[
+          'NEET Delhi NCR',
+          'NEET Biology Delhi NCR',
+          'Medical entrance coaching Delhi NCR',
+        ]}
       />
       <DelhiAreaSchema pageSlug="ap-biology-tutor-delhi-ncr" />
       <APBiologyMetroSchemas

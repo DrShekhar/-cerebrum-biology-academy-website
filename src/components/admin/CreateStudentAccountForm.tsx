@@ -43,10 +43,7 @@ function generatePassword(): string {
   return password
 }
 
-export function CreateStudentAccountForm({
-  onSuccess,
-  onCancel,
-}: CreateStudentAccountFormProps) {
+export function CreateStudentAccountForm({ onSuccess, onCancel }: CreateStudentAccountFormProps) {
   const [courses, setCourses] = useState<Course[]>([])
 
   const {
@@ -72,11 +69,7 @@ export function CreateStudentAccountForm({
       .then((res) => res.json())
       .then((data) => {
         if (data.success && data.data) {
-          setCourses(
-            Array.isArray(data.data)
-              ? data.data
-              : data.data.courses || []
-          )
+          setCourses(Array.isArray(data.data) ? data.data : data.data.courses || [])
         }
       })
       .catch(() => {})
@@ -100,18 +93,14 @@ export function CreateStudentAccountForm({
       reset()
       onSuccess()
     } catch (error) {
-      toast.error(
-        error instanceof Error ? error.message : 'Failed to create student account'
-      )
+      toast.error(error instanceof Error ? error.message : 'Failed to create student account')
     }
   }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div className="space-y-4">
-        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">
-          Account Information
-        </h3>
+        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">Account Information</h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -124,9 +113,7 @@ export function CreateStudentAccountForm({
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Enter full name"
             />
-            {errors.name && (
-              <p className="text-sm text-red-600 mt-1">{errors.name.message}</p>
-            )}
+            {errors.name && <p className="text-sm text-red-600 mt-1">{errors.name.message}</p>}
           </div>
 
           <div>
@@ -139,9 +126,7 @@ export function CreateStudentAccountForm({
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="student@email.com"
             />
-            {errors.email && (
-              <p className="text-sm text-red-600 mt-1">{errors.email.message}</p>
-            )}
+            {errors.email && <p className="text-sm text-red-600 mt-1">{errors.email.message}</p>}
           </div>
 
           <div>
@@ -154,9 +139,7 @@ export function CreateStudentAccountForm({
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="+91 98765 43210"
             />
-            {errors.phone && (
-              <p className="text-sm text-red-600 mt-1">{errors.phone.message}</p>
-            )}
+            {errors.phone && <p className="text-sm text-red-600 mt-1">{errors.phone.message}</p>}
           </div>
 
           <div>
@@ -186,9 +169,7 @@ export function CreateStudentAccountForm({
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">
-          Tier & Enrollment
-        </h3>
+        <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">Tier & Enrollment</h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -213,10 +194,7 @@ export function CreateStudentAccountForm({
               {...register('createEnrollment')}
               className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
             />
-            <label
-              htmlFor="createEnrollment"
-              className="ml-2 text-sm font-medium text-gray-700"
-            >
+            <label htmlFor="createEnrollment" className="ml-2 text-sm font-medium text-gray-700">
               Create enrollment immediately
             </label>
           </div>
@@ -243,12 +221,7 @@ export function CreateStudentAccountForm({
       </div>
 
       <div className="flex items-center justify-end space-x-3 pt-4 border-t">
-        <Button
-          type="button"
-          variant="outline"
-          onClick={onCancel}
-          disabled={isSubmitting}
-        >
+        <Button type="button" variant="outline" onClick={onCancel} disabled={isSubmitting}>
           Cancel
         </Button>
         <Button

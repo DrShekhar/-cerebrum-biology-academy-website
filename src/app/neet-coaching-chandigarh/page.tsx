@@ -40,7 +40,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-chandigarh' },
+    alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-chandigarh' },
     description: 'Real-time online coaching for Chandigarh Tricity. No commute needed.',
   },
   {
@@ -116,7 +116,7 @@ const faqs = [
   {
     question: 'How is Cerebrum different from the largest national NEET chain Chandigarh?',
     answer:
-      'the largest national NEET chain Chandigarh has large batches (50-100+ students) and fees of Rs 1.5-2.5 lakhs. Cerebrum offers small batches (10-15 students), AIIMS-trained faculty (not just MBBS graduates), flexible online format saving commute time, and fees of Rs 24K-68K. Our 98% success rate competes with the largest national NEET chain\'s results.',
+      "the largest national NEET chain Chandigarh has large batches (50-100+ students) and fees of Rs 1.5-2.5 lakhs. Cerebrum offers small batches (10-15 students), AIIMS-trained faculty (not just MBBS graduates), flexible online format saving commute time, and fees of Rs 24K-68K. Our 98% success rate competes with the largest national NEET chain's results.",
   },
   {
     question: 'How is Cerebrum different from the 2nd-largest national NEET chain Chandigarh?',
@@ -141,7 +141,7 @@ const faqs = [
   {
     question: 'Which schools in Chandigarh trust Cerebrum for NEET coaching?',
     answer:
-      'Students from top Chandigarh schools choose us: DPS Chandigarh, Bhavan Vidyalaya, St. John\'s High School, Carmel Convent, AKSIPS, Vivek High School, DAV Schools, St. Kabir, Saupin\'s, and Strawberry Fields. Our flexible online timings work with all school schedules.',
+      "Students from top Chandigarh schools choose us: DPS Chandigarh, Bhavan Vidyalaya, St. John's High School, Carmel Convent, AKSIPS, Vivek High School, DAV Schools, St. Kabir, Saupin's, and Strawberry Fields. Our flexible online timings work with all school schedules.",
   },
   {
     question: 'Do Panchkula students need to come to Chandigarh for coaching?',
@@ -164,9 +164,9 @@ const faqs = [
       'Book your free demo class by: 1) WhatsApp 88264-44334, 2) Call 88264-44334, or 3) Click "Book Free Demo" on this page. Demo classes are live interactive sessions with actual faculty. No payment required. Experience our teaching before enrolling.',
   },
   {
-    question: 'What is the refund policy if I don\'t like the coaching?',
+    question: "What is the refund policy if I don't like the coaching?",
     answer:
-      'We offer a 7-day trial period. If you\'re not satisfied within the first week of joining, get a full refund (minus payment gateway charges). We\'re confident in our quality - 95% students continue after trial. No questions asked refund policy.',
+      "We offer a 7-day trial period. If you're not satisfied within the first week of joining, get a full refund (minus payment gateway charges). We're confident in our quality - 95% students continue after trial. No questions asked refund policy.",
   },
 ]
 
@@ -215,9 +215,7 @@ export default function NEETCoachingChandigarhPage() {
       <section className="relative bg-gradient-to-br from-[#1e3a5f] via-[#2d5a87] to-[#3d7ab5] text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2" />
               The City Beautiful | Chandigarh Tricity
@@ -232,8 +230,8 @@ export default function NEETCoachingChandigarhPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Chandigarh Tricity. 98% success rate, AIIMS
-              faculty. Target PGIMER, GMCH with expert guidance. Join 780+ Tricity students!
+              Premium NEET Biology coaching for Chandigarh Tricity. 98% success rate, AIIMS faculty.
+              Target PGIMER, GMCH with expert guidance. Join 780+ Tricity students!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -246,7 +244,11 @@ export default function NEETCoachingChandigarhPage() {
                 <MessageCircle className="w-6 h-6" />
                 <span>WhatsApp Us Now</span>
               </Button>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -326,9 +328,7 @@ export default function NEETCoachingChandigarhPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {chandigarhLocalities.map((locality, index) => (
-              <div
-                key={locality.name}
-               className="animate-fadeInUp">
+              <div key={locality.name} className="animate-fadeInUp">
                 <div
                   className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all hover:-translate-y-1 ${locality.priority === 'high' ? 'ring-2 ring-[#1e3a5f]' : ''}`}
                 >
@@ -428,8 +428,7 @@ export default function NEETCoachingChandigarhPage() {
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-[#1e3a5f] via-[#2d5a87] to-[#3d7ab5] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Ready to Crack NEET from Chandigarh?
             </h2>
@@ -446,7 +445,11 @@ export default function NEETCoachingChandigarhPage() {
                 <MessageCircle className="w-6 h-6" />
                 <span>WhatsApp Us Now</span>
               </Button>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

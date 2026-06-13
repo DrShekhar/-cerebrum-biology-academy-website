@@ -78,8 +78,8 @@ export function MobileInstallPrompt() {
   if (isInstalled || !showPrompt) return null
 
   return (
-<>
-{showPrompt && (
+    <>
+      {showPrompt && (
         <>
           {/* Backdrop */}
           <div
@@ -88,9 +88,7 @@ export function MobileInstallPrompt() {
           />
 
           {/* Prompt Card */}
-          <div
-            className="fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-2xl shadow-2xl animate-fadeInUp"
-          >
+          <div className="fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-2xl shadow-2xl animate-fadeInUp">
             <div className="p-6">
               {/* Close button */}
               <button
@@ -163,6 +161,6 @@ export function MobileInstallPrompt() {
           </div>
         </>
       )}
-</>
-)
+    </>
+  )
 }

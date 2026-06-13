@@ -180,21 +180,39 @@ export default function DropperBatchTemplate({
     url: pageUrl,
     inLanguage: 'en-IN',
     educationalLevel: 'NEET-UG Dropper/Repeater',
-    provider: { '@type': 'EducationalOrganization', '@id': 'https://cerebrumbiologyacademy.com/#organization', name: 'Cerebrum Biology Academy' },
+    provider: {
+      '@type': 'EducationalOrganization',
+      '@id': 'https://cerebrumbiologyacademy.com/#organization',
+      name: 'Cerebrum Biology Academy',
+    },
   }
 
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
   }
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: `NEET ${cityName}`, item: `https://cerebrumbiologyacademy.com/neet-coaching-${citySlug}` },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: `NEET ${cityName}`,
+        item: `https://cerebrumbiologyacademy.com/neet-coaching-${citySlug}`,
+      },
       { '@type': 'ListItem', position: 3, name: 'Dropper Batch', item: pageUrl },
     ],
   }
@@ -204,7 +222,10 @@ export default function DropperBatchTemplate({
     '@type': 'WebPage',
     name: `NEET Dropper Batch ${cityName}`,
     url: pageUrl,
-    speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="title"]', '[data-speakable="summary"]'] },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['[data-speakable="title"]', '[data-speakable="summary"]'],
+    },
   }
 
   const personSchema = {
@@ -217,18 +238,42 @@ export default function DropperBatchTemplate({
     description: `AIIMS-trained NEET Biology faculty leading dropper/repeater batches for ${cityName} students.`,
     url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
     image: 'https://cerebrumbiologyacademy.com/images/dr-shekhar-singh.webp',
-    affiliation: { '@type': 'EducationalOrganization', '@id': 'https://cerebrumbiologyacademy.com/#organization', name: 'Cerebrum Biology Academy' },
-    knowsAbout: ['NEET Biology', 'NEET Dropper Batch', 'NEET Repeater Strategy', 'Class 11 + 12 Biology'],
+    affiliation: {
+      '@type': 'EducationalOrganization',
+      '@id': 'https://cerebrumbiologyacademy.com/#organization',
+      name: 'Cerebrum Biology Academy',
+    },
+    knowsAbout: [
+      'NEET Biology',
+      'NEET Dropper Batch',
+      'NEET Repeater Strategy',
+      'Class 11 + 12 Biology',
+    ],
     sameAs: ['https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty'],
   }
 
   return (
     <main className="min-h-screen bg-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       <nav className="bg-gray-100 py-3 px-4">
         <div className="max-w-7xl mx-auto">
           <ol className="flex items-center flex-wrap gap-1 text-sm">

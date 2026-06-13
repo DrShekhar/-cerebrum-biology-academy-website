@@ -130,9 +130,7 @@ export default function AnalyticsPage() {
 
         {/* Real-time Metrics Bar */}
         {realTimeData && (
-          <div
-            className="bg-indigo-500 rounded-xl p-6 text-white animate-fadeInUp"
-          >
+          <div className="bg-indigo-500 rounded-xl p-6 text-white animate-fadeInUp">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <Zap className="w-5 h-5" />
@@ -192,9 +190,7 @@ export default function AnalyticsPage() {
           <div className="space-y-8">
             {/* Key Metrics Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              <div
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
-              >
+              <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm font-medium text-gray-600">Total Users</p>
@@ -212,9 +208,7 @@ export default function AnalyticsPage() {
                 </div>
               </div>
 
-              <div
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
-              >
+              <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm font-medium text-gray-600">Page Views</p>
@@ -232,9 +226,7 @@ export default function AnalyticsPage() {
                 </div>
               </div>
 
-              <div
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
-              >
+              <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm font-medium text-gray-600">Avg. Session</p>
@@ -252,9 +244,7 @@ export default function AnalyticsPage() {
                 </div>
               </div>
 
-              <div
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
-              >
+              <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm font-medium text-gray-600">Conversion Rate</p>
@@ -276,9 +266,7 @@ export default function AnalyticsPage() {
             {/* Charts Row */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* User Growth Chart */}
-              <div
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
-              >
+              <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">User Growth Trend</h3>
                 <div className="h-64 flex items-center justify-center bg-gray-50 rounded-lg">
                   <div className="text-center">
@@ -292,9 +280,7 @@ export default function AnalyticsPage() {
               </div>
 
               {/* Device Breakdown */}
-              <div
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
-              >
+              <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Device Usage</h3>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
@@ -357,9 +343,7 @@ export default function AnalyticsPage() {
             {/* Top Pages and Courses */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Top Pages */}
-              <div
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
-              >
+              <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Top Pages</h3>
                 <div className="space-y-3">
                   {dashboardData.topPages.map((page, index) => (
@@ -382,9 +366,7 @@ export default function AnalyticsPage() {
               </div>
 
               {/* Top Courses */}
-              <div
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
-              >
+              <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Top Courses</h3>
                 <div className="space-y-3">
                   {dashboardData.topCourses.map((course, index) => (
@@ -420,9 +402,7 @@ export default function AnalyticsPage() {
         {activeTab === 'conversions' && dashboardData && (
           <div className="space-y-8">
             {/* Conversion Funnel */}
-            <div
-              className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
-            >
+            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp">
               <h3 className="text-lg font-semibold text-gray-900 mb-6">
                 Lead-to-Payment Conversion Funnel
               </h3>
@@ -445,10 +425,7 @@ export default function AnalyticsPage() {
                   const width = (item.count / arr[0].count) * 100
 
                   return (
-                    <div
-                      key={item.stage}
-                      className="relative animate-fadeInUp"
-                    >
+                    <div key={item.stage} className="relative animate-fadeInUp">
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center space-x-3">
                           <div className={`w-3 h-3 ${item.color} rounded-full`} />
@@ -483,33 +460,25 @@ export default function AnalyticsPage() {
 
             {/* Key Conversion Metrics */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div
-                className="bg-gradient-to-br from-blue-500 to-blue-600 p-6 rounded-xl text-white animate-fadeInUp"
-              >
+              <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-6 rounded-xl text-white animate-fadeInUp">
                 <div className="text-sm opacity-90">Lead Capture Rate</div>
                 <div className="text-3xl font-bold mt-2">16.7%</div>
                 <div className="text-xs opacity-80 mt-1">Visitors → Leads</div>
               </div>
 
-              <div
-                className="bg-gradient-to-br from-purple-500 to-purple-600 p-6 rounded-xl text-white animate-fadeInUp"
-              >
+              <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-6 rounded-xl text-white animate-fadeInUp">
                 <div className="text-sm opacity-90">Demo Booking Rate</div>
                 <div className="text-3xl font-bold mt-2">34.0%</div>
                 <div className="text-xs opacity-80 mt-1">Leads → Demo Booked</div>
               </div>
 
-              <div
-                className="bg-gradient-to-br from-indigo-500 to-indigo-600 p-6 rounded-xl text-white animate-fadeInUp"
-              >
+              <div className="bg-gradient-to-br from-indigo-500 to-indigo-600 p-6 rounded-xl text-white animate-fadeInUp">
                 <div className="text-sm opacity-90">Demo Attendance</div>
                 <div className="text-3xl font-bold mt-2">75.0%</div>
                 <div className="text-xs opacity-80 mt-1">Confirmed → Attended</div>
               </div>
 
-              <div
-                className="bg-green-600 p-6 rounded-xl text-white animate-fadeInUp"
-              >
+              <div className="bg-green-600 p-6 rounded-xl text-white animate-fadeInUp">
                 <div className="text-sm opacity-90">Overall Conversion</div>
                 <div className="text-3xl font-bold mt-2">1.63%</div>
                 <div className="text-xs opacity-80 mt-1">Visitors → Paid</div>
@@ -517,9 +486,7 @@ export default function AnalyticsPage() {
             </div>
 
             {/* Funnel Insights */}
-            <div
-              className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 p-6 rounded-xl animate-fadeInUp"
-            >
+            <div className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 p-6 rounded-xl animate-fadeInUp">
               <h4 className="font-semibold text-yellow-800 mb-4 flex items-center">
                 <Target className="w-5 h-5 mr-2" />
                 Funnel Optimization Insights
@@ -557,9 +524,7 @@ export default function AnalyticsPage() {
             </div>
 
             {/* Exit Intent Performance */}
-            <div
-              className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
-            >
+            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
                 Exit Intent Popup Performance
               </h3>
@@ -586,9 +551,7 @@ export default function AnalyticsPage() {
           <div className="space-y-8">
             {/* Real-time Metrics */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
-              >
+              <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp">
                 <div className="flex items-center space-x-3">
                   <div className="p-2 bg-green-100 rounded-full">
                     <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse" />
@@ -600,9 +563,7 @@ export default function AnalyticsPage() {
                 </div>
               </div>
 
-              <div
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
-              >
+              <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp">
                 <div className="flex items-center space-x-3">
                   <MousePointer className="w-8 h-8 text-blue-600" />
                   <div>
@@ -614,9 +575,7 @@ export default function AnalyticsPage() {
                 </div>
               </div>
 
-              <div
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
-              >
+              <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp">
                 <div className="flex items-center space-x-3">
                   <Eye className="w-8 h-8 text-purple-600" />
                   <div>
@@ -628,9 +587,7 @@ export default function AnalyticsPage() {
                 </div>
               </div>
 
-              <div
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
-              >
+              <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp">
                 <div className="flex items-center space-x-3">
                   <Target className="w-8 h-8 text-orange-600" />
                   <div>
@@ -649,9 +606,7 @@ export default function AnalyticsPage() {
             </div>
 
             {/* Live Activity Feed */}
-            <div
-              className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
-            >
+            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Live Activity Feed</h3>
               <div className="space-y-2 max-h-96 overflow-y-auto">
                 {realTimeData.recentActivities.slice(0, 20).map((activity, index) => (

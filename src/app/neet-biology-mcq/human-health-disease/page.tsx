@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Human Health and Disease MCQ for NEET 2026 | Free Practice Questions',
-    description: 'Practice 500+ free Human Health and Disease MCQs for NEET. Immunity, Infectious Diseases, AIDS, Cancer, and Drugs & Alcohol Abuse questions. NCERT-based with explanations.',
+    description:
+      'Practice 500+ free Human Health and Disease MCQs for NEET. Immunity, Infectious Diseases, AIDS, Cancer, and Drugs & Alcohol Abuse questions. NCERT-based with explanations.',
   },
 }
 
@@ -61,13 +62,7 @@ export default function HumanHealthDiseasePage() {
         title="Human Health and Disease MCQ for NEET 2026"
         description="Master Human Health and Disease with 500+ free MCQs covering immunity, infectious diseases, AIDS, cancer, and substance abuse. Practice NCERT-based questions with detailed explanations."
         questionCount={500}
-        chapters={[
-          'Common Diseases',
-          'Immunity',
-          'AIDS',
-          'Cancer',
-          'Drugs and Alcohol Abuse',
-        ]}
+        chapters={['Common Diseases', 'Immunity', 'AIDS', 'Cancer', 'Drugs and Alcohol Abuse']}
         neetWeightage="6-8%"
         difficulty="Medium"
         importantSubtopics={[

@@ -35,7 +35,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'IB Biology HL vs SL 2025 | Which Level Should You Take? | Cerebrum',
-    description: 'IB Biology HL vs SL — 2025 syllabus comparison: 150 vs 240 teaching hours, AHL content, exam length, university requirements. Clear decision framework for HL vs SL choice.',
+    description:
+      'IB Biology HL vs SL — 2025 syllabus comparison: 150 vs 240 teaching hours, AHL content, exam length, university requirements. Clear decision framework for HL vs SL choice.',
   },
 }
 

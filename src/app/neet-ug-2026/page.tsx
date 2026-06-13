@@ -4,7 +4,6 @@ import {
   Calendar,
   Clock,
   FileText,
-
   CheckCircle2,
   AlertTriangle,
   ExternalLink,
@@ -55,7 +54,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET UG 2026 Registration, Dates, Eligibility & Updates',
-    description: 'Complete guide to NEET UG 2026 — registration dates, application fee, eligibility, exam pattern, documents required, and step-by-step form filling guide. Apply before 8th March 2026.',
+    description:
+      'Complete guide to NEET UG 2026 — registration dates, application fee, eligibility, exam pattern, documents required, and step-by-step form filling guide. Apply before 8th March 2026.',
   },
 }
 

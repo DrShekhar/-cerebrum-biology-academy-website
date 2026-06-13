@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching for Hillwoods Academy Gurugram',
-    description: 'Best NEET coaching for Hillwoods Academy Preet Vihar students. Just 12 min drive. CBSE-NEET aligned preparation. AIIMS faculty, 98% success rate. Call 88264-44334!',
+    description:
+      'Best NEET coaching for Hillwoods Academy Preet Vihar students. Just 12 min drive. CBSE-NEET aligned preparation. AIIMS faculty, 98% success rate. Call 88264-44334!',
   },
 }
 
@@ -86,7 +87,11 @@ export default function NEETCoachingHillwoodsAcademy() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

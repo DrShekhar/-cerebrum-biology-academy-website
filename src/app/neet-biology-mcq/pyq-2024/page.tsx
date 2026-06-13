@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET 2024 Biology PYQ | Previous Year Questions with Answers',
-    description: 'Practice NEET 2024 Biology Previous Year Questions (PYQs) with detailed solutions. All 90 Biology questions from NEET 2024 exam. Free practice with explanations.',
+    description:
+      'Practice NEET 2024 Biology Previous Year Questions (PYQs) with detailed solutions. All 90 Biology questions from NEET 2024 exam. Free practice with explanations.',
   },
 }
 

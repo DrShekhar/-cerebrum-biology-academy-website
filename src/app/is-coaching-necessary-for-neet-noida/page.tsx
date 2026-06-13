@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Is Coaching Necessary for NEET? Noida Expert Answer | 2026',
-    description: 'Is coaching necessary for NEET? Expert analysis from Noida NEET toppers. When coaching helps vs self-study works. Honest advice from AIIMS faculty. Call 99536-43938!',
+    description:
+      'Is coaching necessary for NEET? Expert analysis from Noida NEET toppers. When coaching helps vs self-study works. Honest advice from AIIMS faculty. Call 99536-43938!',
   },
 }
 
@@ -235,7 +236,9 @@ export default function IsCoachingNecessaryForNEETNoida() {
               Call 99536-43938
             </a>
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition"
             >
               Book Free Demo

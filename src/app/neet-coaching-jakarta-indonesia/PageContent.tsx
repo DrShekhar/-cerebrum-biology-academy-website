@@ -1,47 +1,55 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import SmartWhatsAppCTA from '@/components/conversion/SmartWhatsAppCTA';
-import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection';
-import LocalitySchema from '@/components/seo/LocalitySchema';
-import { PricingSection } from '@/components/city/PricingSection';
-import { CostComparisonSection } from '@/components/city/CostComparisonSection';
-import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks';
+import Image from 'next/image'
+import Link from 'next/link'
+import SmartWhatsAppCTA from '@/components/conversion/SmartWhatsAppCTA'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import LocalitySchema from '@/components/seo/LocalitySchema'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 export default function NEETCoachingPageContent() {
   const faqData = [
     {
       question: 'Why choose Cerebrum Biology Academy for NEET coaching in Jakarta?',
-      answer: 'Cerebrum Academy offers 98% success rate with personalized coaching from Dr. Shekhar C Singh. We understand Jakarta student needs and provide curriculum-aligned preparation.'
+      answer:
+        'Cerebrum Academy offers 98% success rate with personalized coaching from Dr. Shekhar C Singh. We understand Jakarta student needs and provide curriculum-aligned preparation.',
     },
     {
       question: 'What is the success rate for students in Jakarta?',
-      answer: 'Our Jakarta center maintains a consistent 98% success rate with students regularly scoring in top percentiles.'
+      answer:
+        'Our Jakarta center maintains a consistent 98% success rate with students regularly scoring in top percentiles.',
     },
     {
       question: 'Do you offer online NEET coaching for Jakarta students?',
-      answer: 'Yes, we offer both online and offline coaching. Online platform is accessible 24/7 with live classes and recorded sessions.'
+      answer:
+        'Yes, we offer both online and offline coaching. Online platform is accessible 24/7 with live classes and recorded sessions.',
     },
     {
       question: 'What are the class timings at Jakarta center?',
-      answer: 'We offer flexible batches in morning, afternoon, and evening aligned with WIB timezone, accommodating school schedules.'
+      answer:
+        'We offer flexible batches in morning, afternoon, and evening aligned with WIB timezone, accommodating school schedules.',
     },
     {
       question: 'How does Cerebrum Academy help with curriculum transition?',
-      answer: 'We provide comprehensive curriculum bridge programs connecting Indonesia school education with NEET requirements.'
+      answer:
+        'We provide comprehensive curriculum bridge programs connecting Indonesia school education with NEET requirements.',
     },
     {
       question: 'What is the fee structure?',
-      answer: 'Flexible fee structure with multiple payment plans. Contact us via WhatsApp at +918826444334 for detailed pricing.'
+      answer:
+        'Flexible fee structure with multiple payment plans. Contact us via WhatsApp at +918826444334 for detailed pricing.',
     },
     {
       question: 'Do you provide doubt-solving sessions?',
-      answer: 'Yes, unlimited doubt-solving sessions are part of our premium package. 24/7 WhatsApp support with Dr. Shekhar C Singh.'
+      answer:
+        'Yes, unlimited doubt-solving sessions are part of our premium package. 24/7 WhatsApp support with Dr. Shekhar C Singh.',
     },
     {
       question: 'How are mock tests conducted?',
-      answer: 'Monthly NEET-standard mock tests both online and offline with detailed performance analysis and feedback.'
-    }
-  ];
+      answer:
+        'Monthly NEET-standard mock tests both online and offline with detailed performance analysis and feedback.',
+    },
+  ]
 
   return (
     <>
@@ -68,13 +76,11 @@ export default function NEETCoachingPageContent() {
               NEET Coaching in Jakarta, Indonesia
             </h1>
             <p className="text-xl sm:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              NEET Coaching in Jakarta - Asia's emerging Indian expat hub with Gandhi Memorial School partnerships and IB curriculum bridge.
+              NEET Coaching in Jakarta - Asia's emerging Indian expat hub with Gandhi Memorial
+              School partnerships and IB curriculum bridge.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <SmartWhatsAppCTA 
-                text="Start Free Consultation"
-                variant="light"
-              />
+              <SmartWhatsAppCTA text="Start Free Consultation" variant="light" />
               <button className="px-8 py-4 bg-white text-blue-700 font-bold rounded-lg hover:bg-blue-50 transition duration-300">
                 Download Success Stories
               </button>
@@ -115,24 +121,44 @@ export default function NEETCoachingPageContent() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div key="0" className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600">
-              <h3 className="font-bold text-lg mb-2 text-gray-900">Growing Indian expat community in Jakarta</h3>
-              <p className="text-gray-700">Expert coaching aligned with local education standards.</p>
+              <h3 className="font-bold text-lg mb-2 text-gray-900">
+                Growing Indian expat community in Jakarta
+              </h3>
+              <p className="text-gray-700">
+                Expert coaching aligned with local education standards.
+              </p>
             </div>
             <div key="1" className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600">
-              <h3 className="font-bold text-lg mb-2 text-gray-900">Gandhi Memorial School partnerships</h3>
-              <p className="text-gray-700">Expert coaching aligned with local education standards.</p>
+              <h3 className="font-bold text-lg mb-2 text-gray-900">
+                Gandhi Memorial School partnerships
+              </h3>
+              <p className="text-gray-700">
+                Expert coaching aligned with local education standards.
+              </p>
             </div>
             <div key="2" className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600">
-              <h3 className="font-bold text-lg mb-2 text-gray-900">International Baccalaureate curriculum bridge</h3>
-              <p className="text-gray-700">Expert coaching aligned with local education standards.</p>
+              <h3 className="font-bold text-lg mb-2 text-gray-900">
+                International Baccalaureate curriculum bridge
+              </h3>
+              <p className="text-gray-700">
+                Expert coaching aligned with local education standards.
+              </p>
             </div>
             <div key="3" className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600">
-              <h3 className="font-bold text-lg mb-2 text-gray-900">Southeast Asia's gateway to Indian medical education</h3>
-              <p className="text-gray-700">Expert coaching aligned with local education standards.</p>
+              <h3 className="font-bold text-lg mb-2 text-gray-900">
+                Southeast Asia's gateway to Indian medical education
+              </h3>
+              <p className="text-gray-700">
+                Expert coaching aligned with local education standards.
+              </p>
             </div>
             <div key="4" className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600">
-              <h3 className="font-bold text-lg mb-2 text-gray-900">Emerging market with premium coaching</h3>
-              <p className="text-gray-700">Expert coaching aligned with local education standards.</p>
+              <h3 className="font-bold text-lg mb-2 text-gray-900">
+                Emerging market with premium coaching
+              </h3>
+              <p className="text-gray-700">
+                Expert coaching aligned with local education standards.
+              </p>
             </div>
           </div>
         </div>
@@ -145,11 +171,21 @@ export default function NEETCoachingPageContent() {
             We Coach Students From
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div key="0" className="bg-blue-50 p-4 rounded-lg border border-blue-200">Gandhi Memorial School</div>
-            <div key="1" className="bg-blue-50 p-4 rounded-lg border border-blue-200">Jakarta Intercultural School</div>
-            <div key="2" className="bg-blue-50 p-4 rounded-lg border border-blue-200">Bina Nusantara International School</div>
-            <div key="3" className="bg-blue-50 p-4 rounded-lg border border-blue-200">Sekolah Pelita Harapan</div>
-            <div key="4" className="bg-blue-50 p-4 rounded-lg border border-blue-200">British International School Jakarta</div>
+            <div key="0" className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+              Gandhi Memorial School
+            </div>
+            <div key="1" className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+              Jakarta Intercultural School
+            </div>
+            <div key="2" className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+              Bina Nusantara International School
+            </div>
+            <div key="3" className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+              Sekolah Pelita Harapan
+            </div>
+            <div key="4" className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+              British International School Jakarta
+            </div>
           </div>
         </div>
       </section>
@@ -207,18 +243,13 @@ export default function NEETCoachingPageContent() {
       {/* Final CTA */}
       <section className="py-16 sm:py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Ready to Excel in NEET?
-          </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Excel in NEET?</h2>
           <p className="text-xl mb-8 text-blue-100">
             Contact Dr. Shekhar C Singh today for personalized NEET coaching in Jakarta
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <SmartWhatsAppCTA 
-              text="Chat on WhatsApp Now"
-              variant="light"
-            />
-            <a 
+            <SmartWhatsAppCTA text="Chat on WhatsApp Now" variant="light" />
+            <a
               href="tel:+918826444334"
               className="px-8 py-4 bg-white text-purple-700 font-bold rounded-lg hover:bg-blue-50 transition"
             >
@@ -231,5 +262,5 @@ export default function NEETCoachingPageContent() {
       {/* Related Cities */}
       <RelatedCityLinks currentCity="Jakarta" />
     </>
-  );
+  )
 }

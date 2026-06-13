@@ -228,7 +228,6 @@ export async function POST(request: NextRequest) {
       },
     })
 
-
     notifyAdminFormSubmission('Enrollment Order Created', {
       Student: studentName,
       Email: email,

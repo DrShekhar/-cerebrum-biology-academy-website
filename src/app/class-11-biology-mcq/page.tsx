@@ -18,7 +18,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Class 11 Biology MCQ Practice | 2,200+ Free Questions — NCERT Based',
-    description: 'Practice 2,200+ free Class 11 Biology MCQs based on NCERT. Covers Diversity, Structural Organisation, Cell Biology, Plant & Human Physiology. Start now!',
+    description:
+      'Practice 2,200+ free Class 11 Biology MCQs based on NCERT. Covers Diversity, Structural Organisation, Cell Biology, Plant & Human Physiology. Start now!',
   },
 }
 

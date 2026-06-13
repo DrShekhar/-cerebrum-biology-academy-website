@@ -26,7 +26,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Crash Course 2026 | 3-Month Intensive Biology Program',
-    description: 'Intensive 3-month NEET crash course for Biology. Complete syllabus revision, 100+ mock tests, daily practice sessions.',
+    description:
+      'Intensive 3-month NEET crash course for Biology. Complete syllabus revision, 100+ mock tests, daily practice sessions.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/courses/neet-crash-course',

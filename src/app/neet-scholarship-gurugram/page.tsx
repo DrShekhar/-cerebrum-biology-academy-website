@@ -41,7 +41,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Scholarship Gurugram 2026 | Up to 100% Fee Waiver',
-    description: 'Apply for NEET scholarship in Gurugram (Gurgaon). Merit-based scholarships up to 100% fee waiver. Based on 10th/12th marks or scholarship test. Limited seats. Apply now at Cerebrum Biology Academy!',
+    description:
+      'Apply for NEET scholarship in Gurugram (Gurgaon). Merit-based scholarships up to 100% fee waiver. Based on 10th/12th marks or scholarship test. Limited seats. Apply now at Cerebrum Biology Academy!',
   },
 }
 
@@ -166,7 +167,11 @@ export default function NEETScholarshipGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-scholarship-gurugram" />
       {/* Hero Section */}

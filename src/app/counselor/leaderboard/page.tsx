@@ -85,25 +85,57 @@ function RankBadge({ rank }: { rank: number }) {
 
 function GoalCard({ goal }: { goal: Goal }) {
   const goalLabels: Record<string, { label: string; icon: React.ReactNode; color: string }> = {
-    LEADS_CREATED: { label: 'Leads Created', icon: <Users className="w-4 h-4" />, color: 'text-blue-600' },
-    CONVERSIONS: { label: 'Conversions', icon: <Target className="w-4 h-4" />, color: 'text-green-600' },
-    REVENUE: { label: 'Revenue', icon: <DollarSign className="w-4 h-4" />, color: 'text-emerald-600' },
-    DEMOS_SCHEDULED: { label: 'Demos Scheduled', icon: <Calendar className="w-4 h-4" />, color: 'text-purple-600' },
-    FOLLOW_UPS: { label: 'Follow-ups', icon: <Phone className="w-4 h-4" />, color: 'text-indigo-600' },
-    RESPONSE_TIME: { label: 'Avg Response Time', icon: <Clock className="w-4 h-4" />, color: 'text-amber-600' },
+    LEADS_CREATED: {
+      label: 'Leads Created',
+      icon: <Users className="w-4 h-4" />,
+      color: 'text-blue-600',
+    },
+    CONVERSIONS: {
+      label: 'Conversions',
+      icon: <Target className="w-4 h-4" />,
+      color: 'text-green-600',
+    },
+    REVENUE: {
+      label: 'Revenue',
+      icon: <DollarSign className="w-4 h-4" />,
+      color: 'text-emerald-600',
+    },
+    DEMOS_SCHEDULED: {
+      label: 'Demos Scheduled',
+      icon: <Calendar className="w-4 h-4" />,
+      color: 'text-purple-600',
+    },
+    FOLLOW_UPS: {
+      label: 'Follow-ups',
+      icon: <Phone className="w-4 h-4" />,
+      color: 'text-indigo-600',
+    },
+    RESPONSE_TIME: {
+      label: 'Avg Response Time',
+      icon: <Clock className="w-4 h-4" />,
+      color: 'text-amber-600',
+    },
   }
 
-  const config = goalLabels[goal.goalType] || { label: goal.goalType, icon: <Target className="w-4 h-4" />, color: 'text-gray-600' }
+  const config = goalLabels[goal.goalType] || {
+    label: goal.goalType,
+    icon: <Target className="w-4 h-4" />,
+    color: 'text-gray-600',
+  }
   const progressPercent = Math.min(goal.progress, 100)
   const isAchieved = goal.status === 'ACHIEVED'
   const isMissed = goal.status === 'MISSED'
 
   return (
-    <div className={`bg-white rounded-xl border p-5 transition-all ${
-      isAchieved ? 'border-green-200 bg-green-50/30' :
-      isMissed ? 'border-red-200 bg-red-50/30' :
-      'border-gray-200 hover:shadow-sm'
-    }`}>
+    <div
+      className={`bg-white rounded-xl border p-5 transition-all ${
+        isAchieved
+          ? 'border-green-200 bg-green-50/30'
+          : isMissed
+            ? 'border-red-200 bg-red-50/30'
+            : 'border-gray-200 hover:shadow-sm'
+      }`}
+    >
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           <span className={config.color}>{config.icon}</span>
@@ -126,16 +158,24 @@ function GoalCard({ goal }: { goal: Goal }) {
               : Number(goal.currentValue).toFixed(0)}
           </p>
           <p className="text-xs text-gray-400">
-            of {goal.goalType === 'REVENUE'
+            of{' '}
+            {goal.goalType === 'REVENUE'
               ? `₹${(Number(goal.targetValue) / 1000).toFixed(0)}K`
-              : Number(goal.targetValue).toFixed(0)} target
+              : Number(goal.targetValue).toFixed(0)}{' '}
+            target
           </p>
         </div>
-        <p className={`text-lg font-bold ${
-          progressPercent >= 100 ? 'text-green-600' :
-          progressPercent >= 70 ? 'text-indigo-600' :
-          progressPercent >= 40 ? 'text-yellow-600' : 'text-red-500'
-        }`}>
+        <p
+          className={`text-lg font-bold ${
+            progressPercent >= 100
+              ? 'text-green-600'
+              : progressPercent >= 70
+                ? 'text-indigo-600'
+                : progressPercent >= 40
+                  ? 'text-yellow-600'
+                  : 'text-red-500'
+          }`}
+        >
           {progressPercent.toFixed(0)}%
         </p>
       </div>
@@ -143,9 +183,13 @@ function GoalCard({ goal }: { goal: Goal }) {
       <div className="w-full bg-gray-200 rounded-full h-2.5">
         <div
           className={`h-2.5 rounded-full transition-all duration-700 ${
-            progressPercent >= 100 ? 'bg-green-500' :
-            progressPercent >= 70 ? 'bg-indigo-500' :
-            progressPercent >= 40 ? 'bg-yellow-500' : 'bg-red-400'
+            progressPercent >= 100
+              ? 'bg-green-500'
+              : progressPercent >= 70
+                ? 'bg-indigo-500'
+                : progressPercent >= 40
+                  ? 'bg-yellow-500'
+                  : 'bg-red-400'
           }`}
           style={{ width: `${Math.min(progressPercent, 100)}%` }}
         />
@@ -266,7 +310,9 @@ function CreateGoalModal({
         </div>
 
         <div className="p-6 border-t border-gray-100 flex justify-end gap-3">
-          <button onClick={onClose} className="px-4 py-2 text-gray-600 text-sm">Cancel</button>
+          <button onClick={onClose} className="px-4 py-2 text-gray-600 text-sm">
+            Cancel
+          </button>
           <button
             onClick={handleCreate}
             disabled={saving || !targetValue}
@@ -370,7 +416,9 @@ export default function LeaderboardPage() {
           <div className="p-8 text-center">
             <Trophy className="w-12 h-12 text-gray-300 mx-auto mb-3" />
             <p className="text-gray-500">No leaderboard data available for this period</p>
-            <p className="text-sm text-gray-400 mt-1">Rankings update automatically based on counselor performance</p>
+            <p className="text-sm text-gray-400 mt-1">
+              Rankings update automatically based on counselor performance
+            </p>
           </div>
         ) : (
           <div className="divide-y divide-gray-100">
@@ -381,11 +429,18 @@ export default function LeaderboardPage() {
                   const entry = leaderboard[idx]
                   if (!entry) return <div key={idx} />
                   return (
-                    <div key={entry.counselorId} className={`text-center ${idx === 0 ? 'order-2' : idx === 1 ? 'order-1 mt-4' : 'order-3 mt-4'}`}>
+                    <div
+                      key={entry.counselorId}
+                      className={`text-center ${idx === 0 ? 'order-2' : idx === 1 ? 'order-1 mt-4' : 'order-3 mt-4'}`}
+                    >
                       <RankBadge rank={entry.rank} />
-                      <p className="text-sm font-bold text-gray-900 mt-2 truncate">{entry.counselorName}</p>
+                      <p className="text-sm font-bold text-gray-900 mt-2 truncate">
+                        {entry.counselorName}
+                      </p>
                       <p className="text-xs text-gray-500">{entry.conversions} conversions</p>
-                      <p className="text-xs text-indigo-600 font-medium">₹{(Number(entry.revenue) / 1000).toFixed(0)}K</p>
+                      <p className="text-xs text-indigo-600 font-medium">
+                        ₹{(Number(entry.revenue) / 1000).toFixed(0)}K
+                      </p>
                     </div>
                   )
                 })}
@@ -394,7 +449,10 @@ export default function LeaderboardPage() {
 
             {/* Full List */}
             {leaderboard.map((entry) => (
-              <div key={entry.counselorId} className="flex items-center gap-4 px-6 py-4 hover:bg-gray-50 transition-colors">
+              <div
+                key={entry.counselorId}
+                className="flex items-center gap-4 px-6 py-4 hover:bg-gray-50 transition-colors"
+              >
                 <RankBadge rank={entry.rank} />
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-semibold text-gray-900">{entry.counselorName}</p>
@@ -411,7 +469,9 @@ export default function LeaderboardPage() {
                   <p className="text-xs text-gray-400">conversions</p>
                 </div>
                 <div className="text-right hidden sm:block">
-                  <p className="text-sm font-bold text-green-600">₹{(Number(entry.revenue) / 1000).toFixed(0)}K</p>
+                  <p className="text-sm font-bold text-green-600">
+                    ₹{(Number(entry.revenue) / 1000).toFixed(0)}K
+                  </p>
                   <p className="text-xs text-gray-400">revenue</p>
                 </div>
               </div>

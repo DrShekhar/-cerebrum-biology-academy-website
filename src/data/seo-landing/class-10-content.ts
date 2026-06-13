@@ -221,7 +221,7 @@ export const class10BiologyTuitionOnline: SEOLandingContent = {
     paragraphs: [
       {
         heading: 'Class 10 Biology Chapters That Directly Map to NEET Syllabus',
-        body: 'The CBSE Class 10 science syllabus contains four biology chapters that serve as direct precursors to NEET topics. Life Processes covers nutrition, respiration, transportation, and excretion in both plants and animals, laying groundwork for the Human Physiology and Plant Physiology units in Class 11. Control and Coordination introduces the nervous system and hormonal regulation, concepts that expand into detailed neural control, chemical coordination, and reproductive endocrinology in Classes 11 and 12. How Do Organisms Reproduce covers asexual and sexual reproduction, directly connecting to the Class 12 Reproduction unit that carries 5 to 7 NEET questions. Heredity and Evolution introduces Mendelian genetics and Darwin\'s theory of natural selection, both of which are explored at molecular depth in Class 12 Genetics and Evolution chapters. Students who master these Class 10 chapters thoroughly carry forward a conceptual scaffolding that makes the NEET syllabus feel like an extension rather than an entirely new subject.',
+        body: "The CBSE Class 10 science syllabus contains four biology chapters that serve as direct precursors to NEET topics. Life Processes covers nutrition, respiration, transportation, and excretion in both plants and animals, laying groundwork for the Human Physiology and Plant Physiology units in Class 11. Control and Coordination introduces the nervous system and hormonal regulation, concepts that expand into detailed neural control, chemical coordination, and reproductive endocrinology in Classes 11 and 12. How Do Organisms Reproduce covers asexual and sexual reproduction, directly connecting to the Class 12 Reproduction unit that carries 5 to 7 NEET questions. Heredity and Evolution introduces Mendelian genetics and Darwin's theory of natural selection, both of which are explored at molecular depth in Class 12 Genetics and Evolution chapters. Students who master these Class 10 chapters thoroughly carry forward a conceptual scaffolding that makes the NEET syllabus feel like an extension rather than an entirely new subject.",
       },
       {
         heading: 'Board Exam Strategy: How to Score 95-Plus in Class 10 Science',
@@ -233,10 +233,26 @@ export const class10BiologyTuitionOnline: SEOLandingContent = {
       },
     ],
     comparisonTable: [
-      { Aspect: 'Life Processes (Class 10)', 'Board Exam Requirement': 'Describe processes with diagrams', 'NEET Foundation Value': 'Prepares for Human Physiology and Plant Physiology in Class 11' },
-      { Aspect: 'Control and Coordination', 'Board Exam Requirement': 'Explain nervous and hormonal systems', 'NEET Foundation Value': 'Foundation for Neural Control and Chemical Coordination' },
-      { Aspect: 'Reproduction', 'Board Exam Requirement': 'Compare asexual and sexual methods', 'NEET Foundation Value': 'Direct precursor to Class 12 Reproduction unit (5-7 NEET Qs)' },
-      { Aspect: 'Heredity and Evolution', 'Board Exam Requirement': 'Basic Mendel\'s laws and natural selection', 'NEET Foundation Value': 'Foundation for Genetics and Evolution (8-12 NEET Qs)' },
+      {
+        Aspect: 'Life Processes (Class 10)',
+        'Board Exam Requirement': 'Describe processes with diagrams',
+        'NEET Foundation Value': 'Prepares for Human Physiology and Plant Physiology in Class 11',
+      },
+      {
+        Aspect: 'Control and Coordination',
+        'Board Exam Requirement': 'Explain nervous and hormonal systems',
+        'NEET Foundation Value': 'Foundation for Neural Control and Chemical Coordination',
+      },
+      {
+        Aspect: 'Reproduction',
+        'Board Exam Requirement': 'Compare asexual and sexual methods',
+        'NEET Foundation Value': 'Direct precursor to Class 12 Reproduction unit (5-7 NEET Qs)',
+      },
+      {
+        Aspect: 'Heredity and Evolution',
+        'Board Exam Requirement': "Basic Mendel's laws and natural selection",
+        'NEET Foundation Value': 'Foundation for Genetics and Evolution (8-12 NEET Qs)',
+      },
     ],
   },
 
@@ -420,15 +436,35 @@ export const neetFoundationClass10: SEOLandingContent = {
       },
       {
         heading: 'What Class 11 Concepts Are Introduced at the Foundation Level',
-        body: 'A thoughtfully designed Class 10 NEET foundation introduces specific Class 11 concepts at a digestible level. Cell biology is extended beyond the Class 10 syllabus to include basic organelle functions such as the role of ribosomes in protein synthesis and mitochondria as the energy currency producers. Human physiology concepts like the cardiac cycle, glomerular filtration, and synaptic transmission are introduced through simplified animations without the molecular detail that Class 11 demands. Basic genetics moves beyond Mendel\'s monohybrid cross to include dihybrid crosses and sex determination, preparing students for the probability-based problems that dominate Class 12 Genetics. Plant biology concepts like transpiration pull, root pressure, and translocation are explained using everyday analogies before students encounter them formally as part of Class 11 Plant Physiology. Each introduction is calibrated to build curiosity and familiarity without creating the burden of premature mastery.',
+        body: "A thoughtfully designed Class 10 NEET foundation introduces specific Class 11 concepts at a digestible level. Cell biology is extended beyond the Class 10 syllabus to include basic organelle functions such as the role of ribosomes in protein synthesis and mitochondria as the energy currency producers. Human physiology concepts like the cardiac cycle, glomerular filtration, and synaptic transmission are introduced through simplified animations without the molecular detail that Class 11 demands. Basic genetics moves beyond Mendel's monohybrid cross to include dihybrid crosses and sex determination, preparing students for the probability-based problems that dominate Class 12 Genetics. Plant biology concepts like transpiration pull, root pressure, and translocation are explained using everyday analogies before students encounter them formally as part of Class 11 Plant Physiology. Each introduction is calibrated to build curiosity and familiarity without creating the burden of premature mastery.",
       },
     ],
     checklist: [
-      { item: 'Master all Class 10 NCERT biology diagrams with labels', explanation: 'Board exams award full marks for labelled diagrams, and the skill transfers directly to NEET preparation.' },
-      { item: 'Create comparison tables for every chapter', explanation: 'Tabular comparison is a core NEET skill and helps organise Class 10 content for board revision.' },
-      { item: 'Solve at least 20 MCQs per chapter beyond board requirements', explanation: 'Early exposure to MCQ logic builds the test-taking instincts needed for NEET.' },
-      { item: 'Read one biology-related article or watch one science video per week', explanation: 'Broadens biological awareness and builds the curiosity that sustains long-term NEET motivation.' },
-      { item: 'Maintain an error log of mistakes made in practice tests', explanation: 'Tracking error patterns prevents repeating the same mistakes in Class 11 and 12.' },
+      {
+        item: 'Master all Class 10 NCERT biology diagrams with labels',
+        explanation:
+          'Board exams award full marks for labelled diagrams, and the skill transfers directly to NEET preparation.',
+      },
+      {
+        item: 'Create comparison tables for every chapter',
+        explanation:
+          'Tabular comparison is a core NEET skill and helps organise Class 10 content for board revision.',
+      },
+      {
+        item: 'Solve at least 20 MCQs per chapter beyond board requirements',
+        explanation:
+          'Early exposure to MCQ logic builds the test-taking instincts needed for NEET.',
+      },
+      {
+        item: 'Read one biology-related article or watch one science video per week',
+        explanation:
+          'Broadens biological awareness and builds the curiosity that sustains long-term NEET motivation.',
+      },
+      {
+        item: 'Maintain an error log of mistakes made in practice tests',
+        explanation:
+          'Tracking error patterns prevents repeating the same mistakes in Class 11 and 12.',
+      },
     ],
   },
 
@@ -791,24 +827,44 @@ export const class10BoardNeetCoaching: SEOLandingContent = {
   deepContent: {
     paragraphs: [
       {
-        heading: 'The Dual-Goal Approach: Why Board Excellence and NEET Foundation Are Not Competing Goals',
+        heading:
+          'The Dual-Goal Approach: Why Board Excellence and NEET Foundation Are Not Competing Goals',
         body: 'Parents often worry that NEET foundation work will dilute board exam preparation, but the evidence consistently shows the opposite. Students who study biology with conceptual depth, the hallmark of NEET-oriented teaching, outperform their peers in board exams because they understand the "why" behind biological processes rather than memorising isolated facts. When a Class 10 student understands that the heart has four chambers because it prevents mixing of oxygenated and deoxygenated blood for efficient oxygen delivery, they can answer both a board question asking them to draw and label the heart AND a NEET-style MCQ about double circulation. The conceptual framework serves both purposes simultaneously. Our coaching program leverages this synergy by teaching each topic at board level first, ensuring marks are secured, and then extending to NEET foundation depth, adding value without adding separate study hours.',
       },
       {
         heading: 'Key Class 10 Chapters for NEET Foundation Building',
-        body: 'Heredity and Evolution is the single most strategically important Class 10 chapter for future NEET aspirants. At the board level, students learn about Mendel\'s experiments with pea plants, dominant and recessive traits, and the basic principles of natural selection. NEET foundation extends this to include dihybrid crosses with a 9:3:3:1 ratio, sex determination mechanisms, and Hardy-Weinberg equilibrium at an introductory level. Life Processes is equally valuable: the board syllabus covers nutrition, respiration, transportation, and excretion, while foundation work introduces enzyme specificity, the oxyhemoglobin dissociation concept, and nephron function in greater detail. Control and Coordination, covering the nervous system and plant hormones, serves as the bridge to Class 11 Neural Control and Chemical Coordination. Students who invest focused effort in these three chapters during Class 10 enter Class 11 with a meaningful head start over peers who treated Class 10 as a standalone year.',
+        body: "Heredity and Evolution is the single most strategically important Class 10 chapter for future NEET aspirants. At the board level, students learn about Mendel's experiments with pea plants, dominant and recessive traits, and the basic principles of natural selection. NEET foundation extends this to include dihybrid crosses with a 9:3:3:1 ratio, sex determination mechanisms, and Hardy-Weinberg equilibrium at an introductory level. Life Processes is equally valuable: the board syllabus covers nutrition, respiration, transportation, and excretion, while foundation work introduces enzyme specificity, the oxyhemoglobin dissociation concept, and nephron function in greater detail. Control and Coordination, covering the nervous system and plant hormones, serves as the bridge to Class 11 Neural Control and Chemical Coordination. Students who invest focused effort in these three chapters during Class 10 enter Class 11 with a meaningful head start over peers who treated Class 10 as a standalone year.",
       },
       {
-        heading: 'How Integrated Coaching Prepares Students for the Class 10 to Class 11 Transition',
+        heading:
+          'How Integrated Coaching Prepares Students for the Class 10 to Class 11 Transition',
         body: 'The jump from Class 10 to Class 11 Biology is often described as the steepest learning curve in Indian school science. Class 10 teaches biology at a systems level, describing what happens in the body. Class 11 shifts to a cellular and molecular level, explaining how and why these processes occur. Students who have only experienced board-level teaching find this transition disorienting because the vocabulary, diagram complexity, and question depth change dramatically. Integrated coaching smooths this curve by introducing molecular concepts gradually during Class 10. For instance, while teaching digestion in Life Processes, integrated coaching mentions specific enzymes like pepsin and trypsin and their optimal pH ranges, foreshadowing the Biomolecules chapter in Class 11. While teaching reproduction, it introduces the concept of DNA as the hereditary material, connecting to the Molecular Basis of Inheritance in Class 12. These carefully placed previews transform the Class 11 syllabus from an overwhelming new subject into a natural deepening of familiar territory.',
       },
     ],
     checklist: [
-      { item: 'Score 90-plus in each Class 10 unit test before advancing to foundation content', explanation: 'Board marks are the primary goal; foundation is additive, not a substitute.' },
-      { item: 'Complete all NCERT in-text activities, not just end-of-chapter questions', explanation: 'Board examiners frequently draw questions from in-text activities and diagrams.' },
-      { item: 'Practise at least one Punnett square problem daily during the Heredity unit', explanation: 'Builds the genetics problem-solving speed needed for Class 12 NEET questions.' },
-      { item: 'Draw every NCERT diagram at least five times from memory', explanation: 'Diagram questions carry 2-5 marks in boards and are easy scoring if practised.' },
-      { item: 'Read the first two chapters of Class 11 NCERT Biology during summer break', explanation: 'Early exposure to Class 11 vocabulary reduces the shock of the transition.' },
+      {
+        item: 'Score 90-plus in each Class 10 unit test before advancing to foundation content',
+        explanation: 'Board marks are the primary goal; foundation is additive, not a substitute.',
+      },
+      {
+        item: 'Complete all NCERT in-text activities, not just end-of-chapter questions',
+        explanation:
+          'Board examiners frequently draw questions from in-text activities and diagrams.',
+      },
+      {
+        item: 'Practise at least one Punnett square problem daily during the Heredity unit',
+        explanation:
+          'Builds the genetics problem-solving speed needed for Class 12 NEET questions.',
+      },
+      {
+        item: 'Draw every NCERT diagram at least five times from memory',
+        explanation:
+          'Diagram questions carry 2-5 marks in boards and are easy scoring if practised.',
+      },
+      {
+        item: 'Read the first two chapters of Class 11 NCERT Biology during summer break',
+        explanation: 'Early exposure to Class 11 vocabulary reduces the shock of the transition.',
+      },
     ],
   },
 

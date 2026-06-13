@@ -52,7 +52,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'USABO 6-Month Prep Plan | Month-by-Month Schedule for the Open Exam',
-    description: 'A realistic 6-month USABO preparation plan for US high school students aiming at the February Open Exam. Month-by-month topics, weekly hours, books, past-paper drills, and the pitfalls that derail ...',
+    description:
+      'A realistic 6-month USABO preparation plan for US high school students aiming at the February Open Exam. Month-by-month topics, weekly hours, books, past-paper drills, and the pitfalls that derail ...',
   },
 }
 
@@ -80,7 +81,7 @@ const months = [
       'Track weak topics in a spreadsheet — wrong answers by Campbell chapter',
     ],
     pitfall:
-      'Reading Alberts cover-to-cover. It\'s a reference, not a textbook. Use it to dig into specific molecular mechanisms USABO has historically tested.',
+      "Reading Alberts cover-to-cover. It's a reference, not a textbook. Use it to dig into specific molecular mechanisms USABO has historically tested.",
   },
   {
     n: 3,
@@ -116,7 +117,7 @@ const months = [
       'Solve every available USABO Open paper from 2015–2024',
       'Re-solve the 3 papers where you scored lowest, now timed',
       'Surgery week: focus only on the bottom-3 topics from your spreadsheet',
-      'Read past Semifinal papers if you\'re aiming beyond Open cutoff',
+      "Read past Semifinal papers if you're aiming beyond Open cutoff",
       'Stop adding new content; consolidate what you have',
     ],
     pitfall:
@@ -175,7 +176,7 @@ const faqs = [
   {
     question: 'Is 6 months enough to prepare for USABO from scratch?',
     answer:
-      'For a strong honors-biology student, yes — but assume 12–15 hrs/week from December onwards. If you\'re starting from zero biology, 9 months is more realistic. If you have AP-5 already, 6–8 weeks of focused bridging work is typically enough to clear Open.',
+      "For a strong honors-biology student, yes — but assume 12–15 hrs/week from December onwards. If you're starting from zero biology, 9 months is more realistic. If you have AP-5 already, 6–8 weeks of focused bridging work is typically enough to clear Open.",
   },
   {
     question: 'How many hours per week is realistic on top of school?',
@@ -193,14 +194,14 @@ const faqs = [
       'You take it next year. Many USA Finalists qualified on their second or third attempt. Use the year for deeper Alberts and Lehninger reading, and for ethology / biosystematics — the units that take longest to internalize.',
   },
   {
-    question: 'Can my school still register if it\'s not currently a USABO school?',
+    question: "Can my school still register if it's not currently a USABO school?",
     answer:
-      'Yes — schools can register annually with the Center for Excellence in Education (CEE), which administers USABO. Registration is generally inexpensive and any US high school can sign up. Speak to your AP Biology teacher first; if they\'re willing to coordinate, the path is straightforward.',
+      "Yes — schools can register annually with the Center for Excellence in Education (CEE), which administers USABO. Registration is generally inexpensive and any US high school can sign up. Speak to your AP Biology teacher first; if they're willing to coordinate, the path is straightforward.",
   },
   {
     question: 'Do I need a tutor, or can I self-study?',
     answer:
-      'Self-study is workable for the Open Exam if you\'re disciplined and have access to past papers and the reference set. A tutor adds the most value at three points: (1) building the right monthly plan up front, (2) interpreting your past-paper mistakes correctly, and (3) Semifinal preparation, where free-response analytical reasoning is hard to self-grade.',
+      "Self-study is workable for the Open Exam if you're disciplined and have access to past papers and the reference set. A tutor adds the most value at three points: (1) building the right monthly plan up front, (2) interpreting your past-paper mistakes correctly, and (3) Semifinal preparation, where free-response analytical reasoning is hard to self-grade.",
   },
 ]
 
@@ -293,11 +294,15 @@ export default function USABO6MonthPrepPlanPage() {
           <div className="max-w-7xl mx-auto">
             <ol className="flex items-center flex-wrap gap-1 text-sm">
               <li>
-                <Link href="/" className="text-gray-600 hover:text-teal-600">Home</Link>
+                <Link href="/" className="text-gray-600 hover:text-teal-600">
+                  Home
+                </Link>
               </li>
               <li className="flex items-center">
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-                <Link href="/usabo-coaching" className="text-gray-600 hover:text-teal-600">USABO Coaching</Link>
+                <Link href="/usabo-coaching" className="text-gray-600 hover:text-teal-600">
+                  USABO Coaching
+                </Link>
               </li>
               <li className="flex items-center">
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
@@ -320,20 +325,25 @@ export default function USABO6MonthPrepPlanPage() {
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
               USABO 6-Month Prep Plan
-              <span className="block text-yellow-400 mt-2">Month-by-month schedule for Open Exam</span>
+              <span className="block text-yellow-400 mt-2">
+                Month-by-month schedule for Open Exam
+              </span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 mb-6 max-w-3xl">
               A realistic, week-by-week roadmap for US high-school students sitting the USABO Open
-              Exam in February. Includes monthly goals, reading lists, weekly hour expectations,
-              and the specific pitfalls that derail most first-time candidates.
+              Exam in February. Includes monthly goals, reading lists, weekly hour expectations, and
+              the specific pitfalls that derail most first-time candidates.
             </p>
             <p className="text-base text-slate-400 mb-8 max-w-3xl">
               Designed for students with a strong honors-biology background. AP-5 students can
               compress the first three months — see our{' '}
-              <Link href="/ap-biology-vs-usabo" className="text-yellow-300 underline hover:text-yellow-200">
+              <Link
+                href="/ap-biology-vs-usabo"
+                className="text-yellow-300 underline hover:text-yellow-200"
+              >
                 AP Biology vs USABO bridge
-              </Link>
-              {' '}for the 6-week version.
+              </Link>{' '}
+              for the 6-week version.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <ContextualWhatsAppLink className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-6 py-3 rounded-lg font-semibold transition">
@@ -359,10 +369,7 @@ export default function USABO6MonthPrepPlanPage() {
             </h2>
             <div className="space-y-5">
               {months.map((m) => (
-                <div
-                  key={m.n}
-                  className="bg-slate-50 rounded-xl p-6 border border-slate-200"
-                >
+                <div key={m.n} className="bg-slate-50 rounded-xl p-6 border border-slate-200">
                   <div className="flex flex-col md:flex-row md:items-baseline md:justify-between mb-3">
                     <h3 className="text-xl font-bold text-slate-900">{m.title}</h3>
                     <span className="inline-flex items-center gap-1.5 text-sm font-medium text-teal-700 bg-teal-100 px-3 py-1 rounded-full mt-2 md:mt-0">
@@ -398,8 +405,8 @@ export default function USABO6MonthPrepPlanPage() {
               <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Reference set</h2>
             </div>
             <p className="text-slate-600 mb-8 max-w-3xl">
-              The books and resources that earn their place in a USABO library. Buy in this
-              order — Campbell first; Alberts and Lehninger only after you start hitting Campbell&apos;s
+              The books and resources that earn their place in a USABO library. Buy in this order —
+              Campbell first; Alberts and Lehninger only after you start hitting Campbell&apos;s
               ceiling.
             </p>
             <div className="grid md:grid-cols-2 gap-4">
@@ -515,19 +522,31 @@ export default function USABO6MonthPrepPlanPage() {
           <div className="max-w-5xl mx-auto px-4">
             <h2 className="text-xl font-bold text-slate-900 mb-6 text-center">Related guides</h2>
             <div className="grid md:grid-cols-4 gap-4">
-              <Link href="/ap-biology-vs-usabo" className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition">
+              <Link
+                href="/ap-biology-vs-usabo"
+                className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+              >
                 <h3 className="font-semibold text-teal-700">AP Biology vs USABO</h3>
                 <p className="text-xs text-slate-600 mt-1">Bridge guide for AP-5 students</p>
               </Link>
-              <Link href="/usabo-coaching" className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition">
+              <Link
+                href="/usabo-coaching"
+                className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+              >
                 <h3 className="font-semibold text-teal-700">USABO Coaching</h3>
                 <p className="text-xs text-slate-600 mt-1">Full Open + Semifinal pathway</p>
               </Link>
-              <Link href="/usabo-past-papers" className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition">
+              <Link
+                href="/usabo-past-papers"
+                className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+              >
                 <h3 className="font-semibold text-teal-700">USABO Past Papers</h3>
                 <p className="text-xs text-slate-600 mt-1">2015–2024 archive</p>
               </Link>
-              <Link href="/ibo-preparation" className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition">
+              <Link
+                href="/ibo-preparation"
+                className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+              >
                 <h3 className="font-semibold text-teal-700">IBO Preparation</h3>
                 <p className="text-xs text-slate-600 mt-1">After USABO Finalist</p>
               </Link>

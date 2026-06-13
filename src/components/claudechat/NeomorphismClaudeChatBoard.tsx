@@ -222,9 +222,7 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
         </div>
 
         {/* Quick Topics */}
-        <div
-          className="mt-4 flex flex-wrap gap-2 max-w-6xl mx-auto animate-fadeInUp"
-        >
+        <div className="mt-4 flex flex-wrap gap-2 max-w-6xl mx-auto animate-fadeInUp">
           {quickTopics.map((topic, index) => (
             <button
               key={index}
@@ -242,96 +240,90 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
       <div className="flex-1 overflow-hidden p-4">
         <div className="max-w-4xl mx-auto h-full flex flex-col">
           <div className="flex-1 overflow-y-auto space-y-4 pb-4">
-{messages.map((message) => (
+            {messages.map((message) => (
+              <div
+                key={message.id}
+                className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+              >
                 <div
-                  key={message.id}
-                  className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+                  className={`max-w-xs lg:max-w-md xl:max-w-lg ${
+                    message.type === 'user' ? 'order-2' : 'order-1'
+                  }`}
                 >
                   <div
-                    className={`max-w-xs lg:max-w-md xl:max-w-lg ${
-                      message.type === 'user' ? 'order-2' : 'order-1'
-                    }`}
-                  >
-                    <div
-                      className={`p-4 rounded-2xl shadow-neomorph ${
-                        message.type === 'user'
-                          ? 'bg-blue-500 text-white ml-auto'
-                          : 'bg-gray-100 text-gray-800'
-                      }`}
-                    >
-                      <p className="text-sm leading-relaxed">{message.content}</p>
-
-                      {message.hasVoice && message.type === 'ai' && (
-                        <button
-                          className="mt-3 flex items-center space-x-2 text-xs bg-white/20 hover:bg-white/30 px-3 py-1 rounded-lg transition-colors animate-fadeInUp"
-                          onClick={() => handleVoiceToggle(message)}
-                        >
-                          {isSpeaking ? (
-                            <VolumeX className="w-3 h-3" />
-                          ) : (
-                            <Volume2 className="w-3 h-3" />
-                          )}
-                          <span>{isSpeaking ? 'Stop' : 'Listen'}</span>
-                        </button>
-                      )}
-                    </div>
-
-                    <p
-                      className={`text-xs text-gray-500 mt-1 ${
-                        message.type === 'user' ? 'text-right' : 'text-left'
-                      }`}
-                    >
-                      {message.timestamp.toLocaleTimeString('en-IN', {
-                        hour: '2-digit',
-                        minute: '2-digit',
-                      })}
-                    </p>
-                  </div>
-
-                  {/* Avatar */}
-                  <div
-                    className={`w-8 h-8 rounded-full shadow-neomorph flex items-center justify-center text-xs font-bold ${
+                    className={`p-4 rounded-2xl shadow-neomorph ${
                       message.type === 'user'
-                        ? 'order-1 mr-3 bg-gradient-to-br from-green-400 to-green-700 text-white'
-                        : 'order-2 ml-3 bg-blue-500 text-white'
+                        ? 'bg-blue-500 text-white ml-auto'
+                        : 'bg-gray-100 text-gray-800'
                     }`}
                   >
-                    {message.type === 'user' ? '👨‍🎓' : '👨‍🏫'}
+                    <p className="text-sm leading-relaxed">{message.content}</p>
+
+                    {message.hasVoice && message.type === 'ai' && (
+                      <button
+                        className="mt-3 flex items-center space-x-2 text-xs bg-white/20 hover:bg-white/30 px-3 py-1 rounded-lg transition-colors animate-fadeInUp"
+                        onClick={() => handleVoiceToggle(message)}
+                      >
+                        {isSpeaking ? (
+                          <VolumeX className="w-3 h-3" />
+                        ) : (
+                          <Volume2 className="w-3 h-3" />
+                        )}
+                        <span>{isSpeaking ? 'Stop' : 'Listen'}</span>
+                      </button>
+                    )}
                   </div>
+
+                  <p
+                    className={`text-xs text-gray-500 mt-1 ${
+                      message.type === 'user' ? 'text-right' : 'text-left'
+                    }`}
+                  >
+                    {message.timestamp.toLocaleTimeString('en-IN', {
+                      hour: '2-digit',
+                      minute: '2-digit',
+                    })}
+                  </p>
                 </div>
-              ))}
-{/* Thinking Indicator */}
-{isThinking && (
+
+                {/* Avatar */}
                 <div
-                  className="flex justify-start animate-fadeInUp"
+                  className={`w-8 h-8 rounded-full shadow-neomorph flex items-center justify-center text-xs font-bold ${
+                    message.type === 'user'
+                      ? 'order-1 mr-3 bg-gradient-to-br from-green-400 to-green-700 text-white'
+                      : 'order-2 ml-3 bg-blue-500 text-white'
+                  }`}
                 >
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-blue-500 shadow-neomorph flex items-center justify-center">
-                      <span className="text-xs">👨‍🏫</span>
+                  {message.type === 'user' ? '👨‍🎓' : '👨‍🏫'}
+                </div>
+              </div>
+            ))}
+            {/* Thinking Indicator */}
+            {isThinking && (
+              <div className="flex justify-start animate-fadeInUp">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-blue-500 shadow-neomorph flex items-center justify-center">
+                    <span className="text-xs">👨‍🏫</span>
+                  </div>
+                  <div className="bg-gray-100 p-4 rounded-2xl shadow-neomorph flex items-center space-x-2 animate-fadeInUp">
+                    <div className="flex space-x-1">
+                      {[0, 1, 2].map((i) => (
+                        <div
+                          key={i}
+                          className="w-2 h-2 bg-blue-400 rounded-full animate-fadeInUp"
+                        />
+                      ))}
                     </div>
-                    <div
-                      className="bg-gray-100 p-4 rounded-2xl shadow-neomorph flex items-center space-x-2 animate-fadeInUp"
-                    >
-                      <div className="flex space-x-1">
-                        {[0, 1, 2].map((i) => (
-                          <div
-                            key={i}
-                            className="w-2 h-2 bg-blue-400 rounded-full animate-fadeInUp"
-                          />
-                        ))}
-                      </div>
-                      <span className="text-sm text-gray-600">Shekhar Sir is thinking...</span>
-                    </div>
+                    <span className="text-sm text-gray-600">Shekhar Sir is thinking...</span>
                   </div>
                 </div>
-              )}
-<div ref={messagesEndRef} />
+              </div>
+            )}
+            <div ref={messagesEndRef} />
           </div>
 
           {/* Input Area */}
-          <div
-            className="bg-gray-100 rounded-2xl p-4 shadow-neomorph animate-fadeInUp"
-          >
+          <div className="bg-gray-100 rounded-2xl p-4 shadow-neomorph animate-fadeInUp">
             <div className="flex items-end space-x-3">
               {/* Attachments */}
               <div className="flex space-x-2">
@@ -386,19 +378,15 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
             </div>
 
             {/* Voice Recording Indicator */}
-{isRecording && (
-                <div
-                  className="mt-3 flex items-center justify-center space-x-2 text-red-500 animate-fadeInUp"
-                >
-                  <div
-                    className="w-2 h-2 bg-red-500 rounded-full animate-fadeInUp"
-                  />
-                  <span className="text-sm font-medium">
-                    Recording... Speak in Hindi, English, or Hinglish
-                  </span>
-                </div>
-              )}
-</div>
+            {isRecording && (
+              <div className="mt-3 flex items-center justify-center space-x-2 text-red-500 animate-fadeInUp">
+                <div className="w-2 h-2 bg-red-500 rounded-full animate-fadeInUp" />
+                <span className="text-sm font-medium">
+                  Recording... Speak in Hindi, English, or Hinglish
+                </span>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 

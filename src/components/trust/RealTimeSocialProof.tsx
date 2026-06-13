@@ -152,82 +152,74 @@ export function RealTimeSocialProof() {
   const EventIcon = getEventIcon(currentEvent.type)
 
   return (
-<div
-        className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:w-96 z-40 animate-fadeInUp"
-      >
-        <div className="bg-white border border-gray-200 rounded-xl shadow-lg p-4 backdrop-blur-sm bg-opacity-95">
-          <div className="flex items-start space-x-3">
-            {/* Icon */}
-            <div className="flex-shrink-0">
-              <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                <EventIcon className="w-5 h-5 text-green-600" />
-              </div>
+    <div className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:w-96 z-40 animate-fadeInUp">
+      <div className="bg-white border border-gray-200 rounded-xl shadow-lg p-4 backdrop-blur-sm bg-opacity-95">
+        <div className="flex items-start space-x-3">
+          {/* Icon */}
+          <div className="flex-shrink-0">
+            <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+              <EventIcon className="w-5 h-5 text-green-600" />
             </div>
-
-            {/* Content */}
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center space-x-2 mb-1">
-                <p className="text-sm font-medium text-gray-900 truncate">
-                  {getEventMessage(currentEvent)}
-                </p>
-                {currentEvent.verified && (
-                  <div className="flex-shrink-0">
-                    <div className="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-2.5 h-2.5 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              <div className="flex items-center space-x-2 text-xs text-gray-500">
-                <MapPin className="w-3 h-3" />
-                <span>{currentEvent.location}</span>
-                <span>•</span>
-                <Clock className="w-3 h-3" />
-                <span>
-                  {Math.floor((Date.now() - currentEvent.timestamp.getTime()) / (1000 * 60))}{' '}
-                  {language === 'hi' ? 'मिनट पहले' : 'min ago'}
-                </span>
-              </div>
-            </div>
-
-            {/* Close button */}
-            <button
-              onClick={() => setIsVisible(false)}
-              className="flex-shrink-0 text-gray-400 hover:text-gray-600 transition-colors"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
           </div>
 
-          {/* Progress bar */}
-          <div className="mt-3">
-            <div className="h-1 bg-gray-100 rounded-full overflow-hidden animate-fadeInUp">
-              <div
-                className="h-full bg-green-600 rounded-full animate-fadeInUp"
-              />
+          {/* Content */}
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center space-x-2 mb-1">
+              <p className="text-sm font-medium text-gray-900 truncate">
+                {getEventMessage(currentEvent)}
+              </p>
+              {currentEvent.verified && (
+                <div className="flex-shrink-0">
+                  <div className="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
+                    <svg className="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              )}
             </div>
+
+            <div className="flex items-center space-x-2 text-xs text-gray-500">
+              <MapPin className="w-3 h-3" />
+              <span>{currentEvent.location}</span>
+              <span>•</span>
+              <Clock className="w-3 h-3" />
+              <span>
+                {Math.floor((Date.now() - currentEvent.timestamp.getTime()) / (1000 * 60))}{' '}
+                {language === 'hi' ? 'मिनट पहले' : 'min ago'}
+              </span>
+            </div>
+          </div>
+
+          {/* Close button */}
+          <button
+            onClick={() => setIsVisible(false)}
+            className="flex-shrink-0 text-gray-400 hover:text-gray-600 transition-colors"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Progress bar */}
+        <div className="mt-3">
+          <div className="h-1 bg-gray-100 rounded-full overflow-hidden animate-fadeInUp">
+            <div className="h-full bg-green-600 rounded-full animate-fadeInUp" />
           </div>
         </div>
       </div>
-)
+    </div>
+  )
 }
 
 // Live stats counter component
@@ -288,15 +280,9 @@ export function LiveStatsCounter() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {statsData.map((stat, index) => (
-          <div
-            key={stat.label}
-            className={`${stat.bgColor} rounded-lg p-4 text-center`}
-          >
+          <div key={stat.label} className={`${stat.bgColor} rounded-lg p-4 text-center`}>
             <stat.icon className={`w-6 h-6 ${stat.color} mx-auto mb-2`} />
-            <div
-              key={stat.value}
-              className={`text-2xl font-bold ${stat.color} mb-1`}
-            >
+            <div key={stat.value} className={`text-2xl font-bold ${stat.color} mb-1`}>
               {stat.value.toLocaleString()}
             </div>
             <div className="text-sm text-gray-600">{stat.label}</div>

@@ -467,13 +467,10 @@ export function EnhancedVoiceChat({
   return (
     <div className={`enhanced-voice-chat ${className}`}>
       {/* Header with Shekhar Sir branding */}
-      <div
-        className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white rounded-t-2xl p-6 animate-fadeInUp"
-      >
+      <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white rounded-t-2xl p-6 animate-fadeInUp">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <Brain className="w-8 h-8" />
             </div>
             <div>
@@ -486,9 +483,7 @@ export function EnhancedVoiceChat({
 
           <div className="flex items-center space-x-3">
             {shekharSirVoice && (
-              <div
-                className="bg-white/20 px-3 py-1 rounded-full text-xs font-medium animate-fadeInUp"
-              >
+              <div className="bg-white/20 px-3 py-1 rounded-full text-xs font-medium animate-fadeInUp">
                 <Heart className="w-3 h-3 inline mr-1" />
                 Shekhar Sir's Voice
               </div>
@@ -526,78 +521,72 @@ export function EnhancedVoiceChat({
         />
 
         {/* Biology Terms Detection Panel */}
-{showBiologyHelp && detectedBiologyTerms.length > 0 && (
-            <div
-              className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-4 mb-6 border border-green-200 animate-fadeInUp"
-            >
-              <div className="flex items-center space-x-2 mb-3">
-                <Brain className="text-green-600" size={20} />
-                <h4 className="font-semibold text-green-800">Biology Concepts Detected</h4>
-                <Sparkles className="text-blue-500" size={16} />
-                <span className="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">
-                  NEET Important
-                </span>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {detectedBiologyTerms.map((term, index) => {
-                  const termData = biologyTermDefinitions[term.toLowerCase()]
-                  return termData ? (
-                    <div
-                      key={term}
-                      className="bg-white rounded-lg p-3 border shadow-sm animate-fadeInUp"
-                    >
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="font-medium text-gray-800">{termData.term}</span>
-                        <div className="flex items-center space-x-2">
-                          <span
-                            className={`px-2 py-1 rounded-full text-xs ${
-                              termData.neetImportance === 'high'
-                                ? 'bg-red-100 text-red-700'
-                                : termData.neetImportance === 'medium'
-                                  ? 'bg-yellow-100 text-yellow-700'
-                                  : 'bg-green-100 text-green-700'
-                            }`}
-                          >
-                            {termData.neetImportance} priority
-                          </span>
-                          <span
-                            className={`px-2 py-1 rounded-full text-xs ${
-                              termData.category === 'cellular'
-                                ? 'bg-purple-100 text-purple-700'
-                                : termData.category === 'genetics'
-                                  ? 'bg-blue-100 text-blue-700'
-                                  : termData.category === 'physiology'
-                                    ? 'bg-green-100 text-green-700'
-                                    : termData.category === 'anatomy'
-                                      ? 'bg-red-100 text-red-700'
-                                      : 'bg-gray-100 text-gray-700'
-                            }`}
-                          >
-                            {termData.category}
-                          </span>
-                        </div>
-                      </div>
-                      <p className="text-sm text-gray-600 mb-1">{termData.definition}</p>
-                      <p className="text-xs text-blue-600 font-medium">
-                        {termData.hindiTranslation}
-                      </p>
-                    </div>
-                  ) : null
-                })}
-              </div>
-              <button
-                className="mt-3 text-sm text-gray-500 hover:text-gray-700 flex items-center space-x-1"
-                onClick={() => setShowBiologyHelp(false)}
-              >
-                <span>Hide Biology Help</span>
-                <Zap size={12} />
-              </button>
+        {showBiologyHelp && detectedBiologyTerms.length > 0 && (
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-4 mb-6 border border-green-200 animate-fadeInUp">
+            <div className="flex items-center space-x-2 mb-3">
+              <Brain className="text-green-600" size={20} />
+              <h4 className="font-semibold text-green-800">Biology Concepts Detected</h4>
+              <Sparkles className="text-blue-500" size={16} />
+              <span className="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">
+                NEET Important
+              </span>
             </div>
-          )}
-{/* Language & Settings Panel */}
-        <div
-          className="bg-gray-50 rounded-xl p-4 mb-6 animate-fadeInUp"
-        >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {detectedBiologyTerms.map((term, index) => {
+                const termData = biologyTermDefinitions[term.toLowerCase()]
+                return termData ? (
+                  <div
+                    key={term}
+                    className="bg-white rounded-lg p-3 border shadow-sm animate-fadeInUp"
+                  >
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-medium text-gray-800">{termData.term}</span>
+                      <div className="flex items-center space-x-2">
+                        <span
+                          className={`px-2 py-1 rounded-full text-xs ${
+                            termData.neetImportance === 'high'
+                              ? 'bg-red-100 text-red-700'
+                              : termData.neetImportance === 'medium'
+                                ? 'bg-yellow-100 text-yellow-700'
+                                : 'bg-green-100 text-green-700'
+                          }`}
+                        >
+                          {termData.neetImportance} priority
+                        </span>
+                        <span
+                          className={`px-2 py-1 rounded-full text-xs ${
+                            termData.category === 'cellular'
+                              ? 'bg-purple-100 text-purple-700'
+                              : termData.category === 'genetics'
+                                ? 'bg-blue-100 text-blue-700'
+                                : termData.category === 'physiology'
+                                  ? 'bg-green-100 text-green-700'
+                                  : termData.category === 'anatomy'
+                                    ? 'bg-red-100 text-red-700'
+                                    : 'bg-gray-100 text-gray-700'
+                          }`}
+                        >
+                          {termData.category}
+                        </span>
+                      </div>
+                    </div>
+                    <p className="text-sm text-gray-600 mb-1">{termData.definition}</p>
+                    <p className="text-xs text-blue-600 font-medium">{termData.hindiTranslation}</p>
+                  </div>
+                ) : null
+              })}
+            </div>
+            <button
+              className="mt-3 text-sm text-gray-500 hover:text-gray-700 flex items-center space-x-1"
+              onClick={() => setShowBiologyHelp(false)}
+            >
+              <span>Hide Biology Help</span>
+              <Zap size={12} />
+            </button>
+          </div>
+        )}
+        {/* Language & Settings Panel */}
+        <div className="bg-gray-50 rounded-xl p-4 mb-6 animate-fadeInUp">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <Languages className="text-gray-600" size={20} />
@@ -621,9 +610,7 @@ export function EnhancedVoiceChat({
             </div>
 
             <div className="flex items-center space-x-3 text-sm text-gray-600">
-              <div
-                className="flex items-center space-x-2 animate-fadeInUp"
-              >
+              <div className="flex items-center space-x-2 animate-fadeInUp">
                 <Volume2 size={16} />
                 <span>AI Enhanced</span>
               </div>
@@ -633,30 +620,25 @@ export function EnhancedVoiceChat({
         </div>
 
         {/* Processing Status */}
-{isProcessing && (
-            <div
-              className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6 animate-fadeInUp"
-            >
-              <div className="flex items-center space-x-3">
-                <div
-                 className="animate-fadeInUp">
-                  <Brain className="text-blue-600" size={20} />
-                </div>
-                <div>
-                  <p className="font-medium text-blue-800">Shekhar Sir is thinking...</p>
-                  <p className="text-sm text-blue-600">
-                    Analyzing your Biology question with AI intelligence
-                  </p>
-                </div>
+        {isProcessing && (
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6 animate-fadeInUp">
+            <div className="flex items-center space-x-3">
+              <div className="animate-fadeInUp">
+                <Brain className="text-blue-600" size={20} />
+              </div>
+              <div>
+                <p className="font-medium text-blue-800">Shekhar Sir is thinking...</p>
+                <p className="text-sm text-blue-600">
+                  Analyzing your Biology question with AI intelligence
+                </p>
               </div>
             </div>
-          )}
-</div>
+          </div>
+        )}
+      </div>
 
       {/* Footer Status */}
-      <div
-        className="bg-gray-50 px-6 py-4 rounded-b-2xl border-t animate-fadeInUp"
-      >
+      <div className="bg-gray-50 px-6 py-4 rounded-b-2xl border-t animate-fadeInUp">
         <div className="flex items-center justify-between text-xs text-gray-500">
           <div className="flex items-center space-x-4">
             <span>

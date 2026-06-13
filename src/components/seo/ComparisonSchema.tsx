@@ -29,7 +29,13 @@ export const COMPETITORS: Record<string, CompetitorData> = {
     batchSize: '100-200 students',
     successRate: '~70%',
     pros: ['Brand recognition', 'Large test series', 'Competitive environment'],
-    cons: ['Huge batch sizes', 'High fees', 'Relocation required', 'Mental health concerns', 'No personal attention'],
+    cons: [
+      'Huge batch sizes',
+      'High fees',
+      'Relocation required',
+      'Mental health concerns',
+      'No personal attention',
+    ],
     bestFor: 'Students who thrive in highly competitive, high-pressure environments',
   },
   'allen-career': {
@@ -67,7 +73,12 @@ export const COMPETITORS: Record<string, CompetitorData> = {
     batchSize: '500+ students',
     successRate: '~40%',
     pros: ['Low cost', 'Convenience', 'Self-paced'],
-    cons: ['No personal attention', 'Pre-recorded content', 'No doubt support', 'Low accountability'],
+    cons: [
+      'No personal attention',
+      'Pre-recorded content',
+      'No doubt support',
+      'Low accountability',
+    ],
     bestFor: 'Self-motivated students with strong basics',
   },
   'local-coaching': {
@@ -104,10 +115,7 @@ export const CEREBRUM_DATA: CompetitorData = {
     '60% lower fees than Kota',
     'Personal mentorship',
   ],
-  cons: [
-    'Biology-only (not PCB combined)',
-    'Single faculty-led (ensures quality)',
-  ],
+  cons: ['Biology-only (not PCB combined)', 'Single faculty-led (ensures quality)'],
   bestFor: 'Students wanting specialized Biology coaching with personal attention',
 }
 

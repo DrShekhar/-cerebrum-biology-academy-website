@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'RE-NEET 2026 Coaching in Mumbai | Online Biology Crash Course',
-    description: 'RE-NEET 2026 coaching for Mumbai students (Andheri, Thane, Borivali) after the 12 May NEET cancellation. Online biology-only AIIMS-trained crash — alongside your Mahesh Tutorials / the largest nati...',
+    description:
+      'RE-NEET 2026 coaching for Mumbai students (Andheri, Thane, Borivali) after the 12 May NEET cancellation. Online biology-only AIIMS-trained crash — alongside your Mahesh Tutorials / the largest nati...',
   },
 }
 

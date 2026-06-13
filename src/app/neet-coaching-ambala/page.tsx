@@ -64,7 +64,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-ambala' },
+    alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-ambala' },
     description: 'Real-time online sessions. Same quality as top Chandigarh coaching centers.',
   },
   {
@@ -203,8 +203,7 @@ export default function NEETCoachingAmbala() {
 
           <div className="mx-auto max-w-7xl">
             <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div
-               className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-amber-100 px-4 py-2 text-amber-800">
                   <MapPin className="h-4 w-4" />
                   <span className="text-sm font-medium">
@@ -257,9 +256,7 @@ export default function NEETCoachingAmbala() {
                 </div>
               </div>
 
-              <div
-                className="relative animate-fadeInUp"
-              >
+              <div className="relative animate-fadeInUp">
                 <div className="rounded-2xl bg-white p-8 shadow-xl">
                   <h3 className="mb-6 text-center text-xl font-bold text-gray-900">
                     Ambala Students Success Metrics
@@ -286,9 +283,7 @@ export default function NEETCoachingAmbala() {
         {/* Why Ambala Students Choose Online */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Ambala Students Are Choosing Online NEET Coaching
               </h2>
@@ -332,9 +327,7 @@ export default function NEETCoachingAmbala() {
         {/* Ambala Areas We Serve */}
         <section className="bg-amber-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 NEET Coaching for All Ambala Areas
               </h2>
@@ -377,9 +370,7 @@ export default function NEETCoachingAmbala() {
         {/* Features */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Cerebrum is Best for Ambala Students
               </h2>
@@ -408,9 +399,7 @@ export default function NEETCoachingAmbala() {
         {/* Schools Section */}
         <section className="bg-amber-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Trusted by Students from Top Ambala Schools
               </h2>
@@ -436,9 +425,7 @@ export default function NEETCoachingAmbala() {
         {/* Medical Colleges */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Target Medical Colleges for Ambala Students
               </h2>
@@ -490,9 +477,7 @@ export default function NEETCoachingAmbala() {
         {/* Cost Comparison */}
         <section className="bg-amber-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Cost Comparison: Chandigarh vs Online for Ambala Students
               </h2>
@@ -570,9 +555,7 @@ export default function NEETCoachingAmbala() {
         {/* FAQs */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 FAQs: NEET Coaching in Ambala
               </h2>
@@ -605,8 +588,7 @@ export default function NEETCoachingAmbala() {
         {/* Final CTA */}
         <section className="bg-gradient-to-r from-amber-600 to-orange-600 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
                 Ready to Start Your NEET Journey from Ambala?
               </h2>

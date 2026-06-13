@@ -34,9 +34,7 @@ export function SpacedReviewWidget() {
         if (json.success && json.data) {
           setStats(json.data.stats)
           const uniqueTopics = [
-            ...new Set(
-              json.data.questions.map((q: ReviewQuestion) => q.topic).filter(Boolean)
-            ),
+            ...new Set(json.data.questions.map((q: ReviewQuestion) => q.topic).filter(Boolean)),
           ] as string[]
           setTopics(uniqueTopics.slice(0, 3))
         }
@@ -77,11 +75,7 @@ export function SpacedReviewWidget() {
           </div>
           <h3 className="text-base sm:text-lg font-bold text-gray-900">Spaced Review</h3>
         </div>
-        {stats && (
-          <span className="text-xs text-gray-500">
-            {stats.masteredCount} mastered
-          </span>
-        )}
+        {stats && <span className="text-xs text-gray-500">{stats.masteredCount} mastered</span>}
       </div>
 
       {dueCount === 0 ? (

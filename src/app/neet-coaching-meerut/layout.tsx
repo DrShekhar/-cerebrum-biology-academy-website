@@ -36,7 +36,16 @@ export default function MeerutCoachingLayout({ children }: { children: React.Rea
         parentLocation="UP"
         centerAddress="B-45, Sector 62, Noida, Uttar Pradesh - 201301"
         centerPhone="+91-8826-444-334"
-        nearbyAreas={['Sadar Bazaar', 'Cantt', 'Pallavpuram', 'Shastri Nagar', 'Begumpul', 'Garh Road', 'Modipuram', 'Partapur']}
+        nearbyAreas={[
+          'Sadar Bazaar',
+          'Cantt',
+          'Pallavpuram',
+          'Shastri Nagar',
+          'Begumpul',
+          'Garh Road',
+          'Modipuram',
+          'Partapur',
+        ]}
       />
     </>
   )

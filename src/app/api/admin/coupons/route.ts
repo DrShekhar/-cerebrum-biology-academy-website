@@ -74,10 +74,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
     console.error('Fetch coupons error:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to fetch coupons' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to fetch coupons' }, { status: 500 })
   }
 }
 
@@ -131,9 +128,6 @@ export async function POST(request: NextRequest) {
       )
     }
     console.error('Create coupon error:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to create coupon' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to create coupon' }, { status: 500 })
   }
 }

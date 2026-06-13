@@ -14,21 +14,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Plasma constitutes approximately what percentage of the total blood volume?",
-      "options": [
-        "75%",
-        "65%",
-        "45%",
-        "55%"
-      ],
+      "options": ["75%", "65%", "45%", "55%"],
       "correctAnswer": "D",
       "explanation": "Plasma is the fluid portion of blood and constitutes about 55% of total blood volume. The remaining 45% is formed elements (RBCs, WBCs, and platelets).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood-composition",
-        "plasma"
-      ],
+      "tags": ["blood-composition", "plasma"],
       "neetWeightage": "HIGH"
     },
     {
@@ -39,21 +31,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Which plasma protein is essential for blood clotting?",
-      "options": [
-        "Globulin",
-        "Albumin",
-        "Fibrinogen",
-        "Prothrombin"
-      ],
+      "options": ["Globulin", "Albumin", "Fibrinogen", "Prothrombin"],
       "correctAnswer": "C",
       "explanation": "Fibrinogen is a plasma protein that plays a crucial role in blood clotting. It is converted to fibrin by the enzyme thrombin during the coagulation process.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "plasma-proteins",
-        "coagulation"
-      ],
+      "tags": ["plasma-proteins", "coagulation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -64,21 +48,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "The average lifespan of human RBCs is approximately:",
-      "options": [
-        "200 days",
-        "60 days",
-        "30 days",
-        "120 days"
-      ],
+      "options": ["200 days", "60 days", "30 days", "120 days"],
       "correctAnswer": "D",
       "explanation": "Human red blood cells have an average lifespan of about 120 days. After this period, they are destroyed in the spleen, which is often called the graveyard of RBCs.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "RBC",
-        "formed-elements"
-      ],
+      "tags": ["RBC", "formed-elements"],
       "neetWeightage": "HIGH"
     },
     {
@@ -89,21 +65,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Which type of WBC is most abundant in human blood?",
-      "options": [
-        "Monocytes",
-        "Neutrophils",
-        "Eosinophils",
-        "Basophils"
-      ],
+      "options": ["Monocytes", "Neutrophils", "Eosinophils", "Basophils"],
       "correctAnswer": "B",
       "explanation": "Neutrophils are the most abundant WBCs, constituting 60-65% of total WBCs. They are phagocytic in nature and form the first line of cellular defence against infections.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "WBC",
-        "formed-elements"
-      ],
+      "tags": ["WBC", "formed-elements"],
       "neetWeightage": "HIGH"
     },
     {
@@ -114,22 +82,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "The SA node is located in:",
-      "options": [
-        "Right ventricle",
-        "Left atrium",
-        "Right atrium",
-        "Left ventricle"
-      ],
+      "options": ["Right ventricle", "Left atrium", "Right atrium", "Left ventricle"],
       "correctAnswer": "C",
       "explanation": "The SA (sinoatrial) node is located in the upper right corner of the right atrium near the opening of the superior vena cava. It is called the pacemaker of the heart as it initiates the cardiac impulse.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "heart",
-        "SA-node",
-        "pacemaker"
-      ],
+      "tags": ["heart", "SA-node", "pacemaker"],
       "neetWeightage": "HIGH"
     },
     {
@@ -140,21 +99,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "A person with blood group AB can receive blood from:",
-      "options": [
-        "All blood groups",
-        "Only AB group",
-        "Only A and B groups",
-        "Only O group"
-      ],
+      "options": ["All blood groups", "Only AB group", "Only A and B groups", "Only O group"],
       "correctAnswer": "A",
       "explanation": "Blood group AB individuals are called universal recipients because they have both A and B antigens on their RBCs and no anti-A or anti-B antibodies in their plasma. Hence, they can receive blood from all blood groups (A, B, AB, and O).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood-groups",
-        "ABO-system"
-      ],
+      "tags": ["blood-groups", "ABO-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -176,10 +127,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "heart",
-        "valves"
-      ],
+      "tags": ["heart", "valves"],
       "neetWeightage": "HIGH"
     },
     {
@@ -201,10 +149,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cardiac-output",
-        "heart"
-      ],
+      "tags": ["cardiac-output", "heart"],
       "neetWeightage": "HIGH"
     },
     {
@@ -226,10 +171,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ECG",
-        "QRS-complex"
-      ],
+      "tags": ["ECG", "QRS-complex"],
       "neetWeightage": "HIGH"
     },
     {
@@ -251,10 +193,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Rh-factor",
-        "erythroblastosis-foetalis"
-      ],
+      "tags": ["Rh-factor", "erythroblastosis-foetalis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -276,10 +215,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "heart",
-        "conducting-system"
-      ],
+      "tags": ["heart", "conducting-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -290,21 +226,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Which of the following blood vessels carries oxygenated blood?",
-      "options": [
-        "Pulmonary vein",
-        "Hepatic portal vein",
-        "Pulmonary artery",
-        "Vena cava"
-      ],
+      "options": ["Pulmonary vein", "Hepatic portal vein", "Pulmonary artery", "Vena cava"],
       "correctAnswer": "A",
       "explanation": "Pulmonary veins carry oxygenated blood from the lungs to the left atrium of the heart. They are the only veins in the body that carry oxygenated blood.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood-vessels",
-        "oxygenated-blood"
-      ],
+      "tags": ["blood-vessels", "oxygenated-blood"],
       "neetWeightage": "HIGH"
     },
     {
@@ -315,21 +243,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Thrombocytes are involved in:",
-      "options": [
-        "Blood clotting",
-        "Oxygen transport",
-        "Immunity",
-        "Phagocytosis"
-      ],
+      "options": ["Blood clotting", "Oxygen transport", "Immunity", "Phagocytosis"],
       "correctAnswer": "A",
       "explanation": "Thrombocytes (platelets) are cell fragments that play a crucial role in blood clotting (coagulation). They release thromboplastin (factor III) at the site of injury, which initiates the clotting cascade.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "platelets",
-        "coagulation"
-      ],
+      "tags": ["platelets", "coagulation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -351,10 +271,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood-pressure",
-        "systolic"
-      ],
+      "tags": ["blood-pressure", "systolic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -376,10 +293,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cardiac-cycle",
-        "joint-diastole"
-      ],
+      "tags": ["cardiac-cycle", "joint-diastole"],
       "neetWeightage": "HIGH"
     },
     {
@@ -390,22 +304,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Which WBC is involved in allergic reactions and resistance to parasites?",
-      "options": [
-        "Monocytes",
-        "Basophils",
-        "Neutrophils",
-        "Eosinophils"
-      ],
+      "options": ["Monocytes", "Basophils", "Neutrophils", "Eosinophils"],
       "correctAnswer": "D",
       "explanation": "Eosinophils are associated with allergic reactions and provide resistance against parasitic infections. They constitute 2-3% of total WBCs and their count increases during allergic conditions and parasitic infestations.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "WBC",
-        "eosinophils",
-        "allergy"
-      ],
+      "tags": ["WBC", "eosinophils", "allergy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -416,21 +321,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "The instrument used to measure blood pressure is:",
-      "options": [
-        "Stethoscope",
-        "ECG machine",
-        "Haemocytometer",
-        "Sphygmomanometer"
-      ],
+      "options": ["Stethoscope", "ECG machine", "Haemocytometer", "Sphygmomanometer"],
       "correctAnswer": "D",
       "explanation": "Sphygmomanometer is the instrument used to measure arterial blood pressure. It consists of an inflatable cuff connected to a mercury or aneroid manometer, and is used along with a stethoscope.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "blood-pressure",
-        "instrument"
-      ],
+      "tags": ["blood-pressure", "instrument"],
       "neetWeightage": "HIGH"
     },
     {
@@ -452,10 +349,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "angina"
-      ],
+      "tags": ["disorders", "angina"],
       "neetWeightage": "HIGH"
     },
     {
@@ -466,21 +360,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "If the stroke volume is 70 mL and the heart rate is 75 beats per minute, the cardiac output is:",
-      "options": [
-        "7500 mL/min",
-        "5000 mL/min",
-        "5250 mL/min",
-        "4200 mL/min"
-      ],
+      "options": ["7500 mL/min", "5000 mL/min", "5250 mL/min", "4200 mL/min"],
       "correctAnswer": "C",
       "explanation": "Cardiac output = Stroke volume x Heart rate = 70 mL x 75 beats/min = 5250 mL/min. This is the volume of blood pumped by each ventricle per minute.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cardiac-output",
-        "numerical"
-      ],
+      "tags": ["cardiac-output", "numerical"],
       "neetWeightage": "HIGH"
     },
     {
@@ -502,11 +388,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "CAD",
-        "atherosclerosis"
-      ],
+      "tags": ["disorders", "CAD", "atherosclerosis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -528,10 +410,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "conducting-system",
-        "cardiac-conduction"
-      ],
+      "tags": ["conducting-system", "cardiac-conduction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -553,10 +432,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lymph",
-        "body-fluids"
-      ],
+      "tags": ["lymph", "body-fluids"],
       "neetWeightage": "HIGH"
     },
     {
@@ -578,10 +454,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "RBC",
-        "adaptation"
-      ],
+      "tags": ["RBC", "adaptation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -592,22 +465,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Hypertension is defined as consistently high blood pressure exceeding:",
-      "options": [
-        "140/90 mm Hg",
-        "160/100 mm Hg",
-        "120/80 mm Hg",
-        "100/70 mm Hg"
-      ],
+      "options": ["140/90 mm Hg", "160/100 mm Hg", "120/80 mm Hg", "100/70 mm Hg"],
       "correctAnswer": "A",
       "explanation": "Hypertension is defined as a condition in which blood pressure is consistently higher than 140/90 mm Hg. Normal blood pressure is about 120/80 mm Hg. Hypertension increases the risk of heart disease and stroke.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "hypertension",
-        "blood-pressure"
-      ],
+      "tags": ["disorders", "hypertension", "blood-pressure"],
       "neetWeightage": "HIGH"
     },
     {
@@ -629,11 +493,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "heart",
-        "valves",
-        "bicuspid"
-      ],
+      "tags": ["heart", "valves", "bicuspid"],
       "neetWeightage": "HIGH"
     },
     {
@@ -655,10 +515,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ECG",
-        "P-wave"
-      ],
+      "tags": ["ECG", "P-wave"],
       "neetWeightage": "HIGH"
     },
     {
@@ -669,21 +526,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Which mineral ion is essential for blood coagulation?",
-      "options": [
-        "Iron",
-        "Sodium",
-        "Potassium",
-        "Calcium"
-      ],
+      "options": ["Iron", "Sodium", "Potassium", "Calcium"],
       "correctAnswer": "D",
       "explanation": "Calcium ions (Ca\u00b2\u207a) are essential for blood coagulation. They are required at several steps of the clotting cascade, including the conversion of prothrombin to thrombin and the activation of various clotting factors.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "coagulation",
-        "calcium"
-      ],
+      "tags": ["coagulation", "calcium"],
       "neetWeightage": "HIGH"
     },
     {
@@ -694,21 +543,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "The thickest wall among the four chambers of the heart is found in the:",
-      "options": [
-        "Left ventricle",
-        "Left atrium",
-        "Right atrium",
-        "Right ventricle"
-      ],
+      "options": ["Left ventricle", "Left atrium", "Right atrium", "Right ventricle"],
       "correctAnswer": "A",
       "explanation": "The left ventricle has the thickest wall because it pumps oxygenated blood to the entire body through the systemic circulation. It needs to generate the highest pressure to push blood through the aorta to all body parts.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "heart",
-        "chambers"
-      ],
+      "tags": ["heart", "chambers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -730,10 +571,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ECG",
-        "T-wave"
-      ],
+      "tags": ["ECG", "T-wave"],
       "neetWeightage": "HIGH"
     },
     {
@@ -744,22 +582,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Which of the following is NOT a granulocyte?",
-      "options": [
-        "Basophil",
-        "Lymphocyte",
-        "Eosinophil",
-        "Neutrophil"
-      ],
+      "options": ["Basophil", "Lymphocyte", "Eosinophil", "Neutrophil"],
       "correctAnswer": "B",
       "explanation": "Lymphocytes are agranulocytes, meaning they lack granules in their cytoplasm. Neutrophils, eosinophils, and basophils are granulocytes that possess cytoplasmic granules.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "WBC",
-        "granulocytes",
-        "agranulocytes"
-      ],
+      "tags": ["WBC", "granulocytes", "agranulocytes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -770,21 +599,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "A complete cardiac cycle lasts for approximately:",
-      "options": [
-        "1.0 second",
-        "0.8 seconds",
-        "0.6 seconds",
-        "0.4 seconds"
-      ],
+      "options": ["1.0 second", "0.8 seconds", "0.6 seconds", "0.4 seconds"],
       "correctAnswer": "B",
       "explanation": "A complete cardiac cycle lasts approximately 0.8 seconds at a normal heart rate of 72 beats per minute. This includes atrial systole (0.1 s), ventricular systole (0.3 s), and joint diastole (0.4 s).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cardiac-cycle",
-        "numerical"
-      ],
+      "tags": ["cardiac-cycle", "numerical"],
       "neetWeightage": "HIGH"
     },
     {
@@ -806,10 +627,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "heart-failure"
-      ],
+      "tags": ["disorders", "heart-failure"],
       "neetWeightage": "HIGH"
     },
     {
@@ -831,10 +649,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood-groups",
-        "antibodies"
-      ],
+      "tags": ["blood-groups", "antibodies"],
       "neetWeightage": "HIGH"
     },
     {
@@ -845,21 +660,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "The hepatic portal vein carries blood from the:",
-      "options": [
-        "Heart to liver",
-        "Liver to kidneys",
-        "Liver to heart",
-        "Intestine to liver"
-      ],
+      "options": ["Heart to liver", "Liver to kidneys", "Liver to heart", "Intestine to liver"],
       "correctAnswer": "D",
       "explanation": "The hepatic portal vein carries nutrient-rich deoxygenated blood from the intestine (and other abdominal organs like spleen, stomach, pancreas) to the liver for processing before it enters the systemic circulation.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "portal-system",
-        "hepatic-portal"
-      ],
+      "tags": ["portal-system", "hepatic-portal"],
       "neetWeightage": "HIGH"
     },
     {
@@ -881,11 +688,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "heart",
-        "valves",
-        "semilunar"
-      ],
+      "tags": ["heart", "valves", "semilunar"],
       "neetWeightage": "HIGH"
     },
     {
@@ -896,22 +699,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "The normal stroke volume of the human heart is approximately:",
-      "options": [
-        "50 mL",
-        "100 mL",
-        "70 mL",
-        "150 mL"
-      ],
+      "options": ["50 mL", "100 mL", "70 mL", "150 mL"],
       "correctAnswer": "C",
       "explanation": "The stroke volume (volume of blood pumped by each ventricle per beat) is approximately 70 mL in a healthy adult at rest. Cardiac output = Stroke volume (70 mL) x Heart rate (72/min) \u2248 5 L/min.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cardiac-output",
-        "stroke-volume",
-        "numerical"
-      ],
+      "tags": ["cardiac-output", "stroke-volume", "numerical"],
       "neetWeightage": "HIGH"
     },
     {
@@ -922,22 +716,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "The interatrial septum has a small opening during foetal development called the:",
-      "options": [
-        "Interventricular foramen",
-        "Foramen magnum",
-        "Foramen ovale",
-        "Fossa ovalis"
-      ],
+      "options": ["Interventricular foramen", "Foramen magnum", "Foramen ovale", "Fossa ovalis"],
       "correctAnswer": "C",
       "explanation": "The foramen ovale is an opening in the interatrial septum during foetal life that allows blood to flow directly from the right atrium to the left atrium, bypassing the non-functional lungs. It closes shortly after birth, leaving a depression called fossa ovalis.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "heart",
-        "foetal-circulation",
-        "foramen-ovale"
-      ],
+      "tags": ["heart", "foetal-circulation", "foramen-ovale"],
       "neetWeightage": "HIGH"
     },
     {
@@ -948,21 +733,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Basophils secrete which of the following substances?",
-      "options": [
-        "Haemoglobin",
-        "Heparin and histamine",
-        "Antibodies",
-        "Serotonin only"
-      ],
+      "options": ["Haemoglobin", "Heparin and histamine", "Antibodies", "Serotonin only"],
       "correctAnswer": "B",
       "explanation": "Basophils secrete heparin (an anticoagulant), histamine (a vasodilator involved in inflammatory and allergic responses), and serotonin. They constitute 0.5-1% of total WBCs.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "WBC",
-        "basophils"
-      ],
+      "tags": ["WBC", "basophils"],
       "neetWeightage": "HIGH"
     },
     {
@@ -984,9 +761,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "double-circulation"
-      ],
+      "tags": ["double-circulation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1008,11 +783,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "SA-node",
-        "pacemaker",
-        "assertion-reason"
-      ],
+      "tags": ["SA-node", "pacemaker", "assertion-reason"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1034,11 +805,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood-groups",
-        "universal-donor",
-        "assertion-reason"
-      ],
+      "tags": ["blood-groups", "universal-donor", "assertion-reason"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1060,12 +827,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood-vessels",
-        "veins",
-        "valves",
-        "assertion-reason"
-      ],
+      "tags": ["blood-vessels", "veins", "valves", "assertion-reason"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1087,11 +849,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "heart",
-        "ventricles",
-        "assertion-reason"
-      ],
+      "tags": ["heart", "ventricles", "assertion-reason"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1113,11 +871,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "RBC",
-        "enucleated",
-        "assertion-reason"
-      ],
+      "tags": ["RBC", "enucleated", "assertion-reason"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1139,11 +893,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "coagulation",
-        "fibrinogen",
-        "assertion-reason"
-      ],
+      "tags": ["coagulation", "fibrinogen", "assertion-reason"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1165,12 +915,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lymph",
-        "fat-absorption",
-        "lacteals",
-        "assertion-reason"
-      ],
+      "tags": ["lymph", "fat-absorption", "lacteals", "assertion-reason"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1192,11 +937,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "myogenic-heart",
-        "SA-node",
-        "assertion-reason"
-      ],
+      "tags": ["myogenic-heart", "SA-node", "assertion-reason"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1218,11 +959,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pulmonary-artery",
-        "blood-vessels",
-        "assertion-reason"
-      ],
+      "tags": ["pulmonary-artery", "blood-vessels", "assertion-reason"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1244,11 +981,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ECG",
-        "diagnosis",
-        "assertion-reason"
-      ],
+      "tags": ["ECG", "diagnosis", "assertion-reason"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1270,11 +1003,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "platelets",
-        "megakaryocytes",
-        "assertion-reason"
-      ],
+      "tags": ["platelets", "megakaryocytes", "assertion-reason"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1296,11 +1025,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "serum",
-        "plasma",
-        "assertion-reason"
-      ],
+      "tags": ["serum", "plasma", "assertion-reason"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1322,11 +1047,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cardiac-output",
-        "exercise",
-        "assertion-reason"
-      ],
+      "tags": ["cardiac-output", "exercise", "assertion-reason"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1348,11 +1069,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "AV-node",
-        "conduction-delay",
-        "assertion-reason"
-      ],
+      "tags": ["AV-node", "conduction-delay", "assertion-reason"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1374,11 +1091,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "plasma",
-        "blood-composition",
-        "statement-based"
-      ],
+      "tags": ["plasma", "blood-composition", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1400,11 +1113,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cardiac-cycle",
-        "numerical",
-        "statement-based"
-      ],
+      "tags": ["cardiac-cycle", "numerical", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1426,10 +1135,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "WBC",
-        "statement-based"
-      ],
+      "tags": ["WBC", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1440,22 +1146,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Which of the following statements about the human heart is/are INCORRECT?\n(i) The heart is covered by a double-layered pericardium.\n(ii) The heart has four chambers \u2014 two atria and two ventricles.\n(iii) The right ventricle pumps blood to the systemic circulation.\n(iv) The interatrial and interventricular septa separate the heart into right and left halves.",
-      "options": [
-        "(iii) only",
-        "(i) only",
-        "(ii) and (iv) only",
-        "(i) and (iii) only"
-      ],
+      "options": ["(iii) only", "(i) only", "(ii) and (iv) only", "(i) and (iii) only"],
       "correctAnswer": "A",
       "explanation": "Statement (iii) is incorrect. The right ventricle pumps blood to the pulmonary circulation (lungs), not the systemic circulation. It is the LEFT ventricle that pumps blood to the systemic circulation. Statements (i), (ii), and (iv) are all correct.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "heart",
-        "chambers",
-        "statement-based"
-      ],
+      "tags": ["heart", "chambers", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1477,11 +1174,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "coagulation",
-        "clotting-cascade",
-        "statement-based"
-      ],
+      "tags": ["coagulation", "clotting-cascade", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1503,11 +1196,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lymph",
-        "lymphatic-system",
-        "statement-based"
-      ],
+      "tags": ["lymph", "lymphatic-system", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1529,11 +1218,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ECG",
-        "waves",
-        "statement-based"
-      ],
+      "tags": ["ECG", "waves", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1555,11 +1240,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood-groups",
-        "ABO-system",
-        "statement-based"
-      ],
+      "tags": ["blood-groups", "ABO-system", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1581,13 +1262,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "formed-elements",
-        "RBC",
-        "WBC",
-        "platelets",
-        "statement-based"
-      ],
+      "tags": ["formed-elements", "RBC", "WBC", "platelets", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1609,10 +1284,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood-vessels",
-        "statement-based"
-      ],
+      "tags": ["blood-vessels", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1634,12 +1306,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "atherosclerosis",
-        "heart-failure",
-        "statement-based"
-      ],
+      "tags": ["disorders", "atherosclerosis", "heart-failure", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1661,11 +1328,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cardiac-regulation",
-        "ANS",
-        "statement-based"
-      ],
+      "tags": ["cardiac-regulation", "ANS", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1687,11 +1350,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "Rh-factor",
-        "erythroblastosis-foetalis",
-        "statement-based"
-      ],
+      "tags": ["Rh-factor", "erythroblastosis-foetalis", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1713,10 +1372,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "double-circulation",
-        "statement-based"
-      ],
+      "tags": ["double-circulation", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1738,10 +1394,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "conducting-system",
-        "match-following"
-      ],
+      "tags": ["conducting-system", "match-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1763,11 +1416,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood-groups",
-        "ABO-system",
-        "match-following"
-      ],
+      "tags": ["blood-groups", "ABO-system", "match-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1789,10 +1438,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ECG",
-        "match-following"
-      ],
+      "tags": ["ECG", "match-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1814,11 +1460,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "WBC",
-        "functions",
-        "match-following"
-      ],
+      "tags": ["WBC", "functions", "match-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1840,11 +1482,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "heart",
-        "valves",
-        "match-following"
-      ],
+      "tags": ["heart", "valves", "match-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1866,10 +1504,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "match-following"
-      ],
+      "tags": ["disorders", "match-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1891,10 +1526,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood-composition",
-        "match-following"
-      ],
+      "tags": ["blood-composition", "match-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1916,10 +1548,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood-vessels",
-        "match-following"
-      ],
+      "tags": ["blood-vessels", "match-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1941,10 +1570,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "plasma-proteins",
-        "match-following"
-      ],
+      "tags": ["plasma-proteins", "match-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1966,11 +1592,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cardiac-cycle",
-        "numerical",
-        "match-following"
-      ],
+      "tags": ["cardiac-cycle", "numerical", "match-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1992,10 +1614,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood-terms",
-        "match-following"
-      ],
+      "tags": ["blood-terms", "match-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2017,11 +1636,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "heart",
-        "chambers",
-        "match-following"
-      ],
+      "tags": ["heart", "chambers", "match-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2043,10 +1658,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cardiac-regulation",
-        "match-following"
-      ],
+      "tags": ["cardiac-regulation", "match-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2057,22 +1669,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "How many of the following are granulocytes?\nNeutrophils, Eosinophils, Basophils, Lymphocytes, Monocytes",
-      "options": [
-        "5",
-        "4",
-        "2",
-        "3"
-      ],
+      "options": ["5", "4", "2", "3"],
       "correctAnswer": "D",
       "explanation": "Three of the listed WBCs are granulocytes: Neutrophils, Eosinophils, and Basophils. These have cytoplasmic granules. Lymphocytes and Monocytes are agranulocytes (lack cytoplasmic granules).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "WBC",
-        "granulocytes",
-        "counting-type"
-      ],
+      "tags": ["WBC", "granulocytes", "counting-type"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2083,21 +1686,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "How many of the following structures are part of the conducting system of the human heart?\nSA node, AV node, Bundle of His, Purkinje fibres, Chordae tendineae, Papillary muscles",
-      "options": [
-        "6",
-        "3",
-        "4",
-        "2"
-      ],
+      "options": ["6", "3", "4", "2"],
       "correctAnswer": "C",
       "explanation": "Four structures are part of the conducting system: SA node, AV node, Bundle of His, and Purkinje fibres. Chordae tendineae and papillary muscles are structural components of the heart valves and are NOT part of the conducting system.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "conducting-system",
-        "counting-type"
-      ],
+      "tags": ["conducting-system", "counting-type"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2108,22 +1703,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "How many of the following carry oxygenated blood?\nPulmonary artery, Pulmonary vein, Aorta, Superior vena cava, Inferior vena cava, Coronary artery",
-      "options": [
-        "3",
-        "4",
-        "5",
-        "2"
-      ],
+      "options": ["3", "4", "5", "2"],
       "correctAnswer": "A",
       "explanation": "Three vessels carry oxygenated blood: Pulmonary vein (from lungs to left atrium), Aorta (from left ventricle to body), and Coronary artery (supplies heart muscle). Pulmonary artery, superior vena cava, and inferior vena cava carry deoxygenated blood.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood-vessels",
-        "oxygenated-blood",
-        "counting-type"
-      ],
+      "tags": ["blood-vessels", "oxygenated-blood", "counting-type"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2134,22 +1720,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "How many of the following statements about blood are correct?\n(a) Normal RBC count is 5-5.5 million per cubic mm in males.\n(b) Normal WBC count is 6000-8000 per cubic mm.\n(c) Normal platelet count is 1.5-3.5 lakh per cubic mm.\n(d) Haemoglobin content is 12-16 g per 100 mL of blood.\n(e) Blood constitutes about 30% of body weight.",
-      "options": [
-        "3",
-        "5",
-        "2",
-        "4"
-      ],
+      "options": ["3", "5", "2", "4"],
       "correctAnswer": "D",
       "explanation": "Four statements are correct: (a), (b), (c), and (d). Statement (e) is incorrect \u2014 blood constitutes about 6-8% of body weight, not 30%. Normal values: RBC = 5-5.5 million/mm\u00b3 in males, WBC = 6000-8000/mm\u00b3, platelets = 1.5-3.5 lakh/mm\u00b3, Hb = 12-16 g/dL.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood-composition",
-        "normal-values",
-        "counting-type"
-      ],
+      "tags": ["blood-composition", "normal-values", "counting-type"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2160,22 +1737,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "How many valves are present in the human heart?",
-      "options": [
-        "4",
-        "5",
-        "2",
-        "3"
-      ],
+      "options": ["4", "5", "2", "3"],
       "correctAnswer": "A",
       "explanation": "The human heart has 4 valves: (1) Tricuspid valve (between right atrium and right ventricle), (2) Bicuspid/mitral valve (between left atrium and left ventricle), (3) Pulmonary semilunar valve (at the base of pulmonary artery), and (4) Aortic semilunar valve (at the base of aorta).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "heart",
-        "valves",
-        "counting-type"
-      ],
+      "tags": ["heart", "valves", "counting-type"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2186,22 +1754,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "How many of the following are correct regarding cardiac output calculation?\n(a) Stroke volume of a healthy adult is approximately 70 mL.\n(b) Normal resting heart rate is about 72 beats per minute.\n(c) Cardiac output = Stroke volume \u00d7 Heart rate.\n(d) Normal cardiac output is approximately 10 litres per minute.\n(e) Cardiac output can increase during exercise.",
-      "options": [
-        "5",
-        "3",
-        "2",
-        "4"
-      ],
+      "options": ["5", "3", "2", "4"],
       "correctAnswer": "D",
       "explanation": "Four statements are correct: (a), (b), (c), and (e). Statement (d) is incorrect \u2014 normal cardiac output is approximately 5 litres per minute (70 mL \u00d7 72 = 5040 mL \u2248 5 L/min), not 10 litres. During exercise, cardiac output can increase to 20-25 L/min.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cardiac-output",
-        "numerical",
-        "counting-type"
-      ],
+      "tags": ["cardiac-output", "numerical", "counting-type"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2212,22 +1771,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "How many of the following are functions of lymph?\n(a) Transport of digested fats from the intestine\n(b) Drainage of excess tissue fluid back to blood\n(c) Transport of oxygen to tissues\n(d) Defence against infection through lymphocytes\n(e) Transport of hormones",
-      "options": [
-        "5",
-        "4",
-        "2",
-        "3"
-      ],
+      "options": ["5", "4", "2", "3"],
       "correctAnswer": "D",
       "explanation": "Three functions are correct: (a) lymph transports digested fats via lacteals, (b) it drains excess tissue fluid back to blood, and (d) it contains lymphocytes for immune defence. Statement (c) is incorrect \u2014 lymph has no RBCs/haemoglobin so it does not transport oxygen. Statement (e) is also not a primary function of lymph.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lymph",
-        "functions",
-        "counting-type"
-      ],
+      "tags": ["lymph", "functions", "counting-type"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2238,21 +1788,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "How many of the following are cardiac disorders?\nHypertension, Angina pectoris, Atherosclerosis, Anaemia, Heart failure, Coronary artery disease, Diabetes",
-      "options": [
-        "4",
-        "5",
-        "3",
-        "6"
-      ],
+      "options": ["4", "5", "3", "6"],
       "correctAnswer": "B",
       "explanation": "Five are cardiac/cardiovascular disorders: Hypertension, Angina pectoris, Atherosclerosis, Heart failure, and Coronary artery disease. Anaemia is a blood disorder (not specifically cardiac) and Diabetes is a metabolic disorder.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disorders",
-        "counting-type"
-      ],
+      "tags": ["disorders", "counting-type"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2274,11 +1816,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "coagulation",
-        "sequence",
-        "sequence-order"
-      ],
+      "tags": ["coagulation", "sequence", "sequence-order"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2300,10 +1838,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "systemic-circulation",
-        "sequence-order"
-      ],
+      "tags": ["systemic-circulation", "sequence-order"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2325,10 +1860,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "conducting-system",
-        "sequence-order"
-      ],
+      "tags": ["conducting-system", "sequence-order"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2350,10 +1882,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cardiac-cycle",
-        "sequence-order"
-      ],
+      "tags": ["cardiac-cycle", "sequence-order"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2375,10 +1904,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pulmonary-circulation",
-        "sequence-order"
-      ],
+      "tags": ["pulmonary-circulation", "sequence-order"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2400,10 +1926,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ECG",
-        "sequence-order"
-      ],
+      "tags": ["ECG", "sequence-order"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2425,11 +1948,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood-pressure",
-        "blood-vessels",
-        "sequence-order"
-      ],
+      "tags": ["blood-pressure", "blood-vessels", "sequence-order"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2440,22 +1959,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "The pacemaker of the heart is:",
-      "options": [
-        "AV node",
-        "SA node",
-        "Bundle of His",
-        "Purkinje fibres"
-      ],
+      "options": ["AV node", "SA node", "Bundle of His", "Purkinje fibres"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the SA node (sino-atrial node) is the pacemaker of the heart because it has the highest rate of generating action potentials (about 70-75 per minute). It initiates and maintains the rhythmic contractile activity of the heart.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "heart",
-        "sa-node",
-        "pacemaker"
-      ],
+      "tags": ["heart", "sa-node", "pacemaker"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2466,22 +1976,13 @@
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Which blood cells are responsible for clotting?",
-      "options": [
-        "Erythrocytes",
-        "Leucocytes",
-        "Thrombocytes (Platelets)",
-        "Monocytes"
-      ],
+      "options": ["Erythrocytes", "Leucocytes", "Thrombocytes (Platelets)", "Monocytes"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, thrombocytes (platelets) are cell fragments that play a key role in blood clotting. When a blood vessel is injured, platelets aggregate at the site and release thromboplastin, initiating the clotting cascade.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood",
-        "platelets",
-        "clotting"
-      ],
+      "tags": ["blood", "platelets", "clotting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2503,11 +2004,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "heart-sounds",
-        "lub-dub",
-        "valves"
-      ],
+      "tags": ["heart-sounds", "lub-dub", "valves"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2529,11 +2026,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ecg",
-        "p-wave",
-        "atrial-depolarisation"
-      ],
+      "tags": ["ecg", "p-wave", "atrial-depolarisation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2555,11 +2048,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "blood-groups",
-        "universal-recipient",
-        "ab-group"
-      ],
+      "tags": ["blood-groups", "universal-recipient", "ab-group"],
       "neetWeightage": "HIGH"
     }
   ]

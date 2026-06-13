@@ -16,7 +16,8 @@ const leadMagnets: LeadMagnet[] = [
   {
     id: '1',
     title: 'NCERT Biology Quick Revision',
-    description: 'Comprehensive quick revision guide covering all NCERT biology chapters with key concepts and definitions.',
+    description:
+      'Comprehensive quick revision guide covering all NCERT biology chapters with key concepts and definitions.',
     pages: 38,
     fileName: 'ncert-biology-quick-revision',
     category: 'biology',
@@ -24,7 +25,8 @@ const leadMagnets: LeadMagnet[] = [
   {
     id: '2',
     title: 'NEET Biology Study Planner 2026',
-    description: 'Structured 12-month study plan for NEET 2026 with chapter-wise timeline and daily targets.',
+    description:
+      'Structured 12-month study plan for NEET 2026 with chapter-wise timeline and daily targets.',
     pages: 14,
     fileName: 'neet-study-planner-2026',
     category: 'study-plan',
@@ -32,7 +34,8 @@ const leadMagnets: LeadMagnet[] = [
   {
     id: '3',
     title: 'Human Physiology Reference',
-    description: 'Detailed reference guide for human physiology with diagrams and key points for NEET.',
+    description:
+      'Detailed reference guide for human physiology with diagrams and key points for NEET.',
     pages: 11,
     fileName: 'human-physiology-reference',
     category: 'reference',
@@ -40,7 +43,8 @@ const leadMagnets: LeadMagnet[] = [
   {
     id: '4',
     title: 'Genetics & Heredity Guide',
-    description: 'Complete guide on genetics and heredity with solved examples and important problem types.',
+    description:
+      'Complete guide on genetics and heredity with solved examples and important problem types.',
     pages: 16,
     fileName: 'genetics-heredity-guide',
     category: 'biology',
@@ -72,7 +76,8 @@ const leadMagnets: LeadMagnet[] = [
   {
     id: '8',
     title: 'Plant Biology Complete Guide',
-    description: 'In-depth guide on plant biology, morphology, anatomy, and physiology with diagrams.',
+    description:
+      'In-depth guide on plant biology, morphology, anatomy, and physiology with diagrams.',
     pages: 24,
     fileName: 'plant-biology-guide',
     category: 'biology',
@@ -80,7 +85,8 @@ const leadMagnets: LeadMagnet[] = [
   {
     id: '9',
     title: 'Ecology and Biodiversity',
-    description: 'Comprehensive coverage of ecology, ecosystems, and biodiversity with case studies.',
+    description:
+      'Comprehensive coverage of ecology, ecosystems, and biodiversity with case studies.',
     pages: 20,
     fileName: 'ecology-biodiversity-guide',
     category: 'biology',
@@ -88,7 +94,8 @@ const leadMagnets: LeadMagnet[] = [
   {
     id: '10',
     title: 'NEET Biology Mock Test Paper',
-    description: 'Full-length mock test with 180 questions in NEET pattern with answer key and solutions.',
+    description:
+      'Full-length mock test with 180 questions in NEET pattern with answer key and solutions.',
     pages: 28,
     fileName: 'neet-biology-mock-test',
     category: 'mock-test',
@@ -158,9 +165,8 @@ export default function PageContent() {
               Download Free NEET Biology Resources
             </h2>
             <p className="text-lg text-gray-600">
-              Get access to 10 premium PDFs covering NEET biology preparation, study plans, and
-              mock tests. All resources are created by expert educators at Cerebrum Biology
-              Academy.
+              Get access to 10 premium PDFs covering NEET biology preparation, study plans, and mock
+              tests. All resources are created by expert educators at Cerebrum Biology Academy.
             </p>
           </div>
 
@@ -177,14 +183,14 @@ export default function PageContent() {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-start justify-between gap-2 mb-2">
-                      <h3 className="font-bold text-gray-900 text-lg flex-1">
-                        {resource.title}
-                      </h3>
+                      <h3 className="font-bold text-gray-900 text-lg flex-1">{resource.title}</h3>
                     </div>
                     <p className="text-gray-700 text-sm mb-4">{resource.description}</p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <span className={`text-xs font-semibold px-3 py-1 rounded-full ${getCategoryBadgeColor(resource.category)}`}>
+                        <span
+                          className={`text-xs font-semibold px-3 py-1 rounded-full ${getCategoryBadgeColor(resource.category)}`}
+                        >
                           {getCategoryLabel(resource.category)}
                         </span>
                         <span className="text-sm text-gray-600 font-medium">
@@ -211,8 +217,8 @@ export default function PageContent() {
               Need More Resources or Have Questions?
             </h3>
             <p className="text-gray-700 mb-6">
-              Connect with our NEET biology experts on WhatsApp for personalized guidance and
-              custom study materials.
+              Connect with our NEET biology experts on WhatsApp for personalized guidance and custom
+              study materials.
             </p>
             <a
               href="https://wa.me/918826444334"
@@ -236,8 +242,8 @@ export default function PageContent() {
                 and syllabus
               </li>
               <li>
-                <strong>Easy to Use:</strong> Simple, organized layouts perfect for quick
-                revision and study
+                <strong>Easy to Use:</strong> Simple, organized layouts perfect for quick revision
+                and study
               </li>
               <li>
                 <strong>100% Free:</strong> No hidden charges, no subscription required

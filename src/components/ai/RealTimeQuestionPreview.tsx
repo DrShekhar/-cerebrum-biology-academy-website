@@ -264,277 +264,268 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
         </div>
 
         {/* Configuration Panel */}
-{showConfig && (
-            <div
-              className="overflow-hidden border-t pt-4 animate-fadeInUp"
-            >
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-700">View Mode</label>
-                  <select
-                    value={config.viewMode}
-                    onChange={(e) =>
-                      setConfig((prev) => ({ ...prev, viewMode: e.target.value as any }))
-                    }
-                    className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="student">Student View</option>
-                    <option value="teacher">Teacher View</option>
-                    <option value="review">Review Mode</option>
-                  </select>
-                </div>
+        {showConfig && (
+          <div className="overflow-hidden border-t pt-4 animate-fadeInUp">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-gray-700">View Mode</label>
+                <select
+                  value={config.viewMode}
+                  onChange={(e) =>
+                    setConfig((prev) => ({ ...prev, viewMode: e.target.value as any }))
+                  }
+                  className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                >
+                  <option value="student">Student View</option>
+                  <option value="teacher">Teacher View</option>
+                  <option value="review">Review Mode</option>
+                </select>
+              </div>
 
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-700">Layout</label>
-                  <select
-                    value={config.layout}
-                    onChange={(e) =>
-                      setConfig((prev) => ({ ...prev, layout: e.target.value as any }))
-                    }
-                    className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="compact">Compact</option>
-                    <option value="detailed">Detailed</option>
-                    <option value="mobile">Mobile</option>
-                  </select>
-                </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-gray-700">Layout</label>
+                <select
+                  value={config.layout}
+                  onChange={(e) =>
+                    setConfig((prev) => ({ ...prev, layout: e.target.value as any }))
+                  }
+                  className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                >
+                  <option value="compact">Compact</option>
+                  <option value="detailed">Detailed</option>
+                  <option value="mobile">Mobile</option>
+                </select>
+              </div>
 
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-700">Auto Advance</label>
-                  <div className="flex items-center gap-2">
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-gray-700">Auto Advance</label>
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={config.autoAdvance}
+                    onChange={(e) =>
+                      setConfig((prev) => ({ ...prev, autoAdvance: e.target.checked }))
+                    }
+                    className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                  />
+                  <span className="text-sm text-gray-600">Every {config.previewSpeed / 1000}s</span>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-gray-700">Show Elements</label>
+                <div className="space-y-1">
+                  <label className="flex items-center gap-2 text-sm">
                     <input
                       type="checkbox"
-                      checked={config.autoAdvance}
+                      checked={config.showAnswers}
                       onChange={(e) =>
-                        setConfig((prev) => ({ ...prev, autoAdvance: e.target.checked }))
+                        setConfig((prev) => ({ ...prev, showAnswers: e.target.checked }))
                       }
                       className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                     />
-                    <span className="text-sm text-gray-600">
-                      Every {config.previewSpeed / 1000}s
-                    </span>
-                  </div>
+                    Answers
+                  </label>
+                  <label className="flex items-center gap-2 text-sm">
+                    <input
+                      type="checkbox"
+                      checked={config.showExplanations}
+                      onChange={(e) =>
+                        setConfig((prev) => ({ ...prev, showExplanations: e.target.checked }))
+                      }
+                      className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    />
+                    Explanations
+                  </label>
+                  <label className="flex items-center gap-2 text-sm">
+                    <input
+                      type="checkbox"
+                      checked={config.showHints}
+                      onChange={(e) =>
+                        setConfig((prev) => ({ ...prev, showHints: e.target.checked }))
+                      }
+                      className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    />
+                    Hints
+                  </label>
                 </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
 
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-700">Show Elements</label>
-                  <div className="space-y-1">
-                    <label className="flex items-center gap-2 text-sm">
-                      <input
-                        type="checkbox"
-                        checked={config.showAnswers}
-                        onChange={(e) =>
-                          setConfig((prev) => ({ ...prev, showAnswers: e.target.checked }))
-                        }
-                        className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                      />
-                      Answers
-                    </label>
-                    <label className="flex items-center gap-2 text-sm">
-                      <input
-                        type="checkbox"
-                        checked={config.showExplanations}
-                        onChange={(e) =>
-                          setConfig((prev) => ({ ...prev, showExplanations: e.target.checked }))
-                        }
-                        className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                      />
-                      Explanations
-                    </label>
-                    <label className="flex items-center gap-2 text-sm">
-                      <input
-                        type="checkbox"
-                        checked={config.showHints}
-                        onChange={(e) =>
-                          setConfig((prev) => ({ ...prev, showHints: e.target.checked }))
-                        }
-                        className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                      />
-                      Hints
-                    </label>
-                  </div>
+      {/* Question Display */}
+      <div key={currentQuestion.id} className="bg-white rounded-xl p-6 border animate-fadeInUp">
+        {/* Question Header */}
+        <div className="flex justify-between items-start mb-6">
+          <div className="flex items-center gap-3">
+            <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+              Q{currentIndex + 1}
+            </span>
+            <span
+              className={`px-2 py-1 rounded border text-xs font-medium ${getDifficultyColor(currentQuestion.difficulty)}`}
+            >
+              {currentQuestion.difficulty.toUpperCase()}
+            </span>
+            <span className="text-sm text-gray-500">
+              {currentQuestion.topic} • {currentQuestion.marks} marks
+            </span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => onQuestionEdit(currentQuestion.id)}
+              className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+            >
+              <Edit3 className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+
+        {/* Question Content */}
+        <div className="space-y-6">
+          <div className="prose max-w-none">
+            <div className="text-lg text-gray-800 leading-relaxed">{currentQuestion.question}</div>
+          </div>
+
+          {/* Options for MCQ */}
+          {currentQuestion.type === 'mcq' && currentQuestion.options && (
+            <div className="space-y-3">
+              {currentQuestion.options.map((option, index) => (
+                <label
+                  key={index}
+                  className={`flex items-center gap-3 p-4 border rounded-lg cursor-pointer transition-colors ${
+                    config.showAnswers && option === currentQuestion.correctAnswer
+                      ? 'bg-green-50 border-green-300'
+                      : 'hover:bg-gray-50'
+                  }`}
+                >
+                  <input
+                    type="radio"
+                    name={`question_${currentQuestion.id}`}
+                    value={option}
+                    className="text-blue-600 focus:ring-blue-500"
+                    disabled={config.viewMode !== 'student'}
+                  />
+                  <span className="text-gray-800">{option}</span>
+                  {config.showAnswers && option === currentQuestion.correctAnswer && (
+                    <span className="ml-auto text-green-600 text-sm font-medium">✓ Correct</span>
+                  )}
+                </label>
+              ))}
+            </div>
+          )}
+
+          {/* Answer Input for Numerical */}
+          {currentQuestion.type === 'numerical' && config.viewMode === 'student' && (
+            <div className="space-y-3">
+              <input
+                type="number"
+                placeholder="Enter your answer"
+                className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+          )}
+
+          {/* Teacher/Review Mode Information */}
+          {(config.viewMode === 'teacher' || config.viewMode === 'review') && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-gray-50 rounded-lg">
+              <div>
+                <h5 className="font-medium text-gray-700 mb-2">Question Details</h5>
+                <div className="text-sm text-gray-600 space-y-1">
+                  <div>Type: {currentQuestion.type.toUpperCase()}</div>
+                  <div>Chapter: {currentQuestion.chapter}</div>
+                  <div>Subtopic: {currentQuestion.subtopic}</div>
+                  <div>Bloom's Level: {currentQuestion.bloomsLevel}</div>
+                </div>
+              </div>
+              <div>
+                <h5 className="font-medium text-gray-700 mb-2">Assessment Info</h5>
+                <div className="text-sm text-gray-600 space-y-1">
+                  <div>Estimated Time: {Math.round(currentQuestion.estimatedTime / 60)} min</div>
+                  <div>Difficulty: {currentQuestion.difficulty}</div>
+                  <div>Tags: {currentQuestion.tags.join(', ')}</div>
                 </div>
               </div>
             </div>
           )}
-</div>
 
-      {/* Question Display */}
-<div
-          key={currentQuestion.id}
-          className="bg-white rounded-xl p-6 border animate-fadeInUp"
-        >
-          {/* Question Header */}
-          <div className="flex justify-between items-start mb-6">
-            <div className="flex items-center gap-3">
-              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                Q{currentIndex + 1}
-              </span>
-              <span
-                className={`px-2 py-1 rounded border text-xs font-medium ${getDifficultyColor(currentQuestion.difficulty)}`}
-              >
-                {currentQuestion.difficulty.toUpperCase()}
-              </span>
-              <span className="text-sm text-gray-500">
-                {currentQuestion.topic} • {currentQuestion.marks} marks
-              </span>
+          {/* Correct Answer Display */}
+          {config.showAnswers && (
+            <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+              <h5 className="font-medium text-green-800 mb-2 flex items-center gap-2">
+                <Target className="w-4 h-4" />
+                Correct Answer
+              </h5>
+              <p className="text-green-700 font-medium">{currentQuestion.correctAnswer}</p>
             </div>
+          )}
 
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => onQuestionEdit(currentQuestion.id)}
-                className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
-              >
-                <Edit3 className="w-4 h-4" />
-              </button>
+          {/* Explanation */}
+          {config.showExplanations && (
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <h5 className="font-medium text-blue-800 mb-2 flex items-center gap-2">
+                <BookOpen className="w-4 h-4" />
+                Explanation
+              </h5>
+              <p className="text-blue-700">{currentQuestion.explanation}</p>
             </div>
-          </div>
+          )}
 
-          {/* Question Content */}
-          <div className="space-y-6">
-            <div className="prose max-w-none">
-              <div className="text-lg text-gray-800 leading-relaxed">
-                {currentQuestion.question}
-              </div>
-            </div>
-
-            {/* Options for MCQ */}
-            {currentQuestion.type === 'mcq' && currentQuestion.options && (
-              <div className="space-y-3">
-                {currentQuestion.options.map((option, index) => (
-                  <label
-                    key={index}
-                    className={`flex items-center gap-3 p-4 border rounded-lg cursor-pointer transition-colors ${
-                      config.showAnswers && option === currentQuestion.correctAnswer
-                        ? 'bg-green-50 border-green-300'
-                        : 'hover:bg-gray-50'
-                    }`}
-                  >
-                    <input
-                      type="radio"
-                      name={`question_${currentQuestion.id}`}
-                      value={option}
-                      className="text-blue-600 focus:ring-blue-500"
-                      disabled={config.viewMode !== 'student'}
-                    />
-                    <span className="text-gray-800">{option}</span>
-                    {config.showAnswers && option === currentQuestion.correctAnswer && (
-                      <span className="ml-auto text-green-600 text-sm font-medium">✓ Correct</span>
-                    )}
-                  </label>
+          {/* Hints */}
+          {config.showHints && currentQuestion.hints.length > 0 && (
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <h5 className="font-medium text-yellow-800 mb-2 flex items-center gap-2">
+                <Zap className="w-4 h-4" />
+                Hints
+              </h5>
+              <ul className="text-yellow-700 space-y-1">
+                {currentQuestion.hints.map((hint, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <span className="text-yellow-600 mt-1">•</span>
+                    {hint}
+                  </li>
                 ))}
-              </div>
-            )}
-
-            {/* Answer Input for Numerical */}
-            {currentQuestion.type === 'numerical' && config.viewMode === 'student' && (
-              <div className="space-y-3">
-                <input
-                  type="number"
-                  placeholder="Enter your answer"
-                  className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-            )}
-
-            {/* Teacher/Review Mode Information */}
-            {(config.viewMode === 'teacher' || config.viewMode === 'review') && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-gray-50 rounded-lg">
-                <div>
-                  <h5 className="font-medium text-gray-700 mb-2">Question Details</h5>
-                  <div className="text-sm text-gray-600 space-y-1">
-                    <div>Type: {currentQuestion.type.toUpperCase()}</div>
-                    <div>Chapter: {currentQuestion.chapter}</div>
-                    <div>Subtopic: {currentQuestion.subtopic}</div>
-                    <div>Bloom's Level: {currentQuestion.bloomsLevel}</div>
-                  </div>
-                </div>
-                <div>
-                  <h5 className="font-medium text-gray-700 mb-2">Assessment Info</h5>
-                  <div className="text-sm text-gray-600 space-y-1">
-                    <div>Estimated Time: {Math.round(currentQuestion.estimatedTime / 60)} min</div>
-                    <div>Difficulty: {currentQuestion.difficulty}</div>
-                    <div>Tags: {currentQuestion.tags.join(', ')}</div>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Correct Answer Display */}
-            {config.showAnswers && (
-              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                <h5 className="font-medium text-green-800 mb-2 flex items-center gap-2">
-                  <Target className="w-4 h-4" />
-                  Correct Answer
-                </h5>
-                <p className="text-green-700 font-medium">{currentQuestion.correctAnswer}</p>
-              </div>
-            )}
-
-            {/* Explanation */}
-            {config.showExplanations && (
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                <h5 className="font-medium text-blue-800 mb-2 flex items-center gap-2">
-                  <BookOpen className="w-4 h-4" />
-                  Explanation
-                </h5>
-                <p className="text-blue-700">{currentQuestion.explanation}</p>
-              </div>
-            )}
-
-            {/* Hints */}
-            {config.showHints && currentQuestion.hints.length > 0 && (
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                <h5 className="font-medium text-yellow-800 mb-2 flex items-center gap-2">
-                  <Zap className="w-4 h-4" />
-                  Hints
-                </h5>
-                <ul className="text-yellow-700 space-y-1">
-                  {currentQuestion.hints.map((hint, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <span className="text-yellow-600 mt-1">•</span>
-                      {hint}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-
-          {/* Navigation Footer */}
-          <div className="flex justify-between items-center mt-8 pt-6 border-t">
-            <button
-              onClick={handlePrevious}
-              disabled={currentIndex === 0}
-              className="flex items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-            >
-              <SkipBack className="w-4 h-4" />
-              Previous
-            </button>
-
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-600">
-                {currentIndex + 1} / {questions.length}
-              </span>
-              <div className="w-32 bg-gray-200 rounded-full h-2">
-                <div
-                  className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-                  style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
-                />
-              </div>
+              </ul>
             </div>
-
-            <button
-              onClick={handleNext}
-              disabled={currentIndex === questions.length - 1}
-              className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-            >
-              Next
-              <SkipForward className="w-4 h-4" />
-            </button>
-          </div>
+          )}
         </div>
-{/* Question Overview Strip */}
+
+        {/* Navigation Footer */}
+        <div className="flex justify-between items-center mt-8 pt-6 border-t">
+          <button
+            onClick={handlePrevious}
+            disabled={currentIndex === 0}
+            className="flex items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          >
+            <SkipBack className="w-4 h-4" />
+            Previous
+          </button>
+
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-gray-600">
+              {currentIndex + 1} / {questions.length}
+            </span>
+            <div className="w-32 bg-gray-200 rounded-full h-2">
+              <div
+                className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
+              />
+            </div>
+          </div>
+
+          <button
+            onClick={handleNext}
+            disabled={currentIndex === questions.length - 1}
+            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          >
+            Next
+            <SkipForward className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+      {/* Question Overview Strip */}
       <div className="bg-white rounded-xl p-4 border">
         <h4 className="font-medium text-gray-800 mb-3">Question Overview</h4>
         <div className="flex gap-2 overflow-x-auto pb-2">

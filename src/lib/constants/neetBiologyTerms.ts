@@ -32,7 +32,8 @@ export const NEET_BIOLOGY_TERMS: BiologyTerm[] = [
     term: 'Photosystem',
     definition:
       'Photosystems are functional units in the thylakoid membrane containing chlorophyll and associated proteins that absorb light and initiate photosynthesis.',
-    description: 'PSII (680 nm) is in grana and initiates electron transport. PSI (700 nm) in stroma is the final step producing NADPH.',
+    description:
+      'PSII (680 nm) is in grana and initiates electron transport. PSI (700 nm) in stroma is the final step producing NADPH.',
     category: 'Plant Physiology',
     weightage: '4-5%',
     relatedTerms: ['Photosynthesis', 'Light Reactions', 'Electron Transport'],
@@ -135,7 +136,7 @@ export const NEET_BIOLOGY_TERMS: BiologyTerm[] = [
     definition:
       'DNA replication is the process by which DNA makes an exact copy of itself, occurring during S phase of interphase, ensuring each daughter cell receives identical genetic information.',
     description:
-      'Semi-conservative replication: Original DNA strands separate, each serving as template for new strand. DNA polymerase III synthesizes new strand 5\'→3\'. Leading strand synthesized continuously, lagging strand synthesized in Okazaki fragments.',
+      "Semi-conservative replication: Original DNA strands separate, each serving as template for new strand. DNA polymerase III synthesizes new strand 5'→3'. Leading strand synthesized continuously, lagging strand synthesized in Okazaki fragments.",
     category: 'Molecular Biology',
     weightage: '6-8%',
     relatedTerms: ['DNA', 'Chromosome', 'Cell Division', 'Protein Synthesis'],
@@ -238,7 +239,7 @@ export const NEET_BIOLOGY_TERMS: BiologyTerm[] = [
     definition:
       'An enzyme is a biological catalyst, usually a protein, that speeds up biochemical reactions by lowering activation energy without being consumed in the reaction.',
     description:
-      'Lock and key model: Substrate fits into enzyme\'s active site. Forms enzyme-substrate complex. Product released. Factors affecting enzyme activity: pH (optimal 7-8), temperature (optimal 37°C), substrate concentration, cofactors/coenzymes.',
+      "Lock and key model: Substrate fits into enzyme's active site. Forms enzyme-substrate complex. Product released. Factors affecting enzyme activity: pH (optimal 7-8), temperature (optimal 37°C), substrate concentration, cofactors/coenzymes.",
     category: 'Cell Biology',
     weightage: '4-5%',
     relatedTerms: ['Metabolism', 'Protein', 'Catalysis', 'Biochemistry'],

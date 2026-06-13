@@ -6,7 +6,8 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'Maharashtra HSC Biology Coaching | NEET + MHT-CET Dual Prep',
-  description: 'Expert Maharashtra HSC Biology coaching with MHT-CET overlap coverage and NEET integration. Master Std XII Biology with chapter-wise weightage and entrance exam strategy.',
+  description:
+    'Expert Maharashtra HSC Biology coaching with MHT-CET overlap coverage and NEET integration. Master Std XII Biology with chapter-wise weightage and entrance exam strategy.',
   keywords: [
     'Maharashtra HSC biology',
     'Maharashtra state board biology',
@@ -18,7 +19,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Maharashtra HSC Biology Coaching | NEET + MHT-CET Dual Prep',
-    description: 'Expert Maharashtra HSC Biology coaching with MHT-CET overlap coverage and NEET integration.',
+    description:
+      'Expert Maharashtra HSC Biology coaching with MHT-CET overlap coverage and NEET integration.',
     url: `${BASE_URL}/boards/maharashtra-hsc`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -27,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Maharashtra HSC Biology Coaching | NEET + MHT-CET Dual Prep',
-    description: 'Expert Maharashtra HSC Biology coaching with MHT-CET overlap coverage and NEET integration.',
+    description:
+      'Expert Maharashtra HSC Biology coaching with MHT-CET overlap coverage and NEET integration.',
   },
   alternates: {
     canonical: `${BASE_URL}/boards/maharashtra-hsc`,

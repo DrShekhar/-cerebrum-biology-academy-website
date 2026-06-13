@@ -79,12 +79,20 @@ function StatCard({
           <Icon className={`w-5 h-5 ${iconColor}`} />
         </div>
         {trend && trendValue && (
-          <div className={`flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-full ${
-            trend === 'up' ? 'bg-green-50 text-green-700' :
-            trend === 'down' ? 'bg-red-50 text-red-700' :
-            'bg-gray-50 text-gray-600'
-          }`}>
-            {trend === 'up' ? <ArrowUpRight className="w-3 h-3" /> : trend === 'down' ? <ArrowDownRight className="w-3 h-3" /> : null}
+          <div
+            className={`flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-full ${
+              trend === 'up'
+                ? 'bg-green-50 text-green-700'
+                : trend === 'down'
+                  ? 'bg-red-50 text-red-700'
+                  : 'bg-gray-50 text-gray-600'
+            }`}
+          >
+            {trend === 'up' ? (
+              <ArrowUpRight className="w-3 h-3" />
+            ) : trend === 'down' ? (
+              <ArrowDownRight className="w-3 h-3" />
+            ) : null}
             {trendValue}
           </div>
         )}
@@ -98,9 +106,13 @@ function StatCard({
 
 // ─── Funnel Visualization ────────────────────────────────────────────────────
 
-function ConversionFunnel({ stages }: { stages: { stage: string; count: number; percentage: number }[] }) {
-  const maxCount = Math.max(...stages.map(s => s.count), 1)
-  
+function ConversionFunnel({
+  stages,
+}: {
+  stages: { stage: string; count: number; percentage: number }[]
+}) {
+  const maxCount = Math.max(...stages.map((s) => s.count), 1)
+
   const stageLabels: Record<string, string> = {
     NEW_LEAD: 'New Leads',
     DEMO_SCHEDULED: 'Demo Scheduled',
@@ -123,7 +135,7 @@ function ConversionFunnel({ stages }: { stages: { stage: string; count: number; 
     'from-green-500 to-green-400',
   ]
 
-  const funnelStages = stages.filter(s => s.stage !== 'LOST' && s.stage !== 'ACTIVE_STUDENT')
+  const funnelStages = stages.filter((s) => s.stage !== 'LOST' && s.stage !== 'ACTIVE_STUDENT')
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
@@ -138,9 +150,12 @@ function ConversionFunnel({ stages }: { stages: { stage: string; count: number; 
       <div className="space-y-3">
         {funnelStages.map((stage, i) => {
           const widthPercent = Math.max((stage.count / maxCount) * 100, 8)
-          const dropOff = i > 0 && funnelStages[i - 1].count > 0
-            ? Math.round(((funnelStages[i - 1].count - stage.count) / funnelStages[i - 1].count) * 100)
-            : null
+          const dropOff =
+            i > 0 && funnelStages[i - 1].count > 0
+              ? Math.round(
+                  ((funnelStages[i - 1].count - stage.count) / funnelStages[i - 1].count) * 100
+                )
+              : null
 
           return (
             <div key={stage.stage} className="group">
@@ -173,12 +188,12 @@ function ConversionFunnel({ stages }: { stages: { stage: string; count: number; 
       </div>
 
       {/* Lost Leads */}
-      {stages.find(s => s.stage === 'LOST') && (
+      {stages.find((s) => s.stage === 'LOST') && (
         <div className="mt-4 pt-4 border-t border-gray-100">
           <div className="flex items-center justify-between">
             <span className="text-sm text-red-600 font-medium">❌ Lost Leads</span>
             <span className="text-sm font-bold text-red-600">
-              {stages.find(s => s.stage === 'LOST')?.count || 0}
+              {stages.find((s) => s.stage === 'LOST')?.count || 0}
             </span>
           </div>
         </div>
@@ -190,9 +205,8 @@ function ConversionFunnel({ stages }: { stages: { stage: string; count: number; 
 // ─── Revenue Cards ───────────────────────────────────────────────────────────
 
 function RevenueSection({ metrics }: { metrics: AnalyticsData['revenueMetrics'] }) {
-  const paidPercentage = metrics.totalRevenue > 0
-    ? Math.round((metrics.paidRevenue / metrics.totalRevenue) * 100)
-    : 0
+  const paidPercentage =
+    metrics.totalRevenue > 0 ? Math.round((metrics.paidRevenue / metrics.totalRevenue) * 100) : 0
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
@@ -222,15 +236,21 @@ function RevenueSection({ metrics }: { metrics: AnalyticsData['revenueMetrics'] 
       <div className="grid grid-cols-3 gap-4">
         <div className="text-center p-3 bg-green-50 rounded-lg">
           <p className="text-xs text-gray-500 mb-1">Paid</p>
-          <p className="text-lg font-bold text-green-600">₹{(metrics.paidRevenue / 1000).toFixed(0)}K</p>
+          <p className="text-lg font-bold text-green-600">
+            ₹{(metrics.paidRevenue / 1000).toFixed(0)}K
+          </p>
         </div>
         <div className="text-center p-3 bg-yellow-50 rounded-lg">
           <p className="text-xs text-gray-500 mb-1">Pending</p>
-          <p className="text-lg font-bold text-yellow-600">₹{(metrics.pendingRevenue / 1000).toFixed(0)}K</p>
+          <p className="text-lg font-bold text-yellow-600">
+            ₹{(metrics.pendingRevenue / 1000).toFixed(0)}K
+          </p>
         </div>
         <div className="text-center p-3 bg-indigo-50 rounded-lg">
           <p className="text-xs text-gray-500 mb-1">Avg Deal</p>
-          <p className="text-lg font-bold text-indigo-600">₹{(metrics.averageDealSize / 1000).toFixed(0)}K</p>
+          <p className="text-lg font-bold text-indigo-600">
+            ₹{(metrics.averageDealSize / 1000).toFixed(0)}K
+          </p>
         </div>
       </div>
     </div>
@@ -241,7 +261,7 @@ function RevenueSection({ metrics }: { metrics: AnalyticsData['revenueMetrics'] 
 
 function WeeklyPerformance({ data }: { data: AnalyticsData['leadsThisWeek'] }) {
   const total = data.new + data.contacted + data.converted + data.lost
-  
+
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
       <div className="flex items-center justify-between mb-5">

@@ -509,9 +509,7 @@ const MobileMultimodalInterface: React.FC = () => {
   return (
     <div ref={containerRef} className={`${getLayoutClasses()} min-h-screen bg-gray-50`}>
       {/* Mobile Header */}
-      <header
-        className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b px-4 py-3 animate-fadeInUp"
-      >
+      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b px-4 py-3 animate-fadeInUp">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-indigo-500 rounded-lg">
@@ -563,9 +561,7 @@ const MobileMultimodalInterface: React.FC = () => {
       {/* Content Area */}
       <main className="flex-1 p-4 space-y-4">
         {/* Device Optimization Info */}
-        <div
-          className="bg-white rounded-xl p-4 border animate-fadeInUp"
-        >
+        <div className="bg-white rounded-xl p-4 border animate-fadeInUp">
           <h3 className="font-semibold text-gray-800 mb-3">Device Optimization</h3>
           <div className="grid grid-cols-2 gap-3 text-sm">
             <div className="flex items-center gap-2">
@@ -670,9 +666,7 @@ const MobileMultimodalInterface: React.FC = () => {
 
         {/* Current Gestures Display */}
         {activeGestures.length > 0 && (
-          <div
-            className="bg-white rounded-xl p-4 border animate-fadeInUp"
-          >
+          <div className="bg-white rounded-xl p-4 border animate-fadeInUp">
             <h3 className="font-semibold text-gray-800 mb-3">Recent Gestures</h3>
             <div className="space-y-2">
               {activeGestures.slice(-3).map((gesture, index) => (
@@ -693,9 +687,7 @@ const MobileMultimodalInterface: React.FC = () => {
 
         {/* Session Performance */}
         {mobileSession && (
-          <div
-            className="bg-white rounded-xl p-4 border animate-fadeInUp"
-          >
+          <div className="bg-white rounded-xl p-4 border animate-fadeInUp">
             <h3 className="font-semibold text-gray-800 mb-3">Session Analytics</h3>
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div className="text-center p-3 bg-blue-50 rounded-lg">
@@ -741,23 +733,18 @@ const MobileMultimodalInterface: React.FC = () => {
       </main>
 
       {/* Voice Control Indicator */}
-{voiceControlActive && (
-          <div
-            className="fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg animate-fadeInUp"
-          >
-            <div className="flex items-center gap-2">
-              <div
-               className="animate-fadeInUp">
-                <Mic className="w-4 h-4" />
-              </div>
-              <span className="text-sm">Voice Control Active</span>
+      {voiceControlActive && (
+        <div className="fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg animate-fadeInUp">
+          <div className="flex items-center gap-2">
+            <div className="animate-fadeInUp">
+              <Mic className="w-4 h-4" />
             </div>
+            <span className="text-sm">Voice Control Active</span>
           </div>
-        )}
-{/* Bottom Navigation */}
-      <nav
-        className="fixed bottom-0 left-0 right-0 bg-white border-t px-4 py-2 animate-fadeInUp"
-      >
+        </div>
+      )}
+      {/* Bottom Navigation */}
+      <nav className="fixed bottom-0 left-0 right-0 bg-white border-t px-4 py-2 animate-fadeInUp">
         <div className="flex justify-around items-center">
           {[
             { icon: BookOpen, label: 'Learn', active: true },

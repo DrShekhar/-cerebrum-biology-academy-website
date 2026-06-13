@@ -77,9 +77,7 @@ export default function ConversionPage() {
         <div className="flex justify-between items-center">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Conversion Analytics</h1>
-            <p className="text-gray-600 mt-1">
-              Track funnel performance and conversion rates
-            </p>
+            <p className="text-gray-600 mt-1">Track funnel performance and conversion rates</p>
           </div>
           <div className="flex space-x-3">
             <select

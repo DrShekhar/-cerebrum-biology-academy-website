@@ -20,9 +20,12 @@ function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) setIsVisible(true)
-    }, { threshold: 0.1 })
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true)
+      },
+      { threshold: 0.1 }
+    )
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
   }, [])
@@ -37,7 +40,8 @@ export default function PageContent() {
   const featuresAnimation = useScrollAnimation()
   const faqAnimation = useScrollAnimation()
 
-  const whatsappLink = 'https://wa.me/918826444334?text=I%20am%20interested%20in%20Maharashtra%20HSC%20Biology%20coaching%20with%20NEET%20and%20MHT-CET%20preparation.'
+  const whatsappLink =
+    'https://wa.me/918826444334?text=I%20am%20interested%20in%20Maharashtra%20HSC%20Biology%20coaching%20with%20NEET%20and%20MHT-CET%20preparation.'
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
@@ -58,14 +62,25 @@ export default function PageContent() {
               Maharashtra HSC Biology + NEET + MHT-CET Coaching
             </h1>
             <p className="text-lg text-slate-600 mb-8 max-w-3xl mx-auto">
-              Complete Maharashtra State Board (Std XII) Biology coaching with integrated NEET and MHT-CET preparation. Master chapter-wise weightage and crack all three exams simultaneously.
+              Complete Maharashtra State Board (Std XII) Biology coaching with integrated NEET and
+              MHT-CET preparation. Master chapter-wise weightage and crack all three exams
+              simultaneously.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href={whatsappLink} target="_blank" variant="primary" className="flex items-center justify-center gap-2">
+              <Button
+                href={whatsappLink}
+                target="_blank"
+                variant="primary"
+                className="flex items-center justify-center gap-2"
+              >
                 <MessageCircle className="w-5 h-5" />
                 Start Your Journey
               </Button>
-              <Button href="tel:8826444334" variant="secondary" className="flex items-center justify-center gap-2">
+              <Button
+                href="tel:8826444334"
+                variant="secondary"
+                className="flex items-center justify-center gap-2"
+              >
                 <Trophy className="w-5 h-5" />
                 Call: 8826444334
               </Button>
@@ -101,7 +116,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Maharashtra HSC Biology Syllabus (Std XII)</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Maharashtra HSC Biology Syllabus (Std XII)
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-8 border border-green-200">
               <div className="flex items-center gap-3 mb-6">
@@ -171,7 +188,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Triple Exam Strategy: Board + NEET + MHT-CET</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Triple Exam Strategy: Board + NEET + MHT-CET
+          </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg p-8 border border-slate-200 hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
@@ -179,7 +198,8 @@ export default function PageContent() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Board Excellence</h3>
               <p className="text-slate-600">
-                Master Maharashtra HSC curriculum with chapter-wise weightage analysis. Achieve 90+ board scores with focused preparation tailored to board exam patterns.
+                Master Maharashtra HSC curriculum with chapter-wise weightage analysis. Achieve 90+
+                board scores with focused preparation tailored to board exam patterns.
               </p>
             </div>
             <div className="bg-white rounded-lg p-8 border border-slate-200 hover:shadow-lg transition-shadow">
@@ -188,7 +208,8 @@ export default function PageContent() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">MHT-CET Overlap</h3>
               <p className="text-slate-600">
-                Strategic mapping of board chapters with MHT-CET high-weightage topics. Maximize entrance exam performance while fulfilling board requirements.
+                Strategic mapping of board chapters with MHT-CET high-weightage topics. Maximize
+                entrance exam performance while fulfilling board requirements.
               </p>
             </div>
             <div className="bg-white rounded-lg p-8 border border-slate-200 hover:shadow-lg transition-shadow">
@@ -197,7 +218,8 @@ export default function PageContent() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">NEET Readiness</h3>
               <p className="text-slate-600">
-                Comprehensive NEET preparation integrated with board curriculum. Complete coverage of high-frequency NEET topics with exhaustive practice.
+                Comprehensive NEET preparation integrated with board curriculum. Complete coverage
+                of high-frequency NEET topics with exhaustive practice.
               </p>
             </div>
           </div>
@@ -212,7 +234,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Chapter-Wise Weightage & Key Topics</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Chapter-Wise Weightage & Key Topics
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-bold text-green-600 mb-6 flex items-center gap-2">
@@ -272,7 +296,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Why Choose Cerebrum for Maharashtra HSC?</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Why Choose Cerebrum for Maharashtra HSC?
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-8 border border-red-200">
               <div className="flex items-start gap-4">
@@ -280,7 +306,8 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Maharashtra Experts</h3>
                   <p className="text-slate-700">
-                    11+ years specialized coaching for Maharashtra HSC. Deep expertise in chapter-wise weightage, board exam patterns, and MHT-CET overlap strategy.
+                    11+ years specialized coaching for Maharashtra HSC. Deep expertise in
+                    chapter-wise weightage, board exam patterns, and MHT-CET overlap strategy.
                   </p>
                 </div>
               </div>
@@ -291,7 +318,8 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Triple Success Rate</h3>
                   <p className="text-slate-700">
-                    2200+ students coached with 97% board success. 890+ simultaneous NEET + MHT-CET qualifiers in last 5 years.
+                    2200+ students coached with 97% board success. 890+ simultaneous NEET + MHT-CET
+                    qualifiers in last 5 years.
                   </p>
                 </div>
               </div>
@@ -302,7 +330,8 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Integrated Triple Prep</h3>
                   <p className="text-slate-700">
-                    Single study plan for board + NEET + MHT-CET. No redundancy, maximum efficiency. Achieve excellence in all three exams simultaneously.
+                    Single study plan for board + NEET + MHT-CET. No redundancy, maximum efficiency.
+                    Achieve excellence in all three exams simultaneously.
                   </p>
                 </div>
               </div>
@@ -313,7 +342,8 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Personalized Guidance</h3>
                   <p className="text-slate-700">
-                    One-on-one mentoring with doubt clarification. Regular mock tests, answer evaluation, and personalized improvement strategies based on performance.
+                    One-on-one mentoring with doubt clarification. Regular mock tests, answer
+                    evaluation, and personalized improvement strategies based on performance.
                   </p>
                 </div>
               </div>
@@ -330,7 +360,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
           <div className="space-y-6">
             {[
               {
@@ -354,7 +386,10 @@ export default function PageContent() {
                 a: 'Yes! Our curriculum is flexible. While all three exams are covered, we can adjust the focus based on your priority. However, our integrated approach ensures board success is never compromised while focusing on entrance exams.',
               },
             ].map((faq, idx) => (
-              <details key={idx} className="group bg-white rounded-lg border border-slate-200 p-6 cursor-pointer hover:border-red-300 transition-colors">
+              <details
+                key={idx}
+                className="group bg-white rounded-lg border border-slate-200 p-6 cursor-pointer hover:border-red-300 transition-colors"
+              >
                 <summary className="flex items-start justify-between font-semibold text-slate-900 group-open:text-red-600">
                   <span>{faq.q}</span>
                   <ArrowRight className="w-5 h-5 flex-shrink-0 transition-transform group-open:rotate-90" />
@@ -369,9 +404,12 @@ export default function PageContent() {
       {/* CTA Section */}
       <section className="px-6 py-16 bg-gradient-to-r from-red-600 to-red-700 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Master Maharashtra HSC + NEET + MHT-CET</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Master Maharashtra HSC + NEET + MHT-CET
+          </h2>
           <p className="text-lg text-red-100 mb-8">
-            Join 2200+ Maharashtra students who achieved board excellence and simultaneous NEET + MHT-CET success with Cerebrum.
+            Join 2200+ Maharashtra students who achieved board excellence and simultaneous NEET +
+            MHT-CET success with Cerebrum.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -390,9 +428,7 @@ export default function PageContent() {
               Call: 8826444334
             </Button>
           </div>
-          <p className="text-red-100 mt-6 text-sm">
-            Website: cerebrumbiologyacademy.com
-          </p>
+          <p className="text-red-100 mt-6 text-sm">Website: cerebrumbiologyacademy.com</p>
         </div>
       </section>
     </div>

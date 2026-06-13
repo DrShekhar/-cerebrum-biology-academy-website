@@ -36,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 10 in Chennai | Samacheer Kalvi + CBSE + ICSE Parallel',
-    description: 'NEET Foundation Class 10 in Chennai at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Tamil Nadu Samacheer Kalvi + NEET parallel. T. Nagar, Adyar, Anna N...',
+    description:
+      'NEET Foundation Class 10 in Chennai at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Tamil Nadu Samacheer Kalvi + NEET parallel. T. Nagar, Adyar, Anna N...',
   },
 }
 
@@ -64,7 +65,8 @@ const faqs = [
       "CBSE/ICSE feeders: PSBB (Nungambakkam, KK Nagar, T. Nagar), DAV Boys/Girls, Velammal Vidyalaya CBSE branches, Vidya Mandir Mylapore, Sishya School, Chettinad Vidyashram, Sankara Senior Secondary, Bhavan's Rajaji Vidyashram. International curriculum feeders: AISC (American International School Chennai), British International School Chennai, KC High International. Tamil Nadu Samacheer Kalvi feeders span the wider Chennai state-board school ecosystem.",
   },
   {
-    question: 'How does Cerebrum compare to Velammal or the 2nd-largest national NEET chain for Class 10 NEET in Chennai?',
+    question:
+      'How does Cerebrum compare to Velammal or the 2nd-largest national NEET chain for Class 10 NEET in Chennai?',
     answer:
       'Velammal Group runs integrated school-plus-NEET coaching from Class 9 onwards with 200-400 student Class 10 batches. the 2nd-largest national NEET chain Chennai operates ~5 centres with 200-300 student Class 10 PCB Foundation batches. For Class 10 specifically, Velammal and the 2nd-largest national NEET chain both deprioritise Tamil Nadu Samacheer Kalvi board strategy in favour of NEET-only drilling. For families targeting both Tamil Nadu Class 10 board 90%+ AND TNMSC-relevant Class 11-12 trajectory AND NEET-ready foundations, Cerebrum is structurally different. Many Chennai families pair Cerebrum biology (₹55K-75K Ascent) with Velammal/the 2nd-largest national NEET chain for PC.',
   },

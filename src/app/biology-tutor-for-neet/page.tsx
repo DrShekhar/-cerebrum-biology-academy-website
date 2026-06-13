@@ -33,7 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biology Tutor for NEET | 1:1 AIIMS Faculty | Cerebrum Biology Academy',
-    description: 'Biology tutor for NEET — Dr. Shekhar C Singh (AIIMS Delhi) and senior faculty. 1:1 personalised mentoring with NCERT mastery, weekly mocks, doubt resolution. 680+ medical college selections, 98% NE...',
+    description:
+      'Biology tutor for NEET — Dr. Shekhar C Singh (AIIMS Delhi) and senior faculty. 1:1 personalised mentoring with NCERT mastery, weekly mocks, doubt resolution. 680+ medical college selections, 98% NE...',
   },
 }
 

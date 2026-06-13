@@ -24,11 +24,19 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'ICSE Biology Coaching | Detailed Curriculum | Medical Entrance | Cerebrum Biology Academy',
-    description: 'Expert ICSE Biology coaching with comprehensive curriculum coverage. In-depth conceptual learning, practical focus, and medical entrance preparation.',
+    title:
+      'ICSE Biology Coaching | Detailed Curriculum | Medical Entrance | Cerebrum Biology Academy',
+    description:
+      'Expert ICSE Biology coaching with comprehensive curriculum coverage. In-depth conceptual learning, practical focus, and medical entrance preparation.',
   },
 
-  openGraph: { title: 'ICSE Biology Coaching | Detailed Curriculum | Medical Entrance | Cerebrum Biology Academy', description: 'Expert ICSE Biology coaching with comprehensive curriculum coverage. In-depth conceptual learning, practical focus, and medical entrance preparation.', type: 'website' },
+  openGraph: {
+    title:
+      'ICSE Biology Coaching | Detailed Curriculum | Medical Entrance | Cerebrum Biology Academy',
+    description:
+      'Expert ICSE Biology coaching with comprehensive curriculum coverage. In-depth conceptual learning, practical focus, and medical entrance preparation.',
+    type: 'website',
+  },
 }
 
 export default function ICSEBiologyPage() {
@@ -184,7 +192,9 @@ export default function ICSEBiologyPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-white text-green-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center min-h-[44px] w-full sm:w-auto"
                 >
                   Enroll for ICSE
@@ -508,7 +518,9 @@ export default function ICSEBiologyPage() {
                 </p>
                 <div className="space-y-3">
                   <Link
-                    href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+                    href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block bg-green-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors min-h-[44px] flex items-center justify-center"
                   >
                     Enroll for ICSE

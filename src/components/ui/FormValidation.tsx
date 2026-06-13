@@ -283,33 +283,27 @@ export function ValidatedInput({
 
         {/* Validation Icons */}
         <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-{hasError && (
-              <div
-                key="error"
-               className="animate-fadeInUp">
-                <AlertCircle className="w-5 h-5 text-red-500" />
-              </div>
-            )}
-            {isValid && (
-              <div
-                key="success"
-               className="animate-fadeInUp">
-                <CheckCircle2 className="w-5 h-5 text-green-600" />
-              </div>
-            )}
-</div>
+          {hasError && (
+            <div key="error" className="animate-fadeInUp">
+              <AlertCircle className="w-5 h-5 text-red-500" />
+            </div>
+          )}
+          {isValid && (
+            <div key="success" className="animate-fadeInUp">
+              <CheckCircle2 className="w-5 h-5 text-green-600" />
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Error Message */}
-{hasError && (
-          <div
-            className="flex items-center space-x-1 text-sm text-red-600 animate-fadeInUp"
-          >
-            <AlertCircle className="w-4 h-4 flex-shrink-0" />
-            <span>{error}</span>
-          </div>
-        )}
-</div>
+      {hasError && (
+        <div className="flex items-center space-x-1 text-sm text-red-600 animate-fadeInUp">
+          <AlertCircle className="w-4 h-4 flex-shrink-0" />
+          <span>{error}</span>
+        </div>
+      )}
+    </div>
   )
 }
 
@@ -384,33 +378,27 @@ export function ValidatedSelect({
 
         {/* Validation Icons */}
         <div className="absolute right-10 top-1/2 transform -translate-y-1/2">
-{hasError && (
-              <div
-                key="error"
-               className="animate-fadeInUp">
-                <AlertCircle className="w-5 h-5 text-red-500" />
-              </div>
-            )}
-            {isValid && (
-              <div
-                key="success"
-               className="animate-fadeInUp">
-                <CheckCircle2 className="w-5 h-5 text-green-600" />
-              </div>
-            )}
-</div>
+          {hasError && (
+            <div key="error" className="animate-fadeInUp">
+              <AlertCircle className="w-5 h-5 text-red-500" />
+            </div>
+          )}
+          {isValid && (
+            <div key="success" className="animate-fadeInUp">
+              <CheckCircle2 className="w-5 h-5 text-green-600" />
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Error Message */}
-{hasError && (
-          <div
-            className="flex items-center space-x-1 text-sm text-red-600 animate-fadeInUp"
-          >
-            <AlertCircle className="w-4 h-4" />
-            <span>{error}</span>
-          </div>
-        )}
-</div>
+      {hasError && (
+        <div className="flex items-center space-x-1 text-sm text-red-600 animate-fadeInUp">
+          <AlertCircle className="w-4 h-4" />
+          <span>{error}</span>
+        </div>
+      )}
+    </div>
   )
 }
 
@@ -433,37 +421,35 @@ export function ErrorSummary({
   if (!isVisible || errorList.length === 0) return null
 
   return (
-<div
-        className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 max-w-md w-full mx-4 animate-fadeInUp"
-      >
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4 shadow-lg">
-          <div className="flex items-start justify-between">
-            <div className="flex-1">
-              <div className="flex items-center space-x-2 mb-2">
-                <AlertCircle className="w-5 h-5 text-red-500" />
-                <h3 className="text-sm font-medium text-red-800">{title}</h3>
-              </div>
-              <ul className="space-y-1">
-                {errorList.map(([field, error]) => (
-                  <li key={field} className="text-sm text-red-700 flex items-center space-x-1">
-                    <span className="w-1 h-1 bg-red-500 rounded-full"></span>
-                    <span className="capitalize">
-                      {field.replace(/([A-Z])/g, ' $1')}: {error}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 max-w-md w-full mx-4 animate-fadeInUp">
+      <div className="bg-red-50 border border-red-200 rounded-lg p-4 shadow-lg">
+        <div className="flex items-start justify-between">
+          <div className="flex-1">
+            <div className="flex items-center space-x-2 mb-2">
+              <AlertCircle className="w-5 h-5 text-red-500" />
+              <h3 className="text-sm font-medium text-red-800">{title}</h3>
             </div>
-            <button
-              onClick={onClose}
-              className="ml-3 text-red-400 hover:text-red-600 transition-colors"
-            >
-              <X className="w-5 h-5" />
-            </button>
+            <ul className="space-y-1">
+              {errorList.map(([field, error]) => (
+                <li key={field} className="text-sm text-red-700 flex items-center space-x-1">
+                  <span className="w-1 h-1 bg-red-500 rounded-full"></span>
+                  <span className="capitalize">
+                    {field.replace(/([A-Z])/g, ' $1')}: {error}
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
+          <button
+            onClick={onClose}
+            className="ml-3 text-red-400 hover:text-red-600 transition-colors"
+          >
+            <X className="w-5 h-5" />
+          </button>
         </div>
       </div>
-)
+    </div>
+  )
 }
 
 // Form Container with validation

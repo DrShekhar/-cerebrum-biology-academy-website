@@ -309,9 +309,7 @@ export function DataInterpretationCard({
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl">
-                    {result.isCorrect ? '🎉' : '😔'}
-                  </span>
+                  <span className="text-2xl">{result.isCorrect ? '🎉' : '😔'}</span>
                   <span
                     className={`font-bold text-base ${result.isCorrect ? 'text-green-700' : 'text-red-700'}`}
                   >

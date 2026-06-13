@@ -118,7 +118,9 @@ export function MyEnrollments() {
             </p>
           </a>
 
-          <ContextualWhatsAppLink target="_blank" rel="noopener noreferrer"
+          <ContextualWhatsAppLink
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-indigo-500 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow group text-white animate-fadeInUp"
           >
             <div className="flex items-center mb-4">
@@ -144,11 +146,7 @@ export function MyEnrollments() {
           <p className="text-gray-600 mb-4">
             Sign in to track your progress, access study materials, and join live classes.
           </p>
-          <Button
-            variant="outline"
-            size="default"
-            onClick={() => router.push('/sign-in')}
-          >
+          <Button variant="outline" size="default" onClick={() => router.push('/sign-in')}>
             Sign In to View Enrollments
           </Button>
         </div>

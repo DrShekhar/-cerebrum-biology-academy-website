@@ -36,9 +36,7 @@ export function FinalCTA({ cta, contactButtons }: FinalCTAProps) {
       <div className="absolute bottom-10 right-10 h-96 w-96 rounded-full bg-purple-500/20 blur-3xl" />
 
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div
-          className="text-center animate-fadeInUp"
-        >
+        <div className="text-center animate-fadeInUp">
           <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">{cta.title}</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-white/70">{cta.subtitle}</p>
 
@@ -73,9 +71,7 @@ export function FinalCTA({ cta, contactButtons }: FinalCTAProps) {
           </div>
 
           {/* Quick Contact */}
-          <div
-            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6 animate-fadeInUp"
-          >
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6 animate-fadeInUp">
             <a
               href={contactButtons?.phone ? `tel:${phoneNumber}` : getPhoneLink()}
               className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-white/20"

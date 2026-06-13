@@ -34,10 +34,42 @@ export default function PageContent() {
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)
 
   const syllabusCoverage = [
-    { title: 'Cell & Molecular Biology', topics: ['Cell Structure', 'Cell Division', 'Photosynthesis & Respiration', 'Genetic Material'] },
-    { title: 'Genetics & Evolution', topics: ['Heredity & Variation', 'Molecular Biology', 'Evolution Concepts', 'Natural Selection'] },
-    { title: 'Human Physiology', topics: ['Nutrition & Digestion', 'Blood Circulation', 'Respiration', 'Nervous & Hormonal Coordination'] },
-    { title: 'Ecology & Biodiversity', topics: ['Organisms & Environment', 'Population Dynamics', 'Ecosystem', 'Biodiversity Conservation'] },
+    {
+      title: 'Cell & Molecular Biology',
+      topics: [
+        'Cell Structure',
+        'Cell Division',
+        'Photosynthesis & Respiration',
+        'Genetic Material',
+      ],
+    },
+    {
+      title: 'Genetics & Evolution',
+      topics: [
+        'Heredity & Variation',
+        'Molecular Biology',
+        'Evolution Concepts',
+        'Natural Selection',
+      ],
+    },
+    {
+      title: 'Human Physiology',
+      topics: [
+        'Nutrition & Digestion',
+        'Blood Circulation',
+        'Respiration',
+        'Nervous & Hormonal Coordination',
+      ],
+    },
+    {
+      title: 'Ecology & Biodiversity',
+      topics: [
+        'Organisms & Environment',
+        'Population Dynamics',
+        'Ecosystem',
+        'Biodiversity Conservation',
+      ],
+    },
   ]
 
   const rajasthanAreas = [
@@ -50,44 +82,89 @@ export default function PageContent() {
   ]
 
   const whyChooseUs = [
-    { icon: BookOpen, title: 'RBSE Syllabus Expertise', description: 'Complete mastery of Rajasthan Board (RBSE) biology curriculum with chapter-wise depth' },
-    { icon: Target, title: 'NEET Bridge Content', description: 'Strategic filling of gaps between RBSE and NEET with focused advanced modules' },
-    { icon: MapPin, title: 'Rajasthan-Wide Coverage', description: 'Expert coaching for students from Kota, Jaipur, Jodhpur and all Rajasthan regions' },
-    { icon: Award, title: 'Dual Success Focus', description: 'Ensure 90+ in board exams while building 650+ NEET score potential' },
-    { icon: Users, title: 'Experienced RBSE Faculty', description: 'Teachers with deep understanding of RBSE patterns and successful NEET conversion' },
-    { icon: Microscope, title: 'Lab-to-Theory Bridge', description: 'Connect RBSE practical experience with NEET theoretical excellence' },
+    {
+      icon: BookOpen,
+      title: 'RBSE Syllabus Expertise',
+      description:
+        'Complete mastery of Rajasthan Board (RBSE) biology curriculum with chapter-wise depth',
+    },
+    {
+      icon: Target,
+      title: 'NEET Bridge Content',
+      description: 'Strategic filling of gaps between RBSE and NEET with focused advanced modules',
+    },
+    {
+      icon: MapPin,
+      title: 'Rajasthan-Wide Coverage',
+      description:
+        'Expert coaching for students from Kota, Jaipur, Jodhpur and all Rajasthan regions',
+    },
+    {
+      icon: Award,
+      title: 'Dual Success Focus',
+      description: 'Ensure 90+ in board exams while building 650+ NEET score potential',
+    },
+    {
+      icon: Users,
+      title: 'Experienced RBSE Faculty',
+      description:
+        'Teachers with deep understanding of RBSE patterns and successful NEET conversion',
+    },
+    {
+      icon: Microscope,
+      title: 'Lab-to-Theory Bridge',
+      description: 'Connect RBSE practical experience with NEET theoretical excellence',
+    },
   ]
 
   const pricingPlans = [
-    { name: '1:1 Coaching', price: '₹44,999', description: 'Personalized sessions with RBSE board + NEET integration from start to finish' },
-    { name: 'Complete Program', price: '₹33,999', description: 'Full 2-year program covering RBSE syllabus and NEET preparation with materials' },
-    { name: 'Group Batch', price: '₹23,999', description: 'Small group classes perfect for Rajasthan students with personalized attention' },
+    {
+      name: '1:1 Coaching',
+      price: '₹44,999',
+      description: 'Personalized sessions with RBSE board + NEET integration from start to finish',
+    },
+    {
+      name: 'Complete Program',
+      price: '₹33,999',
+      description: 'Full 2-year program covering RBSE syllabus and NEET preparation with materials',
+    },
+    {
+      name: 'Group Batch',
+      price: '₹23,999',
+      description: 'Small group classes perfect for Rajasthan students with personalized attention',
+    },
   ]
 
   const faqs = [
     {
       question: 'How is RBSE biology different from CBSE for NEET?',
-      answer: 'RBSE has unique phrasing and depth variations. We specifically map RBSE topics to NEET requirements, prevent over-study of non-NEET content, and fill critical NEET-specific gaps in areas where RBSE is lighter.',
+      answer:
+        'RBSE has unique phrasing and depth variations. We specifically map RBSE topics to NEET requirements, prevent over-study of non-NEET content, and fill critical NEET-specific gaps in areas where RBSE is lighter.',
     },
     {
       question: 'Is Kota known specifically for NEET coaching?',
-      answer: 'Absolutely! Kota is India\'s premier NEET coaching hub. Students from across India come to Kota for specialized NEET preparation. Our online platform brings this Kota excellence to your city.',
+      answer:
+        "Absolutely! Kota is India's premier NEET coaching hub. Students from across India come to Kota for specialized NEET preparation. Our online platform brings this Kota excellence to your city.",
     },
     {
       question: 'What is the NEET success rate for Rajasthan board students?',
-      answer: 'Rajasthan board students show 80%+ NEET qualification rate when properly guided. With our RBSE-to-NEET bridge, students average 640+ scores with many exceeding 680.',
+      answer:
+        'Rajasthan board students show 80%+ NEET qualification rate when properly guided. With our RBSE-to-NEET bridge, students average 640+ scores with many exceeding 680.',
     },
     {
       question: 'Can I maintain RBSE board marks while preparing for NEET?',
-      answer: 'Yes! We specifically design programs to ensure RBSE board excellence (90+) alongside NEET depth. The programs are complementary when properly structured.',
+      answer:
+        'Yes! We specifically design programs to ensure RBSE board excellence (90+) alongside NEET depth. The programs are complementary when properly structured.',
     },
     {
       question: 'How long does NEET prep take after RBSE completion?',
-      answer: 'With early start in Class 11, RBSE students need 6-8 months of intensive NEET focus post-board exams. Starting our dual program earlier maximizes preparation depth.',
+      answer:
+        'With early start in Class 11, RBSE students need 6-8 months of intensive NEET focus post-board exams. Starting our dual program earlier maximizes preparation depth.',
     },
     {
       question: 'Do you provide city-specific or online coaching?',
-      answer: 'Our model offers premium online live classes accessible from Rajasthan. This combines flexibility for board exams with structured NEET preparation, perfect for Rajasthan students.',
+      answer:
+        'Our model offers premium online live classes accessible from Rajasthan. This combines flexibility for board exams with structured NEET preparation, perfect for Rajasthan students.',
     },
   ]
 
@@ -96,9 +173,7 @@ export default function PageContent() {
       <FloatingWhatsAppButton />
 
       {/* Hero Section */}
-      <section
-        className="bg-gradient-to-br from-amber-700 to-orange-700 text-white py-12 sm:py-20 animate-fadeInUp"
-      >
+      <section className="bg-gradient-to-br from-amber-700 to-orange-700 text-white py-12 sm:py-20 animate-fadeInUp">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="animate-fadeInUp">
@@ -106,11 +181,14 @@ export default function PageContent() {
                 Rajasthan RBSE to NEET Success
               </h1>
               <p className="text-lg sm:text-xl text-amber-100 mb-8">
-                Master Rajasthan Board Biology with seamless NEET integration. Expert coaching for students across Rajasthan - Kota, Jaipur, Jodhpur and beyond.
+                Master Rajasthan Board Biology with seamless NEET integration. Expert coaching for
+                students across Rajasthan - Kota, Jaipur, Jodhpur and beyond.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-white text-amber-700 px-8 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors inline-flex items-center justify-center"
                 >
                   Enroll for RBSE-NEET
@@ -157,7 +235,9 @@ export default function PageContent() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Rajasthan-Wide Coverage
             </h2>
-            <p className="text-gray-600 text-lg">Serving students from major cities across Rajasthan</p>
+            <p className="text-gray-600 text-lg">
+              Serving students from major cities across Rajasthan
+            </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {rajasthanAreas.map((area, index) => (
@@ -187,10 +267,7 @@ export default function PageContent() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {syllabusCoverage.map((module, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                   <BookOpen className="w-6 h-6 text-amber-600 mr-3" />
                   {module.title}
@@ -253,7 +330,9 @@ export default function PageContent() {
                 <div className="text-3xl font-bold text-amber-600 mb-4">{plan.price}</div>
                 <p className="text-gray-600 mb-6">{plan.description}</p>
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block bg-amber-600 text-white text-center py-2 rounded-lg font-semibold hover:bg-amber-700 transition-colors"
                 >
                   Enroll Now
@@ -274,7 +353,10 @@ export default function PageContent() {
           </div>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp">
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
+              >
                 <button
                   onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
                   className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
@@ -286,23 +368,19 @@ export default function PageContent() {
                     <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
                   )}
                 </button>
-{expandedFAQ === index && (
-                    <div
-                      className="border-t border-gray-200 bg-gray-50 animate-fadeInUp"
-                    >
-                      <p className="p-6 text-gray-700">{faq.answer}</p>
-                    </div>
-                  )}
-</div>
+                {expandedFAQ === index && (
+                  <div className="border-t border-gray-200 bg-gray-50 animate-fadeInUp">
+                    <p className="p-6 text-gray-700">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section
-        className="bg-gradient-to-r from-amber-700 to-orange-700 text-white py-12 sm:py-16 md:py-20 animate-fadeInUp"
-      >
+      <section className="bg-gradient-to-r from-amber-700 to-orange-700 text-white py-12 sm:py-16 md:py-20 animate-fadeInUp">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
             Master RBSE & Excel in NEET
@@ -312,7 +390,9 @@ export default function PageContent() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white text-amber-700 px-8 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors inline-flex items-center justify-center"
             >
               Start Your Journey

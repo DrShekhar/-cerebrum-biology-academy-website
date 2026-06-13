@@ -93,7 +93,11 @@ export default function NEETCoachingYamunaViharPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Yamuna Vihar', 'NEET Biology Yamuna Vihar', 'Medical entrance coaching Yamuna Vihar']}
+        knowsAbout={[
+          'NEET Yamuna Vihar',
+          'NEET Biology Yamuna Vihar',
+          'Medical entrance coaching Yamuna Vihar',
+        ]}
       />
       <DelhiAreaSchema pageSlug="neet-coaching-yamuna-vihar-delhi" />
       <LocalitySchema

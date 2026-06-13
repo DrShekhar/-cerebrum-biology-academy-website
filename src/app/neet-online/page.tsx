@@ -99,9 +99,7 @@ export default function NeetOnlinePage() {
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-green-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
-          <div
-            className="mx-auto max-w-4xl text-center animate-fadeInUp"
-          >
+          <div className="mx-auto max-w-4xl text-center animate-fadeInUp">
             <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <Wifi className="mr-1 inline h-4 w-4" />
               Study NEET Online
@@ -155,19 +153,14 @@ export default function NeetOnlinePage() {
       {/* Benefits */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Why Study NEET Online?</h2>
             <p className="text-lg text-gray-600">The smart way to prepare for medical entrance</p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {onlineBenefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <benefit.icon className="mb-4 h-10 w-10 text-blue-600" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.desc}</p>
@@ -180,9 +173,7 @@ export default function NeetOnlinePage() {
       {/* What We Offer */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">What We Offer</h2>
           </div>
 
@@ -208,9 +199,7 @@ export default function NeetOnlinePage() {
       {/* Device Compatibility */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Study on Any Device</h2>
             <p className="text-lg text-gray-600">
               Our platform works seamlessly across all devices
@@ -241,18 +230,13 @@ export default function NeetOnlinePage() {
       {/* FAQs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
           </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>

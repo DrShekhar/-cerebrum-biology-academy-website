@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Reproduction MCQ for NEET 2026 | Free Practice Questions',
-    description: 'Practice 550+ free Reproduction MCQs for NEET. Human reproduction, reproductive health, plant reproduction questions. NCERT-based with detailed explanations.',
+    description:
+      'Practice 550+ free Reproduction MCQs for NEET. Human reproduction, reproductive health, plant reproduction questions. NCERT-based with detailed explanations.',
   },
 }
 

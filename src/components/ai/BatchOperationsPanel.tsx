@@ -391,138 +391,136 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
         )}
 
         {/* Filters Panel */}
-{showFilters && (
-            <div
-              className="overflow-hidden border-t pt-6 mb-6 animate-fadeInUp"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {/* Search */}
-                <div className="md:col-span-3 lg:col-span-1">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Search Questions
-                  </label>
-                  <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                    <input
-                      type="text"
-                      value={filters.searchQuery}
-                      onChange={(e) =>
-                        setFilters((prev) => ({ ...prev, searchQuery: e.target.value }))
-                      }
-                      placeholder="Search question text..."
-                      className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm"
-                    />
-                  </div>
-                </div>
-
-                {/* Difficulty Filter */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Difficulty</label>
-                  <div className="space-y-1">
-                    {['easy', 'medium', 'hard'].map((difficulty) => (
-                      <label key={difficulty} className="flex items-center gap-2 text-sm">
-                        <input
-                          type="checkbox"
-                          checked={filters.difficulty.includes(difficulty)}
-                          onChange={(e) => {
-                            if (e.target.checked) {
-                              setFilters((prev) => ({
-                                ...prev,
-                                difficulty: [...prev.difficulty, difficulty],
-                              }))
-                            } else {
-                              setFilters((prev) => ({
-                                ...prev,
-                                difficulty: prev.difficulty.filter((d) => d !== difficulty),
-                              }))
-                            }
-                          }}
-                          className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
-                        />
-                        <span className="capitalize">{difficulty}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Topics Filter */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Topics</label>
-                  <div className="space-y-1 max-h-32 overflow-y-auto">
-                    {uniqueTopics.map((topic) => (
-                      <label key={topic} className="flex items-center gap-2 text-sm">
-                        <input
-                          type="checkbox"
-                          checked={filters.topics.includes(topic)}
-                          onChange={(e) => {
-                            if (e.target.checked) {
-                              setFilters((prev) => ({ ...prev, topics: [...prev.topics, topic] }))
-                            } else {
-                              setFilters((prev) => ({
-                                ...prev,
-                                topics: prev.topics.filter((t) => t !== topic),
-                              }))
-                            }
-                          }}
-                          className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
-                        />
-                        <span>{topic}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Question Types Filter */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Question Types
-                  </label>
-                  <div className="space-y-1">
-                    {['mcq', 'assertion', 'numerical', 'matching'].map((type) => (
-                      <label key={type} className="flex items-center gap-2 text-sm">
-                        <input
-                          type="checkbox"
-                          checked={filters.types.includes(type)}
-                          onChange={(e) => {
-                            if (e.target.checked) {
-                              setFilters((prev) => ({ ...prev, types: [...prev.types, type] }))
-                            } else {
-                              setFilters((prev) => ({
-                                ...prev,
-                                types: prev.types.filter((t) => t !== type),
-                              }))
-                            }
-                          }}
-                          className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
-                        />
-                        <span className="uppercase">{type}</span>
-                      </label>
-                    ))}
-                  </div>
+        {showFilters && (
+          <div className="overflow-hidden border-t pt-6 mb-6 animate-fadeInUp">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {/* Search */}
+              <div className="md:col-span-3 lg:col-span-1">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Search Questions
+                </label>
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                  <input
+                    type="text"
+                    value={filters.searchQuery}
+                    onChange={(e) =>
+                      setFilters((prev) => ({ ...prev, searchQuery: e.target.value }))
+                    }
+                    placeholder="Search question text..."
+                    className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm"
+                  />
                 </div>
               </div>
 
-              <div className="flex justify-end mt-4 gap-2">
-                <button
-                  onClick={() =>
-                    setFilters({
-                      difficulty: [],
-                      topics: [],
-                      types: [],
-                      bloomsLevels: [],
-                      markRange: [1, 10],
-                      timeRange: [30, 600],
-                      searchQuery: '',
-                    })
-                  }
-                  className="px-3 py-1 text-sm text-gray-600 hover:text-gray-800 transition-colors"
-                >
-                  Clear Filters
-                </button>
+              {/* Difficulty Filter */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Difficulty</label>
+                <div className="space-y-1">
+                  {['easy', 'medium', 'hard'].map((difficulty) => (
+                    <label key={difficulty} className="flex items-center gap-2 text-sm">
+                      <input
+                        type="checkbox"
+                        checked={filters.difficulty.includes(difficulty)}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setFilters((prev) => ({
+                              ...prev,
+                              difficulty: [...prev.difficulty, difficulty],
+                            }))
+                          } else {
+                            setFilters((prev) => ({
+                              ...prev,
+                              difficulty: prev.difficulty.filter((d) => d !== difficulty),
+                            }))
+                          }
+                        }}
+                        className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                      />
+                      <span className="capitalize">{difficulty}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* Topics Filter */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Topics</label>
+                <div className="space-y-1 max-h-32 overflow-y-auto">
+                  {uniqueTopics.map((topic) => (
+                    <label key={topic} className="flex items-center gap-2 text-sm">
+                      <input
+                        type="checkbox"
+                        checked={filters.topics.includes(topic)}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setFilters((prev) => ({ ...prev, topics: [...prev.topics, topic] }))
+                          } else {
+                            setFilters((prev) => ({
+                              ...prev,
+                              topics: prev.topics.filter((t) => t !== topic),
+                            }))
+                          }
+                        }}
+                        className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                      />
+                      <span>{topic}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* Question Types Filter */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Question Types
+                </label>
+                <div className="space-y-1">
+                  {['mcq', 'assertion', 'numerical', 'matching'].map((type) => (
+                    <label key={type} className="flex items-center gap-2 text-sm">
+                      <input
+                        type="checkbox"
+                        checked={filters.types.includes(type)}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setFilters((prev) => ({ ...prev, types: [...prev.types, type] }))
+                          } else {
+                            setFilters((prev) => ({
+                              ...prev,
+                              types: prev.types.filter((t) => t !== type),
+                            }))
+                          }
+                        }}
+                        className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                      />
+                      <span className="uppercase">{type}</span>
+                    </label>
+                  ))}
+                </div>
               </div>
             </div>
-          )}
-</div>
+
+            <div className="flex justify-end mt-4 gap-2">
+              <button
+                onClick={() =>
+                  setFilters({
+                    difficulty: [],
+                    topics: [],
+                    types: [],
+                    bloomsLevels: [],
+                    markRange: [1, 10],
+                    timeRange: [30, 600],
+                    searchQuery: '',
+                  })
+                }
+                className="px-3 py-1 text-sm text-gray-600 hover:text-gray-800 transition-colors"
+              >
+                Clear Filters
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
 
       {/* Questions Table */}
       <div className="bg-white rounded-xl border overflow-hidden">
@@ -661,291 +659,283 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
       </div>
 
       {/* Batch Operation Modal */}
-{activeOperation && (
-          <div
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
-          >
-            <div
-              className="bg-white rounded-xl p-6 max-w-md w-full animate-fadeInUp"
-            >
-              <div className="flex justify-between items-center mb-4">
-                <h4 className="text-lg font-semibold flex items-center gap-2">
-                  {activeOperation.icon}
-                  {activeOperation.label}
-                </h4>
-                <button
-                  onClick={() => setActiveOperation(null)}
-                  className="text-gray-400 hover:text-gray-600"
-                >
-                  <X className="w-5 h-5" />
-                </button>
+      {activeOperation && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp">
+          <div className="bg-white rounded-xl p-6 max-w-md w-full animate-fadeInUp">
+            <div className="flex justify-between items-center mb-4">
+              <h4 className="text-lg font-semibold flex items-center gap-2">
+                {activeOperation.icon}
+                {activeOperation.label}
+              </h4>
+              <button
+                onClick={() => setActiveOperation(null)}
+                className="text-gray-400 hover:text-gray-600"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <p className="text-gray-600 mb-4">{activeOperation.description}</p>
+            <p className="text-sm text-gray-500 mb-4">
+              This will affect {selectedQuestions.size} selected question
+              {selectedQuestions.size !== 1 ? 's' : ''}.
+            </p>
+
+            {activeOperation.requiresInput && (
+              <div className="mb-4">
+                {activeOperation.inputType === 'select' ? (
+                  <select
+                    value={operationValue}
+                    onChange={(e) => setOperationValue(e.target.value)}
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  >
+                    <option value="">Select {activeOperation.type}...</option>
+                    {activeOperation.options?.map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                ) : activeOperation.inputType === 'number' ? (
+                  <input
+                    type="number"
+                    value={operationValue}
+                    onChange={(e) => setOperationValue(e.target.value)}
+                    placeholder={`Enter ${activeOperation.type}...`}
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  />
+                ) : activeOperation.inputType === 'tags' ? (
+                  <input
+                    type="text"
+                    value={operationValue}
+                    onChange={(e) => setOperationValue(e.target.value)}
+                    placeholder="Enter tags separated by commas..."
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  />
+                ) : (
+                  <input
+                    type="text"
+                    value={operationValue}
+                    onChange={(e) => setOperationValue(e.target.value)}
+                    placeholder={`Enter ${activeOperation.type}...`}
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  />
+                )}
+              </div>
+            )}
+
+            <div className="flex justify-end gap-3">
+              <button
+                onClick={() => setActiveOperation(null)}
+                className="px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={() => executeBatchOperation(activeOperation)}
+                disabled={activeOperation.requiresInput && !operationValue}
+                className={`px-4 py-2 rounded-lg transition-colors ${
+                  activeOperation.type === 'delete'
+                    ? 'bg-red-600 text-white hover:bg-red-700'
+                    : 'bg-purple-600 text-white hover:bg-purple-700'
+                } disabled:opacity-50 disabled:cursor-not-allowed`}
+              >
+                {activeOperation.label}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      {/* Bulk Generate Modal */}
+      {showBulkGenerate && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp">
+          <div className="bg-white rounded-xl p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-fadeInUp">
+            <div className="flex justify-between items-center mb-6">
+              <h4 className="text-xl font-semibold flex items-center gap-2">
+                <Plus className="w-5 h-5" />
+                Bulk Question Generation
+              </h4>
+              <button
+                onClick={() => setShowBulkGenerate(false)}
+                className="text-gray-400 hover:text-gray-600"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="space-y-6">
+              {/* Generation Mode */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-3">
+                  Generation Mode
+                </label>
+                <div className="grid grid-cols-3 gap-3">
+                  {[
+                    {
+                      id: 'balanced',
+                      label: 'Balanced',
+                      desc: 'Even distribution across topics',
+                    },
+                    {
+                      id: 'topic-focused',
+                      label: 'Topic Focused',
+                      desc: 'Focus on specific topics',
+                    },
+                    {
+                      id: 'difficulty-focused',
+                      label: 'Difficulty Focused',
+                      desc: 'Focus on difficulty distribution',
+                    },
+                  ].map((mode) => (
+                    <button
+                      key={mode.id}
+                      onClick={() =>
+                        setBulkGenerate((prev) => ({ ...prev, generateMode: mode.id as any }))
+                      }
+                      className={`p-3 border rounded-lg text-left transition-colors ${
+                        bulkGenerate.generateMode === mode.id
+                          ? 'border-purple-300 bg-purple-50'
+                          : 'border-gray-200 hover:border-gray-300'
+                      }`}
+                    >
+                      <div className="font-medium text-sm">{mode.label}</div>
+                      <div className="text-xs text-gray-600 mt-1">{mode.desc}</div>
+                    </button>
+                  ))}
+                </div>
               </div>
 
-              <p className="text-gray-600 mb-4">{activeOperation.description}</p>
-              <p className="text-sm text-gray-500 mb-4">
-                This will affect {selectedQuestions.size} selected question
-                {selectedQuestions.size !== 1 ? 's' : ''}.
-              </p>
+              {/* Topics Selection */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-3">
+                  Topics to Generate
+                </label>
+                <div className="grid grid-cols-2 gap-2 max-h-40 overflow-y-auto border rounded-lg p-3">
+                  {uniqueTopics.map((topic) => (
+                    <label key={topic} className="flex items-center gap-2 text-sm">
+                      <input
+                        type="checkbox"
+                        checked={bulkGenerate.topicsToGenerate.includes(topic)}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setBulkGenerate((prev) => ({
+                              ...prev,
+                              topicsToGenerate: [...prev.topicsToGenerate, topic],
+                            }))
+                          } else {
+                            setBulkGenerate((prev) => ({
+                              ...prev,
+                              topicsToGenerate: prev.topicsToGenerate.filter((t) => t !== topic),
+                            }))
+                          }
+                        }}
+                        className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                      />
+                      {topic}
+                    </label>
+                  ))}
+                </div>
+              </div>
 
-              {activeOperation.requiresInput && (
-                <div className="mb-4">
-                  {activeOperation.inputType === 'select' ? (
-                    <select
-                      value={operationValue}
-                      onChange={(e) => setOperationValue(e.target.value)}
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    >
-                      <option value="">Select {activeOperation.type}...</option>
-                      {activeOperation.options?.map((option) => (
-                        <option key={option} value={option}>
-                          {option}
-                        </option>
-                      ))}
-                    </select>
-                  ) : activeOperation.inputType === 'number' ? (
-                    <input
-                      type="number"
-                      value={operationValue}
-                      onChange={(e) => setOperationValue(e.target.value)}
-                      placeholder={`Enter ${activeOperation.type}...`}
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    />
-                  ) : activeOperation.inputType === 'tags' ? (
-                    <input
-                      type="text"
-                      value={operationValue}
-                      onChange={(e) => setOperationValue(e.target.value)}
-                      placeholder="Enter tags separated by commas..."
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    />
-                  ) : (
-                    <input
-                      type="text"
-                      value={operationValue}
-                      onChange={(e) => setOperationValue(e.target.value)}
-                      placeholder={`Enter ${activeOperation.type}...`}
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    />
+              {/* Generation Settings */}
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Total Questions
+                  </label>
+                  <input
+                    type="number"
+                    value={bulkGenerate.totalQuestions}
+                    onChange={(e) =>
+                      setBulkGenerate((prev) => ({
+                        ...prev,
+                        totalQuestions: parseInt(e.target.value) || 50,
+                      }))
+                    }
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Questions per Topic
+                  </label>
+                  <input
+                    type="number"
+                    value={bulkGenerate.questionsPerTopic}
+                    onChange={(e) =>
+                      setBulkGenerate((prev) => ({
+                        ...prev,
+                        questionsPerTopic: parseInt(e.target.value) || 5,
+                      }))
+                    }
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  />
+                </div>
+              </div>
+
+              {/* Difficulty Distribution */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-3">
+                  Difficulty Distribution
+                </label>
+                <div className="space-y-3">
+                  {Object.entries(bulkGenerate.difficultyDistribution).map(
+                    ([difficulty, percentage]) => (
+                      <div key={difficulty} className="flex items-center gap-3">
+                        <span className="w-16 text-sm capitalize">{difficulty}:</span>
+                        <input
+                          type="range"
+                          min="0"
+                          max="100"
+                          value={percentage}
+                          onChange={(e) =>
+                            setBulkGenerate((prev) => ({
+                              ...prev,
+                              difficultyDistribution: {
+                                ...prev.difficultyDistribution,
+                                [difficulty]: parseInt(e.target.value),
+                              },
+                            }))
+                          }
+                          className="flex-1"
+                        />
+                        <span className="w-8 text-sm">{percentage}%</span>
+                      </div>
+                    )
                   )}
                 </div>
-              )}
+              </div>
 
-              <div className="flex justify-end gap-3">
+              <div className="flex justify-end gap-3 pt-4 border-t">
                 <button
-                  onClick={() => setActiveOperation(null)}
-                  className="px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors"
+                  onClick={() => setShowBulkGenerate(false)}
+                  className="px-6 py-2 text-gray-600 hover:text-gray-800 transition-colors"
                 >
                   Cancel
                 </button>
                 <button
-                  onClick={() => executeBatchOperation(activeOperation)}
-                  disabled={activeOperation.requiresInput && !operationValue}
-                  className={`px-4 py-2 rounded-lg transition-colors ${
-                    activeOperation.type === 'delete'
-                      ? 'bg-red-600 text-white hover:bg-red-700'
-                      : 'bg-purple-600 text-white hover:bg-purple-700'
-                  } disabled:opacity-50 disabled:cursor-not-allowed`}
+                  onClick={handleBulkGenerate}
+                  disabled={isGenerating || bulkGenerate.topicsToGenerate.length === 0}
+                  className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                 >
-                  {activeOperation.label}
+                  {isGenerating ? (
+                    <>
+                      <RefreshCw className="w-4 h-4 animate-spin" />
+                      Generating...
+                    </>
+                  ) : (
+                    <>
+                      <PlayCircle className="w-4 h-4" />
+                      Generate Questions
+                    </>
+                  )}
                 </button>
               </div>
             </div>
           </div>
-        )}
-{/* Bulk Generate Modal */}
-{showBulkGenerate && (
-          <div
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
-          >
-            <div
-              className="bg-white rounded-xl p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-fadeInUp"
-            >
-              <div className="flex justify-between items-center mb-6">
-                <h4 className="text-xl font-semibold flex items-center gap-2">
-                  <Plus className="w-5 h-5" />
-                  Bulk Question Generation
-                </h4>
-                <button
-                  onClick={() => setShowBulkGenerate(false)}
-                  className="text-gray-400 hover:text-gray-600"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-
-              <div className="space-y-6">
-                {/* Generation Mode */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">
-                    Generation Mode
-                  </label>
-                  <div className="grid grid-cols-3 gap-3">
-                    {[
-                      {
-                        id: 'balanced',
-                        label: 'Balanced',
-                        desc: 'Even distribution across topics',
-                      },
-                      {
-                        id: 'topic-focused',
-                        label: 'Topic Focused',
-                        desc: 'Focus on specific topics',
-                      },
-                      {
-                        id: 'difficulty-focused',
-                        label: 'Difficulty Focused',
-                        desc: 'Focus on difficulty distribution',
-                      },
-                    ].map((mode) => (
-                      <button
-                        key={mode.id}
-                        onClick={() =>
-                          setBulkGenerate((prev) => ({ ...prev, generateMode: mode.id as any }))
-                        }
-                        className={`p-3 border rounded-lg text-left transition-colors ${
-                          bulkGenerate.generateMode === mode.id
-                            ? 'border-purple-300 bg-purple-50'
-                            : 'border-gray-200 hover:border-gray-300'
-                        }`}
-                      >
-                        <div className="font-medium text-sm">{mode.label}</div>
-                        <div className="text-xs text-gray-600 mt-1">{mode.desc}</div>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Topics Selection */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">
-                    Topics to Generate
-                  </label>
-                  <div className="grid grid-cols-2 gap-2 max-h-40 overflow-y-auto border rounded-lg p-3">
-                    {uniqueTopics.map((topic) => (
-                      <label key={topic} className="flex items-center gap-2 text-sm">
-                        <input
-                          type="checkbox"
-                          checked={bulkGenerate.topicsToGenerate.includes(topic)}
-                          onChange={(e) => {
-                            if (e.target.checked) {
-                              setBulkGenerate((prev) => ({
-                                ...prev,
-                                topicsToGenerate: [...prev.topicsToGenerate, topic],
-                              }))
-                            } else {
-                              setBulkGenerate((prev) => ({
-                                ...prev,
-                                topicsToGenerate: prev.topicsToGenerate.filter((t) => t !== topic),
-                              }))
-                            }
-                          }}
-                          className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
-                        />
-                        {topic}
-                      </label>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Generation Settings */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Total Questions
-                    </label>
-                    <input
-                      type="number"
-                      value={bulkGenerate.totalQuestions}
-                      onChange={(e) =>
-                        setBulkGenerate((prev) => ({
-                          ...prev,
-                          totalQuestions: parseInt(e.target.value) || 50,
-                        }))
-                      }
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Questions per Topic
-                    </label>
-                    <input
-                      type="number"
-                      value={bulkGenerate.questionsPerTopic}
-                      onChange={(e) =>
-                        setBulkGenerate((prev) => ({
-                          ...prev,
-                          questionsPerTopic: parseInt(e.target.value) || 5,
-                        }))
-                      }
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    />
-                  </div>
-                </div>
-
-                {/* Difficulty Distribution */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">
-                    Difficulty Distribution
-                  </label>
-                  <div className="space-y-3">
-                    {Object.entries(bulkGenerate.difficultyDistribution).map(
-                      ([difficulty, percentage]) => (
-                        <div key={difficulty} className="flex items-center gap-3">
-                          <span className="w-16 text-sm capitalize">{difficulty}:</span>
-                          <input
-                            type="range"
-                            min="0"
-                            max="100"
-                            value={percentage}
-                            onChange={(e) =>
-                              setBulkGenerate((prev) => ({
-                                ...prev,
-                                difficultyDistribution: {
-                                  ...prev.difficultyDistribution,
-                                  [difficulty]: parseInt(e.target.value),
-                                },
-                              }))
-                            }
-                            className="flex-1"
-                          />
-                          <span className="w-8 text-sm">{percentage}%</span>
-                        </div>
-                      )
-                    )}
-                  </div>
-                </div>
-
-                <div className="flex justify-end gap-3 pt-4 border-t">
-                  <button
-                    onClick={() => setShowBulkGenerate(false)}
-                    className="px-6 py-2 text-gray-600 hover:text-gray-800 transition-colors"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    onClick={handleBulkGenerate}
-                    disabled={isGenerating || bulkGenerate.topicsToGenerate.length === 0}
-                    className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-                  >
-                    {isGenerating ? (
-                      <>
-                        <RefreshCw className="w-4 h-4 animate-spin" />
-                        Generating...
-                      </>
-                    ) : (
-                      <>
-                        <PlayCircle className="w-4 h-4" />
-                        Generate Questions
-                      </>
-                    )}
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-</div>
+        </div>
+      )}
+    </div>
   )
 }
 

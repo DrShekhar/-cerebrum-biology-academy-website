@@ -333,7 +333,8 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     ],
     faqs: [
       {
-        question: 'How does Cerebrum compare to the largest national NEET chains and online-first generalist platforms?',
+        question:
+          'How does Cerebrum compare to the largest national NEET chains and online-first generalist platforms?',
         answer:
           'While big institutes have brand value, they often have 100+ student batches where individual attention is impossible. Cerebrum offers AIIMS-trained faculty, 10-15 student batches, and personalized mentoring at 50% lower cost. Our results speak for themselves - 98% selection rate with 330+ average biology scores.',
       },

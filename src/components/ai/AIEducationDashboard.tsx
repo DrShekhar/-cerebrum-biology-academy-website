@@ -347,7 +347,7 @@ export function AIEducationDashboard() {
       // Add welcome message from AI
       const welcomeMessage = {
         id: `msg_${Date.now()}`,
-        text: "Welcome to Ceri AI Biology Tutor! 🧬\n\n📝 Ask text questions for detailed explanations\n📸 Upload images of diagrams and specimens for analysis\n🎤 Send voice notes with your doubts\n\nWhat would you like to learn about today?",
+        text: 'Welcome to Ceri AI Biology Tutor! 🧬\n\n📝 Ask text questions for detailed explanations\n📸 Upload images of diagrams and specimens for analysis\n🎤 Send voice notes with your doubts\n\nWhat would you like to learn about today?',
         sender: 'ai' as const,
         timestamp: new Date(),
         type: 'text' as const,
@@ -765,380 +765,364 @@ export function AIEducationDashboard() {
             )}
           </div>
         </div>
-{activeTab === 'overview' && (
-            <div
-              key="overview"
-              className="space-y-8 animate-fadeInUp"
-            >
-              {/* Visual Progress Cards */}
-              {metrics.totalQuestions > 0 ||
-              progressData.syllabus.completed > 0 ||
-              progressData.studyHours.hours > 0 ? (
-                <div
-                  className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 animate-fadeInUp"
-                >
-                  <div
-                   className="animate-fadeInUp">
-                    <SyllabusCard
-                      completed={progressData.syllabus.completed}
-                      total={progressData.syllabus.total}
-                      change="+5%"
-                      showMilestones={true}
-                    />
-                  </div>
-
-                  <div
-                   className="animate-fadeInUp">
-                    <StudyHoursCard
-                      hours={progressData.studyHours.hours}
-                      target={progressData.studyHours.target}
-                      change="+8h"
-                    />
-                  </div>
-
-                  <div
-                   className="animate-fadeInUp">
-                    <TestScoreCard
-                      score={progressData.testScore.score}
-                      maxScore={progressData.testScore.maxScore}
-                      change="+2.5%"
-                    />
-                  </div>
-
-                  <div
-                   className="animate-fadeInUp">
-                    <StreakCard
-                      days={progressData.streak.days}
-                      bestStreak={progressData.streak.bestStreak}
-                      change="+3 days"
-                    />
-                  </div>
+        {activeTab === 'overview' && (
+          <div key="overview" className="space-y-8 animate-fadeInUp">
+            {/* Visual Progress Cards */}
+            {metrics.totalQuestions > 0 ||
+            progressData.syllabus.completed > 0 ||
+            progressData.studyHours.hours > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 animate-fadeInUp">
+                <div className="animate-fadeInUp">
+                  <SyllabusCard
+                    completed={progressData.syllabus.completed}
+                    total={progressData.syllabus.total}
+                    change="+5%"
+                    showMilestones={true}
+                  />
                 </div>
-              ) : (
-                <div className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl">
+
+                <div className="animate-fadeInUp">
+                  <StudyHoursCard
+                    hours={progressData.studyHours.hours}
+                    target={progressData.studyHours.target}
+                    change="+8h"
+                  />
+                </div>
+
+                <div className="animate-fadeInUp">
+                  <TestScoreCard
+                    score={progressData.testScore.score}
+                    maxScore={progressData.testScore.maxScore}
+                    change="+2.5%"
+                  />
+                </div>
+
+                <div className="animate-fadeInUp">
+                  <StreakCard
+                    days={progressData.streak.days}
+                    bestStreak={progressData.streak.bestStreak}
+                    change="+3 days"
+                  />
+                </div>
+              </div>
+            ) : (
+              <div className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl">
+                <EmptyState
+                  icon={BookOpen}
+                  title="Welcome to Cerebrum Biology Academy"
+                  description="Experience our AI-powered learning platform. Try our AI Tutor for free or book a demo to see the full range of features."
+                  primaryAction={{
+                    label: 'Try AI Tutor',
+                    onClick: () => setActiveTab('tutor'),
+                  }}
+                  secondaryAction={{
+                    label: 'Book Free Demo',
+                    href: '/demo-booking',
+                  }}
+                  size="lg"
+                  variant="default"
+                />
+              </div>
+            )}
+
+            {/* Main Content Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+              {/* AI Predictions */}
+              <div className="lg:col-span-2 backdrop-blur-xl bg-white/10 rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 shadow-xl">
+                <div className="flex items-center justify-between mb-6 sm:mb-8">
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-800 flex items-center">
+                    <Zap className="w-5 h-5 mr-2 sm:mr-3 text-yellow-500" />
+                    AI Predictions
+                  </h3>
+                  <button
+                    onClick={handleViewDetails}
+                    className="text-sm text-blue-600 hover:text-blue-700 font-medium"
+                  >
+                    View Details
+                  </button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                  {[
+                    {
+                      label: 'Predicted Biology Score',
+                      value: Math.round(metrics.predictions.examScore / 2),
+                      max: 360,
+                      color: 'purple',
+                      icon: GraduationCap,
+                      showTotal: true,
+                      totalValue: metrics.predictions.examScore,
+                    },
+                    {
+                      label: 'Exam Readiness',
+                      value: metrics.predictions.readiness,
+                      max: 100,
+                      color: 'blue',
+                      icon: CheckCircle,
+                    },
+                    {
+                      label: 'Expected Rank',
+                      value: metrics.predictions.rank,
+                      max: 10000,
+                      color: 'green',
+                      icon: Award,
+                      isRank: true,
+                    },
+                  ].map((prediction, index) => {
+                    const iconColorClass =
+                      prediction.color === 'purple'
+                        ? 'text-purple-500'
+                        : prediction.color === 'blue'
+                          ? 'text-blue-500'
+                          : 'text-green-600'
+
+                    const gradientClass =
+                      prediction.color === 'purple'
+                        ? 'bg-gradient-to-r from-purple-400 to-purple-600'
+                        : prediction.color === 'blue'
+                          ? 'bg-gradient-to-r from-blue-400 to-blue-600'
+                          : 'bg-gradient-to-r from-green-400 to-green-600'
+
+                    return (
+                      <div
+                        key={prediction.label}
+                        className="backdrop-blur-lg bg-white/20 rounded-xl p-4 sm:p-6 border border-white/30 shadow-lg animate-fadeInUp"
+                      >
+                        <div className="flex items-center justify-between mb-3 sm:mb-4">
+                          <prediction.icon className={`w-5 h-5 sm:w-6 sm:h-6 ${iconColorClass}`} />
+                          <span className="text-xs text-gray-500 font-medium uppercase tracking-wide">
+                            {prediction.isRank ? 'Lower is Better' : 'Target'}
+                          </span>
+                        </div>
+                        <p className="text-sm text-gray-600 mb-2 sm:mb-3">{prediction.label}</p>
+                        <p className="text-2xl sm:text-3xl font-bold text-gray-800 mb-1">
+                          {prediction.isRank ? '#' : ''}
+                          {prediction.value}
+                          {!prediction.isRank && prediction.max > 100 ? `/${prediction.max}` : ''}
+                          {!prediction.isRank && prediction.max <= 100 ? '%' : ''}
+                        </p>
+                        {prediction.showTotal && (
+                          <p className="text-xs text-gray-500 mb-2">
+                            Total NEET: {prediction.totalValue}/720
+                          </p>
+                        )}
+                        {!prediction.isRank && (
+                          <div className="w-full bg-gray-200 rounded-full h-2 sm:h-2.5">
+                            <div
+                              className={`${gradientClass} h-2 sm:h-2.5 rounded-full transition-all duration-500`}
+                              style={{ width: `${(prediction.value / prediction.max) * 100}%` }}
+                            ></div>
+                          </div>
+                        )}
+                      </div>
+                    )
+                  })}
+                </div>
+
+                {/* Quick Actions - Marketing CTAs */}
+                <div className="mt-6 sm:mt-8 flex flex-wrap gap-2 sm:gap-3">
+                  <button
+                    onClick={() => setActiveTab('tutor')}
+                    className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px] animate-fadeInUp"
+                    aria-label="Try AI Tutor"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    <span>Try AI Tutor</span>
+                  </button>
+                  <ContextualWhatsAppLink
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-[#4a5d4a] text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px] animate-fadeInUp"
+                    aria-label="Book Free Demo"
+                  >
+                    <Calendar className="w-4 h-4" />
+                    <span>Book Free Demo</span>
+                  </ContextualWhatsAppLink>
+                  <a
+                    href="/courses"
+                    className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px] animate-fadeInUp"
+                    aria-label="View Courses"
+                  >
+                    <BookOpen className="w-4 h-4" />
+                    <span>View Courses</span>
+                  </a>
+                  <a
+                    href="/sign-up"
+                    className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px] animate-fadeInUp"
+                    aria-label="Enroll Now"
+                  >
+                    <GraduationCap className="w-4 h-4" />
+                    <span>Enroll Now</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Recent Activity */}
+              <div className="backdrop-blur-xl bg-white/10 rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 shadow-xl">
+                <div className="flex items-center justify-between mb-6 sm:mb-8">
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-800 flex items-center">
+                    <Activity className="w-5 h-5 mr-2 sm:mr-3 text-green-600" />
+                    Recent Activity
+                  </h3>
+                  {recentActivities.length > 0 && (
+                    <button
+                      onClick={handleViewAll}
+                      className="text-sm text-blue-600 hover:text-blue-700 font-medium"
+                    >
+                      View All
+                    </button>
+                  )}
+                </div>
+
+                {recentActivities.length > 0 ? (
+                  <div className="space-y-3 sm:space-y-4">
+                    {recentActivities.map((activity, index) => (
+                      <div
+                        key={activity.id}
+                        className="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 backdrop-blur-lg bg-white/20 rounded-lg border border-white/30 hover:shadow-lg transition-shadow animate-fadeInUp"
+                      >
+                        <div
+                          className={`w-8 h-8 rounded-lg flex items-center justify-center ${
+                            activity.type === 'doubt'
+                              ? 'bg-purple-100 text-purple-600'
+                              : activity.type === 'assessment'
+                                ? 'bg-green-100 text-green-600'
+                                : activity.type === 'achievement'
+                                  ? 'bg-yellow-100 text-yellow-600'
+                                  : 'bg-blue-100 text-blue-600'
+                          }`}
+                        >
+                          {activity.icon}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-medium text-gray-800 truncate">
+                            {activity.title}
+                          </p>
+                          <p className="text-xs text-gray-500 mt-1">{activity.description}</p>
+                          <p className="text-xs text-gray-400 mt-1">
+                            {new Intl.RelativeTimeFormat().format(
+                              Math.round((activity.timestamp.getTime() - Date.now()) / (1000 * 60)),
+                              'minute'
+                            )}
+                          </p>
+                        </div>
+                        {activity.success && (
+                          <CheckCircle className="w-4 h-4 text-green-600 mt-1" />
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                ) : (
                   <EmptyState
-                    icon={BookOpen}
-                    title="Welcome to Cerebrum Biology Academy"
-                    description="Experience our AI-powered learning platform. Try our AI Tutor for free or book a demo to see the full range of features."
+                    icon={TrendingUp}
+                    title="Your learning journey begins here"
+                    description="Try our AI Tutor for instant Biology help or enroll to unlock the full personalized learning experience."
                     primaryAction={{
                       label: 'Try AI Tutor',
                       onClick: () => setActiveTab('tutor'),
                     }}
                     secondaryAction={{
-                      label: 'Book Free Demo',
-                      href: '/demo-booking',
+                      label: 'Enroll Now',
+                      href: '/sign-up',
                     }}
-                    size="lg"
-                    variant="default"
+                    size="md"
+                    variant="info"
                   />
-                </div>
-              )}
+                )}
+              </div>
+            </div>
 
-              {/* Main Content Grid */}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
-                {/* AI Predictions */}
-                <div className="lg:col-span-2 backdrop-blur-xl bg-white/10 rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 shadow-xl">
-                  <div className="flex items-center justify-between mb-6 sm:mb-8">
-                    <h3 className="text-lg sm:text-xl font-semibold text-gray-800 flex items-center">
-                      <Zap className="w-5 h-5 mr-2 sm:mr-3 text-yellow-500" />
-                      AI Predictions
-                    </h3>
-                    <button
-                      onClick={handleViewDetails}
-                      className="text-sm text-blue-600 hover:text-blue-700 font-medium"
-                    >
-                      View Details
-                    </button>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-                    {[
-                      {
-                        label: 'Predicted Biology Score',
-                        value: Math.round(metrics.predictions.examScore / 2),
-                        max: 360,
-                        color: 'purple',
-                        icon: GraduationCap,
-                        showTotal: true,
-                        totalValue: metrics.predictions.examScore,
-                      },
-                      {
-                        label: 'Exam Readiness',
-                        value: metrics.predictions.readiness,
-                        max: 100,
-                        color: 'blue',
-                        icon: CheckCircle,
-                      },
-                      {
-                        label: 'Expected Rank',
-                        value: metrics.predictions.rank,
-                        max: 10000,
-                        color: 'green',
-                        icon: Award,
-                        isRank: true,
-                      },
-                    ].map((prediction, index) => {
-                      const iconColorClass =
-                        prediction.color === 'purple'
-                          ? 'text-purple-500'
-                          : prediction.color === 'blue'
-                            ? 'text-blue-500'
-                            : 'text-green-600'
-
-                      const gradientClass =
-                        prediction.color === 'purple'
-                          ? 'bg-gradient-to-r from-purple-400 to-purple-600'
-                          : prediction.color === 'blue'
-                            ? 'bg-gradient-to-r from-blue-400 to-blue-600'
-                            : 'bg-gradient-to-r from-green-400 to-green-600'
-
-                      return (
-                        <div
-                          key={prediction.label}
-                          className="backdrop-blur-lg bg-white/20 rounded-xl p-4 sm:p-6 border border-white/30 shadow-lg animate-fadeInUp"
-                        >
-                          <div className="flex items-center justify-between mb-3 sm:mb-4">
-                            <prediction.icon
-                              className={`w-5 h-5 sm:w-6 sm:h-6 ${iconColorClass}`}
-                            />
-                            <span className="text-xs text-gray-500 font-medium uppercase tracking-wide">
-                              {prediction.isRank ? 'Lower is Better' : 'Target'}
-                            </span>
-                          </div>
-                          <p className="text-sm text-gray-600 mb-2 sm:mb-3">{prediction.label}</p>
-                          <p className="text-2xl sm:text-3xl font-bold text-gray-800 mb-1">
-                            {prediction.isRank ? '#' : ''}
-                            {prediction.value}
-                            {!prediction.isRank && prediction.max > 100 ? `/${prediction.max}` : ''}
-                            {!prediction.isRank && prediction.max <= 100 ? '%' : ''}
-                          </p>
-                          {prediction.showTotal && (
-                            <p className="text-xs text-gray-500 mb-2">
-                              Total NEET: {prediction.totalValue}/720
-                            </p>
-                          )}
-                          {!prediction.isRank && (
-                            <div className="w-full bg-gray-200 rounded-full h-2 sm:h-2.5">
-                              <div
-                                className={`${gradientClass} h-2 sm:h-2.5 rounded-full transition-all duration-500`}
-                                style={{ width: `${(prediction.value / prediction.max) * 100}%` }}
-                              ></div>
-                            </div>
-                          )}
-                        </div>
-                      )
-                    })}
-                  </div>
-
-                  {/* Quick Actions - Marketing CTAs */}
-                  <div className="mt-6 sm:mt-8 flex flex-wrap gap-2 sm:gap-3">
-                    <button
-                      onClick={() => setActiveTab('tutor')}
-                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px] animate-fadeInUp"
-                      aria-label="Try AI Tutor"
-                    >
-                      <MessageCircle className="w-4 h-4" />
-                      <span>Try AI Tutor</span>
-                    </button>
-                    <ContextualWhatsAppLink target="_blank" rel="noopener noreferrer"
-                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-[#4a5d4a] text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px] animate-fadeInUp"
-                      aria-label="Book Free Demo"
-                    >
-                      <Calendar className="w-4 h-4" />
-                      <span>Book Free Demo</span>
-                    </ContextualWhatsAppLink>
-                    <a
-                      href="/courses"
-                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px] animate-fadeInUp"
-                      aria-label="View Courses"
-                    >
-                      <BookOpen className="w-4 h-4" />
-                      <span>View Courses</span>
-                    </a>
-                    <a
-                      href="/sign-up"
-                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px] animate-fadeInUp"
-                      aria-label="Enroll Now"
-                    >
-                      <GraduationCap className="w-4 h-4" />
-                      <span>Enroll Now</span>
-                    </a>
-                  </div>
-                </div>
-
-                {/* Recent Activity */}
-                <div className="backdrop-blur-xl bg-white/10 rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 shadow-xl">
-                  <div className="flex items-center justify-between mb-6 sm:mb-8">
-                    <h3 className="text-lg sm:text-xl font-semibold text-gray-800 flex items-center">
-                      <Activity className="w-5 h-5 mr-2 sm:mr-3 text-green-600" />
-                      Recent Activity
-                    </h3>
-                    {recentActivities.length > 0 && (
-                      <button
-                        onClick={handleViewAll}
-                        className="text-sm text-blue-600 hover:text-blue-700 font-medium"
-                      >
-                        View All
-                      </button>
-                    )}
-                  </div>
-
-                  {recentActivities.length > 0 ? (
-                    <div className="space-y-3 sm:space-y-4">
-                      {recentActivities.map((activity, index) => (
-                        <div
-                          key={activity.id}
-                          className="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 backdrop-blur-lg bg-white/20 rounded-lg border border-white/30 hover:shadow-lg transition-shadow animate-fadeInUp"
-                        >
-                          <div
-                            className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                              activity.type === 'doubt'
-                                ? 'bg-purple-100 text-purple-600'
-                                : activity.type === 'assessment'
-                                  ? 'bg-green-100 text-green-600'
-                                  : activity.type === 'achievement'
-                                    ? 'bg-yellow-100 text-yellow-600'
-                                    : 'bg-blue-100 text-blue-600'
-                            }`}
-                          >
-                            {activity.icon}
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <p className="text-sm font-medium text-gray-800 truncate">
-                              {activity.title}
-                            </p>
-                            <p className="text-xs text-gray-500 mt-1">{activity.description}</p>
-                            <p className="text-xs text-gray-400 mt-1">
-                              {new Intl.RelativeTimeFormat().format(
-                                Math.round(
-                                  (activity.timestamp.getTime() - Date.now()) / (1000 * 60)
-                                ),
-                                'minute'
-                              )}
-                            </p>
-                          </div>
-                          {activity.success && (
-                            <CheckCircle className="w-4 h-4 text-green-600 mt-1" />
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  ) : (
-                    <EmptyState
-                      icon={TrendingUp}
-                      title="Your learning journey begins here"
-                      description="Try our AI Tutor for instant Biology help or enroll to unlock the full personalized learning experience."
-                      primaryAction={{
-                        label: 'Try AI Tutor',
-                        onClick: () => setActiveTab('tutor'),
-                      }}
-                      secondaryAction={{
-                        label: 'Enroll Now',
-                        href: '/sign-up',
-                      }}
-                      size="md"
-                      variant="info"
-                    />
-                  )}
+            {/* Progress Chart */}
+            <div className="backdrop-blur-xl bg-white/10 rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 shadow-xl">
+              <div className="flex items-center justify-between mb-6 sm:mb-8">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 flex items-center">
+                  <PieChart className="w-5 h-5 mr-2 sm:mr-3 text-indigo-500" />
+                  Learning Progress
+                </h3>
+                <div className="flex space-x-2">
+                  <button
+                    onClick={() => setTimeFilter('week')}
+                    className={`text-sm px-3 py-1 rounded-lg font-medium ${
+                      timeFilter === 'week'
+                        ? 'bg-indigo-100 text-indigo-600'
+                        : 'text-gray-500 hover:text-gray-700'
+                    }`}
+                  >
+                    This Week
+                  </button>
+                  <button
+                    onClick={() => setTimeFilter('month')}
+                    className={`text-sm px-3 py-1 rounded-lg font-medium ${
+                      timeFilter === 'month'
+                        ? 'bg-indigo-100 text-indigo-600'
+                        : 'text-gray-500 hover:text-gray-700'
+                    }`}
+                  >
+                    This Month
+                  </button>
                 </div>
               </div>
 
-              {/* Progress Chart */}
-              <div className="backdrop-blur-xl bg-white/10 rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 shadow-xl">
-                <div className="flex items-center justify-between mb-6 sm:mb-8">
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-800 flex items-center">
-                    <PieChart className="w-5 h-5 mr-2 sm:mr-3 text-indigo-500" />
-                    Learning Progress
-                  </h3>
-                  <div className="flex space-x-2">
-                    <button
-                      onClick={() => setTimeFilter('week')}
-                      className={`text-sm px-3 py-1 rounded-lg font-medium ${
-                        timeFilter === 'week'
-                          ? 'bg-indigo-100 text-indigo-600'
-                          : 'text-gray-500 hover:text-gray-700'
-                      }`}
-                    >
-                      This Week
-                    </button>
-                    <button
-                      onClick={() => setTimeFilter('month')}
-                      className={`text-sm px-3 py-1 rounded-lg font-medium ${
-                        timeFilter === 'month'
-                          ? 'bg-indigo-100 text-indigo-600'
-                          : 'text-gray-500 hover:text-gray-700'
-                      }`}
-                    >
-                      This Month
-                    </button>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-                  {[
-                    { subject: 'Cell Biology', progress: 85, colorClass: 'text-purple-500' },
-                    { subject: 'Genetics', progress: 72, colorClass: 'text-blue-500' },
-                    { subject: 'Ecology', progress: 90, colorClass: 'text-green-600' },
-                    { subject: 'Physiology', progress: 68, colorClass: 'text-orange-500' },
-                  ].map((subject, index) => (
-                    <div
-                      key={subject.subject}
-                      className="text-center animate-fadeInUp"
-                    >
-                      <div className="relative w-20 h-20 mx-auto mb-3">
-                        <svg className="w-20 h-20 transform -rotate-90" viewBox="0 0 100 100">
-                          <circle
-                            cx="50"
-                            cy="50"
-                            r="40"
-                            stroke="currentColor"
-                            strokeWidth="8"
-                            fill="transparent"
-                            className="text-gray-200"
-                          />
-                          <circle
-                            cx="50"
-                            cy="50"
-                            r="40"
-                            stroke="currentColor"
-                            strokeWidth="8"
-                            fill="transparent"
-                            strokeDasharray={`${2 * Math.PI * 40}`}
-                            strokeDashoffset={`${2 * Math.PI * 40 * (1 - subject.progress / 100)}`}
-                            className={`${subject.colorClass} transition-all duration-1000`}
-                            strokeLinecap="round"
-                          />
-                        </svg>
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <span className="text-lg font-bold text-gray-800">
-                            {subject.progress}%
-                          </span>
-                        </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+                {[
+                  { subject: 'Cell Biology', progress: 85, colorClass: 'text-purple-500' },
+                  { subject: 'Genetics', progress: 72, colorClass: 'text-blue-500' },
+                  { subject: 'Ecology', progress: 90, colorClass: 'text-green-600' },
+                  { subject: 'Physiology', progress: 68, colorClass: 'text-orange-500' },
+                ].map((subject, index) => (
+                  <div key={subject.subject} className="text-center animate-fadeInUp">
+                    <div className="relative w-20 h-20 mx-auto mb-3">
+                      <svg className="w-20 h-20 transform -rotate-90" viewBox="0 0 100 100">
+                        <circle
+                          cx="50"
+                          cy="50"
+                          r="40"
+                          stroke="currentColor"
+                          strokeWidth="8"
+                          fill="transparent"
+                          className="text-gray-200"
+                        />
+                        <circle
+                          cx="50"
+                          cy="50"
+                          r="40"
+                          stroke="currentColor"
+                          strokeWidth="8"
+                          fill="transparent"
+                          strokeDasharray={`${2 * Math.PI * 40}`}
+                          strokeDashoffset={`${2 * Math.PI * 40 * (1 - subject.progress / 100)}`}
+                          className={`${subject.colorClass} transition-all duration-1000`}
+                          strokeLinecap="round"
+                        />
+                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-lg font-bold text-gray-800">{subject.progress}%</span>
                       </div>
-                      <p className="text-sm font-medium text-gray-700">{subject.subject}</p>
                     </div>
-                  ))}
-                </div>
+                    <p className="text-sm font-medium text-gray-700">{subject.subject}</p>
+                  </div>
+                ))}
               </div>
             </div>
-          )}
+          </div>
+        )}
 
-          {activeTab === 'tutor' && (
-            <div
-              key="tutor"
-              className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl animate-fadeInUp"
-              style={{ pointerEvents: 'all' }}
-            >
-              <EnhancedChatInterface
-                isOpen={showChatInterface}
-                onClose={() => setShowChatInterface(false)}
-                messages={chatMessages}
-                onSendMessage={handleStartConversation}
-                isLoading={isChatLoading}
-              />
-            </div>
-          )}
-{/* Activity History Modal */}
+        {activeTab === 'tutor' && (
+          <div
+            key="tutor"
+            className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl animate-fadeInUp"
+            style={{ pointerEvents: 'all' }}
+          >
+            <EnhancedChatInterface
+              isOpen={showChatInterface}
+              onClose={() => setShowChatInterface(false)}
+              messages={chatMessages}
+              onSendMessage={handleStartConversation}
+              isLoading={isChatLoading}
+            />
+          </div>
+        )}
+        {/* Activity History Modal */}
         <ActivityHistoryModal
           isOpen={showActivityHistory}
           onClose={() => setShowActivityHistory(false)}

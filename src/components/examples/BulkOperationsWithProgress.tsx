@@ -211,145 +211,133 @@ export default function BulkOperationsWithProgress() {
             })}
           </div>
         </div>
-{!isProcessing && processedCount === 0 && (
-            <div
-              key="ready"
-              className="space-y-6 animate-fadeInUp"
-            >
-              <div className="bg-slate-50 rounded-lg p-6 space-y-4">
-                <h3 className="font-semibold text-slate-900">Operation Details</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="text-center p-3 bg-white rounded-lg">
-                    <p className="text-2xl font-bold text-slate-900">{totalItems}</p>
-                    <p className="text-xs text-slate-600">Total Items</p>
-                  </div>
-                  <div className="text-center p-3 bg-white rounded-lg">
-                    <p className="text-2xl font-bold text-slate-900">{batchSize}</p>
-                    <p className="text-xs text-slate-600">Batch Size</p>
-                  </div>
-                  <div className="text-center p-3 bg-white rounded-lg">
-                    <p className="text-2xl font-bold text-slate-900">{totalBatches}</p>
-                    <p className="text-xs text-slate-600">Total Batches</p>
-                  </div>
-                  <div className="text-center p-3 bg-white rounded-lg">
-                    <p className="text-2xl font-bold text-slate-900">~8s</p>
-                    <p className="text-xs text-slate-600">Est. Time</p>
-                  </div>
+        {!isProcessing && processedCount === 0 && (
+          <div key="ready" className="space-y-6 animate-fadeInUp">
+            <div className="bg-slate-50 rounded-lg p-6 space-y-4">
+              <h3 className="font-semibold text-slate-900">Operation Details</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="text-center p-3 bg-white rounded-lg">
+                  <p className="text-2xl font-bold text-slate-900">{totalItems}</p>
+                  <p className="text-xs text-slate-600">Total Items</p>
+                </div>
+                <div className="text-center p-3 bg-white rounded-lg">
+                  <p className="text-2xl font-bold text-slate-900">{batchSize}</p>
+                  <p className="text-xs text-slate-600">Batch Size</p>
+                </div>
+                <div className="text-center p-3 bg-white rounded-lg">
+                  <p className="text-2xl font-bold text-slate-900">{totalBatches}</p>
+                  <p className="text-xs text-slate-600">Total Batches</p>
+                </div>
+                <div className="text-center p-3 bg-white rounded-lg">
+                  <p className="text-2xl font-bold text-slate-900">~8s</p>
+                  <p className="text-xs text-slate-600">Est. Time</p>
                 </div>
               </div>
-
-              <Button onClick={handleStart} size="lg" className="w-full" variant="primary">
-                <Play className="w-5 h-5 mr-2" />
-                Start Operation
-              </Button>
             </div>
-          )}
 
-          {(isProcessing || processedCount > 0) && (
-            <div
-              key="processing"
-              className="space-y-6 animate-fadeInUp"
-            >
-              <StepIndicator
-                steps={processingSteps}
-                currentStep={processedCount === 0 ? 0 : processedCount < totalItems ? 1 : 2}
-                orientation="horizontal"
-                size="md"
+            <Button onClick={handleStart} size="lg" className="w-full" variant="primary">
+              <Play className="w-5 h-5 mr-2" />
+              Start Operation
+            </Button>
+          </div>
+        )}
+
+        {(isProcessing || processedCount > 0) && (
+          <div key="processing" className="space-y-6 animate-fadeInUp">
+            <StepIndicator
+              steps={processingSteps}
+              currentStep={processedCount === 0 ? 0 : processedCount < totalItems ? 1 : 2}
+              orientation="horizontal"
+              size="md"
+              color={currentOperation.color as any}
+            />
+
+            <div className="space-y-4">
+              <ProgressIndicator
+                current={processedCount}
+                total={totalItems}
+                percentage={percentage}
+                status={
+                  isPaused
+                    ? 'Operation paused'
+                    : isProcessing
+                      ? `Processing batch ${currentBatch} of ${totalBatches}...`
+                      : 'Operation complete!'
+                }
+                estimatedTime={isProcessing ? estimatedTimeRemaining : undefined}
+                variant="linear"
+                size="lg"
                 color={currentOperation.color as any}
+                success={!isProcessing && processedCount === totalItems}
+                showSteps={false}
               />
 
-              <div className="space-y-4">
-                <ProgressIndicator
-                  current={processedCount}
-                  total={totalItems}
-                  percentage={percentage}
-                  status={
-                    isPaused
-                      ? 'Operation paused'
-                      : isProcessing
-                        ? `Processing batch ${currentBatch} of ${totalBatches}...`
-                        : 'Operation complete!'
-                  }
-                  estimatedTime={isProcessing ? estimatedTimeRemaining : undefined}
-                  variant="linear"
-                  size="lg"
-                  color={currentOperation.color as any}
-                  success={!isProcessing && processedCount === totalItems}
-                  showSteps={false}
-                />
-
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-                  <div className={`bg-${currentOperation.color}-50 rounded-lg p-4 text-center`}>
-                    <p className={`text-2xl font-bold text-${currentOperation.color}-600`}>
-                      {processedCount}
-                    </p>
-                    <p className={`text-xs text-${currentOperation.color}-800 font-medium`}>
-                      Processed
-                    </p>
-                  </div>
-                  <div className="bg-green-50 rounded-lg p-4 text-center">
-                    <p className="text-2xl font-bold text-green-600">{successCount}</p>
-                    <p className="text-xs text-green-700 font-medium">Success</p>
-                  </div>
-                  <div className="bg-red-50 rounded-lg p-4 text-center">
-                    <p className="text-2xl font-bold text-red-600">{errorCount}</p>
-                    <p className="text-xs text-red-800 font-medium">Errors</p>
-                  </div>
-                  <div className="bg-slate-100 rounded-lg p-4 text-center">
-                    <p className="text-2xl font-bold text-slate-900">{successRate}%</p>
-                    <p className="text-xs text-slate-600 font-medium">Success Rate</p>
-                  </div>
-                  <div className="bg-slate-100 rounded-lg p-4 text-center">
-                    <p className="text-2xl font-bold text-slate-900">
-                      {totalItems - processedCount}
-                    </p>
-                    <p className="text-xs text-slate-600 font-medium">Remaining</p>
-                  </div>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+                <div className={`bg-${currentOperation.color}-50 rounded-lg p-4 text-center`}>
+                  <p className={`text-2xl font-bold text-${currentOperation.color}-600`}>
+                    {processedCount}
+                  </p>
+                  <p className={`text-xs text-${currentOperation.color}-800 font-medium`}>
+                    Processed
+                  </p>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4 text-center">
+                  <p className="text-2xl font-bold text-green-600">{successCount}</p>
+                  <p className="text-xs text-green-700 font-medium">Success</p>
+                </div>
+                <div className="bg-red-50 rounded-lg p-4 text-center">
+                  <p className="text-2xl font-bold text-red-600">{errorCount}</p>
+                  <p className="text-xs text-red-800 font-medium">Errors</p>
+                </div>
+                <div className="bg-slate-100 rounded-lg p-4 text-center">
+                  <p className="text-2xl font-bold text-slate-900">{successRate}%</p>
+                  <p className="text-xs text-slate-600 font-medium">Success Rate</p>
+                </div>
+                <div className="bg-slate-100 rounded-lg p-4 text-center">
+                  <p className="text-2xl font-bold text-slate-900">{totalItems - processedCount}</p>
+                  <p className="text-xs text-slate-600 font-medium">Remaining</p>
                 </div>
               </div>
-
-              <div className="flex gap-3">
-                {isProcessing && (
-                  <Button onClick={handlePause} variant="outline" size="lg" className="flex-1">
-                    <Pause className="w-5 h-5 mr-2" />
-                    {isPaused ? 'Resume' : 'Pause'}
-                  </Button>
-                )}
-                <Button onClick={handleReset} variant="outline" size="lg" className="flex-1">
-                  <RotateCcw className="w-5 h-5 mr-2" />
-                  Reset
-                </Button>
-              </div>
-
-              {processedCount === totalItems && (
-                <div
-                  className="bg-green-50 border-2 border-green-200 rounded-xl p-6 animate-fadeInUp"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-green-100 rounded-full">
-                      <CheckCircle2 className="w-8 h-8 text-green-600" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-green-800 mb-1">Operation Complete!</h3>
-                      <p className="text-green-700 mb-3">
-                        Successfully processed {successCount} out of {totalItems} items
-                        {errorCount > 0 && ` with ${errorCount} error${errorCount > 1 ? 's' : ''}`}
-                      </p>
-                      {errorCount > 0 && (
-                        <div className="flex items-center gap-2 text-sm text-yellow-700 bg-amber-50 p-3 rounded-lg">
-                          <AlertCircle className="w-4 h-4 flex-shrink-0" />
-                          <span>
-                            Some items failed to process. Check the error log for details.
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              )}
             </div>
-          )}
-</Card>
+
+            <div className="flex gap-3">
+              {isProcessing && (
+                <Button onClick={handlePause} variant="outline" size="lg" className="flex-1">
+                  <Pause className="w-5 h-5 mr-2" />
+                  {isPaused ? 'Resume' : 'Pause'}
+                </Button>
+              )}
+              <Button onClick={handleReset} variant="outline" size="lg" className="flex-1">
+                <RotateCcw className="w-5 h-5 mr-2" />
+                Reset
+              </Button>
+            </div>
+
+            {processedCount === totalItems && (
+              <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6 animate-fadeInUp">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-green-100 rounded-full">
+                    <CheckCircle2 className="w-8 h-8 text-green-600" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-green-800 mb-1">Operation Complete!</h3>
+                    <p className="text-green-700 mb-3">
+                      Successfully processed {successCount} out of {totalItems} items
+                      {errorCount > 0 && ` with ${errorCount} error${errorCount > 1 ? 's' : ''}`}
+                    </p>
+                    {errorCount > 0 && (
+                      <div className="flex items-center gap-2 text-sm text-yellow-700 bg-amber-50 p-3 rounded-lg">
+                        <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                        <span>Some items failed to process. Check the error log for details.</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+      </Card>
 
       <Card className="p-6">
         <h3 className="font-semibold text-slate-900 mb-4">Batch Processing Features</h3>

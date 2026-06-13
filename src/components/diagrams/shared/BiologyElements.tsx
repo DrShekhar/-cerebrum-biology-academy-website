@@ -69,11 +69,7 @@ export function Cell({
   const cy = y + height / 2
 
   return (
-    <g
-      className="cell"
-      onClick={onClick}
-      style={{ cursor: onClick ? 'pointer' : 'default' }}
-    >
+    <g className="cell" onClick={onClick} style={{ cursor: onClick ? 'pointer' : 'default' }}>
       <rect
         x={x}
         y={y}
@@ -197,9 +193,7 @@ export function VascularBundle({
   delay = 0,
 }: VascularBundleProps) {
   return (
-    <g
-      className="vascular-bundle"
-    >
+    <g className="vascular-bundle">
       <circle
         cx={cx}
         cy={cy}
@@ -275,9 +269,7 @@ export function MeristemZone({
   const color = biologyColors[zone] || biologyColors.groundMeristem
 
   return (
-    <g
-      className="meristem-zone"
-    >
+    <g className="meristem-zone">
       <rect
         x={x}
         y={y}

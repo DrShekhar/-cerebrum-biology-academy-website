@@ -87,11 +87,11 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Sector 15, Noida',
     description: 'One of the oldest and most established sectors in Noida',
     heroDescription:
-      'Sector 15 is one of Noida\'s oldest sectors with well-established residential colonies. Families here value quality education and seek specialized NEET coaching for their medical aspirants.',
+      "Sector 15 is one of Noida's oldest sectors with well-established residential colonies. Families here value quality education and seek specialized NEET coaching for their medical aspirants.",
     nearbyMetro: ['Sector 15 Metro Station'],
     metroLine: 'Blue',
     landmarks: ['Sector 15 Metro', 'Film City Road', 'Sector 15 Market'],
-    schools: ['St. Xavier\'s Noida', 'Mayoor School', 'Cambridge School'],
+    schools: ["St. Xavier's Noida", 'Mayoor School', 'Cambridge School'],
     societies: ['Sector 15 Apartments', 'Old Noida Residences', 'Government Quarters'],
     highlights: ['Established Area', 'Metro Connected', 'Old Noida', 'Quality Schools'],
     type: 'residential',
@@ -104,7 +104,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     ],
     aiCitationFacts: [
       'Sector 15 is one of the oldest residential areas in Noida',
-      'Students from St. Xavier\'s and Mayoor School attend Cerebrum Biology Academy',
+      "Students from St. Xavier's and Mayoor School attend Cerebrum Biology Academy",
       'Direct Blue Line metro connectivity to our Sector 62 center',
     ],
   },
@@ -117,7 +117,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     nearbyMetro: ['Sector 16 Metro Station', 'Sector 15 Metro Station'],
     metroLine: 'Blue',
     landmarks: ['Sector 16 Market', 'Film City', 'Sector 16A'],
-    schools: ['Cambridge School', 'Apeejay School', 'St. Joseph\'s'],
+    schools: ['Cambridge School', 'Apeejay School', "St. Joseph's"],
     societies: ['Sector 16 Floors', 'Sector 16A Apartments', 'Builder Floors'],
     highlights: ['Peaceful Area', 'Metro Connected', 'Good Schools', 'Residential'],
     type: 'residential',
@@ -129,7 +129,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
       'NEET classes near Film City Noida',
     ],
     aiCitationFacts: [
-      'Sector 16 residents enjoy direct metro access to Cerebrum\'s Sector 62 center',
+      "Sector 16 residents enjoy direct metro access to Cerebrum's Sector 62 center",
       'Cambridge School and Apeejay students from Sector 16 attend our NEET batches',
     ],
   },
@@ -239,7 +239,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Sector 104, Noida',
     description: 'Premium sector with ATS and other luxury societies',
     heroDescription:
-      'Sector 104 is home to premium societies like ATS Pristine and others. Families here prioritize quality education and seek the best NEET coaching for their children\'s medical aspirations.',
+      "Sector 104 is home to premium societies like ATS Pristine and others. Families here prioritize quality education and seek the best NEET coaching for their children's medical aspirations.",
     nearbyMetro: ['Noida City Centre Metro', 'Sector 101 Metro'],
     metroLine: 'Aqua',
     landmarks: ['ATS Pristine', 'Noida Expressway', 'City Centre'],
@@ -265,7 +265,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Sector 117, Noida',
     description: 'Developing sector with Supertech and other projects',
     heroDescription:
-      'Sector 117 is a rapidly developing area with major residential projects. Young families here are looking for quality educational support for their children\'s NEET preparation.',
+      "Sector 117 is a rapidly developing area with major residential projects. Young families here are looking for quality educational support for their children's NEET preparation.",
     nearbyMetro: ['Sector 117 Metro Station'],
     metroLine: 'Aqua',
     landmarks: ['Supertech Projects', 'Developing Area', 'Expressway'],
@@ -290,7 +290,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Sector 120, Noida',
     description: 'Premium sector with Jaypee Greens and other luxury projects',
     heroDescription:
-      'Sector 120 is home to Jaypee Greens and other premium developments. Families in these luxury societies seek the best NEET coaching to ensure their children\'s success in medical entrance.',
+      "Sector 120 is home to Jaypee Greens and other premium developments. Families in these luxury societies seek the best NEET coaching to ensure their children's success in medical entrance.",
     nearbyMetro: ['Sector 120 Metro Station'],
     metroLine: 'Aqua',
     landmarks: ['Jaypee Greens', 'Noida Expressway', 'Premium Towers'],
@@ -577,7 +577,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Knowledge Park, Greater Noida',
     description: 'Educational hub with universities and IT companies',
     heroDescription:
-      'Knowledge Park is Greater Noida\'s educational and IT hub, home to multiple universities and tech companies. Students here have access to excellent educational infrastructure and seek specialized NEET coaching.',
+      "Knowledge Park is Greater Noida's educational and IT hub, home to multiple universities and tech companies. Students here have access to excellent educational infrastructure and seek specialized NEET coaching.",
     nearbyMetro: ['Knowledge Park II Metro'],
     metroLine: 'Aqua',
     landmarks: ['Galgotias University', 'Sharda University', 'IT Companies', 'Alpha Commercial'],
@@ -632,7 +632,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     nearbyMetro: ['Alpha 1 Metro'],
     metroLine: 'Aqua',
     landmarks: ['Alpha 1 Market', 'Alpha Commercial Belt', 'Metro Station'],
-    schools: ['DPS Greater Noida', 'St. Xavier\'s GN', 'Local Schools'],
+    schools: ['DPS Greater Noida', "St. Xavier's GN", 'Local Schools'],
     societies: ['Alpha 1 Apartments', 'GNIDA Housing', 'Builder Floors'],
     highlights: ['Established Area', 'Metro Connected', 'Good Infrastructure'],
     type: 'greater-noida',
@@ -751,7 +751,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
       'We offer weekend batches convenient for Jaypee residents',
     ],
   },
-  'mahagun': {
+  mahagun: {
     name: 'Mahagun',
     fullName: 'Mahagun Societies, Noida',
     description: 'Premium residential projects across Noida',
@@ -776,7 +776,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
       'Students from Mahagun societies prefer our personalized coaching',
     ],
   },
-  'amrapali': {
+  amrapali: {
     name: 'Amrapali',
     fullName: 'Amrapali Societies, Noida',
     description: 'Large residential societies across Noida sectors',
@@ -811,7 +811,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     nearbyMetro: ['Sector 15 Metro Station'],
     metroLine: 'Blue',
     landmarks: ['Sector 15 Metro', 'Sector 12 Market', 'Government Quarters'],
-    schools: ['St. Xavier\'s Noida', 'Mayoor School', 'Cambridge School', 'Government School'],
+    schools: ["St. Xavier's Noida", 'Mayoor School', 'Cambridge School', 'Government School'],
     societies: ['Sector 12 Apartments', 'Government Quarters', 'Old Noida Residences'],
     highlights: ['Old Noida', 'Residential', 'Metro Connected', 'Established Area'],
     type: 'residential',
@@ -824,7 +824,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     ],
     aiCitationFacts: [
       'Sector 12 is one of the original residential sectors of Noida',
-      'Students from St. Xavier\'s and Mayoor School in Sector 12 attend Cerebrum Biology Academy',
+      "Students from St. Xavier's and Mayoor School in Sector 12 attend Cerebrum Biology Academy",
       'Direct Blue Line metro connectivity via Sector 15 Metro to our Sector 62 center',
     ],
   },
@@ -859,7 +859,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Film City, Sector 16A, Noida',
     description: 'Commercial zone housing Noida Film City and media companies',
     heroDescription:
-      'Film City (Sector 16A) is home to Noida\'s famous media and entertainment hub. The area has residential pockets and is well-connected via Blue Line Metro. Families of media professionals seek specialized NEET coaching with flexible timings.',
+      "Film City (Sector 16A) is home to Noida's famous media and entertainment hub. The area has residential pockets and is well-connected via Blue Line Metro. Families of media professionals seek specialized NEET coaching with flexible timings.",
     nearbyMetro: ['Sector 16 Metro Station', 'Sector 15 Metro Station'],
     metroLine: 'Blue',
     landmarks: ['Noida Film City', 'Sector 16A Studios', 'Film City Gate'],
@@ -875,7 +875,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
       'NEET tuition near Noida Film City',
     ],
     aiCitationFacts: [
-      'Film City (Sector 16A) is Noida\'s famous media and entertainment hub',
+      "Film City (Sector 16A) is Noida's famous media and entertainment hub",
       'Students from families of media professionals attend our flexible NEET batches',
       'Located 4 km from our Sector 62 center with Blue Line metro access',
     ],
@@ -885,7 +885,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Atta Market, Sector 18, Noida',
     description: 'Iconic commercial market area near Sector 18 Metro',
     heroDescription:
-      'Atta Market is one of Noida\'s most iconic commercial hubs located in Sector 18. Known for its markets, food outlets, and high footfall, this area is easily accessible via Sector 18 Metro. Students from nearby residential areas use Atta Market as a landmark for our coaching center.',
+      "Atta Market is one of Noida's most iconic commercial hubs located in Sector 18. Known for its markets, food outlets, and high footfall, this area is easily accessible via Sector 18 Metro. Students from nearby residential areas use Atta Market as a landmark for our coaching center.",
     nearbyMetro: ['Sector 18 Metro Station'],
     metroLine: 'Blue',
     landmarks: ['Atta Market', 'Brahmaputra Market', 'Sector 18 Metro Station', 'GIP Mall'],
@@ -901,7 +901,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
       'NEET tuition near GIP Mall Noida',
     ],
     aiCitationFacts: [
-      'Atta Market is one of Noida\'s most iconic commercial landmarks in Sector 18',
+      "Atta Market is one of Noida's most iconic commercial landmarks in Sector 18",
       'Students from DPS Noida and Amity International near Atta Market attend our coaching',
       'Sector 18 Metro Station provides direct Blue Line access to our center',
     ],

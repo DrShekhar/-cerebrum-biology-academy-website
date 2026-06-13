@@ -1,4 +1,5 @@
 # READY-TO-USE REDIRECT BATCH
+
 ## Copy-paste these redirects into src/config/seo-redirects.mjs
 
 This file contains all 20+ redirects needed to fix SEO cannibalization issues. Ready to copy-paste directly into the redirect config.
@@ -21,6 +22,7 @@ This file contains all 20+ redirects needed to fix SEO cannibalization issues. R
 ## ISSUE #3: BEST/TOP/WHICH/AFFORDABLE COACHING (20 redirects)
 
 ### Faridabad (4 redirects)
+
 ```javascript
 // Faridabad coaching consolidation
 { source: '/top-5-neet-coaching-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
@@ -30,6 +32,7 @@ This file contains all 20+ redirects needed to fix SEO cannibalization issues. R
 ```
 
 ### Ghaziabad (3 redirects)
+
 ```javascript
 // Ghaziabad coaching consolidation
 { source: '/top-10-neet-coaching-ghaziabad', destination: '/best-neet-coaching-ghaziabad', permanent: true },
@@ -38,6 +41,7 @@ This file contains all 20+ redirects needed to fix SEO cannibalization issues. R
 ```
 
 ### Gurugram (4 redirects)
+
 ```javascript
 // Gurugram coaching consolidation
 { source: '/top-5-neet-coaching-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
@@ -47,6 +51,7 @@ This file contains all 20+ redirects needed to fix SEO cannibalization issues. R
 ```
 
 ### Greater Noida (3 redirects)
+
 ```javascript
 // Greater Noida coaching consolidation
 { source: '/top-10-neet-coaching-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
@@ -55,6 +60,7 @@ This file contains all 20+ redirects needed to fix SEO cannibalization issues. R
 ```
 
 ### Noida (3 redirects)
+
 ```javascript
 // Noida coaching consolidation
 { source: '/top-10-neet-coaching-noida', destination: '/best-neet-coaching-noida', permanent: true },
@@ -87,6 +93,7 @@ This file contains all 20+ redirects needed to fix SEO cannibalization issues. R
 ```
 
 ### If keeping TUITION as primary (redirect 50+ tutor pages):
+
 This would require redirecting many tutor pages. Not recommended as tutor pages are more extensive.
 
 ---
@@ -117,32 +124,100 @@ export const cannibalizationConsolidationRedirects = [
   // BEST/TOP/WHICH/AFFORDABLE coaching consolidation
   // ============================================
   // Faridabad
-  { source: '/top-5-neet-coaching-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
-  { source: '/top-10-neet-coaching-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
-  { source: '/which-neet-coaching-is-best-in-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
-  { source: '/affordable-neet-coaching-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
+  {
+    source: '/top-5-neet-coaching-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/top-10-neet-coaching-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/which-neet-coaching-is-best-in-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/affordable-neet-coaching-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
 
   // Ghaziabad
-  { source: '/top-10-neet-coaching-ghaziabad', destination: '/best-neet-coaching-ghaziabad', permanent: true },
-  { source: '/which-neet-coaching-is-best-in-ghaziabad', destination: '/best-neet-coaching-ghaziabad', permanent: true },
-  { source: '/affordable-neet-coaching-ghaziabad', destination: '/best-neet-coaching-ghaziabad', permanent: true },
+  {
+    source: '/top-10-neet-coaching-ghaziabad',
+    destination: '/best-neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/which-neet-coaching-is-best-in-ghaziabad',
+    destination: '/best-neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/affordable-neet-coaching-ghaziabad',
+    destination: '/best-neet-coaching-ghaziabad',
+    permanent: true,
+  },
 
   // Gurugram
-  { source: '/top-5-neet-coaching-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
-  { source: '/top-10-neet-coaching-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
-  { source: '/which-neet-coaching-is-best-in-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
-  { source: '/affordable-neet-coaching-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
+  {
+    source: '/top-5-neet-coaching-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/top-10-neet-coaching-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/which-neet-coaching-is-best-in-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/affordable-neet-coaching-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
 
   // Greater Noida
-  { source: '/top-10-neet-coaching-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
-  { source: '/which-neet-coaching-is-best-in-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
-  { source: '/affordable-neet-coaching-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
+  {
+    source: '/top-10-neet-coaching-greater-noida',
+    destination: '/best-neet-coaching-greater-noida',
+    permanent: true,
+  },
+  {
+    source: '/which-neet-coaching-is-best-in-greater-noida',
+    destination: '/best-neet-coaching-greater-noida',
+    permanent: true,
+  },
+  {
+    source: '/affordable-neet-coaching-greater-noida',
+    destination: '/best-neet-coaching-greater-noida',
+    permanent: true,
+  },
 
   // Noida
-  { source: '/top-10-neet-coaching-noida', destination: '/best-neet-coaching-noida', permanent: true },
-  { source: '/which-neet-coaching-is-best-in-noida', destination: '/best-neet-coaching-noida', permanent: true },
-  { source: '/affordable-neet-coaching-noida', destination: '/best-neet-coaching-noida', permanent: true },
-];
+  {
+    source: '/top-10-neet-coaching-noida',
+    destination: '/best-neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/which-neet-coaching-is-best-in-noida',
+    destination: '/best-neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/affordable-neet-coaching-noida',
+    destination: '/best-neet-coaching-noida',
+    permanent: true,
+  },
+]
 ```
 
 ### Step 2: Register in next.config.mjs
@@ -155,15 +230,15 @@ const redirects = async () => {
 
   const allRedirects = [
     // ... existing arrays ...
-    ...cannibalizationConsolidationRedirects,  // ← Add this line
-  ];
+    ...cannibalizationConsolidationRedirects, // ← Add this line
+  ]
 
   return allRedirects.map((r) => ({
     source: r.source,
     destination: r.destination,
     permanent: r.permanent,
-  }));
-};
+  }))
+}
 ```
 
 ### Step 3: Test
@@ -173,6 +248,7 @@ npm run audit:redirects
 ```
 
 Expected output:
+
 ```
 ✓ 0 redirect chains detected
 ✓ 0 conflicts detected
@@ -214,16 +290,19 @@ After deployment:
 ## MONITORING AFTER DEPLOYMENT
 
 ### Week 1-2:
+
 - Google starts crawling redirects
 - Check GSC for "Redirect errors" (should be none)
 - Monitor crawl stats
 
 ### Week 2-4:
+
 - Old URLs should disappear from index
 - Canonical URLs should consolidate authority
 - Monitor rankings for "best neet coaching [city]" queries
 
 ### Month 2:
+
 - Rankings should improve for main keywords
 - Traffic to canonical pages should increase
 - Verify no unusual spikes in 404 errors
@@ -234,18 +313,21 @@ After deployment:
 
 **Problem**: "Build fails with redirect errors"
 **Solution**:
+
 - Check destinations exist (all `/best-neet-coaching-*` pages should exist)
 - Run `npm run type-check` to see exact error
 - Verify URL spelling exactly
 
 **Problem**: "Redirects not working in development"
 **Solution**:
+
 - Redirects only work in production
 - Test in production or staging build
 - Run `npm run build` then `npm run start`
 
 **Problem**: "Redirect creates a loop"
 **Solution**:
+
 - Verify destination page exists
 - Check for chains (A→B→C)
 - Run `npm run audit:redirects` to detect

@@ -38,7 +38,8 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'NEET Toppers from Noida 2025 | 23 AIIMS Selections',
-    description: 'Meet our toppers: Priya Sharma (698), Rahul Verma (685). 47 students scored 650+ from Noida.',
+    description:
+      'Meet our toppers: Priya Sharma (698), Rahul Verma (685). 47 students scored 650+ from Noida.',
     url: 'https://cerebrumbiologyacademy.com/neet-toppers-noida',
   },
   alternates: {
@@ -48,7 +49,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Toppers from Noida 2025 | 23 AIIMS Selections',
-    description: 'Meet NEET toppers from Noida 2025: 47 students scored 650+, 23 got AIIMS/JIPMER. Priya Sharma (698), Rahul Verma (685). See results, testimonials & success stories.',
+    description:
+      'Meet NEET toppers from Noida 2025: 47 students scored 650+, 23 got AIIMS/JIPMER. Priya Sharma (698), Rahul Verma (685). See results, testimonials & success stories.',
   },
 }
 
@@ -75,7 +77,7 @@ const testimonials = [
     college: 'AIIMS Delhi',
     sector: 'Gaur City',
     quote:
-      'I was a dropper who scored 520 in first attempt. Cerebrum\'s dropper batch and personal mentorship helped me improve 165 marks. The WhatsApp doubt support was available even at 10 PM!',
+      "I was a dropper who scored 520 in first attempt. Cerebrum's dropper batch and personal mentorship helped me improve 165 marks. The WhatsApp doubt support was available even at 10 PM!",
     improvement: '+165 marks',
   },
   {
@@ -125,8 +127,15 @@ export default function NEETToppersNoidaPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/neet-toppers-noida"
         pageName="NEET Toppers from Noida"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
-        personKnowsAbout={['NEET NEET Toppers from Noida', 'NEET Biology NEET Toppers from Noida', 'Medical entrance coaching NEET Toppers from Noida']}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
+        personKnowsAbout={[
+          'NEET NEET Toppers from Noida',
+          'NEET Biology NEET Toppers from Noida',
+          'Medical entrance coaching NEET Toppers from Noida',
+        ]}
       />
       <NoidaPageSchemas
         area="Noida"
@@ -209,7 +218,11 @@ export default function NEETToppersNoidaPage() {
                     <div className="mb-2">
                       <Trophy
                         className={`h-8 w-8 mx-auto ${
-                          i === 0 ? 'text-yellow-500' : i === 1 ? 'text-gray-500' : 'text-orange-500'
+                          i === 0
+                            ? 'text-yellow-500'
+                            : i === 1
+                              ? 'text-gray-500'
+                              : 'text-orange-500'
                         }`}
                       />
                     </div>
@@ -340,7 +353,9 @@ export default function NEETToppersNoidaPage() {
                 WhatsApp Us
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2"
               >
                 Book Free Demo

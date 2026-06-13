@@ -1,6 +1,21 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MessageCircle, Star, Users, Trophy, Building2, ArrowRight, BookOpen, Target, Clock, Gift, GraduationCap, Award, Quote } from 'lucide-react'
+import {
+  Phone,
+  MessageCircle,
+  Star,
+  Users,
+  Trophy,
+  Building2,
+  ArrowRight,
+  BookOpen,
+  Target,
+  Clock,
+  Gift,
+  GraduationCap,
+  Award,
+  Quote,
+} from 'lucide-react'
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
@@ -20,7 +35,8 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'Best Biology Tutor in Noida | AIIMS Faculty | 500+ Selections',
-    description: 'Learn from Dr. Shekhar C Singh, AIIMS alumnus with 15+ years experience and 67+ AIIMS selections.',
+    description:
+      'Learn from Dr. Shekhar C Singh, AIIMS alumnus with 15+ years experience and 67+ AIIMS selections.',
     url: 'https://cerebrumbiologyacademy.com/best-biology-tutor-noida',
   },
   alternates: {
@@ -30,7 +46,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best Biology Tutor in Noida 2026 | AIIMS Faculty | Dr. Shekhar',
-    description: 'Find the best Biology tutor in Noida. Dr. Shekhar C Singh (AIIMS alumnus, 15+ years). 67+ AIIMS selections, 5.0/5 rating. Online & offline. Gaur City, Sector 150. Free demo!',
+    description:
+      'Find the best Biology tutor in Noida. Dr. Shekhar C Singh (AIIMS alumnus, 15+ years). 67+ AIIMS selections, 5.0/5 rating. Online & offline. Gaur City, Sector 150. Free demo!',
   },
 }
 
@@ -44,11 +61,31 @@ const tutorProfile = {
 }
 
 const credentials = [
-  { icon: GraduationCap, title: 'AIIMS Delhi Alumnus', description: 'Medical education from India\'s top institution' },
-  { icon: Clock, title: '15+ Years Experience', description: 'Teaching Biology for NEET and boards since 2014' },
-  { icon: Trophy, title: '67+ AIIMS Selections', description: 'Students in top medical colleges across India' },
-  { icon: Star, title: '5.0/5 Google Rating', description: 'Consistently rated best by students and parents' },
-  { icon: Award, title: 'Subject Matter Expert', description: 'Author of NEET Biology study materials' },
+  {
+    icon: GraduationCap,
+    title: 'AIIMS Delhi Alumnus',
+    description: "Medical education from India's top institution",
+  },
+  {
+    icon: Clock,
+    title: '15+ Years Experience',
+    description: 'Teaching Biology for NEET and boards since 2014',
+  },
+  {
+    icon: Trophy,
+    title: '67+ AIIMS Selections',
+    description: 'Students in top medical colleges across India',
+  },
+  {
+    icon: Star,
+    title: '5.0/5 Google Rating',
+    description: 'Consistently rated best by students and parents',
+  },
+  {
+    icon: Award,
+    title: 'Subject Matter Expert',
+    description: 'Author of NEET Biology study materials',
+  },
   { icon: Users, title: '5000+ Students Taught', description: 'From Delhi NCR, India, and abroad' },
 ]
 
@@ -69,7 +106,7 @@ const testimonials = [
     name: 'Ananya Singh',
     location: 'Greater Noida West',
     score: '635/720',
-    text: 'Online classes were as good as offline. Sir\'s teaching style and WhatsApp doubt support is amazing.',
+    text: "Online classes were as good as offline. Sir's teaching style and WhatsApp doubt support is amazing.",
   },
 ]
 
@@ -80,28 +117,52 @@ const freeTools = [
 ]
 
 const courses = [
-  { name: 'Class 11 NEET (Pursuit to Pinnacle)', fee: '48,000 - 98,000', mode: 'Online/Hybrid', link: '/biology-class-11-noida' },
-  { name: 'Class 12 NEET (Pursuit to Pinnacle)', fee: '70,000 - 98,000', mode: 'Online/Hybrid', link: '/biology-class-12-noida' },
-  { name: 'Dropper Batch (Pursuit to Pinnacle ZA)', fee: '70,000 - 1,56,000', mode: 'Online/Offline', link: '/neet-dropper-batch-online' },
-  { name: 'Board Only (Pursuit to Pinnacle)', fee: '40,000 - 68,000', mode: 'Online', link: '/class-12-board-biology-noida' },
+  {
+    name: 'Class 11 NEET (Pursuit to Pinnacle)',
+    fee: '48,000 - 98,000',
+    mode: 'Online/Hybrid',
+    link: '/biology-class-11-noida',
+  },
+  {
+    name: 'Class 12 NEET (Pursuit to Pinnacle)',
+    fee: '70,000 - 98,000',
+    mode: 'Online/Hybrid',
+    link: '/biology-class-12-noida',
+  },
+  {
+    name: 'Dropper Batch (Pursuit to Pinnacle ZA)',
+    fee: '70,000 - 1,56,000',
+    mode: 'Online/Offline',
+    link: '/neet-dropper-batch-online',
+  },
+  {
+    name: 'Board Only (Pursuit to Pinnacle)',
+    fee: '40,000 - 68,000',
+    mode: 'Online',
+    link: '/class-12-board-biology-noida',
+  },
 ]
 
 const faqs = [
   {
     question: 'Who is the best Biology tutor in Noida?',
-    answer: 'Dr. Shekhar C Singh is widely regarded as the best Biology tutor in Noida. AIIMS Delhi alumnus with 15+ years experience, 67+ AIIMS selections, and 5.0/5 rating. He specializes in making complex Biology concepts simple and memorable.',
+    answer:
+      'Dr. Shekhar C Singh is widely regarded as the best Biology tutor in Noida. AIIMS Delhi alumnus with 15+ years experience, 67+ AIIMS selections, and 5.0/5 rating. He specializes in making complex Biology concepts simple and memorable.',
   },
   {
     question: 'What are the fees for the best Biology tutor in Noida?',
-    answer: 'Dr. Shekhar\'s Biology coaching has 3 tiers: Pursuit (30-40 students), Ascent (16-18 students), Pinnacle (10-12 students). Class 11: Rs 48,000-98,000/year, Class 12: Rs 70,000-98,000/year, Droppers: Rs 70,000-1,56,000/year. Pinnacle tier includes personal mentorship from Dr. Shekhar.',
+    answer:
+      "Dr. Shekhar's Biology coaching has 3 tiers: Pursuit (30-40 students), Ascent (16-18 students), Pinnacle (10-12 students). Class 11: Rs 48,000-98,000/year, Class 12: Rs 70,000-98,000/year, Droppers: Rs 70,000-1,56,000/year. Pinnacle tier includes personal mentorship from Dr. Shekhar.",
   },
   {
     question: 'Does the best Biology tutor offer online classes for Noida students?',
-    answer: 'Yes! Dr. Shekhar offers full online courses for Noida students. Live interactive classes, recorded lectures, WhatsApp doubt support. 70% of Noida students prefer online mode for convenience.',
+    answer:
+      'Yes! Dr. Shekhar offers full online courses for Noida students. Live interactive classes, recorded lectures, WhatsApp doubt support. 70% of Noida students prefer online mode for convenience.',
   },
   {
     question: 'How can I book a demo class with the best Biology tutor?',
-    answer: 'WhatsApp us at 88264-44334 to book a free demo class. You can attend one full session before deciding. Demo available for all courses - Class 11, 12, and Dropper batches.',
+    answer:
+      'WhatsApp us at 88264-44334 to book a free demo class. You can attend one full session before deciding. Demo available for all courses - Class 11, 12, and Dropper batches.',
   },
 ]
 
@@ -111,7 +172,10 @@ export default function BestBiologyTutorNoidaPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/best-biology-tutor-noida"
         pageName="Best Biology Tutor in Noida"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
         personKnowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
       />
       {/* Hero Section */}
@@ -123,7 +187,8 @@ export default function BestBiologyTutorNoidaPage() {
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Best Biology Tutor in Noida</h1>
             <p className="text-xl text-slate-300 mb-6">
-              Learn from Dr. Shekhar C Singh - AIIMS alumnus, 15+ years experience, 67+ AIIMS selections
+              Learn from Dr. Shekhar C Singh - AIIMS alumnus, 15+ years experience, 67+ AIIMS
+              selections
             </p>
 
             {/* Tutor Quick Stats */}
@@ -194,7 +259,9 @@ export default function BestBiologyTutorNoidaPage() {
       {/* Credentials */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Why Dr. Shekhar is the Best Biology Tutor</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Why Dr. Shekhar is the Best Biology Tutor
+          </h2>
           <p className="text-center text-gray-600 mb-12">Credentials that matter</p>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -243,7 +310,10 @@ export default function BestBiologyTutorNoidaPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
             {courses.map((course, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6 border-2 border-gray-200 hover:border-amber-400 transition">
+              <div
+                key={index}
+                className="bg-gray-50 rounded-xl p-6 border-2 border-gray-200 hover:border-amber-400 transition"
+              >
                 <h3 className="font-bold mb-2">{course.name}</h3>
                 <p className="text-2xl font-bold text-amber-600 mb-2">₹{course.fee}</p>
                 <p className="text-sm text-gray-500 mb-4">{course.mode}</p>
@@ -269,7 +339,9 @@ export default function BestBiologyTutorNoidaPage() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-amber-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-amber-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>
@@ -316,7 +388,10 @@ export default function BestBiologyTutorNoidaPage() {
         breadcrumbs={[
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
           { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
-          { name: 'Best Biology Tutor Noida', url: 'https://cerebrumbiologyacademy.com/best-biology-tutor-noida' },
+          {
+            name: 'Best Biology Tutor Noida',
+            url: 'https://cerebrumbiologyacademy.com/best-biology-tutor-noida',
+          },
         ]}
         customFAQs={faqs}
       />

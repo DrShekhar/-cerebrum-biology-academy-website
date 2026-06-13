@@ -46,22 +46,20 @@ function useScrollAnimation(threshold = 0.1) {
 }
 
 const kondapurAreas = [
-{ name: 'Kondapur', distance: '15 km', landmark: 'Business District' },
+  { name: 'Kondapur', distance: '15 km', landmark: 'Business District' },
   { name: 'Madhapur', distance: '14 km', landmark: 'Tech Hub' },
   { name: 'Gachibowli', distance: '16 km', landmark: 'ISB Vicinity' },
   { name: 'Hitec City', distance: '12 km', landmark: 'Corporate Zone' },
   { name: 'Osman Nagar', distance: '17 km', landmark: 'Residential' },
   { name: 'Shilparamam', distance: '18 km', landmark: 'Mixed Use' },
   { name: 'Narsingi', distance: '19 km', landmark: 'Emerging Area' },
-  { name: 'Hafeezpet', distance: '13 km', landmark: 'Tech Zone' }
+  { name: 'Hafeezpet', distance: '13 km', landmark: 'Tech Zone' },
 ]
 
-const whyChooseUs = [
-
-]
+const whyChooseUs = []
 
 const faqs = [
-{
+  {
     question: 'Why is Kondapur ideal for online NEET coaching?',
     answer:
       'Kondapur corporate families have busy, unpredictable schedules. Online NEET coaching offers flexibility - live classes, recorded sessions, 24/7 support. Modern infrastructure and tech-savvy mindset make our online platform perfect.',
@@ -80,7 +78,7 @@ const faqs = [
     question: 'How does your coaching adapt to corporate schedules?',
     answer:
       'We offer flexible batch timings, recorded lectures, weekend classes, and asynchronous learning options. Corporate families appreciate this flexibility and our transparent progress reporting system.',
-  }
+  },
 ]
 
 const faqSchema = {
@@ -121,11 +119,11 @@ export default function PageContent() {
     <div className="min-h-screen">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={ { __html: JSON.stringify(faqSchema) } }
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={ { __html: JSON.stringify(localBusinessSchema) } }
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       {/* Hero */}
@@ -152,11 +150,16 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET coaching for Kondapur, Madhapur, Gachibowli & nearby areas. Learn from Dr. Shekhar C Singh, AIIMS Alumnus - trusted by corporate and tech professionals.
+              Premium NEET coaching for Kondapur, Madhapur, Gachibowli & nearby areas. Learn from
+              Dr. Shekhar C Singh, AIIMS Alumnus - trusted by corporate and tech professionals.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Hyderabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Hyderabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -242,7 +245,7 @@ export default function PageContent() {
               <div
                 key={area.name}
                 className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 animate-fade-in-up"
-                style={ { animationDelay: `${index * 50}ms` } }
+                style={{ animationDelay: `${index * 50}ms` }}
               >
                 <MapPin className="w-8 h-8 text-green-600 mb-4" />
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{area.name}</h3>
@@ -273,7 +276,7 @@ export default function PageContent() {
               <div
                 key={item.title}
                 className="text-center animate-fade-in-up"
-                style={ { animationDelay: `${index * 100}ms` } }
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-slate-700 to-green-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <item.icon className="w-8 h-8 text-white" />
@@ -303,7 +306,7 @@ export default function PageContent() {
               <div
                 key={faq.question}
                 className="bg-white rounded-xl p-8 shadow-lg animate-fade-in-up"
-                style={ { animationDelay: `${index * 100}ms` } }
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
@@ -325,15 +328,17 @@ export default function PageContent() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Kondapur Students, Crack NEET!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Kondapur Students, Crack NEET!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Premium coaching for corporate families
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Hyderabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Hyderabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

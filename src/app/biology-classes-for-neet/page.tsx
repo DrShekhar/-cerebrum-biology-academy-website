@@ -33,7 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biology Classes for NEET | Small-Batch AIIMS Faculty | Cerebrum',
-    description: 'Biology classes for NEET — small-batch (15–20 students) live classroom instruction by AIIMS-trained faculty. Dr. Shekhar C Singh + senior team. NCERT-anchored, PYQ-driven, weekly mocks. 680+ medica...',
+    description:
+      'Biology classes for NEET — small-batch (15–20 students) live classroom instruction by AIIMS-trained faculty. Dr. Shekhar C Singh + senior team. NCERT-anchored, PYQ-driven, weekly mocks. 680+ medica...',
   },
 }
 
@@ -183,7 +184,8 @@ const config: BestVerticalConfig = {
         'Ideal: Class 11 onset (April–May) for full 2-year Foundation. Class 12: April for the final-year batch. Droppers: within 30 days of NEET result for a structured 12-month dropper programme covering complete Class 11 + 12 revision. Crash courses (8–12 weeks) available for the final pre-NEET stretch.',
     },
     {
-      question: 'How does Cerebrum compare to the largest national NEET chains and online-first generalist platforms?',
+      question:
+        'How does Cerebrum compare to the largest national NEET chains and online-first generalist platforms?',
       answer:
         'Cerebrum is biology-only (360/720 NEET marks). the largest national NEET chains and online-first generalist platforms teach all three subjects with rotating faculty and 100–400 students per batch. Cerebrum runs 15–20 student batches and the same AIIMS-trained biology faculty for the entire term. Fees are typically 40–60% lower for biology-specific quality. Most students keep their main coaching for Physics/Chemistry and add Cerebrum for Biology.',
     },

@@ -226,18 +226,18 @@ export function Leaderboard({ freeUserId, compact = false, onRequireLogin }: Lea
             </p>
           </div>
         ) : (
-<div className="space-y-3">
-              {leaderboard?.entries.map((entry, index) => (
-                <LeaderboardRow
-                  key={entry.rank}
-                  entry={entry}
-                  index={index}
-                  getRankBadge={getRankBadge}
-                  getRankColor={getRankColor}
-                />
-              ))}
-            </div>
-)}
+          <div className="space-y-3">
+            {leaderboard?.entries.map((entry, index) => (
+              <LeaderboardRow
+                key={entry.rank}
+                entry={entry}
+                index={index}
+                getRankBadge={getRankBadge}
+                getRankColor={getRankColor}
+              />
+            ))}
+          </div>
+        )}
 
         {!freeUserId && (
           <div className="mt-6 p-4 bg-blue-50 rounded-xl text-center">

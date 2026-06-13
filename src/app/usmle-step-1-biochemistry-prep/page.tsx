@@ -38,7 +38,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'USMLE Step 1 Biochemistry Prep | Lippincott + First Aid + UWorld',
-    description: 'USMLE Step 1 biochemistry & molecular biology coaching from AIIMS-trained specialists. Glycolysis through fatty acid metabolism, DNA replication, lysosomal storage disorders. $2,499 full programme ...',
+    description:
+      'USMLE Step 1 biochemistry & molecular biology coaching from AIIMS-trained specialists. Glycolysis through fatty acid metabolism, DNA replication, lysosomal storage disorders. $2,499 full programme ...',
   },
 }
 

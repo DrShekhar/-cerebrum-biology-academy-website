@@ -90,9 +90,7 @@ export default function AdminError({ error, reset }: ErrorProps) {
           )}
         </div>
 
-        <div
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fadeInUp"
-        >
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fadeInUp">
           <Button size="lg" onClick={handleReset}>
             <RefreshCw className="w-5 h-5 mr-2" />
             Reload Panel
@@ -105,9 +103,7 @@ export default function AdminError({ error, reset }: ErrorProps) {
           </Link>
         </div>
 
-        <div
-          className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto mb-12 animate-fadeInUp"
-        >
+        <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto mb-12 animate-fadeInUp">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">Admin Quick Access</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link
@@ -164,9 +160,7 @@ export default function AdminError({ error, reset }: ErrorProps) {
           </div>
         </div>
 
-        <div
-          className="bg-red-50 border border-red-200 rounded-2xl p-8 max-w-2xl mx-auto mb-12 animate-fadeInUp"
-        >
+        <div className="bg-red-50 border border-red-200 rounded-2xl p-8 max-w-2xl mx-auto mb-12 animate-fadeInUp">
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
             <span className="text-2xl mr-2">🚨</span>
             Critical System Alert
@@ -186,9 +180,7 @@ export default function AdminError({ error, reset }: ErrorProps) {
           </div>
         </div>
 
-        <div
-          className="bg-gray-50 rounded-2xl p-8 max-w-2xl mx-auto animate-fadeInUp"
-        >
+        <div className="bg-gray-50 rounded-2xl p-8 max-w-2xl mx-auto animate-fadeInUp">
           <h3 className="text-xl font-semibold text-gray-900 mb-4">Technical Support</h3>
           <p className="text-gray-600 mb-6">
             For admin panel issues, contact our technical team immediately. We have 24/7 support for
@@ -219,9 +211,7 @@ export default function AdminError({ error, reset }: ErrorProps) {
         </div>
 
         {error.digest && (
-          <div
-            className="mt-8 text-center animate-fadeInUp"
-          >
+          <div className="mt-8 text-center animate-fadeInUp">
             <div className="text-sm font-medium text-gray-700 mb-2">CRITICAL ERROR ID:</div>
             <div className="text-lg">
               <code className="bg-red-100 border border-red-300 px-4 py-2 rounded text-red-700 font-mono">

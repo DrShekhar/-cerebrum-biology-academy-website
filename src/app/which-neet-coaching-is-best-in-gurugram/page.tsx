@@ -43,7 +43,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Which NEET Coaching is Best in Gurugram? | 2026 Honest Comparison',
-    description: 'Looking for the best NEET coaching in Gurugram (Gurgaon)? Compare the 2nd-largest national NEET chain, the largest national NEET chain, other online-only platforms & Cerebrum on fees, batch size, r...',
+    description:
+      'Looking for the best NEET coaching in Gurugram (Gurgaon)? Compare the 2nd-largest national NEET chain, the largest national NEET chain, other online-only platforms & Cerebrum on fees, batch size, r...',
   },
 }
 
@@ -140,7 +141,8 @@ const faqs = [
       'For Biology-focused preparation, Cerebrum Biology Academy is the top choice in Gurugram. With AIIMS-trained faculty, 15-20 student batches, and 98% success rate, it offers specialized attention that larger institutes cannot match. For all-subject coaching, the largest national NEET chains are popular but have much larger batch sizes.',
   },
   {
-    question: 'Is the 2nd-largest national NEET chain or the largest national NEET chain better for NEET in Gurugram?',
+    question:
+      'Is the 2nd-largest national NEET chain or the largest national NEET chain better for NEET in Gurugram?',
     answer:
       'Both have similar pros and cons - large batches (80-150 students), mixed faculty, and high fees (₹1.5-2.5L). the 2nd-largest national NEET chain has more Gurugram centers while the largest national NEET chain follows Kota methodology. For Biology, consider specialized coaching like Cerebrum for better results at lower cost.',
   },
@@ -165,7 +167,11 @@ export default function WhichNEETCoachingBestGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"
@@ -175,8 +181,14 @@ export default function WhichNEETCoachingBestGurugram() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-          { name: 'NEET Coaching Gurugram', url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-          { name: 'Which is Best', url: 'https://cerebrumbiologyacademy.com/which-neet-coaching-is-best-in-gurugram' },
+          {
+            name: 'NEET Coaching Gurugram',
+            url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+          },
+          {
+            name: 'Which is Best',
+            url: 'https://cerebrumbiologyacademy.com/which-neet-coaching-is-best-in-gurugram',
+          },
         ]}
       />
       {/* Hero Section */}
@@ -216,12 +228,12 @@ export default function WhichNEETCoachingBestGurugram() {
                 with AIIMS faculty, 15-20 student batches, and 98% success rate at ₹57K-85K/year.
               </p>
               <p className="text-gray-700 mb-4">
-                <strong>For all-subject coaching:</strong> the largest national NEET chains offer comprehensive
-                programs but with larger batches (80-150) and higher fees (₹1.5-2.5L).
+                <strong>For all-subject coaching:</strong> the largest national NEET chains offer
+                comprehensive programs but with larger batches (80-150) and higher fees (₹1.5-2.5L).
               </p>
               <p className="text-gray-700">
-                <strong>For budget option:</strong> other online-only platforms offers affordable online classes
-                (₹15-50K) but requires high self-discipline.
+                <strong>For budget option:</strong> other online-only platforms offers affordable
+                online classes (₹15-50K) but requires high self-discipline.
               </p>
             </div>
           </div>

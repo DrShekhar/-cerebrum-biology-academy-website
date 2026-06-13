@@ -588,9 +588,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
-      <div
-        className="text-center space-y-4 animate-fadeInUp"
-      >
+      <div className="text-center space-y-4 animate-fadeInUp">
         <div className="flex items-center justify-center gap-3">
           <div className="p-3 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl">
             <Layers className="w-8 h-8 text-white" />
@@ -744,51 +742,45 @@ const InteractiveBiologyDiagrams: React.FC = () => {
               }}
             >
               {/* Components */}
-{selectedDiagram.components
-                  .filter((comp) => comp.isVisible)
-                  .map((component) => (
+              {selectedDiagram.components
+                .filter((comp) => comp.isVisible)
+                .map((component) => (
+                  <div
+                    key={component.id}
+                    onClick={() => handleComponentClick(component)}
+                    className="absolute cursor-pointer animate-fadeInUp"
+                    style={{
+                      width: component.size.width,
+                      height: component.size.height,
+                    }}
+                  >
                     <div
-                      key={component.id}
-                      onClick={() => handleComponentClick(component)}
-                      className="absolute cursor-pointer animate-fadeInUp"
-                      style={{
-                        width: component.size.width,
-                        height: component.size.height,
-                      }}
+                      className="w-full h-full rounded-lg border-2 border-white shadow-lg flex items-center justify-center"
+                      style={{ backgroundColor: component.color }}
                     >
-                      <div
-                        className="w-full h-full rounded-lg border-2 border-white shadow-lg flex items-center justify-center"
-                        style={{ backgroundColor: component.color }}
-                      >
-                        {showLabels && (
-                          <span className="text-white text-xs font-medium text-center px-1">
-                            {component.name}
-                          </span>
-                        )}
-                      </div>
-
-                      {/* Hover tooltip */}
-                      <div
-                        className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-black text-white text-xs px-2 py-1 rounded whitespace-nowrap z-10 pointer-events-none animate-fadeInUp"
-                      >
-                        {component.description}
-                      </div>
+                      {showLabels && (
+                        <span className="text-white text-xs font-medium text-center px-1">
+                          {component.name}
+                        </span>
+                      )}
                     </div>
-                  ))}
-{/* Process Animation Overlay */}
+
+                    {/* Hover tooltip */}
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-black text-white text-xs px-2 py-1 rounded whitespace-nowrap z-10 pointer-events-none animate-fadeInUp">
+                      {component.description}
+                    </div>
+                  </div>
+                ))}
+              {/* Process Animation Overlay */}
               {isPlaying && activeProcess && (
-                <div
-                  className="absolute inset-0 pointer-events-none animate-fadeInUp"
-                >
+                <div className="absolute inset-0 pointer-events-none animate-fadeInUp">
                   {/* Current step description */}
                   <div className="absolute top-4 left-4 bg-white rounded-lg p-3 shadow-lg max-w-xs">
                     <h4 className="font-medium text-gray-800 mb-1">
                       {activeProcess.steps[currentStep]?.description}
                     </h4>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div
-                        className="bg-blue-600 h-2 rounded-full animate-fadeInUp"
-                      />
+                      <div className="bg-blue-600 h-2 rounded-full animate-fadeInUp" />
                     </div>
                   </div>
                 </div>

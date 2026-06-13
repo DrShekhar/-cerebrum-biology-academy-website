@@ -47,7 +47,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'செரிப்ரம் பயாலஜி அகாடமி | இந்தியாவின் #1 NEET பயாலஜி கோச்சிங் | 98% வெற்றி விகிதம்',
-    description: 'AIIMS பயிற்சி பெற்ற ஆசிரியர்களால் இந்தியாவின் சிறந்த NEET பயாலஜி கோச்சிங். 98% வெற்றி விகிதம், 2000+ மாணவர்கள். 11, 12 வகுப்பு மற்றும் ட்ராப்பர் பேட்ச். ஆன்லைன் மற்றும் ஆஃப்லைன் வகுப்புகள். இலவச டெ...',
+    description:
+      'AIIMS பயிற்சி பெற்ற ஆசிரியர்களால் இந்தியாவின் சிறந்த NEET பயாலஜி கோச்சிங். 98% வெற்றி விகிதம், 2000+ மாணவர்கள். 11, 12 வகுப்பு மற்றும் ட்ராப்பர் பேட்ச். ஆன்லைன் மற்றும் ஆஃப்லைன் வகுப்புகள். இலவச டெ...',
   },
 }
 
@@ -61,7 +62,8 @@ export default function TamilHomePage() {
     alternateName: 'Cerebrum Biology Academy',
     url: 'https://cerebrumbiologyacademy.com/ta',
     logo: 'https://cerebrumbiologyacademy.com/logo.png',
-    description: 'இந்தியாவின் முன்னணி NEET பயாலஜி கோச்சிங். AIIMS பயிற்சி பெற்ற ஆசிரியர்களால் விரிவான தயாரிப்பு.',
+    description:
+      'இந்தியாவின் முன்னணி NEET பயாலஜி கோச்சிங். AIIMS பயிற்சி பெற்ற ஆசிரியர்களால் விரிவான தயாரிப்பு.',
     inLanguage: 'ta',
     availableLanguage: ['ta', 'hi', 'en'],
     areaServed: {
@@ -105,8 +107,7 @@ export default function TamilHomePage() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                NEET பயாலஜியில்{' '}
-                <span className="text-yellow-300">98% வெற்றி விகிதம்</span>
+                NEET பயாலஜியில் <span className="text-yellow-300">98% வெற்றி விகிதம்</span>
               </h1>
 
               <p className="text-xl md:text-2xl text-green-100 mb-8 max-w-3xl mx-auto">
@@ -195,7 +196,8 @@ export default function TamilHomePage() {
                 தமிழ்நாடு மாணவர்களுக்கு சிறப்பு
               </h2>
               <p className="text-xl text-gray-600 mb-8">
-                சென்னை, கோயம்புத்தூர், மதுரை, திருச்சி மற்றும் அனைத்து மாவட்டங்களிலிருந்தும் மாணவர்கள் எங்கள் ஆன்லைன் வகுப்புகளில் கலந்துகொள்கின்றனர்.
+                சென்னை, கோயம்புத்தூர், மதுரை, திருச்சி மற்றும் அனைத்து மாவட்டங்களிலிருந்தும்
+                மாணவர்கள் எங்கள் ஆன்லைன் வகுப்புகளில் கலந்துகொள்கின்றனர்.
               </p>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="bg-white rounded-xl p-6 shadow-sm">

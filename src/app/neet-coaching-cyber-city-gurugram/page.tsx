@@ -41,7 +41,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Cyber City Gurugram | 10 Min from DLF Cyber Hub',
-    description: 'Best NEET coaching near Cyber City Gurugram (Gurgaon). Just 10 min drive to M2K Sector 51. Perfect for IT professional families. AIIMS faculty, 98% success rate. Call 88264-44334!',
+    description:
+      'Best NEET coaching near Cyber City Gurugram (Gurgaon). Just 10 min drive to M2K Sector 51. Perfect for IT professional families. AIIMS faculty, 98% success rate. Call 88264-44334!',
   },
 }
 
@@ -94,7 +95,11 @@ export default function NEETCoachingCyberCityGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

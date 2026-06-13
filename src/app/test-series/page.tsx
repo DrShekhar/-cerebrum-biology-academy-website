@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Biology Test Series 2026 | 31+ Tests | Online + Offline | Free MCQ Tool',
-    description: 'Comprehensive NEET Biology test series with 31+ tests, detailed analytics, rank prediction. Free MCQ practice with 19,619 questions. Weekly tests at all centers.',
+    description:
+      'Comprehensive NEET Biology test series with 31+ tests, detailed analytics, rank prediction. Free MCQ practice with 19,619 questions. Weekly tests at all centers.',
   },
 }
 

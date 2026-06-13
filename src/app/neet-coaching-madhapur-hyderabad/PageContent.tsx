@@ -47,22 +47,20 @@ function useScrollAnimation(threshold = 0.1) {
 }
 
 const madhapurAreas = [
-{ name: 'Madhapur', distance: '14 km', landmark: 'CyberTowers' },
+  { name: 'Madhapur', distance: '14 km', landmark: 'CyberTowers' },
   { name: 'Hitec City', distance: '13 km', landmark: 'Tech Zone' },
   { name: 'Durgam Cheruvu', distance: '12 km', landmark: 'Residential' },
   { name: 'Kondapur', distance: '15 km', landmark: 'Business Area' },
   { name: 'Gachibowli', distance: '16 km', landmark: 'IIIT Zone' },
   { name: 'Nanakramguda', distance: '17 km', landmark: 'Tech Corridor' },
   { name: 'Shilparamam', distance: '18 km', landmark: 'Entertainment' },
-  { name: 'Narsingi', distance: '19 km', landmark: 'Emerging Area' }
+  { name: 'Narsingi', distance: '19 km', landmark: 'Emerging Area' },
 ]
 
-const whyChooseUs = [
-
-]
+const whyChooseUs = []
 
 const faqs = [
-{
+  {
     question: 'Why Madhapur tech families choose online NEET coaching?',
     answer:
       'Tech professionals value innovation and efficiency. Online NEET coaching aligns perfectly - AI-powered learning analytics, interactive live classes, mobile-first platform. Tech families appreciate data-driven progress tracking.',
@@ -81,7 +79,7 @@ const faqs = [
     question: 'How do you support tech startup families?',
     answer:
       'Startup founders have volatile schedules and frequent travel. Flexible classes, catch-up sessions, and asynchronous learning ensure continuity. We understand startup lifestyle and adapt accordingly.',
-  }
+  },
 ]
 
 const faqSchema = {
@@ -122,11 +120,11 @@ export default function PageContent() {
     <div className="min-h-screen">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={ { __html: JSON.stringify(faqSchema) } }
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={ { __html: JSON.stringify(localBusinessSchema) } }
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       {/* Hero */}
@@ -153,11 +151,16 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET coaching for Madhapur, Hitec City, Durgam Cheruvu & nearby areas. Learn from Dr. Shekhar C Singh, AIIMS Alumnus - trusted by tech professionals.
+              Premium NEET coaching for Madhapur, Hitec City, Durgam Cheruvu & nearby areas. Learn
+              from Dr. Shekhar C Singh, AIIMS Alumnus - trusted by tech professionals.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Hyderabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Hyderabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -243,7 +246,7 @@ export default function PageContent() {
               <div
                 key={area.name}
                 className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 animate-fade-in-up"
-                style={ { animationDelay: `${index * 50}ms` } }
+                style={{ animationDelay: `${index * 50}ms` }}
               >
                 <MapPin className="w-8 h-8 text-green-600 mb-4" />
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{area.name}</h3>
@@ -274,7 +277,7 @@ export default function PageContent() {
               <div
                 key={item.title}
                 className="text-center animate-fade-in-up"
-                style={ { animationDelay: `${index * 100}ms` } }
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-slate-700 to-green-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <item.icon className="w-8 h-8 text-white" />
@@ -304,7 +307,7 @@ export default function PageContent() {
               <div
                 key={faq.question}
                 className="bg-white rounded-xl p-8 shadow-lg animate-fade-in-up"
-                style={ { animationDelay: `${index * 100}ms` } }
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
@@ -326,15 +329,15 @@ export default function PageContent() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Madhapur Students, Crack NEET!
-            </h2>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Modern coaching for tech families
-            </p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Madhapur Students, Crack NEET!</h2>
+            <p className="text-xl md:text-2xl mb-8 opacity-90">Modern coaching for tech families</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Hyderabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Hyderabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

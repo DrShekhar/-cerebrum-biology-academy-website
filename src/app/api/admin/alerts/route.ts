@@ -174,10 +174,7 @@ export async function POST(request: NextRequest) {
       )
     }
     console.error('Send alert error:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to send alert' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to send alert' }, { status: 500 })
   }
 }
 
@@ -232,9 +229,6 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
     console.error('Fetch alerts error:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to fetch alerts' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to fetch alerts' }, { status: 500 })
   }
 }

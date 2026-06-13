@@ -20,9 +20,12 @@ function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) setIsVisible(true)
-    }, { threshold: 0.1 })
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true)
+      },
+      { threshold: 0.1 }
+    )
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
   }, [])
@@ -37,7 +40,8 @@ export default function PageContent() {
   const featuresAnimation = useScrollAnimation()
   const faqAnimation = useScrollAnimation()
 
-  const whatsappLink = 'https://wa.me/918826444334?text=I%20am%20interested%20in%20Gujarat%20HSC%20Biology%20coaching%20with%20NEET%20and%20GUJCET%20preparation.'
+  const whatsappLink =
+    'https://wa.me/918826444334?text=I%20am%20interested%20in%20Gujarat%20HSC%20Biology%20coaching%20with%20NEET%20and%20GUJCET%20preparation.'
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
@@ -58,14 +62,25 @@ export default function PageContent() {
               Gujarat HSC Biology + NEET + GUJCET Coaching
             </h1>
             <p className="text-lg text-slate-600 mb-8 max-w-3xl mx-auto">
-              Complete GSEB Gujarat HSC Biology coaching with NEET and GUJCET integration. Gujarati and English medium support available. Master state board curriculum with entrance exam strategy.
+              Complete GSEB Gujarat HSC Biology coaching with NEET and GUJCET integration. Gujarati
+              and English medium support available. Master state board curriculum with entrance exam
+              strategy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href={whatsappLink} target="_blank" variant="primary" className="flex items-center justify-center gap-2">
+              <Button
+                href={whatsappLink}
+                target="_blank"
+                variant="primary"
+                className="flex items-center justify-center gap-2"
+              >
                 <MessageCircle className="w-5 h-5" />
                 Start Your Journey
               </Button>
-              <Button href="tel:8826444334" variant="secondary" className="flex items-center justify-center gap-2">
+              <Button
+                href="tel:8826444334"
+                variant="secondary"
+                className="flex items-center justify-center gap-2"
+              >
                 <Trophy className="w-5 h-5" />
                 Call: 8826444334
               </Button>
@@ -101,7 +116,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Gujarat HSC Biology Syllabus (GSEB)</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Gujarat HSC Biology Syllabus (GSEB)
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-8 border border-green-200">
               <div className="flex items-center gap-3 mb-6">
@@ -171,7 +188,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Triple Exam Preparation: Board + NEET + GUJCET</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Triple Exam Preparation: Board + NEET + GUJCET
+          </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg p-8 border border-slate-200 hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
@@ -179,7 +198,8 @@ export default function PageContent() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">GSEB Board Focus</h3>
               <p className="text-slate-600">
-                Expert GSEB curriculum coverage with board-specific emphasis. Understand exam patterns, chapter weightage, and marking schemes for guaranteed board success.
+                Expert GSEB curriculum coverage with board-specific emphasis. Understand exam
+                patterns, chapter weightage, and marking schemes for guaranteed board success.
               </p>
             </div>
             <div className="bg-white rounded-lg p-8 border border-slate-200 hover:shadow-lg transition-shadow">
@@ -188,7 +208,8 @@ export default function PageContent() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">GUJCET Overlap</h3>
               <p className="text-slate-600">
-                GSEB syllabus strategically mapped with GUJCET high-weightage topics. Simultaneous preparation for Gujarat state engineering entrance exam with board curriculum.
+                GSEB syllabus strategically mapped with GUJCET high-weightage topics. Simultaneous
+                preparation for Gujarat state engineering entrance exam with board curriculum.
               </p>
             </div>
             <div className="bg-white rounded-lg p-8 border border-slate-200 hover:shadow-lg transition-shadow">
@@ -197,7 +218,8 @@ export default function PageContent() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">NEET Integration</h3>
               <p className="text-slate-600">
-                Complete NEET preparation integrated with board curriculum. Exhaustive coverage of high-frequency NEET topics within GSEB syllabus framework.
+                Complete NEET preparation integrated with board curriculum. Exhaustive coverage of
+                high-frequency NEET topics within GSEB syllabus framework.
               </p>
             </div>
           </div>
@@ -212,7 +234,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Key Chapters & Topics (GSEB HSC)</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Key Chapters & Topics (GSEB HSC)
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-bold text-green-600 mb-6 flex items-center gap-2">
@@ -272,7 +296,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Why Choose Cerebrum for Gujarat HSC Biology?</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Why Choose Cerebrum for Gujarat HSC Biology?
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg p-8 border border-yellow-200">
               <div className="flex items-start gap-4">
@@ -280,7 +306,8 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">GSEB Experts</h3>
                   <p className="text-slate-700">
-                    15+ years specialization in GSEB curriculum. Deep expertise in board exam patterns, chapter-wise weightage, and Gujarati education system.
+                    15+ years specialization in GSEB curriculum. Deep expertise in board exam
+                    patterns, chapter-wise weightage, and Gujarati education system.
                   </p>
                 </div>
               </div>
@@ -291,7 +318,8 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Proven Success Rate</h3>
                   <p className="text-slate-700">
-                    1900+ Gujarat students coached with 93% board success. 650+ simultaneous NEET + GUJCET qualifiers in last 5 years.
+                    1900+ Gujarat students coached with 93% board success. 650+ simultaneous NEET +
+                    GUJCET qualifiers in last 5 years.
                   </p>
                 </div>
               </div>
@@ -302,7 +330,8 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">GUJCET Alignment</h3>
                   <p className="text-slate-700">
-                    GSEB curriculum strategically mapped with GUJCET topics. Maximize your engineering entrance exam performance while securing board excellence.
+                    GSEB curriculum strategically mapped with GUJCET topics. Maximize your
+                    engineering entrance exam performance while securing board excellence.
                   </p>
                 </div>
               </div>
@@ -313,7 +342,8 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Bilingual Support</h3>
                   <p className="text-slate-700">
-                    Gujarati and English medium coaching available. Master biology concepts in your preferred language for comprehensive understanding and retention.
+                    Gujarati and English medium coaching available. Master biology concepts in your
+                    preferred language for comprehensive understanding and retention.
                   </p>
                 </div>
               </div>
@@ -330,7 +360,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
           <div className="space-y-6">
             {[
               {
@@ -354,7 +386,10 @@ export default function PageContent() {
                 a: 'Absolutely! Our integrated approach ensures board success while focusing on GUJCET preparation. GUJCET topics are taught at the depth required for the exam while fulfilling all board requirements.',
               },
             ].map((faq, idx) => (
-              <details key={idx} className="group bg-white rounded-lg border border-slate-200 p-6 cursor-pointer hover:border-yellow-300 transition-colors">
+              <details
+                key={idx}
+                className="group bg-white rounded-lg border border-slate-200 p-6 cursor-pointer hover:border-yellow-300 transition-colors"
+              >
                 <summary className="flex items-start justify-between font-semibold text-slate-900 group-open:text-yellow-600">
                   <span>{faq.q}</span>
                   <ArrowRight className="w-5 h-5 flex-shrink-0 transition-transform group-open:rotate-90" />
@@ -369,9 +404,12 @@ export default function PageContent() {
       {/* CTA Section */}
       <section className="px-6 py-16 bg-gradient-to-r from-yellow-600 to-yellow-700 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Master Gujarat HSC Biology + NEET + GUJCET</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Master Gujarat HSC Biology + NEET + GUJCET
+          </h2>
           <p className="text-lg text-yellow-100 mb-8">
-            Join 1900+ Gujarat students who achieved board excellence and competitive exam success with Cerebrum. Gujarati and English medium available.
+            Join 1900+ Gujarat students who achieved board excellence and competitive exam success
+            with Cerebrum. Gujarati and English medium available.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -390,9 +428,7 @@ export default function PageContent() {
               Call: 8826444334
             </Button>
           </div>
-          <p className="text-yellow-100 mt-6 text-sm">
-            Website: cerebrumbiologyacademy.com
-          </p>
+          <p className="text-yellow-100 mt-6 text-sm">Website: cerebrumbiologyacademy.com</p>
         </div>
       </section>
     </div>

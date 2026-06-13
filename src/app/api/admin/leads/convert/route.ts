@@ -25,10 +25,7 @@ export async function POST(request: NextRequest) {
     })
 
     if (!lead) {
-      return NextResponse.json(
-        { success: false, error: 'Lead not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Lead not found' }, { status: 404 })
     }
 
     if (lead.convertedAt) {
@@ -40,10 +37,7 @@ export async function POST(request: NextRequest) {
 
     const existingUser = await prisma.users.findFirst({
       where: {
-        OR: [
-          ...(lead.email ? [{ email: lead.email }] : []),
-          { phone: lead.phone },
-        ],
+        OR: [...(lead.email ? [{ email: lead.email }] : []), { phone: lead.phone }],
       },
     })
 
@@ -160,9 +154,6 @@ export async function POST(request: NextRequest) {
     }
 
     console.error('Convert lead error:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to convert lead' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to convert lead' }, { status: 500 })
   }
 }

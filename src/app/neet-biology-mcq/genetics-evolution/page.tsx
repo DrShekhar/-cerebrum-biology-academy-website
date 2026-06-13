@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Genetics & Evolution MCQ for NEET 2026 | Free Practice Questions',
-    description: 'Practice 600+ free Genetics & Evolution MCQs for NEET. Mendel laws, molecular genetics, DNA replication, evolution theory questions. NCERT-based with explanations.',
+    description:
+      'Practice 600+ free Genetics & Evolution MCQs for NEET. Mendel laws, molecular genetics, DNA replication, evolution theory questions. NCERT-based with explanations.',
   },
 }
 

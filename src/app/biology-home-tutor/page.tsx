@@ -161,7 +161,10 @@ export default function BiologyHomeTutorPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Handle form submission
-    window.open(`https://wa.me/918826444334?text=Hi!%20I%20am%20${formData.name}%20and%20want%20a%20home%20biology%20tutor.%20My%20phone:%20${formData.phone}`, '_blank')
+    window.open(
+      `https://wa.me/918826444334?text=Hi!%20I%20am%20${formData.name}%20and%20want%20a%20home%20biology%20tutor.%20My%20phone:%20${formData.phone}`,
+      '_blank'
+    )
   }
 
   return (
@@ -210,7 +213,11 @@ export default function BiologyHomeTutorPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20home%20tutor.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20home%20tutor.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -236,8 +243,7 @@ export default function BiologyHomeTutorPage() {
       {/* Why Home Tutors Fail */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <div className="inline-flex items-center bg-red-100 px-4 py-2 rounded-full text-red-700 font-medium mb-4">
               <AlertTriangle className="w-5 h-5 mr-2" />
               The Harsh Truth
@@ -254,7 +260,10 @@ export default function BiologyHomeTutorPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {homeTutorProblems.map((problem, index) => (
-              <div key={problem.title} className="bg-white rounded-xl p-8 shadow-lg border-l-4 border-red-500 animate-fadeInUp">
+              <div
+                key={problem.title}
+                className="bg-white rounded-xl p-8 shadow-lg border-l-4 border-red-500 animate-fadeInUp"
+              >
                 <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
                   <problem.icon className="w-6 h-6 text-red-600" />
                 </div>
@@ -269,8 +278,7 @@ export default function BiologyHomeTutorPage() {
       {/* The Cerebrum Solution */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <div className="inline-flex items-center bg-green-100 px-4 py-2 rounded-full text-green-700 font-medium mb-4">
               <Lightbulb className="w-5 h-5 mr-2" />
               The Solution
@@ -286,9 +294,14 @@ export default function BiologyHomeTutorPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cerebrumAdvantages.map((advantage, index) => (
-              <div key={advantage.title} className={`rounded-xl p-8 shadow-lg ${
-                  advantage.highlight ? 'bg-green-50 border-2 border-green-200' : 'bg-gray-50'
-                }` + " animate-fadeInUp"}>
+              <div
+                key={advantage.title}
+                className={
+                  `rounded-xl p-8 shadow-lg ${
+                    advantage.highlight ? 'bg-green-50 border-2 border-green-200' : 'bg-gray-50'
+                  }` + ' animate-fadeInUp'
+                }
+              >
                 <div
                   className={`w-12 h-12 rounded-full flex items-center justify-center mb-4 ${
                     advantage.highlight ? 'bg-green-200' : 'bg-gray-200'
@@ -309,8 +322,7 @@ export default function BiologyHomeTutorPage() {
       {/* Comparison Table */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Home Tutor vs Cerebrum - The Truth
             </h2>
@@ -366,8 +378,7 @@ export default function BiologyHomeTutorPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -397,7 +408,11 @@ export default function BiologyHomeTutorPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20home%20tutor.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20home%20tutor.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -437,8 +452,7 @@ export default function BiologyHomeTutorPage() {
       {/* Enquiry Form Modal */}
       {showEnquiryForm && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl p-8 max-w-lg w-full shadow-2xl max-h-[90vh] overflow-y-auto animate-fadeInUp"
-          >
+          <div className="bg-white rounded-2xl p-8 max-w-lg w-full shadow-2xl max-h-[90vh] overflow-y-auto animate-fadeInUp">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-bold text-gray-900">Talk to Our Counselor</h2>
               <button

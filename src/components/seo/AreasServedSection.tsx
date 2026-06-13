@@ -96,7 +96,13 @@ function AreaAccordionCard({ area }: { area: AreaCardData }) {
   )
 }
 
-function OfflineCenterBanner({ centerInfo, cityName }: { centerInfo: CenterInfo; cityName: string }) {
+function OfflineCenterBanner({
+  centerInfo,
+  cityName,
+}: {
+  centerInfo: CenterInfo
+  cityName: string
+}) {
   return (
     <div className="mt-10 rounded-xl bg-blue-50 border-2 border-blue-300 p-6 max-w-4xl mx-auto">
       <div className="flex flex-col md:flex-row md:items-start gap-6">
@@ -149,20 +155,40 @@ function OnlineAdvantagesBanner({ cityName }: { cityName: string }) {
       </h3>
       <div className="grid sm:grid-cols-2 gap-4 mb-4">
         <div className="flex items-start gap-2">
-          <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-600 text-white text-xs font-bold">1</div>
-          <p className="text-sm text-gray-700"><span className="font-medium">Same AIIMS faculty</span> — Dr. Shekhar C Singh teaches every batch, whether online or offline. No compromise on quality.</p>
+          <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-600 text-white text-xs font-bold">
+            1
+          </div>
+          <p className="text-sm text-gray-700">
+            <span className="font-medium">Same AIIMS faculty</span> — Dr. Shekhar C Singh teaches
+            every batch, whether online or offline. No compromise on quality.
+          </p>
         </div>
         <div className="flex items-start gap-2">
-          <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-600 text-white text-xs font-bold">2</div>
-          <p className="text-sm text-gray-700"><span className="font-medium">Save 2-3 hours daily</span> — zero commute means more study time. Our toppers credit this as their #1 advantage.</p>
+          <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-600 text-white text-xs font-bold">
+            2
+          </div>
+          <p className="text-sm text-gray-700">
+            <span className="font-medium">Save 2-3 hours daily</span> — zero commute means more
+            study time. Our toppers credit this as their #1 advantage.
+          </p>
         </div>
         <div className="flex items-start gap-2">
-          <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-600 text-white text-xs font-bold">3</div>
-          <p className="text-sm text-gray-700"><span className="font-medium">Recorded lectures</span> — rewatch any class anytime. Pause, rewind, replay difficult topics until mastered.</p>
+          <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-600 text-white text-xs font-bold">
+            3
+          </div>
+          <p className="text-sm text-gray-700">
+            <span className="font-medium">Recorded lectures</span> — rewatch any class anytime.
+            Pause, rewind, replay difficult topics until mastered.
+          </p>
         </div>
         <div className="flex items-start gap-2">
-          <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-600 text-white text-xs font-bold">4</div>
-          <p className="text-sm text-gray-700"><span className="font-medium">Better than offline</span> — small batch (15 students), instant doubt solving via WhatsApp, AI-powered study tools included.</p>
+          <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-600 text-white text-xs font-bold">
+            4
+          </div>
+          <p className="text-sm text-gray-700">
+            <span className="font-medium">Better than offline</span> — small batch (15 students),
+            instant doubt solving via WhatsApp, AI-powered study tools included.
+          </p>
         </div>
       </div>
       <div className="flex flex-wrap gap-3">
@@ -196,9 +222,7 @@ function CourseOfferingsBanner() {
 
   return (
     <div className="mt-6 rounded-xl bg-purple-50 border border-purple-200 p-6 max-w-4xl mx-auto">
-      <h3 className="text-center text-lg font-bold text-purple-900 mb-4">
-        Courses We Offer
-      </h3>
+      <h3 className="text-center text-lg font-bold text-purple-900 mb-4">Courses We Offer</h3>
       <div className="flex flex-wrap justify-center gap-3">
         {courses.map((c) => (
           <span

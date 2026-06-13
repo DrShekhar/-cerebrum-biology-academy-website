@@ -19,8 +19,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/online-medical-coaching-india' },
   openGraph: {
     title: 'Online Medical Coaching India | Cerebrum Biology Academy',
-    description:
-      'NEET-UG biology specialist for MBBS entrance. AIIMS faculty, 98% qualification.',
+    description: 'NEET-UG biology specialist for MBBS entrance. AIIMS faculty, 98% qualification.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/online-medical-coaching-india',

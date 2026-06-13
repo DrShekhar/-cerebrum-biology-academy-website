@@ -369,166 +369,156 @@ export default function CourseComparisonTable({
               </button>
 
               {/* Category Features */}
-{expandedCategories.includes(category) && (
-                  <div
-                    className="overflow-hidden animate-fadeInUp"
-                  >
-                    {COMPARISON_DATA.filter((item) => item.category === category).map(
-                      (feature, index) => (
-                        <div
-                          key={feature.feature}
-                          className="grid grid-cols-4 gap-4 p-4 hover:bg-gray-50 transition-colors"
-                        >
-                          <div className="flex flex-col">
-                            <span className="font-medium text-gray-900">{feature.feature}</span>
-                            {feature.description && (
-                              <span className="text-sm text-gray-500 mt-1">
-                                {feature.description}
-                              </span>
-                            )}
-                          </div>
-                          <div className="flex items-center justify-center">
-                            <FeatureValue
-                              value={feature.pinnacle}
-                              seriesId="pinnacle"
-                              isSelected={selectedSeries.includes('pinnacle')}
-                            />
-                          </div>
-                          <div className="flex items-center justify-center">
-                            <FeatureValue
-                              value={feature.ascent}
-                              seriesId="ascent"
-                              isSelected={selectedSeries.includes('ascent')}
-                            />
-                          </div>
-                          <div className="flex items-center justify-center">
-                            <FeatureValue
-                              value={feature.pursuit}
-                              seriesId="pursuit"
-                              isSelected={selectedSeries.includes('pursuit')}
-                            />
-                          </div>
+              {expandedCategories.includes(category) && (
+                <div className="overflow-hidden animate-fadeInUp">
+                  {COMPARISON_DATA.filter((item) => item.category === category).map(
+                    (feature, index) => (
+                      <div
+                        key={feature.feature}
+                        className="grid grid-cols-4 gap-4 p-4 hover:bg-gray-50 transition-colors"
+                      >
+                        <div className="flex flex-col">
+                          <span className="font-medium text-gray-900">{feature.feature}</span>
+                          {feature.description && (
+                            <span className="text-sm text-gray-500 mt-1">
+                              {feature.description}
+                            </span>
+                          )}
                         </div>
-                      )
-                    )}
-                  </div>
-                )}
-</div>
+                        <div className="flex items-center justify-center">
+                          <FeatureValue
+                            value={feature.pinnacle}
+                            seriesId="pinnacle"
+                            isSelected={selectedSeries.includes('pinnacle')}
+                          />
+                        </div>
+                        <div className="flex items-center justify-center">
+                          <FeatureValue
+                            value={feature.ascent}
+                            seriesId="ascent"
+                            isSelected={selectedSeries.includes('ascent')}
+                          />
+                        </div>
+                        <div className="flex items-center justify-center">
+                          <FeatureValue
+                            value={feature.pursuit}
+                            seriesId="pursuit"
+                            isSelected={selectedSeries.includes('pursuit')}
+                          />
+                        </div>
+                      </div>
+                    )
+                  )}
+                </div>
+              )}
+            </div>
           ))}
         </div>
       </div>
 
       {/* Mobile View */}
       <div className="md:hidden">
-{showMobileComparison && (
-            <div
-              className="overflow-hidden animate-fadeInUp"
-            >
-              {/* Series Selection */}
-              <div className="p-4 border-b border-gray-200">
-                <h3 className="font-semibold text-gray-900 mb-3">Select Series to Compare</h3>
-                <div className="space-y-2">
-                  {Object.entries(SERIES_INFO).map(([seriesId, series]) => {
-                    const IconComponent = series.icon
-                    const isSelected = selectedSeries.includes(seriesId)
+        {showMobileComparison && (
+          <div className="overflow-hidden animate-fadeInUp">
+            {/* Series Selection */}
+            <div className="p-4 border-b border-gray-200">
+              <h3 className="font-semibold text-gray-900 mb-3">Select Series to Compare</h3>
+              <div className="space-y-2">
+                {Object.entries(SERIES_INFO).map(([seriesId, series]) => {
+                  const IconComponent = series.icon
+                  const isSelected = selectedSeries.includes(seriesId)
 
-                    return (
-                      <button
-                        key={seriesId}
-                        onClick={() => handleSeriesToggle(seriesId)}
-                        className={`w-full p-3 rounded-lg border-2 transition-all flex items-center ${
-                          isSelected
-                            ? `${series.border} ${series.bg} ${series.text}`
-                            : 'border-gray-200 hover:border-gray-300'
-                        }`}
-                      >
-                        <IconComponent
-                          className={`w-5 h-5 mr-3 ${isSelected ? series.accent : 'text-gray-400'}`}
-                        />
-                        <div className="flex-grow text-left">
-                          <div className="font-semibold">{series.name} Series</div>
-                          <div className="text-sm opacity-75">{series.priceRange}</div>
-                        </div>
-                        {isSelected && <Check className="w-5 h-5 text-green-600" />}
-                      </button>
-                    )
-                  })}
-                </div>
+                  return (
+                    <button
+                      key={seriesId}
+                      onClick={() => handleSeriesToggle(seriesId)}
+                      className={`w-full p-3 rounded-lg border-2 transition-all flex items-center ${
+                        isSelected
+                          ? `${series.border} ${series.bg} ${series.text}`
+                          : 'border-gray-200 hover:border-gray-300'
+                      }`}
+                    >
+                      <IconComponent
+                        className={`w-5 h-5 mr-3 ${isSelected ? series.accent : 'text-gray-400'}`}
+                      />
+                      <div className="flex-grow text-left">
+                        <div className="font-semibold">{series.name} Series</div>
+                        <div className="text-sm opacity-75">{series.priceRange}</div>
+                      </div>
+                      {isSelected && <Check className="w-5 h-5 text-green-600" />}
+                    </button>
+                  )
+                })}
               </div>
-
-              {/* Mobile Feature Comparison */}
-              {selectedSeries.length > 0 && (
-                <div className="p-4">
-                  <h3 className="font-semibold text-gray-900 mb-4">Feature Comparison</h3>
-
-                  {categories.map((category) => (
-                    <div key={category} className="mb-6">
-                      <button
-                        onClick={() => toggleCategory(category)}
-                        className="w-full text-left mb-3 flex items-center justify-between"
-                      >
-                        <h4 className="font-semibold text-gray-800">{category}</h4>
-                        {expandedCategories.includes(category) ? (
-                          <ChevronUp className="w-4 h-4 text-gray-500" />
-                        ) : (
-                          <ChevronDown className="w-4 h-4 text-gray-500" />
-                        )}
-                      </button>
-{expandedCategories.includes(category) && (
-                          <div
-                            className="space-y-3 overflow-hidden animate-fadeInUp"
-                          >
-                            {COMPARISON_DATA.filter((item) => item.category === category).map(
-                              (feature) => (
-                                <div key={feature.feature} className="bg-gray-50 rounded-lg p-3">
-                                  <h5 className="font-medium text-gray-900 mb-2">
-                                    {feature.feature}
-                                  </h5>
-                                  {feature.description && (
-                                    <p className="text-sm text-gray-600 mb-3">
-                                      {feature.description}
-                                    </p>
-                                  )}
-
-                                  <div className="space-y-2">
-                                    {selectedSeries.map((seriesId) => {
-                                      const series =
-                                        SERIES_INFO[seriesId as keyof typeof SERIES_INFO]
-                                      const featureValue = feature[
-                                        seriesId as keyof typeof feature
-                                      ] as boolean | string | number
-
-                                      return (
-                                        <div
-                                          key={seriesId}
-                                          className="flex items-center justify-between"
-                                        >
-                                          <span className={`text-sm font-medium ${series.text}`}>
-                                            {series.name}
-                                          </span>
-                                          <div className="flex items-center">
-                                            <FeatureValue
-                                              value={featureValue}
-                                              seriesId={seriesId}
-                                              isSelected={true}
-                                            />
-                                          </div>
-                                        </div>
-                                      )
-                                    })}
-                                  </div>
-                                </div>
-                              )
-                            )}
-                          </div>
-                        )}
-</div>
-                  ))}
-                </div>
-              )}
             </div>
-          )}
-</div>
+
+            {/* Mobile Feature Comparison */}
+            {selectedSeries.length > 0 && (
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-900 mb-4">Feature Comparison</h3>
+
+                {categories.map((category) => (
+                  <div key={category} className="mb-6">
+                    <button
+                      onClick={() => toggleCategory(category)}
+                      className="w-full text-left mb-3 flex items-center justify-between"
+                    >
+                      <h4 className="font-semibold text-gray-800">{category}</h4>
+                      {expandedCategories.includes(category) ? (
+                        <ChevronUp className="w-4 h-4 text-gray-500" />
+                      ) : (
+                        <ChevronDown className="w-4 h-4 text-gray-500" />
+                      )}
+                    </button>
+                    {expandedCategories.includes(category) && (
+                      <div className="space-y-3 overflow-hidden animate-fadeInUp">
+                        {COMPARISON_DATA.filter((item) => item.category === category).map(
+                          (feature) => (
+                            <div key={feature.feature} className="bg-gray-50 rounded-lg p-3">
+                              <h5 className="font-medium text-gray-900 mb-2">{feature.feature}</h5>
+                              {feature.description && (
+                                <p className="text-sm text-gray-600 mb-3">{feature.description}</p>
+                              )}
+
+                              <div className="space-y-2">
+                                {selectedSeries.map((seriesId) => {
+                                  const series = SERIES_INFO[seriesId as keyof typeof SERIES_INFO]
+                                  const featureValue = feature[seriesId as keyof typeof feature] as
+                                    | boolean
+                                    | string
+                                    | number
+
+                                  return (
+                                    <div
+                                      key={seriesId}
+                                      className="flex items-center justify-between"
+                                    >
+                                      <span className={`text-sm font-medium ${series.text}`}>
+                                        {series.name}
+                                      </span>
+                                      <div className="flex items-center">
+                                        <FeatureValue
+                                          value={featureValue}
+                                          seriesId={seriesId}
+                                          isSelected={true}
+                                        />
+                                      </div>
+                                    </div>
+                                  )
+                                })}
+                              </div>
+                            </div>
+                          )
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
 
       {/* Call to Action */}
       <div className="p-6 bg-gray-50 border-t border-gray-200">

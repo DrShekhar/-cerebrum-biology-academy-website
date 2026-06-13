@@ -86,19 +86,20 @@ export function ComparisonLandingPage({ competitor }: ComparisonLandingPageProps
             </div>
 
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Cerebrum Biology Academy vs{' '}
-              <span className="text-yellow-300">{competitor.name}</span>
+              Cerebrum Biology Academy vs <span className="text-yellow-300">{competitor.name}</span>
             </h1>
 
             <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-              Complete comparison of fees, batch size, success rate, and teaching quality.
-              Make an informed decision for your NEET Biology preparation.
+              Complete comparison of fees, batch size, success rate, and teaching quality. Make an
+              informed decision for your NEET Biology preparation.
             </p>
 
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                <div className="text-2xl font-bold text-yellow-300">₹{feeSavings.toLocaleString()}</div>
+                <div className="text-2xl font-bold text-yellow-300">
+                  ₹{feeSavings.toLocaleString()}
+                </div>
                 <div className="text-sm text-green-100">You Save Per Year</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
@@ -117,7 +118,12 @@ export function ComparisonLandingPage({ competitor }: ComparisonLandingPageProps
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => trackAndOpenWhatsApp({ message: WHATSAPP_MESSAGES.demo, source: `compare_${competitor.slug}_hero` })}
+                onClick={() =>
+                  trackAndOpenWhatsApp({
+                    message: WHATSAPP_MESSAGES.demo,
+                    source: `compare_${competitor.slug}_hero`,
+                  })
+                }
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-green-900 font-bold px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105"
               >
                 <Video className="w-5 h-5" />
@@ -154,9 +160,7 @@ export function ComparisonLandingPage({ competitor }: ComparisonLandingPageProps
                         Cerebrum
                       </div>
                     </th>
-                    <th className="p-4 text-center bg-gray-100 rounded-tr-xl">
-                      {competitor.name}
-                    </th>
+                    <th className="p-4 text-center bg-gray-100 rounded-tr-xl">{competitor.name}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -168,15 +172,23 @@ export function ComparisonLandingPage({ competitor }: ComparisonLandingPageProps
                           <span className="font-medium text-gray-900">{row.aspect}</span>
                         </div>
                       </td>
-                      <td className={`p-4 text-center ${row.cerebrumWins ? 'bg-green-50' : 'bg-white'}`}>
+                      <td
+                        className={`p-4 text-center ${row.cerebrumWins ? 'bg-green-50' : 'bg-white'}`}
+                      >
                         <div className="flex items-center justify-center gap-2">
                           {row.cerebrumWins && <CheckCircle className="w-5 h-5 text-green-500" />}
-                          <span className={row.cerebrumWins ? 'font-semibold text-green-700' : 'text-gray-700'}>
+                          <span
+                            className={
+                              row.cerebrumWins ? 'font-semibold text-green-700' : 'text-gray-700'
+                            }
+                          >
                             {row.cerebrum}
                           </span>
                         </div>
                       </td>
-                      <td className={`p-4 text-center ${!row.cerebrumWins ? 'bg-green-50' : 'bg-white'}`}>
+                      <td
+                        className={`p-4 text-center ${!row.cerebrumWins ? 'bg-green-50' : 'bg-white'}`}
+                      >
                         <span className="text-gray-700">{row.competitor}</span>
                       </td>
                     </tr>
@@ -315,7 +327,9 @@ export function ComparisonLandingPage({ competitor }: ComparisonLandingPageProps
               </div>
 
               <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-                <h3 className="font-bold text-gray-800 mb-3">Choose {competitor.name} if you want:</h3>
+                <h3 className="font-bold text-gray-800 mb-3">
+                  Choose {competitor.name} if you want:
+                </h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start gap-2">
                     <ArrowRight className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
@@ -341,12 +355,17 @@ export function ComparisonLandingPage({ competitor }: ComparisonLandingPageProps
             Ready to Experience the Cerebrum Difference?
           </h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Book a FREE demo class and see why students choose Cerebrum over {competitor.name}.
-            No obligation, no pressure.
+            Book a FREE demo class and see why students choose Cerebrum over {competitor.name}. No
+            obligation, no pressure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              onClick={() => trackAndOpenWhatsApp({ message: WHATSAPP_MESSAGES.demo, source: `compare_${competitor.slug}_footer` })}
+              onClick={() =>
+                trackAndOpenWhatsApp({
+                  message: WHATSAPP_MESSAGES.demo,
+                  source: `compare_${competitor.slug}_footer`,
+                })
+              }
               className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-green-900 font-bold px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105"
             >
               <MessageCircle className="w-5 h-5" />

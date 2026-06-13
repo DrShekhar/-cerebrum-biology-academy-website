@@ -297,7 +297,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-
     // Calculate score
     const { score, totalMarks, results, topicWise } = await calculateScore(testId, answers)
 
@@ -347,7 +346,6 @@ export async function POST(request: NextRequest) {
       topicWiseAnalysis: topicAnalysis,
       aiAnalysis,
     }
-
 
     return NextResponse.json(testResults)
   } catch (error) {

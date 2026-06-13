@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function CirculationIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -130,8 +130,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
       </text>
 
       {/* HEART DIAGRAM - Left side */}
-      <g
-      >
+      <g>
         <g transform="translate(30, 55)">
           {/* Heart outline */}
           <path
@@ -242,13 +241,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
           </text>
 
           {/* Heartbeat animation - pulsing */}
-          <circle
-            cx="100"
-            cy="120"
-            r="8"
-            fill="#EF4444"
-            opacity="0.5"
-          />
+          <circle cx="100" cy="120" r="8" fill="#EF4444" opacity="0.5" />
 
           {/* Labels */}
           <text x="100" y="250" textAnchor="middle" fill="#64748B" fontSize="9" fontWeight="600">
@@ -270,8 +263,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
       </g>
 
       {/* DOUBLE CIRCULATION DIAGRAM */}
-      <g
-      >
+      <g>
         <g transform="translate(25, 370)">
           <rect
             x="0"
@@ -366,8 +358,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
       </g>
 
       {/* BLOOD COMPOSITION - Right Top */}
-      <g
-      >
+      <g>
         <g transform="translate(315, 52)">
           <rect
             x="0"
@@ -425,33 +416,19 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             </text>
 
             {/* RBC */}
-            <ellipse
-              cx="32"
-              cy="42"
-              rx="15"
-              ry="8"
-              fill="url(#rbcGrad)"
-            />
+            <ellipse cx="32" cy="42" rx="15" ry="8" fill="url(#rbcGrad)" />
             <text x="32" y="60" textAnchor="middle" fill="#991B1B" fontSize="7">
               RBC
             </text>
 
             {/* WBC */}
-            <circle
-              cx="77"
-              cy="42"
-              r="10"
-              fill="#DBEAFE"
-              stroke="#3B82F6"
-              strokeWidth="1.5"
-            />
+            <circle cx="77" cy="42" r="10" fill="#DBEAFE" stroke="#3B82F6" strokeWidth="1.5" />
             <text x="77" y="60" textAnchor="middle" fill="#1D4ED8" fontSize="7">
               WBC
             </text>
 
             {/* Platelets */}
-            <g
-            >
+            <g>
               <circle cx="118" cy="38" r="4" fill="#A78BFA" />
               <circle cx="126" cy="42" r="4" fill="#A78BFA" />
               <circle cx="122" cy="48" r="4" fill="#A78BFA" />
@@ -464,8 +441,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
       </g>
 
       {/* CARDIAC CYCLE - Right Middle */}
-      <g
-      >
+      <g>
         <g transform="translate(315, 185)">
           <rect
             x="0"
@@ -485,40 +461,19 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             <rect x="0" y="0" width="330" height="16" rx="8" fill="#E2E8F0" />
 
             {/* Atrial Systole */}
-            <rect
-              x="0"
-              y="0"
-              width="42"
-              height="16"
-              rx="8"
-              fill="#F59E0B"
-            />
+            <rect x="0" y="0" width="42" height="16" rx="8" fill="#F59E0B" />
             <text x="21" y="12" textAnchor="middle" fill="white" fontSize="7" fontWeight="bold">
               0.1s
             </text>
 
             {/* Ventricular Systole */}
-            <rect
-              x="42"
-              y="0"
-              width="124"
-              height="16"
-              rx="0"
-              fill="#EF4444"
-            />
+            <rect x="42" y="0" width="124" height="16" rx="0" fill="#EF4444" />
             <text x="104" y="12" textAnchor="middle" fill="white" fontSize="7" fontWeight="bold">
               0.3s
             </text>
 
             {/* Joint Diastole */}
-            <rect
-              x="166"
-              y="0"
-              width="164"
-              height="16"
-              rx="8"
-              fill="#22C55E"
-            />
+            <rect x="166" y="0" width="164" height="16" rx="8" fill="#22C55E" />
             <text x="248" y="12" textAnchor="middle" fill="white" fontSize="7" fontWeight="bold">
               0.4s
             </text>
@@ -561,8 +516,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
       </g>
 
       {/* ECG - Right Bottom */}
-      <g
-      >
+      <g>
         <g transform="translate(315, 310)">
           <rect
             x="0"
@@ -615,8 +569,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
       </g>
 
       {/* BLOOD GROUPS & KEY FACTS - Bottom Right */}
-      <g
-      >
+      <g>
         <g transform="translate(315, 430)">
           <rect
             x="0"
@@ -633,50 +586,22 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
 
           {/* Blood group circles */}
           <g transform="translate(18, 30)">
-            <circle
-              cx="25"
-              cy="22"
-              r="18"
-              fill="#FEE2E2"
-              stroke="#EF4444"
-              strokeWidth="2.5"
-            />
+            <circle cx="25" cy="22" r="18" fill="#FEE2E2" stroke="#EF4444" strokeWidth="2.5" />
             <text x="25" y="27" textAnchor="middle" fill="#B91C1C" fontSize="12" fontWeight="bold">
               A
             </text>
 
-            <circle
-              cx="75"
-              cy="22"
-              r="18"
-              fill="#DBEAFE"
-              stroke="#3B82F6"
-              strokeWidth="2.5"
-            />
+            <circle cx="75" cy="22" r="18" fill="#DBEAFE" stroke="#3B82F6" strokeWidth="2.5" />
             <text x="75" y="27" textAnchor="middle" fill="#1D4ED8" fontSize="12" fontWeight="bold">
               B
             </text>
 
-            <circle
-              cx="125"
-              cy="22"
-              r="18"
-              fill="#F3E8FF"
-              stroke="#8B5CF6"
-              strokeWidth="2.5"
-            />
+            <circle cx="125" cy="22" r="18" fill="#F3E8FF" stroke="#8B5CF6" strokeWidth="2.5" />
             <text x="125" y="27" textAnchor="middle" fill="#6D28D9" fontSize="11" fontWeight="bold">
               AB
             </text>
 
-            <circle
-              cx="175"
-              cy="22"
-              r="18"
-              fill="#F1F5F9"
-              stroke="#64748B"
-              strokeWidth="2.5"
-            />
+            <circle cx="175" cy="22" r="18" fill="#F1F5F9" stroke="#64748B" strokeWidth="2.5" />
             <text x="175" y="27" textAnchor="middle" fill="#334155" fontSize="12" fontWeight="bold">
               O
             </text>
@@ -698,8 +623,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
       </g>
 
       {/* SA Node indicator on heart */}
-      <g
-      >
+      <g>
         <circle cx="115" cy="108" r="7" fill="#22C55E" filter="url(#vesselGlow)" />
         <text x="128" y="105" fill="#166534" fontSize="6" fontWeight="bold">
           SA
@@ -707,8 +631,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
       </g>
 
       {/* AV Node indicator */}
-      <g
-      >
+      <g>
         <circle cx="128" cy="135" r="6" fill="#FBBF24" />
         <text x="140" y="133" fill="#92400E" fontSize="6" fontWeight="bold">
           AV

@@ -54,9 +54,7 @@
     {
       "file": "stress-management-mental-health-neet-students.mdx",
       "score": 0,
-      "issues": [
-        "CRITICAL: YAML syntax error"
-      ]
+      "issues": ["CRITICAL: YAML syntax error"]
     },
     {
       "file": "dps-students-neet-preparation-guide.mdx",
@@ -126,16 +124,12 @@
     {
       "file": "neet-plant-physiology-weightage-chapter-wise-analysis.mdx",
       "score": 99,
-      "issues": [
-        "Missing excerpt"
-      ]
+      "issues": ["Missing excerpt"]
     },
     {
       "file": "neet-reproduction-weightage-chapter-wise-analysis.mdx",
       "score": 99,
-      "issues": [
-        "Missing excerpt"
-      ]
+      "issues": ["Missing excerpt"]
     },
     {
       "file": "12-month-neet-dropper-study-plan-complete-guide.mdx",

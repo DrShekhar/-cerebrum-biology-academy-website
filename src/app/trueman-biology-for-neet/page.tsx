@@ -99,18 +99,13 @@ export default function TruemanBiologyPage() {
       {/* Hero Section */}
       <section className="relative bg-red-600 text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div
-            className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-fadeInUp"
-          />
-          <div
-            className="absolute -bottom-40 -left-40 w-96 h-96 bg-rose-400/20 rounded-full blur-3xl animate-fadeInUp"
-          />
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-fadeInUp" />
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-rose-400/20 rounded-full blur-3xl animate-fadeInUp" />
         </div>
 
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
                 <Star className="w-4 h-4 fill-yellow-300 text-yellow-300" />
                 <span className="text-sm font-medium">Trusted by NEET Toppers</span>
@@ -166,9 +161,7 @@ export default function TruemanBiologyPage() {
               </div>
             </div>
 
-            <div
-              className="hidden md:block animate-fadeInUp"
-            >
+            <div className="hidden md:block animate-fadeInUp">
               <BookStackIllustration className="w-full max-w-md mx-auto" />
             </div>
           </div>
@@ -178,9 +171,7 @@ export default function TruemanBiologyPage() {
       {/* Features */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Trueman Biology?
             </h2>
@@ -206,9 +197,7 @@ export default function TruemanBiologyPage() {
       {/* Volume Details */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Two Volumes for Complete Coverage
             </h2>
@@ -262,9 +251,7 @@ export default function TruemanBiologyPage() {
       {/* Comparison */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Trueman vs Other Biology Books
             </h2>
@@ -304,9 +291,7 @@ export default function TruemanBiologyPage() {
       {/* Related Books */}
       <section className="py-16 bg-gradient-to-br bg-red-50">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Complete Your Collection
             </h2>
@@ -335,9 +320,7 @@ export default function TruemanBiologyPage() {
                 color: 'blue-600',
               },
             ].map((book, idx) => (
-              <div
-                key={idx}
-               className="animate-fadeInUp">
+              <div key={idx} className="animate-fadeInUp">
                 <Link href={book.href}>
                   <div
                     className={`bg-gradient-to-br ${book.color} rounded-xl p-5 text-white text-center hover:shadow-lg transition-shadow`}
@@ -355,9 +338,7 @@ export default function TruemanBiologyPage() {
       {/* FAQ Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
@@ -394,8 +375,7 @@ export default function TruemanBiologyPage() {
       {/* CTA */}
       <section className="py-16 bg-red-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Need Expert NEET Guidance?</h2>
             <p className="text-white/90 max-w-2xl mx-auto mb-8">
               Join Cerebrum Academy for comprehensive Biology coaching by AIIMS-trained faculty

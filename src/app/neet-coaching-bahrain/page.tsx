@@ -102,6 +102,7 @@ export default function NEETCoachingBahrainPage() {
   return (
     <>
       <LocalitySchema
+        country="BH"
         locality="Bahrain"
         slug="neet-coaching-bahrain"
         pageTitle="Best NEET Coaching in Bahrain"

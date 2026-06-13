@@ -54,7 +54,7 @@ export function trackCeriEvent(eventType: CeriEventType, eventData: CeriEventDat
   try {
     // Google Analytics 4
     if (typeof window !== 'undefined' && window.gtag) {
-      ;window.gtag('event', eventType, {
+      window.gtag('event', eventType, {
         event_category: 'ceri_ai_tutor',
         event_label: eventData.topic || 'general',
         topic: eventData.topic,
@@ -97,7 +97,7 @@ export function trackAriaEvent(eventType: AriaEventType, eventData: AriaEventDat
   try {
     // Google Analytics 4
     if (typeof window !== 'undefined' && window.gtag) {
-      ;window.gtag('event', eventType, {
+      window.gtag('event', eventType, {
         event_category: 'aria_sales_agent',
         event_label: eventData.source || 'unknown',
         source: eventData.source,
@@ -116,7 +116,7 @@ export function trackAriaEvent(eventType: AriaEventType, eventData: AriaEventDat
       eventType === 'aria_lead_captured'
     ) {
       if (typeof window !== 'undefined' && window.gtag) {
-        ;window.gtag('event', 'conversion', {
+        window.gtag('event', 'conversion', {
           send_to: 'AW-11121440988/demo_booking',
           value: eventType === 'aria_demo_booked' ? 500 : 200,
           currency: 'INR',

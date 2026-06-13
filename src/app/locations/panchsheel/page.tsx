@@ -19,10 +19,7 @@ import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
-import {
-  RelatedLocations,
-  getRelatedLocations,
-} from '@/components/locations/RelatedLocations'
+import { RelatedLocations, getRelatedLocations } from '@/components/locations/RelatedLocations'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
@@ -82,15 +79,21 @@ export default function PanchsheelPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/locations/panchsheel"
         pageName="NEET Biology Coaching for Panchsheel Park Students"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
-        personKnowsAbout={['NEET Panchsheel Park', 'NEET Biology Panchsheel Park', 'Medical entrance coaching Panchsheel Park']}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
+        personKnowsAbout={[
+          'NEET Panchsheel Park',
+          'NEET Biology Panchsheel Park',
+          'Medical entrance coaching Panchsheel Park',
+        ]}
         faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
       />
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-indigo-900 via-violet-800 to-indigo-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center animate-fadeInUp"
-            >
+            <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-300 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <MapPin className="w-4 h-4" />
                 Diplomat Area
@@ -126,8 +129,7 @@ export default function PanchsheelPage() {
         <section className="py-12 md:py-16 -mt-8">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-green-400 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-green-400 animate-fadeInUp">
                 <div className="bg-gradient-to-r from-green-500 to-teal-500 text-white py-4 px-6">
                   <h3 className="font-bold text-lg">Green Park Center</h3>
                   <p className="text-green-100 text-sm">8-10 Min from Panchsheel</p>
@@ -151,8 +153,7 @@ export default function PanchsheelPage() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-yellow-400 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-yellow-400 animate-fadeInUp">
                 <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white py-4 px-6">
                   <div className="flex items-center gap-2">
                     <Award className="w-5 h-5" />
@@ -220,8 +221,7 @@ export default function PanchsheelPage() {
                 { icon: Trophy, title: '98% Success', desc: 'Top results' },
                 { icon: Star, title: 'AIIMS Faculty', desc: 'Expert teachers' },
               ].map((item, idx) => (
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
-                >
+                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp">
                   <div className="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-indigo-600" />
                   </div>
@@ -278,8 +278,7 @@ export default function PanchsheelPage() {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">FAQs</h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((f, i) => (
-                <div key={i} className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
-                >
+                <div key={i} className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp">
                   <h3 className="font-semibold text-lg mb-2">{f.q}</h3>
                   <p className="text-gray-600">{f.a}</p>
                 </div>

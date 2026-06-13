@@ -94,9 +94,7 @@ export function VideoShowcase({
 
   return (
     <div className={`video-showcase ${className}`}>
-      <div
-        className="relative bg-white rounded-2xl shadow-lg overflow-hidden group animate-fadeInUp"
-      >
+      <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden group animate-fadeInUp">
         {/* Video Container - Using LazyYouTubeEmbed for LCP optimization */}
         <LazyYouTubeEmbed
           videoId={videoId}

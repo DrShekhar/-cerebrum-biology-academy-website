@@ -360,9 +360,7 @@ const ProgressSaver: React.FC<ProgressSaverProps> = ({
               <span>{progressPercentage}% complete</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
-              <div
-                className="bg-green-600 h-2 rounded-full animate-fadeInUp"
-              />
+              <div className="bg-green-600 h-2 rounded-full animate-fadeInUp" />
             </div>
           </div>
         )}
@@ -435,60 +433,54 @@ const ProgressSaver: React.FC<ProgressSaverProps> = ({
       </div>
 
       {/* Save Success Notification */}
-{showSaveNotification && (
-          <div
-            className="fixed bottom-4 right-4 z-50 bg-green-600 text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-2 animate-fadeInUp"
-          >
-            <Check className="w-5 h-5" />
-            <span className="font-medium">Progress saved successfully!</span>
-          </div>
-        )}
-{/* Conflict Resolution Dialog */}
-{showConflictDialog && (
-          <div
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
-          >
-            <div
-              className="bg-white rounded-xl p-6 max-w-md w-full animate-fadeInUp"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <AlertCircle className="w-6 h-6 text-orange-500" />
-                <h3 className="text-lg font-semibold">Sync Conflict Detected</h3>
-              </div>
+      {showSaveNotification && (
+        <div className="fixed bottom-4 right-4 z-50 bg-green-600 text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-2 animate-fadeInUp">
+          <Check className="w-5 h-5" />
+          <span className="font-medium">Progress saved successfully!</span>
+        </div>
+      )}
+      {/* Conflict Resolution Dialog */}
+      {showConflictDialog && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 animate-fadeInUp">
+          <div className="bg-white rounded-xl p-6 max-w-md w-full animate-fadeInUp">
+            <div className="flex items-center gap-3 mb-4">
+              <AlertCircle className="w-6 h-6 text-orange-500" />
+              <h3 className="text-lg font-semibold">Sync Conflict Detected</h3>
+            </div>
 
-              <p className="text-gray-600 mb-6">
-                We found different versions of your progress. Which one would you like to keep?
-              </p>
+            <p className="text-gray-600 mb-6">
+              We found different versions of your progress. Which one would you like to keep?
+            </p>
 
-              <div className="space-y-3">
-                <button
-                  onClick={() => {
-                    setSaveState((prev) => ({ ...prev, conflictResolution: 'local' }))
-                    setShowConflictDialog(false)
-                  }}
-                  className="w-full p-3 text-left border border-gray-200 rounded-lg hover:bg-gray-50"
-                >
-                  <div className="font-medium">Keep Local Version</div>
-                  <div className="text-sm text-gray-500">
-                    Last modified on this device: {formatLastSaved()}
-                  </div>
-                </button>
+            <div className="space-y-3">
+              <button
+                onClick={() => {
+                  setSaveState((prev) => ({ ...prev, conflictResolution: 'local' }))
+                  setShowConflictDialog(false)
+                }}
+                className="w-full p-3 text-left border border-gray-200 rounded-lg hover:bg-gray-50"
+              >
+                <div className="font-medium">Keep Local Version</div>
+                <div className="text-sm text-gray-500">
+                  Last modified on this device: {formatLastSaved()}
+                </div>
+              </button>
 
-                <button
-                  onClick={() => {
-                    setSaveState((prev) => ({ ...prev, conflictResolution: 'cloud' }))
-                    setShowConflictDialog(false)
-                  }}
-                  className="w-full p-3 text-left border border-gray-200 rounded-lg hover:bg-gray-50"
-                >
-                  <div className="font-medium">Use Cloud Version</div>
-                  <div className="text-sm text-gray-500">Synced from another device</div>
-                </button>
-              </div>
+              <button
+                onClick={() => {
+                  setSaveState((prev) => ({ ...prev, conflictResolution: 'cloud' }))
+                  setShowConflictDialog(false)
+                }}
+                className="w-full p-3 text-left border border-gray-200 rounded-lg hover:bg-gray-50"
+              >
+                <div className="font-medium">Use Cloud Version</div>
+                <div className="text-sm text-gray-500">Synced from another device</div>
+              </button>
             </div>
           </div>
-        )}
-</>
+        </div>
+      )}
+    </>
   )
 }
 

@@ -45,7 +45,9 @@ interface BotanicalGardenMetroContentProps {
   metroData: MetroData
 }
 
-export default function BotanicalGardenMetroContent({ metroData }: BotanicalGardenMetroContentProps) {
+export default function BotanicalGardenMetroContent({
+  metroData,
+}: BotanicalGardenMetroContentProps) {
   const handleWhatsAppClick = (source: string, message: string) => {
     trackAndOpenWhatsApp({
       source,
@@ -86,13 +88,13 @@ export default function BotanicalGardenMetroContent({ metroData }: BotanicalGard
           </div>
 
           <h1 className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
-            NEET Coaching Near{' '}
-            <span className="text-blue-200">Botanical Garden Metro</span>
+            NEET Coaching Near <span className="text-blue-200">Botanical Garden Metro</span>
           </h1>
 
           <p className="mx-auto mb-6 max-w-3xl text-xl text-white/90">
-            Biology Classes for Students in Noida. {metroData.studentCount} students
-            enrolled from Sector 18, Sector 16, Amity University area & Greater Noida. Gateway to quality NEET preparation!
+            Biology Classes for Students in Noida. {metroData.studentCount} students enrolled from
+            Sector 18, Sector 16, Amity University area & Greater Noida. Gateway to quality NEET
+            preparation!
           </p>
 
           {/* Trust Badges */}
@@ -118,17 +120,21 @@ export default function BotanicalGardenMetroContent({ metroData }: BotanicalGard
           {/* CTAs */}
           <div className="flex flex-wrap justify-center gap-4">
             <button
-              onClick={() => handleWhatsAppClick(
-                'botanical-garden-metro-hero',
-                "Hi! I'm near Botanical Garden Metro in Noida. I'm interested in NEET Biology coaching."
-              )}
+              onClick={() =>
+                handleWhatsAppClick(
+                  'botanical-garden-metro-hero',
+                  "Hi! I'm near Botanical Garden Metro in Noida. I'm interested in NEET Biology coaching."
+                )
+              }
               className="inline-flex items-center gap-2 rounded-lg bg-green-500 px-6 py-3 font-semibold text-white transition hover:bg-green-600"
             >
               <MessageCircle className="h-5 w-5" />
               WhatsApp Us
             </button>
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20botanical%20garden%20metro.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20botanical%20garden%20metro.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-blue-400 px-6 py-3 font-semibold text-white transition hover:bg-blue-300"
             >
               Book FREE Demo
@@ -206,7 +212,8 @@ export default function BotanicalGardenMetroContent({ metroData }: BotanicalGard
               </h3>
               <p className="text-gray-600">
                 Botanical Garden connects Blue Line (Delhi-Noida) and Magenta Line (South Delhi).
-                For Noida students, our online live classes eliminate commute entirely - study from home with same quality AIIMS faculty teaching!
+                For Noida students, our online live classes eliminate commute entirely - study from
+                home with same quality AIIMS faculty teaching!
               </p>
             </div>
           </div>
@@ -327,8 +334,8 @@ export default function BotanicalGardenMetroContent({ metroData }: BotanicalGard
               NEET Coaching for Working Professionals
             </h2>
             <p className="mb-8 text-lg text-gray-600">
-              Many IT professionals from Noida Sector 62 and Sector 18 prepare for NEET with us.
-              Our evening batch (7-9 PM) and weekend sessions are designed for your busy schedule.
+              Many IT professionals from Noida Sector 62 and Sector 18 prepare for NEET with us. Our
+              evening batch (7-9 PM) and weekend sessions are designed for your busy schedule.
             </p>
             <div className="grid gap-4 md:grid-cols-3">
               <div className="rounded-xl bg-white p-4 shadow-sm">
@@ -348,10 +355,12 @@ export default function BotanicalGardenMetroContent({ metroData }: BotanicalGard
               </div>
             </div>
             <button
-              onClick={() => handleWhatsAppClick(
-                'botanical-garden-working-professional',
-                "Hi! I'm a working professional in Noida. I want to prepare for NEET. Please share details about evening batches."
-              )}
+              onClick={() =>
+                handleWhatsAppClick(
+                  'botanical-garden-working-professional',
+                  "Hi! I'm a working professional in Noida. I want to prepare for NEET. Please share details about evening batches."
+                )
+              }
               className="mt-8 inline-flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
             >
               <MessageCircle className="h-5 w-5" />
@@ -400,7 +409,12 @@ export default function BotanicalGardenMetroContent({ metroData }: BotanicalGard
                   {faq.question}
                   <span className="text-blue-600 transition-transform group-open:rotate-180">
                     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
                     </svg>
                   </span>
                 </summary>
@@ -423,22 +437,27 @@ export default function BotanicalGardenMetroContent({ metroData }: BotanicalGard
             Join {metroData.studentCount} Students from Botanical Garden Area
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-xl text-white/90">
-            Start your medical journey with expert guidance from AIIMS faculty - Online classes perfect for Noida students!
+            Start your medical journey with expert guidance from AIIMS faculty - Online classes
+            perfect for Noida students!
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
             <button
-              onClick={() => handleWhatsAppClick(
-                'botanical-garden-metro-cta',
-                "Hi! I'm near Botanical Garden Metro. I want to join NEET coaching."
-              )}
+              onClick={() =>
+                handleWhatsAppClick(
+                  'botanical-garden-metro-cta',
+                  "Hi! I'm near Botanical Garden Metro. I want to join NEET coaching."
+                )
+              }
               className="inline-flex items-center gap-2 rounded-lg bg-green-500 px-8 py-3 font-semibold text-white transition hover:bg-green-600"
             >
               <MessageCircle className="h-5 w-5" />
               WhatsApp Now
             </button>
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20botanical%20garden%20metro.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20botanical%20garden%20metro.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 font-semibold text-blue-700 transition hover:bg-blue-50"
             >
               Book Free Demo

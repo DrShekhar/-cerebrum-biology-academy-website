@@ -86,9 +86,7 @@ function SwipeableLeadCard({
       </div>
 
       {/* Card */}
-      <div
-        className="relative bg-white rounded-lg shadow-sm border border-gray-200 p-4 animate-fadeInUp"
-      >
+      <div className="relative bg-white rounded-lg shadow-sm border border-gray-200 p-4 animate-fadeInUp">
         <div className="flex items-start justify-between gap-3">
           {/* Left: Lead info */}
           <div className="flex-1 min-w-0" onClick={() => onLeadClick(lead)}>

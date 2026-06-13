@@ -18,10 +18,7 @@ export function AnswersTab({
   generateAnswerKey,
 }: AnswersTabProps) {
   return (
-    <div
-      key="answers"
-      className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-    >
+    <div key="answers" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
       <div className="bg-white rounded-xl p-6 border">
         <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
           <Key className="w-5 h-5 text-yellow-600" />

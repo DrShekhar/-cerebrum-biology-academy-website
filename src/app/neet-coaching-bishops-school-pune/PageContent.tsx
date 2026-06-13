@@ -26,11 +26,14 @@ function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true)
-      }
-    }, { threshold: 0.1 })
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
   }, [])
@@ -55,44 +58,94 @@ export default function PageContent() {
   const faqAnim = useScrollAnimation()
 
   const bishopsAdvantages = [
-    { icon: Award, title: 'Premium Pune Excellence', description: 'Bishop\'s School Camp area location in Pune\'s educational hub provides strong NEET foundation' },
-    { icon: BookOpen, title: 'ICSE/ISC Rigor', description: 'ICSE provides excellent science depth; ISC offers university-level rigor - both strong for NEET' },
-    { icon: Target, title: 'ICSE-to-NEET Bridge', description: 'Custom mapping of ICSE/ISC curriculum to NEET ensuring no content gaps in medical entrance preparation' },
-    { icon: Users, title: 'High-Achieving Peer Group', description: 'Bishop\'s School students are motivated and achievement-focused - ideal environment for NEET success' },
-    { icon: Compass, title: 'Pune Medical Hub', description: 'Pune\'s medical education prominence and coaching excellence supports NEET preparation culture' },
-    { icon: Zap, title: 'Academic Excellence Culture', description: 'School\'s emphasis on rigorous academics develops discipline and depth crucial for medical entrance' },
+    {
+      icon: Award,
+      title: 'Premium Pune Excellence',
+      description:
+        "Bishop's School Camp area location in Pune's educational hub provides strong NEET foundation",
+    },
+    {
+      icon: BookOpen,
+      title: 'ICSE/ISC Rigor',
+      description:
+        'ICSE provides excellent science depth; ISC offers university-level rigor - both strong for NEET',
+    },
+    {
+      icon: Target,
+      title: 'ICSE-to-NEET Bridge',
+      description:
+        'Custom mapping of ICSE/ISC curriculum to NEET ensuring no content gaps in medical entrance preparation',
+    },
+    {
+      icon: Users,
+      title: 'High-Achieving Peer Group',
+      description:
+        "Bishop's School students are motivated and achievement-focused - ideal environment for NEET success",
+    },
+    {
+      icon: Compass,
+      title: 'Pune Medical Hub',
+      description:
+        "Pune's medical education prominence and coaching excellence supports NEET preparation culture",
+    },
+    {
+      icon: Zap,
+      title: 'Academic Excellence Culture',
+      description:
+        "School's emphasis on rigorous academics develops discipline and depth crucial for medical entrance",
+    },
   ]
 
   const pricingPlans = [
-    { name: 'Complete ICSE-NEET Program', price: '₹36,999', description: '18-month comprehensive program bridging ICSE to NEET with complete preparation' },
-    { name: 'Intensive NEET Focus', price: '₹45,999', description: '12-month intensive program for Bishop\'s School students targeting 630+ NEET scores' },
-    { name: 'Premium 1:1 Coaching', price: '₹55,999', description: 'Personalized coaching for Bishop\'s School high-achievers with ICSE/ISC expertise' },
+    {
+      name: 'Complete ICSE-NEET Program',
+      price: '₹36,999',
+      description: '18-month comprehensive program bridging ICSE to NEET with complete preparation',
+    },
+    {
+      name: 'Intensive NEET Focus',
+      price: '₹45,999',
+      description:
+        "12-month intensive program for Bishop's School students targeting 630+ NEET scores",
+    },
+    {
+      name: 'Premium 1:1 Coaching',
+      price: '₹55,999',
+      description:
+        "Personalized coaching for Bishop's School high-achievers with ICSE/ISC expertise",
+    },
   ]
 
   const faqs = [
     {
       question: 'How do ICSE and ISC students perform in NEET?',
-      answer: 'ICSE/ISC students show strong NEET performance with 85%+ qualification and 630+ average scores. The rigorous curriculum provides excellent foundation. We bridge any content gaps while leveraging the strong conceptual understanding developed by ICSE/ISC.',
+      answer:
+        'ICSE/ISC students show strong NEET performance with 85%+ qualification and 630+ average scores. The rigorous curriculum provides excellent foundation. We bridge any content gaps while leveraging the strong conceptual understanding developed by ICSE/ISC.',
     },
     {
       question: "What advantage does Bishop\'s School Camp location provide?",
-      answer: "Pune is a major medical education hub with strong coaching infrastructure. Camp area is Pune\'s premium educational district. This environment, combined with Bishop\'s academic excellence, creates ideal NEET preparation setting.",
+      answer:
+        "Pune is a major medical education hub with strong coaching infrastructure. Camp area is Pune\'s premium educational district. This environment, combined with Bishop\'s academic excellence, creates ideal NEET preparation setting.",
     },
     {
       question: 'Can I prepare for ICSE/ISC boards and NEET together?',
-      answer: 'Yes! ICSE/ISC and NEET have significant science overlap. Our program ensures both board excellence (90+) and NEET strength (630+) through synchronized preparation that prevents redundant studying.',
+      answer:
+        'Yes! ICSE/ISC and NEET have significant science overlap. Our program ensures both board excellence (90+) and NEET strength (630+) through synchronized preparation that prevents redundant studying.',
     },
     {
       question: "What is the NEET success rate for Bishop\'s School students?",
-      answer: "Bishop\'s School students show 85%+ NEET qualification with 630+ average scores. The school\'s academic culture and ICSE/ISC rigor provide strong platform for medical entrance success.",
+      answer:
+        "Bishop\'s School students show 85%+ NEET qualification with 630+ average scores. The school\'s academic culture and ICSE/ISC rigor provide strong platform for medical entrance success.",
     },
     {
       question: 'How do you handle ICSE vs ISC differences for NEET?',
-      answer: 'Both ICSE (Class 10) and ISC (Class 11-12) contribute to NEET. We provide integrated coaching covering both levels, ensuring complete science foundation without repetition while building NEET depth.',
+      answer:
+        'Both ICSE (Class 10) and ISC (Class 11-12) contribute to NEET. We provide integrated coaching covering both levels, ensuring complete science foundation without repetition while building NEET depth.',
     },
     {
       question: 'Is Pune location good for NEET preparation?',
-      answer: "Pune is excellent for NEET preparation with strong coaching centers, medical colleges, and educational infrastructure. Bishop\'s School location in premium Camp area provides access to best resources while maintaining school focus.",
+      answer:
+        "Pune is excellent for NEET preparation with strong coaching centers, medical colleges, and educational infrastructure. Bishop\'s School location in premium Camp area provides access to best resources while maintaining school focus.",
     },
   ]
 
@@ -101,11 +154,12 @@ export default function PageContent() {
       <FloatingWhatsAppButton />
 
       {/* Hero Section */}
-      <section
-        className="bg-gradient-to-br from-amber-700 to-orange-800 text-white py-12 sm:py-20 animate-fadeInUp"
-      >
+      <section className="bg-gradient-to-br from-amber-700 to-orange-800 text-white py-12 sm:py-20 animate-fadeInUp">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div ref={heroAnim.ref} className={`text-center max-w-4xl mx-auto transition-all duration-700 ${heroAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+          <div
+            ref={heroAnim.ref}
+            className={`text-center max-w-4xl mx-auto transition-all duration-700 ${heroAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
+          >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Compass className="w-5 h-5 mr-2 text-yellow-400" />
               Pune Medical Education Excellence
@@ -114,14 +168,25 @@ export default function PageContent() {
               NEET Coaching for <span className="text-yellow-300">Bishop&apos;s School, Pune</span>
             </h1>
             <p className="text-lg md:text-xl opacity-90 mb-8">
-              Expert ICSE/ISC-to-NEET bridge coaching for Bishop&apos;s School students in Pune. Transform premium school foundation into 630+ NEET success.
+              Expert ICSE/ISC-to-NEET bridge coaching for Bishop&apos;s School students in Pune.
+              Transform premium school foundation into 630+ NEET success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Pune.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" className="bg-white text-amber-700 px-8 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors inline-flex items-center justify-center">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Pune.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-amber-700 px-8 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors inline-flex items-center justify-center"
+              >
                 Book Free Demo
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <a href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-amber-700 transition-colors inline-flex items-center justify-center">
+              <a
+                href="https://wa.me/918826444334"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-amber-700 transition-colors inline-flex items-center justify-center"
+              >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 WhatsApp Now
               </a>
@@ -151,18 +216,22 @@ export default function PageContent() {
       {/* Bishop&apos;s Advantages */}
       <section className="py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div ref={whyAnim.ref} className={`text-center mb-12 transition-all duration-600 ${whyAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Bishop&apos;s School Excellence in NEET</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Premium school advantage for medical entrance success</p>
+          <div
+            ref={whyAnim.ref}
+            className={`text-center mb-12 transition-all duration-600 ${whyAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              Bishop&apos;s School Excellence in NEET
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Premium school advantage for medical entrance success
+            </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {bishopsAdvantages.map((item, index) => {
               const Icon = item.icon
               return (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
-                >
+                <div key={index} className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp">
                   <Icon className="w-10 h-10 text-amber-600 mb-4" />
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm">{item.description}</p>
@@ -177,7 +246,9 @@ export default function PageContent() {
       <section className="py-12 md:py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Bishop&apos;s School NEET Programs</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              Bishop&apos;s School NEET Programs
+            </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {pricingPlans.map((plan, index) => (
@@ -188,7 +259,12 @@ export default function PageContent() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                 <div className="text-3xl font-bold text-amber-600 mb-4">{plan.price}</div>
                 <p className="text-gray-600 mb-6">{plan.description}</p>
-                <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20NEET%20Biology%20coaching%20in%20Pune.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer" className="block bg-amber-600 text-white text-center py-2 rounded-lg font-semibold hover:bg-amber-700 transition-colors">
+                <Link
+                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20NEET%20Biology%20coaching%20in%20Pune.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-amber-600 text-white text-center py-2 rounded-lg font-semibold hover:bg-amber-700 transition-colors"
+                >
                   Enroll Now
                 </Link>
               </div>
@@ -200,12 +276,18 @@ export default function PageContent() {
       {/* FAQ */}
       <section className="py-12 md:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div ref={faqAnim.ref} className={`text-center mb-12 transition-all duration-600 ${faqAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+          <div
+            ref={faqAnim.ref}
+            className={`text-center mb-12 transition-all duration-600 ${faqAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
+          >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">FAQs</h2>
           </div>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp">
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
+              >
                 <button
                   onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
                   className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
@@ -217,14 +299,12 @@ export default function PageContent() {
                     <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
                   )}
                 </button>
-{expandedFAQ === index && (
-                    <div
-                      className="border-t border-gray-200 bg-gray-50 animate-fadeInUp"
-                    >
-                      <p className="p-6 text-gray-700">{faq.answer}</p>
-                    </div>
-                  )}
-</div>
+                {expandedFAQ === index && (
+                  <div className="border-t border-gray-200 bg-gray-50 animate-fadeInUp">
+                    <p className="p-6 text-gray-700">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>
@@ -233,14 +313,26 @@ export default function PageContent() {
       {/* CTA */}
       <section className="bg-gradient-to-r from-amber-700 to-orange-800 text-white py-12 md:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">Bishop&apos;s School Excellence in NEET</h2>
-          <p className="text-xl md:text-2xl mb-8 opacity-90">Join 280+ Bishop&apos;s School students achieving top NEET scores</p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            Bishop&apos;s School Excellence in NEET
+          </h2>
+          <p className="text-xl md:text-2xl mb-8 opacity-90">
+            Join 280+ Bishop&apos;s School students achieving top NEET scores
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Pune.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" className="bg-white text-amber-700 px-8 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors inline-flex items-center justify-center">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Pune.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-amber-700 px-8 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors inline-flex items-center justify-center"
+            >
               Book Free Demo
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <a href="tel:8826444334" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-amber-700 transition-colors inline-flex items-center justify-center">
+            <a
+              href="tel:8826444334"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-amber-700 transition-colors inline-flex items-center justify-center"
+            >
               <Phone className="w-5 h-5 mr-2" />
               Call: 8826444334
             </a>

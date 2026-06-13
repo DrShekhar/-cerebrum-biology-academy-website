@@ -42,9 +42,7 @@ export default function AdmissionsPage() {
         </div>
 
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Enroll Now</h1>
-        <p className="text-gray-600 mb-6">
-          Start your NEET Biology journey with Cerebrum Academy
-        </p>
+        <p className="text-gray-600 mb-6">Start your NEET Biology journey with Cerebrum Academy</p>
 
         {/* Stats */}
         <div className="grid grid-cols-3 gap-3 mb-6">

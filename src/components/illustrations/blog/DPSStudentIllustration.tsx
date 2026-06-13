@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function DPSStudentIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -12,19 +12,12 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Background */}
       <rect x="20" y="20" width="360" height="260" rx="20" fill="#F0FDFA" opacity="0.5" />
 
       {/* DPS Logo/Badge */}
-      <g
-        style={{ transformOrigin: '100px 80px' }}
-      >
+      <g style={{ transformOrigin: '100px 80px' }}>
         <circle cx="100" cy="80" r="45" fill="#1E40AF" />
         <circle cx="100" cy="80" r="38" fill="#FFFFFF" />
         <circle cx="100" cy="80" r="32" fill="#1E40AF" />
@@ -37,17 +30,14 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
       </g>
 
       {/* Plus sign */}
-      <g
-      >
+      <g>
         <text x="175" y="90" fontSize="40" fill="#14B8A6" fontWeight="bold">
           +
         </text>
       </g>
 
       {/* NEET Badge */}
-      <g
-        style={{ transformOrigin: '280px 80px' }}
-      >
+      <g style={{ transformOrigin: '280px 80px' }}>
         <circle cx="280" cy="80" r="45" fill="#14B8A6" />
         <circle cx="280" cy="80" r="38" fill="#FFFFFF" />
         <circle cx="280" cy="80" r="32" fill="#14B8A6" />
@@ -80,9 +70,7 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
         <rect x="55" y="55" width="30" height="5" fill="#FFFFFF" />
 
         {/* Books in hand */}
-        <g
-          style={{ transformOrigin: '120px 90px' }}
-        >
+        <g style={{ transformOrigin: '120px 90px' }}>
           <rect x="110" y="70" width="40" height="8" rx="2" fill="#14B8A6" />
           <rect x="112" y="62" width="38" height="8" rx="2" fill="#3B82F6" />
           <rect x="114" y="54" width="36" height="8" rx="2" fill="#F97316" />
@@ -90,8 +78,7 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
       </g>
 
       {/* Result badge */}
-      <g
-      >
+      <g>
         <rect x="280" y="200" width="90" height="40" rx="8" fill="#10B981" />
         <text x="325" y="218" fontSize="8" fill="#FFFFFF" textAnchor="middle">
           Success Rate
@@ -102,18 +89,10 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
       </g>
 
       {/* Decorative stars */}
-      <text
-        x="50"
-        y="180"
-        fontSize="20"
-      >
+      <text x="50" y="180" fontSize="20">
         ⭐
       </text>
-      <text
-        x="350"
-        y="150"
-        fontSize="16"
-      >
+      <text x="350" y="150" fontSize="16">
         ⭐
       </text>
     </svg>

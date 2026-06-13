@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Can I Crack NEET Without Coaching? Self-Study Guide 2026',
-    description: 'Can you crack NEET without coaching? Honest analysis with self-study strategy, resources, and when you might need help. Success stories from Gurugram (Gurgaon). Call 88264-44334!',
+    description:
+      'Can you crack NEET without coaching? Honest analysis with self-study strategy, resources, and when you might need help. Success stories from Gurugram (Gurgaon). Call 88264-44334!',
   },
 }
 
@@ -55,7 +56,11 @@ const selfStudyResources = [
   },
   { resource: 'MTG/Trueman Biology', purpose: 'Advanced concepts and MCQs', mandatory: false },
   { resource: 'HC Verma / DC Pandey', purpose: 'Physics problem solving', mandatory: false },
-  { resource: 'the largest national NEET chains Test Series', purpose: 'Mock tests and analysis', mandatory: true },
+  {
+    resource: 'the largest national NEET chains Test Series',
+    purpose: 'Mock tests and analysis',
+    mandatory: true,
+  },
   { resource: 'PYQs (Last 10 years)', purpose: 'Exam pattern understanding', mandatory: true },
 ]
 
@@ -107,7 +112,11 @@ export default function CanICrackNEETWithoutCoaching() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

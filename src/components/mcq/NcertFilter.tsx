@@ -115,191 +115,186 @@ export function NcertFilter({
           />
         </button>
       </div>
-{isNcertOnly && (
-          <div
-            className="space-y-4 animate-fadeInUp"
-          >
-            {/* Class Selection */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Select Class</label>
-              <div className="flex gap-2">
-                <button
-                  onClick={() => handleClassChange(null)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                    !selectedClass
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-600 border border-gray-300 hover:border-blue-300'
-                  }`}
-                >
-                  Both Classes
-                </button>
-                <button
-                  onClick={() => handleClassChange(11)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
-                    selectedClass === 11
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-600 border border-gray-300 hover:border-blue-300'
-                  }`}
-                >
-                  Class 11
-                  {stats && (
-                    <span
-                      className={`text-xs px-1.5 py-0.5 rounded ${selectedClass === 11 ? 'bg-blue-500' : 'bg-gray-100'}`}
-                    >
-                      {stats.class11Questions}
-                    </span>
-                  )}
-                </button>
-                <button
-                  onClick={() => handleClassChange(12)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
-                    selectedClass === 12
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-600 border border-gray-300 hover:border-blue-300'
-                  }`}
-                >
-                  Class 12
-                  {stats && (
-                    <span
-                      className={`text-xs px-1.5 py-0.5 rounded ${selectedClass === 12 ? 'bg-blue-500' : 'bg-gray-100'}`}
-                    >
-                      {stats.class12Questions}
-                    </span>
-                  )}
-                </button>
-              </div>
+      {isNcertOnly && (
+        <div className="space-y-4 animate-fadeInUp">
+          {/* Class Selection */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">Select Class</label>
+            <div className="flex gap-2">
+              <button
+                onClick={() => handleClassChange(null)}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  !selectedClass
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-white text-gray-600 border border-gray-300 hover:border-blue-300'
+                }`}
+              >
+                Both Classes
+              </button>
+              <button
+                onClick={() => handleClassChange(11)}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
+                  selectedClass === 11
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-white text-gray-600 border border-gray-300 hover:border-blue-300'
+                }`}
+              >
+                Class 11
+                {stats && (
+                  <span
+                    className={`text-xs px-1.5 py-0.5 rounded ${selectedClass === 11 ? 'bg-blue-500' : 'bg-gray-100'}`}
+                  >
+                    {stats.class11Questions}
+                  </span>
+                )}
+              </button>
+              <button
+                onClick={() => handleClassChange(12)}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
+                  selectedClass === 12
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-white text-gray-600 border border-gray-300 hover:border-blue-300'
+                }`}
+              >
+                Class 12
+                {stats && (
+                  <span
+                    className={`text-xs px-1.5 py-0.5 rounded ${selectedClass === 12 ? 'bg-blue-500' : 'bg-gray-100'}`}
+                  >
+                    {stats.class12Questions}
+                  </span>
+                )}
+              </button>
             </div>
+          </div>
 
-            {/* Chapter Selection */}
-{selectedClass && (
-                <div
-                 className="animate-fadeInUp">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Select Chapter
-                  </label>
-                  {loading ? (
-                    <div className="flex items-center gap-2 text-gray-500">
-                      <div className="animate-spin h-4 w-4 border-2 border-blue-500 border-t-transparent rounded-full"></div>
-                      <span className="text-sm">Loading chapters...</span>
-                    </div>
-                  ) : availableChapters.length > 0 ? (
-                    <div className="flex flex-wrap gap-2 max-h-48 overflow-y-auto">
-                      <button
-                        onClick={() => onChapterChange(null)}
-                        className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                          !selectedChapter
-                            ? 'bg-purple-600 text-white'
-                            : 'bg-white text-purple-700 border border-purple-300 hover:bg-purple-50'
-                        }`}
-                      >
-                        All Chapters
-                      </button>
-                      {availableChapters.map((ch) => (
-                        <button
-                          key={ch.ncertChapter}
-                          onClick={() => onChapterChange(ch.ncertChapter)}
-                          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors flex items-center gap-1 ${
-                            selectedChapter === ch.ncertChapter
-                              ? 'bg-purple-600 text-white'
-                              : 'bg-white text-purple-700 border border-purple-300 hover:bg-purple-50'
-                          }`}
-                          title={ch.ncertChapterName}
-                        >
-                          Ch {ch.ncertChapter}
-                          <span
-                            className={`text-xs px-1 rounded ${selectedChapter === ch.ncertChapter ? 'bg-purple-500' : 'bg-purple-100'}`}
-                          >
-                            {ch.questionCount}
-                          </span>
-                        </button>
-                      ))}
-                    </div>
-                  ) : (
-                    <p className="text-sm text-gray-500 italic">
-                      No NCERT questions available for Class {selectedClass} yet.
-                    </p>
-                  )}
+          {/* Chapter Selection */}
+          {selectedClass && (
+            <div className="animate-fadeInUp">
+              <label className="block text-sm font-medium text-gray-700 mb-2">Select Chapter</label>
+              {loading ? (
+                <div className="flex items-center gap-2 text-gray-500">
+                  <div className="animate-spin h-4 w-4 border-2 border-blue-500 border-t-transparent rounded-full"></div>
+                  <span className="text-sm">Loading chapters...</span>
                 </div>
+              ) : availableChapters.length > 0 ? (
+                <div className="flex flex-wrap gap-2 max-h-48 overflow-y-auto">
+                  <button
+                    onClick={() => onChapterChange(null)}
+                    className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                      !selectedChapter
+                        ? 'bg-purple-600 text-white'
+                        : 'bg-white text-purple-700 border border-purple-300 hover:bg-purple-50'
+                    }`}
+                  >
+                    All Chapters
+                  </button>
+                  {availableChapters.map((ch) => (
+                    <button
+                      key={ch.ncertChapter}
+                      onClick={() => onChapterChange(ch.ncertChapter)}
+                      className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors flex items-center gap-1 ${
+                        selectedChapter === ch.ncertChapter
+                          ? 'bg-purple-600 text-white'
+                          : 'bg-white text-purple-700 border border-purple-300 hover:bg-purple-50'
+                      }`}
+                      title={ch.ncertChapterName}
+                    >
+                      Ch {ch.ncertChapter}
+                      <span
+                        className={`text-xs px-1 rounded ${selectedChapter === ch.ncertChapter ? 'bg-purple-500' : 'bg-purple-100'}`}
+                      >
+                        {ch.questionCount}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-sm text-gray-500 italic">
+                  No NCERT questions available for Class {selectedClass} yet.
+                </p>
               )}
-{/* NEET Weightage Filter */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">NEET Weightage</label>
-              <div className="flex flex-wrap gap-2">
+            </div>
+          )}
+          {/* NEET Weightage Filter */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">NEET Weightage</label>
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => onWeightageChange(null)}
+                className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${
+                  !selectedWeightage
+                    ? 'bg-gray-700 text-white border-gray-700'
+                    : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400'
+                }`}
+              >
+                All Weightages
+              </button>
+              {weightages.map((w) => (
                 <button
-                  onClick={() => onWeightageChange(null)}
+                  key={w.value}
+                  onClick={() => onWeightageChange(w.value)}
                   className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${
-                    !selectedWeightage
-                      ? 'bg-gray-700 text-white border-gray-700'
+                    selectedWeightage === w.value
+                      ? w.color
                       : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400'
                   }`}
                 >
-                  All Weightages
+                  {w.label} Priority
                 </button>
-                {weightages.map((w) => (
-                  <button
-                    key={w.value}
-                    onClick={() => onWeightageChange(w.value)}
-                    className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${
-                      selectedWeightage === w.value
-                        ? w.color
-                        : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400'
-                    }`}
-                  >
-                    {w.label} Priority
-                  </button>
-                ))}
-              </div>
-              <p className="text-xs text-gray-500 mt-1">
-                Filter by how frequently this topic appears in NEET exams
-              </p>
+              ))}
             </div>
-
-            {/* Diagram Filter */}
-            <div className="flex items-center justify-between bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg p-3 border border-amber-200">
-              <div className="flex items-center gap-2">
-                <span className="text-xl">🖼️</span>
-                <div>
-                  <span className="font-medium text-gray-800">Diagram-Based Questions</span>
-                  <p className="text-xs text-gray-500">Practice with visual diagrams</p>
-                </div>
-                <span className="px-2 py-0.5 rounded-full bg-amber-100 text-yellow-700 text-xs font-medium">
-                  {diagramCount} questions
-                </span>
-              </div>
-              <button
-                onClick={() => onDiagramOnlyChange(!hasDiagramOnly)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault()
-                    onDiagramOnlyChange(!hasDiagramOnly)
-                  }
-                }}
-                role="switch"
-                aria-checked={hasDiagramOnly}
-                aria-label="Toggle diagram-only questions"
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 ${
-                  hasDiagramOnly ? 'bg-amber-500' : 'bg-gray-200'
-                }`}
-              >
-                <span
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    hasDiagramOnly ? 'translate-x-6' : 'translate-x-1'
-                  }`}
-                  aria-hidden="true"
-                />
-              </button>
-            </div>
-
-            {/* Info Box */}
-            <div className="bg-white/50 rounded-lg p-3 border border-blue-100">
-              <p className="text-xs text-gray-600">
-                <span className="font-medium text-blue-700">💡 NCERT Mode:</span> Questions are
-                directly mapped to NCERT textbook chapters. Perfect for building strong fundamentals
-                and covering the syllabus systematically.
-              </p>
-            </div>
+            <p className="text-xs text-gray-500 mt-1">
+              Filter by how frequently this topic appears in NEET exams
+            </p>
           </div>
-        )}
-</div>
+
+          {/* Diagram Filter */}
+          <div className="flex items-center justify-between bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg p-3 border border-amber-200">
+            <div className="flex items-center gap-2">
+              <span className="text-xl">🖼️</span>
+              <div>
+                <span className="font-medium text-gray-800">Diagram-Based Questions</span>
+                <p className="text-xs text-gray-500">Practice with visual diagrams</p>
+              </div>
+              <span className="px-2 py-0.5 rounded-full bg-amber-100 text-yellow-700 text-xs font-medium">
+                {diagramCount} questions
+              </span>
+            </div>
+            <button
+              onClick={() => onDiagramOnlyChange(!hasDiagramOnly)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  onDiagramOnlyChange(!hasDiagramOnly)
+                }
+              }}
+              role="switch"
+              aria-checked={hasDiagramOnly}
+              aria-label="Toggle diagram-only questions"
+              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 ${
+                hasDiagramOnly ? 'bg-amber-500' : 'bg-gray-200'
+              }`}
+            >
+              <span
+                className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                  hasDiagramOnly ? 'translate-x-6' : 'translate-x-1'
+                }`}
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+
+          {/* Info Box */}
+          <div className="bg-white/50 rounded-lg p-3 border border-blue-100">
+            <p className="text-xs text-gray-600">
+              <span className="font-medium text-blue-700">💡 NCERT Mode:</span> Questions are
+              directly mapped to NCERT textbook chapters. Perfect for building strong fundamentals
+              and covering the syllabus systematically.
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
   )
 }

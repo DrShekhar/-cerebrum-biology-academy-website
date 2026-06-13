@@ -154,9 +154,7 @@ export function DailyChallenge({ freeUserId, onRequireLogin }: DailyChallengePro
   // Ready state - show challenge card
   if (state === 'ready' && challenge) {
     return (
-      <div
-        className="bg-indigo-500 rounded-2xl shadow-lg overflow-hidden animate-fadeInUp"
-      >
+      <div className="bg-indigo-500 rounded-2xl shadow-lg overflow-hidden animate-fadeInUp">
         <div className="p-6 text-white">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-4xl">🎯</span>
@@ -226,9 +224,7 @@ export function DailyChallenge({ freeUserId, onRequireLogin }: DailyChallengePro
             </span>
           </div>
           <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-blue-500 animate-fadeInUp"
-            />
+            <div className="h-full bg-blue-500 animate-fadeInUp" />
           </div>
         </div>
 
@@ -329,9 +325,7 @@ export function DailyChallenge({ freeUserId, onRequireLogin }: DailyChallengePro
   // Completed state
   if (state === 'completed') {
     return (
-      <div
-        className="bg-white rounded-2xl shadow-lg overflow-hidden animate-fadeInUp"
-      >
+      <div className="bg-white rounded-2xl shadow-lg overflow-hidden animate-fadeInUp">
         <div
           className={`p-8 text-center ${
             result?.isPerfect || isAlreadyCompleted

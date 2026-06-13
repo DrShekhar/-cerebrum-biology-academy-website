@@ -87,7 +87,15 @@ const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
   },
 ]
 
-export function VideoTestimonialsSection(_props: { city?: string; country?: string; title?: string; subtitle?: string; testimonials?: Array<{ name: string; score: string; school: string; quote: string }> } = {}) {
+export function VideoTestimonialsSection(
+  _props: {
+    city?: string
+    country?: string
+    title?: string
+    subtitle?: string
+    testimonials?: Array<{ name: string; score: string; school: string; quote: string }>
+  } = {}
+) {
   const [activeIndex, setActiveIndex] = useState(0)
   // Track which videos have been clicked to play
   const [playingVideos, setPlayingVideos] = useState<Set<number>>(new Set())
@@ -133,9 +141,7 @@ export function VideoTestimonialsSection(_props: { city?: string; country?: stri
       />
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div
-          className="text-center mb-12 animate-fadeInUp"
-        >
+        <div className="text-center mb-12 animate-fadeInUp">
           <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-4">
             Success Stories
           </span>
@@ -171,10 +177,7 @@ export function VideoTestimonialsSection(_props: { city?: string; country?: stri
             {/* Testimonial Details */}
             <div className="space-y-6">
               {/* Quote */}
-              <div
-                key={`quote-${activeIndex}`}
-                className="relative animate-fadeInUp"
-              >
+              <div key={`quote-${activeIndex}`} className="relative animate-fadeInUp">
                 <Quote className="absolute -top-2 -left-2 w-10 h-10 text-blue-200" />
                 <p className="text-xl md:text-2xl text-gray-700 italic pl-8 leading-relaxed">
                   &ldquo;{activeTestimonial.quote}&rdquo;
@@ -213,7 +216,9 @@ export function VideoTestimonialsSection(_props: { city?: string; country?: stri
                 </div>
                 {activeTestimonial.rank !== undefined && (
                   <div className="bg-purple-50 rounded-xl p-4 text-center">
-                    <p className="text-2xl font-bold text-purple-600">AIR {activeTestimonial.rank}</p>
+                    <p className="text-2xl font-bold text-purple-600">
+                      AIR {activeTestimonial.rank}
+                    </p>
                     <p className="text-sm text-gray-600">All India Rank</p>
                   </div>
                 )}
@@ -267,9 +272,7 @@ export function VideoTestimonialsSection(_props: { city?: string; country?: stri
         </div>
 
         {/* Quick Stats */}
-        <div
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto animate-fadeInUp"
-        >
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto animate-fadeInUp">
           {[
             { label: 'Students Placed', value: '500+', color: 'text-blue-600' },
             { label: 'AIIMS Selections', value: '45+', color: 'text-green-600' },

@@ -110,14 +110,10 @@ export const ProgressRing = memo(function ProgressRing({
 
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         {showPercentage && (
-          <span className={`text-2xl font-bold ${selectedColor.text}`}>
-            {displayValue}%
-          </span>
+          <span className={`text-2xl font-bold ${selectedColor.text}`}>{displayValue}%</span>
         )}
         {label && (
-          <span className="text-xs text-gray-500 mt-1 text-center animate-fadeInUp">
-            {label}
-          </span>
+          <span className="text-xs text-gray-500 mt-1 text-center animate-fadeInUp">{label}</span>
         )}
       </div>
     </div>

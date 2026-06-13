@@ -6,7 +6,7 @@ export function PhotosynthesisVsRespirationIllustration({
   className = '',
   animate = true,
 }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -151,9 +151,7 @@ export function PhotosynthesisVsRespirationIllustration({
 
       {/* Sun with glow */}
       <g filter="url(#sunGlowPvr)">
-        <g
-          style={{ transformOrigin: '80px 160px' }}
-        >
+        <g style={{ transformOrigin: '80px 160px' }}>
           <circle cx="80" cy="160" r="28" fill="url(#sunGradPvr)" />
           <circle
             cx="80"
@@ -191,10 +189,7 @@ export function PhotosynthesisVsRespirationIllustration({
       </text>
 
       {/* Chloroplast/Leaf */}
-      <g
-        filter="url(#pvrCardShadow)"
-        style={{ transformOrigin: '175px 165px' }}
-      >
+      <g filter="url(#pvrCardShadow)" style={{ transformOrigin: '175px 165px' }}>
         <ellipse cx="175" cy="165" rx="38" ry="55" fill="url(#leafGradPvr)" />
         <line x1="175" y1="115" x2="175" y2="215" stroke="#15803D" strokeWidth="3" />
         <line
@@ -283,8 +278,7 @@ export function PhotosynthesisVsRespirationIllustration({
       </g>
 
       {/* O2 bubbles */}
-      <g
-      >
+      <g>
         <circle cx="55" cy="345" r="8" fill="#93C5FD" fillOpacity="0.8" />
         <circle cx="80" cy="360" r="6" fill="#93C5FD" fillOpacity="0.7" />
         <circle cx="65" cy="372" r="5" fill="#93C5FD" fillOpacity="0.6" />
@@ -315,10 +309,7 @@ export function PhotosynthesisVsRespirationIllustration({
       </text>
 
       {/* Mitochondria */}
-      <g
-        filter="url(#pvrCardShadow)"
-        style={{ transformOrigin: '387px 165px' }}
-      >
+      <g filter="url(#pvrCardShadow)" style={{ transformOrigin: '387px 165px' }}>
         <ellipse cx="387" cy="165" rx="55" ry="35" fill="url(#mitoGradPvr)" />
         <ellipse cx="387" cy="165" rx="48" ry="28" fill="none" stroke="#FCA5A5" strokeWidth="2" />
         {/* Cristae */}
@@ -390,9 +381,7 @@ export function PhotosynthesisVsRespirationIllustration({
       </g>
 
       {/* ATP Energy badge */}
-      <g
-        filter="url(#pvrGlow)"
-      >
+      <g filter="url(#pvrGlow)">
         <circle cx="440" cy="355" r="28" fill="url(#atpGradPvr)" />
         <circle
           cx="440"

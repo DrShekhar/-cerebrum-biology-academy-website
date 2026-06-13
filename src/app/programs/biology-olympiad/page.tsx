@@ -185,8 +185,8 @@ export default async function BiologyOlympiadHubPage() {
               Schedule — calibrated to international school workloads
             </h2>
             <p className="mt-3 max-w-3xl text-base text-slate-600 md:text-lg">
-              Six hours per week, scheduled for your local evenings — typically two weekday slots
-              + one Sunday session. Recordings are available if you miss a class. The cycle starts
+              Six hours per week, scheduled for your local evenings — typically two weekday slots +
+              one Sunday session. Recordings are available if you miss a class. The cycle starts
               fresh each September; mid-year entry is supported with 1-on-1 catch-up sessions.
             </p>
             <div className="mt-8 grid gap-4 md:grid-cols-3">

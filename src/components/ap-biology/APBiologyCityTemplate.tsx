@@ -104,7 +104,9 @@ const pedagogyPillars = [
 export default function APBiologyCityTemplate({ metro }: APBiologyCityTemplateProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const pricingTiers = apBiologyPricingTiers
-  const pricingSummary = pricingTiers.map((t) => `• ${t.name} — ${t.label} (${t.batchSize})`).join('\n')
+  const pricingSummary = pricingTiers
+    .map((t) => `• ${t.name} — ${t.label} (${t.batchSize})`)
+    .join('\n')
 
   // Hero CTA — counsellor receives the visitor's location + the full
   // pricing menu they were just shown, so the conversation starts with
@@ -381,7 +383,8 @@ export default function APBiologyCityTemplate({ metro }: APBiologyCityTemplatePr
             AP Biology — Pinnacle / Ascent / Pursuit
           </h2>
           <p className="text-slate-600 mb-8 max-w-3xl">
-            Annual programmes with clear tier differentiation. Choose by batch size and 1:1 access level.
+            Annual programmes with clear tier differentiation. Choose by batch size and 1:1 access
+            level.
           </p>
           <div className="grid md:grid-cols-3 gap-5">
             {pricingTiers.map((tier) => (
@@ -389,13 +392,24 @@ export default function APBiologyCityTemplate({ metro }: APBiologyCityTemplatePr
                 key={tier.id}
                 className={`rounded-xl border ${tier.highlight ? 'border-blue-400 ring-2 ring-blue-100' : 'border-slate-200'} bg-slate-50 p-6 hover:shadow-md transition flex flex-col`}
               >
-                {tier.highlight && <span className="text-xs font-semibold text-blue-600 uppercase mb-2">Most Popular</span>}
+                {tier.highlight && (
+                  <span className="text-xs font-semibold text-blue-600 uppercase mb-2">
+                    Most Popular
+                  </span>
+                )}
                 <h3 className="text-lg font-bold text-slate-900 mb-1">{tier.name}</h3>
                 <p className="text-2xl font-bold text-blue-700 mb-1">{tier.label}</p>
-                <p className="text-sm text-green-700 font-medium mb-1">{tier.batchSize} · {tier.oneOnOne}</p>
+                <p className="text-sm text-green-700 font-medium mb-1">
+                  {tier.batchSize} · {tier.oneOnOne}
+                </p>
                 <p className="text-xs text-slate-500 mb-3">{tier.subtitle}</p>
                 <ul className="text-sm text-slate-600 flex-grow space-y-1 mb-4">
-                  {tier.features.slice(0, 4).map((f) => <li key={f} className="flex items-start gap-1.5"><span className="text-green-500 mt-0.5">✓</span>{f}</li>)}
+                  {tier.features.slice(0, 4).map((f) => (
+                    <li key={f} className="flex items-start gap-1.5">
+                      <span className="text-green-500 mt-0.5">✓</span>
+                      {f}
+                    </li>
+                  ))}
                 </ul>
                 {/* Per-tier CTA — the WhatsApp message includes this
                     exact tier name + price so the counsellor sees the

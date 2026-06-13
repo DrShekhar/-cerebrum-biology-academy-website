@@ -549,9 +549,7 @@ Submitted via School Seminar Booking Form`
                 </div>
               </div>
 
-              <div
-                className="relative hidden lg:block animate-fadeInUp"
-              >
+              <div className="relative hidden lg:block animate-fadeInUp">
                 <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                   <div className="grid grid-cols-2 gap-4">
                     {stats.map((stat, index) => (
@@ -570,9 +568,7 @@ Submitted via School Seminar Booking Form`
         {/* Why Schools Need Career Seminars */}
         <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 Why Schools Need Career Guidance Seminars
               </h2>
@@ -583,9 +579,7 @@ Submitted via School Seminar Booking Form`
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <div
-                className="bg-white rounded-xl p-6 shadow-lg border border-green-100 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-green-100 animate-fadeInUp">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
                     <FileText className="w-6 h-6 text-green-700" />
@@ -602,9 +596,7 @@ Submitted via School Seminar Booking Form`
                 </p>
               </div>
 
-              <div
-                className="bg-white rounded-xl p-6 shadow-lg border border-blue-100 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-blue-100 animate-fadeInUp">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
                     <Building className="w-6 h-6 text-blue-600" />
@@ -627,9 +619,7 @@ Submitted via School Seminar Booking Form`
         {/* Seminar Types */}
         <section className="py-16 md:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 Our Seminar Programs
               </h2>
@@ -695,9 +685,7 @@ Submitted via School Seminar Booking Form`
         {/* Why Choose Cerebrum */}
         <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 Why Schools Choose Cerebrum
               </h2>
@@ -796,16 +784,12 @@ Submitted via School Seminar Booking Form`
         {/* Sample Agenda */}
         <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-4xl mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Sample Agenda</h2>
               <p className="text-gray-600">A typical 3-hour comprehensive session structure</p>
             </div>
 
-            <div
-              className="bg-gray-50 rounded-2xl p-6 md:p-8 animate-fadeInUp"
-            >
+            <div className="bg-gray-50 rounded-2xl p-6 md:p-8 animate-fadeInUp">
               <div className="space-y-4">
                 {sampleAgenda.map((item, index) => (
                   <div
@@ -829,9 +813,7 @@ Submitted via School Seminar Booking Form`
         {/* Testimonials */}
         <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 What Schools Say About Us
               </h2>
@@ -937,9 +919,7 @@ Submitted via School Seminar Booking Form`
         {/* Booking Form Section */}
         <section id="booking-form" className="py-16 md:py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <div className="inline-flex items-center px-4 py-2 bg-green-100 rounded-full text-green-800 text-sm font-medium mb-4">
                 <ClipboardList className="w-4 h-4 mr-2" />
                 For Principals & School Management
@@ -1282,8 +1262,7 @@ Submitted via School Seminar Booking Form`
         {/* Final CTA */}
         <section className="py-16 md:py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <School className="w-16 h-16 mx-auto mb-6 text-yellow-400" />
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
                 Ready to Empower Your Students?

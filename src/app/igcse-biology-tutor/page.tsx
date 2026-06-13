@@ -217,8 +217,7 @@ export default function IGCSEBiologyTutorPage() {
           </div>
 
           <div className="container relative mx-auto px-4">
-            <div className="mx-auto max-w-4xl text-center animate-fadeInUp"
-            >
+            <div className="mx-auto max-w-4xl text-center animate-fadeInUp">
               <span className="mb-4 inline-block rounded-full bg-white/20 px-6 py-2 text-sm font-medium backdrop-blur-sm">
                 Cambridge, Edexcel, AQA, OCR Specialist
               </span>
@@ -274,8 +273,7 @@ export default function IGCSEBiologyTutorPage() {
         {/* Exam Boards Section */}
         <section className="bg-white py-16">
           <div className="container mx-auto px-4">
-            <div className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 All IGCSE & GCSE Exam Boards Covered
               </h2>
@@ -286,7 +284,13 @@ export default function IGCSEBiologyTutorPage() {
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {examBoards.map((board, index) => (
-                <div key={board.code} className={`rounded-2xl bg-gradient-to-br ${board.gradient} p-6 text-white shadow-xl` + " animate-fadeInUp"}>
+                <div
+                  key={board.code}
+                  className={
+                    `rounded-2xl bg-gradient-to-br ${board.gradient} p-6 text-white shadow-xl` +
+                    ' animate-fadeInUp'
+                  }
+                >
                   <div className="mb-4 text-5xl">{board.icon}</div>
                   <h3 className="mb-2 text-xl font-bold">{board.name}</h3>
                   <p className="mb-4 text-sm opacity-90">Code: {board.code}</p>
@@ -307,8 +311,7 @@ export default function IGCSEBiologyTutorPage() {
         {/* Syllabus Topics Section */}
         <section className="bg-gradient-to-b from-blue-50 to-white py-16">
           <div className="container mx-auto px-4">
-            <div className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Complete IGCSE Biology Syllabus Coverage
               </h2>
@@ -319,7 +322,9 @@ export default function IGCSEBiologyTutorPage() {
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {syllabusTopics.map((topic, index) => (
-                <div key={topic.title} className="rounded-2xl border border-cyan-100 bg-white/80 p-6 backdrop-blur-sm shadow-lg transition hover:shadow-xl animate-fadeInUp"
+                <div
+                  key={topic.title}
+                  className="rounded-2xl border border-cyan-100 bg-white/80 p-6 backdrop-blur-sm shadow-lg transition hover:shadow-xl animate-fadeInUp"
                 >
                   <div className="mb-4 text-4xl">{topic.icon}</div>
                   <h3 className="mb-4 text-xl font-bold text-gray-900">{topic.title}</h3>
@@ -340,8 +345,7 @@ export default function IGCSEBiologyTutorPage() {
         {/* Grade Boundaries Section */}
         <section className="bg-white py-16">
           <div className="container mx-auto px-4">
-            <div className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 IGCSE Biology Grade Boundaries
               </h2>
@@ -352,7 +356,9 @@ export default function IGCSEBiologyTutorPage() {
 
             <div className="mx-auto max-w-4xl space-y-4">
               {gradeBoundaries.map((grade, index) => (
-                <div key={grade.grade} className="overflow-hidden rounded-xl shadow-lg animate-fadeInUp"
+                <div
+                  key={grade.grade}
+                  className="overflow-hidden rounded-xl shadow-lg animate-fadeInUp"
                 >
                   <div className={`bg-gradient-to-r ${grade.color} p-6 text-white`}>
                     <div className="flex flex-col items-start justify-between md:flex-row md:items-center">
@@ -369,8 +375,7 @@ export default function IGCSEBiologyTutorPage() {
               ))}
             </div>
 
-            <div className="mt-10 rounded-2xl bg-gradient-to-r from-cyan-100 to-green-100 p-8 animate-fadeInUp"
-            >
+            <div className="mt-10 rounded-2xl bg-gradient-to-r from-cyan-100 to-green-100 p-8 animate-fadeInUp">
               <h3 className="mb-4 text-2xl font-bold text-gray-900">
                 Tips for Achieving Top Grades
               </h3>
@@ -406,8 +411,7 @@ export default function IGCSEBiologyTutorPage() {
         {/* Features Section */}
         <section className="bg-gradient-to-b from-blue-50 to-white py-16">
           <div className="container mx-auto px-4">
-            <div className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Why Choose Our IGCSE Biology Tutoring?
               </h2>
@@ -418,7 +422,9 @@ export default function IGCSEBiologyTutorPage() {
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {features.map((feature, index) => (
-                <div key={feature.title} className="rounded-2xl bg-white p-6 shadow-lg transition hover:shadow-xl animate-fadeInUp"
+                <div
+                  key={feature.title}
+                  className="rounded-2xl bg-white p-6 shadow-lg transition hover:shadow-xl animate-fadeInUp"
                 >
                   <div className="mb-4 text-5xl">{feature.icon}</div>
                   <h3 className="mb-3 text-xl font-bold text-gray-900">{feature.title}</h3>
@@ -432,8 +438,7 @@ export default function IGCSEBiologyTutorPage() {
         {/* FAQ Section */}
         <section className="bg-white py-16">
           <div className="container mx-auto px-4">
-            <div className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Frequently Asked Questions
               </h2>
@@ -444,7 +449,9 @@ export default function IGCSEBiologyTutorPage() {
 
             <div className="mx-auto max-w-3xl space-y-4">
               {faqSchema.mainEntity.map((faq, index) => (
-                <div key={index} className="rounded-xl border border-gray-200 bg-white shadow-md animate-fadeInUp"
+                <div
+                  key={index}
+                  className="rounded-xl border border-gray-200 bg-white shadow-md animate-fadeInUp"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -479,8 +486,7 @@ export default function IGCSEBiologyTutorPage() {
         {/* Internal Links Section */}
         <section className="bg-gradient-to-b from-blue-50 to-white py-16">
           <div className="container mx-auto px-4">
-            <div className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Explore Other Programs
               </h2>

@@ -109,12 +109,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about plant tissue systems:\n\nI. The dermal tissue system includes the epidermis and periderm, providing protection against water loss and pathogens.\nII. The vascular tissue system consists of xylem (water and mineral transport) and phloem (sugar transport).\nIII. Ground tissue is composed exclusively of sclerenchyma cells.\nIV. Collenchyma cells have unevenly thickened primary cell walls and provide flexible support to growing organs.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TTFT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE. The dermal tissue system forms the outer protective covering. In primary growth, the epidermis (a single cell layer with cuticle) serves this role. In secondary growth, the epidermis is replaced by the periderm (bark), produced by the cork cambium. Both provide protection against water loss (cuticle, suberin in cork), mechanical damage, and pathogen entry. Statement II is TRUE. The vascular tissue system comprises: xylem — conducting water and dissolved minerals from roots to shoots, containing tracheids and vessel elements (dead, hollow cells); and phloem — transporting organic nutrients (primarily sucrose), containing sieve tube elements and companion cells (living cells). Statement III is FALSE. Ground tissue includes three cell types: (a) Parenchyma — the most abundant, with thin primary walls, functioning in photosynthesis, storage, and secretion. (b) Collenchyma — with unevenly thickened primary walls, providing flexible support. (c) Sclerenchyma — with thick, lignified secondary walls, providing rigid support (fibers and sclereids). Ground tissue is NOT exclusively sclerenchyma — parenchyma is the most common ground tissue cell type. Statement IV is TRUE. Collenchyma cells are characterized by primary cell walls thickened irregularly at the corners (angular collenchyma) or along tangential walls (lamellar collenchyma). They are living at maturity and provide mechanical support while retaining flexibility, which is important in growing stems and petioles that must bend without breaking.",
       "isOlympiad": true,
@@ -369,12 +364,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about root anatomy:\n\nI. The root epidermis produces root hairs that increase the surface area for water and mineral absorption.\nII. The pericycle, located just inside the endodermis, gives rise to lateral (branch) roots.\nIII. The cortex of the root is composed of dead sclerenchyma cells that provide rigid support.\nIV. In the root tip, the zone of cell division is located behind (proximal to) the root cap.",
-      "options": [
-        "TTFT",
-        "TTFF",
-        "TFTT",
-        "TFTF"
-      ],
+      "options": ["TTFT", "TTFF", "TFTT", "TFTF"],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE. Root hairs are tubular extensions of individual epidermal cells (trichoblasts) that dramatically increase the root surface area in contact with soil. A single rye plant may have 14 billion root hairs, increasing the root surface area by over 400 square meters. Root hairs absorb water and minerals through the enormous surface area they provide. Statement II is TRUE. Lateral roots originate from the pericycle — a layer of parenchyma cells just inside the endodermis. Pericycle cells opposite the xylem poles are stimulated (by auxin) to divide, producing a lateral root primordium that grows through the cortex and epidermis to emerge from the parent root. This endogenous origin (from inside) distinguishes lateral roots from adventitious roots. Statement III is FALSE. The root cortex is primarily composed of living parenchyma cells, not dead sclerenchyma. Cortical parenchyma functions in: storage (starch, sugars), aeration (aerenchyma — air spaces in cortex of wetland plants), and lateral transport of water and minerals. Some cortical cells may have thickened walls, but the cortex is predominantly parenchymatous. Statement IV is TRUE. The root tip is organized into zones: the root cap (protects the meristem), then the zone of cell division (quiescent center + actively dividing cells), then the zone of elongation, and then the zone of differentiation/maturation. The zone of cell division is proximal to (behind) the root cap.",
       "isOlympiad": true,
@@ -789,12 +779,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about leaf morphology and adaptation:\n\nI. Xerophytic leaves (adapted to dry conditions) often have thick cuticles, sunken stomata, and trichomes to reduce water loss.\nII. Hydrophytic leaves (adapted to aquatic environments) typically have large air spaces (aerenchyma) and stomata on the upper surface.\nIII. Sun leaves on the same tree are typically thicker than shade leaves, with more layers of palisade mesophyll.\nIV. All leaves have the same internal anatomy regardless of environment.",
-      "options": [
-        "TTTF",
-        "TTFT",
-        "TTFF",
-        "FTTT"
-      ],
+      "options": ["TTTF", "TTFT", "TTFF", "FTTT"],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE. Xerophytic adaptations reduce water loss: thick waxy cuticle minimizes cuticular transpiration; sunken stomata in pits or grooves create a humid microenvironment above the pore, reducing the water vapor gradient; dense trichomes create a boundary layer of still air; additionally, some xerophytes have succulent water-storing tissue, rolled leaves (like marram grass), or reduce leaves to spines (like cacti). Statement II is TRUE. Hydrophytic leaf adaptations include: aerenchyma (large air spaces) that provide buoyancy and facilitate gas transport to submerged tissues; stomata on the upper (adaxial) surface only (in floating leaves like water lilies) because the lower surface contacts water; reduced or absent cuticle on submerged surfaces; and thin leaves to maximize gas exchange with the aqueous environment. Statement III is TRUE. Sun leaves and shade leaves (even on the same individual tree) differ dramatically: sun leaves are thicker with 2-3 layers of elongated palisade mesophyll cells (maximizing photosynthetic capacity per unit area); shade leaves are thinner with a single, less developed palisade layer but larger total leaf area (maximizing light interception). This plasticity is called heteroblasty or environmental heterophylly. Statement IV is FALSE. Leaf internal anatomy varies enormously in response to environmental conditions, species-specific adaptations, and developmental plasticity. C4 plants have Kranz anatomy; CAM plants have large vacuoles; xerophytes, mesophytes, and hydrophytes all have distinct internal organizations.",
       "isOlympiad": true,

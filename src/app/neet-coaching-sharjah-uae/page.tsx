@@ -109,6 +109,7 @@ export default async function NEETCoachingSharjahPage() {
   return (
     <>
       <LocalitySchema
+        country="AE"
         locality="Sharjah"
         slug="neet-coaching-sharjah-uae"
         pageTitle="Best NEET Coaching in Sharjah"

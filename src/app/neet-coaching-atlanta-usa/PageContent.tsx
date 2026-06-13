@@ -259,8 +259,10 @@ export default function PageContent({ faqs }: PageContentProps) {
         </div>
       </section>
 
-            <USABOPathwayCallout cityName="Atlanta + suburbs" schools={["Walton HS","Roswell HS","Alpharetta HS","Northview HS"]} />
-
+      <USABOPathwayCallout
+        cityName="Atlanta + suburbs"
+        schools={['Walton HS', 'Roswell HS', 'Alpharetta HS', 'Northview HS']}
+      />
 
       <RelatedCityLinks currentCity="atlanta" variant="default" />
     </div>

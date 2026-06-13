@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 10 in Gurugram | 2-Year Head Start',
-    description: 'NEET Foundation for Class 10 students in Gurugram (Gurgaon). 2-year head start, 40% NEET syllabus overlap with boards. Expert faculty at Sector 51 center.',
+    description:
+      'NEET Foundation for Class 10 students in Gurugram (Gurgaon). 2-year head start, 40% NEET syllabus overlap with boards. Expert faculty at Sector 51 center.',
   },
 }
 
@@ -106,7 +107,11 @@ export default function NEETFoundationClass10GurugramPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-foundation-class-10-gurugram" />
       <script

@@ -152,159 +152,140 @@ export default function TestGenerationWithProgress() {
             </p>
           </div>
         </div>
-{!isGenerating && !generatedTest && (
-            <div
-              key="start"
-              className="space-y-6 animate-fadeInUp"
-            >
-              <div className="bg-slate-50 rounded-lg p-6 space-y-4">
-                <h3 className="font-semibold text-slate-900">Test Configuration</h3>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <span className="text-slate-600">Topics:</span>
-                    <span className="ml-2 font-medium">Cell Biology, Genetics, Ecology</span>
-                  </div>
-                  <div>
-                    <span className="text-slate-600">Questions:</span>
-                    <span className="ml-2 font-medium">50</span>
-                  </div>
-                  <div>
-                    <span className="text-slate-600">Difficulty:</span>
-                    <span className="ml-2 font-medium">Medium</span>
-                  </div>
-                  <div>
-                    <span className="text-slate-600">Est. Time:</span>
-                    <span className="ml-2 font-medium">10 seconds</span>
-                  </div>
+        {!isGenerating && !generatedTest && (
+          <div key="start" className="space-y-6 animate-fadeInUp">
+            <div className="bg-slate-50 rounded-lg p-6 space-y-4">
+              <h3 className="font-semibold text-slate-900">Test Configuration</h3>
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div>
+                  <span className="text-slate-600">Topics:</span>
+                  <span className="ml-2 font-medium">Cell Biology, Genetics, Ecology</span>
+                </div>
+                <div>
+                  <span className="text-slate-600">Questions:</span>
+                  <span className="ml-2 font-medium">50</span>
+                </div>
+                <div>
+                  <span className="text-slate-600">Difficulty:</span>
+                  <span className="ml-2 font-medium">Medium</span>
+                </div>
+                <div>
+                  <span className="text-slate-600">Est. Time:</span>
+                  <span className="ml-2 font-medium">10 seconds</span>
                 </div>
               </div>
-
-              <Button
-                onClick={handleStartGeneration}
-                size="lg"
-                className="w-full"
-                variant="primary"
-              >
-                <Sparkles className="w-5 h-5 mr-2" />
-                Start Generation
-              </Button>
             </div>
-          )}
 
-          {isGenerating && (
-            <div
-              key="generating"
-              className="space-y-8 animate-fadeInUp"
-            >
-              <StepIndicator
-                steps={steps}
-                currentStep={currentStep}
-                orientation="horizontal"
-                size="md"
+            <Button onClick={handleStartGeneration} size="lg" className="w-full" variant="primary">
+              <Sparkles className="w-5 h-5 mr-2" />
+              Start Generation
+            </Button>
+          </div>
+        )}
+
+        {isGenerating && (
+          <div key="generating" className="space-y-8 animate-fadeInUp">
+            <StepIndicator
+              steps={steps}
+              currentStep={currentStep}
+              orientation="horizontal"
+              size="md"
+              color="blue"
+              animated
+            />
+
+            <div className="space-y-6">
+              <ProgressIndicator
+                current={currentStep + 1}
+                total={generationSteps.length}
+                percentage={percentage}
+                status={steps[currentStep]?.description || 'Processing...'}
+                estimatedTime={estimatedTimeRemaining}
+                variant="linear"
+                size="lg"
                 color="blue"
-                animated
+                onCancel={handleCancel}
+                error={error || undefined}
               />
 
-              <div className="space-y-6">
-                <ProgressIndicator
-                  current={currentStep + 1}
-                  total={generationSteps.length}
-                  percentage={percentage}
-                  status={steps[currentStep]?.description || 'Processing...'}
-                  estimatedTime={estimatedTimeRemaining}
-                  variant="linear"
-                  size="lg"
-                  color="blue"
-                  onCancel={handleCancel}
-                  error={error || undefined}
-                />
-
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="bg-blue-50 rounded-lg p-4 text-center">
-                    <p className="text-2xl font-bold text-blue-600">{currentStep + 1}</p>
-                    <p className="text-xs text-blue-800 font-medium">Current Step</p>
-                  </div>
-                  <div className="bg-green-50 rounded-lg p-4 text-center">
-                    <p className="text-2xl font-bold text-green-600">{Math.round(percentage)}%</p>
-                    <p className="text-xs text-green-700 font-medium">Progress</p>
-                  </div>
-                  <div className="bg-amber-50 rounded-lg p-4 text-center">
-                    <p className="text-2xl font-bold text-yellow-600">{estimatedTimeRemaining}s</p>
-                    <p className="text-xs text-yellow-800 font-medium">Remaining</p>
-                  </div>
+              <div className="grid grid-cols-3 gap-4">
+                <div className="bg-blue-50 rounded-lg p-4 text-center">
+                  <p className="text-2xl font-bold text-blue-600">{currentStep + 1}</p>
+                  <p className="text-xs text-blue-800 font-medium">Current Step</p>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4 text-center">
+                  <p className="text-2xl font-bold text-green-600">{Math.round(percentage)}%</p>
+                  <p className="text-xs text-green-700 font-medium">Progress</p>
+                </div>
+                <div className="bg-amber-50 rounded-lg p-4 text-center">
+                  <p className="text-2xl font-bold text-yellow-600">{estimatedTimeRemaining}s</p>
+                  <p className="text-xs text-yellow-800 font-medium">Remaining</p>
                 </div>
               </div>
             </div>
-          )}
+          </div>
+        )}
 
-          {generatedTest && !isGenerating && (
-            <div
-              key="success"
-              className="space-y-6 animate-fadeInUp"
-            >
-              <div className="bg-green-50 border-2 border-green-200 rounded-xl p-8 text-center">
-                <div
-                  className="inline-flex p-4 bg-green-100 rounded-full mb-4 animate-fadeInUp"
-                >
-                  <CheckCircle2 className="w-12 h-12 text-green-600" />
-                </div>
-
-                <h2 className="text-2xl font-bold text-green-800 mb-2">
-                  Test Generated Successfully!
-                </h2>
-                <p className="text-green-700 mb-6">
-                  Your test with {generatedTest.questions} questions is ready to download
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                  <Button onClick={handleDownload} size="lg" variant="primary">
-                    <Download className="w-5 h-5 mr-2" />
-                    Download Test
-                  </Button>
-                  <Button
-                    onClick={() => {
-                      setGeneratedTest(null)
-                      setSteps(generationSteps)
-                      setPercentage(0)
-                      setCurrentStep(0)
-                    }}
-                    size="lg"
-                    variant="outline"
-                  >
-                    Generate Another
-                  </Button>
-                </div>
+        {generatedTest && !isGenerating && (
+          <div key="success" className="space-y-6 animate-fadeInUp">
+            <div className="bg-green-50 border-2 border-green-200 rounded-xl p-8 text-center">
+              <div className="inline-flex p-4 bg-green-100 rounded-full mb-4 animate-fadeInUp">
+                <CheckCircle2 className="w-12 h-12 text-green-600" />
               </div>
-            </div>
-          )}
 
-          {error && !isGenerating && (
-            <div
-              key="error"
-              className="space-y-6 animate-fadeInUp"
-            >
-              <div className="bg-gradient-to-br bg-red-50 border-2 border-red-200 rounded-xl p-8 text-center">
-                <div className="inline-flex p-4 bg-red-100 rounded-full mb-4">
-                  <AlertCircle className="w-12 h-12 text-red-600" />
-                </div>
+              <h2 className="text-2xl font-bold text-green-800 mb-2">
+                Test Generated Successfully!
+              </h2>
+              <p className="text-green-700 mb-6">
+                Your test with {generatedTest.questions} questions is ready to download
+              </p>
 
-                <h2 className="text-2xl font-bold text-red-900 mb-2">Generation Failed</h2>
-                <p className="text-red-700 mb-6">{error}</p>
-
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Button onClick={handleDownload} size="lg" variant="primary">
+                  <Download className="w-5 h-5 mr-2" />
+                  Download Test
+                </Button>
                 <Button
                   onClick={() => {
-                    setError(null)
+                    setGeneratedTest(null)
                     setSteps(generationSteps)
+                    setPercentage(0)
+                    setCurrentStep(0)
                   }}
                   size="lg"
-                  variant="primary"
+                  variant="outline"
                 >
-                  Try Again
+                  Generate Another
                 </Button>
               </div>
             </div>
-          )}
-</Card>
+          </div>
+        )}
+
+        {error && !isGenerating && (
+          <div key="error" className="space-y-6 animate-fadeInUp">
+            <div className="bg-gradient-to-br bg-red-50 border-2 border-red-200 rounded-xl p-8 text-center">
+              <div className="inline-flex p-4 bg-red-100 rounded-full mb-4">
+                <AlertCircle className="w-12 h-12 text-red-600" />
+              </div>
+
+              <h2 className="text-2xl font-bold text-red-900 mb-2">Generation Failed</h2>
+              <p className="text-red-700 mb-6">{error}</p>
+
+              <Button
+                onClick={() => {
+                  setError(null)
+                  setSteps(generationSteps)
+                }}
+                size="lg"
+                variant="primary"
+              >
+                Try Again
+              </Button>
+            </div>
+          </div>
+        )}
+      </Card>
 
       <Card className="p-6">
         <h3 className="font-semibold text-slate-900 mb-4">Generation Process</h3>

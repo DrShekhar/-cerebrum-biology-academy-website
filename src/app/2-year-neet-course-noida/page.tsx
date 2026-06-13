@@ -43,7 +43,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: '2 Year NEET Course Noida 2026 | Class 11-12 Integrated',
-    description: 'Join 2-year NEET course in Noida from Class 11. Complete foundation + advanced coaching. Sector 62. Best results with 98% success rate. Call 99536-43938!',
+    description:
+      'Join 2-year NEET course in Noida from Class 11. Complete foundation + advanced coaching. Sector 62. Best results with 98% success rate. Call 99536-43938!',
   },
 }
 
@@ -496,7 +497,9 @@ export default function TwoYearNEETCourseNoida() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-teal-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-teal-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>

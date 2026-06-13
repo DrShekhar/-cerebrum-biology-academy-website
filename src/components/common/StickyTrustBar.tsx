@@ -71,65 +71,60 @@ export function StickyTrustBar() {
   if (!isVisible) return null
 
   return (
-<div
-        className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm animate-fadeInUp"
-      >
-        <div className="max-w-7xl mx-auto px-4 py-2">
-          <div className="flex items-center justify-between">
-            {/* Left: Rotating Trust Metric */}
+    <div className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm animate-fadeInUp">
+      <div className="max-w-7xl mx-auto px-4 py-2">
+        <div className="flex items-center justify-between">
+          {/* Left: Rotating Trust Metric */}
+          <div key={currentMetric} className="flex items-center space-x-3 animate-fadeInUp">
             <div
-              key={currentMetric}
-              className="flex items-center space-x-3 animate-fadeInUp"
+              className={`w-8 h-8 rounded-lg flex items-center justify-center border ${currentTrustMetric.color}`}
             >
-              <div
-                className={`w-8 h-8 rounded-lg flex items-center justify-center border ${currentTrustMetric.color}`}
-              >
-                <Icon className="w-4 h-4" />
-              </div>
-              <div>
-                <span className="text-lg font-bold text-gray-900">{currentTrustMetric.value}</span>
-                <span className="text-sm text-gray-600 ml-2">{currentTrustMetric.label}</span>
-              </div>
+              <Icon className="w-4 h-4" />
+            </div>
+            <div>
+              <span className="text-lg font-bold text-gray-900">{currentTrustMetric.value}</span>
+              <span className="text-sm text-gray-600 ml-2">{currentTrustMetric.label}</span>
+            </div>
+          </div>
+
+          {/* Center: Quick Stats */}
+          <div className="hidden md:flex items-center space-x-6 text-sm">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
+              <span className="text-gray-600">127 students online</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <TrendingUp className="w-4 h-4 text-green-600" />
+              <span className="text-gray-600">+23% enrollment this month</span>
+            </div>
+          </div>
+
+          {/* Right: Metric Indicators + Close */}
+          <div className="flex items-center space-x-3">
+            {/* Metric dots */}
+            <div className="hidden sm:flex space-x-1">
+              {trustMetrics.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentMetric(index)}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    index === currentMetric ? 'bg-blue-600' : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                />
+              ))}
             </div>
 
-            {/* Center: Quick Stats */}
-            <div className="hidden md:flex items-center space-x-6 text-sm">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
-                <span className="text-gray-600">127 students online</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <TrendingUp className="w-4 h-4 text-green-600" />
-                <span className="text-gray-600">+23% enrollment this month</span>
-              </div>
-            </div>
-
-            {/* Right: Metric Indicators + Close */}
-            <div className="flex items-center space-x-3">
-              {/* Metric dots */}
-              <div className="hidden sm:flex space-x-1">
-                {trustMetrics.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentMetric(index)}
-                    className={`w-2 h-2 rounded-full transition-colors ${
-                      index === currentMetric ? 'bg-blue-600' : 'bg-gray-300 hover:bg-gray-400'
-                    }`}
-                  />
-                ))}
-              </div>
-
-              {/* Close button */}
-              <button
-                onClick={() => setIsVisible(false)}
-                className="p-1 hover:bg-gray-100 rounded transition-colors"
-                aria-label="Close trust bar"
-              >
-                <X className="w-4 h-4 text-gray-500" />
-              </button>
-            </div>
+            {/* Close button */}
+            <button
+              onClick={() => setIsVisible(false)}
+              className="p-1 hover:bg-gray-100 rounded transition-colors"
+              aria-label="Close trust bar"
+            >
+              <X className="w-4 h-4 text-gray-500" />
+            </button>
           </div>
         </div>
       </div>
-)
+    </div>
+  )
 }

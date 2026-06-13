@@ -71,7 +71,11 @@ export function PressReleaseSchema({
     headline,
     alternativeHeadline: `${headline} - Cerebrum Biology Academy`,
     description,
-    image: image ? (image.startsWith('http') ? image : `${baseUrl}${image}`) : `${baseUrl}/og-image.jpg`,
+    image: image
+      ? image.startsWith('http')
+        ? image
+        : `${baseUrl}${image}`
+      : `${baseUrl}/og-image.jpg`,
     datePublished,
     author: {
       '@type': 'Person',
@@ -116,10 +120,7 @@ export function PressReleaseSchema({
     },
   }
 
-  const schemaId = `press-release-${headline
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-    .slice(0, 40)}`
+  const schemaId = `press-release-${headline.toLowerCase().replace(/\s+/g, '-').slice(0, 40)}`
 
   return (
     <Script

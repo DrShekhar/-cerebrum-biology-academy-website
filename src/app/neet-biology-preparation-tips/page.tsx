@@ -29,10 +29,16 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Biology Preparation Tips | Study Strategies 2026',
-    description: 'Expert NEET Biology preparation tips and study strategies. Learn from toppers. Score 340+. Book free counseling. Call +91-88264-44334',
+    description:
+      'Expert NEET Biology preparation tips and study strategies. Learn from toppers. Score 340+. Book free counseling. Call +91-88264-44334',
   },
 
-  openGraph: { title: 'NEET Biology Preparation Tips | Study Strategies 2026', description: 'Expert NEET Biology preparation tips and study strategies. Learn from toppers. Score 340+. Book free counseling. Call +91-88264-44334', type: 'website' },
+  openGraph: {
+    title: 'NEET Biology Preparation Tips | Study Strategies 2026',
+    description:
+      'Expert NEET Biology preparation tips and study strategies. Learn from toppers. Score 340+. Book free counseling. Call +91-88264-44334',
+    type: 'website',
+  },
 }
 
 const usps: USP[] = [

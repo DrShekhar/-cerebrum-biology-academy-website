@@ -6,11 +6,19 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Study Planner 2026 | Daily Schedule | Free PDF',
-  description: 'Download free NEET Biology 12-month study planner. Day-by-day schedule, chapter allocation, revision cycles. Designed by AIIMS toppers for NEET 2026.',
-  keywords: ['NEET biology study planner', 'NEET 2026 timetable', 'NEET study schedule', 'NEET daily routine', 'NEET preparation plan biology'],
+  description:
+    'Download free NEET Biology 12-month study planner. Day-by-day schedule, chapter allocation, revision cycles. Designed by AIIMS toppers for NEET 2026.',
+  keywords: [
+    'NEET biology study planner',
+    'NEET 2026 timetable',
+    'NEET study schedule',
+    'NEET daily routine',
+    'NEET preparation plan biology',
+  ],
   openGraph: {
     title: 'NEET Biology Study Planner 2026 | Daily Schedule | Free PDF',
-    description: 'Download free NEET Biology 12-month study planner. Day-by-day schedule, chapter allocation, revision cycles. Designed by AIIMS toppers for NEET 2026.',
+    description:
+      'Download free NEET Biology 12-month study planner. Day-by-day schedule, chapter allocation, revision cycles. Designed by AIIMS toppers for NEET 2026.',
     url: `${BASE_URL}/free-neet-biology-study-planner`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -19,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Free NEET Biology Study Planner 2026',
-    description: 'Download free NEET Biology 12-month study planner. Day-by-day schedule, chapter allocation, revision cycles. Designed by',
+    description:
+      'Download free NEET Biology 12-month study planner. Day-by-day schedule, chapter allocation, revision cycles. Designed by',
   },
   alternates: { canonical: `${BASE_URL}/free-neet-biology-study-planner` },
 }
@@ -58,7 +67,11 @@ const faqSchema = {
 export default function FreeNeetBiologyStudyPlannerPage() {
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <PageContent />
     </>
   )

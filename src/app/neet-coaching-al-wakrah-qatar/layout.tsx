@@ -1,12 +1,15 @@
-import { Metadata } from 'next';
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Al Wakrah, Qatar',
-  description: 'Expert NEET coaching in Al Wakrah, Qatar. 98% success rate. Biology-focused curriculum with Dr. Shekhar C Singh. Enroll now!',
-  keywords: 'NEET coaching Al Wakrah, NEET classes Qatar, biology tuition, medical entrance preparation',
+  description:
+    'Expert NEET coaching in Al Wakrah, Qatar. 98% success rate. Biology-focused curriculum with Dr. Shekhar C Singh. Enroll now!',
+  keywords:
+    'NEET coaching Al Wakrah, NEET classes Qatar, biology tuition, medical entrance preparation',
   openGraph: {
     title: 'NEET Coaching in Al Wakrah, Qatar',
-    description: 'Expert NEET coaching with 98% success rate. Personalized biology curriculum tailored for Qatar students.',
+    description:
+      'Expert NEET coaching with 98% success rate. Personalized biology curriculum tailored for Qatar students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-al-wakrah-qatar',
     siteName: 'Cerebrum Biology Academy',
     images: [
@@ -29,12 +32,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-al-wakrah-qatar',
   },
-};
+}
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="layout-neet-coaching-al-wakrah-qatar">
-      {children}
-    </div>
-  );
+  return <div className="layout-neet-coaching-al-wakrah-qatar">{children}</div>
 }

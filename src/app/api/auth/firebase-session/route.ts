@@ -198,14 +198,12 @@ export async function POST(request: NextRequest) {
 
     // Action: Create session (login)
     if (action === 'login') {
-
       // Find user by phone or Firebase UID (check both phone formats)
       let user = await prisma.users.findFirst({
         where: {
           OR: [{ phone: normalizedPhone }, { phone: barePhone }, { firebaseUid: uid }],
         },
       })
-
 
       if (!user) {
         console.warn(

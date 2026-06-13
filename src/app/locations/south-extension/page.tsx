@@ -22,10 +22,7 @@ import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 import Link from 'next/link'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
-import {
-  RelatedLocations,
-  getRelatedLocations,
-} from '@/components/locations/RelatedLocations'
+import { RelatedLocations, getRelatedLocations } from '@/components/locations/RelatedLocations'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
@@ -123,8 +120,7 @@ export default function SouthExtensionLocationPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center animate-fadeInUp"
-            >
+            <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Award className="w-4 h-4" />
                 Flagship Center
@@ -208,8 +204,7 @@ export default function SouthExtensionLocationPage() {
                   desc: '60% of our AIIMS selections from this center',
                 },
               ].map((item, idx) => (
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
-                >
+                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp">
                   <div className="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-yellow-600" />
                   </div>
@@ -234,7 +229,7 @@ export default function SouthExtensionLocationPage() {
                   placeholder={{
                     lat: 28.567,
                     lng: 77.22,
-                    address: `${center.streetAddress}, ${center.addressLocality}`
+                    address: `${center.streetAddress}, ${center.addressLocality}`,
                   }}
                 />
                 <div className="p-6">
@@ -386,8 +381,7 @@ export default function SouthExtensionLocationPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, idx) => (
-                <div className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
-                >
+                <div className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp">
                   <h3 className="font-semibold text-lg mb-2">{faq.q}</h3>
                   <p className="text-gray-600">{faq.a}</p>
                 </div>
@@ -399,19 +393,42 @@ export default function SouthExtensionLocationPage() {
         {/* Other Centers */}
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
-              Our Other Centers
-            </h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">Our Other Centers</h2>
             <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
               Cerebrum Biology Academy has 4 centers across Delhi-NCR. Visit the one nearest to you.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
               {[
-                { name: 'Rohini - DC Chowk', slug: 'rohini', city: 'New Delhi', highlight: 'North Delhi' },
-                { name: 'Gurugram - Sector 51', slug: 'gurugram', city: 'Gurugram', highlight: 'Haryana' },
-                { name: 'Faridabad - Sector 17', slug: 'faridabad', city: 'Faridabad', highlight: 'Haryana' },
-                { name: 'Noida (Sector 62)', slug: 'noida', city: 'Near Botanical Garden Metro', highlight: '~45 min from South Extension' },
-                { name: 'Ghaziabad (Online + Hybrid)', slug: 'ghaziabad', city: 'Online classes + weekend visits', highlight: 'UP' },
+                {
+                  name: 'Rohini - DC Chowk',
+                  slug: 'rohini',
+                  city: 'New Delhi',
+                  highlight: 'North Delhi',
+                },
+                {
+                  name: 'Gurugram - Sector 51',
+                  slug: 'gurugram',
+                  city: 'Gurugram',
+                  highlight: 'Haryana',
+                },
+                {
+                  name: 'Faridabad - Sector 17',
+                  slug: 'faridabad',
+                  city: 'Faridabad',
+                  highlight: 'Haryana',
+                },
+                {
+                  name: 'Noida (Sector 62)',
+                  slug: 'noida',
+                  city: 'Near Botanical Garden Metro',
+                  highlight: '~45 min from South Extension',
+                },
+                {
+                  name: 'Ghaziabad (Online + Hybrid)',
+                  slug: 'ghaziabad',
+                  city: 'Online classes + weekend visits',
+                  highlight: 'UP',
+                },
               ].map((center) => (
                 <Link
                   key={center.slug}
@@ -421,7 +438,9 @@ export default function SouthExtensionLocationPage() {
                   <MapPin className="w-8 h-8 text-yellow-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                   <h3 className="font-bold text-gray-900 mb-1">{center.name}</h3>
                   <p className="text-sm text-gray-500">{center.city}</p>
-                  <span className="inline-block mt-2 text-xs bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full">{center.highlight}</span>
+                  <span className="inline-block mt-2 text-xs bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full">
+                    {center.highlight}
+                  </span>
                 </Link>
               ))}
             </div>

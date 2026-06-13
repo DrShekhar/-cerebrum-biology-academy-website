@@ -300,9 +300,7 @@ export default function SchoolNEETCoachingPage() {
         <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-5xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <Link
               href="/neet-coaching-near"
               className="inline-flex items-center text-yellow-300 hover:text-yellow-200 mb-4"
@@ -328,7 +326,11 @@ export default function SchoolNEETCoachingPage() {
             <p className="text-md opacity-80 mb-8 max-w-4xl mx-auto">{school.heroDescription}</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20near.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20near.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -369,9 +371,7 @@ export default function SchoolNEETCoachingPage() {
       {/* Batch Timings */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Batch Timings for {school.name} Students
             </h2>
@@ -399,9 +399,7 @@ export default function SchoolNEETCoachingPage() {
       {/* Why Us */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why {school.name} Students Choose Us
             </h2>
@@ -424,8 +422,7 @@ export default function SchoolNEETCoachingPage() {
       {/* Testimonial */}
       <section className="py-16 md:py-20 bg-green-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <GraduationCap className="w-16 h-16 mx-auto mb-6 text-yellow-300" />
             <blockquote className="text-xl md:text-2xl italic mb-6">
               "{school.testimonial.text}"
@@ -439,9 +436,7 @@ export default function SchoolNEETCoachingPage() {
       {/* Nearby Areas */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Nearby Areas We Cover
             </h2>
@@ -464,8 +459,7 @@ export default function SchoolNEETCoachingPage() {
       {/* CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Join Your {school.name} Classmates at Cerebrum
             </h2>
@@ -474,7 +468,11 @@ export default function SchoolNEETCoachingPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20near.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20near.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

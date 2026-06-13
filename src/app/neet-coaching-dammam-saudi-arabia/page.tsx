@@ -52,7 +52,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Biology Coaching in Dammam, Saudi Arabia | Cerebrum',
-    description: "Live online NEET Biology coaching for Eastern Province Indian-origin Class 11-12 students. IISD flagship feeder, AST evening batch, NRI quota.",
+    description:
+      'Live online NEET Biology coaching for Eastern Province Indian-origin Class 11-12 students. IISD flagship feeder, AST evening batch, NRI quota.',
   },
 }
 
@@ -67,6 +68,7 @@ export default async function Page() {
   return (
     <>
       <LocalitySchema
+        country="SA"
         data={{
           ...localityData,
           phone: '+918826444334',

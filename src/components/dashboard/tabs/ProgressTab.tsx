@@ -88,8 +88,15 @@ function ScoreTrendChart({ sessions }: { sessions: StudySession[] }) {
     .join(', ')
 
   return (
-    <div className="relative" role="img" aria-label={`Score trend chart showing ${scoreSessions.length} test scores: ${srText}`}>
-      <div className="flex items-end gap-1.5 sm:gap-2 justify-center" style={{ height: chartHeight }}>
+    <div
+      className="relative"
+      role="img"
+      aria-label={`Score trend chart showing ${scoreSessions.length} test scores: ${srText}`}
+    >
+      <div
+        className="flex items-end gap-1.5 sm:gap-2 justify-center"
+        style={{ height: chartHeight }}
+      >
         {scoreSessions.map((session, idx) => {
           const score = session.score || 0
           const barHeight = Math.max((score / maxScore) * chartHeight * 0.85, 8)
@@ -97,10 +104,7 @@ function ScoreTrendChart({ sessions }: { sessions: StudySession[] }) {
           const isUp = score >= prevScore
 
           return (
-            <div
-              key={session.id}
-              className="flex flex-col items-center gap-1 flex-1 max-w-[48px]"
-            >
+            <div key={session.id} className="flex flex-col items-center gap-1 flex-1 max-w-[48px]">
               <span className="text-[10px] sm:text-xs font-medium text-gray-700">{score}%</span>
               <div
                 className={`w-full rounded-t-md transition-all duration-500 ${
@@ -166,7 +170,10 @@ function TopicMasteryGrid({
                     ? 'w-2/5'
                     : 'w-3/5'
               return (
-                <div key={area.chapter} className="bg-gray-50 rounded-lg p-3 border border-gray-200">
+                <div
+                  key={area.chapter}
+                  className="bg-gray-50 rounded-lg p-3 border border-gray-200"
+                >
                   <div className="flex items-center justify-between mb-1.5">
                     <span className="text-sm font-medium text-gray-900 truncate">
                       {area.chapter}
@@ -288,9 +295,7 @@ export function ProgressTab({
           />
           {neetProgress.strongAreas.length === 0 && neetProgress.weakAreas.length === 0 && (
             <div className="text-center py-6">
-              <p className="text-gray-500 text-sm">
-                Complete more tests to see topic-wise mastery
-              </p>
+              <p className="text-gray-500 text-sm">Complete more tests to see topic-wise mastery</p>
             </div>
           )}
         </div>

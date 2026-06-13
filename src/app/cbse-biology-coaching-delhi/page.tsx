@@ -30,10 +30,16 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'CBSE Biology Coaching Delhi | Class 11-12 | Board + NEET',
-    description: 'Best CBSE Biology coaching in Delhi NCR. Class 11-12 board + NEET preparation. Expert faculty. Book free demo. Call +91-88264-44334',
+    description:
+      'Best CBSE Biology coaching in Delhi NCR. Class 11-12 board + NEET preparation. Expert faculty. Book free demo. Call +91-88264-44334',
   },
 
-  openGraph: { title: 'CBSE Biology Coaching Delhi | Class 11-12 | Board + NEET', description: 'Best CBSE Biology coaching in Delhi NCR. Class 11-12 board + NEET preparation. Expert faculty. Book free demo. Call +91-88264-44334', type: 'website' },
+  openGraph: {
+    title: 'CBSE Biology Coaching Delhi | Class 11-12 | Board + NEET',
+    description:
+      'Best CBSE Biology coaching in Delhi NCR. Class 11-12 board + NEET preparation. Expert faculty. Book free demo. Call +91-88264-44334',
+    type: 'website',
+  },
 }
 
 const usps: USP[] = [

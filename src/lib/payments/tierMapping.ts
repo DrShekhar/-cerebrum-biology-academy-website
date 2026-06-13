@@ -1,8 +1,5 @@
 import { CoachingTier } from '@/generated/prisma'
-import {
-  CoachingTiers,
-  CoachingSubscriptionTier,
-} from '@/lib/subscriptions/SmartSubscriptionTiers'
+import { CoachingTiers, CoachingSubscriptionTier } from '@/lib/subscriptions/SmartSubscriptionTiers'
 
 const TIER_PRICE_RANGES: { tier: CoachingTier; min: number; max: number }[] = [
   { tier: 'PINNACLE', min: 90000, max: Infinity },
@@ -10,10 +7,7 @@ const TIER_PRICE_RANGES: { tier: CoachingTier; min: number; max: number }[] = [
   { tier: 'PURSUIT', min: 30000, max: 59999 },
 ]
 
-export function mapCourseToTier(
-  courseId: string,
-  totalFees?: number
-): CoachingTier {
+export function mapCourseToTier(courseId: string, totalFees?: number): CoachingTier {
   if (totalFees && totalFees > 0) {
     for (const range of TIER_PRICE_RANGES) {
       if (totalFees >= range.min && totalFees <= range.max) {

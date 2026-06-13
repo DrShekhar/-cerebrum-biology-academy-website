@@ -10,10 +10,7 @@ const updateFeePlanSchema = z.object({
   status: z.enum(['PENDING', 'PARTIAL', 'COMPLETED', 'CANCELLED']).optional(),
 })
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
+export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     await requireAdminAuth()
     const { id } = await params
@@ -29,10 +26,7 @@ export async function GET(
     })
 
     if (!feePlan) {
-      return NextResponse.json(
-        { success: false, error: 'Fee plan not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Fee plan not found' }, { status: 404 })
     }
 
     return NextResponse.json({
@@ -56,17 +50,11 @@ export async function GET(
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
     console.error('Fetch fee plan error:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to fetch fee plan' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to fetch fee plan' }, { status: 500 })
   }
 }
 
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
+export async function PATCH(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     await requireAdminAuth()
     const { id } = await params
@@ -76,10 +64,7 @@ export async function PATCH(
 
     const existing = await prisma.fee_plans.findUnique({ where: { id } })
     if (!existing) {
-      return NextResponse.json(
-        { success: false, error: 'Fee plan not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Fee plan not found' }, { status: 404 })
     }
 
     const updateData: Record<string, unknown> = { updatedAt: new Date() }
@@ -99,9 +84,7 @@ export async function PATCH(
       }
       totalFee = Math.max(0, Math.round(totalFee))
       updateData.totalFee = new Decimal(totalFee)
-      updateData.amountDue = new Decimal(
-        Math.max(0, totalFee - Number(existing.amountPaid))
-      )
+      updateData.amountDue = new Decimal(Math.max(0, totalFee - Number(existing.amountPaid)))
     }
     if (validatedData.discountType) {
       updateData.discountType = validatedData.discountType

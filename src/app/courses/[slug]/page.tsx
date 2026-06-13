@@ -44,14 +44,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       openGraph: {
         title: `${newCourse.name}`,
         description: newCourse.description,
-        images: [`/api/og?title=${encodeURIComponent(newCourse.name)}&subtitle=${encodeURIComponent('NEET Biology Coaching')}`],
+        images: [
+          `/api/og?title=${encodeURIComponent(newCourse.name)}&subtitle=${encodeURIComponent('NEET Biology Coaching')}`,
+        ],
         type: 'website',
       },
       twitter: {
         card: 'summary_large_image',
         title: `${newCourse.name}`,
         description: newCourse.description,
-        images: [`/api/og?title=${encodeURIComponent(newCourse.name)}&subtitle=${encodeURIComponent('NEET Biology Coaching')}`],
+        images: [
+          `/api/og?title=${encodeURIComponent(newCourse.name)}&subtitle=${encodeURIComponent('NEET Biology Coaching')}`,
+        ],
       },
     }
   }
@@ -70,14 +74,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       openGraph: {
         title: oldCourse.seoTitle || oldCourse.title,
         description: oldCourse.seoDescription || oldCourse.description,
-        images: [oldCourse.gallery[0] || `/api/og?title=${encodeURIComponent(oldCourse.title)}&subtitle=${encodeURIComponent('Cerebrum Biology Academy')}`],
+        images: [
+          oldCourse.gallery[0] ||
+            `/api/og?title=${encodeURIComponent(oldCourse.title)}&subtitle=${encodeURIComponent('Cerebrum Biology Academy')}`,
+        ],
         type: 'website',
       },
       twitter: {
         card: 'summary_large_image',
         title: oldCourse.seoTitle || oldCourse.title,
         description: oldCourse.seoDescription || oldCourse.description,
-        images: [oldCourse.gallery[0] || `/api/og?title=${encodeURIComponent(oldCourse.title)}&subtitle=${encodeURIComponent('Cerebrum Biology Academy')}`],
+        images: [
+          oldCourse.gallery[0] ||
+            `/api/og?title=${encodeURIComponent(oldCourse.title)}&subtitle=${encodeURIComponent('Cerebrum Biology Academy')}`,
+        ],
       },
     }
   }
@@ -110,7 +120,13 @@ export default async function CoursePage({ params }: Props) {
         <CourseDetailSchema
           courseName={newCourse.name}
           description={newCourse.description}
-          duration={newCourse.duration.includes('2') ? 'P2Y' : newCourse.duration.includes('6') ? 'P6M' : 'P1Y'}
+          duration={
+            newCourse.duration.includes('2')
+              ? 'P2Y'
+              : newCourse.duration.includes('6')
+                ? 'P6M'
+                : 'P1Y'
+          }
           price={newCourse.tiers.pinnacle.price}
           batchSize={newCourse.tiers.pinnacle.batchSize}
           targetClass={newCourse.targetClass}
@@ -145,7 +161,13 @@ export default async function CoursePage({ params }: Props) {
         <CourseDetailSchema
           courseName={oldCourse.title}
           description={oldCourse.description}
-          duration={oldCourse.duration?.includes('2') ? 'P2Y' : oldCourse.duration?.includes('6') ? 'P6M' : 'P1Y'}
+          duration={
+            oldCourse.duration?.includes('2')
+              ? 'P2Y'
+              : oldCourse.duration?.includes('6')
+                ? 'P6M'
+                : 'P1Y'
+          }
           price={oldCourse.pricing?.amount || 85000}
           targetClass={oldCourse.targetClass}
           slug={oldCourse.slug}

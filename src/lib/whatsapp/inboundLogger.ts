@@ -43,9 +43,7 @@ function normalize(phone: string): string {
  * caller has other work to do (AI replies, intent routing, etc.) and
  * we don't want CRM logging to break those flows.
  */
-export async function logInboundWhatsAppMessage(
-  input: InboundLogInput
-): Promise<InboundLogResult> {
+export async function logInboundWhatsAppMessage(input: InboundLogInput): Promise<InboundLogResult> {
   try {
     const last10 = normalize(input.fromPhone)
     if (last10.length < 10) {
@@ -71,10 +69,7 @@ export async function logInboundWhatsAppMessage(
     // pick most recently active. Indexed on `phone`.
     const candidates = await prisma.leads.findMany({
       where: {
-        OR: [
-          { phone: last10 },
-          { phone: { endsWith: last10 } },
-        ],
+        OR: [{ phone: last10 }, { phone: { endsWith: last10 } }],
       },
       orderBy: { updatedAt: 'desc' },
       take: 1,

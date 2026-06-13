@@ -2,15 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
-import {
-  Calendar,
-  Clock,
-  Target,
-  ArrowRight,
-  CheckCircle,
-  Circle,
-  Flame,
-} from 'lucide-react'
+import { Calendar, Clock, Target, ArrowRight, CheckCircle, Circle, Flame } from 'lucide-react'
 
 interface WeakArea {
   chapter: string
@@ -73,10 +65,7 @@ function loadSchedule(): ScheduleData {
 function saveSchedule(data: ScheduleData) {
   if (typeof window === 'undefined') return
   try {
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify({ weekKey: getWeekKey(), data })
-    )
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ weekKey: getWeekKey(), data }))
   } catch {
     console.error('Failed to save schedule')
   }

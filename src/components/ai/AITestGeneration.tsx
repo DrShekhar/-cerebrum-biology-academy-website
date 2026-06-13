@@ -580,9 +580,7 @@ const AITestGeneration: React.FC = () => {
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <div
-          className="flex items-center justify-center gap-3 animate-fadeInUp"
-        >
+        <div className="flex items-center justify-center gap-3 animate-fadeInUp">
           <div className="p-3 bg-indigo-500 rounded-xl">
             <Brain className="w-8 h-8 text-white" />
           </div>
@@ -633,371 +631,326 @@ const AITestGeneration: React.FC = () => {
       </div>
 
       {/* Content */}
-{activeTab === 'configure' && (
-          <div
-            key="configure"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-          >
-            {/* Basic Configuration */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Target className="w-5 h-5 text-purple-600" />
-                Basic Configuration
-              </h3>
+      {activeTab === 'configure' && (
+        <div key="configure" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
+          {/* Basic Configuration */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Target className="w-5 h-5 text-purple-600" />
+              Basic Configuration
+            </h3>
 
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-2">
-                    Total Questions
-                  </label>
-                  <input
-                    type="number"
-                    value={configuration.totalQuestions}
-                    onChange={(e) =>
-                      setConfiguration((prev) => ({
-                        ...prev,
-                        totalQuestions: parseInt(e.target.value) || 0,
-                      }))
-                    }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  />
-                </div>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-semibold text-gray-900 mb-2">
+                  Total Questions
+                </label>
+                <input
+                  type="number"
+                  value={configuration.totalQuestions}
+                  onChange={(e) =>
+                    setConfiguration((prev) => ({
+                      ...prev,
+                      totalQuestions: parseInt(e.target.value) || 0,
+                    }))
+                  }
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                />
+              </div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-2">
-                    Total Marks
-                  </label>
-                  <input
-                    type="number"
-                    value={configuration.totalMarks}
-                    onChange={(e) =>
-                      setConfiguration((prev) => ({
-                        ...prev,
-                        totalMarks: parseInt(e.target.value) || 0,
-                      }))
-                    }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  />
-                </div>
+              <div>
+                <label className="block text-sm font-semibold text-gray-900 mb-2">
+                  Total Marks
+                </label>
+                <input
+                  type="number"
+                  value={configuration.totalMarks}
+                  onChange={(e) =>
+                    setConfiguration((prev) => ({
+                      ...prev,
+                      totalMarks: parseInt(e.target.value) || 0,
+                    }))
+                  }
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                />
+              </div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-2">
-                    Duration (minutes)
-                  </label>
-                  <input
-                    type="number"
-                    value={configuration.duration}
-                    onChange={(e) =>
-                      setConfiguration((prev) => ({
-                        ...prev,
-                        duration: parseInt(e.target.value) || 0,
-                      }))
-                    }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  />
-                </div>
+              <div>
+                <label className="block text-sm font-semibold text-gray-900 mb-2">
+                  Duration (minutes)
+                </label>
+                <input
+                  type="number"
+                  value={configuration.duration}
+                  onChange={(e) =>
+                    setConfiguration((prev) => ({
+                      ...prev,
+                      duration: parseInt(e.target.value) || 0,
+                    }))
+                  }
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                />
               </div>
             </div>
+          </div>
 
-            {/* Difficulty Distribution */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <BarChart3 className="w-5 h-5 text-green-600" />
-                Difficulty Distribution
-              </h3>
+          {/* Difficulty Distribution */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <BarChart3 className="w-5 h-5 text-green-600" />
+              Difficulty Distribution
+            </h3>
 
-              <div className="space-y-4">
-                {Object.entries(configuration.difficultyDistribution).map(([level, percentage]) => (
-                  <div key={level}>
-                    <div className="flex justify-between items-center mb-2">
-                      <label className="text-sm font-semibold text-gray-900 capitalize">
-                        {level}
-                      </label>
-                      <span className="text-sm text-gray-800 font-medium">{percentage}%</span>
-                    </div>
-                    <input
-                      type="range"
-                      min="0"
-                      max="100"
-                      value={percentage}
-                      onChange={(e) =>
-                        setConfiguration((prev) => ({
-                          ...prev,
-                          difficultyDistribution: {
-                            ...prev.difficultyDistribution,
-                            [level]: parseInt(e.target.value),
-                          },
-                        }))
-                      }
-                      className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-                    />
+            <div className="space-y-4">
+              {Object.entries(configuration.difficultyDistribution).map(([level, percentage]) => (
+                <div key={level}>
+                  <div className="flex justify-between items-center mb-2">
+                    <label className="text-sm font-semibold text-gray-900 capitalize">
+                      {level}
+                    </label>
+                    <span className="text-sm text-gray-800 font-medium">{percentage}%</span>
                   </div>
-                ))}
-              </div>
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value={percentage}
+                    onChange={(e) =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        difficultyDistribution: {
+                          ...prev.difficultyDistribution,
+                          [level]: parseInt(e.target.value),
+                        },
+                      }))
+                    }
+                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                  />
+                </div>
+              ))}
             </div>
+          </div>
 
-            {/* NEET Topic Selection */}
-            <div className="bg-white rounded-xl p-6 border lg:col-span-2">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <BookOpen className="w-5 h-5 text-blue-600" />
-                NEET Topic Selection
-              </h3>
+          {/* NEET Topic Selection */}
+          <div className="bg-white rounded-xl p-6 border lg:col-span-2">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <BookOpen className="w-5 h-5 text-blue-600" />
+              NEET Topic Selection
+            </h3>
 
-              <TopicSelector
-                onSelectionChange={handleNEETTopicSelection}
-                initialSelectedUnits={selectedUnits}
-                initialSelectedChapters={selectedChapters}
-              />
+            <TopicSelector
+              onSelectionChange={handleNEETTopicSelection}
+              initialSelectedUnits={selectedUnits}
+              initialSelectedChapters={selectedChapters}
+            />
 
-              {Object.keys(configuration.topicDistribution).length > 0 && (
-                <div className="mt-6 p-4 bg-purple-50 rounded-lg border border-purple-200">
-                  <h4 className="font-semibold text-gray-900 mb-3">Question Distribution</h4>
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                    {Object.entries(configuration.topicDistribution).map(([topic, count]) => (
-                      <div key={topic} className="text-sm">
-                        <div className="font-medium text-gray-900 truncate" title={topic}>
-                          {topic}
-                        </div>
-                        <div className="text-purple-600 font-semibold">{count} questions</div>
+            {Object.keys(configuration.topicDistribution).length > 0 && (
+              <div className="mt-6 p-4 bg-purple-50 rounded-lg border border-purple-200">
+                <h4 className="font-semibold text-gray-900 mb-3">Question Distribution</h4>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                  {Object.entries(configuration.topicDistribution).map(([topic, count]) => (
+                    <div key={topic} className="text-sm">
+                      <div className="font-medium text-gray-900 truncate" title={topic}>
+                        {topic}
                       </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Advanced Settings */}
-            <div className="bg-white rounded-xl p-6 border lg:col-span-2">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Zap className="w-5 h-5 text-yellow-600" />
-                Advanced Settings
-              </h3>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-2">
-                    Previous Year Pattern Weightage
-                  </label>
-                  <div className="flex items-center gap-2">
-                    <input
-                      type="range"
-                      min="0"
-                      max="100"
-                      value={configuration.previousYearWeightage}
-                      onChange={(e) =>
-                        setConfiguration((prev) => ({
-                          ...prev,
-                          previousYearWeightage: parseInt(e.target.value),
-                        }))
-                      }
-                      className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-                    />
-                    <span className="text-sm text-gray-800 font-medium min-w-[3rem]">
-                      {configuration.previousYearWeightage}%
-                    </span>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-2">
-                    Learning Objectives
-                  </label>
-                  <textarea
-                    placeholder="Enter learning objectives (one per line)"
-                    value={configuration.learningObjectives.join('\n')}
-                    onChange={(e) =>
-                      setConfiguration((prev) => ({
-                        ...prev,
-                        learningObjectives: e.target.value.split('\n').filter((obj) => obj.trim()),
-                      }))
-                    }
-                    rows={3}
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {activeTab === 'templates' && (
-          <div
-            key="templates"
-            style={{ pointerEvents: 'all' }}
-           className="animate-fadeInUp">
-            <TestTemplates />
-          </div>
-        )}
-
-        {activeTab === 'sections' && (
-          <div
-            key="sections"
-            style={{ pointerEvents: 'all' }}
-           className="animate-fadeInUp">
-            <SectionConfiguration />
-          </div>
-        )}
-
-        {activeTab === 'adaptive' && (
-          <div
-            key="adaptive"
-            style={{ pointerEvents: 'all' }}
-           className="animate-fadeInUp">
-            <AdaptiveFeatures />
-          </div>
-        )}
-
-        {activeTab === 'access' && (
-          <div
-            key="access"
-            style={{ pointerEvents: 'all' }}
-           className="animate-fadeInUp">
-            <AccessSettings />
-          </div>
-        )}
-
-        {activeTab === 'security' && (
-          <div
-            key="security"
-            style={{ pointerEvents: 'all' }}
-           className="animate-fadeInUp">
-            <SecurityFeatures />
-          </div>
-        )}
-
-        {activeTab === 'collaborate' && (
-          <div
-            key="collaborate"
-            style={{ pointerEvents: 'all' }}
-           className="animate-fadeInUp">
-            <Collaboration />
-          </div>
-        )}
-
-        {activeTab === 'data' && (
-          <div
-            key="data"
-            style={{ pointerEvents: 'all' }}
-           className="animate-fadeInUp">
-            <DataManagement />
-          </div>
-        )}
-
-        {activeTab === 'bank' && (
-          <div
-            key="bank"
-            style={{ pointerEvents: 'all' }}
-           className="animate-fadeInUp">
-            <QuestionBank />
-          </div>
-        )}
-
-        {activeTab === 'distribute' && (
-          <div
-            key="distribute"
-            style={{ pointerEvents: 'all' }}
-           className="animate-fadeInUp">
-            <Distribution />
-          </div>
-        )}
-
-        {activeTab === 'analytics' && (
-          <div
-            key="analytics"
-            style={{ pointerEvents: 'all' }}
-           className="animate-fadeInUp">
-            <Analytics />
-          </div>
-        )}
-
-        {activeTab === 'ui' && (
-          <div
-            key="ui"
-            style={{ pointerEvents: 'all' }}
-           className="animate-fadeInUp">
-            <UICustomization />
-          </div>
-        )}
-
-        {activeTab === 'lifecycle' && (
-          <div
-            key="lifecycle"
-            style={{ pointerEvents: 'all' }}
-           className="animate-fadeInUp">
-            <Lifecycle />
-          </div>
-        )}
-
-        {activeTab === 'generate' && (
-          <div
-            key="generate"
-            className="text-center space-y-8 animate-fadeInUp"
-          >
-            <div className="bg-white rounded-xl p-8 border">
-              <div className="space-y-6">
-                <div className="flex justify-center">
-                  <div className="p-4 bg-indigo-500 rounded-full">
-                    <Brain className="w-12 h-12 text-white" />
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">Ready to Generate Test</h3>
-                  <p className="text-gray-800 font-medium">
-                    AI will analyze your configuration and generate an optimized test using advanced
-                    algorithms
-                  </p>
-                </div>
-
-                {/* Generation Features */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                  {[
-                    { icon: Target, label: 'Auto Topic Selection', color: 'text-blue-600' },
-                    { icon: BarChart3, label: 'Difficulty Balance', color: 'text-green-600' },
-                    { icon: Shield, label: 'Duplicate Detection', color: 'text-red-600' },
-                    { icon: Shuffle, label: 'Diversity Assurance', color: 'text-purple-600' },
-                  ].map(({ icon: Icon, label, color }) => (
-                    <div
-                      key={label}
-                      className="flex flex-col items-center gap-2 p-4 bg-gray-50 rounded-lg"
-                    >
-                      <Icon className={`w-6 h-6 ${color}`} />
-                      <span className="font-semibold text-center text-gray-900">{label}</span>
+                      <div className="text-purple-600 font-semibold">{count} questions</div>
                     </div>
                   ))}
                 </div>
+              </div>
+            )}
+          </div>
 
-                <button
-                  onClick={handleGenerateTest}
-                  disabled={isGenerating}
-                  className="bg-indigo-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-indigo-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-3 mx-auto animate-fadeInUp"
-                >
-                  {isGenerating ? (
-                    <>
-                      <RefreshCw className="w-5 h-5 animate-spin" />
-                      Generating Test...
-                    </>
-                  ) : (
-                    <>
-                      <Play className="w-5 h-5" />
-                      Generate Test
-                    </>
-                  )}
-                </button>
+          {/* Advanced Settings */}
+          <div className="bg-white rounded-xl p-6 border lg:col-span-2">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Zap className="w-5 h-5 text-yellow-600" />
+              Advanced Settings
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-semibold text-gray-900 mb-2">
+                  Previous Year Pattern Weightage
+                </label>
+                <div className="flex items-center gap-2">
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value={configuration.previousYearWeightage}
+                    onChange={(e) =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        previousYearWeightage: parseInt(e.target.value),
+                      }))
+                    }
+                    className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                  />
+                  <span className="text-sm text-gray-800 font-medium min-w-[3rem]">
+                    {configuration.previousYearWeightage}%
+                  </span>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-900 mb-2">
+                  Learning Objectives
+                </label>
+                <textarea
+                  placeholder="Enter learning objectives (one per line)"
+                  value={configuration.learningObjectives.join('\n')}
+                  onChange={(e) =>
+                    setConfiguration((prev) => ({
+                      ...prev,
+                      learningObjectives: e.target.value.split('\n').filter((obj) => obj.trim()),
+                    }))
+                  }
+                  rows={3}
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                />
               </div>
             </div>
           </div>
-        )}
+        </div>
+      )}
 
-        {activeTab === 'review' && (
-          <div
-            key="review"
-            style={{ pointerEvents: 'all' }}
-           className="animate-fadeInUp">
-            <TestReview />
+      {activeTab === 'templates' && (
+        <div key="templates" style={{ pointerEvents: 'all' }} className="animate-fadeInUp">
+          <TestTemplates />
+        </div>
+      )}
+
+      {activeTab === 'sections' && (
+        <div key="sections" style={{ pointerEvents: 'all' }} className="animate-fadeInUp">
+          <SectionConfiguration />
+        </div>
+      )}
+
+      {activeTab === 'adaptive' && (
+        <div key="adaptive" style={{ pointerEvents: 'all' }} className="animate-fadeInUp">
+          <AdaptiveFeatures />
+        </div>
+      )}
+
+      {activeTab === 'access' && (
+        <div key="access" style={{ pointerEvents: 'all' }} className="animate-fadeInUp">
+          <AccessSettings />
+        </div>
+      )}
+
+      {activeTab === 'security' && (
+        <div key="security" style={{ pointerEvents: 'all' }} className="animate-fadeInUp">
+          <SecurityFeatures />
+        </div>
+      )}
+
+      {activeTab === 'collaborate' && (
+        <div key="collaborate" style={{ pointerEvents: 'all' }} className="animate-fadeInUp">
+          <Collaboration />
+        </div>
+      )}
+
+      {activeTab === 'data' && (
+        <div key="data" style={{ pointerEvents: 'all' }} className="animate-fadeInUp">
+          <DataManagement />
+        </div>
+      )}
+
+      {activeTab === 'bank' && (
+        <div key="bank" style={{ pointerEvents: 'all' }} className="animate-fadeInUp">
+          <QuestionBank />
+        </div>
+      )}
+
+      {activeTab === 'distribute' && (
+        <div key="distribute" style={{ pointerEvents: 'all' }} className="animate-fadeInUp">
+          <Distribution />
+        </div>
+      )}
+
+      {activeTab === 'analytics' && (
+        <div key="analytics" style={{ pointerEvents: 'all' }} className="animate-fadeInUp">
+          <Analytics />
+        </div>
+      )}
+
+      {activeTab === 'ui' && (
+        <div key="ui" style={{ pointerEvents: 'all' }} className="animate-fadeInUp">
+          <UICustomization />
+        </div>
+      )}
+
+      {activeTab === 'lifecycle' && (
+        <div key="lifecycle" style={{ pointerEvents: 'all' }} className="animate-fadeInUp">
+          <Lifecycle />
+        </div>
+      )}
+
+      {activeTab === 'generate' && (
+        <div key="generate" className="text-center space-y-8 animate-fadeInUp">
+          <div className="bg-white rounded-xl p-8 border">
+            <div className="space-y-6">
+              <div className="flex justify-center">
+                <div className="p-4 bg-indigo-500 rounded-full">
+                  <Brain className="w-12 h-12 text-white" />
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold mb-2">Ready to Generate Test</h3>
+                <p className="text-gray-800 font-medium">
+                  AI will analyze your configuration and generate an optimized test using advanced
+                  algorithms
+                </p>
+              </div>
+
+              {/* Generation Features */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                {[
+                  { icon: Target, label: 'Auto Topic Selection', color: 'text-blue-600' },
+                  { icon: BarChart3, label: 'Difficulty Balance', color: 'text-green-600' },
+                  { icon: Shield, label: 'Duplicate Detection', color: 'text-red-600' },
+                  { icon: Shuffle, label: 'Diversity Assurance', color: 'text-purple-600' },
+                ].map(({ icon: Icon, label, color }) => (
+                  <div
+                    key={label}
+                    className="flex flex-col items-center gap-2 p-4 bg-gray-50 rounded-lg"
+                  >
+                    <Icon className={`w-6 h-6 ${color}`} />
+                    <span className="font-semibold text-center text-gray-900">{label}</span>
+                  </div>
+                ))}
+              </div>
+
+              <button
+                onClick={handleGenerateTest}
+                disabled={isGenerating}
+                className="bg-indigo-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-indigo-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-3 mx-auto animate-fadeInUp"
+              >
+                {isGenerating ? (
+                  <>
+                    <RefreshCw className="w-5 h-5 animate-spin" />
+                    Generating Test...
+                  </>
+                ) : (
+                  <>
+                    <Play className="w-5 h-5" />
+                    Generate Test
+                  </>
+                )}
+              </button>
+            </div>
           </div>
-        )}
-</div>
+        </div>
+      )}
+
+      {activeTab === 'review' && (
+        <div key="review" style={{ pointerEvents: 'all' }} className="animate-fadeInUp">
+          <TestReview />
+        </div>
+      )}
+    </div>
   )
 }
 

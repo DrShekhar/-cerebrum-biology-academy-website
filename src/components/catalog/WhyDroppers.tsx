@@ -60,9 +60,7 @@ export function WhyDroppers({ className = '' }: WhyDroppersSectionProps) {
     <section ref={sectionRef} className={`py-16 bg-gray-50 ${className}`}>
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
-        <div
-          className="text-center mb-16 animate-fadeInUp"
-        >
+        <div className="text-center mb-16 animate-fadeInUp">
           <div className="inline-flex items-center gap-2 bg-red-100 text-red-800 px-6 py-2 rounded-full text-sm font-semibold mb-6">
             <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
             NEET Dropper Specialization
@@ -126,9 +124,7 @@ export function WhyDroppers({ className = '' }: WhyDroppersSectionProps) {
         </div>
 
         {/* Success Statistics */}
-        <div
-          className="mt-16 bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 text-center text-white animate-fadeInUp"
-        >
+        <div className="mt-16 bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 text-center text-white animate-fadeInUp">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-2">
               <div className="text-3xl font-bold">1,000+</div>
@@ -156,9 +152,7 @@ export function WhyDroppers({ className = '' }: WhyDroppersSectionProps) {
         </div>
 
         {/* Call to Action */}
-        <div
-          className="text-center mt-12 animate-fadeInUp"
-        >
+        <div className="text-center mt-12 animate-fadeInUp">
           <button className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
             Start Your Success Journey Today
           </button>

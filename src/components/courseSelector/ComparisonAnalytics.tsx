@@ -222,9 +222,7 @@ export default function ComparisonAnalytics({
       <div className="p-6 space-y-6">
         {/* Key Metrics Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div
-            className="bg-green-50 rounded-lg p-4 text-center border border-green-200 animate-fadeInUp"
-          >
+          <div className="bg-green-50 rounded-lg p-4 text-center border border-green-200 animate-fadeInUp">
             <DollarSign className="w-6 h-6 text-green-600 mx-auto mb-2" />
             <div className="text-lg font-bold text-green-900">
               ₹{(analytics.priceRange.min / 1000).toFixed(0)}K
@@ -233,9 +231,7 @@ export default function ComparisonAnalytics({
             <div className="text-xs text-gray-600 mt-1">{analytics.mostAffordable.name}</div>
           </div>
 
-          <div
-            className="bg-blue-50 rounded-lg p-4 text-center border border-blue-200 animate-fadeInUp"
-          >
+          <div className="bg-blue-50 rounded-lg p-4 text-center border border-blue-200 animate-fadeInUp">
             <Calculator className="w-6 h-6 text-blue-600 mx-auto mb-2" />
             <div className="text-lg font-bold text-blue-900">
               ₹{analytics.bestValue.costPerHour}
@@ -244,9 +240,7 @@ export default function ComparisonAnalytics({
             <div className="text-xs text-gray-600 mt-1">{analytics.bestValue.name}</div>
           </div>
 
-          <div
-            className="bg-purple-50 rounded-lg p-4 text-center border border-purple-200 animate-fadeInUp"
-          >
+          <div className="bg-purple-50 rounded-lg p-4 text-center border border-purple-200 animate-fadeInUp">
             <Award className="w-6 h-6 text-purple-600 mx-auto mb-2" />
             <div className="text-lg font-bold text-purple-900">
               {analytics.highestSuccess.successRate}%
@@ -255,9 +249,7 @@ export default function ComparisonAnalytics({
             <div className="text-xs text-gray-600 mt-1">{analytics.highestSuccess.name}</div>
           </div>
 
-          <div
-            className="bg-orange-50 rounded-lg p-4 text-center border border-orange-200 animate-fadeInUp"
-          >
+          <div className="bg-orange-50 rounded-lg p-4 text-center border border-orange-200 animate-fadeInUp">
             <TrendingUp className="w-6 h-6 text-orange-600 mx-auto mb-2" />
             <div className="text-lg font-bold text-orange-900">
               {analytics.valueAnalysis[0].valueScore}
@@ -287,9 +279,7 @@ export default function ComparisonAnalytics({
                     <span className="text-gray-600">{course.valueScore}/100</span>
                   </div>
                   <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
-                    <div
-                      className={`h-full ${barColor} rounded-full`}
-                    />
+                    <div className={`h-full ${barColor} rounded-full`} />
                   </div>
                   <div className="flex justify-between text-xs text-gray-500">
                     <span>₹{course.costPerHour}/hour</span>

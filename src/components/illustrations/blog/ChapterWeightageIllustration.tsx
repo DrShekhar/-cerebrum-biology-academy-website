@@ -6,7 +6,7 @@ export function ChapterWeightageIllustration({
   className = '',
   animate = true,
 }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -138,8 +138,7 @@ export function ChapterWeightageIllustration({
       </g>
 
       {/* Title Section */}
-      <g
-      >
+      <g>
         <rect x="175" y="15" width="350" height="55" rx="27" fill="#F59E0B" opacity="0.15" />
         <text x="350" y="42" fontSize="22" fill="#B45309" textAnchor="middle" fontWeight="bold">
           NEET Biology Chapter Weightage
@@ -150,16 +149,13 @@ export function ChapterWeightageIllustration({
       </g>
 
       {/* === LEFT SECTION: Pie Chart === */}
-      <g
-      >
+      <g>
         <g filter="url(#weightCardShadow)">
           <rect x="20" y="85" width="250" height="250" rx="16" fill="#FFFFFF" />
         </g>
 
         {/* Pie Chart */}
-        <g
-          style={{ transformOrigin: '145px 210px' }}
-        >
+        <g style={{ transformOrigin: '145px 210px' }}>
           {pieSegments.map((segment, i) => (
             <path
               key={i}
@@ -171,8 +167,7 @@ export function ChapterWeightageIllustration({
         </g>
 
         {/* Center circle */}
-        <g
-        >
+        <g>
           <circle cx="145" cy="210" r="45" fill="#FFFFFF" stroke="#E5E7EB" strokeWidth="2" />
           <text x="145" y="200" fontSize="12" fill="#6B7280" textAnchor="middle">
             Total
@@ -192,8 +187,7 @@ export function ChapterWeightageIllustration({
       </g>
 
       {/* === CENTER SECTION: Bar Chart === */}
-      <g
-      >
+      <g>
         <g filter="url(#weightCardShadow)">
           <rect x="285" y="85" width="260" height="250" rx="16" fill="#FFFFFF" />
         </g>
@@ -215,14 +209,7 @@ export function ChapterWeightageIllustration({
               <rect x="90" y="2" width="130" height="16" rx="4" fill="#F3F4F6" />
 
               {/* Animated bar */}
-              <rect
-                x="90"
-                y="2"
-                width={0}
-                height="16"
-                rx="4"
-                fill={chapter.color}
-              />
+              <rect x="90" y="2" width={0} height="16" rx="4" fill={chapter.color} />
 
               {/* Question count */}
               <text
@@ -285,8 +272,7 @@ export function ChapterWeightageIllustration({
       </g>
 
       {/* === RIGHT SECTION: Key Stats === */}
-      <g
-      >
+      <g>
         <g filter="url(#weightCardShadow)">
           <rect x="560" y="85" width="125" height="250" rx="16" fill="#FFFFFF" />
         </g>
@@ -301,14 +287,7 @@ export function ChapterWeightageIllustration({
           <text x="47" y="22" fontSize="9" fill="#92400E" textAnchor="middle">
             Total Marks
           </text>
-          <text
-            x="47"
-            y="44"
-            fontSize="22"
-            fill="#B45309"
-            textAnchor="middle"
-            fontWeight="bold"
-          >
+          <text x="47" y="44" fontSize="22" fill="#B45309" textAnchor="middle" fontWeight="bold">
             360
           </text>
         </g>
@@ -355,8 +334,7 @@ export function ChapterWeightageIllustration({
       </g>
 
       {/* === BOTTOM SECTION: Year-wise Comparison === */}
-      <g
-      >
+      <g>
         <g filter="url(#weightCardShadow)">
           <rect x="20" y="350" width="665" height="155" rx="16" fill="#FFFFFF" />
         </g>
@@ -380,14 +358,7 @@ export function ChapterWeightageIllustration({
                   Botany
                 </text>
                 <rect x="45" y="5" width="100" height="18" rx="4" fill="#DCFCE7" />
-                <rect
-                  x="45"
-                  y="5"
-                  width={0}
-                  height="18"
-                  rx="4"
-                  fill="#22C55E"
-                />
+                <rect x="45" y="5" width={0} height="18" rx="4" fill="#22C55E" />
                 <text x={50 + year.botany * 2} y="18" fontSize="9" fill="#166534" fontWeight="600">
                   {year.botany}
                 </text>
@@ -399,14 +370,7 @@ export function ChapterWeightageIllustration({
                   Zoology
                 </text>
                 <rect x="45" y="5" width="100" height="18" rx="4" fill="#FEE2E2" />
-                <rect
-                  x="45"
-                  y="5"
-                  width={0}
-                  height="18"
-                  rx="4"
-                  fill="#EF4444"
-                />
+                <rect x="45" y="5" width={0} height="18" rx="4" fill="#EF4444" />
                 <text x={50 + year.zoology * 2} y="18" fontSize="9" fill="#991B1B" fontWeight="600">
                   {year.zoology}
                 </text>
@@ -416,8 +380,7 @@ export function ChapterWeightageIllustration({
         </g>
 
         {/* Insight badge */}
-        <g
-        >
+        <g>
           <rect x="250" y="480" width="200" height="22" rx="11" fill="#F59E0B" />
           <text x="350" y="494" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
             💡 Zoology slightly dominates in NEET
@@ -428,20 +391,8 @@ export function ChapterWeightageIllustration({
       {/* Floating decorations */}
       {animate && (
         <>
-          <circle
-            cx="30"
-            cy="50"
-            r="6"
-            fill="#F59E0B"
-            opacity="0.4"
-          />
-          <circle
-            cx="670"
-            cy="40"
-            r="5"
-            fill="#10B981"
-            opacity="0.3"
-          />
+          <circle cx="30" cy="50" r="6" fill="#F59E0B" opacity="0.4" />
+          <circle cx="670" cy="40" r="5" fill="#10B981" opacity="0.3" />
         </>
       )}
     </svg>

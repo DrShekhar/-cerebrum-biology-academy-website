@@ -222,7 +222,11 @@ export default function VelocityAlternativeContent({ faqs }: { faqs: FAQ[] }) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -355,7 +359,11 @@ export default function VelocityAlternativeContent({ faqs }: { faqs: FAQ[] }) {
                   AIIMS faculty for Biology-specific depth
                 </li>
               </ul>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button className="bg-white text-teal-600 hover:bg-teal-50">
                   Book a Free Demo <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
@@ -532,22 +540,22 @@ export default function VelocityAlternativeContent({ faqs }: { faqs: FAQ[] }) {
               href="/aakash-alternative-faridabad"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
-              <h3 className="font-semibold text-teal-600">the 2nd-largest national NEET chain Alternative</h3>
-              <p className="text-sm text-gray-600">Compare with the 2nd-largest national NEET chain</p>
+              <h3 className="font-semibold text-teal-600">Aakash Alternative</h3>
+              <p className="text-sm text-gray-600">Compare with Aakash</p>
             </Link>
             <Link
               href="/allen-alternative-faridabad"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
-              <h3 className="font-semibold text-teal-600">the largest national NEET chain Alternative</h3>
-              <p className="text-sm text-gray-600">Compare with the largest national NEET chain</p>
+              <h3 className="font-semibold text-teal-600">Allen Alternative</h3>
+              <p className="text-sm text-gray-600">Compare with Allen</p>
             </Link>
             <Link
               href="/narayana-alternative-faridabad"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
-              <h3 className="font-semibold text-teal-600">a leading national educational institution Alternative</h3>
-              <p className="text-sm text-gray-600">Compare with a leading national educational institution</p>
+              <h3 className="font-semibold text-teal-600">Narayana Alternative</h3>
+              <p className="text-sm text-gray-600">Compare with Narayana</p>
             </Link>
             <Link
               href="/neet-coaching-faridabad"
@@ -570,7 +578,11 @@ export default function VelocityAlternativeContent({ faqs }: { faqs: FAQ[] }) {
             Experience the difference of biology-specialist coaching with AIIMS-trained faculty
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 size="xl"

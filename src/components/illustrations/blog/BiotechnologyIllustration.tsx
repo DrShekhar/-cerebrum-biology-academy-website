@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function BiotechnologyIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -12,12 +12,7 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Background */}
       <rect x="10" y="10" width="380" height="280" rx="20" fill="#F0FDF4" />
 
@@ -27,8 +22,7 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
       </text>
 
       {/* DNA strand being cut */}
-      <g
-      >
+      <g>
         {/* DNA helix segment */}
         <path
           d="M40 80 Q60 100 40 120 Q20 140 40 160"
@@ -49,9 +43,7 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* Scissors (restriction enzyme) */}
-      <g
-        style={{ transformOrigin: '120px 120px' }}
-      >
+      <g style={{ transformOrigin: '120px 120px' }}>
         <path d="M100 100 L120 120 L100 140" stroke="#EF4444" strokeWidth="3" fill="none" />
         <path d="M140 100 L120 120 L140 140" stroke="#EF4444" strokeWidth="3" fill="none" />
         <circle cx="120" cy="120" r="5" fill="#EF4444" />
@@ -64,9 +56,7 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
       </text>
 
       {/* Plasmid vector */}
-      <g
-        style={{ transformOrigin: '200px 120px' }}
-      >
+      <g style={{ transformOrigin: '200px 120px' }}>
         <circle cx="200" cy="120" r="40" fill="none" stroke="#3B82F6" strokeWidth="4" />
         <circle cx="200" cy="80" r="5" fill="#EF4444" />
         <text x="200" y="70" fontSize="6" fill="#DC2626" textAnchor="middle">
@@ -86,8 +76,7 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
       />
 
       {/* Recombinant DNA */}
-      <g
-      >
+      <g>
         <circle cx="300" cy="120" r="45" fill="none" stroke="#10B981" strokeWidth="4" />
         <line x1="280" y1="100" x2="320" y2="100" stroke="#EC4899" strokeWidth="3" />
         <line x1="280" y1="140" x2="320" y2="140" stroke="#F59E0B" strokeWidth="3" />
@@ -152,8 +141,7 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
       </text>
 
       {/* Questions badge */}
-      <g
-      >
+      <g>
         <circle cx="360" cy="70" r="18" fill="#10B981" />
         <text x="360" y="67" fontSize="8" fill="#FFFFFF" textAnchor="middle">
           6-8

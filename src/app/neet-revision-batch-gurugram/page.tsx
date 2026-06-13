@@ -34,7 +34,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Revision Batch in Gurugram | Final 3-Month Revision Program',
-    description: 'Join our intensive 3-month NEET Biology revision batch in Gurugram (Gurgaon). Complete NCERT revision, high-yield topics focus, 2000+ MCQs, and mock tests. Starting ₹40,000.',
+    description:
+      'Join our intensive 3-month NEET Biology revision batch in Gurugram (Gurgaon). Complete NCERT revision, high-yield topics focus, 2000+ MCQs, and mock tests. Starting ₹40,000.',
   },
 }
 
@@ -149,7 +150,11 @@ export default function NEETRevisionBatchGurugramPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-revision-batch-gurugram" />
       <script

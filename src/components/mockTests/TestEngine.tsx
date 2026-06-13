@@ -192,9 +192,7 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
   if (showInstructions) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
-        <div
-          className="bg-white rounded-3xl shadow-xl max-w-4xl w-full p-8 animate-fadeInUp"
-        >
+        <div className="bg-white rounded-3xl shadow-xl max-w-4xl w-full p-8 animate-fadeInUp">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-4">{test.title}</h1>
             <div className="grid md:grid-cols-3 gap-6 text-center">
@@ -319,72 +317,70 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
 
       <div className="flex h-[calc(100vh-80px)]">
         {/* Question Palette Sidebar */}
-{showQuestionPalette && (
-            <div
-              className="w-80 bg-gray-50 border-r border-gray-200 p-6 overflow-y-auto animate-fadeInUp"
-            >
-              <h3 className="font-bold text-gray-900 mb-4">Question Palette</h3>
+        {showQuestionPalette && (
+          <div className="w-80 bg-gray-50 border-r border-gray-200 p-6 overflow-y-auto animate-fadeInUp">
+            <h3 className="font-bold text-gray-900 mb-4">Question Palette</h3>
 
-              {/* Legend */}
-              <div className="mb-6 space-y-2 text-sm">
-                <div className="flex items-center">
-                  <div className="w-6 h-6 bg-green-600 rounded mr-3"></div>
-                  <span>Answered</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-6 h-6 bg-yellow-500 rounded mr-3"></div>
-                  <span>Marked for Review</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-6 h-6 bg-purple-500 rounded mr-3"></div>
-                  <span>Answered & Marked</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-6 h-6 bg-blue-600 rounded mr-3"></div>
-                  <span>Current</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-6 h-6 bg-gray-200 rounded mr-3"></div>
-                  <span>Not Visited</span>
-                </div>
+            {/* Legend */}
+            <div className="mb-6 space-y-2 text-sm">
+              <div className="flex items-center">
+                <div className="w-6 h-6 bg-green-600 rounded mr-3"></div>
+                <span>Answered</span>
               </div>
-
-              {/* Question Grid */}
-              <div className="grid grid-cols-5 gap-2">
-                {Array.from({ length: totalQuestions }, (_, index) => {
-                  const status = getQuestionStatus(index)
-                  return (
-                    <button
-                      key={index}
-                      onClick={() => handleQuestionChange(index)}
-                      className={`w-10 h-10 rounded font-semibold text-sm transition-colors ${getQuestionStatusColor(status)}`}
-                    >
-                      {index + 1}
-                    </button>
-                  )
-                })}
+              <div className="flex items-center">
+                <div className="w-6 h-6 bg-yellow-500 rounded mr-3"></div>
+                <span>Marked for Review</span>
               </div>
+              <div className="flex items-center">
+                <div className="w-6 h-6 bg-purple-500 rounded mr-3"></div>
+                <span>Answered & Marked</span>
+              </div>
+              <div className="flex items-center">
+                <div className="w-6 h-6 bg-blue-600 rounded mr-3"></div>
+                <span>Current</span>
+              </div>
+              <div className="flex items-center">
+                <div className="w-6 h-6 bg-gray-200 rounded mr-3"></div>
+                <span>Not Visited</span>
+              </div>
+            </div>
 
-              {/* Summary */}
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span>Answered:</span>
-                    <span className="font-semibold">{responses.size}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Marked:</span>
-                    <span className="font-semibold">{markedForReview.size}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Remaining:</span>
-                    <span className="font-semibold">{totalQuestions - responses.size}</span>
-                  </div>
+            {/* Question Grid */}
+            <div className="grid grid-cols-5 gap-2">
+              {Array.from({ length: totalQuestions }, (_, index) => {
+                const status = getQuestionStatus(index)
+                return (
+                  <button
+                    key={index}
+                    onClick={() => handleQuestionChange(index)}
+                    className={`w-10 h-10 rounded font-semibold text-sm transition-colors ${getQuestionStatusColor(status)}`}
+                  >
+                    {index + 1}
+                  </button>
+                )
+              })}
+            </div>
+
+            {/* Summary */}
+            <div className="mt-6 pt-6 border-t border-gray-200">
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Answered:</span>
+                  <span className="font-semibold">{responses.size}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Marked:</span>
+                  <span className="font-semibold">{markedForReview.size}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Remaining:</span>
+                  <span className="font-semibold">{totalQuestions - responses.size}</span>
                 </div>
               </div>
             </div>
-          )}
-{/* Main Content */}
+          </div>
+        )}
+        {/* Main Content */}
         <div className="flex-1 flex flex-col">
           {/* Question Content */}
           <div className="flex-1 p-8 overflow-y-auto">

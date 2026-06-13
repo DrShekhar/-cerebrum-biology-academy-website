@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Ecology MCQ for NEET 2026 | Free Practice Questions',
-    description: 'Practice 500+ free Ecology MCQs for NEET. Ecosystem, biodiversity, environmental issues, population ecology questions. NCERT-based with detailed explanations.',
+    description:
+      'Practice 500+ free Ecology MCQs for NEET. Ecosystem, biodiversity, environmental issues, population ecology questions. NCERT-based with detailed explanations.',
   },
 }
 

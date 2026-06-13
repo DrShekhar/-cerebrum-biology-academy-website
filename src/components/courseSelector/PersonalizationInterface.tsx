@@ -557,9 +557,7 @@ function RecommendationDisplay({ recommendation }: { recommendation: CourseRecom
   const theme = getSeriesTheme(recommendation.seriesId)
 
   return (
-    <div
-      className={`${theme.bg} ${theme.border} border-2 rounded-xl p-6`}
-    >
+    <div className={`${theme.bg} ${theme.border} border-2 rounded-xl p-6`}>
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <div>
@@ -832,184 +830,176 @@ export default function PersonalizationInterface({
 
       {/* Content */}
       <div className="p-6">
-{activeSection === 'profile' && (
-            <div
-              key="profile"
-              className="space-y-6 animate-fadeInUp"
-            >
-              {/* Basic Information */}
-              <div className="bg-white rounded-xl border border-gray-200 p-6">
-                <div className="flex items-center mb-4">
-                  <User className="w-5 h-5 text-blue-600 mr-2" />
-                  <h3 className="text-lg font-semibold text-gray-900">Basic Information</h3>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Current Class
-                    </label>
-                    <select
-                      value={profile.currentClass}
-                      onChange={(e) =>
-                        setProfile((prev) => ({ ...prev, currentClass: e.target.value as any }))
-                      }
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    >
-                      <option value="9th">Class 9th</option>
-                      <option value="10th">Class 10th</option>
-                      <option value="11th">Class 11th</option>
-                      <option value="12th">Class 12th</option>
-                      <option value="Dropper">Dropper/Repeater</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Target Exam
-                    </label>
-                    <select
-                      value={profile.targetExam}
-                      onChange={(e) =>
-                        setProfile((prev) => ({ ...prev, targetExam: e.target.value as any }))
-                      }
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    >
-                      <option value="NEET">NEET</option>
-                      <option value="AIIMS">AIIMS</option>
-                      <option value="JIPMER">JIPMER</option>
-                      <option value="StateNEET">State NEET</option>
-                      <option value="Multiple">Multiple Exams</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Budget Range
-                    </label>
-                    <select
-                      value={profile.preferences.budget.range}
-                      onChange={(e) =>
-                        updateProfile({
-                          preferences: {
-                            ...profile.preferences,
-                            budget: { ...profile.preferences.budget, range: e.target.value as any },
-                          },
-                        })
-                      }
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    >
-                      <option value="budget">Budget (₹40K-60K)</option>
-                      <option value="standard">Standard (₹60K-1L)</option>
-                      <option value="premium">Premium (₹1L+)</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Delivery Preference
-                    </label>
-                    <select
-                      value={profile.location.deliveryPreference}
-                      onChange={(e) =>
-                        updateProfile({
-                          location: {
-                            ...profile.location,
-                            deliveryPreference: e.target.value as any,
-                          },
-                        })
-                      }
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    >
-                      <option value="online">Online Only</option>
-                      <option value="offline">Offline Only</option>
-                      <option value="hybrid">Hybrid (Online + Offline)</option>
-                      <option value="flexible">Flexible</option>
-                    </select>
-                  </div>
-                </div>
+        {activeSection === 'profile' && (
+          <div key="profile" className="space-y-6 animate-fadeInUp">
+            {/* Basic Information */}
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <div className="flex items-center mb-4">
+                <User className="w-5 h-5 text-blue-600 mr-2" />
+                <h3 className="text-lg font-semibold text-gray-900">Basic Information</h3>
               </div>
 
-              <AcademicPerformanceSection profile={profile} updateProfile={updateProfile} />
-              <LearningStyleSection profile={profile} updateProfile={updateProfile} />
-              <TimeAvailabilitySection profile={profile} updateProfile={updateProfile} />
-              <BiologyWeakAreasSection profile={profile} updateProfile={updateProfile} />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Current Class
+                  </label>
+                  <select
+                    value={profile.currentClass}
+                    onChange={(e) =>
+                      setProfile((prev) => ({ ...prev, currentClass: e.target.value as any }))
+                    }
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  >
+                    <option value="9th">Class 9th</option>
+                    <option value="10th">Class 10th</option>
+                    <option value="11th">Class 11th</option>
+                    <option value="12th">Class 12th</option>
+                    <option value="Dropper">Dropper/Repeater</option>
+                  </select>
+                </div>
 
-              {/* Generate Recommendations Button */}
-              <div className="text-center">
-                <button
-                  onClick={generateRecommendations}
-                  disabled={
-                    !profileAnalysis || profileAnalysis.recommendationReadiness === 'insufficient'
-                  }
-                  className="bg-indigo-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {profileAnalysis?.recommendationReadiness === 'insufficient'
-                    ? 'Complete Profile to Get Recommendations'
-                    : '🎯 Generate Personalized Recommendations'}
-                </button>
-                {profileAnalysis && profileAnalysis.profileCompleteness < 80 && (
-                  <p className="text-sm text-gray-600 mt-2">
-                    {profileAnalysis.profileCompleteness}% complete - Add more details for better
-                    recommendations
-                  </p>
-                )}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Target Exam
+                  </label>
+                  <select
+                    value={profile.targetExam}
+                    onChange={(e) =>
+                      setProfile((prev) => ({ ...prev, targetExam: e.target.value as any }))
+                    }
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  >
+                    <option value="NEET">NEET</option>
+                    <option value="AIIMS">AIIMS</option>
+                    <option value="JIPMER">JIPMER</option>
+                    <option value="StateNEET">State NEET</option>
+                    <option value="Multiple">Multiple Exams</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Budget Range
+                  </label>
+                  <select
+                    value={profile.preferences.budget.range}
+                    onChange={(e) =>
+                      updateProfile({
+                        preferences: {
+                          ...profile.preferences,
+                          budget: { ...profile.preferences.budget, range: e.target.value as any },
+                        },
+                      })
+                    }
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  >
+                    <option value="budget">Budget (₹40K-60K)</option>
+                    <option value="standard">Standard (₹60K-1L)</option>
+                    <option value="premium">Premium (₹1L+)</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Delivery Preference
+                  </label>
+                  <select
+                    value={profile.location.deliveryPreference}
+                    onChange={(e) =>
+                      updateProfile({
+                        location: {
+                          ...profile.location,
+                          deliveryPreference: e.target.value as any,
+                        },
+                      })
+                    }
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  >
+                    <option value="online">Online Only</option>
+                    <option value="offline">Offline Only</option>
+                    <option value="hybrid">Hybrid (Online + Offline)</option>
+                    <option value="flexible">Flexible</option>
+                  </select>
+                </div>
               </div>
             </div>
-          )}
 
-          {activeSection === 'recommendations' && (
-            <div
-              key="recommendations"
-              className="space-y-6 animate-fadeInUp"
-            >
-              {recommendations.length > 0 ? (
-                <>
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                      Your Personalized Course Recommendations
-                    </h3>
-                    <p className="text-gray-600">
-                      Based on your profile analysis, here are the best matches for you
-                    </p>
-                  </div>
+            <AcademicPerformanceSection profile={profile} updateProfile={updateProfile} />
+            <LearningStyleSection profile={profile} updateProfile={updateProfile} />
+            <TimeAvailabilitySection profile={profile} updateProfile={updateProfile} />
+            <BiologyWeakAreasSection profile={profile} updateProfile={updateProfile} />
 
-                  {recommendations.map((recommendation, index) => (
-                    <RecommendationDisplay
-                      key={recommendation.courseId}
-                      recommendation={recommendation}
-                    />
-                  ))}
-
-                  <div className="text-center">
-                    <button
-                      onClick={() => setActiveSection('profile')}
-                      className="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
-                    >
-                      ← Update Profile for Better Recommendations
-                    </button>
-                  </div>
-                </>
-              ) : (
-                <div className="text-center py-12">
-                  <Target className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    No Recommendations Yet
-                  </h3>
-                  <p className="text-gray-600 mb-6">
-                    Complete your profile to get personalized course recommendations
-                  </p>
-                  <button
-                    onClick={() => setActiveSection('profile')}
-                    className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                  >
-                    Complete Your Profile
-                  </button>
-                </div>
+            {/* Generate Recommendations Button */}
+            <div className="text-center">
+              <button
+                onClick={generateRecommendations}
+                disabled={
+                  !profileAnalysis || profileAnalysis.recommendationReadiness === 'insufficient'
+                }
+                className="bg-indigo-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {profileAnalysis?.recommendationReadiness === 'insufficient'
+                  ? 'Complete Profile to Get Recommendations'
+                  : '🎯 Generate Personalized Recommendations'}
+              </button>
+              {profileAnalysis && profileAnalysis.profileCompleteness < 80 && (
+                <p className="text-sm text-gray-600 mt-2">
+                  {profileAnalysis.profileCompleteness}% complete - Add more details for better
+                  recommendations
+                </p>
               )}
             </div>
-          )}
-</div>
+          </div>
+        )}
+
+        {activeSection === 'recommendations' && (
+          <div key="recommendations" className="space-y-6 animate-fadeInUp">
+            {recommendations.length > 0 ? (
+              <>
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    Your Personalized Course Recommendations
+                  </h3>
+                  <p className="text-gray-600">
+                    Based on your profile analysis, here are the best matches for you
+                  </p>
+                </div>
+
+                {recommendations.map((recommendation, index) => (
+                  <RecommendationDisplay
+                    key={recommendation.courseId}
+                    recommendation={recommendation}
+                  />
+                ))}
+
+                <div className="text-center">
+                  <button
+                    onClick={() => setActiveSection('profile')}
+                    className="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
+                  >
+                    ← Update Profile for Better Recommendations
+                  </button>
+                </div>
+              </>
+            ) : (
+              <div className="text-center py-12">
+                <Target className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">No Recommendations Yet</h3>
+                <p className="text-gray-600 mb-6">
+                  Complete your profile to get personalized course recommendations
+                </p>
+                <button
+                  onClick={() => setActiveSection('profile')}
+                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  Complete Your Profile
+                </button>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   )
 }

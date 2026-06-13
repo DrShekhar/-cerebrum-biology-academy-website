@@ -8,23 +8,45 @@ const PAGE_URL = 'https://cerebrumbiologyacademy.com/neet-foundation-class-9-kot
 
 export const metadata: Metadata = {
   title: 'NEET Foundation Class 9 in Kota | AIIMS-Trained Online Live',
-  description: 'NEET Foundation Class 9 in Kota — AIIMS-trained faculty, online live. CBSE/ICSE/State Board + NEET parallel. Serving Kota coaching corridor. From Rs 35,000/year.',
-  keywords: ['neet foundation class 9 kota', 'class 9 biology coaching kota', 'class 9 neet preparation kota'],
+  description:
+    'NEET Foundation Class 9 in Kota — AIIMS-trained faculty, online live. CBSE/ICSE/State Board + NEET parallel. Serving Kota coaching corridor. From Rs 35,000/year.',
+  keywords: [
+    'neet foundation class 9 kota',
+    'class 9 biology coaching kota',
+    'class 9 neet preparation kota',
+  ],
   alternates: { canonical: PAGE_URL },
-  openGraph: { title: 'NEET Foundation Class 9 Kota', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+  openGraph: {
+    title: 'NEET Foundation Class 9 Kota',
+    url: PAGE_URL,
+    locale: 'en_IN',
+    type: 'website',
+  },
 
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 9 in Kota | AIIMS-Trained Online Live',
-    description: 'NEET Foundation Class 9 in Kota — AIIMS-trained faculty, online live. CBSE/ICSE/State Board + NEET parallel. Serving Kota coaching corridor. From Rs 35,000/year.',
+    description:
+      'NEET Foundation Class 9 in Kota — AIIMS-trained faculty, online live. CBSE/ICSE/State Board + NEET parallel. Serving Kota coaching corridor. From Rs 35,000/year.',
   },
 }
 
-const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I want to enroll my child (Class 9) in NEET Foundation from Kota. Please share batch details.")
+const wa =
+  'https://wa.me/918826444334?text=' +
+  encodeURIComponent(
+    'Hi — I want to enroll my child (Class 9) in NEET Foundation from Kota. Please share batch details.'
+  )
 
 const faqs = [
-  { question: 'Is Class 9 too early for NEET prep in Kota?', answer: 'No — Class 9 is ideal. NCERT Class 9 Biology maps directly to NEET. Starting early gives 2-3 year advantage.' },
-  { question: 'What does Foundation Class 9 cost?', answer: 'Foundation Pursuit Rs 35,000/yr. Ascent Rs 50,000/yr. Pinnacle Rs 70,000/yr.' },
+  {
+    question: 'Is Class 9 too early for NEET prep in Kota?',
+    answer:
+      'No — Class 9 is ideal. NCERT Class 9 Biology maps directly to NEET. Starting early gives 2-3 year advantage.',
+  },
+  {
+    question: 'What does Foundation Class 9 cost?',
+    answer: 'Foundation Pursuit Rs 35,000/yr. Ascent Rs 50,000/yr. Pinnacle Rs 70,000/yr.',
+  },
 ]
 
 export default function Page() {
@@ -36,13 +58,31 @@ export default function Page() {
       <section className="bg-gradient-to-br from-emerald-900 to-green-800 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4">
           <nav className="text-sm text-emerald-300 mb-6" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white">Home</Link><span className="mx-2">/</span>
-            <Link href="/neet-coaching-kota" className="hover:text-white">NEET Kota</Link><span className="mx-2">/</span>
+            <Link href="/" className="hover:text-white">
+              Home
+            </Link>
+            <span className="mx-2">/</span>
+            <Link href="/neet-coaching-kota" className="hover:text-white">
+              NEET Kota
+            </Link>
+            <span className="mx-2">/</span>
             <span className="text-white">Foundation Class 9</span>
           </nav>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">NEET Foundation Class 9 in Kota</h1>
-          <p className="text-xl text-emerald-200 mb-6 max-w-3xl">Start NEET preparation early from Kota. AIIMS-trained faculty, online live. Serving Kota coaching corridor. From Rs 35,000/year.</p>
-          <a href={wa} className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold" target="_blank" rel="noopener noreferrer">WhatsApp +91 88264-44334</a>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            NEET Foundation Class 9 in Kota
+          </h1>
+          <p className="text-xl text-emerald-200 mb-6 max-w-3xl">
+            Start NEET preparation early from Kota. AIIMS-trained faculty, online live. Serving Kota
+            coaching corridor. From Rs 35,000/year.
+          </p>
+          <a
+            href={wa}
+            className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp +91 88264-44334
+          </a>
         </div>
       </section>
       <section className="py-16 bg-slate-50">
@@ -51,7 +91,9 @@ export default function Page() {
           <div className="space-y-6">
             {faqs.map((f, i) => (
               <details key={i} className="bg-white rounded-xl p-6 border border-slate-200">
-                <summary className="text-lg font-semibold text-slate-900 cursor-pointer">{f.question}</summary>
+                <summary className="text-lg font-semibold text-slate-900 cursor-pointer">
+                  {f.question}
+                </summary>
                 <p className="mt-4 text-slate-700 leading-relaxed">{f.answer}</p>
               </details>
             ))}
@@ -61,7 +103,14 @@ export default function Page() {
       <section className="py-16 bg-gradient-to-br from-emerald-600 to-green-600">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start Foundation from Kota</h2>
-          <a href={wa} className="inline-flex items-center gap-2 bg-white text-emerald-700 px-8 py-4 rounded-xl font-semibold text-lg" target="_blank" rel="noopener noreferrer">WhatsApp +91 88264-44334</a>
+          <a
+            href={wa}
+            className="inline-flex items-center gap-2 bg-white text-emerald-700 px-8 py-4 rounded-xl font-semibold text-lg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp +91 88264-44334
+          </a>
         </div>
       </section>
     </main>

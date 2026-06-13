@@ -10,7 +10,8 @@ const school = getSchoolBySlug(SLUG)
 
 export const metadata: Metadata = buildIBBiologySchoolMetadata({
   title: 'IB Biology Tutor for KCS Wimbledon · London · Cerebrum',
-  description: "IB Biology HL & SL tutoring for King's College School Wimbledon students. AIIMS-trained faculty, IA + EE mentorship.",
+  description:
+    "IB Biology HL & SL tutoring for King's College School Wimbledon students. AIIMS-trained faculty, IA + EE mentorship.",
   keywords: [
     'IB Biology tutor KCS Wimbledon',
     'IB Biology coaching Kings Wimbledon',

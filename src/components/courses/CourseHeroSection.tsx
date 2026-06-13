@@ -54,9 +54,7 @@ export function CourseHeroSection({ course }: CourseHeroSectionProps) {
   const primaryTier = course.tiers[defaultTier as CourseSeries]
 
   return (
-    <section
-      className="relative bg-gradient-to-r from-slate-900 via-blue-950 to-indigo-900 text-white"
-    >
+    <section className="relative bg-gradient-to-r from-slate-900 via-blue-950 to-indigo-900 text-white">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black bg-opacity-20">
         <div className="absolute inset-0 bg-[url('/images/patterns/grid.svg')] opacity-10"></div>
@@ -145,7 +143,18 @@ export function CourseHeroSection({ course }: CourseHeroSectionProps) {
                 size="lg"
                 variant="secondary"
                 className="bg-white text-gray-900 hover:bg-gray-100 font-semibold min-h-[44px] w-full sm:w-auto text-sm sm:text-base"
-                onClick={() => trackAndOpenWhatsApp({ source: 'course-hero-demo-' + course.id, message: 'Hi! I want to book a FREE demo class for ' + course.name + ' (Class ' + course.targetClass + '). Please share available demo timings.', campaign: 'course-demo' })}
+                onClick={() =>
+                  trackAndOpenWhatsApp({
+                    source: 'course-hero-demo-' + course.id,
+                    message:
+                      'Hi! I want to book a FREE demo class for ' +
+                      course.name +
+                      ' (Class ' +
+                      course.targetClass +
+                      '). Please share available demo timings.',
+                    campaign: 'course-demo',
+                  })
+                }
               >
                 <Play className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                 Book Free Demo Class
@@ -154,7 +163,18 @@ export function CourseHeroSection({ course }: CourseHeroSectionProps) {
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-gray-900 min-h-[44px] w-full sm:w-auto text-sm sm:text-base"
-                onClick={() => trackAndOpenWhatsApp({ source: 'course-hero-syllabus-' + course.id, message: 'Hi! Please share the complete syllabus/curriculum for ' + course.name + ' (Class ' + course.targetClass + ').', campaign: 'course-syllabus' })}
+                onClick={() =>
+                  trackAndOpenWhatsApp({
+                    source: 'course-hero-syllabus-' + course.id,
+                    message:
+                      'Hi! Please share the complete syllabus/curriculum for ' +
+                      course.name +
+                      ' (Class ' +
+                      course.targetClass +
+                      ').',
+                    campaign: 'course-syllabus',
+                  })
+                }
               >
                 <Download className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                 Download Syllabus
@@ -209,7 +229,8 @@ Please share the details!`,
               <div className="text-center mb-4">
                 <div className="text-sm font-medium mb-1">Choose Your Plan</div>
                 <div className="text-3xl font-bold">
-                  ₹{lowestPrice.toLocaleString()}<span className="text-lg font-medium">/year</span>
+                  ₹{lowestPrice.toLocaleString()}
+                  <span className="text-lg font-medium">/year</span>
                 </div>
                 <div className="text-sm mt-1">EMI from ₹{monthlyEMI.toLocaleString()}/month</div>
               </div>
@@ -219,7 +240,12 @@ Please share the details!`,
                   <span className="font-bold">₹{course.tiers.pursuit.price.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between items-center bg-white/60 rounded-lg px-3 py-2 ring-2 ring-gray-900/20">
-                  <span className="font-medium text-sm">Ascent <span className="text-xs bg-gray-900 text-yellow-400 px-1.5 py-0.5 rounded ml-1">Popular</span></span>
+                  <span className="font-medium text-sm">
+                    Ascent{' '}
+                    <span className="text-xs bg-gray-900 text-yellow-400 px-1.5 py-0.5 rounded ml-1">
+                      Popular
+                    </span>
+                  </span>
                   <span className="font-bold">₹{course.tiers.ascent.price.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between items-center bg-white/40 rounded-lg px-3 py-2">
@@ -227,7 +253,9 @@ Please share the details!`,
                   <span className="font-bold">₹{course.tiers.pinnacle.price.toLocaleString()}</span>
                 </div>
               </div>
-              <div className="text-xs text-center mt-3 font-medium">15-day money-back guarantee • 2% off lump sum</div>
+              <div className="text-xs text-center mt-3 font-medium">
+                15-day money-back guarantee • 2% off lump sum
+              </div>
             </Card>
 
             {/* Enrollment Bonus */}
@@ -250,7 +278,6 @@ Please share the details!`,
           </div>
         </div>
       </div>
-
     </section>
   )
 }

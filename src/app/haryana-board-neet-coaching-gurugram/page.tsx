@@ -34,7 +34,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Haryana Board NEET Coaching in Gurugram | HBSE Students NEET Prep',
-    description: 'Specialized NEET Biology coaching for Haryana Board (HBSE) students in Gurugram (Gurgaon). Hindi + English medium support, NCERT bridging, affordable fees. For Govt & private school students.',
+    description:
+      'Specialized NEET Biology coaching for Haryana Board (HBSE) students in Gurugram (Gurgaon). Hindi + English medium support, NCERT bridging, affordable fees. For Govt & private school students.',
   },
 }
 
@@ -149,7 +150,11 @@ export default function HaryanaBoardNEETCoachingGurugramPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

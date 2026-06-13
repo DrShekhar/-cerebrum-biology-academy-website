@@ -549,9 +549,7 @@ const Collaboration: React.FC = () => {
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <div
-          className="flex items-center justify-center gap-3 animate-fadeInUp"
-        >
+        <div className="flex items-center justify-center gap-3 animate-fadeInUp">
           <div className="p-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl">
             <Users className="w-8 h-8 text-white" />
           </div>
@@ -664,876 +662,840 @@ const Collaboration: React.FC = () => {
       </div>
 
       {/* Content */}
-{/* Co-author Invitations */}
-        {activeTab === 'invitations' && (
-          <div
-            key="invitations"
-            className="space-y-6 animate-fadeInUp"
-          >
-            {/* Invite New Collaborator */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <UserPlus className="w-5 h-5 text-blue-600" />
-                Invite New Collaborator
-              </h3>
+      {/* Co-author Invitations */}
+      {activeTab === 'invitations' && (
+        <div key="invitations" className="space-y-6 animate-fadeInUp">
+          {/* Invite New Collaborator */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <UserPlus className="w-5 h-5 text-blue-600" />
+              Invite New Collaborator
+            </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  value={newInvitation.email}
+                  onChange={(e) => setNewInvitation((prev) => ({ ...prev, email: e.target.value }))}
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="colleague@university.edu"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                <input
+                  type="text"
+                  value={newInvitation.name}
+                  onChange={(e) => setNewInvitation((prev) => ({ ...prev, name: e.target.value }))}
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Dr. John Smith"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Role</label>
+                <select
+                  value={newInvitation.role}
+                  onChange={(e) =>
+                    setNewInvitation((prev) => ({
+                      ...prev,
+                      role: e.target.value as User['role'],
+                    }))
+                  }
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                >
+                  <option value="viewer">Viewer</option>
+                  <option value="reviewer">Reviewer</option>
+                  <option value="editor">Editor</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Personal Message (Optional)
+                </label>
+                <textarea
+                  value={newInvitation.message}
+                  onChange={(e) =>
+                    setNewInvitation((prev) => ({ ...prev, message: e.target.value }))
+                  }
+                  rows={3}
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Welcome to our biology test development team!"
+                />
+              </div>
+            </div>
+
+            <button
+              onClick={sendInvitation}
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
+            >
+              <Send className="w-4 h-4" />
+              Send Invitation
+            </button>
+          </div>
+
+          {/* Pending Invitations */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Clock className="w-5 h-5 text-yellow-600" />
+              Pending Invitations ({invitations.filter((i) => i.status === 'pending').length})
+            </h3>
+
+            {invitations.length === 0 ? (
+              <div className="text-center py-12 text-gray-500">
+                <UserPlus className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                <p>No invitations sent yet</p>
+                <p className="text-sm">Invite team members to start collaborating</p>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                {invitations.map((invitation) => (
+                  <div
+                    key={invitation.id}
+                    className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                  >
+                    <div className="flex justify-between items-start mb-3">
+                      <div>
+                        <h4 className="font-medium text-gray-800">{invitation.recipientName}</h4>
+                        <p className="text-sm text-gray-600">{invitation.recipientEmail}</p>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span
+                          className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(invitation.status)}-100 text-${getStatusColor(invitation.status)}-700`}
+                        >
+                          {invitation.status}
+                        </span>
+                        <span
+                          className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(invitation.role)}-100 text-${getStatusColor(invitation.role)}-700`}
+                        >
+                          {invitation.role}
+                        </span>
+                      </div>
+                    </div>
+
+                    {invitation.message && (
+                      <p className="text-sm text-gray-700 mb-3 bg-gray-50 p-2 rounded">
+                        {invitation.message}
+                      </p>
+                    )}
+
+                    <div className="flex justify-between items-center text-sm text-gray-500">
+                      <span>Invited {new Date(invitation.invitedAt).toLocaleDateString()}</span>
+                      <span>Expires {new Date(invitation.expiresAt).toLocaleDateString()}</span>
+                    </div>
+
+                    <div className="flex gap-2 mt-3">
+                      <button className="text-blue-600 hover:text-blue-800 text-sm">Resend</button>
+                      <button className="text-red-600 hover:text-red-800 text-sm">Cancel</button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Peer Review System */}
+      {activeTab === 'reviews' && (
+        <div key="reviews" className="space-y-6 animate-fadeInUp">
+          {/* Review Summary */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="bg-white rounded-xl p-4 border text-center">
+              <div className="text-2xl font-bold text-yellow-600">
+                {reviews.filter((r) => r.status === 'pending').length}
+              </div>
+              <div className="text-sm text-yellow-800">Pending Reviews</div>
+            </div>
+            <div className="bg-white rounded-xl p-4 border text-center">
+              <div className="text-2xl font-bold text-green-600">
+                {reviews.filter((r) => r.status === 'approved').length}
+              </div>
+              <div className="text-sm text-green-800">Approved</div>
+            </div>
+            <div className="bg-white rounded-xl p-4 border text-center">
+              <div className="text-2xl font-bold text-red-600">
+                {reviews.filter((r) => r.status === 'rejected').length}
+              </div>
+              <div className="text-sm text-red-800">Rejected</div>
+            </div>
+            <div className="bg-white rounded-xl p-4 border text-center">
+              <div className="text-2xl font-bold text-orange-600">
+                {reviews.filter((r) => r.status === 'needs_changes').length}
+              </div>
+              <div className="text-sm text-orange-800">Needs Changes</div>
+            </div>
+          </div>
+
+          {/* Reviews List */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Eye className="w-5 h-5 text-purple-600" />
+              Recent Reviews
+            </h3>
+
+            <div className="space-y-4">
+              {reviews.map((review) => (
+                <div
+                  key={review.id}
+                  className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                >
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h4 className="font-medium text-gray-800">Question {review.questionId}</h4>
+                      <p className="text-sm text-gray-600">Reviewed by {review.reviewerName}</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span
+                        className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(review.status)}-100 text-${getStatusColor(review.status)}-700`}
+                      >
+                        {review.status.replace('_', ' ')}
+                      </span>
+                      <div className="flex items-center gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className={`w-4 h-4 ${i < review.score ? 'text-yellow-500 fill-current' : 'text-gray-300'}`}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-sm text-gray-700 mb-3">{review.comments}</p>
+
+                  {/* Review Checklist */}
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mb-3">
+                    {Object.entries(review.checklist).map(([criteria, passed]) => (
+                      <div key={criteria} className="flex items-center gap-2 text-sm">
+                        {passed ? (
+                          <CheckCircle className="w-4 h-4 text-green-600" />
+                        ) : (
+                          <X className="w-4 h-4 text-red-600" />
+                        )}
+                        <span className={passed ? 'text-green-700' : 'text-red-700'}>
+                          {criteria}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex justify-between items-center text-xs text-gray-500">
+                    <span>Submitted {new Date(review.submittedAt).toLocaleString()}</span>
+                    {review.decidedAt && (
+                      <span>Decided {new Date(review.decidedAt).toLocaleString()}</span>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {reviews.length === 0 && (
+              <div className="text-center py-12 text-gray-500">
+                <Eye className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                <p>No reviews submitted yet</p>
+                <p className="text-sm">
+                  Reviews will appear here as team members evaluate questions
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Comments & Feedback */}
+      {activeTab === 'comments' && (
+        <div key="comments" className="space-y-6 animate-fadeInUp">
+          {/* Add New Comment */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <MessageSquare className="w-5 h-5 text-green-600" />
+              Add Comment
+            </h3>
+
+            <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address
+                    Question ID
                   </label>
-                  <input
-                    type="email"
-                    value={newInvitation.email}
-                    onChange={(e) =>
-                      setNewInvitation((prev) => ({ ...prev, email: e.target.value }))
-                    }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="colleague@university.edu"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                  <input
-                    type="text"
-                    value={newInvitation.name}
-                    onChange={(e) =>
-                      setNewInvitation((prev) => ({ ...prev, name: e.target.value }))
-                    }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Dr. John Smith"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Role</label>
                   <select
-                    value={newInvitation.role}
+                    value={newComment.questionId}
                     onChange={(e) =>
-                      setNewInvitation((prev) => ({
-                        ...prev,
-                        role: e.target.value as User['role'],
-                      }))
+                      setNewComment((prev) => ({ ...prev, questionId: e.target.value }))
                     }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                   >
-                    <option value="viewer">Viewer</option>
-                    <option value="reviewer">Reviewer</option>
-                    <option value="editor">Editor</option>
-                    <option value="admin">Admin</option>
+                    <option value="q1">Question 1</option>
+                    <option value="q2">Question 2</option>
+                    <option value="q3">Question 3</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Personal Message (Optional)
+                    Comment Type
                   </label>
-                  <textarea
-                    value={newInvitation.message}
+                  <select
+                    value={newComment.type}
                     onChange={(e) =>
-                      setNewInvitation((prev) => ({ ...prev, message: e.target.value }))
+                      setNewComment((prev) => ({
+                        ...prev,
+                        type: e.target.value as Comment['type'],
+                      }))
                     }
-                    rows={3}
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Welcome to our biology test development team!"
-                  />
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  >
+                    <option value="general">General</option>
+                    <option value="suggestion">Suggestion</option>
+                    <option value="concern">Concern</option>
+                    <option value="approval">Approval</option>
+                    <option value="rejection">Rejection</option>
+                  </select>
                 </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Priority</label>
+                  <select
+                    value={newComment.priority}
+                    onChange={(e) =>
+                      setNewComment((prev) => ({
+                        ...prev,
+                        priority: e.target.value as Comment['priority'],
+                      }))
+                    }
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  >
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Comment</label>
+                <textarea
+                  value={newComment.content}
+                  onChange={(e) => setNewComment((prev) => ({ ...prev, content: e.target.value }))}
+                  rows={4}
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  placeholder="Enter your feedback or comment..."
+                />
               </div>
 
               <button
-                onClick={sendInvitation}
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
+                onClick={addComment}
+                className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2"
               >
                 <Send className="w-4 h-4" />
-                Send Invitation
+                Post Comment
               </button>
             </div>
+          </div>
 
-            {/* Pending Invitations */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Clock className="w-5 h-5 text-yellow-600" />
-                Pending Invitations ({invitations.filter((i) => i.status === 'pending').length})
-              </h3>
+          {/* Comments List */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <MessageSquare className="w-5 h-5 text-blue-600" />
+              Recent Comments ({comments.length})
+            </h3>
 
-              {invitations.length === 0 ? (
-                <div className="text-center py-12 text-gray-500">
-                  <UserPlus className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-                  <p>No invitations sent yet</p>
-                  <p className="text-sm">Invite team members to start collaborating</p>
+            <div className="space-y-6">
+              {comments.map((comment) => (
+                <div key={comment.id} className="border-l-4 border-blue-200 pl-4">
+                  <div className="flex justify-between items-start mb-2">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                        {comment.authorName
+                          .split(' ')
+                          .map((n) => n[0])
+                          .join('')}
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-800">{comment.authorName}</h4>
+                        <div className="flex items-center gap-2 text-xs text-gray-500">
+                          <span>Q{comment.questionId}</span>
+                          <span>•</span>
+                          <span>{new Date(comment.createdAt).toLocaleString()}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span
+                        className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(comment.type)}-100 text-${getStatusColor(comment.type)}-700`}
+                      >
+                        {comment.type}
+                      </span>
+                      <span
+                        className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(comment.priority)}-100 text-${getStatusColor(comment.priority)}-700`}
+                      >
+                        {comment.priority}
+                      </span>
+                    </div>
+                  </div>
+
+                  <p className="text-gray-700 mb-3">{comment.content}</p>
+
+                  {/* Reactions */}
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="flex items-center gap-2">
+                      <button className="flex items-center gap-1 text-sm text-gray-500 hover:text-blue-600">
+                        <ThumbsUp className="w-4 h-4" />
+                        <span>
+                          {Object.values(comment.reactions).filter((r) => r === 'like').length}
+                        </span>
+                      </button>
+                      <button className="flex items-center gap-1 text-sm text-gray-500 hover:text-red-600">
+                        <ThumbsDown className="w-4 h-4" />
+                        <span>
+                          {Object.values(comment.reactions).filter((r) => r === 'dislike').length}
+                        </span>
+                      </button>
+                      <button className="text-sm text-gray-500 hover:text-green-600">Reply</button>
+                      <button className="text-sm text-gray-500 hover:text-orange-600">Flag</button>
+                    </div>
+                  </div>
+
+                  {/* Replies */}
+                  {comment.replies.length > 0 && (
+                    <div className="ml-6 space-y-3 border-l-2 border-gray-100 pl-4">
+                      {comment.replies.map((reply) => (
+                        <div key={reply.id} className="text-sm">
+                          <div className="flex items-center gap-2 mb-1">
+                            <div className="w-6 h-6 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
+                              {reply.authorName
+                                .split(' ')
+                                .map((n) => n[0])
+                                .join('')}
+                            </div>
+                            <span className="font-medium">{reply.authorName}</span>
+                            <span className="text-gray-500">
+                              {new Date(reply.createdAt).toLocaleString()}
+                            </span>
+                          </div>
+                          <p className="text-gray-700">{reply.content}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              ) : (
-                <div className="space-y-4">
-                  {invitations.map((invitation) => (
+              ))}
+            </div>
+
+            {comments.length === 0 && (
+              <div className="text-center py-12 text-gray-500">
+                <MessageSquare className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                <p>No comments yet</p>
+                <p className="text-sm">Start the conversation by adding a comment</p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Version Control */}
+      {activeTab === 'versions' && (
+        <div key="versions" className="space-y-6 animate-fadeInUp">
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <GitBranch className="w-5 h-5 text-purple-600" />
+              Version History
+            </h3>
+
+            <div className="space-y-4">
+              {versions.map((version, index) => (
+                <div key={version.id} className="relative">
+                  {/* Version Line */}
+                  {index < versions.length - 1 && (
+                    <div className="absolute left-4 top-12 bottom-0 w-0.5 bg-gray-200" />
+                  )}
+
+                  <div className="flex gap-4">
                     <div
-                      key={invitation.id}
-                      className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                      className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
+                        version.status === 'published'
+                          ? 'bg-green-600'
+                          : version.status === 'approved'
+                            ? 'bg-blue-500'
+                            : version.status === 'review'
+                              ? 'bg-yellow-500'
+                              : 'bg-gray-500'
+                      }`}
                     >
-                      <div className="flex justify-between items-start mb-3">
+                      v{version.version}
+                    </div>
+
+                    <div className="flex-1 bg-gray-50 rounded-lg p-4">
+                      <div className="flex justify-between items-start mb-2">
                         <div>
-                          <h4 className="font-medium text-gray-800">{invitation.recipientName}</h4>
-                          <p className="text-sm text-gray-600">{invitation.recipientEmail}</p>
+                          <h4 className="font-medium text-gray-800">
+                            Version {version.version} - {version.description}
+                          </h4>
+                          <p className="text-sm text-gray-600">
+                            by {version.authorName} • {new Date(version.createdAt).toLocaleString()}
+                          </p>
                         </div>
                         <div className="flex items-center gap-2">
                           <span
-                            className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(invitation.status)}-100 text-${getStatusColor(invitation.status)}-700`}
+                            className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(version.status)}-100 text-${getStatusColor(version.status)}-700`}
                           >
-                            {invitation.status}
+                            {version.status}
                           </span>
-                          <span
-                            className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(invitation.role)}-100 text-${getStatusColor(invitation.role)}-700`}
-                          >
-                            {invitation.role}
-                          </span>
-                        </div>
-                      </div>
-
-                      {invitation.message && (
-                        <p className="text-sm text-gray-700 mb-3 bg-gray-50 p-2 rounded">
-                          {invitation.message}
-                        </p>
-                      )}
-
-                      <div className="flex justify-between items-center text-sm text-gray-500">
-                        <span>Invited {new Date(invitation.invitedAt).toLocaleDateString()}</span>
-                        <span>Expires {new Date(invitation.expiresAt).toLocaleDateString()}</span>
-                      </div>
-
-                      <div className="flex gap-2 mt-3">
-                        <button className="text-blue-600 hover:text-blue-800 text-sm">
-                          Resend
-                        </button>
-                        <button className="text-red-600 hover:text-red-800 text-sm">Cancel</button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Peer Review System */}
-        {activeTab === 'reviews' && (
-          <div
-            key="reviews"
-            className="space-y-6 animate-fadeInUp"
-          >
-            {/* Review Summary */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              <div className="bg-white rounded-xl p-4 border text-center">
-                <div className="text-2xl font-bold text-yellow-600">
-                  {reviews.filter((r) => r.status === 'pending').length}
-                </div>
-                <div className="text-sm text-yellow-800">Pending Reviews</div>
-              </div>
-              <div className="bg-white rounded-xl p-4 border text-center">
-                <div className="text-2xl font-bold text-green-600">
-                  {reviews.filter((r) => r.status === 'approved').length}
-                </div>
-                <div className="text-sm text-green-800">Approved</div>
-              </div>
-              <div className="bg-white rounded-xl p-4 border text-center">
-                <div className="text-2xl font-bold text-red-600">
-                  {reviews.filter((r) => r.status === 'rejected').length}
-                </div>
-                <div className="text-sm text-red-800">Rejected</div>
-              </div>
-              <div className="bg-white rounded-xl p-4 border text-center">
-                <div className="text-2xl font-bold text-orange-600">
-                  {reviews.filter((r) => r.status === 'needs_changes').length}
-                </div>
-                <div className="text-sm text-orange-800">Needs Changes</div>
-              </div>
-            </div>
-
-            {/* Reviews List */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Eye className="w-5 h-5 text-purple-600" />
-                Recent Reviews
-              </h3>
-
-              <div className="space-y-4">
-                {reviews.map((review) => (
-                  <div
-                    key={review.id}
-                    className="border rounded-lg p-4 hover:shadow-md transition-shadow"
-                  >
-                    <div className="flex justify-between items-start mb-3">
-                      <div>
-                        <h4 className="font-medium text-gray-800">Question {review.questionId}</h4>
-                        <p className="text-sm text-gray-600">Reviewed by {review.reviewerName}</p>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span
-                          className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(review.status)}-100 text-${getStatusColor(review.status)}-700`}
-                        >
-                          {review.status.replace('_', ' ')}
-                        </span>
-                        <div className="flex items-center gap-1">
-                          {[...Array(5)].map((_, i) => (
-                            <Star
-                              key={i}
-                              className={`w-4 h-4 ${i < review.score ? 'text-yellow-500 fill-current' : 'text-gray-300'}`}
-                            />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-
-                    <p className="text-sm text-gray-700 mb-3">{review.comments}</p>
-
-                    {/* Review Checklist */}
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mb-3">
-                      {Object.entries(review.checklist).map(([criteria, passed]) => (
-                        <div key={criteria} className="flex items-center gap-2 text-sm">
-                          {passed ? (
-                            <CheckCircle className="w-4 h-4 text-green-600" />
-                          ) : (
-                            <X className="w-4 h-4 text-red-600" />
+                          <button className="text-blue-600 hover:text-blue-800 text-sm">
+                            View
+                          </button>
+                          <button className="text-green-600 hover:text-green-800 text-sm">
+                            Compare
+                          </button>
+                          {version.status !== 'published' && (
+                            <button className="text-red-600 hover:text-red-800 text-sm">
+                              Revert
+                            </button>
                           )}
-                          <span className={passed ? 'text-green-700' : 'text-red-700'}>
-                            {criteria}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="flex justify-between items-center text-xs text-gray-500">
-                      <span>Submitted {new Date(review.submittedAt).toLocaleString()}</span>
-                      {review.decidedAt && (
-                        <span>Decided {new Date(review.decidedAt).toLocaleString()}</span>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {reviews.length === 0 && (
-                <div className="text-center py-12 text-gray-500">
-                  <Eye className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-                  <p>No reviews submitted yet</p>
-                  <p className="text-sm">
-                    Reviews will appear here as team members evaluate questions
-                  </p>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Comments & Feedback */}
-        {activeTab === 'comments' && (
-          <div
-            key="comments"
-            className="space-y-6 animate-fadeInUp"
-          >
-            {/* Add New Comment */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <MessageSquare className="w-5 h-5 text-green-600" />
-                Add Comment
-              </h3>
-
-              <div className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Question ID
-                    </label>
-                    <select
-                      value={newComment.questionId}
-                      onChange={(e) =>
-                        setNewComment((prev) => ({ ...prev, questionId: e.target.value }))
-                      }
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                    >
-                      <option value="q1">Question 1</option>
-                      <option value="q2">Question 2</option>
-                      <option value="q3">Question 3</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Comment Type
-                    </label>
-                    <select
-                      value={newComment.type}
-                      onChange={(e) =>
-                        setNewComment((prev) => ({
-                          ...prev,
-                          type: e.target.value as Comment['type'],
-                        }))
-                      }
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                    >
-                      <option value="general">General</option>
-                      <option value="suggestion">Suggestion</option>
-                      <option value="concern">Concern</option>
-                      <option value="approval">Approval</option>
-                      <option value="rejection">Rejection</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Priority</label>
-                    <select
-                      value={newComment.priority}
-                      onChange={(e) =>
-                        setNewComment((prev) => ({
-                          ...prev,
-                          priority: e.target.value as Comment['priority'],
-                        }))
-                      }
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                    >
-                      <option value="low">Low</option>
-                      <option value="medium">Medium</option>
-                      <option value="high">High</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Comment</label>
-                  <textarea
-                    value={newComment.content}
-                    onChange={(e) =>
-                      setNewComment((prev) => ({ ...prev, content: e.target.value }))
-                    }
-                    rows={4}
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                    placeholder="Enter your feedback or comment..."
-                  />
-                </div>
-
-                <button
-                  onClick={addComment}
-                  className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2"
-                >
-                  <Send className="w-4 h-4" />
-                  Post Comment
-                </button>
-              </div>
-            </div>
-
-            {/* Comments List */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <MessageSquare className="w-5 h-5 text-blue-600" />
-                Recent Comments ({comments.length})
-              </h3>
-
-              <div className="space-y-6">
-                {comments.map((comment) => (
-                  <div key={comment.id} className="border-l-4 border-blue-200 pl-4">
-                    <div className="flex justify-between items-start mb-2">
-                      <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                          {comment.authorName
-                            .split(' ')
-                            .map((n) => n[0])
-                            .join('')}
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-gray-800">{comment.authorName}</h4>
-                          <div className="flex items-center gap-2 text-xs text-gray-500">
-                            <span>Q{comment.questionId}</span>
-                            <span>•</span>
-                            <span>{new Date(comment.createdAt).toLocaleString()}</span>
-                          </div>
                         </div>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <span
-                          className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(comment.type)}-100 text-${getStatusColor(comment.type)}-700`}
-                        >
-                          {comment.type}
-                        </span>
-                        <span
-                          className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(comment.priority)}-100 text-${getStatusColor(comment.priority)}-700`}
-                        >
-                          {comment.priority}
-                        </span>
-                      </div>
-                    </div>
 
-                    <p className="text-gray-700 mb-3">{comment.content}</p>
-
-                    {/* Reactions */}
-                    <div className="flex items-center gap-4 mb-3">
-                      <div className="flex items-center gap-2">
-                        <button className="flex items-center gap-1 text-sm text-gray-500 hover:text-blue-600">
-                          <ThumbsUp className="w-4 h-4" />
-                          <span>
-                            {Object.values(comment.reactions).filter((r) => r === 'like').length}
-                          </span>
-                        </button>
-                        <button className="flex items-center gap-1 text-sm text-gray-500 hover:text-red-600">
-                          <ThumbsDown className="w-4 h-4" />
-                          <span>
-                            {Object.values(comment.reactions).filter((r) => r === 'dislike').length}
-                          </span>
-                        </button>
-                        <button className="text-sm text-gray-500 hover:text-green-600">
-                          Reply
-                        </button>
-                        <button className="text-sm text-gray-500 hover:text-orange-600">
-                          Flag
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* Replies */}
-                    {comment.replies.length > 0 && (
-                      <div className="ml-6 space-y-3 border-l-2 border-gray-100 pl-4">
-                        {comment.replies.map((reply) => (
-                          <div key={reply.id} className="text-sm">
-                            <div className="flex items-center gap-2 mb-1">
-                              <div className="w-6 h-6 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
-                                {reply.authorName
-                                  .split(' ')
-                                  .map((n) => n[0])
-                                  .join('')}
-                              </div>
-                              <span className="font-medium">{reply.authorName}</span>
-                              <span className="text-gray-500">
-                                {new Date(reply.createdAt).toLocaleString()}
-                              </span>
-                            </div>
-                            <p className="text-gray-700">{reply.content}</p>
+                      {/* Changes */}
+                      <div className="space-y-1">
+                        {version.changes.map((change, idx) => (
+                          <div key={idx} className="flex items-center gap-2 text-sm">
+                            <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                            <span className="text-gray-700">{change}</span>
                           </div>
                         ))}
                       </div>
-                    )}
-                  </div>
-                ))}
-              </div>
 
-              {comments.length === 0 && (
-                <div className="text-center py-12 text-gray-500">
-                  <MessageSquare className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-                  <p>No comments yet</p>
-                  <p className="text-sm">Start the conversation by adding a comment</p>
+                      {/* Branch info */}
+                      {version.parentVersion && (
+                        <div className="mt-2 text-xs text-gray-500">
+                          Branched from {version.parentVersion}
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
-              )}
+              ))}
             </div>
           </div>
-        )}
+        </div>
+      )}
 
-        {/* Version Control */}
-        {activeTab === 'versions' && (
-          <div
-            key="versions"
-            className="space-y-6 animate-fadeInUp"
-          >
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <GitBranch className="w-5 h-5 text-purple-600" />
-                Version History
-              </h3>
+      {/* Change History */}
+      {activeTab === 'history' && (
+        <div key="history" className="space-y-6 animate-fadeInUp">
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <History className="w-5 h-5 text-orange-600" />
+              Activity Timeline
+            </h3>
 
-              <div className="space-y-4">
-                {versions.map((version, index) => (
-                  <div key={version.id} className="relative">
-                    {/* Version Line */}
-                    {index < versions.length - 1 && (
-                      <div className="absolute left-4 top-12 bottom-0 w-0.5 bg-gray-200" />
-                    )}
+            <div className="space-y-4">
+              {[
+                {
+                  id: '1',
+                  action: 'Question approved',
+                  user: 'Dr. Emily Rodriguez',
+                  timestamp: new Date(Date.now() - 3600000),
+                  details: 'Question Q1 approved with minor suggestions',
+                  type: 'approval',
+                },
+                {
+                  id: '2',
+                  action: 'Comment added',
+                  user: 'Prof. Michael Chen',
+                  timestamp: new Date(Date.now() - 7200000),
+                  details: 'Suggested simplifying the language in Q1',
+                  type: 'comment',
+                },
+                {
+                  id: '3',
+                  action: 'Version created',
+                  user: 'Dr. Sarah Johnson',
+                  timestamp: new Date(Date.now() - 10800000),
+                  details: 'Created version 2 with revised content',
+                  type: 'version',
+                },
+                {
+                  id: '4',
+                  action: 'Review submitted',
+                  user: 'Dr. Emily Rodriguez',
+                  timestamp: new Date(Date.now() - 14400000),
+                  details: 'Submitted review for Q1 with score 4/5',
+                  type: 'review',
+                },
+                {
+                  id: '5',
+                  action: 'Question shared',
+                  user: 'Dr. Sarah Johnson',
+                  timestamp: new Date(Date.now() - 18000000),
+                  details: 'Shared Q1 with external reviewers',
+                  type: 'share',
+                },
+              ].map((activity, index) => (
+                <div key={activity.id} className="relative">
+                  {index < 4 && (
+                    <div className="absolute left-4 top-12 bottom-0 w-0.5 bg-gray-200" />
+                  )}
 
-                    <div className="flex gap-4">
-                      <div
-                        className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
-                          version.status === 'published'
-                            ? 'bg-green-600'
-                            : version.status === 'approved'
-                              ? 'bg-blue-500'
-                              : version.status === 'review'
+                  <div className="flex gap-4">
+                    <div
+                      className={`w-8 h-8 rounded-full flex items-center justify-center text-white ${
+                        activity.type === 'approval'
+                          ? 'bg-green-600'
+                          : activity.type === 'comment'
+                            ? 'bg-blue-500'
+                            : activity.type === 'version'
+                              ? 'bg-purple-500'
+                              : activity.type === 'review'
                                 ? 'bg-yellow-500'
                                 : 'bg-gray-500'
-                        }`}
-                      >
-                        v{version.version}
+                      }`}
+                    >
+                      {activity.type === 'approval' ? (
+                        <CheckCircle className="w-4 h-4" />
+                      ) : activity.type === 'comment' ? (
+                        <MessageSquare className="w-4 h-4" />
+                      ) : activity.type === 'version' ? (
+                        <GitBranch className="w-4 h-4" />
+                      ) : activity.type === 'review' ? (
+                        <Eye className="w-4 h-4" />
+                      ) : (
+                        <Share2 className="w-4 h-4" />
+                      )}
+                    </div>
+
+                    <div className="flex-1">
+                      <div className="flex justify-between items-start mb-1">
+                        <h4 className="font-medium text-gray-800">{activity.action}</h4>
+                        <span className="text-sm text-gray-500">
+                          {activity.timestamp.toLocaleString()}
+                        </span>
                       </div>
-
-                      <div className="flex-1 bg-gray-50 rounded-lg p-4">
-                        <div className="flex justify-between items-start mb-2">
-                          <div>
-                            <h4 className="font-medium text-gray-800">
-                              Version {version.version} - {version.description}
-                            </h4>
-                            <p className="text-sm text-gray-600">
-                              by {version.authorName} •{' '}
-                              {new Date(version.createdAt).toLocaleString()}
-                            </p>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <span
-                              className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(version.status)}-100 text-${getStatusColor(version.status)}-700`}
-                            >
-                              {version.status}
-                            </span>
-                            <button className="text-blue-600 hover:text-blue-800 text-sm">
-                              View
-                            </button>
-                            <button className="text-green-600 hover:text-green-800 text-sm">
-                              Compare
-                            </button>
-                            {version.status !== 'published' && (
-                              <button className="text-red-600 hover:text-red-800 text-sm">
-                                Revert
-                              </button>
-                            )}
-                          </div>
-                        </div>
-
-                        {/* Changes */}
-                        <div className="space-y-1">
-                          {version.changes.map((change, idx) => (
-                            <div key={idx} className="flex items-center gap-2 text-sm">
-                              <div className="w-2 h-2 bg-blue-500 rounded-full" />
-                              <span className="text-gray-700">{change}</span>
-                            </div>
-                          ))}
-                        </div>
-
-                        {/* Branch info */}
-                        {version.parentVersion && (
-                          <div className="mt-2 text-xs text-gray-500">
-                            Branched from {version.parentVersion}
-                          </div>
-                        )}
-                      </div>
+                      <p className="text-sm text-gray-600 mb-1">by {activity.user}</p>
+                      <p className="text-sm text-gray-700">{activity.details}</p>
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
-        )}
+        </div>
+      )}
 
-        {/* Change History */}
-        {activeTab === 'history' && (
-          <div
-            key="history"
-            className="space-y-6 animate-fadeInUp"
-          >
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <History className="w-5 h-5 text-orange-600" />
-                Activity Timeline
-              </h3>
+      {/* Approval Workflow */}
+      {activeTab === 'workflow' && (
+        <div key="workflow" className="space-y-6 animate-fadeInUp">
+          {/* Workflow Overview */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <CheckCircle className="w-5 h-5 text-green-600" />
+              Approval Workflows
+            </h3>
 
-              <div className="space-y-4">
-                {[
-                  {
-                    id: '1',
-                    action: 'Question approved',
-                    user: 'Dr. Emily Rodriguez',
-                    timestamp: new Date(Date.now() - 3600000),
-                    details: 'Question Q1 approved with minor suggestions',
-                    type: 'approval',
-                  },
-                  {
-                    id: '2',
-                    action: 'Comment added',
-                    user: 'Prof. Michael Chen',
-                    timestamp: new Date(Date.now() - 7200000),
-                    details: 'Suggested simplifying the language in Q1',
-                    type: 'comment',
-                  },
-                  {
-                    id: '3',
-                    action: 'Version created',
-                    user: 'Dr. Sarah Johnson',
-                    timestamp: new Date(Date.now() - 10800000),
-                    details: 'Created version 2 with revised content',
-                    type: 'version',
-                  },
-                  {
-                    id: '4',
-                    action: 'Review submitted',
-                    user: 'Dr. Emily Rodriguez',
-                    timestamp: new Date(Date.now() - 14400000),
-                    details: 'Submitted review for Q1 with score 4/5',
-                    type: 'review',
-                  },
-                  {
-                    id: '5',
-                    action: 'Question shared',
-                    user: 'Dr. Sarah Johnson',
-                    timestamp: new Date(Date.now() - 18000000),
-                    details: 'Shared Q1 with external reviewers',
-                    type: 'share',
-                  },
-                ].map((activity, index) => (
-                  <div key={activity.id} className="relative">
-                    {index < 4 && (
-                      <div className="absolute left-4 top-12 bottom-0 w-0.5 bg-gray-200" />
-                    )}
-
-                    <div className="flex gap-4">
-                      <div
-                        className={`w-8 h-8 rounded-full flex items-center justify-center text-white ${
-                          activity.type === 'approval'
-                            ? 'bg-green-600'
-                            : activity.type === 'comment'
-                              ? 'bg-blue-500'
-                              : activity.type === 'version'
-                                ? 'bg-purple-500'
-                                : activity.type === 'review'
-                                  ? 'bg-yellow-500'
-                                  : 'bg-gray-500'
-                        }`}
-                      >
-                        {activity.type === 'approval' ? (
-                          <CheckCircle className="w-4 h-4" />
-                        ) : activity.type === 'comment' ? (
-                          <MessageSquare className="w-4 h-4" />
-                        ) : activity.type === 'version' ? (
-                          <GitBranch className="w-4 h-4" />
-                        ) : activity.type === 'review' ? (
-                          <Eye className="w-4 h-4" />
-                        ) : (
-                          <Share2 className="w-4 h-4" />
-                        )}
-                      </div>
-
-                      <div className="flex-1">
-                        <div className="flex justify-between items-start mb-1">
-                          <h4 className="font-medium text-gray-800">{activity.action}</h4>
-                          <span className="text-sm text-gray-500">
-                            {activity.timestamp.toLocaleString()}
+            <div className="space-y-6">
+              {workflows.map((workflow) => (
+                <div key={workflow.id} className="border rounded-lg p-4">
+                  <div className="flex justify-between items-start mb-4">
+                    <div>
+                      <h4 className="font-medium text-gray-800 flex items-center gap-2">
+                        {workflow.name}
+                        {workflow.isDefault && (
+                          <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
+                            Default
                           </span>
-                        </div>
-                        <p className="text-sm text-gray-600 mb-1">by {activity.user}</p>
-                        <p className="text-sm text-gray-700">{activity.details}</p>
-                      </div>
+                        )}
+                      </h4>
+                      <p className="text-sm text-gray-600">{workflow.description}</p>
+                    </div>
+                    <div className="flex gap-2">
+                      <button className="text-blue-600 hover:text-blue-800 text-sm">Edit</button>
+                      <button className="text-green-600 hover:text-green-800 text-sm">
+                        Duplicate
+                      </button>
                     </div>
                   </div>
-                ))}
+
+                  {/* Workflow Steps */}
+                  <div className="space-y-4">
+                    {workflow.steps.map((step, index) => (
+                      <div key={step.id} className="relative">
+                        {index < workflow.steps.length - 1 && (
+                          <div className="absolute left-4 top-12 w-0.5 h-8 bg-gray-300" />
+                        )}
+
+                        <div className="flex gap-4">
+                          <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                            {index + 1}
+                          </div>
+
+                          <div className="flex-1 bg-gray-50 rounded-lg p-3">
+                            <div className="flex justify-between items-start mb-2">
+                              <h5 className="font-medium text-gray-800">{step.name}</h5>
+                              <div className="flex items-center gap-2">
+                                <span className="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">
+                                  {step.assigneeRole}
+                                </span>
+                                {step.timeLimit && (
+                                  <span className="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs">
+                                    {step.timeLimit}h
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+                            <p className="text-sm text-gray-600 mb-2">{step.description}</p>
+                            <div className="text-xs text-gray-500">
+                              Requires {step.requiredApprovals} approval(s) • Auto-advance:{' '}
+                              {step.autoAdvance ? 'Yes' : 'No'}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Question Sharing */}
+      {activeTab === 'sharing' && (
+        <div key="sharing" className="space-y-6 animate-fadeInUp">
+          {/* Create Share Link */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Share2 className="w-5 h-5 text-green-600" />
+              Share Questions
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Question</label>
+                <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                  <option value="q1">Question 1 - Cell Biology</option>
+                  <option value="q2">Question 2 - Genetics</option>
+                  <option value="q3">Question 3 - Evolution</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Share Type</label>
+                <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                  <option value="view">View Only</option>
+                  <option value="collaborate">Collaborate</option>
+                  <option value="copy">Copy & Edit</option>
+                </select>
+              </div>
+
+              <div className="flex items-end">
+                <button
+                  onClick={() => createShareLink('q1', 'view')}
+                  className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2"
+                >
+                  <Share2 className="w-4 h-4" />
+                  Create Link
+                </button>
               </div>
             </div>
           </div>
-        )}
 
-        {/* Approval Workflow */}
-        {activeTab === 'workflow' && (
-          <div
-            key="workflow"
-            className="space-y-6 animate-fadeInUp"
-          >
-            {/* Workflow Overview */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-green-600" />
-                Approval Workflows
-              </h3>
+          {/* Active Shares */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <ExternalLink className="w-5 h-5 text-blue-600" />
+              Active Shares ({shares.length})
+            </h3>
 
-              <div className="space-y-6">
-                {workflows.map((workflow) => (
-                  <div key={workflow.id} className="border rounded-lg p-4">
-                    <div className="flex justify-between items-start mb-4">
-                      <div>
-                        <h4 className="font-medium text-gray-800 flex items-center gap-2">
-                          {workflow.name}
-                          {workflow.isDefault && (
-                            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
-                              Default
-                            </span>
-                          )}
-                        </h4>
-                        <p className="text-sm text-gray-600">{workflow.description}</p>
-                      </div>
-                      <div className="flex gap-2">
-                        <button className="text-blue-600 hover:text-blue-800 text-sm">Edit</button>
-                        <button className="text-green-600 hover:text-green-800 text-sm">
-                          Duplicate
+            <div className="space-y-4">
+              {shares.map((share) => (
+                <div
+                  key={share.id}
+                  className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                >
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h4 className="font-medium text-gray-800">Question {share.questionId}</h4>
+                      <p className="text-sm text-gray-600">
+                        Shared {new Date(share.createdAt).toLocaleDateString()}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span
+                        className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(share.shareType)}-100 text-${getStatusColor(share.shareType)}-700`}
+                      >
+                        {share.shareType}
+                      </span>
+                      <span className="text-sm text-gray-500">{share.accessCount} views</span>
+                    </div>
+                  </div>
+
+                  {share.shareLink && (
+                    <div className="bg-gray-50 rounded p-3 mb-3">
+                      <div className="flex items-center gap-2 mb-2">
+                        <code className="flex-1 text-sm bg-white p-2 rounded border">
+                          {share.shareLink}
+                        </code>
+                        <button
+                          onClick={() => navigator.clipboard.writeText(share.shareLink!)}
+                          className="text-blue-600 hover:text-blue-800"
+                        >
+                          <Copy className="w-4 h-4" />
                         </button>
                       </div>
                     </div>
+                  )}
 
-                    {/* Workflow Steps */}
-                    <div className="space-y-4">
-                      {workflow.steps.map((step, index) => (
-                        <div key={step.id} className="relative">
-                          {index < workflow.steps.length - 1 && (
-                            <div className="absolute left-4 top-12 w-0.5 h-8 bg-gray-300" />
-                          )}
-
-                          <div className="flex gap-4">
-                            <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                              {index + 1}
-                            </div>
-
-                            <div className="flex-1 bg-gray-50 rounded-lg p-3">
-                              <div className="flex justify-between items-start mb-2">
-                                <h5 className="font-medium text-gray-800">{step.name}</h5>
-                                <div className="flex items-center gap-2">
-                                  <span className="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">
-                                    {step.assigneeRole}
-                                  </span>
-                                  {step.timeLimit && (
-                                    <span className="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs">
-                                      {step.timeLimit}h
-                                    </span>
-                                  )}
-                                </div>
-                              </div>
-                              <p className="text-sm text-gray-600 mb-2">{step.description}</p>
-                              <div className="text-xs text-gray-500">
-                                Requires {step.requiredApprovals} approval(s) • Auto-advance:{' '}
-                                {step.autoAdvance ? 'Yes' : 'No'}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Question Sharing */}
-        {activeTab === 'sharing' && (
-          <div
-            key="sharing"
-            className="space-y-6 animate-fadeInUp"
-          >
-            {/* Create Share Link */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Share2 className="w-5 h-5 text-green-600" />
-                Share Questions
-              </h3>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Question</label>
-                  <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent">
-                    <option value="q1">Question 1 - Cell Biology</option>
-                    <option value="q2">Question 2 - Genetics</option>
-                    <option value="q3">Question 3 - Evolution</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Share Type</label>
-                  <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent">
-                    <option value="view">View Only</option>
-                    <option value="collaborate">Collaborate</option>
-                    <option value="copy">Copy & Edit</option>
-                  </select>
-                </div>
-
-                <div className="flex items-end">
-                  <button
-                    onClick={() => createShareLink('q1', 'view')}
-                    className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2"
-                  >
-                    <Share2 className="w-4 h-4" />
-                    Create Link
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Active Shares */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <ExternalLink className="w-5 h-5 text-blue-600" />
-                Active Shares ({shares.length})
-              </h3>
-
-              <div className="space-y-4">
-                {shares.map((share) => (
-                  <div
-                    key={share.id}
-                    className="border rounded-lg p-4 hover:shadow-md transition-shadow"
-                  >
-                    <div className="flex justify-between items-start mb-3">
-                      <div>
-                        <h4 className="font-medium text-gray-800">Question {share.questionId}</h4>
-                        <p className="text-sm text-gray-600">
-                          Shared {new Date(share.createdAt).toLocaleDateString()}
-                        </p>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span
-                          className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(share.shareType)}-100 text-${getStatusColor(share.shareType)}-700`}
-                        >
-                          {share.shareType}
-                        </span>
-                        <span className="text-sm text-gray-500">{share.accessCount} views</span>
-                      </div>
-                    </div>
-
-                    {share.shareLink && (
-                      <div className="bg-gray-50 rounded p-3 mb-3">
-                        <div className="flex items-center gap-2 mb-2">
-                          <code className="flex-1 text-sm bg-white p-2 rounded border">
-                            {share.shareLink}
-                          </code>
-                          <button
-                            onClick={() => navigator.clipboard.writeText(share.shareLink!)}
-                            className="text-blue-600 hover:text-blue-800"
+                  {share.sharedWith.length > 0 && (
+                    <div className="mb-3">
+                      <p className="text-sm font-medium text-gray-700 mb-1">Shared with:</p>
+                      <div className="flex flex-wrap gap-2">
+                        {share.sharedWith.map((email, index) => (
+                          <span
+                            key={index}
+                            className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs"
                           >
-                            <Copy className="w-4 h-4" />
-                          </button>
-                        </div>
+                            {email}
+                          </span>
+                        ))}
                       </div>
-                    )}
-
-                    {share.sharedWith.length > 0 && (
-                      <div className="mb-3">
-                        <p className="text-sm font-medium text-gray-700 mb-1">Shared with:</p>
-                        <div className="flex flex-wrap gap-2">
-                          {share.sharedWith.map((email, index) => (
-                            <span
-                              key={index}
-                              className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs"
-                            >
-                              {email}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    <div className="flex gap-2">
-                      <button className="text-blue-600 hover:text-blue-800 text-sm">
-                        Edit Permissions
-                      </button>
-                      <button className="text-green-600 hover:text-green-800 text-sm">
-                        View Analytics
-                      </button>
-                      <button className="text-red-600 hover:text-red-800 text-sm">
-                        Revoke Access
-                      </button>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  )}
 
-              {shares.length === 0 && (
-                <div className="text-center py-12 text-gray-500">
-                  <Share2 className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-                  <p>No questions shared yet</p>
-                  <p className="text-sm">
-                    Create share links to collaborate with external partners
-                  </p>
+                  <div className="flex gap-2">
+                    <button className="text-blue-600 hover:text-blue-800 text-sm">
+                      Edit Permissions
+                    </button>
+                    <button className="text-green-600 hover:text-green-800 text-sm">
+                      View Analytics
+                    </button>
+                    <button className="text-red-600 hover:text-red-800 text-sm">
+                      Revoke Access
+                    </button>
+                  </div>
                 </div>
-              )}
+              ))}
             </div>
+
+            {shares.length === 0 && (
+              <div className="text-center py-12 text-gray-500">
+                <Share2 className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                <p>No questions shared yet</p>
+                <p className="text-sm">Create share links to collaborate with external partners</p>
+              </div>
+            )}
           </div>
-        )}
-{/* Quick Actions */}
+        </div>
+      )}
+      {/* Quick Actions */}
       <div className="bg-white rounded-xl p-6 border">
         <div className="flex justify-between items-center">
           <div>

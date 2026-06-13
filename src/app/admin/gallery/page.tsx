@@ -172,9 +172,7 @@ export default function AdminGalleryPage() {
       {/* Stats Cards */}
       {stats && (
         <div className="mb-8 grid grid-cols-2 gap-4 md:grid-cols-4">
-          <div
-            className="rounded-xl bg-white p-4 shadow-sm animate-fadeInUp"
-          >
+          <div className="rounded-xl bg-white p-4 shadow-sm animate-fadeInUp">
             <div className="flex items-center gap-3">
               <div className="rounded-lg bg-blue-100 p-2">
                 <Grid className="h-5 w-5 text-blue-600" />
@@ -186,9 +184,7 @@ export default function AdminGalleryPage() {
             </div>
           </div>
 
-          <div
-            className="rounded-xl bg-white p-4 shadow-sm animate-fadeInUp"
-          >
+          <div className="rounded-xl bg-white p-4 shadow-sm animate-fadeInUp">
             <div className="flex items-center gap-3">
               <div className="rounded-lg bg-green-100 p-2">
                 <ImageIcon className="h-5 w-5 text-green-600" />
@@ -200,9 +196,7 @@ export default function AdminGalleryPage() {
             </div>
           </div>
 
-          <div
-            className="rounded-xl bg-white p-4 shadow-sm animate-fadeInUp"
-          >
+          <div className="rounded-xl bg-white p-4 shadow-sm animate-fadeInUp">
             <div className="flex items-center gap-3">
               <div className="rounded-lg bg-purple-100 p-2">
                 <Video className="h-5 w-5 text-purple-600" />
@@ -214,9 +208,7 @@ export default function AdminGalleryPage() {
             </div>
           </div>
 
-          <div
-            className="rounded-xl bg-white p-4 shadow-sm animate-fadeInUp"
-          >
+          <div className="rounded-xl bg-white p-4 shadow-sm animate-fadeInUp">
             <div className="flex items-center gap-3">
               <div className="rounded-lg bg-yellow-100 p-2">
                 <Star className="h-5 w-5 text-yellow-600" />
@@ -362,99 +354,99 @@ export default function AdminGalleryPage() {
           {/* Gallery Grid */}
           {viewMode === 'grid' ? (
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-{items.map((item) => (
-                  <div
-                    key={item.id}
-                    className="group relative overflow-hidden rounded-xl bg-white shadow-sm transition-shadow hover:shadow-md animate-fadeInUp"
-                  >
-                    {/* Image/Video Thumbnail */}
-                    <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
-                      {item.thumbnailUrl ? (
-                        <Image
-                          src={item.thumbnailUrl}
-                          alt={item.title}
-                          fill
-                          sizes="(max-width: 768px) 50vw, 25vw"
-                          className="object-cover transition-transform group-hover:scale-105"
-                          unoptimized
-                        />
-                      ) : (
-                        <div className="flex h-full w-full items-center justify-center">
-                          {item.type === 'VIDEO' ? (
-                            <Video className="h-12 w-12 text-gray-400" />
-                          ) : (
-                            <ImageIcon className="h-12 w-12 text-gray-400" />
-                          )}
-                        </div>
-                      )}
-
-                      {/* Type Badge */}
-                      {item.type === 'VIDEO' && (
-                        <div className="absolute left-2 top-2 rounded-full bg-black/70 px-2 py-1 text-xs text-white">
-                          <Video className="inline-block h-3 w-3 mr-1" />
-                          {item.durationSeconds && formatDuration(item.durationSeconds)}
-                        </div>
-                      )}
-
-                      {/* Featured Badge */}
-                      {item.featured && (
-                        <div className="absolute right-2 top-2 rounded-full bg-yellow-500 p-1">
-                          <Star className="h-3 w-3 text-white" fill="currentColor" />
-                        </div>
-                      )}
-
-                      {/* Hover Actions */}
-                      <div className="absolute inset-0 flex items-center justify-center gap-2 bg-black/50 opacity-0 transition-opacity group-hover:opacity-100">
-                        <button
-                          onClick={() => toggleFeatured(item)}
-                          className="rounded-full bg-white p-2 hover:bg-yellow-100"
-                          title={item.featured ? 'Remove from featured' : 'Add to featured'}
-                        >
-                          {item.featured ? (
-                            <StarOff className="h-4 w-4 text-yellow-600" />
-                          ) : (
-                            <Star className="h-4 w-4 text-yellow-600" />
-                          )}
-                        </button>
-                        <button
-                          onClick={() => setEditingItem(item)}
-                          className="rounded-full bg-white p-2 hover:bg-blue-100"
-                          title="Edit"
-                        >
-                          <Edit className="h-4 w-4 text-blue-600" />
-                        </button>
-                        <a
-                          href={item.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="rounded-full bg-white p-2 hover:bg-green-100"
-                          title="View original"
-                        >
-                          <ExternalLink className="h-4 w-4 text-green-600" />
-                        </a>
-                        <button
-                          onClick={() => setDeletingItem(item)}
-                          className="rounded-full bg-white p-2 hover:bg-red-100"
-                          title="Delete"
-                        >
-                          <Trash2 className="h-4 w-4 text-red-600" />
-                        </button>
+              {items.map((item) => (
+                <div
+                  key={item.id}
+                  className="group relative overflow-hidden rounded-xl bg-white shadow-sm transition-shadow hover:shadow-md animate-fadeInUp"
+                >
+                  {/* Image/Video Thumbnail */}
+                  <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                    {item.thumbnailUrl ? (
+                      <Image
+                        src={item.thumbnailUrl}
+                        alt={item.title}
+                        fill
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                        className="object-cover transition-transform group-hover:scale-105"
+                        unoptimized
+                      />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center">
+                        {item.type === 'VIDEO' ? (
+                          <Video className="h-12 w-12 text-gray-400" />
+                        ) : (
+                          <ImageIcon className="h-12 w-12 text-gray-400" />
+                        )}
                       </div>
-                    </div>
+                    )}
 
-                    {/* Info */}
-                    <div className="p-3">
-                      <h3 className="truncate font-medium text-gray-900">{item.title}</h3>
-                      <div className="mt-1 flex items-center gap-2">
-                        <span className="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-600">
-                          {CATEGORIES.find((c) => c.value === item.category)?.icon}{' '}
-                          {CATEGORIES.find((c) => c.value === item.category)?.label}
-                        </span>
+                    {/* Type Badge */}
+                    {item.type === 'VIDEO' && (
+                      <div className="absolute left-2 top-2 rounded-full bg-black/70 px-2 py-1 text-xs text-white">
+                        <Video className="inline-block h-3 w-3 mr-1" />
+                        {item.durationSeconds && formatDuration(item.durationSeconds)}
                       </div>
+                    )}
+
+                    {/* Featured Badge */}
+                    {item.featured && (
+                      <div className="absolute right-2 top-2 rounded-full bg-yellow-500 p-1">
+                        <Star className="h-3 w-3 text-white" fill="currentColor" />
+                      </div>
+                    )}
+
+                    {/* Hover Actions */}
+                    <div className="absolute inset-0 flex items-center justify-center gap-2 bg-black/50 opacity-0 transition-opacity group-hover:opacity-100">
+                      <button
+                        onClick={() => toggleFeatured(item)}
+                        className="rounded-full bg-white p-2 hover:bg-yellow-100"
+                        title={item.featured ? 'Remove from featured' : 'Add to featured'}
+                      >
+                        {item.featured ? (
+                          <StarOff className="h-4 w-4 text-yellow-600" />
+                        ) : (
+                          <Star className="h-4 w-4 text-yellow-600" />
+                        )}
+                      </button>
+                      <button
+                        onClick={() => setEditingItem(item)}
+                        className="rounded-full bg-white p-2 hover:bg-blue-100"
+                        title="Edit"
+                      >
+                        <Edit className="h-4 w-4 text-blue-600" />
+                      </button>
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-full bg-white p-2 hover:bg-green-100"
+                        title="View original"
+                      >
+                        <ExternalLink className="h-4 w-4 text-green-600" />
+                      </a>
+                      <button
+                        onClick={() => setDeletingItem(item)}
+                        className="rounded-full bg-white p-2 hover:bg-red-100"
+                        title="Delete"
+                      >
+                        <Trash2 className="h-4 w-4 text-red-600" />
+                      </button>
                     </div>
                   </div>
-                ))}
-</div>
+
+                  {/* Info */}
+                  <div className="p-3">
+                    <h3 className="truncate font-medium text-gray-900">{item.title}</h3>
+                    <div className="mt-1 flex items-center gap-2">
+                      <span className="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-600">
+                        {CATEGORIES.find((c) => c.value === item.category)?.icon}{' '}
+                        {CATEGORIES.find((c) => c.value === item.category)?.label}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           ) : (
             /* List View */
             <div className="overflow-hidden rounded-xl bg-white shadow-sm">
@@ -769,7 +761,14 @@ function GalleryUploadForm({
         <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center">
           {preview ? (
             <div className="relative">
-              <Image src={preview} alt="Preview" width={400} height={192} className="max-h-48 mx-auto rounded object-contain" unoptimized />
+              <Image
+                src={preview}
+                alt="Preview"
+                width={400}
+                height={192}
+                className="max-h-48 mx-auto rounded object-contain"
+                unoptimized
+              />
               <button
                 type="button"
                 onClick={() => {
@@ -1105,7 +1104,14 @@ function GalleryEditForm({
       {/* Preview */}
       {item.thumbnailUrl && (
         <div className="flex justify-center">
-          <Image src={item.thumbnailUrl} alt={item.title} width={300} height={128} className="max-h-32 rounded-lg object-contain" unoptimized />
+          <Image
+            src={item.thumbnailUrl}
+            alt={item.title}
+            width={300}
+            height={128}
+            className="max-h-32 rounded-lg object-contain"
+            unoptimized
+          />
         </div>
       )}
 

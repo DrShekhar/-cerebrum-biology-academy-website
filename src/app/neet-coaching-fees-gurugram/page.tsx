@@ -36,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Fees in Gurugram 2026 | Fee Comparison | ₹45K-2L',
-    description: 'Compare NEET coaching fees in Gurugram for 2026. the 2nd-largest national NEET chain, the largest national NEET chain, Cerebrum fees compared. Scholarships, EMI options. Find affordable NEET coachi...',
+    description:
+      'Compare NEET coaching fees in Gurugram for 2026. the 2nd-largest national NEET chain, the largest national NEET chain, Cerebrum fees compared. Scholarships, EMI options. Find affordable NEET coachi...',
   },
 }
 
@@ -62,7 +63,8 @@ const faqs = [
       'Most institutes including Cerebrum offer EMI options. We provide 0% interest EMI for 3-6 months. Some banks offer education loans for coaching fees. Contact us for payment plans.',
   },
   {
-    question: 'Why is Cerebrum cheaper than the 2nd-largest national NEET chain/the largest national NEET chain?',
+    question:
+      'Why is Cerebrum cheaper than the 2nd-largest national NEET chain/the largest national NEET chain?',
     answer:
       'We focus exclusively on Biology (not all subjects), have smaller batches (lower overhead), no expensive marketing, and operate from corporate parks (not malls). Lower costs = lower fees for students.',
   },
@@ -164,7 +166,11 @@ export default function NEETCoachingFeesGurugramPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-coaching-fees-gurugram" />
       <script

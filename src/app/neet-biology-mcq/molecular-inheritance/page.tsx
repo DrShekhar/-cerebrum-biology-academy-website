@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Molecular Basis of Inheritance MCQ for NEET 2026 | Free Practice Questions',
-    description: 'Practice 500+ free Molecular Basis of Inheritance MCQs for NEET. DNA replication, transcription, translation, genetic code, lac operon questions. NCERT-based with explanations.',
+    description:
+      'Practice 500+ free Molecular Basis of Inheritance MCQs for NEET. DNA replication, transcription, translation, genetic code, lac operon questions. NCERT-based with explanations.',
   },
 }
 
@@ -98,7 +99,7 @@ export default function MolecularInheritancePage() {
           },
           {
             question: 'Okazaki fragments are synthesized on which strand during DNA replication',
-            answer: 'Lagging strand (3\' to 5\' template)',
+            answer: "Lagging strand (3' to 5' template)",
           },
         ]}
         ncertReference="NCERT Class 12 Biology, Chapter 6"

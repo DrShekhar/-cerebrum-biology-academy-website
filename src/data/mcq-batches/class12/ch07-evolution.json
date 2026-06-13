@@ -14,21 +14,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "The theory of natural selection was proposed by:",
-      "options": [
-        "Lamarck",
-        "Charles Darwin",
-        "Hugo de Vries",
-        "Mendel"
-      ],
+      "options": ["Lamarck", "Charles Darwin", "Hugo de Vries", "Mendel"],
       "correctAnswer": "B",
       "explanation": "Charles Darwin proposed the theory of natural selection in his book 'On the Origin of Species' (1859). He stated that organisms with favourable variations survive and reproduce more, leading to evolution.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "natural-selection",
-        "darwin"
-      ],
+      "tags": ["natural-selection", "darwin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -39,21 +31,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Hardy-Weinberg equilibrium is disturbed by:",
-      "options": [
-        "Large population size",
-        "Random mating",
-        "No mutation",
-        "Gene flow"
-      ],
+      "options": ["Large population size", "Random mating", "No mutation", "Gene flow"],
       "correctAnswer": "D",
       "explanation": "Gene flow (migration) disturbs Hardy-Weinberg equilibrium. The equilibrium requires: no mutation, random mating, no gene flow, no natural selection, and large population size. Any factor violating these conditions causes evolution.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hardy-weinberg",
-        "gene-flow"
-      ],
+      "tags": ["hardy-weinberg", "gene-flow"],
       "neetWeightage": "HIGH"
     },
     {
@@ -75,10 +59,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "homologous-organs",
-        "divergent-evolution"
-      ],
+      "tags": ["homologous-organs", "divergent-evolution"],
       "neetWeightage": "HIGH"
     },
     {
@@ -89,21 +70,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Analogous organs are a result of:",
-      "options": [
-        "Convergent evolution",
-        "Gene flow",
-        "Divergent evolution",
-        "Genetic drift"
-      ],
+      "options": ["Convergent evolution", "Gene flow", "Divergent evolution", "Genetic drift"],
       "correctAnswer": "A",
       "explanation": "Analogous organs (different structural origin but similar function, e.g., wings of butterfly and bird) result from convergent evolution. Different organisms evolve similar features independently due to similar environmental pressures.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "analogous-organs",
-        "convergent-evolution"
-      ],
+      "tags": ["analogous-organs", "convergent-evolution"],
       "neetWeightage": "HIGH"
     },
     {
@@ -125,10 +98,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "oparin-haldane",
-        "chemical-evolution"
-      ],
+      "tags": ["oparin-haldane", "chemical-evolution"],
       "neetWeightage": "HIGH"
     },
     {
@@ -150,10 +120,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "miller-urey",
-        "primitive-atmosphere"
-      ],
+      "tags": ["miller-urey", "primitive-atmosphere"],
       "neetWeightage": "HIGH"
     },
     {
@@ -164,21 +131,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Industrial melanism is an example of:",
-      "options": [
-        "Genetic drift",
-        "Natural selection",
-        "Gene flow",
-        "Mutation"
-      ],
+      "options": ["Genetic drift", "Natural selection", "Gene flow", "Mutation"],
       "correctAnswer": "B",
       "explanation": "Industrial melanism (increase in dark-coloured peppered moths during industrial revolution in England) is a classic example of natural selection. Dark moths had survival advantage against soot-covered tree trunks.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "industrial-melanism",
-        "natural-selection"
-      ],
+      "tags": ["industrial-melanism", "natural-selection"],
       "neetWeightage": "HIGH"
     },
     {
@@ -200,10 +159,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "genetic-drift",
-        "small-populations"
-      ],
+      "tags": ["genetic-drift", "small-populations"],
       "neetWeightage": "HIGH"
     },
     {
@@ -225,10 +181,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "darwins-finches",
-        "adaptive-radiation"
-      ],
+      "tags": ["darwins-finches", "adaptive-radiation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -239,20 +192,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "The Hardy-Weinberg equation is:",
-      "options": [
-        "p + q = 1",
-        "p\u00b2 + 2pq + q\u00b2 = 1",
-        "p\u00b2 + q\u00b2 = 1",
-        "p - q = 1"
-      ],
+      "options": ["p + q = 1", "p\u00b2 + 2pq + q\u00b2 = 1", "p\u00b2 + q\u00b2 = 1", "p - q = 1"],
       "correctAnswer": "B",
       "explanation": "The Hardy-Weinberg equation is p\u00b2 + 2pq + q\u00b2 = 1, where p and q are allele frequencies. p\u00b2 = frequency of homozygous dominant, 2pq = frequency of heterozygous, q\u00b2 = frequency of homozygous recessive.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hardy-weinberg-equation"
-      ],
+      "tags": ["hardy-weinberg-equation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -274,9 +220,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "disruptive-selection"
-      ],
+      "tags": ["disruptive-selection"],
       "neetWeightage": "HIGH"
     },
     {
@@ -287,21 +231,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Vestigial organs in humans include:",
-      "options": [
-        "Lungs",
-        "Vermiform appendix",
-        "Eyes",
-        "Heart"
-      ],
+      "options": ["Lungs", "Vermiform appendix", "Eyes", "Heart"],
       "correctAnswer": "B",
       "explanation": "The vermiform appendix is a vestigial organ in humans. It was functional in herbivorous ancestors for cellulose digestion but has no significant function now. Other examples include wisdom teeth, coccyx, and ear muscles.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vestigial-organs",
-        "appendix"
-      ],
+      "tags": ["vestigial-organs", "appendix"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -312,21 +248,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Hugo de Vries proposed the theory of:",
-      "options": [
-        "Pangenesis",
-        "Mutation",
-        "Lamarckism",
-        "Natural selection"
-      ],
+      "options": ["Pangenesis", "Mutation", "Lamarckism", "Natural selection"],
       "correctAnswer": "B",
       "explanation": "Hugo de Vries proposed the mutation theory of evolution (1901) based on his work with Oenothera lamarckiana (evening primrose). He suggested that evolution occurs through sudden, large, heritable changes called mutations.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hugo-de-vries",
-        "mutation-theory"
-      ],
+      "tags": ["hugo-de-vries", "mutation-theory"],
       "neetWeightage": "HIGH"
     },
     {
@@ -348,10 +276,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "allopatric-speciation",
-        "geographical-isolation"
-      ],
+      "tags": ["allopatric-speciation", "geographical-isolation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -362,21 +287,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "The bottleneck effect is a type of:",
-      "options": [
-        "Gene flow",
-        "Mutation",
-        "Genetic drift",
-        "Natural selection"
-      ],
+      "options": ["Gene flow", "Mutation", "Genetic drift", "Natural selection"],
       "correctAnswer": "C",
       "explanation": "The bottleneck effect is a type of genetic drift that occurs when a population is dramatically reduced in size due to a catastrophic event. The surviving population may have different allele frequencies from the original population.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bottleneck-effect",
-        "genetic-drift"
-      ],
+      "tags": ["bottleneck-effect", "genetic-drift"],
       "neetWeightage": "HIGH"
     },
     {
@@ -398,10 +315,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fossil-dating",
-        "radiometric"
-      ],
+      "tags": ["fossil-dating", "radiometric"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -412,21 +326,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Which of the following is the direct ancestor of modern humans?",
-      "options": [
-        "Australopithecus",
-        "Homo habilis",
-        "Homo sapiens sapiens",
-        "Homo erectus"
-      ],
+      "options": ["Australopithecus", "Homo habilis", "Homo sapiens sapiens", "Homo erectus"],
       "correctAnswer": "C",
       "explanation": "Homo sapiens sapiens (modern humans) arose in Africa about 100,000-200,000 years ago. The evolutionary sequence includes Dryopithecus \u2192 Ramapithecus \u2192 Australopithecus \u2192 Homo habilis \u2192 Homo erectus \u2192 Homo sapiens.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "human-evolution",
-        "homo-sapiens"
-      ],
+      "tags": ["human-evolution", "homo-sapiens"],
       "neetWeightage": "HIGH"
     },
     {
@@ -448,9 +354,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stabilising-selection"
-      ],
+      "tags": ["stabilising-selection"],
       "neetWeightage": "HIGH"
     },
     {
@@ -472,10 +376,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lamarck",
-        "acquired-characters"
-      ],
+      "tags": ["lamarck", "acquired-characters"],
       "neetWeightage": "HIGH"
     },
     {
@@ -497,10 +398,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "adaptive-radiation",
-        "divergent-evolution"
-      ],
+      "tags": ["adaptive-radiation", "divergent-evolution"],
       "neetWeightage": "HIGH"
     },
     {
@@ -511,21 +409,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "The first life on Earth originated in:",
-      "options": [
-        "Land",
-        "Water",
-        "Air",
-        "Rocks"
-      ],
+      "options": ["Land", "Water", "Air", "Rocks"],
       "correctAnswer": "B",
       "explanation": "The first life on Earth is believed to have originated in water (oceans/seas). The primitive oceans served as a 'prebiotic soup' where organic molecules accumulated and eventually gave rise to the first living cells.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "origin-of-life",
-        "water"
-      ],
+      "tags": ["origin-of-life", "water"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -547,10 +437,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "founder-effect",
-        "genetic-drift"
-      ],
+      "tags": ["founder-effect", "genetic-drift"],
       "neetWeightage": "HIGH"
     },
     {
@@ -561,21 +448,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Embryological evidence for evolution was provided by:",
-      "options": [
-        "Ernst von Baer",
-        "Lamarck",
-        "Darwin",
-        "Mendel"
-      ],
+      "options": ["Ernst von Baer", "Lamarck", "Darwin", "Mendel"],
       "correctAnswer": "A",
       "explanation": "Ernst von Baer provided embryological evidence for evolution. He showed that embryos of different vertebrates look remarkably similar in early stages of development, suggesting common ancestry (Von Baer's law).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "embryological-evidence",
-        "von-baer"
-      ],
+      "tags": ["embryological-evidence", "von-baer"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -586,21 +465,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "The connecting link between reptiles and birds is:",
-      "options": [
-        "Peripatus",
-        "Archaeopteryx",
-        "Platypus",
-        "Lungfish"
-      ],
+      "options": ["Peripatus", "Archaeopteryx", "Platypus", "Lungfish"],
       "correctAnswer": "B",
       "explanation": "Archaeopteryx is the connecting link between reptiles and birds. It had features of both: reptilian features (teeth, clawed wings, long tail) and bird-like features (feathers, beak, wings).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "archaeopteryx",
-        "connecting-link"
-      ],
+      "tags": ["archaeopteryx", "connecting-link"],
       "neetWeightage": "HIGH"
     },
     {
@@ -611,21 +482,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Reproductive isolation is important for:",
-      "options": [
-        "Reducing mutations",
-        "Increasing gene flow",
-        "Stopping evolution",
-        "Speciation"
-      ],
+      "options": ["Reducing mutations", "Increasing gene flow", "Stopping evolution", "Speciation"],
       "correctAnswer": "D",
       "explanation": "Reproductive isolation is essential for speciation. When populations become reproductively isolated (cannot interbreed), they evolve independently and eventually become distinct species.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "reproductive-isolation",
-        "speciation"
-      ],
+      "tags": ["reproductive-isolation", "speciation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -647,9 +510,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "directional-selection"
-      ],
+      "tags": ["directional-selection"],
       "neetWeightage": "HIGH"
     },
     {
@@ -660,21 +521,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Which of the following is a living fossil?",
-      "options": [
-        "Limulus (king crab)",
-        "Frog",
-        "Pigeon",
-        "Dog"
-      ],
+      "options": ["Limulus (king crab)", "Frog", "Pigeon", "Dog"],
       "correctAnswer": "A",
       "explanation": "Limulus (king crab) is a living fossil that has remained essentially unchanged for millions of years. Other examples include coelacanth, Ginkgo biloba, Sphenodon (tuatara), and Neopilina.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "living-fossil",
-        "limulus"
-      ],
+      "tags": ["living-fossil", "limulus"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -685,21 +538,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "The wings of birds and wings of insects are:",
-      "options": [
-        "Atavistic organs",
-        "Homologous organs",
-        "Vestigial organs",
-        "Analogous organs"
-      ],
+      "options": ["Atavistic organs", "Homologous organs", "Vestigial organs", "Analogous organs"],
       "correctAnswer": "D",
       "explanation": "Wings of birds and wings of insects are analogous organs. They perform the same function (flight) but have different structural origins and developmental patterns, indicating convergent evolution.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "analogous-organs",
-        "wings"
-      ],
+      "tags": ["analogous-organs", "wings"],
       "neetWeightage": "HIGH"
     },
     {
@@ -721,10 +566,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "panspermia",
-        "origin-of-life"
-      ],
+      "tags": ["panspermia", "origin-of-life"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -746,10 +588,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "convergent-evolution",
-        "marsupials"
-      ],
+      "tags": ["convergent-evolution", "marsupials"],
       "neetWeightage": "HIGH"
     },
     {
@@ -771,10 +610,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "homo-erectus",
-        "human-evolution"
-      ],
+      "tags": ["homo-erectus", "human-evolution"],
       "neetWeightage": "HIGH"
     },
     {
@@ -796,10 +632,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "neanderthal",
-        "cranial-capacity"
-      ],
+      "tags": ["neanderthal", "cranial-capacity"],
       "neetWeightage": "HIGH"
     },
     {
@@ -821,10 +654,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biogeography",
-        "evidence"
-      ],
+      "tags": ["biogeography", "evidence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -835,21 +665,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "The primitive atmosphere of Earth lacked:",
-      "options": [
-        "Water vapour",
-        "Free oxygen",
-        "Ammonia",
-        "Methane"
-      ],
+      "options": ["Water vapour", "Free oxygen", "Ammonia", "Methane"],
       "correctAnswer": "B",
       "explanation": "The primitive atmosphere of Earth was reducing and lacked free oxygen (O2). It contained methane (CH4), ammonia (NH3), hydrogen (H2), and water vapour (H2O). Oxygen accumulated later due to photosynthesis by cyanobacteria.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "primitive-atmosphere",
-        "no-oxygen"
-      ],
+      "tags": ["primitive-atmosphere", "no-oxygen"],
       "neetWeightage": "HIGH"
     },
     {
@@ -860,21 +682,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Which scientist performed experiments to disprove the theory of spontaneous generation?",
-      "options": [
-        "Lamarck",
-        "Mendel",
-        "Pasteur",
-        "Darwin"
-      ],
+      "options": ["Lamarck", "Mendel", "Pasteur", "Darwin"],
       "correctAnswer": "C",
       "explanation": "Louis Pasteur disproved the theory of spontaneous generation through his famous swan-neck flask experiment (1859). He showed that life arises only from pre-existing life (biogenesis), not from non-living matter spontaneously.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pasteur",
-        "spontaneous-generation"
-      ],
+      "tags": ["pasteur", "spontaneous-generation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -896,10 +710,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "comparative-anatomy",
-        "evidence"
-      ],
+      "tags": ["comparative-anatomy", "evidence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -921,10 +732,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "first-life",
-        "anaerobic-prokaryote"
-      ],
+      "tags": ["first-life", "anaerobic-prokaryote"],
       "neetWeightage": "HIGH"
     },
     {
@@ -946,10 +754,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cro-magnon",
-        "homo-sapiens"
-      ],
+      "tags": ["cro-magnon", "homo-sapiens"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -960,21 +765,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Which factor is NOT required for Hardy-Weinberg equilibrium?",
-      "options": [
-        "Natural selection",
-        "Random mating",
-        "No mutation",
-        "Large population"
-      ],
+      "options": ["Natural selection", "Random mating", "No mutation", "Large population"],
       "correctAnswer": "A",
       "explanation": "Natural selection is NOT required for Hardy-Weinberg equilibrium; in fact, it must be ABSENT. The conditions for equilibrium are: large population, random mating, no mutation, no gene flow (migration), and no natural selection.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hardy-weinberg",
-        "conditions"
-      ],
+      "tags": ["hardy-weinberg", "conditions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -996,10 +793,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "adaptive-radiation",
-        "finches"
-      ],
+      "tags": ["adaptive-radiation", "finches"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1021,10 +815,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "genetic-drift",
-        "allele-loss"
-      ],
+      "tags": ["genetic-drift", "allele-loss"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1046,10 +837,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "homologous-organs",
-        "embryonic-origin"
-      ],
+      "tags": ["homologous-organs", "embryonic-origin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1071,10 +859,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pasteur",
-        "biogenesis"
-      ],
+      "tags": ["pasteur", "biogenesis"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1096,10 +881,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "variation",
-        "natural-selection"
-      ],
+      "tags": ["variation", "natural-selection"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1121,10 +903,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "industrial-melanism",
-        "peppered-moth"
-      ],
+      "tags": ["industrial-melanism", "peppered-moth"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1146,10 +925,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mutation",
-        "genetic-variation"
-      ],
+      "tags": ["mutation", "genetic-variation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1171,9 +947,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vestigial-organs"
-      ],
+      "tags": ["vestigial-organs"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1195,10 +969,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "allopatric-speciation",
-        "geographic-barriers"
-      ],
+      "tags": ["allopatric-speciation", "geographic-barriers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1220,10 +991,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "miller-urey",
-        "amino-acids"
-      ],
+      "tags": ["miller-urey", "amino-acids"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1245,10 +1013,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "coacervates",
-        "origin-of-life"
-      ],
+      "tags": ["coacervates", "origin-of-life"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1270,10 +1035,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lamarckism",
-        "rejection"
-      ],
+      "tags": ["lamarckism", "rejection"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1295,10 +1057,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hardy-weinberg",
-        "conditions"
-      ],
+      "tags": ["hardy-weinberg", "conditions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1320,10 +1079,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "evolution",
-        "natural-selection"
-      ],
+      "tags": ["evolution", "natural-selection"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1334,20 +1090,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Which of the following about human evolution is INCORRECT?\n(i) Australopithecus was the first to walk erect.\n(ii) Homo habilis had the largest brain.\n(iii) Homo erectus probably used fire.\n(iv) Neanderthals had a cranial capacity of about 1400 cc.",
-      "options": [
-        "(i) and (ii)",
-        "(i) only",
-        "(ii) only",
-        "(iii) only"
-      ],
+      "options": ["(i) and (ii)", "(i) only", "(ii) only", "(iii) only"],
       "correctAnswer": "C",
       "explanation": "Statement (ii) is incorrect. Homo habilis did NOT have the largest brain. Modern humans (Homo sapiens) and Neanderthals have the largest cranial capacity (~1400-1650 cc). Homo habilis had about 650-800 cc.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "human-evolution"
-      ],
+      "tags": ["human-evolution"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1369,9 +1118,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "evidence-for-evolution"
-      ],
+      "tags": ["evidence-for-evolution"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1393,10 +1140,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mutation-theory",
-        "darwin"
-      ],
+      "tags": ["mutation-theory", "darwin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1418,9 +1162,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "types-of-selection"
-      ],
+      "tags": ["types-of-selection"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1442,10 +1184,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "convergent",
-        "divergent"
-      ],
+      "tags": ["convergent", "divergent"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1467,10 +1206,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "speciation",
-        "types"
-      ],
+      "tags": ["speciation", "types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1481,21 +1217,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Match Column I (Type of selection) with Column II (Effect):\nColumn I: (P) Stabilising, (Q) Directional, (R) Disruptive\nColumn II: (i) Favours both extremes, (ii) Favours one extreme, (iii) Favours the mean",
-      "options": [
-        "P-i, Q-ii, R-iii",
-        "P-ii, Q-iii, R-i",
-        "P-iii, Q-ii, R-i",
-        "P-iii, Q-i, R-ii"
-      ],
+      "options": ["P-i, Q-ii, R-iii", "P-ii, Q-iii, R-i", "P-iii, Q-ii, R-i", "P-iii, Q-i, R-ii"],
       "correctAnswer": "C",
       "explanation": "Stabilising selection favours the mean (iii), Directional selection favours one extreme (ii), Disruptive selection favours both extremes (i).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "selection-types",
-        "match"
-      ],
+      "tags": ["selection-types", "match"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1517,11 +1245,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "scientists",
-        "contributions",
-        "match"
-      ],
+      "tags": ["scientists", "contributions", "match"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1543,10 +1267,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "human-evolution",
-        "match"
-      ],
+      "tags": ["human-evolution", "match"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1568,10 +1289,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "evidence-types",
-        "match"
-      ],
+      "tags": ["evidence-types", "match"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1593,10 +1311,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "connecting-links",
-        "match"
-      ],
+      "tags": ["connecting-links", "match"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1618,10 +1333,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "evolution-terms",
-        "match"
-      ],
+      "tags": ["evolution-terms", "match"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1643,10 +1355,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "organs-types",
-        "match"
-      ],
+      "tags": ["organs-types", "match"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1657,22 +1366,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "How many factors can disturb Hardy-Weinberg equilibrium from the following?\nNatural selection, Mutation, Gene flow, Genetic drift, Non-random mating, Large population size",
-      "options": [
-        "Five",
-        "Three",
-        "Six",
-        "Four"
-      ],
+      "options": ["Five", "Three", "Six", "Four"],
       "correctAnswer": "A",
       "explanation": "Five factors disturb Hardy-Weinberg equilibrium: Natural selection, Mutation, Gene flow, Genetic drift, and Non-random mating. Large population size is a condition that MAINTAINS equilibrium, not disrupts it.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hardy-weinberg",
-        "factors",
-        "counting"
-      ],
+      "tags": ["hardy-weinberg", "factors", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1683,21 +1383,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "How many of the following are homologous organs?\nForelimb of whale, Wing of bat, Leg of horse, Arm of human, Wing of butterfly",
-      "options": [
-        "Three",
-        "Two",
-        "Four",
-        "Five"
-      ],
+      "options": ["Three", "Two", "Four", "Five"],
       "correctAnswer": "C",
       "explanation": "Four are homologous: Forelimb of whale, Wing of bat, Leg of horse, and Arm of human. All have the same basic pentadactyl limb structure. Wing of butterfly has a completely different origin (insect exoskeleton).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "homologous-organs",
-        "counting"
-      ],
+      "tags": ["homologous-organs", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1708,21 +1400,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "How many of the following are vestigial organs in humans?\nVermiform appendix, Coccyx, Wisdom teeth, Nictitating membrane, Heart, Ear pinna muscles",
-      "options": [
-        "Five",
-        "Three",
-        "Four",
-        "Six"
-      ],
+      "options": ["Five", "Three", "Four", "Six"],
       "correctAnswer": "A",
       "explanation": "Five are vestigial organs: Vermiform appendix, Coccyx (tail bone), Wisdom teeth, Nictitating membrane (plica semilunaris), and Ear pinna muscles. Heart is a fully functional organ.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vestigial-organs",
-        "counting"
-      ],
+      "tags": ["vestigial-organs", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1733,21 +1417,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "How many types of natural selection are there?",
-      "options": [
-        "Two",
-        "Four",
-        "Three",
-        "One"
-      ],
+      "options": ["Two", "Four", "Three", "One"],
       "correctAnswer": "C",
       "explanation": "There are three main types of natural selection: Stabilising selection (favours mean), Directional selection (favours one extreme), and Disruptive selection (favours both extremes).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "natural-selection",
-        "types"
-      ],
+      "tags": ["natural-selection", "types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1758,21 +1434,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "How many of the following are connecting links?\nArchaeopteryx, Peripatus, Platypus, Lungfish, Dog, Cat",
-      "options": [
-        "Five",
-        "Three",
-        "Four",
-        "Two"
-      ],
+      "options": ["Five", "Three", "Four", "Two"],
       "correctAnswer": "C",
       "explanation": "Four are connecting links: Archaeopteryx (reptiles-birds), Peripatus (annelids-arthropods), Platypus (reptiles-mammals), and Lungfish (fish-amphibians). Dog and Cat are not connecting links.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "connecting-links",
-        "counting"
-      ],
+      "tags": ["connecting-links", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1783,21 +1451,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "How many of the following are evidences for evolution?\nFossils, Comparative anatomy, Embryology, Molecular biology, Biogeography, Astrology",
-      "options": [
-        "Three",
-        "Five",
-        "Six",
-        "Four"
-      ],
+      "options": ["Three", "Five", "Six", "Four"],
       "correctAnswer": "B",
       "explanation": "Five are evidences for evolution: Fossils (palaeontological), Comparative anatomy, Embryology, Molecular biology, and Biogeography. Astrology is not a scientific evidence for evolution.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "evolution-evidence",
-        "counting"
-      ],
+      "tags": ["evolution-evidence", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1808,21 +1468,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "How many of the following gases were present in the primitive Earth atmosphere according to the Oparin-Haldane hypothesis?\nMethane, Ammonia, Hydrogen, Oxygen, Water vapour, Nitrogen",
-      "options": [
-        "Three",
-        "Six",
-        "Five",
-        "Four"
-      ],
+      "options": ["Three", "Six", "Five", "Four"],
       "correctAnswer": "D",
       "explanation": "Four gases were present: Methane (CH4), Ammonia (NH3), Hydrogen (H2), and Water vapour (H2O). Free oxygen was ABSENT in the primitive atmosphere. Nitrogen was present but in small amounts.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "primitive-atmosphere",
-        "gases"
-      ],
+      "tags": ["primitive-atmosphere", "gases"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1833,22 +1485,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "How many amino acids were synthesised in the Miller-Urey experiment?",
-      "options": [
-        "5",
-        "20",
-        "10",
-        "About 15"
-      ],
+      "options": ["5", "20", "10", "About 15"],
       "correctAnswer": "D",
       "explanation": "Miller and Urey synthesised about 15 different amino acids along with other simple organic molecules like sugars in their experiment simulating primitive Earth conditions.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "miller-urey",
-        "amino-acids",
-        "counting"
-      ],
+      "tags": ["miller-urey", "amino-acids", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1870,10 +1513,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "human-evolution",
-        "sequence"
-      ],
+      "tags": ["human-evolution", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1895,10 +1535,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "evolution-theories",
-        "chronology"
-      ],
+      "tags": ["evolution-theories", "chronology"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1920,10 +1557,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "history-of-life",
-        "sequence"
-      ],
+      "tags": ["history-of-life", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1945,10 +1579,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "geological-eras",
-        "sequence"
-      ],
+      "tags": ["geological-eras", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1970,10 +1601,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "speciation",
-        "steps"
-      ],
+      "tags": ["speciation", "steps"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1995,11 +1623,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "origin-of-life",
-        "theories",
-        "sequence"
-      ],
+      "tags": ["origin-of-life", "theories", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2021,10 +1645,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chemical-evolution",
-        "stages"
-      ],
+      "tags": ["chemical-evolution", "stages"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2046,10 +1667,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "divergent-evolution",
-        "homologous-organs"
-      ],
+      "tags": ["divergent-evolution", "homologous-organs"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2071,11 +1689,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "origin-of-life",
-        "early-life",
-        "anaerobic"
-      ],
+      "tags": ["origin-of-life", "early-life", "anaerobic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2086,22 +1700,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Which of the following gases was NOT present in the primitive atmosphere of Earth?",
-      "options": [
-        "Methane",
-        "Ammonia",
-        "Oxygen",
-        "Hydrogen"
-      ],
+      "options": ["Methane", "Ammonia", "Oxygen", "Hydrogen"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the primitive atmosphere of Earth was reducing and contained gases like methane (CH\u2084), ammonia (NH\u2083), hydrogen (H\u2082), and water vapour. Free oxygen was absent. Oxygen accumulated later due to photosynthetic organisms like cyanobacteria.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "origin-of-life",
-        "primitive-atmosphere",
-        "reducing"
-      ],
+      "tags": ["origin-of-life", "primitive-atmosphere", "reducing"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2123,11 +1728,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "connecting-link",
-        "peripatus",
-        "evolution-evidence"
-      ],
+      "tags": ["connecting-link", "peripatus", "evolution-evidence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2149,11 +1750,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gene-flow",
-        "population-genetics",
-        "allele-frequency"
-      ],
+      "tags": ["gene-flow", "population-genetics", "allele-frequency"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2175,11 +1772,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hardy-weinberg",
-        "population-genetics",
-        "heterozygous"
-      ],
+      "tags": ["hardy-weinberg", "population-genetics", "heterozygous"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2201,11 +1794,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "miller-urey",
-        "origin-of-life",
-        "experiment"
-      ],
+      "tags": ["miller-urey", "origin-of-life", "experiment"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2227,11 +1816,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "speciation",
-        "sympatric",
-        "reproductive-isolation"
-      ],
+      "tags": ["speciation", "sympatric", "reproductive-isolation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2253,11 +1838,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "natural-selection",
-        "stabilising",
-        "population"
-      ],
+      "tags": ["natural-selection", "stabilising", "population"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2279,11 +1860,7 @@
       "difficulty": "HARD",
       "isNcertBased": false,
       "isNeetImportant": true,
-      "tags": [
-        "fossil-dating",
-        "carbon-14",
-        "radiometric"
-      ],
+      "tags": ["fossil-dating", "carbon-14", "radiometric"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2305,10 +1882,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "convergent-evolution",
-        "analogous-organs"
-      ],
+      "tags": ["convergent-evolution", "analogous-organs"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2319,22 +1893,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Australopithecus is believed to have lived in:",
-      "options": [
-        "North America",
-        "Asia",
-        "Africa",
-        "Europe"
-      ],
+      "options": ["North America", "Asia", "Africa", "Europe"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, Australopithecus ('southern ape') fossils were discovered in East Africa. They are considered early human ancestors (hominins) that lived approximately 2-4 million years ago. Africa is regarded as the cradle of human evolution.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "human-evolution",
-        "australopithecus",
-        "africa"
-      ],
+      "tags": ["human-evolution", "australopithecus", "africa"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2356,11 +1921,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mutation",
-        "genetic-variation",
-        "evolution"
-      ],
+      "tags": ["mutation", "genetic-variation", "evolution"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2382,11 +1943,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mutation-theory",
-        "de-vries",
-        "oenothera"
-      ],
+      "tags": ["mutation-theory", "de-vries", "oenothera"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2397,22 +1954,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "The idea of 'use and disuse of organs' was proposed by:",
-      "options": [
-        "Darwin",
-        "Lamarck",
-        "Wallace",
-        "Weismann"
-      ],
+      "options": ["Darwin", "Lamarck", "Wallace", "Weismann"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, Jean-Baptiste Lamarck proposed the theory of 'inheritance of acquired characters' which included the concept of use and disuse of organs. He believed that organs that are used extensively become well-developed, while unused organs degenerate.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lamarck",
-        "use-disuse",
-        "evolution-theory"
-      ],
+      "tags": ["lamarck", "use-disuse", "evolution-theory"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2423,22 +1971,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Which of the following provides the most direct evidence for evolution?",
-      "options": [
-        "Comparative anatomy",
-        "Embryology",
-        "Fossils",
-        "Biogeography"
-      ],
+      "options": ["Comparative anatomy", "Embryology", "Fossils", "Biogeography"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, fossils provide the most direct and concrete evidence for evolution. They are actual remains or impressions of organisms from the past preserved in sedimentary rocks. They reveal the morphology, size, and often the habitat of extinct organisms.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fossils",
-        "evolution-evidence",
-        "direct-evidence"
-      ],
+      "tags": ["fossils", "evolution-evidence", "direct-evidence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2460,11 +1999,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "human-evolution",
-        "homo-sapiens",
-        "timeline"
-      ],
+      "tags": ["human-evolution", "homo-sapiens", "timeline"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2475,22 +2010,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Random changes in allele frequency that occur in small populations are termed:",
-      "options": [
-        "Natural selection",
-        "Gene flow",
-        "Genetic drift",
-        "Mutation"
-      ],
+      "options": ["Natural selection", "Gene flow", "Genetic drift", "Mutation"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, genetic drift refers to random changes in allele frequencies that occur by chance, particularly in small populations. It can lead to fixation or loss of alleles regardless of their adaptive value. The bottleneck effect and founder effect are examples.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "genetic-drift",
-        "population-genetics",
-        "allele-frequency"
-      ],
+      "tags": ["genetic-drift", "population-genetics", "allele-frequency"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2501,22 +2027,13 @@
       "ncertChapter": 7,
       "ncertChapterName": "Evolution",
       "question": "Recapitulation theory (ontogeny recapitulates phylogeny) was proposed by:",
-      "options": [
-        "Darwin",
-        "Haeckel",
-        "Oparin",
-        "Weismann"
-      ],
+      "options": ["Darwin", "Haeckel", "Oparin", "Weismann"],
       "correctAnswer": "B",
       "explanation": "Ernst Haeckel proposed the biogenetic law or recapitulation theory, which states that ontogeny (embryonic development of an organism) repeats its phylogeny (evolutionary history). For example, human embryos develop gill-like structures during early development.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "embryology",
-        "haeckel",
-        "recapitulation"
-      ],
+      "tags": ["embryology", "haeckel", "recapitulation"],
       "neetWeightage": "MEDIUM"
     }
   ]

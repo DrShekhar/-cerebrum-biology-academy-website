@@ -69,12 +69,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about homology and analogy:\nS1: The forelimbs of bats and the forelimbs of whales are homologous structures derived from a common tetrapod ancestor.\nS2: The wings of butterflies and the wings of birds are homologous structures because both are used for flight.\nS3: Molecular homologies, such as conserved DNA sequences across taxa, provide evidence for common descent independent of morphological data.\nS4: Analogous structures arise through convergent evolution and reflect similar selective pressures rather than shared ancestry.",
-      "options": [
-        "TTTT",
-        "TTFT",
-        "TFTT",
-        "TFTF"
-      ],
+      "options": ["TTTT", "TTFT", "TFTT", "TFTF"],
       "correctAnswer": "C",
       "explanation": "S1 is TRUE because bat forelimbs and whale flippers share the same underlying skeletal pattern (humerus, radius, ulna, carpals, phalanges) inherited from a common tetrapod ancestor, making them homologous despite different functions. S2 is FALSE because butterfly wings (extensions of the exoskeleton) and bird wings (modified tetrapod forelimbs) have completely different developmental and evolutionary origins — they are analogous, not homologous, structures that evolved independently for flight. S3 is TRUE because conserved DNA sequences (such as Hox genes, ribosomal RNA genes) across distantly related taxa provide molecular evidence for common descent that is independent of and complementary to morphological comparisons. S4 is TRUE because analogous structures (like the camera eyes of vertebrates and cephalopods) arise when unrelated lineages independently evolve similar features in response to similar environmental challenges through convergent evolution.",
       "isOlympiad": true,
@@ -169,12 +164,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about Darwin's observations and their significance:\nS1: The geographic distribution of species on oceanic islands more closely resembles that of the nearest mainland than of similar islands at the same latitude elsewhere.\nS2: Darwin concluded that the fossil record shows a perfect, unbroken chain of transitional forms between all species.\nS3: Artificial selection by plant and animal breeders demonstrated that heritable variation could be directionally modified over generations.\nS4: Darwin's theory required knowledge of Mendelian genetics to explain the mechanism of inheritance.",
-      "options": [
-        "TTTT",
-        "TFTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TTTT", "TFTT", "TFTF", "TFFT"],
       "correctAnswer": "C",
       "explanation": "S1 is TRUE because Darwin observed that island species (like those on the Galapagos) resemble species from the nearest mainland (South America) rather than species on climatically similar but geographically distant islands, supporting colonization and subsequent modification from mainland ancestors. S2 is FALSE because Darwin acknowledged the fossil record was incomplete and did not claim a perfect chain of intermediates; he attributed gaps to the imperfection of geological preservation. S3 is TRUE because artificial selection was a cornerstone of Darwin's argument in The Origin of Species — breeders demonstrated that selecting for desired traits over generations could produce dramatic phenotypic changes, providing an analogy for natural selection. S4 is FALSE because Darwin published his theory in 1859 without knowledge of Mendel's work (published 1866, rediscovered 1900); Darwin struggled with the mechanism of inheritance but his theory did not require Mendelian genetics to be formulated.",
       "isOlympiad": true,
@@ -309,12 +299,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about biogeographic evidence for evolution:\nS1: Endemic species on oceanic islands often include many bird and insect species but few amphibians and freshwater fish, consistent with over-water dispersal as the colonization mechanism.\nS2: The distribution of marsupials primarily in Australia and South America reflects their origin on the supercontinent Gondwana before its breakup.\nS3: Closely related species found on different continents always indicate recent dispersal events rather than vicariance.\nS4: Islands closer to the mainland typically have species more closely related to mainland species than do more distant islands.",
-      "options": [
-        "TTTT",
-        "TTTF",
-        "TFTT",
-        "TTFT"
-      ],
+      "options": ["TTTT", "TTTF", "TFTT", "TTFT"],
       "correctAnswer": "D",
       "explanation": "S1 is TRUE because oceanic islands (formed de novo from volcanic activity, never connected to continents) are typically colonized via dispersal across water. Birds and insects can fly, and some invertebrates can raft, but amphibians and freshwater fish rarely survive saltwater crossings, explaining their absence or rarity on oceanic islands. S2 is TRUE because marsupials are most diverse in Australia and South America, connected via Antarctica in Gondwana. Fossil marsupials in Antarctica confirm this Gondwanan distribution before continental separation. S3 is FALSE because closely related species on different continents can result from either dispersal or vicariance (continental breakup separating a once-continuous range), and distinguishing between these requires molecular dating correlated with geological events. S4 is TRUE because islands closer to the mainland receive colonizers more frequently, and those colonizers are drawn from the nearest mainland fauna, producing closer phylogenetic relationships.",
       "isOlympiad": true,
@@ -469,12 +454,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about evidence for evolution from comparative anatomy:\nS1: The similar bone structure in the forelimbs of humans, cats, bats, and whales is evidence of homology inherited from a common ancestor.\nS2: The presence of both eyes on one side of an adult flatfish (flounder) represents an embryological rearrangement consistent with descent with modification from a bilaterally symmetrical ancestor.\nS3: Structures that appear similar but evolved independently in unrelated lineages (like the eyes of octopi and vertebrates) are called homoplasies.\nS4: All vestigial structures are completely non-functional and serve no purpose whatsoever in the organisms that possess them.",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TTFF",
-        "TTTF"
-      ],
+      "options": ["TFTT", "TTTT", "TTFF", "TTTF"],
       "correctAnswer": "D",
       "explanation": "S1 is TRUE because the pentadactyl limb pattern (one bone-two bones-many bones-digits) shared across diverse mammals represents a classic homology inherited from a common tetrapod ancestor, modified for different functions. S2 is TRUE because flatfish begin development as bilaterally symmetrical larvae, and one eye migrates to the other side during metamorphosis — a remarkable developmental modification of the ancestral body plan that is visible during ontogeny. S3 is TRUE because homoplasy refers to similarity not due to shared ancestry, including convergent evolution (like octopus and vertebrate camera eyes) and parallel evolution; the term correctly describes independently evolved similar features. S4 is FALSE because many vestigial structures retain partial or secondary functions; for example, the human appendix, while vestigial as a cecal digestive organ, harbors beneficial gut bacteria and contains lymphoid tissue with immune function. Vestigial means reduced from the ancestral condition, not necessarily completely non-functional.",
       "isOlympiad": true,
@@ -649,12 +629,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about evolutionary developmental biology (evo-devo) evidence for descent with modification:\nS1: Changes in the cis-regulatory elements of developmental genes can produce major morphological differences without altering the protein-coding sequence.\nS2: The Dll/Dlx gene family is involved in appendage development in both arthropods and vertebrates, suggesting deep homology of the genetic toolkit for limb formation.\nS3: All morphological differences between species are caused by mutations in protein-coding sequences rather than regulatory elements.\nS4: Toolkit genes like Hox, Pax, and hedgehog families are found only in vertebrates and are absent in invertebrates.",
-      "options": [
-        "TTFT",
-        "TFTF",
-        "TFFT",
-        "TTFF"
-      ],
+      "options": ["TTFT", "TFTF", "TFFT", "TTFF"],
       "correctAnswer": "D",
       "explanation": "S1 is TRUE because cis-regulatory element changes (in enhancers, promoters, silencers) can alter when, where, and how much a developmental gene is expressed, producing dramatic morphological changes while leaving the protein itself intact. A classic example is pelvic reduction in sticklebacks driven by changes in a Pitx1 enhancer. S2 is TRUE because Distal-less (Dll in Drosophila, Dlx in vertebrates) is expressed at the tips of developing appendages across arthropods and vertebrates, suggesting the last common ancestor of bilaterians used this gene for appendage outgrowth. S3 is FALSE because a major insight of evo-devo is that regulatory changes are often more important than protein-coding changes for morphological evolution, as regulatory mutations can alter gene expression patterns without disrupting protein function in other contexts. S4 is FALSE because toolkit genes (Hox, Pax, hedgehog/Shh, Wnt, etc.) are ancient and conserved across bilaterians, including arthropods, nematodes, and other invertebrates.",
       "isOlympiad": true,
@@ -769,12 +744,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the fossil record as evidence for evolution:\nS1: Fossils document the existence of intermediate forms (transitional fossils) between major taxonomic groups, such as Archaeopteryx between dinosaurs and modern birds.\nS2: The fossil record is complete and documents every species that has ever lived.\nS3: Radiometric dating of volcanic rock layers above and below fossil-bearing strata allows estimation of fossil ages, providing a temporal framework for evolutionary events.\nS4: The law of superposition states that in undisturbed sedimentary sequences, older strata lie below younger strata, consistent with the pattern of evolutionary change over time.",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TFTT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "A",
       "explanation": "S1 is TRUE because the fossil record contains numerous transitional forms. Archaeopteryx (with both dinosaurian features like teeth, clawed wings, and a bony tail, and avian features like feathers and a wishbone) is a classic example bridging non-avian dinosaurs and modern birds. S2 is FALSE because the fossil record is notoriously incomplete. Fossilization requires specific conditions (rapid burial, appropriate mineral replacement), and most organisms decompose without being preserved. Darwin himself acknowledged this limitation. S3 is TRUE because radiometric dating of volcanic (ignite) rock layers bracketing sedimentary fossil-bearing strata provides absolute age estimates through radioactive decay measurements, enabling calibration of the fossil record timeline. S4 is TRUE because the law of superposition is a foundational principle of stratigraphy that establishes relative age relationships in undisturbed sedimentary sequences, providing the framework for understanding the temporal order of fossil appearance.",
       "isOlympiad": true,
@@ -949,12 +919,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about molecular evidence for evolution:\nS1: The universal genetic code (with minor variations) shared by virtually all life on Earth supports the hypothesis of common descent from a universal ancestor.\nS2: Phylogenetic trees constructed from different genes (e.g., rRNA, cytochrome c, hemoglobin) that produce the same branching topology provide strong corroboration for descent with modification.\nS3: The presence of introns in eukaryotic genes but not in prokaryotic genes proves that eukaryotes and prokaryotes are unrelated.\nS4: Molecular phylogenetics can only resolve relationships between closely related species and is useless for deep evolutionary divergences.",
-      "options": [
-        "TTFT",
-        "TFFF",
-        "TTFF",
-        "TFTF"
-      ],
+      "options": ["TTFT", "TFFF", "TTFF", "TFTF"],
       "correctAnswer": "C",
       "explanation": "S1 is TRUE because the near-universal genetic code (DNA triplet codons specifying the same amino acids across bacteria, archaea, and eukaryotes) is most parsimoniously explained by inheritance from a single common ancestor. The few minor variations (e.g., mitochondrial code differences) are derived modifications. S2 is TRUE because independent molecular datasets converging on the same phylogenetic tree topology provide powerful corroboration — if descent with modification is real, different genes should record the same evolutionary history (with minor discordances expected from incomplete lineage sorting or horizontal gene transfer). S3 is FALSE because intron distribution differences reflect evolutionary changes in genome organization, not unrelatedness; the 'introns-early' vs. 'introns-late' hypotheses both presuppose shared ancestry, and rRNA phylogenies firmly unite eukaryotes and prokaryotes in the tree of life. S4 is FALSE because highly conserved molecules like ribosomal RNA are specifically useful for resolving deep divergences (as demonstrated by Woese's three-domain tree based on 16S/18S rRNA).",
       "isOlympiad": true,
@@ -1169,12 +1134,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the evidence for evolution from imperfect design:\nS1: The human spine's S-curve, which causes back problems, reflects evolutionary modification of a horizontal quadrupedal spine for bipedal locomotion.\nS2: The pharyngeal nerve routing in giraffes represents optimal design for long-necked animals.\nS3: The backward-wired retina in vertebrates, with photoreceptors facing away from light, creates a blind spot that would not exist in a freshly designed eye.\nS4: Imperfect designs in organisms are expected under descent with modification because evolution modifies existing structures rather than engineering solutions from scratch.",
-      "options": [
-        "TFTF",
-        "TTTT",
-        "TFTT",
-        "TFFT"
-      ],
+      "options": ["TFTF", "TTTT", "TFTT", "TFFT"],
       "correctAnswer": "C",
       "explanation": "S1 is TRUE because the human spine evolved from a horizontally oriented quadrupedal ancestor's spine. Bipedalism required the S-curve modification, which places stresses on intervertebral discs and vertebrae not originally 'designed' for vertical weight bearing, leading to common back problems. S2 is FALSE because the recurrent laryngeal nerve in giraffes takes a 4.6-meter detour down the neck, around the aortic arch, and back up — the opposite of optimal design. This routing is an evolutionary legacy from a fish ancestor where the path was direct. S3 is TRUE because the inverted retina forces light to pass through layers of neurons and blood vessels before reaching photoreceptors, creating a blind spot where the optic nerve exits. This imperfection arises from the developmental origin of the vertebrate eye from the neural tube. S4 is TRUE because evolution can only modify existing structures through mutation and selection, producing 'good enough' solutions constrained by historical contingency rather than optimal designs.",
       "isOlympiad": true,
@@ -1369,12 +1329,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about artificial selection as evidence for descent with modification:\nS1: All domestic dog breeds descended from wolves, demonstrating that selection on heritable variation can produce dramatic phenotypic change.\nS2: Artificial selection differs fundamentally from natural selection because artificial selection creates new genetic variation while natural selection cannot.\nS3: The diversity among Brassica oleracea cultivars (broccoli, cauliflower, kale, Brussels sprouts, cabbage) from a single wild ancestor demonstrates the power of selective breeding.\nS4: Artificial selection experiments in laboratory populations have demonstrated the evolution of reproductive isolation between divergently selected lines.",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TFTF",
-        "TTFT"
-      ],
+      "options": ["TFTT", "TTTT", "TFTF", "TTFT"],
       "correctAnswer": "A",
       "explanation": "S1 is TRUE because extensive genetic and archaeological evidence confirms that all domestic dog breeds descended from wolves (Canis lupus), with thousands of years of artificial selection producing the extraordinary morphological diversity seen today — from Chihuahuas to Great Danes. S2 is FALSE because neither artificial nor natural selection creates new genetic variation; both act on pre-existing heritable variation generated by mutation, recombination, and other genetic processes. The key difference is that artificial selection is directed by human preferences while natural selection is driven by differential reproductive success in natural environments. S3 is TRUE because the remarkable diversity of Brassica oleracea cultivars (all derived from a single wild mustard species through selection on different plant organs) is a compelling demonstration that selection can produce major morphological changes. S4 is TRUE because experiments with Drosophila and other organisms have shown that divergent selection (e.g., for different food preferences or mating times) can produce incipient reproductive isolation between selected lines, providing experimental evidence for speciation.",
       "isOlympiad": true,
@@ -1549,12 +1504,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the evidence provided by the geographic distribution of species:\nS1: Continental islands (once connected to the mainland) typically have more terrestrial mammal species than oceanic islands (formed by volcanic activity).\nS2: The Hawaiian Islands have native terrestrial mammals that colonized by walking across ancient land bridges.\nS3: The presence of Darwin's finches only in the Galapagos and Cocos Island supports colonization from South America followed by adaptive radiation.\nS4: Species richness on islands tends to decrease with increasing distance from the mainland source, consistent with decreased colonization rates.",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TFTF",
-        "TTFT"
-      ],
+      "options": ["TFTT", "TTTT", "TFTF", "TTFT"],
       "correctAnswer": "A",
       "explanation": "S1 is TRUE because continental islands (like Britain, which was connected to Europe during glacial lowstands) were colonized by terrestrial mammals walking across land bridges, while oceanic islands (like Hawaii, formed from seafloor volcanic activity) could only be reached by organisms capable of long-distance dispersal over water, excluding most terrestrial mammals. S2 is FALSE because Hawaii is an oceanic volcanic archipelago that has never been connected to any continent by a land bridge. The only native Hawaiian land mammal is a bat (Lasiurus cinereus semotus), which arrived by flying. All other Hawaiian mammals were introduced by humans. S3 is TRUE because the restriction of Darwin's finches to these Pacific islands, combined with their phylogenetic affinity to South American emberizid sparrows, supports a single colonization event from the nearest mainland followed by in situ adaptive radiation. S4 is TRUE because the equilibrium theory of island biogeography predicts that more distant islands receive fewer colonizers, resulting in lower species richness, which is consistent with dispersal-based colonization.",
       "isOlympiad": true,
@@ -1769,12 +1719,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the Modern Synthesis (Neo-Darwinism) and its relationship to Darwin's original theory:\nS1: The Modern Synthesis integrated Darwin's natural selection with Mendelian genetics, providing the mechanism of inheritance that Darwin lacked.\nS2: The Modern Synthesis demonstrated that evolution occurs through changes in allele frequencies within populations.\nS3: The Modern Synthesis rejected natural selection as a mechanism of evolution, replacing it entirely with genetic drift.\nS4: The Modern Synthesis established that mutations provide the ultimate source of new genetic variation upon which natural selection acts.",
-      "options": [
-        "TTTT",
-        "TTFT",
-        "TFTF",
-        "TTFF"
-      ],
+      "options": ["TTTT", "TTFT", "TFTF", "TTFF"],
       "correctAnswer": "B",
       "explanation": "S1 is TRUE because the Modern Synthesis (1930s-1940s, developed by Dobzhansky, Mayr, Simpson, and others) unified Darwin's theory of natural selection with Mendelian genetics and population genetics, resolving the major weakness of Darwin's theory — the lack of a mechanism for inheritance. S2 is TRUE because the Modern Synthesis defined evolution as changes in allele frequencies within populations, providing a precise, quantitative framework for understanding evolutionary change. S3 is FALSE because the Modern Synthesis did not reject natural selection; rather, it confirmed natural selection as a primary mechanism of adaptive evolution while also recognizing genetic drift as an additional evolutionary force. The synthesis strengthened the role of natural selection by showing how it operates on Mendelian variation. S4 is TRUE because the Modern Synthesis established that mutations (random changes in DNA) are the ultimate source of all new genetic variation, and this variation is the raw material upon which natural selection, genetic drift, and other evolutionary forces act.",
       "isOlympiad": true,

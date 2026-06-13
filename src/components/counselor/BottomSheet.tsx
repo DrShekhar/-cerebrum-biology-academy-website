@@ -68,10 +68,7 @@ export function BottomSheet({
   return (
     <>
       {/* Backdrop */}
-      <div
-        className="fixed inset-0 bg-black/50 z-50 animate-fadeInUp"
-        onClick={onClose}
-      />
+      <div className="fixed inset-0 bg-black/50 z-50 animate-fadeInUp" onClick={onClose} />
 
       {/* Bottom Sheet */}
       <div

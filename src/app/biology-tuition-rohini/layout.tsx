@@ -18,8 +18,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best Biology Tuition in Rohini 2026',
-    description:
-      'Top biology tuition in Rohini. CBSE + NEET at DC Chowk center. Call 88264-44334.',
+    description: 'Top biology tuition in Rohini. CBSE + NEET at DC Chowk center. Call 88264-44334.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-tuition-rohini',

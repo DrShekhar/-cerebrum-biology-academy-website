@@ -16,6 +16,7 @@ Each phase produces 1-3 PRs with atomic, focused commits.
 ---
 
 ## Phase 1: Critical Quick Fixes (5-10 min each)
+
 > Priority: CRITICAL | Impact: Very High | Effort: Minimal
 > Files touched: 3-4 files, non-overlapping
 
@@ -40,6 +41,7 @@ Each phase produces 1-3 PRs with atomic, focused commits.
 ---
 
 ## Phase 2: Desktop Fallback Form for Demo Booking
+
 > Priority: CRITICAL | Impact: Very High (recovers ~300 leads/month) | Effort: 4-6 hrs
 > Files touched: 2-3 files
 
@@ -54,6 +56,7 @@ Each phase produces 1-3 PRs with atomic, focused commits.
 ---
 
 ## Phase 3: Lead Magnet PDF Creation (Top 3)
+
 > Priority: HIGH | Impact: High | Effort: 8-12 hrs
 > These are actual content PDFs for download gating
 
@@ -73,6 +76,7 @@ Each phase produces 1-3 PRs with atomic, focused commits.
 ---
 
 ## Phase 4: Social Proof & Trust Signals
+
 > Priority: HIGH | Impact: High | Effort: 3-5 hrs
 > Files touched: 3-4 components
 
@@ -95,6 +99,7 @@ Each phase produces 1-3 PRs with atomic, focused commits.
 ---
 
 ## Phase 5: Blog CTA Enhancement & Email Capture
+
 > Priority: HIGH | Impact: High | Effort: 4-6 hrs
 > Files touched: 3-4 blog/content components
 
@@ -112,6 +117,7 @@ Each phase produces 1-3 PRs with atomic, focused commits.
 ---
 
 ## Phase 6: Missing High-Value Comparison Pages
+
 > Priority: MEDIUM-HIGH | Impact: High (SEO) | Effort: 6-8 hrs
 > New pages capturing competitor comparison traffic
 
@@ -132,6 +138,7 @@ Each phase produces 1-3 PRs with atomic, focused commits.
 ---
 
 ## Phase 7: Enrollment Frontend & Payment Flow
+
 > Priority: MEDIUM | Impact: High | Effort: 8-12 hrs
 > Activate the already-built Razorpay backend
 
@@ -144,6 +151,7 @@ Each phase produces 1-3 PRs with atomic, focused commits.
 ---
 
 ## Phase 8: Final Optimizations & QA
+
 > Priority: MEDIUM | Impact: Medium | Effort: 4-6 hrs
 
 - [ ] **PR #69**: NEET Coaching Fees Comparison Delhi page
@@ -162,6 +170,7 @@ Each phase produces 1-3 PRs with atomic, focused commits.
 ## Execution Notes
 
 ### Git Workflow (per PR):
+
 ```bash
 git checkout main && git pull origin main
 git checkout -b fix/descriptive-branch-name
@@ -175,12 +184,14 @@ git checkout main && git pull origin main
 ```
 
 ### Cross-Context-Window Continuity:
+
 1. This file (`MARKETING_FIX_PLAN.md`) persists in the repo
 2. After each phase, update checkboxes `[ ]` → `[x]`
 3. Each new context window should: `cat MARKETING_FIX_PLAN.md` first
 4. Continue from the first unchecked `[ ]` item
 
 ### Contact Info (use consistently):
+
 - Phone: +91 88264 44334
 - Email: info@cerebrumbiologyacademy.com
 - WhatsApp: wa.me/918826444334

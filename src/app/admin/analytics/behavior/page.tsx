@@ -204,7 +204,10 @@ export default function UserBehaviorPage() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Peak Hours (IST)</h3>
                 <div className="space-y-2">
                   {(data.peakHours || []).slice(0, 8).map((entry) => {
-                    const maxSessions = Math.max(...(data.peakHours || []).map((h) => h.sessions), 1)
+                    const maxSessions = Math.max(
+                      ...(data.peakHours || []).map((h) => h.sessions),
+                      1
+                    )
                     const pct = (entry.sessions / maxSessions) * 100
                     return (
                       <div key={entry.hour} className="flex items-center space-x-3">

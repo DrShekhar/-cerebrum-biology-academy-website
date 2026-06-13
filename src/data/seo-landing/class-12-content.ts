@@ -238,10 +238,30 @@ export const neetBiologyCoachingClass12: SEOLandingContent = {
       },
     ],
     comparisonTable: [
-      { Aspect: 'NEET Questions', 'Genetics & Molecular Biology': '8-12 questions', 'Ecology & Environment': '6-8 questions', 'Reproduction': '5-7 questions' },
-      { Aspect: 'Difficulty Level', 'Genetics & Molecular Biology': 'High (analytical)', 'Ecology & Environment': 'Low-Medium (factual)', 'Reproduction': 'Medium (conceptual)' },
-      { Aspect: 'Study Time Needed', 'Genetics & Molecular Biology': '40-50 hours', 'Ecology & Environment': '20-25 hours', 'Reproduction': '25-30 hours' },
-      { Aspect: 'Scoring Potential', 'Genetics & Molecular Biology': 'High but requires practice', 'Ecology & Environment': 'High with NCERT mastery', 'Reproduction': 'High with diagram focus' },
+      {
+        Aspect: 'NEET Questions',
+        'Genetics & Molecular Biology': '8-12 questions',
+        'Ecology & Environment': '6-8 questions',
+        Reproduction: '5-7 questions',
+      },
+      {
+        Aspect: 'Difficulty Level',
+        'Genetics & Molecular Biology': 'High (analytical)',
+        'Ecology & Environment': 'Low-Medium (factual)',
+        Reproduction: 'Medium (conceptual)',
+      },
+      {
+        Aspect: 'Study Time Needed',
+        'Genetics & Molecular Biology': '40-50 hours',
+        'Ecology & Environment': '20-25 hours',
+        Reproduction: '25-30 hours',
+      },
+      {
+        Aspect: 'Scoring Potential',
+        'Genetics & Molecular Biology': 'High but requires practice',
+        'Ecology & Environment': 'High with NCERT mastery',
+        Reproduction: 'High with diagram focus',
+      },
     ],
   },
 
@@ -422,7 +442,7 @@ export const class12BiologyTuitionOnline: SEOLandingContent = {
     paragraphs: [
       {
         heading: 'How Online Tuition Solves the Class 12 Time Crunch',
-        body: 'Class 12 is the most time-constrained year for any NEET aspirant. Students must complete the Class 12 syllabus, revise Class 11, prepare for board exams, and peak for NEET, all within roughly twelve months. Online tuition addresses this squeeze by eliminating commute time, typically saving students one to two hours daily that can be redirected to self-study or practice tests. Recorded sessions allow students to revisit complex topics like DNA fingerprinting or ecological succession without waiting for the next class. The flexibility to attend from any location means that even during board exam season, when students might be studying at a relative\'s home or a library, their NEET preparation does not pause. For Class 12 students, where every hour counts, the efficiency gains of online tuition compound into a measurable score advantage.',
+        body: "Class 12 is the most time-constrained year for any NEET aspirant. Students must complete the Class 12 syllabus, revise Class 11, prepare for board exams, and peak for NEET, all within roughly twelve months. Online tuition addresses this squeeze by eliminating commute time, typically saving students one to two hours daily that can be redirected to self-study or practice tests. Recorded sessions allow students to revisit complex topics like DNA fingerprinting or ecological succession without waiting for the next class. The flexibility to attend from any location means that even during board exam season, when students might be studying at a relative's home or a library, their NEET preparation does not pause. For Class 12 students, where every hour counts, the efficiency gains of online tuition compound into a measurable score advantage.",
       },
       {
         heading: 'Board and NEET Dual Preparation: The Integrated Online Approach',
@@ -430,10 +450,26 @@ export const class12BiologyTuitionOnline: SEOLandingContent = {
       },
     ],
     checklist: [
-      { item: 'Complete Class 12 syllabus by December', explanation: 'Leaves January for board prep and February onward for intensive NEET revision.' },
-      { item: 'Schedule weekly Class 11 revision sessions', explanation: 'Prevents forgetting half the NEET syllabus while learning new Class 12 chapters.' },
-      { item: 'Practise at least 50 MCQs daily from March onward', explanation: 'Builds the speed needed to attempt 90 Biology questions in the allotted time.' },
-      { item: 'Take full-length NEET mock tests fortnightly', explanation: 'Simulates exam conditions and identifies weak chapters that need targeted revision.' },
+      {
+        item: 'Complete Class 12 syllabus by December',
+        explanation:
+          'Leaves January for board prep and February onward for intensive NEET revision.',
+      },
+      {
+        item: 'Schedule weekly Class 11 revision sessions',
+        explanation:
+          'Prevents forgetting half the NEET syllabus while learning new Class 12 chapters.',
+      },
+      {
+        item: 'Practise at least 50 MCQs daily from March onward',
+        explanation:
+          'Builds the speed needed to attempt 90 Biology questions in the allotted time.',
+      },
+      {
+        item: 'Take full-length NEET mock tests fortnightly',
+        explanation:
+          'Simulates exam conditions and identifies weak chapters that need targeted revision.',
+      },
     ],
   },
 
@@ -614,7 +650,7 @@ export const onlineBiologyClassesClass12: SEOLandingContent = {
     paragraphs: [
       {
         heading: 'Why Live Classes Outperform Self-Study for Class 12 NEET Biology',
-        body: 'Class 12 Biology contains chapters that are deceptively simple on the surface but demand analytical depth for NEET. Genetics, for example, appears straightforward when reading about Mendel\'s laws in NCERT, but NEET questions often present complex pedigree charts, trihybrid cross ratios, or gene mapping problems that require guided practice. Live classes provide the structured problem-solving environment where a teacher can walk students through a pedigree step by step, identifying autosomal versus sex-linked patterns, dominant versus recessive traits, and carrier probabilities. Similarly, Molecular Biology topics like the lac operon or splicing mechanisms benefit enormously from animated walkthroughs that a teacher narrates in real time, pausing to explain each regulatory element. Self-study students frequently develop misconceptions in these areas that persist until exposed in a mock test, by which point valuable revision time has been lost.',
+        body: "Class 12 Biology contains chapters that are deceptively simple on the surface but demand analytical depth for NEET. Genetics, for example, appears straightforward when reading about Mendel's laws in NCERT, but NEET questions often present complex pedigree charts, trihybrid cross ratios, or gene mapping problems that require guided practice. Live classes provide the structured problem-solving environment where a teacher can walk students through a pedigree step by step, identifying autosomal versus sex-linked patterns, dominant versus recessive traits, and carrier probabilities. Similarly, Molecular Biology topics like the lac operon or splicing mechanisms benefit enormously from animated walkthroughs that a teacher narrates in real time, pausing to explain each regulatory element. Self-study students frequently develop misconceptions in these areas that persist until exposed in a mock test, by which point valuable revision time has been lost.",
       },
       {
         heading: 'The Role of Mock Tests and Performance Analytics in Live Class Programs',
@@ -810,10 +846,26 @@ export const bestBiologyTutorClass12: SEOLandingContent = {
       },
     ],
     checklist: [
-      { item: 'Ensure the tutor has a track record with Class 12 specifically, not just Class 11', explanation: 'Class 12 demands board-NEET integration expertise that differs from pure foundation teaching.' },
-      { item: 'Ask how the tutor handles mid-year motivation drops', explanation: 'Academic expertise alone cannot sustain a student through the emotional highs and lows of Class 12.' },
-      { item: 'Confirm access to one-on-one sessions, not just group classes', explanation: 'Individual attention for personalised weak-area analysis is critical in the final year.' },
-      { item: 'Verify the tutor provides exam strategy guidance, not just subject teaching', explanation: 'Knowing which questions to attempt first, time allocation per section, and when to skip can swing 20+ marks.' },
+      {
+        item: 'Ensure the tutor has a track record with Class 12 specifically, not just Class 11',
+        explanation:
+          'Class 12 demands board-NEET integration expertise that differs from pure foundation teaching.',
+      },
+      {
+        item: 'Ask how the tutor handles mid-year motivation drops',
+        explanation:
+          'Academic expertise alone cannot sustain a student through the emotional highs and lows of Class 12.',
+      },
+      {
+        item: 'Confirm access to one-on-one sessions, not just group classes',
+        explanation:
+          'Individual attention for personalised weak-area analysis is critical in the final year.',
+      },
+      {
+        item: 'Verify the tutor provides exam strategy guidance, not just subject teaching',
+        explanation:
+          'Knowing which questions to attempt first, time allocation per section, and when to skip can swing 20+ marks.',
+      },
     ],
   },
 
@@ -1002,7 +1054,7 @@ export const neet2025BiologyCoaching: SEOLandingContent = {
       },
       {
         heading: 'Managing the Gap Between Board Exams and NEET 2026',
-        body: 'The four-to-six-week gap between CBSE board exams and NEET is a critical window that can determine a student\'s final score. Many students make the mistake of taking a break after boards, losing the momentum they built over months. The optimal approach is to begin NEET-specific revision within 48 hours of the last board exam. The first week should focus on re-reading Class 11 NCERT chapters that were deprioritised during board season, particularly Human Physiology and Plant Physiology. The second and third weeks should be devoted to full-length mock tests on alternate days with detailed error analysis on intervening days. The final week before NEET should involve light revision of high-yield topics, formula sheets for Genetics ratios, and ecological data, with early sleep to ensure peak cognitive performance on exam day. Coaching programs that provide structured post-board revision schedules help students navigate this period without anxiety or wasted time.',
+        body: "The four-to-six-week gap between CBSE board exams and NEET is a critical window that can determine a student's final score. Many students make the mistake of taking a break after boards, losing the momentum they built over months. The optimal approach is to begin NEET-specific revision within 48 hours of the last board exam. The first week should focus on re-reading Class 11 NCERT chapters that were deprioritised during board season, particularly Human Physiology and Plant Physiology. The second and third weeks should be devoted to full-length mock tests on alternate days with detailed error analysis on intervening days. The final week before NEET should involve light revision of high-yield topics, formula sheets for Genetics ratios, and ecological data, with early sleep to ensure peak cognitive performance on exam day. Coaching programs that provide structured post-board revision schedules help students navigate this period without anxiety or wasted time.",
       },
     ],
   },
@@ -1186,7 +1238,7 @@ export const boardNeetBiologyClass12: SEOLandingContent = {
     paragraphs: [
       {
         heading: 'Understanding the Overlap Between CBSE Boards and NEET Biology',
-        body: 'The CBSE Class 12 Biology board exam and NEET share the same NCERT-based syllabus, but they test knowledge in fundamentally different ways. Board exams reward comprehensive written answers with diagrams, requiring students to demonstrate depth through structured paragraphs and labelled illustrations. A board question on DNA replication might ask students to describe the process with a diagram and explain the role of each enzyme. NEET, by contrast, tests the same concept through a four-option MCQ that might present an incorrect statement about Okazaki fragments and ask students to identify the error. This difference in assessment format means that a student who prepares only for boards will struggle with NEET\'s speed demands, while a student who prepares only for NEET may lose marks in boards for incomplete diagrams or poorly structured answers. Dual preparation explicitly trains both skills for each chapter.',
+        body: "The CBSE Class 12 Biology board exam and NEET share the same NCERT-based syllabus, but they test knowledge in fundamentally different ways. Board exams reward comprehensive written answers with diagrams, requiring students to demonstrate depth through structured paragraphs and labelled illustrations. A board question on DNA replication might ask students to describe the process with a diagram and explain the role of each enzyme. NEET, by contrast, tests the same concept through a four-option MCQ that might present an incorrect statement about Okazaki fragments and ask students to identify the error. This difference in assessment format means that a student who prepares only for boards will struggle with NEET's speed demands, while a student who prepares only for NEET may lose marks in boards for incomplete diagrams or poorly structured answers. Dual preparation explicitly trains both skills for each chapter.",
       },
       {
         heading: 'The Strategic Calendar for Board and NEET Success',
@@ -1198,11 +1250,31 @@ export const boardNeetBiologyClass12: SEOLandingContent = {
       },
     ],
     comparisonTable: [
-      { Aspect: 'Question Format', 'CBSE Board Exam': 'Descriptive, diagram-based, structured answers', 'NEET Exam': 'Multiple-choice, assertion-reason, matching type' },
-      { Aspect: 'Time per Question', 'CBSE Board Exam': '3-5 minutes (fewer questions, longer answers)', 'NEET Exam': '~1 minute (90 Biology questions in ~60 minutes)' },
-      { Aspect: 'Syllabus Coverage', 'CBSE Board Exam': 'Class 12 NCERT only', 'NEET Exam': 'Class 11 + Class 12 NCERT' },
-      { Aspect: 'Scoring Strategy', 'CBSE Board Exam': 'Attempt all, focus on presentation and diagrams', 'NEET Exam': 'Accuracy over speed, negative marking penalty' },
-      { Aspect: 'Preparation Peak', 'CBSE Board Exam': 'January-February', 'NEET Exam': 'April-May' },
+      {
+        Aspect: 'Question Format',
+        'CBSE Board Exam': 'Descriptive, diagram-based, structured answers',
+        'NEET Exam': 'Multiple-choice, assertion-reason, matching type',
+      },
+      {
+        Aspect: 'Time per Question',
+        'CBSE Board Exam': '3-5 minutes (fewer questions, longer answers)',
+        'NEET Exam': '~1 minute (90 Biology questions in ~60 minutes)',
+      },
+      {
+        Aspect: 'Syllabus Coverage',
+        'CBSE Board Exam': 'Class 12 NCERT only',
+        'NEET Exam': 'Class 11 + Class 12 NCERT',
+      },
+      {
+        Aspect: 'Scoring Strategy',
+        'CBSE Board Exam': 'Attempt all, focus on presentation and diagrams',
+        'NEET Exam': 'Accuracy over speed, negative marking penalty',
+      },
+      {
+        Aspect: 'Preparation Peak',
+        'CBSE Board Exam': 'January-February',
+        'NEET Exam': 'April-May',
+      },
     ],
   },
 

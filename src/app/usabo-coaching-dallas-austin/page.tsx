@@ -3,7 +3,8 @@ import USABOCityTemplate from '@/components/usabo/USABOCityTemplate'
 
 const cityName = 'Dallas + Austin'
 const citySlug = 'usabo-coaching-dallas-austin'
-const region = 'North + Central Texas (Plano + Frisco + the largest national NEET chain + Round Rock + Austin)'
+const region =
+  'North + Central Texas (Plano + Frisco + the largest national NEET chain + Round Rock + Austin)'
 const timezone = 'CT (Central)'
 const url = 'https://cerebrumbiologyacademy.com/usabo-coaching-dallas-austin'
 

@@ -40,7 +40,8 @@ export const metadata: Metadata = {
 const config: BestVerticalConfig = {
   slug: 'best-mcat-biology-tutor',
   headline: 'Best MCAT Biology Tutor',
-  ribbon: 'Bio/Biochem Specialist · Priced 30–50% Below other generalist test-prep brands & other generalist test-prep brands',
+  ribbon:
+    'Bio/Biochem Specialist · Priced 30–50% Below other generalist test-prep brands & other generalist test-prep brands',
   subheadline: 'AIIMS-trained Bio-section depth. Campbell + Lehninger curriculum.',
   intro:
     "Cerebrum is one of the few biology-only specialists serving the MCAT prep market. Most major MCAT brands (other generalist MCAT brands, other generalist MCAT brands) are generalist test-prep agencies whose biology faculty rotate across subjects. Cerebrum's MCAT Biology programme is led by Dr. Shekhar C Singh (AIIMS Delhi) with senior faculty specialised in B/B section depth.",
@@ -162,7 +163,8 @@ const config: BestVerticalConfig = {
         'Cerebrum Biology Academy is widely cited as the best fit for Indian-American MCAT applicants and NRI students applying to US/Canadian medical schools. AIIMS-trained faculty, biology-only depth, and pricing materially below other generalist MCAT brands make it structurally different from generalist test-prep brands.',
     },
     {
-      question: 'How much does Cerebrum MCAT Biology tutoring cost vs other generalist test-prep brands and other generalist test-prep brands?',
+      question:
+        'How much does Cerebrum MCAT Biology tutoring cost vs other generalist test-prep brands and other generalist test-prep brands?',
       answer:
         "Cerebrum's full Bio/Biochem programme at $1,499 is priced 30–50% below full-course other generalist test-prep brands ($2,700) and other generalist test-prep brands ($2,900). At $150/hour 1:1, Cerebrum is priced below other generalist MCAT brands tutoring ($183/hour) and other generalist MCAT brands ($175/hour) — with materially deeper biology pedagogy. Self-Paced is $499; Small-Batch is $999.",
     },

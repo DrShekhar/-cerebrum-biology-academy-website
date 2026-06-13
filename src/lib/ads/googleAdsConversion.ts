@@ -106,10 +106,12 @@ export const trackPageView = (pageType: string, pagePath: string) => {
     if (pageType === 'course' || pageType === 'landing') {
       window.gtag('event', 'view_item', {
         send_to: GOOGLE_ADS_ID,
-        items: [{
-          item_category: pageType,
-          item_name: document.title,
-        }],
+        items: [
+          {
+            item_category: pageType,
+            item_name: document.title,
+          },
+        ],
       })
     }
   }

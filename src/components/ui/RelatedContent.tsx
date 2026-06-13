@@ -19,25 +19,72 @@ export interface RelatedLink {
 
 // Pre-defined related content categories
 export const RELATED_COURSES: RelatedLink[] = [
-  { title: 'NEET Foundation (Class 11)', href: '/courses/foundation', category: 'course', description: '2-year comprehensive program' },
-  { title: 'NEET Target (Class 12)', href: '/courses/class-12', category: 'course', description: '1-year intensive coaching' },
-  { title: 'NEET Dropper Batch', href: '/courses/neet-dropper', category: 'course', description: 'Specialized repeater program', isPopular: true },
-  { title: 'Online NEET Biology', href: '/online-neet-biology-classes', category: 'course', description: 'Live interactive classes' },
-  { title: 'NEET Crash Course', href: '/courses/neet-crash-course', category: 'course', description: 'Last-minute revision' },
+  {
+    title: 'NEET Foundation (Class 11)',
+    href: '/courses/foundation',
+    category: 'course',
+    description: '2-year comprehensive program',
+  },
+  {
+    title: 'NEET Target (Class 12)',
+    href: '/courses/class-12',
+    category: 'course',
+    description: '1-year intensive coaching',
+  },
+  {
+    title: 'NEET Dropper Batch',
+    href: '/courses/neet-dropper',
+    category: 'course',
+    description: 'Specialized repeater program',
+    isPopular: true,
+  },
+  {
+    title: 'Online NEET Biology',
+    href: '/online-neet-biology-classes',
+    category: 'course',
+    description: 'Live interactive classes',
+  },
+  {
+    title: 'NEET Crash Course',
+    href: '/courses/neet-crash-course',
+    category: 'course',
+    description: 'Last-minute revision',
+  },
 ]
 
 export const RELATED_LOCATIONS: RelatedLink[] = [
-  { title: 'NEET Coaching Gurugram', href: '/neet-coaching-gurugram', category: 'location', isPopular: true },
+  {
+    title: 'NEET Coaching Gurugram',
+    href: '/neet-coaching-gurugram',
+    category: 'location',
+    isPopular: true,
+  },
   { title: 'NEET Coaching Delhi', href: '/neet-coaching-delhi', category: 'location' },
-  { title: 'NEET Coaching South Extension', href: '/neet-coaching-south-extension', category: 'location' },
+  {
+    title: 'NEET Coaching South Extension',
+    href: '/neet-coaching-south-extension',
+    category: 'location',
+  },
   { title: 'NEET Coaching Rohini', href: '/neet-coaching-rohini', category: 'location' },
   { title: 'NEET Coaching Noida', href: '/neet-coaching-noida', category: 'location' },
 ]
 
 export const RELATED_COMPARISONS: RelatedLink[] = [
-  { title: 'Cerebrum vs the 2nd-largest national NEET chain', href: '/cerebrum-vs-aakash-neet-coaching', category: 'comparison' },
-  { title: 'Cerebrum vs the largest national NEET chain', href: '/cerebrum-vs-allen-neet-coaching', category: 'comparison' },
-  { title: 'Online vs Offline Coaching', href: '/online-vs-offline-neet-coaching', category: 'comparison' },
+  {
+    title: 'Cerebrum vs the 2nd-largest national NEET chain',
+    href: '/cerebrum-vs-aakash-neet-coaching',
+    category: 'comparison',
+  },
+  {
+    title: 'Cerebrum vs the largest national NEET chain',
+    href: '/cerebrum-vs-allen-neet-coaching',
+    category: 'comparison',
+  },
+  {
+    title: 'Online vs Offline Coaching',
+    href: '/online-vs-offline-neet-coaching',
+    category: 'comparison',
+  },
   { title: 'NEET Fees Comparison', href: '/neet-coaching-fees-comparison', category: 'comparison' },
 ]
 
@@ -45,7 +92,12 @@ export const RELATED_STATES: RelatedLink[] = [
   { title: 'NEET Coaching for UP Students', href: '/states/uttar-pradesh', category: 'state' },
   { title: 'NEET Coaching for Bihar Students', href: '/states/bihar', category: 'state' },
   { title: 'NEET Coaching for Rajasthan Students', href: '/states/rajasthan', category: 'state' },
-  { title: 'NEET Coaching for Delhi Students', href: '/states/delhi', category: 'state', isNew: true },
+  {
+    title: 'NEET Coaching for Delhi Students',
+    href: '/states/delhi',
+    category: 'state',
+    isNew: true,
+  },
   { title: 'All States', href: '/states', category: 'state' },
 ]
 
@@ -134,10 +186,14 @@ export function RelatedContent({
                   <Icon className="w-4 h-4 text-gray-400 group-hover:text-blue-500" />
                   <span>{link.title}</span>
                   {link.isNew && (
-                    <span className="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full">New</span>
+                    <span className="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full">
+                      New
+                    </span>
                   )}
                   {link.isPopular && (
-                    <span className="bg-amber-100 text-amber-700 text-xs px-2 py-0.5 rounded-full">Popular</span>
+                    <span className="bg-amber-100 text-amber-700 text-xs px-2 py-0.5 rounded-full">
+                      Popular
+                    </span>
                   )}
                   <ArrowRight className="w-3 h-3 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>
@@ -175,10 +231,14 @@ export function RelatedContent({
                       {link.title}
                     </h3>
                     {link.isNew && (
-                      <span className="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full">New</span>
+                      <span className="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full">
+                        New
+                      </span>
                     )}
                     {link.isPopular && (
-                      <span className="bg-amber-100 text-amber-700 text-xs px-2 py-0.5 rounded-full">Popular</span>
+                      <span className="bg-amber-100 text-amber-700 text-xs px-2 py-0.5 rounded-full">
+                        Popular
+                      </span>
                     )}
                   </div>
                   {showDescription && link.description && (
@@ -196,7 +256,11 @@ export function RelatedContent({
 }
 
 // Quick related links for footer/sidebar
-export function QuickLinks({ category }: { category: 'courses' | 'locations' | 'comparisons' | 'states' }) {
+export function QuickLinks({
+  category,
+}: {
+  category: 'courses' | 'locations' | 'comparisons' | 'states'
+}) {
   const linksMap = {
     courses: RELATED_COURSES,
     locations: RELATED_LOCATIONS,

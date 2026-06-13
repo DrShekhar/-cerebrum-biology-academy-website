@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'RE-NEET 2026 Online Coaching | Live Classes, No Relocation Required',
-    description: 'Online RE-NEET 2026 coaching by AIIMS-trained faculty. Live (not recorded) evening batches across IST, EST, GST timezones. 6–8 week crash course built for the reconduct window. Join from anywhere i...',
+    description:
+      'Online RE-NEET 2026 coaching by AIIMS-trained faculty. Live (not recorded) evening batches across IST, EST, GST timezones. 6–8 week crash course built for the reconduct window. Join from anywhere i...',
   },
 }
 

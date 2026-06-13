@@ -49,12 +49,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about bacterial cell wall structure and Gram staining:\nS1: Gram-positive bacteria have a thick peptidoglycan layer (20-80 nm) that retains the crystal violet-iodine complex during decolorization with alcohol.\nS2: Gram-negative bacteria have an outer membrane containing lipopolysaccharide (LPS), which serves as an endotoxin and can trigger septic shock when released into the bloodstream.\nS3: Mycoplasma bacteria stain Gram-positive because their cholesterol-containing membranes strongly retain crystal violet.\nS4: The periplasmic space in Gram-negative bacteria contains enzymes for nutrient degradation, detoxification, and cell wall synthesis.",
-      "options": [
-        "TTTT",
-        "TTFT",
-        "TTTF",
-        "TFTT"
-      ],
+      "options": ["TTTT", "TTFT", "TTTF", "TFTT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Gram-positive bacteria have thick peptidoglycan layers (20-80 nm) with multiple layers of cross-linked NAG-NAM polymers. This thick layer traps the crystal violet-iodine (CV-I) complex and prevents its removal during alcohol decolorization. S2 is TRUE: The outer membrane of Gram-negative bacteria contains LPS, whose lipid A component is an endotoxin. When released from lysed bacteria, lipid A activates immune cells via TLR4, potentially leading to cytokine storm and septic shock. S3 is FALSE: Mycoplasma bacteria completely lack cell walls (no peptidoglycan at all) and are therefore not stained by the Gram procedure. Their membranes contain sterols (cholesterol obtained from host) for stability, but this does not enable crystal violet retention, which requires peptidoglycan. S4 is TRUE: The periplasm is the gel-like space between the inner and outer membranes of Gram-negative bacteria, containing degradative enzymes (e.g., beta-lactamases), binding proteins for nutrient transport, and enzymes involved in peptidoglycan synthesis and modification.",
       "isOlympiad": true,
@@ -189,12 +184,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about archaeal biology:\nS1: Archaeal membranes contain ether-linked isoprenoid lipids, in contrast to the ester-linked fatty acid lipids of bacteria and eukaryotes.\nS2: Some archaea (thermophiles) have tetraether lipids that span the entire membrane bilayer, forming a monolayer that provides stability at extreme temperatures.\nS3: Archaeal DNA replication machinery (initiator proteins, helicases, primases, DNA polymerases) more closely resembles the eukaryotic replication system than the bacterial one.\nS4: All archaea are obligate extremophiles that cannot survive in moderate environments.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFF",
-        "TFFT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFF", "TFFT"],
       "correctAnswer": "A",
       "explanation": "S1 is TRUE: Archaeal membrane lipids have ether bonds linking glycerol to isoprenoid chains (typically phytanyl), compared to ester bonds linking glycerol to fatty acids in bacteria and eukaryotes. Additionally, archaeal glycerol-phosphate backbone uses the sn-2,3 stereochemistry (sn-glycerol-1-phosphate), opposite to bacterial/eukaryotic sn-1,2. S2 is TRUE: Crenarchaeota and other thermophilic archaea possess tetraether lipids (e.g., caldarchaeol) where two glycerol moieties are linked by two C40 biphytanyl chains spanning the entire membrane, creating a monolayer. This eliminates the midplane weakness of a bilayer, providing extraordinary thermal stability. S3 is TRUE: Archaeal DNA replication proteins share homology with eukaryotic proteins: Orc1/Cdc6-like initiator, MCM helicase, GINS complex, and family B DNA polymerases. The bacterial system uses DnaA, DnaB, DnaG, and DNA Pol III. S4 is FALSE: Archaea are found in virtually all environments, including soils, oceans, freshwater lakes, and the human gut and skin microbiome. They are among the most abundant organisms in the ocean.",
       "isOlympiad": true,
@@ -369,12 +359,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about bacterial metabolic diversity:\nS1: Photoheterotrophs such as purple non-sulfur bacteria can use light as an energy source while assimilating organic compounds as their carbon source.\nS2: Obligate anaerobes like Clostridium botulinum are killed by the presence of molecular oxygen because they lack superoxide dismutase and catalase to neutralize reactive oxygen species.\nS3: Facultative anaerobes like E. coli can switch between aerobic respiration using O2 as the terminal electron acceptor and anaerobic respiration using alternative electron acceptors like nitrate or fumarate.\nS4: All bacteria capable of chemolithotrophy (using inorganic electron donors) are obligate autotrophs that can only use CO2 as a carbon source.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFF",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFF", "TFTT"],
       "correctAnswer": "A",
       "explanation": "S1 is TRUE: Purple non-sulfur bacteria (e.g., Rhodobacter) are photoheterotrophs under anaerobic conditions with light and organic carbon. They use bacteriochlorophyll-based cyclic photophosphorylation for energy (ATP) while assimilating organic compounds (fatty acids, ethanol, succinate) as carbon sources. S2 is TRUE: Strict (obligate) anaerobes lack the protective enzymes superoxide dismutase (SOD) and catalase that convert toxic reactive oxygen species (superoxide O2-, hydrogen peroxide H2O2) to harmless products. Without these enzymes, oxygen generates lethal free radicals that damage DNA, proteins, and lipids. S3 is TRUE: E. coli preferentially uses O2 as the terminal electron acceptor during aerobic respiration (highest ATP yield) but switches to anaerobic respiration using nitrate, fumarate, DMSO, or other alternative electron acceptors when O2 is unavailable, regulated by the ArcAB and FNR systems. S4 is FALSE: Many chemolithotrophs are mixotrophs or facultative heterotrophs. For example, some sulfur-oxidizing bacteria can simultaneously use thiosulfate as an electron donor and organic carbon as a carbon source.",
       "isOlympiad": true,
@@ -509,12 +494,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about bacterial pathogenesis mechanisms:\nS1: Type III secretion systems (T3SS) function as molecular syringes that inject effector proteins directly into host cells through a needle-like structure spanning both bacterial membranes and the host cell membrane.\nS2: Pathogenicity islands are large genomic regions (10-200 kb) acquired by horizontal gene transfer that encode virulence factors, often have different GC content from the core genome, and are flanked by mobile genetic elements.\nS3: Koch's postulates can always be satisfied for every bacterial pathogen, including obligate intracellular pathogens that cannot be grown in pure culture.\nS4: Toxin-antitoxin systems in bacteria can contribute to persistence during antibiotic treatment by triggering a dormant state in a subpopulation of cells.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFTF",
-        "TTFF"
-      ],
+      "options": ["TTFT", "TTTT", "TFTF", "TTFF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: The T3SS (also called the injectisome) is a multiprotein complex resembling a molecular syringe. It spans the bacterial inner membrane, periplasm, outer membrane, and forms a translocon pore in the host cell membrane, allowing direct translocation of effector proteins from the bacterial cytoplasm into the host cell. T3SS is used by Salmonella, Shigella, Yersinia, and enteropathogenic E. coli. S2 is TRUE: Pathogenicity islands (PAIs) are hallmarks of bacterial virulence evolution. They encode toxins, adhesins, secretion systems, and iron acquisition systems. Their distinct GC content and association with tRNA genes and mobile elements indicate horizontal acquisition. S3 is FALSE: Koch's postulates require isolation in pure culture, which is impossible for obligate intracellular pathogens (Chlamydia, Rickettsia, Mycobacterium leprae) and bacteria that only cause disease in the context of complex microbial communities. Molecular Koch's postulates have been proposed as alternatives. S4 is TRUE: Toxin-antitoxin (TA) modules can trigger growth arrest by inhibiting translation, replication, or cell wall synthesis. The antitoxin is degraded during stress, freeing the toxin to induce dormancy (persistence), creating a subpopulation tolerant to antibiotics.",
       "isOlympiad": true,
@@ -769,12 +749,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about bacterial gene regulation:\nS1: Sigma factors in bacteria direct RNA polymerase to specific promoter sequences, and alternative sigma factors allow rapid reprogramming of gene expression in response to environmental changes (e.g., sigma-32 for heat shock, sigma-S for stationary phase).\nS2: Riboswitches are mRNA regulatory elements that directly bind small molecule metabolites in the 5' UTR, changing RNA secondary structure to control transcription termination or translation initiation without requiring a protein regulator.\nS3: All bacterial gene regulation occurs at the transcriptional level; post-transcriptional regulation does not exist in prokaryotes.\nS4: Small regulatory RNAs (sRNAs) in bacteria can base-pair with target mRNAs to either stabilize or destabilize them, functioning analogously to eukaryotic microRNAs in post-transcriptional gene regulation.",
-      "options": [
-        "TTFT",
-        "TTTF",
-        "TTTT",
-        "TFFT"
-      ],
+      "options": ["TTFT", "TTTF", "TTTT", "TFFT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Sigma factors are dissociable subunits of bacterial RNA polymerase that confer promoter specificity. E. coli has seven sigma factors: sigma-70 (housekeeping), sigma-32 (heat shock/misfolded proteins), sigma-S/RpoS (stationary phase/general stress), sigma-54 (nitrogen), sigma-F/FliA (flagellar), sigma-E (extracytoplasmic stress), and sigma-FecI (iron citrate). Switching sigma factors rapidly redirects transcription to new gene sets. S2 is TRUE: Riboswitches are cis-acting RNA elements (typically in 5' UTRs) that undergo conformational changes upon directly binding specific metabolites (e.g., thiamine pyrophosphate, flavin mononucleotide, SAM, lysine). This conformational change can form or disrupt terminators (controlling transcription) or sequester/expose the Shine-Dalgarno sequence (controlling translation). S3 is FALSE: Bacteria extensively use post-transcriptional regulation including sRNAs, RNA thermometers, riboswitches, RNase-mediated mRNA degradation, translational coupling, and ribosome-mediated attenuation. S4 is TRUE: Bacterial sRNAs (e.g., RyhB, MicA, OxyS) base-pair with target mRNAs, often facilitated by the RNA chaperone Hfq, to promote or inhibit translation and affect mRNA stability.",
       "isOlympiad": true,
@@ -1109,12 +1084,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about bacterial photosynthesis:\nS1: Cyanobacteria perform oxygenic photosynthesis using two photosystems (PSI and PSII) linked in series, similar to plants and algae.\nS2: Purple sulfur bacteria use bacteriochlorophyll and a single reaction center (homologous to PSII) for anoxygenic photosynthesis, using H2S as an electron donor instead of water.\nS3: Green sulfur bacteria perform photosynthesis using a type I reaction center (homologous to PSI) and can use the reverse tricarboxylic acid cycle for carbon fixation instead of the Calvin cycle.\nS4: Bacteriorhodopsin in halophilic archaea is a chlorophyll-based photosystem that performs the same type of photosynthesis as cyanobacteria.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFF",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFF", "TFTT"],
       "correctAnswer": "A",
       "explanation": "S1 is TRUE: Cyanobacteria have both PSI and PSII working in series (Z-scheme), with PSII using water as the electron donor and producing O2, and PSI reducing ferredoxin for NADPH production. This oxygenic photosynthesis was the evolutionary origin of chloroplast photosynthesis through endosymbiosis. S2 is TRUE: Purple sulfur bacteria (e.g., Chromatium) use bacteriochlorophyll a or b in a type II reaction center (homologous to PSII) for cyclic photophosphorylation. They use H2S as an electron donor, depositing sulfur granules intracellularly (or extracellularly in some species). S3 is TRUE: Green sulfur bacteria (e.g., Chlorobium) use bacteriochlorophyll c, d, or e in chlorosomes with a type I reaction center (homologous to PSI). Many use the reverse TCA (rTCA) cycle for carbon fixation, which is more energy-efficient than the Calvin cycle under low-light conditions. S4 is FALSE: Bacteriorhodopsin is NOT a chlorophyll-based system. It is a retinal-containing protein (using retinal chromophore) that functions as a light-driven proton pump, generating a proton motive force for ATP synthesis. It is mechanistically and evolutionarily unrelated to chlorophyll-based photosynthesis.",
       "isOlympiad": true,

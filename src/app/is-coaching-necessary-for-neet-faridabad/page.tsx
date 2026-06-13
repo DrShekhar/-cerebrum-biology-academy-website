@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Is Coaching Necessary for NEET? Faridabad Expert Answer | 2026',
-    description: 'Is coaching necessary for NEET? Expert analysis from Faridabad NEET toppers. When coaching helps vs self-study works. Honest advice from AIIMS faculty. Call 88264-44334!',
+    description:
+      'Is coaching necessary for NEET? Expert analysis from Faridabad NEET toppers. When coaching helps vs self-study works. Honest advice from AIIMS faculty. Call 88264-44334!',
   },
 }
 
@@ -76,7 +77,11 @@ export default function IsCoachingNecessaryForNEETFaridabad() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+        knowsAbout={[
+          'NEET Faridabad',
+          'NEET Biology Faridabad',
+          'Medical entrance coaching Faridabad',
+        ]}
       />
       <section className="bg-gradient-to-r from-slate-800 to-slate-700 text-white py-16">
         <div className="container mx-auto px-4">
@@ -235,7 +240,9 @@ export default function IsCoachingNecessaryForNEETFaridabad() {
               Call 88264-44334
             </a>
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition"
             >
               Book Free Demo

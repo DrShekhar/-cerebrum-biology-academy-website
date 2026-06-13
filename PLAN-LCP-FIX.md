@@ -11,10 +11,12 @@ This plan addresses the LCP (Largest Contentful Paint) issue affecting 54 URLs o
 ## Phase 1: Create Lazy Loading Components (Already Done ✅)
 
 ### 1.1 LazyVideo Component
+
 - **File**: `src/components/performance/LazyVideo.tsx` ✅
 - **Purpose**: Lazy load native video elements with poster image facade
 
 ### 1.2 LazyYouTubeEmbed Component
+
 - **File**: `src/components/performance/LazyYouTubeEmbed.tsx` ✅
 - **Purpose**: Facade pattern for YouTube - shows thumbnail, loads iframe on click
 
@@ -23,10 +25,12 @@ This plan addresses the LCP (Largest Contentful Paint) issue affecting 54 URLs o
 ## Phase 2: Create LazyGoogleMap Component (New)
 
 ### 2.1 Create Component
+
 - **File**: `src/components/performance/LazyGoogleMap.tsx`
 - **Purpose**: Facade pattern for Google Maps - shows static map image, loads interactive map on click/hover
 
 **Implementation approach:**
+
 ```tsx
 // Shows a static Google Maps image initially
 // On user interaction (click/hover), loads the full interactive iframe
@@ -34,6 +38,7 @@ This plan addresses the LCP (Largest Contentful Paint) issue affecting 54 URLs o
 ```
 
 **Key features:**
+
 - Static map thumbnail from Google Static Maps API (or placeholder)
 - "Click to interact" overlay
 - Loads iframe only when user wants to interact
@@ -44,11 +49,13 @@ This plan addresses the LCP (Largest Contentful Paint) issue affecting 54 URLs o
 ## Phase 3: Update YouTube Components
 
 ### 3.1 YouTubeChannel.tsx
+
 - **File**: `src/components/media/YouTubeChannel.tsx`
 - **Change**: Replace modal iframe with `LazyYouTubeEmbed`
 - **Lines affected**: 314-325 (modal section)
 
 **Before:**
+
 ```tsx
 <iframe
   src={`https://www.youtube.com/embed/${selectedVideo.id}?autoplay=1`}
@@ -57,6 +64,7 @@ This plan addresses the LCP (Largest Contentful Paint) issue affecting 54 URLs o
 ```
 
 **After:**
+
 ```tsx
 <LazyYouTubeEmbed
   videoId={selectedVideo.id}
@@ -67,11 +75,13 @@ This plan addresses the LCP (Largest Contentful Paint) issue affecting 54 URLs o
 ```
 
 ### 3.2 RealStudentTestimonials.tsx
+
 - **File**: `src/components/testimonials/RealStudentTestimonials.tsx`
 - **Change**: Replace modal iframe with `LazyYouTubeEmbed`
 - **Lines affected**: 234-245 (modal section)
 
 **Before:**
+
 ```tsx
 <iframe
   src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?autoplay=1`}
@@ -80,6 +90,7 @@ This plan addresses the LCP (Largest Contentful Paint) issue affecting 54 URLs o
 ```
 
 **After:**
+
 ```tsx
 <LazyYouTubeEmbed
   videoId={selectedVideo.youtubeId}
@@ -93,11 +104,13 @@ This plan addresses the LCP (Largest Contentful Paint) issue affecting 54 URLs o
 ## Phase 4: Update Video Components
 
 ### 4.1 AuthenticTestimonials.tsx
+
 - **File**: `src/components/trust/AuthenticTestimonials.tsx`
 - **Change**: Replace `<video autoPlay>` in modal with `LazyVideo`
 - **Lines affected**: 413-418
 
 **Before:**
+
 ```tsx
 <video
   className="w-full rounded-xl"
@@ -108,6 +121,7 @@ This plan addresses the LCP (Largest Contentful Paint) issue affecting 54 URLs o
 ```
 
 **After:**
+
 ```tsx
 <LazyVideo
   src={testimonialData.find((t) => t.id === showVideo)?.videoUrl || ''}
@@ -123,29 +137,31 @@ This plan addresses the LCP (Largest Contentful Paint) issue affecting 54 URLs o
 ## Phase 5: Update Google Maps Embeds (13 Files)
 
 ### Strategy
+
 Replace all direct `<iframe>` Google Maps embeds with the new `<LazyGoogleMap>` component.
 
 ### Files to Update
 
-| # | File Path | Priority |
-|---|-----------|----------|
-| 1 | `src/app/neet-coaching-gurgaon/page.tsx` | HIGH (line ~680) |
-| 2 | `src/app/neet-coaching-gurugram/page.tsx` | HIGH |
-| 3 | `src/app/neet-coaching-noida/page.tsx` | HIGH |
-| 4 | `src/app/neet-coaching-faridabad/page.tsx` | HIGH |
-| 5 | `src/app/neet-coaching-rohini/page.tsx` | HIGH |
-| 6 | `src/app/neet-coaching-south-delhi/PageContent.tsx` | HIGH |
-| 7 | `src/app/locations/gurugram/GurugramLocationContent.tsx` | MEDIUM |
-| 8 | `src/app/locations/green-park/page.tsx` | MEDIUM |
-| 9 | `src/app/locations/south-extension/page.tsx` | MEDIUM |
-| 10 | `src/app/locations/rohini/page.tsx` | MEDIUM |
-| 11 | `src/app/locations/noida/page.tsx` | MEDIUM |
-| 12 | `src/app/locations/faridabad/page.tsx` | MEDIUM |
-| 13 | `src/app/contact/page.tsx` | HIGH |
+| #   | File Path                                                | Priority         |
+| --- | -------------------------------------------------------- | ---------------- |
+| 1   | `src/app/neet-coaching-gurgaon/page.tsx`                 | HIGH (line ~680) |
+| 2   | `src/app/neet-coaching-gurugram/page.tsx`                | HIGH             |
+| 3   | `src/app/neet-coaching-noida/page.tsx`                   | HIGH             |
+| 4   | `src/app/neet-coaching-faridabad/page.tsx`               | HIGH             |
+| 5   | `src/app/neet-coaching-rohini/page.tsx`                  | HIGH             |
+| 6   | `src/app/neet-coaching-south-delhi/PageContent.tsx`      | HIGH             |
+| 7   | `src/app/locations/gurugram/GurugramLocationContent.tsx` | MEDIUM           |
+| 8   | `src/app/locations/green-park/page.tsx`                  | MEDIUM           |
+| 9   | `src/app/locations/south-extension/page.tsx`             | MEDIUM           |
+| 10  | `src/app/locations/rohini/page.tsx`                      | MEDIUM           |
+| 11  | `src/app/locations/noida/page.tsx`                       | MEDIUM           |
+| 12  | `src/app/locations/faridabad/page.tsx`                   | MEDIUM           |
+| 13  | `src/app/contact/page.tsx`                               | HIGH             |
 
 ### Example Transformation
 
 **Before:**
+
 ```tsx
 <iframe
   src="https://www.google.com/maps/embed?pb=!1m18..."
@@ -159,6 +175,7 @@ Replace all direct `<iframe>` Google Maps embeds with the new `<LazyGoogleMap>` 
 ```
 
 **After:**
+
 ```tsx
 <LazyGoogleMap
   embedUrl="https://www.google.com/maps/embed?pb=!1m18..."
@@ -167,7 +184,7 @@ Replace all direct `<iframe>` Google Maps embeds with the new `<LazyGoogleMap>` 
   placeholder={{
     lat: 28.5696,
     lng: 77.2144,
-    address: "South Extension, New Delhi"
+    address: 'South Extension, New Delhi',
   }}
 />
 ```
@@ -177,6 +194,7 @@ Replace all direct `<iframe>` Google Maps embeds with the new `<LazyGoogleMap>` 
 ## Phase 6: Update Index Exports
 
 ### 6.1 Update Performance Components Index
+
 - **File**: `src/components/performance/index.ts`
 - **Change**: Add `LazyGoogleMap` export
 
@@ -197,18 +215,19 @@ Replace all direct `<iframe>` Google Maps embeds with the new `<LazyGoogleMap>` 
 
 ## Risk Assessment
 
-| Risk | Mitigation |
-|------|------------|
-| Breaking existing functionality | Each component maintains same props interface |
-| SEO impact | Schema markup preserved, thumbnail images indexed |
-| User experience change | Clear "click to play/interact" affordances |
-| Mobile performance | Components optimized for mobile-first |
+| Risk                            | Mitigation                                        |
+| ------------------------------- | ------------------------------------------------- |
+| Breaking existing functionality | Each component maintains same props interface     |
+| SEO impact                      | Schema markup preserved, thumbnail images indexed |
+| User experience change          | Clear "click to play/interact" affordances        |
+| Mobile performance              | Components optimized for mobile-first             |
 
 ---
 
 ## Verification Steps
 
 After implementation:
+
 1. Run `npm run build` to verify no type errors
 2. Run Lighthouse audit on key pages
 3. Check PageSpeed Insights for LCP metric
@@ -219,9 +238,11 @@ After implementation:
 ## Files Changed Summary
 
 ### New Files (1)
+
 - `src/components/performance/LazyGoogleMap.tsx`
 
 ### Modified Files (17)
+
 - `src/components/performance/index.ts`
 - `src/components/media/YouTubeChannel.tsx`
 - `src/components/testimonials/RealStudentTestimonials.tsx`

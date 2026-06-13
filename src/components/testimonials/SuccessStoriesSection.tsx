@@ -17,14 +17,10 @@ function StoryCard({ story, index }: { story: SuccessStory; index: number }) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
-    <div
-      className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 animate-fadeInUp"
-    >
+    <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 animate-fadeInUp">
       {/* Score Improvement Header */}
       <div className="bg-green-600 p-6 text-white relative overflow-hidden">
-        <div
-          className="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full animate-fadeInUp"
-        />
+        <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full animate-fadeInUp" />
 
         <div className="relative z-10">
           <div className="flex items-center justify-between mb-4">
@@ -122,9 +118,7 @@ export function SuccessStoriesSection({
     <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div
-          className="text-center mb-12 animate-fadeInUp"
-        >
+        <div className="text-center mb-12 animate-fadeInUp">
           <div className="inline-flex items-center bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <TrendingUp className="w-4 h-4 mr-2" />
             Score Improvements
@@ -134,9 +128,7 @@ export function SuccessStoriesSection({
         </div>
 
         {/* Stats Bar */}
-        <div
-          className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-12 animate-fadeInUp"
-        >
+        <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-12 animate-fadeInUp">
           <div className="text-center bg-white rounded-xl p-4 shadow-md">
             <div className="text-2xl md:text-3xl font-bold text-green-600">156+</div>
             <div className="text-xs md:text-sm text-gray-600">Avg. Improvement</div>
@@ -160,9 +152,7 @@ export function SuccessStoriesSection({
 
         {/* View All Button */}
         {showViewAll && (
-          <div
-            className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <Link
               href="/success-stories"
               className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl"

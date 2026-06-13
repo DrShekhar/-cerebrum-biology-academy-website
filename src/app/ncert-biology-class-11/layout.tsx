@@ -21,8 +21,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/ncert-biology-class-11' },
   openGraph: {
     title: 'NCERT Biology Class 11 | 22 Chapters | Cerebrum',
-    description:
-      'All 22 chapters line-by-line with NEET-aligned MCQs from AIIMS faculty.',
+    description: 'All 22 chapters line-by-line with NEET-aligned MCQs from AIIMS faculty.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/ncert-biology-class-11',

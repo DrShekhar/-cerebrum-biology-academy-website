@@ -5,9 +5,9 @@ import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaS
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
-  title: 'Best a leading national educational institution Alternative in Gurugram 2026 | Small Batch Personal Attention',
+  title: 'Best Narayana Alternative in Gurugram 2026 | Small Batch Personal Attention',
   description:
-    "Looking for a leading national educational institution alternative in Gurugram (Gurgaon)? Cerebrum: 25-student batches vs a leading national educational institution's 100+. AIIMS faculty, 98% success rate. Personal attention guaranteed. Call 88264-44334!",
+    "Looking for Narayana alternative in Gurugram (Gurgaon)? Cerebrum: 25-student batches vs Narayana's 100+. AIIMS faculty, 98% success rate. Personal attention guaranteed. Call 88264-44334!",
   keywords: [
     'narayana alternative gurugram',
     'narayana alternative gurgaon',
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     locale: 'en_IN',
-    title: 'Best a leading national educational institution Alternative in Gurugram 2026',
+    title: 'Best Narayana Alternative in Gurugram 2026 | Small Batch Personal Attention',
     description:
-      'Tired of crowded a leading national educational institution batches? Get personal attention with 25-student batches.',
+      'Tired of crowded Narayana batches? Get personal attention with 25-student batches.',
     url: 'https://cerebrumbiologyacademy.com/narayana-alternative-gurugram',
   },
   alternates: {
@@ -34,8 +34,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Best a leading national educational institution Alternative in Gurugram 2026 | Small Batch Personal Attention',
-    description: 'Looking for a leading national educational institution alternative in Gurugram (Gurgaon)? Cerebrum: 25-student batches vs a leading national educational institution',
+    title: 'Best Narayana Alternative in Gurugram 2026 | Small Batch Personal Attention',
+    description:
+      'Looking for Narayana alternative in Gurugram (Gurgaon)? Cerebrum: 25-student batches vs Narayana',
   },
 }
 
@@ -92,44 +93,44 @@ const comparisonData = [
 
 const faqs = [
   {
-    question: 'Why switch from a leading national educational institution to Cerebrum?',
+    question: 'Why switch from Narayana to Cerebrum?',
     answer:
-      'Top reasons students switch: 1) Batch size - a leading national educational institution has 100-150 students, Cerebrum has 25, 2) Personal attention - doubts answered same day vs weeks later, 3) Faculty access - direct WhatsApp for doubts, 4) Specialized biology focus vs general coaching, 5) Better success rate in biology (98%).',
+      'Top reasons students switch: 1) Batch size - Narayana has 100-150 students, Cerebrum has 25, 2) Personal attention - doubts answered same day vs weeks later, 3) Faculty access - direct WhatsApp for doubts, 4) Specialized biology focus vs general coaching, 5) Better success rate in biology (98%).',
   },
   {
-    question: 'How do a leading national educational institution and Cerebrum fees compare?',
+    question: 'How do Narayana and Cerebrum fees compare?',
     answer:
-      'a leading national educational institution Gurugram: ₹1.2-1.8 Lakh/year for NEET programs. Cerebrum: ₹45,000-75,000/year for comprehensive NEET biology coaching. Save ₹75K-1L while getting 4x more personal attention per student.',
+      'Narayana Gurugram: ₹1.2-1.8 Lakh/year for NEET programs. Cerebrum: ₹45,000-75,000/year for comprehensive NEET biology coaching. Save ₹75K-1L while getting 4x more personal attention per student.',
   },
   {
-    question: 'Is a leading national educational institution good for NEET in Gurugram?',
+    question: 'Is Narayana good for NEET in Gurugram?',
     answer:
-      "a leading national educational institution has a strong brand but Gurugram branches are known for very large batches (100-150 students). Good for self-motivated students who don't need much personal guidance. If you need doubt resolution and personal attention, smaller batches work better.",
+      "Narayana has a strong brand but Gurugram branches are known for very large batches (100-150 students). Good for self-motivated students who don't need much personal guidance. If you need doubt resolution and personal attention, smaller batches work better.",
   },
   {
-    question: 'What is the main problem with a leading national educational institution Gurugram?',
+    question: 'What is the main problem with Narayana Gurugram?',
     answer:
-      "Common complaints from ex-a leading national educational institution students: 1) Too crowded - can't ask doubts in class, 2) Faculty turnover - teachers change mid-session, 3) Focus on quantity over quality, 4) Generic study material, 5) Long wait for doubt resolution. Cerebrum solves all these with small batches.",
+      "Common complaints from ex-Narayana students: 1) Too crowded - can't ask doubts in class, 2) Faculty turnover - teachers change mid-session, 3) Focus on quantity over quality, 4) Generic study material, 5) Long wait for doubt resolution. Cerebrum solves all these with small batches.",
   },
   {
-    question: 'Can I join Cerebrum after leaving a leading national educational institution mid-year?',
+    question: 'Can I join Cerebrum after leaving Narayana mid-year?',
     answer:
       'Yes! We have flexible joining options: 1) Mid-session joining with catch-up support, 2) Backlog clearing batches for specific chapters, 3) Fast-track revision for already-covered syllabus, 4) No penalty or extra fees for mid-year joiners.',
   },
   {
     question: 'What makes Cerebrum better for biology specifically?',
     answer:
-      'Cerebrum is a biology-specialized institute: 1) All faculty are biology experts (AIIMS/medical background), 2) Daily biology classes (not alternate days), 3) NEET biology pattern expertise, 4) Diagram-focused teaching, 5) NCERT line-by-line coverage. a leading national educational institution treats biology as just one of 3 subjects.',
+      'Cerebrum is a biology-specialized institute: 1) All faculty are biology experts (AIIMS/medical background), 2) Daily biology classes (not alternate days), 3) NEET biology pattern expertise, 4) Diagram-focused teaching, 5) NCERT line-by-line coverage. Narayana treats biology as just one of 3 subjects.',
   },
   {
-    question: 'Do a leading national educational institution students join for supplementary biology?',
+    question: 'Do Narayana students join for supplementary biology?',
     answer:
-      'Yes, many a leading national educational institution students take our: 1) Biology-only batch (weekends, ₹35,000/year), 2) Test series membership (₹8,000/year), 3) Crash courses before exams (₹15,000-25,000). Timings designed to complement a leading national educational institution schedule.',
+      'Yes, many Narayana students take our: 1) Biology-only batch (weekends, ₹35,000/year), 2) Test series membership (₹8,000/year), 3) Crash courses before exams (₹15,000-25,000). Timings designed to complement Narayana schedule.',
   },
   {
-    question: 'How to decide between a leading national educational institution and Cerebrum?',
+    question: 'How to decide between Narayana and Cerebrum?',
     answer:
-      "Choose a leading national educational institution if: You want all-subjects coaching, you are highly self-motivated, you don't need personal attention. Choose Cerebrum if: Biology is your weak subject, you need doubt resolution, you want small batches, you are serious about biology score in NEET.",
+      "Choose Narayana if: You want all-subjects coaching, you are highly self-motivated, you don't need personal attention. Choose Cerebrum if: Biology is your weak subject, you need doubt resolution, you want small batches, you are serious about biology score in NEET.",
   },
 ]
 
@@ -160,7 +161,11 @@ export default function NarayanaAlternativeGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="narayana-alternative-gurugram" />
       {/* Hero Section */}
@@ -168,13 +173,13 @@ export default function NarayanaAlternativeGurugram() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-block bg-yellow-500 text-green-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
-              a leading national educational institution Alternative in Gurugram
+              Narayana Alternative in Gurugram
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Best a leading national educational institution Alternative in Gurugram
+              Best Narayana Alternative in Gurugram
             </h1>
             <p className="text-xl text-green-100 mb-8">
-              Tired of crowded a leading national educational institution batches? Get personal attention with 25-student batches at
+              Tired of crowded Narayana batches? Get personal attention with 25-student batches at
               Cerebrum.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -215,7 +220,7 @@ export default function NarayanaAlternativeGurugram() {
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-green-600">200+</div>
-              <div className="text-gray-600">a leading national educational institution Switchers</div>
+              <div className="text-gray-600">Narayana Switchers</div>
             </div>
           </div>
         </div>
@@ -224,9 +229,9 @@ export default function NarayanaAlternativeGurugram() {
       {/* Pain Points */}
       <section className="py-16 bg-red-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Common a leading national educational institution Problems We Solve</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">Common Narayana Problems We Solve</h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Hear what ex-a leading national educational institution students said about why they switched
+            Hear what ex-Narayana students said about why they switched
           </p>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {painPoints.map((point, index) => (
@@ -235,7 +240,7 @@ export default function NarayanaAlternativeGurugram() {
                 <div className="space-y-3">
                   <div className="flex items-start gap-3 text-gray-500">
                     <span className="text-red-400">✗</span>
-                    <span>a leading national educational institution: {point.narayana}</span>
+                    <span>Narayana: {point.narayana}</span>
                   </div>
                   <div className="flex items-start gap-3 text-green-700 font-medium">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
@@ -252,14 +257,14 @@ export default function NarayanaAlternativeGurugram() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
-            a leading national educational institution vs Cerebrum: Head-to-Head
+            Narayana vs Cerebrum: Head-to-Head
           </h2>
           <div className="max-w-4xl mx-auto overflow-x-auto">
             <table className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
               <thead className="bg-green-800 text-white">
                 <tr>
                   <th className="px-6 py-4 text-left">Feature</th>
-                  <th className="px-6 py-4 text-center">a leading national educational institution</th>
+                  <th className="px-6 py-4 text-center">Narayana</th>
                   <th className="px-6 py-4 text-center">Cerebrum</th>
                 </tr>
               </thead>
@@ -292,14 +297,14 @@ export default function NarayanaAlternativeGurugram() {
       <section className="py-16 bg-green-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Why Students Switch from a leading national educational institution
+            Why Students Switch from Narayana
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <UserCheck className="w-12 h-12 text-green-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Personal Attention</h3>
               <p className="text-gray-600">
-                a leading national educational institution batches have 100-150 students. You become just a number. Our 25-student
+                Narayana batches have 100-150 students. You become just a number. Our 25-student
                 limit ensures every student gets individual focus.
               </p>
             </div>
@@ -307,7 +312,7 @@ export default function NarayanaAlternativeGurugram() {
               <Clock className="w-12 h-12 text-green-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Instant Doubt Resolution</h3>
               <p className="text-gray-600">
-                At a leading national educational institution, doubts pile up for days. At Cerebrum, WhatsApp your doubt and get
+                At Narayana, doubts pile up for days. At Cerebrum, WhatsApp your doubt and get
                 answers the same day. No waiting, no queues.
               </p>
             </div>
@@ -315,7 +320,7 @@ export default function NarayanaAlternativeGurugram() {
               <Award className="w-12 h-12 text-green-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Biology Specialists</h3>
               <p className="text-gray-600">
-                a leading national educational institution treats biology as one of many subjects. We specialize in NEET biology with
+                Narayana treats biology as one of many subjects. We specialize in NEET biology with
                 AIIMS-trained faculty who live and breathe biology.
               </p>
             </div>
@@ -326,16 +331,16 @@ export default function NarayanaAlternativeGurugram() {
       {/* Supplementary Options */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Already in a leading national educational institution?</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">Already in Narayana?</h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Many a leading national educational institution students take our supplementary biology coaching alongside
+            Many Narayana students take our supplementary biology coaching alongside
           </p>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-center">
               <div className="text-2xl font-bold text-green-600 mb-2">₹35,000/year</div>
               <div className="font-semibold mb-2">Weekend Biology Batch</div>
               <p className="text-sm text-gray-600">
-                Sat-Sun classes that complement a leading national educational institution weekday schedule
+                Sat-Sun classes that complement Narayana weekday schedule
               </p>
             </div>
             <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-center">
@@ -369,7 +374,7 @@ export default function NarayanaAlternativeGurugram() {
                     <p className="font-semibold">M2K Corporate Park</p>
                     <p className="text-gray-600">Sector 51, Gurugram 122018</p>
                     <p className="text-sm text-gray-500 mt-1">
-                      a leading national educational institution is in Sector 14 (8 km away)
+                      Narayana is in Sector 14 (8 km away)
                     </p>
                   </div>
                 </div>
@@ -429,7 +434,7 @@ export default function NarayanaAlternativeGurugram() {
       {/* CTA */}
       <section className="py-16 bg-green-800 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Switch from a leading national educational institution?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Switch from Narayana?</h2>
           <p className="text-xl text-green-100 mb-8">
             Book a free 3-day trial. Experience personal attention in small batches.
           </p>

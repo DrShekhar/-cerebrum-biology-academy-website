@@ -103,14 +103,10 @@ export function HeaderServer() {
 
             {/* Desktop CTA - Server rendered for SEO */}
             <div className="hidden lg:flex items-center gap-6">
-              <ContextualWhatsAppLink
-                className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold border-2 border-green-600 text-green-600 hover:bg-green-50 transition-all duration-300"
-              >
+              <ContextualWhatsAppLink className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold border-2 border-green-600 text-green-600 hover:bg-green-50 transition-all duration-300">
                 Free Demo
               </ContextualWhatsAppLink>
-              <ContextualWhatsAppLink
-                className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold bg-[#4a5d4a] text-white shadow-lg hover:shadow-xl transition-all duration-300"
-              >
+              <ContextualWhatsAppLink className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold bg-[#4a5d4a] text-white shadow-lg hover:shadow-xl transition-all duration-300">
                 Enroll Now
               </ContextualWhatsAppLink>
             </div>

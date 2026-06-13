@@ -55,9 +55,7 @@ export function FacultyProfile({ facultyId }: Props) {
         <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-purple-600 opacity-10"></div>
 
         <div className="container mx-auto px-4 relative">
-          <div
-            className="mb-8 animate-fadeInUp"
-          >
+          <div className="mb-8 animate-fadeInUp">
             <Link
               href="/faculty"
               className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium"
@@ -69,9 +67,7 @@ export function FacultyProfile({ facultyId }: Props) {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Faculty Image */}
-            <div
-              className="relative animate-fadeInUp"
-            >
+            <div className="relative animate-fadeInUp">
               <div className="relative w-full max-w-md mx-auto lg:mx-0">
                 <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary-100 to-purple-100 p-8 flex items-center justify-center">
                   <GraduationCap className="w-32 h-32 text-primary-600" />
@@ -85,9 +81,7 @@ export function FacultyProfile({ facultyId }: Props) {
             </div>
 
             {/* Faculty Info */}
-            <div
-              className="text-center lg:text-left animate-fadeInUp"
-            >
+            <div className="text-center lg:text-left animate-fadeInUp">
               <div className="inline-flex items-center px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-4">
                 {faculty.designation}
               </div>
@@ -140,9 +134,7 @@ export function FacultyProfile({ facultyId }: Props) {
       {/* About Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="max-w-4xl mx-auto animate-fadeInUp">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
               About {faculty.name}
             </h2>
@@ -203,9 +195,7 @@ export function FacultyProfile({ facultyId }: Props) {
       {/* Contact Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div
-            className="max-w-2xl mx-auto text-center animate-fadeInUp"
-          >
+          <div className="max-w-2xl mx-auto text-center animate-fadeInUp">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
             <p className="text-gray-600 mb-8">
               Ready to start your NEET Biology journey with {faculty.name}? Book a demo class or

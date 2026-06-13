@@ -20,9 +20,12 @@ function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) setIsVisible(true)
-    }, { threshold: 0.1 })
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true)
+      },
+      { threshold: 0.1 }
+    )
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
   }, [])
@@ -37,7 +40,8 @@ export default function PageContent() {
   const featuresAnimation = useScrollAnimation()
   const faqAnimation = useScrollAnimation()
 
-  const whatsappLink = 'https://wa.me/918826444334?text=I%20am%20interested%20in%20Tamil%20Nadu%20HSC%20Biology%20coaching%20with%20NEET%20preparation.'
+  const whatsappLink =
+    'https://wa.me/918826444334?text=I%20am%20interested%20in%20Tamil%20Nadu%20HSC%20Biology%20coaching%20with%20NEET%20preparation.'
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
@@ -58,14 +62,25 @@ export default function PageContent() {
               Tamil Nadu HSC Biology + NEET Coaching
             </h1>
             <p className="text-lg text-slate-600 mb-8 max-w-3xl mx-auto">
-              Complete Tamil Nadu State Board (Volume I & II) coaching with NEET integration. Excel in 12th std board exams while securing NEET qualification with our proven dual-prep methodology.
+              Complete Tamil Nadu State Board (Volume I & II) coaching with NEET integration. Excel
+              in 12th std board exams while securing NEET qualification with our proven dual-prep
+              methodology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href={whatsappLink} target="_blank" variant="primary" className="flex items-center justify-center gap-2">
+              <Button
+                href={whatsappLink}
+                target="_blank"
+                variant="primary"
+                className="flex items-center justify-center gap-2"
+              >
                 <MessageCircle className="w-5 h-5" />
                 Start Your Journey
               </Button>
-              <Button href="tel:8826444334" variant="secondary" className="flex items-center justify-center gap-2">
+              <Button
+                href="tel:8826444334"
+                variant="secondary"
+                className="flex items-center justify-center gap-2"
+              >
                 <Trophy className="w-5 h-5" />
                 Call: 8826444334
               </Button>
@@ -101,7 +116,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Tamil Nadu HSC Biology Syllabus (12th Std)</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Tamil Nadu HSC Biology Syllabus (12th Std)
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-8 border border-green-200">
               <div className="flex items-center gap-3 mb-6">
@@ -171,7 +188,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Board + NEET Dual Preparation Strategy</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Board + NEET Dual Preparation Strategy
+          </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg p-8 border border-slate-200 hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
@@ -179,7 +198,8 @@ export default function PageContent() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">TN Board Alignment</h3>
               <p className="text-slate-600">
-                Volume I & II curriculum mapped with NEET topics. Understand TN board exam patterns, chapter weightage, and marking schemes for board excellence.
+                Volume I & II curriculum mapped with NEET topics. Understand TN board exam patterns,
+                chapter weightage, and marking schemes for board excellence.
               </p>
             </div>
             <div className="bg-white rounded-lg p-8 border border-slate-200 hover:shadow-lg transition-shadow">
@@ -188,7 +208,8 @@ export default function PageContent() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">NEET Cutoff Focus</h3>
               <p className="text-slate-600">
-                Tamil Nadu NEET cutoff trends analyzed and incorporated. Strategic deep-dive into high-frequency NEET topics within TN board curriculum.
+                Tamil Nadu NEET cutoff trends analyzed and incorporated. Strategic deep-dive into
+                high-frequency NEET topics within TN board curriculum.
               </p>
             </div>
             <div className="bg-white rounded-lg p-8 border border-slate-200 hover:shadow-lg transition-shadow">
@@ -197,7 +218,8 @@ export default function PageContent() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Integrated Learning</h3>
               <p className="text-slate-600">
-                Single study plan covering both 12th std board requirements and NEET expectations. No redundancy, maximum efficiency in preparation.
+                Single study plan covering both 12th std board requirements and NEET expectations.
+                No redundancy, maximum efficiency in preparation.
               </p>
             </div>
           </div>
@@ -212,7 +234,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Key Chapters & Topics (Volume I & II)</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Key Chapters & Topics (Volume I & II)
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-bold text-green-600 mb-6 flex items-center gap-2">
@@ -272,7 +296,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Why Choose Cerebrum for Tamil Nadu HSC?</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Why Choose Cerebrum for Tamil Nadu HSC?
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-8 border border-orange-200">
               <div className="flex items-start gap-4">
@@ -280,7 +306,8 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">TN Board Specialists</h3>
                   <p className="text-slate-700">
-                    15+ years expertise in Tamil Nadu HSC curriculum. Deep understanding of board exam patterns, chapter weightage, and marking scheme expectations.
+                    15+ years expertise in Tamil Nadu HSC curriculum. Deep understanding of board
+                    exam patterns, chapter weightage, and marking scheme expectations.
                   </p>
                 </div>
               </div>
@@ -291,7 +318,8 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Proven Excellence</h3>
                   <p className="text-slate-700">
-                    1800+ Tamil Nadu students coached with 96% board success. 720+ NEET selections in last 5 years from TN region.
+                    1800+ Tamil Nadu students coached with 96% board success. 720+ NEET selections
+                    in last 5 years from TN region.
                   </p>
                 </div>
               </div>
@@ -302,7 +330,8 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">NEET Score Optimization</h3>
                   <p className="text-slate-700">
-                    Tamil Nadu NEET cutoff trends incorporated in coaching. Strategic focus on high-weightage topics that bridge TN board and NEET expectations.
+                    Tamil Nadu NEET cutoff trends incorporated in coaching. Strategic focus on
+                    high-weightage topics that bridge TN board and NEET expectations.
                   </p>
                 </div>
               </div>
@@ -313,7 +342,8 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Flexible Learning Modes</h3>
                   <p className="text-slate-700">
-                    Live online classes, recorded lectures, and personalized guidance. Choose your learning pace with flexible batch timings suitable for working students.
+                    Live online classes, recorded lectures, and personalized guidance. Choose your
+                    learning pace with flexible batch timings suitable for working students.
                   </p>
                 </div>
               </div>
@@ -330,7 +360,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
           <div className="space-y-6">
             {[
               {
@@ -354,7 +386,10 @@ export default function PageContent() {
                 a: 'We analyze TN NEET cutoff trends annually and incorporate this data into our curriculum design. High-frequency topics in TN cutoff exams receive additional attention, ensuring maximum NEET score optimization for TN students.',
               },
             ].map((faq, idx) => (
-              <details key={idx} className="group bg-white rounded-lg border border-slate-200 p-6 cursor-pointer hover:border-orange-300 transition-colors">
+              <details
+                key={idx}
+                className="group bg-white rounded-lg border border-slate-200 p-6 cursor-pointer hover:border-orange-300 transition-colors"
+              >
                 <summary className="flex items-start justify-between font-semibold text-slate-900 group-open:text-orange-600">
                   <span>{faq.q}</span>
                   <ArrowRight className="w-5 h-5 flex-shrink-0 transition-transform group-open:rotate-90" />
@@ -369,9 +404,12 @@ export default function PageContent() {
       {/* CTA Section */}
       <section className="px-6 py-16 bg-gradient-to-r from-orange-600 to-orange-700 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Master Tamil Nadu HSC Biology + NEET Today</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Master Tamil Nadu HSC Biology + NEET Today
+          </h2>
           <p className="text-lg text-orange-100 mb-8">
-            Join 1800+ Tamil Nadu students who achieved board excellence and NEET success with Cerebrum.
+            Join 1800+ Tamil Nadu students who achieved board excellence and NEET success with
+            Cerebrum.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -390,9 +428,7 @@ export default function PageContent() {
               Call: 8826444334
             </Button>
           </div>
-          <p className="text-orange-100 mt-6 text-sm">
-            Website: cerebrumbiologyacademy.com
-          </p>
+          <p className="text-orange-100 mt-6 text-sm">Website: cerebrumbiologyacademy.com</p>
         </div>
       </section>
     </div>

@@ -42,8 +42,8 @@ export function PricingTier({ country, allCountries }: PricingTierProps) {
             Small-batch pricing — premium-tier, transparent
           </h2>
           <p className="mt-3 text-base text-slate-600 md:text-lg">
-            One published tier: small-batch coaching (4–6 students, 6 hrs/week, weekly mentor
-            call). 1-on-1 Elite coaching with Dr. Shekhar is available on enquiry.
+            One published tier: small-batch coaching (4–6 students, 6 hrs/week, weekly mentor call).
+            1-on-1 Elite coaching with Dr. Shekhar is available on enquiry.
           </p>
         </div>
 
@@ -95,10 +95,10 @@ function SingleCountryCard({ country }: { country: OlympiadCountry }) {
         </span>
       </div>
       <div className="mt-4 flex items-baseline gap-3">
-        <span aria-hidden="true" className="text-4xl">{country.flag}</span>
-        <h3 className="text-2xl font-bold text-[#2C2C2C] md:text-3xl">
-          {country.name} pricing
-        </h3>
+        <span aria-hidden="true" className="text-4xl">
+          {country.flag}
+        </span>
+        <h3 className="text-2xl font-bold text-[#2C2C2C] md:text-3xl">{country.name} pricing</h3>
       </div>
       <div className="mt-6 flex items-baseline gap-2">
         <span className="text-4xl font-bold text-[#2C2C2C] md:text-5xl">

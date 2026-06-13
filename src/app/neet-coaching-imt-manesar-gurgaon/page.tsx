@@ -96,8 +96,15 @@ export default function NEETCoachingIMTManesarPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-imt-manesar-gurgaon"
         pageName="NEET Coaching in IMT Manesar Gurgaon"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
-        personKnowsAbout={['NEET IMT Manesar Gurgaon', 'NEET Biology IMT Manesar Gurgaon', 'Medical entrance coaching IMT Manesar Gurgaon']}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
+        personKnowsAbout={[
+          'NEET IMT Manesar Gurgaon',
+          'NEET Biology IMT Manesar Gurgaon',
+          'Medical entrance coaching IMT Manesar Gurgaon',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurgaon"

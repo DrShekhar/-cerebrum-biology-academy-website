@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biology Tutor for Class 9 ICSE | Expert Biology Classes',
-    description: 'Expert biology tutor for Class 9 ICSE students. Build a strong foundation for NEET with AIIMS-trained faculty. Interactive classes, ICSE-aligned curriculum. Free demo!',
+    description:
+      'Expert biology tutor for Class 9 ICSE students. Build a strong foundation for NEET with AIIMS-trained faculty. Interactive classes, ICSE-aligned curriculum. Free demo!',
   },
 }
 

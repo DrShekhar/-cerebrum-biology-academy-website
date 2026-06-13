@@ -6,11 +6,19 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Last 60 Days Plan | Day-wise Strategy | Free PDF',
-  description: 'Download free NEET Biology last 60 days revision plan. Day-wise strategy, mock test schedule, high-yield topics focus. Maximize your score in final stretch.',
-  keywords: ['NEET last 60 days plan', 'NEET biology revision plan', 'NEET final preparation strategy', 'NEET last month preparation', 'NEET biology crash course plan'],
+  description:
+    'Download free NEET Biology last 60 days revision plan. Day-wise strategy, mock test schedule, high-yield topics focus. Maximize your score in final stretch.',
+  keywords: [
+    'NEET last 60 days plan',
+    'NEET biology revision plan',
+    'NEET final preparation strategy',
+    'NEET last month preparation',
+    'NEET biology crash course plan',
+  ],
   openGraph: {
     title: 'NEET Biology Last 60 Days Plan | Day-wise Strategy | Free PDF',
-    description: 'Download free NEET Biology last 60 days revision plan. Day-wise strategy, mock test schedule, high-yield topics focus. Maximize your score in final stretch.',
+    description:
+      'Download free NEET Biology last 60 days revision plan. Day-wise strategy, mock test schedule, high-yield topics focus. Maximize your score in final stretch.',
     url: `${BASE_URL}/free-neet-biology-last-60-days-plan`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -19,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Free NEET Biology Last 60 Days Plan',
-    description: 'Download free NEET Biology last 60 days revision plan. Day-wise strategy, mock test schedule, high-yield topics focus. M',
+    description:
+      'Download free NEET Biology last 60 days revision plan. Day-wise strategy, mock test schedule, high-yield topics focus. M',
   },
   alternates: { canonical: `${BASE_URL}/free-neet-biology-last-60-days-plan` },
 }
@@ -58,7 +67,11 @@ const faqSchema = {
 export default function FreeNeetBiologyLast60DaysPlanPage() {
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <PageContent />
     </>
   )

@@ -177,9 +177,7 @@ export default function NTSEBiologyPreparationPage() {
       <section className="relative bg-gradient-to-br from-lime-900 via-green-800 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <BookOpen className="w-5 h-5 mr-2 text-lime-300" />
               NTSE Biology Preparation
@@ -200,7 +198,11 @@ export default function NTSEBiologyPreparationPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20ntse%20biology%20preparation.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20ntse%20biology%20preparation.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -252,9 +254,7 @@ export default function NTSEBiologyPreparationPage() {
       {/* Topic Weightage Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               NTSE Biology Topics & Weightage
             </h2>
@@ -265,10 +265,7 @@ export default function NTSEBiologyPreparationPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {ntseBiologyTopics.map((unit, index) => (
-              <div
-                key={unit.unit}
-                className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={unit.unit} className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-lime-100 rounded-full flex items-center justify-center">
                     <unit.icon className="w-6 h-6 text-lime-600" />
@@ -296,9 +293,7 @@ export default function NTSEBiologyPreparationPage() {
       {/* Question Types Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               NTSE Biology Question Types
             </h2>
@@ -326,9 +321,7 @@ export default function NTSEBiologyPreparationPage() {
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               What You Get in NTSE Biology Coaching
             </h2>
@@ -352,9 +345,7 @@ export default function NTSEBiologyPreparationPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -362,10 +353,7 @@ export default function NTSEBiologyPreparationPage() {
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div
-                key={faq.question}
-                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
-              >
+              <div key={faq.question} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-lime-600 flex-shrink-0 mt-1" />
                   {faq.question}
@@ -380,8 +368,7 @@ export default function NTSEBiologyPreparationPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-lime-600 via-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Maximize Your NTSE Biology Score
             </h2>
@@ -390,7 +377,11 @@ export default function NTSEBiologyPreparationPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20ntse%20biology%20preparation.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20ntse%20biology%20preparation.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -401,7 +392,11 @@ export default function NTSEBiologyPreparationPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20ntse%20biology%20preparation.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20ntse%20biology%20preparation.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"

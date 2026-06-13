@@ -245,8 +245,7 @@ export default function EarlyNeetPreparationPage() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
                 <Lightbulb className="w-5 h-5 mr-2" />
                 Smart Parents, Successful Students
@@ -304,9 +303,7 @@ export default function EarlyNeetPreparationPage() {
       {/* Research & Data Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               The Data Speaks: Early Start = Higher Success
             </h2>
@@ -340,9 +337,7 @@ export default function EarlyNeetPreparationPage() {
       {/* Benefits of Early Start */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               4 Compelling Reasons to Start NEET Preparation Early
             </h2>
@@ -379,9 +374,7 @@ export default function EarlyNeetPreparationPage() {
       {/* Program Comparison */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Choose the Right Foundation Program for Your Child
             </h2>
@@ -442,9 +435,7 @@ export default function EarlyNeetPreparationPage() {
             ))}
           </div>
 
-          <div
-            className="text-center mt-12 animate-fadeInUp"
-          >
+          <div className="text-center mt-12 animate-fadeInUp">
             <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-xl p-8 max-w-3xl mx-auto">
               <AlertCircle className="w-12 h-12 mx-auto mb-4 text-purple-600" />
               <h3 className="text-xl font-bold text-gray-900 mb-3">Not Sure Which Program?</h3>
@@ -469,9 +460,7 @@ export default function EarlyNeetPreparationPage() {
       {/* Parent FAQs */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Common Parent Questions About Early NEET Preparation
             </h2>
@@ -503,8 +492,7 @@ export default function EarlyNeetPreparationPage() {
       {/* Final CTA */}
       <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Give Your Child the Gift of Early Preparation
             </h2>

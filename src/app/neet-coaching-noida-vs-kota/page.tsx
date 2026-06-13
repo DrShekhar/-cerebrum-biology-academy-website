@@ -13,7 +13,11 @@ import {
   Wifi,
   Heart,
 } from 'lucide-react'
-import { NoidaPageSchemas, NoidaEventSchema, NOIDA_COMPREHENSIVE_FAQS } from '@/components/seo/NoidaSchemas'
+import {
+  NoidaPageSchemas,
+  NoidaEventSchema,
+  NOIDA_COMPREHENSIVE_FAQS,
+} from '@/components/seo/NoidaSchemas'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
@@ -35,7 +39,8 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'NEET Coaching: Noida vs Kota - Complete Comparison 2026',
-    description: 'Should you go to Kota or stay in Noida for NEET? Complete comparison of costs, results, and lifestyle.',
+    description:
+      'Should you go to Kota or stay in Noida for NEET? Complete comparison of costs, results, and lifestyle.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-noida-vs-kota',
   },
   alternates: {
@@ -45,7 +50,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching: Noida vs Kota 2026 | Which is Better?',
-    description: 'Noida vs Kota for NEET coaching - complete comparison. Save Rs 2-3 lakh on hostel costs, study from home, get same results. 98% success rate with online coaching from Noida.',
+    description:
+      'Noida vs Kota for NEET coaching - complete comparison. Save Rs 2-3 lakh on hostel costs, study from home, get same results. 98% success rate with online coaching from Noida.',
   },
 }
 
@@ -174,8 +180,15 @@ export default function NoidaVsKotaPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-noida-vs-kota"
         pageName="NEET Coaching: Noida vs Kota"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
-        personKnowsAbout={['NEET Noida vs Kota', 'NEET Biology Noida vs Kota', 'Medical entrance coaching Noida vs Kota']}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
+        personKnowsAbout={[
+          'NEET Noida vs Kota',
+          'NEET Biology Noida vs Kota',
+          'Medical entrance coaching Noida vs Kota',
+        ]}
       />
       <NoidaPageSchemas
         area="Noida"
@@ -185,7 +198,10 @@ export default function NoidaVsKotaPage() {
         breadcrumbs={[
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
           { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/neet-coaching-noida' },
-          { name: 'vs Kota', url: 'https://cerebrumbiologyacademy.com/neet-coaching-noida-vs-kota' },
+          {
+            name: 'vs Kota',
+            url: 'https://cerebrumbiologyacademy.com/neet-coaching-noida-vs-kota',
+          },
         ]}
         customFAQs={faqs}
         shortAnswer="Stay in Noida for NEET! Save Rs 2-3 lakh on hostel costs, study from home with family support, get 98% success rate with online coaching. Cerebrum offers AIIMS faculty, small batches (10-40), and instant doubt support - all benefits of Kota without the expense."
@@ -226,9 +242,10 @@ export default function NoidaVsKotaPage() {
           <div className="max-w-6xl mx-auto">
             <h2 className="font-bold text-lg text-green-800 mb-2">Quick Answer</h2>
             <p className="text-gray-700 speakable-content" data-speakable="true">
-              <strong>Stay in Noida!</strong> With online NEET coaching from Cerebrum (98% success rate),
-              you save Rs 2-3 lakh on hostel/food, study with family support, and get AIIMS faculty
-              guidance in small batches of 10-40 students. Same results, fraction of the cost.
+              <strong>Stay in Noida!</strong> With online NEET coaching from Cerebrum (98% success
+              rate), you save Rs 2-3 lakh on hostel/food, study with family support, and get AIIMS
+              faculty guidance in small batches of 10-40 students. Same results, fraction of the
+              cost.
             </p>
           </div>
         </section>
@@ -340,9 +357,7 @@ export default function NoidaVsKotaPage() {
             </div>
 
             <div className="mt-8 text-center">
-              <p className="text-xl font-bold text-green-700">
-                Noida wins in 8 out of 10 factors!
-              </p>
+              <p className="text-xl font-bold text-green-700">Noida wins in 8 out of 10 factors!</p>
             </div>
           </div>
         </section>
@@ -357,22 +372,26 @@ export default function NoidaVsKotaPage() {
                 {
                   icon: Heart,
                   title: 'Family Support',
-                  description: 'Home food, emotional support, no homesickness. Parents can monitor progress daily.',
+                  description:
+                    'Home food, emotional support, no homesickness. Parents can monitor progress daily.',
                 },
                 {
                   icon: IndianRupee,
                   title: 'Save Rs 2-3 Lakh',
-                  description: 'No hostel, food, or travel expenses. Invest savings in better resources.',
+                  description:
+                    'No hostel, food, or travel expenses. Invest savings in better resources.',
                 },
                 {
                   icon: Users,
                   title: 'Small Batches',
-                  description: '10-40 students vs 100+ in Kota. More personal attention and doubt resolution.',
+                  description:
+                    '10-40 students vs 100+ in Kota. More personal attention and doubt resolution.',
                 },
                 {
                   icon: Wifi,
                   title: 'Flexible Learning',
-                  description: 'Miss a class? Watch recording. Revise anytime. Not possible in Kota.',
+                  description:
+                    'Miss a class? Watch recording. Revise anytime. Not possible in Kota.',
                 },
                 {
                   icon: Clock,
@@ -382,7 +401,8 @@ export default function NoidaVsKotaPage() {
                 {
                   icon: Award,
                   title: '98% Success Rate',
-                  description: 'Cerebrum students have higher success rate than average Kota student.',
+                  description:
+                    'Cerebrum students have higher success rate than average Kota student.',
                 },
               ].map((item, i) => {
                 const Icon = item.icon
@@ -420,7 +440,8 @@ export default function NoidaVsKotaPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Stay in Noida. Get Kota Results.</h2>
             <p className="text-gray-300 mb-8">
-              Join 1,200+ Noida students who chose smart preparation. Book your FREE demo class today.
+              Join 1,200+ Noida students who chose smart preparation. Book your FREE demo class
+              today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -431,7 +452,9 @@ export default function NoidaVsKotaPage() {
                 WhatsApp Us
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2"
               >
                 Book Free Demo

@@ -215,38 +215,30 @@ export function AdminDashboard({ isAdmin = false }: AdminDashboardProps) {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-{selectedTab === 'overview' && (
-            <div
-              key="overview"
-             className="animate-fadeInUp">
-              <OverviewTab metrics={metrics} trends={trends} isLoading={isLoading} />
-            </div>
-          )}
+        {selectedTab === 'overview' && (
+          <div key="overview" className="animate-fadeInUp">
+            <OverviewTab metrics={metrics} trends={trends} isLoading={isLoading} />
+          </div>
+        )}
 
-          {selectedTab === 'students' && (
-            <div
-              key="students"
-             className="animate-fadeInUp">
-              <StudentsTab />
-            </div>
-          )}
+        {selectedTab === 'students' && (
+          <div key="students" className="animate-fadeInUp">
+            <StudentsTab />
+          </div>
+        )}
 
-          {selectedTab === 'demos' && (
-            <div
-              key="demos"
-             className="animate-fadeInUp">
-              <DemoBookingsTab />
-            </div>
-          )}
+        {selectedTab === 'demos' && (
+          <div key="demos" className="animate-fadeInUp">
+            <DemoBookingsTab />
+          </div>
+        )}
 
-          {selectedTab === 'marketing' && (
-            <div
-              key="marketing"
-             className="animate-fadeInUp">
-              <MarketingTab />
-            </div>
-          )}
-</main>
+        {selectedTab === 'marketing' && (
+          <div key="marketing" className="animate-fadeInUp">
+            <MarketingTab />
+          </div>
+        )}
+      </main>
     </div>
   )
 }

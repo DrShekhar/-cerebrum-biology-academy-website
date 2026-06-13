@@ -15,7 +15,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Dropper Course 2027 | Best Biology Coaching for Repeaters',
-    description: 'Specialized NEET Biology coaching for droppers. Transform your second attempt into success with AIIMS faculty guidance.',
+    description:
+      'Specialized NEET Biology coaching for droppers. Transform your second attempt into success with AIIMS faculty guidance.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/dropper',

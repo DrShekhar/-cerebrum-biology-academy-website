@@ -14,22 +14,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Which of the following is a simple permanent tissue?",
-      "options": [
-        "Xylem",
-        "Phloem",
-        "Vascular bundle",
-        "Parenchyma"
-      ],
+      "options": ["Xylem", "Phloem", "Vascular bundle", "Parenchyma"],
       "correctAnswer": "D",
       "explanation": "Parenchyma is a simple permanent tissue made up of only one type of cell. Xylem and phloem are complex permanent tissues as they are composed of more than one type of cells.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tissues",
-        "simple-permanent",
-        "parenchyma"
-      ],
+      "tags": ["tissues", "simple-permanent", "parenchyma"],
       "neetWeightage": "HIGH"
     },
     {
@@ -40,21 +31,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Casparian strips are found in the:",
-      "options": [
-        "Pericycle",
-        "Epidermis",
-        "Cortex",
-        "Endodermis"
-      ],
+      "options": ["Pericycle", "Epidermis", "Cortex", "Endodermis"],
       "correctAnswer": "D",
       "explanation": "Casparian strips are bands of suberin found on the radial and tangential walls of endodermal cells. They are impervious to water and regulate the passage of water and dissolved substances into the vascular cylinder.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "endodermis",
-        "casparian-strips"
-      ],
+      "tags": ["endodermis", "casparian-strips"],
       "neetWeightage": "HIGH"
     },
     {
@@ -76,11 +59,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tissues",
-        "collenchyma",
-        "sclerenchyma"
-      ],
+      "tags": ["tissues", "collenchyma", "sclerenchyma"],
       "neetWeightage": "HIGH"
     },
     {
@@ -91,22 +70,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Companion cells are associated with:",
-      "options": [
-        "Tracheids",
-        "Sieve tubes",
-        "Fibres",
-        "Vessels"
-      ],
+      "options": ["Tracheids", "Sieve tubes", "Fibres", "Vessels"],
       "correctAnswer": "B",
       "explanation": "Companion cells are specialized parenchymatous cells found in the phloem of angiosperms. They are closely associated with sieve tube elements and help in maintaining their function, as sieve tubes lack nuclei at maturity.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "phloem",
-        "companion-cells",
-        "sieve-tubes"
-      ],
+      "tags": ["phloem", "companion-cells", "sieve-tubes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -128,10 +98,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "monocot-stem",
-        "vascular-bundles"
-      ],
+      "tags": ["monocot-stem", "vascular-bundles"],
       "neetWeightage": "HIGH"
     },
     {
@@ -153,10 +120,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meristematic-tissue",
-        "lateral-meristem"
-      ],
+      "tags": ["meristematic-tissue", "lateral-meristem"],
       "neetWeightage": "HIGH"
     },
     {
@@ -167,21 +131,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Which of the following is NOT a component of xylem?",
-      "options": [
-        "Xylem fibres",
-        "Companion cells",
-        "Vessel elements",
-        "Tracheids"
-      ],
+      "options": ["Xylem fibres", "Companion cells", "Vessel elements", "Tracheids"],
       "correctAnswer": "B",
       "explanation": "Companion cells are components of phloem, not xylem. Xylem is composed of tracheids, vessel elements, xylem parenchyma, and xylem fibres.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "xylem",
-        "components"
-      ],
+      "tags": ["xylem", "components"],
       "neetWeightage": "HIGH"
     },
     {
@@ -203,11 +159,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dicot-root",
-        "xylem",
-        "exarch"
-      ],
+      "tags": ["dicot-root", "xylem", "exarch"],
       "neetWeightage": "HIGH"
     },
     {
@@ -229,11 +181,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "cork-cambium",
-        "periderm"
-      ],
+      "tags": ["secondary-growth", "cork-cambium", "periderm"],
       "neetWeightage": "HIGH"
     },
     {
@@ -255,10 +203,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "annual-rings"
-      ],
+      "tags": ["secondary-growth", "annual-rings"],
       "neetWeightage": "HIGH"
     },
     {
@@ -280,10 +225,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dicot-stem",
-        "vascular-bundles"
-      ],
+      "tags": ["dicot-stem", "vascular-bundles"],
       "neetWeightage": "HIGH"
     },
     {
@@ -305,11 +247,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "heartwood",
-        "sapwood"
-      ],
+      "tags": ["secondary-growth", "heartwood", "sapwood"],
       "neetWeightage": "HIGH"
     },
     {
@@ -320,22 +258,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Passage cells are found in the endodermis of:",
-      "options": [
-        "Monocot root",
-        "Dicot stem",
-        "Dicot leaf",
-        "Monocot stem"
-      ],
+      "options": ["Monocot root", "Dicot stem", "Dicot leaf", "Monocot stem"],
       "correctAnswer": "A",
       "explanation": "Passage cells (thin-walled cells without Casparian thickening) are found in the endodermis of monocot roots, opposite to the protoxylem. They allow passage of water and minerals from cortex to the stele.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "monocot-root",
-        "endodermis",
-        "passage-cells"
-      ],
+      "tags": ["monocot-root", "endodermis", "passage-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -346,22 +275,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Bulliform cells (motor cells) are found in:",
-      "options": [
-        "Dicot leaves",
-        "Roots",
-        "Stems",
-        "Monocot leaves (grasses)"
-      ],
+      "options": ["Dicot leaves", "Roots", "Stems", "Monocot leaves (grasses)"],
       "correctAnswer": "D",
       "explanation": "Bulliform cells (motor cells) are large, bubble-shaped epidermal cells found in the upper epidermis of grass leaves (monocots). They help in rolling and unrolling of leaves during water stress.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf-anatomy",
-        "bulliform-cells",
-        "monocot"
-      ],
+      "tags": ["leaf-anatomy", "bulliform-cells", "monocot"],
       "neetWeightage": "HIGH"
     },
     {
@@ -372,21 +292,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Pith is absent or very small in:",
-      "options": [
-        "Dicot root",
-        "Dicot stem",
-        "Monocot stem",
-        "Monocot leaf"
-      ],
+      "options": ["Dicot root", "Dicot stem", "Monocot stem", "Monocot leaf"],
       "correctAnswer": "A",
       "explanation": "In dicot roots, pith is absent or very small. The xylem is usually tetrarch with the metaxylem occupying the central position. In monocot roots, pith is large and well-developed.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dicot-root",
-        "pith"
-      ],
+      "tags": ["dicot-root", "pith"],
       "neetWeightage": "HIGH"
     },
     {
@@ -397,21 +309,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Interfascicular cambium develops from:",
-      "options": [
-        "Phloem parenchyma",
-        "Pericycle",
-        "Medullary ray cells",
-        "Xylem parenchyma"
-      ],
+      "options": ["Phloem parenchyma", "Pericycle", "Medullary ray cells", "Xylem parenchyma"],
       "correctAnswer": "C",
       "explanation": "During secondary growth in dicot stems, the interfascicular cambium develops from the parenchymatous cells of the medullary rays (between the vascular bundles). It forms a complete ring with the intrafascicular cambium.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "interfascicular-cambium"
-      ],
+      "tags": ["secondary-growth", "interfascicular-cambium"],
       "neetWeightage": "HIGH"
     },
     {
@@ -433,11 +337,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf-anatomy",
-        "stomata",
-        "dicot"
-      ],
+      "tags": ["leaf-anatomy", "stomata", "dicot"],
       "neetWeightage": "HIGH"
     },
     {
@@ -448,21 +348,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Which type of meristem is responsible for the increase in length of the stem?",
-      "options": [
-        "Intercalary meristem",
-        "Apical meristem",
-        "Lateral meristem",
-        "Cork cambium"
-      ],
+      "options": ["Intercalary meristem", "Apical meristem", "Lateral meristem", "Cork cambium"],
       "correctAnswer": "B",
       "explanation": "Apical meristem, present at the tips of roots and shoots, is responsible for the increase in length (primary growth) of the plant body. Lateral meristems cause increase in girth.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meristematic-tissue",
-        "apical-meristem"
-      ],
+      "tags": ["meristematic-tissue", "apical-meristem"],
       "neetWeightage": "HIGH"
     },
     {
@@ -473,21 +365,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "The tissue that lines the internal surface of ducts, tubes, and cavities and forms a continuous layer without intercellular spaces is:",
-      "options": [
-        "Collenchyma",
-        "Parenchyma",
-        "Epidermis",
-        "Epithelium"
-      ],
+      "options": ["Collenchyma", "Parenchyma", "Epidermis", "Epithelium"],
       "correctAnswer": "C",
       "explanation": "The epidermis forms a continuous layer of cells covering the plant body. It is part of the dermal tissue system and typically lacks intercellular spaces. Note: Epithelium is an animal tissue concept.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "tissue-systems",
-        "epidermis"
-      ],
+      "tags": ["tissue-systems", "epidermis"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -509,10 +393,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sclerenchyma",
-        "sclereids"
-      ],
+      "tags": ["sclerenchyma", "sclereids"],
       "neetWeightage": "HIGH"
     },
     {
@@ -534,11 +415,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "lenticels",
-        "periderm"
-      ],
+      "tags": ["secondary-growth", "lenticels", "periderm"],
       "neetWeightage": "HIGH"
     },
     {
@@ -560,11 +437,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf-anatomy",
-        "palisade-mesophyll",
-        "dorsiventral"
-      ],
+      "tags": ["leaf-anatomy", "palisade-mesophyll", "dorsiventral"],
       "neetWeightage": "HIGH"
     },
     {
@@ -586,11 +459,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "monocot-root",
-        "xylem",
-        "polyarch"
-      ],
+      "tags": ["monocot-root", "xylem", "polyarch"],
       "neetWeightage": "HIGH"
     },
     {
@@ -612,11 +481,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "xylem",
-        "tracheids",
-        "vessels"
-      ],
+      "tags": ["xylem", "tracheids", "vessels"],
       "neetWeightage": "HIGH"
     },
     {
@@ -638,11 +503,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root-anatomy",
-        "vascular-bundles",
-        "radial"
-      ],
+      "tags": ["root-anatomy", "vascular-bundles", "radial"],
       "neetWeightage": "HIGH"
     },
     {
@@ -653,22 +514,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Which tissue provides flexibility to plants without breaking?",
-      "options": [
-        "Sclerenchyma",
-        "Xylem",
-        "Parenchyma",
-        "Collenchyma"
-      ],
+      "options": ["Sclerenchyma", "Xylem", "Parenchyma", "Collenchyma"],
       "correctAnswer": "D",
       "explanation": "Collenchyma provides mechanical support and flexibility to plants. Due to its pectin and cellulose thickening (non-lignified), it can stretch and provide support to growing organs like young stems and petioles without breaking.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tissues",
-        "collenchyma",
-        "flexibility"
-      ],
+      "tags": ["tissues", "collenchyma", "flexibility"],
       "neetWeightage": "HIGH"
     },
     {
@@ -690,11 +542,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf-anatomy",
-        "mesophyll",
-        "dorsiventral"
-      ],
+      "tags": ["leaf-anatomy", "mesophyll", "dorsiventral"],
       "neetWeightage": "HIGH"
     },
     {
@@ -716,11 +564,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "spring-wood",
-        "autumn-wood"
-      ],
+      "tags": ["secondary-growth", "spring-wood", "autumn-wood"],
       "neetWeightage": "HIGH"
     },
     {
@@ -731,22 +575,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Conjoint, collateral, and closed vascular bundles are found in:",
-      "options": [
-        "Dicot root",
-        "Monocot stem",
-        "Monocot root",
-        "Dicot stem"
-      ],
+      "options": ["Dicot root", "Monocot stem", "Monocot root", "Dicot stem"],
       "correctAnswer": "B",
       "explanation": "Monocot stems have conjoint (xylem and phloem together), collateral (phloem external to xylem), and closed (no cambium) vascular bundles. Dicot stems have open bundles with cambium.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "monocot-stem",
-        "vascular-bundles",
-        "closed"
-      ],
+      "tags": ["monocot-stem", "vascular-bundles", "closed"],
       "neetWeightage": "HIGH"
     },
     {
@@ -757,21 +592,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Intercalary meristem is derived from:",
-      "options": [
-        "Cork cambium",
-        "Vascular cambium",
-        "Lateral meristem",
-        "Apical meristem"
-      ],
+      "options": ["Cork cambium", "Vascular cambium", "Lateral meristem", "Apical meristem"],
       "correctAnswer": "D",
       "explanation": "Intercalary meristems are remnants of the apical meristem that are left behind during growth. They are found at the base of internodes or leaf bases, particularly in monocots like grasses, and contribute to longitudinal growth.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meristematic-tissue",
-        "intercalary-meristem"
-      ],
+      "tags": ["meristematic-tissue", "intercalary-meristem"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -782,22 +609,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "The endodermis in roots is also known as:",
-      "options": [
-        "Bundle sheath",
-        "Pericycle",
-        "Exodermis",
-        "Starch sheath"
-      ],
+      "options": ["Bundle sheath", "Pericycle", "Exodermis", "Starch sheath"],
       "correctAnswer": "D",
       "explanation": "The endodermis in roots is sometimes called the starch sheath because the endodermal cells often contain starch grains. It is the innermost layer of the cortex.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root-anatomy",
-        "endodermis",
-        "starch-sheath"
-      ],
+      "tags": ["root-anatomy", "endodermis", "starch-sheath"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -808,21 +626,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "The bark of a tree includes all tissues external to:",
-      "options": [
-        "Pith",
-        "Vascular cambium",
-        "Endodermis",
-        "Cortex"
-      ],
+      "options": ["Pith", "Vascular cambium", "Endodermis", "Cortex"],
       "correctAnswer": "B",
       "explanation": "In technical terms, bark refers to all tissues external to the vascular cambium. This includes the secondary phloem (inner bark) and the periderm (outer bark). The term 'bark' is non-technical but commonly used.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "bark"
-      ],
+      "tags": ["secondary-growth", "bark"],
       "neetWeightage": "HIGH"
     },
     {
@@ -833,22 +643,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Phloem parenchyma is absent in:",
-      "options": [
-        "Dicot stems",
-        "Dicot roots",
-        "Monocots",
-        "Gymnosperm stems"
-      ],
+      "options": ["Dicot stems", "Dicot roots", "Monocots", "Gymnosperm stems"],
       "correctAnswer": "C",
       "explanation": "Phloem parenchyma is generally absent in monocotyledons. It is present in dicots and serves the function of storage of food and also in lateral conduction of food.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "phloem",
-        "phloem-parenchyma",
-        "monocots"
-      ],
+      "tags": ["phloem", "phloem-parenchyma", "monocots"],
       "neetWeightage": "HIGH"
     },
     {
@@ -870,10 +671,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "monocot-stem",
-        "ground-tissue"
-      ],
+      "tags": ["monocot-stem", "ground-tissue"],
       "neetWeightage": "HIGH"
     },
     {
@@ -895,10 +693,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "epidermis",
-        "trichomes"
-      ],
+      "tags": ["epidermis", "trichomes"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -920,10 +715,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "vascular-cambium"
-      ],
+      "tags": ["secondary-growth", "vascular-cambium"],
       "neetWeightage": "HIGH"
     },
     {
@@ -934,21 +726,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Bundle sheath cells surrounding vascular bundles in leaves are made of:",
-      "options": [
-        "Parenchymatous cells",
-        "Epidermal cells",
-        "Collenchyma",
-        "Sclerenchyma"
-      ],
+      "options": ["Parenchymatous cells", "Epidermal cells", "Collenchyma", "Sclerenchyma"],
       "correctAnswer": "A",
       "explanation": "The bundle sheath is a layer of parenchymatous cells surrounding the vascular bundles in leaves. In some monocots (like grasses with C4 pathway), bundle sheath cells contain chloroplasts and are important in photosynthesis.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf-anatomy",
-        "bundle-sheath"
-      ],
+      "tags": ["leaf-anatomy", "bundle-sheath"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -959,21 +743,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Secondary growth does NOT occur in:",
-      "options": [
-        "Dicot stems",
-        "Gymnosperm stems",
-        "Monocot stems",
-        "Dicot roots"
-      ],
+      "options": ["Dicot stems", "Gymnosperm stems", "Monocot stems", "Dicot roots"],
       "correctAnswer": "C",
       "explanation": "Secondary growth generally does not occur in monocot stems because they lack vascular cambium (having closed vascular bundles). Secondary growth occurs in dicot stems, dicot roots, and gymnosperm stems.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "monocots"
-      ],
+      "tags": ["secondary-growth", "monocots"],
       "neetWeightage": "HIGH"
     },
     {
@@ -995,10 +771,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "monocot-stem",
-        "secondary-growth"
-      ],
+      "tags": ["monocot-stem", "secondary-growth"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1020,11 +793,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "heartwood",
-        "durability"
-      ],
+      "tags": ["secondary-growth", "heartwood", "durability"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1046,11 +815,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tissues",
-        "collenchyma",
-        "function"
-      ],
+      "tags": ["tissues", "collenchyma", "function"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1072,11 +837,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "phloem",
-        "sieve-tubes",
-        "companion-cells"
-      ],
+      "tags": ["phloem", "sieve-tubes", "companion-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1098,11 +859,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "endodermis",
-        "casparian-strips",
-        "water-transport"
-      ],
+      "tags": ["endodermis", "casparian-strips", "water-transport"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1124,11 +881,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "annual-rings",
-        "dendrochronology"
-      ],
+      "tags": ["secondary-growth", "annual-rings", "dendrochronology"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1150,11 +903,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "cork",
-        "suberin"
-      ],
+      "tags": ["secondary-growth", "cork", "suberin"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1176,11 +925,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root-anatomy",
-        "xylem",
-        "exarch"
-      ],
+      "tags": ["root-anatomy", "xylem", "exarch"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1202,12 +947,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "xylem",
-        "vessels",
-        "tracheids",
-        "efficiency"
-      ],
+      "tags": ["xylem", "vessels", "tracheids", "efficiency"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1229,11 +969,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "lenticels",
-        "bark"
-      ],
+      "tags": ["secondary-growth", "lenticels", "bark"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1255,11 +991,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tissues",
-        "sclerenchyma",
-        "rigidity"
-      ],
+      "tags": ["tissues", "sclerenchyma", "rigidity"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1281,11 +1013,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dicot-stem",
-        "monocot-stem",
-        "cortex"
-      ],
+      "tags": ["dicot-stem", "monocot-stem", "cortex"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1307,11 +1035,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf-anatomy",
-        "palisade",
-        "dorsiventral"
-      ],
+      "tags": ["leaf-anatomy", "palisade", "dorsiventral"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1322,22 +1046,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Consider the following statements about xylem:\n(i) Tracheids are found in all vascular plants.\n(ii) Vessels are found only in angiosperms.\n(iii) Xylem parenchyma stores food and assists in lateral conduction.\n(iv) Xylem fibres provide mechanical support.\nHow many statements are correct?",
-      "options": [
-        "Three",
-        "One",
-        "Two",
-        "Four"
-      ],
+      "options": ["Three", "One", "Two", "Four"],
       "correctAnswer": "D",
       "explanation": "All four statements are correct. Tracheids are universal in vascular plants. Vessels are primarily found in angiosperms (with some exceptions like Gnetum). Xylem parenchyma is the only living component and stores food. Xylem fibres provide mechanical support.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "xylem",
-        "components",
-        "characteristics"
-      ],
+      "tags": ["xylem", "components", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1348,21 +1063,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Which of the following statements about dicot stem is INCORRECT?\n(i) Epidermis with cuticle is the outermost layer.\n(ii) Cortex contains collenchyma in the peripheral region.\n(iii) Vascular bundles are scattered throughout.\n(iv) Pith is well-developed.",
-      "options": [
-        "(iii) only",
-        "(ii) and (iii)",
-        "(i) and (iv)",
-        "(iii) and (iv)"
-      ],
+      "options": ["(iii) only", "(ii) and (iii)", "(i) and (iv)", "(iii) and (iv)"],
       "correctAnswer": "A",
       "explanation": "Statement (iii) is incorrect for dicot stem. In dicot stems, vascular bundles are arranged in a ring, not scattered. Scattered vascular bundles are a feature of monocot stems. All other statements are correct for dicot stems.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dicot-stem",
-        "anatomy"
-      ],
+      "tags": ["dicot-stem", "anatomy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1373,21 +1080,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Read the following statements about secondary growth:\nStatement I: Vascular cambium forms a complete ring by joining intrafascicular and interfascicular cambium.\nStatement II: Secondary xylem is produced more than secondary phloem.\nStatement III: Annual rings are formed due to different activity of cambium in spring and autumn.\nWhich statements are correct?",
-      "options": [
-        "I and III only",
-        "II and III only",
-        "I and II only",
-        "All three"
-      ],
+      "options": ["I and III only", "II and III only", "I and II only", "All three"],
       "correctAnswer": "D",
       "explanation": "All three statements are correct. The cambium ring forms from intra- and interfascicular cambia joining. More secondary xylem is produced than phloem. Annual rings form due to seasonal variation in cambial activity.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "vascular-cambium"
-      ],
+      "tags": ["secondary-growth", "vascular-cambium"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1398,21 +1097,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "How many of the following are features of monocot roots?\n(i) Polyarch xylem\n(ii) Large pith\n(iii) Well-developed passage cells in endodermis\n(iv) Presence of vascular cambium\n(v) Exarch xylem",
-      "options": [
-        "Two",
-        "Five",
-        "Four",
-        "Three"
-      ],
+      "options": ["Two", "Five", "Four", "Three"],
       "correctAnswer": "C",
       "explanation": "Features (i) polyarch xylem, (ii) large pith, (iii) passage cells, and (v) exarch xylem are all features of monocot roots. Feature (iv) is incorrect as monocot roots lack vascular cambium and do not show secondary growth.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "monocot-root",
-        "features"
-      ],
+      "tags": ["monocot-root", "features"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1434,10 +1125,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "phloem",
-        "components"
-      ],
+      "tags": ["phloem", "components"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1459,10 +1147,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meristematic-tissue",
-        "characteristics"
-      ],
+      "tags": ["meristematic-tissue", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1473,22 +1158,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Which of the following comparisons between dicot and monocot stems is INCORRECT?\n(i) Dicot stems have ring arrangement of vascular bundles; monocot stems have scattered arrangement.\n(ii) Dicot stems show secondary growth; monocot stems do not.\n(iii) Dicot stems have open vascular bundles; monocot stems have closed bundles.\n(iv) Dicot stems have a well-developed pith; monocot stems lack pith.",
-      "options": [
-        "None are incorrect",
-        "(ii) and (iii)",
-        "(iv) only",
-        "(i) only"
-      ],
+      "options": ["None are incorrect", "(ii) and (iii)", "(iv) only", "(i) only"],
       "correctAnswer": "C",
       "explanation": "Statement (iv) is misleading. Both dicot and monocot stems have pith; in dicot stems it is well-developed, and in monocot stems the ground tissue (which includes the region of pith) is not differentiated but is present as ground tissue throughout.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dicot-stem",
-        "monocot-stem",
-        "comparison"
-      ],
+      "tags": ["dicot-stem", "monocot-stem", "comparison"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1499,21 +1175,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Read the following about the periderm:\nI. Phellogen (cork cambium) develops from cortical cells.\nII. Phellem (cork) is produced towards the outside.\nIII. Phelloderm (secondary cortex) is produced towards the inside.\nIV. All cells of periderm are dead.\nWhich are correct?",
-      "options": [
-        "II and IV only",
-        "I, II and III only",
-        "All four",
-        "I and II only"
-      ],
+      "options": ["II and IV only", "I, II and III only", "All four", "I and II only"],
       "correctAnswer": "B",
       "explanation": "Statements I, II, and III are correct. Statement IV is incorrect because phelloderm cells are living parenchymatous cells. Only the phellem (cork) cells are dead at maturity.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "periderm"
-      ],
+      "tags": ["secondary-growth", "periderm"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1524,21 +1192,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "How many of the following tissues have dead cells at maturity?\n(i) Sclerenchyma (ii) Cork (iii) Tracheids (iv) Vessels (v) Companion cells (vi) Xylem fibres",
-      "options": [
-        "Five",
-        "Three",
-        "Four",
-        "Six"
-      ],
+      "options": ["Five", "Three", "Four", "Six"],
       "correctAnswer": "A",
       "explanation": "Sclerenchyma, cork, tracheids, vessels, and xylem fibres are all dead at maturity. Companion cells are living cells with dense cytoplasm and a prominent nucleus.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tissues",
-        "dead-cells"
-      ],
+      "tags": ["tissues", "dead-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1549,22 +1209,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Which of the following about collenchyma types is correct?\nI. Angular collenchyma has thickening at the corners.\nII. Lamellar collenchyma has thickening on tangential walls.\nIII. Lacunar collenchyma has intercellular spaces.\nIV. All collenchyma cells are dead.",
-      "options": [
-        "I only",
-        "All four",
-        "I and II only",
-        "I, II and III only"
-      ],
+      "options": ["I only", "All four", "I and II only", "I, II and III only"],
       "correctAnswer": "D",
       "explanation": "Statements I, II, and III correctly describe the three types of collenchyma. Statement IV is incorrect; collenchyma cells are living cells, which distinguishes them from sclerenchyma.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tissues",
-        "collenchyma",
-        "types"
-      ],
+      "tags": ["tissues", "collenchyma", "types"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1586,10 +1237,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tissues",
-        "functions"
-      ],
+      "tags": ["tissues", "functions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1611,11 +1259,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "xylem",
-        "components",
-        "features"
-      ],
+      "tags": ["xylem", "components", "features"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1637,10 +1281,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "anatomy",
-        "locations"
-      ],
+      "tags": ["anatomy", "locations"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1651,20 +1292,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Match the tissue system with its components:\nColumn I: (a) Epidermal tissue system (b) Vascular tissue system (c) Ground tissue system\nColumn II: (i) Xylem and phloem (ii) Parenchyma, collenchyma, sclerenchyma (iii) Epidermis, stomata, trichomes",
-      "options": [
-        "a-ii, b-i, c-iii",
-        "a-i, b-iii, c-ii",
-        "a-iii, b-ii, c-i",
-        "a-iii, b-i, c-ii"
-      ],
+      "options": ["a-ii, b-i, c-iii", "a-i, b-iii, c-ii", "a-iii, b-ii, c-i", "a-iii, b-i, c-ii"],
       "correctAnswer": "D",
       "explanation": "The epidermal tissue system includes epidermis, stomata, and trichomes. The vascular tissue system includes xylem and phloem. The ground tissue system includes parenchyma, collenchyma, and sclerenchyma.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tissue-systems"
-      ],
+      "tags": ["tissue-systems"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1686,10 +1320,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vascular-bundles",
-        "types"
-      ],
+      "tags": ["vascular-bundles", "types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1711,11 +1342,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "periderm",
-        "terms"
-      ],
+      "tags": ["secondary-growth", "periderm", "terms"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1726,21 +1353,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Match the meristem type with its position:\nColumn I: (a) Apical meristem (b) Lateral meristem (c) Intercalary meristem\nColumn II: (i) At the base of internodes or leaf bases (ii) At the tips of roots and shoots (iii) Along the sides of the plant axis",
-      "options": [
-        "a-iii, b-ii, c-i",
-        "a-i, b-iii, c-ii",
-        "a-ii, b-iii, c-i",
-        "a-ii, b-i, c-iii"
-      ],
+      "options": ["a-iii, b-ii, c-i", "a-i, b-iii, c-ii", "a-ii, b-iii, c-i", "a-ii, b-i, c-iii"],
       "correctAnswer": "C",
       "explanation": "Apical meristems are at the tips of roots and shoots. Lateral meristems (vascular cambium, cork cambium) are along the sides. Intercalary meristems are at the base of internodes or leaf bases.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meristematic-tissue",
-        "position"
-      ],
+      "tags": ["meristematic-tissue", "position"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1762,11 +1381,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "phloem",
-        "components",
-        "features"
-      ],
+      "tags": ["phloem", "components", "features"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1777,22 +1392,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Match the leaf type with its anatomy:\nColumn I: (a) Dorsiventral leaf (b) Isobilateral leaf\nColumn II: (i) Mesophyll differentiated into palisade and spongy (ii) Mesophyll not differentiated, stomata on both surfaces",
-      "options": [
-        "Both a-i and b-i",
-        "a-i, b-ii",
-        "Both a-ii and b-ii",
-        "a-ii, b-i"
-      ],
+      "options": ["Both a-i and b-i", "a-i, b-ii", "Both a-ii and b-ii", "a-ii, b-i"],
       "correctAnswer": "B",
       "explanation": "Dorsiventral (dicot) leaves have differentiated mesophyll with palisade and spongy tissues. Isobilateral (monocot) leaves have undifferentiated mesophyll and stomata equally distributed on both surfaces.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf-anatomy",
-        "dorsiventral",
-        "isobilateral"
-      ],
+      "tags": ["leaf-anatomy", "dorsiventral", "isobilateral"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1814,10 +1420,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "wood-types"
-      ],
+      "tags": ["secondary-growth", "wood-types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1828,22 +1431,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Match the type of collenchyma with its thickening pattern:\nColumn I: (a) Angular (b) Lacunar (c) Lamellar\nColumn II: (i) Thickening on tangential walls (ii) Thickening at cell corners (iii) Thickening around intercellular spaces",
-      "options": [
-        "a-iii, b-i, c-ii",
-        "a-ii, b-iii, c-i",
-        "a-ii, b-i, c-iii",
-        "a-i, b-ii, c-iii"
-      ],
+      "options": ["a-iii, b-i, c-ii", "a-ii, b-iii, c-i", "a-ii, b-i, c-iii", "a-i, b-ii, c-iii"],
       "correctAnswer": "B",
       "explanation": "Angular collenchyma has thickening at cell corners (most common type). Lacunar collenchyma has thickening around intercellular spaces. Lamellar (plate) collenchyma has thickening on tangential walls.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tissues",
-        "collenchyma",
-        "types"
-      ],
+      "tags": ["tissues", "collenchyma", "types"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1854,21 +1448,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "How many of the following are components of the vascular tissue system?\nXylem, Phloem, Epidermis, Cortex, Pith, Vascular cambium",
-      "options": [
-        "Two",
-        "Three",
-        "Five",
-        "Four"
-      ],
+      "options": ["Two", "Three", "Five", "Four"],
       "correctAnswer": "B",
       "explanation": "Xylem, Phloem, and Vascular cambium are components of the vascular tissue system. Epidermis is part of the epidermal tissue system. Cortex and Pith are part of the ground tissue system.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tissue-systems",
-        "vascular"
-      ],
+      "tags": ["tissue-systems", "vascular"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1879,21 +1465,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "How many of the following are simple permanent tissues?\nParenchyma, Collenchyma, Sclerenchyma, Xylem, Phloem, Aerenchyma",
-      "options": [
-        "Five",
-        "Two",
-        "Four",
-        "Three"
-      ],
+      "options": ["Five", "Two", "Four", "Three"],
       "correctAnswer": "C",
       "explanation": "Parenchyma, Collenchyma, Sclerenchyma, and Aerenchyma (a type of parenchyma with air spaces) are simple permanent tissues made of one type of cell. Xylem and Phloem are complex permanent tissues.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tissues",
-        "simple-permanent"
-      ],
+      "tags": ["tissues", "simple-permanent"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1904,21 +1482,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "How many of the following cells/tissues are living at maturity?\n(i) Parenchyma (ii) Collenchyma (iii) Sclerenchyma (iv) Companion cells (v) Sieve tube elements (vi) Tracheids (vii) Xylem parenchyma",
-      "options": [
-        "Five",
-        "Four",
-        "Three",
-        "Six"
-      ],
+      "options": ["Five", "Four", "Three", "Six"],
       "correctAnswer": "A",
       "explanation": "Parenchyma, collenchyma, companion cells, sieve tube elements (living but enucleate), and xylem parenchyma are living at maturity. Sclerenchyma and tracheids are dead at maturity.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tissues",
-        "living-cells"
-      ],
+      "tags": ["tissues", "living-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1929,20 +1499,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "How many tissue systems are present in plants as per NCERT classification?",
-      "options": [
-        "Three",
-        "Four",
-        "Five",
-        "Two"
-      ],
+      "options": ["Three", "Four", "Five", "Two"],
       "correctAnswer": "A",
       "explanation": "Plants have three tissue systems: (1) Epidermal tissue system (epidermis, stomata, trichomes), (2) Ground tissue system (parenchyma, collenchyma, sclerenchyma), and (3) Vascular tissue system (xylem, phloem, cambium).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tissue-systems"
-      ],
+      "tags": ["tissue-systems"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1953,22 +1516,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "How many of the following are differences between dicot and monocot roots?\n(i) Number of xylem bundles (ii) Presence of pith (iii) Presence of cambium (iv) Exarch vs endarch xylem (v) Passage cells",
-      "options": [
-        "Two",
-        "Three",
-        "Five",
-        "Four"
-      ],
+      "options": ["Two", "Three", "Five", "Four"],
       "correctAnswer": "B",
       "explanation": "Three features differ: (i) dicot has fewer xylem bundles (diarch-hexarch) vs monocot (polyarch), (ii) dicot has small/absent pith vs monocot has large pith, (iii) cambium develops in dicot root for secondary growth, absent in monocot. Both have exarch xylem, and passage cells are in monocot endodermis.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dicot-root",
-        "monocot-root",
-        "differences"
-      ],
+      "tags": ["dicot-root", "monocot-root", "differences"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1979,21 +1533,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "How many components does xylem have?",
-      "options": [
-        "Two",
-        "Five",
-        "Four",
-        "Three"
-      ],
+      "options": ["Two", "Five", "Four", "Three"],
       "correctAnswer": "C",
       "explanation": "Xylem has four components: (1) Tracheids, (2) Vessel elements, (3) Xylem parenchyma, and (4) Xylem fibres. Of these, only xylem parenchyma is living at maturity.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "xylem",
-        "components"
-      ],
+      "tags": ["xylem", "components"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2004,21 +1550,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "How many of the following structures are part of the periderm?\n(i) Phellem (ii) Phellogen (iii) Phelloderm (iv) Epidermis (v) Cortex",
-      "options": [
-        "Two",
-        "Five",
-        "Four",
-        "Three"
-      ],
+      "options": ["Two", "Five", "Four", "Three"],
       "correctAnswer": "D",
       "explanation": "Periderm consists of three components: Phellem (cork), Phellogen (cork cambium), and Phelloderm (secondary cortex). Epidermis and cortex are not part of the periderm; they are replaced by periderm during secondary growth.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "periderm"
-      ],
+      "tags": ["secondary-growth", "periderm"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2040,11 +1578,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dicot-stem",
-        "anatomy",
-        "layers"
-      ],
+      "tags": ["dicot-stem", "anatomy", "layers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2066,11 +1600,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dicot-root",
-        "anatomy",
-        "layers"
-      ],
+      "tags": ["dicot-root", "anatomy", "layers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2092,10 +1622,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "sequence"
-      ],
+      "tags": ["secondary-growth", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2117,11 +1644,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root-anatomy",
-        "xylem",
-        "exarch"
-      ],
+      "tags": ["root-anatomy", "xylem", "exarch"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2143,11 +1666,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "periderm",
-        "layers"
-      ],
+      "tags": ["secondary-growth", "periderm", "layers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2169,11 +1688,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf-anatomy",
-        "dorsiventral",
-        "layers"
-      ],
+      "tags": ["leaf-anatomy", "dorsiventral", "layers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2195,11 +1710,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secondary-growth",
-        "wood",
-        "trunk-layers"
-      ],
+      "tags": ["secondary-growth", "wood", "trunk-layers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2210,21 +1721,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Which of the following is the only living component of xylem?",
-      "options": [
-        "Vessels",
-        "Tracheids",
-        "Xylem parenchyma",
-        "Xylem fibres"
-      ],
+      "options": ["Vessels", "Tracheids", "Xylem parenchyma", "Xylem fibres"],
       "correctAnswer": "C",
       "explanation": "Xylem parenchyma is the only living component of xylem. It stores food materials and helps in the lateral (radial) conduction of water. Tracheids, vessels, and xylem fibres are all dead at maturity.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "xylem",
-        "xylem-parenchyma"
-      ],
+      "tags": ["xylem", "xylem-parenchyma"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2246,10 +1749,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "monocot-root",
-        "cortex"
-      ],
+      "tags": ["monocot-root", "cortex"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2260,22 +1760,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "The hypodermis in a dicot stem is made up of:",
-      "options": [
-        "Aerenchyma",
-        "Collenchyma",
-        "Sclerenchyma",
-        "Parenchyma"
-      ],
+      "options": ["Aerenchyma", "Collenchyma", "Sclerenchyma", "Parenchyma"],
       "correctAnswer": "B",
       "explanation": "In dicot stems, the hypodermis (just beneath the epidermis) is made of collenchyma cells. This provides mechanical support to the young growing stem while allowing flexibility. In monocot stems, the hypodermis is sclerenchymatous.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dicot-stem",
-        "hypodermis",
-        "collenchyma"
-      ],
+      "tags": ["dicot-stem", "hypodermis", "collenchyma"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2286,22 +1777,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "The pericycle in a dicot root gives rise to:",
-      "options": [
-        "Stomata",
-        "Cortex",
-        "Root hairs",
-        "Lateral roots and vascular cambium"
-      ],
+      "options": ["Stomata", "Cortex", "Root hairs", "Lateral roots and vascular cambium"],
       "correctAnswer": "D",
       "explanation": "The pericycle in dicot roots is important because it gives rise to lateral roots (endogenous origin) and also contributes to the formation of vascular cambium during secondary growth.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dicot-root",
-        "pericycle",
-        "lateral-roots"
-      ],
+      "tags": ["dicot-root", "pericycle", "lateral-roots"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2312,22 +1794,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "The xylem in stems is:",
-      "options": [
-        "Exarch",
-        "Centrarch",
-        "Mesarch",
-        "Endarch"
-      ],
+      "options": ["Exarch", "Centrarch", "Mesarch", "Endarch"],
       "correctAnswer": "D",
       "explanation": "In stems, the xylem is endarch, meaning the protoxylem is towards the centre (pith) and metaxylem is towards the periphery. This is opposite to roots where xylem is exarch.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stem-anatomy",
-        "xylem",
-        "endarch"
-      ],
+      "tags": ["stem-anatomy", "xylem", "endarch"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2338,22 +1811,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Bicollateral vascular bundles are found in:",
-      "options": [
-        "Dicot root",
-        "Monocot root",
-        "Cucurbit stem",
-        "Monocot stem"
-      ],
+      "options": ["Dicot root", "Monocot root", "Cucurbit stem", "Monocot stem"],
       "correctAnswer": "C",
       "explanation": "Bicollateral vascular bundles have phloem on both sides of the xylem (outer phloem and inner phloem with cambium between xylem and each phloem). They are characteristically found in Cucurbitaceae (cucumber family).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vascular-bundles",
-        "bicollateral",
-        "cucurbits"
-      ],
+      "tags": ["vascular-bundles", "bicollateral", "cucurbits"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2375,10 +1839,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tissues",
-        "parenchyma"
-      ],
+      "tags": ["tissues", "parenchyma"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2400,11 +1861,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "monocot-stem",
-        "hypodermis",
-        "sclerenchyma"
-      ],
+      "tags": ["monocot-stem", "hypodermis", "sclerenchyma"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2415,22 +1872,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Select the INCORRECT statement about isobilateral (monocot) leaves:\n(i) Mesophyll is not differentiated into palisade and spongy.\n(ii) Stomata are present equally on both surfaces.\n(iii) Bundle sheath cells may contain chloroplasts.\n(iv) Bulliform cells are found on the lower epidermis.",
-      "options": [
-        "(iv) only",
-        "(i) only",
-        "(iii) and (iv)",
-        "(ii) and (iii)"
-      ],
+      "options": ["(iv) only", "(i) only", "(iii) and (iv)", "(ii) and (iii)"],
       "correctAnswer": "A",
       "explanation": "Statement (iv) is incorrect. Bulliform cells are found on the upper (adaxial) epidermis of monocot leaves, not the lower epidermis. They help in rolling and unrolling of leaves during water stress.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf-anatomy",
-        "isobilateral",
-        "bulliform-cells"
-      ],
+      "tags": ["leaf-anatomy", "isobilateral", "bulliform-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2441,22 +1889,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "How many of the following are differences between open and closed vascular bundles?\n(i) Open bundles have cambium, closed do not.\n(ii) Open bundles can undergo secondary growth.\n(iii) Open bundles are found in dicots, closed in monocots.\n(iv) Both types have xylem and phloem.",
-      "options": [
-        "Three",
-        "One (only iv is a similarity, not a difference)",
-        "Two",
-        "Four"
-      ],
+      "options": ["Three", "One (only iv is a similarity, not a difference)", "Two", "Four"],
       "correctAnswer": "A",
       "explanation": "Statements (i), (ii), and (iii) describe actual differences between open and closed vascular bundles. Statement (iv) is a similarity (both have xylem and phloem), not a difference.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vascular-bundles",
-        "open",
-        "closed"
-      ],
+      "tags": ["vascular-bundles", "open", "closed"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2467,22 +1906,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "Match the plant organs with their xylem arrangement:\nColumn I: (a) Root (b) Stem\nColumn II: (i) Endarch (ii) Exarch",
-      "options": [
-        "Both a-i and b-i",
-        "a-i, b-ii",
-        "a-ii, b-i",
-        "Both a-ii and b-ii"
-      ],
+      "options": ["Both a-i and b-i", "a-i, b-ii", "a-ii, b-i", "Both a-ii and b-ii"],
       "correctAnswer": "C",
       "explanation": "In roots, the xylem is exarch (protoxylem towards periphery, metaxylem towards centre). In stems, the xylem is endarch (protoxylem towards centre/pith, metaxylem towards periphery).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "xylem",
-        "exarch",
-        "endarch"
-      ],
+      "tags": ["xylem", "exarch", "endarch"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2504,10 +1934,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "anatomy",
-        "comparison"
-      ],
+      "tags": ["anatomy", "comparison"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2518,21 +1945,13 @@
       "ncertChapter": 6,
       "ncertChapterName": "Anatomy of Flowering Plants",
       "question": "How many of the following are features of dicot root anatomy?\n(i) Exarch xylem (ii) Usually 2-6 xylem bundles (iii) Pith is small or absent (iv) Cambium develops during secondary growth (v) Polyarch xylem",
-      "options": [
-        "Four",
-        "Five",
-        "Two",
-        "Three"
-      ],
+      "options": ["Four", "Five", "Two", "Three"],
       "correctAnswer": "A",
       "explanation": "Features (i) exarch xylem, (ii) 2-6 xylem bundles, (iii) small/absent pith, and (iv) cambium development are all features of dicot roots. Feature (v) polyarch xylem is a feature of monocot roots.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dicot-root",
-        "features"
-      ],
+      "tags": ["dicot-root", "features"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2554,10 +1973,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meristematic-tissue",
-        "differentiation"
-      ],
+      "tags": ["meristematic-tissue", "differentiation"],
       "neetWeightage": "MEDIUM"
     }
   ]

@@ -40,7 +40,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'DAT Biology Tutor New Jersey | Rutgers, NYU, Edison, Jersey City',
-    description: 'DAT Biology tutor for New Jersey pre-dental students — Rutgers, TCNJ, NJIT, Edison, Iselin, Jersey City. AIIMS-trained biology specialists, ET evening slots. From $449.',
+    description:
+      'DAT Biology tutor for New Jersey pre-dental students — Rutgers, TCNJ, NJIT, Edison, Iselin, Jersey City. AIIMS-trained biology specialists, ET evening slots. From $449.',
   },
 }
 
@@ -62,7 +63,8 @@ const faqs = [
       'Payment is in USD via card, ACH, or international wire (for parents paying from outside the US). Faculty are biology specialists led by Dr. Shekhar C Singh (AIIMS Delhi), with senior faculty fluent in English and Hindi if family communication is preferred in Hindi. All sessions are online — no commute. Parents typically attend the diagnostic and milestone check-ins; the rest is direct student-tutor over Zoom + WhatsApp.',
   },
   {
-    question: 'How does Cerebrum compare to other generalist DAT brands or other generalist DAT prep platforms for an NJ pre-dental?',
+    question:
+      'How does Cerebrum compare to other generalist DAT brands or other generalist DAT prep platforms for an NJ pre-dental?',
     answer:
       'other generalist DAT brands is $2,599 — full-DAT generalist covering all four sections with rotating subject faculty. other generalist DAT prep platforms is $295 (basic) to $795 (Pro) — primarily a question-bank platform with video library. Cerebrum is a biology-only specialist — we cover the Biology section in depth ($1,399 1:1 full programme, $135/hr ad-hoc) and most NJ students pair us with other generalist DAT prep platforms for drill volume.',
   },

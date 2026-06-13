@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function KotaVsOnlineIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -55,8 +55,7 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
       <rect width="700" height="520" fill="#F8FAFC" rx="16" />
 
       {/* Title Section */}
-      <g
-      >
+      <g>
         <rect
           x="175"
           y="10"
@@ -75,8 +74,7 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Left Section - Kota Coaching */}
-      <g
-      >
+      <g>
         <rect
           x="20"
           y="70"
@@ -92,8 +90,7 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
         </text>
 
         {/* Kota Building Illustration */}
-        <g
-        >
+        <g>
           {/* Building */}
           <rect x="60" y="115" width="120" height="80" rx="6" fill="#EA580C" />
           <rect x="70" y="125" width="20" height="20" rx="3" fill="#FFFFFF" />
@@ -112,20 +109,17 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
         </g>
 
         {/* Walking students */}
-        <g
-        >
+        <g>
           <circle cx="50" cy="210" r="8" fill="#FBBF24" />
           <rect x="46" y="220" width="8" height="12" rx="2" fill="#3B82F6" />
         </g>
-        <g
-        >
+        <g>
           <circle cx="75" cy="215" r="8" fill="#FBBF24" />
           <rect x="71" y="225" width="8" height="12" rx="2" fill="#8B5CF6" />
         </g>
 
         {/* Auto/Taxi */}
-        <g
-        >
+        <g>
           <rect x="140" y="205" width="35" height="18" rx="4" fill="#FCD34D" />
           <circle cx="148" cy="223" r="5" fill="#1E293B" />
           <circle cx="167" cy="223" r="5" fill="#1E293B" />
@@ -150,8 +144,7 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Center Section - Comparison Chart */}
-      <g
-      >
+      <g>
         <rect
           x="250"
           y="70"
@@ -168,9 +161,7 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
 
         {/* Comparison rows */}
         {comparisonData.map((item, index) => (
-          <g
-            key={item.factor}
-          >
+          <g key={item.factor}>
             {/* Row background */}
             <rect
               x="260"
@@ -223,11 +214,7 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
 
             {/* Winner indicator */}
             {item.winner === 'online' && (
-              <text
-                x="440"
-                y={144 + index * 48}
-                fontSize="10"
-              >
+              <text x="440" y={144 + index * 48} fontSize="10">
                 ✓
               </text>
             )}
@@ -236,8 +223,7 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Right Section - Online Coaching */}
-      <g
-      >
+      <g>
         <rect
           x="460"
           y="70"
@@ -253,8 +239,7 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
         </text>
 
         {/* Laptop with Live Class */}
-        <g
-        >
+        <g>
           <rect x="495" y="115" width="150" height="90" rx="8" fill="#1E293B" />
           <rect x="503" y="123" width="134" height="74" rx="4" fill="#3B82F6" />
 
@@ -274,19 +259,13 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
           </text>
 
           {/* Live indicator */}
-          <circle
-            cx="625"
-            cy="130"
-            r="6"
-            fill="#EF4444"
-          />
+          <circle cx="625" cy="130" r="6" fill="#EF4444" />
           <text x="625" y="145" fontSize="6" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
             LIVE
           </text>
 
           {/* Chat bubbles */}
-          <g
-          >
+          <g>
             <rect x="595" y="165" width="35" height="10" rx="3" fill="#FFFFFF" />
             <rect x="600" y="178" width="28" height="8" rx="3" fill="#10B981" />
           </g>
@@ -296,8 +275,7 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
         </g>
 
         {/* Student at home */}
-        <g
-        >
+        <g>
           <ellipse cx="570" cy="250" rx="25" ry="20" fill="#0D9488" />
           <circle cx="570" cy="228" r="15" fill="#FBBF24" />
           <circle cx="566" cy="225" r="2" fill="#1E293B" />
@@ -335,8 +313,7 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* VS Badge */}
-      <g
-      >
+      <g>
         <circle cx="350" cy="360" r="25" fill="#EF4444" />
         <text x="350" y="365" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           VS
@@ -344,8 +321,7 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Bottom Section - Final Verdict */}
-      <g
-      >
+      <g>
         <rect
           x="20"
           y="395"
@@ -445,29 +421,9 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Floating decorative elements */}
-      <circle
-        cx="15"
-        cy="55"
-        r="8"
-        fill="#F97316"
-        opacity="0.3"
-      />
-      <circle
-        cx="685"
-        cy="45"
-        r="6"
-        fill="#14B8A6"
-        opacity="0.3"
-      />
-      <rect
-        x="660"
-        y="380"
-        width="15"
-        height="10"
-        rx="2"
-        fill="#6366F1"
-        opacity="0.3"
-      />
+      <circle cx="15" cy="55" r="8" fill="#F97316" opacity="0.3" />
+      <circle cx="685" cy="45" r="6" fill="#14B8A6" opacity="0.3" />
+      <rect x="660" y="380" width="15" height="10" rx="2" fill="#6366F1" opacity="0.3" />
     </svg>
   )
 }

@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Online Biology Tutor for NEET | Expert NEET Biology Classes Online',
-    description: 'Get expert online biology tutoring for NEET preparation. Live 1-on-1 classes with AIIMS-trained faculty. Flexible scheduling, personalized study plans. Start your free demo today!',
+    description:
+      'Get expert online biology tutoring for NEET preparation. Live 1-on-1 classes with AIIMS-trained faculty. Flexible scheduling, personalized study plans. Start your free demo today!',
   },
 }
 

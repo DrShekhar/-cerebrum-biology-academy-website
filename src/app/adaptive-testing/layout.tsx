@@ -28,8 +28,18 @@ export default function AdaptiveTestingLayout({ children }: { children: React.Re
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'Adaptive Testing', item: 'https://cerebrumbiologyacademy.com/adaptive-testing' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Adaptive Testing',
+        item: 'https://cerebrumbiologyacademy.com/adaptive-testing',
+      },
     ],
   }
 
@@ -37,7 +47,8 @@ export default function AdaptiveTestingLayout({ children }: { children: React.Re
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Adaptive Testing - Cerebrum Biology Academy',
-    description: 'AI-powered adaptive testing for NEET Biology. Personalized assessments that adjust difficulty to your level.',
+    description:
+      'AI-powered adaptive testing for NEET Biology. Personalized assessments that adjust difficulty to your level.',
     url: 'https://cerebrumbiologyacademy.com/adaptive-testing',
     isPartOf: {
       '@type': 'WebSite',
@@ -57,7 +68,8 @@ export default function AdaptiveTestingLayout({ children }: { children: React.Re
     name: 'Cerebrum Adaptive Testing System',
     applicationCategory: 'EducationalApplication',
     operatingSystem: 'Web',
-    description: 'AI-powered adaptive testing platform for NEET Biology preparation with personalized difficulty adjustment.',
+    description:
+      'AI-powered adaptive testing platform for NEET Biology preparation with personalized difficulty adjustment.',
     offers: {
       '@type': 'Offer',
       price: '0',
@@ -72,9 +84,18 @@ export default function AdaptiveTestingLayout({ children }: { children: React.Re
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
+      />
       {children}
     </>
   )

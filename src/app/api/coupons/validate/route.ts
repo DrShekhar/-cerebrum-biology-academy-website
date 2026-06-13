@@ -17,10 +17,7 @@ export async function POST(request: NextRequest) {
       windowMs: 60 * 60 * 1000,
     })
     if (!rateLimitResult.success) {
-      return NextResponse.json(
-        { success: false, error: 'Too many requests' },
-        { status: 429 }
-      )
+      return NextResponse.json({ success: false, error: 'Too many requests' }, { status: 429 })
     }
 
     const session = await validateUserSession(request)
@@ -39,10 +36,7 @@ export async function POST(request: NextRequest) {
     })
 
     if (!coupon) {
-      return NextResponse.json(
-        { success: false, error: 'Invalid coupon code' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Invalid coupon code' }, { status: 404 })
     }
 
     if (!coupon.isActive) {
@@ -128,10 +122,7 @@ export async function POST(request: NextRequest) {
     })
   } catch (error) {
     if (error instanceof z.ZodError) {
-      return NextResponse.json(
-        { success: false, error: 'Invalid request data' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Invalid request data' }, { status: 400 })
     }
     console.error('Validate coupon error:', error)
     return NextResponse.json(

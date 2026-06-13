@@ -21,10 +21,7 @@ import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
-import {
-  RelatedLocations,
-  getRelatedLocations,
-} from '@/components/locations/RelatedLocations'
+import { RelatedLocations, getRelatedLocations } from '@/components/locations/RelatedLocations'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
@@ -84,15 +81,21 @@ export default function MaharaniBaghPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/locations/maharani-bagh"
         pageName="NEET Biology Coaching for Maharani Bagh Students"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
-        personKnowsAbout={['NEET Maharani Bagh', 'NEET Biology Maharani Bagh', 'Medical entrance coaching Maharani Bagh']}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
+        personKnowsAbout={[
+          'NEET Maharani Bagh',
+          'NEET Biology Maharani Bagh',
+          'Medical entrance coaching Maharani Bagh',
+        ]}
         faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
       />
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-emerald-900 via-teal-800 to-emerald-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center animate-fadeInUp"
-            >
+            <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-300 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Building className="w-4 h-4" />
                 Premium South Delhi
@@ -128,8 +131,7 @@ export default function MaharaniBaghPage() {
         <section className="py-12 md:py-16 -mt-8">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-yellow-400 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-yellow-400 animate-fadeInUp">
                 <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white py-4 px-6">
                   <div className="flex items-center gap-3">
                     <Award className="w-8 h-8" />
@@ -227,8 +229,7 @@ export default function MaharaniBaghPage() {
                 { icon: Trophy, title: '98% Success', desc: '695/720 top score' },
                 { icon: Star, title: 'AIIMS Faculty', desc: 'Dr. Shekhar leads' },
               ].map((item, idx) => (
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
-                >
+                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp">
                   <div className="w-14 h-14 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-emerald-600" />
                   </div>
@@ -287,8 +288,7 @@ export default function MaharaniBaghPage() {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">FAQs</h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((f, i) => (
-                <div key={i} className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
-                >
+                <div key={i} className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp">
                   <h3 className="font-semibold text-lg mb-2">{f.q}</h3>
                   <p className="text-gray-600">{f.a}</p>
                 </div>

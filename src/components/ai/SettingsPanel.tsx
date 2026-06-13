@@ -197,17 +197,15 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
   ]
 
   return (
-<>
-{isOpen && (
+    <>
+      {isOpen && (
         <>
           <div
             onClick={onClose}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 animate-fadeInUp"
           />
 
-          <div
-            className="fixed right-0 top-0 h-full w-full md:w-[600px] bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 shadow-2xl z-50 overflow-hidden animate-fadeInUp"
-          >
+          <div className="fixed right-0 top-0 h-full w-full md:w-[600px] bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 shadow-2xl z-50 overflow-hidden animate-fadeInUp">
             <div className="h-full flex flex-col">
               <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 text-white">
                 <div className="flex items-center justify-between mb-4">
@@ -241,9 +239,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
 
               <div className="flex-1 overflow-y-auto p-6 space-y-6">
                 {activeSection === 'theme' && (
-                  <div
-                    className="space-y-6 animate-fadeInUp"
-                  >
+                  <div className="space-y-6 animate-fadeInUp">
                     <div className="bg-white/80 backdrop-blur-lg rounded-xl p-6 border border-white/20 shadow-lg">
                       <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
                         <Sun className="w-5 h-5 mr-2 text-yellow-500" />
@@ -336,9 +332,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
                 )}
 
                 {activeSection === 'notifications' && (
-                  <div
-                    className="space-y-6 animate-fadeInUp"
-                  >
+                  <div className="space-y-6 animate-fadeInUp">
                     <div className="bg-white/80 backdrop-blur-lg rounded-xl p-6 border border-white/20 shadow-lg">
                       <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
                         <Bell className="w-5 h-5 mr-2 text-blue-500" />
@@ -484,9 +478,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
                 )}
 
                 {activeSection === 'profile' && (
-                  <div
-                    className="space-y-6 animate-fadeInUp"
-                  >
+                  <div className="space-y-6 animate-fadeInUp">
                     <div className="bg-white/80 backdrop-blur-lg rounded-xl p-6 border border-white/20 shadow-lg">
                       <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
                         <User className="w-5 h-5 mr-2 text-purple-500" />
@@ -599,9 +591,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
                 )}
 
                 {activeSection === 'privacy' && (
-                  <div
-                    className="space-y-6 animate-fadeInUp"
-                  >
+                  <div className="space-y-6 animate-fadeInUp">
                     <div className="bg-white/80 backdrop-blur-lg rounded-xl p-6 border border-white/20 shadow-lg">
                       <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
                         <Shield className="w-5 h-5 mr-2 text-green-600" />
@@ -721,8 +711,8 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
           </div>
         </>
       )}
-</>
-)
+    </>
+  )
 }
 
 export default SettingsPanel

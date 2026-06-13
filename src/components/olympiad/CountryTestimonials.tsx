@@ -49,11 +49,7 @@ export function CountryTestimonials({ testimonials, countryName }: CountryTestim
                   className={`h-6 w-6 ${isPlaceholder ? 'text-slate-400' : 'text-[#6B5DC6]'}`}
                 />
                 <blockquote className="mt-3 text-sm italic leading-relaxed">
-                  {isPlaceholder ? (
-                    <span className="text-xs">{t.quote}</span>
-                  ) : (
-                    `"${t.quote}"`
-                  )}
+                  {isPlaceholder ? <span className="text-xs">{t.quote}</span> : `"${t.quote}"`}
                 </blockquote>
                 <div className="mt-4 border-t border-slate-200 pt-3 text-xs">
                   <div

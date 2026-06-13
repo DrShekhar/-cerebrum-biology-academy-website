@@ -315,13 +315,9 @@ export function ProgressIndicator({
       <div className="relative">
         <div className={cn('w-full bg-slate-200 rounded-full overflow-hidden', sizes.progress)}>
           {mode === 'indeterminate' ? (
-            <div
-              className={cn('h-full rounded-full', colors.bg)}
-            />
+            <div className={cn('h-full rounded-full', colors.bg)} />
           ) : (
-            <div
-              className={cn('h-full rounded-full', colors.bg)}
-            />
+            <div className={cn('h-full rounded-full', colors.bg)} />
           )}
         </div>
 

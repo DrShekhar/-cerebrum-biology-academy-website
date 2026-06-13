@@ -2,14 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
-import {
-  Target,
-  Loader2,
-  Lightbulb,
-  TrendingUp,
-  Calendar,
-  Zap,
-} from 'lucide-react'
+import { Target, Loader2, Lightbulb, TrendingUp, Calendar, Zap } from 'lucide-react'
 
 interface ProgressInsights {
   strengths: string[]
@@ -92,8 +85,7 @@ function ReadinessGauge({ value }: { value: number }) {
   const circumference = normalizedRadius * 2 * Math.PI
   const strokeDashoffset = circumference - (value / 100) * circumference
 
-  const color =
-    value >= 75 ? '#22c55e' : value >= 50 ? '#eab308' : '#ef4444'
+  const color = value >= 75 ? '#22c55e' : value >= 50 ? '#eab308' : '#ef4444'
 
   return (
     <div className="relative inline-flex items-center justify-center">
@@ -249,10 +241,7 @@ export function NEETReadinessMeter() {
           </h4>
           <ul className="space-y-1.5">
             {recommendations.map((rec, idx) => (
-              <li
-                key={idx}
-                className="text-xs text-gray-600 pl-3 border-l-2 border-blue-200"
-              >
+              <li key={idx} className="text-xs text-gray-600 pl-3 border-l-2 border-blue-200">
                 {rec}
               </li>
             ))}

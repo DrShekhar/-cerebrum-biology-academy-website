@@ -13,7 +13,14 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: 'Book Free Demo Class',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Book Free Demo Class | NEET Biology Trial Lesson' }],
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Book Free Demo Class | NEET Biology Trial Lesson',
+      },
+    ],
     description:
       'Experience NEET Biology coaching with AIIMS-trained faculty. Book your free demo class today!',
     type: 'website',
@@ -23,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Book Free Demo Class | NEET Biology Trial Lesson',
-    description: 'Book a free demo class for NEET Biology coaching. Experience our teaching methodology with AIIMS-trained faculty. Limited slots available. Instant confirmation via WhatsApp.',
+    description:
+      'Book a free demo class for NEET Biology coaching. Experience our teaching methodology with AIIMS-trained faculty. Limited slots available. Instant confirmation via WhatsApp.',
   },
 }
 

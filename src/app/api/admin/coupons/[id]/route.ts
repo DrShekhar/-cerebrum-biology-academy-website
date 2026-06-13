@@ -16,10 +16,7 @@ const updateCouponSchema = z.object({
   applicableCourseIds: z.array(z.string()).optional(),
 })
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
+export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     await requireAdminAuth()
     const { id } = await params
@@ -38,10 +35,7 @@ export async function GET(
     })
 
     if (!coupon) {
-      return NextResponse.json(
-        { success: false, error: 'Coupon not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Coupon not found' }, { status: 404 })
     }
 
     return NextResponse.json({ success: true, data: coupon })
@@ -50,17 +44,11 @@ export async function GET(
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
     console.error('Fetch coupon error:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to fetch coupon' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to fetch coupon' }, { status: 500 })
   }
 }
 
-export async function PATCH(
-  request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
+export async function PATCH(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     await requireAdminAuth()
     const { id } = await params
@@ -70,28 +58,20 @@ export async function PATCH(
 
     const existing = await prisma.coupons.findUnique({ where: { id } })
     if (!existing) {
-      return NextResponse.json(
-        { success: false, error: 'Coupon not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Coupon not found' }, { status: 404 })
     }
 
     const updateData: Record<string, unknown> = {}
-    if (validatedData.description !== undefined)
-      updateData.description = validatedData.description
+    if (validatedData.description !== undefined) updateData.description = validatedData.description
     if (validatedData.discountPercent !== undefined)
       updateData.discountPercent = validatedData.discountPercent
     if (validatedData.discountAmount !== undefined)
       updateData.discountAmount = validatedData.discountAmount
     if (validatedData.isActive !== undefined) updateData.isActive = validatedData.isActive
     if (validatedData.startsAt !== undefined)
-      updateData.startsAt = validatedData.startsAt
-        ? new Date(validatedData.startsAt)
-        : null
+      updateData.startsAt = validatedData.startsAt ? new Date(validatedData.startsAt) : null
     if (validatedData.expiresAt !== undefined)
-      updateData.expiresAt = validatedData.expiresAt
-        ? new Date(validatedData.expiresAt)
-        : null
+      updateData.expiresAt = validatedData.expiresAt ? new Date(validatedData.expiresAt) : null
     if (validatedData.maxUses !== undefined) updateData.maxUses = validatedData.maxUses
     if (validatedData.maxUsesPerUser !== undefined)
       updateData.maxUsesPerUser = validatedData.maxUsesPerUser
@@ -117,10 +97,7 @@ export async function PATCH(
       )
     }
     console.error('Update coupon error:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to update coupon' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to update coupon' }, { status: 500 })
   }
 }
 
@@ -134,10 +111,7 @@ export async function DELETE(
 
     const existing = await prisma.coupons.findUnique({ where: { id } })
     if (!existing) {
-      return NextResponse.json(
-        { success: false, error: 'Coupon not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Coupon not found' }, { status: 404 })
     }
 
     await prisma.coupons.update({
@@ -151,9 +125,6 @@ export async function DELETE(
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
     console.error('Delete coupon error:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to delete coupon' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to delete coupon' }, { status: 500 })
   }
 }

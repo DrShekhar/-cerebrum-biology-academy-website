@@ -6,7 +6,7 @@ export function Class11FoundationIllustration({
   className = '',
   animate = true,
 }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -15,12 +15,7 @@ export function Class11FoundationIllustration({
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Background */}
       <rect x="10" y="10" width="380" height="280" rx="20" fill="#F0FDF4" />
 
@@ -30,8 +25,7 @@ export function Class11FoundationIllustration({
       </text>
 
       {/* Building blocks pyramid */}
-      <g
-      >
+      <g>
         <rect
           x="145"
           y="60"
@@ -47,8 +41,7 @@ export function Class11FoundationIllustration({
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <rect
           x="115"
           y="100"
@@ -77,8 +70,7 @@ export function Class11FoundationIllustration({
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <rect
           x="85"
           y="140"
@@ -120,8 +112,7 @@ export function Class11FoundationIllustration({
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <rect
           x="55"
           y="180"
@@ -149,8 +140,7 @@ export function Class11FoundationIllustration({
         strokeWidth="2"
       />
 
-      <g
-      >
+      <g>
         <circle cx="80" cy="252" r="18" fill="#22C55E" />
         <text x="80" y="249" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           60%
@@ -160,8 +150,7 @@ export function Class11FoundationIllustration({
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <circle cx="155" cy="252" r="18" fill="#3B82F6" />
         <text x="155" y="249" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           16
@@ -171,8 +160,7 @@ export function Class11FoundationIllustration({
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <circle cx="230" cy="252" r="18" fill="#F59E0B" />
         <text x="230" y="249" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           54

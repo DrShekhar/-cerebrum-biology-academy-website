@@ -24,7 +24,7 @@ export function OlympiadHero({ country }: OlympiadHeroProps) {
 
   const subhead = isCountry
     ? country!.heroAngle
-    : "AIIMSonian-led, biology-only coaching for olympiad-aspirant students at international schools worldwide. Small batches (4–6 students), live online in your time zone, with a 99%+ NCERT-aligned foundation that doubles as Pre-Med preparation."
+    : 'AIIMSonian-led, biology-only coaching for olympiad-aspirant students at international schools worldwide. Small batches (4–6 students), live online in your time zone, with a 99%+ NCERT-aligned foundation that doubles as Pre-Med preparation.'
 
   const counsellingMessage = isCountry
     ? `Hi! I want to book a free counselling call for the Biology Olympiad & IBO programme. I am in ${country!.name}. Please share available slots in ${country!.timezone}.`
@@ -58,9 +58,7 @@ export function OlympiadHero({ country }: OlympiadHeroProps) {
           {headline}
         </h1>
 
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/85 md:text-xl">
-          {subhead}
-        </p>
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/85 md:text-xl">{subhead}</p>
 
         {/* Trust strip — credentials, batch size, time zone */}
         <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -93,9 +91,8 @@ export function OlympiadHero({ country }: OlympiadHeroProps) {
             >
               {country!.canonicalHubLabel} programme
             </Link>{' '}
-            is the better fit — it specifically prepares students for{' '}
-            {country!.nationalOlympiad} eligibility. This page is for international-school
-            families instead.
+            is the better fit — it specifically prepares students for {country!.nationalOlympiad}{' '}
+            eligibility. This page is for international-school families instead.
           </div>
         )}
 

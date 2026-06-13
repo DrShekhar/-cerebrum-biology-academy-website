@@ -39,7 +39,16 @@ export default function NEETCoachingSouthDelhiLayout({ children }: { children: R
         parentLocation="Delhi NCR"
         centerAddress="D 35, South Extension Part 2, New Delhi - 110049"
         centerPhone="+91-8826-444-334"
-        nearbyAreas={['Hauz Khas', 'Greater Kailash', 'Defence Colony', 'Saket', 'Vasant Vihar', 'CR Park', 'Malviya Nagar', 'Lajpat Nagar']}
+        nearbyAreas={[
+          'Hauz Khas',
+          'Greater Kailash',
+          'Defence Colony',
+          'Saket',
+          'Vasant Vihar',
+          'CR Park',
+          'Malviya Nagar',
+          'Lajpat Nagar',
+        ]}
       />
     </>
   )

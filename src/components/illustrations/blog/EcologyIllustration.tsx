@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function EcologyIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -12,12 +12,7 @@ export function EcologyIllustration({ className = '', animate = true }: Illustra
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Sky background */}
       <rect x="10" y="10" width="380" height="180" rx="20" fill="#BFDBFE" />
       {/* Ground */}
@@ -29,9 +24,7 @@ export function EcologyIllustration({ className = '', animate = true }: Illustra
       </text>
 
       {/* Sun with rays */}
-      <g
-        style={{ transformOrigin: '350px 70px' }}
-      >
+      <g style={{ transformOrigin: '350px 70px' }}>
         <circle cx="350" cy="70" r="25" fill="#FCD34D" />
         {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
           <line
@@ -47,8 +40,7 @@ export function EcologyIllustration({ className = '', animate = true }: Illustra
       </g>
 
       {/* Clouds */}
-      <g
-      >
+      <g>
         <ellipse cx="80" cy="60" rx="25" ry="15" fill="#FFFFFF" />
         <ellipse cx="100" cy="55" rx="20" ry="12" fill="#FFFFFF" />
         <ellipse cx="60" cy="55" rx="18" ry="10" fill="#FFFFFF" />
@@ -56,38 +48,27 @@ export function EcologyIllustration({ className = '', animate = true }: Illustra
 
       {/* Trees */}
       {/* Tree 1 */}
-      <g
-        style={{ transformOrigin: '70px 180px' }}
-      >
+      <g style={{ transformOrigin: '70px 180px' }}>
         <rect x="65" y="140" width="10" height="50" fill="#92400E" />
         <polygon points="70,80 40,140 100,140" fill="#22C55E" />
         <polygon points="70,100 45,150 95,150" fill="#16A34A" />
       </g>
 
       {/* Tree 2 */}
-      <g
-        style={{ transformOrigin: '140px 180px' }}
-      >
+      <g style={{ transformOrigin: '140px 180px' }}>
         <rect x="135" y="130" width="10" height="60" fill="#92400E" />
         <polygon points="140,70 105,130 175,130" fill="#22C55E" />
         <polygon points="140,95 115,145 165,145" fill="#16A34A" />
       </g>
 
       {/* Water body */}
-      <ellipse
-        cx="280"
-        cy="230"
-        rx="60"
-        ry="25"
-        fill="#60A5FA"
-      />
+      <ellipse cx="280" cy="230" rx="60" ry="25" fill="#60A5FA" />
       <text x="280" y="235" fontSize="8" fill="#1E40AF" textAnchor="middle">
         Pond
       </text>
 
       {/* Food Chain arrow */}
-      <g
-      >
+      <g>
         <rect
           x="30"
           y="200"
@@ -112,8 +93,7 @@ export function EcologyIllustration({ className = '', animate = true }: Illustra
       </g>
 
       {/* Deer */}
-      <g
-      >
+      <g>
         <ellipse cx="200" cy="195" rx="20" ry="12" fill="#D97706" />
         <circle cx="215" cy="185" r="8" fill="#D97706" />
         <rect x="190" y="205" width="4" height="15" fill="#92400E" />
@@ -121,8 +101,7 @@ export function EcologyIllustration({ className = '', animate = true }: Illustra
       </g>
 
       {/* Bird */}
-      <g
-      >
+      <g>
         <path d="M250 100 Q260 90 270 100 Q260 95 250 100" fill="#1E293B" />
       </g>
 
@@ -149,8 +128,7 @@ export function EcologyIllustration({ className = '', animate = true }: Illustra
       </text>
 
       {/* Questions badge */}
-      <g
-      >
+      <g>
         <circle cx="370" cy="270" r="18" fill="#10B981" />
         <text x="370" y="267" fontSize="8" fill="#FFFFFF" textAnchor="middle">
           10-12

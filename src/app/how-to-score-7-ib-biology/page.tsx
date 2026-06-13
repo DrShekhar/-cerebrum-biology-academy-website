@@ -37,7 +37,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'How to Score 7 in IB Biology 2025 | Proven Strategy | Cerebrum',
-    description: 'How to score 7 in IB Biology (2025 syllabus) — grade boundaries, the 3 habits all 7-scorers share, what to cut from your revision, and how to score full marks on IA and Paper 2.',
+    description:
+      'How to score 7 in IB Biology (2025 syllabus) — grade boundaries, the 3 habits all 7-scorers share, what to cut from your revision, and how to score full marks on IA and Paper 2.',
   },
 }
 

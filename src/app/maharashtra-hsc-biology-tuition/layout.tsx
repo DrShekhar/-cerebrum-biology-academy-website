@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Maharashtra HSC Biology Tuition | MHT-CET & NEET Coaching',
-    description: 'Expert Maharashtra HSC biology tuition for board exams & MHT-CET/NEET preparation. State board aligned teaching with competitive exam focus. Online classes available!',
+    description:
+      'Expert Maharashtra HSC biology tuition for board exams & MHT-CET/NEET preparation. State board aligned teaching with competitive exam focus. Online classes available!',
   },
 }
 

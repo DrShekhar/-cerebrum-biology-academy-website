@@ -296,9 +296,7 @@ export default function AnswerKeysPage({ params }: { params: Promise<{ id: strin
         </div>
 
         {csvMode ? (
-          <div
-            className="bg-white rounded-lg shadow-sm border p-6 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-lg shadow-sm border p-6 animate-fadeInUp">
             <h3 className="text-lg font-semibold mb-4">Upload Answer Keys via CSV</h3>
             <p className="text-sm text-gray-600 mb-4">
               Format: QuestionNo,Answer,Explanation (optional),Topic (optional)
@@ -336,9 +334,7 @@ export default function AnswerKeysPage({ params }: { params: Promise<{ id: strin
             </div>
           </div>
         ) : (
-          <div
-            className="bg-white rounded-lg shadow-sm border p-6 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-lg shadow-sm border p-6 animate-fadeInUp">
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-lg font-semibold">Manual Answer Entry</h3>
               <Button variant="primary" onClick={handleSave} disabled={saving}>

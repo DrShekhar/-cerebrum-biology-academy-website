@@ -28,7 +28,16 @@ import { AreaTestimonials } from '@/components/testimonials/AreaTestimonials'
 function getNearbyAreas(currentSlug: string, currentType: string): string[] {
   const typeMapping: Record<string, string[]> = {
     posh: ['janakpuri', 'punjabi-bagh', 'paschim-vihar'],
-    residential: ['dwarka', 'vikaspuri', 'uttam-nagar', 'tilak-nagar', 'subhash-nagar', 'paschim-vihar', 'hari-nagar', 'moti-nagar'],
+    residential: [
+      'dwarka',
+      'vikaspuri',
+      'uttam-nagar',
+      'tilak-nagar',
+      'subhash-nagar',
+      'paschim-vihar',
+      'hari-nagar',
+      'moti-nagar',
+    ],
     commercial: ['rajouri-garden', 'kirti-nagar', 'moti-nagar'],
     'coaching-hub': ['rajouri-garden', 'kirti-nagar'],
   }
@@ -61,14 +70,20 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
         <div className="max-w-7xl mx-auto">
           <ol className="flex items-center flex-wrap gap-1 text-sm">
             <li className="flex items-center">
-              <Link href="/" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center">
+              <Link
+                href="/"
+                className="text-gray-600 hover:text-orange-600 transition-colors flex items-center"
+              >
                 <Home className="w-4 h-4" />
                 <span className="sr-only">Home</span>
               </Link>
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <Link href="/neet-coaching-west-delhi" className="text-gray-600 hover:text-orange-600 transition-colors">
+              <Link
+                href="/neet-coaching-west-delhi"
+                className="text-gray-600 hover:text-orange-600 transition-colors"
+              >
                 NEET Coaching West Delhi
               </Link>
             </li>
@@ -95,12 +110,18 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
               Best <span className="text-orange-300">NEET Coaching in {area.name}</span>
             </h1>
 
-            <p className="hero-description text-lg md:text-xl opacity-90 mb-4">{area.description}</p>
+            <p className="hero-description text-lg md:text-xl opacity-90 mb-4">
+              {area.description}
+            </p>
 
             <p className="text-md opacity-80 mb-8 max-w-4xl mx-auto">{area.heroDescription}</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20West.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20West.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -219,12 +240,27 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Users, title: 'Small Batches', desc: '15-20 students per batch for personal attention' },
-              { icon: GraduationCap, title: 'AIIMS Faculty', desc: 'Doctors from AIIMS/MAMC as teachers' },
+              {
+                icon: Users,
+                title: 'Small Batches',
+                desc: '15-20 students per batch for personal attention',
+              },
+              {
+                icon: GraduationCap,
+                title: 'AIIMS Faculty',
+                desc: 'Doctors from AIIMS/MAMC as teachers',
+              },
               { icon: Trophy, title: '98% Success', desc: 'Highest success rate in Delhi NCR' },
-              { icon: Target, title: 'Result Oriented', desc: 'Focus on NEET marks, not attendance' },
+              {
+                icon: Target,
+                title: 'Result Oriented',
+                desc: 'Focus on NEET marks, not attendance',
+              },
             ].map((feature) => (
-              <div key={feature.title} className="bg-white rounded-xl p-6 text-center shadow-sm animate-fadeInUp">
+              <div
+                key={feature.title}
+                className="bg-white rounded-xl p-6 text-center shadow-sm animate-fadeInUp"
+              >
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-orange-600" />
                 </div>
@@ -249,8 +285,16 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                 size="lg"
                 className="bg-white text-green-700 hover:bg-green-50 font-bold"
               />
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20West.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-green-700">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20West.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-white text-white hover:bg-white hover:text-green-700"
+                >
                   Book Demo Class
                 </Button>
               </Link>
@@ -293,8 +337,14 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                     </li>
                   ))}
                 </ul>
-                <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20West.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
-                  <Button variant="primary" className="w-full">Enquire Now</Button>
+                <Link
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20West.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="primary" className="w-full">
+                    Enquire Now
+                  </Button>
                 </Link>
               </div>
             ))}
@@ -347,8 +397,12 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-10 animate-fadeInUp">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">NEET Coaching in Nearby Areas</h2>
-              <p className="text-gray-600">Explore our coaching services in similar localities near {area.name}</p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                NEET Coaching in Nearby Areas
+              </h2>
+              <p className="text-gray-600">
+                Explore our coaching services in similar localities near {area.name}
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -365,11 +419,18 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                         <MapPin className="w-5 h-5 text-orange-600" />
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-orange-600 group-hover:translate-x-1 transition-all" />
                       </div>
-                      <h3 className="font-bold text-gray-900 mb-2 group-hover:text-orange-700">{nearbyArea.name}</h3>
+                      <h3 className="font-bold text-gray-900 mb-2 group-hover:text-orange-700">
+                        {nearbyArea.name}
+                      </h3>
                       <p className="text-sm text-gray-600 line-clamp-2">{nearbyArea.description}</p>
                       <div className="mt-3 flex flex-wrap gap-1">
                         {nearbyArea.highlights.slice(0, 2).map((h) => (
-                          <span key={h} className="bg-orange-100 text-orange-700 text-xs px-2 py-1 rounded-full">{h}</span>
+                          <span
+                            key={h}
+                            className="bg-orange-100 text-orange-700 text-xs px-2 py-1 rounded-full"
+                          >
+                            {h}
+                          </span>
                         ))}
                       </div>
                     </Link>
@@ -379,7 +440,10 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
             </div>
 
             <div className="text-center mt-8">
-              <Link href="/neet-coaching-west-delhi" className="inline-flex items-center text-orange-600 hover:text-orange-800 font-medium">
+              <Link
+                href="/neet-coaching-west-delhi"
+                className="inline-flex items-center text-orange-600 hover:text-orange-800 font-medium"
+              >
                 View All West Delhi Areas
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
@@ -393,27 +457,35 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Related Pages</h2>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/neet-coaching-west-delhi" className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-700 hover:border-orange-300 hover:text-orange-700 transition-colors">
+            <Link
+              href="/neet-coaching-west-delhi"
+              className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-700 hover:border-orange-300 hover:text-orange-700 transition-colors"
+            >
               NEET Coaching West Delhi
             </Link>
-            <Link href="/biology-tutor" className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-700 hover:border-orange-300 hover:text-orange-700 transition-colors">
+            <Link
+              href="/biology-tutor"
+              className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-700 hover:border-orange-300 hover:text-orange-700 transition-colors"
+            >
               Biology Tutor Delhi
             </Link>
-            <Link href="/locations/delhi" className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-700 hover:border-orange-300 hover:text-orange-700 transition-colors">
+            <Link
+              href="/locations/delhi"
+              className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-700 hover:border-orange-300 hover:text-orange-700 transition-colors"
+            >
               All Delhi Locations
             </Link>
-            <Link href="/neet-coaching-south-delhi" className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-700 hover:border-orange-300 hover:text-orange-700 transition-colors">
+            <Link
+              href="/neet-coaching-south-delhi"
+              className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-700 hover:border-orange-300 hover:text-orange-700 transition-colors"
+            >
               NEET Coaching South Delhi
             </Link>
           </div>
         </div>
       </section>
 
-      <AreaTestimonials
-        citySlug="west-delhi"
-        areaName={area.name}
-        cityName="West Delhi"
-      />
+      <AreaTestimonials citySlug="west-delhi" areaName={area.name} cityName="West Delhi" />
 
       <HowToReachSection
         areaName={area.name}
@@ -431,11 +503,10 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
               Ready to Start Your NEET Preparation?
             </h2>
             <p className="text-orange-100 mb-4 max-w-2xl mx-auto">
-              Join successful students from {area.name}. Visit our Rohini center and book your FREE demo class today!
+              Join successful students from {area.name}. Visit our Rohini center and book your FREE
+              demo class today!
             </p>
-            <p className="text-orange-200 mb-8">
-              Online classes also available
-            </p>
+            <p className="text-orange-200 mb-8">Online classes also available</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
                 <Link href={`/demo-booking?center=rohini&area=${areaSlug}`}>

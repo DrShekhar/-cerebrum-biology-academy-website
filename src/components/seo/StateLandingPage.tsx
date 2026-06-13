@@ -25,7 +25,6 @@ interface StateLandingPageProps {
   state: StateData
 }
 
-
 export function StateLandingPage({ state }: StateLandingPageProps) {
   const faqs = generateStateFAQs(state)
 
@@ -38,17 +37,18 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
               <MapPin className="w-4 h-4" />
-              <span className="text-sm font-medium">Serving {state.majorCities.length}+ Cities in {state.name}</span>
+              <span className="text-sm font-medium">
+                Serving {state.majorCities.length}+ Cities in {state.name}
+              </span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Best NEET Biology Coaching in{' '}
-              <span className="text-yellow-300">{state.name}</span>
+              Best NEET Biology Coaching in <span className="text-yellow-300">{state.name}</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-green-100 mb-8 max-w-3xl mx-auto">
-              Join India&apos;s top-rated NEET Biology coaching. AIIMS-trained faculty,
-              98% success rate. Online classes for {state.majorCities.slice(0, 3).join(', ')} & all cities.
+              Join India&apos;s top-rated NEET Biology coaching. AIIMS-trained faculty, 98% success
+              rate. Online classes for {state.majorCities.slice(0, 3).join(', ')} & all cities.
             </p>
 
             {/* Stats */}
@@ -58,7 +58,9 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
                 <div className="text-sm text-green-100">Success Rate</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                <div className="text-3xl font-bold text-yellow-300">{state.neetSeats.toLocaleString()}+</div>
+                <div className="text-3xl font-bold text-yellow-300">
+                  {state.neetSeats.toLocaleString()}+
+                </div>
                 <div className="text-sm text-green-100">{state.name} MBBS Seats</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
@@ -74,7 +76,12 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => trackAndOpenWhatsApp({ message: WHATSAPP_MESSAGES.demo, source: `state_${state.slug}_hero` })}
+                onClick={() =>
+                  trackAndOpenWhatsApp({
+                    message: WHATSAPP_MESSAGES.demo,
+                    source: `state_${state.slug}_hero`,
+                  })
+                }
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-green-900 font-bold px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105"
               >
                 <Video className="w-5 h-5" />
@@ -128,8 +135,8 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
                   {state.medicalColleges.length} Medical Colleges
                 </h3>
                 <p className="text-gray-600 mb-3">
-                  {state.name} has {state.neetSeats.toLocaleString()}+ MBBS seats across government colleges
-                  including {state.medicalColleges.slice(0, 2).join(' and ')}.
+                  {state.name} has {state.neetSeats.toLocaleString()}+ MBBS seats across government
+                  colleges including {state.medicalColleges.slice(0, 2).join(' and ')}.
                 </p>
                 <Link
                   href="/neet-college-predictor"
@@ -146,8 +153,9 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
                   {state.educationFocus[0]} Focus
                 </h3>
                 <p className="text-gray-600 mb-3">
-                  Our curriculum covers both CBSE and state board ({state.localLanguage} medium) biology
-                  with NEET-aligned teaching for {state.capital} and {state.majorCities[1]} students.
+                  Our curriculum covers both CBSE and state board ({state.localLanguage} medium)
+                  biology with NEET-aligned teaching for {state.capital} and {state.majorCities[1]}{' '}
+                  students.
                 </p>
                 <Link
                   href="/courses"
@@ -160,9 +168,7 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
                 <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
                   <School className="w-6 h-6 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Major Cities Covered
-                </h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Major Cities Covered</h3>
                 <p className="text-gray-600">
                   Students from {state.majorCities.slice(0, 5).join(', ')} and other cities in{' '}
                   {state.name} attend our live online classes with full doubt support.
@@ -172,9 +178,7 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
                 <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mb-4">
                   <GraduationCap className="w-6 h-6 text-yellow-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Online + Offline Access
-                </h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Online + Offline Access</h3>
                 <p className="text-gray-600">
                   Live interactive classes from anywhere in {state.name}.
                   {state.nearestOfflineCenter && (
@@ -196,7 +200,8 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
                 Target Medical Colleges in {state.name}
               </h2>
               <p className="text-xl text-gray-600">
-                {state.neetSeats.toLocaleString()}+ MBBS seats available. Our {state.name} students regularly get admissions.
+                {state.neetSeats.toLocaleString()}+ MBBS seats available. Our {state.name} students
+                regularly get admissions.
               </p>
             </div>
 
@@ -263,11 +268,10 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
-                <h3 className="text-2xl font-bold mb-2">
-                  Prefer Offline Classes?
-                </h3>
+                <h3 className="text-2xl font-bold mb-2">Prefer Offline Classes?</h3>
                 <p className="text-green-100">
-                  Our nearest offline center for {state.name} students: <strong>{state.nearestOfflineCenter}</strong>
+                  Our nearest offline center for {state.name} students:{' '}
+                  <strong>{state.nearestOfflineCenter}</strong>
                 </p>
               </div>
               <a
@@ -296,11 +300,7 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
                 Common questions from {state.capital} and {state.majorCities[1]} students
               </p>
             </div>
-            <FAQDisplay
-              questions={faqs}
-              title=""
-              className="!my-0"
-            />
+            <FAQDisplay questions={faqs} title="" className="!my-0" />
           </div>
         </div>
       </section>
@@ -308,16 +308,18 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
       {/* Final CTA */}
       <section className="py-16 bg-gradient-to-br from-green-600 via-green-700 to-emerald-800 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Start Your NEET Journey?
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Start Your NEET Journey?</h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Join 500+ {state.name} students already preparing with us.
-            Book a FREE demo class today!
+            Join 500+ {state.name} students already preparing with us. Book a FREE demo class today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              onClick={() => trackAndOpenWhatsApp({ message: WHATSAPP_MESSAGES.demo, source: `state_${state.slug}_footer` })}
+              onClick={() =>
+                trackAndOpenWhatsApp({
+                  message: WHATSAPP_MESSAGES.demo,
+                  source: `state_${state.slug}_footer`,
+                })
+              }
               className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-green-900 font-bold px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105"
             >
               <MessageCircle className="w-5 h-5" />

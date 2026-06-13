@@ -616,7 +616,6 @@ export async function POST(request: NextRequest) {
       questionTypeCounts.mcq += difference // Add difference to MCQ as default
     }
 
-
     // Generate questions for each difficulty and type combination
     const allQuestions: GeneratedQuestion[] = []
 
@@ -695,7 +694,6 @@ export async function POST(request: NextRequest) {
         neetAlignment: 95, // High alignment score for NEET-focused content
       },
     }
-
 
     return NextResponse.json({
       success: true,

@@ -55,9 +55,7 @@ class DashboardErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundary
 function AuthRequiredMessage() {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <div
-        className="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center animate-fadeInUp"
-      >
+      <div className="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center animate-fadeInUp">
         <div className="w-20 h-20 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">
           <BookOpen className="w-10 h-10 text-white" />
         </div>
@@ -115,9 +113,7 @@ function LoadingState() {
 function ErrorFallback({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <div
-        className="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center animate-fadeInUp"
-      >
+      <div className="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center animate-fadeInUp">
         <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
           <AlertCircle className="w-10 h-10 text-red-500" />
         </div>
@@ -201,7 +197,9 @@ export default function DashboardPage() {
   // User is authenticated - show the dashboard
   return (
     <main className="min-h-screen">
-      <DashboardErrorBoundary fallback={(error, reset) => <ErrorFallback error={error} reset={reset} />}>
+      <DashboardErrorBoundary
+        fallback={(error, reset) => <ErrorFallback error={error} reset={reset} />}
+      >
         <PersonalizedStudentDashboard />
       </DashboardErrorBoundary>
     </main>

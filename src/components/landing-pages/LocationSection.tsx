@@ -25,23 +25,15 @@ export function LocationSection({
     <section className="bg-gradient-to-b from-gray-50 to-white py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2
-            className="text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl animate-fadeInUp"
-          >
+          <h2 className="text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl animate-fadeInUp">
             {title}
           </h2>
-          <p
-            className="mt-4 text-lg text-slate-600 animate-fadeInUp"
-          >
-            {subtitle}
-          </p>
+          <p className="mt-4 text-lg text-slate-600 animate-fadeInUp">{subtitle}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
           {/* Contact Information */}
-          <div
-            className="space-y-8 animate-fadeInUp"
-          >
+          <div className="space-y-8 animate-fadeInUp">
             <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-slate-900">Get in Touch</h3>
               <div className="mt-6 space-y-6">
@@ -95,7 +87,9 @@ export function LocationSection({
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-900">Working Hours</h4>
-                    <p className="mt-1 text-slate-600">Open 24/7 — Online Classes Available Globally</p>
+                    <p className="mt-1 text-slate-600">
+                      Open 24/7 — Online Classes Available Globally
+                    </p>
                   </div>
                 </div>
               </div>
@@ -120,9 +114,7 @@ export function LocationSection({
           </div>
 
           {/* Google Map */}
-          <div
-            className="h-[600px] overflow-hidden rounded-2xl border border-slate-200 shadow-xl animate-fadeInUp"
-          >
+          <div className="h-[600px] overflow-hidden rounded-2xl border border-slate-200 shadow-xl animate-fadeInUp">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5397597147395!2d77.2177!3d28.5672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM0JzAxLjkiTiA3N8KwMTMnMDMuNyJF!5e0!3m2!1sen!2sin!4v1234567890"
               width="100%"

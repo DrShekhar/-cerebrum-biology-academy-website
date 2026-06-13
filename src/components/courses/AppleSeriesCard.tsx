@@ -142,9 +142,7 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
           <div className="pt-8 pb-6 px-8 flex-shrink-0">
             {/* Icon with subtle glow */}
             <div className="text-center mb-6">
-              <div
-                className="relative inline-block animate-fadeInUp"
-              >
+              <div className="relative inline-block animate-fadeInUp">
                 <div
                   className={`
                   w-20 h-20 mx-auto
@@ -225,20 +223,20 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
 
               {/* Apple-style segmented control */}
               <div className="relative bg-slate-100 rounded-xl p-1">
-{selectedPlan && (
-                    <div
-                      className={`
+                {selectedPlan && (
+                  <div
+                    className={`
                         absolute inset-y-1
                         bg-gradient-to-r ${config.accentColor}
                         rounded-lg shadow-sm
                       `}
-                      style={{
-                        left: `${(series.plans.findIndex((p) => p.id === selectedPlan) * 100) / series.plans.length + 0.5}%`,
-                        width: `${100 / series.plans.length - 1}%`,
-                      }}
-                    />
-                  )}
-<div className="relative flex">
+                    style={{
+                      left: `${(series.plans.findIndex((p) => p.id === selectedPlan) * 100) / series.plans.length + 0.5}%`,
+                      width: `${100 / series.plans.length - 1}%`,
+                    }}
+                  />
+                )}
+                <div className="relative flex">
                   {series.plans.map((plan) => (
                     <button
                       key={plan.id}
@@ -254,13 +252,7 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
                       `}
                     >
                       Plan {plan.id}
-                      {plan.popular && (
-                        <span
-                          className="ml-1 text-xs animate-fadeInUp"
-                        >
-                          ⭐
-                        </span>
-                      )}
+                      {plan.popular && <span className="ml-1 text-xs animate-fadeInUp">⭐</span>}
                     </button>
                   ))}
                 </div>
@@ -268,84 +260,80 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
             </div>
 
             {/* Selected plan details */}
-{selectedPlan && (
-                <div
-                  key={selectedPlan}
-                  className="mb-6 animate-fadeInUp"
-                >
-                  {(() => {
-                    const plan = series.plans.find((p) => p.id === selectedPlan)
-                    if (!plan) return null
+            {selectedPlan && (
+              <div key={selectedPlan} className="mb-6 animate-fadeInUp">
+                {(() => {
+                  const plan = series.plans.find((p) => p.id === selectedPlan)
+                  if (!plan) return null
 
-                    return (
-                      <div
-                        className="
+                  return (
+                    <div
+                      className="
                         bg-slate-50/60 backdrop-blur-sm
                         rounded-2xl p-5 border border-slate-200/40
                       "
-                      >
-                        <div className="flex items-center justify-between mb-4">
-                          <div className="flex items-center gap-2">
-                            <div
-                              className={`w-2 h-2 rounded-full bg-gradient-to-r ${config.accentColor}`}
-                            />
-                            <span className="font-semibold text-slate-900">
-                              Plan {plan.id} - {plan.name}
-                            </span>
-                          </div>
-                          {plan.popular && (
-                            <span
-                              className="
+                    >
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center gap-2">
+                          <div
+                            className={`w-2 h-2 rounded-full bg-gradient-to-r ${config.accentColor}`}
+                          />
+                          <span className="font-semibold text-slate-900">
+                            Plan {plan.id} - {plan.name}
+                          </span>
+                        </div>
+                        {plan.popular && (
+                          <span
+                            className="
                               bg-gold-600
                               text-white px-2.5 py-1 rounded-full text-xs font-semibold
                             "
-                            >
-                              Popular
-                            </span>
-                          )}
-                        </div>
+                          >
+                            Popular
+                          </span>
+                        )}
+                      </div>
 
-                        <div className="grid grid-cols-2 gap-3 mb-4">
-                          <div className="bg-white/60 rounded-lg p-3">
-                            <div className="text-xs text-slate-500 font-medium">Duration</div>
-                            <div className="font-semibold text-slate-900">{plan.duration}</div>
-                          </div>
-                          <div className="bg-white/60 rounded-lg p-3">
-                            <div className="text-xs text-slate-500 font-medium">Investment</div>
-                            <div className="font-semibold text-slate-900">
-                              ₹{plan.price.toLocaleString()}
-                            </div>
+                      <div className="grid grid-cols-2 gap-3 mb-4">
+                        <div className="bg-white/60 rounded-lg p-3">
+                          <div className="text-xs text-slate-500 font-medium">Duration</div>
+                          <div className="font-semibold text-slate-900">{plan.duration}</div>
+                        </div>
+                        <div className="bg-white/60 rounded-lg p-3">
+                          <div className="text-xs text-slate-500 font-medium">Investment</div>
+                          <div className="font-semibold text-slate-900">
+                            ₹{plan.price.toLocaleString()}
                           </div>
                         </div>
+                      </div>
 
-                        <div className="flex flex-wrap gap-2">
-                          {plan.features.slice(0, 3).map((feature, index) => (
-                            <span
-                              key={feature}
-                              className="
+                      <div className="flex flex-wrap gap-2">
+                        {plan.features.slice(0, 3).map((feature, index) => (
+                          <span
+                            key={feature}
+                            className="
                                 bg-white/60 text-slate-700
                                 px-3 py-1 rounded-full text-xs font-medium
                                 border border-slate-200/40
                               "
-                            >
-                              {feature}
-                            </span>
-                          ))}
-                          {plan.features.length > 3 && (
-                            <span className="text-slate-400 text-xs font-medium px-2 py-1">
-                              +{plan.features.length - 3} more
-                            </span>
-                          )}
-                        </div>
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                        {plan.features.length > 3 && (
+                          <span className="text-slate-400 text-xs font-medium px-2 py-1">
+                            +{plan.features.length - 3} more
+                          </span>
+                        )}
                       </div>
-                    )
-                  })()}
-                </div>
-              )}
-{/* Action buttons - Apple style */}
+                    </div>
+                  )
+                })()}
+              </div>
+            )}
+            {/* Action buttons - Apple style */}
             <div className="space-y-3">
-              <div
-               className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 <Link
                   href={
                     selectedPlan

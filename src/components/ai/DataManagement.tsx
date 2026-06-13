@@ -645,9 +645,7 @@ const DataManagement: React.FC = () => {
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <div
-          className="flex items-center justify-center gap-3 animate-fadeInUp"
-        >
+        <div className="flex items-center justify-center gap-3 animate-fadeInUp">
           <div className="p-3 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl">
             <Database className="w-8 h-8 text-white" />
           </div>
@@ -717,893 +715,871 @@ const DataManagement: React.FC = () => {
       </div>
 
       {/* Content */}
-{/* Export to PDF/Word/Excel */}
-        {activeTab === 'export' && (
-          <div
-            key="export"
-            className="space-y-6 animate-fadeInUp"
-          >
-            {/* Export Formats */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
-                <Download className="w-5 h-5 text-green-600" />
-                Export Formats
-              </h3>
+      {/* Export to PDF/Word/Excel */}
+      {activeTab === 'export' && (
+        <div key="export" className="space-y-6 animate-fadeInUp">
+          {/* Export Formats */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
+              <Download className="w-5 h-5 text-green-600" />
+              Export Formats
+            </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                {exportFormats.map((format) => {
-                  const IconComponent = format.icon
-                  return (
-                    <div
-                      key={format.id}
-                      className="border rounded-lg p-4 hover:shadow-md transition-shadow"
-                    >
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="p-2 bg-green-100 rounded-lg">
-                          <IconComponent className="w-6 h-6 text-green-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-gray-800">{format.name}</h4>
-                          <p className="text-sm text-gray-500">{format.extension}</p>
-                        </div>
-                      </div>
-
-                      <p className="text-sm text-gray-600 mb-3">{format.description}</p>
-
-                      <div className="space-y-2 mb-4">
-                        <div className="text-xs text-gray-500">Features:</div>
-                        <div className="flex flex-wrap gap-1">
-                          {format.features.slice(0, 2).map((feature, index) => (
-                            <span
-                              key={index}
-                              className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs"
-                            >
-                              {feature}
-                            </span>
-                          ))}
-                          {format.features.length > 2 && (
-                            <span className="text-xs text-gray-400">
-                              +{format.features.length - 2}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-
-                      <div className="text-xs text-gray-500 mb-3">Size: {format.fileSize}</div>
-
-                      <button
-                        onClick={() =>
-                          handleExport(
-                            format.name,
-                            selectedTests.length > 0 ? selectedTests : ['test1']
-                          )
-                        }
-                        className="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors text-sm"
-                      >
-                        Export as {format.name}
-                      </button>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-
-            {/* Export Queue */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Clock className="w-5 h-5 text-blue-600" />
-                Export Queue ({exportJobs.length})
-              </h3>
-
-              <div className="space-y-4">
-                {exportJobs.map((job) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {exportFormats.map((format) => {
+                const IconComponent = format.icon
+                return (
                   <div
-                    key={job.id}
+                    key={format.id}
                     className="border rounded-lg p-4 hover:shadow-md transition-shadow"
                   >
-                    <div className="flex justify-between items-start mb-3">
-                      <div>
-                        <h4 className="font-medium text-gray-800">{job.testName}</h4>
-                        <p className="text-sm text-gray-600">{job.format} export</p>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="p-2 bg-green-100 rounded-lg">
+                        <IconComponent className="w-6 h-6 text-green-600" />
                       </div>
-                      <div className="flex items-center gap-2">
-                        <span
-                          className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(job.status)} ${getStatusTextClass(job.status)}`}
-                        >
-                          {job.status}
-                        </span>
-                        {job.status === 'completed' && job.downloadUrl && (
-                          <button className="text-blue-600 hover:text-blue-800 text-sm">
-                            <Download className="w-4 h-4" />
-                          </button>
+                      <div>
+                        <h4 className="font-medium text-gray-800">{format.name}</h4>
+                        <p className="text-sm text-gray-500">{format.extension}</p>
+                      </div>
+                    </div>
+
+                    <p className="text-sm text-gray-600 mb-3">{format.description}</p>
+
+                    <div className="space-y-2 mb-4">
+                      <div className="text-xs text-gray-500">Features:</div>
+                      <div className="flex flex-wrap gap-1">
+                        {format.features.slice(0, 2).map((feature, index) => (
+                          <span
+                            key={index}
+                            className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                        {format.features.length > 2 && (
+                          <span className="text-xs text-gray-400">
+                            +{format.features.length - 2}
+                          </span>
                         )}
                       </div>
                     </div>
 
-                    {/* Progress Bar */}
-                    <div className="mb-3">
-                      <div className="flex justify-between text-sm text-gray-600 mb-1">
-                        <span>Progress</span>
-                        <span>{job.progress}%</span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div
-                          className={`h-2 rounded-full ${getStatusProgressClass(job.status)} transition-all duration-300`}
-                          style={{ width: `${job.progress}%` }}
-                        />
-                      </div>
-                    </div>
+                    <div className="text-xs text-gray-500 mb-3">Size: {format.fileSize}</div>
 
-                    <div className="flex justify-between items-center text-xs text-gray-500">
-                      <span>Started: {new Date(job.startedAt).toLocaleString()}</span>
-                      {job.completedAt && (
-                        <span>Completed: {new Date(job.completedAt).toLocaleString()}</span>
-                      )}
-                      {job.fileSize && <span>Size: {job.fileSize}</span>}
-                    </div>
-
-                    {job.error && (
-                      <div className="mt-2 text-sm text-red-600 bg-red-50 p-2 rounded">
-                        Error: {job.error}
-                      </div>
-                    )}
+                    <button
+                      onClick={() =>
+                        handleExport(
+                          format.name,
+                          selectedTests.length > 0 ? selectedTests : ['test1']
+                        )
+                      }
+                      className="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors text-sm"
+                    >
+                      Export as {format.name}
+                    </button>
                   </div>
-                ))}
-              </div>
-
-              {exportJobs.length === 0 && (
-                <div className="text-center py-12 text-gray-500">
-                  <Download className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-                  <p>No exports in progress</p>
-                  <p className="text-sm">Select a format above to start exporting</p>
-                </div>
-              )}
+                )
+              })}
             </div>
           </div>
-        )}
 
-        {/* Bulk Import Questions */}
-        {activeTab === 'import' && (
-          <div
-            key="import"
-            className="space-y-6 animate-fadeInUp"
-          >
-            {/* Import Options */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
-                <Upload className="w-5 h-5 text-green-600" />
-                Bulk Import Questions
-              </h3>
+          {/* Export Queue */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Clock className="w-5 h-5 text-blue-600" />
+              Export Queue ({exportJobs.length})
+            </h3>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                {/* Upload Area */}
-                <div>
-                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-green-400 transition-colors">
-                    <CloudUpload className="w-12 h-12 mx-auto mb-4 text-gray-400" />
-                    <h4 className="text-lg font-medium text-gray-700 mb-2">Upload Question File</h4>
-                    <p className="text-sm text-gray-500 mb-4">
-                      Drag and drop your file here, or click to browse
-                    </p>
-                    <input
-                      type="file"
-                      accept=".xlsx,.csv,.json,.xml"
-                      onChange={(e) => {
-                        const file = e.target.files?.[0]
-                        if (file) handleBulkImport(file)
-                      }}
-                      className="hidden"
-                      id="file-upload"
-                    />
-                    <label
-                      htmlFor="file-upload"
-                      className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors cursor-pointer inline-block"
-                    >
-                      Choose File
-                    </label>
-                  </div>
-
-                  <div className="mt-4 space-y-2 text-sm text-gray-600">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-600" />
-                      <span>Supported formats: Excel (.xlsx), CSV (.csv), JSON (.json)</span>
+            <div className="space-y-4">
+              {exportJobs.map((job) => (
+                <div
+                  key={job.id}
+                  className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                >
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h4 className="font-medium text-gray-800">{job.testName}</h4>
+                      <p className="text-sm text-gray-600">{job.format} export</p>
                     </div>
                     <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-600" />
-                      <span>Maximum file size: 50 MB</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-600" />
-                      <span>Automatic duplicate detection</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Import Template */}
-                <div>
-                  <h4 className="font-medium text-gray-800 mb-3">Import Template</h4>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Download our template to ensure your questions are formatted correctly
-                  </p>
-
-                  <div className="space-y-3">
-                    <button className="w-full bg-blue-100 text-blue-700 py-3 px-4 rounded-lg hover:bg-blue-200 transition-colors flex items-center gap-2">
-                      <File className="w-4 h-4" />
-                      Download Excel Template
-                    </button>
-                    <button className="w-full bg-green-100 text-green-700 py-3 px-4 rounded-lg hover:bg-green-200 transition-colors flex items-center gap-2">
-                      <Database className="w-4 h-4" />
-                      Download CSV Template
-                    </button>
-                    <button className="w-full bg-purple-100 text-purple-700 py-3 px-4 rounded-lg hover:bg-purple-200 transition-colors flex items-center gap-2">
-                      <FileText className="w-4 h-4" />
-                      View Format Guide
-                    </button>
-                  </div>
-
-                  <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
-                    <h5 className="font-medium text-yellow-800 mb-2">Required Fields</h5>
-                    <ul className="text-sm text-yellow-700 space-y-1">
-                      <li>• Question text</li>
-                      <li>• Question type (MCQ, True/False, etc.)</li>
-                      <li>• Correct answer</li>
-                      <li>• Difficulty level</li>
-                      <li>• Topic/Subject</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Import History */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Activity className="w-5 h-5 text-purple-600" />
-                Import History
-              </h3>
-
-              <div className="space-y-4">
-                {importJobs.map((job) => (
-                  <div
-                    key={job.id}
-                    className="border rounded-lg p-4 hover:shadow-md transition-shadow"
-                  >
-                    <div className="flex justify-between items-start mb-3">
-                      <div>
-                        <h4 className="font-medium text-gray-800">{job.fileName}</h4>
-                        <p className="text-sm text-gray-600">
-                          {job.format} • {job.fileSize}
-                        </p>
-                      </div>
                       <span
                         className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(job.status)} ${getStatusTextClass(job.status)}`}
                       >
                         {job.status}
                       </span>
-                    </div>
-
-                    {/* Progress */}
-                    <div className="mb-3">
-                      <div className="flex justify-between text-sm text-gray-600 mb-1">
-                        <span>
-                          Progress: {job.questionsImported}/{job.questionsTotal} questions
-                        </span>
-                        <span>{job.progress}%</span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div
-                          className={`h-2 rounded-full ${getStatusProgressClass(job.status)} transition-all duration-300`}
-                          style={{ width: `${job.progress}%` }}
-                        />
-                      </div>
-                    </div>
-
-                    {/* Warnings/Errors */}
-                    {job.warnings.length > 0 && (
-                      <div className="mb-2">
-                        <div className="text-sm font-medium text-yellow-800 mb-1">Warnings:</div>
-                        <ul className="text-sm text-yellow-700 space-y-1">
-                          {job.warnings.map((warning, index) => (
-                            <li key={index} className="flex items-start gap-1">
-                              <AlertCircle className="w-3 h-3 mt-1 flex-shrink-0" />
-                              {warning}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-
-                    {job.errors.length > 0 && (
-                      <div className="mb-2">
-                        <div className="text-sm font-medium text-red-800 mb-1">Errors:</div>
-                        <ul className="text-sm text-red-700 space-y-1">
-                          {job.errors.map((error, index) => (
-                            <li key={index} className="flex items-start gap-1">
-                              <X className="w-3 h-3 mt-1 flex-shrink-0" />
-                              {error}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-
-                    <div className="flex justify-between items-center text-xs text-gray-500">
-                      <span>Started: {new Date(job.startedAt).toLocaleString()}</span>
-                      {job.completedAt && (
-                        <span>Completed: {new Date(job.completedAt).toLocaleString()}</span>
+                      {job.status === 'completed' && job.downloadUrl && (
+                        <button className="text-blue-600 hover:text-blue-800 text-sm">
+                          <Download className="w-4 h-4" />
+                        </button>
                       )}
                     </div>
                   </div>
-                ))}
-              </div>
 
-              {importJobs.length === 0 && (
-                <div className="text-center py-12 text-gray-500">
-                  <Upload className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-                  <p>No imports yet</p>
-                  <p className="text-sm">Upload your first question file to get started</p>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Backup Test Data */}
-        {activeTab === 'backup' && (
-          <div
-            key="backup"
-            className="space-y-6 animate-fadeInUp"
-          >
-            {/* Create Backup */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
-                <HardDrive className="w-5 h-5 text-blue-600" />
-                Create Backup
-              </h3>
-
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-medium text-gray-800 mb-3">Manual Backup</h4>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Create an immediate backup of all your test data
-                  </p>
-
-                  <div className="space-y-3">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Backup Name
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="Enter backup name..."
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  {/* Progress Bar */}
+                  <div className="mb-3">
+                    <div className="flex justify-between text-sm text-gray-600 mb-1">
+                      <span>Progress</span>
+                      <span>{job.progress}%</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div
+                        className={`h-2 rounded-full ${getStatusProgressClass(job.status)} transition-all duration-300`}
+                        style={{ width: `${job.progress}%` }}
                       />
                     </div>
+                  </div>
 
-                    <div className="space-y-2">
-                      <label className="flex items-center gap-2 text-sm">
-                        <input type="checkbox" defaultChecked className="rounded" />
-                        Include test data
-                      </label>
-                      <label className="flex items-center gap-2 text-sm">
-                        <input type="checkbox" defaultChecked className="rounded" />
-                        Include media files
-                      </label>
-                      <label className="flex items-center gap-2 text-sm">
-                        <input type="checkbox" className="rounded" />
-                        Include analytics data
-                      </label>
-                      <label className="flex items-center gap-2 text-sm">
-                        <input type="checkbox" defaultChecked className="rounded" />
-                        Compress backup
-                      </label>
+                  <div className="flex justify-between items-center text-xs text-gray-500">
+                    <span>Started: {new Date(job.startedAt).toLocaleString()}</span>
+                    {job.completedAt && (
+                      <span>Completed: {new Date(job.completedAt).toLocaleString()}</span>
+                    )}
+                    {job.fileSize && <span>Size: {job.fileSize}</span>}
+                  </div>
+
+                  {job.error && (
+                    <div className="mt-2 text-sm text-red-600 bg-red-50 p-2 rounded">
+                      Error: {job.error}
                     </div>
+                  )}
+                </div>
+              ))}
+            </div>
 
+            {exportJobs.length === 0 && (
+              <div className="text-center py-12 text-gray-500">
+                <Download className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                <p>No exports in progress</p>
+                <p className="text-sm">Select a format above to start exporting</p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Bulk Import Questions */}
+      {activeTab === 'import' && (
+        <div key="import" className="space-y-6 animate-fadeInUp">
+          {/* Import Options */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
+              <Upload className="w-5 h-5 text-green-600" />
+              Bulk Import Questions
+            </h3>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Upload Area */}
+              <div>
+                <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-green-400 transition-colors">
+                  <CloudUpload className="w-12 h-12 mx-auto mb-4 text-gray-400" />
+                  <h4 className="text-lg font-medium text-gray-700 mb-2">Upload Question File</h4>
+                  <p className="text-sm text-gray-500 mb-4">
+                    Drag and drop your file here, or click to browse
+                  </p>
+                  <input
+                    type="file"
+                    accept=".xlsx,.csv,.json,.xml"
+                    onChange={(e) => {
+                      const file = e.target.files?.[0]
+                      if (file) handleBulkImport(file)
+                    }}
+                    className="hidden"
+                    id="file-upload"
+                  />
+                  <label
+                    htmlFor="file-upload"
+                    className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors cursor-pointer inline-block"
+                  >
+                    Choose File
+                  </label>
+                </div>
+
+                <div className="mt-4 space-y-2 text-sm text-gray-600">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-green-600" />
+                    <span>Supported formats: Excel (.xlsx), CSV (.csv), JSON (.json)</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-green-600" />
+                    <span>Maximum file size: 50 MB</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-green-600" />
+                    <span>Automatic duplicate detection</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Import Template */}
+              <div>
+                <h4 className="font-medium text-gray-800 mb-3">Import Template</h4>
+                <p className="text-sm text-gray-600 mb-4">
+                  Download our template to ensure your questions are formatted correctly
+                </p>
+
+                <div className="space-y-3">
+                  <button className="w-full bg-blue-100 text-blue-700 py-3 px-4 rounded-lg hover:bg-blue-200 transition-colors flex items-center gap-2">
+                    <File className="w-4 h-4" />
+                    Download Excel Template
+                  </button>
+                  <button className="w-full bg-green-100 text-green-700 py-3 px-4 rounded-lg hover:bg-green-200 transition-colors flex items-center gap-2">
+                    <Database className="w-4 h-4" />
+                    Download CSV Template
+                  </button>
+                  <button className="w-full bg-purple-100 text-purple-700 py-3 px-4 rounded-lg hover:bg-purple-200 transition-colors flex items-center gap-2">
+                    <FileText className="w-4 h-4" />
+                    View Format Guide
+                  </button>
+                </div>
+
+                <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+                  <h5 className="font-medium text-yellow-800 mb-2">Required Fields</h5>
+                  <ul className="text-sm text-yellow-700 space-y-1">
+                    <li>• Question text</li>
+                    <li>• Question type (MCQ, True/False, etc.)</li>
+                    <li>• Correct answer</li>
+                    <li>• Difficulty level</li>
+                    <li>• Topic/Subject</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Import History */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Activity className="w-5 h-5 text-purple-600" />
+              Import History
+            </h3>
+
+            <div className="space-y-4">
+              {importJobs.map((job) => (
+                <div
+                  key={job.id}
+                  className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                >
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h4 className="font-medium text-gray-800">{job.fileName}</h4>
+                      <p className="text-sm text-gray-600">
+                        {job.format} • {job.fileSize}
+                      </p>
+                    </div>
+                    <span
+                      className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(job.status)} ${getStatusTextClass(job.status)}`}
+                    >
+                      {job.status}
+                    </span>
+                  </div>
+
+                  {/* Progress */}
+                  <div className="mb-3">
+                    <div className="flex justify-between text-sm text-gray-600 mb-1">
+                      <span>
+                        Progress: {job.questionsImported}/{job.questionsTotal} questions
+                      </span>
+                      <span>{job.progress}%</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div
+                        className={`h-2 rounded-full ${getStatusProgressClass(job.status)} transition-all duration-300`}
+                        style={{ width: `${job.progress}%` }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Warnings/Errors */}
+                  {job.warnings.length > 0 && (
+                    <div className="mb-2">
+                      <div className="text-sm font-medium text-yellow-800 mb-1">Warnings:</div>
+                      <ul className="text-sm text-yellow-700 space-y-1">
+                        {job.warnings.map((warning, index) => (
+                          <li key={index} className="flex items-start gap-1">
+                            <AlertCircle className="w-3 h-3 mt-1 flex-shrink-0" />
+                            {warning}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {job.errors.length > 0 && (
+                    <div className="mb-2">
+                      <div className="text-sm font-medium text-red-800 mb-1">Errors:</div>
+                      <ul className="text-sm text-red-700 space-y-1">
+                        {job.errors.map((error, index) => (
+                          <li key={index} className="flex items-start gap-1">
+                            <X className="w-3 h-3 mt-1 flex-shrink-0" />
+                            {error}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  <div className="flex justify-between items-center text-xs text-gray-500">
+                    <span>Started: {new Date(job.startedAt).toLocaleString()}</span>
+                    {job.completedAt && (
+                      <span>Completed: {new Date(job.completedAt).toLocaleString()}</span>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {importJobs.length === 0 && (
+              <div className="text-center py-12 text-gray-500">
+                <Upload className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                <p>No imports yet</p>
+                <p className="text-sm">Upload your first question file to get started</p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Backup Test Data */}
+      {activeTab === 'backup' && (
+        <div key="backup" className="space-y-6 animate-fadeInUp">
+          {/* Create Backup */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
+              <HardDrive className="w-5 h-5 text-blue-600" />
+              Create Backup
+            </h3>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-medium text-gray-800 mb-3">Manual Backup</h4>
+                <p className="text-sm text-gray-600 mb-4">
+                  Create an immediate backup of all your test data
+                </p>
+
+                <div className="space-y-3">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Backup Name
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter backup name..."
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="flex items-center gap-2 text-sm">
+                      <input type="checkbox" defaultChecked className="rounded" />
+                      Include test data
+                    </label>
+                    <label className="flex items-center gap-2 text-sm">
+                      <input type="checkbox" defaultChecked className="rounded" />
+                      Include media files
+                    </label>
+                    <label className="flex items-center gap-2 text-sm">
+                      <input type="checkbox" className="rounded" />
+                      Include analytics data
+                    </label>
+                    <label className="flex items-center gap-2 text-sm">
+                      <input type="checkbox" defaultChecked className="rounded" />
+                      Compress backup
+                    </label>
+                  </div>
+
+                  <button
+                    onClick={() =>
+                      createBackup('Manual Backup - ' + new Date().toLocaleDateString())
+                    }
+                    className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2 justify-center"
+                  >
+                    <HardDrive className="w-4 h-4" />
+                    Create Backup Now
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-medium text-gray-800 mb-3">Backup Settings</h4>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <span className="text-sm font-medium text-gray-700">Auto Backup</span>
+                      <p className="text-xs text-gray-500">Automatically create backups</p>
+                    </div>
                     <button
                       onClick={() =>
-                        createBackup('Manual Backup - ' + new Date().toLocaleDateString())
+                        setBackupSettings((prev) => ({ ...prev, autoBackup: !prev.autoBackup }))
                       }
-                      className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2 justify-center"
+                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                        backupSettings.autoBackup ? 'bg-blue-600' : 'bg-gray-200'
+                      }`}
                     >
-                      <HardDrive className="w-4 h-4" />
-                      Create Backup Now
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          backupSettings.autoBackup ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
+                    </button>
+                  </div>
+
+                  {backupSettings.autoBackup && (
+                    <>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Frequency
+                        </label>
+                        <select
+                          value={backupSettings.frequency}
+                          onChange={(e) =>
+                            setBackupSettings((prev) => ({
+                              ...prev,
+                              frequency: e.target.value as any,
+                            }))
+                          }
+                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        >
+                          <option value="daily">Daily</option>
+                          <option value="weekly">Weekly</option>
+                          <option value="monthly">Monthly</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Retention Period (days)
+                        </label>
+                        <input
+                          type="number"
+                          min="1"
+                          max="365"
+                          value={backupSettings.retention}
+                          onChange={(e) =>
+                            setBackupSettings((prev) => ({
+                              ...prev,
+                              retention: parseInt(e.target.value) || 30,
+                            }))
+                          }
+                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Storage Location
+                        </label>
+                        <select
+                          value={backupSettings.location}
+                          onChange={(e) =>
+                            setBackupSettings((prev) => ({
+                              ...prev,
+                              location: e.target.value as any,
+                            }))
+                          }
+                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        >
+                          <option value="local">Local Storage</option>
+                          <option value="cloud">Cloud Storage</option>
+                          <option value="both">Both</option>
+                        </select>
+                      </div>
+                    </>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Backup History */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Archive className="w-5 h-5 text-green-600" />
+              Backup History ({backups.length})
+            </h3>
+
+            <div className="space-y-4">
+              {backups.map((backup) => (
+                <div
+                  key={backup.id}
+                  className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                >
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h4 className="font-medium text-gray-800 flex items-center gap-2">
+                        {backup.name}
+                        {backup.encrypted && <Lock className="w-4 h-4 text-green-600" />}
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        {backup.location} • {backup.size}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span
+                        className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(backup.status)} ${getStatusTextClass(backup.status)}`}
+                      >
+                        {backup.status}
+                      </span>
+                      <span
+                        className={`px-2 py-1 rounded text-xs font-medium ${
+                          backup.type === 'automatic'
+                            ? 'bg-blue-100 text-blue-700'
+                            : 'bg-gray-100 text-gray-700'
+                        }`}
+                      >
+                        {backup.type}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-600 mb-3">
+                    <div>
+                      <span className="font-medium">{backup.testCount}</span> tests
+                    </div>
+                    <div>
+                      <span className="font-medium">{backup.questionCount}</span> questions
+                    </div>
+                    <div>Created: {new Date(backup.createdAt).toLocaleDateString()}</div>
+                    <div className="flex items-center gap-1">
+                      {backup.encrypted ? (
+                        <>
+                          <Lock className="w-3 h-3 text-green-600" />
+                          <span className="text-green-600">Encrypted</span>
+                        </>
+                      ) : (
+                        <>
+                          <Unlock className="w-3 h-3 text-yellow-600" />
+                          <span className="text-yellow-600">Unencrypted</span>
+                        </>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="flex gap-2">
+                    {backup.downloadUrl && (
+                      <button className="text-blue-600 hover:text-blue-800 text-sm">
+                        <Download className="w-4 h-4 inline mr-1" />
+                        Download
+                      </button>
+                    )}
+                    <button className="text-green-600 hover:text-green-800 text-sm">
+                      <RefreshCw className="w-4 h-4 inline mr-1" />
+                      Restore
+                    </button>
+                    <button className="text-red-600 hover:text-red-800 text-sm">
+                      <Trash2 className="w-4 h-4 inline mr-1" />
+                      Delete
                     </button>
                   </div>
                 </div>
+              ))}
+            </div>
 
-                <div>
-                  <h4 className="font-medium text-gray-800 mb-3">Backup Settings</h4>
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <span className="text-sm font-medium text-gray-700">Auto Backup</span>
-                        <p className="text-xs text-gray-500">Automatically create backups</p>
+            {backups.length === 0 && (
+              <div className="text-center py-12 text-gray-500">
+                <HardDrive className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                <p>No backups available</p>
+                <p className="text-sm">Create your first backup to secure your data</p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Test Duplication */}
+      {activeTab === 'duplicate' && (
+        <div key="duplicate" className="space-y-6 animate-fadeInUp">
+          {/* Search and Filter */}
+          <div className="bg-white rounded-xl p-6 border">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-lg font-semibold flex items-center gap-2">
+                <Copy className="w-5 h-5 text-purple-600" />
+                Test Duplication ({getFilteredTests().length})
+              </h3>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setViewMode(viewMode === 'grid' ? 'list' : 'grid')}
+                  className="p-2 border rounded-lg hover:bg-gray-50"
+                >
+                  {viewMode === 'grid' ? (
+                    <List className="w-4 h-4" />
+                  ) : (
+                    <Grid className="w-4 h-4" />
+                  )}
+                </button>
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row gap-4 mb-6">
+              <div className="flex-1">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                  <input
+                    type="text"
+                    placeholder="Search tests..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  />
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as any)}
+                  className="px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                >
+                  <option value="name">Name</option>
+                  <option value="date">Date</option>
+                  <option value="size">Size</option>
+                  <option value="usage">Usage</option>
+                </select>
+                <button
+                  onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
+                  className="p-2 border rounded-lg hover:bg-gray-50"
+                >
+                  {sortOrder === 'asc' ? (
+                    <SortAsc className="w-4 h-4" />
+                  ) : (
+                    <SortDesc className="w-4 h-4" />
+                  )}
+                </button>
+              </div>
+            </div>
+
+            {/* Test Items */}
+            <div
+              className={
+                viewMode === 'grid'
+                  ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'
+                  : 'space-y-4'
+              }
+            >
+              {getFilteredTests().map((test) => {
+                const TypeIcon = getTypeIcon(test.type)
+                return (
+                  <div
+                    key={test.id}
+                    className={`border rounded-lg p-4 hover:shadow-md transition-shadow ${
+                      viewMode === 'list' ? 'flex items-center gap-4' : ''
+                    }`}
+                  >
+                    <div className={viewMode === 'list' ? 'flex-1' : ''}>
+                      <div className="flex justify-between items-start mb-2">
+                        <div className="flex items-center gap-2">
+                          <TypeIcon className="w-5 h-5 text-purple-600" />
+                          <h4 className="font-medium text-gray-800 truncate">{test.name}</h4>
+                        </div>
+                        <span
+                          className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(test.status)} ${getStatusTextClass(test.status)}`}
+                        >
+                          {test.status}
+                        </span>
                       </div>
+
+                      <p className="text-sm text-gray-600 mb-3 line-clamp-2">{test.description}</p>
+
+                      <div className="grid grid-cols-2 gap-2 text-sm text-gray-600 mb-3">
+                        <div>{test.questionCount} questions</div>
+                        <div>{test.totalMarks} marks</div>
+                        <div>{test.duration} min</div>
+                        <div>v{test.version}</div>
+                      </div>
+
+                      <div className="flex flex-wrap gap-1 mb-3">
+                        {test.tags.slice(0, 3).map((tag, index) => (
+                          <span
+                            key={index}
+                            className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="flex justify-between items-center text-xs text-gray-500 mb-3">
+                        <span>By {test.createdBy}</span>
+                        <span>{new Date(test.updatedAt).toLocaleDateString()}</span>
+                      </div>
+                    </div>
+
+                    <div className={`flex gap-2 ${viewMode === 'list' ? 'flex-col' : ''}`}>
+                      <button
+                        onClick={() => duplicateTest(test.id)}
+                        className="bg-purple-600 text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm flex items-center gap-1"
+                      >
+                        <Copy className="w-3 h-3" />
+                        Duplicate
+                      </button>
+                      <button className="text-blue-600 hover:text-blue-800 text-sm">
+                        <Eye className="w-4 h-4" />
+                      </button>
+                      <button className="text-gray-600 hover:text-gray-800 text-sm">
+                        <MoreHorizontal className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+
+            {getFilteredTests().length === 0 && (
+              <div className="text-center py-12 text-gray-500">
+                <Copy className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                <p>No tests found</p>
+                <p className="text-sm">Try adjusting your search criteria</p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Archive Old Tests */}
+      {activeTab === 'archive' && (
+        <div key="archive" className="space-y-6 animate-fadeInUp">
+          {/* Archive Rules */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
+              <Archive className="w-5 h-5 text-orange-600" />
+              Archive Rules
+            </h3>
+
+            <div className="space-y-4">
+              {archiveRules.map((rule) => (
+                <div key={rule.id} className="border rounded-lg p-4">
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h4 className="font-medium text-gray-800">{rule.name}</h4>
+                      <p className="text-sm text-gray-600">
+                        {rule.condition === 'age'
+                          ? 'Archive items older than'
+                          : rule.condition === 'usage'
+                            ? 'Archive items with'
+                            : rule.condition === 'status'
+                              ? 'Archive items with status'
+                              : 'Archive items larger than'}{' '}
+                        {rule.value}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2">
                       <button
                         onClick={() =>
-                          setBackupSettings((prev) => ({ ...prev, autoBackup: !prev.autoBackup }))
+                          setArchiveRules((prev) =>
+                            prev.map((r) => (r.id === rule.id ? { ...r, enabled: !r.enabled } : r))
+                          )
                         }
                         className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                          backupSettings.autoBackup ? 'bg-blue-600' : 'bg-gray-200'
+                          rule.enabled ? 'bg-orange-600' : 'bg-gray-200'
                         }`}
                       >
                         <span
                           className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                            backupSettings.autoBackup ? 'translate-x-6' : 'translate-x-1'
+                            rule.enabled ? 'translate-x-6' : 'translate-x-1'
                           }`}
                         />
                       </button>
+                      <button className="text-gray-600 hover:text-gray-800">
+                        <MoreHorizontal className="w-4 h-4" />
+                      </button>
                     </div>
+                  </div>
 
-                    {backupSettings.autoBackup && (
-                      <>
-                        <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-2">
-                            Frequency
-                          </label>
-                          <select
-                            value={backupSettings.frequency}
-                            onChange={(e) =>
-                              setBackupSettings((prev) => ({
-                                ...prev,
-                                frequency: e.target.value as any,
-                              }))
-                            }
-                            className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          >
-                            <option value="daily">Daily</option>
-                            <option value="weekly">Weekly</option>
-                            <option value="monthly">Monthly</option>
-                          </select>
-                        </div>
-
-                        <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-2">
-                            Retention Period (days)
-                          </label>
-                          <input
-                            type="number"
-                            min="1"
-                            max="365"
-                            value={backupSettings.retention}
-                            onChange={(e) =>
-                              setBackupSettings((prev) => ({
-                                ...prev,
-                                retention: parseInt(e.target.value) || 30,
-                              }))
-                            }
-                            className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          />
-                        </div>
-
-                        <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-2">
-                            Storage Location
-                          </label>
-                          <select
-                            value={backupSettings.location}
-                            onChange={(e) =>
-                              setBackupSettings((prev) => ({
-                                ...prev,
-                                location: e.target.value as any,
-                              }))
-                            }
-                            className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          >
-                            <option value="local">Local Storage</option>
-                            <option value="cloud">Cloud Storage</option>
-                            <option value="both">Both</option>
-                          </select>
-                        </div>
-                      </>
+                  <div className="flex justify-between items-center text-sm text-gray-500">
+                    <span>
+                      Action: <span className="font-medium capitalize">{rule.action}</span>
+                    </span>
+                    {rule.lastRun && (
+                      <span>Last run: {new Date(rule.lastRun).toLocaleDateString()}</span>
                     )}
+                    <span>{rule.itemsProcessed} items processed</span>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
 
-            {/* Backup History */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Archive className="w-5 h-5 text-green-600" />
-                Backup History ({backups.length})
-              </h3>
-
-              <div className="space-y-4">
-                {backups.map((backup) => (
-                  <div
-                    key={backup.id}
-                    className="border rounded-lg p-4 hover:shadow-md transition-shadow"
-                  >
-                    <div className="flex justify-between items-start mb-3">
-                      <div>
-                        <h4 className="font-medium text-gray-800 flex items-center gap-2">
-                          {backup.name}
-                          {backup.encrypted && <Lock className="w-4 h-4 text-green-600" />}
-                        </h4>
-                        <p className="text-sm text-gray-600">
-                          {backup.location} • {backup.size}
-                        </p>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span
-                          className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(backup.status)} ${getStatusTextClass(backup.status)}`}
-                        >
-                          {backup.status}
-                        </span>
-                        <span
-                          className={`px-2 py-1 rounded text-xs font-medium ${
-                            backup.type === 'automatic'
-                              ? 'bg-blue-100 text-blue-700'
-                              : 'bg-gray-100 text-gray-700'
-                          }`}
-                        >
-                          {backup.type}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-600 mb-3">
-                      <div>
-                        <span className="font-medium">{backup.testCount}</span> tests
-                      </div>
-                      <div>
-                        <span className="font-medium">{backup.questionCount}</span> questions
-                      </div>
-                      <div>Created: {new Date(backup.createdAt).toLocaleDateString()}</div>
-                      <div className="flex items-center gap-1">
-                        {backup.encrypted ? (
-                          <>
-                            <Lock className="w-3 h-3 text-green-600" />
-                            <span className="text-green-600">Encrypted</span>
-                          </>
-                        ) : (
-                          <>
-                            <Unlock className="w-3 h-3 text-yellow-600" />
-                            <span className="text-yellow-600">Unencrypted</span>
-                          </>
-                        )}
-                      </div>
-                    </div>
-
-                    <div className="flex gap-2">
-                      {backup.downloadUrl && (
-                        <button className="text-blue-600 hover:text-blue-800 text-sm">
-                          <Download className="w-4 h-4 inline mr-1" />
-                          Download
-                        </button>
-                      )}
-                      <button className="text-green-600 hover:text-green-800 text-sm">
-                        <RefreshCw className="w-4 h-4 inline mr-1" />
-                        Restore
-                      </button>
-                      <button className="text-red-600 hover:text-red-800 text-sm">
-                        <Trash2 className="w-4 h-4 inline mr-1" />
-                        Delete
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {backups.length === 0 && (
-                <div className="text-center py-12 text-gray-500">
-                  <HardDrive className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-                  <p>No backups available</p>
-                  <p className="text-sm">Create your first backup to secure your data</p>
-                </div>
-              )}
-            </div>
+            <button className="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors flex items-center gap-2">
+              <Plus className="w-4 h-4" />
+              Add Archive Rule
+            </button>
           </div>
-        )}
 
-        {/* Test Duplication */}
-        {activeTab === 'duplicate' && (
-          <div
-            key="duplicate"
-            className="space-y-6 animate-fadeInUp"
-          >
-            {/* Search and Filter */}
-            <div className="bg-white rounded-xl p-6 border">
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="text-lg font-semibold flex items-center gap-2">
-                  <Copy className="w-5 h-5 text-purple-600" />
-                  Test Duplication ({getFilteredTests().length})
-                </h3>
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => setViewMode(viewMode === 'grid' ? 'list' : 'grid')}
-                    className="p-2 border rounded-lg hover:bg-gray-50"
-                  >
-                    {viewMode === 'grid' ? (
-                      <List className="w-4 h-4" />
-                    ) : (
-                      <Grid className="w-4 h-4" />
-                    )}
-                  </button>
-                </div>
-              </div>
+          {/* Archived Tests */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Folder className="w-5 h-5 text-gray-600" />
+              Archived Tests ({testItems.filter((t) => t.status === 'archived').length})
+            </h3>
 
-              <div className="flex flex-col md:flex-row gap-4 mb-6">
-                <div className="flex-1">
-                  <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                    <input
-                      type="text"
-                      placeholder="Search tests..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    />
-                  </div>
-                </div>
-                <div className="flex gap-2">
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value as any)}
-                    className="px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  >
-                    <option value="name">Name</option>
-                    <option value="date">Date</option>
-                    <option value="size">Size</option>
-                    <option value="usage">Usage</option>
-                  </select>
-                  <button
-                    onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-                    className="p-2 border rounded-lg hover:bg-gray-50"
-                  >
-                    {sortOrder === 'asc' ? (
-                      <SortAsc className="w-4 h-4" />
-                    ) : (
-                      <SortDesc className="w-4 h-4" />
-                    )}
-                  </button>
-                </div>
-              </div>
-
-              {/* Test Items */}
-              <div
-                className={
-                  viewMode === 'grid'
-                    ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'
-                    : 'space-y-4'
-                }
-              >
-                {getFilteredTests().map((test) => {
+            <div className="space-y-4">
+              {testItems
+                .filter((t) => t.status === 'archived')
+                .map((test) => {
                   const TypeIcon = getTypeIcon(test.type)
                   return (
-                    <div
-                      key={test.id}
-                      className={`border rounded-lg p-4 hover:shadow-md transition-shadow ${
-                        viewMode === 'list' ? 'flex items-center gap-4' : ''
-                      }`}
-                    >
-                      <div className={viewMode === 'list' ? 'flex-1' : ''}>
-                        <div className="flex justify-between items-start mb-2">
-                          <div className="flex items-center gap-2">
-                            <TypeIcon className="w-5 h-5 text-purple-600" />
-                            <h4 className="font-medium text-gray-800 truncate">{test.name}</h4>
-                          </div>
-                          <span
-                            className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(test.status)} ${getStatusTextClass(test.status)}`}
+                    <div key={test.id} className="border rounded-lg p-4 bg-gray-50">
+                      <div className="flex justify-between items-start mb-2">
+                        <div className="flex items-center gap-2">
+                          <TypeIcon className="w-5 h-5 text-gray-500" />
+                          <h4 className="font-medium text-gray-700">{test.name}</h4>
+                        </div>
+                        <div className="flex gap-2">
+                          <button
+                            onClick={() => restoreTest(test.id)}
+                            className="text-green-600 hover:text-green-800 text-sm"
                           >
-                            {test.status}
-                          </span>
-                        </div>
-
-                        <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-                          {test.description}
-                        </p>
-
-                        <div className="grid grid-cols-2 gap-2 text-sm text-gray-600 mb-3">
-                          <div>{test.questionCount} questions</div>
-                          <div>{test.totalMarks} marks</div>
-                          <div>{test.duration} min</div>
-                          <div>v{test.version}</div>
-                        </div>
-
-                        <div className="flex flex-wrap gap-1 mb-3">
-                          {test.tags.slice(0, 3).map((tag, index) => (
-                            <span
-                              key={index}
-                              className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-
-                        <div className="flex justify-between items-center text-xs text-gray-500 mb-3">
-                          <span>By {test.createdBy}</span>
-                          <span>{new Date(test.updatedAt).toLocaleDateString()}</span>
+                            <RefreshCw className="w-4 h-4 inline mr-1" />
+                            Restore
+                          </button>
+                          <button
+                            onClick={() => deleteTest(test.id)}
+                            className="text-red-600 hover:text-red-800 text-sm"
+                          >
+                            <Trash2 className="w-4 h-4 inline mr-1" />
+                            Delete
+                          </button>
                         </div>
                       </div>
 
-                      <div className={`flex gap-2 ${viewMode === 'list' ? 'flex-col' : ''}`}>
-                        <button
-                          onClick={() => duplicateTest(test.id)}
-                          className="bg-purple-600 text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm flex items-center gap-1"
-                        >
-                          <Copy className="w-3 h-3" />
-                          Duplicate
-                        </button>
-                        <button className="text-blue-600 hover:text-blue-800 text-sm">
-                          <Eye className="w-4 h-4" />
-                        </button>
-                        <button className="text-gray-600 hover:text-gray-800 text-sm">
-                          <MoreHorizontal className="w-4 h-4" />
-                        </button>
+                      <p className="text-sm text-gray-600 mb-2">{test.description}</p>
+
+                      <div className="flex justify-between items-center text-xs text-gray-500">
+                        <span>Archived: {new Date(test.updatedAt).toLocaleDateString()}</span>
+                        <span>
+                          {test.questionCount} questions • {test.size}
+                        </span>
                       </div>
                     </div>
                   )
                 })}
+            </div>
+
+            {testItems.filter((t) => t.status === 'archived').length === 0 && (
+              <div className="text-center py-12 text-gray-500">
+                <Archive className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                <p>No archived tests</p>
+                <p className="text-sm">Tests will appear here when archived</p>
               </div>
-
-              {getFilteredTests().length === 0 && (
-                <div className="text-center py-12 text-gray-500">
-                  <Copy className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-                  <p>No tests found</p>
-                  <p className="text-sm">Try adjusting your search criteria</p>
-                </div>
-              )}
-            </div>
+            )}
           </div>
-        )}
+        </div>
+      )}
 
-        {/* Archive Old Tests */}
-        {activeTab === 'archive' && (
-          <div
-            key="archive"
-            className="space-y-6 animate-fadeInUp"
-          >
-            {/* Archive Rules */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
-                <Archive className="w-5 h-5 text-orange-600" />
-                Archive Rules
-              </h3>
-
-              <div className="space-y-4">
-                {archiveRules.map((rule) => (
-                  <div key={rule.id} className="border rounded-lg p-4">
-                    <div className="flex justify-between items-start mb-3">
-                      <div>
-                        <h4 className="font-medium text-gray-800">{rule.name}</h4>
-                        <p className="text-sm text-gray-600">
-                          {rule.condition === 'age'
-                            ? 'Archive items older than'
-                            : rule.condition === 'usage'
-                              ? 'Archive items with'
-                              : rule.condition === 'status'
-                                ? 'Archive items with status'
-                                : 'Archive items larger than'}{' '}
-                          {rule.value}
-                        </p>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <button
-                          onClick={() =>
-                            setArchiveRules((prev) =>
-                              prev.map((r) =>
-                                r.id === rule.id ? { ...r, enabled: !r.enabled } : r
-                              )
-                            )
-                          }
-                          className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                            rule.enabled ? 'bg-orange-600' : 'bg-gray-200'
-                          }`}
-                        >
-                          <span
-                            className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                              rule.enabled ? 'translate-x-6' : 'translate-x-1'
-                            }`}
-                          />
-                        </button>
-                        <button className="text-gray-600 hover:text-gray-800">
-                          <MoreHorizontal className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </div>
-
-                    <div className="flex justify-between items-center text-sm text-gray-500">
-                      <span>
-                        Action: <span className="font-medium capitalize">{rule.action}</span>
-                      </span>
-                      {rule.lastRun && (
-                        <span>Last run: {new Date(rule.lastRun).toLocaleDateString()}</span>
-                      )}
-                      <span>{rule.itemsProcessed} items processed</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <button className="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors flex items-center gap-2">
-                <Plus className="w-4 h-4" />
-                Add Archive Rule
-              </button>
-            </div>
-
-            {/* Archived Tests */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Folder className="w-5 h-5 text-gray-600" />
-                Archived Tests ({testItems.filter((t) => t.status === 'archived').length})
-              </h3>
-
-              <div className="space-y-4">
-                {testItems
-                  .filter((t) => t.status === 'archived')
-                  .map((test) => {
-                    const TypeIcon = getTypeIcon(test.type)
-                    return (
-                      <div key={test.id} className="border rounded-lg p-4 bg-gray-50">
-                        <div className="flex justify-between items-start mb-2">
-                          <div className="flex items-center gap-2">
-                            <TypeIcon className="w-5 h-5 text-gray-500" />
-                            <h4 className="font-medium text-gray-700">{test.name}</h4>
-                          </div>
-                          <div className="flex gap-2">
-                            <button
-                              onClick={() => restoreTest(test.id)}
-                              className="text-green-600 hover:text-green-800 text-sm"
-                            >
-                              <RefreshCw className="w-4 h-4 inline mr-1" />
-                              Restore
-                            </button>
-                            <button
-                              onClick={() => deleteTest(test.id)}
-                              className="text-red-600 hover:text-red-800 text-sm"
-                            >
-                              <Trash2 className="w-4 h-4 inline mr-1" />
-                              Delete
-                            </button>
-                          </div>
-                        </div>
-
-                        <p className="text-sm text-gray-600 mb-2">{test.description}</p>
-
-                        <div className="flex justify-between items-center text-xs text-gray-500">
-                          <span>Archived: {new Date(test.updatedAt).toLocaleDateString()}</span>
-                          <span>
-                            {test.questionCount} questions • {test.size}
-                          </span>
-                        </div>
-                      </div>
-                    )
-                  })}
-              </div>
-
-              {testItems.filter((t) => t.status === 'archived').length === 0 && (
-                <div className="text-center py-12 text-gray-500">
-                  <Archive className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-                  <p>No archived tests</p>
-                  <p className="text-sm">Tests will appear here when archived</p>
-                </div>
-              )}
-            </div>
+      {/* QTI Standard Export & Bulk Operations - Additional tabs would go here */}
+      {(activeTab === 'bulk' || activeTab === 'qti' || activeTab === 'settings') && (
+        <div key={activeTab} className="bg-white rounded-xl p-6 border animate-fadeInUp">
+          <div className="text-center py-12 text-gray-500">
+            <Settings className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+            <p className="text-lg font-medium mb-2">
+              {activeTab === 'bulk'
+                ? 'Bulk Operations'
+                : activeTab === 'qti'
+                  ? 'QTI Export'
+                  : 'Settings'}
+            </p>
+            <p className="text-sm">This feature is coming soon</p>
           </div>
-        )}
-
-        {/* QTI Standard Export & Bulk Operations - Additional tabs would go here */}
-        {(activeTab === 'bulk' || activeTab === 'qti' || activeTab === 'settings') && (
-          <div
-            key={activeTab}
-            className="bg-white rounded-xl p-6 border animate-fadeInUp"
-          >
-            <div className="text-center py-12 text-gray-500">
-              <Settings className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-              <p className="text-lg font-medium mb-2">
-                {activeTab === 'bulk'
-                  ? 'Bulk Operations'
-                  : activeTab === 'qti'
-                    ? 'QTI Export'
-                    : 'Settings'}
-              </p>
-              <p className="text-sm">This feature is coming soon</p>
-            </div>
-          </div>
-        )}
-{/* Quick Actions */}
+        </div>
+      )}
+      {/* Quick Actions */}
       <div className="bg-white rounded-xl p-6 border">
         <div className="flex justify-between items-center">
           <div>

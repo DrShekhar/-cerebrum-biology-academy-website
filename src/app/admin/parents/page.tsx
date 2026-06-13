@@ -1,15 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import {
-  Users,
-  Search,
-  UserPlus,
-  Mail,
-  Phone,
-  Link2,
-  Unlink,
-} from 'lucide-react'
+import { Users, Search, UserPlus, Mail, Phone, Link2, Unlink } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
@@ -158,9 +150,7 @@ export default function ParentsPage() {
           </div>
         </div>
 
-        <div
-          className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-fadeInUp"
-        >
+        <div className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-fadeInUp">
           {loading ? (
             <div className="text-center py-12 text-gray-500">Loading...</div>
           ) : (
@@ -195,9 +185,7 @@ export default function ParentsPage() {
                               <Users className="h-5 w-5 text-purple-600" />
                             </div>
                             <div className="ml-4">
-                              <div className="text-sm font-medium text-gray-900">
-                                {parent.name}
-                              </div>
+                              <div className="text-sm font-medium text-gray-900">{parent.name}</div>
                             </div>
                           </div>
                         </td>
@@ -219,13 +207,8 @@ export default function ParentsPage() {
                           ) : (
                             <div className="space-y-1">
                               {parent.children.map((child) => (
-                                <div
-                                  key={child.id}
-                                  className="flex items-center gap-2"
-                                >
-                                  <span className="text-sm text-gray-900">
-                                    {child.name}
-                                  </span>
+                                <div key={child.id} className="flex items-center gap-2">
+                                  <span className="text-sm text-gray-900">{child.name}</span>
                                   <button
                                     onClick={() => handleUnlink(child.relationshipId)}
                                     className="text-red-400 hover:text-red-600"
@@ -245,9 +228,7 @@ export default function ParentsPage() {
                           <Button
                             variant="outline"
                             className="text-xs"
-                            onClick={() =>
-                              toast('Link student feature - use Create Parent form')
-                            }
+                            onClick={() => toast('Link student feature - use Create Parent form')}
                           >
                             <Link2 className="w-3 h-3 mr-1" />
                             Link Student
@@ -261,9 +242,7 @@ export default function ParentsPage() {
               {parents.length === 0 && !loading && (
                 <div className="text-center py-12">
                   <Users className="mx-auto h-12 w-12 text-gray-400" />
-                  <h3 className="mt-2 text-sm font-medium text-gray-900">
-                    No parents found
-                  </h3>
+                  <h3 className="mt-2 text-sm font-medium text-gray-900">No parents found</h3>
                   <p className="mt-1 text-sm text-gray-500">
                     Create a parent account to get started.
                   </p>

@@ -17,10 +17,16 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Student Results & Success Stories | NEET Biology Achievements',
-    description: 'Outstanding NEET Biology results from our students. See AIIMS, JIPMER selections, rank improvements, and success stories from across India.',
+    description:
+      'Outstanding NEET Biology results from our students. See AIIMS, JIPMER selections, rank improvements, and success stories from across India.',
   },
 
-  openGraph: { title: 'Student Results & Success Stories | NEET Biology Achievements', description: 'Outstanding NEET Biology results from our students. See AIIMS, JIPMER selections, rank improvements, and success stories from across India.', type: 'website' },
+  openGraph: {
+    title: 'Student Results & Success Stories | NEET Biology Achievements',
+    description:
+      'Outstanding NEET Biology results from our students. See AIIMS, JIPMER selections, rank improvements, and success stories from across India.',
+    type: 'website',
+  },
 }
 
 export default function ResultsPage() {
@@ -512,7 +518,9 @@ export default function ResultsPage() {
               <Zap className="w-5 h-5 ml-2" />
             </Link>
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20company.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20company.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+              target="_blank"
+              rel="noopener noreferrer"
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
               Apply Now

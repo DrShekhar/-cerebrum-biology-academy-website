@@ -109,9 +109,7 @@ function JoinDemoContent() {
   if (sdkConfigured === false) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-gray-50 p-4">
-        <div
-          className="max-w-md rounded-2xl bg-white p-8 text-center shadow-xl animate-fadeInUp"
-        >
+        <div className="max-w-md rounded-2xl bg-white p-8 text-center shadow-xl animate-fadeInUp">
           <div className="mb-4 text-6xl">🎥</div>
           <h1 className="mb-4 text-2xl font-bold text-gray-900">Meeting Room Coming Soon</h1>
           <p className="mb-6 text-gray-600">
@@ -145,9 +143,7 @@ function JoinDemoContent() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50 p-4">
-      <div
-        className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl animate-fadeInUp"
-      >
+      <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl animate-fadeInUp">
         {/* Header */}
         <div className="mb-6 text-center">
           <div className="mb-4 text-5xl">🎓</div>

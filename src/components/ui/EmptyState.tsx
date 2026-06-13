@@ -121,7 +121,12 @@ export function EmptyState({
                     </Button>
                   </Link>
                 ) : (
-                  <Button variant="primary" size="lg" onClick={primaryAction.onClick} animate={false}>
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    onClick={primaryAction.onClick}
+                    animate={false}
+                  >
                     {primaryAction.label}
                   </Button>
                 )}

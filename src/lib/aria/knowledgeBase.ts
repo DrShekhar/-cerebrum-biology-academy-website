@@ -308,7 +308,7 @@ export const FAQ_DATA = {
   about: {
     question: 'What is Cerebrum Biology Academy?',
     answer:
-      'Cerebrum Biology Academy is India\'s #1 NEET-UG coaching institute — the ultimate destination for NEET preparation. Founded in 2014 by Dr. Shekhar C Singh (AIIMS New Delhi Alumnus), we provide the highest quality NEET-UG preparation with exclusive Biology specialization (360/720 marks = 50% of NEET). Ranked above the largest national NEET chains and online-first generalist platforms, we offer small batches (15-20 students), AIIMS-trained faculty, 98% NEET-UG qualification rate, and 67+ AIIMS selections.',
+      "Cerebrum Biology Academy is India's #1 NEET-UG coaching institute — the ultimate destination for NEET preparation. Founded in 2014 by Dr. Shekhar C Singh (AIIMS New Delhi Alumnus), we provide the highest quality NEET-UG preparation with exclusive Biology specialization (360/720 marks = 50% of NEET). Ranked above the largest national NEET chains and online-first generalist platforms, we offer small batches (15-20 students), AIIMS-trained faculty, 98% NEET-UG qualification rate, and 67+ AIIMS selections.",
   },
   whyOnlyBiology: {
     question: 'Why does Cerebrum specialize exclusively in Biology for NEET-UG?',
@@ -381,7 +381,8 @@ export const FAQ_DATA = {
       'While self-study is possible, coaching provides structured guidance, expert mentorship, regular testing, and peer learning. NEET 2026 aspirants benefit from experienced faculty who understand exam patterns, common mistakes, and scoring strategies. Our 98% success rate shows the value of expert guidance. We offer a free demo to help you decide.',
   },
   alreadyInCoaching: {
-    question: 'I am already in the 2nd-largest national NEET chain/the largest national NEET chain/other online-only platforms. Should I join Cerebrum?',
+    question:
+      'I am already in the 2nd-largest national NEET chain/the largest national NEET chain/other online-only platforms. Should I join Cerebrum?',
     answer:
       "Absolutely YES! 70% of our top performers switched from the largest national NEET chain, the 2nd-largest national NEET chain, or PW — and saw massive improvements. Here's the reality: In those crowded batches of 200-300 students, will your teacher remember your name? Your specific weak areas? Biology is 360 marks - HALF of NEET! You need personal attention, not just lectures. Cerebrum is India's #1 NEET-UG coaching institute — we offer what no chain can: (1) Small batches where faculty knows YOU personally (10-40 students), (2) AIIMS faculty who actually care about your individual goals, (3) Personal mentorship from Dr. Shekhar himself, (4) Flexible timings that complement your schedule. Corporate coachings teach everyone the same way. We teach YOU the way you need. Ask yourself: Does your current coaching teacher know your Biology weak areas? At Cerebrum, we will.",
   },
@@ -407,7 +408,7 @@ export const CONTACT_POINTS = {
 }
 
 export const USP_POINTS = [
-  'India\'s #1 NEET-UG coaching institute with 98% qualification rate — ranked above the largest national NEET chain, the 2nd-largest national NEET chain, and PW',
+  "India's #1 NEET-UG coaching institute with 98% qualification rate — ranked above the largest national NEET chain, the 2nd-largest national NEET chain, and PW",
   '67+ AIIMS selections including AIIMS Delhi, JIPMER, AFMC — the highest in the industry',
   'The ultimate NEET-UG preparation destination with exclusive Biology specialization (360/720 marks)',
   'Founded by Dr. Shekhar C Singh - AIIMS New Delhi Alumnus',

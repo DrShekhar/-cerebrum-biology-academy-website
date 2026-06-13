@@ -26,7 +26,7 @@ git push origin staging
 ```bash
 # 1. Run all quality checks
 npm run type-check
-npm run lint  
+npm run lint
 npm run build
 
 # 2. If all pass, proceed to deployment
@@ -69,12 +69,14 @@ git checkout staging
 ## 🆘 Emergency Rollback (If Something Breaks)
 
 ### Option 1: Instant Rollback via Vercel Dashboard
+
 1. Go to Vercel Dashboard → Deployments
 2. Find the previous working deployment
 3. Click "Promote to Production"
 4. Takes ~10 seconds
 
 ### Option 2: Git Revert
+
 ```bash
 # Find the commit to revert to
 git log --oneline -10
@@ -91,7 +93,9 @@ git push origin main
 After each deployment, update this log:
 
 ### Feb 10, 2026 - 9:00 PM IST ✅
+
 **Changes:**
+
 - Blog SEO optimization (109 fields)
 - Image improvements (90 SVGs)
 - Quality score: 99.3/100
@@ -104,9 +108,9 @@ After each deployment, update this log:
 
 ## 🎯 Branch Strategy
 
-| Branch | Purpose | Deploy To | When to Use |
-|--------|---------|-----------|-------------|
-| `main` | Production code | Live site | Tuesday 9 PM IST |
+| Branch    | Purpose               | Deploy To   | When to Use       |
+| --------- | --------------------- | ----------- | ----------------- |
+| `main`    | Production code       | Live site   | Tuesday 9 PM IST  |
 | `staging` | Development & testing | Preview URL | Daily development |
 
 ---
@@ -147,9 +151,11 @@ git log main..staging --oneline
 **Tuesday, Feb 11, 2026 - 9:00 PM IST**
 
 **Planned Changes:**
+
 - [ ] (List changes accumulated on staging)
 
 **Pre-Deploy:**
+
 - [ ] Run `npm run type-check`
 - [ ] Run `npm run lint`
 - [ ] Run `npm run build`
@@ -157,11 +163,13 @@ git log main..staging --oneline
 - [ ] Review all changes: `git diff main..staging`
 
 **Deploy:**
+
 - [ ] `git checkout main`
 - [ ] `git merge staging`
 - [ ] `git push origin main`
 
 **Post-Deploy:**
+
 - [ ] Monitor Vercel analytics (15 min)
 - [ ] Test critical user flows
 - [ ] Check error logs
@@ -172,8 +180,10 @@ git log main..staging --oneline
 ## 📅 Deployment History
 
 ### Upcoming
+
 - **Next Deploy:** Tuesday, Feb 11, 2026 at 9:00 PM IST
 
 ### Past Deployments
+
 - **Feb 10, 2026:** Blog quality improvements, SEO optimization (99.3/100 score)
 - **Feb 9, 2026:** Blog image optimization (90 SVG images created)

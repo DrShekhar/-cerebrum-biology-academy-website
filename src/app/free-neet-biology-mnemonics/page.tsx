@@ -6,11 +6,19 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Mnemonics 2026 | 200+ Memory Tricks | Free PDF',
-  description: 'Download 200+ NEET Biology mnemonics and memory tricks. Easy memorization for taxonomy, classification, body systems. Created by AIIMS doctors.',
-  keywords: ['NEET biology mnemonics', 'biology memory tricks NEET', 'NEET biology shortcuts', 'mnemonics for NEET preparation', 'biology tricks and tips'],
+  description:
+    'Download 200+ NEET Biology mnemonics and memory tricks. Easy memorization for taxonomy, classification, body systems. Created by AIIMS doctors.',
+  keywords: [
+    'NEET biology mnemonics',
+    'biology memory tricks NEET',
+    'NEET biology shortcuts',
+    'mnemonics for NEET preparation',
+    'biology tricks and tips',
+  ],
   openGraph: {
     title: 'NEET Biology Mnemonics 2026 | 200+ Memory Tricks | Free PDF',
-    description: 'Download 200+ NEET Biology mnemonics and memory tricks. Easy memorization for taxonomy, classification, body systems. Created by AIIMS doctors.',
+    description:
+      'Download 200+ NEET Biology mnemonics and memory tricks. Easy memorization for taxonomy, classification, body systems. Created by AIIMS doctors.',
     url: `${BASE_URL}/free-neet-biology-mnemonics`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -19,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Free NEET Biology Mnemonics PDF',
-    description: 'Download 200+ NEET Biology mnemonics and memory tricks. Easy memorization for taxonomy, classification, body systems. Cr',
+    description:
+      'Download 200+ NEET Biology mnemonics and memory tricks. Easy memorization for taxonomy, classification, body systems. Cr',
   },
   alternates: { canonical: `${BASE_URL}/free-neet-biology-mnemonics` },
 }
@@ -58,7 +67,11 @@ const faqSchema = {
 export default function FreeNeetBiologyMnemonicsPage() {
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <PageContent />
     </>
   )

@@ -111,7 +111,7 @@ const faqData = [
   {
     question: 'What is your success rate?',
     answer:
-      '98% of students achieve 650+ scores with our program. Top performers consistently score 700+. Board students with strong fundamentals excel in conceptual questions.',
+      '98% of our students qualify NEET-UG, and top performers consistently score 700+. Board students with strong fundamentals excel in conceptual questions.',
   },
   {
     question: 'How long does preparation take?',

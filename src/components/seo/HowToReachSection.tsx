@@ -45,7 +45,9 @@ export function HowToReachSection({
                 {nearbyMetro.slice(0, 3).map((metro, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
-                    <span>Board from <strong>{metro}</strong></span>
+                    <span>
+                      Board from <strong>{metro}</strong>
+                    </span>
                   </li>
                 ))}
                 <li className="flex items-start gap-2 text-blue-700 font-medium mt-3">
@@ -66,11 +68,18 @@ export function HowToReachSection({
             <ul className="space-y-2 text-gray-700 text-sm">
               <li className="flex items-start gap-2">
                 <span className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0" />
-                <span>Distance: <strong>{distanceFromCenter}</strong> from {areaName}</span>
+                <span>
+                  Distance: <strong>{distanceFromCenter}</strong> from {areaName}
+                </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0" />
-                <span>Address: <strong>{center.streetAddress}, {center.addressLocality}</strong></span>
+                <span>
+                  Address:{' '}
+                  <strong>
+                    {center.streetAddress}, {center.addressLocality}
+                  </strong>
+                </span>
               </li>
               {center.nearbyLandmarks.slice(0, 2).map((landmark, i) => (
                 <li key={i} className="flex items-start gap-2">
@@ -91,15 +100,21 @@ export function HowToReachSection({
             <ul className="space-y-2 text-gray-700 text-sm">
               <li className="flex items-start gap-2">
                 <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 flex-shrink-0" />
-                <span>Mon-Sat: <strong>7:00 AM - 9:00 PM</strong></span>
+                <span>
+                  Mon-Sat: <strong>7:00 AM - 9:00 PM</strong>
+                </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 flex-shrink-0" />
-                <span>Sunday: <strong>9:00 AM - 6:00 PM</strong></span>
+                <span>
+                  Sunday: <strong>9:00 AM - 6:00 PM</strong>
+                </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 flex-shrink-0" />
-                <span>Online classes available <strong>24/7</strong></span>
+                <span>
+                  Online classes available <strong>24/7</strong>
+                </span>
               </li>
             </ul>
           </div>

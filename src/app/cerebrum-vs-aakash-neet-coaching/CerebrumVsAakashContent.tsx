@@ -149,18 +149,18 @@ const successStories = [
     name: 'Priya Sharma',
     score: '655/720',
     biologyScore: '345/360',
-    previous: 'Switched from the 2nd-largest national NEET chain',
+    previous: 'Switched from Aakash',
     quote:
-      'At the 2nd-largest national NEET chain, I was lost in a batch of 150 students. Biology concepts were rushed. At Cerebrum, every doubt was addressed. My Biology score jumped from 280 to 345.',
+      'At Aakash, I was lost in a batch of 150 students. Biology concepts were rushed. At Cerebrum, every doubt was addressed. My Biology score jumped from 280 to 345.',
     year: 'NEET 2025',
   },
   {
     name: 'Rahul Verma',
     score: '638/720',
     biologyScore: '340/360',
-    previous: 'Joined Cerebrum + the 2nd-largest national NEET chain',
+    previous: 'Joined Cerebrum + Aakash',
     quote:
-      'I kept the 2nd-largest national NEET chain for Physics but joined Cerebrum for Biology. Best decision! The small batch made a huge difference in understanding complex topics like Genetics.',
+      'I kept Aakash for Physics but joined Cerebrum for Biology. Best decision! The small batch made a huge difference in understanding complex topics like Genetics.',
     year: 'NEET 2025',
   },
   {
@@ -204,7 +204,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
     trackAndOpenWhatsApp({
       source: 'cerebrum-vs-aakash-comparison',
       message:
-        'Hi! I was comparing Cerebrum and the 2nd-largest national NEET chain for NEET Biology coaching. Can you help me understand which would be better for my preparation?',
+        'Hi! I was comparing Cerebrum and Aakash for NEET Biology coaching. Can you help me understand which would be better for my preparation?',
       campaign: 'cerebrum-vs-aakash-comparison',
     })
   }
@@ -222,7 +222,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <span className="text-teal-700 font-medium">Cerebrum vs the 2nd-largest national NEET chain</span>
+              <span className="text-teal-700 font-medium">Cerebrum vs Aakash</span>
             </li>
           </ol>
         </div>
@@ -236,22 +236,20 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="max-w-4xl animate-fadeInUp"
-          >
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="w-4 h-4" />
               Honest Comparison for NEET 2026 Aspirants
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Cerebrum vs the 2nd-largest national NEET chain
+              Cerebrum vs Aakash
               <span className="block text-teal-400 mt-2">NEET Coaching Comparison</span>
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
               Making the right coaching decision can define your NEET journey. Compare Cerebrum and
-              the 2nd-largest national NEET chain on key parameters like batch size, faculty, fees, and specialization to find
+              Aakash on key parameters like batch size, faculty, fees, and specialization to find
               your best fit.
             </p>
 
@@ -271,7 +269,11 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20cerebrum%20vs%20aakash%20neet%20coaching.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20cerebrum%20vs%20aakash%20neet%20coaching.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -296,18 +298,14 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
       {/* Quick Summary Cards */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">At a Glance</h2>
             <p className="text-xl text-slate-600">Key differences that matter for your NEET prep</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Cerebrum Card */}
-            <div
-              className="bg-gradient-to-br from-teal-50 to-white rounded-2xl p-8 border-2 border-teal-200 shadow-lg animate-fadeInUp"
-            >
+            <div className="bg-gradient-to-br from-teal-50 to-white rounded-2xl p-8 border-2 border-teal-200 shadow-lg animate-fadeInUp">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center">
                   <Microscope className="w-6 h-6 text-teal-600" />
@@ -344,16 +342,14 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
               </p>
             </div>
 
-            {/* the 2nd-largest national NEET chain Card */}
-            <div
-              className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 shadow-lg animate-fadeInUp"
-            >
+            {/* Aakash Card */}
+            <div className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 shadow-lg animate-fadeInUp">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center">
                   <Building2 className="w-6 h-6 text-slate-600" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-slate-900">the 2nd-largest national NEET chain</h3>
+                  <h3 className="text-2xl font-bold text-slate-900">Aakash</h3>
                   <p className="text-slate-600 font-medium">All-Subject Coaching</p>
                 </div>
               </div>
@@ -400,15 +396,11 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
       {/* Detailed Comparison Table */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Detailed Comparison: Cerebrum vs the 2nd-largest national NEET chain
+              Detailed Comparison: Cerebrum vs Aakash
             </h2>
-            <p className="text-xl text-slate-600">
-              Feature-by-feature analysis to help you decide
-            </p>
+            <p className="text-xl text-slate-600">Feature-by-feature analysis to help you decide</p>
           </div>
 
           <div className="overflow-x-auto">
@@ -417,7 +409,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
                 <tr>
                   <th className="px-6 py-4 text-left">Feature</th>
                   <th className="px-6 py-4 text-center bg-teal-700">Cerebrum</th>
-                  <th className="px-6 py-4 text-center">the 2nd-largest national NEET chain</th>
+                  <th className="px-6 py-4 text-center">Aakash</th>
                   <th className="px-6 py-4 text-left hidden md:table-cell">Why It Matters</th>
                 </tr>
               </thead>
@@ -437,9 +429,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
                     <td className="px-6 py-4 text-center text-slate-600">
                       <span className="flex items-center justify-center gap-2">
                         {row.winner === 'cerebrum' && <XCircle className="w-5 h-5 text-red-400" />}
-                        {row.winner === 'tie' && (
-                          <CheckCircle className="w-5 h-5 text-blue-500" />
-                        )}
+                        {row.winner === 'tie' && <CheckCircle className="w-5 h-5 text-blue-500" />}
                         {row.aakash}
                       </span>
                     </td>
@@ -462,9 +452,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
       {/* Why Cerebrum Offers Better Value */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-teal-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Why Cerebrum Offers Better Value for Biology
             </h2>
@@ -501,9 +489,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
       {/* Success Stories */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Students Who Made the Right Choice
             </h2>
@@ -547,9 +533,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
       {/* Decision Guide */}
       <section className="py-16 bg-gradient-to-br from-slate-900 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               When Should You Choose Cerebrum?
             </h2>
@@ -571,14 +555,16 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
             ))}
           </div>
 
-          <div
-            className="mt-12 text-center animate-fadeInUp"
-          >
+          <div className="mt-12 text-center animate-fadeInUp">
             <p className="text-slate-300 mb-6">
               Not sure which is right for you? Talk to our counselor for unbiased guidance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20cerebrum%20vs%20aakash%20neet%20coaching.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20cerebrum%20vs%20aakash%20neet%20coaching.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -604,22 +590,21 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 bg-gradient-to-br from-blue-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Best of Both Worlds?
                 <br />
-                Join the 2nd-largest national NEET chain + Cerebrum
+                Join Aakash + Cerebrum
               </h2>
               <p className="text-xl text-blue-100 mb-6">
-                Many students continue at the 2nd-largest national NEET chain for Physics and Chemistry while joining Cerebrum
+                Many students continue at Aakash for Physics and Chemistry while joining Cerebrum
                 specifically for Biology. Get comprehensive coverage without compromising on Biology
                 depth.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  Weekend batches that complement the 2nd-largest national NEET chain schedule
+                  Weekend batches that complement Aakash schedule
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
@@ -627,7 +612,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  Use the 2nd-largest national NEET chain study material + Cerebrum expert teaching
+                  Use Aakash study material + Cerebrum expert teaching
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
@@ -636,15 +621,12 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
               </ul>
               <Link href="/complement-aakash-coaching-gurugram">
                 <Button className="bg-white text-blue-600 hover:bg-blue-50">
-                  Learn About Complementary Coaching{' '}
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  Learn About Complementary Coaching <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
             </div>
 
-            <div
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp"
-            >
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
               <h3 className="text-2xl font-bold mb-6">Flexible Batch Options</h3>
               <div className="space-y-4">
                 <div className="bg-white/10 rounded-xl p-4">
@@ -724,15 +706,15 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
               href="/aakash-alternative-gurugram"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md transition-shadow"
             >
-              <h3 className="font-semibold text-teal-600">the 2nd-largest national NEET chain Alternative Gurugram</h3>
+              <h3 className="font-semibold text-teal-600">Aakash Alternative Gurugram</h3>
               <p className="text-sm text-gray-600">For Gurugram students</p>
             </Link>
             <Link
               href="/allen-alternative-gurugram"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md transition-shadow"
             >
-              <h3 className="font-semibold text-teal-600">the largest national NEET chain Alternative</h3>
-              <p className="text-sm text-gray-600">Compare with the largest national NEET chain</p>
+              <h3 className="font-semibold text-teal-600">Allen Alternative</h3>
+              <p className="text-sm text-gray-600">Compare with Allen</p>
             </Link>
             <Link
               href="/best-neet-coaching-gurugram"
@@ -762,7 +744,11 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
             Join 15,000+ students who chose specialized Biology coaching for better NEET results
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20cerebrum%20vs%20aakash%20neet%20coaching.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20cerebrum%20vs%20aakash%20neet%20coaching.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 size="xl"

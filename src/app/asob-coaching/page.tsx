@@ -260,9 +260,7 @@ export default function ASOBCoachingPage() {
       <section className="relative bg-gradient-to-br from-slate-900 to-slate-800 py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div
-            className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <div className="flex items-center justify-center gap-2 mb-4">
               <MapPin className="h-5 w-5 text-green-500" />
               <span className="text-green-400 font-medium">For Students in Australia</span>
@@ -297,9 +295,7 @@ export default function ASOBCoachingPage() {
           </div>
 
           {/* Stats */}
-          <div
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 animate-fadeInUp"
-          >
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 animate-fadeInUp">
             {[
               { value: '40+', label: 'ASOB Medalists Trained' },
               { value: '90%', label: 'Summer School Selection' },
@@ -328,10 +324,7 @@ export default function ASOBCoachingPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {asobPathway.map((stage, index) => (
-              <div
-                key={index}
-                className="relative animate-fadeInUp"
-              >
+              <div key={index} className="relative animate-fadeInUp">
                 <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 h-full">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                     <stage.icon className="h-6 w-6 text-green-600" />
@@ -550,10 +543,7 @@ export default function ASOBCoachingPage() {
           </div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
-              >
+              <div key={index} className="bg-gray-50 rounded-xl p-6 animate-fadeInUp">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
@@ -594,7 +584,14 @@ export default function ASOBCoachingPage() {
             className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl text-lg"
           >
             Start ASOB Practice
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
           </Link>
         </div>
       </section>

@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching HUDA City Centre Gurugram | 15 Min',
-    description: 'Best NEET coaching near HUDA City Centre Gurugram (Gurgaon). Just 15 min drive to M2K Sector 51. Yellow Line terminus, major commercial hub. AIIMS faculty, 98% success. Call 88264-44334!',
+    description:
+      'Best NEET coaching near HUDA City Centre Gurugram (Gurgaon). Just 15 min drive to M2K Sector 51. Yellow Line terminus, major commercial hub. AIIMS faculty, 98% success. Call 88264-44334!',
   },
 }
 
@@ -72,7 +73,11 @@ export default function NEETCoachingHUDACityCentreGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-violet-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

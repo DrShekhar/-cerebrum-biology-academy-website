@@ -16,11 +16,14 @@ export async function GET(request: NextRequest) {
 
   const results = filtered.slice(0, limit)
 
-  return NextResponse.json({
-    success: true,
-    data: results,
-    total: filtered.length,
-  }, {
-    headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
-  })
+  return NextResponse.json(
+    {
+      success: true,
+      data: results,
+      total: filtered.length,
+    },
+    {
+      headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
+    }
+  )
 }

@@ -201,150 +201,148 @@ export default function ContentDraftsPage() {
           </div>
         ) : (
           <div className="space-y-4">
-{filteredDrafts.map((draft) => {
-                const config = statusConfig[draft.status]
-                const StatusIcon = config.icon
-                const isExpanded = expandedDraft === draft.id
-                const isActionLoading = actionLoading === draft.id
+            {filteredDrafts.map((draft) => {
+              const config = statusConfig[draft.status]
+              const StatusIcon = config.icon
+              const isExpanded = expandedDraft === draft.id
+              const isActionLoading = actionLoading === draft.id
 
-                return (
-                  <div
-                    key={draft.id}
-                    className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm animate-fadeInUp"
-                  >
-                    {/* Main Row */}
-                    <div className="p-4 md:p-6">
-                      <div className="flex flex-col md:flex-row md:items-center gap-4">
-                        {/* Priority & Type */}
-                        <div className="flex items-center gap-3 md:w-32">
-                          {draft.priority === 'urgent' && <span className="text-lg">⚡</span>}
-                          {draft.priority === 'high' && <span className="text-lg">🔥</span>}
-                          <span className={`px-2 py-1 text-xs font-medium rounded ${config.color}`}>
-                            {typeLabels[draft.type]}
+              return (
+                <div
+                  key={draft.id}
+                  className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm animate-fadeInUp"
+                >
+                  {/* Main Row */}
+                  <div className="p-4 md:p-6">
+                    <div className="flex flex-col md:flex-row md:items-center gap-4">
+                      {/* Priority & Type */}
+                      <div className="flex items-center gap-3 md:w-32">
+                        {draft.priority === 'urgent' && <span className="text-lg">⚡</span>}
+                        {draft.priority === 'high' && <span className="text-lg">🔥</span>}
+                        <span className={`px-2 py-1 text-xs font-medium rounded ${config.color}`}>
+                          {typeLabels[draft.type]}
+                        </span>
+                      </div>
+
+                      {/* Title & Info */}
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold text-gray-900 truncate">{draft.title}</h3>
+                        <div className="flex flex-wrap items-center gap-3 mt-1 text-sm text-gray-500">
+                          <span className="flex items-center gap-1">
+                            <Clock className="w-3 h-3" />
+                            {getAge(draft.createdAt)}
                           </span>
+                          {draft.wordCount && <span>{draft.wordCount} words</span>}
+                          <span className="font-mono text-xs text-gray-400">{draft.id}</span>
                         </div>
+                      </div>
 
-                        {/* Title & Info */}
-                        <div className="flex-1 min-w-0">
-                          <h3 className="font-semibold text-gray-900 truncate">{draft.title}</h3>
-                          <div className="flex flex-wrap items-center gap-3 mt-1 text-sm text-gray-500">
-                            <span className="flex items-center gap-1">
-                              <Clock className="w-3 h-3" />
-                              {getAge(draft.createdAt)}
-                            </span>
-                            {draft.wordCount && <span>{draft.wordCount} words</span>}
-                            <span className="font-mono text-xs text-gray-400">{draft.id}</span>
+                      {/* Status Badge */}
+                      <div className="flex items-center gap-3">
+                        <span
+                          className={`flex items-center gap-1 px-3 py-1 rounded-full text-sm ${config.color}`}
+                        >
+                          <StatusIcon className="w-4 h-4" />
+                          {config.label}
+                        </span>
+                      </div>
+
+                      {/* Actions */}
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={() => setExpandedDraft(isExpanded ? null : draft.id)}
+                          className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg"
+                        >
+                          {isExpanded ? (
+                            <ChevronUp className="w-5 h-5" />
+                          ) : (
+                            <ChevronDown className="w-5 h-5" />
+                          )}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Expanded Details */}
+                  {isExpanded && (
+                    <div className="border-t border-gray-100 bg-gray-50 animate-fadeInUp">
+                      <div className="p-4 md:p-6">
+                        {draft.excerpt && <p className="text-gray-600 mb-4">{draft.excerpt}</p>}
+
+                        {draft.tags && draft.tags.length > 0 && (
+                          <div className="flex flex-wrap gap-2 mb-4">
+                            {draft.tags.map((tag) => (
+                              <span
+                                key={tag}
+                                className="inline-flex items-center gap-1 px-2 py-1 bg-gray-200 rounded text-xs text-gray-700"
+                              >
+                                <Tag className="w-3 h-3" />
+                                {tag}
+                              </span>
+                            ))}
                           </div>
-                        </div>
+                        )}
 
-                        {/* Status Badge */}
-                        <div className="flex items-center gap-3">
-                          <span
-                            className={`flex items-center gap-1 px-3 py-1 rounded-full text-sm ${config.color}`}
-                          >
-                            <StatusIcon className="w-4 h-4" />
-                            {config.label}
+                        {/* Action Buttons */}
+                        <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-gray-200">
+                          {(draft.status === 'draft' || draft.status === 'in_review') && (
+                            <>
+                              <button
+                                onClick={() => handleAction(draft.id, 'approve')}
+                                disabled={isActionLoading}
+                                className="flex items-center gap-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 disabled:opacity-50"
+                              >
+                                <CheckCircle className="w-4 h-4" />
+                                Approve
+                              </button>
+                              <button
+                                onClick={() => handleAction(draft.id, 'reject')}
+                                disabled={isActionLoading}
+                                className="flex items-center gap-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 disabled:opacity-50"
+                              >
+                                <XCircle className="w-4 h-4" />
+                                Reject
+                              </button>
+                            </>
+                          )}
+
+                          {draft.status === 'approved' && (
+                            <button
+                              onClick={() => handleAction(draft.id, 'publish')}
+                              disabled={isActionLoading}
+                              className="flex items-center gap-2 px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 disabled:opacity-50"
+                            >
+                              <Send className="w-4 h-4" />
+                              {isActionLoading ? 'Publishing...' : 'Publish Now'}
+                            </button>
+                          )}
+
+                          {draft.status === 'published' && draft.type === 'BLOG_POST' && (
+                            <a
+                              href={`/blog/${draft.title
+                                .toLowerCase()
+                                .replace(/[^a-z0-9]+/g, '-')
+                                .slice(0, 60)}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200"
+                            >
+                              <ExternalLink className="w-4 h-4" />
+                              View Live
+                            </a>
+                          )}
+
+                          <span className="text-sm text-gray-500 ml-auto">
+                            Updated {getAge(draft.updatedAt)}
                           </span>
-                        </div>
-
-                        {/* Actions */}
-                        <div className="flex items-center gap-2">
-                          <button
-                            onClick={() => setExpandedDraft(isExpanded ? null : draft.id)}
-                            className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg"
-                          >
-                            {isExpanded ? (
-                              <ChevronUp className="w-5 h-5" />
-                            ) : (
-                              <ChevronDown className="w-5 h-5" />
-                            )}
-                          </button>
                         </div>
                       </div>
                     </div>
-
-                    {/* Expanded Details */}
-{isExpanded && (
-                        <div
-                          className="border-t border-gray-100 bg-gray-50 animate-fadeInUp"
-                        >
-                          <div className="p-4 md:p-6">
-                            {draft.excerpt && <p className="text-gray-600 mb-4">{draft.excerpt}</p>}
-
-                            {draft.tags && draft.tags.length > 0 && (
-                              <div className="flex flex-wrap gap-2 mb-4">
-                                {draft.tags.map((tag) => (
-                                  <span
-                                    key={tag}
-                                    className="inline-flex items-center gap-1 px-2 py-1 bg-gray-200 rounded text-xs text-gray-700"
-                                  >
-                                    <Tag className="w-3 h-3" />
-                                    {tag}
-                                  </span>
-                                ))}
-                              </div>
-                            )}
-
-                            {/* Action Buttons */}
-                            <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-gray-200">
-                              {(draft.status === 'draft' || draft.status === 'in_review') && (
-                                <>
-                                  <button
-                                    onClick={() => handleAction(draft.id, 'approve')}
-                                    disabled={isActionLoading}
-                                    className="flex items-center gap-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 disabled:opacity-50"
-                                  >
-                                    <CheckCircle className="w-4 h-4" />
-                                    Approve
-                                  </button>
-                                  <button
-                                    onClick={() => handleAction(draft.id, 'reject')}
-                                    disabled={isActionLoading}
-                                    className="flex items-center gap-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 disabled:opacity-50"
-                                  >
-                                    <XCircle className="w-4 h-4" />
-                                    Reject
-                                  </button>
-                                </>
-                              )}
-
-                              {draft.status === 'approved' && (
-                                <button
-                                  onClick={() => handleAction(draft.id, 'publish')}
-                                  disabled={isActionLoading}
-                                  className="flex items-center gap-2 px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 disabled:opacity-50"
-                                >
-                                  <Send className="w-4 h-4" />
-                                  {isActionLoading ? 'Publishing...' : 'Publish Now'}
-                                </button>
-                              )}
-
-                              {draft.status === 'published' && draft.type === 'BLOG_POST' && (
-                                <a
-                                  href={`/blog/${draft.title
-                                    .toLowerCase()
-                                    .replace(/[^a-z0-9]+/g, '-')
-                                    .slice(0, 60)}`}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200"
-                                >
-                                  <ExternalLink className="w-4 h-4" />
-                                  View Live
-                                </a>
-                              )}
-
-                              <span className="text-sm text-gray-500 ml-auto">
-                                Updated {getAge(draft.updatedAt)}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-</div>
-                )
-              })}
-</div>
+                  )}
+                </div>
+              )
+            })}
+          </div>
         )}
 
         {/* CLI Commands */}

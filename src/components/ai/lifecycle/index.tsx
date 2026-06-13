@@ -187,78 +187,78 @@ export function Lifecycle() {
       </div>
 
       {/* Content */}
-{activeTab === 'draft' && (
-          <DraftTab
-            draftSettings={draftSettings}
-            setDraftSettings={setDraftSettings}
-            saving={saving}
-            saveAsDraft={saveAsDraft}
-          />
-        )}
+      {activeTab === 'draft' && (
+        <DraftTab
+          draftSettings={draftSettings}
+          setDraftSettings={setDraftSettings}
+          saving={saving}
+          saveAsDraft={saveAsDraft}
+        />
+      )}
 
-        {activeTab === 'publish' && (
-          <PublishTab
-            publishSettings={publishSettings}
-            setPublishSettings={setPublishSettings}
-            loading={loading}
-            publishTest={publishTest}
-          />
-        )}
+      {activeTab === 'publish' && (
+        <PublishTab
+          publishSettings={publishSettings}
+          setPublishSettings={setPublishSettings}
+          loading={loading}
+          publishTest={publishTest}
+        />
+      )}
 
-        {activeTab === 'schedule' && (
-          <ScheduleTab
-            scheduleSettings={scheduleSettings}
-            setScheduleSettings={setScheduleSettings}
-            loading={loading}
-            scheduleTest={scheduleTest}
-          />
-        )}
+      {activeTab === 'schedule' && (
+        <ScheduleTab
+          scheduleSettings={scheduleSettings}
+          setScheduleSettings={setScheduleSettings}
+          loading={loading}
+          scheduleTest={scheduleTest}
+        />
+      )}
 
-        {activeTab === 'clone' && (
-          <CloneTab
-            cloneSettings={cloneSettings}
-            setCloneSettings={setCloneSettings}
-            loading={loading}
-            cloneTest={cloneTest}
-          />
-        )}
+      {activeTab === 'clone' && (
+        <CloneTab
+          cloneSettings={cloneSettings}
+          setCloneSettings={setCloneSettings}
+          loading={loading}
+          cloneTest={cloneTest}
+        />
+      )}
 
-        {activeTab === 'practice' && (
-          <PracticeTab
-            practiceSettings={practiceSettings}
-            setPracticeSettings={setPracticeSettings}
-            loading={loading}
-            enablePracticeMode={enablePracticeMode}
-          />
-        )}
+      {activeTab === 'practice' && (
+        <PracticeTab
+          practiceSettings={practiceSettings}
+          setPracticeSettings={setPracticeSettings}
+          loading={loading}
+          enablePracticeMode={enablePracticeMode}
+        />
+      )}
 
-        {activeTab === 'answers' && (
-          <AnswersTab
-            answerKeySettings={answerKeySettings}
-            setAnswerKeySettings={setAnswerKeySettings}
-            loading={loading}
-            generateAnswerKey={generateAnswerKey}
-          />
-        )}
+      {activeTab === 'answers' && (
+        <AnswersTab
+          answerKeySettings={answerKeySettings}
+          setAnswerKeySettings={setAnswerKeySettings}
+          loading={loading}
+          generateAnswerKey={generateAnswerKey}
+        />
+      )}
 
-        {activeTab === 'solutions' && (
-          <SolutionsTab
-            solutionSettings={solutionSettings}
-            setSolutionSettings={setSolutionSettings}
-            loading={loading}
-            releaseSolutions={releaseSolutions}
-          />
-        )}
+      {activeTab === 'solutions' && (
+        <SolutionsTab
+          solutionSettings={solutionSettings}
+          setSolutionSettings={setSolutionSettings}
+          loading={loading}
+          releaseSolutions={releaseSolutions}
+        />
+      )}
 
-        {activeTab === 'regrade' && (
-          <RegradeTab
-            regradeOptions={regradeOptions}
-            setRegradeOptions={setRegradeOptions}
-            loading={loading}
-            initiateRegrade={initiateRegrade}
-          />
-        )}
-</div>
+      {activeTab === 'regrade' && (
+        <RegradeTab
+          regradeOptions={regradeOptions}
+          setRegradeOptions={setRegradeOptions}
+          loading={loading}
+          initiateRegrade={initiateRegrade}
+        />
+      )}
+    </div>
   )
 }
 

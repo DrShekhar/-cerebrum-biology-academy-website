@@ -26,10 +26,7 @@ const StatCard = ({
   gradient: string
   delay: number
 }) => (
-  <div
-    className="group relative animate-fade-in-up"
-    style={{ animationDelay: `${delay}ms` }}
-  >
+  <div className="group relative animate-fade-in-up" style={{ animationDelay: `${delay}ms` }}>
     <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     <div className="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center overflow-hidden hover:-translate-y-2 transition-transform duration-300">
       <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-amber-500/10 to-transparent rounded-bl-full" />

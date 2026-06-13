@@ -18,7 +18,10 @@ import { CityInlineEnquiryForm } from '@/components/seo/CityInlineEnquiryForm'
 
 // Map a school's locality/center to the canonical parent city hub.
 // Used to push users from doorway pages back to the indexed hub.
-function resolveParentCityHub(locality: string, centerName: string): { url: string; label: string } {
+function resolveParentCityHub(
+  locality: string,
+  centerName: string
+): { url: string; label: string } {
   const hay = `${locality} ${centerName}`.toLowerCase()
   if (hay.includes('rohini')) return { url: '/neet-coaching-rohini', label: 'NEET Coaching Rohini' }
   if (hay.includes('faridabad'))

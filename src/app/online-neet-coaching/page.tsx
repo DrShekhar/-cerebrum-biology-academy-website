@@ -107,8 +107,7 @@ export default function OnlineNeetCoachingPage() {
       <section className="relative overflow-hidden bg-blue-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
-          <div className="mx-auto max-w-4xl text-center animate-fadeInUp"
-          >
+          <div className="mx-auto max-w-4xl text-center animate-fadeInUp">
             <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <Globe className="mr-1 inline h-4 w-4" />
               Pan-India Online Classes Available
@@ -149,7 +148,9 @@ export default function OnlineNeetCoachingPage() {
               { icon: Star, value: '98%', label: 'Success Rate' },
               { icon: Clock, value: '500+', label: 'Video Hours' },
             ].map((stat, index) => (
-              <div key={index} className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
+              <div
+                key={index}
+                className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
               >
                 <stat.icon className="mx-auto mb-3 h-10 w-10 text-blue-600" />
                 <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
@@ -174,8 +175,7 @@ export default function OnlineNeetCoachingPage() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {onlineFeatures.map((feature, index) => (
-              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <feature.icon className="mb-4 h-10 w-10 text-blue-600" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
@@ -195,7 +195,9 @@ export default function OnlineNeetCoachingPage() {
           <div className="mx-auto max-w-4xl">
             <div className="grid gap-4 md:grid-cols-2">
               {whyOnline.map((item, index) => (
-                <div key={index} className="flex items-start gap-3 rounded-lg bg-white p-4 shadow-lg animate-fadeInUp"
+                <div
+                  key={index}
+                  className="flex items-start gap-3 rounded-lg bg-white p-4 shadow-lg animate-fadeInUp"
                 >
                   <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-blue-600" />
                   <div>
@@ -218,8 +220,7 @@ export default function OnlineNeetCoachingPage() {
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>

@@ -50,7 +50,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET 2026 Cutoff - Expected Category Wise Cutoff Marks & Qualifying Percentile',
-    description: 'NEET 2026 cutoff marks for General, OBC, SC, ST categories. Expected qualifying percentile, AIQ cutoff, state quota cutoff for MBBS, BDS admission. Previous year cutoff trends analysis.',
+    description:
+      'NEET 2026 cutoff marks for General, OBC, SC, ST categories. Expected qualifying percentile, AIQ cutoff, state quota cutoff for MBBS, BDS admission. Previous year cutoff trends analysis.',
   },
 }
 

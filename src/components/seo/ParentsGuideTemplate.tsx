@@ -91,7 +91,7 @@ const baseFaqs = [
   {
     question: 'How can I help without being overbearing?',
     answer:
-      'Create a distraction-free environment, ensure healthy meals and sleep, handle your own stress (don\'t add to theirs), attend parent-teacher meetings, and most importantly — express love and support unconditionally.',
+      "Create a distraction-free environment, ensure healthy meals and sleep, handle your own stress (don't add to theirs), attend parent-teacher meetings, and most importantly — express love and support unconditionally.",
   },
 ]
 
@@ -121,7 +121,9 @@ export function ParentsGuideTemplate({ config }: { config: ParentsGuideCityConfi
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <div className="mb-8 rounded-lg border-l-4 border-rose-600 bg-gradient-to-r from-rose-50 to-pink-50 p-6">
-              <h2 className="mb-3 text-xl font-bold text-rose-900">Dear {config.cityName} Parent</h2>
+              <h2 className="mb-3 text-xl font-bold text-rose-900">
+                Dear {config.cityName} Parent
+              </h2>
               <p className="text-lg text-rose-800">
                 Your child's NEET journey is stressful for the entire family. This guide helps you
                 make informed decisions about coaching, understand what to expect, and most

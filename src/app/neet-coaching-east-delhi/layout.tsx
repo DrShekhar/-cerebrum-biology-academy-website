@@ -19,7 +19,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Coaching in East Delhi | Laxmi Nagar, Preet Vihar, Mayur Vihar',
-    description: 'Best NEET coaching for East Delhi students from Laxmi Nagar, Preet Vihar, Mayur Vihar, Patparganj, IP Extension.',
+    description:
+      'Best NEET coaching for East Delhi students from Laxmi Nagar, Preet Vihar, Mayur Vihar, Patparganj, IP Extension.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-east-delhi',
@@ -36,7 +37,16 @@ export default function NEETCoachingEastDelhiLayout({ children }: { children: Re
         parentLocation="Delhi NCR"
         centerAddress="D 35, South Extension Part 2, New Delhi - 110049"
         centerPhone="+91-8826-444-334"
-        nearbyAreas={['Laxmi Nagar', 'Preet Vihar', 'Mayur Vihar', 'Patparganj', 'Nirman Vihar', 'Anand Vihar', 'Shahdara', 'Vivek Vihar']}
+        nearbyAreas={[
+          'Laxmi Nagar',
+          'Preet Vihar',
+          'Mayur Vihar',
+          'Patparganj',
+          'Nirman Vihar',
+          'Anand Vihar',
+          'Shahdara',
+          'Vivek Vihar',
+        ]}
       />
     </>
   )

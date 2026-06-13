@@ -20,10 +20,7 @@ import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
-import {
-  RelatedLocations,
-  getRelatedLocations,
-} from '@/components/locations/RelatedLocations'
+import { RelatedLocations, getRelatedLocations } from '@/components/locations/RelatedLocations'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
@@ -111,16 +108,22 @@ export default function GreenParkLocationPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/locations/green-park"
         pageName="NEET Biology Coaching for Green Park Students"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
-        personKnowsAbout={['NEET Green Park', 'NEET Biology Green Park', 'Medical entrance coaching Green Park']}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
+        personKnowsAbout={[
+          'NEET Green Park',
+          'NEET Biology Green Park',
+          'Medical entrance coaching Green Park',
+        ]}
         faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center animate-fadeInUp"
-            >
+            <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Train className="w-4 h-4" />
                 Yellow Line Metro
@@ -204,8 +207,7 @@ export default function GreenParkLocationPage() {
                   desc: '100+ NEET selections from this center',
                 },
               ].map((item, idx) => (
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
-                >
+                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp">
                   <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-green-600" />
                   </div>
@@ -228,9 +230,9 @@ export default function GreenParkLocationPage() {
                   title="Green Park NEET Coaching Center"
                   height={350}
                   placeholder={{
-                    lat: 28.560,
+                    lat: 28.56,
                     lng: 77.209,
-                    address: `${center.streetAddress}, ${center.addressLocality}`
+                    address: `${center.streetAddress}, ${center.addressLocality}`,
                   }}
                 />
                 <div className="p-6">
@@ -378,8 +380,7 @@ export default function GreenParkLocationPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, idx) => (
-                <div className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
-                >
+                <div className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp">
                   <h3 className="font-semibold text-lg mb-2">{faq.q}</h3>
                   <p className="text-gray-600">{faq.a}</p>
                 </div>

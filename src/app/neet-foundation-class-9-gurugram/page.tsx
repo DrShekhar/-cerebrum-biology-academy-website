@@ -34,7 +34,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 9 in Gurugram | Early NEET Preparation',
-    description: 'Start NEET preparation from Class 9 in Gurugram (Gurgaon). 4-year head start, NCERT foundation, board + NEET dual prep. Expert faculty at Sector 51 center. Book free demo.',
+    description:
+      'Start NEET preparation from Class 9 in Gurugram (Gurgaon). 4-year head start, NCERT foundation, board + NEET dual prep. Expert faculty at Sector 51 center. Book free demo.',
   },
 }
 
@@ -148,7 +149,11 @@ export default function NEETFoundationClass9GurugramPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-foundation-class-9-gurugram" />
       <script

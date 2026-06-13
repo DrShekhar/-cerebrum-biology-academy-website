@@ -24,7 +24,8 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'Online NEET Classes in Faridabad | Live Interactive Sessions',
-    description: 'Premium online NEET Biology coaching for Faridabad students. Live classes, recordings, doubt support.',
+    description:
+      'Premium online NEET Biology coaching for Faridabad students. Live classes, recordings, doubt support.',
     url: 'https://cerebrumbiologyacademy.com/online-neet-classes-faridabad',
   },
   alternates: {
@@ -34,7 +35,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Online NEET Classes in Faridabad | Live Biology Classes from Home',
-    description: 'Join online NEET Biology classes from Faridabad. Live interactive sessions, recorded lectures, doubt clearing. Same AIIMS faculty as offline. Starting ₹45,000/year.',
+    description:
+      'Join online NEET Biology classes from Faridabad. Live interactive sessions, recorded lectures, doubt clearing. Same AIIMS faculty as offline. Starting ₹45,000/year.',
   },
 }
 
@@ -106,7 +108,8 @@ export default function OnlineNEETClassesFaridabadPage() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: 'Online NEET Biology Classes - Faridabad',
-    description: 'Live interactive online NEET Biology coaching for Faridabad students with AIIMS faculty',
+    description:
+      'Live interactive online NEET Biology coaching for Faridabad students with AIIMS faculty',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -149,20 +152,48 @@ export default function OnlineNEETClassesFaridabadPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Faridabad', item: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad' },
-      { '@type': 'ListItem', position: 3, name: 'Online Classes', item: 'https://cerebrumbiologyacademy.com/online-neet-classes-faridabad' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Faridabad',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Online Classes',
+        item: 'https://cerebrumbiologyacademy.com/online-neet-classes-faridabad',
+      },
     ],
   }
 
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+        knowsAbout={[
+          'NEET Faridabad',
+          'NEET Biology Faridabad',
+          'Medical entrance coaching Faridabad',
+        ]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <OnlineNEETClassesFaridabadContent faqs={faqs} />
     </>
   )

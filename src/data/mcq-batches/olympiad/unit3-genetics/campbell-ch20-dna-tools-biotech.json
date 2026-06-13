@@ -109,12 +109,7 @@
     {
       "type": "MCQ",
       "question": "A researcher wants to detect a specific mRNA transcript in tissue sections while preserving spatial information about which cells express the gene. Which technique should they use?",
-      "options": [
-        "Northern blot",
-        "RT-PCR",
-        "In situ hybridization (ISH)",
-        "Western blot"
-      ],
+      "options": ["Northern blot", "RT-PCR", "In situ hybridization (ISH)", "Western blot"],
       "correctAnswer": "C",
       "explanation": "In situ hybridization (ISH) uses labeled nucleic acid probes (DNA or RNA) that hybridize to complementary mRNA sequences directly within intact tissue sections or whole-mount specimens. This preserves spatial information, showing exactly which cells and tissues express the gene of interest. Northern blots detect mRNA but require tissue homogenization (losing spatial information). RT-PCR quantifies mRNA levels but also requires homogenized samples. Western blots detect protein, not mRNA. Fluorescent ISH (FISH) variants and single-molecule FISH (smFISH) can visualize individual mRNA molecules within cells with high spatial resolution.",
       "isOlympiad": true,
@@ -269,12 +264,7 @@
     {
       "type": "MCQ",
       "question": "A researcher performs a restriction digest with BamHI (recognition site: 5'-GGATCC-3') on a 10 kb circular plasmid and obtains two linear fragments of 3 kb and 7 kb. How many BamHI sites are present in this plasmid?",
-      "options": [
-        "2",
-        "1",
-        "3",
-        "4"
-      ],
+      "options": ["2", "1", "3", "4"],
       "correctAnswer": "A",
       "explanation": "Cutting a circular DNA molecule with a restriction enzyme always produces a number of fragments equal to the number of cut sites. Since two fragments were produced (3 kb + 7 kb = 10 kb total, consistent with the plasmid size), there must be exactly 2 BamHI sites in the plasmid. One cut in a circle produces a single linear fragment; two cuts produce two fragments; n cuts produce n fragments. This is different from linear DNA, where n cuts produce n+1 fragments. The result is consistent because 3 + 7 = 10 kb, matching the original plasmid size.",
       "isOlympiad": true,
@@ -309,12 +299,7 @@
     {
       "type": "MCQ",
       "question": "A bacterial artificial chromosome (BAC) can carry inserts of approximately what size range, making it useful for genomic library construction?",
-      "options": [
-        "1-10 kb",
-        "10-50 kb",
-        "100-300 kb",
-        "1-5 Mb"
-      ],
+      "options": ["1-10 kb", "10-50 kb", "100-300 kb", "1-5 Mb"],
       "correctAnswer": "C",
       "explanation": "BACs (Bacterial Artificial Chromosomes) can carry DNA inserts of approximately 100-300 kb, making them essential for constructing genomic libraries and genome sequencing projects. BACs are based on the F (fertility) plasmid of E. coli, which naturally maintains itself at one copy per cell, ensuring insert stability. For comparison: plasmids typically carry 0.1-10 kb inserts; cosmids 35-45 kb; fosmids ~40 kb; and YACs (Yeast Artificial Chromosomes) 200-2,000 kb but with higher chimeric rates. BACs were the primary cloning vector used in the Human Genome Project due to their stability, large insert capacity, and ease of manipulation.",
       "isOlympiad": true,
@@ -389,12 +374,7 @@
     {
       "type": "MCQ",
       "question": "Gel electrophoresis separates DNA fragments by size. In a standard agarose gel, which percentage of agarose would be most appropriate for resolving DNA fragments in the 100-500 bp range?",
-      "options": [
-        "0.5% agarose",
-        "2.0% agarose",
-        "0.8% agarose",
-        "4.0% agarose"
-      ],
+      "options": ["0.5% agarose", "2.0% agarose", "0.8% agarose", "4.0% agarose"],
       "correctAnswer": "B",
       "explanation": "The agarose concentration determines pore size and thus the resolution range. Higher agarose concentrations have smaller pores that better resolve small fragments: 0.5% agarose: resolves 1-30 kb fragments; 0.8% agarose: resolves 0.5-12 kb; 1.0% agarose: resolves 0.25-10 kb; 2.0% agarose: resolves 0.1-2 kb (best for the 100-500 bp range); 3-4% agarose: resolves very small fragments (<100 bp) but these concentrations make brittle gels. For very fine resolution of small fragments, polyacrylamide gels (PAGE) are used instead of agarose. The optimal agarose percentage is the one where the target size range falls in the linear portion of the log(size) vs. distance relationship.",
       "isOlympiad": true,
@@ -909,12 +889,7 @@
     {
       "type": "DATA_INTERPRETATION",
       "question": "A researcher uses RT-qPCR to measure expression of Gene X relative to a housekeeping gene (GAPDH). In control cells, Gene X Ct = 25 and GAPDH Ct = 18. In treated cells, Gene X Ct = 22 and GAPDH Ct = 18. Calculate the fold change in Gene X expression using the ΔΔCt method.",
-      "options": [
-        "2-fold increase",
-        "4-fold increase",
-        "8-fold increase",
-        "No change"
-      ],
+      "options": ["2-fold increase", "4-fold increase", "8-fold increase", "No change"],
       "correctAnswer": "C",
       "explanation": "ΔΔCt method: (1) ΔCt_control = Ct(Gene X) - Ct(GAPDH) = 25 - 18 = 7. (2) ΔCt_treated = 22 - 18 = 4. (3) ΔΔCt = ΔCt_treated - ΔCt_control = 4 - 7 = -3. (4) Fold change = 2^(-ΔΔCt) = 2^(-(-3)) = 2³ = 8. Gene X expression is 8-fold higher in treated cells compared to control cells. The lower Ct value in treated cells (22 vs. 25) indicates more template (earlier crossing of the fluorescence threshold). Each 1-Ct difference represents approximately a 2-fold change in starting template quantity, so a 3-Ct reduction corresponds to 2³ = 8-fold increase.",
       "isOlympiad": true,
@@ -1089,12 +1064,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about biotechnology applications:\nI. Transgenic organisms contain DNA from another species introduced through genetic engineering\nII. Golden rice was engineered to produce beta-carotene (provitamin A) to address vitamin A deficiency\nIII. Bt crops produce Bacillus thuringiensis toxin that kills insect pests\nIV. All genetically modified organisms are produced using CRISPR-Cas9",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "A",
       "explanation": "I. TRUE: Transgenic organisms contain foreign DNA (transgenes) from another species. Examples include GFP-expressing mice (jellyfish gene), Bt crops (bacterial gene), and transgenic salmon (growth hormone gene). II. TRUE: Golden rice was engineered by inserting daffodil phytoene synthase and bacterial carotene desaturase genes into rice, enabling beta-carotene production in the endosperm to combat vitamin A deficiency. III. TRUE: Bt crops (corn, cotton, soybean) express the Cry protein from Bacillus thuringiensis, which forms pores in insect gut membranes, killing specific insect pests while being non-toxic to mammals. IV. FALSE: GMOs have been produced since the 1970s using various methods including Agrobacterium-mediated transformation, biolistics (gene gun), microinjection, and electroporation—long before CRISPR-Cas9 was developed (2012).",
       "isOlympiad": true,
@@ -1109,12 +1079,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about cloning vectors:\nI. A cloning vector must contain an origin of replication (ori) to replicate in host cells\nII. Selectable markers (e.g., antibiotic resistance) allow identification of cells that have taken up the vector\nIII. A multiple cloning site (polylinker) contains several unique restriction enzyme recognition sequences for inserting foreign DNA\nIV. All cloning vectors can accept DNA inserts larger than 500 kb",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "A",
       "explanation": "I. TRUE: All cloning vectors require an origin of replication for autonomous replication in the host cell. Plasmid vectors use bacterial ori sequences; YACs include yeast centromere and telomere sequences. II. TRUE: Selectable markers (ampicillin resistance, kanamycin resistance, URA3 in yeast) are essential for identifying cells that have taken up the vector, as transformation efficiency is typically low. III. TRUE: The multiple cloning site (MCS) or polylinker is a short DNA segment containing multiple unique restriction sites, allowing researchers to choose compatible enzymes for directional cloning. IV. FALSE: Insert capacity varies greatly: plasmids (1-10 kb), cosmids (~35-45 kb), BACs (100-300 kb), and only YACs can accept inserts >500 kb (up to ~2 Mb). Most vectors have upper insert size limits.",
       "isOlympiad": true,
@@ -1129,12 +1094,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about gene therapy:\nI. Ex vivo gene therapy involves modifying cells outside the body and then transplanting them back into the patient\nII. In vivo gene therapy delivers the therapeutic gene directly to cells within the patient's body\nIII. Gene therapy has successfully cured some patients with severe combined immunodeficiency (SCID)\nIV. Gene therapy carries no risk of adverse effects such as insertional mutagenesis",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "A",
       "explanation": "I. TRUE: Ex vivo gene therapy removes cells from the patient (e.g., hematopoietic stem cells), genetically modifies them in culture, and returns them to the patient. Examples include CAR-T cell therapy and ex vivo gene correction for SCID. II. TRUE: In vivo gene therapy delivers therapeutic genes directly to target tissues using viral vectors (AAV, lentivirus) or non-viral delivery systems. Examples include Luxturna (AAV for RPE65 mutation causing blindness) and Zolgensma (AAV for spinal muscular atrophy). III. TRUE: Gene therapy has cured SCID-X1 (bubble boy disease) in clinical trials, with patients maintaining functional immune systems years after treatment. IV. FALSE: Gene therapy carries risks including insertional mutagenesis (vector integration near oncogenes can cause cancer, as occurred in early SCID trials), immune responses to viral vectors, off-target effects, and variable transgene expression.",
       "isOlympiad": true,
@@ -1149,12 +1109,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about emerging biotechnologies:\nI. Base editing can convert one DNA base to another (e.g., C to T) without creating double-strand breaks\nII. Prime editing can install any type of point mutation, small insertion, or deletion without double-strand breaks or donor DNA\nIII. Organoids are three-dimensional cell cultures that recapitulate some structural and functional features of organs\nIV. All CRISPR applications require cutting both strands of DNA",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TFTT",
-        "TFTF"
-      ],
+      "options": ["TTTF", "TTTT", "TFTT", "TFTF"],
       "correctAnswer": "A",
       "explanation": "I. TRUE: Base editors (CBE = cytidine base editor, C→T; ABE = adenine base editor, A→G) use nickase Cas9 fused to deaminase enzymes to directly convert one base to another without double-strand breaks. II. TRUE: Prime editing (PE) uses Cas9 nickase fused to reverse transcriptase and a prime editing guide RNA (pegRNA) that contains both the target-binding sequence and a template for the desired edit. It can install any single-base change, small insertions (up to ~40 bp), or deletions without DSBs or external donor DNA. III. TRUE: Organoids are self-organizing 3D structures grown from stem cells that mimic organ architecture and function (brain organoids, intestinal organoids, kidney organoids). IV. FALSE: Many CRISPR applications (CRISPRi/a using dCas9, base editing, prime editing, RNA targeting with Cas13, epigenome editing) do not require double-strand DNA breaks.",
       "isOlympiad": true,
@@ -1309,12 +1264,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about next-generation sequencing (NGS) technologies:\nS1: Illumina sequencing uses reversible terminator chemistry where fluorescently labeled nucleotides are incorporated one at a time\nS2: Oxford Nanopore sequencing can produce reads exceeding 100 kb by threading single DNA molecules through protein nanopores\nS3: PacBio SMRT sequencing achieves high accuracy on single reads comparable to Illumina\nS4: All NGS platforms require PCR amplification of the DNA library before sequencing",
-      "options": [
-        "TTFT",
-        "TTFF",
-        "TTTT",
-        "TFFT"
-      ],
+      "options": ["TTFT", "TTFF", "TTTT", "TFFT"],
       "correctAnswer": "B",
       "explanation": "S1 is TRUE: Illumina sequencing-by-synthesis uses fluorescently labeled dNTPs with 3'-O-azidomethyl reversible terminators. Each cycle adds one nucleotide, the fluorescence is imaged, and the terminator is cleaved to allow the next cycle. S2 is TRUE: Oxford Nanopore can produce ultra-long reads (>100 kb, record >4 Mb) by measuring current changes as single-stranded DNA passes through a biological nanopore (e.g., CsgG). S3 is FALSE: Individual PacBio SMRT reads have ~10-15% error rate (primarily insertions/deletions), much higher than Illumina's <0.1% per-base error rate. However, PacBio achieves high consensus accuracy (>99.999%) through circular consensus sequencing (CCS/HiFi reads). S4 is FALSE: Both Oxford Nanopore and PacBio can sequence native DNA without PCR amplification, enabling direct detection of base modifications like methylation.",
       "isOlympiad": true,
@@ -1429,12 +1379,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about molecular cloning strategies:\nS1: Restriction enzyme-based cloning requires compatible cohesive or blunt ends between insert and vector\nS2: Gateway cloning uses site-specific recombination (att sites) to transfer inserts between vectors without restriction enzymes\nS3: Gibson assembly can join multiple DNA fragments in a single isothermal reaction using overlapping sequences\nS4: TA cloning exploits the terminal transferase activity of Taq polymerase which adds a single adenine to 3' ends of PCR products",
-      "options": [
-        "TTTT",
-        "TTFT",
-        "TFTT",
-        "FTTT"
-      ],
+      "options": ["TTTT", "TTFT", "TFTT", "FTTT"],
       "correctAnswer": "A",
       "explanation": "S1 is TRUE: Traditional restriction cloning requires that the insert and vector be cut with compatible enzymes producing compatible ends (matching cohesive ends for directional cloning, or blunt ends). Incompatible ends must be modified or blunted before ligation. S2 is TRUE: Gateway cloning uses bacteriophage lambda integrase-mediated site-specific recombination between att sites (attB × attP → attL + attR via BP reaction; attL × attR → attB + attP via LR reaction), enabling efficient transfer of cloned inserts between vectors without restriction enzymes. S3 is TRUE: Gibson assembly joins multiple DNA fragments with 20-40 bp overlapping ends in a single isothermal reaction (50°C, 1 hour) using three enzymes: T5 exonuclease (creates 3' overhangs), Phusion polymerase (fills gaps), and Taq ligase (seals nicks). S4 is TRUE: Taq DNA polymerase has a non-template-directed terminal transferase activity that adds a single deoxyadenosine (A) to the 3' ends of PCR products, which can be ligated into vectors with complementary 3' T overhangs (T-vectors).",
       "isOlympiad": true,

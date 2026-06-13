@@ -49,17 +49,20 @@ const bridgeFeatures = [
   {
     icon: BookOpen,
     title: 'Same Curriculum Advantage',
-    description: 'Your CBSE foundation is perfect for NEET. We accelerate from familiarity to excellence.',
+    description:
+      'Your CBSE foundation is perfect for NEET. We accelerate from familiarity to excellence.',
   },
   {
     icon: Target,
     title: 'Timezone-Friendly Scheduling',
-    description: 'Classes scheduled for US, UK, UAE, Singapore, Australia timezones. Choose your slot.',
+    description:
+      'Classes scheduled for US, UK, UAE, Singapore, Australia timezones. Choose your slot.',
   },
   {
     icon: Headphones,
     title: '24/7 Doubt Support',
-    description: 'Round-the-clock WhatsApp & email support. Never miss a doubt clearance opportunity.',
+    description:
+      'Round-the-clock WhatsApp & email support. Never miss a doubt clearance opportunity.',
   },
   {
     icon: Play,
@@ -69,31 +72,37 @@ const bridgeFeatures = [
   {
     icon: Shield,
     title: 'NRI Expert Mentoring',
-    description: 'Faculty experienced in coaching NRI students. Understand overseas study challenges.',
+    description:
+      'Faculty experienced in coaching NRI students. Understand overseas study challenges.',
   },
   {
     icon: Star,
     title: 'Medical College Return',
-    description: 'Specific coaching for returning to India for medical studies. All admission processes covered.',
+    description:
+      'Specific coaching for returning to India for medical studies. All admission processes covered.',
   },
 ]
 
 const whyOurApproach = [
   {
     title: 'Overseas Scheduling',
-    description: 'Morning IST (US night), afternoon IST (UK morning), evening IST (UAE-Singapore morning). Pick your timezone.',
+    description:
+      'Morning IST (US night), afternoon IST (UK morning), evening IST (UAE-Singapore morning). Pick your timezone.',
   },
   {
     title: 'Consistent Curriculum',
-    description: 'CBSE + NEET alignment means you leverage existing knowledge. No new curriculum to learn.',
+    description:
+      'CBSE + NEET alignment means you leverage existing knowledge. No new curriculum to learn.',
   },
   {
     title: 'Return-to-India Ready',
-    description: 'Coaching focused on returning to India for medical college. Help with admission processes.',
+    description:
+      'Coaching focused on returning to India for medical college. Help with admission processes.',
   },
   {
     title: 'NRI Student Support',
-    description: 'Understand visa timelines, travel arrangements, and medical college admission procedures.',
+    description:
+      'Understand visa timelines, travel arrangements, and medical college admission procedures.',
   },
 ]
 
@@ -128,7 +137,8 @@ const methodologySteps = [
   {
     number: '3',
     title: 'Focused Coaching',
-    description: 'Live classes + recorded sessions. Flexible learning around school/abroad schedule.',
+    description:
+      'Live classes + recorded sessions. Flexible learning around school/abroad schedule.',
   },
   {
     number: '4',
@@ -164,7 +174,7 @@ const faqData = [
       'Yes. WhatsApp + email support available 24/7. Your doubts answered within 2-4 hours regardless of timezone. Live doubt clearing sessions scheduled in your timezone twice weekly. You never feel isolated despite being abroad.',
   },
   {
-    question: 'How do I take NEET from abroad? What\'s the process?',
+    question: "How do I take NEET from abroad? What's the process?",
     answer:
       'NRI candidates can take NEET from centers in countries with Indian embassies or CBSE-affiliated schools. We guide entire process: exam center selection, registration, travel arrangements. We prepare you the same way as students taking NEET from India - no difference in curriculum or difficulty.',
   },
@@ -218,19 +228,22 @@ const successStories = [
     name: 'Aryan - USA',
     score: '720/720',
     college: 'AIIMS Delhi',
-    story: 'Studied in California, cracked NEET with 720/720 with our timezone-friendly classes. Now in AIIMS.',
+    story:
+      'Studied in California, cracked NEET with 720/720 with our timezone-friendly classes. Now in AIIMS.',
   },
   {
     name: 'Divya - UK',
     score: '710/720',
     college: 'JIPMER Puducherry',
-    story: 'London-based CBSE student scored 710. Our early morning UK slots fit perfectly with school schedule.',
+    story:
+      'London-based CBSE student scored 710. Our early morning UK slots fit perfectly with school schedule.',
   },
   {
     name: 'Rohan - UAE',
     score: '705/720',
     college: 'MAULANA AZAD MEDICAL',
-    story: 'Dubai resident achieved 705 with our UAE morning classes. Now pursuing medicine in India.',
+    story:
+      'Dubai resident achieved 705 with our UAE morning classes. Now pursuing medicine in India.',
   },
 ]
 
@@ -257,15 +270,11 @@ export default function CBSEAbroadContent() {
             </h1>
             <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
               Expert NEET coaching for CBSE students studying abroad. Timezone-friendly classes,
-              same curriculum advantage, proven 98% success rate. Prepare from USA, UK, UAE, Singapore,
-              Australia - anywhere in the world.
+              same curriculum advantage, proven 98% success rate. Prepare from USA, UK, UAE,
+              Singapore, Australia - anywhere in the world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
-                href="https://wa.me/918826444334"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Get Details on WhatsApp
@@ -445,9 +454,7 @@ export default function CBSEAbroadContent() {
       {/* Who Is This For */}
       <section className="bg-amber-50 px-4 py-20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-amber-900 mb-4">
-            Who Should Enroll?
-          </h2>
+          <h2 className="text-4xl font-bold text-center text-amber-900 mb-4">Who Should Enroll?</h2>
           <p className="text-center text-gray-700 mb-12">
             Perfect for CBSE students in these situations
           </p>
@@ -469,9 +476,7 @@ export default function CBSEAbroadContent() {
       {/* Pricing Section */}
       <section className="px-4 py-20 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-amber-900 mb-4">
-            NRI Coaching Plans
-          </h2>
+          <h2 className="text-4xl font-bold text-center text-amber-900 mb-4">NRI Coaching Plans</h2>
           <p className="text-center text-gray-700 mb-12">
             Choose based on your timeline and support needs
           </p>
@@ -487,13 +492,17 @@ export default function CBSEAbroadContent() {
                 }`}
               >
                 <div className="p-6">
-                  <h3 className={`text-2xl font-bold mb-2 ${index === 1 ? 'text-white' : 'text-amber-900'}`}>
+                  <h3
+                    className={`text-2xl font-bold mb-2 ${index === 1 ? 'text-white' : 'text-amber-900'}`}
+                  >
                     {tier.name}
                   </h3>
                   <p className={`mb-4 ${index === 1 ? 'text-amber-100' : 'text-gray-700'}`}>
                     {tier.duration}
                   </p>
-                  <p className={`text-xl font-bold mb-6 ${index === 1 ? 'text-amber-100' : 'text-gray-900'}`}>
+                  <p
+                    className={`text-xl font-bold mb-6 ${index === 1 ? 'text-amber-100' : 'text-gray-900'}`}
+                  >
                     {tier.price}
                   </p>
                   <ul className="space-y-3 mb-6">
@@ -519,11 +528,7 @@ export default function CBSEAbroadContent() {
             <p className="text-gray-700 mb-6">
               Custom plans available. Get personalized pricing and timezone scheduling.
             </p>
-            <Link
-              href="https://wa.me/918826444334"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
               <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Discuss Your Timezone & Plan
@@ -568,11 +573,7 @@ export default function CBSEAbroadContent() {
             your medical college dreams.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="https://wa.me/918826444334"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
               <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 w-full sm:w-auto">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Message on WhatsApp

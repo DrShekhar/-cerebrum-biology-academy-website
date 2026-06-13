@@ -664,164 +664,160 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
         </div>
 
         {/* Advanced Filters */}
-{showFilters && (
-            <div
-              className="overflow-hidden border-b animate-fadeInUp"
-            >
-              <div className="p-4 space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                  {/* Category Filter */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
-                    <div className="space-y-1">
-                      {templateCategories.map((category) => (
-                        <label key={category.id} className="flex items-center gap-2 text-sm">
-                          <input
-                            type="checkbox"
-                            checked={filters.category.includes(category.id)}
-                            onChange={(e) => {
-                              if (e.target.checked) {
-                                setFilters((prev) => ({
-                                  ...prev,
-                                  category: [...prev.category, category.id],
-                                }))
-                              } else {
-                                setFilters((prev) => ({
-                                  ...prev,
-                                  category: prev.category.filter((c) => c !== category.id),
-                                }))
-                              }
-                            }}
-                            className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                          />
-                          {category.name}
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Class Filter */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Class</label>
-                    <div className="space-y-1">
-                      {['11', '12', 'both'].map((classLevel) => (
-                        <label key={classLevel} className="flex items-center gap-2 text-sm">
-                          <input
-                            type="checkbox"
-                            checked={filters.class.includes(classLevel)}
-                            onChange={(e) => {
-                              if (e.target.checked) {
-                                setFilters((prev) => ({
-                                  ...prev,
-                                  class: [...prev.class, classLevel],
-                                }))
-                              } else {
-                                setFilters((prev) => ({
-                                  ...prev,
-                                  class: prev.class.filter((c) => c !== classLevel),
-                                }))
-                              }
-                            }}
-                            className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                          />
-                          Class {classLevel === 'both' ? '11 & 12' : classLevel}
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Difficulty Filter */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Difficulty
-                    </label>
-                    <div className="space-y-1">
-                      {['easy', 'medium', 'hard', 'mixed'].map((difficulty) => (
-                        <label key={difficulty} className="flex items-center gap-2 text-sm">
-                          <input
-                            type="checkbox"
-                            checked={filters.difficulty.includes(difficulty)}
-                            onChange={(e) => {
-                              if (e.target.checked) {
-                                setFilters((prev) => ({
-                                  ...prev,
-                                  difficulty: [...prev.difficulty, difficulty],
-                                }))
-                              } else {
-                                setFilters((prev) => ({
-                                  ...prev,
-                                  difficulty: prev.difficulty.filter((d) => d !== difficulty),
-                                }))
-                              }
-                            }}
-                            className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                          />
-                          <span className="capitalize">{difficulty}</span>
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Exam Pattern Filter */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Exam Pattern
-                    </label>
-                    <div className="space-y-1">
-                      {['neet', 'boards', 'jee', 'custom'].map((pattern) => (
-                        <label key={pattern} className="flex items-center gap-2 text-sm">
-                          <input
-                            type="checkbox"
-                            checked={filters.examPattern.includes(pattern)}
-                            onChange={(e) => {
-                              if (e.target.checked) {
-                                setFilters((prev) => ({
-                                  ...prev,
-                                  examPattern: [...prev.examPattern, pattern],
-                                }))
-                              } else {
-                                setFilters((prev) => ({
-                                  ...prev,
-                                  examPattern: prev.examPattern.filter((p) => p !== pattern),
-                                }))
-                              }
-                            }}
-                            className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                          />
-                          <span className="uppercase">{pattern}</span>
-                        </label>
-                      ))}
-                    </div>
+        {showFilters && (
+          <div className="overflow-hidden border-b animate-fadeInUp">
+            <div className="p-4 space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {/* Category Filter */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
+                  <div className="space-y-1">
+                    {templateCategories.map((category) => (
+                      <label key={category.id} className="flex items-center gap-2 text-sm">
+                        <input
+                          type="checkbox"
+                          checked={filters.category.includes(category.id)}
+                          onChange={(e) => {
+                            if (e.target.checked) {
+                              setFilters((prev) => ({
+                                ...prev,
+                                category: [...prev.category, category.id],
+                              }))
+                            } else {
+                              setFilters((prev) => ({
+                                ...prev,
+                                category: prev.category.filter((c) => c !== category.id),
+                              }))
+                            }
+                          }}
+                          className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                        />
+                        {category.name}
+                      </label>
+                    ))}
                   </div>
                 </div>
 
-                <div className="flex justify-end">
-                  <button
-                    onClick={() =>
-                      setFilters({
-                        category: [],
-                        class: [],
-                        difficulty: [],
-                        duration: [30, 300],
-                        questionCount: [10, 200],
-                        examPattern: [],
-                        topics: [],
-                        chapters: [],
-                        searchQuery: '',
-                        showFavoritesOnly: false,
-                        sortBy: 'rating',
-                        sortOrder: 'desc',
-                      })
-                    }
-                    className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors"
-                  >
-                    Clear All Filters
-                  </button>
+                {/* Class Filter */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Class</label>
+                  <div className="space-y-1">
+                    {['11', '12', 'both'].map((classLevel) => (
+                      <label key={classLevel} className="flex items-center gap-2 text-sm">
+                        <input
+                          type="checkbox"
+                          checked={filters.class.includes(classLevel)}
+                          onChange={(e) => {
+                            if (e.target.checked) {
+                              setFilters((prev) => ({
+                                ...prev,
+                                class: [...prev.class, classLevel],
+                              }))
+                            } else {
+                              setFilters((prev) => ({
+                                ...prev,
+                                class: prev.class.filter((c) => c !== classLevel),
+                              }))
+                            }
+                          }}
+                          className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                        />
+                        Class {classLevel === 'both' ? '11 & 12' : classLevel}
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Difficulty Filter */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Difficulty</label>
+                  <div className="space-y-1">
+                    {['easy', 'medium', 'hard', 'mixed'].map((difficulty) => (
+                      <label key={difficulty} className="flex items-center gap-2 text-sm">
+                        <input
+                          type="checkbox"
+                          checked={filters.difficulty.includes(difficulty)}
+                          onChange={(e) => {
+                            if (e.target.checked) {
+                              setFilters((prev) => ({
+                                ...prev,
+                                difficulty: [...prev.difficulty, difficulty],
+                              }))
+                            } else {
+                              setFilters((prev) => ({
+                                ...prev,
+                                difficulty: prev.difficulty.filter((d) => d !== difficulty),
+                              }))
+                            }
+                          }}
+                          className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                        />
+                        <span className="capitalize">{difficulty}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Exam Pattern Filter */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Exam Pattern
+                  </label>
+                  <div className="space-y-1">
+                    {['neet', 'boards', 'jee', 'custom'].map((pattern) => (
+                      <label key={pattern} className="flex items-center gap-2 text-sm">
+                        <input
+                          type="checkbox"
+                          checked={filters.examPattern.includes(pattern)}
+                          onChange={(e) => {
+                            if (e.target.checked) {
+                              setFilters((prev) => ({
+                                ...prev,
+                                examPattern: [...prev.examPattern, pattern],
+                              }))
+                            } else {
+                              setFilters((prev) => ({
+                                ...prev,
+                                examPattern: prev.examPattern.filter((p) => p !== pattern),
+                              }))
+                            }
+                          }}
+                          className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                        />
+                        <span className="uppercase">{pattern}</span>
+                      </label>
+                    ))}
+                  </div>
                 </div>
               </div>
+
+              <div className="flex justify-end">
+                <button
+                  onClick={() =>
+                    setFilters({
+                      category: [],
+                      class: [],
+                      difficulty: [],
+                      duration: [30, 300],
+                      questionCount: [10, 200],
+                      examPattern: [],
+                      topics: [],
+                      chapters: [],
+                      searchQuery: '',
+                      showFavoritesOnly: false,
+                      sortBy: 'rating',
+                      sortOrder: 'desc',
+                    })
+                  }
+                  className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors"
+                >
+                  Clear All Filters
+                </button>
+              </div>
             </div>
-          )}
-{/* Results Summary */}
+          </div>
+        )}
+        {/* Results Summary */}
         <div className="p-4 bg-gray-50 text-sm text-gray-600">
           Showing {filteredAndSortedTemplates.length} of {templates.length} templates
           {filters.showFavoritesOnly && ' (favorites only)'}

@@ -27,7 +27,9 @@ interface ConditionalHeaderFooterProviderProps {
  * Provider that manages the hide state once for all ConditionalHeaderFooter children.
  * This prevents multiple pathname subscriptions and mounted state updates.
  */
-export function ConditionalHeaderFooterProvider({ children }: ConditionalHeaderFooterProviderProps) {
+export function ConditionalHeaderFooterProvider({
+  children,
+}: ConditionalHeaderFooterProviderProps) {
   const pathname = usePathname()
   const [mounted, setMounted] = useState(false)
 

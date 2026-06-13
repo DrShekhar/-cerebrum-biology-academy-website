@@ -36,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Affordable NEET Coaching in Gurugram | Budget-Friendly Biology Preparation',
-    description: 'Best affordable NEET coaching in Gurugram (Gurgaon) starting from ₹45,000/year. Quality Biology coaching with AIIMS faculty at 30-40% lower fees than the largest national NEET chain, the 2nd-larges...',
+    description:
+      'Best affordable NEET coaching in Gurugram (Gurgaon) starting from ₹45,000/year. Quality Biology coaching with AIIMS faculty at 30-40% lower fees than the largest national NEET chain, the 2nd-larges...',
   },
 }
 
@@ -145,7 +146,11 @@ export default function AffordableNEETCoachingGurugramPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="affordable-neet-coaching-gurugram" />
       <LocalBusinessSchema />

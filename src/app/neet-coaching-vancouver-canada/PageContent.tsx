@@ -1,53 +1,59 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
+'use client'
 
-import { useState } from "react";
-import { SmartWhatsAppCTA } from "@/components/conversion/SmartWhatsAppCTA";
-import { VideoTestimonialsSection } from "@/components/testimonials/VideoTestimonialsSection";
-import { PricingSection, CostComparisonSection } from "@/components/city";
-import { RelatedCityLinks } from "@/components/seo/RelatedCityLinks";
+import { useState } from 'react'
+import { SmartWhatsAppCTA } from '@/components/conversion/SmartWhatsAppCTA'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import { PricingSection, CostComparisonSection } from '@/components/city'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 interface FAQItem {
-  id: string;
-  question: string;
-  answer: string;
+  id: string
+  question: string
+  answer: string
 }
 
 const faqData: FAQItem[] = [
   {
-        id: "0",
-        question: "How does NEET align with BC curriculum?",
-        answer: "NEET biology/chemistry exceeds BC Science requirements. Students taking NEET find BC exams much easier while getting into top Indian medical colleges."
-      },
-      {
-        id: "1",
-        question: "What are the class timings for Vancouver?",
-        answer: "Vancouver batches: 7 AM - 10 AM IST (6 PM - 9 PM PST previous day) or 8 PM - 11 PM IST (10 AM - 1 PM PST) daily."
-      },
-      {
-        id: "2",
-        question: "Is the South Asian community in Vancouver supportive for NEET prep?",
-        answer: "Yes! Vancouver has a thriving South Asian community. We organize monthly meetups, study groups, and motivational sessions with local achievers."
-      },
-      {
-        id: "3",
-        question: "Can I do NEET coaching while in IB program?",
-        answer: "Many Vancouver IB students excel in NEET. Our flexible online curriculum integrates perfectly with IB Science HL requirements."
-      },
-      {
-        id: "4",
-        question: "What's your Vancouver batch success rate?",
-        answer: "98% success with average NEET score of 630+. Over 35 students from Vancouver are in AIIMS/NIT colleges."
-      },
-      {
-        id: "5",
-        question: "Do you offer summer intensive batches?",
-        answer: "Yes! We run intensive 4-week and 8-week summer batches specially designed for Vancouver students during their school breaks."
-      }
-];
+    id: '0',
+    question: 'How does NEET align with BC curriculum?',
+    answer:
+      'NEET biology/chemistry exceeds BC Science requirements. Students taking NEET find BC exams much easier while getting into top Indian medical colleges.',
+  },
+  {
+    id: '1',
+    question: 'What are the class timings for Vancouver?',
+    answer:
+      'Vancouver batches: 7 AM - 10 AM IST (6 PM - 9 PM PST previous day) or 8 PM - 11 PM IST (10 AM - 1 PM PST) daily.',
+  },
+  {
+    id: '2',
+    question: 'Is the South Asian community in Vancouver supportive for NEET prep?',
+    answer:
+      'Yes! Vancouver has a thriving South Asian community. We organize monthly meetups, study groups, and motivational sessions with local achievers.',
+  },
+  {
+    id: '3',
+    question: 'Can I do NEET coaching while in IB program?',
+    answer:
+      'Many Vancouver IB students excel in NEET. Our flexible online curriculum integrates perfectly with IB Science HL requirements.',
+  },
+  {
+    id: '4',
+    question: "What's your Vancouver batch success rate?",
+    answer:
+      '98% success with average NEET score of 630+. Over 35 students from Vancouver are in AIIMS/NIT colleges.',
+  },
+  {
+    id: '5',
+    question: 'Do you offer summer intensive batches?',
+    answer:
+      'Yes! We run intensive 4-week and 8-week summer batches specially designed for Vancouver students during their school breaks.',
+  },
+]
 
 export function PageContent() {
-  const [expandedFaq, setExpandedFaq] = useState<string | null>(null);
+  const [expandedFaq, setExpandedFaq] = useState<string | null>(null)
 
   return (
     <div className="min-h-screen bg-white">
@@ -104,24 +110,29 @@ export function PageContent() {
       {/* Why Choose Us */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Why Choose Cerebrum for Vancouver?</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">
+            Why Choose Cerebrum for Vancouver?
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold mb-2">Expert Mentorship</h3>
               <p className="text-gray-700">
-                Learn directly from Dr. Shekhar C Singh with 20+ years of medical education expertise.
+                Learn directly from Dr. Shekhar C Singh with 20+ years of medical education
+                expertise.
               </p>
             </div>
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold mb-2">Localized Curriculum</h3>
               <p className="text-gray-700">
-                Vancouver-specific content aligned with local education boards and timezone optimization.
+                Vancouver-specific content aligned with local education boards and timezone
+                optimization.
               </p>
             </div>
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold mb-2">Community Support</h3>
               <p className="text-gray-700">
-                Join a vibrant Vancouver community of NEET aspirants with peer mentorship and study groups.
+                Join a vibrant Vancouver community of NEET aspirants with peer mentorship and study
+                groups.
               </p>
             </div>
             <div className="border-l-4 border-blue-600 pl-6">
@@ -185,10 +196,10 @@ export function PageContent() {
           <div className="bg-white border border-gray-200 rounded-lg p-8">
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <li key="0">Stratford Hall</li>
-                  <li key="1">Collingwood School</li>
-                  <li key="2">Little Flower Academy</li>
-                  <li key="3">St. Thomas Aquinas Regional High School</li>
-                  <li key="4">Vancouver College</li>
+              <li key="1">Collingwood School</li>
+              <li key="2">Little Flower Academy</li>
+              <li key="3">St. Thomas Aquinas Regional High School</li>
+              <li key="4">Vancouver College</li>
             </ul>
           </div>
         </div>
@@ -221,8 +232,8 @@ export function PageContent() {
       {/* WhatsApp CTA 2 */}
       <section className="py-8 px-4">
         <div className="max-w-6xl mx-auto">
-          <SmartWhatsAppCTA 
-            title="Still Have Questions?" 
+          <SmartWhatsAppCTA
+            title="Still Have Questions?"
             message="Chat with our counselors on WhatsApp for instant guidance"
           />
         </div>
@@ -236,16 +247,13 @@ export function PageContent() {
           </h2>
           <div className="max-w-3xl mx-auto space-y-4">
             {faqData.map((item) => (
-              <div
-                key={item.id}
-                className="border border-gray-200 rounded-lg"
-              >
+              <div key={item.id} className="border border-gray-200 rounded-lg">
                 <button
                   onClick={() => setExpandedFaq(expandedFaq === item.id ? null : item.id)}
                   className="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center"
                 >
                   {item.question}
-                  <span className="text-blue-600">{expandedFaq === item.id ? "-" : "+"}</span>
+                  <span className="text-blue-600">{expandedFaq === item.id ? '-' : '+'}</span>
                 </button>
                 {expandedFaq === item.id && (
                   <div className="px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
@@ -261,8 +269,8 @@ export function PageContent() {
       {/* WhatsApp CTA 3 */}
       <section className="py-8 px-4 bg-blue-50">
         <div className="max-w-6xl mx-auto">
-          <SmartWhatsAppCTA 
-            title="Ready to Start Your NEET Journey?" 
+          <SmartWhatsAppCTA
+            title="Ready to Start Your NEET Journey?"
             message="Book your free counseling session now"
             variant="highlight"
           />
@@ -280,11 +288,10 @@ export function PageContent() {
       {/* Final CTA */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Join Our Successful NEET Students
-          </h2>
+          <h2 className="text-3xl font-bold mb-4">Join Our Successful NEET Students</h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Start your preparation with India's most trusted NEET coaching. Limited seats available in Vancouver batch.
+            Start your preparation with India's most trusted NEET coaching. Limited seats available
+            in Vancouver batch.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -303,5 +310,5 @@ export function PageContent() {
         </div>
       </section>
     </div>
-  );
+  )
 }

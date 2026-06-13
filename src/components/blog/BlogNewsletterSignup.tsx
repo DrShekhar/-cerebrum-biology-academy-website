@@ -85,9 +85,7 @@ export function BlogNewsletterSignup({ articleSlug, category }: BlogNewsletterSi
           <BookOpen className="w-6 h-6 text-indigo-600" />
         </div>
         <div className="flex-1">
-          <h3 className="text-lg font-bold text-gray-900 mb-1">
-            Get Weekly NEET Biology Tips
-          </h3>
+          <h3 className="text-lg font-bold text-gray-900 mb-1">Get Weekly NEET Biology Tips</h3>
           <p className="text-sm text-gray-600 mb-4">
             Join 15,000+ students receiving free chapter summaries, mnemonics, and exam strategies
             every week from AIIMS faculty.
@@ -122,9 +120,7 @@ export function BlogNewsletterSignup({ articleSlug, category }: BlogNewsletterSi
             </button>
           </form>
 
-          {error && (
-            <p className="mt-2 text-red-500 text-sm">{error}</p>
-          )}
+          {error && <p className="mt-2 text-red-500 text-sm">{error}</p>}
 
           <p className="mt-3 text-xs text-gray-400">
             No spam. Unsubscribe anytime. We respect your privacy.

@@ -147,9 +147,7 @@ export default function BiologyClassesNearMePage() {
       <section className="relative bg-gradient-to-br from-blue-900 via-indigo-800 to-violet-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2 text-yellow-300" />
               Find Classes Near You
@@ -180,7 +178,11 @@ export default function BiologyClassesNearMePage() {
                 {userLocation ? 'Change Location' : 'Select Your Location'}
               </Button>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20classes%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20classes%20near%20me.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"
@@ -218,9 +220,7 @@ export default function BiologyClassesNearMePage() {
       {/* Location Modal */}
       {showLocationModal && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div
-            className="bg-white rounded-2xl p-8 max-w-lg w-full max-h-[80vh] overflow-y-auto animate-fadeInUp"
-          >
+          <div className="bg-white rounded-2xl p-8 max-w-lg w-full max-h-[80vh] overflow-y-auto animate-fadeInUp">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Select Your Location</h3>
 
             <div className="space-y-4 mb-6">
@@ -274,9 +274,7 @@ export default function BiologyClassesNearMePage() {
       {/* Offline Centers */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Our Offline Centers in Delhi NCR
             </h2>
@@ -331,7 +329,11 @@ export default function BiologyClassesNearMePage() {
 
                   {/* Action Links */}
                   <div className="flex flex-wrap gap-3 mt-4">
-                    <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20classes%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                    <Link
+                      href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20classes%20near%20me.%20Please%20share%20available%20timings."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Button variant="outline" size="sm">
                         Book Visit
                       </Button>
@@ -364,8 +366,7 @@ export default function BiologyClassesNearMePage() {
       <section className="py-20 bg-[#4a5d4a] text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <Wifi className="w-16 h-16 mb-6 text-yellow-300" />
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Not Near Our Centers? Join Online!
@@ -390,15 +391,17 @@ export default function BiologyClassesNearMePage() {
               </div>
             </div>
 
-            <div
-              className="text-center animate-fadeInUp"
-            >
+            <div className="text-center animate-fadeInUp">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
                 <h3 className="text-2xl font-bold mb-4">Start Your Journey Today</h3>
                 <p className="opacity-90 mb-6">
                   Book a free demo class and experience our teaching methodology
                 </p>
-                <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20classes%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                <Link
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20classes%20near%20me.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button
                     variant="secondary"
                     size="xl"
@@ -418,9 +421,7 @@ export default function BiologyClassesNearMePage() {
       {isInDelhiNCR === false && (
         <section className="py-20 bg-white">
           <div className="max-w-6xl mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Online Biology Classes for Your Region
               </h2>
@@ -467,10 +468,7 @@ export default function BiologyClassesNearMePage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {classFeatures.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="text-center p-6 animate-fadeInUp"
-              >
+              <div key={feature.title} className="text-center p-6 animate-fadeInUp">
                 <feature.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
@@ -483,9 +481,7 @@ export default function BiologyClassesNearMePage() {
       {/* FAQs */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -511,8 +507,7 @@ export default function BiologyClassesNearMePage() {
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Ready to Start Your Biology Journey?
             </h2>
@@ -520,7 +515,11 @@ export default function BiologyClassesNearMePage() {
               Book a free demo class today - online or at our nearest center!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20classes%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20classes%20near%20me.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -530,7 +529,11 @@ export default function BiologyClassesNearMePage() {
                   Book Free Demo
                 </Button>
               </Link>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20classes%20near%20me.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20classes%20near%20me.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"

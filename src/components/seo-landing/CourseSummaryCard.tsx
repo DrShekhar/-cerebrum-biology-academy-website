@@ -18,8 +18,7 @@ export function CourseSummaryCard({ courseSummary, classLevel, ctaLink }: Course
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Course Info */}
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">{courseSummary.title}</h2>
 
             <div className="mt-6 flex flex-wrap gap-4">
@@ -35,10 +34,7 @@ export function CourseSummaryCard({ courseSummary, classLevel, ctaLink }: Course
 
             <div className="mt-8 space-y-3">
               {courseSummary.features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-3 animate-fadeInUp"
-                >
+                <div key={index} className="flex items-start gap-3 animate-fadeInUp">
                   <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-600 text-white">
                     <Check className="h-3 w-3" />
                   </div>
@@ -49,9 +45,7 @@ export function CourseSummaryCard({ courseSummary, classLevel, ctaLink }: Course
           </div>
 
           {/* Pricing Card */}
-          <div
-            className="relative overflow-hidden rounded-3xl bg-indigo-500 p-8 text-white shadow-2xl animate-fadeInUp"
-          >
+          <div className="relative overflow-hidden rounded-3xl bg-indigo-500 p-8 text-white shadow-2xl animate-fadeInUp">
             {/* Decorative Elements */}
             <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/10" />
             <div className="absolute -bottom-10 -left-10 h-40 w-40 rounded-full bg-white/10" />

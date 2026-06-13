@@ -280,7 +280,9 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
       updateData.submittedAt = new Date()
 
       const assignment = submission.test_assignments
-      const questionsMap = new Map(assignment.test_assignment_questions.map((q) => [q.questionId, q]))
+      const questionsMap = new Map(
+        assignment.test_assignment_questions.map((q) => [q.questionId, q])
+      )
 
       let totalScore = 0
       let questionsAttempted = 0

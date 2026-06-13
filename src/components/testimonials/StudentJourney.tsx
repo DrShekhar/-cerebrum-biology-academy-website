@@ -136,9 +136,7 @@ export function StudentJourney({ student }: StudentJourneyProps) {
 
       {/* Score Progress Chart */}
       {showScoreChart && (
-        <div
-          className="bg-white rounded-3xl shadow-lg p-8 mb-8 animate-fadeInUp"
-        >
+        <div className="bg-white rounded-3xl shadow-lg p-8 mb-8 animate-fadeInUp">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Score Improvement Timeline</h3>
 
           <div className="relative">
@@ -244,9 +242,7 @@ export function StudentJourney({ student }: StudentJourneyProps) {
 
                   {/* Expanded Details */}
                   {activePhase === index && (
-                    <div
-                      className="grid md:grid-cols-3 gap-6 mt-6 pt-6 border-t border-gray-200 animate-fadeInUp"
-                    >
+                    <div className="grid md:grid-cols-3 gap-6 mt-6 pt-6 border-t border-gray-200 animate-fadeInUp">
                       <div>
                         <h5 className="font-semibold text-green-900 mb-3 flex items-center">
                           <CheckCircle className="w-4 h-4 mr-2" />

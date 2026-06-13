@@ -71,7 +71,9 @@ export default function AdBlockDetector() {
     setTimeout(() => {
       if (typeof window !== 'undefined') {
         const gtagExists = typeof (window as unknown as Record<string, unknown>).gtag === 'function'
-        const dataLayerExists = Array.isArray((window as unknown as Record<string, unknown>).dataLayer)
+        const dataLayerExists = Array.isArray(
+          (window as unknown as Record<string, unknown>).dataLayer
+        )
         if (!gtagExists && !dataLayerExists) {
           setAdBlockDetected(true)
         }
@@ -186,9 +188,9 @@ export default function AdBlockDetector() {
           color: 'rgba(255,255,255,0.9)',
         }}
       >
-        We use Google Ads to keep our educational resources{' '}
-        <strong>free and accessible</strong> for NEET aspirants. Please consider whitelisting{' '}
-        <strong>cerebrumbiologyacademy.com</strong> in your ad blocker.
+        We use Google Ads to keep our educational resources <strong>free and accessible</strong> for
+        NEET aspirants. Please consider whitelisting <strong>cerebrumbiologyacademy.com</strong> in
+        your ad blocker.
       </p>
 
       {/* Action buttons */}

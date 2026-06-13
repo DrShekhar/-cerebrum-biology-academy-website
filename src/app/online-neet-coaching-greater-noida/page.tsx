@@ -45,7 +45,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Online NEET Coaching for Greater Noida Students | Live & Hybrid Mode',
-    description: 'Online NEET Biology classes for Greater Noida students. Live interactive sessions from home. Hybrid mode with weekend offline at Sector 62 Noida. 800+ students. Call 99536-43938!',
+    description:
+      'Online NEET Biology classes for Greater Noida students. Live interactive sessions from home. Hybrid mode with weekend offline at Sector 62 Noida. 800+ students. Call 99536-43938!',
   },
 }
 
@@ -55,7 +56,11 @@ const travelTimes = [
   { area: 'Pari Chowk', time: '0 min', mode: 'Study from home!' },
   { area: 'Jaypee Greens', time: '0 min', mode: 'Study from home!' },
   { area: 'Alpha/Beta Sectors', time: '0 min', mode: 'Study from home!' },
-  { area: 'To Sector 62, Noida (Weekend)', time: '30-45 min by road', mode: 'For offline sessions' },
+  {
+    area: 'To Sector 62, Noida (Weekend)',
+    time: '30-45 min by road',
+    mode: 'For offline sessions',
+  },
 ]
 
 const onlineFeatures = [
@@ -122,7 +127,11 @@ export default function OnlineNEETCoachingGreaterNoidaPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Greater Noida', 'NEET Biology Greater Noida', 'Medical entrance coaching Greater Noida']}
+        knowsAbout={[
+          'NEET Greater Noida',
+          'NEET Biology Greater Noida',
+          'Medical entrance coaching Greater Noida',
+        ]}
       />
       {/* Hero */}
       <section className="bg-gradient-to-br from-indigo-900 to-purple-800 text-white py-16">
@@ -149,7 +158,9 @@ export default function OnlineNEETCoachingGreaterNoidaPage() {
                 Call 99536-43938
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition"
               >
                 Try Free Online Demo
@@ -294,9 +305,7 @@ export default function OnlineNEETCoachingGreaterNoidaPage() {
                 <Building2 className="w-7 h-7 text-yellow-400" />
               </div>
               <h3 className="text-xl font-bold mb-2">Hybrid Mode</h3>
-              <p className="text-indigo-900 mb-4">
-                Online + Weekend offline at Sector 62, Noida.
-              </p>
+              <p className="text-indigo-900 mb-4">Online + Weekend offline at Sector 62, Noida.</p>
               <ul className="space-y-2 text-sm mb-6">
                 {hybridBenefits.slice(0, 4).map((benefit, index) => (
                   <li key={index} className="flex items-center gap-2">

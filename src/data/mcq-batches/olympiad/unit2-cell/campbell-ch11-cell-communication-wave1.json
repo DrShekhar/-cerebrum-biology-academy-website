@@ -29,12 +29,7 @@
     {
       "type": "MCQ",
       "question": "In RTK signaling, autophosphorylation of the receptor creates docking sites for downstream effectors. Which structural domain on Grb2 recognizes phosphotyrosine residues on the activated RTK?",
-      "options": [
-        "Pleckstrin homology (PH) domain",
-        "SH3 domain",
-        "SH2 domain",
-        "PDZ domain"
-      ],
+      "options": ["Pleckstrin homology (PH) domain", "SH3 domain", "SH2 domain", "PDZ domain"],
       "correctAnswer": "C",
       "explanation": "SH2 (Src Homology 2) domains specifically bind to phosphotyrosine residues on activated RTKs. Grb2 is an adaptor protein that contains one SH2 domain (which binds phosphotyrosine on the RTK) and two SH3 domains (which bind proline-rich motifs on Sos, a Ras-GEF). The SH3 domains on Grb2 do not bind phosphotyrosine. PH domains bind phosphoinositides in the membrane, not phosphotyrosine. PDZ domains recognize C-terminal peptide sequences and are involved in scaffolding at synapses and tight junctions.",
       "topic": "Cell Structure and Function",

@@ -69,9 +69,7 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
     color: string
     trend?: number
   }) => (
-    <div
-      className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow animate-fadeInUp"
-    >
+    <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow animate-fadeInUp">
       <div className="flex items-center justify-between mb-4">
         <div className={`w-12 h-12 ${color} rounded-xl flex items-center justify-center`}>
           <Icon className="w-6 h-6 text-white" />
@@ -323,10 +321,7 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
                 </thead>
                 <tbody>
                   {data.batchAnalysis.map((batch, index) => (
-                    <tr
-                      key={index}
-                      className="border-b border-gray-100 hover:bg-gray-50"
-                    >
+                    <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
                       <td className="py-4 px-6">
                         <div className="font-medium text-gray-900">{batch.batchType}</div>
                       </td>

@@ -36,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 10 in Bangalore | Karnataka SSLC + CBSE + ICSE Parallel',
-    description: 'NEET Foundation Class 10 in Bangalore at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Karnataka SSLC + NEET parallel. ₹35K-95K/year.',
+    description:
+      'NEET Foundation Class 10 in Bangalore at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Karnataka SSLC + NEET parallel. ₹35K-95K/year.',
   },
 }
 

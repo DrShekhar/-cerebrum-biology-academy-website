@@ -63,7 +63,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-jalandhar' },
+    alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-jalandhar' },
     description: 'Real-time sessions with Chandigarh-quality teaching. Doaba students thrive here.',
   },
   {
@@ -101,7 +101,7 @@ const successMetrics = [
 ]
 
 const jalandharSchools = [
-  'St. Joseph\'s Convent School',
+  "St. Joseph's Convent School",
   'DAV Public School Jalandhar',
   'Apeejay School Jalandhar',
   'CT Public School',
@@ -131,12 +131,12 @@ const faqs = [
   {
     question: 'Is there good NEET coaching available in Jalandhar city?',
     answer:
-      'While Jalandhar has some coaching centers, they lack AIIMS-level faculty and NEET specialization. Cerebrum Academy\'s online coaching brings expert teachers directly to Jalandhar students. We have 350+ students from Jalandhar with excellent results in NEET.',
+      "While Jalandhar has some coaching centers, they lack AIIMS-level faculty and NEET specialization. Cerebrum Academy's online coaching brings expert teachers directly to Jalandhar students. We have 350+ students from Jalandhar with excellent results in NEET.",
   },
   {
     question: 'What are NEET coaching fees for Jalandhar students?',
     answer:
-      'Cerebrum Academy\'s NEET coaching fees for Jalandhar students are Rs 45,000-85,000 per year. Compare this to Chandigarh coaching (Rs 1.5-2.5 lakhs) plus Rs 1.2 lakh hostel expenses. You get superior quality at fraction of the cost.',
+      "Cerebrum Academy's NEET coaching fees for Jalandhar students are Rs 45,000-85,000 per year. Compare this to Chandigarh coaching (Rs 1.5-2.5 lakhs) plus Rs 1.2 lakh hostel expenses. You get superior quality at fraction of the cost.",
   },
   {
     question: 'Is online coaching suitable for NRI families in Jalandhar?',
@@ -195,8 +195,7 @@ export default function NEETCoachingJalandhar() {
 
           <div className="mx-auto max-w-7xl">
             <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div
-               className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-purple-100 px-4 py-2 text-purple-800">
                   <MapPin className="h-4 w-4" />
                   <span className="text-sm font-medium">
@@ -248,9 +247,7 @@ export default function NEETCoachingJalandhar() {
                 </div>
               </div>
 
-              <div
-                className="relative animate-fadeInUp"
-              >
+              <div className="relative animate-fadeInUp">
                 <div className="rounded-2xl bg-white p-8 shadow-xl">
                   <h3 className="mb-6 text-center text-xl font-bold text-gray-900">
                     Jalandhar Students Success Metrics
@@ -277,9 +274,7 @@ export default function NEETCoachingJalandhar() {
         {/* Why Jalandhar Students Choose Online */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Jalandhar Families Are Choosing Online NEET Coaching
               </h2>
@@ -323,9 +318,7 @@ export default function NEETCoachingJalandhar() {
         {/* Jalandhar Areas We Serve */}
         <section className="bg-purple-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 NEET Coaching for Jalandhar & Doaba Region
               </h2>
@@ -368,9 +361,7 @@ export default function NEETCoachingJalandhar() {
         {/* Features */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Cerebrum is Best for Jalandhar Students
               </h2>
@@ -399,9 +390,7 @@ export default function NEETCoachingJalandhar() {
         {/* Schools Section */}
         <section className="bg-purple-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Trusted by Students from Top Jalandhar Schools
               </h2>
@@ -424,9 +413,7 @@ export default function NEETCoachingJalandhar() {
         {/* Medical Colleges */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Target Medical Colleges for Jalandhar Students
               </h2>
@@ -481,9 +468,7 @@ export default function NEETCoachingJalandhar() {
         {/* Cost Comparison */}
         <section className="bg-purple-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Cost Comparison: Chandigarh vs Online for Jalandhar Students
               </h2>
@@ -561,9 +546,7 @@ export default function NEETCoachingJalandhar() {
         {/* FAQs */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 FAQs: NEET Coaching in Jalandhar
               </h2>
@@ -593,8 +576,7 @@ export default function NEETCoachingJalandhar() {
         {/* Final CTA */}
         <section className="bg-gradient-to-r from-purple-600 to-violet-600 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
                 Ready to Start Your NEET Journey from Jalandhar?
               </h2>

@@ -67,10 +67,30 @@ const SEQUENCE_TEMPLATES = [
     description: 'Auto-follow-up after demo class with fee info and success stories',
     triggerStage: 'DEMO_COMPLETED',
     steps: [
-      { delay: '0d 2h', message: '🎓 Hi {{name}}, thank you for attending our Biology demo class! We hope you found it insightful.\n\nHere\'s what our toppers say about our focused biology coaching: [Success Story Link]\n\nWould you like to discuss the next steps?', channel: 'WHATSAPP' },
-      { delay: '2d 0h', message: '📋 Hi {{name}}, here are our batch options for NEET {{neet_year}}:\n\n🔹 Regular Batch: Mon-Sat, 4-7 PM\n🔹 Weekend Batch: Sat-Sun, 10 AM-2 PM\n🔹 Dropper Batch: Mon-Sat, 10 AM-5 PM\n\nWhich schedule works best for you?', channel: 'WHATSAPP' },
-      { delay: '4d 0h', message: '💰 Hi {{name}}, sharing our fee structure for NEET {{neet_year}} session:\n\n📄 [Fee Structure PDF]\n\n✅ Early-bird discount available till {{deadline}}\n✅ EMI options: 3/6/9 month plans\n✅ Scholarship test available for additional discount\n\nShall I help you with the fee details?', channel: 'WHATSAPP' },
-      { delay: '6d 0h', message: '🏆 Hi {{name}}, just a quick reminder — our scholarship admission test is coming up!\n\nScore 80%+ → 30% tuition waiver\nScore 90%+ → 50% tuition waiver\n\n📝 Book your slot: [Scholarship Test Link]\n\nLimited seats available. Let me know if you have any questions!', channel: 'WHATSAPP' },
+      {
+        delay: '0d 2h',
+        message:
+          "🎓 Hi {{name}}, thank you for attending our Biology demo class! We hope you found it insightful.\n\nHere's what our toppers say about our focused biology coaching: [Success Story Link]\n\nWould you like to discuss the next steps?",
+        channel: 'WHATSAPP',
+      },
+      {
+        delay: '2d 0h',
+        message:
+          '📋 Hi {{name}}, here are our batch options for NEET {{neet_year}}:\n\n🔹 Regular Batch: Mon-Sat, 4-7 PM\n🔹 Weekend Batch: Sat-Sun, 10 AM-2 PM\n🔹 Dropper Batch: Mon-Sat, 10 AM-5 PM\n\nWhich schedule works best for you?',
+        channel: 'WHATSAPP',
+      },
+      {
+        delay: '4d 0h',
+        message:
+          '💰 Hi {{name}}, sharing our fee structure for NEET {{neet_year}} session:\n\n📄 [Fee Structure PDF]\n\n✅ Early-bird discount available till {{deadline}}\n✅ EMI options: 3/6/9 month plans\n✅ Scholarship test available for additional discount\n\nShall I help you with the fee details?',
+        channel: 'WHATSAPP',
+      },
+      {
+        delay: '6d 0h',
+        message:
+          '🏆 Hi {{name}}, just a quick reminder — our scholarship admission test is coming up!\n\nScore 80%+ → 30% tuition waiver\nScore 90%+ → 50% tuition waiver\n\n📝 Book your slot: [Scholarship Test Link]\n\nLimited seats available. Let me know if you have any questions!',
+        channel: 'WHATSAPP',
+      },
     ],
   },
   {
@@ -78,9 +98,24 @@ const SEQUENCE_TEMPLATES = [
     description: 'Welcome sequence for new inquiries with demo class invitation',
     triggerStage: 'NEW_LEAD',
     steps: [
-      { delay: '0d 1h', message: '👋 Welcome to Cerebrum Biology Academy, {{name}}!\n\nWe specialize exclusively in Biology for NEET — giving your child the edge where it matters most (Biology = 360/720 marks in NEET).\n\n🧬 Expert faculty | 📊 Proven results | 🎯 Focused approach\n\nWould you like to attend a free demo class?', channel: 'WHATSAPP' },
-      { delay: '1d 0h', message: '📅 Hi {{name}}, we have demo classes available this week!\n\nFree demo includes:\n✅ 45-min concept class\n✅ Faculty interaction\n✅ NEET preparation roadmap\n✅ Doubt clearing session\n\nReply with your preferred day and I\'ll book a slot for you.', channel: 'WHATSAPP' },
-      { delay: '3d 0h', message: '📊 Hi {{name}}, did you know?\n\n🎯 Biology alone decides NEET rank for 70% of students\n🧬 Our students scored 340+ avg in Biology section\n📈 92% improvement in mock test scores within 3 months\n\nDon\'t let Biology be the weak link. Book your free demo today!', channel: 'WHATSAPP' },
+      {
+        delay: '0d 1h',
+        message:
+          '👋 Welcome to Cerebrum Biology Academy, {{name}}!\n\nWe specialize exclusively in Biology for NEET — giving your child the edge where it matters most (Biology = 360/720 marks in NEET).\n\n🧬 Expert faculty | 📊 Proven results | 🎯 Focused approach\n\nWould you like to attend a free demo class?',
+        channel: 'WHATSAPP',
+      },
+      {
+        delay: '1d 0h',
+        message:
+          "📅 Hi {{name}}, we have demo classes available this week!\n\nFree demo includes:\n✅ 45-min concept class\n✅ Faculty interaction\n✅ NEET preparation roadmap\n✅ Doubt clearing session\n\nReply with your preferred day and I'll book a slot for you.",
+        channel: 'WHATSAPP',
+      },
+      {
+        delay: '3d 0h',
+        message:
+          "📊 Hi {{name}}, did you know?\n\n🎯 Biology alone decides NEET rank for 70% of students\n🧬 Our students scored 340+ avg in Biology section\n📈 92% improvement in mock test scores within 3 months\n\nDon't let Biology be the weak link. Book your free demo today!",
+        channel: 'WHATSAPP',
+      },
     ],
   },
   {
@@ -88,9 +123,24 @@ const SEQUENCE_TEMPLATES = [
     description: 'Gentle reminders after fee structure is shared',
     triggerStage: 'OFFER_SENT',
     steps: [
-      { delay: '2d 0h', message: '👋 Hi {{name}}, hope you had a chance to review our fee structure.\n\nQuick highlights:\n💳 Flexible EMI plans available\n🎁 Early-bird discount active\n🏆 Scholarship test for additional savings\n\nAny questions? Happy to help!', channel: 'WHATSAPP' },
-      { delay: '5d 0h', message: '⏰ Hi {{name}}, just a friendly reminder — the early-bird discount expires on {{deadline}}.\n\nThat\'s a saving of ₹{{discount_amount}} on the total fee.\n\nWould you like me to set up a flexible payment plan? We have 3/6/9 month EMI options.', channel: 'WHATSAPP' },
-      { delay: '8d 0h', message: '🔔 Hi {{name}}, only {{seats_remaining}} seats left in the {{batch_name}} batch!\n\nWe\'d hate for {{student_name}} to miss out. If fee is a concern, let\'s discuss:\n\n✅ Scholarship test for tuition waiver\n✅ Custom installment plans\n✅ Sibling discounts\n\nCall me anytime — happy to make it work for you.', channel: 'WHATSAPP' },
+      {
+        delay: '2d 0h',
+        message:
+          '👋 Hi {{name}}, hope you had a chance to review our fee structure.\n\nQuick highlights:\n💳 Flexible EMI plans available\n🎁 Early-bird discount active\n🏆 Scholarship test for additional savings\n\nAny questions? Happy to help!',
+        channel: 'WHATSAPP',
+      },
+      {
+        delay: '5d 0h',
+        message:
+          "⏰ Hi {{name}}, just a friendly reminder — the early-bird discount expires on {{deadline}}.\n\nThat's a saving of ₹{{discount_amount}} on the total fee.\n\nWould you like me to set up a flexible payment plan? We have 3/6/9 month EMI options.",
+        channel: 'WHATSAPP',
+      },
+      {
+        delay: '8d 0h',
+        message:
+          "🔔 Hi {{name}}, only {{seats_remaining}} seats left in the {{batch_name}} batch!\n\nWe'd hate for {{student_name}} to miss out. If fee is a concern, let's discuss:\n\n✅ Scholarship test for tuition waiver\n✅ Custom installment plans\n✅ Sibling discounts\n\nCall me anytime — happy to make it work for you.",
+        channel: 'WHATSAPP',
+      },
     ],
   },
   {
@@ -98,8 +148,18 @@ const SEQUENCE_TEMPLATES = [
     description: 'Win back leads who went cold or chose competitors',
     triggerStage: 'LOST',
     steps: [
-      { delay: '7d 0h', message: '👋 Hi {{name}}, we noticed you were exploring NEET coaching options. No pressure at all!\n\nJust wanted to share a quick update — we\'ve added new batch timings that might work better for your schedule.\n\nWould you be open to a quick chat?', channel: 'WHATSAPP' },
-      { delay: '21d 0h', message: '🏆 Hi {{name}}, our latest NEET results are in!\n\n🎯 {{result_highlight}}\n\nIf you\'re still considering NEET coaching, we\'d love to show you what makes our biology-focused approach different.\n\nFree demo classes available this week!', channel: 'WHATSAPP' },
+      {
+        delay: '7d 0h',
+        message:
+          "👋 Hi {{name}}, we noticed you were exploring NEET coaching options. No pressure at all!\n\nJust wanted to share a quick update — we've added new batch timings that might work better for your schedule.\n\nWould you be open to a quick chat?",
+        channel: 'WHATSAPP',
+      },
+      {
+        delay: '21d 0h',
+        message:
+          "🏆 Hi {{name}}, our latest NEET results are in!\n\n🎯 {{result_highlight}}\n\nIf you're still considering NEET coaching, we'd love to show you what makes our biology-focused approach different.\n\nFree demo classes available this week!",
+        channel: 'WHATSAPP',
+      },
     ],
   },
 ]
@@ -135,9 +195,7 @@ function StepEditor({
   return (
     <div className="relative">
       {/* Connector line */}
-      {index > 0 && (
-        <div className="absolute left-8 -top-6 w-0.5 h-6 bg-indigo-200" />
-      )}
+      {index > 0 && <div className="absolute left-8 -top-6 w-0.5 h-6 bg-indigo-200" />}
 
       <div className="flex gap-4">
         {/* Step number circle */}
@@ -209,7 +267,8 @@ function StepEditor({
             <div className="flex items-center justify-between mb-1.5">
               <label className="text-xs font-medium text-gray-500">MESSAGE CONTENT</label>
               <span className="text-[10px] text-gray-400">
-                Variables: {'{{name}}'} {'{{course}}'} {'{{neet_year}}'} {'{{deadline}}'} {'{{student_name}}'}
+                Variables: {'{{name}}'} {'{{course}}'} {'{{neet_year}}'} {'{{deadline}}'}{' '}
+                {'{{student_name}}'}
               </span>
             </div>
             <textarea
@@ -245,10 +304,20 @@ function SequenceBuilderModal({
   const [name, setName] = useState(editSequence?.name || '')
   const [description, setDescription] = useState(editSequence?.description || '')
   const [triggerStage, setTriggerStage] = useState(editSequence?.triggerStage || 'DEMO_COMPLETED')
-  const [stopOnStageChange, setStopOnStageChange] = useState(editSequence?.stopOnStageChange ?? true)
+  const [stopOnStageChange, setStopOnStageChange] = useState(
+    editSequence?.stopOnStageChange ?? true
+  )
   const [steps, setSteps] = useState<SequenceStep[]>(
     editSequence?.steps || [
-      { id: `step_1`, stepNumber: 1, delayDays: 0, delayHours: 2, messageTemplate: '', channel: 'WHATSAPP', stopOnReply: true },
+      {
+        id: `step_1`,
+        stepNumber: 1,
+        delayDays: 0,
+        delayHours: 2,
+        messageTemplate: '',
+        channel: 'WHATSAPP',
+        stopOnReply: true,
+      },
     ]
   )
   const [saving, setSaving] = useState(false)
@@ -303,8 +372,14 @@ function SequenceBuilderModal({
   }
 
   async function handleSave() {
-    if (!name.trim()) { showToast.error('Please enter a sequence name'); return }
-    if (steps.some((s) => !s.messageTemplate.trim())) { showToast.error('All steps must have a message'); return }
+    if (!name.trim()) {
+      showToast.error('Please enter a sequence name')
+      return
+    }
+    if (steps.some((s) => !s.messageTemplate.trim())) {
+      showToast.error('All steps must have a message')
+      return
+    }
 
     setSaving(true)
     try {
@@ -335,7 +410,9 @@ function SequenceBuilderModal({
             <h2 className="text-xl font-bold text-gray-900">
               {editSequence ? 'Edit Sequence' : 'Create Drip Sequence'}
             </h2>
-            <p className="text-sm text-gray-500 mt-0.5">Build an automated WhatsApp nurture workflow</p>
+            <p className="text-sm text-gray-500 mt-0.5">
+              Build an automated WhatsApp nurture workflow
+            </p>
           </div>
           <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-lg">
             <X className="w-5 h-5 text-gray-400" />
@@ -357,7 +434,9 @@ function SequenceBuilderModal({
                     <p className="text-sm font-semibold text-gray-900">{t.name}</p>
                     <p className="text-xs text-gray-500 mt-1">{t.description}</p>
                     <div className="flex items-center gap-2 mt-2">
-                      <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${stageColors[t.triggerStage]}`}>
+                      <span
+                        className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${stageColors[t.triggerStage]}`}
+                      >
                         {t.triggerStage.replace(/_/g, ' ')}
                       </span>
                       <span className="text-[10px] text-gray-400">{t.steps.length} steps</span>
@@ -366,7 +445,10 @@ function SequenceBuilderModal({
                 ))}
               </div>
               <div className="text-center mt-3">
-                <button onClick={() => setShowTemplates(false)} className="text-sm text-indigo-600 hover:underline">
+                <button
+                  onClick={() => setShowTemplates(false)}
+                  className="text-sm text-indigo-600 hover:underline"
+                >
                   Or start from scratch →
                 </button>
               </div>
@@ -379,7 +461,9 @@ function SequenceBuilderModal({
               <div className="bg-white rounded-xl border border-gray-200 p-5 mb-6">
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1.5">Sequence Name</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                      Sequence Name
+                    </label>
                     <input
                       type="text"
                       value={name}
@@ -389,7 +473,9 @@ function SequenceBuilderModal({
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1.5">Trigger: When lead enters stage</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                      Trigger: When lead enters stage
+                    </label>
                     <select
                       value={triggerStage}
                       onChange={(e) => setTriggerStage(e.target.value)}
@@ -404,7 +490,9 @@ function SequenceBuilderModal({
                   </div>
                 </div>
                 <div className="mb-4">
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">Description</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                    Description
+                  </label>
                   <input
                     type="text"
                     value={description}
@@ -480,8 +568,8 @@ function SequenceBuilderModal({
         {!showTemplates && (
           <div className="bg-white px-6 py-4 border-t border-gray-200 flex justify-between items-center">
             <div className="text-sm text-gray-500">
-              {steps.length} step{steps.length > 1 ? 's' : ''} •
-              Total duration: {steps.reduce((sum, s) => sum + s.delayDays, 0)} days
+              {steps.length} step{steps.length > 1 ? 's' : ''} • Total duration:{' '}
+              {steps.reduce((sum, s) => sum + s.delayDays, 0)} days
             </div>
             <div className="flex gap-3">
               <button onClick={onClose} className="px-4 py-2 text-gray-600 text-sm">
@@ -492,7 +580,11 @@ function SequenceBuilderModal({
                 disabled={saving}
                 className="flex items-center gap-2 px-6 py-2.5 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-700 disabled:opacity-50 transition-colors"
               >
-                {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Zap className="w-4 h-4" />}
+                {saving ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : (
+                  <Zap className="w-4 h-4" />
+                )}
                 {editSequence ? 'Save Changes' : 'Create Sequence'}
               </button>
             </div>
@@ -521,7 +613,9 @@ function SequenceCard({
   const [expanded, setExpanded] = useState(false)
 
   return (
-    <div className={`bg-white rounded-xl border-2 transition-all ${sequence.isActive ? 'border-green-200' : 'border-gray-200'}`}>
+    <div
+      className={`bg-white rounded-xl border-2 transition-all ${sequence.isActive ? 'border-green-200' : 'border-gray-200'}`}
+    >
       <div className="p-5">
         {/* Header */}
         <div className="flex items-start justify-between mb-3">
@@ -533,18 +627,36 @@ function SequenceCard({
                   <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" /> ACTIVE
                 </span>
               ) : (
-                <span className="px-2 py-0.5 bg-gray-100 text-gray-500 text-[10px] font-semibold rounded-full">PAUSED</span>
+                <span className="px-2 py-0.5 bg-gray-100 text-gray-500 text-[10px] font-semibold rounded-full">
+                  PAUSED
+                </span>
               )}
             </div>
             <p className="text-sm text-gray-500 truncate">{sequence.description}</p>
           </div>
           <div className="flex items-center gap-1 ml-4">
-            <button onClick={onToggle} className={`p-2 rounded-lg transition-colors ${sequence.isActive ? 'hover:bg-red-50 text-amber-500' : 'hover:bg-green-50 text-green-600'}`} title={sequence.isActive ? 'Pause' : 'Activate'}>
+            <button
+              onClick={onToggle}
+              className={`p-2 rounded-lg transition-colors ${sequence.isActive ? 'hover:bg-red-50 text-amber-500' : 'hover:bg-green-50 text-green-600'}`}
+              title={sequence.isActive ? 'Pause' : 'Activate'}
+            >
               {sequence.isActive ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
             </button>
-            <button onClick={onEdit} className="p-2 hover:bg-gray-100 text-gray-400 rounded-lg"><Edit3 className="w-4 h-4" /></button>
-            <button onClick={onDuplicate} className="p-2 hover:bg-gray-100 text-gray-400 rounded-lg"><Copy className="w-4 h-4" /></button>
-            <button onClick={onDelete} className="p-2 hover:bg-red-50 text-gray-400 hover:text-red-500 rounded-lg"><Trash2 className="w-4 h-4" /></button>
+            <button onClick={onEdit} className="p-2 hover:bg-gray-100 text-gray-400 rounded-lg">
+              <Edit3 className="w-4 h-4" />
+            </button>
+            <button
+              onClick={onDuplicate}
+              className="p-2 hover:bg-gray-100 text-gray-400 rounded-lg"
+            >
+              <Copy className="w-4 h-4" />
+            </button>
+            <button
+              onClick={onDelete}
+              className="p-2 hover:bg-red-50 text-gray-400 hover:text-red-500 rounded-lg"
+            >
+              <Trash2 className="w-4 h-4" />
+            </button>
           </div>
         </div>
 
@@ -552,12 +664,17 @@ function SequenceCard({
         <div className="flex items-center gap-4 mb-4">
           <div className="flex items-center gap-1.5">
             <Zap className="w-3.5 h-3.5 text-amber-500" />
-            <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${stageColors[sequence.triggerStage]}`}>
+            <span
+              className={`text-xs px-2 py-0.5 rounded-full font-medium ${stageColors[sequence.triggerStage]}`}
+            >
               {sequence.triggerStage.replace(/_/g, ' ')}
             </span>
           </div>
           <span className="text-xs text-gray-400">→</span>
-          <span className="text-xs text-gray-500">{sequence.steps.length} steps over {sequence.steps.reduce((sum, s) => sum + s.delayDays, 0)} days</span>
+          <span className="text-xs text-gray-500">
+            {sequence.steps.length} steps over{' '}
+            {sequence.steps.reduce((sum, s) => sum + s.delayDays, 0)} days
+          </span>
         </div>
 
         {/* Stats Grid */}
@@ -575,7 +692,9 @@ function SequenceCard({
             <p className="text-[10px] text-purple-500">Completed</p>
           </div>
           <div className="bg-amber-50 rounded-lg p-2.5 text-center">
-            <p className="text-lg font-bold text-amber-700">{(sequence.stats?.replyRate || 0).toFixed(0)}%</p>
+            <p className="text-lg font-bold text-amber-700">
+              {(sequence.stats?.replyRate || 0).toFixed(0)}%
+            </p>
             <p className="text-[10px] text-amber-500">Reply Rate</p>
           </div>
         </div>
@@ -585,7 +704,11 @@ function SequenceCard({
           onClick={() => setExpanded(!expanded)}
           className="flex items-center gap-1 text-xs text-indigo-600 hover:text-indigo-800 mt-3 font-medium"
         >
-          {expanded ? <ChevronDown className="w-3.5 h-3.5" /> : <ChevronRight className="w-3.5 h-3.5" />}
+          {expanded ? (
+            <ChevronDown className="w-3.5 h-3.5" />
+          ) : (
+            <ChevronRight className="w-3.5 h-3.5" />
+          )}
           {expanded ? 'Hide' : 'View'} steps
         </button>
 
@@ -664,7 +787,9 @@ export default function DripSequencesPage() {
         body: JSON.stringify({ id, isActive: !currentStatus }),
       })
       if (res.ok) {
-        setSequences((prev) => prev.map((s) => (s.id === id ? { ...s, isActive: !currentStatus } : s)))
+        setSequences((prev) =>
+          prev.map((s) => (s.id === id ? { ...s, isActive: !currentStatus } : s))
+        )
         showToast.success(currentStatus ? 'Sequence paused' : 'Sequence activated!')
       }
     } catch {
@@ -675,7 +800,10 @@ export default function DripSequencesPage() {
   async function handleDelete(id: string) {
     if (!confirm('Delete this sequence? Active nurturing will stop for all enrolled leads.')) return
     try {
-      await fetch(`/api/counselor/drip-sequences?id=${id}`, { method: 'DELETE', credentials: 'include' })
+      await fetch(`/api/counselor/drip-sequences?id=${id}`, {
+        method: 'DELETE',
+        credentials: 'include',
+      })
       setSequences((prev) => prev.filter((s) => s.id !== id))
       showToast.success('Sequence deleted')
     } catch {
@@ -686,9 +814,10 @@ export default function DripSequencesPage() {
   // Stats summary
   const totalActive = sequences.filter((s) => s.isActive).length
   const totalLeadsInSequences = sequences.reduce((sum, s) => sum + (s.stats?.active || 0), 0)
-  const avgReplyRate = sequences.length > 0
-    ? sequences.reduce((sum, s) => sum + (s.stats?.replyRate || 0), 0) / sequences.length
-    : 0
+  const avgReplyRate =
+    sequences.length > 0
+      ? sequences.reduce((sum, s) => sum + (s.stats?.replyRate || 0), 0) / sequences.length
+      : 0
 
   if (loading) {
     return (
@@ -704,10 +833,15 @@ export default function DripSequencesPage() {
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Drip Sequences</h1>
-          <p className="text-gray-600 mt-1">Automated WhatsApp nurture workflows that run while you sleep</p>
+          <p className="text-gray-600 mt-1">
+            Automated WhatsApp nurture workflows that run while you sleep
+          </p>
         </div>
         <button
-          onClick={() => { setEditingSequence(null); setShowBuilder(true) }}
+          onClick={() => {
+            setEditingSequence(null)
+            setShowBuilder(true)
+          }}
           className="flex items-center gap-2 px-5 py-2.5 bg-indigo-600 text-white rounded-xl text-sm font-medium hover:bg-indigo-700 transition-colors shadow-lg shadow-indigo-200"
         >
           <Plus className="w-4 h-4" /> New Sequence
@@ -747,10 +881,14 @@ export default function DripSequencesPage() {
           </div>
           <h3 className="text-xl font-bold text-gray-900 mb-2">No Sequences Yet</h3>
           <p className="text-gray-500 mb-6 max-w-md mx-auto">
-            Create automated WhatsApp nurture sequences that follow up with leads automatically based on their pipeline stage.
+            Create automated WhatsApp nurture sequences that follow up with leads automatically
+            based on their pipeline stage.
           </p>
           <button
-            onClick={() => { setEditingSequence(null); setShowBuilder(true) }}
+            onClick={() => {
+              setEditingSequence(null)
+              setShowBuilder(true)
+            }}
             className="px-6 py-3 bg-indigo-600 text-white rounded-xl font-medium hover:bg-indigo-700 transition-colors"
           >
             Create Your First Sequence
@@ -763,7 +901,10 @@ export default function DripSequencesPage() {
               key={seq.id}
               sequence={seq}
               onToggle={() => handleToggle(seq.id, seq.isActive)}
-              onEdit={() => { setEditingSequence(seq); setShowBuilder(true) }}
+              onEdit={() => {
+                setEditingSequence(seq)
+                setShowBuilder(true)
+              }}
               onDelete={() => handleDelete(seq.id)}
               onDuplicate={() => {
                 const clone = { ...seq, id: undefined, name: `${seq.name} (Copy)`, isActive: false }
@@ -777,7 +918,10 @@ export default function DripSequencesPage() {
       {/* Builder Modal */}
       <SequenceBuilderModal
         isOpen={showBuilder}
-        onClose={() => { setShowBuilder(false); setEditingSequence(null) }}
+        onClose={() => {
+          setShowBuilder(false)
+          setEditingSequence(null)
+        }}
         onSave={handleSave}
         editSequence={editingSequence}
       />

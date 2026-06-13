@@ -160,7 +160,11 @@ export default function NEETCrashCourseNoidaContent({ faqs }: { faqs: FAQ[] }) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20crash%20course%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20crash%20course%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -515,10 +519,7 @@ export default function NEETCrashCourseNoidaContent({ faqs }: { faqs: FAQ[] }) {
               <h3 className="font-semibold text-teal-600">Affordable Coaching</h3>
               <p className="text-sm text-gray-600">Budget-friendly options</p>
             </Link>
-            <Link
-              href="/neet-coaching-noida"
-              className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
-            >
+            <Link href="/neet-coaching-noida" className="bg-gray-50 p-4 rounded-xl hover:shadow-md">
               <h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3>
               <p className="text-sm text-gray-600">All programs</p>
             </Link>
@@ -534,7 +535,11 @@ export default function NEETCrashCourseNoidaContent({ faqs }: { faqs: FAQ[] }) {
             Join our 45-day crash course in Noida and improve by 75+ marks
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20crash%20course%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20crash%20course%20in%20Noida.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 size="xl"

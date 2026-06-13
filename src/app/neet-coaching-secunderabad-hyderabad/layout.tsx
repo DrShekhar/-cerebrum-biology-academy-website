@@ -18,7 +18,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best NEET Coaching in Secunderabad Hyderabad | Biology Classes',
-    description: 'Best NEET biology coaching in Secunderabad Hyderabad. 98% success rate. AIIMS faculty.',
+    description:
+      'Best NEET biology coaching in Secunderabad Hyderabad. 98% success rate. AIIMS faculty.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-secunderabad-hyderabad',

@@ -22,7 +22,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biology Topics for NEET | Complete Study Guide',
-    description: 'Comprehensive biology topics for NEET preparation. Master Zoology, Botany, Human Physiology, Genetics, Ecology, Cell Biology, and more with expert guidance from AIIMS faculty.',
+    description:
+      'Comprehensive biology topics for NEET preparation. Master Zoology, Botany, Human Physiology, Genetics, Ecology, Cell Biology, and more with expert guidance from AIIMS faculty.',
   },
 }
 

@@ -190,14 +190,34 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
         },
         {
           heading: 'High-Yield Genetics Topics and Common Pitfalls',
-          body: 'Within the broad genetics chapter, certain topics appear disproportionately in NEET. Dihybrid crosses and their modified ratios (epistasis producing 9:3:4, 12:3:1, or 9:7 ratios) test the understanding of gene interaction. Blood group inheritance involving multiple alleles (three alleles IA, IB, and i producing six genotypes and four phenotypes) and codominance is almost guaranteed to appear. The chromosomal theory of inheritance linking Mendel\'s factors to chromosomes, demonstrated through Morgan\'s Drosophila experiments on sex-linked inheritance, bridges classical and modern genetics. Common pitfalls include confusing incomplete dominance (blending phenotype, 1:2:1 ratio) with codominance (both phenotypes expressed, 1:2:1 ratio), and mixing up cis and trans configurations in gene linkage. Our notes address these confusion points explicitly with comparison tables and solved examples that highlight the differences.',
+          body: "Within the broad genetics chapter, certain topics appear disproportionately in NEET. Dihybrid crosses and their modified ratios (epistasis producing 9:3:4, 12:3:1, or 9:7 ratios) test the understanding of gene interaction. Blood group inheritance involving multiple alleles (three alleles IA, IB, and i producing six genotypes and four phenotypes) and codominance is almost guaranteed to appear. The chromosomal theory of inheritance linking Mendel's factors to chromosomes, demonstrated through Morgan's Drosophila experiments on sex-linked inheritance, bridges classical and modern genetics. Common pitfalls include confusing incomplete dominance (blending phenotype, 1:2:1 ratio) with codominance (both phenotypes expressed, 1:2:1 ratio), and mixing up cis and trans configurations in gene linkage. Our notes address these confusion points explicitly with comparison tables and solved examples that highlight the differences.",
         },
       ],
       comparisonTable: [
-        { 'Concept': 'Incomplete Dominance', 'Ratio': '1:2:1', 'Phenotype': 'Intermediate blend', 'Example': 'Snapdragon flower colour' },
-        { 'Concept': 'Codominance', 'Ratio': '1:2:1', 'Phenotype': 'Both expressed', 'Example': 'ABO blood groups (IA IB)' },
-        { 'Concept': 'Complete Dominance', 'Ratio': '3:1', 'Phenotype': 'Dominant masks recessive', 'Example': 'Mendel\'s pea traits' },
-        { 'Concept': 'Epistasis', 'Ratio': 'Modified 9:3:3:1', 'Phenotype': 'One gene masks another', 'Example': 'Coat colour in mice' },
+        {
+          Concept: 'Incomplete Dominance',
+          Ratio: '1:2:1',
+          Phenotype: 'Intermediate blend',
+          Example: 'Snapdragon flower colour',
+        },
+        {
+          Concept: 'Codominance',
+          Ratio: '1:2:1',
+          Phenotype: 'Both expressed',
+          Example: 'ABO blood groups (IA IB)',
+        },
+        {
+          Concept: 'Complete Dominance',
+          Ratio: '3:1',
+          Phenotype: 'Dominant masks recessive',
+          Example: "Mendel's pea traits",
+        },
+        {
+          Concept: 'Epistasis',
+          Ratio: 'Modified 9:3:3:1',
+          Phenotype: 'One gene masks another',
+          Example: 'Coat colour in mice',
+        },
       ],
     },
     schema: {
@@ -361,17 +381,29 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
       paragraphs: [
         {
           heading: 'System-by-System Approach to Human Physiology Notes',
-          body: 'Human Physiology comprises six chapters covering the major organ systems, and effective notes must organise each system around three pillars: anatomy (structure), physiology (function), and regulation (hormonal and neural control). For the circulatory system, notes should cover heart anatomy with four chambers, the conduction system (SA node, AV node, Bundle of His, Purkinje fibres), the cardiac cycle timing, and ECG interpretation. For the excretory system, the nephron is the functional unit, and notes should trace the journey of filtrate from Bowman\'s capsule through the PCT, loop of Henle (countercurrent mechanism), DCT, and collecting duct, noting what is reabsorbed and secreted at each segment. The key to effective physiology notes is connecting structure to function: the length of the loop of Henle determines urine concentrating ability, the thin walls of alveoli enable gas exchange, and the villi of the small intestine increase absorption surface area.',
+          body: "Human Physiology comprises six chapters covering the major organ systems, and effective notes must organise each system around three pillars: anatomy (structure), physiology (function), and regulation (hormonal and neural control). For the circulatory system, notes should cover heart anatomy with four chambers, the conduction system (SA node, AV node, Bundle of His, Purkinje fibres), the cardiac cycle timing, and ECG interpretation. For the excretory system, the nephron is the functional unit, and notes should trace the journey of filtrate from Bowman's capsule through the PCT, loop of Henle (countercurrent mechanism), DCT, and collecting duct, noting what is reabsorbed and secreted at each segment. The key to effective physiology notes is connecting structure to function: the length of the loop of Henle determines urine concentrating ability, the thin walls of alveoli enable gas exchange, and the villi of the small intestine increase absorption surface area.",
         },
         {
           heading: 'Hormones and Chemical Coordination: The Connecting Thread',
-          body: 'Chemical Coordination and Integration ties all organ systems together through hormonal regulation, making it both a standalone chapter and a key to understanding the other five physiology chapters. Notes should organise hormones by gland of origin: hypothalamus (releasing and inhibiting hormones), anterior pituitary (GH, TSH, ACTH, FSH, LH, Prolactin), posterior pituitary (ADH, Oxytocin), thyroid (T3, T4, Calcitonin), parathyroid (PTH), adrenal cortex (cortisol, aldosterone), adrenal medulla (adrenaline, noradrenaline), pancreas (insulin, glucagon), and gonads (testosterone, oestrogen, progesterone). For each hormone, note the target organ, specific action, and the disorder caused by hyper- or hypo-secretion. NEET frequently tests hormone-disorder matching: gigantism from excess GH in childhood, acromegaly from excess GH in adults, diabetes mellitus from insulin deficiency, and Addison\'s disease from adrenal cortex insufficiency.',
+          body: "Chemical Coordination and Integration ties all organ systems together through hormonal regulation, making it both a standalone chapter and a key to understanding the other five physiology chapters. Notes should organise hormones by gland of origin: hypothalamus (releasing and inhibiting hormones), anterior pituitary (GH, TSH, ACTH, FSH, LH, Prolactin), posterior pituitary (ADH, Oxytocin), thyroid (T3, T4, Calcitonin), parathyroid (PTH), adrenal cortex (cortisol, aldosterone), adrenal medulla (adrenaline, noradrenaline), pancreas (insulin, glucagon), and gonads (testosterone, oestrogen, progesterone). For each hormone, note the target organ, specific action, and the disorder caused by hyper- or hypo-secretion. NEET frequently tests hormone-disorder matching: gigantism from excess GH in childhood, acromegaly from excess GH in adults, diabetes mellitus from insulin deficiency, and Addison's disease from adrenal cortex insufficiency.",
         },
       ],
       checklist: [
-        { item: 'Create a master hormone table organised by gland', explanation: 'Quick reference for the 20+ hormones tested in NEET with their targets and actions.' },
-        { item: 'Draw the nephron and trace filtrate processing at each segment', explanation: 'Nephron diagram questions with functional annotations are extremely common in NEET.' },
-        { item: 'Memorise ECG wave components and their physiological significance', explanation: 'P wave, QRS complex, and T wave identification appears in most NEET papers.' },
+        {
+          item: 'Create a master hormone table organised by gland',
+          explanation:
+            'Quick reference for the 20+ hormones tested in NEET with their targets and actions.',
+        },
+        {
+          item: 'Draw the nephron and trace filtrate processing at each segment',
+          explanation:
+            'Nephron diagram questions with functional annotations are extremely common in NEET.',
+        },
+        {
+          item: 'Memorise ECG wave components and their physiological significance',
+          explanation:
+            'P wave, QRS complex, and T wave identification appears in most NEET papers.',
+        },
       ],
     },
     schema: {
@@ -881,10 +913,25 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
         },
       ],
       checklist: [
-        { item: 'Draw the Z-scheme of photosynthesis with all electron carriers', explanation: 'The light reaction pathway diagram is one of the most frequently tested figures in NEET.' },
-        { item: 'Memorise the net ATP yield at each stage of respiration', explanation: 'Calculation questions asking total ATP from one glucose molecule appear regularly.' },
-        { item: 'Create a mineral deficiency symptom table with mobile vs immobile elements', explanation: 'The location of deficiency symptoms depends on element mobility in the plant.' },
-        { item: 'Know all five phytohormones with their discovery experiments', explanation: 'Hormone-function and discoverer matching questions are standard NEET fare.' },
+        {
+          item: 'Draw the Z-scheme of photosynthesis with all electron carriers',
+          explanation:
+            'The light reaction pathway diagram is one of the most frequently tested figures in NEET.',
+        },
+        {
+          item: 'Memorise the net ATP yield at each stage of respiration',
+          explanation:
+            'Calculation questions asking total ATP from one glucose molecule appear regularly.',
+        },
+        {
+          item: 'Create a mineral deficiency symptom table with mobile vs immobile elements',
+          explanation:
+            'The location of deficiency symptoms depends on element mobility in the plant.',
+        },
+        {
+          item: 'Know all five phytohormones with their discovery experiments',
+          explanation: 'Hormone-function and discoverer matching questions are standard NEET fare.',
+        },
       ],
     },
     schema: {
@@ -1056,11 +1103,31 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
         },
       ],
       comparisonTable: [
-        { 'Contraception Type': 'Natural Methods', 'Examples': 'Rhythm, withdrawal, lactational amenorrhoea', 'Effectiveness': 'Low-Moderate' },
-        { 'Contraception Type': 'Barrier Methods', 'Examples': 'Condom, diaphragm, cervical cap', 'Effectiveness': 'Moderate' },
-        { 'Contraception Type': 'Hormonal Methods', 'Examples': 'OC pills, Saheli, implants', 'Effectiveness': 'High' },
-        { 'Contraception Type': 'IUDs', 'Examples': 'Cu-T, Cu-7, LNG-20, Multiload 375', 'Effectiveness': 'High' },
-        { 'Contraception Type': 'Surgical Methods', 'Examples': 'Vasectomy, tubectomy', 'Effectiveness': 'Very High (permanent)' },
+        {
+          'Contraception Type': 'Natural Methods',
+          Examples: 'Rhythm, withdrawal, lactational amenorrhoea',
+          Effectiveness: 'Low-Moderate',
+        },
+        {
+          'Contraception Type': 'Barrier Methods',
+          Examples: 'Condom, diaphragm, cervical cap',
+          Effectiveness: 'Moderate',
+        },
+        {
+          'Contraception Type': 'Hormonal Methods',
+          Examples: 'OC pills, Saheli, implants',
+          Effectiveness: 'High',
+        },
+        {
+          'Contraception Type': 'IUDs',
+          Examples: 'Cu-T, Cu-7, LNG-20, Multiload 375',
+          Effectiveness: 'High',
+        },
+        {
+          'Contraception Type': 'Surgical Methods',
+          Examples: 'Vasectomy, tubectomy',
+          Effectiveness: 'Very High (permanent)',
+        },
       ],
     },
     schema: {
@@ -1397,13 +1464,25 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
         },
         {
           heading: 'Biotechnology Applications in Medicine and Agriculture',
-          body: 'Biotechnology applications tested in NEET span medicine, agriculture, and diagnostics. In medicine, genetically engineered insulin (humulin) produced in E. coli replaced animal-source insulin for diabetics. Gene therapy for ADA deficiency involves introducing a functional ADA gene into the patient\'s lymphocytes using a retroviral vector. Transgenic animals serve as models for disease research, and Rosie the cow was the first transgenic cow producing human alpha-lactalbumin-enriched milk. In agriculture, Bt crops express the cry gene from Bacillus thuringiensis producing insecticidal crystal proteins: Bt cotton uses cry1Ac and cry2Ab genes effective against cotton bollworm, while Bt brinjal uses cry1Ab. Golden Rice is engineered to produce beta-carotene addressing Vitamin A deficiency. RNA interference (RNAi) technology has been used to create nematode-resistant tobacco plants. Molecular diagnostic techniques including ELISA and DNA fingerprinting (using VNTR or variable number tandem repeats) are tested for their principles and applications in forensics and paternity testing.',
+          body: "Biotechnology applications tested in NEET span medicine, agriculture, and diagnostics. In medicine, genetically engineered insulin (humulin) produced in E. coli replaced animal-source insulin for diabetics. Gene therapy for ADA deficiency involves introducing a functional ADA gene into the patient's lymphocytes using a retroviral vector. Transgenic animals serve as models for disease research, and Rosie the cow was the first transgenic cow producing human alpha-lactalbumin-enriched milk. In agriculture, Bt crops express the cry gene from Bacillus thuringiensis producing insecticidal crystal proteins: Bt cotton uses cry1Ac and cry2Ab genes effective against cotton bollworm, while Bt brinjal uses cry1Ab. Golden Rice is engineered to produce beta-carotene addressing Vitamin A deficiency. RNA interference (RNAi) technology has been used to create nematode-resistant tobacco plants. Molecular diagnostic techniques including ELISA and DNA fingerprinting (using VNTR or variable number tandem repeats) are tested for their principles and applications in forensics and paternity testing.",
         },
       ],
       checklist: [
-        { item: 'Draw the steps of rDNA technology as a flowchart', explanation: 'Process-order questions testing the sequence of genetic engineering steps are common in NEET.' },
-        { item: 'Know specific restriction enzymes with their recognition sequences', explanation: 'EcoRI (GAATTC), HindIII (AAGCTT), and BamHI (GGATCC) are frequently tested examples.' },
-        { item: 'Memorise Bt crop genes with their target pests', explanation: 'Matching cry genes to specific Bt crops and target insects is a standard question format.' },
+        {
+          item: 'Draw the steps of rDNA technology as a flowchart',
+          explanation:
+            'Process-order questions testing the sequence of genetic engineering steps are common in NEET.',
+        },
+        {
+          item: 'Know specific restriction enzymes with their recognition sequences',
+          explanation:
+            'EcoRI (GAATTC), HindIII (AAGCTT), and BamHI (GGATCC) are frequently tested examples.',
+        },
+        {
+          item: 'Memorise Bt crop genes with their target pests',
+          explanation:
+            'Matching cry genes to specific Bt crops and target insects is a standard question format.',
+        },
       ],
     },
     schema: {
@@ -2247,9 +2326,21 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
         },
       ],
       checklist: [
-        { item: 'Draw and label root, stem, and leaf modifications with examples', explanation: 'Diagram-based identification of plant modifications is a high-frequency NEET question type.' },
-        { item: 'Memorise floral formulas for Fabaceae, Solanaceae, and Liliaceae', explanation: 'These three families are explicitly prescribed in NCERT and directly tested.' },
-        { item: 'Practice writing floral formulas from descriptions', explanation: 'Converting a verbal flower description into formula notation tests comprehension of floral characters.' },
+        {
+          item: 'Draw and label root, stem, and leaf modifications with examples',
+          explanation:
+            'Diagram-based identification of plant modifications is a high-frequency NEET question type.',
+        },
+        {
+          item: 'Memorise floral formulas for Fabaceae, Solanaceae, and Liliaceae',
+          explanation:
+            'These three families are explicitly prescribed in NCERT and directly tested.',
+        },
+        {
+          item: 'Practice writing floral formulas from descriptions',
+          explanation:
+            'Converting a verbal flower description into formula notation tests comprehension of floral characters.',
+        },
       ],
     },
     schema: {
@@ -2424,11 +2515,23 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
         },
       ],
       comparisonTable: [
-        { 'Feature': 'Vascular Bundle Arrangement', 'Dicot Stem': 'Ring arrangement (eustele)', 'Monocot Stem': 'Scattered (atactostele)' },
-        { 'Feature': 'Cambium', 'Dicot Stem': 'Present (open bundles)', 'Monocot Stem': 'Absent (closed bundles)' },
-        { 'Feature': 'Secondary Growth', 'Dicot Stem': 'Present', 'Monocot Stem': 'Absent' },
-        { 'Feature': 'Ground Tissue', 'Dicot Stem': 'Cortex + Pith distinct', 'Monocot Stem': 'Undifferentiated' },
-        { 'Feature': 'Xylem', 'Dicot Stem': 'Endarch', 'Monocot Stem': 'Endarch' },
+        {
+          Feature: 'Vascular Bundle Arrangement',
+          'Dicot Stem': 'Ring arrangement (eustele)',
+          'Monocot Stem': 'Scattered (atactostele)',
+        },
+        {
+          Feature: 'Cambium',
+          'Dicot Stem': 'Present (open bundles)',
+          'Monocot Stem': 'Absent (closed bundles)',
+        },
+        { Feature: 'Secondary Growth', 'Dicot Stem': 'Present', 'Monocot Stem': 'Absent' },
+        {
+          Feature: 'Ground Tissue',
+          'Dicot Stem': 'Cortex + Pith distinct',
+          'Monocot Stem': 'Undifferentiated',
+        },
+        { Feature: 'Xylem', 'Dicot Stem': 'Endarch', 'Monocot Stem': 'Endarch' },
       ],
     },
     schema: {
@@ -2759,8 +2862,8 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
     deepContent: {
       paragraphs: [
         {
-          heading: 'Five Kingdom Classification: Whittaker\'s System for NEET',
-          body: 'Biological Classification is a factual chapter testing knowledge of Whittaker\'s five kingdom system: Monera (prokaryotes), Protista (unicellular eukaryotes), Fungi (heterotrophic eukaryotes with cell walls), Plantae (autotrophic multicellular eukaryotes), and Animalia (heterotrophic multicellular eukaryotes without cell walls). Kingdom Monera includes Archaebacteria (extremophiles living in hot springs, salt lakes, and marshy areas producing methane) and Eubacteria (true bacteria classified by shape as cocci, bacilli, spirilla, and vibrio). Cyanobacteria (blue-green algae) are photosynthetic prokaryotes that fix nitrogen, and Mycoplasma are the smallest living cells lacking a cell wall. Kingdom Protista includes chrysophytes (diatoms with siliceous frustules), dinoflagellates (red tides from Gonyaulax blooms), euglenoids (mixotrophic with pellicle), slime moulds (saprophytic, forming plasmodium), and protozoans classified by locomotion as amoeboid, flagellated, ciliated, or sporozoans (Plasmodium causing malaria).',
+          heading: "Five Kingdom Classification: Whittaker's System for NEET",
+          body: "Biological Classification is a factual chapter testing knowledge of Whittaker's five kingdom system: Monera (prokaryotes), Protista (unicellular eukaryotes), Fungi (heterotrophic eukaryotes with cell walls), Plantae (autotrophic multicellular eukaryotes), and Animalia (heterotrophic multicellular eukaryotes without cell walls). Kingdom Monera includes Archaebacteria (extremophiles living in hot springs, salt lakes, and marshy areas producing methane) and Eubacteria (true bacteria classified by shape as cocci, bacilli, spirilla, and vibrio). Cyanobacteria (blue-green algae) are photosynthetic prokaryotes that fix nitrogen, and Mycoplasma are the smallest living cells lacking a cell wall. Kingdom Protista includes chrysophytes (diatoms with siliceous frustules), dinoflagellates (red tides from Gonyaulax blooms), euglenoids (mixotrophic with pellicle), slime moulds (saprophytic, forming plasmodium), and protozoans classified by locomotion as amoeboid, flagellated, ciliated, or sporozoans (Plasmodium causing malaria).",
         },
         {
           heading: 'Kingdom Fungi and Viruses: Classification and Characteristics',
@@ -2768,9 +2871,21 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
         },
       ],
       checklist: [
-        { item: 'Create a classification table for all Protista groups with examples', explanation: 'Protista subgroups with their locomotion and examples are frequently tested in NEET.' },
-        { item: 'Know the four fungal classes with their spore types and examples', explanation: 'Matching fungi to their classes based on spore type or example organism is a common question format.' },
-        { item: 'Distinguish between virus, viroid, and prion with specific diseases', explanation: 'NEET tests the structural differences between these acellular agents and their associated diseases.' },
+        {
+          item: 'Create a classification table for all Protista groups with examples',
+          explanation:
+            'Protista subgroups with their locomotion and examples are frequently tested in NEET.',
+        },
+        {
+          item: 'Know the four fungal classes with their spore types and examples',
+          explanation:
+            'Matching fungi to their classes based on spore type or example organism is a common question format.',
+        },
+        {
+          item: 'Distinguish between virus, viroid, and prion with specific diseases',
+          explanation:
+            'NEET tests the structural differences between these acellular agents and their associated diseases.',
+        },
       ],
     },
     schema: {

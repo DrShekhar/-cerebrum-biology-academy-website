@@ -53,17 +53,12 @@ export interface MTFScoreResult {
   xpEarned: number
 }
 
-export function calculateMTFScore(
-  userAnswer: string,
-  correctAnswer: string
-): MTFScoreResult {
+export function calculateMTFScore(userAnswer: string, correctAnswer: string): MTFScoreResult {
   const total = correctAnswer.length
   let correctCount = 0
 
   for (let i = 0; i < total; i++) {
-    if (
-      userAnswer[i]?.toUpperCase() === correctAnswer[i]?.toUpperCase()
-    ) {
+    if (userAnswer[i]?.toUpperCase() === correctAnswer[i]?.toUpperCase()) {
       correctCount++
     }
   }

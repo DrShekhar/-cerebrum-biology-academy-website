@@ -40,7 +40,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best NEET Coaching in Karol Bagh | Cerebrum Biology Academy',
-    description: 'Best NEET Coaching in Karol Bagh — biology-only specialist NEET coaching for Karol Bagh (Delhi) families. AIIMS-trained faculty, 15-20 student batches, ₹40K-₹1.56L/year. Nearest Cerebrum centre: So...',
+    description:
+      'Best NEET Coaching in Karol Bagh — biology-only specialist NEET coaching for Karol Bagh (Delhi) families. AIIMS-trained faculty, 15-20 student batches, ₹40K-₹1.56L/year. Nearest Cerebrum centre: So...',
   },
 }
 
@@ -67,7 +68,8 @@ const faqs = [
       'Common Karol Bagh feeder schools across the Cerebrum cohort: Springdales School (Pusa Road), Punjab Public School (Karol Bagh), Bal Bhavan Public School, Saint Thomas School (Mandir Marg-adjacent), Mata Jai Kaur Public School (Ashok Vihar-adjacent Rajinder Nagar), New Era Senior Secondary, Apeejay School Pitampura (commute). Students from these schools join Pursuit (small-batch 30-40, ₹40K-75K), Ascent (pro batch 16-25 with weekly 1:1 doubt slots, ₹58K-90K), or Pinnacle (direct Dr. Shekhar 1:1 micro-batch 10-12, ₹1.2L-1.56L) depending on target NEET rank.',
   },
   {
-    question: 'How does Cerebrum compare to the largest national NEET chains / other IIT-JEE-first coachings for Karol Bagh students?',
+    question:
+      'How does Cerebrum compare to the largest national NEET chains / other IIT-JEE-first coachings for Karol Bagh students?',
     answer:
       'the largest national NEET chains / other IIT-JEE-first coachings Delhi run combined Physics + Chemistry + Biology batches of 200-400 students with rotating subject faculty (typically ₹1.4L-1.6L/year). Cerebrum is biology-only with 15-20 student batches and continuous AIIMS-trained faculty (₹40K-1.56L/year biology-only). Most strategic Karol Bagh pattern: Cerebrum biology + other online-only platforms / other multi-subject tutoring platforms / other online-only platforms for PC = total ₹70K-1.1L with materially deeper biology pedagogy than full-the largest national NEET chain at half the all-in cost.',
   },
@@ -233,26 +235,48 @@ export default function NEETCoachingKarolBaghPage() {
             The Karol Bagh advantage: UPSC culture meets NEET preparation
           </h2>
           <p>
-            Karol Bagh is unique in Delhi's coaching geography: it is the country's densest UPSC coaching corridor (Rajinder Nagar, Old Rajinder Nagar, Patel Nagar). This creates a high-intensity study culture that directly benefits NEET aspirants. Students in the Karol Bagh catchment are surrounded by 18-22 year olds studying 12-14 hours daily for civil services — this environment normalises long study hours and competitive focus. NEET families here don't need to be convinced about the value of coaching; they need to be convinced about the right coaching.
+            Karol Bagh is unique in Delhi's coaching geography: it is the country's densest UPSC
+            coaching corridor (Rajinder Nagar, Old Rajinder Nagar, Patel Nagar). This creates a
+            high-intensity study culture that directly benefits NEET aspirants. Students in the
+            Karol Bagh catchment are surrounded by 18-22 year olds studying 12-14 hours daily for
+            civil services — this environment normalises long study hours and competitive focus.
+            NEET families here don't need to be convinced about the value of coaching; they need to
+            be convinced about the right coaching.
           </p>
           <p>
-            The competitive coaching landscape in Karol Bagh is overwhelmingly UPSC-focused. For NEET, the major generalist chains have Karol Bagh centres but they run mixed Physics-Chemistry-Biology batches with 150-200 students. Cerebrum's biology-only model stands out precisely because it's different from everything else in the Rajinder Nagar corridor — specialist depth in a market dominated by generalist breadth.
+            The competitive coaching landscape in Karol Bagh is overwhelmingly UPSC-focused. For
+            NEET, the major generalist chains have Karol Bagh centres but they run mixed
+            Physics-Chemistry-Biology batches with 150-200 students. Cerebrum's biology-only model
+            stands out precisely because it's different from everything else in the Rajinder Nagar
+            corridor — specialist depth in a market dominated by generalist breadth.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
             Karol Bagh school-by-school NEET Biology analysis
           </h2>
           <p>
-            <strong>Springdales School (Pusa Road):</strong> One of Central Delhi's most respected CBSE schools. Springdales students have strong science foundations and typically aim for AIIMS or top-tier government medical colleges. Most Springdales families book the Ascent or Pinnacle tier.
+            <strong>Springdales School (Pusa Road):</strong> One of Central Delhi's most respected
+            CBSE schools. Springdales students have strong science foundations and typically aim for
+            AIIMS or top-tier government medical colleges. Most Springdales families book the Ascent
+            or Pinnacle tier.
           </p>
           <p>
-            <strong>Punjab Public School:</strong> Strong academic traditions, large NEET aspirant cohort. PPS students typically need emphasis on Human Physiology and Genetics — the two highest-weightage NEET chapters where school Biology underserves.
+            <strong>Punjab Public School:</strong> Strong academic traditions, large NEET aspirant
+            cohort. PPS students typically need emphasis on Human Physiology and Genetics — the two
+            highest-weightage NEET chapters where school Biology underserves.
           </p>
           <p>
-            <strong>Bal Bhavan Public School:</strong> Known for holistic education. Bal Bhavan students sometimes start NEET prep slightly later (Class 12 vs Class 11). The compressed timeline makes Cerebrum's structured programme especially valuable — no time wasted on non-NEET content.
+            <strong>Bal Bhavan Public School:</strong> Known for holistic education. Bal Bhavan
+            students sometimes start NEET prep slightly later (Class 12 vs Class 11). The compressed
+            timeline makes Cerebrum's structured programme especially valuable — no time wasted on
+            non-NEET content.
           </p>
           <p>
-            <strong>Rajinder Nagar / Old Rajinder Nagar NEET aspirants:</strong> This is a distinctive segment — some NEET aspirants in the Rajinder Nagar area are droppers who came to Delhi for UPSC but switched to NEET. They're typically older (20-22), highly motivated, and need intensive 6-month programmes. The RE-NEET crash course is the typical entry point.
+            <strong>Rajinder Nagar / Old Rajinder Nagar NEET aspirants:</strong> This is a
+            distinctive segment — some NEET aspirants in the Rajinder Nagar area are droppers who
+            came to Delhi for UPSC but switched to NEET. They're typically older (20-22), highly
+            motivated, and need intensive 6-month programmes. The RE-NEET crash course is the
+            typical entry point.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">

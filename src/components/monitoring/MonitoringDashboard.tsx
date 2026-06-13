@@ -214,170 +214,156 @@ export default function MonitoringDashboard() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 py-8">
-{activeTab === 'overview' && (
-            <div
-              key="overview"
-              className="space-y-8 animate-fadeInUp"
-            >
-              {/* KPI Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <MetricCard
-                  title="System Health"
-                  value={`${data.health.score.toFixed(0)}%`}
-                  change={data.health.status === 'healthy' ? '+2%' : '-5%'}
-                  trend={data.health.status === 'healthy' ? 'up' : 'down'}
-                  icon="🏥"
-                  color={data.health.status === 'healthy' ? 'green' : 'red'}
-                />
+        {activeTab === 'overview' && (
+          <div key="overview" className="space-y-8 animate-fadeInUp">
+            {/* KPI Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <MetricCard
+                title="System Health"
+                value={`${data.health.score.toFixed(0)}%`}
+                change={data.health.status === 'healthy' ? '+2%' : '-5%'}
+                trend={data.health.status === 'healthy' ? 'up' : 'down'}
+                icon="🏥"
+                color={data.health.status === 'healthy' ? 'green' : 'red'}
+              />
 
-                <MetricCard
-                  title="Response Time"
-                  value={`${Math.round(data.performance.responseTime.average)}ms`}
-                  change={`${data.performance.responseTime.p95}ms P95`}
-                  trend="up"
-                  icon="⚡"
-                  color="blue"
-                />
+              <MetricCard
+                title="Response Time"
+                value={`${Math.round(data.performance.responseTime.average)}ms`}
+                change={`${data.performance.responseTime.p95}ms P95`}
+                trend="up"
+                icon="⚡"
+                color="blue"
+              />
 
-                <MetricCard
-                  title="Monthly Revenue"
-                  value={formatCurrency(data.business.revenue.monthly)}
-                  change={`${formatPercentage(data.business.revenue.growth)} growth`}
-                  trend={data.business.revenue.growth > 0 ? 'up' : 'down'}
-                  icon="💰"
-                  color="green"
-                />
+              <MetricCard
+                title="Monthly Revenue"
+                value={formatCurrency(data.business.revenue.monthly)}
+                change={`${formatPercentage(data.business.revenue.growth)} growth`}
+                trend={data.business.revenue.growth > 0 ? 'up' : 'down'}
+                icon="💰"
+                color="green"
+              />
 
-                <MetricCard
-                  title="Active Students"
-                  value={formatNumber(data.business.users.active)}
-                  change={`${data.business.users.new} new today`}
-                  trend="up"
-                  icon="👨‍🎓"
-                  color="purple"
-                />
+              <MetricCard
+                title="Active Students"
+                value={formatNumber(data.business.users.active)}
+                change={`${data.business.users.new} new today`}
+                trend="up"
+                icon="👨‍🎓"
+                color="purple"
+              />
+            </div>
+
+            {/* System Health Checks */}
+            <div className="bg-white rounded-lg shadow p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">🔍 System Health Checks</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {data.health.checks.map((check, index) => (
+                  <div
+                    key={index}
+                    className={`p-4 rounded-lg border ${
+                      check.status ? 'border-green-200 bg-green-50' : 'border-red-200 bg-red-50'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="font-medium text-gray-900">{check.name}</span>
+                      <span className="text-2xl">{check.status ? '✅' : '❌'}</span>
+                    </div>
+                    {check.latency && (
+                      <p className="text-sm text-gray-600 mt-1">Latency: {check.latency}ms</p>
+                    )}
+                    {check.error && <p className="text-sm text-red-600 mt-1">{check.error}</p>}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Quick Business Overview */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="bg-white rounded-lg shadow p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">📊 Business Metrics</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Daily Revenue</span>
+                    <span className="font-semibold text-green-600">
+                      {formatCurrency(data.business.revenue.daily)}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Student Retention</span>
+                    <span className="font-semibold text-blue-600">
+                      {formatPercentage(data.business.users.retention * 100)}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Collaborative Participation</span>
+                    <span className="font-semibold text-purple-600">
+                      {formatPercentage(data.business.engagement.collaborativeRate * 100)}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">ROI</span>
+                    <span className="font-semibold text-indigo-600">
+                      {formatPercentage(data.business.costs.roi)}
+                    </span>
+                  </div>
+                </div>
               </div>
 
-              {/* System Health Checks */}
               <div className="bg-white rounded-lg shadow p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  🔍 System Health Checks
+                  ⚡ Performance Overview
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {data.health.checks.map((check, index) => (
-                    <div
-                      key={index}
-                      className={`p-4 rounded-lg border ${
-                        check.status ? 'border-green-200 bg-green-50' : 'border-red-200 bg-red-50'
-                      }`}
-                    >
-                      <div className="flex items-center justify-between">
-                        <span className="font-medium text-gray-900">{check.name}</span>
-                        <span className="text-2xl">{check.status ? '✅' : '❌'}</span>
-                      </div>
-                      {check.latency && (
-                        <p className="text-sm text-gray-600 mt-1">Latency: {check.latency}ms</p>
-                      )}
-                      {check.error && <p className="text-sm text-red-600 mt-1">{check.error}</p>}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Quick Business Overview */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="bg-white rounded-lg shadow p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">📊 Business Metrics</h3>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Daily Revenue</span>
-                      <span className="font-semibold text-green-600">
-                        {formatCurrency(data.business.revenue.daily)}
-                      </span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Student Retention</span>
-                      <span className="font-semibold text-blue-600">
-                        {formatPercentage(data.business.users.retention * 100)}
-                      </span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Collaborative Participation</span>
-                      <span className="font-semibold text-purple-600">
-                        {formatPercentage(data.business.engagement.collaborativeRate * 100)}
-                      </span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">ROI</span>
-                      <span className="font-semibold text-indigo-600">
-                        {formatPercentage(data.business.costs.roi)}
-                      </span>
-                    </div>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Availability</span>
+                    <span className="font-semibold text-green-600">
+                      {formatPercentage(data.performance.availability)}
+                    </span>
                   </div>
-                </div>
-
-                <div className="bg-white rounded-lg shadow p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                    ⚡ Performance Overview
-                  </h3>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Availability</span>
-                      <span className="font-semibold text-green-600">
-                        {formatPercentage(data.performance.availability)}
-                      </span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Error Rate</span>
-                      <span className="font-semibold text-red-600">
-                        {formatPercentage(data.performance.errorRate)}
-                      </span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Requests/Second</span>
-                      <span className="font-semibold text-blue-600">
-                        {formatNumber(data.performance.throughput.requestsPerSecond)}
-                      </span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">P99 Response Time</span>
-                      <span className="font-semibold text-orange-600">
-                        {Math.round(data.performance.responseTime.p99)}ms
-                      </span>
-                    </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Error Rate</span>
+                    <span className="font-semibold text-red-600">
+                      {formatPercentage(data.performance.errorRate)}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Requests/Second</span>
+                    <span className="font-semibold text-blue-600">
+                      {formatNumber(data.performance.throughput.requestsPerSecond)}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">P99 Response Time</span>
+                    <span className="font-semibold text-orange-600">
+                      {Math.round(data.performance.responseTime.p99)}ms
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
-          )}
+          </div>
+        )}
 
-          {activeTab === 'system' && (
-            <div
-              key="system"
-              className="space-y-6 animate-fadeInUp"
-            >
-              <SystemHealthView health={data.health} />
-            </div>
-          )}
+        {activeTab === 'system' && (
+          <div key="system" className="space-y-6 animate-fadeInUp">
+            <SystemHealthView health={data.health} />
+          </div>
+        )}
 
-          {activeTab === 'performance' && (
-            <div
-              key="performance"
-              className="space-y-6 animate-fadeInUp"
-            >
-              <PerformanceView performance={data.performance} />
-            </div>
-          )}
+        {activeTab === 'performance' && (
+          <div key="performance" className="space-y-6 animate-fadeInUp">
+            <PerformanceView performance={data.performance} />
+          </div>
+        )}
 
-          {activeTab === 'business' && (
-            <div
-              key="business"
-              className="space-y-6 animate-fadeInUp"
-            >
-              <BusinessIntelligenceView business={data.business} />
-            </div>
-          )}
-</div>
+        {activeTab === 'business' && (
+          <div key="business" className="space-y-6 animate-fadeInUp">
+            <BusinessIntelligenceView business={data.business} />
+          </div>
+        )}
+      </div>
     </div>
   )
 }

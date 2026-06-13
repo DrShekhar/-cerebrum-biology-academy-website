@@ -19,7 +19,8 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-tagore-garden' },
   openGraph: {
     title: 'NEET Coaching in Tagore Garden | Cerebrum Biology Academy',
-    description: 'Biology specialist serving Tagore Garden + Rajouri Garden + Subhash Nagar. AIIMS faculty.',
+    description:
+      'Biology specialist serving Tagore Garden + Rajouri Garden + Subhash Nagar. AIIMS faculty.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-tagore-garden',

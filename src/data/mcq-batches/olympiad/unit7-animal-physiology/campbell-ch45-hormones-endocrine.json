@@ -49,12 +49,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about insulin signaling:\n(I) Insulin binds to a receptor tyrosine kinase (the insulin receptor), triggering autophosphorylation and recruitment of insulin receptor substrate (IRS) proteins\n(II) Activated PI3K-Akt pathway promotes GLUT4 vesicle translocation to the plasma membrane, increasing glucose uptake in muscle and adipose tissue\n(III) Insulin promotes glycogen synthesis by activating glycogen synthase through Akt-mediated inhibition of GSK3\n(IV) All cell types require insulin for glucose uptake, including neurons and red blood cells",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "(I) TRUE: The insulin receptor is a heterotetrameric (α₂β₂) receptor tyrosine kinase. Insulin binding to the α subunits causes conformational change and trans-autophosphorylation of the β subunits on specific tyrosine residues, creating docking sites for IRS-1 and IRS-2. (II) TRUE: IRS phosphorylation activates PI3K, generating PIP₃, which activates PDK1 and subsequently Akt (protein kinase B). Akt phosphorylates AS160 (TBC1D4), promoting GLUT4-containing vesicle fusion with the plasma membrane. This dramatically increases glucose uptake in skeletal muscle and adipose tissue. (III) TRUE: Akt phosphorylates and INACTIVATES GSK3 (glycogen synthase kinase 3), which normally phosphorylates and inhibits glycogen synthase. Thus insulin indirectly activates glycogen synthase, promoting glycogen storage. (IV) FALSE: Neurons use GLUT1 and GLUT3, and red blood cells use GLUT1 — these transporters are constitutively expressed and insulin-independent. Brain and RBCs take up glucose regardless of insulin levels.",
       "isOlympiad": true,
@@ -189,12 +184,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the adrenal cortex:\n(I) The zona glomerulosa produces mineralocorticoids (primarily aldosterone), regulated mainly by angiotensin II and potassium\n(II) The zona fasciculata produces glucocorticoids (primarily cortisol), regulated by ACTH from the anterior pituitary\n(III) The zona reticularis produces adrenal androgens (DHEA and androstenedione), also regulated by ACTH\n(IV) All three zones express aldosterone synthase (CYP11B2), which is the enzyme that determines which steroid is produced",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "(I) TRUE: The outermost zona glomerulosa synthesizes aldosterone. Its regulation is primarily by angiotensin II (from the RAAS) and serum K⁺ concentration, with ACTH playing a minor permissive role. Aldosterone promotes Na⁺ reabsorption and K⁺ secretion in the collecting duct. (II) TRUE: The middle zona fasciculata is the thickest zone and produces cortisol. ACTH from anterior pituitary corticotrophs is the primary regulator, acting through MC2R (melanocortin 2 receptor) to stimulate steroidogenesis via the StAR protein and steroidogenic enzymes. (III) TRUE: The inner zona reticularis produces weak androgens (DHEA, DHEA-S, androstenedione), regulated by ACTH. These androgens are important precursors for peripheral conversion to testosterone and estrogens. (IV) FALSE: Aldosterone synthase (CYP11B2) is expressed ONLY in the zona glomerulosa. The zona fasciculata expresses 11β-hydroxylase (CYP11B1) instead. This zone-specific enzyme expression is what determines the final steroid product from each zone, despite shared precursor pathways.",
       "isOlympiad": true,
@@ -349,12 +339,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the hypothalamic-pituitary portal system:\n(I) Hypothalamic releasing and inhibiting hormones are secreted into capillaries of the median eminence and travel via portal veins to a second capillary bed in the anterior pituitary\n(II) This portal system allows hypothalamic hormones to reach pituitary cells at high concentrations without dilution in the systemic circulation\n(III) Oxytocin and ADH are delivered to the anterior pituitary via this same portal system\n(IV) Destruction of the portal system (e.g., by pituitary stalk transection) leads to decreased secretion of all anterior pituitary hormones except prolactin, which increases",
-      "options": [
-        "True",
-        "True",
-        "False",
-        "True"
-      ],
+      "options": ["True", "True", "False", "True"],
       "correctAnswer": "TTFT",
       "explanation": "(I) TRUE: The hypothalamic-hypophyseal portal system is a specialized vascular arrangement. Neurons in hypothalamic nuclei (arcuate, paraventricular, etc.) release their hormones (TRH, GnRH, CRH, GHRH, somatostatin, dopamine) into fenestrated capillaries of the primary capillary plexus in the median eminence. These capillaries drain into portal veins that descend along the pituitary stalk to a secondary capillary plexus in the anterior pituitary. (II) TRUE: This portal arrangement delivers hypothalamic hormones directly to their pituitary target cells at concentrations 100-1000× higher than systemic levels. (III) FALSE: Oxytocin and ADH are produced by magnocellular neurons and transported via axons directly to the POSTERIOR pituitary for storage and release into the systemic circulation. They do NOT travel through the portal system. (IV) TRUE: Since most hypothalamic hormones are stimulatory (TRH, GnRH, CRH, GHRH), stalk transection reduces anterior pituitary hormone secretion. The exception is prolactin, which is under tonic INHIBITORY control by dopamine — loss of dopamine inhibition causes prolactin hypersecretion.",
       "isOlympiad": true,
@@ -549,12 +534,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about G-protein-coupled receptor (GPCR) signaling in endocrine systems:\n(I) Gs-coupled receptors activate adenylyl cyclase, increasing cAMP, while Gi-coupled receptors inhibit adenylyl cyclase, decreasing cAMP\n(II) Gq-coupled receptors activate phospholipase C, generating IP₃ (which releases Ca²⁺ from ER) and DAG (which activates PKC)\n(III) Beta-arrestin only desensitizes GPCRs and has no independent signaling function\n(IV) Receptor desensitization involves GRK (GPCR kinase) phosphorylation of the receptor, β-arrestin binding, and clathrin-mediated endocytosis",
-      "options": [
-        "True",
-        "True",
-        "False",
-        "True"
-      ],
+      "options": ["True", "True", "False", "True"],
       "correctAnswer": "TTFT",
       "explanation": "(I) TRUE: Gs (stimulatory G protein) activates adenylyl cyclase, converting ATP to cAMP, which activates PKA. Gi (inhibitory G protein) inhibits adenylyl cyclase, reducing cAMP. Examples: TSH receptor (Gs), dopamine D2 receptor on lactotrophs (Gi). (II) TRUE: Gq activates phospholipase C-β (PLCβ), which cleaves PIP₂ into IP₃ and DAG. IP₃ binds IP₃ receptors on the ER, releasing stored Ca²⁺. DAG remains membrane-bound and activates protein kinase C (PKC). Examples: GnRH receptor (Gq), oxytocin receptor (Gq). (III) FALSE: β-arrestin was initially identified as a desensitization molecule, but it is now recognized as a signaling scaffold in its own right. β-arrestin-mediated signaling includes activation of MAPK/ERK pathways, Src kinases, and other cascades — independent of G protein signaling. This 'biased agonism' is a major area of pharmacological research. (IV) TRUE: Receptor desensitization is a critical process that prevents overstimulation.",
       "isOlympiad": true,
@@ -689,12 +669,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about thyroid hormone physiology:\n(I) T4 is the predominant thyroid secretory product but T3 is the more biologically active form\n(II) Most circulating T3 is produced by peripheral deiodination of T4 by type 1 and type 2 deiodinases (D1, D2)\n(III) Thyroid hormones increase basal metabolic rate by upregulating Na⁺/K⁺-ATPase expression and activity, increasing oxygen consumption in most tissues\n(IV) The brain is a major target of thyroid hormone metabolic effects, with thyroid hormone significantly increasing cerebral oxygen consumption in adults",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "(I) TRUE: The thyroid gland produces approximately 90% T4 (thyroxine) and 10% T3 (triiodothyronine). However, T3 has approximately 10× greater affinity for nuclear thyroid hormone receptors (TRα and TRβ) and is the primary active form. (II) TRUE: Approximately 80% of circulating T3 is produced outside the thyroid by deiodination of T4. Type 2 deiodinase (D2) in the brain, pituitary, and brown adipose tissue converts T4 to T3 locally. Type 1 deiodinase (D1) in the liver and kidneys converts T4 to T3 for systemic circulation. Type 3 deiodinase (D3) inactivates both T4 and T3. (III) TRUE: A major metabolic effect of thyroid hormones is upregulation of Na⁺/K⁺-ATPase in most tissues, which consumes ATP and generates heat, increasing oxygen consumption and basal metabolic rate. Thyroid hormones also increase mitochondrial uncoupling proteins and metabolic enzyme expression. (IV) FALSE: The adult brain, along with the spleen and testes, does NOT significantly increase its oxygen consumption in response to thyroid hormone. However, thyroid hormone is critical for fetal and neonatal brain development.",
       "isOlympiad": true,
@@ -869,12 +844,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about invertebrate endocrine systems:\n(I) Molting in crustaceans is controlled by ecdysteroids produced by the Y-organ, analogous to the prothoracic gland in insects\n(II) The X-organ/sinus gland complex in crustacean eyestalks produces molt-inhibiting hormone (MIH), which suppresses the Y-organ\n(III) Eyestalk ablation in crustaceans triggers precocious molting due to removal of MIH\n(IV) Crustaceans use juvenile hormone (JH) for the same developmental functions as insects",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "(I) TRUE: The crustacean Y-organ is functionally analogous to the insect prothoracic gland — both produce ecdysteroids (ecdysone/20-hydroxyecdysone) that trigger molting. (II) TRUE: The X-organ/sinus gland complex in the crustacean eyestalk is a major neuroendocrine organ. The X-organ neurons produce several neuropeptide hormones including MIH (molt-inhibiting hormone), which is stored and released from the sinus gland. MIH tonically inhibits the Y-organ, preventing premature molting. (III) TRUE: Eyestalk ablation removes the source of MIH, releasing the Y-organ from inhibition and triggering ecdysteroid production and molting. This technique is used commercially in shrimp aquaculture to induce ovarian maturation (the eyestalk also produces gonad-inhibiting hormone). (IV) FALSE: Crustaceans use methyl farnesoate (MF), not juvenile hormone (JH), as their sesquiterpenoid hormone. MF is the unepoxidized precursor of insect JH III. While MF has some JH-like functions (regulating reproduction and morphogenesis), the crustacean and insect systems have diverged significantly.",
       "isOlympiad": true,
@@ -1029,12 +999,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about cortisol's metabolic effects:\n(I) Cortisol promotes gluconeogenesis in the liver by inducing PEPCK and glucose-6-phosphatase gene expression\n(II) Cortisol promotes protein catabolism in muscle, providing amino acid substrates for hepatic gluconeogenesis\n(III) Cortisol enhances lipolysis in adipose tissue, releasing free fatty acids as an alternative fuel source\n(IV) Cortisol increases insulin sensitivity in peripheral tissues, facilitating glucose uptake",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "(I) TRUE: Cortisol's primary metabolic role is maintaining blood glucose during fasting/stress. In the liver, cortisol (via glucocorticoid receptor/GR binding to glucocorticoid response elements) induces transcription of key gluconeogenic enzymes: PEPCK (phosphoenolpyruvate carboxykinase) and glucose-6-phosphatase. (II) TRUE: In skeletal muscle, cortisol promotes protein catabolism (degradation) and inhibits protein synthesis. The released amino acids (particularly alanine and glutamine) serve as carbon skeletons for hepatic gluconeogenesis. Chronic excess causes muscle wasting (as seen in Cushing's syndrome). (III) TRUE: Cortisol promotes lipolysis in adipose tissue (through induction of ATGL and HSL), releasing free fatty acids (FFAs) and glycerol. FFAs provide alternative fuel for peripheral tissues, sparing glucose for the brain. Glycerol serves as a gluconeogenic substrate. (IV) FALSE: Cortisol DECREASES insulin sensitivity (causes insulin resistance) in peripheral tissues. It reduces GLUT4 translocation in muscle and adipose tissue, antagonizing insulin's glucose-lowering effect. This is why chronic cortisol excess causes hyperglycemia/diabetes.",
       "isOlympiad": true,
@@ -1169,12 +1134,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the endocrine functions of non-classical endocrine organs:\n(I) The heart produces atrial natriuretic peptide (ANP) and brain natriuretic peptide (BNP), which promote natriuresis and vasodilation\n(II) Adipose tissue produces leptin (satiety signal), adiponectin (insulin sensitizer), and resistin (promotes insulin resistance)\n(III) The gut produces hormones including GLP-1, GIP, cholecystokinin (CCK), and ghrelin, which regulate digestion, metabolism, and appetite\n(IV) The kidney produces only erythropoietin; it has no role in vitamin D metabolism",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "(I) TRUE: Cardiac myocytes produce natriuretic peptides in response to wall stress from volume overload. ANP is produced mainly by atrial myocytes, while BNP (despite its name) is produced primarily by ventricular myocytes. Both promote natriuresis, vasodilation, and oppose RAAS. BNP is clinically used as a biomarker for heart failure. (II) TRUE: Adipose tissue is now recognized as a major endocrine organ. Key adipokines include: leptin (proportional to fat mass, signals satiety to hypothalamus), adiponectin (insulin sensitizer, anti-inflammatory, paradoxically decreased in obesity), and resistin (promotes insulin resistance in rodents, controversial in humans). (III) TRUE: The gastrointestinal tract is the largest endocrine organ by cell number. GLP-1 and GIP are incretins enhancing insulin secretion. CCK from I-cells stimulates gallbladder contraction and pancreatic enzyme secretion. Ghrelin from gastric X/A-like cells stimulates appetite. (IV) FALSE: The kidney is a critical endocrine organ producing: EPO (erythropoiesis), renin (RAAS), AND 1,25-(OH)₂D₃ (calcitriol — the active form of vitamin D, via 1α-hydroxylase).",
       "isOlympiad": true,
@@ -1309,12 +1269,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the role of kisspeptin in reproductive endocrinology:\n(I) Kisspeptin neurons in the arcuate nucleus of the hypothalamus are the primary upstream regulators of GnRH neurons, integrating metabolic and environmental signals\n(II) Loss-of-function mutations in the kisspeptin receptor (KISS1R/GPR54) cause hypogonadotropic hypogonadism and failure of puberty onset\n(III) Kisspeptin neurons are inhibited by sex steroids, providing the mechanism for negative feedback on GnRH\n(IV) Kisspeptin neurons in the AVPV/PeN region mediate the positive feedback estrogen signal that triggers the preovulatory LH surge in females",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "True"
-      ],
+      "options": ["True", "True", "True", "True"],
       "correctAnswer": "TTTT",
       "explanation": "(I) TRUE: Kisspeptin neurons (expressing Kiss1 gene) in the arcuate nucleus (ARC, also called KNDy neurons because they co-express Kisspeptin, Neurokinin B, and Dynorphin) are now recognized as the key 'GnRH pulse generator.' They integrate signals from metabolic state (leptin, insulin), photoperiod, stress, and sex steroids to regulate GnRH neuron firing and pulsatile GnRH release. (II) TRUE: This was the landmark discovery (2003) — patients with inactivating mutations in GPR54 (now KISS1R) had normal GnRH neurons but failed to undergo puberty due to absent GnRH secretion. Similarly, Kiss1 knockout mice are infertile. This established kisspeptin as an essential gatekeeper of reproductive maturation. (III) TRUE: ARC kisspeptin neurons express ERα and androgen receptors. Estradiol and testosterone inhibit these neurons, reducing kisspeptin input to GnRH neurons — this mediates the negative feedback limb. (IV) TRUE: A distinct population of kisspeptin neurons in the AVPV/PeN (anteroventral periventricular nucleus) is STIMULATED by estradiol (positive feedback), existing only in females. The surge of kisspeptin from AVPV triggers the GnRH/LH surge needed for ovulation.",
       "isOlympiad": true,
@@ -1489,12 +1444,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about hormone half-life and its clinical significance:\n(I) Protein-bound hormones (e.g., T4 bound to TBG, cortisol bound to CBG) have longer half-lives than free hormones because binding protects them from degradation and renal clearance\n(II) Peptide hormones generally have shorter half-lives (minutes) than steroid hormones (hours to days)\n(III) The half-life of a hormone determines how quickly its levels change after secretion rate changes, affecting the temporal resolution of hormonal signaling\n(IV) Synthetic hormone analogs are designed with identical half-lives to their natural counterparts",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "(I) TRUE: Protein binding creates a reservoir of hormone that is protected from glomerular filtration (protein-bound complexes are too large to filter), enzymatic degradation, and hepatic clearance. T4 has a half-life of ~6-7 days largely because 99.97% is protein-bound (to TBG, transthyretin, and albumin). Free T4 has a much shorter half-life. (II) TRUE: Peptide hormones (insulin ~5 min, ACTH ~10 min, PTH ~5 min) are rapidly degraded by peptidases and cleared by the kidneys. Steroid hormones bound to proteins last longer (cortisol ~60-90 min, T4 ~7 days). Catecholamines are intermediate (1-2 min). (III) TRUE: Half-life determines the temporal dynamics of hormonal signaling. Short-lived hormones (insulin, catecholamines) allow rapid, pulsatile regulation. Long-lived hormones (T4) provide stable, slowly-changing signals. Clinical implication: after thyroidectomy, T4 levels decline slowly over weeks, while insulin levels fall within minutes of β-cell destruction. (IV) FALSE: Synthetic analogs are often deliberately engineered with DIFFERENT half-lives — usually longer for convenience (e.g., insulin glargine ~24 hr vs. native insulin ~5 min, desmopressin ~3 hr vs. ADH ~20 min, semaglutide ~7 days vs. GLP-1 ~2 min).",
       "isOlympiad": true,
@@ -1529,12 +1479,7 @@
     {
       "type": "MCQ",
       "question": "Which of the following hormones uses the JAK-STAT signaling pathway as its primary signal transduction mechanism?",
-      "options": [
-        "Cortisol",
-        "Insulin",
-        "Epinephrine",
-        "Growth hormone"
-      ],
+      "options": ["Cortisol", "Insulin", "Epinephrine", "Growth hormone"],
       "correctAnswer": "D",
       "explanation": "Growth hormone (GH) binds to the GH receptor (GHR), a type I cytokine receptor that signals through the JAK-STAT pathway. The mechanism: (1) GH binds to a preformed GHR dimer on the target cell surface. (2) Binding induces conformational change, activating JAK2 (Janus kinase 2), which is constitutively associated with the GHR intracellular domain. (3) Activated JAK2 phosphorylates itself (autophosphorylation), the GHR (creating docking sites), and STAT proteins (Signal Transducers and Activators of Transcription, particularly STAT5a and STAT5b). (4) Phosphorylated STATs dimerize, translocate to the nucleus, and activate transcription of target genes including IGF-1, SOCS (suppressors of cytokine signaling — negative feedback), and genes for growth and metabolism. GH also activates MAPK and PI3K pathways via SHC/IRS adaptors. Insulin uses receptor tyrosine kinase/IRS/PI3K. Cortisol uses nuclear receptor. Epinephrine uses GPCRs.",
       "isOlympiad": true,
@@ -1709,12 +1654,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about diabetes mellitus complications:\n(I) Chronic hyperglycemia leads to non-enzymatic glycation of proteins (forming advanced glycation end products, AGEs), which damage blood vessel walls and contribute to microvascular complications\n(II) The polyol pathway (converting glucose to sorbitol via aldose reductase) contributes to diabetic neuropathy and cataracts by accumulating osmotically active sorbitol in cells\n(III) Diabetic ketoacidosis (DKA) occurs primarily in type 2 diabetes due to excessive insulin resistance\n(IV) Retinopathy, nephropathy, and neuropathy are the classic microvascular complications of diabetes, while macrovascular complications include coronary artery disease, stroke, and peripheral vascular disease",
-      "options": [
-        "True",
-        "True",
-        "False",
-        "True"
-      ],
+      "options": ["True", "True", "False", "True"],
       "correctAnswer": "TTFT",
       "explanation": "(I) TRUE: AGEs form when glucose non-enzymatically reacts with amino groups on proteins (Maillard reaction). AGEs cross-link collagen, modify LDL (promoting atherosclerosis), activate RAGE receptors (causing inflammation), and damage basement membranes. HbA1c (glycated hemoglobin) is a clinically useful AGE that reflects average glycemia over 2-3 months. (II) TRUE: In cells that don't require insulin for glucose uptake (lens, Schwann cells, retinal pericytes), hyperglycemia increases intracellular glucose, which aldose reductase converts to sorbitol. Sorbitol accumulation (it crosses membranes poorly) causes osmotic stress and depletes NADPH (required for glutathione regeneration), contributing to oxidative damage. (III) FALSE: DKA occurs primarily in TYPE 1 diabetes (absolute insulin deficiency). Without insulin, unrestrained lipolysis releases massive FFAs → hepatic β-oxidation → ketone bodies (acetoacetate, β-hydroxybutyrate, acetone) → metabolic acidosis. Type 2 patients retain enough insulin to suppress lipolysis, preventing DKA (they develop HHS — hyperosmolar hyperglycemic state instead). (IV) TRUE: This classification is fundamental to diabetes management.",
       "isOlympiad": true,
@@ -1849,12 +1789,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the fight-or-flight response mediated by the sympatho-adrenal system:\n(I) The adrenal medulla releases primarily epinephrine (80%) and norepinephrine (20%) in response to acetylcholine from preganglionic sympathetic neurons\n(II) Epinephrine activates β2-adrenergic receptors in bronchial smooth muscle, causing bronchodilation\n(III) Norepinephrine from sympathetic nerve endings activates α1 receptors on arteriolar smooth muscle, causing vasoconstriction in skin and viscera\n(IV) The fight-or-flight response inhibits glycogenolysis to conserve energy stores",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "(I) TRUE: The adrenal medulla is a modified sympathetic ganglion. Preganglionic sympathetic neurons (cholinergic, using ACh) synapse on chromaffin cells, which release catecholamines. The enzyme PNMT (phenylethanolamine N-methyltransferase), induced by cortisol from the adjacent adrenal cortex (via portal blood), converts norepinephrine to epinephrine, explaining the ~80% epinephrine predominance. (II) TRUE: Epinephrine activates β2 receptors (Gs-coupled) on bronchial smooth muscle, increasing cAMP and causing relaxation/bronchodilation — expanding airways for increased oxygen intake. This is the basis for β2-agonist bronchodilators (albuterol). (III) TRUE: Norepinephrine from sympathetic varicosities preferentially activates α1 receptors (Gq-coupled) on vascular smooth muscle, causing IP₃-mediated Ca²⁺ release and vasoconstriction. This redistributes blood from skin and GI tract to skeletal muscle and heart. (IV) FALSE: The fight-or-flight response PROMOTES glycogenolysis — epinephrine activates hepatic glycogen phosphorylase via β2-cAMP-PKA cascade and muscle glycogenolysis via β2, mobilizing glucose for energy. It also stimulates lipolysis in adipose tissue via β3 receptors.",
       "isOlympiad": true,
@@ -2089,12 +2024,7 @@
     {
       "type": "MCQ",
       "question": "Receptor tyrosine kinases (RTKs) are used by several hormones and growth factors. Which of the following hormones signals through an RTK?",
-      "options": [
-        "Epinephrine",
-        "ACTH",
-        "Insulin",
-        "Glucagon"
-      ],
+      "options": ["Epinephrine", "ACTH", "Insulin", "Glucagon"],
       "correctAnswer": "C",
       "explanation": "The insulin receptor is the classic example of a receptor tyrosine kinase (RTK) in endocrinology. It exists as a preformed α2β2 heterotetrameric dimer. Insulin binding to the extracellular α subunits causes conformational change in the transmembrane β subunits, activating their intrinsic tyrosine kinase domains. This leads to trans-autophosphorylation of specific tyrosine residues on the β subunits, creating docking sites for IRS (insulin receptor substrate) proteins. Phosphorylated IRS activates PI3K/Akt and Ras/MAPK pathways. Other RTK-utilizing ligands include IGF-1 (via IGF-1R), EGF, PDGF, FGF, and NGF. In contrast, ACTH, glucagon, and epinephrine all signal through G-protein-coupled receptors (GPCRs): ACTH via MC2R (Gs), glucagon via GCGR (Gs), and epinephrine via adrenergic receptors (α1/Gq, α2/Gi, β/Gs). This distinction between RTK and GPCR signaling reflects fundamentally different signal transduction mechanisms, response kinetics, and downstream effectors.",
       "isOlympiad": true,

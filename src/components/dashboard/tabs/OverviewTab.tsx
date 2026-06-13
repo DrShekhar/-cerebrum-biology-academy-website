@@ -92,10 +92,7 @@ export function OverviewTab({
   testsCompleted,
 }: OverviewTabProps) {
   return (
-    <div
-      key="overview"
-      className="space-y-4 sm:space-y-8 animate-fadeInUp"
-    >
+    <div key="overview" className="space-y-4 sm:space-y-8 animate-fadeInUp">
       {/* NEET Score Prediction Card - Mobile Optimized */}
       <div className="bg-gradient-to-r from-green-600 to-navy-700 rounded-xl sm:rounded-2xl p-4 sm:p-8 text-white">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">

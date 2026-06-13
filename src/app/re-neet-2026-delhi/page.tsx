@@ -31,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'RE-NEET 2026 Coaching in Delhi NCR | 6 Centres + Online Crash Course',
-    description: 'RE-NEET 2026 coaching for Delhi NCR students after the 12 May NEET cancellation. 5 offline centres (South Ext, Rohini, Green Park, Gurugram, Faridabad, Noida) + online live AIIMS-trained crash course.',
+    description:
+      'RE-NEET 2026 coaching for Delhi NCR students after the 12 May NEET cancellation. 5 offline centres (South Ext, Rohini, Green Park, Gurugram, Faridabad, Noida) + online live AIIMS-trained crash course.',
   },
 }
 

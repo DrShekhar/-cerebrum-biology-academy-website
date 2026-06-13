@@ -1,6 +1,23 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift, Home, Wifi, Video } from 'lucide-react'
+import {
+  Phone,
+  MessageCircle,
+  CheckCircle,
+  Star,
+  Users,
+  Trophy,
+  Building2,
+  MapPin,
+  ArrowRight,
+  BookOpen,
+  Target,
+  Clock,
+  Gift,
+  Home,
+  Wifi,
+  Video,
+} from 'lucide-react'
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
@@ -20,7 +37,8 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'Home Biology Tutor Noida | Learn from Home | AIIMS Faculty',
-    description: 'Best home Biology tutor in Noida. Online classes from your home with AIIMS faculty.',
+    description:
+      'Best home Biology tutor in Noida. Online classes from your home with AIIMS faculty.',
     url: 'https://cerebrumbiologyacademy.com/home-biology-tutor-noida',
   },
   alternates: {
@@ -30,7 +48,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Home Biology Tutor in Noida 2026 | Online Home Tuition | Rs 45,000/year',
-    description: 'Home Biology tutor in Noida. Learn from home via online classes. AIIMS faculty, Class 9-12 & NEET. Rs 45,000/year. Gaur City, Sector 150, Greater Noida. Free demo!',
+    description:
+      'Home Biology tutor in Noida. Learn from home via online classes. AIIMS faculty, Class 9-12 & NEET. Rs 45,000/year. Gaur City, Sector 150, Greater Noida. Free demo!',
   },
 }
 
@@ -39,7 +58,12 @@ const homeTuitionModes = [
     mode: 'Pursuit Tier (Online)',
     description: '30-40 students | 6 hrs/week',
     fee: '48,000 - 70,000',
-    features: ['Live interactive classes', 'Learn from your room', 'AI doubt bot access', 'Recorded lectures'],
+    features: [
+      'Live interactive classes',
+      'Learn from your room',
+      'AI doubt bot access',
+      'Recorded lectures',
+    ],
     icon: Wifi,
     popular: true,
   },
@@ -47,7 +71,12 @@ const homeTuitionModes = [
     mode: 'Ascent Tier (Online)',
     description: '16-18 students | 8 hrs/week',
     fee: '76,000',
-    features: ['Weekly group doubt sessions', 'Performance tracking', 'Better attention', 'Standard mock tests'],
+    features: [
+      'Weekly group doubt sessions',
+      'Performance tracking',
+      'Better attention',
+      'Standard mock tests',
+    ],
     icon: Building2,
     recommended: true,
   },
@@ -55,16 +84,29 @@ const homeTuitionModes = [
     mode: 'Pinnacle Tier (Online)',
     description: '10-12 students | 10-12 hrs/week',
     fee: '98,000 - 1,56,000',
-    features: ['Personal mentorship from Dr. Shekhar', 'Weekly 1-on-1 doubt sessions', 'Money-back guarantee', 'Priority support'],
+    features: [
+      'Personal mentorship from Dr. Shekhar',
+      'Weekly 1-on-1 doubt sessions',
+      'Money-back guarantee',
+      'Priority support',
+    ],
     icon: Video,
   },
 ]
 
 const benefits = [
-  { title: 'No Travel Time', description: 'Save 2-3 hours daily commuting in Noida traffic', icon: Clock },
+  {
+    title: 'No Travel Time',
+    description: 'Save 2-3 hours daily commuting in Noida traffic',
+    icon: Clock,
+  },
   { title: 'Safe Learning', description: 'Study in your comfortable home environment', icon: Home },
   { title: 'Same Quality', description: 'AIIMS faculty, same as offline coaching', icon: Star },
-  { title: 'Parent Supervision', description: 'Parents can monitor classes from home', icon: Users },
+  {
+    title: 'Parent Supervision',
+    description: 'Parents can monitor classes from home',
+    icon: Users,
+  },
   { title: 'Cost Effective', description: 'Save transport + food costs', icon: Target },
   { title: 'Flexible Timing', description: 'Morning, afternoon, or evening batches', icon: Clock },
 ]
@@ -78,26 +120,42 @@ const freeTools = [
 const faqs = [
   {
     question: 'Do you provide home visit tuition in Noida?',
-    answer: 'We provide online home tuition - you learn from your Noida home via live video classes. This is better than physical home visits: same quality, lower cost (Rs 45,000 vs Rs 2-3 lakhs), and access to AIIMS faculty who don\'t do home visits.',
+    answer:
+      "We provide online home tuition - you learn from your Noida home via live video classes. This is better than physical home visits: same quality, lower cost (Rs 45,000 vs Rs 2-3 lakhs), and access to AIIMS faculty who don't do home visits.",
   },
   {
     question: 'What is the fee for home Biology tutor in Noida?',
-    answer: 'Online home tuition fees by tier: Pursuit (30-40 students): Rs 48,000-70,000/year, Ascent (16-18 students): Rs 76,000/year, Pinnacle (10-12 students): Rs 98,000-1,56,000/year. All tiers include AIIMS faculty and recorded lectures. Much better value than home tutors charging Rs 1,000-2,000/hour.',
+    answer:
+      'Online home tuition fees by tier: Pursuit (30-40 students): Rs 48,000-70,000/year, Ascent (16-18 students): Rs 76,000/year, Pinnacle (10-12 students): Rs 98,000-1,56,000/year. All tiers include AIIMS faculty and recorded lectures. Much better value than home tutors charging Rs 1,000-2,000/hour.',
   },
   {
     question: 'How does online home tuition work?',
-    answer: 'Live classes via Zoom from your home. AIIMS faculty teaches just like classroom. You can ask questions, share screen for doubts. Classes are recorded for revision. WhatsApp support for doubts between classes.',
+    answer:
+      'Live classes via Zoom from your home. AIIMS faculty teaches just like classroom. You can ask questions, share screen for doubts. Classes are recorded for revision. WhatsApp support for doubts between classes.',
   },
   {
     question: 'Can parents monitor online home tuition?',
-    answer: 'Yes! Parents can sit in the same room during classes. We also provide weekly progress reports, test scores, and monthly parent meetings. Much more transparent than traditional home tutors.',
+    answer:
+      'Yes! Parents can sit in the same room during classes. We also provide weekly progress reports, test scores, and monthly parent meetings. Much more transparent than traditional home tutors.',
   },
 ]
 
 const areas = [
-  'Gaur City 1 & 2', 'Sector 150', 'Greater Noida West', 'Sector 128', 'Jaypee Greens',
-  'ATS Pristine', 'Sector 62', 'Sector 18', 'Noida Extension', 'Sector 137',
-  'Alpha Beta Gamma', 'Knowledge Park', 'Sector 76', 'Sector 50', 'Pari Chowk'
+  'Gaur City 1 & 2',
+  'Sector 150',
+  'Greater Noida West',
+  'Sector 128',
+  'Jaypee Greens',
+  'ATS Pristine',
+  'Sector 62',
+  'Sector 18',
+  'Noida Extension',
+  'Sector 137',
+  'Alpha Beta Gamma',
+  'Knowledge Park',
+  'Sector 76',
+  'Sector 50',
+  'Pari Chowk',
 ]
 
 export default function HomeBiologyTutorNoidaPage() {
@@ -106,7 +164,10 @@ export default function HomeBiologyTutorNoidaPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/home-biology-tutor-noida"
         pageName="Home Biology Tutor in Noida"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
         personKnowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
       />
       {/* Hero Section */}
@@ -118,7 +179,8 @@ export default function HomeBiologyTutorNoidaPage() {
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Home Biology Tutor in Noida</h1>
             <p className="text-xl text-slate-300 mb-6">
-              Get AIIMS-faculty coaching from your Noida home. Online home tuition at Rs 45,000/year.
+              Get AIIMS-faculty coaching from your Noida home. Online home tuition at Rs
+              45,000/year.
             </p>
 
             {/* Quick Stats */}
@@ -194,8 +256,8 @@ export default function HomeBiologyTutorNoidaPage() {
                   item.recommended
                     ? 'bg-yellow-400 shadow-xl scale-105'
                     : item.popular
-                    ? 'bg-rose-50 border-2 border-rose-300'
-                    : 'bg-gray-50 border-2 border-gray-200'
+                      ? 'bg-rose-50 border-2 border-rose-300'
+                      : 'bg-gray-50 border-2 border-gray-200'
                 }`}
               >
                 {item.recommended && (
@@ -208,17 +270,29 @@ export default function HomeBiologyTutorNoidaPage() {
                     MOST POPULAR
                   </span>
                 )}
-                <item.icon className={`w-10 h-10 mb-4 ${item.recommended ? 'text-slate-900' : 'text-rose-600'}`} />
+                <item.icon
+                  className={`w-10 h-10 mb-4 ${item.recommended ? 'text-slate-900' : 'text-rose-600'}`}
+                />
                 <h3 className="text-xl font-bold mb-2">{item.mode}</h3>
-                <p className={`text-sm mb-2 ${item.recommended ? 'text-slate-700' : 'text-gray-500'}`}>{item.description}</p>
+                <p
+                  className={`text-sm mb-2 ${item.recommended ? 'text-slate-700' : 'text-gray-500'}`}
+                >
+                  {item.description}
+                </p>
                 <p className="text-3xl font-bold mb-4">
                   ₹{item.fee}
-                  {item.fee.includes('hour') ? '' : <span className="text-sm font-normal">/year</span>}
+                  {item.fee.includes('hour') ? (
+                    ''
+                  ) : (
+                    <span className="text-sm font-normal">/year</span>
+                  )}
                 </p>
                 <ul className="space-y-2 mb-6">
                   {item.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm">
-                      <CheckCircle className={`w-4 h-4 mt-0.5 ${item.recommended ? 'text-slate-900' : 'text-green-600'}`} />
+                      <CheckCircle
+                        className={`w-4 h-4 mt-0.5 ${item.recommended ? 'text-slate-900' : 'text-green-600'}`}
+                      />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -261,12 +335,17 @@ export default function HomeBiologyTutorNoidaPage() {
       {/* Areas Served */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Home Tuition Available Across Noida</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Home Tuition Available Across Noida
+          </h2>
           <p className="text-center text-gray-600 mb-8">Online home tuition for all localities</p>
 
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
             {areas.map((area) => (
-              <span key={area} className="bg-rose-100 text-rose-800 px-4 py-2 rounded-full text-sm font-medium">
+              <span
+                key={area}
+                className="bg-rose-100 text-rose-800 px-4 py-2 rounded-full text-sm font-medium"
+              >
                 <MapPin className="w-3 h-3 inline mr-1" />
                 {area}
               </span>
@@ -291,7 +370,9 @@ export default function HomeBiologyTutorNoidaPage() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-rose-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-rose-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>
@@ -338,7 +419,10 @@ export default function HomeBiologyTutorNoidaPage() {
         breadcrumbs={[
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
           { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
-          { name: 'Home Biology Tutor', url: 'https://cerebrumbiologyacademy.com/home-biology-tutor-noida' },
+          {
+            name: 'Home Biology Tutor',
+            url: 'https://cerebrumbiologyacademy.com/home-biology-tutor-noida',
+          },
         ]}
         customFAQs={faqs}
       />

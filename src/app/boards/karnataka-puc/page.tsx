@@ -5,7 +5,8 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'Karnataka PUC Biology to NEET',
-  description: 'Expert Karnataka PUC Biology coaching with seamless NEET integration. Master KCET & NEET from Pre-University Course curriculum.',
+  description:
+    'Expert Karnataka PUC Biology coaching with seamless NEET integration. Master KCET & NEET from Pre-University Course curriculum.',
   keywords: [
     'Karnataka PUC biology coaching',
     'PUC to NEET bridge',
@@ -29,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Karnataka PUC Biology to NEET',
-    description: 'Expert Karnataka PUC Biology coaching with seamless NEET integration. Master KCET & NEET from Pre-University Course curriculum.',
+    description:
+      'Expert Karnataka PUC Biology coaching with seamless NEET integration. Master KCET & NEET from Pre-University Course curriculum.',
   },
 }
 

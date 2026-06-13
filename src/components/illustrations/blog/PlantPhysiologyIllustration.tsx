@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function PlantPhysiologyIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -296,8 +296,7 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
 
         {/* Z-Scheme Diagram */}
         {/* PS II */}
-        <g
-        >
+        <g>
           <rect x="330" y="260" width="50" height="50" rx="8" fill="#3B82F6" />
           <text
             x="355"
@@ -323,8 +322,7 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
         </g>
 
         {/* PS I */}
-        <g
-        >
+        <g>
           <rect x="520" y="260" width="50" height="50" rx="8" fill="#8B5CF6" />
           <text
             x="545"
@@ -384,11 +382,7 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
           >
             H₂O
           </text>
-          <path
-            d="M350 315 L355 300"
-            stroke="#3B82F6"
-            strokeWidth="1.5"
-          />
+          <path d="M350 315 L355 300" stroke="#3B82F6" strokeWidth="1.5" />
           <text x="365" y="320" fontSize="6" fill="#16A34A" fontFamily="system-ui, sans-serif">
             → O₂ + H⁺
           </text>
@@ -601,12 +595,7 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
         <circle cx="155" cy="445" r="60" fill="none" stroke="#BFDBFE" strokeWidth="3" />
 
         {/* Animated cycle arrow */}
-        <circle
-          cx="155"
-          cy="385"
-          r="6"
-          fill="#3B82F6"
-        />
+        <circle cx="155" cy="385" r="6" fill="#3B82F6" />
 
         {/* Stage 1: Carbon Fixation */}
         <g>
@@ -1315,9 +1304,7 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
       </g>
 
       {/* NEET Questions Badge */}
-      <g
-        filter="url(#photoGlow)"
-      >
+      <g filter="url(#photoGlow)">
         <circle cx="850" cy="50" r="35" fill="#15803D" />
         <text
           x="850"

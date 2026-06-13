@@ -48,7 +48,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'USABO 2026 Results, Cutoffs & Dates | Open Exam, Semifinal, Finalists',
-    description: 'USABO 2026 Open Exam date, Semifinal date, expected cutoffs, and the historical cutoff range for Semifinalist qualification. Plus the 2025 results recap and what they tell us about Cerebrum student...',
+    description:
+      'USABO 2026 Open Exam date, Semifinal date, expected cutoffs, and the historical cutoff range for Semifinalist qualification. Plus the 2025 results recap and what they tell us about Cerebrum student...',
   },
 }
 
@@ -74,7 +75,7 @@ const expectedDates = [
   {
     stage: 'IBO 2026',
     expectedWindow: 'July 2026',
-    format: 'Hosted by the year\'s designated country — 80+ nations compete',
+    format: "Hosted by the year's designated country — 80+ nations compete",
     nextStep: 'Medals (Gold ~10%, Silver ~20%, Bronze ~30%)',
   },
 ]
@@ -89,7 +90,8 @@ const historicalCutoffs = [
   {
     year: '2023',
     openCutoff: 'Approximately 29/50 to advance to Semifinal',
-    semifinalNote: 'Strong year for biostats-heavy questions; Finalist scoring concentrated tightly',
+    semifinalNote:
+      'Strong year for biostats-heavy questions; Finalist scoring concentrated tightly',
     teamHost: 'IBO 2023 hosted in Al Ain, UAE — US team standard medal performance',
   },
   {
@@ -192,11 +194,15 @@ export default function USABO2026ResultsPage() {
           <div className="max-w-7xl mx-auto">
             <ol className="flex items-center flex-wrap gap-1 text-sm">
               <li>
-                <Link href="/" className="text-gray-600 hover:text-teal-600">Home</Link>
+                <Link href="/" className="text-gray-600 hover:text-teal-600">
+                  Home
+                </Link>
               </li>
               <li className="flex items-center">
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-                <Link href="/usabo-coaching" className="text-gray-600 hover:text-teal-600">USABO Coaching</Link>
+                <Link href="/usabo-coaching" className="text-gray-600 hover:text-teal-600">
+                  USABO Coaching
+                </Link>
               </li>
               <li className="flex items-center">
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
@@ -222,9 +228,9 @@ export default function USABO2026ResultsPage() {
               <span className="block text-yellow-400 mt-2">Cutoffs & Dates</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 mb-6 max-w-3xl">
-              Everything we know about the 2026 cycle — Open Exam window (early February),
-              Semifinal date (mid-March), expected cutoff ranges based on 2022–2024 history, and a
-              live tracker for cutoffs and Finalist announcements once CEE publishes them.
+              Everything we know about the 2026 cycle — Open Exam window (early February), Semifinal
+              date (mid-March), expected cutoff ranges based on 2022–2024 history, and a live
+              tracker for cutoffs and Finalist announcements once CEE publishes them.
             </p>
             <p className="text-base text-slate-400 mb-8 max-w-3xl">
               All exam dates and cutoffs are confirmed by the Center for Excellence in Education
@@ -279,10 +285,7 @@ export default function USABO2026ResultsPage() {
             </p>
             <div className="space-y-4">
               {expectedDates.map((d, i) => (
-                <div
-                  key={d.stage}
-                  className="bg-slate-50 rounded-xl p-6 border border-slate-200"
-                >
+                <div key={d.stage} className="bg-slate-50 rounded-xl p-6 border border-slate-200">
                   <div className="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
                     <h3 className="text-lg font-bold text-slate-900">
                       <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-teal-600 text-white text-xs font-bold mr-2">
@@ -295,10 +298,12 @@ export default function USABO2026ResultsPage() {
                     </span>
                   </div>
                   <p className="text-sm text-slate-700 mb-2 md:ml-8">
-                    <strong>Format: </strong>{d.format}
+                    <strong>Format: </strong>
+                    {d.format}
                   </p>
                   <p className="text-sm text-slate-700 md:ml-8">
-                    <strong>Next step: </strong>{d.nextStep}
+                    <strong>Next step: </strong>
+                    {d.nextStep}
                   </p>
                 </div>
               ))}
@@ -355,13 +360,16 @@ export default function USABO2026ResultsPage() {
                   <h3 className="text-lg font-bold text-slate-900 mb-3">USABO {y.year}</h3>
                   <ul className="space-y-2 text-sm text-slate-700">
                     <li>
-                      <strong>Open cutoff: </strong>{y.openCutoff}
+                      <strong>Open cutoff: </strong>
+                      {y.openCutoff}
                     </li>
                     <li>
-                      <strong>Semifinal: </strong>{y.semifinalNote}
+                      <strong>Semifinal: </strong>
+                      {y.semifinalNote}
                     </li>
                     <li>
-                      <strong>IBO link: </strong>{y.teamHost}
+                      <strong>IBO link: </strong>
+                      {y.teamHost}
                     </li>
                   </ul>
                 </div>
@@ -403,9 +411,7 @@ export default function USABO2026ResultsPage() {
                 Cerebrum Biology Academy is an independent coaching provider and is not affiliated
                 with CEE or the USABO administration.
               </li>
-              <li>
-                We update this page within 48 hours of each official announcement.
-              </li>
+              <li>We update this page within 48 hours of each official announcement.</li>
             </ul>
           </div>
         </section>
@@ -441,19 +447,31 @@ export default function USABO2026ResultsPage() {
           <div className="max-w-5xl mx-auto px-4">
             <h2 className="text-xl font-bold text-slate-900 mb-6 text-center">Related guides</h2>
             <div className="grid md:grid-cols-4 gap-4">
-              <Link href="/usabo-coaching" className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition">
+              <Link
+                href="/usabo-coaching"
+                className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+              >
                 <h3 className="font-semibold text-teal-700">USABO Coaching</h3>
                 <p className="text-xs text-slate-600 mt-1">Full pathway preparation</p>
               </Link>
-              <Link href="/ap-biology-vs-usabo" className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition">
+              <Link
+                href="/ap-biology-vs-usabo"
+                className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+              >
                 <h3 className="font-semibold text-teal-700">AP Biology vs USABO</h3>
                 <p className="text-xs text-slate-600 mt-1">Bridge guide for AP-5 students</p>
               </Link>
-              <Link href="/usabo-past-papers" className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition">
+              <Link
+                href="/usabo-past-papers"
+                className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+              >
                 <h3 className="font-semibold text-teal-700">USABO Past Papers</h3>
                 <p className="text-xs text-slate-600 mt-1">2015–2024 archive</p>
               </Link>
-              <Link href="/ibo-preparation" className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition">
+              <Link
+                href="/ibo-preparation"
+                className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+              >
                 <h3 className="font-semibold text-teal-700">IBO Preparation</h3>
                 <p className="text-xs text-slate-600 mt-1">After USABO Finalist</p>
               </Link>

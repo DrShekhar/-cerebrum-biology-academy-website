@@ -31,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best Biology Classes for NEET 2026 | AIIMS Faculty | Cerebrum',
-    description: 'Best biology classes for NEET 2026 — Cerebrum Biology Academy, the only major biology-only specialist coaching brand in India. AIIMS-trained faculty, small batches (15–20), 680+ medical college sel...',
+    description:
+      'Best biology classes for NEET 2026 — Cerebrum Biology Academy, the only major biology-only specialist coaching brand in India. AIIMS-trained faculty, small batches (15–20), 680+ medical college sel...',
   },
 }
 
@@ -64,8 +65,14 @@ const config: BestVerticalConfig = {
     { title: 'Online NEET Biology Coaching', href: '/online-neet-biology-coaching' },
     { title: 'NEET Biology Video Lectures', href: '/neet-biology-video-lectures' },
     { title: 'NEET Coaching Near Me', href: '/best-neet-coaching-near-me' },
-    { title: 'Cerebrum vs the largest national NEET chain', href: '/cerebrum-vs-allen-neet-coaching' },
-    { title: 'Cerebrum vs the 2nd-largest national NEET chain', href: '/cerebrum-vs-aakash-neet-coaching' },
+    {
+      title: 'Cerebrum vs the largest national NEET chain',
+      href: '/cerebrum-vs-allen-neet-coaching',
+    },
+    {
+      title: 'Cerebrum vs the 2nd-largest national NEET chain',
+      href: '/cerebrum-vs-aakash-neet-coaching',
+    },
     { title: 'Cerebrum vs other online-only platforms', href: '/cerebrum-vs-physicswallah' },
     { title: 'Cerebrum vs other multi-subject tutoring platforms', href: '/cerebrum-vs-vedantu' },
   ],
@@ -130,7 +137,8 @@ const config: BestVerticalConfig = {
       name: 'Aditya Verma',
       score: 'NEET 689/720',
       college: 'JIPMER Puducherry',
-      quote: 'I left the largest national NEET chain mid-year. The 18-student Cerebrum batch was a game-changer for biology.',
+      quote:
+        'I left the largest national NEET chain mid-year. The 18-student Cerebrum batch was a game-changer for biology.',
     },
     {
       name: 'Ananya Singh',
@@ -152,7 +160,8 @@ const config: BestVerticalConfig = {
         "Three structural advantages: (1) biology-only specialisation — faculty teach only biology, all year; (2) AIIMS-trained pedagogy — Dr. Shekhar studied at AIIMS New Delhi, India's premier medical institution; (3) small batches of 15–20 — individual attention preserved. Combined, no other major institute in India matches all three.",
     },
     {
-      question: 'How does Cerebrum compare to the largest national NEET chains and online-first generalist platforms for biology?',
+      question:
+        'How does Cerebrum compare to the largest national NEET chains and online-first generalist platforms for biology?',
       answer:
         "Cerebrum is biology-only (360/720 NEET marks = 50% of exam). the largest national NEET chains and online-first generalist platforms teach all three subjects with rotating faculty and 100–400 students per batch. Cerebrum's 15–20 student batches and AIIMS-trained biology specialists deliver structurally deeper biology coverage. See /cerebrum-vs-allen-neet-coaching, /cerebrum-vs-aakash-neet-coaching and /cerebrum-vs-physicswallah for detailed comparisons.",
     },

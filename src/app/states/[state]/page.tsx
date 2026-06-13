@@ -62,7 +62,9 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: [`https://cerebrumbiologyacademy.com/api/og?title=${encodeURIComponent('NEET Coaching ' + state.name)}&locality=${encodeURIComponent(state.name)}`],
+      images: [
+        `https://cerebrumbiologyacademy.com/api/og?title=${encodeURIComponent('NEET Coaching ' + state.name)}&locality=${encodeURIComponent(state.name)}`,
+      ],
     },
     alternates: {
       canonical: `https://cerebrumbiologyacademy.com/states/${state.slug}`,
@@ -74,11 +76,7 @@ export async function generateMetadata({
   }
 }
 
-export default async function StatePage({
-  params,
-}: {
-  params: Promise<{ state: string }>
-}) {
+export default async function StatePage({ params }: { params: Promise<{ state: string }> }) {
   const { state: stateSlug } = await params
   const state = INDIAN_STATES[stateSlug]
 

@@ -1829,12 +1829,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the thalamus:\nS1: The thalamus serves as the major relay station for sensory information (except olfaction) to the cerebral cortex.\nS2: The lateral geniculate nucleus (LGN) relays visual information from the retina to the primary visual cortex (V1).\nS3: The thalamus passively relays sensory information without any processing or modulation.\nS4: The reticular nucleus of the thalamus is a thin shell of GABAergic neurons that regulates thalamocortical activity and contributes to sleep spindle generation.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFTT",
-        "TTTF"
-      ],
+      "options": ["TTFT", "TTTT", "TFTT", "TTTF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: The thalamus is the obligatory relay for virtually all sensory modalities reaching the cortex: LGN (vision), MGN (auditory), VPM/VPL (somatosensory), and VP (taste). Olfaction is the notable exception — olfactory bulb projects directly to piriform cortex without thalamic relay (though olfactory information does reach the thalamus indirectly via MDN). S2 is TRUE: Retinal ganglion cell axons travel via the optic nerve, partially cross at the optic chiasm, and project to the LGN. LGN relay neurons project to layer IV of V1 via the optic radiations. The LGN has six layers: magnocellular (1-2), parvocellular (3-6), and koniocellular (between layers). S3 is FALSE: The thalamus is NOT a passive relay. Thalamocortical relay neurons receive massive feedback from the cortex (layer VI corticothalamic projections), modulatory input from the reticular nucleus and brainstem, and their firing mode (tonic vs. burst) is dynamically regulated. Only ~5-10% of synapses on relay neurons come from sensory afferents. S4 is TRUE: The thalamic reticular nucleus (TRN) is a thin GABAergic shell that receives collaterals from both thalamocortical and corticothalamic axons and provides inhibitory feedback to relay nuclei. TRN-thalamocortical interactions generate sleep spindles (11-15 Hz oscillations during stage 2 NREM sleep).",
       "isOlympiad": true,
@@ -1849,12 +1844,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the hypothalamus:\nS1: The hypothalamus controls body temperature, hunger, thirst, circadian rhythms, and autonomic nervous system function.\nS2: The suprachiasmatic nucleus (SCN) is the master circadian clock, containing neurons with autonomous ~24-hour oscillations driven by transcription-translation feedback loops (CLOCK/BMAL1, PER/CRY).\nS3: The hypothalamus has no connection to the pituitary gland.\nS4: Orexin (hypocretin) neurons in the lateral hypothalamus regulate wakefulness and appetite, and their loss causes narcolepsy.",
-      "options": [
-        "TTFT",
-        "TTTF",
-        "TFTT",
-        "TTTT"
-      ],
+      "options": ["TTFT", "TTTF", "TFTT", "TTTT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: The hypothalamus is the master regulator of homeostasis and autonomic function, containing numerous specialized nuclei: preoptic area (thermoregulation), arcuate nucleus (feeding via NPY/AgRP and POMC neurons), lateral hypothalamus (feeding/wakefulness), paraventricular nucleus (autonomic control, CRH/AVP secretion), supraoptic nucleus (AVP/oxytocin secretion), ventromedial hypothalamus (satiety, defensive behavior), SCN (circadian clock), and others. S2 is TRUE: The SCN contains ~20,000 neurons that generate circadian rhythms through interlocking transcription-translation feedback loops: CLOCK:BMAL1 heterodimers activate PER and CRY transcription; PER:CRY complexes inhibit CLOCK:BMAL1, creating ~24-hour oscillations. Light entrainment occurs via melanopsin-expressing retinal ganglion cells → retinohypothalamic tract → SCN. S3 is FALSE: The hypothalamus has EXTENSIVE connections to the pituitary gland: the hypothalamic-hypophyseal portal system carries releasing/inhibiting hormones to the anterior pituitary; magnocellular neurons project axons directly to the posterior pituitary for oxytocin and vasopressin release. S4 is TRUE: Lateral hypothalamic orexin neurons promote wakefulness by exciting LC, raphe, TMN, and cholinergic nuclei. Autoimmune destruction of orexin neurons causes narcolepsy type 1 (with cataplexy).",
       "isOlympiad": true,
@@ -1869,12 +1859,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the spinal cord:\nS1: The spinal cord gray matter is organized into dorsal horns (sensory processing), ventral horns (motor neurons), and intermediate zone (interneurons, autonomic neurons).\nS2: Alpha motor neurons in the ventral horn directly innervate extrafusal skeletal muscle fibers.\nS3: The corticospinal tract (pyramidal tract) crosses (decussates) at the pyramids of the medulla, so the left motor cortex controls the right side of the body.\nS4: All reflexes require processing by the cerebral cortex before a motor response can be generated.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: The spinal cord gray matter (butterfly-shaped in cross-section) is organized into: dorsal horn (laminae I-VI, receiving sensory afferents and containing projection neurons and interneurons for pain, temperature, touch processing); ventral horn (lamina IX, containing alpha and gamma motor neurons organized somatotopically); and intermediate zone (lamina VII, containing interneurons, propriospinal neurons, and the intermediolateral cell column in thoracolumbar segments for sympathetic preganglionic neurons). S2 is TRUE: Alpha motor neurons are lower motor neurons whose cell bodies are in the ventral horn and whose axons exit via the ventral root to innervate extrafusal (force-generating) skeletal muscle fibers at neuromuscular junctions. Each alpha motor neuron plus all the muscle fibers it innervates constitutes a 'motor unit.' S3 is TRUE: About 85-90% of corticospinal tract fibers cross at the pyramidal decussation in the caudal medulla, forming the lateral corticospinal tract. This means left motor cortex controls right-sided voluntary movements. S4 is FALSE: Spinal reflexes (stretch reflex, withdrawal reflex, crossed extensor reflex) are processed entirely within the spinal cord without cortical involvement. They are fast, stereotyped, involuntary responses.",
       "isOlympiad": true,
@@ -1889,12 +1874,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the organization of the cerebral cortex:\n(I) The neocortex is organized into six layers (I-VI), each with distinct cell types and connectivity — layer IV receives thalamocortical input, layers II/III project to other cortical areas, layer V projects subcortically, and layer VI provides feedback to the thalamus.\n(II) Brodmann mapped 52 distinct cytoarchitectonic areas based on cellular organization, many corresponding to functional areas (e.g., area 4 = motor cortex, area 17 = V1).\n(III) Cortical asymmetry (lateralization) is demonstrated by language localization — Broca's area (speech production) and Wernicke's area (speech comprehension) are predominantly in the left hemisphere.\n(IV) All cortical areas have identical cytoarchitecture with no regional variation.",
-      "options": [
-        "TTTT",
-        "TFTT",
-        "TTTF",
-        "TTFT"
-      ],
+      "options": ["TTTT", "TFTT", "TTTF", "TTFT"],
       "correctAnswer": "C",
       "explanation": "Statement I is TRUE: The six-layered neocortex has a canonical circuit. Layer I (molecular) — sparse neurons, dendrites. Layer II/III — small/medium pyramidal neurons, cortico-cortical projections. Layer IV — stellate cells, receives thalamocortical input (thick in sensory cortices). Layer V — large pyramidal neurons (Betz cells in motor cortex), projects to brainstem/spinal cord. Layer VI — corticothalamic feedback. Statement II is TRUE: Korbinian Brodmann (1909) mapped cortical areas based on cytoarchitecture. Area 4 (precentral gyrus) is primary motor cortex with giant layer V Betz cells. Area 17 (calcarine sulcus) is V1 with thick layer IV (stria of Gennari). Areas 3,1,2 (postcentral gyrus) are primary somatosensory cortex. Areas 44/45 are Broca's area. Statement III is TRUE: Language lateralization to the left hemisphere occurs in >95% of right-handed and ~70% of left-handed individuals. Broca's area damage causes non-fluent/expressive aphasia. Wernicke's area damage causes fluent/receptive aphasia. The arcuate fasciculus connects these areas. Split-brain studies (Sperry, Nobel Prize 1981) demonstrated hemispheric specialization: left hemisphere — language, analytical; right hemisphere — spatial, emotional prosody. Statement IV is FALSE: Cytoarchitectural variation is dramatic. V1 has a unique layer IV with sublayers (4Cα, 4Cβ). Motor cortex is agranular (thin layer IV, thick layer V). This variation is the basis of Brodmann's mapping and reflects different computational demands.",
       "isOlympiad": true,
@@ -1909,12 +1889,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the basal ganglia:\n(I) The basal ganglia consist of the striatum (caudate + putamen), globus pallidus (GPe, GPi), subthalamic nucleus (STN), and substantia nigra (SNc, SNr).\n(II) The direct pathway (D1-MSNs → GPi/SNr) disinhibits thalamocortical circuits to facilitate movement.\n(III) The indirect pathway (D2-MSNs → GPe → STN → GPi/SNr) increases thalamic inhibition to suppress unwanted movements.\n(IV) Parkinson's disease results from excessive dopamine in the substantia nigra.",
-      "options": [
-        "TTTT",
-        "TFTT",
-        "TTTF",
-        "TTFT"
-      ],
+      "options": ["TTTT", "TFTT", "TTTF", "TTFT"],
       "correctAnswer": "C",
       "explanation": "Statements I-III are TRUE: The direct pathway facilitates movement: cortex activates D1-MSNs (Gs-coupled D1 receptors excited by dopamine) → inhibit GPi/SNr → release thalamus from inhibition → thalamus excites motor cortex. The indirect pathway suppresses movement: cortex activates D2-MSNs (Gi-coupled D2 receptors inhibited by dopamine) → inhibit GPe → disinhibit STN → STN excites GPi/SNr → increased thalamic inhibition. Statement IV is FALSE: Parkinson's disease is caused by degeneration and LOSS of dopaminergic neurons in SNc, not excess. Loss of dopamine tips the D1/D2 balance: weakened direct pathway (less facilitation) + strengthened indirect pathway (more suppression) = bradykinesia, rigidity, tremor. Treatment: L-DOPA, dopamine agonists, MAO-B inhibitors, deep brain stimulation of STN.",
       "isOlympiad": true,
@@ -1929,12 +1904,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about invertebrate nervous system organization:\n(I) Cnidarians have a nerve net — diffuse, non-centralized neurons allowing radially symmetric responses.\n(II) Planarians show the earliest cephalization — anterior cerebral ganglion with ventral nerve cords.\n(III) Arthropods have segmental ventral ganglia that function semi-independently plus a cerebral ganglion with mushroom bodies (learning) and central complex (navigation).\n(IV) All invertebrate nervous systems are structurally identical to the vertebrate brain.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TTTF",
-        "TFTT"
-      ],
+      "options": ["TTFT", "TTTT", "TTTF", "TFTT"],
       "correctAnswer": "C",
       "explanation": "Statements I-III show the evolutionary progression toward centralization: (1) Cnidaria: Simplest nervous system. Bidirectional nerve net without centralization. Some species (box jellyfish) have concentrated neural tissue (rhopalia) with simple eyes. (2) Planaria: First cephalization. Bilobed cerebral ganglion + two ventral nerve cords with transverse commissures (ladder-like). Anterior sensory organs (eyespots, chemoreceptors). (3) Arthropoda: Sophisticated ventral chain ganglia. Brain = protocerebrum (mushroom bodies — olfactory learning analogous to hippocampus), deutocerebrum (antennal/olfactory processing with glomerular organization like vertebrate olfactory bulb), tritocerebrum. Segmental ganglia can control local reflexes independently. (4) Statement IV is FALSE: Fundamental differences include ventral vs dorsal nerve cord, neuron numbers (Drosophila ~100K vs human ~86 billion), absence of myelination in most invertebrates, and different developmental programs. However, molecular conservation is extensive (Hox genes, neurotransmitter systems, Shh/BMP axis).",
       "isOlympiad": true,
@@ -1949,12 +1919,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the blood-brain barrier (BBB) and cerebrospinal fluid (CSF) system:\nS1: The BBB is formed primarily by tight junctions between brain capillary endothelial cells, with astrocyte end-feet providing inductive signals for barrier maintenance.\nS2: CSF is produced mainly by choroid plexus epithelial cells in the ventricles through active secretion involving Na+/K+-ATPase and carbonic anhydrase.\nS3: The circumventricular organs (e.g., area postrema, median eminence) lack a BBB, allowing them to directly sense blood-borne signals.\nS4: The glymphatic system uses perivascular channels lined by aquaporin-4 on astrocytic end-feet to clear metabolic waste from the brain, primarily during wakefulness.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TFTT",
-        "TTFT"
-      ],
+      "options": ["TTTF", "TTTT", "TFTT", "TTFT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: The BBB is formed by specialized brain capillary endothelial cells connected by tight junctions (claudins, occludin, ZO proteins). Astrocyte end-feet ensheath approximately 99% of the brain vasculature and provide signals (including Shh, angiopoietin-1) that maintain and induce barrier properties, though they do not form the physical barrier themselves. S2 is TRUE: The choroid plexus, located in each ventricle, is the primary source of CSF production (approximately 500 mL/day in adults). The epithelial cells actively secrete CSF using Na+/K+-ATPase on the apical surface and carbonic anhydrase for bicarbonate transport, creating osmotic gradients that drive water movement. S3 is TRUE: Circumventricular organs including the area postrema (chemoreceptor trigger zone), median eminence, and organum vasculosum of the lamina terminalis have fenestrated capillaries lacking a BBB, enabling them to monitor circulating hormones, toxins, and metabolites. S4 is FALSE: The glymphatic system does use AQP4-lined perivascular channels for waste clearance, but it is most active during SLEEP (particularly NREM sleep), not wakefulness. During sleep, the interstitial space expands by approximately 60%, facilitating convective flow and clearance of metabolic waste including amyloid-beta.",
       "isOlympiad": true,
@@ -1969,12 +1934,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about cranial nerves and their functions:\nS1: The vagus nerve (CN X) provides parasympathetic innervation to thoracic and abdominal viscera, including heart rate reduction via ACh release at sinoatrial node muscarinic receptors.\nS2: The oculomotor nerve (CN III) controls all extraocular muscles and carries parasympathetic fibers for pupil constriction and lens accommodation.\nS3: The trigeminal nerve (CN V) is purely sensory, providing facial sensation from three divisions but no motor function.\nS4: The facial nerve (CN VII) controls muscles of facial expression and carries gustatory fibers from the anterior two-thirds of the tongue.",
-      "options": [
-        "TTFT",
-        "TFTT",
-        "TTTF",
-        "TTTT"
-      ],
+      "options": ["TTFT", "TFTT", "TTTF", "TTTT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: The vagus nerve (CN X) is the primary parasympathetic nerve for thoracic and abdominal organs. It releases acetylcholine at postganglionic terminals that act on M2 muscarinic receptors at the sinoatrial node, activating G-protein-coupled inward-rectifying potassium channels (GIRK) to slow heart rate. It also innervates the GI tract, lungs, and other visceral organs. S2 is TRUE: CN III (oculomotor) innervates the superior rectus, inferior rectus, medial rectus, inferior oblique, and levator palpebrae superioris muscles. It also carries preganglionic parasympathetic fibers that synapse in the ciliary ganglion, sending postganglionic fibers via short ciliary nerves to the sphincter pupillae (constriction) and ciliary muscle (accommodation). S3 is FALSE: The trigeminal nerve (CN V) is NOT purely sensory. While it provides sensation to the face via three divisions (ophthalmic V1, maxillary V2, mandibular V3), the mandibular division also carries motor fibers to the muscles of mastication (masseter, temporalis, lateral and medial pterygoids). S4 is TRUE: CN VII controls the muscles of facial expression (derived from the second pharyngeal arch) and carries taste fibers from the anterior two-thirds of the tongue via the chorda tympani branch.",
       "isOlympiad": true,
@@ -1989,12 +1949,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about neurological disorders and their neural basis:\nS1: Alzheimer's disease is characterized by extracellular amyloid-beta plaques and intracellular neurofibrillary tangles of hyperphosphorylated tau protein, with early degeneration in the entorhinal cortex and hippocampus.\nS2: Multiple sclerosis involves autoimmune destruction of oligodendrocytes in the CNS, leading to demyelination that slows or blocks saltatory conduction.\nS3: Huntington's disease results from CAG trinucleotide repeat expansion in the huntingtin gene, causing selective degeneration of striatal medium spiny neurons in the caudate nucleus.\nS4: Epilepsy is caused exclusively by excessive glutamatergic excitation, with GABAergic inhibition playing no role in seizure generation or termination.",
-      "options": [
-        "TTTT",
-        "TTTF",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Alzheimer's disease (AD) is the most common neurodegenerative disease and is neuropathologically defined by two hallmark lesions: extracellular senile plaques composed of aggregated amyloid-beta peptides (Abeta42 is particularly amyloidogenic) and intracellular neurofibrillary tangles (NFTs) of hyperphosphorylated tau protein. Neuropathological staging (Braak staging) shows that tau pathology begins in the entorhinal cortex (stages I-II) before spreading to the hippocampus (stages III-IV) and neocortex (stages V-VI). S2 is TRUE: MS is an autoimmune inflammatory disease targeting CNS myelin, specifically oligodendrocytes. T-cell-mediated and antibody-mediated immune attacks destroy myelin sheaths, creating demyelinated plaques that impair saltatory conduction, causing neurological deficits. S3 is TRUE: Huntington's disease is an autosomal dominant disorder caused by expansion of a CAG repeat (more than 36 repeats) in the HTT gene on chromosome 4. The mutant huntingtin protein with expanded polyglutamine tract is selectively toxic to medium spiny neurons in the striatum. S4 is FALSE: Epilepsy involves an imbalance between excitation and inhibition. Both excessive glutamate and insufficient GABA contribute. GABAergic interneurons play crucial roles in seizure initiation, propagation, and termination.",
       "isOlympiad": true,
@@ -2009,12 +1964,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about brain lateralization and split-brain studies:\nS1: In most right-handed individuals, the left hemisphere is dominant for language production and comprehension, as demonstrated by Wada test results and lesion studies.\nS2: The corpus callosum, containing approximately 200 million axons, is the primary commissure connecting homologous cortical areas of the two hemispheres.\nS3: In split-brain patients (corpus callosotomy), an object presented to the left visual field can be named verbally because visual information from the left field reaches the left (language-dominant) hemisphere directly.\nS4: The right hemisphere shows advantages in visuospatial processing, face recognition, and processing of emotional prosody in speech.",
-      "options": [
-        "TTFT",
-        "TTTF",
-        "TTTT",
-        "TFTT"
-      ],
+      "options": ["TTFT", "TTTF", "TTTT", "TFTT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: In approximately 95% of right-handed individuals (and about 70% of left-handed individuals), the left hemisphere is dominant for language. This has been confirmed through the Wada test (intracarotid amobarbital injection), lesion studies showing aphasia following left hemisphere damage, and functional neuroimaging studies demonstrating left-lateralized activation during language tasks. S2 is TRUE: The corpus callosum is the largest white matter tract in the brain, containing approximately 200 million axons that connect corresponding cortical regions of the two hemispheres, allowing interhemispheric communication and integration. S3 is FALSE: In split-brain patients, information presented to the left visual field projects to the RIGHT hemisphere (due to the contralateral organization of the visual system). Without the corpus callosum, this information cannot reach the left hemisphere's language centers, so the patient CANNOT verbally name the object, though they can select it with the left hand (controlled by the right hemisphere). S4 is TRUE: The right hemisphere shows specialization for visuospatial tasks, face recognition (right fusiform face area), emotional prosody comprehension, and holistic/gestalt processing.",
       "isOlympiad": true,
@@ -2029,12 +1979,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the hypothalamus and its role in homeostasis:\nS1: The suprachiasmatic nucleus (SCN) of the hypothalamus is the master circadian pacemaker, receiving direct retinal input via the retinohypothalamic tract and expressing clock genes (CLOCK, BMAL1, PER, CRY) in a transcription-translation feedback loop.\nS2: The paraventricular nucleus (PVN) of the hypothalamus is the origin of corticotropin-releasing hormone (CRH) neurons that regulate the hypothalamic-pituitary-adrenal (HPA) stress axis.\nS3: The arcuate nucleus contains two opposing neuronal populations for appetite regulation: orexigenic NPY/AgRP neurons and anorexigenic POMC/CART neurons, which respond to circulating leptin and ghrelin.\nS4: The hypothalamus has no direct connections to the autonomic nervous system and regulates body functions exclusively through the pituitary gland.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TFTT",
-        "TTFT"
-      ],
+      "options": ["TTTF", "TTTT", "TFTT", "TTFT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: The SCN is the master circadian clock, containing approximately 20,000 neurons that generate autonomous circadian rhythms through an interlocking transcription-translation feedback loop. CLOCK and BMAL1 heterodimerize to activate transcription of Period (PER1/2/3) and Cryptochrome (CRY1/2) genes, whose protein products accumulate and eventually inhibit CLOCK:BMAL1 activity, creating a roughly 24-hour cycle. The SCN receives photic entrainment signals via glutamatergic retinal ganglion cells (using melanopsin) through the retinohypothalamic tract. S2 is TRUE: Parvocellular neurons in the PVN synthesize CRH (and co-release AVP), which is released into the hypophyseal portal system to stimulate ACTH release from anterior pituitary corticotrophs, driving cortisol production from the adrenal cortex. S3 is TRUE: The arcuate nucleus contains the melanocortin appetite circuit. NPY/AgRP neurons promote feeding (orexigenic), while POMC/CART neurons suppress appetite (anorexigenic). Leptin from adipocytes inhibits NPY/AgRP and activates POMC neurons. Ghrelin from the stomach activates NPY/AgRP neurons. S4 is FALSE: The hypothalamus has extensive direct connections to the autonomic nervous system, projecting to brainstem autonomic nuclei and the intermediolateral cell column of the spinal cord.",
       "isOlympiad": true,
@@ -2049,12 +1994,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about neural development and synapse elimination:\nS1: During embryonic development, neurons are produced in excess, and approximately 50% undergo programmed cell death (apoptosis) mediated by the balance between pro-survival (BDNF, NGF) and pro-apoptotic signals.\nS2: Synaptic pruning during postnatal development is activity-independent and occurs uniformly across all brain regions at the same developmental stage.\nS3: The complement cascade (C1q, C3) tags weak synapses for elimination by microglia during developmental synaptic pruning, a process recently shown to be reactivated in neurodegenerative diseases.\nS4: Hebbian plasticity (fire together, wire together) and synaptic competition for limited neurotrophic factors are key mechanisms driving activity-dependent synapse refinement during development.",
-      "options": [
-        "TFTT",
-        "TTTF",
-        "TTTT",
-        "TFTF"
-      ],
+      "options": ["TFTT", "TTTF", "TTTT", "TFTF"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: The developing nervous system produces a substantial excess of neurons, with approximately 50% eliminated through apoptosis. Survival depends on competition for limited target-derived neurotrophic factors (BDNF, NGF, NT-3, NT-4). Neurons that successfully innervate targets and receive sufficient trophic support activate anti-apoptotic signaling (via Trk receptors, PI3K/Akt, Bcl-2 family), while those that fail to form appropriate connections undergo apoptosis (via caspase activation). S2 is FALSE: Synaptic pruning is NOT activity-independent; it is highly dependent on neural activity patterns. Furthermore, it occurs at different times in different brain regions, following a posterior-to-anterior developmental gradient, with sensory cortices pruned earlier than association cortices (prefrontal cortex pruning continues into the mid-20s in humans). S3 is TRUE: Recent research has revealed that the classical complement cascade (C1q, C3) is expressed by neurons at developing synapses and tags weak or inactive synapses for phagocytic elimination by microglia. Aberrant reactivation of this complement-mediated pruning mechanism has been implicated in Alzheimer's disease and schizophrenia. S4 is TRUE: Hebbian mechanisms and neurotrophic competition are the primary drivers of activity-dependent synaptic refinement.",
       "isOlympiad": true,
@@ -2069,12 +2009,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about glial cells and their functions:\nS1: Astrocytes regulate extracellular potassium concentration through spatial buffering via Kir4.1 channels, preventing hyperexcitability from K+ accumulation during sustained neuronal activity.\nS2: Oligodendrocyte precursor cells (OPCs/NG2 cells) can proliferate and differentiate into new myelinating oligodendrocytes in response to neural activity throughout adulthood, a process called adaptive myelination.\nS3: Astrocytes participate in the tripartite synapse by detecting neurotransmitter release (via metabotropic glutamate receptors), releasing gliotransmitters (glutamate, D-serine, ATP), and modulating synaptic transmission and plasticity.\nS4: Schwann cells in the peripheral nervous system can myelinate multiple axons simultaneously, with each Schwann cell wrapping up to 50 different axonal segments.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TFTT",
-        "TTFT"
-      ],
+      "options": ["TTTF", "TTTT", "TFTT", "TTFT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Astrocytes express inwardly rectifying potassium channels (Kir4.1) that take up excess K+ released during neuronal firing. Through their extensive gap junction-coupled syncytium, astrocytes redistribute (spatially buffer) this K+ to regions of lower concentration and to blood vessels, maintaining extracellular K+ at approximately 3 mM. Dysfunction of this system (Kir4.1 mutations) causes epilepsy. S2 is TRUE: OPCs (NG2 glia) are distributed throughout the adult CNS and retain the capacity to proliferate and differentiate into new oligodendrocytes. Recent research has demonstrated activity-dependent (adaptive) myelination, where neural activity promotes OPC proliferation and differentiation, leading to new myelin formation that can modify circuit function and support learning. S3 is TRUE: The tripartite synapse concept includes the presynaptic terminal, postsynaptic terminal, and perisynaptic astrocyte process. Astrocytes sense synaptic activity through metabotropic receptors and respond by releasing gliotransmitters through various mechanisms, modulating synaptic strength and plasticity. S4 is FALSE: Each Schwann cell myelinates only ONE internode on ONE axon. This is a fundamental difference from oligodendrocytes, which CAN myelinate multiple axons simultaneously (up to 40-60 internodes on different axons).",
       "isOlympiad": true,
@@ -2089,12 +2024,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about brain imaging techniques:\nS1: fMRI measures neural activity indirectly through the blood-oxygen-level-dependent (BOLD) signal, which reflects changes in the ratio of deoxyhemoglobin to oxyhemoglobin in active brain regions, with temporal resolution of 1-2 seconds.\nS2: EEG has excellent temporal resolution (milliseconds) but poor spatial resolution because scalp-recorded signals represent the summed activity of millions of synchronously active cortical neurons, with volume conduction through CSF, skull, and scalp blurring the signal.\nS3: PET scanning uses radioactive tracers to measure metabolic activity, cerebral blood flow, or receptor density with millimeter spatial resolution, but requires injection of radioactive isotopes and has temporal resolution of minutes.\nS4: Magnetoencephalography (MEG) detects the magnetic fields produced by inhibitory postsynaptic currents in deep subcortical structures, providing excellent spatial resolution for imaging the brainstem.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TFTT",
-        "TTFT"
-      ],
+      "options": ["TTTF", "TTTT", "TFTT", "TTFT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: fMRI measures the BOLD signal, an indirect proxy for neural activity. When neurons become active, local blood flow increases disproportionately (neurovascular coupling), delivering more oxygenated hemoglobin than is consumed. Since deoxyhemoglobin is paramagnetic and oxyhemoglobin is diamagnetic, the resulting decrease in deoxyhemoglobin concentration increases the local MR signal. The hemodynamic response peaks approximately 5-6 seconds after neural activity onset, giving fMRI temporal resolution of 1-2 seconds. S2 is TRUE: EEG records electrical potential differences on the scalp generated primarily by synchronous postsynaptic potentials in large populations of cortical pyramidal neurons. It has excellent temporal resolution (sub-millisecond) but poor spatial resolution (centimeters) due to volume conduction effects. S3 is TRUE: PET uses radioactive tracers (e.g., FDG for glucose metabolism, O-15 water for blood flow, C-11 raclopride for dopamine D2 receptors) to image brain function with spatial resolution of several millimeters. Temporal resolution is limited to minutes because sufficient radioactive decay events must accumulate for image reconstruction. S4 is FALSE: MEG detects magnetic fields primarily generated by tangentially oriented postsynaptic currents in cortical sulci (not inhibitory currents in deep structures). MEG has poor sensitivity to deep structures like the brainstem because magnetic field strength decreases rapidly with distance.",
       "isOlympiad": true,
@@ -2109,12 +2039,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the basal ganglia and movement disorders:\nS1: The direct pathway of the basal ganglia facilitates movement through a disinhibition mechanism: striatal D1 MSNs inhibit GPi/SNr, releasing the thalamus from tonic inhibition and enabling thalamocortical excitation.\nS2: The indirect pathway suppresses unwanted movements: striatal D2 MSNs inhibit GPe, disinhibiting STN, which excites GPi/SNr, increasing thalamic inhibition.\nS3: In Parkinson's disease, loss of dopaminergic neurons in the substantia nigra pars compacta reduces D1 receptor activation (weakening the direct pathway) and reduces D2 receptor inhibition (strengthening the indirect pathway), resulting in excessive GPi output and movement suppression.\nS4: Deep brain stimulation (DBS) of the subthalamic nucleus treats Parkinson's disease by permanently destroying the STN through thermal ablation.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TFTT",
-        "TTFT"
-      ],
+      "options": ["TTTF", "TTTT", "TFTT", "TTFT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: The direct pathway operates through a double inhibition (disinhibition) mechanism. Cortical glutamatergic input activates striatal medium spiny neurons (MSNs) expressing D1 dopamine receptors. These MSNs send GABAergic inhibitory projections directly to the internal segment of the globus pallidus (GPi) and substantia nigra pars reticulata (SNr), which tonically inhibit the thalamus. Inhibiting the inhibitor releases the ventral anterior/ventral lateral thalamic nuclei, allowing them to excite motor cortex and facilitate movement. S2 is TRUE: The indirect pathway adds additional processing stations. D2-expressing MSNs inhibit the external segment of the globus pallidus (GPe), which normally inhibits the subthalamic nucleus (STN). Disinhibited STN sends glutamatergic excitatory projections to GPi/SNr, increasing their inhibitory output to the thalamus and suppressing movement. S3 is TRUE: Loss of SNpc dopamine neurons in Parkinson's disease creates a dual imbalance: reduced D1 activation weakens the facilitatory direct pathway while reduced D2-mediated inhibition strengthens the suppressive indirect pathway, producing the cardinal features of bradykinesia, rigidity, and tremor. S4 is FALSE: DBS does not destroy the STN. It delivers continuous high-frequency electrical stimulation (typically 130 Hz) through implanted electrodes. The exact mechanism remains debated but likely involves functional disruption of pathological oscillatory activity rather than ablation.",
       "isOlympiad": true,
@@ -2129,12 +2054,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about spinal cord injury and recovery:\nS1: Complete spinal cord transection at the thoracic level produces immediate flaccid paralysis below the injury (spinal shock), followed by the gradual return of spastic reflexes below the lesion level as spinal circuits become hyperexcitable due to loss of descending inhibitory modulation.\nS2: Central pattern generators (CPGs) in the lumbar spinal cord can produce rhythmic stepping patterns in the absence of supraspinal input, as demonstrated by treadmill locomotion in spinalized cats after recovery from spinal shock.\nS3: Chondroitinase ABC treatment at the injury site degrades inhibitory chondroitin sulfate proteoglycans in the glial scar, promoting limited axonal regeneration in animal models of spinal cord injury.\nS4: Epidural electrical stimulation of the lumbar spinal cord in humans with complete spinal cord injury has failed to produce any voluntary movement in clinical trials, proving that the technology has no therapeutic potential.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TFTT",
-        "TTFT"
-      ],
+      "options": ["TTTF", "TTTT", "TFTT", "TTFT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Complete spinal cord transection produces initial spinal shock (areflexia, flaccid paralysis) below the injury level, lasting days to weeks. As spinal circuits recover from the acute insult and adapt to the loss of supraspinal modulation, hyperexcitable reflexes develop (spasticity, hyperreflexia, clonus, extensor spasms) due to upregulation of intrinsic spinal cord excitability, denervation supersensitivity, and sprouting of primary afferent terminals. S2 is TRUE: Grillner and others demonstrated that CPGs in the lumbar enlargement of the spinal cord can generate coordinated locomotor patterns (alternating flexion-extension, left-right coordination) without descending input. Spinalized cats on a treadmill, after recovery from spinal shock, show rhythmic stepping when the hindlimbs contact the moving belt, demonstrating CPG activation by peripheral sensory feedback alone. S3 is TRUE: The glial scar that forms after spinal cord injury contains chondroitin sulfate proteoglycans (CSPGs) produced by reactive astrocytes that inhibit axon regeneration. Enzymatic digestion of CSPGs with chondroitinase ABC has been shown to promote axonal sprouting and functional recovery in multiple animal models of SCI. S4 is FALSE: Epidural electrical stimulation (EES) of the lumbar spinal cord has shown remarkable success in recent clinical trials. Multiple studies have demonstrated that EES can restore voluntary movement in patients with clinically complete spinal cord injuries, likely by activating residual spared pathways and CPGs.",
       "isOlympiad": true,
@@ -2169,12 +2089,7 @@
     {
       "type": "MTF",
       "question": "Regarding the reticular formation and its role in brain function, evaluate these statements:\nI. The reticular formation is a diffuse network of neurons extending through the brainstem core from medulla to midbrain\nII. It plays a critical role in regulating arousal and sleep-wake transitions via the ascending reticular activating system (ARAS)\nIII. Damage to the reticular formation can result in irreversible coma even when the cerebral cortex is intact\nIV. The reticular formation exclusively controls motor functions and has no role in sensory filtering",
-      "options": [
-        "TTTF",
-        "TTFT",
-        "TFTT",
-        "FTTT"
-      ],
+      "options": ["TTTF", "TTFT", "TFTT", "FTTT"],
       "correctAnswer": "A",
       "explanation": "Statements I, II, and III are true; IV is false. (1) The reticular formation is a phylogenetically ancient network of ~100 nuclei spanning the brainstem tegmentum from caudal medulla through pons to midbrain. It receives collateral inputs from all sensory pathways. (2) The ascending reticular activating system (ARAS) projects to intralaminar thalamic nuclei and diffusely to cortex, maintaining wakefulness and conscious arousal. Key nuclei include locus coeruleus (NE), raphe nuclei (5-HT), pedunculopontine nucleus (ACh), and ventral tegmental area (DA). (3) Bilateral ARAS lesions cause profound coma despite intact cortex, demonstrated in classic transection experiments by Moruzzi and Magoun (1949). (4) Statement IV is false: the reticular formation is crucial for sensory filtering (gating), pain modulation (descending analgesia via periaqueductal gray and raphe nuclei), cardiovascular/respiratory reflexes, and modulating sensory transmission at thalamic level.",
       "isOlympiad": true,
@@ -2249,12 +2164,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about cerebrospinal fluid (CSF) and the ventricular system:\nI. CSF is produced primarily by choroid plexus epithelial cells at approximately 500 mL/day in humans\nII. CSF flows from lateral ventricles through foramina of Monro to third ventricle, cerebral aqueduct to fourth ventricle, then exits via median and lateral apertures to subarachnoid space\nIII. CSF is absorbed into venous sinuses through arachnoid granulations projecting into the superior sagittal sinus\nIV. Total CSF volume in humans is approximately 5 liters, replacing itself once per year",
-      "options": [
-        "TTFT",
-        "TTTF",
-        "FTTT",
-        "TFTT"
-      ],
+      "options": ["TTFT", "TTTF", "FTTT", "TFTT"],
       "correctAnswer": "B",
       "explanation": "Statements I, II, III true; IV false. (1) CSF production: Choroid plexus epithelial cells (modified ependymal) actively secrete CSF via Na+/K+-ATPase, carbonic anhydrase, aquaporin-1. Rate ~500 mL/day. Choroid plexus in all four ventricles, largest in lateral ventricles. (2) Circulation: Lateral ventricles to foramina of Monro to third ventricle to cerebral aqueduct (narrowest, blockage causes obstructive hydrocephalus) to fourth ventricle to median aperture (Magendie) and lateral apertures (Luschka) to subarachnoid space. (3) Absorption: Arachnoid granulations are one-way pressure-dependent valves draining CSF into dural venous sinuses. Absorption equals production at steady state. (4) IV is false: Total CSF ~150 mL, replaced 3-4 times daily (every 6-8 hours). Glymphatic system (perivascular channels using aquaporin-4 on astrocyte end-feet) supplements waste clearance, especially during sleep.",
       "isOlympiad": true,
@@ -2329,12 +2239,7 @@
     {
       "type": "MTF",
       "question": "Regarding the hypothalamus and neuroendocrine functions:\nI. Osmoreceptor neurons detect blood osmolarity changes of 1-2% and trigger ADH release from posterior pituitary\nII. Magnocellular neurons of supraoptic and paraventricular nuclei synthesize oxytocin and vasopressin, transported along axons to posterior pituitary\nIII. Parvocellular neurons release CRH into hypophyseal portal system to stimulate anterior pituitary ACTH release\nIV. The hypothalamus has no role in thermoregulation",
-      "options": [
-        "TTTF",
-        "FTTT",
-        "TFTT",
-        "TTFT"
-      ],
+      "options": ["TTTF", "FTTT", "TFTT", "TTFT"],
       "correctAnswer": "A",
       "explanation": "I, II, III true; IV false. (1) Osmoreceptors in circumventricular organs (OVLT, SFO) lack blood-brain barrier and detect 1-2% osmolarity changes via TRPV1/TRPV4 mechanosensitive channels. Increased osmolarity causes cell shrinkage, depolarization, ADH release. Also activate thirst circuits. (2) Magnocellular system: Large neurons (25-35 micrometers) in SON/PVN synthesize preprohormones packaged in dense-core vesicles, transported at 2-3mm/day to posterior pituitary fenestrated capillaries. Ca2+-dependent exocytosis. Vasopressin neurons fire phasic bursts. (3) Parvocellular: Small PVN neurons release CRH (plus AVP co-secretagogue) into portal capillaries at median eminence, reaching anterior pituitary corticotrophs for ACTH release. HPA axis shows circadian rhythm and stress activation. (4) IV is false: Preoptic/anterior hypothalamus is the thermostat. Warm-sensitive neurons trigger vasodilation/sweating. Posterior hypothalamus mediates cold responses. Prostaglandin E2 on preoptic neurons causes fever.",
       "isOlympiad": true,
@@ -2409,12 +2314,7 @@
     {
       "type": "MTF",
       "question": "Evaluate statements about the cerebral cortex and lateralization:\nI. The corpus callosum contains ~200 million axons connecting homologous regions of both hemispheres\nII. Split-brain studies revealed left hemisphere dominance for language production in right-handed individuals\nIII. The right hemisphere shows superiority for visuospatial processing, face recognition, and emotional prosody\nIV. Hemispheric lateralization means each hemisphere functions completely independently",
-      "options": [
-        "TFTT",
-        "FTTT",
-        "TTFT",
-        "TTTF"
-      ],
+      "options": ["TFTT", "FTTT", "TTFT", "TTTF"],
       "correctAnswer": "D",
       "explanation": "I, II, III true; IV false. (1) Corpus callosum: Largest white matter structure, ~200 million axons. Topographic: anterior connects prefrontal, body connects motor/somatosensory, splenium connects visual/parietal. (2) Left language dominance in ~95% right-handers, ~70% left-handers. Split-brain (Sperry, Gazzaniga): left visual field info (right hemisphere) cannot be verbally reported but guides left-hand responses. Broca's area (BA44/45) for production, Wernicke's area (BA22) for comprehension, connected by arcuate fasciculus. (3) Right hemisphere: Prosopagnosia from right fusiform face area lesions. Right TPJ for spatial attention (neglect from right parietal damage). Emotional prosody processed by right hemisphere vs. linguistic content by left. (4) IV false: Hemispheres constantly share via corpus callosum (transfer time 5-15ms), anterior, posterior, hippocampal commissures. Only callosotomy causes functional disconnection.",
       "isOlympiad": true,

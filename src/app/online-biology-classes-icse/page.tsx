@@ -94,9 +94,7 @@ export default function OnlineBiologyClassesICSEPage() {
       <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
-          <div
-            className="max-w-4xl animate-fadeInUp"
-          >
+          <div className="max-w-4xl animate-fadeInUp">
             <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <BookOpen className="h-4 w-4" />
               {board.studentCount} ICSE/ISC Students Enrolled
@@ -107,7 +105,9 @@ export default function OnlineBiologyClassesICSEPage() {
             <p className="mb-8 text-xl text-purple-100">{board.heroSubtitle}</p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20biology%20classes%20icse.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20biology%20classes%20icse.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg bg-yellow-500 px-8 py-3 font-semibold text-black shadow-lg transition hover:bg-yellow-400"
               >
                 <Play className="h-5 w-5" />
@@ -151,9 +151,7 @@ export default function OnlineBiologyClassesICSEPage() {
       {/* NEET Gap Alert */}
       <section className="bg-amber-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mx-auto max-w-4xl animate-fadeInUp"
-          >
+          <div className="mx-auto max-w-4xl animate-fadeInUp">
             <div className="mb-6 flex items-center justify-center gap-3">
               <AlertTriangle className="h-8 w-8 text-amber-600" />
               <h2 className="text-3xl font-bold text-gray-900">The ICSE-NEET Gap</h2>
@@ -190,9 +188,7 @@ export default function OnlineBiologyClassesICSEPage() {
       {/* Syllabus Focus */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Our ICSE → NEET Approach</h2>
             <p className="text-lg text-gray-600">Bridging the gap between ICSE and NCERT</p>
           </div>
@@ -214,9 +210,7 @@ export default function OnlineBiologyClassesICSEPage() {
       {/* Gap Topics */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               ICSE + NCERT Gap Topics We Cover
             </h2>
@@ -227,10 +221,7 @@ export default function OnlineBiologyClassesICSEPage() {
 
           <div className="grid gap-8 md:grid-cols-2">
             {board.chapters.map((classData, classIndex) => (
-              <div
-                key={classIndex}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={classIndex} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <h3 className="mb-4 flex items-center gap-2 text-xl font-bold text-purple-600">
                   <GraduationCap className="h-6 w-6" />
                   {classData.class}
@@ -255,19 +246,14 @@ export default function OnlineBiologyClassesICSEPage() {
       {/* Unique Features */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">ICSE-Specific Features</h2>
             <p className="text-lg text-gray-600">What makes our ICSE online classes special</p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {board.uniqueFeatures.map((feature, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-purple-50 p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-purple-50 p-6 shadow-lg animate-fadeInUp">
                 <FileText className="mb-4 h-10 w-10 text-purple-600" />
                 <p className="font-medium text-gray-800">{feature}</p>
               </div>
@@ -279,18 +265,13 @@ export default function OnlineBiologyClassesICSEPage() {
       {/* FAQs */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">FAQs for ICSE Students</h2>
           </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
@@ -346,7 +327,9 @@ export default function OnlineBiologyClassesICSEPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20biology%20classes%20icse.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20biology%20classes%20icse.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg bg-yellow-500 px-8 py-3 font-semibold text-black shadow-lg transition hover:bg-yellow-400"
               >
                 <Play className="h-5 w-5" />

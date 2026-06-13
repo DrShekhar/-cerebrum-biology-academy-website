@@ -103,11 +103,7 @@ export default function AbandonedCartsPage() {
               Recover lost revenue from incomplete enrollments and payments
             </p>
           </div>
-          <Button
-            variant="outline"
-            className="text-gray-700 border-gray-300"
-            onClick={fetchCarts}
-          >
+          <Button variant="outline" className="text-gray-700 border-gray-300" onClick={fetchCarts}>
             <RefreshCw className="w-4 h-4 mr-2" />
             Refresh
           </Button>
@@ -156,9 +152,7 @@ export default function AbandonedCartsPage() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">High Value</p>
-                <p className="text-2xl font-bold text-purple-600">
-                  {recovery?.highValue || 0}
-                </p>
+                <p className="text-2xl font-bold text-purple-600">{recovery?.highValue || 0}</p>
                 <p className="text-xs text-gray-500 mt-1">Above &#8377;10,000</p>
               </div>
               <div className="h-12 w-12 rounded-lg flex items-center justify-center bg-purple-100 text-purple-600">

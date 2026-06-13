@@ -101,9 +101,7 @@ export function EnrollmentDashboard({ isAdmin = false }: EnrollmentDashboardProp
 
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-        <div
-          className="bg-white rounded-2xl shadow-lg p-6 animate-fadeInUp"
-        >
+        <div className="bg-white rounded-2xl shadow-lg p-6 animate-fadeInUp">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-2xl font-bold text-gray-900">{stats.total}</h3>
@@ -113,9 +111,7 @@ export function EnrollmentDashboard({ isAdmin = false }: EnrollmentDashboardProp
           </div>
         </div>
 
-        <div
-          className="bg-white rounded-2xl shadow-lg p-6 animate-fadeInUp"
-        >
+        <div className="bg-white rounded-2xl shadow-lg p-6 animate-fadeInUp">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-2xl font-bold text-orange-600">{stats.pending}</h3>
@@ -125,9 +121,7 @@ export function EnrollmentDashboard({ isAdmin = false }: EnrollmentDashboardProp
           </div>
         </div>
 
-        <div
-          className="bg-white rounded-2xl shadow-lg p-6 animate-fadeInUp"
-        >
+        <div className="bg-white rounded-2xl shadow-lg p-6 animate-fadeInUp">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-2xl font-bold text-green-600">{stats.paid}</h3>
@@ -137,9 +131,7 @@ export function EnrollmentDashboard({ isAdmin = false }: EnrollmentDashboardProp
           </div>
         </div>
 
-        <div
-          className="bg-white rounded-2xl shadow-lg p-6 animate-fadeInUp"
-        >
+        <div className="bg-white rounded-2xl shadow-lg p-6 animate-fadeInUp">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-2xl font-bold text-red-600">{stats.failed}</h3>
@@ -206,10 +198,7 @@ export function EnrollmentDashboard({ isAdmin = false }: EnrollmentDashboardProp
             </thead>
             <tbody className="divide-y divide-gray-200">
               {filteredEnrollments.map((enrollment) => (
-                <tr
-                  key={enrollment.id}
-                  className="hover:bg-gray-50 transition-colors"
-                >
+                <tr key={enrollment.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-6 py-4">
                     <div className="flex items-center">
                       <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">

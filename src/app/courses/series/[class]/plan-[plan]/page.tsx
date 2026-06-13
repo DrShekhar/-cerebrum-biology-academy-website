@@ -100,9 +100,7 @@ export default function PlanDetailsPage() {
         {/* Hero Section */}
         <section className={`bg-gradient-to-r ${getSeriesGradient(series)} text-white py-16`}>
           <div className="max-w-7xl mx-auto px-6">
-            <div
-              className="text-center animate-fadeInUp"
-            >
+            <div className="text-center animate-fadeInUp">
               <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
                 <Target className="w-5 h-5" />
                 <span className="font-semibold">Plan {planLetter} Details</span>
@@ -161,8 +159,7 @@ export default function PlanDetailsPage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Features & Benefits */}
-              <div
-               className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 <h3 className="text-3xl font-bold text-gray-900 mb-8">
                   What's Included in Plan {planLetter}
                 </h3>
@@ -207,8 +204,7 @@ export default function PlanDetailsPage() {
               </div>
 
               {/* Plan Comparison & Details */}
-              <div
-               className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 <h3 className="text-3xl font-bold text-gray-900 mb-8">Detailed Breakdown</h3>
 
                 <div className="space-y-6">
@@ -298,9 +294,7 @@ export default function PlanDetailsPage() {
             </div>
 
             {/* Action Section */}
-            <div
-              className="mt-16 text-center animate-fadeInUp"
-            >
+            <div className="mt-16 text-center animate-fadeInUp">
               <div
                 className={`bg-gradient-to-r ${getSeriesGradient(series)} rounded-3xl p-12 text-white`}
               >

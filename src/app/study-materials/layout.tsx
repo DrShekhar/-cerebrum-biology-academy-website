@@ -21,8 +21,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/study-materials' },
   openGraph: {
     title: 'NEET Biology Study Materials | Cerebrum',
-    description:
-      '10,000+ MCQs + NCERT notes + mock tests + PYQ analysis. AIIMS faculty annotated.',
+    description: '10,000+ MCQs + NCERT notes + mock tests + PYQ analysis. AIIMS faculty annotated.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/study-materials',

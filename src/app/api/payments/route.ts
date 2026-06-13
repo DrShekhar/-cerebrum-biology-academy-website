@@ -179,10 +179,7 @@ export async function POST(request: NextRequest) {
         return await getBillingHistory(data as unknown as BillingHistoryData)
 
       default:
-        return NextResponse.json(
-          { error: 'Unknown action' },
-          { status: 400 }
-        )
+        return NextResponse.json({ error: 'Unknown action' }, { status: 400 })
     }
   } catch (error) {
     console.error('Payment API error:', error)
@@ -730,7 +727,6 @@ async function getBillingHistory(data: BillingHistoryData) {
 }
 
 async function demonstratePaymentSystem(data: DemoData) {
-
   const analytics = await paymentEngine.getSubscriptionAnalytics('month')
 
   return NextResponse.json({

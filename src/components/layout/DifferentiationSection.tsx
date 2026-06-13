@@ -204,9 +204,7 @@ export function DifferentiationSection({
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div
-          className="text-center mb-16 animate-fadeInUp"
-        >
+        <div className="text-center mb-16 animate-fadeInUp">
           <div className="inline-flex items-center gap-2 bg-yellow-900/30 backdrop-blur-sm border border-amber-500/30 rounded-full px-6 py-3 mb-6">
             <Flame className="w-5 h-5 text-amber-400" />
             <span className="text-amber-300 font-medium">The Brutal Truth</span>
@@ -231,9 +229,7 @@ export function DifferentiationSection({
         </div>
 
         {/* Comparison Matrix */}
-        <div
-          className="mb-20 animate-fadeInUp"
-        >
+        <div className="mb-20 animate-fadeInUp">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
             The <span className="text-green-500">Honest</span> Comparison
           </h2>
@@ -276,7 +272,9 @@ export function DifferentiationSection({
                         <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center">
                           <GraduationCap className="w-6 h-6 text-gray-300" />
                         </div>
-                        <span className="font-medium text-gray-300">Other Local Biology Academy</span>
+                        <span className="font-medium text-gray-300">
+                          Other Local Biology Academy
+                        </span>
                         <span className="text-xs text-gray-400">Local independent coaching</span>
                       </div>
                     </th>
@@ -323,9 +321,7 @@ export function DifferentiationSection({
         </div>
 
         {/* Unique Features Showcase */}
-        <div
-          className="mb-20 animate-fadeInUp"
-        >
+        <div className="mb-20 animate-fadeInUp">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
             Our <span className="text-green-500">Exclusive</span> Advantages
           </h2>
@@ -368,40 +364,36 @@ export function DifferentiationSection({
 
             {/* Active Feature Display */}
             <div className="lg:sticky lg:top-8">
-{uniqueFeatures.map(
-                  (feature) =>
-                    activeFeature === feature.id && (
-                      <div
-                        key={feature.id}
-                       className="animate-fadeInUp">
-                        <PremiumCard variant="luxury" className="text-center">
-                          <div
-                            className={`w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r ${feature.color} flex items-center justify-center`}
-                          >
-                            <feature.icon className="w-12 h-12 text-white" />
+              {uniqueFeatures.map(
+                (feature) =>
+                  activeFeature === feature.id && (
+                    <div key={feature.id} className="animate-fadeInUp">
+                      <PremiumCard variant="luxury" className="text-center">
+                        <div
+                          className={`w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r ${feature.color} flex items-center justify-center`}
+                        >
+                          <feature.icon className="w-12 h-12 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                        <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+                          {feature.description}
+                        </p>
+                        <div className="bg-green-800/30 border border-green-600/30 rounded-xl p-6">
+                          <div className="text-3xl font-bold text-green-500 mb-2">
+                            {feature.stats}
                           </div>
-                          <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                          <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                            {feature.description}
-                          </p>
-                          <div className="bg-green-800/30 border border-green-600/30 rounded-xl p-6">
-                            <div className="text-3xl font-bold text-green-500 mb-2">
-                              {feature.stats}
-                            </div>
-                            <div className="text-green-400 font-medium">{feature.benefit}</div>
-                          </div>
-                        </PremiumCard>
-                      </div>
-                    )
-                )}
-</div>
+                          <div className="text-green-400 font-medium">{feature.benefit}</div>
+                        </div>
+                      </PremiumCard>
+                    </div>
+                  )
+              )}
+            </div>
           </div>
         </div>
 
         {/* Visual Attention Calculator */}
-        <div
-          className="mb-20 animate-fadeInUp"
-        >
+        <div className="mb-20 animate-fadeInUp">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
             Your <span className="text-amber-400">Personal Attention</span> Calculator
           </h2>
@@ -467,9 +459,7 @@ export function DifferentiationSection({
         </div>
 
         {/* Call-to-Action Section */}
-        <div
-          className="text-center animate-fadeInUp"
-        >
+        <div className="text-center animate-fadeInUp">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white">
             See the <span className="text-green-500">Difference</span> Yourself
           </h2>

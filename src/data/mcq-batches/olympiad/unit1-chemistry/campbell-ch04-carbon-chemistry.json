@@ -509,12 +509,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about organic functional groups in biology:\nS1: The hydroxyl group (-OH) is polar and participates in hydrogen bonding, making molecules like sugars and alcohols soluble in water.\nS2: The amino group (-NH\u2082) acts as a base at physiological pH, accepting a proton to form -NH\u2083\u207a.\nS3: The carbonyl group (C=O) is nonpolar because the electrons are shared equally between carbon and oxygen.\nS4: The phosphate group transfers between molecules in kinase-catalyzed reactions and carries negative charge at physiological pH.",
-      "options": [
-        "T, T, F, T",
-        "T, F, T, T",
-        "F, T, F, T",
-        "T, T, T, F"
-      ],
+      "options": ["T, T, F, T", "T, F, T, T", "F, T, F, T", "T, T, T, F"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: The hydroxyl group (-OH) has an electronegative oxygen that creates a permanent dipole, allowing it to form hydrogen bonds both as a donor (O-H\u00b7\u00b7\u00b7X) and acceptor (X\u00b7\u00b7\u00b7O). This makes hydroxyl-containing molecules hydrophilic. S2 is TRUE: The amino group's nitrogen has a lone pair that readily accepts a proton at physiological pH (amino groups typically have pKa ~9-10), forming the positively charged ammonium ion (-NH\u2083\u207a). This is why amino acids exist as zwitterions at pH 7.4. S3 is FALSE: The carbonyl group is highly polar. Oxygen (electronegativity 3.44) pulls electron density away from carbon (electronegativity 2.55), creating a significant dipole moment (\u03b4+ on carbon, \u03b4- on oxygen). This polarity makes carbonyl carbons electrophilic and susceptible to nucleophilic attack. S4 is TRUE: Protein kinases transfer the terminal (\u03b3) phosphate group from ATP to serine, threonine, or tyrosine residues. At pH 7.4, phosphate groups carry approximately -2 charge.",
       "isOlympiad": true,
@@ -529,12 +524,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about isomerism in biological molecules:\nS1: D-glucose and L-glucose are enantiomers \u2014 they are mirror images that cannot be superimposed, and only D-glucose is used in mammalian metabolism.\nS2: Cis and trans fatty acids differ in their three-dimensional shape around a C=C double bond, with cis double bonds creating kinks that reduce membrane fluidity.\nS3: \u03b1-glucose and \u03b2-glucose are anomers that differ in the configuration at the anomeric carbon (C-1), and this difference determines whether they form starch (\u03b1-1,4 linkages) or cellulose (\u03b2-1,4 linkages).\nS4: Constitutional (structural) isomers like glucose (aldose) and fructose (ketose) have different molecular formulas.",
-      "options": [
-        "T, F, T, F",
-        "T, T, T, T",
-        "T, F, T, T",
-        "F, T, F, T"
-      ],
+      "options": ["T, F, T, F", "T, T, T, T", "T, F, T, T", "F, T, F, T"],
       "correctAnswer": "TFTF",
       "explanation": "S1 is TRUE: D-glucose and L-glucose are enantiomers (mirror images at all chiral centers). Due to the chirality of enzymes (built from L-amino acids), only D-glucose is recognized and metabolized by mammalian glycolytic enzymes. L-glucose passes through the body unmetabolized. S2 is FALSE: Cis double bonds create kinks that INCREASE (not reduce) membrane fluidity by preventing tight packing of fatty acid chains. Trans fatty acids pack more tightly, similar to saturated fats, and actually decrease fluidity. S3 is TRUE: \u03b1-glucose and \u03b2-glucose are anomers \u2014 they differ in the hydroxyl orientation at C-1 (the anomeric carbon). \u03b1-glucose has the C-1 OH in the axial position (down in Haworth projection), while \u03b2-glucose has it equatorial (up). This difference leads to \u03b1-1,4 linkages in starch and \u03b2-1,4 linkages in cellulose, with dramatically different digestibility. S4 is FALSE: Glucose and fructose are constitutional isomers with the SAME molecular formula (C\u2086H\u2081\u2082O\u2086) but different structural arrangements.",
       "isOlympiad": true,
@@ -549,12 +539,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about carbon bonding and molecular geometry:\nS1: A carbon atom with four single bonds adopts sp\u00b3 hybridization with tetrahedral geometry and bond angles of 109.5\u00b0.\nS2: Rotation around C=C double bonds is freely possible at body temperature, allowing rapid interconversion of cis and trans isomers.\nS3: Carbon chains can include branching, which affects physical properties \u2014 branched-chain hydrocarbons have lower boiling points than their straight-chain isomers due to reduced van der Waals contact area.\nS4: Carbon can form stable bonds with electronegative elements like nitrogen and oxygen, as well as electropositive elements like metals, but carbon-metal bonds (organometallics) are rare in biology.",
-      "options": [
-        "T, F, T, T",
-        "T, T, F, T",
-        "F, F, T, T",
-        "T, F, T, F"
-      ],
+      "options": ["T, F, T, T", "T, T, F, T", "F, F, T, T", "T, F, T, F"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: With four single bonds (all \u03c3), carbon undergoes sp\u00b3 hybridization, producing four equivalent hybrid orbitals directed toward the corners of a tetrahedron with angles of 109.5\u00b0. Examples include methane and the \u03b1-carbon of amino acids. S2 is FALSE: The pi bond in C=C double bonds prevents free rotation. Breaking a pi bond requires ~260 kJ/mol of energy, far exceeding thermal energy at body temperature (~2.5 kJ/mol at 37\u00b0C). This is why cis-trans interconversion requires either enzymes (retinal isomerase), photons (vision), or extreme heat. S3 is TRUE: Branching reduces the surface area available for van der Waals (London dispersion) interactions between molecules, lowering boiling points. For example, neopentane (bp 9.5\u00b0C) < isopentane (bp 28\u00b0C) < n-pentane (bp 36\u00b0C). S4 is TRUE: Carbon bonds readily to N, O, S, P (common in biochemistry). Carbon-metal bonds exist in organometallic compounds, but in biology they are rare \u2014 vitamin B12 (cobalamin) contains a notable Co-C bond.",
       "isOlympiad": true,
@@ -849,12 +834,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about hydrolysis and condensation reactions:\nS1: Hydrolysis adds a water molecule to break a covalent bond, while condensation removes a water molecule to form a covalent bond.\nS2: The hydrolysis of ATP (ATP + H\u2082O \u2192 ADP + Pi, \u0394G\u00b0 = -30.5 kJ/mol) is exergonic because the products are more stable due to resonance stabilization, charge repulsion relief, and increased entropy.\nS3: Condensation reactions in cells are endergonic and must be coupled to exergonic reactions like ATP hydrolysis to proceed.\nS4: Hydrolysis reactions require enzymes in biological systems because the activation energy is too high for spontaneous hydrolysis at body temperature.",
-      "options": [
-        "T, T, T, T",
-        "T, T, T, F",
-        "T, F, T, T",
-        "F, T, F, T"
-      ],
+      "options": ["T, T, T, T", "T, T, T, F", "T, F, T, T", "F, T, F, T"],
       "correctAnswer": "TTTT",
       "explanation": "S1 is TRUE: This is the fundamental definition. Hydrolysis (hydro = water, lysis = breaking) uses water to cleave bonds (peptide, glycosidic, ester, phosphodiester). Condensation (dehydration synthesis) removes water to form these bonds. S2 is TRUE: ATP hydrolysis is exergonic for multiple reasons: (1) the products ADP and Pi have greater resonance stabilization than ATP, (2) relieving electrostatic repulsion among the closely spaced negative charges of the triphosphate chain, (3) increased entropy from one molecule becoming two, and (4) favorable solvation of the products. S3 is TRUE: Forming biopolymers (proteins, DNA, polysaccharides) requires energy because condensation is endergonic. In cells, this energy comes from ATP/GTP hydrolysis \u2014 for example, aminoacyl-tRNA synthetases couple amino acid activation to ATP hydrolysis. S4 is TRUE: While hydrolysis is thermodynamically favorable, the activation energies are very high. Uncatalyzed peptide bond hydrolysis has a half-life of ~350-600 years. Biological hydrolysis depends on specific enzymes (proteases, nucleases, glycosidases, lipases) to lower activation energy.",
       "isOlympiad": true,
@@ -869,12 +849,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about the biological importance of chirality:\nS1: All amino acids found in proteins (except glycine) are L-amino acids, and this homochirality is essential for proper protein folding.\nS2: D-amino acids are never found in nature and are purely synthetic artifacts.\nS3: The enzyme lactate dehydrogenase produces only L-lactate in mammalian metabolism, demonstrating enzyme stereospecificity.\nS4: Racemic mixtures (50:50 R and S) are always pharmacologically inactive because the enantiomers cancel each other's effects.",
-      "options": [
-        "T, F, T, F",
-        "T, T, T, T",
-        "F, F, T, F",
-        "T, F, F, T"
-      ],
+      "options": ["T, F, T, F", "T, T, T, T", "F, F, T, F", "T, F, F, T"],
       "correctAnswer": "TFTF",
       "explanation": "S1 is TRUE: With the exception of glycine (which is achiral), all proteinogenic amino acids are L-amino acids. This homochirality is essential because mixing L- and D-amino acids would disrupt the regular hydrogen bonding patterns required for \u03b1-helices and \u03b2-sheets. S2 is FALSE: D-amino acids ARE found in nature \u2014 they are present in bacterial cell wall peptidoglycan (D-alanine, D-glutamate), some antimicrobial peptides (gramicidin), and as neurotransmitters (D-serine in the mammalian brain acts as an NMDA receptor co-agonist). D-amino acid oxidases exist in many organisms. S3 is TRUE: L-lactate dehydrogenase (L-LDH) stereospecifically produces L-lactate from pyruvate using NADH. The enzyme's active site has a precise chiral geometry that positions the substrate for hydride transfer to only one face of the pyruvate carbonyl. S4 is FALSE: Racemic mixtures are NOT always inactive. Often one enantiomer is active and the other is inactive (not inhibitory), so the racemic mixture shows half the activity of the pure active enantiomer.",
       "isOlympiad": true,
@@ -1189,12 +1164,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about carbon's role in biological energy storage:\nS1: The C-H bond is a source of metabolic energy because its oxidation (removal of electrons) releases energy that can be captured in electron carriers like NADH and FADH\u2082.\nS2: Fats store more energy per gram than carbohydrates because fatty acid carbon atoms are more reduced (more C-H bonds) than carbohydrate carbon atoms.\nS3: Complete oxidation of glucose (C\u2086H\u2081\u2082O\u2086) to CO\u2082 and H\u2082O yields approximately 686 kcal/mol (2870 kJ/mol) of free energy.\nS4: ATP is the cell's primary energy currency because the C-C bonds in adenosine store all of the molecule's chemical energy.",
-      "options": [
-        "T, T, T, F",
-        "T, T, F, T",
-        "F, T, T, F",
-        "T, F, T, T"
-      ],
+      "options": ["T, T, T, F", "T, T, F, T", "F, T, T, F", "T, F, T, T"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: C-H bonds represent a reduced form of carbon. During metabolic oxidation, electrons and hydrogens are removed from C-H bonds by dehydrogenases, transferred to NAD\u207a or FAD to form NADH or FADH\u2082, and ultimately passed down the electron transport chain to O\u2082, driving ATP synthesis. S2 is TRUE: In fatty acids like palmitate (C\u2081\u2086H\u2083\u2082O\u2082), most carbons are bonded to H (average oxidation state \u2248 -2), while in glucose (C\u2086H\u2081\u2082O\u2086) carbons have an average oxidation state of 0. The more reduced state of fat carbons means more electrons can be extracted, yielding ~9 kcal/g for fat vs ~4 kcal/g for carbohydrate. S3 is TRUE: The standard free energy of complete glucose oxidation (C\u2086H\u2081\u2082O\u2086 + 6O\u2082 \u2192 6CO\u2082 + 6H\u2082O) is \u0394G\u00b0 = -686 kcal/mol (2870 kJ/mol). S4 is FALSE: ATP's energy is stored primarily in its phosphoanhydride bonds (P-O-P), not C-C bonds of adenosine. The hydrolysis of the \u03b3-phosphate releases ~-30.5 kJ/mol.",
       "isOlympiad": true,

@@ -239,10 +239,16 @@ export default function FailedPaymentsPage() {
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center space-x-2">
-                          <button className="text-blue-600 hover:text-blue-900" title="View details">
+                          <button
+                            className="text-blue-600 hover:text-blue-900"
+                            title="View details"
+                          >
                             <Eye className="w-4 h-4" />
                           </button>
-                          <button className="text-green-600 hover:text-green-900" title="Retry payment">
+                          <button
+                            className="text-green-600 hover:text-green-900"
+                            title="Retry payment"
+                          >
                             <RotateCcw className="w-4 h-4" />
                           </button>
                         </div>

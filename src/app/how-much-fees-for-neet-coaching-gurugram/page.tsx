@@ -29,13 +29,15 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Fees in Gurugram 2026 | ₹45K-₹3L Comparison',
-    description: 'NEET coaching fees in Gurugram (Gurgaon) range from ₹45,000 to ₹3,00,000. Compare the 2nd-largest national NEET chain, the largest national NEET chain, Cerebrum fees. What',
+    description:
+      'NEET coaching fees in Gurugram (Gurgaon) range from ₹45,000 to ₹3,00,000. Compare the 2nd-largest national NEET chain, the largest national NEET chain, Cerebrum fees. What',
   },
 }
 
 const feeComparison = [
   {
-    institute: 'Large Coaching (the 2nd-largest national NEET chain/the largest national NEET chain)',
+    institute:
+      'Large Coaching (the 2nd-largest national NEET chain/the largest national NEET chain)',
     fees: '₹1.5L - ₹3L',
     batch: '100-200',
     included: 'Books, Tests',
@@ -104,7 +106,11 @@ export default function HowMuchFeesForNEETCoaching() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

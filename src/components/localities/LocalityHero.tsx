@@ -67,7 +67,9 @@ export default function LocalityHero({ locality }: LocalityHeroProps) {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll.%20Please%20share%20details." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll.%20Please%20share%20details."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
                 Enroll Now

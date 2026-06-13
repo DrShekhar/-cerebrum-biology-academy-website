@@ -450,7 +450,9 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
 
             <div className="mt-8 text-center">
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20locations.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20locations.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 View Detailed Pricing & Enroll
@@ -470,31 +472,44 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
             <div className="space-y-6">
               <div className="rounded-xl bg-blue-50 border border-blue-200 p-6">
                 <div className="flex items-center gap-3 mb-3">
-                  <span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${
-                    locality.educationalLandscape.neetDemandLevel === 'very-high'
-                      ? 'bg-red-100 text-red-800'
-                      : locality.educationalLandscape.neetDemandLevel === 'high'
-                        ? 'bg-orange-100 text-orange-800'
-                        : locality.educationalLandscape.neetDemandLevel === 'moderate'
-                          ? 'bg-yellow-100 text-yellow-800'
-                          : 'bg-green-100 text-green-800'
-                  }`}>
-                    {locality.educationalLandscape.neetDemandLevel.replace('-', ' ').toUpperCase()} DEMAND
+                  <span
+                    className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${
+                      locality.educationalLandscape.neetDemandLevel === 'very-high'
+                        ? 'bg-red-100 text-red-800'
+                        : locality.educationalLandscape.neetDemandLevel === 'high'
+                          ? 'bg-orange-100 text-orange-800'
+                          : locality.educationalLandscape.neetDemandLevel === 'moderate'
+                            ? 'bg-yellow-100 text-yellow-800'
+                            : 'bg-green-100 text-green-800'
+                    }`}
+                  >
+                    {locality.educationalLandscape.neetDemandLevel.replace('-', ' ').toUpperCase()}{' '}
+                    DEMAND
                   </span>
                 </div>
-                <p className="text-gray-700 leading-relaxed">{locality.educationalLandscape.demandExplanation}</p>
+                <p className="text-gray-700 leading-relaxed">
+                  {locality.educationalLandscape.demandExplanation}
+                </p>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Competition Analysis</h3>
-                <p className="text-gray-700 leading-relaxed">{locality.educationalLandscape.competitionAnalysis}</p>
+                <p className="text-gray-700 leading-relaxed">
+                  {locality.educationalLandscape.competitionAnalysis}
+                </p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">What Parents Are Asking</h3>
-                <p className="text-gray-700 leading-relaxed">{locality.educationalLandscape.parentConcerns}</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  What Parents Are Asking
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  {locality.educationalLandscape.parentConcerns}
+                </p>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Study Culture Trends</h3>
-                <p className="text-gray-700 leading-relaxed">{locality.educationalLandscape.studyCultureTrend}</p>
+                <p className="text-gray-700 leading-relaxed">
+                  {locality.educationalLandscape.studyCultureTrend}
+                </p>
               </div>
             </div>
           </div>
@@ -573,7 +588,9 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20locations.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20locations.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
             >
               Enroll Now

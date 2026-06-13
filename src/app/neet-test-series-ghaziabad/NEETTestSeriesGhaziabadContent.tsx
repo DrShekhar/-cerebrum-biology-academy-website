@@ -186,7 +186,8 @@ export default function NEETTestSeriesGhaziabadContent({ faqs }: { faqs: FAQ[] }
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-8 inline-block">
               <p className="text-white text-lg">
-                Starting from <span className="text-yellow-400 font-bold text-2xl">&#8377;6,000</span>
+                Starting from{' '}
+                <span className="text-yellow-400 font-bold text-2xl">&#8377;6,000</span>
               </p>
             </div>
 
@@ -465,7 +466,12 @@ export default function NEETTestSeriesGhaziabadContent({ faqs }: { faqs: FAQ[] }
               <h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3>
               <p className="text-sm text-gray-600">All programs</p>
             </Link>
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" className="bg-white p-4 rounded-xl hover:shadow-md">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white p-4 rounded-xl hover:shadow-md"
+            >
               <h3 className="font-semibold text-teal-600">Book Demo</h3>
               <p className="text-sm text-gray-600">Free counseling</p>
             </Link>

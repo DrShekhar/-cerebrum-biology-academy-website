@@ -2,14 +2,7 @@
 
 import React, { useState, useMemo } from 'react'
 import Link from 'next/link'
-import {
-  AlertTriangle,
-  BookOpen,
-  FileQuestion,
-  Timer,
-  ArrowUpDown,
-  Star,
-} from 'lucide-react'
+import { AlertTriangle, BookOpen, FileQuestion, Timer, ArrowUpDown, Star } from 'lucide-react'
 
 interface WeakArea {
   chapter: string

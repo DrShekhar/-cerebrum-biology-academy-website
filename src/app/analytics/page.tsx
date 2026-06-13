@@ -199,9 +199,7 @@ export default function AnalyticsPage() {
       {/* Hero Section */}
       <section className="bg-indigo-500 text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <h1 className="text-4xl font-bold mb-4">Your Performance Analytics</h1>
             <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
               Deep insights into your NEET preparation journey with AI-powered recommendations to

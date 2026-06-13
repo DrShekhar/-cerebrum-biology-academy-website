@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function TwoYearProgramIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -12,12 +12,7 @@ export function TwoYearProgramIllustration({ className = '', animate = true }: I
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Background */}
       <defs>
         <linearGradient id="twoYearGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -28,16 +23,10 @@ export function TwoYearProgramIllustration({ className = '', animate = true }: I
       <rect width="400" height="300" fill="url(#twoYearGradient)" />
 
       {/* Timeline line */}
-      <path
-        d="M50 150 L350 150"
-        stroke="#9CA3AF"
-        strokeWidth="4"
-        strokeLinecap="round"
-      />
+      <path d="M50 150 L350 150" stroke="#9CA3AF" strokeWidth="4" strokeLinecap="round" />
 
       {/* Year 1 - Class 11 */}
-      <g
-      >
+      <g>
         <circle cx="100" cy="150" r="25" fill="#8B5CF6" />
         <text x="100" y="145" textAnchor="middle" fill="#FFF" fontSize="9" fontWeight="600">
           YEAR
@@ -75,8 +64,7 @@ export function TwoYearProgramIllustration({ className = '', animate = true }: I
       </g>
 
       {/* Midpoint - Revision */}
-      <g
-      >
+      <g>
         <circle cx="200" cy="150" r="18" fill="#F59E0B" />
         <text x="200" y="154" textAnchor="middle" fill="#FFF" fontSize="8" fontWeight="600">
           MID
@@ -101,8 +89,7 @@ export function TwoYearProgramIllustration({ className = '', animate = true }: I
       </g>
 
       {/* Year 2 - Class 12 */}
-      <g
-      >
+      <g>
         <circle cx="300" cy="150" r="25" fill="#22C55E" />
         <text x="300" y="145" textAnchor="middle" fill="#FFF" fontSize="9" fontWeight="600">
           YEAR
@@ -137,16 +124,14 @@ export function TwoYearProgramIllustration({ className = '', animate = true }: I
       </g>
 
       {/* NEET Exam endpoint */}
-      <g
-      >
+      <g>
         <circle cx="350" cy="150" r="15" fill="#EF4444" />
         <text x="350" y="154" textAnchor="middle" fill="#FFF" fontSize="7" fontWeight="700">
           NEET
         </text>
 
         {/* Trophy */}
-        <g
-        >
+        <g>
           <rect x="338" y="170" width="24" height="30" rx="4" fill="#FCD34D" />
           <circle cx="350" cy="180" r="8" fill="#F59E0B" />
           <rect x="345" y="200" width="10" height="8" fill="#F59E0B" />
@@ -154,16 +139,10 @@ export function TwoYearProgramIllustration({ className = '', animate = true }: I
       </g>
 
       {/* Progress arrow */}
-      <path
-        d="M75 150 L325 150"
-        stroke="#22C55E"
-        strokeWidth="3"
-        strokeLinecap="round"
-      />
+      <path d="M75 150 L325 150" stroke="#22C55E" strokeWidth="3" strokeLinecap="round" />
 
       {/* Title */}
-      <g
-      >
+      <g>
         <rect x="100" y="250" width="200" height="35" rx="6" fill="#1F2937" />
         <text x="200" y="272" textAnchor="middle" fill="#FFF" fontSize="12" fontWeight="600">
           2-Year NEET Program
@@ -171,8 +150,7 @@ export function TwoYearProgramIllustration({ className = '', animate = true }: I
       </g>
 
       {/* Benefits bubbles */}
-      <g
-      >
+      <g>
         <circle cx="30" cy="80" r="25" fill="#DBEAFE" />
         <text x="30" y="77" textAnchor="middle" fill="#1D4ED8" fontSize="7" fontWeight="600">
           No

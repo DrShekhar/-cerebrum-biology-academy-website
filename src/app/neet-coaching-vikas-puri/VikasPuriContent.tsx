@@ -190,9 +190,7 @@ export default function VikasPuriContent() {
           </div>
 
           <div className="max-w-6xl mx-auto relative z-10">
-            <div
-              className="text-center animate-fadeInUp"
-            >
+            <div className="text-center animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
                 <MapPin className="w-4 h-4" />
                 <span className="text-sm font-medium">Serving All 9 Blocks of Vikas Puri</span>
@@ -209,7 +207,9 @@ export default function VikasPuriContent() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20vikas%20puri.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20vikas%20puri.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
                 >
                   Book FREE Demo Class
@@ -259,9 +259,7 @@ export default function VikasPuriContent() {
         {/* Why Vikas Puri Section */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 NEET Coaching for Vikas Puri Residents
               </h2>
@@ -271,9 +269,7 @@ export default function VikasPuriContent() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <div
-                className="bg-white p-8 rounded-2xl shadow-lg animate-fadeInUp"
-              >
+              <div className="bg-white p-8 rounded-2xl shadow-lg animate-fadeInUp">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
                     <Building2 className="w-6 h-6 text-green-600" />
@@ -290,9 +286,7 @@ export default function VikasPuriContent() {
                 </ul>
               </div>
 
-              <div
-                className="bg-white p-8 rounded-2xl shadow-lg animate-fadeInUp"
-              >
+              <div className="bg-white p-8 rounded-2xl shadow-lg animate-fadeInUp">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
                     <Train className="w-6 h-6 text-green-600" />
@@ -332,9 +326,7 @@ export default function VikasPuriContent() {
         {/* Features Section */}
         <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Why Vikas Puri Students Choose Cerebrum
               </h2>
@@ -360,9 +352,7 @@ export default function VikasPuriContent() {
         {/* Free NEET Tools */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Free NEET Preparation Tools</h2>
               <p className="text-gray-600">
                 Use our free tools to plan your NEET journey effectively
@@ -371,9 +361,7 @@ export default function VikasPuriContent() {
 
             <div className="grid md:grid-cols-3 gap-6">
               {freeTools.map((tool, index) => (
-                <div
-                  key={index}
-                 className="animate-fadeInUp">
+                <div key={index} className="animate-fadeInUp">
                   <Link
                     href={tool.link}
                     className="block bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
@@ -396,9 +384,7 @@ export default function VikasPuriContent() {
         {/* Nearby Areas */}
         <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Students from All Vikas Puri Areas
               </h2>
@@ -422,9 +408,7 @@ export default function VikasPuriContent() {
         {/* Testimonial */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
-            <div
-              className="bg-white p-8 rounded-2xl shadow-lg animate-fadeInUp"
-            >
+            <div className="bg-white p-8 rounded-2xl shadow-lg animate-fadeInUp">
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
@@ -454,21 +438,14 @@ export default function VikasPuriContent() {
         {/* FAQ */}
         <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Frequently Asked Questions
-              </h2>
+            <div className="text-center mb-12 animate-fadeInUp">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
               <p className="text-gray-600">Common questions from Vikas Puri students</p>
             </div>
 
             <div className="space-y-4">
               {faqStructuredData.mainEntity.map((faq, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-6 rounded-xl shadow-md animate-fadeInUp"
-                >
+                <div key={index} className="bg-white p-6 rounded-xl shadow-md animate-fadeInUp">
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{faq.name}</h3>
                   <p className="text-gray-600">{faq.acceptedAnswer.text}</p>
                 </div>
@@ -480,8 +457,7 @@ export default function VikasPuriContent() {
         {/* CTA */}
         <section className="py-16 px-4 bg-[#4a5d4a] text-white">
           <div className="max-w-4xl mx-auto text-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl font-bold mb-4">
                 Start Your NEET Journey from Vikas Puri Today
               </h2>
@@ -492,7 +468,9 @@ export default function VikasPuriContent() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20vikas%20puri.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20vikas%20puri.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
                 >
                   Book FREE Demo Class

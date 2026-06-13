@@ -298,8 +298,7 @@ function StatCard({
   trendValue?: string
 }) {
   return (
-    <div
-     className="animate-fadeInUp">
+    <div className="animate-fadeInUp">
       <Card className="hover:shadow-lg transition-shadow">
         <CardContent className="p-6">
           <div className="flex items-start justify-between">

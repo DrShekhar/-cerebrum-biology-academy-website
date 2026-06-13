@@ -28,10 +28,16 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Class 12 Board Biology Preparation | CBSE Exam Coaching',
-    description: 'Specialized Class 12 board Biology preparation. Score 95+. Expert answer writing. Book free demo. Call +91-88264-44334',
+    description:
+      'Specialized Class 12 board Biology preparation. Score 95+. Expert answer writing. Book free demo. Call +91-88264-44334',
   },
 
-  openGraph: { title: 'Class 12 Board Biology Preparation | CBSE Exam Coaching', description: 'Specialized Class 12 board Biology preparation. Score 95+. Expert answer writing. Book free demo. Call +91-88264-44334', type: 'website' },
+  openGraph: {
+    title: 'Class 12 Board Biology Preparation | CBSE Exam Coaching',
+    description:
+      'Specialized Class 12 board Biology preparation. Score 95+. Expert answer writing. Book free demo. Call +91-88264-44334',
+    type: 'website',
+  },
 }
 
 const usps: USP[] = [

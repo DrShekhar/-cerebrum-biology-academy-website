@@ -94,7 +94,7 @@ export function NEETSchemaStack({
   const personSchema = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    '@id': `${pageUrl}#dr-shekhar`,
+    '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
     name: 'Dr. Shekhar C Singh',
     alternateName: ['Shekhar Singh', 'Dr Shekhar Singh'],
     honorificPrefix: 'Dr.',
@@ -125,18 +125,9 @@ export function NEETSchemaStack({
     ],
   }
 
-  const orgSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'EducationalOrganization',
-    '@id': 'https://cerebrumbiologyacademy.com/#organization',
-    name: 'Cerebrum Biology Academy',
-    url: 'https://cerebrumbiologyacademy.com',
-    logo: 'https://cerebrumbiologyacademy.com/logo.png',
-    foundingDate: '2014',
-    description:
-      "India's leading biology-only specialist NEET coaching brand under AIIMS-trained Dr. Shekhar C Singh. 680+ medical college selections, 98% NEET-UG qualification rate, 15-20 student batches across 6 Delhi NCR offline centres plus pan-India online live classes.",
-    // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
-  }
+  // The canonical EducationalOrganization (#organization) is declared once in the
+  // root layout (CerebrumOrgSchema). This stack references it by @id only — it must
+  // never re-declare a second Org node (was causing a duplicate "6 centres" entity).
 
   const courseSchema = {
     '@context': 'https://schema.org',
@@ -227,10 +218,6 @@ export function NEETSchemaStack({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
       />
       <script
         type="application/ld+json"

@@ -26,11 +26,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "The law of dominance states that when two individuals homozygous for contrasting traits are crossed, the F1 hybrids express only the dominant trait. The recessive allele remains unexpressed in the heterozygous condition.",
-      "tags": [
-        "mendels-laws",
-        "law-of-dominance",
-        "monohybrid-cross"
-      ]
+      "tags": ["mendels-laws", "law-of-dominance", "monohybrid-cross"]
     },
     {
       "type": "MCQ",
@@ -44,19 +40,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "The phenotypic ratio of a monohybrid cross in F2 generation is:",
-      "options": [
-        "1:1",
-        "9:3:3:1",
-        "3:1",
-        "1:2:1"
-      ],
+      "options": ["1:1", "9:3:3:1", "3:1", "1:2:1"],
       "correctAnswer": "C",
       "explanation": "In a monohybrid cross, the F2 generation shows a 3:1 phenotypic ratio, where 3 individuals show the dominant phenotype and 1 shows the recessive phenotype. The genotypic ratio, however, is 1:2:1.",
-      "tags": [
-        "mendels-laws",
-        "monohybrid-cross",
-        "phenotypic-ratio"
-      ]
+      "tags": ["mendels-laws", "monohybrid-cross", "phenotypic-ratio"]
     },
     {
       "type": "MCQ",
@@ -78,11 +65,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "Pea plants are naturally self-pollinating, not cross-pollinating. This was advantageous for Mendel because it allowed him to obtain true-breeding lines easily and then perform controlled cross-pollination when needed.",
-      "tags": [
-        "mendels-laws",
-        "pea-plant",
-        "experimental-design"
-      ]
+      "tags": ["mendels-laws", "pea-plant", "experimental-design"]
     },
     {
       "type": "MCQ",
@@ -104,11 +87,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "The law of segregation states that alleles separate during gamete formation so that each gamete carries only one allele for each trait. This ensures gametes are 'pure' for a particular trait, hence it is also called the law of purity of gametes.",
-      "tags": [
-        "mendels-laws",
-        "law-of-segregation",
-        "purity-of-gametes"
-      ]
+      "tags": ["mendels-laws", "law-of-segregation", "purity-of-gametes"]
     },
     {
       "type": "MCQ",
@@ -130,11 +109,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "The law of independent assortment applies to genes located on different chromosomes. It can also apply to genes on the same chromosome if they are far apart, as high recombination frequency makes them behave as if independently assorting.",
-      "tags": [
-        "mendels-laws",
-        "independent-assortment",
-        "linkage"
-      ]
+      "tags": ["mendels-laws", "independent-assortment", "linkage"]
     },
     {
       "type": "MCQ",
@@ -156,11 +131,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "A test cross involves crossing an organism with a dominant phenotype (whose genotype is unknown) with a homozygous recessive individual. This helps determine whether the dominant phenotype individual is homozygous or heterozygous.",
-      "tags": [
-        "monohybrid-cross",
-        "test-cross",
-        "genotype-determination"
-      ]
+      "tags": ["monohybrid-cross", "test-cross", "genotype-determination"]
     },
     {
       "type": "MCQ",
@@ -174,19 +145,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "In a test cross of a heterozygous tall pea plant (Tt), the expected phenotypic ratio of offspring is:",
-      "options": [
-        "1:1 (tall:dwarf)",
-        "All tall",
-        "All dwarf",
-        "3:1 (tall:dwarf)"
-      ],
+      "options": ["1:1 (tall:dwarf)", "All tall", "All dwarf", "3:1 (tall:dwarf)"],
       "correctAnswer": "A",
       "explanation": "When a heterozygous tall plant (Tt) is crossed with a homozygous dwarf plant (tt), the offspring are 50% Tt (tall) and 50% tt (dwarf), giving a 1:1 phenotypic ratio. This confirms the parent was heterozygous.",
-      "tags": [
-        "monohybrid-cross",
-        "test-cross",
-        "phenotypic-ratio"
-      ]
+      "tags": ["monohybrid-cross", "test-cross", "phenotypic-ratio"]
     },
     {
       "type": "MCQ",
@@ -200,19 +162,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "The genotypic ratio of a monohybrid cross in F2 generation is:",
-      "options": [
-        "3:1",
-        "1:1",
-        "1:2:1",
-        "9:3:3:1"
-      ],
+      "options": ["3:1", "1:1", "1:2:1", "9:3:3:1"],
       "correctAnswer": "C",
       "explanation": "In a monohybrid cross, the F2 genotypic ratio is 1 homozygous dominant (TT) : 2 heterozygous (Tt) : 1 homozygous recessive (tt). This 1:2:1 ratio is distinct from the 3:1 phenotypic ratio.",
-      "tags": [
-        "monohybrid-cross",
-        "genotypic-ratio",
-        "F2-generation"
-      ]
+      "tags": ["monohybrid-cross", "genotypic-ratio", "F2-generation"]
     },
     {
       "type": "MCQ",
@@ -234,11 +187,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "A back cross involves crossing the F1 offspring with either parent (dominant or recessive). When the back cross is specifically with the homozygous recessive parent, it becomes a test cross. Thus, every test cross is a back cross, but not every back cross is a test cross.",
-      "tags": [
-        "monohybrid-cross",
-        "back-cross",
-        "test-cross"
-      ]
+      "tags": ["monohybrid-cross", "back-cross", "test-cross"]
     },
     {
       "type": "MCQ",
@@ -252,19 +201,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "How many types of gametes are produced by a plant with genotype RrYy?",
-      "options": [
-        "4",
-        "8",
-        "2",
-        "16"
-      ],
+      "options": ["4", "8", "2", "16"],
       "correctAnswer": "A",
       "explanation": "A dihybrid heterozygote RrYy produces 4 types of gametes: RY, Ry, rY, and ry. The number of gamete types follows the formula 2^n, where n is the number of heterozygous gene pairs. Here n = 2, so 2^2 = 4.",
-      "tags": [
-        "dihybrid-cross",
-        "gamete-types",
-        "independent-assortment"
-      ]
+      "tags": ["dihybrid-cross", "gamete-types", "independent-assortment"]
     },
     {
       "type": "MCQ",
@@ -278,19 +218,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "In a dihybrid cross, the proportion of offspring showing both recessive traits in F2 is:",
-      "options": [
-        "4/16",
-        "9/16",
-        "1/16",
-        "3/16"
-      ],
+      "options": ["4/16", "9/16", "1/16", "3/16"],
       "correctAnswer": "C",
       "explanation": "In a dihybrid cross (9:3:3:1 ratio), the double recessive phenotype (aabb) constitutes 1 out of 16 offspring in F2. This class represents the smallest proportion in the dihybrid ratio.",
-      "tags": [
-        "dihybrid-cross",
-        "F2-ratio",
-        "recessive-phenotype"
-      ]
+      "tags": ["dihybrid-cross", "F2-ratio", "recessive-phenotype"]
     },
     {
       "type": "MCQ",
@@ -304,19 +235,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "In a dihybrid cross between RrYy x RrYy, the number of individuals that are homozygous for both dominant traits in F2 is:",
-      "options": [
-        "2/16",
-        "1/16",
-        "4/16",
-        "9/16"
-      ],
+      "options": ["2/16", "1/16", "4/16", "9/16"],
       "correctAnswer": "B",
       "explanation": "Homozygous dominant for both traits means RRYY genotype. The probability of RR from Rr x Rr is 1/4, and YY from Yy x Yy is 1/4. By independent assortment, P(RRYY) = 1/4 x 1/4 = 1/16.",
-      "tags": [
-        "dihybrid-cross",
-        "genotype-probability",
-        "homozygous"
-      ]
+      "tags": ["dihybrid-cross", "genotype-probability", "homozygous"]
     },
     {
       "type": "MCQ",
@@ -338,11 +260,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "Incomplete dominance is classically demonstrated in snapdragon (Antirrhinum majus), where a cross between red (RR) and white (rr) flowers produces pink (Rr) flowers in F1. Neither allele is completely dominant over the other.",
-      "tags": [
-        "incomplete-dominance",
-        "snapdragon",
-        "flower-colour"
-      ]
+      "tags": ["incomplete-dominance", "snapdragon", "flower-colour"]
     },
     {
       "type": "MCQ",
@@ -356,19 +274,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "In incomplete dominance, the F2 phenotypic ratio is:",
-      "options": [
-        "1:1",
-        "3:1",
-        "1:2:1",
-        "9:3:3:1"
-      ],
+      "options": ["1:1", "3:1", "1:2:1", "9:3:3:1"],
       "correctAnswer": "C",
       "explanation": "In incomplete dominance, the F2 ratio is 1:2:1 (e.g., 1 red : 2 pink : 1 white in snapdragon). The phenotypic ratio matches the genotypic ratio because the heterozygote shows an intermediate phenotype distinct from both homozygotes.",
-      "tags": [
-        "incomplete-dominance",
-        "phenotypic-ratio",
-        "F2-generation"
-      ]
+      "tags": ["incomplete-dominance", "phenotypic-ratio", "F2-generation"]
     },
     {
       "type": "MCQ",
@@ -382,19 +291,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "The blood group of humans is controlled by how many alleles?",
-      "options": [
-        "Three",
-        "Six",
-        "Two",
-        "Four"
-      ],
+      "options": ["Three", "Six", "Two", "Four"],
       "correctAnswer": "A",
       "explanation": "Human ABO blood group is determined by three alleles: I^A, I^B, and i. The alleles I^A and I^B are codominant to each other, and both are dominant over i. This is an example of multiple allelism, though an individual carries only two alleles.",
-      "tags": [
-        "codominance",
-        "blood-groups",
-        "multiple-alleles"
-      ]
+      "tags": ["codominance", "blood-groups", "multiple-alleles"]
     },
     {
       "type": "MCQ",
@@ -408,19 +308,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "A person with blood group AB has the genotype:",
-      "options": [
-        "I^A I^B",
-        "I^A i",
-        "I^A I^A",
-        "I^B I^B"
-      ],
+      "options": ["I^A I^B", "I^A i", "I^A I^A", "I^B I^B"],
       "correctAnswer": "A",
       "explanation": "Blood group AB results from the codominant expression of both I^A and I^B alleles. The individual produces both A and B antigens on their red blood cells. This is the classic example of codominance in humans.",
-      "tags": [
-        "codominance",
-        "blood-groups",
-        "genotype"
-      ]
+      "tags": ["codominance", "blood-groups", "genotype"]
     },
     {
       "type": "MCQ",
@@ -434,19 +325,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "A cross between a woman with blood group A (heterozygous) and a man with blood group B (heterozygous) can produce children with which blood groups?",
-      "options": [
-        "A, B, AB, and O",
-        "A, B, and AB only",
-        "A and B only",
-        "AB and O only"
-      ],
+      "options": ["A, B, AB, and O", "A, B, and AB only", "A and B only", "AB and O only"],
       "correctAnswer": "A",
       "explanation": "Mother (I^A i) x Father (I^B i) produces: I^A I^B (AB), I^A i (A), I^B i (B), and ii (O). All four blood groups are possible in a 1:1:1:1 ratio. This cross demonstrates both codominance and independent segregation.",
-      "tags": [
-        "codominance",
-        "blood-groups",
-        "cross-prediction"
-      ]
+      "tags": ["codominance", "blood-groups", "cross-prediction"]
     },
     {
       "type": "MCQ",
@@ -468,11 +350,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "Sickle cell anaemia demonstrates pleiotropy because a single gene (HbS) affects multiple phenotypic traits including anaemia, splenomegaly, and organ damage. It also shows codominance at the molecular level, as heterozygotes produce both normal (HbA) and sickle (HbS) haemoglobin.",
-      "tags": [
-        "pleiotropy",
-        "codominance",
-        "sickle-cell-anaemia"
-      ]
+      "tags": ["pleiotropy", "codominance", "sickle-cell-anaemia"]
     },
     {
       "type": "MCQ",
@@ -494,11 +372,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "Phenylketonuria (PKU) is an autosomal recessive disorder caused by a mutation in the gene coding for the enzyme phenylalanine hydroxylase. This enzyme converts phenylalanine to tyrosine. Its absence leads to accumulation of phenylalanine, causing intellectual disability.",
-      "tags": [
-        "pleiotropy",
-        "phenylketonuria",
-        "metabolic-disorder"
-      ]
+      "tags": ["pleiotropy", "phenylketonuria", "metabolic-disorder"]
     },
     {
       "type": "MCQ",
@@ -520,11 +394,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "In humans, the sex of the child is determined by the father's chromosome. The mother always contributes an X chromosome, while the father contributes either an X (resulting in a girl, XX) or a Y (resulting in a boy, XY) chromosome.",
-      "tags": [
-        "sex-determination",
-        "XX-XY",
-        "human-genetics"
-      ]
+      "tags": ["sex-determination", "XX-XY", "human-genetics"]
     },
     {
       "type": "MCQ",
@@ -546,11 +416,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "In the ZW-ZZ system (found in birds, some reptiles, and butterflies), females are heterogametic (ZW) and males are homogametic (ZZ). This is the reverse of the XX-XY system in humans where males are heterogametic.",
-      "tags": [
-        "sex-determination",
-        "ZW-ZZ",
-        "heterogametic"
-      ]
+      "tags": ["sex-determination", "ZW-ZZ", "heterogametic"]
     },
     {
       "type": "MCQ",
@@ -572,11 +438,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "Colour blindness is an X-linked recessive trait. The gene for colour vision is located on the X chromosome. Males (XY) are more commonly affected because they have only one X chromosome and a single recessive allele is sufficient to express the trait.",
-      "tags": [
-        "sex-linked-inheritance",
-        "colour-blindness",
-        "X-linked-recessive"
-      ]
+      "tags": ["sex-linked-inheritance", "colour-blindness", "X-linked-recessive"]
     },
     {
       "type": "MCQ",
@@ -590,19 +452,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "A carrier woman for haemophilia marries a normal man. What proportion of their sons will be haemophilic?",
-      "options": [
-        "All sons",
-        "Half of the sons",
-        "None of the sons",
-        "One-fourth of the sons"
-      ],
+      "options": ["All sons", "Half of the sons", "None of the sons", "One-fourth of the sons"],
       "correctAnswer": "B",
       "explanation": "A carrier woman (X^H X^h) married to a normal man (X^H Y) produces sons: X^H Y (normal) and X^h Y (haemophilic). Thus, 50% of sons will be haemophilic. All daughters will be phenotypically normal (either carriers or homozygous normal).",
-      "tags": [
-        "sex-linked-inheritance",
-        "haemophilia",
-        "carrier"
-      ]
+      "tags": ["sex-linked-inheritance", "haemophilia", "carrier"]
     },
     {
       "type": "MCQ",
@@ -624,11 +477,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "T.H. Morgan used the fruit fly Drosophila melanogaster for his genetics experiments. It was ideal due to its short life cycle, large number of offspring, clear sexual dimorphism, and many easily observable hereditary variations.",
-      "tags": [
-        "linkage",
-        "morgan",
-        "drosophila"
-      ]
+      "tags": ["linkage", "morgan", "drosophila"]
     },
     {
       "type": "MCQ",
@@ -650,11 +499,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "One centiMorgan (cM) or one map unit equals 1% recombination frequency between two genes. Alfred Sturtevant used recombination frequencies to map gene positions on chromosomes, creating the first genetic map of Drosophila.",
-      "tags": [
-        "linkage",
-        "recombination",
-        "centimorgan"
-      ]
+      "tags": ["linkage", "recombination", "centimorgan"]
     },
     {
       "type": "MCQ",
@@ -668,19 +513,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "Down syndrome is caused by trisomy of chromosome:",
-      "options": [
-        "13",
-        "22",
-        "18",
-        "21"
-      ],
+      "options": ["13", "22", "18", "21"],
       "correctAnswer": "D",
       "explanation": "Down syndrome (trisomy 21) is caused by the presence of an extra copy of chromosome 21, resulting in 47 chromosomes instead of 46. It is the most common autosomal aneuploidy compatible with survival and is characterised by intellectual disability and distinctive facial features.",
-      "tags": [
-        "chromosomal-disorders",
-        "down-syndrome",
-        "trisomy"
-      ]
+      "tags": ["chromosomal-disorders", "down-syndrome", "trisomy"]
     },
     {
       "type": "MCQ",
@@ -694,19 +530,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "Turner syndrome has a chromosomal complement of:",
-      "options": [
-        "44 + XO",
-        "44 + XXX",
-        "44 + XXY",
-        "44 + XYY"
-      ],
+      "options": ["44 + XO", "44 + XXX", "44 + XXY", "44 + XYY"],
       "correctAnswer": "A",
       "explanation": "Turner syndrome is caused by monosomy of the X chromosome (45, XO). Affected individuals are phenotypically female but are sterile, short-statured, and lack secondary sexual characteristics. It is the only monosomy in humans that is viable.",
-      "tags": [
-        "chromosomal-disorders",
-        "turner-syndrome",
-        "monosomy"
-      ]
+      "tags": ["chromosomal-disorders", "turner-syndrome", "monosomy"]
     },
     {
       "type": "MCQ",
@@ -728,11 +555,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "Klinefelter syndrome (47, XXY) individuals are phenotypically male but have feminine characteristics like gynaecomastia (breast development). They are sterile due to underdeveloped testes and are often tall. The extra X chromosome leads to these developmental abnormalities.",
-      "tags": [
-        "chromosomal-disorders",
-        "klinefelter-syndrome",
-        "aneuploidy"
-      ]
+      "tags": ["chromosomal-disorders", "klinefelter-syndrome", "aneuploidy"]
     },
     {
       "type": "MCQ",
@@ -754,11 +577,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "A base substitution (point mutation) involves the replacement of one nucleotide pair by another. In sickle cell anaemia, GAG is replaced by GUG in the sixth codon of the beta-globin gene, resulting in valine instead of glutamic acid.",
-      "tags": [
-        "mutation",
-        "point-mutation",
-        "base-substitution"
-      ]
+      "tags": ["mutation", "point-mutation", "base-substitution"]
     },
     {
       "type": "MCQ",
@@ -780,11 +599,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "In sickle cell anaemia, glutamic acid (Glu) is replaced by valine (Val) at the 6th position of the beta-globin chain of haemoglobin. This is caused by a single base substitution (GAG to GUG) in the gene, demonstrating how a point mutation can cause a serious genetic disorder.",
-      "tags": [
-        "mutation",
-        "sickle-cell-anaemia",
-        "amino-acid-substitution"
-      ]
+      "tags": ["mutation", "sickle-cell-anaemia", "amino-acid-substitution"]
     },
     {
       "type": "MCQ",
@@ -798,19 +613,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "In a pedigree chart, a completely filled circle represents:",
-      "options": [
-        "Affected female",
-        "Normal female",
-        "Carrier female",
-        "Carrier male"
-      ],
+      "options": ["Affected female", "Normal female", "Carrier female", "Carrier male"],
       "correctAnswer": "A",
       "explanation": "In pedigree analysis, circles represent females and squares represent males. A completely filled (shaded) symbol indicates an affected individual expressing the trait. Half-filled symbols indicate carriers.",
-      "tags": [
-        "pedigree-analysis",
-        "symbols",
-        "affected-individual"
-      ]
+      "tags": ["pedigree-analysis", "symbols", "affected-individual"]
     },
     {
       "type": "MCQ",
@@ -824,19 +630,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "Haplodiploidy is the sex determination mechanism found in:",
-      "options": [
-        "Birds",
-        "Reptiles",
-        "Honeybees",
-        "Grasshoppers"
-      ],
+      "options": ["Birds", "Reptiles", "Honeybees", "Grasshoppers"],
       "correctAnswer": "C",
       "explanation": "Haplodiploidy is found in honeybees and other hymenopteran insects. Males (drones) develop from unfertilised eggs and are haploid (16 chromosomes), while females (queen and workers) develop from fertilised eggs and are diploid (32 chromosomes).",
-      "tags": [
-        "sex-determination",
-        "haplodiploidy",
-        "honeybee"
-      ]
+      "tags": ["sex-determination", "haplodiploidy", "honeybee"]
     },
     {
       "type": "MCQ",
@@ -850,19 +647,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "In Drosophila, white eye colour is:",
-      "options": [
-        "Y-linked",
-        "X-linked recessive",
-        "Autosomal recessive",
-        "Autosomal dominant"
-      ],
+      "options": ["Y-linked", "X-linked recessive", "Autosomal recessive", "Autosomal dominant"],
       "correctAnswer": "B",
       "explanation": "Morgan discovered that white eye colour in Drosophila is X-linked recessive. In his classic experiment, crossing a white-eyed male with a red-eyed female gave all red-eyed F1, but in F2, only males showed white eyes in a 1:1 ratio, confirming sex-linked inheritance.",
-      "tags": [
-        "sex-linked-inheritance",
-        "drosophila",
-        "white-eye"
-      ]
+      "tags": ["sex-linked-inheritance", "drosophila", "white-eye"]
     },
     {
       "type": "MCQ",
@@ -884,11 +672,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "Sickle cell anaemia is an autosomal recessive disorder caused by a mutation in the beta-globin gene on chromosome 11. Both copies of the gene must be mutated for the disease to manifest. Heterozygous carriers show sickle cell trait but are generally asymptomatic.",
-      "tags": [
-        "mutation",
-        "sickle-cell-anaemia",
-        "autosomal-recessive"
-      ]
+      "tags": ["mutation", "sickle-cell-anaemia", "autosomal-recessive"]
     },
     {
       "type": "MCQ",
@@ -902,19 +686,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "Chromosomal theory of inheritance was proposed by:",
-      "options": [
-        "Mendel",
-        "Morgan",
-        "Sturtevant",
-        "Sutton and Boveri"
-      ],
+      "options": ["Mendel", "Morgan", "Sturtevant", "Sutton and Boveri"],
       "correctAnswer": "D",
       "explanation": "Walter Sutton and Theodor Boveri independently proposed the chromosomal theory of inheritance in 1902. They noted parallels between the behaviour of chromosomes during meiosis and Mendel's laws, proposing that genes are located on chromosomes.",
-      "tags": [
-        "mendels-laws",
-        "chromosomal-theory",
-        "sutton-boveri"
-      ]
+      "tags": ["mendels-laws", "chromosomal-theory", "sutton-boveri"]
     },
     {
       "type": "MCQ",
@@ -928,19 +703,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "Which Mendelian ratio is modified to 9:7 in complementary gene interaction?",
-      "options": [
-        "9:3:3:1",
-        "1:1:1:1",
-        "3:1",
-        "1:2:1"
-      ],
+      "options": ["9:3:3:1", "1:1:1:1", "3:1", "1:2:1"],
       "correctAnswer": "A",
       "explanation": "The 9:3:3:1 dihybrid ratio is modified to 9:7 in complementary gene interaction. In this case, two non-allelic genes complement each other to produce a phenotype. When either gene is homozygous recessive, the phenotype is not expressed.",
-      "tags": [
-        "dihybrid-cross",
-        "gene-interaction",
-        "complementary-genes"
-      ]
+      "tags": ["dihybrid-cross", "gene-interaction", "complementary-genes"]
     },
     {
       "type": "MCQ",
@@ -962,11 +728,7 @@
       ],
       "correctAnswer": "A",
       "explanation": "Aneuploidy is a condition in which the chromosome number differs from the normal diploid number by the gain or loss of individual chromosomes. Common examples include monosomy (2n-1) as in Turner syndrome and trisomy (2n+1) as in Down syndrome.",
-      "tags": [
-        "chromosomal-disorders",
-        "aneuploidy",
-        "chromosome-number"
-      ]
+      "tags": ["chromosomal-disorders", "aneuploidy", "chromosome-number"]
     },
     {
       "type": "MCQ",
@@ -980,19 +742,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "The number of contrasting traits studied by Mendel in pea plants was:",
-      "options": [
-        "6",
-        "5",
-        "7",
-        "8"
-      ],
+      "options": ["6", "5", "7", "8"],
       "correctAnswer": "C",
       "explanation": "Mendel selected 7 pairs of contrasting traits in pea plants: seed shape, seed colour, flower colour, flower position, pod shape, pod colour, and stem height. Each trait had two clearly distinguishable forms (e.g., tall vs dwarf).",
-      "tags": [
-        "mendels-laws",
-        "contrasting-traits",
-        "pea-plant"
-      ]
+      "tags": ["mendels-laws", "contrasting-traits", "pea-plant"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -1014,11 +767,7 @@
       ],
       "correctAnswer": "A",
       "explanation": "In F2 of a monohybrid cross (e.g., Tt x Tt), the genotypic ratio is 1 TT : 2 Tt : 1 tt. Out of 4, 2 are heterozygous (Tt), which is 50%. The 1:2:1 genotypic ratio directly explains why 50% are heterozygous.",
-      "tags": [
-        "mendels-laws",
-        "monohybrid-cross",
-        "genotypic-ratio"
-      ]
+      "tags": ["mendels-laws", "monohybrid-cross", "genotypic-ratio"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -1040,11 +789,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "Linked genes (genes on the same chromosome) do not assort independently because they are physically connected and tend to be inherited together. This is why Morgan's work on Drosophila showed deviations from Mendel's expected dihybrid ratios.",
-      "tags": [
-        "mendels-laws",
-        "linkage",
-        "independent-assortment"
-      ]
+      "tags": ["mendels-laws", "linkage", "independent-assortment"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -1066,11 +811,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "In incomplete dominance, the F1 phenotype is intermediate (e.g., pink flowers from red x white in snapdragon) precisely because neither allele is fully dominant. The partial expression of both alleles results in the blended intermediate phenotype.",
-      "tags": [
-        "incomplete-dominance",
-        "F1-phenotype",
-        "snapdragon"
-      ]
+      "tags": ["incomplete-dominance", "F1-phenotype", "snapdragon"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -1092,11 +833,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "In codominance (e.g., AB blood group), both alleles are fully expressed without blending, producing both gene products simultaneously. This differs from incomplete dominance where an intermediate phenotype is produced. The independent full expression of both alleles is what makes codominance distinct.",
-      "tags": [
-        "codominance",
-        "incomplete-dominance",
-        "allele-expression"
-      ]
+      "tags": ["codominance", "incomplete-dominance", "allele-expression"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -1118,11 +855,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "Haemophilia is indeed more common in males, but the gene is located on the X chromosome, not the Y chromosome. Males are more affected because they have only one X chromosome, so a single recessive allele causes the disease. Females would need two copies (homozygous recessive) to be affected.",
-      "tags": [
-        "sex-linked-inheritance",
-        "haemophilia",
-        "X-linked"
-      ]
+      "tags": ["sex-linked-inheritance", "haemophilia", "X-linked"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -1144,11 +877,7 @@
       ],
       "correctAnswer": "A",
       "explanation": "Down syndrome results from non-disjunction of chromosome 21, typically during maternal meiosis. Non-disjunction is the failure of homologous chromosomes (or sister chromatids) to separate properly, leading to gametes with an extra chromosome 21 and subsequent trisomy in the offspring.",
-      "tags": [
-        "chromosomal-disorders",
-        "down-syndrome",
-        "non-disjunction"
-      ]
+      "tags": ["chromosomal-disorders", "down-syndrome", "non-disjunction"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -1170,11 +899,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "Turner syndrome individuals are indeed sterile females, making the assertion true. However, Turner syndrome is caused by monosomy X (45, XO) - the absence of one X chromosome, not an extra one. The reason is false. An extra X in females gives Triple X syndrome (47, XXX).",
-      "tags": [
-        "chromosomal-disorders",
-        "turner-syndrome",
-        "monosomy"
-      ]
+      "tags": ["chromosomal-disorders", "turner-syndrome", "monosomy"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -1196,11 +921,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "Polyploidy (having more than two complete sets of chromosomes) is far more common in plants than animals. Plants tolerate polyploidy better partly because they can propagate vegetatively, bypassing the meiotic problems that polyploidy causes in sexual reproduction.",
-      "tags": [
-        "chromosomal-disorders",
-        "polyploidy",
-        "plants-vs-animals"
-      ]
+      "tags": ["chromosomal-disorders", "polyploidy", "plants-vs-animals"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -1222,11 +943,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "Frameshift mutations (caused by insertion or deletion of nucleotides not in multiples of three) shift the reading frame of the mRNA. This alters every codon downstream of the mutation, usually producing a completely non-functional protein. Point mutations typically affect only one amino acid.",
-      "tags": [
-        "mutation",
-        "frameshift",
-        "point-mutation"
-      ]
+      "tags": ["mutation", "frameshift", "point-mutation"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -1248,11 +965,7 @@
       ],
       "correctAnswer": "A",
       "explanation": "Individuals with blood group O are universal donors because their red blood cells lack both A and B antigens. Since there are no antigens to be recognised as foreign, their blood can be transfused to persons of any ABO blood group without causing agglutination.",
-      "tags": [
-        "codominance",
-        "blood-groups",
-        "universal-donor"
-      ]
+      "tags": ["codominance", "blood-groups", "universal-donor"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -1274,11 +987,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "Male honeybees (drones) are haploid because they develop from unfertilised eggs through parthenogenesis. Since the eggs are not fertilised, they contain only the maternal set of chromosomes (n = 16). Females develop from fertilised eggs and are diploid (2n = 32).",
-      "tags": [
-        "sex-determination",
-        "haplodiploidy",
-        "honeybee"
-      ]
+      "tags": ["sex-determination", "haplodiploidy", "honeybee"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -1300,11 +1009,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "Recombination frequency cannot exceed 50% because at maximum, equal numbers of parental and recombinant types are produced. At 50% recombination, the genes assort as if on separate chromosomes, making it impossible to distinguish linkage from independent assortment.",
-      "tags": [
-        "linkage",
-        "recombination-frequency",
-        "genetic-mapping"
-      ]
+      "tags": ["linkage", "recombination-frequency", "genetic-mapping"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -1326,11 +1031,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "PKU is pleiotropic because a single gene defect (phenylalanine hydroxylase deficiency) leads to multiple phenotypic effects: accumulation of phenylalanine causes intellectual disability, and reduced conversion to tyrosine leads to decreased melanin production, causing lighter skin and hair pigmentation.",
-      "tags": [
-        "pleiotropy",
-        "phenylketonuria",
-        "pleiotropic-effects"
-      ]
+      "tags": ["pleiotropy", "phenylketonuria", "pleiotropic-effects"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -1352,11 +1053,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "Statement I is correct because the law of dominance is considered more of a descriptive statement explaining how traits appear in heterozygotes, rather than a universal law. Statement II is correct because the law of segregation (alleles separate during gamete formation) is universally applicable to all sexually reproducing organisms without exceptions.",
-      "tags": [
-        "mendels-laws",
-        "law-of-dominance",
-        "law-of-segregation"
-      ]
+      "tags": ["mendels-laws", "law-of-dominance", "law-of-segregation"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -1378,11 +1075,7 @@
       ],
       "correctAnswer": "A",
       "explanation": "Both statements are correct. In a dihybrid cross (AaBb x AaBb), 9/16 show both dominant traits (A_B_). This 9:3:3:1 ratio is only obtained when the two gene pairs assort independently, i.e., they are located on different chromosomes or are far apart on the same chromosome.",
-      "tags": [
-        "dihybrid-cross",
-        "F2-ratio",
-        "independent-assortment"
-      ]
+      "tags": ["dihybrid-cross", "F2-ratio", "independent-assortment"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -1404,11 +1097,7 @@
       ],
       "correctAnswer": "A",
       "explanation": "Statement I is correct because in codominance (e.g., AB blood group), the heterozygote phenotype (both A and B antigens) is distinct from either homozygous parent. Statement II is incorrect because codominance does not involve blending; both alleles are expressed independently and fully. Blending is characteristic of incomplete dominance.",
-      "tags": [
-        "codominance",
-        "heterozygote",
-        "allele-expression"
-      ]
+      "tags": ["codominance", "heterozygote", "allele-expression"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -1430,11 +1119,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "Both statements are correct. AB individuals are universal recipients because they possess both A and B antigens and therefore do not produce anti-A or anti-B antibodies. This means they will not agglutinate red blood cells of any ABO blood group during transfusion.",
-      "tags": [
-        "codominance",
-        "blood-groups",
-        "universal-recipient"
-      ]
+      "tags": ["codominance", "blood-groups", "universal-recipient"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -1456,11 +1141,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "Both statements are correct. Genes that are close together on a chromosome (tightly linked) show very low recombination because crossing over between them is unlikely. As the distance between genes increases, the probability of crossing over between them increases, so recombination frequency is directly proportional to gene distance.",
-      "tags": [
-        "linkage",
-        "recombination",
-        "gene-distance"
-      ]
+      "tags": ["linkage", "recombination", "gene-distance"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -1482,11 +1163,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "Both statements are correct. Klinefelter syndrome individuals have 47 chromosomes (44 autosomes + XXY). Despite having two X chromosomes, they are phenotypically male because the Y chromosome carries the SRY gene that determines maleness. However, they show feminised features due to the extra X.",
-      "tags": [
-        "chromosomal-disorders",
-        "klinefelter-syndrome",
-        "sex-determination"
-      ]
+      "tags": ["chromosomal-disorders", "klinefelter-syndrome", "sex-determination"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -1508,11 +1185,7 @@
       ],
       "correctAnswer": "A",
       "explanation": "Both statements are correct. Colour blindness being X-linked recessive means sons receive the affected X from their carrier mother (the father gives Y to sons). Fathers always pass their X chromosome to daughters and their Y chromosome to sons, which is why X-linked traits show criss-cross inheritance.",
-      "tags": [
-        "sex-linked-inheritance",
-        "colour-blindness",
-        "criss-cross"
-      ]
+      "tags": ["sex-linked-inheritance", "colour-blindness", "criss-cross"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -1534,11 +1207,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "Both statements are correct. Autosomal recessive traits skip generations because carriers (heterozygotes) are phenotypically normal and can pass the allele to the next generation without expressing it. The trait only appears when an individual inherits the recessive allele from both carrier parents.",
-      "tags": [
-        "pedigree-analysis",
-        "autosomal-recessive",
-        "inheritance-pattern"
-      ]
+      "tags": ["pedigree-analysis", "autosomal-recessive", "inheritance-pattern"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -1560,11 +1229,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "Both statements are correct. Pleiotropy is when one gene affects multiple traits. In pea seeds, the gene controlling starch synthesis has pleiotropic effects: the dominant allele produces large starch grains (round seeds), while the recessive allele produces small starch grains (wrinkled seeds) and also affects seed shape.",
-      "tags": [
-        "pleiotropy",
-        "starch-synthesis",
-        "pea-seeds"
-      ]
+      "tags": ["pleiotropy", "starch-synthesis", "pea-seeds"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -1586,11 +1251,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "Both statements are correct. Gregor Johann Mendel is known as the Father of Genetics for discovering the fundamental laws of inheritance. He conducted his hybridisation experiments on garden pea plants in the monastery garden at Brunn (now Brno, Czech Republic) between 1856 and 1863.",
-      "tags": [
-        "mendels-laws",
-        "history",
-        "gregor-mendel"
-      ]
+      "tags": ["mendels-laws", "history", "gregor-mendel"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -1612,11 +1273,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "Both statements are correct. Autosomal dominant traits require at least one copy of the dominant allele, so at least one parent must be affected to pass it on. Being autosomal, these disorders affect both sexes equally, unlike X-linked disorders which show sex-specific inheritance patterns.",
-      "tags": [
-        "pedigree-analysis",
-        "autosomal-dominant",
-        "inheritance-pattern"
-      ]
+      "tags": ["pedigree-analysis", "autosomal-dominant", "inheritance-pattern"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -1638,12 +1295,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "Both statements are correct. Morgan observed that linked genes in Drosophila did not always stay together, producing some recombinant offspring. This is because crossing over during prophase I of meiosis can exchange segments between homologous chromosomes, separating linked genes and generating new allele combinations.",
-      "tags": [
-        "linkage",
-        "recombination",
-        "crossing-over",
-        "morgan"
-      ]
+      "tags": ["linkage", "recombination", "crossing-over", "morgan"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -1665,11 +1317,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "Both statements are correct. Deletion (loss of a segment) and duplication (repetition of a segment) change the amount of genetic material, while inversion (reversal of a segment) and translocation (transfer of a segment to a non-homologous chromosome) rearrange the material without changing the total amount.",
-      "tags": [
-        "mutation",
-        "chromosomal-aberrations",
-        "structural-changes"
-      ]
+      "tags": ["mutation", "chromosomal-aberrations", "structural-changes"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -1691,11 +1339,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "Law of Dominance states one allele masks the other (iii). Law of Segregation states alleles separate during gamete formation (ii). Law of Independent Assortment states two gene pairs assort independently (iv). Chromosomal Theory was proposed by Sutton and Boveri (i).",
-      "tags": [
-        "mendels-laws",
-        "chromosomal-theory",
-        "matching"
-      ]
+      "tags": ["mendels-laws", "chromosomal-theory", "matching"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -1717,11 +1361,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "Down syndrome is trisomy 21 (iii). Turner syndrome has 44+XO karyotype (ii). Klinefelter syndrome has 44+XXY karyotype (i). Super female (Triple X syndrome) has 44+XXX karyotype (iv). Each disorder has a distinctive chromosomal constitution.",
-      "tags": [
-        "chromosomal-disorders",
-        "karyotype",
-        "matching"
-      ]
+      "tags": ["chromosomal-disorders", "karyotype", "matching"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -1743,11 +1383,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "Blood group A has anti-B antibodies (iii). Blood group B has anti-A antibodies (iv). Blood group AB has no antibodies (ii) making them universal recipients. Blood group O has both anti-A and anti-B antibodies (i). Antibodies are produced against the antigens absent from one's own RBCs.",
-      "tags": [
-        "codominance",
-        "blood-groups",
-        "antibodies"
-      ]
+      "tags": ["codominance", "blood-groups", "antibodies"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -1769,11 +1405,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "XX-XY system is found in humans (iv) and Drosophila. ZW-ZZ system is found in birds (ii) and butterflies. Haplodiploidy is found in honeybees (i) and other hymenopterans. XO system is found in grasshoppers (iii) where males have one X and females have two X chromosomes.",
-      "tags": [
-        "sex-determination",
-        "organisms",
-        "matching"
-      ]
+      "tags": ["sex-determination", "organisms", "matching"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -1795,11 +1427,7 @@
       ],
       "correctAnswer": "A",
       "explanation": "PKU is autosomal recessive with phenylalanine hydroxylase deficiency (iii). Sickle cell anaemia is autosomal recessive with Glu to Val substitution (ii). Colour blindness is X-linked recessive affecting cone cells (iv). Haemophilia is X-linked recessive with clotting factor VIII deficiency (i).",
-      "tags": [
-        "genetic-disorders",
-        "inheritance-pattern",
-        "matching"
-      ]
+      "tags": ["genetic-disorders", "inheritance-pattern", "matching"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -1821,11 +1449,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "Deletion involves loss of a chromosome segment (iii). Duplication is the repetition of a segment (iv). Inversion reverses a segment by 180 degrees (i). Translocation transfers a segment to a non-homologous chromosome (ii). These are the four main types of structural chromosomal aberrations.",
-      "tags": [
-        "mutation",
-        "chromosomal-aberrations",
-        "matching"
-      ]
+      "tags": ["mutation", "chromosomal-aberrations", "matching"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -1847,11 +1471,7 @@
       ],
       "correctAnswer": "A",
       "explanation": "Monohybrid F2 phenotypic ratio is 3:1 (iii). Dihybrid F2 phenotypic ratio is 9:3:3:1 (ii). Test cross of heterozygote gives 1:1 (iv). Incomplete dominance F2 gives 1:2:1 (i) where phenotypic ratio equals genotypic ratio.",
-      "tags": [
-        "mendels-laws",
-        "ratios",
-        "matching"
-      ]
+      "tags": ["mendels-laws", "ratios", "matching"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -1873,11 +1493,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "Autosomal dominant appears in every generation affecting both sexes (ii). Autosomal recessive skips generations as carriers are unaffected (iii). X-linked recessive affects more males through carrier mothers (i). X-linked dominant is passed from affected fathers to all daughters (iv).",
-      "tags": [
-        "pedigree-analysis",
-        "inheritance-patterns",
-        "matching"
-      ]
+      "tags": ["pedigree-analysis", "inheritance-patterns", "matching"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -1899,11 +1515,7 @@
       ],
       "correctAnswer": "A",
       "explanation": "Mendel discovered laws of inheritance using pea plants (iv). Morgan discovered linkage and sex-linked inheritance in Drosophila (iii). Sturtevant, Morgan's student, created the first genetic map using recombination frequencies (i). Hugo de Vries proposed the mutation theory (ii).",
-      "tags": [
-        "scientists",
-        "contributions",
-        "history-of-genetics"
-      ]
+      "tags": ["scientists", "contributions", "history-of-genetics"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -1925,11 +1537,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "Seed shape in pea shows complete dominance with round (R) over wrinkled (r) (iii). Flower colour in snapdragon shows incomplete dominance with pink heterozygotes (iv). ABO blood groups show codominance between I^A and I^B (ii). Eye colour in Drosophila is X-linked (i).",
-      "tags": [
-        "inheritance-patterns",
-        "examples",
-        "matching"
-      ]
+      "tags": ["inheritance-patterns", "examples", "matching"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -1951,12 +1559,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "Blood group A can have genotype I^A I^A (homozygous) or I^A i (heterozygous) (iii). Blood group B can be I^B I^B or I^B i (iv). Blood group AB has genotype I^A I^B (i). Blood group O has genotype ii (ii), being homozygous recessive.",
-      "tags": [
-        "codominance",
-        "blood-groups",
-        "genotypes",
-        "matching"
-      ]
+      "tags": ["codominance", "blood-groups", "genotypes", "matching"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -1978,11 +1581,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "Down syndrome is caused by trisomy 21 (iii). Turner syndrome is caused by monosomy X (ii). Klinefelter syndrome results from XXY trisomy (iv). Cri-du-chat syndrome is caused by deletion of the short arm of chromosome 5 (i), resulting in a characteristic cat-like cry in infants.",
-      "tags": [
-        "chromosomal-disorders",
-        "causes",
-        "matching"
-      ]
+      "tags": ["chromosomal-disorders", "causes", "matching"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -2004,11 +1603,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "Test cross is between F1 and homozygous recessive parent (ii). Back cross is between F1 and either parent (iii). Reciprocal cross involves interchanging the roles of male and female parents (iv). Dihybrid cross involves two pairs of contrasting traits (i).",
-      "tags": [
-        "cross-types",
-        "definitions",
-        "matching"
-      ]
+      "tags": ["cross-types", "definitions", "matching"]
     },
     {
       "type": "COUNTING_TYPE",
@@ -2022,19 +1617,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "How many of the following are features of Down syndrome?\n(a) Short stature with small round head\n(b) Furrowed tongue and partially open mouth\n(c) Palm with characteristic single crease\n(d) Mental retardation\n(e) XO chromosomal constitution\n(f) Trisomy of chromosome 21",
-      "options": [
-        "Five",
-        "Six",
-        "Four",
-        "Three"
-      ],
+      "options": ["Five", "Six", "Four", "Three"],
       "correctAnswer": "A",
       "explanation": "Features (a), (b), (c), (d), and (f) are correct features of Down syndrome. Statement (e) is incorrect as XO is Turner syndrome, not Down syndrome. Down syndrome has trisomy 21 (47 chromosomes). Therefore, 5 of the 6 listed features are correct.",
-      "tags": [
-        "chromosomal-disorders",
-        "down-syndrome",
-        "features"
-      ]
+      "tags": ["chromosomal-disorders", "down-syndrome", "features"]
     },
     {
       "type": "COUNTING_TYPE",
@@ -2048,19 +1634,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "How many of the following statements about Mendel's experiments are correct?\n(a) Mendel studied seven pairs of contrasting traits\n(b) Mendel used emasculation for cross-pollination\n(c) Mendel proposed the concept of factors (now called genes)\n(d) Mendel's work was published in 1866\n(e) Mendel's work was rediscovered independently by three scientists in 1900\n(f) Mendel studied quantitative traits in pea plants",
-      "options": [
-        "Four",
-        "Three",
-        "Five",
-        "Six"
-      ],
+      "options": ["Four", "Three", "Five", "Six"],
       "correctAnswer": "C",
       "explanation": "Statements (a), (b), (c), (d), and (e) are correct. Mendel studied 7 contrasting traits, used emasculation, proposed 'factors', published in 1866, and was rediscovered by de Vries, Correns, and von Tschermak in 1900. Statement (f) is incorrect; Mendel studied qualitative (discontinuous) traits, not quantitative ones.",
-      "tags": [
-        "mendels-laws",
-        "history",
-        "experimental-design"
-      ]
+      "tags": ["mendels-laws", "history", "experimental-design"]
     },
     {
       "type": "COUNTING_TYPE",
@@ -2074,19 +1651,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "How many of the following are X-linked recessive disorders?\n(a) Haemophilia\n(b) Colour blindness\n(c) Phenylketonuria\n(d) Sickle cell anaemia\n(e) Duchenne muscular dystrophy\n(f) Down syndrome",
-      "options": [
-        "Five",
-        "Two",
-        "Three",
-        "Four"
-      ],
+      "options": ["Five", "Two", "Three", "Four"],
       "correctAnswer": "C",
       "explanation": "Haemophilia (a), colour blindness (b), and Duchenne muscular dystrophy (e) are X-linked recessive disorders. Phenylketonuria (c) and sickle cell anaemia (d) are autosomal recessive. Down syndrome (f) is a chromosomal disorder (trisomy 21), not a gene-linked disorder.",
-      "tags": [
-        "sex-linked-inheritance",
-        "genetic-disorders",
-        "X-linked"
-      ]
+      "tags": ["sex-linked-inheritance", "genetic-disorders", "X-linked"]
     },
     {
       "type": "COUNTING_TYPE",
@@ -2100,19 +1668,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "How many of the following are characteristics of Turner syndrome?\n(a) Female phenotype\n(b) Sterility\n(c) Webbed neck\n(d) Gynaecomastia\n(e) Short stature\n(f) Lack of secondary sexual characters\n(g) 47 chromosomes",
-      "options": [
-        "Five",
-        "Three",
-        "Four",
-        "Six"
-      ],
+      "options": ["Five", "Three", "Four", "Six"],
       "correctAnswer": "A",
       "explanation": "Features (a), (b), (c), (e), and (f) are characteristics of Turner syndrome. Gynaecomastia (d) is a feature of Klinefelter syndrome, not Turner. Turner syndrome individuals have 45 chromosomes (XO), not 47 (g). So 5 out of 7 statements are correct.",
-      "tags": [
-        "chromosomal-disorders",
-        "turner-syndrome",
-        "features"
-      ]
+      "tags": ["chromosomal-disorders", "turner-syndrome", "features"]
     },
     {
       "type": "COUNTING_TYPE",
@@ -2126,19 +1685,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "How many of the following statements about linkage are correct?\n(a) Linked genes are located on the same chromosome\n(b) Linkage reduces the variety of gametes produced\n(c) Linkage was discovered by T.H. Morgan\n(d) Crossing over can break linkage\n(e) Linked genes always show 50% recombination\n(f) Genes closer together show stronger linkage",
-      "options": [
-        "Three",
-        "Four",
-        "Five",
-        "Six"
-      ],
+      "options": ["Three", "Four", "Five", "Six"],
       "correctAnswer": "C",
       "explanation": "Statements (a), (b), (c), (d), and (f) are correct. Linked genes are on the same chromosome, reduce gamete variety, were discovered by Morgan, can be separated by crossing over, and show stronger linkage when closer together. Statement (e) is wrong; 50% recombination means genes behave as unlinked.",
-      "tags": [
-        "linkage",
-        "recombination",
-        "morgan"
-      ]
+      "tags": ["linkage", "recombination", "morgan"]
     },
     {
       "type": "COUNTING_TYPE",
@@ -2152,19 +1702,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "How many of the following are correct about the ABO blood group system?\n(a) It is an example of multiple allelism\n(b) I^A and I^B are codominant\n(c) Blood group O is the universal donor\n(d) Blood group AB is the universal recipient\n(e) A person can have a maximum of three alleles for blood group\n(f) The gene for ABO blood group is located on chromosome 9",
-      "options": [
-        "Three",
-        "Four",
-        "Five",
-        "Six"
-      ],
+      "options": ["Three", "Four", "Five", "Six"],
       "correctAnswer": "C",
       "explanation": "Statements (a), (b), (c), (d), and (f) are correct. ABO blood groups show multiple allelism, codominance, and the gene is on chromosome 9. Statement (e) is incorrect; an individual can carry a maximum of only two alleles (one on each homologue), though three alleles exist in the population.",
-      "tags": [
-        "codominance",
-        "blood-groups",
-        "multiple-alleles"
-      ]
+      "tags": ["codominance", "blood-groups", "multiple-alleles"]
     },
     {
       "type": "COUNTING_TYPE",
@@ -2178,19 +1719,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "How many of the following organisms use the XX-XY system of sex determination?\n(a) Humans\n(b) Drosophila\n(c) Birds\n(d) Grasshoppers\n(e) Most mammals\n(f) Honeybees",
-      "options": [
-        "Two",
-        "Three",
-        "Five",
-        "Four"
-      ],
+      "options": ["Two", "Three", "Five", "Four"],
       "correctAnswer": "B",
       "explanation": "Humans (a), Drosophila (b), and most mammals (e) use the XX-XY system. Birds (c) use ZW-ZZ system. Grasshoppers (d) use XO system. Honeybees (f) use haplodiploidy. Therefore, 3 organisms in the list use the XX-XY system.",
-      "tags": [
-        "sex-determination",
-        "XX-XY",
-        "organisms"
-      ]
+      "tags": ["sex-determination", "XX-XY", "organisms"]
     },
     {
       "type": "COUNTING_TYPE",
@@ -2204,19 +1736,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "How many of the following are correct about pedigree analysis?\n(a) Circles represent females\n(b) Squares represent males\n(c) A horizontal line between circle and square represents mating\n(d) Filled symbols represent carriers\n(e) Vertical lines represent parent-offspring relationships\n(f) A double horizontal line represents consanguineous mating",
-      "options": [
-        "Six",
-        "Four",
-        "Three",
-        "Five"
-      ],
+      "options": ["Six", "Four", "Three", "Five"],
       "correctAnswer": "D",
       "explanation": "Statements (a), (b), (c), (e), and (f) are correct standard pedigree symbols. Statement (d) is incorrect; filled (completely shaded) symbols represent affected individuals, not carriers. Carriers are typically shown with half-filled symbols in pedigree charts.",
-      "tags": [
-        "pedigree-analysis",
-        "symbols",
-        "conventions"
-      ]
+      "tags": ["pedigree-analysis", "symbols", "conventions"]
     },
     {
       "type": "SEQUENCE_ORDER",
@@ -2238,11 +1761,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "Mendel first selected true-breeding (homozygous) parents (I), then performed cross-pollination (III), observed the F1 generation which was all dominant (II), allowed F1 plants to self-pollinate (IV), and finally observed and recorded F2 ratios showing 3:1 ratio (V).",
-      "tags": [
-        "mendels-laws",
-        "experimental-procedure",
-        "monohybrid-cross"
-      ]
+      "tags": ["mendels-laws", "experimental-procedure", "monohybrid-cross"]
     },
     {
       "type": "SEQUENCE_ORDER",
@@ -2264,11 +1783,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "The correct chronological order is: Mendel's publication in 1866 (II), rediscovery in 1900 (I), chromosomal theory by Sutton and Boveri in 1902 (III), Morgan's work on sex-linkage around 1910 (IV), and Sturtevant's genetic map in 1913 (V).",
-      "tags": [
-        "history-of-genetics",
-        "chronological-order",
-        "scientists"
-      ]
+      "tags": ["history-of-genetics", "chronological-order", "scientists"]
     },
     {
       "type": "SEQUENCE_ORDER",
@@ -2290,11 +1805,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "The sequence begins with a point mutation in the gene (II), which causes amino acid substitution of Glu to Val (III). The abnormal HbS haemoglobin polymerises under low oxygen tension (IV), which finally causes the RBCs to become sickle-shaped (I).",
-      "tags": [
-        "mutation",
-        "sickle-cell-anaemia",
-        "molecular-basis"
-      ]
+      "tags": ["mutation", "sickle-cell-anaemia", "molecular-basis"]
     },
     {
       "type": "SEQUENCE_ORDER",
@@ -2316,11 +1827,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "Non-disjunction of chromosome 21 during meiosis (III) leads to a gamete with an extra chromosome 21 (n+1 = 24) (II). When this abnormal gamete is fertilised by a normal gamete (I), the resulting zygote has 47 chromosomes with trisomy 21 (IV), leading to Down syndrome (V).",
-      "tags": [
-        "chromosomal-disorders",
-        "non-disjunction",
-        "down-syndrome"
-      ]
+      "tags": ["chromosomal-disorders", "non-disjunction", "down-syndrome"]
     },
     {
       "type": "SEQUENCE_ORDER",
@@ -2342,11 +1849,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "Genetic mapping begins with performing test crosses involving linked genes (II), then counting parental and recombinant offspring (V), calculating recombination frequencies (I), expressing distances in centiMorgans (IV), and finally arranging genes in linear order on the chromosome map (III).",
-      "tags": [
-        "linkage",
-        "genetic-mapping",
-        "sturtevant"
-      ]
+      "tags": ["linkage", "genetic-mapping", "sturtevant"]
     },
     {
       "type": "SEQUENCE_ORDER",
@@ -2368,11 +1871,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "Turner syndrome (XO) has 45 chromosomes (I). Normal humans have 46 chromosomes (II). Both Down syndrome (trisomy 21) and Klinefelter syndrome (XXY) have 47 chromosomes, so III = IV. The correct ascending order is 45 -> 46 -> 47 = 47.",
-      "tags": [
-        "chromosomal-disorders",
-        "chromosome-number",
-        "sequence"
-      ]
+      "tags": ["chromosomal-disorders", "chromosome-number", "sequence"]
     },
     {
       "type": "SEQUENCE_ORDER",
@@ -2394,11 +1893,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "PKU begins with the absence of the enzyme phenylalanine hydroxylase (II), which causes failure to convert phenylalanine to tyrosine (IV). This leads to accumulation of phenylalanine in body fluids (I), ultimately causing mental retardation and reduced melanin (from reduced tyrosine) (III).",
-      "tags": [
-        "pleiotropy",
-        "phenylketonuria",
-        "metabolic-pathway"
-      ]
+      "tags": ["pleiotropy", "phenylketonuria", "metabolic-pathway"]
     },
     {
       "type": "MCQ",
@@ -2412,19 +1907,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "If both parents are carriers for sickle cell anaemia (HbA HbS), the probability of their child being affected is:",
-      "options": [
-        "25%",
-        "100%",
-        "50%",
-        "75%"
-      ],
+      "options": ["25%", "100%", "50%", "75%"],
       "correctAnswer": "A",
       "explanation": "When both parents are carriers (HbA HbS x HbA HbS), the offspring ratio is 1 HbA HbA (normal) : 2 HbA HbS (carrier) : 1 HbS HbS (affected). The probability of an affected child (homozygous HbS HbS) is 1/4 or 25%.",
-      "tags": [
-        "sickle-cell-anaemia",
-        "probability",
-        "autosomal-recessive"
-      ]
+      "tags": ["sickle-cell-anaemia", "probability", "autosomal-recessive"]
     },
     {
       "type": "MCQ",
@@ -2438,19 +1924,10 @@
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
       "question": "Which of the following crosses will produce all offspring with the same phenotype?",
-      "options": [
-        "Tt x Tt",
-        "Tt x tt",
-        "TT x tt",
-        "All of the above"
-      ],
+      "options": ["Tt x Tt", "Tt x tt", "TT x tt", "All of the above"],
       "correctAnswer": "C",
       "explanation": "TT x tt produces all Tt offspring, which are all tall (assuming complete dominance). In Tt x Tt, 1/4 will be dwarf. In Tt x tt, 1/2 will be dwarf. Only the cross TT x tt produces phenotypically uniform offspring.",
-      "tags": [
-        "monohybrid-cross",
-        "cross-prediction",
-        "phenotype"
-      ]
+      "tags": ["monohybrid-cross", "cross-prediction", "phenotype"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -2472,11 +1949,7 @@
       ],
       "correctAnswer": "A",
       "explanation": "The assertion is true: for a woman to be colour blind (X^c X^c), she must receive X^c from both parents, meaning her father must be colour blind (X^c Y) and her mother must be at least a carrier (X^C X^c). The reason is false because colour blindness is X-linked recessive, not autosomal recessive.",
-      "tags": [
-        "sex-linked-inheritance",
-        "colour-blindness",
-        "X-linked"
-      ]
+      "tags": ["sex-linked-inheritance", "colour-blindness", "X-linked"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -2498,12 +1971,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "Alfred Sturtevant used recombination frequencies to create the first genetic map of Drosophila. His method was based on the principle that genes farther apart on a chromosome have more chance of crossing over between them, resulting in higher recombination frequencies. The reason correctly explains the basis of his mapping approach.",
-      "tags": [
-        "linkage",
-        "genetic-mapping",
-        "sturtevant",
-        "recombination"
-      ]
+      "tags": ["linkage", "genetic-mapping", "sturtevant", "recombination"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -2525,11 +1993,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "Both statements are correct. In the XO system of grasshoppers, males are XO and produce two types of sperms (with and without the X chromosome), making them heterogametic. Males have one fewer sex chromosome than females (XX), so Statement II is also correct.",
-      "tags": [
-        "sex-determination",
-        "XO-system",
-        "grasshopper"
-      ]
+      "tags": ["sex-determination", "XO-system", "grasshopper"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -2551,11 +2015,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "Statement I is correct; polyploidy can result from failure of cytokinesis after DNA replication, leading to cells with multiple sets of chromosomes. Statement II is incorrect because even-numbered polyploids (like tetraploids) can be fertile as chromosomes can pair properly during meiosis. Many crop plants are fertile polyploids.",
-      "tags": [
-        "chromosomal-disorders",
-        "polyploidy",
-        "cytokinesis"
-      ]
+      "tags": ["chromosomal-disorders", "polyploidy", "cytokinesis"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -2577,11 +2037,7 @@
       ],
       "correctAnswer": "B",
       "explanation": "Homozygous means having two identical alleles (ii). Heterozygous means having two different alleles (i). Hemizygous refers to having only one copy of a gene, as in X-linked genes in males who have one X chromosome (iii). Nullizygous means having no functional copy of a gene (iv).",
-      "tags": [
-        "genetic-terminology",
-        "zygosity",
-        "matching"
-      ]
+      "tags": ["genetic-terminology", "zygosity", "matching"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -2603,12 +2059,7 @@
       ],
       "correctAnswer": "A",
       "explanation": "In Mendel's pea plant experiments: yellow seed colour is dominant over green (ii), axial flower position is dominant over terminal (iii), inflated pod shape is dominant over constricted (iv), and tall stem is dominant over dwarf (i). These were among the 7 contrasting traits Mendel studied.",
-      "tags": [
-        "mendels-laws",
-        "pea-plant",
-        "dominant-traits",
-        "matching"
-      ]
+      "tags": ["mendels-laws", "pea-plant", "dominant-traits", "matching"]
     }
   ]
 }

@@ -228,9 +228,7 @@ Key concepts covered:
         onDrop={handleDrop}
       >
         <div className="text-center">
-          <div
-            className="mx-auto w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mb-4 animate-fadeInUp"
-          >
+          <div className="mx-auto w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mb-4 animate-fadeInUp">
             <Upload className="w-8 h-8 text-white" />
           </div>
 
@@ -273,94 +271,83 @@ Key concepts covered:
       </div>
 
       {/* Analysis Progress */}
-{isAnalyzing && (
-          <div
-            className="mt-6 p-6 bg-gray-50 rounded-2xl border animate-fadeInUp"
-          >
-            <div className="flex items-center space-x-4 mb-4">
-              <div
-               className="animate-fadeInUp">
-                <Brain className="w-8 h-8 text-blue-500" />
-              </div>
-              <div className="flex-1">
-                <h4 className="font-semibold text-gray-800">AI Analysis in Progress</h4>
-                <p className="text-sm text-gray-600">{currentAnalysis}</p>
-              </div>
-              <div className="text-right">
-                <div className="text-2xl font-bold text-blue-500">
-                  {Math.round(analysisProgress)}%
-                </div>
-              </div>
+      {isAnalyzing && (
+        <div className="mt-6 p-6 bg-gray-50 rounded-2xl border animate-fadeInUp">
+          <div className="flex items-center space-x-4 mb-4">
+            <div className="animate-fadeInUp">
+              <Brain className="w-8 h-8 text-blue-500" />
             </div>
-
-            <div className="w-full bg-gray-200 rounded-full h-3">
-              <div
-                className="bg-blue-500 h-3 rounded-full animate-fadeInUp"
-              />
+            <div className="flex-1">
+              <h4 className="font-semibold text-gray-800">AI Analysis in Progress</h4>
+              <p className="text-sm text-gray-600">{currentAnalysis}</p>
+            </div>
+            <div className="text-right">
+              <div className="text-2xl font-bold text-blue-500">
+                {Math.round(analysisProgress)}%
+              </div>
             </div>
           </div>
-        )}
-{/* Uploaded Files */}
-{uploadedFiles.length > 0 && (
-          <div
-            className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 animate-fadeInUp"
-          >
-            {uploadedFiles.map((file) => (
-              <div
-                key={file.id}
-                className="relative bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
-              >
-                <div className="aspect-square relative">
-                  <Image
-                    src={file.preview}
-                    alt={file.file.name}
-                    fill
-                    className="object-cover"
-                    sizes="120px"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+
+          <div className="w-full bg-gray-200 rounded-full h-3">
+            <div className="bg-blue-500 h-3 rounded-full animate-fadeInUp" />
+          </div>
+        </div>
+      )}
+      {/* Uploaded Files */}
+      {uploadedFiles.length > 0 && (
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 animate-fadeInUp">
+          {uploadedFiles.map((file) => (
+            <div
+              key={file.id}
+              className="relative bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
+            >
+              <div className="aspect-square relative">
+                <Image
+                  src={file.preview}
+                  alt={file.file.name}
+                  fill
+                  className="object-cover"
+                  sizes="120px"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                  <button
+                    className="opacity-0 hover:opacity-100 bg-white rounded-full p-2 transition-opacity animate-fadeInUp"
+                    onClick={() => analyzeImage(file)}
+                  >
+                    <Eye size={20} className="text-gray-700" />
+                  </button>
+                </div>
+              </div>
+
+              <div className="p-4">
+                <p className="text-sm font-medium text-gray-800 truncate mb-2">{file.file.name}</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-gray-500">
+                    {(file.file.size / 1024 / 1024).toFixed(1)} MB
+                  </span>
+                  <div className="flex space-x-2">
                     <button
-                      className="opacity-0 hover:opacity-100 bg-white rounded-full p-2 transition-opacity animate-fadeInUp"
+                      className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 animate-fadeInUp"
                       onClick={() => analyzeImage(file)}
+                      disabled={isAnalyzing}
                     >
-                      <Eye size={20} className="text-gray-700" />
+                      <Sparkles size={16} />
+                    </button>
+                    <button
+                      className="p-2 bg-red-100 text-red-600 rounded-lg hover:bg-red-200 animate-fadeInUp"
+                      onClick={() => removeFile(file.id)}
+                    >
+                      <X size={16} />
                     </button>
                   </div>
                 </div>
-
-                <div className="p-4">
-                  <p className="text-sm font-medium text-gray-800 truncate mb-2">
-                    {file.file.name}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-gray-500">
-                      {(file.file.size / 1024 / 1024).toFixed(1)} MB
-                    </span>
-                    <div className="flex space-x-2">
-                      <button
-                        className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 animate-fadeInUp"
-                        onClick={() => analyzeImage(file)}
-                        disabled={isAnalyzing}
-                      >
-                        <Sparkles size={16} />
-                      </button>
-                      <button
-                        className="p-2 bg-red-100 text-red-600 rounded-lg hover:bg-red-200 animate-fadeInUp"
-                        onClick={() => removeFile(file.id)}
-                      >
-                        <X size={16} />
-                      </button>
-                    </div>
-                  </div>
-                </div>
               </div>
-            ))}
-          </div>
-        )}
-{/* Quick Tips */}
-      <div
-        className="mt-6 p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-xl border border-green-200 animate-fadeInUp"
-      >
+            </div>
+          ))}
+        </div>
+      )}
+      {/* Quick Tips */}
+      <div className="mt-6 p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-xl border border-green-200 animate-fadeInUp">
         <div className="flex items-start space-x-3">
           <Zap className="w-5 h-5 text-green-600 mt-0.5" />
           <div>

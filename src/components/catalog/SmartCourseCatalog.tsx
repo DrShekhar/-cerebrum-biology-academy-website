@@ -327,16 +327,16 @@ export function SmartCourseCatalog() {
 
             {/* Course Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-{filteredAndSortedCourses.map((course, index) => (
-                  <CourseCard
-                    key={course.id}
-                    course={course}
-                    index={index}
-                    isSelected={selectedCourses.includes(course.id)}
-                    onToggleSelection={toggleCourseSelection}
-                  />
-                ))}
-</div>
+              {filteredAndSortedCourses.map((course, index) => (
+                <CourseCard
+                  key={course.id}
+                  course={course}
+                  index={index}
+                  isSelected={selectedCourses.includes(course.id)}
+                  onToggleSelection={toggleCourseSelection}
+                />
+              ))}
+            </div>
 
             {filteredAndSortedCourses.length === 0 && (
               <div className="text-center py-12">

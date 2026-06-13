@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function MistakesToAvoidIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -62,8 +62,7 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
       <circle cx="550" cy="400" r="100" fill="#F59E0B" opacity="0.05" />
 
       {/* Title */}
-      <g
-      >
+      <g>
         <rect
           x="150"
           y="12"
@@ -79,8 +78,7 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
       </g>
 
       {/* LEFT COLUMN - DON'T DO */}
-      <g
-      >
+      <g>
         <rect
           x="20"
           y="70"
@@ -97,14 +95,7 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
 
         {/* Mistake 1 */}
         <g transform="translate(35, 115)">
-          <circle
-            cx="18"
-            cy="18"
-            r="18"
-            fill="#FEE2E2"
-            stroke="#EF4444"
-            strokeWidth="2"
-          />
+          <circle cx="18" cy="18" r="18" fill="#FEE2E2" stroke="#EF4444" strokeWidth="2" />
           <text x="18" y="23" fontSize="14" textAnchor="middle" fill="#DC2626" fontWeight="bold">
             1
           </text>
@@ -212,8 +203,7 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
       </g>
 
       {/* RIGHT COLUMN - DO THIS INSTEAD */}
-      <g
-      >
+      <g>
         <rect
           x="310"
           y="70"
@@ -230,14 +220,7 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
 
         {/* Correct 1 */}
         <g transform="translate(325, 115)">
-          <circle
-            cx="18"
-            cy="18"
-            r="18"
-            fill="#DCFCE7"
-            stroke="#22C55E"
-            strokeWidth="2"
-          />
+          <circle cx="18" cy="18" r="18" fill="#DCFCE7" stroke="#22C55E" strokeWidth="2" />
           <text x="18" y="24" fontSize="16" textAnchor="middle" fill="#16A34A">
             ✓
           </text>
@@ -307,8 +290,7 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
       </g>
 
       {/* STATISTICS BOX */}
-      <g
-      >
+      <g>
         <rect
           x="310"
           y="360"
@@ -321,14 +303,7 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
         <text x="445" y="385" fontSize="10" fill="#94A3B8" textAnchor="middle">
           Students who avoid these mistakes
         </text>
-        <text
-          x="445"
-          y="415"
-          fontSize="28"
-          fill="#22C55E"
-          textAnchor="middle"
-          fontWeight="bold"
-        >
+        <text x="445" y="415" fontSize="28" fill="#22C55E" textAnchor="middle" fontWeight="bold">
           3x More Likely
         </text>
         <text x="445" y="430" fontSize="9" fill="#94A3B8" textAnchor="middle">
@@ -337,11 +312,8 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
       </g>
 
       {/* WARNING TRIANGLE */}
-      <g
-      >
-        <g
-          style={{ transformOrigin: '155px 440px' }}
-        >
+      <g>
+        <g style={{ transformOrigin: '155px 440px' }}>
           <path
             d="M155 390 L190 440 L120 440 Z"
             fill="url(#warningGrad)"

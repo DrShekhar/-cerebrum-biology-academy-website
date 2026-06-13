@@ -3,9 +3,9 @@ import Link from 'next/link'
 import { Check, X } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Cerebrum vs the 2nd-largest national NEET chain: Which is Better for NEET Biology 2026?',
+  title: 'Cerebrum vs Aakash: Which is Better for NEET Biology 2026?',
   description:
-    'Detailed comparison of Cerebrum Biology Academy vs SKY Coaching (2nd-largest national NEET chain) for NEET coaching. Compare faculty, fees, results, and why Cerebrum specializes in Biology with 98% success rate.',
+    'Detailed comparison of Cerebrum Biology Academy vs Aakash for NEET coaching. Compare faculty, fees, results, and why Cerebrum specializes in Biology with 98% success rate.',
   keywords:
     'cerebrum vs aakash, aakash vs cerebrum, NEET coaching comparison, Biology coaching, Delhi NCR',
   alternates: {
@@ -13,16 +13,17 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: 'Cerebrum vs the 2nd-largest national NEET chain: Which is Better for NEET Biology 2026?',
+    title: 'Cerebrum vs Aakash: Which is Better for NEET Biology 2026?',
     description:
-      'Compare Cerebrum Biology Academy vs SKY Coaching (2nd-largest national NEET chain). Learn about faculty, fees, success rates, and which institute is better for Biology specialization.',
+      'Compare Cerebrum Biology Academy vs Aakash. Learn about faculty, fees, success rates, and which institute is better for Biology specialization.',
     type: 'article',
   },
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Cerebrum vs the 2nd-largest national NEET chain: Which is Better for NEET Biology 2026?',
-    description: 'Detailed comparison of Cerebrum Biology Academy vs SKY Coaching (2nd-largest national NEET chain) for NEET coaching. Compare faculty, fees, results, and why Cerebrum specializes in Biology with 98%...',
+    title: 'Cerebrum vs Aakash: Which is Better for NEET Biology 2026?',
+    description:
+      'Detailed comparison of Cerebrum Biology Academy vs Aakash for NEET coaching. Compare faculty, fees, results, and why Cerebrum specializes in Biology with 98%...',
   },
 }
 
@@ -33,29 +34,29 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: 'Is Cerebrum better than the 2nd-largest national NEET chain for NEET Biology?',
+    question: 'Is Cerebrum better than Aakash for NEET Biology?',
     answer:
-      'Cerebrum specializes exclusively in Biology and leverages AIIMS-trained faculty, making it superior for students prioritizing Biology mastery. With a 98% selection rate and average 120+ marks improvement in Biology, Cerebrum offers focused expertise. the 2nd-largest national NEET chain covers all NEET subjects, which may work better if you need comprehensive subject coverage. The choice depends on your Biology proficiency and goals.',
+      'Cerebrum specializes exclusively in Biology and leverages AIIMS-trained faculty, making it superior for students prioritizing Biology mastery. With a 98% selection rate and average 120+ marks improvement in Biology, Cerebrum offers focused expertise. Aakash covers all NEET subjects, which may work better if you need comprehensive subject coverage. The choice depends on your Biology proficiency and goals.',
   },
   {
-    question: 'What is the fee difference between Cerebrum and the 2nd-largest national NEET chain?',
+    question: 'What is the fee difference between Cerebrum and Aakash?',
     answer:
-      'Cerebrum Biology Academy charges ₹45,000 to ₹1,20,000 depending on duration and location, while the 2nd-largest national NEET chain typically charges ₹1,00,000 to ₹2,50,000 for comprehensive NEET programs. Cerebrum offers competitive pricing with Biology-specialized curriculum, making it more affordable for students focusing on Biology excellence.',
+      'Cerebrum Biology Academy charges ₹45,000 to ₹1,20,000 depending on duration and location, while Aakash typically charges ₹1,00,000 to ₹2,50,000 for comprehensive NEET programs. Cerebrum offers competitive pricing with Biology-specialized curriculum, making it more affordable for students focusing on Biology excellence.',
   },
   {
-    question: "How is Cerebrum's faculty different from the 2nd-largest national NEET chain?",
+    question: "How is Cerebrum's faculty different from Aakash?",
     answer:
-      'Cerebrum is founded by Dr. Shekhar, an AIIMS Senior Faculty, and all instructors are AIIMS-trained with specialization in Biology. This ensures medical college-aligned teaching. the 2nd-largest national NEET chain employs a mix of faculty across subjects with varying expertise levels, though they do have experienced teachers in individual subjects.',
+      'Cerebrum is founded by Dr. Shekhar, an AIIMS Senior Faculty, and all instructors are AIIMS-trained with specialization in Biology. This ensures medical college-aligned teaching. Aakash employs a mix of faculty across subjects with varying expertise levels, though they do have experienced teachers in individual subjects.',
   },
   {
     question: 'Which institute provides better personal attention?',
     answer:
-      "Cerebrum maintains batch sizes of 25-30 students with a 1:25 student-to-faculty ratio, ensuring personalized attention. the 2nd-largest national NEET chain typically has 60-80+ students per batch with higher ratios. For Biology mastery requiring detailed doubt clearing, Cerebrum's smaller batches provide superior personal attention.",
+      "Cerebrum maintains batch sizes of 25-30 students with a 1:25 student-to-faculty ratio, ensuring personalized attention. Aakash typically has 60-80+ students per batch with higher ratios. For Biology mastery requiring detailed doubt clearing, Cerebrum's smaller batches provide superior personal attention.",
   },
   {
     question: 'Does Cerebrum have centers outside Delhi NCR?',
     answer:
-      "Currently, Cerebrum Biology Academy operates 4 centers across Delhi NCR and offers live online classes with recorded sessions. For pan-India availability, the 2nd-largest national NEET chain has centers in most major cities. However, Cerebrum's online programs allow students nationwide to access AIIMS-trained faculty expertise.",
+      "Currently, Cerebrum Biology Academy operates 4 centers across Delhi NCR and offers live online classes with recorded sessions. For pan-India availability, Aakash has centers in most major cities. However, Cerebrum's online programs allow students nationwide to access AIIMS-trained faculty expertise.",
   },
 ]
 
@@ -85,7 +86,7 @@ export default function CerebrumVsAakash() {
       <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-12 sm:py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
-            Cerebrum vs the 2nd-largest national NEET chain: Which is Better for NEET Biology 2026?
+            Cerebrum vs Aakash: Which is Better for NEET Biology 2026?
           </h1>
           <p className="text-lg sm:text-xl text-blue-100 mb-6 leading-relaxed">
             A detailed comparison of two leading NEET coaching institutes. Understand the
@@ -117,7 +118,7 @@ export default function CerebrumVsAakash() {
                     Cerebrum Biology Academy
                   </th>
                   <th className="px-4 sm:px-6 py-4 text-left font-semibold text-gray-700 text-sm sm:text-base">
-                    SKY Coaching (2nd-largest national NEET chain)
+                    Aakash
                   </th>
                 </tr>
               </thead>
@@ -212,7 +213,7 @@ export default function CerebrumVsAakash() {
                     <span className="text-green-700 font-medium">Live + Recorded Classes</span>
                   </td>
                   <td className="px-4 sm:px-6 py-4 text-sm sm:text-base text-gray-700">
-                    the 2nd-largest national NEET chain Digital Platform
+                    Aakash Digital Platform
                   </td>
                 </tr>
 
@@ -274,7 +275,7 @@ export default function CerebrumVsAakash() {
               </div>
 
               <div className="bg-gray-50 p-6 sm:p-8 rounded-lg border border-gray-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">SKY Coaching (2nd-largest national NEET chain)</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Aakash</h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
@@ -348,7 +349,7 @@ export default function CerebrumVsAakash() {
               </div>
 
               <div className="bg-gray-50 p-6 sm:p-8 rounded-lg border border-gray-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">SKY Coaching (2nd-largest national NEET chain)</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Aakash</h3>
                 <div className="space-y-4">
                   <div>
                     <p className="font-semibold text-gray-900">Classroom Program (NEET)</p>
@@ -358,7 +359,7 @@ export default function CerebrumVsAakash() {
                     </p>
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">Online (the 2nd-largest national NEET chain Digital)</p>
+                    <p className="font-semibold text-gray-900">Online (Aakash Digital)</p>
                     <p className="text-gray-900 font-bold text-lg">₹80,000 - ₹1,50,000</p>
                     <p className="text-sm text-gray-600">
                       Video-based learning with BYJU'S integration
@@ -375,7 +376,7 @@ export default function CerebrumVsAakash() {
             </div>
             <p className="mt-6 text-gray-700 text-base">
               <strong>Verdict:</strong> Cerebrum offers superior affordability with specialized
-              Biology focus. If you need comprehensive NEET subject coverage, the 2nd-largest national NEET chain's all-in-one
+              Biology focus. If you need comprehensive NEET subject coverage, Aakash's all-in-one
               approach justifies higher fees. For Biology specialists, Cerebrum provides 50-70% cost
               savings.
             </p>
@@ -419,7 +420,7 @@ export default function CerebrumVsAakash() {
               </div>
 
               <div className="bg-gray-50 p-6 sm:p-8 rounded-lg border border-gray-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">SKY Coaching (2nd-largest national NEET chain)</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Aakash</h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
@@ -446,7 +447,7 @@ export default function CerebrumVsAakash() {
             </div>
             <p className="mt-6 text-gray-700 text-base">
               <strong>Verdict:</strong> Cerebrum's 98% selection rate demonstrates focused
-              excellence in Biology training. the 2nd-largest national NEET chain's track record is solid but distributed across
+              excellence in Biology training. Aakash's track record is solid but distributed across
               multiple subjects. For Biology-specific improvements, Cerebrum's specialized approach
               shows measurable advantages.
             </p>
@@ -491,7 +492,7 @@ export default function CerebrumVsAakash() {
               </div>
 
               <div className="bg-gray-50 p-6 sm:p-8 rounded-lg border border-gray-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">SKY Coaching (2nd-largest national NEET chain)</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Aakash</h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
@@ -499,7 +500,7 @@ export default function CerebrumVsAakash() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
-                    <span>the 2nd-largest national NEET chain Digital platform with video lectures and animations</span>
+                    <span>Aakash Digital platform with video lectures and animations</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
@@ -522,8 +523,8 @@ export default function CerebrumVsAakash() {
             </div>
             <p className="mt-6 text-gray-700 text-base">
               <strong>Verdict:</strong> Cerebrum provides focused Biology material with direct
-              faculty access. the 2nd-largest national NEET chain offers comprehensive multi-subject resources with advanced
-              technology. Cerebrum is better for in-depth Biology learning; the 2nd-largest national NEET chain for complete NEET
+              faculty access. Aakash offers comprehensive multi-subject resources with advanced
+              technology. Cerebrum is better for in-depth Biology learning; Aakash for complete NEET
               preparation.
             </p>
           </div>
@@ -564,7 +565,7 @@ export default function CerebrumVsAakash() {
               </div>
 
               <div className="bg-gray-50 p-6 sm:p-8 rounded-lg border border-gray-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">SKY Coaching (2nd-largest national NEET chain)</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Aakash</h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
@@ -578,7 +579,7 @@ export default function CerebrumVsAakash() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
-                    <span>the 2nd-largest national NEET chain Digital for nationwide online access</span>
+                    <span>Aakash Digital for nationwide online access</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
@@ -593,7 +594,7 @@ export default function CerebrumVsAakash() {
             </div>
             <p className="mt-6 text-gray-700 text-base">
               <strong>Verdict:</strong> Cerebrum is ideal for Delhi NCR students with direct access
-              to AIIMS faculty. the 2nd-largest national NEET chain suits students nationwide needing centers in multiple cities.
+              to AIIMS faculty. Aakash suits students nationwide needing centers in multiple cities.
               For Delhi NCR, both are accessible; Cerebrum offers specialized Biology focus.
             </p>
           </div>

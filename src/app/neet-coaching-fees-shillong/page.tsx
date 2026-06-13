@@ -12,7 +12,11 @@ const PAGE_URL = `https://cerebrumbiologyacademy.com/neet-coaching-fees-${SLUG}`
 export const metadata: Metadata = city
   ? {
       title: `NEET Coaching Fees in ${city.displayName} 2026 | Fee Comparison vs Allen / Aakash · Cerebrum`,
-      description: `NEET coaching fee comparison ${city.displayName} (${city.state}) 2026. Cerebrum Biology: Pursuit Rs 48,000 / Ascent Rs 76,000 / Pinnacle Rs 98,000 per year. Compare with Allen, Aakash, ${city.localCoachingPresence.split(',')[0].trim().replace(/\\(.*\\)/, '').trim()}. Biology specialist online + study material shipped to ${city.majorAreas.slice(0, 3).join(', ')}.`,
+      description: `NEET coaching fee comparison ${city.displayName} (${city.state}) 2026. Cerebrum Biology: Pursuit Rs 48,000 / Ascent Rs 76,000 / Pinnacle Rs 98,000 per year. Compare with Allen, Aakash, ${city.localCoachingPresence
+        .split(',')[0]
+        .trim()
+        .replace(/\\(.*\\)/, '')
+        .trim()}. Biology specialist online + study material shipped to ${city.majorAreas.slice(0, 3).join(', ')}.`,
       keywords: [
         `NEET coaching fees ${city.displayName}`,
         `NEET coaching fee ${city.displayName} 2026`,
@@ -100,7 +104,9 @@ export default function Page() {
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4">
           <nav className="text-sm text-slate-400 mb-6" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white">Home</Link>
+            <Link href="/" className="hover:text-white">
+              Home
+            </Link>
             <span className="mx-2">/</span>
             <span className="text-white">NEET Coaching Fees {city.displayName}</span>
           </nav>
@@ -108,13 +114,13 @@ export default function Page() {
             NEET Coaching Fees in {city.displayName} 2026
           </h1>
           <p className="text-xl text-slate-300 mb-6 max-w-3xl">
-            Transparent fee comparison for {city.displayName} ({city.state}) NEET
-            aspirants. Cerebrum biology-specialist pricing is pan-India — no
-            city premium. Pair with your existing {localCoaching} for PCM. Target:{' '}
-            <strong>{city.stateQuotaCollege}</strong>
+            Transparent fee comparison for {city.displayName} ({city.state}) NEET aspirants.
+            Cerebrum biology-specialist pricing is pan-India — no city premium. Pair with your
+            existing {localCoaching} for PCM. Target: <strong>{city.stateQuotaCollege}</strong>
             {city.otherStateMedicalColleges?.length ? (
               <> or {city.otherStateMedicalColleges[0]}</>
-            ) : null}.
+            ) : null}
+            .
           </p>
           <a
             href={wa}
@@ -138,27 +144,39 @@ export default function Page() {
               <p className="text-xs uppercase tracking-wide text-slate-500 font-semibold">
                 Pursuit
               </p>
-              <p className="mt-2 text-3xl font-bold text-slate-900">~Rs 48,000<span className="text-sm text-slate-500">/yr</span></p>
-              <p className="mt-2 text-sm text-slate-600">30-40 student batch · group doubt sessions · NCERT guide shipped</p>
+              <p className="mt-2 text-3xl font-bold text-slate-900">
+                ~Rs 48,000<span className="text-sm text-slate-500">/yr</span>
+              </p>
+              <p className="mt-2 text-sm text-slate-600">
+                30-40 student batch · group doubt sessions · NCERT guide shipped
+              </p>
             </div>
             <div className="rounded-xl border-2 border-indigo-600 bg-indigo-50 p-6">
               <p className="text-xs uppercase tracking-wide text-indigo-700 font-semibold">
                 Ascent · Most popular
               </p>
-              <p className="mt-2 text-3xl font-bold text-slate-900">~Rs 76,000<span className="text-sm text-slate-500">/yr</span></p>
-              <p className="mt-2 text-sm text-slate-700">16-25 student batch · weekly 15-min 1:1 doubt slot · monthly mocks</p>
+              <p className="mt-2 text-3xl font-bold text-slate-900">
+                ~Rs 76,000<span className="text-sm text-slate-500">/yr</span>
+              </p>
+              <p className="mt-2 text-sm text-slate-700">
+                16-25 student batch · weekly 15-min 1:1 doubt slot · monthly mocks
+              </p>
             </div>
             <div className="rounded-xl border-2 border-slate-200 p-6">
               <p className="text-xs uppercase tracking-wide text-amber-600 font-semibold">
                 Pinnacle ZA
               </p>
-              <p className="mt-2 text-3xl font-bold text-slate-900">~Rs 98,000<span className="text-sm text-slate-500">/yr</span></p>
-              <p className="mt-2 text-sm text-slate-600">10-12 students · direct Dr. Shekhar weekly 1:1 mentor · AIIMS target</p>
+              <p className="mt-2 text-3xl font-bold text-slate-900">
+                ~Rs 98,000<span className="text-sm text-slate-500">/yr</span>
+              </p>
+              <p className="mt-2 text-sm text-slate-600">
+                10-12 students · direct Dr. Shekhar weekly 1:1 mentor · AIIMS target
+              </p>
             </div>
           </div>
           <p className="mt-5 text-xs text-slate-500">
-            EMI options 3/6/12 months. Sibling discounts. Merit-based scholarships up to 30%.
-            For {city.displayName} students from {city.feederSchools.slice(0, 3).join(', ')}, etc.
+            EMI options 3/6/12 months. Sibling discounts. Merit-based scholarships up to 30%. For{' '}
+            {city.displayName} students from {city.feederSchools.slice(0, 3).join(', ')}, etc.
           </p>
         </div>
       </section>
@@ -187,7 +205,9 @@ export default function Page() {
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Get a personalised quote for {city.displayName}
           </h2>
-          <p className="text-blue-100 mb-6">WhatsApp with your child's class + target college. Reply within hours.</p>
+          <p className="text-blue-100 mb-6">
+            WhatsApp with your child's class + target college. Reply within hours.
+          </p>
           <a
             href={wa}
             className="inline-flex items-center gap-2 bg-white text-blue-700 px-8 py-4 rounded-xl font-semibold text-lg"

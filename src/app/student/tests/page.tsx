@@ -220,8 +220,7 @@ export default function StudentTestsPage() {
         {/* Stats Cards */}
         {stats && (
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <Card className="hover:shadow-md transition-shadow">
                 <CardContent className="p-4">
                   <div className="flex items-center space-x-3">
@@ -237,8 +236,7 @@ export default function StudentTestsPage() {
               </Card>
             </div>
 
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <Card className="hover:shadow-md transition-shadow">
                 <CardContent className="p-4">
                   <div className="flex items-center space-x-3">
@@ -254,8 +252,7 @@ export default function StudentTestsPage() {
               </Card>
             </div>
 
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <Card className="hover:shadow-md transition-shadow">
                 <CardContent className="p-4">
                   <div className="flex items-center space-x-3">
@@ -271,8 +268,7 @@ export default function StudentTestsPage() {
               </Card>
             </div>
 
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <Card className="hover:shadow-md transition-shadow">
                 <CardContent className="p-4">
                   <div className="flex items-center space-x-3">
@@ -288,8 +284,7 @@ export default function StudentTestsPage() {
               </Card>
             </div>
 
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <Card className="hover:shadow-md transition-shadow">
                 <CardContent className="p-4">
                   <div className="flex items-center space-x-3">
@@ -355,9 +350,7 @@ export default function StudentTestsPage() {
         ) : (
           <div className="space-y-4">
             {tests.map((test, index) => (
-              <div
-                key={test.submissionId}
-               className="animate-fadeInUp">
+              <div key={test.submissionId} className="animate-fadeInUp">
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">

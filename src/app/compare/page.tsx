@@ -4,7 +4,8 @@ import { CEREBRUM_DATA, getAllCompetitors } from '@/components/seo/ComparisonSch
 import { ArrowRight, Trophy, IndianRupee, Users, Target, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Comparison | Cerebrum vs Kota, the largest national NEET chain, the 2nd-largest national NEET chain | 2026 Guide',
+  title:
+    'NEET Coaching Comparison | Cerebrum vs Kota, the largest national NEET chain, the 2nd-largest national NEET chain | 2026 Guide',
   description:
     'Compare Cerebrum Biology Academy with Kota coaching, the largest national NEET chain, the 2nd-largest national NEET chain, and local institutes. See fees, batch sizes, success rates. Make an informed decision for NEET 2026.',
   keywords: [
@@ -28,8 +29,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'NEET Coaching Comparison | Cerebrum vs Kota, the largest national NEET chain, the 2nd-largest national NEET chain | 2026 Guide',
-    description: 'Compare Cerebrum Biology Academy with Kota coaching, the largest national NEET chain, the 2nd-largest national NEET chain, and local institutes. See fees, batch sizes, success rates. Make an inform...',
+    title:
+      'NEET Coaching Comparison | Cerebrum vs Kota, the largest national NEET chain, the 2nd-largest national NEET chain | 2026 Guide',
+    description:
+      'Compare Cerebrum Biology Academy with Kota coaching, the largest national NEET chain, the 2nd-largest national NEET chain, and local institutes. See fees, batch sizes, success rates. Make an inform...',
   },
 }
 
@@ -46,12 +49,10 @@ export default function ComparePage() {
               <Trophy className="w-4 h-4" />
               <span className="text-sm font-medium">Honest Comparisons</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Coaching Comparison 2026
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">NEET Coaching Comparison 2026</h1>
             <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-              Compare Cerebrum Biology Academy with other coaching institutes.
-              Transparent comparisons to help you make the right decision.
+              Compare Cerebrum Biology Academy with other coaching institutes. Transparent
+              comparisons to help you make the right decision.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
@@ -111,7 +112,8 @@ export default function ComparePage() {
                     <div className="space-y-3">
                       <div className="flex items-center justify-between text-sm">
                         <span className="text-gray-500 flex items-center gap-1">
-                          <IndianRupee className="w-4 h-4" />Fee Savings
+                          <IndianRupee className="w-4 h-4" />
+                          Fee Savings
                         </span>
                         <span className="font-semibold text-green-600">
                           Save ₹{feeSavings.toLocaleString()} ({savingsPercent}%)
@@ -119,7 +121,8 @@ export default function ComparePage() {
                       </div>
                       <div className="flex items-center justify-between text-sm">
                         <span className="text-gray-500 flex items-center gap-1">
-                          <Users className="w-4 h-4" />Batch Size
+                          <Users className="w-4 h-4" />
+                          Batch Size
                         </span>
                         <span className="text-gray-700">
                           {CEREBRUM_DATA.batchSize} vs {competitor.batchSize}
@@ -127,9 +130,12 @@ export default function ComparePage() {
                       </div>
                       <div className="flex items-center justify-between text-sm">
                         <span className="text-gray-500 flex items-center gap-1">
-                          <Target className="w-4 h-4" />Success Rate
+                          <Target className="w-4 h-4" />
+                          Success Rate
                         </span>
-                        <span className="text-gray-700">98% vs {competitor.successRate || 'N/A'}</span>
+                        <span className="text-gray-700">
+                          98% vs {competitor.successRate || 'N/A'}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -159,7 +165,9 @@ export default function ComparePage() {
                   <thead>
                     <tr className="bg-gray-50">
                       <th className="p-4 text-left font-semibold text-gray-900">Feature</th>
-                      <th className="p-4 text-center font-semibold text-green-700 bg-green-50">Cerebrum</th>
+                      <th className="p-4 text-center font-semibold text-green-700 bg-green-50">
+                        Cerebrum
+                      </th>
                       <th className="p-4 text-center font-semibold text-gray-600">Kota/Others</th>
                     </tr>
                   </thead>
@@ -174,7 +182,9 @@ export default function ComparePage() {
                     ].map(([feature, cerebrum, others], i) => (
                       <tr key={i} className="border-t border-gray-100">
                         <td className="p-4 font-medium text-gray-900">{feature}</td>
-                        <td className="p-4 text-center bg-green-50 text-green-700 font-medium">{cerebrum}</td>
+                        <td className="p-4 text-center bg-green-50 text-green-700 font-medium">
+                          {cerebrum}
+                        </td>
                         <td className="p-4 text-center text-gray-600">{others}</td>
                       </tr>
                     ))}

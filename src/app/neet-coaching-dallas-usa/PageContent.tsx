@@ -55,6 +55,7 @@ export default function NEETCoachingPageContent() {
   return (
     <>
       <LocalitySchema
+        country="US"
         locality="Dallas"
         slug="neet-coaching-dallas-usa"
         pageTitle="NEET Coaching in Dallas, USA"
@@ -277,7 +278,10 @@ export default function NEETCoachingPageContent() {
         </div>
       </section>
 
-            <USABOPathwayCallout cityName="Dallas–Plano" schools={["Plano West Senior HS","TAG Magnet","Highland Park HS"]} />
+      <USABOPathwayCallout
+        cityName="Dallas–Plano"
+        schools={['Plano West Senior HS', 'TAG Magnet', 'Highland Park HS']}
+      />
 
       {/* Related Cities */}
       <RelatedCityLinks currentCity="dallas" />

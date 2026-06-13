@@ -521,10 +521,10 @@ export default function APBiologyHubPage() {
                 </li>
               </ol>
               <p>
-                The trade-off is honest: we cost less per hour than other generalist test-prep brands ($120–$150 vs their
-                $200+) because we do not subsidize departments we do not run. other generalist test-prep brands needs to fund
-                LSAT, MCAT, GRE, GMAT, USMLE, NCLEX, and SAT teams from the same fee base. Cerebrum
-                only teaches Biology.
+                The trade-off is honest: we cost less per hour than other generalist test-prep
+                brands ($120–$150 vs their $200+) because we do not subsidize departments we do not
+                run. other generalist test-prep brands needs to fund LSAT, MCAT, GRE, GMAT, USMLE,
+                NCLEX, and SAT teams from the same fee base. Cerebrum only teaches Biology.
               </p>
             </div>
           </div>

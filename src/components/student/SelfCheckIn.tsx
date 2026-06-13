@@ -225,137 +225,135 @@ export function SelfCheckIn() {
         </div>
       </CardHeader>
       <CardContent>
-{sessions.length > 0 ? (
-            <div className="space-y-3">
-              {sessions.map((session, index) => {
-                const isOngoing = isSessionOngoing(session)
-                const hasCheckedIn = !!session.attendance?.checkInTime
-                const hasCheckedOut = !!session.attendance?.checkOutTime
+        {sessions.length > 0 ? (
+          <div className="space-y-3">
+            {sessions.map((session, index) => {
+              const isOngoing = isSessionOngoing(session)
+              const hasCheckedIn = !!session.attendance?.checkInTime
+              const hasCheckedOut = !!session.attendance?.checkOutTime
 
-                return (
-                  <div
-                    key={session.id}
-                    className={cn(
-                      'p-4 rounded-lg border transition-all',
-                      isOngoing ? 'border-green-200 bg-green-50' : 'border-gray-200 bg-white',
-                      hasCheckedIn && !hasCheckedOut && 'ring-2 ring-green-500'
-                    )}
-                  >
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2 mb-1">
-                          {getSessionTypeIcon(session.sessionType)}
-                          <h4 className="font-semibold text-gray-900 truncate">{session.title}</h4>
-                        </div>
+              return (
+                <div
+                  key={session.id}
+                  className={cn(
+                    'p-4 rounded-lg border transition-all',
+                    isOngoing ? 'border-green-200 bg-green-50' : 'border-gray-200 bg-white',
+                    hasCheckedIn && !hasCheckedOut && 'ring-2 ring-green-500'
+                  )}
+                >
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 mb-1">
+                        {getSessionTypeIcon(session.sessionType)}
+                        <h4 className="font-semibold text-gray-900 truncate">{session.title}</h4>
+                      </div>
 
-                        {session.course && (
-                          <p className="text-sm text-gray-600 mb-2">{session.course.name}</p>
-                        )}
+                      {session.course && (
+                        <p className="text-sm text-gray-600 mb-2">{session.course.name}</p>
+                      )}
 
-                        <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500">
+                      <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500">
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-3 h-3" />
+                          {formatTime(session.startTime)} - {formatTime(session.endTime)}
+                        </span>
+                        {session.teacher && (
                           <span className="flex items-center gap-1">
-                            <Clock className="w-3 h-3" />
-                            {formatTime(session.startTime)} - {formatTime(session.endTime)}
+                            <User className="w-3 h-3" />
+                            {session.teacher.name}
                           </span>
-                          {session.teacher && (
-                            <span className="flex items-center gap-1">
-                              <User className="w-3 h-3" />
-                              {session.teacher.name}
-                            </span>
+                        )}
+                        <span
+                          className={cn(
+                            'px-2 py-0.5 rounded-full font-medium',
+                            isOngoing
+                              ? 'bg-green-200 text-green-800'
+                              : 'bg-yellow-200 text-yellow-800'
                           )}
-                          <span
-                            className={cn(
-                              'px-2 py-0.5 rounded-full font-medium',
-                              isOngoing
-                                ? 'bg-green-200 text-green-800'
-                                : 'bg-yellow-200 text-yellow-800'
-                            )}
-                          >
-                            {isOngoing ? 'Ongoing' : getTimeUntilSession(session.startTime)}
-                          </span>
-                        </div>
+                        >
+                          {isOngoing ? 'Ongoing' : getTimeUntilSession(session.startTime)}
+                        </span>
+                      </div>
 
-                        {hasCheckedIn && (
-                          <div className="mt-2 flex items-center gap-2 text-xs">
-                            <CheckCircle className="w-4 h-4 text-green-600" />
-                            <span className="text-green-700">
-                              Checked in at {formatTime(session.attendance!.checkInTime!)}
-                              {session.attendance?.isLate && (
-                                <span className="text-orange-600 ml-1">
-                                  ({session.attendance.lateBy} min late)
-                                </span>
-                              )}
-                            </span>
-                            {hasCheckedOut && (
-                              <span className="text-gray-600">
-                                • Checked out at {formatTime(session.attendance!.checkOutTime!)}
+                      {hasCheckedIn && (
+                        <div className="mt-2 flex items-center gap-2 text-xs">
+                          <CheckCircle className="w-4 h-4 text-green-600" />
+                          <span className="text-green-700">
+                            Checked in at {formatTime(session.attendance!.checkInTime!)}
+                            {session.attendance?.isLate && (
+                              <span className="text-orange-600 ml-1">
+                                ({session.attendance.lateBy} min late)
                               </span>
                             )}
-                          </div>
-                        )}
-                      </div>
-
-                      <div className="flex flex-row sm:flex-col gap-2 w-full sm:w-auto">
-                        {session.allowSelfCheckIn ? (
-                          <>
-                            {session.attendance?.canCheckIn && (
-                              <Button
-                                size="sm"
-                                onClick={() => handleCheckIn(session.id)}
-                                disabled={checkingIn === session.id}
-                                className="gap-1 bg-green-600 hover:bg-green-700 flex-1 sm:flex-none sm:min-w-[100px]"
-                              >
-                                {checkingIn === session.id ? (
-                                  <RefreshCw className="w-4 h-4 animate-spin" />
-                                ) : (
-                                  <LogIn className="w-4 h-4" />
-                                )}
-                                Check In
-                              </Button>
-                            )}
-                            {session.attendance?.canCheckOut && (
-                              <Button
-                                size="sm"
-                                variant="outline"
-                                onClick={() => handleCheckOut(session.id)}
-                                disabled={checkingOut === session.id}
-                                className="gap-1 border-red-300 text-red-600 hover:bg-red-50 flex-1 sm:flex-none sm:min-w-[100px]"
-                              >
-                                {checkingOut === session.id ? (
-                                  <RefreshCw className="w-4 h-4 animate-spin" />
-                                ) : (
-                                  <LogOut className="w-4 h-4" />
-                                )}
-                                Check Out
-                              </Button>
-                            )}
-                            {hasCheckedIn && hasCheckedOut && (
-                              <span className="text-xs text-gray-500 text-center">Completed</span>
-                            )}
-                          </>
-                        ) : (
-                          <span className="text-xs text-gray-500 px-2 py-1 bg-gray-100 rounded">
-                            Manual attendance
                           </span>
-                        )}
-                      </div>
+                          {hasCheckedOut && (
+                            <span className="text-gray-600">
+                              • Checked out at {formatTime(session.attendance!.checkOutTime!)}
+                            </span>
+                          )}
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="flex flex-row sm:flex-col gap-2 w-full sm:w-auto">
+                      {session.allowSelfCheckIn ? (
+                        <>
+                          {session.attendance?.canCheckIn && (
+                            <Button
+                              size="sm"
+                              onClick={() => handleCheckIn(session.id)}
+                              disabled={checkingIn === session.id}
+                              className="gap-1 bg-green-600 hover:bg-green-700 flex-1 sm:flex-none sm:min-w-[100px]"
+                            >
+                              {checkingIn === session.id ? (
+                                <RefreshCw className="w-4 h-4 animate-spin" />
+                              ) : (
+                                <LogIn className="w-4 h-4" />
+                              )}
+                              Check In
+                            </Button>
+                          )}
+                          {session.attendance?.canCheckOut && (
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              onClick={() => handleCheckOut(session.id)}
+                              disabled={checkingOut === session.id}
+                              className="gap-1 border-red-300 text-red-600 hover:bg-red-50 flex-1 sm:flex-none sm:min-w-[100px]"
+                            >
+                              {checkingOut === session.id ? (
+                                <RefreshCw className="w-4 h-4 animate-spin" />
+                              ) : (
+                                <LogOut className="w-4 h-4" />
+                              )}
+                              Check Out
+                            </Button>
+                          )}
+                          {hasCheckedIn && hasCheckedOut && (
+                            <span className="text-xs text-gray-500 text-center">Completed</span>
+                          )}
+                        </>
+                      ) : (
+                        <span className="text-xs text-gray-500 px-2 py-1 bg-gray-100 rounded">
+                          Manual attendance
+                        </span>
+                      )}
                     </div>
                   </div>
-                )
-              })}
-            </div>
-          ) : (
-            <div
-              className="text-center py-8 animate-fadeInUp"
-            >
-              <Clock className="w-12 h-12 text-gray-300 mx-auto mb-3" />
-              <p className="text-gray-500 font-medium">No active sessions</p>
-              <p className="text-sm text-gray-400 mt-1">
-                Sessions will appear here when they&apos;re about to start
-              </p>
-            </div>
-          )}
-</CardContent>
+                </div>
+              )
+            })}
+          </div>
+        ) : (
+          <div className="text-center py-8 animate-fadeInUp">
+            <Clock className="w-12 h-12 text-gray-300 mx-auto mb-3" />
+            <p className="text-gray-500 font-medium">No active sessions</p>
+            <p className="text-sm text-gray-400 mt-1">
+              Sessions will appear here when they&apos;re about to start
+            </p>
+          </div>
+        )}
+      </CardContent>
     </Card>
   )
 }

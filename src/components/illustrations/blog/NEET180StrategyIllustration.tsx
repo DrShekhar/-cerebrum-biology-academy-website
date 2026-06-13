@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function NEET180StrategyIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -93,8 +93,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
 
       {/* Target circle - Professional with rings */}
       <g filter="url(#targetGlow)">
-        <g
-        >
+        <g>
           <circle cx="120" cy="190" r="75" fill="white" stroke="#DC2626" strokeWidth="10" />
           <circle cx="120" cy="190" r="60" fill="white" stroke="#F97316" strokeWidth="8" />
           <circle cx="120" cy="190" r="45" fill="white" stroke="#FBBF24" strokeWidth="6" />
@@ -106,8 +105,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
       </g>
 
       {/* Arrow hitting target */}
-      <g
-      >
+      <g>
         <line
           x1="20"
           y1="190"
@@ -123,9 +121,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
       </g>
 
       {/* Score Badge - Glass morphism */}
-      <g
-        filter="url(#stratShadow)"
-      >
+      <g filter="url(#stratShadow)">
         <rect x="45" y="290" width="150" height="65" rx="16" fill="url(#successGrad)" />
         <rect x="45" y="290" width="150" height="65" rx="16" fill="white" fillOpacity="0.1" />
         <text
@@ -180,8 +176,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
         <line x1="250" y1="125" x2="485" y2="125" stroke="#E2E8F0" strokeWidth="2" />
 
         {/* Phase 1 */}
-        <g
-        >
+        <g>
           <rect x="245" y="135" width="245" height="45" rx="10" fill="#DBEAFE" />
           <circle cx="265" cy="157" r="12" fill="#3B82F6" />
           <text x="265" y="162" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">
@@ -203,8 +198,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
         </g>
 
         {/* Phase 2 */}
-        <g
-        >
+        <g>
           <rect x="245" y="185" width="245" height="45" rx="10" fill="#FEF3C7" />
           <circle cx="265" cy="207" r="12" fill="#F59E0B" />
           <text x="265" y="212" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">
@@ -226,8 +220,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
         </g>
 
         {/* Phase 3 */}
-        <g
-        >
+        <g>
           <rect x="245" y="235" width="245" height="45" rx="10" fill="#DCFCE7" />
           <circle cx="265" cy="257" r="12" fill="#22C55E" />
           <text x="265" y="262" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">
@@ -249,8 +242,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
         </g>
 
         {/* Phase 4 */}
-        <g
-        >
+        <g>
           <rect x="245" y="285" width="245" height="45" rx="10" fill="#FCE7F3" />
           <circle cx="265" cy="307" r="12" fill="#EC4899" />
           <text x="265" y="312" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">
@@ -273,14 +265,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
 
         {/* Progress bar */}
         <rect x="245" y="340" width="245" height="8" rx="4" fill="#E2E8F0" />
-        <rect
-          x="245"
-          y="340"
-          width="0"
-          height="8"
-          rx="4"
-          fill="url(#successGrad)"
-        />
+        <rect x="245" y="340" width="0" height="8" rx="4" fill="url(#successGrad)" />
         <text
           x="367"
           y="362"
@@ -294,9 +279,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
       </g>
 
       {/* Success checkmark */}
-      <g
-        filter="url(#stratGlow)"
-      >
+      <g filter="url(#stratGlow)">
         <circle cx="480" cy="50" r="25" fill="url(#successGrad)" />
         <circle
           cx="480"

@@ -303,8 +303,7 @@ export default function TestResultsPage() {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-3 gap-4 mb-6">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <Card className="border-l-4 border-l-green-500">
               <CardContent className="p-4">
                 <div className="flex items-center gap-3">
@@ -320,8 +319,7 @@ export default function TestResultsPage() {
             </Card>
           </div>
 
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <Card className="border-l-4 border-l-red-500">
               <CardContent className="p-4">
                 <div className="flex items-center gap-3">
@@ -335,8 +333,7 @@ export default function TestResultsPage() {
             </Card>
           </div>
 
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <Card className="border-l-4 border-l-gray-400">
               <CardContent className="p-4">
                 <div className="flex items-center gap-3">
@@ -355,8 +352,7 @@ export default function TestResultsPage() {
 
         {/* Teacher Feedback */}
         {results.teacherFeedback && (
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <Card className="mb-6 border-l-4 border-l-blue-500">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-lg">
@@ -373,8 +369,7 @@ export default function TestResultsPage() {
 
         {/* Question Review */}
         {testData.showAnswers && questions.length > 0 && (
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <Card>
               <CardHeader>
                 <div className="flex items-center justify-between">

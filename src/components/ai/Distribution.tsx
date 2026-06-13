@@ -400,9 +400,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <div
-          className="flex items-center justify-center gap-3 animate-fadeInUp"
-        >
+        <div className="flex items-center justify-center gap-3 animate-fadeInUp">
           <div className="p-3 bg-green-600 rounded-xl">
             <Share2 className="w-8 h-8 text-white" />
           </div>
@@ -446,1302 +444,1248 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
       </div>
 
       {/* Content */}
-{/* Online Test Link Generation */}
-        {activeTab === 'online' && (
-          <div
-            key="online"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-          >
-            {/* Link Generation */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Link className="w-5 h-5 text-green-600" />
-                Generate Online Test Link
-              </h3>
+      {/* Online Test Link Generation */}
+      {activeTab === 'online' && (
+        <div key="online" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
+          {/* Link Generation */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Link className="w-5 h-5 text-green-600" />
+              Generate Online Test Link
+            </h3>
 
-              <div className="space-y-4">
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Select Test</label>
+                <select
+                  value={selectedTest}
+                  onChange={(e) => setSelectedTest(e.target.value)}
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                >
+                  <option value="">Choose a test...</option>
+                  <option value="NEET Biology Mock Test 1">NEET Biology Mock Test 1</option>
+                  <option value="Cell Biology Quiz">Cell Biology Quiz</option>
+                  <option value="Genetics Assessment">Genetics Assessment</option>
+                  <option value="Human Physiology Test">Human Physiology Test</option>
+                </select>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Select Test
+                    Expiry Date
                   </label>
-                  <select
-                    value={selectedTest}
-                    onChange={(e) => setSelectedTest(e.target.value)}
+                  <input
+                    type="date"
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Access Limit
+                  </label>
+                  <input
+                    type="number"
+                    placeholder="Unlimited"
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  />
+                </div>
+              </div>
+
+              <button
+                onClick={generateOnlineLink}
+                disabled={loading || !selectedTest}
+                className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              >
+                {loading ? (
+                  <>
+                    <Zap className="w-4 h-4 animate-spin" />
+                    Generating...
+                  </>
+                ) : (
+                  <>
+                    <Link className="w-4 h-4" />
+                    Generate Link
+                  </>
+                )}
+              </button>
+
+              {generatedLink && (
+                <div className="mt-4 p-4 bg-green-50 rounded-lg">
+                  <div className="flex items-center justify-between">
+                    <div className="flex-1">
+                      <p className="text-sm text-green-700 font-medium">Generated Link:</p>
+                      <p className="text-green-700 font-mono text-sm break-all">{generatedLink}</p>
+                    </div>
+                    <button
+                      onClick={() => copyToClipboard(generatedLink)}
+                      className="ml-2 p-2 text-green-600 hover:bg-green-100 rounded-lg transition-colors"
+                    >
+                      <Copy className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Active Links */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Globe className="w-5 h-5 text-blue-600" />
+              Active Online Links
+            </h3>
+
+            <div className="space-y-3">
+              {distributions
+                .filter((d) => d.distributionType === 'online')
+                .map((dist) => (
+                  <div
+                    key={dist.id}
+                    className="p-4 border rounded-lg hover:bg-gray-50 transition-colors"
                   >
-                    <option value="">Choose a test...</option>
-                    <option value="NEET Biology Mock Test 1">NEET Biology Mock Test 1</option>
-                    <option value="Cell Biology Quiz">Cell Biology Quiz</option>
-                    <option value="Genetics Assessment">Genetics Assessment</option>
-                    <option value="Human Physiology Test">Human Physiology Test</option>
-                  </select>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Expiry Date
-                    </label>
-                    <input
-                      type="date"
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Access Limit
-                    </label>
-                    <input
-                      type="number"
-                      placeholder="Unlimited"
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                    />
-                  </div>
-                </div>
-
-                <button
-                  onClick={generateOnlineLink}
-                  disabled={loading || !selectedTest}
-                  className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                >
-                  {loading ? (
-                    <>
-                      <Zap className="w-4 h-4 animate-spin" />
-                      Generating...
-                    </>
-                  ) : (
-                    <>
-                      <Link className="w-4 h-4" />
-                      Generate Link
-                    </>
-                  )}
-                </button>
-
-                {generatedLink && (
-                  <div className="mt-4 p-4 bg-green-50 rounded-lg">
                     <div className="flex items-center justify-between">
                       <div className="flex-1">
-                        <p className="text-sm text-green-700 font-medium">Generated Link:</p>
-                        <p className="text-green-700 font-mono text-sm break-all">
-                          {generatedLink}
-                        </p>
+                        <div className="flex items-center gap-2 mb-1">
+                          <h4 className="font-medium text-gray-800">{dist.testTitle}</h4>
+                          <span
+                            className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}
+                          >
+                            {dist.status}
+                          </span>
+                        </div>
+                        <p className="text-sm text-gray-600 font-mono">{dist.url}</p>
+                        <div className="flex items-center gap-4 text-xs text-gray-500 mt-2">
+                          <span>{dist.analytics.views} views</span>
+                          <span>{dist.analytics.starts} starts</span>
+                          <span>{dist.analytics.completions} completions</span>
+                          <span>Created: {dist.createdAt}</span>
+                        </div>
                       </div>
-                      <button
-                        onClick={() => copyToClipboard(generatedLink)}
-                        className="ml-2 p-2 text-green-600 hover:bg-green-100 rounded-lg transition-colors"
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={() => copyToClipboard(dist.url || '')}
+                          className="p-2 text-gray-400 hover:text-green-600 rounded-lg hover:bg-green-50 transition-colors"
+                        >
+                          <Copy className="w-4 h-4" />
+                        </button>
+                        <button className="p-2 text-gray-400 hover:text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+                          <Eye className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* QR Code Generation */}
+      {activeTab === 'qr' && (
+        <div key="qr" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
+          {/* QR Code Generator */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <QrCode className="w-5 h-5 text-purple-600" />
+              Generate QR Code
+            </h3>
+
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Select Test</label>
+                <select
+                  value={selectedTest}
+                  onChange={(e) => setSelectedTest(e.target.value)}
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                >
+                  <option value="">Choose a test...</option>
+                  <option value="NEET Biology Mock Test 1">NEET Biology Mock Test 1</option>
+                  <option value="Cell Biology Quiz">Cell Biology Quiz</option>
+                  <option value="Genetics Assessment">Genetics Assessment</option>
+                </select>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    QR Code Size
+                  </label>
+                  <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    <option value="200">200x200px</option>
+                    <option value="300">300x300px</option>
+                    <option value="400">400x400px</option>
+                    <option value="500">500x500px</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Format</label>
+                  <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    <option value="png">PNG</option>
+                    <option value="svg">SVG</option>
+                    <option value="pdf">PDF</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Include test title in QR code</span>
+                </label>
+              </div>
+
+              <button
+                onClick={generateQRCode}
+                disabled={loading || !selectedTest}
+                className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              >
+                {loading ? (
+                  <>
+                    <Zap className="w-4 h-4 animate-spin" />
+                    Generating...
+                  </>
+                ) : (
+                  <>
+                    <QrCode className="w-4 h-4" />
+                    Generate QR Code
+                  </>
+                )}
+              </button>
+
+              {qrCodeData && (
+                <div className="mt-4 p-4 bg-purple-50 rounded-lg text-center">
+                  <div className="w-48 h-48 bg-white border-2 border-purple-200 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                    <QrCode className="w-32 h-32 text-purple-400" />
+                  </div>
+                  <div className="flex gap-2 justify-center">
+                    <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2">
+                      <Download className="w-4 h-4" />
+                      Download
+                    </button>
+                    <button className="px-4 py-2 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors flex items-center gap-2">
+                      <Copy className="w-4 h-4" />
+                      Copy
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* QR Code Gallery */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Image className="w-5 h-5 text-indigo-600" />
+              QR Code Gallery
+            </h3>
+
+            <div className="grid grid-cols-2 gap-4">
+              {distributions
+                .filter((d) => d.distributionType === 'qr')
+                .map((dist) => (
+                  <div
+                    key={dist.id}
+                    className="p-4 border rounded-lg hover:bg-gray-50 transition-colors"
+                  >
+                    <div className="w-full h-32 bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
+                      <QrCode className="w-16 h-16 text-gray-400" />
+                    </div>
+                    <h4 className="font-medium text-sm text-gray-800 mb-1">{dist.testTitle}</h4>
+                    <div className="flex items-center justify-between text-xs text-gray-500">
+                      <span>{dist.analytics.views} scans</span>
+                      <span
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}
                       >
-                        <Copy className="w-4 h-4" />
+                        {dist.status}
+                      </span>
+                    </div>
+                    <div className="flex gap-1 mt-2">
+                      <button className="flex-1 px-2 py-2 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors min-h-[44px]">
+                        <Download className="w-3 h-3 inline mr-1" />
+                        Download
+                      </button>
+                      <button className="flex-1 px-2 py-2 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors min-h-[44px]">
+                        <Eye className="w-3 h-3 inline mr-1" />
+                        View
                       </button>
                     </div>
                   </div>
-                )}
-              </div>
-            </div>
-
-            {/* Active Links */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Globe className="w-5 h-5 text-blue-600" />
-                Active Online Links
-              </h3>
-
-              <div className="space-y-3">
-                {distributions
-                  .filter((d) => d.distributionType === 'online')
-                  .map((dist) => (
-                    <div
-                      key={dist.id}
-                      className="p-4 border rounded-lg hover:bg-gray-50 transition-colors"
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex-1">
-                          <div className="flex items-center gap-2 mb-1">
-                            <h4 className="font-medium text-gray-800">{dist.testTitle}</h4>
-                            <span
-                              className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}
-                            >
-                              {dist.status}
-                            </span>
-                          </div>
-                          <p className="text-sm text-gray-600 font-mono">{dist.url}</p>
-                          <div className="flex items-center gap-4 text-xs text-gray-500 mt-2">
-                            <span>{dist.analytics.views} views</span>
-                            <span>{dist.analytics.starts} starts</span>
-                            <span>{dist.analytics.completions} completions</span>
-                            <span>Created: {dist.createdAt}</span>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <button
-                            onClick={() => copyToClipboard(dist.url || '')}
-                            className="p-2 text-gray-400 hover:text-green-600 rounded-lg hover:bg-green-50 transition-colors"
-                          >
-                            <Copy className="w-4 h-4" />
-                          </button>
-                          <button className="p-2 text-gray-400 hover:text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
-                            <Eye className="w-4 h-4" />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-              </div>
+                ))}
             </div>
           </div>
-        )}
+        </div>
+      )}
 
-        {/* QR Code Generation */}
-        {activeTab === 'qr' && (
-          <div
-            key="qr"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-          >
-            {/* QR Code Generator */}
+      {/* Email Invitations */}
+      {activeTab === 'email' && (
+        <div key="email" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
+          {/* Email Composer */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Mail className="w-5 h-5 text-blue-600" />
+              Send Email Invitations
+            </h3>
+
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Recipients (comma-separated emails)
+                </label>
+                <textarea
+                  value={emailSettings.recipients}
+                  onChange={(e) =>
+                    setEmailSettings({ ...emailSettings, recipients: e.target.value })
+                  }
+                  placeholder="student1@example.com, student2@example.com"
+                  rows={3}
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                <input
+                  type="text"
+                  value={emailSettings.subject}
+                  onChange={(e) => setEmailSettings({ ...emailSettings, subject: e.target.value })}
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                <textarea
+                  value={emailSettings.message}
+                  onChange={(e) => setEmailSettings({ ...emailSettings, message: e.target.value })}
+                  rows={4}
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Schedule Send (Optional)
+                  </label>
+                  <input
+                    type="datetime-local"
+                    value={emailSettings.scheduleDate}
+                    onChange={(e) =>
+                      setEmailSettings({ ...emailSettings, scheduleDate: e.target.value })
+                    }
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                <div className="flex items-end">
+                  <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      checked={emailSettings.sendCopy}
+                      onChange={(e) =>
+                        setEmailSettings({ ...emailSettings, sendCopy: e.target.checked })
+                      }
+                      className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    />
+                    <span className="ml-2 text-sm text-gray-700">Send copy to me</span>
+                  </label>
+                </div>
+              </div>
+
+              <button
+                onClick={sendEmailInvitations}
+                disabled={loading || !emailSettings.recipients.trim()}
+                className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              >
+                {loading ? (
+                  <>
+                    <Zap className="w-4 h-4 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-4 h-4" />
+                    {emailSettings.scheduleDate ? 'Schedule Emails' : 'Send Emails'}
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+
+          {/* Email History */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Clock className="w-5 h-5 text-green-600" />
+              Email Campaign History
+            </h3>
+
+            <div className="space-y-3">
+              {distributions
+                .filter((d) => d.distributionType === 'email')
+                .map((dist) => (
+                  <div key={dist.id} className="p-4 border rounded-lg">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="font-medium text-gray-800">{dist.testTitle}</h4>
+                      <span
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}
+                      >
+                        {dist.status}
+                      </span>
+                    </div>
+                    <p className="text-sm text-gray-600 mb-2">{dist.subject}</p>
+                    <div className="grid grid-cols-2 gap-4 text-xs text-gray-500">
+                      <div>
+                        <span className="font-medium">Recipients:</span> {dist.recipients.length}
+                      </div>
+                      <div>
+                        <span className="font-medium">Sent:</span> {dist.createdAt}
+                      </div>
+                      <div>
+                        <span className="font-medium">Opens:</span> {dist.analytics.views}
+                      </div>
+                      <div>
+                        <span className="font-medium">Clicks:</span> {dist.analytics.starts}
+                      </div>
+                    </div>
+                    <div className="flex gap-2 mt-3">
+                      <button className="px-3 py-1 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors">
+                        View Details
+                      </button>
+                      <button className="px-3 py-1 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors">
+                        Resend
+                      </button>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* SMS Notifications */}
+      {activeTab === 'sms' && (
+        <div key="sms" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
+          {/* SMS Composer */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <MessageSquare className="w-5 h-5 text-green-600" />
+              Send SMS Notifications
+            </h3>
+
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Phone Numbers (comma-separated)
+                </label>
+                <textarea
+                  value={smsSettings.recipients}
+                  onChange={(e) => setSmsSettings({ ...smsSettings, recipients: e.target.value })}
+                  placeholder="+1234567890, +0987654321"
+                  rows={3}
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Message (160 characters max)
+                </label>
+                <textarea
+                  value={smsSettings.message}
+                  onChange={(e) => setSmsSettings({ ...smsSettings, message: e.target.value })}
+                  rows={3}
+                  maxLength={160}
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                />
+                <div className="text-xs text-gray-500 mt-1">
+                  {smsSettings.message.length}/160 characters
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    SMS Provider
+                  </label>
+                  <select
+                    value={smsSettings.provider}
+                    onChange={(e) => setSmsSettings({ ...smsSettings, provider: e.target.value })}
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  >
+                    <option value="twilio">Twilio</option>
+                    <option value="aws-sns">AWS SNS</option>
+                    <option value="textlocal">TextLocal</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Schedule Send (Optional)
+                  </label>
+                  <input
+                    type="datetime-local"
+                    value={smsSettings.scheduleDate}
+                    onChange={(e) =>
+                      setSmsSettings({ ...smsSettings, scheduleDate: e.target.value })
+                    }
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  />
+                </div>
+              </div>
+
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h4 className="font-medium text-blue-800 mb-2">Cost Estimate</h4>
+                <div className="text-sm text-blue-700">
+                  <p>
+                    Recipients: {smsSettings.recipients.split(',').filter((r) => r.trim()).length}
+                  </p>
+                  <p>Cost per SMS: $0.02</p>
+                  <p className="font-medium">
+                    Total: $
+                    {(
+                      smsSettings.recipients.split(',').filter((r) => r.trim()).length * 0.02
+                    ).toFixed(2)}
+                  </p>
+                </div>
+              </div>
+
+              <button
+                onClick={sendSMSNotifications}
+                disabled={loading || !smsSettings.recipients.trim()}
+                className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              >
+                {loading ? (
+                  <>
+                    <Zap className="w-4 h-4 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-4 h-4" />
+                    {smsSettings.scheduleDate ? 'Schedule SMS' : 'Send SMS'}
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+
+          {/* SMS History */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Smartphone className="w-5 h-5 text-orange-600" />
+              SMS Campaign History
+            </h3>
+
+            <div className="space-y-3">
+              {distributions
+                .filter((d) => d.distributionType === 'sms')
+                .map((dist) => (
+                  <div key={dist.id} className="p-4 border rounded-lg">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="font-medium text-gray-800">{dist.testTitle}</h4>
+                      <span
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}
+                      >
+                        {dist.status}
+                      </span>
+                    </div>
+                    <p className="text-sm text-gray-600 mb-2">{dist.message}</p>
+                    <div className="grid grid-cols-2 gap-4 text-xs text-gray-500">
+                      <div>
+                        <span className="font-medium">Recipients:</span> {dist.recipients.length}
+                      </div>
+                      <div>
+                        <span className="font-medium">Sent:</span> {dist.createdAt}
+                      </div>
+                      <div>
+                        <span className="font-medium">Delivered:</span> {dist.analytics.views}
+                      </div>
+                      <div>
+                        <span className="font-medium">Clicks:</span> {dist.analytics.starts}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* LMS Integration */}
+      {activeTab === 'lms' && (
+        <div key="lms" className="space-y-6 animate-fadeInUp">
+          {/* LMS Connections */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <QrCode className="w-5 h-5 text-purple-600" />
-                Generate QR Code
+                <BookOpen className="w-5 h-5 text-indigo-600" />
+                LMS Integrations
+              </h3>
+
+              <div className="space-y-4">
+                {lmsIntegrations.map((lms) => (
+                  <div key={lms.id} className="p-4 border rounded-lg">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center gap-3">
+                        <div
+                          className={`w-3 h-3 rounded-full ${lms.isConnected ? 'bg-green-600' : 'bg-red-500'}`}
+                        />
+                        <h4 className="font-medium text-gray-800">{lms.name}</h4>
+                        <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                          {lms.type}
+                        </span>
+                      </div>
+                      <button
+                        className={`px-3 py-1 text-xs rounded-lg transition-colors ${
+                          lms.isConnected
+                            ? 'bg-red-100 text-red-600 hover:bg-red-200'
+                            : 'bg-green-100 text-green-600 hover:bg-green-200'
+                        }`}
+                      >
+                        {lms.isConnected ? 'Disconnect' : 'Connect'}
+                      </button>
+                    </div>
+                    <div className="text-xs text-gray-500 space-y-1">
+                      <p>URL: {lms.baseUrl}</p>
+                      <p>Courses: {lms.courseCount}</p>
+                      <p>Last Sync: {new Date(lms.lastSync).toLocaleDateString()}</p>
+                    </div>
+                  </div>
+                ))}
+
+                <button className="w-full p-4 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-indigo-400 hover:text-indigo-600 transition-colors flex items-center justify-center gap-2">
+                  <Plus className="w-4 h-4" />
+                  Add New LMS Integration
+                </button>
+              </div>
+            </div>
+
+            {/* Test Distribution to LMS */}
+            <div className="bg-white rounded-xl p-6 border">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <Target className="w-5 h-5 text-purple-600" />
+                Distribute to LMS
               </h3>
 
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Select Test
-                  </label>
-                  <select
-                    value={selectedTest}
-                    onChange={(e) => setSelectedTest(e.target.value)}
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  >
-                    <option value="">Choose a test...</option>
-                    <option value="NEET Biology Mock Test 1">NEET Biology Mock Test 1</option>
-                    <option value="Cell Biology Quiz">Cell Biology Quiz</option>
-                    <option value="Genetics Assessment">Genetics Assessment</option>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Select LMS</label>
+                  <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    <option value="">Choose LMS...</option>
+                    {lmsIntegrations
+                      .filter((lms) => lms.isConnected)
+                      .map((lms) => (
+                        <option key={lms.id} value={lms.id}>
+                          {lms.name}
+                        </option>
+                      ))}
                   </select>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      QR Code Size
-                    </label>
-                    <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                      <option value="200">200x200px</option>
-                      <option value="300">300x300px</option>
-                      <option value="400">400x400px</option>
-                      <option value="500">500x500px</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Format</label>
-                    <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                      <option value="png">PNG</option>
-                      <option value="svg">SVG</option>
-                      <option value="pdf">PDF</option>
-                    </select>
-                  </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Select Course
+                  </label>
+                  <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    <option value="">Choose course...</option>
+                    <option value="bio-101">Biology 101</option>
+                    <option value="bio-advanced">Advanced Biology</option>
+                    <option value="neet-prep">NEET Preparation</option>
+                  </select>
                 </div>
 
                 <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Test Availability
+                  </label>
+                  <div className="grid grid-cols-2 gap-4">
+                    <input
+                      type="datetime-local"
+                      placeholder="Start date"
+                      className="px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    />
+                    <input
+                      type="datetime-local"
+                      placeholder="End date"
+                      className="px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                    />
+                    <span className="ml-2 text-sm text-gray-700">Sync grades back to LMS</span>
+                  </label>
                   <label className="flex items-center">
                     <input
                       type="checkbox"
                       className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                     />
                     <span className="ml-2 text-sm text-gray-700">
-                      Include test title in QR code
+                      Send completion notifications
                     </span>
                   </label>
                 </div>
 
-                <button
-                  onClick={generateQRCode}
-                  disabled={loading || !selectedTest}
-                  className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                >
-                  {loading ? (
-                    <>
-                      <Zap className="w-4 h-4 animate-spin" />
-                      Generating...
-                    </>
-                  ) : (
-                    <>
-                      <QrCode className="w-4 h-4" />
-                      Generate QR Code
-                    </>
-                  )}
+                <button className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center justify-center gap-2">
+                  <Send className="w-4 h-4" />
+                  Deploy to LMS
                 </button>
-
-                {qrCodeData && (
-                  <div className="mt-4 p-4 bg-purple-50 rounded-lg text-center">
-                    <div className="w-48 h-48 bg-white border-2 border-purple-200 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                      <QrCode className="w-32 h-32 text-purple-400" />
-                    </div>
-                    <div className="flex gap-2 justify-center">
-                      <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2">
-                        <Download className="w-4 h-4" />
-                        Download
-                      </button>
-                      <button className="px-4 py-2 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors flex items-center gap-2">
-                        <Copy className="w-4 h-4" />
-                        Copy
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* QR Code Gallery */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Image className="w-5 h-5 text-indigo-600" />
-                QR Code Gallery
-              </h3>
-
-              <div className="grid grid-cols-2 gap-4">
-                {distributions
-                  .filter((d) => d.distributionType === 'qr')
-                  .map((dist) => (
-                    <div
-                      key={dist.id}
-                      className="p-4 border rounded-lg hover:bg-gray-50 transition-colors"
-                    >
-                      <div className="w-full h-32 bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
-                        <QrCode className="w-16 h-16 text-gray-400" />
-                      </div>
-                      <h4 className="font-medium text-sm text-gray-800 mb-1">{dist.testTitle}</h4>
-                      <div className="flex items-center justify-between text-xs text-gray-500">
-                        <span>{dist.analytics.views} scans</span>
-                        <span
-                          className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}
-                        >
-                          {dist.status}
-                        </span>
-                      </div>
-                      <div className="flex gap-1 mt-2">
-                        <button className="flex-1 px-2 py-2 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors min-h-[44px]">
-                          <Download className="w-3 h-3 inline mr-1" />
-                          Download
-                        </button>
-                        <button className="flex-1 px-2 py-2 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors min-h-[44px]">
-                          <Eye className="w-3 h-3 inline mr-1" />
-                          View
-                        </button>
-                      </div>
-                    </div>
-                  ))}
               </div>
             </div>
           </div>
-        )}
+        </div>
+      )}
 
-        {/* Email Invitations */}
-        {activeTab === 'email' && (
-          <div
-            key="email"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-          >
-            {/* Email Composer */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Mail className="w-5 h-5 text-blue-600" />
-                Send Email Invitations
-              </h3>
+      {/* Embed in Website */}
+      {activeTab === 'embed' && (
+        <div key="embed" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
+          {/* Embed Options */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Code className="w-5 h-5 text-green-600" />
+              Embed Configuration
+            </h3>
 
-              <div className="space-y-4">
+            <div className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Recipients (comma-separated emails)
-                  </label>
-                  <textarea
-                    value={emailSettings.recipients}
-                    onChange={(e) =>
-                      setEmailSettings({ ...emailSettings, recipients: e.target.value })
-                    }
-                    placeholder="student1@example.com, student2@example.com"
-                    rows={3}
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Width</label>
                   <input
                     type="text"
-                    value={emailSettings.subject}
-                    onChange={(e) =>
-                      setEmailSettings({ ...emailSettings, subject: e.target.value })
-                    }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    value={embedOptions.width}
+                    onChange={(e) => setEmbedOptions({ ...embedOptions, width: e.target.value })}
+                    placeholder="100%"
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                   />
                 </div>
-
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <textarea
-                    value={emailSettings.message}
-                    onChange={(e) =>
-                      setEmailSettings({ ...emailSettings, message: e.target.value })
-                    }
-                    rows={4}
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Height</label>
+                  <input
+                    type="text"
+                    value={embedOptions.height}
+                    onChange={(e) => setEmbedOptions({ ...embedOptions, height: e.target.value })}
+                    placeholder="600px"
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                   />
                 </div>
+              </div>
 
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Schedule Send (Optional)
-                    </label>
-                    <input
-                      type="datetime-local"
-                      value={emailSettings.scheduleDate}
-                      onChange={(e) =>
-                        setEmailSettings({ ...emailSettings, scheduleDate: e.target.value })
-                      }
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
-                  </div>
-                  <div className="flex items-end">
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        checked={emailSettings.sendCopy}
-                        onChange={(e) =>
-                          setEmailSettings({ ...emailSettings, sendCopy: e.target.checked })
-                        }
-                        className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                      />
-                      <span className="ml-2 text-sm text-gray-700">Send copy to me</span>
-                    </label>
-                  </div>
-                </div>
-
-                <button
-                  onClick={sendEmailInvitations}
-                  disabled={loading || !emailSettings.recipients.trim()}
-                  className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Theme</label>
+                <select
+                  value={embedOptions.theme}
+                  onChange={(e) =>
+                    setEmbedOptions({ ...embedOptions, theme: e.target.value as any })
+                  }
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                 >
-                  {loading ? (
-                    <>
-                      <Zap className="w-4 h-4 animate-spin" />
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-4 h-4" />
-                      {emailSettings.scheduleDate ? 'Schedule Emails' : 'Send Emails'}
-                    </>
-                  )}
-                </button>
+                  <option value="light">Light</option>
+                  <option value="dark">Dark</option>
+                  <option value="custom">Custom</option>
+                </select>
               </div>
-            </div>
 
-            {/* Email History */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Clock className="w-5 h-5 text-green-600" />
-                Email Campaign History
-              </h3>
-
-              <div className="space-y-3">
-                {distributions
-                  .filter((d) => d.distributionType === 'email')
-                  .map((dist) => (
-                    <div key={dist.id} className="p-4 border rounded-lg">
-                      <div className="flex items-center justify-between mb-2">
-                        <h4 className="font-medium text-gray-800">{dist.testTitle}</h4>
-                        <span
-                          className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}
-                        >
-                          {dist.status}
-                        </span>
-                      </div>
-                      <p className="text-sm text-gray-600 mb-2">{dist.subject}</p>
-                      <div className="grid grid-cols-2 gap-4 text-xs text-gray-500">
-                        <div>
-                          <span className="font-medium">Recipients:</span> {dist.recipients.length}
-                        </div>
-                        <div>
-                          <span className="font-medium">Sent:</span> {dist.createdAt}
-                        </div>
-                        <div>
-                          <span className="font-medium">Opens:</span> {dist.analytics.views}
-                        </div>
-                        <div>
-                          <span className="font-medium">Clicks:</span> {dist.analytics.starts}
-                        </div>
-                      </div>
-                      <div className="flex gap-2 mt-3">
-                        <button className="px-3 py-1 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors">
-                          View Details
-                        </button>
-                        <button className="px-3 py-1 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors">
-                          Resend
-                        </button>
-                      </div>
-                    </div>
-                  ))}
+              <div className="space-y-2">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={embedOptions.showHeader}
+                    onChange={(e) =>
+                      setEmbedOptions({ ...embedOptions, showHeader: e.target.checked })
+                    }
+                    className="rounded border-gray-300 text-green-600 focus:ring-green-600"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Show header</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={embedOptions.showFooter}
+                    onChange={(e) =>
+                      setEmbedOptions({ ...embedOptions, showFooter: e.target.checked })
+                    }
+                    className="rounded border-gray-300 text-green-600 focus:ring-green-600"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Show footer</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={embedOptions.autoStart}
+                    onChange={(e) =>
+                      setEmbedOptions({ ...embedOptions, autoStart: e.target.checked })
+                    }
+                    className="rounded border-gray-300 text-green-600 focus:ring-green-600"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Auto-start test</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={embedOptions.responsiveMode}
+                    onChange={(e) =>
+                      setEmbedOptions({ ...embedOptions, responsiveMode: e.target.checked })
+                    }
+                    className="rounded border-gray-300 text-green-600 focus:ring-green-600"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Responsive mode</span>
+                </label>
               </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Custom CSS</label>
+                <textarea
+                  value={embedOptions.customCSS}
+                  onChange={(e) => setEmbedOptions({ ...embedOptions, customCSS: e.target.value })}
+                  placeholder="/* Custom CSS styles */"
+                  rows={4}
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent font-mono text-sm"
+                />
+              </div>
+
+              <button
+                onClick={generateEmbedCode}
+                className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
+              >
+                <Code className="w-4 h-4" />
+                Generate Embed Code
+              </button>
             </div>
           </div>
-        )}
 
-        {/* SMS Notifications */}
-        {activeTab === 'sms' && (
-          <div
-            key="sms"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-          >
-            {/* SMS Composer */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <MessageSquare className="w-5 h-5 text-green-600" />
-                Send SMS Notifications
-              </h3>
+          {/* Generated Embed Code */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Monitor className="w-5 h-5 text-blue-600" />
+              Generated Embed Code
+            </h3>
 
+            {embedCode ? (
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Numbers (comma-separated)
+                    HTML Embed Code
                   </label>
-                  <textarea
-                    value={smsSettings.recipients}
-                    onChange={(e) => setSmsSettings({ ...smsSettings, recipients: e.target.value })}
-                    placeholder="+1234567890, +0987654321"
-                    rows={3}
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Message (160 characters max)
-                  </label>
-                  <textarea
-                    value={smsSettings.message}
-                    onChange={(e) => setSmsSettings({ ...smsSettings, message: e.target.value })}
-                    rows={3}
-                    maxLength={160}
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                  />
-                  <div className="text-xs text-gray-500 mt-1">
-                    {smsSettings.message.length}/160 characters
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      SMS Provider
-                    </label>
-                    <select
-                      value={smsSettings.provider}
-                      onChange={(e) => setSmsSettings({ ...smsSettings, provider: e.target.value })}
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  <div className="relative">
+                    <pre className="bg-gray-100 p-4 rounded-lg text-sm overflow-x-auto font-mono">
+                      <code>{embedCode}</code>
+                    </pre>
+                    <button
+                      onClick={() => copyToClipboard(embedCode)}
+                      className="absolute top-2 right-2 p-2 bg-white border rounded-lg hover:bg-gray-50 transition-colors"
                     >
-                      <option value="twilio">Twilio</option>
-                      <option value="aws-sns">AWS SNS</option>
-                      <option value="textlocal">TextLocal</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Schedule Send (Optional)
-                    </label>
-                    <input
-                      type="datetime-local"
-                      value={smsSettings.scheduleDate}
-                      onChange={(e) =>
-                        setSmsSettings({ ...smsSettings, scheduleDate: e.target.value })
-                      }
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                    />
+                      <Copy className="w-4 h-4" />
+                    </button>
                   </div>
                 </div>
 
                 <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-medium text-blue-800 mb-2">Cost Estimate</h4>
-                  <div className="text-sm text-blue-700">
-                    <p>
-                      Recipients: {smsSettings.recipients.split(',').filter((r) => r.trim()).length}
-                    </p>
-                    <p>Cost per SMS: $0.02</p>
-                    <p className="font-medium">
-                      Total: $
-                      {(
-                        smsSettings.recipients.split(',').filter((r) => r.trim()).length * 0.02
-                      ).toFixed(2)}
-                    </p>
-                  </div>
+                  <h4 className="font-medium text-blue-800 mb-2">Integration Instructions</h4>
+                  <ol className="text-sm text-blue-700 space-y-1 list-decimal list-inside">
+                    <li>Copy the embed code above</li>
+                    <li>Paste it into your website's HTML</li>
+                    <li>Customize the styling as needed</li>
+                    <li>Test the integration</li>
+                  </ol>
                 </div>
 
-                <button
-                  onClick={sendSMSNotifications}
-                  disabled={loading || !smsSettings.recipients.trim()}
-                  className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                >
-                  {loading ? (
-                    <>
-                      <Zap className="w-4 h-4 animate-spin" />
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-4 h-4" />
-                      {smsSettings.scheduleDate ? 'Schedule SMS' : 'Send SMS'}
-                    </>
-                  )}
-                </button>
-              </div>
-            </div>
-
-            {/* SMS History */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Smartphone className="w-5 h-5 text-orange-600" />
-                SMS Campaign History
-              </h3>
-
-              <div className="space-y-3">
-                {distributions
-                  .filter((d) => d.distributionType === 'sms')
-                  .map((dist) => (
-                    <div key={dist.id} className="p-4 border rounded-lg">
-                      <div className="flex items-center justify-between mb-2">
-                        <h4 className="font-medium text-gray-800">{dist.testTitle}</h4>
-                        <span
-                          className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}
-                        >
-                          {dist.status}
-                        </span>
-                      </div>
-                      <p className="text-sm text-gray-600 mb-2">{dist.message}</p>
-                      <div className="grid grid-cols-2 gap-4 text-xs text-gray-500">
-                        <div>
-                          <span className="font-medium">Recipients:</span> {dist.recipients.length}
-                        </div>
-                        <div>
-                          <span className="font-medium">Sent:</span> {dist.createdAt}
-                        </div>
-                        <div>
-                          <span className="font-medium">Delivered:</span> {dist.analytics.views}
-                        </div>
-                        <div>
-                          <span className="font-medium">Clicks:</span> {dist.analytics.starts}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* LMS Integration */}
-        {activeTab === 'lms' && (
-          <div
-            key="lms"
-            className="space-y-6 animate-fadeInUp"
-          >
-            {/* LMS Connections */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl p-6 border">
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <BookOpen className="w-5 h-5 text-indigo-600" />
-                  LMS Integrations
-                </h3>
-
-                <div className="space-y-4">
-                  {lmsIntegrations.map((lms) => (
-                    <div key={lms.id} className="p-4 border rounded-lg">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="flex items-center gap-3">
-                          <div
-                            className={`w-3 h-3 rounded-full ${lms.isConnected ? 'bg-green-600' : 'bg-red-500'}`}
-                          />
-                          <h4 className="font-medium text-gray-800">{lms.name}</h4>
-                          <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
-                            {lms.type}
-                          </span>
-                        </div>
-                        <button
-                          className={`px-3 py-1 text-xs rounded-lg transition-colors ${
-                            lms.isConnected
-                              ? 'bg-red-100 text-red-600 hover:bg-red-200'
-                              : 'bg-green-100 text-green-600 hover:bg-green-200'
-                          }`}
-                        >
-                          {lms.isConnected ? 'Disconnect' : 'Connect'}
-                        </button>
-                      </div>
-                      <div className="text-xs text-gray-500 space-y-1">
-                        <p>URL: {lms.baseUrl}</p>
-                        <p>Courses: {lms.courseCount}</p>
-                        <p>Last Sync: {new Date(lms.lastSync).toLocaleDateString()}</p>
-                      </div>
-                    </div>
-                  ))}
-
-                  <button className="w-full p-4 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-indigo-400 hover:text-indigo-600 transition-colors flex items-center justify-center gap-2">
-                    <Plus className="w-4 h-4" />
-                    Add New LMS Integration
-                  </button>
-                </div>
-              </div>
-
-              {/* Test Distribution to LMS */}
-              <div className="bg-white rounded-xl p-6 border">
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <Target className="w-5 h-5 text-purple-600" />
-                  Distribute to LMS
-                </h3>
-
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Select LMS
-                    </label>
-                    <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                      <option value="">Choose LMS...</option>
-                      {lmsIntegrations
-                        .filter((lms) => lms.isConnected)
-                        .map((lms) => (
-                          <option key={lms.id} value={lms.id}>
-                            {lms.name}
-                          </option>
-                        ))}
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Select Course
-                    </label>
-                    <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                      <option value="">Choose course...</option>
-                      <option value="bio-101">Biology 101</option>
-                      <option value="bio-advanced">Advanced Biology</option>
-                      <option value="neet-prep">NEET Preparation</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Test Availability
-                    </label>
-                    <div className="grid grid-cols-2 gap-4">
-                      <input
-                        type="datetime-local"
-                        placeholder="Start date"
-                        className="px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      />
-                      <input
-                        type="datetime-local"
-                        placeholder="End date"
-                        className="px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
-                      />
-                      <span className="ml-2 text-sm text-gray-700">Sync grades back to LMS</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
-                      />
-                      <span className="ml-2 text-sm text-gray-700">
-                        Send completion notifications
-                      </span>
-                    </label>
-                  </div>
-
-                  <button className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center justify-center gap-2">
-                    <Send className="w-4 h-4" />
-                    Deploy to LMS
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Embed in Website */}
-        {activeTab === 'embed' && (
-          <div
-            key="embed"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-          >
-            {/* Embed Options */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Code className="w-5 h-5 text-green-600" />
-                Embed Configuration
-              </h3>
-
-              <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Width</label>
-                    <input
-                      type="text"
-                      value={embedOptions.width}
-                      onChange={(e) => setEmbedOptions({ ...embedOptions, width: e.target.value })}
-                      placeholder="100%"
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Height</label>
-                    <input
-                      type="text"
-                      value={embedOptions.height}
-                      onChange={(e) => setEmbedOptions({ ...embedOptions, height: e.target.value })}
-                      placeholder="600px"
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                    />
-                  </div>
+                  <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
+                    <Eye className="w-4 h-4" />
+                    Preview
+                  </button>
+                  <button className="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors flex items-center gap-2">
+                    <Download className="w-4 h-4" />
+                    Download
+                  </button>
                 </div>
+              </div>
+            ) : (
+              <div className="text-center py-8 text-gray-500">
+                <Code className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                <p>Configure your embed options and click "Generate Embed Code" to get started.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
+      {/* Offline Test Package */}
+      {activeTab === 'offline' && (
+        <div key="offline" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
+          {/* Offline Package Creator */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Package className="w-5 h-5 text-orange-600" />
+              Create Offline Package
+            </h3>
+
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Package Name</label>
+                <input
+                  type="text"
+                  placeholder="NEET Biology Offline Test"
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Package Type</label>
+                <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                  <option value="standalone">Standalone Application</option>
+                  <option value="browser">Browser-based (HTML)</option>
+                  <option value="mobile">Mobile App Package</option>
+                </select>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Theme</label>
-                  <select
-                    value={embedOptions.theme}
-                    onChange={(e) =>
-                      setEmbedOptions({ ...embedOptions, theme: e.target.value as any })
-                    }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                  >
-                    <option value="light">Light</option>
-                    <option value="dark">Dark</option>
-                    <option value="custom">Custom</option>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Platform</label>
+                  <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                    <option value="windows">Windows</option>
+                    <option value="macos">macOS</option>
+                    <option value="linux">Linux</option>
+                    <option value="android">Android</option>
+                    <option value="ios">iOS</option>
                   </select>
                 </div>
-
-                <div className="space-y-2">
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      checked={embedOptions.showHeader}
-                      onChange={(e) =>
-                        setEmbedOptions({ ...embedOptions, showHeader: e.target.checked })
-                      }
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-600"
-                    />
-                    <span className="ml-2 text-sm text-gray-700">Show header</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      checked={embedOptions.showFooter}
-                      onChange={(e) =>
-                        setEmbedOptions({ ...embedOptions, showFooter: e.target.checked })
-                      }
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-600"
-                    />
-                    <span className="ml-2 text-sm text-gray-700">Show footer</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      checked={embedOptions.autoStart}
-                      onChange={(e) =>
-                        setEmbedOptions({ ...embedOptions, autoStart: e.target.checked })
-                      }
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-600"
-                    />
-                    <span className="ml-2 text-sm text-gray-700">Auto-start test</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      checked={embedOptions.responsiveMode}
-                      onChange={(e) =>
-                        setEmbedOptions({ ...embedOptions, responsiveMode: e.target.checked })
-                      }
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-600"
-                    />
-                    <span className="ml-2 text-sm text-gray-700">Responsive mode</span>
-                  </label>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Custom CSS</label>
-                  <textarea
-                    value={embedOptions.customCSS}
-                    onChange={(e) =>
-                      setEmbedOptions({ ...embedOptions, customCSS: e.target.value })
-                    }
-                    placeholder="/* Custom CSS styles */"
-                    rows={4}
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent font-mono text-sm"
-                  />
-                </div>
-
-                <button
-                  onClick={generateEmbedCode}
-                  className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
-                >
-                  <Code className="w-4 h-4" />
-                  Generate Embed Code
-                </button>
-              </div>
-            </div>
-
-            {/* Generated Embed Code */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Monitor className="w-5 h-5 text-blue-600" />
-                Generated Embed Code
-              </h3>
-
-              {embedCode ? (
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      HTML Embed Code
-                    </label>
-                    <div className="relative">
-                      <pre className="bg-gray-100 p-4 rounded-lg text-sm overflow-x-auto font-mono">
-                        <code>{embedCode}</code>
-                      </pre>
-                      <button
-                        onClick={() => copyToClipboard(embedCode)}
-                        className="absolute top-2 right-2 p-2 bg-white border rounded-lg hover:bg-gray-50 transition-colors"
-                      >
-                        <Copy className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <h4 className="font-medium text-blue-800 mb-2">Integration Instructions</h4>
-                    <ol className="text-sm text-blue-700 space-y-1 list-decimal list-inside">
-                      <li>Copy the embed code above</li>
-                      <li>Paste it into your website's HTML</li>
-                      <li>Customize the styling as needed</li>
-                      <li>Test the integration</li>
-                    </ol>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4">
-                    <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
-                      <Eye className="w-4 h-4" />
-                      Preview
-                    </button>
-                    <button className="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors flex items-center gap-2">
-                      <Download className="w-4 h-4" />
-                      Download
-                    </button>
-                  </div>
-                </div>
-              ) : (
-                <div className="text-center py-8 text-gray-500">
-                  <Code className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-                  <p>
-                    Configure your embed options and click "Generate Embed Code" to get started.
-                  </p>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Offline Test Package */}
-        {activeTab === 'offline' && (
-          <div
-            key="offline"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-          >
-            {/* Offline Package Creator */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Package className="w-5 h-5 text-orange-600" />
-                Create Offline Package
-              </h3>
-
-              <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Package Name
+                    Expiry Date
                   </label>
                   <input
-                    type="text"
-                    placeholder="NEET Biology Offline Test"
+                    type="date"
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   />
                 </div>
+              </div>
 
+              <div className="space-y-2">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Include answer key</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Allow multiple attempts</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Generate results report</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Password protect</span>
+                </label>
+              </div>
+
+              <div className="bg-orange-50 p-4 rounded-lg">
+                <h4 className="font-medium text-orange-800 mb-2">Package Contents</h4>
+                <ul className="text-sm text-orange-700 space-y-1">
+                  <li>• Test application executable</li>
+                  <li>• Question database (encrypted)</li>
+                  <li>• Installation instructions</li>
+                  <li>• User manual</li>
+                  <li>• Results export utility</li>
+                </ul>
+              </div>
+
+              <button className="w-full bg-orange-600 text-white py-3 rounded-lg hover:bg-orange-700 transition-colors flex items-center justify-center gap-2">
+                <Package className="w-4 h-4" />
+                Create Package
+              </button>
+            </div>
+          </div>
+
+          {/* Package History */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <WifiOff className="w-5 h-5 text-gray-600" />
+              Offline Packages
+            </h3>
+
+            <div className="space-y-4">
+              {[
+                {
+                  name: 'NEET Biology Mock Test 1',
+                  platform: 'Windows',
+                  size: '45.2 MB',
+                  downloads: 23,
+                  created: '2024-01-15',
+                },
+                {
+                  name: 'Cell Biology Quiz',
+                  platform: 'Android',
+                  size: '32.1 MB',
+                  downloads: 12,
+                  created: '2024-01-14',
+                },
+              ].map((pkg, index) => (
+                <div
+                  key={index}
+                  className="p-4 border rounded-lg hover:bg-gray-50 transition-colors"
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="font-medium text-gray-800">{pkg.name}</h4>
+                    <span className="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full">
+                      Ready
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 text-xs text-gray-500 mb-3">
+                    <div>
+                      <span className="font-medium">Platform:</span> {pkg.platform}
+                    </div>
+                    <div>
+                      <span className="font-medium">Size:</span> {pkg.size}
+                    </div>
+                    <div>
+                      <span className="font-medium">Downloads:</span> {pkg.downloads}
+                    </div>
+                    <div>
+                      <span className="font-medium">Created:</span> {pkg.created}
+                    </div>
+                  </div>
+                  <div className="flex gap-2">
+                    <button className="flex-1 px-3 py-2 bg-orange-600 text-white text-xs rounded-lg hover:bg-orange-700 transition-colors flex items-center justify-center gap-1">
+                      <Download className="w-3 h-3" />
+                      Download
+                    </button>
+                    <button className="flex-1 px-3 py-2 border border-gray-300 text-gray-600 text-xs rounded-lg hover:bg-gray-50 transition-colors flex items-center justify-center gap-1">
+                      <Copy className="w-3 h-3" />
+                      Copy Link
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Print-Friendly Version */}
+      {activeTab === 'print' && (
+        <div key="print" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
+          {/* Print Configuration */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Printer className="w-5 h-5 text-gray-600" />
+              Print Configuration
+            </h3>
+
+            <div className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Package Type
-                  </label>
-                  <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
-                    <option value="standalone">Standalone Application</option>
-                    <option value="browser">Browser-based (HTML)</option>
-                    <option value="mobile">Mobile App Package</option>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Paper Size</label>
+                  <select
+                    value={printOptions.paperSize}
+                    onChange={(e) =>
+                      setPrintOptions({ ...printOptions, paperSize: e.target.value as any })
+                    }
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                  >
+                    <option value="A4">A4</option>
+                    <option value="A3">A3</option>
+                    <option value="Letter">Letter</option>
+                    <option value="Legal">Legal</option>
                   </select>
                 </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Platform</label>
-                    <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
-                      <option value="windows">Windows</option>
-                      <option value="macos">macOS</option>
-                      <option value="linux">Linux</option>
-                      <option value="android">Android</option>
-                      <option value="ios">iOS</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Expiry Date
-                    </label>
-                    <input
-                      type="date"
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
-                    />
-                    <span className="ml-2 text-sm text-gray-700">Include answer key</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
-                    />
-                    <span className="ml-2 text-sm text-gray-700">Allow multiple attempts</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
-                    />
-                    <span className="ml-2 text-sm text-gray-700">Generate results report</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
-                    />
-                    <span className="ml-2 text-sm text-gray-700">Password protect</span>
-                  </label>
-                </div>
-
-                <div className="bg-orange-50 p-4 rounded-lg">
-                  <h4 className="font-medium text-orange-800 mb-2">Package Contents</h4>
-                  <ul className="text-sm text-orange-700 space-y-1">
-                    <li>• Test application executable</li>
-                    <li>• Question database (encrypted)</li>
-                    <li>• Installation instructions</li>
-                    <li>• User manual</li>
-                    <li>• Results export utility</li>
-                  </ul>
-                </div>
-
-                <button className="w-full bg-orange-600 text-white py-3 rounded-lg hover:bg-orange-700 transition-colors flex items-center justify-center gap-2">
-                  <Package className="w-4 h-4" />
-                  Create Package
-                </button>
-              </div>
-            </div>
-
-            {/* Package History */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <WifiOff className="w-5 h-5 text-gray-600" />
-                Offline Packages
-              </h3>
-
-              <div className="space-y-4">
-                {[
-                  {
-                    name: 'NEET Biology Mock Test 1',
-                    platform: 'Windows',
-                    size: '45.2 MB',
-                    downloads: 23,
-                    created: '2024-01-15',
-                  },
-                  {
-                    name: 'Cell Biology Quiz',
-                    platform: 'Android',
-                    size: '32.1 MB',
-                    downloads: 12,
-                    created: '2024-01-14',
-                  },
-                ].map((pkg, index) => (
-                  <div
-                    key={index}
-                    className="p-4 border rounded-lg hover:bg-gray-50 transition-colors"
-                  >
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="font-medium text-gray-800">{pkg.name}</h4>
-                      <span className="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full">
-                        Ready
-                      </span>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4 text-xs text-gray-500 mb-3">
-                      <div>
-                        <span className="font-medium">Platform:</span> {pkg.platform}
-                      </div>
-                      <div>
-                        <span className="font-medium">Size:</span> {pkg.size}
-                      </div>
-                      <div>
-                        <span className="font-medium">Downloads:</span> {pkg.downloads}
-                      </div>
-                      <div>
-                        <span className="font-medium">Created:</span> {pkg.created}
-                      </div>
-                    </div>
-                    <div className="flex gap-2">
-                      <button className="flex-1 px-3 py-2 bg-orange-600 text-white text-xs rounded-lg hover:bg-orange-700 transition-colors flex items-center justify-center gap-1">
-                        <Download className="w-3 h-3" />
-                        Download
-                      </button>
-                      <button className="flex-1 px-3 py-2 border border-gray-300 text-gray-600 text-xs rounded-lg hover:bg-gray-50 transition-colors flex items-center justify-center gap-1">
-                        <Copy className="w-3 h-3" />
-                        Copy Link
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Print-Friendly Version */}
-        {activeTab === 'print' && (
-          <div
-            key="print"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-          >
-            {/* Print Configuration */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Printer className="w-5 h-5 text-gray-600" />
-                Print Configuration
-              </h3>
-
-              <div className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Paper Size
-                    </label>
-                    <select
-                      value={printOptions.paperSize}
-                      onChange={(e) =>
-                        setPrintOptions({ ...printOptions, paperSize: e.target.value as any })
-                      }
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
-                    >
-                      <option value="A4">A4</option>
-                      <option value="A3">A3</option>
-                      <option value="Letter">Letter</option>
-                      <option value="Legal">Legal</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Orientation
-                    </label>
-                    <select
-                      value={printOptions.orientation}
-                      onChange={(e) =>
-                        setPrintOptions({ ...printOptions, orientation: e.target.value as any })
-                      }
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
-                    >
-                      <option value="portrait">Portrait</option>
-                      <option value="landscape">Landscape</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Questions per Page
-                    </label>
-                    <input
-                      type="number"
-                      value={printOptions.questionsPerPage}
-                      onChange={(e) =>
-                        setPrintOptions({
-                          ...printOptions,
-                          questionsPerPage: parseInt(e.target.value),
-                        })
-                      }
-                      min="1"
-                      max="20"
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Font Size
-                    </label>
-                    <select
-                      value={printOptions.fontSize}
-                      onChange={(e) =>
-                        setPrintOptions({ ...printOptions, fontSize: e.target.value as any })
-                      }
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
-                    >
-                      <option value="small">Small</option>
-                      <option value="medium">Medium</option>
-                      <option value="large">Large</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Margins</label>
-                  <input
-                    type="text"
-                    value={printOptions.margins}
-                    onChange={(e) => setPrintOptions({ ...printOptions, margins: e.target.value })}
-                    placeholder="1in"
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
-                  />
-                </div>
-
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Watermark Text
+                    Orientation
+                  </label>
+                  <select
+                    value={printOptions.orientation}
+                    onChange={(e) =>
+                      setPrintOptions({ ...printOptions, orientation: e.target.value as any })
+                    }
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                  >
+                    <option value="portrait">Portrait</option>
+                    <option value="landscape">Landscape</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Questions per Page
                   </label>
                   <input
-                    type="text"
-                    value={printOptions.watermark}
+                    type="number"
+                    value={printOptions.questionsPerPage}
                     onChange={(e) =>
-                      setPrintOptions({ ...printOptions, watermark: e.target.value })
+                      setPrintOptions({
+                        ...printOptions,
+                        questionsPerPage: parseInt(e.target.value),
+                      })
                     }
-                    placeholder="CONFIDENTIAL"
+                    min="1"
+                    max="20"
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
                   />
                 </div>
-
-                <div className="space-y-2">
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      checked={printOptions.includeAnswerKey}
-                      onChange={(e) =>
-                        setPrintOptions({ ...printOptions, includeAnswerKey: e.target.checked })
-                      }
-                      className="rounded border-gray-300 text-gray-600 focus:ring-gray-500"
-                    />
-                    <span className="ml-2 text-sm text-gray-700">Include answer key</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      checked={printOptions.includeInstructions}
-                      onChange={(e) =>
-                        setPrintOptions({ ...printOptions, includeInstructions: e.target.checked })
-                      }
-                      className="rounded border-gray-300 text-gray-600 focus:ring-gray-500"
-                    />
-                    <span className="ml-2 text-sm text-gray-700">Include instructions</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      checked={printOptions.headerFooter}
-                      onChange={(e) =>
-                        setPrintOptions({ ...printOptions, headerFooter: e.target.checked })
-                      }
-                      className="rounded border-gray-300 text-gray-600 focus:ring-gray-500"
-                    />
-                    <span className="ml-2 text-sm text-gray-700">Include header and footer</span>
-                  </label>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Font Size</label>
+                  <select
+                    value={printOptions.fontSize}
+                    onChange={(e) =>
+                      setPrintOptions({ ...printOptions, fontSize: e.target.value as any })
+                    }
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                  >
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                  </select>
                 </div>
+              </div>
 
-                <button className="w-full bg-gray-600 text-white py-3 rounded-lg hover:bg-gray-700 transition-colors flex items-center justify-center gap-2">
-                  <FileText className="w-4 h-4" />
-                  Generate Print Version
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Margins</label>
+                <input
+                  type="text"
+                  value={printOptions.margins}
+                  onChange={(e) => setPrintOptions({ ...printOptions, margins: e.target.value })}
+                  placeholder="1in"
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Watermark Text
+                </label>
+                <input
+                  type="text"
+                  value={printOptions.watermark}
+                  onChange={(e) => setPrintOptions({ ...printOptions, watermark: e.target.value })}
+                  placeholder="CONFIDENTIAL"
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={printOptions.includeAnswerKey}
+                    onChange={(e) =>
+                      setPrintOptions({ ...printOptions, includeAnswerKey: e.target.checked })
+                    }
+                    className="rounded border-gray-300 text-gray-600 focus:ring-gray-500"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Include answer key</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={printOptions.includeInstructions}
+                    onChange={(e) =>
+                      setPrintOptions({ ...printOptions, includeInstructions: e.target.checked })
+                    }
+                    className="rounded border-gray-300 text-gray-600 focus:ring-gray-500"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Include instructions</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={printOptions.headerFooter}
+                    onChange={(e) =>
+                      setPrintOptions({ ...printOptions, headerFooter: e.target.checked })
+                    }
+                    className="rounded border-gray-300 text-gray-600 focus:ring-gray-500"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Include header and footer</span>
+                </label>
+              </div>
+
+              <button className="w-full bg-gray-600 text-white py-3 rounded-lg hover:bg-gray-700 transition-colors flex items-center justify-center gap-2">
+                <FileText className="w-4 h-4" />
+                Generate Print Version
+              </button>
+            </div>
+          </div>
+
+          {/* Print Preview */}
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Eye className="w-5 h-5 text-indigo-600" />
+              Print Preview
+            </h3>
+
+            <div className="space-y-4">
+              <div className="bg-gray-100 p-6 rounded-lg min-h-96">
+                <div className="bg-white p-4 rounded shadow-sm">
+                  <div className="text-center mb-4">
+                    <h4 className="font-bold text-lg">NEET Biology Mock Test 1</h4>
+                    <p className="text-sm text-gray-600">Time: 3 hours | Total Marks: 200</p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="border-b pb-2">
+                      <p className="font-medium">
+                        1. Which of the following is the powerhouse of the cell?
+                      </p>
+                      <div className="ml-4 space-y-1 text-sm">
+                        <p>a) Nucleus</p>
+                        <p>b) Mitochondria</p>
+                        <p>c) Chloroplast</p>
+                        <p>d) Ribosome</p>
+                      </div>
+                    </div>
+
+                    <div className="border-b pb-2">
+                      <p className="font-medium">2. The process of photosynthesis occurs in:</p>
+                      <div className="ml-4 space-y-1 text-sm">
+                        <p>a) Mitochondria</p>
+                        <p>b) Nucleus</p>
+                        <p>c) Chloroplast</p>
+                        <p>d) Vacuole</p>
+                      </div>
+                    </div>
+
+                    <div className="text-xs text-gray-400 text-center">... more questions ...</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex gap-2">
+                <button className="flex-1 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2">
+                  <Download className="w-4 h-4" />
+                  Download PDF
+                </button>
+                <button className="flex-1 px-4 py-2 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors flex items-center justify-center gap-2">
+                  <Printer className="w-4 h-4" />
+                  Print
                 </button>
               </div>
             </div>
-
-            {/* Print Preview */}
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Eye className="w-5 h-5 text-indigo-600" />
-                Print Preview
-              </h3>
-
-              <div className="space-y-4">
-                <div className="bg-gray-100 p-6 rounded-lg min-h-96">
-                  <div className="bg-white p-4 rounded shadow-sm">
-                    <div className="text-center mb-4">
-                      <h4 className="font-bold text-lg">NEET Biology Mock Test 1</h4>
-                      <p className="text-sm text-gray-600">Time: 3 hours | Total Marks: 200</p>
-                    </div>
-
-                    <div className="space-y-4">
-                      <div className="border-b pb-2">
-                        <p className="font-medium">
-                          1. Which of the following is the powerhouse of the cell?
-                        </p>
-                        <div className="ml-4 space-y-1 text-sm">
-                          <p>a) Nucleus</p>
-                          <p>b) Mitochondria</p>
-                          <p>c) Chloroplast</p>
-                          <p>d) Ribosome</p>
-                        </div>
-                      </div>
-
-                      <div className="border-b pb-2">
-                        <p className="font-medium">2. The process of photosynthesis occurs in:</p>
-                        <div className="ml-4 space-y-1 text-sm">
-                          <p>a) Mitochondria</p>
-                          <p>b) Nucleus</p>
-                          <p>c) Chloroplast</p>
-                          <p>d) Vacuole</p>
-                        </div>
-                      </div>
-
-                      <div className="text-xs text-gray-400 text-center">
-                        ... more questions ...
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex gap-2">
-                  <button className="flex-1 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2">
-                    <Download className="w-4 h-4" />
-                    Download PDF
-                  </button>
-                  <button className="flex-1 px-4 py-2 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors flex items-center justify-center gap-2">
-                    <Printer className="w-4 h-4" />
-                    Print
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
-        )}
-{/* Distribution Analytics Overview */}
+        </div>
+      )}
+      {/* Distribution Analytics Overview */}
       <div className="bg-white rounded-xl p-6 border">
         <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
           <BarChart3 className="w-5 h-5 text-blue-600" />

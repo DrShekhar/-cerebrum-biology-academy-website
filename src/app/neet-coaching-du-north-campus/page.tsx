@@ -221,7 +221,8 @@ const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   name: 'How to Enroll in NEET Coaching for DU Students',
-  description: 'Step-by-step guide to enroll in Cerebrum Biology Academy for NEET preparation near Delhi University North Campus.',
+  description:
+    'Step-by-step guide to enroll in Cerebrum Biology Academy for NEET preparation near Delhi University North Campus.',
   totalTime: 'P3D',
   estimatedCost: {
     '@type': 'MonetaryAmount',
@@ -270,7 +271,6 @@ const speakableSchema = {
   },
 }
 
-
 export default function NEETCoachingDUNorthCampusPage() {
   return (
     <>
@@ -301,7 +301,9 @@ export default function NEETCoachingDUNorthCampusPage() {
         pageTitle="NEET Coaching Near DU North Campus | Biology Classes for DU Students"
         pageDescription={`Join specialized NEET coaching for BSc Biology students near Delhi University. Evening & weekend batches. ${CEREBRUM_METRICS.successRateText} success rate. Hansraj, Hindu, Miranda House, Kirori Mal students welcome.`}
         pageType="coaching"
-      coordinates={{ lat: "28.6889", lng: "77.2101" }} faqs={faqs} />
+        coordinates={{ lat: '28.6889', lng: '77.2101' }}
+        faqs={faqs}
+      />
       <PageContent />
     </>
   )

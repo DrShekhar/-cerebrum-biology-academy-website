@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Free Biology MCQ Practice | NEET, NCERT, Olympiad — 19,000+ Questions',
-    description: '19,000+ free Biology MCQs for NEET, Class 11-12 NCERT, and Olympiad. PYQs, topic-wise practice, gamification, and leaderboards.',
+    description:
+      '19,000+ free Biology MCQs for NEET, Class 11-12 NCERT, and Olympiad. PYQs, topic-wise practice, gamification, and leaderboards.',
   },
 }
 

@@ -35,7 +35,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biology Coaching in Vasant Vihar Delhi | NEET & IB Biology Tutor',
-    description: 'Best Biology coaching for Vasant Vihar, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET & IB Biology coaching with 67+ AIIMS selections. International school students welcome.',
+    description:
+      'Best Biology coaching for Vasant Vihar, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET & IB Biology coaching with 67+ AIIMS selections. International school students welcome.',
   },
 }
 
@@ -43,7 +44,11 @@ export default function BiologyCoachingVasantViharPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Vasant Vihar', 'NEET Biology Vasant Vihar', 'Medical entrance coaching Vasant Vihar']}
+        knowsAbout={[
+          'NEET Vasant Vihar',
+          'NEET Biology Vasant Vihar',
+          'Medical entrance coaching Vasant Vihar',
+        ]}
       />
       <DelhiAreaSchema pageSlug="biology-coaching-vasant-vihar-delhi" />
       <LocalitySchema

@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function DwarkaIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -12,12 +12,7 @@ export function DwarkaIllustration({ className = '', animate = true }: Illustrat
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Background gradient - West Delhi sunset tones */}
       <defs>
         <linearGradient id="dwarkaSkyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -30,16 +25,14 @@ export function DwarkaIllustration({ className = '', animate = true }: Illustrat
       <rect width="400" height="300" fill="url(#dwarkaSkyGradient)" />
 
       {/* Airplane in sky */}
-      <g
-      >
+      <g>
         <path d="M0 25 L30 20 L35 10 L40 20 L60 25 L40 27 L35 35 L30 27 Z" fill="#9CA3AF" />
         <circle cx="35" cy="22" r="3" fill="#E5E7EB" />
       </g>
 
       {/* Dwarka Sector buildings */}
       {/* Sector 10 */}
-      <g
-      >
+      <g>
         <rect x="30" y="100" width="55" height="130" rx="4" fill="#F59E0B" />
         <rect x="35" y="105" width="45" height="18" fill="#FEF3C7" />
         <text x="57" y="117" textAnchor="middle" fill="#B45309" fontSize="7" fontWeight="600">
@@ -55,8 +48,7 @@ export function DwarkaIllustration({ className = '', animate = true }: Illustrat
       </g>
 
       {/* Main Coaching Center - Sector 12 */}
-      <g
-      >
+      <g>
         <rect x="110" y="70" width="90" height="160" rx="4" fill="#8B5CF6" />
         <rect x="115" y="75" width="80" height="35" fill="#F3E8FF" />
         <text x="155" y="92" textAnchor="middle" fill="#6D28D9" fontSize="10" fontWeight="700">
@@ -80,8 +72,7 @@ export function DwarkaIllustration({ className = '', animate = true }: Illustrat
       </g>
 
       {/* Sector 21 */}
-      <g
-      >
+      <g>
         <rect x="220" y="110" width="60" height="120" rx="4" fill="#EC4899" />
         <rect x="225" y="115" width="50" height="18" fill="#FCE7F3" />
         <text x="250" y="127" textAnchor="middle" fill="#BE185D" fontSize="7" fontWeight="600">
@@ -97,8 +88,7 @@ export function DwarkaIllustration({ className = '', animate = true }: Illustrat
       </g>
 
       {/* Dwarka Mor Metro */}
-      <g
-      >
+      <g>
         <rect x="300" y="130" width="70" height="100" rx="4" fill="#3B82F6" />
         <rect x="305" y="135" width="60" height="25" fill="#DBEAFE" />
         <text x="335" y="148" textAnchor="middle" fill="#1D4ED8" fontSize="7" fontWeight="600">
@@ -112,8 +102,7 @@ export function DwarkaIllustration({ className = '', animate = true }: Illustrat
       </g>
 
       {/* Metro line */}
-      <g
-      >
+      <g>
         <rect x="0" y="235" width="400" height="8" fill="#3B82F6" />
         <text x="200" y="260" textAnchor="middle" fill="#374151" fontSize="9">
           Blue Line Metro
@@ -121,21 +110,14 @@ export function DwarkaIllustration({ className = '', animate = true }: Illustrat
       </g>
 
       {/* Location pin */}
-      <g
-      >
-        <circle
-          cx="155"
-          cy="45"
-          r="18"
-          fill="#EF4444"
-        />
+      <g>
+        <circle cx="155" cy="45" r="18" fill="#EF4444" />
         <path d="M155 27 L155 10" stroke="#EF4444" strokeWidth="3" />
         <circle cx="155" cy="45" r="7" fill="#FFF" />
       </g>
 
       {/* Title */}
-      <g
-      >
+      <g>
         <rect x="90" y="270" width="220" height="25" rx="6" fill="#1F2937" />
         <text x="200" y="287" textAnchor="middle" fill="#FFF" fontSize="11" fontWeight="600">
           NEET Coaching Dwarka West Delhi

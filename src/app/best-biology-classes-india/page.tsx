@@ -30,10 +30,9 @@ const CANONICAL = '/best-biology-classes-india'
 const PAGE_URL = `${SITE_URL}${CANONICAL}`
 
 export const metadata: Metadata = {
-  title:
-    'Best Biology Classes in India — Live Online + Offline · NEET · IB · AP · Olympiads',
+  title: 'Best Biology Classes in India — Live Online + Offline · NEET · IB · AP · Olympiads',
   description:
-    'India\'s best biology classes — Cerebrum Biology Academy by Dr. Shekhar C Singh (AIIMS New Delhi alumnus). Live online classes in your time zone + 4 offline centres in Delhi NCR. NEET, IB, AP, MCAT, Biology Olympiads. Small-batch, weekly tests, English medium. Free trial class.',
+    "India's best biology classes — Cerebrum Biology Academy by Dr. Shekhar C Singh (AIIMS New Delhi alumnus). Live online classes in your time zone + 4 offline centres in Delhi NCR. NEET, IB, AP, MCAT, Biology Olympiads. Small-batch, weekly tests, English medium. Free trial class.",
   keywords: [
     'best biology classes',
     'best biology classes india',
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best Biology Classes in India · Live Online + Offline · Cerebrum',
     description:
-      'India\'s best biology classes by Dr. Shekhar C Singh (AIIMS alumnus). Live online globally + 4 NCR offline centres. NEET, IB, AP, Olympiads.',
+      "India's best biology classes by Dr. Shekhar C Singh (AIIMS alumnus). Live online globally + 4 NCR offline centres. NEET, IB, AP, Olympiads.",
     url: PAGE_URL,
     locale: 'en_IN',
     type: 'website',
@@ -121,9 +120,9 @@ const SCHEDULES = [
 
 const FAQS = [
   {
-    question: 'What\'s the difference between Cerebrum\'s classes and Allen / Aakash / PW classes?',
+    question: "What's the difference between Cerebrum's classes and Allen / Aakash / PW classes?",
     answer:
-      'Three structural differences. (1) Specialisation: Cerebrum is biology-only; Allen/Aakash/PW are full-PCM. Our faculty don\'t split focus across three subjects. (2) Batch size: 10-40 students depending on tier vs 150-200 at mass-coaching. (3) Per-MCQ review: every wrong answer on weekly tests is discussed in the next live class — impossible at lecture-hall scale. The trade-off: we don\'t teach physics or chemistry. Most students pair Cerebrum biology with their existing Allen/Aakash for PCM.',
+      "Three structural differences. (1) Specialisation: Cerebrum is biology-only; Allen/Aakash/PW are full-PCM. Our faculty don't split focus across three subjects. (2) Batch size: 10-40 students depending on tier vs 150-200 at mass-coaching. (3) Per-MCQ review: every wrong answer on weekly tests is discussed in the next live class — impossible at lecture-hall scale. The trade-off: we don't teach physics or chemistry. Most students pair Cerebrum biology with their existing Allen/Aakash for PCM.",
   },
   {
     question: 'When are biology classes scheduled?',
@@ -133,7 +132,7 @@ const FAQS = [
   {
     question: 'Are classes live or pre-recorded?',
     answer:
-      'Live. Live is the entire point — real-time Q&A, weekly progress check, per-student review of wrong test answers, mentor accountability. Recordings are available for any session you miss, but the value is in attending live. We\'re not a video-course library.',
+      "Live. Live is the entire point — real-time Q&A, weekly progress check, per-student review of wrong test answers, mentor accountability. Recordings are available for any session you miss, but the value is in attending live. We're not a video-course library.",
   },
   {
     question: 'How big are the batches?',
@@ -146,20 +145,20 @@ const FAQS = [
       'Both. Online live classes via Zoom from anywhere in the world (active student cohorts in 30+ countries). Plus 4 offline centres in Delhi NCR: South Extension (Delhi), Rohini (Delhi), Gurugram, Faridabad. Online and offline students share the same faculty and curriculum.',
   },
   {
-    question: 'My child is in international curriculum (IB / AP / IGCSE). Do biology classes cover those?',
+    question:
+      'My child is in international curriculum (IB / AP / IGCSE). Do biology classes cover those?',
     answer:
       'Yes. We have dedicated programme tracks for IB Biology HL/SL (2025 syllabus, Theme A/B/C/D coverage + IA + EE supervision), AP Biology (College Board score-5 calibration), IGCSE Biology (Cambridge syllabus), and A-Level Biology. Each programme has its own batch schedule + dedicated curriculum.',
   },
   {
-    question:
-      'Classes are in English medium, right?',
+    question: 'Classes are in English medium, right?',
     answer:
       'Yes — every class is in English medium of instruction. Study material in English. Tests in English. Doubt sessions in English (with Hindi or regional-language clarification allowed when a terminology word is the blocker). NEET, IB, AP, MCAT, USMLE, and all biology olympiads are conducted in English, so our medium of instruction matches.',
   },
   {
     question: 'How do I attend a trial class?',
     answer:
-      'Free 60-minute live trial class with Dr. Shekhar. WhatsApp us with your child\'s class + programme + city/country and we send the Zoom link with the next available slot in your time zone.',
+      "Free 60-minute live trial class with Dr. Shekhar. WhatsApp us with your child's class + programme + city/country and we send the Zoom link with the next available slot in your time zone.",
   },
 ]
 
@@ -167,7 +166,7 @@ export default function BestBiologyClassesIndiaPage() {
   const waUrl =
     'https://wa.me/918826444334?text=' +
     encodeURIComponent(
-      "Hi — interested in Cerebrum biology classes. My child is in Class [9/10/11/12/dropper], targeting [NEET / IB / AP / MCAT / Olympiad / CBSE]. Based in [city, country]. Please share batch schedule + how to attend a trial class."
+      'Hi — interested in Cerebrum biology classes. My child is in Class [9/10/11/12/dropper], targeting [NEET / IB / AP / MCAT / Olympiad / CBSE]. Based in [city, country]. Please share batch schedule + how to attend a trial class.'
     )
 
   const courseSchema = {
@@ -176,7 +175,7 @@ export default function BestBiologyClassesIndiaPage() {
     '@id': `${PAGE_URL}#course`,
     name: 'Best Biology Classes in India — Live Online + Offline',
     description:
-      'India\'s best biology classes by Cerebrum Biology Academy. Live online + offline NEET, IB, AP, MCAT, Olympiad classes. Small-batch, weekly tests, English medium.',
+      "India's best biology classes by Cerebrum Biology Academy. Live online + offline NEET, IB, AP, MCAT, Olympiad classes. Small-batch, weekly tests, English medium.",
     url: PAGE_URL,
     inLanguage: 'en-IN',
     provider: { '@id': `${SITE_URL}/#organization` },
@@ -237,14 +236,12 @@ export default function BestBiologyClassesIndiaPage() {
             <span className="text-indigo-700">live online or in-person.</span>
           </h1>
           <p className="mt-5 text-lg text-slate-600 leading-relaxed max-w-4xl">
-            Cerebrum Biology Academy runs live biology classes &mdash; not
-            recorded video courses. Real-time Q&amp;A with AIIMS-trained
-            faculty, weekly tests with per-student review, English medium of
-            instruction throughout. Live online classes serve 30+ countries
-            in time-zone-matched batches; four offline centres in Delhi NCR
-            (South Extension, Rohini, Gurugram, Faridabad) for in-person
-            students. NEET, IB Biology HL/SL, AP Biology, MCAT, USMLE Step
-            1, Biology Olympiads, and CBSE/ICSE Class 11-12.
+            Cerebrum Biology Academy runs live biology classes &mdash; not recorded video courses.
+            Real-time Q&amp;A with AIIMS-trained faculty, weekly tests with per-student review,
+            English medium of instruction throughout. Live online classes serve 30+ countries in
+            time-zone-matched batches; four offline centres in Delhi NCR (South Extension, Rohini,
+            Gurugram, Faridabad) for in-person students. NEET, IB Biology HL/SL, AP Biology, MCAT,
+            USMLE Step 1, Biology Olympiads, and CBSE/ICSE Class 11-12.
           </p>
 
           <div className="mt-7 flex flex-col sm:flex-row gap-3">
@@ -274,9 +271,8 @@ export default function BestBiologyClassesIndiaPage() {
               Live class schedule — by programme
             </h2>
             <p className="mt-3 text-slate-600">
-              Times adjust for time zones at enrolment. Listed in IST below;
-              gulf / US / UK / Singapore / Australia students get matched
-              schedules.
+              Times adjust for time zones at enrolment. Listed in IST below; gulf / US / UK /
+              Singapore / Australia students get matched schedules.
             </p>
 
             <div className="mt-8 overflow-x-auto rounded-xl border border-slate-200 bg-white">
@@ -312,12 +308,36 @@ export default function BestBiologyClassesIndiaPage() {
 
           <div className="mt-8 grid gap-5 md:grid-cols-3">
             {[
-              { icon: <Video className="h-5 w-5 text-indigo-600" />, title: 'Live two-way classes', text: 'Real-time Zoom with Q&A. Recordings available if you miss.' },
-              { icon: <Users className="h-5 w-5 text-indigo-600" />, title: 'Small-batch model', text: 'Max 40 students per batch (Pursuit tier); 10-12 in Pinnacle ZA.' },
-              { icon: <BookOpen className="h-5 w-5 text-indigo-600" />, title: 'Material shipped globally', text: 'NCERT-line-by-line guide + 12,000 MCQ bank shipped to 30+ countries.' },
-              { icon: <CalendarDays className="h-5 w-5 text-indigo-600" />, title: 'Weekly chapter tests', text: 'Per-MCQ review of wrong answers in next live class.' },
-              { icon: <Globe className="h-5 w-5 text-indigo-600" />, title: 'Time-zone-matched batches', text: 'IST + Gulf + US + UK + Singapore + Australia time-zone options.' },
-              { icon: <Clock className="h-5 w-5 text-indigo-600" />, title: 'Mentor accountability', text: 'Weekly 1:1 (Pinnacle) or bi-weekly mentor call (Ascent).' },
+              {
+                icon: <Video className="h-5 w-5 text-indigo-600" />,
+                title: 'Live two-way classes',
+                text: 'Real-time Zoom with Q&A. Recordings available if you miss.',
+              },
+              {
+                icon: <Users className="h-5 w-5 text-indigo-600" />,
+                title: 'Small-batch model',
+                text: 'Max 40 students per batch (Pursuit tier); 10-12 in Pinnacle ZA.',
+              },
+              {
+                icon: <BookOpen className="h-5 w-5 text-indigo-600" />,
+                title: 'Material shipped globally',
+                text: 'NCERT-line-by-line guide + 12,000 MCQ bank shipped to 30+ countries.',
+              },
+              {
+                icon: <CalendarDays className="h-5 w-5 text-indigo-600" />,
+                title: 'Weekly chapter tests',
+                text: 'Per-MCQ review of wrong answers in next live class.',
+              },
+              {
+                icon: <Globe className="h-5 w-5 text-indigo-600" />,
+                title: 'Time-zone-matched batches',
+                text: 'IST + Gulf + US + UK + Singapore + Australia time-zone options.',
+              },
+              {
+                icon: <Clock className="h-5 w-5 text-indigo-600" />,
+                title: 'Mentor accountability',
+                text: 'Weekly 1:1 (Pinnacle) or bi-weekly mentor call (Ascent).',
+              },
             ].map((b) => (
               <div key={b.title} className="rounded-xl border border-slate-200 p-5">
                 {b.icon}
@@ -341,9 +361,7 @@ export default function BestBiologyClassesIndiaPage() {
                     <span>{f.question}</span>
                     <ChevronRight className="h-5 w-5 shrink-0 text-slate-400 transition-transform group-open:rotate-90" />
                   </summary>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-700">
-                    {f.answer}
-                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-700">{f.answer}</p>
                 </details>
               ))}
             </div>
@@ -357,8 +375,8 @@ export default function BestBiologyClassesIndiaPage() {
               Attend a free trial class with Dr. Shekhar
             </h2>
             <p className="mt-3 text-slate-300 max-w-2xl mx-auto">
-              60-minute live class. Bring your child\&rsquo;s last biology
-              exam. Slot in your time zone. No commitment.
+              60-minute live class. Bring your child\&rsquo;s last biology exam. Slot in your time
+              zone. No commitment.
             </p>
             <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
               <a

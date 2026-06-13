@@ -33,7 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'YVS Institute Alternative in Faridabad | AIIMS Faculty NEET Biology',
-    description: 'Looking for YVS Institute alternative in Faridabad? Cerebrum: Biology-specialist coaching, AIIMS faculty, 15-20 student batches vs YVS',
+    description:
+      'Looking for YVS Institute alternative in Faridabad? Cerebrum: Biology-specialist coaching, AIIMS faculty, 15-20 student batches vs YVS',
   },
 }
 
@@ -158,7 +159,11 @@ export default function YVSAlternativeFaridabad() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+        knowsAbout={[
+          'NEET Faridabad',
+          'NEET Biology Faridabad',
+          'Medical entrance coaching Faridabad',
+        ]}
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-800 to-green-600 text-white py-16">

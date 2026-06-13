@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AP Biology vs USABO 2026 | Difference, Overlap & Bridge Guide',
     description:
-      'AP-5? You\'re ~6 weeks from USABO Semifinalist. Here\'s exactly how the two exams differ — and how to bridge.',
+      "AP-5? You're ~6 weeks from USABO Semifinalist. Here's exactly how the two exams differ — and how to bridge.",
   },
 }
 
@@ -84,12 +84,14 @@ const comparisonRows = [
   {
     label: 'Primary text',
     apBio: 'Campbell Biology (~12 chapters at AP depth)',
-    usabo: 'Campbell Biology (all chapters, deeper) + Alberts Molecular Biology of the Cell + Lehninger Biochemistry',
+    usabo:
+      'Campbell Biology (all chapters, deeper) + Alberts Molecular Biology of the Cell + Lehninger Biochemistry',
   },
   {
     label: 'Lab / practical',
     apBio: '13 required AP labs (school-administered)',
-    usabo: 'No practical at Open/Semifinal stage. National Finals + IBO selection camp include lab work',
+    usabo:
+      'No practical at Open/Semifinal stage. National Finals + IBO selection camp include lab work',
   },
   {
     label: 'Cost to take',
@@ -99,7 +101,8 @@ const comparisonRows = [
   {
     label: 'College admissions weight',
     apBio: 'Standard expected rigor; AP-5 is competitive but common',
-    usabo: 'Semifinalist / Finalist is a national distinction — rare and routinely cited in successful Ivy / MIT / Stanford applications for STEM',
+    usabo:
+      'Semifinalist / Finalist is a national distinction — rare and routinely cited in successful Ivy / MIT / Stanford applications for STEM',
   },
 ]
 
@@ -363,16 +366,14 @@ export default function APBiologyVsUSABOPage() {
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
               AP Biology vs USABO:
-              <span className="block text-yellow-400 mt-2">
-                Difference, Overlap & Bridge Guide
-              </span>
+              <span className="block text-yellow-400 mt-2">Difference, Overlap & Bridge Guide</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 mb-6 max-w-3xl">
-              AP Biology and the USA Biology Olympiad share roughly 80% of their content but
-              differ sharply on depth, format, and what they signal to college admissions
-              officers. If you&apos;re aiming for AP-5, you are about <strong>six weeks of
-              focused prep away</strong> from a USABO Semifinalist score — a credential a small
-              fraction of US biology students earn.
+              AP Biology and the USA Biology Olympiad share roughly 80% of their content but differ
+              sharply on depth, format, and what they signal to college admissions officers. If
+              you&apos;re aiming for AP-5, you are about{' '}
+              <strong>six weeks of focused prep away</strong> from a USABO Semifinalist score — a
+              credential a small fraction of US biology students earn.
             </p>
             <p className="text-base text-slate-400 mb-8 max-w-3xl">
               This guide breaks down every meaningful difference (format, difficulty, eligibility,
@@ -459,10 +460,10 @@ export default function APBiologyVsUSABOPage() {
             </div>
             <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
               <p className="text-sm text-slate-700">
-                <strong>Read the gaps, not the average.</strong> The biggest delta isn&apos;t
-                cell biology or genetics (where AP is solid) — it&apos;s ethology,
-                biosystematics, and plant/animal physiology depth. Those three units typically
-                account for the difference between a top-AP student and a USABO Semifinalist.
+                <strong>Read the gaps, not the average.</strong> The biggest delta isn&apos;t cell
+                biology or genetics (where AP is solid) — it&apos;s ethology, biosystematics, and
+                plant/animal physiology depth. Those three units typically account for the
+                difference between a top-AP student and a USABO Semifinalist.
               </p>
             </div>
           </div>
@@ -482,19 +483,18 @@ export default function APBiologyVsUSABOPage() {
                 <Clock className="w-6 h-6 text-purple-600 mb-3" />
                 <h3 className="font-semibold text-slate-900 mb-2">Pace</h3>
                 <p className="text-sm text-slate-600">
-                  AP Biology MCQ section gives ~96 seconds per question. USABO Open gives
-                  60 seconds. That extra third of a minute is where most AP-5 students lose
-                  points — not on knowledge, on speed.
+                  AP Biology MCQ section gives ~96 seconds per question. USABO Open gives 60
+                  seconds. That extra third of a minute is where most AP-5 students lose points —
+                  not on knowledge, on speed.
                 </p>
               </div>
               <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
                 <Target className="w-6 h-6 text-purple-600 mb-3" />
                 <h3 className="font-semibold text-slate-900 mb-2">Question style</h3>
                 <p className="text-sm text-slate-600">
-                  AP MCQs test conceptual recall plus simple application. USABO MCQs are
-                  often experimental — &quot;here is a research figure you have not seen
-                  before; what can you infer?&quot; Reading-the-figure skill matters as much
-                  as biology.
+                  AP MCQs test conceptual recall plus simple application. USABO MCQs are often
+                  experimental — &quot;here is a research figure you have not seen before; what can
+                  you infer?&quot; Reading-the-figure skill matters as much as biology.
                 </p>
               </div>
               <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
@@ -502,8 +502,8 @@ export default function APBiologyVsUSABOPage() {
                 <h3 className="font-semibold text-slate-900 mb-2">Depth ceiling</h3>
                 <p className="text-sm text-slate-600">
                   AP caps at college-introductory depth. USABO Semifinal probes molecular
-                  mechanisms, ethology classification, and biostatistical interpretation
-                  closer to first-year-graduate work.
+                  mechanisms, ethology classification, and biostatistical interpretation closer to
+                  first-year-graduate work.
                 </p>
               </div>
             </div>
@@ -520,9 +520,9 @@ export default function APBiologyVsUSABOPage() {
               </h2>
             </div>
             <p className="text-slate-600 mb-6 max-w-3xl">
-              Both exams fit comfortably in a single junior or senior year. USABO Open in
-              February forces deep prep early; AP in May then becomes a lighter exam-tactics
-              run because the biology is already there.
+              Both exams fit comfortably in a single junior or senior year. USABO Open in February
+              forces deep prep early; AP in May then becomes a lighter exam-tactics run because the
+              biology is already there.
             </p>
             <ol className="space-y-3 max-w-3xl">
               <li className="flex gap-3 bg-white p-4 rounded-xl border border-slate-200">
@@ -543,8 +543,8 @@ export default function APBiologyVsUSABOPage() {
                 <div>
                   <strong className="text-slate-900">December–January:</strong>{' '}
                   <span className="text-slate-700">
-                    USABO bridge — fill ethology, biosystematics, plant/animal histology gaps.
-                    Drill USABO Open past papers (2018–present).
+                    USABO bridge — fill ethology, biosystematics, plant/animal histology gaps. Drill
+                    USABO Open past papers (2018–present).
                   </span>
                 </div>
               </li>
@@ -566,8 +566,8 @@ export default function APBiologyVsUSABOPage() {
                 <div>
                   <strong className="text-slate-900">March:</strong>{' '}
                   <span className="text-slate-700">
-                    USABO Semifinal (theory + free-response). National Finalists invited to
-                    the team selection camp.
+                    USABO Semifinal (theory + free-response). National Finalists invited to the team
+                    selection camp.
                   </span>
                 </div>
               </li>
@@ -578,8 +578,8 @@ export default function APBiologyVsUSABOPage() {
                 <div>
                   <strong className="text-slate-900">April–May:</strong>{' '}
                   <span className="text-slate-700">
-                    AP Biology exam tactics — pacing, FRQ structure, reading rubrics. The
-                    biology is already done.
+                    AP Biology exam tactics — pacing, FRQ structure, reading rubrics. The biology is
+                    already done.
                   </span>
                 </div>
               </li>
@@ -636,8 +636,8 @@ export default function APBiologyVsUSABOPage() {
               </h2>
             </div>
             <p className="text-slate-600 mb-8 max-w-3xl">
-              The honest hierarchy. We are summarising what admissions readers at top STEM
-              schools have publicly said about each tier, not what we think they should think.
+              The honest hierarchy. We are summarising what admissions readers at top STEM schools
+              have publicly said about each tier, not what we think they should think.
             </p>
             <div className="space-y-3">
               {collegeValue.map((item, idx) => (
@@ -719,18 +719,14 @@ export default function APBiologyVsUSABOPage() {
                 className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
               >
                 <h3 className="font-semibold text-teal-700">USABO Coaching</h3>
-                <p className="text-xs text-slate-600 mt-1">
-                  Open + Semifinal + Finals pathway
-                </p>
+                <p className="text-xs text-slate-600 mt-1">Open + Semifinal + Finals pathway</p>
               </Link>
               <Link
                 href="/ap-biology-online-tutor"
                 className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
               >
                 <h3 className="font-semibold text-teal-700">AP Biology Tutor</h3>
-                <p className="text-xs text-slate-600 mt-1">
-                  Score-5 prep aligned to Campbell
-                </p>
+                <p className="text-xs text-slate-600 mt-1">Score-5 prep aligned to Campbell</p>
               </Link>
               <Link
                 href="/ibo-preparation"
@@ -746,9 +742,7 @@ export default function APBiologyVsUSABOPage() {
                 className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
               >
                 <h3 className="font-semibold text-teal-700">Campbell Biology</h3>
-                <p className="text-xs text-slate-600 mt-1">
-                  56 chapter-by-chapter guides
-                </p>
+                <p className="text-xs text-slate-600 mt-1">56 chapter-by-chapter guides</p>
               </Link>
             </div>
           </div>

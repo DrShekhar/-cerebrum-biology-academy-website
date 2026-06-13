@@ -11,9 +11,7 @@ export function MiniTestimonials({ testimonials }: MiniTestimonialsProps) {
   return (
     <section className="bg-indigo-900 py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div
-          className="text-center animate-fadeInUp"
-        >
+        <div className="text-center animate-fadeInUp">
           <h2 className="text-3xl font-bold text-white sm:text-4xl">What Our Students Say</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-white/70">
             Real stories from students who achieved their NEET dreams with us
@@ -66,9 +64,7 @@ export function MiniTestimonials({ testimonials }: MiniTestimonialsProps) {
         </div>
 
         {/* Trust Indicator */}
-        <div
-          className="mt-12 text-center animate-fadeInUp"
-        >
+        <div className="mt-12 text-center animate-fadeInUp">
           <p className="text-white/60">
             Join <span className="font-semibold text-white">15,000+</span> successful students
           </p>

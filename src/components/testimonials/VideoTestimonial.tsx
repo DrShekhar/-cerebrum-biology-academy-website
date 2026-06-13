@@ -53,9 +53,7 @@ export function VideoTestimonial({
   return (
     <>
       {/* Main Video Card */}
-      <div
-        className="bg-white rounded-3xl shadow-lg overflow-hidden animate-fadeInUp"
-      >
+      <div className="bg-white rounded-3xl shadow-lg overflow-hidden animate-fadeInUp">
         {/* Video Container */}
         <div
           className="relative aspect-video bg-gray-900 cursor-pointer group"
@@ -83,65 +81,53 @@ export function VideoTestimonial({
           )}
 
           {/* Play Overlay */}
-{!isPlaying && (
-              <div
-                className="absolute inset-0 bg-black/40 flex items-center justify-center animate-fadeInUp"
-              >
-                <div
-                  className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg animate-fadeInUp"
+          {!isPlaying && (
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center animate-fadeInUp">
+              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg animate-fadeInUp">
+                <Play className="w-8 h-8 text-blue-600 ml-1" />
+              </div>
+            </div>
+          )}
+          {/* Video Controls */}
+          {isPlaying && showControls && (
+            <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between animate-fadeInUp">
+              <div className="flex items-center space-x-3">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    handlePlayPause()
+                  }}
+                  className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
                 >
-                  <Play className="w-8 h-8 text-blue-600 ml-1" />
-                </div>
-              </div>
-            )}
-{/* Video Controls */}
-{isPlaying && showControls && (
-              <div
-                className="absolute bottom-4 left-4 right-4 flex items-center justify-between animate-fadeInUp"
-              >
-                <div className="flex items-center space-x-3">
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      handlePlayPause()
-                    }}
-                    className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
-                  >
-                    {isPlaying ? (
-                      <Pause className="w-5 h-5" />
-                    ) : (
-                      <Play className="w-5 h-5 ml-0.5" />
-                    )}
-                  </button>
+                  {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-0.5" />}
+                </button>
 
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      toggleMute()
-                    }}
-                    className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
-                  >
-                    {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
-                  </button>
-                </div>
-
-                <div className="flex items-center space-x-3">
-                  <span className="text-white text-sm bg-black/30 px-2 py-1 rounded">
-                    {duration}
-                  </span>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      toggleFullscreen()
-                    }}
-                    className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
-                  >
-                    <Maximize className="w-5 h-5" />
-                  </button>
-                </div>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    toggleMute()
+                  }}
+                  className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                >
+                  {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+                </button>
               </div>
-            )}
-{/* Achievement Badge */}
+
+              <div className="flex items-center space-x-3">
+                <span className="text-white text-sm bg-black/30 px-2 py-1 rounded">{duration}</span>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    toggleFullscreen()
+                  }}
+                  className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                >
+                  <Maximize className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+          )}
+          {/* Achievement Badge */}
           <div className="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
             {achievement}
           </div>
@@ -187,41 +173,39 @@ export function VideoTestimonial({
       </div>
 
       {/* Fullscreen Modal */}
-{isFullscreen && (
-          <div
-            className="fixed inset-0 bg-black z-50 flex items-center justify-center animate-fadeInUp"
+      {isFullscreen && (
+        <div className="fixed inset-0 bg-black z-50 flex items-center justify-center animate-fadeInUp">
+          <button
+            onClick={toggleFullscreen}
+            className="absolute top-4 right-4 z-10 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
           >
-            <button
-              onClick={toggleFullscreen}
-              className="absolute top-4 right-4 z-10 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
-            >
-              <X className="w-6 h-6" />
-            </button>
+            <X className="w-6 h-6" />
+          </button>
 
-            <div className="w-full h-full max-w-6xl max-h-full p-4">
-              <video
-                src={videoUrl}
-                autoPlay
-                muted={isMuted}
-                controls
-                className="w-full h-full object-contain"
-                onEnded={() => {
-                  setIsPlaying(false)
-                  setIsFullscreen(false)
-                }}
-              />
-            </div>
-
-            {/* Fullscreen Info Overlay */}
-            <div className="absolute bottom-6 left-6 bg-black/60 backdrop-blur-sm text-white p-4 rounded-2xl">
-              <h3 className="font-bold text-lg">{studentName}</h3>
-              <p className="text-blue-300">{college}</p>
-              <p className="text-green-300">
-                NEET Score: {neetScore} (+{improvement} improvement)
-              </p>
-            </div>
+          <div className="w-full h-full max-w-6xl max-h-full p-4">
+            <video
+              src={videoUrl}
+              autoPlay
+              muted={isMuted}
+              controls
+              className="w-full h-full object-contain"
+              onEnded={() => {
+                setIsPlaying(false)
+                setIsFullscreen(false)
+              }}
+            />
           </div>
-        )}
-</>
+
+          {/* Fullscreen Info Overlay */}
+          <div className="absolute bottom-6 left-6 bg-black/60 backdrop-blur-sm text-white p-4 rounded-2xl">
+            <h3 className="font-bold text-lg">{studentName}</h3>
+            <p className="text-blue-300">{college}</p>
+            <p className="text-green-300">
+              NEET Score: {neetScore} (+{improvement} improvement)
+            </p>
+          </div>
+        </div>
+      )}
+    </>
   )
 }

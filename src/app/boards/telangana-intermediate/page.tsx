@@ -6,7 +6,8 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'Telangana Intermediate Biology Coaching | NEET + Board Dual Prep',
-  description: 'Expert Telangana BIE Biology coaching with integrated NEET preparation. Master BIE Telangana syllabus (Botany Paper-I & Zoology Paper-II) with EAMCET overlap coverage.',
+  description:
+    'Expert Telangana BIE Biology coaching with integrated NEET preparation. Master BIE Telangana syllabus (Botany Paper-I & Zoology Paper-II) with EAMCET overlap coverage.',
   keywords: [
     'Telangana intermediate biology',
     'BIE Telangana biology tuition',

@@ -410,9 +410,7 @@ function BadgesTab({
             </div>
           </div>
           <div className="mt-4 h-3 bg-gray-200 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-gradient-to-r from-purple-500 to-purple-600 rounded-full animate-fadeInUp"
-            />
+            <div className="h-full bg-gradient-to-r from-purple-500 to-purple-600 rounded-full animate-fadeInUp" />
           </div>
         </CardContent>
       </Card>

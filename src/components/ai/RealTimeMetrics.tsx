@@ -483,47 +483,47 @@ export function RealTimeMetrics() {
       </div>
 
       {/* Live Alerts */}
-{alerts
-          .filter((alert) => !alert.dismissed)
-          .map((alert) => (
-            <div
-              key={alert.id}
-              className={`flex items-center justify-between p-4 rounded-lg border ${
-                alert.type === 'error'
-                  ? 'bg-red-50 border-red-200 text-red-800'
-                  : alert.type === 'warning'
-                    ? 'bg-yellow-50 border-yellow-200 text-yellow-800'
-                    : alert.type === 'success'
-                      ? 'bg-green-50 border-green-200 text-green-800'
-                      : 'bg-blue-50 border-blue-200 text-blue-800'
-              }`}
-            >
-              <div className="flex items-center space-x-3">
-                <div className="flex-shrink-0">
-                  {alert.type === 'error' ? (
-                    <AlertTriangle className="w-5 h-5" />
-                  ) : alert.type === 'warning' ? (
-                    <AlertTriangle className="w-5 h-5" />
-                  ) : alert.type === 'success' ? (
-                    <CheckCircle className="w-5 h-5" />
-                  ) : (
-                    <Info className="w-5 h-5" />
-                  )}
-                </div>
-                <div>
-                  <h4 className="font-medium">{alert.title}</h4>
-                  <p className="text-sm opacity-90">{alert.message}</p>
-                </div>
+      {alerts
+        .filter((alert) => !alert.dismissed)
+        .map((alert) => (
+          <div
+            key={alert.id}
+            className={`flex items-center justify-between p-4 rounded-lg border ${
+              alert.type === 'error'
+                ? 'bg-red-50 border-red-200 text-red-800'
+                : alert.type === 'warning'
+                  ? 'bg-yellow-50 border-yellow-200 text-yellow-800'
+                  : alert.type === 'success'
+                    ? 'bg-green-50 border-green-200 text-green-800'
+                    : 'bg-blue-50 border-blue-200 text-blue-800'
+            }`}
+          >
+            <div className="flex items-center space-x-3">
+              <div className="flex-shrink-0">
+                {alert.type === 'error' ? (
+                  <AlertTriangle className="w-5 h-5" />
+                ) : alert.type === 'warning' ? (
+                  <AlertTriangle className="w-5 h-5" />
+                ) : alert.type === 'success' ? (
+                  <CheckCircle className="w-5 h-5" />
+                ) : (
+                  <Info className="w-5 h-5" />
+                )}
               </div>
-              <button
-                onClick={() => dismissAlert(alert.id)}
-                className="flex-shrink-0 p-1 rounded-md hover:bg-white/50 transition-colors"
-              >
-                <X className="w-4 h-4" />
-              </button>
+              <div>
+                <h4 className="font-medium">{alert.title}</h4>
+                <p className="text-sm opacity-90">{alert.message}</p>
+              </div>
             </div>
-          ))}
-{/* Performance Metrics Grid */}
+            <button
+              onClick={() => dismissAlert(alert.id)}
+              className="flex-shrink-0 p-1 rounded-md hover:bg-white/50 transition-colors"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        ))}
+      {/* Performance Metrics Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {performanceMetrics.map((metric, index) => (
           <div

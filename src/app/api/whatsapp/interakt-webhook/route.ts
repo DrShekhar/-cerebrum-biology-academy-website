@@ -223,9 +223,7 @@ async function handleIncomingMessage(data: any, originalPayload: InteraktWebhook
   const providerMessageId =
     data?.id || data?.messageId || originalPayload.data?.message?.id || undefined
   const previewBody =
-    messageType === 'text'
-      ? messageText || ''
-      : `[${String(messageType).toUpperCase()}]`
+    messageType === 'text' ? messageText || '' : `[${String(messageType).toUpperCase()}]`
   void logInboundWhatsAppMessage({
     fromPhone: phone,
     message: previewBody,

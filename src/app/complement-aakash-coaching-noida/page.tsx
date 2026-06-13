@@ -7,9 +7,9 @@ import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 const noidaLocation = CONTACT_INFO.location.noida
 
 export const metadata: Metadata = {
-  title: 'Complement the 2nd-largest national NEET chain Coaching with Cerebrum Biology | Noida',
+  title: 'Complement Aakash Coaching with Cerebrum Biology | Noida',
   description:
-    'Boost your NEET Biology score while staying at the 2nd-largest national NEET chain. Cerebrum offers weekend & evening Biology classes for the 2nd-largest national NEET chain students in Noida. Personalized attention from AIIMS faculty.',
+    'Boost your NEET Biology score while staying at Aakash. Cerebrum offers weekend & evening Biology classes for Aakash students in Noida. Personalized attention from AIIMS faculty.',
   keywords: [
     'complement aakash coaching noida',
     'aakash coaching biology supplement',
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     locale: 'en_IN',
-    title: 'Complement the 2nd-largest national NEET chain with Cerebrum Biology Coaching | Noida',
-    description: 'Keep your the 2nd-largest national NEET chain enrollment. Add focused Biology coaching from AIIMS faculty.',
+    title: 'Complement Aakash with Cerebrum Biology Coaching | Noida',
+    description: 'Keep your Aakash enrollment. Add focused Biology coaching from AIIMS faculty.',
     url: 'https://cerebrumbiologyacademy.com/complement-aakash-coaching-noida',
   },
   alternates: {
@@ -32,31 +32,32 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Complement the 2nd-largest national NEET chain Coaching with Cerebrum Biology | Noida',
-    description: 'Boost your NEET Biology score while staying at the 2nd-largest national NEET chain. Cerebrum offers weekend & evening Biology classes for the 2nd-largest national NEET chain students in Noida. Pers...',
+    title: 'Complement Aakash Coaching with Cerebrum Biology | Noida',
+    description:
+      'Boost your NEET Biology score while staying at Aakash. Cerebrum offers weekend & evening Biology classes for Aakash students in Noida. Pers...',
   },
 }
 
 const faqs = [
   {
-    question: 'Can I join Cerebrum without leaving the 2nd-largest national NEET chain?',
+    question: 'Can I join Cerebrum without leaving Aakash?',
     answer:
-      'Yes! Many the 2nd-largest national NEET chain students join Cerebrum specifically for Biology coaching. We offer flexible weekend and evening batches that complement your the 2nd-largest national NEET chain schedule perfectly.',
+      'Yes! Many Aakash students join Cerebrum specifically for Biology coaching. We offer flexible weekend and evening batches that complement your Aakash schedule perfectly.',
   },
   {
-    question: 'Why do the 2nd-largest national NEET chain students need extra Biology coaching?',
+    question: 'Why do Aakash students need extra Biology coaching?',
     answer:
-      'the 2nd-largest national NEET chain has good digital resources but Biology requires depth and personalized attention. With 60-80 students per batch, individual doubt clearing is limited. Cerebrum fills this gap with specialized Biology focus and AIIMS faculty.',
+      'Aakash has good digital resources but Biology requires depth and personalized attention. With 60-80 students per batch, individual doubt clearing is limited. Cerebrum fills this gap with specialized Biology focus and AIIMS faculty.',
   },
   {
-    question: 'How does the timing work with the 2nd-largest national NEET chain classes?',
+    question: 'How does the timing work with Aakash classes?',
     answer:
-      'We offer: 1) Weekend intensive batches (Saturday-Sunday) 2) Evening sessions (6-8 PM weekdays) 3) Flexible online sessions. Choose what fits your the 2nd-largest national NEET chain schedule.',
+      'We offer: 1) Weekend intensive batches (Saturday-Sunday) 2) Evening sessions (6-8 PM weekdays) 3) Flexible online sessions. Choose what fits your Aakash schedule.',
   },
   {
-    question: 'Can I use the 2nd-largest national NEET chain digital resources along with Cerebrum?',
+    question: 'Can I use Aakash digital resources along with Cerebrum?',
     answer:
-      'Absolutely! the 2nd-largest national NEET chain has good test series and digital content. Cerebrum adds the personal teaching and doubt clearing that digital platforms cannot provide. Use both for maximum benefit.',
+      'Absolutely! Aakash has good test series and digital content. Cerebrum adds the personal teaching and doubt clearing that digital platforms cannot provide. Use both for maximum benefit.',
   },
   {
     question: 'What topics can I focus on?',
@@ -78,9 +79,9 @@ export default function ComplementAakashCoachingNoidaPage() {
   const courseSchema = {
     '@context': 'https://schema.org',
     '@type': 'Course',
-    name: 'Biology Coaching for the 2nd-largest national NEET chain Students - Noida',
+    name: 'Biology Coaching for Aakash Students - Noida',
     description:
-      'Supplementary NEET Biology coaching designed for students already enrolled at SKY Coaching (2nd-largest national NEET chain)',
+      'Supplementary NEET Biology coaching designed for students already enrolled at Aakash',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -131,7 +132,7 @@ export default function ComplementAakashCoachingNoidaPage() {
       {
         '@type': 'ListItem',
         position: 3,
-        name: 'Complement the 2nd-largest national NEET chain Coaching',
+        name: 'Complement Aakash Coaching',
         item: 'https://cerebrumbiologyacademy.com/complement-aakash-coaching-noida',
       },
     ],

@@ -26,9 +26,6 @@ export async function GET() {
     })
   } catch (error) {
     console.error('Error fetching MCQ counts:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to fetch counts' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to fetch counts' }, { status: 500 })
   }
 }

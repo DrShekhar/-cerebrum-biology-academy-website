@@ -118,9 +118,7 @@ export default function ReferralPage() {
     <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Hero Section */}
-        <div
-          className="text-center mb-12 animate-fadeInUp"
-        >
+        <div className="text-center mb-12 animate-fadeInUp">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-indigo-500 rounded-full mb-6">
             <Gift className="w-10 h-10 text-white" />
           </div>
@@ -134,9 +132,7 @@ export default function ReferralPage() {
         </div>
 
         {/* How It Works */}
-        <div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 animate-fadeInUp"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 animate-fadeInUp">
           {[
             {
               icon: Share2,
@@ -170,8 +166,7 @@ export default function ReferralPage() {
         </div>
 
         {/* Generate or Display Referral Code */}
-        <div
-         className="animate-fadeInUp">
+        <div className="animate-fadeInUp">
           {showGenerateForm ? (
             <Card className="p-8 max-w-md mx-auto">
               <h2 className="text-xl font-semibold text-gray-900 mb-6 text-center">
@@ -302,9 +297,7 @@ export default function ReferralPage() {
         </div>
 
         {/* Leaderboard Preview */}
-        <div
-          className="mt-12 animate-fadeInUp"
-        >
+        <div className="mt-12 animate-fadeInUp">
           <Card className="p-6">
             <div className="flex items-center justify-between mb-6">
               <h3 className="font-semibold text-gray-900 flex items-center">
@@ -353,9 +346,7 @@ export default function ReferralPage() {
         </div>
 
         {/* Terms */}
-        <div
-          className="mt-8 text-center text-sm text-gray-500 animate-fadeInUp"
-        >
+        <div className="mt-8 text-center text-sm text-gray-500 animate-fadeInUp">
           <p>
             By participating, you agree to our{' '}
             <Link href="/terms-of-service" className="text-purple-600 hover:underline">

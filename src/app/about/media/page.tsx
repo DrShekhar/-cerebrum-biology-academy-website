@@ -18,10 +18,16 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Media Coverage & Press',
-    description: 'Read about Cerebrum Biology Academy in the news. Media coverage, press releases, and recognition in education sector.',
+    description:
+      'Read about Cerebrum Biology Academy in the news. Media coverage, press releases, and recognition in education sector.',
   },
 
-  openGraph: { title: 'Media Coverage & Press', description: 'Read about Cerebrum Biology Academy in the news. Media coverage, press releases, and recognition in education sector.', type: 'website' },
+  openGraph: {
+    title: 'Media Coverage & Press',
+    description:
+      'Read about Cerebrum Biology Academy in the news. Media coverage, press releases, and recognition in education sector.',
+    type: 'website',
+  },
 }
 
 export default function MediaPage() {

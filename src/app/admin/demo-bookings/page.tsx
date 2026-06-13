@@ -256,9 +256,7 @@ export default function DemoBookingsPage() {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <div
-            className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500 animate-fadeInUp">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Total Bookings</p>
@@ -268,9 +266,7 @@ export default function DemoBookingsPage() {
             </div>
           </div>
 
-          <div
-            className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-yellow-500 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-yellow-500 animate-fadeInUp">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Pending</p>
@@ -280,9 +276,7 @@ export default function DemoBookingsPage() {
             </div>
           </div>
 
-          <div
-            className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-600 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-600 animate-fadeInUp">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Confirmed</p>
@@ -292,9 +286,7 @@ export default function DemoBookingsPage() {
             </div>
           </div>
 
-          <div
-            className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-600 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-600 animate-fadeInUp">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Completed</p>

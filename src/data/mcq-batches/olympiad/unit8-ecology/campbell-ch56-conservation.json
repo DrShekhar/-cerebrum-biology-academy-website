@@ -69,12 +69,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about the economics of conservation:\nI. The global cost of effectively protecting the existing protected area network is estimated at $10-30 billion per year\nII. The economic value of ecosystem services provided by biodiversity far exceeds the cost of conservation\nIII. Most countries currently spend enough on conservation to meet their biodiversity protection goals\nIV. Market-based instruments (carbon credits, PES) can supplement but not replace public funding for conservation",
-      "options": [
-        "TTFT",
-        "TTTF",
-        "TFTT",
-        "TTTT"
-      ],
+      "options": ["TTFT", "TTTF", "TFTT", "TTTT"],
       "correctAnswer": "A",
       "explanation": "I. TRUE: Estimates suggest $10-30 billion/yr is needed for effective protected area management globally (current spending is ~$10 billion, leaving a significant funding gap). II. TRUE: Global ecosystem services are valued at $125-145 trillion/yr (Costanza et al.), far exceeding conservation costs. III. FALSE: Most countries, especially in the tropics where biodiversity is greatest, have major conservation funding gaps. The biodiversity finance gap is estimated at $598-824 billion/yr. IV. TRUE: Market-based instruments provide important funding streams but cannot fully replace public investment because many ecosystem services are public goods (non-excludable, non-rival) that markets underprovide.",
       "isOlympiad": true,
@@ -249,12 +244,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about the causes of species endangerment:\nI. Habitat destruction is the leading cause of species endangerment globally\nII. Overexploitation is the second most common threat to endangered species\nIII. Climate change is currently causing more species extinctions than habitat loss\nIV. Invasive species are the leading cause of extinction on islands",
-      "options": [
-        "TTFT",
-        "TFTF",
-        "TTTT",
-        "TFFT"
-      ],
+      "options": ["TTFT", "TFTF", "TTTT", "TFFT"],
       "correctAnswer": "A",
       "explanation": "I. TRUE: Habitat destruction (deforestation, wetland drainage, urban expansion) is the leading threat to biodiversity, affecting ~85% of threatened species on the IUCN Red List. II. TRUE: Overexploitation (hunting, fishing, harvesting) is the second most common threat, particularly affecting large mammals, marine fish, and commercially valuable species. III. FALSE: While climate change is an increasingly important and growing threat, habitat destruction currently causes more documented extinctions and endangerment than climate change. Climate change is projected to become the dominant threat in coming decades. IV. TRUE: On islands, invasive species (especially rats, cats, goats, and snakes) are the leading cause of extinction, responsible for ~86% of island bird extinctions. Islands are disproportionately affected because island species evolved without these predators and competitors.",
       "isOlympiad": true,
@@ -729,12 +719,7 @@
     {
       "type": "DATA_INTERPRETATION",
       "question": "A conservation biologist surveys bird communities in forest fragments of different sizes. The results show: 1 ha fragments: 12 species, 10 ha: 28 species, 100 ha: 58 species, 1000 ha: 95 species. Using the species-area relationship S = cA^z, estimate the z-value from these data.",
-      "options": [
-        "z ≈ 0.15",
-        "z ≈ 0.75",
-        "z ≈ 0.50",
-        "z ≈ 0.30"
-      ],
+      "options": ["z ≈ 0.15", "z ≈ 0.75", "z ≈ 0.50", "z ≈ 0.30"],
       "correctAnswer": "D",
       "explanation": "Using S = cA^z, take two points: S₁ = 12 at A₁ = 1 ha, S₂ = 95 at A₂ = 1000 ha. Taking logs: log(S₂/S₁) = z × log(A₂/A₁). log(95/12) = z × log(1000/1). log(7.917) = z × log(1000). 0.899 = z × 3.0. z = 0.300. We can verify: from 1→10 ha: 28/12 = 2.33, 10^0.3 = 2.0 (close). From 10→100: 58/28 = 2.07, 10^0.3 = 2.0 (close). The z-value of 0.30 is slightly above the typical range for habitat islands (0.25-0.35), consistent with fragmented landscapes where isolation increases extinction rates compared to continental biotas.",
       "isOlympiad": true,
@@ -869,12 +854,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about biodiversity hotspots:\nI. Biodiversity hotspots are defined as regions with at least 1,500 endemic plant species that have lost at least 70% of their original habitat\nII. Hotspots cover approximately 2.5% of Earth's land surface but contain over 50% of endemic plant species\nIII. All 36 recognized biodiversity hotspots are located in tropical regions\nIV. Protecting all hotspots would safeguard the majority of globally threatened terrestrial vertebrate species",
-      "options": [
-        "TTFT",
-        "TTTF",
-        "TTFF",
-        "TFTT"
-      ],
+      "options": ["TTFT", "TTTF", "TTFF", "TFTT"],
       "correctAnswer": "A",
       "explanation": "I. TRUE: Norman Myers defined hotspots using two criteria: ≥1,500 endemic vascular plant species AND ≥70% habitat loss. II. TRUE: Despite covering only ~2.5% of Earth's land area, hotspots harbor >50% of endemic plant species and ~43% of endemic vertebrate species. III. FALSE: While many hotspots are tropical, several are in temperate regions (Mediterranean Basin, California Floristic Province, Southwest Australia, Chilean Winter Rainfall, etc.). IV. TRUE: Hotspots contain habitat for ~77% of threatened mammals, birds, reptiles, and amphibians, so their protection would disproportionately benefit threatened species conservation.",
       "isOlympiad": true,
@@ -1169,12 +1149,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about marine protected areas (MPAs):\nI. No-take MPAs (where fishing is prohibited) consistently show higher fish biomass and larger individual fish than adjacent fished areas\nII. MPAs can benefit adjacent fisheries through spillover of adults and larvae (the fishery spillover effect)\nIII. Most of the ocean's protected areas are effectively managed and enforced\nIV. Deep-sea MPAs are less common than coastal MPAs despite the deep sea covering most of the ocean floor",
-      "options": [
-        "TTFT",
-        "TFTF",
-        "TTTT",
-        "TFFT"
-      ],
+      "options": ["TTFT", "TFTF", "TTTT", "TFFT"],
       "correctAnswer": "A",
       "explanation": "I. TRUE: Meta-analyses consistently show that no-take MPAs have higher fish biomass (200-400% higher), larger fish, and greater species richness than fished areas. II. TRUE: MPAs can benefit surrounding fisheries through net emigration of adults across boundaries and larval export, though the magnitude depends on MPA size, species mobility, and management. III. FALSE: Many MPAs are 'paper parks' with inadequate management, enforcement, and funding. Only about 10-15% of the global MPA network is considered effectively managed. IV. TRUE: Most MPAs are in coastal/shelf waters. Deep-sea ecosystems remain vastly under-protected despite covering >60% of the ocean floor, because of logistical challenges and jurisdictional issues (much deep sea is in international waters).",
       "isOlympiad": true,

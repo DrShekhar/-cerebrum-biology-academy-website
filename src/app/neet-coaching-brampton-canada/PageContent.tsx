@@ -56,6 +56,7 @@ export default function NEETCoachingPageContent() {
   return (
     <>
       <LocalitySchema
+        country="CA"
         locality="Brampton"
         slug="neet-coaching-brampton-canada"
         pageTitle="NEET Coaching in Brampton, Canada"

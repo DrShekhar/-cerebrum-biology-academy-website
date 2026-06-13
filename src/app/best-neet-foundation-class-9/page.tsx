@@ -31,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best NEET Foundation Class 9 Biology Tutor | Tissues + Life Processes Start',
-    description: 'Best NEET Foundation Class 9 Biology tutor in India — Dr. Shekhar C Singh (AIIMS Delhi). Class 9 CBSE/ICSE board + early NEET-pattern biology. Tissues, Diversity, Why Do We Fall Ill. ₹35K-95K/year,...',
+    description:
+      'Best NEET Foundation Class 9 Biology tutor in India — Dr. Shekhar C Singh (AIIMS Delhi). Class 9 CBSE/ICSE board + early NEET-pattern biology. Tissues, Diversity, Why Do We Fall Ill. ₹35K-95K/year,...',
   },
 }
 

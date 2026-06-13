@@ -131,7 +131,8 @@ const faqs = [
       'Class 10 Biology is significantly deeper and more diagram-heavy than Class 9. The five chapters — Life Processes, Control & Coordination, Reproduction, Heredity, and Our Environment — go from "what is biology" (Class 9) to "how the body actually works" (Class 10). The board exam expects clear NCERT-aligned answers with labeled diagrams. Many students who scored well in Class 9 without much effort struggle in Class 10 because the diagram, mechanism, and process-explanation expectations jump up sharply.',
   },
   {
-    question: 'Class 10 is a board exam year — what is the right balance between board prep and Olympiad / NEET prep?',
+    question:
+      'Class 10 is a board exam year — what is the right balance between board prep and Olympiad / NEET prep?',
     answer:
       'For Class 10 students, the board exam must be the primary focus — Class 10 board marks matter for school records and future references, and many CBSE schools use Class 10 marks for streaming Class 11. That said, the NCERT chapters in Class 10 Biology (Life Processes, Control & Coordination, Heredity) directly overlap with NEET Class 11-12 syllabus, so understanding them at conceptual depth (not just rote-memorising) gives a meaningful Class 11 headstart. We teach the boards-then-NEET sequencing explicitly: master the board level first, then layer NEET-level depth in the same chapter.',
   },
@@ -141,7 +142,8 @@ const faqs = [
       'For the board exam itself, yes — NCERT is the primary and sufficient textbook. CBSE board papers stick closely to NCERT content, diagrams, and language. We cover NCERT line-by-line and add the diagram practice and past-paper drilling that the board exam rewards. For students aiming at NTSE, Olympiads, or NEET-foundation depth, we add supplementary conceptual material — but only after NCERT mastery is solid.',
   },
   {
-    question: 'My child has weak diagram skills — Class 10 Biology has many diagrams (heart, kidney, neuron, flower). Can you help?',
+    question:
+      'My child has weak diagram skills — Class 10 Biology has many diagrams (heart, kidney, neuron, flower). Can you help?',
     answer:
       'Yes — diagram practice is one of the highest-leverage interventions in Class 10 Biology. Weekly diagram-drawing sessions, label-the-parts drills against the NCERT diagrams, and feedback on board-style diagram answers. Many of our Class 10 students who started with weak diagram skills score full marks on the diagram-questions in the final board paper because of this focused practice. Diagrams are 8-12 marks in the typical CBSE Class 10 Biology section — we make sure your child does not lose any of them.',
   },
@@ -156,7 +158,8 @@ const faqs = [
       'Yes. We offer offline classes at our 4 centres in Delhi NCR (South Extension, Gurugram, Faridabad, Rohini) and live online classes for students across India. Both modes have the same faculty, same curriculum, and the same diagram-practice and past-paper drills. Many of our Class 10 students prefer the hybrid model — online for weekday classes, offline for Saturday board-paper drilling.',
   },
   {
-    question: 'My child is in Class 10 CBSE and we are planning NEET for Class 11-12 — when should we start NEET-specific prep?',
+    question:
+      'My child is in Class 10 CBSE and we are planning NEET for Class 11-12 — when should we start NEET-specific prep?',
     answer:
       'The honest answer: serious NEET prep should start in Class 11 (which is itself NEET Class 11 syllabus). For Class 10 students, the right move is to (a) master Class 10 NCERT Biology at conceptual depth, (b) introduce the NEET-style multiple-choice question pattern in a low-pressure way so it is not new in Class 11, and (c) build the study-habit foundation. We run a "Class 10 → NEET bridge" track that does exactly this — board mastery primary, NEET-foundation secondary.',
   },
@@ -282,10 +285,7 @@ export default function BiologyTutorClass10CBSEPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {class10Syllabus.map((unit) => (
-              <div
-                key={unit.unit}
-                className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={unit.unit} className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
                     <unit.icon className="w-6 h-6 text-emerald-600" />
@@ -342,10 +342,9 @@ export default function BiologyTutorClass10CBSEPage() {
               Beyond Class 10 boards — what else Cerebrum coaches
             </h2>
             <p className="text-sm md:text-base text-slate-600 max-w-3xl mx-auto">
-              Cerebrum Biology Academy is biology-only across CBSE Class 9 → Class 10 boards →
-              Class 11-12 → NEET, plus Biology Olympiads (NSEB / INBO / IBO) and international
-              curricula (IB, IGCSE, AP). One faculty network across your child&apos;s entire biology
-              journey.
+              Cerebrum Biology Academy is biology-only across CBSE Class 9 → Class 10 boards → Class
+              11-12 → NEET, plus Biology Olympiads (NSEB / INBO / IBO) and international curricula
+              (IB, IGCSE, AP). One faculty network across your child&apos;s entire biology journey.
             </p>
           </div>
 
@@ -360,8 +359,8 @@ export default function BiologyTutorClass10CBSEPage() {
               </div>
               <p className="text-sm text-slate-600 mb-4 leading-relaxed">
                 The natural next step after Class 10. Same faculty, same coaching style, NEET-
-                aligned Class 11-12 NCERT mastery. Many of our Class 10 students continue
-                seamlessly into the Class 11 batch.
+                aligned Class 11-12 NCERT mastery. Many of our Class 10 students continue seamlessly
+                into the Class 11 batch.
               </p>
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20My%20child%20is%20in%20Class%2010%20CBSE%20and%20we%20are%20planning%20Class%2011-12%20Biology%20%2B%20NEET.%20Please%20share%20the%20Class%2010%20%E2%86%92%20Class%2011%20continuation%20track%20and%20fee%20structure."
@@ -384,8 +383,8 @@ export default function BiologyTutorClass10CBSEPage() {
               </div>
               <p className="text-sm text-slate-600 mb-4 leading-relaxed">
                 Board-then-NEET sequencing: master Class 10 boards first, then layer NEET-level
-                conceptual depth in the same chapters. Class 11 becomes a continuation, not a
-                jump. AIIMS-trained faculty.
+                conceptual depth in the same chapters. Class 11 becomes a continuation, not a jump.
+                AIIMS-trained faculty.
               </p>
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20My%20child%20is%20in%20Class%2010%20CBSE%20and%20we%20want%20to%20add%20NEET%20foundation%20alongside%20board%20preparation.%20Please%20share%20the%20Class%2010%20%E2%86%92%20NEET%20foundation%20track%20details%20and%20schedule."
@@ -409,8 +408,7 @@ export default function BiologyTutorClass10CBSEPage() {
               <p className="text-sm text-slate-600 mb-4 leading-relaxed">
                 For Class 10 students with strong board marks who want a Biology Olympiad layer.
                 Cerebrum coaches the full India funnel — NSEB (Class 11/12 eligibility) → INBO →
-                OCSC → IBO India team. Class 10 is the right year to start building the
-                foundation.
+                OCSC → IBO India team. Class 10 is the right year to start building the foundation.
               </p>
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20My%20child%20is%20in%20Class%2010%20CBSE%20with%20strong%20biology%20marks.%20We%20want%20to%20explore%20Biology%20Olympiad%20coaching%20%E2%80%94%20NSEB%20%2F%20INBO%20%2F%20IBO%20pipeline.%20Please%20share%20schedule%20and%20eligibility."

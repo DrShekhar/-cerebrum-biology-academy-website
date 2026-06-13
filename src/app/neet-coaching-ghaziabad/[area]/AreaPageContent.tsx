@@ -34,7 +34,12 @@ interface AreaPageContentProps {
   aiCitationFacts: string[]
 }
 
-export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }: AreaPageContentProps) {
+export function AreaPageContent({
+  area,
+  slug,
+  nearbyAreaSlugs,
+  aiCitationFacts,
+}: AreaPageContentProps) {
   useEffect(() => {
     ConversionTracker.initialize()
     ConversionTracker.trackConversion('page_view', 0, {
@@ -80,9 +85,13 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
       <div className="bg-gray-50 py-3 border-b">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center text-sm text-gray-600">
-            <Link href="/" className="hover:text-blue-600">Home</Link>
+            <Link href="/" className="hover:text-blue-600">
+              Home
+            </Link>
             <span className="mx-2">/</span>
-            <Link href="/neet-coaching-ghaziabad" className="hover:text-blue-600">NEET Coaching Ghaziabad</Link>
+            <Link href="/neet-coaching-ghaziabad" className="hover:text-blue-600">
+              NEET Coaching Ghaziabad
+            </Link>
             <span className="mx-2">/</span>
             <span className="text-gray-900 font-medium">{area.name}</span>
           </div>
@@ -95,11 +104,11 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="max-w-4xl animate-fadeInUp"
-          >
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="flex items-center gap-3 mb-4">
-              <span className={`px-3 py-1 rounded-full text-xs font-medium ${metroLineColors[area.metroLine]} text-white`}>
+              <span
+                className={`px-3 py-1 rounded-full text-xs font-medium ${metroLineColors[area.metroLine]} text-white`}
+              >
                 {area.metroLine === 'None' ? 'Road Access' : `${area.metroLine} Line Metro`}
               </span>
               <span className="px-3 py-1 bg-yellow-500 text-black rounded-full text-xs font-medium">
@@ -108,7 +117,8 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
             </div>
 
             <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
-              Best <span className="text-yellow-300">NEET Biology Coaching</span> in {area.name}, Ghaziabad
+              Best <span className="text-yellow-300">NEET Biology Coaching</span> in {area.name},
+              Ghaziabad
             </h1>
 
             {/* AEO: Speakable intro for voice search */}
@@ -118,7 +128,10 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
 
             <div className="flex flex-wrap gap-3 mb-8">
               {area.highlights.map((highlight, i) => (
-                <span key={i} className="flex items-center bg-white/10 px-3 py-1 rounded-full text-sm">
+                <span
+                  key={i}
+                  className="flex items-center bg-white/10 px-3 py-1 rounded-full text-sm"
+                >
                   <CheckCircle className="w-4 h-4 mr-1 text-green-400" />
                   {highlight}
                 </span>
@@ -126,14 +139,27 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" onClick={handleDemoBooking}>
-                <Button variant="secondary" size="lg" className="bg-yellow-500 text-black hover:bg-yellow-400 font-bold">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleDemoBooking}
+              >
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  className="bg-yellow-500 text-black hover:bg-yellow-400 font-bold"
+                >
                   <Play className="w-5 h-5 mr-2" />
                   Book Free Demo Class
                 </Button>
               </Link>
               <a href={`tel:${CONTACT_INFO.phone.primary}`} onClick={handlePhoneCall}>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-red-900">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-white text-white hover:bg-white hover:text-red-900"
+                >
                   <Phone className="w-5 h-5 mr-2" />
                   Call: {CONTACT_INFO.phone.display.primary}
                 </Button>
@@ -195,7 +221,9 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
               <div className="space-y-3">
                 {area.nearbyMetro.map((metro, i) => (
                   <div key={i} className="flex items-center p-3 bg-gray-50 rounded-lg">
-                    <span className={`w-3 h-3 rounded-full ${metroLineColors[area.metroLine]} mr-3`} />
+                    <span
+                      className={`w-3 h-3 rounded-full ${metroLineColors[area.metroLine]} mr-3`}
+                    />
                     <span className="text-gray-700">{metro}</span>
                   </div>
                 ))}
@@ -213,7 +241,10 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
               </h3>
               <div className="flex flex-wrap gap-2">
                 {area.schools.map((school, i) => (
-                  <span key={i} className="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm">
+                  <span
+                    key={i}
+                    className="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm"
+                  >
                     {school}
                   </span>
                 ))}
@@ -302,9 +333,7 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
       {nearbyAreaSlugs.length > 0 && (
         <section className="py-12 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Also Serving Nearby Areas
-            </h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Also Serving Nearby Areas</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {nearbyAreaSlugs.map((nearbySlug) => {
                 const nearbyArea = getGhaziabadAreaBySlug(nearbySlug)
@@ -325,11 +354,7 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
         </section>
       )}
 
-      <AreaTestimonials
-        citySlug="ghaziabad"
-        areaName={area.name}
-        cityName="Ghaziabad"
-      />
+      <AreaTestimonials citySlug="ghaziabad" areaName={area.name} cityName="Ghaziabad" />
 
       <HowToReachSection
         areaName={area.name}
@@ -340,13 +365,17 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
       />
 
       {/* CTA Section */}
-      <section id="speakable-contact" className="py-16 bg-gradient-to-r from-red-600 to-orange-600 text-white">
+      <section
+        id="speakable-contact"
+        className="py-16 bg-gradient-to-r from-red-600 to-orange-600 text-white"
+      >
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Ready to Start Your NEET Journey from {area.name}?
           </h2>
           <p className="text-lg text-red-100 mb-4">
-            Join {CEREBRUM_METRICS.totalStudentsText} students. Visit our Noida Sector 62 center and book your free demo class today!
+            Join {CEREBRUM_METRICS.totalStudentsText} students. Visit our Noida Sector 62 center and
+            book your free demo class today!
           </p>
           <p className="text-md text-red-200 mb-8">
             Just {area.distanceFromCenter} from {area.name} | Online classes also available
@@ -354,13 +383,19 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href={`/demo-booking?center=noida&area=${slug}`}>
-              <Button size="xl" className="bg-yellow-500 text-black hover:bg-yellow-400 font-bold w-full sm:w-auto">
+              <Button
+                size="xl"
+                className="bg-yellow-500 text-black hover:bg-yellow-400 font-bold w-full sm:w-auto"
+              >
                 <Play className="w-5 h-5 mr-2" />
                 Book Demo at Noida Center
               </Button>
             </Link>
             <a href={`tel:${CONTACT_INFO.phone.primary}`} onClick={handlePhoneCall}>
-              <Button size="xl" className="bg-white text-red-600 hover:bg-gray-100 font-bold w-full sm:w-auto">
+              <Button
+                size="xl"
+                className="bg-white text-red-600 hover:bg-gray-100 font-bold w-full sm:w-auto"
+              >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
               </Button>

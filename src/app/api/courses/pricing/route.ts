@@ -45,34 +45,40 @@ export async function GET(request: NextRequest) {
           return NextResponse.json({ success: false, error: 'Course not found' }, { status: 404 })
         }
 
-        return NextResponse.json({
-          success: true,
-          data: {
-            courseId: course.id,
-            courseName: course.name,
-            currency: 'INR',
-            amount: course.totalFees,
-            amountDisplay: course.totalFees / 100,
-            fallback: true,
+        return NextResponse.json(
+          {
+            success: true,
+            data: {
+              courseId: course.id,
+              courseName: course.name,
+              currency: 'INR',
+              amount: course.totalFees,
+              amountDisplay: course.totalFees / 100,
+              fallback: true,
+            },
           },
-        }, {
-          headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' },
-        })
+          {
+            headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' },
+          }
+        )
       }
 
-      return NextResponse.json({
-        success: true,
-        data: {
-          courseId: pricing.courseId,
-          courseName: pricing.course.name,
-          currency: pricing.currency,
-          amount: pricing.amount,
-          amountDisplay: pricing.amount / 100,
-          fallback: false,
+      return NextResponse.json(
+        {
+          success: true,
+          data: {
+            courseId: pricing.courseId,
+            courseName: pricing.course.name,
+            currency: pricing.currency,
+            amount: pricing.amount,
+            amountDisplay: pricing.amount / 100,
+            fallback: false,
+          },
         },
-      }, {
-        headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' },
-      })
+        {
+          headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' },
+        }
+      )
     }
 
     const allPricing = await prisma.course_pricing.findMany({
@@ -125,13 +131,16 @@ export async function GET(request: NextRequest) {
       }
     })
 
-    return NextResponse.json({
-      success: true,
-      currency,
-      data: coursesWithPricing,
-    }, {
-      headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' },
-    })
+    return NextResponse.json(
+      {
+        success: true,
+        currency,
+        data: coursesWithPricing,
+      },
+      {
+        headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' },
+      }
+    )
   } catch (error) {
     console.error('Error fetching course pricing:', error)
     return NextResponse.json(

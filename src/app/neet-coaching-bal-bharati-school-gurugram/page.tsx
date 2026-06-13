@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching for Bal Bharati School Gurugram',
-    description: 'Best NEET coaching for Bal Bharati Public School Brij Vihar students. Just 15 min drive. CBSE-NEET aligned preparation. AIIMS faculty, 98% success rate. Call 88264-44334!',
+    description:
+      'Best NEET coaching for Bal Bharati Public School Brij Vihar students. Just 15 min drive. CBSE-NEET aligned preparation. AIIMS faculty, 98% success rate. Call 88264-44334!',
   },
 }
 
@@ -87,7 +88,11 @@ export default function NEETCoachingBalBharatiSchool() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

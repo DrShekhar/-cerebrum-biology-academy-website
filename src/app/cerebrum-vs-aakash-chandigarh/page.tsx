@@ -30,64 +30,65 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 const faqs = [
   {
-    question: 'How is Cerebrum different from the 2nd-largest national NEET chain Chandigarh for NEET Biology?',
+    question: 'How is Cerebrum different from Aakash Chandigarh for NEET Biology?',
     answer:
-      'Cerebrum offers small batches of 10-15 students compared to the 2nd-largest national NEET chain Chandigarh\'s 100+ students per batch. Our faculty is exclusively AIIMS-trained, while the 2nd-largest national NEET chain has mixed faculty backgrounds. You get daily 1-on-1 doubt sessions vs crowded doubt counters. Fees are Rs 24K-68K vs Rs 1-3.5 Lakhs at the 2nd-largest national NEET chain. Despite being a specialized Biology institute, our 98% success rate rivals the 2nd-largest national NEET chain\'s results.',
+      "Cerebrum offers small batches of 10-15 students compared to Aakash Chandigarh's 100+ students per batch. Our faculty is exclusively AIIMS-trained, while Aakash has mixed faculty backgrounds. You get daily 1-on-1 doubt sessions vs crowded doubt counters. Fees are Rs 24K-68K vs Rs 1-3.5 Lakhs at Aakash. Despite being a specialized Biology institute, our 98% success rate rivals Aakash's results.",
   },
   {
-    question: 'How many the 2nd-largest national NEET chain centers are there in Chandigarh Tricity?',
+    question: 'How many Aakash centers are there in Chandigarh Tricity?',
     answer:
-      'SKY Coaching (2nd-largest national NEET chain) has 7 centers across Chandigarh Tricity: Sector 34, Sector 17, Sector 22, Panchkula, Mohali Phase 7, Mohali Sector 70, and Zirakpur. Despite multiple locations, batch sizes remain 100+ students. Cerebrum offers online classes accessible from any Tricity location with significantly smaller batches of 10-15 students.',
+      'Aakash has 7 centers across Chandigarh Tricity: Sector 34, Sector 17, Sector 22, Panchkula, Mohali Phase 7, Mohali Sector 70, and Zirakpur. Despite multiple locations, batch sizes remain 100+ students. Cerebrum offers online classes accessible from any Tricity location with significantly smaller batches of 10-15 students.',
   },
   {
-    question: 'What is the ANTHE scholarship at the 2nd-largest national NEET chain and how does Cerebrum compare?',
+    question: 'What is the ANTHE scholarship at Aakash and how does Cerebrum compare?',
     answer:
-      'ANTHE (the 2nd-largest national NEET chain National Talent Hunt Exam) offers scholarships up to 90% on the 2nd-largest national NEET chain fees. However, base fees of Rs 1-3.5 Lakhs mean even with 50% scholarship, you pay Rs 50K-1.75L. Cerebrum offers merit-based discounts on already affordable Rs 24K-68K fees, plus our 7-day trial with money-back guarantee - no scholarship exam needed.',
+      'ANTHE (Aakash National Talent Hunt Exam) offers scholarships up to 90% on Aakash fees. However, base fees of Rs 1-3.5 Lakhs mean even with 50% scholarship, you pay Rs 50K-1.75L. Cerebrum offers merit-based discounts on already affordable Rs 24K-68K fees, plus our 7-day trial with money-back guarantee - no scholarship exam needed.',
   },
   {
-    question: 'Is the 2nd-largest national NEET chain Chandigarh\'s 36+ years experience an advantage?',
+    question: "Is Aakash Chandigarh's 36+ years experience an advantage?",
     answer:
-      'the 2nd-largest national NEET chain\'s 36+ years of experience in coaching is indeed valuable. However, experience alone doesn\'t guarantee personalized attention. A 100+ student batch with experienced faculty still means limited individual focus. Cerebrum combines experienced AIIMS faculty with small 10-15 batches - giving you both expertise AND personal attention.',
+      "Aakash's 36+ years of experience in coaching is indeed valuable. However, experience alone doesn't guarantee personalized attention. A 100+ student batch with experienced faculty still means limited individual focus. Cerebrum combines experienced AIIMS faculty with small 10-15 batches - giving you both expertise AND personal attention.",
   },
   {
-    question: 'Can I join Cerebrum for Biology while continuing at the 2nd-largest national NEET chain Chandigarh for Physics/Chemistry?',
+    question:
+      'Can I join Cerebrum for Biology while continuing at Aakash Chandigarh for Physics/Chemistry?',
     answer:
-      'Absolutely! Many Tricity students take this hybrid approach. Continue the 2nd-largest national NEET chain for Physics and Chemistry, but boost your Biology with Cerebrum\'s AIIMS faculty. Our flexible evening and weekend batches complement the 2nd-largest national NEET chain\'s schedule. Students who tried this approach improved their Biology scores by 50-80 marks.',
+      "Absolutely! Many Tricity students take this hybrid approach. Continue Aakash for Physics and Chemistry, but boost your Biology with Cerebrum's AIIMS faculty. Our flexible evening and weekend batches complement Aakash's schedule. Students who tried this approach improved their Biology scores by 50-80 marks.",
   },
   {
-    question: 'Why do students switch from the 2nd-largest national NEET chain Chandigarh to Cerebrum?',
+    question: 'Why do students switch from Aakash Chandigarh to Cerebrum?',
     answer:
       'Common reasons include: 1) Large batch sizes (100+) making personal attention impossible, 2) Long wait times at doubt counters, 3) Generic teaching not specialized for Biology, 4) High fees even with ANTHE discounts, 5) Multiple centers but same crowded experience. Students switching to Cerebrum report better conceptual clarity and improved confidence.',
   },
   {
-    question: 'What is the batch size comparison between Cerebrum and the 2nd-largest national NEET chain Chandigarh?',
+    question: 'What is the batch size comparison between Cerebrum and Aakash Chandigarh?',
     answer:
-      'the 2nd-largest national NEET chain Chandigarh operates with 100+ students per batch across all 7 centers. Cerebrum strictly limits batches to 10-15 students. This 7-10x smaller batch size means every student gets individual attention, personalized feedback on tests, and guaranteed time with faculty for doubt clearing - regardless of your Tricity location.',
+      'Aakash Chandigarh operates with 100+ students per batch across all 7 centers. Cerebrum strictly limits batches to 10-15 students. This 7-10x smaller batch size means every student gets individual attention, personalized feedback on tests, and guaranteed time with faculty for doubt clearing - regardless of your Tricity location.',
   },
   {
-    question: 'How does the fee structure compare between Cerebrum and the 2nd-largest national NEET chain Chandigarh?',
+    question: 'How does the fee structure compare between Cerebrum and Aakash Chandigarh?',
     answer:
-      'the 2nd-largest national NEET chain Chandigarh fees range from Rs 1-3.5 Lakhs per year for different programs. Even with ANTHE scholarship (typically 20-50%), costs remain Rs 50K-2.8L. Cerebrum offers complete NEET Biology at Rs 24K-68K. You save Rs 30K-2.8 Lakhs while getting smaller batches and AIIMS faculty.',
+      'Aakash Chandigarh fees range from Rs 1-3.5 Lakhs per year for different programs. Even with ANTHE scholarship (typically 20-50%), costs remain Rs 50K-2.8L. Cerebrum offers complete NEET Biology at Rs 24K-68K. You save Rs 30K-2.8 Lakhs while getting smaller batches and AIIMS faculty.',
   },
   {
-    question: 'Is online coaching from Cerebrum as effective as the 2nd-largest national NEET chain Chandigarh offline classes?',
+    question: 'Is online coaching from Cerebrum as effective as Aakash Chandigarh offline classes?',
     answer:
-      'Our 98% success rate proves online coaching effectiveness. Benefits include: live interactive classes (not recorded), instant doubt clearing via screen share, 7am-11pm WhatsApp support, recorded sessions for revision. Many students prefer focused online learning over traveling to crowded the 2nd-largest national NEET chain centers.',
+      'Our 98% success rate proves online coaching effectiveness. Benefits include: live interactive classes (not recorded), instant doubt clearing via screen share, 7am-11pm WhatsApp support, recorded sessions for revision. Many students prefer focused online learning over traveling to crowded Aakash centers.',
   },
   {
-    question: 'How does faculty qualification compare between Cerebrum and the 2nd-largest national NEET chain Chandigarh?',
+    question: 'How does faculty qualification compare between Cerebrum and Aakash Chandigarh?',
     answer:
-      'Cerebrum faculty is exclusively from AIIMS (Dr. Shekhar C Singh leads our team). the 2nd-largest national NEET chain has a larger faculty pool with varied backgrounds across their 7 Tricity centers. Our AIIMS-trained teachers bring clinical perspective to Biology, making complex topics easier to understand and remember for NEET.',
+      'Cerebrum faculty is exclusively from AIIMS (Dr. Shekhar C Singh leads our team). Aakash has a larger faculty pool with varied backgrounds across their 7 Tricity centers. Our AIIMS-trained teachers bring clinical perspective to Biology, making complex topics easier to understand and remember for NEET.',
   },
   {
-    question: 'Which the 2nd-largest national NEET chain Chandigarh center is best and how does Cerebrum compare?',
+    question: 'Which Aakash Chandigarh center is best and how does Cerebrum compare?',
     answer:
-      'Among the 2nd-largest national NEET chain\'s 7 Tricity centers, Sector 34 and Sector 17 are typically considered their flagship locations. However, all centers follow similar large-batch methodology. Cerebrum\'s online model delivers consistent quality to students across Chandigarh, Panchkula, Mohali without the variability of different center experiences.',
+      "Among Aakash's 7 Tricity centers, Sector 34 and Sector 17 are typically considered their flagship locations. However, all centers follow similar large-batch methodology. Cerebrum's online model delivers consistent quality to students across Chandigarh, Panchkula, Mohali without the variability of different center experiences.",
   },
   {
-    question: 'Does Cerebrum offer test series like the 2nd-largest national NEET chain\'s AIATS?',
+    question: "Does Cerebrum offer test series like Aakash's AIATS?",
     answer:
-      'the 2nd-largest national NEET chain offers AIATS (All India the 2nd-largest national NEET chain Test Series) for competitive benchmarking. Cerebrum provides 50+ Biology-specific mock tests with AI-powered analysis. Our tests focus deeply on Biology with detailed topic-wise feedback, while AIATS covers all subjects. Many students use Cerebrum tests alongside the 2nd-largest national NEET chain\'s for comprehensive preparation.',
+      "Aakash offers AIATS (All India Aakash Test Series) for competitive benchmarking. Cerebrum provides 50+ Biology-specific mock tests with AI-powered analysis. Our tests focus deeply on Biology with detailed topic-wise feedback, while AIATS covers all subjects. Many students use Cerebrum tests alongside Aakash's for comprehensive preparation.",
   },
 ]
 
@@ -180,25 +181,25 @@ const reasonsToSwitch = [
   {
     title: 'Lost in 100+ Student Batches?',
     description:
-      "the 2nd-largest national NEET chain's 100+ student batches across all 7 Tricity centers mean teachers can't provide individual attention. At Cerebrum, with 10-15 students, you're personally mentored by AIIMS faculty.",
+      "Aakash's 100+ student batches across all 7 Tricity centers mean teachers can't provide individual attention. At Cerebrum, with 10-15 students, you're personally mentored by AIIMS faculty.",
     icon: Users,
   },
   {
     title: 'Biology Needs Medical Insight',
     description:
-      'Our AIIMS faculty connects Biology to clinical applications, making topics memorable. Generic coaching across all subjects can\'t provide this specialized medical perspective.',
+      "Our AIIMS faculty connects Biology to clinical applications, making topics memorable. Generic coaching across all subjects can't provide this specialized medical perspective.",
     icon: BookOpen,
   },
   {
-    title: 'ANTHE Doesn\'t Solve Everything',
+    title: "ANTHE Doesn't Solve Everything",
     description:
-      'Even with 50% ANTHE scholarship, the 2nd-largest national NEET chain costs Rs 50K-1.75L. Cerebrum\'s base fees of Rs 24K-68K with merit discounts offer better value without competitive scholarship exams.',
+      "Even with 50% ANTHE scholarship, Aakash costs Rs 50K-1.75L. Cerebrum's base fees of Rs 24K-68K with merit discounts offer better value without competitive scholarship exams.",
     icon: Gift,
   },
   {
     title: 'Quality Over Quantity',
     description:
-      'the 2nd-largest national NEET chain\'s 36+ years and 7 centers mean scale, not necessarily quality attention. Cerebrum focuses on depth with AIIMS expertise in small batches - proven by 98% success rate.',
+      "Aakash's 36+ years and 7 centers mean scale, not necessarily quality attention. Cerebrum focuses on depth with AIIMS expertise in small batches - proven by 98% success rate.",
     icon: Target,
   },
 ]
@@ -207,37 +208,52 @@ const successStories = [
   {
     name: 'Simran Kaur',
     score: '668/720',
-    previousInstitute: 'Ex-the 2nd-largest national NEET chain Sector 34',
+    previousInstitute: 'Ex-Aakash Sector 34',
     location: 'Chandigarh',
     quote:
-      'After Class 11 at the 2nd-largest national NEET chain Sector 34, I couldn\'t cope with 100+ students competing for teacher attention. Switched to Cerebrum and my Biology improved from 280 to 355. The personal attention made all the difference!',
+      "After Class 11 at Aakash Sector 34, I couldn't cope with 100+ students competing for teacher attention. Switched to Cerebrum and my Biology improved from 280 to 355. The personal attention made all the difference!",
     improvement: '+75 in Biology',
   },
   {
     name: 'Arjun Mehta',
     score: '645/720',
-    previousInstitute: 'the 2nd-largest national NEET chain + Cerebrum',
+    previousInstitute: 'Aakash + Cerebrum',
     location: 'Mohali Phase 7',
     quote:
-      'I kept the 2nd-largest national NEET chain Mohali for Physics/Chemistry but added Cerebrum for Biology. Their AIIMS faculty explained concepts with clinical relevance. Biology became my scoring subject with 340+ marks.',
+      'I kept Aakash Mohali for Physics/Chemistry but added Cerebrum for Biology. Their AIIMS faculty explained concepts with clinical relevance. Biology became my scoring subject with 340+ marks.',
     improvement: 'Biology strongest subject',
   },
   {
     name: 'Neha Sharma',
     score: '632/720',
-    previousInstitute: 'Dropper (Ex-the 2nd-largest national NEET chain)',
+    previousInstitute: 'Dropper (Ex-Aakash)',
     location: 'Panchkula',
     quote:
-      'First attempt with the 2nd-largest national NEET chain Panchkula center - 498 marks. Too many students, too little attention. Cerebrum\'s dropper batch with 15 students and daily mentoring helped me cross 630!',
+      "First attempt with Aakash Panchkula center - 498 marks. Too many students, too little attention. Cerebrum's dropper batch with 15 students and daily mentoring helped me cross 630!",
     improvement: '+134 overall',
   },
 ]
 
 const savingsBreakdown = [
-  { item: 'Course Fee (Without Scholarship)', cerebrum: 'Rs 68,000', aakash: 'Rs 2,50,000', savings: 'Rs 1,82,000' },
-  { item: 'Course Fee (With 50% ANTHE)', cerebrum: 'Rs 68,000', aakash: 'Rs 1,25,000', savings: 'Rs 57,000' },
+  {
+    item: 'Course Fee (Without Scholarship)',
+    cerebrum: 'Rs 68,000',
+    aakash: 'Rs 2,50,000',
+    savings: 'Rs 1,82,000',
+  },
+  {
+    item: 'Course Fee (With 50% ANTHE)',
+    cerebrum: 'Rs 68,000',
+    aakash: 'Rs 1,25,000',
+    savings: 'Rs 57,000',
+  },
   { item: 'Study Material Cost', cerebrum: 'Included', aakash: 'Rs 15,000', savings: 'Rs 15,000' },
-  { item: 'Annual Commute Cost', cerebrum: 'Rs 0 (Online)', aakash: 'Rs 24,000', savings: 'Rs 24,000' },
+  {
+    item: 'Annual Commute Cost',
+    cerebrum: 'Rs 0 (Online)',
+    aakash: 'Rs 24,000',
+    savings: 'Rs 24,000',
+  },
 ]
 
 export default function CerebrumVsAakashChandigarhPage() {
@@ -247,7 +263,7 @@ export default function CerebrumVsAakashChandigarhPage() {
     trackAndOpenWhatsApp({
       source: 'cerebrum-vs-aakash-chandigarh',
       message:
-        'Hi! I am comparing Cerebrum vs the 2nd-largest national NEET chain Chandigarh for NEET Biology coaching. Please share how Cerebrum is better for Tricity students.',
+        'Hi! I am comparing Cerebrum vs Aakash Chandigarh for NEET Biology coaching. Please share how Cerebrum is better for Tricity students.',
       campaign: 'aakash-chandigarh-comparison',
     })
   }
@@ -260,9 +276,9 @@ export default function CerebrumVsAakashChandigarhPage() {
   const comparisonSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Cerebrum vs the 2nd-largest national NEET chain Chandigarh NEET Coaching Comparison',
+    name: 'Cerebrum vs Aakash Chandigarh NEET Coaching Comparison',
     description:
-      'Detailed comparison of Cerebrum Biology Academy vs SKY Coaching (2nd-largest national NEET chain) Chandigarh for NEET Biology preparation in Chandigarh Tricity',
+      'Detailed comparison of Cerebrum Biology Academy vs Aakash Chandigarh for NEET Biology preparation in Chandigarh Tricity',
     mainEntity: {
       '@type': 'ItemList',
       itemListElement: [
@@ -276,8 +292,9 @@ export default function CerebrumVsAakashChandigarhPage() {
         {
           '@type': 'EducationalOrganization',
           position: 2,
-          name: 'SKY Coaching (2nd-largest national NEET chain) Chandigarh',
-          description: 'Large coaching institute with 7 centers in Chandigarh Tricity offering NEET/JEE preparation',
+          name: 'Aakash Chandigarh',
+          description:
+            'Large coaching institute with 7 centers in Chandigarh Tricity offering NEET/JEE preparation',
         },
       ],
     },
@@ -297,7 +314,12 @@ export default function CerebrumVsAakashChandigarhPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
       {
         '@type': 'ListItem',
         position: 2,
@@ -307,7 +329,7 @@ export default function CerebrumVsAakashChandigarhPage() {
       {
         '@type': 'ListItem',
         position: 3,
-        name: 'Cerebrum vs the 2nd-largest national NEET chain Chandigarh',
+        name: 'Cerebrum vs Aakash Chandigarh',
         item: 'https://cerebrumbiologyacademy.com/cerebrum-vs-aakash-chandigarh',
       },
     ],
@@ -345,7 +367,7 @@ export default function CerebrumVsAakashChandigarhPage() {
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <span className="text-[#1e3a5f] font-medium">Cerebrum vs the 2nd-largest national NEET chain</span>
+              <span className="text-[#1e3a5f] font-medium">Cerebrum vs Aakash</span>
             </li>
           </ol>
         </div>
@@ -359,21 +381,19 @@ export default function CerebrumVsAakashChandigarhPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="max-w-4xl animate-fadeInUp"
-          >
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Building className="w-4 h-4" />
-              Vs All 7 the 2nd-largest national NEET chain Tricity Centers
+              Vs All 7 Aakash Tricity Centers
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Cerebrum vs the 2nd-largest national NEET chain Chandigarh
+              Cerebrum vs Aakash Chandigarh
               <span className="block text-[#4ade80] mt-2">NEET Biology Coaching Comparison</span>
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Compare with all 7 the 2nd-largest national NEET chain centers in Chandigarh Tricity. See why 780+ students chose
+              Compare with all 7 Aakash centers in Chandigarh Tricity. See why 780+ students chose
               personalized AIIMS-faculty coaching over 100+ batch sizes.
             </p>
 
@@ -393,7 +413,11 @@ export default function CerebrumVsAakashChandigarhPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -425,11 +449,11 @@ export default function CerebrumVsAakashChandigarhPage() {
             </div>
             <div>
               <p className="text-3xl font-bold text-orange-600">100+</p>
-              <p className="text-sm text-gray-600">the 2nd-largest national NEET chain Batch Size</p>
+              <p className="text-sm text-gray-600">Aakash Batch Size</p>
             </div>
             <div>
               <p className="text-3xl font-bold text-purple-600">7</p>
-              <p className="text-sm text-gray-600">the 2nd-largest national NEET chain Tricity Centers</p>
+              <p className="text-sm text-gray-600">Aakash Tricity Centers</p>
             </div>
             <div>
               <p className="text-3xl font-bold text-green-600">Rs 1.8L+</p>
@@ -439,14 +463,12 @@ export default function CerebrumVsAakashChandigarhPage() {
         </div>
       </section>
 
-      {/* the 2nd-largest national NEET chain Centers Overview */}
+      {/* Aakash Centers Overview */}
       <section className="py-12 bg-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-8 animate-fadeInUp"
-          >
+          <div className="text-center mb-8 animate-fadeInUp">
             <h2 className="text-2xl font-bold text-slate-900 mb-2">
-              SKY Coaching (2nd-largest national NEET chain) has 7 Centers in Chandigarh Tricity
+              Aakash has 7 Centers in Chandigarh Tricity
             </h2>
             <p className="text-slate-600">
               Same 100+ batch size across all locations. Cerebrum offers better attention online.
@@ -468,8 +490,8 @@ export default function CerebrumVsAakashChandigarhPage() {
 
           <div className="mt-6 text-center">
             <p className="text-slate-600">
-              <span className="font-semibold">Cerebrum Advantage:</span> One consistent quality online
-              experience accessible from any Tricity location
+              <span className="font-semibold">Cerebrum Advantage:</span> One consistent quality
+              online experience accessible from any Tricity location
             </p>
           </div>
         </div>
@@ -478,14 +500,12 @@ export default function CerebrumVsAakashChandigarhPage() {
       {/* Why Students Switch */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Why Chandigarh Students Switch from the 2nd-largest national NEET chain to Cerebrum
+              Why Chandigarh Students Switch from Aakash to Cerebrum
             </h2>
             <p className="text-xl text-slate-600">
-              Common challenges across all 7 the 2nd-largest national NEET chain centers that bring students to us
+              Common challenges across all 7 Aakash centers that bring students to us
             </p>
           </div>
 
@@ -509,11 +529,9 @@ export default function CerebrumVsAakashChandigarhPage() {
       {/* Detailed Comparison Table */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Cerebrum vs the 2nd-largest national NEET chain Chandigarh: Detailed Comparison
+              Cerebrum vs Aakash Chandigarh: Detailed Comparison
             </h2>
             <p className="text-xl text-slate-600">
               Side-by-side comparison for NEET Biology preparation in Chandigarh Tricity
@@ -531,7 +549,7 @@ export default function CerebrumVsAakashChandigarhPage() {
                       Cerebrum
                     </span>
                   </th>
-                  <th className="px-6 py-4 text-center font-semibold">the 2nd-largest national NEET chain Chandigarh</th>
+                  <th className="px-6 py-4 text-center font-semibold">Aakash Chandigarh</th>
                 </tr>
               </thead>
               <tbody>
@@ -572,15 +590,13 @@ export default function CerebrumVsAakashChandigarhPage() {
       {/* Cost Savings Calculator */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-green-50 to-emerald-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Calculator className="w-4 h-4" />
               Annual Savings Calculator
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              How Much Can You Save vs the 2nd-largest national NEET chain Chandigarh?
+              How Much Can You Save vs Aakash Chandigarh?
             </h2>
             <p className="text-xl text-slate-600">
               Even with ANTHE scholarship, see the real cost comparison
@@ -594,7 +610,7 @@ export default function CerebrumVsAakashChandigarhPage() {
                   <tr>
                     <th className="px-6 py-4 text-left">Expense Item</th>
                     <th className="px-6 py-4 text-center">Cerebrum</th>
-                    <th className="px-6 py-4 text-center">the 2nd-largest national NEET chain</th>
+                    <th className="px-6 py-4 text-center">Aakash</th>
                     <th className="px-6 py-4 text-center bg-green-600">You Save</th>
                   </tr>
                 </thead>
@@ -632,7 +648,7 @@ export default function CerebrumVsAakashChandigarhPage() {
               </h3>
               <p className="text-yellow-700 text-sm">
                 ANTHE offers up to 90% scholarship, but most students get 20-50% discount. Even with
-                50% ANTHE discount, the 2nd-largest national NEET chain costs Rs 1.25L+ vs Cerebrum's Rs 68K maximum. Plus, our
+                50% ANTHE discount, Aakash costs Rs 1.25L+ vs Cerebrum's Rs 68K maximum. Plus, our
                 7-day trial with money-back guarantee requires no scholarship exam!
               </p>
             </div>
@@ -653,18 +669,16 @@ export default function CerebrumVsAakashChandigarhPage() {
       {/* Success Stories */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-[#1e3a5f] to-[#2d5a87] text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Award className="w-4 h-4" />
               Real Chandigarh Success Stories
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ex-the 2nd-largest national NEET chain Students Who Made the Switch
+              Ex-Aakash Students Who Made the Switch
             </h2>
             <p className="text-xl text-slate-300">
-              Real results from students across different the 2nd-largest national NEET chain centers
+              Real results from students across different Aakash centers
             </p>
           </div>
 
@@ -703,20 +717,19 @@ export default function CerebrumVsAakashChandigarhPage() {
       <section className="py-16 bg-gradient-to-br from-purple-600 to-[#1e3a5f] text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Don't Want to Leave the 2nd-largest national NEET chain?
+                Don't Want to Leave Aakash?
                 <br />
                 Complement Your Biology!
               </h2>
               <p className="text-xl text-purple-100 mb-6">
-                Continue at any of the 2nd-largest national NEET chain's 7 Tricity centers for Physics & Chemistry while boosting
-                Biology with Cerebrum. Our flexible timing works with any the 2nd-largest national NEET chain schedule.
+                Continue at any of Aakash's 7 Tricity centers for Physics & Chemistry while boosting
+                Biology with Cerebrum. Our flexible timing works with any Aakash schedule.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
-                  'Evening batches after the 2nd-largest national NEET chain classes',
+                  'Evening batches after Aakash classes',
                   'Weekend intensive Biology sessions',
                   'Online format - accessible from any center area',
                   'Focus on Biology weak areas',
@@ -728,16 +741,18 @@ export default function CerebrumVsAakashChandigarhPage() {
                   </li>
                 ))}
               </ul>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button className="bg-white text-[#1e3a5f] hover:bg-purple-50">
                   Try a Free Biology Class <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
             </div>
 
-            <div
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp"
-            >
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
               <h3 className="text-2xl font-bold mb-6">The Winning Chandigarh Combination</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4 p-4 bg-white/10 rounded-xl">
@@ -745,7 +760,7 @@ export default function CerebrumVsAakashChandigarhPage() {
                     <span className="font-bold">Ak</span>
                   </div>
                   <div>
-                    <p className="font-semibold">the 2nd-largest national NEET chain (Any Center) for P & C</p>
+                    <p className="font-semibold">Aakash (Any Center) for P & C</p>
                     <p className="text-sm text-purple-200">Physics & Chemistry preparation</p>
                   </div>
                 </div>
@@ -770,33 +785,29 @@ export default function CerebrumVsAakashChandigarhPage() {
         </div>
       </section>
 
-      {/* the 2nd-largest national NEET chain Info Section */}
+      {/* Aakash Info Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              About SKY Coaching (2nd-largest national NEET chain) Chandigarh
-            </h2>
-            <p className="text-lg text-slate-600">Fair overview of the 2nd-largest national NEET chain's Tricity presence</p>
+          <div className="text-center mb-12 animate-fadeInUp">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">About Aakash Chandigarh</h2>
+            <p className="text-lg text-slate-600">Fair overview of Aakash's Tricity presence</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <h3 className="text-xl font-bold text-[#1e3a5f] mb-4 flex items-center gap-2">
                 <Building className="w-5 h-5" />
-                the 2nd-largest national NEET chain Chandigarh Network
+                Aakash Chandigarh Network
               </h3>
               <p className="text-slate-600 mb-4">
-                SKY Coaching (2nd-largest national NEET chain) operates 7 centers across Chandigarh Tricity, covering Chandigarh
-                city (Sectors 34, 17, 22), Panchkula, Mohali (Phase 7 & Sector 70), and Zirakpur.
-                This extensive network provides accessibility for students across the region.
+                Aakash operates 7 centers across Chandigarh Tricity, covering Chandigarh city
+                (Sectors 34, 17, 22), Panchkula, Mohali (Phase 7 & Sector 70), and Zirakpur. This
+                extensive network provides accessibility for students across the region.
               </p>
               <div className="bg-purple-50 p-4 rounded-lg">
                 <p className="text-sm text-purple-800">
                   <strong>Note:</strong> Despite multiple locations, batch sizes remain 100+ at all
-                  centers, following the 2nd-largest national NEET chain's standard large-batch methodology.
+                  centers, following Aakash's standard large-batch methodology.
                 </p>
               </div>
             </div>
@@ -804,7 +815,7 @@ export default function CerebrumVsAakashChandigarhPage() {
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <h3 className="text-xl font-bold text-[#1e3a5f] mb-4 flex items-center gap-2">
                 <Award className="w-5 h-5" />
-                the 2nd-largest national NEET chain Chandigarh Strengths
+                Aakash Chandigarh Strengths
               </h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -852,12 +863,10 @@ export default function CerebrumVsAakashChandigarhPage() {
       {/* FAQs */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4">
-          <div
-            className="text-center mb-8 animate-fadeInUp"
-          >
+          <div className="text-center mb-8 animate-fadeInUp">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-slate-600">
-              Common questions about Cerebrum vs the 2nd-largest national NEET chain Chandigarh for NEET Biology
+              Common questions about Cerebrum vs Aakash Chandigarh for NEET Biology
             </p>
           </div>
 
@@ -898,8 +907,8 @@ export default function CerebrumVsAakashChandigarhPage() {
               href="/cerebrum-vs-allen-chandigarh"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md transition-shadow"
             >
-              <h3 className="font-semibold text-[#1e3a5f]">Cerebrum vs the largest national NEET chain Chandigarh</h3>
-              <p className="text-sm text-gray-600">Compare with the largest national NEET chain Sector 34</p>
+              <h3 className="font-semibold text-[#1e3a5f]">Cerebrum vs Allen Chandigarh</h3>
+              <p className="text-sm text-gray-600">Compare with Allen Sector 34</p>
             </Link>
             <Link
               href="/neet-coaching-chandigarh"
@@ -919,7 +928,7 @@ export default function CerebrumVsAakashChandigarhPage() {
               href="/cerebrum-vs-aakash-neet-coaching"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md transition-shadow"
             >
-              <h3 className="font-semibold text-[#1e3a5f]">Cerebrum vs the 2nd-largest national NEET chain (National)</h3>
+              <h3 className="font-semibold text-[#1e3a5f]">Cerebrum vs Aakash (National)</h3>
               <p className="text-sm text-gray-600">Pan-India comparison</p>
             </Link>
           </div>
@@ -936,7 +945,11 @@ export default function CerebrumVsAakashChandigarhPage() {
             Join 780+ Tricity students who chose personalized Biology coaching over crowded batches
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chandigarh.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 size="xl"

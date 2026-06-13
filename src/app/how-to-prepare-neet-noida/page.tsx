@@ -53,7 +53,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'How to Prepare for NEET in Noida | Step-by-Step Guide 2026',
-    description: 'Complete guide on how to prepare for NEET from Noida. 5-step strategy by AIIMS faculty Dr. Shekhar C Singh. Score 650+ with our proven methodology. Free demo class available.',
+    description:
+      'Complete guide on how to prepare for NEET from Noida. 5-step strategy by AIIMS faculty Dr. Shekhar C Singh. Score 650+ with our proven methodology. Free demo class available.',
   },
 }
 
@@ -63,8 +64,7 @@ const preparationSteps = [
     title: 'Master NCERT Biology Completely',
     duration: '3-4 months',
     icon: BookOpen,
-    description:
-      '60% of NEET Biology questions come directly from NCERT. This is your foundation.',
+    description: '60% of NEET Biology questions come directly from NCERT. This is your foundation.',
     tasks: [
       'Read NCERT Class 11 & 12 Biology cover-to-cover (3 times minimum)',
       'Highlight key diagrams, flowcharts, and definitions',
@@ -79,8 +79,7 @@ const preparationSteps = [
     title: 'Join Expert NEET Coaching',
     duration: '12 months',
     icon: GraduationCap,
-    description:
-      'Self-study is good, but expert guidance accelerates your preparation by 2x.',
+    description: 'Self-study is good, but expert guidance accelerates your preparation by 2x.',
     tasks: [
       'Choose coaching with small batches (10-40 students max)',
       'Verify faculty credentials - AIIMS/top medical college background',
@@ -95,8 +94,7 @@ const preparationSteps = [
     title: 'Practice 100+ MCQs Daily',
     duration: 'Daily habit',
     icon: Target,
-    description:
-      'NEET is an MCQ exam. More practice = more accuracy = higher score.',
+    description: 'NEET is an MCQ exam. More practice = more accuracy = higher score.',
     tasks: [
       'Solve 50 MCQs from the topic you studied that day',
       'Solve 30 MCQs from previous topics (revision)',
@@ -111,8 +109,7 @@ const preparationSteps = [
     title: 'Take Weekly Full-Length Mock Tests',
     duration: 'Every Sunday',
     icon: Clock,
-    description:
-      'Mock tests build exam temperament and time management skills.',
+    description: 'Mock tests build exam temperament and time management skills.',
     tasks: [
       'Attempt one full NEET mock test every week',
       'Simulate real exam conditions (3 hours, no breaks)',
@@ -140,7 +137,11 @@ const preparationSteps = [
 ]
 
 const monthlyPlan = [
-  { month: 'April-May', focus: 'Class 11 Foundation - Cell Biology, Biomolecules', hours: '4-5 hrs/day' },
+  {
+    month: 'April-May',
+    focus: 'Class 11 Foundation - Cell Biology, Biomolecules',
+    hours: '4-5 hrs/day',
+  },
   { month: 'June-July', focus: 'Plant Physiology, Human Physiology basics', hours: '5-6 hrs/day' },
   { month: 'Aug-Sept', focus: 'Class 12 - Genetics, Evolution, Biotechnology', hours: '6 hrs/day' },
   { month: 'Oct-Nov', focus: 'Ecology, Human Health, Complete Class 12', hours: '6-7 hrs/day' },
@@ -174,7 +175,10 @@ export default function HowToPrepareNEETNoida() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/how-to-prepare-neet-noida"
         pageName="How to Prepare for NEET in Noida"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
         personKnowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
       />
       <NoidaPageSchemas
@@ -214,7 +218,10 @@ export default function HowToPrepareNEETNoida() {
             <h1 className="text-3xl md:text-5xl font-bold mb-6" data-speakable="true">
               How to Prepare for NEET in Noida
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl hero-description" data-speakable="true">
+            <p
+              className="text-xl text-gray-300 mb-8 max-w-3xl hero-description"
+              data-speakable="true"
+            >
               Complete 5-step guide to crack NEET from Noida. This proven strategy has helped 500+
               students score 650+ in NEET. Follow this roadmap for guaranteed success.
             </p>
@@ -306,16 +313,17 @@ export default function HowToPrepareNEETNoida() {
         {/* Monthly Study Plan */}
         <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-4">
-              Month-by-Month NEET Study Plan
-            </h2>
+            <h2 className="text-3xl font-bold text-center mb-4">Month-by-Month NEET Study Plan</h2>
             <p className="text-gray-600 text-center mb-12">
               12-month preparation schedule for Noida students
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {monthlyPlan.map((item, index) => (
-                <div key={index} className="bg-white rounded-lg p-4 shadow-md border border-gray-100">
+                <div
+                  key={index}
+                  className="bg-white rounded-lg p-4 shadow-md border border-gray-100"
+                >
                   <div className="flex items-center gap-2 mb-2">
                     <Calendar className="h-5 w-5 text-blue-600" />
                     <span className="font-bold text-gray-800">{item.month}</span>
@@ -336,7 +344,9 @@ export default function HowToPrepareNEETNoida() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-4xl font-bold key-stat" data-speakable="true">98%</div>
+                <div className="text-4xl font-bold key-stat" data-speakable="true">
+                  98%
+                </div>
                 <div className="text-blue-100">Success Rate</div>
               </div>
               <div>
@@ -358,12 +368,13 @@ export default function HowToPrepareNEETNoida() {
         {/* FAQs */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">
-              Frequently Asked Questions
-            </h2>
+            <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md border border-gray-100 p-6">
+                <div
+                  key={index}
+                  className="bg-white rounded-lg shadow-md border border-gray-100 p-6"
+                >
                   <h3 className="font-bold text-lg text-gray-800 mb-2 faq-question">
                     {faq.question}
                   </h3>
@@ -393,7 +404,9 @@ export default function HowToPrepareNEETNoida() {
                 WhatsApp Us
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2 transition"
               >
                 Book Free Demo

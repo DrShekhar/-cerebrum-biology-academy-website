@@ -121,7 +121,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Omicron Sector',
-  description: 'Best NEET Coaching for Omicron Sector, Greater Noida students - Expert AIIMS Faculty',
+  description:
+    'Best NEET Coaching for Omicron Sector, Greater Noida students - Expert AIIMS Faculty',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-omicron-noida',
   telephone: '+91-88264-44334',
   address: {
@@ -130,7 +131,15 @@ const localBusinessSchema = {
     addressRegion: 'Uttar Pradesh',
     addressCountry: 'IN',
   },
-  areaServed: ['Omicron Sectors I-III', 'Pari Chowk', 'Alpha', 'Beta', 'Gamma sectors', 'Knowledge Park', 'Noida Extension'],
+  areaServed: [
+    'Omicron Sectors I-III',
+    'Pari Chowk',
+    'Alpha',
+    'Beta',
+    'Gamma sectors',
+    'Knowledge Park',
+    'Noida Extension',
+  ],
   priceRange: '$$',
 }
 
@@ -168,7 +177,8 @@ export default function PageContent() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              NEET Coaching in <span className="text-yellow-400">Omicron Sector, Greater Noida</span>
+              NEET Coaching in{' '}
+              <span className="text-yellow-400">Omicron Sector, Greater Noida</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -182,7 +192,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -359,7 +373,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

@@ -217,7 +217,8 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
 
             <p className="text-lg md:text-xl text-slate-100 mb-8 max-w-3xl leading-relaxed">
               We compared 7 top coaching institutes so you don't have to. See how Cerebrum Biology
-              Academy stacks up against the largest national NEET chains and online-first generalist platforms, and more.
+              Academy stacks up against the largest national NEET chains and online-first generalist
+              platforms, and more.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -267,12 +268,13 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
               teaching live classes in 15-20 student batches
             </strong>
             , led by Dr. Shekhar C Singh (AIIMS Delhi alumnus, 15+ years). Online-only recorded
-            platforms such as other online-only biology platforms and other online-only biology platforms operate at lower price points but do not offer
-            live small batches, AIIMS-led faculty, structured 1-on-1 mentorship, or published
-            per-student qualification rates — they are best treated as MCQ supplements rather than
-            primary coaching. The larger generalist institutes (the largest national NEET chains and online-first generalist platforms) offer
-            biology as part of an all-subjects bundle with 60-200 student batches rather than as a
-            focused biology specialist track.
+            platforms such as other online-only biology platforms and other online-only biology
+            platforms operate at lower price points but do not offer live small batches, AIIMS-led
+            faculty, structured 1-on-1 mentorship, or published per-student qualification rates —
+            they are best treated as MCQ supplements rather than primary coaching. The larger
+            generalist institutes (the largest national NEET chains and online-first generalist
+            platforms) offer biology as part of an all-subjects bundle with 60-200 student batches
+            rather than as a focused biology specialist track.
           </p>
           <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-4">
             What distinguishes a biology-specialist programme from a generalist one is measurable:
@@ -310,11 +312,21 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
                   <th className="text-left px-4 py-3 font-bold text-white bg-green-600">
                     Cerebrum
                   </th>
-                  <th className="text-left px-4 py-3 font-bold text-slate-900">the largest national NEET chain</th>
-                  <th className="text-left px-4 py-3 font-bold text-slate-900">the 2nd-largest national NEET chain</th>
-                  <th className="text-left px-4 py-3 font-bold text-slate-900">other online-only platforms</th>
-                  <th className="text-left px-4 py-3 font-bold text-slate-900">other online-only biology platforms</th>
-                  <th className="text-left px-4 py-3 font-bold text-slate-900">other online-only biology platforms</th>
+                  <th className="text-left px-4 py-3 font-bold text-slate-900">
+                    the largest national NEET chain
+                  </th>
+                  <th className="text-left px-4 py-3 font-bold text-slate-900">
+                    the 2nd-largest national NEET chain
+                  </th>
+                  <th className="text-left px-4 py-3 font-bold text-slate-900">
+                    other online-only platforms
+                  </th>
+                  <th className="text-left px-4 py-3 font-bold text-slate-900">
+                    other online-only biology platforms
+                  </th>
+                  <th className="text-left px-4 py-3 font-bold text-slate-900">
+                    other online-only biology platforms
+                  </th>
                 </tr>
               </thead>
               <tbody>

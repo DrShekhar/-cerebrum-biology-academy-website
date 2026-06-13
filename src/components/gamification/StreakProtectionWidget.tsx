@@ -94,9 +94,7 @@ export function StreakProtectionWidget({
                 : 'Keep the momentum going!'}
           </p>
         </div>
-        <div
-          className="flex items-center space-x-1 animate-fadeInUp"
-        >
+        <div className="flex items-center space-x-1 animate-fadeInUp">
           <span className="text-5xl font-bold">{status.currentStreak}</span>
           {status.isProtected ? (
             <Shield className="w-8 h-8 text-cyan-200" />
@@ -110,9 +108,7 @@ export function StreakProtectionWidget({
 
       {/* Protection Status Banner */}
       {status.isProtected && status.protectedUntil && (
-        <div
-          className="bg-white/20 rounded-lg p-3 mb-4 flex items-center justify-between animate-fadeInUp"
-        >
+        <div className="bg-white/20 rounded-lg p-3 mb-4 flex items-center justify-between animate-fadeInUp">
           <div className="flex items-center space-x-2">
             <Snowflake className="w-5 h-5 text-cyan-200" />
             <span className="text-sm font-medium">Freeze Active</span>
@@ -126,9 +122,7 @@ export function StreakProtectionWidget({
 
       {/* Recovery Banner */}
       {status.canRecover && status.recoveryDeadline && (
-        <div
-          className="bg-yellow-500/30 border border-yellow-400/50 rounded-lg p-3 mb-4 animate-fadeInUp"
-        >
+        <div className="bg-yellow-500/30 border border-yellow-400/50 rounded-lg p-3 mb-4 animate-fadeInUp">
           <div className="flex items-center justify-between">
             <div>
               <div className="flex items-center space-x-2 mb-1">
@@ -203,100 +197,99 @@ export function StreakProtectionWidget({
       </div>
 
       {/* Freeze Modal */}
-{showFreezeModal && (
+      {showFreezeModal && (
+        <div
+          className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
+          onClick={() => setShowFreezeModal(false)}
+        >
           <div
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
-            onClick={() => setShowFreezeModal(false)}
+            onClick={(e) => e.stopPropagation()}
+            className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl animate-fadeInUp"
           >
-            <div
-              onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl animate-fadeInUp"
-            >
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Snowflake className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Use Streak Freeze?</h3>
-                <p className="text-gray-600 mb-6">
-                  This will protect your {status.currentStreak}-day streak until tomorrow. You have{' '}
-                  {status.freezesAvailable} freeze{status.freezesAvailable !== 1 ? 's' : ''} left
-                  this week.
-                </p>
-                <div className="flex space-x-3">
-                  <button
-                    onClick={() => setShowFreezeModal(false)}
-                    className="flex-1 py-3 px-4 border border-gray-200 rounded-lg font-medium text-gray-700 hover:bg-gray-50 transition-colors"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    onClick={async () => {
-                      await onUseFreeze?.()
-                      setShowFreezeModal(false)
-                    }}
-                    disabled={isLoading}
-                    className="flex-1 py-3 px-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center justify-center space-x-2"
-                  >
-                    <Snowflake className="w-4 h-4" />
-                    <span>Activate</span>
-                  </button>
-                </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Snowflake className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Use Streak Freeze?</h3>
+              <p className="text-gray-600 mb-6">
+                This will protect your {status.currentStreak}-day streak until tomorrow. You have{' '}
+                {status.freezesAvailable} freeze{status.freezesAvailable !== 1 ? 's' : ''} left this
+                week.
+              </p>
+              <div className="flex space-x-3">
+                <button
+                  onClick={() => setShowFreezeModal(false)}
+                  className="flex-1 py-3 px-4 border border-gray-200 rounded-lg font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={async () => {
+                    await onUseFreeze?.()
+                    setShowFreezeModal(false)
+                  }}
+                  disabled={isLoading}
+                  className="flex-1 py-3 px-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center justify-center space-x-2"
+                >
+                  <Snowflake className="w-4 h-4" />
+                  <span>Activate</span>
+                </button>
               </div>
             </div>
           </div>
-        )}
-{/* Recovery Modal */}
-{showRecoveryModal && (
+        </div>
+      )}
+      {/* Recovery Modal */}
+      {showRecoveryModal && (
+        <div
+          className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
+          onClick={() => setShowRecoveryModal(false)}
+        >
           <div
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
-            onClick={() => setShowRecoveryModal(false)}
+            onClick={(e) => e.stopPropagation()}
+            className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl animate-fadeInUp"
           >
-            <div
-              onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl animate-fadeInUp"
-            >
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Flame className="w-8 h-8 text-white" />
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Flame className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Recover Your Streak?</h3>
+              <p className="text-gray-600 mb-4">
+                Spend <span className="font-bold text-yellow-600">{status.recoveryXpCost} XP</span>{' '}
+                to restore your streak.
+              </p>
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mb-6">
+                <div className="flex items-center justify-center space-x-2 text-yellow-800">
+                  <Clock className="w-4 h-4" />
+                  <span className="text-sm font-medium">
+                    Offer expires in{' '}
+                    {status.recoveryDeadline ? getTimeRemaining(status.recoveryDeadline) : 'soon'}
+                  </span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Recover Your Streak?</h3>
-                <p className="text-gray-600 mb-4">
-                  Spend{' '}
-                  <span className="font-bold text-yellow-600">{status.recoveryXpCost} XP</span> to
-                  restore your streak.
-                </p>
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mb-6">
-                  <div className="flex items-center justify-center space-x-2 text-yellow-800">
-                    <Clock className="w-4 h-4" />
-                    <span className="text-sm font-medium">
-                      Offer expires in{' '}
-                      {status.recoveryDeadline ? getTimeRemaining(status.recoveryDeadline) : 'soon'}
-                    </span>
-                  </div>
-                </div>
-                <div className="flex space-x-3">
-                  <button
-                    onClick={() => setShowRecoveryModal(false)}
-                    className="flex-1 py-3 px-4 border border-gray-200 rounded-lg font-medium text-gray-700 hover:bg-gray-50 transition-colors"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    onClick={async () => {
-                      await onRecoverStreak?.()
-                      setShowRecoveryModal(false)
-                    }}
-                    disabled={isLoading}
-                    className="flex-1 py-3 px-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center justify-center space-x-2"
-                  >
-                    <Zap className="w-4 h-4" />
-                    <span>Recover</span>
-                  </button>
-                </div>
+              </div>
+              <div className="flex space-x-3">
+                <button
+                  onClick={() => setShowRecoveryModal(false)}
+                  className="flex-1 py-3 px-4 border border-gray-200 rounded-lg font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={async () => {
+                    await onRecoverStreak?.()
+                    setShowRecoveryModal(false)
+                  }}
+                  disabled={isLoading}
+                  className="flex-1 py-3 px-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center justify-center space-x-2"
+                >
+                  <Zap className="w-4 h-4" />
+                  <span>Recover</span>
+                </button>
               </div>
             </div>
           </div>
-        )}
-</div>
+        </div>
+      )}
+    </div>
   )
 }

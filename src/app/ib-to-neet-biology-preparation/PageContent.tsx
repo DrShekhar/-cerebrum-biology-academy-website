@@ -49,17 +49,20 @@ const bridgeFeatures = [
   {
     icon: BookOpen,
     title: 'NCERT + IB Alignment',
-    description: 'Map IB HL/SL concepts to NCERT and identify gaps in Indian medical curriculum focus areas.',
+    description:
+      'Map IB HL/SL concepts to NCERT and identify gaps in Indian medical curriculum focus areas.',
   },
   {
     icon: Target,
     title: 'HL to NEET Depth',
-    description: 'Convert IB HL understanding into NEET speed. Master NCERT depth at medical school level.',
+    description:
+      'Convert IB HL understanding into NEET speed. Master NCERT depth at medical school level.',
   },
   {
     icon: Headphones,
     title: 'Doubt Clearing Sessions',
-    description: '24/7 chat support + weekly live doubt clearing sessions for IB-specific conceptual gaps.',
+    description:
+      '24/7 chat support + weekly live doubt clearing sessions for IB-specific conceptual gaps.',
   },
   {
     icon: Play,
@@ -69,7 +72,8 @@ const bridgeFeatures = [
   {
     icon: Shield,
     title: 'Medical Context',
-    description: 'Focus on applied medical biology relevant to NEET, not just theoretical IB concepts.',
+    description:
+      'Focus on applied medical biology relevant to NEET, not just theoretical IB concepts.',
   },
   {
     icon: Star,
@@ -82,7 +86,8 @@ const syllabusGapData = [
   {
     category: 'Cell Biology',
     ibCovered: 'Cell structure, organelles, transport mechanisms',
-    neetRequired: 'Indian medical focus on cell divisions (mitosis, meiosis), enzyme kinetics, photosynthesis',
+    neetRequired:
+      'Indian medical focus on cell divisions (mitosis, meiosis), enzyme kinetics, photosynthesis',
     focusArea: 'Meiosis & gametogenesis, photosynthesis depth, enzyme inhibition',
   },
   {
@@ -117,12 +122,14 @@ const methodologySteps = [
   {
     number: '1',
     title: 'Gap Analysis',
-    description: 'Comprehensive assessment of IB topics vs NEET syllabus. Identify your strong areas and gaps.',
+    description:
+      'Comprehensive assessment of IB topics vs NEET syllabus. Identify your strong areas and gaps.',
   },
   {
     number: '2',
     title: 'NCERT Mapping',
-    description: 'Align IB concepts with NCERT chapters. Learn medical school perspective on familiar topics.',
+    description:
+      'Align IB concepts with NCERT chapters. Learn medical school perspective on familiar topics.',
   },
   {
     number: '3',
@@ -232,15 +239,11 @@ export default function IBToNEETContent() {
               IB to NEET Biology Bridge
             </h1>
             <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-              Convert your strong IB foundation into NEET success. Expert bridging for IB HL/SL students
-              targeting India's top medical colleges.
+              Convert your strong IB foundation into NEET success. Expert bridging for IB HL/SL
+              students targeting India's top medical colleges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
-                href="https://wa.me/918826444334"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Get Details on WhatsApp
@@ -358,7 +361,9 @@ export default function IBToNEETContent() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-2xl font-bold text-blue-900 mb-6">Why IB Students Excel in NEET</h3>
+              <h3 className="text-2xl font-bold text-blue-900 mb-6">
+                Why IB Students Excel in NEET
+              </h3>
               <ul className="space-y-4">
                 {[
                   'Strong conceptual foundation from IB curriculum',
@@ -456,13 +461,17 @@ export default function IBToNEETContent() {
                 }`}
               >
                 <div className="p-6">
-                  <h3 className={`text-2xl font-bold mb-2 ${index === 1 ? 'text-white' : 'text-blue-900'}`}>
+                  <h3
+                    className={`text-2xl font-bold mb-2 ${index === 1 ? 'text-white' : 'text-blue-900'}`}
+                  >
                     {tier.name}
                   </h3>
                   <p className={`mb-4 ${index === 1 ? 'text-blue-100' : 'text-gray-700'}`}>
                     {tier.duration}
                   </p>
-                  <p className={`text-xl font-bold mb-6 ${index === 1 ? 'text-blue-100' : 'text-gray-900'}`}>
+                  <p
+                    className={`text-xl font-bold mb-6 ${index === 1 ? 'text-blue-100' : 'text-gray-900'}`}
+                  >
                     {tier.price}
                   </p>
                   <ul className="space-y-3 mb-6">
@@ -486,13 +495,10 @@ export default function IBToNEETContent() {
 
           <div className="text-center">
             <p className="text-gray-700 mb-6">
-              Prices vary based on duration and intensity. Get personalized quote matching your timeline.
+              Prices vary based on duration and intensity. Get personalized quote matching your
+              timeline.
             </p>
-            <Link
-              href="https://wa.me/918826444334"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
               <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Ask About Pricing on WhatsApp
@@ -534,11 +540,7 @@ export default function IBToNEETContent() {
             Connect with our expert counselors to discuss your IB background and NEET goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="https://wa.me/918826444334"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
               <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 w-full sm:w-auto">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Message on WhatsApp

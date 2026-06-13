@@ -41,7 +41,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Biology Coaching in Delhi NCR | Top Institute 2026',
-    description: 'Best NEET Biology coaching in Delhi NCR. Expert faculty, small batches, 98% results. Book free demo class at South Extension. Call +91-88264-44334',
+    description:
+      'Best NEET Biology coaching in Delhi NCR. Expert faculty, small batches, 98% results. Book free demo class at South Extension. Call +91-88264-44334',
   },
 }
 
@@ -150,7 +151,11 @@ export default function NEETBiologyCoachingDelhiNCRPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Delhi NCR', 'NEET Biology Delhi NCR', 'Medical entrance coaching Delhi NCR']}
+        knowsAbout={[
+          'NEET Delhi NCR',
+          'NEET Biology Delhi NCR',
+          'Medical entrance coaching Delhi NCR',
+        ]}
       />
       <DelhiAreaSchema pageSlug="neet-biology-coaching-delhi-ncr" />
       <LandingHero

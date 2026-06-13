@@ -136,9 +136,7 @@ export function PlanButtons({
 
   return (
     <div className={`plan-buttons-container ${className}`}>
-      <div
-        className="mb-6 text-center animate-fadeInUp"
-      >
+      <div className="mb-6 text-center animate-fadeInUp">
         <h3 className="text-2xl font-bold text-gray-900 mb-2">Choose Your Learning Path</h3>
         <p className="text-gray-600">
           Select the plan that best fits your preparation timeline and learning style
@@ -153,17 +151,12 @@ export function PlanButtons({
           const isHovered = hoveredPlan === plan.id
 
           return (
-            <div
-              key={plan.id}
-              className="relative group animate-fadeInUp"
-            >
+            <div key={plan.id} className="relative group animate-fadeInUp">
               {/* Selection indicator */}
-{isSelected && (
-                  <div
-                    className="absolute -inset-1 bg-gradient-to-r from-green-600/20 to-green-600/20 rounded-3xl blur-sm animate-fadeInUp"
-                  />
-                )}
-{/* Main plan button */}
+              {isSelected && (
+                <div className="absolute -inset-1 bg-gradient-to-r from-green-600/20 to-green-600/20 rounded-3xl blur-sm animate-fadeInUp" />
+              )}
+              {/* Main plan button */}
               <button
                 onClick={() => onPlanSelect(plan.id)}
                 className={`relative w-full p-6 rounded-3xl transition-all duration-500 group ${
@@ -187,16 +180,12 @@ export function PlanButtons({
                 {/* Recommended ribbon */}
                 {plan.recommended && (
                   <div className="absolute -top-2 left-6 right-6">
-                    <div
-                      className="h-1 bg-gold-500 rounded-full animate-fadeInUp"
-                    />
+                    <div className="h-1 bg-gold-500 rounded-full animate-fadeInUp" />
                   </div>
                 )}
 
                 {/* Plan icon */}
-                <div
-                  className="text-center mb-4 animate-fadeInUp"
-                >
+                <div className="text-center mb-4 animate-fadeInUp">
                   <div
                     className={`w-16 h-16 mx-auto mb-3 bg-gradient-to-br ${plan.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300`}
                   >
@@ -247,43 +236,37 @@ export function PlanButtons({
                 </div>
 
                 {/* Selection indicator */}
-{isSelected && (
-                    <div
-                      className="absolute bottom-4 right-4 animate-fadeInUp"
-                    >
-                      <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center">
-                        <Check className="w-3 h-3 text-white" />
-                      </div>
+                {isSelected && (
+                  <div className="absolute bottom-4 right-4 animate-fadeInUp">
+                    <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center">
+                      <Check className="w-3 h-3 text-white" />
                     </div>
-                  )}
-{/* Hover glow effect */}
-{isHovered && !isSelected && (
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-br ${plan.gradient} opacity-5 rounded-3xl`}
-                    />
-                  )}
-</button>
+                  </div>
+                )}
+                {/* Hover glow effect */}
+                {isHovered && !isSelected && (
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${plan.gradient} opacity-5 rounded-3xl`}
+                  />
+                )}
+              </button>
             </div>
           )
         })}
       </div>
 
       {/* Action section */}
-{selectedPlan && (
-          <div
-            className="mt-8 text-center animate-fadeInUp"
+      {selectedPlan && (
+        <div className="mt-8 text-center animate-fadeInUp">
+          <button
+            className={`px-8 py-4 bg-gradient-to-r ${planOptions.find((p) => p.id === selectedPlan)?.gradient} text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300`}
           >
-            <button
-              className={`px-8 py-4 bg-gradient-to-r ${planOptions.find((p) => p.id === selectedPlan)?.gradient} text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300`}
-            >
-              Continue with Plan {selectedPlan}
-            </button>
+            Continue with Plan {selectedPlan}
+          </button>
 
-            <p className="text-sm text-gray-500 mt-3">
-              30-day money-back guarantee • Cancel anytime
-            </p>
-          </div>
-        )}
-</div>
+          <p className="text-sm text-gray-500 mt-3">30-day money-back guarantee • Cancel anytime</p>
+        </div>
+      )}
+    </div>
   )
 }

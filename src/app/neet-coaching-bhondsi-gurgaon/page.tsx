@@ -95,8 +95,15 @@ export default function NEETCoachingBhondsiPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-bhondsi-gurgaon"
         pageName="NEET Coaching in Bhondsi Gurgaon"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
-        personKnowsAbout={['NEET Bhondsi Gurgaon', 'NEET Biology Bhondsi Gurgaon', 'Medical entrance coaching Bhondsi Gurgaon']}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
+        personKnowsAbout={[
+          'NEET Bhondsi Gurgaon',
+          'NEET Biology Bhondsi Gurgaon',
+          'Medical entrance coaching Bhondsi Gurgaon',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurgaon"

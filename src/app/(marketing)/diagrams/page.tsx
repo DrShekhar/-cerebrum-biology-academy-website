@@ -14,10 +14,16 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Interactive Biology Diagrams',
-    description: 'Explore interactive NCERT-style biology diagrams for NEET preparation. Learn plant anatomy, tissue types, and stem cross-sections with our visual learning tools.',
+    description:
+      'Explore interactive NCERT-style biology diagrams for NEET preparation. Learn plant anatomy, tissue types, and stem cross-sections with our visual learning tools.',
   },
 
-  openGraph: { title: 'Interactive Biology Diagrams', description: 'Explore interactive NCERT-style biology diagrams for NEET preparation. Learn plant anatomy, tissue types, and stem cross-sections with our visual learning tools.', type: 'website' },
+  openGraph: {
+    title: 'Interactive Biology Diagrams',
+    description:
+      'Explore interactive NCERT-style biology diagrams for NEET preparation. Learn plant anatomy, tissue types, and stem cross-sections with our visual learning tools.',
+    type: 'website',
+  },
 }
 
 export default function DiagramsPage() {

@@ -110,6 +110,7 @@ export default async function NEETCoachingMuscatPage() {
   return (
     <>
       <LocalitySchema
+        country="OM"
         locality="Muscat"
         slug="neet-coaching-muscat-oman"
         pageTitle="Best NEET Coaching in Muscat"

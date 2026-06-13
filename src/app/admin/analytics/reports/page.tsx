@@ -222,7 +222,9 @@ export default function ReportsPage() {
               className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
             >
               <div className="flex items-start justify-between mb-4">
-                <div className={`h-12 w-12 rounded-lg flex items-center justify-center ${report.color}`}>
+                <div
+                  className={`h-12 w-12 rounded-lg flex items-center justify-center ${report.color}`}
+                >
                   {report.icon}
                 </div>
               </div>

@@ -29,6 +29,10 @@ export const metadata: Metadata = {
 }
 
 export default function AhmedabadCoachingLayout({ children }: { children: React.ReactNode }) {
-  return <><LocalBusinessSchema />
-      {children}</>
+  return (
+    <>
+      <LocalBusinessSchema />
+      {children}
+    </>
+  )
 }

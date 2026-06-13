@@ -32,7 +32,14 @@ export const metadata: Metadata = {
     description:
       'Expert NEET coaching for NRI students in Saudi Arabia. 42 CBSE schools, 2.6M Indians. IST-friendly evening batches with 98% success rate.',
     creator: '@cerebrumbiology',
-    images: [{ url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-saudi-arabia.jpg', width: 1200, height: 630, alt: 'Neet Coaching Saudi Arabia — Cerebrum Biology Academy' }],
+    images: [
+      {
+        url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-saudi-arabia.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Neet Coaching Saudi Arabia — Cerebrum Biology Academy',
+      },
+    ],
   },
 }
 
@@ -149,7 +156,12 @@ export default async function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonld) }}
       />
-      <LocalitySchema locality="Saudi Arabia" region="Saudi Arabia" country="Saudi Arabia" skipCourseList />
+      <LocalitySchema
+        locality="Saudi Arabia"
+        region="Saudi Arabia"
+        country="Saudi Arabia"
+        skipCourseList
+      />
       <PageContent />
       <NEETNRIPricingTiers />
     </>

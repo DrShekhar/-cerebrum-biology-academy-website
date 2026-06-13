@@ -6,7 +6,7 @@ export function SmallVsLargeBatchIllustration({
   className = '',
   animate = true,
 }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -15,18 +15,12 @@ export function SmallVsLargeBatchIllustration({
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Background */}
       <rect width="400" height="300" fill="#F8FAFC" />
 
       {/* Left side - Small Batch */}
-      <g
-      >
+      <g>
         <rect
           x="20"
           y="40"
@@ -64,8 +58,7 @@ export function SmallVsLargeBatchIllustration({
         )}
 
         {/* Personal attention arrows */}
-        <g
-        >
+        <g>
           <path
             d="M85 120 L65 140"
             stroke="#166534"
@@ -79,8 +72,7 @@ export function SmallVsLargeBatchIllustration({
       </g>
 
       {/* Right side - Large Batch */}
-      <g
-      >
+      <g>
         <rect
           x="220"
           y="40"
@@ -119,8 +111,7 @@ export function SmallVsLargeBatchIllustration({
       </g>
 
       {/* VS divider */}
-      <g
-      >
+      <g>
         <circle cx="200" cy="140" r="20" fill="#1F2937" />
         <text x="200" y="145" textAnchor="middle" fill="#FFF" fontSize="12" fontWeight="700">
           VS
@@ -128,8 +119,7 @@ export function SmallVsLargeBatchIllustration({
       </g>
 
       {/* Comparison checkmarks */}
-      <g
-      >
+      <g>
         <rect x="20" y="250" width="160" height="40" rx="4" fill="#22C55E" />
         <text x="100" y="275" textAnchor="middle" fill="#FFF" fontSize="10" fontWeight="600">
           Personal Attention
@@ -142,14 +132,7 @@ export function SmallVsLargeBatchIllustration({
       </g>
 
       {/* Title */}
-      <text
-        x="200"
-        y="25"
-        textAnchor="middle"
-        fill="#1F2937"
-        fontSize="14"
-        fontWeight="700"
-      >
+      <text x="200" y="25" textAnchor="middle" fill="#1F2937" fontSize="14" fontWeight="700">
         Batch Size Comparison
       </text>
     </svg>

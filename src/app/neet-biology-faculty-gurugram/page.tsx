@@ -18,7 +18,14 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'NEET Biology Faculty Gurugram',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'NEET Biology Faculty Gurugram | AIIMS Faculty' }],
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'NEET Biology Faculty Gurugram | AIIMS Faculty',
+      },
+    ],
     description: 'AIIMS graduates with 15+ years experience. 98% success rate.',
     url: 'https://cerebrumbiologyacademy.com/neet-biology-faculty-gurugram',
   },
@@ -29,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Biology Faculty Gurugram | AIIMS Faculty',
-    description: 'Meet our expert NEET Biology faculty in Gurugram (Gurgaon). AIIMS graduates, 15+ years experience, 98% success rate. Small batch specialists. Call 88264-44334!',
+    description:
+      'Meet our expert NEET Biology faculty in Gurugram (Gurgaon). AIIMS graduates, 15+ years experience, 98% success rate. Small batch specialists. Call 88264-44334!',
   },
 }
 

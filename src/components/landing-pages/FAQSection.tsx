@@ -54,21 +54,13 @@ export function FAQSection({
       <section className="bg-white py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div
-              className="inline-flex rounded-full bg-purple-100 p-3 animate-fadeInUp"
-            >
+            <div className="inline-flex rounded-full bg-purple-100 p-3 animate-fadeInUp">
               <HelpCircle className="h-8 w-8 text-purple-700" />
             </div>
-            <h2
-              className="mt-6 text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl animate-fadeInUp"
-            >
+            <h2 className="mt-6 text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl animate-fadeInUp">
               {title}
             </h2>
-            <p
-              className="mt-4 text-lg text-slate-600 animate-fadeInUp"
-            >
-              {subtitle}
-            </p>
+            <p className="mt-4 text-lg text-slate-600 animate-fadeInUp">{subtitle}</p>
           </div>
 
           <div className="mt-12 space-y-4">
@@ -88,21 +80,18 @@ export function FAQSection({
                     }`}
                   />
                 </button>
-{openIndex === index && (
-                    <div
-                     className="animate-fadeInUp">
-                      <div className="border-t border-slate-100 px-6 py-5">
-                        <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
-                      </div>
+                {openIndex === index && (
+                  <div className="animate-fadeInUp">
+                    <div className="border-t border-slate-100 px-6 py-5">
+                      <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
                     </div>
-                  )}
-</div>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 
-          <div
-            className="mt-12 rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 p-8 text-center animate-fadeInUp"
-          >
+          <div className="mt-12 rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 p-8 text-center animate-fadeInUp">
             <p className="text-lg text-slate-700">
               Still have questions?{' '}
               <a href="tel:918826444334" className="font-semibold text-purple-700 hover:underline">

@@ -3,7 +3,8 @@ import { TopicLandingPage } from '@/components/mcq/TopicLandingPage'
 
 export const metadata: Metadata = {
   title: 'Biotechnology Principles MCQ for NEET 2026 | Free Practice Questions',
-  description: 'Practice 300+ free Biotechnology: Principles and Processes MCQs for NEET. Recombinant DNA, PCR, Restriction Enzymes, Vectors, and Cloning questions. NCERT Class 12 based with detailed explanations.',
+  description:
+    'Practice 300+ free Biotechnology: Principles and Processes MCQs for NEET. Recombinant DNA, PCR, Restriction Enzymes, Vectors, and Cloning questions. NCERT Class 12 based with detailed explanations.',
   keywords: [
     'Biotechnology MCQ NEET',
     'Recombinant DNA MCQ',
@@ -19,7 +20,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Biotechnology Principles MCQ for NEET | 300+ Free Questions',
-    description: 'Master Biotechnology: Principles and Processes for NEET with 300+ free MCQs. Practice recombinant DNA, PCR, restriction enzymes, and vectors questions.',
+    description:
+      'Master Biotechnology: Principles and Processes for NEET with 300+ free MCQs. Practice recombinant DNA, PCR, restriction enzymes, and vectors questions.',
     url: 'https://cerebrumbiologyacademy.com/neet-biology-mcq/biotechnology-principles',
   },
   alternates: {
@@ -29,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biotechnology Principles MCQ for NEET 2026 | Free Practice Questions',
-    description: 'Practice 300+ free Biotechnology: Principles and Processes MCQs for NEET. Recombinant DNA, PCR, Restriction Enzymes, Vectors, and Cloning questions. NCERT Class 12 based with detailed explanations.',
+    description:
+      'Practice 300+ free Biotechnology: Principles and Processes MCQs for NEET. Recombinant DNA, PCR, Restriction Enzymes, Vectors, and Cloning questions. NCERT Class 12 based with detailed explanations.',
   },
 }
 
@@ -37,7 +40,8 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Quiz',
   name: 'Biotechnology Principles MCQ for NEET',
-  description: 'Practice 300+ free Biotechnology: Principles and Processes MCQs for NEET covering recombinant DNA technology, PCR, restriction enzymes, vectors, and cloning.',
+  description:
+    'Practice 300+ free Biotechnology: Principles and Processes MCQs for NEET covering recombinant DNA technology, PCR, restriction enzymes, vectors, and cloning.',
   educationalLevel: 'High School',
   isAccessibleForFree: true,
   provider: {

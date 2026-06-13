@@ -226,11 +226,9 @@ export function LocationDetector({
   }
 
   return (
-<>
-{showLocationBanner && (
-        <div
-          className={`fixed top-0 left-0 right-0 z-50 ${className}`}
-        >
+    <>
+      {showLocationBanner && (
+        <div className={`fixed top-0 left-0 right-0 z-50 ${className}`}>
           <Card className="mx-4 mt-4 border-2 border-primary/20 shadow-lg bg-gray-50">
             <CardContent className="p-4">
               <div className="flex items-center justify-between">
@@ -301,8 +299,8 @@ export function LocationDetector({
           </Card>
         </div>
       )}
-</>
-)
+    </>
+  )
 }
 
 // Hook for getting user's preferred location

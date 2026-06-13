@@ -47,7 +47,6 @@ export async function POST(request: NextRequest): Promise<NextResponse<ProcessMe
       )
     }
 
-
     const messageProcessor = new WhatsAppMessageProcessor()
 
     // Create educational message object

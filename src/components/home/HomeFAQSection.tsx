@@ -25,7 +25,7 @@ const homepageFAQs: FAQ[] = [
   },
   {
     question: 'Where are Cerebrum Biology Academy centres located?',
-    answer: `We operate 5 offline centres across Delhi NCR: South Extension Part II (flagship), Rohini, Green Park, Gurugram, Faridabad, and Noida. We also offer pan-India online classes with the same AIIMS-trained faculty and curriculum, serving students from Mumbai, Bangalore, Hyderabad, Chennai, Kolkata, Pune, plus 14+ international countries (USA, UAE, UK, Canada, Singapore, Australia, etc.). Contact ${CONTACT_INFO.phone.display.primary} to find the centre nearest to you.`,
+    answer: `We operate 5 offline centres across Delhi NCR: South Extension Part II (flagship), Rohini, Green Park, Gurugram, and Faridabad. We also offer pan-India online classes with the same AIIMS-trained faculty and curriculum, serving students from Mumbai, Bangalore, Hyderabad, Chennai, Kolkata, Pune, plus 14+ international countries (USA, UAE, UK, Canada, Singapore, Australia, etc.). Contact ${CONTACT_INFO.phone.display.primary} to find the centre nearest to you.`,
   },
   {
     question: 'Do you offer online NEET Biology coaching?',
@@ -40,7 +40,7 @@ const homepageFAQs: FAQ[] = [
   {
     question: 'Do you offer NEET Foundation coaching for Class 9 and Class 10 students?',
     answer:
-      'Yes. The Cerebrum NEET Foundation track is built specifically for Class 9 and Class 10 students on a 4-year NEET pathway, with board (CBSE / ICSE / state board) and NEET-pattern MCQ drilling running in parallel. Foundation pricing runs ₹35K–₹95K/year across three tiers. Foundation runs offline at all 6 NCR centres plus pan-India online with the same AIIMS-trained faculty. See /best-neet-foundation-tutor for the full pathway.',
+      'Yes. The Cerebrum NEET Foundation track is built specifically for Class 9 and Class 10 students on a 4-year NEET pathway, with board (CBSE / ICSE / state board) and NEET-pattern MCQ drilling running in parallel. Foundation pricing runs ₹35K–₹95K/year across three tiers. Foundation runs offline at all 5 NCR centres plus pan-India online with the same AIIMS-trained faculty. See /best-neet-foundation-tutor for the full pathway.',
   },
   {
     question: 'Do you coach beyond NEET — MCAT, DAT, GAMSAT, USMLE Step 1, IB, AP, or Olympiads?',

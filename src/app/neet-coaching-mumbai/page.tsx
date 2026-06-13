@@ -164,551 +164,559 @@ export default function NEETCoachingMumbai() {
       />
 
       <>
-      <link rel="canonical" href="https://cerebrumbiologyacademy.com/neet-coaching-mumbai" />
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-orange-950/20 to-slate-950">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 lg:py-28">
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-orange-500 rounded-full filter blur-[128px]" />
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-red-500 rounded-full filter blur-[128px]" />
-          </div>
+        <link rel="canonical" href="https://cerebrumbiologyacademy.com/neet-coaching-mumbai" />
+        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-orange-950/20 to-slate-950">
+          {/* Hero Section */}
+          <section className="relative overflow-hidden py-20 lg:py-28">
+            <div className="absolute inset-0 opacity-30">
+              <div className="absolute top-20 left-10 w-72 h-72 bg-orange-500 rounded-full filter blur-[128px]" />
+              <div className="absolute bottom-20 right-10 w-96 h-96 bg-red-500 rounded-full filter blur-[128px]" />
+            </div>
 
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
-              <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 rounded-full px-4 py-2 mb-6">
-                <Building className="w-4 h-4 text-orange-400" />
-                <span className="text-orange-300 text-sm font-medium">
-                  Financial Capital | 5,125 Maharashtra MBBS Seats | Seth GS, KEM, Grant
-                </span>
-              </div>
+            <div className="container mx-auto px-4 relative z-10">
+              <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
+                <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 rounded-full px-4 py-2 mb-6">
+                  <Building className="w-4 h-4 text-orange-400" />
+                  <span className="text-orange-300 text-sm font-medium">
+                    Financial Capital | 5,125 Maharashtra MBBS Seats | Seth GS, KEM, Grant
+                  </span>
+                </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Best NEET Coaching in{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
-                  Mumbai
-                </span>{' '}
-                2026
-              </h1>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                  Best NEET Coaching in{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+                    Mumbai
+                  </span>{' '}
+                  2026
+                </h1>
 
-              <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Stop wasting hours in Mumbai traffic!
-                <span className="text-orange-400 font-semibold"> Save 500+ hours/year</span> with
-                online NEET coaching. AIIMS faculty, same results, from Andheri to Navi Mumbai.
-              </p>
+                <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                  Stop wasting hours in Mumbai traffic!
+                  <span className="text-orange-400 font-semibold"> Save 500+ hours/year</span> with
+                  online NEET coaching. AIIMS faculty, same results, from Andheri to Navi Mumbai.
+                </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Link
-                  href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Mumbai%20and%20interested%20in%20NEET%20coaching.%20Please%20share%20details."
-                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  WhatsApp Now
-                </Link>
-                <Link
-                  href="tel:+918826444334"
-                  className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300"
-                >
-                  <Phone className="w-5 h-5" />
-                  Call: +91 98721 00215
-                </Link>
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                {[
-                  { number: '98%', label: 'Success Rate', icon: TrendingUp },
-                  { number: '10,000+', label: 'Mumbai Students', icon: Users },
-                  { number: '650+', label: 'Avg. NEET Score', icon: Target },
-                  { number: '5125', label: 'MH MBBS Seats', icon: Award },
-                ].map((stat, index) => (
-                  <div
-                    key={index}
-                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 animate-fadeInUp"
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                  <Link
+                    href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Mumbai%20and%20interested%20in%20NEET%20coaching.%20Please%20share%20details."
+                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
                   >
-                    <stat.icon className="w-6 h-6 text-orange-400 mx-auto mb-2" />
-                    <div className="text-2xl md:text-3xl font-bold text-white">{stat.number}</div>
-                    <div className="text-slate-400 text-sm">{stat.label}</div>
-                  </div>
-                ))}
+                    <MessageCircle className="w-5 h-5" />
+                    WhatsApp Now
+                  </Link>
+                  <Link
+                    href="tel:+918826444334"
+                    className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300"
+                  >
+                    <Phone className="w-5 h-5" />
+                    Call: +91 98721 00215
+                  </Link>
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                  {[
+                    { number: '98%', label: 'Success Rate', icon: TrendingUp },
+                    { number: '10,000+', label: 'Mumbai Students', icon: Users },
+                    { number: '650+', label: 'Avg. NEET Score', icon: Target },
+                    { number: '5125', label: 'MH MBBS Seats', icon: Award },
+                  ].map((stat, index) => (
+                    <div
+                      key={index}
+                      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 animate-fadeInUp"
+                    >
+                      <stat.icon className="w-6 h-6 text-orange-400 mx-auto mb-2" />
+                      <div className="text-2xl md:text-3xl font-bold text-white">{stat.number}</div>
+                      <div className="text-slate-400 text-sm">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* RE-NEET 2026 announcement — purely additive lead-magnet block.
+          {/* RE-NEET 2026 announcement — purely additive lead-magnet block.
             Surfaces the news + crash-course CTA on high-traffic NEET hubs. */}
-        <section className="mx-auto max-w-4xl px-4">
-          <aside
-            className="my-6 rounded-xl border-2 border-red-200 bg-red-50 p-5"
-            aria-label="RE-NEET 2026 announcement"
-          >
-            <div className="flex items-start gap-3">
-              <div className="flex-shrink-0 mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700">
-                <span aria-hidden="true">!</span>
+          <section className="mx-auto max-w-4xl px-4">
+            <aside
+              className="my-6 rounded-xl border-2 border-red-200 bg-red-50 p-5"
+              aria-label="RE-NEET 2026 announcement"
+            >
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700">
+                  <span aria-hidden="true">!</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-base font-bold text-red-900">
+                    NEET-UG 2026 cancelled — RE-NEET reconduct confirmed by NTA
+                  </h3>
+                  <p className="mt-1 text-sm leading-snug text-slate-700">
+                    ~22 lakh candidates affected, including thousands across Mumbai, Thane and Navi
+                    Mumbai. New exam expected late June / early July 2026. Our 6–8 week crash course
+                    is built for the window — free demo today.
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <a
+                      href="/re-neet-2026"
+                      className="inline-flex items-center gap-1.5 rounded-md bg-red-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-red-700"
+                    >
+                      Read the full update →
+                    </a>
+                    <a
+                      href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20join%20the%20RE-NEET%202026%20crash%20course.%20Please%20share%20batch%20details."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-md bg-green-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-green-700"
+                    >
+                      WhatsApp the crash course
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div className="flex-1">
-                <h3 className="text-base font-bold text-red-900">
-                  NEET-UG 2026 cancelled — RE-NEET reconduct confirmed by NTA
-                </h3>
-                <p className="mt-1 text-sm leading-snug text-slate-700">
-                  ~22 lakh candidates affected, including thousands across Mumbai, Thane and Navi
-                  Mumbai. New exam expected late June / early July 2026. Our 6–8 week crash course
-                  is built for the window — free demo today.
+            </aside>
+          </section>
+
+          {/* Mumbai Traffic Problem */}
+          <section className="py-16 bg-slate-900/50">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto animate-fadeInUp">
+                <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+                  The Mumbai{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+                    Commute Problem
+                  </span>
+                </h2>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-6">
+                    <h3 className="text-xl font-semibold text-red-400 mb-4 flex items-center gap-2">
+                      <Train className="w-5 h-5" />
+                      Traditional Mumbai Coaching
+                    </h3>
+                    <ul className="space-y-3 text-slate-300">
+                      <li className="flex items-start gap-3">
+                        <span className="text-red-400 mt-1">•</span>
+                        Borivali → Andheri coaching: 1.5 hrs each way
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-red-400 mt-1">•</span>
+                        Thane → Dadar center: 2 hrs in local trains
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-red-400 mt-1">•</span>
+                        500+ hours/year wasted in travel
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-red-400 mt-1">•</span>
+                        Exhausted before class even starts
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-red-400 mt-1">•</span>
+                        ₹30,000-50,000/year on travel alone
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-6">
+                    <h3 className="text-xl font-semibold text-green-400 mb-4 flex items-center gap-2">
+                      <Video className="w-5 h-5" />
+                      Cerebrum Online Solution
+                    </h3>
+                    <ul className="space-y-3 text-slate-300">
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        Zero commute - study from your bedroom
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        Same AIIMS faculty as top centers
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        500 extra hours for actual studying
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        Fresh mind, better concentration
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        Save ₹2+ lakhs on fees + travel
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Areas We Serve */}
+          <section className="py-16">
+            <div className="container mx-auto px-4">
+              <div className="animate-fadeInUp">
+                <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
+                  Serving Students Across{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+                    Mumbai Metropolitan Region
+                  </span>
+                </h2>
+                <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+                  From South Mumbai to Virar, Thane to Panvel - premium NEET coaching reaches every
+                  corner
                 </p>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  <a
-                    href="/re-neet-2026"
-                    className="inline-flex items-center gap-1.5 rounded-md bg-red-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-red-700"
-                  >
-                    Read the full update →
-                  </a>
-                  <a
-                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20join%20the%20RE-NEET%202026%20crash%20course.%20Please%20share%20batch%20details."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-md bg-green-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-green-700"
-                  >
-                    WhatsApp the crash course
-                  </a>
-                </div>
-              </div>
-            </div>
-          </aside>
-        </section>
 
-        {/* Mumbai Traffic Problem */}
-        <section className="py-16 bg-slate-900/50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto animate-fadeInUp">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                The Mumbai{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
-                  Commute Problem
-                </span>
-              </h2>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-6">
-                  <h3 className="text-xl font-semibold text-red-400 mb-4 flex items-center gap-2">
-                    <Train className="w-5 h-5" />
-                    Traditional Mumbai Coaching
-                  </h3>
-                  <ul className="space-y-3 text-slate-300">
-                    <li className="flex items-start gap-3">
-                      <span className="text-red-400 mt-1">•</span>
-                      Borivali → Andheri coaching: 1.5 hrs each way
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-red-400 mt-1">•</span>
-                      Thane → Dadar center: 2 hrs in local trains
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-red-400 mt-1">•</span>
-                      500+ hours/year wasted in travel
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-red-400 mt-1">•</span>
-                      Exhausted before class even starts
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-red-400 mt-1">•</span>
-                      ₹30,000-50,000/year on travel alone
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-6">
-                  <h3 className="text-xl font-semibold text-green-400 mb-4 flex items-center gap-2">
-                    <Video className="w-5 h-5" />
-                    Cerebrum Online Solution
-                  </h3>
-                  <ul className="space-y-3 text-slate-300">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                      Zero commute - study from your bedroom
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                      Same AIIMS faculty as top centers
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                      500 extra hours for actual studying
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                      Fresh mind, better concentration
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                      Save ₹2+ lakhs on fees + travel
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Areas We Serve */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="animate-fadeInUp">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
-                Serving Students Across{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
-                  Mumbai Metropolitan Region
-                </span>
-              </h2>
-              <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
-                From South Mumbai to Virar, Thane to Panvel - premium NEET coaching reaches every
-                corner
-              </p>
-
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-                {nearbyAreas.map((area, index) => (
-                  <div
-                    key={index}
-                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:border-orange-500/50 transition-all duration-300 animate-fadeInUp"
-                  >
-                    <div className="flex items-center gap-2 mb-2">
-                      <MapPin className="w-4 h-4 text-orange-400" />
-                      <span className="text-white font-medium">{area.name}</span>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                  {nearbyAreas.map((area, index) => (
+                    <div
+                      key={index}
+                      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:border-orange-500/50 transition-all duration-300 animate-fadeInUp"
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <MapPin className="w-4 h-4 text-orange-400" />
+                        <span className="text-white font-medium">{area.name}</span>
+                      </div>
+                      <div className="text-sm text-slate-400">
+                        {area.students} students enrolled
+                      </div>
+                      <div className="text-xs text-orange-400 mt-1">{area.distance}</div>
                     </div>
-                    <div className="text-sm text-slate-400">{area.students} students enrolled</div>
-                    <div className="text-xs text-orange-400 mt-1">{area.distance}</div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Features Grid */}
-        <section className="py-16 bg-slate-900/50">
-          <div className="container mx-auto px-4">
-            <div className="animate-fadeInUp">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                Why Mumbai Students{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
-                  Choose Cerebrum
-                </span>
-              </h2>
+          {/* Features Grid */}
+          <section className="py-16 bg-slate-900/50">
+            <div className="container mx-auto px-4">
+              <div className="animate-fadeInUp">
+                <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+                  Why Mumbai Students{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+                    Choose Cerebrum
+                  </span>
+                </h2>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                {[
-                  {
-                    icon: Clock,
-                    title: 'Save 500+ Hours/Year',
-                    description:
-                      'No Mumbai traffic. No crowded locals. That commute time becomes study time. Game changer!',
-                  },
-                  {
-                    icon: Video,
-                    title: 'AIIMS Faculty Live',
-                    description:
-                      'Same quality teachers as premium Andheri/Dadar centers, but accessible from your home.',
-                  },
-                  {
-                    icon: BookOpen,
-                    title: 'MH Board Compatible',
-                    description:
-                      'Materials bridge Maharashtra Board and CBSE with NEET. Works for all board students.',
-                  },
-                  {
-                    icon: MessageCircle,
-                    title: 'Personal Attention',
-                    description:
-                      'Unlike 100+ student Mumbai batches, we provide one-on-one doubt clearing sessions.',
-                  },
-                  {
-                    icon: Target,
-                    title: 'Mumbai College Focus',
-                    description:
-                      'Specific prep for Seth GS, Grant, KEM cutoffs. Know exactly what score you need.',
-                  },
-                  {
-                    icon: GraduationCap,
-                    title: 'MH Counselling Guide',
-                    description:
-                      'Complete Maharashtra CET Cell counselling support. College selection strategy.',
-                  },
-                ].map((feature, index) => (
-                  <div
-                    key={index}
-                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-orange-500/50 transition-all duration-300 animate-fadeInUp"
-                  >
-                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-4">
-                      <feature.icon className="w-6 h-6 text-orange-400" />
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                  {[
+                    {
+                      icon: Clock,
+                      title: 'Save 500+ Hours/Year',
+                      description:
+                        'No Mumbai traffic. No crowded locals. That commute time becomes study time. Game changer!',
+                    },
+                    {
+                      icon: Video,
+                      title: 'AIIMS Faculty Live',
+                      description:
+                        'Same quality teachers as premium Andheri/Dadar centers, but accessible from your home.',
+                    },
+                    {
+                      icon: BookOpen,
+                      title: 'MH Board Compatible',
+                      description:
+                        'Materials bridge Maharashtra Board and CBSE with NEET. Works for all board students.',
+                    },
+                    {
+                      icon: MessageCircle,
+                      title: 'Personal Attention',
+                      description:
+                        'Unlike 100+ student Mumbai batches, we provide one-on-one doubt clearing sessions.',
+                    },
+                    {
+                      icon: Target,
+                      title: 'Mumbai College Focus',
+                      description:
+                        'Specific prep for Seth GS, Grant, KEM cutoffs. Know exactly what score you need.',
+                    },
+                    {
+                      icon: GraduationCap,
+                      title: 'MH Counselling Guide',
+                      description:
+                        'Complete Maharashtra CET Cell counselling support. College selection strategy.',
+                    },
+                  ].map((feature, index) => (
+                    <div
+                      key={index}
+                      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-orange-500/50 transition-all duration-300 animate-fadeInUp"
+                    >
+                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <feature.icon className="w-6 h-6 text-orange-400" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                      <p className="text-slate-400">{feature.description}</p>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                    <p className="text-slate-400">{feature.description}</p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Local Schools Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="animate-fadeInUp">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
-                Top Schools in{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
-                  Mumbai
-                </span>
-              </h2>
-              <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
-                Students from Mumbai's elite schools trust us for NEET preparation
-              </p>
+          {/* Local Schools Section */}
+          <section className="py-16">
+            <div className="container mx-auto px-4">
+              <div className="animate-fadeInUp">
+                <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
+                  Top Schools in{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+                    Mumbai
+                  </span>
+                </h2>
+                <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+                  Students from Mumbai's elite schools trust us for NEET preparation
+                </p>
 
-              <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-                {localSchools.map((school, index) => (
-                  <div
-                    key={index}
-                    className="bg-white/5 border border-white/10 rounded-full px-4 py-2 text-slate-300 text-sm hover:border-orange-500/50 hover:text-orange-300 transition-all duration-300 animate-fadeInUp"
-                  >
-                    {school}
-                  </div>
-                ))}
+                <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+                  {localSchools.map((school, index) => (
+                    <div
+                      key={index}
+                      className="bg-white/5 border border-white/10 rounded-full px-4 py-2 text-slate-300 text-sm hover:border-orange-500/50 hover:text-orange-300 transition-all duration-300 animate-fadeInUp"
+                    >
+                      {school}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Medical Colleges Section */}
-        <section className="py-16 bg-slate-900/50">
-          <div className="container mx-auto px-4">
-            <div className="animate-fadeInUp">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
-                Target{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
-                  Medical Colleges
-                </span>{' '}
-                in Mumbai
-              </h2>
-              <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
-                Seth GS (KEM), Grant Medical, LTMMC - India's most prestigious medical colleges are
-                in your city!
-              </p>
+          {/* Medical Colleges Section */}
+          <section className="py-16 bg-slate-900/50">
+            <div className="container mx-auto px-4">
+              <div className="animate-fadeInUp">
+                <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
+                  Target{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+                    Medical Colleges
+                  </span>{' '}
+                  in Mumbai
+                </h2>
+                <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+                  Seth GS (KEM), Grant Medical, LTMMC - India's most prestigious medical colleges
+                  are in your city!
+                </p>
 
-              <div className="max-w-4xl mx-auto overflow-x-auto">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b border-white/10">
-                      <th className="text-left py-4 px-4 text-slate-300 font-semibold">College</th>
-                      <th className="text-center py-4 px-4 text-slate-300 font-semibold">
-                        MBBS Seats
-                      </th>
-                      <th className="text-center py-4 px-4 text-slate-300 font-semibold">
-                        Location
-                      </th>
-                      <th className="text-center py-4 px-4 text-slate-300 font-semibold">State</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {medicalColleges.map((college, index) => (
-                      <tr
-                        key={index}
-                        className={`border-b border-white/5 ${college.highlight ? 'bg-orange-500/10' : ''}`}
-                      >
-                        <td className="py-4 px-4">
-                          <div className="flex items-center gap-2">
-                            <Building2
-                              className={`w-4 h-4 ${college.highlight ? 'text-orange-400' : 'text-slate-500'}`}
-                            />
-                            <span
-                              className={
-                                college.highlight ? 'text-orange-300 font-semibold' : 'text-white'
-                              }
-                            >
-                              {college.name}
-                            </span>
-                            {college.highlight && college.name.includes('Seth GS') && (
-                              <span className="text-xs bg-orange-500/20 text-orange-300 px-2 py-0.5 rounded-full">
-                                #11 India
-                              </span>
-                            )}
-                            {college.highlight && college.name.includes('Grant') && (
-                              <span className="text-xs bg-orange-500/20 text-orange-300 px-2 py-0.5 rounded-full">
-                                #12 India
-                              </span>
-                            )}
-                          </div>
-                        </td>
-                        <td className="py-4 px-4 text-center text-slate-300">{college.seats}</td>
-                        <td className="py-4 px-4 text-center text-slate-300">{college.distance}</td>
-                        <td className="py-4 px-4 text-center text-slate-300">{college.state}</td>
+                <div className="max-w-4xl mx-auto overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border-b border-white/10">
+                        <th className="text-left py-4 px-4 text-slate-300 font-semibold">
+                          College
+                        </th>
+                        <th className="text-center py-4 px-4 text-slate-300 font-semibold">
+                          MBBS Seats
+                        </th>
+                        <th className="text-center py-4 px-4 text-slate-300 font-semibold">
+                          Location
+                        </th>
+                        <th className="text-center py-4 px-4 text-slate-300 font-semibold">
+                          State
+                        </th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-
-              <p className="text-center text-slate-400 mt-6">
-                + GMC Nagpur, GMC Pune, GMC Aurangabad, and 20+ more Maharashtra government medical
-                colleges!
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Cost Comparison */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto animate-fadeInUp">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                Cost Comparison:{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
-                  Cerebrum vs Mumbai Centers
-                </span>
-              </h2>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-6">
-                  <h3 className="text-xl font-semibold text-red-400 mb-4 flex items-center gap-2">
-                    <IndianRupee className="w-5 h-5" />
-                    the largest national NEET chains Mumbai
-                  </h3>
-                  <ul className="space-y-3 text-slate-300">
-                    <li className="flex justify-between">
-                      <span>Coaching Fees (2 years)</span>
-                      <span className="text-red-400">₹2,50,000+</span>
-                    </li>
-                    <li className="flex justify-between">
-                      <span>Travel (Local/Auto/Cab)</span>
-                      <span className="text-red-400">₹60,000</span>
-                    </li>
-                    <li className="flex justify-between">
-                      <span>Time Lost: 500 hrs/year</span>
-                      <span className="text-red-400">Priceless</span>
-                    </li>
-                    <li className="flex justify-between border-t border-red-500/20 pt-3 font-semibold">
-                      <span>Total</span>
-                      <span className="text-red-400">₹3,10,000+</span>
-                    </li>
-                  </ul>
+                    </thead>
+                    <tbody>
+                      {medicalColleges.map((college, index) => (
+                        <tr
+                          key={index}
+                          className={`border-b border-white/5 ${college.highlight ? 'bg-orange-500/10' : ''}`}
+                        >
+                          <td className="py-4 px-4">
+                            <div className="flex items-center gap-2">
+                              <Building2
+                                className={`w-4 h-4 ${college.highlight ? 'text-orange-400' : 'text-slate-500'}`}
+                              />
+                              <span
+                                className={
+                                  college.highlight ? 'text-orange-300 font-semibold' : 'text-white'
+                                }
+                              >
+                                {college.name}
+                              </span>
+                              {college.highlight && college.name.includes('Seth GS') && (
+                                <span className="text-xs bg-orange-500/20 text-orange-300 px-2 py-0.5 rounded-full">
+                                  #11 India
+                                </span>
+                              )}
+                              {college.highlight && college.name.includes('Grant') && (
+                                <span className="text-xs bg-orange-500/20 text-orange-300 px-2 py-0.5 rounded-full">
+                                  #12 India
+                                </span>
+                              )}
+                            </div>
+                          </td>
+                          <td className="py-4 px-4 text-center text-slate-300">{college.seats}</td>
+                          <td className="py-4 px-4 text-center text-slate-300">
+                            {college.distance}
+                          </td>
+                          <td className="py-4 px-4 text-center text-slate-300">{college.state}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
 
-                <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-6">
-                  <h3 className="text-xl font-semibold text-green-400 mb-4 flex items-center gap-2">
-                    <IndianRupee className="w-5 h-5" />
-                    Cerebrum Online
-                  </h3>
-                  <ul className="space-y-3 text-slate-300">
-                    <li className="flex justify-between">
-                      <span>Complete Program (2 years)</span>
-                      <span className="text-green-400">₹65,000</span>
-                    </li>
-                    <li className="flex justify-between">
-                      <span>Zero Travel Cost</span>
-                      <span className="text-green-400">₹0</span>
-                    </li>
-                    <li className="flex justify-between">
-                      <span>500 hrs Extra Study Time</span>
-                      <span className="text-green-400">Bonus!</span>
-                    </li>
-                    <li className="flex justify-between border-t border-green-500/20 pt-3 font-semibold">
-                      <span>Total</span>
-                      <span className="text-green-400">₹65,000</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="text-center mt-8">
-                <p className="text-2xl font-bold text-white">
-                  Save <span className="text-green-400">₹2,45,000+</span> and{' '}
-                  <span className="text-green-400">1000 hours</span> in 2 years!
+                <p className="text-center text-slate-400 mt-6">
+                  + GMC Nagpur, GMC Pune, GMC Aurangabad, and 20+ more Maharashtra government
+                  medical colleges!
                 </p>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Video Testimonials */}
-        <VideoTestimonialsSection />
+          {/* Cost Comparison */}
+          <section className="py-16">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto animate-fadeInUp">
+                <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+                  Cost Comparison:{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+                    Cerebrum vs Mumbai Centers
+                  </span>
+                </h2>
 
-        {/* FAQs Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="animate-fadeInUp">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
-                Frequently Asked{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
-                  Questions
-                </span>
-              </h2>
-              <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
-                Everything Mumbai students and parents want to know about NEET coaching
-              </p>
-
-              <div className="max-w-3xl mx-auto space-y-4">
-                {faqs.map((faq, index) => (
-                  <div
-                    key={index}
-                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden animate-fadeInUp"
-                  >
-                    <details className="group">
-                      <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-                        <span className="text-white font-medium pr-4">{faq.question}</span>
-                        <span className="text-orange-400 group-open:rotate-180 transition-transform duration-300">
-                          ▼
-                        </span>
-                      </summary>
-                      <div className="px-6 pb-6 text-slate-300">{faq.answer}</div>
-                    </details>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-6">
+                    <h3 className="text-xl font-semibold text-red-400 mb-4 flex items-center gap-2">
+                      <IndianRupee className="w-5 h-5" />
+                      the largest national NEET chains Mumbai
+                    </h3>
+                    <ul className="space-y-3 text-slate-300">
+                      <li className="flex justify-between">
+                        <span>Coaching Fees (2 years)</span>
+                        <span className="text-red-400">₹2,50,000+</span>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Travel (Local/Auto/Cab)</span>
+                        <span className="text-red-400">₹60,000</span>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Time Lost: 500 hrs/year</span>
+                        <span className="text-red-400">Priceless</span>
+                      </li>
+                      <li className="flex justify-between border-t border-red-500/20 pt-3 font-semibold">
+                        <span>Total</span>
+                        <span className="text-red-400">₹3,10,000+</span>
+                      </li>
+                    </ul>
                   </div>
-                ))}
+
+                  <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-6">
+                    <h3 className="text-xl font-semibold text-green-400 mb-4 flex items-center gap-2">
+                      <IndianRupee className="w-5 h-5" />
+                      Cerebrum Online
+                    </h3>
+                    <ul className="space-y-3 text-slate-300">
+                      <li className="flex justify-between">
+                        <span>Complete Program (2 years)</span>
+                        <span className="text-green-400">₹65,000</span>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Zero Travel Cost</span>
+                        <span className="text-green-400">₹0</span>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>500 hrs Extra Study Time</span>
+                        <span className="text-green-400">Bonus!</span>
+                      </li>
+                      <li className="flex justify-between border-t border-green-500/20 pt-3 font-semibold">
+                        <span>Total</span>
+                        <span className="text-green-400">₹65,000</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="text-center mt-8">
+                  <p className="text-2xl font-bold text-white">
+                    Save <span className="text-green-400">₹2,45,000+</span> and{' '}
+                    <span className="text-green-400">1000 hours</span> in 2 years!
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Final CTA */}
-        <section className="py-20 bg-gradient-to-r from-orange-900/50 to-red-900/50">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-3xl mx-auto animate-fadeInUp">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Beat the{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
-                  Mumbai Commute
-                </span>
-                ?
-              </h2>
-              <p className="text-xl text-slate-300 mb-8">
-                Seth GS, Grant Medical, KEM - India's best medical colleges are in Mumbai. Prepare
-                smartly from home!
-              </p>
+          {/* Video Testimonials */}
+          <VideoTestimonialsSection />
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Mumbai%20and%20want%20to%20join%20NEET%20coaching.%20Please%20share%20the%20admission%20process."
-                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 text-lg"
-                >
-                  <MessageCircle className="w-6 h-6" />
-                  Book Free Demo Class
-                </Link>
-                <Link
-                  href="tel:+918826444334"
-                  className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 text-lg"
-                >
-                  <Phone className="w-6 h-6" />
-                  Talk to Counsellor
-                </Link>
+          {/* FAQs Section */}
+          <section className="py-16">
+            <div className="container mx-auto px-4">
+              <div className="animate-fadeInUp">
+                <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
+                  Frequently Asked{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+                    Questions
+                  </span>
+                </h2>
+                <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+                  Everything Mumbai students and parents want to know about NEET coaching
+                </p>
+
+                <div className="max-w-3xl mx-auto space-y-4">
+                  {faqs.map((faq, index) => (
+                    <div
+                      key={index}
+                      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden animate-fadeInUp"
+                    >
+                      <details className="group">
+                        <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                          <span className="text-white font-medium pr-4">{faq.question}</span>
+                          <span className="text-orange-400 group-open:rotate-180 transition-transform duration-300">
+                            ▼
+                          </span>
+                        </summary>
+                        <div className="px-6 pb-6 text-slate-300">{faq.answer}</div>
+                      </details>
+                    </div>
+                  ))}
+                </div>
               </div>
-
-              <p className="text-slate-400 mt-6">
-                Join 15,000+ students from Mumbai who chose smart preparation over crowded local
-                trains
-              </p>
             </div>
-          </div>
-        </section>
-      </main>
-    </>
+          </section>
+
+          {/* Final CTA */}
+          <section className="py-20 bg-gradient-to-r from-orange-900/50 to-red-900/50">
+            <div className="container mx-auto px-4">
+              <div className="text-center max-w-3xl mx-auto animate-fadeInUp">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  Ready to Beat the{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+                    Mumbai Commute
+                  </span>
+                  ?
+                </h2>
+                <p className="text-xl text-slate-300 mb-8">
+                  Seth GS, Grant Medical, KEM - India's best medical colleges are in Mumbai. Prepare
+                  smartly from home!
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link
+                    href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Mumbai%20and%20want%20to%20join%20NEET%20coaching.%20Please%20share%20the%20admission%20process."
+                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 text-lg"
+                  >
+                    <MessageCircle className="w-6 h-6" />
+                    Book Free Demo Class
+                  </Link>
+                  <Link
+                    href="tel:+918826444334"
+                    className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 text-lg"
+                  >
+                    <Phone className="w-6 h-6" />
+                    Talk to Counsellor
+                  </Link>
+                </div>
+
+                <p className="text-slate-400 mt-6">
+                  Join 15,000+ students from Mumbai who chose smart preparation over crowded local
+                  trains
+                </p>
+              </div>
+            </div>
+          </section>
+        </main>
+      </>
       <StickyMobileCTABar waUrl="https://wa.me/918826444334?text=Hi!%20I%20want%20a%20FREE%20demo%20for%20NEET%20Biology%20coaching%20in%20Mumbai.%20Please%20share%20timings." />
     </>
   )

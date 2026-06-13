@@ -214,9 +214,7 @@ const UrgencyIndicators: React.FC<UrgencyIndicatorProps> = ({
       className={`flex items-center gap-3 p-4 rounded-xl border-2 ${colors.bg} relative overflow-hidden`}
     >
       {urgencyLevel === 'critical' && (
-        <div
-          className={`absolute inset-0 ${colors.pulse} opacity-10`}
-        />
+        <div className={`absolute inset-0 ${colors.pulse} opacity-10`} />
       )}
 
       <div className={`p-2 rounded-lg bg-white ${colors.text}`}>
@@ -237,17 +235,13 @@ const UrgencyIndicators: React.FC<UrgencyIndicatorProps> = ({
       </div>
 
       <div className="w-12 h-2 bg-white rounded-full overflow-hidden">
-        <div
-          className={`h-full ${colors.pulse}`}
-        />
+        <div className={`h-full ${colors.pulse}`} />
       </div>
     </div>
   )
 
   const TimerIndicator = () => (
-    <div
-      className="flex items-center gap-3 p-4 bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200 rounded-xl animate-fadeInUp"
-    >
+    <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200 rounded-xl animate-fadeInUp">
       <div className="p-2 rounded-lg bg-purple-100 text-purple-600">
         <Timer className="w-5 h-5" />
       </div>
@@ -259,38 +253,27 @@ const UrgencyIndicators: React.FC<UrgencyIndicatorProps> = ({
         <div className="font-mono text-xl font-bold text-purple-600">{formatTimeRemaining()}</div>
       </div>
 
-      <div
-        className="w-3 h-3 bg-purple-500 rounded-full animate-fadeInUp"
-      />
+      <div className="w-3 h-3 bg-purple-500 rounded-full animate-fadeInUp" />
     </div>
   )
 
   const ViewersIndicator = () => (
-    <div
-      className="flex items-center gap-3 p-3 bg-blue-50 border border-blue-200 rounded-lg animate-fadeInUp"
-    >
+    <div className="flex items-center gap-3 p-3 bg-blue-50 border border-blue-200 rounded-lg animate-fadeInUp">
       <Eye className="w-4 h-4 text-blue-600" />
       <span className="text-sm text-blue-800">
         <span className="font-semibold">{urgencyData.currentViewers}</span> others viewing this
         course
       </span>
-      <div
-        className="flex gap-1 animate-fadeInUp"
-      >
+      <div className="flex gap-1 animate-fadeInUp">
         {Array.from({ length: Math.min(urgencyData.currentViewers, 5) }).map((_, i) => (
-          <div
-            key={i}
-            className="w-2 h-2 bg-blue-500 rounded-full animate-fadeInUp"
-          />
+          <div key={i} className="w-2 h-2 bg-blue-500 rounded-full animate-fadeInUp" />
         ))}
       </div>
     </div>
   )
 
   const SocialProofIndicator = () => (
-    <div
-      className="p-3 bg-green-50 border border-green-200 rounded-lg animate-fadeInUp"
-    >
+    <div className="p-3 bg-green-50 border border-green-200 rounded-lg animate-fadeInUp">
       <div className="flex items-center gap-2 mb-2">
         <TrendingUp className="w-4 h-4 text-green-600" />
         <span className="text-sm font-medium text-green-800">Recent Activity</span>
@@ -324,9 +307,7 @@ const UrgencyIndicators: React.FC<UrgencyIndicatorProps> = ({
     )
 
     return (
-      <div
-        className="flex items-center gap-3 p-3 bg-amber-50 border border-amber-200 rounded-lg animate-fadeInUp"
-      >
+      <div className="flex items-center gap-3 p-3 bg-amber-50 border border-amber-200 rounded-lg animate-fadeInUp">
         <Calendar className="w-4 h-4 text-yellow-600" />
         <div className="text-sm text-yellow-800">
           <span className="font-medium">Batch starts in {daysUntilStart} days</span>
@@ -365,16 +346,14 @@ const UrgencyIndicators: React.FC<UrgencyIndicatorProps> = ({
 
   return (
     <div className={containerClass}>
-{showMultiple ? (
-          <div className="space-y-3">{visibleIndicators.map((type) => renderIndicator(type))}</div>
-        ) : (
-          visibleIndicators.map((type) => renderIndicator(type))
-        )}
-{/* Floating urgency badge for critical situations */}
+      {showMultiple ? (
+        <div className="space-y-3">{visibleIndicators.map((type) => renderIndicator(type))}</div>
+      ) : (
+        visibleIndicators.map((type) => renderIndicator(type))
+      )}
+      {/* Floating urgency badge for critical situations */}
       {urgencyLevel === 'critical' && variant === 'aggressive' && (
-        <div
-          className="fixed top-4 right-4 z-50 p-3 bg-red-500 text-white rounded-full shadow-lg animate-fadeInUp"
-        >
+        <div className="fixed top-4 right-4 z-50 p-3 bg-red-500 text-white rounded-full shadow-lg animate-fadeInUp">
           <div className="flex items-center gap-2">
             <AlertTriangle className="w-5 h-5" />
             <span className="text-sm font-bold">ONLY {urgencyData.seatsRemaining} LEFT!</span>

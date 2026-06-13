@@ -9,12 +9,7 @@
     {
       "type": "MCQ",
       "question": "Acid rain primarily affects freshwater ecosystems by mobilizing which toxic metal from soils into waterways?",
-      "options": [
-        "Mercury",
-        "Cadmium",
-        "Lead",
-        "Aluminum"
-      ],
+      "options": ["Mercury", "Cadmium", "Lead", "Aluminum"],
       "correctAnswer": "D",
       "explanation": "Acid rain (pH < 5.6) mobilizes aluminum ions (Al³⁺) from soil minerals through cation exchange. Aluminum is normally bound in aluminosilicate minerals at neutral pH but becomes soluble under acidic conditions. Dissolved aluminum is highly toxic to fish and other aquatic organisms, damaging gill epithelium and disrupting ion regulation. While mercury, lead, and cadmium are also environmental contaminants, aluminum mobilization is the most direct and quantitatively significant toxic effect of acid rain on freshwater ecosystems.",
       "isOlympiad": true,
@@ -109,12 +104,7 @@
     {
       "type": "MCQ",
       "question": "Which ecosystem has the highest net primary productivity per unit area on Earth?",
-      "options": [
-        "Tropical rainforest",
-        "Coral reefs",
-        "Swamps and marshes",
-        "Estuaries"
-      ],
+      "options": ["Tropical rainforest", "Coral reefs", "Swamps and marshes", "Estuaries"],
       "correctAnswer": "C",
       "explanation": "Swamps and marshes have the highest NPP per unit area (~2,500 g C/m²/yr on average), slightly exceeding tropical rainforests (~2,200 g C/m²/yr). This is because wetlands combine high water availability, nutrient-rich sediments, and intense solar radiation with highly productive emergent vegetation. Tropical rainforests have the highest total global NPP due to their vast area, but per unit area, wetlands are more productive. Coral reefs and estuaries are also highly productive but typically slightly lower than wetlands.",
       "isOlympiad": true,
@@ -209,12 +199,7 @@
     {
       "type": "MCQ",
       "question": "In the context of ecological stoichiometry, the Redfield ratio (106C:16N:1P) describes the elemental composition of marine phytoplankton. When the N:P ratio of available nutrients falls well below 16:1, which nutrient is most likely limiting?",
-      "options": [
-        "Carbon",
-        "Nitrogen",
-        "Phosphorus",
-        "Silicon"
-      ],
+      "options": ["Carbon", "Nitrogen", "Phosphorus", "Silicon"],
       "correctAnswer": "B",
       "explanation": "When the N:P ratio in the water is well below the Redfield ratio of 16:1, nitrogen is in short supply relative to phosphorus, making nitrogen the limiting nutrient. This is because organisms require N and P in approximately a 16:1 molar ratio. If N:P < 16, nitrogen runs out before phosphorus is depleted. Conversely, when N:P > 16, phosphorus is limiting. This principle, derived from Alfred Redfield's observations, is fundamental to understanding nutrient limitation in aquatic ecosystems.",
       "isOlympiad": true,
@@ -229,12 +214,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about the global water cycle and its interaction with ecosystems:\nI. Transpiration by terrestrial plants returns more water to the atmosphere than direct evaporation from land surfaces\nII. The residence time of water in the atmosphere is approximately 9 days\nIII. Deforestation in the Amazon basin could reduce regional rainfall by disrupting the 'flying rivers' phenomenon\nIV. Groundwater represents the largest reservoir of liquid freshwater on Earth",
-      "options": [
-        "TTTT",
-        "TFTF",
-        "FTTT",
-        "TFTT"
-      ],
+      "options": ["TTTT", "TFTF", "FTTT", "TFTT"],
       "correctAnswer": "A",
       "explanation": "All four statements are true. I. TRUE: Transpiration accounts for ~60-80% of water vapor returned from land to atmosphere, exceeding direct evaporation. II. TRUE: The average residence time of water in the atmosphere is ~9 days. III. TRUE: Amazon forests generate ~50% of their own rainfall through transpiration—the 'flying rivers' concept. Deforestation disrupts this recycling, potentially reducing rainfall and triggering savannification. IV. TRUE: Groundwater (~10.6 million km³ of fresh groundwater) is the largest reservoir of liquid freshwater, far exceeding surface freshwater (lakes, rivers ~93,000 km³). Ice sheets are larger but are solid.",
       "isOlympiad": true,
@@ -629,12 +609,7 @@
     {
       "type": "MCQ",
       "question": "The half-life of a radioisotope tracer in an ecosystem compartment can be used to calculate nutrient turnover rates. If ³²P added to a lake has a biological half-life of 14 days in phytoplankton biomass (ignoring physical decay), what is the turnover rate constant (k)?",
-      "options": [
-        "k = 0.050/day",
-        "k = 0.071/day",
-        "k = 0.143/day",
-        "k = 14 days"
-      ],
+      "options": ["k = 0.050/day", "k = 0.071/day", "k = 0.143/day", "k = 14 days"],
       "correctAnswer": "A",
       "explanation": "The turnover rate constant k is related to half-life (t₁/₂) by the equation: k = ln(2)/t₁/₂ = 0.693/14 = 0.0495 ≈ 0.050/day. This means approximately 5% of the phosphorus in phytoplankton is turned over (taken up or released) each day. The residence time (turnover time) = 1/k = 20 days, meaning the average phosphorus atom spends 20 days in the phytoplankton compartment before being recycled. This radioisotope tracer approach is fundamental for quantifying nutrient cycling rates in ecosystems.",
       "isOlympiad": true,
@@ -769,12 +744,7 @@
     {
       "type": "MCQ",
       "question": "In a temperate deciduous forest, gross primary productivity (GPP) is measured at 2,500 g C/m²/yr. If autotrophic respiration consumes 1,500 g C/m²/yr and heterotrophic respiration consumes 600 g C/m²/yr, what is the net ecosystem production (NEP)?",
-      "options": [
-        "400 g C/m²/yr",
-        "1,000 g C/m²/yr",
-        "600 g C/m²/yr",
-        "2,500 g C/m²/yr"
-      ],
+      "options": ["400 g C/m²/yr", "1,000 g C/m²/yr", "600 g C/m²/yr", "2,500 g C/m²/yr"],
       "correctAnswer": "A",
       "explanation": "NEP = GPP - total ecosystem respiration = GPP - (Ra + Rh) = 2,500 - (1,500 + 600) = 400 g C/m²/yr. NEP represents the net carbon accumulation in the ecosystem. NPP = GPP - Ra = 1,000 g C/m²/yr, but NEP further subtracts heterotrophic respiration from NPP.",
       "isOlympiad": true,
@@ -889,12 +859,7 @@
     {
       "type": "MCQ",
       "question": "Which element's biogeochemical cycle is MOST strongly influenced by redox chemistry, cycling between oxidized and reduced forms in response to oxygen availability?",
-      "options": [
-        "Calcium",
-        "Magnesium",
-        "Potassium",
-        "Iron"
-      ],
+      "options": ["Calcium", "Magnesium", "Potassium", "Iron"],
       "correctAnswer": "D",
       "explanation": "Iron (Fe) is the most redox-sensitive major element in biogeochemical cycling. Under oxic conditions, iron exists as Fe³⁺ (ferric, insoluble, forming iron oxyhydroxides that bind phosphorus). Under anoxic conditions, iron is reduced to Fe²⁺ (ferrous, soluble), releasing bound phosphorus and becoming bioavailable. This redox cycling of iron is central to sediment-water phosphorus dynamics, ocean iron limitation, and banded iron formations in the geological record. Calcium, potassium, and magnesium do not undergo significant redox cycling under environmental conditions.",
       "isOlympiad": true,
@@ -929,12 +894,7 @@
     {
       "type": "DATA_INTERPRETATION",
       "question": "A stream ecologist measures leaf litter decomposition rates using mesh bags of two sizes: coarse mesh (5 mm, allows macroinvertebrate access) and fine mesh (0.5 mm, excludes macroinvertebrates). After 90 days, coarse mesh bags retained 25% of original leaf mass while fine mesh bags retained 65%. What percentage of total decomposition is attributable to macroinvertebrate shredders?",
-      "options": [
-        "40%",
-        "53%",
-        "62%",
-        "75%"
-      ],
+      "options": ["40%", "53%", "62%", "75%"],
       "correctAnswer": "B",
       "explanation": "Total decomposition in coarse bags = 100% - 25% = 75% (due to microbes + macroinvertebrates). Decomposition in fine bags = 100% - 65% = 35% (due to microbes only). Macroinvertebrate contribution = 75% - 35% = 40% of original mass. As a percentage of total decomposition: 40/75 = 53.3%. This mesh-bag exclusion technique is a standard method for partitioning microbial vs. macroinvertebrate contributions to leaf litter decomposition in stream ecology. Shredder invertebrates (e.g., Gammarus, Tipula larvae) play a major role in processing coarse particulate organic matter (CPOM) into fine particulate organic matter (FPOM).",
       "isOlympiad": true,
@@ -1109,12 +1069,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about ecosystem restoration:\nI. Reference ecosystems provide targets for restoration but may not be achievable under changed climate conditions\nII. Restoration of degraded ecosystems always returns them to their historical state\nIII. Assisted migration of species to track climate change is a controversial but increasingly discussed restoration strategy\nIV. Ecosystem restoration can recover some but rarely all ecosystem functions and services of undegraded systems",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TFTT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "A",
       "explanation": "I. TRUE: Reference ecosystems provide restoration benchmarks, but climate change may make historical targets unachievable. II. FALSE: Restoration rarely returns ecosystems to their exact historical state. Complete recovery of species composition, soil properties, and all ecological processes can take centuries or may never occur, especially on degraded sites. III. TRUE: Assisted migration (managed relocation) involves deliberately moving species to new areas where climate conditions are predicted to be suitable. It is controversial because of risks of introducing species that become invasive. IV. TRUE: Meta-analyses of restoration projects show that restored ecosystems typically recover 80-86% of biodiversity and ecosystem services compared to undegraded reference systems.",
       "isOlympiad": true,
@@ -1209,12 +1164,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about ecosystem energy budgets:\nI. Secondary production efficiency is generally higher in ectotherms than endotherms\nII. Detritivores process more energy than herbivores in most terrestrial ecosystems\nIII. Net primary productivity equals the total amount of biomass available to consumers\nIV. Assimilation efficiency is higher for carnivores than for herbivores",
-      "options": [
-        "TTTT",
-        "TTFT",
-        "TFFT",
-        "TTTF"
-      ],
+      "options": ["TTTT", "TTFT", "TFFT", "TTTF"],
       "correctAnswer": "B",
       "explanation": "I. TRUE: Ectotherms use less energy for respiration (no thermoregulation), so more assimilated energy goes to growth (production efficiency ~10-40% vs ~1-3% for endotherms). II. TRUE: In most terrestrial ecosystems, the majority of primary production enters the detrital food web rather than being consumed by herbivores. III. FALSE: NPP equals GPP minus autotrophic respiration, representing organic matter accumulated by plants. However, not all NPP is available to consumers—some is stored in wood, some is chemically defended, etc. IV. TRUE: Carnivores assimilate ~80% of ingested food vs ~20-60% for herbivores because animal tissue is more digestible than plant tissue (less cellulose, lignin).",
       "isOlympiad": true,
@@ -1269,12 +1219,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about nutrient limitation in ecosystems:\nI. Liebig's Law of the Minimum states that growth is limited by the nutrient in shortest supply relative to demand\nII. Co-limitation by two or more nutrients simultaneously is common in natural ecosystems\nIII. Nitrogen typically limits productivity in marine ecosystems, while phosphorus limits freshwater ecosystems\nIV. Adding a limiting nutrient always increases primary productivity proportionally",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFF",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFF", "TFTT"],
       "correctAnswer": "A",
       "explanation": "I. TRUE: Liebig's Law states that the nutrient present in the lowest amount relative to demand (the most limiting) determines growth rate. II. TRUE: Meta-analyses show that co-limitation (simultaneous limitation by N + P, or other combinations) is common and may be the norm rather than the exception in natural ecosystems. III. TRUE: This is a well-established generalization—marine systems are typically N-limited, freshwater systems P-limited—though exceptions exist. IV. FALSE: Nutrient addition does not always increase productivity proportionally. Above certain thresholds, other factors (light, water, other nutrients, temperature) may become limiting. Also, nutrient additions can cause shifts in species composition, toxicity, or other non-linear responses.",
       "isOlympiad": true,
@@ -1449,12 +1394,7 @@
     {
       "type": "MCQ",
       "question": "Which biogeochemical cycle is MOST tightly coupled to the carbon cycle through the process of oxygenic photosynthesis?",
-      "options": [
-        "Nitrogen cycle",
-        "Phosphorus cycle",
-        "Oxygen cycle",
-        "Sulfur cycle"
-      ],
+      "options": ["Nitrogen cycle", "Phosphorus cycle", "Oxygen cycle", "Sulfur cycle"],
       "correctAnswer": "C",
       "explanation": "The oxygen cycle is most directly coupled to the carbon cycle through oxygenic photosynthesis (6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂) and aerobic respiration (the reverse). For every mole of carbon fixed by photosynthesis, one mole of O₂ is produced. Similarly, for every mole of organic carbon respired, one mole of O₂ is consumed. This tight coupling means that the atmospheric concentrations of CO₂ and O₂ are inversely correlated on seasonal and geological timescales. The current atmospheric O₂ concentration (21%) is maintained by the balance between photosynthetic O₂ production and respiratory/combustion O₂ consumption.",
       "isOlympiad": true,
@@ -1549,12 +1489,7 @@
     {
       "type": "MCQ",
       "question": "The concept of 'ecological footprint' measures human demand on the biosphere. If humanity's ecological footprint exceeds Earth's biocapacity, this is termed ecological overshoot. Currently, humanity uses approximately how many Earths' worth of biocapacity annually?",
-      "options": [
-        "0.7 Earths",
-        "1.0 Earth",
-        "1.7 Earths",
-        "3.5 Earths"
-      ],
+      "options": ["0.7 Earths", "1.0 Earth", "1.7 Earths", "3.5 Earths"],
       "correctAnswer": "C",
       "explanation": "According to the Global Footprint Network, humanity currently uses approximately 1.7 Earth's worth of biocapacity annually, meaning we use ecological resources 1.7 times faster than Earth can regenerate them. This ecological overshoot has been occurring since approximately the early 1970s. It is sustained by depleting natural capital (forests, fisheries, groundwater) and accumulating waste (CO₂ in the atmosphere). Earth Overshoot Day—the date when humanity has used all the biocapacity Earth can regenerate in a year—has been moving earlier each decade.",
       "isOlympiad": true,
@@ -1649,12 +1584,7 @@
     {
       "type": "MCQ",
       "question": "Which biogeochemical cycle has NO significant gaseous phase under normal conditions, making it the most easily disrupted by human activities such as mining and agriculture?",
-      "options": [
-        "Nitrogen cycle",
-        "Sulfur cycle",
-        "Phosphorus cycle",
-        "Carbon cycle"
-      ],
+      "options": ["Nitrogen cycle", "Sulfur cycle", "Phosphorus cycle", "Carbon cycle"],
       "correctAnswer": "C",
       "explanation": "The phosphorus cycle is unique among major biogeochemical cycles because phosphorus has no significant gaseous phase. It cycles through rock weathering → soil → organisms → sediments on geological timescales. This makes phosphorus the most likely nutrient to limit primary productivity in freshwater ecosystems and means that human additions (from mining phosphate rock for fertilizer) cannot be removed from ecosystems through atmospheric processes, leading to persistent eutrophication problems.",
       "isOlympiad": true,

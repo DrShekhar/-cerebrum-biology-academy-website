@@ -315,7 +315,9 @@ export default function OnlineNEETBiologyCoachingPage() {
                 For reference — competitor published rates (2024-25)
               </p>
               <div className="p-5 rounded-lg bg-slate-50 border border-slate-200">
-                <div className="text-sm text-slate-600 mb-1">the largest national NEET chain (Offline, full programme)</div>
+                <div className="text-sm text-slate-600 mb-1">
+                  the largest national NEET chain (Offline, full programme)
+                </div>
                 <div className="text-2xl font-bold text-slate-900">Rs 1.0–3.5 lakh/year</div>
                 <div className="text-xs text-slate-500 mt-1">
                   Includes classroom, test series, materials, and centre infrastructure
@@ -323,7 +325,9 @@ export default function OnlineNEETBiologyCoachingPage() {
               </div>
 
               <div className="p-5 rounded-lg bg-slate-50 border border-slate-200">
-                <div className="text-sm text-slate-600 mb-1">the 2nd-largest national NEET chain (Offline, full programme)</div>
+                <div className="text-sm text-slate-600 mb-1">
+                  the 2nd-largest national NEET chain (Offline, full programme)
+                </div>
                 <div className="text-2xl font-bold text-slate-900">Rs 1.2–2.8 lakh/year</div>
                 <div className="text-xs text-slate-500 mt-1">
                   Includes classroom, test series, study material
@@ -331,7 +335,9 @@ export default function OnlineNEETBiologyCoachingPage() {
               </div>
 
               <div className="p-5 rounded-lg bg-slate-50 border border-slate-200">
-                <div className="text-sm text-slate-600 mb-1">other online-only platforms (Online, recorded)</div>
+                <div className="text-sm text-slate-600 mb-1">
+                  other online-only platforms (Online, recorded)
+                </div>
                 <div className="text-2xl font-bold text-slate-900">Rs 3,000–15,000/year</div>
                 <div className="text-xs text-slate-500 mt-1">
                   Recorded videos; live interaction limited to doubt sessions

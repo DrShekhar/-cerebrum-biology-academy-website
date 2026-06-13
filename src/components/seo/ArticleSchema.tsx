@@ -30,6 +30,7 @@ export function ArticleSchema({
   tags = [],
   readTime,
 }: ArticleSchemaProps) {
+  const isDrShekhar = /^Dr\.?\s+Shekhar\s+C?\s*Singh/i.test(author.name)
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -42,25 +43,31 @@ export function ArticleSchema({
     // schema to the site-wide Person @id so Google merges the article
     // author with the master entity. Cerebrum-staffed articles inherit
     // the cross-vertical Person authority signals.
-    author:
-      /^Dr\.?\s+Shekhar\s+C?\s*Singh/i.test(author.name)
-        ? {
-            '@type': 'Person',
-            '@id':
-              'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
-            name: 'Dr. Shekhar C Singh',
-            jobTitle: author.role,
-            url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-biology-faculty-india',
-          }
-        : {
-            '@type': 'Person',
-            name: author.name,
-            jobTitle: author.role,
-            url: 'https://cerebrumbiologyacademy.com/about',
-          },
-    creator: {
-      '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
-    },
+    author: isDrShekhar
+      ? {
+          '@type': 'Person',
+          '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+          name: 'Dr. Shekhar C Singh',
+          jobTitle: author.role,
+          url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-biology-faculty-india',
+        }
+      : {
+          '@type': 'Person',
+          name: author.name,
+          jobTitle: author.role,
+          url: 'https://cerebrumbiologyacademy.com/about',
+        },
+    // creator mirrors the real author — only reference Dr. Shekhar's canonical
+    // Person @id when he actually wrote the article (else use the real author).
+    creator: isDrShekhar
+      ? {
+          '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+        }
+      : {
+          '@type': 'Person',
+          name: author.name,
+          jobTitle: author.role,
+        },
     publisher: {
       '@type': 'EducationalOrganization',
       '@id': 'https://cerebrumbiologyacademy.com/#organization',

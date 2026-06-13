@@ -194,9 +194,7 @@ export function MobileAppPromoSection({
     <section className="py-20 bg-indigo-700 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div
-          className="text-center mb-16 animate-fadeInUp"
-        >
+        <div className="text-center mb-16 animate-fadeInUp">
           <div className="flex items-center justify-center space-x-3 mb-6">
             <Smartphone className="w-12 h-12 text-blue-400" />
             <Sparkles className="w-8 h-8 text-yellow-400" />
@@ -214,18 +212,14 @@ export function MobileAppPromoSection({
 
           {/* App Statistics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div
-              className="text-center animate-fadeInUp"
-            >
+            <div className="text-center animate-fadeInUp">
               <div className="text-3xl font-bold text-green-400">
                 <AnimatedCounter value={appStats.downloads} suffix="+" />
               </div>
               <div className="text-blue-200 text-sm">Downloads</div>
             </div>
 
-            <div
-              className="text-center animate-fadeInUp"
-            >
+            <div className="text-center animate-fadeInUp">
               <div className="flex items-center justify-center space-x-1 text-3xl font-bold text-yellow-400">
                 <span>{appStats.rating}</span>
                 <Star className="w-6 h-6" />
@@ -233,18 +227,14 @@ export function MobileAppPromoSection({
               <div className="text-blue-200 text-sm">Rating</div>
             </div>
 
-            <div
-              className="text-center animate-fadeInUp"
-            >
+            <div className="text-center animate-fadeInUp">
               <div className="text-3xl font-bold text-purple-400">
                 <AnimatedCounter value={appStats.questionsSolved / 1000000} suffix="M+" />
               </div>
               <div className="text-blue-200 text-sm">Questions Solved</div>
             </div>
 
-            <div
-              className="text-center animate-fadeInUp"
-            >
+            <div className="text-center animate-fadeInUp">
               <div className="text-3xl font-bold text-blue-400">{appStats.activeUsers}%</div>
               <div className="text-blue-200 text-sm">Daily Active Users</div>
             </div>
@@ -254,18 +244,14 @@ export function MobileAppPromoSection({
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
           {/* Features Grid */}
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h3 className="text-3xl font-bold mb-8 text-center lg:text-left">
               Powerful Features Designed for NEET Success
             </h3>
 
             <div className="grid gap-6">
               {appFeatures.map((feature, index) => (
-                <div
-                  key={feature.id}
-                  className="group animate-fadeInUp"
-                >
+                <div key={feature.id} className="group animate-fadeInUp">
                   <PremiumCard
                     variant="default"
                     className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/15 transition-all duration-300"
@@ -292,9 +278,7 @@ export function MobileAppPromoSection({
           </div>
 
           {/* App Screenshots Carousel */}
-          <div
-            className="relative animate-fadeInUp"
-          >
+          <div className="relative animate-fadeInUp">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold mb-4">See the App in Action</h3>
               <p className="text-blue-200">Experience the future of NEET preparation</p>
@@ -305,31 +289,28 @@ export function MobileAppPromoSection({
               <div className="relative bg-gray-900 rounded-[3rem] p-3 shadow-2xl">
                 <div className="bg-black rounded-[2.5rem] p-2">
                   <div className="relative bg-white rounded-[2rem] overflow-hidden aspect-[9/19.5]">
-<div
-                        key={currentScreenshot}
-                        className="absolute inset-0 animate-fadeInUp"
-                      >
-                        <Image
-                          src={appScreenshots[currentScreenshot].image}
-                          alt={appScreenshots[currentScreenshot].title}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 768px) 100vw, 400px"
-                        />
+                    <div key={currentScreenshot} className="absolute inset-0 animate-fadeInUp">
+                      <Image
+                        src={appScreenshots[currentScreenshot].image}
+                        alt={appScreenshots[currentScreenshot].title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 400px"
+                      />
 
-                        {/* Overlay with app interface elements */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                      {/* Overlay with app interface elements */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-                        <div className="absolute bottom-4 left-4 right-4 text-white">
-                          <h4 className="font-bold text-lg mb-1">
-                            {appScreenshots[currentScreenshot].title}
-                          </h4>
-                          <p className="text-sm text-gray-200">
-                            {appScreenshots[currentScreenshot].description}
-                          </p>
-                        </div>
+                      <div className="absolute bottom-4 left-4 right-4 text-white">
+                        <h4 className="font-bold text-lg mb-1">
+                          {appScreenshots[currentScreenshot].title}
+                        </h4>
+                        <p className="text-sm text-gray-200">
+                          {appScreenshots[currentScreenshot].description}
+                        </p>
                       </div>
-</div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -365,9 +346,7 @@ export function MobileAppPromoSection({
         </div>
 
         {/* Special Offer Banner */}
-        <div
-          className="text-center mb-12 animate-fadeInUp"
-        >
+        <div className="text-center mb-12 animate-fadeInUp">
           <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-8 py-4 rounded-2xl font-bold text-lg mb-8">
             <Trophy className="w-6 h-6" />
             <span>Download now and get 7 days premium access FREE!</span>
@@ -376,9 +355,7 @@ export function MobileAppPromoSection({
         </div>
 
         {/* Download CTAs */}
-        <div
-          className="text-center animate-fadeInUp"
-        >
+        <div className="text-center animate-fadeInUp">
           <h3 className="text-2xl font-bold mb-8">Download the App Now</h3>
 
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
@@ -422,17 +399,15 @@ export function MobileAppPromoSection({
                 <QrCodeIcon className="w-5 h-5" />
                 <span>Scan QR Code</span>
               </button>
-{showQRCode && (
-                  <div
-                    className="absolute mt-20 bg-white p-4 rounded-xl shadow-xl animate-fadeInUp"
-                  >
-                    <div className="w-32 h-32 bg-gray-200 rounded-lg flex items-center justify-center">
-                      <QrCodeIcon className="w-16 h-16 text-gray-500" />
-                    </div>
-                    <p className="text-black text-xs mt-2 text-center">Scan to download</p>
+              {showQRCode && (
+                <div className="absolute mt-20 bg-white p-4 rounded-xl shadow-xl animate-fadeInUp">
+                  <div className="w-32 h-32 bg-gray-200 rounded-lg flex items-center justify-center">
+                    <QrCodeIcon className="w-16 h-16 text-gray-500" />
                   </div>
-                )}
-</div>
+                  <p className="text-black text-xs mt-2 text-center">Scan to download</p>
+                </div>
+              )}
+            </div>
 
             {/* SMS Option */}
             <PremiumButton

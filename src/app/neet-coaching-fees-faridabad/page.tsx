@@ -43,7 +43,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Fees in Faridabad 2026 | Compare Coaching Fees',
-    description: 'Compare NEET coaching fees in Faridabad 2026. Fee comparison of the 2nd-largest national NEET chain, a leading national educational institution, other Delhi-origin mid-tier institutes, Velocity, YV...',
+    description:
+      'Compare NEET coaching fees in Faridabad 2026. Fee comparison of the 2nd-largest national NEET chain, a leading national educational institution, other Delhi-origin mid-tier institutes, Velocity, YV...',
   },
 }
 
@@ -149,7 +150,8 @@ const faqs = [
       'We offer merit-based scholarships up to 100% fee waiver. Based on your Class 10/11/12 marks or our scholarship test. Students with 90%+ marks can get 50-75% scholarship.',
   },
   {
-    question: 'Why is Cerebrum cheaper than the 2nd-largest national NEET chain/a leading national educational institution?',
+    question:
+      'Why is Cerebrum cheaper than the 2nd-largest national NEET chain/a leading national educational institution?',
     answer:
       'We focus on Biology only (not all 3 subjects), keep batches small (15-20 students), and have minimal overhead. This allows us to offer premium quality at affordable fees. Our results prove that expensive does not mean better.',
   },
@@ -170,7 +172,11 @@ export default function NEETCoachingFeesFaridabadPage() {
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <LocalBusinessSchema />
       <CerebrumPersonSchema
-        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+        knowsAbout={[
+          'NEET Faridabad',
+          'NEET Biology Faridabad',
+          'Medical entrance coaching Faridabad',
+        ]}
       />
       {/* Hero */}
       <section className="bg-gradient-to-br from-blue-700 to-blue-900 text-white py-16">
@@ -437,7 +443,9 @@ export default function NEETCoachingFeesFaridabadPage() {
               Call Now: 88264-44334
             </a>
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition border border-white/30"
             >
               Book Free Demo

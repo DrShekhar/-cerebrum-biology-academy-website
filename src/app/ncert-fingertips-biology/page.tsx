@@ -86,18 +86,13 @@ export default function NCERTFingertipsBiologyPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-orange-500 via-amber-500 to-yellow-500 text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div
-            className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-fadeInUp"
-          />
-          <div
-            className="absolute -bottom-40 -left-40 w-96 h-96 bg-yellow-400/20 rounded-full blur-3xl animate-fadeInUp"
-          />
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-fadeInUp" />
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-yellow-400/20 rounded-full blur-3xl animate-fadeInUp" />
         </div>
 
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
                 <Star className="w-4 h-4 fill-yellow-300 text-yellow-300" />
                 <span className="text-sm font-medium">Best Seller for NEET</span>
@@ -148,9 +143,7 @@ export default function NCERTFingertipsBiologyPage() {
               </div>
             </div>
 
-            <div
-              className="hidden md:block animate-fadeInUp"
-            >
+            <div className="hidden md:block animate-fadeInUp">
               <BookStackIllustration className="w-full max-w-md mx-auto" />
             </div>
           </div>
@@ -160,9 +153,7 @@ export default function NCERTFingertipsBiologyPage() {
       {/* Book Features */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why NCERT Fingertips?
             </h2>
@@ -191,9 +182,7 @@ export default function NCERTFingertipsBiologyPage() {
       {/* Book Details */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div
-            className="max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="max-w-4xl mx-auto animate-fadeInUp">
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <div className="p-8 md:p-10">
                 <div className="flex flex-col md:flex-row items-start gap-6">
@@ -261,9 +250,7 @@ export default function NCERTFingertipsBiologyPage() {
       {/* Chapter-wise MCQs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Chapter-wise MCQ Count
             </h2>
@@ -296,9 +283,7 @@ export default function NCERTFingertipsBiologyPage() {
       {/* How to Use */}
       <section className="py-16 bg-gradient-to-br from-orange-50 to-amber-50">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               How to Use NCERT Fingertips Effectively
             </h2>
@@ -331,10 +316,7 @@ export default function NCERTFingertipsBiologyPage() {
                   description: 'Star difficult questions. Revise them weekly and before exams.',
                 },
               ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-2xl p-6 shadow-md animate-fadeInUp"
-                >
+                <div key={idx} className="bg-white rounded-2xl p-6 shadow-md animate-fadeInUp">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center text-white font-bold flex-shrink-0">
                       {item.step}
@@ -354,9 +336,7 @@ export default function NCERTFingertipsBiologyPage() {
       {/* Related Books */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Complete Your Collection
             </h2>
@@ -385,9 +365,7 @@ export default function NCERTFingertipsBiologyPage() {
                 color: 'blue-600',
               },
             ].map((book, idx) => (
-              <div
-                key={idx}
-               className="animate-fadeInUp">
+              <div key={idx} className="animate-fadeInUp">
                 <Link href={book.href}>
                   <div
                     className={`bg-gradient-to-br ${book.color} rounded-xl p-5 text-white text-center hover:shadow-lg transition-shadow`}
@@ -405,9 +383,7 @@ export default function NCERTFingertipsBiologyPage() {
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
@@ -444,8 +420,7 @@ export default function NCERTFingertipsBiologyPage() {
       {/* CTA */}
       <section className="py-16 bg-gradient-to-br from-orange-500 via-amber-500 to-yellow-500 text-white">
         <div className="container mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Need Help with NCERT Biology?</h2>
             <p className="text-white/90 max-w-2xl mx-auto mb-8">
               Join Cerebrum Academy for expert NCERT guidance and NEET preparation

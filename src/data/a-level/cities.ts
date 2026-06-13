@@ -56,12 +56,12 @@ export const aLevelCities: ALevelCityConfig[] = [
     timezoneIana: 'Europe/London',
     examBoards: ['AQA', 'OCR', 'Edexcel', 'CAIE'],
     heroBlurb:
-      'London is the UK\'s largest A-Level market with hundreds of sixth forms and independent schools offering Biology. Our tutors cover all four exam boards and align sessions to the London school calendar.',
+      "London is the UK's largest A-Level market with hundreds of sixth forms and independent schools offering Biology. Our tutors cover all four exam boards and align sessions to the London school calendar.",
     schools: [
       'Westminster School',
-      'St Paul\'s School',
+      "St Paul's School",
       'City of London School',
-      'King\'s College School Wimbledon',
+      "King's College School Wimbledon",
       'Dulwich College',
       'Latymer Upper School',
       'Highgate School',
@@ -91,7 +91,7 @@ export const aLevelCities: ALevelCityConfig[] = [
       {
         question: 'How do your A-Level Biology sessions prepare for medicine applications?',
         answer:
-          'Many London students target medicine at UCL, Imperial, or King\'s. We integrate BMAT/UCAT Biology overlap topics and help students articulate Biology knowledge in personal statements and interviews.',
+          "Many London students target medicine at UCL, Imperial, or King's. We integrate BMAT/UCAT Biology overlap topics and help students articulate Biology knowledge in personal statements and interviews.",
       },
     ],
     pricing: {
@@ -114,8 +114,8 @@ export const aLevelCities: ALevelCityConfig[] = [
       'Manchester has a strong sixth-form tradition with AQA headquartered in the city. Our tutors have deep familiarity with AQA Biology specification and the Manchester medical school admissions cycle.',
     schools: [
       'Manchester Grammar School',
-      'Withington Girls\' School',
-      'The King\'s School Macclesfield',
+      "Withington Girls' School",
+      "The King's School Macclesfield",
       'Cheadle Hulme School',
       'Stockport Grammar School',
       'Altrincham Grammar School for Girls',
@@ -159,9 +159,9 @@ export const aLevelCities: ALevelCityConfig[] = [
     timezoneIana: 'Europe/London',
     examBoards: ['AQA', 'OCR', 'Edexcel'],
     heroBlurb:
-      'Birmingham is the UK\'s second city with a large medical school intake at the University of Birmingham. Our A-Level Biology tutors support students across the West Midlands targeting medicine, dentistry, and bioscience degrees.',
+      "Birmingham is the UK's second city with a large medical school intake at the University of Birmingham. Our A-Level Biology tutors support students across the West Midlands targeting medicine, dentistry, and bioscience degrees.",
     schools: [
-      'King Edward\'s School Birmingham',
+      "King Edward's School Birmingham",
       'King Edward VI High School for Girls',
       'Edgbaston High School',
       'Solihull School',
@@ -213,7 +213,7 @@ export const aLevelCities: ALevelCityConfig[] = [
       'Bradford Grammar School',
       'Harrogate Grammar School',
       'The Grammar School at Leeds',
-      'Ermysted\'s Grammar School',
+      "Ermysted's Grammar School",
       'Ilkley Grammar School',
     ],
     faqs: [
@@ -258,16 +258,16 @@ export const aLevelCities: ALevelCityConfig[] = [
       'Edinburgh is home to world-class medical and bioscience programmes at the University of Edinburgh. While Scotland primarily uses SQA, many independent schools offer A-Levels in Biology.',
     schools: [
       'Edinburgh Academy',
-      'George Heriot\'s School',
+      "George Heriot's School",
       'Fettes College',
       'Merchiston Castle School',
-      'Stewart\'s Melville College',
+      "Stewart's Melville College",
     ],
     faqs: [
       {
         question: 'Do Edinburgh schools offer A-Level Biology?',
         answer:
-          'Many Edinburgh independent schools offer A-Levels alongside Scottish Highers. Edinburgh Academy, Fettes, and George Heriot\'s all offer A-Level Biology. We support both A-Level and Advanced Higher Biology.',
+          "Many Edinburgh independent schools offer A-Levels alongside Scottish Highers. Edinburgh Academy, Fettes, and George Heriot's all offer A-Level Biology. We support both A-Level and Advanced Higher Biology.",
       },
       {
         question: 'Which exam boards are used in Edinburgh for A-Level Biology?',
@@ -307,8 +307,8 @@ export const aLevelCities: ALevelCityConfig[] = [
       'Bristol Grammar School',
       'Clifton College',
       'Badminton School',
-      'Colston\'s School',
-      'Queen Elizabeth\'s Hospital',
+      "Colston's School",
+      "Queen Elizabeth's Hospital",
       'Redland Green School',
     ],
     faqs: [
@@ -402,10 +402,10 @@ export const aLevelCities: ALevelCityConfig[] = [
     schools: [
       'Magdalen College School',
       'Oxford High School',
-      'St Edward\'s School',
+      "St Edward's School",
       'Headington School',
       'Abingdon School',
-      'd\'Overbroeck\'s',
+      "d'Overbroeck's",
     ],
     faqs: [
       {
@@ -452,7 +452,7 @@ export const aLevelCities: ALevelCityConfig[] = [
     schools: [
       'Dubai College',
       'Jumeirah English Speaking School',
-      'Kings\' School Dubai',
+      "Kings' School Dubai",
       'Repton School Dubai',
       'Brighton College Dubai',
       'GEMS Wellington International School',
@@ -550,7 +550,7 @@ export const aLevelCities: ALevelCityConfig[] = [
     timezoneIana: 'Asia/Singapore',
     examBoards: ['CAIE', 'Edexcel'],
     heroBlurb:
-      'Singapore\'s British international schools offer CAIE and Edexcel A-Level Biology alongside the local H2 Biology pathway. Our tutors support both international A-Level and cross-preparation for NUS/NTU admissions.',
+      "Singapore's British international schools offer CAIE and Edexcel A-Level Biology alongside the local H2 Biology pathway. Our tutors support both international A-Level and cross-preparation for NUS/NTU admissions.",
     schools: [
       'Tanglin Trust School',
       'Dover Court International School',
@@ -599,7 +599,7 @@ export const aLevelCities: ALevelCityConfig[] = [
     timezoneIana: 'Asia/Hong_Kong',
     examBoards: ['CAIE', 'Edexcel'],
     heroBlurb:
-      'Hong Kong\'s British international schools deliver CAIE and Edexcel A-Level Biology to students targeting UK and Hong Kong university medicine programmes. Our tutors support both boards with HKT-aligned sessions.',
+      "Hong Kong's British international schools deliver CAIE and Edexcel A-Level Biology to students targeting UK and Hong Kong university medicine programmes. Our tutors support both boards with HKT-aligned sessions.",
     schools: [
       'Harrow International School Hong Kong',
       'Kellett School',
@@ -682,7 +682,7 @@ export const aLevelCities: ALevelCityConfig[] = [
       {
         question: 'Which universities do Delhi NCR A-Level students typically target?',
         answer:
-          'Most target UK Russell Group universities (Imperial, UCL, Edinburgh, King\'s) for medicine or biosciences. Some also apply to Indian private medical colleges using A-Level grades.',
+          "Most target UK Russell Group universities (Imperial, UCL, Edinburgh, King's) for medicine or biosciences. Some also apply to Indian private medical colleges using A-Level grades.",
       },
     ],
     pricing: {
@@ -750,7 +750,7 @@ export const aLevelCities: ALevelCityConfig[] = [
     timezoneIana: 'Asia/Kolkata',
     examBoards: ['CAIE', 'Edexcel'],
     heroBlurb:
-      'Bangalore\'s tech-driven international school community includes several schools offering CAIE A-Level Biology. Our tutors provide IST-aligned sessions with deep familiarity with the Bangalore academic calendar.',
+      "Bangalore's tech-driven international school community includes several schools offering CAIE A-Level Biology. Our tutors provide IST-aligned sessions with deep familiarity with the Bangalore academic calendar.",
     schools: [
       'Canadian International School',
       'Stonehill International School',
@@ -797,7 +797,7 @@ export const aLevelCities: ALevelCityConfig[] = [
     timezoneIana: 'Asia/Kolkata',
     examBoards: ['CAIE', 'Edexcel'],
     heroBlurb:
-      'Hyderabad\'s growing international school sector includes British curriculum schools offering CAIE A-Level Biology. Our tutors provide IST-aligned sessions for Hyderabad students targeting UK and Indian medical pathways.',
+      "Hyderabad's growing international school sector includes British curriculum schools offering CAIE A-Level Biology. Our tutors provide IST-aligned sessions for Hyderabad students targeting UK and Indian medical pathways.",
     schools: [
       'Oakridge International School',
       'Chirec International School',
@@ -852,14 +852,14 @@ export const aLevelCities: ALevelCityConfig[] = [
       'Garden International School',
       'Marlborough College Malaysia',
       'Epsom College in Malaysia',
-      'Taylor\'s College',
+      "Taylor's College",
       'INTI International College',
     ],
     faqs: [
       {
         question: 'Which A-Level Biology exam boards are used in Kuala Lumpur?',
         answer:
-          'CAIE is the dominant board in KL. Alice Smith, Garden International, and Marlborough College all use CAIE. Taylor\'s College offers Edexcel. We cover both.',
+          "CAIE is the dominant board in KL. Alice Smith, Garden International, and Marlborough College all use CAIE. Taylor's College offers Edexcel. We cover both.",
       },
       {
         question: 'How much does A-Level Biology tutoring cost in KL?',
@@ -896,7 +896,7 @@ export const aLevelCities: ALevelCityConfig[] = [
     timezoneIana: 'Africa/Lagos',
     examBoards: ['CAIE', 'Edexcel'],
     heroBlurb:
-      'Lagos has a thriving British curriculum school community serving Nigeria\'s elite families. CAIE and Edexcel A-Level Biology are the standard pathways for students targeting UK medical schools from Nigeria.',
+      "Lagos has a thriving British curriculum school community serving Nigeria's elite families. CAIE and Edexcel A-Level Biology are the standard pathways for students targeting UK medical schools from Nigeria.",
     schools: [
       'British International School Lagos',
       'Grange School',
@@ -941,9 +941,7 @@ export const aLevelCities: ALevelCityConfig[] = [
   },
 ]
 
-const cityMap = new Map<string, ALevelCityConfig>(
-  aLevelCities.map((c) => [c.slug, c])
-)
+const cityMap = new Map<string, ALevelCityConfig>(aLevelCities.map((c) => [c.slug, c]))
 
 export function aLevelCitySlugs(): string[] {
   return aLevelCities.map((c) => c.slug)

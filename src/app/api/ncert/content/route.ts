@@ -59,35 +59,38 @@ export async function GET(request: NextRequest) {
       page.figures.forEach((fig) => allFigures.add(fig))
     }
 
-    return NextResponse.json({
-      success: true,
-      chapter: {
-        number: chapter.number,
-        name: chapter.name,
-        ncertClass: chapter.ncertClass,
-        neetWeightage: chapter.neetWeightage,
-        topicsCovered: chapter.topicsCovered,
-        keyDiagrams: chapter.keyDiagrams,
-        totalPages: chapter.totalPages,
-      },
-      content: {
-        pages: pages.map((p) => ({
-          pageNumber: p.pageNumber,
-          contentPreview: p.content.substring(0, 500) + (p.content.length > 500 ? '...' : ''),
-          keyTermsCount: p.keyTerms.length,
-          statementsCount: p.importantStatements.length,
-          figuresCount: p.figures.length,
-        })),
-        aggregated: {
-          keyTerms: Array.from(allKeyTerms),
-          importantStatements: allStatements.slice(0, 50), // Limit to 50
-          figures: Array.from(allFigures),
+    return NextResponse.json(
+      {
+        success: true,
+        chapter: {
+          number: chapter.number,
+          name: chapter.name,
+          ncertClass: chapter.ncertClass,
+          neetWeightage: chapter.neetWeightage,
+          topicsCovered: chapter.topicsCovered,
+          keyDiagrams: chapter.keyDiagrams,
+          totalPages: chapter.totalPages,
         },
+        content: {
+          pages: pages.map((p) => ({
+            pageNumber: p.pageNumber,
+            contentPreview: p.content.substring(0, 500) + (p.content.length > 500 ? '...' : ''),
+            keyTermsCount: p.keyTerms.length,
+            statementsCount: p.importantStatements.length,
+            figuresCount: p.figures.length,
+          })),
+          aggregated: {
+            keyTerms: Array.from(allKeyTerms),
+            importantStatements: allStatements.slice(0, 50), // Limit to 50
+            figures: Array.from(allFigures),
+          },
+        },
+        questionGenerationReady: pages.some((p) => p.content.length > 0),
       },
-      questionGenerationReady: pages.some((p) => p.content.length > 0),
-    }, {
-      headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
-    })
+      {
+        headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
+      }
+    )
   } catch (error) {
     console.error('[NCERT Content API] Error:', error)
     return NextResponse.json(

@@ -40,7 +40,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'USMLE Step 1 Physiology Prep | BRS + Costanzo + Pathophysiology Bridge',
-    description: 'USMLE Step 1 physiology coaching from AIIMS-trained specialists. Cardiovascular, renal, respiratory, endocrine, GI, neurophysiology — bridged to pathophysiology mechanism. $2,499 full programme.',
+    description:
+      'USMLE Step 1 physiology coaching from AIIMS-trained specialists. Cardiovascular, renal, respiratory, endocrine, GI, neurophysiology — bridged to pathophysiology mechanism. $2,499 full programme.',
   },
 }
 

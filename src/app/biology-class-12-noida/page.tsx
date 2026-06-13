@@ -1,6 +1,20 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MessageCircle, CheckCircle, Trophy, Monitor, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift, AlertTriangle } from 'lucide-react'
+import {
+  Phone,
+  MessageCircle,
+  CheckCircle,
+  Trophy,
+  Monitor,
+  Building2,
+  MapPin,
+  ArrowRight,
+  BookOpen,
+  Target,
+  Clock,
+  Gift,
+  AlertTriangle,
+} from 'lucide-react'
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
@@ -21,7 +35,8 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'Class 12 Biology Coaching Noida | NEET + Board 2026',
-    description: 'Expert Class 12 Biology coaching for NEET & Boards. AIIMS faculty, proven results.',
+    description:
+      'Expert Class 12 Biology coaching for NEET & Boards. AIIMS faculty, proven results.',
     url: 'https://cerebrumbiologyacademy.com/biology-class-12-noida',
   },
   alternates: {
@@ -31,7 +46,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Class 12 Biology Coaching in Noida 2026 | NEET + Board',
-    description: 'Best Class 12 Biology coaching in Noida. NEET + Board exam integrated. AIIMS faculty, Rs 70,000/year. Gaur City, Sector 150, Greater Noida. 650+ NEET scorers. Free demo!',
+    description:
+      'Best Class 12 Biology coaching in Noida. NEET + Board exam integrated. AIIMS faculty, Rs 70,000/year. Gaur City, Sector 150, Greater Noida. 650+ NEET scorers. Free demo!',
   },
 }
 
@@ -41,7 +57,12 @@ const courses = [
     duration: '12 months',
     mode: '30-40 students | 6 hrs/week',
     fee: '70,000',
-    features: ['AIIMS faculty teaching', 'NEET syllabus coverage', '5,000+ practice questions', '20+ mock tests'],
+    features: [
+      'AIIMS faculty teaching',
+      'NEET syllabus coverage',
+      '5,000+ practice questions',
+      '20+ mock tests',
+    ],
     popular: true,
   },
   {
@@ -49,7 +70,12 @@ const courses = [
     duration: '12 months',
     mode: '16-18 students | 8 hrs/week',
     fee: '76,000',
-    features: ['Focused NEET preparation', '8,000+ practice questions', '30+ mock tests', 'NEET strategy sessions'],
+    features: [
+      'Focused NEET preparation',
+      '8,000+ practice questions',
+      '30+ mock tests',
+      'NEET strategy sessions',
+    ],
     recommended: true,
   },
   {
@@ -57,7 +83,12 @@ const courses = [
     duration: '12 months',
     mode: '10-12 students | 10-12 hrs/week',
     fee: '98,000',
-    features: ['Personal mentorship from Dr. Shekhar', '15,000+ practice questions', '50+ full-length mocks', 'Money-back guarantee'],
+    features: [
+      'Personal mentorship from Dr. Shekhar',
+      '15,000+ practice questions',
+      '50+ full-length mocks',
+      'Money-back guarantee',
+    ],
   },
 ]
 
@@ -68,28 +99,50 @@ const freeTools = [
 ]
 
 const syllabus = [
-  { unit: 'Reproduction', chapters: 'Reproduction in Organisms, Sexual Reproduction in Plants, Human Reproduction, Reproductive Health', weight: '12%' },
-  { unit: 'Genetics & Evolution', chapters: 'Principles of Inheritance, Molecular Basis of Inheritance, Evolution', weight: '18%' },
-  { unit: 'Biology & Human Welfare', chapters: 'Human Health & Disease, Microbes in Human Welfare, Biotechnology Principles & Applications', weight: '14%' },
-  { unit: 'Ecology', chapters: 'Organisms & Populations, Ecosystem, Biodiversity, Environmental Issues', weight: '14%' },
+  {
+    unit: 'Reproduction',
+    chapters:
+      'Reproduction in Organisms, Sexual Reproduction in Plants, Human Reproduction, Reproductive Health',
+    weight: '12%',
+  },
+  {
+    unit: 'Genetics & Evolution',
+    chapters: 'Principles of Inheritance, Molecular Basis of Inheritance, Evolution',
+    weight: '18%',
+  },
+  {
+    unit: 'Biology & Human Welfare',
+    chapters:
+      'Human Health & Disease, Microbes in Human Welfare, Biotechnology Principles & Applications',
+    weight: '14%',
+  },
+  {
+    unit: 'Ecology',
+    chapters: 'Organisms & Populations, Ecosystem, Biodiversity, Environmental Issues',
+    weight: '14%',
+  },
 ]
 
 const faqs = [
   {
     question: 'Can I prepare for both Board and NEET together in Class 12?',
-    answer: 'Yes! Our Class 12 course integrates Board and NEET preparation. NCERT is covered thoroughly (for boards) at NEET depth. Most NEET toppers score 95%+ in boards too. We complete syllabus by December for revision.',
+    answer:
+      'Yes! Our Class 12 course integrates Board and NEET preparation. NCERT is covered thoroughly (for boards) at NEET depth. Most NEET toppers score 95%+ in boards too. We complete syllabus by December for revision.',
   },
   {
     question: 'What is the fee for Class 12 Biology coaching in Noida?',
-    answer: 'Our Class 12 Biology fees: Pursuit (30-40 students) - Rs 70,000/year, Ascent (16-18 students) - Rs 76,000/year, Pinnacle (10-12 students) - Rs 98,000/year. All tiers include AIIMS faculty, test series, and doubt support.',
+    answer:
+      'Our Class 12 Biology fees: Pursuit (30-40 students) - Rs 70,000/year, Ascent (16-18 students) - Rs 76,000/year, Pinnacle (10-12 students) - Rs 98,000/year. All tiers include AIIMS faculty, test series, and doubt support.',
   },
   {
     question: 'Is it too late to join NEET coaching in Class 12?',
-    answer: 'Not at all! Class 12 is actually the best time - you have fresh syllabus knowledge and focused preparation time. Many of our 650+ scorers joined in Class 12. Our intensive program is designed for this.',
+    answer:
+      'Not at all! Class 12 is actually the best time - you have fresh syllabus knowledge and focused preparation time. Many of our 650+ scorers joined in Class 12. Our intensive program is designed for this.',
   },
   {
     question: 'How do online classes work for Class 12 students?',
-    answer: 'Live interactive classes via Zoom, 6 days/week. Recorded lectures for revision. WhatsApp group for instant doubts. Weekly tests with detailed analysis. Most Noida students prefer online for convenience.',
+    answer:
+      'Live interactive classes via Zoom, 6 days/week. Recorded lectures for revision. WhatsApp group for instant doubts. Weekly tests with detailed analysis. Most Noida students prefer online for convenience.',
   },
 ]
 
@@ -100,8 +153,16 @@ const results = [
 ]
 
 const areas = [
-  'Gaur City', 'Sector 150', 'Greater Noida West', 'Sector 128', 'Jaypee Greens',
-  'ATS Pristine', 'Sector 62', 'Sector 18', 'Noida Extension', 'Sector 137'
+  'Gaur City',
+  'Sector 150',
+  'Greater Noida West',
+  'Sector 128',
+  'Jaypee Greens',
+  'ATS Pristine',
+  'Sector 62',
+  'Sector 18',
+  'Noida Extension',
+  'Sector 137',
 ]
 
 export default function BiologyClass12NoidaPage() {
@@ -110,7 +171,10 @@ export default function BiologyClass12NoidaPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/biology-class-12-noida"
         pageName="Class 12 Biology Coaching in Noida"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
         personKnowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
       />
       {/* Urgency Banner */}
@@ -130,9 +194,12 @@ export default function BiologyClass12NoidaPage() {
             <span className="inline-flex items-center gap-2 bg-yellow-500 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
               <Trophy className="w-4 h-4" /> 650+ NEET Scorers
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Class 12 Biology Coaching in Noida</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Class 12 Biology Coaching in Noida
+            </h1>
             <p className="text-xl text-slate-300 mb-6">
-              NEET + Board integrated coaching. Score 650+ in NEET and 95%+ in Boards with AIIMS faculty.
+              NEET + Board integrated coaching. Score 650+ in NEET and 95%+ in Boards with AIIMS
+              faculty.
             </p>
 
             {/* Results Stats */}
@@ -140,7 +207,9 @@ export default function BiologyClass12NoidaPage() {
               {results.map((result, index) => (
                 <div key={index} className="text-center">
                   <p className="text-3xl font-bold text-yellow-400">{result.count}</p>
-                  <p className="text-sm text-slate-300">{result.score} {result.label}</p>
+                  <p className="text-sm text-slate-300">
+                    {result.score} {result.label}
+                  </p>
                 </div>
               ))}
             </div>
@@ -191,8 +260,12 @@ export default function BiologyClass12NoidaPage() {
       {/* Course Cards */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Class 12 Biology Courses for Noida Students</h2>
-          <p className="text-center text-gray-600 mb-12">NEET + Board Exam Integrated Preparation</p>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Class 12 Biology Courses for Noida Students
+          </h2>
+          <p className="text-center text-gray-600 mb-12">
+            NEET + Board Exam Integrated Preparation
+          </p>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {courses.map((course, index) => (
@@ -202,8 +275,8 @@ export default function BiologyClass12NoidaPage() {
                   course.recommended
                     ? 'bg-yellow-400 shadow-xl scale-105'
                     : course.popular
-                    ? 'bg-indigo-50 border-2 border-indigo-300'
-                    : 'bg-gray-50 border-2 border-gray-200'
+                      ? 'bg-indigo-50 border-2 border-indigo-300'
+                      : 'bg-gray-50 border-2 border-gray-200'
                 }`}
               >
                 {course.recommended && (
@@ -216,9 +289,15 @@ export default function BiologyClass12NoidaPage() {
                     MOST POPULAR
                   </span>
                 )}
-                <Monitor className={`w-10 h-10 mb-4 ${course.recommended ? 'text-slate-900' : 'text-indigo-600'}`} />
+                <Monitor
+                  className={`w-10 h-10 mb-4 ${course.recommended ? 'text-slate-900' : 'text-indigo-600'}`}
+                />
                 <h3 className="text-xl font-bold mb-2">{course.name}</h3>
-                <p className={`text-sm mb-2 ${course.recommended ? 'text-slate-700' : 'text-gray-500'}`}>{course.mode}</p>
+                <p
+                  className={`text-sm mb-2 ${course.recommended ? 'text-slate-700' : 'text-gray-500'}`}
+                >
+                  {course.mode}
+                </p>
                 <p className="text-3xl font-bold mb-4">
                   ₹{course.fee}
                   <span className="text-sm font-normal">/year</span>
@@ -226,7 +305,9 @@ export default function BiologyClass12NoidaPage() {
                 <ul className="space-y-2 mb-6">
                   {course.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm">
-                      <CheckCircle className={`w-4 h-4 mt-0.5 ${course.recommended ? 'text-slate-900' : 'text-green-600'}`} />
+                      <CheckCircle
+                        className={`w-4 h-4 mt-0.5 ${course.recommended ? 'text-slate-900' : 'text-green-600'}`}
+                      />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -251,8 +332,12 @@ export default function BiologyClass12NoidaPage() {
       {/* Syllabus Section */}
       <section className="py-16 bg-indigo-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Class 12 Biology Syllabus - NEET Weightage</h2>
-          <p className="text-center text-gray-600 mb-12">Class 12 contributes ~50% of NEET Biology questions</p>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Class 12 Biology Syllabus - NEET Weightage
+          </h2>
+          <p className="text-center text-gray-600 mb-12">
+            Class 12 contributes ~50% of NEET Biology questions
+          </p>
 
           <div className="max-w-4xl mx-auto space-y-4">
             {syllabus.map((unit, index) => (
@@ -273,12 +358,19 @@ export default function BiologyClass12NoidaPage() {
       {/* Areas Served */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Serving Class 12 Students Across Noida</h2>
-          <p className="text-center text-gray-600 mb-8">Online classes available for all locations</p>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Serving Class 12 Students Across Noida
+          </h2>
+          <p className="text-center text-gray-600 mb-8">
+            Online classes available for all locations
+          </p>
 
           <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
             {areas.map((area) => (
-              <span key={area} className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium">
+              <span
+                key={area}
+                className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium"
+              >
                 <MapPin className="w-3 h-3 inline mr-1" />
                 {area}
               </span>
@@ -296,7 +388,9 @@ export default function BiologyClass12NoidaPage() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-indigo-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-indigo-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>
@@ -309,7 +403,9 @@ export default function BiologyClass12NoidaPage() {
       <section className="py-16 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Don't Wait - NEET 2026 is Approaching!</h2>
-          <p className="text-xl text-slate-300 mb-8">Join Class 12 Batch now and secure your medical seat</p>
+          <p className="text-xl text-slate-300 mb-8">
+            Join Class 12 Batch now and secure your medical seat
+          </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <a
@@ -343,7 +439,10 @@ export default function BiologyClass12NoidaPage() {
         breadcrumbs={[
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
           { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
-          { name: 'Class 12 Biology Noida', url: 'https://cerebrumbiologyacademy.com/biology-class-12-noida' },
+          {
+            name: 'Class 12 Biology Noida',
+            url: 'https://cerebrumbiologyacademy.com/biology-class-12-noida',
+          },
         ]}
         customFAQs={faqs}
       />

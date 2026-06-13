@@ -15,7 +15,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://cerebrumbiologyaca
 export function generatePageMetadata(params: PageMetadataParams): Metadata {
   const keywordsArray = Array.isArray(params.keywords)
     ? params.keywords
-    : params.keywords.split(',').map(k => k.trim())
+    : params.keywords.split(',').map((k) => k.trim())
 
   const canonicalUrl = params.canonical || `${BASE_URL}${params.path}`
 

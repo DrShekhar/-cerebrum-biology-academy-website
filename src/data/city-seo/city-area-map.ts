@@ -12,7 +12,10 @@ interface AreaInfo {
 }
 
 function toAreaInfoList(
-  details: Record<string, { name: string; schools: string[]; nearbyMetro: string[]; landmarks?: string[] }>
+  details: Record<
+    string,
+    { name: string; schools: string[]; nearbyMetro: string[]; landmarks?: string[] }
+  >
 ): AreaInfo[] {
   return Object.values(details).map((d) => ({
     name: d.name,

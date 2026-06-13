@@ -44,10 +44,18 @@ export function PersonalizedContent({
   return (
     <div className={`${className}`}>
       {section === 'hero' && <PersonalizedHero data={personalizedData as PersonalizedHeroData} />}
-      {section === 'courses' && <PersonalizedCourses data={personalizedData as PersonalizedCoursesData} />}
-      {section === 'recommendations' && <PersonalizedRecommendations data={personalizedData as PersonalizedRecommendationsData} />}
-      {section === 'testimonials' && <PersonalizedTestimonials data={personalizedData as PersonalizedTestimonialsData} />}
-      {section === 'urgency' && <PersonalizedUrgency data={personalizedData as PersonalizedUrgencyData} />}
+      {section === 'courses' && (
+        <PersonalizedCourses data={personalizedData as PersonalizedCoursesData} />
+      )}
+      {section === 'recommendations' && (
+        <PersonalizedRecommendations data={personalizedData as PersonalizedRecommendationsData} />
+      )}
+      {section === 'testimonials' && (
+        <PersonalizedTestimonials data={personalizedData as PersonalizedTestimonialsData} />
+      )}
+      {section === 'urgency' && (
+        <PersonalizedUrgency data={personalizedData as PersonalizedUrgencyData} />
+      )}
     </div>
   )
 }
@@ -110,9 +118,7 @@ type PersonalizedData =
 
 function PersonalizedHero({ data }: { data: PersonalizedHeroData }) {
   return (
-    <div
-      className="text-center mb-8 animate-fadeInUp"
-    >
+    <div className="text-center mb-8 animate-fadeInUp">
       <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
         <Heart className="w-4 h-4 mr-2" />
         Personalized for You
@@ -137,9 +143,7 @@ function PersonalizedCourses({ data }: { data: PersonalizedCoursesData }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {data.courses.map((course, index: number) => (
-        <div
-          key={course.id}
-         className="animate-fadeInUp">
+        <div key={course.id} className="animate-fadeInUp">
           <Card
             className={`h-full ${course.recommended ? 'border-2 border-primary/30 bg-primary/5' : ''}`}
           >
@@ -266,9 +270,7 @@ function PersonalizedTestimonials({ data }: { data: PersonalizedTestimonialsData
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {data.testimonials.map((testimonial, index: number) => (
-          <div
-            key={index}
-           className="animate-fadeInUp">
+          <div key={index} className="animate-fadeInUp">
             <Card className="h-full">
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-2">
@@ -444,7 +446,11 @@ function generatePersonalizedContent(
   }
 }
 
-function generatePersonalizedHero(preferences: UserPreferences, segment: string, visitCount: number): PersonalizedHeroData {
+function generatePersonalizedHero(
+  preferences: UserPreferences,
+  segment: string,
+  visitCount: number
+): PersonalizedHeroData {
   const isReturningUser = visitCount > 1
 
   if (preferences.class === '12') {
@@ -504,7 +510,11 @@ function generatePersonalizedHero(preferences: UserPreferences, segment: string,
   }
 }
 
-function generatePersonalizedCourses(preferences: UserPreferences, recommendations: UserRecommendations, segment: string): PersonalizedCoursesData {
+function generatePersonalizedCourses(
+  preferences: UserPreferences,
+  recommendations: UserRecommendations,
+  segment: string
+): PersonalizedCoursesData {
   const courses = []
 
   if (preferences.class === '12') {
@@ -587,7 +597,10 @@ function generatePersonalizedCourses(preferences: UserPreferences, recommendatio
   return { courses }
 }
 
-function generatePersonalizedTestimonials(preferences: UserPreferences, segment: string): PersonalizedTestimonialsData {
+function generatePersonalizedTestimonials(
+  preferences: UserPreferences,
+  segment: string
+): PersonalizedTestimonialsData {
   const testimonials = []
 
   if (preferences.class === '12') {
@@ -651,7 +664,11 @@ function generatePersonalizedTestimonials(preferences: UserPreferences, segment:
   return { testimonials: testimonials.slice(0, 3) }
 }
 
-function generatePersonalizedUrgency(preferences: UserPreferences, recommendations: UserRecommendations, segment: string): PersonalizedUrgencyData {
+function generatePersonalizedUrgency(
+  preferences: UserPreferences,
+  recommendations: UserRecommendations,
+  segment: string
+): PersonalizedUrgencyData {
   if (preferences.class === '12') {
     return {
       urgencyLevel: 'high',

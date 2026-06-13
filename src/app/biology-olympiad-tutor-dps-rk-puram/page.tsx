@@ -46,8 +46,15 @@ export default function Page() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/biology-olympiad-tutor-dps-rk-puram"
         pageName="Biology Olympiad Tutor for DPS RK Puram"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
-        personKnowsAbout={['NEET DPS RK Puram', 'NEET Biology DPS RK Puram', 'Medical entrance coaching DPS RK Puram']}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
+        personKnowsAbout={[
+          'NEET DPS RK Puram',
+          'NEET Biology DPS RK Puram',
+          'Medical entrance coaching DPS RK Puram',
+        ]}
       />
       <IndiaOlympiadSchoolSchemas school={school} />
       <IndiaOlympiadSchoolTemplate school={school} />

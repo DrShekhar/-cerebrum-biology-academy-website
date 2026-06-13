@@ -14,7 +14,12 @@ export const metadata: Metadata = {
     description: 'Thank You | Cerebrum Biology Academy',
   },
 
-  openGraph: { title: 'Thank You | Cerebrum Biology Academy', description: 'Thank You | Cerebrum Biology Academy', type: 'website', locale: 'en_IN' },
+  openGraph: {
+    title: 'Thank You | Cerebrum Biology Academy',
+    description: 'Thank You | Cerebrum Biology Academy',
+    type: 'website',
+    locale: 'en_IN',
+  },
 }
 
 export default function ThankYouLayout({ children }: { children: React.ReactNode }) {

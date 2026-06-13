@@ -156,9 +156,7 @@ const CourseCard = ({
   const perYearPrice = Math.round(price * 0.85) // Assuming some discount for annual payment
 
   return (
-    <div
-      className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 relative overflow-hidden animate-fadeInUp"
-    >
+    <div className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 relative overflow-hidden animate-fadeInUp">
       {/* Popular Badge */}
       {course.isPopular && (
         <div className="absolute top-4 right-4">

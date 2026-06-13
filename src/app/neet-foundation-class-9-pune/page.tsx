@@ -36,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 9 in Pune | AIIMS-Trained Online Live',
-    description: 'NEET Foundation Class 9 in Pune at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Maharashtra Board + NEET parallel. Koregaon Park, Kalyani Nagar, Aundh,...',
+    description:
+      'NEET Foundation Class 9 in Pune at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Maharashtra Board + NEET parallel. Koregaon Park, Kalyani Nagar, Aundh,...',
   },
 }
 
@@ -57,7 +58,8 @@ const faqs = [
       "Common Pune feeder schools across Class 9-10 Foundation cohorts: Symbiosis International School (Viman Nagar), Mercedes-Benz International School (Hadapsar), Indus International School (Bavdhan), Vibgyor High (Balewadi, Magarpatta, Kondhwa), Bishop's School (Camp + Undri), Loyola High School (Camp), Mahindra International School (Lavale), MIT Vishwashanti Gurukul (Loni Kalbhor), Pawar Public School (Hinjewadi, Bavdhan), DPS Pune, The Bishop's Co-Ed (Kalyani Nagar), Hutchings High School (Camp), Akshara International (Wakad), DSK World (Wadgaon Sheri), Sanskriti School (Bhosari). Maharashtra State Board feeders span the broader Pune Municipal Corporation school catchment.",
   },
   {
-    question: 'How does Cerebrum compare to the 2nd-largest national NEET chain Pune or the largest national NEET chain Pune for Class 9 Foundation?',
+    question:
+      'How does Cerebrum compare to the 2nd-largest national NEET chain Pune or the largest national NEET chain Pune for Class 9 Foundation?',
     answer:
       "the 2nd-largest national NEET chain Scholastics Pune operates ~5 centres (Camp, Pimpri-Chinchwad, Kothrud, Aundh, Hadapsar) with 150-300 student PCB Foundation batches. the largest national NEET chain Pune operates 1-2 centres. Local players: Sinhgad Foundation, Lakshya by Bansal Pune. Cerebrum is biology-only with 15-20 student online live batches and AIIMS-trained biology faculty — structurally different positioning. Pune's strong IT-professional and academic family base disproportionately values pedagogy depth over mass-batch test series. Common Pune pattern: Cerebrum biology (₹55K-75K Ascent) + the 2nd-largest national NEET chain for PC for total ₹1L-1.4L.",
   },

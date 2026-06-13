@@ -87,21 +87,25 @@ Required in `.env.local`: `DATABASE_URL`, `DIRECT_DATABASE_URL`, `NEXTAUTH_SECRE
 ## Workflow
 
 ### Before Changes
+
 1. **ALWAYS `git pull` first**
 2. Read related files first, check existing patterns
 
 ### During Development
+
 1. Make incremental changes
 2. Run `npm run type-check` frequently
 3. **Commit every 20-30 messages or at 60-70% context usage**
 4. Break large tasks into subtasks, commit incrementally
 
 ### Before Committing
+
 1. Run: `npm run type-check && npm run lint && npm test`
 2. Format: `npm run format`
 3. Check responsiveness: Mobile (375px), Tablet (768px), Desktop (1280px+)
 
 ### Deployment
+
 1. `npm run deploy:pre-check`
 2. Verify staging preview first
 3. `npm run deploy:production`

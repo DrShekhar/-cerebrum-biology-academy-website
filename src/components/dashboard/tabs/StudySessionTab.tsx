@@ -33,10 +33,7 @@ export function StudySessionTab({
   formatTime,
 }: StudySessionTabProps) {
   return (
-    <div
-      key="study"
-      className="space-y-4 sm:space-y-8 animate-fadeInUp"
-    >
+    <div key="study" className="space-y-4 sm:space-y-8 animate-fadeInUp">
       {/* Study Timer - Mobile Optimized */}
       <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg">
         <div className="text-center">

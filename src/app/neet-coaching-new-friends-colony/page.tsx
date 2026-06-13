@@ -21,7 +21,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Best NEET Biology Coaching in New Friends Colony, Delhi',
-    description: 'Expert NEET biology coaching at New Friends Colony. AIIMS faculty, 98% success rate, small batches.',
+    description:
+      'Expert NEET biology coaching at New Friends Colony. AIIMS faculty, 98% success rate, small batches.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-new-friends-colony',
   },
   alternates: {
@@ -31,7 +32,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best NEET Biology Coaching in New Friends Colony, Delhi',
-    description: 'Top NEET biology coaching in New Friends Colony, Delhi. Expert AIIMS faculty, 98% success rate, live classes & comprehensive test series. 780+ students. Call 88264-44334.',
+    description:
+      'Top NEET biology coaching in New Friends Colony, Delhi. Expert AIIMS faculty, 98% success rate, live classes & comprehensive test series. 780+ students. Call 88264-44334.',
   },
 }
 
@@ -80,7 +82,8 @@ export default function NEETCoachingNewFriendsColonyPage() {
             Best NEET Biology Coaching in New Friends Colony, Delhi
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl">
-            Premier NEET coaching for NFC & South Delhi students. AIIMS faculty, 98% success rate, live classes, and personalized guidance.
+            Premier NEET coaching for NFC & South Delhi students. AIIMS faculty, 98% success rate,
+            live classes, and personalized guidance.
           </p>
           <div className="mt-8 flex gap-4 flex-wrap">
             <a
@@ -105,13 +108,17 @@ export default function NEETCoachingNewFriendsColonyPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">Cerebrum South Extension - NFC Location</h2>
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">
+                Cerebrum South Extension - NFC Location
+              </h2>
               <div className="space-y-4">
                 <div className="flex gap-3">
                   <MapPin className="w-6 h-6 text-green-500 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-gray-900">Location</p>
-                    <p className="text-gray-700">D 35, South Extension Part 2, New Delhi - 110049</p>
+                    <p className="text-gray-700">
+                      D 35, South Extension Part 2, New Delhi - 110049
+                    </p>
                     <p className="text-sm text-gray-600">5 min walk from New Friends Colony</p>
                   </div>
                 </div>
@@ -119,7 +126,10 @@ export default function NEETCoachingNewFriendsColonyPage() {
                   <Phone className="w-6 h-6 text-green-500 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-gray-900">Phone</p>
-                    <a href={`tel:${CONTACT_INFO.phone.primary}`} className="text-green-600 hover:text-green-700 font-semibold">
+                    <a
+                      href={`tel:${CONTACT_INFO.phone.primary}`}
+                      className="text-green-600 hover:text-green-700 font-semibold"
+                    >
                       {CONTACT_INFO.phone.primary}
                     </a>
                   </div>
@@ -162,7 +172,9 @@ export default function NEETCoachingNewFriendsColonyPage() {
       {/* Why Choose Cerebrum */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Why NFC Students Choose Cerebrum</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Why NFC Students Choose Cerebrum
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -197,7 +209,10 @@ export default function NEETCoachingNewFriendsColonyPage() {
                 desc: 'Walking distance from NFC & metro',
               },
             ].map((item, idx) => (
-              <div key={idx} className="p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-md transition">
+              <div
+                key={idx}
+                className="p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-md transition"
+              >
                 <item.icon className="w-10 h-10 text-green-500 mb-4" />
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
@@ -210,7 +225,9 @@ export default function NEETCoachingNewFriendsColonyPage() {
       {/* Course Details */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Courses Available for NFC Students</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Courses Available for NFC Students
+          </h2>
 
           <div className="space-y-4">
             {[
@@ -233,13 +250,18 @@ export default function NEETCoachingNewFriendsColonyPage() {
                 features: ['Crash Course', 'Daily Practice', 'Score Improvement'],
               },
             ].map((course, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-green-500">
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-green-500"
+              >
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">{course.name}</h3>
                     <p className="text-gray-600 text-sm">{course.duration}</p>
                   </div>
-                  <span className="bg-green-100 text-green-700 px-3 py-1 rounded font-semibold">{course.price}</span>
+                  <span className="bg-green-100 text-green-700 px-3 py-1 rounded font-semibold">
+                    {course.price}
+                  </span>
                 </div>
                 <div className="flex gap-2 flex-wrap">
                   {course.features.map((feat, i) => (
@@ -254,7 +276,8 @@ export default function NEETCoachingNewFriendsColonyPage() {
 
           <div className="mt-8 text-center">
             <p className="text-gray-600 mb-4">
-              Flexible payment plans. Scholarships for meritorious students. Special discounts available.
+              Flexible payment plans. Scholarships for meritorious students. Special discounts
+              available.
             </p>
             <a
               href={`tel:${CONTACT_INFO.phone.primary}`}
@@ -269,15 +292,24 @@ export default function NEETCoachingNewFriendsColonyPage() {
       {/* Nearby Areas */}
       <section className="py-12 bg-white border-y">
         <div className="max-w-4xl mx-auto px-4">
-          <h3 className="text-2xl font-bold text-slate-900 mb-6">We Serve These South Delhi Areas</h3>
+          <h3 className="text-2xl font-bold text-slate-900 mb-6">
+            We Serve These South Delhi Areas
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['New Friends Colony', 'Maharani Bagh', 'South Extension', 'Greater Kailash', 'Defence Colony', 'Lajpat Nagar', 'Saket', 'Malviya Nagar'].map(
-              (area) => (
-                <div key={area} className="bg-gray-50 p-3 rounded border border-gray-200 text-center">
-                  <p className="text-gray-700 font-medium text-sm">{area}</p>
-                </div>
-              ),
-            )}
+            {[
+              'New Friends Colony',
+              'Maharani Bagh',
+              'South Extension',
+              'Greater Kailash',
+              'Defence Colony',
+              'Lajpat Nagar',
+              'Saket',
+              'Malviya Nagar',
+            ].map((area) => (
+              <div key={area} className="bg-gray-50 p-3 rounded border border-gray-200 text-center">
+                <p className="text-gray-700 font-medium text-sm">{area}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -285,7 +317,9 @@ export default function NEETCoachingNewFriendsColonyPage() {
       {/* Premium Facilities */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Premium Facilities at South Extension</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            Premium Facilities at South Extension
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
@@ -310,7 +344,9 @@ export default function NEETCoachingNewFriendsColonyPage() {
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">FAQs - New Friends Colony</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            FAQs - New Friends Colony
+          </h2>
 
           <div className="space-y-4">
             {faqItems.map((item, idx) => (
@@ -322,7 +358,12 @@ export default function NEETCoachingNewFriendsColonyPage() {
                   <h3 className="font-semibold text-gray-900 pr-4">{item.question}</h3>
                   <span className="text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
                     </svg>
                   </span>
                 </summary>
@@ -338,7 +379,8 @@ export default function NEETCoachingNewFriendsColonyPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Join 780+ Successful NFC Students!</h2>
           <p className="text-lg mb-8">
-            Visit our South Extension center. Just 5 minutes from New Friends Colony. Book your FREE demo class today!
+            Visit our South Extension center. Just 5 minutes from New Friends Colony. Book your FREE
+            demo class today!
           </p>
           <a
             href={`tel:${CONTACT_INFO.phone.primary}`}
@@ -351,7 +393,10 @@ export default function NEETCoachingNewFriendsColonyPage() {
 
       {/* Schema Markup */}
       <LocalBusinessSchema locationId="south-extension" />
-      <FAQSchema questions={faqItems} pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-new-friends-colony" />
+      <FAQSchema
+        questions={faqItems}
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-new-friends-colony"
+      />
     </>
   )
 }

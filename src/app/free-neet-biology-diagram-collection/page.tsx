@@ -6,11 +6,19 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Diagrams 2026 | 150+ Important Diagrams | Free PDF',
-  description: 'Download 150+ important NEET Biology diagrams. NCERT diagrams with labels, flowcharts, cycles. Must-know diagrams for NEET 2026. By AIIMS faculty.',
-  keywords: ['NEET biology diagrams', 'important diagrams NEET', 'NCERT biology diagrams', 'biology flowcharts NEET', 'labeled diagrams NEET biology'],
+  description:
+    'Download 150+ important NEET Biology diagrams. NCERT diagrams with labels, flowcharts, cycles. Must-know diagrams for NEET 2026. By AIIMS faculty.',
+  keywords: [
+    'NEET biology diagrams',
+    'important diagrams NEET',
+    'NCERT biology diagrams',
+    'biology flowcharts NEET',
+    'labeled diagrams NEET biology',
+  ],
   openGraph: {
     title: 'NEET Biology Diagrams 2026 | 150+ Important Diagrams | Free PDF',
-    description: 'Download 150+ important NEET Biology diagrams. NCERT diagrams with labels, flowcharts, cycles. Must-know diagrams for NEET 2026. By AIIMS faculty.',
+    description:
+      'Download 150+ important NEET Biology diagrams. NCERT diagrams with labels, flowcharts, cycles. Must-know diagrams for NEET 2026. By AIIMS faculty.',
     url: `${BASE_URL}/free-neet-biology-diagram-collection`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -19,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Free NEET Biology Important Diagrams',
-    description: 'Download 150+ important NEET Biology diagrams. NCERT diagrams with labels, flowcharts, cycles. Must-know diagrams for NE',
+    description:
+      'Download 150+ important NEET Biology diagrams. NCERT diagrams with labels, flowcharts, cycles. Must-know diagrams for NE',
   },
   alternates: { canonical: `${BASE_URL}/free-neet-biology-diagram-collection` },
 }
@@ -58,7 +67,11 @@ const faqSchema = {
 export default function FreeNeetBiologyDiagramCollectionPage() {
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <PageContent />
     </>
   )

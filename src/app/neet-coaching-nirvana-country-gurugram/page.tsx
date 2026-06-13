@@ -21,7 +21,14 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'NEET Coaching Nirvana Country Gurugram',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'NEET Coaching Nirvana Country Gurugram | 10 Min Drive' }],
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'NEET Coaching Nirvana Country Gurugram | 10 Min Drive',
+      },
+    ],
     description: 'Best NEET coaching near Nirvana Country. Just 10 min from your home.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-nirvana-country-gurugram',
   },
@@ -32,7 +39,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Nirvana Country Gurugram | 10 Min Drive',
-    description: 'Best NEET coaching near Nirvana Country Gurugram (Gurgaon). Just 10 min drive to M2K Sector 51. AIIMS faculty, 98% success rate. Perfect for Nirvana Country residents. Call 88264-44334!',
+    description:
+      'Best NEET coaching near Nirvana Country Gurugram (Gurgaon). Just 10 min drive to M2K Sector 51. AIIMS faculty, 98% success rate. Perfect for Nirvana Country residents. Call 88264-44334!',
   },
 }
 
@@ -76,7 +84,11 @@ export default function NEETCoachingNirvanaCountryGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Nirvana Country', 'NEET Biology Nirvana Country', 'Medical entrance coaching Nirvana Country']}
+        knowsAbout={[
+          'NEET Nirvana Country',
+          'NEET Biology Nirvana Country',
+          'Medical entrance coaching Nirvana Country',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

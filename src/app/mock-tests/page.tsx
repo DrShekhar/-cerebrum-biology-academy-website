@@ -1,7 +1,6 @@
 import { prisma } from '@/lib/prisma'
 import Link from 'next/link'
 
-
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -10,7 +9,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Biology Mock Tests | Cerebrum',
-    description: 'Full-length NEET Biology mock tests with AIIMS-faculty solutions and rank-band projection.',
+    description:
+      'Full-length NEET Biology mock tests with AIIMS-faculty solutions and rank-band projection.',
   },
 }
 

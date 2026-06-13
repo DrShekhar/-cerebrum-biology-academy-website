@@ -8,10 +8,7 @@ interface UseInViewOptions {
   margin?: string
 }
 
-export function useInView(
-  ref: RefObject<Element | null>,
-  options: UseInViewOptions = {}
-): boolean {
+export function useInView(ref: RefObject<Element | null>, options: UseInViewOptions = {}): boolean {
   const { once = false, amount = 0, margin = '0px' } = options
   const [isInView, setIsInView] = useState(false)
 

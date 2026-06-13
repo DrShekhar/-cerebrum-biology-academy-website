@@ -116,7 +116,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-jaipur' },
+    alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-jaipur' },
     description: 'Real-time teaching with instant doubt resolution - same as Kota coaching quality',
   },
   {
@@ -255,9 +255,7 @@ export default function NeetCoachingJaipurPage() {
       <section className="relative bg-gradient-to-br from-pink-900 via-pink-700 to-pink-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2" />
               The Pink City | Kota-Level Results at Home
@@ -273,12 +271,16 @@ export default function NeetCoachingJaipurPage() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Why migrate to Kota when you can get same results from Jaipur? AIIMS trained
-              faculties, 98% success rate, live interactive classes. Join 3,500+ Rajasthan
-              students achieving NEET success from home.
+              faculties, 98% success rate, live interactive classes. Join 3,500+ Rajasthan students
+              achieving NEET success from home.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Jaipur.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Jaipur.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -321,9 +323,7 @@ export default function NeetCoachingJaipurPage() {
       {/* Jaipur vs Kota Section */}
       <section className="py-20 bg-pink-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Jaipur vs Kota: Why Migrate 200 km?
             </h2>
@@ -333,8 +333,7 @@ export default function NeetCoachingJaipurPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <h3 className="text-2xl font-bold text-red-600 mb-6">❌ Kota Migration</h3>
                 <ul className="space-y-4">
@@ -362,8 +361,7 @@ export default function NeetCoachingJaipurPage() {
               </div>
             </div>
 
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <h3 className="text-2xl font-bold text-green-600 mb-6">✓ Cerebrum from Jaipur</h3>
                 <ul className="space-y-4">
@@ -397,9 +395,7 @@ export default function NeetCoachingJaipurPage() {
       {/* Jaipur Localities Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               NEET Coaching Across All Jaipur Localities
             </h2>
@@ -411,9 +407,7 @@ export default function NeetCoachingJaipurPage() {
 
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
             {jaipurLocalities.map((locality, index) => (
-              <div
-                key={locality.slug}
-               className="animate-fadeInUp">
+              <div key={locality.slug} className="animate-fadeInUp">
                 <div
                   className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer ${
                     locality.priority === 'high' ? 'ring-2 ring-pink-600' : ''
@@ -441,9 +435,7 @@ export default function NeetCoachingJaipurPage() {
       {/* Rajasthan Medical Colleges */}
       <section className="py-20 bg-pink-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Get Into Top Rajasthan Medical Colleges
             </h2>
@@ -472,9 +464,7 @@ export default function NeetCoachingJaipurPage() {
       {/* Why Jaipur Students Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Jaipur Students Choose Online NEET Coaching
             </h2>
@@ -514,9 +504,7 @@ export default function NeetCoachingJaipurPage() {
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Cerebrum for NEET Coaching in Jaipur?
             </h2>
@@ -540,9 +528,7 @@ export default function NeetCoachingJaipurPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions - NEET Coaching Jaipur
             </h2>
@@ -550,10 +536,7 @@ export default function NeetCoachingJaipurPage() {
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div
-                key={faq.question}
-                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
-              >
+              <div key={faq.question} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-pink-600 flex-shrink-0 mt-1" />
                   {faq.question}
@@ -571,8 +554,7 @@ export default function NeetCoachingJaipurPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-pink-600 via-pink-600 to-pink-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Start Your NEET Journey from the Pink City
             </h2>
@@ -582,7 +564,11 @@ export default function NeetCoachingJaipurPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Jaipur.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Jaipur.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -594,7 +580,11 @@ export default function NeetCoachingJaipurPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20NEET%20Biology%20coaching%20in%20Jaipur.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20NEET%20Biology%20coaching%20in%20Jaipur.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"

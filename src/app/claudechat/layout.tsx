@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'ClaudeChat Board | AI-Powered NEET Biology Tutor | Cerebrum',
   description:
-    'Try ClaudeChat — Cerebrum\'s 24/7 AI-powered NEET Biology learning assistant. Instant doubt resolution, NCERT-aligned explanations, voice & text interactions. Free to use.',
+    "Try ClaudeChat — Cerebrum's 24/7 AI-powered NEET Biology learning assistant. Instant doubt resolution, NCERT-aligned explanations, voice & text interactions. Free to use.",
   keywords: [
     'ClaudeChat',
     'AI NEET biology tutor',

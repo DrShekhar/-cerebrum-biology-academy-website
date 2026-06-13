@@ -156,25 +156,48 @@ export default async function Page() {
       {/* Cross-programme links for US families */}
       <section className="py-12 bg-white border-t border-slate-200">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-slate-900 mb-2">Other Biology Programmes for US Students</h2>
-          <p className="text-slate-600 mb-6">Beyond NEET, Cerebrum serves US students across MCAT, AP Biology, USABO, IB Biology, and DAT.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-2">
+            Other Biology Programmes for US Students
+          </h2>
+          <p className="text-slate-600 mb-6">
+            Beyond NEET, Cerebrum serves US students across MCAT, AP Biology, USABO, IB Biology, and
+            DAT.
+          </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-            <a href="/mcat-biology-tutor-new-york" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition">
+            <a
+              href="/mcat-biology-tutor-new-york"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">MCAT Biology NYC</span>
             </a>
-            <a href="/ap-biology-tutor-new-york" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <a
+              href="/ap-biology-tutor-new-york"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">AP Biology NYC</span>
             </a>
-            <a href="/usabo-coaching-new-york" className="block p-3 rounded-lg border border-slate-200 hover:border-amber-400 hover:shadow text-center transition">
+            <a
+              href="/usabo-coaching-new-york"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-amber-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">USABO Coaching</span>
             </a>
-            <a href="/mcat-biology-tutor-bay-area" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition">
+            <a
+              href="/mcat-biology-tutor-bay-area"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">MCAT Bay Area</span>
             </a>
-            <a href="/dat-biology-tutor-new-york" className="block p-3 rounded-lg border border-slate-200 hover:border-teal-400 hover:shadow text-center transition">
+            <a
+              href="/dat-biology-tutor-new-york"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-teal-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">DAT Biology NYC</span>
             </a>
-            <a href="/usmle-step-1-tutor-new-york" className="block p-3 rounded-lg border border-slate-200 hover:border-red-400 hover:shadow text-center transition">
+            <a
+              href="/usmle-step-1-tutor-new-york"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-red-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">USMLE Step 1</span>
             </a>
           </div>

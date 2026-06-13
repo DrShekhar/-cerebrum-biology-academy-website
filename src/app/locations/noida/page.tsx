@@ -24,7 +24,11 @@ import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import Link from 'next/link'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
-import { getAllNoidaAreaSlugs, getNoidaAreaBySlug, getNoidaAreasByMetroLine } from '@/data/noida-areas'
+import {
+  getAllNoidaAreaSlugs,
+  getNoidaAreaBySlug,
+  getNoidaAreasByMetroLine,
+} from '@/data/noida-areas'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export default function NoidaLocationPage() {
@@ -106,7 +110,10 @@ export default function NoidaLocationPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/locations/noida"
         pageName="NEET Biology Coaching for Noida Students"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
         personKnowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
         faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
       />
@@ -115,8 +122,7 @@ export default function NoidaLocationPage() {
         <div className="max-w-7xl mx-auto px-4 py-12 lg:py-16">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left - Location Info */}
-            <div className="space-y-6 animate-fadeInUp"
-            >
+            <div className="space-y-6 animate-fadeInUp">
               <div className="inline-flex items-center space-x-2 bg-blue-500/20 border border-blue-500/40 rounded-full px-4 py-2">
                 <MapPin className="w-4 h-4 text-blue-400" />
                 <span className="text-blue-300 text-sm font-medium">Noida Center</span>
@@ -189,8 +195,7 @@ export default function NoidaLocationPage() {
             </div>
 
             {/* Right - Map Embed */}
-            <div className="h-[400px] rounded-2xl overflow-hidden shadow-2xl animate-fadeInUp"
-            >
+            <div className="h-[400px] rounded-2xl overflow-hidden shadow-2xl animate-fadeInUp">
               <LazyGoogleMap
                 embedUrl={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.5!2d${CONTACT_INFO.location.noida.geo.longitude}!3d${CONTACT_INFO.location.noida.geo.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM3JzQxLjAiTiA3N8KwMjEnNTMuNiJF!5e0!3m2!1sen!2sin!4v1234567890`}
                 title="Noida NEET Coaching Center"
@@ -198,7 +203,7 @@ export default function NoidaLocationPage() {
                 placeholder={{
                   lat: CONTACT_INFO.location.noida.geo.latitude,
                   lng: CONTACT_INFO.location.noida.geo.longitude,
-                  address: `${CONTACT_INFO.location.noida.streetAddress}, ${CONTACT_INFO.location.noida.addressLocality}`
+                  address: `${CONTACT_INFO.location.noida.streetAddress}, ${CONTACT_INFO.location.noida.addressLocality}`,
                 }}
               />
             </div>
@@ -280,7 +285,9 @@ export default function NoidaLocationPage() {
                 description: 'Serves Noida, Greater Noida, Ghaziabad & East Delhi',
               },
             ].map((feature, index) => (
-              <div key={index} className="text-center p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all animate-fadeInUp"
+              <div
+                key={index}
+                className="text-center p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all animate-fadeInUp"
               >
                 <feature.icon className="w-10 h-10 text-blue-600 mx-auto mb-4" />
                 <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
@@ -379,8 +386,12 @@ export default function NoidaLocationPage() {
                 href={center.href}
                 className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 hover:border-blue-200 border border-gray-200 transition-colors group"
               >
-                <p className="font-semibold text-gray-900 group-hover:text-blue-600">{center.name}</p>
-                <span className="text-sm text-gray-500 group-hover:text-blue-500">View details →</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600">
+                  {center.name}
+                </p>
+                <span className="text-sm text-gray-500 group-hover:text-blue-500">
+                  View details →
+                </span>
               </Link>
             ))}
           </div>

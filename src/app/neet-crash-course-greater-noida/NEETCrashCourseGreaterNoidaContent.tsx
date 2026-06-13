@@ -101,10 +101,7 @@ export default function NEETCrashCourseGreaterNoidaContent({ faqs }: { faqs: FAQ
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <Link
-                href="/neet-coaching-noida"
-                className="text-gray-600 hover:text-teal-600"
-              >
+              <Link href="/neet-coaching-noida" className="text-gray-600 hover:text-teal-600">
                 NEET Coaching Greater Noida
               </Link>
             </li>
@@ -137,8 +134,8 @@ export default function NEETCrashCourseGreaterNoidaContent({ faqs }: { faqs: FAQ
 
             <p className="text-xl text-slate-200 mb-8 max-w-3xl">
               Complete Biology revision in 45 days. 1000+ questions, 15 mock tests, daily doubt
-              clearing. Average improvement: 75 marks. Online + hybrid classes available for
-              Greater Noida students.
+              clearing. Average improvement: 75 marks. Online + hybrid classes available for Greater
+              Noida students.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -164,7 +161,11 @@ export default function NEETCrashCourseGreaterNoidaContent({ faqs }: { faqs: FAQ
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20crash%20course%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20crash%20course%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -520,10 +521,7 @@ export default function NEETCrashCourseGreaterNoidaContent({ faqs }: { faqs: FAQ
               <h3 className="font-semibold text-teal-600">Scholarship</h3>
               <p className="text-sm text-gray-600">Up to 100% fee waiver</p>
             </Link>
-            <Link
-              href="/neet-coaching-noida"
-              className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
-            >
+            <Link href="/neet-coaching-noida" className="bg-gray-50 p-4 rounded-xl hover:shadow-md">
               <h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3>
               <p className="text-sm text-gray-600">All programs</p>
             </Link>
@@ -534,14 +532,16 @@ export default function NEETCrashCourseGreaterNoidaContent({ faqs }: { faqs: FAQ
       {/* CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Don&apos;t Wait - NEET is Coming!
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Don&apos;t Wait - NEET is Coming!</h2>
           <p className="text-xl mb-8 opacity-90">
             Join our 45-day crash course and improve by 75+ marks
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20crash%20course%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20crash%20course%20in%20Noida.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 size="xl"

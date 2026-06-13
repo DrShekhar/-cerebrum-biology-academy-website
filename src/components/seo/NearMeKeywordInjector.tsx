@@ -148,13 +148,11 @@ export function NearMeKeywordInjector({
             Best NEET Biology Coaching & Biology Tutor Near Me in {location}
           </h2>
           <p className="text-gray-700 text-base leading-relaxed mb-4">
-            Looking for the <strong>best NEET coaching near me in {location}</strong>? Cerebrum Biology
-            Academy is the top-rated NEET biology coaching institute near {location}, {parentLocation}.
-            Our center is conveniently located at {centerAddress}, easily accessible from{' '}
-            {nearbyAreas.length > 0
-              ? nearbyAreas.join(', ')
-              : `nearby areas in ${location}`}
-            .
+            Looking for the <strong>best NEET coaching near me in {location}</strong>? Cerebrum
+            Biology Academy is the top-rated NEET biology coaching institute near {location},{' '}
+            {parentLocation}. Our center is conveniently located at {centerAddress}, easily
+            accessible from{' '}
+            {nearbyAreas.length > 0 ? nearbyAreas.join(', ') : `nearby areas in ${location}`}.
           </p>
           <p className="text-gray-700 text-base leading-relaxed mb-4">
             With <strong>AIIMS-trained faculty</strong>, <strong>98% success rate</strong>, and{' '}
@@ -164,13 +162,12 @@ export function NearMeKeywordInjector({
             <em>best NEET institute in {parentLocation}</em> — Cerebrum Academy is your answer.
           </p>
           <p className="text-gray-700 text-base leading-relaxed mb-4">
-            We also serve searches for{' '}
-            <em>biology tutor near me in {location}</em>,{' '}
+            We also serve searches for <em>biology tutor near me in {location}</em>,{' '}
             <em>best biology tutor in {location}</em>,{' '}
             <em>private biology tutor for NEET in {parentLocation}</em>, and{' '}
-            <em>biology olympiad tutor near me {location}</em>. Whether you need 1-on-1 tutoring,
-            a small batch, or olympiad-track depth, our biology-only specialisation matches the
-            intent more directly than generalist NEET coaching.
+            <em>biology olympiad tutor near me {location}</em>. Whether you need 1-on-1 tutoring, a
+            small batch, or olympiad-track depth, our biology-only specialisation matches the intent
+            more directly than generalist NEET coaching.
           </p>
 
           {/* Nearby areas for internal linking */}

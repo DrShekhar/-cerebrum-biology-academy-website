@@ -1,6 +1,7 @@
 # Gurugram SEO Pages Implementation Plan
 
 ## Overview
+
 Create high-value SEO pages targeting underserved keywords for the Gurugram market.
 
 ---
@@ -8,12 +9,15 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 ## Phase 1: Olympiad Pages (Critical Priority)
 
 ### 1.1 `/biology-olympiad-coaching-gurugram/`
+
 **Target Keywords:**
+
 - "biology olympiad coaching gurugram" (140-220/mo)
 - "olympiad preparation gurugram"
 - "science olympiad biology gurugram"
 
 **Page Structure:**
+
 - Hero: "Biology Olympiad Coaching in Gurugram | IBO, NSEB, INBO Preparation"
 - Olympiad pathways explained (IBO → NSEB → INBO)
 - Syllabus coverage (6 categories)
@@ -26,6 +30,7 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 - Internal links to NSEB, IBO specific pages
 
 **Schemas:**
+
 - EducationalOrganization
 - Course (Olympiad courses)
 - FAQPage
@@ -34,12 +39,15 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 ---
 
 ### 1.2 `/nseb-coaching-gurugram/`
+
 **Target Keywords:**
+
 - "nseb coaching gurugram" (100-160/mo)
 - "nseb preparation gurugram"
 - "national standard examination biology gurugram"
 
 **Page Structure:**
+
 - Hero: "NSEB Coaching in Gurugram | National Standard Examination in Biology"
 - NSEB exam pattern & eligibility
 - Complete NSEB syllabus (theory + practical)
@@ -52,6 +60,7 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 - NEET Tools widget
 
 **Schemas:**
+
 - Course (NSEB Preparation)
 - FAQPage
 - HowTo (NSEB preparation steps)
@@ -60,12 +69,15 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 ---
 
 ### 1.3 `/ibo-preparation-gurugram/`
+
 **Target Keywords:**
+
 - "ibo preparation gurugram" (40-80/mo)
 - "international biology olympiad gurugram"
 - "ibo coaching gurugram"
 
 **Page Structure:**
+
 - Hero: "IBO Preparation in Gurugram | International Biology Olympiad Coaching"
 - IBO pathway (India selection process)
 - Complete IBO syllabus (25 topics, 6 categories)
@@ -78,6 +90,7 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 - NEET Tools widget
 
 **Schemas:**
+
 - Course
 - FAQPage
 - BreadcrumbList
@@ -87,12 +100,15 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 ## Phase 2: NEET Foundation Pages
 
 ### 2.1 `/neet-foundation-class-9-gurugram/`
+
 **Target Keywords:**
+
 - "neet foundation class 9 gurugram" (380-500/mo)
 - "class 9 neet preparation gurugram"
 - "early neet coaching class 9"
 
 **Page Structure:**
+
 - Hero: "NEET Foundation for Class 9 in Gurugram | Start Early, Score High"
 - 4-year advantage messaging
 - Class 9 syllabus mapped to NEET
@@ -106,6 +122,7 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 - NEET Tools widget
 
 **Schemas:**
+
 - Course (NEET Foundation Class 9)
 - FAQPage
 - BreadcrumbList
@@ -114,12 +131,15 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 ---
 
 ### 2.2 `/neet-foundation-class-10-gurugram/`
+
 **Target Keywords:**
+
 - "neet foundation class 10 gurugram" (280-400/mo)
 - "class 10 neet preparation gurugram"
 - "2-year neet prep gurugram"
 
 **Page Structure:**
+
 - Hero: "NEET Foundation for Class 10 in Gurugram | 2-Year Head Start"
 - 2-year advantage messaging
 - Class 10 board + NEET overlap (40% concepts)
@@ -131,6 +151,7 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 - NEET Tools widget
 
 **Schemas:**
+
 - Course
 - FAQPage
 - BreadcrumbList
@@ -138,12 +159,15 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 ---
 
 ### 2.3 `/class-9-biology-tuition-gurugram/`
+
 **Target Keywords:**
+
 - "class 9 biology tuition gurugram" (480-600/mo)
 - "class 9 biology coaching gurugram"
 - "9th biology tuition gurugram"
 
 **Page Structure:**
+
 - Hero: "Class 9 Biology Tuition in Gurugram | CBSE, ICSE Board Preparation"
 - Board-specific curriculum coverage
 - NCERT + Reference book approach
@@ -156,6 +180,7 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 - NEET Tools widget
 
 **Schemas:**
+
 - Course
 - FAQPage
 - BreadcrumbList
@@ -163,12 +188,15 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 ---
 
 ### 2.4 `/class-10-biology-coaching-gurugram/`
+
 **Target Keywords:**
+
 - "class 10 biology coaching gurugram" (420-550/mo)
 - "class 10 biology tuition gurugram"
 - "10th biology coaching gurugram"
 
 **Page Structure:**
+
 - Hero: "Class 10 Biology Coaching in Gurugram | Board Exam Excellence"
 - Board exam focus
 - Complete syllabus coverage
@@ -180,6 +208,7 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 - NEET Tools widget
 
 **Schemas:**
+
 - Course
 - FAQPage
 - BreadcrumbList
@@ -189,12 +218,15 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 ## Phase 3: Dropper/Repeater Pages
 
 ### 3.1 `/neet-dropper-batch-2025-26-gurugram/`
+
 **Target Keywords:**
+
 - "neet dropper batch gurugram" (400-600/mo)
 - "neet repeater coaching gurugram"
 - "neet 2nd attempt gurugram"
 
 **Page Structure:**
+
 - Hero: "NEET Dropper Batch 2025-26 in Gurugram | Transform Your Score"
 - Year-long intensive program
 - Score improvement data (+150 marks average)
@@ -207,6 +239,7 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 - NEET Tools widget
 
 **Schemas:**
+
 - Course
 - FAQPage
 - BreadcrumbList
@@ -215,12 +248,15 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 ---
 
 ### 3.2 `/one-year-dropper-course-gurugram/`
+
 **Target Keywords:**
+
 - "one year dropper course gurugram" (120-180/mo)
 - "neet 1 year course gurugram"
 - "intensive dropper coaching gurugram"
 
 **Page Structure:**
+
 - Hero: "One Year NEET Dropper Course in Gurugram | Complete Transformation"
 - 12-month curriculum breakdown
 - Phase-wise preparation (Foundation → Advanced → Revision → Mock)
@@ -232,6 +268,7 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 - NEET Tools widget
 
 **Schemas:**
+
 - Course
 - FAQPage
 - BreadcrumbList
@@ -241,6 +278,7 @@ Create high-value SEO pages targeting underserved keywords for the Gurugram mark
 ## Implementation Approach
 
 ### File Structure
+
 ```
 src/app/
 ├── biology-olympiad-coaching-gurugram/
@@ -264,6 +302,7 @@ src/app/
 ```
 
 ### Common Components to Include
+
 1. `VideoTestimonialsSection` - Video success stories
 2. `NEETToolsWidget` - Free NEET tools
 3. `QuickAnswers` - AEO-optimized Q&A
@@ -274,6 +313,7 @@ src/app/
 8. Mobile sticky bar
 
 ### Execution Order
+
 1. Phase 1.1: `/biology-olympiad-coaching-gurugram/` (main olympiad hub)
 2. Phase 1.2: `/nseb-coaching-gurugram/` (highest demand olympiad)
 3. Phase 1.3: `/ibo-preparation-gurugram/` (premium segment)
@@ -288,17 +328,17 @@ src/app/
 
 ## Expected Impact
 
-| Page | Monthly Search Volume | Expected Traffic (60% CTR) |
-|------|----------------------|---------------------------|
-| class-9-biology-tuition-gurugram | 480-600 | 290-360 |
-| neet-foundation-class-9-gurugram | 380-500 | 230-300 |
-| class-10-biology-coaching-gurugram | 420-550 | 250-330 |
-| neet-dropper-batch-gurugram | 400-600 | 240-360 |
-| neet-foundation-class-10-gurugram | 280-400 | 170-240 |
-| biology-olympiad-coaching-gurugram | 140-220 | 85-130 |
-| one-year-dropper-course-gurugram | 120-180 | 70-110 |
-| nseb-coaching-gurugram | 100-160 | 60-100 |
-| ibo-preparation-gurugram | 40-80 | 25-50 |
+| Page                               | Monthly Search Volume | Expected Traffic (60% CTR) |
+| ---------------------------------- | --------------------- | -------------------------- |
+| class-9-biology-tuition-gurugram   | 480-600               | 290-360                    |
+| neet-foundation-class-9-gurugram   | 380-500               | 230-300                    |
+| class-10-biology-coaching-gurugram | 420-550               | 250-330                    |
+| neet-dropper-batch-gurugram        | 400-600               | 240-360                    |
+| neet-foundation-class-10-gurugram  | 280-400               | 170-240                    |
+| biology-olympiad-coaching-gurugram | 140-220               | 85-130                     |
+| one-year-dropper-course-gurugram   | 120-180               | 70-110                     |
+| nseb-coaching-gurugram             | 100-160               | 60-100                     |
+| ibo-preparation-gurugram           | 40-80                 | 25-50                      |
 
 **Total Estimated Monthly Traffic: 1,420-1,980 new visitors**
 

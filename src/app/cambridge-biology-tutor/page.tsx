@@ -27,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Cambridge Biology Tutor Online | IGCSE, AS, A Level, Pre-U | 92% A*/A Rate',
-    description: 'Expert Cambridge Biology tutor for IGCSE (0610), AS Level, A Level (9700), and Pre-U. 92% A*/A rate. AIIMS-trained faculty. Online classes worldwide.',
+    description:
+      'Expert Cambridge Biology tutor for IGCSE (0610), AS Level, A Level (9700), and Pre-U. 92% A*/A rate. AIIMS-trained faculty. Online classes worldwide.',
   },
 }
 

@@ -41,7 +41,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Weekend Batch Noida 2026 | Saturday-Sunday Classes',
-    description: 'Join NEET weekend batch in Noida - Saturday & Sunday intensive classes for school students. Complete syllabus coverage. Sector 62. Call 99536-43938!',
+    description:
+      'Join NEET weekend batch in Noida - Saturday & Sunday intensive classes for school students. Complete syllabus coverage. Sector 62. Call 99536-43938!',
   },
 }
 

@@ -41,8 +41,15 @@ export default function Top10NEETCoachingGurugramPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/top-10-neet-coaching-gurugram"
         pageName="Top 10 NEET Coaching in Gurugram"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
-        personKnowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
+        personKnowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="top-10-neet-coaching-gurugram" />
       <Top10NEETCoachingContent />

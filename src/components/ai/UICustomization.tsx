@@ -503,9 +503,7 @@ const UICustomization: React.FC = () => {
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <div
-          className="flex items-center justify-center gap-3 animate-fadeInUp"
-        >
+        <div className="flex items-center justify-center gap-3 animate-fadeInUp">
           <div className="p-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl">
             <Palette className="w-8 h-8 text-white" />
           </div>
@@ -618,1027 +616,993 @@ const UICustomization: React.FC = () => {
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
         {/* Customization Panel */}
         <div className="xl:col-span-2">
-{/* Theme Selection */}
-            {activeTab === 'themes' && (
-              <div
-                key="themes"
-                className="bg-white rounded-xl p-6 border animate-fadeInUp"
-              >
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <Palette className="w-5 h-5 text-indigo-600" />
-                  Theme Selection
-                </h3>
+          {/* Theme Selection */}
+          {activeTab === 'themes' && (
+            <div key="themes" className="bg-white rounded-xl p-6 border animate-fadeInUp">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <Palette className="w-5 h-5 text-indigo-600" />
+                Theme Selection
+              </h3>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {customizationData.themes.map((theme) => (
-                    <div
-                      key={theme.id}
-                      onClick={() => updateTheme(theme.id)}
-                      className={`p-4 border-2 rounded-lg cursor-pointer transition-all ${
-                        customizationData.selectedTheme === theme.id
-                          ? 'border-indigo-500 bg-pink-50'
-                          : 'border-gray-200 hover:border-gray-300'
-                      }`}
-                    >
-                      <div className="flex items-center justify-between mb-3">
-                        <h4 className="font-medium">{theme.name}</h4>
-                        {customizationData.selectedTheme === theme.id && (
-                          <Check className="w-5 h-5 text-indigo-600" />
-                        )}
-                      </div>
-
-                      <p className="text-sm text-gray-600 mb-4">{theme.description}</p>
-
-                      {/* Theme Preview */}
-                      <div className="space-y-3">
-                        <div className="flex gap-2">
-                          <div
-                            className="w-6 h-6 rounded-full border"
-                            style={{ backgroundColor: theme.primaryColor }}
-                            title="Primary Color"
-                          />
-                          <div
-                            className="w-6 h-6 rounded-full border"
-                            style={{ backgroundColor: theme.secondaryColor }}
-                            title="Secondary Color"
-                          />
-                          <div
-                            className="w-6 h-6 rounded-full border"
-                            style={{ backgroundColor: theme.accentColor }}
-                            title="Accent Color"
-                          />
-                        </div>
-
-                        <div
-                          className="p-3 rounded border"
-                          style={{
-                            backgroundColor: theme.backgroundColor,
-                            color: theme.textColor,
-                            borderRadius: theme.borderRadius,
-                            fontFamily: theme.fontFamily,
-                          }}
-                        >
-                          <div className="text-sm">Sample Question Text</div>
-                          <div className="mt-2 flex gap-2">
-                            <button
-                              className="px-3 py-1 text-xs rounded"
-                              style={{ backgroundColor: theme.primaryColor, color: 'white' }}
-                            >
-                              Option A
-                            </button>
-                            <button
-                              className="px-3 py-1 text-xs rounded border"
-                              style={{ borderColor: theme.primaryColor, color: theme.primaryColor }}
-                            >
-                              Option B
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="mt-3 flex items-center gap-2 text-xs text-gray-500">
-                        <span>{theme.fontFamily}</span>
-                        <span>•</span>
-                        <span>{theme.isDark ? 'Dark' : 'Light'}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-6 bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-medium text-blue-800 mb-2">Custom Theme</h4>
-                  <p className="text-sm text-blue-700 mb-3">
-                    Create your own theme by customizing colors and typography in other tabs.
-                  </p>
-                  <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm">
-                    Create Custom Theme
-                  </button>
-                </div>
-              </div>
-            )}
-
-            {/* Font Settings */}
-            {activeTab === 'fonts' && (
-              <div
-                key="fonts"
-                className="bg-white rounded-xl p-6 border animate-fadeInUp"
-              >
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <Type className="w-5 h-5 text-blue-600" />
-                  Font Settings
-                </h3>
-
-                <div className="space-y-6">
-                  {/* Font Family */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Font Family
-                    </label>
-                    <select
-                      value={customizationData.fontSettings.family}
-                      onChange={(e) => updateFontSettings({ family: e.target.value })}
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      <option value="Inter">Inter (Modern Sans-serif)</option>
-                      <option value="Roboto">Roboto (Google Fonts)</option>
-                      <option value="Open Sans">Open Sans (Friendly)</option>
-                      <option value="Poppins">Poppins (Rounded)</option>
-                      <option value="Lato">Lato (Humanist)</option>
-                      <option value="Georgia">Georgia (Serif)</option>
-                      <option value="Times New Roman">Times New Roman (Classical)</option>
-                      <option value="Courier New">Courier New (Monospace)</option>
-                    </select>
-                  </div>
-
-                  {/* Font Sizes */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-3">
-                      Font Sizes
-                    </label>
-                    <div className="grid grid-cols-2 gap-4">
-                      {Object.entries(customizationData.fontSettings.size).map(([size, value]) => (
-                        <div key={size}>
-                          <label className="block text-xs text-gray-600 mb-1 capitalize">
-                            {size}
-                          </label>
-                          <input
-                            type="text"
-                            value={value}
-                            onChange={(e) =>
-                              updateFontSettings({
-                                size: {
-                                  ...customizationData.fontSettings.size,
-                                  [size]: e.target.value,
-                                },
-                              })
-                            }
-                            className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
-                            placeholder="16px"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Font Weight */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Font Weight
-                    </label>
-                    <select
-                      value={customizationData.fontSettings.weight}
-                      onChange={(e) => updateFontSettings({ weight: e.target.value })}
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      <option value="300">Light (300)</option>
-                      <option value="400">Normal (400)</option>
-                      <option value="500">Medium (500)</option>
-                      <option value="600">Semi-bold (600)</option>
-                      <option value="700">Bold (700)</option>
-                    </select>
-                  </div>
-
-                  {/* Line Height and Letter Spacing */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Line Height
-                      </label>
-                      <input
-                        type="text"
-                        value={customizationData.fontSettings.lineHeight}
-                        onChange={(e) => updateFontSettings({ lineHeight: e.target.value })}
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="1.5"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Letter Spacing
-                      </label>
-                      <input
-                        type="text"
-                        value={customizationData.fontSettings.letterSpacing}
-                        onChange={(e) => updateFontSettings({ letterSpacing: e.target.value })}
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="0px"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Typography Preview */}
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-medium mb-3">Typography Preview</h4>
-                    <div
-                      style={{
-                        fontFamily: customizationData.fontSettings.family,
-                        fontWeight: customizationData.fontSettings.weight,
-                        lineHeight: customizationData.fontSettings.lineHeight,
-                        letterSpacing: customizationData.fontSettings.letterSpacing,
-                      }}
-                    >
-                      <div
-                        className="mb-2"
-                        style={{ fontSize: customizationData.fontSettings.size.xlarge }}
-                      >
-                        Question Title (Extra Large)
-                      </div>
-                      <div
-                        className="mb-2"
-                        style={{ fontSize: customizationData.fontSettings.size.large }}
-                      >
-                        Question Content (Large)
-                      </div>
-                      <div
-                        className="mb-2"
-                        style={{ fontSize: customizationData.fontSettings.size.medium }}
-                      >
-                        Answer Options (Medium)
-                      </div>
-                      <div style={{ fontSize: customizationData.fontSettings.size.small }}>
-                        Instructions and Help Text (Small)
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Difficulty Colors */}
-            {activeTab === 'colors' && (
-              <div
-                key="colors"
-                className="bg-white rounded-xl p-6 border animate-fadeInUp"
-              >
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <Eye className="w-5 h-5 text-green-600" />
-                  Difficulty Color Coding
-                </h3>
-
-                <div className="space-y-6">
-                  {Object.entries(customizationData.difficultyColors).map(
-                    ([difficulty, colors]) => (
-                      <div key={difficulty} className="space-y-4">
-                        <h4 className="font-medium capitalize flex items-center gap-2">
-                          <div
-                            className="w-4 h-4 rounded-full"
-                            style={{ backgroundColor: colors.background }}
-                          />
-                          {difficulty} Questions
-                        </h4>
-
-                        <div className="grid grid-cols-3 gap-4">
-                          <div>
-                            <label className="block text-sm text-gray-600 mb-2">Background</label>
-                            <div className="flex gap-2">
-                              <input
-                                type="color"
-                                value={colors.background}
-                                onChange={(e) =>
-                                  updateDifficultyColors(
-                                    difficulty as keyof DifficultyColors,
-                                    'background',
-                                    e.target.value
-                                  )
-                                }
-                                className="w-12 h-10 border rounded-lg cursor-pointer"
-                              />
-                              <input
-                                type="text"
-                                value={colors.background}
-                                onChange={(e) =>
-                                  updateDifficultyColors(
-                                    difficulty as keyof DifficultyColors,
-                                    'background',
-                                    e.target.value
-                                  )
-                                }
-                                className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-sm font-mono"
-                              />
-                            </div>
-                          </div>
-
-                          <div>
-                            <label className="block text-sm text-gray-600 mb-2">Text</label>
-                            <div className="flex gap-2">
-                              <input
-                                type="color"
-                                value={colors.text}
-                                onChange={(e) =>
-                                  updateDifficultyColors(
-                                    difficulty as keyof DifficultyColors,
-                                    'text',
-                                    e.target.value
-                                  )
-                                }
-                                className="w-12 h-10 border rounded-lg cursor-pointer"
-                              />
-                              <input
-                                type="text"
-                                value={colors.text}
-                                onChange={(e) =>
-                                  updateDifficultyColors(
-                                    difficulty as keyof DifficultyColors,
-                                    'text',
-                                    e.target.value
-                                  )
-                                }
-                                className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-sm font-mono"
-                              />
-                            </div>
-                          </div>
-
-                          <div>
-                            <label className="block text-sm text-gray-600 mb-2">Border</label>
-                            <div className="flex gap-2">
-                              <input
-                                type="color"
-                                value={colors.border}
-                                onChange={(e) =>
-                                  updateDifficultyColors(
-                                    difficulty as keyof DifficultyColors,
-                                    'border',
-                                    e.target.value
-                                  )
-                                }
-                                className="w-12 h-10 border rounded-lg cursor-pointer"
-                              />
-                              <input
-                                type="text"
-                                value={colors.border}
-                                onChange={(e) =>
-                                  updateDifficultyColors(
-                                    difficulty as keyof DifficultyColors,
-                                    'border',
-                                    e.target.value
-                                  )
-                                }
-                                className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-sm font-mono"
-                              />
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Preview */}
-                        <div className="bg-gray-50 p-4 rounded-lg">
-                          <div
-                            className="inline-block px-4 py-2 rounded-lg border-2 font-medium"
-                            style={{
-                              backgroundColor: colors.background,
-                              color: colors.text,
-                              borderColor: colors.border,
-                            }}
-                          >
-                            {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)} Question
-                            Sample
-                          </div>
-                        </div>
-                      </div>
-                    )
-                  )}
-
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <h4 className="font-medium text-blue-800 mb-2">Color Guidelines</h4>
-                    <ul className="text-sm text-blue-700 space-y-1">
-                      <li>• Use high contrast ratios for accessibility (4.5:1 minimum)</li>
-                      <li>
-                        • Green typically represents easy, yellow/orange for medium, red for hard
-                      </li>
-                      <li>• Consider colorblind users - use additional visual cues</li>
-                      <li>• Test colors in different lighting conditions</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Custom Instructions */}
-            {activeTab === 'instructions' && (
-              <div
-                key="instructions"
-                className="bg-white rounded-xl p-6 border animate-fadeInUp"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-semibold flex items-center gap-2">
-                    <FileText className="w-5 h-5 text-purple-600" />
-                    Custom Instructions
-                  </h3>
-                  <button
-                    onClick={addCustomInstruction}
-                    className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2"
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {customizationData.themes.map((theme) => (
+                  <div
+                    key={theme.id}
+                    onClick={() => updateTheme(theme.id)}
+                    className={`p-4 border-2 rounded-lg cursor-pointer transition-all ${
+                      customizationData.selectedTheme === theme.id
+                        ? 'border-indigo-500 bg-pink-50'
+                        : 'border-gray-200 hover:border-gray-300'
+                    }`}
                   >
-                    <Plus className="w-4 h-4" />
-                    Add Instruction
-                  </button>
-                </div>
+                    <div className="flex items-center justify-between mb-3">
+                      <h4 className="font-medium">{theme.name}</h4>
+                      {customizationData.selectedTheme === theme.id && (
+                        <Check className="w-5 h-5 text-indigo-600" />
+                      )}
+                    </div>
 
-                <div className="space-y-4">
-                  {customizationData.customInstructions.map((instruction) => (
-                    <div key={instruction.id} className="p-4 border rounded-lg">
-                      <div className="flex items-center justify-between mb-3">
-                        <input
-                          type="text"
-                          value={instruction.title}
-                          onChange={(e) =>
-                            updateCustomInstruction(instruction.id, { title: e.target.value })
-                          }
-                          className="font-medium text-lg bg-transparent border-none focus:outline-none focus:ring-2 focus:ring-purple-500 rounded px-2"
-                        />
-                        <div className="flex items-center gap-2">
-                          <label className="flex items-center">
-                            <input
-                              type="checkbox"
-                              checked={instruction.isActive}
-                              onChange={(e) =>
-                                updateCustomInstruction(instruction.id, {
-                                  isActive: e.target.checked,
-                                })
-                              }
-                              className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
-                            />
-                            <span className="ml-2 text-sm text-gray-600">Active</span>
-                          </label>
-                          <button
-                            onClick={() => deleteCustomInstruction(instruction.id)}
-                            className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
-                          >
-                            <Trash2 className="w-4 h-4" />
-                          </button>
-                        </div>
-                      </div>
+                    <p className="text-sm text-gray-600 mb-4">{theme.description}</p>
 
-                      <textarea
-                        value={instruction.content}
-                        onChange={(e) =>
-                          updateCustomInstruction(instruction.id, { content: e.target.value })
-                        }
-                        rows={3}
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent mb-3"
-                        placeholder="Enter instruction content..."
-                      />
-
-                      <div className="grid grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-sm text-gray-600 mb-1">Position</label>
-                          <select
-                            value={instruction.position}
-                            onChange={(e) =>
-                              updateCustomInstruction(instruction.id, {
-                                position: e.target.value as any,
-                              })
-                            }
-                            className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                          >
-                            <option value="top">Top</option>
-                            <option value="bottom">Bottom</option>
-                            <option value="sidebar">Sidebar</option>
-                          </select>
-                        </div>
-                        <div>
-                          <label className="block text-sm text-gray-600 mb-1">Style</label>
-                          <select
-                            value={instruction.style}
-                            onChange={(e) =>
-                              updateCustomInstruction(instruction.id, {
-                                style: e.target.value as any,
-                              })
-                            }
-                            className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                          >
-                            <option value="info">Info</option>
-                            <option value="warning">Warning</option>
-                            <option value="success">Success</option>
-                            <option value="error">Error</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      {/* Preview */}
-                      <div className="mt-3">
+                    {/* Theme Preview */}
+                    <div className="space-y-3">
+                      <div className="flex gap-2">
                         <div
-                          className={`p-3 rounded-lg border ${getStyleColor(instruction.style)}`}
-                        >
-                          <div className="font-medium mb-1">{instruction.title}</div>
-                          <div className="text-sm">{instruction.content}</div>
+                          className="w-6 h-6 rounded-full border"
+                          style={{ backgroundColor: theme.primaryColor }}
+                          title="Primary Color"
+                        />
+                        <div
+                          className="w-6 h-6 rounded-full border"
+                          style={{ backgroundColor: theme.secondaryColor }}
+                          title="Secondary Color"
+                        />
+                        <div
+                          className="w-6 h-6 rounded-full border"
+                          style={{ backgroundColor: theme.accentColor }}
+                          title="Accent Color"
+                        />
+                      </div>
+
+                      <div
+                        className="p-3 rounded border"
+                        style={{
+                          backgroundColor: theme.backgroundColor,
+                          color: theme.textColor,
+                          borderRadius: theme.borderRadius,
+                          fontFamily: theme.fontFamily,
+                        }}
+                      >
+                        <div className="text-sm">Sample Question Text</div>
+                        <div className="mt-2 flex gap-2">
+                          <button
+                            className="px-3 py-1 text-xs rounded"
+                            style={{ backgroundColor: theme.primaryColor, color: 'white' }}
+                          >
+                            Option A
+                          </button>
+                          <button
+                            className="px-3 py-1 text-xs rounded border"
+                            style={{ borderColor: theme.primaryColor, color: theme.primaryColor }}
+                          >
+                            Option B
+                          </button>
                         </div>
                       </div>
                     </div>
-                  ))}
-                </div>
-              </div>
-            )}
 
-            {/* Branding Settings */}
-            {activeTab === 'branding' && (
-              <div
-                key="branding"
-                className="bg-white rounded-xl p-6 border animate-fadeInUp"
-              >
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <Image className="w-5 h-5 text-indigo-600" />
-                  Branding & Logo
-                </h3>
-
-                <div className="space-y-6">
-                  {/* Logo Settings */}
-                  <div>
-                    <h4 className="font-medium mb-3">Logo Settings</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-sm text-gray-600 mb-2">Logo URL</label>
-                        <div className="flex gap-2">
-                          <input
-                            type="url"
-                            value={customizationData.brandingSettings.logo.url}
-                            onChange={(e) =>
-                              updateBrandingSettings({
-                                logo: {
-                                  ...customizationData.brandingSettings.logo,
-                                  url: e.target.value,
-                                },
-                              })
-                            }
-                            className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                            placeholder="https://example.com/logo.png"
-                          />
-                          <button className="px-4 py-2 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors">
-                            <Upload className="w-4 h-4" />
-                          </button>
-                        </div>
-                      </div>
-
-                      <div>
-                        <label className="block text-sm text-gray-600 mb-2">Position</label>
-                        <select
-                          value={customizationData.brandingSettings.logo.position}
-                          onChange={(e) =>
-                            updateBrandingSettings({
-                              logo: {
-                                ...customizationData.brandingSettings.logo,
-                                position: e.target.value as any,
-                              },
-                            })
-                          }
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                        >
-                          <option value="top-left">Top Left</option>
-                          <option value="top-center">Top Center</option>
-                          <option value="top-right">Top Right</option>
-                        </select>
-                      </div>
-
-                      <div>
-                        <label className="block text-sm text-gray-600 mb-2">Width</label>
-                        <input
-                          type="text"
-                          value={customizationData.brandingSettings.logo.width}
-                          onChange={(e) =>
-                            updateBrandingSettings({
-                              logo: {
-                                ...customizationData.brandingSettings.logo,
-                                width: e.target.value,
-                              },
-                            })
-                          }
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                          placeholder="150px"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-sm text-gray-600 mb-2">Height</label>
-                        <input
-                          type="text"
-                          value={customizationData.brandingSettings.logo.height}
-                          onChange={(e) =>
-                            updateBrandingSettings({
-                              logo: {
-                                ...customizationData.brandingSettings.logo,
-                                height: e.target.value,
-                              },
-                            })
-                          }
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                          placeholder="50px"
-                        />
-                      </div>
+                    <div className="mt-3 flex items-center gap-2 text-xs text-gray-500">
+                      <span>{theme.fontFamily}</span>
+                      <span>•</span>
+                      <span>{theme.isDark ? 'Dark' : 'Light'}</span>
                     </div>
                   </div>
+                ))}
+              </div>
 
-                  {/* Organization Info */}
-                  <div>
-                    <h4 className="font-medium mb-3">Organization Information</h4>
-                    <div className="space-y-4">
-                      <div>
-                        <label className="block text-sm text-gray-600 mb-2">
-                          Organization Name
+              <div className="mt-6 bg-blue-50 p-4 rounded-lg">
+                <h4 className="font-medium text-blue-800 mb-2">Custom Theme</h4>
+                <p className="text-sm text-blue-700 mb-3">
+                  Create your own theme by customizing colors and typography in other tabs.
+                </p>
+                <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm">
+                  Create Custom Theme
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Font Settings */}
+          {activeTab === 'fonts' && (
+            <div key="fonts" className="bg-white rounded-xl p-6 border animate-fadeInUp">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <Type className="w-5 h-5 text-blue-600" />
+                Font Settings
+              </h3>
+
+              <div className="space-y-6">
+                {/* Font Family */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Font Family
+                  </label>
+                  <select
+                    value={customizationData.fontSettings.family}
+                    onChange={(e) => updateFontSettings({ family: e.target.value })}
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
+                    <option value="Inter">Inter (Modern Sans-serif)</option>
+                    <option value="Roboto">Roboto (Google Fonts)</option>
+                    <option value="Open Sans">Open Sans (Friendly)</option>
+                    <option value="Poppins">Poppins (Rounded)</option>
+                    <option value="Lato">Lato (Humanist)</option>
+                    <option value="Georgia">Georgia (Serif)</option>
+                    <option value="Times New Roman">Times New Roman (Classical)</option>
+                    <option value="Courier New">Courier New (Monospace)</option>
+                  </select>
+                </div>
+
+                {/* Font Sizes */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">Font Sizes</label>
+                  <div className="grid grid-cols-2 gap-4">
+                    {Object.entries(customizationData.fontSettings.size).map(([size, value]) => (
+                      <div key={size}>
+                        <label className="block text-xs text-gray-600 mb-1 capitalize">
+                          {size}
                         </label>
                         <input
                           type="text"
-                          value={customizationData.brandingSettings.organizationName}
+                          value={value}
                           onChange={(e) =>
-                            updateBrandingSettings({ organizationName: e.target.value })
+                            updateFontSettings({
+                              size: {
+                                ...customizationData.fontSettings.size,
+                                [size]: e.target.value,
+                              },
+                            })
                           }
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                          placeholder="Your Organization"
+                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                          placeholder="16px"
                         />
                       </div>
-
-                      <div>
-                        <label className="block text-sm text-gray-600 mb-2">Tagline</label>
-                        <input
-                          type="text"
-                          value={customizationData.brandingSettings.tagline}
-                          onChange={(e) => updateBrandingSettings({ tagline: e.target.value })}
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                          placeholder="Your tagline here"
-                        />
-                      </div>
-                    </div>
+                    ))}
                   </div>
+                </div>
 
-                  {/* Watermark Settings */}
+                {/* Font Weight */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Font Weight
+                  </label>
+                  <select
+                    value={customizationData.fontSettings.weight}
+                    onChange={(e) => updateFontSettings({ weight: e.target.value })}
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
+                    <option value="300">Light (300)</option>
+                    <option value="400">Normal (400)</option>
+                    <option value="500">Medium (500)</option>
+                    <option value="600">Semi-bold (600)</option>
+                    <option value="700">Bold (700)</option>
+                  </select>
+                </div>
+
+                {/* Line Height and Letter Spacing */}
+                <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <h4 className="font-medium mb-3">Watermark Settings</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <div>
-                        <label className="block text-sm text-gray-600 mb-2">Text</label>
-                        <input
-                          type="text"
-                          value={customizationData.brandingSettings.watermark.text}
-                          onChange={(e) =>
-                            updateBrandingSettings({
-                              watermark: {
-                                ...customizationData.brandingSettings.watermark,
-                                text: e.target.value,
-                              },
-                            })
-                          }
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                          placeholder="Watermark text"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-sm text-gray-600 mb-2">Opacity</label>
-                        <input
-                          type="range"
-                          min="0"
-                          max="1"
-                          step="0.1"
-                          value={customizationData.brandingSettings.watermark.opacity}
-                          onChange={(e) =>
-                            updateBrandingSettings({
-                              watermark: {
-                                ...customizationData.brandingSettings.watermark,
-                                opacity: e.target.value,
-                              },
-                            })
-                          }
-                          className="w-full"
-                        />
-                        <div className="text-xs text-gray-500 mt-1">
-                          {(
-                            parseFloat(customizationData.brandingSettings.watermark.opacity) * 100
-                          ).toFixed(0)}
-                          %
-                        </div>
-                      </div>
-
-                      <div>
-                        <label className="block text-sm text-gray-600 mb-2">Position</label>
-                        <select
-                          value={customizationData.brandingSettings.watermark.position}
-                          onChange={(e) =>
-                            updateBrandingSettings({
-                              watermark: {
-                                ...customizationData.brandingSettings.watermark,
-                                position: e.target.value as any,
-                              },
-                            })
-                          }
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                        >
-                          <option value="top-left">Top Left</option>
-                          <option value="top-right">Top Right</option>
-                          <option value="bottom-left">Bottom Left</option>
-                          <option value="bottom-right">Bottom Right</option>
-                          <option value="center">Center</option>
-                        </select>
-                      </div>
-                    </div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Line Height
+                    </label>
+                    <input
+                      type="text"
+                      value={customizationData.fontSettings.lineHeight}
+                      onChange={(e) => updateFontSettings({ lineHeight: e.target.value })}
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="1.5"
+                    />
                   </div>
-
-                  {/* Custom CSS */}
                   <div>
-                    <h4 className="font-medium mb-3">Custom CSS</h4>
-                    <textarea
-                      value={customizationData.brandingSettings.customCSS}
-                      onChange={(e) => updateBrandingSettings({ customCSS: e.target.value })}
-                      rows={6}
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent font-mono text-sm"
-                      placeholder="/* Add your custom CSS here */"
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Letter Spacing
+                    </label>
+                    <input
+                      type="text"
+                      value={customizationData.fontSettings.letterSpacing}
+                      onChange={(e) => updateFontSettings({ letterSpacing: e.target.value })}
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="0px"
                     />
                   </div>
                 </div>
-              </div>
-            )}
 
-            {/* Status Messages */}
-            {activeTab === 'messages' && (
-              <div
-                key="messages"
-                className="bg-white rounded-xl p-6 border animate-fadeInUp"
-              >
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <MessageSquare className="w-5 h-5 text-orange-600" />
-                  Success/Failure Messages
-                </h3>
-
-                <div className="space-y-6">
-                  {Object.entries(customizationData.statusMessages).map(
-                    ([messageType, message]) => (
-                      <div key={messageType} className="space-y-4">
-                        <h4 className="font-medium capitalize">{messageType} Message</h4>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div>
-                            <label className="block text-sm text-gray-600 mb-2">Title</label>
-                            <input
-                              type="text"
-                              value={message.title}
-                              onChange={(e) =>
-                                updateStatusMessages(messageType as keyof StatusMessages, {
-                                  title: e.target.value,
-                                })
-                              }
-                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                            />
-                          </div>
-
-                          <div>
-                            <label className="block text-sm text-gray-600 mb-2">Icon</label>
-                            <input
-                              type="text"
-                              value={message.icon}
-                              onChange={(e) =>
-                                updateStatusMessages(messageType as keyof StatusMessages, {
-                                  icon: e.target.value,
-                                })
-                              }
-                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                              placeholder="🎉"
-                            />
-                          </div>
-                        </div>
-
-                        <div>
-                          <label className="block text-sm text-gray-600 mb-2">Message</label>
-                          <textarea
-                            value={message.message}
-                            onChange={(e) =>
-                              updateStatusMessages(messageType as keyof StatusMessages, {
-                                message: e.target.value,
-                              })
-                            }
-                            rows={3}
-                            className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                          />
-                        </div>
-
-                        <div>
-                          <label className="block text-sm text-gray-600 mb-2">Color</label>
-                          <div className="flex gap-2">
-                            <input
-                              type="color"
-                              value={message.color}
-                              onChange={(e) =>
-                                updateStatusMessages(messageType as keyof StatusMessages, {
-                                  color: e.target.value,
-                                })
-                              }
-                              className="w-12 h-10 border rounded-lg cursor-pointer"
-                            />
-                            <input
-                              type="text"
-                              value={message.color}
-                              onChange={(e) =>
-                                updateStatusMessages(messageType as keyof StatusMessages, {
-                                  color: e.target.value,
-                                })
-                              }
-                              className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent font-mono"
-                            />
-                          </div>
-                        </div>
-
-                        {/* Preview */}
-                        <div className="bg-gray-50 p-4 rounded-lg">
-                          <div
-                            className="p-4 rounded-lg border-l-4 bg-white"
-                            style={{ borderLeftColor: message.color }}
-                          >
-                            <div className="flex items-center gap-2 mb-2">
-                              <span className="text-xl">{message.icon}</span>
-                              <h5 className="font-medium" style={{ color: message.color }}>
-                                {message.title}
-                              </h5>
-                            </div>
-                            <p className="text-gray-700">{message.message}</p>
-                          </div>
-                        </div>
-                      </div>
-                    )
-                  )}
+                {/* Typography Preview */}
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h4 className="font-medium mb-3">Typography Preview</h4>
+                  <div
+                    style={{
+                      fontFamily: customizationData.fontSettings.family,
+                      fontWeight: customizationData.fontSettings.weight,
+                      lineHeight: customizationData.fontSettings.lineHeight,
+                      letterSpacing: customizationData.fontSettings.letterSpacing,
+                    }}
+                  >
+                    <div
+                      className="mb-2"
+                      style={{ fontSize: customizationData.fontSettings.size.xlarge }}
+                    >
+                      Question Title (Extra Large)
+                    </div>
+                    <div
+                      className="mb-2"
+                      style={{ fontSize: customizationData.fontSettings.size.large }}
+                    >
+                      Question Content (Large)
+                    </div>
+                    <div
+                      className="mb-2"
+                      style={{ fontSize: customizationData.fontSettings.size.medium }}
+                    >
+                      Answer Options (Medium)
+                    </div>
+                    <div style={{ fontSize: customizationData.fontSettings.size.small }}>
+                      Instructions and Help Text (Small)
+                    </div>
+                  </div>
                 </div>
               </div>
-            )}
+            </div>
+          )}
 
-            {/* Progress Bar Settings */}
-            {activeTab === 'progress' && (
-              <div
-                key="progress"
-                className="bg-white rounded-xl p-6 border animate-fadeInUp"
-              >
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <BarChart3 className="w-5 h-5 text-green-600" />
-                  Progress Bar Style
+          {/* Difficulty Colors */}
+          {activeTab === 'colors' && (
+            <div key="colors" className="bg-white rounded-xl p-6 border animate-fadeInUp">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <Eye className="w-5 h-5 text-green-600" />
+                Difficulty Color Coding
+              </h3>
+
+              <div className="space-y-6">
+                {Object.entries(customizationData.difficultyColors).map(([difficulty, colors]) => (
+                  <div key={difficulty} className="space-y-4">
+                    <h4 className="font-medium capitalize flex items-center gap-2">
+                      <div
+                        className="w-4 h-4 rounded-full"
+                        style={{ backgroundColor: colors.background }}
+                      />
+                      {difficulty} Questions
+                    </h4>
+
+                    <div className="grid grid-cols-3 gap-4">
+                      <div>
+                        <label className="block text-sm text-gray-600 mb-2">Background</label>
+                        <div className="flex gap-2">
+                          <input
+                            type="color"
+                            value={colors.background}
+                            onChange={(e) =>
+                              updateDifficultyColors(
+                                difficulty as keyof DifficultyColors,
+                                'background',
+                                e.target.value
+                              )
+                            }
+                            className="w-12 h-10 border rounded-lg cursor-pointer"
+                          />
+                          <input
+                            type="text"
+                            value={colors.background}
+                            onChange={(e) =>
+                              updateDifficultyColors(
+                                difficulty as keyof DifficultyColors,
+                                'background',
+                                e.target.value
+                              )
+                            }
+                            className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-sm font-mono"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm text-gray-600 mb-2">Text</label>
+                        <div className="flex gap-2">
+                          <input
+                            type="color"
+                            value={colors.text}
+                            onChange={(e) =>
+                              updateDifficultyColors(
+                                difficulty as keyof DifficultyColors,
+                                'text',
+                                e.target.value
+                              )
+                            }
+                            className="w-12 h-10 border rounded-lg cursor-pointer"
+                          />
+                          <input
+                            type="text"
+                            value={colors.text}
+                            onChange={(e) =>
+                              updateDifficultyColors(
+                                difficulty as keyof DifficultyColors,
+                                'text',
+                                e.target.value
+                              )
+                            }
+                            className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-sm font-mono"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm text-gray-600 mb-2">Border</label>
+                        <div className="flex gap-2">
+                          <input
+                            type="color"
+                            value={colors.border}
+                            onChange={(e) =>
+                              updateDifficultyColors(
+                                difficulty as keyof DifficultyColors,
+                                'border',
+                                e.target.value
+                              )
+                            }
+                            className="w-12 h-10 border rounded-lg cursor-pointer"
+                          />
+                          <input
+                            type="text"
+                            value={colors.border}
+                            onChange={(e) =>
+                              updateDifficultyColors(
+                                difficulty as keyof DifficultyColors,
+                                'border',
+                                e.target.value
+                              )
+                            }
+                            className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-sm font-mono"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Preview */}
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <div
+                        className="inline-block px-4 py-2 rounded-lg border-2 font-medium"
+                        style={{
+                          backgroundColor: colors.background,
+                          color: colors.text,
+                          borderColor: colors.border,
+                        }}
+                      >
+                        {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)} Question Sample
+                      </div>
+                    </div>
+                  </div>
+                ))}
+
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h4 className="font-medium text-blue-800 mb-2">Color Guidelines</h4>
+                  <ul className="text-sm text-blue-700 space-y-1">
+                    <li>• Use high contrast ratios for accessibility (4.5:1 minimum)</li>
+                    <li>
+                      • Green typically represents easy, yellow/orange for medium, red for hard
+                    </li>
+                    <li>• Consider colorblind users - use additional visual cues</li>
+                    <li>• Test colors in different lighting conditions</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Custom Instructions */}
+          {activeTab === 'instructions' && (
+            <div key="instructions" className="bg-white rounded-xl p-6 border animate-fadeInUp">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-semibold flex items-center gap-2">
+                  <FileText className="w-5 h-5 text-purple-600" />
+                  Custom Instructions
                 </h3>
+                <button
+                  onClick={addCustomInstruction}
+                  className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2"
+                >
+                  <Plus className="w-4 h-4" />
+                  Add Instruction
+                </button>
+              </div>
 
-                <div className="space-y-6">
-                  {/* Style and Position */}
+              <div className="space-y-4">
+                {customizationData.customInstructions.map((instruction) => (
+                  <div key={instruction.id} className="p-4 border rounded-lg">
+                    <div className="flex items-center justify-between mb-3">
+                      <input
+                        type="text"
+                        value={instruction.title}
+                        onChange={(e) =>
+                          updateCustomInstruction(instruction.id, { title: e.target.value })
+                        }
+                        className="font-medium text-lg bg-transparent border-none focus:outline-none focus:ring-2 focus:ring-purple-500 rounded px-2"
+                      />
+                      <div className="flex items-center gap-2">
+                        <label className="flex items-center">
+                          <input
+                            type="checkbox"
+                            checked={instruction.isActive}
+                            onChange={(e) =>
+                              updateCustomInstruction(instruction.id, {
+                                isActive: e.target.checked,
+                              })
+                            }
+                            className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                          />
+                          <span className="ml-2 text-sm text-gray-600">Active</span>
+                        </label>
+                        <button
+                          onClick={() => deleteCustomInstruction(instruction.id)}
+                          className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </div>
+
+                    <textarea
+                      value={instruction.content}
+                      onChange={(e) =>
+                        updateCustomInstruction(instruction.id, { content: e.target.value })
+                      }
+                      rows={3}
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent mb-3"
+                      placeholder="Enter instruction content..."
+                    />
+
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm text-gray-600 mb-1">Position</label>
+                        <select
+                          value={instruction.position}
+                          onChange={(e) =>
+                            updateCustomInstruction(instruction.id, {
+                              position: e.target.value as any,
+                            })
+                          }
+                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        >
+                          <option value="top">Top</option>
+                          <option value="bottom">Bottom</option>
+                          <option value="sidebar">Sidebar</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-sm text-gray-600 mb-1">Style</label>
+                        <select
+                          value={instruction.style}
+                          onChange={(e) =>
+                            updateCustomInstruction(instruction.id, {
+                              style: e.target.value as any,
+                            })
+                          }
+                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        >
+                          <option value="info">Info</option>
+                          <option value="warning">Warning</option>
+                          <option value="success">Success</option>
+                          <option value="error">Error</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    {/* Preview */}
+                    <div className="mt-3">
+                      <div className={`p-3 rounded-lg border ${getStyleColor(instruction.style)}`}>
+                        <div className="font-medium mb-1">{instruction.title}</div>
+                        <div className="text-sm">{instruction.content}</div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Branding Settings */}
+          {activeTab === 'branding' && (
+            <div key="branding" className="bg-white rounded-xl p-6 border animate-fadeInUp">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <Image className="w-5 h-5 text-indigo-600" />
+                Branding & Logo
+              </h3>
+
+              <div className="space-y-6">
+                {/* Logo Settings */}
+                <div>
+                  <h4 className="font-medium mb-3">Logo Settings</h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm text-gray-600 mb-2">Style</label>
-                      <select
-                        value={customizationData.progressBarSettings.style}
-                        onChange={(e) =>
-                          updateProgressBarSettings({ style: e.target.value as any })
-                        }
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                      >
-                        <option value="thin">Thin</option>
-                        <option value="thick">Thick</option>
-                        <option value="rounded">Rounded</option>
-                        <option value="gradient">Gradient</option>
-                      </select>
+                      <label className="block text-sm text-gray-600 mb-2">Logo URL</label>
+                      <div className="flex gap-2">
+                        <input
+                          type="url"
+                          value={customizationData.brandingSettings.logo.url}
+                          onChange={(e) =>
+                            updateBrandingSettings({
+                              logo: {
+                                ...customizationData.brandingSettings.logo,
+                                url: e.target.value,
+                              },
+                            })
+                          }
+                          className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                          placeholder="https://example.com/logo.png"
+                        />
+                        <button className="px-4 py-2 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors">
+                          <Upload className="w-4 h-4" />
+                        </button>
+                      </div>
                     </div>
 
                     <div>
                       <label className="block text-sm text-gray-600 mb-2">Position</label>
                       <select
-                        value={customizationData.progressBarSettings.position}
+                        value={customizationData.brandingSettings.logo.position}
                         onChange={(e) =>
-                          updateProgressBarSettings({ position: e.target.value as any })
+                          updateBrandingSettings({
+                            logo: {
+                              ...customizationData.brandingSettings.logo,
+                              position: e.target.value as any,
+                            },
+                          })
                         }
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                       >
-                        <option value="top">Top</option>
-                        <option value="bottom">Bottom</option>
-                        <option value="sidebar">Sidebar</option>
+                        <option value="top-left">Top Left</option>
+                        <option value="top-center">Top Center</option>
+                        <option value="top-right">Top Right</option>
                       </select>
                     </div>
-                  </div>
 
-                  {/* Colors */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm text-gray-600 mb-2">Progress Color</label>
-                      <div className="flex gap-2">
-                        <input
-                          type="color"
-                          value={customizationData.progressBarSettings.color}
-                          onChange={(e) => updateProgressBarSettings({ color: e.target.value })}
-                          className="w-12 h-10 border rounded-lg cursor-pointer"
-                        />
-                        <input
-                          type="text"
-                          value={customizationData.progressBarSettings.color}
-                          onChange={(e) => updateProgressBarSettings({ color: e.target.value })}
-                          className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent font-mono"
-                        />
-                      </div>
+                      <label className="block text-sm text-gray-600 mb-2">Width</label>
+                      <input
+                        type="text"
+                        value={customizationData.brandingSettings.logo.width}
+                        onChange={(e) =>
+                          updateBrandingSettings({
+                            logo: {
+                              ...customizationData.brandingSettings.logo,
+                              width: e.target.value,
+                            },
+                          })
+                        }
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                        placeholder="150px"
+                      />
                     </div>
 
                     <div>
-                      <label className="block text-sm text-gray-600 mb-2">Background Color</label>
-                      <div className="flex gap-2">
-                        <input
-                          type="color"
-                          value={customizationData.progressBarSettings.backgroundColor}
-                          onChange={(e) =>
-                            updateProgressBarSettings({ backgroundColor: e.target.value })
-                          }
-                          className="w-12 h-10 border rounded-lg cursor-pointer"
-                        />
-                        <input
-                          type="text"
-                          value={customizationData.progressBarSettings.backgroundColor}
-                          onChange={(e) =>
-                            updateProgressBarSettings({ backgroundColor: e.target.value })
-                          }
-                          className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent font-mono"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Settings */}
-                  <div>
-                    <label className="block text-sm text-gray-600 mb-2">Height</label>
-                    <input
-                      type="text"
-                      value={customizationData.progressBarSettings.height}
-                      onChange={(e) => updateProgressBarSettings({ height: e.target.value })}
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                      placeholder="8px"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm text-gray-600 mb-2">Animation</label>
-                    <select
-                      value={customizationData.progressBarSettings.animation}
-                      onChange={(e) =>
-                        updateProgressBarSettings({ animation: e.target.value as any })
-                      }
-                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                    >
-                      <option value="none">None</option>
-                      <option value="pulse">Pulse</option>
-                      <option value="glow">Glow</option>
-                      <option value="slide">Slide</option>
-                    </select>
-                  </div>
-
-                  {/* Display Options */}
-                  <div className="space-y-3">
-                    <label className="flex items-center">
+                      <label className="block text-sm text-gray-600 mb-2">Height</label>
                       <input
-                        type="checkbox"
-                        checked={customizationData.progressBarSettings.showPercentage}
+                        type="text"
+                        value={customizationData.brandingSettings.logo.height}
                         onChange={(e) =>
-                          updateProgressBarSettings({ showPercentage: e.target.checked })
+                          updateBrandingSettings({
+                            logo: {
+                              ...customizationData.brandingSettings.logo,
+                              height: e.target.value,
+                            },
+                          })
                         }
-                        className="rounded border-gray-300 text-green-600 focus:ring-green-600"
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                        placeholder="50px"
                       />
-                      <span className="ml-2 text-sm text-gray-700">Show percentage</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        checked={customizationData.progressBarSettings.showTimeRemaining}
-                        onChange={(e) =>
-                          updateProgressBarSettings({ showTimeRemaining: e.target.checked })
-                        }
-                        className="rounded border-gray-300 text-green-600 focus:ring-green-600"
-                      />
-                      <span className="ml-2 text-sm text-gray-700">Show time remaining</span>
-                    </label>
-                  </div>
-
-                  {/* Preview */}
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h5 className="font-medium mb-3">Progress Bar Preview</h5>
-                    <div className="space-y-3">
-                      <div
-                        className="w-full rounded-full"
-                        style={{
-                          backgroundColor: customizationData.progressBarSettings.backgroundColor,
-                          height: customizationData.progressBarSettings.height,
-                        }}
-                      >
-                        <div
-                          className={`h-full rounded-full transition-all ${
-                            customizationData.progressBarSettings.animation === 'pulse'
-                              ? 'animate-pulse'
-                              : customizationData.progressBarSettings.animation === 'glow'
-                                ? 'shadow-lg'
-                                : ''
-                          }`}
-                          style={{
-                            backgroundColor: customizationData.progressBarSettings.color,
-                            width: '65%',
-                          }}
-                        />
-                      </div>
-                      {(customizationData.progressBarSettings.showPercentage ||
-                        customizationData.progressBarSettings.showTimeRemaining) && (
-                        <div className="flex justify-between text-sm text-gray-600">
-                          {customizationData.progressBarSettings.showPercentage && (
-                            <span>65% Complete</span>
-                          )}
-                          {customizationData.progressBarSettings.showTimeRemaining && (
-                            <span>35 minutes remaining</span>
-                          )}
-                        </div>
-                      )}
                     </div>
                   </div>
                 </div>
+
+                {/* Organization Info */}
+                <div>
+                  <h4 className="font-medium mb-3">Organization Information</h4>
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block text-sm text-gray-600 mb-2">Organization Name</label>
+                      <input
+                        type="text"
+                        value={customizationData.brandingSettings.organizationName}
+                        onChange={(e) =>
+                          updateBrandingSettings({ organizationName: e.target.value })
+                        }
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                        placeholder="Your Organization"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm text-gray-600 mb-2">Tagline</label>
+                      <input
+                        type="text"
+                        value={customizationData.brandingSettings.tagline}
+                        onChange={(e) => updateBrandingSettings({ tagline: e.target.value })}
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                        placeholder="Your tagline here"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Watermark Settings */}
+                <div>
+                  <h4 className="font-medium mb-3">Watermark Settings</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                      <label className="block text-sm text-gray-600 mb-2">Text</label>
+                      <input
+                        type="text"
+                        value={customizationData.brandingSettings.watermark.text}
+                        onChange={(e) =>
+                          updateBrandingSettings({
+                            watermark: {
+                              ...customizationData.brandingSettings.watermark,
+                              text: e.target.value,
+                            },
+                          })
+                        }
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                        placeholder="Watermark text"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm text-gray-600 mb-2">Opacity</label>
+                      <input
+                        type="range"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        value={customizationData.brandingSettings.watermark.opacity}
+                        onChange={(e) =>
+                          updateBrandingSettings({
+                            watermark: {
+                              ...customizationData.brandingSettings.watermark,
+                              opacity: e.target.value,
+                            },
+                          })
+                        }
+                        className="w-full"
+                      />
+                      <div className="text-xs text-gray-500 mt-1">
+                        {(
+                          parseFloat(customizationData.brandingSettings.watermark.opacity) * 100
+                        ).toFixed(0)}
+                        %
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm text-gray-600 mb-2">Position</label>
+                      <select
+                        value={customizationData.brandingSettings.watermark.position}
+                        onChange={(e) =>
+                          updateBrandingSettings({
+                            watermark: {
+                              ...customizationData.brandingSettings.watermark,
+                              position: e.target.value as any,
+                            },
+                          })
+                        }
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                      >
+                        <option value="top-left">Top Left</option>
+                        <option value="top-right">Top Right</option>
+                        <option value="bottom-left">Bottom Left</option>
+                        <option value="bottom-right">Bottom Right</option>
+                        <option value="center">Center</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Custom CSS */}
+                <div>
+                  <h4 className="font-medium mb-3">Custom CSS</h4>
+                  <textarea
+                    value={customizationData.brandingSettings.customCSS}
+                    onChange={(e) => updateBrandingSettings({ customCSS: e.target.value })}
+                    rows={6}
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent font-mono text-sm"
+                    placeholder="/* Add your custom CSS here */"
+                  />
+                </div>
               </div>
-            )}
-</div>
+            </div>
+          )}
+
+          {/* Status Messages */}
+          {activeTab === 'messages' && (
+            <div key="messages" className="bg-white rounded-xl p-6 border animate-fadeInUp">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <MessageSquare className="w-5 h-5 text-orange-600" />
+                Success/Failure Messages
+              </h3>
+
+              <div className="space-y-6">
+                {Object.entries(customizationData.statusMessages).map(([messageType, message]) => (
+                  <div key={messageType} className="space-y-4">
+                    <h4 className="font-medium capitalize">{messageType} Message</h4>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm text-gray-600 mb-2">Title</label>
+                        <input
+                          type="text"
+                          value={message.title}
+                          onChange={(e) =>
+                            updateStatusMessages(messageType as keyof StatusMessages, {
+                              title: e.target.value,
+                            })
+                          }
+                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm text-gray-600 mb-2">Icon</label>
+                        <input
+                          type="text"
+                          value={message.icon}
+                          onChange={(e) =>
+                            updateStatusMessages(messageType as keyof StatusMessages, {
+                              icon: e.target.value,
+                            })
+                          }
+                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                          placeholder="🎉"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm text-gray-600 mb-2">Message</label>
+                      <textarea
+                        value={message.message}
+                        onChange={(e) =>
+                          updateStatusMessages(messageType as keyof StatusMessages, {
+                            message: e.target.value,
+                          })
+                        }
+                        rows={3}
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm text-gray-600 mb-2">Color</label>
+                      <div className="flex gap-2">
+                        <input
+                          type="color"
+                          value={message.color}
+                          onChange={(e) =>
+                            updateStatusMessages(messageType as keyof StatusMessages, {
+                              color: e.target.value,
+                            })
+                          }
+                          className="w-12 h-10 border rounded-lg cursor-pointer"
+                        />
+                        <input
+                          type="text"
+                          value={message.color}
+                          onChange={(e) =>
+                            updateStatusMessages(messageType as keyof StatusMessages, {
+                              color: e.target.value,
+                            })
+                          }
+                          className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent font-mono"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Preview */}
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <div
+                        className="p-4 rounded-lg border-l-4 bg-white"
+                        style={{ borderLeftColor: message.color }}
+                      >
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="text-xl">{message.icon}</span>
+                          <h5 className="font-medium" style={{ color: message.color }}>
+                            {message.title}
+                          </h5>
+                        </div>
+                        <p className="text-gray-700">{message.message}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Progress Bar Settings */}
+          {activeTab === 'progress' && (
+            <div key="progress" className="bg-white rounded-xl p-6 border animate-fadeInUp">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <BarChart3 className="w-5 h-5 text-green-600" />
+                Progress Bar Style
+              </h3>
+
+              <div className="space-y-6">
+                {/* Style and Position */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm text-gray-600 mb-2">Style</label>
+                    <select
+                      value={customizationData.progressBarSettings.style}
+                      onChange={(e) => updateProgressBarSettings({ style: e.target.value as any })}
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                    >
+                      <option value="thin">Thin</option>
+                      <option value="thick">Thick</option>
+                      <option value="rounded">Rounded</option>
+                      <option value="gradient">Gradient</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm text-gray-600 mb-2">Position</label>
+                    <select
+                      value={customizationData.progressBarSettings.position}
+                      onChange={(e) =>
+                        updateProgressBarSettings({ position: e.target.value as any })
+                      }
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                    >
+                      <option value="top">Top</option>
+                      <option value="bottom">Bottom</option>
+                      <option value="sidebar">Sidebar</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Colors */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm text-gray-600 mb-2">Progress Color</label>
+                    <div className="flex gap-2">
+                      <input
+                        type="color"
+                        value={customizationData.progressBarSettings.color}
+                        onChange={(e) => updateProgressBarSettings({ color: e.target.value })}
+                        className="w-12 h-10 border rounded-lg cursor-pointer"
+                      />
+                      <input
+                        type="text"
+                        value={customizationData.progressBarSettings.color}
+                        onChange={(e) => updateProgressBarSettings({ color: e.target.value })}
+                        className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent font-mono"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm text-gray-600 mb-2">Background Color</label>
+                    <div className="flex gap-2">
+                      <input
+                        type="color"
+                        value={customizationData.progressBarSettings.backgroundColor}
+                        onChange={(e) =>
+                          updateProgressBarSettings({ backgroundColor: e.target.value })
+                        }
+                        className="w-12 h-10 border rounded-lg cursor-pointer"
+                      />
+                      <input
+                        type="text"
+                        value={customizationData.progressBarSettings.backgroundColor}
+                        onChange={(e) =>
+                          updateProgressBarSettings({ backgroundColor: e.target.value })
+                        }
+                        className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent font-mono"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Settings */}
+                <div>
+                  <label className="block text-sm text-gray-600 mb-2">Height</label>
+                  <input
+                    type="text"
+                    value={customizationData.progressBarSettings.height}
+                    onChange={(e) => updateProgressBarSettings({ height: e.target.value })}
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                    placeholder="8px"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm text-gray-600 mb-2">Animation</label>
+                  <select
+                    value={customizationData.progressBarSettings.animation}
+                    onChange={(e) =>
+                      updateProgressBarSettings({ animation: e.target.value as any })
+                    }
+                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  >
+                    <option value="none">None</option>
+                    <option value="pulse">Pulse</option>
+                    <option value="glow">Glow</option>
+                    <option value="slide">Slide</option>
+                  </select>
+                </div>
+
+                {/* Display Options */}
+                <div className="space-y-3">
+                  <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      checked={customizationData.progressBarSettings.showPercentage}
+                      onChange={(e) =>
+                        updateProgressBarSettings({ showPercentage: e.target.checked })
+                      }
+                      className="rounded border-gray-300 text-green-600 focus:ring-green-600"
+                    />
+                    <span className="ml-2 text-sm text-gray-700">Show percentage</span>
+                  </label>
+                  <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      checked={customizationData.progressBarSettings.showTimeRemaining}
+                      onChange={(e) =>
+                        updateProgressBarSettings({ showTimeRemaining: e.target.checked })
+                      }
+                      className="rounded border-gray-300 text-green-600 focus:ring-green-600"
+                    />
+                    <span className="ml-2 text-sm text-gray-700">Show time remaining</span>
+                  </label>
+                </div>
+
+                {/* Preview */}
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h5 className="font-medium mb-3">Progress Bar Preview</h5>
+                  <div className="space-y-3">
+                    <div
+                      className="w-full rounded-full"
+                      style={{
+                        backgroundColor: customizationData.progressBarSettings.backgroundColor,
+                        height: customizationData.progressBarSettings.height,
+                      }}
+                    >
+                      <div
+                        className={`h-full rounded-full transition-all ${
+                          customizationData.progressBarSettings.animation === 'pulse'
+                            ? 'animate-pulse'
+                            : customizationData.progressBarSettings.animation === 'glow'
+                              ? 'shadow-lg'
+                              : ''
+                        }`}
+                        style={{
+                          backgroundColor: customizationData.progressBarSettings.color,
+                          width: '65%',
+                        }}
+                      />
+                    </div>
+                    {(customizationData.progressBarSettings.showPercentage ||
+                      customizationData.progressBarSettings.showTimeRemaining) && (
+                      <div className="flex justify-between text-sm text-gray-600">
+                        {customizationData.progressBarSettings.showPercentage && (
+                          <span>65% Complete</span>
+                        )}
+                        {customizationData.progressBarSettings.showTimeRemaining && (
+                          <span>35 minutes remaining</span>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
 
         {/* Live Preview Panel */}
         {showPreview && (

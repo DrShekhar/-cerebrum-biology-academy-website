@@ -24,13 +24,16 @@ export async function GET(request: NextRequest) {
     // If requesting featured items only
     if (featuredOnly) {
       const items = await getFeaturedGalleryItems(limit)
-      return NextResponse.json({
-        success: true,
-        items,
-        total: items.length,
-      }, {
-        headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
-      })
+      return NextResponse.json(
+        {
+          success: true,
+          items,
+          total: items.length,
+        },
+        {
+          headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
+        }
+      )
     }
 
     // Build filters
@@ -56,13 +59,16 @@ export async function GET(request: NextRequest) {
       categories = await getCategoriesWithCounts()
     }
 
-    return NextResponse.json({
-      success: true,
-      ...result,
-      ...(categories && { categories }),
-    }, {
-      headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
-    })
+    return NextResponse.json(
+      {
+        success: true,
+        ...result,
+        ...(categories && { categories }),
+      },
+      {
+        headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
+      }
+    )
   } catch (error) {
     console.error('Error fetching gallery items:', error)
     return NextResponse.json(

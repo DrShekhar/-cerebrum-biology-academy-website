@@ -253,9 +253,7 @@ const courseData = generateCourseData()
 
 const CourseCard = ({ course }: { course: CourseCard }) => {
   return (
-    <div
-      className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 relative overflow-hidden animate-fadeInUp"
-    >
+    <div className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 relative overflow-hidden animate-fadeInUp">
       {/* Series Badge */}
       <div className="absolute top-4 right-4">
         <span

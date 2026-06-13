@@ -1,13 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import {
-  BarChart3,
-  TrendingUp,
-  Users,
-  BookOpen,
-  Target,
-} from 'lucide-react'
+import { BarChart3, TrendingUp, Users, BookOpen, Target } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 
 interface CoursePerformance {
@@ -47,15 +41,18 @@ export default function CoursePerformancePage() {
   }
 
   const totalStudents = courses.reduce((sum, c) => sum + c.enrolledStudents, 0)
-  const avgCompletion = courses.length > 0
-    ? Math.round(courses.reduce((sum, c) => sum + c.completionRate, 0) / courses.length)
-    : 0
-  const avgScore = courses.length > 0
-    ? Math.round(courses.reduce((sum, c) => sum + c.avgTestScore, 0) / courses.length)
-    : 0
-  const avgSubmissionRate = courses.length > 0
-    ? Math.round(courses.reduce((sum, c) => sum + c.submissionRate, 0) / courses.length)
-    : 0
+  const avgCompletion =
+    courses.length > 0
+      ? Math.round(courses.reduce((sum, c) => sum + c.completionRate, 0) / courses.length)
+      : 0
+  const avgScore =
+    courses.length > 0
+      ? Math.round(courses.reduce((sum, c) => sum + c.avgTestScore, 0) / courses.length)
+      : 0
+  const avgSubmissionRate =
+    courses.length > 0
+      ? Math.round(courses.reduce((sum, c) => sum + c.submissionRate, 0) / courses.length)
+      : 0
 
   return (
     <AdminLayout>
@@ -149,7 +146,9 @@ export default function CoursePerformancePage() {
                       <ProgressBar value={course.completionRate} color="green" />
                     </td>
                     <td className="whitespace-nowrap px-6 py-4">
-                      <span className={`text-sm font-medium ${course.avgTestScore >= 70 ? 'text-green-600' : course.avgTestScore >= 50 ? 'text-yellow-600' : 'text-red-600'}`}>
+                      <span
+                        className={`text-sm font-medium ${course.avgTestScore >= 70 ? 'text-green-600' : course.avgTestScore >= 50 ? 'text-yellow-600' : 'text-red-600'}`}
+                      >
                         {course.avgTestScore}%
                       </span>
                     </td>
@@ -167,7 +166,17 @@ export default function CoursePerformancePage() {
   )
 }
 
-function StatCard({ icon, label, value, bg }: { icon: React.ReactNode; label: string; value: string | number; bg: string }) {
+function StatCard({
+  icon,
+  label,
+  value,
+  bg,
+}: {
+  icon: React.ReactNode
+  label: string
+  value: string | number
+  bg: string
+}) {
   return (
     <div className={`rounded-lg ${bg} p-4`}>
       <div className="flex items-center gap-3">

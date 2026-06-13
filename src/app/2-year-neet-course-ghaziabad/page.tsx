@@ -43,7 +43,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: '2 Year NEET Course Ghaziabad 2026 | Class 11-12 Integrated',
-    description: 'Join 2-year NEET course for Ghaziabad students from Class 11. Complete foundation + advanced coaching. Best results with 98% success rate. Call 99536-43938!',
+    description:
+      'Join 2-year NEET course for Ghaziabad students from Class 11. Complete foundation + advanced coaching. Best results with 98% success rate. Call 99536-43938!',
   },
 }
 
@@ -135,7 +136,11 @@ export default function TwoYearNEETCourseGhaziabad() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+        knowsAbout={[
+          'NEET Ghaziabad',
+          'NEET Biology Ghaziabad',
+          'Medical entrance coaching Ghaziabad',
+        ]}
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-teal-800 to-teal-600 text-white py-16">

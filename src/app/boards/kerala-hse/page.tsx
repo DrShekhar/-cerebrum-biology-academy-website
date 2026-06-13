@@ -5,7 +5,8 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'Kerala HSE Biology to NEET & KEAM',
-  description: 'Expert Kerala HSE Biology coaching for NEET and KEAM entrance exams. Known for producing high NEET scorers from Kerala board curriculum.',
+  description:
+    'Expert Kerala HSE Biology coaching for NEET and KEAM entrance exams. Known for producing high NEET scorers from Kerala board curriculum.',
   keywords: [
     'Kerala HSE biology coaching',
     'KEAM preparation',
@@ -16,7 +17,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Kerala HSE Biology to NEET & KEAM',
-    description: 'Expert Kerala HSE Biology coaching with NEET and KEAM integration for maximum success.',
+    description:
+      'Expert Kerala HSE Biology coaching with NEET and KEAM integration for maximum success.',
     url: `${BASE_URL}/boards/kerala-hse`,
     siteName: 'Cerebrum Biology Academy',
     type: 'website',
@@ -28,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Kerala HSE Biology to NEET & KEAM',
-    description: 'Expert Kerala HSE Biology coaching for NEET and KEAM entrance exams. Known for producing high NEET scorers from Kerala board curriculum.',
+    description:
+      'Expert Kerala HSE Biology coaching for NEET and KEAM entrance exams. Known for producing high NEET scorers from Kerala board curriculum.',
   },
 }
 

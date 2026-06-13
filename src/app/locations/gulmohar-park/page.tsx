@@ -21,10 +21,7 @@ import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
-import {
-  RelatedLocations,
-  getRelatedLocations,
-} from '@/components/locations/RelatedLocations'
+import { RelatedLocations, getRelatedLocations } from '@/components/locations/RelatedLocations'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import { areaDetails } from '@/data/south-delhi-areas'
@@ -85,15 +82,21 @@ export default function GulmoharParkPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/locations/gulmohar-park"
         pageName="NEET Biology Coaching for Gulmohar Park Students"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
-        personKnowsAbout={['NEET Gulmohar Park', 'NEET Biology Gulmohar Park', 'Medical entrance coaching Gulmohar Park']}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
+        personKnowsAbout={[
+          'NEET Gulmohar Park',
+          'NEET Biology Gulmohar Park',
+          'Medical entrance coaching Gulmohar Park',
+        ]}
         faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
       />
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-amber-900 via-orange-800 to-amber-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center animate-fadeInUp"
-            >
+            <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-amber-500/20 text-amber-300 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <MapPin className="w-4 h-4" />
                 Ultra-Premium Locality
@@ -129,8 +132,7 @@ export default function GulmoharParkPage() {
         <section className="py-12 md:py-16 -mt-8">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-amber-400 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-amber-400 animate-fadeInUp">
                 <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white py-4 px-6">
                   <div className="flex items-center gap-3">
                     <Award className="w-8 h-8" />
@@ -225,8 +227,7 @@ export default function GulmoharParkPage() {
                 { icon: Trophy, title: '98% Success', desc: 'Proven track record' },
                 { icon: Star, title: 'AIIMS Faculty', desc: 'Top educators' },
               ].map((item, idx) => (
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
-                >
+                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp">
                   <div className="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-amber-600" />
                   </div>
@@ -326,8 +327,7 @@ export default function GulmoharParkPage() {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">FAQs</h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((f, i) => (
-                <div key={i} className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
-                >
+                <div key={i} className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp">
                   <h3 className="font-semibold text-lg mb-2">{f.q}</h3>
                   <p className="text-gray-600">{f.a}</p>
                 </div>

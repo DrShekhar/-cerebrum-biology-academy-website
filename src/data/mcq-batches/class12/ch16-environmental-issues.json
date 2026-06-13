@@ -25,11 +25,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "electrostatic-precipitator",
-        "air-pollution",
-        "particulate-matter"
-      ],
+      "tags": ["electrostatic-precipitator", "air-pollution", "particulate-matter"],
       "neetWeightage": "HIGH"
     },
     {
@@ -51,11 +47,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bod",
-        "water-pollution",
-        "dissolved-oxygen"
-      ],
+      "tags": ["bod", "water-pollution", "dissolved-oxygen"],
       "neetWeightage": "HIGH"
     },
     {
@@ -77,11 +69,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "eutrophication",
-        "water-pollution",
-        "nutrients"
-      ],
+      "tags": ["eutrophication", "water-pollution", "nutrients"],
       "neetWeightage": "HIGH"
     },
     {
@@ -92,22 +80,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "Which of the following gases is primarily responsible for ozone depletion?",
-      "options": [
-        "Carbon dioxide",
-        "Methane",
-        "Nitrous oxide",
-        "Chlorofluorocarbons (CFCs)"
-      ],
+      "options": ["Carbon dioxide", "Methane", "Nitrous oxide", "Chlorofluorocarbons (CFCs)"],
       "correctAnswer": "D",
       "explanation": "Chlorofluorocarbons (CFCs) are primarily responsible for ozone layer depletion. CFCs release chlorine atoms in the stratosphere under UV radiation, and each chlorine atom can destroy thousands of ozone molecules through a chain reaction.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cfcs",
-        "ozone-depletion",
-        "stratosphere"
-      ],
+      "tags": ["cfcs", "ozone-depletion", "stratosphere"],
       "neetWeightage": "HIGH"
     },
     {
@@ -129,11 +108,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "montreal-protocol",
-        "ozone-depletion",
-        "cfcs"
-      ],
+      "tags": ["montreal-protocol", "ozone-depletion", "cfcs"],
       "neetWeightage": "HIGH"
     },
     {
@@ -155,11 +130,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biomagnification",
-        "food-chain",
-        "pollutants"
-      ],
+      "tags": ["biomagnification", "food-chain", "pollutants"],
       "neetWeightage": "HIGH"
     },
     {
@@ -181,11 +152,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "greenhouse-effect",
-        "infrared-radiation",
-        "global-warming"
-      ],
+      "tags": ["greenhouse-effect", "infrared-radiation", "global-warming"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -207,11 +174,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "catalytic-converter",
-        "automobile-pollution",
-        "hydrocarbons"
-      ],
+      "tags": ["catalytic-converter", "automobile-pollution", "hydrocarbons"],
       "neetWeightage": "HIGH"
     },
     {
@@ -233,11 +196,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "jhum-cultivation",
-        "slash-burn",
-        "deforestation"
-      ],
+      "tags": ["jhum-cultivation", "slash-burn", "deforestation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -259,11 +218,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "uv-b",
-        "skin-cancer",
-        "ozone-depletion"
-      ],
+      "tags": ["uv-b", "skin-cancer", "ozone-depletion"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -285,11 +240,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "electrostatic-precipitator",
-        "voltage",
-        "corona"
-      ],
+      "tags": ["electrostatic-precipitator", "voltage", "corona"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -300,22 +251,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "Which of the following is NOT a greenhouse gas?",
-      "options": [
-        "Carbon dioxide",
-        "Nitrogen",
-        "Methane",
-        "Nitrous oxide"
-      ],
+      "options": ["Carbon dioxide", "Nitrogen", "Methane", "Nitrous oxide"],
       "correctAnswer": "B",
       "explanation": "Nitrogen (N2) is not a greenhouse gas. It makes up about 78% of the atmosphere but does not absorb or re-emit infrared radiation. The main greenhouse gases are CO2, CH4, N2O, CFCs, and water vapour.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "greenhouse-gases",
-        "nitrogen",
-        "global-warming"
-      ],
+      "tags": ["greenhouse-gases", "nitrogen", "global-warming"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -337,11 +279,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algal-bloom",
-        "eutrophication",
-        "nitrogen-phosphorus"
-      ],
+      "tags": ["algal-bloom", "eutrophication", "nitrogen-phosphorus"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -363,11 +301,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "catalytic-converter",
-        "platinum",
-        "rhodium"
-      ],
+      "tags": ["catalytic-converter", "platinum", "rhodium"],
       "neetWeightage": "HIGH"
     },
     {
@@ -389,11 +323,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ddt",
-        "biomagnification",
-        "fat-soluble"
-      ],
+      "tags": ["ddt", "biomagnification", "fat-soluble"],
       "neetWeightage": "HIGH"
     },
     {
@@ -404,22 +334,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "Good ozone is found in the:",
-      "options": [
-        "Troposphere",
-        "Mesosphere",
-        "Thermosphere",
-        "Stratosphere"
-      ],
+      "options": ["Troposphere", "Mesosphere", "Thermosphere", "Stratosphere"],
       "correctAnswer": "D",
       "explanation": "Good ozone is found in the stratosphere (15-50 km above Earth's surface) where it forms the ozone layer that absorbs harmful UV-B and UV-C radiation. Bad ozone at ground level (troposphere) is a pollutant that causes respiratory problems.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ozone-layer",
-        "stratosphere",
-        "uv-protection"
-      ],
+      "tags": ["ozone-layer", "stratosphere", "uv-protection"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -430,22 +351,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "The thickness of ozone in a column of air from the ground to the top of the atmosphere is measured in:",
-      "options": [
-        "Parts per million",
-        "Decibels",
-        "Dobson Units",
-        "Becquerels"
-      ],
+      "options": ["Parts per million", "Decibels", "Dobson Units", "Becquerels"],
       "correctAnswer": "C",
       "explanation": "The thickness of the ozone layer is measured in Dobson Units (DU). The ozone hole is defined as a region where ozone levels drop below 200 DU. Normal ozone thickness over the tropics is about 260 DU. The unit is named after G.M.B. Dobson.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dobson-units",
-        "ozone-measurement",
-        "ozone-hole"
-      ],
+      "tags": ["dobson-units", "ozone-measurement", "ozone-hole"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -467,11 +379,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "reforestation",
-        "afforestation",
-        "deforestation"
-      ],
+      "tags": ["reforestation", "afforestation", "deforestation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -493,11 +401,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pm2.5",
-        "particulate-matter",
-        "respiratory"
-      ],
+      "tags": ["pm2.5", "particulate-matter", "respiratory"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -508,22 +412,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "The increase in global average temperature due to enhanced greenhouse effect is called:",
-      "options": [
-        "Ozone depletion",
-        "Global warming",
-        "Acid rain",
-        "Thermal inversion"
-      ],
+      "options": ["Ozone depletion", "Global warming", "Acid rain", "Thermal inversion"],
       "correctAnswer": "B",
       "explanation": "Global warming refers to the increase in the average temperature of the Earth's atmosphere, primarily due to the enhanced greenhouse effect caused by increased concentrations of greenhouse gases from human activities like burning fossil fuels and deforestation.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "global-warming",
-        "greenhouse-effect",
-        "temperature"
-      ],
+      "tags": ["global-warming", "greenhouse-effect", "temperature"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -545,11 +440,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "deforestation",
-        "agriculture",
-        "habitat-conversion"
-      ],
+      "tags": ["deforestation", "agriculture", "habitat-conversion"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -571,11 +462,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "scrubber",
-        "gaseous-pollutants",
-        "sulphur-dioxide"
-      ],
+      "tags": ["scrubber", "gaseous-pollutants", "sulphur-dioxide"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -597,11 +484,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sewage-treatment",
-        "water-pollution",
-        "zones"
-      ],
+      "tags": ["sewage-treatment", "water-pollution", "zones"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -612,22 +495,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "An electrostatic precipitator can remove over what percentage of particulate matter?",
-      "options": [
-        "50%",
-        "75%",
-        "90%",
-        "99%"
-      ],
+      "options": ["50%", "75%", "90%", "99%"],
       "correctAnswer": "D",
       "explanation": "An electrostatic precipitator can remove over 99% of particulate matter present in the exhaust from thermal power plants. It is highly efficient at removing even very fine particulate matter from industrial emissions.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "electrostatic-precipitator",
-        "efficiency",
-        "particulate-matter"
-      ],
+      "tags": ["electrostatic-precipitator", "efficiency", "particulate-matter"],
       "neetWeightage": "HIGH"
     },
     {
@@ -638,22 +512,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "Which of the following causes acid rain?",
-      "options": [
-        "SO2 and NO2",
-        "CO2 and N2",
-        "O3 and CH4",
-        "CO and H2"
-      ],
+      "options": ["SO2 and NO2", "CO2 and N2", "O3 and CH4", "CO and H2"],
       "correctAnswer": "A",
       "explanation": "Acid rain is caused primarily by sulphur dioxide (SO2) and nitrogen dioxide (NO2). These gases react with water vapour in the atmosphere to form sulphuric acid (H2SO4) and nitric acid (HNO3) respectively, which fall as acid rain with pH below 5.6.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "acid-rain",
-        "sulphur-dioxide",
-        "nitrogen-dioxide"
-      ],
+      "tags": ["acid-rain", "sulphur-dioxide", "nitrogen-dioxide"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -675,11 +540,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "chipko-movement",
-        "deforestation",
-        "conservation"
-      ],
+      "tags": ["chipko-movement", "deforestation", "conservation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -690,22 +551,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "Motor vehicles fitted with catalytic converters should use:",
-      "options": [
-        "Leaded petrol",
-        "Diesel",
-        "Unleaded petrol",
-        "Kerosene"
-      ],
+      "options": ["Leaded petrol", "Diesel", "Unleaded petrol", "Kerosene"],
       "correctAnswer": "C",
       "explanation": "Motor vehicles fitted with catalytic converters should use unleaded petrol because lead in leaded petrol inactivates the catalysts (platinum, palladium, and rhodium) used in the converter, rendering it ineffective in reducing pollution.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "catalytic-converter",
-        "unleaded-petrol",
-        "lead"
-      ],
+      "tags": ["catalytic-converter", "unleaded-petrol", "lead"],
       "neetWeightage": "HIGH"
     },
     {
@@ -727,11 +579,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "global-warming",
-        "sea-level-rise",
-        "glaciers"
-      ],
+      "tags": ["global-warming", "sea-level-rise", "glaciers"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -753,11 +601,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "radioactive-waste",
-        "disposal",
-        "nuclear"
-      ],
+      "tags": ["radioactive-waste", "disposal", "nuclear"],
       "neetWeightage": "LOW"
     },
     {
@@ -768,22 +612,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "The phenomenon where DDT concentration increases from 0.003 ppb in water to 25 ppm in fish-eating birds is an example of:",
-      "options": [
-        "Bioaccumulation",
-        "Eutrophication",
-        "Biodegradation",
-        "Biomagnification"
-      ],
+      "options": ["Bioaccumulation", "Eutrophication", "Biodegradation", "Biomagnification"],
       "correctAnswer": "D",
       "explanation": "This is an example of biomagnification where DDT concentration increases at each successive trophic level: water (0.003 ppb) to zooplankton (0.04 ppm) to small fish (0.5 ppm) to large fish (2 ppm) to fish-eating birds (25 ppm). The concentration increases about 8 million times from water to top predator.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biomagnification",
-        "ddt",
-        "trophic-levels"
-      ],
+      "tags": ["biomagnification", "ddt", "trophic-levels"],
       "neetWeightage": "HIGH"
     },
     {
@@ -794,22 +629,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "The ozone hole was first observed over:",
-      "options": [
-        "Antarctica",
-        "Arctic",
-        "Equator",
-        "North America"
-      ],
+      "options": ["Antarctica", "Arctic", "Equator", "North America"],
       "correctAnswer": "A",
       "explanation": "The ozone hole was first observed over Antarctica in the 1980s. It occurs primarily during the Antarctic spring (September-November) when the polar vortex and extremely cold temperatures facilitate the formation of polar stratospheric clouds that promote ozone destruction by CFCs.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ozone-hole",
-        "antarctica",
-        "polar"
-      ],
+      "tags": ["ozone-hole", "antarctica", "polar"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -831,11 +657,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "deforestation",
-        "soil-erosion",
-        "desertification"
-      ],
+      "tags": ["deforestation", "soil-erosion", "desertification"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -857,11 +679,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bod",
-        "organic-pollution",
-        "water-quality"
-      ],
+      "tags": ["bod", "organic-pollution", "water-quality"],
       "neetWeightage": "HIGH"
     },
     {
@@ -883,11 +701,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "kyoto-protocol",
-        "greenhouse-gases",
-        "global-warming"
-      ],
+      "tags": ["kyoto-protocol", "greenhouse-gases", "global-warming"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -898,22 +712,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "Which type of UV radiation is most harmful and is largely absorbed by the ozone layer?",
-      "options": [
-        "UV-A",
-        "UV-B",
-        "UV-C",
-        "Visible light"
-      ],
+      "options": ["UV-A", "UV-B", "UV-C", "Visible light"],
       "correctAnswer": "B",
       "explanation": "UV-B radiation is the most biologically harmful UV radiation that reaches Earth's surface. While UV-C is the most energetic, it is almost completely absorbed by the ozone layer and atmosphere. UV-B is partially absorbed by ozone, and increased UV-B reaching the surface due to ozone depletion causes skin cancer, cataracts, and DNA damage.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "uv-b",
-        "ozone",
-        "harmful-radiation"
-      ],
+      "tags": ["uv-b", "ozone", "harmful-radiation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -935,11 +740,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "waste-management",
-        "reduce-reuse-recycle",
-        "solid-waste"
-      ],
+      "tags": ["waste-management", "reduce-reuse-recycle", "solid-waste"],
       "neetWeightage": "LOW"
     },
     {
@@ -961,11 +762,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "eutrophication",
-        "lake-aging",
-        "succession"
-      ],
+      "tags": ["eutrophication", "lake-aging", "succession"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -976,22 +773,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "Which of the following is used to measure noise pollution?",
-      "options": [
-        "Lux meter",
-        "Decibel meter",
-        "Hygrometer",
-        "Anemometer"
-      ],
+      "options": ["Lux meter", "Decibel meter", "Hygrometer", "Anemometer"],
       "correctAnswer": "B",
       "explanation": "Noise pollution is measured in decibels (dB) using a decibel meter (sound level meter). According to WHO, noise above 80 dB can cause hearing damage. Prolonged exposure to noise above 150 dB can permanently damage hearing.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "noise-pollution",
-        "decibels",
-        "measurement"
-      ],
+      "tags": ["noise-pollution", "decibels", "measurement"],
       "neetWeightage": "LOW"
     },
     {
@@ -1002,22 +790,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "Which of the following pesticides caused biomagnification and thinning of eggshells in birds?",
-      "options": [
-        "BHC",
-        "DDT",
-        "Malathion",
-        "2,4-D"
-      ],
+      "options": ["BHC", "DDT", "Malathion", "2,4-D"],
       "correctAnswer": "B",
       "explanation": "DDT (dichlorodiphenyltrichloroethane) is a classic example of a pollutant that undergoes biomagnification. High DDT concentrations in fish-eating birds like pelicans caused thinning of eggshells, leading to premature breaking during incubation and severe population declines.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ddt",
-        "eggshell-thinning",
-        "biomagnification"
-      ],
+      "tags": ["ddt", "eggshell-thinning", "biomagnification"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1039,11 +818,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "catalytic-converter",
-        "unleaded-petrol",
-        "lead-poisoning"
-      ],
+      "tags": ["catalytic-converter", "unleaded-petrol", "lead-poisoning"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1065,11 +840,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "eutrophication",
-        "fish-kills",
-        "dissolved-oxygen"
-      ],
+      "tags": ["eutrophication", "fish-kills", "dissolved-oxygen"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1091,11 +862,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ddt",
-        "biomagnification",
-        "fat-soluble"
-      ],
+      "tags": ["ddt", "biomagnification", "fat-soluble"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1117,11 +884,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ozone-hole",
-        "antarctica",
-        "cfcs"
-      ],
+      "tags": ["ozone-hole", "antarctica", "cfcs"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1143,11 +906,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "global-warming",
-        "ice-melting",
-        "greenhouse-effect"
-      ],
+      "tags": ["global-warming", "ice-melting", "greenhouse-effect"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1169,11 +928,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bod",
-        "water-quality",
-        "dissolved-oxygen"
-      ],
+      "tags": ["bod", "water-quality", "dissolved-oxygen"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1195,11 +950,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "electrostatic-precipitator",
-        "corona",
-        "collecting-plates"
-      ],
+      "tags": ["electrostatic-precipitator", "corona", "collecting-plates"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1221,11 +972,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "jhum-cultivation",
-        "deforestation",
-        "soil-erosion"
-      ],
+      "tags": ["jhum-cultivation", "deforestation", "soil-erosion"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1247,11 +994,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "montreal-protocol",
-        "cfcs",
-        "ozone-protection"
-      ],
+      "tags": ["montreal-protocol", "cfcs", "ozone-protection"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1273,11 +1016,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "deforestation",
-        "co2",
-        "photosynthesis"
-      ],
+      "tags": ["deforestation", "co2", "photosynthesis"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1299,11 +1038,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mercury",
-        "minamata",
-        "biomagnification"
-      ],
+      "tags": ["mercury", "minamata", "biomagnification"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1325,11 +1060,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "scrubber",
-        "gaseous-pollutants",
-        "lime-spray"
-      ],
+      "tags": ["scrubber", "gaseous-pollutants", "lime-spray"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1351,11 +1082,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "uv-b",
-        "dna-damage",
-        "thymine-dimers"
-      ],
+      "tags": ["uv-b", "dna-damage", "thymine-dimers"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1377,11 +1104,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "electrostatic-precipitator",
-        "mechanism",
-        "particulate-matter"
-      ],
+      "tags": ["electrostatic-precipitator", "mechanism", "particulate-matter"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1403,11 +1126,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "greenhouse-effect",
-        "infrared",
-        "global-warming"
-      ],
+      "tags": ["greenhouse-effect", "infrared", "global-warming"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1429,11 +1148,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ozone-depletion",
-        "cfcs",
-        "montreal-protocol"
-      ],
+      "tags": ["ozone-depletion", "cfcs", "montreal-protocol"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1455,11 +1170,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biomagnification",
-        "ddt",
-        "trophic-levels"
-      ],
+      "tags": ["biomagnification", "ddt", "trophic-levels"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1481,11 +1192,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "catalytic-converter",
-        "catalysts",
-        "unleaded-petrol"
-      ],
+      "tags": ["catalytic-converter", "catalysts", "unleaded-petrol"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1507,11 +1214,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "water-pollution",
-        "bod",
-        "eutrophication"
-      ],
+      "tags": ["water-pollution", "bod", "eutrophication"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1533,11 +1236,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "deforestation",
-        "soil-erosion",
-        "jhum"
-      ],
+      "tags": ["deforestation", "soil-erosion", "jhum"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1559,11 +1258,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "uv-radiation",
-        "skin-cancer",
-        "ozone"
-      ],
+      "tags": ["uv-radiation", "skin-cancer", "ozone"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1585,11 +1280,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "solid-waste",
-        "e-waste",
-        "polyblend"
-      ],
+      "tags": ["solid-waste", "e-waste", "polyblend"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1611,11 +1302,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "global-warming",
-        "consequences",
-        "sea-level"
-      ],
+      "tags": ["global-warming", "consequences", "sea-level"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1637,11 +1324,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "air-pollution-control",
-        "esp",
-        "scrubber"
-      ],
+      "tags": ["air-pollution-control", "esp", "scrubber"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1663,11 +1346,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "eutrophication",
-        "algal-bloom",
-        "dissolved-oxygen"
-      ],
+      "tags": ["eutrophication", "algal-bloom", "dissolved-oxygen"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1689,11 +1368,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "noise-pollution",
-        "hearing-loss",
-        "health-effects"
-      ],
+      "tags": ["noise-pollution", "hearing-loss", "health-effects"],
       "neetWeightage": "LOW"
     },
     {
@@ -1715,11 +1390,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollution-control",
-        "devices",
-        "functions"
-      ],
+      "tags": ["pollution-control", "devices", "functions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1741,11 +1412,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollutants",
-        "effects",
-        "matching"
-      ],
+      "tags": ["pollutants", "effects", "matching"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1767,11 +1434,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "international-agreements",
-        "environmental-issues",
-        "protocols"
-      ],
+      "tags": ["international-agreements", "environmental-issues", "protocols"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1793,11 +1456,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "catalytic-converter",
-        "reactions",
-        "products"
-      ],
+      "tags": ["catalytic-converter", "reactions", "products"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1819,11 +1478,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollution-measurement",
-        "units",
-        "indicators"
-      ],
+      "tags": ["pollution-measurement", "units", "indicators"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1845,11 +1500,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "greenhouse-gases",
-        "sources",
-        "emissions"
-      ],
+      "tags": ["greenhouse-gases", "sources", "emissions"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1871,11 +1522,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "water-pollution-terms",
-        "definitions",
-        "matching"
-      ],
+      "tags": ["water-pollution-terms", "definitions", "matching"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1897,11 +1544,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "environmental-movements",
-        "chipko",
-        "conservation"
-      ],
+      "tags": ["environmental-movements", "chipko", "conservation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1923,11 +1566,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "consequences",
-        "environmental-issues",
-        "matching"
-      ],
+      "tags": ["consequences", "environmental-issues", "matching"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1949,11 +1588,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "waste-types",
-        "examples",
-        "solid-waste"
-      ],
+      "tags": ["waste-types", "examples", "solid-waste"],
       "neetWeightage": "LOW"
     },
     {
@@ -1975,11 +1610,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "electrostatic-precipitator",
-        "components",
-        "mechanism"
-      ],
+      "tags": ["electrostatic-precipitator", "components", "mechanism"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2001,11 +1632,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "acid-rain",
-        "precursor-gases",
-        "chemical-reactions"
-      ],
+      "tags": ["acid-rain", "precursor-gases", "chemical-reactions"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2016,22 +1643,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "How many of the following are greenhouse gases?\n(a) CO2 (b) CH4 (c) N2O (d) O2 (e) CFCs (f) N2 (g) Water vapour (h) Argon",
-      "options": [
-        "3",
-        "4",
-        "5",
-        "6"
-      ],
+      "options": ["3", "4", "5", "6"],
       "correctAnswer": "C",
       "explanation": "Five are greenhouse gases: (a) CO2, (b) CH4, (c) N2O, (e) CFCs, and (g) Water vapour. O2, N2, and Argon are not greenhouse gases as they do not absorb or re-emit infrared radiation. These five greenhouse gases trap heat in the atmosphere contributing to global warming.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "greenhouse-gases",
-        "counting",
-        "global-warming"
-      ],
+      "tags": ["greenhouse-gases", "counting", "global-warming"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2042,22 +1660,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "How many of the following are consequences of ozone depletion?\n(a) Skin cancer (b) Cataracts (c) Reduced immunity (d) DNA damage (e) Global warming (f) Acid rain (g) Snow blindness (h) Damage to phytoplankton",
-      "options": [
-        "4",
-        "5",
-        "6",
-        "7"
-      ],
+      "options": ["4", "5", "6", "7"],
       "correctAnswer": "C",
       "explanation": "Six are consequences of ozone depletion (increased UV-B): (a) Skin cancer, (b) Cataracts, (c) Reduced immunity, (d) DNA damage, (g) Snow blindness, and (h) Damage to phytoplankton. Global warming and acid rain are caused by other factors, not ozone depletion.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ozone-depletion",
-        "consequences",
-        "counting"
-      ],
+      "tags": ["ozone-depletion", "consequences", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2068,22 +1677,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "How many of the following are consequences of deforestation?\n(a) Soil erosion (b) Increased CO2 (c) Loss of biodiversity (d) Flooding (e) Increased rainfall (f) Desertification (g) Disruption of water cycle (h) Decreased global temperature",
-      "options": [
-        "4",
-        "5",
-        "6",
-        "7"
-      ],
+      "options": ["4", "5", "6", "7"],
       "correctAnswer": "C",
       "explanation": "Six are consequences of deforestation: (a) Soil erosion, (b) Increased atmospheric CO2, (c) Loss of biodiversity, (d) Flooding, (f) Desertification, and (g) Disruption of water cycle. Increased rainfall and decreased global temperature are not consequences; deforestation actually reduces rainfall and contributes to warming.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "deforestation",
-        "consequences",
-        "counting"
-      ],
+      "tags": ["deforestation", "consequences", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2094,22 +1694,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "How many of the following pollutants undergo biomagnification?\n(a) DDT (b) Mercury (c) Sugar (d) Lead (e) Paper waste (f) Polychlorinated biphenyls (PCBs) (g) Vegetable oil (h) Arsenic",
-      "options": [
-        "3",
-        "4",
-        "5",
-        "6"
-      ],
+      "options": ["3", "4", "5", "6"],
       "correctAnswer": "B",
       "explanation": "Four undergo biomagnification: (a) DDT, (b) Mercury, (f) PCBs, and (h) Arsenic. These are non-biodegradable, persistent pollutants that accumulate in living tissues. Sugar, paper waste, and vegetable oil are biodegradable. Lead is toxic but does not biomagnify as efficiently in food chains.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biomagnification",
-        "persistent-pollutants",
-        "counting"
-      ],
+      "tags": ["biomagnification", "persistent-pollutants", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2120,22 +1711,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "How many of the following are correct functions of a catalytic converter?\n(a) Converts unburnt hydrocarbons to CO2 and water (b) Converts CO to CO2 (c) Converts NO to N2 (d) Converts SO2 to S (e) Converts lead to lead oxide (f) Uses platinum-palladium as catalyst (g) Uses rhodium as catalyst (h) Requires unleaded petrol",
-      "options": [
-        "4",
-        "5",
-        "6",
-        "7"
-      ],
+      "options": ["4", "5", "6", "7"],
       "correctAnswer": "C",
       "explanation": "Six statements are correct: (a), (b), (c), (f), (g), and (h). The catalytic converter converts hydrocarbons to CO2 and H2O, CO to CO2, and NO to N2 using platinum-palladium and rhodium catalysts, requiring unleaded petrol. It does not convert SO2 to S or lead to lead oxide.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "catalytic-converter",
-        "functions",
-        "counting"
-      ],
+      "tags": ["catalytic-converter", "functions", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2146,22 +1728,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "How many of the following contribute to water pollution?\n(a) Sewage (b) Industrial effluents (c) Agricultural runoff with fertilisers (d) Thermal discharge from power plants (e) Oil spills (f) Detergents with phosphates (g) Solar radiation (h) Radioactive waste",
-      "options": [
-        "5",
-        "6",
-        "7",
-        "8"
-      ],
+      "options": ["5", "6", "7", "8"],
       "correctAnswer": "C",
       "explanation": "Seven contribute to water pollution: (a) Sewage, (b) Industrial effluents, (c) Agricultural runoff, (d) Thermal discharge, (e) Oil spills, (f) Detergents with phosphates, and (h) Radioactive waste. Solar radiation does not pollute water; it is a natural energy source.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "water-pollution",
-        "sources",
-        "counting"
-      ],
+      "tags": ["water-pollution", "sources", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2172,22 +1745,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "How many of the following are correct about the effects of UV-B radiation?\n(a) Causes skin ageing (b) Causes skin cancer (c) Causes cataracts (d) Damages DNA (e) Reduces immunity (f) Promotes vitamin D synthesis (g) Damages phytoplankton (h) Causes ozone formation at ground level",
-      "options": [
-        "5",
-        "6",
-        "7",
-        "8"
-      ],
+      "options": ["5", "6", "7", "8"],
       "correctAnswer": "C",
       "explanation": "Seven statements are correct about UV-B: (a) Causes skin ageing, (b) Causes skin cancer, (c) Causes cataracts, (d) Damages DNA, (e) Reduces immunity, (f) Promotes vitamin D synthesis (in moderate amounts), and (g) Damages phytoplankton. Statement (h) is about UV from other wavelengths reacting with pollutants.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "uv-b",
-        "health-effects",
-        "counting"
-      ],
+      "tags": ["uv-b", "health-effects", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2198,22 +1762,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "How many of the following are air pollutants?\n(a) CO (b) SO2 (c) NO2 (d) Particulate matter (e) N2 (f) Lead particles (g) O2 (h) Benzene vapours",
-      "options": [
-        "4",
-        "5",
-        "6",
-        "7"
-      ],
+      "options": ["4", "5", "6", "7"],
       "correctAnswer": "C",
       "explanation": "Six are air pollutants: (a) CO, (b) SO2, (c) NO2, (d) Particulate matter, (f) Lead particles, and (h) Benzene vapours. N2 (nitrogen gas) and O2 (oxygen gas) are normal atmospheric components, not pollutants.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "air-pollutants",
-        "counting",
-        "atmospheric"
-      ],
+      "tags": ["air-pollutants", "counting", "atmospheric"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2235,12 +1790,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biomagnification",
-        "ddt",
-        "food-chain",
-        "sequence"
-      ],
+      "tags": ["biomagnification", "ddt", "food-chain", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2262,11 +1812,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "eutrophication",
-        "sequence",
-        "algal-bloom"
-      ],
+      "tags": ["eutrophication", "sequence", "algal-bloom"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2288,12 +1834,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ozone-depletion",
-        "cfcs",
-        "chlorine",
-        "sequence"
-      ],
+      "tags": ["ozone-depletion", "cfcs", "chlorine", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2304,22 +1845,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "Arrange the following in increasing order of their contribution to enhanced greenhouse effect:\n(a) N2O (b) CO2 (c) CFCs (d) CH4",
-      "options": [
-        "b < d < c < a",
-        "c < a < d < b",
-        "a < c < d < b",
-        "d < a < b < c"
-      ],
+      "options": ["b < d < c < a", "c < a < d < b", "a < c < d < b", "d < a < b < c"],
       "correctAnswer": "C",
       "explanation": "In increasing order of contribution to the enhanced greenhouse effect: N2O (about 6%) < CFCs (about 14%) < CH4 (about 20%) < CO2 (about 60%). CO2 is the single largest contributor to the enhanced greenhouse effect due to its high atmospheric concentration from fossil fuel burning.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "greenhouse-gases",
-        "contribution",
-        "sequence"
-      ],
+      "tags": ["greenhouse-gases", "contribution", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2341,11 +1873,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "electrostatic-precipitator",
-        "mechanism",
-        "sequence"
-      ],
+      "tags": ["electrostatic-precipitator", "mechanism", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2356,22 +1884,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "Arrange the layers of atmosphere from Earth's surface outward where ozone has different roles:\n(a) Stratosphere (good ozone) (b) Troposphere (bad ozone at ground level) (c) Mesosphere (d) Thermosphere",
-      "options": [
-        "a < b < c < d",
-        "b < a < c < d",
-        "c < d < a < b",
-        "d < c < b < a"
-      ],
+      "options": ["a < b < c < d", "b < a < c < d", "c < d < a < b", "d < c < b < a"],
       "correctAnswer": "B",
       "explanation": "From Earth's surface outward: Troposphere (0-12 km, where ground-level ozone is a pollutant) < Stratosphere (12-50 km, where the ozone layer protects against UV) < Mesosphere (50-80 km) < Thermosphere (80-700 km). The ozone layer in the stratosphere is beneficial while tropospheric ozone is harmful.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "atmospheric-layers",
-        "ozone",
-        "sequence"
-      ],
+      "tags": ["atmospheric-layers", "ozone", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2382,22 +1901,13 @@
       "ncertChapter": 16,
       "ncertChapterName": "Environmental Issues",
       "question": "Arrange the international environmental agreements in chronological order:\n(a) Kyoto Protocol (b) Montreal Protocol (c) Stockholm Conference (d) Rio Earth Summit",
-      "options": [
-        "b < c < a < d",
-        "d < a < b < c",
-        "c < b < d < a",
-        "a < b < c < d"
-      ],
+      "options": ["b < c < a < d", "d < a < b < c", "c < b < d < a", "a < b < c < d"],
       "correctAnswer": "C",
       "explanation": "The correct chronological order is: Stockholm Conference (1972, first major international conference on environment) < Montreal Protocol (1987, to phase out ozone-depleting substances) < Rio Earth Summit (1992, addressed climate change and biodiversity) < Kyoto Protocol (1997, set greenhouse gas emission targets).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "international-agreements",
-        "chronology",
-        "sequence"
-      ],
+      "tags": ["international-agreements", "chronology", "sequence"],
       "neetWeightage": "LOW"
     },
     {
@@ -2419,11 +1929,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "polyblend",
-        "ahmed-khan",
-        "plastic-waste"
-      ],
+      "tags": ["polyblend", "ahmed-khan", "plastic-waste"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2445,11 +1951,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "acid-rain",
-        "ph",
-        "so2-no2"
-      ],
+      "tags": ["acid-rain", "ph", "so2-no2"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2471,11 +1973,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "thermal-pollution",
-        "dissolved-oxygen",
-        "fish-kills"
-      ],
+      "tags": ["thermal-pollution", "dissolved-oxygen", "fish-kills"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2497,11 +1995,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "radioactive-waste",
-        "nuclear",
-        "disposal"
-      ],
+      "tags": ["radioactive-waste", "nuclear", "disposal"],
       "neetWeightage": "LOW"
     },
     {
@@ -2523,11 +2017,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "jhum-cultivation",
-        "shifting-agriculture",
-        "soil"
-      ],
+      "tags": ["jhum-cultivation", "shifting-agriculture", "soil"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2549,11 +2039,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollution-diseases",
-        "mercury",
-        "cadmium"
-      ],
+      "tags": ["pollution-diseases", "mercury", "cadmium"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2575,11 +2061,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pollution-control",
-        "methods",
-        "matching"
-      ],
+      "tags": ["pollution-control", "methods", "matching"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2601,11 +2083,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "environmental-phenomena",
-        "features",
-        "matching"
-      ],
+      "tags": ["environmental-phenomena", "features", "matching"],
       "neetWeightage": "MEDIUM"
     }
   ]

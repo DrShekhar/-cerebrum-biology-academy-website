@@ -182,7 +182,9 @@ export async function validateAdminSession(request: NextRequest): Promise<AdminS
     // Check if any admin keys are configured
     const adminKeys = getAdminKeys()
     if (adminKeys.length === 0) {
-      console.error('[SECURITY] No admin keys configured (ADMIN_ACCESS_KEY, ADMIN_ACCESS_KEYS, or ADMIN_ACCESS_KEYS_JSON)')
+      console.error(
+        '[SECURITY] No admin keys configured (ADMIN_ACCESS_KEY, ADMIN_ACCESS_KEYS, or ADMIN_ACCESS_KEYS_JSON)'
+      )
       return { valid: false }
     }
 

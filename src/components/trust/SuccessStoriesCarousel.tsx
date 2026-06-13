@@ -285,9 +285,7 @@ function SuccessStoryCard({ story }: { story: SuccessStory }) {
   const theme = getSeriesTheme(story.series)
 
   return (
-    <div
-      className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden animate-fadeInUp"
-    >
+    <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden animate-fadeInUp">
       {/* Header with student info */}
       <div className={`${theme.bg} p-6 relative`}>
         {/* Verification Badge */}
@@ -582,15 +580,15 @@ export default function SuccessStoriesCarousel({
 
       {/* Stories Grid */}
       <div className="p-6">
-<div
-            key={currentIndex}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeInUp"
-          >
-            {currentStories.map((story) => (
-              <SuccessStoryCard key={story.id} story={story} />
-            ))}
-          </div>
-</div>
+        <div
+          key={currentIndex}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeInUp"
+        >
+          {currentStories.map((story) => (
+            <SuccessStoryCard key={story.id} story={story} />
+          ))}
+        </div>
+      </div>
 
       {/* Slide Indicators */}
       {totalSlideGroups > 1 && (

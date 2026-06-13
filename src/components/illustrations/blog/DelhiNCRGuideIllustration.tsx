@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function DelhiNCRGuideIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -12,12 +12,7 @@ export function DelhiNCRGuideIllustration({ className = '', animate = true }: Il
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Background - City skyline gradient */}
       <defs>
         <linearGradient id="delhiSkyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -33,8 +28,7 @@ export function DelhiNCRGuideIllustration({ className = '', animate = true }: Il
       <rect width="400" height="300" fill="url(#delhiSkyGradient)" />
 
       {/* Delhi NCR Map representation */}
-      <g
-      >
+      <g>
         {/* Map base */}
         <ellipse
           cx="200"
@@ -72,8 +66,7 @@ export function DelhiNCRGuideIllustration({ className = '', animate = true }: Il
 
       {/* Location pins with animation */}
       {/* Rohini */}
-      <g
-      >
+      <g>
         <circle cx="140" cy="100" r="12" fill="#EF4444" />
         <path d="M140 88 L140 76" stroke="#EF4444" strokeWidth="3" />
         <circle cx="140" cy="100" r="5" fill="#FFF" />
@@ -83,8 +76,7 @@ export function DelhiNCRGuideIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* South Delhi */}
-      <g
-      >
+      <g>
         <circle cx="200" cy="200" r="12" fill="#8B5CF6" />
         <path d="M200 188 L200 176" stroke="#8B5CF6" strokeWidth="3" />
         <circle cx="200" cy="200" r="5" fill="#FFF" />
@@ -94,8 +86,7 @@ export function DelhiNCRGuideIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* Gurugram */}
-      <g
-      >
+      <g>
         <circle cx="130" cy="180" r="12" fill="#14B8A6" />
         <path d="M130 168 L130 156" stroke="#14B8A6" strokeWidth="3" />
         <circle cx="130" cy="180" r="5" fill="#FFF" />
@@ -105,8 +96,7 @@ export function DelhiNCRGuideIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* Noida */}
-      <g
-      >
+      <g>
         <circle cx="280" cy="140" r="12" fill="#F59E0B" />
         <path d="M280 128 L280 116" stroke="#F59E0B" strokeWidth="3" />
         <circle cx="280" cy="140" r="5" fill="#FFF" />
@@ -116,8 +106,7 @@ export function DelhiNCRGuideIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* Faridabad */}
-      <g
-      >
+      <g>
         <circle cx="240" cy="220" r="12" fill="#3B82F6" />
         <path d="M240 208 L240 196" stroke="#3B82F6" strokeWidth="3" />
         <circle cx="240" cy="220" r="5" fill="#FFF" />
@@ -127,16 +116,14 @@ export function DelhiNCRGuideIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* Central building icon - India Gate style */}
-      <g
-      >
+      <g>
         <rect x="185" y="130" width="30" height="40" fill="#9CA3AF" />
         <path d="M185 130 Q 200 110 215 130" fill="#9CA3AF" />
         <rect x="195" y="150" width="10" height="20" fill="#6B7280" />
       </g>
 
       {/* Title banner */}
-      <g
-      >
+      <g>
         <rect x="100" y="255" width="200" height="30" rx="6" fill="#1F2937" />
         <text x="200" y="275" textAnchor="middle" fill="#FFF" fontSize="12" fontWeight="600">
           Delhi NCR Coaching Guide
@@ -144,14 +131,7 @@ export function DelhiNCRGuideIllustration({ className = '', animate = true }: Il
       </g>
 
       {/* Pulsing connection lines */}
-      <circle
-        cx="200"
-        cy="160"
-        r="60"
-        stroke="#22C55E"
-        strokeWidth="1"
-        fill="none"
-      />
+      <circle cx="200" cy="160" r="60" stroke="#22C55E" strokeWidth="1" fill="none" />
     </svg>
   )
 }

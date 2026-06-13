@@ -649,12 +649,7 @@
     {
       "type": "MTF",
       "question": "Regarding the vertical structure of tropical rainforests, mark each statement as True (T) or False (F):\n(I) The emergent layer receives the most direct sunlight, with trees reaching 60-70 m\n(II) The understory receives approximately 50% of sunlight that reaches the canopy\n(III) Epiphytes in the canopy obtain water and nutrients from rainfall and airborne detritus, not from the host tree\n(IV) The forest floor receives less than 2% of sunlight, resulting in sparse ground vegetation",
-      "options": [
-        "TFTT",
-        "TTFT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TFTT", "TTFT", "TFTF", "TFFT"],
       "correctAnswer": "A",
       "explanation": "(I) TRUE — Emergent trees project above the main canopy, reaching heights of 60-70 m or more, and receive the most direct and intense sunlight. (II) FALSE — The understory receives far less than 50% of sunlight. The dense canopy absorbs approximately 95-98% of incoming sunlight, leaving the understory and forest floor in deep shade. The understory typically receives only 2-5% of full sunlight. (III) TRUE — Epiphytes (such as bromeliads, orchids, and ferns) are not parasitic; they use the host tree only for physical support. They obtain water from rainfall and fog, and nutrients from rainwater, airborne dust, and decomposing organic matter that accumulates in their root masses. (IV) TRUE — The forest floor receives less than 2% of sunlight, which is why understory vegetation is typically sparse and adapted to deep shade conditions.",
       "isOlympiad": true,
@@ -689,12 +684,7 @@
     {
       "type": "MTF",
       "question": "Regarding the factors that create the distinct vertical zones in a lake, mark each statement as True (T) or False (F):\n(I) The thermocline is a zone of rapid temperature change that acts as a barrier to mixing between the epilimnion and hypolimnion\n(II) Lake turnover in temperate lakes occurs twice per year (spring and fall) when surface water temperature reaches 4°C\n(III) The photic zone always extends to the bottom of the thermocline in all lakes\n(IV) Dissolved oxygen is typically lowest in the hypolimnion of eutrophic lakes during summer stratification",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFFT",
-        "TFTF"
-      ],
+      "options": ["TTFT", "TTTT", "TFFT", "TFTF"],
       "correctAnswer": "A",
       "explanation": "(I) TRUE — The thermocline is a narrow zone of rapid temperature decrease that creates a density barrier, preventing mixing between the warm, less dense epilimnion above and the cold, dense hypolimnion below. (II) TRUE — In dimictic temperate lakes, turnover occurs in spring (when surface water warms to 4°C after ice melt) and fall (when surface water cools to 4°C). At 4°C, water reaches maximum density, eliminating density differences and allowing wind-driven mixing throughout the water column. (III) FALSE — The depth of the photic zone depends on water clarity and has no fixed relationship to the thermocline. In turbid lakes, the photic zone may be only a few meters deep, well above the thermocline. (IV) TRUE — In eutrophic lakes, decomposition of dead organic matter sinking from the productive surface waters consumes dissolved oxygen in the hypolimnion. Since the thermocline prevents oxygen replenishment from the surface, the hypolimnion can become anoxic.",
       "isOlympiad": true,
@@ -949,12 +939,7 @@
     {
       "type": "MTF",
       "question": "Regarding ocean circulation and its effects on climate and biome distribution, mark each statement as True (T) or False (F):\n(I) The Gulf Stream carries warm water from the tropics northward, moderating the climate of Western Europe\n(II) El Nino events involve warming of surface waters in the eastern tropical Pacific, suppressing upwelling off South America\n(III) Ocean acidification is caused by increased absorption of atmospheric sulfur dioxide by seawater\n(IV) The Southern Ocean surrounding Antarctica has the strongest wind-driven surface currents on Earth",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFFT",
-        "TTTF"
-      ],
+      "options": ["TTFT", "TTTT", "TFFT", "TTTF"],
       "correctAnswer": "A",
       "explanation": "(I) TRUE — The Gulf Stream (and its extension, the North Atlantic Drift) transports warm tropical water northeastward, releasing heat to the atmosphere and significantly warming the climate of Western Europe. London, at 51°N latitude, has much milder winters than Labrador at the same latitude, largely due to this warm current. (II) TRUE — During El Nino, trade winds weaken or reverse, allowing warm surface water to accumulate in the eastern tropical Pacific. This suppresses the normal upwelling of cold, nutrient-rich water off South America, devastating fisheries. (III) FALSE — Ocean acidification is caused by absorption of atmospheric CO2, not SO2. CO2 dissolves in seawater to form carbonic acid (H2CO3), which dissociates to release H+ ions, lowering pH. SO2 causes acid rain on land but is not the primary driver of ocean acidification. (IV) TRUE — The Antarctic Circumpolar Current, driven by strong westerly winds, is the largest ocean current by volume and the strongest wind-driven current system on Earth.",
       "isOlympiad": true,
@@ -1249,12 +1234,7 @@
     {
       "type": "MTF",
       "question": "Regarding adaptations of organisms to their abiotic environment, mark each statement as True (T) or False (F):\n(I) CAM photosynthesis allows plants to fix CO2 at night, reducing water loss in arid environments\n(II) Bergmann's rule states that body size increases with latitude in endotherms, which is an adaptation to conserve heat\n(III) Counter-current heat exchangers in Arctic mammals warm venous blood returning from extremities to reduce heat loss\n(IV) Hibernation in mammals involves complete cessation of metabolic activity until spring",
-      "options": [
-        "TTFF",
-        "TTTF",
-        "TTFT",
-        "TFFF"
-      ],
+      "options": ["TTFF", "TTTF", "TTFT", "TFFF"],
       "correctAnswer": "B",
       "explanation": "(I) TRUE — Crassulacean acid metabolism (CAM) plants open stomata only at night to fix CO2 into organic acids, which are then decarboxylated during the day to supply CO2 for the Calvin cycle with stomata closed. This dramatically reduces daytime water loss. (II) TRUE — Bergmann's rule describes the tendency for endotherm body size to increase with latitude and decreasing temperature. Larger body size produces a smaller surface area-to-volume ratio, reducing relative heat loss. (III) TRUE — Counter-current heat exchangers in the limbs of Arctic mammals (and birds) transfer heat from warm arterial blood to cool venous blood returning from extremities. This recaptures heat that would otherwise be lost and maintains core body temperature. (IV) FALSE — Hibernation involves dramatic reduction but not complete cessation of metabolism. Heart rate, breathing rate, and body temperature decrease substantially, but metabolic processes continue at a reduced rate. Periodic arousal episodes occur during hibernation.",
       "isOlympiad": true,
@@ -1309,12 +1289,7 @@
     {
       "type": "MCQ",
       "question": "In aquatic ecosystems, the compensation depth is the depth at which photosynthetic oxygen production equals respiratory oxygen consumption. Below this depth, net primary productivity is negative. What is the typical compensation depth in the clear tropical ocean?",
-      "options": [
-        "5-10 m",
-        "20-40 m",
-        "80-120 m",
-        "500-1000 m"
-      ],
+      "options": ["5-10 m", "20-40 m", "80-120 m", "500-1000 m"],
       "correctAnswer": "C",
       "explanation": "The compensation depth in clear tropical oceanic water typically ranges from 80-120 m. At this depth, light intensity has been attenuated to approximately 1% of surface irradiance (the '1% light level'), which is roughly the point where photosynthetic rate equals respiratory rate for phytoplankton. Above this depth (the photic or euphotic zone), net photosynthesis occurs; below it, respiration exceeds photosynthesis and organisms are net consumers of organic carbon. The compensation depth varies with water clarity: in turbid coastal waters, it may be only 5-20 m, while in the extremely clear open ocean, it can reach 100-120 m. The compensation depth defines the effective depth of the euphotic zone and therefore the depth to which primary production extends in the ocean.",
       "isOlympiad": true,

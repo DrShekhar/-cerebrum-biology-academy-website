@@ -2,10 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 
 const INDEXNOW_KEY = process.env.INDEXNOW_KEY || 'cerebrum-biology-academy-indexnow'
 const SITE_URL = 'https://cerebrumbiologyacademy.com'
-const INDEXNOW_ENDPOINTS = [
-  'https://api.indexnow.org/indexnow',
-  'https://www.bing.com/indexnow',
-]
+const INDEXNOW_ENDPOINTS = ['https://api.indexnow.org/indexnow', 'https://www.bing.com/indexnow']
 
 interface IndexNowRequest {
   urls?: string[]

@@ -21,7 +21,14 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'NEET Foundation Class 9 in Noida | 4-Year Head Start',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'NEET Foundation Class 9 in Noida | Early NEET Preparation' }],
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'NEET Foundation Class 9 in Noida | Early NEET Preparation',
+      },
+    ],
     description:
       'Start your NEET journey from Class 9 in Noida. Build strong foundation with our expert faculty.',
     url: 'https://cerebrumbiologyacademy.com/neet-foundation-class-9-noida',
@@ -33,7 +40,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 9 in Noida | Early NEET Preparation',
-    description: 'Start NEET preparation from Class 9 in Noida. 4-year head start, NCERT foundation, board + NEET dual prep. Expert faculty at Sector 62 center. Book free demo.',
+    description:
+      'Start NEET preparation from Class 9 in Noida. 4-year head start, NCERT foundation, board + NEET dual prep. Expert faculty at Sector 62 center. Book free demo.',
   },
 }
 

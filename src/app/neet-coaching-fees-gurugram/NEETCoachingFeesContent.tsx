@@ -127,16 +127,12 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-teal-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 border border-yellow-400/30 px-4 py-2 rounded-full mb-6">
               <IndianRupee className="w-4 h-4 text-yellow-400" />
               <span className="text-yellow-200 text-sm font-medium">Fee Comparison 2026</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              NEET Coaching Fees in Gurugram
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">NEET Coaching Fees in Gurugram</h1>
             <p className="text-xl text-green-100 mb-6 max-w-3xl mx-auto">
               Compare fees of top NEET coaching institutes. Find the best value for your investment.
               Save up to 60% with quality coaching at Cerebrum.
@@ -174,9 +170,7 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
       {/* Fee Comparison Table */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Fee Comparison: Top Institutes in Gurugram
             </h2>
@@ -217,7 +211,9 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
                             BEST VALUE
                           </span>
                         )}
-                        <span className={`font-semibold ${item.highlight ? 'text-green-700' : 'text-gray-900'}`}>
+                        <span
+                          className={`font-semibold ${item.highlight ? 'text-green-700' : 'text-gray-900'}`}
+                        >
                           {item.institute}
                         </span>
                       </div>
@@ -229,24 +225,34 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
                         ))}
                       </div>
                     </td>
-                    <td className={`px-4 py-4 text-center font-medium ${item.highlight ? 'text-green-700' : ''}`}>
+                    <td
+                      className={`px-4 py-4 text-center font-medium ${item.highlight ? 'text-green-700' : ''}`}
+                    >
                       {item.class11Fee}
                     </td>
-                    <td className={`px-4 py-4 text-center font-medium ${item.highlight ? 'text-green-700' : ''}`}>
+                    <td
+                      className={`px-4 py-4 text-center font-medium ${item.highlight ? 'text-green-700' : ''}`}
+                    >
                       {item.class12Fee}
                     </td>
-                    <td className={`px-4 py-4 text-center font-medium ${item.highlight ? 'text-green-700' : ''}`}>
+                    <td
+                      className={`px-4 py-4 text-center font-medium ${item.highlight ? 'text-green-700' : ''}`}
+                    >
                       {item.dropperFee}
                     </td>
-                    <td className={`px-4 py-4 text-center font-medium ${item.highlight ? 'text-green-700' : ''}`}>
+                    <td
+                      className={`px-4 py-4 text-center font-medium ${item.highlight ? 'text-green-700' : ''}`}
+                    >
                       {item.onlineFee}
                     </td>
                     <td className="px-4 py-4 text-center">
-                      <span className={`px-2 py-1 rounded text-sm ${
-                        parseInt(item.batchSize) <= 20
-                          ? 'bg-green-100 text-green-700'
-                          : 'bg-orange-100 text-orange-700'
-                      }`}>
+                      <span
+                        className={`px-2 py-1 rounded text-sm ${
+                          parseInt(item.batchSize) <= 20
+                            ? 'bg-green-100 text-green-700'
+                            : 'bg-orange-100 text-orange-700'
+                        }`}
+                      >
                         {item.batchSize}
                       </span>
                     </td>
@@ -258,7 +264,8 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
           </div>
 
           <p className="text-sm text-gray-500 mt-4 text-center">
-            * Fees are approximate and may vary. Contact institutes for exact current fees. Last updated: Jan 2026
+            * Fees are approximate and may vary. Contact institutes for exact current fees. Last
+            updated: Jan 2026
           </p>
         </div>
       </section>
@@ -266,9 +273,7 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
       {/* Savings Calculator */}
       <section className="py-16 bg-gradient-to-br from-green-50 to-teal-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               <Calculator className="inline w-8 h-8 mr-2 text-green-600" />
               Your Savings with Cerebrum
@@ -280,19 +285,20 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
 
           <div className="grid md:grid-cols-3 gap-6">
             {savingsCalculation.map((calc, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
-              >
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp">
                 <h3 className="font-bold text-lg text-gray-900 mb-4">{calc.program}</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Competitor Fee (avg)</span>
-                    <span className="text-red-600 font-medium">₹{calc.competitorFee.toLocaleString()}</span>
+                    <span className="text-red-600 font-medium">
+                      ₹{calc.competitorFee.toLocaleString()}
+                    </span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Cerebrum Fee</span>
-                    <span className="text-green-600 font-medium">₹{calc.cerebrumFee.toLocaleString()}</span>
+                    <span className="text-green-600 font-medium">
+                      ₹{calc.cerebrumFee.toLocaleString()}
+                    </span>
                   </div>
                   <div className="border-t pt-3 flex justify-between">
                     <span className="font-bold text-gray-900">You Save</span>
@@ -310,9 +316,7 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
       {/* Why Lower Fees */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               How We Offer Lower Fees Without Compromising Quality
             </h2>
@@ -323,22 +327,26 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
               {
                 icon: BookOpen,
                 title: 'Biology Focus Only',
-                description: 'We specialize in Biology, not all subjects. This focus allows expert faculty and lower overhead.',
+                description:
+                  'We specialize in Biology, not all subjects. This focus allows expert faculty and lower overhead.',
               },
               {
                 icon: Users,
                 title: 'Small Batches',
-                description: '15-20 students vs 60-100+. Fewer students = less infrastructure needed, lower costs passed to you.',
+                description:
+                  '15-20 students vs 60-100+. Fewer students = less infrastructure needed, lower costs passed to you.',
               },
               {
                 icon: Gift,
                 title: 'No Fancy Marketing',
-                description: 'No celebrity ads, no mall showrooms. We invest in faculty and material, not marketing.',
+                description:
+                  'No celebrity ads, no mall showrooms. We invest in faculty and material, not marketing.',
               },
               {
                 icon: Award,
                 title: 'Results Speak',
-                description: '98% success rate with 15+ years track record. Quality teaching, not expensive branding.',
+                description:
+                  '98% success rate with 15+ years track record. Quality teaching, not expensive branding.',
               },
             ].map((item, index) => (
               <div
@@ -445,9 +453,7 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Get Detailed Fee Structure & Scholarship Info
-          </h2>
+          <h2 className="text-3xl font-bold mb-4">Get Detailed Fee Structure & Scholarship Info</h2>
           <p className="text-green-100 mb-8 text-lg">
             Contact us for personalized fee calculation based on your eligibility
           </p>

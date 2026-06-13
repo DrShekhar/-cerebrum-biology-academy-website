@@ -315,9 +315,7 @@ export function BlogListingPage({ posts, categories, stats, popularTags }: BlogL
       {hasNextPage && <link rel="next" href={nextPageUrl} />}
       <section className="pt-8 pb-4 bg-white border-b">
         <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">
-            NEET Biology Blog
-          </h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">NEET Biology Blog</h1>
           <p className="text-gray-600">
             {stats.totalPosts} articles by AIIMS faculty — tips, strategies & study guides
           </p>
@@ -328,113 +326,111 @@ export function BlogListingPage({ posts, categories, stats, popularTags }: BlogL
       <section className="py-4 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col sm:flex-row gap-3 items-stretch">
-              {/* Search Bar with Preview */}
-              <div className="flex-1 relative" ref={searchRef}>
-                <Search
-                  className={`absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 transition-colors ${isSearching ? 'text-blue-500 animate-pulse' : 'text-gray-400'}`}
-                />
-                <input
-                  type="text"
-                  placeholder="Search articles, topics, or keywords..."
-                  value={searchInput}
-                  onChange={(e) => {
-                    setSearchInput(e.target.value)
-                    setIsSearching(true)
-                    setShowSearchPreview(true)
+            {/* Search Bar with Preview */}
+            <div className="flex-1 relative" ref={searchRef}>
+              <Search
+                className={`absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 transition-colors ${isSearching ? 'text-blue-500 animate-pulse' : 'text-gray-400'}`}
+              />
+              <input
+                type="text"
+                placeholder="Search articles, topics, or keywords..."
+                value={searchInput}
+                onChange={(e) => {
+                  setSearchInput(e.target.value)
+                  setIsSearching(true)
+                  setShowSearchPreview(true)
+                  handleFilterChange()
+                }}
+                onFocus={() => setShowSearchPreview(true)}
+                className="w-full pl-12 pr-12 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+                aria-label="Search blog articles"
+                autoComplete="off"
+              />
+              {searchInput && (
+                <button
+                  onClick={() => {
+                    setSearchInput('')
+                    setSearchTerm('')
+                    setShowSearchPreview(false)
                     handleFilterChange()
                   }}
-                  onFocus={() => setShowSearchPreview(true)}
-                  className="w-full pl-12 pr-12 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
-                  aria-label="Search blog articles"
-                  autoComplete="off"
-                />
-                {searchInput && (
-                  <button
-                    onClick={() => {
-                      setSearchInput('')
-                      setSearchTerm('')
-                      setShowSearchPreview(false)
-                      handleFilterChange()
-                    }}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition-colors"
-                    aria-label="Clear search"
-                  >
-                    <X className="w-4 h-4 text-gray-600" />
-                  </button>
-                )}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition-colors"
+                  aria-label="Clear search"
+                >
+                  <X className="w-4 h-4 text-gray-600" />
+                </button>
+              )}
 
-                {/* Search Preview Dropdown */}
-                {showSearchPreview && searchInput && searchPreviewResults.length > 0 && (
-                  <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden z-50 animate-fade-in">
-                    <div className="p-2">
-                      <p className="text-xs text-gray-500 px-3 py-2">
-                        {searchPreviewResults.length} results found
-                      </p>
-                      {searchPreviewResults.map((post) => (
-                        <Link
-                          key={post.slug}
-                          href={`/blog/${post.slug}`}
-                          onClick={() => setShowSearchPreview(false)}
-                          className="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-colors"
-                        >
-                          <div className="w-12 h-12 bg-indigo-100 rounded-lg flex-shrink-0 flex items-center justify-center">
-                            <BookOpen className="w-5 h-5 text-blue-600" />
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <p className="font-medium text-gray-900 text-sm truncate">
-                              {post.title}
-                            </p>
-                            <p className="text-xs text-gray-500 flex items-center gap-2">
-                              <span>{parseReadTime(post.readTime)} min read</span>
-                              <span>•</span>
-                              <span>{(post.views || 0).toLocaleString()} views</span>
-                            </p>
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
+              {/* Search Preview Dropdown */}
+              {showSearchPreview && searchInput && searchPreviewResults.length > 0 && (
+                <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden z-50 animate-fade-in">
+                  <div className="p-2">
+                    <p className="text-xs text-gray-500 px-3 py-2">
+                      {searchPreviewResults.length} results found
+                    </p>
+                    {searchPreviewResults.map((post) => (
+                      <Link
+                        key={post.slug}
+                        href={`/blog/${post.slug}`}
+                        onClick={() => setShowSearchPreview(false)}
+                        className="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-colors"
+                      >
+                        <div className="w-12 h-12 bg-indigo-100 rounded-lg flex-shrink-0 flex items-center justify-center">
+                          <BookOpen className="w-5 h-5 text-blue-600" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-medium text-gray-900 text-sm truncate">{post.title}</p>
+                          <p className="text-xs text-gray-500 flex items-center gap-2">
+                            <span>{parseReadTime(post.readTime)} min read</span>
+                            <span>•</span>
+                            <span>{(post.views || 0).toLocaleString()} views</span>
+                          </p>
+                        </div>
+                      </Link>
+                    ))}
                   </div>
-                )}
-              </div>
+                </div>
+              )}
+            </div>
 
-              {/* Sort Dropdown */}
-              <div className="flex items-center gap-2">
-                <ArrowUpDown className="w-5 h-5 text-gray-500" />
-                <select
-                  value={sortBy}
-                  onChange={(e) => {
-                    setSortBy(e.target.value as SortOption)
-                    handleFilterChange()
-                  }}
-                  className="px-4 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm font-medium"
-                  aria-label="Sort articles"
-                >
-                  <option value="newest">Newest First</option>
-                  <option value="popular">Most Popular</option>
-                  <option value="readTime">Quick Reads</option>
-                </select>
-              </div>
+            {/* Sort Dropdown */}
+            <div className="flex items-center gap-2">
+              <ArrowUpDown className="w-5 h-5 text-gray-500" />
+              <select
+                value={sortBy}
+                onChange={(e) => {
+                  setSortBy(e.target.value as SortOption)
+                  handleFilterChange()
+                }}
+                className="px-4 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm font-medium"
+                aria-label="Sort articles"
+              >
+                <option value="newest">Newest First</option>
+                <option value="popular">Most Popular</option>
+                <option value="readTime">Quick Reads</option>
+              </select>
+            </div>
 
-              {/* Category Filter — single dropdown */}
-              <div className="flex items-center gap-2">
-                <Filter className="w-5 h-5 text-gray-500" aria-hidden="true" />
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => {
-                    setSelectedCategory(e.target.value)
-                    handleFilterChange()
-                  }}
-                  className="px-4 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm"
-                  aria-label="Filter by category"
-                >
-                  <option value="all">All Categories</option>
-                  {categories.map((category) => (
-                    <option key={category.id} value={category.slug}>
-                      {category.name}
-                    </option>
-                  ))}
-                </select>
-              </div>
+            {/* Category Filter — single dropdown */}
+            <div className="flex items-center gap-2">
+              <Filter className="w-5 h-5 text-gray-500" aria-hidden="true" />
+              <select
+                value={selectedCategory}
+                onChange={(e) => {
+                  setSelectedCategory(e.target.value)
+                  handleFilterChange()
+                }}
+                className="px-4 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm"
+                aria-label="Filter by category"
+              >
+                <option value="all">All Categories</option>
+                {categories.map((category) => (
+                  <option key={category.id} value={category.slug}>
+                    {category.name}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
       </section>

@@ -242,31 +242,29 @@ export function Leaderboard({
                 <span>{TYPE_CONFIG[type].label}</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
-{showTypeDropdown && (
-                  <div
-                    className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-10 animate-fadeInUp"
-                  >
-                    {Object.entries(TYPE_CONFIG).map(([key, config]) => {
-                      const Icon = config.icon
-                      return (
-                        <button
-                          key={key}
-                          onClick={() => {
-                            onTypeChange?.(key as LeaderboardType)
-                            setShowTypeDropdown(false)
-                          }}
-                          className={`w-full flex items-center space-x-2 px-4 py-2 text-sm hover:bg-gray-50 ${
-                            type === key ? 'bg-purple-50 text-purple-700' : 'text-gray-700'
-                          }`}
-                        >
-                          <Icon className="w-4 h-4" />
-                          <span>{config.label}</span>
-                        </button>
-                      )
-                    })}
-                  </div>
-                )}
-</div>
+              {showTypeDropdown && (
+                <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-10 animate-fadeInUp">
+                  {Object.entries(TYPE_CONFIG).map(([key, config]) => {
+                    const Icon = config.icon
+                    return (
+                      <button
+                        key={key}
+                        onClick={() => {
+                          onTypeChange?.(key as LeaderboardType)
+                          setShowTypeDropdown(false)
+                        }}
+                        className={`w-full flex items-center space-x-2 px-4 py-2 text-sm hover:bg-gray-50 ${
+                          type === key ? 'bg-purple-50 text-purple-700' : 'text-gray-700'
+                        }`}
+                      >
+                        <Icon className="w-4 h-4" />
+                        <span>{config.label}</span>
+                      </button>
+                    )
+                  })}
+                </div>
+              )}
+            </div>
 
             {/* Scope Filter */}
             <div className="relative">
@@ -281,27 +279,25 @@ export function Leaderboard({
                 <span>{SCOPE_LABELS[scope]}</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
-{showScopeDropdown && (
-                  <div
-                    className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-10 animate-fadeInUp"
-                  >
-                    {Object.entries(SCOPE_LABELS).map(([key, label]) => (
-                      <button
-                        key={key}
-                        onClick={() => {
-                          onScopeChange?.(key as LeaderboardScope)
-                          setShowScopeDropdown(false)
-                        }}
-                        className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 ${
-                          scope === key ? 'bg-purple-50 text-purple-700' : 'text-gray-700'
-                        }`}
-                      >
-                        {label}
-                      </button>
-                    ))}
-                  </div>
-                )}
-</div>
+              {showScopeDropdown && (
+                <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-10 animate-fadeInUp">
+                  {Object.entries(SCOPE_LABELS).map(([key, label]) => (
+                    <button
+                      key={key}
+                      onClick={() => {
+                        onScopeChange?.(key as LeaderboardScope)
+                        setShowScopeDropdown(false)
+                      }}
+                      className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 ${
+                        scope === key ? 'bg-purple-50 text-purple-700' : 'text-gray-700'
+                      }`}
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -329,9 +325,7 @@ export function Leaderboard({
                 <div className="flex items-end justify-center space-x-2 sm:space-x-4">
                   {/* 2nd Place */}
                   {entries[1] && (
-                    <div
-                      className="text-center animate-fadeInUp"
-                    >
+                    <div className="text-center animate-fadeInUp">
                       <div className="relative">
                         {entries[1].userAvatar ? (
                           <Image
@@ -362,9 +356,7 @@ export function Leaderboard({
 
                   {/* 1st Place */}
                   {entries[0] && (
-                    <div
-                      className="text-center animate-fadeInUp"
-                    >
+                    <div className="text-center animate-fadeInUp">
                       <div className="relative">
                         <Crown className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-500 absolute -top-5 sm:-top-6 left-1/2 -translate-x-1/2" />
                         {entries[0].userAvatar ? (
@@ -396,9 +388,7 @@ export function Leaderboard({
 
                   {/* 3rd Place */}
                   {entries[2] && (
-                    <div
-                      className="text-center animate-fadeInUp"
-                    >
+                    <div className="text-center animate-fadeInUp">
                       <div className="relative">
                         {entries[2].userAvatar ? (
                           <Image

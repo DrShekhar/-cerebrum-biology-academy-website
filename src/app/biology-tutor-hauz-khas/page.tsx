@@ -34,7 +34,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biology Tutor in Hauz Khas Delhi | NEET & CBSE Coaching',
-    description: 'Best Biology tutor for Hauz Khas, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET coaching with 67+ AIIMS selections. Near IIT Delhi, Green Park, SDA students welcome.',
+    description:
+      'Best Biology tutor for Hauz Khas, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET coaching with 67+ AIIMS selections. Near IIT Delhi, Green Park, SDA students welcome.',
   },
 }
 
@@ -44,8 +45,15 @@ export default function BiologyTutorHauzKhasPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/biology-tutor-hauz-khas"
         pageName="Biology Tutor in Hauz Khas"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
-        personKnowsAbout={['NEET Hauz Khas', 'NEET Biology Hauz Khas', 'Medical entrance coaching Hauz Khas']}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
+        personKnowsAbout={[
+          'NEET Hauz Khas',
+          'NEET Biology Hauz Khas',
+          'Medical entrance coaching Hauz Khas',
+        ]}
       />
       <LocalitySchema
         locality="Hauz Khas"

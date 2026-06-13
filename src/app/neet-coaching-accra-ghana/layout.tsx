@@ -1,12 +1,15 @@
-import { Metadata } from 'next';
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Accra, Ghana',
-  description: 'Expert NEET coaching in Accra, Ghana. 98% success rate. Biology-focused curriculum with Dr. Shekhar C Singh. Enroll now!',
-  keywords: 'NEET coaching Accra, NEET classes Ghana, biology tuition, medical entrance preparation',
+  description:
+    'Expert NEET coaching in Accra, Ghana. 98% success rate. Biology-focused curriculum with Dr. Shekhar C Singh. Enroll now!',
+  keywords:
+    'NEET coaching Accra, NEET classes Ghana, biology tuition, medical entrance preparation',
   openGraph: {
     title: 'NEET Coaching in Accra, Ghana',
-    description: 'Expert NEET coaching with 98% success rate. Personalized biology curriculum tailored for Ghana students.',
+    description:
+      'Expert NEET coaching with 98% success rate. Personalized biology curriculum tailored for Ghana students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-accra-ghana',
     siteName: 'Cerebrum Biology Academy',
     images: [
@@ -29,12 +32,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-accra-ghana',
   },
-};
+}
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="layout-neet-coaching-accra-ghana">
-      {children}
-    </div>
-  );
+  return <div className="layout-neet-coaching-accra-ghana">{children}</div>
 }

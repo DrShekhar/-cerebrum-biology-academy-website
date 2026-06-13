@@ -148,7 +148,8 @@ const config: BestVerticalConfig = {
         'Most AP Biology students lose marks on the Free Response (50% of the exam). Cerebrum tutors have direct exposure to College Board scoring rubrics and run weekly FRQ drills with peer review — not just multiple-choice prep.',
     },
     {
-      title: 'Biology-Only (vs other tutor marketplaces / other tutor marketplaces / other tutor marketplaces)',
+      title:
+        'Biology-Only (vs other tutor marketplaces / other tutor marketplaces / other tutor marketplaces)',
       description:
         'Generalist tutoring platforms rotate biology tutors across subjects. Cerebrum tutors teach only biology — AP, IB, NEET, USABO, MCAT. Same AIIMS-trained pedagogy across verticals; structurally different from one-tutor-fits-all platforms.',
     },

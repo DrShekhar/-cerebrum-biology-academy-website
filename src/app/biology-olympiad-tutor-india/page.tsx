@@ -34,8 +34,7 @@ const CANONICAL = '/biology-olympiad-tutor-india'
 const PAGE_URL = `${SITE_URL}${CANONICAL}`
 
 export const metadata: Metadata = {
-  title:
-    'Biology Olympiad Tutor in India — 1:1 + Micro-Batch Mentoring · Dr. Shekhar C Singh',
+  title: 'Biology Olympiad Tutor in India — 1:1 + Micro-Batch Mentoring · Dr. Shekhar C Singh',
   description:
     'Direct 1:1 and micro-batch (6-8 students) biology olympiad tutoring with Dr. Shekhar C Singh (AIIMS New Delhi alumnus). Personalised NSEB / INBO / USABO / BBO / CBO / SBO / IBO preparation with weekly progress reviews. Available globally via Zoom.',
   keywords: [
@@ -75,7 +74,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biology Olympiad Tutor in India — 1:1 + Micro-Batch Mentoring · Dr. Shekhar C Singh',
-    description: 'Direct 1:1 and micro-batch (6-8 students) biology olympiad tutoring with Dr. Shekhar C Singh (AIIMS New Delhi alumnus). Personalised NSEB / INBO / USABO / BBO / CBO / SBO / IBO preparation with wee...',
+    description:
+      'Direct 1:1 and micro-batch (6-8 students) biology olympiad tutoring with Dr. Shekhar C Singh (AIIMS New Delhi alumnus). Personalised NSEB / INBO / USABO / BBO / CBO / SBO / IBO preparation with wee...',
   },
   robots: 'index, follow, max-image-preview:large',
 }
@@ -124,14 +124,12 @@ const TUTORING_MODELS = [
 
 const FAQS = [
   {
-    question:
-      'What\'s the difference between a tutor and coaching at Cerebrum?',
+    question: "What's the difference between a tutor and coaching at Cerebrum?",
     answer:
-      'Coaching = institute-led class with structured curriculum and faculty rotation. Tutoring = continuous relationship with one named mentor (Dr. Shekhar or senior faculty) who knows your child\'s strengths, gaps, and target olympiad. Our Pinnacle ZA tier IS the tutor-like product — direct Dr. Shekhar weekly review, customised topics, named mentor. 1:1 fully solo is also available for OCSC candidates.',
+      "Coaching = institute-led class with structured curriculum and faculty rotation. Tutoring = continuous relationship with one named mentor (Dr. Shekhar or senior faculty) who knows your child's strengths, gaps, and target olympiad. Our Pinnacle ZA tier IS the tutor-like product — direct Dr. Shekhar weekly review, customised topics, named mentor. 1:1 fully solo is also available for OCSC candidates.",
   },
   {
-    question:
-      'I\'m looking for a tutor specifically — does Cerebrum offer 1:1?',
+    question: "I'm looking for a tutor specifically — does Cerebrum offer 1:1?",
     answer:
       'Yes. The Pinnacle ZA Solo programme is fully 1:1 with Dr. Shekhar. Limited slots (max 8 per year). Reserved for OCSC candidates, USABO Finals aspirants, or IBO team aspirants. Most families pick the 6-8 student Pinnacle ZA Micro-Batch instead, which gives 95% of the 1:1 benefits at a fraction of the cost.',
   },
@@ -142,32 +140,27 @@ const FAQS = [
       'A tutor knows you. A video course does not. Olympiad prep is built on identifying your specific reasoning gaps and drilling them. Khan Academy / paid video courses are one-size-fits-all. A live tutor watches you attempt a Campbell figure-interpretation problem, sees exactly where your reasoning breaks down, and customises the next 3 weeks of work around that specific gap. That feedback loop is the entire mechanism.',
   },
   {
-    question:
-      'My child is in IB / IGCSE. Can they have a Cerebrum tutor too?',
+    question: 'My child is in IB / IGCSE. Can they have a Cerebrum tutor too?',
     answer:
       'Yes. IB Biology HL students are often well-positioned for international olympiads (BBO, USABO if US-domicile, CBO, SBO). The tutor adapts to your IB syllabus + your target olympiad — for example, an IB DP2 student preparing for USABO Open and Internal Assessment simultaneously gets a customised plan that uses IB IA as olympiad-style research training.',
   },
   {
-    question:
-      'How much does a 1:1 biology olympiad tutor cost?',
+    question: 'How much does a 1:1 biology olympiad tutor cost?',
     answer:
       'We do not publish prices because they depend on tier (1:1 Solo vs Pinnacle ZA Micro-Batch vs Competitive), your country / currency, and any sibling discount. Send a WhatsApp message — we share the tier matrix + currency-specific quote in the conversation.',
   },
   {
-    question:
-      'How do I know if 1:1 tutor is the right fit before committing?',
+    question: 'How do I know if 1:1 tutor is the right fit before committing?',
     answer:
       'Free 60-minute trial class with Dr. Shekhar. Bring one olympiad-style biology question your child has struggled with. We work through it live and you see the teaching style + tutor-style depth before committing.',
   },
   {
-    question:
-      'What olympiads can I prep for with a Cerebrum tutor?',
+    question: 'What olympiads can I prep for with a Cerebrum tutor?',
     answer:
       'NSEB, INBO (India funnel including OCSC), IBO simulation, USABO Open + Semifinal, BBO (UK), CBO (Canada), SBO (Singapore). Plus IB Biology HL extension prep, AP Biology Score-5 prep, NEET 360/360 biology, and the foundation work that precedes any of the above.',
   },
   {
-    question:
-      'I am outside India. Can my child have a Cerebrum tutor?',
+    question: 'I am outside India. Can my child have a Cerebrum tutor?',
     answer:
       'Yes — we tutor students globally via Zoom. Active student cohorts include UAE, USA, UK, Canada, Saudi Arabia, Qatar, Singapore, Australia, and Malaysia. Time-zone-matched slot scheduled at enrolment.',
   },
@@ -271,11 +264,10 @@ export default function BiologyOlympiadTutorIndiaPage() {
             <span className="text-indigo-700">a real mentor, not a video course.</span>
           </h1>
           <p className="mt-5 text-lg text-slate-600 leading-relaxed max-w-3xl">
-            A tutor knows you. A video course does not. Cerebrum&rsquo;s
-            Pinnacle ZA tier is the tutor-like product: 6-8 student micro-batch
-            with direct Dr. Shekhar C Singh weekly review, customised topic
-            plan, weekly progress check. Fully 1:1 Solo is also available for
-            OCSC and USABO Finals candidates (limited slots).
+            A tutor knows you. A video course does not. Cerebrum&rsquo;s Pinnacle ZA tier is the
+            tutor-like product: 6-8 student micro-batch with direct Dr. Shekhar C Singh weekly
+            review, customised topic plan, weekly progress check. Fully 1:1 Solo is also available
+            for OCSC and USABO Finals candidates (limited slots).
           </p>
 
           <div className="mt-7 flex flex-col sm:flex-row gap-3">
@@ -305,9 +297,9 @@ export default function BiologyOlympiadTutorIndiaPage() {
               Three tutor models. Pick by depth needed.
             </h2>
             <p className="mt-3 text-slate-600 max-w-3xl">
-              Honest framing: 1:1 Solo is genuinely the gold standard but is
-              limited in slots and most families don\'t need it. Micro-batch
-              gets you 95% of the value at a fraction of the cost.
+              Honest framing: 1:1 Solo is genuinely the gold standard but is limited in slots and
+              most families don\'t need it. Micro-batch gets you 95% of the value at a fraction of
+              the cost.
             </p>
 
             <div className="mt-8 grid gap-5 md:grid-cols-3">
@@ -354,11 +346,7 @@ export default function BiologyOlympiadTutorIndiaPage() {
                   >
                     Best for
                   </p>
-                  <p
-                    className={`mt-1 text-sm ${
-                      idx === 1 ? 'text-indigo-100' : 'text-slate-700'
-                    }`}
-                  >
+                  <p className={`mt-1 text-sm ${idx === 1 ? 'text-indigo-100' : 'text-slate-700'}`}>
                     {m.bestFor}
                   </p>
                   <ul
@@ -389,32 +377,26 @@ export default function BiologyOlympiadTutorIndiaPage() {
             Why a tutor specifically — not just a video course
           </h2>
           <p className="mt-4 text-base text-slate-700 leading-relaxed">
-            Most biology olympiad preparation content online &mdash; Khan
-            Academy, paid YouTube channels, OpenCourseWare lectures &mdash;
-            is genuinely good content but one-size-fits-all. It cannot
-            substitute for a tutor for one specific reason: olympiad prep is
-            built on identifying and fixing your child&rsquo;s specific
-            reasoning gaps, and video lectures cannot see where the reasoning
-            breaks down.
+            Most biology olympiad preparation content online &mdash; Khan Academy, paid YouTube
+            channels, OpenCourseWare lectures &mdash; is genuinely good content but
+            one-size-fits-all. It cannot substitute for a tutor for one specific reason: olympiad
+            prep is built on identifying and fixing your child&rsquo;s specific reasoning gaps, and
+            video lectures cannot see where the reasoning breaks down.
           </p>
           <p className="mt-4 text-base text-slate-700 leading-relaxed">
-            A live tutor watches your child attempt a Campbell figure-
-            interpretation problem (say: predict what happens to the action
-            potential if voltage-gated potassium channels are blocked) and
-            observes exactly where the reasoning breaks down. Maybe the issue
-            is they conflate depolarisation and hyperpolarisation directions.
-            Maybe they understand the mechanism but can&rsquo;t hold all four
-            ion-gradient calculations in working memory simultaneously. Maybe
-            they\&rsquo;ve memorised the answer to a similar question without
-            understanding why. The tutor sees the precise failure mode and
-            customises the next 3 weeks of work around drilling that specific
-            gap.
+            A live tutor watches your child attempt a Campbell figure- interpretation problem (say:
+            predict what happens to the action potential if voltage-gated potassium channels are
+            blocked) and observes exactly where the reasoning breaks down. Maybe the issue is they
+            conflate depolarisation and hyperpolarisation directions. Maybe they understand the
+            mechanism but can&rsquo;t hold all four ion-gradient calculations in working memory
+            simultaneously. Maybe they\&rsquo;ve memorised the answer to a similar question without
+            understanding why. The tutor sees the precise failure mode and customises the next 3
+            weeks of work around drilling that specific gap.
           </p>
           <p className="mt-4 text-base text-slate-700 leading-relaxed">
-            That feedback loop is the mechanism. Olympiad selection is won
-            and lost on reasoning depth at the margins. The mass-coaching
-            model and the video-course model both flatten the feedback loop.
-            A tutor preserves it.
+            That feedback loop is the mechanism. Olympiad selection is won and lost on reasoning
+            depth at the margins. The mass-coaching model and the video-course model both flatten
+            the feedback loop. A tutor preserves it.
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -424,9 +406,9 @@ export default function BiologyOlympiadTutorIndiaPage() {
                 Personal reasoning-gap diagnosis
               </h3>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                Each tutor session begins by reviewing the past week\&rsquo;s
-                attempts and pinpointing the specific reasoning failure mode.
-                Then the next session targets exactly that gap.
+                Each tutor session begins by reviewing the past week\&rsquo;s attempts and
+                pinpointing the specific reasoning failure mode. Then the next session targets
+                exactly that gap.
               </p>
             </div>
             <div className="rounded-xl border border-slate-200 p-5">
@@ -435,9 +417,9 @@ export default function BiologyOlympiadTutorIndiaPage() {
                 Customised curriculum per child
               </h3>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                No two students of ours follow identical week-on-week plans.
-                The base topic structure stays (Campbell\&rsquo;s 7 units)
-                but the depth allocation per topic varies by individual.
+                No two students of ours follow identical week-on-week plans. The base topic
+                structure stays (Campbell\&rsquo;s 7 units) but the depth allocation per topic
+                varies by individual.
               </p>
             </div>
             <div className="rounded-xl border border-slate-200 p-5">
@@ -446,10 +428,9 @@ export default function BiologyOlympiadTutorIndiaPage() {
                 Accountability the average student doesn\&rsquo;t have
               </h3>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                Weekly tutor sessions create accountability that
-                self-study + video-course models lack. You finish the
-                Campbell chapter and the figure-interpretation drills
-                because the tutor is going to ask about them next week.
+                Weekly tutor sessions create accountability that self-study + video-course models
+                lack. You finish the Campbell chapter and the figure-interpretation drills because
+                the tutor is going to ask about them next week.
               </p>
             </div>
             <div className="rounded-xl border border-slate-200 p-5">
@@ -458,10 +439,9 @@ export default function BiologyOlympiadTutorIndiaPage() {
                 Named mentor for the long arc
               </h3>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                Olympiad prep is a 1-2 year arc. Having one named mentor
-                throughout (vs faculty rotation at a large institute) means
-                deep familiarity with your child\&rsquo;s strengths and
-                blind spots.
+                Olympiad prep is a 1-2 year arc. Having one named mentor throughout (vs faculty
+                rotation at a large institute) means deep familiarity with your child\&rsquo;s
+                strengths and blind spots.
               </p>
             </div>
           </div>
@@ -480,9 +460,7 @@ export default function BiologyOlympiadTutorIndiaPage() {
                     <span>{f.question}</span>
                     <ChevronRight className="h-5 w-5 shrink-0 text-slate-400 transition-transform group-open:rotate-90" />
                   </summary>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-700">
-                    {f.answer}
-                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-700">{f.answer}</p>
                 </details>
               ))}
             </div>
@@ -497,9 +475,8 @@ export default function BiologyOlympiadTutorIndiaPage() {
               Book a free 60-minute trial with Dr. Shekhar
             </h2>
             <p className="mt-3 text-slate-300 max-w-2xl mx-auto">
-              Bring one olympiad-style biology question your child has
-              struggled with. We work through it live. You see the
-              tutor-style depth before committing to anything.
+              Bring one olympiad-style biology question your child has struggled with. We work
+              through it live. You see the tutor-style depth before committing to anything.
             </p>
             <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
               <a

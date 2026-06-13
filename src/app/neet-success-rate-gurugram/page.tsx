@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Success Rate Gurugram 2026 | Coaching Results Comparison',
-    description: 'Compare NEET success rates of coaching institutes in Gurugram (Gurgaon). Cerebrum: 98% qualification, 15 students 650+. See selection data, topper stats. Call 88264-44334!',
+    description:
+      'Compare NEET success rates of coaching institutes in Gurugram (Gurgaon). Cerebrum: 98% qualification, 15 students 650+. See selection data, topper stats. Call 88264-44334!',
   },
 }
 
@@ -157,7 +158,11 @@ export default function NEETSuccessRateGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-success-rate-gurugram" />
       {/* Quick Answer Box */}

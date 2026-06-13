@@ -80,35 +80,28 @@ const RecordButton: React.FC<{
   return (
     <div className="relative flex items-center justify-center">
       {/* Outer pulsing ring when recording */}
-{isRecording && (
-          <div
-            className="absolute w-20 h-20 border-2 border-red-500 rounded-full animate-fadeInUp"
-          />
-        )}
-{/* Main record button */}
+      {isRecording && (
+        <div className="absolute w-20 h-20 border-2 border-red-500 rounded-full animate-fadeInUp" />
+      )}
+      {/* Main record button */}
       <button
         className={`relative w-16 h-16 rounded-full flex items-center justify-center shadow-lg ${
           isRecording ? 'bg-red-500 text-white' : 'bg-white text-red-500 border-2 border-red-500'
         }`}
         onClick={isRecording ? onStop : onStart}
       >
-{isRecording ? (
-            <div
-              key="recording"
-              className="w-6 h-6 bg-white rounded-sm animate-fadeInUp"
-            />
-          ) : (
-            <div key="mic" className="animate-fadeInUp">
-              <Mic size={24} />
-            </div>
-          )}
-</button>
+        {isRecording ? (
+          <div key="recording" className="w-6 h-6 bg-white rounded-sm animate-fadeInUp" />
+        ) : (
+          <div key="mic" className="animate-fadeInUp">
+            <Mic size={24} />
+          </div>
+        )}
+      </button>
 
       {/* Audio level indicator */}
       {isRecording && (
-        <div
-          className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 animate-fadeInUp"
-        >
+        <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 animate-fadeInUp">
           <div className="flex space-x-1">
             {[...Array(5)].map((_, i) => (
               <div
@@ -139,9 +132,7 @@ const PlaybackControls: React.FC<{
   }
 
   return (
-    <div
-      className="flex items-center justify-center space-x-6 py-4 animate-fadeInUp"
-    >
+    <div className="flex items-center justify-center space-x-6 py-4 animate-fadeInUp">
       {/* Rewind */}
       <button
         className="p-3 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 animate-fadeInUp"
@@ -155,20 +146,16 @@ const PlaybackControls: React.FC<{
         className="p-4 rounded-full bg-blue-500 text-white shadow-lg hover:bg-blue-600 animate-fadeInUp"
         onClick={onPlayPause}
       >
-{isPlaying ? (
-            <div
-              key="pause"
-             className="animate-fadeInUp">
-              <Pause size={24} />
-            </div>
-          ) : (
-            <div
-              key="play"
-             className="animate-fadeInUp">
-              <Play size={24} />
-            </div>
-          )}
-</button>
+        {isPlaying ? (
+          <div key="pause" className="animate-fadeInUp">
+            <Pause size={24} />
+          </div>
+        ) : (
+          <div key="play" className="animate-fadeInUp">
+            <Play size={24} />
+          </div>
+        )}
+      </button>
 
       {/* Stop */}
       <button
@@ -195,34 +182,25 @@ const TranscriptDisplay: React.FC<{
   isRecording: boolean
 }> = ({ transcript, confidence, isRecording }) => {
   return (
-<>
-{transcript && (
-        <div
-          className="mx-4 p-4 bg-gray-50 rounded-lg border animate-fadeInUp"
-        >
+    <>
+      {transcript && (
+        <div className="mx-4 p-4 bg-gray-50 rounded-lg border animate-fadeInUp">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-medium text-gray-700">Transcript</span>
             <div className="flex items-center space-x-2">
               <span className="text-xs text-gray-500">
                 Confidence: {Math.round(confidence * 100)}%
               </span>
-              {isRecording && (
-                <div
-                  className="w-2 h-2 bg-red-500 rounded-full animate-fadeInUp"
-                />
-              )}
+              {isRecording && <div className="w-2 h-2 bg-red-500 rounded-full animate-fadeInUp" />}
             </div>
           </div>
-          <p
-            className="text-gray-800 leading-relaxed animate-fadeInUp"
-            key={transcript}
-          >
+          <p className="text-gray-800 leading-relaxed animate-fadeInUp" key={transcript}>
             {transcript}
           </p>
         </div>
       )}
-</>
-)
+    </>
+  )
 }
 
 export const VoiceMemosUI: React.FC<VoiceMemosUIProps> = ({
@@ -250,9 +228,7 @@ export const VoiceMemosUI: React.FC<VoiceMemosUIProps> = ({
   return (
     <div className={`bg-white rounded-2xl shadow-lg overflow-hidden ${className}`}>
       {/* Header */}
-      <div
-        className="px-6 py-4 bg-gray-50 border-b animate-fadeInUp"
-      >
+      <div className="px-6 py-4 bg-gray-50 border-b animate-fadeInUp">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-gray-800">Voice Learning</h3>
           <div className="flex items-center space-x-2">
@@ -288,16 +264,16 @@ export const VoiceMemosUI: React.FC<VoiceMemosUIProps> = ({
           />
 
           {/* Playback Controls */}
-{hasRecording && !isRecording && (
-              <PlaybackControls
-                isPlaying={isPlaying}
-                duration={duration}
-                onPlayPause={onPlayPause}
-                onStop={onStop}
-                onRewind={onRewind}
-              />
-            )}
-</div>
+          {hasRecording && !isRecording && (
+            <PlaybackControls
+              isPlaying={isPlaying}
+              duration={duration}
+              onPlayPause={onPlayPause}
+              onStop={onStop}
+              onRewind={onRewind}
+            />
+          )}
+        </div>
       </div>
 
       {/* Transcript */}
@@ -308,14 +284,10 @@ export const VoiceMemosUI: React.FC<VoiceMemosUIProps> = ({
       />
 
       {/* Bottom Action Bar */}
-      <div
-        className="px-6 py-4 bg-gray-50 border-t animate-fadeInUp"
-      >
+      <div className="px-6 py-4 bg-gray-50 border-t animate-fadeInUp">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <button
-              className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-white border hover:bg-gray-50 animate-fadeInUp"
-            >
+            <button className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-white border hover:bg-gray-50 animate-fadeInUp">
               <Volume2 size={16} />
               <span className="text-sm">Biology Mode</span>
             </button>

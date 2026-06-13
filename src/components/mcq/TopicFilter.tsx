@@ -89,225 +89,216 @@ export function TopicFilter({
             </span>
           )}
         </div>
-        <span
-          className="text-gray-400 animate-fadeInUp"
-        >
-          ▼
-        </span>
+        <span className="text-gray-400 animate-fadeInUp">▼</span>
       </button>
-{isExpanded && (
-          <div
-            className="border-t animate-fadeInUp"
-          >
-            <div className="p-4 space-y-6">
-              {/* Topic Selection */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Topic</label>
-                <div className="flex flex-wrap gap-2">
+      {isExpanded && (
+        <div className="border-t animate-fadeInUp">
+          <div className="p-4 space-y-6">
+            {/* Topic Selection */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Topic</label>
+              <div className="flex flex-wrap gap-2">
+                <button
+                  onClick={() => handleTopicChange(null)}
+                  className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                    !selectedTopic
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  }`}
+                >
+                  All Topics
+                </button>
+                {BIOLOGY_TOPICS.map((topic) => (
                   <button
-                    onClick={() => handleTopicChange(null)}
+                    key={topic}
+                    onClick={() => handleTopicChange(topic)}
                     className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                      !selectedTopic
+                      selectedTopic === topic
                         ? 'bg-blue-600 text-white'
                         : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                     }`}
                   >
-                    All Topics
+                    {topic}
                   </button>
-                  {BIOLOGY_TOPICS.map((topic) => (
+                ))}
+              </div>
+            </div>
+
+            {/* Chapter Selection (only shown when topic is selected) */}
+            {selectedTopic && availableChapters.length > 0 && (
+              <div className="animate-fadeInUp">
+                <label className="block text-sm font-medium text-gray-700 mb-2">Chapter</label>
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    onClick={() => onChapterChange(null)}
+                    className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                      !selectedChapter
+                        ? 'bg-purple-600 text-white'
+                        : 'bg-purple-100 text-purple-700 hover:bg-purple-200'
+                    }`}
+                  >
+                    All Chapters
+                  </button>
+                  {availableChapters.map((chapter) => (
                     <button
-                      key={topic}
-                      onClick={() => handleTopicChange(topic)}
+                      key={chapter}
+                      onClick={() => onChapterChange(chapter)}
                       className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                        selectedTopic === topic
-                          ? 'bg-blue-600 text-white'
-                          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                        selectedChapter === chapter
+                          ? 'bg-purple-600 text-white'
+                          : 'bg-purple-100 text-purple-700 hover:bg-purple-200'
                       }`}
                     >
-                      {topic}
+                      {chapter}
                     </button>
                   ))}
                 </div>
               </div>
-
-              {/* Chapter Selection (only shown when topic is selected) */}
-{selectedTopic && availableChapters.length > 0 && (
-                  <div
-                   className="animate-fadeInUp">
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Chapter</label>
-                    <div className="flex flex-wrap gap-2">
-                      <button
-                        onClick={() => onChapterChange(null)}
-                        className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                          !selectedChapter
-                            ? 'bg-purple-600 text-white'
-                            : 'bg-purple-100 text-purple-700 hover:bg-purple-200'
-                        }`}
-                      >
-                        All Chapters
-                      </button>
-                      {availableChapters.map((chapter) => (
-                        <button
-                          key={chapter}
-                          onClick={() => onChapterChange(chapter)}
-                          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                            selectedChapter === chapter
-                              ? 'bg-purple-600 text-white'
-                              : 'bg-purple-100 text-purple-700 hover:bg-purple-200'
-                          }`}
-                        >
-                          {chapter}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-{/* Difficulty Selection */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Difficulty</label>
-                <div className="flex flex-wrap gap-2">
+            )}
+            {/* Difficulty Selection */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Difficulty</label>
+              <div className="flex flex-wrap gap-2">
+                <button
+                  onClick={() => onDifficultyChange(null)}
+                  className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${
+                    !selectedDifficulty
+                      ? 'bg-blue-600 text-white border-blue-600'
+                      : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400'
+                  }`}
+                >
+                  All Levels
+                </button>
+                {difficulties.map((diff) => (
                   <button
-                    onClick={() => onDifficultyChange(null)}
+                    key={diff.value}
+                    onClick={() => onDifficultyChange(diff.value)}
                     className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${
-                      !selectedDifficulty
-                        ? 'bg-blue-600 text-white border-blue-600'
+                      selectedDifficulty === diff.value
+                        ? diff.color
                         : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400'
                     }`}
                   >
-                    All Levels
+                    {diff.label}
                   </button>
-                  {difficulties.map((diff) => (
-                    <button
-                      key={diff.value}
-                      onClick={() => onDifficultyChange(diff.value)}
-                      className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${
-                        selectedDifficulty === diff.value
-                          ? diff.color
-                          : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400'
-                      }`}
-                    >
-                      {diff.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* PYQ Toggle */}
-              <div>
-                <div className="flex items-center justify-between">
-                  <label id="pyq-toggle-label" className="text-sm font-medium text-gray-700">
-                    Previous Year Questions Only
-                  </label>
-                  <button
-                    onClick={() => onPYQOnlyChange(!isPYQOnly)}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault()
-                        onPYQOnlyChange(!isPYQOnly)
-                      }
-                    }}
-                    role="switch"
-                    aria-checked={isPYQOnly}
-                    aria-labelledby="pyq-toggle-label"
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 ${
-                      isPYQOnly ? 'bg-amber-500' : 'bg-gray-200'
-                    }`}
-                  >
-                    <span
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        isPYQOnly ? 'translate-x-6' : 'translate-x-1'
-                      }`}
-                      aria-hidden="true"
-                    />
-                  </button>
-                </div>
-
-                {/* PYQ Year Selection */}
-{isPYQOnly && (
-                    <div
-                      className="mt-3 animate-fadeInUp"
-                    >
-                      <label className="block text-sm font-medium text-gray-500 mb-2">
-                        Select Year
-                      </label>
-                      <div className="flex flex-wrap gap-2">
-                        <button
-                          onClick={() => onPYQYearChange(null)}
-                          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                            !selectedPYQYear
-                              ? 'bg-amber-500 text-white'
-                              : 'bg-amber-100 text-yellow-700 hover:bg-amber-200'
-                          }`}
-                        >
-                          All Years
-                        </button>
-                        {PYQ_YEARS.map((year) => (
-                          <button
-                            key={year}
-                            onClick={() => onPYQYearChange(year)}
-                            className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                              selectedPYQYear === year
-                                ? 'bg-amber-500 text-white'
-                                : 'bg-amber-100 text-yellow-700 hover:bg-amber-200'
-                            }`}
-                          >
-                            {year}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-</div>
-
-              {/* Number of Questions Selection */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Questions per Session
-                </label>
-                <div className="flex flex-wrap gap-2">
-                  {QUESTION_COUNTS.map((count) => (
-                    <button
-                      key={count}
-                      onClick={() => onQuestionCountChange(count)}
-                      className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                        questionCount === count
-                          ? 'bg-indigo-600 text-white'
-                          : 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200'
-                      }`}
-                    >
-                      {count}
-                    </button>
-                  ))}
-                </div>
-                <p className="text-xs text-gray-500 mt-1">
-                  Select how many questions you want to practice in this session
-                </p>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex items-center gap-3 pt-2 border-t">
-                <button
-                  onClick={() => {
-                    onApplyFilters()
-                    setIsExpanded(false)
-                  }}
-                  className="flex-1 py-2 px-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
-                >
-                  Apply Filters
-                </button>
-                {activeFiltersCount > 0 && (
-                  <button
-                    onClick={clearAllFilters}
-                    className="py-2 px-4 text-gray-600 hover:text-gray-800 font-medium transition-colors"
-                  >
-                    Clear All
-                  </button>
-                )}
+                ))}
               </div>
             </div>
+
+            {/* PYQ Toggle */}
+            <div>
+              <div className="flex items-center justify-between">
+                <label id="pyq-toggle-label" className="text-sm font-medium text-gray-700">
+                  Previous Year Questions Only
+                </label>
+                <button
+                  onClick={() => onPYQOnlyChange(!isPYQOnly)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault()
+                      onPYQOnlyChange(!isPYQOnly)
+                    }
+                  }}
+                  role="switch"
+                  aria-checked={isPYQOnly}
+                  aria-labelledby="pyq-toggle-label"
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 ${
+                    isPYQOnly ? 'bg-amber-500' : 'bg-gray-200'
+                  }`}
+                >
+                  <span
+                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                      isPYQOnly ? 'translate-x-6' : 'translate-x-1'
+                    }`}
+                    aria-hidden="true"
+                  />
+                </button>
+              </div>
+
+              {/* PYQ Year Selection */}
+              {isPYQOnly && (
+                <div className="mt-3 animate-fadeInUp">
+                  <label className="block text-sm font-medium text-gray-500 mb-2">
+                    Select Year
+                  </label>
+                  <div className="flex flex-wrap gap-2">
+                    <button
+                      onClick={() => onPYQYearChange(null)}
+                      className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                        !selectedPYQYear
+                          ? 'bg-amber-500 text-white'
+                          : 'bg-amber-100 text-yellow-700 hover:bg-amber-200'
+                      }`}
+                    >
+                      All Years
+                    </button>
+                    {PYQ_YEARS.map((year) => (
+                      <button
+                        key={year}
+                        onClick={() => onPYQYearChange(year)}
+                        className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                          selectedPYQYear === year
+                            ? 'bg-amber-500 text-white'
+                            : 'bg-amber-100 text-yellow-700 hover:bg-amber-200'
+                        }`}
+                      >
+                        {year}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Number of Questions Selection */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Questions per Session
+              </label>
+              <div className="flex flex-wrap gap-2">
+                {QUESTION_COUNTS.map((count) => (
+                  <button
+                    key={count}
+                    onClick={() => onQuestionCountChange(count)}
+                    className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                      questionCount === count
+                        ? 'bg-indigo-600 text-white'
+                        : 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200'
+                    }`}
+                  >
+                    {count}
+                  </button>
+                ))}
+              </div>
+              <p className="text-xs text-gray-500 mt-1">
+                Select how many questions you want to practice in this session
+              </p>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex items-center gap-3 pt-2 border-t">
+              <button
+                onClick={() => {
+                  onApplyFilters()
+                  setIsExpanded(false)
+                }}
+                className="flex-1 py-2 px-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              >
+                Apply Filters
+              </button>
+              {activeFiltersCount > 0 && (
+                <button
+                  onClick={clearAllFilters}
+                  className="py-2 px-4 text-gray-600 hover:text-gray-800 font-medium transition-colors"
+                >
+                  Clear All
+                </button>
+              )}
+            </div>
           </div>
-        )}
-{/* Active Filters Summary (when collapsed) */}
+        </div>
+      )}
+      {/* Active Filters Summary (when collapsed) */}
       {!isExpanded && activeFiltersCount > 0 && (
         <div className="px-4 pb-4 flex flex-wrap gap-2">
           {selectedTopic && (

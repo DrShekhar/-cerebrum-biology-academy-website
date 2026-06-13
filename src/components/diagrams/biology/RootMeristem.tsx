@@ -89,9 +89,7 @@ export function RootMeristem({
           </filter>
         </defs>
 
-        <g
-          className="root-meristem"
-        >
+        <g className="root-meristem">
           {/* Main root body - outer layer (Epidermis/Cortex) */}
           <path
             d={`
@@ -316,9 +314,7 @@ export function RootMeristem({
 
       {/* Info Panel */}
       {selectedZone && (
-        <div
-          className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200 animate-fadeInUp"
-        >
+        <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200 animate-fadeInUp">
           <h4 className="font-bold text-blue-800 mb-1">{getZoneInfo(selectedZone)?.name}</h4>
           <p className="text-sm text-blue-700">{getZoneInfo(selectedZone)?.description}</p>
         </div>

@@ -14,21 +14,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Which of the following is NOT a method of asexual reproduction?",
-      "options": [
-        "Budding",
-        "Fragmentation",
-        "Syngamy",
-        "Binary fission"
-      ],
+      "options": ["Budding", "Fragmentation", "Syngamy", "Binary fission"],
       "correctAnswer": "C",
       "explanation": "Syngamy is the fusion of male and female gametes during sexual reproduction, not a method of asexual reproduction. Binary fission, budding, and fragmentation are all asexual reproduction methods.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "asexual-reproduction",
-        "syngamy"
-      ],
+      "tags": ["asexual-reproduction", "syngamy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -39,22 +31,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Zoospores are the motile asexual reproductive structures found in:",
-      "options": [
-        "Hydra",
-        "Penicillium",
-        "Sponge",
-        "Chlamydomonas"
-      ],
+      "options": ["Hydra", "Penicillium", "Sponge", "Chlamydomonas"],
       "correctAnswer": "D",
       "explanation": "Chlamydomonas produces zoospores which are flagellated motile asexual spores. Penicillium produces non-motile conidia, Hydra reproduces by budding, and sponges reproduce by gemmule formation.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "zoospores",
-        "chlamydomonas",
-        "asexual-reproduction"
-      ],
+      "tags": ["zoospores", "chlamydomonas", "asexual-reproduction"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -76,10 +59,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "clone",
-        "asexual-reproduction"
-      ],
+      "tags": ["clone", "asexual-reproduction"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -90,21 +70,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Which of the following organisms reproduces by budding?",
-      "options": [
-        "Planaria",
-        "Amoeba",
-        "Spirogyra",
-        "Yeast"
-      ],
+      "options": ["Planaria", "Amoeba", "Spirogyra", "Yeast"],
       "correctAnswer": "D",
       "explanation": "Yeast reproduces by budding where a small bud develops on the parent cell, grows, and eventually detaches. Amoeba reproduces by binary fission, Planaria by regeneration, and Spirogyra by fragmentation.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "budding",
-        "yeast"
-      ],
+      "tags": ["budding", "yeast"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -115,22 +87,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Vegetative propagation in Agave occurs through:",
-      "options": [
-        "Runner",
-        "Bulbil",
-        "Offset",
-        "Rhizome"
-      ],
+      "options": ["Runner", "Bulbil", "Offset", "Rhizome"],
       "correctAnswer": "B",
       "explanation": "Agave reproduces vegetatively through bulbils which are modified floral buds that develop into new plants. They are fleshy buds produced in the axil of leaves or in place of flowers.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vegetative-propagation",
-        "bulbil",
-        "agave"
-      ],
+      "tags": ["vegetative-propagation", "bulbil", "agave"],
       "neetWeightage": "HIGH"
     },
     {
@@ -141,21 +104,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Internal fertilisation is observed in:",
-      "options": [
-        "Bony fishes",
-        "Frogs",
-        "Algae",
-        "Reptiles"
-      ],
+      "options": ["Bony fishes", "Frogs", "Algae", "Reptiles"],
       "correctAnswer": "D",
       "explanation": "Reptiles exhibit internal fertilisation where the fusion of gametes occurs inside the body of the organism. Bony fishes, frogs, and algae mostly show external fertilisation.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "internal-fertilisation",
-        "reptiles"
-      ],
+      "tags": ["internal-fertilisation", "reptiles"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -177,11 +132,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "diplontic",
-        "gamete-formation"
-      ],
+      "tags": ["meiosis", "diplontic", "gamete-formation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -192,21 +143,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Which plant shows monoecious condition?",
-      "options": [
-        "Marchantia",
-        "Date palm",
-        "Papaya",
-        "Coconut"
-      ],
+      "options": ["Marchantia", "Date palm", "Papaya", "Coconut"],
       "correctAnswer": "D",
       "explanation": "Coconut is monoecious, bearing both male and female flowers on the same plant. Papaya, date palm, and Marchantia are dioecious with male and female flowers on separate plants.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "monoecious",
-        "coconut"
-      ],
+      "tags": ["monoecious", "coconut"],
       "neetWeightage": "HIGH"
     },
     {
@@ -217,21 +160,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Gemmules are asexual reproductive structures found in:",
-      "options": [
-        "Planaria",
-        "Hydra",
-        "Sycon",
-        "Sponge"
-      ],
+      "options": ["Planaria", "Hydra", "Sycon", "Sponge"],
       "correctAnswer": "D",
       "explanation": "Gemmules are internal buds found in sponges (Porifera). They are masses of cells enclosed in a resistant shell and help in asexual reproduction, especially under unfavorable conditions.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gemmules",
-        "sponge"
-      ],
+      "tags": ["gemmules", "sponge"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -242,21 +177,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "The lifespan of a butterfly is approximately:",
-      "options": [
-        "1-2 months",
-        "1-2 weeks",
-        "1-2 days",
-        "1-2 years"
-      ],
+      "options": ["1-2 months", "1-2 weeks", "1-2 days", "1-2 years"],
       "correctAnswer": "B",
       "explanation": "The average lifespan of a butterfly is approximately 1-2 weeks. This varies among species but most adult butterflies live for a relatively short period.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "lifespan",
-        "butterfly"
-      ],
+      "tags": ["lifespan", "butterfly"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -267,22 +194,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Which of the following is a bisexual animal?",
-      "options": [
-        "Frog",
-        "Earthworm",
-        "Rabbit",
-        "Cockroach"
-      ],
+      "options": ["Frog", "Earthworm", "Rabbit", "Cockroach"],
       "correctAnswer": "B",
       "explanation": "Earthworm is a bisexual (hermaphrodite) animal possessing both male and female reproductive organs in the same individual. Cockroach, frog, and rabbit are unisexual animals.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bisexual",
-        "hermaphrodite",
-        "earthworm"
-      ],
+      "tags": ["bisexual", "hermaphrodite", "earthworm"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -293,21 +211,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "In which of the following does the juvenile phase coincide with the vegetative phase?",
-      "options": [
-        "Animals",
-        "Fungi",
-        "Bacteria",
-        "Plants"
-      ],
+      "options": ["Animals", "Fungi", "Bacteria", "Plants"],
       "correctAnswer": "D",
       "explanation": "In plants, the juvenile phase (period of growth before reproductive maturity) is also called the vegetative phase. During this phase, the plant grows but cannot reproduce sexually.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "juvenile-phase",
-        "vegetative-phase"
-      ],
+      "tags": ["juvenile-phase", "vegetative-phase"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -318,22 +228,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Water hyacinth (Eichhornia) reproduces vegetatively by:",
-      "options": [
-        "Stolons",
-        "Runners",
-        "Suckers",
-        "Offsets"
-      ],
+      "options": ["Stolons", "Runners", "Suckers", "Offsets"],
       "correctAnswer": "D",
       "explanation": "Water hyacinth (Eichhornia) reproduces vegetatively by offsets. It is one of the most invasive weeds and can drain oxygen from water bodies, leading to the death of aquatic life.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "water-hyacinth",
-        "offsets",
-        "vegetative-propagation"
-      ],
+      "tags": ["water-hyacinth", "offsets", "vegetative-propagation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -344,21 +245,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Conidia are asexual spores produced by:",
-      "options": [
-        "Hydra",
-        "Spirogyra",
-        "Penicillium",
-        "Chlamydomonas"
-      ],
+      "options": ["Hydra", "Spirogyra", "Penicillium", "Chlamydomonas"],
       "correctAnswer": "C",
       "explanation": "Conidia are non-motile asexual spores produced exogenously by Penicillium. They are formed on specialised structures called conidiophores.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "conidia",
-        "penicillium"
-      ],
+      "tags": ["conidia", "penicillium"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -369,21 +262,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Which of the following organisms exhibits external fertilisation?",
-      "options": [
-        "Dog",
-        "Frog",
-        "Human",
-        "Hen"
-      ],
+      "options": ["Dog", "Frog", "Human", "Hen"],
       "correctAnswer": "B",
       "explanation": "Frogs exhibit external fertilisation where the fusion of male and female gametes occurs outside the body, typically in water. Hens, dogs, and humans have internal fertilisation.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "external-fertilisation",
-        "frog"
-      ],
+      "tags": ["external-fertilisation", "frog"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -394,21 +279,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Parthenogenesis is the development of a new organism from:",
-      "options": [
-        "Somatic cells",
-        "A fertilized egg",
-        "An unfertilised egg",
-        "Vegetative parts"
-      ],
+      "options": ["Somatic cells", "A fertilized egg", "An unfertilised egg", "Vegetative parts"],
       "correctAnswer": "C",
       "explanation": "Parthenogenesis is the development of a new organism from an unfertilised egg without the involvement of sperm. It is observed in organisms like honeybees (drones), some lizards, and rotifers.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "parthenogenesis",
-        "unfertilised-egg"
-      ],
+      "tags": ["parthenogenesis", "unfertilised-egg"],
       "neetWeightage": "HIGH"
     },
     {
@@ -419,21 +296,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Strobilanthus kunthiana (Neelakuranji) flowers once in:",
-      "options": [
-        "12 years",
-        "100 years",
-        "50 years",
-        "6 years"
-      ],
+      "options": ["12 years", "100 years", "50 years", "6 years"],
       "correctAnswer": "A",
       "explanation": "Neelakuranji (Strobilanthus kunthiana) flowers once in 12 years. It is found in the hilly areas of Kerala and blooms gregariously, covering large areas with blue flowers.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "neelakuranji",
-        "flowering"
-      ],
+      "tags": ["neelakuranji", "flowering"],
       "neetWeightage": "HIGH"
     },
     {
@@ -455,10 +324,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "binary-fission",
-        "amoeba"
-      ],
+      "tags": ["binary-fission", "amoeba"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -469,21 +335,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Which of the following pairs shows viviparous organisms?",
-      "options": [
-        "Butterfly and hen",
-        "Frog and hen",
-        "Hen and dog",
-        "Dog and cat"
-      ],
+      "options": ["Butterfly and hen", "Frog and hen", "Hen and dog", "Dog and cat"],
       "correctAnswer": "D",
       "explanation": "Viviparous organisms give birth to young ones. Dog and cat are viviparous. Hen is oviparous (lays eggs), frog is oviparous, and butterfly is also oviparous.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "viviparous",
-        "oviparous"
-      ],
+      "tags": ["viviparous", "oviparous"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -505,10 +363,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "potato-eyes",
-        "vegetative-propagation"
-      ],
+      "tags": ["potato-eyes", "vegetative-propagation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -530,11 +385,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "clones",
-        "mitosis",
-        "asexual-reproduction"
-      ],
+      "tags": ["clones", "mitosis", "asexual-reproduction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -556,11 +407,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sexual-reproduction",
-        "variation",
-        "meiosis"
-      ],
+      "tags": ["sexual-reproduction", "variation", "meiosis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -582,10 +429,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "haplontic",
-        "zygotic-meiosis"
-      ],
+      "tags": ["haplontic", "zygotic-meiosis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -607,10 +451,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bamboo",
-        "monocarpic"
-      ],
+      "tags": ["bamboo", "monocarpic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -632,11 +473,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "earthworm",
-        "cross-fertilisation",
-        "hermaphrodite"
-      ],
+      "tags": ["earthworm", "cross-fertilisation", "hermaphrodite"],
       "neetWeightage": "HIGH"
     },
     {
@@ -658,10 +495,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "oviparous",
-        "zygote-development"
-      ],
+      "tags": ["oviparous", "zygote-development"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -683,11 +517,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "conidia",
-        "exogenous",
-        "fungi"
-      ],
+      "tags": ["conidia", "exogenous", "fungi"],
       "neetWeightage": "HIGH"
     },
     {
@@ -709,10 +539,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "water-hyacinth",
-        "terror-of-bengal"
-      ],
+      "tags": ["water-hyacinth", "terror-of-bengal"],
       "neetWeightage": "HIGH"
     },
     {
@@ -723,21 +550,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Consider the following statements about asexual reproduction:\n(i) It involves a single parent.\n(ii) Offspring are genetically identical to the parent.\n(iii) It always involves meiosis.\n(iv) It is common in organisms with simple organisation.\nHow many of the above statements are correct?",
-      "options": [
-        "Three",
-        "Two",
-        "Four",
-        "One"
-      ],
+      "options": ["Three", "Two", "Four", "One"],
       "correctAnswer": "A",
       "explanation": "Statements (i), (ii), and (iv) are correct. Statement (iii) is incorrect because asexual reproduction involves only mitosis, not meiosis. Meiosis is involved in sexual reproduction.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "asexual-reproduction",
-        "statement-based"
-      ],
+      "tags": ["asexual-reproduction", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -759,10 +578,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sexual-reproduction",
-        "self-fertilisation"
-      ],
+      "tags": ["sexual-reproduction", "self-fertilisation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -784,11 +600,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dioecious",
-        "monoecious",
-        "unisexual"
-      ],
+      "tags": ["dioecious", "monoecious", "unisexual"],
       "neetWeightage": "HIGH"
     },
     {
@@ -810,11 +622,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "binary-fission",
-        "paramecium",
-        "amoeba"
-      ],
+      "tags": ["binary-fission", "paramecium", "amoeba"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -836,10 +644,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sexual-reproduction-events",
-        "fertilisation"
-      ],
+      "tags": ["sexual-reproduction-events", "fertilisation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -861,10 +666,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mule",
-        "interspecific-hybridisation"
-      ],
+      "tags": ["mule", "interspecific-hybridisation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -875,22 +677,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Consider the following statements about vegetative propagation:\n(i) Ginger propagates through rhizome.\n(ii) Potato propagates through stem tuber.\n(iii) Onion propagates through bulb.\n(iv) Sweet potato propagates through stem tuber.\nHow many statements are correct?",
-      "options": [
-        "Four",
-        "Two",
-        "One",
-        "Three"
-      ],
+      "options": ["Four", "Two", "One", "Three"],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), and (iii) are correct. Statement (iv) is incorrect because sweet potato propagates through tuberous roots (root tubers), not stem tubers like potato.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vegetative-propagation",
-        "rhizome",
-        "tuber"
-      ],
+      "tags": ["vegetative-propagation", "rhizome", "tuber"],
       "neetWeightage": "HIGH"
     },
     {
@@ -912,10 +705,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "asexual-reproduction",
-        "match-following"
-      ],
+      "tags": ["asexual-reproduction", "match-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -937,10 +727,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sexual-condition",
-        "match-following"
-      ],
+      "tags": ["sexual-condition", "match-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -962,10 +749,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vegetative-propagule",
-        "match-following"
-      ],
+      "tags": ["vegetative-propagule", "match-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -987,10 +771,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis-types",
-        "life-cycle"
-      ],
+      "tags": ["meiosis-types", "life-cycle"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1012,10 +793,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "reproduction-methods",
-        "match-following"
-      ],
+      "tags": ["reproduction-methods", "match-following"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1026,21 +804,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "How many of the following are examples of organisms showing vegetative propagation?\nGinger, potato, onion, banana, rose, sugarcane, Bryophyllum, Agave",
-      "options": [
-        "Six",
-        "Seven",
-        "Eight",
-        "Five"
-      ],
+      "options": ["Six", "Seven", "Eight", "Five"],
       "correctAnswer": "C",
       "explanation": "All eight organisms show vegetative propagation: Ginger (rhizome), potato (tuber), onion (bulb), banana (rhizome), rose (stem cutting), sugarcane (stem cutting), Bryophyllum (leaf buds), and Agave (bulbils).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vegetative-propagation",
-        "counting"
-      ],
+      "tags": ["vegetative-propagation", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1051,21 +821,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "How many of the following organisms are hermaphrodite (bisexual)?\nEarthworm, Leech, Tapeworm, Sponge, Cockroach, Ascaris, Hydra, Liver fluke",
-      "options": [
-        "Three",
-        "Five",
-        "Four",
-        "Six"
-      ],
+      "options": ["Three", "Five", "Four", "Six"],
       "correctAnswer": "B",
       "explanation": "Five organisms are hermaphrodite: Earthworm, Leech, Tapeworm, Sponge, and Liver fluke. Cockroach and Ascaris are unisexual. Hydra can reproduce both sexually and asexually but has separate sexes in sexual reproduction.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hermaphrodite",
-        "counting"
-      ],
+      "tags": ["hermaphrodite", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1076,21 +838,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "How many of the following are oviparous animals?\nHen, Frog, Dog, Crocodile, Snake, Cat, Platypus, Butterfly",
-      "options": [
-        "Four",
-        "Six",
-        "Five",
-        "Seven"
-      ],
+      "options": ["Four", "Six", "Five", "Seven"],
       "correctAnswer": "B",
       "explanation": "Six organisms are oviparous: Hen, Frog, Crocodile, Snake, Platypus, and Butterfly. Dog and Cat are viviparous (give birth to young ones).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "oviparous",
-        "counting"
-      ],
+      "tags": ["oviparous", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1101,21 +855,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Count the number of organisms that show external fertilisation from the following:\nFrog, Fish (bony), Sea urchin, Algae, Reptile, Bird, Starfish",
-      "options": [
-        "Four",
-        "Six",
-        "Three",
-        "Five"
-      ],
+      "options": ["Four", "Six", "Three", "Five"],
       "correctAnswer": "D",
       "explanation": "Five organisms show external fertilisation: Frog, Fish (bony), Sea urchin, Algae, and Starfish. Reptiles and birds show internal fertilisation.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "external-fertilisation",
-        "counting"
-      ],
+      "tags": ["external-fertilisation", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1137,9 +883,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sexual-reproduction-sequence"
-      ],
+      "tags": ["sexual-reproduction-sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1161,10 +905,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "life-phases",
-        "sequence"
-      ],
+      "tags": ["life-phases", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1186,10 +927,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "lifespan",
-        "sequence"
-      ],
+      "tags": ["lifespan", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1200,21 +938,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Which of the following is an example of isogamy?",
-      "options": [
-        "Marchantia",
-        "Chlamydomonas",
-        "Fucus",
-        "Human"
-      ],
+      "options": ["Marchantia", "Chlamydomonas", "Fucus", "Human"],
       "correctAnswer": "B",
       "explanation": "Chlamydomonas shows isogamy where the fusing gametes are morphologically similar and cannot be differentiated into male and female. Fucus shows oogamy with distinct male and female gametes.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "isogamy",
-        "chlamydomonas"
-      ],
+      "tags": ["isogamy", "chlamydomonas"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1225,21 +955,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Which of the following shows oogamy?",
-      "options": [
-        "Fucus",
-        "Spirogyra",
-        "Chlamydomonas (some species)",
-        "Ulothrix"
-      ],
+      "options": ["Fucus", "Spirogyra", "Chlamydomonas (some species)", "Ulothrix"],
       "correctAnswer": "A",
       "explanation": "Fucus shows oogamy where the female gamete (egg) is large and non-motile while the male gamete (sperm) is small and motile. This is the most advanced type of sexual reproduction.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "oogamy",
-        "fucus"
-      ],
+      "tags": ["oogamy", "fucus"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1250,21 +972,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Which of the following is NOT a post-fertilisation event?",
-      "options": [
-        "Embryogenesis",
-        "Formation of zygote",
-        "Gamete transfer",
-        "Seed formation"
-      ],
+      "options": ["Embryogenesis", "Formation of zygote", "Gamete transfer", "Seed formation"],
       "correctAnswer": "C",
       "explanation": "Gamete transfer is a pre-fertilisation event, not a post-fertilisation event. Formation of zygote, embryogenesis, and seed formation are all post-fertilisation events.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "post-fertilisation",
-        "gamete-transfer"
-      ],
+      "tags": ["post-fertilisation", "gamete-transfer"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1275,22 +989,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Regeneration as a mode of reproduction is found in:",
-      "options": [
-        "Amoeba",
-        "Both Hydra and Planaria",
-        "Planaria only",
-        "Hydra only"
-      ],
+      "options": ["Amoeba", "Both Hydra and Planaria", "Planaria only", "Hydra only"],
       "correctAnswer": "B",
       "explanation": "Regeneration is found in both Hydra and Planaria. When these organisms are cut into pieces, each piece can regenerate into a complete organism due to the presence of specialised cells.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "regeneration",
-        "hydra",
-        "planaria"
-      ],
+      "tags": ["regeneration", "hydra", "planaria"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1312,10 +1017,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "embryogenesis",
-        "zygote"
-      ],
+      "tags": ["embryogenesis", "zygote"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1337,9 +1039,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "senescence"
-      ],
+      "tags": ["senescence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1350,21 +1050,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Which among the following is a dioecious plant?",
-      "options": [
-        "Coconut",
-        "Cucurbits",
-        "Chara",
-        "Maize"
-      ],
+      "options": ["Coconut", "Cucurbits", "Chara", "Maize"],
       "correctAnswer": "C",
       "explanation": "Chara is dioecious with male and female reproductive organs on separate plants. Cucurbits, coconut, and maize are monoecious bearing both male and female flowers on the same plant.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dioecious",
-        "chara"
-      ],
+      "tags": ["dioecious", "chara"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1375,21 +1067,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Which type of cell division occurs during gamete formation in diploid organisms?",
-      "options": [
-        "Mitosis",
-        "Amitosis",
-        "Both mitosis and meiosis",
-        "Meiosis"
-      ],
+      "options": ["Mitosis", "Amitosis", "Both mitosis and meiosis", "Meiosis"],
       "correctAnswer": "D",
       "explanation": "In diploid organisms, meiosis occurs during gamete formation to reduce the chromosome number from diploid (2n) to haploid (n). This ensures that the chromosome number is maintained after fertilisation.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "meiosis",
-        "gamete-formation"
-      ],
+      "tags": ["meiosis", "gamete-formation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1400,21 +1084,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Which of the following shows heterogamy?",
-      "options": [
-        "Spirogyra",
-        "Ulothrix",
-        "Chlamydomonas (some species)",
-        "Cladophora"
-      ],
+      "options": ["Spirogyra", "Ulothrix", "Chlamydomonas (some species)", "Cladophora"],
       "correctAnswer": "C",
       "explanation": "Some species of Chlamydomonas show heterogamy (anisogamy) where the two fusing gametes are morphologically dissimilar. The male gamete is smaller and the female gamete is larger.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "heterogamy",
-        "anisogamy"
-      ],
+      "tags": ["heterogamy", "anisogamy"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1425,21 +1101,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Which of the following organisms does NOT show cell division as a mode of reproduction?",
-      "options": [
-        "Amoeba",
-        "Spirogyra",
-        "Euglena",
-        "Paramecium"
-      ],
+      "options": ["Amoeba", "Spirogyra", "Euglena", "Paramecium"],
       "correctAnswer": "B",
       "explanation": "Spirogyra reproduces by fragmentation, not by simple cell division. Amoeba, Paramecium, and Euglena are unicellular organisms that reproduce by cell division (binary fission).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-division",
-        "reproduction"
-      ],
+      "tags": ["cell-division", "reproduction"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1450,20 +1118,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "The formation of new organisms from the mother organism without the involvement of gametes is called:",
-      "options": [
-        "Apomixis",
-        "Amphimixis",
-        "Sexual reproduction",
-        "Asexual reproduction"
-      ],
+      "options": ["Apomixis", "Amphimixis", "Sexual reproduction", "Asexual reproduction"],
       "correctAnswer": "D",
       "explanation": "Asexual reproduction involves formation of new organisms from a single parent without the involvement of gamete formation and fusion. Only mitotic divisions are involved.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "asexual-reproduction"
-      ],
+      "tags": ["asexual-reproduction"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1474,21 +1135,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "In which organism does longitudinal binary fission occur?",
-      "options": [
-        "Amoeba",
-        "Euglena",
-        "Plasmodium",
-        "Paramecium"
-      ],
+      "options": ["Amoeba", "Euglena", "Plasmodium", "Paramecium"],
       "correctAnswer": "B",
       "explanation": "Euglena undergoes longitudinal binary fission where the cell divides along the longitudinal axis. Paramecium undergoes transverse binary fission, Amoeba divides in any plane, and Plasmodium undergoes multiple fission.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "binary-fission",
-        "euglena"
-      ],
+      "tags": ["binary-fission", "euglena"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1499,21 +1152,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Which of the following is used for vegetative propagation of sugarcane?",
-      "options": [
-        "Seeds",
-        "Root cuttings",
-        "Stem cuttings",
-        "Leaf cuttings"
-      ],
+      "options": ["Seeds", "Root cuttings", "Stem cuttings", "Leaf cuttings"],
       "correctAnswer": "C",
       "explanation": "Sugarcane is commercially propagated by stem cuttings (setts). Nodes on the stem have buds that sprout and grow into new plants.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "vegetative-propagation",
-        "sugarcane"
-      ],
+      "tags": ["vegetative-propagation", "sugarcane"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1524,21 +1169,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Multiple fission is characteristic of:",
-      "options": [
-        "Plasmodium",
-        "Paramecium",
-        "Amoeba",
-        "Euglena"
-      ],
+      "options": ["Plasmodium", "Paramecium", "Amoeba", "Euglena"],
       "correctAnswer": "A",
       "explanation": "Multiple fission is characteristic of Plasmodium (malarial parasite). In multiple fission, the parent cell divides into many daughter cells simultaneously. This occurs in the schizont stage inside RBCs.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "multiple-fission",
-        "plasmodium"
-      ],
+      "tags": ["multiple-fission", "plasmodium"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1560,10 +1197,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "asexual-reproduction",
-        "characteristics"
-      ],
+      "tags": ["asexual-reproduction", "characteristics"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1585,10 +1219,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "external-fertilisation",
-        "zygote"
-      ],
+      "tags": ["external-fertilisation", "zygote"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1599,21 +1230,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Runners as a means of vegetative propagation are seen in:",
-      "options": [
-        "Onion",
-        "Grass",
-        "Potato",
-        "Banana"
-      ],
+      "options": ["Onion", "Grass", "Potato", "Banana"],
       "correctAnswer": "B",
       "explanation": "Runners are lateral stems that grow along the soil surface and produce new plants at nodes. Grass reproduces through runners. Banana uses rhizomes, potato uses tubers, and onion uses bulbs.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "runners",
-        "vegetative-propagation"
-      ],
+      "tags": ["runners", "vegetative-propagation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1635,9 +1258,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sexual-reproduction"
-      ],
+      "tags": ["sexual-reproduction"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1659,10 +1280,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "external-fertilisation",
-        "gamete-production"
-      ],
+      "tags": ["external-fertilisation", "gamete-production"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1684,10 +1302,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophyllum",
-        "adventitious-buds"
-      ],
+      "tags": ["bryophyllum", "adventitious-buds"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1709,10 +1324,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "diplontic",
-        "sporophyte"
-      ],
+      "tags": ["diplontic", "sporophyte"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1734,9 +1346,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "parthenogenesis"
-      ],
+      "tags": ["parthenogenesis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1758,10 +1368,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vegetative-propagation",
-        "asexual"
-      ],
+      "tags": ["vegetative-propagation", "asexual"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1783,10 +1390,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "juvenile-phase",
-        "vegetative-phase"
-      ],
+      "tags": ["juvenile-phase", "vegetative-phase"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1808,10 +1412,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "seasonal-breeders",
-        "continuous-breeders"
-      ],
+      "tags": ["seasonal-breeders", "continuous-breeders"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1833,10 +1434,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "homogametes",
-        "heterogametes"
-      ],
+      "tags": ["homogametes", "heterogametes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1858,11 +1456,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-division",
-        "mitosis",
-        "meiosis"
-      ],
+      "tags": ["cell-division", "mitosis", "meiosis"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1873,21 +1467,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Which of the following statements about the zygote is/are INCORRECT?\n(i) Zygote is always diploid.\n(ii) Zygote undergoes mitosis to form embryo.\n(iii) External fertilisation always produces a zygote in water.\n(iv) In haplontic organisms, the zygote undergoes meiosis.",
-      "options": [
-        "(i) only",
-        "(ii) and (iv) only",
-        "(i) and (iii) only",
-        "None of the above"
-      ],
+      "options": ["(i) only", "(ii) and (iv) only", "(i) and (iii) only", "None of the above"],
       "correctAnswer": "A",
       "explanation": "Statement (i) is incorrect because in organisms with haplontic life cycle (like some algae), if both gametes are haploid and the organism undergoes parthenogenesis, the scenario differs. Generally the zygote is diploid, but the statement 'always' makes it debatable. Statements (ii), (iii), and (iv) are correct.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "zygote",
-        "statement-based"
-      ],
+      "tags": ["zygote", "statement-based"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1909,10 +1495,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vegetative-propagation",
-        "match"
-      ],
+      "tags": ["vegetative-propagation", "match"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1923,23 +1506,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Match Column I (Type of gamete fusion) with Column II (Example):\nColumn I: (P) Isogamy, (Q) Anisogamy, (R) Oogamy\nColumn II: (i) Fucus, (ii) Cladophora, (iii) Some Chlamydomonas species",
-      "options": [
-        "P-ii, Q-i, R-iii",
-        "P-i, Q-ii, R-iii",
-        "P-iii, Q-ii, R-i",
-        "P-ii, Q-iii, R-i"
-      ],
+      "options": ["P-ii, Q-i, R-iii", "P-i, Q-ii, R-iii", "P-iii, Q-ii, R-i", "P-ii, Q-iii, R-i"],
       "correctAnswer": "D",
       "explanation": "Isogamy (similar gametes) - Cladophora (ii), Anisogamy (dissimilar gametes) - some Chlamydomonas species (iii), Oogamy (large egg + small sperm) - Fucus (i).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gamete-fusion",
-        "isogamy",
-        "anisogamy",
-        "oogamy"
-      ],
+      "tags": ["gamete-fusion", "isogamy", "anisogamy", "oogamy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1961,10 +1534,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "binary-fission",
-        "types"
-      ],
+      "tags": ["binary-fission", "types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1975,22 +1545,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Match Column I (Life cycle type) with Column II (Characteristic):\nColumn I: (P) Haplontic, (Q) Diplontic, (R) Haplodiplontic\nColumn II: (i) Both haploid and diploid multicellular phases, (ii) Dominant haploid phase with diploid zygote, (iii) Dominant diploid phase with haploid gametes",
-      "options": [
-        "P-i, Q-ii, R-iii",
-        "P-ii, Q-i, R-iii",
-        "P-iii, Q-ii, R-i",
-        "P-ii, Q-iii, R-i"
-      ],
+      "options": ["P-i, Q-ii, R-iii", "P-ii, Q-i, R-iii", "P-iii, Q-ii, R-i", "P-ii, Q-iii, R-i"],
       "correctAnswer": "D",
       "explanation": "Haplontic organisms have a dominant haploid phase with a diploid zygote (ii). Diplontic organisms have a dominant diploid phase with haploid gametes (iii). Haplodiplontic organisms have both multicellular haploid and diploid phases (i).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "life-cycle",
-        "haplontic",
-        "diplontic"
-      ],
+      "tags": ["life-cycle", "haplontic", "diplontic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2012,10 +1573,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "lifespan",
-        "match"
-      ],
+      "tags": ["lifespan", "match"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2026,21 +1584,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "How many of the following are monoecious plants?\nCoconut, Maize, Cucurbits, Papaya, Chara, Date palm, Castor",
-      "options": [
-        "Five",
-        "Two",
-        "Three",
-        "Four"
-      ],
+      "options": ["Five", "Two", "Three", "Four"],
       "correctAnswer": "D",
       "explanation": "Four are monoecious: Coconut, Maize, Cucurbits, and Castor bear both male and female flowers on the same plant. Papaya, Chara, and Date palm are dioecious.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "monoecious",
-        "counting"
-      ],
+      "tags": ["monoecious", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2051,21 +1601,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "How many of the following are methods of vegetative propagation?\nBinary fission, Budding, Rhizome, Runner, Offset, Zoospores, Bulbil, Tuber",
-      "options": [
-        "Five",
-        "Four",
-        "Seven",
-        "Six"
-      ],
+      "options": ["Five", "Four", "Seven", "Six"],
       "correctAnswer": "A",
       "explanation": "Five are methods of vegetative propagation: Rhizome, Runner, Offset, Bulbil, and Tuber. Binary fission and zoospores are asexual reproductive methods but not vegetative propagation. Budding in yeast is asexual but not considered vegetative propagation in the plant sense.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vegetative-propagation",
-        "counting"
-      ],
+      "tags": ["vegetative-propagation", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2076,21 +1618,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "How many of the following organisms show internal fertilisation?\nHuman, Dog, Hen, Frog, Reptiles, Shark, Butterfly, Bony fish",
-      "options": [
-        "Seven",
-        "Six",
-        "Five",
-        "Four"
-      ],
+      "options": ["Seven", "Six", "Five", "Four"],
       "correctAnswer": "B",
       "explanation": "Six organisms show internal fertilisation: Human, Dog, Hen, Reptiles, Shark, and Butterfly. Frog and bony fish show external fertilisation where gametes fuse outside the body in water.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "internal-fertilisation",
-        "counting"
-      ],
+      "tags": ["internal-fertilisation", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2101,21 +1635,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "How many of the following are pre-fertilisation events?\nGametogenesis, Gamete transfer, Cell differentiation, Embryogenesis, Pollination, Meiosis",
-      "options": [
-        "Five",
-        "Two",
-        "Three",
-        "Four"
-      ],
+      "options": ["Five", "Two", "Three", "Four"],
       "correctAnswer": "C",
       "explanation": "Three are pre-fertilisation events: Gametogenesis (gamete formation), Gamete transfer (including pollination), and Meiosis (occurs during gametogenesis). Pollination is part of gamete transfer. Cell differentiation and embryogenesis are post-fertilisation events.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pre-fertilisation",
-        "counting"
-      ],
+      "tags": ["pre-fertilisation", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2137,10 +1663,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gamete-fusion",
-        "evolution"
-      ],
+      "tags": ["gamete-fusion", "evolution"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2162,10 +1685,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sexual-life-cycle",
-        "sequence"
-      ],
+      "tags": ["sexual-life-cycle", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2187,10 +1707,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "asexual-reproduction",
-        "complexity"
-      ],
+      "tags": ["asexual-reproduction", "complexity"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2212,10 +1729,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "flowering-cycle",
-        "sequence"
-      ],
+      "tags": ["flowering-cycle", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2237,10 +1751,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "haplodiplontic",
-        "life-cycle"
-      ],
+      "tags": ["haplodiplontic", "life-cycle"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2262,10 +1773,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "external-fertilisation",
-        "zygote"
-      ],
+      "tags": ["external-fertilisation", "zygote"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2276,21 +1784,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Strobili or cones are reproductive structures found in:",
-      "options": [
-        "Angiosperms",
-        "Bryophytes",
-        "Gymnosperms",
-        "Thallophytes"
-      ],
+      "options": ["Angiosperms", "Bryophytes", "Gymnosperms", "Thallophytes"],
       "correctAnswer": "C",
       "explanation": "Strobili (cones) are the reproductive structures of gymnosperms like Pinus. Male cones produce pollen grains and female cones bear ovules. Angiosperms have flowers, bryophytes have archegonia and antheridia.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "strobili",
-        "gymnosperms"
-      ],
+      "tags": ["strobili", "gymnosperms"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2312,10 +1812,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "asexual-reproduction",
-        "simple-organisms"
-      ],
+      "tags": ["asexual-reproduction", "simple-organisms"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2337,10 +1834,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "asexual-reproduction",
-        "favourable-conditions"
-      ],
+      "tags": ["asexual-reproduction", "favourable-conditions"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2362,10 +1856,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "syngamy",
-        "fertilisation"
-      ],
+      "tags": ["syngamy", "fertilisation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2387,10 +1878,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "diploid-phase",
-        "haplontic"
-      ],
+      "tags": ["diploid-phase", "haplontic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2412,10 +1900,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "terminology",
-        "match"
-      ],
+      "tags": ["terminology", "match"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2437,10 +1922,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "asexual-reproduction",
-        "match"
-      ],
+      "tags": ["asexual-reproduction", "match"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2451,21 +1933,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Which of the following pairs of organisms shows both asexual and sexual modes of reproduction?",
-      "options": [
-        "Amoeba and Human",
-        "Cockroach and Frog",
-        "Yeast and Hydra",
-        "Dog and Cat"
-      ],
+      "options": ["Amoeba and Human", "Cockroach and Frog", "Yeast and Hydra", "Dog and Cat"],
       "correctAnswer": "C",
       "explanation": "Both yeast and Hydra can reproduce asexually (by budding) and sexually. Humans, dogs, cats, cockroaches, and frogs reproduce only sexually under natural conditions. Amoeba primarily reproduces asexually.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "asexual-sexual",
-        "reproduction-modes"
-      ],
+      "tags": ["asexual-sexual", "reproduction-modes"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2476,21 +1950,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "In which of the following plants does vegetative propagation occur through adventitious buds on leaves?",
-      "options": [
-        "Ginger",
-        "Bryophyllum",
-        "Agave",
-        "Potato"
-      ],
+      "options": ["Ginger", "Bryophyllum", "Agave", "Potato"],
       "correctAnswer": "B",
       "explanation": "Bryophyllum reproduces vegetatively through adventitious buds that develop in the notches along the leaf margins. Agave uses bulbils, potato uses tubers (stem), and ginger uses rhizomes.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophyllum",
-        "adventitious-buds"
-      ],
+      "tags": ["bryophyllum", "adventitious-buds"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2501,22 +1967,13 @@
       "ncertChapter": 1,
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Zoospores are flagellated motile asexual reproductive structures found in:",
-      "options": [
-        "Bryophyllum",
-        "Rhizopus",
-        "Chlamydomonas",
-        "Yeast"
-      ],
+      "options": ["Bryophyllum", "Rhizopus", "Chlamydomonas", "Yeast"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, zoospores are flagellated (motile) microscopic asexual reproductive structures produced in aquatic organisms. Chlamydomonas reproduces asexually by zoospores. Yeast reproduces by budding and Rhizopus by non-motile spores.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "asexual-reproduction",
-        "zoospores",
-        "chlamydomonas"
-      ],
+      "tags": ["asexual-reproduction", "zoospores", "chlamydomonas"],
       "neetWeightage": "HIGH"
     }
   ]

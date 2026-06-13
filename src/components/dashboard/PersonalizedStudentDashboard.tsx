@@ -1,7 +1,17 @@
 'use client'
 
 import React, { useState, useEffect, useCallback, useRef } from 'react'
-import { BookOpen, TrendingUp, Target, AlertTriangle, Calendar, BarChart3, Wrench, RefreshCw, XCircle } from 'lucide-react'
+import {
+  BookOpen,
+  TrendingUp,
+  Target,
+  AlertTriangle,
+  Calendar,
+  BarChart3,
+  Wrench,
+  RefreshCw,
+  XCircle,
+} from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useSwipeGesture, usePullToRefresh } from '@/hooks/useSwipeGesture'
 import { FloatingActionButton, useDashboardFAB } from '@/components/mobile/FloatingActionButton'
@@ -429,64 +439,68 @@ export function PersonalizedStudentDashboard() {
       />
 
       {/* Main Content */}
-      <div role="tabpanel" aria-label={tabs.find(t => t.id === activeTab)?.label} className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-8">
-{activeTab === 'overview' && (
-            <OverviewTab
-              neetProgress={neetProgress}
-              recentSessions={recentSessions}
-              gamificationData={gamificationData}
-              onWeakAreaSelect={handleWeakAreaSelect}
-              totalStudyTime={totalStudyTime}
-              averageScore={averageScore}
-              testsCompleted={testsCompleted}
-            />
-          )}
+      <div
+        role="tabpanel"
+        aria-label={tabs.find((t) => t.id === activeTab)?.label}
+        className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-8"
+      >
+        {activeTab === 'overview' && (
+          <OverviewTab
+            neetProgress={neetProgress}
+            recentSessions={recentSessions}
+            gamificationData={gamificationData}
+            onWeakAreaSelect={handleWeakAreaSelect}
+            totalStudyTime={totalStudyTime}
+            averageScore={averageScore}
+            testsCompleted={testsCompleted}
+          />
+        )}
 
-          {activeTab === 'tools' && <ToolsHubTab />}
+        {activeTab === 'tools' && <ToolsHubTab />}
 
-          {activeTab === 'progress' && (
-            <ProgressTab
-              neetProgress={neetProgress}
-              recentSessions={recentSessions}
-              gamificationData={gamificationData}
-              totalStudyTime={totalStudyTime}
-              averageScore={averageScore}
-              testsCompleted={testsCompleted}
-            />
-          )}
+        {activeTab === 'progress' && (
+          <ProgressTab
+            neetProgress={neetProgress}
+            recentSessions={recentSessions}
+            gamificationData={gamificationData}
+            totalStudyTime={totalStudyTime}
+            averageScore={averageScore}
+            testsCompleted={testsCompleted}
+          />
+        )}
 
-          {activeTab === 'study' && (
-            <StudySessionTab
-              studyTimer={studyTimer}
-              isStudying={isStudying}
-              currentSession={currentSession}
-              weakAreas={neetProgress.weakAreas}
-              onStartSession={startStudySession}
-              onPauseSession={pauseStudySession}
-              onStopSession={stopStudySession}
-              formatTime={formatTime}
-            />
-          )}
+        {activeTab === 'study' && (
+          <StudySessionTab
+            studyTimer={studyTimer}
+            isStudying={isStudying}
+            currentSession={currentSession}
+            weakAreas={neetProgress.weakAreas}
+            onStartSession={startStudySession}
+            onPauseSession={pauseStudySession}
+            onStopSession={stopStudySession}
+            formatTime={formatTime}
+          />
+        )}
 
-          {activeTab === 'weak-areas' && (
-            <WeakAreasTab
-              weakAreas={neetProgress.weakAreas}
-              onStartStudy={(chapter) => {
-                startStudySession(chapter)
-                setActiveTab('study')
-              }}
-            />
-          )}
+        {activeTab === 'weak-areas' && (
+          <WeakAreasTab
+            weakAreas={neetProgress.weakAreas}
+            onStartStudy={(chapter) => {
+              startStudySession(chapter)
+              setActiveTab('study')
+            }}
+          />
+        )}
 
-          {activeTab === 'practice' && <PracticeTab />}
+        {activeTab === 'practice' && <PracticeTab />}
 
-          {activeTab === 'schedule' && (
-            <ScheduleTab
-              weakAreas={neetProgress.weakAreas}
-              studyStreak={gamificationData?.gamification?.studyStreak}
-            />
-          )}
-</div>
+        {activeTab === 'schedule' && (
+          <ScheduleTab
+            weakAreas={neetProgress.weakAreas}
+            studyStreak={gamificationData?.gamification?.studyStreak}
+          />
+        )}
+      </div>
 
       <FloatingActionButton actions={defaultActions} />
 

@@ -25,7 +25,10 @@ function parseMatchColumns(question: MCQQuestion): {
   choices: string[]
 } {
   const text = question.question
-  const lines = text.split(/\n+/).map((l) => l.trim()).filter(Boolean)
+  const lines = text
+    .split(/\n+/)
+    .map((l) => l.trim())
+    .filter(Boolean)
 
   let prompt = ''
   const columnA: string[] = []
@@ -106,11 +109,20 @@ export function MatchFollowingCard({
     const handleKeyDown = (e: KeyboardEvent) => {
       if (selectedAnswer || isSubmitting || e.repeat) return
       const keyMap: Record<string, 'A' | 'B' | 'C' | 'D'> = {
-        '1': 'A', '2': 'B', '3': 'C', '4': 'D',
-        a: 'A', b: 'B', c: 'C', d: 'D',
+        '1': 'A',
+        '2': 'B',
+        '3': 'C',
+        '4': 'D',
+        a: 'A',
+        b: 'B',
+        c: 'C',
+        d: 'D',
       }
       const option = keyMap[e.key.toLowerCase()]
-      if (option) { e.preventDefault(); handleOptionClick(option) }
+      if (option) {
+        e.preventDefault()
+        handleOptionClick(option)
+      }
     }
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
@@ -223,15 +235,23 @@ export function MatchFollowingCard({
           </table>
           <div className="md:hidden space-y-2">
             <div className="p-2.5 rounded-lg bg-teal-50/50 border border-teal-200">
-              <p className="text-xs font-semibold text-teal-700 uppercase tracking-wide mb-1.5">Column A</p>
+              <p className="text-xs font-semibold text-teal-700 uppercase tracking-wide mb-1.5">
+                Column A
+              </p>
               {columnA.map((item, i) => (
-                <p key={i} className="text-sm text-ink py-0.5">{item}</p>
+                <p key={i} className="text-sm text-ink py-0.5">
+                  {item}
+                </p>
               ))}
             </div>
             <div className="p-2.5 rounded-lg bg-blue-50/50 border border-blue-200">
-              <p className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1.5">Column B</p>
+              <p className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1.5">
+                Column B
+              </p>
               {columnB.map((item, i) => (
-                <p key={i} className="text-sm text-ink py-0.5">{item}</p>
+                <p key={i} className="text-sm text-ink py-0.5">
+                  {item}
+                </p>
               ))}
             </div>
           </div>
@@ -280,9 +300,13 @@ export function MatchFollowingCard({
         <div className="flex items-center justify-center gap-2 mt-3 text-stone-400">
           <p className="text-xs">
             Press{' '}
-            <kbd className="px-1.5 py-0.5 bg-stone-100 rounded text-stone-600 font-mono text-xs">1-4</kbd>{' '}
+            <kbd className="px-1.5 py-0.5 bg-stone-100 rounded text-stone-600 font-mono text-xs">
+              1-4
+            </kbd>{' '}
             or{' '}
-            <kbd className="px-1.5 py-0.5 bg-stone-100 rounded text-stone-600 font-mono text-xs">A-D</kbd>{' '}
+            <kbd className="px-1.5 py-0.5 bg-stone-100 rounded text-stone-600 font-mono text-xs">
+              A-D
+            </kbd>{' '}
             to select
           </p>
         </div>
@@ -306,10 +330,14 @@ export function MatchFollowingCard({
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <span className={`text-2xl ${result.isCorrect ? 'animate-confetti-burst' : 'animate-scale-in'}`}>
+                  <span
+                    className={`text-2xl ${result.isCorrect ? 'animate-confetti-burst' : 'animate-scale-in'}`}
+                  >
                     {result.isCorrect ? '🎉' : '😔'}
                   </span>
-                  <span className={`font-bold text-base ${result.isCorrect ? 'text-green-700' : 'text-red-700'}`}>
+                  <span
+                    className={`font-bold text-base ${result.isCorrect ? 'text-green-700' : 'text-red-700'}`}
+                  >
                     {result.isCorrect ? 'Correct!' : 'Incorrect'}
                   </span>
                 </div>

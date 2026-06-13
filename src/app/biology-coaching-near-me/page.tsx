@@ -21,7 +21,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biology Coaching Near Me | NEET Biology Classes Delhi NCR',
-    description: 'Find the best biology coaching near you for NEET preparation. Expert AIIMS faculty in Delhi, Noida, Gurgaon, Ghaziabad, Faridabad. 98% success rate. Book FREE demo today!',
+    description:
+      'Find the best biology coaching near you for NEET preparation. Expert AIIMS faculty in Delhi, Noida, Gurgaon, Ghaziabad, Faridabad. 98% success rate. Book FREE demo today!',
   },
 }
 

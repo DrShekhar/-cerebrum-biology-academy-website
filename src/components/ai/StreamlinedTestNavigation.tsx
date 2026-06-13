@@ -473,54 +473,52 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
                 <Search className="w-4 h-4" />
                 <span>Search tabs... (Ctrl+K)</span>
               </button>
-{showSearch && (
-                  <div
-                    className="absolute top-full left-0 right-0 mt-1 bg-white border rounded-lg shadow-lg z-50 animate-fadeInUp"
-                  >
-                    <div className="p-3">
-                      <input
-                        ref={searchInputRef}
-                        type="text"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        placeholder="Type to search tabs..."
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        onKeyDown={(e) => {
-                          if (e.key === 'Escape') {
-                            setShowSearch(false)
-                            setSearchQuery('')
-                          }
-                        }}
-                      />
-                    </div>
-
-                    {searchQuery && (
-                      <div className="border-t max-h-64 overflow-y-auto">
-                        {getFilteredGroups().map((group) => (
-                          <div key={group.id}>
-                            {group.tabs.map((tab) => (
-                              <button
-                                key={tab.id}
-                                onClick={() => handleTabChange(tab.id)}
-                                className="w-full flex items-center gap-3 px-3 py-2 text-left hover:bg-gray-50 transition-colors"
-                              >
-                                {tab.icon}
-                                <div className="flex-1 min-w-0">
-                                  <div className="font-medium text-sm">{tab.name}</div>
-                                  <div className="text-xs text-gray-500 truncate">
-                                    {group.name} • {tab.description}
-                                  </div>
-                                </div>
-                                {getStatusIcon(tab)}
-                              </button>
-                            ))}
-                          </div>
-                        ))}
-                      </div>
-                    )}
+              {showSearch && (
+                <div className="absolute top-full left-0 right-0 mt-1 bg-white border rounded-lg shadow-lg z-50 animate-fadeInUp">
+                  <div className="p-3">
+                    <input
+                      ref={searchInputRef}
+                      type="text"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      placeholder="Type to search tabs..."
+                      className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      onKeyDown={(e) => {
+                        if (e.key === 'Escape') {
+                          setShowSearch(false)
+                          setSearchQuery('')
+                        }
+                      }}
+                    />
                   </div>
-                )}
-</div>
+
+                  {searchQuery && (
+                    <div className="border-t max-h-64 overflow-y-auto">
+                      {getFilteredGroups().map((group) => (
+                        <div key={group.id}>
+                          {group.tabs.map((tab) => (
+                            <button
+                              key={tab.id}
+                              onClick={() => handleTabChange(tab.id)}
+                              className="w-full flex items-center gap-3 px-3 py-2 text-left hover:bg-gray-50 transition-colors"
+                            >
+                              {tab.icon}
+                              <div className="flex-1 min-w-0">
+                                <div className="font-medium text-sm">{tab.name}</div>
+                                <div className="text-xs text-gray-500 truncate">
+                                  {group.name} • {tab.description}
+                                </div>
+                              </div>
+                              {getStatusIcon(tab)}
+                            </button>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
 
             {/* Breadcrumbs */}
             {showBreadcrumbs && (
@@ -671,83 +669,77 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
               </button>
 
               {/* Group Tabs */}
-{(groupStates[group.id] || isCollapsed) && (
-                  <div
-                    className="overflow-hidden animate-fadeInUp"
-                  >
-                    <div className={isCollapsed ? 'space-y-1' : 'ml-4 space-y-1'}>
-                      {group.tabs.map((tab) => (
-                        <button
-                          key={tab.id}
-                          onClick={() => handleTabChange(tab.id)}
-                          className={`w-full flex items-center gap-3 p-2.5 rounded-lg transition-colors group relative ${
-                            activeTab === tab.id
-                              ? 'bg-blue-50 text-blue-700 border border-blue-200'
-                              : 'hover:bg-gray-50'
-                          }`}
-                          title={isCollapsed ? `${tab.name} - ${tab.description}` : undefined}
-                        >
-                          <div className="flex items-center gap-3 flex-1 min-w-0">
-                            {tab.icon}
+              {(groupStates[group.id] || isCollapsed) && (
+                <div className="overflow-hidden animate-fadeInUp">
+                  <div className={isCollapsed ? 'space-y-1' : 'ml-4 space-y-1'}>
+                    {group.tabs.map((tab) => (
+                      <button
+                        key={tab.id}
+                        onClick={() => handleTabChange(tab.id)}
+                        className={`w-full flex items-center gap-3 p-2.5 rounded-lg transition-colors group relative ${
+                          activeTab === tab.id
+                            ? 'bg-blue-50 text-blue-700 border border-blue-200'
+                            : 'hover:bg-gray-50'
+                        }`}
+                        title={isCollapsed ? `${tab.name} - ${tab.description}` : undefined}
+                      >
+                        <div className="flex items-center gap-3 flex-1 min-w-0">
+                          {tab.icon}
 
-                            {!isCollapsed && (
-                              <div className="flex-1 min-w-0">
-                                <div className="flex items-center gap-2">
-                                  <span className="font-medium truncate">{tab.name}</span>
-                                  {tab.isRequired && (
-                                    <span className="text-xs text-red-600">*</span>
-                                  )}
-                                  {getStatusIcon(tab)}
-                                </div>
-
-                                {tab.description && (
-                                  <div className="text-xs text-gray-500 truncate mt-0.5">
-                                    {tab.description}
-                                  </div>
-                                )}
-
-                                {showProgress && tab.completionPercentage !== undefined && (
-                                  <div className="flex items-center gap-2 mt-1">
-                                    <div className="flex-1 bg-gray-200 rounded-full h-1">
-                                      <div
-                                        className={`h-1 rounded-full transition-all ${getCompletionColor(tab.completionPercentage)}`}
-                                        style={{ width: `${tab.completionPercentage}%` }}
-                                      />
-                                    </div>
-                                    <span className="text-xs text-gray-500">
-                                      {tab.estimatedTime}
-                                    </span>
-                                  </div>
-                                )}
+                          {!isCollapsed && (
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center gap-2">
+                                <span className="font-medium truncate">{tab.name}</span>
+                                {tab.isRequired && <span className="text-xs text-red-600">*</span>}
+                                {getStatusIcon(tab)}
                               </div>
-                            )}
-                          </div>
 
-                          {!isCollapsed && allowPinning && (
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation()
-                                togglePinTab(tab.id)
-                              }}
-                              className={`opacity-0 group-hover:opacity-100 p-1 rounded transition-all ${
-                                pinnedTabs.includes(tab.id)
-                                  ? 'text-blue-600'
-                                  : 'text-gray-400 hover:text-gray-600'
-                              }`}
-                            >
-                              {pinnedTabs.includes(tab.id) ? (
-                                <Pin className="w-3 h-3" />
-                              ) : (
-                                <PinOff className="w-3 h-3" />
+                              {tab.description && (
+                                <div className="text-xs text-gray-500 truncate mt-0.5">
+                                  {tab.description}
+                                </div>
                               )}
-                            </button>
+
+                              {showProgress && tab.completionPercentage !== undefined && (
+                                <div className="flex items-center gap-2 mt-1">
+                                  <div className="flex-1 bg-gray-200 rounded-full h-1">
+                                    <div
+                                      className={`h-1 rounded-full transition-all ${getCompletionColor(tab.completionPercentage)}`}
+                                      style={{ width: `${tab.completionPercentage}%` }}
+                                    />
+                                  </div>
+                                  <span className="text-xs text-gray-500">{tab.estimatedTime}</span>
+                                </div>
+                              )}
+                            </div>
                           )}
-                        </button>
-                      ))}
-                    </div>
+                        </div>
+
+                        {!isCollapsed && allowPinning && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              togglePinTab(tab.id)
+                            }}
+                            className={`opacity-0 group-hover:opacity-100 p-1 rounded transition-all ${
+                              pinnedTabs.includes(tab.id)
+                                ? 'text-blue-600'
+                                : 'text-gray-400 hover:text-gray-600'
+                            }`}
+                          >
+                            {pinnedTabs.includes(tab.id) ? (
+                              <Pin className="w-3 h-3" />
+                            ) : (
+                              <PinOff className="w-3 h-3" />
+                            )}
+                          </button>
+                        )}
+                      </button>
+                    ))}
                   </div>
-                )}
-</div>
+                </div>
+              )}
+            </div>
           ))}
         </div>
       </div>

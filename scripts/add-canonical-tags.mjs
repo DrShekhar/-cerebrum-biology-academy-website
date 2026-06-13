@@ -58,11 +58,7 @@ const SKIP_DIRS = new Set([
 ])
 
 // Also skip these specific paths
-const SKIP_PATHS = new Set([
-  'src/app/layout.tsx',
-  'src/app/not-found.tsx',
-  'src/app/error.tsx',
-])
+const SKIP_PATHS = new Set(['src/app/layout.tsx', 'src/app/not-found.tsx', 'src/app/error.tsx'])
 
 function getAllPageFiles(dir, files = []) {
   const entries = readdirSync(dir)
@@ -97,14 +93,20 @@ function hasLayoutWithCanonical(pageDir) {
 }
 
 function isClientComponent(content) {
-  if (content.trimStart().startsWith("'use client'") || content.trimStart().startsWith('"use client"')) return true
+  if (
+    content.trimStart().startsWith("'use client'") ||
+    content.trimStart().startsWith('"use client"')
+  )
+    return true
   return /^[\s\S]*?['"]use client['"]/m.test(content) && content.includes("'use client'")
 }
 
 function hasMetadataExport(content) {
-  return /export\s+const\s+metadata\s*[=:]/.test(content) ||
+  return (
+    /export\s+const\s+metadata\s*[=:]/.test(content) ||
     /export\s+async\s+function\s+generateMetadata/.test(content) ||
     /export\s+function\s+generateMetadata/.test(content)
+  )
 }
 
 function getCanonicalPath(filePath) {
@@ -112,10 +114,10 @@ function getCanonicalPath(filePath) {
   if (!rel || rel === '.') return '/'
 
   // Handle route groups (e.g., (marketing)) - strip them
-  const parts = rel.split('/').filter(p => !p.startsWith('('))
+  const parts = rel.split('/').filter((p) => !p.startsWith('('))
 
   // Handle dynamic segments - skip them for canonical (they use generateMetadata)
-  if (parts.some(p => p.startsWith('['))) return null
+  if (parts.some((p) => p.startsWith('['))) return null
 
   return '/' + parts.join('/')
 }
@@ -161,7 +163,10 @@ function addMetadataExport(content, canonicalPath) {
   const importEnd = content.lastIndexOf('import ')
   if (importEnd === -1) {
     // No imports, add at top
-    return `import type { Metadata } from 'next'\n\nexport const metadata: Metadata = {\n  alternates: { canonical: '${canonicalPath}' },\n}\n\n` + content
+    return (
+      `import type { Metadata } from 'next'\n\nexport const metadata: Metadata = {\n  alternates: { canonical: '${canonicalPath}' },\n}\n\n` +
+      content
+    )
   }
 
   // Find end of last import statement
@@ -184,10 +189,17 @@ function addMetadataExport(content, canonicalPath) {
   const after = content.slice(lastImportEnd + 1)
 
   // Check if Metadata import already exists
-  const hasMetadataImport = content.includes("import type { Metadata }") || content.includes("import { Metadata")
+  const hasMetadataImport =
+    content.includes('import type { Metadata }') || content.includes('import { Metadata')
   const metadataImport = hasMetadataImport ? '' : "import type { Metadata } from 'next'\n"
 
-  return before + '\n' + metadataImport + `\nexport const metadata: Metadata = {\n  alternates: { canonical: '${canonicalPath}' },\n}\n\n` + after
+  return (
+    before +
+    '\n' +
+    metadataImport +
+    `\nexport const metadata: Metadata = {\n  alternates: { canonical: '${canonicalPath}' },\n}\n\n` +
+    after
+  )
 }
 
 // Main
@@ -288,9 +300,9 @@ console.log(`Skipped (dynamic routes): ${skippedDynamic}`)
 
 if (results.layoutsCreated.length > 0) {
   console.log(`\nNew layout.tsx files:`)
-  results.layoutsCreated.forEach(f => console.log(`  + ${f}`))
+  results.layoutsCreated.forEach((f) => console.log(`  + ${f}`))
 }
 if (results.pagesModified.length > 0) {
   console.log(`\nModified files:`)
-  results.pagesModified.forEach(f => console.log(`  ~ ${f}`))
+  results.pagesModified.forEach((f) => console.log(`  ~ ${f}`))
 }

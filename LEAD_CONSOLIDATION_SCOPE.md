@@ -11,15 +11,15 @@ separate records nobody can reconcile**.
 
 ### The three tables (verified against prisma/schema.prisma)
 
-| Table | Role | Writers | Readers | Key fields |
-|---|---|---|---|---|
-| **`leads`** | The real CRM. 15 relations (activities, tasks, fee_plans, offers, communications, followup_queue, payment_links, whatsapp_conversations…). Has stage pipeline, priority, score, assignment. | **10 routes**: admin/leads, counselor/leads, aria/lead-capture, seo/leads/capture, catalog/download, webhooks/leads, admission-application, leads/blog-query, admin/students, admin/leads/migrate | counselor/* + admin/* + demo-booking + payments/webhook | `studentName, email?, phone, stage, priority, assignedToId (REQUIRED), source, score` |
-| **`contact_inquiries`** | Support/contact buffer. No pipeline, no relations. | **1 route**: `contact/inquiry` (ARIA widget, CERI chatbot, contact form, olympiad form, careers) | **only** `admin/inquiries` (the read-only view built this session) | `name, email, phone, supportType, status` |
-| **`content_leads`** | Lead-magnet / SEO capture. Has its own mini-pipeline (leadStage, leadScore, convertedToPaid). | **6 routes**: enquiry (city pages + book-free-demo), whatsapp-gate, exit-intent, blog/capture-lead, catalog/download, seo/leads/capture | lead-magnet flows + admin/inquiries + admin/leads/migrate + admin/leads/export | `name?, email?, whatsappNumber?, leadStage, leadScore` |
+| Table                   | Role                                                                                                                                                                                        | Writers                                                                                                                                                                                           | Readers                                                                        | Key fields                                                                            |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
+| **`leads`**             | The real CRM. 15 relations (activities, tasks, fee_plans, offers, communications, followup_queue, payment_links, whatsapp_conversations…). Has stage pipeline, priority, score, assignment. | **10 routes**: admin/leads, counselor/leads, aria/lead-capture, seo/leads/capture, catalog/download, webhooks/leads, admission-application, leads/blog-query, admin/students, admin/leads/migrate | counselor/_ + admin/_ + demo-booking + payments/webhook                        | `studentName, email?, phone, stage, priority, assignedToId (REQUIRED), source, score` |
+| **`contact_inquiries`** | Support/contact buffer. No pipeline, no relations.                                                                                                                                          | **1 route**: `contact/inquiry` (ARIA widget, CERI chatbot, contact form, olympiad form, careers)                                                                                                  | **only** `admin/inquiries` (the read-only view built this session)             | `name, email, phone, supportType, status`                                             |
+| **`content_leads`**     | Lead-magnet / SEO capture. Has its own mini-pipeline (leadStage, leadScore, convertedToPaid).                                                                                               | **6 routes**: enquiry (city pages + book-free-demo), whatsapp-gate, exit-intent, blog/capture-lead, catalog/download, seo/leads/capture                                                           | lead-magnet flows + admin/inquiries + admin/leads/migrate + admin/leads/export | `name?, email?, whatsappNumber?, leadStage, leadScore`                                |
 
 ### Confirmed gaps
 
-1. **No phone/email uniqueness on ANY lead table.** (`@unique phone` at schema line 3038 is on `users`, not leads.) Every submission = a new row, even repeat submissions to the *same* table.
+1. **No phone/email uniqueness on ANY lead table.** (`@unique phone` at schema line 3038 is on `users`, not leads.) Every submission = a new row, even repeat submissions to the _same_ table.
 2. **`contact_inquiries` has ZERO promotion path to `leads`.** Every ARIA chat lead, contact-form message, olympiad enquiry, and careers application is invisible to the counselor CRM unless re-keyed by hand.
 3. **`content_leads → leads` bridge exists but is manual + one-directional.** `api/admin/leads/migrate` promotes qualified content_leads, dedups by email/phone against `leads`, but a human must trigger it.
 4. **Lead conversion mints placeholder emails** (`{phone}@placeholder.cerebrum.app`, convert/route.ts:68) → converted students can't receive email. Small, separate fix.
@@ -27,23 +27,29 @@ separate records nobody can reconcile**.
 ## Options
 
 ### Option A — Read-time unification only (lightest)
+
 Keep all three tables. Extend the new `/admin/inquiries` view to also pull `leads`, and
-add a phone-match indicator so staff *see* the same person across tables.
+add a phone-match indicator so staff _see_ the same person across tables.
+
 - **Effort**: ~half day. **Risk**: none (read-only, additive).
 - **Limit**: silos remain; no dedup; counselor CRM still never auto-receives ARIA/contact/content leads. Cosmetic.
 
-### Option B — Canonical `leads` + auto-promotion + dedup  ★ RECOMMENDED
+### Option B — Canonical `leads` + auto-promotion + dedup ★ RECOMMENDED
+
 Designate `leads` as the single system of record. Keep `contact_inquiries` and
 `content_leads` as **raw capture logs** (untouched), but on every write also **upsert a
 `leads` row keyed on normalized phone**: create if new, else attach an activity/touchpoint
 to the existing lead. Dedup within `leads` by normalized phone too.
+
 - **Effort**: moderate, phased (below). **Risk**: medium-low, fully additive — no capture
   path is removed, so no lead is lost mid-transition (honors the no-prospect-loss rule).
 - **Payoff**: one record per person in the CRM, with full cross-channel history; counselors
   finally see ARIA/contact/olympiad leads.
 
 ### Option C — Full schema merge (not recommended)
+
 Collapse all three into one table.
+
 - **Effort**: large. **Risk**: high — `leads` has 15 relations and a required `assignedToId`;
   every reader/writer + the InstantDB marketing path must be rewritten. Little extra benefit
   over B for far more risk. Reject.
@@ -69,7 +75,7 @@ the proven `admin/leads/migrate` dedup pattern to cover contact_inquiries (it al
 content_leads). One-time admin-triggered run.
 
 **B3 — Wire remaining writers** (whatsapp-gate, exit-intent, blog/capture-lead,
-catalog/download, seo/leads/*). 
+catalog/download, seo/leads/\*).
 
 **B4 — `/admin/inquiries`**: add the unified `leads` column + a "seen across N channels"
 dedup badge keyed on phone.

@@ -21,7 +21,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'NEET Biology Coaching in Surajkund, Faridabad | Expert Classes',
-    description: 'Best NEET biology coaching near Surajkund. AIIMS faculty, 98% success rate, expert guidance.',
+    description:
+      'Best NEET biology coaching near Surajkund. AIIMS faculty, 98% success rate, expert guidance.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-surajkund',
   },
   alternates: {
@@ -31,7 +32,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Biology Coaching in Surajkund, Faridabad | Expert Classes',
-    description: 'Best NEET biology coaching in Surajkund, Faridabad. Expert AIIMS faculty, 98% success rate, live classes & test series. 550+ students trained. Call 88264-44334.',
+    description:
+      'Best NEET biology coaching in Surajkund, Faridabad. Expert AIIMS faculty, 98% success rate, live classes & test series. 550+ students trained. Call 88264-44334.',
   },
 }
 
@@ -80,7 +82,8 @@ export default function NEETCoachingSurajkundPage() {
             Best NEET Biology Coaching Near Surajkund, Faridabad
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl">
-            Expert NEET preparation for Surajkund students. 98% success rate, AIIMS faculty, live classes & comprehensive guidance.
+            Expert NEET preparation for Surajkund students. 98% success rate, AIIMS faculty, live
+            classes & comprehensive guidance.
           </p>
           <div className="mt-8 flex gap-4 flex-wrap">
             <a
@@ -112,14 +115,19 @@ export default function NEETCoachingSurajkundPage() {
                   <div>
                     <p className="font-semibold text-gray-900">Nearest Center</p>
                     <p className="text-gray-700">Sector 17, Faridabad, Haryana</p>
-                    <p className="text-sm text-gray-600">25-30 km from Surajkund (45-60 min commute)</p>
+                    <p className="text-sm text-gray-600">
+                      25-30 km from Surajkund (45-60 min commute)
+                    </p>
                   </div>
                 </div>
                 <div className="flex gap-3">
                   <Phone className="w-6 h-6 text-green-500 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-gray-900">Contact</p>
-                    <a href={`tel:${CONTACT_INFO.phone.primary}`} className="text-green-600 hover:text-green-700 font-semibold">
+                    <a
+                      href={`tel:${CONTACT_INFO.phone.primary}`}
+                      className="text-green-600 hover:text-green-700 font-semibold"
+                    >
                       {CONTACT_INFO.phone.primary}
                     </a>
                   </div>
@@ -162,7 +170,9 @@ export default function NEETCoachingSurajkundPage() {
       {/* Why Choose Cerebrum */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Why Surajkund Students Choose Cerebrum</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Why Surajkund Students Choose Cerebrum
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -197,7 +207,10 @@ export default function NEETCoachingSurajkundPage() {
                 desc: 'Easy commute via NH-44 highway',
               },
             ].map((item, idx) => (
-              <div key={idx} className="p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-md transition">
+              <div
+                key={idx}
+                className="p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-md transition"
+              >
                 <item.icon className="w-10 h-10 text-green-500 mb-4" />
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
@@ -210,7 +223,9 @@ export default function NEETCoachingSurajkundPage() {
       {/* Course Information */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Courses for Surajkund Students</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Courses for Surajkund Students
+          </h2>
 
           <div className="space-y-4">
             {[
@@ -239,13 +254,18 @@ export default function NEETCoachingSurajkundPage() {
                 features: ['Live Interactive', 'Same Faculty', 'Recorded Access'],
               },
             ].map((course, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-green-500">
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-green-500"
+              >
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">{course.name}</h3>
                     <p className="text-gray-600 text-sm">{course.duration}</p>
                   </div>
-                  <span className="bg-green-100 text-green-700 px-3 py-1 rounded font-semibold">{course.price}</span>
+                  <span className="bg-green-100 text-green-700 px-3 py-1 rounded font-semibold">
+                    {course.price}
+                  </span>
                 </div>
                 <div className="flex gap-2 flex-wrap">
                   {course.features.map((feat, i) => (
@@ -260,7 +280,8 @@ export default function NEETCoachingSurajkundPage() {
 
           <div className="mt-8 bg-yellow-50 border border-yellow-200 p-6 rounded-lg">
             <p className="text-gray-800 mb-4">
-              <strong>Special Offer for Surajkund:</strong> Flexible EMI options, scholarship for merit, hostel assistance available.
+              <strong>Special Offer for Surajkund:</strong> Flexible EMI options, scholarship for
+              merit, hostel assistance available.
             </p>
             <a
               href={`tel:${CONTACT_INFO.phone.primary}`}
@@ -275,15 +296,24 @@ export default function NEETCoachingSurajkundPage() {
       {/* Nearby Towns */}
       <section className="py-12 bg-white border-y">
         <div className="max-w-4xl mx-auto px-4">
-          <h3 className="text-2xl font-bold text-slate-900 mb-6">Students from These Areas Also Join Us</h3>
+          <h3 className="text-2xl font-bold text-slate-900 mb-6">
+            Students from These Areas Also Join Us
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Surajkund', 'Ballabgarh', 'Palwal', 'NIT Faridabad', 'Sec 15-21', 'Bptp Parklands', 'Greater Faridabad', 'Old Faridabad'].map(
-              (area) => (
-                <div key={area} className="bg-gray-50 p-3 rounded border border-gray-200 text-center">
-                  <p className="text-gray-700 font-medium text-sm">{area}</p>
-                </div>
-              ),
-            )}
+            {[
+              'Surajkund',
+              'Ballabgarh',
+              'Palwal',
+              'NIT Faridabad',
+              'Sec 15-21',
+              'Bptp Parklands',
+              'Greater Faridabad',
+              'Old Faridabad',
+            ].map((area) => (
+              <div key={area} className="bg-gray-50 p-3 rounded border border-gray-200 text-center">
+                <p className="text-gray-700 font-medium text-sm">{area}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -291,7 +321,9 @@ export default function NEETCoachingSurajkundPage() {
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">FAQs - Surajkund Students</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            FAQs - Surajkund Students
+          </h2>
 
           <div className="space-y-4">
             {faqItems.map((item, idx) => (
@@ -303,7 +335,12 @@ export default function NEETCoachingSurajkundPage() {
                   <h3 className="font-semibold text-gray-900 pr-4">{item.question}</h3>
                   <span className="text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
                     </svg>
                   </span>
                 </summary>
@@ -318,7 +355,9 @@ export default function NEETCoachingSurajkundPage() {
       <section className="bg-gradient-to-r from-green-500 to-green-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Start Your NEET Success Story from Surajkund</h2>
-          <p className="text-lg mb-8">Join 550+ Faridabad students. Book your FREE demo class now!</p>
+          <p className="text-lg mb-8">
+            Join 550+ Faridabad students. Book your FREE demo class now!
+          </p>
           <a
             href={`tel:${CONTACT_INFO.phone.primary}`}
             className="bg-yellow-800 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-900 transition inline-block"
@@ -330,7 +369,10 @@ export default function NEETCoachingSurajkundPage() {
 
       {/* Schema Markup */}
       <LocalBusinessSchema locationId="faridabad" />
-      <FAQSchema questions={faqItems} pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-surajkund" />
+      <FAQSchema
+        questions={faqItems}
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-surajkund"
+      />
     </>
   )
 }

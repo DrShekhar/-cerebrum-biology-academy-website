@@ -37,10 +37,9 @@ const CANONICAL = '/best-biology-olympiad-coaching-india'
 const PAGE_URL = `${SITE_URL}${CANONICAL}`
 
 export const metadata: Metadata = {
-  title:
-    'Best Biology Olympiad Coaching in India — NSEB · INBO · IBO · USABO · BBO · CBO · SBO',
+  title: 'Best Biology Olympiad Coaching in India — NSEB · INBO · IBO · USABO · BBO · CBO · SBO',
   description:
-    'India\'s biology-specialist olympiad coaching, by Dr. Shekhar C Singh (AIIMS New Delhi alumnus). Covers the full Indian funnel — NSEB → INBO → OCSC → IBO — plus international olympiads (USABO, BBO, CBO, SBO). Live online, micro-batches, research-paper-fluent curriculum. Free trial class.',
+    "India's biology-specialist olympiad coaching, by Dr. Shekhar C Singh (AIIMS New Delhi alumnus). Covers the full Indian funnel — NSEB → INBO → OCSC → IBO — plus international olympiads (USABO, BBO, CBO, SBO). Live online, micro-batches, research-paper-fluent curriculum. Free trial class.",
   keywords: [
     'best biology olympiad coaching',
     'best biology olympiad coaching india',
@@ -146,9 +145,10 @@ const OLYMPIAD_PATHWAYS = [
 
 const FAQS = [
   {
-    question: 'Why does India need a biology specialist coach for olympiads, not generalist NEET coaching?',
+    question:
+      'Why does India need a biology specialist coach for olympiads, not generalist NEET coaching?',
     answer:
-      'Biology olympiads test depth, not breadth — research-paper interpretation, electron-micrograph reading, biochemistry mechanism prediction, evolutionary reasoning. These do not appear in NEET papers (which test recall + standard MCQ application of NCERT). Mass-coaching NEET institutes don\'t prepare students for INBO, USABO, or IBO because their curriculum stops at the NCERT layer. Olympiad prep requires depth in Campbell Biology / Raven Biology, primary research papers, and lab-technique conceptualisation — a layer above NEET. That depth is exactly what Cerebrum is built for.',
+      "Biology olympiads test depth, not breadth — research-paper interpretation, electron-micrograph reading, biochemistry mechanism prediction, evolutionary reasoning. These do not appear in NEET papers (which test recall + standard MCQ application of NCERT). Mass-coaching NEET institutes don't prepare students for INBO, USABO, or IBO because their curriculum stops at the NCERT layer. Olympiad prep requires depth in Campbell Biology / Raven Biology, primary research papers, and lab-technique conceptualisation — a layer above NEET. That depth is exactly what Cerebrum is built for.",
   },
   {
     question: 'My child cleared NSEB. What does INBO preparation actually look like?',
@@ -156,7 +156,7 @@ const FAQS = [
       'INBO (Indian National Biology Olympiad) tests 4 hours over 2 papers — one written conceptual + one experimental simulation. Topics extend well beyond NCERT: detailed cell biology, advanced genetics (population genetics, evolutionary biology), biochemistry pathways (citric acid cycle to enzyme kinetics depth), ethology, biostatistics. We run weekly INBO-format mocks (4 hours, exam conditions) starting in early February, plus dedicated cell biology + biochemistry tracks. Past 3 cohorts: 8 INBO qualifiers from our programme.',
   },
   {
-    question: 'What\'s the difference between USABO and Indian INBO preparation?',
+    question: "What's the difference between USABO and Indian INBO preparation?",
     answer:
       'Different rule-books. USABO uses Campbell Biology as the authoritative reference and emphasises problem-solving on extended diagrams + American AP-Bio framing. INBO uses Indian textbooks (NCERT base + recommended supplements like Raven, Campbell, Lehninger) and emphasises conceptual mechanism + experimental design. Our US students follow Campbell-led syllabus calibrated to USABO Open and Semifinal patterns; our Indian students follow the INBO-specific curriculum. Both share a common cell + molecular biology core.',
   },
@@ -171,9 +171,9 @@ const FAQS = [
       'Absolutely — IB Biology HL students are often the best-prepared for international olympiads because the IB syllabus already pushes beyond standard high-school biology into command-term reasoning. IB HL students can target BBO (UK, single-stage), CBO (Canada), USABO (if US-domicile), or SBO (Singapore). IB Internal Assessment + Extended Essay rigor maps cleanly onto olympiad-style scientific reasoning. We run a dedicated IB Biology HL → Olympiad parallel track.',
   },
   {
-    question: 'What\'s Cerebrum\'s actual track record in biology olympiads?',
+    question: "What's Cerebrum's actual track record in biology olympiads?",
     answer:
-      'Across 12 years (2014-2025): multiple INBO Stage 2 qualifiers per cohort, OCSC selections, USABO Semifinal qualifiers, BBO Gold medals. Dr. Shekhar C Singh personally coaches the OCSC tier through our Pinnacle programme. While we don\'t publicly publish cohort-by-cohort olympiad data (some students prefer privacy), we\'re happy to share specific qualifier names + years on a WhatsApp request if you want references.',
+      "Across 12 years (2014-2025): multiple INBO Stage 2 qualifiers per cohort, OCSC selections, USABO Semifinal qualifiers, BBO Gold medals. Dr. Shekhar C Singh personally coaches the OCSC tier through our Pinnacle programme. While we don't publicly publish cohort-by-cohort olympiad data (some students prefer privacy), we're happy to share specific qualifier names + years on a WhatsApp request if you want references.",
   },
   {
     question: 'When should a student start biology olympiad prep?',
@@ -193,7 +193,7 @@ const FAQS = [
   {
     question: 'How do I start?',
     answer:
-      'Free 60-minute trial class with Dr. Shekhar. Bring your child\'s last biology exam (school internal or NEET PT) and one olympiad past-paper question they\'ve attempted. We\'ll work through it together and give a clear assessment of where they are and what the prep plan looks like.',
+      "Free 60-minute trial class with Dr. Shekhar. Bring your child's last biology exam (school internal or NEET PT) and one olympiad past-paper question they've attempted. We'll work through it together and give a clear assessment of where they are and what the prep plan looks like.",
   },
 ]
 
@@ -210,7 +210,7 @@ export default function BestBiologyOlympiadCoachingIndiaPage() {
     '@id': `${PAGE_URL}#course`,
     name: 'Biology Olympiad Coaching — India + International Tracks',
     description:
-      'India\'s biology-specialist olympiad coaching covering NSEB → INBO → OCSC → IBO (India funnel), USABO (USA), BBO (UK), CBO (Canada), SBO (Singapore). AIIMS-trained faculty, micro-batches, Campbell-based curriculum with research-paper depth.',
+      "India's biology-specialist olympiad coaching covering NSEB → INBO → OCSC → IBO (India funnel), USABO (USA), BBO (UK), CBO (Canada), SBO (Singapore). AIIMS-trained faculty, micro-batches, Campbell-based curriculum with research-paper depth.",
     url: PAGE_URL,
     inLanguage: 'en-IN',
     educationalLevel: 'Biology Olympiad aspirant (Class 9-12)',
@@ -296,17 +296,14 @@ export default function BestBiologyOlympiadCoachingIndiaPage() {
           </span>
           <h1 className="mt-4 text-3xl md:text-5xl font-bold leading-tight text-slate-900 max-w-4xl">
             Best biology olympiad coaching in India —{' '}
-            <span className="text-indigo-700">
-              NSEB · INBO · OCSC · IBO + international tracks
-            </span>
+            <span className="text-indigo-700">NSEB · INBO · OCSC · IBO + international tracks</span>
           </h1>
           <p className="mt-5 text-lg text-slate-600 leading-relaxed max-w-4xl">
-            India\'s biology-only specialist programme, led by Dr. Shekhar C Singh
-            (AIIMS New Delhi alumnus). The same depth that produces 360/360
-            NEET biology scores is what wins olympiads &mdash; Campbell-level
-            cell biology, biochemistry mechanism fluency, primary research-paper
-            reading, and live INBO/USABO/IBO-format mocks. 12 years, multiple
-            INBO Stage 2 + USABO Semifinal + BBO Gold qualifiers.
+            India\'s biology-only specialist programme, led by Dr. Shekhar C Singh (AIIMS New Delhi
+            alumnus). The same depth that produces 360/360 NEET biology scores is what wins
+            olympiads &mdash; Campbell-level cell biology, biochemistry mechanism fluency, primary
+            research-paper reading, and live INBO/USABO/IBO-format mocks. 12 years, multiple INBO
+            Stage 2 + USABO Semifinal + BBO Gold qualifiers.
           </p>
 
           <div className="mt-7 flex flex-col sm:flex-row gap-3">
@@ -336,27 +333,19 @@ export default function BestBiologyOlympiadCoachingIndiaPage() {
               The 5 biology olympiad pathways Cerebrum coaches
             </h2>
             <p className="mt-3 text-slate-600 max-w-3xl">
-              Different countries, different rule-books — we coach all five.
-              Pick the one that applies to your child\'s domicile / academic
-              track.
+              Different countries, different rule-books — we coach all five. Pick the one that
+              applies to your child\'s domicile / academic track.
             </p>
 
             <div className="mt-10 grid gap-5 md:grid-cols-2">
               {OLYMPIAD_PATHWAYS.map((p) => (
-                <div
-                  key={p.region}
-                  className="rounded-2xl bg-white p-6 ring-1 ring-slate-200"
-                >
+                <div key={p.region} className="rounded-2xl bg-white p-6 ring-1 ring-slate-200">
                   <div className="flex items-center gap-2">
                     <Trophy className="h-5 w-5 text-amber-500" />
                     <h3 className="text-lg font-bold text-slate-900">{p.region}</h3>
                   </div>
-                  <p className="mt-2 text-sm font-semibold text-indigo-700">
-                    {p.funnel}
-                  </p>
-                  <p className="mt-3 text-sm text-slate-700 leading-relaxed">
-                    {p.description}
-                  </p>
+                  <p className="mt-2 text-sm font-semibold text-indigo-700">{p.funnel}</p>
+                  <p className="mt-3 text-sm text-slate-700 leading-relaxed">{p.description}</p>
                   <p className="mt-3 text-xs text-slate-500">
                     <span className="font-semibold text-slate-700">Funnel scale:</span>{' '}
                     {p.cohortSize}
@@ -386,24 +375,20 @@ export default function BestBiologyOlympiadCoachingIndiaPage() {
             Why specialist biology coaching wins olympiads
           </h2>
           <p className="mt-4 text-base text-slate-700 leading-relaxed">
-            Mass-coaching NEET institutes &mdash; Allen, Aakash, Resonance,
-            Sri Chaitanya &mdash; teach biology to the NCERT level and stop
-            there. That\'s enough for NEET. It is not enough for INBO,
-            USABO, or any IBO-funnel olympiad. Olympiads test what NCERT
-            doesn\'t cover: detailed cell biology mechanisms, primary
-            research paper interpretation, biochemistry pathway prediction,
-            comparative evolutionary reasoning, and experimental design
-            critique. The reference text is Campbell Biology, not NCERT.
-            The cognitive demand is conceptual mechanism, not memorisation.
+            Mass-coaching NEET institutes &mdash; Allen, Aakash, Resonance, Sri Chaitanya &mdash;
+            teach biology to the NCERT level and stop there. That\'s enough for NEET. It is not
+            enough for INBO, USABO, or any IBO-funnel olympiad. Olympiads test what NCERT doesn\'t
+            cover: detailed cell biology mechanisms, primary research paper interpretation,
+            biochemistry pathway prediction, comparative evolutionary reasoning, and experimental
+            design critique. The reference text is Campbell Biology, not NCERT. The cognitive demand
+            is conceptual mechanism, not memorisation.
           </p>
           <p className="mt-4 text-base text-slate-700 leading-relaxed">
-            This is exactly what Cerebrum is built for. We are India&rsquo;s
-            biology-only specialist — every faculty hour is biology depth,
-            not split across PCM. Dr. Shekhar C Singh (AIIMS New Delhi)
-            personally designs the olympiad curriculum and coaches the
-            Pinnacle ZA tier where INBO Stage 2 and IBO simulation runs.
-            Senior faculty trained by him handle the foundation + competitive
-            tiers.
+            This is exactly what Cerebrum is built for. We are India&rsquo;s biology-only specialist
+            — every faculty hour is biology depth, not split across PCM. Dr. Shekhar C Singh (AIIMS
+            New Delhi) personally designs the olympiad curriculum and coaches the Pinnacle ZA tier
+            where INBO Stage 2 and IBO simulation runs. Senior faculty trained by him handle the
+            foundation + competitive tiers.
           </p>
 
           <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -413,10 +398,9 @@ export default function BestBiologyOlympiadCoachingIndiaPage() {
                 Campbell-led syllabus (not NCERT)
               </h3>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                Campbell Biology 11th+ is the global olympiad reference. Our
-                weekly chapters follow Campbell\'s 7-unit structure with
-                cross-references to Raven, Lehninger, and Alberts where
-                depth requires.
+                Campbell Biology 11th+ is the global olympiad reference. Our weekly chapters follow
+                Campbell\'s 7-unit structure with cross-references to Raven, Lehninger, and Alberts
+                where depth requires.
               </p>
             </div>
             <div className="rounded-xl border border-slate-200 p-5">
@@ -425,9 +409,8 @@ export default function BestBiologyOlympiadCoachingIndiaPage() {
                 Primary research paper drills
               </h3>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                Weekly figure-interpretation exercises using actual Nature /
-                Science / Cell figures. Trains the exact skill INBO Stage 2
-                + USABO Semifinal test.
+                Weekly figure-interpretation exercises using actual Nature / Science / Cell figures.
+                Trains the exact skill INBO Stage 2 + USABO Semifinal test.
               </p>
             </div>
             <div className="rounded-xl border border-slate-200 p-5">
@@ -436,9 +419,8 @@ export default function BestBiologyOlympiadCoachingIndiaPage() {
                 Lab technique conceptualisation
               </h3>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                INBO Stage 2 + IBO have practical components — we teach
-                experimental design principles + reagent-purpose reasoning
-                even without wet-lab access.
+                INBO Stage 2 + IBO have practical components — we teach experimental design
+                principles + reagent-purpose reasoning even without wet-lab access.
               </p>
             </div>
             <div className="rounded-xl border border-slate-200 p-5">
@@ -447,9 +429,8 @@ export default function BestBiologyOlympiadCoachingIndiaPage() {
                 Weekly olympiad-format mocks
               </h3>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                4-hour timed mocks in INBO / USABO Open / Semifinal format,
-                starting 4 months before the actual exam. Calibrates pacing
-                + endurance.
+                4-hour timed mocks in INBO / USABO Open / Semifinal format, starting 4 months before
+                the actual exam. Calibrates pacing + endurance.
               </p>
             </div>
             <div className="rounded-xl border border-slate-200 p-5">
@@ -458,9 +439,8 @@ export default function BestBiologyOlympiadCoachingIndiaPage() {
                 Micro-batches with named mentors
               </h3>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                Competitive tier batches: 8-12 students. Pinnacle ZA: 6-8
-                students with direct Dr. Shekhar weekly review. The
-                per-question discussion depth lecture-format coaching
+                Competitive tier batches: 8-12 students. Pinnacle ZA: 6-8 students with direct Dr.
+                Shekhar weekly review. The per-question discussion depth lecture-format coaching
                 cannot reach.
               </p>
             </div>
@@ -470,9 +450,8 @@ export default function BestBiologyOlympiadCoachingIndiaPage() {
                 NEET + Olympiad parallel track
               </h3>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                For Class 11-12 students, olympiad depth directly deepens
-                NEET biology recall. Students typically score 340+/360 on
-                NEET AND have a real INBO/USABO shot.
+                For Class 11-12 students, olympiad depth directly deepens NEET biology recall.
+                Students typically score 340+/360 on NEET AND have a real INBO/USABO shot.
               </p>
             </div>
           </div>
@@ -485,8 +464,8 @@ export default function BestBiologyOlympiadCoachingIndiaPage() {
               Pathway-specific coaching pages
             </h2>
             <p className="mt-3 text-slate-600">
-              Already know which olympiad you\'re targeting? Jump to the
-              detailed coaching page for that pathway:
+              Already know which olympiad you\'re targeting? Jump to the detailed coaching page for
+              that pathway:
             </p>
             <div className="mt-7 grid gap-3 sm:grid-cols-2">
               {[
@@ -531,9 +510,7 @@ export default function BestBiologyOlympiadCoachingIndiaPage() {
                     <span>{f.question}</span>
                     <ChevronRight className="h-5 w-5 shrink-0 text-slate-400 transition-transform group-open:rotate-90" />
                   </summary>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-700">
-                    {f.answer}
-                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-700">{f.answer}</p>
                 </details>
               ))}
             </div>
@@ -548,9 +525,9 @@ export default function BestBiologyOlympiadCoachingIndiaPage() {
               Ready to start biology olympiad prep?
             </h2>
             <p className="mt-3 text-slate-300 max-w-2xl mx-auto">
-              Free 60-minute trial class with Dr. Shekhar. Send a WhatsApp
-              with your child\'s class + target olympiad (NSEB, USABO, BBO,
-              CBO, SBO, IBO) and we&rsquo;ll schedule it in your time zone.
+              Free 60-minute trial class with Dr. Shekhar. Send a WhatsApp with your child\'s class
+              + target olympiad (NSEB, USABO, BBO, CBO, SBO, IBO) and we&rsquo;ll schedule it in
+              your time zone.
             </p>
             <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
               <a

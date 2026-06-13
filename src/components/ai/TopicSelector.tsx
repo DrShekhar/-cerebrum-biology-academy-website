@@ -204,67 +204,62 @@ const TopicSelector: React.FC<TopicSelectorProps> = ({
                   </button>
                 </div>
               </div>
-{isExpanded && (
-                  <div
-                    className="border-t border-gray-200 animate-fadeInUp"
-                  >
-                    <div className="p-4 space-y-3 bg-gray-50">
-                      {unit.chapters.map((chapter) => {
-                        const isChapterSelected = selectedChapters.has(chapter.id)
+              {isExpanded && (
+                <div className="border-t border-gray-200 animate-fadeInUp">
+                  <div className="p-4 space-y-3 bg-gray-50">
+                    {unit.chapters.map((chapter) => {
+                      const isChapterSelected = selectedChapters.has(chapter.id)
 
-                        return (
-                          <div
-                            key={chapter.id}
-                            onClick={() => toggleChapter(unit.id, chapter.id)}
-                            className={cn(
-                              'p-3 rounded-lg border-2 cursor-pointer transition-all',
-                              isChapterSelected
-                                ? 'bg-white border-purple-400'
-                                : 'bg-white border-gray-200 hover:border-purple-300'
-                            )}
-                          >
-                            <div className="flex items-start gap-3">
-                              <div
-                                className={cn(
-                                  'mt-0.5 w-4 h-4 rounded border-2 flex items-center justify-center transition-all flex-shrink-0',
-                                  isChapterSelected
-                                    ? 'bg-purple-600 border-purple-600'
-                                    : 'border-gray-300'
-                                )}
-                              >
-                                {isChapterSelected && <Check className="w-3 h-3 text-white" />}
+                      return (
+                        <div
+                          key={chapter.id}
+                          onClick={() => toggleChapter(unit.id, chapter.id)}
+                          className={cn(
+                            'p-3 rounded-lg border-2 cursor-pointer transition-all',
+                            isChapterSelected
+                              ? 'bg-white border-purple-400'
+                              : 'bg-white border-gray-200 hover:border-purple-300'
+                          )}
+                        >
+                          <div className="flex items-start gap-3">
+                            <div
+                              className={cn(
+                                'mt-0.5 w-4 h-4 rounded border-2 flex items-center justify-center transition-all flex-shrink-0',
+                                isChapterSelected
+                                  ? 'bg-purple-600 border-purple-600'
+                                  : 'border-gray-300'
+                              )}
+                            >
+                              {isChapterSelected && <Check className="w-3 h-3 text-white" />}
+                            </div>
+
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center gap-2 flex-wrap mb-2">
+                                <h5 className="font-semibold text-gray-900 text-sm">
+                                  {chapter.name}
+                                </h5>
+                                <DifficultyBadge difficulty={chapter.difficulty} showIcon={false} />
                               </div>
-
-                              <div className="flex-1 min-w-0">
-                                <div className="flex items-center gap-2 flex-wrap mb-2">
-                                  <h5 className="font-semibold text-gray-900 text-sm">
-                                    {chapter.name}
-                                  </h5>
-                                  <DifficultyBadge
-                                    difficulty={chapter.difficulty}
-                                    showIcon={false}
-                                  />
-                                </div>
-                                <div className="flex items-center gap-2 text-xs text-gray-600 mb-2">
-                                  <span className="font-medium">{chapter.ncertPages}</span>
-                                  <span>•</span>
-                                  <span className="flex items-center gap-1">
-                                    <TrendingUp className="w-3 h-3" />
-                                    Avg {chapter.pyqFrequency} Q/year
-                                  </span>
-                                </div>
-                                <div className="text-xs text-gray-500">
-                                  {chapter.topics.length} topics
-                                </div>
+                              <div className="flex items-center gap-2 text-xs text-gray-600 mb-2">
+                                <span className="font-medium">{chapter.ncertPages}</span>
+                                <span>•</span>
+                                <span className="flex items-center gap-1">
+                                  <TrendingUp className="w-3 h-3" />
+                                  Avg {chapter.pyqFrequency} Q/year
+                                </span>
+                              </div>
+                              <div className="text-xs text-gray-500">
+                                {chapter.topics.length} topics
                               </div>
                             </div>
                           </div>
-                        )
-                      })}
-                    </div>
+                        </div>
+                      )
+                    })}
                   </div>
-                )}
-</div>
+                </div>
+              )}
+            </div>
           )
         })}
       </div>

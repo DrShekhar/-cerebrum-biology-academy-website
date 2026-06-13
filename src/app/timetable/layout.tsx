@@ -44,8 +44,18 @@ export default function TimetableLayout({ children }: { children: React.ReactNod
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'Timetable', item: 'https://cerebrumbiologyacademy.com/timetable' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Timetable',
+        item: 'https://cerebrumbiologyacademy.com/timetable',
+      },
     ],
   }
 
@@ -54,14 +64,16 @@ export default function TimetableLayout({ children }: { children: React.ReactNod
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Upcoming NEET Biology Batches - Cerebrum Biology Academy',
-    description: 'Scheduled batch starts for NEET Biology coaching at Cerebrum Biology Academy centers',
+    description:
+      'Scheduled batch starts for NEET Biology coaching at Cerebrum Biology Academy centers',
     numberOfItems: 4,
     itemListElement: [
       {
         '@type': 'EducationEvent',
         position: 1,
         name: 'NEET Biology Class 12 Intensive Batch - New Session 2026',
-        description: 'Intensive NEET Biology preparation for Class 12 students with AIIMS faculty. Covers complete syllabus with MCQ practice and test series.',
+        description:
+          'Intensive NEET Biology preparation for Class 12 students with AIIMS faculty. Covers complete syllabus with MCQ practice and test series.',
         startDate: '2026-03-01',
         endDate: '2027-04-30',
         eventStatus: 'https://schema.org/EventScheduled',
@@ -70,7 +82,13 @@ export default function TimetableLayout({ children }: { children: React.ReactNod
           {
             '@type': 'Place',
             name: 'Cerebrum Biology Academy - South Extension',
-            address: { '@type': 'PostalAddress', streetAddress: 'D 35, South Extension Part 2', addressLocality: 'New Delhi', postalCode: '110049', addressCountry: 'IN' },
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'D 35, South Extension Part 2',
+              addressLocality: 'New Delhi',
+              postalCode: '110049',
+              addressCountry: 'IN',
+            },
           },
           {
             '@type': 'VirtualLocation',
@@ -100,7 +118,8 @@ export default function TimetableLayout({ children }: { children: React.ReactNod
         '@type': 'EducationEvent',
         position: 2,
         name: 'NEET Biology Class 11 Foundation Batch - New Session 2026',
-        description: 'Early NEET Biology preparation for Class 11 students. Build strong fundamentals with concept clarity and MCQ practice.',
+        description:
+          'Early NEET Biology preparation for Class 11 students. Build strong fundamentals with concept clarity and MCQ practice.',
         startDate: '2026-04-01',
         endDate: '2027-03-31',
         eventStatus: 'https://schema.org/EventScheduled',
@@ -109,7 +128,12 @@ export default function TimetableLayout({ children }: { children: React.ReactNod
           {
             '@type': 'Place',
             name: 'Cerebrum Biology Academy - All Centers',
-            address: { '@type': 'PostalAddress', addressLocality: 'New Delhi', addressRegion: 'Delhi NCR', addressCountry: 'IN' },
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'New Delhi',
+              addressRegion: 'Delhi NCR',
+              addressCountry: 'IN',
+            },
           },
           {
             '@type': 'VirtualLocation',
@@ -134,7 +158,8 @@ export default function TimetableLayout({ children }: { children: React.ReactNod
         '@type': 'EducationEvent',
         position: 3,
         name: 'NEET 2027 Dropper Batch - Intensive Program',
-        description: 'Dedicated intensive program for NEET repeaters. Daily classes, weekly tests, and personalized mentoring to improve scores by 100-150 marks.',
+        description:
+          'Dedicated intensive program for NEET repeaters. Daily classes, weekly tests, and personalized mentoring to improve scores by 100-150 marks.',
         startDate: '2026-07-01',
         endDate: '2027-04-30',
         eventStatus: 'https://schema.org/EventScheduled',
@@ -143,7 +168,12 @@ export default function TimetableLayout({ children }: { children: React.ReactNod
           {
             '@type': 'Place',
             name: 'Cerebrum Biology Academy - All Centers',
-            address: { '@type': 'PostalAddress', addressLocality: 'New Delhi', addressRegion: 'Delhi NCR', addressCountry: 'IN' },
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'New Delhi',
+              addressRegion: 'Delhi NCR',
+              addressCountry: 'IN',
+            },
           },
           {
             '@type': 'VirtualLocation',
@@ -168,7 +198,8 @@ export default function TimetableLayout({ children }: { children: React.ReactNod
         '@type': 'EducationEvent',
         position: 4,
         name: 'Free NEET Biology Demo Class',
-        description: 'Experience Cerebrum\'s teaching methodology with a free demo class. AIIMS faculty teaches live Biology concepts with interactive Q&A session.',
+        description:
+          "Experience Cerebrum's teaching methodology with a free demo class. AIIMS faculty teaches live Biology concepts with interactive Q&A session.",
         startDate: '2026-03-15',
         eventStatus: 'https://schema.org/EventScheduled',
         eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
@@ -176,7 +207,13 @@ export default function TimetableLayout({ children }: { children: React.ReactNod
           {
             '@type': 'Place',
             name: 'Cerebrum Biology Academy - South Extension',
-            address: { '@type': 'PostalAddress', streetAddress: 'D 35, South Extension Part 2', addressLocality: 'New Delhi', postalCode: '110049', addressCountry: 'IN' },
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'D 35, South Extension Part 2',
+              addressLocality: 'New Delhi',
+              postalCode: '110049',
+              addressCountry: 'IN',
+            },
           },
           {
             '@type': 'VirtualLocation',
@@ -202,8 +239,14 @@ export default function TimetableLayout({ children }: { children: React.ReactNod
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(upcomingBatchEvents) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(upcomingBatchEvents) }}
+      />
       {children}
     </>
   )

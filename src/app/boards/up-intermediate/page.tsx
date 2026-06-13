@@ -6,7 +6,8 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'UP Board Intermediate Biology Coaching | NEET Dual Prep',
-  description: 'Expert UP Board Intermediate Biology coaching with NEET integration. Hindi medium support available. Master UP board curriculum aligned with NCERT and NEET requirements.',
+  description:
+    'Expert UP Board Intermediate Biology coaching with NEET integration. Hindi medium support available. Master UP board curriculum aligned with NCERT and NEET requirements.',
   keywords: [
     'UP board intermediate biology',
     'UP board biology coaching',

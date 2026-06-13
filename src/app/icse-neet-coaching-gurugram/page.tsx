@@ -34,7 +34,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'ICSE Board NEET Coaching in Gurugram | Biology for ICSE Students',
-    description: 'Specialized NEET Biology coaching for ICSE board students in Gurugram (Gurgaon). Bridge ICSE to NCERT syllabus, conceptual depth advantage. Perfect for Pathways, Lancers students.',
+    description:
+      'Specialized NEET Biology coaching for ICSE board students in Gurugram (Gurgaon). Bridge ICSE to NCERT syllabus, conceptual depth advantage. Perfect for Pathways, Lancers students.',
   },
 }
 
@@ -142,7 +143,11 @@ export default function ICSENEETCoachingGurugramPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="icse-neet-coaching-gurugram" />
       <script

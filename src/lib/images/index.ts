@@ -24,11 +24,7 @@ export {
 export type { DalleImage, DalleGenerationOptions } from './dalleService'
 
 // Blog image service - explicit named exports
-export {
-  getBlogFeaturedImage,
-  getBlogImages,
-  getBlogImagesForPosts,
-} from './blogImageService'
+export { getBlogFeaturedImage, getBlogImages, getBlogImagesForPosts } from './blogImageService'
 export type { ImageSource, BlogImage, BlogImageRequest } from './blogImageService'
 
 // Image utilities - explicit named exports

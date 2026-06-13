@@ -105,9 +105,7 @@ export default function NeetOnlineCoursePage() {
       <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
-          <div
-            className="mx-auto max-w-4xl text-center animate-fadeInUp"
-          >
+          <div className="mx-auto max-w-4xl text-center animate-fadeInUp">
             <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <BookOpen className="mr-1 inline h-4 w-4" />
               Complete NEET Preparation
@@ -161,9 +159,7 @@ export default function NeetOnlineCoursePage() {
       {/* Course Modules */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Course Coverage</h2>
             <p className="text-lg text-gray-600">
               Complete NEET syllabus in one comprehensive course
@@ -173,10 +169,7 @@ export default function NeetOnlineCoursePage() {
           <div className="mx-auto max-w-3xl">
             <div className="grid gap-6 md:grid-cols-3">
               {courseModules.map((module, index) => (
-                <div
-                  key={index}
-                  className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-                >
+                <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                   <div className={`mb-4 h-2 w-full rounded-full ${module.color}`} />
                   <h3 className="mb-2 text-2xl font-bold text-gray-900">{module.name}</h3>
                   <p className="text-gray-600">{module.chapters} Chapters</p>
@@ -191,18 +184,13 @@ export default function NeetOnlineCoursePage() {
       {/* Course Types */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Choose Your Course</h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
             {courseTypes.map((course, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <h3 className="mb-2 text-2xl font-bold text-purple-600">{course.name}</h3>
                 <div className="mb-4 text-gray-600">
                   <p>
@@ -231,9 +219,7 @@ export default function NeetOnlineCoursePage() {
       {/* What's Included */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">What&apos;s Included</h2>
           </div>
 
@@ -257,18 +243,13 @@ export default function NeetOnlineCoursePage() {
       {/* FAQs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
           </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>

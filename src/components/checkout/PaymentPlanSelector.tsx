@@ -56,7 +56,10 @@ export const paymentPlans: PaymentPlan[] = [
     getSchedule: (total) => [
       { label: 'Day 1 — On admission (50%)', amount: Math.round(total * 0.5) },
       { label: 'Day 31 — After 30 days (25%)', amount: Math.round(total * 0.25) },
-      { label: 'Day 61 — After 60 days (25%)', amount: total - Math.round(total * 0.5) - Math.round(total * 0.25) },
+      {
+        label: 'Day 61 — After 60 days (25%)',
+        amount: total - Math.round(total * 0.5) - Math.round(total * 0.25),
+      },
     ],
   },
 ]

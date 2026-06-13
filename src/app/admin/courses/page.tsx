@@ -64,10 +64,13 @@ export default function CoursesPage() {
         const mapped: Course[] = data.data.courses.map((c: any) => ({
           id: c.id,
           name: c.name,
-          type: c.type?.toLowerCase().includes('11') ? 'class-11'
-            : c.type?.toLowerCase().includes('12') ? 'class-12'
-            : c.type?.toLowerCase().includes('dropper') ? 'dropper'
-            : 'foundation',
+          type: c.type?.toLowerCase().includes('11')
+            ? 'class-11'
+            : c.type?.toLowerCase().includes('12')
+              ? 'class-12'
+              : c.type?.toLowerCase().includes('dropper')
+                ? 'dropper'
+                : 'foundation',
           duration: `${c.duration} months`,
           totalLessons: c._count?.chapters || 0,
           enrolledStudents: c._count?.enrollments || 0,

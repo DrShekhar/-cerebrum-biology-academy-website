@@ -321,37 +321,25 @@ export default function JBOCoachingPage() {
         <section className="relative bg-gradient-to-br from-slate-900 to-slate-800 py-20">
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
           <div className="container mx-auto px-4 relative z-10">
-            <div
-              className="max-w-4xl mx-auto text-center animate-fadeInUp"
-             
-             
-            >
-              <div
-                className="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/20 rounded-full px-4 py-2 mb-6 animate-fadeInUp"
-              >
+            <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
+              <div className="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/20 rounded-full px-4 py-2 mb-6 animate-fadeInUp">
                 <Globe className="w-4 h-4 text-yellow-400" />
                 <span className="text-yellow-400 text-sm font-medium">
                   Japan&apos;s Biology Olympiad
                 </span>
               </div>
 
-              <h1
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fadeInUp"
-              >
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fadeInUp">
                 JBO Coaching Online
                 <span className="block text-yellow-400 mt-2">Japan Biology Olympiad</span>
               </h1>
 
-              <p
-                className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fadeInUp"
-              >
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fadeInUp">
                 Expert coaching to help you excel in the Japan Biology Olympiad and qualify for the
                 International Biology Olympiad (IBO). Join Japan&apos;s top biology students!
               </p>
 
-              <div
-                className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp"
-              >
+              <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp">
                 <button
                   onClick={() => handleWhatsAppClick('hero-cta')}
                   className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg"
@@ -368,9 +356,7 @@ export default function JBOCoachingPage() {
                 </Link>
               </div>
 
-              <div
-                className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 animate-fadeInUp"
-              >
+              <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 animate-fadeInUp">
                 {[
                   { value: '150+', label: 'Japanese Students' },
                   { value: '20+', label: 'JBO Finalists' },
@@ -405,10 +391,7 @@ export default function JBOCoachingPage() {
             <div className="max-w-5xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 {pathwayStages.map((stage, index) => (
-                  <div
-                    key={stage.stage}
-                    className="relative animate-fadeInUp"
-                  >
+                  <div key={stage.stage} className="relative animate-fadeInUp">
                     <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 h-full">
                       <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mb-4">
                         <stage.icon className="w-6 h-6 text-slate-900" />
@@ -665,15 +648,22 @@ export default function JBOCoachingPage() {
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Practice JBO MCQs Online</h2>
             <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-              Prepare for the Japan Biology Olympiad with our free MCQ practice tool — 5,900+ Campbell
-              Biology level questions with instant feedback and detailed explanations.
+              Prepare for the Japan Biology Olympiad with our free MCQ practice tool — 5,900+
+              Campbell Biology level questions with instant feedback and detailed explanations.
             </p>
             <Link
               href="/neet-biology-mcq?source=olympiad"
               className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl text-lg"
             >
               Start JBO Practice
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
             </Link>
           </div>
         </section>

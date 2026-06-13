@@ -55,10 +55,7 @@ export const PremiumSection: React.FC<PremiumSectionProps> = ({
 
   if (animation) {
     return (
-      <section
-        className={sectionClasses}
-        {...props}
-      >
+      <section className={sectionClasses} {...props}>
         <div className={containerClasses}>{children}</div>
       </section>
     )
@@ -121,9 +118,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
   )
 
   return (
-    <div
-      className={headerClasses}
-    >
+    <div className={headerClasses}>
       {subtitle && (
         <div className="text-blue-600 font-semibold text-sm uppercase tracking-wider mb-4">
           {subtitle}
@@ -168,13 +163,7 @@ export const AcademicGrid: React.FC<AcademicGridProps> = ({
     className
   )
 
-  return (
-    <div
-      className={gridClasses}
-    >
-      {children}
-    </div>
-  )
+  return <div className={gridClasses}>{children}</div>
 }
 
 // Academic card component with premium styling
@@ -204,11 +193,5 @@ export const AcademicCard: React.FC<AcademicCardProps> = ({
     className
   )
 
-  return (
-    <div
-      className={cardClasses}
-    >
-      {children}
-    </div>
-  )
+  return <div className={cardClasses}>{children}</div>
 }

@@ -57,9 +57,7 @@ export function StemCrossSection({
     const vbSize = 25
 
     return (
-      <g
-        className="dicot-stem"
-      >
+      <g className="dicot-stem">
         {/* Title */}
         <text
           x={cx}
@@ -151,9 +149,7 @@ export function StemCrossSection({
           const vbY = cy + Math.sin(angle) * vbRadius
 
           return (
-            <g
-              key={`vb-dicot-${i}`}
-            >
+            <g key={`vb-dicot-${i}`}>
               {/* Bundle sheath / Pericycle patch */}
               <ellipse
                 cx={vbX}
@@ -295,9 +291,7 @@ export function StemCrossSection({
     ]
 
     return (
-      <g
-        className="monocot-stem"
-      >
+      <g className="monocot-stem">
         {/* Title */}
         <text
           x={cx}
@@ -361,9 +355,7 @@ export function StemCrossSection({
           const vbY = cy + pos.y * r * 0.75
 
           return (
-            <g
-              key={`vb-monocot-${i}`}
-            >
+            <g key={`vb-monocot-${i}`}>
               {/* Bundle sheath */}
               <circle
                 cx={vbX}
@@ -498,9 +490,7 @@ export function StemCrossSection({
 
       {/* Info Panel */}
       {selectedPart && (
-        <div
-          className="mt-4 p-4 bg-green-50 rounded-lg border border-green-200 animate-fadeInUp"
-        >
+        <div className="mt-4 p-4 bg-green-50 rounded-lg border border-green-200 animate-fadeInUp">
           <h4 className="font-bold text-green-800 mb-1 capitalize">
             {selectedPart.part.replace(/([A-Z])/g, ' $1').trim()} ({selectedPart.type})
           </h4>

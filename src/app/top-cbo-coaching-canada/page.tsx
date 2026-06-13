@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Top 4 CBO Coaching in Canada 2026 | Canadian Biology Olympiad Honest Ranking',
-    description: 'Honest 2026 ranking of CBO (Canadian Biology Olympiad) coaching in Canada. Cerebrum #1 with documented CBO Stage qualifiers and direct IBO national-team funnel coaching.',
+    description:
+      'Honest 2026 ranking of CBO (Canadian Biology Olympiad) coaching in Canada. Cerebrum #1 with documented CBO Stage qualifiers and direct IBO national-team funnel coaching.',
   },
 }
 

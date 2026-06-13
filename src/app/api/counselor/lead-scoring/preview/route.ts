@@ -43,7 +43,10 @@ export async function GET(req: NextRequest) {
       breakdown: Array.isArray(lead.scoreBreakdown)
         ? lead.scoreBreakdown
         : typeof lead.scoreBreakdown === 'object' && lead.scoreBreakdown
-          ? Object.entries(lead.scoreBreakdown).map(([rule, points]) => ({ rule, points: Number(points) }))
+          ? Object.entries(lead.scoreBreakdown).map(([rule, points]) => ({
+              rule,
+              points: Number(points),
+            }))
           : [],
     }))
 

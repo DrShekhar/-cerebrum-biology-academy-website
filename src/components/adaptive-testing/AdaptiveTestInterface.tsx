@@ -574,138 +574,135 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Main Question Area */}
         <div className="lg:col-span-2">
-{currentItem && (
-              <div
-                key={currentItem.id}
-                className="bg-white rounded-xl border p-6 animate-fadeInUp"
-              >
-                {/* Question Header */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-3">
-                    <div
-                      className={`px-3 py-1 rounded-full text-sm font-medium ${
-                        currentItem.difficulty > 0.5
-                          ? 'bg-red-100 text-red-700'
-                          : currentItem.difficulty > 0
-                            ? 'bg-yellow-100 text-yellow-700'
-                            : 'bg-green-100 text-green-700'
-                      }`}
-                    >
-                      {currentItem.difficulty > 0.5
-                        ? 'Hard'
+          {currentItem && (
+            <div key={currentItem.id} className="bg-white rounded-xl border p-6 animate-fadeInUp">
+              {/* Question Header */}
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <div
+                    className={`px-3 py-1 rounded-full text-sm font-medium ${
+                      currentItem.difficulty > 0.5
+                        ? 'bg-red-100 text-red-700'
                         : currentItem.difficulty > 0
-                          ? 'Medium'
-                          : 'Easy'}
-                    </div>
-                    <div className="text-sm text-gray-600">
-                      {currentItem.topic} • {currentItem.subtopic}
-                    </div>
+                          ? 'bg-yellow-100 text-yellow-700'
+                          : 'bg-green-100 text-green-700'
+                    }`}
+                  >
+                    {currentItem.difficulty > 0.5
+                      ? 'Hard'
+                      : currentItem.difficulty > 0
+                        ? 'Medium'
+                        : 'Easy'}
                   </div>
-                  <div className="text-sm text-gray-600">~{currentItem.estimatedTime} min</div>
-                </div>
-
-                {/* Question */}
-                <div className="mb-6">
-                  <h2 className="text-lg font-medium mb-4">{currentItem.question}</h2>
-
-                  {/* MCQ Options */}
-                  {currentItem.type === 'mcq' && currentItem.options && (
-                    <div className="space-y-3">
-                      {currentItem.options.map((option, index) => (
-                        <label
-                          key={index}
-                          className={`flex items-center gap-3 p-4 rounded-lg border-2 cursor-pointer transition-all ${
-                            selectedAnswer === option
-                              ? 'border-blue-600 bg-blue-50'
-                              : 'border-gray-200 hover:border-gray-300'
-                          }`}
-                        >
-                          <input
-                            type="radio"
-                            name="answer"
-                            value={option}
-                            checked={selectedAnswer === option}
-                            onChange={(e) => setSelectedAnswer(e.target.value)}
-                            className="w-4 h-4 text-blue-600"
-                          />
-                          <span className="font-medium">{String.fromCharCode(65 + index)}.</span>
-                          <span>{option}</span>
-                        </label>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                {/* Confidence Slider */}
-                <div className="mb-6">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    How confident are you in your answer?
-                  </label>
-                  <div className="flex items-center gap-4">
-                    <span className="text-sm text-gray-600">Not sure</span>
-                    <input
-                      type="range"
-                      min="1"
-                      max="5"
-                      value={confidence}
-                      onChange={(e) => setConfidence(parseInt(e.target.value))}
-                      className="flex-1"
-                    />
-                    <span className="text-sm text-gray-600">Very confident</span>
-                  </div>
-                  <div className="text-center mt-1">
-                    <span className="text-sm font-medium">
-                      {['Very low', 'Low', 'Medium', 'High', 'Very high'][confidence - 1]}
-                    </span>
+                  <div className="text-sm text-gray-600">
+                    {currentItem.topic} • {currentItem.subtopic}
                   </div>
                 </div>
+                <div className="text-sm text-gray-600">~{currentItem.estimatedTime} min</div>
+              </div>
 
-                {/* Hints */}
-                {currentItem.hints && currentItem.hints.length > 0 && (
-                  <div className="mb-6">
-                    <button
-                      onClick={() => setShowHints(!showHints)}
-                      className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"
-                    >
-                      <Lightbulb className="w-4 h-4" />
-                      {showHints ? 'Hide Hints' : 'Show Hints'}
-                    </button>
-                    {showHints && (
-                      <div className="mt-3 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
-                        <ul className="space-y-2">
-                          {currentItem.hints.map((hint, index) => (
-                            <li key={index} className="flex items-start gap-2">
-                              <Lightbulb className="w-4 h-4 text-yellow-600 mt-0.5 flex-shrink-0" />
-                              <span className="text-yellow-800">{hint}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+              {/* Question */}
+              <div className="mb-6">
+                <h2 className="text-lg font-medium mb-4">{currentItem.question}</h2>
+
+                {/* MCQ Options */}
+                {currentItem.type === 'mcq' && currentItem.options && (
+                  <div className="space-y-3">
+                    {currentItem.options.map((option, index) => (
+                      <label
+                        key={index}
+                        className={`flex items-center gap-3 p-4 rounded-lg border-2 cursor-pointer transition-all ${
+                          selectedAnswer === option
+                            ? 'border-blue-600 bg-blue-50'
+                            : 'border-gray-200 hover:border-gray-300'
+                        }`}
+                      >
+                        <input
+                          type="radio"
+                          name="answer"
+                          value={option}
+                          checked={selectedAnswer === option}
+                          onChange={(e) => setSelectedAnswer(e.target.value)}
+                          className="w-4 h-4 text-blue-600"
+                        />
+                        <span className="font-medium">{String.fromCharCode(65 + index)}.</span>
+                        <span>{option}</span>
+                      </label>
+                    ))}
                   </div>
                 )}
-
-                {/* Submit Button */}
-                <button
-                  onClick={submitResponse}
-                  disabled={!selectedAnswer || loading}
-                  className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                >
-                  {loading ? (
-                    <>
-                      <RefreshCw className="w-4 h-4 animate-spin" />
-                      Processing...
-                    </>
-                  ) : (
-                    <>
-                      <SkipForward className="w-4 h-4" />
-                      Submit Answer
-                    </>
-                  )}
-                </button>
               </div>
-            )}
-</div>
+
+              {/* Confidence Slider */}
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  How confident are you in your answer?
+                </label>
+                <div className="flex items-center gap-4">
+                  <span className="text-sm text-gray-600">Not sure</span>
+                  <input
+                    type="range"
+                    min="1"
+                    max="5"
+                    value={confidence}
+                    onChange={(e) => setConfidence(parseInt(e.target.value))}
+                    className="flex-1"
+                  />
+                  <span className="text-sm text-gray-600">Very confident</span>
+                </div>
+                <div className="text-center mt-1">
+                  <span className="text-sm font-medium">
+                    {['Very low', 'Low', 'Medium', 'High', 'Very high'][confidence - 1]}
+                  </span>
+                </div>
+              </div>
+
+              {/* Hints */}
+              {currentItem.hints && currentItem.hints.length > 0 && (
+                <div className="mb-6">
+                  <button
+                    onClick={() => setShowHints(!showHints)}
+                    className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"
+                  >
+                    <Lightbulb className="w-4 h-4" />
+                    {showHints ? 'Hide Hints' : 'Show Hints'}
+                  </button>
+                  {showHints && (
+                    <div className="mt-3 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+                      <ul className="space-y-2">
+                        {currentItem.hints.map((hint, index) => (
+                          <li key={index} className="flex items-start gap-2">
+                            <Lightbulb className="w-4 h-4 text-yellow-600 mt-0.5 flex-shrink-0" />
+                            <span className="text-yellow-800">{hint}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Submit Button */}
+              <button
+                onClick={submitResponse}
+                disabled={!selectedAnswer || loading}
+                className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              >
+                {loading ? (
+                  <>
+                    <RefreshCw className="w-4 h-4 animate-spin" />
+                    Processing...
+                  </>
+                ) : (
+                  <>
+                    <SkipForward className="w-4 h-4" />
+                    Submit Answer
+                  </>
+                )}
+              </button>
+            </div>
+          )}
+        </div>
 
         {/* Analytics Panel */}
         {showAnalytics && analytics && (

@@ -138,9 +138,7 @@ export default function BestBiologyTeacherClass11CBSEPage() {
       <section className="relative bg-gradient-to-br from-blue-900 via-indigo-800 to-blue-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <BookOpen className="w-5 h-5 mr-2 text-yellow-300" />
               CBSE Class 11 Biology
@@ -161,7 +159,11 @@ export default function BestBiologyTeacherClass11CBSEPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%2011%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%2011%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -213,9 +215,7 @@ export default function BestBiologyTeacherClass11CBSEPage() {
       {/* Syllabus Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Class 11 CBSE Biology Syllabus
             </h2>
@@ -226,10 +226,7 @@ export default function BestBiologyTeacherClass11CBSEPage() {
 
           <div className="space-y-6">
             {class11Syllabus.map((unit, index) => (
-              <div
-                key={unit.unit}
-                className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp"
-              >
+              <div key={unit.unit} className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                   <div className="flex items-center gap-4">
                     <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center">
@@ -263,18 +260,14 @@ export default function BestBiologyTeacherClass11CBSEPage() {
       {/* Why Class 11 Matters */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Class 11 Foundation Matters
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-              className="space-y-6 animate-fadeInUp"
-            >
+            <div className="space-y-6 animate-fadeInUp">
               <div className="flex items-start gap-4">
                 <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
@@ -313,9 +306,7 @@ export default function BestBiologyTeacherClass11CBSEPage() {
               </div>
             </div>
 
-            <div
-              className="bg-blue-50 rounded-2xl p-8 animate-fadeInUp"
-            >
+            <div className="bg-blue-50 rounded-2xl p-8 animate-fadeInUp">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">What You Get</h3>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
@@ -347,9 +338,7 @@ export default function BestBiologyTeacherClass11CBSEPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">FAQs</h2>
           </div>
 
@@ -373,15 +362,18 @@ export default function BestBiologyTeacherClass11CBSEPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Start Your NEET Journey Today</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Build a strong Class 11 foundation. Book your free demo!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%2011%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%2011%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -392,7 +384,11 @@ export default function BestBiologyTeacherClass11CBSEPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20Class%2011%20Biology.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20Class%2011%20Biology.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"

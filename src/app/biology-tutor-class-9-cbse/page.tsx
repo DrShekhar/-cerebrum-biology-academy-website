@@ -168,8 +168,7 @@ export default function BiologyTutorClass9CBSEPage() {
       <section className="relative bg-gradient-to-br from-green-800 via-green-800 to-green-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <BookOpen className="w-5 h-5 mr-2 text-yellow-300" />
               Class 9 CBSE Biology
@@ -190,7 +189,11 @@ export default function BiologyTutorClass9CBSEPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%209%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%209%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -242,8 +245,7 @@ export default function BiologyTutorClass9CBSEPage() {
       {/* Syllabus Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Class 9 CBSE Biology Syllabus
             </h2>
@@ -282,8 +284,7 @@ export default function BiologyTutorClass9CBSEPage() {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               What You Get in Class 9 Coaching
             </h2>
@@ -312,9 +313,9 @@ export default function BiologyTutorClass9CBSEPage() {
               Beyond Class 9 — what else Cerebrum coaches
             </h2>
             <p className="text-sm md:text-base text-slate-600 max-w-3xl mx-auto">
-              Cerebrum Biology Academy is biology-only across CBSE Class 9 → Class 10 boards →
-              Class 11-12 → NEET, plus Biology Olympiads (NSEB / INBO / IBO) and IB / IGCSE / AP
-              Biology for international-curriculum students.
+              Cerebrum Biology Academy is biology-only across CBSE Class 9 → Class 10 boards → Class
+              11-12 → NEET, plus Biology Olympiads (NSEB / INBO / IBO) and IB / IGCSE / AP Biology
+              for international-curriculum students.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-4 md:gap-6">
@@ -326,8 +327,8 @@ export default function BiologyTutorClass9CBSEPage() {
                 <h3 className="font-bold text-slate-900">Class 10 CBSE Biology</h3>
               </div>
               <p className="text-sm text-slate-600 mb-4 leading-relaxed">
-                The natural next step after Class 9. Class 10 is the board exam year — same
-                faculty, same NCERT mastery approach, full board + diagram preparation.
+                The natural next step after Class 9. Class 10 is the board exam year — same faculty,
+                same NCERT mastery approach, full board + diagram preparation.
               </p>
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20My%20child%20is%20in%20Class%209%20CBSE%20and%20we%20want%20to%20continue%20into%20Class%2010%20Biology%20coaching.%20Please%20share%20the%20Class%209%20%E2%86%92%20Class%2010%20continuation%20track%20details."
@@ -368,9 +369,9 @@ export default function BiologyTutorClass9CBSEPage() {
                 <h3 className="font-bold text-slate-900">Biology Olympiads</h3>
               </div>
               <p className="text-sm text-slate-600 mb-4 leading-relaxed">
-                Class 9 is a great year to start the Olympiad layer. NSEB eligibility begins
-                Class 11, but the conceptual foundation builds from Class 9. Strong students
-                often start Olympiad-style problem-solving here.
+                Class 9 is a great year to start the Olympiad layer. NSEB eligibility begins Class
+                11, but the conceptual foundation builds from Class 9. Strong students often start
+                Olympiad-style problem-solving here.
               </p>
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20My%20child%20is%20in%20Class%209%20CBSE%20and%20we%20want%20to%20explore%20Biology%20Olympiad%20coaching%20%E2%80%94%20NSEB%20%2F%20INBO%20%2F%20IBO%20pipeline.%20Please%20share%20the%20Class%209%20olympiad-foundation%20track."
@@ -393,8 +394,7 @@ export default function BiologyTutorClass9CBSEPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -402,7 +402,10 @@ export default function BiologyTutorClass9CBSEPage() {
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div key={faq.question} className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp">
+              <div
+                key={faq.question}
+                className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp"
+              >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
@@ -426,7 +429,11 @@ export default function BiologyTutorClass9CBSEPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%209%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%209%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -437,7 +444,11 @@ export default function BiologyTutorClass9CBSEPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20Class%209%20Biology.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20Class%209%20Biology.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"

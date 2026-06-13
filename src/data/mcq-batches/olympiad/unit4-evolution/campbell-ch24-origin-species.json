@@ -1159,12 +1159,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about hybrid zones and their outcomes:\n\nI. In a stable hybrid zone, hybrids have equal or greater fitness than parentals, maintaining the zone indefinitely.\nII. Reinforcement occurs when natural selection strengthens prezygotic barriers in hybrid zones where hybrids have reduced fitness.\nIII. Fusion occurs when reproductive barriers weaken over time, and the two species merge into a single population.\nIV. Hybrid zones can only form between species that diverged through allopatric speciation.",
-      "options": [
-        "TFTT",
-        "FTTT",
-        "FTTF",
-        "TFTF"
-      ],
+      "options": ["TFTT", "FTTT", "FTTF", "TFTF"],
       "correctAnswer": "C",
       "explanation": "Statement I is FALSE. In a stable hybrid zone, hybrids typically have LOWER fitness than parentals. The zone is maintained because continued dispersal of parental types into the contact zone replenishes the hybrid population. Hybrids are continuously produced through interbreeding but are selected against, creating a balance between gene flow (immigration of parentals) and selection against hybrids. If hybrids had equal or greater fitness, the zone would expand and the species would fuse. Statement II is TRUE. Reinforcement (the Wallace effect) occurs when natural selection strengthens prezygotic reproductive barriers in areas of sympatry. If hybrids have reduced fitness, individuals who mate with heterospecifics waste reproductive effort, so selection favors increased mate discrimination — strengthening behavioral, temporal, or other prezygotic barriers. Statement III is TRUE. Fusion occurs when barriers to reproduction weaken, gene flow increases between the two forms, and they eventually merge into a single gene pool. This is the opposite outcome of reinforcement. Statement IV is FALSE. Hybrid zones can form between any species that come into secondary contact, regardless of their original speciation mechanism, including parapatric or even sympatric scenarios.",
       "isOlympiad": true,
@@ -1319,12 +1314,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about mechanisms of speciation:\n\nI. Allopatric speciation requires a geographic barrier that reduces gene flow to zero or near zero.\nII. Sympatric speciation can occur through polyploidy in a single generation.\nIII. Peripatric speciation, a subtype of allopatric speciation, involves a small peripheral population becoming isolated and diverging through both genetic drift and natural selection.\nIV. All speciation events require millions of years to complete.",
-      "options": [
-        "TTTF",
-        "TTFT",
-        "FTTT",
-        "TFFT"
-      ],
+      "options": ["TTTF", "TTFT", "FTTT", "TFFT"],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE. Allopatric speciation requires a geographic barrier (mountain range, river, ocean, desert) that substantially reduces or eliminates gene flow between populations. Without this reduction in gene flow, the populations cannot diverge sufficiently to develop reproductive isolation because gene flow homogenizes allele frequencies. Statement II is TRUE. Polyploidy can create a new species in a single generation — an autopolyploid (4n) arising from a diploid (2n) population is immediately reproductively isolated because crosses with the 2n parental population produce sterile triploids (3n). This is the fastest known mechanism of speciation. Statement III is TRUE. Peripatric speciation (described by Ernst Mayr as the founder effect model) occurs when a small population becomes isolated at the periphery of the species' range. Due to the small population size, genetic drift plays a significant role alongside natural selection, and the founder effect may establish novel allele frequencies. Statement IV is FALSE. While some speciation events are gradual and take millions of years (gradualism), others can be very rapid — polyploidy is instantaneous, and adaptive radiations like Lake Victoria cichlids produced hundreds of species in ~15,000 years.",
       "isOlympiad": true,
@@ -1599,12 +1589,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about species concepts:\n\nI. The biological species concept can be applied to all organisms, including bacteria and archaea.\nII. The ecological species concept defines a species by its ecological niche.\nIII. Under the morphological species concept, species are distinguished primarily by physical appearance.\nIV. The phylogenetic species concept focuses on reproductive isolation as the defining criterion.",
-      "options": [
-        "FTTF",
-        "FTFT",
-        "TFFT",
-        "TTFF"
-      ],
+      "options": ["FTTF", "FTFT", "TFFT", "TTFF"],
       "correctAnswer": "A",
       "explanation": "Statement I is FALSE. The biological species concept (BSC) defines species based on reproductive isolation — the ability to interbreed and produce viable, fertile offspring. This concept fundamentally cannot be applied to asexual organisms (many bacteria, archaea, and some eukaryotes) because they do not reproduce sexually. It also cannot be applied to fossils (extinct organisms whose mating behavior cannot be observed) or to organisms that hybridize extensively. The BSC works best for sexually reproducing, contemporaneous organisms. Statement II is TRUE. The ecological species concept, proposed by Leigh Van Valen, defines a species as a set of organisms adapted to a particular set of resources (ecological niche). Under this concept, species identity is determined by the ecological role an organism plays, regardless of morphological similarity or reproductive compatibility. Statement III is TRUE. The morphological species concept (also called the typological concept) distinguishes species based on observable structural features — body form, size, color, anatomical details. This is the oldest species concept and was the primary basis for taxonomy before molecular methods. Statement IV is FALSE. The phylogenetic species concept focuses on shared evolutionary history and monophyly, not reproductive isolation. It defines species as the smallest diagnosable monophyletic group sharing unique derived characters (synapomorphies). Reproductive isolation is the criterion of the biological species concept.",
       "isOlympiad": true,

@@ -306,9 +306,7 @@ export default function StudentFeesPage() {
           </div>
 
           {activeTab === 'overview' && (
-            <div
-              className="space-y-6 animate-fadeInUp"
-            >
+            <div className="space-y-6 animate-fadeInUp">
               {summary && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                   <StatCard
@@ -492,9 +490,7 @@ export default function StudentFeesPage() {
           )}
 
           {activeTab === 'schedule' && (
-            <div
-              className="space-y-6 animate-fadeInUp"
-            >
+            <div className="space-y-6 animate-fadeInUp">
               {Object.keys(groupedInstallments).length === 0 ? (
                 <Card>
                   <CardContent className="p-8">
@@ -613,9 +609,7 @@ export default function StudentFeesPage() {
           )}
 
           {activeTab === 'enquiry' && (
-            <div
-              className="grid grid-cols-1 lg:grid-cols-3 gap-6 animate-fadeInUp"
-            >
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 animate-fadeInUp">
               <div className="lg:col-span-2">
                 <Card>
                   <CardHeader>

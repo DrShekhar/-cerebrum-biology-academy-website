@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Principles of Inheritance MCQ for NEET 2026 | Free Practice Questions',
-    description: 'Practice 500+ free Principles of Inheritance and Variation MCQs for NEET. Mendel laws, linkage, sex determination, mutation, chromosomal disorders questions. NCERT-based with explanations.',
+    description:
+      'Practice 500+ free Principles of Inheritance and Variation MCQs for NEET. Mendel laws, linkage, sex determination, mutation, chromosomal disorders questions. NCERT-based with explanations.',
   },
 }
 
@@ -89,7 +90,8 @@ export default function PrinciplesInheritancePage() {
             answer: '9:3:3:1',
           },
           {
-            question: 'Colour blindness is inherited as a sex-linked recessive trait. If a carrier woman marries a normal man, the probability of their son being colour blind is',
+            question:
+              'Colour blindness is inherited as a sex-linked recessive trait. If a carrier woman marries a normal man, the probability of their son being colour blind is',
             answer: '50%',
           },
           {

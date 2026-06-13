@@ -47,8 +47,7 @@ export function CredentialSchema({
     '@type': 'EducationalOccupationalCredential',
     name: courseName,
     description:
-      description ||
-      `${credentialCategory} preparation and qualification through ${provider}`,
+      description || `${credentialCategory} preparation and qualification through ${provider}`,
     credentialCategory: credentialCategory,
     recognizedBy: {
       '@type': 'Organization',
@@ -106,10 +105,7 @@ export function CredentialSchema({
     },
   }
 
-  const schemaId = `credential-${courseName
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-    .slice(0, 40)}`
+  const schemaId = `credential-${courseName.toLowerCase().replace(/\s+/g, '-').slice(0, 40)}`
 
   return (
     <Script

@@ -92,7 +92,10 @@ export async function PATCH(request: NextRequest, { params }: { params: Promise<
     // CSRF validation for mutating operation
     const csrfResult = await validateCSRF(request)
     if (!csrfResult.valid) {
-      return NextResponse.json({ error: csrfResult.error, code: 'CSRF_VALIDATION_FAILED' }, { status: 403 })
+      return NextResponse.json(
+        { error: csrfResult.error, code: 'CSRF_VALIDATION_FAILED' },
+        { status: 403 }
+      )
     }
 
     const { id } = await params
@@ -184,7 +187,10 @@ export async function DELETE(
     // CSRF validation for mutating operation
     const csrfResult = await validateCSRF(request)
     if (!csrfResult.valid) {
-      return NextResponse.json({ error: csrfResult.error, code: 'CSRF_VALIDATION_FAILED' }, { status: 403 })
+      return NextResponse.json(
+        { error: csrfResult.error, code: 'CSRF_VALIDATION_FAILED' },
+        { status: 403 }
+      )
     }
 
     const { id } = await params

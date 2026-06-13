@@ -223,12 +223,12 @@ export default function WazirpurNEETContent({ faqs }: WazirpurNEETContentProps) 
             </div>
 
             <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
-              Best NEET Coaching in{' '}
-              <span className="text-yellow-400">Wazirpur</span>
+              Best NEET Coaching in <span className="text-yellow-400">Wazirpur</span>
             </h1>
 
             <p className="mb-8 text-xl text-slate-300 md:text-2xl">
-              Top-rated Biology Classes Near Rohini for Wazirpur, Lawrence Road & Ashok Vihar Students
+              Top-rated Biology Classes Near Rohini for Wazirpur, Lawrence Road & Ashok Vihar
+              Students
             </p>
 
             {/* Trust Badges */}
@@ -250,7 +250,9 @@ export default function WazirpurNEETContent({ faqs }: WazirpurNEETContentProps) 
             {/* Primary CTAs */}
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20wazirpur.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20wazirpur.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-4 py-3 text-base font-bold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:bg-yellow-400 sm:px-8 sm:py-4 sm:text-lg"
               >
                 Book FREE Demo Class
@@ -335,7 +337,9 @@ export default function WazirpurNEETContent({ faqs }: WazirpurNEETContentProps) 
                   </div>
                   <div className="flex flex-wrap gap-3">
                     <Link
-                      href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20wazirpur.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                      href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20wazirpur.%20Please%20share%20available%20timings."
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="rounded-lg bg-green-600 px-6 py-3 font-medium text-white transition hover:bg-green-700"
                     >
                       Book Demo at Rohini Center
@@ -365,11 +369,10 @@ export default function WazirpurNEETContent({ faqs }: WazirpurNEETContentProps) 
               <Trophy className="mr-2 h-4 w-4" />
               Success Stories from Wazirpur Area
             </div>
-            <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-              Our Students from Wazirpur Area
-            </h2>
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Our Students from Wazirpur Area</h2>
             <p className="mx-auto max-w-2xl text-lg text-slate-300">
-              See how students from Wazirpur, Lawrence Road, and nearby areas cracked NEET with Cerebrum
+              See how students from Wazirpur, Lawrence Road, and nearby areas cracked NEET with
+              Cerebrum
             </p>
           </div>
 
@@ -625,7 +628,8 @@ export default function WazirpurNEETContent({ faqs }: WazirpurNEETContentProps) 
             Start Your NEET Journey from Wazirpur!
           </h2>
           <p className="mx-auto mb-6 max-w-2xl text-xl text-slate-300">
-            Join 180+ students from Wazirpur area who are already preparing with Cerebrum Biology Academy
+            Join 180+ students from Wazirpur area who are already preparing with Cerebrum Biology
+            Academy
           </p>
 
           <div className="mx-auto mb-8 flex max-w-2xl flex-wrap justify-center gap-4">
@@ -645,7 +649,9 @@ export default function WazirpurNEETContent({ faqs }: WazirpurNEETContentProps) 
 
           <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20wazirpur.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20wazirpur.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-4 py-3 text-base font-bold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:bg-yellow-400 sm:px-8 sm:py-4 sm:text-lg"
             >
               Book Free Demo Class

@@ -36,59 +36,152 @@ export default function PageContent() {
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)
 
   const syllabusCoverage = [
-    { title: 'Cell Biology & Biochemistry', topics: ['Cell Structure & Division', 'Enzymes', 'Carbohydrates & Lipids', 'Proteins & Nucleic Acids'] },
-    { title: 'Genetics & Heredity', topics: ['Mendelian Inheritance', 'Chromosomal Basis', 'Mutations', 'Linkage & Crossing Over'] },
-    { title: 'Ecology & Environment', topics: ['Organisms & Environment', 'Ecosystems', 'Biodiversity', 'Environmental Issues'] },
-    { title: 'Human Physiology', topics: ['Nutrition & Digestion', 'Respiration', 'Circulation & Immunity', 'Nervous & Endocrine Systems'] },
+    {
+      title: 'Cell Biology & Biochemistry',
+      topics: [
+        'Cell Structure & Division',
+        'Enzymes',
+        'Carbohydrates & Lipids',
+        'Proteins & Nucleic Acids',
+      ],
+    },
+    {
+      title: 'Genetics & Heredity',
+      topics: [
+        'Mendelian Inheritance',
+        'Chromosomal Basis',
+        'Mutations',
+        'Linkage & Crossing Over',
+      ],
+    },
+    {
+      title: 'Ecology & Environment',
+      topics: ['Organisms & Environment', 'Ecosystems', 'Biodiversity', 'Environmental Issues'],
+    },
+    {
+      title: 'Human Physiology',
+      topics: [
+        'Nutrition & Digestion',
+        'Respiration',
+        'Circulation & Immunity',
+        'Nervous & Endocrine Systems',
+      ],
+    },
   ]
 
   const boardToNEETMapping = [
-    { pucTopic: 'Cell Division (Mitosis/Meiosis)', neetRelevance: 'Critical for Genetics & Reproduction sections', overlap: '95%' },
-    { pucTopic: 'Photosynthesis & Respiration', neetRelevance: 'Plant Physiology & Metabolism foundation', overlap: '90%' },
-    { pucTopic: 'Ecosystem Principles', neetRelevance: 'Ecology & Environmental Biology', overlap: '85%' },
-    { pucTopic: 'Digestive & Circulatory Systems', neetRelevance: 'Human Physiology core topics', overlap: '92%' },
-    { pucTopic: 'Genetic Laws & Inheritance', neetRelevance: 'Foundation for Molecular Genetics', overlap: '98%' },
+    {
+      pucTopic: 'Cell Division (Mitosis/Meiosis)',
+      neetRelevance: 'Critical for Genetics & Reproduction sections',
+      overlap: '95%',
+    },
+    {
+      pucTopic: 'Photosynthesis & Respiration',
+      neetRelevance: 'Plant Physiology & Metabolism foundation',
+      overlap: '90%',
+    },
+    {
+      pucTopic: 'Ecosystem Principles',
+      neetRelevance: 'Ecology & Environmental Biology',
+      overlap: '85%',
+    },
+    {
+      pucTopic: 'Digestive & Circulatory Systems',
+      neetRelevance: 'Human Physiology core topics',
+      overlap: '92%',
+    },
+    {
+      pucTopic: 'Genetic Laws & Inheritance',
+      neetRelevance: 'Foundation for Molecular Genetics',
+      overlap: '98%',
+    },
   ]
 
   const whyChooseUs = [
-    { icon: BookOpen, title: 'PUC Syllabus Mastery', description: 'Complete coverage of Karnataka PUC biology with chapter-wise modules and KCET-aligned content' },
-    { icon: Target, title: 'NEET Bridge Content', description: 'Strategic gap filling between PUC and NEET with chapter overlap analysis and advanced concepts' },
-    { icon: Award, title: 'KCET & NEET Dual Focus', description: 'Simultaneous preparation for both KCET (Karnataka entrance) and national NEET examination' },
-    { icon: Users, title: 'Expert Karnataka Faculty', description: 'Experienced teachers familiar with PUC board patterns and successful NEET conversion' },
-    { icon: Microscope, title: 'Lab-to-NEET Bridge', description: 'Connect PUC practicals with NEET theory through experimental understanding' },
-    { icon: Shield, title: 'Proven Success Rate', description: 'Strong track record with Karnataka PUC students achieving 650+ NEET scores' },
+    {
+      icon: BookOpen,
+      title: 'PUC Syllabus Mastery',
+      description:
+        'Complete coverage of Karnataka PUC biology with chapter-wise modules and KCET-aligned content',
+    },
+    {
+      icon: Target,
+      title: 'NEET Bridge Content',
+      description:
+        'Strategic gap filling between PUC and NEET with chapter overlap analysis and advanced concepts',
+    },
+    {
+      icon: Award,
+      title: 'KCET & NEET Dual Focus',
+      description:
+        'Simultaneous preparation for both KCET (Karnataka entrance) and national NEET examination',
+    },
+    {
+      icon: Users,
+      title: 'Expert Karnataka Faculty',
+      description:
+        'Experienced teachers familiar with PUC board patterns and successful NEET conversion',
+    },
+    {
+      icon: Microscope,
+      title: 'Lab-to-NEET Bridge',
+      description: 'Connect PUC practicals with NEET theory through experimental understanding',
+    },
+    {
+      icon: Shield,
+      title: 'Proven Success Rate',
+      description: 'Strong track record with Karnataka PUC students achieving 650+ NEET scores',
+    },
   ]
 
   const pricingPlans = [
-    { name: '1:1 Coaching', price: '₹45,000', description: 'Personalized one-on-one sessions with complete PUC + NEET integration' },
-    { name: 'Complete Program', price: '₹34,999', description: 'Full batch program with 2 years PUC + NEET preparation and study materials' },
-    { name: 'Group Batch', price: '₹24,999', description: 'Small group classes (4-6 students) with personalized doubt clearing' },
+    {
+      name: '1:1 Coaching',
+      price: '₹45,000',
+      description: 'Personalized one-on-one sessions with complete PUC + NEET integration',
+    },
+    {
+      name: 'Complete Program',
+      price: '₹34,999',
+      description: 'Full batch program with 2 years PUC + NEET preparation and study materials',
+    },
+    {
+      name: 'Group Batch',
+      price: '₹24,999',
+      description: 'Small group classes (4-6 students) with personalized doubt clearing',
+    },
   ]
 
   const faqs = [
     {
       question: 'How does PUC curriculum differ from CBSE for NEET preparation?',
-      answer: 'Karnataka PUC has its own syllabus depth and sequence. We bridge this by mapping PUC topics to NEET requirements, ensuring you\'re not over-studying unnecessary content while filling NEET-specific gaps in Cell Biology, Genetics, and Human Physiology.',
+      answer:
+        "Karnataka PUC has its own syllabus depth and sequence. We bridge this by mapping PUC topics to NEET requirements, ensuring you're not over-studying unnecessary content while filling NEET-specific gaps in Cell Biology, Genetics, and Human Physiology.",
     },
     {
       question: 'Can I appear for KCET while preparing for NEET?',
-      answer: 'Absolutely! PUC students have the advantage of preparing for both KCET (state entrance) and NEET. Our dual-focus program ensures you excel in both, with KCET-specific pattern practice and NEET\'s deeper concept requirements.',
+      answer:
+        "Absolutely! PUC students have the advantage of preparing for both KCET (state entrance) and NEET. Our dual-focus program ensures you excel in both, with KCET-specific pattern practice and NEET's deeper concept requirements.",
     },
     {
       question: 'What is the NEET success rate for Karnataka PUC students?',
-      answer: 'Our Karnataka PUC students achieve consistent success with 85%+ qualifying for NEET and average scores of 630+. The strong PUC biology foundation converts well to NEET when gaps are systematically addressed.',
+      answer:
+        'Our Karnataka PUC students achieve consistent success with 85%+ qualifying for NEET and average scores of 630+. The strong PUC biology foundation converts well to NEET when gaps are systematically addressed.',
     },
     {
       question: 'How much time do PUC students need for NEET preparation?',
-      answer: 'PUC students typically need 8-10 months of focused NEET preparation post-PUC completion. With aligned coaching starting from PUC 1st year, you\'ll gradually build depth and breadth required for NEET.',
+      answer:
+        "PUC students typically need 8-10 months of focused NEET preparation post-PUC completion. With aligned coaching starting from PUC 1st year, you'll gradually build depth and breadth required for NEET.",
     },
     {
       question: 'Are there specific NEET topics that PUC misses?',
-      answer: 'Yes - detailed Molecular Biology, certain Reproductive Health concepts, and specific Ecology nuances. Our program systematically covers these through targeted modules beyond PUC syllabus.',
+      answer:
+        'Yes - detailed Molecular Biology, certain Reproductive Health concepts, and specific Ecology nuances. Our program systematically covers these through targeted modules beyond PUC syllabus.',
     },
     {
       question: 'Do you provide PUC board exam preparation alongside NEET?',
-      answer: 'Yes! We maintain PUC board excellence while building NEET depth. Students score 90+ in PUC boards while simultaneously developing NEET-level conceptual strength.',
+      answer:
+        'Yes! We maintain PUC board excellence while building NEET depth. Students score 90+ in PUC boards while simultaneously developing NEET-level conceptual strength.',
     },
   ]
 
@@ -97,9 +190,7 @@ export default function PageContent() {
       <FloatingWhatsAppButton />
 
       {/* Hero Section */}
-      <section
-        className="bg-gradient-to-br from-orange-600 to-red-700 text-white py-12 sm:py-20 animate-fadeInUp"
-      >
+      <section className="bg-gradient-to-br from-orange-600 to-red-700 text-white py-12 sm:py-20 animate-fadeInUp">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="animate-fadeInUp">
@@ -107,11 +198,14 @@ export default function PageContent() {
                 Karnataka PUC to NEET Excellence
               </h1>
               <p className="text-lg sm:text-xl text-orange-100 mb-8">
-                Master Karnataka Pre-University Biology with seamless NEET integration. Expert coaching for KCET & NEET success from PUC curriculum foundation.
+                Master Karnataka Pre-University Biology with seamless NEET integration. Expert
+                coaching for KCET & NEET success from PUC curriculum foundation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors inline-flex items-center justify-center"
                 >
                   Enroll for PUC-NEET
@@ -195,10 +289,7 @@ export default function PageContent() {
           </div>
           <div className="space-y-4">
             {boardToNEETMapping.map((mapping, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp">
                 <div className="grid md:grid-cols-3 gap-6">
                   <div>
                     <p className="text-sm text-gray-500 uppercase font-semibold">PUC Topic</p>
@@ -263,7 +354,9 @@ export default function PageContent() {
                 <div className="text-3xl font-bold text-orange-600 mb-4">{plan.price}</div>
                 <p className="text-gray-600 mb-6">{plan.description}</p>
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block bg-orange-600 text-white text-center py-2 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
                 >
                   Enroll Now
@@ -284,7 +377,10 @@ export default function PageContent() {
           </div>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp">
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
+              >
                 <button
                   onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
                   className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
@@ -296,23 +392,19 @@ export default function PageContent() {
                     <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
                   )}
                 </button>
-{expandedFAQ === index && (
-                    <div
-                      className="border-t border-gray-200 bg-gray-50 animate-fadeInUp"
-                    >
-                      <p className="p-6 text-gray-700">{faq.answer}</p>
-                    </div>
-                  )}
-</div>
+                {expandedFAQ === index && (
+                  <div className="border-t border-gray-200 bg-gray-50 animate-fadeInUp">
+                    <p className="p-6 text-gray-700">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section
-        className="bg-gradient-to-r from-orange-600 to-red-700 text-white py-12 sm:py-16 md:py-20 animate-fadeInUp"
-      >
+      <section className="bg-gradient-to-r from-orange-600 to-red-700 text-white py-12 sm:py-16 md:py-20 animate-fadeInUp">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
             Excel in Karnataka PUC & NEET Today
@@ -322,7 +414,9 @@ export default function PageContent() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors inline-flex items-center justify-center"
             >
               Start Your Journey

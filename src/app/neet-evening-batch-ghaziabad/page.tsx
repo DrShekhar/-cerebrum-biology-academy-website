@@ -43,7 +43,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Evening Batch Ghaziabad 2026 | After-School Classes 5-8 PM',
-    description: 'Join NEET evening batch for Ghaziabad students - 5 PM to 8 PM classes after school. Perfect for Class 11-12 students from Indirapuram, Vaishali, Kaushambi. Call 99536-43938!',
+    description:
+      'Join NEET evening batch for Ghaziabad students - 5 PM to 8 PM classes after school. Perfect for Class 11-12 students from Indirapuram, Vaishali, Kaushambi. Call 99536-43938!',
   },
 }
 
@@ -144,7 +145,11 @@ export default function NEETEveningBatchGhaziabad() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+        knowsAbout={[
+          'NEET Ghaziabad',
+          'NEET Biology Ghaziabad',
+          'Medical entrance coaching Ghaziabad',
+        ]}
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-indigo-900 to-indigo-700 text-white py-16">

@@ -81,6 +81,7 @@ export default async function Page() {
   return (
     <>
       <LocalitySchema
+        country="KW"
         locality={locality}
         slug="neet-coaching-salmiya-kuwait"
         pageTitle="NEET Coaching in Salmiya, Kuwait"

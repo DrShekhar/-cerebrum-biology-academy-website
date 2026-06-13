@@ -44,13 +44,15 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'DAT Biology Preparation | Bio Section Specialist | Campbell + ADA Outline',
-    description: 'DAT Biology section coaching from AIIMS-trained biology specialists. Campbell Biology end-to-end with ADA outline weighting for anatomy/physiology. $449 self-paced, $899 small-batch, $1,399 1:1 sen...',
+    description:
+      'DAT Biology section coaching from AIIMS-trained biology specialists. Campbell Biology end-to-end with ADA outline weighting for anatomy/physiology. $449 self-paced, $899 small-batch, $1,399 1:1 sen...',
   },
 }
 
 const faqs = [
   {
-    question: 'How is Cerebrum DAT Biology different from other generalist DAT prep platforms or other generalist DAT brands?',
+    question:
+      'How is Cerebrum DAT Biology different from other generalist DAT prep platforms or other generalist DAT brands?',
     answer:
       'other generalist DAT prep platforms is a question-bank platform — strong for drill volume but weak for deep biology pedagogy when a student gets stuck. other generalist DAT brands is a generalist programme covering all four sections (Survey of Natural Sciences, Perceptual Ability, Reading Comprehension, Quantitative Reasoning) with rotating faculty. Cerebrum is a biology-only specialist — Dr. Shekhar C Singh (AIIMS Delhi) and senior faculty teach the Biology section in depth, with Campbell end-to-end coverage and ADA outline mapping. Most students pair us with other generalist DAT prep platforms for drill and a generalist for the non-biology sections.',
   },
@@ -318,16 +320,28 @@ export default function DATBiologyPreparationPage() {
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-xl font-bold text-slate-900 mb-4">Compare & Explore</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            <Link href="/dat-vs-mcat-biology" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/dat-vs-mcat-biology"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">DAT vs MCAT Biology</span>
             </Link>
-            <Link href="/mcat-biology-preparation" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/mcat-biology-preparation"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">MCAT Biology</span>
             </Link>
-            <Link href="/gamsat-section-3-biology-prep" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/gamsat-section-3-biology-prep"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">GAMSAT Biology</span>
             </Link>
-            <Link href="/usmle-step-1-biology-preparation" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/usmle-step-1-biology-preparation"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">USMLE Step 1</span>
             </Link>
           </div>

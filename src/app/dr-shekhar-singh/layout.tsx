@@ -26,9 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Dr. Shekhar C Singh - Expert NEET Biology Educator',
     description: 'AIIMS faculty with proven track record of 98% success rate',
-    images: [
-      '/images/faculty/dr-shekhar-portrait.jpg',
-    ],
+    images: ['/images/faculty/dr-shekhar-portrait.jpg'],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh',

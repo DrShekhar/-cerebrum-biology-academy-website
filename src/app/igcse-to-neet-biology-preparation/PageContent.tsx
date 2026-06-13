@@ -49,12 +49,14 @@ const bridgeFeatures = [
   {
     icon: BookOpen,
     title: 'Cambridge to NCERT Bridge',
-    description: 'Align Cambridge IGCSE concepts with NCERT chapters. Map familiar topics to Indian curriculum.',
+    description:
+      'Align Cambridge IGCSE concepts with NCERT chapters. Map familiar topics to Indian curriculum.',
   },
   {
     icon: Target,
     title: 'NEET MCQ Mastery',
-    description: 'Transition from Cambridge extended response to NEET single correct answer format. 4000+ practice MCQs.',
+    description:
+      'Transition from Cambridge extended response to NEET single correct answer format. 4000+ practice MCQs.',
   },
   {
     icon: Headphones,
@@ -64,7 +66,8 @@ const bridgeFeatures = [
   {
     icon: Play,
     title: 'Speed & Accuracy Training',
-    description: 'IGCSE teaches depth; NEET demands speed. Master both with timed practice modules.',
+    description:
+      'IGCSE teaches depth; NEET demands speed. Master both with timed practice modules.',
   },
   {
     icon: Shield,
@@ -74,7 +77,8 @@ const bridgeFeatures = [
   {
     icon: Star,
     title: 'NEET Pattern Mastery',
-    description: 'Learn NEET-specific question patterns, negative marking strategy, and time management.',
+    description:
+      'Learn NEET-specific question patterns, negative marking strategy, and time management.',
   },
 ]
 
@@ -82,13 +86,15 @@ const syllabusGapData = [
   {
     category: 'Cell & Genetics',
     igcseCovered: 'Cell structure, simple inheritance, DNA basics',
-    neetRequired: 'Cell division (mitosis/meiosis depth), human genetics, multiple inheritance patterns',
+    neetRequired:
+      'Cell division (mitosis/meiosis depth), human genetics, multiple inheritance patterns',
     focusArea: 'Meiosis stages, polyploidy, linkage, genetic crosses, blood group inheritance',
   },
   {
     category: 'Respiration & Photosynthesis',
     igcseCovered: 'Basic aerobic & anaerobic respiration',
-    neetRequired: 'Detailed pathway knowledge (Krebs, ETC), photosynthesis mechanisms, light reactions',
+    neetRequired:
+      'Detailed pathway knowledge (Krebs, ETC), photosynthesis mechanisms, light reactions',
     focusArea: 'ATP production pathways, electron transport chain, Calvin cycle, C3/C4 plants',
   },
   {
@@ -101,7 +107,8 @@ const syllabusGapData = [
     category: 'Ecology & Evolution',
     igcseCovered: 'Biomes, populations, basic evolution',
     neetRequired: 'Biogeochemical cycles, succession, speciation, adaptation, Indian ecosystems',
-    focusArea: 'Nitrogen & carbon cycles, ecological succession, natural selection, species interactions',
+    focusArea:
+      'Nitrogen & carbon cycles, ecological succession, natural selection, species interactions',
   },
 ]
 
@@ -117,7 +124,8 @@ const methodologySteps = [
   {
     number: '1',
     title: 'Curriculum Mapping',
-    description: 'Map Cambridge IGCSE chapters to NEET syllabus. Identify overlaps, gaps, and depth requirements.',
+    description:
+      'Map Cambridge IGCSE chapters to NEET syllabus. Identify overlaps, gaps, and depth requirements.',
   },
   {
     number: '2',
@@ -127,12 +135,14 @@ const methodologySteps = [
   {
     number: '3',
     title: 'MCQ Pattern Training',
-    description: 'Shift from extended response to NEET single-select MCQs. Practice with curated questions.',
+    description:
+      'Shift from extended response to NEET single-select MCQs. Practice with curated questions.',
   },
   {
     number: '4',
     title: 'Intensive Practice',
-    description: 'Solve 4000+ MCQs, full-length tests, and previous year papers with performance analysis.',
+    description:
+      'Solve 4000+ MCQs, full-length tests, and previous year papers with performance analysis.',
   },
 ]
 
@@ -238,11 +248,7 @@ export default function IGCSEToNEETContent() {
               program designed specifically for IGCSE students targeting top medical colleges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
-                href="https://wa.me/918826444334"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Get Details on WhatsApp
@@ -360,7 +366,9 @@ export default function IGCSEToNEETContent() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-2xl font-bold text-emerald-900 mb-6">IGCSE Strengths We Leverage</h3>
+              <h3 className="text-2xl font-bold text-emerald-900 mb-6">
+                IGCSE Strengths We Leverage
+              </h3>
               <ul className="space-y-4">
                 {[
                   'Strong conceptual foundation across all biology topics',
@@ -419,9 +427,7 @@ export default function IGCSEToNEETContent() {
           <h2 className="text-4xl font-bold text-center text-emerald-900 mb-4">
             Who Should Take This Course?
           </h2>
-          <p className="text-center text-gray-700 mb-12">
-            This bridge program is ideal for:
-          </p>
+          <p className="text-center text-gray-700 mb-12">This bridge program is ideal for:</p>
 
           <div className="grid gap-4">
             {whoIsThisFor.map((item, index) => (
@@ -440,9 +446,7 @@ export default function IGCSEToNEETContent() {
       {/* Pricing Section */}
       <section className="px-4 py-20 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-emerald-900 mb-4">
-            Pricing & Plans
-          </h2>
+          <h2 className="text-4xl font-bold text-center text-emerald-900 mb-4">Pricing & Plans</h2>
           <p className="text-center text-gray-700 mb-12">
             Choose based on your timeline and intensity preference
           </p>
@@ -458,13 +462,17 @@ export default function IGCSEToNEETContent() {
                 }`}
               >
                 <div className="p-6">
-                  <h3 className={`text-2xl font-bold mb-2 ${index === 1 ? 'text-white' : 'text-emerald-900'}`}>
+                  <h3
+                    className={`text-2xl font-bold mb-2 ${index === 1 ? 'text-white' : 'text-emerald-900'}`}
+                  >
                     {tier.name}
                   </h3>
                   <p className={`mb-4 ${index === 1 ? 'text-emerald-100' : 'text-gray-700'}`}>
                     {tier.duration}
                   </p>
-                  <p className={`text-xl font-bold mb-6 ${index === 1 ? 'text-emerald-100' : 'text-gray-900'}`}>
+                  <p
+                    className={`text-xl font-bold mb-6 ${index === 1 ? 'text-emerald-100' : 'text-gray-900'}`}
+                  >
                     {tier.price}
                   </p>
                   <ul className="space-y-3 mb-6">
@@ -490,11 +498,7 @@ export default function IGCSEToNEETContent() {
             <p className="text-gray-700 mb-6">
               Custom plans available. Contact us for personalized pricing based on your timeline.
             </p>
-            <Link
-              href="https://wa.me/918826444334"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
               <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Get Custom Pricing
@@ -537,11 +541,7 @@ export default function IGCSEToNEETContent() {
             bridge program for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="https://wa.me/918826444334"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
               <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 w-full sm:w-auto">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Message on WhatsApp

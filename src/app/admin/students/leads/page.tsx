@@ -126,7 +126,12 @@ export default function LeadsPage() {
   const [counselors, setCounselors] = useState<Counselor[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [pagination, setPagination] = useState<Pagination>({ page: 1, limit: 20, total: 0, totalPages: 0 })
+  const [pagination, setPagination] = useState<Pagination>({
+    page: 1,
+    limit: 20,
+    total: 0,
+    totalPages: 0,
+  })
   const [stats, setStats] = useState<Stats>({ total: 0, byStage: {} })
   const [searchTerm, setSearchTerm] = useState('')
   const [stageFilter, setStageFilter] = useState<string>('all')
@@ -419,9 +424,7 @@ export default function LeadsPage() {
         </div>
 
         {/* Leads Table */}
-        <div
-          className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-fadeInUp"
-        >
+        <div className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-fadeInUp">
           <div className="overflow-x-auto">
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
@@ -579,7 +582,7 @@ export default function LeadsPage() {
         size="lg"
       >
         <AddLeadForm
-          counselors={counselors.map(c => ({ id: c.id, name: c.name }))}
+          counselors={counselors.map((c) => ({ id: c.id, name: c.name }))}
           onSuccess={() => {
             setIsAddLeadModalOpen(false)
             fetchLeads()
@@ -611,7 +614,7 @@ export default function LeadsPage() {
               nextFollowUpAt: selectedLead.nextFollowUp,
               lostReason: selectedLead.lostReason,
             }}
-            counselors={counselors.map(c => ({ id: c.id, name: c.name }))}
+            counselors={counselors.map((c) => ({ id: c.id, name: c.name }))}
             onSuccess={() => {
               setIsEditLeadModalOpen(false)
               setSelectedLead(null)

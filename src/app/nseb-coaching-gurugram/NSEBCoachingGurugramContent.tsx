@@ -38,7 +38,13 @@ const nsebSyllabus = [
   {
     unit: 'Cell Biology',
     weightage: '20%',
-    topics: ['Cell structure', 'Organelles', 'Cell division', 'Membrane transport', 'Cell signaling'],
+    topics: [
+      'Cell structure',
+      'Organelles',
+      'Cell division',
+      'Membrane transport',
+      'Cell signaling',
+    ],
   },
   {
     unit: 'Plant Biology',
@@ -53,7 +59,13 @@ const nsebSyllabus = [
   {
     unit: 'Genetics & Evolution',
     weightage: '20%',
-    topics: ['Mendelian genetics', 'Molecular genetics', 'Evolution', 'Speciation', 'Population genetics'],
+    topics: [
+      'Mendelian genetics',
+      'Molecular genetics',
+      'Evolution',
+      'Speciation',
+      'Population genetics',
+    ],
   },
   {
     unit: 'Ecology',
@@ -71,7 +83,11 @@ const preparationTimeline = [
   {
     month: 'June-July',
     phase: 'Foundation',
-    activities: ['Complete NCERT Class 11-12', 'Start Campbell Biology basics', 'Build conceptual understanding'],
+    activities: [
+      'Complete NCERT Class 11-12',
+      'Start Campbell Biology basics',
+      'Build conceptual understanding',
+    ],
   },
   {
     month: 'Aug-Sep',
@@ -93,7 +109,8 @@ const preparationTimeline = [
 const features = [
   {
     title: 'Complete Syllabus Coverage',
-    description: 'Comprehensive coverage of entire NSEB syllabus with Campbell Biology as the foundation.',
+    description:
+      'Comprehensive coverage of entire NSEB syllabus with Campbell Biology as the foundation.',
     icon: BookOpen,
   },
   {
@@ -148,7 +165,10 @@ export default function NSEBCoachingGurugramContent({ faqs }: NSEBCoachingGurugr
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <Link href="/biology-olympiad-coaching-gurugram" className="text-gray-600 hover:text-teal-600">
+              <Link
+                href="/biology-olympiad-coaching-gurugram"
+                className="text-gray-600 hover:text-teal-600"
+              >
                 Biology Olympiad Gurugram
               </Link>
             </li>
@@ -180,9 +200,9 @@ export default function NSEBCoachingGurugramContent({ faqs }: NSEBCoachingGurugr
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Expert coaching for National Standard Examination in Biology (NSEB).
-              Comprehensive preparation to qualify for INBO and represent India at IBO.
-              Join our Sector 51, Gurugram center.
+              Expert coaching for National Standard Examination in Biology (NSEB). Comprehensive
+              preparation to qualify for INBO and represent India at IBO. Join our Sector 51,
+              Gurugram center.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -201,8 +221,16 @@ export default function NSEBCoachingGurugramContent({ faqs }: NSEBCoachingGurugr
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NSEB%20Olympiad%20in%20Gurugram.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
-                <Button variant="secondary" size="xl" className="bg-blue-500 text-white hover:bg-blue-400 font-bold">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NSEB%20Olympiad%20in%20Gurugram.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="secondary"
+                  size="xl"
+                  className="bg-blue-500 text-white hover:bg-blue-400 font-bold"
+                >
                   <Play className="w-5 h-5 mr-2" />
                   Book Free Demo Class
                 </Button>
@@ -226,8 +254,12 @@ export default function NSEBCoachingGurugramContent({ faqs }: NSEBCoachingGurugr
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">NSEB Syllabus Coverage</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">Complete syllabus coverage based on NCERT and Campbell Biology</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              NSEB Syllabus Coverage
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Complete syllabus coverage based on NCERT and Campbell Biology
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -258,16 +290,17 @@ export default function NSEBCoachingGurugramContent({ faqs }: NSEBCoachingGurugr
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">6-Month NSEB Preparation Plan</h2>
-            <p className="text-xl text-slate-600">Structured timeline to maximize your NSEB preparation</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              6-Month NSEB Preparation Plan
+            </h2>
+            <p className="text-xl text-slate-600">
+              Structured timeline to maximize your NSEB preparation
+            </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-6">
             {preparationTimeline.map((phase, index) => (
-              <div
-                key={phase.phase}
-                className="relative animate-fadeInUp"
-              >
+              <div key={phase.phase} className="relative animate-fadeInUp">
                 <div className="bg-blue-50 rounded-2xl p-6 h-full">
                   <div className="text-sm font-medium text-blue-600 mb-2">{phase.month}</div>
                   <h3 className="text-lg font-bold text-slate-900 mb-4">{phase.phase}</h3>
@@ -295,7 +328,9 @@ export default function NSEBCoachingGurugramContent({ faqs }: NSEBCoachingGurugr
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Choose Our NSEB Coaching?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Why Choose Our NSEB Coaching?
+            </h2>
             <p className="text-xl text-slate-600">Expert preparation at our Gurugram center</p>
           </div>
 
@@ -328,10 +363,12 @@ export default function NSEBCoachingGurugramContent({ faqs }: NSEBCoachingGurugr
               <div>
                 <p className="text-gray-700 mb-4">
                   <strong>Address:</strong> {CONTACT_INFO.location.gurugram.streetAddress},{' '}
-                  {CONTACT_INFO.location.gurugram.addressLocality} - {CONTACT_INFO.location.gurugram.postalCode}
+                  {CONTACT_INFO.location.gurugram.addressLocality} -{' '}
+                  {CONTACT_INFO.location.gurugram.postalCode}
                 </p>
                 <p className="text-gray-700 mb-4">
-                  <strong>Landmark:</strong> Same building as XYZ Coaching (largest national NEET chain)
+                  <strong>Landmark:</strong> Same building as XYZ Coaching (largest national NEET
+                  chain)
                 </p>
                 <div className="flex gap-4 mt-6">
                   <a href={`tel:${CONTACT_INFO.phone.primary}`}>
@@ -340,7 +377,11 @@ export default function NSEBCoachingGurugramContent({ faqs }: NSEBCoachingGurugr
                       Call Now
                     </Button>
                   </a>
-                  <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NSEB%20Olympiad%20in%20Gurugram.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                  <Link
+                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NSEB%20Olympiad%20in%20Gurugram.%20Please%20share%20available%20timings."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button>Book Demo</Button>
                   </Link>
                 </div>
@@ -375,7 +416,10 @@ export default function NSEBCoachingGurugramContent({ faqs }: NSEBCoachingGurugr
       <VideoTestimonialsSection />
 
       {/* NEET Tools */}
-      <NEETToolsWidget title="Free NEET & Olympiad Tools" subtitle="Plan your preparation with our free tools" />
+      <NEETToolsWidget
+        title="Free NEET & Olympiad Tools"
+        subtitle="Plan your preparation with our free tools"
+      />
 
       {/* FAQs */}
       <section className="py-16 bg-white">
@@ -392,7 +436,9 @@ export default function NSEBCoachingGurugramContent({ faqs }: NSEBCoachingGurugr
                   className="w-full flex items-center justify-between p-6 text-left"
                 >
                   <span className="font-semibold text-slate-900 pr-4">{faq.question}</span>
-                  <ChevronDown className={`w-5 h-5 text-slate-500 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    className={`w-5 h-5 text-slate-500 transition-transform ${openFaq === index ? 'rotate-180' : ''}`}
+                  />
                 </button>
                 {openFaq === index && (
                   <div className="px-6 pb-6">
@@ -410,19 +456,31 @@ export default function NSEBCoachingGurugramContent({ faqs }: NSEBCoachingGurugr
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Related Pages</h2>
           <div className="grid md:grid-cols-4 gap-4">
-            <Link href="/biology-olympiad-coaching-gurugram" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <Link
+              href="/biology-olympiad-coaching-gurugram"
+              className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+            >
               <h3 className="font-semibold text-teal-600">Biology Olympiad Gurugram</h3>
               <p className="text-sm text-gray-600">Complete olympiad preparation</p>
             </Link>
-            <Link href="/ibo-preparation-gurugram" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <Link
+              href="/ibo-preparation-gurugram"
+              className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+            >
               <h3 className="font-semibold text-teal-600">IBO Preparation Gurugram</h3>
               <p className="text-sm text-gray-600">International level coaching</p>
             </Link>
-            <Link href="/neet-coaching-gurugram" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <Link
+              href="/neet-coaching-gurugram"
+              className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+            >
               <h3 className="font-semibold text-teal-600">NEET Coaching Gurugram</h3>
               <p className="text-sm text-gray-600">NEET Biology preparation</p>
             </Link>
-            <Link href="/neet-foundation-class-9-gurugram" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <Link
+              href="/neet-foundation-class-9-gurugram"
+              className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+            >
               <h3 className="font-semibold text-teal-600">NEET Foundation Class 9</h3>
               <p className="text-sm text-gray-600">Early preparation</p>
             </Link>
@@ -434,16 +492,30 @@ export default function NSEBCoachingGurugramContent({ faqs }: NSEBCoachingGurugr
       <section className="py-16 md:py-20 bg-gradient-to-r from-blue-600 to-teal-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Crack NSEB?</h2>
-          <p className="text-xl mb-8 opacity-90">Join our expert coaching in Gurugram and qualify for INBO</p>
+          <p className="text-xl mb-8 opacity-90">
+            Join our expert coaching in Gurugram and qualify for INBO
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NSEB%20Olympiad%20in%20Gurugram.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
-              <Button variant="secondary" size="xl" className="bg-white text-blue-600 hover:bg-gray-100 font-bold">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NSEB%20Olympiad%20in%20Gurugram.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="secondary"
+                size="xl"
+                className="bg-white text-blue-600 hover:bg-gray-100 font-bold"
+              >
                 <Play className="w-5 h-5 mr-2" />
                 Book Free Demo
               </Button>
             </Link>
             <a href={`tel:${CONTACT_INFO.phone.primary}`}>
-              <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-blue-600">
+              <Button
+                variant="outline"
+                size="xl"
+                className="border-white text-white hover:bg-white hover:text-blue-600"
+              >
                 <Phone className="w-5 h-5 mr-2" />
                 Call: +91-88264-44334
               </Button>

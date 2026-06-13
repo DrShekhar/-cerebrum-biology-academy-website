@@ -1,10 +1,10 @@
-import { Suspense } from 'react';
-import SmartWhatsAppCTA from '@/components/conversion/SmartWhatsAppCTA';
-import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection';
-import LocalitySchema from '@/components/seo/LocalitySchema';
-import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks';
-import { PricingSection } from '@/components/city/PricingSection';
-import { CostComparisonSection } from '@/components/city/CostComparisonSection';
+import { Suspense } from 'react'
+import SmartWhatsAppCTA from '@/components/conversion/SmartWhatsAppCTA'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import LocalitySchema from '@/components/seo/LocalitySchema'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 
 export default function PageContent() {
   const cityData = {
@@ -17,34 +17,40 @@ export default function PageContent() {
     },
     timezone: 'AST (UTC+3)',
     community: 'Growing Indian community',
-  };
+  }
 
   const faqs = [
     {
       question: 'Why choose Cerebrum Biology Academy for NEET coaching in Al Wakrah, Qatar?',
-      answer: 'Cerebrum Biology Academy offers a 98% success rate with personalized coaching tailored to the Qatar educational context. Our expert faculty, led by Dr. Shekhar C Singh, uses evidence-based teaching methods proven to maximize student performance.',
+      answer:
+        'Cerebrum Biology Academy offers a 98% success rate with personalized coaching tailored to the Qatar educational context. Our expert faculty, led by Dr. Shekhar C Singh, uses evidence-based teaching methods proven to maximize student performance.',
     },
     {
       question: 'What is the course duration for NEET preparation in Al Wakrah?',
-      answer: 'Our comprehensive NEET coaching program is designed for flexibility. We offer both intensive 12-month programs and accelerated 6-month tracks, depending on your current level and target timeline.',
+      answer:
+        'Our comprehensive NEET coaching program is designed for flexibility. We offer both intensive 12-month programs and accelerated 6-month tracks, depending on your current level and target timeline.',
     },
     {
       question: 'Are there Qatar board-specific coaching modules?',
-      answer: 'Yes, we provide curriculum customization for Qatar boards while maintaining NEET alignment. Our biology-focused approach ensures mastery of all concepts required for top scores.',
+      answer:
+        'Yes, we provide curriculum customization for Qatar boards while maintaining NEET alignment. Our biology-focused approach ensures mastery of all concepts required for top scores.',
     },
     {
       question: 'What support do students from Al Wakrah receive during the coaching?',
-      answer: 'Beyond classroom instruction, students get 1-on-1 mentoring, doubt-clearing sessions, mock tests, and personalized study schedules. We also provide nutrition and stress management guidance.',
+      answer:
+        'Beyond classroom instruction, students get 1-on-1 mentoring, doubt-clearing sessions, mock tests, and personalized study schedules. We also provide nutrition and stress management guidance.',
     },
     {
       question: 'How affordable is NEET coaching in Al Wakrah?',
-      answer: 'Our pricing is competitive and transparent with no hidden charges. We offer flexible payment plans and scholarships for merit students. Contact us for customized packages.',
+      answer:
+        'Our pricing is competitive and transparent with no hidden charges. We offer flexible payment plans and scholarships for merit students. Contact us for customized packages.',
     },
     {
       question: "Can I join from Al Wakrah if I'm still in Grade 10 or 11?",
-      answer: 'Absolutely! Early-bird enrollment gives students a significant advantage. We offer foundational courses for Grade 10-11 students to build strong fundamentals before intensive NEET prep.',
+      answer:
+        'Absolutely! Early-bird enrollment gives students a significant advantage. We offer foundational courses for Grade 10-11 students to build strong fundamentals before intensive NEET prep.',
     },
-  ];
+  ]
 
   return (
     <main>
@@ -52,9 +58,12 @@ export default function PageContent() {
         <div className="container">
           <h1>NEET Coaching in Al Wakrah, Qatar</h1>
           <p className="lead">
-            Al Wakrah, Qatar's growing satellite city south of Doha, offers modern educational infrastructure and competitive NEET coaching options. Cerebrum Biology Academy brings expert NEET coaching to Al Wakrah with a proven 98% success rate and personalized learning paths.
+            Al Wakrah, Qatar's growing satellite city south of Doha, offers modern educational
+            infrastructure and competitive NEET coaching options. Cerebrum Biology Academy brings
+            expert NEET coaching to Al Wakrah with a proven 98% success rate and personalized
+            learning paths.
           </p>
-          
+
           <div className="info-grid">
             <div className="info-card">
               <h3>Community Size</h3>
@@ -70,7 +79,7 @@ export default function PageContent() {
             </div>
           </div>
 
-          <SmartWhatsAppCTA 
+          <SmartWhatsAppCTA
             ctaText="Get NEET Coaching Details"
             message="Hi! I'm interested in NEET coaching in Al Wakrah, Qatar."
           />
@@ -80,12 +89,15 @@ export default function PageContent() {
       <section className="highlights-section">
         <div className="container">
           <h2>Why Al Wakrah for NEET Coaching?</h2>
-          <p>FIFA World Cup infrastructure, new schools, competitive pricing vs Doha, satellite city advantage</p>
+          <p>
+            FIFA World Cup infrastructure, new schools, competitive pricing vs Doha, satellite city
+            advantage
+          </p>
           <ul>
-              <li>MES Indian School</li>
-              <li>Al Wakrah Academy</li>
-              <li>Qatar International School</li>
-              <li>Doha Modern Indian School</li>
+            <li>MES Indian School</li>
+            <li>Al Wakrah Academy</li>
+            <li>Qatar International School</li>
+            <li>Doha Modern Indian School</li>
           </ul>
         </div>
       </section>
@@ -108,7 +120,7 @@ export default function PageContent() {
         </div>
       </section>
 
-      <SmartWhatsAppCTA 
+      <SmartWhatsAppCTA
         ctaText="Schedule Your Free Counseling"
         message="I'd like to schedule a free NEET counseling session. I'm from Al Wakrah, Qatar."
       />
@@ -124,9 +136,12 @@ export default function PageContent() {
       <section className="cta-final">
         <div className="container">
           <h2>Start Your NEET Success Journey in Al Wakrah</h2>
-          <p>Dr. Shekhar C Singh and the Cerebrum Biology Academy team are ready to guide you to NEET success.</p>
-          
-          <SmartWhatsAppCTA 
+          <p>
+            Dr. Shekhar C Singh and the Cerebrum Biology Academy team are ready to guide you to NEET
+            success.
+          </p>
+
+          <SmartWhatsAppCTA
             ctaText="Connect on WhatsApp Now"
             message="Hi Dr. Shekhar! I want to enroll in NEET coaching. I'm based in Al Wakrah, Qatar."
           />
@@ -137,7 +152,7 @@ export default function PageContent() {
         <RelatedCityLinks currentCity="Al Wakrah" />
       </Suspense>
 
-      <LocalitySchema 
+      <LocalitySchema
         city="Al Wakrah"
         country="Qatar"
         coordinates={{
@@ -146,5 +161,5 @@ export default function PageContent() {
         }}
       />
     </main>
-  );
+  )
 }

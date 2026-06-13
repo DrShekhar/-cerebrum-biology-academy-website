@@ -185,7 +185,10 @@ function VerifyEmailContent() {
         {/* Footer */}
         <p className="text-center text-gray-500 text-sm mt-6">
           Need help?{' '}
-          <a href="mailto:support@cerebrumbiologyacademy.com" className="text-green-600 hover:underline">
+          <a
+            href="mailto:support@cerebrumbiologyacademy.com"
+            className="text-green-600 hover:underline"
+          >
             Contact Support
           </a>
         </p>

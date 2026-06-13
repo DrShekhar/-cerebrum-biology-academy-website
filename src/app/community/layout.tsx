@@ -10,7 +10,12 @@ export const metadata: Metadata = {
 
   twitter: { card: 'summary_large_image' as const },
 
-  openGraph: { title: 'Student Community | Cerebrum Biology Academy', description: 'Student Community | Cerebrum Biology Academy', type: 'website', locale: 'en_IN' },
+  openGraph: {
+    title: 'Student Community | Cerebrum Biology Academy',
+    description: 'Student Community | Cerebrum Biology Academy',
+    type: 'website',
+    locale: 'en_IN',
+  },
 }
 
 export default function CommunityLayout({ children }: { children: React.ReactNode }) {

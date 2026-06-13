@@ -29,7 +29,8 @@ export default function Page() {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     name: 'How to Prepare for NEET Online from Home',
-    description: 'Complete guide to prepare for NEET exam online with effective self-study strategies, time management tips, and expert guidance.',
+    description:
+      'Complete guide to prepare for NEET exam online with effective self-study strategies, time management tips, and expert guidance.',
     totalTime: 'P12M',
     estimatedCost: {
       '@type': 'MonetaryAmount',

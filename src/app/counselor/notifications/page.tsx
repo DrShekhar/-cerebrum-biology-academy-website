@@ -68,17 +68,67 @@ const notificationConfig: Record<
   NotificationType,
   { icon: any; color: string; bgColor: string; label: string }
 > = {
-  BUYING_SIGNAL: { icon: Zap, color: 'text-amber-600', bgColor: 'bg-amber-100', label: 'Buying Signal' },
-  OVERDUE_FOLLOWUP: { icon: AlertTriangle, color: 'text-red-600', bgColor: 'bg-red-100', label: 'Overdue' },
-  LEAD_UNTOUCHED: { icon: Clock, color: 'text-orange-600', bgColor: 'bg-orange-100', label: 'Untouched Lead' },
-  HOT_LEAD_NEW: { icon: TrendingUp, color: 'text-red-500', bgColor: 'bg-red-50', label: 'Hot Lead' },
-  PAYMENT_STARTED: { icon: DollarSign, color: 'text-blue-600', bgColor: 'bg-blue-100', label: 'Payment' },
-  PAYMENT_COMPLETED: { icon: DollarSign, color: 'text-green-600', bgColor: 'bg-green-100', label: 'Payment' },
-  DEMO_BOOKED: { icon: Calendar, color: 'text-purple-600', bgColor: 'bg-purple-100', label: 'Demo' },
-  STAGE_CHANGE: { icon: Users, color: 'text-indigo-600', bgColor: 'bg-indigo-100', label: 'Stage Change' },
-  REPLY_RECEIVED: { icon: MessageSquare, color: 'text-green-600', bgColor: 'bg-green-100', label: 'Reply' },
+  BUYING_SIGNAL: {
+    icon: Zap,
+    color: 'text-amber-600',
+    bgColor: 'bg-amber-100',
+    label: 'Buying Signal',
+  },
+  OVERDUE_FOLLOWUP: {
+    icon: AlertTriangle,
+    color: 'text-red-600',
+    bgColor: 'bg-red-100',
+    label: 'Overdue',
+  },
+  LEAD_UNTOUCHED: {
+    icon: Clock,
+    color: 'text-orange-600',
+    bgColor: 'bg-orange-100',
+    label: 'Untouched Lead',
+  },
+  HOT_LEAD_NEW: {
+    icon: TrendingUp,
+    color: 'text-red-500',
+    bgColor: 'bg-red-50',
+    label: 'Hot Lead',
+  },
+  PAYMENT_STARTED: {
+    icon: DollarSign,
+    color: 'text-blue-600',
+    bgColor: 'bg-blue-100',
+    label: 'Payment',
+  },
+  PAYMENT_COMPLETED: {
+    icon: DollarSign,
+    color: 'text-green-600',
+    bgColor: 'bg-green-100',
+    label: 'Payment',
+  },
+  DEMO_BOOKED: {
+    icon: Calendar,
+    color: 'text-purple-600',
+    bgColor: 'bg-purple-100',
+    label: 'Demo',
+  },
+  STAGE_CHANGE: {
+    icon: Users,
+    color: 'text-indigo-600',
+    bgColor: 'bg-indigo-100',
+    label: 'Stage Change',
+  },
+  REPLY_RECEIVED: {
+    icon: MessageSquare,
+    color: 'text-green-600',
+    bgColor: 'bg-green-100',
+    label: 'Reply',
+  },
   TASK_DUE: { icon: Clock, color: 'text-amber-600', bgColor: 'bg-amber-100', label: 'Task Due' },
-  GOAL_PROGRESS: { icon: TrendingUp, color: 'text-indigo-600', bgColor: 'bg-indigo-100', label: 'Goal' },
+  GOAL_PROGRESS: {
+    icon: TrendingUp,
+    color: 'text-indigo-600',
+    bgColor: 'bg-indigo-100',
+    label: 'Goal',
+  },
   SYSTEM: { icon: Bell, color: 'text-gray-600', bgColor: 'bg-gray-100', label: 'System' },
 }
 
@@ -115,7 +165,9 @@ function NotificationCard({
       }`}
     >
       {/* Icon */}
-      <div className={`w-10 h-10 ${config.bgColor} rounded-xl flex items-center justify-center flex-shrink-0`}>
+      <div
+        className={`w-10 h-10 ${config.bgColor} rounded-xl flex items-center justify-center flex-shrink-0`}
+      >
         <Icon className={`w-5 h-5 ${config.color}`} />
       </div>
 
@@ -127,7 +179,9 @@ function NotificationCard({
               {!notification.isRead && (
                 <div className="w-2 h-2 bg-indigo-500 rounded-full flex-shrink-0" />
               )}
-              <h4 className={`text-sm ${notification.isRead ? 'text-gray-600' : 'text-gray-900 font-semibold'}`}>
+              <h4
+                className={`text-sm ${notification.isRead ? 'text-gray-600' : 'text-gray-900 font-semibold'}`}
+              >
                 {notification.title}
               </h4>
               {isUrgent && !notification.isRead && (
@@ -201,13 +255,7 @@ function NotificationCard({
 
 // ─── Notification Preferences ────────────────────────────────────────────────
 
-function NotificationPreferences({
-  isOpen,
-  onClose,
-}: {
-  isOpen: boolean
-  onClose: () => void
-}) {
+function NotificationPreferences({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const [prefs, setPrefs] = useState<Record<string, boolean>>({
     BUYING_SIGNAL: true,
     OVERDUE_FOLLOWUP: true,
@@ -234,7 +282,9 @@ function NotificationPreferences({
             <Settings className="w-5 h-5 text-gray-600" />
             <h2 className="text-lg font-bold text-gray-900">Notification Preferences</h2>
           </div>
-          <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-lg"><X className="w-4 h-4" /></button>
+          <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-lg">
+            <X className="w-4 h-4" />
+          </button>
         </div>
 
         <div className="p-6 space-y-6">
@@ -242,17 +292,33 @@ function NotificationPreferences({
           <div className="space-y-3">
             <label className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                {soundEnabled ? <Volume2 className="w-4 h-4 text-gray-600" /> : <VolumeX className="w-4 h-4 text-gray-400" />}
+                {soundEnabled ? (
+                  <Volume2 className="w-4 h-4 text-gray-600" />
+                ) : (
+                  <VolumeX className="w-4 h-4 text-gray-400" />
+                )}
                 <span className="text-sm font-medium text-gray-700">Sound alerts</span>
               </div>
-              <input type="checkbox" checked={soundEnabled} onChange={(e) => setSoundEnabled(e.target.checked)} className="rounded text-indigo-600" />
+              <input
+                type="checkbox"
+                checked={soundEnabled}
+                onChange={(e) => setSoundEnabled(e.target.checked)}
+                className="rounded text-indigo-600"
+              />
             </label>
             <label className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <BellRing className="w-4 h-4 text-gray-600" />
-                <span className="text-sm font-medium text-gray-700">Browser push notifications</span>
+                <span className="text-sm font-medium text-gray-700">
+                  Browser push notifications
+                </span>
               </div>
-              <input type="checkbox" checked={browserPush} onChange={(e) => setBrowserPush(e.target.checked)} className="rounded text-indigo-600" />
+              <input
+                type="checkbox"
+                checked={browserPush}
+                onChange={(e) => setBrowserPush(e.target.checked)}
+                className="rounded text-indigo-600"
+              />
             </label>
           </div>
 
@@ -265,7 +331,9 @@ function NotificationPreferences({
                 return (
                   <label key={type} className="flex items-center justify-between py-2">
                     <div className="flex items-center gap-2">
-                      <div className={`w-7 h-7 ${config.bgColor} rounded-lg flex items-center justify-center`}>
+                      <div
+                        className={`w-7 h-7 ${config.bgColor} rounded-lg flex items-center justify-center`}
+                      >
                         <Icon className={`w-3.5 h-3.5 ${config.color}`} />
                       </div>
                       <span className="text-sm text-gray-700">{config.label}</span>
@@ -285,7 +353,10 @@ function NotificationPreferences({
 
         <div className="p-6 border-t border-gray-100">
           <button
-            onClick={() => { showToast.success('Preferences saved'); onClose() }}
+            onClick={() => {
+              showToast.success('Preferences saved')
+              onClose()
+            }}
             className="w-full py-2.5 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-700 transition-colors"
           >
             Save Preferences
@@ -380,7 +451,9 @@ export default function NotificationsPage() {
     })
 
   const unreadCount = notifications.filter((n) => !n.isRead).length
-  const urgentCount = notifications.filter((n) => !n.isRead && (n.priority === 'URGENT' || n.priority === 'HIGH')).length
+  const urgentCount = notifications.filter(
+    (n) => !n.isRead && (n.priority === 'URGENT' || n.priority === 'HIGH')
+  ).length
 
   if (loading) {
     return (
@@ -408,7 +481,9 @@ export default function NotificationsPage() {
               </span>
             )}
           </div>
-          <p className="text-gray-600 mt-1">Real-time alerts for buying signals, follow-ups, and lead activity</p>
+          <p className="text-gray-600 mt-1">
+            Real-time alerts for buying signals, follow-ups, and lead activity
+          </p>
         </div>
         <div className="flex gap-2">
           <button
@@ -437,7 +512,9 @@ export default function NotificationsPage() {
             key={f.id}
             onClick={() => setFilter(f.id)}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-              filter === f.id ? 'bg-indigo-600 text-white' : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
+              filter === f.id
+                ? 'bg-indigo-600 text-white'
+                : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
             }`}
           >
             {f.label}
@@ -469,7 +546,9 @@ export default function NotificationsPage() {
           <Bell className="w-12 h-12 text-gray-300 mx-auto mb-3" />
           <p className="text-gray-500 font-medium">No notifications</p>
           <p className="text-sm text-gray-400 mt-1">
-            {filter === 'unread' ? "You're all caught up!" : 'Notifications will appear here as events happen'}
+            {filter === 'unread'
+              ? "You're all caught up!"
+              : 'Notifications will appear here as events happen'}
           </p>
         </div>
       ) : (
@@ -500,7 +579,8 @@ function generateDemoNotifications(): Notification[] {
       type: 'BUYING_SIGNAL',
       priority: 'URGENT',
       title: '🔥 Fee document opened!',
-      message: 'Priya Sharma\'s parent just opened the fee structure PDF (3rd time today). High purchase intent detected.',
+      message:
+        "Priya Sharma's parent just opened the fee structure PDF (3rd time today). High purchase intent detected.",
       leadId: 'demo_lead_1',
       leadName: 'Priya Sharma',
       actionLabel: 'Call Now',
@@ -513,7 +593,8 @@ function generateDemoNotifications(): Notification[] {
       type: 'OVERDUE_FOLLOWUP',
       priority: 'HIGH',
       title: '⚠️ 3 follow-ups overdue',
-      message: 'Rahul Verma, Ankit Patel, and Sneha Gupta have overdue follow-ups. Last contact was 5+ days ago.',
+      message:
+        'Rahul Verma, Ankit Patel, and Sneha Gupta have overdue follow-ups. Last contact was 5+ days ago.',
       actionUrl: '/counselor/tasks',
       actionLabel: 'View Tasks',
       isRead: false,
@@ -524,7 +605,8 @@ function generateDemoNotifications(): Notification[] {
       type: 'PAYMENT_STARTED',
       priority: 'HIGH',
       title: '💳 Payment link clicked!',
-      message: 'Amit Kumar clicked the payment link for ₹45,000 (EMI #1) but did not complete. Follow up immediately.',
+      message:
+        'Amit Kumar clicked the payment link for ₹45,000 (EMI #1) but did not complete. Follow up immediately.',
       leadId: 'demo_lead_3',
       leadName: 'Amit Kumar',
       actionLabel: 'Send Reminder',
@@ -537,7 +619,8 @@ function generateDemoNotifications(): Notification[] {
       type: 'HOT_LEAD_NEW',
       priority: 'HIGH',
       title: '🚀 New hot lead! Score: 85',
-      message: 'Kavya Reddy — Class 12, Biology weak, dropper from the 2nd-largest national NEET chain. Demo attended + scholarship test registered. Auto-assigned to you.',
+      message:
+        'Kavya Reddy — Class 12, Biology weak, dropper from the 2nd-largest national NEET chain. Demo attended + scholarship test registered. Auto-assigned to you.',
       leadId: 'demo_lead_4',
       leadName: 'Kavya Reddy',
       isRead: false,
@@ -548,7 +631,8 @@ function generateDemoNotifications(): Notification[] {
       type: 'DEMO_BOOKED',
       priority: 'MEDIUM',
       title: '📅 Demo booked for tomorrow',
-      message: 'Riya Singh booked a demo class for tomorrow at 4:00 PM. Course: NEET Regular Batch 2027.',
+      message:
+        'Riya Singh booked a demo class for tomorrow at 4:00 PM. Course: NEET Regular Batch 2027.',
       leadId: 'demo_lead_5',
       leadName: 'Riya Singh',
       isRead: false,
@@ -559,7 +643,8 @@ function generateDemoNotifications(): Notification[] {
       type: 'REPLY_RECEIVED',
       priority: 'MEDIUM',
       title: '💬 WhatsApp reply received',
-      message: 'Neha Joshi replied: "What are the batch timings for the dropper course?" — respond within 5 minutes for best conversion.',
+      message:
+        'Neha Joshi replied: "What are the batch timings for the dropper course?" — respond within 5 minutes for best conversion.',
       leadId: 'demo_lead_6',
       leadName: 'Neha Joshi',
       actionLabel: 'Reply on WhatsApp',
@@ -571,7 +656,8 @@ function generateDemoNotifications(): Notification[] {
       type: 'PAYMENT_COMPLETED',
       priority: 'LOW',
       title: '✅ Payment received!',
-      message: 'Vikram Singh completed ₹90,000 payment (Full fee). Enrollment confirmed for Regular Batch 2026.',
+      message:
+        'Vikram Singh completed ₹90,000 payment (Full fee). Enrollment confirmed for Regular Batch 2026.',
       leadId: 'demo_lead_7',
       leadName: 'Vikram Singh',
       isRead: true,
@@ -582,7 +668,8 @@ function generateDemoNotifications(): Notification[] {
       type: 'LEAD_UNTOUCHED',
       priority: 'MEDIUM',
       title: '⏰ 5 leads untouched for 4+ hours',
-      message: 'New leads from Google Ads haven\'t been contacted yet. First-response time affects conversion by 3x.',
+      message:
+        "New leads from Google Ads haven't been contacted yet. First-response time affects conversion by 3x.",
       actionUrl: '/counselor/leads',
       actionLabel: 'View Pipeline',
       isRead: true,

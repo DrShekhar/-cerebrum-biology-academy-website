@@ -221,8 +221,7 @@ export default function BiologyTutorOnlinePage() {
 
           <div className="container relative mx-auto px-4">
             <div className="grid items-center gap-12 md:grid-cols-2">
-              <div
-               className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-medium backdrop-blur-sm">
                   Personalized Learning Experience
                 </span>
@@ -273,9 +272,7 @@ export default function BiologyTutorOnlinePage() {
                 </div>
               </div>
 
-              <div
-                className="relative hidden md:block animate-fadeInUp"
-              >
+              <div className="relative hidden md:block animate-fadeInUp">
                 <div className="relative h-[400px] w-full overflow-hidden rounded-2xl shadow-2xl">
                   <Image
                     src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop"
@@ -300,9 +297,7 @@ export default function BiologyTutorOnlinePage() {
         {/* Why Online Tuition Section */}
         <section className="bg-white py-16">
           <div className="container mx-auto px-4">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Why Choose Online Biology Tuition?
               </h2>
@@ -331,9 +326,7 @@ export default function BiologyTutorOnlinePage() {
         {/* Tutoring Options Section */}
         <section className="bg-gradient-to-b from-blue-50 to-white py-16">
           <div className="container mx-auto px-4">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Online Biology Tuition Options
               </h2>
@@ -389,9 +382,7 @@ export default function BiologyTutorOnlinePage() {
         {/* Comparison Section */}
         <section className="bg-white py-16">
           <div className="container mx-auto px-4">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Online Biology Tuition vs Home Tutor
               </h2>
@@ -401,9 +392,7 @@ export default function BiologyTutorOnlinePage() {
               </p>
             </div>
 
-            <div
-              className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0 animate-fadeInUp"
-            >
+            <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0 animate-fadeInUp">
               <table className="w-full min-w-[500px] md:min-w-[600px] rounded-xl bg-white shadow-lg text-sm md:text-base">
                 <thead>
                   <tr className="bg-blue-600 text-white">
@@ -432,8 +421,7 @@ export default function BiologyTutorOnlinePage() {
         <section className="bg-gradient-to-r from-blue-600 to-blue-600 py-16 text-white">
           <div className="container mx-auto px-4">
             <div className="grid items-center gap-12 md:grid-cols-2">
-              <div
-               className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-medium">
                   For NRI Students
                 </span>
@@ -481,9 +469,7 @@ export default function BiologyTutorOnlinePage() {
                 </div>
               </div>
 
-              <div
-                className="relative animate-fadeInUp"
-              >
+              <div className="relative animate-fadeInUp">
                 <div className="relative h-[350px] w-full overflow-hidden rounded-2xl shadow-2xl">
                   <Image
                     src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=350&fit=crop"
@@ -500,9 +486,7 @@ export default function BiologyTutorOnlinePage() {
         {/* FAQ Section */}
         <section className="bg-gray-50 py-16">
           <div className="container mx-auto px-4">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Frequently Asked Questions
               </h2>
@@ -513,10 +497,7 @@ export default function BiologyTutorOnlinePage() {
 
             <div className="mx-auto max-w-3xl space-y-4">
               {faqSchema.mainEntity.map((faq, index) => (
-                <div
-                  key={index}
-                  className="rounded-xl bg-white p-6 shadow-md animate-fadeInUp"
-                >
+                <div key={index} className="rounded-xl bg-white p-6 shadow-md animate-fadeInUp">
                   <h3 className="mb-3 text-lg font-bold text-gray-900">{faq.name}</h3>
                   <p className="text-gray-600">{faq.acceptedAnswer.text}</p>
                 </div>
@@ -528,9 +509,7 @@ export default function BiologyTutorOnlinePage() {
         {/* Internal Links Section */}
         <section className="bg-white py-16">
           <div className="container mx-auto px-4">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Explore More Options
               </h2>
@@ -595,8 +574,7 @@ export default function BiologyTutorOnlinePage() {
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-blue-600 to-blue-600 py-16">
           <div className="container mx-auto px-4 text-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
                 Start Your Online Biology Tuition Today
               </h2>

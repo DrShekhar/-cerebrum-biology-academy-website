@@ -107,9 +107,7 @@ export default function BotanyTeacherNearMePage() {
       <section className="relative overflow-hidden bg-gradient-to-r from-lime-600 to-green-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
-          <div
-            className="mx-auto max-w-4xl text-center animate-fadeInUp"
-          >
+          <div className="mx-auto max-w-4xl text-center animate-fadeInUp">
             <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <MapPin className="mr-1 inline h-4 w-4" />4 Centers in Delhi NCR + Pan-India Online
             </span>
@@ -142,9 +140,7 @@ export default function BotanyTeacherNearMePage() {
       {/* Offline Centers */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Our Offline Centers</h2>
             <p className="text-lg text-gray-600">
               Expert botany teachers at 4 convenient locations in Delhi NCR
@@ -192,9 +188,7 @@ export default function BotanyTeacherNearMePage() {
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <div
-              className="rounded-2xl bg-gradient-to-r from-lime-600 to-green-600 p-8 text-white md:p-12 animate-fadeInUp"
-            >
+            <div className="rounded-2xl bg-gradient-to-r from-lime-600 to-green-600 p-8 text-white md:p-12 animate-fadeInUp">
               <div className="flex flex-col items-center gap-8 md:flex-row">
                 <div className="flex-1">
                   <Globe className="mb-4 h-12 w-12" />
@@ -236,9 +230,7 @@ export default function BotanyTeacherNearMePage() {
       {isInDelhiNCR === false && (
         <section className="py-12">
           <div className="container mx-auto px-4">
-            <div
-              className="mb-8 text-center animate-fadeInUp"
-            >
+            <div className="mb-8 text-center animate-fadeInUp">
               <h2 className="mb-3 text-2xl font-bold text-gray-900">
                 Botany Classes Available in Your Region
               </h2>
@@ -301,9 +293,7 @@ export default function BotanyTeacherNearMePage() {
       {/* Why Choose */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Why Choose Our Botany Coaching
             </h2>
@@ -342,10 +332,7 @@ export default function BotanyTeacherNearMePage() {
                 desc: 'Personalized attention with limited students per batch.',
               },
             ].map((feature, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <feature.icon className="mb-4 h-10 w-10 text-lime-600" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
@@ -358,18 +345,13 @@ export default function BotanyTeacherNearMePage() {
       {/* FAQs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
           </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>

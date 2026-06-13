@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Class 10 NEET Foundation Biology | CBSE Board + Early NEET Prep | Cerebrum Biology Academy',
+  title:
+    'Class 10 NEET Foundation Biology | CBSE Board + Early NEET Prep | Cerebrum Biology Academy',
   description:
     'Class 10 NEET Foundation Biology programme — integrated CBSE board prep + early NEET 2028 / 2029 head start. NCERT depth, NSEB / INBO olympiad pathway entry, scientific reasoning + MCQ technique. AIIMS-trained Dr. Shekhar C Singh, small batches, weekly 1:1 doubt slots.',
   keywords: [

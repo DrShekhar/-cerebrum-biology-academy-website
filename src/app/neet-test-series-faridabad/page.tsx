@@ -34,7 +34,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Test Series in Faridabad | 50+ Mock Tests with Analysis',
-    description: 'Join our comprehensive NEET Biology test series in Faridabad. 50+ full-length mock tests, detailed analysis, rank prediction. Online and offline options. Starting ₹8,000.',
+    description:
+      'Join our comprehensive NEET Biology test series in Faridabad. 50+ full-length mock tests, detailed analysis, rank prediction. Online and offline options. Starting ₹8,000.',
   },
 }
 
@@ -149,7 +150,11 @@ export default function NEETTestSeriesFaridabadPage() {
     <>
       <LocalBusinessSchema />
       <CerebrumPersonSchema
-        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+        knowsAbout={[
+          'NEET Faridabad',
+          'NEET Biology Faridabad',
+          'Medical entrance coaching Faridabad',
+        ]}
       />
       <script
         type="application/ld+json"

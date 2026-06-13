@@ -68,7 +68,9 @@ interface VoiceSearchContentProps {
 export function VoiceSearchContent({ intro, keyInfo, className = '' }: VoiceSearchContentProps) {
   return (
     <div className={className}>
-      <p data-speakable="intro" className="sr-only">{intro}</p>
+      <p data-speakable="intro" className="sr-only">
+        {intro}
+      </p>
       <div data-speakable="key-info" className="sr-only">
         {keyInfo.map((info, index) => (
           <p key={index}>{info}</p>
@@ -206,7 +208,11 @@ export function LocalBusinessSpeakable({
     ],
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['[data-speakable="business-intro"]', '[data-speakable="contact-info"]', '[data-speakable="areas-served"]'],
+      cssSelector: [
+        '[data-speakable="business-intro"]',
+        '[data-speakable="contact-info"]',
+        '[data-speakable="areas-served"]',
+      ],
     },
   }
 

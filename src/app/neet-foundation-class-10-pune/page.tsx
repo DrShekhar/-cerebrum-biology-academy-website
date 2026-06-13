@@ -36,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 10 in Pune | Maharashtra SSC + CBSE + ICSE Parallel',
-    description: 'NEET Foundation Class 10 in Pune at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Maharashtra SSC + NEET parallel. Koregaon Park, Aundh, Hinjewadi, Koth...',
+    description:
+      'NEET Foundation Class 10 in Pune at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Maharashtra SSC + NEET parallel. Koregaon Park, Aundh, Hinjewadi, Koth...',
   },
 }
 
@@ -57,7 +58,8 @@ const faqs = [
       "CBSE/ICSE/International feeders: Symbiosis International, Mercedes-Benz International (Hadapsar), Indus International (Bavdhan), Vibgyor High (multiple campuses), Bishop's School (Camp + Undri), Loyola High School, Mahindra International, MIT Vishwashanti Gurukul, Pawar Public School, DPS Pune, Hutchings High School, Akshara International, DSK World. Maharashtra SSC feeders include various Marathi-medium-with-English-track and English-medium Maharashtra Board schools across Pune Municipal Corporation and Pimpri-Chinchwad Municipal Corporation.",
   },
   {
-    question: 'How does Cerebrum compare to the 2nd-largest national NEET chain Pune or Sinhgad Foundation for Class 10 NEET?',
+    question:
+      'How does Cerebrum compare to the 2nd-largest national NEET chain Pune or Sinhgad Foundation for Class 10 NEET?',
     answer:
       'the 2nd-largest national NEET chain Scholastics Pune operates ~5 centres with 150-300 student Class 10 PCB Foundation batches. Sinhgad Foundation (Pune-headquartered) runs Class 10 prep with similar mass-batch model. the largest national NEET chain Pune operates 1-2 centres. For Class 10 specifically, all three deprioritise Maharashtra SSC board strategy in favour of NEET-only drilling. For families targeting both Maharashtra SSC 90%+ AND NEET-ready foundations for Class 11-12, Cerebrum is structurally different (biology-only, 15-20 student batches, AIIMS-trained faculty, parallel board + NEET pedagogy). Many Pune families pair Cerebrum biology (₹55K-75K Ascent) with the 2nd-largest national NEET chain/Sinhgad for PC.',
   },

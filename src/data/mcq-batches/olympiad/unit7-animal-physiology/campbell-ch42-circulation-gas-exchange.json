@@ -29,12 +29,7 @@
     {
       "type": "MCQ",
       "question": "The cardiac output (CO) of a resting human is approximately 5 L/min. If the heart rate (HR) is 72 bpm and the end-diastolic volume (EDV) is 120 mL, what is the ejection fraction (EF)?",
-      "options": [
-        "42%",
-        "72%",
-        "58%",
-        "35%"
-      ],
+      "options": ["42%", "72%", "58%", "35%"],
       "correctAnswer": "C",
       "explanation": "Cardiac output = Heart rate x Stroke volume. So SV = CO/HR = 5000 mL/min / 72 beats/min = 69.4 mL/beat. Ejection fraction = SV/EDV = 69.4/120 = 0.578 = 58%. A normal ejection fraction is 55-70%, so this value falls within the normal range. Option A (42%) would indicate mild heart failure (HFrEF is defined as EF < 40%). Option C (72%) would be supranormal, typically seen during exercise. Option D (35%) would indicate significant systolic dysfunction. The ejection fraction is one of the most important clinical parameters for assessing cardiac function, and it represents the fraction of blood in the ventricle that is ejected with each heartbeat.",
       "isOlympiad": true,
@@ -329,12 +324,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about blood vessel structure and function:\nS1: Arteries have thicker walls with more smooth muscle and elastic tissue than veins, enabling them to withstand and buffer high-pressure pulsatile blood flow.\nS2: Capillaries consist of a single layer of endothelial cells and a basement membrane, minimizing diffusion distance for gas and nutrient exchange.\nS3: Veins contain valves that prevent backflow and rely on the skeletal muscle pump and respiratory pump to assist venous return to the heart.\nS4: Arterioles are the primary resistance vessels because their small diameter and thick smooth muscle layer allow precise regulation of blood flow to downstream capillary beds.",
-      "options": [
-        "TTTT",
-        "TTFT",
-        "TFTT",
-        "TTTF"
-      ],
+      "options": ["TTTT", "TTFT", "TFTT", "TTTF"],
       "correctAnswer": "TTTT",
       "explanation": "All four statements are TRUE. S1: Arteries have three thick layers (tunica intima, media, externa) with the tunica media being particularly well-developed with smooth muscle and elastic fibers. The elastic tissue allows the Windkessel function, and the smooth muscle allows active tone regulation. S2: Capillaries are the simplest blood vessels, consisting only of endothelial cells surrounded by a basement membrane, creating the thinnest possible barrier (0.5-1 \u03bcm) for diffusion. Some capillaries have pores (fenestrated) or gaps (sinusoidal) for even greater exchange capacity. S3: Venous valves are bicuspid folds of the tunica intima that prevent gravity-driven backflow, particularly in the limbs. The skeletal muscle pump (contraction squeezing veins) and respiratory pump (thoracic pressure changes during breathing) are essential for venous return. S4: Arterioles (15-300 \u03bcm diameter) have a proportionally thick smooth muscle layer that can significantly change vessel radius. By Poiseuille's law, small changes in arteriolar radius produce large changes in resistance (r^4 relationship), making arterioles the primary determinants of total peripheral resistance and regional blood flow distribution.",
       "isOlympiad": true,
@@ -349,12 +339,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about comparative circulatory systems:\nS1: Fish have a single-circuit circulation where blood passes through the heart once per complete circuit (heart \u2192 gills \u2192 systemic capillaries \u2192 heart).\nS2: Amphibians have a three-chambered heart (two atria, one ventricle) where mixing of oxygenated and deoxygenated blood occurs in the single ventricle.\nS3: Crocodilians have a four-chambered heart identical in function to mammalian hearts, with complete separation of pulmonary and systemic circuits.\nS4: The double circulation of mammals (pulmonary + systemic) allows the generation of different pressures for each circuit \u2014 low pressure in the pulmonary circuit prevents pulmonary edema while high pressure in the systemic circuit ensures adequate perfusion of distant organs.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFFT",
-        "TTTF"
-      ],
+      "options": ["TTFT", "TTTT", "TFFT", "TTTF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Fish have a single-circuit circulation. The two-chambered heart (one atrium, one ventricle) pumps deoxygenated blood to the gills, where gas exchange occurs. Oxygenated blood then flows through systemic capillaries before returning to the heart. A disadvantage is that blood pressure drops significantly after passing through gill capillaries, limiting systemic blood flow rate. S2 is TRUE: Most amphibians have a three-chambered heart with some mixing in the ventricle. However, internal ridges and differential timing of atrial contraction direct most oxygenated blood toward the systemic arch and most deoxygenated blood toward the pulmocutaneous arch, achieving partial separation. S3 is FALSE: While crocodilians do have a four-chambered heart with a complete ventricular septum, they possess a unique feature: the foramen of Panizza, a connection between the left and right aortic arches, and a left aorta that exits the right ventricle. This allows a right-to-left shunt during diving, bypassing the lungs. This is NOT identical to mammalian heart function. S4 is TRUE: The left ventricle generates systemic pressure (~120/80 mmHg in humans) while the right ventricle generates pulmonary pressure (~25/8 mmHg), which is essential for preventing fluid leakage into the thin-walled alveoli.",
       "isOlympiad": true,
@@ -369,12 +354,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about respiratory gas exchange:\nS1: The respiratory quotient (RQ) is the ratio of CO2 produced to O2 consumed and is approximately 1.0 for pure carbohydrate oxidation and 0.7 for pure fat oxidation.\nS2: Hyperventilation increases arterial PO2 significantly above normal levels.\nS3: The alveolar gas equation predicts that as alveolar ventilation increases, alveolar PO2 rises and alveolar PCO2 falls.\nS4: Surfactant produced by type II pneumocytes reduces alveolar surface tension, preventing alveolar collapse during expiration and reducing the work of breathing.",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TFTT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: RQ = CO2 produced / O2 consumed. For glucose oxidation: C6H12O6 + 6O2 \u2192 6CO2 + 6H2O, RQ = 6/6 = 1.0. For fat (palmitate): C16H32O2 + 23O2 \u2192 16CO2 + 16H2O, RQ = 16/23 = 0.70. For protein, RQ \u2248 0.8. A mixed diet gives RQ \u2248 0.82. S2 is FALSE: Hyperventilation dramatically decreases arterial PCO2 (from ~40 to ~20 mmHg) but increases arterial PO2 only modestly (from ~100 to ~110-120 mmHg). This is because hemoglobin is already ~98% saturated at normal PO2, and the additional O2 from hyperventilation mostly dissolves in plasma without significantly increasing total O2 content. The main effect of hyperventilation is CO2 washout causing respiratory alkalosis. S3 is TRUE: The alveolar gas equation (PAO2 = PIO2 - PACO2/RQ) shows that increasing ventilation decreases PACO2 (more CO2 exhaled), which increases PAO2. S4 is TRUE: Pulmonary surfactant (primarily dipalmitoylphosphatidylcholine, DPPC) reduces alveolar surface tension by inserting between water molecules at the air-liquid interface, preventing atelectasis and reducing inspiratory work.",
       "isOlympiad": true,
@@ -389,12 +369,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the Bohr effect:\nS1: The Bohr effect describes the decrease in hemoglobin's oxygen affinity at lower pH and higher CO2 levels.\nS2: The physiological significance of the Bohr effect is that it promotes oxygen loading at tissues where metabolism produces CO2 and H+.\nS3: H+ and CO2 stabilize the T-state (tense, deoxygenated form) of hemoglobin by forming salt bridges between subunits and carbamino groups on terminal amino acids.\nS4: The Bohr effect is absent in fetal hemoglobin, which is why fetal hemoglobin has a higher oxygen affinity than adult hemoglobin.",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TFTF",
-        "TFTT"
-      ],
+      "options": ["TFTT", "TTTT", "TFTF", "TFTT"],
       "correctAnswer": "TFTF",
       "explanation": "S1 is TRUE: Christian Bohr (1904) described this rightward shift of the oxygen dissociation curve at lower pH and higher PCO2. At metabolically active tissues, CO2 production lowers pH (via H2CO3 dissociation), which decreases hemoglobin's O2 affinity, promoting O2 release. S2 is FALSE: The statement reverses the effect. The Bohr effect promotes oxygen UNLOADING (not loading) at tissues. At tissues, low pH and high CO2 decrease hemoglobin's oxygen affinity, causing it to release O2. In the lungs, high pH and low CO2 increase affinity, promoting O2 loading. Option S2 has the correct concept backward. S3 is TRUE: Protons (H+) bind to specific histidine residues (particularly His-146 on beta subunits) forming salt bridges that stabilize the T-state. CO2 reacts with N-terminal amino groups to form carbamino groups (R-NH-COO-), also stabilizing the T-state. Both favor the low-affinity conformation. S4 is FALSE: Fetal hemoglobin (HbF) does exhibit a Bohr effect, though it may be slightly smaller in magnitude than adult hemoglobin. The higher oxygen affinity of HbF is primarily due to reduced 2,3-BPG binding (as discussed earlier), not absence of the Bohr effect.",
       "isOlympiad": true,
@@ -689,12 +664,7 @@
     {
       "type": "MCQ",
       "question": "Mean arterial pressure (MAP) can be estimated as MAP = diastolic pressure + 1/3(pulse pressure). For a person with blood pressure 120/80 mmHg, what is the MAP?",
-      "options": [
-        "107 mmHg",
-        "100 mmHg",
-        "93 mmHg",
-        "80 mmHg"
-      ],
+      "options": ["107 mmHg", "100 mmHg", "93 mmHg", "80 mmHg"],
       "correctAnswer": "C",
       "explanation": "Pulse pressure = systolic - diastolic = 120 - 80 = 40 mmHg. MAP = diastolic + 1/3(pulse pressure) = 80 + 1/3(40) = 80 + 13.3 = 93.3 mmHg. The formula weights diastolic pressure more heavily because the heart spends approximately twice as long in diastole (2/3 of the cardiac cycle) as in systole (1/3 of the cardiac cycle) at rest. MAP represents the average driving pressure for tissue perfusion throughout the cardiac cycle. A MAP of at least 60 mmHg is required to adequately perfuse vital organs. Option A (100 mmHg) would be the arithmetic mean, ignoring the time-weighting. Option C represents diastolic pressure alone. Option D overestimates by weighting systolic pressure too heavily. During exercise, the systolic/diastolic ratio changes as heart rate increases, and the 1/3 rule becomes less accurate.",
       "isOlympiad": true,
@@ -849,12 +819,7 @@
     {
       "type": "MCQ",
       "question": "The Fick principle can be used to calculate cardiac output. If a patient consumes 250 mL O2/min, has an arterial O2 content of 200 mL O2/L blood, and a mixed venous O2 content of 150 mL O2/L blood, what is the cardiac output?",
-      "options": [
-        "10 L/min",
-        "5 L/min",
-        "1.25 L/min",
-        "2.5 L/min"
-      ],
+      "options": ["10 L/min", "5 L/min", "1.25 L/min", "2.5 L/min"],
       "correctAnswer": "B",
       "explanation": "The Fick principle states: O2 consumption = Cardiac output x (arterial O2 content - venous O2 content). Rearranging: CO = VO2 / (CaO2 - CvO2) = 250 mL/min / (200 - 150) mL/L = 250/50 = 5 L/min. This is a normal resting cardiac output. The Fick principle is based on the conservation of mass: the amount of oxygen consumed by the body per minute must equal the amount of oxygen delivered by the arterial blood minus the amount remaining in venous blood. The arteriovenous O2 difference (50 mL/L in this case) represents the fraction of carried oxygen that tissues extract. During exercise, both VO2 and a-v O2 difference increase, and cardiac output can reach 25-30 L/min. Option B (2.5 L/min) would indicate heart failure. Option C (10 L/min) would indicate a hyperkinetic state. Option D (1.25 L/min) would be incompatible with life.",
       "isOlympiad": true,
@@ -909,12 +874,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the cardiac action potential:\nS1: The SA node action potential has a gradual depolarization phase (pacemaker potential) caused by funny current (If) \u2014 a mixed Na+/K+ current activated by hyperpolarization, plus T-type Ca2+ channels.\nS2: Ventricular cardiomyocyte action potentials have a prolonged plateau phase (Phase 2) caused by L-type Ca2+ channels, which prevents tetanic contraction by maintaining a long refractory period.\nS3: The refractory period of cardiac muscle is much shorter than skeletal muscle, allowing the heart to contract tetanically for sustained ejection.\nS4: Beta-1 adrenergic stimulation increases heart rate by enhancing the If current and L-type Ca2+ channel activity in SA node cells, accelerating the rate of pacemaker depolarization.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFFT",
-        "TFTF"
-      ],
+      "options": ["TTFT", "TTTT", "TFFT", "TFTF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: SA node cells have no stable resting potential. After repolarization, the funny current (HCN channels conducting Na+ inward and K+ outward at negative potentials) creates a gradual depolarization. As the membrane potential reaches about -40 mV, T-type and then L-type Ca2+ channels open, producing the upstroke. This automatic depolarization makes the SA node the heart's pacemaker. S2 is TRUE: The ventricular action potential has 5 phases (0-4), with the plateau (Phase 2) lasting approximately 200-300 ms due to a balance between inward L-type Ca2+ current and outward delayed rectifier K+ currents. This prolonged plateau creates a long absolute refractory period, preventing tetanus. S3 is FALSE: The cardiac refractory period is MUCH LONGER than skeletal muscle (200-300 ms vs. 1-2 ms), not shorter. This long refractory period is essential to prevent tetanic contraction, which would stop the heart from filling between beats. S4 is TRUE: Sympathetic stimulation via beta-1 receptors increases cAMP in SA node cells, which enhances If (shifting its activation to more positive voltages) and increases L-type Ca2+ current, both accelerating pacemaker depolarization and increasing heart rate (positive chronotropy).",
       "isOlympiad": true,
@@ -929,12 +889,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about Starling forces and capillary fluid dynamics:\nS1: Blood hydrostatic pressure is higher at the arteriolar end of the capillary (~35 mmHg) than at the venular end (~15 mmHg), favoring filtration at the arteriolar end and reabsorption at the venular end.\nS2: Plasma colloid osmotic pressure (~28 mmHg) is primarily due to plasma albumin and favors fluid reabsorption into the capillary throughout its length.\nS3: Interstitial fluid hydrostatic pressure is typically positive and adds to the filtration pressure at the arteriolar end.\nS4: Net filtration exceeds net reabsorption in most capillary beds, and the excess filtered fluid is removed by the lymphatic system.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFFT",
-        "TTFF"
-      ],
+      "options": ["TTFT", "TTTT", "TFFT", "TTFF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Blood hydrostatic pressure (BHP) decreases from arteriolar (~35 mmHg) to venular end (~15 mmHg) due to resistance along the capillary. At the arteriolar end, BHP exceeds plasma osmotic pressure, producing net filtration. At the venular end, plasma osmotic pressure exceeds BHP, producing net reabsorption. This is the classic Starling model. S2 is TRUE: Plasma colloid osmotic (oncotic) pressure is approximately 25-28 mmHg, primarily generated by albumin (which accounts for ~80% of total osmotic pressure due to its high concentration and net negative charge attracting Na+ and water). This oncotic pressure opposes filtration throughout the capillary length. S3 is FALSE: Interstitial fluid hydrostatic pressure (IFHP) is typically slightly negative (-1 to -3 mmHg) in most tissues (due to lymphatic drainage creating slight suction), which actually favors filtration out of the capillary. A positive IFHP would oppose filtration. S4 is TRUE: Net filtration exceeds reabsorption by approximately 3 liters/day, and this excess is returned to the circulation via lymphatic drainage, maintaining fluid homeostasis.",
       "isOlympiad": true,
@@ -949,12 +904,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about respiratory adaptations:\nS1: Mammalian lungs ventilate using negative pressure breathing, where diaphragm contraction and intercostal muscle expansion create negative intrathoracic pressure that draws air in.\nS2: Amphibians use positive pressure (buccal pump) breathing, forcing air into the lungs from the buccal cavity.\nS3: The tidal volume of a resting human is approximately 500 mL, of which approximately 350 mL reaches the alveoli (alveolar ventilation) and 150 mL remains in the anatomical dead space.\nS4: Residual volume is the amount of air that can be forcefully expelled after a maximum expiration.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Mammalian inspiration is an active process. Contraction of the diaphragm (flatting downward) and external intercostal muscles (raising the ribs) increases thoracic volume, creating a negative intrathoracic pressure (below atmospheric), which draws air into the lungs through the airway. This is negative-pressure ventilation, as opposed to the positive-pressure ventilation used in mechanical ventilators. S2 is TRUE: Most amphibians use a buccal pump mechanism. Air is drawn into the buccal (oral) cavity by lowering the floor of the mouth, then the nostrils close and the floor of the mouth rises, pushing (forcing) air into the lungs under positive pressure. This is the opposite of mammalian negative-pressure breathing. S3 is TRUE: At rest, tidal volume (VT) is approximately 500 mL. Of this, approximately 150 mL fills the conducting airways (nose to terminal bronchioles \u2014 anatomical dead space) where no gas exchange occurs. The remaining 350 mL reaches the alveoli for gas exchange. Alveolar ventilation = (VT - VD) x respiratory rate = 350 x 12 = 4200 mL/min. S4 is FALSE: Residual volume (RV) is the amount of air that REMAINS in the lungs after a maximum forced expiration (~1200 mL in adults). It cannot be expelled. The definition given in S4 actually describes the expiratory reserve volume (ERV).",
       "isOlympiad": true,

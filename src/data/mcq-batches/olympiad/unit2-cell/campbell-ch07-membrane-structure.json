@@ -69,12 +69,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about aquaporins:\nS1: Aquaporins allow water but not protons (H3O+) to pass through the channel\nS2: The selectivity of aquaporins is achieved partly by a constriction region containing two conserved NPA (Asn-Pro-Ala) motifs\nS3: Aquaporin-2 (AQP2) in the kidney collecting duct is regulated by vasopressin (ADH) through insertion into the apical membrane\nS4: Aquaporins transport water by active transport, using ATP to pump water molecules against their concentration gradient",
-      "options": [
-        "TTTT",
-        "TTTF",
-        "TFTT",
-        "FTTF"
-      ],
+      "options": ["TTTT", "TTTF", "TFTT", "FTTF"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Aquaporins have a remarkable selectivity mechanism that allows rapid water transport (~3 billion molecules per second) while completely excluding protons. The channel is oriented so that water molecules pass single-file, with their dipoles reoriented at the NPA constriction to break the hydrogen-bonded water chain, preventing proton hopping (Grotthuss mechanism). S2 is TRUE: The two NPA motifs from opposite loops meet in the center of the channel, creating a constriction that reorients water molecules and provides size exclusion. An additional selectivity filter (ar/R constriction) near the extracellular end uses an arginine residue to provide additional selectivity. S3 is TRUE: Vasopressin (ADH) binds V2 receptors on basolateral membranes of collecting duct principal cells, activating cAMP-PKA signaling that triggers exocytic insertion of AQP2-containing vesicles into the apical membrane, increasing water reabsorption. S4 is FALSE: Aquaporins facilitate PASSIVE water transport down the osmotic gradient. They are channels, not pumps.",
       "isOlympiad": true,
@@ -229,12 +224,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about membrane transport proteins:\nS1: GLUT4 is an insulin-regulated glucose transporter that is recruited to the plasma membrane in response to insulin signaling\nS2: The Na+/K+-ATPase is electrogenic because it pumps 3 Na+ out for every 2 K+ in, creating a net outward positive current\nS3: Ion channels are always open and cannot be regulated\nS4: The H+/K+-ATPase in gastric parietal cells acidifies the stomach by pumping H+ into the lumen in exchange for K+",
-      "options": [
-        "TTFT",
-        "TTTF",
-        "TFFT",
-        "TTTT"
-      ],
+      "options": ["TTFT", "TTTF", "TFFT", "TTTT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: In the absence of insulin, GLUT4 is stored in intracellular vesicles (GLUT4 storage vesicles, GSVs). Insulin signaling activates PI3K-Akt-AS160 pathway, which promotes translocation and fusion of GSVs with the plasma membrane, dramatically increasing glucose uptake in muscle and adipose tissue (up to 20-fold). S2 is TRUE: The Na+/K+-ATPase moves 3 positive charges out and 2 positive charges in per cycle, generating a net outward current that contributes about -5 to -10 mV to the resting membrane potential. This electrogenic contribution is relatively small compared to K+ leak channels but is physiologically significant. S3 is FALSE: Most ion channels are gated and switch between open and closed states. Types of gating include voltage-gated (respond to membrane potential), ligand-gated (respond to chemical signals), mechanically-gated (respond to physical force), and temperature-gated channels. S4 is TRUE: The H+/K+-ATPase (gastric proton pump) is a P-type ATPase that exchanges cytoplasmic H+ for luminal K+, achieving stomach pH as low as 1.0. This is the target of proton pump inhibitors (PPIs) like omeprazole.",
       "isOlympiad": true,
@@ -469,12 +459,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about membrane fluidity:\nS1: Unsaturated fatty acid tails increase membrane fluidity because their cis double bonds introduce kinks that prevent tight packing\nS2: Longer fatty acid chains decrease fluidity by increasing van der Waals interactions between neighboring tails\nS3: Cholesterol increases membrane fluidity at all temperatures\nS4: Mycoplasma bacteria, which lack cell walls, can adjust their membrane fluidity by modifying the proportion of unsaturated fatty acids in their membrane phospholipids",
-      "options": [
-        "TTFT",
-        "TTTF",
-        "TTFF",
-        "TFFT"
-      ],
+      "options": ["TTFT", "TTTF", "TTFF", "TFFT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Cis double bonds in unsaturated fatty acids create a ~30-degree kink in the hydrocarbon chain, which disrupts the regular packing of neighboring fatty acid tails and increases the space between molecules, enhancing fluidity and lowering the phase transition temperature. S2 is TRUE: Longer saturated chains have more surface area for van der Waals (London dispersion) interactions with neighbors, requiring more thermal energy to disrupt these interactions and increasing the transition temperature/decreasing fluidity. S3 is FALSE: Cholesterol has dual, temperature-dependent effects. At physiological temperatures (above transition temperature), cholesterol DECREASES fluidity by restricting phospholipid chain motion. Below the transition temperature, it INCREASES fluidity by preventing tight crystalline packing. Cholesterol thus acts as a fluidity buffer, moderating the effects of temperature changes. S4 is TRUE: Mycoplasma (like Acholeplasma laidlawii) are model organisms for studying membrane adaptation. They can desaturate fatty acids using desaturase enzymes in response to temperature decreases, maintaining appropriate membrane fluidity (homeoviscous adaptation).",
       "isOlympiad": true,
@@ -649,12 +634,7 @@
     {
       "type": "MCQ",
       "question": "During exocytosis of neurotransmitter-containing synaptic vesicles, the SNARE complex (synaptobrevin, syntaxin, SNAP-25) drives membrane fusion. Which calcium sensor triggers this rapid fusion event?",
-      "options": [
-        "Calmodulin",
-        "Synaptotagmin",
-        "Protein kinase C",
-        "Troponin C"
-      ],
+      "options": ["Calmodulin", "Synaptotagmin", "Protein kinase C", "Troponin C"],
       "correctAnswer": "B",
       "explanation": "Synaptotagmin is the calcium sensor for fast synaptic vesicle exocytosis. It is an integral membrane protein of synaptic vesicles with two C2 domains (C2A and C2B) that bind Ca2+ ions. When an action potential arrives at the presynaptic terminal and Ca2+ enters through voltage-gated Ca2+ channels, Ca2+ binds to synaptotagmin's C2 domains, triggering rapid conformational changes. Ca2+-bound synaptotagmin interacts with both the SNARE complex and the plasma membrane (inserting into the bilayer via Ca2+-dependent phospholipid binding), accelerating membrane fusion from a time scale of minutes (spontaneous SNARE-mediated fusion) to sub-milliseconds. This speed is essential for synchronous neurotransmitter release. Calmodulin (A) mediates many Ca2+ responses but not fast exocytosis. Troponin C (C) is the Ca2+ sensor for muscle contraction. PKC (D) modulates synaptic transmission through phosphorylation but is not the fast Ca2+ sensor.",
       "isOlympiad": true,
@@ -669,12 +649,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about endocytosis:\nS1: Clathrin-mediated endocytosis requires adaptor proteins (like AP-2) to link cargo receptors to the clathrin lattice\nS2: Macropinocytosis is a non-specific form of endocytosis that internalizes large volumes of extracellular fluid along with dissolved solutes\nS3: Caveolae-mediated endocytosis requires clathrin for membrane invagination\nS4: Dynamin is required for vesicle scission in clathrin-mediated endocytosis",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFFT",
-        "TFTF"
-      ],
+      "options": ["TTFT", "TTTT", "TFFT", "TFTF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: In clathrin-mediated endocytosis, adaptor protein complex AP-2 is essential. AP-2 binds to specific sorting motifs on the cytoplasmic tails of transmembrane cargo receptors (like YXXF motifs for transferrin receptor, or dileucine motifs) and simultaneously binds clathrin heavy chain triskelions, linking cargo selection to coat assembly. Other adaptors include epsins, Dab2, and ARH for specific cargo. S2 is TRUE: Macropinocytosis involves actin-driven membrane ruffling that collapses back onto the cell surface, trapping large volumes (0.2-5 micrometers vesicles) of extracellular fluid in macropinosomes. This non-selective process is important for immune cell antigen sampling and is exploited by some pathogens for cell entry. S3 is FALSE: Caveolae are flask-shaped invaginations formed by caveolin proteins (caveolin-1, -2, -3) and cavins, NOT clathrin. They represent a clathrin-independent endocytic pathway. S4 is TRUE: Dynamin forms a helical collar at the neck of budding clathrin-coated pits; GTP hydrolysis drives membrane fission to release the coated vesicle.",
       "isOlympiad": true,
@@ -709,12 +684,7 @@
     {
       "type": "MCQ",
       "question": "In polarized epithelial cells, the apical and basolateral membrane domains have different protein compositions. Which structure prevents lateral diffusion of membrane proteins between these domains?",
-      "options": [
-        "Tight junctions",
-        "Gap junctions",
-        "Adherens junctions",
-        "Desmosomes"
-      ],
+      "options": ["Tight junctions", "Gap junctions", "Adherens junctions", "Desmosomes"],
       "correctAnswer": "A",
       "explanation": "Tight junctions (zonula occludens) serve as a 'fence' that prevents lateral diffusion of membrane lipids and proteins between the apical and basolateral domains. The claudin and occludin strands create a continuous seal around the cell that acts as a diffusion barrier within the plane of the outer leaflet membrane. This maintains the polarized distribution of proteins: for example, SGLT1 (Na+/glucose symporter) is confined to the apical membrane while the Na+/K+-ATPase is restricted to the basolateral membrane. Without tight junctions, these proteins would intermix, abolishing vectorial transport. Desmosomes (A) provide mechanical adhesion but do not form a continuous diffusion barrier. Gap junctions (B) allow intercellular communication. Adherens junctions (D) provide adhesion linked to actin but do not act as diffusion fences.",
       "isOlympiad": true,
@@ -849,12 +819,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the Na+/K+-ATPase:\nS1: The pump cycles between E1 (high Na+ affinity, facing cytoplasm) and E2 (high K+ affinity, facing extracellular) conformations\nS2: The pump is inhibited by ouabain binding to the extracellular surface\nS3: The pump consumes approximately 30% of a typical cell's ATP budget\nS4: The pump transports Na+ and K+ in the same direction across the membrane",
-      "options": [
-        "TTTT",
-        "TTTF",
-        "TFTT",
-        "FTTT"
-      ],
+      "options": ["TTTT", "TTTF", "TFTT", "FTTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: The Na+/K+-ATPase alternates between E1 conformation (cytoplasm-facing, high affinity for Na+, binds 3 Na+ ions) and E2 conformation (extracellular-facing, high affinity for K+, binds 2 K+ ions). ATP-dependent phosphorylation of Asp376 triggers the E1-to-E2 transition that releases Na+ extracellularly, while dephosphorylation triggers the E2-to-E1 transition that releases K+ intracellularly. S2 is TRUE: Ouabain (and other cardiac glycosides like digoxin) bind to specific sites on the extracellular loops of the alpha subunit, stabilizing the E2-P conformation and preventing the conformational changes needed for continued pumping. S3 is TRUE: The Na+/K+-ATPase is one of the most energy-demanding cellular processes, consuming ~25-30% of cellular ATP in most cells and up to 70% in neurons (which must constantly restore ion gradients after action potentials). S4 is FALSE: The pump is an antiporter \u2014 it transports Na+ OUT and K+ IN (opposite directions). This is fundamental to its function in establishing and maintaining the asymmetric ion distributions across the plasma membrane.",
       "isOlympiad": true,
@@ -969,12 +934,7 @@
     {
       "type": "MCQ",
       "question": "The water potential (psi) of a plant cell is described by the equation psi = psi_s + psi_p. If a plant cell has a solute potential of -0.8 MPa and a pressure potential of 0.3 MPa, what is the water potential of the cell?",
-      "options": [
-        "-0.5 MPa",
-        "0 MPa",
-        "-1.1 MPa",
-        "+0.5 MPa"
-      ],
+      "options": ["-0.5 MPa", "0 MPa", "-1.1 MPa", "+0.5 MPa"],
       "correctAnswer": "A",
       "explanation": "Water potential (psi) is the sum of solute potential (psi_s, also called osmotic potential) and pressure potential (psi_p, also called turgor pressure). Solute potential is always negative or zero (solutes lower water potential), while pressure potential is typically positive in turgid cells. Calculating: psi = psi_s + psi_p = (-0.8 MPa) + (0.3 MPa) = -0.5 MPa. This negative water potential means the cell would take up water from any source with a higher (less negative) water potential, such as pure water (psi = 0) or a solution with psi > -0.5 MPa. Water always moves from higher to lower water potential. At full turgor, psi_p would equal the magnitude of psi_s, giving psi = 0, and the cell would be in equilibrium with pure water. In a wilted cell, psi_p = 0 and psi = psi_s = -0.8 MPa, the most negative possible value for this cell.",
       "isOlympiad": true,
@@ -1009,12 +969,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the erythrocyte membrane skeleton:\nS1: The major protein of the erythrocyte membrane skeleton is spectrin, which forms a flexible meshwork on the cytoplasmic face\nS2: Ankyrin links the spectrin network to the integral membrane protein band 3 (anion exchanger AE1)\nS3: The membrane skeleton gives erythrocytes their rigid, spherical shape\nS4: Defects in spectrin or ankyrin cause hereditary spherocytosis, where erythrocytes lose their normal biconcave shape",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFFT",
-        "TTTF"
-      ],
+      "options": ["TTFT", "TTTT", "TFFT", "TTTF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Spectrin alpha and beta chains form antiparallel heterodimers that associate head-to-head to form tetramers, and these are cross-linked by short actin filaments, protein 4.1, and adducin to form a two-dimensional meshwork underlying the plasma membrane. S2 is TRUE: Ankyrin (also called band 2.1) is the key linker protein that binds both spectrin and the cytoplasmic domain of band 3 (the Cl-/HCO3- exchanger). This attachment anchors the spectrin meshwork to the lipid bilayer. Protein 4.1 also links spectrin to glycophorin C, providing a second attachment point. S3 is FALSE: The membrane skeleton gives erythrocytes their characteristic BICONCAVE DISC shape, not a rigid spherical shape. The spectrin meshwork is highly flexible, allowing erythrocytes to deform reversibly as they squeeze through capillaries smaller than their diameter. S4 is TRUE: Hereditary spherocytosis results from mutations in spectrin, ankyrin, band 3, or protein 4.2. Reduced attachment between the skeleton and bilayer causes progressive membrane loss through vesiculation, converting the biconcave disc into a sphere (spherocyte) with reduced surface area-to-volume ratio.",
       "isOlympiad": true,
@@ -1189,12 +1144,7 @@
     {
       "type": "MCQ",
       "question": "The Nernst equation calculates the equilibrium potential for a single ion. For K+ with intracellular concentration of 140 mM and extracellular concentration of 4 mM at 37 degrees Celsius, the equilibrium potential (E_K) is approximately:",
-      "options": [
-        "0 mV",
-        "+60 mV",
-        "-60 mV",
-        "-95 mV"
-      ],
+      "options": ["0 mV", "+60 mV", "-60 mV", "-95 mV"],
       "correctAnswer": "D",
       "explanation": "The Nernst equation at 37 degrees Celsius for a monovalent ion is: E = (61.5 mV / z) x log10([ion]outside / [ion]inside). For K+ (z = +1): E_K = (61.5 / 1) x log10(4/140) = 61.5 x log10(0.0286) = 61.5 x (-1.544) = -95 mV. This strongly negative equilibrium potential reflects the strong outward driving force for K+ due to the 35:1 concentration ratio (inside:outside). At E_K, the chemical force driving K+ out (due to concentration gradient) is exactly balanced by the electrical force pulling K+ back in (due to the negative membrane potential). If the membrane were permeable only to K+, the membrane potential would be exactly -95 mV. +60 mV (A) is approximately E_Na. -60 mV (B) would correspond to a much smaller concentration ratio. 0 mV (D) would require equal concentrations on both sides.",
       "isOlympiad": true,
@@ -1229,12 +1179,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about tonicity and osmosis:\nS1: A solution isotonic to a cell will not cause any net water movement across the membrane\nS2: Tonicity differs from osmolarity in that tonicity considers only non-penetrating solutes\nS3: Pure water has a water potential of zero and always moves from higher to lower water potential\nS4: Red blood cells placed in a 0.9% NaCl solution (normal saline) will undergo crenation due to water loss",
-      "options": [
-        "TTTT",
-        "TTTF",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: An isotonic solution has the same effective osmolarity as the cell cytoplasm (considering only non-penetrating solutes), resulting in no net water movement and no change in cell volume. S2 is TRUE: Osmolarity measures total solute concentration regardless of membrane permeability, while tonicity (effective osmolarity) considers only solutes that cannot freely cross the membrane. A solution can be isosmolar but hypotonic if it contains penetrating solutes (like urea) that equilibrate across the membrane, leaving the cell in a effectively hypotonic environment. S3 is TRUE: Pure water has the maximum water potential (zero, by convention), and water always moves from regions of higher water potential to lower water potential (more negative). Solutes lower water potential; pressure raises it. S4 is FALSE: 0.9% NaCl (normal saline) is isotonic to human red blood cells, so cells maintain their normal biconcave shape. Crenation (shrinkage with spiky projections) occurs in HYPERtonic solutions. In HYPOtonic solutions, RBCs swell and may lyse (hemolysis).",
       "isOlympiad": true,
@@ -1409,12 +1354,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about voltage-gated ion channels:\nS1: The S4 segment of each domain contains positively charged amino acids (arginine/lysine) that serve as the voltage sensor\nS2: Voltage-gated Na+ channels have four homologous domains (I-IV) encoded by a single gene, while voltage-gated K+ channels are tetramers of separate subunits\nS3: Voltage-gated channels are always open at the resting membrane potential\nS4: The selectivity filter of K+ channels is formed by the P-loop (pore loop) between S5 and S6 transmembrane segments",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TTTF",
-        "TFFT"
-      ],
+      "options": ["TTFT", "TTTT", "TTTF", "TFFT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: The S4 transmembrane segment in each voltage-gated ion channel domain contains 4-7 positively charged residues (typically arginine) at every third position. These charged residues sense changes in the electric field across the membrane. When the membrane depolarizes, the S4 segments undergo outward/rotational movement, conformationally opening the activation gate. This was confirmed by gating current measurements and fluorescence studies. S2 is TRUE: Voltage-gated Na+ (Nav) and Ca2+ (Cav) channels are encoded by single genes producing a large protein with four homologous domains (I-IV), each containing six transmembrane segments (S1-S6). Voltage-gated K+ (Kv) channels are tetramers of four separate subunits, each equivalent to one domain. S3 is FALSE: Most voltage-gated channels are CLOSED at the resting potential (-70 mV) and open only upon depolarization past threshold (approximately -55 to -40 mV for Nav channels). S4 is TRUE: The P-loop (between S5 and S6) from each of the four domains/subunits dips into the membrane to form the selectivity filter at the narrowest point of the pore.",
       "isOlympiad": true,
@@ -1569,12 +1509,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the Na+/Ca2+ exchanger (NCX):\nS1: NCX is a secondary active transporter that uses the Na+ gradient to extrude Ca2+ from the cell\nS2: NCX exchanges 3 Na+ for 1 Ca2+, making it electrogenic\nS3: NCX can operate in reverse mode (Ca2+ influx) when intracellular Na+ concentration is abnormally high\nS4: NCX is the only mechanism for Ca2+ removal from cardiac myocytes",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFF",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFF", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: NCX is a secondary active transporter (antiporter) that uses the electrochemical gradient for Na+ (high outside, low inside) to drive Ca2+ extrusion from the cell. Three Na+ ions flow inward down their gradient while one Ca2+ ion is transported outward against its gradient. S2 is TRUE: The 3:1 stoichiometry (3 Na+ in for 1 Ca2+ out) means there is a net inward movement of one positive charge per cycle, making the exchanger electrogenic. This electrogenicity is important because it makes the exchange rate sensitive to membrane potential. S3 is TRUE: Under conditions of elevated intracellular Na+ (as occurs during ischemia or in the presence of cardiac glycosides that inhibit the Na+/K+-ATPase), the driving force can reverse, causing NCX to operate in reverse mode (Na+ out, Ca2+ in). This contributes to Ca2+ overload and is relevant to the mechanism of cardiac glycoside toxicity. S4 is FALSE: SERCA (SR Ca2+-ATPase) is actually the primary mechanism for Ca2+ removal from the cytoplasm in cardiac myocytes (~70% in humans), pumping Ca2+ back into the sarcoplasmic reticulum. NCX handles ~28%, and the plasma membrane Ca2+-ATPase (PMCA) handles ~2%.",
       "isOlympiad": true,

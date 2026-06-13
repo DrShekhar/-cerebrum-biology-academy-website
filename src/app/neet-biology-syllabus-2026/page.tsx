@@ -51,7 +51,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Biology Syllabus 2026 - Complete Chapter-wise Syllabus with Weightage | NCERT',
-    description: 'NEET Biology Syllabus 2026 with chapter-wise topics from Class 11 & 12 NCERT. Complete Botany & Zoology syllabus, topic weightage, important chapters, and preparation strategy.',
+    description:
+      'NEET Biology Syllabus 2026 with chapter-wise topics from Class 11 & 12 NCERT. Complete Botany & Zoology syllabus, topic weightage, important chapters, and preparation strategy.',
   },
 }
 

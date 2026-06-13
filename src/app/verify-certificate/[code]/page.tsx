@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     description: 'Verify the authenticity of a Cerebrum Biology Academy certificate',
   },
 
-  openGraph: { title: 'Verify Certificate', description: 'Verify the authenticity of a Cerebrum Biology Academy certificate', type: 'website' },
+  openGraph: {
+    title: 'Verify Certificate',
+    description: 'Verify the authenticity of a Cerebrum Biology Academy certificate',
+    type: 'website',
+  },
 }
 
 async function verifyCertificate(code: string) {

@@ -116,7 +116,10 @@ export default function DelhiLocationPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/locations/delhi"
         pageName="NEET Biology Coaching for Delhi Students"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
         personKnowsAbout={['NEET Delhi', 'NEET Biology Delhi', 'Medical entrance coaching Delhi']}
         faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
       />
@@ -124,8 +127,7 @@ export default function DelhiLocationPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center animate-fadeInUp"
-            >
+            <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <MapPin className="w-4 h-4" />
                 Area We Serve
@@ -166,8 +168,7 @@ export default function DelhiLocationPage() {
             </h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {nearestCenters.map((center, idx) => (
-                <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-transparent hover:border-blue-500 transition-all animate-fadeInUp"
-                >
+                <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-transparent hover:border-blue-500 transition-all animate-fadeInUp">
                   <div className={`bg-${center.color}-500 text-white py-3 px-6`}>
                     <h3 className="font-bold text-lg">{center.name}</h3>
                   </div>
@@ -227,8 +228,7 @@ export default function DelhiLocationPage() {
                   desc: 'All centers near metro stations',
                 },
               ].map((item, idx) => (
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
-                >
+                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp">
                   <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-blue-600" />
                   </div>
@@ -305,8 +305,12 @@ export default function DelhiLocationPage() {
                   href={center.href}
                   className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 hover:border-blue-200 border border-gray-200 transition-colors group"
                 >
-                  <p className="font-semibold text-gray-900 group-hover:text-blue-600">{center.name}</p>
-                  <span className="text-sm text-gray-500 group-hover:text-blue-500">View details →</span>
+                  <p className="font-semibold text-gray-900 group-hover:text-blue-600">
+                    {center.name}
+                  </p>
+                  <span className="text-sm text-gray-500 group-hover:text-blue-500">
+                    View details →
+                  </span>
                 </Link>
               ))}
             </div>
@@ -321,8 +325,7 @@ export default function DelhiLocationPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, idx) => (
-                <div className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
-                >
+                <div className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp">
                   <h3 className="font-semibold text-lg mb-2">{faq.q}</h3>
                   <p className="text-gray-600">{faq.a}</p>
                 </div>
@@ -334,7 +337,9 @@ export default function DelhiLocationPage() {
         {/* Map Section */}
         <div className="py-8 bg-gray-50">
           <div className="max-w-3xl mx-auto px-4">
-            <h2 className="text-xl font-bold text-gray-900 mb-4 text-center">Find Our Delhi Centers</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-4 text-center">
+              Find Our Delhi Centers
+            </h2>
             <div className="h-[300px] rounded-xl overflow-hidden shadow-lg">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.54!2d77.06!3d28.52!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1eabeb1c0001%3A0x1234567890abcdef!2sDelhi!5e0!3m2!1sen!2sin"

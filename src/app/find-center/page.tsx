@@ -32,7 +32,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Find Your Nearest Cerebrum Biology Academy Center - 6 Locations',
-    description: 'Locate Cerebrum Biology Academy centers in Delhi NCR. 5 offline centres in Rohini, Gurugram, South Extension, Green Park, Faridabad, Noida. Visit us or book a demo class.',
+    description:
+      'Locate Cerebrum Biology Academy centers in Delhi NCR. 5 offline centres in Rohini, Gurugram, South Extension, Green Park, Faridabad, Noida. Visit us or book a demo class.',
   },
 }
 
@@ -154,8 +155,8 @@ export default function FindCenterPage() {
         <div className="max-w-6xl mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Find Your Nearest Cerebrum Center</h1>
           <p className="text-xl text-gray-300 max-w-3xl">
-            Visit our 6 strategically located centers across Delhi NCR. Expert faculty, world-class infrastructure,
-            and proven results awaiting you.
+            Visit our 6 strategically located centers across Delhi NCR. Expert faculty, world-class
+            infrastructure, and proven results awaiting you.
           </p>
         </div>
       </section>
@@ -163,7 +164,9 @@ export default function FindCenterPage() {
       {/* Centers Grid */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">All Cerebrum Centers</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            All Cerebrum Centers
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {centers.map((center) => (
@@ -192,7 +195,10 @@ export default function FindCenterPage() {
                   {/* Phone */}
                   <div className="mb-4 flex items-center gap-2">
                     <Phone className="w-5 h-5 text-green-500" />
-                    <a href={`tel:${center.phone}`} className="text-green-600 hover:text-green-700 font-semibold">
+                    <a
+                      href={`tel:${center.phone}`}
+                      className="text-green-600 hover:text-green-700 font-semibold"
+                    >
                       {center.phone}
                     </a>
                   </div>
@@ -208,7 +214,10 @@ export default function FindCenterPage() {
                     <p className="text-xs text-gray-600 font-semibold mb-2">NEARBY AREAS</p>
                     <div className="flex flex-wrap gap-2">
                       {center.nearbyAreas.map((area) => (
-                        <span key={area} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                        <span
+                          key={area}
+                          className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded"
+                        >
                           {area}
                         </span>
                       ))}
@@ -249,7 +258,9 @@ export default function FindCenterPage() {
       {/* Why Choose Cerebrum */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Why Choose Cerebrum</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Why Choose Cerebrum
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -271,7 +282,9 @@ export default function FindCenterPage() {
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
 
           <div className="space-y-4">
             {faqItems.map((item, idx) => (
@@ -283,7 +296,12 @@ export default function FindCenterPage() {
                   <h3 className="font-semibold text-gray-900 pr-4">{item.question}</h3>
                   <span className="text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
                     </svg>
                   </span>
                 </summary>
@@ -298,7 +316,9 @@ export default function FindCenterPage() {
       <section className="bg-gradient-to-r from-green-500 to-green-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Medical Journey?</h2>
-          <p className="text-lg mb-8">Book a FREE demo class at your nearest Cerebrum center today!</p>
+          <p className="text-lg mb-8">
+            Book a FREE demo class at your nearest Cerebrum center today!
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={`tel:${CONTACT_INFO.phone.primary}`}

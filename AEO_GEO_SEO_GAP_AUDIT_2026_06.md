@@ -13,6 +13,7 @@ shadowed pages) and tracked separately.
 ## THE BIG FOUR (fix before anything else)
 
 ### 1. Fabricated review schema on 221+ pages — active Google-policy violation
+
 - `src/components/seo/LocalitySchema.tsx:162-185` (167 pages) + `src/components/seo/CitySchema.tsx:96-105`
   (54 pages) emit `aggregateRating: 5.0 / reviewCount: 38` plus two reviews authored by
   "Parent of NEET Aspirant" and "NEET 2024 Student" whose reviewBody template-injects the locality —
@@ -26,6 +27,7 @@ shadowed pages) and tracked separately.
   ratings only where genuine dated testimonials render visibly (src/data/realTestimonials).
 
 ### 2. Index bloat: ~1,300–1,500 near-duplicate URLs (scaled-content-abuse exposure)
+
 - 57-city × 5-intent doorway matrix: 230 pages import the same `NEAR_ME_CITY_BY_SLUG` record.
   `neet-coaching-fees-{city}` siblings differ by **1 line of code** (~96% identical rendered copy);
   `neet-dropper-batch-*` ~96%; `near-me-*` ~75-80% shared frame.
@@ -40,6 +42,7 @@ shadowed pages) and tracked separately.
   `/neet-coaching-dps-rk-puram-delhi` has no robots directive) — unify.
 
 ### 3. Entity-stat contradictions (AI engines can't trust the numbers)
+
 - "98%" means 3 different things (600+ scores in llms.txt:2247, qualification rate in ai.txt:369,
   95%-scored-300+ in PeopleAlsoAsk.tsx:249).
 - UI contradicts AEO files: 94.8% (`course-finder/page.tsx:64`, `SimplifiedCourseCards.tsx:55`,
@@ -51,13 +54,14 @@ shadowed pages) and tracked separately.
   hardcoded UI strings.
 
 ### 4. Google Business Profile layer is dead/fake
+
 - All 6 `g.page` links resolve to Google search pages, not profiles (`contactInfo.ts:75-187`),
   and are injected into every LocalBusiness sameAs (`LocalBusinessSchema.tsx:359`).
 - Review link `g.page/r/CerebrumBiologyAcademy/review` is fabricated-format (`demo-feedback/page.tsx`).
 - Map embeds mostly placeholders: fake `4v1234567890` timestamps; ~20 South Delhi pages embed the
   identical map; Rohini embed has invalid place ID.
 - 24/7 hours (00:00-23:59) still live in 6+ inline schemas though `contactInfo.ts:306-310`
-  documents this exact bug as "fixed" (contact/layout.tsx:52, all locations/*/layout.tsx).
+  documents this exact bug as "fixed" (contact/layout.tsx:52, all locations/\*/layout.tsx).
 - Geo coordinates diverge per center (Rohini "source of truth" = Delhi centroid; Faridabad 2.6km
   apart between files; Gurugram 3 variants incl. placeholder digits).
 - Noida declared a physical center in schema (`LocalBusinessSchema.tsx:263-309`, "6 offline
@@ -81,7 +85,7 @@ shadowed pages) and tracked separately.
 5. Direct-answer blocks: hubs lead with marketing prose; add 40-60-word `data-speakable="summary"`
    under H1 on courses/pricing/vertical hubs; Speakable schema only on homepage + scattered pages.
 6. HowTo schema covers NEET/IB/USABO/AP only — missing MCAT, DAT, GAMSAT, USMLE, A-Level, olympiad funnel.
-7. Missing question clusters: per-vertical fees in $/£ (data exists in src/data/*/pricing-matrix.ts),
+7. Missing question clusters: per-vertical fees in $/£ (data exists in src/data/\*/pricing-matrix.ts),
    "is X worth it", "how long to prepare" (non-NEET), syllabus questions, X-vs-Y (NEET vs IB,
    USMLE vs MCAT, DAT vs OAT), OAT entirely absent, free-resources per vertical.
 8. middleware geo-404 (China cluster): consider UA allowlist for known AI bots regardless of IP.
@@ -114,8 +118,8 @@ shadowed pages) and tracked separately.
 2. 3 corrupted doubled titles: biology-tuition-class-11/layout.tsx, biology-coaching/layout.tsx,
    biology-teacher/layout.tsx (phrase repeated + stale 2025/2027 mashups).
 3. 598 titles >60 chars (worst 140ch), 760 descriptions >165 chars.
-4. Course schema missing on 9 of 20 /courses/* product pages.
-5. Zero-JSON-LD clusters: boards/* (8), class-11/12, 5 vertical pricing pages (Offer-schema
+4. Course schema missing on 9 of 20 /courses/\* product pages.
+5. Zero-JSON-LD clusters: boards/\* (8), class-11/12, 5 vertical pricing pages (Offer-schema
    candidates), free-resources, mock-tests, testimonials, success-stories, book-free-demo.
 6. Orphan clusters (0 inbound links): the 230-page near-me/dropper/fees/online build; 3 of 4 MCAT
    cornerstones; OCSC cornerstone; school feeders. RelatedPages.tsx exists, imported by 0 pages.

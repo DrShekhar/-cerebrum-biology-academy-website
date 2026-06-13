@@ -64,9 +64,7 @@ export function SessionSettings({
   if (mode === 'obs') return null
 
   return (
-    <div
-      className={`bg-white rounded-xl shadow-xl overflow-hidden ${className}`}
-    >
+    <div className={`bg-white rounded-xl shadow-xl overflow-hidden ${className}`}>
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         className="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors"
@@ -77,14 +75,10 @@ export function SessionSettings({
             Session Settings
           </h3>
         </div>
-        <span className="text-gray-400 animate-fadeInUp">
-          ▼
-        </span>
+        <span className="text-gray-400 animate-fadeInUp">▼</span>
       </button>
 
-      <div
-        className="overflow-hidden animate-fadeInUp"
-      >
+      <div className="overflow-hidden animate-fadeInUp">
         <div className="p-4 pt-0 space-y-4">
           {/* Topic Name */}
           <div className="space-y-2">

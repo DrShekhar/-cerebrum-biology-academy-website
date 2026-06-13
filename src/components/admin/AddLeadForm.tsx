@@ -70,7 +70,11 @@ const PRIORITY_LEVELS = [
 // Fallback counselors (used only if no counselors prop provided)
 const DEFAULT_COUNSELORS: Counselor[] = []
 
-export function AddLeadForm({ counselors = DEFAULT_COUNSELORS, onSuccess, onCancel }: AddLeadFormProps) {
+export function AddLeadForm({
+  counselors = DEFAULT_COUNSELORS,
+  onSuccess,
+  onCancel,
+}: AddLeadFormProps) {
   const {
     register,
     handleSubmit,

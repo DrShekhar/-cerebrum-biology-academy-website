@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Voice AI Features Demo | NEET Biology | Cerebrum',
   description:
-    'Try Cerebrum\'s voice-enabled NEET Biology AI — ask biology questions in your voice, get instant spoken explanations, navigate NCERT topics hands-free. Free demo.',
+    "Try Cerebrum's voice-enabled NEET Biology AI — ask biology questions in your voice, get instant spoken explanations, navigate NCERT topics hands-free. Free demo.",
   keywords: [
     'voice AI biology tutor',
     'voice NEET biology assistant',

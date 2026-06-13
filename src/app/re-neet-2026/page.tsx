@@ -620,10 +620,10 @@ export default function ReNEET2026Page() {
               <p>
                 Every major newspaper covering this cancellation has quoted psychiatrists warning
                 about anticipatory anxiety, sleep disruption and post-stress crash. Clinicians at
-                Government Medical College Thiruvananthapuram, leading private healthcare and Delhi-based
-                hospitals have given the same practical guidance: protect 6+ hours of sleep, limit
-                doomscrolling, get daily sunlight and exercise, and do not rewrite your study plan
-                in panic mode in the first week.
+                Government Medical College Thiruvananthapuram, leading private healthcare and
+                Delhi-based hospitals have given the same practical guidance: protect 6+ hours of
+                sleep, limit doomscrolling, get daily sunlight and exercise, and do not rewrite your
+                study plan in panic mode in the first week.
               </p>
               <p>
                 Parents — please resist piling on additional pressure. This cancellation is not a

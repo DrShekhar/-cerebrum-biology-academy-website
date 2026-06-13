@@ -43,7 +43,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'USMLE Step 1 Biology Preparation | First Aid + UWorld + NBME Integrated',
-    description: 'USMLE Step 1 biology-foundations coaching from AIIMS-trained specialists. Biochemistry, microbiology, immunology, physiology depth. First Aid mapped end-to-end, UWorld integration walkthroughs. $79...',
+    description:
+      'USMLE Step 1 biology-foundations coaching from AIIMS-trained specialists. Biochemistry, microbiology, immunology, physiology depth. First Aid mapped end-to-end, UWorld integration walkthroughs. $79...',
   },
 }
 
@@ -233,8 +234,8 @@ export default function USMLEStep1BiologyPreparationPage() {
             </li>
             <li>
               <strong>Ad-hoc 1:1 tutoring — $175/hour</strong>. For students who already have a
-              generalist other USMLE generalist brands track and need biology-specialist gap-fill, or for
-              NBME remediation. No minimum commitment.
+              generalist other USMLE generalist brands track and need biology-specialist gap-fill,
+              or for NBME remediation. No minimum commitment.
             </li>
           </ul>
 

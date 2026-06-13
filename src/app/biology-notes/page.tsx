@@ -20,7 +20,14 @@ export const metadata: Metadata = {
   ].join(', '),
   openGraph: {
     title: 'Free NEET Biology Notes',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Free NEET Biology Notes | Comprehensive Study Material' }],
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Free NEET Biology Notes | Comprehensive Study Material',
+      },
+    ],
     description: 'Comprehensive biology notes for NEET preparation by Dr. Shekhar C Singh',
     type: 'website',
   },
@@ -31,7 +38,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Free NEET Biology Notes | Comprehensive Study Material',
-    description: 'Access free comprehensive NEET biology notes covering all Class 11 and 12 topics. Expert-written study material by Dr. Shekhar C Singh to help you ace NEET Biology.',
+    description:
+      'Access free comprehensive NEET biology notes covering all Class 11 and 12 topics. Expert-written study material by Dr. Shekhar C Singh to help you ace NEET Biology.',
   },
 }
 
@@ -248,7 +256,9 @@ export default async function BiologyNotesIndexPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20notes.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20notes.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block bg-white text-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold hover:bg-gray-100 transition-colors text-center"
                 >
                   Book Free Demo

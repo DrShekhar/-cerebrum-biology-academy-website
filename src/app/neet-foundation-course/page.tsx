@@ -321,8 +321,7 @@ export default function NeetFoundationCoursePage() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
                 <Rocket className="w-5 h-5 mr-2" />
                 Complete NEET Foundation Program
@@ -381,9 +380,7 @@ export default function NeetFoundationCoursePage() {
       {/* Why Foundation Course */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Why NEET Foundation Course is the Smart Choice
             </h2>
@@ -416,9 +413,7 @@ export default function NeetFoundationCoursePage() {
       {/* Program Features */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               What Makes Our Foundation Program Special
             </h2>
@@ -450,9 +445,7 @@ export default function NeetFoundationCoursePage() {
       {/* Program Comparison */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Class 9 vs Class 10 Foundation: Detailed Comparison
             </h2>
@@ -462,9 +455,7 @@ export default function NeetFoundationCoursePage() {
             </p>
           </div>
 
-          <div
-            className="overflow-x-auto animate-fadeInUp"
-          >
+          <div className="overflow-x-auto animate-fadeInUp">
             <div className="min-w-full bg-white rounded-xl shadow-lg overflow-hidden">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
@@ -502,9 +493,7 @@ export default function NeetFoundationCoursePage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mt-12">
-            <div
-              className="bg-gray-50 rounded-xl p-8 border-2 border-blue-200 animate-fadeInUp"
-            >
+            <div className="bg-gray-50 rounded-xl p-8 border-2 border-blue-200 animate-fadeInUp">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
                   <GraduationCap className="w-6 h-6 text-white" />
@@ -523,9 +512,7 @@ export default function NeetFoundationCoursePage() {
               </Link>
             </div>
 
-            <div
-              className="bg-green-50 rounded-xl p-8 border-2 border-green-200 animate-fadeInUp"
-            >
+            <div className="bg-green-50 rounded-xl p-8 border-2 border-green-200 animate-fadeInUp">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
                   <Rocket className="w-6 h-6 text-white" />
@@ -550,9 +537,7 @@ export default function NeetFoundationCoursePage() {
       {/* Curriculum Journey */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Your Foundation to NEET Success Journey
             </h2>
@@ -564,10 +549,7 @@ export default function NeetFoundationCoursePage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {curriculumHighlights.map((phase, index) => (
-              <div
-                key={phase.phase}
-                className="bg-white rounded-xl shadow-lg p-8 animate-fadeInUp"
-              >
+              <div key={phase.phase} className="bg-white rounded-xl shadow-lg p-8 animate-fadeInUp">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full flex items-center justify-center mb-6 mx-auto">
                   <phase.icon className="w-8 h-8 text-white" />
                 </div>
@@ -599,8 +581,7 @@ export default function NeetFoundationCoursePage() {
       {/* Final CTA */}
       <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Start Your Child's NEET Journey the Right Way
             </h2>

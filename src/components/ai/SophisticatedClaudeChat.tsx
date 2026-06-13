@@ -46,7 +46,7 @@ export function SophisticatedClaudeChat({
       id: '1',
       type: 'system',
       content:
-        "Welcome to Ceri AI! Your Biology study assistant for NEET preparation. Ask any Biology question to get started.",
+        'Welcome to Ceri AI! Your Biology study assistant for NEET preparation. Ask any Biology question to get started.',
       timestamp: new Date(),
     },
   ])
@@ -181,9 +181,7 @@ export function SophisticatedClaudeChat({
       />
 
       {/* Chat Interface */}
-      <div
-        className="relative w-full max-w-4xl h-[80vh] bg-white rounded-2xl shadow-2xl overflow-hidden animate-fadeInUp"
-      >
+      <div className="relative w-full max-w-4xl h-[80vh] bg-white rounded-2xl shadow-2xl overflow-hidden animate-fadeInUp">
         {/* Header */}
         <div className="bg-blue-600 p-6 text-white">
           <div className="flex items-center justify-between">
@@ -237,65 +235,58 @@ export function SophisticatedClaudeChat({
 
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-6 space-y-6">
-{messages.map((message) => (
+          {messages.map((message) => (
+            <div
+              key={message.id}
+              className={cn(
+                'flex gap-4',
+                message.type === 'user' ? 'justify-end' : 'justify-start'
+              )}
+            >
+              {message.type !== 'user' && (
+                <div className="w-10 h-10 bg-indigo-500 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                  <Sparkles className="h-5 w-5" />
+                </div>
+              )}
+
               <div
-                key={message.id}
                 className={cn(
-                  'flex gap-4',
-                  message.type === 'user' ? 'justify-end' : 'justify-start'
+                  'max-w-[70%] rounded-2xl p-4',
+                  message.type === 'user'
+                    ? 'bg-blue-600 text-white'
+                    : message.type === 'system'
+                      ? 'bg-yellow-50 text-yellow-800 border border-yellow-200'
+                      : 'bg-gray-50 text-gray-800'
                 )}
               >
-                {message.type !== 'user' && (
-                  <div className="w-10 h-10 bg-indigo-500 rounded-xl flex items-center justify-center text-white flex-shrink-0">
-                    <Sparkles className="h-5 w-5" />
-                  </div>
-                )}
-
+                <div className="text-sm leading-relaxed whitespace-pre-wrap">{message.content}</div>
                 <div
                   className={cn(
-                    'max-w-[70%] rounded-2xl p-4',
-                    message.type === 'user'
-                      ? 'bg-blue-600 text-white'
-                      : message.type === 'system'
-                        ? 'bg-yellow-50 text-yellow-800 border border-yellow-200'
-                        : 'bg-gray-50 text-gray-800'
+                    'text-xs mt-2 opacity-70',
+                    message.type === 'user' ? 'text-blue-100' : 'text-gray-500'
                   )}
                 >
-                  <div className="text-sm leading-relaxed whitespace-pre-wrap">
-                    {message.content}
-                  </div>
-                  <div
-                    className={cn(
-                      'text-xs mt-2 opacity-70',
-                      message.type === 'user' ? 'text-blue-100' : 'text-gray-500'
-                    )}
-                  >
-                    {message.timestamp.toLocaleTimeString()}
-                  </div>
+                  {message.timestamp.toLocaleTimeString()}
                 </div>
-
-                {message.type === 'user' && (
-                  <div className="w-10 h-10 bg-gray-300 rounded-xl flex items-center justify-center text-gray-600 flex-shrink-0">
-                    U
-                  </div>
-                )}
               </div>
-            ))}
-{/* Typing Indicator */}
+
+              {message.type === 'user' && (
+                <div className="w-10 h-10 bg-gray-300 rounded-xl flex items-center justify-center text-gray-600 flex-shrink-0">
+                  U
+                </div>
+              )}
+            </div>
+          ))}
+          {/* Typing Indicator */}
           {isTyping && (
-            <div
-              className="flex gap-4 animate-fadeInUp"
-            >
+            <div className="flex gap-4 animate-fadeInUp">
               <div className="w-10 h-10 bg-indigo-500 rounded-xl flex items-center justify-center text-white">
                 <Sparkles className="h-5 w-5" />
               </div>
               <div className="bg-gray-50 rounded-2xl p-4">
                 <div className="flex gap-1">
                   {[0, 1, 2].map((i) => (
-                    <div
-                      key={i}
-                      className="w-2 h-2 bg-gray-400 rounded-full animate-fadeInUp"
-                    />
+                    <div key={i} className="w-2 h-2 bg-gray-400 rounded-full animate-fadeInUp" />
                   ))}
                 </div>
               </div>

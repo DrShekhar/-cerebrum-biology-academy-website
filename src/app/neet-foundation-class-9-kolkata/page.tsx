@@ -36,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 9 in Kolkata | AIIMS-Trained Online Live',
-    description: 'NEET Foundation Class 9 in Kolkata at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / West Bengal Board (Madhyamik) + NEET parallel. Ballygunge, Park Stre...',
+    description:
+      'NEET Foundation Class 9 in Kolkata at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / West Bengal Board (Madhyamik) + NEET parallel. Ballygunge, Park Stre...',
   },
 }
 

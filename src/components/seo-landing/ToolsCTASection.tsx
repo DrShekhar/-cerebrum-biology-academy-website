@@ -43,9 +43,7 @@ export function ToolsCTASection({ toolsCTA }: ToolsCTASectionProps) {
   return (
     <section className="bg-gradient-to-br from-gray-50 to-white py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div
-          className="text-center animate-fadeInUp"
-        >
+        <div className="text-center animate-fadeInUp">
           <span className="inline-block rounded-full bg-blue-100 px-4 py-1.5 text-sm font-semibold text-blue-700">
             Free Tools
           </span>
@@ -64,9 +62,7 @@ export function ToolsCTASection({ toolsCTA }: ToolsCTASectionProps) {
             const bgColor = bgColorMap[tool.icon]
 
             return (
-              <div
-                key={index}
-               className="animate-fadeInUp">
+              <div key={index} className="animate-fadeInUp">
                 <Link
                   href={tool.link}
                   className={`group flex flex-col items-center rounded-2xl border border-gray-100 ${bgColor} p-8 text-center shadow-sm transition-all hover:shadow-lg`}

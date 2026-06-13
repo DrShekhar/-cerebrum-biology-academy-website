@@ -36,7 +36,7 @@ function daysToRRule(days: DayOfWeek[]): string {
     Saturday: 'SA',
     Sunday: 'SU',
   }
-  return `FREQ=WEEKLY;BYDAY=${days.map(d => dayMap[d]).join(',')}`
+  return `FREQ=WEEKLY;BYDAY=${days.map((d) => dayMap[d]).join(',')}`
 }
 
 export function ScheduleSchema({
@@ -59,17 +59,22 @@ export function ScheduleSchema({
       name: 'Cerebrum Biology Academy',
       url: baseUrl,
     },
-    hasCourseInstance: batches.map(batch => ({
+    hasCourseInstance: batches.map((batch) => ({
       '@type': 'CourseInstance',
       name: `${courseName} - ${batch.batchName}`,
       description: batch.description || `${batch.batchName} batch for ${courseName}`,
-      courseMode: batch.location === 'online' ? 'online' :
-                  batch.location === 'offline' ? 'onsite' :
-                  ['online', 'onsite'],
-      instructor: batch.instructor ? {
-        '@type': 'Person',
-        name: batch.instructor,
-      } : undefined,
+      courseMode:
+        batch.location === 'online'
+          ? 'online'
+          : batch.location === 'offline'
+            ? 'onsite'
+            : ['online', 'onsite'],
+      instructor: batch.instructor
+        ? {
+            '@type': 'Person',
+            name: batch.instructor,
+          }
+        : undefined,
       // Schedule specification
       courseSchedule: {
         '@type': 'Schedule',
@@ -84,22 +89,27 @@ export function ScheduleSchema({
         duration: calculateDuration(batch.startTime, batch.endTime),
       },
       // Location
-      location: batch.location === 'online' ? {
-        '@type': 'VirtualLocation',
-        name: 'Cerebrum Online Classroom',
-        url: `${baseUrl}/live-class`,
-      } : batch.location === 'offline' ? {
-        '@type': 'Place',
-        name: 'Cerebrum Biology Academy - Noida',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: 'Sector 62',
-          addressLocality: 'Noida',
-          addressRegion: 'Uttar Pradesh',
-          postalCode: '201301',
-          addressCountry: 'IN',
-        },
-      } : undefined,
+      location:
+        batch.location === 'online'
+          ? {
+              '@type': 'VirtualLocation',
+              name: 'Cerebrum Online Classroom',
+              url: `${baseUrl}/live-class`,
+            }
+          : batch.location === 'offline'
+            ? {
+                '@type': 'Place',
+                name: 'Cerebrum Biology Academy - Noida',
+                address: {
+                  '@type': 'PostalAddress',
+                  streetAddress: 'Sector 62',
+                  addressLocality: 'Noida',
+                  addressRegion: 'Uttar Pradesh',
+                  postalCode: '201301',
+                  addressCountry: 'IN',
+                },
+              }
+            : undefined,
       // Availability
       ...(batch.maxStudents && {
         maximumAttendeeCapacity: batch.maxStudents,
@@ -206,21 +216,23 @@ export function DemoClassScheduleSchema({ upcomingDemos }: DemoClassScheduleProp
           ? 'https://schema.org/OnlineEventAttendanceMode'
           : 'https://schema.org/OfflineEventAttendanceMode',
         eventStatus: 'https://schema.org/EventScheduled',
-        location: demo.isOnline ? {
-          '@type': 'VirtualLocation',
-          url: `${baseUrl}/live-demo`,
-        } : {
-          '@type': 'Place',
-          name: 'Cerebrum Biology Academy',
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: 'Sector 62',
-            addressLocality: 'Noida',
-            addressRegion: 'UP',
-            postalCode: '201301',
-            addressCountry: 'IN',
-          },
-        },
+        location: demo.isOnline
+          ? {
+              '@type': 'VirtualLocation',
+              url: `${baseUrl}/live-demo`,
+            }
+          : {
+              '@type': 'Place',
+              name: 'Cerebrum Biology Academy',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Sector 62',
+                addressLocality: 'Noida',
+                addressRegion: 'UP',
+                postalCode: '201301',
+                addressCountry: 'IN',
+              },
+            },
         performer: {
           '@type': 'Person',
           name: demo.instructor,
@@ -273,7 +285,7 @@ export function OpeningHoursSchema({ location, hours }: OpeningHoursSchemaProps)
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: `Cerebrum Biology Academy - ${location}`,
-    openingHoursSpecification: hours.map(spec => ({
+    openingHoursSpecification: hours.map((spec) => ({
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: spec.days,
       opens: spec.opens,

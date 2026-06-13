@@ -144,9 +144,7 @@ export default function OnboardingDemoPage() {
       <div className="max-w-4xl mx-auto">
         {/* Success Message */}
         {demoComplete && (
-          <div
-            className="bg-white rounded-2xl shadow-xl p-12 text-center animate-fadeInUp"
-          >
+          <div className="bg-white rounded-2xl shadow-xl p-12 text-center animate-fadeInUp">
             <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="w-10 h-10 text-white" />
             </div>
@@ -164,9 +162,7 @@ export default function OnboardingDemoPage() {
           <>
             {/* Header */}
             <div className="text-center mb-8">
-              <div
-                className="inline-flex items-center justify-center w-16 h-16 bg-indigo-500 rounded-full mb-4 animate-fadeInUp"
-              >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-500 rounded-full mb-4 animate-fadeInUp">
                 <Brain className="w-8 h-8 text-white" />
               </div>
               <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome to Cerebrum!</h1>
@@ -202,9 +198,7 @@ export default function OnboardingDemoPage() {
 
             {/* Step 1: Track Selection */}
             {step === 1 && (
-              <div
-                className="space-y-6 animate-fadeInUp"
-              >
+              <div className="space-y-6 animate-fadeInUp">
                 <div className="text-center mb-8">
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
                     What are you preparing for?
@@ -214,9 +208,7 @@ export default function OnboardingDemoPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {TRACK_OPTIONS.map((track) => (
-                    <div
-                      key={track.id}
-                     className="animate-fadeInUp">
+                    <div key={track.id} className="animate-fadeInUp">
                       <Card
                         className={`cursor-pointer transition-all ${
                           selectedTrack === track.id
@@ -255,9 +247,7 @@ export default function OnboardingDemoPage() {
 
             {/* Step 2: Goal & Details */}
             {step === 2 && selectedTrackOption && (
-              <div
-                className="space-y-6 animate-fadeInUp"
-              >
+              <div className="space-y-6 animate-fadeInUp">
                 <div className="text-center mb-8">
                   <div
                     className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br ${selectedTrackOption.color} text-white mb-4`}
@@ -351,9 +341,7 @@ export default function OnboardingDemoPage() {
 
             {/* Step 3: Target Score (NEET only) */}
             {step === 3 && selectedTrack === 'NEET' && (
-              <div
-                className="space-y-6 animate-fadeInUp"
-              >
+              <div className="space-y-6 animate-fadeInUp">
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-indigo-500 text-white mb-4">
                     <Target className="w-8 h-8" />

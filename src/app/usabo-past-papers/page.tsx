@@ -41,8 +41,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'USABO Past Papers 2015–2024 | Open & Semifinal Archive',
-    description:
-      'USABO Open and Semifinal past papers from 2015 to 2024 with worked solutions.',
+    description: 'USABO Open and Semifinal past papers from 2015 to 2024 with worked solutions.',
     url: URL,
     type: 'article',
     locale: 'en_US',
@@ -52,7 +51,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'USABO Past Papers 2015–2024 | Open Exam & Semifinal Archive',
-    description: 'Download USABO Open Exam and Semifinal past papers from 2015 to 2024 with worked solutions. Year-by-year archive — use these as your primary practice resource for the February Open Exam.',
+    description:
+      'Download USABO Open Exam and Semifinal past papers from 2015 to 2024 with worked solutions. Year-by-year archive — use these as your primary practice resource for the February Open Exam.',
   },
 }
 
@@ -139,23 +139,19 @@ const papers: PaperEntry[] = [
 const howToUse = [
   {
     title: 'Cold-attempt one paper first',
-    text:
-      'Pick the oldest paper in your archive (2017–2018) and sit it cold under exam conditions — 50 minutes, no books, no internet. Score it honestly. This is your baseline.',
+    text: 'Pick the oldest paper in your archive (2017–2018) and sit it cold under exam conditions — 50 minutes, no books, no internet. Score it honestly. This is your baseline.',
   },
   {
     title: 'Track wrong answers by topic',
-    text:
-      'Maintain a spreadsheet: column A is the question stem, column B is the topic (Cell Bio, Genetics, Plant Phys, Ethology, etc.), column C is right/wrong. After 3–4 papers, you\'ll see your weakest 2 topics. That\'s your study target.',
+    text: "Maintain a spreadsheet: column A is the question stem, column B is the topic (Cell Bio, Genetics, Plant Phys, Ethology, etc.), column C is right/wrong. After 3–4 papers, you'll see your weakest 2 topics. That's your study target.",
   },
   {
-    title: 'Re-solve papers — don\'t move on too fast',
-    text:
-      'Solving each paper twice (a week apart) is more useful than rushing through 10 papers once. The second sit teaches you which mistakes were knowledge gaps vs reading-the-question errors.',
+    title: "Re-solve papers — don't move on too fast",
+    text: 'Solving each paper twice (a week apart) is more useful than rushing through 10 papers once. The second sit teaches you which mistakes were knowledge gaps vs reading-the-question errors.',
   },
   {
     title: 'Save 2 papers for the final simulations',
-    text:
-      'Don\'t exhaust the archive. Keep your two newest papers (e.g. 2023, 2024) sealed until the final week before USABO Open. Sit them under full exam conditions as your dress rehearsal.',
+    text: "Don't exhaust the archive. Keep your two newest papers (e.g. 2023, 2024) sealed until the final week before USABO Open. Sit them under full exam conditions as your dress rehearsal.",
   },
 ]
 
@@ -253,11 +249,15 @@ export default function USABOPastPapersPage() {
           <div className="max-w-7xl mx-auto">
             <ol className="flex items-center flex-wrap gap-1 text-sm">
               <li>
-                <Link href="/" className="text-gray-600 hover:text-teal-600">Home</Link>
+                <Link href="/" className="text-gray-600 hover:text-teal-600">
+                  Home
+                </Link>
               </li>
               <li className="flex items-center">
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-                <Link href="/usabo-coaching" className="text-gray-600 hover:text-teal-600">USABO Coaching</Link>
+                <Link href="/usabo-coaching" className="text-gray-600 hover:text-teal-600">
+                  USABO Coaching
+                </Link>
               </li>
               <li className="flex items-center">
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
@@ -342,10 +342,10 @@ export default function USABOPastPapersPage() {
               Year-by-year archive
             </h2>
             <p className="text-slate-600 mb-8">
-              Listed newest first. Each year includes both the Open Exam paper and the
-              corresponding Semifinal paper, plus our worked solutions and topic tagging.
-              Year-specific notes below are summary characterisations from Cerebrum faculty
-              review — not authoritative answer keys.
+              Listed newest first. Each year includes both the Open Exam paper and the corresponding
+              Semifinal paper, plus our worked solutions and topic tagging. Year-specific notes
+              below are summary characterisations from Cerebrum faculty review — not authoritative
+              answer keys.
             </p>
             <div className="overflow-x-auto rounded-xl border border-slate-200">
               <table className="w-full text-left">
@@ -437,19 +437,31 @@ export default function USABOPastPapersPage() {
           <div className="max-w-5xl mx-auto px-4">
             <h2 className="text-xl font-bold text-slate-900 mb-6 text-center">Related guides</h2>
             <div className="grid md:grid-cols-4 gap-4">
-              <Link href="/usabo-coaching" className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition">
+              <Link
+                href="/usabo-coaching"
+                className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+              >
                 <h3 className="font-semibold text-teal-700">USABO Coaching</h3>
                 <p className="text-xs text-slate-600 mt-1">Full pathway preparation</p>
               </Link>
-              <Link href="/usabo-6-month-prep-plan" className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition">
+              <Link
+                href="/usabo-6-month-prep-plan"
+                className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+              >
                 <h3 className="font-semibold text-teal-700">6-Month Prep Plan</h3>
                 <p className="text-xs text-slate-600 mt-1">Month-by-month schedule</p>
               </Link>
-              <Link href="/ap-biology-vs-usabo" className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition">
+              <Link
+                href="/ap-biology-vs-usabo"
+                className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+              >
                 <h3 className="font-semibold text-teal-700">AP Biology vs USABO</h3>
                 <p className="text-xs text-slate-600 mt-1">Bridge for AP-5 students</p>
               </Link>
-              <Link href="/usabo-2026-results" className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition">
+              <Link
+                href="/usabo-2026-results"
+                className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+              >
                 <h3 className="font-semibold text-teal-700">2026 Cutoffs & Dates</h3>
                 <p className="text-xs text-slate-600 mt-1">Live tracker</p>
               </Link>

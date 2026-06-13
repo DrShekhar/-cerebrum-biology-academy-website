@@ -221,9 +221,7 @@ export default function PaperDetailPage({ params }: { params: Promise<{ id: stri
           </div>
         </div>
 
-        <div
-          className="bg-white rounded-lg shadow-sm border p-6 animate-fadeInUp"
-        >
+        <div className="bg-white rounded-lg shadow-sm border p-6 animate-fadeInUp">
           <h2 className="text-lg font-semibold mb-4">Edit Paper Details</h2>
 
           <div className="space-y-4">

@@ -1,34 +1,64 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
-import { ChevronDown, MapPin, Clock, Users, Trophy, Phone, MessageSquare } from 'lucide-react';
-import { SmartWhatsAppCTA } from '@/components/conversion/SmartWhatsAppCTA';
-import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection';
-import { PricingSection, CostComparisonSection } from '@/components/city';
-import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks';
+import { useState } from 'react'
+import { ChevronDown, MapPin, Clock, Users, Trophy, Phone, MessageSquare } from 'lucide-react'
+import { SmartWhatsAppCTA } from '@/components/conversion/SmartWhatsAppCTA'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import { PricingSection, CostComparisonSection } from '@/components/city'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 interface PageContentProps {
-  city: string;
-  country: string;
+  city: string
+  country: string
 }
 
 interface FAQ {
-  id: string;
-  question: string;
-  answer: string;
+  id: string
+  question: string
+  answer: string
 }
 
 export function PageContent({ city, country }: PageContentProps) {
-  const [openFAQ, setOpenFAQ] = useState<string | null>(null);
+  const [openFAQ, setOpenFAQ] = useState<string | null>(null)
 
   const faqs: FAQ[] = [
-    { id: 'faq-1', question: 'Why should I do NEET coaching from Dammam instead of Riyadh?', answer: 'Eastern Province has 20+ CBSE schools and largest concentration of Indian families. Lower competition, better local support, and evening classes for working professionals.' },
-    { id: 'faq-2', question: 'How many CBSE schools are in Eastern Province?', answer: '20+ schools across Dammam, Khobar, and Dhahran. ISD and Al Hussam are top choices for NEET students.' },
-    { id: 'faq-3', question: 'What about evening classes - are they effective?', answer: 'Yes, highly effective for school students. 6-10 PM slot allows school completion. Focused, intensive curriculum. Success rate: 98%.' },
-    { id: 'faq-4', question: 'Is hostel accommodation available in Dammam?', answer: 'Yes, we have tie-ups with student hostels in Dammam and Khobar. Cost: SAR 1500-2000/month with meals.' },
-    { id: 'faq-5', question: 'How large is the Indian community in Dammam?', answer: '80,000+ Indians in Eastern Province. Strong community support, Indian temples, restaurants, and social networks.' },
-    { id: 'faq-6', question: 'What\'s the exam center capacity and experience?', answer: 'Dammam center: 250 seats. Proper invigilation, NEET-standard facilities. 2023-24: 180 students appeared.' },
-  ];
+    {
+      id: 'faq-1',
+      question: 'Why should I do NEET coaching from Dammam instead of Riyadh?',
+      answer:
+        'Eastern Province has 20+ CBSE schools and largest concentration of Indian families. Lower competition, better local support, and evening classes for working professionals.',
+    },
+    {
+      id: 'faq-2',
+      question: 'How many CBSE schools are in Eastern Province?',
+      answer:
+        '20+ schools across Dammam, Khobar, and Dhahran. ISD and Al Hussam are top choices for NEET students.',
+    },
+    {
+      id: 'faq-3',
+      question: 'What about evening classes - are they effective?',
+      answer:
+        'Yes, highly effective for school students. 6-10 PM slot allows school completion. Focused, intensive curriculum. Success rate: 98%.',
+    },
+    {
+      id: 'faq-4',
+      question: 'Is hostel accommodation available in Dammam?',
+      answer:
+        'Yes, we have tie-ups with student hostels in Dammam and Khobar. Cost: SAR 1500-2000/month with meals.',
+    },
+    {
+      id: 'faq-5',
+      question: 'How large is the Indian community in Dammam?',
+      answer:
+        '80,000+ Indians in Eastern Province. Strong community support, Indian temples, restaurants, and social networks.',
+    },
+    {
+      id: 'faq-6',
+      question: "What's the exam center capacity and experience?",
+      answer:
+        'Dammam center: 250 seats. Proper invigilation, NEET-standard facilities. 2023-24: 180 students appeared.',
+    },
+  ]
 
   const schools = [
     'Al Hussam School, Dammam',
@@ -39,14 +69,16 @@ export function PageContent({ city, country }: PageContentProps) {
     'Saudi Indian Academy',
     'Al Badr School Dammam',
     'Aramco Schools (limited access)',
-  ];
+  ]
 
   return (
     <div className="w-full">
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600 text-white px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6">
-            <span className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">NEET Excellence in {country}</span>
+            <span className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">
+              NEET Excellence in {country}
+            </span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             NEET Coaching in {city}, {country}
@@ -55,8 +87,14 @@ export function PageContent({ city, country }: PageContentProps) {
             98% Success Rate • Expert Faculty • Proven Results
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <SmartWhatsAppCTA text="Start Free Consultation" variant="light" className="px-8 py-3 font-semibold text-lg" />
-            <button className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition">Download Syllabus</button>
+            <SmartWhatsAppCTA
+              text="Start Free Consultation"
+              variant="light"
+              className="px-8 py-3 font-semibold text-lg"
+            />
+            <button className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition">
+              Download Syllabus
+            </button>
           </div>
         </div>
       </section>
@@ -90,7 +128,9 @@ export function PageContent({ city, country }: PageContentProps) {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-sm border-l-4 border-blue-500">
               <h3 className="text-xl font-bold mb-3">Indian Community Hub</h3>
-              <p className="text-gray-600">3rd largest Indian community in Saudi Arabia (80,000+)</p>
+              <p className="text-gray-600">
+                3rd largest Indian community in Saudi Arabia (80,000+)
+              </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm border-l-4 border-blue-500">
               <h3 className="text-xl font-bold mb-3">CBSE Network</h3>
@@ -115,7 +155,9 @@ export function PageContent({ city, country }: PageContentProps) {
               <MapPin className="w-8 h-8 text-blue-600 flex-shrink-0 mt-1" />
               <div>
                 <h3 className="text-2xl font-bold mb-2">NEET Exam Center in {city}</h3>
-                <p className="text-gray-700 text-lg">Dammam's official NEET exam center - Saudi Arabia's 2nd largest with 250 seats</p>
+                <p className="text-gray-700 text-lg">
+                  Dammam's official NEET exam center - Saudi Arabia's 2nd largest with 250 seats
+                </p>
               </div>
             </div>
           </div>
@@ -127,7 +169,10 @@ export function PageContent({ city, country }: PageContentProps) {
           <h2 className="text-4xl font-bold text-center mb-12">Schools We Serve</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {schools.map((school) => (
-              <div key={school} className="bg-white p-6 rounded-lg shadow-sm flex items-start gap-4">
+              <div
+                key={school}
+                className="bg-white p-6 rounded-lg shadow-sm flex items-start gap-4"
+              >
                 <Users className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-gray-900">{school}</p>
@@ -146,7 +191,9 @@ export function PageContent({ city, country }: PageContentProps) {
               <Clock className="w-8 h-8 flex-shrink-0 mt-1" />
               <div>
                 <h3 className="text-2xl font-bold mb-4">Flexible Learning Schedule</h3>
-                <p className="text-lg whitespace-pre-wrap">6:00 PM - 10:00 PM AST (Evening Classes) | Weekend Batches: Saturday 10 AM - 2 PM</p>
+                <p className="text-lg whitespace-pre-wrap">
+                  6:00 PM - 10:00 PM AST (Evening Classes) | Weekend Batches: Saturday 10 AM - 2 PM
+                </p>
               </div>
             </div>
           </div>
@@ -168,7 +215,9 @@ export function PageContent({ city, country }: PageContentProps) {
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition"
                 >
                   <span className="font-semibold text-gray-900">{faq.question}</span>
-                  <ChevronDown className={`w-5 h-5 text-gray-600 transition-transform ${openFAQ === faq.id ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    className={`w-5 h-5 text-gray-600 transition-transform ${openFAQ === faq.id ? 'rotate-180' : ''}`}
+                  />
                 </button>
                 {openFAQ === faq.id && (
                   <div className="px-6 py-4 border-t border-gray-200 bg-gray-50">
@@ -185,7 +234,11 @@ export function PageContent({ city, country }: PageContentProps) {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Ace Your NEET?</h2>
           <p className="text-xl mb-8">Join thousands of successful students preparing in {city}</p>
-          <SmartWhatsAppCTA text="Start Your NEET Journey Today" variant="light" className="px-8 py-4 font-semibold text-lg" />
+          <SmartWhatsAppCTA
+            text="Start Your NEET Journey Today"
+            variant="light"
+            className="px-8 py-4 font-semibold text-lg"
+          />
         </div>
       </section>
 
@@ -213,5 +266,5 @@ export function PageContent({ city, country }: PageContentProps) {
         </div>
       </section>
     </div>
-  );
+  )
 }

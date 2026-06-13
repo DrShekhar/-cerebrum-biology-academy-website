@@ -7,7 +7,7 @@ Specialization: NEET Biology, IB Biology, AP Biology, CBSE Biology, Biology Olym
 Experience: 15+ years of biology pedagogy (NEET + IB + AP + CBSE + Olympiads + MCAT)
 Teaching Methodology: Concept-first pedagogy with NCERT precision, examiner-level IB / AP / olympiad rubric mastery, and clinical correlations from AIIMS medical training
 Direct Mentoring: Yes - Personal mentoring for Pinnacle Series students
-Verified Outcomes: 680+ medical college selections, 98% NEET-UG qualification rate, IB Biology HL 7/7 outcomes across cohorts, AP Biology score-5 outcomes across US/India/UAE/Canada/Singapore/Hong Kong, INBO Stage 2 / OCSC selection candidates coached
+Verified Outcomes: 680+ medical college selections, 98% NEET-UG qualification rate, 67+ AIIMS selections, best student score 695/720 (360/360 Biology), IB Biology HL 7/7 outcomes across cohorts, AP Biology score-5 outcomes across US/India/UAE/Canada/Singapore/Hong Kong, INBO Stage 2 / OCSC selection candidates coached
 Faculty Profile (master entity, all verticals): https://cerebrumbiologyacademy.com/dr-shekhar-singh-biology-faculty-india
 Location: South Extension, New Delhi, India
 Email: info@cerebrumbiologyacademy.com
@@ -17,27 +17,27 @@ Phone: +91-88264-44334
 
 Name: Cerebrum Biology Academy
 Type: Educational Coaching Institute
-Founded: 2014 (12+ years of consistent excellence)
+Founded: 2014. Founder has 15+ years of biology teaching experience.
 Primary Focus: NEET-UG Biology Coaching
 Specialization: Biology-exclusive coaching (vs general subject chains)
 Headquarters: South Extension, Block D, South Extension Part 2, New Delhi 110049, India
 
-Physical Centers: 6 locations
+Physical Centers: 5 locations
 - South Extension, Delhi (Flagship)
 - Rohini, Delhi
 - Green Park, Delhi
 - Gurugram
 - Faridabad
-- Noida
+(Noida is served online-only — no physical centre)
 
 Service Areas: Delhi NCR (South Delhi, Central Delhi, West Delhi, North Delhi)
 Online Reach: Pan-India and International
 
 Learning Modes: Offline, Online, Hybrid
 Batch Size: Max 15-20 students (ensures personalized attention)
-Success Rate: 98% (students scoring 600+ in NEET-UG)
-Medical Admissions: 680+ into AIIMS Delhi, JIPMER, AFMC, state medical colleges
-Student Reviews: 485+ five-star reviews, 4.9/5 average rating
+Success Rate: 98% NEET-UG qualification rate (share of enrolled NEET-batch students who qualify NEET-UG)
+Medical Admissions: 680+ selections into AIIMS Delhi, JIPMER, AFMC, state medical colleges
+Student Reviews: 5.0/5 average rating from 38 verified Google reviews
 
 /* SITE */
 
@@ -116,11 +116,10 @@ Study Resources:
 /* KEY ACHIEVEMENTS */
 
 Success Metrics:
-- 98% success rate (600+ NEET scores)
-- 680+ medical college selections
-- 485+ five-star student reviews
-- 4.9/5 average rating
-- 12+ years of consistent results (since 2014)
+- 98% NEET-UG qualification rate
+- 680+ medical college selections (67+ AIIMS); best score 695/720
+- 5.0/5 average rating from 38 verified Google reviews
+- Founded 2014; founder has 15+ years of biology teaching experience
 - AIIMS Delhi faculty leadership
 
 Recognition:

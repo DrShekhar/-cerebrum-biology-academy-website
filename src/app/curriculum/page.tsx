@@ -20,10 +20,16 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Biology Curriculum Details - Complete Syllabus',
-    description: 'Detailed curriculum and syllabus for all our NEET Biology courses. Chapter-wise breakdown, learning objectives, and study materials.',
+    description:
+      'Detailed curriculum and syllabus for all our NEET Biology courses. Chapter-wise breakdown, learning objectives, and study materials.',
   },
 
-  openGraph: { title: 'NEET Biology Curriculum Details - Complete Syllabus', description: 'Detailed curriculum and syllabus for all our NEET Biology courses. Chapter-wise breakdown, learning objectives, and study materials.', type: 'website' },
+  openGraph: {
+    title: 'NEET Biology Curriculum Details - Complete Syllabus',
+    description:
+      'Detailed curriculum and syllabus for all our NEET Biology courses. Chapter-wise breakdown, learning objectives, and study materials.',
+    type: 'website',
+  },
 }
 
 export default function CurriculumPage() {

@@ -174,8 +174,21 @@ export function IndiaOlympiadSchoolSchemas({
     description: `AIIMS-trained biology olympiad coach. NSEB, INBO, OCSC, IBO preparation for students at ${school.shortName}.`,
     url: `${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`,
     image: `${SITE_URL}/images/dr-shekhar-singh.webp`,
-    affiliation: { '@type': 'EducationalOrganization', '@id': `${SITE_URL}/#organization`, name: 'Cerebrum Biology Academy' },
-    knowsAbout: ['NSEB', 'INBO', 'OCSC', 'IBO', 'Biology Olympiad', 'Campbell Biology', 'HBCSE', 'IAPT'],
+    affiliation: {
+      '@type': 'EducationalOrganization',
+      '@id': `${SITE_URL}/#organization`,
+      name: 'Cerebrum Biology Academy',
+    },
+    knowsAbout: [
+      'NSEB',
+      'INBO',
+      'OCSC',
+      'IBO',
+      'Biology Olympiad',
+      'Campbell Biology',
+      'HBCSE',
+      'IAPT',
+    ],
     sameAs: [`${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`],
   }
 

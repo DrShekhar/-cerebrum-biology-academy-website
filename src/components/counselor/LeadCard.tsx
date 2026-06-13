@@ -4,15 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
-import {
-  Phone,
-  Mail,
-  MessageSquare,
-  Clock,
-  GripVertical,
-  ExternalLink,
-  Star,
-} from 'lucide-react'
+import { Phone, Mail, MessageSquare, Clock, GripVertical, ExternalLink, Star } from 'lucide-react'
 import { formatDistanceToNow } from 'date-fns'
 import type { Lead, Priority } from '@/app/counselor/leads/page'
 
@@ -22,14 +14,12 @@ interface LeadCardProps {
   onRefresh?: () => void
 }
 
-const priorityConfig: Record<
-  Priority,
-  { label: string; emoji: string; bg: string; ring: string }
-> = {
-  HOT: { label: 'Hot', emoji: '🔥', bg: 'bg-red-50', ring: 'ring-red-200' },
-  WARM: { label: 'Warm', emoji: '⚡', bg: 'bg-amber-50', ring: 'ring-amber-200' },
-  COLD: { label: 'Cold', emoji: '❄️', bg: 'bg-blue-50', ring: 'ring-blue-200' },
-}
+const priorityConfig: Record<Priority, { label: string; emoji: string; bg: string; ring: string }> =
+  {
+    HOT: { label: 'Hot', emoji: '🔥', bg: 'bg-red-50', ring: 'ring-red-200' },
+    WARM: { label: 'Warm', emoji: '⚡', bg: 'bg-amber-50', ring: 'ring-amber-200' },
+    COLD: { label: 'Cold', emoji: '❄️', bg: 'bg-blue-50', ring: 'ring-blue-200' },
+  }
 
 function ScoreDot({ score }: { score: number | null }) {
   const s = score || 0
@@ -58,8 +48,7 @@ export function LeadCard({ lead, isDragging, onRefresh }: LeadCardProps) {
   }
 
   const priority = priorityConfig[lead.priority] || priorityConfig.WARM
-  const hasOverdueFollowUp =
-    lead.nextFollowUpAt && new Date(lead.nextFollowUpAt) < new Date()
+  const hasOverdueFollowUp = lead.nextFollowUpAt && new Date(lead.nextFollowUpAt) < new Date()
 
   return (
     <div
@@ -91,10 +80,7 @@ export function LeadCard({ lead, isDragging, onRefresh }: LeadCardProps) {
         </div>
 
         {/* Student Name — clickable link to detail page */}
-        <Link
-          href={`/counselor/leads/${lead.id}`}
-          className="block group/link"
-        >
+        <Link href={`/counselor/leads/${lead.id}`} className="block group/link">
           <div className="flex items-center gap-2 mb-1.5">
             <div className="w-7 h-7 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
               {lead.studentName.charAt(0).toUpperCase()}

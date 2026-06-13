@@ -193,110 +193,103 @@ export function OfflineFormHandler({ children }: OfflineFormHandlerProps) {
       {children}
 
       {/* Offline Indicator */}
-{showOfflineIndicator && (
-          <div
-            className="fixed top-0 left-0 right-0 z-50 bg-orange-600 text-white py-2 px-4 animate-fadeInUp"
-          >
-            <div className="flex items-center justify-center space-x-2 text-sm">
-              <WifiOff className="w-4 h-4" />
-              <span>You're offline. Forms will be saved and sent when you reconnect.</span>
-            </div>
+      {showOfflineIndicator && (
+        <div className="fixed top-0 left-0 right-0 z-50 bg-orange-600 text-white py-2 px-4 animate-fadeInUp">
+          <div className="flex items-center justify-center space-x-2 text-sm">
+            <WifiOff className="w-4 h-4" />
+            <span>You're offline. Forms will be saved and sent when you reconnect.</span>
           </div>
-        )}
-{/* Pending Forms Manager */}
-{pendingForms.length > 0 && (
-          <div
-            className="fixed bottom-6 right-6 z-40 max-w-sm animate-fadeInUp"
-          >
-            <Card className="border-2 border-orange-200 shadow-lg bg-white">
-              <CardHeader className="pb-3">
-                <CardTitle className="flex items-center justify-between text-lg">
-                  <div className="flex items-center space-x-2">
-                    <Send className="w-5 h-5 text-orange-600" />
-                    <span>Pending Forms</span>
+        </div>
+      )}
+      {/* Pending Forms Manager */}
+      {pendingForms.length > 0 && (
+        <div className="fixed bottom-6 right-6 z-40 max-w-sm animate-fadeInUp">
+          <Card className="border-2 border-orange-200 shadow-lg bg-white">
+            <CardHeader className="pb-3">
+              <CardTitle className="flex items-center justify-between text-lg">
+                <div className="flex items-center space-x-2">
+                  <Send className="w-5 h-5 text-orange-600" />
+                  <span>Pending Forms</span>
+                </div>
+                <Badge className="bg-orange-100 text-orange-800 border-orange-200">
+                  {pendingForms.length}
+                </Badge>
+              </CardTitle>
+            </CardHeader>
+
+            <CardContent className="space-y-3 max-h-64 overflow-y-auto">
+              {pendingForms.map((form) => (
+                <div key={form.id} className="p-3 bg-gray-50 rounded-lg border animate-fadeInUp">
+                  <div className="flex items-start justify-between mb-2">
+                    <div>
+                      <h4 className="font-medium text-sm text-gray-900">
+                        {getFormTypeLabel(form.type)}
+                      </h4>
+                      <p className="text-xs text-gray-500">
+                        {new Date(form.timestamp).toLocaleString()}
+                      </p>
+                    </div>
+                    {getStatusBadge(form.status)}
                   </div>
-                  <Badge className="bg-orange-100 text-orange-800 border-orange-200">
-                    {pendingForms.length}
-                  </Badge>
-                </CardTitle>
-              </CardHeader>
 
-              <CardContent className="space-y-3 max-h-64 overflow-y-auto">
-                {pendingForms.map((form) => (
-                  <div
-                    key={form.id}
-                    className="p-3 bg-gray-50 rounded-lg border animate-fadeInUp"
-                  >
-                    <div className="flex items-start justify-between mb-2">
-                      <div>
-                        <h4 className="font-medium text-sm text-gray-900">
-                          {getFormTypeLabel(form.type)}
-                        </h4>
-                        <p className="text-xs text-gray-500">
-                          {new Date(form.timestamp).toLocaleString()}
-                        </p>
-                      </div>
-                      {getStatusBadge(form.status)}
-                    </div>
+                  {/* Form preview */}
+                  <div className="text-xs text-gray-600 mb-3">
+                    {form.data.name && <div>Name: {form.data.name}</div>}
+                    {form.data.email && <div>Email: {form.data.email}</div>}
+                    {form.data.phone && <div>Phone: {form.data.phone}</div>}
+                  </div>
 
-                    {/* Form preview */}
-                    <div className="text-xs text-gray-600 mb-3">
-                      {form.data.name && <div>Name: {form.data.name}</div>}
-                      {form.data.email && <div>Email: {form.data.email}</div>}
-                      {form.data.phone && <div>Phone: {form.data.phone}</div>}
-                    </div>
-
-                    {/* Actions */}
-                    <div className="flex space-x-2">
-                      {form.status === 'failed' && (
-                        <Button
-                          size="sm"
-                          onClick={() => retryForm(form.id)}
-                          className="text-xs px-2 py-1 h-auto bg-blue-600 hover:bg-blue-700"
-                        >
-                          <RefreshCw className="w-3 h-3 mr-1" />
-                          Retry
-                        </Button>
-                      )}
-
+                  {/* Actions */}
+                  <div className="flex space-x-2">
+                    {form.status === 'failed' && (
                       <Button
                         size="sm"
-                        variant="outline"
-                        onClick={() => deleteForm(form.id)}
-                        className="text-xs px-2 py-1 h-auto border-red-300 text-red-700 hover:bg-red-50"
+                        onClick={() => retryForm(form.id)}
+                        className="text-xs px-2 py-1 h-auto bg-blue-600 hover:bg-blue-700"
                       >
-                        <Trash2 className="w-3 h-3 mr-1" />
-                        Delete
+                        <RefreshCw className="w-3 h-3 mr-1" />
+                        Retry
                       </Button>
-                    </div>
-                  </div>
-                ))}
+                    )}
 
-                {/* Sync All Button */}
-                {isOnline &&
-                  pendingForms.some((f) => f.status === 'pending' || f.status === 'failed') && (
                     <Button
-                      onClick={syncPendingForms}
-                      className="w-full bg-green-600 hover:bg-green-700 text-sm"
+                      size="sm"
+                      variant="outline"
+                      onClick={() => deleteForm(form.id)}
+                      className="text-xs px-2 py-1 h-auto border-red-300 text-red-700 hover:bg-red-50"
                     >
-                      <Send className="w-4 h-4 mr-2" />
-                      Sync All Forms
+                      <Trash2 className="w-3 h-3 mr-1" />
+                      Delete
                     </Button>
-                  )}
-
-                {/* Offline Notice */}
-                {!isOnline && (
-                  <div className="p-2 bg-orange-50 rounded border border-orange-200">
-                    <p className="text-xs text-orange-800 text-center">
-                      Forms will sync automatically when you're back online
-                    </p>
                   </div>
+                </div>
+              ))}
+
+              {/* Sync All Button */}
+              {isOnline &&
+                pendingForms.some((f) => f.status === 'pending' || f.status === 'failed') && (
+                  <Button
+                    onClick={syncPendingForms}
+                    className="w-full bg-green-600 hover:bg-green-700 text-sm"
+                  >
+                    <Send className="w-4 h-4 mr-2" />
+                    Sync All Forms
+                  </Button>
                 )}
-              </CardContent>
-            </Card>
-          </div>
-        )}
-</div>
+
+              {/* Offline Notice */}
+              {!isOnline && (
+                <div className="p-2 bg-orange-50 rounded border border-orange-200">
+                  <p className="text-xs text-orange-800 text-center">
+                    Forms will sync automatically when you're back online
+                  </p>
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        </div>
+      )}
+    </div>
   )
 }
 

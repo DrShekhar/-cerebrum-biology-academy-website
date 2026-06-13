@@ -116,12 +116,12 @@ export default function GurugramLocationContent() {
         <div className="max-w-7xl mx-auto px-4 py-12 lg:py-16">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left - Location Info */}
-            <div
-              className="space-y-6 animate-fadeInUp"
-            >
+            <div className="space-y-6 animate-fadeInUp">
               <div className="inline-flex items-center space-x-2 bg-green-500/20 border border-green-500/40 rounded-full px-4 py-2">
                 <MapPin className="w-4 h-4 text-green-400" />
-                <span className="text-green-300 text-sm font-medium">Gurugram Center — Offline Classes Available</span>
+                <span className="text-green-300 text-sm font-medium">
+                  Gurugram Center — Offline Classes Available
+                </span>
               </div>
 
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
@@ -129,8 +129,9 @@ export default function GurugramLocationContent() {
               </h1>
 
               <p className="text-lg text-gray-300 leading-relaxed">
-                Offline classroom coaching at our Gurugram Sector 51 center. AIIMS faculty,
-                small batches of 15 students, 98% success rate. Walk-in classes — no need to travel to Delhi!
+                Offline classroom coaching at our Gurugram Sector 51 center. AIIMS faculty, small
+                batches of 15 students, 98% success rate. Walk-in classes — no need to travel to
+                Delhi!
               </p>
 
               {/* Address Card */}
@@ -190,9 +191,7 @@ export default function GurugramLocationContent() {
             </div>
 
             {/* Right - Map Embed */}
-            <div
-              className="h-[400px] rounded-2xl overflow-hidden shadow-2xl animate-fadeInUp"
-            >
+            <div className="h-[400px] rounded-2xl overflow-hidden shadow-2xl animate-fadeInUp">
               <LazyGoogleMap
                 embedUrl={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2!2d${CONTACT_INFO.location.gurugram.geo.longitude}!3d${CONTACT_INFO.location.gurugram.geo.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI3JzM0LjIiTiA3N8KwMDEnMzUuOCJF!5e0!3m2!1sen!2sin!4v1234567890`}
                 title="Gurugram NEET Coaching Center"
@@ -200,7 +199,7 @@ export default function GurugramLocationContent() {
                 placeholder={{
                   lat: CONTACT_INFO.location.gurugram.geo.latitude,
                   lng: CONTACT_INFO.location.gurugram.geo.longitude,
-                  address: `${CONTACT_INFO.location.gurugram.streetAddress}, ${CONTACT_INFO.location.gurugram.addressLocality}`
+                  address: `${CONTACT_INFO.location.gurugram.streetAddress}, ${CONTACT_INFO.location.gurugram.addressLocality}`,
                 }}
               />
             </div>
@@ -279,7 +278,8 @@ export default function GurugramLocationContent() {
               {
                 icon: MapPin,
                 title: 'Offline Classes in Gurugram',
-                description: 'Physical classroom at Sector 51 — walk-in, attend in person, no online compromise',
+                description:
+                  'Physical classroom at Sector 51 — walk-in, attend in person, no online compromise',
               },
             ].map((feature, index) => (
               <div
@@ -382,8 +382,12 @@ export default function GurugramLocationContent() {
                 href={center.href}
                 className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 hover:border-blue-200 border border-gray-200 transition-colors group"
               >
-                <p className="font-semibold text-gray-900 group-hover:text-blue-600">{center.name}</p>
-                <span className="text-sm text-gray-500 group-hover:text-blue-500">View details →</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600">
+                  {center.name}
+                </p>
+                <span className="text-sm text-gray-500 group-hover:text-blue-500">
+                  View details →
+                </span>
               </Link>
             ))}
           </div>

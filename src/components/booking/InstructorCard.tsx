@@ -67,11 +67,9 @@ export function InstructorCard({ instructorName, isVisible }: InstructorCardProp
   if (!instructor) return null
 
   return (
-<>
-{isVisible && (
-        <div
-          className="absolute z-50 mt-2 w-full min-w-[280px] max-w-[320px] bg-white rounded-lg shadow-2xl border border-gray-200 p-4 max-h-[400px] overflow-y-auto animate-fadeInUp"
-        >
+    <>
+      {isVisible && (
+        <div className="absolute z-50 mt-2 w-full min-w-[280px] max-w-[320px] bg-white rounded-lg shadow-2xl border border-gray-200 p-4 max-h-[400px] overflow-y-auto animate-fadeInUp">
           <div className="flex gap-4">
             <div className="flex-shrink-0">
               <div className="w-16 h-16 rounded-full bg-indigo-400 flex items-center justify-center text-white font-bold text-xl">
@@ -119,6 +117,6 @@ export function InstructorCard({ instructorName, isVisible }: InstructorCardProp
           </div>
         </div>
       )}
-</>
-)
+    </>
+  )
 }

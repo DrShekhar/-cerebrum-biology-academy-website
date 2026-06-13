@@ -9,12 +9,7 @@
     {
       "type": "MCQ",
       "question": "In Drosophila, the white gene is X-linked recessive. A cross between a white-eyed female and a red-eyed male produces F1 progeny. If F1 females are crossed with F1 males, what proportion of F2 females will be white-eyed?",
-      "options": [
-        "All",
-        "0",
-        "1/4",
-        "1/2"
-      ],
+      "options": ["All", "0", "1/4", "1/2"],
       "correctAnswer": "C",
       "explanation": "The white-eyed female is X^w X^w, and the red-eyed male is X^W Y. F1 females are all X^W X^w (carriers, red-eyed), and F1 males are all X^w Y (white-eyed). Crossing F1 females (X^W X^w) with F1 males (X^w Y) gives F2 females: 1/2 X^W X^w (red) and 1/2 X^w X^w (white). Thus 1/2 of F2 females are white-eyed. However, considering the total F2: females are 1/4 carrier red, 1/4 white; males are 1/4 red, 1/4 white. Among all F2 females specifically, 1/2 are white-eyed, which means 1/4 of all F2 are white-eyed females.",
       "isOlympiad": true,
@@ -89,12 +84,7 @@
     {
       "type": "MCQ",
       "question": "A woman who is a carrier for both hemophilia A (X-linked) and red-green color blindness (X-linked) has these alleles in trans configuration. She marries a normal-vision, non-hemophilic man. The recombination frequency between these two loci is approximately 10%. What is the probability that her son will be both color blind and hemophilic?",
-      "options": [
-        "5%",
-        "25%",
-        "45%",
-        "10%"
-      ],
+      "options": ["5%", "25%", "45%", "10%"],
       "correctAnswer": "A",
       "explanation": "Since the alleles are in trans configuration, the mother's X chromosomes are: X^H-cb (hemophilia normal vision) and X^h-CB (normal clotting, color blind), where H = normal clotting, h = hemophilia, CB = normal vision, cb = color blind. For a son to be both color blind AND hemophilic, he would need to receive an X chromosome carrying both recessive alleles (X^h-cb). This would require a recombination event between the two loci. With 10% recombination frequency, recombinant gametes make up 10% total (5% each type). The X^h-cb recombinant gamete would be produced at 5% frequency. Since sons receive one X from mother, the probability is 5%. This illustrates how trans configuration means the double-mutant phenotype requires recombination.",
       "isOlympiad": true,

@@ -137,8 +137,8 @@ export function LiveActivityFeed({
 
   if (variant === 'floating') {
     return (
-<>
-{isVisible && (
+      <>
+        {isVisible && (
           <div
             className={`fixed bottom-6 left-6 z-40 ${className}`}
             onMouseEnter={() => setIsPaused(true)}
@@ -199,8 +199,8 @@ export function LiveActivityFeed({
             </div>
           </div>
         )}
-</>
-)
+      </>
+    )
   }
 
   if (variant === 'sidebar') {

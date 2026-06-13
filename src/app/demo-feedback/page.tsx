@@ -3,7 +3,16 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { Star, Send, CheckCircle, AlertCircle, Loader2, ArrowLeft, ThumbsUp, ThumbsDown } from 'lucide-react'
+import {
+  Star,
+  Send,
+  CheckCircle,
+  AlertCircle,
+  Loader2,
+  ArrowLeft,
+  ThumbsUp,
+  ThumbsDown,
+} from 'lucide-react'
 
 interface FeedbackState {
   rating: number
@@ -29,7 +38,9 @@ export default function DemoFeedbackPage() {
   const bookingId = searchParams.get('id')
   const token = searchParams.get('token')
 
-  const [state, setState] = useState<'loading' | 'form' | 'submitting' | 'success' | 'error' | 'expired' | 'invalid'>('loading')
+  const [state, setState] = useState<
+    'loading' | 'form' | 'submitting' | 'success' | 'error' | 'expired' | 'invalid'
+  >('loading')
   const [errorMessage, setErrorMessage] = useState('')
   const [bookingInfo, setBookingInfo] = useState<{ studentName?: string } | null>(null)
 
@@ -175,12 +186,14 @@ export default function DemoFeedbackPage() {
             </div>
             <h1 className="text-2xl font-bold text-slate-800 mb-2">Thank You!</h1>
             <p className="text-slate-600 mb-6">
-              Your feedback has been submitted successfully. We truly appreciate you taking the time to help us improve.
+              Your feedback has been submitted successfully. We truly appreciate you taking the time
+              to help us improve.
             </p>
             {feedback.rating >= 4 && (
               <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6">
                 <p className="text-amber-800 text-sm">
-                  We&apos;re thrilled you enjoyed your demo! Would you consider sharing your experience with others?
+                  We&apos;re thrilled you enjoyed your demo! Would you consider sharing your
+                  experience with others?
                 </p>
                 <a
                   href="https://g.page/r/CerebrumBiologyAcademy/review"
@@ -284,9 +297,7 @@ export default function DemoFeedbackPage() {
                   >
                     <Star
                       className={`w-10 h-10 ${
-                        star <= feedback.rating
-                          ? 'fill-amber-400 text-amber-400'
-                          : 'text-slate-300'
+                        star <= feedback.rating ? 'fill-amber-400 text-amber-400' : 'text-slate-300'
                       }`}
                     />
                   </button>
@@ -379,13 +390,18 @@ export default function DemoFeedbackPage() {
 
             {/* Improvement Suggestions */}
             <div>
-              <label htmlFor="suggestions" className="block text-lg font-semibold text-slate-800 mb-3">
+              <label
+                htmlFor="suggestions"
+                className="block text-lg font-semibold text-slate-800 mb-3"
+              >
                 Any suggestions for improvement?
               </label>
               <textarea
                 id="suggestions"
                 value={feedback.improvementSuggestions}
-                onChange={(e) => setFeedback((prev) => ({ ...prev, improvementSuggestions: e.target.value }))}
+                onChange={(e) =>
+                  setFeedback((prev) => ({ ...prev, improvementSuggestions: e.target.value }))
+                }
                 placeholder="How can we make our demo classes better?"
                 rows={3}
                 maxLength={1000}

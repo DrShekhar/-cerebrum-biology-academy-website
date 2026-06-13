@@ -3,7 +3,8 @@ import { TopicLandingPage } from '@/components/mcq/TopicLandingPage'
 
 export const metadata: Metadata = {
   title: 'Cell: The Unit of Life MCQ for NEET 2026 | Free Practice Questions',
-  description: 'Practice 500+ free Cell Biology MCQs for NEET. Cell structure, cell organelles, prokaryotic vs eukaryotic cells questions. NCERT Class 11 based with detailed explanations.',
+  description:
+    'Practice 500+ free Cell Biology MCQs for NEET. Cell structure, cell organelles, prokaryotic vs eukaryotic cells questions. NCERT Class 11 based with detailed explanations.',
   keywords: [
     'Cell Unit of Life MCQ NEET',
     'Cell Biology MCQ',
@@ -18,7 +19,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Cell: The Unit of Life MCQ for NEET | 500+ Free Questions',
-    description: 'Master Cell Biology for NEET with 500+ free MCQs. Practice cell structure, organelles, and cell functions questions.',
+    description:
+      'Master Cell Biology for NEET with 500+ free MCQs. Practice cell structure, organelles, and cell functions questions.',
     url: 'https://cerebrumbiologyacademy.com/neet-biology-mcq/cell-unit-of-life',
   },
   alternates: {
@@ -28,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Cell: The Unit of Life MCQ for NEET 2026 | Free Practice Questions',
-    description: 'Practice 500+ free Cell Biology MCQs for NEET. Cell structure, cell organelles, prokaryotic vs eukaryotic cells questions. NCERT Class 11 based with detailed explanations.',
+    description:
+      'Practice 500+ free Cell Biology MCQs for NEET. Cell structure, cell organelles, prokaryotic vs eukaryotic cells questions. NCERT Class 11 based with detailed explanations.',
   },
 }
 
@@ -36,7 +39,8 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Quiz',
   name: 'Cell: The Unit of Life MCQ for NEET',
-  description: 'Practice 500+ free Cell Biology MCQs for NEET covering cell structure, organelles, and cellular functions.',
+  description:
+    'Practice 500+ free Cell Biology MCQs for NEET covering cell structure, organelles, and cellular functions.',
   educationalLevel: 'High School',
   isAccessibleForFree: true,
   provider: {

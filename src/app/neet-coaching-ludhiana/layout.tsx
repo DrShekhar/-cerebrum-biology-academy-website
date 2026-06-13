@@ -18,7 +18,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best NEET Coaching in Ludhiana',
-    description: 'Top NEET biology coaching in Ludhiana, Punjab. 98% success rate. Model Town, Civil Lines.',
+    description:
+      'Top NEET biology coaching in Ludhiana, Punjab. 98% success rate. Model Town, Civil Lines.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-ludhiana',

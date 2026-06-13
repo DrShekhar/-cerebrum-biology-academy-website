@@ -114,7 +114,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-kota' },
+    alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-kota' },
     description:
       'Same quality as Kota top faculties - live teaching with instant doubt resolution from your room',
   },
@@ -276,8 +276,7 @@ export default function NeetCoachingKotaPage() {
       <section className="relative bg-gradient-to-br from-orange-900 via-orange-700 to-orange-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2" />
               India&apos;s Coaching Capital | 2.5 Lakh Aspirants
@@ -298,7 +297,11 @@ export default function NeetCoachingKotaPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Kota.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Kota.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -324,7 +327,10 @@ export default function NeetCoachingKotaPage() {
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {successMetrics.map((metric, index) => (
-                <div key={metric.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
+                <div
+                  key={metric.label}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
+                >
                   <metric.icon className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                   <div className="text-2xl font-bold">{metric.value}</div>
                   <div className="text-sm opacity-80">{metric.label}</div>
@@ -338,8 +344,7 @@ export default function NeetCoachingKotaPage() {
       {/* The Kota Biology Problem Section */}
       <section className="py-20 bg-red-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               The Hidden Problem in Kota Coaching
             </h2>
@@ -412,8 +417,7 @@ export default function NeetCoachingKotaPage() {
       {/* Kota Localities Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               NEET Biology Coaching Across All Kota Localities
             </h2>
@@ -453,8 +457,7 @@ export default function NeetCoachingKotaPage() {
       {/* Why Kota Students Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why 1,000+ Kota Students Added Cerebrum
             </h2>
@@ -465,7 +468,10 @@ export default function NeetCoachingKotaPage() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {whyKota.map((item, index) => (
-              <div key={item.title} className="bg-orange-50 rounded-xl p-8 border border-orange-100 animate-fadeInUp">
+              <div
+                key={item.title}
+                className="bg-orange-50 rounded-xl p-8 border border-orange-100 animate-fadeInUp"
+              >
                 <item.icon className="w-12 h-12 text-orange-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
@@ -479,7 +485,10 @@ export default function NeetCoachingKotaPage() {
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
               {topCoachingCenters.map((center, index) => (
-                <span key={center} className="bg-white text-gray-700 px-4 py-2 rounded-full font-medium shadow-sm animate-fadeInUp">
+                <span
+                  key={center}
+                  className="bg-white text-gray-700 px-4 py-2 rounded-full font-medium shadow-sm animate-fadeInUp"
+                >
                   {center}
                 </span>
               ))}
@@ -491,8 +500,7 @@ export default function NeetCoachingKotaPage() {
       {/* Comparison Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Kota Coaching vs Cerebrum Biology
             </h2>
@@ -508,7 +516,10 @@ export default function NeetCoachingKotaPage() {
               <div className="text-orange-600">Cerebrum Biology</div>
             </div>
             {competitorComparison.map((row, index) => (
-              <div key={row.feature} className="grid grid-cols-3 gap-0 p-4 border-b last:border-b-0 text-center items-center animate-fadeInUp">
+              <div
+                key={row.feature}
+                className="grid grid-cols-3 gap-0 p-4 border-b last:border-b-0 text-center items-center animate-fadeInUp"
+              >
                 <div className="font-medium text-gray-900">{row.feature}</div>
                 <div className="text-gray-600">{row.kota}</div>
                 <div
@@ -528,8 +539,7 @@ export default function NeetCoachingKotaPage() {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Cerebrum for NEET Biology in Kota?
             </h2>
@@ -537,7 +547,10 @@ export default function NeetCoachingKotaPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={feature.title} className="bg-gray-50 rounded-xl p-8 shadow-lg animate-fadeInUp">
+              <div
+                key={feature.title}
+                className="bg-gray-50 rounded-xl p-8 shadow-lg animate-fadeInUp"
+              >
                 <feature.icon className="w-12 h-12 text-orange-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -550,8 +563,7 @@ export default function NeetCoachingKotaPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions - NEET Coaching Kota
             </h2>
@@ -582,12 +594,16 @@ export default function NeetCoachingKotaPage() {
               Fill Your Biology Gap - Score 340+ in NEET
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              98% success rate, AIIMS trained faculties, 5,000+ Kota students. Complement your
-              Kota coaching today!
+              98% success rate, AIIMS trained faculties, 5,000+ Kota students. Complement your Kota
+              coaching today!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Kota.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Kota.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -599,7 +615,11 @@ export default function NeetCoachingKotaPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20NEET%20Biology%20coaching%20in%20Kota.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20NEET%20Biology%20coaching%20in%20Kota.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"

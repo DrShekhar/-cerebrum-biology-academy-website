@@ -14,22 +14,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "The term 'biodiversity' was popularised by:",
-      "options": [
-        "Paul Ehrlich",
-        "Alexander von Humboldt",
-        "Robert May",
-        "Edward Wilson"
-      ],
+      "options": ["Paul Ehrlich", "Alexander von Humboldt", "Robert May", "Edward Wilson"],
       "correctAnswer": "D",
       "explanation": "The term 'biodiversity' was popularised by sociobiologist Edward Wilson. He used it to describe the combined diversity at all levels of biological organisation including genetic, species, and ecological diversity.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biodiversity",
-        "edward-wilson",
-        "terminology"
-      ],
+      "tags": ["biodiversity", "edward-wilson", "terminology"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -40,22 +31,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "According to Robert May, the global species diversity is approximately:",
-      "options": [
-        "1.5 million",
-        "20 million",
-        "50 million",
-        "7 million"
-      ],
+      "options": ["1.5 million", "20 million", "50 million", "7 million"],
       "correctAnswer": "D",
       "explanation": "Robert May estimated global species diversity to be about 7 million. Of this, only about 1.5 million species have been formally described and named so far. The actual number could be much higher.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "species-diversity",
-        "robert-may",
-        "global-biodiversity"
-      ],
+      "tags": ["species-diversity", "robert-may", "global-biodiversity"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -66,22 +48,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "Which group of organisms contributes the largest fraction of known species on Earth?",
-      "options": [
-        "Fungi",
-        "Plants",
-        "Mammals",
-        "Insects"
-      ],
+      "options": ["Fungi", "Plants", "Mammals", "Insects"],
       "correctAnswer": "D",
       "explanation": "Insects are the most species-rich group of organisms on Earth. Over 70% of all known species are insects. Among insects, beetles alone account for a huge proportion, prompting J.B.S. Haldane's famous remark about the Creator's fondness for beetles.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "insects",
-        "species-richness",
-        "diversity"
-      ],
+      "tags": ["insects", "species-richness", "diversity"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -92,22 +65,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "The species-area relationship was given by:",
-      "options": [
-        "Robert May",
-        "Paul Ehrlich",
-        "Edward Wilson",
-        "Alexander von Humboldt"
-      ],
+      "options": ["Robert May", "Paul Ehrlich", "Edward Wilson", "Alexander von Humboldt"],
       "correctAnswer": "D",
       "explanation": "Alexander von Humboldt observed the species-area relationship during his extensive explorations in South American jungles. He noted that within a region, species richness increases with increasing explored area but only up to a limit.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "species-area",
-        "humboldt",
-        "biogeography"
-      ],
+      "tags": ["species-area", "humboldt", "biogeography"],
       "neetWeightage": "HIGH"
     },
     {
@@ -118,22 +82,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "In the equation log S = log C + Z log A, the value of Z for a large area like an entire continent is:",
-      "options": [
-        "0.1 to 0.2",
-        "0.3 to 0.5",
-        "0.6 to 1.2",
-        "1.5 to 3.5"
-      ],
+      "options": ["0.1 to 0.2", "0.3 to 0.5", "0.6 to 1.2", "1.5 to 3.5"],
       "correctAnswer": "C",
       "explanation": "For very large areas like entire continents, the slope of the regression line (Z value) is found to be in the range of 0.6 to 1.2. For smaller areas, the Z value typically ranges from 0.1 to 0.2 regardless of taxonomic group or region.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "species-area",
-        "z-value",
-        "regression"
-      ],
+      "tags": ["species-area", "z-value", "regression"],
       "neetWeightage": "HIGH"
     },
     {
@@ -144,22 +99,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "The 'Rivet Popper Hypothesis' to explain the importance of biodiversity was proposed by:",
-      "options": [
-        "Alexander von Humboldt",
-        "Edward Wilson",
-        "Robert May",
-        "Paul Ehrlich"
-      ],
+      "options": ["Alexander von Humboldt", "Edward Wilson", "Robert May", "Paul Ehrlich"],
       "correctAnswer": "D",
       "explanation": "Paul Ehrlich proposed the Rivet Popper Hypothesis using the analogy of rivets in an aeroplane. He compared each species in an ecosystem to rivets holding the parts of an aeroplane together. Removal of each rivet (species extinction) weakens the structure progressively.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "rivet-popper",
-        "paul-ehrlich",
-        "biodiversity-importance"
-      ],
+      "tags": ["rivet-popper", "paul-ehrlich", "biodiversity-importance"],
       "neetWeightage": "HIGH"
     },
     {
@@ -181,11 +127,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "evil-quartet",
-        "biodiversity-loss",
-        "causes"
-      ],
+      "tags": ["evil-quartet", "biodiversity-loss", "causes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -207,11 +149,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sacred-groves",
-        "in-situ",
-        "conservation"
-      ],
+      "tags": ["sacred-groves", "in-situ", "conservation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -222,22 +160,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "How many biodiversity hotspots have been identified in the world?",
-      "options": [
-        "25",
-        "34",
-        "12",
-        "50"
-      ],
+      "options": ["25", "34", "12", "50"],
       "correctAnswer": "B",
       "explanation": "Originally 25 biodiversity hotspots were identified by Norman Myers, but the number has now increased to 34. A hotspot must have at least 1500 species of vascular plants as endemics and must have lost at least 70% of its original habitat.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hotspots",
-        "biodiversity",
-        "conservation"
-      ],
+      "tags": ["hotspots", "biodiversity", "conservation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -248,22 +177,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "India has how many biodiversity hotspots?",
-      "options": [
-        "1",
-        "4",
-        "2",
-        "3"
-      ],
+      "options": ["1", "4", "2", "3"],
       "correctAnswer": "D",
       "explanation": "India has three biodiversity hotspots: (1) Western Ghats and Sri Lanka, (2) Indo-Burma region, and (3) Himalaya. These regions harbour a disproportionately high number of endemic species and have suffered significant habitat loss.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "india-hotspots",
-        "western-ghats",
-        "himalaya"
-      ],
+      "tags": ["india-hotspots", "western-ghats", "himalaya"],
       "neetWeightage": "HIGH"
     },
     {
@@ -285,11 +205,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cryopreservation",
-        "ex-situ",
-        "conservation"
-      ],
+      "tags": ["cryopreservation", "ex-situ", "conservation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -300,22 +216,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "The Amazon rainforest is known as the 'lungs of the planet' and is home to approximately what fraction of total species in the world?",
-      "options": [
-        "One-tenth",
-        "One-third",
-        "One-fifth",
-        "One-half"
-      ],
+      "options": ["One-tenth", "One-third", "One-fifth", "One-half"],
       "correctAnswer": "C",
       "explanation": "The Amazon rainforest harbours more than one-fifth (about 20%) of the total species found in the world. It is the world's largest tropical rainforest and is extremely rich in biodiversity, containing thousands of species of plants, animals, and microorganisms.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "amazon",
-        "tropical-forest",
-        "species-richness"
-      ],
+      "tags": ["amazon", "tropical-forest", "species-richness"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -337,12 +244,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "nile-perch",
-        "alien-species",
-        "cichlid",
-        "lake-victoria"
-      ],
+      "tags": ["nile-perch", "alien-species", "cichlid", "lake-victoria"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -364,11 +266,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "extinction-rate",
-        "mass-extinction",
-        "biodiversity-loss"
-      ],
+      "tags": ["extinction-rate", "mass-extinction", "biodiversity-loss"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -390,11 +288,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "genetic-diversity",
-        "rice-varieties",
-        "allelic-variation"
-      ],
+      "tags": ["genetic-diversity", "rice-varieties", "allelic-variation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -416,11 +310,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "habitat-loss",
-        "fragmentation",
-        "biodiversity-loss"
-      ],
+      "tags": ["habitat-loss", "fragmentation", "biodiversity-loss"],
       "neetWeightage": "HIGH"
     },
     {
@@ -431,23 +321,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "The IUCN Red List (2004) documented the extinction of how many species in the last 500 years?",
-      "options": [
-        "284",
-        "584",
-        "984",
-        "784"
-      ],
+      "options": ["284", "584", "984", "784"],
       "correctAnswer": "D",
       "explanation": "According to the IUCN Red List (2004), 784 species have gone extinct in the last 500 years. This includes 338 vertebrates, 359 invertebrates, and 87 plants. The actual number may be much higher as many species go extinct before they are even discovered.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "iucn",
-        "red-list",
-        "extinction",
-        "statistics"
-      ],
+      "tags": ["iucn", "red-list", "extinction", "statistics"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -458,22 +338,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "The species-area relationship on a log-log scale gives a straight line. In the equation log S = log C + Z log A, 'C' represents:",
-      "options": [
-        "Slope of the line",
-        "Y-intercept",
-        "Species richness",
-        "Area"
-      ],
+      "options": ["Slope of the line", "Y-intercept", "Species richness", "Area"],
       "correctAnswer": "B",
       "explanation": "In the species-area relationship log S = log C + Z log A, 'C' represents the y-intercept, which is a constant that varies with the taxonomic group. 'Z' is the slope of the regression line, 'S' is species richness, and 'A' is the area.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "species-area",
-        "y-intercept",
-        "regression"
-      ],
+      "tags": ["species-area", "y-intercept", "regression"],
       "neetWeightage": "HIGH"
     },
     {
@@ -495,11 +366,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hotspot-criteria",
-        "endemism",
-        "habitat-loss"
-      ],
+      "tags": ["hotspot-criteria", "endemism", "habitat-loss"],
       "neetWeightage": "HIGH"
     },
     {
@@ -510,22 +377,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "Which of the following is NOT an example of ex-situ conservation?",
-      "options": [
-        "Zoological parks",
-        "Botanical gardens",
-        "Seed banks",
-        "National parks"
-      ],
+      "options": ["Zoological parks", "Botanical gardens", "Seed banks", "National parks"],
       "correctAnswer": "D",
       "explanation": "National parks are examples of in-situ conservation where species are protected in their natural habitats. Zoological parks, botanical gardens, and seed banks are examples of ex-situ conservation where threatened species are taken out of their natural habitat and placed in special settings.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ex-situ",
-        "in-situ",
-        "national-parks"
-      ],
+      "tags": ["ex-situ", "in-situ", "national-parks"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -547,11 +405,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "latitudinal-gradient",
-        "tropics",
-        "species-diversity"
-      ],
+      "tags": ["latitudinal-gradient", "tropics", "species-diversity"],
       "neetWeightage": "HIGH"
     },
     {
@@ -562,22 +416,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "Which invasive weed, introduced to India, caused environmental damage?",
-      "options": [
-        "Hydrilla",
-        "Wolffia",
-        "Parthenium",
-        "Azolla"
-      ],
+      "options": ["Hydrilla", "Wolffia", "Parthenium", "Azolla"],
       "correctAnswer": "C",
       "explanation": "Parthenium (carrot grass or Congress grass) was accidentally introduced to India with imported wheat. It has spread throughout India, causing environmental damage by displacing native species and also causing health issues like allergic reactions in humans.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "parthenium",
-        "invasive-species",
-        "alien-species"
-      ],
+      "tags": ["parthenium", "invasive-species", "alien-species"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -599,11 +444,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dodo",
-        "over-exploitation",
-        "extinction"
-      ],
+      "tags": ["dodo", "over-exploitation", "extinction"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -614,22 +455,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "The Z value in the species-area relationship for smaller areas typically ranges from:",
-      "options": [
-        "0.1 to 0.2",
-        "0.6 to 1.2",
-        "1.0 to 2.0",
-        "2.0 to 3.0"
-      ],
+      "options": ["0.1 to 0.2", "0.6 to 1.2", "1.0 to 2.0", "2.0 to 3.0"],
       "correctAnswer": "A",
       "explanation": "For smaller areas investigated, the regression coefficient (Z value) in the species-area relationship typically ranges from 0.1 to 0.2, regardless of the taxonomic group or the region. This value steepens to 0.6-1.2 for very large areas like entire continents.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "z-value",
-        "species-area",
-        "regression-coefficient"
-      ],
+      "tags": ["z-value", "species-area", "regression-coefficient"],
       "neetWeightage": "HIGH"
     },
     {
@@ -651,11 +483,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "utilitarian",
-        "conservation-arguments",
-        "economic-value"
-      ],
+      "tags": ["utilitarian", "conservation-arguments", "economic-value"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -677,11 +505,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "co-extinction",
-        "obligate-dependency",
-        "evil-quartet"
-      ],
+      "tags": ["co-extinction", "obligate-dependency", "evil-quartet"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -703,11 +527,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "biosphere-reserves",
-        "national-parks",
-        "in-situ"
-      ],
+      "tags": ["biosphere-reserves", "national-parks", "in-situ"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -718,22 +538,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "India has approximately what percentage of the world's total species?",
-      "options": [
-        "2.4%",
-        "8.1%",
-        "15%",
-        "25%"
-      ],
+      "options": ["2.4%", "8.1%", "15%", "25%"],
       "correctAnswer": "B",
       "explanation": "India has about 8.1% of the world's total species, making it one of the 12 mega diversity countries of the world. India has over 45,000 plant species and about 91,000 animal species documented so far.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "india-biodiversity",
-        "mega-diversity",
-        "species-percentage"
-      ],
+      "tags": ["india-biodiversity", "mega-diversity", "species-percentage"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -755,11 +566,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tropical-diversity",
-        "speciation",
-        "evolutionary-time"
-      ],
+      "tags": ["tropical-diversity", "speciation", "evolutionary-time"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -770,22 +577,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "Eichhornia crassipes, an aquatic invasive species in India, is commonly known as:",
-      "options": [
-        "Congress grass",
-        "Lantana",
-        "Water fern",
-        "Water hyacinth"
-      ],
+      "options": ["Congress grass", "Lantana", "Water fern", "Water hyacinth"],
       "correctAnswer": "D",
       "explanation": "Eichhornia crassipes is commonly known as water hyacinth or 'Terror of Bengal'. It is an invasive alien species introduced from tropical America that clogs water bodies, affecting aquatic biodiversity by depleting dissolved oxygen and blocking sunlight.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "eichhornia",
-        "water-hyacinth",
-        "invasive-species"
-      ],
+      "tags": ["eichhornia", "water-hyacinth", "invasive-species"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -807,11 +605,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tilman",
-        "diversity-stability",
-        "productivity"
-      ],
+      "tags": ["tilman", "diversity-stability", "productivity"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -822,22 +616,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "The number of described species of plants in India is approximately:",
-      "options": [
-        "25,000",
-        "45,000",
-        "75,000",
-        "1,00,000"
-      ],
+      "options": ["25,000", "45,000", "75,000", "1,00,000"],
       "correctAnswer": "B",
       "explanation": "India has approximately 45,000 described species of plants. This rich plant diversity is due to the wide range of climatic and topographic conditions across the country, from tropical rainforests to alpine meadows.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "india-plants",
-        "species-count",
-        "biodiversity"
-      ],
+      "tags": ["india-plants", "species-count", "biodiversity"],
       "neetWeightage": "LOW"
     },
     {
@@ -859,11 +644,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "broadly-utilitarian",
-        "ecosystem-services",
-        "conservation"
-      ],
+      "tags": ["broadly-utilitarian", "ecosystem-services", "conservation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -874,22 +655,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "What percentage of the Earth's land surface do biodiversity hotspots collectively cover?",
-      "options": [
-        "0.5%",
-        "2.3%",
-        "10%",
-        "25%"
-      ],
+      "options": ["0.5%", "2.3%", "10%", "25%"],
       "correctAnswer": "B",
       "explanation": "All the biodiversity hotspots taken together cover less than 2.3% of the Earth's land area, yet they harbour a disproportionately high number of species. This makes hotspot-based conservation a very efficient strategy.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hotspot-area",
-        "conservation-efficiency",
-        "land-coverage"
-      ],
+      "tags": ["hotspot-area", "conservation-efficiency", "land-coverage"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -911,11 +683,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "seed-banks",
-        "tissue-culture",
-        "ex-situ"
-      ],
+      "tags": ["seed-banks", "tissue-culture", "ex-situ"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -926,22 +694,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "Tropical forests cover about what percentage of Earth's land surface?",
-      "options": [
-        "2%",
-        "6%",
-        "15%",
-        "30%"
-      ],
+      "options": ["2%", "6%", "15%", "30%"],
       "correctAnswer": "B",
       "explanation": "Tropical forests cover about 6% of the Earth's land surface but harbour more than half of the total species on Earth. This makes them the most species-rich terrestrial biome and a critical target for conservation.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tropical-forests",
-        "land-area",
-        "species-richness"
-      ],
+      "tags": ["tropical-forests", "land-area", "species-richness"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -963,11 +722,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ecological-diversity",
-        "ecosystem-variety",
-        "biodiversity-levels"
-      ],
+      "tags": ["ecological-diversity", "ecosystem-variety", "biodiversity-levels"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -978,22 +733,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "In India, which of the following is NOT a biodiversity hotspot?",
-      "options": [
-        "Western Ghats",
-        "Indo-Burma",
-        "Himalaya",
-        "Sundarbans"
-      ],
+      "options": ["Western Ghats", "Indo-Burma", "Himalaya", "Sundarbans"],
       "correctAnswer": "D",
       "explanation": "Sundarbans is not classified as a separate biodiversity hotspot. India's three biodiversity hotspots are Western Ghats and Sri Lanka, Indo-Burma region, and the Himalaya. The Sundarbans is a UNESCO World Heritage Site but not a recognised biodiversity hotspot.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sundarbans",
-        "india-hotspots",
-        "conservation"
-      ],
+      "tags": ["sundarbans", "india-hotspots", "conservation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1015,11 +761,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "latitudinal-gradient",
-        "tropics",
-        "evolutionary-time"
-      ],
+      "tags": ["latitudinal-gradient", "tropics", "evolutionary-time"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1041,11 +783,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "z-value",
-        "species-area",
-        "continental"
-      ],
+      "tags": ["z-value", "species-area", "continental"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1067,11 +805,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "alien-species",
-        "invasive",
-        "biodiversity-loss"
-      ],
+      "tags": ["alien-species", "invasive", "biodiversity-loss"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1093,11 +827,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "amazon",
-        "oxygen-production",
-        "lungs-of-planet"
-      ],
+      "tags": ["amazon", "oxygen-production", "lungs-of-planet"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1119,11 +849,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "genetic-diversity",
-        "adaptation",
-        "natural-selection"
-      ],
+      "tags": ["genetic-diversity", "adaptation", "natural-selection"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1145,11 +871,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "sacred-groves",
-        "tribal-conservation",
-        "in-situ"
-      ],
+      "tags": ["sacred-groves", "tribal-conservation", "in-situ"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1171,11 +893,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "habitat-fragmentation",
-        "population-decline",
-        "territory"
-      ],
+      "tags": ["habitat-fragmentation", "population-decline", "territory"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1197,11 +915,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hotspots",
-        "endemic-species",
-        "land-coverage"
-      ],
+      "tags": ["hotspots", "endemic-species", "land-coverage"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1223,11 +937,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cryopreservation",
-        "liquid-nitrogen",
-        "ex-situ"
-      ],
+      "tags": ["cryopreservation", "liquid-nitrogen", "ex-situ"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1249,11 +959,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "co-extinction",
-        "parasites",
-        "obligate-dependency"
-      ],
+      "tags": ["co-extinction", "parasites", "obligate-dependency"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1275,11 +981,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "zoological-parks",
-        "ex-situ",
-        "inbreeding"
-      ],
+      "tags": ["zoological-parks", "ex-situ", "inbreeding"],
       "neetWeightage": "LOW"
     },
     {
@@ -1301,11 +1003,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mega-diversity",
-        "india-biodiversity",
-        "species-percentage"
-      ],
+      "tags": ["mega-diversity", "india-biodiversity", "species-percentage"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1327,11 +1025,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "in-situ",
-        "ex-situ",
-        "ecosystem-conservation"
-      ],
+      "tags": ["in-situ", "ex-situ", "ecosystem-conservation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1353,11 +1047,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "rivet-popper",
-        "species-importance",
-        "ecosystem"
-      ],
+      "tags": ["rivet-popper", "species-importance", "ecosystem"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1379,11 +1069,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "species-area",
-        "humboldt",
-        "z-value"
-      ],
+      "tags": ["species-area", "humboldt", "z-value"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1405,11 +1091,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hotspots",
-        "criteria",
-        "endemism"
-      ],
+      "tags": ["hotspots", "criteria", "endemism"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1431,11 +1113,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "genetic-diversity",
-        "rice-varieties",
-        "mango"
-      ],
+      "tags": ["genetic-diversity", "rice-varieties", "mango"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1457,12 +1135,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "protected-areas",
-        "sanctuaries",
-        "national-parks",
-        "biosphere-reserves"
-      ],
+      "tags": ["protected-areas", "sanctuaries", "national-parks", "biosphere-reserves"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1484,11 +1157,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "evil-quartet",
-        "jared-diamond",
-        "co-extinction"
-      ],
+      "tags": ["evil-quartet", "jared-diamond", "co-extinction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1510,12 +1179,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "alien-species",
-        "nile-perch",
-        "parthenium",
-        "lantana"
-      ],
+      "tags": ["alien-species", "nile-perch", "parthenium", "lantana"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1537,11 +1201,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ex-situ",
-        "seed-banks",
-        "cryopreservation"
-      ],
+      "tags": ["ex-situ", "seed-banks", "cryopreservation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1563,11 +1223,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "conservation-arguments",
-        "economic-value",
-        "ecosystem-services"
-      ],
+      "tags": ["conservation-arguments", "economic-value", "ecosystem-services"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1589,11 +1245,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "latitudinal-gradient",
-        "colombia",
-        "species-diversity"
-      ],
+      "tags": ["latitudinal-gradient", "colombia", "species-diversity"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1615,11 +1267,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "india-biodiversity",
-        "mega-diversity",
-        "rice-strains"
-      ],
+      "tags": ["india-biodiversity", "mega-diversity", "rice-strains"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1641,11 +1289,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "conservation-strategies",
-        "gene-banks",
-        "biosphere-reserves"
-      ],
+      "tags": ["conservation-strategies", "gene-banks", "biosphere-reserves"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1667,11 +1311,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tilman-experiments",
-        "diversity-stability",
-        "productivity"
-      ],
+      "tags": ["tilman-experiments", "diversity-stability", "productivity"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1693,11 +1333,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tropical-diversity",
-        "evolutionary-time",
-        "solar-energy"
-      ],
+      "tags": ["tropical-diversity", "evolutionary-time", "solar-energy"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1719,11 +1355,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "iucn",
-        "red-list",
-        "extinction-data"
-      ],
+      "tags": ["iucn", "red-list", "extinction-data"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1745,11 +1377,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "scientists",
-        "contributions",
-        "biodiversity"
-      ],
+      "tags": ["scientists", "contributions", "biodiversity"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1771,11 +1399,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "invasive-species",
-        "origin",
-        "alien-species"
-      ],
+      "tags": ["invasive-species", "origin", "alien-species"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1797,11 +1421,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "conservation-types",
-        "diversity-types",
-        "examples"
-      ],
+      "tags": ["conservation-types", "diversity-types", "examples"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1823,11 +1443,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "diversity-types",
-        "alpha-diversity",
-        "definitions"
-      ],
+      "tags": ["diversity-types", "alpha-diversity", "definitions"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1849,11 +1465,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hotspots",
-        "locations",
-        "india-hotspots"
-      ],
+      "tags": ["hotspots", "locations", "india-hotspots"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1875,11 +1487,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "evil-quartet",
-        "examples",
-        "biodiversity-loss"
-      ],
+      "tags": ["evil-quartet", "examples", "biodiversity-loss"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1901,11 +1509,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "protected-areas",
-        "features",
-        "conservation"
-      ],
+      "tags": ["protected-areas", "features", "conservation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1927,11 +1531,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "species-area-equation",
-        "variables",
-        "regression"
-      ],
+      "tags": ["species-area-equation", "variables", "regression"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1953,11 +1553,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "conservation-arguments",
-        "utilitarian",
-        "ethical"
-      ],
+      "tags": ["conservation-arguments", "utilitarian", "ethical"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1979,10 +1575,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ex-situ-methods",
-        "conservation-techniques"
-      ],
+      "tags": ["ex-situ-methods", "conservation-techniques"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2004,11 +1597,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "latitudinal-gradient",
-        "bird-species",
-        "colombia"
-      ],
+      "tags": ["latitudinal-gradient", "bird-species", "colombia"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2030,11 +1619,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "species-area",
-        "z-values",
-        "graph-shapes"
-      ],
+      "tags": ["species-area", "z-values", "graph-shapes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2056,11 +1641,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "extinct-species",
-        "causes",
-        "over-exploitation"
-      ],
+      "tags": ["extinct-species", "causes", "over-exploitation"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2082,11 +1663,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biodiversity-levels",
-        "examples",
-        "genetic-species-ecological"
-      ],
+      "tags": ["biodiversity-levels", "examples", "genetic-species-ecological"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2097,22 +1674,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "How many of the following are examples of in-situ conservation?\n(a) National parks (b) Seed banks (c) Wildlife sanctuaries (d) Botanical gardens (e) Biosphere reserves (f) Sacred groves (g) Zoological parks (h) Cryopreservation",
-      "options": [
-        "3",
-        "4",
-        "5",
-        "6"
-      ],
+      "options": ["3", "4", "5", "6"],
       "correctAnswer": "B",
       "explanation": "Four are examples of in-situ conservation: (a) National parks, (c) Wildlife sanctuaries, (e) Biosphere reserves, and (f) Sacred groves. The remaining four (seed banks, botanical gardens, zoological parks, cryopreservation) are ex-situ conservation methods.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "in-situ",
-        "ex-situ",
-        "counting"
-      ],
+      "tags": ["in-situ", "ex-situ", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2123,22 +1691,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "How many of the following are part of the 'Evil Quartet' causing biodiversity loss?\n(a) Habitat loss and fragmentation (b) Climate change (c) Over-exploitation (d) Natural disasters (e) Alien species invasions (f) Co-extinctions (g) Pollution (h) Volcanic eruptions",
-      "options": [
-        "3",
-        "4",
-        "5",
-        "6"
-      ],
+      "options": ["3", "4", "5", "6"],
       "correctAnswer": "B",
       "explanation": "Four are part of the Evil Quartet: (a) Habitat loss and fragmentation, (c) Over-exploitation, (e) Alien species invasions, and (f) Co-extinctions. Climate change, natural disasters, pollution, and volcanic eruptions are not part of this specific classification by Jared Diamond.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "evil-quartet",
-        "biodiversity-loss",
-        "counting"
-      ],
+      "tags": ["evil-quartet", "biodiversity-loss", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2149,22 +1708,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "How many of the following are biodiversity hotspots of India?\n(a) Western Ghats (b) Eastern Ghats (c) Indo-Burma (d) Sundarbans (e) Himalaya (f) Thar Desert (g) Deccan Plateau (h) Andaman Islands",
-      "options": [
-        "2",
-        "3",
-        "4",
-        "5"
-      ],
+      "options": ["2", "3", "4", "5"],
       "correctAnswer": "B",
       "explanation": "Three are biodiversity hotspots of India: (a) Western Ghats (and Sri Lanka), (c) Indo-Burma, and (e) Himalaya. The Eastern Ghats, Sundarbans, Thar Desert, Deccan Plateau, and Andaman Islands are not classified as separate biodiversity hotspots.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "india-hotspots",
-        "counting",
-        "conservation"
-      ],
+      "tags": ["india-hotspots", "counting", "conservation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2175,22 +1725,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "How many of the following are alien invasive species in India?\n(a) Parthenium (b) Neem (c) Lantana camara (d) Banyan (e) Eichhornia crassipes (f) Tulsi (g) African catfish (h) Mango",
-      "options": [
-        "2",
-        "3",
-        "4",
-        "5"
-      ],
+      "options": ["2", "3", "4", "5"],
       "correctAnswer": "C",
       "explanation": "Four are alien invasive species: (a) Parthenium (from America, came with wheat), (c) Lantana camara (from Central/South America), (e) Eichhornia crassipes (water hyacinth, from tropical America), and (g) African catfish (Clarias gariepinus). Neem, banyan, tulsi, and mango are native to India.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "alien-species",
-        "invasive",
-        "counting"
-      ],
+      "tags": ["alien-species", "invasive", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2201,22 +1742,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "How many of the following are correct reasons for greater biodiversity in the tropics?\n(a) Longer evolutionary time (b) More seasonal variability (c) More solar energy (d) Frequent glaciation (e) Greater niche specialisation (f) Higher speciation rates (g) Less competition (h) More constant environment",
-      "options": [
-        "3",
-        "4",
-        "5",
-        "6"
-      ],
+      "options": ["3", "4", "5", "6"],
       "correctAnswer": "C",
       "explanation": "Five are correct reasons: (a) Longer evolutionary time, (c) More solar energy, (e) Greater niche specialisation, (f) Higher speciation rates, and (h) More constant environment. Statements (b), (d), and (g) are incorrect - tropics are less seasonal, had less glaciation, and have more competition.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tropical-diversity",
-        "reasons",
-        "counting"
-      ],
+      "tags": ["tropical-diversity", "reasons", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2227,22 +1759,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "How many of the following represent the three levels of biodiversity?\n(a) Genetic diversity (b) Population diversity (c) Species diversity (d) Morphological diversity (e) Ecological diversity (f) Community diversity (g) Phylogenetic diversity (h) Taxonomic diversity",
-      "options": [
-        "2",
-        "3",
-        "4",
-        "5"
-      ],
+      "options": ["2", "3", "4", "5"],
       "correctAnswer": "B",
       "explanation": "Three represent the recognised levels of biodiversity: (a) Genetic diversity (variation within species), (c) Species diversity (variety of species), and (e) Ecological diversity (variety of ecosystems). The others (population, morphological, community, phylogenetic, taxonomic) are not the standard three levels.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biodiversity-levels",
-        "counting",
-        "classification"
-      ],
+      "tags": ["biodiversity-levels", "counting", "classification"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2253,22 +1776,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "How many of the following statements about the species-area relationship are correct?\n(a) It was proposed by Humboldt (b) The equation is log S = log C + Z log A (c) Z ranges 0.1-0.2 for small areas (d) Z ranges 0.6-1.2 for continents (e) It gives a straight line on a normal scale (f) S = CA^Z is the general form (g) Z represents species richness (h) C varies with taxonomic group",
-      "options": [
-        "4",
-        "5",
-        "6",
-        "7"
-      ],
+      "options": ["4", "5", "6", "7"],
       "correctAnswer": "C",
       "explanation": "Six statements are correct: (a), (b), (c), (d), (f), and (h). Statement (e) is wrong as it gives a rectangular hyperbola on a normal scale (straight line on log scale). Statement (g) is wrong as Z represents the regression coefficient/slope, not species richness (S represents species richness).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "species-area",
-        "z-value",
-        "counting"
-      ],
+      "tags": ["species-area", "z-value", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2279,22 +1793,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "How many of the following are examples of ex-situ conservation?\n(a) Zoological parks (b) Sacred groves (c) Botanical gardens (d) Biosphere reserves (e) Seed banks (f) National parks (g) Cryopreservation (h) Tissue culture",
-      "options": [
-        "3",
-        "4",
-        "5",
-        "6"
-      ],
+      "options": ["3", "4", "5", "6"],
       "correctAnswer": "C",
       "explanation": "Five are examples of ex-situ conservation: (a) Zoological parks, (c) Botanical gardens, (e) Seed banks, (g) Cryopreservation, and (h) Tissue culture. Sacred groves, biosphere reserves, and national parks are in-situ conservation methods.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ex-situ",
-        "conservation-methods",
-        "counting"
-      ],
+      "tags": ["ex-situ", "conservation-methods", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2305,22 +1810,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "Arrange the following in increasing order of species diversity:\n(a) Polar region (b) Temperate region (c) Tropical region (d) Subtropical region",
-      "options": [
-        "c < d < b < a",
-        "a < b < d < c",
-        "b < a < d < c",
-        "a < d < b < c"
-      ],
+      "options": ["c < d < b < a", "a < b < d < c", "b < a < d < c", "a < d < b < c"],
       "correctAnswer": "B",
       "explanation": "Species diversity increases from poles towards the equator (latitudinal gradient). The correct order of increasing diversity is: Polar region < Temperate region < Subtropical region < Tropical region. Tropics have the highest species diversity due to longer evolutionary time and more solar energy.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "latitudinal-gradient",
-        "species-diversity",
-        "sequence"
-      ],
+      "tags": ["latitudinal-gradient", "species-diversity", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2331,22 +1827,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "Arrange the following in decreasing order of the number of described species:\n(a) Mammals (b) Insects (c) Fungi (d) Plants",
-      "options": [
-        "d > b > c > a",
-        "d > c > b > a",
-        "b > c > d > a",
-        "b > d > c > a"
-      ],
+      "options": ["d > b > c > a", "d > c > b > a", "b > c > d > a", "b > d > c > a"],
       "correctAnswer": "D",
       "explanation": "In terms of described species, the correct decreasing order is: Insects (over 1 million) > Plants (about 2.5 lakh) > Fungi (about 72,000) > Mammals (about 5,500). Insects are by far the most species-rich group among all organisms.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "species-count",
-        "taxonomic-groups",
-        "sequence"
-      ],
+      "tags": ["species-count", "taxonomic-groups", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2357,22 +1844,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "Arrange the following conservation methods from most natural to most artificial:\n(a) Cryopreservation (b) National parks (c) Zoological parks (d) Biosphere reserves",
-      "options": [
-        "b > d > a > c",
-        "d > b > c > a",
-        "a > c > b > d",
-        "b > d > c > a"
-      ],
+      "options": ["b > d > a > c", "d > b > c > a", "a > c > b > d", "b > d > c > a"],
       "correctAnswer": "B",
       "explanation": "From most natural to most artificial: Biosphere reserves (large areas with multiple use zones) > National parks (strictly protected natural areas) > Zoological parks (captive breeding in enclosures) > Cryopreservation (laboratory preservation at -196 degrees C). This represents a gradient from in-situ to ex-situ conservation.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "conservation-methods",
-        "natural-artificial",
-        "sequence"
-      ],
+      "tags": ["conservation-methods", "natural-artificial", "sequence"],
       "neetWeightage": "LOW"
     },
     {
@@ -2383,22 +1861,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "Arrange the following levels of biodiversity from the smallest to the largest scale:\n(a) Ecological diversity (b) Genetic diversity (c) Species diversity (d) Community diversity",
-      "options": [
-        "a < b < c < d",
-        "d < c < b < a",
-        "b < c < d < a",
-        "c < b < d < a"
-      ],
+      "options": ["a < b < c < d", "d < c < b < a", "b < c < d < a", "c < b < d < a"],
       "correctAnswer": "C",
       "explanation": "From smallest to largest scale: Genetic diversity (within species, at gene/allele level) < Species diversity (variety of species in an area) < Community diversity (variety of communities) < Ecological diversity (variety of ecosystems at landscape level). This represents increasing levels of biological organisation.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "biodiversity-levels",
-        "scale",
-        "sequence"
-      ],
+      "tags": ["biodiversity-levels", "scale", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2409,22 +1878,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "Arrange the following events in chronological order of when they occurred:\n(a) IUCN Red List documentation (b) Convention on Biological Diversity (1992) (c) Humboldt's exploration of South America (d) Edward Wilson popularised term 'biodiversity'",
-      "options": [
-        "a < b < c < d",
-        "d < c < a < b",
-        "c < a < d < b",
-        "c < d < b < a"
-      ],
+      "options": ["a < b < c < d", "d < c < a < b", "c < a < d < b", "c < d < b < a"],
       "correctAnswer": "D",
       "explanation": "Chronological order: Humboldt's exploration of South America (early 19th century) < Edward Wilson popularised the term 'biodiversity' (1980s) < Convention on Biological Diversity at Rio Earth Summit (1992) < IUCN Red List comprehensive documentation (2004 edition referenced in NCERT).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "chronology",
-        "biodiversity-history",
-        "sequence"
-      ],
+      "tags": ["chronology", "biodiversity-history", "sequence"],
       "neetWeightage": "LOW"
     },
     {
@@ -2435,22 +1895,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "Arrange the following in decreasing order of strictness of protection:\n(a) Wildlife sanctuary (b) National park (c) Biosphere reserve (d) Sacred grove",
-      "options": [
-        "c > b > a > d",
-        "b > a > c > d",
-        "a > b > d > c",
-        "d > c > a > b"
-      ],
+      "options": ["c > b > a > d", "b > a > c > d", "a > b > d > c", "d > c > a > b"],
       "correctAnswer": "B",
       "explanation": "In decreasing order of strictness: National parks (strictest, no grazing or private ownership allowed) > Wildlife sanctuaries (hunting prohibited but limited activities allowed) > Biosphere reserves (multiple-use zones, some human activities in buffer and transition zones) > Sacred groves (community-managed, varying levels of protection).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "protected-areas",
-        "strictness",
-        "sequence"
-      ],
+      "tags": ["protected-areas", "strictness", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2461,22 +1912,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "Arrange the steps in the process of biodiversity loss due to habitat fragmentation in the correct sequence:\n(a) Reduced gene flow between populations (b) Continuous habitat is broken into fragments (c) Inbreeding and genetic drift increase (d) Local extinction of species",
-      "options": [
-        "a > b > d > c",
-        "d > c > b > a",
-        "b > a > c > d",
-        "c > d > a > b"
-      ],
+      "options": ["a > b > d > c", "d > c > b > a", "b > a > c > d", "c > d > a > b"],
       "correctAnswer": "C",
       "explanation": "The correct sequence of habitat fragmentation effects: Continuous habitat is broken into fragments > Reduced gene flow between isolated populations > Inbreeding and genetic drift increase in small populations > Eventually local extinction of species occurs due to loss of genetic variability and increased vulnerability.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "habitat-fragmentation",
-        "population-genetics",
-        "sequence"
-      ],
+      "tags": ["habitat-fragmentation", "population-genetics", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2487,22 +1929,13 @@
       "ncertChapter": 15,
       "ncertChapterName": "Biodiversity and Conservation",
       "question": "The Convention on Biological Diversity (CBD) was signed at the Earth Summit held in:",
-      "options": [
-        "Stockholm, 1972",
-        "Montreal, 1987",
-        "Rio de Janeiro, 1992",
-        "Kyoto, 1997"
-      ],
+      "options": ["Stockholm, 1972", "Montreal, 1987", "Rio de Janeiro, 1992", "Kyoto, 1997"],
       "correctAnswer": "C",
       "explanation": "The Convention on Biological Diversity (CBD) was signed at the Earth Summit (United Nations Conference on Environment and Development) held in Rio de Janeiro, Brazil in 1992. It addresses conservation of biological diversity, sustainable use of its components, and fair sharing of benefits.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cbd",
-        "earth-summit",
-        "rio-de-janeiro"
-      ],
+      "tags": ["cbd", "earth-summit", "rio-de-janeiro"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2524,11 +1957,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "diversity-stability",
-        "tilman",
-        "ecosystem"
-      ],
+      "tags": ["diversity-stability", "tilman", "ecosystem"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2550,11 +1979,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "co-extinction",
-        "mutualism",
-        "pollinator"
-      ],
+      "tags": ["co-extinction", "mutualism", "pollinator"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2576,11 +2001,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "species-count",
-        "discovery",
-        "tropical"
-      ],
+      "tags": ["species-count", "discovery", "tropical"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2602,11 +2023,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "sacred-groves",
-        "locations",
-        "states"
-      ],
+      "tags": ["sacred-groves", "locations", "states"],
       "neetWeightage": "LOW"
     }
   ]

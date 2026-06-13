@@ -14,7 +14,6 @@ export async function GET(request: NextRequest) {
     const region = searchParams.get('region')
     const students = searchParams.get('students')
 
-
     switch (action) {
       case 'get_all_tiers':
         return await getAllTiers()
@@ -61,7 +60,6 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     const { action, data } = await request.json()
-
 
     switch (action) {
       case 'get_upgrade_recommendations':

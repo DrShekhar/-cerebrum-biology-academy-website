@@ -6,14 +6,22 @@ author:
   name: 'Dr. Shekhar'
   role: 'Founder & Senior Faculty'
 category: neet-preparation
-tags: ['Negative Marking', 'NEET Strategy', 'Exam Strategy', 'NEET 2026', 'Score Optimization', 'Math Strategy']
+tags:
+  [
+    'Negative Marking',
+    'NEET Strategy',
+    'Exam Strategy',
+    'NEET 2026',
+    'Score Optimization',
+    'Math Strategy',
+  ]
 featuredImage: '/blog/neet-negative-marking.svg'
 publishedAt: '2026-02-05'
 updatedAt: '2026-02-05'
 readTime: 14
 isPublished: true
-seoTitle: "NEET Negative Marking Strategy 2026: When to Guess vs Ski..."
-seoDescription: "Master NEET negative marking with probability-based decision making. The exact math behind when to attempt, guess, or skip questions to maximize your NEET score"
+seoTitle: 'NEET Negative Marking Strategy 2026: When to Guess vs Ski...'
+seoDescription: 'Master NEET negative marking with probability-based decision making. The exact math behind when to attempt, guess, or skip questions to maximize your NEET score'
 views: 0
 difficulty: 'Intermediate'
 neetChapter: 'General'
@@ -45,11 +53,11 @@ This article gives you that framework.
 
 Before we get to the math, let us be precise about the scoring rules.
 
-| Action | Marks |
-|--------|-------|
+| Action         | Marks  |
+| -------------- | ------ |
 | Correct answer | **+4** |
-| Wrong answer | **-1** |
-| Unattempted | **0** |
+| Wrong answer   | **-1** |
+| Unattempted    | **0**  |
 
 NEET has **200 questions** across Physics, Chemistry, Botany, and Zoology. The maximum possible score is **720 marks** (180 questions scored, 20 are optional -- you attempt 180 out of 200). Each section has 50 questions, of which you attempt 45.
 
@@ -99,12 +107,12 @@ This is very profitable. Every such guess earns you an average of **1.5 marks**.
 
 ### The Complete Expected Value Table
 
-| Situation | Options Remaining | P(Correct) | P(Wrong) | Expected Value | Verdict |
-|-----------|-------------------|------------|----------|----------------|---------|
-| No elimination | 4 | 25% | 75% | +0.25 (theoretical) | **Skip** (distractors make practical EV negative) |
-| Eliminate 1 | 3 | 33% | 67% | **+0.67** | **Lean toward guessing** |
-| Eliminate 2 | 2 | 50% | 50% | **+1.50** | **Always guess** |
-| Confident | 1 | ~95% | ~5% | **+3.75** | **Always attempt** |
+| Situation      | Options Remaining | P(Correct) | P(Wrong) | Expected Value      | Verdict                                           |
+| -------------- | ----------------- | ---------- | -------- | ------------------- | ------------------------------------------------- |
+| No elimination | 4                 | 25%        | 75%      | +0.25 (theoretical) | **Skip** (distractors make practical EV negative) |
+| Eliminate 1    | 3                 | 33%        | 67%      | **+0.67**           | **Lean toward guessing**                          |
+| Eliminate 2    | 2                 | 50%        | 50%      | **+1.50**           | **Always guess**                                  |
+| Confident      | 1                 | ~95%       | ~5%      | **+3.75**           | **Always attempt**                                |
 
 The math is unambiguous. **The more options you can eliminate, the more profitable guessing becomes.** The decision is not about courage or caution -- it is about how many options you can rule out.
 
@@ -153,12 +161,12 @@ So if you guess on 6 questions and get only 1 right, you are actually 1 mark wor
 This translates to a **break-even accuracy rate of about 20%.** If your guessing accuracy is above 20%, guessing is profitable. If it is below 20%, you are losing marks.
 
 | Guesses | Correct Needed to Break Even | Accuracy Required |
-|---------|------------------------------|-------------------|
-| 5 | 1 | 20% |
-| 10 | 2 | 20% |
-| 15 | 3 | 20% |
-| 20 | 4 | 20% |
-| 30 | 6 | 20% |
+| ------- | ---------------------------- | ----------------- |
+| 5       | 1                            | 20%               |
+| 10      | 2                            | 20%               |
+| 15      | 3                            | 20%               |
+| 20      | 4                            | 20%               |
+| 30      | 6                            | 20%               |
 
 The break-even point is always 20%, regardless of how many questions you guess on. With random guessing (25% accuracy if truly random), you theoretically clear this bar. But remember: NEET distractors mean your true accuracy on questions where you have zero knowledge is likely below 20%.
 
@@ -174,12 +182,12 @@ Let us work through three realistic exam scenarios to see how these principles p
 
 Priya attempts all 180 questions. She is confident on 130, makes educated guesses (can eliminate 1-2 options) on 30, and blindly guesses on 20.
 
-| Category | Questions | Correct | Wrong | Marks Gained | Marks Lost | Net |
-|----------|-----------|---------|-------|--------------|------------|-----|
-| Confident (130) | 130 | 120 | 10 | 480 | -10 | **470** |
-| Educated guess (30) | 30 | 12 | 18 | 48 | -18 | **30** |
-| Blind guess (20) | 20 | 3 | 17 | 12 | -17 | **-5** |
-| **Total** | **180** | **135** | **45** | **540** | **-45** | **495** |
+| Category            | Questions | Correct | Wrong  | Marks Gained | Marks Lost | Net     |
+| ------------------- | --------- | ------- | ------ | ------------ | ---------- | ------- |
+| Confident (130)     | 130       | 120     | 10     | 480          | -10        | **470** |
+| Educated guess (30) | 30        | 12      | 18     | 48           | -18        | **30**  |
+| Blind guess (20)    | 20        | 3       | 17     | 12           | -17        | **-5**  |
+| **Total**           | **180**   | **135** | **45** | **540**      | **-45**    | **495** |
 
 Priya scores **495 marks**. Her blind guesses cost her 5 marks, but her educated guesses added 30 marks. If she had skipped the 20 blind guesses, she would have scored 500 instead. Those 20 blind guesses cost her 5 marks.
 
@@ -187,11 +195,11 @@ Priya scores **495 marks**. Her blind guesses cost her 5 marks, but her educated
 
 Rahul only attempts questions he is very confident about. He attempts 140 and skips 40.
 
-| Category | Questions | Correct | Wrong | Marks Gained | Marks Lost | Net |
-|----------|-----------|---------|-------|--------------|------------|-----|
-| Confident (140) | 140 | 130 | 10 | 520 | -10 | **510** |
-| Skipped (40) | 40 | -- | -- | 0 | 0 | **0** |
-| **Total** | **140** | **130** | **10** | **520** | **-10** | **510** |
+| Category        | Questions | Correct | Wrong  | Marks Gained | Marks Lost | Net     |
+| --------------- | --------- | ------- | ------ | ------------ | ---------- | ------- |
+| Confident (140) | 140       | 130     | 10     | 520          | -10        | **510** |
+| Skipped (40)    | 40        | --      | --     | 0            | 0          | **0**   |
+| **Total**       | **140**   | **130** | **10** | **520**      | **-10**    | **510** |
 
 Rahul scores **510 marks** with very low negative marking (-10). But what if 25 of those 40 skipped questions were ones where he could eliminate 2 options? Had he guessed on those 25 (expected accuracy ~50%), he would have gotten about 12 right and 13 wrong, adding 48 - 13 = **35 extra marks** for a total of **545**.
 
@@ -201,12 +209,12 @@ Rahul's caution cost him **35 marks** -- far more than negative marking ever wou
 
 Meera applies the decision framework. She is confident on 130, makes educated guesses on 35 (where she can eliminate 1-2 options), and skips 15 (where she has zero clue).
 
-| Category | Questions | Correct | Wrong | Marks Gained | Marks Lost | Net |
-|----------|-----------|---------|-------|--------------|------------|-----|
-| Confident (130) | 130 | 122 | 8 | 488 | -8 | **480** |
-| Educated guess (35) | 35 | 15 | 20 | 60 | -20 | **40** |
-| Skipped (15) | 15 | -- | -- | 0 | 0 | **0** |
-| **Total** | **165** | **137** | **28** | **548** | **-28** | **520** |
+| Category            | Questions | Correct | Wrong  | Marks Gained | Marks Lost | Net     |
+| ------------------- | --------- | ------- | ------ | ------------ | ---------- | ------- |
+| Confident (130)     | 130       | 122     | 8      | 488          | -8         | **480** |
+| Educated guess (35) | 35        | 15      | 20     | 60           | -20        | **40**  |
+| Skipped (15)        | 15        | --      | --     | 0            | 0          | **0**   |
+| **Total**           | **165**   | **137** | **28** | **548**      | **-28**    | **520** |
 
 Meera scores **520 marks**. She accepted a higher negative marking total (-28) but her educated guesses added 40 marks to her score. She skipped only the questions where she could not eliminate any options. This is the mathematically optimal approach.
 
@@ -218,13 +226,13 @@ Meera scores **520 marks**. She accepted a higher negative marking total (-28) b
 
 The number of questions to skip depends on your target score and your confidence level. Here is a practical guide based on score targets.
 
-| Target Score | Questions to Attempt | Max Unattempted | Guessing Strategy |
-|-------------|---------------------|-----------------|-------------------|
-| 720 (Perfect) | 180 | 0 | Attempt everything, minimize errors |
-| 650+ (AIIMS level) | 170-175 | 5-10 | Aggressive educated guessing, skip only zero-clue questions |
-| 600-650 (Top GMC) | 160-170 | 10-20 | Educated guessing on most, skip zero-clue |
-| 500-600 (GMC) | 150-165 | 15-30 | Moderate guessing, skip when only 1 option eliminated |
-| 400-500 (Private college) | 140-155 | 25-40 | Conservative guessing, only guess when 2 options eliminated |
+| Target Score              | Questions to Attempt | Max Unattempted | Guessing Strategy                                           |
+| ------------------------- | -------------------- | --------------- | ----------------------------------------------------------- |
+| 720 (Perfect)             | 180                  | 0               | Attempt everything, minimize errors                         |
+| 650+ (AIIMS level)        | 170-175              | 5-10            | Aggressive educated guessing, skip only zero-clue questions |
+| 600-650 (Top GMC)         | 160-170              | 10-20           | Educated guessing on most, skip zero-clue                   |
+| 500-600 (GMC)             | 150-165              | 15-30           | Moderate guessing, skip when only 1 option eliminated       |
+| 400-500 (Private college) | 140-155              | 25-40           | Conservative guessing, only guess when 2 options eliminated |
 
 **Important:** These are guidelines, not rules. The optimal number of skips for any individual student depends on their confidence calibration -- how well they judge their own certainty. This is why mock test analysis is so critical (more on this below).
 
@@ -307,13 +315,13 @@ Chemistry sits between Biology and Physics in terms of guessing viability.
 
 ### Subject-Wise Recommended Guessing Threshold
 
-| Subject | Minimum Elimination to Guess | Reason |
-|---------|------------------------------|--------|
-| Biology | 1 option eliminated | High fact-density enables elimination |
-| Inorganic Chemistry | 1 option eliminated | Fact-based, similar to Biology |
-| Organic Chemistry | 2 options eliminated | Need mechanism knowledge for reliability |
-| Physical Chemistry | 2 options eliminated | Numerical -- guessing is unreliable |
-| Physics | 2 options eliminated | Formula-dependent, numerical traps |
+| Subject             | Minimum Elimination to Guess | Reason                                   |
+| ------------------- | ---------------------------- | ---------------------------------------- |
+| Biology             | 1 option eliminated          | High fact-density enables elimination    |
+| Inorganic Chemistry | 1 option eliminated          | Fact-based, similar to Biology           |
+| Organic Chemistry   | 2 options eliminated         | Need mechanism knowledge for reliability |
+| Physical Chemistry  | 2 options eliminated         | Numerical -- guessing is unreliable      |
+| Physics             | 2 options eliminated         | Formula-dependent, numerical traps       |
 
 ---
 
@@ -346,19 +354,23 @@ Some coaching centers teach a fixed rule like "always leave 15-20 questions unat
 In the last week before NEET, internalize these rules.
 
 **Always attempt when:**
+
 - You are 90%+ confident in your answer
 - You can eliminate 2 options and have a reasoned preference between the remaining 2
 
 **Strongly lean toward attempting when:**
+
 - You can eliminate 1 option and have partial knowledge
 - The question is from a chapter you have studied thoroughly, even if this specific question is tricky
 
 **Skip when:**
+
 - You have zero clue about the topic
 - You cannot eliminate even a single option
 - You are guessing based on option length, position, or other superstitious patterns
 
 **Never do:**
+
 - Guess based on which option letter (a, b, c, d) has not appeared recently
 - Guess based on which option "looks right" without any content reasoning
 - Change your answer without a specific factual reason

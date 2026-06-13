@@ -72,7 +72,9 @@ export const metadata: Metadata = {
     title: 'Best NEET Coaching in Noida',
     description:
       'Top NEET biology coaching in Noida. 98% success rate. All sectors covered - Sector 18, 62, 137, 150, Greater Noida West.',
-    images: ['/api/og?title=Best+NEET+Coaching+in+Noida&subtitle=98%25+Success+Rate&locality=Noida'],
+    images: [
+      '/api/og?title=Best+NEET+Coaching+in+Noida&subtitle=98%25+Success+Rate&locality=Noida',
+    ],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-noida',
@@ -88,7 +90,16 @@ export default function NoidaCoachingLayout({ children }: { children: React.Reac
         parentLocation="Delhi NCR"
         centerAddress="B-45, Sector 62, Noida, Uttar Pradesh - 201301"
         centerPhone="+91-8826-444-334"
-        nearbyAreas={['Sector 18', 'Sector 62', 'Sector 137', 'Sector 150', 'Greater Noida', 'Greater Noida West', 'Gaur City', 'Pari Chowk']}
+        nearbyAreas={[
+          'Sector 18',
+          'Sector 62',
+          'Sector 137',
+          'Sector 150',
+          'Greater Noida',
+          'Greater Noida West',
+          'Gaur City',
+          'Pari Chowk',
+        ]}
       />
     </>
   )

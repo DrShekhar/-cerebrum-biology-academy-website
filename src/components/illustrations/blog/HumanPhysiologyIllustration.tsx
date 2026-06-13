@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function HumanPhysiologyIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -77,9 +77,7 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
         <ellipse cx="250" cy="238" rx="32" ry="10" fill="#F59E0B" opacity="0.3" />
       </g>
 
-      <g
-        filter="url(#glowPulse)"
-      >
+      <g filter="url(#glowPulse)">
         <ellipse cx="250" cy="95" rx="22" ry="18" fill="url(#brainGrad)" />
         <path
           d="M232 95 Q241 85 250 95 Q259 85 268 95"
@@ -100,8 +98,7 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <path
           d="M250 155 L238 143 Q220 130 220 148 Q220 168 250 195 Q280 168 280 148 Q280 130 262 143 Z"
           fill="url(#heartGrad)"
@@ -112,9 +109,7 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
         </text>
       </g>
 
-      <g
-        style={{ transformOrigin: '250px 165px' }}
-      >
+      <g style={{ transformOrigin: '250px 165px' }}>
         <ellipse
           cx="205"
           cy="165"
@@ -133,8 +128,7 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
         />
       </g>
 
-      <g
-      >
+      <g>
         <rect
           x="30"
           y="100"
@@ -170,8 +164,7 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
         />
       </g>
 
-      <g
-      >
+      <g>
         <rect
           x="370"
           y="100"
@@ -198,16 +191,10 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
         <text x="420" y="143" fontSize="11" fill="#991B1B" textAnchor="middle" fontWeight="700">
           System
         </text>
-        <circle
-          cx="420"
-          cy="160"
-          r="10"
-          fill="#EF4444"
-        />
+        <circle cx="420" cy="160" r="10" fill="#EF4444" />
       </g>
 
-      <g
-      >
+      <g>
         <rect
           x="30"
           y="195"
@@ -234,17 +221,10 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
         <text x="80" y="238" fontSize="11" fill="#1E40AF" textAnchor="middle" fontWeight="700">
           System
         </text>
-        <ellipse
-          cx="80"
-          cy="256"
-          rx="14"
-          ry="9"
-          fill="#60A5FA"
-        />
+        <ellipse cx="80" cy="256" rx="14" ry="9" fill="#60A5FA" />
       </g>
 
-      <g
-      >
+      <g>
         <rect
           x="370"
           y="195"
@@ -280,8 +260,7 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
         />
       </g>
 
-      <g
-      >
+      <g>
         <rect
           x="145"
           y="280"
@@ -317,8 +296,7 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
         />
       </g>
 
-      <g
-      >
+      <g>
         <rect
           x="260"
           y="280"
@@ -348,8 +326,7 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
         <circle cx="307" cy="332" r="6" fill="#F472B6" />
       </g>
 
-      <g
-      >
+      <g>
         <rect
           x="160"
           y="350"

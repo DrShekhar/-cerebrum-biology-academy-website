@@ -1,6 +1,17 @@
 'use client'
 
-import { Check, MessageCircle, Phone, HelpCircle, TrendingDown, Award, BookOpen, Users, MapPin, Trophy } from 'lucide-react'
+import {
+  Check,
+  MessageCircle,
+  Phone,
+  HelpCircle,
+  TrendingDown,
+  Award,
+  BookOpen,
+  Users,
+  MapPin,
+  Trophy,
+} from 'lucide-react'
 import { CONTACT_INFO, getWhatsAppLink, getPhoneLink } from '@/lib/constants/contactInfo'
 import { TrustSignalsBanner } from '@/components/trust/TrustSignalsBanner'
 
@@ -27,14 +38,24 @@ const programs: Program[] = [
         batchSize: '10-12 students',
         monthly: 4500,
         annual: 48000,
-        features: ['1-on-1 personalized attention', 'Daily doubt clearing', 'Premium study materials', 'Priority feedback'],
+        features: [
+          '1-on-1 personalized attention',
+          'Daily doubt clearing',
+          'Premium study materials',
+          'Priority feedback',
+        ],
       },
       {
         name: 'Ascent',
         batchSize: '15-18 students',
         monthly: 3500,
         annual: 38000,
-        features: ['Small group dynamics', 'Weekly doubt sessions', 'Complete study package', 'Regular assessments'],
+        features: [
+          'Small group dynamics',
+          'Weekly doubt sessions',
+          'Complete study package',
+          'Regular assessments',
+        ],
         isPopular: true,
       },
       {
@@ -42,7 +63,12 @@ const programs: Program[] = [
         batchSize: '20-25 students',
         monthly: 2500,
         annual: 28000,
-        features: ['Structured curriculum', 'Mock tests included', 'Standard materials', 'Progress tracking'],
+        features: [
+          'Structured curriculum',
+          'Mock tests included',
+          'Standard materials',
+          'Progress tracking',
+        ],
       },
     ],
   },
@@ -54,14 +80,24 @@ const programs: Program[] = [
         batchSize: '10-12 students',
         monthly: 8000,
         annual: 88000,
-        features: ['1-on-1 mentoring', '24/7 doubt support', 'Advanced problem sets', 'Daily practice drills'],
+        features: [
+          '1-on-1 mentoring',
+          '24/7 doubt support',
+          'Advanced problem sets',
+          'Daily practice drills',
+        ],
       },
       {
         name: 'Ascent',
         batchSize: '15-18 students',
         monthly: 6500,
         annual: 72000,
-        features: ['Interactive sessions', 'Bi-weekly doubt clearing', 'Topic-wise practice', 'Performance analytics'],
+        features: [
+          'Interactive sessions',
+          'Bi-weekly doubt clearing',
+          'Topic-wise practice',
+          'Performance analytics',
+        ],
         isPopular: true,
       },
       {
@@ -69,7 +105,12 @@ const programs: Program[] = [
         batchSize: '20-25 students',
         monthly: 4500,
         annual: 50000,
-        features: ['Core curriculum focus', 'Concept clarity sessions', 'Chapter tests', 'Peer learning'],
+        features: [
+          'Core curriculum focus',
+          'Concept clarity sessions',
+          'Chapter tests',
+          'Peer learning',
+        ],
       },
     ],
   },
@@ -81,14 +122,24 @@ const programs: Program[] = [
         batchSize: '10-12 students',
         monthly: 9000,
         annual: 98000,
-        features: ['NEET-specific strategies', 'One-on-one sessions', 'Full-length mock tests', 'Question bank access'],
+        features: [
+          'NEET-specific strategies',
+          'One-on-one sessions',
+          'Full-length mock tests',
+          'Question bank access',
+        ],
       },
       {
         name: 'Ascent',
         batchSize: '15-18 students',
         monthly: 7000,
         annual: 78000,
-        features: ['NEET-focused curriculum', 'Regular full mocks', 'Speed & accuracy training', 'Revision support'],
+        features: [
+          'NEET-focused curriculum',
+          'Regular full mocks',
+          'Speed & accuracy training',
+          'Revision support',
+        ],
         isPopular: true,
       },
       {
@@ -96,7 +147,12 @@ const programs: Program[] = [
         batchSize: '20-25 students',
         monthly: 5000,
         annual: 55000,
-        features: ['NEET exam prep', 'Concept-based tests', 'Answer analysis', 'Group study sessions'],
+        features: [
+          'NEET exam prep',
+          'Concept-based tests',
+          'Answer analysis',
+          'Group study sessions',
+        ],
       },
     ],
   },
@@ -108,14 +164,24 @@ const programs: Program[] = [
         batchSize: '10-12 students',
         monthly: 8500,
         annual: 92000,
-        features: ['Intensive mentoring', 'Personalized study plan', 'Regular review sessions', 'Focused preparation'],
+        features: [
+          'Intensive mentoring',
+          'Personalized study plan',
+          'Regular review sessions',
+          'Focused preparation',
+        ],
       },
       {
         name: 'Ascent',
         batchSize: '15-18 students',
         monthly: 6500,
         annual: 72000,
-        features: ['Result-oriented teaching', 'Monthly progress review', 'Customized resources', 'Exam strategy'],
+        features: [
+          'Result-oriented teaching',
+          'Monthly progress review',
+          'Customized resources',
+          'Exam strategy',
+        ],
         isPopular: true,
       },
       {
@@ -123,7 +189,12 @@ const programs: Program[] = [
         batchSize: '20-25 students',
         monthly: 4500,
         annual: 50000,
-        features: ['Comprehensive coverage', 'Problem-solving focus', 'Concept revision', 'Full-length tests'],
+        features: [
+          'Comprehensive coverage',
+          'Problem-solving focus',
+          'Concept revision',
+          'Full-length tests',
+        ],
       },
     ],
   },
@@ -135,14 +206,24 @@ const programs: Program[] = [
         batchSize: '10-12 students',
         monthly: 7500,
         annual: 168000,
-        features: ['Full 2-year mentoring', 'Continuous guidance', 'Advanced materials', 'Priority support'],
+        features: [
+          'Full 2-year mentoring',
+          'Continuous guidance',
+          'Advanced materials',
+          'Priority support',
+        ],
       },
       {
         name: 'Ascent',
         batchSize: '15-18 students',
         monthly: 6000,
         annual: 135000,
-        features: ['Comprehensive 2-year plan', 'Regular assessments', 'Complete study package', 'Flexible learning'],
+        features: [
+          'Comprehensive 2-year plan',
+          'Regular assessments',
+          'Complete study package',
+          'Flexible learning',
+        ],
         isPopular: true,
       },
       {
@@ -150,7 +231,12 @@ const programs: Program[] = [
         batchSize: '20-25 students',
         monthly: 4000,
         annual: 96000,
-        features: ['Full curriculum coverage', 'Structured progression', 'Peer support system', 'Cost-effective option'],
+        features: [
+          'Full curriculum coverage',
+          'Structured progression',
+          'Peer support system',
+          'Cost-effective option',
+        ],
       },
     ],
   },
@@ -164,11 +250,31 @@ const competitionData = [
 ]
 
 const whatIncluded = [
-  { icon: Award, title: 'AIIMS-Trained Faculty', description: 'Led by Dr. Shekhar with 15+ years NEET teaching experience' },
-  { icon: BookOpen, title: 'Comprehensive Materials', description: 'Custom-curated study materials and handwritten notes' },
-  { icon: TrendingDown, title: 'Regular Assessments', description: 'Weekly mock tests and monthly comprehensive exams' },
-  { icon: MessageCircle, title: 'Doubt Clearing', description: 'Weekly sessions plus on-demand support' },
-  { icon: Phone, title: 'Online + Offline', description: 'Flexible learning — attend in-class or online' },
+  {
+    icon: Award,
+    title: 'AIIMS-Trained Faculty',
+    description: 'Led by Dr. Shekhar with 15+ years NEET teaching experience',
+  },
+  {
+    icon: BookOpen,
+    title: 'Comprehensive Materials',
+    description: 'Custom-curated study materials and handwritten notes',
+  },
+  {
+    icon: TrendingDown,
+    title: 'Regular Assessments',
+    description: 'Weekly mock tests and monthly comprehensive exams',
+  },
+  {
+    icon: MessageCircle,
+    title: 'Doubt Clearing',
+    description: 'Weekly sessions plus on-demand support',
+  },
+  {
+    icon: Phone,
+    title: 'Online + Offline',
+    description: 'Flexible learning — attend in-class or online',
+  },
   { icon: Check, title: 'Progress Reports', description: 'Detailed parent reports every month' },
 ]
 
@@ -248,9 +354,7 @@ export default function FeesPage() {
       {/* Hero Section */}
       <section className="py-16 md:py-20 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <div className="inline-block mb-4 px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium">
               Starting at Rs 2,500/month
             </div>
@@ -258,7 +362,8 @@ export default function FeesPage() {
               NEET Biology Coaching Fees — Transparent Pricing (2026-27)
             </h1>
             <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
-              No hidden charges. No surprise fees. See exactly what you pay for at Cerebrum Biology Academy.
+              No hidden charges. No surprise fees. See exactly what you pay for at Cerebrum Biology
+              Academy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -310,8 +415,7 @@ export default function FeesPage() {
       {/* Fee Comparison vs Competition */}
       <section className="py-16 md:py-20 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
               How We Compare
             </h2>
@@ -329,10 +433,14 @@ export default function FeesPage() {
                       : 'border-slate-200 bg-white'
                   }`}
                 >
-                  <h3 className={`text-xl font-bold mb-2 ${item.highlight ? 'text-emerald-700' : 'text-slate-900'}`}>
+                  <h3
+                    className={`text-xl font-bold mb-2 ${item.highlight ? 'text-emerald-700' : 'text-slate-900'}`}
+                  >
                     {item.name}
                   </h3>
-                  <p className={`text-lg font-semibold ${item.highlight ? 'text-emerald-600' : 'text-slate-600'}`}>
+                  <p
+                    className={`text-lg font-semibold ${item.highlight ? 'text-emerald-600' : 'text-slate-600'}`}
+                  >
                     {item.range}
                   </p>
                 </div>
@@ -345,9 +453,7 @@ export default function FeesPage() {
       {/* Detailed Fee Cards */}
       <section className="py-16 md:py-20 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="mb-12 animate-fadeInUp"
-          >
+          <div className="mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
               Fee Structure by Program
             </h2>
@@ -357,10 +463,7 @@ export default function FeesPage() {
           </div>
 
           {programs.map((program, programIndex) => (
-            <div
-              key={programIndex}
-              className="mb-16 animate-fadeInUp"
-            >
+            <div key={programIndex} className="mb-16 animate-fadeInUp">
               <h3 className="text-2xl font-bold text-slate-900 mb-8">{program.name}</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 {program.tiers.map((tier, tierIndex) => (
@@ -384,13 +487,17 @@ export default function FeesPage() {
 
                       <div className="mb-6 space-y-2">
                         <p className="text-sm text-slate-600">Monthly Fee</p>
-                        <p className="text-3xl font-bold text-emerald-600">Rs {tier.monthly.toLocaleString()}</p>
+                        <p className="text-3xl font-bold text-emerald-600">
+                          Rs {tier.monthly.toLocaleString()}
+                        </p>
                         <p className="text-sm text-slate-500">/month</p>
                       </div>
 
                       <div className="mb-6 pb-6 border-b border-slate-200">
                         <p className="text-sm text-slate-600 mb-2">Annual/Total Fee</p>
-                        <p className="text-2xl font-bold text-slate-900">Rs {tier.annual.toLocaleString()}</p>
+                        <p className="text-2xl font-bold text-slate-900">
+                          Rs {tier.annual.toLocaleString()}
+                        </p>
                       </div>
 
                       <div className="mb-8">
@@ -406,7 +513,9 @@ export default function FeesPage() {
                       </div>
 
                       <a
-                        href={getWhatsAppLink(`I'm interested in the ${tier.name} tier for ${program.name}.`)}
+                        href={getWhatsAppLink(
+                          `I'm interested in the ${tier.name} tier for ${program.name}.`
+                        )}
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
@@ -429,9 +538,7 @@ export default function FeesPage() {
       {/* What's Included */}
       <section className="py-16 md:py-20 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="mb-12 animate-fadeInUp"
-          >
+          <div className="mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
               What's Included in Every Plan
             </h2>
@@ -440,11 +547,7 @@ export default function FeesPage() {
             </p>
           </div>
 
-          <div
-           
-           
-            className="grid md:grid-cols-3 gap-8 animate-fadeInUp"
-          >
+          <div className="grid md:grid-cols-3 gap-8 animate-fadeInUp">
             {whatIncluded.map((item, index) => {
               const IconComponent = item.icon
               return (
@@ -467,8 +570,7 @@ export default function FeesPage() {
       {/* Payment Options */}
       <section className="py-16 md:py-20 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
               Flexible Payment Options
             </h2>
@@ -476,11 +578,19 @@ export default function FeesPage() {
             <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               {[
                 { title: 'Lump Sum', description: 'Pay full annual fee upfront and save 10%' },
-                { title: '2 Installments', description: 'Split into 2 equal payments (semester-wise)' },
-                { title: '3-Month EMI', description: 'Spread payments every 3 months (no extra charge)' },
+                {
+                  title: '2 Installments',
+                  description: 'Split into 2 equal payments (semester-wise)',
+                },
+                {
+                  title: '3-Month EMI',
+                  description: 'Spread payments every 3 months (no extra charge)',
+                },
                 {
                   title: 'Merit Scholarship',
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-fees' },
+                  alternates: {
+                    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-fees',
+                  },
                   description: 'Eligible students get up to 50% off on yearly fees',
                 },
               ].map((option, index) => (
@@ -500,9 +610,7 @@ export default function FeesPage() {
       {/* FAQ Section */}
       <section className="py-16 md:py-20 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="mb-12 animate-fadeInUp"
-          >
+          <div className="mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
               Frequently Asked Questions
             </h2>
@@ -511,11 +619,7 @@ export default function FeesPage() {
             </p>
           </div>
 
-          <div
-           
-           
-            className="space-y-6 animate-fadeInUp"
-          >
+          <div className="space-y-6 animate-fadeInUp">
             {faqs.map((faq, index) => (
               <details
                 key={index}
@@ -537,19 +641,20 @@ export default function FeesPage() {
       {/* Final CTA Section */}
       <section className="py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
               Have Questions About Fees?
             </h2>
             <p className="text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-              Our team is here to help. Get fee details, discuss payment plans, or book a free demo class.
+              Our team is here to help. Get fee details, discuss payment plans, or book a free demo
+              class.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href={getWhatsAppLink('I have questions about NEET coaching fees and would like more details.')}
+                href={getWhatsAppLink(
+                  'I have questions about NEET coaching fees and would like more details.'
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-green-600 text-white rounded-lg font-semibold text-lg hover:bg-green-700 transition-colors"
@@ -572,9 +677,7 @@ export default function FeesPage() {
               </a>
             </div>
 
-            <p className="mt-8 text-sm text-slate-500">
-              Available 24/7
-            </p>
+            <p className="mt-8 text-sm text-slate-500">Available 24/7</p>
           </div>
         </div>
       </section>

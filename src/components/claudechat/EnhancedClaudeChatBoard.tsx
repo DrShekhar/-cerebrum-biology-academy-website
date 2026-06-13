@@ -440,15 +440,11 @@ Want me to explain any specific part in more detail?`
   return (
     <div className="flex flex-col h-screen bg-gray-50">
       {/* Enhanced Header */}
-      <div
-        className="bg-indigo-500 text-white shadow-lg animate-fadeInUp"
-      >
+      <div className="bg-indigo-500 text-white shadow-lg animate-fadeInUp">
         <div className="px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <div
-                className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center animate-fadeInUp"
-              >
+              <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center animate-fadeInUp">
                 <Brain className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -485,9 +481,7 @@ Want me to explain any specific part in more detail?`
 
           {/* Progress Stats */}
           {isSessionActive && (
-            <div
-              className="mt-4 grid grid-cols-4 gap-4 text-center animate-fadeInUp"
-            >
+            <div className="mt-4 grid grid-cols-4 gap-4 text-center animate-fadeInUp">
               <div className="bg-white bg-opacity-10 rounded-lg p-3">
                 <div className="text-lg font-bold">
                   {messages.filter((m) => m.type === 'user').length}
@@ -539,175 +533,160 @@ Want me to explain any specific part in more detail?`
 
       {/* Messages Area */}
       <div className="flex-1 overflow-y-auto p-6 space-y-6">
-{messages.map((message) => (
-            <div
-              key={message.id}
-              className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-            >
-              <div className={`max-w-4xl ${message.type === 'user' ? 'order-2' : 'order-1'}`}>
+        {messages.map((message) => (
+          <div
+            key={message.id}
+            className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+          >
+            <div className={`max-w-4xl ${message.type === 'user' ? 'order-2' : 'order-1'}`}>
+              <div
+                className={`flex items-start space-x-3 ${message.type === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}
+              >
+                {/* Avatar */}
                 <div
-                  className={`flex items-start space-x-3 ${message.type === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}
+                  className={`w-10 h-10 rounded-full flex items-center justify-center ${
+                    message.type === 'user'
+                      ? 'bg-blue-500'
+                      : 'bg-gradient-to-br from-green-600 to-blue-600'
+                  }`}
                 >
-                  {/* Avatar */}
+                  {message.type === 'user' ? (
+                    <User className="w-5 h-5 text-white" />
+                  ) : (
+                    <Bot className="w-5 h-5 text-white" />
+                  )}
+                </div>
+
+                {/* Message Content */}
+                <div className={`flex-1 ${message.type === 'user' ? 'text-right' : 'text-left'}`}>
                   <div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center ${
+                    className={`inline-block p-4 rounded-2xl shadow-lg max-w-3xl ${
                       message.type === 'user'
-                        ? 'bg-blue-500'
-                        : 'bg-gradient-to-br from-green-600 to-blue-600'
+                        ? 'bg-blue-500 text-white'
+                        : 'bg-white text-gray-800 border'
                     }`}
                   >
-                    {message.type === 'user' ? (
-                      <User className="w-5 h-5 text-white" />
-                    ) : (
-                      <Bot className="w-5 h-5 text-white" />
-                    )}
-                  </div>
-
-                  {/* Message Content */}
-                  <div className={`flex-1 ${message.type === 'user' ? 'text-right' : 'text-left'}`}>
-                    <div
-                      className={`inline-block p-4 rounded-2xl shadow-lg max-w-3xl ${
-                        message.type === 'user'
-                          ? 'bg-blue-500 text-white'
-                          : 'bg-white text-gray-800 border'
-                      }`}
-                    >
-                      {/* Message Header */}
-                      <div className="flex items-center justify-between mb-2">
-                        <div
-                          className={`flex items-center space-x-2 ${message.type === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}
-                        >
-                          <span
-                            className={`px-2 py-1 rounded-full text-xs font-medium ${
-                              message.type === 'user'
-                                ? 'bg-blue-400 text-blue-100'
-                                : 'bg-gray-100 text-gray-600'
-                            }`}
-                          >
-                            {message.inputType === 'voice' && (
-                              <Mic size={12} className="inline mr-1" />
-                            )}
-                            {message.inputType === 'image' && (
-                              <ImageIcon size={12} className="inline mr-1" />
-                            )}
-                            {message.inputType === 'text' && (
-                              <MessageSquare size={12} className="inline mr-1" />
-                            )}
-                            {message.inputType}
-                          </span>
-                          {message.metadata?.confidence && (
-                            <span
-                              className={`text-xs ${message.type === 'user' ? 'text-blue-200' : 'text-gray-500'}`}
-                            >
-                              {Math.round(message.metadata.confidence * 100)}% confident
-                            </span>
-                          )}
-                        </div>
+                    {/* Message Header */}
+                    <div className="flex items-center justify-between mb-2">
+                      <div
+                        className={`flex items-center space-x-2 ${message.type === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}
+                      >
                         <span
-                          className={`text-xs ${message.type === 'user' ? 'text-blue-200' : 'text-gray-500'}`}
+                          className={`px-2 py-1 rounded-full text-xs font-medium ${
+                            message.type === 'user'
+                              ? 'bg-blue-400 text-blue-100'
+                              : 'bg-gray-100 text-gray-600'
+                          }`}
                         >
-                          {formatTime(message.timestamp)}
+                          {message.inputType === 'voice' && (
+                            <Mic size={12} className="inline mr-1" />
+                          )}
+                          {message.inputType === 'image' && (
+                            <ImageIcon size={12} className="inline mr-1" />
+                          )}
+                          {message.inputType === 'text' && (
+                            <MessageSquare size={12} className="inline mr-1" />
+                          )}
+                          {message.inputType}
+                        </span>
+                        {message.metadata?.confidence && (
+                          <span
+                            className={`text-xs ${message.type === 'user' ? 'text-blue-200' : 'text-gray-500'}`}
+                          >
+                            {Math.round(message.metadata.confidence * 100)}% confident
+                          </span>
+                        )}
+                      </div>
+                      <span
+                        className={`text-xs ${message.type === 'user' ? 'text-blue-200' : 'text-gray-500'}`}
+                      >
+                        {formatTime(message.timestamp)}
+                      </span>
+                    </div>
+
+                    {/* Message Text */}
+                    <div className="whitespace-pre-line leading-relaxed">{message.content}</div>
+
+                    {/* Image Preview */}
+                    {message.metadata?.imageUrl && (
+                      <div className="mt-3 rounded-lg overflow-hidden relative animate-fadeInUp">
+                        <Image
+                          src={message.metadata.imageUrl}
+                          alt="Biology diagram"
+                          width={400}
+                          height={256}
+                          className="max-w-full h-auto max-h-64 object-contain"
+                          style={{ width: 'auto', height: 'auto' }}
+                        />
+                      </div>
+                    )}
+
+                    {/* Audio Controls for Assistant Messages */}
+                    {message.type === 'assistant' && (
+                      <div className="mt-3 flex items-center space-x-2 animate-fadeInUp">
+                        <button
+                          className={`p-2 rounded-lg ${
+                            currentPlayingMessage === message.id && isPlayingAudio
+                              ? 'bg-red-100 text-red-600'
+                              : 'bg-blue-100 text-blue-600'
+                          } hover:bg-opacity-80`}
+                          onClick={() =>
+                            currentPlayingMessage === message.id && isPlayingAudio
+                              ? stopAudioMessage()
+                              : playAudioMessage(message.id)
+                          }
+                        >
+                          {currentPlayingMessage === message.id && isPlayingAudio ? (
+                            <VolumeX size={16} />
+                          ) : (
+                            <Volume2 size={16} />
+                          )}
+                        </button>
+                        <span className="text-xs text-gray-600">
+                          {currentPlayingMessage === message.id && isPlayingAudio
+                            ? "🔊 Playing in Shekhar Sir's voice..."
+                            : "🎵 Click to hear in Shekhar Sir's voice"}
                         </span>
                       </div>
-
-                      {/* Message Text */}
-                      <div className="whitespace-pre-line leading-relaxed">{message.content}</div>
-
-                      {/* Image Preview */}
-                      {message.metadata?.imageUrl && (
-                        <div
-                          className="mt-3 rounded-lg overflow-hidden relative animate-fadeInUp"
-                        >
-                          <Image
-                            src={message.metadata.imageUrl}
-                            alt="Biology diagram"
-                            width={400}
-                            height={256}
-                            className="max-w-full h-auto max-h-64 object-contain"
-                            style={{ width: 'auto', height: 'auto' }}
-                          />
-                        </div>
-                      )}
-
-                      {/* Audio Controls for Assistant Messages */}
-                      {message.type === 'assistant' && (
-                        <div
-                          className="mt-3 flex items-center space-x-2 animate-fadeInUp"
-                        >
-                          <button
-                            className={`p-2 rounded-lg ${
-                              currentPlayingMessage === message.id && isPlayingAudio
-                                ? 'bg-red-100 text-red-600'
-                                : 'bg-blue-100 text-blue-600'
-                            } hover:bg-opacity-80`}
-                            onClick={() =>
-                              currentPlayingMessage === message.id && isPlayingAudio
-                                ? stopAudioMessage()
-                                : playAudioMessage(message.id)
-                            }
-                          >
-                            {currentPlayingMessage === message.id && isPlayingAudio ? (
-                              <VolumeX size={16} />
-                            ) : (
-                              <Volume2 size={16} />
-                            )}
-                          </button>
-                          <span className="text-xs text-gray-600">
-                            {currentPlayingMessage === message.id && isPlayingAudio
-                              ? "🔊 Playing in Shekhar Sir's voice..."
-                              : "🎵 Click to hear in Shekhar Sir's voice"}
-                          </span>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Analysis Result Display */}
-                    {message.metadata?.analysisResult && (
-                      <div
-                        className="mt-4 animate-fadeInUp"
-                      >
-                        <AnalysisResultDisplay result={message.metadata.analysisResult} />
-                      </div>
                     )}
                   </div>
-                </div>
-              </div>
-            </div>
-          ))}
-{/* Typing Indicator */}
-{isTyping && (
-            <div
-              className="flex justify-start animate-fadeInUp"
-            >
-              <div className="flex items-start space-x-3">
-                <div
-                  className="w-10 h-10 rounded-full bg-gradient-to-br from-green-600 to-blue-600 flex items-center justify-center animate-fadeInUp"
-                >
-                  <Bot className="w-5 h-5 text-white" />
-                </div>
-                <div className="bg-white p-4 rounded-2xl shadow-lg border">
-                  <div className="flex items-center space-x-2">
-                    <div className="flex space-x-1">
-                      {[0, 1, 2].map((i) => (
-                        <div
-                          key={i}
-                          className="w-2 h-2 bg-blue-500 rounded-full animate-fadeInUp"
-                        />
-                      ))}
+
+                  {/* Analysis Result Display */}
+                  {message.metadata?.analysisResult && (
+                    <div className="mt-4 animate-fadeInUp">
+                      <AnalysisResultDisplay result={message.metadata.analysisResult} />
                     </div>
-                    <span className="text-sm text-gray-600">Shekhar Sir is analyzing...</span>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
-          )}
-<div ref={messagesEndRef} />
+          </div>
+        ))}
+        {/* Typing Indicator */}
+        {isTyping && (
+          <div className="flex justify-start animate-fadeInUp">
+            <div className="flex items-start space-x-3">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-green-600 to-blue-600 flex items-center justify-center animate-fadeInUp">
+                <Bot className="w-5 h-5 text-white" />
+              </div>
+              <div className="bg-white p-4 rounded-2xl shadow-lg border">
+                <div className="flex items-center space-x-2">
+                  <div className="flex space-x-1">
+                    {[0, 1, 2].map((i) => (
+                      <div key={i} className="w-2 h-2 bg-blue-500 rounded-full animate-fadeInUp" />
+                    ))}
+                  </div>
+                  <span className="text-sm text-gray-600">Shekhar Sir is analyzing...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+        <div ref={messagesEndRef} />
       </div>
 
       {/* Enhanced Input Area */}
-      <div
-        className="bg-white border-t p-6 animate-fadeInUp"
-      >
+      <div className="bg-white border-t p-6 animate-fadeInUp">
         {inputMode === 'text' && (
           <div className="flex items-center space-x-4">
             <div className="flex-1 relative">
@@ -756,9 +735,7 @@ Want me to explain any specific part in more detail?`
 
       {/* Floating Progress Indicator */}
       {isSessionActive && (
-        <div
-          className="fixed bottom-6 left-6 bg-white rounded-full shadow-lg p-3 border animate-fadeInUp"
-        >
+        <div className="fixed bottom-6 left-6 bg-white rounded-full shadow-lg p-3 border animate-fadeInUp">
           <div className="flex items-center space-x-3">
             <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
               <Zap className="w-4 h-4 text-white" />

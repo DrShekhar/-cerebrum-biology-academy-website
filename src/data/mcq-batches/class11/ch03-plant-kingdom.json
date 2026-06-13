@@ -14,22 +14,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Which pigment is responsible for the brown colour of Phaeophyceae?",
-      "options": [
-        "Fucoxanthin",
-        "Xanthophyll",
-        "Phycoerythrin",
-        "Chlorophyll a"
-      ],
+      "options": ["Fucoxanthin", "Xanthophyll", "Phycoerythrin", "Chlorophyll a"],
       "correctAnswer": "A",
       "explanation": "Fucoxanthin is the predominant accessory pigment in brown algae (Phaeophyceae), which masks the green colour of chlorophyll and gives them their characteristic brown colour.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "phaeophyceae",
-        "pigments"
-      ],
+      "tags": ["algae", "phaeophyceae", "pigments"],
       "neetWeightage": "HIGH"
     },
     {
@@ -40,22 +31,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "The stored food in Rhodophyceae is:",
-      "options": [
-        "Glycogen",
-        "Mannitol and laminarin",
-        "Starch",
-        "Floridean starch"
-      ],
+      "options": ["Glycogen", "Mannitol and laminarin", "Starch", "Floridean starch"],
       "correctAnswer": "D",
       "explanation": "The reserve food in red algae (Rhodophyceae) is floridean starch, which is similar to amylopectin and glycogen in structure.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "rhodophyceae",
-        "stored-food"
-      ],
+      "tags": ["algae", "rhodophyceae", "stored-food"],
       "neetWeightage": "HIGH"
     },
     {
@@ -66,21 +48,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Which of the following is a liverwort?",
-      "options": [
-        "Funaria",
-        "Marchantia",
-        "Sphagnum",
-        "Polytrichum"
-      ],
+      "options": ["Funaria", "Marchantia", "Sphagnum", "Polytrichum"],
       "correctAnswer": "B",
       "explanation": "Marchantia is a common liverwort (Hepaticopsida). Funaria, Sphagnum, and Polytrichum are all mosses (Bryopsida).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophytes",
-        "liverworts"
-      ],
+      "tags": ["bryophytes", "liverworts"],
       "neetWeightage": "HIGH"
     },
     {
@@ -91,21 +65,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "In which group of plants is the sporophyte not free-living but attached to the photosynthetic gametophyte?",
-      "options": [
-        "Bryophytes",
-        "Gymnosperms",
-        "Angiosperms",
-        "Pteridophytes"
-      ],
+      "options": ["Bryophytes", "Gymnosperms", "Angiosperms", "Pteridophytes"],
       "correctAnswer": "A",
       "explanation": "In bryophytes, the sporophyte is not free-living but attached to the photosynthetic gametophyte and derives nourishment from it. The dominant phase is the gametophyte.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophytes",
-        "alternation-of-generations"
-      ],
+      "tags": ["bryophytes", "alternation-of-generations"],
       "neetWeightage": "HIGH"
     },
     {
@@ -116,21 +82,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "The first vascular plants to appear on land were:",
-      "options": [
-        "Angiosperms",
-        "Bryophytes",
-        "Gymnosperms",
-        "Pteridophytes"
-      ],
+      "options": ["Angiosperms", "Bryophytes", "Gymnosperms", "Pteridophytes"],
       "correctAnswer": "D",
       "explanation": "Pteridophytes are the first terrestrial plants to possess vascular tissues (xylem and phloem). They are found in cool, damp, shady places though some may flourish well in sandy-soil conditions.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pteridophytes",
-        "vascular-plants"
-      ],
+      "tags": ["pteridophytes", "vascular-plants"],
       "neetWeightage": "HIGH"
     },
     {
@@ -141,21 +99,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Which of the following gymnosperms is a living fossil?",
-      "options": [
-        "Cedrus",
-        "Cycas",
-        "Ginkgo",
-        "Pinus"
-      ],
+      "options": ["Cedrus", "Cycas", "Ginkgo", "Pinus"],
       "correctAnswer": "C",
       "explanation": "Ginkgo biloba is called a living fossil because it is the only surviving species of a once widespread group of plants that existed millions of years ago.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "gymnosperms",
-        "living-fossil"
-      ],
+      "tags": ["gymnosperms", "living-fossil"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -166,21 +116,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Double fertilization is a characteristic feature of:",
-      "options": [
-        "Bryophytes",
-        "Pteridophytes",
-        "Angiosperms",
-        "Gymnosperms"
-      ],
+      "options": ["Bryophytes", "Pteridophytes", "Angiosperms", "Gymnosperms"],
       "correctAnswer": "C",
       "explanation": "Double fertilization is unique to angiosperms. One male gamete fuses with the egg cell to form the zygote (syngamy) and the other fuses with the two polar nuclei to form the triploid primary endosperm nucleus (triple fusion).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "angiosperms",
-        "double-fertilization"
-      ],
+      "tags": ["angiosperms", "double-fertilization"],
       "neetWeightage": "HIGH"
     },
     {
@@ -202,11 +144,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "chlorophyceae",
-        "cell-wall"
-      ],
+      "tags": ["algae", "chlorophyceae", "cell-wall"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -228,11 +166,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophytes",
-        "mosses",
-        "morphology"
-      ],
+      "tags": ["bryophytes", "mosses", "morphology"],
       "neetWeightage": "HIGH"
     },
     {
@@ -254,10 +188,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pteridophytes",
-        "heterospory"
-      ],
+      "tags": ["pteridophytes", "heterospory"],
       "neetWeightage": "HIGH"
     },
     {
@@ -279,10 +210,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gymnosperms",
-        "ovules"
-      ],
+      "tags": ["gymnosperms", "ovules"],
       "neetWeightage": "HIGH"
     },
     {
@@ -293,22 +221,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Sphagnum is commonly known as:",
-      "options": [
-        "Reindeer moss",
-        "Irish moss",
-        "Peat moss",
-        "Club moss"
-      ],
+      "options": ["Reindeer moss", "Irish moss", "Peat moss", "Club moss"],
       "correctAnswer": "C",
       "explanation": "Sphagnum is commonly called peat moss. It is economically important as it provides peat, which is used as fuel and also in horticulture for its water-holding capacity.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "bryophytes",
-        "mosses",
-        "sphagnum"
-      ],
+      "tags": ["bryophytes", "mosses", "sphagnum"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -319,22 +238,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Agar is commercially obtained from:",
-      "options": [
-        "Red algae",
-        "Green algae",
-        "Blue-green algae",
-        "Brown algae"
-      ],
+      "options": ["Red algae", "Green algae", "Blue-green algae", "Brown algae"],
       "correctAnswer": "A",
       "explanation": "Agar is obtained from red algae (Rhodophyceae) such as Gelidium and Gracilaria. It is used commercially in the preparation of ice-creams, jellies, and also as a culture medium in laboratories.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "rhodophyceae",
-        "economic-importance"
-      ],
+      "tags": ["algae", "rhodophyceae", "economic-importance"],
       "neetWeightage": "HIGH"
     },
     {
@@ -356,10 +266,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "life-cycles",
-        "haplontic"
-      ],
+      "tags": ["life-cycles", "haplontic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -381,11 +288,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "chlorophyceae",
-        "classification"
-      ],
+      "tags": ["algae", "chlorophyceae", "classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -396,22 +299,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "The protonema stage is found in the life cycle of:",
-      "options": [
-        "Liverworts",
-        "Ferns",
-        "Gymnosperms",
-        "Mosses"
-      ],
+      "options": ["Liverworts", "Ferns", "Gymnosperms", "Mosses"],
       "correctAnswer": "D",
       "explanation": "Moss spores germinate to form a creeping, green, branched, filamentous stage called the protonema. It is the first stage in the development of the moss gametophyte.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophytes",
-        "mosses",
-        "protonema"
-      ],
+      "tags": ["bryophytes", "mosses", "protonema"],
       "neetWeightage": "HIGH"
     },
     {
@@ -433,11 +327,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "angiosperms",
-        "monocots",
-        "characteristics"
-      ],
+      "tags": ["angiosperms", "monocots", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -448,22 +338,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Archegonia are absent in:",
-      "options": [
-        "Pteridophytes",
-        "Angiosperms",
-        "Bryophytes",
-        "Gymnosperms"
-      ],
+      "options": ["Pteridophytes", "Angiosperms", "Bryophytes", "Gymnosperms"],
       "correctAnswer": "B",
       "explanation": "Archegonia are female sex organs found in bryophytes, pteridophytes, and gymnosperms. In angiosperms, the female gametophyte is reduced and does not produce archegonia.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "angiosperms",
-        "archegonia",
-        "reproduction"
-      ],
+      "tags": ["angiosperms", "archegonia", "reproduction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -474,22 +355,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Algin is commercially obtained from:",
-      "options": [
-        "Green algae",
-        "Blue-green algae",
-        "Red algae",
-        "Brown algae"
-      ],
+      "options": ["Green algae", "Blue-green algae", "Red algae", "Brown algae"],
       "correctAnswer": "D",
       "explanation": "Algin is obtained from the cell walls of brown algae (Phaeophyceae). It is used as a hydrocolloid in the food and textile industries.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "phaeophyceae",
-        "economic-importance"
-      ],
+      "tags": ["algae", "phaeophyceae", "economic-importance"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -500,22 +372,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "The male sex organ of bryophytes is called:",
-      "options": [
-        "Strobilus",
-        "Archegonium",
-        "Sporangium",
-        "Antheridium"
-      ],
+      "options": ["Strobilus", "Archegonium", "Sporangium", "Antheridium"],
       "correctAnswer": "D",
       "explanation": "The male sex organ in bryophytes is called the antheridium. It produces biflagellate antherozoids (male gametes). The female sex organ is the archegonium, which produces a single egg.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophytes",
-        "sex-organs",
-        "antheridium"
-      ],
+      "tags": ["bryophytes", "sex-organs", "antheridium"],
       "neetWeightage": "HIGH"
     },
     {
@@ -526,21 +389,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Pteridophytes are used for medicinal purposes and as soil binders. Which of the following is also used as an ornamental plant?",
-      "options": [
-        "Salvinia",
-        "Azolla",
-        "Selaginella",
-        "Adiantum"
-      ],
+      "options": ["Salvinia", "Azolla", "Selaginella", "Adiantum"],
       "correctAnswer": "D",
       "explanation": "Adiantum (maidenhair fern) is widely grown as an ornamental plant. Selaginella and Salvinia are heterosporous, and Azolla is used as a biofertilizer.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "pteridophytes",
-        "economic-importance"
-      ],
+      "tags": ["pteridophytes", "economic-importance"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -551,21 +406,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "In which of the following the sporophytic generation is dominant?",
-      "options": [
-        "Spirogyra",
-        "Funaria",
-        "Dryopteris",
-        "Chlamydomonas"
-      ],
+      "options": ["Spirogyra", "Funaria", "Dryopteris", "Chlamydomonas"],
       "correctAnswer": "C",
       "explanation": "In pteridophytes like Dryopteris (a fern), the sporophyte is the dominant, independent, photosynthetic phase. The gametophyte (prothallus) is small and short-lived.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pteridophytes",
-        "alternation-of-generations"
-      ],
+      "tags": ["pteridophytes", "alternation-of-generations"],
       "neetWeightage": "HIGH"
     },
     {
@@ -576,22 +423,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Which class of algae has predominantly unicellular members?",
-      "options": [
-        "Phaeophyceae",
-        "Rhodophyceae",
-        "Chlorophyceae",
-        "All of the above"
-      ],
+      "options": ["Phaeophyceae", "Rhodophyceae", "Chlorophyceae", "All of the above"],
       "correctAnswer": "C",
       "explanation": "Chlorophyceae members can be unicellular (Chlamydomonas), colonial (Volvox), or filamentous (Ulothrix, Spirogyra). They have the greatest diversity in body forms. Phaeophyceae members are predominantly marine and mostly multicellular.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "algae",
-        "chlorophyceae",
-        "body-forms"
-      ],
+      "tags": ["algae", "chlorophyceae", "body-forms"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -602,22 +440,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "The gametophyte in pteridophytes is called:",
-      "options": [
-        "Protonema",
-        "Thallus",
-        "Sporophyll",
-        "Prothallus"
-      ],
+      "options": ["Protonema", "Thallus", "Sporophyll", "Prothallus"],
       "correctAnswer": "D",
       "explanation": "In pteridophytes, spores germinate to give rise to an inconspicuous, small but multicellular, free-living, mostly photosynthetic thalloid gametophyte called the prothallus.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pteridophytes",
-        "prothallus",
-        "gametophyte"
-      ],
+      "tags": ["pteridophytes", "prothallus", "gametophyte"],
       "neetWeightage": "HIGH"
     },
     {
@@ -639,11 +468,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "phaeophyceae",
-        "cell-wall"
-      ],
+      "tags": ["algae", "phaeophyceae", "cell-wall"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -665,10 +490,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophytes",
-        "amphibians-plant-kingdom"
-      ],
+      "tags": ["bryophytes", "amphibians-plant-kingdom"],
       "neetWeightage": "HIGH"
     },
     {
@@ -679,22 +501,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Coralloid roots in Cycas are associated with:",
-      "options": [
-        "Frankia",
-        "Mycorrhiza",
-        "Rhizobium",
-        "Nostoc (cyanobacteria)"
-      ],
+      "options": ["Frankia", "Mycorrhiza", "Rhizobium", "Nostoc (cyanobacteria)"],
       "correctAnswer": "D",
       "explanation": "Cycas has specialized coralloid roots that contain nitrogen-fixing cyanobacteria (Nostoc or Anabaena) in a symbiotic association.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gymnosperms",
-        "cycas",
-        "coralloid-roots"
-      ],
+      "tags": ["gymnosperms", "cycas", "coralloid-roots"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -716,10 +529,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "life-cycles",
-        "haplo-diplontic"
-      ],
+      "tags": ["life-cycles", "haplo-diplontic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -730,21 +540,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "The tallest living gymnosperm is:",
-      "options": [
-        "Cycas",
-        "Pinus",
-        "Ginkgo",
-        "Sequoia"
-      ],
+      "options": ["Cycas", "Pinus", "Ginkgo", "Sequoia"],
       "correctAnswer": "D",
       "explanation": "Sequoia sempervirens (coast redwood) is the tallest living gymnosperm and one of the tallest trees in the world, reaching heights of over 100 meters.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "gymnosperms",
-        "sequoia"
-      ],
+      "tags": ["gymnosperms", "sequoia"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -755,22 +557,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Chlorophyll a, b, and carotenoids are present in:",
-      "options": [
-        "Phaeophyceae",
-        "Rhodophyceae",
-        "All of the above",
-        "Chlorophyceae"
-      ],
+      "options": ["Phaeophyceae", "Rhodophyceae", "All of the above", "Chlorophyceae"],
       "correctAnswer": "D",
       "explanation": "Chlorophyceae (green algae) contain chlorophyll a, chlorophyll b, and carotenoids. Phaeophyceae has chlorophyll a, c, and fucoxanthin. Rhodophyceae has chlorophyll a, d, and phycoerythrin.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "chlorophyceae",
-        "pigments"
-      ],
+      "tags": ["algae", "chlorophyceae", "pigments"],
       "neetWeightage": "HIGH"
     },
     {
@@ -781,23 +574,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Elaters are present in:",
-      "options": [
-        "Selaginella",
-        "Mosses",
-        "Marchantia",
-        "Funaria"
-      ],
+      "options": ["Selaginella", "Mosses", "Marchantia", "Funaria"],
       "correctAnswer": "C",
       "explanation": "Elaters are hygroscopic structures found in the sporangium of liverworts like Marchantia. They help in the dispersal of spores by their coiling and uncoiling movements.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophytes",
-        "liverworts",
-        "marchantia",
-        "elaters"
-      ],
+      "tags": ["bryophytes", "liverworts", "marchantia", "elaters"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -808,22 +591,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "The stored food in Phaeophyceae is:",
-      "options": [
-        "Mannitol and laminarin",
-        "Starch",
-        "Sucrose",
-        "Floridean starch"
-      ],
+      "options": ["Mannitol and laminarin", "Starch", "Sucrose", "Floridean starch"],
       "correctAnswer": "A",
       "explanation": "In brown algae (Phaeophyceae), the food is stored as mannitol and laminarin (a complex carbohydrate).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "phaeophyceae",
-        "stored-food"
-      ],
+      "tags": ["algae", "phaeophyceae", "stored-food"],
       "neetWeightage": "HIGH"
     },
     {
@@ -834,23 +608,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Isogamous reproduction with non-flagellated gametes is found in:",
-      "options": [
-        "Chlamydomonas",
-        "Volvox",
-        "Fucus",
-        "Spirogyra"
-      ],
+      "options": ["Chlamydomonas", "Volvox", "Fucus", "Spirogyra"],
       "correctAnswer": "D",
       "explanation": "Spirogyra shows isogamous reproduction with non-flagellated gametes. The sexual reproduction occurs by conjugation where similar-looking, non-motile gametes fuse.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "chlorophyceae",
-        "sexual-reproduction",
-        "isogamy"
-      ],
+      "tags": ["algae", "chlorophyceae", "sexual-reproduction", "isogamy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -872,11 +636,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pteridophytes",
-        "seeds",
-        "reproduction"
-      ],
+      "tags": ["pteridophytes", "seeds", "reproduction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -887,21 +647,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "The largest ovules, largest male gametes, and largest female cones are found in:",
-      "options": [
-        "Gnetum",
-        "Sequoia",
-        "Pinus",
-        "Cycas"
-      ],
+      "options": ["Gnetum", "Sequoia", "Pinus", "Cycas"],
       "correctAnswer": "D",
       "explanation": "Cycas has the largest ovules and largest sperms (male gametes) among all living plants. Its female cones are also the largest in the plant kingdom.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "gymnosperms",
-        "cycas"
-      ],
+      "tags": ["gymnosperms", "cycas"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -912,22 +664,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "The diplontic life cycle is found in:",
-      "options": [
-        "Ectocarpus",
-        "Fucus",
-        "Spirogyra",
-        "Polysiphonia"
-      ],
+      "options": ["Ectocarpus", "Fucus", "Spirogyra", "Polysiphonia"],
       "correctAnswer": "B",
       "explanation": "Fucus shows a diplontic life cycle where the diploid sporophyte is the dominant, photosynthetic, independent phase. All seed-bearing plants (gymnosperms and angiosperms) also show diplontic life cycles.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "life-cycles",
-        "diplontic",
-        "fucus"
-      ],
+      "tags": ["life-cycles", "diplontic", "fucus"],
       "neetWeightage": "HIGH"
     },
     {
@@ -938,22 +681,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Which of the following pteridophytes is used as a biofertilizer in rice fields?",
-      "options": [
-        "Adiantum",
-        "Azolla",
-        "Selaginella",
-        "Equisetum"
-      ],
+      "options": ["Adiantum", "Azolla", "Selaginella", "Equisetum"],
       "correctAnswer": "B",
       "explanation": "Azolla is an aquatic fern that harbours nitrogen-fixing cyanobacteria (Anabaena azollae) in its leaf cavities and is used as a biofertilizer, particularly in rice paddy fields.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pteridophytes",
-        "azolla",
-        "biofertilizer"
-      ],
+      "tags": ["pteridophytes", "azolla", "biofertilizer"],
       "neetWeightage": "HIGH"
     },
     {
@@ -975,11 +709,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "angiosperms",
-        "dicots",
-        "venation"
-      ],
+      "tags": ["angiosperms", "dicots", "venation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1001,12 +731,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "siphonogamy",
-        "pollination",
-        "gymnosperms",
-        "angiosperms"
-      ],
+      "tags": ["siphonogamy", "pollination", "gymnosperms", "angiosperms"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1028,10 +753,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophytes",
-        "amphibians-plant-kingdom"
-      ],
+      "tags": ["bryophytes", "amphibians-plant-kingdom"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1053,10 +775,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gymnosperms",
-        "naked-seeds"
-      ],
+      "tags": ["gymnosperms", "naked-seeds"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1078,10 +797,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pteridophytes",
-        "heterospory"
-      ],
+      "tags": ["pteridophytes", "heterospory"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1103,10 +819,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "thallophytes"
-      ],
+      "tags": ["algae", "thallophytes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1128,10 +841,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "pteridophytes",
-        "economic-importance"
-      ],
+      "tags": ["pteridophytes", "economic-importance"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1153,11 +863,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophytes",
-        "mosses",
-        "gametophyte"
-      ],
+      "tags": ["bryophytes", "mosses", "gametophyte"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1179,12 +885,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "rhodophyceae",
-        "phycoerythrin",
-        "depth"
-      ],
+      "tags": ["algae", "rhodophyceae", "phycoerythrin", "depth"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1206,10 +907,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "angiosperms",
-        "double-fertilization"
-      ],
+      "tags": ["angiosperms", "double-fertilization"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1231,11 +929,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "life-cycles",
-        "haplontic",
-        "chlamydomonas"
-      ],
+      "tags": ["life-cycles", "haplontic", "chlamydomonas"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1257,11 +951,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "life-cycles",
-        "haplo-diplontic",
-        "polysiphonia"
-      ],
+      "tags": ["life-cycles", "haplo-diplontic", "polysiphonia"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1283,11 +973,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gymnosperms",
-        "fruits",
-        "naked-seeds"
-      ],
+      "tags": ["gymnosperms", "fruits", "naked-seeds"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1309,11 +995,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "phaeophyceae",
-        "sexual-reproduction"
-      ],
+      "tags": ["algae", "phaeophyceae", "sexual-reproduction"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1335,12 +1017,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophytes",
-        "mosses",
-        "funaria",
-        "sporophyte"
-      ],
+      "tags": ["bryophytes", "mosses", "funaria", "sporophyte"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1362,11 +1039,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "angiosperms",
-        "double-fertilization",
-        "advanced-reproduction"
-      ],
+      "tags": ["angiosperms", "double-fertilization", "advanced-reproduction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1388,11 +1061,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "chlorophyceae",
-        "characteristics"
-      ],
+      "tags": ["algae", "chlorophyceae", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1403,21 +1072,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Which of the following statements about gymnosperms is INCORRECT?\n(i) They have naked seeds.\n(ii) They are heterosporous.\n(iii) They show double fertilization.\n(iv) The male and female gametophytes are free-living.",
-      "options": [
-        "(i) and (iv)",
-        "(iii) and (iv)",
-        "(i) and (ii)",
-        "(ii) and (iii)"
-      ],
+      "options": ["(i) and (iv)", "(iii) and (iv)", "(i) and (ii)", "(ii) and (iii)"],
       "correctAnswer": "B",
       "explanation": "Gymnosperms do NOT show double fertilization (unique to angiosperms) and their gametophytes are NOT free-living. The male gametophyte is the pollen grain, and the female gametophyte develops within the ovule.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gymnosperms",
-        "characteristics"
-      ],
+      "tags": ["gymnosperms", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1439,10 +1100,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophytes",
-        "liverworts"
-      ],
+      "tags": ["bryophytes", "liverworts"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1453,21 +1111,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "How many of the following statements are correct?\n(i) Algae are found in moist stones, soils, and wood.\n(ii) Some algae occur in association with fungi (lichen) and animals (on sloth bear).\n(iii) All algae are microscopic.\n(iv) Algae reproduce by vegetative, asexual, and sexual methods.",
-      "options": [
-        "One",
-        "Two",
-        "Four",
-        "Three"
-      ],
+      "options": ["One", "Two", "Four", "Three"],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), and (iv) are correct. Statement (iii) is incorrect because not all algae are microscopic; kelps (brown algae) can grow to enormous sizes. Algae are found in diverse habitats, can form lichens with fungi, and reproduce by all three methods.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "general-characteristics"
-      ],
+      "tags": ["algae", "general-characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1489,11 +1139,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "phaeophyceae",
-        "characteristics"
-      ],
+      "tags": ["algae", "phaeophyceae", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1504,21 +1150,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Consider the following statements about angiosperms:\n(i) They bear seeds enclosed within fruits.\n(ii) They show double fertilization.\n(iii) Male sex organs are present in the stamen.\n(iv) All angiosperms are woody plants.\nHow many of the above statements are correct?",
-      "options": [
-        "Three",
-        "One",
-        "Two",
-        "Four"
-      ],
+      "options": ["Three", "One", "Two", "Four"],
       "correctAnswer": "A",
       "explanation": "Statements (i), (ii), and (iii) are correct. Statement (iv) is incorrect as angiosperms include both herbaceous and woody plants. Angiosperms bear seeds within fruits, exhibit double fertilization, and have stamens as male reproductive organs.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "angiosperms",
-        "characteristics"
-      ],
+      "tags": ["angiosperms", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1540,10 +1178,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pteridophytes",
-        "characteristics"
-      ],
+      "tags": ["pteridophytes", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1565,12 +1200,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "life-cycles",
-        "haplontic",
-        "diplontic",
-        "haplo-diplontic"
-      ],
+      "tags": ["life-cycles", "haplontic", "diplontic", "haplo-diplontic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1592,11 +1222,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "rhodophyceae",
-        "characteristics"
-      ],
+      "tags": ["algae", "rhodophyceae", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1618,10 +1244,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pteridophytes",
-        "classification"
-      ],
+      "tags": ["pteridophytes", "classification"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1632,22 +1255,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Read the following statements about mosses:\nStatement A: The predominant stage of the moss life cycle is the sporophyte.\nStatement B: Mosses have rhizoids that are multicellular and branched.\nStatement C: The protonema develops from a moss spore.\nWhich of the above is/are correct?",
-      "options": [
-        "A and C only",
-        "B and C only",
-        "Only A",
-        "All of the above"
-      ],
+      "options": ["A and C only", "B and C only", "Only A", "All of the above"],
       "correctAnswer": "B",
       "explanation": "Statement A is incorrect; in mosses, the dominant stage is the gametophyte, not the sporophyte. Statement B is correct; mosses have multicellular, branched rhizoids (unlike liverworts that have unicellular rhizoids). Statement C is correct; the protonema is the first stage developed from a germinating moss spore.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophytes",
-        "mosses",
-        "protonema"
-      ],
+      "tags": ["bryophytes", "mosses", "protonema"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1658,22 +1272,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "How many of the following features are shared by bryophytes and pteridophytes?\n(i) Presence of vascular tissue\n(ii) Requirement of water for fertilization\n(iii) Production of spores\n(iv) Multicellular sporangia with jacket layer\n(v) Alternation of generations",
-      "options": [
-        "Four",
-        "Five",
-        "Two",
-        "Three"
-      ],
+      "options": ["Four", "Five", "Two", "Three"],
       "correctAnswer": "D",
       "explanation": "Features shared by both bryophytes and pteridophytes are: (ii) water requirement for fertilization, (iii) production of spores, and (v) alternation of generations. Vascular tissue (i) is absent in bryophytes. Both have multicellular sporangia but this differs in structure between the two groups.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophytes",
-        "pteridophytes",
-        "comparison"
-      ],
+      "tags": ["bryophytes", "pteridophytes", "comparison"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1695,11 +1300,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "chlorophyceae",
-        "classification"
-      ],
+      "tags": ["algae", "chlorophyceae", "classification"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1710,21 +1311,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Select the INCORRECT statement about gymnosperms:\n(i) Roots in some gymnosperms have fungal association (mycorrhiza).\n(ii) In Cycas, coralloid roots contain Nostoc.\n(iii) Pinus leaves are needle-like.\n(iv) All gymnosperms are deciduous trees.",
-      "options": [
-        "(ii) and (iv)",
-        "(i) and (iii)",
-        "(iv) only",
-        "(i) only"
-      ],
+      "options": ["(ii) and (iv)", "(i) and (iii)", "(iv) only", "(i) only"],
       "correctAnswer": "C",
       "explanation": "Statement (iv) is incorrect. Not all gymnosperms are deciduous; most gymnosperms (like Pinus, Cedrus) are evergreen. Statements (i), (ii), and (iii) are all correct as per NCERT.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gymnosperms",
-        "characteristics"
-      ],
+      "tags": ["gymnosperms", "characteristics"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1746,10 +1339,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "classification"
-      ],
+      "tags": ["algae", "classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1760,21 +1350,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Match the plant groups with their stored food:\nColumn I: (a) Chlorophyceae (b) Phaeophyceae (c) Rhodophyceae\nColumn II: (i) Floridean starch (ii) Starch (iii) Mannitol and laminarin",
-      "options": [
-        "a-iii, b-i, c-ii",
-        "a-ii, b-i, c-iii",
-        "a-i, b-ii, c-iii",
-        "a-ii, b-iii, c-i"
-      ],
+      "options": ["a-iii, b-i, c-ii", "a-ii, b-i, c-iii", "a-i, b-ii, c-iii", "a-ii, b-iii, c-i"],
       "correctAnswer": "D",
       "explanation": "Chlorophyceae stores starch, Phaeophyceae stores mannitol and laminarin, and Rhodophyceae stores floridean starch.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "stored-food"
-      ],
+      "tags": ["algae", "stored-food"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1796,10 +1378,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "life-cycles",
-        "alternation-of-generations"
-      ],
+      "tags": ["life-cycles", "alternation-of-generations"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1821,10 +1400,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "plant-groups",
-        "characteristics"
-      ],
+      "tags": ["plant-groups", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1846,11 +1422,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "chlorophyceae",
-        "body-forms"
-      ],
+      "tags": ["algae", "chlorophyceae", "body-forms"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1872,10 +1444,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pteridophytes",
-        "classification"
-      ],
+      "tags": ["pteridophytes", "classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1897,10 +1466,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "economic-importance"
-      ],
+      "tags": ["algae", "economic-importance"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1922,13 +1488,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "sexual-reproduction",
-        "isogamy",
-        "anisogamy",
-        "oogamy"
-      ],
+      "tags": ["algae", "sexual-reproduction", "isogamy", "anisogamy", "oogamy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1950,10 +1510,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "plant-groups",
-        "features"
-      ],
+      "tags": ["plant-groups", "features"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1964,21 +1521,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Match the following algae with their pigments:\nColumn I: (a) Chlorophyceae (b) Phaeophyceae (c) Rhodophyceae\nColumn II: (i) Chlorophyll a, d, phycoerythrin (ii) Chlorophyll a, b, carotenoids (iii) Chlorophyll a, c, fucoxanthin",
-      "options": [
-        "a-ii, b-i, c-iii",
-        "a-i, b-ii, c-iii",
-        "a-ii, b-iii, c-i",
-        "a-iii, b-i, c-ii"
-      ],
+      "options": ["a-ii, b-i, c-iii", "a-i, b-ii, c-iii", "a-ii, b-iii, c-i", "a-iii, b-i, c-ii"],
       "correctAnswer": "C",
       "explanation": "Chlorophyceae contains chlorophyll a, b and carotenoids. Phaeophyceae contains chlorophyll a, c and fucoxanthin. Rhodophyceae contains chlorophyll a, d and phycoerythrin.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "pigments"
-      ],
+      "tags": ["algae", "pigments"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2000,10 +1549,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gymnosperms",
-        "characteristics"
-      ],
+      "tags": ["gymnosperms", "characteristics"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2025,10 +1571,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "life-cycles",
-        "examples"
-      ],
+      "tags": ["life-cycles", "examples"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2050,10 +1593,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophytes",
-        "examples"
-      ],
+      "tags": ["bryophytes", "examples"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2064,21 +1604,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Match the cell wall composition with the algal classes:\nColumn I: (a) Cellulose and pectose (b) Cellulose and algin (c) Cellulose, pectin, and polysulphate esters\nColumn II: (i) Phaeophyceae (ii) Chlorophyceae (iii) Rhodophyceae",
-      "options": [
-        "a-ii, b-i, c-iii",
-        "a-iii, b-i, c-ii",
-        "a-i, b-ii, c-iii",
-        "a-ii, b-iii, c-i"
-      ],
+      "options": ["a-ii, b-i, c-iii", "a-iii, b-i, c-ii", "a-i, b-ii, c-iii", "a-ii, b-iii, c-i"],
       "correctAnswer": "A",
       "explanation": "Chlorophyceae has cell wall of cellulose and pectose. Phaeophyceae has cellulose and algin. Rhodophyceae has cellulose, pectin, and polysulphate esters.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "cell-wall"
-      ],
+      "tags": ["algae", "cell-wall"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2089,22 +1621,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "How many of the following are examples of Chlorophyceae?\nChlamydomonas, Volvox, Ulothrix, Spirogyra, Ectocarpus, Laminaria, Gelidium, Chara",
-      "options": [
-        "Six",
-        "Three",
-        "Four",
-        "Five"
-      ],
+      "options": ["Six", "Three", "Four", "Five"],
       "correctAnswer": "D",
       "explanation": "Chlamydomonas, Volvox, Ulothrix, Spirogyra, and Chara are all members of Chlorophyceae (green algae). Ectocarpus and Laminaria belong to Phaeophyceae, and Gelidium belongs to Rhodophyceae.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "chlorophyceae",
-        "classification"
-      ],
+      "tags": ["algae", "chlorophyceae", "classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2115,21 +1638,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "How many of the following plant groups require water for fertilization?\nBryophytes, Pteridophytes, Gymnosperms, Angiosperms, Chlorophyceae",
-      "options": [
-        "Three",
-        "Four",
-        "Five",
-        "Two"
-      ],
+      "options": ["Three", "Four", "Five", "Two"],
       "correctAnswer": "A",
       "explanation": "Bryophytes, Pteridophytes, and Chlorophyceae (being aquatic or requiring water medium for gamete transfer) require water for fertilization. Gymnosperms and Angiosperms use pollen tubes for fertilization and do not need external water.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fertilization",
-        "water-requirement"
-      ],
+      "tags": ["fertilization", "water-requirement"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2140,21 +1655,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "How many of the following are heterosporous pteridophytes?\nSelaginella, Salvinia, Dryopteris, Adiantum, Equisetum, Lycopodium, Marsilea",
-      "options": [
-        "Three",
-        "Five",
-        "Two",
-        "Four"
-      ],
+      "options": ["Three", "Five", "Two", "Four"],
       "correctAnswer": "A",
       "explanation": "Selaginella, Salvinia, and Marsilea are heterosporous pteridophytes that produce both microspores and megaspores. Dryopteris, Adiantum, Equisetum, and Lycopodium are homosporous.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pteridophytes",
-        "heterospory"
-      ],
+      "tags": ["pteridophytes", "heterospory"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2165,22 +1672,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Count the number of correct statements:\n(i) Mosses have unicellular rhizoids.\n(ii) Liverworts have unicellular rhizoids.\n(iii) In mosses, the plant body is differentiated into stem and leaves.\n(iv) In liverworts, the plant body is thalloid.\n(v) Sphagnum provides peat.",
-      "options": [
-        "Two",
-        "Three",
-        "Four",
-        "Five"
-      ],
+      "options": ["Two", "Three", "Four", "Five"],
       "correctAnswer": "C",
       "explanation": "Statements (ii), (iii), (iv), and (v) are correct. Statement (i) is incorrect; mosses have multicellular rhizoids, while liverworts have unicellular rhizoids. Mosses have stem-like and leaf-like structures. Liverworts are thalloid. Sphagnum is peat moss.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophytes",
-        "mosses",
-        "liverworts"
-      ],
+      "tags": ["bryophytes", "mosses", "liverworts"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2191,21 +1689,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "How many of the following are features of angiosperms?\n(i) Double fertilization (ii) Presence of vessel elements (iii) Enclosed ovules (iv) Flowers with four whorls (v) Naked seeds (vi) Reduced gametophyte",
-      "options": [
-        "Four",
-        "Three",
-        "Five",
-        "Six"
-      ],
+      "options": ["Four", "Three", "Five", "Six"],
       "correctAnswer": "C",
       "explanation": "Features (i) double fertilization, (ii) vessel elements, (iii) enclosed ovules, (iv) flowers with four whorls, and (vi) reduced gametophyte are all features of angiosperms. Feature (v) naked seeds is a feature of gymnosperms, not angiosperms.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "angiosperms",
-        "features"
-      ],
+      "tags": ["angiosperms", "features"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2216,22 +1706,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "How many of the following genera belong to Phaeophyceae?\nEctocarpus, Dictyota, Laminaria, Sargassum, Fucus, Polysiphonia, Gelidium, Gracilaria",
-      "options": [
-        "Six",
-        "Three",
-        "Five",
-        "Four"
-      ],
+      "options": ["Six", "Three", "Five", "Four"],
       "correctAnswer": "C",
       "explanation": "Ectocarpus, Dictyota, Laminaria, Sargassum, and Fucus belong to Phaeophyceae (brown algae). Polysiphonia, Gelidium, and Gracilaria belong to Rhodophyceae (red algae).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "phaeophyceae",
-        "classification"
-      ],
+      "tags": ["algae", "phaeophyceae", "classification"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2242,21 +1723,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "How many of the following plant groups have archegonia?\n(i) Algae (ii) Bryophytes (iii) Pteridophytes (iv) Gymnosperms (v) Angiosperms",
-      "options": [
-        "Three",
-        "Five",
-        "Two",
-        "Four"
-      ],
+      "options": ["Three", "Five", "Two", "Four"],
       "correctAnswer": "A",
       "explanation": "Archegonia (female sex organs) are found in Bryophytes, Pteridophytes, and Gymnosperms. Algae have simpler reproductive structures, and angiosperms have a highly reduced female gametophyte (embryo sac) without archegonia.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "archegonia",
-        "plant-groups"
-      ],
+      "tags": ["archegonia", "plant-groups"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2267,21 +1740,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "How many of the following show haplontic life cycle?\nChlamydomonas, Volvox, Spirogyra, Fucus, Polysiphonia, Ectocarpus",
-      "options": [
-        "Two",
-        "Five",
-        "Four",
-        "Three"
-      ],
+      "options": ["Two", "Five", "Four", "Three"],
       "correctAnswer": "D",
       "explanation": "Chlamydomonas, Volvox, and Spirogyra show haplontic life cycle where the dominant phase is haploid gametophyte and the only diploid structure is the zygote. Fucus shows diplontic, while Polysiphonia and Ectocarpus show haplo-diplontic life cycles.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "life-cycles",
-        "haplontic"
-      ],
+      "tags": ["life-cycles", "haplontic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2303,10 +1768,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "evolution",
-        "plant-groups"
-      ],
+      "tags": ["evolution", "plant-groups"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2328,11 +1790,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophytes",
-        "mosses",
-        "life-cycle"
-      ],
+      "tags": ["bryophytes", "mosses", "life-cycle"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2354,11 +1812,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "angiosperms",
-        "double-fertilization",
-        "sequence"
-      ],
+      "tags": ["angiosperms", "double-fertilization", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2380,11 +1834,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "evolution",
-        "water-dependence",
-        "reproduction"
-      ],
+      "tags": ["evolution", "water-dependence", "reproduction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2406,11 +1856,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pteridophytes",
-        "fern",
-        "life-cycle"
-      ],
+      "tags": ["pteridophytes", "fern", "life-cycle"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2432,10 +1878,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "evolution",
-        "plant-kingdom"
-      ],
+      "tags": ["evolution", "plant-kingdom"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2457,11 +1900,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "bryophytes",
-        "sexual-reproduction",
-        "life-cycle"
-      ],
+      "tags": ["bryophytes", "sexual-reproduction", "life-cycle"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2472,22 +1911,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "Which of the following gymnosperms has unbranched stems with a crown of large compound leaves?",
-      "options": [
-        "Pinus",
-        "Cycas",
-        "Cedrus",
-        "Ginkgo"
-      ],
+      "options": ["Pinus", "Cycas", "Cedrus", "Ginkgo"],
       "correctAnswer": "B",
       "explanation": "Cycas has unbranched stems with a crown of large, pinnately compound leaves at the apex, giving it a palm-like appearance. Pinus has branched stems with needle-like leaves.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gymnosperms",
-        "cycas",
-        "morphology"
-      ],
+      "tags": ["gymnosperms", "cycas", "morphology"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2509,12 +1939,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "algae",
-        "chlorophyceae",
-        "zoospores",
-        "asexual-reproduction"
-      ],
+      "tags": ["algae", "chlorophyceae", "zoospores", "asexual-reproduction"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2525,22 +1950,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "How many of the following features are common to both gymnosperms and angiosperms?\n(i) Presence of seeds (ii) Presence of pollen tubes (iii) Double fertilization (iv) Presence of ovules (v) Vascular tissues present",
-      "options": [
-        "Two",
-        "Three",
-        "Four",
-        "Five"
-      ],
+      "options": ["Two", "Three", "Four", "Five"],
       "correctAnswer": "C",
       "explanation": "Features common to both: (i) seeds, (ii) pollen tubes, (iv) ovules, and (v) vascular tissues. Double fertilization (iii) is unique to angiosperms and is NOT found in gymnosperms.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gymnosperms",
-        "angiosperms",
-        "comparison"
-      ],
+      "tags": ["gymnosperms", "angiosperms", "comparison"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2551,22 +1967,13 @@
       "ncertChapter": 3,
       "ncertChapterName": "Plant Kingdom",
       "question": "How many of the following are gymnosperms?\nCycas, Pinus, Ginkgo, Sequoia, Cedrus, Ficus, Gnetum, Ephedra",
-      "options": [
-        "Four",
-        "Five",
-        "Six",
-        "Seven"
-      ],
+      "options": ["Four", "Five", "Six", "Seven"],
       "correctAnswer": "D",
       "explanation": "Cycas, Pinus, Ginkgo, Sequoia, Cedrus, Gnetum, and Ephedra are all gymnosperms (7 total). Ficus is an angiosperm (flowering plant) and does not belong to gymnosperms.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "gymnosperms",
-        "examples",
-        "classification"
-      ],
+      "tags": ["gymnosperms", "examples", "classification"],
       "neetWeightage": "MEDIUM"
     }
   ]

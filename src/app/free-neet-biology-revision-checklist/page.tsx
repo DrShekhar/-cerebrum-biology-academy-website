@@ -6,11 +6,19 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Revision Checklist | All 38 Chapters | Free PDF',
-  description: 'Download free NEET Biology revision checklist. Track your progress across all 38 chapters. Sub-topic wise completion tracker. By AIIMS faculty.',
-  keywords: ['NEET biology revision checklist', 'NEET chapter checklist', 'NEET biology progress tracker', 'NEET syllabus completion tracker', 'NEET revision tracker'],
+  description:
+    'Download free NEET Biology revision checklist. Track your progress across all 38 chapters. Sub-topic wise completion tracker. By AIIMS faculty.',
+  keywords: [
+    'NEET biology revision checklist',
+    'NEET chapter checklist',
+    'NEET biology progress tracker',
+    'NEET syllabus completion tracker',
+    'NEET revision tracker',
+  ],
   openGraph: {
     title: 'NEET Biology Revision Checklist | All 38 Chapters | Free PDF',
-    description: 'Download free NEET Biology revision checklist. Track your progress across all 38 chapters. Sub-topic wise completion tracker. By AIIMS faculty.',
+    description:
+      'Download free NEET Biology revision checklist. Track your progress across all 38 chapters. Sub-topic wise completion tracker. By AIIMS faculty.',
     url: `${BASE_URL}/free-neet-biology-revision-checklist`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -19,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Free NEET Biology Revision Checklist',
-    description: 'Download free NEET Biology revision checklist. Track your progress across all 38 chapters. Sub-topic wise completion tra',
+    description:
+      'Download free NEET Biology revision checklist. Track your progress across all 38 chapters. Sub-topic wise completion tra',
   },
   alternates: { canonical: `${BASE_URL}/free-neet-biology-revision-checklist` },
 }
@@ -58,7 +67,11 @@ const faqSchema = {
 export default function FreeNeetBiologyRevisionChecklistPage() {
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <PageContent />
     </>
   )

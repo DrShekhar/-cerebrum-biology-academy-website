@@ -19,13 +19,43 @@ const CLASS_12_PAGE_CHAPTERS: { start: number; end: number; chapter: string; top
   { start: 25, end: 46, chapter: 'Sexual Reproduction in Flowering Plants', topic: 'Reproduction' },
   { start: 47, end: 68, chapter: 'Human Reproduction', topic: 'Reproduction' },
   { start: 69, end: 82, chapter: 'Reproductive Health', topic: 'Reproduction' },
-  { start: 83, end: 112, chapter: 'Principles of Inheritance and Variation', topic: 'Genetics and Evolution' },
-  { start: 113, end: 140, chapter: 'Molecular Basis of Inheritance', topic: 'Genetics and Evolution' },
+  {
+    start: 83,
+    end: 112,
+    chapter: 'Principles of Inheritance and Variation',
+    topic: 'Genetics and Evolution',
+  },
+  {
+    start: 113,
+    end: 140,
+    chapter: 'Molecular Basis of Inheritance',
+    topic: 'Genetics and Evolution',
+  },
   { start: 141, end: 160, chapter: 'Evolution', topic: 'Genetics and Evolution' },
-  { start: 161, end: 180, chapter: 'Human Health and Diseases', topic: 'Biology and Human Welfare' },
-  { start: 181, end: 196, chapter: 'Strategies for Enhancement in Food Production', topic: 'Biology and Human Welfare' },
-  { start: 197, end: 216, chapter: 'Microbes in Human Welfare', topic: 'Biology and Human Welfare' },
-  { start: 217, end: 236, chapter: 'Biotechnology: Principles and Processes', topic: 'Biotechnology' },
+  {
+    start: 161,
+    end: 180,
+    chapter: 'Human Health and Diseases',
+    topic: 'Biology and Human Welfare',
+  },
+  {
+    start: 181,
+    end: 196,
+    chapter: 'Strategies for Enhancement in Food Production',
+    topic: 'Biology and Human Welfare',
+  },
+  {
+    start: 197,
+    end: 216,
+    chapter: 'Microbes in Human Welfare',
+    topic: 'Biology and Human Welfare',
+  },
+  {
+    start: 217,
+    end: 236,
+    chapter: 'Biotechnology: Principles and Processes',
+    topic: 'Biotechnology',
+  },
   { start: 237, end: 252, chapter: 'Biotechnology and Its Applications', topic: 'Biotechnology' },
   { start: 253, end: 272, chapter: 'Organisms and Populations', topic: 'Ecology' },
   { start: 273, end: 296, chapter: 'Ecosystem', topic: 'Ecology' },
@@ -35,9 +65,7 @@ const CLASS_12_PAGE_CHAPTERS: { start: number; end: number; chapter: string; top
 
 function getChapterFromPage(pageNum: number, topic?: string | null): string | null {
   // Find matching page range
-  const matches = CLASS_12_PAGE_CHAPTERS.filter(
-    (ch) => pageNum >= ch.start && pageNum <= ch.end
-  )
+  const matches = CLASS_12_PAGE_CHAPTERS.filter((ch) => pageNum >= ch.start && pageNum <= ch.end)
 
   if (matches.length === 1) return matches[0].chapter
 

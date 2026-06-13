@@ -405,7 +405,7 @@ export async function getChapterWiseProgress(
         curriculum,
         grade,
         isActive: true,
-        OR: chapters.map(chapter => ({ topic: { contains: chapter } })),
+        OR: chapters.map((chapter) => ({ topic: { contains: chapter } })),
       },
       select: {
         topic: true,
@@ -424,7 +424,7 @@ export async function getChapterWiseProgress(
     })
 
     // Index progress by topic+subtopic for O(1) lookup
-    const progressMap = new Map<string, typeof allProgress[0]>()
+    const progressMap = new Map<string, (typeof allProgress)[0]>()
     for (const p of allProgress) {
       progressMap.set(`${p.topic}||${p.subtopic || ''}`, p)
     }
@@ -433,7 +433,7 @@ export async function getChapterWiseProgress(
     const chapterProgressArray: ChapterProgress[] = []
 
     for (const chapter of chapters) {
-      const chapterTopics = allTopics.filter(t => t.topic.includes(chapter))
+      const chapterTopics = allTopics.filter((t) => t.topic.includes(chapter))
 
       if (chapterTopics.length === 0) continue
 

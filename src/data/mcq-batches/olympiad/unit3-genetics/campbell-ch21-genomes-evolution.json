@@ -269,12 +269,7 @@
     {
       "type": "MCQ",
       "question": "Alternative splicing of pre-mRNA can generate multiple protein isoforms from a single gene. In the human genome, what percentage of multi-exon genes are estimated to undergo alternative splicing?",
-      "options": [
-        "Less than 10%",
-        "Approximately 25%",
-        "Greater than 95%",
-        "Exactly 50%"
-      ],
+      "options": ["Less than 10%", "Approximately 25%", "Greater than 95%", "Exactly 50%"],
       "correctAnswer": "C",
       "explanation": "Current estimates suggest that >95% of human multi-exon genes undergo alternative splicing, generating multiple mRNA and protein variants from single genes. This dramatically expands the proteome—the ~20,000 human genes encode an estimated 80,000-100,000+ distinct proteins. Alternative splicing can involve: exon skipping (the most common form), alternative 5' or 3' splice site selection, intron retention, and mutually exclusive exons. The prevalence of alternative splicing helps explain how the relatively modest human gene count can produce the complexity required for human development and physiology. Alternative splicing is tissue-specific and developmentally regulated.",
       "isOlympiad": true,
@@ -549,12 +544,7 @@
     {
       "type": "MCQ",
       "question": "Comparative genomics of bacteria reveals that the 'pan-genome' (total gene repertoire of a species) is typically much larger than any individual genome. The set of genes shared by all strains of a species is called the:",
-      "options": [
-        "Core genome",
-        "Accessory genome",
-        "Metagenome",
-        "Pan-genome"
-      ],
+      "options": ["Core genome", "Accessory genome", "Metagenome", "Pan-genome"],
       "correctAnswer": "A",
       "explanation": "In bacterial pan-genomics: (1) The core genome consists of genes present in all strains—these encode essential housekeeping functions (DNA replication, transcription, translation, central metabolism). (2) The accessory (dispensable) genome includes genes present in some but not all strains—these often encode niche-specific adaptations (antibiotic resistance, virulence factors, metabolic specializations). (3) The pan-genome is the total union of all genes across all strains. For some species (e.g., E. coli), the pan-genome is 'open'—new genes are discovered with each new genome sequenced. The E. coli core genome is ~2,000 genes, while its pan-genome exceeds 16,000 genes, reflecting extensive HGT and genomic plasticity.",
       "isOlympiad": true,
@@ -1249,12 +1239,7 @@
     {
       "type": "MCQ",
       "question": "Chromatin remodeling complexes alter nucleosome positioning and histone-DNA interactions. Which complex uses ATP hydrolysis to slide, eject, or restructure nucleosomes?",
-      "options": [
-        "Spliceosome",
-        "Ribosome",
-        "Proteasome",
-        "SWI/SNF chromatin remodeling complex"
-      ],
+      "options": ["Spliceosome", "Ribosome", "Proteasome", "SWI/SNF chromatin remodeling complex"],
       "correctAnswer": "D",
       "explanation": "SWI/SNF (SWItch/Sucrose Non-Fermentable) is a multi-subunit ATP-dependent chromatin remodeling complex that uses the energy from ATP hydrolysis to: (1) slide nucleosomes along DNA (repositioning), exposing or occluding regulatory sequences; (2) eject nucleosome octamers or individual histones from DNA; (3) exchange histone variants (e.g., replacing H2A with H2A.Z). Other ATP-dependent remodeling complexes include ISWI, CHD/NuRD, and INO80, each with distinct activities and roles. SWI/SNF is particularly important for gene activation, as it makes promoter and enhancer regions accessible to transcription factors. Mutations in SWI/SNF subunits (SMARCB1, SMARCA4, ARID1A) are found in ~20% of human cancers, making it one of the most frequently mutated complexes in cancer.",
       "isOlympiad": true,
@@ -1469,12 +1454,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about genome evolution:\nI. Genome size correlates well with organismal complexity across all domains of life\nII. Gene duplication followed by divergence is a major source of evolutionary novelty\nIII. Exon shuffling can create novel proteins by combining exons from different genes\nIV. Horizontal gene transfer has significantly contributed to prokaryotic genome evolution",
-      "options": [
-        "FTTT",
-        "TTTT",
-        "TFTT",
-        "FTTF"
-      ],
+      "options": ["FTTT", "TTTT", "TFTT", "FTTF"],
       "correctAnswer": "A",
       "explanation": "I. FALSE: The C-value paradox demonstrates that genome size does NOT correlate with organismal complexity. The onion genome (16 Gb) is 5x larger than the human genome; some amoebas have genomes >100x larger than humans. Genome size variation is largely driven by repetitive element content, not gene number or organismal complexity. II. TRUE: Gene duplication creates redundant copies that can diverge (neofunctionalization, subfunctionalization) without losing the original function, providing raw material for new genes. III. TRUE: Exon shuffling recombines exons from different genes (often through retrotransposition or recombination between introns), creating chimeric proteins with novel domain combinations. IV. TRUE: HGT is pervasive in prokaryotes and has distributed genes for antibiotic resistance, metabolic capabilities, and virulence factors across bacterial lineages.",
       "isOlympiad": true,
@@ -1489,12 +1469,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about transposable elements:\nI. DNA transposons move by a 'cut-and-paste' mechanism using transposase\nII. Retrotransposons move by a 'copy-and-paste' mechanism via an RNA intermediate\nIII. Transposable elements comprise less than 1% of the human genome\nIV. Some transposable element-derived sequences have been co-opted for host genome function (exaptation)",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFFT",
-        "TFTF"
-      ],
+      "options": ["TTFT", "TTTT", "TFFT", "TFTF"],
       "correctAnswer": "A",
       "explanation": "I. TRUE: DNA transposons (Class II TEs) use transposase to excise from one location and insert at another (cut-and-paste). Terminal inverted repeats (TIRs) are recognized by transposase. Most DNA transposons in the human genome are now inactive. II. TRUE: Retrotransposons (Class I TEs) transpose via an RNA intermediate: DNA → RNA (transcription) → cDNA (reverse transcription) → new insertion (integration). Copy-and-paste increases copy number. III. FALSE: TEs comprise approximately 45% of the human genome, not <1%. SINEs (~13%), LINEs (~20%), LTR retrotransposons (~8%), DNA transposons (~3%), and their degraded remnants make up nearly half the genome. IV. TRUE: Many TE-derived sequences have been exapted/domesticated for host functions, including regulatory elements, structural chromatin components, and even protein-coding genes (e.g., syncytin from retroviral env gene).",
       "isOlympiad": true,
@@ -1509,12 +1484,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about the evolution of genome size:\nI. Polyploidy (whole-genome duplication) is a common mechanism of genome size increase in plants\nII. Transposable element proliferation is the primary mechanism of genome size increase in mammals\nIII. Genome reduction commonly occurs in obligate intracellular symbionts and parasites\nIV. Genome size is always strongly correlated with phenotypic complexity",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "A",
       "explanation": "I. TRUE: Polyploidy is extremely common in plant evolution. An estimated 15% of speciation events in angiosperms involve polyploidy. Most crop plants are polyploid (wheat 6x, cotton 4x, potato 4x). II. TRUE: In mammals, genome size variation is largely driven by transposable element content. TEs comprise ~45% of the human genome. Species with more active TEs tend to have larger genomes. III. TRUE: Obligate intracellular organisms undergo massive genome reduction because host-provided metabolites make many biosynthetic genes dispensable. Mycoplasma genitalium (580 kb), Buchnera aphidicola (420 kb), and mitochondrial genomes (16 kb in humans) illustrate extreme reduction. IV. FALSE: The C-value paradox demonstrates no strong correlation between genome size and complexity. The onion genome is 5x larger than the human genome; some amoebas have genomes 200x larger.",
       "isOlympiad": true,
@@ -1529,12 +1499,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about horizontal gene transfer (HGT) in eukaryotes:\nI. HGT is common in prokaryotes but extremely rare in multicellular eukaryotes\nII. The endosymbiotic transfer of genes from mitochondria and chloroplasts to the nuclear genome is a form of HGT\nIII. Some plants have acquired genes from parasitic plants through HGT\nIV. HGT never occurs between different domains of life",
-      "options": [
-        "FTFT",
-        "FTFF",
-        "FTTF",
-        "TTFF"
-      ],
+      "options": ["FTFT", "FTFF", "FTTF", "TTFF"],
       "correctAnswer": "C",
       "explanation": "I. FALSE: While HGT is less common in eukaryotes than prokaryotes, it is not extremely rare. Examples are increasingly being documented, especially in protists, fungi, and some animals (e.g., bdelloid rotifers have substantial HGT). II. TRUE: Endosymbiotic gene transfer (EGT) from organellar genomes to the nuclear genome is a specific type of HGT that has occurred extensively. Over 1,000 genes have been transferred from mitochondria to the nucleus over evolutionary time, and similar transfer has occurred from chloroplasts. III. TRUE: Parasitic plants (e.g., Striga, Cuscuta) have been shown to acquire genes from their host plants through horizontal transfer, facilitated by the intimate physical connection between parasite and host. IV. FALSE: HGT occurs between domains—bacterial genes have been found in some eukaryotic genomes, and archaeal genes in bacteria. The original endosymbiotic events themselves represented cross-domain gene transfer.",
       "isOlympiad": true,
@@ -1549,12 +1514,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about non-coding RNA in genome evolution:\nI. MicroRNAs (miRNAs) are short (~22 nt) non-coding RNAs that regulate gene expression post-transcriptionally\nII. The number of miRNA genes tends to increase with organismal complexity across animal evolution\nIII. Long non-coding RNAs (lncRNAs) evolve more rapidly than protein-coding genes\nIV. All transcribed sequences in the genome encode functional non-coding RNAs",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "A",
       "explanation": "I. TRUE: miRNAs are ~22 nt RNAs processed from hairpin precursors by Drosha and Dicer, loaded into RISC/Argonaute to guide translational repression or mRNA degradation of targets with complementary seed sequences. II. TRUE: miRNA gene number correlates with morphological complexity in animals: C. elegans ~250, Drosophila ~250, zebrafish ~350, mouse ~700, human ~2,600. New miRNA genes appear at evolutionary transitions associated with increased complexity. III. TRUE: lncRNAs show lower sequence conservation than protein-coding genes, evolving ~5-10x faster. However, some lncRNAs show conserved secondary structure or syntenic position despite sequence divergence. IV. FALSE: While the genome is pervasively transcribed (~85% by some estimates), most transcription is likely non-functional noise. Not all transcribed sequences produce functional ncRNAs—many represent transcriptional artifacts, processing intermediates, or neutral transcription from accessible chromatin.",
       "isOlympiad": true,
@@ -1769,12 +1729,7 @@
     {
       "type": "MTF",
       "question": "Evaluate these statements about comparative model organism genomics:\n\nS1: Saccharomyces cerevisiae (12 Mb, ~6,000 genes) was the first eukaryotic genome sequenced (1996) and approximately 30% of its genes have identifiable homologs in the human genome.\nS2: Drosophila melanogaster has approximately the same number of protein-coding genes (~14,000) as C. elegans (~20,000).\nS3: The mouse genome shares approximately 99% nucleotide identity with human coding sequences, making it the closest model organism to humans.\nS4: Arabidopsis thaliana (135 Mb, ~27,000 genes) contains more protein-coding genes than the human genome, partly due to ancient whole-genome duplication events.",
-      "options": [
-        "TFFT",
-        "TTTT",
-        "TTFT",
-        "TFTF"
-      ],
+      "options": ["TFFT", "TTTT", "TTFT", "TFTF"],
       "correctAnswer": "A",
       "explanation": "S1 TRUE: S. cerevisiae was sequenced in 1996 (Goffeau et al.), 12.1 Mb across 16 chromosomes, ~6,275 genes. ~30% have human homologs, enabling yeast as a model for cell cycle, DNA repair, and metabolism. S2 FALSE: Drosophila has ~14,000 genes but C. elegans has ~20,000 — these are NOT approximately the same. Drosophila actually has fewer genes despite arguably greater morphological complexity, which itself is an interesting paradox. S3 FALSE: Mouse-human coding sequence identity is ~85%, not ~99%. The ~99% figure applies to human-chimpanzee comparison. Mouse and human diverged ~90 MYA vs human-chimp ~6-7 MYA. Mouse shares ~80% of genes as 1:1 orthologs with humans. S4 TRUE: Arabidopsis was sequenced in 2000, has ~27,000 protein-coding genes — more than human (~20,000-25,000). This is due to ancient WGD events (at least three: alpha, beta, gamma) plus extensive tandem duplications (~17% of genes in tandem arrays).",
       "isOlympiad": true,

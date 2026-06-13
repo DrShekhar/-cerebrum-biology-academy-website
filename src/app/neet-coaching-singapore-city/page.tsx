@@ -1,9 +1,9 @@
-import { Metadata } from 'next';
-import { PageContent } from './PageContent';
-import { LocalitySchema } from '@/components/seo/LocalitySchema';
-import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities';
+import { Metadata } from 'next'
+import { PageContent } from './PageContent'
+import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
-const city = NRI_INTERNATIONAL_CITIES['singapore-city-singapore']!;
+const city = NRI_INTERNATIONAL_CITIES['singapore-city-singapore']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: `NEET Biology Coaching in ${city.city} — Live Online from India`,
     description: `For Singapore-Indian students at ${city.indianSchools.slice(0, 2).join(' / ')}. NRI quota + MCAT premed pathways.`,
   },
-};
+}
 
 export default function Page() {
   const localityData = {
@@ -63,11 +63,12 @@ export default function Page() {
     latitude: 1.3521,
     longitude: 103.8198,
     address: 'Singapore City, Singapore',
-  };
+  }
 
   return (
     <>
       <LocalitySchema
+        country="SG"
         data={{
           ...localityData,
           phone: '+918826444334',
@@ -78,5 +79,5 @@ export default function Page() {
       />
       <PageContent city="Singapore City" country="Singapore" />
     </>
-  );
+  )
 }

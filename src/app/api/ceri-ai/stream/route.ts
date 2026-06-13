@@ -122,7 +122,6 @@ export async function POST(req: NextRequest) {
       const cachedResponse = await upstashCache.get(cacheKey)
 
       if (cachedResponse) {
-
         // Return cached response as SSE stream
         const encoder = createSSEEncoder()
         const stream = new ReadableStream({

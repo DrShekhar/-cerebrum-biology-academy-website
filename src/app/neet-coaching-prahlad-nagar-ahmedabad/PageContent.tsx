@@ -121,7 +121,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Prahlad Nagar',
-  description: 'Best NEET Coaching for Prahlad Nagar Ahmedabad - Premium Coaching for Corporate Families',
+  description:
+    'Best NEET Coaching for Prahlad Nagar Ahmedabad - Premium Coaching for Corporate Families',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-prahlad-nagar-ahmedabad',
   telephone: '+91-88264-44334',
   address: {
@@ -176,13 +177,18 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert NEET coaching for Prahlad Nagar, Satellite area, and surrounding corporate zones. Learn from
-              accomplished medical faculty trusted by <strong>corporate executives and professional families</strong>. Premium
-              online classes with proven 685+ NEET results.
+              Expert NEET coaching for Prahlad Nagar, Satellite area, and surrounding corporate
+              zones. Learn from accomplished medical faculty trusted by{' '}
+              <strong>corporate executives and professional families</strong>. Premium online
+              classes with proven 685+ NEET results.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20prahlad%20nagar%20ahmedabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20prahlad%20nagar%20ahmedabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -359,7 +365,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20prahlad%20nagar%20ahmedabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20prahlad%20nagar%20ahmedabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

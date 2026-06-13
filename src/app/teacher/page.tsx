@@ -178,9 +178,7 @@ export default function TeacherDashboardPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-4">Overview</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {quickStats.map((stat, index) => (
-                <div
-                  key={stat.label}
-                 className="animate-fadeInUp">
+                <div key={stat.label} className="animate-fadeInUp">
                   <Link href={stat.href}>
                     <Card className="hover:shadow-lg transition-shadow cursor-pointer">
                       <CardContent className="p-6">

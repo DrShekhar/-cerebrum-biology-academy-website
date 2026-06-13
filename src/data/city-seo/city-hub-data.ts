@@ -169,7 +169,8 @@ export const cityHubData: Record<string, CityHubData> = {
         "I switched from a big coaching chain to Cerebrum. The small batch size and Dr. Shekhar's direct mentoring made all the difference. Biology went from my weakest to my strongest subject.",
     },
     competitorComparison: {
-      localAlternatives: 'the 2nd-largest national NEET chain Gurgaon, the largest national NEET chain Gurgaon, other IIT-JEE-first coachings Gurgaon, a leading national educational institution Gurgaon',
+      localAlternatives:
+        'the 2nd-largest national NEET chain Gurgaon, the largest national NEET chain Gurgaon, other IIT-JEE-first coachings Gurgaon, a leading national educational institution Gurgaon',
       differentiator:
         'Only dedicated Biology-only institute in Gurgaon. AIIMS-alumni faculty vs generic science teachers. 15-student batches vs 80+ at big chains. Direct WhatsApp access to faculty.',
     },
@@ -1783,7 +1784,8 @@ export const cityHubData: Record<string, CityHubData> = {
           'Pursuit ₹40,000–₹75,000/year (30–40 student batches), Ascent ₹58,000–₹90,000/year (16–25 student batches with weekly doubt sessions — most popular), Pinnacle ₹1,20,000–₹1,56,000/year (10–12 student batches + personal mentorship from Dr. Shekhar). EMI plans available. 7-day full refund guarantee. 50–60% lower than premium chain fees with structurally better biology depth.',
       },
       {
-        question: 'How does Cerebrum compare to the largest national NEET chains / other IIT-JEE-first coachings in Delhi?',
+        question:
+          'How does Cerebrum compare to the largest national NEET chains / other IIT-JEE-first coachings in Delhi?',
         answer:
           'Cerebrum is biology-only (360/720 NEET marks specialist). the largest national NEET chain, the 2nd-largest national NEET chain and other IIT-JEE-first coachings in Delhi are generalists with rotating Physics + Chemistry + Biology faculty and 150–400 student batches. Cerebrum runs 15–20 student batches with AIIMS-trained biology-only faculty. Many serious Delhi NEET aspirants pair their existing the largest national NEET chains / other IIT-JEE-first coachings coaching (for Physics + Chemistry) with Cerebrum (for Biology specifically). See /cerebrum-vs-allen-neet-coaching and /cerebrum-vs-aakash-neet-coaching.',
       },
@@ -1931,7 +1933,8 @@ export const cityHubData: Record<string, CityHubData> = {
         "The South Extension center was just 10 minutes from my home in GK. Dr. Shekhar Sir's teaching made Biology my strongest subject. I scored 360/360 in Biology!",
     },
     competitorComparison: {
-      localAlternatives: 'the 2nd-largest national NEET chain South Ex, the largest national NEET chain South Delhi, other online-only platforms offline center',
+      localAlternatives:
+        'the 2nd-largest national NEET chain South Ex, the largest national NEET chain South Delhi, other online-only platforms offline center',
       differentiator:
         'Only AIIMS-alumni faculty in South Delhi. 15-20 student batches vs 60+ at the 2nd-largest national NEET chain/the largest national NEET chain. Personalized doubt resolution via WhatsApp, not just classroom hours.',
     },
@@ -2017,7 +2020,8 @@ export const cityHubData: Record<string, CityHubData> = {
         'I used to travel to South Delhi for coaching but the 2-hour commute was draining. Cerebrum Rohini saved me 4 hours daily. Used that time for self-study and cracked NEET in first attempt!',
     },
     competitorComparison: {
-      localAlternatives: 'the 2nd-largest national NEET chain Rohini, the largest national NEET chain Pitampura, other IIT-JEE-first coachings Rohini',
+      localAlternatives:
+        'the 2nd-largest national NEET chain Rohini, the largest national NEET chain Pitampura, other IIT-JEE-first coachings Rohini',
       differentiator:
         'Only Biology-specialist institute in North Delhi. AIIMS-trained Dr. Shekhar Sir teaches directly. Batches of 15 vs 100+ at the 2nd-largest national NEET chain/the largest national NEET chain Rohini. Weekend batches for school-going students.',
     },
@@ -5598,9 +5602,15 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'DLF Phases', url: '/biology-classes-dlf-gurgaon' },
     ],
     relatedCities: [
-      { name: 'the 2nd-largest national NEET chain Alternative', url: '/aakash-alternative-gurugram' },
+      {
+        name: 'the 2nd-largest national NEET chain Alternative',
+        url: '/aakash-alternative-gurugram',
+      },
       { name: 'the largest national NEET chain Alternative', url: '/allen-alternative-gurugram' },
-      { name: 'a leading national educational institution Alternative', url: '/narayana-alternative-gurugram' },
+      {
+        name: 'a leading national educational institution Alternative',
+        url: '/narayana-alternative-gurugram',
+      },
     ],
     faqs: [
       {
@@ -5619,7 +5629,8 @@ export const cityHubData: Record<string, CityHubData> = {
           'Brand value helps in IIT-JEE. For NEET, what matters is biology expertise and results. Our 98% selection rate and 67+ AIIMS admits speak for themselves.',
       },
       {
-        question: 'Can I take other IIT-JEE-first coachings for Physics-Chemistry and Cerebrum for Biology?',
+        question:
+          'Can I take other IIT-JEE-first coachings for Physics-Chemistry and Cerebrum for Biology?',
         answer:
           'Yes! Many students do this. We offer Biology-only program at ₹45,000/year. Combine with any coaching for complete preparation.',
       },
@@ -5639,7 +5650,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'narayana-alternative-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'a leading national educational institution Alternative in Gurugram | Personal Attention | Cerebrum Biology Academy',
+    metaTitle:
+      'a leading national educational institution Alternative in Gurugram | Personal Attention | Cerebrum Biology Academy',
     metaDescription:
       'Better than a leading national educational institution for NEET in Gurugram (Gurgaon)? Cerebrum offers small batches, personal attention, AIIMS faculty. No factory coaching. Call 88264-44334!',
     heroTitle: 'a leading national educational institution Alternative for NEET in Gurugram',
@@ -5657,9 +5669,15 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
     ],
     relatedCities: [
-      { name: 'the 2nd-largest national NEET chain Alternative', url: '/aakash-alternative-gurugram' },
+      {
+        name: 'the 2nd-largest national NEET chain Alternative',
+        url: '/aakash-alternative-gurugram',
+      },
       { name: 'other IIT-JEE-first coachings Alternative', url: '/fiitjee-alternative-gurugram' },
-      { name: 'other online-only platforms Alternative', url: '/physics-wallah-alternative-gurugram' },
+      {
+        name: 'other online-only platforms Alternative',
+        url: '/physics-wallah-alternative-gurugram',
+      },
     ],
     faqs: [
       {
@@ -5668,12 +5686,14 @@ export const cityHubData: Record<string, CityHubData> = {
           'a leading national educational institution has 100+ student batches with franchise model. Cerebrum has 25-student batches with AIIMS faculty. Personal attention means better results.',
       },
       {
-        question: 'How do results compare with a leading national educational institution Gurugram?',
+        question:
+          'How do results compare with a leading national educational institution Gurugram?',
         answer:
           'a leading national educational institution Gurugram selection rate: ~15-20%. Cerebrum selection rate: 98%. Our small batches and focused approach deliver better outcomes.',
       },
       {
-        question: 'Is a leading national educational institution better for integrated school program?',
+        question:
+          'Is a leading national educational institution better for integrated school program?',
         answer:
           'a leading national educational institution schools force you into their system. With Cerebrum, study at any school and join coaching separately. More flexibility, same results.',
       },
@@ -5758,7 +5778,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'unacademy-alternative-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'other online-only platforms Alternative Gurugram | Real Classroom | Cerebrum Biology Academy',
+    metaTitle:
+      'other online-only platforms Alternative Gurugram | Real Classroom | Cerebrum Biology Academy',
     metaDescription:
       'Better than other online-only platforms for NEET? Cerebrum offers real classroom coaching in Gurugram (Gurgaon). No screen fatigue. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'other online-only platforms Alternative for NEET in Gurugram',
@@ -5776,8 +5797,14 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
     ],
     relatedCities: [
-      { name: 'other online-only platforms Alternative', url: '/physics-wallah-alternative-gurugram' },
-      { name: 'other multi-subject tutoring platforms Alternative', url: '/vedantu-alternative-gurugram' },
+      {
+        name: 'other online-only platforms Alternative',
+        url: '/physics-wallah-alternative-gurugram',
+      },
+      {
+        name: 'other multi-subject tutoring platforms Alternative',
+        url: '/vedantu-alternative-gurugram',
+      },
       { name: 'Offline NEET Coaching', url: '/offline-neet-coaching-gurugram' },
     ],
     faqs: [
@@ -6616,7 +6643,8 @@ export const cityHubData: Record<string, CityHubData> = {
           'Check: 1) Faculty credentials (AIIMS/MBBS), 2) Batch size (<30 ideal), 3) Past results (ask for proof), 4) Student reviews, 5) Fee transparency. Visit and take demo class.',
       },
       {
-        question: 'Is the 2nd-largest national NEET chain or the largest national NEET chain better in Gurugram?',
+        question:
+          'Is the 2nd-largest national NEET chain or the largest national NEET chain better in Gurugram?',
         answer:
           'Both are large chains with 100+ student batches. For personalized attention and biology focus, consider specialized institutes like Cerebrum with 25-student batches and AIIMS faculty.',
       },
@@ -6953,7 +6981,10 @@ export const cityHubData: Record<string, CityHubData> = {
     ],
     relatedCities: [
       { name: 'Best NEET Coaching', url: '/best-neet-coaching-in-gurugram' },
-      { name: 'the 2nd-largest national NEET chain Alternative', url: '/aakash-alternative-gurugram' },
+      {
+        name: 'the 2nd-largest national NEET chain Alternative',
+        url: '/aakash-alternative-gurugram',
+      },
       { name: 'Personal Attention', url: '/personal-attention-neet-gurugram' },
     ],
     faqs: [
@@ -15570,7 +15601,8 @@ export const cityHubData: Record<string, CityHubData> = {
           'Cerebrum Biology Academy — only Biology-specialist in Delhi NCR. 3 centers + online. AIIMS faculty, 15-student batches, 98% success rate.',
       },
       {
-        question: 'Better than the 2nd-largest national NEET chain or the largest national NEET chain?',
+        question:
+          'Better than the 2nd-largest national NEET chain or the largest national NEET chain?',
         answer:
           'They teach all subjects — Biology gets 1/3 time. Cerebrum: Biology-ONLY, 5 hrs/day, 15-student batches, 40-60% lower fees.',
       },

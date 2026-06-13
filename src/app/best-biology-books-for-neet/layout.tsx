@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Best Biology Books for NEET 2026 | NCERT + Reference Guide | Cerebrum Biology Academy',
   description:
-    'Best biology books for NEET 2026 — NCERT Class 11 & 12 (mandatory), Trueman\'s Biology, Pradeep Biology, MTG NCERT Fingertips, Allen Modules, Dinesh Objective Biology. Topic-by-topic recommendations from AIIMS-trained Dr. Shekhar C Singh. Class 11 / 12 / dropper / repeater book strategy.',
+    "Best biology books for NEET 2026 — NCERT Class 11 & 12 (mandatory), Trueman's Biology, Pradeep Biology, MTG NCERT Fingertips, Allen Modules, Dinesh Objective Biology. Topic-by-topic recommendations from AIIMS-trained Dr. Shekhar C Singh. Class 11 / 12 / dropper / repeater book strategy.",
   keywords: [
     'best biology books for NEET',
     'NEET biology book list 2026',

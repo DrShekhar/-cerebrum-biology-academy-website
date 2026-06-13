@@ -73,9 +73,7 @@ function TestimonialCard({ testimonial }: { testimonial: RealTestimonial }) {
 
       <div className="relative">
         <Quote className="w-6 h-6 text-blue-200 absolute -top-1 -left-1" />
-        <p className="text-sm text-gray-700 pl-4 italic leading-relaxed">
-          {testimonial.quote}
-        </p>
+        <p className="text-sm text-gray-700 pl-4 italic leading-relaxed">{testimonial.quote}</p>
       </div>
 
       <div className="flex items-center gap-1 mt-4">

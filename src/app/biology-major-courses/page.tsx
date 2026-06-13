@@ -46,7 +46,10 @@ export default function BiologyMajorCoursesPage() {
         value: 1,
       })
     }
-    window.open('https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class.', '_blank')
+    window.open(
+      'https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class.',
+      '_blank'
+    )
   }
 
   const handleWhatsAppClick = async () => {
@@ -386,7 +389,10 @@ export default function BiologyMajorCoursesPage() {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {heroStats.map((stat, index) => (
-                  <div key={stat.label} className="text-center bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 animate-fadeInUp">
+                  <div
+                    key={stat.label}
+                    className="text-center bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 animate-fadeInUp"
+                  >
                     <stat.icon className="w-6 h-6 mx-auto mb-2 text-pink-100" />
                     <div className="text-2xl font-bold">{stat.label}</div>
                     <div className="text-xs opacity-90">{stat.sublabel}</div>
@@ -395,15 +401,13 @@ export default function BiologyMajorCoursesPage() {
               </div>
             </div>
 
-            <div className="relative animate-fadeInUp"
-            >
+            <div className="relative animate-fadeInUp">
               {/* Glassmorphism Card */}
               <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
                 <h3 className="text-2xl font-bold mb-6 text-center">Why Choose Us?</h3>
 
                 <div className="space-y-4">
-                  <div className="flex items-start bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 animate-fadeInUp"
-                  >
+                  <div className="flex items-start bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 animate-fadeInUp">
                     <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 shadow-lg">
                       <GraduationCap className="w-6 h-6 text-white" />
                     </div>
@@ -415,8 +419,7 @@ export default function BiologyMajorCoursesPage() {
                     </div>
                   </div>
 
-                  <div className="flex items-start bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 animate-fadeInUp"
-                  >
+                  <div className="flex items-start bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 animate-fadeInUp">
                     <div className="w-12 h-12 bg-[#4a5d4a] rounded-full flex items-center justify-center mr-4 flex-shrink-0 shadow-lg">
                       <Clock className="w-6 h-6 text-white" />
                     </div>
@@ -428,8 +431,7 @@ export default function BiologyMajorCoursesPage() {
                     </div>
                   </div>
 
-                  <div className="flex items-start bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 animate-fadeInUp"
-                  >
+                  <div className="flex items-start bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 animate-fadeInUp">
                     <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 shadow-lg">
                       <Target className="w-6 h-6 text-white" />
                     </div>
@@ -454,8 +456,7 @@ export default function BiologyMajorCoursesPage() {
       {/* Courses We Support */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Biology Major Courses We Support
             </h2>
@@ -467,7 +468,10 @@ export default function BiologyMajorCoursesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {coursesSupported.map((course, index) => (
-              <div key={course.name} className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-100 animate-fadeInUp">
+              <div
+                key={course.name}
+                className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-100 animate-fadeInUp"
+              >
                 <div
                   className={`w-14 h-14 bg-gradient-to-br ${course.color} rounded-xl flex items-center justify-center mb-4 shadow-lg`}
                 >
@@ -491,8 +495,7 @@ export default function BiologyMajorCoursesPage() {
       {/* Target Audience Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Who We Help Excel</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Specialized tutoring designed for different academic paths and career goals in
@@ -531,8 +534,7 @@ export default function BiologyMajorCoursesPage() {
       {/* University Support */}
       <section className="py-20 bg-gradient-to-br from-rose-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Supporting Students from Top Universities Worldwide
             </h2>
@@ -544,7 +546,10 @@ export default function BiologyMajorCoursesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {universitiesSupported.map((uni, index) => (
-              <div key={uni.region} className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow animate-fadeInUp">
+              <div
+                key={uni.region}
+                className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow animate-fadeInUp"
+              >
                 <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4 shadow-md">
                   <uni.icon className="w-6 h-6 text-white" />
                 </div>
@@ -566,8 +571,7 @@ export default function BiologyMajorCoursesPage() {
       {/* Services Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Comprehensive Biology Support Services
             </h2>
@@ -579,7 +583,10 @@ export default function BiologyMajorCoursesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicesOffered.map((service, index) => (
-              <div key={service.title} className="bg-gradient-to-br from-white to-rose-50 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100 animate-fadeInUp">
+              <div
+                key={service.title}
+                className="bg-gradient-to-br from-white to-rose-50 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100 animate-fadeInUp"
+              >
                 <div className="w-14 h-14 bg-gradient-to-br from-rose-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
                   <service.icon className="w-7 h-7 text-white" />
                 </div>
@@ -604,8 +611,7 @@ export default function BiologyMajorCoursesPage() {
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               What Makes Us Different
             </h2>
@@ -617,7 +623,10 @@ export default function BiologyMajorCoursesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {learningFeatures.map((feature, index) => (
-              <div key={feature.title} className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center animate-fadeInUp">
+              <div
+                key={feature.title}
+                className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center animate-fadeInUp"
+              >
                 <div className="w-16 h-16 bg-gradient-to-br from-rose-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -632,8 +641,7 @@ export default function BiologyMajorCoursesPage() {
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -644,7 +652,10 @@ export default function BiologyMajorCoursesPage() {
 
           <div className="space-y-6">
             {faqSchema.mainEntity.map((faq, index) => (
-              <div key={index} className="bg-gradient-to-br from-white to-rose-50 rounded-2xl shadow-lg p-6 border border-gray-100 animate-fadeInUp">
+              <div
+                key={index}
+                className="bg-gradient-to-br from-white to-rose-50 rounded-2xl shadow-lg p-6 border border-gray-100 animate-fadeInUp"
+              >
                 <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-start">
                   <div className="w-8 h-8 bg-gradient-to-br from-rose-500 to-indigo-600 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
                     <span className="text-white font-bold text-sm">Q</span>

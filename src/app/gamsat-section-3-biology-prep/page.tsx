@@ -42,7 +42,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'GAMSAT Section III Biology Prep | Campbell + ACER Paper Walkthroughs',
-    description: 'GAMSAT Section III biology coaching from AIIMS-trained specialists. Campbell + Pre-U biology, ACER official paper walkthroughs, biochemistry-chemistry crossover. £399 self-paced, £799 small-batch, ...',
+    description:
+      'GAMSAT Section III biology coaching from AIIMS-trained specialists. Campbell + Pre-U biology, ACER official paper walkthroughs, biochemistry-chemistry crossover. £399 self-paced, £799 small-batch, ...',
   },
 }
 
@@ -206,20 +207,20 @@ export default function GAMSATSectionIIIBiologyPage() {
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">Pricing</h2>
           <ul>
             <li>
-              <strong>Pursuit — £399 / A$799 / €469</strong> for the full 4–6 month programme.
-              Async Campbell + Pre-U coverage, ACER paper walkthroughs (Papers 1, 2), 150+ practice
-              stems, recorded library, WhatsApp doubt support.
+              <strong>Pursuit — £399 / A$799 / €469</strong> for the full 4–6 month programme. Async
+              Campbell + Pre-U coverage, ACER paper walkthroughs (Papers 1, 2), 150+ practice stems,
+              recorded library, WhatsApp doubt support.
             </li>
             <li>
-              <strong>Ascent — £799 / A$1,599 / €939</strong>. Everything in Pursuit plus
-              weekly 2-hour live sessions, monthly full-length Section III mocks, peer Slack
-              channel, senior faculty office hours.
+              <strong>Ascent — £799 / A$1,599 / €939</strong>. Everything in Pursuit plus weekly
+              2-hour live sessions, monthly full-length Section III mocks, peer Slack channel,
+              senior faculty office hours.
             </li>
             <li>
-              <strong>Pinnacle — £1,249 / A$2,399 / €1,449</strong>. Everything in
-              Ascent plus weekly 90-minute 1:1 video sessions with AIIMS-trained senior
-              faculty, personalised study plan (calibrated to your undergraduate background), custom
-              stem drilling, unlimited WhatsApp faculty access.
+              <strong>Pinnacle — £1,249 / A$2,399 / €1,449</strong>. Everything in Ascent plus
+              weekly 90-minute 1:1 video sessions with AIIMS-trained senior faculty, personalised
+              study plan (calibrated to your undergraduate background), custom stem drilling,
+              unlimited WhatsApp faculty access.
             </li>
             <li>
               <strong>Ad-hoc 1:1 tutoring — £110/hour (A$215 / €130)</strong>. For students who
@@ -301,22 +302,40 @@ export default function GAMSATSectionIIIBiologyPage() {
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-xl font-bold text-slate-900 mb-4">Compare & Explore</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            <Link href="/gamsat-vs-mcat-biology" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/gamsat-vs-mcat-biology"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">GAMSAT vs MCAT</span>
             </Link>
-            <Link href="/gamsat-section-3-study-guide" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/gamsat-section-3-study-guide"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">Section III Study Guide</span>
             </Link>
-            <Link href="/gamsat-score-breakdown-biology" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/gamsat-score-breakdown-biology"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">Score Breakdown</span>
             </Link>
-            <Link href="/gamsat-biology-topics-2026" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/gamsat-biology-topics-2026"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">High-Yield Topics 2026</span>
             </Link>
-            <Link href="/mcat-biology-preparation" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/mcat-biology-preparation"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">MCAT Biology</span>
             </Link>
-            <Link href="/dat-biology-preparation" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/dat-biology-preparation"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">DAT Biology</span>
             </Link>
           </div>

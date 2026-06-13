@@ -31,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Biology Video Lectures | Complete Class 11 + 12 | Cerebrum',
-    description: 'NEET biology video lectures by Dr. Shekhar C Singh (AIIMS Delhi) — complete Class 11 + Class 12 NCERT coverage with chapter-wise PYQ drilling. Unlimited rewatch, speed control, recorded mocks. Pan-...',
+    description:
+      'NEET biology video lectures by Dr. Shekhar C Singh (AIIMS Delhi) — complete Class 11 + Class 12 NCERT coverage with chapter-wise PYQ drilling. Unlimited rewatch, speed control, recorded mocks. Pan-...',
   },
 }
 

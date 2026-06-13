@@ -3,8 +3,7 @@ import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
-  title:
-    'NEET Coaching Ghaziabad — Indirapuram, Vaishali | Cerebrum Biology',
+  title: 'NEET Coaching Ghaziabad — Indirapuram, Vaishali | Cerebrum Biology',
   other: { 'article:modified_time': '2026-05-25' },
   description:
     'Top NEET biology coaching in Ghaziabad. 98% success rate, AIIMS faculty. Best coaching in Indirapuram, Vaishali, Crossing Republik, Raj Nagar Extension. 1,500+ students. Book free demo!',
@@ -39,7 +38,16 @@ export default function GhaziabadCoachingLayout({ children }: { children: React.
         parentLocation="Delhi NCR"
         centerAddress="B-45, Sector 62, Noida, Uttar Pradesh - 201301"
         centerPhone="+91-8826-444-334"
-        nearbyAreas={['Indirapuram', 'Vaishali', 'Crossing Republik', 'Raj Nagar Extension', 'Vasundhara', 'Kaushambi', 'Ahinsa Khand', 'Govindpuram']}
+        nearbyAreas={[
+          'Indirapuram',
+          'Vaishali',
+          'Crossing Republik',
+          'Raj Nagar Extension',
+          'Vasundhara',
+          'Kaushambi',
+          'Ahinsa Khand',
+          'Govindpuram',
+        ]}
       />
     </>
   )

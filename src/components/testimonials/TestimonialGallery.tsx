@@ -248,178 +248,169 @@ export function TestimonialGallery({
       </div>
 
       {/* Results */}
-{currentTestimonials.length > 0 ? (
-          <div
-            key={`${selectedCategory}-${selectedType}-${currentPage}`}
-           className="animate-fadeInUp">
-            {viewMode === 'grid' ? (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                {currentTestimonials.map((testimonial, index) => (
-                  <div
-                    key={testimonial.id}
-                   className="animate-fadeInUp">
-                    {testimonial.type === 'video' && testimonial.videoUrl && (
-                      <VideoTestimonial
-                        id={testimonial.id}
+      {currentTestimonials.length > 0 ? (
+        <div
+          key={`${selectedCategory}-${selectedType}-${currentPage}`}
+          className="animate-fadeInUp"
+        >
+          {viewMode === 'grid' ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              {currentTestimonials.map((testimonial, index) => (
+                <div key={testimonial.id} className="animate-fadeInUp">
+                  {testimonial.type === 'video' && testimonial.videoUrl && (
+                    <VideoTestimonial
+                      id={testimonial.id}
+                      studentName={testimonial.studentName}
+                      college={testimonial.college}
+                      neetScore={testimonial.neetScore}
+                      improvement={testimonial.improvement}
+                      videoUrl={testimonial.videoUrl}
+                      thumbnailUrl={testimonial.thumbnailUrl || '/placeholder-video.jpg'}
+                      duration={testimonial.duration || '3:45'}
+                      achievement={testimonial.achievement}
+                      quote={testimonial.quote}
+                    />
+                  )}
+
+                  {testimonial.type === 'score' &&
+                    testimonial.beforeScore &&
+                    testimonial.afterScore && (
+                      <ScoreComparison
                         studentName={testimonial.studentName}
-                        college={testimonial.college}
-                        neetScore={testimonial.neetScore}
-                        improvement={testimonial.improvement}
-                        videoUrl={testimonial.videoUrl}
-                        thumbnailUrl={testimonial.thumbnailUrl || '/placeholder-video.jpg'}
-                        duration={testimonial.duration || '3:45'}
-                        achievement={testimonial.achievement}
-                        quote={testimonial.quote}
+                        beforeScore={testimonial.beforeScore}
+                        afterScore={testimonial.afterScore}
+                        timeframe="12 months"
+                        rank={{ after: testimonial.rank }}
+                        animated={false}
                       />
                     )}
 
-                    {testimonial.type === 'score' &&
-                      testimonial.beforeScore &&
-                      testimonial.afterScore && (
-                        <ScoreComparison
-                          studentName={testimonial.studentName}
-                          beforeScore={testimonial.beforeScore}
-                          afterScore={testimonial.afterScore}
-                          timeframe="12 months"
-                          rank={{ after: testimonial.rank }}
-                          animated={false}
-                        />
-                      )}
-
-                    {testimonial.type === 'written' && (
-                      <div className="bg-white rounded-3xl shadow-lg p-6">
-                        <div className="flex items-center justify-between mb-4">
-                          <div>
-                            <h3 className="text-xl font-bold text-gray-900">
-                              {testimonial.studentName}
-                            </h3>
-                            <p className="text-blue-600 font-medium">{testimonial.college}</p>
-                          </div>
-                          <div className="text-right">
-                            <div className="text-2xl font-bold text-green-600">
-                              {testimonial.neetScore}
-                            </div>
-                            <div className="text-sm text-gray-600">NEET Score</div>
-                          </div>
+                  {testimonial.type === 'written' && (
+                    <div className="bg-white rounded-3xl shadow-lg p-6">
+                      <div className="flex items-center justify-between mb-4">
+                        <div>
+                          <h3 className="text-xl font-bold text-gray-900">
+                            {testimonial.studentName}
+                          </h3>
+                          <p className="text-blue-600 font-medium">{testimonial.college}</p>
                         </div>
-
-                        <div className="space-y-3 mb-4 text-sm text-gray-600">
-                          <div className="flex items-center">
-                            <School className="w-4 h-4 mr-2" />
-                            {testimonial.school}
+                        <div className="text-right">
+                          <div className="text-2xl font-bold text-green-600">
+                            {testimonial.neetScore}
                           </div>
-                          <div className="flex items-center">
-                            <MapPin className="w-4 h-4 mr-2" />
-                            {testimonial.location}
-                          </div>
-                          <div className="flex items-center">
-                            <Calendar className="w-4 h-4 mr-2" />
-                            {testimonial.year} • {testimonial.class}
-                          </div>
-                        </div>
-
-                        <blockquote className="text-gray-700 italic mb-4">
-                          &ldquo;{testimonial.quote}&rdquo;
-                        </blockquote>
-
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center">
-                            {[1, 2, 3, 4, 5].map((star) => (
-                              <Star
-                                key={star}
-                                className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                              />
-                            ))}
-                          </div>
-                          <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
-                            +{testimonial.improvement} marks
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            ) : (
-              /* List View */
-              <div className="space-y-6 mb-12">
-                {currentTestimonials.map((testimonial, index) => (
-                  <div
-                    key={testimonial.id}
-                    className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-                  >
-                    <div className="grid md:grid-cols-3 gap-6 items-center">
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">
-                          {testimonial.studentName}
-                        </h3>
-                        <p className="text-blue-600 font-medium mb-1">{testimonial.college}</p>
-                        <div className="text-sm text-gray-600 space-y-1">
-                          <div className="flex items-center">
-                            <School className="w-4 h-4 mr-2" />
-                            {testimonial.school}
-                          </div>
-                          <div className="flex items-center">
-                            <MapPin className="w-4 h-4 mr-2" />
-                            {testimonial.location}
-                          </div>
+                          <div className="text-sm text-gray-600">NEET Score</div>
                         </div>
                       </div>
 
-                      <div className="text-center">
-                        <div className="text-3xl font-bold text-green-600 mb-1">
-                          {testimonial.neetScore}
+                      <div className="space-y-3 mb-4 text-sm text-gray-600">
+                        <div className="flex items-center">
+                          <School className="w-4 h-4 mr-2" />
+                          {testimonial.school}
                         </div>
-                        <div className="text-sm text-gray-600 mb-2">NEET Score</div>
+                        <div className="flex items-center">
+                          <MapPin className="w-4 h-4 mr-2" />
+                          {testimonial.location}
+                        </div>
+                        <div className="flex items-center">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          {testimonial.year} • {testimonial.class}
+                        </div>
+                      </div>
+
+                      <blockquote className="text-gray-700 italic mb-4">
+                        &ldquo;{testimonial.quote}&rdquo;
+                      </blockquote>
+
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center">
+                          {[1, 2, 3, 4, 5].map((star) => (
+                            <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                          ))}
+                        </div>
                         <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
-                          +{testimonial.improvement} improvement
-                        </div>
-                      </div>
-
-                      <div>
-                        <blockquote className="text-gray-700 italic mb-4">
-                          &ldquo;{testimonial.quote.substring(0, 120)}...&rdquo;
-                        </blockquote>
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center">
-                            {[1, 2, 3, 4, 5].map((star) => (
-                              <Star
-                                key={star}
-                                className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                              />
-                            ))}
-                          </div>
-                          <Button variant="outline" size="sm">
-                            View Details
-                          </Button>
+                          +{testimonial.improvement} marks
                         </div>
                       </div>
                     </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          ) : (
+            /* List View */
+            <div className="space-y-6 mb-12">
+              {currentTestimonials.map((testimonial, index) => (
+                <div
+                  key={testimonial.id}
+                  className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
+                >
+                  <div className="grid md:grid-cols-3 gap-6 items-center">
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                        {testimonial.studentName}
+                      </h3>
+                      <p className="text-blue-600 font-medium mb-1">{testimonial.college}</p>
+                      <div className="text-sm text-gray-600 space-y-1">
+                        <div className="flex items-center">
+                          <School className="w-4 h-4 mr-2" />
+                          {testimonial.school}
+                        </div>
+                        <div className="flex items-center">
+                          <MapPin className="w-4 h-4 mr-2" />
+                          {testimonial.location}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-green-600 mb-1">
+                        {testimonial.neetScore}
+                      </div>
+                      <div className="text-sm text-gray-600 mb-2">NEET Score</div>
+                      <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+                        +{testimonial.improvement} improvement
+                      </div>
+                    </div>
+
+                    <div>
+                      <blockquote className="text-gray-700 italic mb-4">
+                        &ldquo;{testimonial.quote.substring(0, 120)}...&rdquo;
+                      </blockquote>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center">
+                          {[1, 2, 3, 4, 5].map((star) => (
+                            <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                          ))}
+                        </div>
+                        <Button variant="outline" size="sm">
+                          View Details
+                        </Button>
+                      </div>
+                    </div>
                   </div>
-                ))}
-              </div>
-            )}
-          </div>
-        ) : (
-          <div
-            className="text-center py-12 animate-fadeInUp"
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      ) : (
+        <div className="text-center py-12 animate-fadeInUp">
+          <Target className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">No stories found</h3>
+          <p className="text-gray-600 mb-6">Try adjusting your filters or search terms</p>
+          <Button
+            onClick={() => {
+              setSelectedCategory('all')
+              setSelectedType('all')
+              setSearchTerm('')
+            }}
+            variant="outline"
           >
-            <Target className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">No stories found</h3>
-            <p className="text-gray-600 mb-6">Try adjusting your filters or search terms</p>
-            <Button
-              onClick={() => {
-                setSelectedCategory('all')
-                setSelectedType('all')
-                setSearchTerm('')
-              }}
-              variant="outline"
-            >
-              Clear Filters
-            </Button>
-          </div>
-        )}
-{/* Pagination */}
+            Clear Filters
+          </Button>
+        </div>
+      )}
+      {/* Pagination */}
       {totalPages > 1 && (
         <div className="flex items-center justify-center space-x-2">
           <button

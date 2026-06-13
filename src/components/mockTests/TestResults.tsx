@@ -176,9 +176,7 @@ export function TestResults({
       {/* Header */}
       <div className="bg-indigo-500 text-white py-12">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <div className="flex items-center justify-center mb-4">
               <performanceMessage.icon className={`w-12 h-12 ${performanceMessage.color} mr-3`} />
               <h1 className="text-4xl font-bold">{performanceMessage.text}</h1>
@@ -238,9 +236,7 @@ export function TestResults({
         {activeTab === 'overview' && (
           <div className="space-y-8">
             {/* Performance Summary */}
-            <div
-              className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeInUp"
-            >
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeInUp">
               <div className="bg-white rounded-2xl shadow-lg p-6">
                 <div className="flex items-center justify-between mb-4">
                   <CheckCircle className="w-8 h-8 text-green-600" />
@@ -281,9 +277,7 @@ export function TestResults({
             </div>
 
             {/* Performance Insights */}
-            <div
-              className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Performance Insights</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {insights.map((insight, index) => (
@@ -297,9 +291,7 @@ export function TestResults({
             </div>
 
             {/* Subject-wise Analysis */}
-            <div
-              className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Subject-wise Performance</h2>
               <div className="space-y-6">
                 {subjectAnalysis.map((subject, index) => (
@@ -312,9 +304,7 @@ export function TestResults({
                         </span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-3">
-                        <div
-                          className={`h-3 rounded-full ${subject.color}`}
-                        />
+                        <div className={`h-3 rounded-full ${subject.color}`} />
                       </div>
                     </div>
                   </div>
@@ -323,9 +313,7 @@ export function TestResults({
             </div>
 
             {/* Recommendations */}
-            <div
-              className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Personalized Recommendations
               </h2>
@@ -352,9 +340,7 @@ export function TestResults({
         {/* Detailed Analysis Tab */}
         {activeTab === 'detailed' && (
           <div className="space-y-8">
-            <div
-              className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Detailed Performance Analysis
               </h2>
@@ -425,9 +411,7 @@ export function TestResults({
         {/* Solutions Tab */}
         {activeTab === 'solutions' && (
           <div className="space-y-6">
-            <div
-              className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Detailed Solutions</h2>
 
               {test.questions.map((question, index) => {
@@ -503,9 +487,7 @@ export function TestResults({
                     </div>
 
                     {showAnswer.has(question.id) && (
-                      <div
-                        className="bg-blue-50 rounded-2xl p-6 animate-fadeInUp"
-                      >
+                      <div className="bg-blue-50 rounded-2xl p-6 animate-fadeInUp">
                         <h4 className="font-semibold text-blue-900 mb-3">
                           <Lightbulb className="w-5 h-5 inline mr-2" />
                           Explanation

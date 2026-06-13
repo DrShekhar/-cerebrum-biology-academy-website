@@ -38,9 +38,7 @@ export default function OfflinePage() {
   if (isOnline) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center p-4">
-        <div
-          className="text-center animate-fadeInUp"
-        >
+        <div className="text-center animate-fadeInUp">
           <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mb-6 mx-auto">
             <span className="text-3xl">✅</span>
           </div>
@@ -54,13 +52,9 @@ export default function OfflinePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-100 to-blue-50 flex items-center justify-center p-4">
-      <div
-        className="max-w-md w-full text-center animate-fadeInUp"
-      >
+      <div className="max-w-md w-full text-center animate-fadeInUp">
         {/* Offline Icon */}
-        <div
-          className="w-24 h-24 bg-red-100 rounded-full flex items-center justify-center mb-8 mx-auto animate-fadeInUp"
-        >
+        <div className="w-24 h-24 bg-red-100 rounded-full flex items-center justify-center mb-8 mx-auto animate-fadeInUp">
           <span className="text-4xl">📵</span>
         </div>
 

@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Sector 70 Gurgaon | 17 Min Drive',
-    description: 'Best NEET coaching near Sector 70 Gurgaon (Gurugram). Just 17 min drive to M2K Sector 51. Premium SPR area with new developments. AIIMS faculty, 98% success rate. Call 88264-44334!',
+    description:
+      'Best NEET coaching near Sector 70 Gurgaon (Gurugram). Just 17 min drive to M2K Sector 51. Premium SPR area with new developments. AIIMS faculty, 98% success rate. Call 88264-44334!',
   },
 }
 
@@ -72,7 +73,11 @@ export default function NEETCoachingSector70Gurgaon() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-rose-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurgaon"

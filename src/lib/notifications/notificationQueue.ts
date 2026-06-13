@@ -136,7 +136,9 @@ export async function scheduleRetry(
   const nextRetryAt = new Date(Date.now() + delay)
   notification.nextRetryAt = nextRetryAt.toISOString()
 
-  console.log(`[NotificationQueue] Scheduling retry ${notification.attempts}/${config.maxRetries} for ${notification.id} at ${nextRetryAt.toISOString()}`)
+  console.log(
+    `[NotificationQueue] Scheduling retry ${notification.attempts}/${config.maxRetries} for ${notification.id} at ${nextRetryAt.toISOString()}`
+  )
 
   if (redis) {
     // Store in retry queue with score = retry timestamp
@@ -167,9 +169,7 @@ export async function getRetryDueNotifications(): Promise<NotificationPayload[]>
       // Remove them from retry queue
       await redis.zremrangebyscore('notification:retry', 0, now)
 
-      return data.map((item) =>
-        typeof item === 'string' ? JSON.parse(item) : item
-      )
+      return data.map((item) => (typeof item === 'string' ? JSON.parse(item) : item))
     }
     return []
   } else {
@@ -189,7 +189,9 @@ export async function moveToDeadLetterQueue(notification: NotificationPayload): 
     failedQueue.push(notification)
   }
 
-  console.error(`[NotificationQueue] Notification ${notification.id} moved to DLQ after ${notification.attempts} attempts. Last error: ${notification.lastError}`)
+  console.error(
+    `[NotificationQueue] Notification ${notification.id} moved to DLQ after ${notification.attempts} attempts. Last error: ${notification.lastError}`
+  )
 }
 
 /**
@@ -198,7 +200,7 @@ export async function moveToDeadLetterQueue(notification: NotificationPayload): 
 export async function getDeadLetterQueue(limit: number = 50): Promise<NotificationPayload[]> {
   if (redis) {
     const data = await redis.lrange('notification:dlq', 0, limit - 1)
-    return data.map((item) => typeof item === 'string' ? JSON.parse(item) : item)
+    return data.map((item) => (typeof item === 'string' ? JSON.parse(item) : item))
   } else {
     return failedQueue.slice(0, limit)
   }

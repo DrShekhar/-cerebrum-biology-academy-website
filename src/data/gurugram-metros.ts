@@ -102,7 +102,7 @@ export const gurugramMetroStations: Record<string, GurugramMetroStation> = {
     description:
       'Sector 54 Chowk Rapid Metro serves the ultra-premium Golf Course Road area. Elite families here prefer our personalized NEET coaching.',
     walkingTime: '10 minutes from our center',
-    coordinates: { lat: 28.4475, lng: 77.0670 },
+    coordinates: { lat: 28.4475, lng: 77.067 },
   },
   'sector-55-56-rapid-metro': {
     name: 'Sector 55-56',

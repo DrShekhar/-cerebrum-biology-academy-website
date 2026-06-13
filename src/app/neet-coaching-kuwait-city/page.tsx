@@ -104,6 +104,7 @@ export default function NEETCoachingKuwaitCityPage() {
   return (
     <>
       <LocalitySchema
+        country="KW"
         locality="Kuwait City"
         slug="neet-coaching-kuwait-city"
         pageTitle="Best NEET Coaching in Kuwait City"

@@ -346,314 +346,309 @@ export function ActivityHistoryModal({ isOpen, onClose }: ActivityHistoryModalPr
   if (!isOpen) return null
 
   return (
-<div
-        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeInUp"
-        onClick={onClose}
+    <div
+      className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeInUp"
+      onClick={onClose}
+    >
+      <div
+        className="bg-white rounded-2xl shadow-2xl w-full max-w-5xl max-h-[90vh] flex flex-col animate-fadeInUp"
+        onClick={(e) => e.stopPropagation()}
       >
-        <div
-          className="bg-white rounded-2xl shadow-2xl w-full max-w-5xl max-h-[90vh] flex flex-col animate-fadeInUp"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <div className="flex items-center justify-between p-6 border-b border-gray-200">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 flex items-center">
-                <TrendingUp className="w-6 h-6 mr-3 text-blue-600" />
-                Complete Activity History
-              </h2>
-              <p className="text-sm text-gray-600 mt-1">
-                {filteredActivities.length}{' '}
-                {filteredActivities.length === 1 ? 'activity' : 'activities'} found
+        <div className="flex items-center justify-between p-6 border-b border-gray-200">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 flex items-center">
+              <TrendingUp className="w-6 h-6 mr-3 text-blue-600" />
+              Complete Activity History
+            </h2>
+            <p className="text-sm text-gray-600 mt-1">
+              {filteredActivities.length}{' '}
+              {filteredActivities.length === 1 ? 'activity' : 'activities'} found
+            </p>
+          </div>
+          <button
+            onClick={onClose}
+            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+            aria-label="Close modal"
+          >
+            <X className="w-6 h-6 text-gray-500" />
+          </button>
+        </div>
+
+        <div className="p-6 border-b border-gray-200 space-y-4">
+          <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex-1 relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search activities, topics, or tags..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+
+            <select
+              value={dateRange}
+              onChange={(e) => setDateRange(e.target.value as any)}
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
+              <option value="all">All Time</option>
+              <option value="today">Today</option>
+              <option value="week">Last 7 Days</option>
+              <option value="month">Last 30 Days</option>
+            </select>
+
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value as any)}
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
+              <option value="date">Sort by Date</option>
+              <option value="type">Sort by Type</option>
+            </select>
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            {(['doubt', 'assessment', 'achievement', 'study'] as Activity['type'][]).map((type) => {
+              const Icon = getActivityIcon(type)
+              const color = getActivityColor(type)
+              const isSelected = selectedTypes.includes(type)
+
+              return (
+                <button
+                  key={type}
+                  onClick={() => toggleTypeFilter(type)}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg border-2 transition-all ${
+                    isSelected
+                      ? color === 'purple'
+                        ? 'bg-purple-100 border-purple-500 text-purple-700'
+                        : color === 'green'
+                          ? 'bg-green-100 border-green-600 text-green-700'
+                          : color === 'yellow'
+                            ? 'bg-yellow-100 border-yellow-500 text-yellow-700'
+                            : 'bg-blue-100 border-blue-500 text-blue-700'
+                      : 'bg-white border-gray-300 text-gray-700 hover:bg-gray-50'
+                  }`}
+                >
+                  <Icon className="w-4 h-4" />
+                  <span className="capitalize font-medium">{type}</span>
+                </button>
+              )
+            })}
+          </div>
+        </div>
+
+        <div ref={scrollContainerRef} className="flex-1 overflow-y-auto p-6 space-y-6">
+          {groupedActivities.map(([groupName, groupActivities]) => {
+            const displayedGroupActivities = groupActivities.filter((activity) =>
+              displayedActivities.includes(activity)
+            )
+
+            if (displayedGroupActivities.length === 0) return null
+
+            return (
+              <div key={groupName}>
+                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 flex items-center">
+                  <Calendar className="w-4 h-4 mr-2" />
+                  {groupName}
+                </h3>
+
+                <div className="space-y-3">
+                  {displayedGroupActivities.map((activity, index) => {
+                    const Icon = getActivityIcon(activity.type)
+                    const color = getActivityColor(activity.type)
+                    const isExpanded = expandedId === activity.id
+
+                    return (
+                      <div
+                        key={activity.id}
+                        className="bg-gradient-to-r from-white to-gray-50 rounded-lg border border-gray-200 hover:shadow-md transition-all animate-fadeInUp"
+                      >
+                        <div
+                          className="p-4 cursor-pointer"
+                          onClick={() => setExpandedId(isExpanded ? null : activity.id)}
+                        >
+                          <div className="flex items-start space-x-4">
+                            <div
+                              className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                                color === 'purple'
+                                  ? 'bg-purple-100 text-purple-600'
+                                  : color === 'green'
+                                    ? 'bg-green-100 text-green-600'
+                                    : color === 'yellow'
+                                      ? 'bg-yellow-100 text-yellow-600'
+                                      : 'bg-blue-100 text-blue-600'
+                              }`}
+                            >
+                              <Icon className="w-5 h-5" />
+                            </div>
+
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-start justify-between mb-1">
+                                <h4 className="text-base font-semibold text-gray-900 truncate">
+                                  {activity.title}
+                                </h4>
+                                {activity.success ? (
+                                  <CheckCircle className="w-5 h-5 text-green-600 ml-2 flex-shrink-0" />
+                                ) : (
+                                  <XCircle className="w-5 h-5 text-red-500 ml-2 flex-shrink-0" />
+                                )}
+                              </div>
+
+                              <p className="text-sm text-gray-600 mb-2">{activity.description}</p>
+
+                              <div className="flex items-center space-x-4 text-xs text-gray-500">
+                                <span className="flex items-center">
+                                  <Clock className="w-3 h-3 mr-1" />
+                                  {formatTimestamp(activity.timestamp)}
+                                </span>
+                                {activity.details?.duration && (
+                                  <span className="flex items-center">
+                                    <Zap className="w-3 h-3 mr-1" />
+                                    {activity.details.duration}m
+                                  </span>
+                                )}
+                                {activity.details?.topic && (
+                                  <span className="px-2 py-1 bg-gray-100 rounded text-gray-700 font-medium">
+                                    {activity.details.topic}
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+
+                            <button
+                              className="p-1 hover:bg-gray-100 rounded transition-colors"
+                              aria-label={isExpanded ? 'Collapse' : 'Expand'}
+                            >
+                              {isExpanded ? (
+                                <ChevronUp className="w-5 h-5 text-gray-500" />
+                              ) : (
+                                <ChevronDown className="w-5 h-5 text-gray-500" />
+                              )}
+                            </button>
+                          </div>
+                        </div>
+                        {isExpanded && (
+                          <div className="overflow-hidden animate-fadeInUp">
+                            <div className="px-4 pb-4 pt-2 border-t border-gray-100">
+                              <div className="space-y-3">
+                                <div>
+                                  <h5 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-2">
+                                    Details
+                                  </h5>
+                                  <div className="grid grid-cols-2 gap-4 text-sm">
+                                    <div>
+                                      <span className="text-gray-600">Date & Time:</span>
+                                      <p className="text-gray-900 font-medium">
+                                        {formatAbsoluteTimestamp(activity.timestamp)}
+                                      </p>
+                                    </div>
+                                    {activity.details?.score !== undefined && (
+                                      <div>
+                                        <span className="text-gray-600">Score:</span>
+                                        <p className="text-gray-900 font-medium">
+                                          {activity.details.score}/{activity.details.maxScore} (
+                                          {Math.round(
+                                            (activity.details.score / activity.details.maxScore!) *
+                                              100
+                                          )}
+                                          %)
+                                        </p>
+                                      </div>
+                                    )}
+                                    {activity.details?.duration && (
+                                      <div>
+                                        <span className="text-gray-600">Duration:</span>
+                                        <p className="text-gray-900 font-medium">
+                                          {activity.details.duration} minutes
+                                        </p>
+                                      </div>
+                                    )}
+                                    <div>
+                                      <span className="text-gray-600">Status:</span>
+                                      <p
+                                        className={`font-medium ${activity.success ? 'text-green-600' : 'text-red-600'}`}
+                                      >
+                                        {activity.success ? 'Completed' : 'Incomplete'}
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                {activity.details?.tags && activity.details.tags.length > 0 && (
+                                  <div>
+                                    <h5 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-2">
+                                      Tags
+                                    </h5>
+                                    <div className="flex flex-wrap gap-2">
+                                      {activity.details.tags.map((tag) => (
+                                        <span
+                                          key={tag}
+                                          className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs font-medium"
+                                        >
+                                          #{tag}
+                                        </span>
+                                      ))}
+                                    </div>
+                                  </div>
+                                )}
+
+                                {activity.details?.relatedContent && (
+                                  <div>
+                                    <button className="flex items-center text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors">
+                                      <ExternalLink className="w-4 h-4 mr-2" />
+                                      View Related Content
+                                    </button>
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            )
+          })}
+
+          {displayedCount < filteredActivities.length && (
+            <div className="text-center py-4">
+              <p className="text-sm text-gray-500">
+                Showing {displayedCount} of {filteredActivities.length} activities. Scroll for
+                more...
               </p>
+            </div>
+          )}
+
+          {filteredActivities.length === 0 && (
+            <div className="text-center py-12">
+              <Target className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-gray-700 mb-2">No Activities Found</h3>
+              <p className="text-gray-500">
+                Try adjusting your filters or search query to find activities.
+              </p>
+            </div>
+          )}
+        </div>
+
+        <div className="p-6 border-t border-gray-200 bg-gray-50">
+          <div className="flex items-center justify-between">
+            <div className="text-sm text-gray-600">
+              <span className="font-medium">{filteredActivities.length}</span> activities total
             </div>
             <button
               onClick={onClose}
-              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-              aria-label="Close modal"
+              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
             >
-              <X className="w-6 h-6 text-gray-500" />
+              Close
             </button>
-          </div>
-
-          <div className="p-6 border-b border-gray-200 space-y-4">
-            <div className="flex flex-col sm:flex-row gap-4">
-              <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search activities, topics, or tags..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-
-              <select
-                value={dateRange}
-                onChange={(e) => setDateRange(e.target.value as any)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                <option value="all">All Time</option>
-                <option value="today">Today</option>
-                <option value="week">Last 7 Days</option>
-                <option value="month">Last 30 Days</option>
-              </select>
-
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                <option value="date">Sort by Date</option>
-                <option value="type">Sort by Type</option>
-              </select>
-            </div>
-
-            <div className="flex flex-wrap gap-2">
-              {(['doubt', 'assessment', 'achievement', 'study'] as Activity['type'][]).map(
-                (type) => {
-                  const Icon = getActivityIcon(type)
-                  const color = getActivityColor(type)
-                  const isSelected = selectedTypes.includes(type)
-
-                  return (
-                    <button
-                      key={type}
-                      onClick={() => toggleTypeFilter(type)}
-                      className={`flex items-center space-x-2 px-4 py-2 rounded-lg border-2 transition-all ${
-                        isSelected
-                          ? color === 'purple'
-                            ? 'bg-purple-100 border-purple-500 text-purple-700'
-                            : color === 'green'
-                              ? 'bg-green-100 border-green-600 text-green-700'
-                              : color === 'yellow'
-                                ? 'bg-yellow-100 border-yellow-500 text-yellow-700'
-                                : 'bg-blue-100 border-blue-500 text-blue-700'
-                          : 'bg-white border-gray-300 text-gray-700 hover:bg-gray-50'
-                      }`}
-                    >
-                      <Icon className="w-4 h-4" />
-                      <span className="capitalize font-medium">{type}</span>
-                    </button>
-                  )
-                }
-              )}
-            </div>
-          </div>
-
-          <div ref={scrollContainerRef} className="flex-1 overflow-y-auto p-6 space-y-6">
-            {groupedActivities.map(([groupName, groupActivities]) => {
-              const displayedGroupActivities = groupActivities.filter((activity) =>
-                displayedActivities.includes(activity)
-              )
-
-              if (displayedGroupActivities.length === 0) return null
-
-              return (
-                <div key={groupName}>
-                  <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 flex items-center">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    {groupName}
-                  </h3>
-
-                  <div className="space-y-3">
-                    {displayedGroupActivities.map((activity, index) => {
-                      const Icon = getActivityIcon(activity.type)
-                      const color = getActivityColor(activity.type)
-                      const isExpanded = expandedId === activity.id
-
-                      return (
-                        <div
-                          key={activity.id}
-                          className="bg-gradient-to-r from-white to-gray-50 rounded-lg border border-gray-200 hover:shadow-md transition-all animate-fadeInUp"
-                        >
-                          <div
-                            className="p-4 cursor-pointer"
-                            onClick={() => setExpandedId(isExpanded ? null : activity.id)}
-                          >
-                            <div className="flex items-start space-x-4">
-                              <div
-                                className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                                  color === 'purple'
-                                    ? 'bg-purple-100 text-purple-600'
-                                    : color === 'green'
-                                      ? 'bg-green-100 text-green-600'
-                                      : color === 'yellow'
-                                        ? 'bg-yellow-100 text-yellow-600'
-                                        : 'bg-blue-100 text-blue-600'
-                                }`}
-                              >
-                                <Icon className="w-5 h-5" />
-                              </div>
-
-                              <div className="flex-1 min-w-0">
-                                <div className="flex items-start justify-between mb-1">
-                                  <h4 className="text-base font-semibold text-gray-900 truncate">
-                                    {activity.title}
-                                  </h4>
-                                  {activity.success ? (
-                                    <CheckCircle className="w-5 h-5 text-green-600 ml-2 flex-shrink-0" />
-                                  ) : (
-                                    <XCircle className="w-5 h-5 text-red-500 ml-2 flex-shrink-0" />
-                                  )}
-                                </div>
-
-                                <p className="text-sm text-gray-600 mb-2">{activity.description}</p>
-
-                                <div className="flex items-center space-x-4 text-xs text-gray-500">
-                                  <span className="flex items-center">
-                                    <Clock className="w-3 h-3 mr-1" />
-                                    {formatTimestamp(activity.timestamp)}
-                                  </span>
-                                  {activity.details?.duration && (
-                                    <span className="flex items-center">
-                                      <Zap className="w-3 h-3 mr-1" />
-                                      {activity.details.duration}m
-                                    </span>
-                                  )}
-                                  {activity.details?.topic && (
-                                    <span className="px-2 py-1 bg-gray-100 rounded text-gray-700 font-medium">
-                                      {activity.details.topic}
-                                    </span>
-                                  )}
-                                </div>
-                              </div>
-
-                              <button
-                                className="p-1 hover:bg-gray-100 rounded transition-colors"
-                                aria-label={isExpanded ? 'Collapse' : 'Expand'}
-                              >
-                                {isExpanded ? (
-                                  <ChevronUp className="w-5 h-5 text-gray-500" />
-                                ) : (
-                                  <ChevronDown className="w-5 h-5 text-gray-500" />
-                                )}
-                              </button>
-                            </div>
-                          </div>
-{isExpanded && (
-                              <div
-                                className="overflow-hidden animate-fadeInUp"
-                              >
-                                <div className="px-4 pb-4 pt-2 border-t border-gray-100">
-                                  <div className="space-y-3">
-                                    <div>
-                                      <h5 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-2">
-                                        Details
-                                      </h5>
-                                      <div className="grid grid-cols-2 gap-4 text-sm">
-                                        <div>
-                                          <span className="text-gray-600">Date & Time:</span>
-                                          <p className="text-gray-900 font-medium">
-                                            {formatAbsoluteTimestamp(activity.timestamp)}
-                                          </p>
-                                        </div>
-                                        {activity.details?.score !== undefined && (
-                                          <div>
-                                            <span className="text-gray-600">Score:</span>
-                                            <p className="text-gray-900 font-medium">
-                                              {activity.details.score}/{activity.details.maxScore} (
-                                              {Math.round(
-                                                (activity.details.score /
-                                                  activity.details.maxScore!) *
-                                                  100
-                                              )}
-                                              %)
-                                            </p>
-                                          </div>
-                                        )}
-                                        {activity.details?.duration && (
-                                          <div>
-                                            <span className="text-gray-600">Duration:</span>
-                                            <p className="text-gray-900 font-medium">
-                                              {activity.details.duration} minutes
-                                            </p>
-                                          </div>
-                                        )}
-                                        <div>
-                                          <span className="text-gray-600">Status:</span>
-                                          <p
-                                            className={`font-medium ${activity.success ? 'text-green-600' : 'text-red-600'}`}
-                                          >
-                                            {activity.success ? 'Completed' : 'Incomplete'}
-                                          </p>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    {activity.details?.tags && activity.details.tags.length > 0 && (
-                                      <div>
-                                        <h5 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-2">
-                                          Tags
-                                        </h5>
-                                        <div className="flex flex-wrap gap-2">
-                                          {activity.details.tags.map((tag) => (
-                                            <span
-                                              key={tag}
-                                              className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs font-medium"
-                                            >
-                                              #{tag}
-                                            </span>
-                                          ))}
-                                        </div>
-                                      </div>
-                                    )}
-
-                                    {activity.details?.relatedContent && (
-                                      <div>
-                                        <button className="flex items-center text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors">
-                                          <ExternalLink className="w-4 h-4 mr-2" />
-                                          View Related Content
-                                        </button>
-                                      </div>
-                                    )}
-                                  </div>
-                                </div>
-                              </div>
-                            )}
-</div>
-                      )
-                    })}
-                  </div>
-                </div>
-              )
-            })}
-
-            {displayedCount < filteredActivities.length && (
-              <div className="text-center py-4">
-                <p className="text-sm text-gray-500">
-                  Showing {displayedCount} of {filteredActivities.length} activities. Scroll for
-                  more...
-                </p>
-              </div>
-            )}
-
-            {filteredActivities.length === 0 && (
-              <div className="text-center py-12">
-                <Target className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-700 mb-2">No Activities Found</h3>
-                <p className="text-gray-500">
-                  Try adjusting your filters or search query to find activities.
-                </p>
-              </div>
-            )}
-          </div>
-
-          <div className="p-6 border-t border-gray-200 bg-gray-50">
-            <div className="flex items-center justify-between">
-              <div className="text-sm text-gray-600">
-                <span className="font-medium">{filteredActivities.length}</span> activities total
-              </div>
-              <button
-                onClick={onClose}
-                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
-              >
-                Close
-              </button>
-            </div>
           </div>
         </div>
       </div>
-)
+    </div>
+  )
 }
 
 export default ActivityHistoryModal

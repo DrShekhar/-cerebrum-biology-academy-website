@@ -18,7 +18,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best NEET Coaching in Dharamshala 2026 | Kangra District',
-    description: 'Top NEET coaching for Dharamshala & Kangra students. 98% success rate. Online classes from AIIMS faculty.',
+    description:
+      'Top NEET coaching for Dharamshala & Kangra students. 98% success rate. Online classes from AIIMS faculty.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-dharamshala',

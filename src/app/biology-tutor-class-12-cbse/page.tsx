@@ -162,9 +162,7 @@ export default function BiologyTutorClass12CBSEPage() {
       <section className="relative bg-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <BookOpen className="w-5 h-5 mr-2 text-yellow-300" />
               Class 12 CBSE Biology
@@ -185,7 +183,11 @@ export default function BiologyTutorClass12CBSEPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%2012%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%2012%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -237,9 +239,7 @@ export default function BiologyTutorClass12CBSEPage() {
       {/* Syllabus Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Class 12 CBSE Biology Syllabus
             </h2>
@@ -301,9 +301,7 @@ export default function BiologyTutorClass12CBSEPage() {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               What You Get in Class 12 Coaching
             </h2>
@@ -311,10 +309,7 @@ export default function BiologyTutorClass12CBSEPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
-              >
+              <div key={feature.title} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <feature.icon className="w-12 h-12 text-purple-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -349,8 +344,8 @@ export default function BiologyTutorClass12CBSEPage() {
                 <h3 className="font-bold text-slate-900">NEET Biology (this May)</h3>
               </div>
               <p className="text-sm text-slate-600 mb-4 leading-relaxed">
-                Class 12 NCERT is ~50% of NEET Biology syllabus. We coach boards + NEET together
-                — same chapters, dual-purpose. Intensive Class 12 + NEET integrated track for the
+                Class 12 NCERT is ~50% of NEET Biology syllabus. We coach boards + NEET together —
+                same chapters, dual-purpose. Intensive Class 12 + NEET integrated track for the
                 final-year push.
               </p>
               <Link
@@ -371,9 +366,9 @@ export default function BiologyTutorClass12CBSEPage() {
                 <h3 className="font-bold text-slate-900">NEET Repeat / Dropper Batch</h3>
               </div>
               <p className="text-sm text-slate-600 mb-4 leading-relaxed">
-                For students considering one more year after Class 12 if NEET this May
-                doesn&apos;t land the target college. Dedicated Repeat / Dropper Biology batch —
-                full NEET-only intensive, no board distractions.
+                For students considering one more year after Class 12 if NEET this May doesn&apos;t
+                land the target college. Dedicated Repeat / Dropper Biology batch — full NEET-only
+                intensive, no board distractions.
               </p>
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20My%20child%20is%20in%20Class%2012%20CBSE%20and%20we%20are%20also%20considering%20the%20NEET%20Repeat%20%2F%20Dropper%20batch%20option%20for%20next%20year.%20Please%20share%20the%20Dropper%20Biology%20coaching%20details."
@@ -393,9 +388,9 @@ export default function BiologyTutorClass12CBSEPage() {
                 <h3 className="font-bold text-slate-900">Biology Olympiads (NSEB / INBO)</h3>
               </div>
               <p className="text-sm text-slate-600 mb-4 leading-relaxed">
-                NSEB → INBO → OCSC → IBO India team eligibility runs through Class 12. Strong
-                Class 12 students can layer Olympiad coaching alongside NEET — the biology
-                content overlaps meaningfully.
+                NSEB → INBO → OCSC → IBO India team eligibility runs through Class 12. Strong Class
+                12 students can layer Olympiad coaching alongside NEET — the biology content
+                overlaps meaningfully.
               </p>
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20My%20child%20is%20in%20Class%2012%20CBSE%20with%20strong%20biology%20marks.%20We%20want%20to%20layer%20Biology%20Olympiad%20coaching%20%E2%80%94%20NSEB%20%2F%20INBO%20%2F%20IBO%20%E2%80%94%20alongside%20NEET.%20Please%20share%20schedule%20and%20how%20they%20combine."
@@ -418,9 +413,7 @@ export default function BiologyTutorClass12CBSEPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -446,15 +439,18 @@ export default function BiologyTutorClass12CBSEPage() {
       {/* CTA Section */}
       <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Ace Both Boards and NEET</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Expert coaching for Class 12 Biology. Start now for the best results!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%2012%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%2012%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -465,7 +461,11 @@ export default function BiologyTutorClass12CBSEPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20Class%2012%20Biology.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20Class%2012%20Biology.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"

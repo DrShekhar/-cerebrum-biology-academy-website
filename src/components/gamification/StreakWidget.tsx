@@ -30,9 +30,7 @@ export function StreakWidget({
           </h3>
           <p className="text-orange-100 text-sm mt-1">Keep the momentum going!</p>
         </div>
-        <div
-          className="flex items-center space-x-1 animate-fadeInUp"
-        >
+        <div className="flex items-center space-x-1 animate-fadeInUp">
           <span className="text-5xl font-bold">{studyStreak}</span>
           <Flame className={`w-8 h-8 ${studyStreak > 0 ? 'text-yellow-300' : 'text-orange-200'}`} />
         </div>
@@ -45,9 +43,7 @@ export function StreakWidget({
           <span className="text-orange-100">{streakMilestone.days} days</span>
         </div>
         <div className="w-full bg-orange-700 bg-opacity-50 rounded-full h-3 overflow-hidden">
-          <div
-            className="bg-gradient-to-r from-yellow-300 to-yellow-100 h-3 rounded-full animate-fadeInUp"
-          />
+          <div className="bg-gradient-to-r from-yellow-300 to-yellow-100 h-3 rounded-full animate-fadeInUp" />
         </div>
         <div className="text-xs text-orange-100 mt-1">
           {daysUntilMilestone > 0
@@ -79,9 +75,7 @@ export function StreakWidget({
 
       {/* Encouragement Message */}
       {studyStreak > 0 && (
-        <div
-          className="mt-4 text-center animate-fadeInUp"
-        >
+        <div className="mt-4 text-center animate-fadeInUp">
           {studyStreak >= 7 ? (
             <div className="bg-yellow-400 text-orange-900 px-4 py-2 rounded-full text-sm font-bold inline-flex items-center space-x-2">
               <Flame className="w-4 h-4" />

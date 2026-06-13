@@ -35,7 +35,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching in Vasant Kunj Delhi | Medical Entrance Biology',
-    description: 'Best NEET coaching for Vasant Kunj, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET Biology coaching with 67+ AIIMS selections. DPS Vasant Kunj, Sanskriti students welcome.',
+    description:
+      'Best NEET coaching for Vasant Kunj, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET Biology coaching with 67+ AIIMS selections. DPS Vasant Kunj, Sanskriti students welcome.',
   },
 }
 
@@ -78,7 +79,11 @@ export default function NEETCoachingVasantKunjPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Vasant Kunj', 'NEET Biology Vasant Kunj', 'Medical entrance coaching Vasant Kunj']}
+        knowsAbout={[
+          'NEET Vasant Kunj',
+          'NEET Biology Vasant Kunj',
+          'Medical entrance coaching Vasant Kunj',
+        ]}
       />
       <DelhiAreaSchema pageSlug="neet-coaching-vasant-kunj-delhi" />
       <LocalitySchema

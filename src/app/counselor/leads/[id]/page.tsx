@@ -137,7 +137,9 @@ function StageBadge({ stage }: { stage: string }) {
   }
   const c = config[stage] || { bg: 'bg-gray-100', text: 'text-gray-700', label: stage }
   return (
-    <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${c.bg} ${c.text}`}>
+    <span
+      className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${c.bg} ${c.text}`}
+    >
       {c.label}
     </span>
   )
@@ -164,7 +166,10 @@ function ScoreRing({ score }: { score: number | null }) {
       <svg className="w-20 h-20 -rotate-90" viewBox="0 0 80 80">
         <circle cx="40" cy="40" r="36" fill="none" stroke="#e5e7eb" strokeWidth="6" />
         <circle
-          cx="40" cy="40" r="36" fill="none"
+          cx="40"
+          cy="40"
+          r="36"
+          fill="none"
           className={ringColor}
           strokeWidth="6"
           strokeLinecap="round"
@@ -173,7 +178,9 @@ function ScoreRing({ score }: { score: number | null }) {
           style={{ transition: 'stroke-dashoffset 0.6s ease' }}
         />
       </svg>
-      <div className={`absolute inset-0 flex items-center justify-center text-lg font-bold ${color}`}>
+      <div
+        className={`absolute inset-0 flex items-center justify-center text-lg font-bold ${color}`}
+      >
         {s}
       </div>
     </div>
@@ -182,13 +189,7 @@ function ScoreRing({ score }: { score: number | null }) {
 
 // ─── Session Notes Component ─────────────────────────────────────────────────
 
-function SessionNotesSection({
-  leadId,
-  initialNotes,
-}: {
-  leadId: string
-  initialNotes: Note[]
-}) {
+function SessionNotesSection({ leadId, initialNotes }: { leadId: string; initialNotes: Note[] }) {
   const [notes, setNotes] = useState<Note[]>(initialNotes)
   const [showForm, setShowForm] = useState(false)
   const [saving, setSaving] = useState(false)
@@ -249,7 +250,11 @@ function SessionNotesSection({
             {notes.length}
           </span>
         </div>
-        {expanded ? <ChevronUp className="w-5 h-5 text-gray-400" /> : <ChevronDown className="w-5 h-5 text-gray-400" />}
+        {expanded ? (
+          <ChevronUp className="w-5 h-5 text-gray-400" />
+        ) : (
+          <ChevronDown className="w-5 h-5 text-gray-400" />
+        )}
       </button>
 
       {expanded && (
@@ -292,7 +297,9 @@ function SessionNotesSection({
 
               <div className="flex gap-3">
                 <div className="flex-1">
-                  <label className="text-xs font-medium text-gray-600 mb-1 block">Student Mood</label>
+                  <label className="text-xs font-medium text-gray-600 mb-1 block">
+                    Student Mood
+                  </label>
                   <div className="flex gap-2">
                     {[
                       { val: 'POSITIVE', emoji: '😊', label: 'Positive' },
@@ -324,7 +331,11 @@ function SessionNotesSection({
 
               <div className="flex justify-end gap-2">
                 <button
-                  onClick={() => { setShowForm(false); setNoteContent(''); setNoteNextSteps('') }}
+                  onClick={() => {
+                    setShowForm(false)
+                    setNoteContent('')
+                    setNoteNextSteps('')
+                  }}
                   className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors"
                 >
                   Cancel
@@ -334,7 +345,11 @@ function SessionNotesSection({
                   disabled={saving || !noteContent.trim()}
                   className="flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-700 disabled:opacity-50 transition-colors"
                 >
-                  {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
+                  {saving ? (
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                  ) : (
+                    <Save className="w-4 h-4" />
+                  )}
                   Save Note
                 </button>
               </div>
@@ -353,7 +368,8 @@ function SessionNotesSection({
                 >
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs text-gray-500">
-                      {note.createdBy?.name || 'Counselor'} • {format(new Date(note.createdAt), 'MMM d, yyyy h:mm a')}
+                      {note.createdBy?.name || 'Counselor'} •{' '}
+                      {format(new Date(note.createdAt), 'MMM d, yyyy h:mm a')}
                     </span>
                   </div>
                   <p className="text-sm text-gray-800 whitespace-pre-wrap">{note.content}</p>
@@ -369,7 +385,13 @@ function SessionNotesSection({
 
 // ─── Activity Timeline ───────────────────────────────────────────────────────
 
-function ActivityTimeline({ communications, tasks }: { communications: Communication[]; tasks: Task[] }) {
+function ActivityTimeline({
+  communications,
+  tasks,
+}: {
+  communications: Communication[]
+  tasks: Task[]
+}) {
   const [expanded, setExpanded] = useState(true)
 
   const allEvents = [
@@ -404,7 +426,11 @@ function ActivityTimeline({ communications, tasks }: { communications: Communica
             {allEvents.length}
           </span>
         </div>
-        {expanded ? <ChevronUp className="w-5 h-5 text-gray-400" /> : <ChevronDown className="w-5 h-5 text-gray-400" />}
+        {expanded ? (
+          <ChevronUp className="w-5 h-5 text-gray-400" />
+        ) : (
+          <ChevronDown className="w-5 h-5 text-gray-400" />
+        )}
       </button>
 
       {expanded && (
@@ -484,7 +510,7 @@ export default function LeadDetailPage() {
         body: JSON.stringify({ stage: newStage }),
       })
       if (!res.ok) throw new Error('Failed to update stage')
-      setLead((prev) => prev ? { ...prev, stage: newStage } : prev)
+      setLead((prev) => (prev ? { ...prev, stage: newStage } : prev))
       setEditingStage(false)
       showToast.success('Stage updated')
     } catch {
@@ -511,10 +537,16 @@ export default function LeadDetailPage() {
           <p className="text-gray-900 font-semibold mb-2">Error Loading Profile</p>
           <p className="text-gray-600 mb-4">{error}</p>
           <div className="flex gap-3 justify-center">
-            <button onClick={() => router.back()} className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+            <button
+              onClick={() => router.back()}
+              className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+            >
               Go Back
             </button>
-            <button onClick={fetchLead} className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+            <button
+              onClick={fetchLead}
+              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+            >
               Try Again
             </button>
           </div>
@@ -524,15 +556,24 @@ export default function LeadDetailPage() {
   }
 
   const stages = [
-    'NEW_LEAD', 'DEMO_SCHEDULED', 'DEMO_COMPLETED', 'OFFER_SENT',
-    'NEGOTIATING', 'PAYMENT_PLAN_CREATED', 'ENROLLED', 'LOST',
+    'NEW_LEAD',
+    'DEMO_SCHEDULED',
+    'DEMO_COMPLETED',
+    'OFFER_SENT',
+    'NEGOTIATING',
+    'PAYMENT_PLAN_CREATED',
+    'ENROLLED',
+    'LOST',
   ]
 
   return (
     <div className="space-y-6 max-w-6xl mx-auto">
       {/* Breadcrumb + Back */}
       <div className="flex items-center gap-2 text-sm text-gray-500">
-        <Link href="/counselor/leads" className="flex items-center gap-1 hover:text-indigo-600 transition-colors">
+        <Link
+          href="/counselor/leads"
+          className="flex items-center gap-1 hover:text-indigo-600 transition-colors"
+        >
           <ArrowLeft className="w-4 h-4" /> Pipeline
         </Link>
         <span>/</span>
@@ -555,12 +596,18 @@ export default function LeadDetailPage() {
               </div>
               <div className="flex items-center gap-4 text-sm text-gray-600 flex-wrap">
                 {lead.phone && (
-                  <a href={`tel:${lead.phone}`} className="flex items-center gap-1 hover:text-indigo-600">
+                  <a
+                    href={`tel:${lead.phone}`}
+                    className="flex items-center gap-1 hover:text-indigo-600"
+                  >
                     <Phone className="w-3.5 h-3.5" /> {lead.phone}
                   </a>
                 )}
                 {lead.email && (
-                  <a href={`mailto:${lead.email}`} className="flex items-center gap-1 hover:text-indigo-600">
+                  <a
+                    href={`mailto:${lead.email}`}
+                    className="flex items-center gap-1 hover:text-indigo-600"
+                  >
                     <Mail className="w-3.5 h-3.5" /> {lead.email}
                   </a>
                 )}
@@ -569,10 +616,15 @@ export default function LeadDetailPage() {
                 </span>
               </div>
               <div className="flex items-center gap-4 text-xs text-gray-400 mt-2">
-                <span>Added {formatDistanceToNow(new Date(lead.createdAt), { addSuffix: true })}</span>
+                <span>
+                  Added {formatDistanceToNow(new Date(lead.createdAt), { addSuffix: true })}
+                </span>
                 {lead.source && <span>Source: {lead.source.replace(/_/g, ' ')}</span>}
                 {lead.lastContactedAt && (
-                  <span>Last contact: {formatDistanceToNow(new Date(lead.lastContactedAt), { addSuffix: true })}</span>
+                  <span>
+                    Last contact:{' '}
+                    {formatDistanceToNow(new Date(lead.lastContactedAt), { addSuffix: true })}
+                  </span>
                 )}
               </div>
             </div>
@@ -605,7 +657,13 @@ export default function LeadDetailPage() {
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-medium text-gray-500">PIPELINE STAGE</span>
             {!editingStage ? (
-              <button onClick={() => { setEditingStage(true); setNewStage(lead.stage) }} className="text-xs text-indigo-600 hover:text-indigo-800 font-medium">
+              <button
+                onClick={() => {
+                  setEditingStage(true)
+                  setNewStage(lead.stage)
+                }}
+                className="text-xs text-indigo-600 hover:text-indigo-800 font-medium"
+              >
                 Change Stage
               </button>
             ) : (
@@ -616,33 +674,40 @@ export default function LeadDetailPage() {
                   className="text-xs border border-gray-300 rounded-lg px-2 py-1"
                 >
                   {stages.map((s) => (
-                    <option key={s} value={s}>{s.replace(/_/g, ' ')}</option>
+                    <option key={s} value={s}>
+                      {s.replace(/_/g, ' ')}
+                    </option>
                   ))}
                 </select>
                 <button onClick={handleStageUpdate} className="text-green-600 hover:text-green-800">
                   <CheckCircle2 className="w-4 h-4" />
                 </button>
-                <button onClick={() => setEditingStage(false)} className="text-gray-400 hover:text-gray-600">
+                <button
+                  onClick={() => setEditingStage(false)}
+                  className="text-gray-400 hover:text-gray-600"
+                >
                   <X className="w-4 h-4" />
                 </button>
               </div>
             )}
           </div>
           <div className="flex gap-1">
-            {stages.filter(s => s !== 'LOST').map((stage, i) => {
-              const currentIdx = stages.indexOf(lead.stage)
-              const isActive = i <= currentIdx && lead.stage !== 'LOST'
-              const isCurrent = stage === lead.stage
-              return (
-                <div key={stage} className="flex-1">
-                  <div
-                    className={`h-2 rounded-full transition-colors ${
-                      isCurrent ? 'bg-indigo-600' : isActive ? 'bg-indigo-300' : 'bg-gray-200'
-                    }`}
-                  />
-                </div>
-              )
-            })}
+            {stages
+              .filter((s) => s !== 'LOST')
+              .map((stage, i) => {
+                const currentIdx = stages.indexOf(lead.stage)
+                const isActive = i <= currentIdx && lead.stage !== 'LOST'
+                const isCurrent = stage === lead.stage
+                return (
+                  <div key={stage} className="flex-1">
+                    <div
+                      className={`h-2 rounded-full transition-colors ${
+                        isCurrent ? 'bg-indigo-600' : isActive ? 'bg-indigo-300' : 'bg-gray-200'
+                      }`}
+                    />
+                  </div>
+                )
+              })}
           </div>
         </div>
       </div>
@@ -655,20 +720,21 @@ export default function LeadDetailPage() {
           <SessionNotesSection leadId={lead.id} initialNotes={lead.notes || []} />
 
           {/* Activity Timeline */}
-          <ActivityTimeline
-            communications={lead.communications || []}
-            tasks={lead.tasks || []}
-          />
+          <ActivityTimeline communications={lead.communications || []} tasks={lead.tasks || []} />
         </div>
 
         {/* Right Column: Sidebar */}
         <div className="space-y-6">
           {/* Quick Stats */}
           <div className="bg-white rounded-xl border border-gray-200 p-5">
-            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Quick Stats</h3>
+            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
+              Quick Stats
+            </h3>
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>
-                <p className="text-2xl font-bold text-indigo-600">{lead._count?.communications || 0}</p>
+                <p className="text-2xl font-bold text-indigo-600">
+                  {lead._count?.communications || 0}
+                </p>
                 <p className="text-xs text-gray-500">Messages</p>
               </div>
               <div>
@@ -703,17 +769,23 @@ export default function LeadDetailPage() {
             <div className="bg-white rounded-xl border border-gray-200 p-5">
               <div className="flex items-center gap-2 mb-4">
                 <DollarSign className="w-5 h-5 text-green-600" />
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Fee Plans</h3>
+                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+                  Fee Plans
+                </h3>
               </div>
               {lead.feePlans.map((plan) => (
                 <div key={plan.id} className="mb-3 last:mb-0">
                   <div className="flex justify-between items-center mb-1">
                     <span className="text-sm font-medium text-gray-900">{plan.courseName}</span>
-                    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${
-                      plan.status === 'PAID' ? 'bg-green-100 text-green-700' :
-                      plan.status === 'PARTIAL' ? 'bg-yellow-100 text-yellow-700' :
-                      'bg-gray-100 text-gray-600'
-                    }`}>
+                    <span
+                      className={`text-xs px-2 py-0.5 rounded-full font-medium ${
+                        plan.status === 'PAID'
+                          ? 'bg-green-100 text-green-700'
+                          : plan.status === 'PARTIAL'
+                            ? 'bg-yellow-100 text-yellow-700'
+                            : 'bg-gray-100 text-gray-600'
+                      }`}
+                    >
                       {plan.status}
                     </span>
                   </div>
@@ -724,7 +796,9 @@ export default function LeadDetailPage() {
                   <div className="w-full bg-gray-200 rounded-full h-1.5 mt-2">
                     <div
                       className="bg-green-500 h-1.5 rounded-full"
-                      style={{ width: `${(Number(plan.amountPaid) / Number(plan.totalFee)) * 100}%` }}
+                      style={{
+                        width: `${(Number(plan.amountPaid) / Number(plan.totalFee)) * 100}%`,
+                      }}
                     />
                   </div>
                 </div>
@@ -740,40 +814,67 @@ export default function LeadDetailPage() {
             <div className="bg-white rounded-xl border border-gray-200 p-5">
               <div className="flex items-center gap-2 mb-4">
                 <Star className="w-5 h-5 text-amber-500" />
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Active Offers</h3>
+                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+                  Active Offers
+                </h3>
               </div>
-              {lead.offers.filter(o => o.isActive).map((offer) => (
-                <div key={offer.id} className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-3 mb-2 last:mb-0">
-                  <p className="text-sm font-medium text-gray-900">{offer.offerName}</p>
-                  <div className="flex items-center gap-2 mt-1">
-                    <span className="text-xs text-gray-400 line-through">₹{Number(offer.originalPrice).toLocaleString('en-IN')}</span>
-                    <span className="text-sm font-bold text-green-600">₹{Number(offer.finalPrice).toLocaleString('en-IN')}</span>
+              {lead.offers
+                .filter((o) => o.isActive)
+                .map((offer) => (
+                  <div
+                    key={offer.id}
+                    className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-3 mb-2 last:mb-0"
+                  >
+                    <p className="text-sm font-medium text-gray-900">{offer.offerName}</p>
+                    <div className="flex items-center gap-2 mt-1">
+                      <span className="text-xs text-gray-400 line-through">
+                        ₹{Number(offer.originalPrice).toLocaleString('en-IN')}
+                      </span>
+                      <span className="text-sm font-bold text-green-600">
+                        ₹{Number(offer.finalPrice).toLocaleString('en-IN')}
+                      </span>
+                    </div>
+                    <p className="text-xs text-gray-500 mt-1">
+                      Expires {format(new Date(offer.validUntil), 'MMM d, yyyy')}
+                    </p>
                   </div>
-                  <p className="text-xs text-gray-500 mt-1">
-                    Expires {format(new Date(offer.validUntil), 'MMM d, yyyy')}
-                  </p>
-                </div>
-              ))}
+                ))}
             </div>
           )}
 
           {/* Pending Tasks */}
-          {lead.tasks && lead.tasks.filter(t => t.status !== 'COMPLETED').length > 0 && (
+          {lead.tasks && lead.tasks.filter((t) => t.status !== 'COMPLETED').length > 0 && (
             <div className="bg-white rounded-xl border border-gray-200 p-5">
-              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Pending Tasks</h3>
-              {lead.tasks.filter(t => t.status !== 'COMPLETED').slice(0, 5).map((task) => (
-                <div key={task.id} className="flex items-center gap-3 py-2 border-b border-gray-100 last:border-0">
-                  <div className={`w-2 h-2 rounded-full ${
-                    task.priority === 'URGENT' ? 'bg-red-500' :
-                    task.priority === 'HIGH' ? 'bg-orange-500' :
-                    task.priority === 'MEDIUM' ? 'bg-yellow-500' : 'bg-gray-400'
-                  }`} />
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm text-gray-900 truncate">{task.title}</p>
-                    <p className="text-xs text-gray-400">{format(new Date(task.dueDate), 'MMM d')}</p>
+              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                Pending Tasks
+              </h3>
+              {lead.tasks
+                .filter((t) => t.status !== 'COMPLETED')
+                .slice(0, 5)
+                .map((task) => (
+                  <div
+                    key={task.id}
+                    className="flex items-center gap-3 py-2 border-b border-gray-100 last:border-0"
+                  >
+                    <div
+                      className={`w-2 h-2 rounded-full ${
+                        task.priority === 'URGENT'
+                          ? 'bg-red-500'
+                          : task.priority === 'HIGH'
+                            ? 'bg-orange-500'
+                            : task.priority === 'MEDIUM'
+                              ? 'bg-yellow-500'
+                              : 'bg-gray-400'
+                      }`}
+                    />
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm text-gray-900 truncate">{task.title}</p>
+                      <p className="text-xs text-gray-400">
+                        {format(new Date(task.dueDate), 'MMM d')}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
           )}
         </div>

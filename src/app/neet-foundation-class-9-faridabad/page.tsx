@@ -33,7 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 9 in Faridabad | Early NEET Preparation',
-    description: 'Start NEET preparation from Class 9 in Faridabad. 4-year head start, NCERT foundation, board + NEET dual prep. Expert faculty at Sector 17 center. Book free demo.',
+    description:
+      'Start NEET preparation from Class 9 in Faridabad. 4-year head start, NCERT foundation, board + NEET dual prep. Expert faculty at Sector 17 center. Book free demo.',
   },
 }
 
@@ -147,7 +148,11 @@ export default function NEETFoundationClass9FaridabadPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+        knowsAbout={[
+          'NEET Faridabad',
+          'NEET Biology Faridabad',
+          'Medical entrance coaching Faridabad',
+        ]}
       />
       <script
         type="application/ld+json"

@@ -91,22 +91,18 @@ export function ReferralInput({ onReferralApplied, onReferralRemoved }: Referral
               )}
             </button>
           </div>
-{error && (
-              <div
-                className="flex items-start gap-2 text-red-600 text-sm animate-fadeInUp"
-              >
-                <XCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>{error}</span>
-              </div>
-            )}
-<p className="text-xs text-gray-500 mt-3">
+          {error && (
+            <div className="flex items-start gap-2 text-red-600 text-sm animate-fadeInUp">
+              <XCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
+              <span>{error}</span>
+            </div>
+          )}
+          <p className="text-xs text-gray-500 mt-3">
             Get ₹500 off when you use a friend's referral code!
           </p>
         </div>
       ) : (
-        <div
-          className="bg-white rounded-lg p-4 border-2 border-green-600 animate-fadeInUp"
-        >
+        <div className="bg-white rounded-lg p-4 border-2 border-green-600 animate-fadeInUp">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />

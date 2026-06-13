@@ -135,8 +135,7 @@ export default function OnlineBiologyClassesNRIPage() {
       <section className="relative overflow-hidden bg-gradient-to-r from-orange-500 to-red-500 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
-          <div className="max-w-4xl animate-fadeInUp"
-          >
+          <div className="max-w-4xl animate-fadeInUp">
             <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <Globe className="h-4 w-4" />
               10,000+ NRI Students Across 40+ Countries
@@ -150,7 +149,9 @@ export default function OnlineBiologyClassesNRIPage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20biology%20classes%20nri.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20biology%20classes%20nri.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg bg-yellow-500 px-8 py-3 font-semibold text-black shadow-lg transition hover:bg-yellow-400"
               >
                 <Play className="h-5 w-5" />
@@ -178,7 +179,9 @@ export default function OnlineBiologyClassesNRIPage() {
               { icon: Trophy, value: '98%', label: 'Success Rate' },
               { icon: Star, value: '5.0/5', label: 'Parent Rating' },
             ].map((stat, index) => (
-              <div key={index} className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
+              <div
+                key={index}
+                className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
               >
                 <stat.icon className="mx-auto mb-3 h-10 w-10 text-orange-500" />
                 <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
@@ -201,8 +204,7 @@ export default function OnlineBiologyClassesNRIPage() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {nriRegions.map((region, index) => (
-              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <div className="mb-3 flex items-center gap-3">
                   <MapPin className="h-6 w-6 text-orange-500" />
                   <h3 className="text-lg font-semibold text-gray-900">{region.name}</h3>
@@ -237,8 +239,7 @@ export default function OnlineBiologyClassesNRIPage() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
-              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <feature.icon className="mb-4 h-10 w-10 text-orange-500" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
@@ -272,7 +273,9 @@ export default function OnlineBiologyClassesNRIPage() {
                 'UK GCSE/A-Level to Indian medical entrance',
                 'Middle East curriculum alignment',
               ].map((item, index) => (
-                <div key={index} className="flex items-center gap-3 rounded-lg bg-white p-4 shadow-md animate-fadeInUp"
+                <div
+                  key={index}
+                  className="flex items-center gap-3 rounded-lg bg-white p-4 shadow-md animate-fadeInUp"
                 >
                   <CheckCircle className="h-5 w-5 flex-shrink-0 text-green-600" />
                   <span className="text-gray-700">{item}</span>
@@ -309,8 +312,7 @@ export default function OnlineBiologyClassesNRIPage() {
                 works: 'All timezones • Working parents',
               },
             ].map((batch, index) => (
-              <div key={index} className="rounded-xl bg-orange-50 p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-orange-50 p-6 shadow-lg animate-fadeInUp">
                 <Clock className="mb-4 h-10 w-10 text-orange-500" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{batch.name}</h3>
                 <p className="mb-2 font-medium text-orange-600">{batch.time}</p>
@@ -330,8 +332,7 @@ export default function OnlineBiologyClassesNRIPage() {
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
@@ -391,7 +392,9 @@ export default function OnlineBiologyClassesNRIPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20biology%20classes%20nri.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20online%20biology%20classes%20nri.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg bg-yellow-500 px-8 py-3 font-semibold text-black shadow-lg transition hover:bg-yellow-400"
               >
                 <Play className="h-5 w-5" />

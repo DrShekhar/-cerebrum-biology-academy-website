@@ -9,12 +9,7 @@
     {
       "type": "MCQ",
       "question": "Using the Nernst equation, calculate the equilibrium potential for potassium (K+) at 37°C given intracellular [K+] = 140 mM and extracellular [K+] = 5 mM. (Use RT/F = 26.7 mV at 37°C)",
-      "options": [
-        "-90 mV",
-        "-70 mV",
-        "-60 mV",
-        "-120 mV"
-      ],
+      "options": ["-90 mV", "-70 mV", "-60 mV", "-120 mV"],
       "correctAnswer": "A",
       "explanation": "The Nernst equation for a monovalent cation is: E = (RT/zF) × ln([ion]out/[ion]in). At 37°C, RT/F = 26.7 mV. For K+ (z = +1): EK = 26.7 mV × ln(5/140) = 26.7 mV × ln(0.0357) = 26.7 × (-3.33) = -89 mV, approximately -90 mV. This is very close to the typical resting membrane potential of neurons (-70 mV), reflecting the dominant role of K+ leak channels in setting the resting potential. The slight deviation from EK occurs because the membrane has some permeability to Na+ and Cl-. The Goldman-Hodgkin-Katz equation accounts for all permeable ions. In clinical contexts, hyperkalemia (elevated extracellular K+) depolarizes neurons because EK becomes less negative.",
       "isOlympiad": true,
@@ -49,12 +44,7 @@
     {
       "type": "MCQ",
       "question": "The Goldman-Hodgkin-Katz (GHK) equation predicts membrane potential based on ion permeabilities. At rest, a typical neuron has PK:PNa:PCl = 1:0.04:0.45. If PNa suddenly increases to 20× PK (as during peak action potential), which value best approximates the new membrane potential?",
-      "options": [
-        "-55 mV",
-        "-90 mV (near EK)",
-        "+55 mV (near ENa)",
-        "0 mV"
-      ],
+      "options": ["-55 mV", "-90 mV (near EK)", "+55 mV (near ENa)", "0 mV"],
       "correctAnswer": "C",
       "explanation": "The GHK voltage equation calculates membrane potential as a weighted average of equilibrium potentials for all permeable ions, with weighting determined by relative permeabilities. At rest, the high K+ permeability dominates, pulling Vm near EK (-90 mV). During the peak of the action potential, voltage-gated Na+ channels open massively, increasing PNa to approximately 20× PK. With PNa now dominant, the membrane potential shifts toward ENa (+55 mV for typical intracellular [Na+] = 15 mM and extracellular [Na+] = 145 mM). The overshoot of the action potential (typically reaching +30 to +40 mV) doesn't quite reach ENa because K+ permeability is not zero and some K+ channels are beginning to open. This demonstrates that the action potential is fundamentally a transient shift in the dominant ionic permeability from K+ to Na+ and back.",
       "isOlympiad": true,
@@ -1809,12 +1799,7 @@
     {
       "type": "MCQ",
       "question": "The Nernst equation uses the ratio of extracellular to intracellular ion concentrations. For a divalent cation like Ca2+ ([Ca2+]out = 2 mM, [Ca2+]in = 100 nM), what is the approximate equilibrium potential ECa at 37°C?",
-      "options": [
-        "+65 mV",
-        "+200 mV",
-        "+30 mV",
-        "+128 mV"
-      ],
+      "options": ["+65 mV", "+200 mV", "+30 mV", "+128 mV"],
       "correctAnswer": "D",
       "explanation": "The Nernst equation for Ca2+ (z = +2) is: ECa = (RT/zF) × ln([Ca2+]out/[Ca2+]in) = (26.7/2) × ln(2 mM / 0.0001 mM) = 13.35 × ln(20,000) = 13.35 × 9.90 = +132 mV, approximately +128 mV. The key points: (1) Because Ca2+ is divalent (z = 2), the prefactor is halved compared to monovalent ions (26.7/2 = 13.35 mV instead of 26.7 mV). (2) The enormous concentration gradient (20,000:1 ratio, compared to ~30:1 for Na+) produces a very positive equilibrium potential. This means the electrochemical driving force on Ca2+ is very large at all physiological membrane potentials — both the concentration gradient and electrical gradient drive Ca2+ inward. This is why even brief opening of Ca2+ channels produces significant Ca2+ influx, and why intracellular Ca2+ is such an effective signaling molecule (small absolute changes represent large relative changes from the 100 nM baseline).",
       "isOlympiad": true,
@@ -2189,12 +2174,7 @@
     {
       "type": "DATA_INTERPRETATION",
       "question": "A neuron at rest has the following ion concentrations: [K+]in = 140 mM, [K+]out = 5 mM, [Na+]in = 15 mM, [Na+]out = 145 mM. The membrane has relative permeabilities PK:PNa = 1:0.04. Using the simplified GHK equation (ignoring Cl-): Vm = 61.5 log[(PK[K+]out + PNa[Na+]out)/(PK[K+]in + PNa[Na+]in)], what is the predicted resting membrane potential at 37°C?",
-      "options": [
-        "-90 mV",
-        "-66 mV",
-        "-55 mV",
-        "-86 mV"
-      ],
+      "options": ["-90 mV", "-66 mV", "-55 mV", "-86 mV"],
       "correctAnswer": "B",
       "explanation": "Using the simplified GHK equation at 37°C (using log base 10 with 61.5 mV prefactor): Vm = 61.5 × log[(1×5 + 0.04×145) / (1×140 + 0.04×15)] = 61.5 × log[(5 + 5.8) / (140 + 0.6)] = 61.5 × log[10.8 / 140.6] = 61.5 × log[0.0768] = 61.5 × (-1.115) = -68.6 mV, approximately -66 to -69 mV. This is close to the typical neuronal resting potential of -70 mV. The calculation shows how the small Na+ permeability (PNa = 0.04 × PK) pulls the membrane potential positive from the K+ equilibrium potential (EK = 61.5 × log[5/140] = -89 mV) toward ENa. If PNa were zero, Vm would equal EK (-89 mV). The approximately -20 mV difference between EK and the resting Vm is due to the small but non-zero Na+ permeability, which provides a tonic depolarizing influence balanced by K+ efflux through leak channels.",
       "isOlympiad": true,
@@ -2289,12 +2269,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the resting membrane potential:\nS1: The resting membrane potential is primarily established by K+ leak channels (Kir and K2P families) that make the membrane selectively permeable to K+.\nS2: The Na+/K+ ATPase directly generates the resting potential by pumping ions against their gradients.\nS3: At rest, the membrane potential (-70 mV) is between EK (-90 mV) and ENa (+55 mV), closer to EK because K+ permeability dominates.\nS4: The Donnan equilibrium, created by impermeant intracellular anions (proteins, nucleic acids), contributes to the resting potential.",
-      "options": [
-        "TTTT",
-        "TFTT",
-        "TFTF",
-        "FTTT"
-      ],
+      "options": ["TTTT", "TFTT", "TFTF", "FTTT"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: K+ leak channels, including inward rectifier K+ channels (Kir2.x family) and two-pore domain K+ channels (K2P/TWIK/TREK/TASK), maintain the high resting K+ permeability that dominates the resting membrane potential. S2 is FALSE: The Na+/K+ ATPase indirectly maintains the resting potential by sustaining the ion concentration gradients, but its direct electrogenic contribution is only about -5 to -10 mV. The resting potential is generated by passive ion flow through channels, not by the pump directly. If the pump is acutely inhibited (e.g., by ouabain), the resting potential changes only slightly in the short term because the pre-existing gradients persist. S3 is TRUE: The resting Vm sits between EK and ENa, much closer to EK (reflecting PK >> PNa at rest). The small Na+ permeability pulls Vm slightly positive from EK. S4 is TRUE: Large impermeant intracellular anions (proteins, RNA, organic phosphates) create a Donnan equilibrium that contributes to the asymmetric ion distribution and the negative intracellular potential.",
       "isOlympiad": true,
@@ -2309,12 +2284,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about neurotransmitter systems:\nS1: Glutamate is the principal excitatory neurotransmitter in the mammalian CNS.\nS2: Dopamine is synthesized from tyrosine via the pathway: tyrosine → L-DOPA (by tyrosine hydroxylase) → dopamine (by DOPA decarboxylase).\nS3: Serotonin (5-HT) is synthesized from tryptophan and is primarily produced in the raphe nuclei of the brainstem.\nS4: Norepinephrine is synthesized from acetylcholine by the enzyme norepinephrine transferase.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Glutamate is the most abundant excitatory neurotransmitter in the mammalian CNS, acting through ionotropic receptors (AMPA, NMDA, kainate) and metabotropic receptors (mGluR1-8). Approximately 80% of cortical neurons are glutamatergic. S2 is TRUE: Dopamine biosynthesis begins with tyrosine, which is hydroxylated by tyrosine hydroxylase (TH, the rate-limiting enzyme) to L-DOPA, then decarboxylated by aromatic L-amino acid decarboxylase (AADC/DOPA decarboxylase) to dopamine. TH requires tetrahydrobiopterin (BH4) as a cofactor. S3 is TRUE: Serotonin (5-hydroxytryptamine, 5-HT) is synthesized from tryptophan by tryptophan hydroxylase (TPH, the rate-limiting enzyme) to 5-hydroxytryptophan, then by AADC to serotonin. CNS serotonin neurons are concentrated in the raphe nuclei of the brainstem and project widely throughout the brain. S4 is FALSE: Norepinephrine is synthesized from dopamine by dopamine beta-hydroxylase (DBH) inside synaptic vesicles. It is NOT derived from acetylcholine.",
       "isOlympiad": true,
@@ -2329,12 +2299,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about voltage-gated ion channel structure:\nS1: Voltage-gated Na+ and Ca2+ channels are single polypeptide chains with four homologous domains (I-IV), each containing six transmembrane segments (S1-S6).\nS2: The S4 segment in each domain serves as the voltage sensor, containing positively charged arginine/lysine residues at every third position.\nS3: The selectivity filter of voltage-gated Na+ channels is formed by the P-loops between S5 and S6 of each domain, with the DEKA motif determining Na+ selectivity.\nS4: Voltage-gated K+ channels have the identical four-domain single-polypeptide structure as Na+ channels.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Voltage-gated Na+ channels (Nav) and Ca2+ channels (Cav) are single alpha subunits (~260 kDa for Nav, ~250 kDa for Cav) containing four homologous domains (I-IV), each with six transmembrane alpha-helices (S1-S6). These four domains fold to form the ion-conducting pore. Auxiliary subunits (beta subunits for Nav, alpha2-delta/beta/gamma for Cav) modulate function. S2 is TRUE: The S4 segment is the primary voltage sensor in all voltage-gated channels. It contains 4-8 positively charged residues (arginine or lysine) at every third position, separated by hydrophobic residues. Upon depolarization, these positive charges move outward through the electric field (via a 'sliding helix' or 'helical screw' mechanism), triggering conformational changes that open the pore. S3 is TRUE: Na+ selectivity is determined by the DEKA (Asp-Glu-Lys-Ala) ring formed by one residue from each P-loop. Ca2+ channels have EEEE. S4 is FALSE: Kv channels are tetramers of four SEPARATE subunits, each with one domain of 6 TM segments.",
       "isOlympiad": true,
@@ -2349,12 +2314,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about synaptic plasticity:\nS1: Long-term potentiation (LTP) involves increased AMPA receptor density at the postsynaptic membrane and increased single-channel conductance.\nS2: Long-term depression (LTD) at hippocampal synapses requires modest, sustained Ca2+ elevations that preferentially activate calcineurin (PP2B), leading to AMPA receptor internalization.\nS3: Spike-timing-dependent plasticity (STDP) dictates that LTP occurs when the presynaptic spike follows the postsynaptic spike.\nS4: Late-phase LTP (L-LTP) requires CREB-dependent gene transcription and new protein synthesis.",
-      "options": [
-        "TTFT",
-        "TTTF",
-        "TTTT",
-        "TFTT"
-      ],
+      "options": ["TTFT", "TTTF", "TTTT", "TFTT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: E-LTP involves both increased AMPA receptor number at synapses (through exocytosis of intracellular GluA1-containing AMPA-Rs and lateral diffusion into the PSD) and increased single-channel conductance (through CaMKII phosphorylation of GluA1 at Ser831). Together, these increase the postsynaptic response to glutamate. S2 is TRUE: LTD is triggered by low-frequency stimulation (1 Hz) producing modest, sustained Ca2+ elevation that preferentially activates the phosphatase calcineurin (PP2B, which has higher Ca2+ affinity than CaMKII). Calcineurin dephosphorylates inhibitor-1, activating PP1, which dephosphorylates AMPA receptor subunits, promoting clathrin-mediated endocytosis and removal of AMPA-Rs from the synapse. S3 is FALSE: STDP dictates that LTP occurs when the presynaptic spike PRECEDES the postsynaptic spike (pre→post, within ~10-20 ms), while LTD occurs when the postsynaptic spike precedes the presynaptic spike (post→pre). S4 is TRUE: L-LTP requires PKA activation → CREB phosphorylation → transcription of genes including Arc, BDNF, and Homer → new protein synthesis for structural synaptic changes.",
       "isOlympiad": true,
@@ -2369,12 +2329,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about glial cells and their roles in synaptic function:\nS1: Astrocytes remove excess glutamate from the synaptic cleft via EAAT1/EAAT2 transporters and convert it to glutamine using glutamine synthetase (the glutamate-glutamine cycle).\nS2: Oligodendrocytes form myelin in the CNS, with each oligodendrocyte myelinating segments of multiple different axons.\nS3: Schwann cells in the PNS each myelinate multiple axons, similar to oligodendrocytes.\nS4: Microglia are the resident immune cells of the CNS and play roles in synaptic pruning during development through complement-mediated phagocytosis.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFTT",
-        "TTTF"
-      ],
+      "options": ["TTFT", "TTTT", "TFTT", "TTTF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Astrocytes are essential for glutamate homeostasis. They express EAAT1 (GLAST) and EAAT2 (GLT-1) transporters that remove glutamate from the synaptic cleft. Inside astrocytes, glutamine synthetase converts glutamate to glutamine, which is released and taken up by neurons to regenerate glutamate (and GABA via GAD). This cycle prevents excitotoxicity and maintains neurotransmitter pools. S2 is TRUE: Each oligodendrocyte extends multiple processes that form myelin segments (internodes) around different axons — a single oligodendrocyte can myelinate up to 50 axon segments. S3 is FALSE: Unlike oligodendrocytes, each Schwann cell myelinates only a SINGLE internode on a SINGLE axon. The one-to-one relationship means that PNS nerve injury (requiring remyelination) involves Schwann cell proliferation and sequential remyelination. Non-myelinating Schwann cells (Remak cells) ensheath multiple small-diameter axons without myelination. S4 is TRUE: Microglia prune excess synapses during development by recognizing complement proteins (C1q, C3) deposited on 'weak' synapses and phagocytosing them.",
       "isOlympiad": true,
@@ -2389,12 +2344,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the action potential:\nS1: The threshold for action potential initiation is typically about -55 mV, and once threshold is reached, the all-or-none response occurs regardless of stimulus intensity.\nS2: The overshoot phase (positive membrane potential) occurs because the membrane potential approaches ENa (+55 mV) when Na+ permeability dominates.\nS3: The undershoot (afterhyperpolarization) following repolarization occurs because delayed rectifier K+ channels remain open transiently, driving Vm below resting potential toward EK.\nS4: The amplitude of the action potential decreases as it propagates along the axon due to current leakage.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Action potentials follow the all-or-none principle. If a depolarizing stimulus reaches threshold (typically -55 mV, where the regenerative Na+ positive feedback is triggered), a full action potential occurs. If below threshold, only passive spread occurs and no AP is generated. The amplitude and shape of the AP are independent of stimulus strength — information is encoded in firing frequency, not AP amplitude. S2 is TRUE: At the peak of the action potential, PNa >> PK, so Vm approaches ENa (+55 mV). The overshoot typically reaches +30 to +40 mV (not quite ENa because PK is not zero and Na+ channels begin inactivating). S3 is TRUE: Delayed rectifier K+ channels (Kv2.1, Kv3.x) have slow deactivation kinetics, so they remain open after the membrane has repolarized to rest, driving Vm toward EK (-90 mV) and producing the afterhyperpolarization (AHP). S4 is FALSE: Action potentials propagate without decrement because the regenerative Na+ positive feedback fully regenerates the signal at each point along the axon.",
       "isOlympiad": true,
@@ -2409,12 +2359,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about AMPA receptors:\nS1: AMPA receptors are tetrameric ionotropic glutamate receptors composed of GluA1-4 subunits that mediate fast excitatory transmission.\nS2: Most AMPA receptors in the adult brain contain the GluA2 subunit, which undergoes RNA editing (Q/R site) that renders the channel impermeable to Ca2+.\nS3: AMPA receptors lacking GluA2 are Ca2+-permeable and are important for certain forms of synaptic plasticity.\nS4: AMPA receptors have slower kinetics than NMDA receptors and mediate the late component of the EPSC.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: AMPA receptors are tetramers assembled from GluA1-4 (also called GluR1-4 or GluRA-D) subunits, and they mediate the majority of fast excitatory synaptic transmission in the CNS. They have rapid activation (sub-millisecond) and deactivation kinetics. S2 is TRUE: ~99% of GluA2 mRNA undergoes adenosine-to-inosine RNA editing by ADAR2 at the Q/R site in the channel pore, converting a glutamine to a positively charged arginine. This arginine introduces electrostatic repulsion that blocks Ca2+ permeation and makes the channel linearly conducting (ohmic). Most adult AMPA receptors contain GluA2 and are Ca2+-impermeable. S3 is TRUE: A subset of AMPA receptors lacks GluA2 (e.g., GluA1 homomers), making them Ca2+-permeable (CP-AMPARs). These are important in some forms of plasticity, particularly in interneurons and during early LTP. S4 is FALSE: AMPA receptors have FASTER kinetics than NMDA receptors. AMPA receptors mediate the fast component of the EPSC (rise time <1 ms, decay <5 ms), while NMDA receptors mediate the slow component (decay 50-200 ms).",
       "isOlympiad": true,
@@ -2429,12 +2374,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about neurotransmitter removal from the synaptic cleft:\nS1: Acetylcholine is terminated by enzymatic degradation via acetylcholinesterase in the cleft.\nS2: Glutamate is removed primarily by astrocytic EAAT transporters (EAAT1/EAAT2).\nS3: Monoamines (dopamine, norepinephrine, serotonin) are removed primarily by reuptake via specific Na+-dependent plasma membrane transporters (DAT, NET, SERT).\nS4: Neuropeptides are removed by rapid reuptake through specific peptide transporters.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: ACh is unique among neurotransmitters in that its primary termination mechanism is enzymatic degradation in the synaptic cleft by AChE (acetylcholinesterase), which hydrolyzes ACh to choline and acetate. Choline is then recycled by the presynaptic high-affinity choline transporter. S2 is TRUE: Glutamate is removed primarily by EAAT2/GLT-1 on astrocytes (~90% of clearance in forebrain) and EAAT1/GLAST, with smaller contributions from neuronal EAAT3. These are secondary active transporters driven by Na+/H+/K+ gradients. S3 is TRUE: Monoamines are cleared primarily by reuptake through specific SLC6 family transporters: DAT (SLC6A3) for dopamine, NET (SLC6A2) for norepinephrine, SERT (SLC6A4) for serotonin. These are the targets of many psychoactive drugs (cocaine blocks DAT; SSRIs block SERT). S4 is FALSE: Neuropeptides have NO specific reuptake transporters. They are terminated by extracellular peptidases (enkephalinases, aminopeptidases, neprilysin) and by diffusion away from the release site.",
       "isOlympiad": true,
@@ -2449,12 +2389,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about neuronal ion gradients:\nS1: The Na+ concentration gradient (high outside, low inside) is maintained by the Na+/K+ ATPase.\nS2: The K+ concentration gradient (high inside, low outside) provides the primary driving force for the resting membrane potential.\nS3: The Ca2+ concentration gradient is the steepest of all ions in neurons, with extracellular [Ca2+] approximately 10,000 times higher than resting intracellular [Ca2+].\nS4: During a single action potential, approximately 10% of the intracellular Na+ is exchanged, significantly changing the concentration gradient.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: The Na+/K+ ATPase (3 Na+ out, 2 K+ in per ATP) maintains the transmembrane Na+ gradient ([Na+]out ~145 mM, [Na+]in ~15 mM) and K+ gradient ([K+]in ~140 mM, [K+]out ~5 mM). S2 is TRUE: The K+ gradient, combined with the high resting K+ permeability through K2P and Kir leak channels, is the primary determinant of the resting membrane potential. The GHK equation shows Vm sits closest to EK because PK >> PNa at rest. S3 is TRUE: Resting intracellular [Ca2+] is approximately 50-100 nM (0.0001 mM), while extracellular [Ca2+] is approximately 1.5-2 mM — a gradient of approximately 20,000-fold. This enormous gradient is maintained by PMCA, NCX, SERCA, and mitochondrial uptake. Even modest Ca2+ channel opening produces significant relative Ca2+ increases. S4 is FALSE: A single action potential moves only about 1 picomole of Na+ per cm² of membrane, changing intracellular [Na+] by less than 0.001%. The Na+/K+ ATPase can easily restore this. The gradients are essentially unchanged by individual or even hundreds of action potentials.",
       "isOlympiad": true,
@@ -2469,12 +2404,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about synaptic vesicle pools:\nS1: The readily releasable pool (RRP) consists of docked and primed vesicles at the active zone, comprising about 1-2% of total vesicles.\nS2: The recycling pool is replenished by clathrin-mediated endocytosis and provides vesicles for sustained moderate-frequency transmission.\nS3: The reserve pool, comprising the majority of vesicles (~80-90%), is tethered to the actin cytoskeleton by synapsin and is mobilized during intense stimulation.\nS4: All three vesicle pools contain identical neurotransmitter concentrations and vesicle proteins.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: The RRP (~5-20 vesicles per active zone, ~1-2% of total) consists of vesicles that are morphologically docked at the presynaptic membrane and molecularly primed (SNARE complex assembled, ready for Ca2+-triggered fusion). The RRP can be released by a brief train of action potentials or by hypertonic sucrose application (which triggers fusion independent of Ca2+). S2 is TRUE: The recycling pool (~10-20% of total) is replenished by endocytosis of fused vesicle membrane and supports transmission during moderate activity. These vesicles preferentially recycle through a rapid local pathway. S3 is TRUE: The reserve pool (~80-90% of total) is a large depot of vesicles cross-linked to each other and to the actin cytoskeleton by synapsin proteins. CaMKII-dependent synapsin phosphorylation releases vesicles for mobilization during intense or prolonged stimulation. S4 is FALSE: While neurotransmitter content per vesicle (quantal size) is relatively uniform, there is evidence that recycled vesicles may have slightly different protein compositions (e.g., different VGLUT isoforms or transporter numbers affecting filling). More importantly, newly endocytosed vesicles may have different surface protein compositions until properly sorted.",
       "isOlympiad": true,
@@ -2489,12 +2419,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about presynaptic modulation:\nS1: Presynaptic autoreceptors (e.g., mGluR2/3 at glutamatergic terminals, D2 at dopaminergic terminals) provide negative feedback to reduce neurotransmitter release.\nS2: Presynaptic inhibition via GABA_B receptors on excitatory terminals reduces glutamate release by inhibiting presynaptic Ca2+ channels.\nS3: Adenosine, generated from ATP breakdown in the synaptic cleft, acts on presynaptic A1 receptors to reduce neurotransmitter release.\nS4: Presynaptic modulation can only decrease neurotransmitter release; no mechanisms exist for presynaptic facilitation.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Autoreceptors are G-protein coupled receptors on presynaptic terminals that detect the neuron's own transmitter and provide negative feedback. mGluR2/3 (Gi-coupled) on glutamatergic terminals reduce glutamate release when extracellular glutamate is high. D2 autoreceptors on dopaminergic terminals similarly reduce dopamine synthesis and release. 5-HT1B/1D autoreceptors function similarly at serotonergic terminals. S2 is TRUE: GABA_B receptors (Gi/o-coupled) on excitatory (or inhibitory) presynaptic terminals reduce neurotransmitter release through two mechanisms: (1) Gbetagamma-mediated inhibition of P/Q-type and N-type Ca2+ channels, reducing Ca2+ influx; (2) Gbetagamma activation of GIRK channels (at the soma) and direct modulation of the release machinery. Baclofen is a GABA_B agonist. S3 is TRUE: Adenosine acts as a homeostatic modulator via A1 receptors (Gi-coupled), reducing release probability. Caffeine blocks A1 receptors, enhancing synaptic transmission. S4 is FALSE: Presynaptic facilitation exists — examples include serotonin-mediated facilitation in Aplysia, and various Gs-coupled receptor pathways that increase cAMP and enhance release.",
       "isOlympiad": true,
@@ -2509,12 +2434,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the molecular mechanism of the action potential:\nS1: The rising phase of the action potential is due to regenerative positive feedback: Na+ influx depolarizes the membrane, which opens more Na+ channels, causing more Na+ influx.\nS2: The falling phase (repolarization) requires both Na+ channel inactivation and delayed rectifier K+ channel opening.\nS3: After the action potential, the Na+/K+ ATPase must restore ion gradients before another action potential can be generated.\nS4: The positive feedback loop in the rising phase is an example of ultrasensitive, switch-like behavior with a defined threshold.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TTTF",
-        "TFTT"
-      ],
+      "options": ["TTFT", "TTTT", "TTTF", "TFTT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: The Hodgkin cycle describes the positive feedback: depolarization → Na+ channel activation → Na+ influx → further depolarization → more Na+ channels activated. This regenerative cycle is responsible for the explosive rising phase once threshold is reached, and is the basis of the all-or-none property. S2 is TRUE: Repolarization requires two concurrent events: (1) Na+ channels undergo fast inactivation (h-gate closure), terminating Na+ influx; (2) delayed rectifier K+ channels (Kv2, Kv3) open (slower kinetics than Na+ activation), driving K+ outward and repolarizing the membrane. S3 is FALSE: The Na+/K+ ATPase is NOT required for immediate recovery. Ion gradients barely change during a single AP (only ~1 picomole Na+/cm² crosses). The refractory period depends on Na+ channel recovery from inactivation and K+ channel deactivation, not on gradient restoration. The pump maintains gradients over the long term. S4 is TRUE: The Na+ positive feedback creates a threshold behavior — below threshold, the system returns to rest (negative feedback from K+ leak dominates); above threshold, regenerative Na+ entry dominates. This is a biological example of a bistable/switch-like system.",
       "isOlympiad": true,
@@ -2529,12 +2449,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about long-term depression (LTD):\nS1: LTD at CA3-CA1 hippocampal synapses requires NMDA receptor activation at modest Ca2+ levels.\nS2: The Ca2+-dependent phosphatase calcineurin (PP2B) is preferentially activated during LTD due to its higher Ca2+ affinity compared to CaMKII.\nS3: LTD involves AMPA receptor dephosphorylation and clathrin-mediated endocytosis, reducing the number of surface AMPA receptors.\nS4: LTD and LTP use completely independent signaling pathways with no shared molecular components.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: NMDA receptor-dependent LTD at CA1 synapses is induced by prolonged low-frequency stimulation (LFS, 1-5 Hz for 10-15 minutes), which produces modest, sustained Ca2+ elevation through NMDA receptors. This contrasts with LTP induction, which requires brief, large Ca2+ transients from high-frequency stimulation. S2 is TRUE: Calcineurin (protein phosphatase 2B) has a higher affinity for Ca2+/calmodulin (Kd ~0.1 nM) than CaMKII (Kd ~10-50 nM). Therefore, modest Ca2+ elevations preferentially activate calcineurin, while large Ca2+ elevations additionally activate CaMKII. This Ca2+ amplitude-dependent selectivity determines the plasticity outcome. S3 is TRUE: Calcineurin dephosphorylates inhibitor-1, releasing PP1. PP1 dephosphorylates GluA1 at Ser845 (PKA site) and Ser831 (CaMKII site). Dephosphorylated AMPA receptors are internalized by clathrin-AP2-mediated endocytosis, reducing surface receptor number and weakening the synapse. S4 is FALSE: LTP and LTD share NMDA receptors as the initial Ca2+ source — the DIRECTION of plasticity depends on Ca2+ magnitude and temporal pattern, activating different downstream effectors (CaMKII for LTP, calcineurin for LTD).",
       "isOlympiad": true,
@@ -2549,12 +2464,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about synaptic vesicle cycle steps:\nS1: Docking — vesicles are tethered at the active zone by Rab3/27-RIM interactions.\nS2: Priming — Munc13 opens syntaxin-1, allowing SNARE complex assembly with SNAP-25 and synaptobrevin.\nS3: Fusion — Ca2+ binding to synaptotagmin-1 triggers fast synchronous release by promoting membrane merger.\nS4: Recovery — after fusion, SNARE complexes are disassembled by ATP-independent spontaneous dissociation.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Vesicle docking involves the interaction between vesicle-associated Rab3 and Rab27 GTPases with the active zone protein RIM (Rab3-Interacting Molecule). This tethers vesicles at the release site in proximity to Ca2+ channels. Additional docking factors include Munc18-1 (bound to syntaxin) and ELKS/CAST scaffold proteins. S2 is TRUE: Priming converts docked vesicles to a fusion-competent state. Munc13 is essential for this — its MUN domain catalyzes the opening of syntaxin-1 from its closed Munc18-bound conformation, allowing it to assemble with SNAP-25 and synaptobrevin into the trans-SNARE complex. Complexin then clamps the assembled SNARE complex to prevent spontaneous fusion. S3 is TRUE: Ca2+ influx through Cav2.1/2.2 channels binds synaptotagmin-1's C2 domains, which insert into the membrane and displace complexin, triggering SNARE-mediated fusion within <1 ms. S4 is FALSE: After fusion, cis-SNARE complexes (now all on the same membrane) are disassembled by the AAA-ATPase NSF together with alpha-SNAP, which requires ATP hydrolysis. Without NSF/SNAP, SNARE complexes cannot be recycled.",
       "isOlympiad": true,
@@ -2569,12 +2479,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about neurotoxins as pharmacological tools:\nS1: TTX (tetrodotoxin) specifically blocks voltage-gated Na+ channels and is used to isolate synaptic currents from action potential-dependent transmission.\nS2: TEA (tetraethylammonium) blocks voltage-gated K+ channels, broadening action potentials and increasing neurotransmitter release.\nS3: Omega-conotoxin GVIA specifically blocks N-type Ca2+ channels (Cav2.2) at presynaptic terminals.\nS4: Curare (d-tubocurarine) blocks muscarinic acetylcholine receptors to cause muscle paralysis.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: TTX (from puffer fish) blocks voltage-gated Na+ channels by binding to the extracellular pore. In electrophysiology, TTX is used to block action potentials, allowing recording of miniature postsynaptic currents (mEPSCs/mIPSCs) that reflect spontaneous, AP-independent vesicle fusion. S2 is TRUE: TEA blocks Kv channels (particularly from the extracellular side by entering the pore). Blocking K+ channels prevents repolarization, prolonging the action potential duration. Longer action potentials allow more Ca2+ influx through voltage-gated Ca2+ channels, increasing neurotransmitter release. S3 is TRUE: Omega-conotoxin GVIA (from cone snails) irreversibly blocks N-type Ca2+ channels (Cav2.2). It is used to identify the contribution of N-type channels to synaptic transmission. The synthetic derivative ziconotide (Prialt) is FDA-approved for intrathecal pain management. S4 is FALSE: Curare (d-tubocurarine) blocks NICOTINIC (not muscarinic) acetylcholine receptors at the neuromuscular junction. It is a competitive antagonist at the nAChR ACh binding site, causing flaccid paralysis. Atropine is the classic muscarinic antagonist.",
       "isOlympiad": true,
@@ -2589,12 +2494,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about invertebrate nervous system features:\nS1: Many invertebrate neurons use glutamate as an excitatory transmitter at neuromuscular junctions rather than acetylcholine.\nS2: Invertebrate nervous systems can contain giant axons formed by fusion of multiple neuronal cell bodies.\nS3: The nematode C. elegans has exactly 302 neurons with a completely mapped connectome.\nS4: All invertebrate neurons are unmyelinated; myelin exists only in vertebrates.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: In arthropods (insects, crustaceans), the excitatory transmitter at neuromuscular junctions is glutamate, not ACh. GABA also acts directly on arthropod muscles as an inhibitory transmitter. ACh is used at the NMJ in vertebrates and some mollusks, while glutamate is the primary excitatory NMJ transmitter in invertebrates. S2 is TRUE: Some invertebrate giant axons are formed by cell fusion (syncytium). For example, the squid giant axon is formed by fusion of hundreds of neuronal cell bodies, creating a single giant fiber. Earthworm giant fibers are also syncytial. Other giant axons (like the crayfish lateral giant) are electrically coupled chains of individual neurons. S3 is TRUE: C. elegans (hermaphrodite) has exactly 302 neurons, and its complete connectome was mapped by John White's lab (1986, using serial-section EM). This includes ~7,000 chemical synapses and ~600 gap junctions. S4 is FALSE: While vertebrates are the primary group with myelination (oligodendrocytes in CNS, Schwann cells in PNS), some invertebrates DO have myelin-like wrappings. Copepods and some annelids have glial cell wrappings around axons that increase conduction velocity, though structurally simpler than vertebrate myelin.",
       "isOlympiad": true,
@@ -2609,12 +2509,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the molecular organization of inhibitory synapses:\nS1: Gephyrin is the main scaffolding protein at inhibitory synapses, analogous to PSD-95 at excitatory synapses.\nS2: GABA_A receptors are clustered at postsynaptic sites by gephyrin via direct interaction with receptor subunits.\nS3: Neuroligin-2 is preferentially found at inhibitory synapses and recruits gephyrin scaffolds.\nS4: Inhibitory synapses have the same ultrastructural appearance as excitatory synapses in electron microscopy.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Gephyrin is the primary scaffold protein at glycinergic and GABAergic inhibitory synapses. It self-oligomerizes into a hexagonal lattice beneath the postsynaptic membrane, clustering inhibitory receptors through direct and indirect interactions. This is functionally analogous to PSD-95's role at excitatory synapses. S2 is TRUE: Gephyrin directly binds glycine receptor beta subunits (high affinity) and GABA_A receptor alpha1, alpha2, alpha3, and gamma2 subunits (lower affinity, sometimes requiring intermediate proteins like collybistin/ARHGEF9). This binding clusters receptors at the synapse. S3 is TRUE: Neuroligin-2 (NLGN2) is selectively enriched at inhibitory synapses (while NLGN1 is at excitatory synapses). NLGN2 interacts with gephyrin and collybistin to organize the inhibitory postsynaptic scaffold, and binds presynaptic neurexins to align pre- and postsynaptic specializations. S4 is FALSE: Inhibitory synapses have a SYMMETRIC appearance in EM (thin postsynaptic density), while excitatory synapses are ASYMMETRIC (thick postsynaptic density = PSD). This morphological distinction (Gray's type I = excitatory/asymmetric; type II = inhibitory/symmetric) was identified in the 1950s.",
       "isOlympiad": true,
@@ -2629,12 +2524,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the patch-clamp technique:\nS1: The cell-attached configuration allows recording of single-channel currents without disrupting the intracellular milieu.\nS2: The whole-cell configuration provides access to the cell interior, allowing measurement of total membrane current and control of intracellular composition.\nS3: Outside-out patches are used to study ligand-gated channels because the extracellular face is accessible for drug application.\nS4: The patch-clamp technique can only measure currents from voltage-gated channels, not ligand-gated channels.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: In cell-attached mode, the glass pipette forms a gigaohm (gigaseal) seal on the cell membrane without breaking through. This allows recording of single-channel currents from the membrane patch under the pipette while the cell remains intact. The intracellular contents are undisturbed, preserving normal second messenger cascades and ion concentrations. S2 is TRUE: In whole-cell mode, after forming a gigaseal, brief suction ruptures the membrane patch, providing electrical and diffusional access to the cell interior. This allows measurement of total membrane currents and injection of the pipette solution into the cell (dialyzing the cytoplasm with known solutions). S3 is TRUE: Outside-out patches are formed by pulling the pipette away from a whole-cell configuration, causing a membrane patch to detach with the extracellular face exposed to the bath solution. This is ideal for studying ligand-gated receptors (applying agonists to the external face) and for rapid solution exchange experiments. S4 is FALSE: Patch-clamp can measure ANY ion channel current — voltage-gated, ligand-gated, mechanically gated, or constitutively open. It is the most versatile technique for studying ion channel function.",
       "isOlympiad": true,
@@ -2649,12 +2539,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about neurotransmitter co-transmission:\nS1: Many neurons release multiple neurotransmitters — a classical small-molecule transmitter and one or more neuropeptides — from the same terminal.\nS2: Small-molecule transmitters and neuropeptides are stored in different vesicle types (small clear vesicles vs. large dense-core vesicles) with different release properties.\nS3: Co-released peptides and classical transmitters always act on the same postsynaptic receptors.\nS4: Dale's principle (one neuron, one transmitter) is now known to be an oversimplification, as co-transmission is widespread.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TTTF",
-        "TFTT"
-      ],
+      "options": ["TTFT", "TTTT", "TTTF", "TFTT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Co-transmission is the rule rather than the exception. Many neurons release a classical transmitter (glutamate, GABA, ACh, etc.) alongside one or more neuropeptides. Examples: sympathetic neurons release norepinephrine + neuropeptide Y; parasympathetic neurons release ACh + VIP; some GABAergic interneurons release GABA + somatostatin or cholecystokinin. S2 is TRUE: Classical transmitters are stored in small synaptic vesicles (SSVs, ~40 nm) that fuse at active zones upon single APs. Neuropeptides are in large dense-core vesicles (LDCVs, 80-200 nm) that require burst/high-frequency firing for release and fuse at perisynaptic sites. The different release conditions allow activity-dependent regulation of co-transmission. S3 is FALSE: Co-released molecules typically act on DIFFERENT receptor types. For example, at sympathetic neuroeffector junctions, norepinephrine acts on adrenergic receptors (fast) while NPY acts on Y receptors (slow, modulatory). This provides complementary fast and slow signaling. S4 is TRUE: Dale's original observation (that a neuron releases the same transmitter at all its terminals) has been extended and corrected — neurons commonly release multiple transmitters, and the specific combination is an important determinant of circuit function.",
       "isOlympiad": true,
@@ -2669,12 +2554,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about electrical properties of neurons:\nS1: The time constant (tau = Rm × Cm) determines how quickly the membrane voltage responds to current injection.\nS2: A longer time constant allows greater temporal summation of synaptic potentials because previous EPSPs/IPSPs persist longer.\nS3: The input resistance (Rin) of a neuron determines the amplitude of voltage change for a given injected current (V = I × Rin).\nS4: All neurons in the brain have identical time constants and input resistances.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: The membrane time constant tau = Rm × Cm determines the rate of exponential charging/discharging of the membrane when current flows. A larger tau means the membrane charges more slowly but also holds charge longer (slower decay of voltage changes). Typical neuronal tau values range from 10-50 ms. S2 is TRUE: With a longer tau, EPSPs decay more slowly after synaptic current stops. This means that a second EPSP arriving before the first has fully decayed will summate with the residual depolarization, increasing the chance of reaching threshold. This is temporal summation. Neurons with longer tau (e.g., large cortical pyramidal neurons) show more temporal summation than neurons with short tau (e.g., fast-spiking interneurons). S3 is TRUE: Ohm's law applies: the voltage change produced by injecting current I equals V = I × Rin. Smaller neurons typically have higher Rin (fewer channels and less membrane), so they produce larger voltage changes for the same current. This is why small neurons are often more excitable. S4 is FALSE: Neurons vary enormously in their electrical properties based on cell type, size, and ion channel expression. Fast-spiking interneurons have low tau and Rin; large pyramidal neurons have higher tau; cerebellar granule cells have very high Rin.",
       "isOlympiad": true,

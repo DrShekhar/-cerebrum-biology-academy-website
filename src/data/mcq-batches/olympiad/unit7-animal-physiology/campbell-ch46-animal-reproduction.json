@@ -49,12 +49,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the mammalian menstrual cycle:\n(I) The follicular phase is characterized by rising FSH and estradiol levels, with follicular growth driven by FSH from the anterior pituitary\n(II) The LH surge triggers ovulation by activating proteolytic enzymes that break down the follicle wall, and converts the remaining follicle into the corpus luteum\n(III) The luteal phase is characterized by high progesterone from the corpus luteum, which maintains the endometrium and inhibits GnRH pulsatility\n(IV) If pregnancy does not occur, the corpus luteum degenerates after 14 days because it requires continuous LH stimulation that FSH cannot provide",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "(I) TRUE: During the follicular phase (days 1-14), FSH from the anterior pituitary stimulates growth of ovarian follicles. The growing follicles produce increasing amounts of estradiol, which proliferates the endometrium (proliferative phase). (II) TRUE: Mid-cycle, the rising estradiol crosses a threshold (~200 pg/mL for >50 hours) and triggers positive feedback on kisspeptin neurons in the AVPV, causing the GnRH/LH surge. The LH surge activates MMPs and COX-2 in the follicle wall, leading to rupture (ovulation) approximately 36 hours later. The remaining granulosa and theca cells luteinize under LH influence, forming the corpus luteum. (III) TRUE: The corpus luteum secretes high levels of progesterone (and some estrogen), which transforms the endometrium into a secretory state, inhibits GnRH pulse frequency (favoring FSH over LH), and provides negative feedback suppressing the HPG axis. (IV) FALSE: Corpus luteum regression (luteolysis) occurs after ~14 days due to LOSS of LH support (as LH levels decline from progesterone negative feedback) and possibly prostaglandin F2α. In some species, LH (not hCG) maintains the CL early, but the mechanism of luteolysis is complex and involves intrinsic CL programming, not simply lack of FSH.",
       "isOlympiad": true,
@@ -189,12 +184,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about sexual reproduction strategies across the animal kingdom:\n(I) Sequential hermaphroditism (e.g., clownfish changing from male to female — protandry) is an adaptive strategy that maximizes reproductive success based on body size\n(II) Parthenogenesis (development from unfertilized eggs) occurs naturally in some reptiles, insects, and crustaceans and produces genetically identical offspring\n(III) Traumatic insemination in bedbugs involves the male piercing the female's body wall and injecting sperm directly into the hemocoel\n(IV) All mammals reproduce exclusively through internal fertilization and viviparity",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "(I) TRUE: In clownfish (Amphiprion), all individuals start as males, with the dominant fish becoming female (protandrous hermaphroditism). Since larger females produce more eggs, switching to female when large maximizes reproductive output. Conversely, some wrasses are protogynous (female-to-male), because large dominant males monopolize mating. (II) TRUE: Obligate parthenogenesis occurs in some whiptail lizards (Aspidoscelis), water fleas (Daphnia — cyclical parthenogenesis), aphids (summer generations), and komodo dragons. Most parthenogenetic offspring are genetic clones (apomixis) or near-clones (automixis with fusion of meiotic products). (III) TRUE: Traumatic (or extragenital) insemination in Cimex lectularius involves the male using a hypodermic aedeagus to pierce the female's abdomen, depositing sperm into the hemocoel. Sperm migrate through the hemolymph to the ovaries. (IV) FALSE: Monotremes (platypus, echidna) are egg-laying mammals (oviparity with internal fertilization). Marsupials practice viviparity but with short gestation and extended pouch development. Only placentals have prolonged intrauterine viviparity.",
       "isOlympiad": true,
@@ -349,12 +339,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about oogenesis in mammals:\n(I) All primary oocytes begin meiosis I during fetal development but arrest at prophase I (dictyate stage) until puberty\n(II) Meiosis I is completed just before ovulation, producing a secondary oocyte and the first polar body\n(III) Meiosis II is completed only upon fertilization, triggered by the sperm-induced calcium wave\n(IV) Unlike spermatogenesis, oogenesis produces four functional gametes from each primary oocyte",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "(I) TRUE: During fetal development (weeks 12-20 in humans), oogonia enter meiosis and become primary oocytes. They progress through prophase I and arrest at the DICTYATE (diplotene) stage, maintained by high cAMP levels (via GPR3 receptor signaling and PDE3A inhibition by cGMP from granulosa cells). This arrest can last decades — from fetal life until the oocyte is recruited into a growing follicle. (II) TRUE: The LH surge triggers resumption of meiosis I in the preovulatory follicle. This is mediated by LH-induced EGFR ligand release from mural granulosa cells, which breaks the cGMP supply to the oocyte (via gap junctions), allowing PDE3A to degrade cAMP. Meiosis I completion produces a large secondary oocyte (retaining most cytoplasm) and a small first polar body. (III) TRUE: The secondary oocyte immediately enters meiosis II but arrests at metaphase II (maintained by CSF — cytostatic factor, including Emi2). Only sperm-triggered Ca2+ oscillations (via PLCζ) degrade Emi2, allowing anaphase II completion and second polar body extrusion. (IV) FALSE: Oogenesis produces only ONE functional gamete (the ovum) and 2-3 polar bodies, which degenerate.",
       "isOlympiad": true,
@@ -489,12 +474,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about implantation in humans:\n(I) The blastocyst implants in the endometrium approximately 6-7 days after fertilization, during the 'implantation window' when the endometrium is maximally receptive\n(II) Endometrial receptivity requires progesterone-dependent expression of specific adhesion molecules (integrins, L-selectin ligands) and formation of pinopodes on the luminal epithelium\n(III) The trophoblast secretes matrix metalloproteinases (MMPs) that digest the extracellular matrix, allowing invasion into the decidualized endometrium\n(IV) Ectopic pregnancy (implantation outside the uterus) is impossible because trophoblast can only invade decidualized endometrium",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "(I) TRUE: The blastocyst hatches from the zona pellucida (~day 5-6) and implants into the endometrium during a restricted window (~days 20-24 of the menstrual cycle, or 6-10 days post-fertilization). Outside this window, the endometrium is non-receptive. (II) TRUE: Endometrial receptivity requires progesterone (from the corpus luteum) acting on estrogen-primed endometrium. Key receptivity markers include: αvβ3 integrin on luminal epithelium, L-selectin ligands, HB-EGF (heparin-binding EGF), LIF (leukemia inhibitory factor — essential in mice), and pinopodes (membrane protrusions on luminal epithelial cells that absorb uterine fluid, bringing the blastocyst closer to the epithelium). (III) TRUE: After initial attachment, the syncytiotrophoblast produces MMPs (MMP-2, MMP-9) and serine proteases that degrade the extracellular matrix, allowing invasion through the decidualized stroma toward maternal spiral arteries. This invasion is carefully regulated by tissue inhibitors of metalloproteinases (TIMPs). (IV) FALSE: Ectopic implantation occurs in ~2% of pregnancies, most commonly in the fallopian tube (>95%). The trophoblast can implant in non-decidualized tissue (tube, ovary, peritoneum, cervix), demonstrating its inherently invasive nature. Ectopic pregnancy is a medical emergency due to hemorrhage risk.",
       "isOlympiad": true,
@@ -689,12 +669,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about assisted reproductive technologies (ART):\n(I) In vitro fertilization (IVF) involves ovarian stimulation with gonadotropins, oocyte retrieval via transvaginal ultrasound-guided aspiration, fertilization in vitro, embryo culture, and transfer to the uterus\n(II) Intracytoplasmic sperm injection (ICSI) involves injecting a single sperm directly into the oocyte cytoplasm, bypassing natural selection mechanisms at the zona pellucida\n(III) Preimplantation genetic testing (PGT) involves biopsy of trophectoderm cells from the blastocyst to screen for chromosomal abnormalities before transfer\n(IV) IVF offspring have identical health outcomes to naturally conceived children with no increased risk of any condition",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "(I) TRUE: Standard IVF protocol: (a) Controlled ovarian hyperstimulation with FSH/LH (and GnRH agonist or antagonist to prevent premature LH surge); (b) Monitoring follicle growth by ultrasound and estradiol levels; (c) hCG trigger when follicles reach 18-20 mm; (d) Oocyte retrieval 34-36 hours later; (e) Insemination or ICSI; (f) Embryo culture to day 3 (cleavage) or day 5 (blastocyst); (g) Fresh or frozen embryo transfer. (II) TRUE: ICSI bypasses all natural sperm selection barriers: cumulus, zona pellucida, and oolemma. A single sperm is immobilized, aspirated into a micropipette, and injected directly into the ooplasm. Originally developed for severe male factor infertility, it is now used in >70% of IVF cycles worldwide. Concerns exist that bypassing natural selection may increase transmission of genetic infertility factors. (III) TRUE: PGT (formerly PGD/PGS) typically involves day 5-6 trophectoderm biopsy (5-10 cells), followed by comprehensive chromosome screening (CCS) using next-generation sequencing. (IV) FALSE: IVF/ICSI offspring have slightly increased risks of: low birth weight, preterm delivery, birth defects (~1.3× risk), and imprinting disorders (Beckwith-Wiedemann, Angelman syndrome), though absolute risks remain low.",
       "isOlympiad": true,
@@ -769,12 +744,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the zona pellucida (ZP) in mammalian reproduction:\n(I) The zona pellucida is composed of four glycoproteins (ZP1-ZP4 in humans) that form a cross-linked extracellular matrix around the oocyte.\n(II) ZP3 acts as the primary sperm receptor, binding to species-specific receptors on the sperm head and triggering the acrosome reaction.\n(III) The cortical reaction after fertilization modifies ZP proteins through cleavage by cortical granule proteases, establishing the zona block to polyspermy.\n(IV) The zona pellucida is synthesized entirely by the surrounding cumulus granulosa cells with no oocyte contribution.",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "Analysis of each statement: (I) TRUE — The human zona pellucida consists of four glycoproteins: ZP1 (serves as cross-linker connecting ZP2-ZP3 filaments), ZP2 (secondary receptor after acrosome reaction), ZP3 (primary receptor for acrosome-intact sperm), and ZP4 (structural role). In mice, only ZP1-3 are present. These form heterodimeric filaments (ZP2-ZP3) cross-linked by ZP1 homodimers. (II) TRUE — ZP3 is the primary sperm receptor. The O-linked oligosaccharides on ZP3 mediate initial species-specific sperm binding. This binding triggers the acrosome reaction via a G-protein coupled signaling cascade involving calcium influx. After the acrosome reaction, acrosome-reacted sperm bind ZP2 for secondary binding and zona penetration. (III) TRUE — The cortical reaction releases cortical granule contents (including ovastacin, a metalloendoprotease) that cleave ZP2 and modify ZP3 glycans. Ovastacin specifically cleaves ZP2, converting it from a sperm-binding form to a non-binding form. This 'zona hardening' prevents additional sperm penetration. (IV) FALSE — The zona pellucida is primarily synthesized by the oocyte itself, not by granulosa cells. While granulosa cells may contribute some ZP components in certain species, the oocyte is the major source of all four ZP proteins. This has been confirmed by oocyte-specific knockout studies.",
       "isOlympiad": true,
@@ -929,12 +899,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the epididymis and sperm maturation:\n(I) Sperm leaving the testis via the efferent ductules are immotile and incapable of fertilization; they acquire motility and fertilizing capacity during transit through the epididymis.\n(II) The epididymis is divided into three regions (caput, corpus, cauda), with sperm maturation occurring primarily in the caput and corpus while the cauda serves as a storage site.\n(III) Epididymal maturation involves changes in the sperm plasma membrane, including addition of decapacitation factors and modification of surface glycoproteins.\n(IV) Sperm can be stored in the cauda epididymidis for several weeks while maintaining full viability.",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "Analysis of each statement: (I) TRUE — Sperm released from the seminiferous tubules via spermiation are morphologically mature but functionally immature. They are immotile and cannot recognize or fertilize an egg. During epididymal transit (which takes 2-12 days in humans), sperm acquire progressive motility and the ability to undergo capacitation and the acrosome reaction. (II) TRUE — The epididymis has three anatomical regions: the caput (head) receives sperm from the efferent ductules and begins maturation; the corpus (body) continues maturation processes; and the cauda (tail) serves primarily as a storage reservoir where mature sperm accumulate and can be held for extended periods. (III) TRUE — Epididymal maturation involves extensive remodeling of the sperm surface. This includes: addition of decapacitation factors (proteins that stabilize the membrane and prevent premature capacitation), modification of surface glycoproteins, changes in membrane lipid composition (increased cholesterol/phospholipid ratio), and addition of epididymal secretory proteins (e.g., CRISP1, CD52). These changes are essential for later capacitation in the female tract. (IV) FALSE — While the cauda does serve as a storage site, sperm viability during storage is limited. Stored sperm undergo gradual senescence, with DNA fragmentation increasing over time. In humans, prolonged abstinence (more than 5-7 days) leads to decreased sperm quality. The cauda provides a specialized environment (low pH, high potassium, low oxygen) that slows sperm metabolism, but storage capacity and duration are limited.",
       "isOlympiad": true,
@@ -1129,12 +1094,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about meiotic arrest and resumption in mammalian oocytes:\n(I) Primary oocytes arrest at the dictyate (diplotene) stage of prophase I and can remain arrested for decades in humans.\n(II) The preovulatory LH surge triggers resumption of meiosis I by reducing cAMP levels in the oocyte through disruption of gap junctional communication with granulosa cells.\n(III) After completing meiosis I and extruding the first polar body, the oocyte arrests again at metaphase II until fertilization triggers completion of meiosis II.\n(IV) Meiotic arrest at metaphase II is maintained by high levels of progesterone acting directly on nuclear progesterone receptors in the oocyte.",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "Analysis of each statement: (I) TRUE — During fetal development, oogonia enter meiosis and arrest at the dictyate stage of prophase I (a specialized prolonged diplotene stage). In humans, this arrest begins prenatally (around month 5 of fetal life) and can last up to 50+ years until ovulation or atresia. The arrested oocyte has a large germinal vesicle (intact nuclear envelope) and decondensed chromosomes with lampbrush chromosome morphology (active transcription). (II) TRUE — Meiotic arrest is maintained by high intracellular cAMP in the oocyte. cAMP is generated by constitutively active GPR3 receptor signaling and supplemented by cAMP and cGMP transferred from granulosa cells through gap junctions (connexin-37). High cAMP activates PKA, which phosphorylates and inactivates CDC25B phosphatase, preventing activation of CDK1/cyclin B (maturation promoting factor, MPF). The LH surge triggers closure of gap junctions (via MAPK-dependent connexin phosphorylation) and reduces cGMP transfer, leading to cAMP decrease, PKA inactivation, CDC25B activation, and MPF activation — driving germinal vesicle breakdown (GVBD). (III) TRUE — After completing meiosis I with asymmetric cytokinesis (first polar body extrusion), the oocyte immediately enters meiosis II and arrests at metaphase II. This MII arrest is maintained by cytostatic factor (CSF), primarily the Emi2/Erp1 protein that inhibits the anaphase-promoting complex/cyclosome (APC/C). The oocyte remains at MII until fertilization, when the sperm-induced calcium oscillations activate CaMKII, which phosphorylates Emi2, targeting it for degradation and allowing APC/C to activate, triggering completion of meiosis II. (IV) FALSE — MII arrest is not maintained by progesterone acting on nuclear receptors. It is maintained by cytostatic factor (CSF), specifically the Mos-MEK-MAPK-p90Rsk pathway that stabilizes Emi2/Erp1 protein. While progesterone plays a role in oocyte maturation in amphibians (Xenopus), in mammals the arrest mechanism is CSF/Emi2-dependent, not progesterone-dependent at the oocyte level.",
       "isOlympiad": true,
@@ -1289,12 +1249,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the placental hormone human placental lactogen (hPL, also known as human chorionic somatomammotropin):\n(I) hPL is produced by the syncytiotrophoblast of the placenta and is structurally related to both growth hormone and prolactin.\n(II) hPL promotes lipolysis in maternal tissues, increasing free fatty acid availability for the mother, thereby sparing glucose for fetal use.\n(III) hPL reduces maternal insulin sensitivity (is diabetogenic), which contributes to the development of gestational diabetes in susceptible women.\n(IV) hPL levels peak in the first trimester and decline rapidly in the second and third trimesters.",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "Analysis of each statement: (I) TRUE — hPL is a 191 amino acid polypeptide produced by syncytiotrophoblast cells. It shares significant structural homology with growth hormone (GH, 85% amino acid sequence identity) and prolactin (13% identity), all belonging to the somatotropin/prolactin gene family. This structural similarity underlies hPL's diverse metabolic and lactogenic activities. (II) TRUE — hPL stimulates lipolysis (breakdown of triglycerides to free fatty acids and glycerol) in maternal adipose tissue. The released free fatty acids serve as the primary maternal energy substrate, reducing maternal glucose utilization and redirecting glucose to the fetus. This 'metabolic reprogramming' is one of the major maternal adaptations to pregnancy. (III) TRUE — hPL is a potent diabetogenic hormone. It reduces maternal insulin sensitivity by: (a) decreasing insulin receptor autophosphorylation, (b) reducing insulin-stimulated glucose uptake in maternal skeletal muscle, and (c) promoting hepatic glucose output. This insulin resistance ensures adequate glucose supply to the fetus but can unmask latent diabetes in susceptible women, causing gestational diabetes mellitus (GDM). The diabetogenic effect increases with advancing gestation as hPL levels rise. (IV) FALSE — hPL levels increase progressively throughout pregnancy, roughly in proportion to placental mass. Levels are low in the first trimester, rise steadily, and peak in the third trimester (around weeks 32-36) at concentrations of 5-7 mg/L, making hPL one of the most abundantly produced hormones in pregnancy. The decline occurs only after delivery with placental expulsion.",
       "isOlympiad": true,
@@ -1469,12 +1424,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the cervix and cervical mucus in human reproduction:\n(I) Cervical mucus undergoes cyclic changes — it becomes thin, watery, and spinnbarkeit (stretchable) around ovulation due to high estrogen levels, facilitating sperm penetration.\n(II) Under progesterone dominance (luteal phase), cervical mucus becomes thick and viscous, forming a plug that impedes sperm entry.\n(III) The cervix acts as a sperm reservoir, where sperm can survive in cervical crypts for up to 5 days, enabling fertilization from intercourse occurring days before ovulation.\n(IV) Cervical mucus has no antimicrobial properties and serves only as a physical barrier.",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "Analysis of each statement: (I) TRUE — Estrogen stimulates the cervical epithelium to produce abundant thin, watery mucus with a high water content (~98%), low cellularity, and parallel glycoprotein fiber arrangement ('ferning' pattern on dried slides). Spinnbarkeit (stretchability to >10 cm threads) is maximal at ovulation. This facilitates sperm penetration by creating channels along aligned mucin fibers. (II) TRUE — Progesterone transforms cervical mucus into a thick, viscous, cellular material with low water content (~90%), dense glycoprotein network, and high leukocyte content. This forms the cervical mucus plug that blocks sperm entry and protects the uterus from ascending infection. This is the basis of the progesterone-only contraceptive pill's mechanism. (III) TRUE — The endocervical crypts (glandular invaginations of the cervical canal) serve as sperm reservoirs. Sperm entering the crypts are released gradually over several days, maintaining a sustained supply of capacitating sperm to the upper tract. This is why the fertile window extends to approximately 5 days before ovulation. The crypts provide a favorable environment (nutrients, appropriate pH) that prolongs sperm viability. (IV) FALSE — Cervical mucus has significant antimicrobial properties. It contains lysozyme, lactoferrin, secretory IgA, and defensins. The mucus glycoprotein network physically traps bacteria and abnormal sperm. The pH of cervical mucus (~7.0-8.5 at ovulation) is selectively permissive for motile sperm while inhibiting bacterial growth. The cervical mucus plug is a critical component of innate immune defense protecting the uterine cavity.",
       "isOlympiad": true,
@@ -1709,12 +1659,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the decidual reaction during human implantation:\n(I) Decidualization is the transformation of endometrial stromal cells into large, rounded, glycogen-rich decidual cells that provide nutrition to the early embryo before placental circulation is established.\n(II) Decidualization in humans is unique because it begins spontaneously during the secretory phase under progesterone influence, even without an embryo being present.\n(III) Decidual natural killer (dNK) cells are the most abundant immune cells at the implantation site and promote spiral artery remodeling and trophoblast invasion rather than cytotoxicity.\n(IV) The decidual reaction is triggered exclusively by the embryo and never occurs in non-pregnant cycles.",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "Analysis of each statement: (I) TRUE — Decidualization transforms spindle-shaped endometrial stromal fibroblasts into large, rounded, epithelioid decidual cells packed with glycogen and lipid droplets. These cells secrete prolactin, IGFBP-1, and other factors that create a nutritive and immunologically permissive environment for the implanting embryo. Before the placental circulation is fully established (first 10-12 weeks), the decidua provides histotrophic nutrition through glandular secretions. (II) TRUE — Humans (and some other primates and the elephant shrew) are unusual in that decidualization begins spontaneously during the secretory phase of each menstrual cycle, under the influence of progesterone and cAMP signaling, regardless of whether an embryo is present. This is called 'spontaneous decidualization' and is unique among mammals — in most species, decidualization only occurs in response to embryo implantation signals (induced decidualization). If pregnancy does not occur, the decidualized endometrium is shed during menstruation. (III) TRUE — Decidual NK cells (dNK, CD56bright CD16-) constitute 50-70% of immune cells at the implantation site in the first trimester. Unlike peripheral blood NK cells (CD56dim CD16+), dNK cells are poorly cytotoxic and instead produce angiogenic factors (VEGF, PlGF), cytokines (IL-8, IP-10), and matrix metalloproteinases that promote spiral artery remodeling — converting small, muscular spiral arteries into large, flaccid, low-resistance vessels essential for adequate placental blood flow. dNK cells also regulate trophoblast invasion depth. (IV) FALSE — This directly contradicts statement II. Decidualization in humans occurs spontaneously each cycle, not exclusively in response to embryo presence. This is the basis for menstruation — when pregnancy does not occur, progesterone withdrawal triggers shedding of the decidualized endometrium.",
       "isOlympiad": true,

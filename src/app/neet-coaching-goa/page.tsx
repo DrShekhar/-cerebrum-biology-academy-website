@@ -62,7 +62,9 @@ export default function NEETCoachingGoaPage() {
         slug="neet-coaching-goa"
         pageTitle="Best NEET Coaching in Goa"
         pageDescription="Join #1 NEET coaching in Goa. Expert online classes for 9000+ aspirants. High success rate, NRI-friendly coaching."
-        pageType="coaching" coordinates={{ lat: "15.4909", lng: "73.8278" }} />
+        pageType="coaching"
+        coordinates={{ lat: '15.4909', lng: '73.8278' }}
+      />
       <PageContent />
     </>
   )

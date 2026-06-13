@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching vs Self-Study: Which is Better? 2025 Guide | Gurugram',
-    description: 'NEET coaching vs self-study comparison. Pros, cons, success rates, and who should choose what. Expert advice from AIIMS faculty in Gurugram (Gurgaon). Call 88264-44334!',
+    description:
+      'NEET coaching vs self-study comparison. Pros, cons, success rates, and who should choose what. Expert advice from AIIMS faculty in Gurugram (Gurgaon). Call 88264-44334!',
   },
 }
 
@@ -105,7 +106,11 @@ export default function NEETCoachingVsSelfStudy() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

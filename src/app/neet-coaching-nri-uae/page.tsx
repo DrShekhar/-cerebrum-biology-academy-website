@@ -54,7 +54,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching in UAE | NRI Biology Coaching | Cerebrum Biology Academy',
-    description: 'NEET coaching for NRI students across the UAE — Dubai, Abu Dhabi, Sharjah, Ajman, Al Ain. Online live classes in GST timezone by AIIMS-trained faculty. Dubai/Sharjah/Abu Dhabi NEET exam centres. AE...',
+    description:
+      'NEET coaching for NRI students across the UAE — Dubai, Abu Dhabi, Sharjah, Ajman, Al Ain. Online live classes in GST timezone by AIIMS-trained faculty. Dubai/Sharjah/Abu Dhabi NEET exam centres. AE...',
   },
 }
 
@@ -317,18 +318,47 @@ export default async function NEETCoachingNRIUAEPage() {
         </div>
       </section>
 
-
       {/* Cross-programme links for UAE families */}
       <section className="py-12 bg-white border-t border-slate-200">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-slate-900 mb-2">Other Biology Programmes in UAE</h2>
-          <p className="text-slate-600 mb-6">Beyond NEET, Cerebrum serves UAE students across IB Biology, AP Biology, GAMSAT, and Biology Olympiads.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-2">
+            Other Biology Programmes in UAE
+          </h2>
+          <p className="text-slate-600 mb-6">
+            Beyond NEET, Cerebrum serves UAE students across IB Biology, AP Biology, GAMSAT, and
+            Biology Olympiads.
+          </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-            <Link href="/ib-biology-tutor-asd-dubai" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">IB Biology ASD Dubai</span></Link>
-            <Link href="/ib-biology-tutor-gems-dubai-american-academy" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">IB Biology GEMS DAA</span></Link>
-            <Link href="/ap-biology-tutor-dubai" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">AP Biology Dubai</span></Link>
-            <Link href="/ap-biology-tutor-abu-dhabi" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">AP Biology Abu Dhabi</span></Link>
-            <Link href="/ib-biology/dubai" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">IB Biology Dubai</span></Link>
+            <Link
+              href="/ib-biology-tutor-asd-dubai"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">IB Biology ASD Dubai</span>
+            </Link>
+            <Link
+              href="/ib-biology-tutor-gems-dubai-american-academy"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">IB Biology GEMS DAA</span>
+            </Link>
+            <Link
+              href="/ap-biology-tutor-dubai"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">AP Biology Dubai</span>
+            </Link>
+            <Link
+              href="/ap-biology-tutor-abu-dhabi"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">AP Biology Abu Dhabi</span>
+            </Link>
+            <Link
+              href="/ib-biology/dubai"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">IB Biology Dubai</span>
+            </Link>
           </div>
         </div>
       </section>

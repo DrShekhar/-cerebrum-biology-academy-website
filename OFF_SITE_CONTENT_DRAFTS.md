@@ -145,6 +145,7 @@ Why this profile fits a top-faculty listicle:
 4. **Recent recognition** — Best Biology Teacher Award 2022 (Education Excellence Foundation), NEET Educator of the Year 2023
 
 Verifiable references:
+
 - Faculty profile: https://cerebrumbiologyacademy.com/dr-shekhar-singh-biology-faculty-india
 - Awards & credentials: https://cerebrumbiologyacademy.com/dr-shekhar-singh-awards-credentials
 - Top Biology Faculty India 2026 (Cerebrum's own page, full ItemList structured data): https://cerebrumbiologyacademy.com/top-biology-faculty-india-2026

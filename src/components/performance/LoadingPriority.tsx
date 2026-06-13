@@ -194,20 +194,16 @@ export function LazySection({
       className={`lazy-section ${className}`}
       style={{ minHeight: isLoaded ? 'auto' : '200px' }}
     >
-{!isLoaded ? (
-          <div
-            key="placeholder"
-           className="animate-fadeInUp">
-            {placeholder || <SectionPlaceholder />}
-          </div>
-        ) : (
-          <div
-            key="content"
-           className="animate-fadeInUp">
-            {children}
-          </div>
-        )}
-</div>
+      {!isLoaded ? (
+        <div key="placeholder" className="animate-fadeInUp">
+          {placeholder || <SectionPlaceholder />}
+        </div>
+      ) : (
+        <div key="content" className="animate-fadeInUp">
+          {children}
+        </div>
+      )}
+    </div>
   )
 }
 
@@ -284,9 +280,7 @@ export function PerformanceMonitor() {
   if (process.env.NODE_ENV !== 'development' || !isVisible) return null
 
   return (
-    <div
-      className="fixed bottom-4 left-4 bg-black/80 text-white text-xs p-3 rounded-lg font-mono z-50 animate-fadeInUp"
-    >
+    <div className="fixed bottom-4 left-4 bg-black/80 text-white text-xs p-3 rounded-lg font-mono z-50 animate-fadeInUp">
       <div className="font-semibold mb-2">🚀 Performance Metrics</div>
       <div className="space-y-1">
         {metrics.fcp && <div>FCP: {Math.round(metrics.fcp)}ms</div>}

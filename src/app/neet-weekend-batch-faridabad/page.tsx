@@ -41,7 +41,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Weekend Batch Faridabad 2026 | Saturday-Sunday Classes',
-    description: 'Join NEET weekend batch in Faridabad - Saturday & Sunday intensive classes for school students. Complete syllabus coverage. Sector 17. Call 88264-44334!',
+    description:
+      'Join NEET weekend batch in Faridabad - Saturday & Sunday intensive classes for school students. Complete syllabus coverage. Sector 17. Call 88264-44334!',
   },
 }
 
@@ -121,7 +122,11 @@ export default function NEETWeekendBatchFaridabad() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+        knowsAbout={[
+          'NEET Faridabad',
+          'NEET Biology Faridabad',
+          'Medical entrance coaching Faridabad',
+        ]}
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-16">
@@ -413,16 +418,28 @@ export default function NEETWeekendBatchFaridabad() {
             </Link>
           </div>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
-            <Link href="/neet-biology-important-questions" className="text-orange-100 hover:text-white font-medium underline underline-offset-4">
+            <Link
+              href="/neet-biology-important-questions"
+              className="text-orange-100 hover:text-white font-medium underline underline-offset-4"
+            >
               NEET Important Questions
             </Link>
-            <Link href="/neet-biology-mcq" className="text-orange-100 hover:text-white font-medium underline underline-offset-4">
+            <Link
+              href="/neet-biology-mcq"
+              className="text-orange-100 hover:text-white font-medium underline underline-offset-4"
+            >
               Practice MCQs
             </Link>
-            <Link href="/compare/kota-vs-online" className="text-orange-100 hover:text-white font-medium underline underline-offset-4">
+            <Link
+              href="/compare/kota-vs-online"
+              className="text-orange-100 hover:text-white font-medium underline underline-offset-4"
+            >
               Kota vs Online Comparison
             </Link>
-            <Link href="/best-biology-teacher-online" className="text-orange-100 hover:text-white font-medium underline underline-offset-4">
+            <Link
+              href="/best-biology-teacher-online"
+              className="text-orange-100 hover:text-white font-medium underline underline-offset-4"
+            >
               About Our Faculty
             </Link>
           </div>

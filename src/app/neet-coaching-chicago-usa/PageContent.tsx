@@ -55,6 +55,7 @@ export default function NEETCoachingPageContent() {
   return (
     <>
       <LocalitySchema
+        country="US"
         locality="Chicago"
         slug="neet-coaching-chicago-usa"
         pageTitle="NEET Coaching in Chicago, USA"
@@ -278,7 +279,10 @@ export default function NEETCoachingPageContent() {
         </div>
       </section>
 
-            <USABOPathwayCallout cityName="Chicago suburbs" schools={["Naperville Central","Hinsdale Central","Northbrook","New Trier"]} />
+      <USABOPathwayCallout
+        cityName="Chicago suburbs"
+        schools={['Naperville Central', 'Hinsdale Central', 'Northbrook', 'New Trier']}
+      />
 
       {/* Related Cities */}
       <RelatedCityLinks currentCity="chicago" />

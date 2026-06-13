@@ -23,7 +23,9 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: pageData.metaTitle,
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Image — Cerebrum Biology Academy' }],
+    images: [
+      { url: '/og-image.jpg', width: 1200, height: 630, alt: 'Image — Cerebrum Biology Academy' },
+    ],
     description: pageData.metaDescription,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-sharda-greater-noida-students',
     type: 'website',

@@ -25,7 +25,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biology Olympiad MCQ Practice | 5,900+ Free Questions — Campbell Biology Based',
-    description: 'Practice 5,900+ free Biology Olympiad MCQs based on Campbell Biology. Covers all 8 units with MTF, Data Interpretation, and Experimental Design questions. NSEB, USABO, IBO prep.',
+    description:
+      'Practice 5,900+ free Biology Olympiad MCQs based on Campbell Biology. Covers all 8 units with MTF, Data Interpretation, and Experimental Design questions. NSEB, USABO, IBO prep.',
   },
 }
 

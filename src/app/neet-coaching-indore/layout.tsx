@@ -19,7 +19,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best NEET Coaching in Indore | Biology Classes',
-    description: 'Best NEET biology coaching in Indore. 98% success rate. AIIMS faculty. Vijay Nagar, Palasia, Rau, Bhawarkua.',
+    description:
+      'Best NEET biology coaching in Indore. 98% success rate. AIIMS faculty. Vijay Nagar, Palasia, Rau, Bhawarkua.',
   },
   other: { 'article:modified_time': '2026-05-27' },
   alternates: {
@@ -28,6 +29,10 @@ export const metadata: Metadata = {
 }
 
 export default function IndoreCoachingLayout({ children }: { children: React.ReactNode }) {
-  return <><LocalBusinessSchema />
-      {children}</>
+  return (
+    <>
+      <LocalBusinessSchema />
+      {children}
+    </>
+  )
 }

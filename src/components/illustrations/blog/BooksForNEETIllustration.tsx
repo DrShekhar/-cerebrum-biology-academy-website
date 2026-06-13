@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function BooksForNEETIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -62,8 +62,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
       <rect width="700" height="520" fill="url(#booksBgGrad)" rx="16" />
 
       {/* Title Section */}
-      <g
-      >
+      <g>
         <rect
           x="200"
           y="15"
@@ -82,8 +81,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Left Section - Book Stack Visualization */}
-      <g
-      >
+      <g>
         {/* Bookshelf background */}
         <rect
           x="20"
@@ -100,8 +98,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
         </text>
 
         {/* NCERT Books - Essential */}
-        <g
-        >
+        <g>
           {/* Book 1 - NCERT Class 11 */}
           <rect x="40" y="125" width="180" height="35" rx="4" fill="#14B8A6" />
           <rect x="40" y="125" width="12" height="35" fill="url(#bookSpineGrad)" />
@@ -132,8 +129,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
         </g>
 
         {/* Reference Books */}
-        <g
-        >
+        <g>
           {/* MTG Fingertips */}
           <rect x="50" y="210" width="170" height="30" rx="4" fill="#2DD4BF" />
           <rect x="50" y="210" width="10" height="30" fill="#14B8A6" />
@@ -172,8 +168,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Center Section - Book Rating Chart */}
-      <g
-      >
+      <g>
         <rect
           x="250"
           y="75"
@@ -190,9 +185,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
 
         {/* Rating bars */}
         {biologyBooks.map((book, index) => (
-          <g
-            key={book.name}
-          >
+          <g key={book.name}>
             <text x="260" y={123 + index * 40} fontSize="8" fill="#374151" fontWeight="bold">
               {book.name}
             </text>
@@ -244,8 +237,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Right Section - Reading Strategy */}
-      <g
-      >
+      <g>
         <rect
           x="460"
           y="75"
@@ -262,9 +254,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
 
         {/* Reading phases */}
         {readingPhases.map((phase, index) => (
-          <g
-            key={phase.phase}
-          >
+          <g key={phase.phase}>
             {/* Phase card */}
             <rect
               x="475"
@@ -324,8 +314,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Bottom Section - Key Statistics */}
-      <g
-      >
+      <g>
         <rect
           x="20"
           y="365"
@@ -439,8 +428,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Animated book floating */}
-      <g
-      >
+      <g>
         <rect x="255" y="285" width="40" height="55" rx="4" fill="#14B8A6" />
         <rect x="255" y="285" width="8" height="55" fill="#0D9488" />
         <text x="280" y="308" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -455,8 +443,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Must Read Badge */}
-      <g
-      >
+      <g>
         <rect x="310" y="280" width="80" height="25" rx="12" fill="#DC2626" />
         <text x="350" y="297" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           MUST READ!
@@ -464,8 +451,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Pro Tips Section */}
-      <g
-      >
+      <g>
         <rect
           x="405"
           y="280"
@@ -494,8 +480,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Success Formula */}
-      <g
-      >
+      <g>
         <rect
           x="560"
           y="280"
@@ -521,29 +506,9 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* Floating decorative elements */}
-      <circle
-        cx="15"
-        cy="60"
-        r="8"
-        fill="#14B8A6"
-        opacity="0.3"
-      />
-      <circle
-        cx="685"
-        cy="45"
-        r="6"
-        fill="#2DD4BF"
-        opacity="0.3"
-      />
-      <rect
-        x="660"
-        y="500"
-        width="15"
-        height="10"
-        rx="2"
-        fill="#5EEAD4"
-        opacity="0.4"
-      />
+      <circle cx="15" cy="60" r="8" fill="#14B8A6" opacity="0.3" />
+      <circle cx="685" cy="45" r="6" fill="#2DD4BF" opacity="0.3" />
+      <rect x="660" y="500" width="15" height="10" rx="2" fill="#5EEAD4" opacity="0.4" />
     </svg>
   )
 }

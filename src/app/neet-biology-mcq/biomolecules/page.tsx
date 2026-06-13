@@ -3,7 +3,8 @@ import { TopicLandingPage } from '@/components/mcq/TopicLandingPage'
 
 export const metadata: Metadata = {
   title: 'Biomolecules MCQ for NEET 2026 | Free Practice Questions',
-  description: 'Practice 400+ free Biomolecules MCQs for NEET. Carbohydrates, Proteins, Lipids, Enzymes, and Nucleic Acids questions. NCERT Class 11 based with detailed explanations.',
+  description:
+    'Practice 400+ free Biomolecules MCQs for NEET. Carbohydrates, Proteins, Lipids, Enzymes, and Nucleic Acids questions. NCERT Class 11 based with detailed explanations.',
   keywords: [
     'Biomolecules MCQ NEET',
     'Carbohydrates MCQ',
@@ -18,7 +19,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Biomolecules MCQ for NEET | 400+ Free Questions',
-    description: 'Master Biomolecules for NEET with 400+ free MCQs. Practice carbohydrates, proteins, lipids, enzymes, and nucleic acids questions.',
+    description:
+      'Master Biomolecules for NEET with 400+ free MCQs. Practice carbohydrates, proteins, lipids, enzymes, and nucleic acids questions.',
     url: 'https://cerebrumbiologyacademy.com/neet-biology-mcq/biomolecules',
   },
   alternates: {
@@ -28,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biomolecules MCQ for NEET 2026 | Free Practice Questions',
-    description: 'Practice 400+ free Biomolecules MCQs for NEET. Carbohydrates, Proteins, Lipids, Enzymes, and Nucleic Acids questions. NCERT Class 11 based with detailed explanations.',
+    description:
+      'Practice 400+ free Biomolecules MCQs for NEET. Carbohydrates, Proteins, Lipids, Enzymes, and Nucleic Acids questions. NCERT Class 11 based with detailed explanations.',
   },
 }
 
@@ -36,7 +39,8 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Quiz',
   name: 'Biomolecules MCQ for NEET',
-  description: 'Practice 400+ free Biomolecules MCQs for NEET covering carbohydrates, proteins, lipids, enzymes, and nucleic acids.',
+  description:
+    'Practice 400+ free Biomolecules MCQs for NEET covering carbohydrates, proteins, lipids, enzymes, and nucleic acids.',
   educationalLevel: 'High School',
   isAccessibleForFree: true,
   provider: {
@@ -58,13 +62,7 @@ export default function BiomoleculesPage() {
         title="Biomolecules MCQ for NEET 2026"
         description="Master Biomolecules with 400+ free MCQs covering carbohydrates, proteins, lipids, nucleic acids, and enzymes for NEET preparation."
         questionCount={400}
-        chapters={[
-          'Carbohydrates',
-          'Proteins',
-          'Lipids',
-          'Nucleic Acids',
-          'Enzymes',
-        ]}
+        chapters={['Carbohydrates', 'Proteins', 'Lipids', 'Nucleic Acids', 'Enzymes']}
         neetWeightage="6-8%"
         difficulty="Medium"
         importantSubtopics={[

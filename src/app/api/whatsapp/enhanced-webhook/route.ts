@@ -154,7 +154,6 @@ async function queueMessage(
   // Persist queue in Redis for reliability
   await redis.lpush('whatsapp:message_queue', JSON.stringify(queueItem))
   await redis.expire('whatsapp:message_queue', 3600) // 1 hour expiry
-
 }
 
 /**
@@ -191,7 +190,6 @@ async function processQueuedMessage(queueItem: MessageQueue): Promise<void> {
   const startTime = Date.now()
 
   try {
-
     // Get or create conversation state
     const conversationState = await getConversationState(message.from)
 
@@ -258,7 +256,6 @@ async function processQueuedMessage(queueItem: MessageQueue): Promise<void> {
     if (conversationState.questionCount % 10 === 0) {
       await generateStudySessionSummary(message.from, conversationState)
     }
-
   } catch (error) {
     console.error(`❌ Failed to process message ${message.id}:`, error)
 

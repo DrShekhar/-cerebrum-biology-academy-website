@@ -74,7 +74,7 @@ export const metroStations: Record<string, MetroStation> = {
     description:
       'Greater Kailash Metro serves the affluent GK area, home to students from top schools seeking quality NEET coaching.',
     walkingTime: '20-25 minutes from our center',
-    coordinates: { lat: 28.5472, lng: 77.2390 },
+    coordinates: { lat: 28.5472, lng: 77.239 },
   },
   'saket-metro': {
     name: 'Saket',
@@ -122,7 +122,7 @@ export const metroStations: Record<string, MetroStation> = {
     description:
       'Munirka Metro serves the vibrant student hub near JNU, popular among NEET aspirants from across India.',
     walkingTime: '10-12 minutes from our center',
-    coordinates: { lat: 28.5580, lng: 77.1672 },
+    coordinates: { lat: 28.558, lng: 77.1672 },
   },
   'kalkaji-mandir-metro': {
     name: 'Kalkaji Mandir',

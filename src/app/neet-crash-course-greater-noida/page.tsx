@@ -34,7 +34,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Crash Course in Greater Noida | 45-Day Intensive Biology Program',
-    description: 'Join our 45-day NEET Biology crash course for Greater Noida students. Complete syllabus revision, 1000+ questions, daily tests. Perfect for last-minute preparation. Online + hybrid available. Start...',
+    description:
+      'Join our 45-day NEET Biology crash course for Greater Noida students. Complete syllabus revision, 1000+ questions, daily tests. Perfect for last-minute preparation. Online + hybrid available. Start...',
   },
 }
 
@@ -149,7 +150,11 @@ export default function NEETCrashCourseGreaterNoidaPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Greater Noida', 'NEET Biology Greater Noida', 'Medical entrance coaching Greater Noida']}
+        knowsAbout={[
+          'NEET Greater Noida',
+          'NEET Biology Greater Noida',
+          'Medical entrance coaching Greater Noida',
+        ]}
       />
       <script
         type="application/ld+json"

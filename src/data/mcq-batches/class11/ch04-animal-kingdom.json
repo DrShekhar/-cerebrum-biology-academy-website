@@ -14,21 +14,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Which of the following features is used as the basis of classification of animals as per NCERT?",
-      "options": [
-        "Mode of nutrition",
-        "Habitat",
-        "Body symmetry",
-        "Body colour"
-      ],
+      "options": ["Mode of nutrition", "Habitat", "Body symmetry", "Body colour"],
       "correctAnswer": "C",
       "explanation": "According to NCERT, body symmetry (radial or bilateral) is one of the fundamental features used in classification of animals. Mode of nutrition, habitat, and body colour are not primary bases of classification in the animal kingdom.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "basis-of-classification",
-        "symmetry"
-      ],
+      "tags": ["basis-of-classification", "symmetry"],
       "neetWeightage": "HIGH"
     },
     {
@@ -39,21 +31,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Animals with organ-system level of organisation belong to which of the following phyla?",
-      "options": [
-        "Platyhelminthes",
-        "Cnidaria",
-        "Ctenophora",
-        "Porifera"
-      ],
+      "options": ["Platyhelminthes", "Cnidaria", "Ctenophora", "Porifera"],
       "correctAnswer": "A",
       "explanation": "Platyhelminthes and higher phyla show organ-system level of organisation. Porifera shows cellular level, while Cnidaria and Ctenophora show tissue level of organisation as per NCERT.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "basis-of-classification",
-        "levels-of-organisation"
-      ],
+      "tags": ["basis-of-classification", "levels-of-organisation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -64,21 +48,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Which of the following is the largest phylum of the animal kingdom?",
-      "options": [
-        "Mollusca",
-        "Annelida",
-        "Arthropoda",
-        "Chordata"
-      ],
+      "options": ["Mollusca", "Annelida", "Arthropoda", "Chordata"],
       "correctAnswer": "C",
       "explanation": "Arthropoda is the largest phylum of the animal kingdom, comprising about two-thirds of all named species on earth. It includes insects, arachnids, crustaceans, and myriapods. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "arthropoda",
-        "classification"
-      ],
+      "tags": ["arthropoda", "classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -89,22 +65,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Flame cells are the excretory structures in:",
-      "options": [
-        "Arthropoda",
-        "Platyhelminthes",
-        "Annelida",
-        "Echinodermata"
-      ],
+      "options": ["Arthropoda", "Platyhelminthes", "Annelida", "Echinodermata"],
       "correctAnswer": "B",
       "explanation": "Flame cells are the specialised excretory cells found in Platyhelminthes (flatworms). Annelida has nephridia, Arthropoda has Malpighian tubules, and Echinodermata lacks specialised excretory organs. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "platyhelminthes",
-        "excretion",
-        "flame-cells"
-      ],
+      "tags": ["platyhelminthes", "excretion", "flame-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -115,21 +82,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Water vascular system is a distinctive feature of phylum:",
-      "options": [
-        "Mollusca",
-        "Arthropoda",
-        "Echinodermata",
-        "Annelida"
-      ],
+      "options": ["Mollusca", "Arthropoda", "Echinodermata", "Annelida"],
       "correctAnswer": "C",
       "explanation": "The water vascular system is the most distinctive feature of Echinodermata. It helps in locomotion, capture and transport of food, and respiration. Tube feet are part of this system. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "echinodermata",
-        "water-vascular-system"
-      ],
+      "tags": ["echinodermata", "water-vascular-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -140,22 +99,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Radula is a file-like rasping organ found in:",
-      "options": [
-        "Porifera",
-        "Echinodermata",
-        "Arthropoda",
-        "Mollusca"
-      ],
+      "options": ["Porifera", "Echinodermata", "Arthropoda", "Mollusca"],
       "correctAnswer": "D",
       "explanation": "Radula is a file-like rasping organ for feeding found in Mollusca. It is used for scraping or cutting food before it enters the oesophagus. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mollusca",
-        "radula",
-        "feeding"
-      ],
+      "tags": ["mollusca", "radula", "feeding"],
       "neetWeightage": "HIGH"
     },
     {
@@ -166,22 +116,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Notochord is derived from which germ layer?",
-      "options": [
-        "Both ectoderm and mesoderm",
-        "Mesoderm",
-        "Ectoderm",
-        "Endoderm"
-      ],
+      "options": ["Both ectoderm and mesoderm", "Mesoderm", "Ectoderm", "Endoderm"],
       "correctAnswer": "B",
       "explanation": "The notochord is a mesodermal structure formed during embryonic development in chordates. It is a characteristic feature that defines phylum Chordata. (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chordata",
-        "notochord",
-        "embryology"
-      ],
+      "tags": ["chordata", "notochord", "embryology"],
       "neetWeightage": "HIGH"
     },
     {
@@ -203,11 +144,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cnidaria",
-        "metagenesis",
-        "reproduction"
-      ],
+      "tags": ["cnidaria", "metagenesis", "reproduction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -218,22 +155,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Which of the following animals has a closed circulatory system?",
-      "options": [
-        "Cockroach",
-        "Snail",
-        "Prawn",
-        "Earthworm"
-      ],
+      "options": ["Cockroach", "Snail", "Prawn", "Earthworm"],
       "correctAnswer": "D",
       "explanation": "Earthworm (Annelida) has a closed circulatory system. Cockroach and Prawn (Arthropoda) and Snail (Mollusca) have open circulatory system. In closed circulation, blood flows through closed vessels. (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "annelida",
-        "circulatory-system",
-        "earthworm"
-      ],
+      "tags": ["annelida", "circulatory-system", "earthworm"],
       "neetWeightage": "HIGH"
     },
     {
@@ -244,22 +172,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Choanocytes are characteristic cells of:",
-      "options": [
-        "Ctenophora",
-        "Platyhelminthes",
-        "Cnidaria",
-        "Porifera"
-      ],
+      "options": ["Ctenophora", "Platyhelminthes", "Cnidaria", "Porifera"],
       "correctAnswer": "D",
       "explanation": "Choanocytes (collar cells) are characteristic flagellated cells of Porifera (sponges). They line the spongocoel and the canals, helping in maintaining water current and capturing food particles. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "porifera",
-        "choanocytes",
-        "collar-cells"
-      ],
+      "tags": ["porifera", "choanocytes", "collar-cells"],
       "neetWeightage": "HIGH"
     },
     {
@@ -270,22 +189,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Pneumatic bones are found in:",
-      "options": [
-        "Mammalia",
-        "Reptilia",
-        "Amphibia",
-        "Aves"
-      ],
+      "options": ["Mammalia", "Reptilia", "Amphibia", "Aves"],
       "correctAnswer": "D",
       "explanation": "Pneumatic bones (hollow bones with air cavities) are characteristic of Aves (birds). These bones reduce body weight, which is an adaptation for flight. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "aves",
-        "pneumatic-bones",
-        "flight-adaptation"
-      ],
+      "tags": ["aves", "pneumatic-bones", "flight-adaptation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -296,22 +206,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Which of the following is an egg-laying mammal?",
-      "options": [
-        "Ornithorhynchus",
-        "Macropus",
-        "Delphinus",
-        "Pteropus"
-      ],
+      "options": ["Ornithorhynchus", "Macropus", "Delphinus", "Pteropus"],
       "correctAnswer": "A",
       "explanation": "Ornithorhynchus (Platypus) is an egg-laying mammal (prototherian/monotreme). Macropus (Kangaroo) is a marsupial, Pteropus (Flying fox) is a bat, and Delphinus (Dolphin) is a placental mammal. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mammalia",
-        "monotremes",
-        "prototheria"
-      ],
+      "tags": ["mammalia", "monotremes", "prototheria"],
       "neetWeightage": "HIGH"
     },
     {
@@ -322,22 +223,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Parapodia are locomotory structures found in:",
-      "options": [
-        "Platyhelminthes",
-        "Mollusca",
-        "Arthropoda",
-        "Annelida"
-      ],
+      "options": ["Platyhelminthes", "Mollusca", "Arthropoda", "Annelida"],
       "correctAnswer": "D",
       "explanation": "Parapodia are lateral appendages found in polychaete Annelids like Nereis. They function as locomotory organs and also help in respiration. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "annelida",
-        "parapodia",
-        "locomotion"
-      ],
+      "tags": ["annelida", "parapodia", "locomotion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -348,22 +240,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Sharks and rays belong to the class:",
-      "options": [
-        "Amphibia",
-        "Cyclostomata",
-        "Chondrichthyes",
-        "Osteichthyes"
-      ],
+      "options": ["Amphibia", "Cyclostomata", "Chondrichthyes", "Osteichthyes"],
       "correctAnswer": "C",
       "explanation": "Sharks and rays belong to class Chondrichthyes, characterised by a cartilaginous endoskeleton, placoid scales, and ventral mouth. They are marine with streamlined body and heterocercal tail fin. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chondrichthyes",
-        "sharks",
-        "classification"
-      ],
+      "tags": ["chondrichthyes", "sharks", "classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -374,22 +257,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "The body cavity lined by mesoderm on both sides is called:",
-      "options": [
-        "Blastocoel",
-        "Coelom",
-        "Haemocoel",
-        "Pseudocoelom"
-      ],
+      "options": ["Blastocoel", "Coelom", "Haemocoel", "Pseudocoelom"],
       "correctAnswer": "B",
       "explanation": "A true coelom is a body cavity that is lined by mesoderm (peritoneum) on both its outer (parietal) and inner (visceral) sides. Pseudocoelom is only partially lined by mesoderm. (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "basis-of-classification",
-        "coelom",
-        "body-cavity"
-      ],
+      "tags": ["basis-of-classification", "coelom", "body-cavity"],
       "neetWeightage": "HIGH"
     },
     {
@@ -400,22 +274,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Which of the following is an example of a living fossil?",
-      "options": [
-        "Palaemon",
-        "Hippocampus",
-        "Limulus",
-        "Apis"
-      ],
+      "options": ["Palaemon", "Hippocampus", "Limulus", "Apis"],
       "correctAnswer": "C",
       "explanation": "Limulus (King crab/Horseshoe crab) is a well-known living fossil belonging to phylum Arthropoda. It has remained essentially unchanged for hundreds of millions of years. (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "arthropoda",
-        "living-fossil",
-        "limulus"
-      ],
+      "tags": ["arthropoda", "living-fossil", "limulus"],
       "neetWeightage": "HIGH"
     },
     {
@@ -426,21 +291,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Bioluminescence is a characteristic feature of which phylum?",
-      "options": [
-        "Porifera",
-        "Platyhelminthes",
-        "Cnidaria",
-        "Ctenophora"
-      ],
+      "options": ["Porifera", "Platyhelminthes", "Cnidaria", "Ctenophora"],
       "correctAnswer": "D",
       "explanation": "Bioluminescence (the property of emitting light) is a well-known feature of Ctenophora (comb jellies). They exhibit this property which helps in various functions. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ctenophora",
-        "bioluminescence"
-      ],
+      "tags": ["ctenophora", "bioluminescence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -451,22 +308,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "The connecting link between Annelida and Arthropoda is:",
-      "options": [
-        "Neopilina",
-        "Limulus",
-        "Peripatus",
-        "Balanoglossus"
-      ],
+      "options": ["Neopilina", "Limulus", "Peripatus", "Balanoglossus"],
       "correctAnswer": "C",
       "explanation": "Peripatus is considered a connecting link between Annelida and Arthropoda. It shows annelidan features (segmented body, thin cuticle) and arthropodan features (jointed legs, tracheal respiration). (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "connecting-link",
-        "annelida",
-        "arthropoda"
-      ],
+      "tags": ["connecting-link", "annelida", "arthropoda"],
       "neetWeightage": "HIGH"
     },
     {
@@ -477,22 +325,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Which subphylum includes sea squirts (Herdmania)?",
-      "options": [
-        "Vertebrata",
-        "Cephalochordata",
-        "Urochordata",
-        "Hemichordata"
-      ],
+      "options": ["Vertebrata", "Cephalochordata", "Urochordata", "Hemichordata"],
       "correctAnswer": "C",
       "explanation": "Herdmania (sea squirt) belongs to subphylum Urochordata (Tunicata). In urochordates, the notochord is present only in the larval tail and is lost in adult stage. (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chordata",
-        "urochordata",
-        "herdmania"
-      ],
+      "tags": ["chordata", "urochordata", "herdmania"],
       "neetWeightage": "HIGH"
     },
     {
@@ -503,21 +342,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Which of the following is NOT a characteristic of phylum Chordata?",
-      "options": [
-        "Ventral heart",
-        "Dorsal heart",
-        "Post-anal tail",
-        "Dorsal hollow nerve cord"
-      ],
+      "options": ["Ventral heart", "Dorsal heart", "Post-anal tail", "Dorsal hollow nerve cord"],
       "correctAnswer": "B",
       "explanation": "Chordates have a ventral heart (when present), not a dorsal heart. Other chordate features include a dorsal hollow nerve cord, notochord, paired pharyngeal gill slits, and a post-anal tail. (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chordata",
-        "characteristics"
-      ],
+      "tags": ["chordata", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -528,22 +359,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Malpighian tubules are excretory organs found in:",
-      "options": [
-        "Annelida",
-        "Echinodermata",
-        "Arthropoda",
-        "Mollusca"
-      ],
+      "options": ["Annelida", "Echinodermata", "Arthropoda", "Mollusca"],
       "correctAnswer": "C",
       "explanation": "Malpighian tubules are the excretory organs found in most Arthropods (e.g., insects). Annelids use nephridia, while Echinoderms lack specialised excretory structures. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "arthropoda",
-        "malpighian-tubules",
-        "excretion"
-      ],
+      "tags": ["arthropoda", "malpighian-tubules", "excretion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -554,21 +376,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Crocodiles and turtles belong to class:",
-      "options": [
-        "Mammalia",
-        "Reptilia",
-        "Aves",
-        "Amphibia"
-      ],
+      "options": ["Mammalia", "Reptilia", "Aves", "Amphibia"],
       "correctAnswer": "B",
       "explanation": "Crocodiles and turtles are reptiles belonging to class Reptilia. They are cold-blooded, have dry skin with scales or scutes, and lay eggs with tough shells. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "reptilia",
-        "classification"
-      ],
+      "tags": ["reptilia", "classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -579,22 +393,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Metameric segmentation is the characteristic feature of:",
-      "options": [
-        "Echinodermata",
-        "Platyhelminthes",
-        "Annelida",
-        "Mollusca"
-      ],
+      "options": ["Echinodermata", "Platyhelminthes", "Annelida", "Mollusca"],
       "correctAnswer": "C",
       "explanation": "Metameric segmentation (true segmentation where body is divided into segments or metameres) is a characteristic feature of phylum Annelida. Each segment has its own set of organs. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "annelida",
-        "metamerism",
-        "segmentation"
-      ],
+      "tags": ["annelida", "metamerism", "segmentation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -605,22 +410,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Which of the following is a poisonous lizard?",
-      "options": [
-        "Hemidactylus",
-        "Chameleon",
-        "Calotes",
-        "Heloderma"
-      ],
+      "options": ["Hemidactylus", "Chameleon", "Calotes", "Heloderma"],
       "correctAnswer": "D",
       "explanation": "Heloderma (Gila monster) is a poisonous lizard found in North America. Calotes (garden lizard), Chameleon, and Hemidactylus (wall lizard) are all non-poisonous lizards. (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "reptilia",
-        "heloderma",
-        "poisonous"
-      ],
+      "tags": ["reptilia", "heloderma", "poisonous"],
       "neetWeightage": "HIGH"
     },
     {
@@ -631,22 +427,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "In Aschelminthes, the body cavity is:",
-      "options": [
-        "True coelom",
-        "Haemocoel",
-        "Pseudocoelom",
-        "Absent (acoelomate)"
-      ],
+      "options": ["True coelom", "Haemocoel", "Pseudocoelom", "Absent (acoelomate)"],
       "correctAnswer": "C",
       "explanation": "Aschelminthes (roundworms) possess a pseudocoelom (false body cavity). The body cavity is not lined by mesoderm on the inner side (visceral layer is absent). Hence they are called pseudocoelomates. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "aschelminthes",
-        "pseudocoelom",
-        "body-cavity"
-      ],
+      "tags": ["aschelminthes", "pseudocoelom", "body-cavity"],
       "neetWeightage": "HIGH"
     },
     {
@@ -657,22 +444,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Which of the following organisms exhibits retrogressive metamorphosis?",
-      "options": [
-        "Balanoglossus",
-        "Herdmania",
-        "Petromyzon",
-        "Branchiostoma"
-      ],
+      "options": ["Balanoglossus", "Herdmania", "Petromyzon", "Branchiostoma"],
       "correctAnswer": "B",
       "explanation": "Herdmania (Urochordata) exhibits retrogressive metamorphosis where the larva is more advanced than the adult. The free-swimming tadpole larva has notochord which is lost in the sessile adult. (NCERT Chapter 4)",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "urochordata",
-        "retrogressive-metamorphosis",
-        "herdmania"
-      ],
+      "tags": ["urochordata", "retrogressive-metamorphosis", "herdmania"],
       "neetWeightage": "HIGH"
     },
     {
@@ -683,22 +461,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Spongocoel is lined by which cells in Porifera?",
-      "options": [
-        "Amoebocytes",
-        "Pinacocytes",
-        "Choanocytes",
-        "Cnidocytes"
-      ],
+      "options": ["Amoebocytes", "Pinacocytes", "Choanocytes", "Cnidocytes"],
       "correctAnswer": "C",
       "explanation": "The spongocoel (central cavity) of sponges is lined by choanocytes (collar cells). These flagellated cells help in maintaining water current through the body and in food capture. Pinacocytes line the outer surface. (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "porifera",
-        "spongocoel",
-        "choanocytes"
-      ],
+      "tags": ["porifera", "spongocoel", "choanocytes"],
       "neetWeightage": "HIGH"
     },
     {
@@ -720,11 +489,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cyclostomata",
-        "agnatha",
-        "jawless"
-      ],
+      "tags": ["cyclostomata", "agnatha", "jawless"],
       "neetWeightage": "HIGH"
     },
     {
@@ -735,23 +500,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Which of the following animals has a four-chambered heart?",
-      "options": [
-        "Calotes",
-        "Turtle",
-        "Crocodile",
-        "Salamander"
-      ],
+      "options": ["Calotes", "Turtle", "Crocodile", "Salamander"],
       "correctAnswer": "C",
       "explanation": "Among reptiles, only Crocodile has a four-chambered heart. Other reptiles like Calotes and Turtle have an incompletely divided three-chambered heart. Salamander (Amphibia) has a three-chambered heart. (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "reptilia",
-        "crocodile",
-        "heart",
-        "circulatory-system"
-      ],
+      "tags": ["reptilia", "crocodile", "heart", "circulatory-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -762,22 +517,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Cnidoblasts are found in:",
-      "options": [
-        "Cnidaria",
-        "Ctenophora",
-        "Porifera",
-        "Platyhelminthes"
-      ],
+      "options": ["Cnidaria", "Ctenophora", "Porifera", "Platyhelminthes"],
       "correctAnswer": "A",
       "explanation": "Cnidoblasts (cnidocytes) are specialised stinging cells present in Cnidarians. They contain nematocysts used for anchorage, defence, and capture of prey. These cells are present on tentacles and body surface. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cnidaria",
-        "cnidoblasts",
-        "nematocysts"
-      ],
+      "tags": ["cnidaria", "cnidoblasts", "nematocysts"],
       "neetWeightage": "HIGH"
     },
     {
@@ -788,22 +534,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Which of the following is a marsupial mammal?",
-      "options": [
-        "Balaenoptera",
-        "Equus",
-        "Macropus",
-        "Ornithorhynchus"
-      ],
+      "options": ["Balaenoptera", "Equus", "Macropus", "Ornithorhynchus"],
       "correctAnswer": "C",
       "explanation": "Macropus (Kangaroo) is a marsupial (metatherian) mammal that carries its young in a pouch (marsupium). Ornithorhynchus is a monotreme. Balaenoptera (Blue whale) and Equus (Horse) are placental mammals. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mammalia",
-        "marsupial",
-        "kangaroo"
-      ],
+      "tags": ["mammalia", "marsupial", "kangaroo"],
       "neetWeightage": "HIGH"
     },
     {
@@ -814,22 +551,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Lateral line sense organs are characteristic of:",
-      "options": [
-        "Aves",
-        "Osteichthyes",
-        "Reptilia",
-        "Amphibia"
-      ],
+      "options": ["Aves", "Osteichthyes", "Reptilia", "Amphibia"],
       "correctAnswer": "B",
       "explanation": "Lateral line sense organs are characteristic of fishes (Osteichthyes and Chondrichthyes). They detect water currents, vibrations, and pressure changes, helping the fish in navigation and detecting prey. (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "osteichthyes",
-        "lateral-line",
-        "sense-organs"
-      ],
+      "tags": ["osteichthyes", "lateral-line", "sense-organs"],
       "neetWeightage": "HIGH"
     },
     {
@@ -840,22 +568,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Comb plates are found in:",
-      "options": [
-        "Porifera",
-        "Cnidaria",
-        "Ctenophora",
-        "Platyhelminthes"
-      ],
+      "options": ["Porifera", "Cnidaria", "Ctenophora", "Platyhelminthes"],
       "correctAnswer": "C",
       "explanation": "Comb plates (ctenes) are locomotory structures characteristic of Ctenophora. They are made of fused cilia arranged in eight rows and help in swimming. Ctenophores are commonly called comb jellies or sea walnuts. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ctenophora",
-        "comb-plates",
-        "locomotion"
-      ],
+      "tags": ["ctenophora", "comb-plates", "locomotion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -866,22 +585,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Swim bladder is present in:",
-      "options": [
-        "Amphibia",
-        "Osteichthyes",
-        "Cyclostomata",
-        "Chondrichthyes"
-      ],
+      "options": ["Amphibia", "Osteichthyes", "Cyclostomata", "Chondrichthyes"],
       "correctAnswer": "B",
       "explanation": "Swim bladder (air bladder) is present in Osteichthyes (bony fishes). It helps in maintaining buoyancy. Chondrichthyes (cartilaginous fishes) lack swim bladder and must keep swimming to avoid sinking. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "osteichthyes",
-        "swim-bladder",
-        "buoyancy"
-      ],
+      "tags": ["osteichthyes", "swim-bladder", "buoyancy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -892,22 +602,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "The  triploblastic acoelomate animals belong to phylum:",
-      "options": [
-        "Annelida",
-        "Cnidaria",
-        "Platyhelminthes",
-        "Aschelminthes"
-      ],
+      "options": ["Annelida", "Cnidaria", "Platyhelminthes", "Aschelminthes"],
       "correctAnswer": "C",
       "explanation": "Platyhelminthes are triploblastic (having three germ layers) and acoelomate (lacking body cavity). Aschelminthes are pseudocoelomate, Annelida are coelomate, and Cnidaria are diploblastic. (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "platyhelminthes",
-        "acoelomate",
-        "triploblastic"
-      ],
+      "tags": ["platyhelminthes", "acoelomate", "triploblastic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -918,21 +619,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Balanoglossus belongs to phylum:",
-      "options": [
-        "Annelida",
-        "Hemichordata",
-        "Chordata",
-        "Echinodermata"
-      ],
+      "options": ["Annelida", "Hemichordata", "Chordata", "Echinodermata"],
       "correctAnswer": "B",
       "explanation": "Balanoglossus belongs to phylum Hemichordata. It has a rudimentary structure (stomochord) in the collar region similar to a notochord. Hemichordates were earlier considered as a subphylum of Chordata but are now placed as a separate phylum. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hemichordata",
-        "balanoglossus"
-      ],
+      "tags": ["hemichordata", "balanoglossus"],
       "neetWeightage": "HIGH"
     },
     {
@@ -943,22 +636,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "In which class of Vertebrata is the heart three-chambered with an incomplete interventricular septum?",
-      "options": [
-        "Aves",
-        "Amphibia",
-        "Mammalia",
-        "Reptilia"
-      ],
+      "options": ["Aves", "Amphibia", "Mammalia", "Reptilia"],
       "correctAnswer": "D",
       "explanation": "In Reptilia, the heart is three-chambered with an incompletely divided ventricle (incomplete interventricular septum), except in crocodiles which have a four-chambered heart. In Amphibia, the heart is three-chambered without any ventricular septum. (NCERT Chapter 4)",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "reptilia",
-        "heart",
-        "circulatory-system"
-      ],
+      "tags": ["reptilia", "heart", "circulatory-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -969,22 +653,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Which of the following exhibits tissue level of organisation?",
-      "options": [
-        "Porifera",
-        "Platyhelminthes",
-        "Cnidaria",
-        "Annelida"
-      ],
+      "options": ["Porifera", "Platyhelminthes", "Cnidaria", "Annelida"],
       "correctAnswer": "C",
       "explanation": "Cnidaria and Ctenophora exhibit tissue level of organisation. Porifera shows cellular level, while Platyhelminthes and higher phyla show organ or organ-system level of organisation. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "basis-of-classification",
-        "levels-of-organisation",
-        "cnidaria"
-      ],
+      "tags": ["basis-of-classification", "levels-of-organisation", "cnidaria"],
       "neetWeightage": "HIGH"
     },
     {
@@ -995,22 +670,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Branchiostoma (Amphioxus) belongs to subphylum:",
-      "options": [
-        "Urochordata",
-        "Vertebrata",
-        "Hemichordata",
-        "Cephalochordata"
-      ],
+      "options": ["Urochordata", "Vertebrata", "Hemichordata", "Cephalochordata"],
       "correctAnswer": "D",
       "explanation": "Branchiostoma (Amphioxus) belongs to subphylum Cephalochordata. In cephalochordates, the notochord extends from head to tail and is persistent throughout life. (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cephalochordata",
-        "branchiostoma",
-        "chordata"
-      ],
+      "tags": ["cephalochordata", "branchiostoma", "chordata"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1032,10 +698,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "porifera",
-        "levels-of-organisation"
-      ],
+      "tags": ["porifera", "levels-of-organisation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1057,11 +720,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chondrichthyes",
-        "swim-bladder",
-        "buoyancy"
-      ],
+      "tags": ["chondrichthyes", "swim-bladder", "buoyancy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1083,11 +742,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "echinodermata",
-        "marine",
-        "endoskeleton"
-      ],
+      "tags": ["echinodermata", "marine", "endoskeleton"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1109,11 +764,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "platyhelminthes",
-        "acoelomate",
-        "parenchyma"
-      ],
+      "tags": ["platyhelminthes", "acoelomate", "parenchyma"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1135,11 +786,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "amphibia",
-        "dual-habitat",
-        "reproduction"
-      ],
+      "tags": ["amphibia", "dual-habitat", "reproduction"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1161,11 +808,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cnidaria",
-        "tissue-level",
-        "diploblastic"
-      ],
+      "tags": ["cnidaria", "tissue-level", "diploblastic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1187,11 +830,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "annelida",
-        "circulatory-system",
-        "closed-circulation"
-      ],
+      "tags": ["annelida", "circulatory-system", "closed-circulation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1213,11 +852,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "arthropoda",
-        "open-circulation",
-        "haemocoel"
-      ],
+      "tags": ["arthropoda", "open-circulation", "haemocoel"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1239,11 +874,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "aves",
-        "pneumatic-bones",
-        "flight-adaptation"
-      ],
+      "tags": ["aves", "pneumatic-bones", "flight-adaptation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1265,11 +896,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ctenophora",
-        "cnidaria",
-        "nematocysts"
-      ],
+      "tags": ["ctenophora", "cnidaria", "nematocysts"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1291,11 +918,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "aschelminthes",
-        "pseudocoelom",
-        "blastocoel"
-      ],
+      "tags": ["aschelminthes", "pseudocoelom", "blastocoel"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1317,11 +940,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cyclostomata",
-        "petromyzon",
-        "ectoparasite"
-      ],
+      "tags": ["cyclostomata", "petromyzon", "ectoparasite"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1343,11 +962,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "hemichordata",
-        "notochord",
-        "stomochord"
-      ],
+      "tags": ["hemichordata", "notochord", "stomochord"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1369,11 +984,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mollusca",
-        "circulatory-system",
-        "excretion"
-      ],
+      "tags": ["mollusca", "circulatory-system", "excretion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1395,11 +1006,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "porifera",
-        "characteristics",
-        "canal-system"
-      ],
+      "tags": ["porifera", "characteristics", "canal-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1410,22 +1017,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Which of the following statements about Cnidaria is/are INCORRECT?\n(i) They are exclusively marine.\n(ii) They exhibit tissue level of organisation.\n(iii) They are diploblastic with mesoglea between ectoderm and endoderm.\n(iv) Cnidoblasts are present on tentacles only.",
-      "options": [
-        "(iv) only",
-        "(i) and (iv) only",
-        "(ii) and (iii) only",
-        "(i) only"
-      ],
+      "options": ["(iv) only", "(i) and (iv) only", "(ii) and (iii) only", "(i) only"],
       "correctAnswer": "B",
       "explanation": "Statement (i) is incorrect because some cnidarians are freshwater (e.g., Hydra). Statement (iv) is incorrect because cnidoblasts are present on tentacles as well as on the body surface. Statements (ii) and (iii) are correct descriptions of Cnidaria. (NCERT Chapter 4)",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cnidaria",
-        "cnidoblasts",
-        "diploblastic"
-      ],
+      "tags": ["cnidaria", "cnidoblasts", "diploblastic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1447,11 +1045,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "arthropoda",
-        "characteristics",
-        "excretion"
-      ],
+      "tags": ["arthropoda", "characteristics", "excretion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1473,11 +1067,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mammalia",
-        "characteristics",
-        "viviparous"
-      ],
+      "tags": ["mammalia", "characteristics", "viviparous"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1499,11 +1089,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "echinodermata",
-        "characteristics",
-        "water-vascular-system"
-      ],
+      "tags": ["echinodermata", "characteristics", "water-vascular-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1525,11 +1111,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chondrichthyes",
-        "osteichthyes",
-        "classification"
-      ],
+      "tags": ["chondrichthyes", "osteichthyes", "classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1551,11 +1133,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "reptilia",
-        "characteristics",
-        "heart"
-      ],
+      "tags": ["reptilia", "characteristics", "heart"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1566,21 +1144,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Read the following statements about Amphibia:\n(i) Body is divisible into head and trunk; tail may or may not be present.\n(ii) Eyes have eyelids and a tympanum represents the ear.\n(iii) Respiration is through gills, lungs and skin.\n(iv) Heart is three-chambered with two auricles and one ventricle.\nHow many of the above statements are correct?",
-      "options": [
-        "Only two",
-        "All four",
-        "Only one",
-        "Only three"
-      ],
+      "options": ["Only two", "All four", "Only one", "Only three"],
       "correctAnswer": "B",
       "explanation": "All four statements are correct descriptions of class Amphibia as per NCERT. Amphibians have head and trunk (with or without tail), eyelids and tympanum, respire through gills/lungs/skin, and have a three-chambered heart (2 auricles + 1 ventricle). (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "amphibia",
-        "characteristics"
-      ],
+      "tags": ["amphibia", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1602,12 +1172,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mollusca",
-        "mantle",
-        "radula",
-        "circulatory-system"
-      ],
+      "tags": ["mollusca", "mantle", "radula", "circulatory-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1618,22 +1183,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "How many of the following statements are correct about Phylum Annelida?\n(i) They exhibit organ-system level of body organisation.\n(ii) Body is segmented with a true coelom (coelomate).\n(iii) Respiration through body surface in aquatic forms.\n(iv) Nephridia serve as excretory and osmoregulatory organs.",
-      "options": [
-        "Only one",
-        "All four",
-        "Only three",
-        "Only two"
-      ],
+      "options": ["Only one", "All four", "Only three", "Only two"],
       "correctAnswer": "B",
       "explanation": "All four statements are correct about Annelida. They have organ-system level of organisation, segmented body with true coelom, respire through body surface (especially aquatic forms), and use nephridia for excretion and osmoregulation. (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "annelida",
-        "characteristics",
-        "nephridia"
-      ],
+      "tags": ["annelida", "characteristics", "nephridia"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1644,22 +1200,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Which of the following statements about class Aves is/are INCORRECT?\n(i) They are warm-blooded with a four-chambered heart.\n(ii) Forelimbs are modified into wings.\n(iii) All birds can fly.\n(iv) They possess oil gland (preen gland) at the base of the tail.",
-      "options": [
-        "(iii) and (iv)",
-        "(iii) only",
-        "(ii) and (iii)",
-        "(i) and (iii)"
-      ],
+      "options": ["(iii) and (iv)", "(iii) only", "(ii) and (iii)", "(i) and (iii)"],
       "correctAnswer": "B",
       "explanation": "Only statement (iii) is incorrect. Not all birds can fly - flightless birds include ostrich, kiwi, and penguin. Statements (i), (ii) and (iv) are all correct features of class Aves as per NCERT. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "aves",
-        "characteristics",
-        "flightless-birds"
-      ],
+      "tags": ["aves", "characteristics", "flightless-birds"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1681,11 +1228,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "phyla-comparison",
-        "excretion",
-        "classification"
-      ],
+      "tags": ["phyla-comparison", "excretion", "classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1707,11 +1250,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "basis-of-classification",
-        "germ-layers",
-        "diploblastic"
-      ],
+      "tags": ["basis-of-classification", "germ-layers", "diploblastic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1722,22 +1261,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Consider the following statements about Phylum Chordata:\n(i) Notochord is a mesodermally derived rod-like structure.\n(ii) In vertebrates, notochord is replaced by vertebral column in adults.\n(iii) Central nervous system is dorsal, hollow and single.\n(iv) Pharyngeal gill slits are absent in higher chordates.\nHow many statements are correct?",
-      "options": [
-        "Only three",
-        "Only one",
-        "All four",
-        "Only two"
-      ],
+      "options": ["Only three", "Only one", "All four", "Only two"],
       "correctAnswer": "C",
       "explanation": "All four statements are correct. Notochord is mesodermal, it is replaced by vertebral column in vertebrates, CNS is dorsal and hollow, and pharyngeal gill slits are present in embryonic stages but absent in adult higher chordates (terrestrial forms). (NCERT Chapter 4)",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chordata",
-        "notochord",
-        "characteristics"
-      ],
+      "tags": ["chordata", "notochord", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1759,11 +1289,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "excretion",
-        "phyla-comparison",
-        "matching"
-      ],
+      "tags": ["excretion", "phyla-comparison", "matching"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1785,11 +1311,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vertebrate-classes",
-        "examples",
-        "matching"
-      ],
+      "tags": ["vertebrate-classes", "examples", "matching"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1811,11 +1333,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "body-cavity",
-        "coelom",
-        "classification"
-      ],
+      "tags": ["body-cavity", "coelom", "classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1837,11 +1355,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "classification",
-        "examples",
-        "matching"
-      ],
+      "tags": ["classification", "examples", "matching"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1863,11 +1377,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "diagnostic-features",
-        "phyla",
-        "matching"
-      ],
+      "tags": ["diagnostic-features", "phyla", "matching"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1889,11 +1399,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "animal-features",
-        "matching",
-        "classification"
-      ],
+      "tags": ["animal-features", "matching", "classification"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1915,11 +1421,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "respiration",
-        "vertebrate-classes",
-        "matching"
-      ],
+      "tags": ["respiration", "vertebrate-classes", "matching"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1941,11 +1443,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "parasites",
-        "classification",
-        "matching"
-      ],
+      "tags": ["parasites", "classification", "matching"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1967,11 +1465,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chordata",
-        "subphyla",
-        "matching"
-      ],
+      "tags": ["chordata", "subphyla", "matching"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1993,11 +1487,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mammalia",
-        "types",
-        "matching"
-      ],
+      "tags": ["mammalia", "types", "matching"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2019,11 +1509,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "levels-of-organisation",
-        "classification",
-        "matching"
-      ],
+      "tags": ["levels-of-organisation", "classification", "matching"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2045,11 +1531,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "symmetry",
-        "classification",
-        "matching"
-      ],
+      "tags": ["symmetry", "classification", "matching"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2071,11 +1553,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "reptilia",
-        "examples",
-        "matching"
-      ],
+      "tags": ["reptilia", "examples", "matching"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2086,22 +1564,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "How many of the following animals belong to Phylum Arthropoda?\nApis, Bombyx, Limulus, Locusta, Pila, Asterias, Palamnaeus, Anopheles",
-      "options": [
-        "Four",
-        "Five",
-        "Seven",
-        "Six"
-      ],
+      "options": ["Four", "Five", "Seven", "Six"],
       "correctAnswer": "D",
       "explanation": "Six animals belong to Arthropoda: Apis (honeybee), Bombyx (silkworm moth), Limulus (king crab), Locusta (locust), Palamnaeus (scorpion), and Anopheles (mosquito). Pila (apple snail) belongs to Mollusca, and Asterias (starfish) belongs to Echinodermata. (NCERT Chapter 4)",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "arthropoda",
-        "examples",
-        "counting"
-      ],
+      "tags": ["arthropoda", "examples", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2112,22 +1581,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "How many of the following phyla are exclusively marine?\nPorifera, Ctenophora, Platyhelminthes, Echinodermata, Hemichordata, Arthropoda, Mollusca",
-      "options": [
-        "Four",
-        "Three",
-        "Five",
-        "Two"
-      ],
+      "options": ["Four", "Three", "Five", "Two"],
       "correctAnswer": "B",
       "explanation": "Three phyla are exclusively marine: Ctenophora, Echinodermata, and Hemichordata. Porifera is mostly marine (some freshwater like Spongilla). Platyhelminthes, Arthropoda, and Mollusca have both marine and freshwater/terrestrial representatives. (NCERT Chapter 4)",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "marine-phyla",
-        "habitat",
-        "counting"
-      ],
+      "tags": ["marine-phyla", "habitat", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2138,22 +1598,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "How many of the following features are found in Phylum Chordata?\n(a) Dorsal hollow nerve cord\n(b) Notochord\n(c) Pharyngeal gill slits\n(d) Post-anal tail\n(e) Ventral solid nerve cord\n(f) Dorsal heart",
-      "options": [
-        "Five",
-        "Six",
-        "Four",
-        "Three"
-      ],
+      "options": ["Five", "Six", "Four", "Three"],
       "correctAnswer": "C",
       "explanation": "Four features are found in Chordata: (a) dorsal hollow nerve cord, (b) notochord, (c) pharyngeal gill slits, and (d) post-anal tail. Feature (e) is wrong - nerve cord is dorsal and hollow, not ventral and solid. Feature (f) is wrong - heart is ventral, not dorsal. (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chordata",
-        "characteristics",
-        "counting"
-      ],
+      "tags": ["chordata", "characteristics", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2164,22 +1615,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "How many of the following animals are oviparous?\nPlatypus, Kangaroo, Whale, Bat, Crow, Crocodile, Frog, Shark",
-      "options": [
-        "Five",
-        "Four",
-        "Three",
-        "Six"
-      ],
+      "options": ["Five", "Four", "Three", "Six"],
       "correctAnswer": "A",
       "explanation": "Five animals are oviparous (egg-laying): Platypus (egg-laying mammal), Crow (bird), Crocodile (reptile), Frog (amphibian), and Shark (most sharks are oviparous/ovoviviparous). Kangaroo (viviparous marsupial), Whale (viviparous), and Bat (viviparous) are not oviparous. (NCERT Chapter 4)",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "reproduction",
-        "oviparous",
-        "counting"
-      ],
+      "tags": ["reproduction", "oviparous", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2190,22 +1632,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "How many of the following animals have a four-chambered heart?\nCrocodile, Pigeon, Whale, Lizard, Frog, Human, Tortoise, Parrot",
-      "options": [
-        "Four",
-        "Six",
-        "Three",
-        "Five"
-      ],
+      "options": ["Four", "Six", "Three", "Five"],
       "correctAnswer": "D",
       "explanation": "Five animals have four-chambered hearts: Crocodile (only reptile with 4 chambers), Pigeon (bird), Whale (mammal), Human (mammal), and Parrot (bird). Lizard and Tortoise have incompletely four-chambered hearts (three-chambered). Frog has a three-chambered heart. (NCERT Chapter 4)",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "heart",
-        "circulatory-system",
-        "counting"
-      ],
+      "tags": ["heart", "circulatory-system", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2216,22 +1649,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "How many of the following are cold-blooded (poikilothermic) animals?\nFrog, Lizard, Pigeon, Fish, Snake, Bat, Crocodile, Salamander",
-      "options": [
-        "Five",
-        "Seven",
-        "Six",
-        "Four"
-      ],
+      "options": ["Five", "Seven", "Six", "Four"],
       "correctAnswer": "A",
       "explanation": "Five animals are cold-blooded: Frog (amphibian), Lizard (reptile), Fish, Snake (reptile), and Crocodile (reptile). Note: Salamander is also cold-blooded, making it six. However, among listed: Pigeon (bird - warm-blooded) and Bat (mammal - warm-blooded) are warm-blooded. Counting Frog, Lizard, Fish, Snake, Crocodile = 5 poikilothermic + Salamander = 6. The answer is B if we count 5 reptiles/amphibians/fish excluding salamander from a common grouping, but including salamander makes it C. Given standard NEET interpretation: Frog, Lizard, Fish, Snake, Crocodile, Salamander = 6 cold-blooded.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "thermoregulation",
-        "cold-blooded",
-        "counting"
-      ],
+      "tags": ["thermoregulation", "cold-blooded", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2242,22 +1666,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "How many of the following phyla show bilateral symmetry?\nPorifera, Cnidaria, Platyhelminthes, Aschelminthes, Annelida, Arthropoda, Mollusca, Echinodermata",
-      "options": [
-        "Four",
-        "Three",
-        "Five",
-        "Six"
-      ],
+      "options": ["Four", "Three", "Five", "Six"],
       "correctAnswer": "C",
       "explanation": "Five phyla show bilateral symmetry: Platyhelminthes, Aschelminthes, Annelida, Arthropoda, and Mollusca. Porifera is mostly asymmetrical, Cnidaria shows radial symmetry, and Echinodermata shows radial symmetry in adults (bilateral in larvae). (NCERT Chapter 4)",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "symmetry",
-        "bilateral",
-        "counting"
-      ],
+      "tags": ["symmetry", "bilateral", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2268,22 +1683,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "How many of the following are true coelomates?\nEarthworm, Ascaris, Planaria, Cockroach, Star fish, Liver fluke, Prawn, Octopus",
-      "options": [
-        "Three",
-        "Six",
-        "Four",
-        "Five"
-      ],
+      "options": ["Three", "Six", "Four", "Five"],
       "correctAnswer": "D",
       "explanation": "Five are true coelomates: Earthworm (Annelida), Cockroach (Arthropoda), Star fish (Echinodermata), Prawn (Arthropoda), and Octopus (Mollusca). Ascaris (Aschelminthes) is pseudocoelomate. Planaria and Liver fluke (Platyhelminthes) are acoelomate. (NCERT Chapter 4)",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "coelom",
-        "coelomate",
-        "counting"
-      ],
+      "tags": ["coelom", "coelomate", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2305,11 +1711,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "evolution",
-        "classification",
-        "sequence"
-      ],
+      "tags": ["evolution", "classification", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2331,11 +1733,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vertebrate-evolution",
-        "classification",
-        "sequence"
-      ],
+      "tags": ["vertebrate-evolution", "classification", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2357,11 +1755,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "body-cavity",
-        "coelom",
-        "sequence"
-      ],
+      "tags": ["body-cavity", "coelom", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2383,10 +1777,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "levels-of-organisation",
-        "sequence"
-      ],
+      "tags": ["levels-of-organisation", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2408,11 +1799,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chordata",
-        "subphyla",
-        "sequence"
-      ],
+      "tags": ["chordata", "subphyla", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2434,11 +1821,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "classification",
-        "phyla-sequence",
-        "sequence"
-      ],
+      "tags": ["classification", "phyla-sequence", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2460,11 +1843,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fish-classes",
-        "evolution",
-        "sequence"
-      ],
+      "tags": ["fish-classes", "evolution", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2475,21 +1854,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Which of the following animals shows bioluminescence?",
-      "options": [
-        "Asterias",
-        "Ctenoplana",
-        "Nereis",
-        "Ancylostoma"
-      ],
+      "options": ["Asterias", "Ctenoplana", "Nereis", "Ancylostoma"],
       "correctAnswer": "B",
       "explanation": "Ctenophores like Ctenoplana show bioluminescence \u2014 the property of emitting light. They are commonly known as sea walnuts or comb jellies. They use comb plates (ctenes) for locomotion.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ctenophora",
-        "bioluminescence"
-      ],
+      "tags": ["ctenophora", "bioluminescence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2500,22 +1871,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Flame cells are the excretory structures found in:",
-      "options": [
-        "Annelida",
-        "Platyhelminthes",
-        "Arthropoda",
-        "Mollusca"
-      ],
+      "options": ["Annelida", "Platyhelminthes", "Arthropoda", "Mollusca"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, flame cells (protonephridia) are the excretory structures in Platyhelminthes (flatworms). Annelids have nephridia, arthropods have Malpighian tubules, and molluscs have kidneys.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "platyhelminthes",
-        "flame-cells",
-        "excretion"
-      ],
+      "tags": ["platyhelminthes", "flame-cells", "excretion"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2526,21 +1888,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Which phylum is characterised by the presence of water vascular system?",
-      "options": [
-        "Mollusca",
-        "Arthropoda",
-        "Echinodermata",
-        "Hemichordata"
-      ],
+      "options": ["Mollusca", "Arthropoda", "Echinodermata", "Hemichordata"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, echinoderms possess a unique water vascular system (ambulacral system) that helps in locomotion, capture and transport of food, and respiration. Examples include starfish, sea urchins, and sea cucumbers.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "echinodermata",
-        "water-vascular-system"
-      ],
+      "tags": ["echinodermata", "water-vascular-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2551,22 +1905,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Metameric segmentation is a characteristic feature of:",
-      "options": [
-        "Nematoda",
-        "Annelida",
-        "Platyhelminthes",
-        "Coelenterata"
-      ],
+      "options": ["Nematoda", "Annelida", "Platyhelminthes", "Coelenterata"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, annelids show metameric segmentation (metamerism) \u2014 the body is divided into segments (metameres) that are arranged in a linear series. Each segment contains a similar set of organs. Examples include earthworm and leech.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "annelida",
-        "metamerism",
-        "segmentation"
-      ],
+      "tags": ["annelida", "metamerism", "segmentation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2577,22 +1922,13 @@
       "ncertChapter": 4,
       "ncertChapterName": "Animal Kingdom",
       "question": "Lateral line system is a sensory organ found in:",
-      "options": [
-        "Amphibians",
-        "Reptiles",
-        "Fishes",
-        "Mammals"
-      ],
+      "options": ["Amphibians", "Reptiles", "Fishes", "Mammals"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the lateral line system is a sense organ found in fishes and larval amphibians. It consists of a series of canals along the body that detect water pressure changes and vibrations, helping in navigation and predator detection.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "pisces",
-        "lateral-line",
-        "sensory-organ"
-      ],
+      "tags": ["pisces", "lateral-line", "sensory-organ"],
       "neetWeightage": "MEDIUM"
     }
   ]

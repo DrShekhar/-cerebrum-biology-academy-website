@@ -513,9 +513,7 @@ const VoiceIntegrationHub: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
-      <div
-        className="text-center space-y-4 animate-fadeInUp"
-      >
+      <div className="text-center space-y-4 animate-fadeInUp">
         <div className="flex items-center justify-center gap-3">
           <div className="p-3 bg-indigo-500 rounded-xl">
             <Mic className="w-8 h-8 text-white" />
@@ -570,12 +568,9 @@ const VoiceIntegrationHub: React.FC = () => {
         </div>
 
         {isListening && (
-          <div
-            className="mt-4 text-center animate-fadeInUp"
-          >
+          <div className="mt-4 text-center animate-fadeInUp">
             <div className="flex items-center justify-center gap-2 text-blue-600">
-              <div
-               className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 <Volume2 className="w-5 h-5" />
               </div>
               <span className="text-sm">Listening for your voice...</span>
@@ -584,12 +579,9 @@ const VoiceIntegrationHub: React.FC = () => {
         )}
 
         {isSpeaking && (
-          <div
-            className="mt-4 text-center animate-fadeInUp"
-          >
+          <div className="mt-4 text-center animate-fadeInUp">
             <div className="flex items-center justify-center gap-2 text-green-600">
-              <div
-               className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 <Volume2 className="w-5 h-5" />
               </div>
               <span className="text-sm">Speaking...</span>
@@ -625,401 +617,383 @@ const VoiceIntegrationHub: React.FC = () => {
       </div>
 
       {/* Content */}
-{/* Voice Chat Tab */}
-        {activeTab === 'chat' && (
-          <div
-            key="chat"
-            className="bg-white rounded-xl p-6 border animate-fadeInUp"
-          >
-            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <MessageSquare className="w-5 h-5 text-blue-600" />
-              AI Biology Tutor Conversation
-            </h3>
+      {/* Voice Chat Tab */}
+      {activeTab === 'chat' && (
+        <div key="chat" className="bg-white rounded-xl p-6 border animate-fadeInUp">
+          <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+            <MessageSquare className="w-5 h-5 text-blue-600" />
+            AI Biology Tutor Conversation
+          </h3>
 
-            <div className="space-y-4 max-h-96 overflow-y-auto mb-4">
-              {conversation.length === 0 ? (
-                <div className="text-center py-8 text-gray-500">
-                  <Headphones className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-                  <p>Start a conversation by clicking the microphone</p>
-                  <p className="text-sm mt-2">
-                    Try asking: "What is photosynthesis?" or "फोटोसिंथेसिस क्या है?"
-                  </p>
-                </div>
-              ) : (
-                conversation.map((entry) => (
-                  <div
-                    key={entry.id}
-                    className={`flex ${entry.type === 'user' ? 'justify-end' : 'justify-start'}`}
-                  >
-                    <div
-                      className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
-                        entry.type === 'user'
-                          ? 'bg-blue-500 text-white'
-                          : 'bg-gray-100 text-gray-800'
-                      }`}
-                    >
-                      <p>{entry.content}</p>
-                      {entry.confidence && (
-                        <p className="text-xs mt-1 opacity-75">
-                          Confidence: {Math.round(entry.confidence * 100)}%
-                        </p>
-                      )}
-                      {entry.biologyTerms && entry.biologyTerms.length > 0 && (
-                        <div className="mt-2">
-                          <p className="text-xs opacity-75">Biology terms detected:</p>
-                          <div className="flex flex-wrap gap-1 mt-1">
-                            {entry.biologyTerms.map((term, index) => (
-                              <span
-                                key={index}
-                                className="text-xs bg-blue-700 text-white px-2 py-1 rounded"
-                              >
-                                {term}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                ))
-              )}
-            </div>
-
-            {/* Quick Prompts */}
-            <div className="border-t pt-4">
-              <h4 className="text-sm font-medium text-gray-700 mb-2">Quick Biology Topics:</h4>
-              <div className="flex flex-wrap gap-2">
-                {biologyPrompts
-                  .slice(0, 2)
-                  .flatMap((category) => category.prompts.slice(0, 2))
-                  .map((prompt, index) => (
-                    <button
-                      key={index}
-                      onClick={() => speakText(prompt)}
-                      className="text-xs px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors"
-                    >
-                      {prompt}
-                    </button>
-                  ))}
+          <div className="space-y-4 max-h-96 overflow-y-auto mb-4">
+            {conversation.length === 0 ? (
+              <div className="text-center py-8 text-gray-500">
+                <Headphones className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                <p>Start a conversation by clicking the microphone</p>
+                <p className="text-sm mt-2">
+                  Try asking: "What is photosynthesis?" or "फोटोसिंथेसिस क्या है?"
+                </p>
               </div>
-            </div>
-          </div>
-        )}
-
-        {/* Pronunciation Tab */}
-        {activeTab === 'pronunciation' && (
-          <div
-            key="pronunciation"
-            className="bg-white rounded-xl p-6 border animate-fadeInUp"
-          >
-            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <Languages className="w-5 h-5 text-purple-600" />
-              Biology Term Pronunciation Practice
-            </h3>
-
-            <div className="grid gap-4">
-              {pronunciationChallenges.map((challenge, index) => (
+            ) : (
+              conversation.map((entry) => (
                 <div
-                  key={index}
-                  className="p-4 border rounded-lg hover:shadow-md transition-all animate-fadeInUp"
+                  key={entry.id}
+                  className={`flex ${entry.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h4 className="font-semibold text-gray-800">{challenge.term}</h4>
-                      <p className="text-sm text-gray-600">{challenge.phonetic}</p>
-                      <p className="text-sm text-blue-600">{challenge.hindi}</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <button
-                        onClick={() => speakText(challenge.term)}
-                        className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition-colors"
-                      >
-                        <Play className="w-4 h-4" />
-                      </button>
-                      <button
-                        onClick={() => speakText(challenge.hindi)}
-                        className="p-2 bg-purple-100 text-purple-600 rounded-lg hover:bg-purple-200 transition-colors"
-                      >
-                        <Languages className="w-4 h-4" />
-                      </button>
-                    </div>
+                  <div
+                    className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
+                      entry.type === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-800'
+                    }`}
+                  >
+                    <p>{entry.content}</p>
+                    {entry.confidence && (
+                      <p className="text-xs mt-1 opacity-75">
+                        Confidence: {Math.round(entry.confidence * 100)}%
+                      </p>
+                    )}
+                    {entry.biologyTerms && entry.biologyTerms.length > 0 && (
+                      <div className="mt-2">
+                        <p className="text-xs opacity-75">Biology terms detected:</p>
+                        <div className="flex flex-wrap gap-1 mt-1">
+                          {entry.biologyTerms.map((term, index) => (
+                            <span
+                              key={index}
+                              className="text-xs bg-blue-700 text-white px-2 py-1 rounded"
+                            >
+                              {term}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Analytics Tab */}
-        {activeTab === 'analytics' && (
-          <div
-            key="analytics"
-            className="space-y-6 animate-fadeInUp"
-          >
-            {session && (
-              <div className="bg-white rounded-xl p-6 border">
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <Brain className="w-5 h-5 text-green-600" />
-                  Current Session Analytics
-                </h3>
-
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="text-center p-4 bg-blue-50 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600">
-                      {session.voiceInteractions}
-                    </div>
-                    <div className="text-sm text-blue-600">Voice Interactions</div>
-                  </div>
-                  <div className="text-center p-4 bg-green-50 rounded-lg">
-                    <div className="text-2xl font-bold text-green-600">
-                      {Math.round(session.duration / 60000)}m
-                    </div>
-                    <div className="text-sm text-green-600">Session Duration</div>
-                  </div>
-                  <div className="text-center p-4 bg-purple-50 rounded-lg">
-                    <div className="text-2xl font-bold text-purple-600">
-                      {session.questionsAsked}
-                    </div>
-                    <div className="text-sm text-purple-600">Questions Asked</div>
-                  </div>
-                  <div className="text-center p-4 bg-orange-50 rounded-lg">
-                    <div className="text-2xl font-bold text-orange-600">
-                      {session.questionsAsked > 0
-                        ? Math.round((session.correctAnswers / session.questionsAsked) * 100)
-                        : 0}
-                      %
-                    </div>
-                    <div className="text-sm text-orange-600">Accuracy</div>
-                  </div>
-                </div>
-
-                <div className="mt-6">
-                  <h4 className="text-sm font-medium text-gray-700 mb-3">Language Usage</h4>
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm">English</span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-24 bg-gray-200 rounded-full h-2">
-                          <div
-                            className="bg-blue-600 h-2 rounded-full"
-                            style={{
-                              width: `${(session.languageMix.english / Math.max(session.voiceInteractions, 1)) * 100}%`,
-                            }}
-                          />
-                        </div>
-                        <span className="text-xs text-gray-500 min-w-[3rem]">
-                          {session.languageMix.english}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm">Hindi</span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-24 bg-gray-200 rounded-full h-2">
-                          <div
-                            className="bg-green-600 h-2 rounded-full"
-                            style={{
-                              width: `${(session.languageMix.hindi / Math.max(session.voiceInteractions, 1)) * 100}%`,
-                            }}
-                          />
-                        </div>
-                        <span className="text-xs text-gray-500 min-w-[3rem]">
-                          {session.languageMix.hindi}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm">Hinglish</span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-24 bg-gray-200 rounded-full h-2">
-                          <div
-                            className="bg-purple-600 h-2 rounded-full"
-                            style={{
-                              width: `${(session.languageMix.hinglish / Math.max(session.voiceInteractions, 1)) * 100}%`,
-                            }}
-                          />
-                        </div>
-                        <span className="text-xs text-gray-500 min-w-[3rem]">
-                          {session.languageMix.hinglish}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              ))
             )}
           </div>
-        )}
 
-        {/* Settings Tab */}
-        {activeTab === 'settings' && (
-          <div
-            key="settings"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
-          >
+          {/* Quick Prompts */}
+          <div className="border-t pt-4">
+            <h4 className="text-sm font-medium text-gray-700 mb-2">Quick Biology Topics:</h4>
+            <div className="flex flex-wrap gap-2">
+              {biologyPrompts
+                .slice(0, 2)
+                .flatMap((category) => category.prompts.slice(0, 2))
+                .map((prompt, index) => (
+                  <button
+                    key={index}
+                    onClick={() => speakText(prompt)}
+                    className="text-xs px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors"
+                  >
+                    {prompt}
+                  </button>
+                ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Pronunciation Tab */}
+      {activeTab === 'pronunciation' && (
+        <div key="pronunciation" className="bg-white rounded-xl p-6 border animate-fadeInUp">
+          <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+            <Languages className="w-5 h-5 text-purple-600" />
+            Biology Term Pronunciation Practice
+          </h3>
+
+          <div className="grid gap-4">
+            {pronunciationChallenges.map((challenge, index) => (
+              <div
+                key={index}
+                className="p-4 border rounded-lg hover:shadow-md transition-all animate-fadeInUp"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h4 className="font-semibold text-gray-800">{challenge.term}</h4>
+                    <p className="text-sm text-gray-600">{challenge.phonetic}</p>
+                    <p className="text-sm text-blue-600">{challenge.hindi}</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => speakText(challenge.term)}
+                      className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition-colors"
+                    >
+                      <Play className="w-4 h-4" />
+                    </button>
+                    <button
+                      onClick={() => speakText(challenge.hindi)}
+                      className="p-2 bg-purple-100 text-purple-600 rounded-lg hover:bg-purple-200 transition-colors"
+                    >
+                      <Languages className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Analytics Tab */}
+      {activeTab === 'analytics' && (
+        <div key="analytics" className="space-y-6 animate-fadeInUp">
+          {session && (
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Sliders className="w-5 h-5 text-gray-600" />
-                Voice Settings
+                <Brain className="w-5 h-5 text-green-600" />
+                Current Session Analytics
               </h3>
 
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Language</label>
-                  <select
-                    value={voiceSettings.language}
-                    onChange={(e) =>
-                      setVoiceSettings((prev) => ({ ...prev, language: e.target.value as any }))
-                    }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="en-IN">English (India)</option>
-                    <option value="hi-IN">Hindi (India)</option>
-                    <option value="en-US">English (US)</option>
-                  </select>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="text-center p-4 bg-blue-50 rounded-lg">
+                  <div className="text-2xl font-bold text-blue-600">
+                    {session.voiceInteractions}
+                  </div>
+                  <div className="text-sm text-blue-600">Voice Interactions</div>
                 </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Voice Type</label>
-                  <select
-                    value={voiceSettings.voice}
-                    onChange={(e) =>
-                      setVoiceSettings((prev) => ({ ...prev, voice: e.target.value as any }))
-                    }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="shekhar">Shekhar Sir (AI)</option>
-                    <option value="female">Female Voice</option>
-                    <option value="male">Male Voice</option>
-                  </select>
+                <div className="text-center p-4 bg-green-50 rounded-lg">
+                  <div className="text-2xl font-bold text-green-600">
+                    {Math.round(session.duration / 60000)}m
+                  </div>
+                  <div className="text-sm text-green-600">Session Duration</div>
                 </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Speed: {voiceSettings.speed.toFixed(1)}
-                  </label>
-                  <input
-                    type="range"
-                    min="0.5"
-                    max="2.0"
-                    step="0.1"
-                    value={voiceSettings.speed}
-                    onChange={(e) =>
-                      setVoiceSettings((prev) => ({ ...prev, speed: parseFloat(e.target.value) }))
-                    }
-                    className="w-full"
-                  />
+                <div className="text-center p-4 bg-purple-50 rounded-lg">
+                  <div className="text-2xl font-bold text-purple-600">{session.questionsAsked}</div>
+                  <div className="text-sm text-purple-600">Questions Asked</div>
                 </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Pitch: {voiceSettings.pitch.toFixed(1)}
-                  </label>
-                  <input
-                    type="range"
-                    min="0.5"
-                    max="2.0"
-                    step="0.1"
-                    value={voiceSettings.pitch}
-                    onChange={(e) =>
-                      setVoiceSettings((prev) => ({ ...prev, pitch: parseFloat(e.target.value) }))
-                    }
-                    className="w-full"
-                  />
+                <div className="text-center p-4 bg-orange-50 rounded-lg">
+                  <div className="text-2xl font-bold text-orange-600">
+                    {session.questionsAsked > 0
+                      ? Math.round((session.correctAnswers / session.questionsAsked) * 100)
+                      : 0}
+                    %
+                  </div>
+                  <div className="text-sm text-orange-600">Accuracy</div>
                 </div>
+              </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Volume: {voiceSettings.volume.toFixed(1)}
-                  </label>
-                  <input
-                    type="range"
-                    min="0.1"
-                    max="1.0"
-                    step="0.1"
-                    value={voiceSettings.volume}
-                    onChange={(e) =>
-                      setVoiceSettings((prev) => ({ ...prev, volume: parseFloat(e.target.value) }))
-                    }
-                    className="w-full"
-                  />
+              <div className="mt-6">
+                <h4 className="text-sm font-medium text-gray-700 mb-3">Language Usage</h4>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">English</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-24 bg-gray-200 rounded-full h-2">
+                        <div
+                          className="bg-blue-600 h-2 rounded-full"
+                          style={{
+                            width: `${(session.languageMix.english / Math.max(session.voiceInteractions, 1)) * 100}%`,
+                          }}
+                        />
+                      </div>
+                      <span className="text-xs text-gray-500 min-w-[3rem]">
+                        {session.languageMix.english}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Hindi</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-24 bg-gray-200 rounded-full h-2">
+                        <div
+                          className="bg-green-600 h-2 rounded-full"
+                          style={{
+                            width: `${(session.languageMix.hindi / Math.max(session.voiceInteractions, 1)) * 100}%`,
+                          }}
+                        />
+                      </div>
+                      <span className="text-xs text-gray-500 min-w-[3rem]">
+                        {session.languageMix.hindi}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Hinglish</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-24 bg-gray-200 rounded-full h-2">
+                        <div
+                          className="bg-purple-600 h-2 rounded-full"
+                          style={{
+                            width: `${(session.languageMix.hinglish / Math.max(session.voiceInteractions, 1)) * 100}%`,
+                          }}
+                        />
+                      </div>
+                      <span className="text-xs text-gray-500 min-w-[3rem]">
+                        {session.languageMix.hinglish}
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+          )}
+        </div>
+      )}
 
-            <div className="bg-white rounded-xl p-6 border">
-              <h3 className="text-lg font-semibold mb-4">Advanced Settings</h3>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Pronunciation Style
-                  </label>
-                  <select
-                    value={voiceSettings.pronunciation}
-                    onChange={(e) =>
-                      setVoiceSettings((prev) => ({
-                        ...prev,
-                        pronunciation: e.target.value as any,
-                      }))
-                    }
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="standard">Standard</option>
-                    <option value="indian">Indian Accent</option>
-                    <option value="hinglish">Hinglish Style</option>
-                  </select>
-                </div>
+      {/* Settings Tab */}
+      {activeTab === 'settings' && (
+        <div key="settings" className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp">
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Sliders className="w-5 h-5 text-gray-600" />
+              Voice Settings
+            </h3>
 
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    defaultChecked
-                    className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                  />
-                  <span className="ml-2">Auto-detect language</span>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Language</label>
+                <select
+                  value={voiceSettings.language}
+                  onChange={(e) =>
+                    setVoiceSettings((prev) => ({ ...prev, language: e.target.value as any }))
+                  }
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                >
+                  <option value="en-IN">English (India)</option>
+                  <option value="hi-IN">Hindi (India)</option>
+                  <option value="en-US">English (US)</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Voice Type</label>
+                <select
+                  value={voiceSettings.voice}
+                  onChange={(e) =>
+                    setVoiceSettings((prev) => ({ ...prev, voice: e.target.value as any }))
+                  }
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                >
+                  <option value="shekhar">Shekhar Sir (AI)</option>
+                  <option value="female">Female Voice</option>
+                  <option value="male">Male Voice</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Speed: {voiceSettings.speed.toFixed(1)}
                 </label>
+                <input
+                  type="range"
+                  min="0.5"
+                  max="2.0"
+                  step="0.1"
+                  value={voiceSettings.speed}
+                  onChange={(e) =>
+                    setVoiceSettings((prev) => ({ ...prev, speed: parseFloat(e.target.value) }))
+                  }
+                  className="w-full"
+                />
+              </div>
 
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    defaultChecked
-                    className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                  />
-                  <span className="ml-2">Biology term emphasis</span>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Pitch: {voiceSettings.pitch.toFixed(1)}
                 </label>
+                <input
+                  type="range"
+                  min="0.5"
+                  max="2.0"
+                  step="0.1"
+                  value={voiceSettings.pitch}
+                  onChange={(e) =>
+                    setVoiceSettings((prev) => ({ ...prev, pitch: parseFloat(e.target.value) }))
+                  }
+                  className="w-full"
+                />
+              </div>
 
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    defaultChecked
-                    className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                  />
-                  <span className="ml-2">Noise cancellation</span>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Volume: {voiceSettings.volume.toFixed(1)}
                 </label>
-
-                <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
-                  Test Voice Settings
-                </button>
+                <input
+                  type="range"
+                  min="0.1"
+                  max="1.0"
+                  step="0.1"
+                  value={voiceSettings.volume}
+                  onChange={(e) =>
+                    setVoiceSettings((prev) => ({ ...prev, volume: parseFloat(e.target.value) }))
+                  }
+                  className="w-full"
+                />
               </div>
             </div>
           </div>
-        )}
-{/* Error Display */}
-{error && (
-          <div
-            className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center gap-3 animate-fadeInUp"
+
+          <div className="bg-white rounded-xl p-6 border">
+            <h3 className="text-lg font-semibold mb-4">Advanced Settings</h3>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Pronunciation Style
+                </label>
+                <select
+                  value={voiceSettings.pronunciation}
+                  onChange={(e) =>
+                    setVoiceSettings((prev) => ({
+                      ...prev,
+                      pronunciation: e.target.value as any,
+                    }))
+                  }
+                  className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                >
+                  <option value="standard">Standard</option>
+                  <option value="indian">Indian Accent</option>
+                  <option value="hinglish">Hinglish Style</option>
+                </select>
+              </div>
+
+              <label className="flex items-center">
+                <input
+                  type="checkbox"
+                  defaultChecked
+                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                />
+                <span className="ml-2">Auto-detect language</span>
+              </label>
+
+              <label className="flex items-center">
+                <input
+                  type="checkbox"
+                  defaultChecked
+                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                />
+                <span className="ml-2">Biology term emphasis</span>
+              </label>
+
+              <label className="flex items-center">
+                <input
+                  type="checkbox"
+                  defaultChecked
+                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                />
+                <span className="ml-2">Noise cancellation</span>
+              </label>
+
+              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+                Test Voice Settings
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      {/* Error Display */}
+      {error && (
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center gap-3 animate-fadeInUp">
+          <AlertCircle className="w-5 h-5 text-red-500" />
+          <span className="text-red-700">{error}</span>
+          <button
+            onClick={() => setError(null)}
+            className="ml-auto text-red-500 hover:text-red-700"
           >
-            <AlertCircle className="w-5 h-5 text-red-500" />
-            <span className="text-red-700">{error}</span>
-            <button
-              onClick={() => setError(null)}
-              className="ml-auto text-red-500 hover:text-red-700"
-            >
-              ×
-            </button>
-          </div>
-        )}
-</div>
+            ×
+          </button>
+        </div>
+      )}
+    </div>
   )
 }
 

@@ -67,9 +67,7 @@ export default function AlertsPage() {
   const fetchAlerts = useCallback(async () => {
     try {
       setLoading(true)
-      const res = await fetch(
-        `/api/admin/alerts?page=${pagination.page}&limit=${pagination.limit}`
-      )
+      const res = await fetch(`/api/admin/alerts?page=${pagination.page}&limit=${pagination.limit}`)
       const data = await res.json()
       if (data.success) {
         setAlerts(data.data.alerts)
@@ -96,9 +94,7 @@ export default function AlertsPage() {
     : alerts
 
   const deliveryRate =
-    stats.totalRecipients > 0
-      ? Math.round((stats.totalDelivered / stats.totalRecipients) * 100)
-      : 0
+    stats.totalRecipients > 0 ? Math.round((stats.totalDelivered / stats.totalRecipients) * 100) : 0
 
   const getStatusBadge = (status: string) => {
     switch (status) {
@@ -174,8 +170,7 @@ export default function AlertsPage() {
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Alerts</h1>
             <p className="text-gray-600 mt-2">
-              Broadcast alerts to students and parents via Email, WhatsApp, and
-              SMS
+              Broadcast alerts to students and parents via Email, WhatsApp, and SMS
             </p>
           </div>
           <Button
@@ -195,12 +190,8 @@ export default function AlertsPage() {
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-gray-600">
-                    {stat.label}
-                  </p>
-                  <p className="text-2xl font-bold text-gray-900">
-                    {stat.value}
-                  </p>
+                  <p className="text-sm font-medium text-gray-600">{stat.label}</p>
+                  <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
                 </div>
                 <div
                   className={`h-12 w-12 rounded-lg flex items-center justify-center ${stat.color}`}
@@ -225,9 +216,7 @@ export default function AlertsPage() {
           </div>
         </div>
 
-        <div
-          className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-fadeInUp"
-        >
+        <div className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-fadeInUp">
           {loading ? (
             <div className="text-center py-12 text-gray-500">Loading...</div>
           ) : (
@@ -272,21 +261,15 @@ export default function AlertsPage() {
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                           {alert.recipientCount}
                           {alert.sendToAll && (
-                            <span className="ml-1 text-xs text-blue-600">
-                              (all)
-                            </span>
+                            <span className="ml-1 text-xs text-blue-600">(all)</span>
                           )}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm">
-                          <span className="text-green-600">
-                            {alert.deliveredCount}
-                          </span>
+                          <span className="text-green-600">{alert.deliveredCount}</span>
                           {alert.failedCount > 0 && (
                             <>
                               <span className="text-gray-400"> / </span>
-                              <span className="text-red-600">
-                                {alert.failedCount} failed
-                              </span>
+                              <span className="text-red-600">{alert.failedCount} failed</span>
                             </>
                           )}
                         </td>
@@ -298,9 +281,7 @@ export default function AlertsPage() {
                           </span>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          {alert.sentAt
-                            ? new Date(alert.sentAt).toLocaleString()
-                            : 'Pending'}
+                          {alert.sentAt ? new Date(alert.sentAt).toLocaleString() : 'Pending'}
                         </td>
                       </tr>
                     ))}
@@ -310,9 +291,7 @@ export default function AlertsPage() {
               {filteredAlerts.length === 0 && !loading && (
                 <div className="text-center py-12">
                   <Bell className="mx-auto h-12 w-12 text-gray-400" />
-                  <h3 className="mt-2 text-sm font-medium text-gray-900">
-                    No alerts sent yet
-                  </h3>
+                  <h3 className="mt-2 text-sm font-medium text-gray-900">No alerts sent yet</h3>
                   <p className="mt-1 text-sm text-gray-500">
                     Compose an alert to broadcast to students or parents.
                   </p>
@@ -321,17 +300,15 @@ export default function AlertsPage() {
               {pagination.totalPages > 1 && (
                 <div className="px-6 py-3 border-t border-gray-200 flex items-center justify-between">
                   <p className="text-sm text-gray-500">
-                    Showing page {pagination.page} of {pagination.totalPages} (
-                    {pagination.total} total)
+                    Showing page {pagination.page} of {pagination.totalPages} ({pagination.total}{' '}
+                    total)
                   </p>
                   <div className="flex gap-2">
                     <Button
                       variant="outline"
                       size="sm"
                       disabled={pagination.page <= 1}
-                      onClick={() =>
-                        setPagination((p) => ({ ...p, page: p.page - 1 }))
-                      }
+                      onClick={() => setPagination((p) => ({ ...p, page: p.page - 1 }))}
                     >
                       Previous
                     </Button>
@@ -339,9 +316,7 @@ export default function AlertsPage() {
                       variant="outline"
                       size="sm"
                       disabled={pagination.page >= pagination.totalPages}
-                      onClick={() =>
-                        setPagination((p) => ({ ...p, page: p.page + 1 }))
-                      }
+                      onClick={() => setPagination((p) => ({ ...p, page: p.page + 1 }))}
                     >
                       Next
                     </Button>

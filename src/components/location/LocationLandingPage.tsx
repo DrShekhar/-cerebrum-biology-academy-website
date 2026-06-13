@@ -81,9 +81,7 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
   const competitionBadge = getCompetitionBadge(locationData.competitionLevel)
 
   return (
-    <div
-      className={`min-h-screen bg-gradient-to-b from-slate-50 to-white ${className}`}
-    >
+    <div className={`min-h-screen bg-gradient-to-b from-slate-50 to-white ${className}`}>
       {/* Hero Section */}
       <section
         className={`relative py-20 px-4 overflow-hidden bg-gradient-to-r ${getTierColor(locationData.tier)}`}
@@ -101,15 +99,11 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
             </Badge>
           </div>
 
-          <h1
-            className="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fadeInUp"
-          >
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fadeInUp">
             {locationData.contentVariants.heroTitle}
           </h1>
 
-          <p
-            className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90 animate-fadeInUp"
-          >
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90 animate-fadeInUp">
             {locationData.contentVariants.heroSubtitle}
           </p>
 

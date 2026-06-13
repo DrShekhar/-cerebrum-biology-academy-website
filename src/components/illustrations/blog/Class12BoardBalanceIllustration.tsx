@@ -6,7 +6,7 @@ export function Class12BoardBalanceIllustration({
   className = '',
   animate = true,
 }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -15,12 +15,7 @@ export function Class12BoardBalanceIllustration({
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Background */}
       <rect x="10" y="10" width="380" height="280" rx="20" fill="#FEF3C7" />
 
@@ -31,9 +26,7 @@ export function Class12BoardBalanceIllustration({
 
       {/* Balance scale */}
       <line x1="200" y1="70" x2="200" y2="120" stroke="#92400E" strokeWidth="4" />
-      <g
-        style={{ transformOrigin: '200px 120px' }}
-      >
+      <g style={{ transformOrigin: '200px 120px' }}>
         <line x1="100" y1="120" x2="300" y2="120" stroke="#92400E" strokeWidth="4" />
 
         {/* Board exam side */}
@@ -79,8 +72,7 @@ export function Class12BoardBalanceIllustration({
       {/* Timeline dots */}
       <line x1="60" y1="250" x2="340" y2="250" stroke="#D1D5DB" strokeWidth="2" />
 
-      <g
-      >
+      <g>
         <circle cx="80" cy="250" r="8" fill="#3B82F6" />
         <text x="80" y="242" fontSize="6" fill="#1D4ED8" textAnchor="middle">
           Aug
@@ -90,8 +82,7 @@ export function Class12BoardBalanceIllustration({
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <circle cx="140" cy="250" r="8" fill="#8B5CF6" />
         <text x="140" y="242" fontSize="6" fill="#7C3AED" textAnchor="middle">
           Dec
@@ -101,8 +92,7 @@ export function Class12BoardBalanceIllustration({
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <circle cx="200" cy="250" r="8" fill="#EC4899" />
         <text x="200" y="242" fontSize="6" fill="#DB2777" textAnchor="middle">
           Mar
@@ -112,8 +102,7 @@ export function Class12BoardBalanceIllustration({
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <circle cx="260" cy="250" r="8" fill="#F59E0B" />
         <text x="260" y="242" fontSize="6" fill="#B45309" textAnchor="middle">
           Apr
@@ -123,8 +112,7 @@ export function Class12BoardBalanceIllustration({
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <circle cx="320" cy="250" r="10" fill="#22C55E" />
         <text x="320" y="242" fontSize="6" fill="#16A34A" textAnchor="middle" fontWeight="bold">
           May

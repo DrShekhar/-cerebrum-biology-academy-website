@@ -104,6 +104,7 @@ export default async function NEETCoachingAlAinPage() {
   return (
     <>
       <LocalitySchema
+        country="AE"
         locality={locality}
         slug="neet-coaching-al-ain-uae"
         pageTitle="NEET Coaching in Al Ain, UAE"

@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Biology Chapter Weightage 2026 | Important Topics',
-    description: 'NEET Biology chapter-wise weightage 2026. Human Physiology (20%), Genetics (18%), Plant Biology (15%). Focus on high-weightage chapters. Expert guidance at Cerebrum. Call 88264-44334!',
+    description:
+      'NEET Biology chapter-wise weightage 2026. Human Physiology (20%), Genetics (18%), Plant Biology (15%). Focus on high-weightage chapters. Expert guidance at Cerebrum. Call 88264-44334!',
   },
 }
 
@@ -176,7 +177,11 @@ export default function NEETBiologyChapterWeightageGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

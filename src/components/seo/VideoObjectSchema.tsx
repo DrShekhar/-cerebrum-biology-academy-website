@@ -61,7 +61,9 @@ export function VideoObjectSchema({
     duration,
     embedUrl: absoluteEmbedUrl,
     ...(contentUrl && {
-      contentUrl: contentUrl.startsWith('http') ? contentUrl : `https://youtube.com/watch?v=${contentUrl}`,
+      contentUrl: contentUrl.startsWith('http')
+        ? contentUrl
+        : `https://youtube.com/watch?v=${contentUrl}`,
     }),
     publisher: {
       '@type': 'EducationalOrganization',
@@ -104,28 +106,29 @@ export function VideoObjectSchema({
     },
     ...(interactionStatistic && {
       interactionStatistic: [
-        ...(interactionStatistic.watchCount ? [
-          {
-            '@type': 'InteractionCounter',
-            interactionType: 'https://schema.org/WatchAction',
-            userInteractionCount: interactionStatistic.watchCount,
-          },
-        ] : []),
-        ...(interactionStatistic.likeCount ? [
-          {
-            '@type': 'InteractionCounter',
-            interactionType: 'https://schema.org/LikeAction',
-            userInteractionCount: interactionStatistic.likeCount,
-          },
-        ] : []),
+        ...(interactionStatistic.watchCount
+          ? [
+              {
+                '@type': 'InteractionCounter',
+                interactionType: 'https://schema.org/WatchAction',
+                userInteractionCount: interactionStatistic.watchCount,
+              },
+            ]
+          : []),
+        ...(interactionStatistic.likeCount
+          ? [
+              {
+                '@type': 'InteractionCounter',
+                interactionType: 'https://schema.org/LikeAction',
+                userInteractionCount: interactionStatistic.likeCount,
+              },
+            ]
+          : []),
       ],
     }),
   }
 
-  const schemaId = `video-object-${name
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-    .slice(0, 40)}`
+  const schemaId = `video-object-${name.toLowerCase().replace(/\s+/g, '-').slice(0, 40)}`
 
   return (
     <Script

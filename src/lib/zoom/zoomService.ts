@@ -273,17 +273,17 @@ export class ZoomService {
         where: {
           preferredDate: dateStr,
           status: {
-            in: ['PENDING', 'CONFIRMED', 'RESCHEDULED']
-          }
+            in: ['PENDING', 'CONFIRMED', 'RESCHEDULED'],
+          },
         },
         select: {
-          preferredTime: true
-        }
+          preferredTime: true,
+        },
       })
 
       // Extract booked time slots
       // Handle both "10:00" and "10:00 AM - 11:00 AM" formats
-      const bookedSlots = existingBookings.map(booking => {
+      const bookedSlots = existingBookings.map((booking) => {
         const time = booking.preferredTime
         // Extract start time - handles "10:00", "10:00 AM", "10:00 AM - 11:00 AM"
         const match = time.match(/^(\d{1,2}:\d{2})/)
@@ -296,9 +296,11 @@ export class ZoomService {
       })
 
       // Filter out booked slots
-      const availableSlots = allSlots.filter(slot => !bookedSlots.includes(slot))
+      const availableSlots = allSlots.filter((slot) => !bookedSlots.includes(slot))
 
-      console.log(`[Zoom] Available slots for ${dateStr}: ${availableSlots.length}/${allSlots.length}`)
+      console.log(
+        `[Zoom] Available slots for ${dateStr}: ${availableSlots.length}/${allSlots.length}`
+      )
       return availableSlots
     } catch (error) {
       console.error('[Zoom] Error fetching available slots, returning all:', error)

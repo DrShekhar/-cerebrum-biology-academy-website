@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Cerebrum vs the largest national NEET chain Chandigarh | NEET Biology Coaching Comparison 2026',
+  title: 'Cerebrum vs Allen Chandigarh | NEET Biology 2026',
   description:
-    'Compare Cerebrum Biology Academy vs the largest national NEET chain Chandigarh for NEET preparation. Batch size (10-15 vs 60-100+), fees (Rs 24K-68K vs Rs 1.5-2.5 Lakhs), AIIMS faculty, 98% success rate. Sector 34A comparison.',
+    'Compare Cerebrum Biology Academy vs Allen Chandigarh for NEET preparation. Batch size (10-15 vs 60-100+), fees (Rs 24K-68K vs Rs 1.5-2.5 Lakhs), AIIMS faculty, 98% success rate. Sector 34A comparison.',
   keywords: [
     'cerebrum vs allen chandigarh',
     'allen chandigarh alternative',
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     'neet 2026 coaching chandigarh',
   ],
   openGraph: {
-    title: 'Cerebrum vs the largest national NEET chain Chandigarh | Which is Better for NEET Biology 2026?',
+    title: 'Cerebrum vs Allen Chandigarh | Which is Better for NEET Biology 2026?',
     description:
-      'Honest comparison of Cerebrum Biology Academy vs the largest national NEET chain Chandigarh. See why students switch from crowded 60-100+ batches to personalized 10-15 student coaching with AIIMS faculty.',
+      'Honest comparison of Cerebrum Biology Academy vs Allen Chandigarh. See why students switch from crowded 60-100+ batches to personalized 10-15 student coaching with AIIMS faculty.',
     url: 'https://cerebrumbiologyacademy.com/cerebrum-vs-allen-chandigarh',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cerebrum vs the largest national NEET chain Chandigarh | NEET Biology Coaching Comparison 2026',
-    description: 'Compare Cerebrum Biology Academy vs the largest national NEET chain Chandigarh for NEET preparation.',
+    title: 'Cerebrum vs Allen Chandigarh | NEET Biology 2026',
+    description: 'Compare Cerebrum Biology Academy vs Allen Chandigarh for NEET preparation.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/cerebrum-vs-allen-chandigarh',

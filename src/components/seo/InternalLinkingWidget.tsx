@@ -20,7 +20,11 @@ interface InternalLinkingWidgetProps {
 
 // TIER 1: Hub pages — ALWAYS included (these concentrate authority)
 const DELHI_NCR_HUBS = [
-  { title: 'Best NEET Coaching Delhi NCR 2026', slug: '/best-neet-biology-coaching-delhi-ncr', priority: 10 },
+  {
+    title: 'Best NEET Coaching Delhi NCR 2026',
+    slug: '/best-neet-biology-coaching-delhi-ncr',
+    priority: 10,
+  },
   { title: 'NEET Coaching South Delhi', slug: '/neet-coaching-south-delhi', priority: 9 },
   { title: 'NEET Coaching North Delhi', slug: '/neet-coaching-north-delhi', priority: 9 },
   { title: 'NEET Coaching East Delhi', slug: '/neet-coaching-east-delhi', priority: 9 },
@@ -33,26 +37,66 @@ const DELHI_NCR_HUBS = [
 
 // TIER 2: Sub-locality pages with "near me" anchor text
 const DELHI_NCR_LOCALITIES = [
-  { title: 'NEET Coaching near South Extension', slug: '/neet-coaching-south-extension', priority: 7 },
-  { title: 'Biology Coaching near Greater Kailash', slug: '/biology-coaching-greater-kailash', priority: 7 },
+  {
+    title: 'NEET Coaching near South Extension',
+    slug: '/neet-coaching-south-extension',
+    priority: 7,
+  },
+  {
+    title: 'Biology Coaching near Greater Kailash',
+    slug: '/biology-coaching-greater-kailash',
+    priority: 7,
+  },
   { title: 'NEET Coaching near Dwarka', slug: '/biology-coaching-dwarka', priority: 7 },
   { title: 'Biology Classes near Rohini', slug: '/biology-classes-rohini', priority: 7 },
   { title: 'NEET Coaching near Saket', slug: '/neet-coaching-saket', priority: 6 },
   { title: 'Biology Coaching near Hauz Khas', slug: '/biology-coaching-hauz-khas', priority: 6 },
   { title: 'NEET Coaching near Vasant Kunj', slug: '/biology-coaching-vasant-kunj', priority: 6 },
-  { title: 'Biology Classes near Lajpat Nagar', slug: '/biology-coaching-lajpat-nagar', priority: 6 },
-  { title: 'NEET Coaching near Defence Colony', slug: '/biology-coaching-defence-colony', priority: 6 },
+  {
+    title: 'Biology Classes near Lajpat Nagar',
+    slug: '/biology-coaching-lajpat-nagar',
+    priority: 6,
+  },
+  {
+    title: 'NEET Coaching near Defence Colony',
+    slug: '/biology-coaching-defence-colony',
+    priority: 6,
+  },
   { title: 'Biology Coaching near Pitampura', slug: '/biology-coaching-pitampura', priority: 6 },
-  { title: 'NEET Coaching near Shalimar Bagh', slug: '/biology-coaching-shalimar-bagh', priority: 6 },
-  { title: 'Biology Coaching near Malviya Nagar', slug: '/biology-coaching-malviya-nagar', priority: 6 },
-  { title: 'NEET Coaching near New Friends Colony', slug: '/neet-coaching-new-friends-colony', priority: 5 },
-  { title: 'Biology Coaching near Panchsheel Park', slug: '/biology-coaching-panchsheel-park', priority: 5 },
+  {
+    title: 'NEET Coaching near Shalimar Bagh',
+    slug: '/biology-coaching-shalimar-bagh',
+    priority: 6,
+  },
+  {
+    title: 'Biology Coaching near Malviya Nagar',
+    slug: '/biology-coaching-malviya-nagar',
+    priority: 6,
+  },
+  {
+    title: 'NEET Coaching near New Friends Colony',
+    slug: '/neet-coaching-new-friends-colony',
+    priority: 5,
+  },
+  {
+    title: 'Biology Coaching near Panchsheel Park',
+    slug: '/biology-coaching-panchsheel-park',
+    priority: 5,
+  },
   { title: 'NEET Coaching near Model Town', slug: '/biology-coaching-model-town', priority: 5 },
   { title: 'Biology Classes near Mayur Vihar', slug: '/neet-coaching-mayur-vihar', priority: 5 },
   { title: 'NEET Coaching near Indirapuram', slug: '/biology-coaching-indirapuram', priority: 5 },
-  { title: 'Biology Classes near Sector 62 Noida', slug: '/biology-coaching-sector-62-noida', priority: 5 },
+  {
+    title: 'Biology Classes near Sector 62 Noida',
+    slug: '/biology-coaching-sector-62-noida',
+    priority: 5,
+  },
   { title: 'NEET Coaching near DLF Gurgaon', slug: '/neet-coaching-dlf-gurgaon', priority: 5 },
-  { title: 'NEET Coaching near Sohna Road', slug: '/neet-coaching-sohna-road-gurgaon', priority: 5 },
+  {
+    title: 'NEET Coaching near Sohna Road',
+    slug: '/neet-coaching-sohna-road-gurgaon',
+    priority: 5,
+  },
   { title: 'Biology Classes near Green Park', slug: '/biology-coaching-green-park', priority: 5 },
   { title: 'NEET Coaching near Janakpuri', slug: '/neet-coaching-janakpuri', priority: 5 },
   { title: 'Biology Coaching near Kalkaji', slug: '/biology-coaching-kalkaji', priority: 5 },
@@ -83,17 +127,45 @@ const INTERNAL_LINKS = {
     { title: 'NRI NEET Crash Course', slug: '/nri-neet-crash-course', priority: 4 },
     { title: 'IB to NEET Preparation', slug: '/ib-to-neet-biology-preparation', priority: 4 },
     { title: 'IGCSE to NEET Preparation', slug: '/igcse-to-neet-biology-preparation', priority: 4 },
-    { title: 'A-Level to NEET Preparation', slug: '/a-level-to-neet-biology-preparation', priority: 4 },
+    {
+      title: 'A-Level to NEET Preparation',
+      slug: '/a-level-to-neet-biology-preparation',
+      priority: 4,
+    },
   ],
   blog: [
     { title: 'Blog Home', slug: '/blog', priority: 7 },
     { title: 'NEET Biology Resources', slug: '/neet-biology-resources', priority: 7 },
-    { title: 'Ultimate NEET Biology Guide 2026', slug: '/blog/ultimate-neet-biology-guide-2026', priority: 8 },
-    { title: 'How to Score 360 in NEET Biology', slug: '/blog/how-to-score-360-in-neet-biology', priority: 8 },
-    { title: 'Genetics for NEET: Mendel to Molecular', slug: '/blog/genetics-for-neet-mendel-to-molecular-biology', priority: 6 },
-    { title: 'Photosynthesis: Complete NEET Guide', slug: '/blog/photosynthesis-complete-neet-guide', priority: 6 },
-    { title: 'NEET Biology Weightage 2026', slug: '/blog/neet-biology-chapter-wise-weightage-2026-advanced', priority: 7 },
-    { title: 'Best NEET Coaching Delhi NCR 2026', slug: '/blog/best-neet-coaching-delhi-ncr-2026-comparison', priority: 9 },
+    {
+      title: 'Ultimate NEET Biology Guide 2026',
+      slug: '/blog/ultimate-neet-biology-guide-2026',
+      priority: 8,
+    },
+    {
+      title: 'How to Score 360 in NEET Biology',
+      slug: '/blog/how-to-score-360-in-neet-biology',
+      priority: 8,
+    },
+    {
+      title: 'Genetics for NEET: Mendel to Molecular',
+      slug: '/blog/genetics-for-neet-mendel-to-molecular-biology',
+      priority: 6,
+    },
+    {
+      title: 'Photosynthesis: Complete NEET Guide',
+      slug: '/blog/photosynthesis-complete-neet-guide',
+      priority: 6,
+    },
+    {
+      title: 'NEET Biology Weightage 2026',
+      slug: '/blog/neet-biology-chapter-wise-weightage-2026-advanced',
+      priority: 7,
+    },
+    {
+      title: 'Best NEET Coaching Delhi NCR 2026',
+      slug: '/blog/best-neet-coaching-delhi-ncr-2026-comparison',
+      priority: 9,
+    },
     { title: 'NEET 2026 Biology Strategy', slug: '/blog/neet-2026-biology-strategy', priority: 7 },
     { title: 'Ecology Complete Guide', slug: '/blog/ecology-complete-neet-guide', priority: 5 },
     { title: 'Human Physiology Notes', slug: '/blog/human-physiology-neet-notes', priority: 6 },
@@ -198,7 +270,8 @@ export function InternalLinkingWidget({
 
         <div className="mt-4 text-center">
           <p className="text-xs text-gray-500">
-            Showing {displayLinks.length} relevant pages &bull; Cerebrum Biology Academy serves all Delhi NCR
+            Showing {displayLinks.length} relevant pages &bull; Cerebrum Biology Academy serves all
+            Delhi NCR
           </p>
         </div>
       </div>

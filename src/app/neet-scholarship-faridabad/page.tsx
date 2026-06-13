@@ -40,7 +40,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Scholarship Faridabad 2026 | Up to 100% Fee Waiver',
-    description: 'Apply for NEET scholarship in Faridabad. Merit-based scholarships up to 100% fee waiver. Based on 10th/12th marks or scholarship test. Limited seats. Apply now at Cerebrum Biology Academy!',
+    description:
+      'Apply for NEET scholarship in Faridabad. Merit-based scholarships up to 100% fee waiver. Based on 10th/12th marks or scholarship test. Limited seats. Apply now at Cerebrum Biology Academy!',
   },
 }
 
@@ -165,7 +166,11 @@ export default function NEETScholarshipFaridabad() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+        knowsAbout={[
+          'NEET Faridabad',
+          'NEET Biology Faridabad',
+          'Medical entrance coaching Faridabad',
+        ]}
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-yellow-600 to-orange-500 text-white py-16">
@@ -198,7 +203,9 @@ export default function NEETScholarshipFaridabad() {
                 Apply Now: 88264-44334
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-yellow-700 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-800 transition border-2 border-white/30"
               >
                 Book Demo First

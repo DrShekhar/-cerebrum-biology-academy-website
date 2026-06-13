@@ -110,7 +110,11 @@ export default function BiologyTutorVasantKunjPage() {
   return (
     <div className="min-h-screen">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Vasant Kunj', 'NEET Biology Vasant Kunj', 'Medical entrance coaching Vasant Kunj']}
+        knowsAbout={[
+          'NEET Vasant Kunj',
+          'NEET Biology Vasant Kunj',
+          'Medical entrance coaching Vasant Kunj',
+        ]}
       />
       <DelhiAreaSchema pageSlug="biology-tutor-vasant-kunj" subArea="Vasant Kunj" />
       <script

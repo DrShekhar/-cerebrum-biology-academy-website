@@ -10,8 +10,14 @@ export class FacebookPixelService {
     if (typeof window === 'undefined' || this.isInitialized) return
 
     // Facebook Pixel initialization
-    const fbq: ((...args: [string, ...unknown[]]) => void) & { q?: unknown[][]; push?: unknown; loaded?: boolean; version?: string; queue?: unknown[] } =
-      window.fbq as typeof fbq ||
+    const fbq: ((...args: [string, ...unknown[]]) => void) & {
+      q?: unknown[][]
+      push?: unknown
+      loaded?: boolean
+      version?: string
+      queue?: unknown[]
+    } =
+      (window.fbq as typeof fbq) ||
       function (...args: [string, ...unknown[]]) {
         ;(fbq.q = fbq.q || []).push(args)
       }
@@ -19,7 +25,7 @@ export class FacebookPixelService {
     fbq.loaded = true
     fbq.version = '2.0'
     fbq.queue = []
-    ;window.fbq = fbq
+    window.fbq = fbq
     if (!window._fbq) window._fbq = fbq
 
     // Load Facebook Pixel script
@@ -29,8 +35,8 @@ export class FacebookPixelService {
     document.head.appendChild(script)
 
     // Initialize pixel
-    ;window.fbq('init', pixelId)
-    ;window.fbq('track', 'PageView')
+    window.fbq('init', pixelId)
+    window.fbq('track', 'PageView')
 
     this.isInitialized = true
     console.log('Facebook Pixel initialized with ID:', pixelId)
@@ -38,13 +44,13 @@ export class FacebookPixelService {
 
   static trackEvent(eventName: string, parameters: Record<string, unknown> = {}) {
     if (typeof window === 'undefined' || !window.fbq) return
-    ;window.fbq('track', eventName, parameters)
+    window.fbq('track', eventName, parameters)
     console.log('Facebook Pixel Event:', eventName, parameters)
   }
 
   static trackCustomEvent(eventName: string, parameters: Record<string, unknown> = {}) {
     if (typeof window === 'undefined' || !window.fbq) return
-    ;window.fbq('trackCustom', eventName, parameters)
+    window.fbq('trackCustom', eventName, parameters)
     console.log('Facebook Pixel Custom Event:', eventName, parameters)
   }
 

@@ -33,7 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching in Saket Delhi | Medical Entrance Biology',
-    description: 'Best NEET coaching for Saket, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 67+ AIIMS selections. Join comprehensive medical entrance preparation today.',
+    description:
+      'Best NEET coaching for Saket, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 67+ AIIMS selections. Join comprehensive medical entrance preparation today.',
   },
 }
 

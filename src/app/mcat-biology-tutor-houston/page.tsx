@@ -47,7 +47,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'MCAT Biology Tutor Houston | Rice, UT Austin, UTSW',
-    description: 'MCAT Bio/Biochem tutor for Houston pre-meds — Rice, UT Austin, A&M, U of H, Sugar Land, Pearland. Biology specialists, CT evening slots. From $449.',
+    description:
+      'MCAT Bio/Biochem tutor for Houston pre-meds — Rice, UT Austin, A&M, U of H, Sugar Land, Pearland. Biology specialists, CT evening slots. From $449.',
   },
 }
 
@@ -360,14 +361,14 @@ export default function MCATBiologyTutorHoustonPage() {
               outline mapping, 300+ practice passages, recorded library, WhatsApp doubt support.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem Ascent: $899</strong> for the full programme. Adds
-              weekly 2-hour live sessions, monthly section mocks, peer Slack channel, senior faculty
-              office hours.
+              <strong>MCAT Bio/Biochem Ascent: $899</strong> for the full programme. Adds weekly
+              2-hour live sessions, monthly section mocks, peer Slack channel, senior faculty office
+              hours.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem Pinnacle: $1,349</strong> for the full programme.
-              Adds weekly 90-minute 1:1 video sessions with AIIMS-trained senior faculty,
-              personalised study plan, custom passage drills, unlimited WhatsApp access.
+              <strong>MCAT Bio/Biochem Pinnacle: $1,349</strong> for the full programme. Adds weekly
+              90-minute 1:1 video sessions with AIIMS-trained senior faculty, personalised study
+              plan, custom passage drills, unlimited WhatsApp access.
             </li>
             <li>
               <strong>Ad-hoc 1:1 tutoring — $135/hour</strong> outside the packaged programme. For

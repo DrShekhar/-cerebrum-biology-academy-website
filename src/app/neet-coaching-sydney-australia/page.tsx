@@ -46,7 +46,14 @@ export const metadata: Metadata = {
     title: `NEET Biology Coaching in ${city.city} — Live Online from India`,
     description: `For Australian-Indian Class 11-12 students. Saturday live + weekday recordings.`,
     creator: '@cerebrumacademy',
-    images: [{ url: 'https://cerebrumbiologyacademy.com/twitter-neet-coaching-sydney-australia.jpg', width: 1200, height: 630, alt: 'Twitter Neet Coaching Sydney Australia — Cerebrum Biology Academy' }],
+    images: [
+      {
+        url: 'https://cerebrumbiologyacademy.com/twitter-neet-coaching-sydney-australia.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Twitter Neet Coaching Sydney Australia — Cerebrum Biology Academy',
+      },
+    ],
   },
 }
 

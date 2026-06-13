@@ -36,4 +36,3 @@ export function ResponsiveIllustrationWrapper({
 export function getResponsiveClasses(size: 'sm' | 'md' | 'lg' | 'xl' | 'full' = 'lg'): string {
   return sizeClasses[size]
 }
-

@@ -22,8 +22,8 @@ function PurchaseFailedContent() {
 
         <h1 className="text-2xl font-bold text-slate-900 mb-2">Payment Failed</h1>
         <p className="text-slate-600 mb-6">
-          We were unable to process your payment. Don&apos;t worry — no amount has been deducted from
-          your account.
+          We were unable to process your payment. Don&apos;t worry — no amount has been deducted
+          from your account.
         </p>
 
         {orderId && (
@@ -74,11 +74,19 @@ function PurchaseFailedContent() {
         </div>
 
         <div className="mt-8 flex items-center justify-center gap-6 text-sm">
-          <a href="tel:+918826444334" className="flex items-center gap-1 text-blue-600 hover:underline">
+          <a
+            href="tel:+918826444334"
+            className="flex items-center gap-1 text-blue-600 hover:underline"
+          >
             <Phone className="w-4 h-4" />
             Call Support
           </a>
-          <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20purchase.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-blue-600 hover:underline">
+          <Link
+            href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20purchase.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 text-blue-600 hover:underline"
+          >
             <ArrowRight className="w-4 h-4" />
             Back to Admissions
           </Link>

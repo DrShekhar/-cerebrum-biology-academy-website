@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Biology Chapters - Complete Study Guide | Cerebrum Biology Academy',
-    description: 'Comprehensive NEET Biology chapter-wise study guide covering all Class 11 and 12 chapters. Key topics, important concepts, weightage analysis, and NEET preparation tips.',
+    description:
+      'Comprehensive NEET Biology chapter-wise study guide covering all Class 11 and 12 chapters. Key topics, important concepts, weightage analysis, and NEET preparation tips.',
   },
 }
 

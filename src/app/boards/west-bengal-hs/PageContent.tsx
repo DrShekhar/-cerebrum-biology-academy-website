@@ -20,9 +20,12 @@ function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) setIsVisible(true)
-    }, { threshold: 0.1 })
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true)
+      },
+      { threshold: 0.1 }
+    )
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
   }, [])
@@ -37,7 +40,8 @@ export default function PageContent() {
   const featuresAnimation = useScrollAnimation()
   const faqAnimation = useScrollAnimation()
 
-  const whatsappLink = 'https://wa.me/918826444334?text=I%20am%20interested%20in%20West%20Bengal%20HS%20Biology%20coaching%20with%20NEET%20and%20WBJEE%20preparation.'
+  const whatsappLink =
+    'https://wa.me/918826444334?text=I%20am%20interested%20in%20West%20Bengal%20HS%20Biology%20coaching%20with%20NEET%20and%20WBJEE%20preparation.'
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
@@ -58,14 +62,25 @@ export default function PageContent() {
               West Bengal HS Biology + NEET + WBJEE Coaching
             </h1>
             <p className="text-lg text-slate-600 mb-8 max-w-3xl mx-auto">
-              Complete West Bengal Higher Secondary (WBCHSE) Biology coaching with WBJEE overlap coverage and NEET integration. Master unique WB topics with expert Kolkata-based guidance.
+              Complete West Bengal Higher Secondary (WBCHSE) Biology coaching with WBJEE overlap
+              coverage and NEET integration. Master unique WB topics with expert Kolkata-based
+              guidance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href={whatsappLink} target="_blank" variant="primary" className="flex items-center justify-center gap-2">
+              <Button
+                href={whatsappLink}
+                target="_blank"
+                variant="primary"
+                className="flex items-center justify-center gap-2"
+              >
                 <MessageCircle className="w-5 h-5" />
                 Start Your Journey
               </Button>
-              <Button href="tel:8826444334" variant="secondary" className="flex items-center justify-center gap-2">
+              <Button
+                href="tel:8826444334"
+                variant="secondary"
+                className="flex items-center justify-center gap-2"
+              >
                 <Trophy className="w-5 h-5" />
                 Call: 8826444334
               </Button>
@@ -101,7 +116,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">West Bengal WBCHSE HS Biology Syllabus</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            West Bengal WBCHSE HS Biology Syllabus
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-8 border border-green-200">
               <div className="flex items-center gap-3 mb-6">
@@ -171,7 +188,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Triple Exam Integration: Board + NEET + WBJEE</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Triple Exam Integration: Board + NEET + WBJEE
+          </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg p-8 border border-slate-200 hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
@@ -179,7 +198,8 @@ export default function PageContent() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">WBCHSE Board Mastery</h3>
               <p className="text-slate-600">
-                Specialized coaching for West Bengal HS curriculum. Deep understanding of WBCHSE exam patterns, marking schemes, and WB-specific topics.
+                Specialized coaching for West Bengal HS curriculum. Deep understanding of WBCHSE
+                exam patterns, marking schemes, and WB-specific topics.
               </p>
             </div>
             <div className="bg-white rounded-lg p-8 border border-slate-200 hover:shadow-lg transition-shadow">
@@ -188,7 +208,8 @@ export default function PageContent() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">WBJEE Alignment</h3>
               <p className="text-slate-600">
-                Board curriculum mapped with WBJEE high-weightage topics. Kolkata-based competitive coaching insights for WB engineering entrance exam.
+                Board curriculum mapped with WBJEE high-weightage topics. Kolkata-based competitive
+                coaching insights for WB engineering entrance exam.
               </p>
             </div>
             <div className="bg-white rounded-lg p-8 border border-slate-200 hover:shadow-lg transition-shadow">
@@ -197,7 +218,8 @@ export default function PageContent() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">NEET Preparation</h3>
               <p className="text-slate-600">
-                Complete NEET integration with WB board curriculum. Comprehensive coverage of high-frequency NEET topics with exhaustive practice.
+                Complete NEET integration with WB board curriculum. Comprehensive coverage of
+                high-frequency NEET topics with exhaustive practice.
               </p>
             </div>
           </div>
@@ -212,7 +234,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Key Chapters & Unique WB Topics</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Key Chapters & Unique WB Topics
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-bold text-green-600 mb-6 flex items-center gap-2">
@@ -272,7 +296,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Why Choose Cerebrum for West Bengal HS?</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Why Choose Cerebrum for West Bengal HS?
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-lg p-8 border border-amber-200">
               <div className="flex items-start gap-4">
@@ -280,7 +306,8 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">WB Board Experts</h3>
                   <p className="text-slate-700">
-                    9+ years specialization in WBCHSE curriculum. Deep expertise in board exam patterns, WB-specific topics, and Kolkata competitive coaching dynamics.
+                    9+ years specialization in WBCHSE curriculum. Deep expertise in board exam
+                    patterns, WB-specific topics, and Kolkata competitive coaching dynamics.
                   </p>
                 </div>
               </div>
@@ -291,7 +318,8 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Proven Success</h3>
                   <p className="text-slate-700">
-                    1600+ West Bengal students coached with 94% board success. 580+ simultaneous NEET + WBJEE qualifiers in last 5 years.
+                    1600+ West Bengal students coached with 94% board success. 580+ simultaneous
+                    NEET + WBJEE qualifiers in last 5 years.
                   </p>
                 </div>
               </div>
@@ -302,7 +330,8 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Unique WB Topics</h3>
                   <p className="text-slate-700">
-                    Specialized coverage of WB-specific topics and exam patterns. Our understanding of Kolkata coaching competition ensures you stay ahead.
+                    Specialized coverage of WB-specific topics and exam patterns. Our understanding
+                    of Kolkata coaching competition ensures you stay ahead.
                   </p>
                 </div>
               </div>
@@ -313,7 +342,8 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Personalized Mentoring</h3>
                   <p className="text-slate-700">
-                    One-on-one doubt clarification and personalized guidance. Regular mock tests aligned with WBCHSE patterns and entrance exams.
+                    One-on-one doubt clarification and personalized guidance. Regular mock tests
+                    aligned with WBCHSE patterns and entrance exams.
                   </p>
                 </div>
               </div>
@@ -330,7 +360,9 @@ export default function PageContent() {
         }`}
       >
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
           <div className="space-y-6">
             {[
               {
@@ -354,7 +386,10 @@ export default function PageContent() {
                 a: 'Our instructors have extensive experience in Kolkata coaching landscape. We continuously update our methods based on competitive trends, ensuring our students have cutting-edge preparation surpassing local competition.',
               },
             ].map((faq, idx) => (
-              <details key={idx} className="group bg-white rounded-lg border border-slate-200 p-6 cursor-pointer hover:border-amber-300 transition-colors">
+              <details
+                key={idx}
+                className="group bg-white rounded-lg border border-slate-200 p-6 cursor-pointer hover:border-amber-300 transition-colors"
+              >
                 <summary className="flex items-start justify-between font-semibold text-slate-900 group-open:text-amber-600">
                   <span>{faq.q}</span>
                   <ArrowRight className="w-5 h-5 flex-shrink-0 transition-transform group-open:rotate-90" />
@@ -369,9 +404,12 @@ export default function PageContent() {
       {/* CTA Section */}
       <section className="px-6 py-16 bg-gradient-to-r from-amber-600 to-amber-700 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Master West Bengal HS Biology + NEET + WBJEE</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Master West Bengal HS Biology + NEET + WBJEE
+          </h2>
           <p className="text-lg text-amber-100 mb-8">
-            Join 1600+ West Bengal students who achieved board excellence and competitive exam success with Cerebrum.
+            Join 1600+ West Bengal students who achieved board excellence and competitive exam
+            success with Cerebrum.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -390,9 +428,7 @@ export default function PageContent() {
               Call: 8826444334
             </Button>
           </div>
-          <p className="text-amber-100 mt-6 text-sm">
-            Website: cerebrumbiologyacademy.com
-          </p>
+          <p className="text-amber-100 mt-6 text-sm">Website: cerebrumbiologyacademy.com</p>
         </div>
       </section>
     </div>

@@ -4,8 +4,7 @@ import Link from 'next/link'
 import PageContent from './PageContent'
 
 export const metadata: Metadata = {
-  title:
-    'Free NEET Biology Resources & Study Materials | Cerebrum Biology Academy',
+  title: 'Free NEET Biology Resources & Study Materials | Cerebrum Biology Academy',
   description:
     'Download free NEET biology resources including quick revision guides, study planners, and mock tests. 100% free, no login required.',
   keywords:
@@ -23,7 +22,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Free NEET Biology Resources & Study Materials | Cerebrum Biology Academy',
-    description: 'Download free NEET biology resources including quick revision guides, study planners, and mock tests. 100% free, no login required.',
+    description:
+      'Download free NEET biology resources including quick revision guides, study planners, and mock tests. 100% free, no login required.',
   },
 }
 

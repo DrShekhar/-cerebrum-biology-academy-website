@@ -139,61 +139,55 @@ export function RealTimeProof() {
 
   return (
     <div className="fixed bottom-6 left-6 z-30 max-w-sm">
-<div
-          key={currentNotification.id}
-          className="bg-white/95 backdrop-blur-md rounded-xl shadow-lg border border-gray-200 p-4 hover:shadow-xl transition-all duration-300 animate-fadeInUp"
-        >
-          <div className="flex items-start space-x-3">
-            {/* Avatar/Icon */}
-            <div
-              className={`w-10 h-10 ${currentNotification.color} rounded-full flex items-center justify-center flex-shrink-0`}
-            >
-              <Icon className="w-5 h-5 text-white" />
-            </div>
-
-            {/* Content */}
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center space-x-2 mb-1">
-                <span className="font-semibold text-gray-900 text-sm">
-                  {currentNotification.name}
-                </span>
-                <div className="flex items-center text-xs text-gray-500">
-                  <MapPin className="w-3 h-3 mr-1" />
-                  {currentNotification.location}
-                </div>
-              </div>
-
-              <p className="text-sm text-gray-700 leading-tight">{currentNotification.action}</p>
-
-              <div className="flex items-center justify-between mt-2">
-                <div className="flex items-center text-xs text-gray-500">
-                  <Clock className="w-3 h-3 mr-1" />
-                  {formatTimeAgo(currentNotification.timestamp)}
-                </div>
-
-                {/* Live indicator */}
-                <div className="flex items-center space-x-1">
-                  <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
-                  <span className="text-xs text-green-600 font-medium">Live</span>
-                </div>
-              </div>
-            </div>
+      <div
+        key={currentNotification.id}
+        className="bg-white/95 backdrop-blur-md rounded-xl shadow-lg border border-gray-200 p-4 hover:shadow-xl transition-all duration-300 animate-fadeInUp"
+      >
+        <div className="flex items-start space-x-3">
+          {/* Avatar/Icon */}
+          <div
+            className={`w-10 h-10 ${currentNotification.color} rounded-full flex items-center justify-center flex-shrink-0`}
+          >
+            <Icon className="w-5 h-5 text-white" />
           </div>
 
-          {/* Progress bar */}
-          <div
-            className="mt-3 h-1 bg-gray-200 rounded-full overflow-hidden animate-fadeInUp"
-          >
-            <div
-              className="h-full bg-blue-500 rounded-full animate-fadeInUp"
-            />
+          {/* Content */}
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center space-x-2 mb-1">
+              <span className="font-semibold text-gray-900 text-sm">
+                {currentNotification.name}
+              </span>
+              <div className="flex items-center text-xs text-gray-500">
+                <MapPin className="w-3 h-3 mr-1" />
+                {currentNotification.location}
+              </div>
+            </div>
+
+            <p className="text-sm text-gray-700 leading-tight">{currentNotification.action}</p>
+
+            <div className="flex items-center justify-between mt-2">
+              <div className="flex items-center text-xs text-gray-500">
+                <Clock className="w-3 h-3 mr-1" />
+                {formatTimeAgo(currentNotification.timestamp)}
+              </div>
+
+              {/* Live indicator */}
+              <div className="flex items-center space-x-1">
+                <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
+                <span className="text-xs text-green-600 font-medium">Live</span>
+              </div>
+            </div>
           </div>
         </div>
-{/* Notification count indicator */}
+
+        {/* Progress bar */}
+        <div className="mt-3 h-1 bg-gray-200 rounded-full overflow-hidden animate-fadeInUp">
+          <div className="h-full bg-blue-500 rounded-full animate-fadeInUp" />
+        </div>
+      </div>
+      {/* Notification count indicator */}
       {notifications.length > 1 && (
-        <div
-          className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold animate-fadeInUp"
-        >
+        <div className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold animate-fadeInUp">
           {notifications.length}
         </div>
       )}

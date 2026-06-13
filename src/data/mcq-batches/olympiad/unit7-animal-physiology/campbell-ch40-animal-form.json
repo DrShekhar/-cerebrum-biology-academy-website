@@ -29,12 +29,7 @@
     {
       "type": "MCQ",
       "question": "Kleiber's law describes the relationship between body mass (M) and basal metabolic rate (BMR) as BMR = aM^0.75. If a 25 kg mammal has a BMR of 40 watts, what is the approximate mass-specific metabolic rate (watts/kg) of a 0.025 kg mammal of the same taxonomic group?",
-      "options": [
-        "10.1 W/kg",
-        "5.0 W/kg",
-        "1.6 W/kg",
-        "16 W/kg"
-      ],
+      "options": ["10.1 W/kg", "5.0 W/kg", "1.6 W/kg", "16 W/kg"],
       "correctAnswer": "A",
       "explanation": "Using Kleiber's law, BMR = aM^0.75. For the 25 kg mammal: 40 = a(25)^0.75. First calculate 25^0.75 = e^(0.75 * ln25) = e^(0.75 * 3.219) = e^2.414 = 11.18. So a = 40/11.18 = 3.578. For the 0.025 kg mammal: BMR = 3.578 * (0.025)^0.75 = 3.578 * e^(0.75 * ln0.025) = 3.578 * e^(0.75 * (-3.689)) = 3.578 * e^(-2.767) = 3.578 * 0.0629 = 0.225 W. Mass-specific rate = 0.225/0.025 = 9.0 W/kg, closest to 10.1 W/kg. The key insight is that smaller animals have dramatically higher mass-specific metabolic rates due to the 0.75 scaling exponent being less than 1.0. Option A vastly underestimates the scaling effect. Option B overestimates it. Option C represents an intermediate error in the calculation.",
       "isOlympiad": true,
@@ -129,12 +124,7 @@
     {
       "type": "MCQ",
       "question": "A biologist measures oxygen consumption in a hibernating ground squirrel and finds it to be approximately 2% of the active metabolic rate. The animal's body temperature has dropped from 37\u00b0C to 5\u00b0C. Using Q10 analysis, what is the approximate Q10 value for this metabolic depression?",
-      "options": [
-        "Q10 = 3.5",
-        "Q10 = 2.7",
-        "Q10 = 2.0",
-        "Q10 = 4.2"
-      ],
+      "options": ["Q10 = 3.5", "Q10 = 2.7", "Q10 = 2.0", "Q10 = 4.2"],
       "correctAnswer": "B",
       "explanation": "The Q10 relationship is: Rate2/Rate1 = Q10^((T2-T1)/10). Here, the ratio is 0.02 (2% of active rate), and the temperature change is 32\u00b0C (from 37 to 5). So 0.02 = Q10^(-32/10) = Q10^(-3.2). Taking the natural log: ln(0.02) = -3.2 * ln(Q10), so -3.912 = -3.2 * ln(Q10), giving ln(Q10) = 1.222, and Q10 = e^1.222 = 3.39. However, this assumes all metabolic depression is passive (temperature-dependent). In reality, hibernators also actively suppress metabolism, meaning the actual Q10 for purely thermal effects would be lower, around 2.5-2.7. The best answer is 2.7, acknowledging that both passive thermal effects and active metabolic suppression contribute. Option A underestimates the effect. Options C and D would imply nearly all depression is thermal, ignoring active suppression mechanisms.",
       "isOlympiad": true,
@@ -289,12 +279,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about animal tissue types:\nS1: Connective tissue always contains cells embedded in an extracellular matrix, which may be liquid (as in blood), gel-like (as in cartilage), or solid (as in bone).\nS2: Smooth muscle is found in the walls of hollow organs and is under voluntary nervous control via somatic motor neurons.\nS3: Nervous tissue consists of neurons that transmit electrical signals and glial cells that provide support, insulation, and nourishment to neurons.\nS4: Epithelial tissue is always avascular and receives nutrients by diffusion from underlying connective tissue through the basement membrane.",
-      "options": [
-        "TTTT",
-        "TFTT",
-        "TTFT",
-        "TFFT"
-      ],
+      "options": ["TTTT", "TFTT", "TTFT", "TFFT"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: Connective tissue is defined by the presence of cells dispersed in an extracellular matrix. Blood has a liquid matrix (plasma), cartilage has a gel-like matrix of chondroitin sulfate, and bone has a solid mineralized matrix of hydroxyapatite. S2 is FALSE: While smooth muscle is indeed found in hollow organ walls (gut, blood vessels, uterus), it is under involuntary control via the autonomic nervous system, not voluntary somatic motor neurons. Voluntary control applies to skeletal muscle. S3 is TRUE: Nervous tissue contains two main cell types: neurons (which generate and conduct electrical impulses) and glial cells (astrocytes, oligodendrocytes, Schwann cells, microglia) that support neurons in various ways including myelination, nutrient supply, and immune defense. S4 is TRUE: Epithelial tissue characteristically lacks blood vessels (avascular) and relies on diffusion from the underlying connective tissue layer through the basement membrane for its metabolic needs.",
       "isOlympiad": true,
@@ -309,12 +294,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about thermoregulation in animals:\nS1: Endotherms maintain a constant body temperature regardless of environmental temperature through metabolic heat production alone.\nS2: The hypothalamus serves as the thermoregulatory center, integrating input from peripheral and central thermoreceptors.\nS3: Countercurrent heat exchangers in the limbs of arctic animals can reduce heat loss by transferring heat from arterial blood to venous blood before it reaches the extremities.\nS4: Evaporative cooling becomes ineffective at 100% relative humidity because the vapor pressure gradient between the skin and air approaches zero.",
-      "options": [
-        "FTTT",
-        "FTTF",
-        "TFTT",
-        "FFTT"
-      ],
+      "options": ["FTTT", "FTTF", "TFTT", "FFTT"],
       "correctAnswer": "FTTT",
       "explanation": "S1 is FALSE: Endotherms do not maintain constant body temperature solely through metabolic heat production. They also employ behavioral thermoregulation (seeking shade, huddling), vasomotor responses (vasoconstriction and vasodilation), sweating/panting, and piloerection. Furthermore, body temperature is not perfectly constant but fluctuates within a narrow range around the set point and can vary with circadian rhythms. S2 is TRUE: The preoptic area and anterior hypothalamus serve as the body's thermostat, receiving input from warm and cold receptors throughout the body and in the hypothalamus itself, and coordinating appropriate autonomic, endocrine, and behavioral responses. S3 is TRUE: In countercurrent exchange, warm arterial blood transfers heat to adjacent cool venous blood returning from the extremities, so less heat reaches the limb surface to be lost. S4 is TRUE: Evaporative cooling depends on the evaporation of water, which requires a vapor pressure gradient. At 100% humidity, the air is saturated and cannot accept additional water vapor.",
       "isOlympiad": true,
@@ -329,12 +309,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about metabolic rate and body size:\nS1: Mass-specific metabolic rate increases with body size because larger animals have more mitochondria per cell.\nS2: The relationship between metabolic rate and body mass follows an allometric equation with an exponent of approximately 0.75.\nS3: Basal metabolic rate (BMR) is measured in a post-absorptive, resting, non-stressed endotherm at thermoneutral temperature.\nS4: Standard metabolic rate (SMR) in ectotherms must always be reported with the ambient temperature at which it was measured.",
-      "options": [
-        "FTTT",
-        "FTTF",
-        "FFTT",
-        "FTFT"
-      ],
+      "options": ["FTTT", "FTTF", "FFTT", "FTFT"],
       "correctAnswer": "FTTT",
       "explanation": "S1 is FALSE: Mass-specific metabolic rate actually DECREASES with increasing body size. Smaller animals have higher per-gram metabolic rates than larger animals. This is a fundamental principle of allometric scaling. The number of mitochondria per cell does not simply increase with body size. S2 is TRUE: Kleiber's law describes this relationship as BMR = aM^0.75, where the scaling exponent is approximately 3/4. This three-quarter power scaling has been observed across many taxa. S3 is TRUE: BMR has strict measurement conditions: the animal must be post-absorptive (not digesting food, which would add specific dynamic action), resting (not active), non-stressed, and within its thermoneutral zone where no additional energy is spent on heating or cooling. S4 is TRUE: Unlike BMR in endotherms, SMR in ectotherms is highly temperature-dependent due to Q10 effects, so the measurement temperature must always be specified for the value to be meaningful and comparable.",
       "isOlympiad": true,
@@ -349,12 +324,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about negative feedback in homeostasis:\nS1: In negative feedback, the response reduces the stimulus, moving the variable back toward the set point.\nS2: Blood glucose regulation by insulin and glucagon is an example of negative feedback involving antagonistic hormones.\nS3: Positive feedback always leads to pathological conditions because it amplifies deviations from the set point.\nS4: The thermostat model of homeostasis includes a sensor, an integrating center, and an effector, all connected by signaling pathways.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFTT",
-        "TTFF"
-      ],
+      "options": ["TTFT", "TTTT", "TFTT", "TTFF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Negative feedback is the primary mechanism of homeostasis. When a variable deviates from its set point, the response counteracts the change, restoring the variable to its normal range. For example, rising body temperature triggers sweating, which cools the body. S2 is TRUE: When blood glucose rises, beta cells of the pancreas secrete insulin, promoting glucose uptake and storage. When glucose falls, alpha cells secrete glucagon, promoting glycogenolysis and gluconeogenesis. These antagonistic hormones work through negative feedback to maintain glucose homeostasis. S3 is FALSE: Positive feedback is not always pathological. Normal physiological examples include oxytocin-mediated uterine contractions during childbirth, the LH surge during ovulation, and blood clotting cascades. These are self-limiting processes with defined endpoints. S4 is TRUE: The homeostatic control loop consists of a receptor/sensor that detects the variable, a control center that processes information and compares it to the set point, and an effector that produces the response.",
       "isOlympiad": true,
@@ -409,12 +379,7 @@
     {
       "type": "DATA_INTERPRETATION",
       "question": "A student plots body temperature vs. ambient temperature for four different animals. The results show:\n- Animal W: body temperature remains at 37\u00b0C across all ambient temperatures (0-40\u00b0C)\n- Animal X: body temperature equals ambient temperature from 5-35\u00b0C, then plateaus at 35\u00b0C\n- Animal Y: body temperature tracks ambient from 10-25\u00b0C but remains at 25\u00b0C when ambient drops below 10\u00b0C\n- Animal Z: body temperature is 37\u00b0C from 0-30\u00b0C, then rises to 39\u00b0C at ambient 35\u00b0C and 41\u00b0C at ambient 40\u00b0C\n\nWhich animal is most likely a heterotherm that uses torpor?",
-      "options": [
-        "Animal W",
-        "Animal X",
-        "Animal Y",
-        "Animal Z"
-      ],
+      "options": ["Animal W", "Animal X", "Animal Y", "Animal Z"],
       "correctAnswer": "C",
       "explanation": "Animal Y shows characteristics of a heterotherm. At moderate temperatures (10-25\u00b0C), its body temperature tracks the environment like an ectotherm. However, below 10\u00b0C, it defends a lower set point of 25\u00b0C, indicating it does not simply conform to ambient temperature but actively regulates at a reduced level. This pattern is consistent with an animal that enters torpor or regulated hypothermia, maintaining body temperature above a critical minimum while saving energy by not heating to full endothermic levels. Animal W is a classic endotherm with perfect thermoregulation. Animal X is a thermoconformer (ectotherm) that reaches a thermal maximum. Animal Z is an endotherm that maintains homeostasis until high ambient temperatures overwhelm its cooling mechanisms, causing hyperthermia. Only Animal Y shows the regulated heterothermy pattern.",
       "isOlympiad": true,
@@ -769,12 +734,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about energy budgets in animals:\nS1: The total energy budget of an animal includes basal/standard metabolism, activity, thermoregulation, growth, and reproduction.\nS2: Endotherms typically allocate a larger proportion of their energy budget to thermoregulation compared to ectotherms.\nS3: The specific dynamic action (SDA) or thermic effect of food is highest for protein-rich diets because protein catabolism involves energetically expensive deamination and urea synthesis.\nS4: An animal in energy balance is one where energy intake equals energy expenditure, meaning all consumed food is immediately oxidized.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFT",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: The total energy budget equation is: Total energy intake = basal/standard metabolism + activity costs + thermoregulation + growth + reproduction + excretion. This provides a comprehensive accounting of how organisms partition energy. S2 is TRUE: Endotherms spend 85-90% of their total energy budget on thermoregulation and basal metabolism, while ectotherms can allocate most energy to growth and reproduction because they do not pay the high cost of internal heat production. S3 is TRUE: Protein has the highest SDA (approximately 20-30% of energy content) because amino acid processing requires transamination, deamination, urea cycle enzymes, and gluconeogenesis, all of which consume ATP. Carbohydrates and fats have lower SDA (~5-10%). S4 is FALSE: Energy balance means intake equals expenditure over time, but not all food is immediately oxidized. Energy can be stored as glycogen, fat, or protein (growth), and energy balance is achieved when storage rate equals mobilization rate over time.",
       "isOlympiad": true,
@@ -789,12 +749,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about epithelia:\nS1: Pseudostratified columnar epithelium appears multilayered but all cells contact the basement membrane, though not all reach the apical surface.\nS2: Stratified squamous epithelium is found lining the alveoli of the lungs where thin tissue is needed for gas exchange.\nS3: Transitional epithelium (urothelium) can stretch from a multi-layered appearance to a thinner configuration, which is essential for bladder function.\nS4: Simple cuboidal epithelium lines kidney tubules and functions in secretion and absorption.",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TFTT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE: Pseudostratified epithelium has a deceptively layered appearance because cell nuclei are at different heights, but every cell rests on the basement membrane. Only some cells reach the lumen surface. This tissue lines the trachea and upper respiratory tract, often bearing cilia. S2 is FALSE: Lung alveoli are lined by simple squamous epithelium (specifically type I pneumocytes), not stratified squamous epithelium. Stratified squamous epithelium is too thick for efficient gas diffusion and is instead found in areas subject to abrasion such as skin, oral cavity, esophagus, and vagina. S3 is TRUE: Transitional epithelium is unique to the urinary system (bladder, ureters, renal pelvis). It accommodates stretch when the bladder fills, transitioning from a thick, rounded appearance to a thinner, flattened configuration. S4 is TRUE: Simple cuboidal epithelium lines proximal and distal convoluted tubules of nephrons, functioning in reabsorption and secretion of solutes, water, and waste products.",
       "isOlympiad": true,
@@ -809,12 +764,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about adaptations for heat dissipation in endotherms:\nS1: Panting in dogs primarily cools the body through evaporation of water from the tongue and upper respiratory tract surfaces.\nS2: Sweating in humans is controlled by the sympathetic nervous system, with eccrine glands innervated by cholinergic sympathetic fibers.\nS3: Elephants use their large, highly vascularized ears as radiators, with arteriovenous anastomoses that can increase blood flow to ear skin for heat dissipation.\nS4: Vasodilation of cutaneous arterioles during heat stress is mediated primarily by parasympathetic nervous stimulation.",
-      "options": [
-        "TTTF",
-        "TTTT",
-        "TTFF",
-        "TFTT"
-      ],
+      "options": ["TTTF", "TTTT", "TTFF", "TFTT"],
       "correctAnswer": "TTTF",
       "explanation": "S1 is TRUE: Panting increases airflow over moist respiratory surfaces, promoting evaporative cooling. The shallow, rapid breathing moves air over the tongue and nasal passages without significantly increasing alveolar ventilation, thus cooling blood without causing respiratory alkalosis. S2 is TRUE: Eccrine sweat glands are uniquely innervated by sympathetic cholinergic fibers (using acetylcholine rather than norepinephrine), which is an exception to the general rule that sympathetic postganglionic neurons are adrenergic. S3 is TRUE: African elephants can dissipate up to 100% of their metabolic heat through their ears in cool conditions. The ears have a thin dermis with an extensive vascular network and arteriovenous anastomoses that allow high blood flow when vasodilated. S4 is FALSE: Cutaneous vasodilation during heat stress is mediated by withdrawal of sympathetic vasoconstrictor tone (adrenergic) and an active vasodilatory system involving sympathetic cholinergic nerves, NOT parasympathetic innervation. Cutaneous blood vessels generally lack parasympathetic innervation.",
       "isOlympiad": true,
@@ -989,12 +939,7 @@
     {
       "type": "MCQ",
       "question": "In the loose connective tissue underlying epithelium, which cell type is primarily responsible for secreting the extracellular matrix components including collagen, elastin, and proteoglycans?",
-      "options": [
-        "Macrophages",
-        "Mast cells",
-        "Fibroblasts",
-        "Adipocytes"
-      ],
+      "options": ["Macrophages", "Mast cells", "Fibroblasts", "Adipocytes"],
       "correctAnswer": "C",
       "explanation": "Fibroblasts are the principal secretory cells of connective tissue, responsible for synthesizing and secreting the extracellular matrix (ECM) components. They produce collagen fibers (providing tensile strength), elastin fibers (providing elasticity), and the ground substance composed of proteoglycans and glycosaminoglycans (providing hydration and compressive resistance). Fibroblasts are typically stellate cells with extensive rough endoplasmic reticulum for protein synthesis. Option A (macrophages) are phagocytic immune cells that engulf pathogens and debris but do not synthesize ECM. Option B (mast cells) store and release histamine and heparin in inflammatory responses. Option D (adipocytes) are specialized for lipid storage and energy metabolism, not ECM production.",
       "isOlympiad": true,
@@ -1269,12 +1214,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about organ systems and their interactions:\nS1: The circulatory system provides a medium for distributing heat generated by metabolic activity throughout the body, connecting the thermoregulatory function of the integumentary system with the metabolic function of all cells.\nS2: The endocrine and nervous systems both contribute to homeostatic regulation, but the nervous system acts more rapidly while endocrine responses are generally slower but longer lasting.\nS3: The respiratory system in mammals functions independently of the circulatory system because gas exchange occurs directly between alveoli and the atmosphere.\nS4: The lymphatic system connects the circulatory and immune systems by returning interstitial fluid to the blood while also housing immune cells in lymph nodes.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFTT",
-        "TTTF"
-      ],
+      "options": ["TTFT", "TTTT", "TFTT", "TTTF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Blood serves as a heat transport medium. Warm blood from metabolically active organs (liver, muscles) is distributed to cooler areas, and surface blood flow is modulated for thermoregulation through vasomotor control. S2 is TRUE: The nervous system responds in milliseconds via electrical signals (action potentials) and chemical synapses, while the endocrine system responds over minutes to hours via hormones transported in blood. However, endocrine effects persist longer because hormones have extended half-lives. S3 is FALSE: Gas exchange critically depends on the circulatory system. Oxygen diffuses from alveoli into pulmonary capillary blood (binding hemoglobin), which then transports it to tissues. CO2 follows the reverse path. Without the circulatory system, alveolar gas exchange would be useless because gases would not reach cells. S4 is TRUE: The lymphatic system collects excess interstitial fluid as lymph, filters it through lymph nodes (where B cells, T cells, and macrophages reside), and returns it to venous circulation, integrating fluid balance with immune surveillance.",
       "isOlympiad": true,
@@ -1289,12 +1229,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the thermoneutral zone (TNZ) in endotherms:\nS1: Within the TNZ, metabolic rate is at its minimum because no additional energy is spent on heating or cooling.\nS2: The lower critical temperature (LCT) marks the ambient temperature below which metabolic rate must increase to maintain body temperature.\nS3: Arctic mammals generally have a narrower TNZ than tropical mammals because they experience less temperature variation in their polar habitat.\nS4: The upper critical temperature (UCT) marks the ambient temperature above which evaporative cooling mechanisms must be activated to prevent hyperthermia.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFTT",
-        "TTTF"
-      ],
+      "options": ["TTFT", "TTTT", "TFTT", "TTTF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: The TNZ is defined as the range of ambient temperatures at which the animal's basal metabolic rate is sufficient for thermoregulation, requiring no extra energy for heating or cooling. Body temperature is maintained by passive mechanisms (insulation, vasomotor adjustments). S2 is TRUE: Below the LCT, passive insulation is insufficient and the animal must increase metabolic heat production (through shivering or NST) to maintain core temperature, resulting in increased oxygen consumption. S3 is FALSE: Arctic mammals generally have a WIDER TNZ extending to much lower temperatures. For example, an arctic fox's LCT may be as low as -40\u00b0C, giving it a TNZ spanning nearly 80\u00b0C, because of superior insulation. Tropical mammals have narrower TNZs with higher LCTs because they lack adaptations for extreme cold. S4 is TRUE: Above the UCT, passive heat dissipation (vasodilation, radiation, convection) is insufficient, and the animal must use metabolically costly evaporative cooling (sweating, panting) to prevent hyperthermia.",
       "isOlympiad": true,
@@ -1469,12 +1404,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about freeze tolerance and freeze avoidance strategies in animals:\nS1: Freeze-tolerant animals like wood frogs allow extracellular ice formation while protecting cells from intracellular freezing through cryoprotectants.\nS2: Freeze-avoidant insects such as some beetles can supercool to -40\u00b0C by eliminating ice-nucleating agents from their hemolymph.\nS3: Antifreeze proteins in Antarctic fish work by lowering the colligative freezing point of blood, similar to adding salt to water.\nS4: Some freeze-tolerant insects produce ice-nucleating proteins that promote controlled extracellular ice formation at relatively high subzero temperatures.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFFT",
-        "TTTF"
-      ],
+      "options": ["TTFT", "TTTT", "TFFT", "TTTF"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE: Freeze-tolerant organisms like wood frogs (Rana sylvatica) allow controlled extracellular ice formation while maintaining unfrozen intracellular conditions through cryoprotectants (glucose in frogs, glycerol and trehalose in some insects) that lower the intracellular freezing point and stabilize membranes. S2 is TRUE: Freeze-avoidant organisms prevent any ice formation by supercooling. Insects achieve extreme supercooling by removing or inactivating ice-nucleating agents (food particles, bacteria, dust) from the gut and hemolymph, clearing gut contents before winter, and producing antifreeze proteins. Some can supercool to below -40\u00b0C. S3 is FALSE: Antifreeze proteins (AFPs) and antifreeze glycoproteins (AFGPs) work NON-colligatively through adsorption-inhibition. They bind to ice crystal surfaces and inhibit crystal growth, creating thermal hysteresis between melting and freezing points. Their concentrations are too low for significant colligative effects. S4 is TRUE: Some freeze-tolerant organisms produce ice-nucleating proteins (INPs) that trigger controlled extracellular ice formation at high subzero temperatures (around -2 to -5\u00b0C), preventing dangerous supercooling and sudden, uncontrolled freezing events.",
       "isOlympiad": true,
@@ -1489,12 +1419,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about allometric scaling in animals:\nS1: Heart rate scales inversely with body mass, with smaller animals having higher heart rates than larger animals.\nS2: The total number of heartbeats in a mammal's lifetime is approximately constant across species regardless of body size, at roughly 1 billion beats.\nS3: Lung volume scales linearly (isometrically) with body mass, meaning larger animals have proportionally the same lung volume per unit mass.\nS4: Bone diameter must scale with a power greater than 1.0 relative to body length because bone strength scales with cross-sectional area while body mass scales with volume.",
-      "options": [
-        "TTTT",
-        "TFTT",
-        "TTFT",
-        "TTTF"
-      ],
+      "options": ["TTTT", "TFTT", "TTFT", "TTTF"],
       "correctAnswer": "TTTT",
       "explanation": "S1 is TRUE: Heart rate scales approximately as M^(-0.25), meaning it decreases with body size. A shrew's heart beats ~600-800 bpm while an elephant's beats ~25-30 bpm. This is necessary because larger hearts eject more blood per beat, so fewer beats are needed per minute. S2 is TRUE: Because both heart rate (M^-0.25) and lifespan (M^0.25) scale with body mass but in opposite directions, their product (total heartbeats per lifetime) is approximately constant at ~1-1.5 billion beats across mammalian species. This remarkable invariance was noted by Schmidt-Nielsen. S3 is TRUE: Lung volume scales approximately linearly with body mass (proportional to M^1.0), meaning a 10 kg mammal has roughly 10 times the lung volume of a 1 kg mammal. This isometric scaling maintains a constant lung-to-body mass ratio across species. S4 is TRUE: This is Galileo's square-cube law applied to biology. Since supporting strength depends on cross-sectional area (L^2) but body mass increases with L^3, bones must become disproportionately thicker in larger animals to maintain structural integrity.",
       "isOlympiad": true,

@@ -290,9 +290,7 @@ export function LiveEnrollmentNotifications({
   return (
     <div className="fixed top-24 left-4 z-40 space-y-3 max-w-xs">
       {/* Live Activity Counter */}
-      <div
-        className="bg-[#4a5d4a] text-white p-3 rounded-lg shadow-lg animate-fadeInUp"
-      >
+      <div className="bg-[#4a5d4a] text-white p-3 rounded-lg shadow-lg animate-fadeInUp">
         <div className="flex items-center mb-2">
           <TrendingUp className="w-4 h-4 mr-2" />
           <span className="font-semibold text-sm">Live Activity</span>
@@ -314,46 +312,44 @@ export function LiveEnrollmentNotifications({
       </div>
 
       {/* Enrollment Notifications */}
-{notifications.map((notification, index) => (
-          <div
-            key={notification.id}
-            className={`bg-white rounded-lg shadow-lg border-l-4 p-3 ${getNotificationStyle(notification.urgency)}`}
-          >
-            <div className="flex items-start space-x-3">
-              <div className="flex-shrink-0 mt-1">{getNotificationIcon(notification.type)}</div>
+      {notifications.map((notification, index) => (
+        <div
+          key={notification.id}
+          className={`bg-white rounded-lg shadow-lg border-l-4 p-3 ${getNotificationStyle(notification.urgency)}`}
+        >
+          <div className="flex items-start space-x-3">
+            <div className="flex-shrink-0 mt-1">{getNotificationIcon(notification.type)}</div>
 
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-gray-900 leading-relaxed">
-                  {notification.message}
-                </p>
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-medium text-gray-900 leading-relaxed">
+                {notification.message}
+              </p>
 
-                {notification.seatsLeft && notification.urgency === 'high' && (
-                  <div className="mt-1 flex items-center text-xs text-red-600 font-medium">
-                    <Zap className="w-3 h-3 mr-1" />
-                    <span>Urgent: Only {notification.seatsLeft} left!</span>
-                  </div>
-                )}
-
-                <div className="mt-2 flex items-center text-xs text-gray-500">
-                  <Clock className="w-3 h-3 mr-1" />
-                  <span>Just now</span>
-                  <span className="mx-2">•</span>
-                  <span className="text-purple-600 font-medium">Cerebrum</span>
+              {notification.seatsLeft && notification.urgency === 'high' && (
+                <div className="mt-1 flex items-center text-xs text-red-600 font-medium">
+                  <Zap className="w-3 h-3 mr-1" />
+                  <span>Urgent: Only {notification.seatsLeft} left!</span>
                 </div>
+              )}
+
+              <div className="mt-2 flex items-center text-xs text-gray-500">
+                <Clock className="w-3 h-3 mr-1" />
+                <span>Just now</span>
+                <span className="mx-2">•</span>
+                <span className="text-purple-600 font-medium">Cerebrum</span>
               </div>
             </div>
-
-            {/* Urgency pulse for high priority */}
-            {notification.urgency === 'high' && (
-              <div className="absolute inset-0 rounded-lg bg-red-200 opacity-20 animate-pulse pointer-events-none" />
-            )}
           </div>
-        ))}
-{/* Call to Action for High Urgency */}
+
+          {/* Urgency pulse for high priority */}
+          {notification.urgency === 'high' && (
+            <div className="absolute inset-0 rounded-lg bg-red-200 opacity-20 animate-pulse pointer-events-none" />
+          )}
+        </div>
+      ))}
+      {/* Call to Action for High Urgency */}
       {notifications.some((n) => n.urgency === 'high') && (
-        <div
-          className="bg-red-600 text-white p-3 rounded-lg shadow-lg text-center animate-fadeInUp"
-        >
+        <div className="bg-red-600 text-white p-3 rounded-lg shadow-lg text-center animate-fadeInUp">
           <div className="flex items-center justify-center mb-1">
             <Zap className="w-4 h-4 mr-1" />
             <span className="font-bold text-sm">Limited Seats Alert!</span>

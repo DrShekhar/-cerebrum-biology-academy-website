@@ -262,8 +262,16 @@ export default function PageContent({ faqs }: PageContentProps) {
         </div>
       </section>
 
-            <USABOPathwayCallout cityName="Central New Jersey" schools={["West Windsor-Plainsboro HS","Princeton HS","Montgomery HS","Edison Academy / JP Stevens","Livingston HS"]} />
-
+      <USABOPathwayCallout
+        cityName="Central New Jersey"
+        schools={[
+          'West Windsor-Plainsboro HS',
+          'Princeton HS',
+          'Montgomery HS',
+          'Edison Academy / JP Stevens',
+          'Livingston HS',
+        ]}
+      />
 
       <RelatedCityLinks currentCity="edisonNJ" variant="default" />
     </div>

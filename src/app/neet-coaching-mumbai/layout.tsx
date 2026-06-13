@@ -19,7 +19,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best NEET Coaching in Mumbai 2026 | Maharashtra',
-    description: 'Top NEET coaching for Mumbai students. 98% success rate. Online classes from AIIMS faculty.',
+    description:
+      'Top NEET coaching for Mumbai students. 98% success rate. Online classes from AIIMS faculty.',
   },
   other: {
     'article:modified_time': '2026-05-27',

@@ -12,7 +12,14 @@ export const metadata: Metadata = {
     title: 'NEET Repeaters 2026 | Biology Second Attempt Coaching',
     description:
       '89% of our NEET repeaters qualify. Diagnostic-led biology gap-fill + AIIMS faculty + weekly 1:1 doubt slots + emotional support. Your second NEET attempt starts with the right plan.',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'NEET Repeaters Program 2026 | Second Attempt Biology Coaching | Cer...' }],
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'NEET Repeaters Program 2026 | Second Attempt Biology Coaching | Cer...',
+      },
+    ],
     url: 'https://cerebrumbiologyacademy.com/neet-repeaters',
     type: 'website',
   },
@@ -20,7 +27,14 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NEET Repeaters Success Program 2026',
     description: 'AIIMS faculty + 89% repeater qualify rate + diagnostic gap-fill biology coaching',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'NEET Repeaters Program 2026 | Second Attempt Biology Coaching | Cer...' }],
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'NEET Repeaters Program 2026 | Second Attempt Biology Coaching | Cer...',
+      },
+    ],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-repeaters',

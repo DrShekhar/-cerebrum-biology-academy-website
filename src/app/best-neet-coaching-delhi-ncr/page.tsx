@@ -39,7 +39,11 @@ export default function BestNEETCoachingDelhiNCRPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Delhi NCR', 'NEET Biology Delhi NCR', 'Medical entrance coaching Delhi NCR']}
+        knowsAbout={[
+          'NEET Delhi NCR',
+          'NEET Biology Delhi NCR',
+          'Medical entrance coaching Delhi NCR',
+        ]}
       />
       <DelhiAreaSchema pageSlug="best-neet-coaching-delhi-ncr" />
       <div className="mx-auto max-w-7xl px-4 pt-4">

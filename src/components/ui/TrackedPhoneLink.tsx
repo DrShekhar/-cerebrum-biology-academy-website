@@ -53,7 +53,11 @@ export function TrackedPhoneLink({
  * Standalone function to track phone call clicks
  * Use this when you can't use the TrackedPhoneLink component
  */
-export function handlePhoneClickTracking(source: string, _phone: 'primary' | 'secondary' | 'owner' = 'primary', priority: number = 100) {
+export function handlePhoneClickTracking(
+  source: string,
+  _phone: 'primary' | 'secondary' | 'owner' = 'primary',
+  priority: number = 100
+) {
   trackPhoneCall(source, priority)
 }
 

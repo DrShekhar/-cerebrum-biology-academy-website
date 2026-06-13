@@ -143,9 +143,7 @@ export default function CouponsPage() {
         <div className="flex justify-between items-center">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Coupon Management</h1>
-            <p className="text-gray-600 mt-2">
-              Create and manage discount coupons for courses
-            </p>
+            <p className="text-gray-600 mt-2">Create and manage discount coupons for courses</p>
           </div>
           <Button
             className="bg-blue-600 hover:bg-blue-700 text-white"
@@ -190,9 +188,7 @@ export default function CouponsPage() {
           </div>
         </div>
 
-        <div
-          className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-fadeInUp"
-        >
+        <div className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-fadeInUp">
           {loading ? (
             <div className="text-center py-12 text-gray-500">Loading...</div>
           ) : (
@@ -232,9 +228,7 @@ export default function CouponsPage() {
                                 {coupon.code}
                               </span>
                               {coupon.description && (
-                                <p className="text-xs text-gray-500 mt-0.5">
-                                  {coupon.description}
-                                </p>
+                                <p className="text-xs text-gray-500 mt-0.5">{coupon.description}</p>
                               )}
                             </div>
                           </td>
@@ -244,9 +238,7 @@ export default function CouponsPage() {
                                 ₹{coupon.discountAmount.toLocaleString('en-IN')}
                               </span>
                             ) : (
-                              <span className="font-medium">
-                                {coupon.discountPercent}%
-                              </span>
+                              <span className="font-medium">{coupon.discountPercent}%</span>
                             )}
                             {coupon.minOrderAmount && (
                               <p className="text-xs text-gray-500">
@@ -267,16 +259,10 @@ export default function CouponsPage() {
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-500">
                             {coupon.startsAt && (
-                              <div>
-                                From:{' '}
-                                {new Date(coupon.startsAt).toLocaleDateString()}
-                              </div>
+                              <div>From: {new Date(coupon.startsAt).toLocaleDateString()}</div>
                             )}
                             {coupon.expiresAt && (
-                              <div>
-                                To:{' '}
-                                {new Date(coupon.expiresAt).toLocaleDateString()}
-                              </div>
+                              <div>To: {new Date(coupon.expiresAt).toLocaleDateString()}</div>
                             )}
                             {!coupon.startsAt && !coupon.expiresAt && 'No date limits'}
                           </td>
@@ -296,9 +282,7 @@ export default function CouponsPage() {
                                     ? 'text-green-600 hover:text-green-800'
                                     : 'text-gray-400 hover:text-gray-600'
                                 }
-                                title={
-                                  coupon.isActive ? 'Deactivate' : 'Activate'
-                                }
+                                title={coupon.isActive ? 'Deactivate' : 'Activate'}
                               >
                                 {coupon.isActive ? (
                                   <ToggleRight className="w-5 h-5" />
@@ -317,12 +301,8 @@ export default function CouponsPage() {
               {coupons.length === 0 && !loading && (
                 <div className="text-center py-12">
                   <Tag className="mx-auto h-12 w-12 text-gray-400" />
-                  <h3 className="mt-2 text-sm font-medium text-gray-900">
-                    No coupons found
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500">
-                    Create a coupon to get started.
-                  </p>
+                  <h3 className="mt-2 text-sm font-medium text-gray-900">No coupons found</h3>
+                  <p className="mt-1 text-sm text-gray-500">Create a coupon to get started.</p>
                 </div>
               )}
             </>

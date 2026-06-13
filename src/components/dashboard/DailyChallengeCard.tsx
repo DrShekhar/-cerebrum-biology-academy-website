@@ -2,14 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import {
-  Flame,
-  CheckCircle,
-  ArrowRight,
-  Loader2,
-  Sparkles,
-  Users,
-} from 'lucide-react'
+import { Flame, CheckCircle, ArrowRight, Loader2, Sparkles, Users } from 'lucide-react'
 
 interface ChallengeData {
   id: string
@@ -86,9 +79,7 @@ export function DailyChallengeCard() {
                 Today
               </span>
             </div>
-            {challenge.topic && (
-              <p className="text-xs text-white/70">{challenge.topic}</p>
-            )}
+            {challenge.topic && <p className="text-xs text-white/70">{challenge.topic}</p>}
           </div>
         </div>
         {isCompleted && (

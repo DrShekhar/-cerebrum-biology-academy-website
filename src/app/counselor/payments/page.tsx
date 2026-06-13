@@ -70,9 +70,10 @@ function EMICalculator({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
       date.setMonth(date.getMonth() + i + 1)
       return {
         number: i + 1,
-        amount: i === installments - 1
-          ? remaining - emiAmount * (installments - 1) // Last EMI adjusts for rounding
-          : emiAmount,
+        amount:
+          i === installments - 1
+            ? remaining - emiAmount * (installments - 1) // Last EMI adjusts for rounding
+            : emiAmount,
         date: format(date, 'MMM d, yyyy'),
       }
     })
@@ -101,7 +102,9 @@ function EMICalculator({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
           {/* Inputs */}
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">Total Course Fee (₹)</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                Total Course Fee (₹)
+              </label>
               <input
                 type="number"
                 value={totalFee}
@@ -110,7 +113,9 @@ function EMICalculator({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">Down Payment (₹)</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                Down Payment (₹)
+              </label>
               <input
                 type="number"
                 value={downPayment}
@@ -122,7 +127,9 @@ function EMICalculator({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">Number of EMIs</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                Number of EMIs
+              </label>
               <div className="flex gap-2">
                 {[3, 4, 6, 9, 12].map((n) => (
                   <button
@@ -159,7 +166,9 @@ function EMICalculator({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
               </div>
               <div>
                 <p className="text-indigo-200 text-xs">Monthly EMI</p>
-                <p className="text-2xl font-bold">₹{calculations.emiAmount.toLocaleString('en-IN')}</p>
+                <p className="text-2xl font-bold">
+                  ₹{calculations.emiAmount.toLocaleString('en-IN')}
+                </p>
               </div>
               <div>
                 <p className="text-indigo-200 text-xs">Total Amount</p>
@@ -176,8 +185,12 @@ function EMICalculator({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
                 <thead>
                   <tr className="border-b border-gray-200">
                     <th className="px-4 py-2 text-left text-xs font-medium text-gray-500">EMI #</th>
-                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500">Due Date</th>
-                    <th className="px-4 py-2 text-right text-xs font-medium text-gray-500">Amount</th>
+                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500">
+                      Due Date
+                    </th>
+                    <th className="px-4 py-2 text-right text-xs font-medium text-gray-500">
+                      Amount
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -198,7 +211,9 @@ function EMICalculator({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
                     </tr>
                   ))}
                   <tr className="bg-indigo-50 font-bold">
-                    <td className="px-4 py-2 text-sm text-indigo-700" colSpan={2}>Total</td>
+                    <td className="px-4 py-2 text-sm text-indigo-700" colSpan={2}>
+                      Total
+                    </td>
                     <td className="px-4 py-2 text-sm text-indigo-700 text-right">
                       ₹{calculations.total.toLocaleString('en-IN')}
                     </td>
@@ -232,9 +247,10 @@ export default function PaymentsPageV2() {
     try {
       setLoading(true)
       setError(null)
-      const url = statusFilter === 'ALL'
-        ? '/api/counselor/payments'
-        : `/api/counselor/payments?status=${statusFilter}`
+      const url =
+        statusFilter === 'ALL'
+          ? '/api/counselor/payments'
+          : `/api/counselor/payments?status=${statusFilter}`
       const res = await fetch(url, { credentials: 'include' })
       if (!res.ok) throw new Error('Failed to fetch')
       const data = await res.json()
@@ -248,7 +264,12 @@ export default function PaymentsPageV2() {
 
   async function handleMarkPaid(payment: PaymentInstallment) {
     if (payment.status === 'PAID') return
-    if (!confirm(`Mark ₹${payment.amount.toLocaleString('en-IN')} from ${payment.feePlan.lead.studentName} as paid?`)) return
+    if (
+      !confirm(
+        `Mark ₹${payment.amount.toLocaleString('en-IN')} from ${payment.feePlan.lead.studentName} as paid?`
+      )
+    )
+      return
 
     try {
       setMarking(payment.id)
@@ -295,10 +316,20 @@ export default function PaymentsPageV2() {
   // Computed stats
   const stats = useMemo(() => {
     const total = payments.reduce((sum, p) => sum + Number(p.amount), 0)
-    const paid = payments.filter((p) => p.status === 'PAID').reduce((sum, p) => sum + Number(p.paidAmount || p.amount), 0)
-    const pending = payments.filter((p) => p.status === 'PENDING').reduce((sum, p) => sum + Number(p.amount), 0)
-    const overdue = payments.filter((p) => p.status === 'OVERDUE' || (p.status === 'PENDING' && isPast(new Date(p.dueDate)))).reduce((sum, p) => sum + Number(p.amount), 0)
-    const overdueCount = payments.filter((p) => p.status === 'OVERDUE' || (p.status === 'PENDING' && isPast(new Date(p.dueDate)))).length
+    const paid = payments
+      .filter((p) => p.status === 'PAID')
+      .reduce((sum, p) => sum + Number(p.paidAmount || p.amount), 0)
+    const pending = payments
+      .filter((p) => p.status === 'PENDING')
+      .reduce((sum, p) => sum + Number(p.amount), 0)
+    const overdue = payments
+      .filter(
+        (p) => p.status === 'OVERDUE' || (p.status === 'PENDING' && isPast(new Date(p.dueDate)))
+      )
+      .reduce((sum, p) => sum + Number(p.amount), 0)
+    const overdueCount = payments.filter(
+      (p) => p.status === 'OVERDUE' || (p.status === 'PENDING' && isPast(new Date(p.dueDate)))
+    ).length
     const dueThisWeek = payments.filter((p) => {
       if (p.status === 'PAID') return false
       const days = differenceInDays(new Date(p.dueDate), new Date())
@@ -321,7 +352,9 @@ export default function PaymentsPageV2() {
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Payments</h1>
-          <p className="text-gray-600 mt-1">Track installments, send reminders, and manage collections</p>
+          <p className="text-gray-600 mt-1">
+            Track installments, send reminders, and manage collections
+          </p>
         </div>
         <div className="flex gap-3">
           <button
@@ -460,8 +493,13 @@ export default function PaymentsPageV2() {
               >
                 {/* Header */}
                 <div className="flex items-start justify-between mb-3">
-                  <Link href={`/counselor/leads/${payment.feePlan.lead.id}`} className="hover:text-indigo-600">
-                    <h3 className="font-semibold text-gray-900">{payment.feePlan.lead.studentName}</h3>
+                  <Link
+                    href={`/counselor/leads/${payment.feePlan.lead.id}`}
+                    className="hover:text-indigo-600"
+                  >
+                    <h3 className="font-semibold text-gray-900">
+                      {payment.feePlan.lead.studentName}
+                    </h3>
                     <p className="text-xs text-gray-500">{payment.feePlan.courseName}</p>
                   </Link>
                   <span
@@ -550,7 +588,15 @@ export default function PaymentsPageV2() {
 // Missing import used in JSX
 function MessageSquare(props: any) {
   return (
-    <svg {...props} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      {...props}
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
     </svg>
   )

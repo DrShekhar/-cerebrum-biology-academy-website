@@ -1,6 +1,21 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Monitor, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift } from 'lucide-react'
+import {
+  Phone,
+  MessageCircle,
+  CheckCircle,
+  Star,
+  Users,
+  Trophy,
+  Monitor,
+  Building2,
+  MapPin,
+  ArrowRight,
+  BookOpen,
+  Target,
+  Clock,
+  Gift,
+} from 'lucide-react'
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
@@ -21,7 +36,8 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'Class 11 Biology Coaching Noida | NEET Foundation 2026',
-    description: 'Expert Class 11 Biology coaching with NEET foundation. AIIMS faculty, 15-student batches.',
+    description:
+      'Expert Class 11 Biology coaching with NEET foundation. AIIMS faculty, 15-student batches.',
     url: 'https://cerebrumbiologyacademy.com/biology-class-11-noida',
   },
   alternates: {
@@ -31,7 +47,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Class 11 Biology Coaching in Noida 2026 | NEET Foundation',
-    description: 'Best Class 11 Biology coaching in Noida. AIIMS faculty, small batches (15 students). Online Rs 48,000/year. NEET + Board integrated. Gaur City, Sector 150, Greater Noida. Free demo!',
+    description:
+      'Best Class 11 Biology coaching in Noida. AIIMS faculty, small batches (15 students). Online Rs 48,000/year. NEET + Board integrated. Gaur City, Sector 150, Greater Noida. Free demo!',
   },
 }
 
@@ -41,7 +58,12 @@ const courses = [
     duration: '12 months',
     mode: '30-40 students | 6 hrs/week',
     fee: '48,000',
-    features: ['AIIMS faculty teaching', 'NCERT syllabus', '3,000+ practice questions', 'AI doubt bot access'],
+    features: [
+      'AIIMS faculty teaching',
+      'NCERT syllabus',
+      '3,000+ practice questions',
+      'AI doubt bot access',
+    ],
     popular: true,
   },
   {
@@ -49,7 +71,12 @@ const courses = [
     duration: '12 months',
     mode: '16-18 students | 8 hrs/week',
     fee: '76,000',
-    features: ['AIIMS faculty teaching', '5,000+ practice questions', 'Weekly group doubt sessions', 'Performance tracking'],
+    features: [
+      'AIIMS faculty teaching',
+      '5,000+ practice questions',
+      'Weekly group doubt sessions',
+      'Performance tracking',
+    ],
     recommended: true,
   },
   {
@@ -57,7 +84,12 @@ const courses = [
     duration: '12 months',
     mode: '10-12 students | 10-12 hrs/week',
     fee: '98,000',
-    features: ['Personal mentorship from Dr. Shekhar', '7,000+ practice questions', 'Weekly 1-on-1 doubt sessions', 'Money-back guarantee'],
+    features: [
+      'Personal mentorship from Dr. Shekhar',
+      '7,000+ practice questions',
+      'Weekly 1-on-1 doubt sessions',
+      'Money-back guarantee',
+    ],
   },
 ]
 
@@ -68,35 +100,69 @@ const freeTools = [
 ]
 
 const syllabus = [
-  { unit: 'Diversity in Living World', chapters: 'The Living World, Biological Classification, Plant Kingdom, Animal Kingdom', weight: '14%' },
-  { unit: 'Structural Organisation', chapters: 'Morphology of Flowering Plants, Anatomy of Flowering Plants, Structural Organisation in Animals', weight: '10%' },
-  { unit: 'Cell Structure & Function', chapters: 'Cell: The Unit of Life, Biomolecules, Cell Cycle and Cell Division', weight: '15%' },
-  { unit: 'Plant Physiology', chapters: 'Transport in Plants, Mineral Nutrition, Photosynthesis, Respiration, Plant Growth', weight: '12%' },
-  { unit: 'Human Physiology', chapters: 'Digestion, Breathing, Body Fluids, Excretion, Locomotion, Neural Control, Chemical Coordination', weight: '20%' },
+  {
+    unit: 'Diversity in Living World',
+    chapters: 'The Living World, Biological Classification, Plant Kingdom, Animal Kingdom',
+    weight: '14%',
+  },
+  {
+    unit: 'Structural Organisation',
+    chapters:
+      'Morphology of Flowering Plants, Anatomy of Flowering Plants, Structural Organisation in Animals',
+    weight: '10%',
+  },
+  {
+    unit: 'Cell Structure & Function',
+    chapters: 'Cell: The Unit of Life, Biomolecules, Cell Cycle and Cell Division',
+    weight: '15%',
+  },
+  {
+    unit: 'Plant Physiology',
+    chapters: 'Transport in Plants, Mineral Nutrition, Photosynthesis, Respiration, Plant Growth',
+    weight: '12%',
+  },
+  {
+    unit: 'Human Physiology',
+    chapters:
+      'Digestion, Breathing, Body Fluids, Excretion, Locomotion, Neural Control, Chemical Coordination',
+    weight: '20%',
+  },
 ]
 
 const faqs = [
   {
     question: 'Is Class 11 Biology important for NEET?',
-    answer: 'Yes! Class 11 Biology contributes about 50% of NEET Biology questions. Topics like Human Physiology, Plant Physiology, and Cell Biology are heavily tested. Starting NEET preparation from Class 11 gives you 2 years to master the syllabus.',
+    answer:
+      'Yes! Class 11 Biology contributes about 50% of NEET Biology questions. Topics like Human Physiology, Plant Physiology, and Cell Biology are heavily tested. Starting NEET preparation from Class 11 gives you 2 years to master the syllabus.',
   },
   {
     question: 'What is the fee for Class 11 Biology coaching in Noida?',
-    answer: 'Our Class 11 Biology coaching fees: Pursuit (30-40 students) - Rs 48,000/year, Ascent (16-18 students) - Rs 76,000/year, Pinnacle (10-12 students) - Rs 98,000/year. All tiers include AIIMS faculty teaching and doubt support.',
+    answer:
+      'Our Class 11 Biology coaching fees: Pursuit (30-40 students) - Rs 48,000/year, Ascent (16-18 students) - Rs 76,000/year, Pinnacle (10-12 students) - Rs 98,000/year. All tiers include AIIMS faculty teaching and doubt support.',
   },
   {
     question: 'Can Noida students attend online classes?',
-    answer: 'Yes! Most of our Noida students (Gaur City, Sector 150, Greater Noida) prefer online mode. Live interactive classes from home with same quality as offline. Hybrid option available for weekend offline sessions.',
+    answer:
+      'Yes! Most of our Noida students (Gaur City, Sector 150, Greater Noida) prefer online mode. Live interactive classes from home with same quality as offline. Hybrid option available for weekend offline sessions.',
   },
   {
     question: 'Do you cover both Board and NEET syllabus?',
-    answer: 'Yes, our Class 11 course covers NCERT thoroughly (for boards) while building NEET concepts. The syllabus is same - we teach at NEET depth which automatically covers board exam requirements.',
+    answer:
+      'Yes, our Class 11 course covers NCERT thoroughly (for boards) while building NEET concepts. The syllabus is same - we teach at NEET depth which automatically covers board exam requirements.',
   },
 ]
 
 const areas = [
-  'Gaur City', 'Sector 150', 'Greater Noida West', 'Sector 128', 'Jaypee Greens',
-  'ATS Pristine', 'Sector 62', 'Sector 18', 'Noida Extension', 'Sector 137'
+  'Gaur City',
+  'Sector 150',
+  'Greater Noida West',
+  'Sector 128',
+  'Jaypee Greens',
+  'ATS Pristine',
+  'Sector 62',
+  'Sector 18',
+  'Noida Extension',
+  'Sector 137',
 ]
 
 export default function BiologyClass11NoidaPage() {
@@ -105,7 +171,10 @@ export default function BiologyClass11NoidaPage() {
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/biology-class-11-noida"
         pageName="Class 11 Biology Coaching in Noida"
-        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        parentHub={{
+          name: 'NEET Biology Coaching India',
+          url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india',
+        }}
         personKnowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
       />
       {/* Hero Section */}
@@ -115,9 +184,12 @@ export default function BiologyClass11NoidaPage() {
             <span className="inline-flex items-center gap-2 bg-yellow-500 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
               <Star className="w-4 h-4" /> 2026-27 Batch Open
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Class 11 Biology Coaching in Noida</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Class 11 Biology Coaching in Noida
+            </h1>
             <p className="text-xl text-slate-300 mb-6">
-              Build your NEET foundation with AIIMS faculty. Online classes from Noida + Hybrid mode available.
+              Build your NEET foundation with AIIMS faculty. Online classes from Noida + Hybrid mode
+              available.
             </p>
 
             {/* Quick Stats */}
@@ -182,8 +254,12 @@ export default function BiologyClass11NoidaPage() {
       {/* Course Cards */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Class 11 Biology Courses for Noida Students</h2>
-          <p className="text-center text-gray-600 mb-12">Choose the mode that fits your learning style</p>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Class 11 Biology Courses for Noida Students
+          </h2>
+          <p className="text-center text-gray-600 mb-12">
+            Choose the mode that fits your learning style
+          </p>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {courses.map((course, index) => (
@@ -193,8 +269,8 @@ export default function BiologyClass11NoidaPage() {
                   course.recommended
                     ? 'bg-yellow-400 shadow-xl scale-105'
                     : course.popular
-                    ? 'bg-blue-50 border-2 border-blue-300'
-                    : 'bg-gray-50 border-2 border-gray-200'
+                      ? 'bg-blue-50 border-2 border-blue-300'
+                      : 'bg-gray-50 border-2 border-gray-200'
                 }`}
               >
                 {course.recommended && (
@@ -207,9 +283,15 @@ export default function BiologyClass11NoidaPage() {
                     MOST POPULAR
                   </span>
                 )}
-                <Monitor className={`w-10 h-10 mb-4 ${course.recommended ? 'text-slate-900' : 'text-blue-600'}`} />
+                <Monitor
+                  className={`w-10 h-10 mb-4 ${course.recommended ? 'text-slate-900' : 'text-blue-600'}`}
+                />
                 <h3 className="text-xl font-bold mb-2">{course.name}</h3>
-                <p className={`text-sm mb-2 ${course.recommended ? 'text-slate-700' : 'text-gray-500'}`}>{course.mode}</p>
+                <p
+                  className={`text-sm mb-2 ${course.recommended ? 'text-slate-700' : 'text-gray-500'}`}
+                >
+                  {course.mode}
+                </p>
                 <p className="text-3xl font-bold mb-4">
                   ₹{course.fee}
                   <span className="text-sm font-normal">/year</span>
@@ -217,7 +299,9 @@ export default function BiologyClass11NoidaPage() {
                 <ul className="space-y-2 mb-6">
                   {course.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm">
-                      <CheckCircle className={`w-4 h-4 mt-0.5 ${course.recommended ? 'text-slate-900' : 'text-green-600'}`} />
+                      <CheckCircle
+                        className={`w-4 h-4 mt-0.5 ${course.recommended ? 'text-slate-900' : 'text-green-600'}`}
+                      />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -242,7 +326,9 @@ export default function BiologyClass11NoidaPage() {
       {/* Syllabus Section */}
       <section className="py-16 bg-blue-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Class 11 Biology Syllabus Coverage</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Class 11 Biology Syllabus Coverage
+          </h2>
           <p className="text-center text-gray-600 mb-12">Complete NCERT + NEET preparation</p>
 
           <div className="max-w-4xl mx-auto space-y-4">
@@ -264,12 +350,19 @@ export default function BiologyClass11NoidaPage() {
       {/* Areas Served */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Serving Class 11 Students Across Noida</h2>
-          <p className="text-center text-gray-600 mb-8">Online classes available for all locations</p>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Serving Class 11 Students Across Noida
+          </h2>
+          <p className="text-center text-gray-600 mb-8">
+            Online classes available for all locations
+          </p>
 
           <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
             {areas.map((area) => (
-              <span key={area} className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+              <span
+                key={area}
+                className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium"
+              >
                 <MapPin className="w-3 h-3 inline mr-1" />
                 {area}
               </span>
@@ -277,7 +370,9 @@ export default function BiologyClass11NoidaPage() {
           </div>
 
           <div className="mt-8 text-center">
-            <p className="text-gray-600 mb-4">Offline classes at South Extension, Delhi (45-50 min from Noida via expressway)</p>
+            <p className="text-gray-600 mb-4">
+              Offline classes at South Extension, Delhi (45-50 min from Noida via expressway)
+            </p>
           </div>
         </div>
       </section>
@@ -291,7 +386,9 @@ export default function BiologyClass11NoidaPage() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-blue-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>
@@ -338,7 +435,10 @@ export default function BiologyClass11NoidaPage() {
         breadcrumbs={[
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
           { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
-          { name: 'Class 11 Biology Noida', url: 'https://cerebrumbiologyacademy.com/biology-class-11-noida' },
+          {
+            name: 'Class 11 Biology Noida',
+            url: 'https://cerebrumbiologyacademy.com/biology-class-11-noida',
+          },
         ]}
         customFAQs={faqs}
       />

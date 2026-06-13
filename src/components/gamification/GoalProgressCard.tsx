@@ -214,9 +214,7 @@ export function GoalProgressCard({
 
         {/* Streak Multiplier Banner */}
         {currentStreakDays >= 3 && (
-          <div
-            className="mt-4 bg-white/20 rounded-lg p-3 flex items-center justify-between animate-fadeInUp"
-          >
+          <div className="mt-4 bg-white/20 rounded-lg p-3 flex items-center justify-between animate-fadeInUp">
             <div className="flex items-center space-x-2">
               <Flame className="w-5 h-5 text-orange-300" />
               <span className="font-medium">{currentStreakDays}-Day Streak Active</span>
@@ -293,9 +291,7 @@ export function GoalProgressCard({
 
       {/* All Complete Banner */}
       {dailyCompleted === dailyGoals.length && dailyGoals.length > 0 && (
-        <div
-          className="bg-gradient-to-r from-green-500 to-emerald-600 p-4 text-white text-center animate-fadeInUp"
-        >
+        <div className="bg-gradient-to-r from-green-500 to-emerald-600 p-4 text-white text-center animate-fadeInUp">
           <div className="flex items-center justify-center space-x-2">
             <Trophy className="w-5 h-5" />
             <span className="font-bold">All Daily Goals Complete!</span>

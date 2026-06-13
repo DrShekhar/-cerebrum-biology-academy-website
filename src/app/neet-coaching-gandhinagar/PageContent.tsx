@@ -68,7 +68,7 @@ const whyChooseUs = [
     icon: Target,
     title: 'Gujarat State Capital Hub',
     description:
-      'As Gujarat\'s state capital, Gandhinagar attracts high-achieving families. Our coaching serves educated, ambitious families seeking best NEET preparation for their children.',
+      "As Gujarat's state capital, Gandhinagar attracts high-achieving families. Our coaching serves educated, ambitious families seeking best NEET preparation for their children.",
   },
   {
     icon: GraduationCap,
@@ -103,7 +103,7 @@ const faqs = [
   {
     question: 'How does GIFT City advantage help NEET aspirants?',
     answer:
-      'GIFT City symbolizes Gandhinagar\'s emergence as a global financial hub. Families relocating to Gandhinagar for government/GIFT City positions value quality education. Our online coaching provides seamless learning continuity for such families, combining global standards with focused NEET preparation.',
+      "GIFT City symbolizes Gandhinagar's emergence as a global financial hub. Families relocating to Gandhinagar for government/GIFT City positions value quality education. Our online coaching provides seamless learning continuity for such families, combining global standards with focused NEET preparation.",
   },
   {
     question: 'What is the NEET coaching fee for Gandhinagar students?',
@@ -141,7 +141,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Gandhinagar',
-  description: 'Best Online NEET Coaching for Gandhinagar students - Gujarat State Capital Excellence',
+  description:
+    'Best Online NEET Coaching for Gandhinagar students - Gujarat State Capital Excellence',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-gandhinagar',
   telephone: '+91-88264-44334',
   address: {
@@ -150,7 +151,16 @@ const localBusinessSchema = {
     addressRegion: 'Uttar Pradesh',
     addressCountry: 'IN',
   },
-  areaServed: ['Gandhinagar', 'Sector 1-30', 'Infocity', 'GIFT City', 'Pethapur', 'Kalol', 'Adalaj', 'Kudasan'],
+  areaServed: [
+    'Gandhinagar',
+    'Sector 1-30',
+    'Infocity',
+    'GIFT City',
+    'Pethapur',
+    'Kalol',
+    'Adalaj',
+    'Kudasan',
+  ],
   priceRange: '$$',
 }
 
@@ -197,12 +207,17 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert online NEET classes for Gandhinagar, all sectors (1-30), GIFT City, Infocity, and nearby areas.
-              Perfect for <strong>government families</strong> and GIFT City professionals seeking quality NEET preparation.
+              Expert online NEET classes for Gandhinagar, all sectors (1-30), GIFT City, Infocity,
+              and nearby areas. Perfect for <strong>government families</strong> and GIFT City
+              professionals seeking quality NEET preparation.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20gandhinagar.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20gandhinagar.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -375,11 +390,16 @@ export default function PageContent() {
               Gandhinagar Students, Achieve NEET Excellence!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Premium online NEET coaching for state capital families - structured, results-focused, globally standard
+              Premium online NEET coaching for state capital families - structured, results-focused,
+              globally standard
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20gandhinagar.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20gandhinagar.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -420,7 +440,6 @@ export default function PageContent() {
         </div>
       </section>
 
-
       <PricingSection cityName="Gandhinagar" />
       <CostComparisonSection cityName="Gandhinagar" />
       {/* Related */}
@@ -448,27 +467,35 @@ export default function PageContent() {
             </Link>
           </div>
         </div>
-      
-      {/* Schools Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Students from These Gandhinagar Schools Trust Us
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['DPS Gandhinagar', 'Udgam School for Children', 'Calorx Olive International', 'Kendriya Vidyalaya Gandhinagar', 'Anand Niketan School', 'Nirma Vidyavihar School', 'St. Kabir School Gandhinagar', 'The Galaxy School'].map((school) => (
-              <div
-                key={school}
-                className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
-              >
-                {school}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-</section>
+        {/* Schools Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Students from These Gandhinagar Schools Trust Us
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                'DPS Gandhinagar',
+                'Udgam School for Children',
+                'Calorx Olive International',
+                'Kendriya Vidyalaya Gandhinagar',
+                'Anand Niketan School',
+                'Nirma Vidyavihar School',
+                'St. Kabir School Gandhinagar',
+                'The Galaxy School',
+              ].map((school) => (
+                <div
+                  key={school}
+                  className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
+                >
+                  {school}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </section>
       <RelatedCityLinks currentCity="gandhinagar" variant="default" />
     </div>
   )

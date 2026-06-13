@@ -3,8 +3,20 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import {
-  CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
-  Users, Award, Clock, Star, CreditCard, Percent, Gift,
+  CheckCircle,
+  ChevronRight,
+  ChevronDown,
+  MapPin,
+  Phone,
+  Play,
+  Home,
+  Users,
+  Award,
+  Clock,
+  Star,
+  CreditCard,
+  Percent,
+  Gift,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
@@ -12,7 +24,10 @@ import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
-interface FAQ { question: string; answer: string }
+interface FAQ {
+  question: string
+  answer: string
+}
 
 const pricingTiers = [
   {
@@ -20,7 +35,13 @@ const pricingTiers = [
     price: '₹45,000 - ₹70,000',
     perMonth: '₹3,750 - ₹5,833/month',
     batchSize: '30-40 students',
-    features: ['Complete Biology syllabus', 'Weekly tests', 'Group doubt sessions', 'Study materials included', 'Online access'],
+    features: [
+      'Complete Biology syllabus',
+      'Weekly tests',
+      'Group doubt sessions',
+      'Study materials included',
+      'Online access',
+    ],
     ideal: 'Self-motivated students who learn well in groups',
     color: 'green',
   },
@@ -29,7 +50,13 @@ const pricingTiers = [
     price: '₹60,000 - ₹90,000',
     perMonth: '₹5,000 - ₹7,500/month',
     batchSize: '16-18 students',
-    features: ['Everything in Pursuit', 'Smaller batch size', 'Bi-weekly parent updates', 'Extra practice sessions', 'Priority doubt clearing'],
+    features: [
+      'Everything in Pursuit',
+      'Smaller batch size',
+      'Bi-weekly parent updates',
+      'Extra practice sessions',
+      'Priority doubt clearing',
+    ],
     ideal: 'Students who benefit from more personal attention',
     color: 'blue',
     popular: true,
@@ -39,24 +66,55 @@ const pricingTiers = [
     price: '₹90,000 - ₹1,56,000',
     perMonth: '₹7,500 - ₹13,000/month',
     batchSize: '10-12 students',
-    features: ['Everything in Ascent', 'Personal mentorship', 'Daily doubt sessions', 'Performance tracking', 'Direct access to Dr. Shekhar'],
+    features: [
+      'Everything in Ascent',
+      'Personal mentorship',
+      'Daily doubt sessions',
+      'Performance tracking',
+      'Direct access to Dr. Shekhar',
+    ],
     ideal: 'High-achievers targeting top medical colleges',
     color: 'purple',
   },
 ]
 
 const comparison = [
-  { feature: 'Annual Fee (Class 11-12)', cerebrum: '₹45K - ₹1.56L', allen: '₹1.2L - ₹2L', aakash: '₹1.5L - ₹2.5L' },
-  { feature: 'Batch Size', cerebrum: '10-40 students', allen: '80-100+ students', aakash: '60-80 students' },
-  { feature: 'Subject Coverage', cerebrum: 'Biology Only', allen: 'All Subjects', aakash: 'All Subjects' },
+  {
+    feature: 'Annual Fee (Class 11-12)',
+    cerebrum: '₹45K - ₹1.56L',
+    allen: '₹1.2L - ₹2L',
+    aakash: '₹1.5L - ₹2.5L',
+  },
+  {
+    feature: 'Batch Size',
+    cerebrum: '10-40 students',
+    allen: '80-100+ students',
+    aakash: '60-80 students',
+  },
+  {
+    feature: 'Subject Coverage',
+    cerebrum: 'Biology Only',
+    allen: 'All Subjects',
+    aakash: 'All Subjects',
+  },
   { feature: 'Faculty', cerebrum: 'AIIMS Alumnus', allen: 'Various', aakash: 'Various' },
   { feature: 'EMI Available', cerebrum: 'Yes, 0% for 3 months', allen: 'Yes', aakash: 'Yes' },
   { feature: 'Scholarship', cerebrum: 'Up to 50%', allen: 'Up to 90%', aakash: 'Up to 75%' },
 ]
 
 const scholarships = [
-  { name: 'Merit Scholarship', discount: 'Up to 50%', criteria: '90%+ in Class 10/12 boards', icon: Award },
-  { name: 'Financial Aid', discount: 'Up to 75%', criteria: 'Need-based, document verification', icon: Gift },
+  {
+    name: 'Merit Scholarship',
+    discount: 'Up to 50%',
+    criteria: '90%+ in Class 10/12 boards',
+    icon: Award,
+  },
+  {
+    name: 'Financial Aid',
+    discount: 'Up to 75%',
+    criteria: 'Need-based, document verification',
+    icon: Gift,
+  },
   { name: 'Sibling Discount', discount: '10%', criteria: 'If sibling is enrolled', icon: Users },
   { name: 'Early Bird', discount: '15%', criteria: 'Enroll before April 30', icon: Clock },
 ]
@@ -74,7 +132,8 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
   const handleWhatsApp = () => {
     trackAndOpenWhatsApp({
       source: 'affordable-neet-coaching-gurugram',
-      message: 'Hi! I am looking for affordable NEET coaching in Gurugram. Please share the fee structure and scholarship options.',
+      message:
+        'Hi! I am looking for affordable NEET coaching in Gurugram. Please share the fee structure and scholarship options.',
       campaign: 'affordable-neet-gurugram',
     })
   }
@@ -84,9 +143,21 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
       <nav className="bg-gray-100 py-3 px-4">
         <div className="max-w-7xl mx-auto">
           <ol className="flex items-center flex-wrap gap-1 text-sm">
-            <li><Link href="/" className="text-gray-600 hover:text-teal-600"><Home className="w-4 h-4" /></Link></li>
-            <li className="flex items-center"><ChevronRight className="w-4 h-4 text-gray-400 mx-1" /><Link href="/neet-coaching-gurugram" className="text-gray-600 hover:text-teal-600">NEET Coaching Gurugram</Link></li>
-            <li className="flex items-center"><ChevronRight className="w-4 h-4 text-gray-400 mx-1" /><span className="text-teal-700 font-medium">Affordable NEET Coaching</span></li>
+            <li>
+              <Link href="/" className="text-gray-600 hover:text-teal-600">
+                <Home className="w-4 h-4" />
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
+              <Link href="/neet-coaching-gurugram" className="text-gray-600 hover:text-teal-600">
+                NEET Coaching Gurugram
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
+              <span className="text-teal-700 font-medium">Affordable NEET Coaching</span>
+            </li>
           </ol>
         </div>
       </nav>
@@ -111,8 +182,8 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Premium Biology coaching with AIIMS faculty starting from ₹45,000/year.
-              Better quality at lower fees. EMI and scholarships available.
+              Premium Biology coaching with AIIMS faculty starting from ₹45,000/year. Better quality
+              at lower fees. EMI and scholarships available.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -131,14 +202,26 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
-                <Button variant="secondary" size="xl" className="bg-yellow-500 text-slate-900 hover:bg-yellow-400 font-bold">
-                  <Play className="w-5 h-5 mr-2" />Book Free Demo Class
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="secondary"
+                  size="xl"
+                  className="bg-yellow-500 text-slate-900 hover:bg-yellow-400 font-bold"
+                >
+                  <Play className="w-5 h-5 mr-2" />
+                  Book Free Demo Class
                 </Button>
               </Link>
-              <button onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
-                <Phone className="w-5 h-5" />Get Fee Details
+              <button
+                onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
+              >
+                <Phone className="w-5 h-5" />
+                Get Fee Details
               </button>
             </div>
           </div>
@@ -150,8 +233,7 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {valueProps.map((item, index) => (
-              <div key={item.label}
-                className="text-center animate-fadeInUp">
+              <div key={item.label} className="text-center animate-fadeInUp">
                 <p className="text-3xl md:text-4xl font-bold text-green-600">{item.stat}</p>
                 <p className="text-sm text-slate-600 mt-1">{item.label}</p>
               </div>
@@ -165,13 +247,17 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Choose Your Tier</h2>
-            <p className="text-xl text-slate-600">Same quality teaching, different batch sizes and features</p>
+            <p className="text-xl text-slate-600">
+              Same quality teaching, different batch sizes and features
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
-              <div key={tier.name}
-                className={`relative bg-white rounded-2xl p-6 shadow-lg ${tier.popular ? 'ring-2 ring-blue-500' : ''}`}>
+              <div
+                key={tier.name}
+                className={`relative bg-white rounded-2xl p-6 shadow-lg ${tier.popular ? 'ring-2 ring-blue-500' : ''}`}
+              >
                 {tier.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                     Most Popular
@@ -192,8 +278,10 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
                   ))}
                 </ul>
                 <p className="text-xs text-slate-500 italic mb-4">{tier.ideal}</p>
-                <button onClick={handleWhatsApp}
-                  className={`w-full py-3 rounded-xl font-semibold ${tier.popular ? 'bg-blue-600 text-white' : 'bg-gray-100 text-slate-700 hover:bg-gray-200'}`}>
+                <button
+                  onClick={handleWhatsApp}
+                  className={`w-full py-3 rounded-xl font-semibold ${tier.popular ? 'bg-blue-600 text-white' : 'bg-gray-100 text-slate-700 hover:bg-gray-200'}`}
+                >
                   Get Details
                 </button>
               </div>
@@ -224,7 +312,9 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
                 {comparison.map((row, index) => (
                   <tr key={row.feature} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
                     <td className="px-6 py-4 font-medium">{row.feature}</td>
-                    <td className="px-6 py-4 text-center bg-green-50 font-semibold text-green-700">{row.cerebrum}</td>
+                    <td className="px-6 py-4 text-center bg-green-50 font-semibold text-green-700">
+                      {row.cerebrum}
+                    </td>
                     <td className="px-6 py-4 text-center text-slate-600">{row.allen}</td>
                     <td className="px-6 py-4 text-center text-slate-600">{row.aakash}</td>
                   </tr>
@@ -245,8 +335,10 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
 
           <div className="grid md:grid-cols-4 gap-6">
             {scholarships.map((scholarship, index) => (
-              <div key={scholarship.name}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center animate-fadeInUp">
+              <div
+                key={scholarship.name}
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center animate-fadeInUp"
+              >
                 <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <scholarship.icon className="w-6 h-6" />
                 </div>
@@ -258,9 +350,12 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
           </div>
 
           <div className="text-center mt-8">
-            <button onClick={handleWhatsApp}
-              className="inline-flex items-center gap-2 bg-white text-green-600 px-6 py-3 rounded-xl font-semibold animate-fadeInUp">
-              <Phone className="w-5 h-5" />Check Your Eligibility
+            <button
+              onClick={handleWhatsApp}
+              className="inline-flex items-center gap-2 bg-white text-green-600 px-6 py-3 rounded-xl font-semibold animate-fadeInUp"
+            >
+              <Phone className="w-5 h-5" />
+              Check Your Eligibility
             </button>
           </div>
         </div>
@@ -271,31 +366,41 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fadeInUp">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Flexible Payment Options</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                Flexible Payment Options
+              </h2>
               <p className="text-xl text-slate-600 mb-6">
-                Don't let fees be a barrier to quality education. We offer multiple payment options to make it easier.
+                Don't let fees be a barrier to quality education. We offer multiple payment options
+                to make it easier.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
-                  <div><strong>0% EMI for 3 months</strong> - Pay in easy installments, no extra cost</div>
+                  <div>
+                    <strong>0% EMI for 3 months</strong> - Pay in easy installments, no extra cost
+                  </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
-                  <div><strong>6-12 month EMI</strong> - Low interest rates through partner banks</div>
+                  <div>
+                    <strong>6-12 month EMI</strong> - Low interest rates through partner banks
+                  </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
-                  <div><strong>Split payment</strong> - Pay 50% now, rest in 2 installments</div>
+                  <div>
+                    <strong>Split payment</strong> - Pay 50% now, rest in 2 installments
+                  </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
-                  <div><strong>Monthly payment</strong> - Small convenience fee, maximum flexibility</div>
+                  <div>
+                    <strong>Monthly payment</strong> - Small convenience fee, maximum flexibility
+                  </div>
                 </li>
               </ul>
             </div>
-            <div
-              className="bg-white rounded-2xl p-8 shadow-lg animate-fadeInUp">
+            <div className="bg-white rounded-2xl p-8 shadow-lg animate-fadeInUp">
               <h3 className="text-xl font-bold text-slate-900 mb-6">Sample EMI Calculation</h3>
               <div className="space-y-4">
                 <div className="bg-green-50 rounded-xl p-4">
@@ -309,8 +414,10 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
                   <p className="text-xs text-slate-500">12 months, 0% interest for 3 months</p>
                 </div>
               </div>
-              <button onClick={handleWhatsApp}
-                className="w-full mt-6 bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold animate-fadeInUp">
+              <button
+                onClick={handleWhatsApp}
+                className="w-full mt-6 bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold animate-fadeInUp"
+              >
                 Get Your EMI Plan
               </button>
             </div>
@@ -324,26 +431,57 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
           <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Visit Our Center</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                  Visit Our Center
+                </h2>
                 <p className="text-slate-600 mb-6">
-                  See why students choose quality over expensive marketing. Visit our center for a free counseling session and demo class.
+                  See why students choose quality over expensive marketing. Visit our center for a
+                  free counseling session and demo class.
                 </p>
                 <div className="space-y-3 mb-6">
-                  <p className="flex items-center gap-2"><MapPin className="w-5 h-5 text-green-600" />{CONTACT_INFO.location.gurugram.streetAddress}</p>
-                  <p className="flex items-center gap-2"><Clock className="w-5 h-5 text-green-600" />Open: Mon-Sat, 9 AM - 8 PM</p>
+                  <p className="flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-green-600" />
+                    {CONTACT_INFO.location.gurugram.streetAddress}
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <Clock className="w-5 h-5 text-green-600" />
+                    Open: Mon-Sat, 9 AM - 8 PM
+                  </p>
                 </div>
                 <div className="flex gap-4">
-                  <a href={`tel:${CONTACT_INFO.phone.primary}`}><Button variant="outline"><Phone className="w-4 h-4 mr-2" />Call Now</Button></a>
-                  <a href={CONTACT_INFO.location.gurugram.mapUrl} target="_blank" rel="noopener"><Button><MapPin className="w-4 h-4 mr-2" />Get Directions</Button></a>
+                  <a href={`tel:${CONTACT_INFO.phone.primary}`}>
+                    <Button variant="outline">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Call Now
+                    </Button>
+                  </a>
+                  <a href={CONTACT_INFO.location.gurugram.mapUrl} target="_blank" rel="noopener">
+                    <Button>
+                      <MapPin className="w-4 h-4 mr-2" />
+                      Get Directions
+                    </Button>
+                  </a>
                 </div>
               </div>
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <h3 className="font-bold text-lg mb-4">Free Demo Includes</h3>
                 <ul className="space-y-3">
-                  <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500" />Live class experience</li>
-                  <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500" />Meet Dr. Shekhar</li>
-                  <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500" />Fee counseling</li>
-                  <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500" />Scholarship assessment</li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-500" />
+                    Live class experience
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-500" />
+                    Meet Dr. Shekhar
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-500" />
+                    Fee counseling
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-500" />
+                    Scholarship assessment
+                  </li>
                 </ul>
               </div>
             </div>
@@ -352,20 +490,34 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
       </section>
 
       <VideoTestimonialsSection />
-      <NEETToolsWidget title="Free NEET Preparation Tools" subtitle="Use our AI-powered tools to boost your preparation" />
+      <NEETToolsWidget
+        title="Free NEET Preparation Tools"
+        subtitle="Use our AI-powered tools to boost your preparation"
+      />
 
       {/* FAQs */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            Frequently Asked Questions
+          </h2>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div key={index} className="bg-white rounded-xl overflow-hidden shadow-sm">
-                <button onClick={() => setOpenFaq(openFaq === index ? null : index)} className="w-full flex items-center justify-between p-6 text-left">
+                <button
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  className="w-full flex items-center justify-between p-6 text-left"
+                >
                   <span className="font-semibold text-slate-900 pr-4">{faq.question}</span>
-                  <ChevronDown className={`w-5 h-5 text-slate-500 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    className={`w-5 h-5 text-slate-500 transition-transform ${openFaq === index ? 'rotate-180' : ''}`}
+                  />
                 </button>
-                {openFaq === index && <div className="px-6 pb-6"><p className="text-slate-600">{faq.answer}</p></div>}
+                {openFaq === index && (
+                  <div className="px-6 pb-6">
+                    <p className="text-slate-600">{faq.answer}</p>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -377,10 +529,35 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Related Pages</h2>
           <div className="grid md:grid-cols-4 gap-4">
-            <Link href="/allen-alternative-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">the largest national NEET chain Alternative</h3><p className="text-sm text-gray-600">Lower fees, better ratio</p></Link>
-            <Link href="/aakash-alternative-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">the 2nd-largest national NEET chain Alternative</h3><p className="text-sm text-gray-600">Quality at lower cost</p></Link>
-            <Link href="/courses/foundation" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Class 11 Foundation</h3><p className="text-sm text-gray-600">Start early, save more</p></Link>
-            <Link href="/neet-coaching-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3><p className="text-sm text-gray-600">All programs</p></Link>
+            <Link
+              href="/allen-alternative-gurugram"
+              className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
+            >
+              <h3 className="font-semibold text-teal-600">
+                the largest national NEET chain Alternative
+              </h3>
+              <p className="text-sm text-gray-600">Lower fees, better ratio</p>
+            </Link>
+            <Link
+              href="/aakash-alternative-gurugram"
+              className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
+            >
+              <h3 className="font-semibold text-teal-600">
+                the 2nd-largest national NEET chain Alternative
+              </h3>
+              <p className="text-sm text-gray-600">Quality at lower cost</p>
+            </Link>
+            <Link href="/courses/foundation" className="bg-gray-50 p-4 rounded-xl hover:shadow-md">
+              <h3 className="font-semibold text-teal-600">Class 11 Foundation</h3>
+              <p className="text-sm text-gray-600">Start early, save more</p>
+            </Link>
+            <Link
+              href="/neet-coaching-gurugram"
+              className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
+            >
+              <h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3>
+              <p className="text-sm text-gray-600">All programs</p>
+            </Link>
           </div>
         </div>
       </section>
@@ -388,11 +565,37 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
       {/* CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Quality Education Shouldn't Break the Bank</h2>
-          <p className="text-xl mb-8 opacity-90">Get 98% success rate coaching at 30-40% lower fees</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Quality Education Shouldn't Break the Bank
+          </h2>
+          <p className="text-xl mb-8 opacity-90">
+            Get 98% success rate coaching at 30-40% lower fees
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"><Button variant="secondary" size="xl" className="bg-white text-green-600 hover:bg-gray-100 font-bold"><Play className="w-5 h-5 mr-2" />Book Free Demo</Button></Link>
-            <a href={`tel:${CONTACT_INFO.phone.primary}`}><Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-green-600"><Phone className="w-5 h-5 mr-2" />Call Now</Button></a>
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="secondary"
+                size="xl"
+                className="bg-white text-green-600 hover:bg-gray-100 font-bold"
+              >
+                <Play className="w-5 h-5 mr-2" />
+                Book Free Demo
+              </Button>
+            </Link>
+            <a href={`tel:${CONTACT_INFO.phone.primary}`}>
+              <Button
+                variant="outline"
+                size="xl"
+                className="border-white text-white hover:bg-white hover:text-green-600"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now
+              </Button>
+            </a>
           </div>
         </div>
       </section>

@@ -93,7 +93,11 @@ export default function NEETCoachingConnaughtPlacePage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Connaught Place', 'NEET Biology Connaught Place', 'Medical entrance coaching Connaught Place']}
+        knowsAbout={[
+          'NEET Connaught Place',
+          'NEET Biology Connaught Place',
+          'Medical entrance coaching Connaught Place',
+        ]}
       />
       <DelhiAreaSchema pageSlug="neet-coaching-connaught-place-delhi" />
       <LocalitySchema

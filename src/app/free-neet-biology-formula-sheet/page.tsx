@@ -6,11 +6,19 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Formulas & Equations | One-Page Sheet | Free PDF',
-  description: 'Download free NEET Biology formula sheet. All important equations, ratios, values in one page. Genetics ratios, Hardy-Weinberg, enzyme kinetics. AIIMS faculty.',
-  keywords: ['NEET biology formulas', 'NEET biology equations', 'genetics ratios NEET', 'Hardy Weinberg equation', 'biology formula sheet NEET'],
+  description:
+    'Download free NEET Biology formula sheet. All important equations, ratios, values in one page. Genetics ratios, Hardy-Weinberg, enzyme kinetics. AIIMS faculty.',
+  keywords: [
+    'NEET biology formulas',
+    'NEET biology equations',
+    'genetics ratios NEET',
+    'Hardy Weinberg equation',
+    'biology formula sheet NEET',
+  ],
   openGraph: {
     title: 'NEET Biology Formulas & Equations | One-Page Sheet | Free PDF',
-    description: 'Download free NEET Biology formula sheet. All important equations, ratios, values in one page. Genetics ratios, Hardy-Weinberg, enzyme kinetics. AIIMS faculty.',
+    description:
+      'Download free NEET Biology formula sheet. All important equations, ratios, values in one page. Genetics ratios, Hardy-Weinberg, enzyme kinetics. AIIMS faculty.',
     url: `${BASE_URL}/free-neet-biology-formula-sheet`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -19,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Free NEET Biology Formula Sheet',
-    description: 'Download free NEET Biology formula sheet. All important equations, ratios, values in one page. Genetics ratios, Hardy-We',
+    description:
+      'Download free NEET Biology formula sheet. All important equations, ratios, values in one page. Genetics ratios, Hardy-We',
   },
   alternates: { canonical: `${BASE_URL}/free-neet-biology-formula-sheet` },
 }
@@ -58,7 +67,11 @@ const faqSchema = {
 export default function FreeNeetBiologyFormulaSheetPage() {
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <PageContent />
     </>
   )

@@ -113,7 +113,7 @@ const features = [
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-gtb-nagar' },
+    alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-gtb-nagar' },
     description: 'Learn from doctors who cleared AIIMS',
   },
   { icon: Users, title: 'Small Batches', description: '10-12 students per batch' },
@@ -151,9 +151,7 @@ export default function NEETCoachingGTBNagar() {
           </div>
 
           <div className="max-w-6xl mx-auto relative z-10">
-            <div
-              className="text-center animate-fadeInUp"
-            >
+            <div className="text-center animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
                 <School className="w-4 h-4" />
                 <span className="text-sm font-medium">Near Delhi University</span>
@@ -170,7 +168,9 @@ export default function NEETCoachingGTBNagar() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20gtb%20nagar.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20gtb%20nagar.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
                 >
                   Book FREE Demo Class
@@ -190,9 +190,7 @@ export default function NEETCoachingGTBNagar() {
         {/* Why GTB Nagar Section */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Study in GTB Nagar?</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 The perfect blend of academics and student life
@@ -200,9 +198,7 @@ export default function NEETCoachingGTBNagar() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <div
-                className="bg-white p-8 rounded-2xl shadow-lg animate-fadeInUp"
-              >
+              <div className="bg-white p-8 rounded-2xl shadow-lg animate-fadeInUp">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
                     <School className="w-6 h-6 text-green-600" />
@@ -219,9 +215,7 @@ export default function NEETCoachingGTBNagar() {
                 </ul>
               </div>
 
-              <div
-                className="bg-white p-8 rounded-2xl shadow-lg animate-fadeInUp"
-              >
+              <div className="bg-white p-8 rounded-2xl shadow-lg animate-fadeInUp">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
                     <Train className="w-6 h-6 text-green-600" />
@@ -265,9 +259,7 @@ export default function NEETCoachingGTBNagar() {
         {/* Features Section */}
         <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Why Choose Cerebrum in GTB Nagar?
               </h2>
@@ -293,9 +285,7 @@ export default function NEETCoachingGTBNagar() {
         {/* Nearby Areas */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Students from Nearby Areas</h2>
             </div>
 
@@ -316,9 +306,7 @@ export default function NEETCoachingGTBNagar() {
         {/* Testimonial */}
         <section className="py-16 px-4 bg-green-50">
           <div className="max-w-4xl mx-auto">
-            <div
-              className="bg-white p-8 rounded-2xl shadow-lg animate-fadeInUp"
-            >
+            <div className="bg-white p-8 rounded-2xl shadow-lg animate-fadeInUp">
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
@@ -345,18 +333,13 @@ export default function NEETCoachingGTBNagar() {
         {/* FAQ */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">FAQs</h2>
             </div>
 
             <div className="space-y-4">
               {faqStructuredData.mainEntity.map((faq, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-6 rounded-xl shadow-md animate-fadeInUp"
-                >
+                <div key={index} className="bg-white p-6 rounded-xl shadow-md animate-fadeInUp">
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{faq.name}</h3>
                   <p className="text-gray-600">{faq.acceptedAnswer.text}</p>
                 </div>
@@ -368,8 +351,7 @@ export default function NEETCoachingGTBNagar() {
         {/* CTA */}
         <section className="py-16 px-4 bg-[#4a5d4a] text-white">
           <div className="max-w-4xl mx-auto text-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl font-bold mb-4">Start Your NEET Journey in GTB Nagar</h2>
               <p className="text-green-100 mb-8">
                 Study near DU in Delhi&apos;s best student hub. Book your FREE demo today!
@@ -377,7 +359,9 @@ export default function NEETCoachingGTBNagar() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20gtb%20nagar.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20gtb%20nagar.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
                 >
                   Book FREE Demo Class

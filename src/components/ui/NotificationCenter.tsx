@@ -146,84 +146,79 @@ export function NotificationCenter({
 
   return (
     <div className={`fixed ${getPositionClasses()} z-40`} style={{ maxWidth }}>
-<div
-          key={currentNotification.id}
-          className="relative animate-fadeInUp"
-        >
-          {/* TV Screen Frame */}
-          <div className="bg-gray-900 p-2 rounded-xl shadow-2xl border border-gray-700">
-            {/* Screen Header */}
-            <div className="flex items-center justify-between mb-2 px-2">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-              </div>
-              <div className="text-xs text-gray-400 font-mono">LIVE</div>
+      <div key={currentNotification.id} className="relative animate-fadeInUp">
+        {/* TV Screen Frame */}
+        <div className="bg-gray-900 p-2 rounded-xl shadow-2xl border border-gray-700">
+          {/* Screen Header */}
+          <div className="flex items-center justify-between mb-2 px-2">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+              <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+              <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+            </div>
+            <div className="text-xs text-gray-400 font-mono">LIVE</div>
+          </div>
+
+          {/* Screen Content */}
+          <div
+            className={`bg-gradient-to-r ${currentNotification.color} p-4 rounded-lg text-white relative overflow-hidden`}
+          >
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
+              <div className="absolute -top-2 -right-2 w-16 h-16 border border-white/20 rounded-full"></div>
+              <div className="absolute -bottom-4 -left-4 w-20 h-20 border border-white/10 rounded-full"></div>
             </div>
 
-            {/* Screen Content */}
-            <div
-              className={`bg-gradient-to-r ${currentNotification.color} p-4 rounded-lg text-white relative overflow-hidden`}
-            >
-              {/* Background Pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
-                <div className="absolute -top-2 -right-2 w-16 h-16 border border-white/20 rounded-full"></div>
-                <div className="absolute -bottom-4 -left-4 w-20 h-20 border border-white/10 rounded-full"></div>
+            {/* Content */}
+            <div className="relative z-10">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center space-x-2">
+                  {currentNotification.icon}
+                  <span className="text-xs font-semibold uppercase tracking-wide">
+                    {currentNotification.title}
+                  </span>
+                </div>
+                <div className="flex items-center space-x-1">
+                  <Clock className="w-3 h-3" />
+                  <span className="text-xs">{currentNotification.timestamp}</span>
+                </div>
               </div>
 
-              {/* Content */}
-              <div className="relative z-10">
-                {/* Header */}
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center space-x-2">
-                    {currentNotification.icon}
-                    <span className="text-xs font-semibold uppercase tracking-wide">
-                      {currentNotification.title}
-                    </span>
-                  </div>
+              {/* Message */}
+              <p className="text-sm font-medium leading-relaxed mb-2">
+                {currentNotification.message}
+              </p>
+
+              {/* Location & Brand */}
+              <div className="flex items-center justify-between">
+                {currentNotification.location && (
                   <div className="flex items-center space-x-1">
-                    <Clock className="w-3 h-3" />
-                    <span className="text-xs">{currentNotification.timestamp}</span>
+                    <MapPin className="w-3 h-3" />
+                    <span className="text-xs opacity-90">{currentNotification.location}</span>
                   </div>
-                </div>
-
-                {/* Message */}
-                <p className="text-sm font-medium leading-relaxed mb-2">
-                  {currentNotification.message}
-                </p>
-
-                {/* Location & Brand */}
-                <div className="flex items-center justify-between">
-                  {currentNotification.location && (
-                    <div className="flex items-center space-x-1">
-                      <MapPin className="w-3 h-3" />
-                      <span className="text-xs opacity-90">{currentNotification.location}</span>
-                    </div>
-                  )}
-                  <div className="text-xs font-semibold opacity-90">Cerebrum Student</div>
-                </div>
-              </div>
-
-              {/* Progress Indicator */}
-              <div className="absolute bottom-0 left-0 w-full">
-                <div
-                  className="h-0.5 bg-white/30 animate-fadeInUp"
-                />
+                )}
+                <div className="text-xs font-semibold opacity-90">Cerebrum Student</div>
               </div>
             </div>
 
-            {/* Screen Reflection */}
-            <div className="absolute inset-2 rounded-lg bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
+            {/* Progress Indicator */}
+            <div className="absolute bottom-0 left-0 w-full">
+              <div className="h-0.5 bg-white/30 animate-fadeInUp" />
+            </div>
           </div>
 
-          {/* TV Stand */}
-          <div className="flex justify-center mt-1">
-            <div className="w-8 h-2 bg-gray-800 rounded-b-lg"></div>
-          </div>
+          {/* Screen Reflection */}
+          <div className="absolute inset-2 rounded-lg bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
         </div>
-</div>
+
+        {/* TV Stand */}
+        <div className="flex justify-center mt-1">
+          <div className="w-8 h-2 bg-gray-800 rounded-b-lg"></div>
+        </div>
+      </div>
+    </div>
   )
 }
 

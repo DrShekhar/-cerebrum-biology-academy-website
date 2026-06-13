@@ -101,19 +101,14 @@ export function ErrorReportModal({
   }
 
   return (
-<>
-{isOpen && (
+    <>
+      {isOpen && (
         <>
           {/* Backdrop */}
-          <div
-            onClick={onClose}
-            className="fixed inset-0 bg-black/50 z-50 animate-fadeInUp"
-          />
+          <div onClick={onClose} className="fixed inset-0 bg-black/50 z-50 animate-fadeInUp" />
 
           {/* Modal */}
-          <div
-            className="fixed inset-x-4 top-[10%] md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-lg bg-white rounded-2xl shadow-2xl z-50 max-h-[80vh] overflow-y-auto animate-fadeInUp"
-          >
+          <div className="fixed inset-x-4 top-[10%] md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-lg bg-white rounded-2xl shadow-2xl z-50 max-h-[80vh] overflow-y-auto animate-fadeInUp">
             {submitState === 'success' ? (
               <div className="p-8 text-center">
                 <div className="text-6xl mb-4">✅</div>
@@ -279,6 +274,6 @@ export function ErrorReportModal({
           </div>
         </>
       )}
-</>
-)
+    </>
+  )
 }

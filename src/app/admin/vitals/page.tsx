@@ -118,7 +118,8 @@ export default function VitalsAdminPage() {
 
                 const total = data.good + data.needsImprovement + data.poor
                 const goodPct = total > 0 ? Math.round((data.good / total) * 100) : 0
-                const needsImprovementPct = total > 0 ? Math.round((data.needsImprovement / total) * 100) : 0
+                const needsImprovementPct =
+                  total > 0 ? Math.round((data.needsImprovement / total) * 100) : 0
                 const poorPct = total > 0 ? Math.round((data.poor / total) * 100) : 0
 
                 return (
@@ -164,7 +165,9 @@ export default function VitalsAdminPage() {
 
                     <div className="mt-4 border-t pt-4">
                       <p className="text-xs text-gray-400">
-                        Good: &lt;{config.good}{config.unit} | Poor: &gt;{config.poor}{config.unit}
+                        Good: &lt;{config.good}
+                        {config.unit} | Poor: &gt;{config.poor}
+                        {config.unit}
                       </p>
                       <p className="text-xs text-gray-400">{total.toLocaleString()} samples</p>
                     </div>
@@ -177,10 +180,12 @@ export default function VitalsAdminPage() {
               <h3 className="mb-2 font-semibold text-blue-900">Understanding the Scores</h3>
               <ul className="space-y-1 text-sm text-blue-800">
                 <li>
-                  <strong>LCP &lt; 2.5s:</strong> Content loads quickly - users see main content fast
+                  <strong>LCP &lt; 2.5s:</strong> Content loads quickly - users see main content
+                  fast
                 </li>
                 <li>
-                  <strong>FCP &lt; 1.8s:</strong> First paint happens quickly - page feels responsive
+                  <strong>FCP &lt; 1.8s:</strong> First paint happens quickly - page feels
+                  responsive
                 </li>
                 <li>
                   <strong>CLS &lt; 0.1:</strong> Layout is stable - no unexpected shifts
@@ -189,7 +194,8 @@ export default function VitalsAdminPage() {
                   <strong>INP &lt; 200ms:</strong> Interactions feel instant - clicks respond fast
                 </li>
                 <li>
-                  <strong>TTFB &lt; 800ms:</strong> Server responds quickly - infrastructure is healthy
+                  <strong>TTFB &lt; 800ms:</strong> Server responds quickly - infrastructure is
+                  healthy
                 </li>
               </ul>
             </div>

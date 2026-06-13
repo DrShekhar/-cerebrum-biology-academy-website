@@ -126,9 +126,7 @@ export function BadgeGallery({
         {/* Progress Bar */}
         <div className="mt-4">
           <div className="w-full bg-white/30 rounded-full h-3">
-            <div
-              className="bg-white h-3 rounded-full animate-fadeInUp"
-            />
+            <div className="bg-white h-3 rounded-full animate-fadeInUp" />
           </div>
         </div>
       </div>
@@ -258,94 +256,94 @@ export function BadgeGallery({
       </div>
 
       {/* Badge Detail Modal */}
-{selectedBadge && (
+      {selectedBadge && (
+        <div
+          className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
+          onClick={() => setSelectedBadge(null)}
+        >
           <div
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
-            onClick={() => setSelectedBadge(null)}
+            onClick={(e) => e.stopPropagation()}
+            className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl animate-fadeInUp"
           >
-            <div
-              onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl animate-fadeInUp"
+            {/* Close button */}
+            <button
+              onClick={() => setSelectedBadge(null)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
             >
-              {/* Close button */}
-              <button
-                onClick={() => setSelectedBadge(null)}
-                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+              <X className="w-5 h-5" />
+            </button>
+
+            {/* Badge Display */}
+            <div className="text-center">
+              <div
+                className={`w-24 h-24 mx-auto rounded-2xl flex items-center justify-center text-5xl mb-4 ${
+                  selectedBadge.isEarned
+                    ? `bg-gradient-to-br ${RARITY_CONFIG[selectedBadge.rarity].bgGradient} border-2 ${RARITY_CONFIG[selectedBadge.rarity].borderColor} shadow-lg`
+                    : 'bg-gray-100 border-2 border-gray-200'
+                }`}
               >
-                <X className="w-5 h-5" />
-              </button>
-
-              {/* Badge Display */}
-              <div className="text-center">
-                <div
-                  className={`w-24 h-24 mx-auto rounded-2xl flex items-center justify-center text-5xl mb-4 ${
-                    selectedBadge.isEarned
-                      ? `bg-gradient-to-br ${RARITY_CONFIG[selectedBadge.rarity].bgGradient} border-2 ${RARITY_CONFIG[selectedBadge.rarity].borderColor} shadow-lg`
-                      : 'bg-gray-100 border-2 border-gray-200'
-                  }`}
-                >
-                  {selectedBadge.isEarned ? selectedBadge.icon : '🔒'}
-                </div>
-
-                {/* Rarity Badge */}
-                <div
-                  className={`inline-flex items-center space-x-1 px-3 py-1 rounded-full text-xs font-bold mb-3 ${`bg-gradient-to-r ${RARITY_CONFIG[selectedBadge.rarity].bgGradient} ${RARITY_CONFIG[selectedBadge.rarity].textColor}`}`}
-                >
-                  <Sparkles className="w-3 h-3" />
-                  <span>{RARITY_CONFIG[selectedBadge.rarity].name}</span>
-                </div>
-
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{selectedBadge.name}</h3>
-                <p className="text-gray-600 mb-4">{selectedBadge.description}</p>
-
-                {/* Category */}
-                <div className="text-sm text-gray-500 mb-4">
-                  Category: {CATEGORY_LABELS[selectedBadge.category]}
-                </div>
-
-                {/* XP Reward */}
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mb-4">
-                  <div className="flex items-center justify-center space-x-2 text-yellow-700">
-                    <Star className="w-5 h-5" />
-                    <span className="font-bold text-lg">{selectedBadge.xpReward} XP</span>
-                  </div>
-                </div>
-
-                {/* Earned Info or Progress */}
-                {selectedBadge.isEarned ? (
-                  <div className="flex items-center justify-center space-x-2 text-green-600">
-                    <Trophy className="w-5 h-5" />
-                    <span className="font-medium">
-                      Earned{' '}
-                      {selectedBadge.earnedAt
-                        ? new Date(selectedBadge.earnedAt).toLocaleDateString()
-                        : 'recently'}
-                    </span>
-                  </div>
-                ) : (
-                  <div>
-                    <div className="text-sm text-gray-600 mb-2">
-                      <Lock className="w-4 h-4 inline mr-1" />
-                      {selectedBadge.requirement}
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div
-                        className="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full transition-all"
-                        style={{
-                          width: `${(selectedBadge.progress / selectedBadge.maxProgress) * 100}%`,
-                        }}
-                      />
-                    </div>
-                    <div className="text-xs text-gray-500 mt-1">
-                      {selectedBadge.progress} / {selectedBadge.maxProgress}
-                    </div>
-                  </div>
-                )}
+                {selectedBadge.isEarned ? selectedBadge.icon : '🔒'}
               </div>
+
+              {/* Rarity Badge */}
+              <div
+                className={`inline-flex items-center space-x-1 px-3 py-1 rounded-full text-xs font-bold mb-3 ${`bg-gradient-to-r ${RARITY_CONFIG[selectedBadge.rarity].bgGradient} ${RARITY_CONFIG[selectedBadge.rarity].textColor}`}`}
+              >
+                <Sparkles className="w-3 h-3" />
+                <span>{RARITY_CONFIG[selectedBadge.rarity].name}</span>
+              </div>
+
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{selectedBadge.name}</h3>
+              <p className="text-gray-600 mb-4">{selectedBadge.description}</p>
+
+              {/* Category */}
+              <div className="text-sm text-gray-500 mb-4">
+                Category: {CATEGORY_LABELS[selectedBadge.category]}
+              </div>
+
+              {/* XP Reward */}
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mb-4">
+                <div className="flex items-center justify-center space-x-2 text-yellow-700">
+                  <Star className="w-5 h-5" />
+                  <span className="font-bold text-lg">{selectedBadge.xpReward} XP</span>
+                </div>
+              </div>
+
+              {/* Earned Info or Progress */}
+              {selectedBadge.isEarned ? (
+                <div className="flex items-center justify-center space-x-2 text-green-600">
+                  <Trophy className="w-5 h-5" />
+                  <span className="font-medium">
+                    Earned{' '}
+                    {selectedBadge.earnedAt
+                      ? new Date(selectedBadge.earnedAt).toLocaleDateString()
+                      : 'recently'}
+                  </span>
+                </div>
+              ) : (
+                <div>
+                  <div className="text-sm text-gray-600 mb-2">
+                    <Lock className="w-4 h-4 inline mr-1" />
+                    {selectedBadge.requirement}
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div
+                      className="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full transition-all"
+                      style={{
+                        width: `${(selectedBadge.progress / selectedBadge.maxProgress) * 100}%`,
+                      }}
+                    />
+                  </div>
+                  <div className="text-xs text-gray-500 mt-1">
+                    {selectedBadge.progress} / {selectedBadge.maxProgress}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
-        )}
-{/* Add shimmer animation styles */}
+        </div>
+      )}
+      {/* Add shimmer animation styles */}
       <style jsx>{`
         @keyframes shimmer {
           0% {

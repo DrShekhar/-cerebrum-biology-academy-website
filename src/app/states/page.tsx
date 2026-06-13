@@ -27,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Biology Coaching by State | All India Coverage',
-    description: 'Find the best NEET Biology coaching for your state. Online classes available for Uttar Pradesh, Bihar, Rajasthan, Haryana, Madhya Pradesh, Punjab and all other states. 98% success rate.',
+    description:
+      'Find the best NEET Biology coaching for your state. Online classes available for Uttar Pradesh, Bihar, Rajasthan, Haryana, Madhya Pradesh, Punjab and all other states. 98% success rate.',
   },
 }
 
@@ -81,11 +82,10 @@ export default function StatesIndexPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Select Your State
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Select Your State</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Click on your state to see customized information, local medical colleges, and student testimonials.
+              Click on your state to see customized information, local medical colleges, and student
+              testimonials.
             </p>
           </div>
 
@@ -119,7 +119,9 @@ export default function StatesIndexPage() {
                         <Stethoscope className="w-4 h-4" />
                         MBBS Seats
                       </div>
-                      <div className="font-bold text-gray-900">{state.neetSeats.toLocaleString()}+</div>
+                      <div className="font-bold text-gray-900">
+                        {state.neetSeats.toLocaleString()}+
+                      </div>
                     </div>
                     <div className="bg-gray-50 rounded-lg p-3">
                       <div className="flex items-center gap-2 text-sm text-gray-500 mb-1">
@@ -161,10 +163,12 @@ export default function StatesIndexPage() {
           {/* Coming Soon States */}
           <div className="mt-12 text-center">
             <p className="text-gray-600 mb-4">
-              More states coming soon: Tamil Nadu, Karnataka, Maharashtra, West Bengal, Gujarat, Kerala
+              More states coming soon: Tamil Nadu, Karnataka, Maharashtra, West Bengal, Gujarat,
+              Kerala
             </p>
             <p className="text-sm text-gray-500">
-              Our online classes are available for students in ALL states. Contact us for any location.
+              Our online classes are available for students in ALL states. Contact us for any
+              location.
             </p>
           </div>
         </div>
@@ -173,9 +177,7 @@ export default function StatesIndexPage() {
       {/* CTA Section */}
       <section className="py-12 bg-green-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Don't See Your State?
-          </h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Don't See Your State?</h2>
           <p className="text-green-100 mb-6 max-w-xl mx-auto">
             Our online NEET Biology classes are available for students from ALL Indian states.
             Contact us to learn more!

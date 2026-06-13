@@ -89,9 +89,7 @@ export function MCQAnalyticsWidget() {
           <h3 className="text-base sm:text-lg font-bold text-gray-900">MCQ Analytics</h3>
         </div>
         <div className="text-center py-6">
-          <p className="text-gray-500 text-sm">
-            Practice MCQs to see detailed topic analytics
-          </p>
+          <p className="text-gray-500 text-sm">Practice MCQs to see detailed topic analytics</p>
         </div>
       </div>
     )
@@ -141,9 +139,7 @@ export function MCQAnalyticsWidget() {
         </div>
         <div className="h-10 w-px bg-blue-200" />
         <div className="text-center">
-          <div className="text-2xl font-bold text-gray-900">
-            {data.overallStats.totalQuestions}
-          </div>
+          <div className="text-2xl font-bold text-gray-900">{data.overallStats.totalQuestions}</div>
           <div className="text-xs text-gray-500">Questions</div>
         </div>
         <div className="h-10 w-px bg-blue-200" />

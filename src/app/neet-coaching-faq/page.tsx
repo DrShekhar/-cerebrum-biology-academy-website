@@ -10,7 +10,7 @@ const faqData = {
     {
       question: 'What is Cerebrum Biology Academy?',
       answer:
-        'Cerebrum Biology Academy is India\'s premier NEET Biology coaching institute founded in 2014 by Dr. Shekhar C Singh, an AIIMS-trained biologist with 15+ years of teaching experience since 2014. We specialize exclusively in Biology coaching with small batches of 8-15 students to ensure personalized attention. We operate 4 centers across Delhi NCR (South Extension, Gurugram, Rohini, Green Park, Faridabad, Noida) and have successfully coached 15,000+ students with a 98% NEET qualification rate.',
+        "Cerebrum Biology Academy is India's premier NEET Biology coaching institute founded in 2014 by Dr. Shekhar C Singh, an AIIMS-trained biologist with 15+ years of teaching experience since 2014. We specialize exclusively in Biology coaching with small batches of 8-15 students to ensure personalized attention. We operate 4 centers across Delhi NCR (South Extension, Gurugram, Rohini, Green Park, Faridabad, Noida) and have successfully coached 15,000+ students with a 98% NEET qualification rate.",
     },
     {
       question: 'Who is Dr. Shekhar C Singh?',
@@ -25,10 +25,10 @@ const faqData = {
     {
       question: 'What is the batch size at Cerebrum?',
       answer:
-        'We maintain batch sizes of 8-15 students per class to ensure maximum personalized attention. Unlike mass coaching institutes with 200+ students per classroom, our small batches allow faculty to understand each student\'s learning style, address individual doubts in real-time, and provide customized study plans for optimal results.',
+        "We maintain batch sizes of 8-15 students per class to ensure maximum personalized attention. Unlike mass coaching institutes with 200+ students per classroom, our small batches allow faculty to understand each student's learning style, address individual doubts in real-time, and provide customized study plans for optimal results.",
     },
     {
-      question: 'What is Cerebrum\'s success rate?',
+      question: "What is Cerebrum's success rate?",
       answer:
         'Cerebrum Biology Academy has achieved a 98% NEET qualification rate with 15,000+ students coached over the past 15+ years. Our students have been selected to top medical colleges including AIIMS Delhi, CMC Vellore, JIPMER, BHU, and state government medical colleges. In 2024 alone, 12 of our students scored 700+ in NEET Biology.',
     },
@@ -38,7 +38,7 @@ const faqData = {
         'Yes, Cerebrum offers three flexible modes: (1) Offline - In-center classes at any of our 6 locations, (2) Live Online - Real-time interaction with faculty via video conferencing, (3) Hybrid - Combination of online and offline classes. Students can switch between modes based on their convenience, with full access to recorded lectures, study materials, and doubt-clearing sessions.',
     },
     {
-      question: 'What are Cerebrum\'s contact details?',
+      question: "What are Cerebrum's contact details?",
       answer:
         'Phone: +91-88264-44334 | Email: info@cerebrumbiologyacademy.com | WhatsApp: +91-88264-44334. Our team is available Monday-Saturday, 9 AM to 7 PM. You can also visit any of our 4 centers or book a free demo class online at cerebrumbiologyacademy.com/book-free-demo.',
     },
@@ -58,7 +58,7 @@ const faqData = {
     {
       question: 'What is the ideal study plan for NEET 2026?',
       answer:
-        'If you\'re starting now (Feb 2026), follow this 10-month plan: Feb-April (3 months): NCERT revision, concept building, 0 mock tests. May-August (4 months): Complete NCERT twice more, start chapter-wise tests, solve 20+ mock tests. September-December (4 months): 80% time on weak chapters, mock tests 3x per week. December onwards: Revision mode, solve 50+ full-length tests. Cerebrum provides this exact structured plan with daily targets and progress tracking.',
+        "If you're starting now (Feb 2026), follow this 10-month plan: Feb-April (3 months): NCERT revision, concept building, 0 mock tests. May-August (4 months): Complete NCERT twice more, start chapter-wise tests, solve 20+ mock tests. September-December (4 months): 80% time on weak chapters, mock tests 3x per week. December onwards: Revision mode, solve 50+ full-length tests. Cerebrum provides this exact structured plan with daily targets and progress tracking.",
     },
     {
       question: 'How many hours should I study for NEET daily?',
@@ -93,7 +93,7 @@ const faqData = {
     {
       question: 'What is the best time to start NEET preparation?',
       answer:
-        'Class 11 is ideal. Timeline: Class 11 (Months 1-12): Build foundations, master Class 11 topics, take 10+ topic tests. Class 12 (Months 1-10): Complete entire NEET syllabus, solve 50+ mock tests. Class 12 (Months 11-12): Revision and mock tests only. If you\'re starting in Class 12: Start immediately, complete syllabus in 6 months, spend next 6 months testing. Starting in Class 12 with proper coaching is possible but intense. Cerebrum recommends Class 11 start.',
+        "Class 11 is ideal. Timeline: Class 11 (Months 1-12): Build foundations, master Class 11 topics, take 10+ topic tests. Class 12 (Months 1-10): Complete entire NEET syllabus, solve 50+ mock tests. Class 12 (Months 11-12): Revision and mock tests only. If you're starting in Class 12: Start immediately, complete syllabus in 6 months, spend next 6 months testing. Starting in Class 12 with proper coaching is possible but intense. Cerebrum recommends Class 11 start.",
     },
     {
       question: 'How to revise NEET Biology effectively?',
@@ -109,7 +109,7 @@ const faqData = {
         'Cerebrum specializes in Biology-only coaching for NEET aspirants: (1) Class 11 Foundation Batch: For first-year students, focuses on building fundamentals, (2) Class 12 One-Year Batch: For Class 12 students, completes NEET syllabus in 10 months, (3) Class 12 Two-Year Batch: For Class 11 students, comprehensive 24-month program from fundamentals to mastery, (4) Dropper Batch: For Class 12 pass-outs retaking NEET, (5) Online Courses: All above courses available live online. All courses include classroom lectures, recorded videos, study materials, mock tests, and doubt-clearing.',
     },
     {
-      question: 'What are Cerebrum\'s coaching fees?',
+      question: "What are Cerebrum's coaching fees?",
       answer:
         'Cerebrum offers affordable fees compared to coaching charging ₹3-8 lakhs: (1) Class 11 Foundation (12 months): ₹85,000, (2) Class 12 One-Year (10 months): ₹90,000, (3) Class 12 Two-Year (24 months): ₹1,40,000 (₹70,000/year), (4) Dropper Batch (12 months): ₹95,000, (5) Online variant: 20% discount on offline fees. Why affordable? We focus on quality over marketing. We invest in faculty, not advertising. Students pay for results, not coaching brand value. All fees include study materials, mock tests, and doubt-clearing.',
     },
@@ -190,7 +190,7 @@ const faqData = {
   // Category 5: Results & Success Stories (6 questions)
   results: [
     {
-      question: 'What are Cerebrum\'s NEET 2024 results?',
+      question: "What are Cerebrum's NEET 2024 results?",
       answer:
         'Cerebrum Biology Academy NEET 2024 Results: 98% NEET qualification rate (15,000+ students coached from 2015-2024). 2024 cohort highlights: 12 students scored 700+ marks in NEET Biology. 25 students scored 680-699 range. 45 students scored 660-679 range. Average score: 340 (out of 400 in Biology). Highest score: 738/800 (AIIMS Delhi selection). Top 20 scores: All above 700. Students from all batches (Foundation, One-Year, Two-Year, Online) performed well. Success rate: 98% qualified = 680 out of 722 students who joined Cerebrum eventually got selected in a medical college.',
     },
@@ -205,7 +205,7 @@ const faqData = {
         'Yes! 100% of Cerebrum students who attempt NEET get selected somewhere. Breakdown: 15% → AIIMS/JIPMER/CMC/BHU (elite colleges), 25% → State government medical colleges (AIIMS branches, state NEET colleges), 40% → Central/state-aided colleges, 20% → Private medical colleges (MANIPAL, SRM, Saveetha, etc.). Even students who scored 250-300 get selected in private colleges or deemed universities. However, goal should be 320+ for better government college options. Private colleges have high fees (₹1.5-2.5 crores for 5 years) vs government (₹1-2 lakhs). Cerebrum prepares all students to achieve 320+ to access government colleges.',
     },
     {
-      question: 'What are Cerebrum\'s student testimonials?',
+      question: "What are Cerebrum's student testimonials?",
       answer:
         'Anonymous student testimonials (verified on website): "I was 280 in mocks before joining Cerebrum dropper batch, scored 352 in NEET, got selected in medical college. Dr. Singh\'s teaching made Biology simple." - Arjun (Dropper, 2024). "Small batch size is game-changing. I got personal attention, all my doubts cleared in class itself. My score improved from 310 to 370." - Priya (One-Year, 2024). "Cerebrum\'s mock test accuracy is 95% - I got exactly similar difficulty level as NEET. This confidence helped me perform better in actual exam." - Rohan (Two-Year, 2023). "Online+offline flexibility helped me manage boards and NEET. Faculty didn\'t pressure for attendance, focused on learning. Scored 340 and got selected." - Sana (Two-Year, 2024). Full testimonials with names/colleges available at cerebrumbiologyacademy.com/success-stories.',
     },
@@ -217,23 +217,23 @@ const faqData = {
     {
       question: 'What is the average improvement for Cerebrum students?',
       answer:
-        'Average improvement from joining to NEET exam: 80-120 marks. Breakdown: (1) Students joining with 200-250 mock score: Improve to 300-340 (improvement of 100 marks), (2) Students joining with 250-300 mock score: Improve to 340-380 (improvement of 80 marks), (3) Students joining with 300+ mock score: Improve to 340-360 (improvement of 40-50 marks as they\'re already strong). This improvement comes from: Better concept understanding (reduces silly mistakes), regular testing (identifies weak areas), improved time management, confidence building, mentor support. Dropper students improve more (average 100+ marks) than first-time students (average 60 marks).',
+        "Average improvement from joining to NEET exam: 80-120 marks. Breakdown: (1) Students joining with 200-250 mock score: Improve to 300-340 (improvement of 100 marks), (2) Students joining with 250-300 mock score: Improve to 340-380 (improvement of 80 marks), (3) Students joining with 300+ mock score: Improve to 340-360 (improvement of 40-50 marks as they're already strong). This improvement comes from: Better concept understanding (reduces silly mistakes), regular testing (identifies weak areas), improved time management, confidence building, mentor support. Dropper students improve more (average 100+ marks) than first-time students (average 60 marks).",
     },
   ],
   // Category 6: Locations & Centers (6 questions)
   locations: [
     {
-      question: 'Where is Cerebrum\'s South Extension center?',
+      question: "Where is Cerebrum's South Extension center?",
       answer:
         'South Extension Center: A-68, South Extension Part-1, New Delhi 110049. Landmark: Next to Gita restaurant, opposite DLF Green Park. Distance: 2 km from Lajpat Nagar Metro. Facilities: Smart classroom with interactive board, 60-seat capacity, separate mentor room, online class studio. Serving: Delhi South (South Extension, Lajpat Nagar, Kalkaji, Nehru Place, Chhatarpur). Contact: 011-4141-0102. Demo class: Available 24/7 — book online or call anytime.',
     },
     {
-      question: 'Where is Cerebrum\'s Gurugram center?',
+      question: "Where is Cerebrum's Gurugram center?",
       answer:
         'Gurugram Center: Tower B, 2nd Floor, Sector 14, Gurugram, Haryana 122001. Landmark: Opposite Sector 14 market, 500m from Sector 14 Metro. Facilities: 2 classrooms (capacity 60 each), lab for specimen viewing, library with NCERT books, ac rooms, high-speed wifi, separate online studio. Serving: Gurugram, Noida, Faridabad, Indore, and online pan-India. Contact: 0124-409-6200. Demo class: Available 24/7 — book online or WhatsApp anytime for instant scheduling.',
     },
     {
-      question: 'Where is Cerebrum\'s Rohini center?',
+      question: "Where is Cerebrum's Rohini center?",
       answer:
         'Rohini Center: Block-A, Sector 7, Rohini, Delhi 110085. Landmark: Near Rohini East Metro, opposite Rohini Mall, walking distance from Sector 7 market. Facilities: 1 classroom (capacity 40), mentor chamber, test room, all basic facilities. Serving: Rohini, Bhayandar, Meerut, West Delhi. Contact: 011-4769-8899. Demo class: Available 24/7 — book online or call anytime. Good location for north Delhi students, lower fees than South Extension.',
     },
@@ -245,7 +245,7 @@ const faqData = {
     {
       question: 'Which center should I choose?',
       answer:
-        'Choose based on proximity and schedule: If you live in South Delhi/Lajpat Nagar → South Extension center (Most senior center, Dr. Singh teaches here), If you live in Gurugram/NCR → Gurugram center (Busiest center, highest batches), If you live in West Delhi/Rohini → Rohini center (Affordable fees, smaller batches), If you live in Green Park/Kalkaji → Green Park center, If you live in Faridabad/UP → Faridabad/Noida centers, If you live outside Delhi NCR → Live Online batch (No location limit, 20% cheaper). All centers provide same curriculum, faculty quality, study materials, and mock tests - Location shouldn\'t affect your score.',
+        "Choose based on proximity and schedule: If you live in South Delhi/Lajpat Nagar → South Extension center (Most senior center, Dr. Singh teaches here), If you live in Gurugram/NCR → Gurugram center (Busiest center, highest batches), If you live in West Delhi/Rohini → Rohini center (Affordable fees, smaller batches), If you live in Green Park/Kalkaji → Green Park center, If you live in Faridabad/UP → Faridabad/Noida centers, If you live outside Delhi NCR → Live Online batch (No location limit, 20% cheaper). All centers provide same curriculum, faculty quality, study materials, and mock tests - Location shouldn't affect your score.",
     },
     {
       question: 'What is the Google Maps location for Cerebrum centers?',
@@ -258,27 +258,27 @@ const faqData = {
     {
       question: 'What are the best Biology books for NEET?',
       answer:
-        'Top recommended Biology books: (1) NCERT Biology Class 11 & 12: The foundation - Read 5 times, (2) NCERT Exemplar: For practice problems, 200+ questions, (3) Murgan\'s Elements of Biology (Online version free): Detailed explanations, (4) Campbell Biology (International version): For in-depth understanding of advanced topics, (5) Trueman\'s Biology: Quick reference, helpful for revision, (6) Question banks: Previous 5 years NEET questions with solutions. Don\'t read 10 books - Read NCERT 5 times instead. Cerebrum provides curated notes from all these books, so you don\'t need to buy separately.',
+        "Top recommended Biology books: (1) NCERT Biology Class 11 & 12: The foundation - Read 5 times, (2) NCERT Exemplar: For practice problems, 200+ questions, (3) Murgan's Elements of Biology (Online version free): Detailed explanations, (4) Campbell Biology (International version): For in-depth understanding of advanced topics, (5) Trueman's Biology: Quick reference, helpful for revision, (6) Question banks: Previous 5 years NEET questions with solutions. Don't read 10 books - Read NCERT 5 times instead. Cerebrum provides curated notes from all these books, so you don't need to buy separately.",
     },
     {
       question: 'How should I make Biology notes?',
       answer:
-        'Effective note-making strategy: (1) Create mind maps for every chapter - Central concept in middle, branches for each subtopic, (2) Write definitions in 1 sentence, not paragraphs, (3) Draw diagrams yourself, don\'t just copy from books, (4) Color-code: Green for important, Orange for easy mistakes, Red for very difficult, (5) Index your notes - Date written, chapter, page number, (6) Review notes weekly - If you don\'t review, notes are useless, (7) One-page summary per chapter for final revision. Don\'t make 100 pages of notes - Quality over quantity. Cerebrum provides ready-to-use notes so you can focus on understanding instead of copying. Use our notes + add your own explanations.',
+        "Effective note-making strategy: (1) Create mind maps for every chapter - Central concept in middle, branches for each subtopic, (2) Write definitions in 1 sentence, not paragraphs, (3) Draw diagrams yourself, don't just copy from books, (4) Color-code: Green for important, Orange for easy mistakes, Red for very difficult, (5) Index your notes - Date written, chapter, page number, (6) Review notes weekly - If you don't review, notes are useless, (7) One-page summary per chapter for final revision. Don't make 100 pages of notes - Quality over quantity. Cerebrum provides ready-to-use notes so you can focus on understanding instead of copying. Use our notes + add your own explanations.",
     },
     {
       question: 'What are common Biology mistakes students make?',
       answer:
-        'Top 10 mistakes: (1) Rote learning without understanding - You\'ll forget 90% after exam, (2) Ignoring diagrams - 30% NEET questions are diagram-based, (3) Not solving previous year questions - You\'ll be surprised by repeated concepts, (4) Starting mock tests too late - Should start month 2 of coaching, not month 11, (5) Not maintaining error log - You\'ll repeat same mistakes, (6) Studying all chapters equally - 30% chapters give 70% questions, (7) Sleeping late the night before exam - 1 extra hour of sleep matters more than 1 extra hour of study, (8) Not practicing time management - Solving 180 questions in 200 minutes is tough, (9) Losing confidence midway - If you score 280 in mock, don\'t lose hope, can improve to 320+, (10) Not doing personal mentoring - Faculty guidance for 1 hour can change your score by 30 marks. Cerebrum coaching avoids all these by design.',
+        "Top 10 mistakes: (1) Rote learning without understanding - You'll forget 90% after exam, (2) Ignoring diagrams - 30% NEET questions are diagram-based, (3) Not solving previous year questions - You'll be surprised by repeated concepts, (4) Starting mock tests too late - Should start month 2 of coaching, not month 11, (5) Not maintaining error log - You'll repeat same mistakes, (6) Studying all chapters equally - 30% chapters give 70% questions, (7) Sleeping late the night before exam - 1 extra hour of sleep matters more than 1 extra hour of study, (8) Not practicing time management - Solving 180 questions in 200 minutes is tough, (9) Losing confidence midway - If you score 280 in mock, don't lose hope, can improve to 320+, (10) Not doing personal mentoring - Faculty guidance for 1 hour can change your score by 30 marks. Cerebrum coaching avoids all these by design.",
     },
     {
       question: 'How to create a Biology study schedule?',
       answer:
-        'Weekly study schedule template (35-40 hours/week): Monday-Friday: 2 hours lecture, 3 hours self-study, 1.5 hours testing = 6.5 hours/day. Saturday: 2 hours lecture, 3 hours self-study, 2 hours full test = 7 hours. Sunday: 3 hours revision + personal mentoring (if scheduled). Monthly: 4 full-length mock tests (every Saturday). Chapter-wise: First month = Chapter 1, Second month = Chapters 1-2 revision + Chapter 2, etc. (overlap for continuous revision). Important: Flexibility - If you\'re weak in Genetics, add 1 extra hour to Genetics that week. Cerebrum provides exact class schedule + you adjust self-study. Sample schedule available in admission pack.',
+        "Weekly study schedule template (35-40 hours/week): Monday-Friday: 2 hours lecture, 3 hours self-study, 1.5 hours testing = 6.5 hours/day. Saturday: 2 hours lecture, 3 hours self-study, 2 hours full test = 7 hours. Sunday: 3 hours revision + personal mentoring (if scheduled). Monthly: 4 full-length mock tests (every Saturday). Chapter-wise: First month = Chapter 1, Second month = Chapters 1-2 revision + Chapter 2, etc. (overlap for continuous revision). Important: Flexibility - If you're weak in Genetics, add 1 extra hour to Genetics that week. Cerebrum provides exact class schedule + you adjust self-study. Sample schedule available in admission pack.",
     },
     {
       question: 'What are the best online resources for NEET Biology?',
       answer:
-        'Free online resources: (1) NCERT videos on YouTube (official NCERT channel), (2) Previous year NEET questions on aakash.ac.in and the largest national NEET chain.in (free practice), (3) Doubtnut app (free, but has ads) - Instant video solutions, (4) Khan Academy Biology (free English lessons), (5) Our channel @cerebrumbiologyacademy (YouTube - concept explanations, error analysis). Paid resources: (1) other online-only platforms Plus/Plus Pro: Live classes + recorded lectures, (2) Toppr: Interactive learning platform, (3) Byjus: Comprehensive but expensive. Cerebrum recommendation: Use free resources for concepts, use Cerebrum lectures for NEET-specific approach, use mock tests for practice. Don\'t overwhelm yourself with too many platforms - One good source beats 10 mediocre sources.',
+        "Free online resources: (1) NCERT videos on YouTube (official NCERT channel), (2) Previous year NEET questions on aakash.ac.in and the largest national NEET chain.in (free practice), (3) Doubtnut app (free, but has ads) - Instant video solutions, (4) Khan Academy Biology (free English lessons), (5) Our channel @cerebrumbiologyacademy (YouTube - concept explanations, error analysis). Paid resources: (1) other online-only platforms Plus/Plus Pro: Live classes + recorded lectures, (2) Toppr: Interactive learning platform, (3) Byjus: Comprehensive but expensive. Cerebrum recommendation: Use free resources for concepts, use Cerebrum lectures for NEET-specific approach, use mock tests for practice. Don't overwhelm yourself with too many platforms - One good source beats 10 mediocre sources.",
     },
     {
       question: 'How to prepare chapter-wise Biology quickly?',
@@ -300,15 +300,13 @@ const allFaqs = [
 ]
 
 export const metadata: Metadata = {
-  title:
-    'NEET Coaching FAQ 2026: 50+ Questions Answered | Cerebrum Biology Academy',
+  title: 'NEET Coaching FAQ 2026: 50+ Questions Answered | Cerebrum Biology Academy',
   description:
     "Get answers to 50+ frequently asked questions about NEET coaching, fees, results, study tips, and more from Cerebrum Biology Academy's expert faculty.",
   keywords:
     'NEET FAQ, NEET coaching questions, NEET biology preparation, Cerebrum FAQ, NEET exam questions',
   openGraph: {
-    title:
-      'NEET Coaching FAQ 2026: 50+ Questions Answered | Cerebrum Biology Academy',
+    title: 'NEET Coaching FAQ 2026: 50+ Questions Answered | Cerebrum Biology Academy',
     description:
       "Get answers to 50+ frequently asked questions about NEET coaching, fees, results, study tips, and more from Cerebrum Biology Academy's expert faculty.",
     type: 'website',
@@ -316,10 +314,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title:
-      'NEET Coaching FAQ 2026: 50+ Questions Answered | Cerebrum Biology Academy',
+    title: 'NEET Coaching FAQ 2026: 50+ Questions Answered | Cerebrum Biology Academy',
     description:
-      "Get answers to 50+ frequently asked questions about NEET coaching, fees, results, study tips, and more.",
+      'Get answers to 50+ frequently asked questions about NEET coaching, fees, results, study tips, and more.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-faq',
@@ -382,9 +379,7 @@ export default function NEETCoachingFAQPage() {
                 className="group bg-white border border-slate-200 rounded-lg overflow-hidden hover:border-green-500 transition"
               >
                 <summary className="flex items-center justify-between cursor-pointer p-4 hover:bg-slate-50 transition-colors">
-                  <h3 className="font-semibold text-slate-900 pr-4 text-left">
-                    {item.question}
-                  </h3>
+                  <h3 className="font-semibold text-slate-900 pr-4 text-left">{item.question}</h3>
                   <ChevronDown className="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform flex-shrink-0" />
                 </summary>
                 <div className="px-4 pb-4 pt-0 text-slate-600 border-t border-slate-100">
@@ -407,9 +402,7 @@ export default function NEETCoachingFAQPage() {
                 className="group bg-white border border-slate-200 rounded-lg overflow-hidden hover:border-green-500 transition"
               >
                 <summary className="flex items-center justify-between cursor-pointer p-4 hover:bg-slate-50 transition-colors">
-                  <h3 className="font-semibold text-slate-900 pr-4 text-left">
-                    {item.question}
-                  </h3>
+                  <h3 className="font-semibold text-slate-900 pr-4 text-left">{item.question}</h3>
                   <ChevronDown className="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform flex-shrink-0" />
                 </summary>
                 <div className="px-4 pb-4 pt-0 text-slate-600 border-t border-slate-100">
@@ -432,9 +425,7 @@ export default function NEETCoachingFAQPage() {
                 className="group bg-white border border-slate-200 rounded-lg overflow-hidden hover:border-green-500 transition"
               >
                 <summary className="flex items-center justify-between cursor-pointer p-4 hover:bg-slate-50 transition-colors">
-                  <h3 className="font-semibold text-slate-900 pr-4 text-left">
-                    {item.question}
-                  </h3>
+                  <h3 className="font-semibold text-slate-900 pr-4 text-left">{item.question}</h3>
                   <ChevronDown className="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform flex-shrink-0" />
                 </summary>
                 <div className="px-4 pb-4 pt-0 text-slate-600 border-t border-slate-100">
@@ -457,9 +448,7 @@ export default function NEETCoachingFAQPage() {
                 className="group bg-white border border-slate-200 rounded-lg overflow-hidden hover:border-green-500 transition"
               >
                 <summary className="flex items-center justify-between cursor-pointer p-4 hover:bg-slate-50 transition-colors">
-                  <h3 className="font-semibold text-slate-900 pr-4 text-left">
-                    {item.question}
-                  </h3>
+                  <h3 className="font-semibold text-slate-900 pr-4 text-left">{item.question}</h3>
                   <ChevronDown className="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform flex-shrink-0" />
                 </summary>
                 <div className="px-4 pb-4 pt-0 text-slate-600 border-t border-slate-100">
@@ -482,9 +471,7 @@ export default function NEETCoachingFAQPage() {
                 className="group bg-white border border-slate-200 rounded-lg overflow-hidden hover:border-green-500 transition"
               >
                 <summary className="flex items-center justify-between cursor-pointer p-4 hover:bg-slate-50 transition-colors">
-                  <h3 className="font-semibold text-slate-900 pr-4 text-left">
-                    {item.question}
-                  </h3>
+                  <h3 className="font-semibold text-slate-900 pr-4 text-left">{item.question}</h3>
                   <ChevronDown className="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform flex-shrink-0" />
                 </summary>
                 <div className="px-4 pb-4 pt-0 text-slate-600 border-t border-slate-100">
@@ -507,9 +494,7 @@ export default function NEETCoachingFAQPage() {
                 className="group bg-white border border-slate-200 rounded-lg overflow-hidden hover:border-green-500 transition"
               >
                 <summary className="flex items-center justify-between cursor-pointer p-4 hover:bg-slate-50 transition-colors">
-                  <h3 className="font-semibold text-slate-900 pr-4 text-left">
-                    {item.question}
-                  </h3>
+                  <h3 className="font-semibold text-slate-900 pr-4 text-left">{item.question}</h3>
                   <ChevronDown className="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform flex-shrink-0" />
                 </summary>
                 <div className="px-4 pb-4 pt-0 text-slate-600 border-t border-slate-100">
@@ -532,9 +517,7 @@ export default function NEETCoachingFAQPage() {
                 className="group bg-white border border-slate-200 rounded-lg overflow-hidden hover:border-green-500 transition"
               >
                 <summary className="flex items-center justify-between cursor-pointer p-4 hover:bg-slate-50 transition-colors">
-                  <h3 className="font-semibold text-slate-900 pr-4 text-left">
-                    {item.question}
-                  </h3>
+                  <h3 className="font-semibold text-slate-900 pr-4 text-left">{item.question}</h3>
                   <ChevronDown className="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform flex-shrink-0" />
                 </summary>
                 <div className="px-4 pb-4 pt-0 text-slate-600 border-t border-slate-100">

@@ -140,8 +140,7 @@ export default function FileUploadWithProgress() {
             ${isDragging ? 'border-blue-500 bg-blue-50' : 'border-slate-300 hover:border-blue-400'}
           `}
         >
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <Upload
               className={`w-16 h-16 mx-auto mb-4 ${isDragging ? 'text-blue-500' : 'text-slate-400'}`}
             />
@@ -198,78 +197,75 @@ export default function FileUploadWithProgress() {
         <Card className="p-6">
           <h3 className="font-semibold text-slate-900 mb-4">Files</h3>
           <div className="space-y-3">
-{files.map((file) => (
-                <div
-                  key={file.id}
-                  className="bg-slate-50 rounded-lg p-4 animate-fadeInUp"
-                >
-                  <div className="flex items-start gap-3">
-                    <div
-                      className={`
+            {files.map((file) => (
+              <div key={file.id} className="bg-slate-50 rounded-lg p-4 animate-fadeInUp">
+                <div className="flex items-start gap-3">
+                  <div
+                    className={`
                       p-2 rounded-lg flex-shrink-0
                       ${file.status === 'complete' ? 'bg-green-100 text-green-600' : 'bg-blue-100 text-blue-600'}
                     `}
-                    >
-                      {file.status === 'complete' ? (
-                        <CheckCircle2 className="w-5 h-5" />
-                      ) : (
-                        getFileIcon(file.type)
-                      )}
-                    </div>
+                  >
+                    {file.status === 'complete' ? (
+                      <CheckCircle2 className="w-5 h-5" />
+                    ) : (
+                      getFileIcon(file.type)
+                    )}
+                  </div>
 
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-start justify-between gap-2 mb-2">
-                        <div className="flex-1 min-w-0">
-                          <p className="font-medium text-slate-900 truncate">{file.name}</p>
-                          <p className="text-xs text-slate-500">{formatFileSize(file.size)}</p>
-                        </div>
-                        <button
-                          onClick={() => removeFile(file.id)}
-                          className="text-slate-400 hover:text-slate-600 transition-colors"
-                        >
-                          <X className="w-4 h-4" />
-                        </button>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-start justify-between gap-2 mb-2">
+                      <div className="flex-1 min-w-0">
+                        <p className="font-medium text-slate-900 truncate">{file.name}</p>
+                        <p className="text-xs text-slate-500">{formatFileSize(file.size)}</p>
                       </div>
-
-                      {file.status !== 'complete' && (
-                        <ProgressIndicator
-                          current={Math.floor(file.progress)}
-                          total={100}
-                          percentage={file.progress}
-                          status={
-                            file.status === 'uploading'
-                              ? 'Uploading...'
-                              : file.status === 'processing'
-                                ? 'Processing...'
-                                : ''
-                          }
-                          variant="compact"
-                          size="sm"
-                          color="blue"
-                          showSteps={false}
-                          showEstimatedTime={false}
-                          cancelable={false}
-                        />
-                      )}
-
-                      {file.status === 'complete' && (
-                        <div className="flex items-center gap-2 text-sm text-green-600">
-                          <CheckCircle2 className="w-4 h-4" />
-                          <span className="font-medium">Upload complete</span>
-                        </div>
-                      )}
-
-                      {file.error && (
-                        <p className="text-sm text-red-600 mt-2 flex items-center gap-1">
-                          <X className="w-4 h-4" />
-                          {file.error}
-                        </p>
-                      )}
+                      <button
+                        onClick={() => removeFile(file.id)}
+                        className="text-slate-400 hover:text-slate-600 transition-colors"
+                      >
+                        <X className="w-4 h-4" />
+                      </button>
                     </div>
+
+                    {file.status !== 'complete' && (
+                      <ProgressIndicator
+                        current={Math.floor(file.progress)}
+                        total={100}
+                        percentage={file.progress}
+                        status={
+                          file.status === 'uploading'
+                            ? 'Uploading...'
+                            : file.status === 'processing'
+                              ? 'Processing...'
+                              : ''
+                        }
+                        variant="compact"
+                        size="sm"
+                        color="blue"
+                        showSteps={false}
+                        showEstimatedTime={false}
+                        cancelable={false}
+                      />
+                    )}
+
+                    {file.status === 'complete' && (
+                      <div className="flex items-center gap-2 text-sm text-green-600">
+                        <CheckCircle2 className="w-4 h-4" />
+                        <span className="font-medium">Upload complete</span>
+                      </div>
+                    )}
+
+                    {file.error && (
+                      <p className="text-sm text-red-600 mt-2 flex items-center gap-1">
+                        <X className="w-4 h-4" />
+                        {file.error}
+                      </p>
+                    )}
                   </div>
                 </div>
-              ))}
-</div>
+              </div>
+            ))}
+          </div>
         </Card>
       )}
 

@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function ResultsAnalysisIllustration({ className = '', animate = true }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -12,12 +12,7 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Background */}
       <rect x="10" y="10" width="380" height="280" rx="20" fill="#F0FDF4" />
 
@@ -42,50 +37,22 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
       </text>
 
       {/* Bars */}
-      <rect
-        x="50"
-        y="130"
-        width="25"
-        height="40"
-        rx="2"
-        fill="#EF4444"
-      />
+      <rect x="50" y="130" width="25" height="40" rx="2" fill="#EF4444" />
       <text x="62" y="180" fontSize="5" fill="#6B7280" textAnchor="middle">
         0-200
       </text>
 
-      <rect
-        x="85"
-        y="110"
-        width="25"
-        height="60"
-        rx="2"
-        fill="#F59E0B"
-      />
+      <rect x="85" y="110" width="25" height="60" rx="2" fill="#F59E0B" />
       <text x="97" y="180" fontSize="5" fill="#6B7280" textAnchor="middle">
         200-400
       </text>
 
-      <rect
-        x="120"
-        y="100"
-        width="25"
-        height="70"
-        rx="2"
-        fill="#3B82F6"
-      />
+      <rect x="120" y="100" width="25" height="70" rx="2" fill="#3B82F6" />
       <text x="132" y="180" fontSize="5" fill="#6B7280" textAnchor="middle">
         400-600
       </text>
 
-      <rect
-        x="155"
-        y="120"
-        width="25"
-        height="50"
-        rx="2"
-        fill="#22C55E"
-      />
+      <rect x="155" y="120" width="25" height="50" rx="2" fill="#22C55E" />
       <text x="167" y="180" fontSize="5" fill="#6B7280" textAnchor="middle">
         600+
       </text>
@@ -105,32 +72,28 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
         Key Statistics
       </text>
 
-      <g
-      >
+      <g>
         <rect x="245" y="85" width="120" height="22" rx="4" fill="#DCFCE7" />
         <text x="305" y="100" fontSize="7" fill="#166534" textAnchor="middle">
           24 Lakh+ Appeared
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <rect x="245" y="112" width="120" height="22" rx="4" fill="#DBEAFE" />
         <text x="305" y="127" fontSize="7" fill="#1D4ED8" textAnchor="middle">
           720/720 Top Score
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <rect x="245" y="139" width="120" height="22" rx="4" fill="#FEF3C7" />
         <text x="305" y="154" fontSize="7" fill="#B45309" textAnchor="middle">
           137 Cutoff General
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <rect x="245" y="166" width="120" height="15" rx="4" fill="#FCE7F3" />
         <text x="305" y="177" fontSize="6" fill="#DB2777" textAnchor="middle">
           67% Success Rate
@@ -152,8 +115,7 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
         Trends for NEET 2025
       </text>
 
-      <g
-      >
+      <g>
         <rect x="45" y="225" width="90" height="40" rx="6" fill="#DCFCE7" />
         <text x="90" y="243" fontSize="7" fill="#166534" textAnchor="middle" fontWeight="bold">
           Biology Focus
@@ -163,8 +125,7 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <rect x="155" y="225" width="90" height="40" rx="6" fill="#DBEAFE" />
         <text x="200" y="243" fontSize="7" fill="#1D4ED8" textAnchor="middle" fontWeight="bold">
           NCERT Based
@@ -174,8 +135,7 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
         </text>
       </g>
 
-      <g
-      >
+      <g>
         <rect x="265" y="225" width="90" height="40" rx="6" fill="#FEF3C7" />
         <text x="310" y="243" fontSize="7" fill="#B45309" textAnchor="middle" fontWeight="bold">
           Competition

@@ -27,10 +27,9 @@ const CANONICAL = '/best-ibo-coaching-india'
 const PAGE_URL = `${SITE_URL}${CANONICAL}`
 
 export const metadata: Metadata = {
-  title:
-    'Best IBO Coaching in India — International Biology Olympiad Prep · Cerebrum',
+  title: 'Best IBO Coaching in India — International Biology Olympiad Prep · Cerebrum',
   description:
-    'India\'s biology-specialist coaching for IBO (International Biology Olympiad). Full funnel: NSEB → INBO → OCSC → IBO. AIIMS-trained faculty, Campbell-based curriculum, primary research-paper drills, micro-batches with direct Dr. Shekhar mentorship. Free trial class.',
+    "India's biology-specialist coaching for IBO (International Biology Olympiad). Full funnel: NSEB → INBO → OCSC → IBO. AIIMS-trained faculty, Campbell-based curriculum, primary research-paper drills, micro-batches with direct Dr. Shekhar mentorship. Free trial class.",
   keywords: [
     'best IBO coaching',
     'best IBO coaching india',
@@ -59,7 +58,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best IBO Coaching in India · Cerebrum Biology Academy',
     description:
-      'India\'s biology specialist for International Biology Olympiad. Full NSEB → INBO → OCSC → IBO funnel.',
+      "India's biology specialist for International Biology Olympiad. Full NSEB → INBO → OCSC → IBO funnel.",
     url: PAGE_URL,
     locale: 'en_IN',
     type: 'website',
@@ -92,7 +91,7 @@ const STAGES = [
   {
     stage: 'Stage 4 — IBO (July)',
     description:
-      'International Biology Olympiad. India\'s 4-member team competes globally. 6 hours of theoretical + 8 hours of practical exam. Gold / Silver / Bronze medals awarded. India typically wins 1-3 medals each year.',
+      "International Biology Olympiad. India's 4-member team competes globally. 6 hours of theoretical + 8 hours of practical exam. Gold / Silver / Bronze medals awarded. India typically wins 1-3 medals each year.",
   },
 ]
 
@@ -105,12 +104,12 @@ const FAQS = [
   {
     question: 'How do I prepare for IBO from India?',
     answer:
-      'You can\'t prepare for IBO directly — you have to qualify through the funnel: NSEB (Class 11-12, November) → INBO (~300 candidates, January) → OCSC (~35 candidates, April-May) → IBO team selection (4 members). At each stage the cognitive demand jumps significantly. Cerebrum runs dedicated tracks for NSEB target prep, INBO Stage 2 written + experimental, OCSC residential-camp simulation (we run a virtual OCSC bootcamp for top candidates), and IBO past-paper drills.',
+      "You can't prepare for IBO directly — you have to qualify through the funnel: NSEB (Class 11-12, November) → INBO (~300 candidates, January) → OCSC (~35 candidates, April-May) → IBO team selection (4 members). At each stage the cognitive demand jumps significantly. Cerebrum runs dedicated tracks for NSEB target prep, INBO Stage 2 written + experimental, OCSC residential-camp simulation (we run a virtual OCSC bootcamp for top candidates), and IBO past-paper drills.",
   },
   {
-    question: 'What\'s the difference between IBO prep and NEET prep?',
+    question: "What's the difference between IBO prep and NEET prep?",
     answer:
-      'Different rule-books entirely. NEET tests NCERT recall + MCQ application at moderate depth. IBO tests Campbell-level mechanism reasoning, primary research paper interpretation (Nature / Science / Cell figures), wet-lab experimental design, biochemistry pathway prediction, evolutionary reasoning, biostatistics. A student who scores 360/360 on NEET biology is NOT automatically prepared for IBO — IBO demands depth that NEET doesn\'t reach. That said, the inverse is true: a student preparing for IBO typically aces NEET biology as a side-effect.',
+      "Different rule-books entirely. NEET tests NCERT recall + MCQ application at moderate depth. IBO tests Campbell-level mechanism reasoning, primary research paper interpretation (Nature / Science / Cell figures), wet-lab experimental design, biochemistry pathway prediction, evolutionary reasoning, biostatistics. A student who scores 360/360 on NEET biology is NOT automatically prepared for IBO — IBO demands depth that NEET doesn't reach. That said, the inverse is true: a student preparing for IBO typically aces NEET biology as a side-effect.",
   },
   {
     question: 'When should my child start IBO prep?',
@@ -120,28 +119,28 @@ const FAQS = [
   {
     question: 'What books does Cerebrum use for IBO prep?',
     answer:
-      'Core: Campbell Biology 11th+ edition (the global IBO reference). Supplementary: Lehninger Principles of Biochemistry (for biochemistry depth), Alberts Molecular Biology of the Cell (for cell biology mechanism), Raven Biology of Plants (for botany depth), Sadava Life: The Science of Biology. Plus selected primary research papers from Nature, Science, Cell, PNAS. We also use HBCSE\'s released INBO + IBO past papers (2010-2024) with detailed solutions.',
+      "Core: Campbell Biology 11th+ edition (the global IBO reference). Supplementary: Lehninger Principles of Biochemistry (for biochemistry depth), Alberts Molecular Biology of the Cell (for cell biology mechanism), Raven Biology of Plants (for botany depth), Sadava Life: The Science of Biology. Plus selected primary research papers from Nature, Science, Cell, PNAS. We also use HBCSE's released INBO + IBO past papers (2010-2024) with detailed solutions.",
   },
   {
     question:
       'My child is in IB / IGCSE international school in India. Are they eligible for IBO via India?',
     answer:
-      'Yes, if they\'re Indian citizens / domicile and in Class 11-12 equivalent. IB DP1/DP2 students take NSEB alongside IB; many have done well historically because IB Biology HL syllabus already pushes beyond standard school biology toward command-term reasoning. Cerebrum runs a dedicated IB Biology HL + IBO parallel track that handles both syllabi simultaneously without duplicating effort.',
+      "Yes, if they're Indian citizens / domicile and in Class 11-12 equivalent. IB DP1/DP2 students take NSEB alongside IB; many have done well historically because IB Biology HL syllabus already pushes beyond standard school biology toward command-term reasoning. Cerebrum runs a dedicated IB Biology HL + IBO parallel track that handles both syllabi simultaneously without duplicating effort.",
   },
   {
-    question: 'What\'s Cerebrum\'s IBO track record?',
+    question: "What's Cerebrum's IBO track record?",
     answer:
-      'Multiple INBO Stage 2 qualifiers per cohort since 2018. OCSC selections in 3 of the past 5 years. Dr. Shekhar C Singh personally coaches the OCSC-track Pinnacle ZA tier. We don\'t publicly publish all student names (some families prefer privacy) but reference checks are available on WhatsApp request — we connect prospective families with past IBO-track student parents who can speak about the prep experience.',
+      "Multiple INBO Stage 2 qualifiers per cohort since 2018. OCSC selections in 3 of the past 5 years. Dr. Shekhar C Singh personally coaches the OCSC-track Pinnacle ZA tier. We don't publicly publish all student names (some families prefer privacy) but reference checks are available on WhatsApp request — we connect prospective families with past IBO-track student parents who can speak about the prep experience.",
   },
   {
     question: 'How does the OCSC residential camp simulation work?',
     answer:
-      'We run a 2-week virtual OCSC bootcamp for INBO-qualified students (or those targeting it). Daily 6-hour live sessions: 3 hours theory (Campbell deep-dive on weak areas identified from INBO Stage 2 attempts), 2 hours experimental design + figure interpretation, 1 hour biostatistics + reasoning drills. We can\'t replicate the wet-lab fully online but we cover experimental design + reagent reasoning + figure prediction comprehensively.',
+      "We run a 2-week virtual OCSC bootcamp for INBO-qualified students (or those targeting it). Daily 6-hour live sessions: 3 hours theory (Campbell deep-dive on weak areas identified from INBO Stage 2 attempts), 2 hours experimental design + figure interpretation, 1 hour biostatistics + reasoning drills. We can't replicate the wet-lab fully online but we cover experimental design + reagent reasoning + figure prediction comprehensively.",
   },
   {
     question: 'Pricing for IBO coaching?',
     answer:
-      'IBO prep typically runs via our Pinnacle ZA tier (direct Dr. Shekhar) for OCSC-aiming students, or the Competitive tier for NSEB / INBO target students. We don\'t publish prices because they depend on tier + currency. Send a WhatsApp with your child\'s class + olympiad target — we share the tier matrix and quote in conversation. Free trial class with Dr. Shekhar comes first.',
+      "IBO prep typically runs via our Pinnacle ZA tier (direct Dr. Shekhar) for OCSC-aiming students, or the Competitive tier for NSEB / INBO target students. We don't publish prices because they depend on tier + currency. Send a WhatsApp with your child's class + olympiad target — we share the tier matrix and quote in conversation. Free trial class with Dr. Shekhar comes first.",
   },
 ]
 
@@ -158,7 +157,7 @@ export default function BestIBOCoachingIndiaPage() {
     '@id': `${PAGE_URL}#course`,
     name: 'Best IBO Coaching in India — Full NSEB → INBO → OCSC → IBO Funnel',
     description:
-      'India\'s biology-specialist coaching for International Biology Olympiad team selection. Campbell-based curriculum, primary research paper drills, micro-batches with direct Dr. Shekhar mentorship.',
+      "India's biology-specialist coaching for International Biology Olympiad team selection. Campbell-based curriculum, primary research paper drills, micro-batches with direct Dr. Shekhar mentorship.",
     url: PAGE_URL,
     inLanguage: 'en-IN',
     educationalLevel: 'IBO aspirant (Class 9-12)',
@@ -227,13 +226,12 @@ export default function BestIBOCoachingIndiaPage() {
             <span className="text-indigo-700">the full funnel, one programme.</span>
           </h1>
           <p className="mt-5 text-lg text-slate-600 leading-relaxed max-w-4xl">
-            International Biology Olympiad selection from India happens through
-            a 4-stage funnel — NSEB (November), INBO (January), OCSC residential
-            camp at HBCSE Mumbai (April-May), IBO team selection (July).
-            Cerebrum coaches every stage of this funnel with the same
-            specialist faculty team, led by Dr. Shekhar C Singh (AIIMS New
-            Delhi alumnus). Campbell-based curriculum, research-paper drills,
-            INBO-format mocks, and a virtual OCSC bootcamp for top candidates.
+            International Biology Olympiad selection from India happens through a 4-stage funnel —
+            NSEB (November), INBO (January), OCSC residential camp at HBCSE Mumbai (April-May), IBO
+            team selection (July). Cerebrum coaches every stage of this funnel with the same
+            specialist faculty team, led by Dr. Shekhar C Singh (AIIMS New Delhi alumnus).
+            Campbell-based curriculum, research-paper drills, INBO-format mocks, and a virtual OCSC
+            bootcamp for top candidates.
           </p>
 
           <div className="mt-7 flex flex-col sm:flex-row gap-3">
@@ -274,9 +272,7 @@ export default function BestIBOCoachingIndiaPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-slate-900">{s.stage}</h3>
-                      <p className="mt-2 text-sm text-slate-700 leading-relaxed">
-                        {s.description}
-                      </p>
+                      <p className="mt-2 text-sm text-slate-700 leading-relaxed">{s.description}</p>
                     </div>
                   </div>
                 </li>
@@ -298,9 +294,7 @@ export default function BestIBOCoachingIndiaPage() {
                     <span>{f.question}</span>
                     <ChevronRight className="h-5 w-5 shrink-0 text-slate-400 transition-transform group-open:rotate-90" />
                   </summary>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-700">
-                    {f.answer}
-                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-700">{f.answer}</p>
                 </details>
               ))}
             </div>
@@ -311,13 +305,10 @@ export default function BestIBOCoachingIndiaPage() {
         <section className="bg-slate-900 py-14 text-white">
           <div className="mx-auto max-w-3xl px-4 text-center">
             <Trophy className="h-10 w-10 text-amber-300 mx-auto" />
-            <h2 className="mt-4 text-2xl md:text-3xl font-bold">
-              Ready to start IBO prep?
-            </h2>
+            <h2 className="mt-4 text-2xl md:text-3xl font-bold">Ready to start IBO prep?</h2>
             <p className="mt-3 text-slate-300 max-w-2xl mx-auto">
-              Free 60-minute trial with Dr. Shekhar. Bring one INBO / IBO
-              past-paper question your child has worked on. We assess
-              readiness and give a clear funnel-stage plan.
+              Free 60-minute trial with Dr. Shekhar. Bring one INBO / IBO past-paper question your
+              child has worked on. We assess readiness and give a clear funnel-stage plan.
             </p>
             <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
               <a

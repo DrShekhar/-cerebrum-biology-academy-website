@@ -399,13 +399,21 @@ export default function TestimonialsPage() {
                 expert guidance and proven methodology
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-                <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20testimonials.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+                <Link
+                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20testimonials.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button size="lg">
                     <BookOpen className="w-5 h-5 mr-2" />
                     Enroll Now
                   </Button>
                 </Link>
-                <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20testimonials.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                <Link
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20testimonials.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button size="lg" variant="outline">
                     <Calendar className="w-5 h-5 mr-2" />
                     Book Free Demo

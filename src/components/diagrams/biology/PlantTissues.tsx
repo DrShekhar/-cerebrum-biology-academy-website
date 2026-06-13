@@ -61,9 +61,7 @@ export function PlantTissues({
         </defs>
 
         {/* Collenchyma Cell */}
-        <g
-          className="collenchyma"
-        >
+        <g className="collenchyma">
           <text
             x={startX + cellWidth / 2}
             y={startY - 15}
@@ -176,9 +174,7 @@ export function PlantTissues({
         </g>
 
         {/* Sclerenchyma Fiber */}
-        <g
-          className="sclerenchyma-fiber"
-        >
+        <g className="sclerenchyma-fiber">
           <text
             x={startX + cellWidth + gap + cellWidth / 2}
             y={startY - 15}
@@ -268,9 +264,7 @@ export function PlantTissues({
         </g>
 
         {/* Sclerenchyma Sclereid (Stone Cell) */}
-        <g
-          className="sclerenchyma-sclereid"
-        >
+        <g className="sclerenchyma-sclereid">
           <text
             x={startX + (cellWidth + gap) * 2 + cellWidth / 2}
             y={startY - 15}
@@ -386,9 +380,7 @@ export function PlantTissues({
 
       {/* Info Panel */}
       {selectedTissue && TISSUE_INFO[selectedTissue as keyof typeof TISSUE_INFO] && (
-        <div
-          className="mt-4 p-4 bg-amber-50 rounded-lg border border-amber-200 animate-fadeInUp"
-        >
+        <div className="mt-4 p-4 bg-amber-50 rounded-lg border border-amber-200 animate-fadeInUp">
           <h4 className="font-bold text-amber-800 mb-2">
             {TISSUE_INFO[selectedTissue as keyof typeof TISSUE_INFO].name}
           </h4>

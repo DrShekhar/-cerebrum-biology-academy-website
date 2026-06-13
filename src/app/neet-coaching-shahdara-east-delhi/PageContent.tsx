@@ -121,7 +121,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Shahdara',
-  description: 'Best NEET Coaching for Shahdara and East Delhi students - Affordable Premium Quality',
+  description:
+    'Best NEET Coaching for Shahdara and East Delhi students - Affordable Premium Quality',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-shahdara-east-delhi',
   telephone: '+91-88264-44334',
   address: {
@@ -130,7 +131,14 @@ const localBusinessSchema = {
     addressRegion: 'Uttar Pradesh',
     addressCountry: 'IN',
   },
-  areaServed: ['Shahdara', 'Vivek Vihar', 'Anand Vihar', 'Seelampur', 'Nand Nagri', 'Dilshad Garden'],
+  areaServed: [
+    'Shahdara',
+    'Vivek Vihar',
+    'Anand Vihar',
+    'Seelampur',
+    'Nand Nagri',
+    'Dilshad Garden',
+  ],
   priceRange: '$$',
 }
 
@@ -182,7 +190,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Shahdara%20East.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Shahdara%20East.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -359,7 +371,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Shahdara%20East.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Shahdara%20East.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

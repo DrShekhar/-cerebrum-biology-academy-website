@@ -100,17 +100,11 @@ export function PremiumButton({
       disabled={disabled}
     >
       {/* Shimmer Effect */}
-      <div
-        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-fadeInUp"
-      />
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-fadeInUp" />
 
       {/* Ripple Effect */}
-{isPressed && (
-          <div
-            className="absolute inset-0 bg-white/20 rounded-xl animate-fadeInUp"
-          />
-        )}
-<span className="relative z-10">{children}</span>
+      {isPressed && <div className="absolute inset-0 bg-white/20 rounded-xl animate-fadeInUp" />}
+      <span className="relative z-10">{children}</span>
     </button>
   )
 }
@@ -180,10 +174,7 @@ export function PremiumStat({
   }, [isVisible, value, duration])
 
   return (
-    <div
-      id={`stat-${label}`}
-      className={cn('text-center', className)}
-    >
+    <div id={`stat-${label}`} className={cn('text-center', className)}>
       <div className="text-4xl font-bold bg-indigo-500 bg-clip-text text-transparent">
         {prefix}
         {displayValue.toFixed(decimals)}
@@ -212,9 +203,7 @@ export function PremiumSkeleton({ lines = 3, className, variant = 'text' }: Prem
   if (variant !== 'text') {
     return (
       <div className={cn(variants[variant], className)}>
-        <div
-          className="w-full h-full bg-gradient-to-r from-transparent via-white/60 to-transparent animate-fadeInUp"
-        />
+        <div className="w-full h-full bg-gradient-to-r from-transparent via-white/60 to-transparent animate-fadeInUp" />
       </div>
     )
   }
@@ -223,9 +212,7 @@ export function PremiumSkeleton({ lines = 3, className, variant = 'text' }: Prem
     <div className={cn('space-y-3', className)}>
       {Array.from({ length: lines }).map((_, i) => (
         <div key={i} className={cn(variants.text, i === lines - 1 ? 'w-3/4' : 'w-full')}>
-          <div
-            className="w-full h-full bg-gradient-to-r from-transparent via-white/60 to-transparent animate-fadeInUp"
-          />
+          <div className="w-full h-full bg-gradient-to-r from-transparent via-white/60 to-transparent animate-fadeInUp" />
         </div>
       ))}
     </div>
@@ -262,29 +249,29 @@ export function PremiumTooltip({
       onMouseLeave={() => setIsVisible(false)}
     >
       {children}
-{isVisible && (
+      {isVisible && (
+        <div
+          className={cn(
+            'absolute z-50 px-3 py-2 text-sm text-white bg-gray-900/90 backdrop-blur-sm rounded-lg shadow-lg',
+            'whitespace-nowrap pointer-events-none',
+            positionClasses[position],
+            className
+          )}
+        >
+          {content}
+          {/* Arrow */}
           <div
             className={cn(
-              'absolute z-50 px-3 py-2 text-sm text-white bg-gray-900/90 backdrop-blur-sm rounded-lg shadow-lg',
-              'whitespace-nowrap pointer-events-none',
-              positionClasses[position],
-              className
+              'absolute w-2 h-2 bg-gray-900/90 transform rotate-45',
+              position === 'top' && 'top-full left-1/2 -translate-x-1/2 -mt-1',
+              position === 'bottom' && 'bottom-full left-1/2 -translate-x-1/2 -mb-1',
+              position === 'left' && 'left-full top-1/2 -translate-y-1/2 -ml-1',
+              position === 'right' && 'right-full top-1/2 -translate-y-1/2 -mr-1'
             )}
-          >
-            {content}
-            {/* Arrow */}
-            <div
-              className={cn(
-                'absolute w-2 h-2 bg-gray-900/90 transform rotate-45',
-                position === 'top' && 'top-full left-1/2 -translate-x-1/2 -mt-1',
-                position === 'bottom' && 'bottom-full left-1/2 -translate-x-1/2 -mb-1',
-                position === 'left' && 'left-full top-1/2 -translate-y-1/2 -ml-1',
-                position === 'right' && 'right-full top-1/2 -translate-y-1/2 -mr-1'
-              )}
-            />
-          </div>
-        )}
-</div>
+          />
+        </div>
+      )}
+    </div>
   )
 }
 
@@ -443,9 +430,7 @@ export function PremiumProgress({
         </div>
       )}
       <div className={cn('w-full bg-gray-200 rounded-full overflow-hidden', sizeClasses[size])}>
-        <div
-          className="h-full bg-indigo-500 rounded-full animate-fadeInUp"
-        />
+        <div className="h-full bg-indigo-500 rounded-full animate-fadeInUp" />
       </div>
     </div>
   )

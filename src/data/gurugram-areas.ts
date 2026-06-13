@@ -55,7 +55,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'DLF Phase 2, Gurugram',
     description: 'Premium residential area near Cyber City',
     heroDescription:
-      "DLF Phase 2 offers premium living adjacent to Cyber City. Home to IT professionals and business families who want their children to crack NEET with personalized coaching.",
+      'DLF Phase 2 offers premium living adjacent to Cyber City. Home to IT professionals and business families who want their children to crack NEET with personalized coaching.',
     nearbyMetro: ['Sikanderpur Metro', 'Guru Dronacharya Metro'],
     landmarks: ['Cyber Hub', 'Ambience Mall', 'DLF Cyber City'],
     schools: ['Scottish High', 'GD Goenka', 'Amity International'],
@@ -80,7 +80,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'DLF Phase 3, Gurugram',
     description: 'Established DLF locality with excellent schools',
     heroDescription:
-      "DLF Phase 3 is a mature residential area with well-established infrastructure. Parents here prioritize quality education and seek specialized NEET Biology coaching for their children.",
+      'DLF Phase 3 is a mature residential area with well-established infrastructure. Parents here prioritize quality education and seek specialized NEET Biology coaching for their children.',
     nearbyMetro: ['Sikanderpur Metro', 'MG Road Metro'],
     landmarks: ['Sahara Mall', 'Phase 3 Market', 'MG Road'],
     schools: ['The Shri Ram School', 'Suncity School', 'Blue Bells'],
@@ -205,7 +205,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Nirvana Country, Sector 50, Gurugram',
     description: 'Exclusive gated township with premium villas',
     heroDescription:
-      "Nirvana Country is an exclusive gated township in Sector 50 featuring premium villas and low-rise apartments. Elite families here seek personalized NEET coaching for their children.",
+      'Nirvana Country is an exclusive gated township in Sector 50 featuring premium villas and low-rise apartments. Elite families here seek personalized NEET coaching for their children.',
     nearbyMetro: ['Sector 55-56 Rapid Metro', 'HUDA City Centre Metro'],
     landmarks: ['Nirvana Courtyard', 'Sector 50 Market', 'Golf Course Extension'],
     schools: ['The Shri Ram School', 'Suncity School', 'Pathways World School'],
@@ -230,7 +230,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'South City 1, Gurugram',
     description: 'Well-planned residential area with good infrastructure',
     heroDescription:
-      "South City 1 is a well-planned residential township with excellent infrastructure and schools. Parents here prioritize quality education and seek specialized NEET Biology coaching.",
+      'South City 1 is a well-planned residential township with excellent infrastructure and schools. Parents here prioritize quality education and seek specialized NEET Biology coaching.',
     nearbyMetro: ['HUDA City Centre Metro', 'Sector 42-43 Rapid Metro'],
     landmarks: ['South City 1 Market', 'MGF Mega City Mall', 'Unitech Cyber Park'],
     schools: ['DPS Gurugram', 'Amity International', 'GD Goenka'],
@@ -255,7 +255,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'South City 2, Sector 49, Gurugram',
     description: 'Premium residential area near Sector 49',
     heroDescription:
-      "South City 2 in Sector 49 offers premium living with excellent connectivity to our center in Sector 51. Ideal for students seeking personalized NEET coaching nearby.",
+      'South City 2 in Sector 49 offers premium living with excellent connectivity to our center in Sector 51. Ideal for students seeking personalized NEET coaching nearby.',
     nearbyMetro: ['Sector 55-56 Rapid Metro', 'HUDA City Centre Metro'],
     landmarks: ['Sector 49 Market', 'Nirvana Country', 'South City 1'],
     schools: ['Suncity School', 'The Shri Ram School', 'Pathways World School'],
@@ -282,10 +282,10 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 14, Gurugram',
     description: 'Old Gurugram with established infrastructure',
     heroDescription:
-      "Sector 14 is part of Old Gurugram with well-established infrastructure and schools. Students from this area benefit from convenient access to quality NEET coaching.",
+      'Sector 14 is part of Old Gurugram with well-established infrastructure and schools. Students from this area benefit from convenient access to quality NEET coaching.',
     nearbyMetro: ['IFFCO Chowk Metro', 'MG Road Metro'],
     landmarks: ['Sector 14 Market', 'Civil Hospital', 'Old DLF Colony'],
-    schools: ['DAV Gurugram', 'Ryan International', 'St. Xavier\'s High School'],
+    schools: ['DAV Gurugram', 'Ryan International', "St. Xavier's High School"],
     societies: ['Sector 14 DDA', 'Ansals Palam Vihar'],
     highlights: ['Old Gurugram', 'Established Area', 'Central Location', 'Good Connectivity'],
     type: 'residential',
@@ -307,7 +307,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 43, Gurugram',
     description: 'Metro-connected sector near HUDA City Centre',
     heroDescription:
-      "Sector 43 enjoys excellent metro connectivity being close to HUDA City Centre. Students from top schools here seek quality NEET Biology coaching with convenient access.",
+      'Sector 43 enjoys excellent metro connectivity being close to HUDA City Centre. Students from top schools here seek quality NEET Biology coaching with convenient access.',
     nearbyMetro: ['Sector 42-43 Rapid Metro', 'HUDA City Centre Metro'],
     landmarks: ['Sector 43 Market', 'HUDA City Centre Metro', 'Sushant Lok'],
     schools: ['Blue Bells', 'Amity International', 'DPS Gurugram'],
@@ -332,7 +332,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 45, Gurugram',
     description: 'Commercial sector with office complexes',
     heroDescription:
-      "Sector 45 is a mixed commercial-residential area with many corporate offices. Families working nearby prefer quality NEET coaching close to their workplace.",
+      'Sector 45 is a mixed commercial-residential area with many corporate offices. Families working nearby prefer quality NEET coaching close to their workplace.',
     nearbyMetro: ['HUDA City Centre Metro', 'Sector 42-43 Rapid Metro'],
     landmarks: ['Sector 45 Market', 'Corporate Towers', 'M2K Corporate Park nearby'],
     schools: ['The Shri Ram School', 'Heritage School', 'Amity International'],
@@ -357,7 +357,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 49, Gurugram',
     description: 'Premium sector adjacent to South City 2',
     heroDescription:
-      "Sector 49 is a premium residential area adjacent to South City 2 and very close to our center in Sector 51. Students here enjoy easy access to NEET coaching.",
+      'Sector 49 is a premium residential area adjacent to South City 2 and very close to our center in Sector 51. Students here enjoy easy access to NEET coaching.',
     nearbyMetro: ['Sector 55-56 Rapid Metro', 'HUDA City Centre Metro'],
     landmarks: ['Sector 49 Market', 'South City 2', 'Nirvana Country'],
     schools: ['Suncity School', 'The Shri Ram School', 'Pathways World School'],
@@ -382,12 +382,21 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 51, Gurugram (Our Location)',
     description: 'Our center location - M2K Corporate Park',
     heroDescription:
-      "Sector 51 is home to our Gurugram center at M2K Corporate Park (same building as the largest national NEET chain). Students from nearby sectors enjoy the most convenient access to our NEET Biology coaching.",
+      'Sector 51 is home to our Gurugram center at M2K Corporate Park (same building as the largest national NEET chain). Students from nearby sectors enjoy the most convenient access to our NEET Biology coaching.',
     nearbyMetro: ['Sector 55-56 Rapid Metro', 'HUDA City Centre Metro'],
-    landmarks: ['M2K Corporate Park', 'XYZ Coaching (largest national NEET chain)', 'Mayfield Garden'],
+    landmarks: [
+      'M2K Corporate Park',
+      'XYZ Coaching (largest national NEET chain)',
+      'Mayfield Garden',
+    ],
     schools: ['Suncity School', 'The Shri Ram School', 'Heritage School'],
     societies: ['Mayfield Garden', 'Sector 51 Floors', 'Emaar Imperial Garden'],
-    highlights: ['Our Center', 'Same Building as the largest national NEET chain', 'Most Convenient', 'Walk-in Access'],
+    highlights: [
+      'Our Center',
+      'Same Building as the largest national NEET chain',
+      'Most Convenient',
+      'Walk-in Access',
+    ],
     type: 'commercial',
     pincode: '122018',
     distanceFromCenter: '0 km',
@@ -407,7 +416,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 54, Gurugram',
     description: 'Premium sector on Golf Course Road',
     heroDescription:
-      "Sector 54 lies on the prestigious Golf Course Road with ultra-premium residential options. Elite families here seek the best NEET coaching for their children.",
+      'Sector 54 lies on the prestigious Golf Course Road with ultra-premium residential options. Elite families here seek the best NEET coaching for their children.',
     nearbyMetro: ['Sector 54 Chowk Rapid Metro', 'Golf Course Metro'],
     landmarks: ['Sector 54 Chowk', 'Golf Course Road', 'DLF Golf Course'],
     schools: ['Pathways World School', 'The Shri Ram School', 'Scottish High'],
@@ -432,7 +441,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 56, Gurugram',
     description: 'Residential sector near HUDA City Centre',
     heroDescription:
-      "Sector 56 is a well-developed residential area near HUDA City Centre Metro. Excellent for students who want metro-convenient access to quality NEET coaching.",
+      'Sector 56 is a well-developed residential area near HUDA City Centre Metro. Excellent for students who want metro-convenient access to quality NEET coaching.',
     nearbyMetro: ['HUDA City Centre Metro', 'Sector 55-56 Rapid Metro'],
     landmarks: ['Sector 56 Market', 'HUDA City Centre', 'Raheja Mall'],
     schools: ['DPS Gurugram', 'Amity International', 'GD Goenka'],
@@ -457,7 +466,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 57, Gurugram',
     description: 'Premium sector with luxury apartments',
     heroDescription:
-      "Sector 57 features premium residential towers and excellent schools. Students here benefit from quality NEET coaching with convenient metro access.",
+      'Sector 57 features premium residential towers and excellent schools. Students here benefit from quality NEET coaching with convenient metro access.',
     nearbyMetro: ['Sector 55-56 Rapid Metro', 'HUDA City Centre Metro'],
     landmarks: ['Sector 57 Market', 'One Horizon Centre', 'Bestech Business Towers'],
     schools: ['The Shri Ram School', 'Suncity School', 'Heritage School'],
@@ -482,7 +491,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 58, Gurugram',
     description: 'Residential sector on Sohna Road',
     heroDescription:
-      "Sector 58 on Sohna Road offers a mix of residential and commercial spaces. Students here seek quality NEET coaching conveniently located nearby.",
+      'Sector 58 on Sohna Road offers a mix of residential and commercial spaces. Students here seek quality NEET coaching conveniently located nearby.',
     nearbyMetro: ['Sector 55-56 Rapid Metro', 'Golf Course Extension Road'],
     landmarks: ['Sector 58 Market', 'Vatika Business Park', 'Sohna Road Junction'],
     schools: ['GD Goenka', 'Amity International', 'Ryan International'],
@@ -534,7 +543,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 67, New Gurugram',
     description: 'Premium sector in New Gurugram',
     heroDescription:
-      "Sector 67 hosts premium residential projects in New Gurugram. Families here invest in quality education including specialized NEET Biology coaching.",
+      'Sector 67 hosts premium residential projects in New Gurugram. Families here invest in quality education including specialized NEET Biology coaching.',
     nearbyMetro: ['Golf Course Extension Road'],
     landmarks: ['Sector 67 Market', 'DPS Gurugram Sec 67', 'Badshahpur'],
     schools: ['DPS Gurugram Sector 67', 'Heritage School', 'Pathways World School'],
@@ -559,7 +568,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 69, New Gurugram',
     description: 'Residential sector near SPR Road',
     heroDescription:
-      "Sector 69 is a developing residential area near SPR Road. Students from this growing community seek quality NEET coaching for their medical entrance preparation.",
+      'Sector 69 is a developing residential area near SPR Road. Students from this growing community seek quality NEET coaching for their medical entrance preparation.',
     nearbyMetro: ['SPR Road', 'Golf Course Extension'],
     landmarks: ['Sector 69 Market', 'SPR Road', 'Badshahpur'],
     schools: ['Heritage School', 'GD Goenka', 'Amity International'],
@@ -584,7 +593,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 70, New Gurugram',
     description: 'Emerging residential area in New Gurugram',
     heroDescription:
-      "Sector 70 is an emerging residential area in New Gurugram with many new housing projects. Families here need accessible quality NEET coaching.",
+      'Sector 70 is an emerging residential area in New Gurugram with many new housing projects. Families here need accessible quality NEET coaching.',
     nearbyMetro: ['SPR Road', 'Golf Course Extension'],
     landmarks: ['Sector 70 Market', 'SPR Road Junction'],
     schools: ['DPS Gurugram', 'GD Goenka', 'Heritage School'],
@@ -609,7 +618,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 72, New Gurugram',
     description: 'Affordable residential sector',
     heroDescription:
-      "Sector 72 offers affordable housing in New Gurugram. Middle-class families here seek quality NEET coaching at reasonable fees for their children.",
+      'Sector 72 offers affordable housing in New Gurugram. Middle-class families here seek quality NEET coaching at reasonable fees for their children.',
     nearbyMetro: ['SPR Road', 'NH-8'],
     landmarks: ['Sector 72 Market', 'BPTP Terra', 'NH-8'],
     schools: ['DPS Gurugram', 'Ryan International', 'DAV Gurugram'],
@@ -634,7 +643,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 81, New Gurugram',
     description: 'Developing sector near NH-8',
     heroDescription:
-      "Sector 81 is a developing area near NH-8 with upcoming residential projects. Students here can access quality NEET coaching via good road connectivity.",
+      'Sector 81 is a developing area near NH-8 with upcoming residential projects. Students here can access quality NEET coaching via good road connectivity.',
     nearbyMetro: ['NH-8', 'Dwarka Expressway'],
     landmarks: ['Sector 81 Market', 'NH-8 Junction', 'Dwarka Expressway'],
     schools: ['GD Goenka', 'Ryan International', 'DPS Gurugram'],
@@ -659,7 +668,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 82, New Gurugram',
     description: 'Residential sector on Dwarka Expressway',
     heroDescription:
-      "Sector 82 is located on the Dwarka Expressway with excellent connectivity to Delhi. Students here travel to our center via the expressway for NEET coaching.",
+      'Sector 82 is located on the Dwarka Expressway with excellent connectivity to Delhi. Students here travel to our center via the expressway for NEET coaching.',
     nearbyMetro: ['Dwarka Expressway', 'NH-8'],
     landmarks: ['Dwarka Expressway', 'Sector 82 Market', 'Hero Honda Chowk'],
     schools: ['DPS Dwarka', 'GD Goenka', 'Ryan International'],
@@ -684,7 +693,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 84, New Gurugram',
     description: 'Affordable housing sector',
     heroDescription:
-      "Sector 84 offers affordable housing options in New Gurugram. Students from this area seek accessible quality NEET coaching with EMI options.",
+      'Sector 84 offers affordable housing options in New Gurugram. Students from this area seek accessible quality NEET coaching with EMI options.',
     nearbyMetro: ['Dwarka Expressway', 'NH-8'],
     landmarks: ['Sector 84 Market', 'Dwarka Expressway Junction'],
     schools: ['DPS Gurugram', 'Ryan International', 'GD Goenka'],
@@ -711,7 +720,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sohna Road, Gurugram',
     description: 'Major arterial road with premium developments',
     heroDescription:
-      "Sohna Road is a major arterial road in Gurugram with numerous premium residential projects. Students from societies along Sohna Road access our center conveniently.",
+      'Sohna Road is a major arterial road in Gurugram with numerous premium residential projects. Students from societies along Sohna Road access our center conveniently.',
     nearbyMetro: ['Golf Course Extension', 'SPR Road'],
     landmarks: ['Subhash Chowk', 'Vatika Business Park', 'Omaxe City'],
     schools: ['GD Goenka', 'Pathways World School', 'Heritage School'],
@@ -736,7 +745,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 48 (Sohna Road), Gurugram',
     description: 'Prime location on Sohna Road',
     heroDescription:
-      "Sector 48 is strategically located on Sohna Road near Golf Course Extension. Students here enjoy easy access to our center for quality NEET Biology coaching.",
+      'Sector 48 is strategically located on Sohna Road near Golf Course Extension. Students here enjoy easy access to our center for quality NEET Biology coaching.',
     nearbyMetro: ['Sohna Road', 'Golf Course Extension'],
     landmarks: ['Sohna Road Junction', 'Sector 48 Market', 'AIPL Business Club'],
     schools: ['Suncity School', 'GD Goenka', 'Pathways World School'],
@@ -810,12 +819,12 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
   },
 
   // MANESAR & EXTENDED AREAS
-  'manesar': {
+  manesar: {
     name: 'Manesar',
     fullName: 'Manesar, Gurugram',
     description: 'Industrial township with residential areas',
     heroDescription:
-      "Manesar is an industrial township with growing residential areas. Students from this far end of Gurugram travel to our center for quality NEET coaching.",
+      'Manesar is an industrial township with growing residential areas. Students from this far end of Gurugram travel to our center for quality NEET coaching.',
     nearbyMetro: ['NH-8', 'Manesar Road'],
     landmarks: ['Manesar IMT', 'Hero Honda Plant', 'Maruti Factory'],
     schools: ['GD Goenka Manesar', 'Ryan International', 'DAV Manesar'],
@@ -842,7 +851,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'IFFCO Chowk, Gurugram',
     description: 'Major intersection with metro connectivity',
     heroDescription:
-      "IFFCO Chowk is a major intersection in Gurugram with excellent metro connectivity. Students from nearby areas easily access coaching centers via this hub.",
+      'IFFCO Chowk is a major intersection in Gurugram with excellent metro connectivity. Students from nearby areas easily access coaching centers via this hub.',
     nearbyMetro: ['IFFCO Chowk Metro'],
     landmarks: ['IFFCO Chowk Metro', 'Signature Tower', 'JMD Megapolis'],
     schools: ['DPS Gurugram', 'Amity International', 'Blue Bells'],
@@ -869,7 +878,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Palam Vihar, Gurugram',
     description: 'Established residential area near Dwarka',
     heroDescription:
-      "Palam Vihar is an established residential area close to Dwarka with good connectivity. Students here can access both Delhi and Gurugram coaching centers.",
+      'Palam Vihar is an established residential area close to Dwarka with good connectivity. Students here can access both Delhi and Gurugram coaching centers.',
     nearbyMetro: ['Dwarka Expressway', 'NH-8'],
     landmarks: ['Palam Vihar Market', 'Ansals Palam Vihar'],
     schools: ['DPS Palam Vihar', 'Ryan International', 'Amity International'],
@@ -934,16 +943,32 @@ export function getNearbyGurugramAreas(currentSlug: string): string[] {
   if (!current) return []
 
   const typeMapping: Record<string, string[]> = {
-    'ultra-premium': ['dlf-phase-1', 'dlf-phase-4', 'dlf-phase-5', 'golf-course-road', 'nirvana-country', 'sector-54'],
-    'premium': ['sushant-lok', 'south-city-1', 'south-city-2', 'sector-49', 'sector-57', 'sector-67'],
-    'gated': ['nirvana-country', 'south-city-2', 'dlf-phase-5'],
-    'residential': ['sector-56', 'sector-58', 'sector-14', 'sohna-road', 'palam-vihar'],
-    'commercial': ['mg-road', 'cyber-city', 'sector-45', 'sector-51', 'iffco-chowk'],
-    'new-gurugram': ['sector-65', 'sector-67', 'sector-69', 'sector-70', 'sector-72', 'sector-81', 'sector-82', 'sector-84'],
+    'ultra-premium': [
+      'dlf-phase-1',
+      'dlf-phase-4',
+      'dlf-phase-5',
+      'golf-course-road',
+      'nirvana-country',
+      'sector-54',
+    ],
+    premium: ['sushant-lok', 'south-city-1', 'south-city-2', 'sector-49', 'sector-57', 'sector-67'],
+    gated: ['nirvana-country', 'south-city-2', 'dlf-phase-5'],
+    residential: ['sector-56', 'sector-58', 'sector-14', 'sohna-road', 'palam-vihar'],
+    commercial: ['mg-road', 'cyber-city', 'sector-45', 'sector-51', 'iffco-chowk'],
+    'new-gurugram': [
+      'sector-65',
+      'sector-67',
+      'sector-69',
+      'sector-70',
+      'sector-72',
+      'sector-81',
+      'sector-82',
+      'sector-84',
+    ],
   }
 
   const sameType = typeMapping[current.type] || []
-  return sameType.filter(slug => slug !== currentSlug && gurugramAreaDetails[slug]).slice(0, 4)
+  return sameType.filter((slug) => slug !== currentSlug && gurugramAreaDetails[slug]).slice(0, 4)
 }
 
 export function getVoiceSearchPhrases(slug: string): string[] {

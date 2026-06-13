@@ -87,10 +87,7 @@ export function ClassTierCard({ classLevel, tier }: ClassTierCardProps) {
   }
 
   return (
-    <div
-      className="group cursor-pointer animate-fadeInUp"
-      style={{ minHeight: '500px' }}
-    >
+    <div className="group cursor-pointer animate-fadeInUp" style={{ minHeight: '500px' }}>
       <div
         className={`
         relative bg-white min-h-full
@@ -222,8 +219,7 @@ export function ClassTierCard({ classLevel, tier }: ClassTierCardProps) {
 
             {/* Action buttons */}
             <div className="space-y-3">
-              <div
-               className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 <Link
                   href={`/enrollments?class=${classLevel}&tier=${tier}`}
                   className={`

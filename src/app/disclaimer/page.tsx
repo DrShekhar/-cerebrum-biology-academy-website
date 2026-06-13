@@ -14,7 +14,12 @@ export const metadata: Metadata = {
     description: 'Legal disclaimer for Cerebrum Biology Academy educational services.',
   },
 
-  openGraph: { title: 'Disclaimer', description: 'Legal disclaimer for Cerebrum Biology Academy educational services and website content.', type: 'website' },
+  openGraph: {
+    title: 'Disclaimer',
+    description:
+      'Legal disclaimer for Cerebrum Biology Academy educational services and website content.',
+    type: 'website',
+  },
 }
 
 export default function DisclaimerPage() {

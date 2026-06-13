@@ -100,18 +100,12 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
   }
 
   return (
-    <div
-      className={`bg-white rounded-2xl shadow-lg overflow-hidden ${className}`}
-    >
+    <div className={`bg-white rounded-2xl shadow-lg overflow-hidden ${className}`}>
       {/* Header */}
-      <div
-        className="px-6 py-4 bg-gray-50 border-b animate-fadeInUp"
-      >
+      <div className="px-6 py-4 bg-gray-50 border-b animate-fadeInUp">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div
-              className="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center animate-fadeInUp"
-            >
+            <div className="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center animate-fadeInUp">
               <Brain className="w-5 h-5 text-white" />
             </div>
             <div>
@@ -141,13 +135,9 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
       </div>
 
       {/* Image Preview */}
-      <div
-        className="p-4 border-b bg-gray-50 animate-fadeInUp"
-      >
+      <div className="p-4 border-b bg-gray-50 animate-fadeInUp">
         <div className="flex items-start space-x-4">
-          <div
-            className="relative w-24 h-24 rounded-lg overflow-hidden shadow-md animate-fadeInUp"
-          >
+          <div className="relative w-24 h-24 rounded-lg overflow-hidden shadow-md animate-fadeInUp">
             <Image
               src={result.imageUrl}
               alt={result.fileName}
@@ -186,9 +176,7 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
       {/* Analysis Content */}
       <div className="p-6">
         {/* Main Analysis */}
-        <div
-          className="mb-6 animate-fadeInUp"
-        >
+        <div className="mb-6 animate-fadeInUp">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-2">
               <BookOpen className="w-5 h-5 text-blue-500" />
@@ -241,51 +229,39 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
               </button>
             </div>
           </div>
-{expandedSections.has('analysis') && (
-              <div
-                className="prose prose-sm max-w-none animate-fadeInUp"
-              >
-                <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
-                  {isSpeaking && (
-                    <div
-                      className="flex items-center space-x-2 mb-3 text-blue-600 animate-fadeInUp"
-                    >
-                      <Volume2 size={16} />
-                      <span className="text-sm font-medium">Playing in Shekhar Sir's voice...</span>
-                      <div className="flex-1 bg-blue-200 rounded-full h-1 ml-2">
-                        <div
-                          className="bg-blue-500 h-1 rounded-full animate-fadeInUp"
-                        />
-                      </div>
+          {expandedSections.has('analysis') && (
+            <div className="prose prose-sm max-w-none animate-fadeInUp">
+              <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                {isSpeaking && (
+                  <div className="flex items-center space-x-2 mb-3 text-blue-600 animate-fadeInUp">
+                    <Volume2 size={16} />
+                    <span className="text-sm font-medium">Playing in Shekhar Sir's voice...</span>
+                    <div className="flex-1 bg-blue-200 rounded-full h-1 ml-2">
+                      <div className="bg-blue-500 h-1 rounded-full animate-fadeInUp" />
                     </div>
-                  )}
-                  {error && (
-                    <div
-                      className="flex items-center space-x-2 mb-3 text-red-600 animate-fadeInUp"
-                    >
-                      <VolumeX size={16} />
-                      <span className="text-sm">Voice synthesis error: {error}</span>
-                    </div>
-                  )}
-                  <div className="text-gray-800 leading-relaxed whitespace-pre-line">
-                    {result.analysisText}
                   </div>
+                )}
+                {error && (
+                  <div className="flex items-center space-x-2 mb-3 text-red-600 animate-fadeInUp">
+                    <VolumeX size={16} />
+                    <span className="text-sm">Voice synthesis error: {error}</span>
+                  </div>
+                )}
+                <div className="text-gray-800 leading-relaxed whitespace-pre-line">
+                  {result.analysisText}
                 </div>
               </div>
-            )}
-{copiedText === 'analysis' && (
-            <div
-              className="mt-2 text-green-600 text-sm animate-fadeInUp"
-            >
+            </div>
+          )}
+          {copiedText === 'analysis' && (
+            <div className="mt-2 text-green-600 text-sm animate-fadeInUp">
               ✓ Analysis copied to clipboard
             </div>
           )}
         </div>
 
         {/* Study Suggestions */}
-        <div
-          className="mb-6 animate-fadeInUp"
-        >
+        <div className="mb-6 animate-fadeInUp">
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center space-x-2">
               <Lightbulb className="w-5 h-5 text-yellow-500" />
@@ -302,27 +278,23 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
               )}
             </button>
           </div>
-{expandedSections.has('suggestions') && (
-              <div
-                className="space-y-2 animate-fadeInUp"
-              >
-                {result.suggestions.map((suggestion, index) => (
-                  <div
-                    key={index}
-                    className="flex items-start space-x-3 p-3 bg-yellow-50 rounded-lg border border-yellow-200 animate-fadeInUp"
-                  >
-                    <Target className="w-4 h-4 text-yellow-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-800 text-sm">{suggestion}</span>
-                  </div>
-                ))}
-              </div>
-            )}
-</div>
+          {expandedSections.has('suggestions') && (
+            <div className="space-y-2 animate-fadeInUp">
+              {result.suggestions.map((suggestion, index) => (
+                <div
+                  key={index}
+                  className="flex items-start space-x-3 p-3 bg-yellow-50 rounded-lg border border-yellow-200 animate-fadeInUp"
+                >
+                  <Target className="w-4 h-4 text-yellow-600 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-800 text-sm">{suggestion}</span>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
 
         {/* Related Concepts */}
-        <div
-          className="mb-6 animate-fadeInUp"
-        >
+        <div className="mb-6 animate-fadeInUp">
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center space-x-2">
               <Sparkles className="w-5 h-5 text-purple-500" />
@@ -339,50 +311,38 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
               )}
             </button>
           </div>
-{expandedSections.has('concepts') && (
-              <div
-                className="flex flex-wrap gap-2 animate-fadeInUp"
-              >
-                {result.relatedConcepts.map((concept, index) => (
-                  <span
-                    key={concept}
-                    className="px-3 py-2 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium cursor-pointer hover:bg-purple-200 transition-colors animate-fadeInUp"
-                  >
-                    {concept}
-                  </span>
-                ))}
-              </div>
-            )}
-</div>
+          {expandedSections.has('concepts') && (
+            <div className="flex flex-wrap gap-2 animate-fadeInUp">
+              {result.relatedConcepts.map((concept, index) => (
+                <span
+                  key={concept}
+                  className="px-3 py-2 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium cursor-pointer hover:bg-purple-200 transition-colors animate-fadeInUp"
+                >
+                  {concept}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
 
         {/* Action Buttons */}
-        <div
-          className="flex flex-wrap gap-3 pt-4 border-t animate-fadeInUp"
-        >
-          <button
-            className="flex items-center space-x-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 animate-fadeInUp"
-          >
+        <div className="flex flex-wrap gap-3 pt-4 border-t animate-fadeInUp">
+          <button className="flex items-center space-x-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 animate-fadeInUp">
             <BookOpen size={16} />
             <span>Study More</span>
           </button>
 
-          <button
-            className="flex items-center space-x-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-600 animate-fadeInUp"
-          >
+          <button className="flex items-center space-x-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-600 animate-fadeInUp">
             <Star size={16} />
             <span>Save to Favorites</span>
           </button>
 
-          <button
-            className="flex items-center space-x-2 px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 animate-fadeInUp"
-          >
+          <button className="flex items-center space-x-2 px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 animate-fadeInUp">
             <Share size={16} />
             <span>Share</span>
           </button>
 
-          <button
-            className="flex items-center space-x-2 px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 animate-fadeInUp"
-          >
+          <button className="flex items-center space-x-2 px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 animate-fadeInUp">
             <Download size={16} />
             <span>Download</span>
           </button>

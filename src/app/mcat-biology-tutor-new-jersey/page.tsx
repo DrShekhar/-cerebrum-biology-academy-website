@@ -50,7 +50,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'MCAT Biology Tutor New Jersey | Princeton, Rutgers, Edison',
-    description: 'MCAT Bio/Biochem tutor for New Jersey pre-meds — Princeton, Rutgers, NJIT, Edison, Jersey City. AIIMS-trained biology specialists, ET evening slots. From $449.',
+    description:
+      'MCAT Bio/Biochem tutor for New Jersey pre-meds — Princeton, Rutgers, NJIT, Edison, Jersey City. AIIMS-trained biology specialists, ET evening slots. From $449.',
   },
 }
 
@@ -366,16 +367,15 @@ export default function MCATBiologyTutorNewJerseyPage() {
               outline mapping, 300+ practice passages, recorded library, WhatsApp doubt support.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem Ascent: $899</strong> for the full programme.
-              Everything in self-paced plus weekly 2-hour live sessions with biology-specialist
-              faculty, monthly Bio/Biochem section mocks, peer Slack channel, senior faculty office
-              hours.
+              <strong>MCAT Bio/Biochem Ascent: $899</strong> for the full programme. Everything in
+              self-paced plus weekly 2-hour live sessions with biology-specialist faculty, monthly
+              Bio/Biochem section mocks, peer Slack channel, senior faculty office hours.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem Pinnacle: $1,349</strong> for the full programme.
-              Everything in Small-Batch plus weekly 90-minute 1:1 video sessions with AIIMS-trained
-              senior faculty, personalised study plan, custom passage drills, unlimited WhatsApp
-              faculty access.
+              <strong>MCAT Bio/Biochem Pinnacle: $1,349</strong> for the full programme. Everything
+              in Small-Batch plus weekly 90-minute 1:1 video sessions with AIIMS-trained senior
+              faculty, personalised study plan, custom passage drills, unlimited WhatsApp faculty
+              access.
             </li>
             <li>
               <strong>Ad-hoc 1:1 tutoring — $135/hour</strong> outside the packaged programme. For

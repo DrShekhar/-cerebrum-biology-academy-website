@@ -49,32 +49,24 @@ export function LandingHero({
         <div className="text-center">
           {/* Highlighted Badge */}
           {highlightedBadge && (
-            <div
-              className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm animate-fadeInUp"
-            >
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm animate-fadeInUp">
               <span className="h-2 w-2 animate-pulse rounded-full bg-green-500" />
               <span className="text-sm font-medium text-white/90">{highlightedBadge}</span>
             </div>
           )}
 
           {/* H1 Headline */}
-          <h1
-            className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl animate-fadeInUp"
-          >
+          <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl animate-fadeInUp">
             {h1}
           </h1>
 
           {/* Subheadline */}
-          <p
-            className="mx-auto mt-6 max-w-3xl text-lg text-white/80 md:text-xl animate-fadeInUp"
-          >
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-white/80 md:text-xl animate-fadeInUp">
             {subheadline}
           </p>
 
           {/* Trust Badges */}
-          <div
-            className="mt-6 flex flex-wrap items-center justify-center gap-4 animate-fadeInUp"
-          >
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4 animate-fadeInUp">
             {trustBadges.map((badge, index) => (
               <div
                 key={index}
@@ -87,14 +79,13 @@ export function LandingHero({
           </div>
 
           {/* CTA Buttons */}
-          <div
-            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fadeInUp"
-          >
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fadeInUp">
             <Link
               href="#demo-form"
               onClick={(e) => {
                 e.preventDefault()
-                const element = document.getElementById('demo-form') || document.querySelector('form')
+                const element =
+                  document.getElementById('demo-form') || document.querySelector('form')
                 element?.scrollIntoView({ behavior: 'smooth' })
               }}
               className="group inline-flex items-center gap-2 rounded-lg bg-yellow-500 px-10 py-5 text-xl font-bold text-slate-900 shadow-xl transition-all hover:scale-105 hover:bg-yellow-400 hover:shadow-2xl"
@@ -112,9 +103,7 @@ export function LandingHero({
           </div>
 
           {/* Quick Contact */}
-          <div
-            className="mt-8 flex flex-col items-center justify-center gap-2 text-white/70 sm:flex-row animate-fadeInUp"
-          >
+          <div className="mt-8 flex flex-col items-center justify-center gap-2 text-white/70 sm:flex-row animate-fadeInUp">
             <Phone className="h-4 w-4" />
             <span className="text-sm">Questions? Call us:</span>
             <a href={`tel:${phoneNumber}`} className="font-semibold text-white hover:underline">

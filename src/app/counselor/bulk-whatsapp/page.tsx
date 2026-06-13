@@ -156,7 +156,8 @@ export default function BulkWhatsAppPage() {
   }, [leads, searchTerm, stageFilter, priorityFilter])
 
   // Selection helpers
-  const allFilteredSelected = filteredLeads.length > 0 && filteredLeads.every((l) => selectedLeadIds.has(l.id))
+  const allFilteredSelected =
+    filteredLeads.length > 0 && filteredLeads.every((l) => selectedLeadIds.has(l.id))
   const someFilteredSelected = filteredLeads.some((l) => selectedLeadIds.has(l.id))
 
   function toggleSelectAll() {
@@ -250,7 +251,14 @@ export default function BulkWhatsAppPage() {
     setSelectedLeadIds(newSet)
   }
 
-  const stages = ['NEW_LEAD', 'DEMO_SCHEDULED', 'DEMO_COMPLETED', 'OFFER_SENT', 'NEGOTIATING', 'PAYMENT_PLAN_CREATED']
+  const stages = [
+    'NEW_LEAD',
+    'DEMO_SCHEDULED',
+    'DEMO_COMPLETED',
+    'OFFER_SENT',
+    'NEGOTIATING',
+    'PAYMENT_PLAN_CREATED',
+  ]
 
   if (loading) {
     return (
@@ -273,7 +281,11 @@ export default function BulkWhatsAppPage() {
           </p>
           <div className="flex gap-3 justify-center">
             <button
-              onClick={() => { setSent(false); setSelectedLeadIds(new Set()); setStep(1) }}
+              onClick={() => {
+                setSent(false)
+                setSelectedLeadIds(new Set())
+                setStep(1)
+              }}
               className="px-6 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-colors"
             >
               Send More
@@ -296,7 +308,9 @@ export default function BulkWhatsAppPage() {
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Bulk WhatsApp</h1>
-          <p className="text-gray-600 mt-1">Send personalized messages to multiple students at once</p>
+          <p className="text-gray-600 mt-1">
+            Send personalized messages to multiple students at once
+          </p>
         </div>
         <div className="flex items-center gap-3">
           {selectedLeadIds.size > 0 && (
@@ -317,7 +331,11 @@ export default function BulkWhatsAppPage() {
           <div key={s.num} className="flex items-center gap-2">
             <button
               onClick={() => {
-                if (s.num === 1 || (s.num === 2 && selectedLeadIds.size > 0) || (s.num === 3 && selectedLeadIds.size > 0 && (selectedTemplate || customMessage))) {
+                if (
+                  s.num === 1 ||
+                  (s.num === 2 && selectedLeadIds.size > 0) ||
+                  (s.num === 3 && selectedLeadIds.size > 0 && (selectedTemplate || customMessage))
+                ) {
                   setStep(s.num as 1 | 2 | 3)
                 }
               }}
@@ -394,7 +412,9 @@ export default function BulkWhatsAppPage() {
               >
                 <option value="ALL">All Stages</option>
                 {stages.map((s) => (
-                  <option key={s} value={s}>{s.replace(/_/g, ' ')}</option>
+                  <option key={s} value={s}>
+                    {s.replace(/_/g, ' ')}
+                  </option>
                 ))}
               </select>
               <select
@@ -423,10 +443,18 @@ export default function BulkWhatsAppPage() {
                         onChange={toggleSelectAll}
                       />
                     </th>
-                    <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase">Student</th>
-                    <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase">Phone</th>
-                    <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase hidden md:table-cell">Stage</th>
-                    <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase hidden lg:table-cell">Course</th>
+                    <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase">
+                      Student
+                    </th>
+                    <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase">
+                      Phone
+                    </th>
+                    <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase hidden md:table-cell">
+                      Stage
+                    </th>
+                    <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase hidden lg:table-cell">
+                      Course
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -439,14 +467,19 @@ export default function BulkWhatsAppPage() {
                       }`}
                     >
                       <td className="px-4 py-3">
-                        <Checkbox checked={selectedLeadIds.has(lead.id)} onChange={() => toggleLead(lead.id)} />
+                        <Checkbox
+                          checked={selectedLeadIds.has(lead.id)}
+                          onChange={() => toggleLead(lead.id)}
+                        />
                       </td>
                       <td className="px-4 py-3">
                         <div className="flex items-center gap-2">
                           <div className="w-7 h-7 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
                             {lead.studentName.charAt(0).toUpperCase()}
                           </div>
-                          <span className="text-sm font-medium text-gray-900">{lead.studentName}</span>
+                          <span className="text-sm font-medium text-gray-900">
+                            {lead.studentName}
+                          </span>
                         </div>
                       </td>
                       <td className="px-4 py-3 text-sm text-gray-600">{lead.phone}</td>
@@ -455,7 +488,9 @@ export default function BulkWhatsAppPage() {
                           {lead.stage.replace(/_/g, ' ')}
                         </span>
                       </td>
-                      <td className="px-4 py-3 text-sm text-gray-500 hidden lg:table-cell">{lead.courseInterest}</td>
+                      <td className="px-4 py-3 text-sm text-gray-500 hidden lg:table-cell">
+                        {lead.courseInterest}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -492,14 +527,19 @@ export default function BulkWhatsAppPage() {
             {templates.length === 0 ? (
               <div className="text-center py-8 text-gray-500">
                 <p className="mb-2">No WhatsApp templates found</p>
-                <p className="text-sm">Create templates from the Messages section first, or write a custom message below</p>
+                <p className="text-sm">
+                  Create templates from the Messages section first, or write a custom message below
+                </p>
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {templates.map((template) => (
                   <button
                     key={template.id}
-                    onClick={() => { setSelectedTemplate(template); setCustomMessage('') }}
+                    onClick={() => {
+                      setSelectedTemplate(template)
+                      setCustomMessage('')
+                    }}
                     className={`text-left p-4 rounded-xl border-2 transition-all ${
                       selectedTemplate?.id === template.id
                         ? 'border-indigo-500 bg-indigo-50'
@@ -513,7 +553,9 @@ export default function BulkWhatsAppPage() {
                       )}
                     </div>
                     <p className="text-xs text-gray-500 line-clamp-3">{template.message}</p>
-                    <p className="text-[10px] text-gray-400 mt-2">Used {template.usageCount} times</p>
+                    <p className="text-[10px] text-gray-400 mt-2">
+                      Used {template.usageCount} times
+                    </p>
                   </button>
                 ))}
               </div>
@@ -522,15 +564,16 @@ export default function BulkWhatsAppPage() {
 
           {/* Custom Message */}
           <div className="bg-white rounded-xl border border-gray-200 p-5">
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              Or Write Custom Message
-            </h3>
+            <h3 className="text-lg font-bold text-gray-900 mb-2">Or Write Custom Message</h3>
             <p className="text-xs text-gray-500 mb-3">
               Use {'{{name}}'}, {'{{course}}'}, {'{{phone}}'} for personalization
             </p>
             <textarea
               value={customMessage}
-              onChange={(e) => { setCustomMessage(e.target.value); setSelectedTemplate(null) }}
+              onChange={(e) => {
+                setCustomMessage(e.target.value)
+                setSelectedTemplate(null)
+              }}
               placeholder="Hello {{name}}, this is Cerebrum Biology Academy..."
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm min-h-[120px] resize-y"
             />
@@ -565,7 +608,9 @@ export default function BulkWhatsAppPage() {
               <div className="space-y-3">
                 <div className="flex items-center justify-between py-2 border-b border-gray-100">
                   <span className="text-sm text-gray-600">Recipients</span>
-                  <span className="text-sm font-bold text-gray-900">{selectedLeadIds.size} students</span>
+                  <span className="text-sm font-bold text-gray-900">
+                    {selectedLeadIds.size} students
+                  </span>
                 </div>
                 <div className="flex items-center justify-between py-2 border-b border-gray-100">
                   <span className="text-sm text-gray-600">Template</span>
@@ -603,13 +648,20 @@ export default function BulkWhatsAppPage() {
               <h3 className="text-lg font-bold text-gray-900 mb-4">Message Preview</h3>
               <TemplatePreview
                 template={{
-                  ...(selectedTemplate || { id: 'custom', name: 'Custom', type: 'WHATSAPP', subject: null, usageCount: 0 }),
+                  ...(selectedTemplate || {
+                    id: 'custom',
+                    name: 'Custom',
+                    type: 'WHATSAPP',
+                    subject: null,
+                    usageCount: 0,
+                  }),
                   message: selectedTemplate?.message || customMessage,
                 }}
                 lead={leads.find((l) => selectedLeadIds.has(l.id))}
               />
               <p className="text-xs text-gray-400 mt-3">
-                Preview shown for: {leads.find((l) => selectedLeadIds.has(l.id))?.studentName || 'first recipient'}
+                Preview shown for:{' '}
+                {leads.find((l) => selectedLeadIds.has(l.id))?.studentName || 'first recipient'}
               </p>
             </div>
           </div>

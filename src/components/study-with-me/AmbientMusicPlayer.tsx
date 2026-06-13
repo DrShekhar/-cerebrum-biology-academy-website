@@ -127,9 +127,7 @@ export function AmbientMusicPlayer({
       <div className={`flex items-center space-x-3 ${className}`}>
         {isPlaying && currentSound !== 'silence' ? (
           <>
-            <div
-              className="w-4 h-4 animate-fadeInUp"
-            >
+            <div className="w-4 h-4 animate-fadeInUp">
               <Volume2 className="w-4 h-4 text-green-400" />
             </div>
             <span className="text-gray-400 text-sm capitalize">{currentSound}</span>
@@ -145,18 +143,14 @@ export function AmbientMusicPlayer({
   }
 
   return (
-    <div
-      className={`bg-white rounded-xl shadow-xl p-5 ${className}`}
-    >
+    <div className={`bg-white rounded-xl shadow-xl p-5 ${className}`}>
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider">
           Ambient Sound
         </h3>
         {isPlaying && currentSound !== 'silence' && (
-          <div
-            className="flex items-center text-xs text-green-600 animate-fadeInUp"
-          >
+          <div className="flex items-center text-xs text-green-600 animate-fadeInUp">
             <span className="w-2 h-2 rounded-full bg-green-500 mr-2" />
             Playing
           </div>
@@ -217,14 +211,9 @@ export function AmbientMusicPlayer({
 
       {/* Visual feedback when playing */}
       {isPlaying && currentSound !== 'silence' && (
-        <div
-          className="mt-4 flex items-center justify-center space-x-1 animate-fadeInUp"
-        >
+        <div className="mt-4 flex items-center justify-center space-x-1 animate-fadeInUp">
           {[...Array(5)].map((_, i) => (
-            <div
-              key={i}
-              className="w-1 bg-green-400 rounded-full animate-fadeInUp"
-            />
+            <div key={i} className="w-1 bg-green-400 rounded-full animate-fadeInUp" />
           ))}
         </div>
       )}

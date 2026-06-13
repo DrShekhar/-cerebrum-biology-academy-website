@@ -18,7 +18,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Coaching in Chandigarh Sector 34',
-    description: 'Best NEET biology coaching near Sector 34, Chandigarh. 98% success rate. Expert faculty.',
+    description:
+      'Best NEET biology coaching near Sector 34, Chandigarh. 98% success rate. Expert faculty.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-chandigarh-sector-34',

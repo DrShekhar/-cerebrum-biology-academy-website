@@ -31,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Class 11 Biology Coaching — Online & Offline',
-    description: 'AIIMS faculty. Online + offline (Delhi NCR). NCERT foundation. NEET + Board + Olympiad.',
+    description:
+      'AIIMS faculty. Online + offline (Delhi NCR). NCERT foundation. NEET + Board + Olympiad.',
     images: ['/og-image.jpg'],
   },
   alternates: {

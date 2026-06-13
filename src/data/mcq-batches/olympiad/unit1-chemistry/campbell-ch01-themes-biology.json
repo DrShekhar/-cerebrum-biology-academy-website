@@ -109,12 +109,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about emergent properties in biological systems:\nS1: The ability of a flock of birds to exhibit coordinated movement patterns is an emergent property that cannot be predicted from studying individual birds alone.\nS2: Emergent properties violate the laws of physics and chemistry because they produce outcomes not reducible to component parts.\nS3: Consciousness in the human brain is considered an emergent property arising from the complex interactions of billions of neurons.\nS4: A single water molecule exhibits the same cohesive properties as a large collection of water molecules.",
-      "options": [
-        "TTTT",
-        "TFTT",
-        "TFTF",
-        "TTFF"
-      ],
+      "options": ["TTTT", "TFTT", "TFTF", "TTFF"],
       "correctAnswer": "TFTF",
       "explanation": "S1 is TRUE because flocking behavior (e.g., murmurations of starlings) is a classic example of emergence — the coordinated patterns arise from simple rules followed by individuals but cannot be predicted from studying a single bird. S2 is FALSE because emergent properties do not violate physical or chemical laws; they are fully consistent with them but arise from the specific organization and interactions of components, not from new physics. S3 is TRUE because consciousness is widely regarded in neuroscience and philosophy of mind as an emergent property — it arises from neural network interactions and is not a property of any single neuron. S4 is FALSE because cohesion results from hydrogen bonding between multiple water molecules; a single isolated water molecule cannot exhibit cohesion, making cohesion itself an emergent property of water in bulk.",
       "isOlympiad": true,
@@ -229,12 +224,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the scientific method and hypothesis testing:\nS1: A scientific hypothesis must be falsifiable — there must exist a conceivable observation or experiment that could disprove it.\nS2: A theory in science is merely an unproven guess that has not yet been supported by evidence.\nS3: Inductive reasoning involves drawing general conclusions from specific observations.\nS4: A well-designed experiment tests only one independent variable at a time while holding others constant.",
-      "options": [
-        "TFTF",
-        "TFTT",
-        "TTFT",
-        "FFTT"
-      ],
+      "options": ["TFTF", "TFTT", "TTFT", "FFTT"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE because falsifiability is a defining characteristic of scientific hypotheses (per Karl Popper's criterion). If no conceivable test could disprove a claim, it is not a scientific hypothesis. S2 is FALSE because in science, a theory is a well-substantiated explanation supported by extensive evidence, testing, and peer review (e.g., theory of evolution, cell theory). This is fundamentally different from the colloquial use of 'theory' as a guess. S3 is TRUE because inductive reasoning moves from specific observations to general principles (e.g., observing that all observed swans are white and concluding that all swans are white). S4 is TRUE because controlling variables is essential to experimental design — manipulating one independent variable while holding others constant allows researchers to attribute observed effects to that specific variable.",
       "isOlympiad": true,
@@ -369,12 +359,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the domains of life:\nS1: Bacteria and Archaea are both prokaryotic but are classified in separate domains because of fundamental differences in cell wall composition, membrane lipids, and genetic machinery.\nS2: All members of domain Eukarya are multicellular organisms.\nS3: Archaea are more closely related to Eukarya than to Bacteria based on molecular phylogenetics.\nS4: Horizontal gene transfer blurs the boundaries between the three domains, making a strict tree-of-life model inadequate for representing all evolutionary relationships.",
-      "options": [
-        "TFTT",
-        "TTTT",
-        "TFTF",
-        "TFFT"
-      ],
+      "options": ["TFTT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "TFTT",
       "explanation": "S1 is TRUE because Bacteria and Archaea, while both prokaryotic, differ fundamentally in cell wall composition (peptidoglycan in Bacteria vs. pseudopeptidoglycan or other polymers in Archaea), membrane lipids (ester-linked in Bacteria vs. ether-linked in Archaea), and aspects of genetic machinery (archaeal RNA polymerase and ribosomes more closely resemble eukaryotic versions). S2 is FALSE because domain Eukarya includes many unicellular organisms such as yeasts, protists (amoebae, paramecia, diatoms), and unicellular algae. S3 is TRUE because molecular phylogenetic analyses, particularly of rRNA sequences and core transcription/translation machinery, consistently show Archaea as the sister group to Eukarya. S4 is TRUE because horizontal gene transfer (HGT), especially among prokaryotes, creates a web-like pattern of genetic exchange that cannot be represented by a simple bifurcating tree.",
       "isOlympiad": true,
@@ -509,12 +494,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the properties of life:\nS1: All living organisms maintain homeostasis through regulatory mechanisms that keep internal conditions within tolerable limits.\nS2: Viruses are considered living organisms because they contain nucleic acids and can evolve.\nS3: Growth in living organisms always involves an increase in cell number, never an increase in cell size.\nS4: All living organisms process energy, whether through photosynthesis, chemosynthesis, or consumption of other organisms.",
-      "options": [
-        "TFFT",
-        "TFTF",
-        "TFFF",
-        "TTFT"
-      ],
+      "options": ["TFFT", "TFTF", "TFFF", "TTFT"],
       "correctAnswer": "TFFT",
       "explanation": "S1 is TRUE because maintaining homeostasis is one of the fundamental properties of life. All living organisms have regulatory mechanisms (e.g., feedback loops) that maintain internal conditions such as temperature, pH, and ion concentrations within tolerable ranges. S2 is FALSE because viruses are generally NOT considered living organisms despite containing nucleic acids and evolving. They lack cellular structure, cannot reproduce independently, do not maintain homeostasis, and do not carry out metabolism on their own. S3 is FALSE because growth can involve both an increase in cell number (hyperplasia/cell division) AND an increase in cell size (hypertrophy). For example, plant cell growth often involves vacuolar expansion (increased cell size), and muscle hypertrophy involves enlargement of existing cells. S4 is TRUE because energy processing is a universal property of life. All organisms require energy for metabolic processes, obtained through photosynthesis, chemosynthesis, or heterotrophic consumption.",
       "isOlympiad": true,
@@ -649,12 +629,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about natural selection and evolution:\nS1: Natural selection acts on individuals, but evolution occurs in populations over generations.\nS2: Natural selection can only increase the complexity of organisms over evolutionary time.\nS3: Genetic variation within a population is a prerequisite for natural selection to operate.\nS4: Natural selection is the only mechanism of evolution; genetic drift, gene flow, and mutation play no role in changing allele frequencies.",
-      "options": [
-        "TFTF",
-        "TFTT",
-        "TTFF",
-        "TFFT"
-      ],
+      "options": ["TFTF", "TFTT", "TTFF", "TFFT"],
       "correctAnswer": "TFTF",
       "explanation": "S1 is TRUE because natural selection operates through differential survival and reproduction of individuals, but the resulting changes in allele frequencies (evolution) are properties of populations, not individuals. An individual does not evolve; populations evolve over generations. S2 is FALSE because natural selection can lead to simplification as well as increased complexity. Many parasites have evolved reduced body plans (loss of eyes, digestive systems), and cave-dwelling organisms often lose pigmentation and vision. Natural selection favors whatever traits increase fitness, whether more complex or simpler. S3 is TRUE because without genetic variation, all individuals would be identical and there would be no differential fitness for natural selection to act upon. Genetic variation provides the raw material for natural selection. S4 is FALSE because genetic drift, gene flow (migration), and mutation are all recognized mechanisms of evolution that change allele frequencies in populations, alongside natural selection.",
       "isOlympiad": true,
@@ -809,12 +784,7 @@
     {
       "type": "MCQ",
       "question": "An organism is discovered that obtains energy from inorganic chemical reactions and uses CO₂ as its sole carbon source. This organism's nutritional mode is classified as:",
-      "options": [
-        "Photoautotrophy",
-        "Chemoheterotrophy",
-        "Photoheterotrophy",
-        "Chemoautotrophy"
-      ],
+      "options": ["Photoautotrophy", "Chemoheterotrophy", "Photoheterotrophy", "Chemoautotrophy"],
       "correctAnswer": "D",
       "explanation": "Chemoautotrophy (chemolithoautotrophy) is the correct classification for an organism that obtains energy from inorganic chemical reactions (chemo-) and uses CO₂ as its sole carbon source (auto-). Such organisms oxidize inorganic compounds (H₂S, NH₃, Fe²⁺, H₂) to generate ATP and use the energy to fix CO₂ into organic molecules. Examples include nitrifying bacteria and iron-oxidizing bacteria. Option A (photoautotrophy) is incorrect because photoautotrophs use light energy, not chemical energy. Option B (chemoheterotrophy) is wrong because chemoheterotrophs obtain carbon from organic molecules, not CO₂. Option C (photoheterotrophy) is incorrect because photoheterotrophs use light energy and organic carbon sources, neither of which matches the described organism.",
       "isOlympiad": true,
@@ -829,12 +799,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about model organisms in biology:\nS1: Escherichia coli is used as a model organism because its rapid generation time and well-characterized genetics make it ideal for studying prokaryotic molecular biology.\nS2: Drosophila melanogaster has been instrumental in genetics research because it has a short life cycle, many offspring, and only four pairs of chromosomes.\nS3: Arabidopsis thaliana is the primary model organism for animal developmental biology.\nS4: Caenorhabditis elegans was the first multicellular organism to have its complete genome sequenced and its entire cell lineage mapped.",
-      "options": [
-        "TTFT",
-        "TTTT",
-        "TFTF",
-        "TTFT"
-      ],
+      "options": ["TTFT", "TTTT", "TFTF", "TTFT"],
       "correctAnswer": "TTFT",
       "explanation": "S1 is TRUE because E. coli has a generation time of ~20 minutes, a well-characterized genome, extensive genetic tools, and has been the workhorse of prokaryotic molecular biology for decades. S2 is TRUE because Drosophila melanogaster (fruit fly) has been central to genetics since T.H. Morgan's work. It has a ~10-day generation time, produces hundreds of offspring per cross, and has only 4 chromosome pairs, making genetic analysis tractable. S3 is FALSE because Arabidopsis thaliana is a plant — it is the primary model organism for plant biology, not animal developmental biology. Animal developmental biology models include Drosophila, C. elegans, zebrafish, and mice. S4 is TRUE because C. elegans was the first multicellular organism with a fully sequenced genome (completed in 1998), and Sydney Brenner and colleagues mapped its complete, invariant cell lineage (959 somatic cells in the hermaphrodite).",
       "isOlympiad": true,

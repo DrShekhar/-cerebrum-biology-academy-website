@@ -26,7 +26,7 @@ const instituteHighlights = [
   {
     icon: Briefcase,
     title: '15+ Years Experience',
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-institute' },
+    alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-institute' },
     description: 'Established institute with proven track record since 2014.',
     stat: '15+',
   },
@@ -189,9 +189,7 @@ export default function NeetCoachingInstitutePage() {
       <section className="relative bg-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Building2 className="w-5 h-5 mr-2 text-yellow-300" />
               Established 2008 | 15+ Years of Excellence
@@ -212,7 +210,11 @@ export default function NeetCoachingInstitutePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Cerebrum%20Biology%20Academy.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Cerebrum%20Biology%20Academy.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -255,14 +257,14 @@ export default function NeetCoachingInstitutePage() {
       {/* Institute Highlights */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               What Makes Cerebrum the Best NEET Coaching Institute?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              With 15+ years of experience, 98% success rate, and AIIMS-trained faculty, Cerebrum Biology Academy consistently delivers top NEET results. Here is what sets us apart from other NEET coaching institutes.
+              With 15+ years of experience, 98% success rate, and AIIMS-trained faculty, Cerebrum
+              Biology Academy consistently delivers top NEET results. Here is what sets us apart
+              from other NEET coaching institutes.
             </p>
           </div>
 
@@ -287,14 +289,13 @@ export default function NeetCoachingInstitutePage() {
       {/* Courses Offered */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               What Courses Does Cerebrum's NEET Institute Offer?
             </h2>
             <p className="text-xl text-gray-600">
-              Cerebrum offers four comprehensive programs designed for every stage of NEET preparation, from Class 11 foundation to crash courses for last-minute revision.
+              Cerebrum offers four comprehensive programs designed for every stage of NEET
+              preparation, from Class 11 foundation to crash courses for last-minute revision.
             </p>
           </div>
 
@@ -333,14 +334,13 @@ export default function NeetCoachingInstitutePage() {
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               How Does NEET Coaching at Cerebrum Work?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">
-              Our coaching approach combines expert AIIMS-trained faculty, NCERT-focused curriculum, hybrid learning options, and rigorous weekly testing to maximise your NEET score.
+              Our coaching approach combines expert AIIMS-trained faculty, NCERT-focused curriculum,
+              hybrid learning options, and rigorous weekly testing to maximise your NEET score.
             </p>
           </div>
 
@@ -362,9 +362,7 @@ export default function NeetCoachingInstitutePage() {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               FAQs - NEET Coaching Institute
             </h2>
@@ -372,10 +370,7 @@ export default function NeetCoachingInstitutePage() {
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div
-                key={faq.question}
-                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
-              >
+              <div key={faq.question} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-purple-600 flex-shrink-0 mt-1" />
                   {faq.question}
@@ -390,18 +385,23 @@ export default function NeetCoachingInstitutePage() {
       {/* CTA Section */}
       <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Join the Best NEET Coaching Institute Today
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               15+ years of excellence, 98% success rate, 15,000+ successful alumni
             </p>
-            <p className="text-xs text-white/60 mb-4">Success rate based on 2023-2025 NEET-UG results. NEET is conducted by NTA (nta.ac.in).</p>
+            <p className="text-xs text-white/60 mb-4">
+              Success rate based on 2023-2025 NEET-UG results. NEET is conducted by NTA (nta.ac.in).
+            </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Cerebrum%20Biology%20Academy.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Cerebrum%20Biology%20Academy.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -413,7 +413,11 @@ export default function NeetCoachingInstitutePage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20Cerebrum%20Biology%20Academy.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20Cerebrum%20Biology%20Academy.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"

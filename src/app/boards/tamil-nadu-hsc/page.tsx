@@ -6,7 +6,8 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'Tamil Nadu HSC Biology Coaching | NEET + Board Dual Prep',
-  description: 'Expert Tamil Nadu HSC Biology coaching covering 12th std (Volume I & II) with integrated NEET preparation. Master TN State Board pattern with NEET cutoff optimization.',
+  description:
+    'Expert Tamil Nadu HSC Biology coaching covering 12th std (Volume I & II) with integrated NEET preparation. Master TN State Board pattern with NEET cutoff optimization.',
   keywords: [
     'Tamil Nadu HSC biology',
     'TN State Board biology coaching',
@@ -18,7 +19,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Tamil Nadu HSC Biology Coaching | NEET + Board Dual Prep',
-    description: 'Expert Tamil Nadu HSC Biology coaching covering 12th std with integrated NEET preparation.',
+    description:
+      'Expert Tamil Nadu HSC Biology coaching covering 12th std with integrated NEET preparation.',
     url: `${BASE_URL}/boards/tamil-nadu-hsc`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -27,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Tamil Nadu HSC Biology Coaching | NEET + Board Dual Prep',
-    description: 'Expert Tamil Nadu HSC Biology coaching covering 12th std with integrated NEET preparation.',
+    description:
+      'Expert Tamil Nadu HSC Biology coaching covering 12th std with integrated NEET preparation.',
   },
   alternates: {
     canonical: `${BASE_URL}/boards/tamil-nadu-hsc`,

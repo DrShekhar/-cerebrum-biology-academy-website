@@ -30,26 +30,41 @@ export default function PageContent() {
             <span>150K+ Indian Residents in Bangkok</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Best NEET Biology Coaching in<br />
+            Best NEET Biology Coaching in
+            <br />
             <span className="text-blue-200">Bangkok, Thailand</span>
           </h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-6">
-            Largest Indian community in Thailand. Growing demand for NEET coaching among Indian expat families.
+            Largest Indian community in Thailand. Growing demand for NEET coaching among Indian
+            expat families.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <Link href="https://wa.me/918826444334?text=Hi%20I%20am%20from%20Bangkok%20interested%20in%20NEET%20coaching" className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2 transition-colors">
+            <Link
+              href="https://wa.me/918826444334?text=Hi%20I%20am%20from%20Bangkok%20interested%20in%20NEET%20coaching"
+              className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2 transition-colors"
+            >
               <Phone className="w-5 h-5" /> WhatsApp Us
             </Link>
-            <Link href="/pricing" className="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+            <Link
+              href="/pricing"
+              className="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+            >
               View Pricing
             </Link>
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4" /> 98% Success Rate</span>
-            <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4" /> 695/720 Top Score</span>
-            <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4" /> AIIMS Faculty</span>
-            <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4" /> 5+ CBSE Schools</span>
-            
+            <span className="flex items-center gap-1">
+              <CheckCircle className="w-4 h-4" /> 98% Success Rate
+            </span>
+            <span className="flex items-center gap-1">
+              <CheckCircle className="w-4 h-4" /> 695/720 Top Score
+            </span>
+            <span className="flex items-center gap-1">
+              <CheckCircle className="w-4 h-4" /> AIIMS Faculty
+            </span>
+            <span className="flex items-center gap-1">
+              <CheckCircle className="w-4 h-4" /> 5+ CBSE Schools
+            </span>
           </div>
         </div>
       </section>
@@ -83,22 +98,33 @@ export default function PageContent() {
       {/* Why Choose Cerebrum */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-10">Why Bangkok Students Choose Cerebrum</h2>
+          <h2 className="text-3xl font-bold text-center mb-10">
+            Why Bangkok Students Choose Cerebrum
+          </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="p-6 rounded-xl border border-blue-100 bg-blue-50">
               <GraduationCap className="w-8 h-8 text-blue-600 mb-3" />
               <h3 className="font-bold text-lg mb-2">AIIMS Faculty</h3>
-              <p className="text-gray-600">Learn from doctors who studied at AIIMS Delhi. Real medical experience combined with expert teaching methodology.</p>
+              <p className="text-gray-600">
+                Learn from doctors who studied at AIIMS Delhi. Real medical experience combined with
+                expert teaching methodology.
+              </p>
             </div>
             <div className="p-6 rounded-xl border border-green-100 bg-green-50">
               <Clock className="w-8 h-8 text-green-600 mb-3" />
               <h3 className="font-bold text-lg mb-2">ICT (GMT+7) Friendly</h3>
-              <p className="text-gray-600">Classes at 5:30 PM - 9:30 PM ICT. Perfect timing after school hours. All sessions recorded for revision.</p>
+              <p className="text-gray-600">
+                Classes at 5:30 PM - 9:30 PM ICT. Perfect timing after school hours. All sessions
+                recorded for revision.
+              </p>
             </div>
             <div className="p-6 rounded-xl border border-purple-100 bg-purple-50">
               <Globe className="w-8 h-8 text-purple-600 mb-3" />
               <h3 className="font-bold text-lg mb-2">NRI Quota Expert</h3>
-              <p className="text-gray-600">Complete guidance for NRI quota admissions. Documentation, counseling, and college selection support.</p>
+              <p className="text-gray-600">
+                Complete guidance for NRI quota admissions. Documentation, counseling, and college
+                selection support.
+              </p>
             </div>
           </div>
         </div>
@@ -108,23 +134,40 @@ export default function PageContent() {
       <PricingSection cityName="Bangkok" />
       <CostComparisonSection cityName="Bangkok" />
 
-
       {/* Testimonials */}
       <section className="py-16 max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-10">What Our Students Say</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {[
-            { name: 'Ankit Sharma', city: 'Bangkok', score: '595/720', quote: 'From GIIS Bangkok to medical college in India. The bridge course for international curriculum was exactly what I needed.', college: 'Grant Medical College' },
-            { name: 'Meera Das', city: 'Bangkok', score: '582/720', quote: 'Thailand timezone classes at 5:30 PM worked perfectly. I could attend school, then join Cerebrum classes seamlessly.', college: 'B.J. Medical College' },
+            {
+              name: 'Ankit Sharma',
+              city: 'Bangkok',
+              score: '595/720',
+              quote:
+                'From GIIS Bangkok to medical college in India. The bridge course for international curriculum was exactly what I needed.',
+              college: 'Grant Medical College',
+            },
+            {
+              name: 'Meera Das',
+              city: 'Bangkok',
+              score: '582/720',
+              quote:
+                'Thailand timezone classes at 5:30 PM worked perfectly. I could attend school, then join Cerebrum classes seamlessly.',
+              college: 'B.J. Medical College',
+            },
           ].map((t, i) => (
             <div key={i} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
               <div className="flex items-center gap-1 mb-3">
-                {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 text-yellow-400 fill-yellow-400" />)}
+                {[...Array(5)].map((_, j) => (
+                  <Star key={j} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                ))}
               </div>
               <p className="text-gray-700 italic mb-4">&ldquo;{t.quote}&rdquo;</p>
               <div className="border-t pt-3">
                 <p className="font-bold">{t.name}</p>
-                <p className="text-sm text-gray-500">{t.city} | Score: {t.score}</p>
+                <p className="text-sm text-gray-500">
+                  {t.city} | Score: {t.score}
+                </p>
                 <p className="text-sm text-green-600">{t.college}</p>
               </div>
             </div>
@@ -136,8 +179,14 @@ export default function PageContent() {
       <section className="py-16 bg-gradient-to-r from-blue-600 to-teal-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Start Your NEET Journey from Bangkok</h2>
-          <p className="text-blue-100 mb-8 text-lg">Join Indian students in Bangkok already preparing with expert AIIMS faculty. Book a free demo today.</p>
-          <Link href="https://wa.me/918826444334?text=Hi%20I%20am%20from%20Bangkok%20interested%20in%20NEET%20coaching" className="inline-flex bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-lg font-bold text-lg items-center gap-2 transition-colors">
+          <p className="text-blue-100 mb-8 text-lg">
+            Join Indian students in Bangkok already preparing with expert AIIMS faculty. Book a free
+            demo today.
+          </p>
+          <Link
+            href="https://wa.me/918826444334?text=Hi%20I%20am%20from%20Bangkok%20interested%20in%20NEET%20coaching"
+            className="inline-flex bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-lg font-bold text-lg items-center gap-2 transition-colors"
+          >
             <Phone className="w-5 h-5" /> WhatsApp: +91-8826444334
           </Link>
         </div>

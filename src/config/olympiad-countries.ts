@@ -128,7 +128,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 52000,
     priceDisplay: '$599',
     heroAngle:
-      "For international-school students in the United States — ASA / IB / British / French curriculum families whose schools do not enrol students for USABO. We deliver Olympiad-grade biology + Pre-Med foundation, taught by AIIMS-trained faculty in your local US time zone.",
+      'For international-school students in the United States — ASA / IB / British / French curriculum families whose schools do not enrol students for USABO. We deliver Olympiad-grade biology + Pre-Med foundation, taught by AIIMS-trained faculty in your local US time zone.',
     canonicalHubUrl: '/usabo-coaching',
     canonicalHubLabel: 'USABO',
     testimonials: placeholderTestimonials('USA'),
@@ -145,7 +145,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 53000,
     priceDisplay: '£479',
     heroAngle:
-      "For international-curriculum sixth-formers in the UK — IB Diploma, French-system, American-school families whose schools do not enter students for BBO. Olympiad-grade biology + Pre-Med foundation supporting UCAT / BMAT preparation, taught by AIIMS-trained faculty in GMT / BST.",
+      'For international-curriculum sixth-formers in the UK — IB Diploma, French-system, American-school families whose schools do not enter students for BBO. Olympiad-grade biology + Pre-Med foundation supporting UCAT / BMAT preparation, taught by AIIMS-trained faculty in GMT / BST.',
     canonicalHubUrl: '/bbo-preparation',
     canonicalHubLabel: 'BBO',
     testimonials: placeholderTestimonials('UK'),
@@ -162,7 +162,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 48000,
     priceDisplay: 'C$749',
     heroAngle:
-      "For international-school students in Canada — IB, French-immersion, British-curriculum, American-school families whose schools do not enrol for CBO. Olympiad-grade biology + Pre-Med foundation supporting UofT / McGill / UBC Life-Sciences applications. Live classes in Canadian time zones.",
+      'For international-school students in Canada — IB, French-immersion, British-curriculum, American-school families whose schools do not enrol for CBO. Olympiad-grade biology + Pre-Med foundation supporting UofT / McGill / UBC Life-Sciences applications. Live classes in Canadian time zones.',
     canonicalHubUrl: '/cbo-coaching',
     canonicalHubLabel: 'CBO',
     testimonials: placeholderTestimonials('Canada'),
@@ -215,7 +215,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 53000,
     priceDisplay: 'AED 2,190',
     heroAngle:
-      "For international-school families in Dubai, Abu Dhabi, Sharjah, and across the UAE — Indian, British, American, IB, French curriculum students. UAE has no native national biology olympiad, so most olympiad-aspirant students need an external programme. Olympiad-grade biology + Pre-Med foundation supporting UCAT / MCAT / NEET-equivalent applications.",
+      'For international-school families in Dubai, Abu Dhabi, Sharjah, and across the UAE — Indian, British, American, IB, French curriculum students. UAE has no native national biology olympiad, so most olympiad-aspirant students need an external programme. Olympiad-grade biology + Pre-Med foundation supporting UCAT / MCAT / NEET-equivalent applications.',
     testimonials: placeholderTestimonials('UAE'),
   },
   {
@@ -230,7 +230,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 51000,
     priceDisplay: 'SAR 2,199',
     heroAngle:
-      "For international-school families in Riyadh, Jeddah, Dhahran, and across Saudi Arabia. Olympiad-grade biology + Pre-Med foundation, taught by AIIMS-trained faculty in GMT+3. Strong fit for KSA Mawhiba pathway candidates and for IB / American-curriculum students aiming at US / UK medical-track applications.",
+      'For international-school families in Riyadh, Jeddah, Dhahran, and across Saudi Arabia. Olympiad-grade biology + Pre-Med foundation, taught by AIIMS-trained faculty in GMT+3. Strong fit for KSA Mawhiba pathway candidates and for IB / American-curriculum students aiming at US / UK medical-track applications.',
     testimonials: placeholderTestimonials('Saudi Arabia'),
   },
   {
@@ -245,7 +245,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 53000,
     priceDisplay: 'QAR 2,199',
     heroAngle:
-      "For international-school students in Doha. IB, British, American, Indian, French-curriculum families. Olympiad-grade biology + Pre-Med foundation supporting Weill Cornell-Qatar, Imperial, Oxbridge, and US medical-track applications.",
+      'For international-school students in Doha. IB, British, American, Indian, French-curriculum families. Olympiad-grade biology + Pre-Med foundation supporting Weill Cornell-Qatar, Imperial, Oxbridge, and US medical-track applications.',
     testimonials: placeholderTestimonials('Qatar'),
   },
   {
@@ -260,7 +260,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 52000,
     priceDisplay: 'OMR 229',
     heroAngle:
-      "For international-school students in Muscat, Salalah, and across Oman. Olympiad-grade biology + Pre-Med foundation, in GMT+4 evening live classes. Indian, IB, British-curriculum families served.",
+      'For international-school students in Muscat, Salalah, and across Oman. Olympiad-grade biology + Pre-Med foundation, in GMT+4 evening live classes. Indian, IB, British-curriculum families served.',
     testimonials: placeholderTestimonials('Oman'),
   },
   {
@@ -275,7 +275,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 50000,
     priceDisplay: 'BHD 219',
     heroAngle:
-      "For international-school families in Manama and across Bahrain. Olympiad-grade biology + Pre-Med foundation, AIIMS-trained faculty, GMT+3 live classes.",
+      'For international-school families in Manama and across Bahrain. Olympiad-grade biology + Pre-Med foundation, AIIMS-trained faculty, GMT+3 live classes.',
     testimonials: placeholderTestimonials('Bahrain'),
   },
   {
@@ -290,7 +290,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 51000,
     priceDisplay: 'KWD 179',
     heroAngle:
-      "For international-school families in Kuwait City and across Kuwait — IB, British, American, Indian-curriculum students. Olympiad-grade biology + Pre-Med foundation, taught in GMT+3.",
+      'For international-school families in Kuwait City and across Kuwait — IB, British, American, Indian-curriculum students. Olympiad-grade biology + Pre-Med foundation, taught in GMT+3.',
     testimonials: placeholderTestimonials('Kuwait'),
   },
 
@@ -307,7 +307,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 51000,
     priceDisplay: 'RM 2,699',
     heroAngle:
-      "For international-school students in Kuala Lumpur, Penang, Johor, and across Malaysia — IB, IGCSE, Australian, American, Chinese-curriculum families. Olympiad-grade biology + Pre-Med foundation supporting UM / Monash Malaysia / IMU applications.",
+      'For international-school students in Kuala Lumpur, Penang, Johor, and across Malaysia — IB, IGCSE, Australian, American, Chinese-curriculum families. Olympiad-grade biology + Pre-Med foundation supporting UM / Monash Malaysia / IMU applications.',
     testimonials: placeholderTestimonials('Malaysia'),
   },
   {
@@ -322,7 +322,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 50000,
     priceDisplay: '฿19,900',
     heroAngle:
-      "For international-school students in Bangkok, Chiang Mai, and across Thailand. IB, IGCSE, French, American, German-curriculum families. Olympiad-grade biology + Pre-Med foundation, AIIMS-trained faculty, GMT+7 live classes.",
+      'For international-school students in Bangkok, Chiang Mai, and across Thailand. IB, IGCSE, French, American, German-curriculum families. Olympiad-grade biology + Pre-Med foundation, AIIMS-trained faculty, GMT+7 live classes.',
     testimonials: placeholderTestimonials('Thailand'),
   },
   {
@@ -337,7 +337,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 48000,
     priceDisplay: '₱31,900',
     heroAngle:
-      "For international-school students in Manila, Cebu, and across the Philippines. IB, American, Chinese-curriculum families. Olympiad-grade biology + Pre-Med foundation supporting UP / Ateneo / international medical-track applications.",
+      'For international-school students in Manila, Cebu, and across the Philippines. IB, American, Chinese-curriculum families. Olympiad-grade biology + Pre-Med foundation supporting UP / Ateneo / international medical-track applications.',
     testimonials: placeholderTestimonials('Philippines'),
   },
   {
@@ -352,7 +352,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 31000,
     priceDisplay: 'IDR 8,800,000',
     heroAngle:
-      "For international-school students in Jakarta, Bali, Surabaya, and across Indonesia — IB, IGCSE, American, Australian-curriculum families. Olympiad-grade biology + Pre-Med foundation, AIIMS-trained faculty, GMT+7 live classes.",
+      'For international-school students in Jakarta, Bali, Surabaya, and across Indonesia — IB, IGCSE, American, Australian-curriculum families. Olympiad-grade biology + Pre-Med foundation, AIIMS-trained faculty, GMT+7 live classes.',
     testimonials: placeholderTestimonials('Indonesia'),
   },
   {
@@ -367,7 +367,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 31000,
     priceDisplay: 'VND 14,200,000',
     heroAngle:
-      "For international-school students in Ho Chi Minh City, Hanoi, and across Vietnam. IB, American, French-curriculum families. Olympiad-grade biology + Pre-Med foundation, GMT+7 live classes.",
+      'For international-school students in Ho Chi Minh City, Hanoi, and across Vietnam. IB, American, French-curriculum families. Olympiad-grade biology + Pre-Med foundation, GMT+7 live classes.',
     testimonials: placeholderTestimonials('Vietnam'),
   },
   {
@@ -382,7 +382,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 50000,
     priceDisplay: 'HK$4,590',
     heroAngle:
-      "For international-school students in Hong Kong — ESF, English Schools Foundation, German Swiss, French, American-curriculum families. Olympiad-grade biology + Pre-Med foundation, supporting HKU / CUHK / Imperial / Oxbridge applications.",
+      'For international-school students in Hong Kong — ESF, English Schools Foundation, German Swiss, French, American-curriculum families. Olympiad-grade biology + Pre-Med foundation, supporting HKU / CUHK / Imperial / Oxbridge applications.',
     testimonials: placeholderTestimonials('Hong Kong'),
   },
 
@@ -399,7 +399,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 48000,
     priceDisplay: 'NZ$919',
     heroAngle:
-      "For international-school students in Auckland, Wellington, Christchurch, and across New Zealand. IB, Cambridge / IGCSE, American-curriculum families. Olympiad-grade biology + Pre-Med foundation, AIIMS-trained faculty.",
+      'For international-school students in Auckland, Wellington, Christchurch, and across New Zealand. IB, Cambridge / IGCSE, American-curriculum families. Olympiad-grade biology + Pre-Med foundation, AIIMS-trained faculty.',
     testimonials: placeholderTestimonials('New Zealand'),
   },
   {
@@ -414,7 +414,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 52000,
     priceDisplay: '€549',
     heroAngle:
-      "For international-school students in Berlin, Munich, Frankfurt, and across Germany — IB, British, American, French international-curriculum families. Olympiad-grade biology + Pre-Med foundation, supporting NC-Medizin / TestAS / international medical-track applications.",
+      'For international-school students in Berlin, Munich, Frankfurt, and across Germany — IB, British, American, French international-curriculum families. Olympiad-grade biology + Pre-Med foundation, supporting NC-Medizin / TestAS / international medical-track applications.',
     testimonials: placeholderTestimonials('Germany'),
   },
   {
@@ -429,7 +429,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 52000,
     priceDisplay: '€549',
     heroAngle:
-      "For international-school students in Amsterdam, The Hague, Rotterdam, and across the Netherlands. IB, British, American, German international-curriculum families. Olympiad-grade biology + Pre-Med foundation, AIIMS-trained faculty, CET live classes.",
+      'For international-school students in Amsterdam, The Hague, Rotterdam, and across the Netherlands. IB, British, American, German international-curriculum families. Olympiad-grade biology + Pre-Med foundation, AIIMS-trained faculty, CET live classes.',
     testimonials: placeholderTestimonials('Netherlands'),
   },
 
@@ -446,7 +446,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 51000,
     priceDisplay: 'R 10,900',
     heroAngle:
-      "For international-school students in Johannesburg, Cape Town, Durban, and across South Africa — IB, IEB, British / Cambridge, American-curriculum families. Olympiad-grade biology + Pre-Med foundation, GMT+2 live classes.",
+      'For international-school students in Johannesburg, Cape Town, Durban, and across South Africa — IB, IEB, British / Cambridge, American-curriculum families. Olympiad-grade biology + Pre-Med foundation, GMT+2 live classes.',
     testimonials: placeholderTestimonials('South Africa'),
   },
   {
@@ -461,7 +461,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 34000,
     priceDisplay: 'NGN 920,000',
     heroAngle:
-      "For international-school students in Lagos, Abuja, Port Harcourt, and across Nigeria. British, American, IB-curriculum families. Olympiad-grade biology + Pre-Med foundation, supporting UCL / Imperial / Howard / international medical-track applications.",
+      'For international-school students in Lagos, Abuja, Port Harcourt, and across Nigeria. British, American, IB-curriculum families. Olympiad-grade biology + Pre-Med foundation, supporting UCL / Imperial / Howard / international medical-track applications.',
     testimonials: placeholderTestimonials('Nigeria'),
   },
   {
@@ -476,7 +476,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 34000,
     priceDisplay: 'KES 75,000',
     heroAngle:
-      "For international-school students in Nairobi and across Kenya — British / Cambridge, IB, American-curriculum families. Olympiad-grade biology + Pre-Med foundation, supporting University of Nairobi / international medical-track applications. GMT+3 live classes.",
+      'For international-school students in Nairobi and across Kenya — British / Cambridge, IB, American-curriculum families. Olympiad-grade biology + Pre-Med foundation, supporting University of Nairobi / international medical-track applications. GMT+3 live classes.',
     testimonials: placeholderTestimonials('Kenya'),
   },
   {
@@ -491,7 +491,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 52000,
     priceDisplay: 'MUR 26,900',
     heroAngle:
-      "For international-school students in Mauritius — French-system, British / Cambridge, IB-curriculum families. Olympiad-grade biology + Pre-Med foundation, AIIMS-trained faculty, GMT+4 live classes.",
+      'For international-school students in Mauritius — French-system, British / Cambridge, IB-curriculum families. Olympiad-grade biology + Pre-Med foundation, AIIMS-trained faculty, GMT+4 live classes.',
     testimonials: placeholderTestimonials('Mauritius'),
   },
 
@@ -508,7 +508,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 21000,
     priceDisplay: 'NPR 33,500',
     heroAngle:
-      "For international-school and high-aspiration students in Kathmandu, Pokhara, and across Nepal. Olympiad-grade biology + Pre-Med foundation supporting MBBS-Nepal entrance / international medical-track applications. AIIMS-trained faculty.",
+      'For international-school and high-aspiration students in Kathmandu, Pokhara, and across Nepal. Olympiad-grade biology + Pre-Med foundation supporting MBBS-Nepal entrance / international medical-track applications. AIIMS-trained faculty.',
     testimonials: placeholderTestimonials('Nepal'),
   },
   {
@@ -523,7 +523,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 21000,
     priceDisplay: 'BDT 28,500',
     heroAngle:
-      "For international-school and high-aspiration students in Dhaka, Chittagong, and across Bangladesh. Olympiad-grade biology + Pre-Med foundation, supporting Bangladesh medical-college entrance + international medical-track applications.",
+      'For international-school and high-aspiration students in Dhaka, Chittagong, and across Bangladesh. Olympiad-grade biology + Pre-Med foundation, supporting Bangladesh medical-college entrance + international medical-track applications.',
     testimonials: placeholderTestimonials('Bangladesh'),
   },
   {
@@ -538,7 +538,7 @@ const COUNTRIES_BASE: Omit<OlympiadCountry, 'faqs'>[] = [
     priceMonthlyINR: 21000,
     priceDisplay: 'LKR 70,000',
     heroAngle:
-      "For international-school and high-aspiration students in Colombo, Kandy, and across Sri Lanka. Olympiad-grade biology + Pre-Med foundation, supporting University of Colombo / international medical-track applications.",
+      'For international-school and high-aspiration students in Colombo, Kandy, and across Sri Lanka. Olympiad-grade biology + Pre-Med foundation, supporting University of Colombo / international medical-track applications.',
     testimonials: placeholderTestimonials('Sri Lanka'),
   },
 ]

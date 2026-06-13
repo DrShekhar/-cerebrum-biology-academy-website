@@ -19,7 +19,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biology Tutor in Ghaziabad | NEET Biology Coaching Near You',
-    description: 'Best biology tutor in Ghaziabad for NEET preparation. AIIMS-trained faculty, small batches, personalized attention. Online & offline classes available. Free demo!',
+    description:
+      'Best biology tutor in Ghaziabad for NEET preparation. AIIMS-trained faculty, small batches, personalized attention. Online & offline classes available. Free demo!',
   },
 }
 

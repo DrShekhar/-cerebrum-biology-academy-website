@@ -748,214 +748,202 @@ What would you like to explore today?`,
     <AIErrorBoundary>
       <div className="fixed bottom-4 right-4 z-50">
         {/* Chat toggle button */}
-{!chatState.isOpen && (
-            <button
-              onClick={toggleChatbot}
-              className="bg-gradient-to-r from-green-600 to-blue-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group animate-fadeInUp"
-            >
-              <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
-              <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center">
-                🧬
-              </div>
-            </button>
-          )}
-{/* Chat window */}
-{chatState.isOpen && (
-            <div
-              className="bg-white rounded-lg shadow-2xl md:w-80 md:h-96 flex flex-col border border-gray-200 fixed inset-0 md:inset-auto md:bottom-4 md:right-4 z-50 animate-fadeInUp"
-            >
-              {/* Header */}
-              <div className="bg-gradient-to-r from-green-600 to-blue-500 text-white p-4 md:rounded-t-lg">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                      🧬
-                    </div>
-                    <div>
-                      <h3 className="font-semibold">Dr. Bio</h3>
-                      <p className="text-xs opacity-90">Your AI Biology Tutor</p>
-                    </div>
+        {!chatState.isOpen && (
+          <button
+            onClick={toggleChatbot}
+            className="bg-gradient-to-r from-green-600 to-blue-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group animate-fadeInUp"
+          >
+            <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
+            <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center">
+              🧬
+            </div>
+          </button>
+        )}
+        {/* Chat window */}
+        {chatState.isOpen && (
+          <div className="bg-white rounded-lg shadow-2xl md:w-80 md:h-96 flex flex-col border border-gray-200 fixed inset-0 md:inset-auto md:bottom-4 md:right-4 z-50 animate-fadeInUp">
+            {/* Header */}
+            <div className="bg-gradient-to-r from-green-600 to-blue-500 text-white p-4 md:rounded-t-lg">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                    🧬
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <button
-                      onClick={() =>
-                        setChatState((prev) => ({
-                          ...prev,
-                          voiceSettings: {
-                            ...prev.voiceSettings,
-                            autoPlay: !prev.voiceSettings.autoPlay,
-                          },
-                        }))
-                      }
-                      className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-white/20 rounded touch-manipulation"
-                      aria-label={chatState.voiceSettings.autoPlay ? 'Mute voice' : 'Enable voice'}
-                    >
-                      {chatState.voiceSettings.autoPlay ? (
-                        <Volume2 className="w-4 h-4" />
-                      ) : (
-                        <VolumeX className="w-4 h-4" />
-                      )}
-                    </button>
-                    <button
-                      onClick={toggleChatbot}
-                      className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-white/20 rounded touch-manipulation"
-                      aria-label="Close chatbot"
-                    >
-                      <X className="w-4 h-4" />
-                    </button>
+                  <div>
+                    <h3 className="font-semibold">Dr. Bio</h3>
+                    <p className="text-xs opacity-90">Your AI Biology Tutor</p>
                   </div>
                 </div>
-              </div>
-
-              {/* Messages */}
-              <div className="flex-1 overflow-y-auto p-4 space-y-4">
-                {chatState.messages.length === 0 ? (
-                  <div className="flex items-center justify-center h-full">
-                    <EmptyState
-                      icon={MessageCircle}
-                      title="Ask me anything about Biology!"
-                      description="I can explain concepts, solve doubts, and help you understand difficult topics for NEET and school exams."
-                      size="sm"
-                      variant="default"
-                    />
-                  </div>
-                ) : (
-                  chatState.messages.map((message) => (
-                    <div
-                      key={message.id}
-                      className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-                    >
-                      <div
-                        className={`max-w-[70%] p-3 rounded-lg ${
-                          message.type === 'user'
-                            ? 'bg-blue-500 text-white'
-                            : 'bg-gray-100 text-gray-800'
-                        }`}
-                      >
-                        <div className="flex items-start space-x-2">
-                          {message.type === 'bot' && (
-                            <Bot className="w-4 h-4 mt-1 text-green-600" />
-                          )}
-                          <div className="flex-1">
-                            <p className="text-sm whitespace-pre-wrap">{message.content}</p>
-
-                            {/* Message actions */}
-                            {message.actions && message.actions.length > 0 && (
-                              <div className="mt-2 space-y-1">
-                                {message.actions.map((action, index) => (
-                                  <button
-                                    key={index}
-                                    onClick={() => handleActionClick(action)}
-                                    className="flex items-center space-x-1 text-xs bg-blue-100 hover:bg-blue-200 text-blue-700 px-2 py-1 rounded transition-colors w-full"
-                                  >
-                                    {action.icon}
-                                    <span>{action.label}</span>
-                                  </button>
-                                ))}
-                              </div>
-                            )}
-
-                            {/* Response metadata */}
-                            {message.response && (
-                              <div className="mt-2 text-xs text-gray-500 space-y-1">
-                                <div className="flex items-center space-x-2">
-                                  <Star className="w-3 h-3" />
-                                  <span>
-                                    Confidence: {Math.round(message.response.confidence * 100)}%
-                                  </span>
-                                </div>
-                                <div className="flex items-center space-x-2">
-                                  <Clock className="w-3 h-3" />
-                                  <span>Study time: {message.response.estimatedStudyTime} min</span>
-                                </div>
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))
-                )}
-
-                {chatState.isTyping && (
-                  <div
-                    className="flex justify-start animate-fadeInUp"
-                  >
-                    <div className="bg-gray-100 p-3 rounded-lg">
-                      <div className="flex items-center space-x-2">
-                        <Bot className="w-4 h-4 text-green-600" />
-                        <div className="flex space-x-1">
-                          <div
-                            className="w-2 h-2 bg-gray-400 rounded-full animate-fadeInUp"
-                          />
-                          <div
-                            className="w-2 h-2 bg-gray-400 rounded-full animate-fadeInUp"
-                          />
-                          <div
-                            className="w-2 h-2 bg-gray-400 rounded-full animate-fadeInUp"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                <div ref={messagesEndRef} />
-              </div>
-
-              {/* Input */}
-              <div className="p-4 border-t border-gray-200 pb-safe-bottom">
                 <div className="flex items-center space-x-2">
-                  <div className="flex-1 relative">
-                    <textarea
-                      value={inputValue}
-                      onChange={(e) => setInputValue(e.target.value)}
-                      onKeyPress={handleKeyPress}
-                      placeholder="Ask me anything about Biology..."
-                      className="w-full p-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 text-base min-h-[48px]"
-                      rows={1}
-                    />
-
-                    {voiceRecognition.isSupported && (
-                      <button
-                        onClick={handleVoiceToggle}
-                        className={`absolute right-2 top-1/2 transform -translate-y-1/2 p-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded touch-manipulation ${
-                          voiceRecognition.isListening
-                            ? 'bg-red-100 text-red-500'
-                            : 'bg-gray-100 text-gray-500'
-                        }`}
-                        aria-label={
-                          voiceRecognition.isListening ? 'Stop voice input' : 'Start voice input'
-                        }
-                      >
-                        {voiceRecognition.isListening ? (
-                          <MicOff className="w-4 h-4" />
-                        ) : (
-                          <Mic className="w-4 h-4" />
-                        )}
-                      </button>
-                    )}
-                  </div>
-
                   <button
-                    onClick={handleSendMessage}
-                    disabled={!inputValue.trim() || chatState.isTyping}
-                    className="bg-blue-500 text-white p-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors touch-manipulation animate-fadeInUp"
-                    aria-label="Send message"
+                    onClick={() =>
+                      setChatState((prev) => ({
+                        ...prev,
+                        voiceSettings: {
+                          ...prev.voiceSettings,
+                          autoPlay: !prev.voiceSettings.autoPlay,
+                        },
+                      }))
+                    }
+                    className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-white/20 rounded touch-manipulation"
+                    aria-label={chatState.voiceSettings.autoPlay ? 'Mute voice' : 'Enable voice'}
                   >
-                    <Send className="w-4 h-4" />
+                    {chatState.voiceSettings.autoPlay ? (
+                      <Volume2 className="w-4 h-4" />
+                    ) : (
+                      <VolumeX className="w-4 h-4" />
+                    )}
+                  </button>
+                  <button
+                    onClick={toggleChatbot}
+                    className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-white/20 rounded touch-manipulation"
+                    aria-label="Close chatbot"
+                  >
+                    <X className="w-4 h-4" />
                   </button>
                 </div>
-
-                {voiceRecognition.isListening && (
-                  <div className="mt-2 text-xs text-gray-500">
-                    🎤 Listening... (Confidence: {Math.round(voiceRecognition.confidence * 100)}%)
-                  </div>
-                )}
               </div>
             </div>
-          )}
-</div>
+
+            {/* Messages */}
+            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+              {chatState.messages.length === 0 ? (
+                <div className="flex items-center justify-center h-full">
+                  <EmptyState
+                    icon={MessageCircle}
+                    title="Ask me anything about Biology!"
+                    description="I can explain concepts, solve doubts, and help you understand difficult topics for NEET and school exams."
+                    size="sm"
+                    variant="default"
+                  />
+                </div>
+              ) : (
+                chatState.messages.map((message) => (
+                  <div
+                    key={message.id}
+                    className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+                  >
+                    <div
+                      className={`max-w-[70%] p-3 rounded-lg ${
+                        message.type === 'user'
+                          ? 'bg-blue-500 text-white'
+                          : 'bg-gray-100 text-gray-800'
+                      }`}
+                    >
+                      <div className="flex items-start space-x-2">
+                        {message.type === 'bot' && <Bot className="w-4 h-4 mt-1 text-green-600" />}
+                        <div className="flex-1">
+                          <p className="text-sm whitespace-pre-wrap">{message.content}</p>
+
+                          {/* Message actions */}
+                          {message.actions && message.actions.length > 0 && (
+                            <div className="mt-2 space-y-1">
+                              {message.actions.map((action, index) => (
+                                <button
+                                  key={index}
+                                  onClick={() => handleActionClick(action)}
+                                  className="flex items-center space-x-1 text-xs bg-blue-100 hover:bg-blue-200 text-blue-700 px-2 py-1 rounded transition-colors w-full"
+                                >
+                                  {action.icon}
+                                  <span>{action.label}</span>
+                                </button>
+                              ))}
+                            </div>
+                          )}
+
+                          {/* Response metadata */}
+                          {message.response && (
+                            <div className="mt-2 text-xs text-gray-500 space-y-1">
+                              <div className="flex items-center space-x-2">
+                                <Star className="w-3 h-3" />
+                                <span>
+                                  Confidence: {Math.round(message.response.confidence * 100)}%
+                                </span>
+                              </div>
+                              <div className="flex items-center space-x-2">
+                                <Clock className="w-3 h-3" />
+                                <span>Study time: {message.response.estimatedStudyTime} min</span>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))
+              )}
+
+              {chatState.isTyping && (
+                <div className="flex justify-start animate-fadeInUp">
+                  <div className="bg-gray-100 p-3 rounded-lg">
+                    <div className="flex items-center space-x-2">
+                      <Bot className="w-4 h-4 text-green-600" />
+                      <div className="flex space-x-1">
+                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-fadeInUp" />
+                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-fadeInUp" />
+                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-fadeInUp" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              <div ref={messagesEndRef} />
+            </div>
+
+            {/* Input */}
+            <div className="p-4 border-t border-gray-200 pb-safe-bottom">
+              <div className="flex items-center space-x-2">
+                <div className="flex-1 relative">
+                  <textarea
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    onKeyPress={handleKeyPress}
+                    placeholder="Ask me anything about Biology..."
+                    className="w-full p-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 text-base min-h-[48px]"
+                    rows={1}
+                  />
+
+                  {voiceRecognition.isSupported && (
+                    <button
+                      onClick={handleVoiceToggle}
+                      className={`absolute right-2 top-1/2 transform -translate-y-1/2 p-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded touch-manipulation ${
+                        voiceRecognition.isListening
+                          ? 'bg-red-100 text-red-500'
+                          : 'bg-gray-100 text-gray-500'
+                      }`}
+                      aria-label={
+                        voiceRecognition.isListening ? 'Stop voice input' : 'Start voice input'
+                      }
+                    >
+                      {voiceRecognition.isListening ? (
+                        <MicOff className="w-4 h-4" />
+                      ) : (
+                        <Mic className="w-4 h-4" />
+                      )}
+                    </button>
+                  )}
+                </div>
+
+                <button
+                  onClick={handleSendMessage}
+                  disabled={!inputValue.trim() || chatState.isTyping}
+                  className="bg-blue-500 text-white p-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors touch-manipulation animate-fadeInUp"
+                  aria-label="Send message"
+                >
+                  <Send className="w-4 h-4" />
+                </button>
+              </div>
+
+              {voiceRecognition.isListening && (
+                <div className="mt-2 text-xs text-gray-500">
+                  🎤 Listening... (Confidence: {Math.round(voiceRecognition.confidence * 100)}%)
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
     </AIErrorBoundary>
   )
 }

@@ -38,7 +38,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'IBO Preparation in Gurugram | International Biology Olympiad Coaching',
-    description: 'Expert IBO preparation in Gurugram (Gurgaon) for International Biology Olympiad. Advanced training for INBO qualifiers, practical skills, research paper analysis at Sector 51 center.',
+    description:
+      'Expert IBO preparation in Gurugram (Gurgaon) for International Biology Olympiad. Advanced training for INBO qualifiers, practical skills, research paper analysis at Sector 51 center.',
   },
 }
 
@@ -123,7 +124,11 @@ export default function IBOPreparationGurugramPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="ibo-preparation-gurugram" />
       <script

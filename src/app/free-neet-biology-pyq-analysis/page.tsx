@@ -6,11 +6,19 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'NEET Biology PYQ Analysis 2015-2025 | Free PDF',
-  description: 'Download free NEET Biology Previous Year Question analysis (2015-2025). Topic-wise breakdown, repeated questions, difficulty trends. AIIMS faculty analysis.',
-  keywords: ['NEET biology previous year questions', 'NEET PYQ analysis', 'NEET biology repeated questions', 'NEET biology trend analysis', 'NEET 2025 question paper analysis'],
+  description:
+    'Download free NEET Biology Previous Year Question analysis (2015-2025). Topic-wise breakdown, repeated questions, difficulty trends. AIIMS faculty analysis.',
+  keywords: [
+    'NEET biology previous year questions',
+    'NEET PYQ analysis',
+    'NEET biology repeated questions',
+    'NEET biology trend analysis',
+    'NEET 2025 question paper analysis',
+  ],
   openGraph: {
     title: 'NEET Biology PYQ Analysis 2015-2025 | Free PDF',
-    description: 'Download free NEET Biology Previous Year Question analysis (2015-2025). Topic-wise breakdown, repeated questions, difficulty trends. AIIMS faculty analysis.',
+    description:
+      'Download free NEET Biology Previous Year Question analysis (2015-2025). Topic-wise breakdown, repeated questions, difficulty trends. AIIMS faculty analysis.',
     url: `${BASE_URL}/free-neet-biology-pyq-analysis`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -19,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Free NEET Biology PYQ Analysis 2015-2025',
-    description: 'Download free NEET Biology Previous Year Question analysis (2015-2025). Topic-wise breakdown, repeated questions, diffic',
+    description:
+      'Download free NEET Biology Previous Year Question analysis (2015-2025). Topic-wise breakdown, repeated questions, diffic',
   },
   alternates: { canonical: `${BASE_URL}/free-neet-biology-pyq-analysis` },
 }
@@ -58,7 +67,11 @@ const faqSchema = {
 export default function FreeNeetBiologyPyqAnalysisPage() {
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <PageContent />
     </>
   )

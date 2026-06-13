@@ -124,13 +124,9 @@ export function OptimisticTestSubmission({
 
   if (data.status === 'submitted') {
     return (
-      <div
-        className="bg-green-600 rounded-2xl p-8 text-white shadow-2xl animate-fadeInUp"
-      >
+      <div className="bg-green-600 rounded-2xl p-8 text-white shadow-2xl animate-fadeInUp">
         <div className="text-center">
-          <div
-            className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 animate-fadeInUp"
-          >
+          <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 animate-fadeInUp">
             <CheckCircle className="w-12 h-12 text-green-600" />
           </div>
           <h2 className="text-3xl font-bold mb-2">Test Submitted!</h2>
@@ -156,9 +152,7 @@ export function OptimisticTestSubmission({
         <p className="text-gray-600">{answers.length} questions answered • Ready for submission</p>
       </div>
 
-      <div
-        className={`${status.bgColor} border-2 ${status.borderColor} rounded-xl p-4 mb-6`}
-      >
+      <div className={`${status.bgColor} border-2 ${status.borderColor} rounded-xl p-4 mb-6`}>
         <div className="flex items-center space-x-3">
           <StatusIcon
             className={`w-6 h-6 text-${status.color}-600 ${status.animate ? 'animate-spin' : ''}`}

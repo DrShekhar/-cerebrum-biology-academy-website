@@ -19,7 +19,16 @@ import {
   ChevronLeft,
   ChevronRight,
 } from 'lucide-react'
-import { format, startOfWeek, addDays, isSameDay, isToday, isPast, addWeeks, subWeeks } from 'date-fns'
+import {
+  format,
+  startOfWeek,
+  addDays,
+  isSameDay,
+  isToday,
+  isPast,
+  addWeeks,
+  subWeeks,
+} from 'date-fns'
 import { showToast } from '@/lib/toast'
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -41,12 +50,40 @@ interface ScheduledSession {
   priority: string
 }
 
-const typeConfig: Record<string, { icon: React.ReactNode; label: string; color: string; bg: string }> = {
-  COUNSELING: { icon: <User className="w-4 h-4" />, label: 'Counseling', color: 'text-indigo-700', bg: 'bg-indigo-50 border-indigo-200' },
-  DEMO: { icon: <Video className="w-4 h-4" />, label: 'Demo Class', color: 'text-purple-700', bg: 'bg-purple-50 border-purple-200' },
-  FOLLOW_UP: { icon: <Phone className="w-4 h-4" />, label: 'Follow-up', color: 'text-blue-700', bg: 'bg-blue-50 border-blue-200' },
-  PARENT_MEETING: { icon: <User className="w-4 h-4" />, label: 'Parent Meeting', color: 'text-amber-700', bg: 'bg-amber-50 border-amber-200' },
-  ASSESSMENT: { icon: <FileText className="w-4 h-4" />, label: 'Assessment', color: 'text-green-700', bg: 'bg-green-50 border-green-200' },
+const typeConfig: Record<
+  string,
+  { icon: React.ReactNode; label: string; color: string; bg: string }
+> = {
+  COUNSELING: {
+    icon: <User className="w-4 h-4" />,
+    label: 'Counseling',
+    color: 'text-indigo-700',
+    bg: 'bg-indigo-50 border-indigo-200',
+  },
+  DEMO: {
+    icon: <Video className="w-4 h-4" />,
+    label: 'Demo Class',
+    color: 'text-purple-700',
+    bg: 'bg-purple-50 border-purple-200',
+  },
+  FOLLOW_UP: {
+    icon: <Phone className="w-4 h-4" />,
+    label: 'Follow-up',
+    color: 'text-blue-700',
+    bg: 'bg-blue-50 border-blue-200',
+  },
+  PARENT_MEETING: {
+    icon: <User className="w-4 h-4" />,
+    label: 'Parent Meeting',
+    color: 'text-amber-700',
+    bg: 'bg-amber-50 border-amber-200',
+  },
+  ASSESSMENT: {
+    icon: <FileText className="w-4 h-4" />,
+    label: 'Assessment',
+    color: 'text-green-700',
+    bg: 'bg-green-50 border-green-200',
+  },
 }
 
 const modeIcons: Record<string, React.ReactNode> = {
@@ -130,7 +167,8 @@ function ScheduleSessionModal({
             type: type === 'DEMO' ? 'DEMO_REMINDER' : 'FOLLOW_UP',
             priority: 'HIGH',
             dueDate: scheduledAt,
-            description: notes || `Scheduled ${type.toLowerCase()} session (${duration}min, ${mode})`,
+            description:
+              notes || `Scheduled ${type.toLowerCase()} session (${duration}min, ${mode})`,
           }),
         })
         if (!taskRes.ok) throw new Error('Failed to schedule')
@@ -147,8 +185,7 @@ function ScheduleSessionModal({
 
   const filteredLeads = leads.filter(
     (l) =>
-      l.studentName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      l.phone.includes(searchTerm)
+      l.studentName.toLowerCase().includes(searchTerm.toLowerCase()) || l.phone.includes(searchTerm)
   )
 
   if (!isOpen) return null
@@ -159,7 +196,10 @@ function ScheduleSessionModal({
         <div className="p-6 border-b border-gray-100">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-bold text-gray-900">Schedule Session</h2>
-            <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+            <button
+              onClick={onClose}
+              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+            >
               <XCircle className="w-5 h-5 text-gray-400" />
             </button>
           </div>
@@ -282,7 +322,9 @@ function ScheduleSessionModal({
 
           {/* Notes */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">Preparation Notes</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              Preparation Notes
+            </label>
             <textarea
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
@@ -293,7 +335,10 @@ function ScheduleSessionModal({
         </div>
 
         <div className="p-6 border-t border-gray-100 flex justify-end gap-3">
-          <button onClick={onClose} className="px-4 py-2.5 text-sm text-gray-600 hover:text-gray-800 transition-colors">
+          <button
+            onClick={onClose}
+            className="px-4 py-2.5 text-sm text-gray-600 hover:text-gray-800 transition-colors"
+          >
             Cancel
           </button>
           <button
@@ -301,7 +346,11 @@ function ScheduleSessionModal({
             disabled={saving || !selectedLead || !date || !time}
             className="flex items-center gap-2 px-6 py-2.5 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-700 disabled:opacity-50 transition-colors"
           >
-            {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Calendar className="w-4 h-4" />}
+            {saving ? (
+              <Loader2 className="w-4 h-4 animate-spin" />
+            ) : (
+              <Calendar className="w-4 h-4" />
+            )}
             Schedule Session
           </button>
         </div>
@@ -373,7 +422,9 @@ export default function SchedulePage() {
       <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6 text-white">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-indigo-200 text-sm font-medium">Today, {format(new Date(), 'EEEE, MMMM d')}</p>
+            <p className="text-indigo-200 text-sm font-medium">
+              Today, {format(new Date(), 'EEEE, MMMM d')}
+            </p>
             <p className="text-3xl font-bold mt-1">{todayTasks.length} Sessions</p>
             <p className="text-indigo-200 text-sm mt-1">
               {todayTasks.filter((t) => t.status === 'COMPLETED').length} completed •{' '}
@@ -390,7 +441,9 @@ export default function SchedulePage() {
           <button
             onClick={() => setViewMode('week')}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-              viewMode === 'week' ? 'bg-indigo-600 text-white' : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
+              viewMode === 'week'
+                ? 'bg-indigo-600 text-white'
+                : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
             }`}
           >
             Week View
@@ -398,7 +451,9 @@ export default function SchedulePage() {
           <button
             onClick={() => setViewMode('list')}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-              viewMode === 'list' ? 'bg-indigo-600 text-white' : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
+              viewMode === 'list'
+                ? 'bg-indigo-600 text-white'
+                : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
             }`}
           >
             List View
@@ -443,9 +498,13 @@ export default function SchedulePage() {
                   isCurrentDay ? 'border-indigo-300 ring-1 ring-indigo-200' : 'border-gray-200'
                 }`}
               >
-                <div className={`text-center mb-3 pb-2 border-b ${isCurrentDay ? 'border-indigo-200' : 'border-gray-100'}`}>
+                <div
+                  className={`text-center mb-3 pb-2 border-b ${isCurrentDay ? 'border-indigo-200' : 'border-gray-100'}`}
+                >
                   <p className="text-xs text-gray-500 uppercase">{format(day, 'EEE')}</p>
-                  <p className={`text-lg font-bold ${isCurrentDay ? 'text-indigo-600' : 'text-gray-900'}`}>
+                  <p
+                    className={`text-lg font-bold ${isCurrentDay ? 'text-indigo-600' : 'text-gray-900'}`}
+                  >
                     {format(day, 'd')}
                   </p>
                 </div>
@@ -464,9 +523,12 @@ export default function SchedulePage() {
                               : 'bg-indigo-50 border-indigo-200 text-indigo-700'
                         }`}
                       >
-                        <p className="font-medium truncate">{task.lead?.studentName || task.title}</p>
+                        <p className="font-medium truncate">
+                          {task.lead?.studentName || task.title}
+                        </p>
                         <p className="text-[10px] opacity-75 mt-0.5">
-                          {format(new Date(task.dueDate), 'h:mm a')} • {task.type?.replace(/_/g, ' ')}
+                          {format(new Date(task.dueDate), 'h:mm a')} •{' '}
+                          {task.type?.replace(/_/g, ' ')}
                         </p>
                       </div>
                     ))
@@ -483,7 +545,9 @@ export default function SchedulePage() {
             <div className="bg-gray-50 rounded-xl p-12 text-center">
               <Calendar className="w-12 h-12 text-gray-300 mx-auto mb-3" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">No upcoming sessions</h3>
-              <p className="text-gray-500 mb-4">Schedule your first counseling session to get started</p>
+              <p className="text-gray-500 mb-4">
+                Schedule your first counseling session to get started
+              </p>
               <button
                 onClick={() => setShowScheduleModal(true)}
                 className="px-6 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-colors"
@@ -497,11 +561,13 @@ export default function SchedulePage() {
                 key={task.id}
                 className="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-4 hover:shadow-sm transition-shadow"
               >
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                  isToday(new Date(task.dueDate))
-                    ? 'bg-indigo-100 text-indigo-600'
-                    : 'bg-gray-100 text-gray-500'
-                }`}>
+                <div
+                  className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                    isToday(new Date(task.dueDate))
+                      ? 'bg-indigo-100 text-indigo-600'
+                      : 'bg-gray-100 text-gray-500'
+                  }`}
+                >
                   <Calendar className="w-5 h-5" />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -509,11 +575,15 @@ export default function SchedulePage() {
                     <p className="text-sm font-semibold text-gray-900">
                       {task.lead?.studentName || task.title}
                     </p>
-                    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${
-                      task.priority === 'URGENT' ? 'bg-red-100 text-red-700' :
-                      task.priority === 'HIGH' ? 'bg-orange-100 text-orange-700' :
-                      'bg-gray-100 text-gray-600'
-                    }`}>
+                    <span
+                      className={`text-xs px-2 py-0.5 rounded-full font-medium ${
+                        task.priority === 'URGENT'
+                          ? 'bg-red-100 text-red-700'
+                          : task.priority === 'HIGH'
+                            ? 'bg-orange-100 text-orange-700'
+                            : 'bg-gray-100 text-gray-600'
+                      }`}
+                    >
                       {task.priority}
                     </span>
                   </div>

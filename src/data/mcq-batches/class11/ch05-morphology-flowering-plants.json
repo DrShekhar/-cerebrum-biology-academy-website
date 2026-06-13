@@ -14,22 +14,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Pneumatophores are found in:",
-      "options": [
-        "Rhizophora",
-        "Sweet potato",
-        "Banyan",
-        "Turnip"
-      ],
+      "options": ["Rhizophora", "Sweet potato", "Banyan", "Turnip"],
       "correctAnswer": "A",
       "explanation": "Pneumatophores (breathing roots) are found in mangrove plants like Rhizophora. They grow vertically upward from the ground to help in gaseous exchange in waterlogged, anaerobic soil.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root",
-        "modifications",
-        "pneumatophores"
-      ],
+      "tags": ["root", "modifications", "pneumatophores"],
       "neetWeightage": "HIGH"
     },
     {
@@ -40,22 +31,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Phyllotaxy in which more than two leaves arise at a node is called:",
-      "options": [
-        "Alternate",
-        "Spiral",
-        "Whorled",
-        "Opposite"
-      ],
+      "options": ["Alternate", "Spiral", "Whorled", "Opposite"],
       "correctAnswer": "C",
       "explanation": "Whorled phyllotaxy is the arrangement in which more than two leaves arise at a node and form a whorl, as seen in Alstonia.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf",
-        "phyllotaxy",
-        "whorled"
-      ],
+      "tags": ["leaf", "phyllotaxy", "whorled"],
       "neetWeightage": "HIGH"
     },
     {
@@ -66,21 +48,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Which type of placentation is found in mustard and Argemone?",
-      "options": [
-        "Free central",
-        "Parietal",
-        "Basal",
-        "Axile"
-      ],
+      "options": ["Free central", "Parietal", "Basal", "Axile"],
       "correctAnswer": "B",
       "explanation": "Parietal placentation is found in mustard (Brassicaceae) and Argemone. In this type, the ovules develop on the inner wall of the ovary or on peripheral part, and the ovary is one-chambered but becomes two-chambered due to formation of a false septum.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "placentation",
-        "parietal"
-      ],
+      "tags": ["placentation", "parietal"],
       "neetWeightage": "HIGH"
     },
     {
@@ -91,22 +65,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Fibrous root system is characteristic of:",
-      "options": [
-        "Monocotyledons",
-        "Dicotyledons",
-        "Pteridophytes",
-        "Gymnosperms"
-      ],
+      "options": ["Monocotyledons", "Dicotyledons", "Pteridophytes", "Gymnosperms"],
       "correctAnswer": "A",
       "explanation": "Fibrous root system is characteristic of monocotyledons. In this system, the primary root is short-lived and is replaced by a large number of roots arising from the base of the stem.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root",
-        "fibrous-root",
-        "monocots"
-      ],
+      "tags": ["root", "fibrous-root", "monocots"],
       "neetWeightage": "HIGH"
     },
     {
@@ -128,10 +93,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "inflorescence",
-        "racemose"
-      ],
+      "tags": ["inflorescence", "racemose"],
       "neetWeightage": "HIGH"
     },
     {
@@ -142,22 +104,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Aestivation in which the margins of sepals or petals overlap one another but not in any particular direction is called:",
-      "options": [
-        "Twisted",
-        "Vexillary",
-        "Imbricate",
-        "Valvate"
-      ],
+      "options": ["Twisted", "Vexillary", "Imbricate", "Valvate"],
       "correctAnswer": "C",
       "explanation": "In imbricate aestivation, the margins of sepals or petals overlap one another but not in any definite direction. In twisted aestivation, one margin overlaps the next and so on.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "flower",
-        "aestivation",
-        "imbricate"
-      ],
+      "tags": ["flower", "aestivation", "imbricate"],
       "neetWeightage": "HIGH"
     },
     {
@@ -168,23 +121,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "In Fabaceae (pea family), the aestivation is:",
-      "options": [
-        "Imbricate",
-        "Valvate",
-        "Vexillary",
-        "Twisted"
-      ],
+      "options": ["Imbricate", "Valvate", "Vexillary", "Twisted"],
       "correctAnswer": "C",
       "explanation": "In Fabaceae, the corolla shows vexillary (descending imbricate) aestivation. The largest petal (standard/vexillum) overlaps the two lateral petals (wings/alae), which in turn overlap the two smallest anterior petals (keel/carina).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "flower",
-        "aestivation",
-        "vexillary",
-        "fabaceae"
-      ],
+      "tags": ["flower", "aestivation", "vexillary", "fabaceae"],
       "neetWeightage": "HIGH"
     },
     {
@@ -195,22 +138,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "The stem modification found in ginger is:",
-      "options": [
-        "Corm",
-        "Bulb",
-        "Tuber",
-        "Rhizome"
-      ],
+      "options": ["Corm", "Bulb", "Tuber", "Rhizome"],
       "correctAnswer": "D",
       "explanation": "Ginger has a rhizome, which is an underground stem that grows horizontally. It has nodes, internodes, and scale leaves. Other examples of rhizomes include turmeric and banana.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stem",
-        "modifications",
-        "rhizome"
-      ],
+      "tags": ["stem", "modifications", "rhizome"],
       "neetWeightage": "HIGH"
     },
     {
@@ -221,22 +155,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Marginal placentation is found in:",
-      "options": [
-        "Pea",
-        "Mustard",
-        "Sunflower",
-        "Primrose"
-      ],
+      "options": ["Pea", "Mustard", "Sunflower", "Primrose"],
       "correctAnswer": "A",
       "explanation": "Marginal placentation is found in pea (Pisum sativum), a member of Fabaceae. In marginal placentation, the placenta forms a ridge along the ventral suture of the ovary and the ovules are borne on this ridge.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "placentation",
-        "marginal",
-        "fabaceae"
-      ],
+      "tags": ["placentation", "marginal", "fabaceae"],
       "neetWeightage": "HIGH"
     },
     {
@@ -247,22 +172,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "The edible part of a coconut is:",
-      "options": [
-        "Epicarp",
-        "Mesocarp",
-        "Endocarp",
-        "Endosperm"
-      ],
+      "options": ["Epicarp", "Mesocarp", "Endocarp", "Endosperm"],
       "correctAnswer": "D",
       "explanation": "The edible part of coconut is the endosperm. The white flesh is the cellular endosperm and the coconut water is the liquid endosperm (nuclear endosperm).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fruit",
-        "coconut",
-        "endosperm"
-      ],
+      "tags": ["fruit", "coconut", "endosperm"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -273,22 +189,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Prop roots are found in:",
-      "options": [
-        "Maize",
-        "Banyan",
-        "Turnip",
-        "Sugarcane"
-      ],
+      "options": ["Maize", "Banyan", "Turnip", "Sugarcane"],
       "correctAnswer": "B",
       "explanation": "Prop roots (pillar roots) are found in the banyan tree (Ficus benghalensis). They arise from horizontal aerial branches and grow downward to the soil, providing additional support to the heavy branches.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root",
-        "modifications",
-        "prop-roots"
-      ],
+      "tags": ["root", "modifications", "prop-roots"],
       "neetWeightage": "HIGH"
     },
     {
@@ -310,11 +217,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf",
-        "compound-leaf",
-        "palmate"
-      ],
+      "tags": ["leaf", "compound-leaf", "palmate"],
       "neetWeightage": "HIGH"
     },
     {
@@ -325,22 +228,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Which of the following fruits is a drupe?",
-      "options": [
-        "Banana",
-        "Tomato",
-        "Mango",
-        "Grape"
-      ],
+      "options": ["Banana", "Tomato", "Mango", "Grape"],
       "correctAnswer": "C",
       "explanation": "Mango is a drupe, a type of simple fleshy fruit with a stony endocarp. The fruit wall is differentiated into an outer epicarp (skin), fleshy mesocarp (edible part), and hard stony endocarp (pit/stone).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fruit",
-        "drupe",
-        "mango"
-      ],
+      "tags": ["fruit", "drupe", "mango"],
       "neetWeightage": "HIGH"
     },
     {
@@ -351,22 +245,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Tendrils in Cucurbita (cucumber) are modifications of:",
-      "options": [
-        "Stipules",
-        "Roots",
-        "Leaves",
-        "Stems"
-      ],
+      "options": ["Stipules", "Roots", "Leaves", "Stems"],
       "correctAnswer": "D",
       "explanation": "In Cucurbita (cucumber family), the tendrils are modifications of stems. They arise from axillary buds and help the plant in climbing.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stem",
-        "modifications",
-        "tendrils"
-      ],
+      "tags": ["stem", "modifications", "tendrils"],
       "neetWeightage": "HIGH"
     },
     {
@@ -388,10 +273,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "solanaceae",
-        "floral-formula"
-      ],
+      "tags": ["solanaceae", "floral-formula"],
       "neetWeightage": "HIGH"
     },
     {
@@ -402,22 +284,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Stilt roots are found in:",
-      "options": [
-        "Banyan tree",
-        "Maize and sugarcane",
-        "Radish",
-        "Asparagus"
-      ],
+      "options": ["Banyan tree", "Maize and sugarcane", "Radish", "Asparagus"],
       "correctAnswer": "B",
       "explanation": "Stilt roots are adventitious roots that arise from the lower nodes of the stem and enter the soil obliquely to provide additional support. They are found in maize and sugarcane.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root",
-        "modifications",
-        "stilt-roots"
-      ],
+      "tags": ["root", "modifications", "stilt-roots"],
       "neetWeightage": "HIGH"
     },
     {
@@ -428,22 +301,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Which type of venation is found in monocotyledons?",
-      "options": [
-        "Reticulate",
-        "Parallel",
-        "Both reticulate and parallel",
-        "Neither"
-      ],
+      "options": ["Reticulate", "Parallel", "Both reticulate and parallel", "Neither"],
       "correctAnswer": "B",
       "explanation": "Parallel venation is characteristic of monocotyledons. In parallel venation, the veins run parallel to each other within the lamina. Examples include grass, maize, and bamboo.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf",
-        "venation",
-        "parallel"
-      ],
+      "tags": ["leaf", "venation", "parallel"],
       "neetWeightage": "HIGH"
     },
     {
@@ -454,22 +318,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "In Fabaceae, the stamens are:",
-      "options": [
-        "Diadelphous",
-        "Polyadelphous",
-        "Monadelphous",
-        "Free"
-      ],
+      "options": ["Diadelphous", "Polyadelphous", "Monadelphous", "Free"],
       "correctAnswer": "A",
       "explanation": "In Fabaceae (Papilionaceae), the stamens are diadelphous, meaning they are united into two bundles. Typically, 9 stamens are fused and 1 stamen is free (9)+1 arrangement.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fabaceae",
-        "stamens",
-        "diadelphous"
-      ],
+      "tags": ["fabaceae", "stamens", "diadelphous"],
       "neetWeightage": "HIGH"
     },
     {
@@ -480,21 +335,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Free central placentation is found in:",
-      "options": [
-        "Pea",
-        "Dianthus and Primrose",
-        "China rose",
-        "Sunflower"
-      ],
+      "options": ["Pea", "Dianthus and Primrose", "China rose", "Sunflower"],
       "correctAnswer": "B",
       "explanation": "Free central placentation is found in Dianthus, Primrose (Primula), and other members of Caryophyllaceae and Primulaceae. In this type, ovules are borne on the central axis without any septum.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "placentation",
-        "free-central"
-      ],
+      "tags": ["placentation", "free-central"],
       "neetWeightage": "HIGH"
     },
     {
@@ -505,22 +352,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "The underground stem modification in potato is:",
-      "options": [
-        "Rhizome",
-        "Corm",
-        "Bulb",
-        "Tuber"
-      ],
+      "options": ["Rhizome", "Corm", "Bulb", "Tuber"],
       "correctAnswer": "D",
       "explanation": "Potato has stem tubers. The stem branches grow underground, swell at the tips and form tubers. The 'eyes' of the potato are nodes with axillary buds.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stem",
-        "modifications",
-        "tuber"
-      ],
+      "tags": ["stem", "modifications", "tuber"],
       "neetWeightage": "HIGH"
     },
     {
@@ -531,22 +369,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Epipetalous stamens are found in:",
-      "options": [
-        "Fabaceae",
-        "Solanaceae",
-        "Brassicaceae",
-        "Liliaceae"
-      ],
+      "options": ["Fabaceae", "Solanaceae", "Brassicaceae", "Liliaceae"],
       "correctAnswer": "B",
       "explanation": "In Solanaceae, the stamens are epipetalous, meaning they are attached to the petals. There are 5 stamens alternating with the petals.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "solanaceae",
-        "stamens",
-        "epipetalous"
-      ],
+      "tags": ["solanaceae", "stamens", "epipetalous"],
       "neetWeightage": "HIGH"
     },
     {
@@ -568,10 +397,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "inflorescence",
-        "cymose"
-      ],
+      "tags": ["inflorescence", "cymose"],
       "neetWeightage": "HIGH"
     },
     {
@@ -593,11 +419,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "liliaceae",
-        "perianth",
-        "tepals"
-      ],
+      "tags": ["liliaceae", "perianth", "tepals"],
       "neetWeightage": "HIGH"
     },
     {
@@ -608,22 +430,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "A flower that can be divided into two equal halves only in one plane is called:",
-      "options": [
-        "Zygomorphic",
-        "Actinomorphic",
-        "Asymmetric",
-        "Incomplete"
-      ],
+      "options": ["Zygomorphic", "Actinomorphic", "Asymmetric", "Incomplete"],
       "correctAnswer": "A",
       "explanation": "A zygomorphic (bilateral symmetry) flower can be divided into two equal halves only in one vertical plane. Examples include pea, bean, and Cassia. Actinomorphic flowers can be divided into equal halves in any radial plane.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "flower",
-        "symmetry",
-        "zygomorphic"
-      ],
+      "tags": ["flower", "symmetry", "zygomorphic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -634,22 +447,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Sweet potato is a modification of:",
-      "options": [
-        "Tap root",
-        "Adventitious root",
-        "Stem",
-        "Leaf"
-      ],
+      "options": ["Tap root", "Adventitious root", "Stem", "Leaf"],
       "correctAnswer": "B",
       "explanation": "Sweet potato (Ipomoea batatas) is a modification of adventitious roots for food storage. Unlike potato, which is a stem tuber, sweet potato is a root tuber. It lacks nodes and internodes.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root",
-        "modifications",
-        "adventitious-root"
-      ],
+      "tags": ["root", "modifications", "adventitious-root"],
       "neetWeightage": "HIGH"
     },
     {
@@ -660,21 +464,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Axile placentation is found in:",
-      "options": [
-        "China rose and tomato",
-        "Mustard",
-        "Pea",
-        "Sunflower"
-      ],
+      "options": ["China rose and tomato", "Mustard", "Pea", "Sunflower"],
       "correctAnswer": "A",
       "explanation": "Axile placentation is found in China rose (Hibiscus), tomato, lemon, and other plants with syncarpous ovary having septa. The ovules are borne on the central axis where septa meet.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "placentation",
-        "axile"
-      ],
+      "tags": ["placentation", "axile"],
       "neetWeightage": "HIGH"
     },
     {
@@ -685,22 +481,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Bulb is a type of stem modification found in:",
-      "options": [
-        "Potato",
-        "Ginger",
-        "Colocasia",
-        "Onion"
-      ],
+      "options": ["Potato", "Ginger", "Colocasia", "Onion"],
       "correctAnswer": "D",
       "explanation": "Onion and garlic have bulbs, which are underground stem modifications. A bulb has a short disc-like stem surrounded by fleshy scale leaves that store food. The stem is highly reduced.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stem",
-        "modifications",
-        "bulb"
-      ],
+      "tags": ["stem", "modifications", "bulb"],
       "neetWeightage": "HIGH"
     },
     {
@@ -722,10 +509,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fruit",
-        "aggregate-fruit"
-      ],
+      "tags": ["fruit", "aggregate-fruit"],
       "neetWeightage": "HIGH"
     },
     {
@@ -736,22 +520,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Thorns are modified stems found in:",
-      "options": [
-        "Bougainvillea and Citrus",
-        "Pea",
-        "Barberry",
-        "Australian Acacia"
-      ],
+      "options": ["Bougainvillea and Citrus", "Pea", "Barberry", "Australian Acacia"],
       "correctAnswer": "A",
       "explanation": "In Bougainvillea and Citrus, thorns are stem modifications that arise in the axil of leaves. They are woody, pointed, and help in protection. In contrast, the spines of Barberry are leaf modifications.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stem",
-        "modifications",
-        "thorns"
-      ],
+      "tags": ["stem", "modifications", "thorns"],
       "neetWeightage": "HIGH"
     },
     {
@@ -762,22 +537,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "The corm is a stem modification found in:",
-      "options": [
-        "Onion",
-        "Potato",
-        "Colocasia",
-        "Ginger"
-      ],
+      "options": ["Onion", "Potato", "Colocasia", "Ginger"],
       "correctAnswer": "C",
       "explanation": "Colocasia (arbi/taro) has a corm, which is a short, swollen underground stem that grows vertically and stores food. It has distinct nodes and internodes, with scale leaves at nodes.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stem",
-        "modifications",
-        "corm"
-      ],
+      "tags": ["stem", "modifications", "corm"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -788,22 +554,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Valvate aestivation is found in:",
-      "options": [
-        "China rose",
-        "Pea",
-        "Calotropis",
-        "Cassia"
-      ],
+      "options": ["China rose", "Pea", "Calotropis", "Cassia"],
       "correctAnswer": "C",
       "explanation": "In valvate aestivation, the margins of sepals or petals just touch each other without overlapping. This is found in Calotropis. China rose shows twisted aestivation, pea shows vexillary, and Cassia shows imbricate.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "flower",
-        "aestivation",
-        "valvate"
-      ],
+      "tags": ["flower", "aestivation", "valvate"],
       "neetWeightage": "HIGH"
     },
     {
@@ -814,22 +571,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "In a seed, the outer covering derived from the integuments is called:",
-      "options": [
-        "Pericarp",
-        "Endosperm",
-        "Testa",
-        "Cotyledon"
-      ],
+      "options": ["Pericarp", "Endosperm", "Testa", "Cotyledon"],
       "correctAnswer": "C",
       "explanation": "The seed coat is derived from the integuments of the ovule. The outer seed coat is called testa and the inner is called tegmen. They protect the embryo within.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "seed",
-        "testa",
-        "seed-coat"
-      ],
+      "tags": ["seed", "testa", "seed-coat"],
       "neetWeightage": "HIGH"
     },
     {
@@ -840,22 +588,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Phylloclades (flattened photosynthetic stems) are found in:",
-      "options": [
-        "Onion",
-        "Opuntia",
-        "Bougainvillea",
-        "Ginger"
-      ],
+      "options": ["Onion", "Opuntia", "Bougainvillea", "Ginger"],
       "correctAnswer": "B",
       "explanation": "In Opuntia (prickly pear cactus), the stem is modified into flattened, green, photosynthetic structures called phylloclades. The leaves are reduced to spines to reduce water loss.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stem",
-        "modifications",
-        "phylloclade"
-      ],
+      "tags": ["stem", "modifications", "phylloclade"],
       "neetWeightage": "HIGH"
     },
     {
@@ -866,22 +605,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "The placentation in Solanaceae is:",
-      "options": [
-        "Axile",
-        "Free central",
-        "Parietal",
-        "Marginal"
-      ],
+      "options": ["Axile", "Free central", "Parietal", "Marginal"],
       "correctAnswer": "A",
       "explanation": "The placentation in Solanaceae is axile. The ovary is bilocular (two-chambered) with a swollen placenta bearing many ovules.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "solanaceae",
-        "placentation",
-        "axile"
-      ],
+      "tags": ["solanaceae", "placentation", "axile"],
       "neetWeightage": "HIGH"
     },
     {
@@ -892,22 +622,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Which modification of tap root is found in turnip?",
-      "options": [
-        "Tuberous",
-        "Napiform",
-        "Fusiform",
-        "Conical"
-      ],
+      "options": ["Tuberous", "Napiform", "Fusiform", "Conical"],
       "correctAnswer": "B",
       "explanation": "Turnip has a napiform root, which is roughly spherical at the top and suddenly tapers at the lower end. Carrot has a conical root, and radish has a fusiform root.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root",
-        "modifications",
-        "napiform"
-      ],
+      "tags": ["root", "modifications", "napiform"],
       "neetWeightage": "HIGH"
     },
     {
@@ -918,22 +639,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Twisted or contorted aestivation is found in:",
-      "options": [
-        "China rose",
-        "Pea",
-        "Calotropis",
-        "Mustard"
-      ],
+      "options": ["China rose", "Pea", "Calotropis", "Mustard"],
       "correctAnswer": "A",
       "explanation": "Twisted (contorted) aestivation is found in China rose (Hibiscus). In this type, one margin of each petal overlaps the margin of the adjacent petal regularly, so that each petal has one margin overlapping and the other overlapped.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "flower",
-        "aestivation",
-        "twisted"
-      ],
+      "tags": ["flower", "aestivation", "twisted"],
       "neetWeightage": "HIGH"
     },
     {
@@ -944,22 +656,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "The flattened leaf-like petiole that performs photosynthesis is called:",
-      "options": [
-        "Cladophyll",
-        "Cladode",
-        "Phylloclade",
-        "Phyllode"
-      ],
+      "options": ["Cladophyll", "Cladode", "Phylloclade", "Phyllode"],
       "correctAnswer": "D",
       "explanation": "A phyllode is a modified flattened petiole that takes over the function of photosynthesis. It is found in Australian Acacia, where the lamina is reduced or absent.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf",
-        "modifications",
-        "phyllode"
-      ],
+      "tags": ["leaf", "modifications", "phyllode"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -970,21 +673,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "The scar left on the seed after the stalk (funicle) detaches is called:",
-      "options": [
-        "Raphe",
-        "Micropyle",
-        "Chalaza",
-        "Hilum"
-      ],
+      "options": ["Raphe", "Micropyle", "Chalaza", "Hilum"],
       "correctAnswer": "D",
       "explanation": "The hilum is the scar on the seed coat through which the developing seed was attached to the fruit via the funicle (stalk). It marks the point of attachment of the seed to the fruit.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "seed",
-        "hilum"
-      ],
+      "tags": ["seed", "hilum"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1006,11 +701,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stem",
-        "modifications",
-        "potato"
-      ],
+      "tags": ["stem", "modifications", "potato"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1032,11 +723,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf",
-        "modifications",
-        "tendrils"
-      ],
+      "tags": ["leaf", "modifications", "tendrils"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1058,11 +745,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fabaceae",
-        "placentation",
-        "marginal"
-      ],
+      "tags": ["fabaceae", "placentation", "marginal"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1084,11 +767,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "solanaceae",
-        "flower",
-        "actinomorphic"
-      ],
+      "tags": ["solanaceae", "flower", "actinomorphic"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1110,12 +789,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root",
-        "modifications",
-        "prop-roots",
-        "banyan"
-      ],
+      "tags": ["root", "modifications", "prop-roots", "banyan"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1137,12 +811,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stem",
-        "leaf",
-        "modifications",
-        "opuntia"
-      ],
+      "tags": ["stem", "leaf", "modifications", "opuntia"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1164,11 +833,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "liliaceae",
-        "stamens",
-        "trimerous"
-      ],
+      "tags": ["liliaceae", "stamens", "trimerous"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1190,11 +855,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root",
-        "modifications",
-        "fusiform"
-      ],
+      "tags": ["root", "modifications", "fusiform"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1216,10 +877,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fruit",
-        "composite-fruit"
-      ],
+      "tags": ["fruit", "composite-fruit"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1241,11 +899,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root",
-        "fibrous-root",
-        "maize"
-      ],
+      "tags": ["root", "fibrous-root", "maize"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1267,11 +921,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf",
-        "phyllotaxy",
-        "alternate"
-      ],
+      "tags": ["leaf", "phyllotaxy", "alternate"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1293,11 +943,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf",
-        "modifications",
-        "pitcher-plant"
-      ],
+      "tags": ["leaf", "modifications", "pitcher-plant"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1319,11 +965,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "flower",
-        "perigynous",
-        "half-inferior"
-      ],
+      "tags": ["flower", "perigynous", "half-inferior"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1334,21 +976,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Consider the following statements about root modifications:\n(i) Carrot has a conical root.\n(ii) Radish has a fusiform root.\n(iii) Turnip has a napiform root.\n(iv) Sweet potato has a modified tap root.\nHow many statements are correct?",
-      "options": [
-        "Two",
-        "One",
-        "Four",
-        "Three"
-      ],
+      "options": ["Two", "One", "Four", "Three"],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), and (iii) are correct. Carrot is conical, radish is fusiform, and turnip is napiform. Statement (iv) is incorrect because sweet potato is a modification of adventitious roots, not tap root.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root",
-        "modifications"
-      ],
+      "tags": ["root", "modifications"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1359,21 +993,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Which of the following statements about Fabaceae is INCORRECT?\n(i) Flowers are zygomorphic.\n(ii) Corolla is papilionaceous.\n(iii) Stamens are monadelphous.\n(iv) Fruit is a legume or pod.",
-      "options": [
-        "(i) only",
-        "(iii) only",
-        "(i) and (iv)",
-        "(ii) and (iii)"
-      ],
+      "options": ["(i) only", "(iii) only", "(i) and (iv)", "(ii) and (iii)"],
       "correctAnswer": "B",
       "explanation": "Statement (iii) is incorrect. In Fabaceae (Papilionaceae), the stamens are diadelphous (9+1), not monadelphous. Statements (i), (ii), and (iv) are all correct features of Fabaceae.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fabaceae",
-        "characteristics"
-      ],
+      "tags": ["fabaceae", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1384,21 +1010,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Read the following statements about Solanaceae:\nStatement I: Flowers are actinomorphic and bisexual.\nStatement II: Calyx and corolla are each five-lobed and fused.\nStatement III: Ovary is tricarpellary and trilocular.\nWhich statements are correct?",
-      "options": [
-        "I and II only",
-        "I, II, and III",
-        "I only",
-        "II and III only"
-      ],
+      "options": ["I and II only", "I, II, and III", "I only", "II and III only"],
       "correctAnswer": "A",
       "explanation": "Statements I and II are correct. Solanaceae flowers are actinomorphic, bisexual, with 5 fused sepals and 5 fused petals. Statement III is incorrect; the ovary is bicarpellary (two carpels) and bilocular (two-chambered), not tricarpellary.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "solanaceae",
-        "characteristics"
-      ],
+      "tags": ["solanaceae", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1420,11 +1038,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stem",
-        "modifications",
-        "underground"
-      ],
+      "tags": ["stem", "modifications", "underground"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1435,21 +1049,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "How many of the following statements about Liliaceae are correct?\n(i) Plants are mostly perennial herbs with bulbs or rhizomes.\n(ii) Flowers have 6 tepals in two whorls.\n(iii) Ovary is superior and tricarpellary.\n(iv) The fruit is usually a capsule or berry.\n(v) Leaves show reticulate venation.",
-      "options": [
-        "Five",
-        "Two",
-        "Three",
-        "Four"
-      ],
+      "options": ["Five", "Two", "Three", "Four"],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), (iii), and (iv) are correct. Statement (v) is incorrect because Liliaceae, being monocots, show parallel venation, not reticulate venation.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "liliaceae",
-        "characteristics"
-      ],
+      "tags": ["liliaceae", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1471,10 +1077,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "inflorescence",
-        "types"
-      ],
+      "tags": ["inflorescence", "types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1485,21 +1088,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Select the INCORRECT statement about seed structure:\n(i) The hilum is the point where the seed is attached to the fruit.\n(ii) The micropyle is a small pore for water absorption.\n(iii) The embryo consists of radicle, plumule, and cotyledons.\n(iv) Endosperm is always present in mature seeds.",
-      "options": [
-        "(ii) and (iv)",
-        "(i) only",
-        "(iv) only",
-        "(iii) only"
-      ],
+      "options": ["(ii) and (iv)", "(i) only", "(iv) only", "(iii) only"],
       "correctAnswer": "C",
       "explanation": "Statement (iv) is incorrect. Endosperm is not always present in mature seeds. In non-endospermic (exalbuminous) seeds like pea and bean, the endosperm is consumed during seed development and food is stored in cotyledons.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "seed",
-        "structure"
-      ],
+      "tags": ["seed", "structure"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1510,21 +1105,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Read the following statements about placentation:\nI. Marginal: ovules on ventral suture (e.g., pea)\nII. Axile: ovules on central axis of multilocular ovary (e.g., tomato)\nIII. Parietal: ovules on inner wall of ovary (e.g., mustard)\nIV. Basal: single ovule at the base (e.g., sunflower)\nHow many are correct?",
-      "options": [
-        "Four",
-        "Three",
-        "One",
-        "Two"
-      ],
+      "options": ["Four", "Three", "One", "Two"],
       "correctAnswer": "A",
       "explanation": "All four statements correctly describe the respective types of placentation with accurate examples. Marginal in pea, axile in tomato, parietal in mustard, and basal in sunflower (Compositae) are all correctly matched.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "placentation",
-        "types"
-      ],
+      "tags": ["placentation", "types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1535,21 +1122,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Which of the following statements about leaf modifications is INCORRECT?\n(i) Tendrils of pea are modified leaflets.\n(ii) Spines of Opuntia are modified leaves.\n(iii) The pitcher of Nepenthes is a modified leaf.\n(iv) Phyllode of Australian Acacia is a modified stipule.",
-      "options": [
-        "(i) and (iii)",
-        "(iv) only",
-        "(ii) only",
-        "(ii) and (iv)"
-      ],
+      "options": ["(i) and (iii)", "(iv) only", "(ii) only", "(ii) and (iv)"],
       "correctAnswer": "B",
       "explanation": "Statement (iv) is incorrect. The phyllode of Australian Acacia is a modified petiole (not stipule) that becomes flattened and green to perform photosynthesis. Statements (i), (ii), and (iii) are correct.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf",
-        "modifications"
-      ],
+      "tags": ["leaf", "modifications"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1571,11 +1150,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "seed",
-        "monocot",
-        "structure"
-      ],
+      "tags": ["seed", "monocot", "structure"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1586,22 +1161,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "How many of the following represent stem modifications?\n(i) Potato (ii) Ginger (iii) Sweet potato (iv) Onion (v) Colocasia (vi) Carrot",
-      "options": [
-        "Five",
-        "Four",
-        "Three",
-        "Two"
-      ],
+      "options": ["Five", "Four", "Three", "Two"],
       "correctAnswer": "B",
       "explanation": "Potato (tuber), Ginger (rhizome), Onion (bulb), and Colocasia (corm) are stem modifications. Sweet potato and Carrot are root modifications, not stem modifications.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stem",
-        "root",
-        "modifications"
-      ],
+      "tags": ["stem", "root", "modifications"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1623,10 +1189,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stem",
-        "modifications"
-      ],
+      "tags": ["stem", "modifications"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1648,11 +1211,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "placentation",
-        "types",
-        "examples"
-      ],
+      "tags": ["placentation", "types", "examples"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1674,10 +1233,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root",
-        "modifications"
-      ],
+      "tags": ["root", "modifications"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1699,10 +1255,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "flower",
-        "aestivation"
-      ],
+      "tags": ["flower", "aestivation"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1713,21 +1266,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Match the family with its fruit type:\nColumn I: (a) Fabaceae (b) Solanaceae (c) Liliaceae\nColumn II: (i) Capsule or berry (ii) Legume or pod (iii) Berry or capsule",
-      "options": [
-        "a-iii, b-ii, c-i",
-        "a-i, b-iii, c-ii",
-        "a-ii, b-iii, c-i",
-        "a-ii, b-i, c-iii"
-      ],
+      "options": ["a-iii, b-ii, c-i", "a-i, b-iii, c-ii", "a-ii, b-iii, c-i", "a-ii, b-i, c-iii"],
       "correctAnswer": "C",
       "explanation": "Fabaceae produces legumes or pods. Solanaceae produces berries or capsules. Liliaceae produces capsules or berries.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "families",
-        "fruit-types"
-      ],
+      "tags": ["families", "fruit-types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1749,11 +1294,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf",
-        "modifications",
-        "functions"
-      ],
+      "tags": ["leaf", "modifications", "functions"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1775,11 +1316,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "inflorescence",
-        "types",
-        "examples"
-      ],
+      "tags": ["inflorescence", "types", "examples"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1790,21 +1327,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Match the families with their key androecium features:\nColumn I: (a) Fabaceae (b) Solanaceae (c) Liliaceae\nColumn II: (i) 6 stamens in two whorls (3+3) (ii) Diadelphous (9)+1 (iii) 5 epipetalous stamens",
-      "options": [
-        "a-ii, b-i, c-iii",
-        "a-ii, b-iii, c-i",
-        "a-i, b-iii, c-ii",
-        "a-iii, b-ii, c-i"
-      ],
+      "options": ["a-ii, b-i, c-iii", "a-ii, b-iii, c-i", "a-i, b-iii, c-ii", "a-iii, b-ii, c-i"],
       "correctAnswer": "B",
       "explanation": "Fabaceae has diadelphous (9)+1 stamens. Solanaceae has 5 epipetalous stamens. Liliaceae has 6 stamens in two whorls of 3 each.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "families",
-        "androecium"
-      ],
+      "tags": ["families", "androecium"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1815,21 +1344,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Match the following terms with their descriptions:\nColumn I: (a) Hypogynous (b) Perigynous (c) Epigynous\nColumn II: (i) Ovary is inferior (ii) Ovary is superior (iii) Ovary is half-inferior",
-      "options": [
-        "a-iii, b-i, c-ii",
-        "a-ii, b-i, c-iii",
-        "a-ii, b-iii, c-i",
-        "a-i, b-ii, c-iii"
-      ],
+      "options": ["a-iii, b-i, c-ii", "a-ii, b-i, c-iii", "a-ii, b-iii, c-i", "a-i, b-ii, c-iii"],
       "correctAnswer": "C",
       "explanation": "In hypogynous flowers, the ovary is superior (e.g., mustard, China rose). In perigynous flowers, the ovary is half-inferior (e.g., plum, rose). In epigynous flowers, the ovary is inferior (e.g., sunflower, apple).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "flower",
-        "ovary-position"
-      ],
+      "tags": ["flower", "ovary-position"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1851,10 +1372,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "families",
-        "examples"
-      ],
+      "tags": ["families", "examples"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1876,11 +1394,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fruit",
-        "types",
-        "examples"
-      ],
+      "tags": ["fruit", "types", "examples"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1891,21 +1405,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "How many of the following are root modifications?\nPneumatophores, Prop roots, Stilt roots, Rhizome, Bulb, Tuberous roots, Nodular roots",
-      "options": [
-        "Four",
-        "Three",
-        "Five",
-        "Six"
-      ],
+      "options": ["Four", "Three", "Five", "Six"],
       "correctAnswer": "C",
       "explanation": "Pneumatophores, prop roots, stilt roots, tuberous roots, and nodular roots are all root modifications. Rhizome and bulb are stem modifications, not root modifications.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root",
-        "modifications"
-      ],
+      "tags": ["root", "modifications"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1916,21 +1422,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "How many of the following plants belong to Solanaceae?\nTomato, Potato, Brinjal, Petunia, Pea, Onion, Tobacco, Datura, Chilli",
-      "options": [
-        "Four",
-        "Six",
-        "Seven",
-        "Five"
-      ],
+      "options": ["Four", "Six", "Seven", "Five"],
       "correctAnswer": "C",
       "explanation": "Tomato, Potato, Brinjal (eggplant), Petunia, Tobacco (Nicotiana), Datura, and Chilli (Capsicum) all belong to Solanaceae. Pea belongs to Fabaceae and Onion to Liliaceae.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "solanaceae",
-        "examples"
-      ],
+      "tags": ["solanaceae", "examples"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1941,21 +1439,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "How many types of placentation are described in NCERT for flowering plants?\nMarginal, Axile, Parietal, Free central, Basal, Superficial",
-      "options": [
-        "Four",
-        "Five",
-        "Three",
-        "Six"
-      ],
+      "options": ["Four", "Five", "Three", "Six"],
       "correctAnswer": "B",
       "explanation": "NCERT describes five types of placentation: Marginal (e.g., pea), Axile (e.g., china rose), Parietal (e.g., mustard), Free central (e.g., Dianthus), and Basal (e.g., sunflower). Superficial is not a standard NCERT type.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "placentation",
-        "types"
-      ],
+      "tags": ["placentation", "types"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1966,21 +1456,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "How many of the following are leaf modifications?\n(i) Tendrils in pea (ii) Spines in cactus (iii) Thorns in Bougainvillea (iv) Pitcher in Nepenthes (v) Phyllode in Acacia (vi) Bladder in Utricularia",
-      "options": [
-        "Three",
-        "Six",
-        "Four",
-        "Five"
-      ],
+      "options": ["Three", "Six", "Four", "Five"],
       "correctAnswer": "D",
       "explanation": "Tendrils in pea, spines in cactus, pitcher in Nepenthes, phyllode in Acacia, and bladder in Utricularia are leaf modifications. Thorns in Bougainvillea are stem modifications, not leaf modifications.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf",
-        "modifications"
-      ],
+      "tags": ["leaf", "modifications"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1991,21 +1473,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "How many whorls are present in a typical complete flower?",
-      "options": [
-        "Three",
-        "Two",
-        "Four",
-        "Five"
-      ],
+      "options": ["Three", "Two", "Four", "Five"],
       "correctAnswer": "C",
       "explanation": "A typical complete flower has four whorls: Calyx (sepals), Corolla (petals), Androecium (stamens), and Gynoecium (carpels). These are arranged on the thalamus.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "flower",
-        "whorls"
-      ],
+      "tags": ["flower", "whorls"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2016,21 +1490,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "How many of the following are features of Fabaceae?\n(i) Zygomorphic flowers (ii) Papilionaceous corolla (iii) Diadelphous stamens (iv) Marginal placentation (v) Fruit is a legume (vi) Superior ovary",
-      "options": [
-        "Five",
-        "Three",
-        "Six",
-        "Four"
-      ],
+      "options": ["Five", "Three", "Six", "Four"],
       "correctAnswer": "C",
       "explanation": "All six features are characteristic of Fabaceae (Papilionaceae): zygomorphic flowers, papilionaceous corolla (with standard, wings, and keel), diadelphous stamens (9+1), marginal placentation, fruit is a legume, and the ovary is superior.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fabaceae",
-        "features"
-      ],
+      "tags": ["fabaceae", "features"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2041,21 +1507,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "How many of the following are examples of Liliaceae?\nOnion, Garlic, Asparagus, Aloe, Colchicum, Tomato, Potato, Gloriosa",
-      "options": [
-        "Seven",
-        "Four",
-        "Five",
-        "Six"
-      ],
+      "options": ["Seven", "Four", "Five", "Six"],
       "correctAnswer": "D",
       "explanation": "Onion (Allium cepa), Garlic (Allium sativum), Asparagus, Aloe, Colchicum, and Gloriosa all belong to Liliaceae. Tomato and Potato belong to Solanaceae.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "liliaceae",
-        "examples"
-      ],
+      "tags": ["liliaceae", "examples"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2077,11 +1535,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "flower",
-        "whorls",
-        "sequence"
-      ],
+      "tags": ["flower", "whorls", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2103,11 +1557,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "flower",
-        "stamen",
-        "parts"
-      ],
+      "tags": ["flower", "stamen", "parts"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2129,11 +1579,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "seed",
-        "structure",
-        "layers"
-      ],
+      "tags": ["seed", "structure", "layers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2155,11 +1601,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root",
-        "regions",
-        "zones"
-      ],
+      "tags": ["root", "regions", "zones"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2181,11 +1623,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fabaceae",
-        "corolla",
-        "papilionaceous"
-      ],
+      "tags": ["fabaceae", "corolla", "papilionaceous"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2207,11 +1645,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fruit",
-        "drupe",
-        "layers"
-      ],
+      "tags": ["fruit", "drupe", "layers"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2233,11 +1667,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "seed",
-        "germination",
-        "sequence"
-      ],
+      "tags": ["seed", "germination", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2248,23 +1678,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Nodular roots containing nitrogen-fixing bacteria (Rhizobium) are found in:",
-      "options": [
-        "Fabaceae (legumes)",
-        "Liliaceae",
-        "Solanaceae",
-        "Poaceae"
-      ],
+      "options": ["Fabaceae (legumes)", "Liliaceae", "Solanaceae", "Poaceae"],
       "correctAnswer": "A",
       "explanation": "Nodular roots are found in leguminous plants (Fabaceae). The root nodules harbour nitrogen-fixing bacteria Rhizobium which converts atmospheric nitrogen into ammonia, making it available to the plant.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root",
-        "modifications",
-        "nodular-roots",
-        "fabaceae"
-      ],
+      "tags": ["root", "modifications", "nodular-roots", "fabaceae"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2275,22 +1695,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "The runners in grass are modifications of:",
-      "options": [
-        "Stem",
-        "Leaf",
-        "Flower",
-        "Root"
-      ],
+      "options": ["Stem", "Leaf", "Flower", "Root"],
       "correctAnswer": "A",
       "explanation": "Runners are sub-aerial stem modifications that grow horizontally along the soil surface. They have nodes from which roots and aerial shoots develop. Examples include grass (Cynodon), Oxalis, and Centella.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stem",
-        "modifications",
-        "runner"
-      ],
+      "tags": ["stem", "modifications", "runner"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2301,21 +1712,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "A flower with both androecium and gynoecium is called:",
-      "options": [
-        "Bisexual",
-        "Naked",
-        "Incomplete",
-        "Unisexual"
-      ],
+      "options": ["Bisexual", "Naked", "Incomplete", "Unisexual"],
       "correctAnswer": "A",
       "explanation": "A bisexual (hermaphrodite or perfect) flower contains both male (androecium/stamens) and female (gynoecium/carpels) reproductive organs. Examples include mustard, rose, and pea.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "flower",
-        "bisexual"
-      ],
+      "tags": ["flower", "bisexual"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2326,22 +1729,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "When carpels are free from each other, the condition is called:",
-      "options": [
-        "Apocarpous",
-        "Polycarpous",
-        "Syncarpous",
-        "Monocarpous"
-      ],
+      "options": ["Apocarpous", "Polycarpous", "Syncarpous", "Monocarpous"],
       "correctAnswer": "A",
       "explanation": "When the carpels of a gynoecium are free from each other (not fused), the condition is called apocarpous. When carpels are fused together, it is syncarpous. Apocarpous gynoecium gives rise to aggregate fruits.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "flower",
-        "gynoecium",
-        "apocarpous"
-      ],
+      "tags": ["flower", "gynoecium", "apocarpous"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2352,22 +1746,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Which of the following is an example of a false fruit (pseudocarp)?",
-      "options": [
-        "Tomato",
-        "Mango",
-        "Pea",
-        "Apple"
-      ],
+      "options": ["Tomato", "Mango", "Pea", "Apple"],
       "correctAnswer": "D",
       "explanation": "Apple is a false fruit because the edible fleshy part develops from the thalamus (receptacle), not from the ovary. True fruits develop from the ovary wall (pericarp). Mango, tomato, and pea are all true fruits.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fruit",
-        "false-fruit",
-        "apple"
-      ],
+      "tags": ["fruit", "false-fruit", "apple"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2389,12 +1774,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stem",
-        "modifications",
-        "onion",
-        "bulb"
-      ],
+      "tags": ["stem", "modifications", "onion", "bulb"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2416,11 +1796,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "liliaceae",
-        "ovary",
-        "superior"
-      ],
+      "tags": ["liliaceae", "ovary", "superior"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2431,22 +1807,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "How many of the following represent adventitious root modifications?\n(i) Sweet potato (ii) Prop roots of banyan (iii) Stilt roots of maize (iv) Carrot (v) Pneumatophores of Rhizophora (vi) Turnip",
-      "options": [
-        "Three",
-        "Five",
-        "Two",
-        "Four"
-      ],
+      "options": ["Three", "Five", "Two", "Four"],
       "correctAnswer": "D",
       "explanation": "Sweet potato, prop roots of banyan, stilt roots of maize, and pneumatophores of Rhizophora are all adventitious root modifications. Carrot and turnip are tap root modifications.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "root",
-        "adventitious",
-        "modifications"
-      ],
+      "tags": ["root", "adventitious", "modifications"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2457,22 +1824,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Which of the following statements about the dicot seed is INCORRECT?\n(i) It has two cotyledons.\n(ii) The embryo consists of radicle, plumule, and embryonal axis.\n(iii) Endosperm is always present in mature seeds.\n(iv) The seed coat is derived from integuments.",
-      "options": [
-        "(i) and (iv)",
-        "(iii) and (iv)",
-        "(ii) only",
-        "(iii) only"
-      ],
+      "options": ["(i) and (iv)", "(iii) and (iv)", "(ii) only", "(iii) only"],
       "correctAnswer": "D",
       "explanation": "Statement (iii) is incorrect. In many dicot seeds (like pea, gram, bean), the endosperm is consumed during development and is absent in the mature seed (exalbuminous seeds). The food is stored in the cotyledons instead.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "seed",
-        "dicot",
-        "endosperm"
-      ],
+      "tags": ["seed", "dicot", "endosperm"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2494,10 +1852,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "stem",
-        "sub-aerial-modifications"
-      ],
+      "tags": ["stem", "sub-aerial-modifications"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2508,21 +1863,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "How many of the following are characteristics of dicotyledons?\n(i) Two cotyledons (ii) Tap root system (iii) Reticulate venation (iv) Trimerous flowers (v) Pentamerous or tetramerous flowers (vi) Parallel venation",
-      "options": [
-        "Three",
-        "Five",
-        "Four",
-        "Two"
-      ],
+      "options": ["Three", "Five", "Four", "Two"],
       "correctAnswer": "C",
       "explanation": "Dicot features: (i) two cotyledons, (ii) tap root system, (iii) reticulate venation, and (v) pentamerous or tetramerous flowers. Trimerous flowers (iv) and parallel venation (vi) are monocot features.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "dicots",
-        "characteristics"
-      ],
+      "tags": ["dicots", "characteristics"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2544,11 +1891,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fruit",
-        "seed",
-        "development"
-      ],
+      "tags": ["fruit", "seed", "development"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2559,22 +1902,13 @@
       "ncertChapter": 5,
       "ncertChapterName": "Morphology of Flowering Plants",
       "question": "Opposite phyllotaxy is found in:",
-      "options": [
-        "China rose",
-        "Sunflower",
-        "Calotropis and Guava",
-        "Mustard"
-      ],
+      "options": ["China rose", "Sunflower", "Calotropis and Guava", "Mustard"],
       "correctAnswer": "C",
       "explanation": "In opposite phyllotaxy, two leaves arise at each node, lying opposite to each other. This arrangement is found in Calotropis (madar) and Guava. Mustard and sunflower show alternate phyllotaxy.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "leaf",
-        "phyllotaxy",
-        "opposite"
-      ],
+      "tags": ["leaf", "phyllotaxy", "opposite"],
       "neetWeightage": "MEDIUM"
     }
   ]

@@ -7,7 +7,7 @@ import { FAQSchema, FAQDisplay } from '@/components/seo/FAQSchema'
 export const metadata: Metadata = {
   title: 'NEET Biology Resources 2026: Free Notes, PYQs, Study Material',
   description:
-    'Access comprehensive NEET Biology resources including chapter-wise notes, previous year questions, study plans, and expert tips from Cerebrum Biology Academy\'s AIIMS-trained faculty.',
+    "Access comprehensive NEET Biology resources including chapter-wise notes, previous year questions, study plans, and expert tips from Cerebrum Biology Academy's AIIMS-trained faculty.",
   keywords:
     'neet biology resources, neet biology study material, neet biology free notes, neet biology pyqs, neet chapter wise notes',
   openGraph: {
@@ -44,7 +44,10 @@ const studyUnits = [
     chapters: ['Plant Kingdom', 'Animal Kingdom', 'Taxonomy'],
     links: [
       { title: 'Plant Kingdom Classification', slug: 'plant-kingdom-classification-neet' },
-      { title: 'Animal Kingdom Weightage Analysis', slug: 'neet-animal-kingdom-weightage-chapter-wise-analysis' },
+      {
+        title: 'Animal Kingdom Weightage Analysis',
+        slug: 'neet-animal-kingdom-weightage-chapter-wise-analysis',
+      },
     ],
   },
   {
@@ -67,7 +70,10 @@ const studyUnits = [
     chapters: ['Photosynthesis', 'Respiration', 'Transport in Plants'],
     links: [
       { title: 'Photosynthesis NEET Notes', slug: 'photosynthesis-neet-biology-notes' },
-      { title: 'Photosynthesis vs Respiration', slug: 'photosynthesis-vs-respiration-neet-comparison' },
+      {
+        title: 'Photosynthesis vs Respiration',
+        slug: 'photosynthesis-vs-respiration-neet-comparison',
+      },
     ],
   },
   {
@@ -84,7 +90,10 @@ const studyUnits = [
       'Hormones',
     ],
     links: [
-      { title: 'Human Physiology Complete Guide', slug: 'neet-biology-human-physiology-complete-guide' },
+      {
+        title: 'Human Physiology Complete Guide',
+        slug: 'neet-biology-human-physiology-complete-guide',
+      },
       { title: 'Digestion & Absorption', slug: 'human-digestion-absorption-neet' },
       { title: 'Breathing & Gas Exchange', slug: 'breathing-gas-exchange-neet-notes' },
       { title: 'Body Fluids & Circulation', slug: 'body-fluids-circulation-neet' },
@@ -110,16 +119,17 @@ const studyUnits = [
     name: 'Genetics & Evolution',
     icon: '⚡',
     description: 'Heredity, Molecular Biology & Evolution',
-    chapters: [
-      'Mendelian Inheritance',
-      'Molecular Basis',
-      'Evolution',
-      'Human Genome',
-    ],
+    chapters: ['Mendelian Inheritance', 'Molecular Basis', 'Evolution', 'Human Genome'],
     links: [
       { title: 'Genetics, Heredity & Variation', slug: 'genetics-heredity-variation-neet' },
-      { title: 'Genetics for NEET: Mendel to Molecular Biology', slug: 'genetics-for-neet-mendel-to-molecular-biology' },
-      { title: 'Genetics Weightage Analysis', slug: 'neet-genetics-weightage-chapter-wise-analysis' },
+      {
+        title: 'Genetics for NEET: Mendel to Molecular Biology',
+        slug: 'genetics-for-neet-mendel-to-molecular-biology',
+      },
+      {
+        title: 'Genetics Weightage Analysis',
+        slug: 'neet-genetics-weightage-chapter-wise-analysis',
+      },
     ],
   },
   {
@@ -179,7 +189,7 @@ const faqQuestions = [
   {
     question: 'How much weightage does Biology carry in NEET?',
     answer:
-      'Biology carries 360 marks out of 720 total in NEET, with 90 questions from Botany and 90 from Zoology. It\'s the most scoring subject if approached strategically with proper time management.',
+      "Biology carries 360 marks out of 720 total in NEET, with 90 questions from Botany and 90 from Zoology. It's the most scoring subject if approached strategically with proper time management.",
   },
   {
     question: 'What is the best way to study NEET Biology chapters?',
@@ -215,8 +225,12 @@ export default function NEETBiologyResourcesPage() {
       <section className="bg-gradient-to-b from-slate-900 to-slate-800 py-20 px-4 text-white">
         <div className="mx-auto max-w-7xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">NEET Biology Resource Hub 2026</h1>
-          <p className="text-xl text-slate-300 mb-2">Master all biology concepts with expert-curated notes and study materials</p>
-          <p className="text-lg text-slate-400">140+ comprehensive articles, previous year analyses, and proven strategies</p>
+          <p className="text-xl text-slate-300 mb-2">
+            Master all biology concepts with expert-curated notes and study materials
+          </p>
+          <p className="text-lg text-slate-400">
+            140+ comprehensive articles, previous year analyses, and proven strategies
+          </p>
         </div>
       </section>
 
@@ -225,7 +239,8 @@ export default function NEETBiologyResourcesPage() {
         <div className="mx-auto max-w-7xl">
           <h2 className="text-3xl font-bold text-slate-900 mb-2">Chapter-Wise Study Material</h2>
           <p className="text-gray-600 mb-12">
-            Complete coverage of all NEET Biology topics with detailed notes and links to comprehensive guides
+            Complete coverage of all NEET Biology topics with detailed notes and links to
+            comprehensive guides
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -283,7 +298,9 @@ export default function NEETBiologyResourcesPage() {
       {/* Preparation Strategy Section */}
       <section className="py-16 px-4 bg-slate-50">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-3xl font-bold text-slate-900 mb-2">Preparation Strategies & Analysis</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-2">
+            Preparation Strategies & Analysis
+          </h2>
           <p className="text-gray-600 mb-12">
             Expert-backed strategies to optimize your study plan and achieve your target score
           </p>
@@ -302,9 +319,7 @@ export default function NEETBiologyResourcesPage() {
                       {article.title}
                     </h3>
                     <p className="text-gray-600 text-sm">{article.description}</p>
-                    <div className="mt-4 text-green-600 font-semibold text-sm">
-                      Read Guide →
-                    </div>
+                    <div className="mt-4 text-green-600 font-semibold text-sm">Read Guide →</div>
                   </div>
                 </div>
               </Link>
@@ -318,7 +333,8 @@ export default function NEETBiologyResourcesPage() {
         <div className="mx-auto max-w-7xl">
           <h2 className="text-3xl font-bold text-slate-900 mb-2">Success Stories</h2>
           <p className="text-gray-600 mb-12">
-            Real students, real results. Learn from those who achieved their goals with our strategies
+            Real students, real results. Learn from those who achieved their goals with our
+            strategies
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -382,7 +398,8 @@ export default function NEETBiologyResourcesPage() {
                 <div className="flex-1">
                   <h3 className="font-bold text-xl text-slate-900 mb-2">Chapter-wise Notes PDF</h3>
                   <p className="text-gray-600 mb-4">
-                    Comprehensive notes for all 11 NEET Biology chapters with diagrams and key points
+                    Comprehensive notes for all 11 NEET Biology chapters with diagrams and key
+                    points
                   </p>
                   <button className="px-6 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors">
                     Download Now
@@ -395,7 +412,9 @@ export default function NEETBiologyResourcesPage() {
               <div className="flex items-start gap-4">
                 <div className="text-4xl">📋</div>
                 <div className="flex-1">
-                  <h3 className="font-bold text-xl text-slate-900 mb-2">NEET Biology PYQ Collection</h3>
+                  <h3 className="font-bold text-xl text-slate-900 mb-2">
+                    NEET Biology PYQ Collection
+                  </h3>
                   <p className="text-gray-600 mb-4">
                     15 years of NEET previous year questions organized by chapter and topic
                   </p>

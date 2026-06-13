@@ -380,22 +380,51 @@ export default function CNBOCoachingPage() {
       </section>
 
       {/* Testimonials */}
-      
-          {/* Related China Biology Programmes */}
-          <section className="py-12 bg-white border-t border-slate-200">
-            <div className="max-w-5xl mx-auto px-4">
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">Related Biology Programmes in China</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-            <Link href="/hkbo-coaching" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">HKBO — Hong Kong Biology Olympiad</span></Link>
-            <Link href="/ibo-coaching-china" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">IBO Coaching China</span></Link>
-            <Link href="/ib-biology/shanghai" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">IB Biology Shanghai</span></Link>
-            <Link href="/ib-biology/beijing" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">IB Biology Beijing</span></Link>
-            <Link href="/ap-biology-tutor-shanghai" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">AP Biology Shanghai</span></Link>
-              </div>
-            </div>
-          </section>
 
-          <section className="py-20 bg-white">
+      {/* Related China Biology Programmes */}
+      <section className="py-12 bg-white border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">
+            Related Biology Programmes in China
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            <Link
+              href="/hkbo-coaching"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">
+                HKBO — Hong Kong Biology Olympiad
+              </span>
+            </Link>
+            <Link
+              href="/ibo-coaching-china"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">IBO Coaching China</span>
+            </Link>
+            <Link
+              href="/ib-biology/shanghai"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">IB Biology Shanghai</span>
+            </Link>
+            <Link
+              href="/ib-biology/beijing"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">IB Biology Beijing</span>
+            </Link>
+            <Link
+              href="/ap-biology-tutor-shanghai"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">AP Biology Shanghai</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Success Stories</h2>

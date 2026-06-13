@@ -43,7 +43,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Free NEET Demo Class Greater Noida | Book Now',
-    description: 'Book your FREE NEET Biology demo class in Greater Noida. Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 99536-43938!',
+    description:
+      'Book your FREE NEET Biology demo class in Greater Noida. Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 99536-43938!',
   },
 }
 
@@ -110,7 +111,11 @@ export default function FreeNEETDemoClassGreaterNoida() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Greater Noida', 'NEET Biology Greater Noida', 'Medical entrance coaching Greater Noida']}
+        knowsAbout={[
+          'NEET Greater Noida',
+          'NEET Biology Greater Noida',
+          'Medical entrance coaching Greater Noida',
+        ]}
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-700 to-teal-600 text-white py-16">
@@ -148,7 +153,9 @@ export default function FreeNEETDemoClassGreaterNoida() {
                 Book Demo: 99536-43938
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-green-700 px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2 hover:bg-green-50 transition"
               >
                 Book Online
@@ -252,8 +259,8 @@ export default function FreeNEETDemoClassGreaterNoida() {
                 <div>
                   <h3 className="font-bold mb-1">Get Your Questions Answered</h3>
                   <p className="text-gray-600">
-                    Ask about online/hybrid options, batch timings, fees, study material — everything
-                    relevant for Greater Noida students.
+                    Ask about online/hybrid options, batch timings, fees, study material —
+                    everything relevant for Greater Noida students.
                   </p>
                 </div>
               </div>

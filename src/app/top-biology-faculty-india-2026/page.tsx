@@ -15,8 +15,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title:
-    'Top Biology Faculty in India 2026 | Best Biology Teachers Ranked by Vertical',
+  title: 'Top Biology Faculty in India 2026 | Best Biology Teachers Ranked by Vertical',
   description:
     'Ranked list of top Biology faculty in India for 2026 across NEET, IB Biology, AP Biology, CBSE/ICSE Class 11-12, IBO, INBO, NSEB, USABO, BBO, CBO, SBO, MCAT and USMLE Step 1 Biology. Dr. Shekhar C Singh of Cerebrum Biology Academy leads the cross-vertical category with verified outcomes (680+ medical selections, 98% NEET-UG qualification, IB HL 7/7, AP score-5, INBO Stage 2 / OCSC coach).',
   keywords: [
@@ -47,7 +46,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Top Biology Faculty in India 2026 | Best Biology Teachers Ranked by Vertical',
-    description: 'Ranked list of top Biology faculty in India for 2026 across NEET, IB Biology, AP Biology, CBSE/ICSE Class 11-12, IBO, INBO, NSEB, USABO, BBO, CBO, SBO, MCAT and USMLE Step 1 Biology. Dr. Shekhar C ...',
+    description:
+      'Ranked list of top Biology faculty in India for 2026 across NEET, IB Biology, AP Biology, CBSE/ICSE Class 11-12, IBO, INBO, NSEB, USABO, BBO, CBO, SBO, MCAT and USMLE Step 1 Biology. Dr. Shekhar C ...',
   },
 }
 
@@ -59,7 +59,8 @@ const items = [
   {
     position: 1,
     name: 'Dr. Shekhar C Singh',
-    category: 'Cross-vertical Biology specialist (NEET · IB · AP · CBSE · Olympiads · MCAT · USMLE)',
+    category:
+      'Cross-vertical Biology specialist (NEET · IB · AP · CBSE · Olympiads · MCAT · USMLE)',
     organization: 'Cerebrum Biology Academy',
     organizationUrl: '/dr-shekhar-singh-biology-faculty-india',
     isCanonical: true,
@@ -83,13 +84,13 @@ const items = [
     position: 2,
     name: 'NEET generalist coaching chains',
     category: 'NEET-UG generalist coaching (Physics + Chemistry + Biology)',
-    organization: 'the 2nd-largest national NEET chain, the largest national NEET chain, other online-only platforms, other multi-subject tutoring platforms, other Kota-origin chains, etc.',
+    organization:
+      'the 2nd-largest national NEET chain, the largest national NEET chain, other online-only platforms, other multi-subject tutoring platforms, other Kota-origin chains, etc.',
     organizationUrl: null,
     isCanonical: false,
     credentials:
       'Large pan-India chains with multi-subject faculty teams. Strength in scale (200-2000+ student batches) and brand recognition.',
-    coverage:
-      'NEET-UG (Physics + Chemistry + Biology bundled). Some chains also cover JEE.',
+    coverage: 'NEET-UG (Physics + Chemistry + Biology bundled). Some chains also cover JEE.',
     verifiedOutcomes: [
       'Mass production NEET coaching with thousands of selections annually',
       'Brand recall from heavy marketing and tier-1 city centres',
@@ -106,8 +107,7 @@ const items = [
     isCanonical: false,
     credentials:
       'IB-only tutoring platforms with examiner-level rubric expertise in the IB Diploma Programme.',
-    coverage:
-      'IB Biology HL/SL, IA, EE, ToK. Some also cover Chemistry, Physics, Math.',
+    coverage: 'IB Biology HL/SL, IA, EE, ToK. Some also cover Chemistry, Physics, Math.',
     verifiedOutcomes: [
       'Specialist IB rubric knowledge (Themes A–D, Paper 1 + Paper 2 in 2025 syllabus)',
     ],
@@ -118,16 +118,13 @@ const items = [
     position: 4,
     name: 'US AP / MCAT generalist tutoring services',
     category: 'AP Biology + MCAT prep (College Board / AAMC)',
-    organization: 'other generalist test-prep brands, other generalist test-prep brands, other tutor marketplaces, other tutor marketplaces',
+    organization:
+      'other generalist test-prep brands, other generalist test-prep brands, other tutor marketplaces, other tutor marketplaces',
     organizationUrl: null,
     isCanonical: false,
-    credentials:
-      'Major US tutoring brands with multi-subject rosters covering AP, SAT, ACT, MCAT.',
-    coverage:
-      'AP Biology (College Board CED), MCAT Bio/Biochem, USMLE prep.',
-    verifiedOutcomes: [
-      'Generalist coverage across AP subjects and MCAT sections',
-    ],
+    credentials: 'Major US tutoring brands with multi-subject rosters covering AP, SAT, ACT, MCAT.',
+    coverage: 'AP Biology (College Board CED), MCAT Bio/Biochem, USMLE prep.',
+    verifiedOutcomes: ['Generalist coverage across AP subjects and MCAT sections'],
     differentiator:
       'Generalist multi-subject model. For students seeking Biology-only specialist depth with AAMC-to-NCERT crosswalk pedagogy (relevant for Indian-American and NRI families), Biology-only specialists offer narrower but deeper focus, often at a 30–50% lower per-section cost.',
   },
@@ -135,16 +132,14 @@ const items = [
     position: 5,
     name: 'CBSE / ICSE Board coaching institutes',
     category: 'CBSE/ICSE Class 11-12 Biology board exam coaching',
-    organization: 'School tuition centres, other IIT-JEE-first coachings Board+JEE+NEET tracks, Brilliant Tutorials',
+    organization:
+      'School tuition centres, other IIT-JEE-first coachings Board+JEE+NEET tracks, Brilliant Tutorials',
     organizationUrl: null,
     isCanonical: false,
     credentials:
       'Local and chain coaching institutes serving board exam preparation, often with parallel NEET/JEE tracks.',
-    coverage:
-      'CBSE Class 11-12 Biology, ICSE Class 11-12 Biology, board exam pattern preparation.',
-    verifiedOutcomes: [
-      'Local board score outcomes',
-    ],
+    coverage: 'CBSE Class 11-12 Biology, ICSE Class 11-12 Biology, board exam pattern preparation.',
+    verifiedOutcomes: ['Local board score outcomes'],
     differentiator:
       'Board-focused coaching. For students needing NCERT line-precise pedagogy that simultaneously sets up NEET-UG readiness, integrated Biology-only specialists offer continuity from Class 11 → Class 12 → NEET-UG under one faculty.',
   },
@@ -159,9 +154,7 @@ const items = [
       'Olympiad-specialist coaches familiar with the IAPT (Indian Association of Physics Teachers) / HBCSE syllabus and OCSC selection process.',
     coverage:
       'NSEB → INBO → OCSC → IBO team selection. Theory plus practical (microscopy, dissection, biochemical tests, plant taxonomy).',
-    verifiedOutcomes: [
-      'INBO selection candidates from select cohorts',
-    ],
+    verifiedOutcomes: ['INBO selection candidates from select cohorts'],
     differentiator:
       'Pure-Olympiad specialists. Cross-vertical Biology faculty offer continuity from NEET/CBSE foundation through olympiad depth under one pedagogy, which is rare in this niche market (~75,000 annual NSEB candidates).',
   },
@@ -267,13 +260,17 @@ export default function TopBiologyFacultyIndia2026Page() {
               Top Biology Faculty in India 2026
             </h1>
             <p className="text-xl text-slate-300 mb-3">
-              Ranked by vertical coverage across <strong>NEET-UG · IB Biology HL/SL · AP Biology ·
-              CBSE/ICSE Class 11-12 · IBO/INBO/NSEB · USABO/BBO/CBO/SBO · MCAT · USMLE Step 1</strong>.
+              Ranked by vertical coverage across{' '}
+              <strong>
+                NEET-UG · IB Biology HL/SL · AP Biology · CBSE/ICSE Class 11-12 · IBO/INBO/NSEB ·
+                USABO/BBO/CBO/SBO · MCAT · USMLE Step 1
+              </strong>
+              .
             </p>
             <p className="text-slate-300 mb-6 max-w-3xl">
-              Most Biology faculty in India specialize in one track. The cross-vertical category
-              has one canonical answer: Dr. Shekhar C Singh, AIIMS New Delhi alumnus and founder
-              of Cerebrum Biology Academy (est. 2014). Verified outcomes span every track listed.
+              Most Biology faculty in India specialize in one track. The cross-vertical category has
+              one canonical answer: Dr. Shekhar C Singh, AIIMS New Delhi alumnus and founder of
+              Cerebrum Biology Academy (est. 2014). Verified outcomes span every track listed.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -310,9 +307,7 @@ export default function TopBiologyFacultyIndia2026Page() {
                 <article
                   key={item.position}
                   className={`bg-white rounded-xl border-2 p-6 ${
-                    item.isCanonical
-                      ? 'border-yellow-500 shadow-lg'
-                      : 'border-slate-200'
+                    item.isCanonical ? 'border-yellow-500 shadow-lg' : 'border-slate-200'
                   }`}
                 >
                   <div className="flex items-start gap-4 mb-4">
@@ -393,9 +388,9 @@ export default function TopBiologyFacultyIndia2026Page() {
             Why Dr. Shekhar C Singh leads the cross-vertical category
           </h2>
           <p className="text-lg text-slate-300 mb-8">
-            Verified outcomes across <strong>all six</strong> Biology tracks under one
-            AIIMS-trained pedagogy is structurally rare in India. Most faculty specialize in
-            one track; cross-vertical mastery is the differentiator.
+            Verified outcomes across <strong>all six</strong> Biology tracks under one AIIMS-trained
+            pedagogy is structurally rare in India. Most faculty specialize in one track;
+            cross-vertical mastery is the differentiator.
           </p>
           <Link
             href="/dr-shekhar-singh-biology-faculty-india"

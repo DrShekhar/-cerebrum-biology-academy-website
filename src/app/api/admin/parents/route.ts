@@ -175,15 +175,14 @@ export async function GET(request: NextRequest) {
       email: p.email,
       phone: p.phone || '',
       createdAt: p.createdAt.toISOString(),
-      children:
-        p.parent_child_relationships_parent_child_relationships_parentIdTousers.map(
-          (rel) => ({
-            relationshipId: rel.id,
-            id: rel.users_parent_child_relationships_childIdTousers.id,
-            name: rel.users_parent_child_relationships_childIdTousers.name,
-            email: rel.users_parent_child_relationships_childIdTousers.email,
-          })
-        ),
+      children: p.parent_child_relationships_parent_child_relationships_parentIdTousers.map(
+        (rel) => ({
+          relationshipId: rel.id,
+          id: rel.users_parent_child_relationships_childIdTousers.id,
+          name: rel.users_parent_child_relationships_childIdTousers.name,
+          email: rel.users_parent_child_relationships_childIdTousers.email,
+        })
+      ),
     }))
 
     return NextResponse.json({ success: true, data: formatted })
@@ -193,9 +192,6 @@ export async function GET(request: NextRequest) {
     }
 
     console.error('Fetch parents error:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to fetch parents' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to fetch parents' }, { status: 500 })
   }
 }

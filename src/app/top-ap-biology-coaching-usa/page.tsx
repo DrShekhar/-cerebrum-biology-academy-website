@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Top 8 AP Biology Coaching / Tutors USA 2026 | Honest Ranking',
-    description: 'Honest 2026 ranking of the top AP Biology coaching and tutors in USA. Cerebrum Biology Academy #1 with documented score-5 outcomes across 10+ US metros, AAMC-to-NCERT crosswalk, best per-section pr...',
+    description:
+      'Honest 2026 ranking of the top AP Biology coaching and tutors in USA. Cerebrum Biology Academy #1 with documented score-5 outcomes across 10+ US metros, AAMC-to-NCERT crosswalk, best per-section pr...',
   },
 }
 

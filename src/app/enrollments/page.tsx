@@ -17,5 +17,10 @@ export const metadata: Metadata = {
 
   twitter: { card: 'summary_large_image' as const },
 
-  openGraph: { title: 'My Enrollments', description: 'Track your course progress and manage your enrollments at Cerebrum Biology Academy.', type: 'website' },
+  openGraph: {
+    title: 'My Enrollments',
+    description:
+      'Track your course progress and manage your enrollments at Cerebrum Biology Academy.',
+    type: 'website',
+  },
 }

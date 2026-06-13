@@ -177,10 +177,7 @@ export async function GET(request: NextRequest) {
     // Free users store their ID in a cookie set during registration
     const freeUserCookie = request.cookies.get('free_user_id')?.value
     if (!freeUserCookie || freeUserCookie !== userId) {
-      return NextResponse.json(
-        { success: false, error: 'Unauthorized' },
-        { status: 401 }
-      )
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
     const user = await prisma.free_users.findUnique({

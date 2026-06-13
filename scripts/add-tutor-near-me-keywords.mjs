@@ -44,7 +44,9 @@ for (const dir of dirs) {
 
   // Pull the cityName from a const cityName = "..." declaration if present
   const cityNameMatch = original.match(/const cityName = (?:"|')([^"']+)(?:"|')/)
-  const cityName = cityNameMatch ? cityNameMatch[1] : dir.replace('usabo-coaching-', '').replace(/-/g, ' ')
+  const cityName = cityNameMatch
+    ? cityNameMatch[1]
+    : dir.replace('usabo-coaching-', '').replace(/-/g, ' ')
   const cityLower = cityName.toLowerCase()
 
   const nearMeLines = [

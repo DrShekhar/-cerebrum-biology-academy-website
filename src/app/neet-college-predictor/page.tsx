@@ -893,9 +893,7 @@ function RankSearchForm({
           onClick={handlePredict}
           disabled={isLoading}
           className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-6 py-4 text-lg font-semibold text-white transition-all disabled:opacity-70 ${
-            hasSearched
-              ? 'bg-green-600 hover:bg-green-700'
-              : 'bg-blue-600 hover:bg-blue-700'
+            hasSearched ? 'bg-green-600 hover:bg-green-700' : 'bg-blue-600 hover:bg-blue-700'
           }`}
         >
           {getButtonText()}

@@ -39,7 +39,16 @@ export default function GurugramCoachingLayout({ children }: { children: React.R
         parentLocation="Delhi NCR"
         centerAddress="M2K Corporate Park, Sector 51, Gurugram - 122003"
         centerPhone="+91-8826-444-334"
-        nearbyAreas={['DLF Phase 1', 'Golf Course Road', 'Sushant Lok', 'Sector 51', 'Sohna Road', 'MG Road', 'Nirvana Country', 'Cyber City']}
+        nearbyAreas={[
+          'DLF Phase 1',
+          'Golf Course Road',
+          'Sushant Lok',
+          'Sector 51',
+          'Sohna Road',
+          'MG Road',
+          'Nirvana Country',
+          'Cyber City',
+        ]}
       />
     </>
   )

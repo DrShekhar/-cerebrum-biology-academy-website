@@ -2928,7 +2928,8 @@ export const punjabChandigarhAreas: LocalArea[] = [
     state: 'Chandigarh',
     description:
       'Premier online NEET Biology coaching for Chandigarh Sector 34 students. Expert AIIMS faculty delivering world-class preparation from the comfort of your home. Join 300+ successful students from the main coaching hub of Chandigarh.',
-    metaTitle: 'Best NEET Coaching Chandigarh Sector 34 | Online Biology Classes | Cerebrum Academy',
+    metaTitle:
+      'Best NEET Coaching Chandigarh Sector 34 | Online Biology Classes | Cerebrum Academy',
     metaDescription:
       'Top-rated online NEET biology coaching for Chandigarh Sector 34. Expert AIIMS faculty, personalized attention, proven results. Serving all Chandigarh sectors. Book free demo!',
     keywords: [
@@ -3012,7 +3013,15 @@ export const punjabChandigarhAreas: LocalArea[] = [
       'neet tutor sector 18 chandigarh',
       'medical coaching near plaza chandigarh',
     ],
-    nearbyAreas: ['Sector 16', 'Sector 18', 'Sector 9', 'Sector 8', 'Sector 11', 'Rose Garden', 'Sukhna Lake'],
+    nearbyAreas: [
+      'Sector 16',
+      'Sector 18',
+      'Sector 9',
+      'Sector 8',
+      'Sector 11',
+      'Rose Garden',
+      'Sukhna Lake',
+    ],
     transportLinks: [
       'Sector 17 Bus Stand',
       'CTU Bus Routes',
@@ -3026,7 +3035,11 @@ export const punjabChandigarhAreas: LocalArea[] = [
         'St. Annes Convent School',
         'Vivek High School',
       ],
-      colleges: ['Government College Sector 11', 'DAV College Sector 10', 'GGDSD College Sector 32'],
+      colleges: [
+        'Government College Sector 11',
+        'DAV College Sector 10',
+        'GGDSD College Sector 32',
+      ],
       populationDensity: 'high',
       studentPopulation: 'high',
     },
@@ -3089,11 +3102,16 @@ export const punjabChandigarhAreas: LocalArea[] = [
       schools: [
         'DPS Mohali',
         'Oakridge International School',
-        'Saupin\'s School',
+        "Saupin's School",
         'Learning Paths School',
         'Delhi Public School Phase 5',
       ],
-      colleges: ['IISER Mohali', 'Indian School of Business', 'NIPER', 'Chandigarh University (nearby)'],
+      colleges: [
+        'IISER Mohali',
+        'Indian School of Business',
+        'NIPER',
+        'Chandigarh University (nearby)',
+      ],
       populationDensity: 'high',
       studentPopulation: 'high',
     },
@@ -3241,7 +3259,7 @@ export const punjabChandigarhAreas: LocalArea[] = [
     ],
     localTestimonials: ['1', '2'],
     centerAddress: 'Online Classes - Serving all Zirakpur Areas',
-    coordinates: { lat: 30.6430, lng: 76.8174 },
+    coordinates: { lat: 30.643, lng: 76.8174 },
   },
   {
     id: 'ludhiana',
@@ -3250,7 +3268,7 @@ export const punjabChandigarhAreas: LocalArea[] = [
     displayName: 'Ludhiana',
     state: 'Punjab',
     description:
-      'Best online NEET Biology coaching for Ludhiana students. AIIMS faculty now accessible to Punjab\'s industrial capital. Students from Model Town, Civil Lines, and Sarabha Nagar can now get Kota-level coaching at home.',
+      "Best online NEET Biology coaching for Ludhiana students. AIIMS faculty now accessible to Punjab's industrial capital. Students from Model Town, Civil Lines, and Sarabha Nagar can now get Kota-level coaching at home.",
     metaTitle: 'Best NEET Coaching Ludhiana Punjab | Online Biology Classes | Cerebrum Academy',
     metaDescription:
       'Premier online NEET biology coaching for Ludhiana. Expert AIIMS faculty, proven results, flexible timings. Serving Model Town, Civil Lines, Sarabha Nagar. Book demo!',
@@ -3295,12 +3313,18 @@ export const punjabChandigarhAreas: LocalArea[] = [
         'SCD Government College School',
         'Arya Model Senior Secondary School',
       ],
-      colleges: ['DMC Ludhiana', 'CMC Ludhiana', 'PAU Ludhiana', 'GNDEC', 'Punjab University Regional Centre'],
+      colleges: [
+        'DMC Ludhiana',
+        'CMC Ludhiana',
+        'PAU Ludhiana',
+        'GNDEC',
+        'Punjab University Regional Centre',
+      ],
       populationDensity: 'high',
       studentPopulation: 'high',
     },
     uniqueSellingPoints: [
-      'Punjab\'s largest city now has access to Delhi-level NEET coaching',
+      "Punjab's largest city now has access to Delhi-level NEET coaching",
       'No need to relocate to Chandigarh or Kota',
       'Industrial families can invest in education, not hostel fees',
       'Bilingual teaching support (Punjabi + English explanations)',
@@ -3309,7 +3333,7 @@ export const punjabChandigarhAreas: LocalArea[] = [
     ],
     localTestimonials: ['1', '2'],
     centerAddress: 'Online Classes - Serving all Ludhiana Areas',
-    coordinates: { lat: 30.9010, lng: 75.8573 },
+    coordinates: { lat: 30.901, lng: 75.8573 },
   },
   {
     id: 'jalandhar',
@@ -3363,13 +3387,18 @@ export const punjabChandigarhAreas: LocalArea[] = [
         'Cambridge International School',
         'Innocent Hearts School',
       ],
-      colleges: ['GNA University', 'Lovely Professional University (nearby)', 'Hans Raj Mahila Maha Vidyalaya', 'DAV College'],
+      colleges: [
+        'GNA University',
+        'Lovely Professional University (nearby)',
+        'Hans Raj Mahila Maha Vidyalaya',
+        'DAV College',
+      ],
       populationDensity: 'high',
       studentPopulation: 'high',
     },
     uniqueSellingPoints: [
-      'Doaba region\'s premier online NEET coaching',
-      'NRI families can track their children\'s progress from abroad',
+      "Doaba region's premier online NEET coaching",
+      "NRI families can track their children's progress from abroad",
       'Compete with students across India from your Jalandhar home',
       'Sports-friendly batch timings for athlete students',
       'Special support for students from Punjabi medium schools',
@@ -3377,7 +3406,7 @@ export const punjabChandigarhAreas: LocalArea[] = [
     ],
     localTestimonials: ['1', '2'],
     centerAddress: 'Online Classes - Serving all Jalandhar Areas',
-    coordinates: { lat: 31.3260, lng: 75.5762 },
+    coordinates: { lat: 31.326, lng: 75.5762 },
   },
   {
     id: 'amritsar',
@@ -3431,7 +3460,12 @@ export const punjabChandigarhAreas: LocalArea[] = [
         'Sacred Heart Convent School',
         'Khalsa College Public School',
       ],
-      colleges: ['Government Medical College Amritsar', 'Khalsa College', 'Guru Nanak Dev University', 'DAV College'],
+      colleges: [
+        'Government Medical College Amritsar',
+        'Khalsa College',
+        'Guru Nanak Dev University',
+        'DAV College',
+      ],
       populationDensity: 'high',
       studentPopulation: 'high',
     },
@@ -3445,7 +3479,7 @@ export const punjabChandigarhAreas: LocalArea[] = [
     ],
     localTestimonials: ['1', '2'],
     centerAddress: 'Online Classes - Serving all Amritsar Areas',
-    coordinates: { lat: 31.6340, lng: 74.8723 },
+    coordinates: { lat: 31.634, lng: 74.8723 },
   },
 ]
 

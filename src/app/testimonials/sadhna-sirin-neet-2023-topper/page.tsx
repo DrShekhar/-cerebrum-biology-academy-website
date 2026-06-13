@@ -5,7 +5,7 @@ import { VideoObjectSchema } from '@/components/seo/VideoObjectSchema'
 export const metadata: Metadata = {
   title: 'Sadhna Sirin - Delhi NCR NEET 2023 Topper',
   description:
-    'Watch Sadhna Sirin share her NEET 2023 journey, scoring 695/720 with Cerebrum Biology Academy. Delhi-NCR\'s top NEET scorer reveals her preparation strategy.',
+    "Watch Sadhna Sirin share her NEET 2023 journey, scoring 695/720 with Cerebrum Biology Academy. Delhi-NCR's top NEET scorer reveals her preparation strategy.",
   openGraph: {
     title: 'Sadhna Sirin - Delhi NCR NEET 2023 Topper',
     description:
@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Sadhna Sirin - Delhi NCR NEET 2023 Topper',
-    description: 'Watch Sadhna Sirin share her NEET 2023 journey, scoring 695/720 with Cerebrum Biology Academy. Delhi-NCR student testimonial.',
+    description:
+      'Watch Sadhna Sirin share her NEET 2023 journey, scoring 695/720 with Cerebrum Biology Academy. Delhi-NCR student testimonial.',
   },
 }
 

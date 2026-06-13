@@ -73,8 +73,7 @@ Be accurate, educational, and exam-focused.`,
       retryOptions: {
         maxRetries: 3,
         initialDelayMs: 1000,
-        onRetry: (attempt, error) => {
-        },
+        onRetry: (attempt, error) => {},
       },
     })
 

@@ -284,12 +284,7 @@
     {
       "type": "MCQ",
       "question": "In a Hardy-Weinberg population with three alleles at a locus (A₁, A₂, A₃) with frequencies p = 0.5, q = 0.3, and r = 0.2, what is the expected frequency of heterozygotes (all heterozygous genotypes combined)?",
-      "options": [
-        "0.30",
-        "0.62",
-        "0.38",
-        "0.50"
-      ],
+      "options": ["0.30", "0.62", "0.38", "0.50"],
       "correctAnswer": "B",
       "explanation": "With three alleles, the total heterozygote frequency = 1 - (sum of homozygote frequencies) = 1 - (p² + q² + r²). Homozygote frequencies: p² = 0.25, q² = 0.09, r² = 0.04. Sum = 0.38. Total heterozygote frequency = 1 - 0.38 = 0.62. Alternatively, this can be calculated as 2pq + 2pr + 2qr = 2(0.5)(0.3) + 2(0.5)(0.2) + 2(0.3)(0.2) = 0.30 + 0.20 + 0.12 = 0.62. This demonstrates that multi-allelic loci maintain higher heterozygosity than two-allele loci. Option A represents only the A₁A₂ heterozygote frequency (2pq = 0.30). Option C represents the total homozygote frequency (p² + q² + r² = 0.38). Option D is incorrect arithmetic.",
       "isOlympiad": true,
@@ -1939,12 +1934,7 @@
     {
       "type": "MCQ",
       "question": "In an island model of migration with n subpopulations, the equilibrium FST is approximately 1/(4Nm + 1), where Nm is the number of migrants per generation. If Nm = 4 (four migrants per generation), the expected FST is:",
-      "options": [
-        "FST = 0.50",
-        "FST = 0.25",
-        "FST = 0.01",
-        "FST = 1/(4 × 4 + 1) = 1/17 ≈ 0.059"
-      ],
+      "options": ["FST = 0.50", "FST = 0.25", "FST = 0.01", "FST = 1/(4 × 4 + 1) = 1/17 ≈ 0.059"],
       "correctAnswer": "D",
       "explanation": "Using Wright's island model formula: FST = 1/(4Nm + 1) = 1/(4(4) + 1) = 1/17 ≈ 0.059. This means that with 4 migrants per generation, only about 5.9% of the total genetic variation is distributed between populations, while 94.1% is within populations. This relatively low FST indicates that 4 migrants per generation is sufficient to substantially homogenize allele frequencies across subpopulations, preventing strong genetic differentiation. This result illustrates Wright's finding that even modest levels of gene flow can prevent substantial differentiation. Option A (FST = 0.50) would require Nm ≈ 0.25 (very little gene flow). Option B (FST = 0.25) would require Nm ≈ 0.75. Option C (FST = 0.01) would require Nm ≈ 25.",
       "isOlympiad": true,

@@ -115,7 +115,11 @@ export default function GhaziabadLocationPage() {
   return (
     <div className="min-h-screen bg-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+        knowsAbout={[
+          'NEET Ghaziabad',
+          'NEET Biology Ghaziabad',
+          'Medical entrance coaching Ghaziabad',
+        ]}
       />
       <BreadcrumbSchema
         items={[
@@ -143,9 +147,9 @@ export default function GhaziabadLocationPage() {
               </h1>
 
               <p className="text-lg text-gray-300 leading-relaxed">
-                Top-rated NEET Biology coaching for Ghaziabad students. AIIMS faculty, small batches,
-                98% success rate. Online classes + in-person options at our nearby Rohini and Noida
-                centers.
+                Top-rated NEET Biology coaching for Ghaziabad students. AIIMS faculty, small
+                batches, 98% success rate. Online classes + in-person options at our nearby Rohini
+                and Noida centers.
               </p>
 
               {/* Info Card */}
@@ -176,7 +180,9 @@ export default function GhaziabadLocationPage() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center space-x-2 px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-black rounded-xl font-medium transition-colors"
                 >
                   <Play className="w-5 h-5" />
@@ -337,10 +343,7 @@ export default function GhaziabadLocationPage() {
                 desc: 'AI-powered analytics to track your progress and identify weak areas',
               },
             ].map((item) => (
-              <div
-                key={item.title}
-                className="flex gap-4 p-4 bg-gray-50 rounded-xl"
-              >
+              <div key={item.title} className="flex gap-4 p-4 bg-gray-50 rounded-xl">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <item.icon className="w-6 h-6 text-blue-600" />
                 </div>
@@ -442,7 +445,9 @@ export default function GhaziabadLocationPage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center space-x-2 px-8 py-3 bg-yellow-500 text-black rounded-xl font-bold hover:bg-yellow-400 transition-colors"
             >
               <Play className="w-5 h-5" />

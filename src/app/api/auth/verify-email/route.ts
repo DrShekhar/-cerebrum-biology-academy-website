@@ -117,7 +117,6 @@ export async function GET(request: NextRequest) {
     // Reset rate limit on success
     AuthRateLimit.resetRateLimit(`verify-email-check:${clientIP}`)
 
-
     // Return success - the frontend will show a success message
     return addSecurityHeaders(
       NextResponse.json({
@@ -248,7 +247,6 @@ export async function POST(request: NextRequest) {
 
     // Reset rate limit on success
     AuthRateLimit.resetRateLimit(`verify-email-check:${clientIP}`)
-
 
     return addSecurityHeaders(
       NextResponse.json({

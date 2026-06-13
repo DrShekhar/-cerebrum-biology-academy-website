@@ -122,10 +122,7 @@ export default function NEETCoachingNearMeGreaterNoidaContent({ faqs }: { faqs: 
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <Link
-                href="/neet-coaching-noida"
-                className="text-gray-600 hover:text-teal-600"
-              >
+              <Link href="/neet-coaching-noida" className="text-gray-600 hover:text-teal-600">
                 NEET Coaching Greater Noida
               </Link>
             </li>
@@ -270,9 +267,7 @@ export default function NEETCoachingNearMeGreaterNoidaContent({ faqs }: { faqs: 
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               How to Join / Reach Us
             </h2>
-            <p className="text-xl text-slate-600">
-              Multiple options for Greater Noida students
-            </p>
+            <p className="text-xl text-slate-600">Multiple options for Greater Noida students</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -347,7 +342,9 @@ export default function NEETCoachingNearMeGreaterNoidaContent({ faqs }: { faqs: 
               </p>
               <p className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-teal-600 flex-shrink-0" />
-                <span className="text-slate-700">Open 24/7 — Online Classes Available Globally</span>
+                <span className="text-slate-700">
+                  Open 24/7 — Online Classes Available Globally
+                </span>
               </p>
             </div>
             <div className="flex gap-4 mt-6">
@@ -435,10 +432,7 @@ export default function NEETCoachingNearMeGreaterNoidaContent({ faqs }: { faqs: 
               <h3 className="font-semibold text-teal-600">Online Classes</h3>
               <p className="text-sm text-gray-600">Zero travel, same quality</p>
             </Link>
-            <Link
-              href="/neet-coaching-noida"
-              className="bg-white p-4 rounded-xl hover:shadow-md"
-            >
+            <Link href="/neet-coaching-noida" className="bg-white p-4 rounded-xl hover:shadow-md">
               <h3 className="font-semibold text-teal-600">Biology Classes</h3>
               <p className="text-sm text-gray-600">View all options</p>
             </Link>
@@ -449,14 +443,16 @@ export default function NEETCoachingNearMeGreaterNoidaContent({ faqs }: { faqs: 
       {/* CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-teal-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Join from Greater Noida?
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Join from Greater Noida?</h2>
           <p className="text-xl mb-8 opacity-90">
             Book a free demo class — online or at our Sector 62, Noida center
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 size="xl"

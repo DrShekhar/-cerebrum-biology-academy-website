@@ -89,15 +89,33 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
         })
         nextKey.then((key) => {
           switch (key) {
-            case 'd': router.push('/counselor'); break
-            case 'l': router.push('/counselor/leads'); break
-            case 's': router.push('/counselor/schedule'); break
-            case 't': router.push('/counselor/tasks'); break
-            case 'p': router.push('/counselor/payments'); break
-            case 'a': router.push('/counselor/analytics'); break
-            case 'm': router.push('/counselor/messages'); break
-            case 'b': router.push('/counselor/bulk-whatsapp'); break
-            case 'r': router.push('/counselor/leaderboard'); break
+            case 'd':
+              router.push('/counselor')
+              break
+            case 'l':
+              router.push('/counselor/leads')
+              break
+            case 's':
+              router.push('/counselor/schedule')
+              break
+            case 't':
+              router.push('/counselor/tasks')
+              break
+            case 'p':
+              router.push('/counselor/payments')
+              break
+            case 'a':
+              router.push('/counselor/analytics')
+              break
+            case 'm':
+              router.push('/counselor/messages')
+              break
+            case 'b':
+              router.push('/counselor/bulk-whatsapp')
+              break
+            case 'r':
+              router.push('/counselor/leaderboard')
+              break
           }
         })
       }
@@ -227,9 +245,7 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
                   key={item.href}
                   href={item.href}
                   className={`flex items-center gap-3 px-3 py-3 text-sm font-medium rounded-lg transition-colors ${
-                    isActive
-                      ? 'bg-indigo-50 text-indigo-700'
-                      : 'text-gray-600 hover:bg-gray-50'
+                    isActive ? 'bg-indigo-50 text-indigo-700' : 'text-gray-600 hover:bg-gray-50'
                   }`}
                 >
                   <Icon className="w-5 h-5" />
@@ -242,9 +258,7 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
       </nav>
 
       {/* ─── Main Content ─── */}
-      <main className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        {children}
-      </main>
+      <main className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 py-6">{children}</main>
 
       <KeyboardShortcutsModal isOpen={showShortcuts} onClose={() => setShowShortcuts(false)} />
       <Toaster position="top-right" />

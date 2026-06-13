@@ -88,14 +88,13 @@ export default function HUDACityCentreMetroContent({ metroData }: HUDACityCentre
           </div>
 
           <h1 className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
-            NEET Coaching Near{' '}
-            <span className="text-yellow-200">HUDA City Centre Metro</span>
+            NEET Coaching Near <span className="text-yellow-200">HUDA City Centre Metro</span>
           </h1>
 
           <p className="mx-auto mb-6 max-w-3xl text-xl text-white/90">
-            Biology Classes for Students in Gurugram. {metroData.studentCount} students
-            enrolled from Cyber City, DLF Phases, MG Road, Golf Course Road & South City.
-            Your gateway to quality NEET preparation!
+            Biology Classes for Students in Gurugram. {metroData.studentCount} students enrolled
+            from Cyber City, DLF Phases, MG Road, Golf Course Road & South City. Your gateway to
+            quality NEET preparation!
           </p>
 
           {/* Trust Badges */}
@@ -121,17 +120,21 @@ export default function HUDACityCentreMetroContent({ metroData }: HUDACityCentre
           {/* CTAs */}
           <div className="flex flex-wrap justify-center gap-4">
             <button
-              onClick={() => handleWhatsAppClick(
-                'huda-city-centre-metro-hero',
-                "Hi! I'm near HUDA City Centre Metro in Gurugram. I'm interested in NEET Biology coaching."
-              )}
+              onClick={() =>
+                handleWhatsAppClick(
+                  'huda-city-centre-metro-hero',
+                  "Hi! I'm near HUDA City Centre Metro in Gurugram. I'm interested in NEET Biology coaching."
+                )
+              }
               className="inline-flex items-center gap-2 rounded-lg bg-green-500 px-6 py-3 font-semibold text-white transition hover:bg-green-600"
             >
               <MessageCircle className="h-5 w-5" />
               WhatsApp Us
             </button>
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20huda%20city%20centre%20metro.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20huda%20city%20centre%20metro.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-yellow-300 px-6 py-3 font-semibold text-amber-900 transition hover:bg-yellow-200"
             >
               Book FREE Demo
@@ -209,8 +212,9 @@ export default function HUDACityCentreMetroContent({ metroData }: HUDACityCentre
                 Yellow Line Terminal - Gateway to Gurugram!
               </h3>
               <p className="text-gray-600">
-                HUDA City Centre is the terminal station of Yellow Line, connecting all of Delhi Metro to Gurugram.
-                For Gurugram students, our online live classes eliminate the Delhi commute entirely - study from home with same quality AIIMS faculty teaching!
+                HUDA City Centre is the terminal station of Yellow Line, connecting all of Delhi
+                Metro to Gurugram. For Gurugram students, our online live classes eliminate the
+                Delhi commute entirely - study from home with same quality AIIMS faculty teaching!
               </p>
             </div>
           </div>
@@ -255,7 +259,9 @@ export default function HUDACityCentreMetroContent({ metroData }: HUDACityCentre
               </span>
               <Monitor className="mb-4 h-10 w-10 text-amber-600" />
               <h3 className="mb-2 text-xl font-bold">100% Online</h3>
-              <p className="mb-4 text-gray-600">Live classes from home. Best for Gurugram students.</p>
+              <p className="mb-4 text-gray-600">
+                Live classes from home. Best for Gurugram students.
+              </p>
               <ul className="mb-4 space-y-2 text-sm text-gray-600">
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-amber-600" />
@@ -331,8 +337,9 @@ export default function HUDACityCentreMetroContent({ metroData }: HUDACityCentre
               NEET Coaching for Working Professionals
             </h2>
             <p className="mb-8 text-lg text-gray-600">
-              Many IT professionals from Cyber City, DLF Cyber Hub, and MG Road corporate parks prepare for NEET with us.
-              Our evening batch (7-9 PM) and weekend sessions are designed for your busy schedule.
+              Many IT professionals from Cyber City, DLF Cyber Hub, and MG Road corporate parks
+              prepare for NEET with us. Our evening batch (7-9 PM) and weekend sessions are designed
+              for your busy schedule.
             </p>
             <div className="grid gap-4 md:grid-cols-3">
               <div className="rounded-xl bg-white p-4 shadow-sm">
@@ -352,10 +359,12 @@ export default function HUDACityCentreMetroContent({ metroData }: HUDACityCentre
               </div>
             </div>
             <button
-              onClick={() => handleWhatsAppClick(
-                'huda-city-centre-working-professional',
-                "Hi! I'm a working professional in Gurugram (Cyber City/DLF area). I want to prepare for NEET. Please share details about evening batches."
-              )}
+              onClick={() =>
+                handleWhatsAppClick(
+                  'huda-city-centre-working-professional',
+                  "Hi! I'm a working professional in Gurugram (Cyber City/DLF area). I want to prepare for NEET. Please share details about evening batches."
+                )
+              }
               className="mt-8 inline-flex items-center gap-2 rounded-lg bg-amber-600 px-6 py-3 font-semibold text-white transition hover:bg-amber-700"
             >
               <MessageCircle className="h-5 w-5" />
@@ -410,10 +419,12 @@ export default function HUDACityCentreMetroContent({ metroData }: HUDACityCentre
             </div>
             <div className="mt-6 text-center">
               <button
-                onClick={() => handleWhatsAppClick(
-                  'huda-city-centre-dlf-resident',
-                  "Hi! I'm from DLF Phase area in Gurugram. I'm interested in NEET Biology coaching. Please share details."
-                )}
+                onClick={() =>
+                  handleWhatsAppClick(
+                    'huda-city-centre-dlf-resident',
+                    "Hi! I'm from DLF Phase area in Gurugram. I'm interested in NEET Biology coaching. Please share details."
+                  )
+                }
                 className="inline-flex items-center gap-2 rounded-lg bg-green-500 px-6 py-3 font-semibold text-white transition hover:bg-green-600"
               >
                 <MessageCircle className="h-5 w-5" />
@@ -463,7 +474,12 @@ export default function HUDACityCentreMetroContent({ metroData }: HUDACityCentre
                   {faq.question}
                   <span className="text-amber-600 transition-transform group-open:rotate-180">
                     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
                     </svg>
                   </span>
                 </summary>
@@ -486,22 +502,27 @@ export default function HUDACityCentreMetroContent({ metroData }: HUDACityCentre
             Join {metroData.studentCount} Students from HUDA City Centre Area
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-xl text-white/90">
-            Start your medical journey with expert guidance from AIIMS faculty - Online classes perfect for Gurugram students!
+            Start your medical journey with expert guidance from AIIMS faculty - Online classes
+            perfect for Gurugram students!
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
             <button
-              onClick={() => handleWhatsAppClick(
-                'huda-city-centre-metro-cta',
-                "Hi! I'm near HUDA City Centre Metro in Gurugram. I want to join NEET coaching."
-              )}
+              onClick={() =>
+                handleWhatsAppClick(
+                  'huda-city-centre-metro-cta',
+                  "Hi! I'm near HUDA City Centre Metro in Gurugram. I want to join NEET coaching."
+                )
+              }
               className="inline-flex items-center gap-2 rounded-lg bg-green-500 px-8 py-3 font-semibold text-white transition hover:bg-green-600"
             >
               <MessageCircle className="h-5 w-5" />
               WhatsApp Now
             </button>
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20huda%20city%20centre%20metro.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20huda%20city%20centre%20metro.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 font-semibold text-amber-700 transition hover:bg-amber-50"
             >
               Book Free Demo

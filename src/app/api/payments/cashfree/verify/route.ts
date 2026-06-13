@@ -48,9 +48,7 @@ export async function POST(request: NextRequest) {
           data: {
             status: 'COMPLETED',
             paymentMethod,
-            cashfreePaymentId: successPayment
-              ? String(successPayment.cf_payment_id)
-              : null,
+            cashfreePaymentId: successPayment ? String(successPayment.cf_payment_id) : null,
             completedAt: new Date(),
             updatedAt: new Date(),
           },
@@ -101,9 +99,6 @@ export async function POST(request: NextRequest) {
     })
   } catch (error) {
     console.error('Cashfree verify error:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to verify payment' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to verify payment' }, { status: 500 })
   }
 }

@@ -89,12 +89,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about nitrogen excretion in animals:\n\nI. Ammoniotelic animals excrete nitrogen primarily as ammonia, which is highly toxic but requires little energy to produce and is readily diluted in surrounding water\nII. Ureotelic animals convert ammonia to urea via the ornithine-urea cycle in the liver, requiring ATP but producing a less toxic, moderately soluble compound\nIII. Uricotelic animals excrete nitrogen as uric acid, which requires more ATP but is nearly insoluble, allowing excretion as a semi-solid paste with minimal water loss\nIV. All animals are strictly limited to one form of nitrogen excretion throughout their entire life cycle",
-      "options": [
-        "TTTF",
-        "TTFF",
-        "TFTT",
-        "TTTT"
-      ],
+      "options": ["TTTF", "TTFF", "TFTT", "TTTT"],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE: Ammonia is the immediate product of amino acid deamination. It is highly toxic to the CNS at micromolar concentrations but is small, highly soluble, and diffuses readily across gill epithelia into water. Fish excrete ammonia primarily via Rh glycoprotein ammonia channels (Rhag, Rhbg, Rhcg) and NH4+ transport via NHE. Statement II is TRUE: The ornithine-urea cycle converts ammonia to urea in liver hepatocytes, spanning mitochondria (CPS-I, ornithine transcarbamylase) and cytosol (argininosuccinate synthetase, argininosuccinate lyase, arginase). Energy cost is approximately 4 ATP equivalents per urea. Urea is much less toxic than ammonia, highly soluble (1200 g/L), and can be concentrated in urine. Sharks retain urea as an osmolyte. Statement III is TRUE: Uric acid requires approximately 5-8 ATP per nitrogen atom via purine biosynthesis but is nearly insoluble (0.06 g/L), allowing excretion as white semi-solid paste with minimal water loss. Essential for birds (weight minimization, closed eggs), reptiles (arid environments), and insects (high surface-to-volume ratio). Statement IV is FALSE: Many animals shift between nitrogen excretion forms. Tadpoles are ammoniotelic but adult frogs become ureotelic (urea cycle enzymes induced during metamorphosis by thyroid hormone). Lungfish shift from ammonotely to ureotely during estivation. Some turtles shift between ureotely and uricotely depending on water availability.",
       "isOlympiad": true,
@@ -209,12 +204,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about glomerular filtration:\n\nI. Glomerular filtration is driven by net filtration pressure, which equals glomerular capillary hydrostatic pressure minus Bowman's capsule hydrostatic pressure and glomerular capillary oncotic pressure\nII. The filtration barrier consists of fenestrated endothelium, glomerular basement membrane (GBM), and podocyte foot processes with slit diaphragms containing nephrin\nIII. The barrier allows free filtration of molecules up to approximately 7,000 Da while restricting albumin passage based on both size and charge selectivity\nIV. GFR is independent of renal blood flow and cannot be regulated by afferent or efferent arteriolar tone",
-      "options": [
-        "TFTT",
-        "TTFF",
-        "TTTF",
-        "TTTT"
-      ],
+      "options": ["TFTT", "TTFF", "TTTF", "TTTT"],
       "correctAnswer": "C",
       "explanation": "Statement I is TRUE: NFP = PGC - (PBS + piGC), where PGC approximately 55 mmHg (high because glomerulus is between two arterioles), PBS approximately 15 mmHg (opposes filtration), piGC approximately 30 mmHg at afferent end increasing to approximately 35 at efferent end as filtration concentrates proteins. NFP approximately 10 mmHg at afferent end. Statement II is TRUE: Three-layered sieve: (1) Fenestrated endothelium with 70-100 nm fenestrae covered by negatively charged glycocalyx. (2) GBM — type IV collagen (alpha3/4/5 — mutations cause Alport syndrome), laminin-521, heparan sulfate proteoglycans providing charge barrier. (3) Podocyte foot processes with slit diaphragms — nephrin (NPHS1, mutations cause congenital nephrotic syndrome) interacts in zipper-like pattern creating approximately 4x14 nm pores. Podocin (NPHS2) anchors nephrin to actin cytoskeleton. Statement III is TRUE: Size selectivity — molecules below approximately 7,000 Da freely filtered (inulin, glucose, urea). Albumin (69,000 Da) restricted (less than 0.01% passage). Charge selectivity — GBM heparan sulfate provides negative charge repelling negatively charged albumin (pI approximately 4.7). Dextran studies: negatively charged dextrans filtered less than neutral less than positively charged at same size. Statement IV is FALSE: GFR depends on renal plasma flow and arteriolar tone. Afferent constriction (sympathetic, angiotensin II at high doses) decreases GFR. Efferent constriction (angiotensin II) increases PGC and GFR. ACE inhibitors dilate efferent preferentially, reducing GFR — beneficial in diabetic nephropathy but harmful in renal artery stenosis.",
       "isOlympiad": true,
@@ -389,12 +379,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about potassium homeostasis in the kidney:\n\nI. Approximately 65% of filtered K+ is reabsorbed in the proximal tubule via paracellular pathways driven by solvent drag\nII. The thick ascending limb reabsorbs approximately 25% of filtered K+ via the apical NKCC2 cotransporter, with K+ recycling back to the lumen through ROMK channels\nIII. The cortical collecting duct is the primary site for regulated K+ secretion, where principal cells secrete K+ through apical ROMK and BK (big conductance) channels driven by the lumen-negative transepithelial potential created by ENaC-mediated Na+ reabsorption\nIV. Hyperkalemia directly inhibits aldosterone release from the adrenal cortex",
-      "options": [
-        "TTTF",
-        "TFTT",
-        "TTFF",
-        "TTTT"
-      ],
+      "options": ["TTTF", "TFTT", "TTFF", "TTTT"],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE: The PCT reabsorbs approximately 65-70% of filtered K+ primarily via the paracellular pathway. This is driven by solvent drag — as water is reabsorbed (carrying dissolved solutes), K+ follows through the relatively leaky tight junctions. Additionally, as the early PCT preferentially reabsorbs NaHCO3, the luminal K+ concentration increases slightly, creating a small concentration gradient favoring paracellular reabsorption. Statement II is TRUE: The thick ascending limb reabsorbs approximately 25-30% of filtered K+ via the apical NKCC2 (Na+/K+/2Cl- cotransporter). K+ enters the cell from the lumen via NKCC2 along with Na+ and 2Cl-. However, K+ recycling is essential: K+ is pumped back into the lumen through apical ROMK (renal outer medullary K+) channels. This K+ recycling ensures continuous NKCC2 operation (K+ availability in the lumen is rate-limiting) and generates the lumen-positive transepithelial potential (through net positive charge movement from cell to lumen) that drives paracellular reabsorption of Na+, Ca2+, and Mg2+. Statement III is TRUE: The cortical collecting duct is the principal site for regulated K+ secretion, responsible for matching K+ excretion to dietary intake. Principal cells secrete K+ through: ROMK channels (constitutive, responsible for baseline K+ secretion) and BK (maxi-K/large-conductance) channels (flow-activated, important during high K+ intake when increased distal flow activates these mechanosensitive channels). The driving force is the lumen-negative transepithelial potential created by ENaC-mediated Na+ reabsorption (Na+ entry through apical ENaC depolarizes the lumen relative to the interstitium). Aldosterone enhances both Na+ reabsorption (ENaC) and K+ secretion (ROMK/BK) — linking sodium balance to potassium balance. Statement IV is FALSE: This is reversed. Hyperkalemia STIMULATES (not inhibits) aldosterone release from the adrenal zona glomerulosa. Elevated plasma K+ directly depolarizes zona glomerulosa cells (by reducing the K+ equilibrium potential), opening voltage-gated Ca2+ channels, increasing intracellular Ca2+, and stimulating aldosterone synthesis (CYP11B2/aldosterone synthase). This is a critical homeostatic mechanism: hyperkalemia → aldosterone → enhanced renal K+ secretion → correction of hyperkalemia. Hypokalemia, conversely, suppresses aldosterone. This K+-aldosterone feedback loop operates independently of the RAAS (angiotensin II is the other major aldosterone secretagogue).",
       "isOlympiad": true,
@@ -549,12 +534,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about osmoconformers and osmoregulators:\n\nI. Osmoconformers (most marine invertebrates) allow their body fluid osmolality to match the surrounding seawater, minimizing the energy cost of osmoregulation\nII. Even osmoconformers typically regulate the concentrations of specific ions (particularly K+, Ca2+, Mg2+, SO42-) differently from seawater through ionoregulation\nIII. Osmoregulators (all vertebrates, some crustaceans) maintain internal osmolality different from the environment, expending energy to pump ions against concentration gradients\nIV. Hagfish are the only vertebrates that are marine osmoconformers, with body fluid osmolality nearly identical to seawater",
-      "options": [
-        "TTTF",
-        "TFTT",
-        "TTFF",
-        "TTTT"
-      ],
+      "options": ["TTTF", "TFTT", "TTFF", "TTTT"],
       "correctAnswer": "D",
       "explanation": "Statement I is TRUE: Most marine invertebrates (cnidarians, echinoderms, many mollusks, most polychaetes) are osmoconformers — their body fluid osmolality closely matches seawater (approximately 1000 mOsm/kg). This eliminates the osmotic gradient across body surfaces, meaning no net water movement and no energy expenditure on osmotic regulation. The energetic savings are significant — osmoregulation can account for 20-30% of total metabolic expenditure in some organisms. Statement II is TRUE: Being an osmoconformer does not mean being an ionoconformer. Even though total osmolality matches seawater, the concentrations of individual ions in the body fluids often differ significantly. For example, many marine invertebrates maintain K+ and Ca2+ at concentrations different from seawater (critical for nerve and muscle function), and actively regulate SO42- and Mg2+ (often maintaining lower concentrations than seawater). This IONOREGULATION requires active transport mechanisms (ion pumps and channels) even in osmoconformers. Statement III is TRUE: Osmoregulators maintain a body fluid osmolality that differs from their environment. In seawater, marine teleosts maintain body fluids at approximately 300-400 mOsm/kg (hypo-osmotic regulation), requiring active NaCl excretion via gill ionocytes and seawater drinking. In freshwater, fish maintain approximately 300 mOsm/kg (hyperosmotic regulation), requiring active NaCl absorption and production of dilute urine. All vertebrates except hagfish are osmoregulators. Some crustaceans (shore crabs like Carcinus maenas) are also osmoregulators, particularly in estuarine environments. The energetic cost of osmoregulation is proportional to the osmotic gradient and surface area of permeable membranes. Statement IV is TRUE: Hagfish (Myxini) are indeed the only vertebrates that are true marine osmoconformers. Their plasma osmolality is approximately 1000 mOsm/kg, nearly identical to seawater. Their NaCl concentration is close to seawater levels (unlike sharks, which maintain lower NaCl but add urea/TMAO to reach seawater osmolality). However, even hagfish regulate some specific ion concentrations differently from seawater (Ca2+, Mg2+, SO42-), making them ionoregulators despite being osmoconformers. This is considered an ancestral (primitive) condition among vertebrates, with osmoregulation evolving later.",
       "isOlympiad": true,
@@ -669,12 +649,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about renal handling of bicarbonate and the kidney's role in acid-base balance:\n\nI. The kidneys reabsorb approximately 4,320 mEq of filtered HCO3- per day, primarily in the proximal tubule via the NHE3/carbonic anhydrase mechanism\nII. The kidneys generate 'new' HCO3- by excreting H+ as titratable acid (primarily H2PO4-) and as ammonium (NH4+), replacing the HCO3- consumed by daily metabolic acid production\nIII. Ammonium (NH4+) is produced by proximal tubular cells from glutamine via glutaminase and glutamate dehydrogenase, and its excretion is upregulated during chronic metabolic acidosis\nIV. The kidneys respond to acid-base disturbances within minutes, making them the fastest compensatory mechanism",
-      "options": [
-        "TTTT",
-        "TTFF",
-        "TFTT",
-        "TTTF"
-      ],
+      "options": ["TTTT", "TTFF", "TFTT", "TTTF"],
       "correctAnswer": "D",
       "explanation": "Statement I is TRUE: The glomerulus freely filters HCO3- at its plasma concentration (approximately 24 mEq/L x GFR 180 L/day = 4,320 mEq/day). If this were excreted, severe metabolic acidosis would result immediately. The proximal tubule reabsorbs approximately 80-85% of filtered HCO3- via an indirect mechanism: NHE3 on the apical membrane secretes H+ into the lumen. H+ combines with filtered HCO3- to form H2CO3, rapidly dehydrated to CO2 + H2O by luminal membrane-bound carbonic anhydrase IV (CAIV). CO2 diffuses into the cell, where cytoplasmic carbonic anhydrase II (CAII) hydrates it back to H2CO3 → H+ + HCO3-. The H+ is recycled back to the lumen via NHE3, and HCO3- exits basolaterally via NBC1 (Na+/HCO3- cotransporter). The remaining 15-20% of HCO3- is reabsorbed in the TAL (via similar mechanisms) and collecting duct (type A intercalated cells). Statement II is TRUE: Normal metabolism produces approximately 50-100 mEq of non-volatile (fixed) acid daily (from protein metabolism — sulfuric acid from sulfur-containing amino acids, phosphoric acid from phospholipids, organic acids). This acid consumes HCO3- as a buffer (H+ + HCO3- → CO2 + H2O). The kidneys must regenerate this consumed HCO3- by excreting the equivalent amount of H+ in two forms: (1) Titratable acid (approximately 10-30 mEq/day) — primarily H+ buffered by HPO42- (forming H2PO4-) in the collecting duct. (2) Ammonium (approximately 40-60 mEq/day) — NH4+ excreted in urine. Each H+ excreted generates one 'new' HCO3- that is added to the blood, replacing the one consumed by metabolic acid. Statement III is TRUE: Ammonium production is the kidney's major mechanism for increasing acid excretion during acidosis. Proximal tubular cells metabolize glutamine (the primary substrate): glutaminase converts glutamine to glutamate + NH4+; glutamate dehydrogenase converts glutamate to alpha-ketoglutarate + NH4+. The NH4+ is secreted into the lumen (via NHE3, substituting for H+, and via NH3 diffusion). Alpha-ketoglutarate metabolism generates HCO3- (new bicarbonate). During chronic metabolic acidosis, ammoniagenesis is dramatically upregulated (3-10 fold increase over days) through: increased glutaminase and glutamate dehydrogenase expression, increased apical NHE3 activity, and acidosis-responsive enhancer elements in the glutaminase gene promoter. Statement IV is FALSE: The kidneys are the SLOWEST compensatory mechanism (full compensation takes 3-5 days). The fastest responses are: (1) Chemical buffers (instantaneous — HCO3-/CO2, phosphate, proteins). (2) Respiratory compensation (minutes to hours — hyperventilation in metabolic acidosis to blow off CO2, reducing PaCO2). (3) Renal compensation (hours to days — adjusting HCO3- reabsorption, titratable acid excretion, and ammoniagenesis). The kidney is slow because it requires transcriptional changes (enzyme upregulation) and morphological adaptations (intercalated cell remodeling) for full compensation, but it is the ONLY mechanism capable of complete correction (not just compensation) and the only mechanism that can excrete or generate new HCO3-.",
       "isOlympiad": true,
@@ -769,12 +744,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about osmoregulation in amphibians:\n\nI. Freshwater frogs are hyperosmotic to their environment and absorb water osmotically across their highly permeable skin, requiring production of large volumes of dilute urine\nII. The frog skin actively absorbs Na+ and Cl- from the surrounding freshwater through apical ENaC-like channels and Cl- channels, driven by basolateral Na+/K+-ATPase — the Koefoed-Johnsen and Ussing model\nIII. During terrestrial exposure, some tree frogs reduce cutaneous water loss by secreting lipid-rich substances from specialized glands, dramatically reducing skin permeability\nIV. The urinary bladder in amphibians is an important osmoregulatory organ that stores dilute urine and can reabsorb water under the influence of arginine vasotocin (AVT, the amphibian ADH analog)",
-      "options": [
-        "TTTT",
-        "TTFT",
-        "TFTT",
-        "TTTF"
-      ],
+      "options": ["TTTT", "TTFT", "TFTT", "TTTF"],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE: Freshwater frogs (like Rana/Lithobates) maintain plasma osmolality approximately 200-250 mOsm/kg in freshwater (approximately 1-10 mOsm/kg). Their skin is highly permeable to water (facilitating cutaneous gas exchange — amphibians rely heavily on skin for O2/CO2 exchange). This high permeability results in constant osmotic water influx. To maintain water balance, the kidneys produce large volumes of very dilute urine (approximately 10-50 mOsm/kg), excreting excess water while minimizing salt loss. GFR is high (for body size), and the distal tubule actively reabsorbs NaCl without water. Statement II is TRUE: The pioneering work of Koefoed-Johnsen and Ussing (1958) on frog skin (Rana temporaria) established the two-membrane model of transepithelial transport that remains foundational to renal physiology. The frog skin absorbs NaCl from dilute freshwater (as low as 0.1 mM) using: APICAL MEMBRANE: ENaC-like sodium channels (amiloride-sensitive, allowing passive Na+ entry from the dilute pond water down its electrochemical gradient into the cell), and Cl- transport via paracellular pathways or specific Cl- channels/exchangers. BASOLATERAL MEMBRANE: Na+/K+-ATPase actively pumps Na+ out of the cell into the interstitium (maintaining low intracellular Na+ that drives apical entry). This active NaCl absorption from extremely dilute solutions compensates for diffusional salt loss across the permeable skin and in the dilute urine. Statement III is TRUE: Some arboreal/terrestrial amphibians have evolved remarkable adaptations to reduce cutaneous water loss. The waxy monkey tree frog (Phyllomedusa sauvagii) secretes lipid-rich waxes (primarily esters, free fatty acids, hydrocarbons) from specialized lipid-secreting glands in the skin. The frog uses its limbs to spread these secretions over its entire body in a characteristic wiping behavior, creating a hydrophobic barrier that reduces evaporative water loss by approximately 95% — achieving water loss rates comparable to desert reptiles. Other species (Chiromantis xerampelina, Litoria caerulea) also show reduced skin permeability through similar mechanisms. Some desert toads (Scaphiopus) burrow underground and form cocoons of shed skin layers that reduce water loss during estivation. Statement IV is TRUE: The amphibian urinary bladder serves as a water reservoir — a unique osmoregulatory adaptation. Unlike the mammalian bladder (which simply stores urine for periodic voiding), the amphibian bladder can store a large volume of dilute urine (up to 50% of body weight in some desert toads). When dehydration threatens, arginine vasotocin (AVT, the non-mammalian homolog of ADH/vasopressin) is released and acts on the bladder epithelium (via V2-like receptors), inserting aquaporins (AQP homologs) into the apical membrane. Water is reabsorbed from the stored urine back into the blood, serving as an internal water reserve. This is critical for terrestrial amphibians — they can 'refill' their bladder when water is available and draw upon this reserve during dry periods. AVT also increases skin water permeability (via AQP insertion in skin principal cells) and reduces renal GFR, analogous to ADH's effects in mammals.",
       "isOlympiad": true,
@@ -929,12 +899,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the countercurrent exchange system in the vasa recta of the mammalian kidney:\n(I) The descending vasa recta loses water and gains solutes as it descends into the medulla\n(II) The ascending vasa recta gains water and loses solutes as it ascends toward the cortex\n(III) The vasa recta actively transports NaCl to maintain the medullary gradient\n(IV) Increased blood flow through the vasa recta tends to wash out the medullary osmotic gradient",
-      "options": [
-        "True",
-        "True",
-        "False",
-        "True"
-      ],
+      "options": ["True", "True", "False", "True"],
       "correctAnswer": "TTFT",
       "explanation": "The vasa recta function as countercurrent exchangers (not multipliers) that passively equilibrate with the surrounding medullary interstitium. (I) TRUE: As the descending vasa recta penetrates deeper into the hypertonic medulla, water moves out and solutes (NaCl, urea) move in by passive diffusion, concentrating the blood. (II) TRUE: As blood ascends through the ascending vasa recta, the process reverses — water enters and solutes leave as the surrounding interstitium becomes progressively less concentrated. (III) FALSE: The vasa recta do NOT actively transport anything; the entire process is passive, driven by osmotic and concentration gradients. (IV) TRUE: Excessive medullary blood flow disrupts the countercurrent exchange by carrying away solutes before equilibration can occur, effectively washing out the gradient.",
       "isOlympiad": true,
@@ -1029,12 +994,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about nitrogen excretion strategies across animal taxa:\n(I) Ammonotelism is energetically cheapest but requires abundant water for ammonia dilution\n(II) Uricotelism is most common in mammals because uric acid is less toxic than urea\n(III) Ureotelic animals convert ammonia to urea via the ornithine-urea cycle, primarily in the liver\n(IV) Some animals switch between ammonotelism and ureotelism depending on water availability",
-      "options": [
-        "True",
-        "False",
-        "True",
-        "True"
-      ],
+      "options": ["True", "False", "True", "True"],
       "correctAnswer": "TFTT",
       "explanation": "(I) TRUE: Ammonia (NH₃/NH₄⁺) is highly toxic but requires minimal energy to produce (no conversion needed). However, it must be diluted extensively (requiring ~500 mL water per gram of nitrogen), making it suitable only for aquatic animals or those with abundant water access. (II) FALSE: Mammals are ureotelic, not uricotelic. Uricotelism (uric acid excretion) is characteristic of birds, reptiles, and terrestrial arthropods. Uric acid is excreted as a semi-solid paste, conserving water. (III) TRUE: The ornithine-urea cycle (Krebs-Henseleit cycle) occurs primarily in hepatocytes, converting two ammonia molecules and one CO₂ into urea through five enzymatic steps spanning the mitochondrial matrix and cytoplasm. (IV) TRUE: Some amphibians (e.g., African clawed frog Xenopus laevis) switch from ammonotelism when in water to ureotelism during estivation or drought conditions, upregulating urea cycle enzymes.",
       "isOlympiad": true,
@@ -1149,12 +1109,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about Malpighian tubules in insects:\n(I) They produce primary urine by pressure filtration of hemolymph, similar to the vertebrate glomerulus\n(II) Active transport of K⁺ and/or Na⁺ into the tubule lumen drives fluid secretion osmotically\n(III) The hindgut and rectum can selectively reabsorb water and ions from the primary urine before excretion\n(IV) Malpighian tubules are derived from endoderm and empty into the midgut",
-      "options": [
-        "False",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["False", "True", "True", "False"],
       "correctAnswer": "FTTF",
       "explanation": "(I) FALSE: Unlike vertebrate kidneys, Malpighian tubules do NOT use pressure filtration. Instead, they employ a secretion-based mechanism. Active transport of ions into the tubule lumen creates an osmotic gradient that draws water from the hemolymph, and other solutes (including nitrogenous wastes like uric acid) follow. (II) TRUE: V-type H⁺-ATPases on the apical membrane create an electrochemical gradient that drives secondary active transport of K⁺ (and Na⁺ in some species) into the lumen. Water follows osmotically through aquaporins. (III) TRUE: The hindgut and especially the rectum are critical for osmoregulation — they selectively reabsorb water, ions (Na⁺, K⁺, Cl⁻), and useful metabolites while allowing waste products to be excreted. In desert insects, rectal pads can generate extremely dry fecal matter. (IV) FALSE: Malpighian tubules are ectodermal (not endodermal) in origin and empty into the junction of the midgut and hindgut, not the midgut itself.",
       "isOlympiad": true,
@@ -1169,12 +1124,7 @@
     {
       "type": "MCQ",
       "question": "During metabolic acidosis, the proximal tubule increases ammonia (NH₃) production and secretion. What is the primary substrate for renal ammoniagenesis?",
-      "options": [
-        "Alanine",
-        "Aspartate",
-        "Arginine",
-        "Glutamine"
-      ],
+      "options": ["Alanine", "Aspartate", "Arginine", "Glutamine"],
       "correctAnswer": "D",
       "explanation": "Glutamine is the primary substrate for renal ammoniagenesis during metabolic acidosis. In the proximal tubule, glutamine is transported into the cell and metabolized by mitochondrial glutaminase to glutamate and NH₄⁺. Glutamate dehydrogenase then converts glutamate to α-ketoglutarate and a second NH₄⁺. The NH₄⁺ is secreted into the tubular lumen via the Na⁺/H⁺ exchanger NHE3 (substituting NH₄⁺ for H⁺) and by nonionic diffusion trapping. The α-ketoglutarate is metabolized to generate new HCO₃⁻, which is returned to the blood. During chronic metabolic acidosis, glutaminase and glutamate dehydrogenase are upregulated 5-10 fold, dramatically increasing NH₄⁺ excretion — the most important adaptive response to chronic acid loads.",
       "isOlympiad": true,
@@ -1289,12 +1239,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the proximal convoluted tubule (PCT) of the mammalian nephron:\n(I) Approximately 65-70% of filtered Na⁺, water, and HCO₃⁻ is reabsorbed in the PCT\n(II) The PCT has high water permeability due to constitutive expression of aquaporin-1 (AQP1), independent of ADH\n(III) Glucose reabsorption in the PCT occurs via SGLT2 and SGLT1 cotransporters and exhibits a transport maximum (Tm)\n(IV) The PCT is the primary site of K⁺ secretion in the nephron",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "(I) TRUE: The PCT is the workhorse of the nephron, reabsorbing approximately 65-70% of filtered Na⁺, water, Cl⁻, K⁺, and HCO₃⁻, plus nearly 100% of filtered glucose and amino acids. (II) TRUE: AQP1 is constitutively expressed in both apical and basolateral membranes of PCT cells, providing high water permeability independent of ADH (vasopressin). This allows water to follow solutes isosmotically — tubular fluid remains ~300 mOsm/L throughout the PCT. (III) TRUE: SGLT2 (low-affinity, high-capacity) in the early PCT reabsorbs ~90% of filtered glucose, while SGLT1 (high-affinity, low-capacity) in the late PCT captures the remainder. When plasma glucose exceeds ~375 mg/dL, these transporters saturate (transport maximum reached), and glucose appears in urine (glycosuria). (IV) FALSE: K⁺ secretion occurs primarily in the cortical collecting duct principal cells via ROMK and BK channels, regulated by aldosterone. The PCT actually reabsorbs ~65% of filtered K⁺ passively.",
       "isOlympiad": true,
@@ -1409,12 +1354,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the renin-angiotensin-aldosterone system (RAAS):\n(I) Renin is an enzyme secreted by juxtaglomerular cells that cleaves angiotensinogen to angiotensin I\n(II) Angiotensin-converting enzyme (ACE) is located primarily in the pulmonary endothelium and converts angiotensin I to angiotensin II\n(III) Angiotensin II stimulates aldosterone release from the adrenal medulla\n(IV) Aldosterone increases expression of ENaC and Na⁺/K⁺-ATPase in principal cells of the collecting duct",
-      "options": [
-        "True",
-        "True",
-        "False",
-        "True"
-      ],
+      "options": ["True", "True", "False", "True"],
       "correctAnswer": "TTFT",
       "explanation": "(I) TRUE: Juxtaglomerular (granular) cells in the wall of the afferent arteriole sense decreased renal perfusion pressure (via stretch receptors) and decreased NaCl delivery to the macula densa, responding by secreting renin. Renin is a protease that cleaves the liver-derived protein angiotensinogen to produce the decapeptide angiotensin I. (II) TRUE: ACE (also known as kininase II) is a membrane-bound metalloprotease concentrated on the luminal surface of pulmonary capillary endothelium, providing a large surface area for conversion. ACE cleaves two amino acids from angiotensin I to produce the octapeptide angiotensin II. ACE also degrades bradykinin. (III) FALSE: Angiotensin II stimulates aldosterone release from the zona glomerulosa of the adrenal CORTEX, not the medulla. The adrenal medulla produces catecholamines (epinephrine and norepinephrine). (IV) TRUE: Aldosterone binds intracellular mineralocorticoid receptors in principal cells, acting as a transcription factor to upregulate ENaC (apical Na⁺ entry), ROMK (apical K⁺ secretion), Na⁺/K⁺-ATPase (basolateral), and SGK1 (serum/glucocorticoid-regulated kinase).",
       "isOlympiad": true,
@@ -1549,12 +1489,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about ADH (vasopressin) regulation of collecting duct water permeability:\n(I) ADH binds to V2 receptors on the basolateral membrane of principal cells, activating adenylyl cyclase via Gs protein\n(II) The resulting cAMP activates protein kinase A, which phosphorylates AQP2 at Ser-256, triggering vesicle fusion with the apical membrane\n(III) When ADH levels fall, AQP2 is removed from the apical membrane by clathrin-mediated endocytosis\n(IV) Long-term ADH exposure increases total AQP2 protein synthesis by enhancing AQP2 gene transcription",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "True"
-      ],
+      "options": ["True", "True", "True", "True"],
       "correctAnswer": "TTTT",
       "explanation": "(I) TRUE: ADH (arginine vasopressin) binds V2 receptors on the basolateral membrane of collecting duct principal cells. V2R couples to Gs protein, activating adenylyl cyclase and increasing intracellular cAMP. (II) TRUE: cAMP activates PKA, which phosphorylates AQP2 at serine-256. This phosphorylation is the critical signal for AQP2-containing intracellular vesicles to translocate to and fuse with the apical plasma membrane, inserting functional water channels. This 'shuttle hypothesis' was confirmed by immunogold electron microscopy and live-cell imaging. (III) TRUE: When ADH levels decline, AQP2 dephosphorylation triggers clathrin-mediated endocytosis of AQP2 from the apical membrane back into intracellular vesicles, reducing water permeability. This recycling allows rapid regulation of water reabsorption. (IV) TRUE: Chronic ADH exposure (hours to days) upregulates AQP2 mRNA transcription via a cAMP-response element (CRE) in the AQP2 gene promoter, increasing total AQP2 protein. This long-term regulation complements the short-term trafficking response.",
       "isOlympiad": true,
@@ -1649,12 +1584,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about osmoregulation in terrestrial insects:\n(I) The cuticle (exoskeleton) is the primary barrier to evaporative water loss, with the waxy epicuticle being especially important\n(II) The rectum of many insects can reabsorb water so effectively that fecal pellets are nearly dry\n(III) Terrestrial insects excrete uric acid as their primary nitrogenous waste, conserving water since uric acid is relatively insoluble\n(IV) All terrestrial insects lack aquaporins since their cuticle prevents transcutaneous water movement",
-      "options": [
-        "True",
-        "True",
-        "True",
-        "False"
-      ],
+      "options": ["True", "True", "True", "False"],
       "correctAnswer": "TTTF",
       "explanation": "(I) TRUE: The insect cuticle consists of an inner procuticle (chitin + protein) and a thin outer epicuticle containing waxes. These epicuticular lipids form the primary barrier to cutaneous water loss. If the waxy layer is experimentally removed (by abrasion or solvent), water loss increases dramatically. There is a characteristic 'critical temperature' above which the wax melts and water loss skyrockets. (II) TRUE: Insect rectal pads (papillae) contain specialized cells with extensive membrane infoldings and mitochondria that generate strong osmotic gradients, capable of reabsorbing >90% of the water from primary urine. Cryptonephridial systems in some beetles and lepidopteran larvae are even more efficient. (III) TRUE: Uric acid (C₅H₄N₄O₃) is the predominant nitrogenous waste in most terrestrial insects. Its low solubility means it precipitates in the hindgut, requiring minimal water for excretion. (IV) FALSE: Insects do express aquaporins (e.g., Drosophila has multiple AQP genes including DRIP and Big Brain) in Malpighian tubules, hindgut, and other epithelia where they facilitate water transport.",
       "isOlympiad": true,
@@ -1689,12 +1619,7 @@
     {
       "type": "DATA_INTERPRETATION",
       "question": "A researcher performs micropuncture studies on a rat nephron, withdrawing fluid samples at different locations. The following inulin concentration ratios (tubular fluid/plasma, TF/P) are obtained:\n\nLocation | TF/P Inulin\nBowman's space | 1.0\nEnd of proximal tubule | 3.0\nEarly distal tubule | 7.5\nFinal urine (with ADH) | 300\nFinal urine (without ADH) | 5.0\n\nWhat fraction of filtered water has been reabsorbed by the end of the proximal tubule?",
-      "options": [
-        "67% (two-thirds)",
-        "33% (one-third)",
-        "75% (three-quarters)",
-        "50% (one-half)"
-      ],
+      "options": ["67% (two-thirds)", "33% (one-third)", "75% (three-quarters)", "50% (one-half)"],
       "correctAnswer": "A",
       "explanation": "Inulin is freely filtered at the glomerulus and is neither reabsorbed nor secreted by the tubules. Therefore, the TF/P inulin ratio reflects the degree of water reabsorption: as water is removed, inulin becomes progressively concentrated. If TF/P inulin = 3.0 at the end of the proximal tubule, this means inulin is 3× as concentrated as in plasma. Since inulin was not added or removed, the tubular fluid volume must be 1/3 of what was filtered. Therefore, 2/3 (67%) of the filtered water has been reabsorbed. This is consistent with the well-established fact that the proximal tubule reabsorbs approximately 65-70% of filtered water. At the early distal tubule, TF/P = 7.5 means 1/7.5 = 13.3% of filtered water remains (86.7% reabsorbed). The dramatic difference between final urine with ADH (TF/P = 300, only 0.33% of water remaining) vs. without ADH (TF/P = 5.0, 20% remaining) illustrates ADH's profound effect on collecting duct water permeability.",
       "isOlympiad": true,
@@ -1849,12 +1774,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about the comparative physiology of excretory organs:\n(I) The metanephridium of earthworms begins with a ciliated nephrostome that opens into the coelomic cavity of the adjacent anterior segment\n(II) The vertebrate kidney and the insect Malpighian tubule system both rely on pressure filtration as the initial step in urine formation\n(III) The rectal gland of sharks is functionally analogous to the chloride cells of marine teleost gills\n(IV) Green glands (antennal glands) of crustaceans can produce urine hyperosmotic to hemolymph, similar to the mammalian kidney",
-      "options": [
-        "True",
-        "False",
-        "True",
-        "False"
-      ],
+      "options": ["True", "False", "True", "False"],
       "correctAnswer": "TFTT",
       "explanation": "(I) TRUE: Metanephridia in earthworms have a ciliated nephrostome opening into the coelom of the segment anterior to the one containing the tubule body. Coelomic fluid enters through the nephrostome, is modified by the tubule (selective reabsorption and secretion), and exits through the nephridiopore on the body surface. (II) FALSE: The vertebrate kidney uses pressure filtration (glomerular ultrafiltration), but insect Malpighian tubules use secretion, not filtration. Active transport of ions into the Malpighian tubule lumen creates an osmotic gradient that draws water in — there is no pressure-driven filtration step. (III) TRUE: Both the shark rectal gland and marine teleost gill chloride cells serve the same function — active secretion of excess NaCl from the body. The rectal gland secretes a fluid nearly isotonic NaCl (similar to seawater) using Na⁺/K⁺-ATPase, NKCC1, and CFTR Cl⁻ channels — the same molecular machinery found in teleost gill ionocytes. (IV) FALSE: Crustacean antennal glands generally cannot produce urine more concentrated than hemolymph. They lack the countercurrent multiplication system found in mammalian kidneys. Urine is typically isosmotic or slightly hypo-osmotic to hemolymph.",
       "isOlympiad": true,
@@ -1969,12 +1889,7 @@
     {
       "type": "MTF",
       "question": "Evaluate the following statements about phosphate handling in the mammalian kidney:\n(I) Approximately 80-85% of filtered phosphate is reabsorbed in the proximal tubule via the NaPi-IIa and NaPi-IIc cotransporters\n(II) Parathyroid hormone (PTH) increases phosphate reabsorption by upregulating NaPi-IIa expression\n(III) Fibroblast growth factor 23 (FGF23), produced by osteocytes, is a phosphaturic hormone that inhibits renal phosphate reabsorption\n(IV) Phosphate reabsorption shows a transport maximum (Tm), and hyperphosphatemia occurs when filtered load exceeds Tm",
-      "options": [
-        "True",
-        "False",
-        "True",
-        "False"
-      ],
+      "options": ["True", "False", "True", "False"],
       "correctAnswer": "TFTT",
       "explanation": "(I) TRUE: The proximal tubule is the major site of phosphate reabsorption, handling 80-85% of filtered phosphate. The Na⁺-dependent phosphate cotransporters NaPi-IIa (SLC34A1) and NaPi-IIc (SLC34A3) on the apical brush border membrane mediate this uptake, driven by the favorable Na⁺ gradient. (II) FALSE: PTH DECREASES phosphate reabsorption — it is phosphaturic. PTH activates PKA and PKC signaling, leading to internalization and lysosomal degradation of NaPi-IIa and NaPi-IIc from the apical membrane, reducing phosphate uptake. This increases urinary phosphate excretion. (III) TRUE: FGF23, secreted primarily by osteocytes in response to high phosphate or high 1,25(OH)₂D₃ levels, acts on the kidney (requiring the coreceptor Klotho) to: downregulate NaPi-IIa/IIc (promoting phosphaturia) and inhibit 1-alpha-hydroxylase (reducing active vitamin D production). (IV) TRUE: Like glucose, phosphate reabsorption has a Tm. When plasma phosphate exceeds the threshold, the Tm is exceeded and phosphate appears in urine (phosphaturia).",
       "isOlympiad": true,

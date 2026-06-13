@@ -1,8 +1,5 @@
 import type { Metadata } from 'next'
-import {
-  getAllGurugramAreaSlugs,
-  getGurugramAreaBySlug,
-} from '@/data/gurugram-areas'
+import { getAllGurugramAreaSlugs, getGurugramAreaBySlug } from '@/data/gurugram-areas'
 import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
 
 type Props = {

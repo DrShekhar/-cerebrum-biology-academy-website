@@ -248,92 +248,88 @@ export function NotificationPopover({
       >
         <Bell className="w-6 h-6" />
         {unreadCount > 0 && (
-          <span
-            className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center animate-fadeInUp"
-          >
+          <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center animate-fadeInUp">
             {unreadCount > 9 ? '9+' : unreadCount}
           </span>
         )}
       </button>
 
       {/* Popover */}
-{isOpen && (
-          <div
-            className="absolute right-0 mt-2 w-96 max-w-[calc(100vw-2rem)] bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden z-50 animate-fadeInUp"
-          >
-            {/* Header */}
-            <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-4 text-white">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-2">
-                  <Bell className="w-5 h-5" />
-                  <h3 className="font-bold">Notifications</h3>
-                  {unreadCount > 0 && (
-                    <span className="bg-white/20 px-2 py-0.5 rounded-full text-xs">
-                      {unreadCount} new
-                    </span>
-                  )}
-                </div>
+      {isOpen && (
+        <div className="absolute right-0 mt-2 w-96 max-w-[calc(100vw-2rem)] bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden z-50 animate-fadeInUp">
+          {/* Header */}
+          <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-4 text-white">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <Bell className="w-5 h-5" />
+                <h3 className="font-bold">Notifications</h3>
                 {unreadCount > 0 && (
-                  <button
-                    onClick={onMarkAllAsRead}
-                    className="text-sm text-white/90 hover:text-white flex items-center"
-                  >
-                    <CheckCheck className="w-4 h-4 mr-1" />
-                    Mark all read
-                  </button>
+                  <span className="bg-white/20 px-2 py-0.5 rounded-full text-xs">
+                    {unreadCount} new
+                  </span>
                 )}
               </div>
-            </div>
-
-            {/* Notifications List */}
-            <div className="max-h-96 overflow-y-auto">
-              {notifications.length === 0 ? (
-                <div className="p-8 text-center">
-                  <Bell className="w-12 h-12 text-gray-300 mx-auto mb-3" />
-                  <p className="text-gray-600 font-medium">No notifications yet</p>
-                  <p className="text-sm text-gray-400 mt-1">
-                    You'll see achievements, streaks, and more here
-                  </p>
-                </div>
-              ) : (
-                notifications.map((notification) => (
-                  <NotificationItem
-                    key={notification.id}
-                    notification={notification}
-                    onMarkAsRead={onMarkAsRead}
-                    onDismiss={onDismiss}
-                  />
-                ))
-              )}
-
-              {/* Load More */}
-              {hasMore && (
+              {unreadCount > 0 && (
                 <button
-                  onClick={onLoadMore}
-                  disabled={isLoading}
-                  className="w-full p-3 text-center text-sm text-blue-600 hover:bg-blue-50 font-medium transition-colors"
+                  onClick={onMarkAllAsRead}
+                  className="text-sm text-white/90 hover:text-white flex items-center"
                 >
-                  {isLoading ? 'Loading...' : 'Load more'}
+                  <CheckCheck className="w-4 h-4 mr-1" />
+                  Mark all read
                 </button>
               )}
             </div>
-
-            {/* Footer */}
-            <div className="border-t border-gray-100 p-3">
-              <button
-                onClick={() => {
-                  setIsOpen(false)
-                  // Navigate to full notifications page
-                  router.push('/student/notifications')
-                }}
-                className="w-full text-center text-sm text-gray-600 hover:text-gray-900 font-medium flex items-center justify-center"
-              >
-                View all notifications
-                <ChevronRight className="w-4 h-4 ml-1" />
-              </button>
-            </div>
           </div>
-        )}
-</div>
+
+          {/* Notifications List */}
+          <div className="max-h-96 overflow-y-auto">
+            {notifications.length === 0 ? (
+              <div className="p-8 text-center">
+                <Bell className="w-12 h-12 text-gray-300 mx-auto mb-3" />
+                <p className="text-gray-600 font-medium">No notifications yet</p>
+                <p className="text-sm text-gray-400 mt-1">
+                  You'll see achievements, streaks, and more here
+                </p>
+              </div>
+            ) : (
+              notifications.map((notification) => (
+                <NotificationItem
+                  key={notification.id}
+                  notification={notification}
+                  onMarkAsRead={onMarkAsRead}
+                  onDismiss={onDismiss}
+                />
+              ))
+            )}
+
+            {/* Load More */}
+            {hasMore && (
+              <button
+                onClick={onLoadMore}
+                disabled={isLoading}
+                className="w-full p-3 text-center text-sm text-blue-600 hover:bg-blue-50 font-medium transition-colors"
+              >
+                {isLoading ? 'Loading...' : 'Load more'}
+              </button>
+            )}
+          </div>
+
+          {/* Footer */}
+          <div className="border-t border-gray-100 p-3">
+            <button
+              onClick={() => {
+                setIsOpen(false)
+                // Navigate to full notifications page
+                router.push('/student/notifications')
+              }}
+              className="w-full text-center text-sm text-gray-600 hover:text-gray-900 font-medium flex items-center justify-center"
+            >
+              View all notifications
+              <ChevronRight className="w-4 h-4 ml-1" />
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
   )
 }

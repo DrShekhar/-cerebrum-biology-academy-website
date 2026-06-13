@@ -33,23 +33,23 @@ const benefits = [
   {
     title: 'Digital + Personal',
     description:
-      "Keep the 2nd-largest national NEET chain's digital resources while adding personal teaching from AIIMS faculty.",
+      "Keep Aakash's digital resources while adding personal teaching from AIIMS faculty.",
     icon: Monitor,
   },
   {
     title: 'Flexible Scheduling',
-    description: 'Weekend intensives or evening sessions. Choose what fits your the 2nd-largest national NEET chain schedule.',
+    description: 'Weekend intensives or evening sessions. Choose what fits your Aakash schedule.',
     icon: Calendar,
   },
   {
     title: 'Biology Deep-Dive',
     description:
-      'While the 2nd-largest national NEET chain covers breadth, we focus on depth. Master concepts that matter for NEET.',
+      'While Aakash covers breadth, we focus on depth. Master concepts that matter for NEET.',
     icon: BookOpen,
   },
   {
     title: 'Personal Attention',
-    description: "10-20 students vs the 2nd-largest national NEET chain's 60-80. Your doubts get answered properly.",
+    description: "10-20 students vs Aakash's 60-80. Your doubts get answered properly.",
     icon: Users,
   },
 ]
@@ -85,21 +85,21 @@ const testimonials = [
   {
     name: 'Arjun P.',
     score: '625/720',
-    combo: 'the 2nd-largest national NEET chain + Cerebrum',
+    combo: 'Aakash + Cerebrum',
     quote:
-      'Continued the 2nd-largest national NEET chain for their test series but joined Cerebrum for Biology concepts. The combination worked perfectly for me.',
+      'Continued Aakash for their test series but joined Cerebrum for Biology concepts. The combination worked perfectly for me.',
   },
   {
     name: 'Priya M.',
     score: '638/720',
-    combo: 'the 2nd-largest national NEET chain + Cerebrum Weekend',
+    combo: 'Aakash + Cerebrum Weekend',
     quote:
-      "the 2nd-largest national NEET chain's digital resources are good, but Biology needs personal teaching. Cerebrum weekend batch gave me exactly that.",
+      "Aakash's digital resources are good, but Biology needs personal teaching. Cerebrum weekend batch gave me exactly that.",
   },
   {
     name: 'Ravi S.',
     score: '608/720',
-    combo: 'the 2nd-largest national NEET chain + Cerebrum Evening',
+    combo: 'Aakash + Cerebrum Evening',
     quote:
       'My Biology score improved by 60 marks after joining Cerebrum evening sessions. The doubt clearing is so much better than app-based.',
   },
@@ -108,7 +108,7 @@ const testimonials = [
 const successStats = [
   { stat: '50-60', label: 'Average marks improvement in Biology' },
   { stat: '82%', label: 'Score 310+ in Biology' },
-  { stat: '150+', label: 'the 2nd-largest national NEET chain students enrolled with us' },
+  { stat: '150+', label: 'Aakash students enrolled with us' },
   { stat: '4.8/5', label: 'Student satisfaction rating' },
 ]
 
@@ -119,7 +119,7 @@ export default function ComplementAakashNoidaContent({ faqs }: { faqs: FAQ[] }) 
     trackAndOpenWhatsApp({
       source: 'complement-aakash-coaching-noida',
       message:
-        'Hi! I am an the 2nd-largest national NEET chain student in Noida and want to join Cerebrum for extra Biology coaching. Please share the schedule and fees.',
+        'Hi! I am an Aakash student in Noida and want to join Cerebrum for extra Biology coaching. Please share the schedule and fees.',
       campaign: 'complement-aakash-noida',
     })
   }
@@ -142,7 +142,7 @@ export default function ComplementAakashNoidaContent({ faqs }: { faqs: FAQ[] }) 
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <span className="text-teal-700 font-medium">Complement the 2nd-largest national NEET chain Coaching</span>
+              <span className="text-teal-700 font-medium">Complement Aakash Coaching</span>
             </li>
           </ol>
         </div>
@@ -159,16 +159,16 @@ export default function ComplementAakashNoidaContent({ faqs }: { faqs: FAQ[] }) 
           <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Zap className="w-4 h-4" />
-              For the 2nd-largest national NEET chain Students Only
+              For Aakash Students Only
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Keep the 2nd-largest national NEET chain. Add
+              Keep Aakash. Add
               <span className="block text-yellow-400 mt-2">Expert Biology Coaching</span>
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Don&apos;t leave the 2nd-largest national NEET chain. Just boost your Biology with focused coaching from AIIMS
+              Don&apos;t leave Aakash. Just boost your Biology with focused coaching from AIIMS
               faculty. Keep using digital resources, add personal teaching.
             </p>
 
@@ -188,7 +188,11 @@ export default function ComplementAakashNoidaContent({ faqs }: { faqs: FAQ[] }) 
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -203,7 +207,7 @@ export default function ComplementAakashNoidaContent({ faqs }: { faqs: FAQ[] }) 
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
               >
                 <Phone className="w-5 h-5" />
-                Get Schedule for the 2nd-largest national NEET chain Students
+                Get Schedule for Aakash Students
               </button>
             </div>
           </div>
@@ -229,7 +233,7 @@ export default function ComplementAakashNoidaContent({ faqs }: { faqs: FAQ[] }) 
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Why the 2nd-largest national NEET chain Students Add Cerebrum
+              Why Aakash Students Add Cerebrum
             </h2>
             <p className="text-xl text-slate-600">Get the best of both worlds</p>
           </div>
@@ -256,7 +260,7 @@ export default function ComplementAakashNoidaContent({ faqs }: { faqs: FAQ[] }) 
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Flexible Batches for the 2nd-largest national NEET chain Students
+              Flexible Batches for Aakash Students
             </h2>
             <p className="text-xl text-slate-600">Choose what fits your schedule</p>
           </div>
@@ -295,7 +299,7 @@ export default function ComplementAakashNoidaContent({ faqs }: { faqs: FAQ[] }) 
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              the 2nd-largest national NEET chain + Cerebrum Success Stories
+              Aakash + Cerebrum Success Stories
             </h2>
             <p className="text-xl text-slate-600">Real results from students who combined both</p>
           </div>
@@ -329,14 +333,14 @@ export default function ComplementAakashNoidaContent({ faqs }: { faqs: FAQ[] }) 
             <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Best of Both Worlds</h2>
               <p className="text-xl text-indigo-100 mb-6">
-                the 2nd-largest national NEET chain&apos;s digital platform is good for practice and tests. But Biology needs
+                Aakash&apos;s digital platform is good for practice and tests. But Biology needs
                 personal teaching and doubt clearing that apps cannot provide. Cerebrum adds the
                 human element.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  Use the 2nd-largest national NEET chain test series + Cerebrum concepts
+                  Use Aakash test series + Cerebrum concepts
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
@@ -351,7 +355,11 @@ export default function ComplementAakashNoidaContent({ faqs }: { faqs: FAQ[] }) 
                   Video lectures + AIIMS faculty interaction
                 </li>
               </ul>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button className="bg-white text-indigo-600 hover:bg-indigo-50">
                   <Play className="w-4 h-4 mr-2" />
                   Try a Free Class
@@ -359,7 +367,7 @@ export default function ComplementAakashNoidaContent({ faqs }: { faqs: FAQ[] }) 
               </Link>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
-              <h3 className="text-2xl font-bold mb-6">Special Package for the 2nd-largest national NEET chain Students</h3>
+              <h3 className="text-2xl font-bold mb-6">Special Package for Aakash Students</h3>
               <div className="space-y-4">
                 <div className="flex justify-between py-3 border-b border-white/20">
                   <span>Weekend Only</span>
@@ -494,27 +502,21 @@ export default function ComplementAakashNoidaContent({ faqs }: { faqs: FAQ[] }) 
               href="/aakash-alternative-noida"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
-              <h3 className="font-semibold text-teal-600">the 2nd-largest national NEET chain Alternative</h3>
-              <p className="text-sm text-gray-600">Full switch from the 2nd-largest national NEET chain</p>
+              <h3 className="font-semibold text-teal-600">Aakash Alternative</h3>
+              <p className="text-sm text-gray-600">Full switch from Aakash</p>
             </Link>
             <Link
               href="/complement-allen-coaching-noida"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
-              <h3 className="font-semibold text-teal-600">Complement the largest national NEET chain</h3>
-              <p className="text-sm text-gray-600">For the largest national NEET chain students</p>
+              <h3 className="font-semibold text-teal-600">Complement Allen</h3>
+              <p className="text-sm text-gray-600">For Allen students</p>
             </Link>
-            <Link
-              href="/courses/foundation"
-              className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
-            >
+            <Link href="/courses/foundation" className="bg-gray-50 p-4 rounded-xl hover:shadow-md">
               <h3 className="font-semibold text-teal-600">Class 11 Foundation</h3>
               <p className="text-sm text-gray-600">Start early preparation</p>
             </Link>
-            <Link
-              href="/neet-coaching-noida"
-              className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
-            >
+            <Link href="/neet-coaching-noida" className="bg-gray-50 p-4 rounded-xl hover:shadow-md">
               <h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3>
               <p className="text-sm text-gray-600">All programs</p>
             </Link>
@@ -529,10 +531,14 @@ export default function ComplementAakashNoidaContent({ faqs }: { faqs: FAQ[] }) 
             Ready to Boost Your Biology Score?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join 150+ the 2nd-largest national NEET chain students who complement their coaching with Cerebrum
+            Join 150+ Aakash students who complement their coaching with Cerebrum
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 size="xl"

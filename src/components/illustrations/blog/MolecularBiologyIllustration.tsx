@@ -6,7 +6,7 @@ export function MolecularBiologyIllustration({
   className = '',
   animate = true,
 }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -15,12 +15,7 @@ export function MolecularBiologyIllustration({
     : {}
 
   return (
-    <svg
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       {/* Background */}
       <rect x="10" y="10" width="380" height="280" rx="20" fill="#EDE9FE" />
 
@@ -30,9 +25,7 @@ export function MolecularBiologyIllustration({
       </text>
 
       {/* DNA Double Helix */}
-      <g
-        style={{ transformOrigin: '120px 160px' }}
-      >
+      <g style={{ transformOrigin: '120px 160px' }}>
         {/* Left strand */}
         <path
           d="M80 70 Q100 90 80 110 Q60 130 80 150 Q100 170 80 190 Q60 210 80 230 Q100 250 80 270"
@@ -90,43 +83,31 @@ export function MolecularBiologyIllustration({
         Central Dogma
       </text>
 
-      <g
-      >
+      <g>
         <rect x="215" y="95" width="40" height="20" rx="4" fill="#3B82F6" />
         <text x="235" y="109" fontSize="7" fill="#FFFFFF" textAnchor="middle">
           DNA
         </text>
       </g>
 
-      <path
-        d="M260 105 L280 105"
-        stroke="#7C3AED"
-        strokeWidth="2"
-        markerEnd="url(#arrow)"
-      />
+      <path d="M260 105 L280 105" stroke="#7C3AED" strokeWidth="2" markerEnd="url(#arrow)" />
       <text x="270" y="100" fontSize="5" fill="#7C3AED" textAnchor="middle">
         Transcription
       </text>
 
-      <g
-      >
+      <g>
         <rect x="285" y="95" width="40" height="20" rx="4" fill="#EC4899" />
         <text x="305" y="109" fontSize="7" fill="#FFFFFF" textAnchor="middle">
           RNA
         </text>
       </g>
 
-      <path
-        d="M330 105 L350 105"
-        stroke="#7C3AED"
-        strokeWidth="2"
-      />
+      <path d="M330 105 L350 105" stroke="#7C3AED" strokeWidth="2" />
       <text x="340" y="100" fontSize="5" fill="#7C3AED" textAnchor="middle">
         Translation
       </text>
 
-      <g
-      >
+      <g>
         <rect x="340" y="95" width="35" height="20" rx="4" fill="#22C55E" />
         <text x="357" y="109" fontSize="6" fill="#FFFFFF" textAnchor="middle">
           Protein
@@ -164,8 +145,7 @@ export function MolecularBiologyIllustration({
       </text>
 
       {/* Questions badge */}
-      <g
-      >
+      <g>
         <circle cx="360" cy="260" r="18" fill="#8B5CF6" />
         <text x="360" y="257" fontSize="8" fill="#FFFFFF" textAnchor="middle">
           4-6

@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'NEET Coaching in Rajinder Nagar | Biology Specialist | Cerebrum Biology Academy',
   description:
-    'NEET Biology coaching in Rajinder Nagar — Central Delhi\'s coaching epicenter where Old Rajinder Nagar hosts dozens of UPSC + NEET coaching institutes. Biology-only specialist, AIIMS-trained Dr. Shekhar C Singh, NCERT line-by-line, weekly 1:1 doubt slots. Karol Bagh metro / Rajendra Place metro access. 98% qualification rate. Online + offline options for Rajinder Nagar droppers / repeaters.',
+    "NEET Biology coaching in Rajinder Nagar — Central Delhi's coaching epicenter where Old Rajinder Nagar hosts dozens of UPSC + NEET coaching institutes. Biology-only specialist, AIIMS-trained Dr. Shekhar C Singh, NCERT line-by-line, weekly 1:1 doubt slots. Karol Bagh metro / Rajendra Place metro access. 98% qualification rate. Online + offline options for Rajinder Nagar droppers / repeaters.",
   keywords: [
     'NEET coaching Rajinder Nagar',
     'NEET coaching Old Rajinder Nagar',

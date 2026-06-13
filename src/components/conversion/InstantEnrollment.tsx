@@ -156,9 +156,7 @@ export function InstantEnrollment({
       <div
         className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 ${className}`}
       >
-        <div
-          className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-fadeInUp"
-        >
+        <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-fadeInUp">
           {/* Header */}
           <div className="bg-indigo-500 text-white p-6 rounded-t-2xl relative">
             <button
@@ -187,9 +185,7 @@ export function InstantEnrollment({
 
           <div className="p-6 space-y-6">
             {/* Seats Left Alert */}
-            <div
-              className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center gap-3 animate-fadeInUp"
-            >
+            <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center gap-3 animate-fadeInUp">
               <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse" />
               <div>
                 <div className="font-semibold text-red-800">
@@ -390,9 +386,7 @@ export function InstantEnrollment({
       <div
         className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 ${className}`}
       >
-        <div
-          className="bg-white rounded-2xl shadow-2xl max-w-lg w-full animate-fadeInUp"
-        >
+        <div className="bg-white rounded-2xl shadow-2xl max-w-lg w-full animate-fadeInUp">
           <div className="p-8 text-center space-y-6">
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto">
               <CheckCircle2 className="h-12 w-12 text-green-600" />

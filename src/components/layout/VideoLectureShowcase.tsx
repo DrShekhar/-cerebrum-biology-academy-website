@@ -188,9 +188,7 @@ export function VideoLectureShowcase() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
-        <div
-          className="text-center mb-16 animate-fadeInUp"
-        >
+        <div className="text-center mb-16 animate-fadeInUp">
           <div className="inline-flex items-center bg-indigo-100 text-indigo-600 px-6 py-3 rounded-full text-sm font-medium mb-6">
             <Play className="w-5 h-5 mr-2" />
             Cerebrum's Complete Video Lecture Series
@@ -213,10 +211,7 @@ export function VideoLectureShowcase() {
               { icon: Users, label: '50K+', sublabel: 'Views', color: 'text-green-600' },
               { icon: Award, label: '98%', sublabel: 'Success Rate', color: 'text-yellow-600' },
             ].map((stat, index) => (
-              <div
-                key={stat.label}
-                className="text-center animate-fadeInUp"
-              >
+              <div key={stat.label} className="text-center animate-fadeInUp">
                 <div
                   className={`w-12 h-12 ${stat.color} mx-auto mb-3 rounded-xl flex items-center justify-center bg-white shadow-lg`}
                 >
@@ -230,9 +225,7 @@ export function VideoLectureShowcase() {
         </div>
 
         {/* Featured Videos Section */}
-        <div
-          className="mb-16 animate-fadeInUp"
-        >
+        <div className="mb-16 animate-fadeInUp">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Featured Lectures</h3>
             <p className="text-gray-600">Most popular and high-impact NEET Biology topics</p>
@@ -256,9 +249,7 @@ export function VideoLectureShowcase() {
         </div>
 
         {/* Filters Section */}
-        <div
-          className="mb-12 animate-fadeInUp"
-        >
+        <div className="mb-12 animate-fadeInUp">
           {/* Search Bar */}
           <div className="relative max-w-md mx-auto mb-8">
             <Search className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
@@ -315,65 +306,56 @@ export function VideoLectureShowcase() {
         </div>
 
         {/* Video Grid */}
-<div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 animate-fadeInUp"
-          >
-            {isLoading
-              ? // Loading skeleton for videos
-                Array.from({ length: 6 }).map((_, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 animate-fadeInUp">
+          {isLoading
+            ? // Loading skeleton for videos
+              Array.from({ length: 6 }).map((_, index) => (
+                <div key={`skeleton-${index}`} className="animate-fadeInUp">
+                  <VideoSkeleton />
+                </div>
+              ))
+            : filteredVideos.map((video, index) => (
+                <div key={video.id} className="relative animate-fadeInUp">
+                  {/* Class Badge */}
                   <div
-                    key={`skeleton-${index}`}
-                   className="animate-fadeInUp">
-                    <VideoSkeleton />
-                  </div>
-                ))
-              : filteredVideos.map((video, index) => (
-                  <div
-                    key={video.id}
-                    className="relative animate-fadeInUp"
+                    className={`absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-xs font-semibold ${
+                      video.class === '11th'
+                        ? 'bg-green-100 text-green-700'
+                        : video.class === '12th'
+                          ? 'bg-blue-100 text-blue-700'
+                          : 'bg-purple-100 text-purple-700'
+                    }`}
                   >
-                    {/* Class Badge */}
-                    <div
-                      className={`absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-xs font-semibold ${
-                        video.class === '11th'
-                          ? 'bg-green-100 text-green-700'
-                          : video.class === '12th'
-                            ? 'bg-blue-100 text-blue-700'
-                            : 'bg-purple-100 text-purple-700'
-                      }`}
-                    >
-                      {video.class === 'dropper' ? 'Dropper' : `Class ${video.class}`}
-                    </div>
-
-                    <VideoShowcase
-                      videoId={video.videoId}
-                      title={video.title}
-                      description={video.description}
-                      category="course_preview"
-                      duration={video.duration}
-                      showCTA={true}
-                      ctaText="Watch Full Lecture"
-                      onCTAClick={handleDemoBooking}
-                    />
-
-                    {/* Video Stats */}
-                    <div className="mt-4 flex items-center justify-between text-sm text-gray-500">
-                      <span className="flex items-center">
-                        <Play className="w-4 h-4 mr-1" />
-                        {video.views} views
-                      </span>
-                      <span className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {video.duration}
-                      </span>
-                    </div>
+                    {video.class === 'dropper' ? 'Dropper' : `Class ${video.class}`}
                   </div>
-                ))}
-          </div>
-{/* Bottom CTA */}
-        <div
-          className="text-center bg-green-600 rounded-3xl p-12 text-white animate-fadeInUp"
-        >
+
+                  <VideoShowcase
+                    videoId={video.videoId}
+                    title={video.title}
+                    description={video.description}
+                    category="course_preview"
+                    duration={video.duration}
+                    showCTA={true}
+                    ctaText="Watch Full Lecture"
+                    onCTAClick={handleDemoBooking}
+                  />
+
+                  {/* Video Stats */}
+                  <div className="mt-4 flex items-center justify-between text-sm text-gray-500">
+                    <span className="flex items-center">
+                      <Play className="w-4 h-4 mr-1" />
+                      {video.views} views
+                    </span>
+                    <span className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {video.duration}
+                    </span>
+                  </div>
+                </div>
+              ))}
+        </div>
+        {/* Bottom CTA */}
+        <div className="text-center bg-green-600 rounded-3xl p-12 text-white animate-fadeInUp">
           <h3 className="text-3xl font-bold mb-4">Ready to Access Complete Video Library?</h3>
           <p className="text-xl mb-8 text-indigo-100">
             Join 15,000+ successful students and get unlimited access to all Cerebrum video lectures

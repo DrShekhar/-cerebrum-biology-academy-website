@@ -39,7 +39,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Topper Interviews Gurugram | Success Stories',
-    description: 'Read inspiring NEET topper interviews from Cerebrum Biology Academy Gurugram (Gurgaon). Learn strategies from students who scored 650+. Real stories, real success. Call 88264-44334!',
+    description:
+      'Read inspiring NEET topper interviews from Cerebrum Biology Academy Gurugram (Gurgaon). Learn strategies from students who scored 650+. Real stories, real success. Call 88264-44334!',
   },
 }
 
@@ -160,7 +161,11 @@ export default function NEETTopperInterviewGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-topper-interview-gurugram" />
       <section className="bg-gradient-to-r from-purple-800 to-purple-600 text-white py-16">

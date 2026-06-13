@@ -16,8 +16,7 @@ const ogImageParams = new URLSearchParams({
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Abu Dhabi, UAE | Online Biology Classes for NRI Students',
-  description:
-    `Live online NEET Biology coaching for ~500K Indian-origin Class 11-12 students in Abu Dhabi (UAE's capital, 2nd-largest UAE Indian community). Khalidiya / Tourist Club Area / Mussafah / Hamdan Street / Mohammed Bin Zayed City / Shahama / Khalifa City. Flagship feeder: Abu Dhabi Indian School (ADIS) with 13,000+ students — among world's largest. Also GEMS Our Own Indian School Abu Dhabi, Indian Islahi Islamic, Indian Academy. GST 4-6:30 PM batch. Abu Dhabi NTA NEET exam centre (serves Al Ain too). NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
+  description: `Live online NEET Biology coaching for ~500K Indian-origin Class 11-12 students in Abu Dhabi (UAE's capital, 2nd-largest UAE Indian community). Khalidiya / Tourist Club Area / Mussafah / Hamdan Street / Mohammed Bin Zayed City / Shahama / Khalifa City. Flagship feeder: Abu Dhabi Indian School (ADIS) with 13,000+ students — among world's largest. Also GEMS Our Own Indian School Abu Dhabi, Indian Islahi Islamic, Indian Academy. GST 4-6:30 PM batch. Abu Dhabi NTA NEET exam centre (serves Al Ain too). NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
   openGraph: {
     title: 'NEET Coaching in Abu Dhabi, UAE — Online Biology Classes',
     description:
@@ -93,6 +92,7 @@ export default async function NEETCoachingAbuDhabiPage() {
   return (
     <>
       <LocalitySchema
+        country="AE"
         locality="Abu Dhabi"
         slug="neet-coaching-abu-dhabi-uae"
         pageTitle="Best NEET Coaching in Abu Dhabi"

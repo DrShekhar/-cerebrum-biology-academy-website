@@ -222,86 +222,76 @@ export function ProgressiveProfilingWidget({
   if (!isVisible || !currentQuestion) return null
 
   return (
-    <div
-      className={`fixed ${getPositionClasses()} z-50 max-w-sm ${className}`}
-    >
-          <Card className="border-2 border-primary/20 shadow-xl bg-white">
-            {showReward ? (
-              <div
-                className="p-6 text-center animate-fadeInUp"
-              >
-                <div
-                  className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 animate-fadeInUp"
-                >
-                  <Gift className="w-8 h-8 text-green-600" />
+    <div className={`fixed ${getPositionClasses()} z-50 max-w-sm ${className}`}>
+      <Card className="border-2 border-primary/20 shadow-xl bg-white">
+        {showReward ? (
+          <div className="p-6 text-center animate-fadeInUp">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 animate-fadeInUp">
+              <Gift className="w-8 h-8 text-green-600" />
+            </div>
+            <h3 className="text-lg font-semibold text-green-800 mb-2">Thank You!</h3>
+            <p className="text-sm text-green-600">{getRewardMessage(currentQuestion.category)}</p>
+            <Badge className="mt-3 bg-gold-100 text-gold-800 border-gold-200">
+              <Gift className="w-3 h-3 mr-1" />
+              Unlocked Personalized Content
+            </Badge>
+          </div>
+        ) : (
+          <>
+            <CardHeader className="pb-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                    {getQuestionIcon(currentQuestion.category)}
+                  </div>
+                  <CardTitle className="text-lg">Quick Question</CardTitle>
                 </div>
-                <h3 className="text-lg font-semibold text-green-800 mb-2">Thank You!</h3>
-                <p className="text-sm text-green-600">
-                  {getRewardMessage(currentQuestion.category)}
-                </p>
-                <Badge className="mt-3 bg-gold-100 text-gold-800 border-gold-200">
-                  <Gift className="w-3 h-3 mr-1" />
-                  Unlocked Personalized Content
-                </Badge>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={handleDismiss}
+                  className="text-gray-400 hover:text-gray-600"
+                >
+                  <X className="w-4 h-4" />
+                </Button>
               </div>
-            ) : (
-              <>
-                <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                        {getQuestionIcon(currentQuestion.category)}
-                      </div>
-                      <CardTitle className="text-lg">Quick Question</CardTitle>
-                    </div>
+              <div className="flex items-center space-x-2">
+                <Badge variant="outline" className="text-xs">
+                  <Clock className="w-3 h-3 mr-1" />
+                  30 seconds
+                </Badge>
+                <Badge className="bg-blue-100 text-blue-800 text-xs">Personalization</Badge>
+              </div>
+            </CardHeader>
+
+            <CardContent className="pt-0">
+              <p className="text-gray-900 font-medium mb-4">{currentQuestion.question}</p>
+
+              <div className="space-y-2">
+                {currentQuestion.options.map((option: string, index: number) => (
+                  <div key={option} className="animate-fadeInUp">
                     <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={handleDismiss}
-                      className="text-gray-400 hover:text-gray-600"
+                      variant="outline"
+                      className="w-full justify-between hover:border-primary/50 hover:bg-primary/5 text-left"
+                      onClick={() => handleAnswer(option)}
+                      disabled={isAnswering}
                     >
-                      <X className="w-4 h-4" />
+                      <span className="text-sm">{option}</span>
+                      <ChevronRight className="w-4 h-4 text-gray-400" />
                     </Button>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <Badge variant="outline" className="text-xs">
-                      <Clock className="w-3 h-3 mr-1" />
-                      30 seconds
-                    </Badge>
-                    <Badge className="bg-blue-100 text-blue-800 text-xs">Personalization</Badge>
-                  </div>
-                </CardHeader>
+                ))}
+              </div>
 
-                <CardContent className="pt-0">
-                  <p className="text-gray-900 font-medium mb-4">{currentQuestion.question}</p>
-
-                  <div className="space-y-2">
-                    {currentQuestion.options.map((option: string, index: number) => (
-                      <div
-                        key={option}
-                       className="animate-fadeInUp">
-                        <Button
-                          variant="outline"
-                          className="w-full justify-between hover:border-primary/50 hover:bg-primary/5 text-left"
-                          onClick={() => handleAnswer(option)}
-                          disabled={isAnswering}
-                        >
-                          <span className="text-sm">{option}</span>
-                          <ChevronRight className="w-4 h-4 text-gray-400" />
-                        </Button>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="mt-4 text-center">
-                    <p className="text-xs text-gray-500">
-                      Help us personalize your NEET Biology experience
-                    </p>
-                  </div>
-                </CardContent>
-              </>
-            )}
-          </Card>
+              <div className="mt-4 text-center">
+                <p className="text-xs text-gray-500">
+                  Help us personalize your NEET Biology experience
+                </p>
+              </div>
+            </CardContent>
+          </>
+        )}
+      </Card>
     </div>
   )
 }

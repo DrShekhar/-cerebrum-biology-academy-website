@@ -101,7 +101,7 @@ export function CitySchema({
             '@type': 'Course',
             name: 'NEET Foundation Course (Class 11)',
             description: 'Complete Biology foundation for NEET aspirants starting in Class 11',
-            provider: { '@type': 'EducationalOrganization', name: 'Cerebrum Biology Academy' },
+            provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
             hasCourseInstance: {
               '@type': 'CourseInstance',
               courseMode: 'online',
@@ -115,7 +115,7 @@ export function CitySchema({
             '@type': 'Course',
             name: 'NEET Intensive Course (Class 12)',
             description: 'Comprehensive Biology coaching for Class 12 NEET preparation',
-            provider: { '@type': 'EducationalOrganization', name: 'Cerebrum Biology Academy' },
+            provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
             hasCourseInstance: {
               '@type': 'CourseInstance',
               courseMode: 'online',
@@ -129,7 +129,7 @@ export function CitySchema({
             '@type': 'Course',
             name: 'NEET Dropper Intensive',
             description: 'Intensive 1-year Biology coaching for NEET droppers',
-            provider: { '@type': 'EducationalOrganization', name: 'Cerebrum Biology Academy' },
+            provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
             hasCourseInstance: {
               '@type': 'CourseInstance',
               courseMode: 'online',

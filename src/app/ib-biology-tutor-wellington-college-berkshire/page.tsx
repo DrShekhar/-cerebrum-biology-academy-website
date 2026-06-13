@@ -10,7 +10,8 @@ const school = getSchoolBySlug(SLUG)
 
 export const metadata: Metadata = buildIBBiologySchoolMetadata({
   title: 'IB Biology Tutor for Wellington College · Berkshire · Cerebrum',
-  description: 'IB Biology HL & SL tutoring for Wellington College students. AIIMS-trained faculty, IA + EE mentorship, 2025 syllabus.',
+  description:
+    'IB Biology HL & SL tutoring for Wellington College students. AIIMS-trained faculty, IA + EE mentorship, 2025 syllabus.',
   keywords: [
     'IB Biology tutor Wellington College',
     'IB Biology coaching Wellington Berkshire',

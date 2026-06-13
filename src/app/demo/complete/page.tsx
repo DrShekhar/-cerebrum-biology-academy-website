@@ -6,14 +6,8 @@ import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 export default function DemoCompletePage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-green-50 to-green-100 p-4">
-      <div
-        className="max-w-lg rounded-2xl bg-white p-8 text-center shadow-xl animate-fadeInUp"
-      >
-        <div
-          className="mb-6 text-7xl animate-fadeInUp"
-        >
-          🎉
-        </div>
+      <div className="max-w-lg rounded-2xl bg-white p-8 text-center shadow-xl animate-fadeInUp">
+        <div className="mb-6 text-7xl animate-fadeInUp">🎉</div>
 
         <h1 className="mb-4 text-3xl font-bold text-gray-900">Demo Class Completed!</h1>
 
@@ -77,9 +71,7 @@ export default function DemoCompletePage() {
         </div>
 
         {/* Special Offer */}
-        <div
-          className="rounded-xl bg-gradient-to-r from-amber-100 to-orange-100 p-6 animate-fadeInUp"
-        >
+        <div className="rounded-xl bg-gradient-to-r from-amber-100 to-orange-100 p-6 animate-fadeInUp">
           <p className="mb-2 text-sm font-medium text-yellow-800">🎁 DEMO ATTENDEE SPECIAL</p>
           <p className="text-xl font-bold text-yellow-900">Get 15% OFF on Course Enrollment</p>
           <p className="mt-1 text-sm text-yellow-700">Valid for 48 hours • Use code: DEMO15</p>

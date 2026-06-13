@@ -46,22 +46,20 @@ function useScrollAnimation(threshold = 0.1) {
 }
 
 const velacheryAreas = [
-{ name: 'Velachery', distance: '14 km', landmark: 'IT Corridor' },
+  { name: 'Velachery', distance: '14 km', landmark: 'IT Corridor' },
   { name: 'VGP Golden Plaza', distance: '15 km', landmark: 'Commercial Hub' },
   { name: 'Phoenix Mall Area', distance: '16 km', landmark: 'Retail Zone' },
   { name: 'Tharamani', distance: '13 km', landmark: 'IT Zone' },
   { name: 'Navalur', distance: '17 km', landmark: 'IT Park' },
   { name: 'Selaiyur', distance: '18 km', landmark: 'Residential' },
   { name: 'Kottivakkam', distance: '19 km', landmark: 'Mixed Use' },
-  { name: 'Tambaram', distance: '20 km', landmark: 'Business Zone' }
+  { name: 'Tambaram', distance: '20 km', landmark: 'Business Zone' },
 ]
 
-const whyChooseUs = [
-
-]
+const whyChooseUs = []
 
 const faqs = [
-{
+  {
     question: 'Why Velachery IT families choose online NEET coaching?',
     answer:
       'Velachery IT professionals value efficiency and technology. Online NEET coaching offers flexibility, modern tools, and data-driven learning. High internet connectivity and tech-savvy mindset make online perfect.',
@@ -80,7 +78,7 @@ const faqs = [
     question: 'How does your platform leverage technology?',
     answer:
       'AI-powered learning analytics, real-time dashboards, mobile apps, and automated doubt resolution. IT families appreciate technology-driven education.',
-  }
+  },
 ]
 
 const faqSchema = {
@@ -121,11 +119,11 @@ export default function PageContent() {
     <div className="min-h-screen">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={ { __html: JSON.stringify(faqSchema) } }
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={ { __html: JSON.stringify(localBusinessSchema) } }
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       {/* Hero */}
@@ -147,16 +145,19 @@ export default function PageContent() {
               NEET Coaching in <span className="text-yellow-400">Velachery</span>
             </h1>
 
-            <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              IT Corridor & VGP Layout
-            </h2>
+            <h2 className="text-xl md:text-2xl opacity-90 mb-4">IT Corridor & VGP Layout</h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET coaching for Velachery, VGP layout, Phoenix Mall area & nearby tech families. Learn from Dr. Shekhar C Singh, AIIMS Alumnus - trusted by IT professionals.
+              Premium NEET coaching for Velachery, VGP layout, Phoenix Mall area & nearby tech
+              families. Learn from Dr. Shekhar C Singh, AIIMS Alumnus - trusted by IT professionals.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chennai.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chennai.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -242,7 +243,7 @@ export default function PageContent() {
               <div
                 key={area.name}
                 className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 animate-fade-in-up"
-                style={ { animationDelay: `${index * 50}ms` } }
+                style={{ animationDelay: `${index * 50}ms` }}
               >
                 <MapPin className="w-8 h-8 text-green-600 mb-4" />
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{area.name}</h3>
@@ -273,7 +274,7 @@ export default function PageContent() {
               <div
                 key={item.title}
                 className="text-center animate-fade-in-up"
-                style={ { animationDelay: `${index * 100}ms` } }
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-slate-700 to-green-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <item.icon className="w-8 h-8 text-white" />
@@ -303,7 +304,7 @@ export default function PageContent() {
               <div
                 key={faq.question}
                 className="bg-white rounded-xl p-8 shadow-lg animate-fade-in-up"
-                style={ { animationDelay: `${index * 100}ms` } }
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
@@ -325,15 +326,15 @@ export default function PageContent() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Velachery Students, Crack NEET!
-            </h2>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Premium coaching for IT families
-            </p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Velachery Students, Crack NEET!</h2>
+            <p className="text-xl md:text-2xl mb-8 opacity-90">Premium coaching for IT families</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chennai.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chennai.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

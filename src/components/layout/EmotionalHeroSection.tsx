@@ -151,9 +151,7 @@ export function EmotionalHeroSection({
   return (
     <div className={`relative min-h-screen bg-navy-900 overflow-hidden ${className}`}>
       {/* Announcement Bar */}
-      <div
-        className="relative z-50 bg-green-600 text-white py-3 px-4 animate-fadeInUp"
-      >
+      <div className="relative z-50 bg-green-600 text-white py-3 px-4 animate-fadeInUp">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 text-sm md:text-base font-semibold">
             <Trophy className="h-5 w-5 text-yellow-300" />
@@ -168,12 +166,8 @@ export function EmotionalHeroSection({
       {/* Background Effects */}
       <div className="absolute inset-0">
         {/* Animated gradient orbs */}
-        <div
-          className="absolute top-1/4 left-1/6 w-96 h-96 bg-green-600/10 rounded-full blur-3xl animate-fadeInUp"
-        />
-        <div
-          className="absolute bottom-1/4 right-1/6 w-80 h-80 bg-navy-500/10 rounded-full blur-3xl animate-fadeInUp"
-        />
+        <div className="absolute top-1/4 left-1/6 w-96 h-96 bg-green-600/10 rounded-full blur-3xl animate-fadeInUp" />
+        <div className="absolute bottom-1/4 right-1/6 w-80 h-80 bg-navy-500/10 rounded-full blur-3xl animate-fadeInUp" />
 
         {/* Floating hearts for emotional connection */}
         {[...Array(5)].map((_, i) => (
@@ -195,9 +189,7 @@ export function EmotionalHeroSection({
           {/* Left Column - Main Content */}
           <div className="space-y-8 text-white">
             {/* Main Emotional Headline */}
-            <div
-              className="space-y-6 animate-fadeInUp"
-            >
+            <div className="space-y-6 animate-fadeInUp">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="text-amber-200">Master Biology,</span>
                 <br />
@@ -218,9 +210,7 @@ export function EmotionalHeroSection({
             </div>
 
             {/* Trust Badges */}
-            <div
-              className="flex flex-wrap gap-3 animate-fadeInUp"
-            >
+            <div className="flex flex-wrap gap-3 animate-fadeInUp">
               {trustBadges.map((badge, index) => (
                 <div
                   key={index}
@@ -233,9 +223,7 @@ export function EmotionalHeroSection({
             </div>
 
             {/* Success Stats */}
-            <div
-              className="grid grid-cols-2 lg:grid-cols-4 gap-4 animate-fadeInUp"
-            >
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 animate-fadeInUp">
               {successStats.map((stat, index) => (
                 <PremiumCard
                   key={index}
@@ -253,9 +241,7 @@ export function EmotionalHeroSection({
             </div>
 
             {/* CTA Buttons */}
-            <div
-              className="flex flex-col sm:flex-row gap-4 animate-fadeInUp"
-            >
+            <div className="flex flex-col sm:flex-row gap-4 animate-fadeInUp">
               <PremiumButton
                 variant="medical"
                 size="lg"
@@ -284,9 +270,7 @@ export function EmotionalHeroSection({
             </div>
 
             {/* Quick Eligibility Checker */}
-            <div
-              className="bg-green-800/30 backdrop-blur-sm border border-green-400/30 rounded-lg p-4 animate-fadeInUp"
-            >
+            <div className="bg-green-800/30 backdrop-blur-sm border border-green-400/30 rounded-lg p-4 animate-fadeInUp">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-lg font-semibold text-green-400">Quick Eligibility Check</h3>
@@ -305,9 +289,7 @@ export function EmotionalHeroSection({
           </div>
 
           {/* Right Column - Emotional Story & Countdown */}
-          <div
-            className="space-y-6 animate-fadeInUp"
-          >
+          <div className="space-y-6 animate-fadeInUp">
             {/* Hero Image/Video Placeholder */}
             <PremiumCard
               variant="luxury"
@@ -348,47 +330,44 @@ export function EmotionalHeroSection({
               size="lg"
               className="bg-white/10 backdrop-blur-sm border-white/20"
             >
-<div
-                  key={currentTestimonial}
-                  className="space-y-4 animate-fadeInUp"
-                >
-                  <div className="flex items-center gap-4">
-                    <Image
-                      src={emotionalTestimonials[currentTestimonial].image}
-                      alt={emotionalTestimonials[currentTestimonial].name}
-                      width={64}
-                      height={64}
-                      className="w-16 h-16 rounded-full object-cover border-3 border-green-400"
-                    />
-                    <div>
-                      <h3 className="text-xl font-bold text-white">
-                        {emotionalTestimonials[currentTestimonial].name}
-                      </h3>
-                      <div className="space-y-1 text-sm">
-                        <div className="text-red-300 font-medium">
-                          Before: {emotionalTestimonials[currentTestimonial].before}
-                        </div>
-                        <div className="text-green-300 font-medium">
-                          After: {emotionalTestimonials[currentTestimonial].after}
-                        </div>
+              <div key={currentTestimonial} className="space-y-4 animate-fadeInUp">
+                <div className="flex items-center gap-4">
+                  <Image
+                    src={emotionalTestimonials[currentTestimonial].image}
+                    alt={emotionalTestimonials[currentTestimonial].name}
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 rounded-full object-cover border-3 border-green-400"
+                  />
+                  <div>
+                    <h3 className="text-xl font-bold text-white">
+                      {emotionalTestimonials[currentTestimonial].name}
+                    </h3>
+                    <div className="space-y-1 text-sm">
+                      <div className="text-red-300 font-medium">
+                        Before: {emotionalTestimonials[currentTestimonial].before}
+                      </div>
+                      <div className="text-green-300 font-medium">
+                        After: {emotionalTestimonials[currentTestimonial].after}
                       </div>
                     </div>
                   </div>
-
-                  <blockquote className="text-lg text-blue-100 leading-relaxed italic">
-                    "{emotionalTestimonials[currentTestimonial].quote}"
-                  </blockquote>
-
-                  <div className="flex justify-between items-center">
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 text-yellow-400" />
-                      ))}
-                    </div>
-                    <Heart className="h-6 w-6 text-red-400 animate-pulse fill-current" />
-                  </div>
                 </div>
-</PremiumCard>
+
+                <blockquote className="text-lg text-blue-100 leading-relaxed italic">
+                  "{emotionalTestimonials[currentTestimonial].quote}"
+                </blockquote>
+
+                <div className="flex justify-between items-center">
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400" />
+                    ))}
+                  </div>
+                  <Heart className="h-6 w-6 text-red-400 animate-pulse fill-current" />
+                </div>
+              </div>
+            </PremiumCard>
 
             {/* Next Batch Countdown */}
             <PremiumCard
@@ -427,9 +406,7 @@ export function EmotionalHeroSection({
         </div>
 
         {/* Floating Stats Bar */}
-        <div
-          className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-2xl border border-white/50 animate-fadeInUp"
-        >
+        <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-2xl border border-white/50 animate-fadeInUp">
           <div className="flex items-center gap-6 text-sm font-semibold">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />

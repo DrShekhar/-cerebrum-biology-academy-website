@@ -110,9 +110,7 @@ export default function IBIGCSEBiologyPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-indigo-800 to-blue-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div
-              className="max-w-4xl mx-auto text-center animate-fadeInUp"
-            >
+            <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Globe className="w-4 h-4" />
                 International Curriculum
@@ -259,10 +257,7 @@ export default function IBIGCSEBiologyPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
-                >
+                <div key={idx} className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp">
                   <h3 className="font-semibold text-lg mb-2">{faq.q}</h3>
                   <p className="text-gray-600">{faq.a}</p>
                 </div>

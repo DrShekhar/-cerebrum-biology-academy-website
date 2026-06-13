@@ -1,9 +1,9 @@
-import { Metadata } from 'next';
-import { PageContent } from './PageContent';
-import { LocalitySchema } from '@/components/seo/LocalitySchema';
-import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities';
+import { Metadata } from 'next'
+import { PageContent } from './PageContent'
+import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
-const city = NRI_INTERNATIONAL_CITIES['lagos-nigeria']!;
+const city = NRI_INTERNATIONAL_CITIES['lagos-nigeria']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: `NEET Biology Coaching in ${city.city} — Live Online from India`,
     description: `For Indian-origin students at ${city.indianSchools.slice(0, 2).join(' / ')}. NRI quota pathway to AIIMS / JIPMER.`,
   },
-};
+}
 
 export default function Page() {
   const localityData = {
@@ -58,11 +58,12 @@ export default function Page() {
     latitude: 6.5244,
     longitude: 3.3792,
     address: 'Lagos, Nigeria',
-  };
+  }
 
   return (
     <>
       <LocalitySchema
+        country="NG"
         data={{
           ...localityData,
           phone: '+918826444334',
@@ -73,5 +74,5 @@ export default function Page() {
       />
       <PageContent city="Lagos" country="Nigeria" />
     </>
-  );
+  )
 }

@@ -125,19 +125,14 @@ function LiveQuestionCounter() {
   }, [])
 
   return (
-    <div
-      className="bg-green-600 rounded-3xl p-8 text-white text-center relative overflow-hidden animate-fadeInUp"
-    >
+    <div className="bg-green-600 rounded-3xl p-8 text-white text-center relative overflow-hidden animate-fadeInUp">
       <div className="absolute inset-0 bg-[url('/patterns/dots.svg')] opacity-10" />
       <div className="relative z-10">
         <div className="flex items-center justify-center mb-4">
           <div className="w-3 h-3 bg-white rounded-full animate-pulse mr-2" />
           <span className="text-sm font-medium uppercase tracking-wider">Live Now</span>
         </div>
-        <div
-          key={todayCount}
-          className="text-5xl sm:text-6xl font-black mb-2 animate-fadeInUp"
-        >
+        <div key={todayCount} className="text-5xl sm:text-6xl font-black mb-2 animate-fadeInUp">
           {todayCount.toLocaleString()}
         </div>
         <p className="text-lg text-white/90 mb-4">Questions Answered Today</p>
@@ -168,9 +163,7 @@ function StudentSuccessMap() {
   const [hoveredCity, setHoveredCity] = useState<string | null>(null)
 
   return (
-    <div
-      className="bg-white rounded-3xl p-8 shadow-xl animate-fadeInUp"
-    >
+    <div className="bg-white rounded-3xl p-8 shadow-xl animate-fadeInUp">
       <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
         Students Across India Trust Ceri AI
       </h3>
@@ -192,9 +185,7 @@ function StudentSuccessMap() {
               <div className="absolute inset-0 w-4 h-4 bg-purple-500 rounded-full animate-ping opacity-50" />
 
               {hoveredCity === city.name && (
-                <div
-                  className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg whitespace-nowrap z-10 shadow-xl animate-fadeInUp"
-                >
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg whitespace-nowrap z-10 shadow-xl animate-fadeInUp">
                   <p className="font-bold">{city.name}</p>
                   <p className="text-sm text-gray-300">{city.students} students</p>
                   <p className="text-xs text-green-400">Best: {city.rank}</p>
@@ -245,9 +236,7 @@ function SampleQuestions({ onQuestionClick }: { onQuestionClick: (q: string) => 
   }
 
   return (
-    <div
-      className="bg-white rounded-3xl p-8 shadow-xl animate-fadeInUp"
-    >
+    <div className="bg-white rounded-3xl p-8 shadow-xl animate-fadeInUp">
       <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Try Sample Questions</h3>
 
       {/* Difficulty Selector */}
@@ -298,9 +287,7 @@ function ComparisonSection() {
   ]
 
   return (
-    <div
-      className="bg-gradient-to-br from-slate-900 to-purple-900 rounded-3xl p-8 text-white animate-fadeInUp"
-    >
+    <div className="bg-gradient-to-br from-slate-900 to-purple-900 rounded-3xl p-8 text-white animate-fadeInUp">
       <h3 className="text-2xl font-bold mb-8 text-center">
         See the Difference: Generic Search vs Ceri AI
       </h3>
@@ -404,9 +391,7 @@ function SubjectModules({ onTopicClick }: { onTopicClick: (topic: string) => voi
   ]
 
   return (
-    <div
-      className="bg-white rounded-3xl p-8 shadow-xl animate-fadeInUp"
-    >
+    <div className="bg-white rounded-3xl p-8 shadow-xl animate-fadeInUp">
       <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center">Master Every NEET Topic</h3>
       <p className="text-gray-600 text-center mb-8">Click on any topic to start learning</p>
 
@@ -444,9 +429,7 @@ function SubjectModules({ onTopicClick }: { onTopicClick: (topic: string) => voi
 // Before/After Comparison
 function BeforeAfterComparison() {
   return (
-    <div
-      className="bg-white rounded-3xl p-8 shadow-xl animate-fadeInUp"
-    >
+    <div className="bg-white rounded-3xl p-8 shadow-xl animate-fadeInUp">
       <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
         Your NEET Journey: Before & After Ceri AI
       </h3>
@@ -550,9 +533,7 @@ function NEETScorePredictor() {
   }
 
   return (
-    <div
-      className="bg-indigo-500 rounded-3xl p-8 text-white animate-fadeInUp"
-    >
+    <div className="bg-indigo-500 rounded-3xl p-8 text-white animate-fadeInUp">
       <div className="flex items-center justify-center mb-6">
         <Calculator className="w-8 h-8 mr-3" />
         <h3 className="text-2xl font-bold">NEET Score Predictor</h3>
@@ -607,25 +588,19 @@ function NEETScorePredictor() {
         </button>
 
         {/* Result */}
-{showResult && (
-            <div
-              className="bg-white/10 rounded-2xl p-6 text-center animate-fadeInUp"
-            >
-              <p className="text-sm text-white/80 mb-2">Your Predicted NEET Score</p>
-              <p
-                className="text-5xl font-black animate-fadeInUp"
-              >
-                {predictedScore}/720
-              </p>
-              <p className="text-green-300 font-semibold mt-2">
-                +{predictedScore - currentScore} marks improvement!
-              </p>
-              <p className="text-xs text-white/60 mt-4">
-                *Based on average improvement of Ceri AI users
-              </p>
-            </div>
-          )}
-</div>
+        {showResult && (
+          <div className="bg-white/10 rounded-2xl p-6 text-center animate-fadeInUp">
+            <p className="text-sm text-white/80 mb-2">Your Predicted NEET Score</p>
+            <p className="text-5xl font-black animate-fadeInUp">{predictedScore}/720</p>
+            <p className="text-green-300 font-semibold mt-2">
+              +{predictedScore - currentScore} marks improvement!
+            </p>
+            <p className="text-xs text-white/60 mt-4">
+              *Based on average improvement of Ceri AI users
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   )
 }
@@ -635,9 +610,7 @@ function FreeTrialCounter() {
   const [questionsLeft, setQuestionsLeft] = useState(5)
 
   return (
-    <div
-      className="bg-orange-600 rounded-3xl p-6 text-white text-center animate-fadeInUp"
-    >
+    <div className="bg-orange-600 rounded-3xl p-6 text-white text-center animate-fadeInUp">
       <div className="flex items-center justify-center mb-2">
         <Sparkles className="w-6 h-6 mr-2" />
         <span className="font-semibold">Free Trial Active</span>
@@ -691,9 +664,7 @@ function PricingSection() {
   ]
 
   return (
-    <div
-      className="py-16 animate-fadeInUp"
-    >
+    <div className="py-16 animate-fadeInUp">
       <h3 className="text-3xl font-black text-gray-900 mb-4 text-center">
         Simple, Transparent Pricing
       </h3>
@@ -775,9 +746,7 @@ function FAQSection() {
   ]
 
   return (
-    <div
-      className="bg-gray-50 rounded-3xl p-8 animate-fadeInUp"
-    >
+    <div className="bg-gray-50 rounded-3xl p-8 animate-fadeInUp">
       <div className="flex items-center justify-center mb-8">
         <HelpCircle className="w-8 h-8 mr-3 text-purple-600" />
         <h3 className="text-2xl font-bold text-gray-900">Frequently Asked Questions</h3>
@@ -800,14 +769,12 @@ function FAQSection() {
                 <ChevronDown className="w-5 h-5 text-gray-400" />
               )}
             </button>
-{openFaq === idx && (
-                <div
-                  className="overflow-hidden animate-fadeInUp"
-                >
-                  <p className="px-5 pb-5 text-gray-600">{faq.a}</p>
-                </div>
-              )}
-</div>
+            {openFaq === idx && (
+              <div className="overflow-hidden animate-fadeInUp">
+                <p className="px-5 pb-5 text-gray-600">{faq.a}</p>
+              </div>
+            )}
+          </div>
         ))}
       </div>
     </div>
@@ -843,9 +810,7 @@ function FeatureCard({
   delay: number
 }) {
   return (
-    <div
-      className="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden animate-fadeInUp"
-    >
+    <div className="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden animate-fadeInUp">
       <div
         className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
       />
@@ -863,9 +828,7 @@ function FeatureCard({
 // Demo conversation bubble
 function DemoBubble({ message, isAI, delay }: { message: string; isAI: boolean; delay: number }) {
   return (
-    <div
-      className={`flex ${isAI ? 'justify-start' : 'justify-end'} mb-4`}
-    >
+    <div className={`flex ${isAI ? 'justify-start' : 'justify-end'} mb-4`}>
       <div
         className={`max-w-[80%] rounded-2xl px-5 py-3 ${
           isAI ? 'bg-indigo-500 text-white' : 'bg-gray-100 text-gray-800'
@@ -1001,9 +964,7 @@ export default function CeriAIShowcase() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Badge */}
-          <div
-            className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 mb-8 animate-fadeInUp"
-          >
+          <div className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 mb-8 animate-fadeInUp">
             <Sparkles className="w-5 h-5 text-yellow-400 mr-2" />
             <span className="text-white/90 text-sm font-medium">
               India's #1 AI Biology Tutor for NEET
@@ -1011,15 +972,11 @@ export default function CeriAIShowcase() {
           </div>
 
           {/* Main Heading */}
-          <h1
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight animate-fadeInUp"
-          >
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight animate-fadeInUp">
             Meet <span className="text-blue-400">Ceri AI</span>
           </h1>
 
-          <p
-            className="text-xl sm:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed animate-fadeInUp"
-          >
+          <p className="text-xl sm:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed animate-fadeInUp">
             Your personal AI Biology tutor that resolves doubts{' '}
             <span className="text-white font-semibold">instantly</span>, explains with{' '}
             <span className="text-white font-semibold">diagrams</span>, and helps you score{' '}
@@ -1027,9 +984,7 @@ export default function CeriAIShowcase() {
           </p>
 
           {/* CTA Buttons */}
-          <div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fadeInUp"
-          >
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fadeInUp">
             <button
               onClick={() => setShowChat(true)}
               className="group relative px-8 py-4 bg-indigo-500 text-white font-bold text-lg rounded-2xl shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 hover:scale-105 flex items-center"
@@ -1039,7 +994,9 @@ export default function CeriAIShowcase() {
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20ai%20education%20demo.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20ai%20education%20demo.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white font-semibold text-lg rounded-2xl hover:bg-white/20 transition-all duration-300 flex items-center"
             >
               Book Live Demo
@@ -1047,9 +1004,7 @@ export default function CeriAIShowcase() {
           </div>
 
           {/* Stats Preview */}
-          <div
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto animate-fadeInUp">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-3xl sm:text-4xl font-black text-white mb-1">
@@ -1062,12 +1017,8 @@ export default function CeriAIShowcase() {
         </div>
 
         {/* Scroll indicator */}
-        <div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fadeInUp"
-        >
-          <div
-            className="text-white/60 animate-fadeInUp"
-          >
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fadeInUp">
+          <div className="text-white/60 animate-fadeInUp">
             <ChevronDown className="w-8 h-8" />
           </div>
         </div>
@@ -1086,9 +1037,7 @@ export default function CeriAIShowcase() {
       {/* Interactive Demo Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
               See Ceri AI in Action
             </h2>
@@ -1122,18 +1071,14 @@ export default function CeriAIShowcase() {
                     </p>
                   </div>
                   {activeDemo === index && (
-                    <div
-                      className="ml-auto w-3 h-3 bg-white rounded-full animate-fadeInUp"
-                    />
+                    <div className="ml-auto w-3 h-3 bg-white rounded-full animate-fadeInUp" />
                   )}
                 </button>
               ))}
             </div>
 
             {/* Demo Chat Preview */}
-            <div
-              className="bg-white rounded-3xl shadow-2xl p-6 border border-gray-100 overflow-hidden animate-fadeInUp"
-            >
+            <div className="bg-white rounded-3xl shadow-2xl p-6 border border-gray-100 overflow-hidden animate-fadeInUp">
               <div className="flex items-center mb-6 pb-4 border-b border-gray-100">
                 <div className="w-10 h-10 bg-indigo-500 rounded-xl flex items-center justify-center mr-3">
                   <Brain className="w-5 h-5 text-white" />
@@ -1146,15 +1091,12 @@ export default function CeriAIShowcase() {
                   </div>
                 </div>
               </div>
-<div
-                  key={activeDemo}
-                  className="min-h-[200px] animate-fadeInUp"
-                >
-                  {demos[activeDemo].conversation.map((msg, idx) => (
-                    <DemoBubble key={idx} message={msg.message} isAI={msg.isAI} delay={idx * 0.3} />
-                  ))}
-                </div>
-<div className="mt-6 flex items-center bg-gray-100 rounded-xl p-3">
+              <div key={activeDemo} className="min-h-[200px] animate-fadeInUp">
+                {demos[activeDemo].conversation.map((msg, idx) => (
+                  <DemoBubble key={idx} message={msg.message} isAI={msg.isAI} delay={idx * 0.3} />
+                ))}
+              </div>
+              <div className="mt-6 flex items-center bg-gray-100 rounded-xl p-3">
                 <input
                   type="text"
                   placeholder="Ask Ceri AI anything..."
@@ -1197,9 +1139,7 @@ export default function CeriAIShowcase() {
       {/* Features Grid */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
               Why Students Love Ceri AI
             </h2>
@@ -1219,9 +1159,7 @@ export default function CeriAIShowcase() {
       {/* Testimonials */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
               Loved by NEET Aspirants
             </h2>
@@ -1285,8 +1223,7 @@ export default function CeriAIShowcase() {
       {/* Final CTA */}
       <section className="py-24 bg-indigo-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-4xl sm:text-5xl font-black text-white mb-6">
               Ready to Transform Your NEET Prep?
             </h2>
@@ -1313,40 +1250,40 @@ export default function CeriAIShowcase() {
       </section>
 
       {/* Chat Modal */}
-{showChat && (
+      {showChat && (
+        <div
+          className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 animate-fadeInUp"
+          onClick={() => setShowChat(false)}
+        >
           <div
-            className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 animate-fadeInUp"
-            onClick={() => setShowChat(false)}
+            className="w-full max-w-2xl h-[80vh] bg-white rounded-3xl shadow-2xl overflow-hidden animate-fadeInUp"
+            onClick={(e) => e.stopPropagation()}
           >
-            <div
-              className="w-full max-w-2xl h-[80vh] bg-white rounded-3xl shadow-2xl overflow-hidden animate-fadeInUp"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="h-full flex flex-col">
-                <div className="flex items-center justify-between p-4 border-b bg-indigo-500 text-white">
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center mr-3">
-                      <Brain className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold">Ceri AI</h3>
-                      <p className="text-xs text-white/80">Your Biology Tutor</p>
-                    </div>
+            <div className="h-full flex flex-col">
+              <div className="flex items-center justify-between p-4 border-b bg-indigo-500 text-white">
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center mr-3">
+                    <Brain className="w-5 h-5" />
                   </div>
-                  <button
-                    onClick={() => setShowChat(false)}
-                    className="p-2 hover:bg-white/20 rounded-lg transition-colors"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
+                  <div>
+                    <h3 className="font-bold">Ceri AI</h3>
+                    <p className="text-xs text-white/80">Your Biology Tutor</p>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <MobileChatInterface />
-                </div>
+                <button
+                  onClick={() => setShowChat(false)}
+                  className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+              <div className="flex-1">
+                <MobileChatInterface />
               </div>
             </div>
           </div>
-        )}
-</div>
+        </div>
+      )}
+    </div>
   )
 }

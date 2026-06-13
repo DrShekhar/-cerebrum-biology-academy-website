@@ -135,14 +135,10 @@ export function FacultyCredentials() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2
-            className="text-3xl font-bold text-gray-900 mb-4 animate-fadeInUp"
-          >
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 animate-fadeInUp">
             {language === 'hi' ? 'हमारे विशेषज्ञ संकाय' : 'Our Expert Faculty'}
           </h2>
-          <p
-            className="text-xl text-gray-600 mb-8 animate-fadeInUp"
-          >
+          <p className="text-xl text-gray-600 mb-8 animate-fadeInUp">
             {language === 'hi'
               ? 'AIIMS डॉक्टरों और अनुभवी शिक्षकों से सीखें'
               : 'Learn from AIIMS doctors and experienced educators'}
@@ -253,10 +249,10 @@ export function FacultyCredentials() {
       </div>
 
       {/* Faculty Detail Modal */}
-{selectedFaculty && (
-          <FacultyDetailModal faculty={selectedFaculty} onClose={() => setSelectedFaculty(null)} />
-        )}
-</section>
+      {selectedFaculty && (
+        <FacultyDetailModal faculty={selectedFaculty} onClose={() => setSelectedFaculty(null)} />
+      )}
+    </section>
   )
 }
 
@@ -502,10 +498,7 @@ function FacultyStatsSection() {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {stats.map((stat, index) => (
-          <div
-            key={stat.label}
-            className="text-center animate-fadeInUp"
-          >
+          <div key={stat.label} className="text-center animate-fadeInUp">
             <stat.icon className={`w-8 h-8 ${stat.color} mx-auto mb-2`} />
             <div className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</div>
             <div className="text-sm text-gray-600">{stat.label}</div>

@@ -79,14 +79,38 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       ],
     },
     universities: [
-      { name: 'Columbia University', programmes: 'Biochemistry, Biology, Neuroscience & Behavior, Biophysics' },
-      { name: 'New York University (NYU)', programmes: 'Biology, Neural Science, Chemistry (pre-med track)' },
-      { name: 'Cornell University (Ithaca + Weill Cornell NYC)', programmes: 'Biology, Human Biology, Neurobiology' },
-      { name: 'Mount Sinai (Icahn School of Medicine)', programmes: 'FlexMed early-assurance BS/MD track' },
-      { name: 'Albert Einstein College of Medicine', programmes: 'MD programme, Yeshiva University feeders' },
-      { name: 'Stony Brook University (SUNY)', programmes: 'Biology, Biochemistry, Health Sciences' },
-      { name: 'Rutgers University (New Brunswick)', programmes: 'Cell Biology & Neuroscience, Molecular Biology, BA/MD with RWJMS' },
-      { name: 'CUNY system (Hunter, Baruch, City College)', programmes: 'Biology, Biochemistry, Sophie Davis BS/MD at CUNY' },
+      {
+        name: 'Columbia University',
+        programmes: 'Biochemistry, Biology, Neuroscience & Behavior, Biophysics',
+      },
+      {
+        name: 'New York University (NYU)',
+        programmes: 'Biology, Neural Science, Chemistry (pre-med track)',
+      },
+      {
+        name: 'Cornell University (Ithaca + Weill Cornell NYC)',
+        programmes: 'Biology, Human Biology, Neurobiology',
+      },
+      {
+        name: 'Mount Sinai (Icahn School of Medicine)',
+        programmes: 'FlexMed early-assurance BS/MD track',
+      },
+      {
+        name: 'Albert Einstein College of Medicine',
+        programmes: 'MD programme, Yeshiva University feeders',
+      },
+      {
+        name: 'Stony Brook University (SUNY)',
+        programmes: 'Biology, Biochemistry, Health Sciences',
+      },
+      {
+        name: 'Rutgers University (New Brunswick)',
+        programmes: 'Cell Biology & Neuroscience, Molecular Biology, BA/MD with RWJMS',
+      },
+      {
+        name: 'CUNY system (Hunter, Baruch, City College)',
+        programmes: 'Biology, Biochemistry, Sophie Davis BS/MD at CUNY',
+      },
     ],
     timezoneSection:
       'All live sessions are in Eastern Time. Standard NYC small-batch slot is 7:30 PM to 9:30 PM ET on weekday evenings, with 9:00 AM to 11:00 AM ET Saturday and Sunday options. This works around the typical Columbia / NYU late-afternoon lab schedule. Senior Faculty 1:1 can be scheduled at any ET slot, including 10:00 PM ET for students with evening hospital shifts or research commitments.',
@@ -109,12 +133,14 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
           'Yes. FlexMed admits sophomores with early assurance to Icahn School of Medicine, but the programme still requires a competitive MCAT score. We coach Bio/Biochem for FlexMed candidates with a compressed timeline — typically starting spring of freshman year for a summer or fall sophomore test date.',
       },
       {
-        question: 'My family is in Edison / Iselin / Jersey City — what is the planning conversation?',
+        question:
+          'My family is in Edison / Iselin / Jersey City — what is the planning conversation?',
         answer:
           'The consultation covers: (a) which undergrad (Columbia, NYU, Rutgers, Stony Brook — each has different course-load timing), (b) gap year or no, (c) target band (515+ for NYC medical schools). For families with a high school student targeting BS/MD tracks (Rutgers BA/MD, Sophie Davis CUNY), the planning starts in junior year of high school.',
       },
       {
-        question: 'Stony Brook or Rutgers pre-meds — how is the prep different from Columbia / NYU?',
+        question:
+          'Stony Brook or Rutgers pre-meds — how is the prep different from Columbia / NYU?',
         answer:
           'Stony Brook and Rutgers pre-meds typically have lighter research loads and more in-semester study time. We can run a full Small-Batch programme during the school year, starting January for a July or August test date. Both schools have strong biology departments, so the content baseline is solid — the work is mostly passage strategy and biochemistry precision.',
       },
@@ -124,7 +150,8 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
           'Yes. The CUNY School of Medicine (formerly Sophie Davis) BS/MD programme has an accelerated timeline. Students sit the MCAT earlier than standard (often end of year 3). We coach Bio/Biochem with a compressed content phase tailored to the Sophie Davis curriculum sequence.',
       },
       {
-        question: 'Long Island families (Jericho, Syosset, Manhasset) — same coaching as NYC students?',
+        question:
+          'Long Island families (Jericho, Syosset, Manhasset) — same coaching as NYC students?',
         answer:
           'Yes — all sessions are online. The only practical difference is testing center logistics. NYC has Pearson VUE MCAT centers in Manhattan, Brooklyn, and the Bronx. From Long Island, the Garden City or Manhattan centers are typically closest. We do a logistics check during the diagnostic.',
       },
@@ -168,14 +195,26 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       ],
     },
     universities: [
-      { name: 'UCLA', programmes: 'Molecular, Cell & Developmental Biology; Physiological Science; Biochemistry' },
+      {
+        name: 'UCLA',
+        programmes: 'Molecular, Cell & Developmental Biology; Physiological Science; Biochemistry',
+      },
       { name: 'USC', programmes: 'Biological Sciences, Neuroscience, Human Biology (Keck feeder)' },
       { name: 'Caltech', programmes: 'Biology, Bioengineering, Chemistry (pre-med track)' },
-      { name: 'UC Irvine', programmes: 'Biological Sciences, Pharmaceutical Sciences, Public Health Sciences' },
+      {
+        name: 'UC Irvine',
+        programmes: 'Biological Sciences, Pharmaceutical Sciences, Public Health Sciences',
+      },
       { name: 'Loyola Marymount University (LMU)', programmes: 'Biology, Biochemistry, Bioethics' },
       { name: 'Pomona College', programmes: 'Biology, Molecular Biology, Neuroscience' },
-      { name: 'UC Riverside', programmes: 'Biology, Biochemistry, Biomedical Sciences (Thomas Haider UCR SOM)' },
-      { name: 'Cal State Long Beach / Fullerton', programmes: 'Biological Sciences, Pre-med advising programmes' },
+      {
+        name: 'UC Riverside',
+        programmes: 'Biology, Biochemistry, Biomedical Sciences (Thomas Haider UCR SOM)',
+      },
+      {
+        name: 'Cal State Long Beach / Fullerton',
+        programmes: 'Biological Sciences, Pre-med advising programmes',
+      },
     ],
     timezoneSection:
       'All live sessions are in Pacific Time. Standard LA small-batch slot is 7:00 PM to 9:00 PM PT on weekday evenings, with 9:00 AM to 11:00 AM PT Saturday and Sunday options. This works around the typical UCLA / USC afternoon lab schedule. Senior Faculty 1:1 can be scheduled at any PT slot.',
@@ -257,12 +296,27 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       ],
     },
     universities: [
-      { name: 'University of Chicago', programmes: 'Biological Sciences, Biochemistry, Neuroscience (Pritzker feeder)' },
-      { name: 'Northwestern University', programmes: 'Biology, Neuroscience, Biomedical Engineering (Feinberg feeder)' },
-      { name: 'University of Illinois Chicago (UIC)', programmes: 'Biological Sciences, Biochemistry, Neuroscience' },
-      { name: 'Loyola University Chicago', programmes: 'Biology, Biochemistry, Bioinformatics (Stritch feeder)' },
+      {
+        name: 'University of Chicago',
+        programmes: 'Biological Sciences, Biochemistry, Neuroscience (Pritzker feeder)',
+      },
+      {
+        name: 'Northwestern University',
+        programmes: 'Biology, Neuroscience, Biomedical Engineering (Feinberg feeder)',
+      },
+      {
+        name: 'University of Illinois Chicago (UIC)',
+        programmes: 'Biological Sciences, Biochemistry, Neuroscience',
+      },
+      {
+        name: 'Loyola University Chicago',
+        programmes: 'Biology, Biochemistry, Bioinformatics (Stritch feeder)',
+      },
       { name: 'Rush University', programmes: 'Clinical research pathways, Rush Medical College' },
-      { name: 'University of Illinois Urbana-Champaign', programmes: 'Molecular & Cellular Biology, Integrative Biology, Biochemistry' },
+      {
+        name: 'University of Illinois Urbana-Champaign',
+        programmes: 'Molecular & Cellular Biology, Integrative Biology, Biochemistry',
+      },
       { name: 'DePaul University', programmes: 'Biological Sciences, Health Sciences' },
     ],
     timezoneSection:
@@ -271,14 +325,14 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       heading: 'Naperville / Schaumburg / Devon Avenue — the family planning conversation',
       paragraphs: [
         'Naperville has one of the highest South Asian household densities in the Midwest, followed by Schaumburg and the Devon Avenue corridor in Chicago. Pre-med families in these communities plan MCAT preparation 12–18 months ahead.',
-        'What we hear from Chicago parents: (1) UChicago\'s rigorous grading makes GPA preservation critical — MCAT prep must not compromise coursework; (2) Northwestern and UIC medical schools are the primary local targets (515+ for Feinberg, 510+ for UIC); (3) many families consider UIUC pre-meds commuting to Chicago for research. We structure the consultation around the student\'s university and target school tier.',
+        "What we hear from Chicago parents: (1) UChicago's rigorous grading makes GPA preservation critical — MCAT prep must not compromise coursework; (2) Northwestern and UIC medical schools are the primary local targets (515+ for Feinberg, 510+ for UIC); (3) many families consider UIUC pre-meds commuting to Chicago for research. We structure the consultation around the student's university and target school tier.",
       ],
     },
     faqs: [
       {
         question: 'UChicago or Northwestern undergrad with research — how do we fit MCAT prep?',
         answer:
-          'UChicago Biological Sciences and Northwestern Biology concentrators face rigorous course loads. We split the timeline: Self-Paced async during the semester (5–8 hrs/week), then concentrated Small-Batch + 1:1 during summer. UChicago\'s quarter system means shorter but more intense terms — we calibrate study load accordingly.',
+          "UChicago Biological Sciences and Northwestern Biology concentrators face rigorous course loads. We split the timeline: Self-Paced async during the semester (5–8 hrs/week), then concentrated Small-Batch + 1:1 during summer. UChicago's quarter system means shorter but more intense terms — we calibrate study load accordingly.",
       },
       {
         question: 'UIC pre-meds — different from UChicago / Northwestern?',
@@ -336,12 +390,27 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       ],
     },
     universities: [
-      { name: 'UT Southwestern Medical Center', programmes: 'MD programme, Summer undergraduate research' },
-      { name: 'Southern Methodist University (SMU)', programmes: 'Biological Sciences, Biochemistry, Applied Physiology' },
+      {
+        name: 'UT Southwestern Medical Center',
+        programmes: 'MD programme, Summer undergraduate research',
+      },
+      {
+        name: 'Southern Methodist University (SMU)',
+        programmes: 'Biological Sciences, Biochemistry, Applied Physiology',
+      },
       { name: 'UT Dallas (UTD)', programmes: 'Biology, Molecular Biology, Neuroscience' },
-      { name: 'Baylor University (Waco feeder)', programmes: 'Biology, Biochemistry, Medical Humanities, Baylor College of Medicine pathway' },
-      { name: 'UNT Health Science Center (Fort Worth)', programmes: 'TCOM DO programme, Graduate biomedical sciences' },
-      { name: 'Texas A&M (College Station feeder)', programmes: 'Biology, Biochemistry, Biomedical Sciences' },
+      {
+        name: 'Baylor University (Waco feeder)',
+        programmes: 'Biology, Biochemistry, Medical Humanities, Baylor College of Medicine pathway',
+      },
+      {
+        name: 'UNT Health Science Center (Fort Worth)',
+        programmes: 'TCOM DO programme, Graduate biomedical sciences',
+      },
+      {
+        name: 'Texas A&M (College Station feeder)',
+        programmes: 'Biology, Biochemistry, Biomedical Sciences',
+      },
     ],
     timezoneSection:
       'All live sessions are in Central Time. Standard DFW small-batch slot is 7:00 PM to 9:00 PM CT on weekday evenings, with 9:00 AM to 11:00 AM CT Saturday and Sunday options. Senior Faculty 1:1 can be scheduled at any CT slot.',
@@ -356,7 +425,7 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       {
         question: 'UTD or SMU pre-med — how does the prep differ?',
         answer:
-          'UTD pre-meds typically have strong quantitative foundations (the university\'s STEM emphasis) but may need more passage-strategy work for the MCAT\'s reasoning-heavy format. SMU pre-meds have slightly lighter research loads and can often run a full Small-Batch during the school year. We calibrate based on the student\'s course load and research commitments.',
+          "UTD pre-meds typically have strong quantitative foundations (the university's STEM emphasis) but may need more passage-strategy work for the MCAT's reasoning-heavy format. SMU pre-meds have slightly lighter research loads and can often run a full Small-Batch during the school year. We calibrate based on the student's course load and research commitments.",
       },
       {
         question: 'UT Southwestern target — what score is needed?',
@@ -407,16 +476,31 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
     whySection: {
       heading: 'Why Seattle is the Pacific Northwest pre-med anchor',
       paragraphs: [
-        'Seattle is built around the University of Washington School of Medicine — the region\'s dominant medical school and one of the largest in the US. UW Medicine serves as the primary pre-med target for students across Washington, Alaska, Montana, Idaho, and Wyoming (the WWAMI regional medical education programme).',
+        "Seattle is built around the University of Washington School of Medicine — the region's dominant medical school and one of the largest in the US. UW Medicine serves as the primary pre-med target for students across Washington, Alaska, Montana, Idaho, and Wyoming (the WWAMI regional medical education programme).",
         'The Eastside tech corridor (Bellevue, Redmond, Sammamish, Kirkland) has a rapidly growing Indian-American community driven by Microsoft, Amazon, Google, and Meta. This tech-sector diaspora drives consistent pre-med demand for their college-age children. The Bellevue School District and Redmond feeder schools produce a steady stream of pre-med aspirants.',
       ],
     },
     universities: [
-      { name: 'University of Washington', programmes: 'Biology, Biochemistry, Neuroscience, Public Health (UW SOM feeder)' },
-      { name: 'Seattle Pacific University', programmes: 'Biology, Biochemistry, Pre-health professions' },
-      { name: 'Gonzaga University (Spokane)', programmes: 'Biology, Biochemistry (UW WWAMI Spokane track)' },
-      { name: 'Washington State University (Pullman)', programmes: 'Biology, Biochemistry, Neuroscience, Elson S. Floyd COM' },
-      { name: 'University of Puget Sound', programmes: 'Biology, Biochemistry, Molecular & Cellular Biology' },
+      {
+        name: 'University of Washington',
+        programmes: 'Biology, Biochemistry, Neuroscience, Public Health (UW SOM feeder)',
+      },
+      {
+        name: 'Seattle Pacific University',
+        programmes: 'Biology, Biochemistry, Pre-health professions',
+      },
+      {
+        name: 'Gonzaga University (Spokane)',
+        programmes: 'Biology, Biochemistry (UW WWAMI Spokane track)',
+      },
+      {
+        name: 'Washington State University (Pullman)',
+        programmes: 'Biology, Biochemistry, Neuroscience, Elson S. Floyd COM',
+      },
+      {
+        name: 'University of Puget Sound',
+        programmes: 'Biology, Biochemistry, Molecular & Cellular Biology',
+      },
     ],
     timezoneSection:
       'All live sessions are in Pacific Time. Standard Seattle small-batch slot is 7:00 PM to 9:00 PM PT on weekday evenings, with 9:00 AM to 11:00 AM PT Saturday and Sunday options. Senior Faculty 1:1 can be scheduled at any PT slot.',
@@ -489,12 +573,27 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       ],
     },
     universities: [
-      { name: 'Georgetown University', programmes: 'Biology, Biochemistry, Neuroscience (Georgetown SOM feeder)' },
-      { name: 'George Washington University (GWU)', programmes: 'Biological Sciences, Biochemistry, Public Health' },
+      {
+        name: 'Georgetown University',
+        programmes: 'Biology, Biochemistry, Neuroscience (Georgetown SOM feeder)',
+      },
+      {
+        name: 'George Washington University (GWU)',
+        programmes: 'Biological Sciences, Biochemistry, Public Health',
+      },
       { name: 'Howard University', programmes: 'Biology, Chemistry, Howard University COM' },
-      { name: 'University of Maryland (College Park)', programmes: 'Biology, Biochemistry, Neuroscience, Cell Biology' },
-      { name: 'Johns Hopkins University (Baltimore)', programmes: 'Biology, Molecular & Cellular Biology, Neuroscience, Biomedical Engineering' },
-      { name: 'University of Virginia (Charlottesville)', programmes: 'Biology, Biomedical Engineering, Neuroscience' },
+      {
+        name: 'University of Maryland (College Park)',
+        programmes: 'Biology, Biochemistry, Neuroscience, Cell Biology',
+      },
+      {
+        name: 'Johns Hopkins University (Baltimore)',
+        programmes: 'Biology, Molecular & Cellular Biology, Neuroscience, Biomedical Engineering',
+      },
+      {
+        name: 'University of Virginia (Charlottesville)',
+        programmes: 'Biology, Biomedical Engineering, Neuroscience',
+      },
       { name: 'Virginia Tech / GMU pre-meds', programmes: 'Biology, Biochemistry, Neuroscience' },
     ],
     timezoneSection:
@@ -568,12 +667,27 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       ],
     },
     universities: [
-      { name: 'University of Pennsylvania', programmes: 'Biology, Biochemistry, Neuroscience (Perelman SOM feeder)' },
-      { name: 'Temple University', programmes: 'Biology, Biochemistry, Neuroscience (Lewis Katz SOM feeder)' },
-      { name: 'Drexel University', programmes: 'Biology, Biochemistry (Drexel COM feeder, co-op programme)' },
-      { name: 'Thomas Jefferson University', programmes: 'Pre-med post-bac, Sidney Kimmel Medical College' },
+      {
+        name: 'University of Pennsylvania',
+        programmes: 'Biology, Biochemistry, Neuroscience (Perelman SOM feeder)',
+      },
+      {
+        name: 'Temple University',
+        programmes: 'Biology, Biochemistry, Neuroscience (Lewis Katz SOM feeder)',
+      },
+      {
+        name: 'Drexel University',
+        programmes: 'Biology, Biochemistry (Drexel COM feeder, co-op programme)',
+      },
+      {
+        name: 'Thomas Jefferson University',
+        programmes: 'Pre-med post-bac, Sidney Kimmel Medical College',
+      },
       { name: 'Villanova University', programmes: 'Biology, Biochemistry, Comprehensive Science' },
-      { name: 'Swarthmore / Haverford / Bryn Mawr', programmes: 'Biology, Biochemistry, Neuroscience (Tri-Co consortium)' },
+      {
+        name: 'Swarthmore / Haverford / Bryn Mawr',
+        programmes: 'Biology, Biochemistry, Neuroscience (Tri-Co consortium)',
+      },
     ],
     timezoneSection:
       'All live sessions are in Eastern Time. Standard Philly small-batch slot is 7:30 PM to 9:30 PM ET on weekday evenings, with 9:00 AM to 11:00 AM ET Saturday and Sunday options. Senior Faculty 1:1 can be scheduled at any ET slot.',
@@ -588,15 +702,16 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       {
         question: 'Penn undergrad with research — how do we fit MCAT prep?',
         answer:
-          'Penn Biology and Biochemistry concentrators typically have significant research commitments at Penn Medicine or CHOP. We split the timeline: Self-Paced async during the semester, then concentrated Small-Batch + 1:1 during summer. Penn\'s pre-med advising office recommends taking the MCAT summer after junior year — we align with this standard timeline.',
+          "Penn Biology and Biochemistry concentrators typically have significant research commitments at Penn Medicine or CHOP. We split the timeline: Self-Paced async during the semester, then concentrated Small-Batch + 1:1 during summer. Penn's pre-med advising office recommends taking the MCAT summer after junior year — we align with this standard timeline.",
       },
       {
         question: 'Temple or Drexel pre-meds — different from Penn?',
         answer:
-          'Temple and Drexel pre-meds typically have more in-semester study time than Penn students. Drexel\'s co-op programme creates alternating study/work semesters — MCAT prep during a co-op term (lighter academic load) is often ideal. We calibrate the schedule based on the co-op cycle.',
+          "Temple and Drexel pre-meds typically have more in-semester study time than Penn students. Drexel's co-op programme creates alternating study/work semesters — MCAT prep during a co-op term (lighter academic load) is often ideal. We calibrate the schedule based on the co-op cycle.",
       },
       {
-        question: 'My family is in Cherry Hill / King of Prussia — what is the planning conversation?',
+        question:
+          'My family is in Cherry Hill / King of Prussia — what is the planning conversation?',
         answer:
           'The consultation covers: (a) which university (Penn, Temple, Drexel, Villanova, Tri-Co schools), (b) target school tier (Perelman at 520+ vs Temple/Jefferson at 510+ vs PCOM DO at 505+), (c) gap year or summer timeline. For Cherry Hill families, the proximity to Edison NJ means our NJ-area community is also relevant.',
       },
@@ -620,41 +735,81 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
     stateCode: 'ON',
     timezone: 'Eastern Time',
     timezoneShort: 'ET',
-    metaTitle: 'MCAT Biology Tutor Toronto | U of T, McMaster, Western, Queen\'s',
+    metaTitle: "MCAT Biology Tutor Toronto | U of T, McMaster, Western, Queen's",
     metaDescription:
-      'MCAT Bio/Biochem tutor for Toronto pre-meds — University of Toronto, McMaster, Western, Queen\'s. Biology specialists, ET evening slots. From $449 USD.',
-    keywords: ['MCAT Biology tutor Toronto', 'MCAT Bio tutor University of Toronto', 'MCAT Biology tutor McMaster', 'MCAT tutor GTA', 'MCAT tutor Brampton', 'MCAT tutor Mississauga', 'MCAT Bio/Biochem tutor Ontario', 'Indian Canadian MCAT tutor Toronto', 'online MCAT Biology coaching Toronto'],
+      "MCAT Bio/Biochem tutor for Toronto pre-meds — University of Toronto, McMaster, Western, Queen's. Biology specialists, ET evening slots. From $449 USD.",
+    keywords: [
+      'MCAT Biology tutor Toronto',
+      'MCAT Bio tutor University of Toronto',
+      'MCAT Biology tutor McMaster',
+      'MCAT tutor GTA',
+      'MCAT tutor Brampton',
+      'MCAT tutor Mississauga',
+      'MCAT Bio/Biochem tutor Ontario',
+      'Indian Canadian MCAT tutor Toronto',
+      'online MCAT Biology coaching Toronto',
+    ],
     heroSubtitle:
-      'MCAT Bio/Biochem coaching for University of Toronto, McMaster, Western, and Queen\'s pre-meds — built around the Brampton / Mississauga / Scarborough South Asian corridor. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Eastern Time evening sessions, $449 to $1,349 USD.',
+      "MCAT Bio/Biochem coaching for University of Toronto, McMaster, Western, and Queen's pre-meds — built around the Brampton / Mississauga / Scarborough South Asian corridor. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Eastern Time evening sessions, $449 to $1,349 USD.",
     whySection: {
-      heading: 'Why Toronto is Canada\'s largest pre-med market',
+      heading: "Why Toronto is Canada's largest pre-med market",
       paragraphs: [
-        'The Greater Toronto Area anchors the largest concentration of medical school applicants in Canada. University of Toronto Faculty of Medicine, McMaster\'s Michael G. DeGroote School of Medicine (Hamilton, 60 km west), and Western University (London, ON) collectively accept the majority of Ontario medical students. The MCAT is required by all Ontario medical schools except McMaster (which uses CASPer + CARS only).',
+        "The Greater Toronto Area anchors the largest concentration of medical school applicants in Canada. University of Toronto Faculty of Medicine, McMaster's Michael G. DeGroote School of Medicine (Hamilton, 60 km west), and Western University (London, ON) collectively accept the majority of Ontario medical students. The MCAT is required by all Ontario medical schools except McMaster (which uses CASPer + CARS only).",
         'The GTA South Asian community — concentrated in Brampton, Mississauga, Scarborough, and Markham — is one of the largest in North America. Pre-med culture is strong in these communities, with MCAT preparation planning starting during sophomore year at U of T, McMaster, York, or Ryerson (now Toronto Metropolitan).',
       ],
     },
     universities: [
-      { name: 'University of Toronto', programmes: 'Life Sciences, Biochemistry, Human Biology, Molecular Genetics' },
-      { name: 'McMaster University (Hamilton)', programmes: 'Life Sciences, Biochemistry, Health Sciences (BHSc)' },
-      { name: 'Western University (London, ON)', programmes: 'Medical Sciences, Biochemistry, Biology' },
-      { name: 'Queen\'s University (Kingston)', programmes: 'Life Sciences, Biochemistry' },
+      {
+        name: 'University of Toronto',
+        programmes: 'Life Sciences, Biochemistry, Human Biology, Molecular Genetics',
+      },
+      {
+        name: 'McMaster University (Hamilton)',
+        programmes: 'Life Sciences, Biochemistry, Health Sciences (BHSc)',
+      },
+      {
+        name: 'Western University (London, ON)',
+        programmes: 'Medical Sciences, Biochemistry, Biology',
+      },
+      { name: "Queen's University (Kingston)", programmes: 'Life Sciences, Biochemistry' },
       { name: 'York University', programmes: 'Biology, Kinesiology, Biomedical Science' },
       { name: 'Toronto Metropolitan University', programmes: 'Biology, Biomedical Sciences' },
     ],
-    timezoneSection: 'All live sessions are in Eastern Time. Standard Toronto small-batch slot is 7:30 PM to 9:30 PM ET on weekday evenings. Weekend: 9:00 AM to 11:00 AM ET. This aligns with US ET scheduling — many Toronto students join sessions alongside NYC, Boston, and DC cohorts.',
+    timezoneSection:
+      'All live sessions are in Eastern Time. Standard Toronto small-batch slot is 7:30 PM to 9:30 PM ET on weekday evenings. Weekend: 9:00 AM to 11:00 AM ET. This aligns with US ET scheduling — many Toronto students join sessions alongside NYC, Boston, and DC cohorts.',
     demographicSection: {
       heading: 'Brampton / Mississauga / Scarborough — the family planning conversation',
       paragraphs: [
         'The Brampton / Mississauga South Asian corridor has one of the highest Indian-Canadian household densities in North America. Combined with the Scarborough and Markham communities, this creates a concentrated pre-med pipeline.',
-        'What we hear from GTA parents: (1) U of T and McMaster are the primary targets; (2) Ontario medical schools have unique requirements (MCAT for U of T/Western/Queen\'s, CARS-only for McMaster); (3) many families also keep US medical school options open, requiring full MCAT Bio/Biochem prep. We structure the consultation around whether the student targets Canada-only or dual US/Canada applications.',
+        "What we hear from GTA parents: (1) U of T and McMaster are the primary targets; (2) Ontario medical schools have unique requirements (MCAT for U of T/Western/Queen's, CARS-only for McMaster); (3) many families also keep US medical school options open, requiring full MCAT Bio/Biochem prep. We structure the consultation around whether the student targets Canada-only or dual US/Canada applications.",
       ],
     },
     faqs: [
-      { question: 'U of T or McMaster pre-med — how does MCAT prep differ?', answer: 'McMaster\'s BHSc and Health Sciences programmes are intensely competitive. McMaster medical school uses CASPer + CARS only (no Bio/Biochem required). U of T, Western, and Queen\'s require full MCAT including Bio/Biochem. If your student targets McMaster only, focus on CARS; if targeting U of T/Western/Queen\'s or US schools, full Bio/Biochem prep is essential.' },
-      { question: 'My family is in Brampton / Mississauga — planning conversation?', answer: 'The consultation covers: (a) target medical schools (Ontario only vs US dual-track), (b) MCAT section requirements (Bio/Biochem needed for all except McMaster), (c) timeline (summer after 3rd year typical). For Brampton/Mississauga families keeping US options open, full Bio/Biochem prep is recommended.' },
-      { question: 'Can Toronto students join US small-batch sessions?', answer: 'Yes — same Eastern Time zone. Toronto students join alongside NYC, Boston, and DC cohorts. This provides richer peer interaction and exposure to both Canadian and US medical school application contexts.' },
-      { question: 'Do you accept CAD payment?', answer: 'Yes — CAD via Canadian bank transfer (TD, RBC, Scotiabank, BMO, CIBC) or international Visa/Mastercard. USD also accepted. Prices listed in USD; CAD equivalent at current exchange rate.' },
-      { question: 'How does Cerebrum compare to Canadian MCAT prep?', answer: 'Canadian MCAT providers (Prep101, Princeton Review Canada) charge $1,500–$3,000 CAD for all sections. Cerebrum is a biology-section specialist at $449–$1,349 USD (~$600–$1,800 CAD) for Bio/Biochem only. Many Toronto students pair us with a generalist for C/P and CARS.' },
+      {
+        question: 'U of T or McMaster pre-med — how does MCAT prep differ?',
+        answer:
+          "McMaster's BHSc and Health Sciences programmes are intensely competitive. McMaster medical school uses CASPer + CARS only (no Bio/Biochem required). U of T, Western, and Queen's require full MCAT including Bio/Biochem. If your student targets McMaster only, focus on CARS; if targeting U of T/Western/Queen's or US schools, full Bio/Biochem prep is essential.",
+      },
+      {
+        question: 'My family is in Brampton / Mississauga — planning conversation?',
+        answer:
+          'The consultation covers: (a) target medical schools (Ontario only vs US dual-track), (b) MCAT section requirements (Bio/Biochem needed for all except McMaster), (c) timeline (summer after 3rd year typical). For Brampton/Mississauga families keeping US options open, full Bio/Biochem prep is recommended.',
+      },
+      {
+        question: 'Can Toronto students join US small-batch sessions?',
+        answer:
+          'Yes — same Eastern Time zone. Toronto students join alongside NYC, Boston, and DC cohorts. This provides richer peer interaction and exposure to both Canadian and US medical school application contexts.',
+      },
+      {
+        question: 'Do you accept CAD payment?',
+        answer:
+          'Yes — CAD via Canadian bank transfer (TD, RBC, Scotiabank, BMO, CIBC) or international Visa/Mastercard. USD also accepted. Prices listed in USD; CAD equivalent at current exchange rate.',
+      },
+      {
+        question: 'How does Cerebrum compare to Canadian MCAT prep?',
+        answer:
+          'Canadian MCAT providers (Prep101, Princeton Review Canada) charge $1,500–$3,000 CAD for all sections. Cerebrum is a biology-section specialist at $449–$1,349 USD (~$600–$1,800 CAD) for Bio/Biochem only. Many Toronto students pair us with a generalist for C/P and CARS.',
+      },
     ],
   },
 
@@ -668,22 +823,38 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
     metaTitle: 'MCAT Biology Tutor Vancouver | UBC, SFU, UVic',
     metaDescription:
       'MCAT Bio/Biochem tutor for Vancouver pre-meds — UBC, SFU, University of Victoria. Biology specialists, PT evening slots. From $449 USD.',
-    keywords: ['MCAT Biology tutor Vancouver', 'MCAT Bio tutor UBC', 'MCAT Biology tutor SFU', 'MCAT tutor Surrey BC', 'MCAT tutor Burnaby', 'MCAT Bio/Biochem tutor BC', 'Indian Canadian MCAT tutor Vancouver', 'online MCAT Biology coaching Vancouver'],
+    keywords: [
+      'MCAT Biology tutor Vancouver',
+      'MCAT Bio tutor UBC',
+      'MCAT Biology tutor SFU',
+      'MCAT tutor Surrey BC',
+      'MCAT tutor Burnaby',
+      'MCAT Bio/Biochem tutor BC',
+      'Indian Canadian MCAT tutor Vancouver',
+      'online MCAT Biology coaching Vancouver',
+    ],
     heroSubtitle:
       'MCAT Bio/Biochem coaching for UBC, SFU, and UVic pre-meds — built around the Surrey / Burnaby / Richmond South Asian corridor. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Pacific Time evening sessions, $449 to $1,349 USD.',
     whySection: {
-      heading: 'Why Vancouver is Western Canada\'s pre-med anchor',
+      heading: "Why Vancouver is Western Canada's pre-med anchor",
       paragraphs: [
         'Vancouver is built around UBC Faculty of Medicine — the largest medical school in Western Canada and one of the most competitive in the country. SFU (Simon Fraser University) and UVic (University of Victoria) provide additional pre-med undergraduate pipelines. UBC requires full MCAT including Bio/Biochem.',
         'The Surrey / Burnaby / Richmond South Asian corridor has a rapidly growing Indian-Canadian community driven by tech, healthcare, and professional services. Pre-med culture is strong, with many families maintaining dual Canada/US medical school application strategies.',
       ],
     },
     universities: [
-      { name: 'University of British Columbia (UBC)', programmes: 'Biology, Biochemistry, Microbiology, Integrated Sciences' },
-      { name: 'Simon Fraser University (SFU)', programmes: 'Molecular Biology & Biochemistry, Biomedical Physiology & Kinesiology' },
+      {
+        name: 'University of British Columbia (UBC)',
+        programmes: 'Biology, Biochemistry, Microbiology, Integrated Sciences',
+      },
+      {
+        name: 'Simon Fraser University (SFU)',
+        programmes: 'Molecular Biology & Biochemistry, Biomedical Physiology & Kinesiology',
+      },
       { name: 'University of Victoria (UVic)', programmes: 'Biology, Biochemistry, Microbiology' },
     ],
-    timezoneSection: 'All live sessions are in Pacific Time. Standard Vancouver small-batch slot is 7:00 PM to 9:00 PM PT on weekday evenings. Weekend: 9:00 AM to 11:00 AM PT. Vancouver students share the PT timezone with Seattle and Bay Area cohorts.',
+    timezoneSection:
+      'All live sessions are in Pacific Time. Standard Vancouver small-batch slot is 7:00 PM to 9:00 PM PT on weekday evenings. Weekend: 9:00 AM to 11:00 AM PT. Vancouver students share the PT timezone with Seattle and Bay Area cohorts.',
     demographicSection: {
       heading: 'Surrey / Burnaby / Richmond — the family planning conversation',
       paragraphs: [
@@ -692,10 +863,26 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       ],
     },
     faqs: [
-      { question: 'UBC pre-med — what MCAT Bio/Biochem score is competitive?', answer: 'UBC Medicine is highly competitive: median accepted MCAT is ~517 overall. Our coaching targets the Bio/Biochem section for 130+ to contribute to the 517+ composite. Many UBC applicants pair Cerebrum (Bio/Biochem) with a generalist for C/P and CARS.' },
-      { question: 'My family is in Surrey / Burnaby — planning conversation?', answer: 'The consultation covers: (a) UBC Medicine as primary target, (b) US dual-track (UW WWAMI or California schools), (c) research timeline at BC Cancer or VGH. For Surrey families, PT evening sessions fit the after-work schedule.' },
-      { question: 'Can Vancouver students join Seattle or Bay Area sessions?', answer: 'Yes — same Pacific Time zone. Vancouver students join alongside Seattle and Bay Area cohorts, providing cross-border peer interaction.' },
-      { question: 'How does Cerebrum compare to Vancouver MCAT prep?', answer: 'BC MCAT providers charge $1,500–$3,000 CAD for all sections. Cerebrum is a biology-section specialist at $449–$1,349 USD (~$600–$1,800 CAD). Many Vancouver students pair us with a generalist for C/P and CARS.' },
+      {
+        question: 'UBC pre-med — what MCAT Bio/Biochem score is competitive?',
+        answer:
+          'UBC Medicine is highly competitive: median accepted MCAT is ~517 overall. Our coaching targets the Bio/Biochem section for 130+ to contribute to the 517+ composite. Many UBC applicants pair Cerebrum (Bio/Biochem) with a generalist for C/P and CARS.',
+      },
+      {
+        question: 'My family is in Surrey / Burnaby — planning conversation?',
+        answer:
+          'The consultation covers: (a) UBC Medicine as primary target, (b) US dual-track (UW WWAMI or California schools), (c) research timeline at BC Cancer or VGH. For Surrey families, PT evening sessions fit the after-work schedule.',
+      },
+      {
+        question: 'Can Vancouver students join Seattle or Bay Area sessions?',
+        answer:
+          'Yes — same Pacific Time zone. Vancouver students join alongside Seattle and Bay Area cohorts, providing cross-border peer interaction.',
+      },
+      {
+        question: 'How does Cerebrum compare to Vancouver MCAT prep?',
+        answer:
+          'BC MCAT providers charge $1,500–$3,000 CAD for all sections. Cerebrum is a biology-section specialist at $449–$1,349 USD (~$600–$1,800 CAD). Many Vancouver students pair us with a generalist for C/P and CARS.',
+      },
     ],
   },
 
@@ -709,35 +896,66 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
     metaTitle: 'MCAT Biology Tutor Montreal | McGill, Université de Montréal',
     metaDescription:
       'MCAT Bio/Biochem tutor for Montreal pre-meds — McGill, Université de Montréal, Université de Sherbrooke. Biology specialists, ET evening slots. From $449 USD.',
-    keywords: ['MCAT Biology tutor Montreal', 'MCAT Bio tutor McGill', 'MCAT Biology tutor Université de Montréal', 'MCAT tutor Laval QC', 'MCAT Bio/Biochem tutor Quebec', 'Indian Canadian MCAT tutor Montreal', 'online MCAT Biology coaching Montreal'],
+    keywords: [
+      'MCAT Biology tutor Montreal',
+      'MCAT Bio tutor McGill',
+      'MCAT Biology tutor Université de Montréal',
+      'MCAT tutor Laval QC',
+      'MCAT Bio/Biochem tutor Quebec',
+      'Indian Canadian MCAT tutor Montreal',
+      'online MCAT Biology coaching Montreal',
+    ],
     heroSubtitle:
       'MCAT Bio/Biochem coaching for McGill, Université de Montréal, and Université de Sherbrooke pre-meds. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Eastern Time evening sessions, $449 to $1,349 USD.',
     whySection: {
-      heading: 'Why Montreal is Quebec\'s bilingual pre-med hub',
+      heading: "Why Montreal is Quebec's bilingual pre-med hub",
       paragraphs: [
         'Montreal is unique in the Canadian medical landscape: it has both English-language (McGill Faculty of Medicine) and French-language (Université de Montréal, Université de Sherbrooke) medical schools. McGill requires full MCAT including Bio/Biochem. Quebec French-language medical schools historically did not require MCAT, but many Quebec students applying out-of-province or to US schools need full MCAT prep.',
         'The Montreal South Asian community — concentrated in Brossard, Dollard-des-Ormeaux, and Côte-des-Neiges — drives growing MCAT demand. Many are McGill students or Concordia/UQAM students targeting out-of-province medical schools.',
       ],
     },
     universities: [
-      { name: 'McGill University', programmes: 'Biology, Biochemistry, Anatomy & Cell Biology, Physiology' },
-      { name: 'Université de Montréal', programmes: 'Sciences biologiques, Biochimie et médecine moléculaire' },
+      {
+        name: 'McGill University',
+        programmes: 'Biology, Biochemistry, Anatomy & Cell Biology, Physiology',
+      },
+      {
+        name: 'Université de Montréal',
+        programmes: 'Sciences biologiques, Biochimie et médecine moléculaire',
+      },
       { name: 'Concordia University', programmes: 'Biology, Biochemistry, Exercise Science' },
       { name: 'Université de Sherbrooke', programmes: 'Biochimie de la santé, Biologie' },
     ],
-    timezoneSection: 'All live sessions are in Eastern Time. Standard Montreal small-batch slot is 7:30 PM to 9:30 PM ET. Montreal students join alongside Toronto, NYC, and Boston ET cohorts.',
+    timezoneSection:
+      'All live sessions are in Eastern Time. Standard Montreal small-batch slot is 7:30 PM to 9:30 PM ET. Montreal students join alongside Toronto, NYC, and Boston ET cohorts.',
     demographicSection: {
       heading: 'Brossard / DDO / Côte-des-Neiges — the family planning conversation',
       paragraphs: [
-        'Montreal\'s South Asian community in Brossard, Dollard-des-Ormeaux, and Côte-des-Neiges drives MCAT demand. Many are McGill students or immigrants whose children target English-language medical schools.',
-        'What we hear from Montreal parents: (1) McGill Medicine is the primary target (MCAT required); (2) some families target Ontario schools (U of T, McMaster, Western) for out-of-province spots; (3) Quebec French-med schools don\'t require MCAT, but out-of-province applications do. We structure the consultation around McGill vs out-of-province strategy.',
+        "Montreal's South Asian community in Brossard, Dollard-des-Ormeaux, and Côte-des-Neiges drives MCAT demand. Many are McGill students or immigrants whose children target English-language medical schools.",
+        "What we hear from Montreal parents: (1) McGill Medicine is the primary target (MCAT required); (2) some families target Ontario schools (U of T, McMaster, Western) for out-of-province spots; (3) Quebec French-med schools don't require MCAT, but out-of-province applications do. We structure the consultation around McGill vs out-of-province strategy.",
       ],
     },
     faqs: [
-      { question: 'McGill pre-med — what MCAT Bio/Biochem score is competitive?', answer: 'McGill Medicine is highly competitive: median accepted MCAT is ~516+. Our coaching targets Bio/Biochem for 129+ to contribute to the 516+ composite. Many McGill students pair Cerebrum (Bio/Biochem) with a generalist for C/P and CARS.' },
-      { question: 'Do Quebec French-med schools require MCAT?', answer: 'Université de Montréal and Université de Sherbrooke do NOT require MCAT for Quebec CEGEP applicants. However, students applying to Ontario or US medical schools need full MCAT. If your student targets McGill or out-of-province schools, Bio/Biochem prep is essential.' },
-      { question: 'Do you offer sessions in French?', answer: 'Our MCAT Biology sessions are in English only, matching the MCAT examination language. However, we can clarify French-medium biology terminology for students who studied sciences in French during CEGEP.' },
-      { question: 'How does Cerebrum compare to Montreal MCAT prep?', answer: 'Quebec MCAT providers charge $1,500–$3,000 CAD for all sections. Cerebrum is a biology-section specialist at $449–$1,349 USD (~$600–$1,800 CAD). Many Montreal students pair us with a generalist for C/P and CARS.' },
+      {
+        question: 'McGill pre-med — what MCAT Bio/Biochem score is competitive?',
+        answer:
+          'McGill Medicine is highly competitive: median accepted MCAT is ~516+. Our coaching targets Bio/Biochem for 129+ to contribute to the 516+ composite. Many McGill students pair Cerebrum (Bio/Biochem) with a generalist for C/P and CARS.',
+      },
+      {
+        question: 'Do Quebec French-med schools require MCAT?',
+        answer:
+          'Université de Montréal and Université de Sherbrooke do NOT require MCAT for Quebec CEGEP applicants. However, students applying to Ontario or US medical schools need full MCAT. If your student targets McGill or out-of-province schools, Bio/Biochem prep is essential.',
+      },
+      {
+        question: 'Do you offer sessions in French?',
+        answer:
+          'Our MCAT Biology sessions are in English only, matching the MCAT examination language. However, we can clarify French-medium biology terminology for students who studied sciences in French during CEGEP.',
+      },
+      {
+        question: 'How does Cerebrum compare to Montreal MCAT prep?',
+        answer:
+          'Quebec MCAT providers charge $1,500–$3,000 CAD for all sections. Cerebrum is a biology-section specialist at $449–$1,349 USD (~$600–$1,800 CAD). Many Montreal students pair us with a generalist for C/P and CARS.',
+      },
     ],
   },
 }

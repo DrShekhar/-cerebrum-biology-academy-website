@@ -64,7 +64,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-ludhiana' },
+    alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-ludhiana' },
     description: 'Real-time sessions with Chandigarh-quality teaching. Ask questions live.',
   },
   {
@@ -80,7 +80,7 @@ const features = [
   {
     icon: Clock,
     title: 'Flexible Timings',
-    description: 'Morning, evening batches. Perfect for business families\' schedules.',
+    description: "Morning, evening batches. Perfect for business families' schedules.",
   },
   {
     icon: BookOpen,
@@ -127,17 +127,17 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching in Ludhiana?',
     answer:
-      'Cerebrum Biology Academy offers the best NEET coaching for Ludhiana students through online classes. With AIIMS-trained faculty, small batch sizes (10-15 students), and 98% success rate, we bring Chandigarh-quality coaching to Punjab\'s largest city. Students from Model Town, Civil Lines, Sarabha Nagar join our live sessions.',
+      "Cerebrum Biology Academy offers the best NEET coaching for Ludhiana students through online classes. With AIIMS-trained faculty, small batch sizes (10-15 students), and 98% success rate, we bring Chandigarh-quality coaching to Punjab's largest city. Students from Model Town, Civil Lines, Sarabha Nagar join our live sessions.",
   },
   {
     question: 'Is there any good NEET coaching center in Ludhiana?',
     answer:
-      'While Ludhiana has some coaching centers, they lack AIIMS-level faculty and NEET specialization. Cerebrum Academy\'s online coaching brings expert teachers directly to Ludhiana students - no relocation needed. We have 400+ students from Ludhiana with excellent results.',
+      "While Ludhiana has some coaching centers, they lack AIIMS-level faculty and NEET specialization. Cerebrum Academy's online coaching brings expert teachers directly to Ludhiana students - no relocation needed. We have 400+ students from Ludhiana with excellent results.",
   },
   {
     question: 'What are the fees for NEET coaching in Ludhiana?',
     answer:
-      'Cerebrum Academy\'s NEET coaching fees for Ludhiana students are Rs 45,000-85,000 per year. Compare this to Chandigarh coaching (Rs 1.5-2.5 lakhs) plus Rs 1-1.5 lakh hostel expenses. You get better quality at 1/4th the total cost.',
+      "Cerebrum Academy's NEET coaching fees for Ludhiana students are Rs 45,000-85,000 per year. Compare this to Chandigarh coaching (Rs 1.5-2.5 lakhs) plus Rs 1-1.5 lakh hostel expenses. You get better quality at 1/4th the total cost.",
   },
   {
     question: 'Should I go to Chandigarh or Kota for NEET coaching from Ludhiana?',
@@ -152,12 +152,12 @@ const faqs = [
   {
     question: 'How do business families in Ludhiana manage NEET coaching?',
     answer:
-      'Our online format is perfect for Ludhiana\'s business families. Students can attend classes from home with flexible morning/evening batches. Parents don\'t need to send children away, and study schedule adjusts around family commitments.',
+      "Our online format is perfect for Ludhiana's business families. Students can attend classes from home with flexible morning/evening batches. Parents don't need to send children away, and study schedule adjusts around family commitments.",
   },
   {
     question: 'Is DMCH Ludhiana good for MBBS?',
     answer:
-      'DMCH Ludhiana is a reputed Christian Medical College with 50 MBBS seats. It has excellent infrastructure and clinical exposure. However, it\'s private with higher fees. Our counseling helps students weigh DMCH vs government college options based on NEET scores.',
+      "DMCH Ludhiana is a reputed Christian Medical College with 50 MBBS seats. It has excellent infrastructure and clinical exposure. However, it's private with higher fees. Our counseling helps students weigh DMCH vs government college options based on NEET scores.",
   },
   {
     question: 'What is the NEET cut-off for Punjab government medical colleges?',
@@ -206,8 +206,7 @@ export default function NEETCoachingLudhiana() {
 
           <div className="mx-auto max-w-7xl">
             <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div
-               className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-blue-800">
                   <MapPin className="h-4 w-4" />
                   <span className="text-sm font-medium">
@@ -260,9 +259,7 @@ export default function NEETCoachingLudhiana() {
                 </div>
               </div>
 
-              <div
-                className="relative animate-fadeInUp"
-              >
+              <div className="relative animate-fadeInUp">
                 <div className="rounded-2xl bg-white p-8 shadow-xl">
                   <h3 className="mb-6 text-center text-xl font-bold text-gray-900">
                     Ludhiana Students Success Metrics
@@ -289,9 +286,7 @@ export default function NEETCoachingLudhiana() {
         {/* Why Ludhiana Students Choose Online */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Ludhiana Families Are Choosing Online NEET Coaching
               </h2>
@@ -335,9 +330,7 @@ export default function NEETCoachingLudhiana() {
         {/* Ludhiana Areas We Serve */}
         <section className="bg-blue-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 NEET Coaching for All Ludhiana Areas
               </h2>
@@ -380,9 +373,7 @@ export default function NEETCoachingLudhiana() {
         {/* Features */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Cerebrum is Best for Ludhiana Students
               </h2>
@@ -411,9 +402,7 @@ export default function NEETCoachingLudhiana() {
         {/* Schools Section */}
         <section className="bg-blue-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Trusted by Students from Top Ludhiana Schools
               </h2>
@@ -439,9 +428,7 @@ export default function NEETCoachingLudhiana() {
         {/* Medical Colleges */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Target Medical Colleges for Ludhiana Students
               </h2>
@@ -499,9 +486,7 @@ export default function NEETCoachingLudhiana() {
         {/* Cost Comparison */}
         <section className="bg-blue-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Cost Comparison: Chandigarh/Kota vs Online for Ludhiana Students
               </h2>
@@ -579,9 +564,7 @@ export default function NEETCoachingLudhiana() {
         {/* FAQs */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 FAQs: NEET Coaching in Ludhiana
               </h2>
@@ -614,14 +597,13 @@ export default function NEETCoachingLudhiana() {
         {/* Final CTA */}
         <section className="bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
                 Ready to Start Your NEET Journey from Ludhiana?
               </h2>
               <p className="mb-8 text-xl text-blue-100">
-                Join 400+ successful Ludhiana students. Punjab&apos;s largest city deserves the
-                best coaching.
+                Join 400+ successful Ludhiana students. Punjab&apos;s largest city deserves the best
+                coaching.
               </p>
 
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">

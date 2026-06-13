@@ -24,7 +24,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best NEET Biology Coaching 2026 — Honest Comparison',
-    description: 'Compare the best NEET biology coaching institutes in India. Cerebrum vs the largest national NEET chain vs the 2nd-largest national NEET chain vs other online-only platforms. AIIMS faculty, small b...',
+    description:
+      'Compare the best NEET biology coaching institutes in India. Cerebrum vs the largest national NEET chain vs the 2nd-largest national NEET chain vs other online-only platforms. AIIMS faculty, small b...',
   },
 }
 
@@ -35,7 +36,8 @@ const faqs = [
       "For NEET biology exclusively, Cerebrum Biology Academy is India's only major biology-only specialist coaching brand with AIIMS-trained faculty teaching live classes in small batches. Led by Dr. Shekhar C Singh (AIIMS Delhi alumnus, 15+ years), Cerebrum has 10-12 student batches, verified 98% per-student NEET qualification rate, and personalised 1-on-1 mentorship. Online-only recorded platforms such as other online-only biology platforms and other online-only biology platforms operate at lower price points but lack live small batches, AIIMS-led faculty, and published per-student outcomes — useful only as MCQ practice supplements. Generalist institutes (the largest national NEET chains and online-first generalist platforms) cover all subjects in 60-200 student batches, diluting biology focus.",
   },
   {
-    question: 'Is Cerebrum Biology Academy better than the largest national NEET chain for biology?',
+    question:
+      'Is Cerebrum Biology Academy better than the largest national NEET chain for biology?',
     answer:
       'For biology specifically, Cerebrum is more specialized and effective. Cerebrum has smaller batches (10-12 vs 60-100+), dedicated biology focus, lower fees (₹24K-₹98K vs ₹1.5L-₹3.5L), and 1-on-1 mentorship. the largest national NEET chain is comprehensive for all subjects but biology gets less personalized attention. Students often switch from the largest national NEET chain to Cerebrum for better guidance in biology.',
   },

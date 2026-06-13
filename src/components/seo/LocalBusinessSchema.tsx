@@ -6,6 +6,21 @@ interface LocalBusinessSchemaProps {
   locationId: 'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad'
 }
 
+// Map this component's location keys to the canonical CONTACT_INFO.centers keys
+// so geo coordinates are sourced from the single source of truth (not hardcoded).
+const CENTER_KEY_MAP = {
+  rohini: 'rohini',
+  gurugram: 'gurugram',
+  'south-extension': 'southExtension',
+  'green-park': 'greenPark',
+  faridabad: 'faridabad',
+} as const
+
+function centerGeo(locationId: keyof typeof CENTER_KEY_MAP) {
+  const c = CONTACT_INFO.centers[CENTER_KEY_MAP[locationId]]
+  return { lat: String(c.geo.latitude), lng: String(c.geo.longitude) }
+}
+
 // Detailed location data with geo coordinates
 const locationData = {
   rohini: {
@@ -265,6 +280,7 @@ const locationData = {
 
 export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
   const location = locationData[locationId]
+  const geo = centerGeo(locationId)
   const baseUrl = 'https://cerebrumbiologyacademy.com'
 
   const localBusinessSchema = {
@@ -292,8 +308,8 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: location.geo.lat,
-      longitude: location.geo.lng,
+      latitude: geo.lat,
+      longitude: geo.lng,
     },
     hasMap: location.googleMapsUrl,
     openingHoursSpecification: [
@@ -420,8 +436,8 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: location.geo.lat,
-      longitude: location.geo.lng,
+      latitude: geo.lat,
+      longitude: geo.lng,
     },
     containedInPlace: {
       '@type': 'City',
@@ -458,30 +474,21 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
 export function AllLocationsSchema() {
   const baseUrl = 'https://cerebrumbiologyacademy.com'
 
-  const locationIds: Array<
-    'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad' | 'noida'
-  > = ['rohini', 'gurugram', 'south-extension', 'green-park', 'faridabad', 'noida']
+  // Only the 5 physical centres (Noida is online-only — no street-address Place).
+  const locationIds: Array<'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad'> =
+    ['rohini', 'gurugram', 'south-extension', 'green-park', 'faridabad']
 
+  // Reference the single canonical #organization node (declared once in the root
+  // layout via CerebrumOrgSchema) and only ADD the centre locations to it. We must
+  // not re-declare conflicting Org identity props (name/description/founder/sameAs)
+  // — that re-fragments the entity. Same @id => Google merges this location[] in.
   const organizationWithLocations = {
     '@context': 'https://schema.org',
     '@type': 'EducationalOrganization',
-    '@id': `${baseUrl}#organization`,
-    name: 'Cerebrum Biology Academy',
-    description:
-      'Best NEET Biology Coaching in Delhi NCR with 5 offline centres and pan-India online classes. Expert AIIMS faculty, 98% success rate.',
-    url: baseUrl,
-    logo: `${baseUrl}/logo.png`,
-    telephone: CONTACT_INFO.phone.primary,
-    email: 'info@cerebrumbiologyacademy.com',
-    foundingDate: '2014',
-    founder: {
-      '@type': 'Person',
-      name: 'Dr. Shekhar C Singh',
-      jobTitle: 'Founder & Chief Academic Officer',
-      alumniOf: 'AIIMS Delhi',
-    },
+    '@id': `${baseUrl}/#organization`,
     location: locationIds.map((id) => {
       const loc = locationData[id]
+      const geo = centerGeo(id)
       return {
         '@type': 'Place',
         name: loc.name,
@@ -495,19 +502,12 @@ export function AllLocationsSchema() {
         },
         geo: {
           '@type': 'GeoCoordinates',
-          latitude: loc.geo.lat,
-          longitude: loc.geo.lng,
+          latitude: geo.lat,
+          longitude: geo.lng,
         },
         telephone: loc.phone,
       }
     }),
-    sameAs: [
-      'https://www.facebook.com/cerebrumbiologyacademy',
-      'https://www.instagram.com/cerebrumbiologyacademy',
-      'https://www.youtube.com/@cerebrumbiologyacademy',
-      'https://www.youtube.com/@drshekharcsingh',
-      'https://www.linkedin.com/company/cerebrum-biology-academy',
-    ],
   }
 
   return (

@@ -19,7 +19,6 @@ async function handlePOST(request: NextRequest, session: UserSession) {
       channels: body.channels || ['email', 'whatsapp', 'sms'],
     }
 
-
     const result = await paymentReminderService.runAutomation(config)
 
     return NextResponse.json({

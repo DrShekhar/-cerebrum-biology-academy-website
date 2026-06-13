@@ -34,7 +34,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'One Year NEET Dropper Course in Gurugram | Intensive Program',
-    description: 'One year intensive NEET dropper course in Gurugram (Gurgaon). Complete syllabus revision, 5000+ questions practice, daily tests. Transform your NEET score at Sector 51 center.',
+    description:
+      'One year intensive NEET dropper course in Gurugram (Gurgaon). Complete syllabus revision, 5000+ questions practice, daily tests. Transform your NEET score at Sector 51 center.',
   },
 }
 
@@ -147,7 +148,11 @@ export default function OneYearDropperCourseGurugramPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="one-year-dropper-course-gurugram" />
       <script

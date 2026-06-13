@@ -10,7 +10,11 @@ export const metadata: Metadata = {
 
   twitter: { card: 'summary_large_image' as const },
 
-  openGraph: { title: 'Thank You - Seminar Registration', description: 'Thank You - Seminar Registration', type: 'website' },
+  openGraph: {
+    title: 'Thank You - Seminar Registration',
+    description: 'Thank You - Seminar Registration',
+    type: 'website',
+  },
 }
 
 export default function SeminarThankYouLayout({ children }: { children: React.ReactNode }) {

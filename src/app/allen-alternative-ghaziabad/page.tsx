@@ -6,9 +6,9 @@ import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 const noidaAddress = 'B-45, Sector 62, Noida, UP 201301'
 
 export const metadata: Metadata = {
-  title: 'the largest national NEET chain Alternative in Ghaziabad | Better NEET Biology Coaching',
+  title: 'Allen Alternative in Ghaziabad | Better NEET Biology Coaching',
   description:
-    'Looking for the largest national NEET chain alternative in Ghaziabad? Cerebrum Biology Academy offers personalized NEET coaching with smaller batches (10-20 students), AIIMS faculty, and 98% success rate. the largest national NEET chain has no Ghaziabad center.',
+    'Looking for Allen alternative in Ghaziabad? Cerebrum Biology Academy offers personalized NEET coaching with smaller batches (10-20 students), AIIMS faculty, and 98% success rate. Allen has no Ghaziabad center.',
   keywords: [
     'allen alternative ghaziabad',
     'allen coaching alternative ghaziabad',
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     locale: 'en_IN',
-    title: 'the largest national NEET chain Alternative in Ghaziabad | Personalized NEET Biology Coaching',
+    title: 'Allen Alternative in Ghaziabad | Personalized NEET Biology Coaching',
     description:
-      'the largest national NEET chain has no center in Ghaziabad. Cerebrum Biology Academy offers better personalized NEET coaching for Ghaziabad students.',
+      'Allen has no center in Ghaziabad. Cerebrum Biology Academy offers better personalized NEET coaching for Ghaziabad students.',
     url: 'https://cerebrumbiologyacademy.com/allen-alternative-ghaziabad',
   },
   alternates: {
@@ -32,41 +32,42 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'the largest national NEET chain Alternative in Ghaziabad | Better NEET Biology Coaching',
-    description: 'Looking for the largest national NEET chain alternative in Ghaziabad? Cerebrum Biology Academy offers personalized NEET coaching with smaller batches (10-20 students), AIIMS faculty, and 98% succes...',
+    title: 'Allen Alternative in Ghaziabad | Better NEET Biology Coaching',
+    description:
+      'Looking for Allen alternative in Ghaziabad? Cerebrum Biology Academy offers personalized NEET coaching with smaller batches (10-20 students), AIIMS faculty, and 98% succes...',
   },
 }
 
 const faqs = [
   {
-    question: 'Does the largest national NEET chain have a center in Ghaziabad?',
+    question: 'Does Allen have a center in Ghaziabad?',
     answer:
-      "XYZ Coaching (largest national NEET chain) does not have a dedicated center in Ghaziabad. Ghaziabad students opting for the largest national NEET chain must travel to Noida or Delhi centers, adding significant commute time. Cerebrum Biology Academy at Sector 62, Noida is much more accessible from Ghaziabad via Blue Line Metro (15-20 min from Vaishali/Kaushambi).",
+      'Allen does not have a dedicated center in Ghaziabad. Ghaziabad students opting for Allen must travel to Noida or Delhi centers, adding significant commute time. Cerebrum Biology Academy at Sector 62, Noida is much more accessible from Ghaziabad via Blue Line Metro (15-20 min from Vaishali/Kaushambi).',
   },
   {
-    question: 'Why should I consider Cerebrum over the largest national NEET chain for NEET Biology?',
+    question: 'Why should I consider Cerebrum over Allen for NEET Biology?',
     answer:
-      'While the largest national NEET chain is a reputed institute, Cerebrum offers key advantages: smaller batches (10-20 vs 100+ at the largest national NEET chain), personalized attention from AIIMS faculty, Biology-only specialization for deeper coverage, and flexible online + offline options. Our 98% success rate speaks for itself.',
+      'While Allen is a reputed institute, Cerebrum offers key advantages: smaller batches (10-20 vs 100+ at Allen), personalized attention from AIIMS faculty, Biology-only specialization for deeper coverage, and flexible online + offline options. Our 98% success rate speaks for itself.',
   },
   {
-    question: 'How is Cerebrum different from the largest national NEET chain for Ghaziabad students?',
+    question: 'How is Cerebrum different from Allen for Ghaziabad students?',
     answer:
-      "Key differences: 1) Batch size: Cerebrum has 10-20 students vs the largest national NEET chain's 80-100+. 2) Faculty: Direct teaching by Dr. Shekhar (AIIMS alumnus) vs rotating faculty. 3) Focus: Biology-specialized vs all subjects. 4) Location: Easy 15-20 min metro ride from Ghaziabad vs longer commute to the largest national NEET chain centers. 5) Fee: More affordable with better value.",
+      "Key differences: 1) Batch size: Cerebrum has 10-20 students vs Allen's 80-100+. 2) Faculty: Direct teaching by Dr. Shekhar (AIIMS alumnus) vs rotating faculty. 3) Focus: Biology-specialized vs all subjects. 4) Location: Easy 15-20 min metro ride from Ghaziabad vs longer commute to Allen centers. 5) Fee: More affordable with better value.",
   },
   {
-    question: 'Can I join Cerebrum along with the largest national NEET chain for extra Biology support?',
+    question: 'Can I join Cerebrum along with Allen for extra Biology support?',
     answer:
-      "Absolutely! Many students complement their the largest national NEET chain online coaching with Cerebrum's Biology-focused classes. We offer flexible weekend batches and evening sessions specifically designed for students already enrolled elsewhere. This combination gives you the best of both worlds.",
+      "Absolutely! Many students complement their Allen online coaching with Cerebrum's Biology-focused classes. We offer flexible weekend batches and evening sessions specifically designed for students already enrolled elsewhere. This combination gives you the best of both worlds.",
   },
   {
-    question: 'What if I am not satisfied after switching from the largest national NEET chain?',
+    question: 'What if I am not satisfied after switching from Allen?',
     answer:
       "We offer a 7-day trial period for students switching from other institutes. Attend classes, interact with faculty, and if you're not satisfied, we'll refund your fees. We're confident you'll see the difference in personalized attention.",
   },
   {
-    question: 'Is the fee structure better than the largest national NEET chain?',
+    question: 'Is the fee structure better than Allen?',
     answer:
-      'Cerebrum offers competitive pricing with better value. Our fees range from ₹45,000 to ₹1,56,000 depending on the tier and program, often 20-30% lower than the largest national NEET chain for comparable quality with significantly smaller batch sizes.',
+      'Cerebrum offers competitive pricing with better value. Our fees range from ₹45,000 to ₹1,56,000 depending on the tier and program, often 20-30% lower than Allen for comparable quality with significantly smaller batch sizes.',
   },
   {
     question: 'Where is Cerebrum located and how do Ghaziabad students reach there?',
@@ -78,9 +79,9 @@ export default function AllenAlternativeGhaziabadPage() {
   const comparisonSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'the largest national NEET chain Alternative in Ghaziabad - Cerebrum Biology Academy',
+    name: 'Allen Alternative in Ghaziabad - Cerebrum Biology Academy',
     description:
-      'Comparison of Cerebrum Biology Academy vs XYZ Coaching (largest national NEET chain) for NEET preparation for Ghaziabad students',
+      'Comparison of Cerebrum Biology Academy vs Allen for NEET preparation for Ghaziabad students',
     mainEntity: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -125,7 +126,7 @@ export default function AllenAlternativeGhaziabadPage() {
       {
         '@type': 'ListItem',
         position: 3,
-        name: 'the largest national NEET chain Alternative',
+        name: 'Allen Alternative',
         item: 'https://cerebrumbiologyacademy.com/allen-alternative-ghaziabad',
       },
     ],
@@ -135,7 +136,11 @@ export default function AllenAlternativeGhaziabadPage() {
     <>
       <LocalBusinessSchema />
       <CerebrumPersonSchema
-        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+        knowsAbout={[
+          'NEET Ghaziabad',
+          'NEET Biology Ghaziabad',
+          'Medical entrance coaching Ghaziabad',
+        ]}
       />
       <script
         type="application/ld+json"

@@ -33,7 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching in Green Park Delhi | Medical Entrance Biology',
-    description: 'Best NEET coaching for Green Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 67+ AIIMS selections. Quality matching IIT area standards.',
+    description:
+      'Best NEET coaching for Green Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 67+ AIIMS selections. Quality matching IIT area standards.',
   },
 }
 
@@ -76,7 +77,11 @@ export default function NEETCoachingGreenParkPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Green Park', 'NEET Biology Green Park', 'Medical entrance coaching Green Park']}
+        knowsAbout={[
+          'NEET Green Park',
+          'NEET Biology Green Park',
+          'Medical entrance coaching Green Park',
+        ]}
       />
       <DelhiAreaSchema pageSlug="neet-coaching-green-park-delhi" />
       <LocalitySchema

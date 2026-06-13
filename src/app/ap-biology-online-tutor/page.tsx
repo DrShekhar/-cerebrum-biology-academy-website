@@ -638,10 +638,10 @@ export default function APBiologyPage() {
                   Already strong in AP Biology? Consider USABO.
                 </h2>
                 <p className="mt-2 text-gray-700">
-                  AP Biology covers ~80% of the USABO Open Exam content. If you're aiming for a 5
-                  on AP Bio, you're already 6 weeks of focused prep away from a Semifinalist score
-                  on USABO — a credential that materially strengthens college applications and
-                  unlocks the IBO pathway.
+                  AP Biology covers ~80% of the USABO Open Exam content. If you're aiming for a 5 on
+                  AP Bio, you're already 6 weeks of focused prep away from a Semifinalist score on
+                  USABO — a credential that materially strengthens college applications and unlocks
+                  the IBO pathway.
                 </p>
               </div>
               <Link

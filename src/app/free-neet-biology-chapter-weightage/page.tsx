@@ -6,11 +6,19 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Chapter Weightage 2026 | Free PDF Download',
-  description: 'Download free NEET Biology chapter-wise weightage analysis for 2026. Know which chapters carry maximum marks. Based on 10-year PYQ analysis by AIIMS faculty.',
-  keywords: ['NEET biology chapter weightage', 'NEET 2026 important chapters', 'NEET biology marks distribution', 'chapter wise weightage NEET biology', 'NEET high yield chapters'],
+  description:
+    'Download free NEET Biology chapter-wise weightage analysis for 2026. Know which chapters carry maximum marks. Based on 10-year PYQ analysis by AIIMS faculty.',
+  keywords: [
+    'NEET biology chapter weightage',
+    'NEET 2026 important chapters',
+    'NEET biology marks distribution',
+    'chapter wise weightage NEET biology',
+    'NEET high yield chapters',
+  ],
   openGraph: {
     title: 'NEET Biology Chapter Weightage 2026 | Free PDF Download',
-    description: 'Download free NEET Biology chapter-wise weightage analysis for 2026. Know which chapters carry maximum marks. Based on 10-year PYQ analysis by AIIMS faculty.',
+    description:
+      'Download free NEET Biology chapter-wise weightage analysis for 2026. Know which chapters carry maximum marks. Based on 10-year PYQ analysis by AIIMS faculty.',
     url: `${BASE_URL}/free-neet-biology-chapter-weightage`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -19,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Free NEET Biology Chapter-wise Weightage 2026',
-    description: 'Download free NEET Biology chapter-wise weightage analysis for 2026. Know which chapters carry maximum marks. Based on 1',
+    description:
+      'Download free NEET Biology chapter-wise weightage analysis for 2026. Know which chapters carry maximum marks. Based on 1',
   },
   alternates: { canonical: `${BASE_URL}/free-neet-biology-chapter-weightage` },
 }
@@ -58,7 +67,11 @@ const faqSchema = {
 export default function FreeNeetBiologyChapterWeightagePage() {
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <PageContent />
     </>
   )

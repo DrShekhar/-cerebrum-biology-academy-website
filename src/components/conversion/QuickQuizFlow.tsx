@@ -223,9 +223,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
               <span className="text-blue-600 font-semibold">{Math.round(progress)}% Complete</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
-              <div
-                className="bg-blue-500 h-2 rounded-full animate-fadeInUp"
-              />
+              <div className="bg-blue-500 h-2 rounded-full animate-fadeInUp" />
             </div>
           </div>
 

@@ -6,7 +6,7 @@ export function Last6MonthsStrategyIllustration({
   className = '',
   animate = true,
 }: IllustrationProps) {
-    const wrapperProps = animate
+  const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -100,26 +100,18 @@ export function Last6MonthsStrategyIllustration({
       </g>
 
       {/* Title Section with Countdown */}
-      <g
-      >
+      <g>
         <rect x="150" y="15" width="400" height="55" rx="27" fill="url(#urgencyGrad)" />
         <text x="350" y="40" fontSize="22" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           ⏰ LAST 6 MONTHS STRATEGY
         </text>
-        <text
-          x="350"
-          y="58"
-          fontSize="12"
-          fill="#FEE2E2"
-          textAnchor="middle"
-        >
+        <text x="350" y="58" fontSize="12" fill="#FEE2E2" textAnchor="middle">
           180 Days to Transform Your NEET Score
         </text>
       </g>
 
       {/* === LEFT SECTION: Phase Breakdown === */}
-      <g
-      >
+      <g>
         <g filter="url(#last6CardShadow)">
           <rect x="20" y="85" width="220" height="320" rx="16" fill="#FFFFFF" />
         </g>
@@ -131,10 +123,7 @@ export function Last6MonthsStrategyIllustration({
         {/* Phase cards */}
         <g transform="translate(30, 120)">
           {phases.map((phase, i) => (
-            <g
-              key={i}
-              transform={`translate(0, ${i * 100})`}
-            >
+            <g key={i} transform={`translate(0, ${i * 100})`}>
               {/* Phase card */}
               <rect
                 x="0"
@@ -185,22 +174,14 @@ export function Last6MonthsStrategyIllustration({
 
               {/* Progress bar */}
               <rect x="60" y="82" width="130" height="4" rx="2" fill="#E5E7EB" />
-              <rect
-                x="60"
-                y="82"
-                width={0}
-                height="4"
-                rx="2"
-                fill={phase.color}
-              />
+              <rect x="60" y="82" width={0} height="4" rx="2" fill={phase.color} />
             </g>
           ))}
         </g>
       </g>
 
       {/* === CENTER SECTION: Weekly Schedule & Milestones === */}
-      <g
-      >
+      <g>
         {/* Weekly Schedule */}
         <g filter="url(#last6CardShadow)">
           <rect x="255" y="85" width="280" height="150" rx="16" fill="#FFFFFF" />
@@ -263,10 +244,7 @@ export function Last6MonthsStrategyIllustration({
 
           {/* Milestone points */}
           {milestones.map((milestone, i) => (
-            <g
-              key={i}
-              transform={`translate(${i * 40}, 0)`}
-            >
+            <g key={i} transform={`translate(${i * 40}, 0)`}>
               <circle
                 cx="20"
                 cy="25"
@@ -291,8 +269,7 @@ export function Last6MonthsStrategyIllustration({
       </g>
 
       {/* === RIGHT SECTION: Daily Hours & Focus === */}
-      <g
-      >
+      <g>
         <g filter="url(#last6CardShadow)">
           <rect x="550" y="85" width="130" height="320" rx="16" fill="#FFFFFF" />
         </g>
@@ -307,14 +284,7 @@ export function Last6MonthsStrategyIllustration({
           <text x="55" y="22" fontSize="9" fill="#B91C1C" textAnchor="middle" fontWeight="600">
             Study Hours
           </text>
-          <text
-            x="55"
-            y="50"
-            fontSize="28"
-            fill="#DC2626"
-            textAnchor="middle"
-            fontWeight="bold"
-          >
+          <text x="55" y="50" fontSize="28" fill="#DC2626" textAnchor="middle" fontWeight="bold">
             8-10
           </text>
           <text x="55" y="65" fontSize="8" fill="#EF4444" textAnchor="middle">
@@ -328,14 +298,7 @@ export function Last6MonthsStrategyIllustration({
           <text x="55" y="22" fontSize="9" fill="#1D4ED8" textAnchor="middle" fontWeight="600">
             Daily MCQs
           </text>
-          <text
-            x="55"
-            y="50"
-            fontSize="28"
-            fill="#2563EB"
-            textAnchor="middle"
-            fontWeight="bold"
-          >
+          <text x="55" y="50" fontSize="28" fill="#2563EB" textAnchor="middle" fontWeight="bold">
             200+
           </text>
           <text x="55" y="65" fontSize="8" fill="#3B82F6" textAnchor="middle">
@@ -349,14 +312,7 @@ export function Last6MonthsStrategyIllustration({
           <text x="55" y="22" fontSize="9" fill="#6D28D9" textAnchor="middle" fontWeight="600">
             Revision Cycles
           </text>
-          <text
-            x="55"
-            y="50"
-            fontSize="28"
-            fill="#7C3AED"
-            textAnchor="middle"
-            fontWeight="bold"
-          >
+          <text x="55" y="50" fontSize="28" fill="#7C3AED" textAnchor="middle" fontWeight="bold">
             3x
           </text>
           <text x="55" y="65" fontSize="8" fill="#8B5CF6" textAnchor="middle">
@@ -377,8 +333,7 @@ export function Last6MonthsStrategyIllustration({
       </g>
 
       {/* === BOTTOM SECTION: Action Items === */}
-      <g
-      >
+      <g>
         <g filter="url(#last6CardShadow)">
           <rect x="20" y="420" width="665" height="85" rx="16" fill="#FFFFFF" />
         </g>
@@ -397,10 +352,7 @@ export function Last6MonthsStrategyIllustration({
             { icon: '🎯', text: 'PYQ Focus', color: '#EF4444' },
             { icon: '😴', text: '7hr Sleep', color: '#06B6D4' },
           ].map((item, i) => (
-            <g
-              key={i}
-              transform={`translate(${i * 105}, 0)`}
-            >
+            <g key={i} transform={`translate(${i * 105}, 0)`}>
               <rect
                 x="0"
                 y="0"
@@ -425,20 +377,10 @@ export function Last6MonthsStrategyIllustration({
       {/* Floating urgency indicators */}
       {animate && (
         <>
-          <text
-            x="30"
-            y="50"
-            fontSize="18"
-            opacity="0.4"
-          >
+          <text x="30" y="50" fontSize="18" opacity="0.4">
             ⏰
           </text>
-          <text
-            x="670"
-            y="55"
-            fontSize="16"
-            opacity="0.4"
-          >
+          <text x="670" y="55" fontSize="16" opacity="0.4">
             🔥
           </text>
         </>

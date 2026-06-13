@@ -25,10 +25,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-theory",
-        "history-of-cell-biology"
-      ],
+      "tags": ["cell-theory", "history-of-cell-biology"],
       "neetWeightage": "HIGH"
     },
     {
@@ -39,21 +36,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Who coined the term 'cell'?",
-      "options": [
-        "Schleiden",
-        "Robert Hooke",
-        "Leeuwenhoek",
-        "Robert Brown"
-      ],
+      "options": ["Schleiden", "Robert Hooke", "Leeuwenhoek", "Robert Brown"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, Robert Hooke (1665) observed slices of cork under a crude microscope and saw small compartments which he termed 'cells' (Latin: cellula = small room).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-theory",
-        "robert-hooke"
-      ],
+      "tags": ["cell-theory", "robert-hooke"],
       "neetWeightage": "HIGH"
     },
     {
@@ -64,21 +53,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following is the exception to cell theory?",
-      "options": [
-        "Bacteria",
-        "Viruses",
-        "Algae",
-        "Fungi"
-      ],
+      "options": ["Bacteria", "Viruses", "Algae", "Fungi"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, viruses do not have a cellular organisation and are exceptions to cell theory. They consist of a protein coat and nucleic acid but lack cellular machinery.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-theory",
-        "viruses"
-      ],
+      "tags": ["cell-theory", "viruses"],
       "neetWeightage": "HIGH"
     },
     {
@@ -89,21 +70,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The modification of cell theory suggesting that all cells arise from pre-existing cells was given by:",
-      "options": [
-        "Rudolf Virchow",
-        "Robert Brown",
-        "Schwann",
-        "Schleiden"
-      ],
+      "options": ["Rudolf Virchow", "Robert Brown", "Schwann", "Schleiden"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, Rudolf Virchow (1855) modified the cell theory by proposing 'Omnis cellula-e cellula' meaning all cells arise from pre-existing cells.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-theory",
-        "virchow"
-      ],
+      "tags": ["cell-theory", "virchow"],
       "neetWeightage": "HIGH"
     },
     {
@@ -125,10 +98,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "prokaryotic-cell",
-        "nucleoid"
-      ],
+      "tags": ["prokaryotic-cell", "nucleoid"],
       "neetWeightage": "HIGH"
     },
     {
@@ -150,10 +120,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-membrane",
-        "fluid-mosaic-model"
-      ],
+      "tags": ["cell-membrane", "fluid-mosaic-model"],
       "neetWeightage": "HIGH"
     },
     {
@@ -164,21 +131,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The lipid component of the plasma membrane mainly consists of:",
-      "options": [
-        "Waxes",
-        "Triglycerides",
-        "Phosphoglycerides",
-        "Cholesterol only"
-      ],
+      "options": ["Waxes", "Triglycerides", "Phosphoglycerides", "Cholesterol only"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the lipid component of the cell membrane mainly consists of phosphoglycerides. They are arranged in a bilayer with their polar heads facing outward and hydrophobic tails facing each other.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-membrane",
-        "phospholipids"
-      ],
+      "tags": ["cell-membrane", "phospholipids"],
       "neetWeightage": "HIGH"
     },
     {
@@ -200,10 +159,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-membrane",
-        "membrane-proteins"
-      ],
+      "tags": ["cell-membrane", "membrane-proteins"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -214,21 +170,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The cell wall of plant cells is mainly composed of:",
-      "options": [
-        "Peptidoglycan",
-        "Chitin",
-        "Cellulose",
-        "Starch"
-      ],
+      "options": ["Peptidoglycan", "Chitin", "Cellulose", "Starch"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the cell wall of plant cells is composed of cellulose, hemicellulose, pectins, and proteins. Cellulose is the major structural component providing rigidity.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-wall",
-        "cellulose"
-      ],
+      "tags": ["cell-wall", "cellulose"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -239,21 +187,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The middle lamella between two adjacent plant cells is composed mainly of:",
-      "options": [
-        "Cellulose",
-        "Calcium pectate",
-        "Lignin",
-        "Hemicellulose"
-      ],
+      "options": ["Cellulose", "Calcium pectate", "Lignin", "Hemicellulose"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the middle lamella is a layer mainly composed of calcium pectate which holds or glues the neighbouring cells together.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-wall",
-        "middle-lamella"
-      ],
+      "tags": ["cell-wall", "middle-lamella"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -264,21 +204,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which organelle is called the 'powerhouse of the cell'?",
-      "options": [
-        "Nucleus",
-        "Mitochondria",
-        "Golgi apparatus",
-        "Chloroplast"
-      ],
+      "options": ["Nucleus", "Mitochondria", "Golgi apparatus", "Chloroplast"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, mitochondria are called the powerhouse of the cell because they produce cellular energy in the form of ATP through oxidative phosphorylation.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitochondria",
-        "atp"
-      ],
+      "tags": ["mitochondria", "atp"],
       "neetWeightage": "HIGH"
     },
     {
@@ -289,21 +221,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The inner membrane of mitochondria is folded into structures called:",
-      "options": [
-        "Thylakoids",
-        "Cisternae",
-        "Grana",
-        "Cristae"
-      ],
+      "options": ["Thylakoids", "Cisternae", "Grana", "Cristae"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, the inner membrane of mitochondria forms a number of infoldings called cristae. These increase the surface area for oxidative phosphorylation.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitochondria",
-        "cristae"
-      ],
+      "tags": ["mitochondria", "cristae"],
       "neetWeightage": "HIGH"
     },
     {
@@ -314,21 +238,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The cis face of Golgi apparatus is also called:",
-      "options": [
-        "Maturing face",
-        "Secretory face",
-        "Trans face",
-        "Forming face"
-      ],
+      "options": ["Maturing face", "Secretory face", "Trans face", "Forming face"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, the cis face (forming face) of Golgi apparatus is convex and faces the endoplasmic reticulum. The trans face (maturing face) is concave and faces the plasma membrane.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "golgi-apparatus",
-        "endomembrane-system"
-      ],
+      "tags": ["golgi-apparatus", "endomembrane-system"],
       "neetWeightage": "HIGH"
     },
     {
@@ -339,21 +255,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which organelle is responsible for intracellular digestion?",
-      "options": [
-        "Peroxisomes",
-        "Centrosomes",
-        "Ribosomes",
-        "Lysosomes"
-      ],
+      "options": ["Peroxisomes", "Centrosomes", "Ribosomes", "Lysosomes"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, lysosomes contain hydrolytic enzymes (lipases, proteases, carbohydrases) capable of digesting carbohydrates, proteins, lipids, and nucleic acids. They are responsible for intracellular digestion.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lysosomes",
-        "intracellular-digestion"
-      ],
+      "tags": ["lysosomes", "intracellular-digestion"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -364,22 +272,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The sedimentation coefficient of prokaryotic ribosomes is:",
-      "options": [
-        "60S",
-        "70S",
-        "80S",
-        "40S"
-      ],
+      "options": ["60S", "70S", "80S", "40S"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, prokaryotic ribosomes are 70S type, consisting of two subunits: 50S (larger) and 30S (smaller). Eukaryotic ribosomes are 80S type with 60S and 40S subunits.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ribosomes",
-        "70S",
-        "prokaryotic"
-      ],
+      "tags": ["ribosomes", "70S", "prokaryotic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -390,22 +289,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The axoneme of cilia and flagella has which structural arrangement of microtubules?",
-      "options": [
-        "9+3",
-        "9+1",
-        "9+0",
-        "9+2"
-      ],
+      "options": ["9+3", "9+1", "9+0", "9+2"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, the axoneme of cilia and flagella has a 9+2 arrangement of microtubules - 9 peripheral doublets and 2 central singlets surrounded by a central sheath.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cilia",
-        "flagella",
-        "9+2-arrangement"
-      ],
+      "tags": ["cilia", "flagella", "9+2-arrangement"],
       "neetWeightage": "HIGH"
     },
     {
@@ -416,22 +306,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Smooth endoplasmic reticulum is primarily involved in:",
-      "options": [
-        "DNA replication",
-        "Photosynthesis",
-        "Lipid synthesis",
-        "Protein synthesis"
-      ],
+      "options": ["DNA replication", "Photosynthesis", "Lipid synthesis", "Protein synthesis"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, Smooth Endoplasmic Reticulum (SER) is the major site for synthesis of lipids. It also plays a role in detoxification in liver cells.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "endoplasmic-reticulum",
-        "SER",
-        "lipid-synthesis"
-      ],
+      "tags": ["endoplasmic-reticulum", "SER", "lipid-synthesis"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -442,22 +323,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The chromatin material is composed of:",
-      "options": [
-        "DNA and lipids",
-        "RNA and histones",
-        "DNA and histones",
-        "RNA and lipids"
-      ],
+      "options": ["DNA and lipids", "RNA and histones", "DNA and histones", "RNA and lipids"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, chromatin is a thread-like stained material containing DNA and histone proteins. During cell division, chromatin condenses to form chromosomes.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "nucleus",
-        "chromatin",
-        "DNA"
-      ],
+      "tags": ["nucleus", "chromatin", "DNA"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -468,21 +340,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following is NOT a part of the endomembrane system?",
-      "options": [
-        "Lysosomes",
-        "Endoplasmic reticulum",
-        "Mitochondria",
-        "Golgi complex"
-      ],
+      "options": ["Lysosomes", "Endoplasmic reticulum", "Mitochondria", "Golgi complex"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the endomembrane system includes ER, Golgi complex, lysosomes, and vacuoles. Mitochondria, chloroplasts, and peroxisomes are NOT part of the endomembrane system as their functions are not coordinated with the above components.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "endomembrane-system",
-        "mitochondria"
-      ],
+      "tags": ["endomembrane-system", "mitochondria"],
       "neetWeightage": "HIGH"
     },
     {
@@ -493,21 +357,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The nucleus was first discovered by:",
-      "options": [
-        "Schwann",
-        "Schleiden",
-        "Robert Brown",
-        "Robert Hooke"
-      ],
+      "options": ["Schwann", "Schleiden", "Robert Brown", "Robert Hooke"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, Robert Brown (1831) discovered the nucleus in plant cells. He observed it as a prominent dense body in orchid root cells.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "nucleus",
-        "robert-brown"
-      ],
+      "tags": ["nucleus", "robert-brown"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -518,22 +374,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following structures is common to both prokaryotic and eukaryotic cells?",
-      "options": [
-        "Ribosomes",
-        "Mitochondria",
-        "Endoplasmic reticulum",
-        "Nuclear membrane"
-      ],
+      "options": ["Ribosomes", "Mitochondria", "Endoplasmic reticulum", "Nuclear membrane"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, ribosomes are found in both prokaryotic (70S) and eukaryotic cells (80S). Nuclear membrane, mitochondria, and ER are present only in eukaryotic cells.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ribosomes",
-        "prokaryotic",
-        "eukaryotic"
-      ],
+      "tags": ["ribosomes", "prokaryotic", "eukaryotic"],
       "neetWeightage": "HIGH"
     },
     {
@@ -555,11 +402,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "plasmodesmata",
-        "cell-wall",
-        "plant-cell"
-      ],
+      "tags": ["plasmodesmata", "cell-wall", "plant-cell"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -570,22 +413,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The extra-genomic, circular, self-replicating DNA present in bacteria is called:",
-      "options": [
-        "Nucleoid",
-        "Phagemid",
-        "Cosmid",
-        "Plasmid"
-      ],
+      "options": ["Nucleoid", "Phagemid", "Cosmid", "Plasmid"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, in addition to the genomic DNA, bacteria have small, circular DNA outside the genomic DNA called plasmids. They are self-replicating and confer certain phenotypic characters such as antibiotic resistance.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "prokaryotic-cell",
-        "plasmid",
-        "bacteria"
-      ],
+      "tags": ["prokaryotic-cell", "plasmid", "bacteria"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -607,11 +441,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chloroplast",
-        "stroma-lamellae",
-        "plastids"
-      ],
+      "tags": ["chloroplast", "stroma-lamellae", "plastids"],
       "neetWeightage": "HIGH"
     },
     {
@@ -633,11 +463,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "nucleus",
-        "nuclear-pores",
-        "nuclear-envelope"
-      ],
+      "tags": ["nucleus", "nuclear-pores", "nuclear-envelope"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -648,22 +474,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following organisms is the smallest cell?",
-      "options": [
-        "Human RBC",
-        "Mycoplasma",
-        "Bacteria",
-        "Ostrich egg"
-      ],
+      "options": ["Human RBC", "Mycoplasma", "Bacteria", "Ostrich egg"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, mycoplasmas are the smallest cells known (0.3 micrometres in length). They are also called PPLOs (Pleuro Pneumonia Like Organisms).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-size",
-        "mycoplasma",
-        "PPLO"
-      ],
+      "tags": ["cell-size", "mycoplasma", "PPLO"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -674,22 +491,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which cytoskeletal structure is involved in amoeboid movement?",
-      "options": [
-        "Centrioles",
-        "Microtubules",
-        "Microfilaments",
-        "Intermediate filaments"
-      ],
+      "options": ["Centrioles", "Microtubules", "Microfilaments", "Intermediate filaments"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, microfilaments are involved in amoeboid movement and also play a role in cytokinesis, muscular contraction, and cell motility.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cytoskeleton",
-        "microfilaments",
-        "amoeboid-movement"
-      ],
+      "tags": ["cytoskeleton", "microfilaments", "amoeboid-movement"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -700,23 +508,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The basal body of cilia and flagella is structurally similar to:",
-      "options": [
-        "Centrioles",
-        "Ribosomes",
-        "Lysosomes",
-        "Peroxisomes"
-      ],
+      "options": ["Centrioles", "Ribosomes", "Lysosomes", "Peroxisomes"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, cilia and flagella arise from centriole-like structures called basal bodies. Both basal bodies and centrioles are made up of 9 triplets of microtubules arranged in a cartwheel pattern.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cilia",
-        "flagella",
-        "basal-body",
-        "centrioles"
-      ],
+      "tags": ["cilia", "flagella", "basal-body", "centrioles"],
       "neetWeightage": "HIGH"
     },
     {
@@ -727,22 +525,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following cell organelles has its own DNA?",
-      "options": [
-        "Lysosomes",
-        "Peroxisomes",
-        "Mitochondria",
-        "Golgi body"
-      ],
+      "options": ["Lysosomes", "Peroxisomes", "Mitochondria", "Golgi body"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, mitochondria and chloroplasts are semi-autonomous organelles that have their own DNA (circular), ribosomes (70S), and can synthesise some of their own proteins.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitochondria",
-        "semi-autonomous",
-        "organelle-DNA"
-      ],
+      "tags": ["mitochondria", "semi-autonomous", "organelle-DNA"],
       "neetWeightage": "HIGH"
     },
     {
@@ -753,22 +542,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Vacuoles in plant cells are bounded by a membrane called:",
-      "options": [
-        "Thylakoid membrane",
-        "Plasma membrane",
-        "Tonoplast",
-        "Nuclear membrane"
-      ],
+      "options": ["Thylakoid membrane", "Plasma membrane", "Tonoplast", "Nuclear membrane"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the large central vacuole in plant cells is bounded by a single membrane called the tonoplast. It facilitates transport of ions and other materials against concentration gradients.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vacuole",
-        "tonoplast",
-        "plant-cell"
-      ],
+      "tags": ["vacuole", "tonoplast", "plant-cell"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -779,22 +559,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The gas vacuoles found in prokaryotes help in:",
-      "options": [
-        "Nitrogen fixation",
-        "Photosynthesis",
-        "Reproduction",
-        "Buoyancy"
-      ],
+      "options": ["Nitrogen fixation", "Photosynthesis", "Reproduction", "Buoyancy"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, gas vacuoles are found in some prokaryotes such as cyanobacteria. They help in providing buoyancy to the cells, allowing them to float at appropriate depths in water bodies.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "prokaryotic-cell",
-        "gas-vacuoles",
-        "buoyancy"
-      ],
+      "tags": ["prokaryotic-cell", "gas-vacuoles", "buoyancy"],
       "neetWeightage": "LOW"
     },
     {
@@ -805,22 +576,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "RER is different from SER because RER has:",
-      "options": [
-        "More lipids",
-        "Ribosomes on its surface",
-        "Pigments",
-        "Circular DNA"
-      ],
+      "options": ["More lipids", "Ribosomes on its surface", "Pigments", "Circular DNA"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, Rough Endoplasmic Reticulum (RER) has ribosomes attached to its cytoplasmic surface, giving it a rough appearance. RER is involved in protein synthesis and secretion.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "endoplasmic-reticulum",
-        "RER",
-        "ribosomes"
-      ],
+      "tags": ["endoplasmic-reticulum", "RER", "ribosomes"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -831,22 +593,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The thylakoids stacked to form grana are characteristic of:",
-      "options": [
-        "Chromoplasts",
-        "Chloroplasts",
-        "Leucoplasts",
-        "Mitochondria"
-      ],
+      "options": ["Chromoplasts", "Chloroplasts", "Leucoplasts", "Mitochondria"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, chloroplasts contain thylakoids which are stacked like piles of coins to form grana. These thylakoid membranes contain chlorophyll and are the site of light reactions of photosynthesis.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chloroplast",
-        "thylakoid",
-        "grana"
-      ],
+      "tags": ["chloroplast", "thylakoid", "grana"],
       "neetWeightage": "HIGH"
     },
     {
@@ -857,22 +610,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The mesosomes in prokaryotic cells are formed by the extension of:",
-      "options": [
-        "Nuclear membrane",
-        "Cell wall",
-        "Outer membrane",
-        "Plasma membrane"
-      ],
+      "options": ["Nuclear membrane", "Cell wall", "Outer membrane", "Plasma membrane"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, mesosomes are membranous extensions of the plasma membrane into the cell in the form of vesicles, tubules, and lamellae. They help in cell wall formation, DNA replication, distribution to daughter cells, respiration, and secretion.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "prokaryotic-cell",
-        "mesosomes",
-        "plasma-membrane"
-      ],
+      "tags": ["prokaryotic-cell", "mesosomes", "plasma-membrane"],
       "neetWeightage": "HIGH"
     },
     {
@@ -883,22 +627,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Centrioles are absent in cells of:",
-      "options": [
-        "Animals",
-        "Fungi",
-        "Higher plants",
-        "Lower plants"
-      ],
+      "options": ["Animals", "Fungi", "Higher plants", "Lower plants"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, centrioles are found in animal cells and some lower plant cells. They are absent in higher plant cells. Centrioles form the basal body of cilia/flagella and the spindle fibres during cell division.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "centrioles",
-        "plant-cell",
-        "animal-cell"
-      ],
+      "tags": ["centrioles", "plant-cell", "animal-cell"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -909,22 +644,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which type of plastid stores starch?",
-      "options": [
-        "Chloroplast",
-        "Elaioplast",
-        "Amyloplast",
-        "Chromoplast"
-      ],
+      "options": ["Chloroplast", "Elaioplast", "Amyloplast", "Chromoplast"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, leucoplasts are colourless plastids that store nutrients. Amyloplasts store carbohydrates (starch), elaioplasts store oils/fats, and aleuroplasts store proteins.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "plastids",
-        "leucoplasts",
-        "amyloplast"
-      ],
+      "tags": ["plastids", "leucoplasts", "amyloplast"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -935,22 +661,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The glycocalyx of prokaryotic cells, when present as a loose sheath, is called:",
-      "options": [
-        "Capsule",
-        "Slime layer",
-        "Cell wall",
-        "Pellicle"
-      ],
+      "options": ["Capsule", "Slime layer", "Cell wall", "Pellicle"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the glycocalyx in prokaryotes can be a loose sheath called the slime layer, or thick and tough called a capsule. It plays a role in protection and sometimes in virulence.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "prokaryotic-cell",
-        "glycocalyx",
-        "slime-layer"
-      ],
+      "tags": ["prokaryotic-cell", "glycocalyx", "slime-layer"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -961,21 +678,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which one of the following structures is not found in a prokaryotic cell?",
-      "options": [
-        "Plasma membrane",
-        "Ribosome",
-        "Mesosome",
-        "Nuclear envelope"
-      ],
+      "options": ["Plasma membrane", "Ribosome", "Mesosome", "Nuclear envelope"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, prokaryotic cells lack a nuclear envelope (nuclear membrane). The genetic material lies in the nucleoid region without any membrane-bound organization.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "prokaryotic-cell",
-        "nuclear-envelope"
-      ],
+      "tags": ["prokaryotic-cell", "nuclear-envelope"],
       "neetWeightage": "HIGH"
     },
     {
@@ -997,11 +706,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "golgi-apparatus",
-        "protein-modification",
-        "packaging"
-      ],
+      "tags": ["golgi-apparatus", "protein-modification", "packaging"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1023,11 +728,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitochondria",
-        "chloroplast",
-        "semi-autonomous"
-      ],
+      "tags": ["mitochondria", "chloroplast", "semi-autonomous"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1049,10 +750,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-membrane",
-        "selective-permeability"
-      ],
+      "tags": ["cell-membrane", "selective-permeability"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1074,11 +772,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lysosomes",
-        "suicidal-bags",
-        "autophagy"
-      ],
+      "tags": ["lysosomes", "suicidal-bags", "autophagy"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1100,10 +794,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ribosomes",
-        "non-membrane-bound"
-      ],
+      "tags": ["ribosomes", "non-membrane-bound"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1125,11 +816,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "viruses",
-        "cell-theory",
-        "non-cellular"
-      ],
+      "tags": ["viruses", "cell-theory", "non-cellular"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1151,11 +838,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-membrane",
-        "fluid-mosaic-model",
-        "lateral-movement"
-      ],
+      "tags": ["cell-membrane", "fluid-mosaic-model", "lateral-movement"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1177,11 +860,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mycoplasma",
-        "cell-size",
-        "cell-wall"
-      ],
+      "tags": ["mycoplasma", "cell-size", "cell-wall"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1203,11 +882,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "centrosome",
-        "RBC",
-        "enucleated"
-      ],
+      "tags": ["centrosome", "RBC", "enucleated"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1229,11 +904,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mesosomes",
-        "prokaryotic-cell",
-        "respiration"
-      ],
+      "tags": ["mesosomes", "prokaryotic-cell", "respiration"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1255,11 +926,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chloroplast",
-        "double-membrane",
-        "plastids"
-      ],
+      "tags": ["chloroplast", "double-membrane", "plastids"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1281,10 +948,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "peroxisomes",
-        "endomembrane-system"
-      ],
+      "tags": ["peroxisomes", "endomembrane-system"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1306,11 +970,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-wall",
-        "osmosis",
-        "plant-cell"
-      ],
+      "tags": ["cell-wall", "osmosis", "plant-cell"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1332,11 +992,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "nucleus",
-        "nuclear-envelope",
-        "mitosis"
-      ],
+      "tags": ["nucleus", "nuclear-envelope", "mitosis"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1358,11 +1014,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "nucleolus",
-        "rRNA",
-        "ribosome-assembly"
-      ],
+      "tags": ["nucleolus", "rRNA", "ribosome-assembly"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1384,10 +1036,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "prokaryotic-cell",
-        "features"
-      ],
+      "tags": ["prokaryotic-cell", "features"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1409,11 +1058,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "golgi-apparatus",
-        "cisternae",
-        "glycoproteins"
-      ],
+      "tags": ["golgi-apparatus", "cisternae", "glycoproteins"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1424,22 +1069,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Read the following statements:\n(i) Mitochondria have 70S ribosomes\n(ii) Mitochondria have their own circular DNA\n(iii) Mitochondria have a single membrane\n(iv) Mitochondria can divide by fission\nHow many of the above statements are correct?",
-      "options": [
-        "One",
-        "Three",
-        "Four",
-        "Two"
-      ],
+      "options": ["One", "Three", "Four", "Two"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, statements (i), (ii), and (iv) are correct. Mitochondria have 70S ribosomes, circular DNA, and can divide by fission. Statement (iii) is incorrect as mitochondria are double-membrane-bound organelles.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitochondria",
-        "semi-autonomous",
-        "double-membrane"
-      ],
+      "tags": ["mitochondria", "semi-autonomous", "double-membrane"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1461,10 +1097,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-wall",
-        "functions"
-      ],
+      "tags": ["cell-wall", "functions"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1486,11 +1119,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "endoplasmic-reticulum",
-        "RER",
-        "SER"
-      ],
+      "tags": ["endoplasmic-reticulum", "RER", "SER"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1512,12 +1141,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "nucleus",
-        "nuclear-envelope",
-        "chromatin",
-        "nucleolus"
-      ],
+      "tags": ["nucleus", "nuclear-envelope", "chromatin", "nucleolus"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1539,11 +1163,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "centrioles",
-        "microtubules",
-        "9+0"
-      ],
+      "tags": ["centrioles", "microtubules", "9+0"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1565,12 +1185,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "plastids",
-        "chloroplast",
-        "chromoplast",
-        "leucoplast"
-      ],
+      "tags": ["plastids", "chloroplast", "chromoplast", "leucoplast"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1581,22 +1196,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following statements about the fluid mosaic model is/are INCORRECT?\n(i) Proteins are embedded in the lipid bilayer\n(ii) The lipid bilayer is rigid and immovable\n(iii) Integral proteins can be easily separated from the membrane\n(iv) The ratio of protein to lipid varies in different cell types",
-      "options": [
-        "(ii) and (iii) only",
-        "(i) and (iv) only",
-        "(ii) only",
-        "(i), (ii), and (iii)"
-      ],
+      "options": ["(ii) and (iii) only", "(i) and (iv) only", "(ii) only", "(i), (ii), and (iii)"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, in the fluid mosaic model, the lipid bilayer is quasi-fluid (NOT rigid), and integral proteins are buried in the membrane and can be separated only by harsh treatments (detergents). Statements (ii) and (iii) are incorrect.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "fluid-mosaic-model",
-        "cell-membrane",
-        "proteins"
-      ],
+      "tags": ["fluid-mosaic-model", "cell-membrane", "proteins"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1607,22 +1213,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "How many of the following organelles are double-membrane-bound?\nMitochondria, Chloroplast, Nucleus, Lysosome, ER, Peroxisome",
-      "options": [
-        "Two",
-        "Five",
-        "Three",
-        "Four"
-      ],
+      "options": ["Two", "Five", "Three", "Four"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, three organelles are double-membrane-bound: mitochondria, chloroplast, and nucleus. Lysosomes, ER, and peroxisomes are single-membrane-bound organelles.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "double-membrane",
-        "organelles",
-        "cell-structure"
-      ],
+      "tags": ["double-membrane", "organelles", "cell-structure"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1633,21 +1230,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Select the incorrect statement about mesosomes:\n(i) They are formed by extensions of plasma membrane\n(ii) They help in cell wall formation\n(iii) They help in DNA replication and distribution to daughter cells\n(iv) They are found in all eukaryotic cells",
-      "options": [
-        "(ii) and (iii) only",
-        "(i) and (iv) only",
-        "(iv) only",
-        "(i) only"
-      ],
+      "options": ["(ii) and (iii) only", "(i) and (iv) only", "(iv) only", "(i) only"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, mesosomes are found in prokaryotic cells (NOT eukaryotic cells). They are extensions of the plasma membrane that help in cell wall formation, DNA replication, and distribution to daughter cells. Statement (iv) is the only incorrect one.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mesosomes",
-        "prokaryotic-cell"
-      ],
+      "tags": ["mesosomes", "prokaryotic-cell"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1669,11 +1258,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "vacuoles",
-        "tonoplast",
-        "contractile-vacuole"
-      ],
+      "tags": ["vacuoles", "tonoplast", "contractile-vacuole"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1695,11 +1280,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cytoskeleton",
-        "microtubules",
-        "microfilaments"
-      ],
+      "tags": ["cytoskeleton", "microtubules", "microfilaments"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1721,11 +1302,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "plant-cell",
-        "animal-cell",
-        "differences"
-      ],
+      "tags": ["plant-cell", "animal-cell", "differences"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1747,11 +1324,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "organelles",
-        "functions",
-        "matching"
-      ],
+      "tags": ["organelles", "functions", "matching"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1773,11 +1346,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-theory",
-        "scientists",
-        "history"
-      ],
+      "tags": ["cell-theory", "scientists", "history"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1799,12 +1368,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cristae",
-        "cisternae",
-        "thylakoids",
-        "stroma-lamellae"
-      ],
+      "tags": ["cristae", "cisternae", "thylakoids", "stroma-lamellae"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1826,12 +1390,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "plastids",
-        "amyloplast",
-        "elaioplast",
-        "aleuroplast"
-      ],
+      "tags": ["plastids", "amyloplast", "elaioplast", "aleuroplast"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1853,10 +1412,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chemical-composition",
-        "cell-components"
-      ],
+      "tags": ["chemical-composition", "cell-components"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1878,11 +1434,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "centriole",
-        "axoneme",
-        "microtubules"
-      ],
+      "tags": ["centriole", "axoneme", "microtubules"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1904,11 +1456,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "membrane",
-        "organelles",
-        "double-membrane"
-      ],
+      "tags": ["membrane", "organelles", "double-membrane"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1930,12 +1478,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "prokaryotic-structures",
-        "pili",
-        "fimbriae",
-        "flagellum"
-      ],
+      "tags": ["prokaryotic-structures", "pili", "fimbriae", "flagellum"],
       "neetWeightage": "HIGH"
     },
     {
@@ -1957,12 +1500,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "tonoplast",
-        "plasmodesmata",
-        "middle-lamella",
-        "nuclear-pore"
-      ],
+      "tags": ["tonoplast", "plasmodesmata", "middle-lamella", "nuclear-pore"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1984,12 +1522,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "ribosomes",
-        "70S",
-        "80S",
-        "subunits"
-      ],
+      "tags": ["ribosomes", "70S", "80S", "subunits"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2011,12 +1544,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cytoskeleton",
-        "tubulin",
-        "actin",
-        "dynein"
-      ],
+      "tags": ["cytoskeleton", "tubulin", "actin", "dynein"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2038,12 +1566,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mycoplasma",
-        "PPLO",
-        "bacteria",
-        "cyanobacteria"
-      ],
+      "tags": ["mycoplasma", "PPLO", "bacteria", "cyanobacteria"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2065,12 +1588,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "polysome",
-        "nucleolus",
-        "centrosome",
-        "peroxisome"
-      ],
+      "tags": ["polysome", "nucleolus", "centrosome", "peroxisome"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2092,12 +1610,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "endomembrane-system",
-        "RER",
-        "SER",
-        "golgi-faces"
-      ],
+      "tags": ["endomembrane-system", "RER", "SER", "golgi-faces"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2108,21 +1621,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "How many of the following organelles are part of the endomembrane system?\nEndoplasmic reticulum, Golgi complex, Lysosomes, Vacuoles, Mitochondria, Chloroplasts, Peroxisomes, Ribosomes",
-      "options": [
-        "Four",
-        "Six",
-        "Five",
-        "Three"
-      ],
+      "options": ["Four", "Six", "Five", "Three"],
       "correctAnswer": "A",
       "explanation": "As per NCERT, the endomembrane system includes: ER, Golgi complex, lysosomes, and vacuoles (4 organelles). Mitochondria, chloroplasts, peroxisomes, and ribosomes are NOT part of the endomembrane system.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "endomembrane-system",
-        "counting"
-      ],
+      "tags": ["endomembrane-system", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2133,22 +1638,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "How many of the following features are found in prokaryotic cells?\nNucleus, Ribosome, Cell membrane, Mesosome, ER, Golgi body, Plasmid, Cell wall",
-      "options": [
-        "Three",
-        "Four",
-        "Six",
-        "Five"
-      ],
+      "options": ["Three", "Four", "Six", "Five"],
       "correctAnswer": "D",
       "explanation": "As per NCERT, prokaryotic cells have: ribosomes (70S), cell membrane, mesosomes, plasmids, and cell wall = 5 features. They lack a true nucleus, ER, and Golgi body.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "prokaryotic-cell",
-        "counting",
-        "features"
-      ],
+      "tags": ["prokaryotic-cell", "counting", "features"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2159,22 +1655,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Count the number of correct statements:\n(a) Chloroplasts are found in all plant cells\n(b) Mitochondria have their own DNA\n(c) Ribosomes are found in both prokaryotes and eukaryotes\n(d) Centrioles are found in all eukaryotic cells\n(e) Lysosomes contain hydrolytic enzymes",
-      "options": [
-        "Three",
-        "Five",
-        "Two",
-        "Four"
-      ],
+      "options": ["Three", "Five", "Two", "Four"],
       "correctAnswer": "A",
       "explanation": "Correct statements are (b), (c), and (e) = 3. Statement (a) is wrong because chloroplasts are found only in green parts of plants, not all plant cells. Statement (d) is wrong because higher plant cells lack centrioles.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "organelles",
-        "counting",
-        "correct-statements"
-      ],
+      "tags": ["organelles", "counting", "correct-statements"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2185,22 +1672,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "How many of the following are functions of mesosomes?\n(a) Cell wall formation (b) DNA replication (c) Distribution of DNA to daughter cells (d) Respiration (e) Secretory processes (f) Photosynthesis",
-      "options": [
-        "Three",
-        "Six",
-        "Five",
-        "Four"
-      ],
+      "options": ["Three", "Six", "Five", "Four"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, mesosomes help in: (a) cell wall formation, (b) DNA replication, (c) distribution of DNA to daughter cells, (d) respiration by increasing surface area for enzymatic content, and (e) secretory processes = 5 functions. Photosynthesis is NOT a function of mesosomes.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mesosomes",
-        "functions",
-        "counting"
-      ],
+      "tags": ["mesosomes", "functions", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2211,23 +1689,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "How many of the following structures are present in an animal cell but absent in a plant cell?\nCell wall, Centrioles, Chloroplasts, Large central vacuole, Lysosomes (well-developed), Plasmodesmata",
-      "options": [
-        "Three",
-        "One",
-        "Four",
-        "Two"
-      ],
+      "options": ["Three", "One", "Four", "Two"],
       "correctAnswer": "D",
       "explanation": "Only centrioles and well-developed lysosomes are present in animal cells but absent (or poorly developed) in plant cells = 2. Cell wall, chloroplasts, large central vacuole, and plasmodesmata are present in plant cells but absent in animal cells.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "animal-cell",
-        "plant-cell",
-        "differences",
-        "counting"
-      ],
+      "tags": ["animal-cell", "plant-cell", "differences", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2238,22 +1706,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "How many of the following contain their own DNA?\nMitochondria, Chloroplast, Ribosome, Lysosome, Nucleus, Centriole, Peroxisome",
-      "options": [
-        "Two",
-        "Five",
-        "Three",
-        "Four"
-      ],
+      "options": ["Two", "Five", "Three", "Four"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, mitochondria, chloroplasts, and the nucleus contain their own DNA = 3. Ribosomes, lysosomes, centrioles, and peroxisomes do not contain DNA.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "DNA",
-        "organelles",
-        "counting"
-      ],
+      "tags": ["DNA", "organelles", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2264,21 +1723,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Count the number of INCORRECT statements:\n(a) Prokaryotic ribosomes are 80S\n(b) SER has ribosomes on its surface\n(c) The middle lamella is made of cellulose\n(d) Chromoplasts are colourless plastids\n(e) Gas vacuoles provide buoyancy",
-      "options": [
-        "Two",
-        "Five",
-        "Three",
-        "Four"
-      ],
+      "options": ["Two", "Five", "Three", "Four"],
       "correctAnswer": "D",
       "explanation": "Incorrect statements: (a) Prokaryotic ribosomes are 70S not 80S, (b) RER has ribosomes not SER, (c) Middle lamella is made of calcium pectate not cellulose, (d) Leucoplasts are colourless, chromoplasts are coloured = 4 incorrect. Statement (e) is correct.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "incorrect-statements",
-        "counting"
-      ],
+      "tags": ["incorrect-statements", "counting"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2289,22 +1740,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "How many of the following are single-membrane-bound organelles?\nER, Golgi body, Lysosome, Vacuole, Mitochondria, Chloroplast, Peroxisome, Nucleus",
-      "options": [
-        "Three",
-        "Five",
-        "Six",
-        "Four"
-      ],
+      "options": ["Three", "Five", "Six", "Four"],
       "correctAnswer": "B",
       "explanation": "Single-membrane-bound organelles: ER, Golgi body, lysosome, vacuole, and peroxisome = 5. Mitochondria, chloroplast, and nucleus are double-membrane-bound.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "single-membrane",
-        "organelles",
-        "counting"
-      ],
+      "tags": ["single-membrane", "organelles", "counting"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2326,11 +1768,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "secretory-pathway",
-        "endomembrane-system",
-        "sequence"
-      ],
+      "tags": ["secretory-pathway", "endomembrane-system", "sequence"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2352,11 +1790,7 @@
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-theory",
-        "chronological-order",
-        "scientists"
-      ],
+      "tags": ["cell-theory", "chronological-order", "scientists"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2378,11 +1812,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-wall",
-        "layers",
-        "sequence"
-      ],
+      "tags": ["cell-wall", "layers", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2404,11 +1834,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-size",
-        "comparison",
-        "sequence"
-      ],
+      "tags": ["cell-size", "comparison", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2430,11 +1856,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "chloroplast",
-        "structure",
-        "sequence"
-      ],
+      "tags": ["chloroplast", "structure", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2456,11 +1878,7 @@
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": [
-        "cell-organisation",
-        "hierarchy",
-        "sequence"
-      ],
+      "tags": ["cell-organisation", "hierarchy", "sequence"],
       "neetWeightage": "LOW"
     },
     {
@@ -2482,11 +1900,7 @@
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "lysosomes",
-        "formation",
-        "sequence"
-      ],
+      "tags": ["lysosomes", "formation", "sequence"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2497,22 +1911,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell: The Unit of Life",
       "question": "The fluid mosaic model of plasma membrane was proposed by:",
-      "options": [
-        "Robertson",
-        "Singer and Nicolson",
-        "Danielli and Davson",
-        "Overton"
-      ],
+      "options": ["Robertson", "Singer and Nicolson", "Danielli and Davson", "Overton"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the fluid mosaic model was proposed by Singer and Nicolson (1972). It describes the cell membrane as a fluid bilayer of phospholipids with proteins floating in it like a mosaic pattern.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "cell-membrane",
-        "fluid-mosaic",
-        "singer-nicolson"
-      ],
+      "tags": ["cell-membrane", "fluid-mosaic", "singer-nicolson"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2523,22 +1928,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell: The Unit of Life",
       "question": "The powerhouse of the cell is:",
-      "options": [
-        "Nucleus",
-        "Golgi apparatus",
-        "Mitochondria",
-        "Endoplasmic reticulum"
-      ],
+      "options": ["Nucleus", "Golgi apparatus", "Mitochondria", "Endoplasmic reticulum"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, mitochondria are called the powerhouse of the cell because they are the sites of aerobic respiration where ATP (energy currency) is produced through oxidative phosphorylation.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "mitochondria",
-        "atp",
-        "cell-organelles"
-      ],
+      "tags": ["mitochondria", "atp", "cell-organelles"],
       "neetWeightage": "HIGH"
     },
     {
@@ -2549,22 +1945,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell: The Unit of Life",
       "question": "Centrioles are absent in the cells of:",
-      "options": [
-        "Animals",
-        "Lower plants",
-        "Higher plants",
-        "Fungi"
-      ],
+      "options": ["Animals", "Lower plants", "Higher plants", "Fungi"],
       "correctAnswer": "C",
       "explanation": "As per NCERT, centrioles are present in animal cells, lower plants, and some fungi. Higher plants (angiosperms and gymnosperms) lack centrioles. Despite this, they can still form spindle fibres during cell division.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "centriole",
-        "plant-cells",
-        "cell-division"
-      ],
+      "tags": ["centriole", "plant-cells", "cell-division"],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2575,22 +1962,13 @@
       "ncertChapter": 8,
       "ncertChapterName": "Cell: The Unit of Life",
       "question": "Which organelle is involved in the formation of lysosomes?",
-      "options": [
-        "Endoplasmic reticulum",
-        "Golgi apparatus",
-        "Mitochondria",
-        "Peroxisomes"
-      ],
+      "options": ["Endoplasmic reticulum", "Golgi apparatus", "Mitochondria", "Peroxisomes"],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the Golgi apparatus (Golgi complex) packages hydrolytic enzymes into membrane-bound vesicles to form lysosomes. Lysosomes contain digestive enzymes that break down cellular waste and foreign material.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": [
-        "golgi-apparatus",
-        "lysosomes",
-        "cell-organelles"
-      ],
+      "tags": ["golgi-apparatus", "lysosomes", "cell-organelles"],
       "neetWeightage": "HIGH"
     }
   ]

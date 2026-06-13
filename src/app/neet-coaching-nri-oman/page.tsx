@@ -32,7 +32,14 @@ export const metadata: Metadata = {
     description:
       'NEET coaching for NRI students in Oman. 20 CBSE schools, 900K Indians. Relaxed learning environment with 98% success rate.',
     creator: '@cerebrumbiology',
-    images: [{ url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-oman.jpg', width: 1200, height: 630, alt: 'Neet Coaching Oman — Cerebrum Biology Academy' }],
+    images: [
+      {
+        url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-oman.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Neet Coaching Oman — Cerebrum Biology Academy',
+      },
+    ],
   },
 }
 

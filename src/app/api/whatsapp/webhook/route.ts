@@ -93,7 +93,6 @@ export async function GET(request: NextRequest) {
     const token = searchParams.get('hub.verify_token')
     const challenge = searchParams.get('hub.challenge')
 
-
     if (mode && token) {
       if (mode === 'subscribe' && token === VERIFY_TOKEN) {
         return new NextResponse(challenge, { status: 200 })
@@ -120,7 +119,6 @@ export async function POST(request: NextRequest) {
     }
 
     const payload: WhatsAppWebhookPayload = JSON.parse(body)
-
 
     // Process webhook payload for biology education
     if (payload.object === 'whatsapp_business_account') {
@@ -239,7 +237,6 @@ async function processWhatsAppEducationWebhook(payload: WhatsAppWebhookPayload) 
           const startTime = Date.now()
 
           try {
-
             // Rate limiting check
             if (!checkRateLimit(message.from)) {
               await sendRateLimitMessage(message.from, value.metadata.phone_number_id)
@@ -307,7 +304,6 @@ async function processWhatsAppEducationWebhook(payload: WhatsAppWebhookPayload) 
       // Process message status updates for analytics
       if (value.statuses && value.statuses.length > 0) {
         for (const status of value.statuses) {
-
           await messageProcessor.trackMessageStatus({
             messageId: status.id,
             status: status.status,
@@ -631,7 +627,7 @@ async function handleVoiceQuestion(
   await processor.sendTextMessage(
     from,
     phoneNumberId,
-    "🎤 Voice message received! Voice transcription is not yet available. Please type your biology question and get help right away! 📚"
+    '🎤 Voice message received! Voice transcription is not yet available. Please type your biology question and get help right away! 📚'
   )
 }
 

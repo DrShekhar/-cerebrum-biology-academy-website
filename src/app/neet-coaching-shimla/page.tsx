@@ -64,7 +64,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-shimla' },
+    alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-shimla' },
     description: 'Real-time sessions. Perfect IGMC Shimla preparation from your mountain home.',
   },
   {
@@ -104,7 +104,7 @@ const successMetrics = [
 const shimlaSchools = [
   'Bishop Cotton School',
   'Auckland House School',
-  'St. Edward\'s School',
+  "St. Edward's School",
   'Loreto Convent Tara Hall',
   'DAV Public School Lakkar Bazaar',
   'Kendriya Vidyalaya Jakhoo',
@@ -132,12 +132,12 @@ const faqs = [
   {
     question: 'Is there good NEET coaching available in Shimla city?',
     answer:
-      'Shimla has limited NEET coaching options due to its hilly terrain and small population. Most good coaching centers are in Chandigarh (115km away). Cerebrum Academy\'s online coaching brings AIIMS-level teaching directly to Shimla - no travel needed. We have 180+ students from Himachal Pradesh.',
+      "Shimla has limited NEET coaching options due to its hilly terrain and small population. Most good coaching centers are in Chandigarh (115km away). Cerebrum Academy's online coaching brings AIIMS-level teaching directly to Shimla - no travel needed. We have 180+ students from Himachal Pradesh.",
   },
   {
     question: 'What are NEET coaching fees for Shimla students?',
     answer:
-      'Cerebrum Academy\'s NEET coaching fees for Shimla students are Rs 45,000-85,000 per year. Compare this to Chandigarh coaching (Rs 1.5-2 lakhs) plus hostel (Rs 1.2 lakh+) plus travel. You save over Rs 2 lakhs while getting better faculty.',
+      "Cerebrum Academy's NEET coaching fees for Shimla students are Rs 45,000-85,000 per year. Compare this to Chandigarh coaching (Rs 1.5-2 lakhs) plus hostel (Rs 1.2 lakh+) plus travel. You save over Rs 2 lakhs while getting better faculty.",
   },
   {
     question: 'How to get admission in IGMC Shimla?',
@@ -206,8 +206,7 @@ export default function NEETCoachingShimla() {
 
           <div className="mx-auto max-w-7xl">
             <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div
-               className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-sky-100 px-4 py-2 text-sky-800">
                   <Mountain className="h-4 w-4" />
                   <span className="text-sm font-medium">
@@ -259,9 +258,7 @@ export default function NEETCoachingShimla() {
                 </div>
               </div>
 
-              <div
-                className="relative animate-fadeInUp"
-              >
+              <div className="relative animate-fadeInUp">
                 <div className="rounded-2xl bg-white p-8 shadow-xl">
                   <h3 className="mb-6 text-center text-xl font-bold text-gray-900">
                     Himachal Pradesh Students Success
@@ -288,9 +285,7 @@ export default function NEETCoachingShimla() {
         {/* Why Shimla Students Choose Online */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Shimla & HP Students Choose Online NEET Coaching
               </h2>
@@ -334,9 +329,7 @@ export default function NEETCoachingShimla() {
         {/* Shimla Areas We Serve */}
         <section className="bg-sky-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 NEET Coaching for Shimla & Nearby Areas
               </h2>
@@ -406,9 +399,7 @@ export default function NEETCoachingShimla() {
         {/* Features */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Cerebrum is Best for Shimla Students
               </h2>
@@ -437,9 +428,7 @@ export default function NEETCoachingShimla() {
         {/* Schools Section */}
         <section className="bg-sky-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Trusted by Students from Top Shimla Schools
               </h2>
@@ -465,9 +454,7 @@ export default function NEETCoachingShimla() {
         {/* Medical Colleges */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Target Medical Colleges for Shimla Students
               </h2>
@@ -550,9 +537,7 @@ export default function NEETCoachingShimla() {
         {/* Cost Comparison */}
         <section className="bg-sky-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Cost Comparison: Chandigarh/Delhi vs Online for Shimla Students
               </h2>
@@ -630,9 +615,7 @@ export default function NEETCoachingShimla() {
         {/* FAQs */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <div
-              className="mb-12 text-center animate-fadeInUp"
-            >
+            <div className="mb-12 text-center animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 FAQs: NEET Coaching in Shimla
               </h2>
@@ -665,8 +648,7 @@ export default function NEETCoachingShimla() {
         {/* Final CTA */}
         <section className="bg-gradient-to-r from-sky-600 to-cyan-600 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
                 Ready to Join IGMC Shimla from Your Mountain Home?
               </h2>

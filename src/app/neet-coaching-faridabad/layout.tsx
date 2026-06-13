@@ -3,8 +3,7 @@ import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
-  title:
-    'NEET Coaching Faridabad — Sector 17 Centre | Cerebrum Biology Academy',
+  title: 'NEET Coaching Faridabad — Sector 17 Centre | Cerebrum Biology Academy',
   description:
     'NEET Biology coaching at Cerebrum Faridabad centre (Sector 17, HUDA Market). AIIMS-trained faculty, 15-20 student batches, 98% qualification rate. Serving Sector 21, NIT, Ballabgarh, Greater Faridabad. ₹40K-₹1.56L/year.',
   other: { 'article:modified_time': '2026-05-25' },
@@ -40,7 +39,16 @@ export default function FaridabadCoachingLayout({ children }: { children: React.
         parentLocation="Delhi NCR"
         centerAddress="SCF-130, 2nd Floor, Above Union Bank, Huda Market, Sector 17, Faridabad - 121002"
         centerPhone="+91-8826-444-334"
-        nearbyAreas={['Sector 21', 'NIT Faridabad', 'Ballabgarh', 'Greater Faridabad', 'Sector 15', 'Neharpar', 'BPTP', 'Surajkund']}
+        nearbyAreas={[
+          'Sector 21',
+          'NIT Faridabad',
+          'Ballabgarh',
+          'Greater Faridabad',
+          'Sector 15',
+          'Neharpar',
+          'BPTP',
+          'Surajkund',
+        ]}
       />
     </>
   )

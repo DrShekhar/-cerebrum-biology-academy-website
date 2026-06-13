@@ -350,87 +350,77 @@ const SocialProofNotifications: React.FC<SocialProofNotificationsProps> = ({
 
   return (
     <div className={getPositionClasses()}>
-{visibleEvents.map((event, index) => {
-          const colors = getEventColor(event.type, event.credibility)
+      {visibleEvents.map((event, index) => {
+        const colors = getEventColor(event.type, event.credibility)
 
-          return (
-            <div
-              key={event.id}
-              className={`
+        return (
+          <div
+            key={event.id}
+            className={`
                 mb-3 p-4 rounded-xl border-2 shadow-lg backdrop-blur-sm
                 ${colors.bg} ${colors.border}
                 hover:shadow-xl transition-shadow duration-300
               `}
-              style={{ marginBottom: index === 0 ? 0 : 12 }}
-            >
-              <div className="flex items-start gap-3">
-                <div
-                  className={`p-2 rounded-lg bg-white ${colors.icon} flex-shrink-0`}
-                >
-                  {getEventIcon(event.type)}
-                </div>
-
-                <div className="flex-1 min-w-0">
-                  <div className={`text-sm font-medium ${colors.text} leading-relaxed`}>
-                    {formatMessage(event)}
-                  </div>
-
-                  <div className="flex items-center gap-2 mt-2">
-                    {event.location && (
-                      <div className="flex items-center gap-1 text-xs text-gray-500">
-                        <MapPin className="w-3 h-3" />
-                        <span>{event.location}</span>
-                      </div>
-                    )}
-
-                    <div className="flex items-center gap-1 text-xs text-gray-500">
-                      <Clock className="w-3 h-3" />
-                      <span>{event.timeAgo}</span>
-                    </div>
-
-                    {event.rating && (
-                      <div className="flex items-center gap-1">
-                        {Array.from({ length: event.rating }).map((_, i) => (
-                          <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                        ))}
-                      </div>
-                    )}
-
-                    {event.credibility === 'high' && (
-                      <div
-                        className={`w-2 h-2 rounded-full ${colors.accent}`}
-                      />
-                    )}
-                  </div>
-                </div>
-
-                <button
-                  onClick={() => dismissEvent(event.id)}
-                  className="text-gray-400 hover:text-gray-600 transition-colors flex-shrink-0"
-                  aria-label="Dismiss notification"
-                >
-                  <X className="w-4 h-4" />
-                </button>
+            style={{ marginBottom: index === 0 ? 0 : 12 }}
+          >
+            <div className="flex items-start gap-3">
+              <div className={`p-2 rounded-lg bg-white ${colors.icon} flex-shrink-0`}>
+                {getEventIcon(event.type)}
               </div>
 
-              {/* Progress bar for credibility */}
-              {event.credibility === 'high' && (
-                <div
-                  className="mt-3 h-1 bg-white rounded-full overflow-hidden animate-fadeInUp"
-                >
-                  <div
-                    className={`h-full ${colors.accent}`}
-                  />
+              <div className="flex-1 min-w-0">
+                <div className={`text-sm font-medium ${colors.text} leading-relaxed`}>
+                  {formatMessage(event)}
                 </div>
-              )}
+
+                <div className="flex items-center gap-2 mt-2">
+                  {event.location && (
+                    <div className="flex items-center gap-1 text-xs text-gray-500">
+                      <MapPin className="w-3 h-3" />
+                      <span>{event.location}</span>
+                    </div>
+                  )}
+
+                  <div className="flex items-center gap-1 text-xs text-gray-500">
+                    <Clock className="w-3 h-3" />
+                    <span>{event.timeAgo}</span>
+                  </div>
+
+                  {event.rating && (
+                    <div className="flex items-center gap-1">
+                      {Array.from({ length: event.rating }).map((_, i) => (
+                        <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                  )}
+
+                  {event.credibility === 'high' && (
+                    <div className={`w-2 h-2 rounded-full ${colors.accent}`} />
+                  )}
+                </div>
+              </div>
+
+              <button
+                onClick={() => dismissEvent(event.id)}
+                className="text-gray-400 hover:text-gray-600 transition-colors flex-shrink-0"
+                aria-label="Dismiss notification"
+              >
+                <X className="w-4 h-4" />
+              </button>
             </div>
-          )
-        })}
-{/* Overall stats overlay */}
+
+            {/* Progress bar for credibility */}
+            {event.credibility === 'high' && (
+              <div className="mt-3 h-1 bg-white rounded-full overflow-hidden animate-fadeInUp">
+                <div className={`h-full ${colors.accent}`} />
+              </div>
+            )}
+          </div>
+        )
+      })}
+      {/* Overall stats overlay */}
       {visibleEvents.length === 0 && (
-        <div
-          className="p-3 bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-200 rounded-xl shadow-lg animate-fadeInUp"
-        >
+        <div className="p-3 bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-200 rounded-xl shadow-lg animate-fadeInUp">
           <div className="flex items-center gap-2 text-green-700">
             <Users className="w-4 h-4" />
             <span className="text-sm font-medium">

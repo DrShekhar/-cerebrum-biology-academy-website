@@ -18,7 +18,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best NEET Coaching in Karnal 2026 | KCGMC City',
-    description: 'Top NEET coaching for Karnal students. 98% success rate. Online classes from AIIMS faculty.',
+    description:
+      'Top NEET coaching for Karnal students. 98% success rate. Online classes from AIIMS faculty.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-karnal',

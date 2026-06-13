@@ -378,11 +378,11 @@ export default function MCATBiologyHubPage() {
             </h1>
 
             <p className="mb-8 max-w-3xl text-lg text-gray-300 sm:text-xl">
-              The bio-only MCAT specialist alternative to other generalist test-prep brands and other generalist test-prep brands. AAMC-aligned
-              B/B (Biological &amp; Biochemical Foundations) coaching, biochem mastery, and a
-              4-phase passage-strategy framework. Built for{' '}
-              <strong>Indian-American and NRI premed families</strong> paying in USD who want
-              focused section rescue instead of a $5,000 generalist bundle.
+              The bio-only MCAT specialist alternative to other generalist test-prep brands and
+              other generalist test-prep brands. AAMC-aligned B/B (Biological &amp; Biochemical
+              Foundations) coaching, biochem mastery, and a 4-phase passage-strategy framework.
+              Built for <strong>Indian-American and NRI premed families</strong> paying in USD who
+              want focused section rescue instead of a $5,000 generalist bundle.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
@@ -417,10 +417,11 @@ export default function MCATBiologyHubPage() {
                 Indian-American &amp; NRI Premed Families Paying USD
               </h2>
               <p className="text-base text-gray-700 sm:text-lg">
-                If you have already invested in a generalist platform (other generalist test-prep brands, other generalist test-prep brands,
-                Blueprint, other generalist MCAT brands, UWorld) and your <strong>B/B section is the weak point</strong>,
-                Cerebrum is the bio-only specialist alternative. We do not teach C/P, CARS, or P/S —
-                we own the biology and biochem half of your MCAT prep and charge accordingly.
+                If you have already invested in a generalist platform (other generalist test-prep
+                brands, other generalist test-prep brands, Blueprint, other generalist MCAT brands,
+                UWorld) and your <strong>B/B section is the weak point</strong>, Cerebrum is the
+                bio-only specialist alternative. We do not teach C/P, CARS, or P/S — we own the
+                biology and biochem half of your MCAT prep and charge accordingly.
               </p>
             </div>
           </div>
@@ -631,8 +632,9 @@ export default function MCATBiologyHubPage() {
                 MCAT Biology Pricing
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
-                Bundles priced per section, not per platform. other generalist test-prep brands and other generalist test-prep brands charge
-                $2,500 to $7,000 for all four sections — we charge less for the biology half.
+                Bundles priced per section, not per platform. other generalist test-prep brands and
+                other generalist test-prep brands charge $2,500 to $7,000 for all four sections — we
+                charge less for the biology half.
               </p>
             </div>
 
@@ -690,11 +692,11 @@ export default function MCATBiologyHubPage() {
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <p>
-                other generalist MCAT brands, and other generalist MCAT brands bundle all four MCAT sections at
-                $2,500 to $7,000. Their instructors rotate — the same teacher may have to cover C/P,
-                B/B, CARS, and P/S in a single course. <strong>Single-section depth suffers</strong>
-                . If your weakness is B/B but you have already mastered C/P, you are paying for
-                sections you do not need.
+                other generalist MCAT brands, and other generalist MCAT brands bundle all four MCAT
+                sections at $2,500 to $7,000. Their instructors rotate — the same teacher may have
+                to cover C/P, B/B, CARS, and P/S in a single course.{' '}
+                <strong>Single-section depth suffers</strong>. If your weakness is B/B but you have
+                already mastered C/P, you are paying for sections you do not need.
               </p>
               <p>
                 The Cerebrum wedge mirrors <strong>Jack Westin’s CARS-specialist model</strong> —
@@ -708,8 +710,8 @@ export default function MCATBiologyHubPage() {
                 We are the right fit if: you have already paid for a generalist platform, you are an
                 Indian-American or NRI premed, your B/B diagnostic is sub-510, or you are
                 second-attempt and need targeted Bio + Biochem rescue. We are not the right fit if
-                you want a one-stop full-MCAT solution — in that case stick with other generalist test-prep brands or Blueprint
-                and add Cerebrum for B/B only.
+                you want a one-stop full-MCAT solution — in that case stick with other generalist
+                test-prep brands or Blueprint and add Cerebrum for B/B only.
               </p>
             </div>
           </div>

@@ -145,10 +145,7 @@ export default function NEETBiologyMCQPage() {
       const saveTask = () => {
         try {
           const key = getAnsweredIdsStorageKey()
-          localStorage.setItem(
-            key,
-            JSON.stringify({ ids: Array.from(ids), updatedAt: Date.now() })
-          )
+          localStorage.setItem(key, JSON.stringify({ ids: Array.from(ids), updatedAt: Date.now() }))
         } catch (err) {
           if (err instanceof DOMException && err.name === 'QuotaExceededError') {
             console.error('localStorage quota exceeded, skipping save')

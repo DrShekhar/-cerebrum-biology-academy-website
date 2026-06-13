@@ -39,7 +39,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET 2025 Results Gurugram | 97% Success',
-    description: 'Cerebrum Biology Academy NEET 2025 results: 97% qualification rate, 15 students scored 650+, 4 in top 5000 AIR. Our best year yet! Call 88264-44334!',
+    description:
+      'Cerebrum Biology Academy NEET 2025 results: 97% qualification rate, 15 students scored 650+, 4 in top 5000 AIR. Our best year yet! Call 88264-44334!',
   },
 }
 
@@ -164,7 +165,11 @@ export default function NEETResult2025Gurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-result-2025-gurugram" />
       <section className="bg-gradient-to-r from-green-700 to-emerald-600 text-white py-16">

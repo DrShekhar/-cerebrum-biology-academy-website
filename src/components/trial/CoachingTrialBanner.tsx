@@ -109,8 +109,8 @@ export function CoachingTrialBanner({
   // User hasn't started trial yet - show start trial banner
   if (!trialStatus.trialStartDate && !trialStatus.isTrialActive) {
     return (
-<>
-{showAnimation && (
+      <>
+        {showAnimation && (
           <div
             className="relative bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white overflow-hidden animate-fadeInUp"
             role="alert"
@@ -170,8 +170,8 @@ export function CoachingTrialBanner({
             </div>
           </div>
         )}
-</>
-)
+      </>
+    )
   }
 
   // Get banner config based on trial status
@@ -230,8 +230,8 @@ export function CoachingTrialBanner({
   const Icon = config.icon
 
   return (
-<>
-{showAnimation && (
+    <>
+      {showAnimation && (
         <div
           className={`relative bg-gradient-to-r ${config.bgGradient} text-white overflow-hidden`}
           role="alert"
@@ -275,7 +275,14 @@ export function CoachingTrialBanner({
 
               <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
                 <button
-                  onClick={onUpgradeClick || (() => window.open('https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll.%20Please%20share%20details.', '_blank'))}
+                  onClick={
+                    onUpgradeClick ||
+                    (() =>
+                      window.open(
+                        'https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll.%20Please%20share%20details.',
+                        '_blank'
+                      ))
+                  }
                   className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg font-semibold text-sm transition-all hover:shadow-lg active:scale-95 ${config.buttonStyle} flex-1 sm:flex-initial min-h-[44px] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2`}
                   aria-label={config.buttonText}
                 >
@@ -306,17 +313,15 @@ export function CoachingTrialBanner({
                   </span>
                 </div>
                 <div className="w-full bg-white/20 rounded-full h-2 overflow-hidden">
-                  <div
-                    className="h-full bg-white rounded-full animate-fadeInUp"
-                  />
+                  <div className="h-full bg-white rounded-full animate-fadeInUp" />
                 </div>
               </div>
             )}
           </div>
         </div>
       )}
-</>
-)
+    </>
+  )
 }
 
 // Hook to fetch coaching trial status for authenticated users

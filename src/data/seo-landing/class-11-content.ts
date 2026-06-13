@@ -241,10 +241,26 @@ export const neetBiologyCoachingClass11: SEOLandingContent = {
       },
     ],
     comparisonTable: [
-      { Aspect: 'Syllabus Weight in NEET', 'Class 11': '~50% of Biology questions', 'Class 12': '~50% of Biology questions' },
-      { Aspect: 'Key High-Yield Units', 'Class 11': 'Human Physiology, Cell Biology', 'Class 12': 'Genetics, Ecology' },
-      { Aspect: 'Difficulty Level', 'Class 11': 'Concept-heavy, visual diagrams', 'Class 12': 'Application-heavy, data interpretation' },
-      { Aspect: 'Study Approach', 'Class 11': 'Build strong conceptual base', 'Class 12': 'Integrate and apply across topics' },
+      {
+        Aspect: 'Syllabus Weight in NEET',
+        'Class 11': '~50% of Biology questions',
+        'Class 12': '~50% of Biology questions',
+      },
+      {
+        Aspect: 'Key High-Yield Units',
+        'Class 11': 'Human Physiology, Cell Biology',
+        'Class 12': 'Genetics, Ecology',
+      },
+      {
+        Aspect: 'Difficulty Level',
+        'Class 11': 'Concept-heavy, visual diagrams',
+        'Class 12': 'Application-heavy, data interpretation',
+      },
+      {
+        Aspect: 'Study Approach',
+        'Class 11': 'Build strong conceptual base',
+        'Class 12': 'Integrate and apply across topics',
+      },
     ],
   },
 
@@ -438,11 +454,29 @@ export const class11BiologyTuitionOnline: SEOLandingContent = {
       },
     ],
     checklist: [
-      { item: 'Stable internet connection (5 Mbps or above)', explanation: 'Prevents buffering during live diagram demonstrations and 3D animations.' },
-      { item: 'Dedicated quiet study space', explanation: 'Minimises distractions so students can focus during 2-hour interactive sessions.' },
-      { item: 'Notebook for handwritten notes', explanation: 'Writing key diagrams and pathways by hand improves retention beyond typed notes.' },
-      { item: 'NCERT textbook open during class', explanation: 'Allows real-time cross-referencing of concepts the tutor is explaining.' },
-      { item: 'Weekly self-assessment log', explanation: 'Tracking chapters covered and weak areas helps the tutor personalise feedback.' },
+      {
+        item: 'Stable internet connection (5 Mbps or above)',
+        explanation: 'Prevents buffering during live diagram demonstrations and 3D animations.',
+      },
+      {
+        item: 'Dedicated quiet study space',
+        explanation:
+          'Minimises distractions so students can focus during 2-hour interactive sessions.',
+      },
+      {
+        item: 'Notebook for handwritten notes',
+        explanation:
+          'Writing key diagrams and pathways by hand improves retention beyond typed notes.',
+      },
+      {
+        item: 'NCERT textbook open during class',
+        explanation: 'Allows real-time cross-referencing of concepts the tutor is explaining.',
+      },
+      {
+        item: 'Weekly self-assessment log',
+        explanation:
+          'Tracking chapters covered and weak areas helps the tutor personalise feedback.',
+      },
     ],
   },
 
@@ -834,11 +868,26 @@ export const bestBiologyTutorClass11: SEOLandingContent = {
       },
     ],
     checklist: [
-      { item: 'Verify the tutor holds a medical degree or competitive exam qualification', explanation: 'Ensures the tutor has first-hand understanding of what NEET demands.' },
-      { item: 'Ask for verifiable student results (names, AIRs, scores)', explanation: 'Claims of "toppers produced" should be backed by actual evidence.' },
-      { item: 'Attend a full demo class, not just an introductory talk', explanation: 'A demo class reveals teaching pace, clarity, and interaction style.' },
-      { item: 'Check doubt-resolution channels and response time', explanation: '24/7 WhatsApp access differs vastly from email-only support.' },
-      { item: 'Confirm batch size in writing before payment', explanation: 'Some institutes advertise small batches but merge them after enrolment.' },
+      {
+        item: 'Verify the tutor holds a medical degree or competitive exam qualification',
+        explanation: 'Ensures the tutor has first-hand understanding of what NEET demands.',
+      },
+      {
+        item: 'Ask for verifiable student results (names, AIRs, scores)',
+        explanation: 'Claims of "toppers produced" should be backed by actual evidence.',
+      },
+      {
+        item: 'Attend a full demo class, not just an introductory talk',
+        explanation: 'A demo class reveals teaching pace, clarity, and interaction style.',
+      },
+      {
+        item: 'Check doubt-resolution channels and response time',
+        explanation: '24/7 WhatsApp access differs vastly from email-only support.',
+      },
+      {
+        item: 'Confirm batch size in writing before payment',
+        explanation: 'Some institutes advertise small batches but merge them after enrolment.',
+      },
     ],
   },
 
@@ -1027,11 +1076,31 @@ export const class11NeetPreparationOnline: SEOLandingContent = {
       },
     ],
     comparisonTable: [
-      { Aspect: 'Starting Point', 'Start in Class 11': 'April of Class 11 (24 months before NEET)', 'Start in Class 12': 'April of Class 12 (12 months before NEET)' },
-      { Aspect: 'Revision Cycles', 'Start in Class 11': '3-4 full revisions possible', 'Start in Class 12': '1-2 revisions at most' },
-      { Aspect: 'Daily Study Load', 'Start in Class 11': '2-3 hours of Biology', 'Start in Class 12': '4-5 hours of Biology' },
-      { Aspect: 'Stress Level', 'Start in Class 11': 'Moderate and manageable', 'Start in Class 12': 'High with frequent burnout risk' },
-      { Aspect: 'Average NEET Biology Score', 'Start in Class 11': '300-340 (with consistent effort)', 'Start in Class 12': '260-300 (with consistent effort)' },
+      {
+        Aspect: 'Starting Point',
+        'Start in Class 11': 'April of Class 11 (24 months before NEET)',
+        'Start in Class 12': 'April of Class 12 (12 months before NEET)',
+      },
+      {
+        Aspect: 'Revision Cycles',
+        'Start in Class 11': '3-4 full revisions possible',
+        'Start in Class 12': '1-2 revisions at most',
+      },
+      {
+        Aspect: 'Daily Study Load',
+        'Start in Class 11': '2-3 hours of Biology',
+        'Start in Class 12': '4-5 hours of Biology',
+      },
+      {
+        Aspect: 'Stress Level',
+        'Start in Class 11': 'Moderate and manageable',
+        'Start in Class 12': 'High with frequent burnout risk',
+      },
+      {
+        Aspect: 'Average NEET Biology Score',
+        'Start in Class 11': '300-340 (with consistent effort)',
+        'Start in Class 12': '260-300 (with consistent effort)',
+      },
     ],
   },
 
@@ -1228,11 +1297,29 @@ export const ncertBiologyClass11Tuition: SEOLandingContent = {
       },
     ],
     checklist: [
-      { item: 'Read each NCERT chapter at least three times before moving on', explanation: 'First read for overview, second for detailed notes, third for inter-chapter connections.' },
-      { item: 'Practise drawing all NCERT diagrams from memory', explanation: 'Diagram-based MCQs are common in NEET and rely on accurate labelling skills.' },
-      { item: 'Memorise every NCERT comparison table', explanation: 'Tables on differences (e.g., mitosis vs meiosis) directly map to matching-type questions.' },
-      { item: 'Solve NCERT back-exercise and exemplar questions', explanation: 'NEET setters often rephrase NCERT exercise questions as MCQs.' },
-      { item: 'Highlight figure captions and boxed text', explanation: 'These overlooked sections frequently appear as distractors or correct options in NEET.' },
+      {
+        item: 'Read each NCERT chapter at least three times before moving on',
+        explanation:
+          'First read for overview, second for detailed notes, third for inter-chapter connections.',
+      },
+      {
+        item: 'Practise drawing all NCERT diagrams from memory',
+        explanation: 'Diagram-based MCQs are common in NEET and rely on accurate labelling skills.',
+      },
+      {
+        item: 'Memorise every NCERT comparison table',
+        explanation:
+          'Tables on differences (e.g., mitosis vs meiosis) directly map to matching-type questions.',
+      },
+      {
+        item: 'Solve NCERT back-exercise and exemplar questions',
+        explanation: 'NEET setters often rephrase NCERT exercise questions as MCQs.',
+      },
+      {
+        item: 'Highlight figure captions and boxed text',
+        explanation:
+          'These overlooked sections frequently appear as distractors or correct options in NEET.',
+      },
     ],
   },
 

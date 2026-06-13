@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Top 4 BBO Coaching in UK 2026 | British Biology Olympiad Honest Ranking',
-    description: 'Honest 2026 ranking of BBO (British Biology Olympiad) coaching in UK. Cerebrum #1 with documented BBO Gold/Silver outcomes and direct IBO UK national-team funnel.',
+    description:
+      'Honest 2026 ranking of BBO (British Biology Olympiad) coaching in UK. Cerebrum #1 with documented BBO Gold/Silver outcomes and direct IBO UK national-team funnel.',
   },
 }
 

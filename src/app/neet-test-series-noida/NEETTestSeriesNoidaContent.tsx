@@ -463,10 +463,7 @@ export default function NEETTestSeriesNoidaContent({ faqs }: { faqs: FAQ[] }) {
               <h3 className="font-semibold text-teal-600">Affordable Coaching</h3>
               <p className="text-sm text-gray-600">Budget-friendly options</p>
             </Link>
-            <Link
-              href="/neet-coaching-noida"
-              className="bg-white p-4 rounded-xl hover:shadow-md"
-            >
+            <Link href="/neet-coaching-noida" className="bg-white p-4 rounded-xl hover:shadow-md">
               <h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3>
               <p className="text-sm text-gray-600">All programs</p>
             </Link>

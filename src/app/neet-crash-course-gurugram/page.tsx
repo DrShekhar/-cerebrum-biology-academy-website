@@ -34,7 +34,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Crash Course in Gurugram | 45-Day Intensive Biology Program',
-    description: 'Join our 45-day NEET Biology crash course in Gurugram (Gurgaon). Complete syllabus revision, 1000+ questions, daily tests. Perfect for last-minute preparation. Starting ₹25,000.',
+    description:
+      'Join our 45-day NEET Biology crash course in Gurugram (Gurgaon). Complete syllabus revision, 1000+ questions, daily tests. Perfect for last-minute preparation. Starting ₹25,000.',
   },
 }
 
@@ -149,7 +150,11 @@ export default function NEETCrashCourseGurugramPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-crash-course-gurugram" />
       <script

@@ -47,22 +47,20 @@ function useScrollAnimation(threshold = 0.1) {
 }
 
 const banjarahillsAreas = [
-{ name: 'Banjara Hills', distance: '18 km', landmark: 'Ultra-Premium' },
+  { name: 'Banjara Hills', distance: '18 km', landmark: 'Ultra-Premium' },
   { name: 'Road No. 1-14', distance: '17 km', landmark: 'Elite Residential' },
   { name: 'Jubilee Hills', distance: '16 km', landmark: 'Affluent Area' },
   { name: 'Madhapur', distance: '15 km', landmark: 'Tech Corridor' },
   { name: 'Hitec City', distance: '14 km', landmark: 'Corporate Zone' },
   { name: 'Kondapur', distance: '16 km', landmark: 'Premium Locality' },
   { name: 'Gachibowli', distance: '19 km', landmark: 'Tech Hub' },
-  { name: 'Shilparamam', distance: '20 km', landmark: 'Mixed Use' }
+  { name: 'Shilparamam', distance: '20 km', landmark: 'Mixed Use' },
 ]
 
-const whyChooseUs = [
-
-]
+const whyChooseUs = []
 
 const faqs = [
-{
+  {
     question: 'Why do Banjara Hills families prefer online NEET coaching?',
     answer:
       "Banjara Hills families value premium quality and privacy. Online NEET coaching offers world-class AIIMS faculty without commute, perfect for government officials' busy schedules. High-speed connectivity and gated community infrastructure support seamless learning.",
@@ -81,7 +79,7 @@ const faqs = [
     question: 'Do you provide special support for government job aspirants?',
     answer:
       'Many Banjara Hills families aim for medical services careers in government. Our NEET coaching covers AIIMS and government medical college requirements. We track student progress for government medical service aspirations.',
-  }
+  },
 ]
 
 const faqSchema = {
@@ -122,11 +120,11 @@ export default function PageContent() {
     <div className="min-h-screen">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={ { __html: JSON.stringify(faqSchema) } }
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={ { __html: JSON.stringify(localBusinessSchema) } }
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       {/* Hero */}
@@ -153,11 +151,17 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET coaching for Banjara Hills, Road No 1-14, & nearby ultra-premium areas. Learn from Dr. Shekhar C Singh, AIIMS Alumnus - trusted by government officials and affluent families.
+              Premium NEET coaching for Banjara Hills, Road No 1-14, & nearby ultra-premium areas.
+              Learn from Dr. Shekhar C Singh, AIIMS Alumnus - trusted by government officials and
+              affluent families.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Hyderabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Hyderabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -243,7 +247,7 @@ export default function PageContent() {
               <div
                 key={area.name}
                 className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 animate-fade-in-up"
-                style={ { animationDelay: `${index * 50}ms` } }
+                style={{ animationDelay: `${index * 50}ms` }}
               >
                 <MapPin className="w-8 h-8 text-green-600 mb-4" />
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{area.name}</h3>
@@ -274,7 +278,7 @@ export default function PageContent() {
               <div
                 key={item.title}
                 className="text-center animate-fade-in-up"
-                style={ { animationDelay: `${index * 100}ms` } }
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-slate-700 to-green-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <item.icon className="w-8 h-8 text-white" />
@@ -304,7 +308,7 @@ export default function PageContent() {
               <div
                 key={faq.question}
                 className="bg-white rounded-xl p-8 shadow-lg animate-fade-in-up"
-                style={ { animationDelay: `${index * 100}ms` } }
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
@@ -334,7 +338,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Hyderabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Hyderabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

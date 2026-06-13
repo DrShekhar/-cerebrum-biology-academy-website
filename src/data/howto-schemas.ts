@@ -223,7 +223,7 @@ export const HOWTO_CONFIGS: Record<string, HowToConfig> = {
       },
       {
         name: 'Build Consistency and Study Habits',
-        text: 'Study 2-3 hours daily for Biology in Class 11. Maintain a consistency calendar. Revise weekly. Take monthly unit tests. Don\'t skip classes. Develop discipline now - it pays off in Class 12.',
+        text: "Study 2-3 hours daily for Biology in Class 11. Maintain a consistency calendar. Revise weekly. Take monthly unit tests. Don't skip classes. Develop discipline now - it pays off in Class 12.",
         position: 6,
       },
     ],
