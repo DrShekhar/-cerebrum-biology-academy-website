@@ -71,7 +71,10 @@ and `LEAD_CONSOLIDATION_SCOPE.md`.
       activation); demo payment/verify got an idempotency guard.
 - [x] **2 stored-XSS sinks** — DONE (196d1b33). free-resources AnnouncementBanner + [id]/page now pipe
       DB/admin HTML through createSafeHtml(). *(PII-in-logs redaction still TODO — see below.)*
-- [ ] **PII in logs** — redact phone/email/full-payment objects from error/warn logs (auth, razorpay).
+- [x] **PII in logs** — DONE (6095d97e). Wrapped the error-level logs that carried real PII (MSG91/Twilio
+      provider responses echoing the phone; Resend error data; welcome-email address) with the existing
+      redactObject/redactPII. removeConsole strips console.log in prod; only these error/warn sites leaked.
+      No full-request-body logs found elsewhere.
 - [x] **251 broken internal links** — DONE (f472204e). 218 dead city-hub `url:` links now redirect to
       real city/region hubs via `cityHubBrokenLinkRedirects` (audit: 0 conflicts/chains/shadows).
       Detector: `scripts/find-broken-cityhub-links.mjs`. *(Remaining ~30 from the audit were seo-landing
