@@ -7,6 +7,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { redactPII } from '@/lib/security/logger'
 import { Prisma } from '@/generated/prisma'
 import { z } from 'zod'
 import crypto from 'crypto'
@@ -601,7 +602,10 @@ export async function POST(request: NextRequest) {
         .then((result) => {
           if (result.success) {
           } else {
-            console.error(`📧 Failed to send welcome email to ${leadData.email}:`, result.error)
+            console.error(
+              `📧 Failed to send welcome email to ${redactPII(leadData.email)}:`,
+              result.error
+            )
           }
         })
         .catch((error) => {

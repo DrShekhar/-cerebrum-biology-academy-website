@@ -4,6 +4,7 @@
  */
 
 import { z } from 'zod'
+import { redactObject } from '@/lib/security/logger'
 
 // SMS validation schema
 const smsSchema = z.object({
@@ -66,7 +67,7 @@ class TwilioProvider implements SMSProvider {
         console.log(`✅ Twilio SMS sent successfully: ${data.sid}`)
         return { success: true, messageId: data.sid }
       } else {
-        console.error(`❌ Twilio error:`, data)
+        console.error(`❌ Twilio error:`, redactObject(data))
         return { success: false, error: data.message || 'Unknown error' }
       }
     } catch (error) {
@@ -132,7 +133,7 @@ class MSG91Provider implements SMSProvider {
         console.log(`✅ MSG91 SMS sent successfully: ${data.request_id}`)
         return { success: true, messageId: data.request_id }
       } else {
-        console.error(`❌ MSG91 error:`, data)
+        console.error(`❌ MSG91 error:`, redactObject(data))
         return { success: false, error: data.message || 'Unknown error' }
       }
     } catch (error) {

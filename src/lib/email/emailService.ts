@@ -16,6 +16,7 @@
  */
 
 import { z } from 'zod'
+import { redactObject } from '@/lib/security/logger'
 
 // Email validation schema
 const emailSchema = z.object({
@@ -158,7 +159,7 @@ class ResendProvider implements EmailProvider {
         console.log(`✅ Resend email sent successfully: ${data.id}`)
         return { success: true, messageId: data.id }
       } else {
-        console.error(`❌ Resend error:`, data)
+        console.error(`❌ Resend error:`, redactObject(data))
         return { success: false, error: data.message || 'Unknown error' }
       }
     } catch (error) {

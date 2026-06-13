@@ -4,6 +4,7 @@ import { addSecurityHeaders } from '@/lib/auth/config'
 import { z } from 'zod'
 import axios from 'axios'
 import crypto from 'crypto'
+import { redactObject } from '@/lib/security/logger'
 
 // E.164-compatible phone validator: accepts an optional leading '+', then
 // 8–15 digits starting with 1–9. Examples that pass:
@@ -152,7 +153,7 @@ async function sendSMSOTP(mobile: string, otp: string): Promise<boolean> {
       return true
     }
 
-    console.error('MSG91 SMS send failed:', response.data)
+    console.error('MSG91 SMS send failed:', redactObject(response.data))
     return false
   } catch (error) {
     console.error('SMS send error:', error)
@@ -223,7 +224,7 @@ async function sendWhatsAppOTP(whatsapp: string, otp: string, name?: string): Pr
       return true
     }
 
-    console.error('MSG91 WhatsApp send failed:', response.data)
+    console.error('MSG91 WhatsApp send failed:', redactObject(response.data))
     return false
   } catch (error) {
     console.error('WhatsApp send error:', error)
