@@ -456,19 +456,19 @@ export default function PricingPage() {
                 </span>
               </div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4 leading-[1.1] px-4">
-                Master NEET Biology
+                Biology Course Fees — NEET, Olympiads,
                 <br />
                 <span className="bg-gradient-to-r from-yellow-300 via-amber-200 to-yellow-300 bg-clip-text text-transparent drop-shadow-sm">
-                  With India&apos;s Best Faculty
+                  Class 9–12 &amp; All Boards
                 </span>
               </h1>
               <p
                 className="text-sm sm:text-base md:text-lg text-blue-200 max-w-2xl mx-auto px-4 leading-relaxed"
                 data-speakable="summary"
               >
-                NEET Biology courses cost ₹45,000–₹1,56,000 per year across three tiers — Pursuit,
-                Ascent and Pinnacle — based on batch size and 1:1 time. EMI available, free demo
-                class before any payment.
+                One faculty, every biology pathway — Class 9–12 foundations, all boards (CBSE, ICSE,
+                IB, IGCSE), NEET, and Biology Olympiad (NSEB → INBO → IBO). NEET tiers from
+                ₹45,000–₹1,56,000/year; EMI available; free demo before any payment.
               </p>
             </div>
 
@@ -1136,6 +1136,53 @@ export default function PricingPage() {
                   ))}
                 </tbody>
               </table>
+            </div>
+          </div>
+
+          {/* Biology Olympiad — beyond NEET/boards. Olympiad batches are small &
+              schedule-based, so fees are shared on request rather than fixed tiers. */}
+          <div className="relative mb-16 overflow-hidden rounded-3xl border border-green-200 bg-gradient-to-br from-green-50 to-blue-50 p-8 sm:p-12">
+            <div className="grid items-center gap-8 lg:grid-cols-[1.4fr_1fr]">
+              <div>
+                <span className="mb-4 inline-block rounded-full bg-green-600 px-4 py-1 text-sm font-semibold uppercase tracking-wide text-white">
+                  Biology Olympiad
+                </span>
+                <h2 className="mb-3 text-2xl font-bold text-gray-900 sm:text-3xl">
+                  Olympiad coaching too — NSEB → INBO → OCSC → IBO
+                </h2>
+                <p className="mb-4 max-w-2xl text-sm text-gray-700 sm:text-base">
+                  Beyond NEET and boards, we prepare Class 9–12 students for the Biology Olympiad
+                  funnel with the same AIIMS faculty — conceptual depth, problem-solving, and
+                  HBCSE-level previous-paper drills (NSEB, INBO, IBO and international olympiads
+                  like USABO/BBO). Batches are small and schedule-based.
+                </p>
+                <p className="text-xs font-medium text-gray-500">
+                  Olympiad fees vary by track and level — share your class &amp; target olympiad and
+                  we&apos;ll send the right plan.
+                </p>
+              </div>
+              <div className="flex flex-col gap-3">
+                <button
+                  onClick={() =>
+                    trackAndOpenWhatsApp({
+                      source: 'pricing-olympiad',
+                      message:
+                        "Hi! I'm interested in Biology Olympiad coaching (NSEB/INBO/IBO). Please share the course plan, batch timings and fees.",
+                      campaign: 'pricing-olympiad',
+                    })
+                  }
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-600 px-6 py-3.5 text-base font-bold text-white shadow-sm transition hover:bg-green-700"
+                >
+                  <MessageCircle className="h-5 w-5" />
+                  Get Olympiad fees on WhatsApp
+                </button>
+                <Link
+                  href="/biology-olympiad-coaching"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-blue-600 px-6 py-3.5 text-base font-bold text-blue-600 transition hover:bg-blue-600 hover:text-white"
+                >
+                  View Olympiad programme
+                </Link>
+              </div>
             </div>
           </div>
 
