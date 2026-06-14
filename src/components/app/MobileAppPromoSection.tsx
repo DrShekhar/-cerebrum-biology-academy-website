@@ -317,6 +317,7 @@ export function MobileAppPromoSection({
               {/* Navigation Buttons */}
               <button
                 onClick={prevScreenshot}
+                aria-label="Previous"
                 className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
               >
                 <ChevronLeft className="w-5 h-5" />
@@ -324,6 +325,7 @@ export function MobileAppPromoSection({
 
               <button
                 onClick={nextScreenshot}
+                aria-label="Next"
                 className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
               >
                 <ChevronRight className="w-5 h-5" />
@@ -335,6 +337,7 @@ export function MobileAppPromoSection({
                   <button
                     key={index}
                     onClick={() => setCurrentScreenshot(index)}
+                    aria-label={`Go to screenshot ${index + 1}`}
                     className={`w-2 h-2 rounded-full transition-colors ${
                       index === currentScreenshot ? 'bg-white' : 'bg-white/40'
                     }`}

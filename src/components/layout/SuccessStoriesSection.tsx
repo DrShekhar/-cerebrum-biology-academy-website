@@ -867,6 +867,7 @@ function InstagramStyleStories({
           <button
             onClick={() => onStoryChange(Math.max(0, currentIndex - 1))}
             disabled={currentIndex === 0}
+            aria-label="Previous story"
             className="p-2 rounded-full bg-gray-100 disabled:opacity-50"
           >
             <ChevronLeft className="h-6 w-6" />
@@ -875,6 +876,7 @@ function InstagramStyleStories({
           <button
             onClick={() => onStoryChange(Math.min(stories.length - 1, currentIndex + 1))}
             disabled={currentIndex === stories.length - 1}
+            aria-label="Next story"
             className="p-2 rounded-full bg-gray-100 disabled:opacity-50"
           >
             <ChevronRight className="h-6 w-6" />

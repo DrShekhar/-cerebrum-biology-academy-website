@@ -167,6 +167,7 @@ export function TestimonialGallery({
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input
               type="text"
+              aria-label="Search testimonials"
               placeholder="Search by name, college, or location..."
               value={searchTerm}
               onChange={(e) => handleSearch(e.target.value)}

@@ -337,6 +337,7 @@ export function PhotoGallerySection({
               {/* Close Button */}
               <button
                 onClick={closeLightbox}
+                aria-label="Close gallery"
                 className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center z-10 hover:bg-white/30 transition-colors"
               >
                 <X className="w-6 h-6 text-white" />
@@ -345,12 +346,14 @@ export function PhotoGallerySection({
               {/* Navigation Buttons */}
               <button
                 onClick={prevPhoto}
+                aria-label="Previous photo"
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center z-10 hover:bg-white/30 transition-colors"
               >
                 <ChevronLeft className="w-6 h-6 text-white" />
               </button>
               <button
                 onClick={nextPhoto}
+                aria-label="Next photo"
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center z-10 hover:bg-white/30 transition-colors"
               >
                 <ChevronRight className="w-6 h-6 text-white" />

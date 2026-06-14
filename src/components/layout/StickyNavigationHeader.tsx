@@ -420,6 +420,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                   <input
                     type="text"
+                    aria-label="Search"
                     placeholder="Search courses, faculty..."
                     value={searchQuery}
                     onChange={(e) => handleSearch(e.target.value)}
@@ -556,6 +557,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                   <input
                     type="text"
                     placeholder="Search..."
+                    aria-label="Search"
                     className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>

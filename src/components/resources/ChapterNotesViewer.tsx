@@ -183,6 +183,7 @@ const ChapterNotesViewer = ({ className }: ChapterNotesViewerProps) => {
               <Search className="h-5 w-5 absolute left-3 top-3 text-gray-400" />
               <input
                 type="text"
+                aria-label="Search chapter notes"
                 placeholder="Search notes by title or tags..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
