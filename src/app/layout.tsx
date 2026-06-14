@@ -257,9 +257,12 @@ export default function RootLayout({
                         </ConditionalHeaderFooter>
                         {/* MaintenancePopup removed — site is live */}
                       </ConditionalHeaderFooterProvider>
-                      {/* REMOVED: StickyMobileCallBar was duplicating FloatingCTA's mobile Call+WhatsApp bar.
-                         FloatingCTA already provides Call+WhatsApp at bottom-16 (above MobileBottomNav)
-                         with proper z-index layering, page-aware skipping, and conversion tracking. */}
+                      {/* Mobile bottom CTAs are layered to avoid stacked bars:
+                         <768px → MobileBottomNav (Home/Courses/Call/WhatsApp/Profile; full
+                         menu via the header hamburger), 768–1024px → Footer "Call Now" bar,
+                         ≥1024px → FloatingCTA circles. FloatingCTA's full-width mobile bar is
+                         intentionally hidden (would duplicate the bottom-nav Call+WhatsApp).
+                         StickyMobileCallBar removed. */}
                       {/* WhatsApp lead gate REMOVED — added friction, killed UX.
                          Leads are captured when users message on WhatsApp directly. */}
                       {/* CONVERSION: Global WhatsApp QR modal for desktop users */}

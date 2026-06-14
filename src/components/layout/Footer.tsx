@@ -515,8 +515,11 @@ export const Footer = memo(function Footer() {
         </div>
       </footer>
 
+      {/* Sticky "Call Now" bar — shown ONLY in the tablet gap (768–1024px).
+          Below 768px the MobileBottomNav (which has its own Call tab) renders,
+          so showing this too would stack two fixed bottom bars. */}
       <div
-        className="fixed bottom-0 left-0 right-0 z-50 lg:hidden"
+        className="fixed bottom-0 left-0 right-0 z-50 hidden md:block lg:hidden"
         style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
       >
         <a

@@ -104,8 +104,11 @@ export const FloatingCTA = memo(function FloatingCTA() {
 
   return (
     <>
-      {/* ===== MOBILE: Full-width Sticky CTA Bar (Above MobileBottomNav) ===== */}
-      {/* Prominent Call + WhatsApp bar on all mobile pages */}
+      {/* ===== MOBILE: Full-width Sticky CTA Bar — INTENTIONALLY DISABLED (`hidden`) =====
+          MobileBottomNav already provides Call + WhatsApp tabs on <768px, so
+          enabling this would stack a redundant 2nd fixed bar above the nav.
+          Kept as a toggleable option; do NOT un-hide without removing the
+          Call/WhatsApp tabs from MobileBottomNav first (else two bottom bars). */}
       <div
         className="fixed left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-[55] hidden"
         style={{ bottom: 'var(--mobile-nav-safe-height, 64px)' }}
