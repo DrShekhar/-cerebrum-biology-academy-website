@@ -66,8 +66,11 @@ export function SeminarRegistrationForm() {
 
     if (!formData.whatsappNumber.trim()) {
       newErrors.whatsappNumber = 'Please enter your WhatsApp number'
-    } else if (!/^[6-9]\d{9}$/.test(formData.whatsappNumber.replace(/\D/g, ''))) {
-      newErrors.whatsappNumber = 'Please enter a valid 10-digit mobile number'
+    } else if (!/^\d{8,15}$/.test(formData.whatsappNumber.replace(/\D/g, ''))) {
+      // Accept international numbers (NRI/global audience) — E.164 is 8–15 digits
+      // after stripping +/spaces/dashes, not just Indian 10-digit.
+      newErrors.whatsappNumber =
+        'Please enter a valid mobile number (include country code if outside India)'
     }
 
     if (!formData.city.trim()) {

@@ -322,71 +322,78 @@ export default function BookFreeDemoPage() {
 
           {/* Contact capture — the lead is saved server-side on tap, so a
               visitor who bails at the WhatsApp composer is not lost. */}
-          <div className="mt-6 grid gap-3 sm:grid-cols-2">
-            <div>
-              <label
-                htmlFor="demo-name"
-                className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500"
-              >
-                <Users className="h-3.5 w-3.5 text-[#3d4d3d]" />
-                <span>Your name</span>
-              </label>
-              <input
-                id="demo-name"
-                type="text"
-                autoComplete="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Student or parent name"
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:border-[#3d4d3d] focus:outline-none focus:ring-2 focus:ring-[#3d4d3d]/20 sm:text-base"
-              />
+          <form
+            onSubmit={(e) => {
+              e.preventDefault()
+              handleWhatsApp()
+            }}
+          >
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              <div>
+                <label
+                  htmlFor="demo-name"
+                  className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500"
+                >
+                  <Users className="h-3.5 w-3.5 text-[#3d4d3d]" />
+                  <span>Your name</span>
+                </label>
+                <input
+                  id="demo-name"
+                  type="text"
+                  autoComplete="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Student or parent name"
+                  className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:border-[#3d4d3d] focus:outline-none focus:ring-2 focus:ring-[#3d4d3d]/20 sm:text-base"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="demo-phone"
+                  className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500"
+                >
+                  <Phone className="h-3.5 w-3.5 text-[#3d4d3d]" />
+                  <span>WhatsApp number</span>
+                </label>
+                <input
+                  id="demo-phone"
+                  type="tel"
+                  inputMode="tel"
+                  autoComplete="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="98XXXXXXXX or +1 555 123 4567"
+                  className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:border-[#3d4d3d] focus:outline-none focus:ring-2 focus:ring-[#3d4d3d]/20 sm:text-base"
+                />
+              </div>
             </div>
-            <div>
-              <label
-                htmlFor="demo-phone"
-                className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500"
-              >
-                <Phone className="h-3.5 w-3.5 text-[#3d4d3d]" />
-                <span>WhatsApp number</span>
-              </label>
-              <input
-                id="demo-phone"
-                type="tel"
-                autoComplete="tel"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                placeholder="98XXXXXXXX or +1 555 123 4567"
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:border-[#3d4d3d] focus:outline-none focus:ring-2 focus:ring-[#3d4d3d]/20 sm:text-base"
-              />
-            </div>
-          </div>
 
-          {contactError && (
-            <p className="mt-3 text-center text-xs font-medium text-red-600 sm:text-sm">
-              {contactError}
-            </p>
-          )}
+            {contactError && (
+              <p className="mt-3 text-center text-xs font-medium text-red-600 sm:text-sm">
+                {contactError}
+              </p>
+            )}
 
-          {/* CTA stack — uniform space-y-3 vertical rhythm. Primary CTA
+            {/* CTA stack — uniform space-y-3 vertical rhythm. Primary CTA
               dominates (filled WhatsApp brand), secondary is outline-only. */}
-          <div className="mt-6 space-y-3">
-            <button
-              type="button"
-              onClick={handleWhatsApp}
-              className="inline-flex min-h-[56px] w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-4 text-base font-bold text-white shadow-md transition-all hover:bg-[#20BD5A] hover:shadow-lg touch-manipulation sm:text-lg"
-            >
-              <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" />
-              <span>Send my details on WhatsApp</span>
-            </button>
+            <div className="mt-6 space-y-3">
+              <button
+                type="submit"
+                className="inline-flex min-h-[56px] w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-4 text-base font-bold text-white shadow-md transition-all hover:bg-[#20BD5A] hover:shadow-lg touch-manipulation sm:text-lg"
+              >
+                <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" />
+                <span>Send my details on WhatsApp</span>
+              </button>
 
-            <a
-              href={`tel:${CONTACT_INFO.phone.primary.replace(/[^+\d]/g, '')}`}
-              className="inline-flex min-h-[56px] w-full items-center justify-center gap-2 rounded-xl border-2 border-[#3d4d3d] bg-white px-6 py-4 text-base font-bold text-[#3d4d3d] transition-all hover:bg-[#e8ede8] touch-manipulation sm:text-lg"
-            >
-              <Phone className="h-5 w-5 sm:h-6 sm:w-6" />
-              <span>Or call +91 88264 44334</span>
-            </a>
-          </div>
+              <a
+                href={`tel:${CONTACT_INFO.phone.primary.replace(/[^+\d]/g, '')}`}
+                className="inline-flex min-h-[56px] w-full items-center justify-center gap-2 rounded-xl border-2 border-[#3d4d3d] bg-white px-6 py-4 text-base font-bold text-[#3d4d3d] transition-all hover:bg-[#e8ede8] touch-manipulation sm:text-lg"
+              >
+                <Phone className="h-5 w-5 sm:h-6 sm:w-6" />
+                <span>Or call +91 88264 44334</span>
+              </a>
+            </div>
+          </form>
 
           {/* Fee anchor — qualifies the lead before they tap. Honest range
               covers Foundation through Pinnacle. Centred to match the CTA

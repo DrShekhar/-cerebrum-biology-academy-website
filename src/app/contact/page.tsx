@@ -437,12 +437,19 @@ export default function ContactPage() {
 
                   <div className="mt-6 sm:mt-7 md:mt-8">
                     <Button
+                      asChild
                       variant="primary"
                       size="lg"
                       className="w-full min-h-11 sm:min-h-12 bg-[#3d4d3d] hover:bg-[#4a5d4a]"
                     >
-                      <Calendar className="w-5 h-5 mr-2" />
-                      Schedule Campus Visit
+                      <a
+                        href="https://wa.me/918826444334?text=Hi!%20I%20would%20like%20to%20schedule%20a%20campus%20visit."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Calendar className="w-5 h-5 mr-2" />
+                        Schedule Campus Visit
+                      </a>
                     </Button>
                   </div>
                 </div>

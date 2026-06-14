@@ -409,11 +409,23 @@ export function CourseFAQ({ course }: CourseFAQProps) {
         {/* Quick Actions */}
         <div className="mt-8 text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-green-600 hover:bg-green-700">
-              Request Course Brochure
+            <Button asChild size="lg" className="bg-green-600 hover:bg-green-700">
+              <a
+                href="https://wa.me/918826444334?text=Hi!%20I%20would%20like%20the%20course%20brochure%20and%20fee%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Request Course Brochure
+              </a>
             </Button>
-            <Button size="lg" variant="outline">
-              Schedule Campus Visit
+            <Button asChild size="lg" variant="outline">
+              <a
+                href="https://wa.me/918826444334?text=Hi!%20I%20would%20like%20to%20schedule%20a%20campus%20visit."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Schedule Campus Visit
+              </a>
             </Button>
           </div>
         </div>
