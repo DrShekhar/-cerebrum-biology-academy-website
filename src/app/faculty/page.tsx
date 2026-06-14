@@ -424,12 +424,16 @@ export default function FacultyPage() {
                 href={v.link}
                 className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 transition hover:border-blue-300 hover:shadow-sm sm:flex-row sm:items-center sm:gap-6"
               >
-                <div className="w-full flex-shrink-0 sm:w-48">
+                {/* No `w-full`: in production CSS `.w-full` overrode `.sm:w-48`,
+                    so the label took the whole row and crushed the description.
+                    In flex-col it stretches full-width naturally; in flex-row
+                    sm:w-48 now applies cleanly. */}
+                <div className="flex-shrink-0 sm:w-48">
                   <span className="text-lg font-bold text-gray-900 group-hover:text-blue-700">
                     {v.label}
                   </span>
                 </div>
-                <p className="flex-1 text-sm text-gray-700">{v.body}</p>
+                <p className="min-w-0 flex-1 text-sm text-gray-700">{v.body}</p>
                 <Lightbulb className="hidden h-5 w-5 flex-shrink-0 text-blue-600 sm:block" />
               </Link>
             ))}
