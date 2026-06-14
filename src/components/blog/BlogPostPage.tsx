@@ -342,14 +342,19 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                   remarkPlugins={[remarkGfm]}
                   rehypePlugins={[rehypeRaw]}
                   components={{
+                    // Markdown `#` renders as <h2>, NOT <h1>: the page title is
+                    // already the single <h1> in the header, so emitting another
+                    // <h1> here produced two h1s (invalid outline / SEO+a11y).
+                    // Kept the larger text-3xl styling so a `#` still reads as a
+                    // top-level section visually.
                     h1: ({ children }) => {
-                      // Skip duplicate h1 if it matches the article title (already rendered in header)
+                      // Skip if it just repeats the article title.
                       const headingText = String(children).trim()
                       if (headingText === meta.title.trim()) {
                         return null
                       }
                       return (
-                        <h1
+                        <h2
                           id={headingText
                             .toLowerCase()
                             .replace(/[^a-z0-9]+/g, '-')
@@ -357,7 +362,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                           className="text-3xl font-bold text-gray-900 mb-6 mt-10"
                         >
                           {children}
-                        </h1>
+                        </h2>
                       )
                     },
                     h2: ({ children }) => (
