@@ -150,7 +150,7 @@ export function ComparisonLandingPage({ competitor }: ComparisonLandingPageProps
             </h2>
 
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
+              <table className="w-full min-w-[600px] border-collapse">
                 <thead>
                   <tr>
                     <th className="p-4 text-left bg-gray-100 rounded-tl-xl">Aspect</th>

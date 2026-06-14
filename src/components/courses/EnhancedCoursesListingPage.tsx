@@ -293,7 +293,7 @@ export function EnhancedCoursesListingPage() {
 
             {/* Pricing Table */}
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
+              <table className="w-full min-w-[600px] border-collapse">
                 <thead>
                   <tr className="bg-gray-100">
                     <th className="text-left p-3 sm:p-4 font-semibold text-gray-900 border-b">
