@@ -199,11 +199,11 @@ export default function NEETScholarshipGhaziabad() {
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="tel:+919953643938"
+                href="tel:+918826444334"
                 className="bg-white text-yellow-700 px-8 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-yellow-50 transition"
               >
                 <Phone className="w-5 h-5" />
-                Apply Now: +91-99536-43938
+                Apply Now: +91-88264-44334
               </a>
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings."
@@ -275,11 +275,11 @@ export default function NEETScholarshipGhaziabad() {
           </div>
           <div className="text-center mt-10">
             <a
-              href="tel:+919953643938"
+              href="tel:+918826444334"
               className="inline-flex items-center gap-2 bg-yellow-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-yellow-600 transition"
             >
               <Phone className="w-5 h-5" />
-              Start Application: +91-99536-43938
+              Start Application: +91-88264-44334
             </a>
           </div>
         </div>
@@ -336,11 +336,11 @@ export default function NEETScholarshipGhaziabad() {
             within 2 hours!
           </p>
           <a
-            href="tel:+919953643938"
+            href="tel:+918826444334"
             className="inline-flex items-center gap-2 bg-white text-blue-700 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition"
           >
             <Phone className="w-5 h-5" />
-            Check Eligibility: +91-99536-43938
+            Check Eligibility: +91-88264-44334
           </a>
         </div>
       </section>
@@ -374,7 +374,7 @@ export default function NEETScholarshipGhaziabad() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:+919953643938"
+              href="tel:+918826444334"
               className="bg-white text-yellow-700 px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2 hover:bg-yellow-50 transition"
             >
               <Phone className="w-5 h-5" />

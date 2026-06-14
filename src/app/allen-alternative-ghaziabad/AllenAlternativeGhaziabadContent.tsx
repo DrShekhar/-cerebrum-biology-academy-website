@@ -434,7 +434,7 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
                   </p>
                 </div>
                 <div className="flex gap-4">
-                  <a href="tel:+919953643938">
+                  <a href="tel:+918826444334">
                     <Button variant="outline">
                       <Phone className="w-4 h-4 mr-2" />
                       Call Now
@@ -574,7 +574,7 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
                 Book Free Demo
               </Button>
             </Link>
-            <a href="tel:+919953643938">
+            <a href="tel:+918826444334">
               <Button
                 variant="outline"
                 size="xl"

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title:
     'Best other IIT-JEE-first coachings Alternative in Noida 2026 | Better Results, Lower Fees',
   description:
-    'Looking for other IIT-JEE-first coachings alternative in Noida? Cerebrum Biology Academy: Same quality, 60% lower fees. AIIMS faculty, 98% success rate. Compare before you join. Call 99536-43938!',
+    'Looking for other IIT-JEE-first coachings alternative in Noida? Cerebrum Biology Academy: Same quality, 60% lower fees. AIIMS faculty, 98% success rate. Compare before you join. Call 88264-44334!',
   keywords: [
     'fiitjee alternative noida',
     'better than fiitjee noida',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title:
       'Best other IIT-JEE-first coachings Alternative in Noida 2026 | Better Results, Lower Fees',
     description:
-      'Looking for other IIT-JEE-first coachings alternative in Noida? Cerebrum Biology Academy: Same quality, 60% lower fees. AIIMS faculty, 98% success rate. Compare before you join. Call 99536-43938!',
+      'Looking for other IIT-JEE-first coachings alternative in Noida? Cerebrum Biology Academy: Same quality, 60% lower fees. AIIMS faculty, 98% success rate. Compare before you join. Call 88264-44334!',
   },
 }
 
@@ -135,7 +135,7 @@ const faqs = [
   {
     question: 'Do you offer demo classes before switching?',
     answer:
-      'Absolutely! Free 3-day trial: Attend classes, compare teaching quality, meet faculty, see infrastructure. No payment required. Many other IIT-JEE-first coachings students switched after experiencing our focused teaching methodology. Book trial at 99536-43938.',
+      'Absolutely! Free 3-day trial: Attend classes, compare teaching quality, meet faculty, see infrastructure. No payment required. Many other IIT-JEE-first coachings students switched after experiencing our focused teaching methodology. Book trial at 88264-44334.',
   },
   {
     question: 'What about study material comparison?',
@@ -166,11 +166,11 @@ export default function FIITJEEAlternativeNoida() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="tel:+919953643938"
+                href="tel:+918826444334"
                 className="bg-yellow-500 text-blue-900 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-400 transition"
               >
                 <Phone className="w-5 h-5" />
-                Call 99536-43938
+                Call 88264-44334
               </a>
               <Link
                 href="/neet-coaching-noida"
@@ -310,7 +310,7 @@ export default function FIITJEEAlternativeNoida() {
                   </div>
                 </div>
                 <a
-                  href="tel:+919953643938"
+                  href="tel:+918826444334"
                   className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
                 >
                   <Phone className="w-5 h-5" />
@@ -364,11 +364,11 @@ export default function FIITJEEAlternativeNoida() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:+919953643938"
+              href="tel:+918826444334"
               className="bg-yellow-500 text-blue-900 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-400 transition"
             >
               <Phone className="w-5 h-5" />
-              Call Now: 99536-43938
+              Call Now: 88264-44334
             </a>
             <Link
               href="/neet-coaching-fees"

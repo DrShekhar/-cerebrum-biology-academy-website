@@ -16,7 +16,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: 'PhysicsWallah Alternative Noida | Offline Expert Biology',
   description:
-    'Need offline alternative to PhysicsWallah in Noida? Cerebrum: Real classroom experience, AIIMS faculty, 98% success rate. Better than video lectures. Call 99536-43938!',
+    'Need offline alternative to PhysicsWallah in Noida? Cerebrum: Real classroom experience, AIIMS faculty, 98% success rate. Better than video lectures. Call 88264-44334!',
   keywords: [
     'physics wallah alternative noida',
     'offline neet coaching noida',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'PhysicsWallah Alternative Noida | Offline Expert Biology',
     description:
-      'Need offline alternative to PhysicsWallah in Noida? Cerebrum: Real classroom experience, AIIMS faculty, 98% success rate. Better than video lectures. Call 99536-43938!',
+      'Need offline alternative to PhysicsWallah in Noida? Cerebrum: Real classroom experience, AIIMS faculty, 98% success rate. Better than video lectures. Call 88264-44334!',
   },
 }
 
@@ -171,11 +171,11 @@ export default function PhysicsWallahAlternativeNoida() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="tel:+919953643938"
+                href="tel:+918826444334"
                 className="bg-yellow-500 text-purple-900 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-400 transition"
               >
                 <Phone className="w-5 h-5" />
-                Call 99536-43938
+                Call 88264-44334
               </a>
               <Link
                 href="/neet-coaching-noida"
@@ -412,7 +412,7 @@ export default function PhysicsWallahAlternativeNoida() {
                   </div>
                 </div>
                 <a
-                  href="tel:+919953643938"
+                  href="tel:+918826444334"
                   className="inline-flex items-center gap-2 bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition"
                 >
                   <Phone className="w-5 h-5" />
@@ -464,11 +464,11 @@ export default function PhysicsWallahAlternativeNoida() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:+919953643938"
+              href="tel:+918826444334"
               className="bg-yellow-500 text-purple-900 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-400 transition"
             >
               <Phone className="w-5 h-5" />
-              Call Now: 99536-43938
+              Call Now: 88264-44334
             </a>
             <Link
               href="/online-neet-classes-noida"

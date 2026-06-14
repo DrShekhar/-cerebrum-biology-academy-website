@@ -371,7 +371,7 @@ export default function NEETTestSeriesGhaziabadContent({ faqs }: { faqs: FAQ[] }
                       Start Free Test
                     </Button>
                   </button>
-                  <a href="tel:+919953643938">
+                  <a href="tel:+918826444334">
                     <Button variant="outline">
                       <Phone className="w-4 h-4 mr-2" />
                       Call Now
@@ -497,7 +497,7 @@ export default function NEETTestSeriesGhaziabadContent({ faqs }: { faqs: FAQ[] }
                 Start Free Test
               </Button>
             </button>
-            <a href="tel:+919953643938">
+            <a href="tel:+918826444334">
               <Button
                 variant="outline"
                 size="xl"

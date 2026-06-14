@@ -15,7 +15,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: 'Aakash vs Allen: Which is Better for NEET in Noida? 2026',
   description:
-    'Aakash vs Allen comparison for NEET coaching in Noida. Fees, faculty, results, batch size compared. Plus a better alternative with 98% success. Call 99536-43938!',
+    'Aakash vs Allen comparison for NEET coaching in Noida. Fees, faculty, results, batch size compared. Plus a better alternative with 98% success. Call 88264-44334!',
   keywords: [
     'aakash vs allen neet',
     'which is better aakash or allen',
@@ -358,11 +358,11 @@ export default function AakashVsAllenNoida() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:+919953643938"
+              href="tel:+918826444334"
               className="inline-flex items-center gap-2 bg-yellow-500 text-indigo-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
             >
               <Phone className="w-5 h-5" />
-              Call 99536-43938
+              Call 88264-44334
             </a>
             <Link
               href="/free-neet-demo-class-noida"

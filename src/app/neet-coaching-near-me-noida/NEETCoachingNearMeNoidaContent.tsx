@@ -328,8 +328,8 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
               </p>
               <p className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-teal-600 flex-shrink-0" />
-                <a href="tel:+919953643938" className="text-teal-600 hover:underline">
-                  +91-99536-43938
+                <a href="tel:+918826444334" className="text-teal-600 hover:underline">
+                  +91-88264-44334
                 </a>
               </p>
               <p className="flex items-center gap-3">
@@ -350,7 +350,7 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
                   Open in Maps
                 </Button>
               </a>
-              <a href="tel:+919953643938">
+              <a href="tel:+918826444334">
                 <Button variant="outline">
                   <Phone className="w-4 h-4 mr-2" />
                   Call Now

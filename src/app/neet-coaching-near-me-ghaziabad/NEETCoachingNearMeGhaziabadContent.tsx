@@ -271,8 +271,8 @@ export default function NEETCoachingNearMeGhaziabadContent({ faqs }: { faqs: FAQ
                 <h3 className="text-xl font-bold text-slate-900 mb-4">Contact</h3>
                 <p className="flex items-center gap-2 text-slate-600 mb-2">
                   <Phone className="w-5 h-5 text-teal-600" />
-                  <a href="tel:+919953643938" className="hover:text-teal-600">
-                    +91-99536-43938
+                  <a href="tel:+918826444334" className="hover:text-teal-600">
+                    +91-88264-44334
                   </a>
                 </p>
                 <p className="flex items-center gap-2 text-slate-600">

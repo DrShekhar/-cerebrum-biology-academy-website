@@ -16,7 +16,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: '2 Year NEET Course Ghaziabad 2026 | Class 11-12 Integrated',
   description:
-    'Join 2-year NEET course for Ghaziabad students from Class 11. Complete foundation + advanced coaching. Best results with 98% success rate. Call 99536-43938!',
+    'Join 2-year NEET course for Ghaziabad students from Class 11. Complete foundation + advanced coaching. Best results with 98% success rate. Call 88264-44334!',
   keywords: [
     '2 year neet course ghaziabad',
     'two year neet coaching ghaziabad',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: '2 Year NEET Course Ghaziabad 2026 | Class 11-12 Integrated',
     description:
-      'Join 2-year NEET course for Ghaziabad students from Class 11. Complete foundation + advanced coaching. Best results with 98% success rate. Call 99536-43938!',
+      'Join 2-year NEET course for Ghaziabad students from Class 11. Complete foundation + advanced coaching. Best results with 98% success rate. Call 88264-44334!',
   },
 }
 
@@ -158,11 +158,11 @@ export default function TwoYearNEETCourseGhaziabad() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="tel:+919953643938"
+                href="tel:+918826444334"
                 className="bg-yellow-500 text-teal-900 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-400 transition"
               >
                 <Phone className="w-5 h-5" />
-                Call 99536-43938
+                Call 88264-44334
               </a>
               <Link
                 href="/1-year-neet-course-ghaziabad"
@@ -379,10 +379,10 @@ export default function TwoYearNEETCourseGhaziabad() {
                   </li>
                 </ul>
                 <a
-                  href="tel:+919953643938"
+                  href="tel:+918826444334"
                   className="block w-full bg-teal-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-teal-700 transition"
                 >
-                  Enroll Now - Call 99536-43938
+                  Enroll Now - Call 88264-44334
                 </a>
                 <p className="text-center text-sm text-gray-500 mt-3">
                   Year-wise payment & EMI options available
@@ -474,7 +474,7 @@ export default function TwoYearNEETCourseGhaziabad() {
                   </div>
                 </div>
                 <a
-                  href="tel:+919953643938"
+                  href="tel:+918826444334"
                   className="inline-flex items-center gap-2 bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition"
                 >
                   <Phone className="w-5 h-5" />
@@ -526,11 +526,11 @@ export default function TwoYearNEETCourseGhaziabad() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:+919953643938"
+              href="tel:+918826444334"
               className="bg-yellow-500 text-teal-900 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-400 transition"
             >
               <Phone className="w-5 h-5" />
-              Call Now: 99536-43938
+              Call Now: 88264-44334
             </a>
             <Link
               href="/neet-coaching-noida"

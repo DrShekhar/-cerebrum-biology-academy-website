@@ -6,7 +6,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: 'Best Narayana Alternative in Noida 2026 | Small Batch Personal Attention',
   description:
-    "Looking for Narayana alternative in Noida? Cerebrum: 25-student batches vs Narayana's 100+. AIIMS faculty, 98% success rate. Personal attention guaranteed. Call 99536-43938!",
+    "Looking for Narayana alternative in Noida? Cerebrum: 25-student batches vs Narayana's 100+. AIIMS faculty, 98% success rate. Personal attention guaranteed. Call 88264-44334!",
   keywords: [
     'narayana alternative noida',
     'better than narayana noida',
@@ -177,11 +177,11 @@ export default function NarayanaAlternativeNoida() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="tel:+919953643938"
+                href="tel:+918826444334"
                 className="bg-yellow-500 text-green-900 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-400 transition"
               >
                 <Phone className="w-5 h-5" />
-                Call 99536-43938
+                Call 88264-44334
               </a>
               <Link
                 href="/neet-coaching-noida"
@@ -381,7 +381,7 @@ export default function NarayanaAlternativeNoida() {
                   </div>
                 </div>
                 <a
-                  href="tel:+919953643938"
+                  href="tel:+918826444334"
                   className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition"
                 >
                   <Phone className="w-5 h-5" />
@@ -433,11 +433,11 @@ export default function NarayanaAlternativeNoida() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:+919953643938"
+              href="tel:+918826444334"
               className="bg-yellow-500 text-green-900 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-400 transition"
             >
               <Phone className="w-5 h-5" />
-              Call Now: 99536-43938
+              Call Now: 88264-44334
             </a>
             <Link
               href="/neet-coaching-fees"

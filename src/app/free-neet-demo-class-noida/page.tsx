@@ -18,7 +18,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: 'Free NEET Demo Class Noida | Book Now',
   description:
-    'Book your FREE NEET Biology demo class in Noida. Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 99536-43938!',
+    'Book your FREE NEET Biology demo class in Noida. Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 88264-44334!',
   keywords: [
     'free neet demo class noida',
     'free neet trial class noida',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'Free NEET Demo Class Noida | Book Now',
     description:
-      'Book your FREE NEET Biology demo class in Noida. Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 99536-43938!',
+      'Book your FREE NEET Biology demo class in Noida. Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 88264-44334!',
   },
 }
 
@@ -89,7 +89,7 @@ const faqs = [
   {
     question: 'How do I book a demo class?',
     answer:
-      'Call us at 99536-43938 or fill the form on this page. We schedule demos instantly — same day slots available 7 days a week. Online demo also available.',
+      'Call us at 88264-44334 or fill the form on this page. We schedule demos instantly — same day slots available 7 days a week. Online demo also available.',
   },
   {
     question: 'What if I dont like the demo class?',
@@ -137,11 +137,11 @@ export default function FreeNEETDemoClassNoida() {
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="tel:+919953643938"
+                href="tel:+918826444334"
                 className="bg-yellow-500 text-green-900 px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2 hover:bg-yellow-400 transition shadow-lg"
               >
                 <Phone className="w-5 h-5" />
-                Book Demo: 99536-43938
+                Book Demo: 88264-44334
               </a>
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
@@ -200,7 +200,7 @@ export default function FreeNEETDemoClassNoida() {
           </div>
           <div className="text-center mt-8">
             <a
-              href="tel:+919953643938"
+              href="tel:+918826444334"
               className="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition"
             >
               <Phone className="w-5 h-5" />
@@ -287,11 +287,11 @@ export default function FreeNEETDemoClassNoida() {
               </div>
               <div className="flex flex-col justify-center">
                 <a
-                  href="tel:+919953643938"
+                  href="tel:+918826444334"
                   className="bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-center hover:bg-green-700 transition mb-3"
                 >
                   <Phone className="w-5 h-5 inline mr-2" />
-                  Call: 99536-43938
+                  Call: 88264-44334
                 </a>
                 <p className="text-center text-gray-600 text-sm">
                   Or WhatsApp us for instant booking
@@ -331,7 +331,7 @@ export default function FreeNEETDemoClassNoida() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:+919953643938"
+              href="tel:+918826444334"
               className="bg-yellow-500 text-green-900 px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2 hover:bg-yellow-400 transition"
             >
               <Phone className="w-5 h-5" />

@@ -16,7 +16,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: 'NEET Evening Batch Ghaziabad 2026 | After-School Classes 5-8 PM',
   description:
-    'Join NEET evening batch for Ghaziabad students - 5 PM to 8 PM classes after school. Perfect for Class 11-12 students from Indirapuram, Vaishali, Kaushambi. Call 99536-43938!',
+    'Join NEET evening batch for Ghaziabad students - 5 PM to 8 PM classes after school. Perfect for Class 11-12 students from Indirapuram, Vaishali, Kaushambi. Call 88264-44334!',
   keywords: [
     'neet evening batch ghaziabad',
     'neet evening classes ghaziabad',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'NEET Evening Batch Ghaziabad 2026 | After-School Classes 5-8 PM',
     description:
-      'Join NEET evening batch for Ghaziabad students - 5 PM to 8 PM classes after school. Perfect for Class 11-12 students from Indirapuram, Vaishali, Kaushambi. Call 99536-43938!',
+      'Join NEET evening batch for Ghaziabad students - 5 PM to 8 PM classes after school. Perfect for Class 11-12 students from Indirapuram, Vaishali, Kaushambi. Call 88264-44334!',
   },
 }
 
@@ -167,11 +167,11 @@ export default function NEETEveningBatchGhaziabad() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="tel:+919953643938"
+                href="tel:+918826444334"
                 className="bg-yellow-500 text-indigo-900 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-400 transition"
               >
                 <Phone className="w-5 h-5" />
-                Call 99536-43938
+                Call 88264-44334
               </a>
               <Link
                 href="/neet-weekend-batch-ghaziabad"
@@ -232,7 +232,7 @@ export default function NEETEveningBatchGhaziabad() {
               ))}
             </div>
             <p className="text-center text-gray-500 mt-6 text-sm">
-              School not listed? Call us to check compatibility: 99536-43938
+              School not listed? Call us to check compatibility: 88264-44334
             </p>
           </div>
         </div>
@@ -396,10 +396,10 @@ export default function NEETEveningBatchGhaziabad() {
                   </li>
                 </ul>
                 <a
-                  href="tel:+919953643938"
+                  href="tel:+918826444334"
                   className="block w-full bg-indigo-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-indigo-700 transition"
                 >
-                  Enroll Now - Call 99536-43938
+                  Enroll Now - Call 88264-44334
                 </a>
               </div>
             </div>
@@ -433,7 +433,7 @@ export default function NEETEveningBatchGhaziabad() {
                   </div>
                 </div>
                 <a
-                  href="tel:+919953643938"
+                  href="tel:+918826444334"
                   className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition"
                 >
                   <Phone className="w-5 h-5" />
@@ -485,11 +485,11 @@ export default function NEETEveningBatchGhaziabad() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:+919953643938"
+              href="tel:+918826444334"
               className="bg-yellow-500 text-indigo-900 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-400 transition"
             >
               <Phone className="w-5 h-5" />
-              Call Now: 99536-43938
+              Call Now: 88264-44334
             </a>
             <Link
               href="/neet-coaching-noida"

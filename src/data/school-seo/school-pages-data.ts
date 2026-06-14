@@ -2002,7 +2002,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'Is there a free demo class for DPS Noida students?',
         answer:
-          'Yes, we offer a free demo class. Call +91-99536-43938 or WhatsApp us to schedule your session at the Sector 62 center.',
+          'Yes, we offer a free demo class. Call +91-88264-44334 or WhatsApp us to schedule your session at the Sector 62 center.',
       },
     ],
     relatedSchools: [
@@ -2015,7 +2015,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
       timing: 'Available 24/7',
-      phone: '+91-99536-43938',
+      phone: '+91-88264-44334',
     },
   },
 
@@ -2112,7 +2112,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
       timing: 'Available 24/7',
-      phone: '+91-99536-43938',
+      phone: '+91-88264-44334',
     },
   },
 
@@ -2192,7 +2192,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'Can we attend a trial class before enrolling?',
         answer:
-          'Yes, we offer a free demo class at our Sector 62 center. Call or WhatsApp +91-99536-43938 to book your slot.',
+          'Yes, we offer a free demo class at our Sector 62 center. Call or WhatsApp +91-88264-44334 to book your slot.',
       },
       {
         question: 'How do you track individual student progress?',
@@ -2210,7 +2210,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
       timing: 'Available 24/7',
-      phone: '+91-99536-43938',
+      phone: '+91-88264-44334',
     },
   },
 
@@ -2308,7 +2308,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
       timing: 'Available 24/7',
-      phone: '+91-99536-43938',
+      phone: '+91-88264-44334',
     },
   },
 
@@ -2378,7 +2378,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'What are the fee options for KV Noida students?',
         answer:
-          'We offer affordable fee structures with EMI options. Contact us at +91-99536-43938 for current fee details and scholarship opportunities.',
+          'We offer affordable fee structures with EMI options. Contact us at +91-88264-44334 for current fee details and scholarship opportunities.',
       },
       {
         question: 'Do you provide special support for first-generation medical aspirants?',
@@ -2393,7 +2393,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'Can KV students get a free trial class?',
         answer:
-          'Yes, call or WhatsApp +91-99536-43938 to book a free demo class at our Sector 62 Noida center.',
+          'Yes, call or WhatsApp +91-88264-44334 to book a free demo class at our Sector 62 Noida center.',
       },
     ],
     relatedSchools: [
@@ -2406,7 +2406,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
       timing: 'Available 24/7',
-      phone: '+91-99536-43938',
+      phone: '+91-88264-44334',
     },
   },
 
@@ -2503,7 +2503,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
       timing: 'Available 24/7',
-      phone: '+91-99536-43938',
+      phone: '+91-88264-44334',
     },
   },
 
@@ -2588,7 +2588,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'Is there a free demo class available for Jaypee students?',
         answer:
-          'Yes, contact us at +91-99536-43938 to schedule a free demo class at our Sector 62 Noida center.',
+          'Yes, contact us at +91-88264-44334 to schedule a free demo class at our Sector 62 Noida center.',
       },
     ],
     relatedSchools: [
@@ -2601,7 +2601,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
       timing: 'Available 24/7',
-      phone: '+91-99536-43938',
+      phone: '+91-88264-44334',
     },
   },
 
@@ -2686,7 +2686,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'How do I enroll at Cerebrum from Somerville School?',
         answer:
-          'Call or WhatsApp +91-99536-43938, visit our Sector 62 center, or fill the enrollment form on our website to get started.',
+          'Call or WhatsApp +91-88264-44334, visit our Sector 62 center, or fill the enrollment form on our website to get started.',
       },
     ],
     relatedSchools: [
@@ -2699,7 +2699,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
       timing: 'Available 24/7',
-      phone: '+91-99536-43938',
+      phone: '+91-88264-44334',
     },
   },
 
@@ -2783,7 +2783,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'How do I book a free demo class?',
         answer:
-          'Call or WhatsApp +91-99536-43938 to schedule your free demo class at our Sector 62 Noida center.',
+          'Call or WhatsApp +91-88264-44334 to schedule your free demo class at our Sector 62 Noida center.',
       },
     ],
     relatedSchools: [
@@ -2796,7 +2796,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
       timing: 'Available 24/7',
-      phone: '+91-99536-43938',
+      phone: '+91-88264-44334',
     },
   },
 
@@ -2879,7 +2879,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'How can Cambridge School Ghaziabad students enroll?',
         answer:
-          'Call or WhatsApp +91-99536-43938, or visit our Sector 62 Noida center to enroll and book a free demo class.',
+          'Call or WhatsApp +91-88264-44334, or visit our Sector 62 Noida center to enroll and book a free demo class.',
       },
     ],
     relatedSchools: [
@@ -2892,7 +2892,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
       timing: 'Available 24/7',
-      phone: '+91-99536-43938',
+      phone: '+91-88264-44334',
     },
   },
 
@@ -2971,12 +2971,12 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'Is there a scholarship or discount for meritorious students?',
         answer:
-          'Yes, we have scholarship programs for academically meritorious students. Contact us at +91-99536-43938 for details.',
+          'Yes, we have scholarship programs for academically meritorious students. Contact us at +91-88264-44334 for details.',
       },
       {
         question: 'How do GD Goenka Ghaziabad students enroll at Cerebrum?',
         answer:
-          'Call or WhatsApp +91-99536-43938 or visit our Sector 62 Noida center. A free demo class is available before enrollment.',
+          'Call or WhatsApp +91-88264-44334 or visit our Sector 62 Noida center. A free demo class is available before enrollment.',
       },
     ],
     relatedSchools: [
@@ -2989,7 +2989,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
       timing: 'Available 24/7',
-      phone: '+91-99536-43938',
+      phone: '+91-88264-44334',
     },
   },
 
@@ -3075,7 +3075,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'How can KR Mangalam students enroll at Cerebrum?',
         answer:
-          'Call or WhatsApp +91-99536-43938 or visit the Sector 62 Noida center. A free demo class is available before enrollment.',
+          'Call or WhatsApp +91-88264-44334 or visit the Sector 62 Noida center. A free demo class is available before enrollment.',
       },
     ],
     relatedSchools: [
@@ -3088,7 +3088,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
       timing: 'Available 24/7',
-      phone: '+91-99536-43938',
+      phone: '+91-88264-44334',
     },
   },
 
@@ -3172,7 +3172,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'How do Presidium Ghaziabad students enroll at Cerebrum?',
         answer:
-          'Call or WhatsApp +91-99536-43938 or visit our Sector 62 Noida center. A free demo class is available.',
+          'Call or WhatsApp +91-88264-44334 or visit our Sector 62 Noida center. A free demo class is available.',
       },
     ],
     relatedSchools: [
@@ -3185,7 +3185,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
       timing: 'Available 24/7',
-      phone: '+91-99536-43938',
+      phone: '+91-88264-44334',
     },
   },
 
@@ -3266,12 +3266,12 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'What is the fee structure for Greater Noida students?',
         answer:
-          'Fee structure is the same for all students. Contact +91-99536-43938 for current details and EMI options.',
+          'Fee structure is the same for all students. Contact +91-88264-44334 for current details and EMI options.',
       },
       {
         question: 'How can Sharda University School students enroll?',
         answer:
-          'Call or WhatsApp +91-99536-43938, visit our Sector 62 Noida center, or fill the online enrollment form on our website.',
+          'Call or WhatsApp +91-88264-44334, visit our Sector 62 Noida center, or fill the online enrollment form on our website.',
       },
     ],
     relatedSchools: [
@@ -3284,7 +3284,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
       timing: 'Available 24/7',
-      phone: '+91-99536-43938',
+      phone: '+91-88264-44334',
     },
   },
 
@@ -3369,7 +3369,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'How do DPS Greater Noida students book a free demo?',
         answer:
-          'Call or WhatsApp +91-99536-43938 to schedule a free demo class at our Sector 62 Noida center. No commitment required.',
+          'Call or WhatsApp +91-88264-44334 to schedule a free demo class at our Sector 62 Noida center. No commitment required.',
       },
     ],
     relatedSchools: [
@@ -3382,7 +3382,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
       timing: 'Available 24/7',
-      phone: '+91-99536-43938',
+      phone: '+91-88264-44334',
     },
   },
 }

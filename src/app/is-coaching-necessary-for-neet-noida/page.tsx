@@ -6,7 +6,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: 'Is Coaching Necessary for NEET? Noida Expert Answer | 2026',
   description:
-    'Is coaching necessary for NEET? Expert analysis from Noida NEET toppers. When coaching helps vs self-study works. Honest advice from AIIMS faculty. Call 99536-43938!',
+    'Is coaching necessary for NEET? Expert analysis from Noida NEET toppers. When coaching helps vs self-study works. Honest advice from AIIMS faculty. Call 88264-44334!',
   keywords: [
     'is coaching necessary for neet',
     'neet coaching vs self study',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'Is Coaching Necessary for NEET? Noida Expert Answer | 2026',
     description:
-      'Is coaching necessary for NEET? Expert analysis from Noida NEET toppers. When coaching helps vs self-study works. Honest advice from AIIMS faculty. Call 99536-43938!',
+      'Is coaching necessary for NEET? Expert analysis from Noida NEET toppers. When coaching helps vs self-study works. Honest advice from AIIMS faculty. Call 88264-44334!',
   },
 }
 
@@ -229,11 +229,11 @@ export default function IsCoachingNecessaryForNEETNoida() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:+919953643938"
+              href="tel:+918826444334"
               className="inline-flex items-center gap-2 bg-yellow-500 text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
             >
               <Phone className="w-5 h-5" />
-              Call 99536-43938
+              Call 88264-44334
             </a>
             <Link
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."

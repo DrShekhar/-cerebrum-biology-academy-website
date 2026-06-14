@@ -197,7 +197,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
               >
                 <Phone className="w-5 h-5" />
-                WhatsApp: +91-99536-43938
+                WhatsApp: +91-88264-44334
               </button>
             </div>
           </div>
@@ -380,7 +380,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
                 Park, Pari Chowk, Jaypee Greens, Greater Noida West, Alpha, Beta
               </p>
               <div className="flex gap-4">
-                <a href="tel:+919953643938">
+                <a href="tel:+918826444334">
                   <Button
                     variant="outline"
                     className="border-white text-white hover:bg-white hover:text-slate-900"
@@ -503,7 +503,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
                 Book Free Counseling
               </Button>
             </Link>
-            <a href="tel:+919953643938">
+            <a href="tel:+918826444334">
               <Button
                 variant="outline"
                 size="xl"

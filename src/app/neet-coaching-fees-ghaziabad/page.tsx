@@ -17,7 +17,7 @@ import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 export const metadata: Metadata = {
   title: 'NEET Coaching Fees in Ghaziabad 2026 | Compare Coaching Fees',
   description:
-    'Compare NEET coaching fees in Ghaziabad 2026. Fee comparison of the 2nd-largest national NEET chain Indirapuram, Smart Achievers, Gyanmudra vs Cerebrum Biology Academy. Best value with small batches. Call 99536-43938!',
+    'Compare NEET coaching fees in Ghaziabad 2026. Fee comparison of the 2nd-largest national NEET chain Indirapuram, Smart Achievers, Gyanmudra vs Cerebrum Biology Academy. Best value with small batches. Call 88264-44334!',
   keywords: [
     'neet coaching fees ghaziabad',
     'neet coaching cost ghaziabad',
@@ -184,11 +184,11 @@ export default function NEETCoachingFeesGhaziabadPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="tel:+919953643938"
+                href="tel:+918826444334"
                 className="inline-flex items-center gap-2 bg-yellow-500 text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
               >
                 <Phone className="w-5 h-5" />
-                Call 99536-43938
+                Call 88264-44334
               </a>
               <Link
                 href="/neet-coaching-ghaziabad"
@@ -352,11 +352,11 @@ export default function NEETCoachingFeesGhaziabadPage() {
               Check Scholarship Eligibility
             </Link>
             <a
-              href="tel:+919953643938"
+              href="tel:+918826444334"
               className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/20 transition border border-white/30"
             >
               <Phone className="w-5 h-5" />
-              Call 99536-43938
+              Call 88264-44334
             </a>
           </div>
         </div>
@@ -407,11 +407,11 @@ export default function NEETCoachingFeesGhaziabadPage() {
               </div>
             </div>
             <a
-              href="tel:+919953643938"
+              href="tel:+918826444334"
               className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
             >
               <Phone className="w-5 h-5" />
-              Discuss Fee &amp; EMI: 99536-43938
+              Discuss Fee &amp; EMI: 88264-44334
             </a>
           </div>
         </div>
@@ -427,11 +427,11 @@ export default function NEETCoachingFeesGhaziabadPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:+919953643938"
+              href="tel:+918826444334"
               className="inline-flex items-center gap-2 bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition"
             >
               <Phone className="w-5 h-5" />
-              Call Now: 99536-43938
+              Call Now: 88264-44334
             </a>
             <Link
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings."

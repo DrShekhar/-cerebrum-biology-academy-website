@@ -21,7 +21,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: 'Online NEET Coaching for Greater Noida Students | Live & Hybrid Mode',
   description:
-    'Online NEET Biology classes for Greater Noida students. Live interactive sessions from home. Hybrid mode with weekend offline at Sector 62 Noida. 800+ students. Call 99536-43938!',
+    'Online NEET Biology classes for Greater Noida students. Live interactive sessions from home. Hybrid mode with weekend offline at Sector 62 Noida. 800+ students. Call 88264-44334!',
   keywords: [
     'online neet classes greater noida',
     'online neet coaching greater noida',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'Online NEET Coaching for Greater Noida Students | Live & Hybrid Mode',
     description:
-      'Online NEET Biology classes for Greater Noida students. Live interactive sessions from home. Hybrid mode with weekend offline at Sector 62 Noida. 800+ students. Call 99536-43938!',
+      'Online NEET Biology classes for Greater Noida students. Live interactive sessions from home. Hybrid mode with weekend offline at Sector 62 Noida. 800+ students. Call 88264-44334!',
   },
 }
 
@@ -151,11 +151,11 @@ export default function OnlineNEETCoachingGreaterNoidaPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="tel:+919953643938"
+                href="tel:+918826444334"
                 className="inline-flex items-center gap-2 bg-yellow-500 text-indigo-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
               >
                 <Phone className="w-5 h-5" />
-                Call 99536-43938
+                Call 88264-44334
               </a>
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
@@ -387,11 +387,11 @@ export default function OnlineNEETCoachingGreaterNoidaPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:+919953643938"
+              href="tel:+918826444334"
               className="inline-flex items-center gap-2 bg-yellow-500 text-indigo-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
             >
               <Phone className="w-5 h-5" />
-              Call 99536-43938
+              Call 88264-44334
             </a>
             <Link
               href="/neet-coaching-noida"
