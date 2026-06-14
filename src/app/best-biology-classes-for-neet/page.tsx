@@ -66,15 +66,15 @@ const config: BestVerticalConfig = {
     { title: 'NEET Biology Video Lectures', href: '/neet-biology-video-lectures' },
     { title: 'NEET Coaching Near Me', href: '/best-neet-coaching-near-me' },
     {
-      title: 'Cerebrum vs the largest national NEET chain',
+      title: 'Cerebrum vs Allen',
       href: '/cerebrum-vs-allen-neet-coaching',
     },
     {
-      title: 'Cerebrum vs the 2nd-largest national NEET chain',
+      title: 'Cerebrum vs Aakash',
       href: '/cerebrum-vs-aakash-neet-coaching',
     },
-    { title: 'Cerebrum vs other online-only platforms', href: '/cerebrum-vs-physicswallah' },
-    { title: 'Cerebrum vs other multi-subject tutoring platforms', href: '/cerebrum-vs-vedantu' },
+    { title: 'Cerebrum vs PhysicsWallah', href: '/cerebrum-vs-physicswallah' },
+    { title: 'Cerebrum vs Vedantu', href: '/cerebrum-vs-vedantu' },
   ],
   pricing: [
     {

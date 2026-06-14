@@ -77,7 +77,7 @@ const config: BestVerticalConfig = {
     { title: 'NEET Foundation Class 9 — Noida', href: '/neet-foundation-class-9-noida' },
     { title: 'NEET Foundation Class 10 — Noida', href: '/neet-foundation-class-10-noida' },
     {
-      title: 'Cerebrum vs the 2nd-largest national NEET chain Foundation',
+      title: 'Cerebrum vs Aakash Foundation',
       href: '/cerebrum-vs-aakash-foundation',
     },
     { title: 'Biology Tuition Class 9-10', href: '/biology-tuition-class-9-10' },

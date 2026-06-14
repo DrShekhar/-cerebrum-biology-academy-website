@@ -67,7 +67,7 @@ const config: BestVerticalConfig = {
     { title: 'RE-NEET Biology Crash Course', href: '/re-neet-2026-biology-crash-course' },
     { title: 'RE-NEET 2026 for Droppers', href: '/re-neet-2026-droppers' },
     {
-      title: 'Cerebrum vs the 2nd-largest national NEET chain vs other online-only platforms',
+      title: 'Cerebrum vs Aakash vs PhysicsWallah',
       href: '/re-neet-2026-cerebrum-vs-aakash-vs-pw',
     },
     { title: 'RE-NEET Coaching in Kota', href: '/re-neet-2026-kota' },

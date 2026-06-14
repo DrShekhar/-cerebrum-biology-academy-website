@@ -74,15 +74,15 @@ const config: BestVerticalConfig = {
     { title: 'NEET Biology MCQ Practice', href: '/neet-biology-mcq' },
     { title: 'NEET Biology Chapter Weightage', href: '/neet-biology-chapter-weightage' },
     {
-      title: 'Cerebrum vs the 2nd-largest national NEET chain NEET Biology',
+      title: 'Cerebrum vs Aakash NEET Biology',
       href: '/cerebrum-vs-aakash-neet-biology',
     },
     {
-      title: 'Cerebrum vs the largest national NEET chain NEET Biology',
+      title: 'Cerebrum vs Allen NEET Biology',
       href: '/cerebrum-vs-allen-neet-biology',
     },
     {
-      title: 'Cerebrum vs other online-only platforms NEET Biology',
+      title: 'Cerebrum vs Unacademy NEET Biology',
       href: '/cerebrum-vs-unacademy-neet-biology',
     },
   ],
