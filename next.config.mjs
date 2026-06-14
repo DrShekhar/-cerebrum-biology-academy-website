@@ -27,8 +27,9 @@ import {
   neetUGBiologySynonymRedirects,
   neetFoundationSynonymRedirects,
   delhiNCRDoorwayConsolidationRedirects,
-  aeoCitationRedirects,
-  cityHubBrokenLinkRedirects,
+  // NOTE: aeoCitationRedirects + cityHubBrokenLinkRedirects are intentionally
+  // served from middleware.ts (Map lookup) instead of here, to stay under
+  // Vercel's 2048 next.config-route cap. Do not re-add them to redirects().
 } from './src/config/seo-redirects.mjs'
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -1628,8 +1629,7 @@ const nextConfig = {
       ...neetUGBiologySynonymRedirects,
       ...neetFoundationSynonymRedirects,
       ...delhiNCRDoorwayConsolidationRedirects,
-      ...aeoCitationRedirects,
-      ...cityHubBrokenLinkRedirects,
+      // aeoCitationRedirects + cityHubBrokenLinkRedirects moved to middleware.ts
     ]
   },
 

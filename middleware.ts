@@ -3,6 +3,15 @@ import { addSecurityHeaders, getJWTSecret } from '@/lib/auth/config'
 import { addCSPHeaders } from '@/lib/security/csp'
 import { compressResponseMiddleware } from '@/lib/middleware/compression'
 import { jwtVerify } from 'jose'
+import { aeoCitationRedirects, cityHubBrokenLinkRedirects } from '@/config/seo-redirects.mjs'
+
+// Vercel caps next.config routes (redirects + rewrites + headers) at 2048.
+// These two large EXACT-MATCH redirect lists are served from middleware instead
+// (a Map lookup doesn't count against that limit) — same 301 behaviour, so
+// prospect/SEO flow is unchanged. Keep ONLY exact-match (no wildcard) arrays here.
+const middlewareRedirects = new Map<string, string>(
+  [...aeoCitationRedirects, ...cityHubBrokenLinkRedirects].map((r) => [r.source, r.destination])
+)
 
 // SECURITY: JWT secret is now imported from @/lib/auth/config (single source of truth)
 // This ensures tokens created with TokenUtils are verified with the same secret
@@ -277,6 +286,13 @@ const HIDE_FROM_INDIA_PATHS = new Set<string>([
 export default async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl
   const hostname = req.headers.get('host') || ''
+
+  // SEO redirects relocated from next.config to stay under Vercel's 2048-route
+  // cap. Exact-match 301s; run first so they behave like config redirects.
+  const relocatedRedirect = middlewareRedirects.get(pathname)
+  if (relocatedRedirect) {
+    return NextResponse.redirect(new URL(relocatedRedirect, req.url), 301)
+  }
 
   // ============================================
   // GEO: Hide China-region cluster from India IPs
