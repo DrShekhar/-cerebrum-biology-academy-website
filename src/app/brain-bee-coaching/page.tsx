@@ -1,0 +1,519 @@
+/**
+ * /brain-bee-coaching
+ *
+ * Vertical landing page for Brain Bee / neuroscience-competition coaching.
+ * New cross-vertical entry (Jun 2026) — positions Cerebrum's AIIMS-trained
+ * biology faculty for the USA / International Brain Bee neuroscience
+ * competition (high-schoolers 13-19). Mirrors /best-biology-tutor-global
+ * structure (server component, metadata + Course/Org/FAQ/Person schema,
+ * WhatsApp CTAs to 918826444334).
+ *
+ * Claims are grounded in verified research (deep-research, Jun 2026):
+ *  - 3-tier ladder: local chapter → USA National → IBB World Championship
+ *  - ages 13-19, official source = free "Brain Facts" book (SfN)
+ *  - 2023 USA scoring: neuroanatomy practical 25% + live oral 25% +
+ *    patient diagnosis 20% = 70% of score; written exam only ~10%
+ *  - patient diagnosis covers ~20 NLM-listed neurological disorders
+ * HONESTY: the official IBB disowns paid prep and IYNA's bootcamp is free —
+ * this page positions Cerebrum as INDEPENDENT competition coaching, not an
+ * official/affiliated program. Prestige is framed conservatively (no
+ * unverified USABO/ISEF-equivalence).
+ */
+
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import {
+  Award,
+  Brain,
+  ChevronRight,
+  ClipboardList,
+  Home,
+  MessageCircle,
+  Microscope,
+  Phone,
+  Stethoscope,
+  Target,
+  Timer,
+  Users,
+} from 'lucide-react'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+
+const SITE_URL = 'https://cerebrumbiologyacademy.com'
+const CANONICAL = '/brain-bee-coaching'
+const PAGE_URL = `${SITE_URL}${CANONICAL}`
+
+export const metadata: Metadata = {
+  title: 'Brain Bee Coaching — Neuroscience Competition Prep (USA & International)',
+  description:
+    'Live, small-batch Brain Bee coaching for high-schoolers (13-19). AIIMS Delhi-trained faculty train the rounds that decide the result — human neuroanatomy practical, neurohistology, MRI ID, patient diagnosis, and the live oral elimination — not just the free Brain Facts written exam. Mock-exam-heavy, time-zone-calibrated for US, NRI & international IBB aspirants. Free assessment.',
+  keywords: [
+    'brain bee coaching',
+    'brain bee preparation',
+    'brain bee tutor',
+    'usa brain bee coaching',
+    'international brain bee prep',
+    'neuroscience competition coaching',
+    'brain bee neuroanatomy practice',
+    'brain bee patient diagnosis prep',
+    'brain bee online course',
+    'brain facts book coaching',
+    'neuroscience olympiad coaching',
+    'brain bee bootcamp',
+    'brain bee mock exam',
+    'brain bee coaching for NRI students',
+    'AIIMS faculty neuroscience coaching',
+  ],
+  alternates: {
+    canonical: PAGE_URL,
+    languages: {
+      en: PAGE_URL,
+      'en-US': PAGE_URL,
+      'en-GB': PAGE_URL,
+      'en-CA': PAGE_URL,
+      'en-AU': PAGE_URL,
+      'en-IN': PAGE_URL,
+      'x-default': PAGE_URL,
+    },
+  },
+  openGraph: {
+    title: 'Brain Bee Coaching — Neuroscience Competition Prep · Cerebrum Biology Academy',
+    description:
+      'Live small-batch coaching for the USA & International Brain Bee — neuroanatomy, neurohistology, MRI ID, patient diagnosis & live-oral simulation by AIIMS-trained faculty.',
+    url: PAGE_URL,
+    locale: 'en',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Brain Bee Coaching — Neuroscience Competition Prep (USA & International)',
+    description:
+      'AIIMS-trained faculty coach the high-weight Brain Bee rounds (neuroanatomy, patient diagnosis, live oral) the free Brain Facts book never trains. Free assessment.',
+  },
+  robots: 'index, follow, max-image-preview:large',
+}
+
+// Curriculum modules mapped to the actual competition rounds. Weights are the
+// verified 2023 USA National scoring breakdown (University of Maryland host).
+const ROUNDS = [
+  {
+    icon: Brain,
+    title: 'Brain Facts mastery — written exam',
+    weight: '~10% of score',
+    detail:
+      'Structured pacing through the full free "Brain Facts" book (Society for Neuroscience) — the official source. We add concept depth, MCQ drilling, and weekly retrieval tests so the breadth is genuinely retained, not skimmed.',
+  },
+  {
+    icon: Microscope,
+    title: 'Human neuroanatomy practical',
+    weight: '25% of score — highest weight',
+    detail:
+      'Identify structures on whole/half human brains and atlas/3D models across timed stations. This is the single biggest-weighted round and the one self-study cannot replicate — we run live, repeated identification drills.',
+  },
+  {
+    icon: Microscope,
+    title: 'Neurohistology + MRI/imaging ID',
+    weight: '~20% of score',
+    detail:
+      'Microscope-slide and photo-matching for histology, plus structure identification on MRI/imaging. Pattern-recognition skills built through graded slide and scan sets with expert feedback.',
+  },
+  {
+    icon: Stethoscope,
+    title: 'Patient diagnosis — clinical reasoning',
+    weight: '20% of score',
+    detail:
+      'Diagnose from patient video/case across the ~20 official neurological disorders (Parkinson’s, Alzheimer’s, Epilepsy, Stroke, MS, ALS, Schizophrenia, OCD, PTSD, and more). This is where AIIMS clinical training is a genuine edge over test-prep generalists.',
+  },
+  {
+    icon: Timer,
+    title: 'Live oral elimination — finals',
+    weight: '25% of score',
+    detail:
+      'Rapid-fire Q&A with two-strike knockout for the top finalists. We simulate the exact timed, high-pressure format weekly so students perform under the conditions that actually separate winners.',
+  },
+  {
+    icon: ClipboardList,
+    title: 'Full mock championships',
+    weight: 'every cohort',
+    detail:
+      'End-to-end graded mocks mirroring the national round structure, with per-student feedback and a personalised gap plan after each one.',
+  },
+]
+
+const TIERS = [
+  {
+    name: 'Foundation Cohort',
+    students: '12-16 weeks · small-batch live',
+    angle:
+      'Full Brain Facts content + every round, built week-by-week. Live classes, slide/practical drills, and graded mocks. For students starting their first Brain Bee season or building from scratch.',
+    bestFor: 'First-time chapter entrants, early starters (Grade 8-11)',
+  },
+  {
+    name: 'Finals & Practical Intensive',
+    students: '4-6 weeks · high-weight rounds',
+    angle:
+      'Focused on the 70% that decides the result — human neuroanatomy practical, neurohistology, MRI ID, patient diagnosis, and timed two-strike oral simulation. For students who have qualified a chapter and are heading to nationals.',
+    bestFor: 'Chapter winners, national & IBB qualifiers',
+  },
+  {
+    name: '1:1 Mentorship',
+    students: '1 student · fully bespoke',
+    angle:
+      'Dedicated faculty mentor, custom plan, weekly clinical-reasoning and oral coaching with direct AIIMS-faculty review. For serious national-champion-track and World-Championship aspirants.',
+    bestFor: 'National-title & International Brain Bee (IBB) aspirants',
+  },
+]
+
+const FAQS = [
+  {
+    question: 'What is the Brain Bee, and who can compete?',
+    answer:
+      'The Brain Bee is a neuroscience competition for high-school students aged 13-19. It runs on three tiers: win a local chapter → advance to your country’s National Championship (e.g. the USA Brain Bee) → the national champion represents the country at the International Brain Bee (IBB) World Championship. The IBB spans 200+ chapters across 50+ countries with roughly 25,000+ competitors a year. Only one national champion per country advances to the World Championship — which is what makes a strong result stand out.',
+  },
+  {
+    question: 'What does the competition actually test?',
+    answer:
+      'Several distinct skills, not just a written exam. In the 2023 USA National scoring, the human neuroanatomy practical was 25%, the live oral elimination 25%, patient diagnosis 20%, and neurohistology + MRI identification + written exam made up the rest — with the written test only ~10%. So roughly 70% of the score comes from the practical, clinical, and live-oral rounds. (Exact rounds and weights vary year to year.)',
+  },
+  {
+    question: 'Isn’t the official Brain Bee study material free? Why pay for coaching?',
+    answer:
+      'Yes — the "Brain Facts" book and the official IYNA bootcamp are free, and they’re genuinely good for the written/content layer. But the free material trains the ~10% written exam, not the ~70% that decides results: identifying structures on real human brains, reading histology slides and MRI, diagnosing patients from the ~20 official disorders, and performing in a timed two-strike oral. Those rounds need live drilling, expert feedback, and mock practice — which is exactly what Cerebrum adds on top of the free content.',
+  },
+  {
+    question: 'Why AIIMS-trained biology faculty for a neuroscience competition?',
+    answer:
+      'The highest-leverage rounds are clinical and physiological — patient diagnosis over real neurological disorders, and rapid oral reasoning. Cerebrum’s faculty are trained at AIIMS Delhi (India’s apex medical institution) and teach neurophysiology and clinical correlations daily for NEET, AP, IB and MCAT students. That clinical depth maps directly onto the patient-diagnosis and oral rounds in a way general test-prep tutors cannot replicate.',
+  },
+  {
+    question: 'Who is this for — US students, NRI families, or international competitors?',
+    answer:
+      'All three. We coach US high-schoolers preparing for the USA Brain Bee, NRI / international families based in the US and elsewhere, and students in other countries preparing for their own national tier and the IBB World Championship. Classes are live online and time-zone-calibrated (ET / PT / GMT / GST / IST and more).',
+  },
+  {
+    question: 'Is Cerebrum affiliated with the official Brain Bee?',
+    answer:
+      'No. Cerebrum Biology Academy provides independent neuroscience-competition coaching. We are not affiliated with, authorised by, or endorsed by the International Brain Bee, the USA Brain Bee, or the Society for Neuroscience. "Brain Bee" is used here only to describe the competition our coaching prepares students for. The official bootcamp (IYNA) is free; our paid coaching is a separate, optional supplement.',
+  },
+  {
+    question: 'How do I start?',
+    answer:
+      'Book a free assessment. We gauge your child’s current level and target tier (chapter, national, or IBB), then recommend the right cohort or 1:1 track and share the schedule and fees in your local currency. WhatsApp +91 88264 44334 or use the buttons on this page.',
+  },
+]
+
+export default function BrainBeeCoachingPage() {
+  const waUrl =
+    'https://wa.me/918826444334?text=' +
+    encodeURIComponent(
+      "Hi — I'm interested in Brain Bee / neuroscience competition coaching for my child (Grade/Year ___, based in [city, country]). Please share the cohort dates, tiers, and a free assessment slot."
+    )
+
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    '@id': `${PAGE_URL}#course`,
+    name: 'Brain Bee Coaching — Neuroscience Competition Preparation',
+    description:
+      'Live small-batch coaching for the USA & International Brain Bee neuroscience competition (ages 13-19). Covers Brain Facts content, human neuroanatomy practical, neurohistology, MRI identification, patient diagnosis, and live-oral simulation. AIIMS-trained faculty.',
+    url: PAGE_URL,
+    inLanguage: 'en',
+    educationalLevel: 'High school (ages 13-19) — neuroscience competition track',
+    about: 'Neuroscience, Brain Bee competition, neuroanatomy, neurophysiology',
+    provider: { '@id': `${SITE_URL}/#organization` },
+  }
+
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'EducationalOrganization',
+    '@id': `${SITE_URL}/#organization`,
+    name: 'Cerebrum Biology Academy',
+    url: SITE_URL,
+    areaServed: { '@type': 'Place', name: 'Worldwide' },
+    knowsAbout: [
+      'Brain Bee competition',
+      'Neuroscience competition coaching',
+      'Neuroanatomy',
+      'Neurohistology',
+      'Patient diagnosis / clinical neurology',
+      'Brain Facts (Society for Neuroscience)',
+      'International Brain Bee (IBB)',
+    ],
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  }
+
+  return (
+    <>
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'Brain Bee Coaching',
+          'Neuroscience Competition Coaching',
+          'Neuroanatomy',
+          'Neurophysiology',
+          'Clinical Neurology / Patient Diagnosis',
+          'International Brain Bee (IBB)',
+        ]}
+        jobTitle="Neuroscience Competition Coach — Brain Bee Preparation"
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
+      <main className="min-h-screen bg-white">
+        <nav className="mx-auto max-w-6xl px-4 pt-6 text-sm text-slate-500">
+          <ol className="flex items-center gap-1">
+            <li>
+              <Link href="/" className="hover:text-blue-700 flex items-center gap-1">
+                <Home className="h-3.5 w-3.5" /> Home
+              </Link>
+            </li>
+            <ChevronRight className="h-3.5 w-3.5" />
+            <li>
+              <Link href="/global" className="hover:text-blue-700">
+                Global Programs
+              </Link>
+            </li>
+            <ChevronRight className="h-3.5 w-3.5" />
+            <li className="text-slate-700">Brain Bee Coaching</li>
+          </ol>
+        </nav>
+
+        {/* Hero */}
+        <section className="mx-auto max-w-6xl px-4 pt-10 pb-14">
+          <span className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-900">
+            <Brain className="h-3.5 w-3.5" />
+            USA &amp; International Brain Bee · Ages 13-19
+          </span>
+          <h1 className="mt-4 max-w-4xl text-3xl font-bold leading-tight text-slate-900 md:text-5xl">
+            Brain Bee coaching that trains the rounds that{' '}
+            <span className="text-blue-700">actually decide the result.</span>
+          </h1>
+          <p className="mt-5 max-w-4xl text-lg leading-relaxed text-slate-600">
+            The free Brain Facts book prepares the written exam &mdash; but that&rsquo;s only about
+            10% of the score. Roughly 70% comes from the human neuroanatomy practical, neurohistology
+            and MRI identification, patient diagnosis, and the live two-strike oral elimination.
+            Cerebrum&rsquo;s AIIMS Delhi-trained faculty coach exactly those rounds &mdash; live,
+            small-batch, mock-exam-heavy, and time-zone-calibrated for US, NRI and international IBB
+            aspirants.
+          </p>
+
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <a
+              href={waUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-base font-semibold text-white shadow hover:bg-green-700"
+            >
+              <MessageCircle className="h-5 w-5" />
+              WhatsApp for a free assessment
+            </a>
+            <a
+              href="tel:+918826444334"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-blue-600 px-5 py-3 text-base font-semibold text-blue-700 hover:bg-blue-50"
+            >
+              <Phone className="h-5 w-5" />
+              Call +91 88264 44334
+            </a>
+          </div>
+
+          <p className="mt-4 text-xs text-slate-400">
+            Independent neuroscience-competition coaching. Not affiliated with or endorsed by the
+            International Brain Bee or the Society for Neuroscience. The official Brain Facts book and
+            IYNA bootcamp are free.
+          </p>
+        </section>
+
+        {/* Rounds-mapped curriculum */}
+        <section className="bg-slate-50">
+          <div className="mx-auto max-w-6xl px-4 py-14">
+            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
+              A curriculum mapped to every round &mdash; not just the book
+            </h2>
+            <p className="mt-3 max-w-3xl text-slate-600">
+              Most prep stops at the written exam. We weight our teaching to the way the competition
+              is actually scored, so students train where the marks are. (Round mix and weights vary
+              year to year; figures shown are the verified 2023 USA National breakdown.)
+            </p>
+            <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {ROUNDS.map((r) => (
+                <div key={r.title} className="rounded-2xl bg-white p-6 ring-1 ring-slate-200">
+                  <r.icon className="h-6 w-6 text-blue-600" />
+                  <h3 className="mt-3 text-lg font-bold text-slate-900">{r.title}</h3>
+                  <p className="text-sm font-semibold text-blue-700">{r.weight}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-700">{r.detail}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Tiers */}
+        <section>
+          <div className="mx-auto max-w-5xl px-4 py-14">
+            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
+              Three tracks &mdash; pick by where you are in the season
+            </h2>
+            <div className="mt-8 grid gap-5 md:grid-cols-3">
+              {TIERS.map((t, idx) => (
+                <div
+                  key={t.name}
+                  className={`rounded-2xl p-6 ${
+                    idx === 1 ? 'bg-blue-700 text-white shadow-xl' : 'bg-white ring-1 ring-slate-200'
+                  }`}
+                >
+                  {idx === 1 && (
+                    <span className="inline-flex items-center gap-1 rounded-full bg-amber-300 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-blue-900">
+                      <Target className="h-3 w-3" />
+                      Most popular
+                    </span>
+                  )}
+                  <h3
+                    className={`mt-3 text-lg font-bold ${idx === 1 ? 'text-white' : 'text-slate-900'}`}
+                  >
+                    {t.name}
+                  </h3>
+                  <p
+                    className={`text-sm font-semibold ${idx === 1 ? 'text-amber-300' : 'text-blue-700'}`}
+                  >
+                    {t.students}
+                  </p>
+                  <p
+                    className={`mt-3 text-sm leading-relaxed ${
+                      idx === 1 ? 'text-blue-100' : 'text-slate-700'
+                    }`}
+                  >
+                    {t.angle}
+                  </p>
+                  <p
+                    className={`mt-4 text-xs font-semibold uppercase tracking-wide ${
+                      idx === 1 ? 'text-amber-300' : 'text-slate-500'
+                    }`}
+                  >
+                    Best for
+                  </p>
+                  <p className={`mt-1 text-sm ${idx === 1 ? 'text-blue-100' : 'text-slate-700'}`}>
+                    {t.bestFor}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-sm text-slate-500">
+              Cohorts are timed to the competition calendar (the USA National runs ~April-May; the
+              IBB World Championship later in the year). Fees are quoted by tier in your local
+              currency after a free assessment.
+            </p>
+          </div>
+        </section>
+
+        {/* Why us */}
+        <section className="bg-slate-50">
+          <div className="mx-auto max-w-4xl px-4 py-14">
+            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
+              Why Cerebrum for Brain Bee
+            </h2>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              {[
+                {
+                  icon: <Stethoscope className="h-5 w-5 text-blue-600" />,
+                  title: 'Clinical depth for patient diagnosis',
+                  text: 'AIIMS-trained faculty teach the real neurology behind the ~20 official disorders — the moat in the 20%-weighted diagnosis round.',
+                },
+                {
+                  icon: <Microscope className="h-5 w-5 text-blue-600" />,
+                  title: 'Live practicals, not just reading',
+                  text: 'Neuroanatomy, histology and MRI identification drilled live with feedback — the 35%+ of the score self-study cannot build.',
+                },
+                {
+                  icon: <Timer className="h-5 w-5 text-blue-600" />,
+                  title: 'Two-strike oral simulation',
+                  text: 'Weekly timed, high-pressure oral rounds so the live finals format is familiar, not a shock.',
+                },
+                {
+                  icon: <Users className="h-5 w-5 text-blue-600" />,
+                  title: 'Small batches, global time zones',
+                  text: 'Live online in ET / PT / GMT / GST / IST and more — built for US, NRI and international IBB aspirants.',
+                },
+              ].map((c) => (
+                <div key={c.title} className="rounded-xl border border-slate-200 bg-white p-5">
+                  {c.icon}
+                  <h3 className="mt-3 text-sm font-semibold text-slate-900">{c.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{c.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section>
+          <div className="mx-auto max-w-4xl px-4 py-16">
+            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
+              Brain Bee coaching &mdash; common questions
+            </h2>
+            <div className="mt-7 divide-y divide-slate-200">
+              {FAQS.map((f, idx) => (
+                <details key={idx} className="group py-5">
+                  <summary className="flex cursor-pointer items-center justify-between gap-4 text-base font-semibold text-slate-900">
+                    <span>{f.question}</span>
+                    <ChevronRight className="h-5 w-5 shrink-0 text-slate-400 transition-transform group-open:rotate-90" />
+                  </summary>
+                  <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-slate-700">
+                    {f.answer}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="bg-slate-900 py-14 text-white">
+          <div className="mx-auto max-w-3xl px-4 text-center">
+            <Award className="mx-auto h-10 w-10 text-amber-300" />
+            <h2 className="mt-4 text-2xl font-bold md:text-3xl">Book a free Brain Bee assessment</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-slate-300">
+              A short live session to gauge your child&rsquo;s level, map the right track (chapter,
+              national, or IBB), and show how we coach the high-weight rounds. Available across all
+              global time zones.
+            </p>
+            <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+              <a
+                href={waUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-6 py-3 text-base font-semibold hover:bg-green-700"
+              >
+                <MessageCircle className="h-5 w-5" />
+                WhatsApp Cerebrum
+              </a>
+              <a
+                href="tel:+918826444334"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white px-6 py-3 text-base font-semibold hover:bg-white hover:text-slate-900"
+              >
+                <Phone className="h-5 w-5" />
+                Call +91 88264 44334
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  )
+}
