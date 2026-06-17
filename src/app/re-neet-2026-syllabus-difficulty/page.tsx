@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'is re-neet harder than original neet',
     'neet reconduct difficulty 2026',
     'neet retest 2026 syllabus',
-    'neet 2026 phase 2 difficulty',
+    'neet 2027 phase 2 difficulty',
     'neet re-exam pattern 2026',
     'nta neet reconduct syllabus update',
   ],

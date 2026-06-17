@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'small batch neet coaching chandigarh',
     'aiims faculty neet coaching chandigarh',
     'allen chandigarh sector 34a review',
-    'neet 2026 coaching chandigarh',
+    'neet 2027 coaching chandigarh',
   ],
   openGraph: {
     title: 'Cerebrum vs Allen Chandigarh | Which is Better for NEET Biology 2026?',

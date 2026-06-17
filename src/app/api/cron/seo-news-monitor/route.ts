@@ -311,7 +311,7 @@ function filterRelevantNews(items: NewsItem[]): NewsItem[] {
     'biology',
     'neet ug',
     'neet 2025',
-    'neet 2026',
+    'neet 2027',
     'medical college',
   ]
 

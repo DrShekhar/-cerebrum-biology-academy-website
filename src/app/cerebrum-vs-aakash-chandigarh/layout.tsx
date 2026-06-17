@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'aakash anthe scholarship chandigarh',
     'aiims faculty neet coaching chandigarh',
     'aakash institute tricity review',
-    'neet 2026 coaching chandigarh',
+    'neet 2027 coaching chandigarh',
   ],
   openGraph: {
     title: 'Cerebrum vs Aakash Chandigarh | Which is Better for NEET Biology 2026?',

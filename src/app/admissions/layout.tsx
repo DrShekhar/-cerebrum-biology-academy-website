@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'Class 11 NEET coaching admission',
     'Class 12 NEET coaching admission',
     'best NEET coaching enrollment',
-    'NEET 2026 batch registration',
+    'NEET 2027 batch registration',
   ],
   openGraph: {
     title: 'Admissions Open 2026-2027 - NEET Biology Coaching',

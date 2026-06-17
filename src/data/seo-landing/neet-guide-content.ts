@@ -2461,12 +2461,12 @@ const neetSyllabus2026: SEOLandingContent = {
     'Complete NEET 2027 syllabus - Physics, Chemistry & Biology. Chapter-wise weightage, important topics & NTA updated preparation strategy.',
   keywords: [
     'neet syllabus 2026',
-    'neet 2026 syllabus',
+    'neet 2027 syllabus',
     'neet ug syllabus 2026',
     'nta neet syllabus 2026',
-    'neet 2026 biology syllabus',
-    'neet 2026 physics syllabus',
-    'neet 2026 chemistry syllabus',
+    'neet 2027 biology syllabus',
+    'neet 2027 physics syllabus',
+    'neet 2027 chemistry syllabus',
     'neet syllabus pdf 2026',
   ],
 
@@ -2664,13 +2664,13 @@ const neetEligibility2026: SEOLandingContent = {
   metaDescription:
     'NEET 2027 eligibility criteria - age limit, educational qualification, attempts limit. Check if you qualify for NEET UG 2026.',
   keywords: [
-    'neet 2026 eligibility',
+    'neet 2027 eligibility',
     'neet eligibility 2026',
-    'neet 2026 age limit',
-    'neet 2026 qualification',
-    'eligibility for neet 2026',
+    'neet 2027 age limit',
+    'neet 2027 qualification',
+    'eligibility for neet 2027',
     'neet ug 2026 eligibility',
-    'who can give neet 2026',
+    'who can give neet 2027',
   ],
 
   hero: {
@@ -2867,12 +2867,12 @@ const neetExamDate2026: SEOLandingContent = {
     'NEET 2026 exam date, application dates, admit card release, result date. Complete NEET UG 2026 schedule and important dates.',
   keywords: [
     'neet 2026 exam date',
-    'neet 2026 date',
+    'neet 2027 date',
     'when is neet 2026',
     'neet ug 2026 exam date',
-    'neet 2026 schedule',
+    'neet 2027 schedule',
     'neet 2026 important dates',
-    'neet 2026 application date',
+    'neet 2027 application date',
   ],
 
   hero: {
@@ -3272,13 +3272,13 @@ const neetApplicationForm2026: SEOLandingContent = {
   metaDescription:
     'NEET 2026 application form - registration dates, how to apply, documents required, fees. Complete NEET UG 2026 application guide.',
   keywords: [
-    'neet 2026 application form',
+    'neet 2027 application form',
     'neet application 2026',
     'neet 2026 registration',
     'neet form 2026',
-    'neet 2026 apply online',
+    'neet 2027 apply online',
     'neet ug 2026 application',
-    'how to apply for neet 2026',
+    'how to apply for neet 2027',
   ],
 
   hero: {

@@ -146,7 +146,7 @@ const faqs = [
   {
     question: 'How to prepare for NEET 2027?',
     answer:
-      'NEET 2026 preparation requires: 1) Master NCERT completely - especially Biology, 2) Create a realistic study schedule (8-10 hours daily), 3) Solve previous year papers (last 10 years), 4) Take regular mock tests, 5) Focus on weak areas, 6) Join good coaching for guidance. Our structured program covers all these aspects.',
+      'NEET 2027 preparation requires: 1) Master NCERT completely - especially Biology, 2) Create a realistic study schedule (8-10 hours daily), 3) Solve previous year papers (last 10 years), 4) Take regular mock tests, 5) Focus on weak areas, 6) Join good coaching for guidance. Our structured program covers all these aspects.',
   },
   {
     question: 'What is the best NEET preparation course?',

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'neet coaching dwarka delhi',
     'aiims trained neet faculty dwarka',
     'cerebrum biology dwarka',
-    'neet 2026 coaching dwarka',
+    'neet 2027 coaching dwarka',
   ],
   other: { 'article:modified_time': '2026-05-25' },
   alternates: { canonical: PAGE_URL },

@@ -2286,7 +2286,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       'live online biology classes for neet',
       'live neet biology coaching',
       'online live classes for neet 2027',
-      'online live classes for neet 2026',
+      'online live classes for neet 2027',
     ],
     hero: {
       headline: 'Live Online NEET Classes',

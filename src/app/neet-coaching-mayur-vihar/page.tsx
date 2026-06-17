@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'neet coaching mayur-vihar delhi',
     'aiims trained neet faculty mayur-vihar',
     'cerebrum biology mayur-vihar',
-    'neet 2026 coaching mayur-vihar',
+    'neet 2027 coaching mayur-vihar',
   ],
   other: { 'article:modified_time': '2026-05-25' },
   alternates: { canonical: PAGE_URL },

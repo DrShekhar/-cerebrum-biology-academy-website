@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     '1 year neet course faridabad',
     'one year neet coaching faridabad',
     '12 months neet course',
-    'neet 2026 one year course',
+    'neet 2027 one year course',
     'class 12 neet integrated course',
     'neet dropper 1 year course',
     'intensive neet coaching faridabad',

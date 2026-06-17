@@ -137,7 +137,7 @@ const faqData = [
   {
     question: 'What is the NEET 2027 syllabus?',
     answer:
-      'NEET 2026 syllabus includes Physics, Chemistry, and Biology (Botany + Zoology) from Class 11 and Class 12 NCERT. NTA may release updated syllabus with the official notification.',
+      'NEET 2027 syllabus includes Physics, Chemistry, and Biology (Botany + Zoology) from Class 11 and Class 12 NCERT. NTA may release updated syllabus with the official notification.',
   },
   {
     question: 'How many times is NEET conducted in a year?',

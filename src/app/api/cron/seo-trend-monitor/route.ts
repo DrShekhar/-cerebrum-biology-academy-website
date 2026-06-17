@@ -21,7 +21,7 @@ const CRON_SECRET = process.env.CRON_SECRET
 
 // Base NEET-related topics to monitor
 const NEET_SEED_TOPICS = [
-  'neet 2026',
+  'neet 2027',
   'neet biology',
   'neet preparation',
   'neet syllabus',

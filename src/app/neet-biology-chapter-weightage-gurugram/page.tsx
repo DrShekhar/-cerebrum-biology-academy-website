@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'neet biology important chapters',
     'neet biology marks distribution',
     'high weightage topics neet biology',
-    'neet 2026 biology syllabus weightage',
+    'neet 2027 biology syllabus weightage',
     'neet biology preparation gurugram',
   ],
   openGraph: {

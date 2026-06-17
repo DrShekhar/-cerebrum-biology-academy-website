@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     'Best biology classes for NEET 2027 — Cerebrum Biology Academy, the only major biology-only specialist coaching brand in India. AIIMS-trained faculty, small batches (15–20), 680+ medical college selections, 98% NEET qualification rate.',
   keywords: [
     'best biology classes for neet',
-    'best biology classes for neet 2026',
+    'best biology classes for neet 2027',
     'best biology classes for neet 2025',
     'best biology classes for neet aspirants',
     'best biology classes online neet',

@@ -2547,7 +2547,7 @@ export const localities: Locality[] = [
         'biology tuition laxmi nagar',
         'neet coaching east delhi',
         'best biology coaching delhi',
-        'neet 2026 coaching laxmi nagar',
+        'neet 2027 coaching laxmi nagar',
       ],
       localKeywords: [
         'laxmi nagar metro',

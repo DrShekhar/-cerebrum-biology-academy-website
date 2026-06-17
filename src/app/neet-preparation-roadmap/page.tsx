@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     'Complete NEET 2027 preparation roadmap with month-by-month study plan, chapter-wise timeline, revision strategy, and mock test schedule by Cerebrum Biology Academy.',
   keywords: [
     'neet preparation roadmap',
-    'neet 2026 study plan',
+    'neet 2027 study plan',
     'neet preparation timeline',
     'neet month wise plan',
     'neet biology roadmap',

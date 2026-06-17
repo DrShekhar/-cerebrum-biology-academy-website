@@ -306,7 +306,7 @@ export const navigationConfig: NavigationSection[] = [
         title: 'NEET Coaching 2026',
         href: '/neet-coaching',
         description: 'Complete NEET coaching with AIIMS & IITians faculty',
-        keywords: ['neet coaching', 'neet 2026', 'neet preparation', 'coaching institute'],
+        keywords: ['neet coaching', 'neet 2027', 'neet preparation', 'coaching institute'],
         isPopular: true,
       },
       {

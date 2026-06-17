@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Biology Notes for NEET 2027 | Chapter-wise Notes by AIIMS Faculty',
   description:
-    'Free NEET Biology notes for all 38 chapters. Chapter-wise notes with diagrams, mnemonics, PYQ analysis and PDF download. Written by Dr. Shekhar (AIIMS). Updated for NEET 2026 syllabus.',
+    'Free NEET Biology notes for all 38 chapters. Chapter-wise notes with diagrams, mnemonics, PYQ analysis and PDF download. Written by Dr. Shekhar (AIIMS). Updated for NEET 2027 syllabus.',
   keywords:
     'biology notes for NEET, NEET biology notes, NEET biology notes PDF, chapter wise biology notes NEET, biology notes class 11 NEET, biology notes class 12 NEET, NCERT biology notes for NEET, NEET biology revision notes, free NEET biology notes',
   openGraph: {

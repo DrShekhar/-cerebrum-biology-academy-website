@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     'neet study plan noida',
     'neet tips noida',
     'how to crack neet from noida',
-    'neet 2026 preparation noida',
+    'neet 2027 preparation noida',
     'best way to prepare for neet noida',
     'neet biology preparation noida',
     'neet coaching tips noida',

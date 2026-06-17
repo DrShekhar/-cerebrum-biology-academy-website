@@ -88,7 +88,7 @@ export default function KeywordTrackerPage() {
         },
         {
           id: '3',
-          keyword: 'neet 2026 biology syllabus',
+          keyword: 'neet 2027 biology syllabus',
           currentPosition: 2,
           previousPosition: 2,
           searchVolume: 22000,
@@ -168,7 +168,7 @@ export default function KeywordTrackerPage() {
         },
         {
           id: '8',
-          keyword: 'nta neet 2026 dates',
+          keyword: 'nta neet 2027 dates',
           currentPosition: 8,
           previousPosition: 4,
           searchVolume: 33100,

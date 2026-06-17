@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'neet coaching connaught-place delhi',
     'aiims trained neet faculty connaught-place',
     'cerebrum biology connaught-place',
-    'neet 2026 coaching connaught-place',
+    'neet 2027 coaching connaught-place',
   ],
   other: { 'article:modified_time': '2026-05-25' },
   alternates: { canonical: PAGE_URL },

@@ -21,7 +21,7 @@ import {
 export const metadata: Metadata = {
   title: 'Free NEET Preparation Tools 2026',
   description:
-    'Free NEET preparation tools: Rank Predictor, College Predictor, Study Plan Generator, and more. Boost your NEET 2026 preparation with our AI-powered tools.',
+    'Free NEET preparation tools: Rank Predictor, College Predictor, Study Plan Generator, and more. Boost your NEET 2027 preparation with our AI-powered tools.',
   keywords: [
     'NEET tools',
     'NEET rank predictor',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'Free NEET Preparation Tools 2026',
     description:
-      'Free NEET preparation tools: Rank Predictor, College Predictor, Study Plan Generator, and more. Boost your NEET 2026 preparation with our AI-powered tools.',
+      'Free NEET preparation tools: Rank Predictor, College Predictor, Study Plan Generator, and more. Boost your NEET 2027 preparation with our AI-powered tools.',
   },
 }
 

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'online neet coaching',
     'neet classes near me',
     'biology for neet',
-    'neet 2026 preparation',
+    'neet 2027 preparation',
   ],
   openGraph: {
     title: 'NEET Biology Coaching | Best NEET Biology Classes | 98% Success Rate',

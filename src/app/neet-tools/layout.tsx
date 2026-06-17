@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Free NEET Tools 2026 - Rank Predictor, College Finder & Study Planner',
   description:
-    'Free NEET 2026 preparation tools including Rank Predictor, College Predictor, Study Plan Generator, and more. AI-powered tools to maximize your NEET score.',
+    'Free NEET 2027 preparation tools including Rank Predictor, College Predictor, Study Plan Generator, and more. AI-powered tools to maximize your NEET score.',
   keywords: [
     'NEET tools',
     'NEET 2027 tools',

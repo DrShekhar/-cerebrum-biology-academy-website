@@ -1481,7 +1481,7 @@ export const southDelhiAreas: LocalArea[] = [
       'biology foundation classes south extension',
       // 2025/2026 keywords
       'neet 2027 coaching south extension',
-      'neet 2026 preparation south delhi',
+      'neet 2027 preparation south delhi',
     ],
     localKeywords: [
       // "Near me" variations for South Extension

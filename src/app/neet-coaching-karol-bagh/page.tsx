@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'neet coaching karol-bagh delhi',
     'aiims trained neet faculty karol-bagh',
     'cerebrum biology karol-bagh',
-    'neet 2026 coaching karol-bagh',
+    'neet 2027 coaching karol-bagh',
   ],
   other: { 'article:modified_time': '2026-05-25' },
   alternates: { canonical: PAGE_URL },
