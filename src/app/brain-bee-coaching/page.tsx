@@ -143,22 +143,31 @@ const TIERS = [
   {
     name: 'Foundation Cohort',
     students: '12-16 weeks · small-batch live',
+    price: '$900',
     angle:
       'Full Brain Facts content + every round, built week-by-week. Live classes, slide/practical drills, and graded mocks. For students starting their first Brain Bee season or building from scratch.',
+    includes:
+      'Includes 2 full mock championships, weekly live oral drills, an AIIMS-faculty patient-diagnosis clinic, a printed study pack, and between-class doubt support — more than the content-only cohorts most providers run.',
     bestFor: 'First-time chapter entrants, early starters (Grade 8-11)',
   },
   {
     name: 'Finals & Practical Intensive',
     students: '4-6 weeks · high-weight rounds',
+    price: '$540',
     angle:
       'Focused on the high-weight rounds (~90% of the score) — human neuroanatomy practical, neurohistology, MRI ID, patient diagnosis, and timed two-strike oral simulation. For students who have qualified a chapter and are heading to nationals.',
+    includes:
+      'Daily timed oral simulation, repeated practical/slide drills, and patient-diagnosis clinics over the full ~20 official disorders, with a graded mock final.',
     bestFor: 'Chapter winners, national & IBB qualifiers',
   },
   {
     name: '1:1 Mentorship',
     students: '1 student · fully bespoke',
+    price: '$1,620',
     angle:
       'Dedicated faculty mentor, custom plan, weekly clinical-reasoning and oral coaching with direct AIIMS-faculty review. For serious national-champion-track and World-Championship aspirants.',
+    includes:
+      'Fully personalised plan, unlimited doubt access, weekly 1:1 with AIIMS-trained faculty, and parent progress updates.',
     bestFor: 'National-title & International Brain Bee (IBB) aspirants',
   },
 ]
@@ -396,12 +405,27 @@ export default function BrainBeeCoachingPage() {
                   >
                     {t.students}
                   </p>
+                  <p className={`mt-2 text-2xl font-bold ${idx === 1 ? 'text-white' : 'text-slate-900'}`}>
+                    {t.price}
+                    <span
+                      className={`ml-1 text-xs font-normal ${idx === 1 ? 'text-blue-200' : 'text-slate-400'}`}
+                    >
+                      all-in
+                    </span>
+                  </p>
                   <p
                     className={`mt-3 text-sm leading-relaxed ${
                       idx === 1 ? 'text-blue-100' : 'text-slate-700'
                     }`}
                   >
                     {t.angle}
+                  </p>
+                  <p
+                    className={`mt-3 text-xs leading-relaxed ${
+                      idx === 1 ? 'text-blue-100' : 'text-slate-600'
+                    }`}
+                  >
+                    {t.includes}
                   </p>
                   <p
                     className={`mt-4 text-xs font-semibold uppercase tracking-wide ${
@@ -418,8 +442,10 @@ export default function BrainBeeCoachingPage() {
             </div>
             <p className="mt-6 text-sm text-slate-500">
               Cohorts are timed to the competition calendar (the USA National runs ~April-May; the
-              IBB World Championship later in the year). Fees are quoted by tier in your local
-              currency after a free assessment.
+              IBB World Championship later in the year). Prices shown are all-in in USD and sit below
+              comparable Brain Bee programmes &mdash; with more live practical, clinical and oral
+              coaching included. Local-currency billing (GBP / EUR / CAD / AUD / INR) and sibling
+              discounts confirmed at your free assessment.
             </p>
           </div>
         </section>

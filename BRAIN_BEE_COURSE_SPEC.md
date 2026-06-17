@@ -13,13 +13,15 @@ One-page spec for a new cross-vertical offering: coaching for the **USA & Intern
 3. **International IBB aspirants** in other countries' national tiers.
 
 ## Products (3 tiers — mirrors Pursuit/Ascent/Pinnacle model)
-| Track | Format | Who | Indicative price* |
-|---|---|---|---|
-| **Foundation Cohort** | 12-16 wk small-batch live | First-timers / early starters (Gr 8-11) | $600-$900 |
-| **Finals & Practical Intensive** | 4-6 wk, high-weight rounds | Chapter winners → nationals/IBB | $400-$700 |
-| **1:1 Mentorship** | Bespoke, weekly faculty review | National-title / IBB aspirants | $1,500-$2,500 |
+**Pricing strategy (owner directive): price ~10% BELOW the closest market comparable, and include MORE service than the market.** All-in USD; local-currency billing + sibling discount at assessment.
 
-\* *Indicative only — OWNER MUST SET.* Market context (verified): IYNA official = **free**; paid competitors **$350-$1,800** (Biolympiads 1:1 $1,800, Advanced camp $1,100; SpringLight $700; iStart Valley $500; self-paced ~$350-$500). Position as premium-live vs free-self-study, not as cheapest.
+| Track | Format | Who | Market comp | **Price (−10%)** |
+|---|---|---|---|---|
+| **Foundation Cohort** | 12-16 wk small-batch live | First-timers / early starters (Gr 8-11) | ~$1,000 (Biolympiads Advanced camp $1,100 / SpringLight $700) | **$900** |
+| **Finals & Practical Intensive** | 4-6 wk, high-weight rounds | Chapter winners → nationals/IBB | ~$600 (iStart $500 / SpringLight std) | **$540** |
+| **1:1 Mentorship** | Bespoke, weekly faculty review | National-title / IBB aspirants | $1,800 (Biolympiads 1:1) | **$1,620** |
+
+Market context (verified): IYNA official bootcamp = **free** (content-only); paid 3rd-parties **$350-$1,800**. Our edge is NOT "cheapest" (IYNA is free) — it's **10% under the paid live programmes AND more included**: live practical/slide/MRI drills, AIIMS-faculty patient-diagnosis clinics, weekly two-strike oral simulation, 2 full mock championships, printed study pack, and doubt support (most competitors ship content/lectures only). Re-baseline if competitor prices move.
 
 ## Curriculum modules → competition rounds
 - **A. Brain Facts mastery** (written ~10%) — paced content + weekly retrieval MCQ tests.
@@ -49,7 +51,7 @@ Align cohorts to the IBB cycle: USA National ~**April-May**, IBB World later in 
 4. How neuroanatomy/histology practicals run when rounds are virtual (affects whether our live-practical pitch holds).
 
 ## Next steps
-- [ ] Owner sets final pricing per tier.
+- [x] Pricing set: $900 / $540 / $1,620 (10% below market, more service included) — DONE Jun 18. Re-baseline if competitor prices move.
 - [x] Link `/brain-bee-coaching` from `/global` vertical cards + add to sitemap. (DONE Jun 18)
 - [ ] Build the Dec-March cohort curriculum week-by-week (mirror IYNA's 16-week spine, add live practical/oral).
 - [ ] Optional: focused research pass on pricing + admissions prestige (deferred).
