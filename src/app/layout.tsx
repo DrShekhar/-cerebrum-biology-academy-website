@@ -31,6 +31,7 @@ import {
   GlobalExitIntent,
   ChatbotWrapper,
   SalesAgentWidget,
+  DynamicDropperBatchBanner,
   DynamicFooter,
   DynamicMobileNavigation,
   DynamicPWAProvider,
@@ -223,6 +224,7 @@ export default function RootLayout({
                               above the trial banner so the time-sensitive
                               CTA gets the top-of-page slot. */}
                           <DynamicReNEETBanner />
+                          <DynamicDropperBatchBanner />
                           <DynamicTrialBanner />
                         </ConditionalHeaderFooter>
                         <main

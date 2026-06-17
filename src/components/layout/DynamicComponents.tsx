@@ -129,6 +129,14 @@ export const DynamicReNEETBanner = dynamic(
   { ssr: true }
 )
 
+// Site-wide NEET 2027 dropper batch start-date announcement (25 Jun / 1 Jul /
+// 10 Jul). SSR for SEO + zero CLS; client-side dismiss with 24h cooldown.
+export const DynamicDropperBatchBanner = dynamic(
+  () =>
+    import('@/components/announcement/DropperBatchBanner').then((mod) => mod.DropperBatchBanner),
+  { ssr: true }
+)
+
 // Maintenance popup - SSR enabled for reduced FOUC
 export const DynamicMaintenancePopup = dynamic(
   () => import('@/components/ui/MaintenancePopup').then((mod) => mod.MaintenancePopup),
