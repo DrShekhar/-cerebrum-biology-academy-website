@@ -47,12 +47,10 @@ export const metadata: Metadata = city
         title: `NEET Coaching in ${city.displayName} · Cerebrum Biology Academy`,
         description: `Best NEET Biology coaching for ${city.displayName} students at Cerebrum.`,
       },
-      // noindex 2026-06 (doorway consolidation Tier C): this intent page shares
-      // ~96% of its rendered copy with its city siblings — Google's scaled-content
-      // policy territory. Page stays fully live for visitors and internal links
-      // (follow); the city's near-me page + city hub carry the indexable signal.
-      // Reversible: restore 'index, follow' when the page gets >=40% unique copy.
-      robots: 'noindex, follow',
+      // index 2026-06: promoted back from Tier-C noindex — this page now renders a
+      // city-unique local-roadmap section (real target colleges, feeder schools,
+      // delivery areas) + 7 city-specific FAQs, clearing the doorway-uniqueness bar.
+      robots: 'index, follow',
     }
   : { title: 'City not found' }
 
@@ -67,6 +65,7 @@ export default function Page() {
     <DropperBatchTemplate
       cityName={city.displayName}
       citySlug={SLUG}
+      cityData={city}
       faqs={[
         {
           question: `What does the NEET dropper batch in ${city.displayName} actually include?`,

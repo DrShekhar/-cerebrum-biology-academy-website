@@ -141,6 +141,18 @@ const NOINDEXED_FAMILY_ALLOWLIST = new Set([
   '/online-neet-coaching-greater-noida',
   '/online-neet-coaching-india',
   '/online-neet-coaching-pcb',
+  // Priority dropper metros promoted back to index (2026-06): each now carries a
+  // city-unique "local roadmap" body (real target colleges, feeder schools,
+  // delivery areas) + 7 city-specific FAQs — well past the doorway-uniqueness bar.
+  // Distinct major markets (different state-quota colleges). Expand this set as
+  // GSC confirms healthy indexing of these first.
+  '/neet-dropper-batch-mumbai',
+  '/neet-dropper-batch-bangalore',
+  '/neet-dropper-batch-hyderabad',
+  '/neet-dropper-batch-pune',
+  '/neet-dropper-batch-chennai',
+  '/neet-dropper-batch-kolkata',
+  '/neet-dropper-batch-kota',
 ])
 const NOINDEXED_FAMILY_PATTERNS = [
   /^\/neet-dropper-batch-[a-z-]+$/,

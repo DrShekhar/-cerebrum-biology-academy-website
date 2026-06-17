@@ -67,6 +67,7 @@ export default function Page() {
     <DropperBatchTemplate
       cityName={city.displayName}
       citySlug={SLUG}
+      cityData={city}
       faqs={[
         {
           question: `What does the NEET dropper batch in ${city.displayName} actually include?`,

@@ -60,6 +60,17 @@ export interface DropperBatchTemplateProps {
   // Per-city differentiation paragraph — covers local NEET ecosystem,
   // coaching competition, student profile. Reduces template-clone signals.
   cityContext?: string
+  // Real per-city data (target colleges, feeder schools, areas, local
+  // coaching). Rendered as a city-unique "local roadmap" body section so the
+  // page carries its own indexable signal instead of reading as a clone.
+  cityData?: {
+    state?: string
+    stateQuotaCollege?: string
+    otherStateMedicalColleges?: string[]
+    feederSchools?: string[]
+    majorAreas?: string[]
+    localCoachingPresence?: string
+  }
   faqs: FAQ[]
 }
 
@@ -143,8 +154,14 @@ export default function DropperBatchTemplate({
   modeLabel = 'online',
   successStories = defaultSuccessStories,
   cityContext,
+  cityData,
   faqs,
 }: DropperBatchTemplateProps) {
+  const localCoachingShort = cityData?.localCoachingPresence
+    ?.split(',')[0]
+    .trim()
+    .replace(/\(.*\)/, '')
+    .trim()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
   // Geo-aware fee range. Foreign visitors (US-based parents of Indian-
@@ -374,6 +391,71 @@ export default function DropperBatchTemplate({
             <p className="text-base md:text-lg text-slate-700 leading-relaxed whitespace-pre-line">
               {cityContext}
             </p>
+          </div>
+        </section>
+      )}
+
+      {/* City-unique local roadmap (renders real per-city data — target colleges,
+          feeder schools, delivery areas, PCM pairing). Differentiates each city
+          page so it earns its own indexable signal rather than reading as a clone. */}
+      {cityData && (
+        <section className="py-12 md:py-16 bg-slate-50">
+          <div className="max-w-5xl mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8">
+              NEET Dropper Coaching in {cityName} — Your Local Roadmap
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {cityData.stateQuotaCollege && (
+                <div className="bg-white rounded-2xl p-6 shadow-sm">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">
+                    Medical colleges {cityName} droppers target
+                  </h3>
+                  <p className="text-slate-700">
+                    Most achievable via {cityData.state ?? 'state'} quota:{' '}
+                    <strong>{cityData.stateQuotaCollege}</strong>.
+                    {cityData.otherStateMedicalColleges?.length
+                      ? ` Also realistic: ${cityData.otherStateMedicalColleges.join(', ')}.`
+                      : ''}{' '}
+                    AIIMS Delhi and national institutes are reachable via the all-India quota.
+                  </p>
+                </div>
+              )}
+              {cityData.feederSchools?.length ? (
+                <div className="bg-white rounded-2xl p-6 shadow-sm">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">
+                    Droppers we&apos;ve coached from {cityName} schools
+                  </h3>
+                  <p className="text-slate-700">
+                    Students from {cityData.feederSchools.slice(0, 4).join(', ')} and similar{' '}
+                    {cityName} schools typically arrive with a strong PCM base but biology stuck
+                    around 270–290. Our 10-month plan moves that to 320+/360.
+                  </p>
+                </div>
+              ) : null}
+              {cityData.majorAreas?.length ? (
+                <div className="bg-white rounded-2xl p-6 shadow-sm">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">
+                    Live online across {cityName}
+                  </h3>
+                  <p className="text-slate-700">
+                    Classes run live on IST evenings; printed study material and test booklets are
+                    shipped to {cityData.majorAreas.slice(0, 5).join(', ')} and all {cityName} pin
+                    codes — no relocation needed.
+                  </p>
+                </div>
+              ) : null}
+              {localCoachingShort && (
+                <div className="bg-white rounded-2xl p-6 shadow-sm">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">
+                    Pairs with your {cityName} PCM coaching
+                  </h3>
+                  <p className="text-slate-700">
+                    Keep {localCoachingShort} for Physics &amp; Chemistry and add Cerebrum as your
+                    biology specialist layer (6–8 hours/week, scheduled around your primary batch).
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </section>
       )}
