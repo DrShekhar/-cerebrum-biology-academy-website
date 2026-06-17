@@ -151,7 +151,7 @@ const TIERS = [
     name: 'Finals & Practical Intensive',
     students: '4-6 weeks · high-weight rounds',
     angle:
-      'Focused on the 70% that decides the result — human neuroanatomy practical, neurohistology, MRI ID, patient diagnosis, and timed two-strike oral simulation. For students who have qualified a chapter and are heading to nationals.',
+      'Focused on the high-weight rounds (~90% of the score) — human neuroanatomy practical, neurohistology, MRI ID, patient diagnosis, and timed two-strike oral simulation. For students who have qualified a chapter and are heading to nationals.',
     bestFor: 'Chapter winners, national & IBB qualifiers',
   },
   {
@@ -172,12 +172,12 @@ const FAQS = [
   {
     question: 'What does the competition actually test?',
     answer:
-      'Several distinct skills, not just a written exam. In the 2023 USA National scoring, the human neuroanatomy practical was 25%, the live oral elimination 25%, patient diagnosis 20%, and neurohistology + MRI identification + written exam made up the rest — with the written test only ~10%. So roughly 70% of the score comes from the practical, clinical, and live-oral rounds. (Exact rounds and weights vary year to year.)',
+      'Several distinct skills, not just a written exam. In the 2023 USA National scoring, the human neuroanatomy practical was 25%, the live oral elimination 25%, patient diagnosis 20%, neurohistology 10%, MRI identification 10%, and the written exam only ~10%. So only about 10% is pure book recall — the other ~90% is practical, clinical and live-oral, and the three heaviest rounds alone (neuroanatomy, oral, patient diagnosis) are ~70%. (Exact rounds and weights vary year to year.)',
   },
   {
     question: 'Isn’t the official Brain Bee study material free? Why pay for coaching?',
     answer:
-      'Yes — the "Brain Facts" book and the official IYNA bootcamp are free, and they’re genuinely good for the written/content layer. But the free material trains the ~10% written exam, not the ~70% that decides results: identifying structures on real human brains, reading histology slides and MRI, diagnosing patients from the ~20 official disorders, and performing in a timed two-strike oral. Those rounds need live drilling, expert feedback, and mock practice — which is exactly what Cerebrum adds on top of the free content.',
+      'Yes — the "Brain Facts" book and the official IYNA bootcamp are free, and they’re genuinely good for the written/content layer. But the free material trains the ~10% written exam, not the ~90% that decides results: identifying structures on real human brains, reading histology slides and MRI, diagnosing patients from the ~20 official disorders, and performing in a timed two-strike oral. Those rounds need live drilling, expert feedback, and mock practice — which is exactly what Cerebrum adds on top of the free content.',
   },
   {
     question: 'Why AIIMS-trained biology faculty for a neuroscience competition?',
@@ -307,9 +307,11 @@ export default function BrainBeeCoachingPage() {
           </h1>
           <p className="mt-5 max-w-4xl text-lg leading-relaxed text-slate-600">
             The free Brain Facts book prepares the written exam &mdash; but that&rsquo;s only about
-            10% of the score. Roughly 70% comes from the human neuroanatomy practical, neurohistology
-            and MRI identification, patient diagnosis, and the live two-strike oral elimination.
-            Cerebrum&rsquo;s AIIMS Delhi-trained faculty coach exactly those rounds &mdash; live,
+            10% of the score. Roughly 90% comes from the practical and clinical rounds &mdash; human
+            neuroanatomy, neurohistology and MRI identification, patient diagnosis, and the live
+            two-strike oral elimination (the three heaviest alone &mdash; neuroanatomy, diagnosis and
+            oral &mdash; are ~70%). Cerebrum&rsquo;s AIIMS Delhi-trained faculty coach exactly those
+            rounds &mdash; live,
             small-batch, mock-exam-heavy, and time-zone-calibrated for US, NRI and international IBB
             aspirants.
           </p>
@@ -438,7 +440,7 @@ export default function BrainBeeCoachingPage() {
                 {
                   icon: <Microscope className="h-5 w-5 text-blue-600" />,
                   title: 'Live practicals, not just reading',
-                  text: 'Neuroanatomy, histology and MRI identification drilled live with feedback — the 35%+ of the score self-study cannot build.',
+                  text: 'Neuroanatomy, histology and MRI identification drilled live with feedback — the ~45% of the score self-study cannot build.',
                 },
                 {
                   icon: <Timer className="h-5 w-5 text-blue-600" />,
