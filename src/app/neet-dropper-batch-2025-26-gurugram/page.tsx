@@ -8,11 +8,11 @@ import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
-  title: 'NEET Dropper Batch 2026-27 in Gurugram | Repeater Course',
+  title: 'NEET Dropper Batch 2027 in Gurugram | Repeater Course',
   description:
-    'Join NEET Dropper Batch 2026-27 in Gurugram (Gurgaon). Intensive 1-year program for NEET repeaters. Previous attempt analysis, personalized strategy, expert faculty at Sector 51.',
+    'Join NEET Dropper Batch 2027 in Gurugram (Gurgaon). Intensive 1-year program for NEET repeaters. Previous attempt analysis, personalized strategy, expert faculty at Sector 51.',
   keywords: [
-    'neet dropper batch 2026-27 gurugram',
+    'neet dropper batch 2027 gurugram',
     'neet repeater course gurugram',
     'neet dropper coaching gurugram',
     'neet second attempt gurugram',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     locale: 'en_IN',
-    title: 'NEET Dropper Batch 2026-27 in Gurugram | Intensive Repeater Course',
+    title: 'NEET Dropper Batch 2027 in Gurugram | Intensive Repeater Course',
     description: 'Intensive 1-year NEET preparation for droppers and repeaters in Gurugram.',
     url: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-2025-26-gurugram',
   },
@@ -33,17 +33,17 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'NEET Dropper Batch 2026-27 in Gurugram | Repeater Course',
+    title: 'NEET Dropper Batch 2027 in Gurugram | Repeater Course',
     description:
-      'Join NEET Dropper Batch 2026-27 in Gurugram (Gurgaon). Intensive 1-year program for NEET repeaters. Previous attempt analysis, personalized strategy, expert faculty at Sector 51.',
+      'Join NEET Dropper Batch 2027 in Gurugram (Gurgaon). Intensive 1-year program for NEET repeaters. Previous attempt analysis, personalized strategy, expert faculty at Sector 51.',
   },
 }
 
 const faqs = [
   {
-    question: 'What is the eligibility for NEET Dropper Batch 2026-27?',
+    question: 'What is the eligibility for NEET Dropper Batch 2027?',
     answer:
-      'Any student who has appeared for NEET 2024 or 2025 and wants to improve their score is eligible. We analyze your previous attempt and create a personalized improvement plan.',
+      'Any student who has appeared for NEET 2025 or 2026 and wants to improve their score is eligible. We analyze your previous attempt and create a personalized improvement plan.',
   },
   {
     question: 'What makes your dropper batch different?',
@@ -75,9 +75,9 @@ export default function NEETDropperBatch2025GurugramPage() {
   const courseSchema = {
     '@context': 'https://schema.org',
     '@type': 'Course',
-    name: 'NEET Dropper Batch 2026-27 - Gurugram',
+    name: 'NEET Dropper Batch 2027 - Gurugram',
     description:
-      'Intensive 1-year NEET preparation program for droppers and repeaters targeting NEET 2026.',
+      'Intensive 1-year NEET preparation program for droppers and repeaters targeting NEET 2027.',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -130,7 +130,7 @@ export default function NEETDropperBatch2025GurugramPage() {
       {
         '@type': 'ListItem',
         position: 3,
-        name: 'Dropper Batch 2026-27',
+        name: 'Dropper Batch 2027',
         item: 'https://cerebrumbiologyacademy.com/one-year-dropper-course-gurugram',
       },
     ],

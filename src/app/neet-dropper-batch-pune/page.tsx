@@ -8,8 +8,8 @@ const city = NEAR_ME_CITY_BY_SLUG[SLUG]
 
 export const metadata: Metadata = city
   ? {
-      title: `NEET Dropper Batch 2026-27 ${city.displayName} | Biology Specialist Repeater Programme · Cerebrum`,
-      description: `NEET Dropper Batch 2026-27 for ${city.displayName} (${city.state}) students. Biology-specialist coaching for repeaters targeting ${city.stateQuotaCollege}${city.otherStateMedicalColleges?.length ? ' or ' + city.otherStateMedicalColleges[0] : ''}. AIIMS-trained faculty, 10-40 student batches, live online + study material shipped to ${city.majorAreas.slice(0, 3).join(', ')}. Pair with your existing ${city.localCoachingPresence
+      title: `NEET Dropper Batch 2027 ${city.displayName} | Biology Specialist Repeater Programme · Cerebrum`,
+      description: `NEET Dropper Batch 2027 for ${city.displayName} (${city.state}) students. Biology-specialist coaching for repeaters targeting ${city.stateQuotaCollege}${city.otherStateMedicalColleges?.length ? ' or ' + city.otherStateMedicalColleges[0] : ''}. AIIMS-trained faculty, 10-40 student batches, live online + study material shipped to ${city.majorAreas.slice(0, 3).join(', ')}. Pair with your existing ${city.localCoachingPresence
         .split(',')[0]
         .trim()
         .replace(/\\(.*\\)/, '')
@@ -31,7 +31,7 @@ export const metadata: Metadata = city
         canonical: `https://cerebrumbiologyacademy.com/neet-dropper-batch-${SLUG}`,
       },
       openGraph: {
-        title: `NEET Dropper Batch 2026-27 ${city.displayName} · Cerebrum Biology Academy`,
+        title: `NEET Dropper Batch 2027 ${city.displayName} · Cerebrum Biology Academy`,
         description: `Biology-specialist NEET repeater programme for ${city.displayName} students targeting ${city.stateQuotaCollege}.`,
         url: `https://cerebrumbiologyacademy.com/neet-dropper-batch-${SLUG}`,
         locale: 'en_IN',
@@ -85,7 +85,7 @@ export default function Page() {
         },
         {
           question: `Pricing for ${city.displayName} dropper?`,
-          answer: `Pursuit Rs 48,000/yr; Ascent Rs 76,000/yr; Pinnacle ZA Rs 98,000/yr. EMI available. Shipping included.`,
+          answer: `Pursuit ₹40,000–₹75,000/yr; Ascent ₹58,000–₹90,000/yr; Pinnacle ZA ₹1,20,000–₹1,56,000/yr. EMI available. Shipping included.`,
         },
         {
           question: `Schedule alongside local PCM coaching?`,

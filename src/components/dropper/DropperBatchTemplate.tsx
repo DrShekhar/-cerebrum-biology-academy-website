@@ -150,9 +150,9 @@ export default function DropperBatchTemplate({
   // Geo-aware fee range. Foreign visitors (US-based parents of Indian-
   // origin droppers are a real cohort) see local currency primary with
   // INR as secondary context. Indian visitors see INR-only.
-  const lowFx = useForeignPrice(70000)
+  const lowFx = useForeignPrice(40000)
   const highFx = useForeignPrice(156000)
-  const feeRangeINR = `${formatINR(70000)} – ${formatINR(156000)}`
+  const feeRangeINR = `${formatINR(40000)} – ${formatINR(156000)}`
   const feeRangeForeign =
     lowFx && highFx
       ? `${lowFx.symbol}${lowFx.amount.toLocaleString('en-US')} – ${highFx.symbol}${highFx.amount.toLocaleString('en-US')} ${highFx.code}`
@@ -161,13 +161,13 @@ export default function DropperBatchTemplate({
   const handleWhatsApp = () => {
     trackAndOpenWhatsApp({
       source: `dropper-batch-${citySlug}`,
-      message: `Hi! I am interested in NEET Dropper Batch 2026-27 in ${cityName}. Please share details about the program, fees, and demo class.`,
+      message: `Hi! I am interested in NEET Dropper Batch 2027 in ${cityName}. Please share details about the program, fees, and demo class.`,
       campaign: `dropper-batch-${citySlug}`,
     })
   }
 
   const counsellingHref = `https://wa.me/${CONTACT_INFO.whatsapp.number}?text=${encodeURIComponent(
-    `Hi! I want to book FREE counseling for NEET Dropper Batch 2026-27 in ${cityName}. Please share available timings.`
+    `Hi! I want to book FREE counseling for NEET 2027 Dropper Batch in ${cityName}. Please share available timings.`
   )}`
 
   const pageUrl = `https://cerebrumbiologyacademy.com/neet-dropper-batch-${citySlug}`
@@ -175,7 +175,7 @@ export default function DropperBatchTemplate({
   const courseSchema = {
     '@context': 'https://schema.org',
     '@type': 'Course',
-    name: `NEET Dropper Batch 2026-27 ${cityName}`,
+    name: `NEET Dropper Batch 2027 ${cityName}`,
     description: `Intensive 1-year NEET Biology repeater programme for ${cityName} students. AIIMS-trained faculty, previous-attempt analysis, 100-150 mark improvement target.`,
     url: pageUrl,
     inLanguage: 'en-IN',
@@ -290,7 +290,7 @@ export default function DropperBatchTemplate({
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <span className="text-teal-700 font-medium">{cityName} Dropper Batch 2026-27</span>
+              <span className="text-teal-700 font-medium">{cityName} Dropper Batch 2027</span>
             </li>
           </ol>
         </div>
@@ -307,11 +307,11 @@ export default function DropperBatchTemplate({
           <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <RefreshCw className="w-4 h-4" />
-              Batch Starting July 2025
+              NEET 2027 Admissions Open · Batch Starts July 2026
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              NEET Dropper Batch 2026-27
+              NEET Dropper Batch 2027
               <span className="block text-yellow-400 mt-2">in {cityName}</span>
             </h1>
 
@@ -495,7 +495,7 @@ export default function DropperBatchTemplate({
                 </div>
                 <div className="flex justify-between py-3 border-b">
                   <span className="text-slate-600">Duration</span>
-                  <span className="font-semibold">1 Year (Jul 2025 – May 2026)</span>
+                  <span className="font-semibold">1 Year (Jul 2026 – May 2027)</span>
                 </div>
                 <div className="flex justify-between py-3 border-b">
                   <span className="text-slate-600">Mode</span>
@@ -521,7 +521,7 @@ export default function DropperBatchTemplate({
                 </div>
                 <div className="flex justify-between py-3">
                   <span className="text-slate-600">Target</span>
-                  <span className="font-semibold text-yellow-600">NEET 2026</span>
+                  <span className="font-semibold text-yellow-600">NEET 2027</span>
                 </div>
               </div>
               <p className="mt-4 text-sm text-slate-600 italic">
@@ -675,7 +675,7 @@ export default function DropperBatchTemplate({
             Your Second Attempt is Your Best Attempt
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join NEET Dropper Batch 2026-27 from {cityName} — most students who follow the programme
+            Join NEET Dropper Batch 2027 from {cityName} — most students who follow the programme
             add 100+ marks
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

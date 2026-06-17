@@ -8,8 +8,8 @@ const city = NEAR_ME_CITY_BY_SLUG[SLUG]
 
 export const metadata: Metadata = city
   ? {
-      title: `NEET Dropper Batch 2026-27 ${city.displayName} | Biology Specialist Repeater Programme · Cerebrum`,
-      description: `NEET Dropper Batch 2026-27 for ${city.displayName} (${city.state}) students. Biology-specialist coaching for repeaters targeting ${city.stateQuotaCollege}${city.otherStateMedicalColleges?.length ? ' or ' + city.otherStateMedicalColleges[0] : ''}. AIIMS-trained faculty, 10-40 student batches, live online + study material shipped to ${city.majorAreas.slice(0, 3).join(', ')}. Pair with your existing ${city.localCoachingPresence
+      title: `NEET Dropper Batch 2027 ${city.displayName} | Biology Specialist Repeater Programme · Cerebrum`,
+      description: `NEET Dropper Batch 2027 for ${city.displayName} (${city.state}) students. Biology-specialist coaching for repeaters targeting ${city.stateQuotaCollege}${city.otherStateMedicalColleges?.length ? ' or ' + city.otherStateMedicalColleges[0] : ''}. AIIMS-trained faculty, 10-40 student batches, live online + study material shipped to ${city.majorAreas.slice(0, 3).join(', ')}. Pair with your existing ${city.localCoachingPresence
         .split(',')[0]
         .trim()
         .replace(/\\(.*\\)/, '')
@@ -36,7 +36,7 @@ export const metadata: Metadata = city
         },
       },
       openGraph: {
-        title: `NEET Dropper Batch 2026-27 ${city.displayName} · Cerebrum Biology Academy`,
+        title: `NEET Dropper Batch 2027 ${city.displayName} · Cerebrum Biology Academy`,
         description: `Biology-specialist NEET repeater programme for ${city.displayName} students targeting ${city.stateQuotaCollege}. AIIMS-trained faculty.`,
         url: `https://cerebrumbiologyacademy.com/neet-dropper-batch-${SLUG}`,
         locale: 'en_IN',
@@ -90,7 +90,7 @@ export default function Page() {
         },
         {
           question: `What's the pricing for the ${city.displayName} dropper programme?`,
-          answer: `Pricing is the same nationally — Pursuit (30-40 students) ~₹48,000/yr; Ascent (16-25 students with weekly 1:1 doubt slot) ~₹76,000/yr; Pinnacle ZA (10-12 students with direct Dr. Shekhar weekly mentor calls) ~₹98,000/yr. EMI options available. Shipping of printed material included.`,
+          answer: `Pricing is the same nationally — Pursuit (30-40 students) ₹40,000–₹75,000/yr; Ascent (16-25 students with weekly 1:1 doubt slot) ₹58,000–₹90,000/yr; Pinnacle ZA (10-12 students with direct Dr. Shekhar weekly mentor calls) ₹1,20,000–₹1,56,000/yr. EMI options available. Shipping of printed material included.`,
         },
         {
           question: `Schedule for a ${city.displayName} dropper while doing local Allen / Aakash?`,

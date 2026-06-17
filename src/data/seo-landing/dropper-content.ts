@@ -88,7 +88,7 @@ export const neetDropperBatchOnline: SEOLandingContent = {
 
   title: 'NEET Dropper Batch Online | Year-Long Intensive Course 2027',
   metaDescription:
-    "Join India's best NEET dropper batch online. Intensive year-long course by AIIMS faculty. 92% success rate, 580+ avg score. Limited seats for 2026 batch!",
+    "Join India's best NEET dropper batch online. Intensive year-long course by AIIMS faculty. 92% success rate, 580+ avg score. Limited seats for 2027 batch!",
   keywords: [
     'NEET dropper batch online',
     'NEET dropper online coaching',
@@ -102,7 +102,7 @@ export const neetDropperBatchOnline: SEOLandingContent = {
     subheadline:
       'NEET dropper online batch with 92% success rate. Turn your gap year into your winning year.',
     highlightedText: 'Drop Year Done Right = AIIMS Possible',
-    ctaText: 'Join 2026 Dropper Batch',
+    ctaText: 'Join 2027 Dropper Batch',
     ctaLink: '/courses/neet-dropper',
     backgroundGradient: 'from-red-900 via-orange-900 to-yellow-900',
   },
@@ -323,35 +323,35 @@ export const neetRepeaterCourse2027: SEOLandingContent = {
   ],
   slug: 'neet-repeater-course-2025',
 
-  title: 'NEET Repeater Course 2026 Online | Best Coaching for 2nd Attempt',
+  title: 'NEET Repeater Course 2027 Online | Best Coaching for 2nd Attempt',
   metaDescription:
-    'NEET 2026/2026 repeater course online. Expert coaching for second attempt. 92% success rate, proven methodology. Enroll for NEET 2026 batch now!',
+    'NEET 2027 repeater course online. Expert coaching for second attempt. 92% success rate, proven methodology. Enroll for NEET 2027 batch now!',
   keywords: [
-    'NEET repeater course 2026',
-    'NEET 2026 dropper batch',
-    'NEET 2026 repeater online',
+    'NEET repeater course 2027',
+    'NEET 2027 dropper batch',
+    'NEET 2027 repeater online',
     'NEET second attempt coaching online',
     'NEET repeater online course',
   ],
 
   hero: {
-    headline: 'NEET 2026: Your Year to Succeed',
+    headline: 'NEET 2027: Your Year to Succeed',
     subheadline:
-      "Didn't crack NEET 2026? The 2026 batch is your opportunity. Strategic online preparation designed for repeaters.",
-    highlightedText: 'NEET 2026 Batch Now Enrolling',
-    ctaText: 'Join NEET 2026 Batch',
+      "Didn't crack NEET 2027? The 2027 batch is your opportunity. Strategic online preparation designed for repeaters.",
+    highlightedText: 'NEET 2027 Batch Now Enrolling',
+    ctaText: 'Join NEET 2027 Batch',
     ctaLink: '/courses/neet-dropper',
     backgroundGradient: 'bg-indigo-700',
   },
 
   painPoints: {
-    title: "NEET 2026 Didn't Work? NEET 2026 Will.",
+    title: "NEET 2027 Didn't Work? NEET 2027 Will.",
     points: [
       {
         icon: 'calendar',
-        question: 'Feeling the time pressure for NEET 2026?',
+        question: 'Feeling the time pressure for NEET 2027?',
         solution:
-          'Our 10-12 month structured program fits perfectly. Peak performance by May 2026.',
+          'Our 10-12 month structured program fits perfectly. Peak performance by May 2027.',
       },
       {
         icon: 'refresh-cw',
@@ -374,7 +374,7 @@ export const neetRepeaterCourse2027: SEOLandingContent = {
   },
 
   benefits: {
-    title: 'NEET 2026 Preparation Timeline',
+    title: 'NEET 2027 Preparation Timeline',
     subtitle: 'Strategically designed for repeaters to peak at the right time',
     items: [
       {
@@ -412,42 +412,42 @@ export const neetRepeaterCourse2027: SEOLandingContent = {
 
   faqs: [
     {
-      question: 'When should I join for NEET 2026 repeater batch?',
+      question: 'When should I join for NEET 2027 repeater batch?',
       answer:
         'Best to join by June-July 2027 for maximum preparation time. Late joiners (up to September) can also catch up with our accelerated track. Earlier you join, better your preparation.',
     },
     {
-      question: 'What is the expected score improvement for NEET 2026?',
+      question: 'What is the expected score improvement for NEET 2027?',
       answer:
         'Typical improvement: 80-150 marks depending on starting point and effort. Students starting at 450-500 often reach 600+. Those at 500-550 can target 650+. Our record improvement is 180 marks.',
     },
     {
-      question: 'How is NEET 2026 expected to be different from 2024?',
+      question: 'How is NEET 2027 expected to be different from 2026?',
       answer:
         'NTA may adjust difficulty and pattern. We prepare for all scenarios with varied question types, increased conceptual focus, and application-based practice. Our students are ready for any pattern.',
     },
     {
-      question: 'Is this online course sufficient for NEET 2026?',
+      question: 'Is this online course sufficient for NEET 2027?',
       answer:
         'Absolutely sufficient. Our online repeater course includes: 6-day classes, complete study material, 50+ mock tests, doubt support, and mentorship. Many of our AIIMS selections came from online batches.',
     },
     {
-      question: 'How do you help with NEET 2026 exam anxiety?',
+      question: 'How do you help with NEET 2027 exam anxiety?',
       answer:
         'We address this seriously: Regular mock tests reduce exam fear, dedicated stress management sessions, one-on-one counseling available, peer support group, and exam day strategy training.',
     },
     {
-      question: 'What is the fee for NEET 2026 repeater online course?',
+      question: 'What is the fee for NEET 2027 repeater online course?',
       answer:
-        'NEET 2026 repeater batch: ₹80,000 for full program. Early bird discount available. EMI at ₹4,500/month. Includes everything needed for NEET 2026 success.',
+        'NEET 2027 repeater batch: ₹80,000 for full program. Early bird discount available. EMI at ₹4,500/month. Includes everything needed for NEET 2027 success.',
     },
   ],
 
   cta: {
-    title: 'Make NEET 2026 Your Year',
+    title: 'Make NEET 2027 Your Year',
     subtitle: "Enrollment open for limited seats. Don't wait until it's too late.",
     primaryButton: {
-      text: 'Enroll for NEET 2026',
+      text: 'Enroll for NEET 2027',
       link: '/courses/neet-dropper',
     },
     secondaryButton: {
@@ -463,7 +463,7 @@ export const neetRepeaterCourse2027: SEOLandingContent = {
         body: 'A repeater has a significant advantage that first-time aspirants lack: examination experience. You have already sat through the three-hour NEET paper, felt the time pressure, and identified which sections drained your energy. The key to a successful second attempt is converting that experience into a data-driven study plan. Start by analyzing your previous scorecard chapter by chapter. Identify the topics where you lost marks due to conceptual gaps versus careless errors. Conceptual gaps require re-learning with a different teaching approach, while careless errors need disciplined practice under timed conditions. Our 2026 repeater course begins with this diagnostic phase, ensuring that your twelve months are spent on targeted improvement rather than aimless repetition of the entire syllabus.',
       },
       {
-        heading: 'How NEET 2026 Preparation Differs from Previous Years',
+        heading: 'How NEET 2027 Preparation Differs from Previous Years',
         body: 'NTA has been progressively shifting NEET towards application-based and assertion-reason questions. The 2026 paper is expected to continue this trend with more interdisciplinary questions that connect concepts across chapters. For example, a genetics question might require understanding of molecular biology and biotechnology simultaneously. Repeaters who simply memorize isolated facts will struggle with this pattern. Our course trains students to build conceptual bridges between chapters through integrated topic sessions. We also incorporate questions modeled on the latest NTA pattern, including statement-based MCQs and data interpretation problems, so that our students are over-prepared for any format changes.',
       },
     ],
@@ -485,7 +485,7 @@ export const neetRepeaterCourse2027: SEOLandingContent = {
 
   schema: {
     '@type': 'Course',
-    courseName: 'NEET 2026 Repeater Course',
+    courseName: 'NEET 2027 Repeater Course',
     provider: 'Cerebrum Biology Academy',
     description:
       'Online NEET repeater course for 2026 exam with strategic preparation and proven results.',
@@ -1126,7 +1126,7 @@ export const neetRepeaters2026: SEOLandingContent = {
       name: 'Ankit Verma',
       achievement: 'AIR 312 | AIIMS Delhi (2026 Repeater)',
       quote:
-        'NEET 2025 was a disaster at 470. Cerebrum 2026 repeater batch rebuilt my biology from chapter 1. Scored 350 in biology and 640 overall in NEET 2026.',
+        'NEET 2025 was a disaster at 470. Cerebrum 2026 repeater batch rebuilt my biology from chapter 1. Scored 350 in biology and 640 overall in NEET 2027.',
       score: '640/720',
     },
     {
@@ -1148,7 +1148,7 @@ export const neetRepeaters2026: SEOLandingContent = {
 
   title: 'NEET Repeaters 2026 | Dropper Batch for Second Attempt Success',
   metaDescription:
-    'Join NEET Repeaters 2026 batch designed specifically for droppers. Proven 92% success rate, 100+ marks improvement guarantee. Expert mentorship for your second attempt.',
+    'Join NEET Repeaters 2027 batch designed specifically for droppers. Proven 92% success rate, 100+ marks improvement guarantee. Expert mentorship for your second attempt.',
   keywords: [
     'neet repeaters 2026',
     'neet dropper batch 2026',
@@ -1162,9 +1162,9 @@ export const neetRepeaters2026: SEOLandingContent = {
   hero: {
     headline: 'NEET Repeaters 2026: Your Second Chance, Our Full Support',
     subheadline:
-      'Specially designed dropper program for NEET 2026. Learn from your first attempt, fix the gaps, and score 650+ this time. Over 1,200 successful droppers trust us.',
+      'Specially designed dropper program for NEET 2027. Learn from your first attempt, fix the gaps, and score 650+ this time. Over 1,200 successful droppers trust us.',
     highlightedText: 'Transform Your Gap Year into AIIMS Year',
-    ctaText: 'Join 2026 Repeaters Batch',
+    ctaText: 'Join 2027 Repeaters Batch',
     ctaLink: '/courses/neet-dropper',
   },
 
@@ -1252,10 +1252,10 @@ export const neetRepeaters2026: SEOLandingContent = {
     {
       question: 'Is taking a drop year for NEET worth it in 2026?',
       answer:
-        'Absolutely. NEET 2026 gives you full 12 months of focused preparation. Statistics show: 65% of medical students took 2+ attempts, average improvement with structured drop year is 80-150 marks, and medical college seats are increasing every year. If you are committed, the drop year is your best investment.',
+        'Absolutely. NEET 2027 gives you full 12 months of focused preparation. Statistics show: 65% of medical students took 2+ attempts, average improvement with structured drop year is 80-150 marks, and medical college seats are increasing every year. If you are committed, the drop year is your best investment.',
     },
     {
-      question: 'How is the NEET Repeaters 2026 batch different from fresh batch?',
+      question: 'How is the NEET Repeaters 2027 batch different from fresh batch?',
       answer:
         'Key differences: Faster syllabus coverage (you have seen it once), more focus on practice and tests (less theory repetition), psychological support for drop year challenges, peer group of serious repeaters only, and personalized gap analysis based on your previous attempt.',
     },
@@ -1265,24 +1265,24 @@ export const neetRepeaters2026: SEOLandingContent = {
         'Our repeater students typically improve by 80-150 marks. Average improvement is 120 marks. Students who follow our schedule completely have seen up to 180 marks improvement. Your improvement depends on your effort and following our strategy.',
     },
     {
-      question: 'When does the NEET 2026 repeaters batch start?',
+      question: 'When does the NEET 2027 repeaters batch start?',
       answer:
         'Main batch starts June 2027 (right after NEET 2027 results). We also have July batch for students who decide later. Earlier you join, more revision cycles you complete. Registration opens April 2027.',
     },
     {
-      question: 'What if I fail again in NEET 2026?',
+      question: 'What if I fail again in NEET 2027?',
       answer:
         'Our 92% success rate means this is rare, but we support you regardless. We offer: discounted re-enrollment for third attempt, career counseling for alternative paths (BDS, BAMS, Abroad), and lifetime access to study materials. You will not be abandoned.',
     },
     {
-      question: 'What is the fee for NEET Repeaters 2026 batch?',
+      question: 'What is the fee for NEET Repeaters 2027 batch?',
       answer:
         'Complete program: Rs 80,000/year (original Rs 95,000). Includes: 6-day weekly live classes, printed study material, 50+ mock tests, mental wellness support, and personal mentorship. EMI at Rs 4,500/month available.',
     },
   ],
 
   courseSummary: {
-    title: 'NEET Repeaters 2026 Batch',
+    title: 'NEET Repeaters 2027 Batch',
     duration: '12 Months (June 2027 - May 2028)',
     batchSize: '10-12 Students per batch',
     features: [
@@ -1304,7 +1304,7 @@ export const neetRepeaters2026: SEOLandingContent = {
 
   cta: {
     title: 'Turn Your 2026 Into AIIMS Year',
-    subtitle: 'Join 200+ motivated repeaters preparing for NEET 2026. Limited seats available.',
+    subtitle: 'Join 200+ motivated repeaters preparing for NEET 2027. Limited seats available.',
     primaryButton: {
       text: 'Join Repeaters Batch',
       link: '/courses/neet-dropper',
@@ -1319,7 +1319,7 @@ export const neetRepeaters2026: SEOLandingContent = {
     paragraphs: [
       {
         heading: 'Why 2026 Is the Right Year to Reattempt NEET',
-        body: 'The NEET 2026 landscape offers repeaters several structural advantages. Medical college seats in India have increased steadily, with new AIIMS and government medical colleges adding thousands of seats over the past three years. This means a score of 600 in 2026 can secure a better college than the same score did in 2023. Additionally, the shift to a more standardized NTA exam pattern means that preparation strategies are now well-established and predictable. Repeaters who understand the pattern from their first attempt and combine that knowledge with twelve months of focused preparation are statistically more likely to secure a government medical seat. Our 2026 batch is designed to leverage these advantages, starting with a comprehensive analysis of your 2025 performance and building a personalized roadmap to your target score.',
+        body: 'The NEET 2027 landscape offers repeaters several structural advantages. Medical college seats in India have increased steadily, with new AIIMS and government medical colleges adding thousands of seats over the past three years. This means a score of 600 in 2026 can secure a better college than the same score did in 2023. Additionally, the shift to a more standardized NTA exam pattern means that preparation strategies are now well-established and predictable. Repeaters who understand the pattern from their first attempt and combine that knowledge with twelve months of focused preparation are statistically more likely to secure a government medical seat. Our 2027 batch is designed to leverage these advantages, starting with a comprehensive analysis of your 2025 performance and building a personalized roadmap to your target score.',
       },
       {
         heading: 'Building on First Attempt Experience for Maximum Score Jump',
@@ -1330,32 +1330,32 @@ export const neetRepeaters2026: SEOLandingContent = {
       {
         Factor: 'First Attempt Score',
         'Unstructured Drop Year': '+50-80 marks avg',
-        'Cerebrum 2026 Batch': '+100-150 marks avg',
+        'Cerebrum 2027 Batch': '+100-150 marks avg',
       },
       {
         Factor: 'Study Plan',
         'Unstructured Drop Year': 'Generic syllabus repeat',
-        'Cerebrum 2026 Batch': 'Personalized gap-based roadmap',
+        'Cerebrum 2027 Batch': 'Personalized gap-based roadmap',
       },
       {
         Factor: 'Mock Tests',
         'Unstructured Drop Year': '10-15 self-purchased',
-        'Cerebrum 2026 Batch': '50+ with detailed chapter analysis',
+        'Cerebrum 2027 Batch': '50+ with detailed chapter analysis',
       },
       {
         Factor: 'Peer Support',
         'Unstructured Drop Year': 'Studying alone',
-        'Cerebrum 2026 Batch': 'Community of 200+ motivated repeaters',
+        'Cerebrum 2027 Batch': 'Community of 200+ motivated repeaters',
       },
     ],
   },
 
   schema: {
     '@type': 'Course',
-    courseName: 'NEET Repeaters 2026 Batch',
+    courseName: 'NEET Repeaters 2027 Batch',
     provider: 'Cerebrum Biology Academy',
     description:
-      'Specialized NEET preparation course for repeaters and droppers appearing for NEET 2026.',
+      'Specialized NEET preparation course for repeaters and droppers appearing for NEET 2027.',
     duration: 'P12M',
     price: 80000,
     priceCurrency: 'INR',
@@ -1413,7 +1413,7 @@ export const neetDropperBatch: SEOLandingContent = {
     subheadline:
       'Turn your drop year into a medical seat. Choose online or attend in person at our Delhi NCR centers. AIIMS faculty, 15-student batches, and a proven 92% success rate.',
     highlightedText: '80-120 Marks Average Improvement',
-    ctaText: 'Join 2026 Dropper Batch',
+    ctaText: 'Join 2027 Dropper Batch',
     ctaLink: '/enrollment',
     backgroundGradient: 'from-red-900 via-orange-900 to-amber-900',
   },
@@ -1518,7 +1518,7 @@ export const neetDropperBatch: SEOLandingContent = {
         'Only 10-15 students per batch. This is our biggest advantage over large coaching centers that pack 100+ students in a room. Every dropper gets personal attention, doubt resolution within minutes, and direct access to Dr. Shekhar for strategy sessions.',
     },
     {
-      question: 'When does the NEET 2026 dropper batch start?',
+      question: 'When does the NEET 2027 dropper batch start?',
       answer:
         'New batches start in June and July every year, right after NEET results. We also have mid-year joining options for students who decide later. Early joiners get the full 12-month program advantage. Contact us on WhatsApp at +91-88264-44334 for the latest batch schedule.',
     },
