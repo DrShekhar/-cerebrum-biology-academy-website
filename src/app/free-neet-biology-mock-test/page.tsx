@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'NEET biology mock test',
     'free NEET test online',
     'NEET practice test biology',
-    'NEET 2026 mock test',
+    'NEET 2027 mock test',
     'biology test series NEET',
   ],
   openGraph: {

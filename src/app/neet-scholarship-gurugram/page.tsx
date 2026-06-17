@@ -74,7 +74,7 @@ const scholarshipSlabs = [
 ]
 
 const eligibility = [
-  'Students appearing for NEET 2026 or 2027',
+  'Students appearing for NEET 2027 or 2027',
   'Class 11, 12, or Dropper students',
   'Minimum 75% in Class 10 (for Class 11 students)',
   'Minimum 75% in Class 11/12 (for Class 12/Droppers)',
@@ -369,7 +369,7 @@ export default function NEETScholarshipGurugram() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Dont Let Fees Stop Your Dream</h2>
           <p className="text-xl text-yellow-100 mb-8 max-w-2xl mx-auto">
-            37 scholarship seats available for NEET 2026 batch. Apply before they are filled!
+            37 scholarship seats available for NEET 2027 batch. Apply before they are filled!
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

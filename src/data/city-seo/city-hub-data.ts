@@ -5265,7 +5265,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Who should join the 1 year NEET course?',
         answer:
-          'Ideal for: Class 12 students targeting NEET 2026, First-time droppers, Students who completed Class 12 and want focused preparation.',
+          'Ideal for: Class 12 students targeting NEET 2027, First-time droppers, Students who completed Class 12 and want focused preparation.',
       },
     ],
     stats: {
@@ -5284,7 +5284,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'Gurugram',
     stateName: 'Haryana',
     metaTitle:
-      '2 Year NEET Course Gurugram 2026-27 | Class 11-12 Integrated | Cerebrum Biology Academy',
+      '2 Year NEET Course Gurugram 2027 | Class 11-12 Integrated | Cerebrum Biology Academy',
     metaDescription:
       'Best 2 year NEET course in Gurugram (Gurgaon) for Class 11 students. Integrated school + NEET preparation. AIIMS faculty, 98% results. Sector 51. Call 88264-44334!',
     heroTitle: '2 Year NEET Course in Gurugram',
@@ -6668,7 +6668,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Complete guide on how to prepare for NEET in Gurugram (Gurgaon). Study plan, coaching options, tips from toppers. Expert guidance from AIIMS faculty. 88264-44334!',
     heroTitle: 'How to Prepare for NEET in Gurugram - Complete Guide',
     heroSubtitle:
-      'A comprehensive roadmap for Gurugram students preparing for NEET 2026. From choosing coaching to cracking the exam.',
+      'A comprehensive roadmap for Gurugram students preparing for NEET 2027. From choosing coaching to cracking the exam.',
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Gurugram Center',
@@ -6682,7 +6682,7 @@ export const cityHubData: Record<string, CityHubData> = {
     ],
     relatedCities: [
       { name: 'Best NEET Coaching', url: '/best-neet-coaching-in-gurugram' },
-      { name: 'NEET 2026 Preparation', url: '/neet-2026-preparation-gurugram' },
+      { name: 'NEET 2027 Preparation', url: '/neet-2026-preparation-gurugram' },
       { name: '2 Year NEET Course', url: '/2-year-neet-course-gurugram' },
     ],
     faqs: [
@@ -12374,7 +12374,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'Gurugram',
     stateName: 'Haryana',
     metaTitle:
-      'Class 12 Biology Tuition Gurugram | Board Exam + NEET 2026 | Cerebrum Biology Academy',
+      'Class 12 Biology Tuition Gurugram | Board Exam + NEET 2027 | Cerebrum Biology Academy',
     metaDescription:
       'Class 12 Biology coaching in Gurugram (Gurgaon) for CBSE Board + NEET. Score 90+ in boards AND crack NEET. AIIMS faculty, 98% pass rate, ₹48K-90K. DLF, Sohna Road, Sector 14-57.',
     heroTitle: 'Class 12 Biology — Board + NEET Coaching in Gurugram',
@@ -12533,7 +12533,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-class-12-ghaziabad',
     cityName: 'Ghaziabad',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Class 12 Biology Coaching Ghaziabad | Board + NEET 2026 | Cerebrum Biology Academy',
+    metaTitle: 'Class 12 Biology Coaching Ghaziabad | Board + NEET 2027 | Cerebrum Biology Academy',
     metaDescription:
       'Class 12 Biology tuition in Ghaziabad for Board + NEET. Indirapuram, Vaishali, Raj Nagar. Score 90+ boards AND crack NEET. AIIMS faculty. ₹35K-75K. Free demo!',
     heroTitle: 'Class 12 Biology — Board + NEET in Ghaziabad',
@@ -12690,7 +12690,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'Faridabad',
     stateName: 'Haryana',
     metaTitle:
-      'Class 12 Biology Coaching Faridabad | Board Exam + NEET 2026 | Cerebrum Biology Academy',
+      'Class 12 Biology Coaching Faridabad | Board Exam + NEET 2027 | Cerebrum Biology Academy',
     metaDescription:
       'Class 12 Biology tuition in Faridabad — CBSE & Haryana Board + NEET prep. Score 90+ boards AND crack NEET. AIIMS faculty. ₹35K-75K. NIT, Sector 15-21. Free demo!',
     heroTitle: 'Class 12 Biology — Board + NEET in Faridabad',
@@ -13257,7 +13257,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'Greater Noida',
     stateName: 'Uttar Pradesh',
     metaTitle:
-      'Class 12 Biology Coaching Greater Noida | Board + NEET 2026 | Cerebrum Biology Academy',
+      'Class 12 Biology Coaching Greater Noida | Board + NEET 2027 | Cerebrum Biology Academy',
     metaDescription:
       'Class 12 Biology in Greater Noida — Board exam + NEET dual focus. Score 90+ in boards AND crack NEET. AIIMS faculty. ₹48,000-90,000/year. Gaur City, Knowledge Park. Free demo!',
     heroTitle: 'Class 12 Biology — Board + NEET in Greater Noida',
@@ -14463,7 +14463,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'North Delhi',
     stateName: 'Delhi',
     metaTitle:
-      'Class 12 Biology North Delhi | Rohini Center | Board + NEET 2026 | Cerebrum Biology Academy',
+      'Class 12 Biology North Delhi | Rohini Center | Board + NEET 2027 | Cerebrum Biology Academy',
     metaDescription:
       'Class 12 Biology at Rohini center — Board exam + NEET. Score 90+ in boards AND crack NEET. AIIMS faculty. ₹48,000-90,000/year. Pitampura, Model Town. Free demo!',
     heroTitle: 'Class 12 Biology — Board + NEET at Rohini Center',
@@ -14525,7 +14525,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'East Delhi',
     stateName: 'Delhi',
     metaTitle:
-      'Class 12 Biology East Delhi | Board + NEET 2026 | Online | Cerebrum Biology Academy',
+      'Class 12 Biology East Delhi | Board + NEET 2027 | Online | Cerebrum Biology Academy',
     metaDescription:
       'Class 12 Biology for East Delhi students — Board exam + NEET. Online + South Extension via metro. AIIMS faculty. ₹40,000-65,000/year. Laxmi Nagar, Mayur Vihar. Free demo!',
     heroTitle: 'Class 12 Biology — Board + NEET for East Delhi',

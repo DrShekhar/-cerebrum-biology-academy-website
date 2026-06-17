@@ -73,7 +73,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
           filter="url(#booksCardShadow)"
         />
         <text x="350" y="32" fontSize="10" fill="#CCFBF1" textAnchor="middle">
-          NEET 2026 Biology
+          NEET 2027 Biology
         </text>
         <text x="350" y="48" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           📚 Best Books & Reading Strategy

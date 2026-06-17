@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     'NEET 2026 countdown',
     'NEET exam date 2026',
     'days left for NEET 2026',
-    'NEET 2026 preparation',
+    'NEET 2027 preparation',
     'NEET countdown timer',
     'NEET UG 2026',
     'NEET exam countdown',

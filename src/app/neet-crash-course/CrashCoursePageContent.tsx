@@ -112,7 +112,7 @@ const toolsCTA = {
     },
     {
       name: 'NEET Rank Predictor',
-      description: 'Estimate your rank based on expected NEET 2026 score',
+      description: 'Estimate your rank based on expected NEET 2027 score',
       link: '/neet-rank-predictor',
       icon: 'rank' as const,
     },
@@ -199,7 +199,7 @@ const faqs = [
 
 const comparisonData = [
   { feature: 'Duration', board: '15 Days', neet: '30-45 Days' },
-  { feature: 'Target Exam', board: 'CBSE Class 12 Board', neet: 'NEET 2026' },
+  { feature: 'Target Exam', board: 'CBSE Class 12 Board', neet: 'NEET 2027' },
   { feature: 'Daily Hours', board: '4 Hours', neet: '5-6 Hours' },
   { feature: 'Practice Questions', board: '15,000+', neet: '5,000+' },
   { feature: 'Course Fee', board: 'Rs 15,000', neet: 'Rs 30,000' },
@@ -333,7 +333,7 @@ export default function CrashCoursePageContent() {
                     Most Popular
                   </span>
                 </div>
-                <p className="mt-1 text-sm text-purple-100">Complete NEET 2026 Biology</p>
+                <p className="mt-1 text-sm text-purple-100">Complete NEET 2027 Biology</p>
               </div>
               <div className="p-6">
                 <div className="mb-6 flex items-baseline gap-1">

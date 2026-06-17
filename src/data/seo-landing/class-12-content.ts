@@ -909,29 +909,29 @@ export const neet2025BiologyCoaching: SEOLandingContent = {
   ],
   slug: 'neet-2025-biology-coaching',
 
-  title: 'NEET 2026 Biology Coaching | Class 12 Batch Starting Now',
+  title: 'NEET 2027 Biology Coaching | Class 12 Batch Starting Now',
   metaDescription:
-    "Prepare for NEET 2026 with India's top biology coaching. Class 12 intensive batch by AIIMS faculty. Early bird enrollment open. Limited seats!",
+    "Prepare for NEET 2027 with India's top biology coaching. Class 12 intensive batch by AIIMS faculty. Early bird enrollment open. Limited seats!",
   keywords: [
-    'NEET 2026 biology coaching',
-    'NEET 2026 preparation class 12',
+    'NEET 2027 biology coaching',
+    'NEET 2027 preparation class 12',
     'NEET biology coaching 2026',
-    'class 12 NEET 2026 batch',
+    'class 12 NEET 2027 batch',
     'best NEET coaching 2026',
   ],
 
   hero: {
-    headline: 'NEET 2026: Your Year to Become a Doctor',
+    headline: 'NEET 2027: Your Year to Become a Doctor',
     subheadline:
-      'Intensive Class 12 biology coaching designed specifically for NEET 2026. Start now, peak in May.',
-    highlightedText: 'Make Every Day Count Till NEET 2026',
-    ctaText: 'Join NEET 2026 Batch',
+      'Intensive Class 12 biology coaching designed specifically for NEET 2027. Start now, peak in May.',
+    highlightedText: 'Make Every Day Count Till NEET 2027',
+    ctaText: 'Join NEET 2027 Batch',
     ctaLink: '/class-12',
     backgroundGradient: 'from-rose-900 via-pink-900 to-fuchsia-900',
   },
 
   painPoints: {
-    title: 'Ready to Crack NEET 2026?',
+    title: 'Ready to Crack NEET 2027?',
     points: [
       {
         icon: 'calendar',
@@ -960,7 +960,7 @@ export const neet2025BiologyCoaching: SEOLandingContent = {
   },
 
   benefits: {
-    title: 'NEET 2026 Preparation Roadmap',
+    title: 'NEET 2027 Preparation Roadmap',
     subtitle: 'Month-by-month plan to peak at the right time',
     items: [
       {
@@ -998,46 +998,46 @@ export const neet2025BiologyCoaching: SEOLandingContent = {
 
   faqs: [
     {
-      question: 'When does NEET 2026 preparation batch start?',
+      question: 'When does NEET 2027 preparation batch start?',
       answer:
-        'Our NEET 2026 batches start in April (regular) and June (late joiner batch). You can join anytime - we provide catch-up material for late joiners. The earlier you start, the more revision cycles you get.',
+        'Our NEET 2027 batches start in April (regular) and June (late joiner batch). You can join anytime - we provide catch-up material for late joiners. The earlier you start, the more revision cycles you get.',
     },
     {
-      question: 'How many months of preparation is ideal for NEET 2026?',
+      question: 'How many months of preparation is ideal for NEET 2027?',
       answer:
         '10-12 months is ideal for Class 12 students. This gives enough time for: complete syllabus coverage (5 months), Class 11 revision (2 months), intensive practice (3 months), and final revision (2 months). Our batch is designed for this timeline.',
     },
     {
-      question: 'Is NEET 2026 expected to be tougher?',
+      question: 'Is NEET 2027 expected to be tougher?',
       answer:
         'NEET pattern has stabilized with increased emphasis on conceptual questions. Whether "tougher" or not, our preparation ensures you\'re ready for any level of difficulty. We train for challenging questions, not just easy ones.',
     },
     {
-      question: 'What marks are needed in NEET 2026 for government medical colleges?',
+      question: 'What marks are needed in NEET 2027 for government medical colleges?',
       answer:
         'Typically, 600+ (out of 720) secures admission in good government colleges. Our target is to help you score 320+ in Biology (out of 360), which gives you a strong base. Combined with Physics and Chemistry, 650+ is achievable.',
     },
     {
-      question: 'Do you guarantee selection in NEET 2026?',
+      question: 'Do you guarantee selection in NEET 2027?',
       answer:
         'We guarantee quality teaching, personal attention, and comprehensive preparation. Our track record: 98% of students improve significantly, 85%+ score above 550, and we have 65+ AIIMS selections. Success depends on your effort combined with our guidance.',
     },
     {
-      question: 'How is NEET 2026 batch different from regular Class 12 batch?',
+      question: 'How is NEET 2027 batch different from regular Class 12 batch?',
       answer:
         "It's the same intensive program, branded for clarity. Our Class 12 batch IS the NEET 2026 batch. Everything is designed around the NEET exam date - the schedule, tests, and revision all peak at the right time.",
     },
   ],
 
   cta: {
-    title: 'NEET 2026: Start Your Journey Today',
+    title: 'NEET 2027: Start Your Journey Today',
     subtitle: 'Early starters have the advantage. Limited seats in each batch.',
     primaryButton: {
-      text: 'Enroll for NEET 2026',
+      text: 'Enroll for NEET 2027',
       link: '/class-12',
     },
     secondaryButton: {
-      text: 'Download NEET 2026 Roadmap',
+      text: 'Download NEET 2027 Roadmap',
       link: '/free-resources?type=neet-2025-roadmap',
     },
   },
@@ -1045,15 +1045,15 @@ export const neet2025BiologyCoaching: SEOLandingContent = {
   deepContent: {
     paragraphs: [
       {
-        heading: 'NEET 2026 Biology: What to Expect and How to Prepare',
-        body: 'NEET 2026 is expected to continue the trend of increasing conceptual complexity in Biology. Recent papers have shifted away from straightforward recall questions toward assertion-reason formats, data interpretation from graphs and tables, and application of concepts to novel scenarios. For example, instead of asking students to simply name the enzyme that catalyses transcription, the paper might present a mutant cell where RNA polymerase has altered specificity and ask students to predict the downstream effect on protein synthesis. Preparing for this level of questioning requires moving beyond rote memorisation of NCERT to understanding the underlying logic of biological processes. Students aiming for 320-plus in Biology must practise extensively with NEET-pattern MCQs that test conceptual depth, not just factual breadth. A structured coaching program that begins in April and peaks in May provides the sustained, phased preparation this exam demands.',
+        heading: 'NEET 2027 Biology: What to Expect and How to Prepare',
+        body: 'NEET 2027 is expected to continue the trend of increasing conceptual complexity in Biology. Recent papers have shifted away from straightforward recall questions toward assertion-reason formats, data interpretation from graphs and tables, and application of concepts to novel scenarios. For example, instead of asking students to simply name the enzyme that catalyses transcription, the paper might present a mutant cell where RNA polymerase has altered specificity and ask students to predict the downstream effect on protein synthesis. Preparing for this level of questioning requires moving beyond rote memorisation of NCERT to understanding the underlying logic of biological processes. Students aiming for 320-plus in Biology must practise extensively with NEET-pattern MCQs that test conceptual depth, not just factual breadth. A structured coaching program that begins in April and peaks in May provides the sustained, phased preparation this exam demands.',
       },
       {
-        heading: 'The Five-Phase Preparation Roadmap for NEET 2026 Biology',
+        heading: 'The Five-Phase Preparation Roadmap for NEET 2027 Biology',
         body: 'Phase 1 (April to July) focuses on completing the Class 12 syllabus, prioritising high-yield chapters like Genetics, Reproduction, and Ecology. Phase 2 (August to October) integrates Class 11 revision with Class 12 consolidation, building cross-chapter connections such as linking cell division with genetic inheritance or linking photosynthesis with ecosystem energy flow. Phase 3 (November to January) shifts to intensive MCQ practice, with students solving 100-plus questions daily across both class levels. Phase 4 (February to March) accommodates board exams while maintaining NEET readiness through daily NCERT re-reading and weekend mock tests. Phase 5 (April to May) is the peaking phase, featuring three full-length mock tests per week, error log analysis, and targeted revision of the ten weakest sub-topics. Students who follow this phased roadmap arrive at NEET day having covered the syllabus three to four times, with exam-day strategy refined through 40-plus mock tests.',
       },
       {
-        heading: 'Managing the Gap Between Board Exams and NEET 2026',
+        heading: 'Managing the Gap Between Board Exams and NEET 2027',
         body: "The four-to-six-week gap between CBSE board exams and NEET is a critical window that can determine a student's final score. Many students make the mistake of taking a break after boards, losing the momentum they built over months. The optimal approach is to begin NEET-specific revision within 48 hours of the last board exam. The first week should focus on re-reading Class 11 NCERT chapters that were deprioritised during board season, particularly Human Physiology and Plant Physiology. The second and third weeks should be devoted to full-length mock tests on alternate days with detailed error analysis on intervening days. The final week before NEET should involve light revision of high-yield topics, formula sheets for Genetics ratios, and ecological data, with early sleep to ensure peak cognitive performance on exam day. Coaching programs that provide structured post-board revision schedules help students navigate this period without anxiety or wasted time.",
       },
     ],
@@ -1061,10 +1061,10 @@ export const neet2025BiologyCoaching: SEOLandingContent = {
 
   schema: {
     '@type': 'Course',
-    courseName: 'NEET 2026 Biology Coaching',
+    courseName: 'NEET 2027 Biology Coaching',
     provider: 'Cerebrum Biology Academy',
     description:
-      'Intensive NEET 2026 biology coaching for Class 12 students with complete preparation roadmap and expert guidance.',
+      'Intensive NEET 2027 biology coaching for Class 12 students with complete preparation roadmap and expert guidance.',
     duration: 'P1Y',
     price: 85000,
     priceCurrency: 'INR',

@@ -46,7 +46,7 @@ const classOptions = [
     class: 'Dropper Batch',
     focus: 'NEET Intensive',
     topics: 'Complete NEET syllabus revision with PYQ focus',
-    neetRelevance: 'Target: NEET 2026/2026',
+    neetRelevance: 'Target: NEET 2027/2026',
     color: 'bg-orange-500',
   },
 ]

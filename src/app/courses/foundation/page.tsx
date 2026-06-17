@@ -209,7 +209,7 @@ export default function FoundationCoursePage() {
     {
       question: 'Will this program help in CBSE Board exams and NEET?',
       answer:
-        'Absolutely! Our online Biology classes ensure excellent board exam performance while building concepts for NEET entrance preparation. Students typically score 85+ in board Biology and develop strong foundation for NEET 2026 preparation.',
+        'Absolutely! Our online Biology classes ensure excellent board exam performance while building concepts for NEET entrance preparation. Students typically score 85+ in board Biology and develop strong foundation for NEET 2027 preparation.',
     },
     {
       question: 'What is the schedule for online Biology classes?',
@@ -463,7 +463,7 @@ export default function FoundationCoursePage() {
               <h3 className="text-lg font-bold text-[#3d4d3d] mb-2">Live Online Biology Classes</h3>
               <p className="text-[#5a6d5a] text-sm">
                 Interactive online Biology tuition with live doubt clearing. Best online Biology
-                tutor for NEET 2026 preparation with Class 11 &amp; 12 NCERT Biology coverage.
+                tutor for NEET 2027 preparation with Class 11 &amp; 12 NCERT Biology coverage.
               </p>
             </div>
 
@@ -471,7 +471,7 @@ export default function FoundationCoursePage() {
               <BookOpen className="w-10 h-10 text-[#4a5d4a] mb-4" />
               <h3 className="text-lg font-bold text-[#3d4d3d] mb-2">NCERT Biology for NEET</h3>
               <p className="text-[#5a6d5a] text-sm">
-                Complete NCERT Biology coverage for NEET 2026. Chapter-wise Biology notes and NEET
+                Complete NCERT Biology coverage for NEET 2027. Chapter-wise Biology notes and NEET
                 Biology mock tests for Class 11 and Class 12 students.
               </p>
             </div>

@@ -221,7 +221,7 @@ export default function NoidaVsKotaPage() {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto hero-description">
               Should you go to Kota or stay in Noida? Complete comparison of costs, results, and
-              lifestyle. Make an informed decision for NEET 2026.
+              lifestyle. Make an informed decision for NEET 2027.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <div className="bg-green-500/20 px-4 py-2 rounded-lg">

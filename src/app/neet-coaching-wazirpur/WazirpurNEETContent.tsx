@@ -212,7 +212,7 @@ export default function WazirpurNEETContent({ faqs }: WazirpurNEETContentProps) 
             {/* Urgency Banner */}
             <div className="mb-6 inline-flex items-center rounded-full bg-gradient-to-r from-orange-500 to-red-500 px-6 py-2 text-sm font-semibold">
               <Zap className="mr-2 h-4 w-4" />
-              Limited Seats! NEET 2026 Batch Starting Soon
+              Limited Seats! NEET 2027 Batch Starting Soon
             </div>
 
             {/* Location Badge */}
@@ -621,7 +621,7 @@ export default function WazirpurNEETContent({ faqs }: WazirpurNEETContentProps) 
         <div className="container mx-auto px-4 text-center">
           <div className="mb-6 inline-flex items-center rounded-full bg-gradient-to-r from-orange-500 to-red-500 px-6 py-2 text-sm font-bold">
             <Zap className="mr-2 h-4 w-4" />
-            Limited Seats for NEET 2026 Batch!
+            Limited Seats for NEET 2027 Batch!
           </div>
 
           <h2 className="mb-4 text-3xl font-bold md:text-4xl">

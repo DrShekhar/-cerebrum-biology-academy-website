@@ -80,11 +80,11 @@ const TOP_BLOG_POSTS: BlogPost[] = [
     excerpt: 'Collection of important biology diagrams that frequently appear in NEET.',
   },
   {
-    title: 'NEET 2026 Exam Pattern & Changes',
+    title: 'NEET 2027 Exam Pattern & Changes',
     slug: '/blog/neet-2026-exam-pattern-changes',
     category: 'neet-preparation',
     readTime: 6,
-    excerpt: 'Latest NEET 2026 exam pattern, marking scheme, and important updates.',
+    excerpt: 'Latest NEET 2027 exam pattern, marking scheme, and important updates.',
   },
 ]
 

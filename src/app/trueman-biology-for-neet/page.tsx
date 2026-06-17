@@ -113,7 +113,7 @@ export default function TruemanBiologyPage() {
 
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 Trueman Biology
-                <span className="block text-rose-200">for NEET 2026</span>
+                <span className="block text-rose-200">for NEET 2027</span>
               </h1>
 
               <p className="text-lg text-white/90 mb-8 max-w-lg">

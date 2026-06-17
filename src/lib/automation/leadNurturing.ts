@@ -329,7 +329,7 @@ Need help? Reply or call ${CONTACT_INFO.phone.display.primary}`,
 
 We noticed you were interested in ${lead.courseInterest}.
 
-NEET 2026 is approaching - it's the perfect time to start!
+NEET 2027 is approaching - it's the perfect time to start!
 
 🎁 Special comeback offer: 20% OFF for returning students
 

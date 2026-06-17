@@ -65,8 +65,8 @@ const class12Topics = [
 const features = [
   {
     icon: Target,
-    title: 'NEET 2026 Focused',
-    description: 'Intensive preparation for NEET 2026 with pattern-based teaching.',
+    title: 'NEET 2027 Focused',
+    description: 'Intensive preparation for NEET 2027 with pattern-based teaching.',
   },
   {
     icon: Video,
@@ -149,7 +149,7 @@ export default function OnlineBiologyTutorClass12Page() {
             '@context': 'https://schema.org',
             '@type': 'Course',
             name: 'Class 12 Biology Online Course',
-            description: 'Complete Class 12 Biology for NEET 2026 & Board exams',
+            description: 'Complete Class 12 Biology for NEET 2027 & Board exams',
             provider: {
               '@type': 'Organization',
               name: 'Cerebrum Biology Academy',
@@ -178,7 +178,7 @@ export default function OnlineBiologyTutorClass12Page() {
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <GraduationCap className="w-5 h-5 mr-2 text-yellow-400" />
-              NEET 2026 + Board Exams
+              NEET 2027 + Board Exams
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -186,7 +186,7 @@ export default function OnlineBiologyTutorClass12Page() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Board Exams + NEET 2026 | Live Classes | AIIMS Faculty
+              Board Exams + NEET 2027 | Live Classes | AIIMS Faculty
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
@@ -195,7 +195,7 @@ export default function OnlineBiologyTutorClass12Page() {
                 Dr. Shekhar C Singh, AIIMS Alumnus and former Academic Head at a leading national
                 educational institution
               </strong>
-              . Dual preparation for Board exams and NEET 2026 in one comprehensive online course.
+              . Dual preparation for Board exams and NEET 2027 in one comprehensive online course.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -351,7 +351,7 @@ export default function OnlineBiologyTutorClass12Page() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Ace Your Boards & NEET 2026!</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Ace Your Boards & NEET 2027!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Join Class 12 Biology online course. Book your free demo today!
             </p>

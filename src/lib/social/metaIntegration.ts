@@ -245,7 +245,7 @@ export class MetaIntegration {
     return [
       {
         name: 'NEET Aspirants 2025',
-        description: 'Students preparing for NEET 2026',
+        description: 'Students preparing for NEET 2027',
         targeting: {
           age_min: 16,
           age_max: 19,

@@ -26,7 +26,7 @@ const leadMagnets: LeadMagnet[] = [
     id: '2',
     title: 'NEET Biology Study Planner 2026',
     description:
-      'Structured 12-month study plan for NEET 2026 with chapter-wise timeline and daily targets.',
+      'Structured 12-month study plan for NEET 2027 with chapter-wise timeline and daily targets.',
     pages: 14,
     fileName: 'neet-study-planner-2026',
     category: 'study-plan',
@@ -51,7 +51,7 @@ const leadMagnets: LeadMagnet[] = [
   },
   {
     id: '5',
-    title: 'Biology Mnemonics for NEET 2026',
+    title: 'Biology Mnemonics for NEET 2027',
     description: 'Easy-to-remember mnemonics for complex biological terms and concepts.',
     pages: 12,
     fileName: 'biology-mnemonics-neet',

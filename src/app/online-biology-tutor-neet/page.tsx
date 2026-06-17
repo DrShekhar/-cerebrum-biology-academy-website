@@ -189,7 +189,7 @@ export default function OnlineBiologyTutorNeetPage() {
                   className="border-white text-white hover:bg-white hover:text-green-900"
                 >
                   <BookOpen className="w-5 h-5 mr-2" />
-                  NEET 2026 Course
+                  NEET 2027 Course
                 </Button>
               </Link>
             </div>

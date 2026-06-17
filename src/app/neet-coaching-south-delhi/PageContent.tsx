@@ -889,7 +889,7 @@ export default function PageContent() {
                     rating: 5,
                   },
                   {
-                    text: 'Joined in Class 11 itself - best decision! The conceptual clarity and doubt-solving sessions are amazing. Study material is comprehensive. My son is now in Class 12 and confident about NEET 2026.',
+                    text: 'Joined in Class 11 itself - best decision! The conceptual clarity and doubt-solving sessions are amazing. Study material is comprehensive. My son is now in Class 12 and confident about NEET 2027.',
                     author: 'Parent',
                     location: 'Hauz Khas',
                     rating: 5,

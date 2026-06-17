@@ -103,7 +103,7 @@ export function DefinedTermListSchema({ terms, category = 'Biology' }: DefinedTe
     '@context': 'https://schema.org',
     '@type': 'DefinedTermSet',
     name: `${category} Glossary - NEET Biology Terms`,
-    description: `Complete glossary of ${category.toLowerCase()} terms for NEET 2026 preparation by Cerebrum Biology Academy`,
+    description: `Complete glossary of ${category.toLowerCase()} terms for NEET 2027 preparation by Cerebrum Biology Academy`,
     url: 'https://cerebrumbiologyacademy.com/glossary',
     hasDefinedTerm: terms.map((t) => ({
       '@type': 'DefinedTerm',

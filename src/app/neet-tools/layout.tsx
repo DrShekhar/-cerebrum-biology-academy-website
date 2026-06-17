@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     'Free NEET 2026 preparation tools including Rank Predictor, College Predictor, Study Plan Generator, and more. AI-powered tools to maximize your NEET score.',
   keywords: [
     'NEET tools',
-    'NEET 2026 tools',
+    'NEET 2027 tools',
     'NEET rank predictor',
     'NEET college predictor',
     'NEET study planner',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'NEET calculator',
     'NEET marks calculator',
     'NEET preparation app',
-    'NEET 2026 preparation',
+    'NEET 2027 preparation',
   ],
   openGraph: {
     title: 'Free NEET Tools 2026 - Rank Predictor, College Finder & More',

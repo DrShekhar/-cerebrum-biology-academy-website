@@ -24,7 +24,7 @@ export default function PageContent() {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             150+ Important NEET Biology Diagrams
           </h1>
-          <p className="text-xl text-pink-100 mb-2">Every NCERT Diagram You Need for NEET 2026</p>
+          <p className="text-xl text-pink-100 mb-2">Every NCERT Diagram You Need for NEET 2027</p>
           <p className="text-lg text-pink-200 max-w-2xl mx-auto mb-8">
             A collection of 150+ must-know diagrams from NCERT Biology, organized chapter-wise with
             clear labels, flowcharts, and cycles that frequently appear in NEET.

@@ -54,8 +54,8 @@ const dropperFeatures = [
   },
   {
     icon: Target,
-    title: 'NEET 2026 Focused',
-    description: 'Intensive preparation specifically designed for NEET 2026.',
+    title: 'NEET 2027 Focused',
+    description: 'Intensive preparation specifically designed for NEET 2027.',
   },
   {
     icon: Clock,
@@ -107,9 +107,9 @@ const faqs = [
       'Droppers receive: Dedicated mentor, personalized study plan, daily doubt sessions, weekly one-on-one reviews, mental health support, and parent updates. We understand the pressure and provide complete support.',
   },
   {
-    question: 'Is there a crash course for NEET 2026?',
+    question: 'Is there a crash course for NEET 2027?',
     answer:
-      'Yes! We offer NEET 2026 Biology Crash Course (3 months intensive) for droppers who join late or need focused revision. Contact us for current batch timings.',
+      'Yes! We offer NEET 2027 Biology Crash Course (3 months intensive) for droppers who join late or need focused revision. Contact us for current batch timings.',
   },
 ]
 

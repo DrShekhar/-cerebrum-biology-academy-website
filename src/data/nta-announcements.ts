@@ -41,9 +41,9 @@ export const ntaAnnouncements: NTAAnnouncement[] = [
     id: 'nta-2026-003',
     type: 'SYLLABUS_CHANGE',
     date: '2026-01-15',
-    title: 'NEET 2026 Syllabus: NCERT-Based, No Changes',
+    title: 'NEET 2027 Syllabus: NCERT-Based, No Changes',
     description:
-      'NTA confirms NEET 2026 syllabus remains based on NCERT Class 11 and 12 textbooks. No new topics added this year.',
+      'NTA confirms NEET 2027 syllabus remains based on NCERT Class 11 and 12 textbooks. No new topics added this year.',
     sourceLink: 'https://neet.nta.nic.in/',
     isImportant: false,
   },
@@ -51,7 +51,7 @@ export const ntaAnnouncements: NTAAnnouncement[] = [
     id: 'nta-2026-004',
     type: 'GENERAL',
     date: '2026-01-10',
-    title: 'NEET 2026 City Slip to Be Released in April',
+    title: 'NEET 2027 City Slip to Be Released in April',
     description:
       'Admit card city slips for NEET UG 2026 will be available for download in the second week of April 2026.',
     sourceLink: 'https://neet.nta.nic.in/',
@@ -81,7 +81,7 @@ export const ntaAnnouncements: NTAAnnouncement[] = [
     id: 'nta-2026-007',
     type: 'EXAM_DATE',
     date: '2025-12-20',
-    title: 'NEET 2026 Will Be Single-Day, Single-Shift Exam',
+    title: 'NEET 2027 Will Be Single-Day, Single-Shift Exam',
     description:
       'NTA confirms NEET UG 2026 will follow the traditional single-day, single-shift pattern from 2:00 PM to 5:20 PM.',
     sourceLink: 'https://neet.nta.nic.in/',
@@ -103,7 +103,7 @@ export const ntaAnnouncements: NTAAnnouncement[] = [
     date: '2025-12-10',
     title: 'NTA Helpline Now Available for NEET Queries',
     description:
-      'Students can reach NTA helpline at 011-40759000 or email neet@nta.ac.in for any NEET 2026 related queries.',
+      'Students can reach NTA helpline at 011-40759000 or email neet@nta.ac.in for any NEET 2027 related queries.',
     sourceLink: 'https://neet.nta.nic.in/',
     isImportant: false,
   },
@@ -111,9 +111,9 @@ export const ntaAnnouncements: NTAAnnouncement[] = [
     id: 'nta-2026-010',
     type: 'SYLLABUS_CHANGE',
     date: '2025-12-01',
-    title: 'NCERT Textbook Updates Do Not Affect NEET 2026',
+    title: 'NCERT Textbook Updates Do Not Affect NEET 2027',
     description:
-      'Recent NCERT textbook revisions for Classes 11-12 Biology will NOT impact NEET 2026 exam content.',
+      'Recent NCERT textbook revisions for Classes 11-12 Biology will NOT impact NEET 2027 exam content.',
     sourceLink: 'https://neet.nta.nic.in/',
     isImportant: true,
   },
@@ -121,9 +121,9 @@ export const ntaAnnouncements: NTAAnnouncement[] = [
     id: 'nta-2026-011',
     type: 'EXAM_DATE',
     date: '2025-11-25',
-    title: 'NEET 2026 Expected in May: Start Preparation Now',
+    title: 'NEET 2027 Expected in May: Start Preparation Now',
     description:
-      'Based on historical patterns, NEET 2026 is expected in the first week of May. Begin your focused preparation.',
+      'Based on historical patterns, NEET 2027 is expected in the first week of May. Begin your focused preparation.',
     sourceLink: 'https://neet.nta.nic.in/',
     isImportant: false,
   },
@@ -131,7 +131,7 @@ export const ntaAnnouncements: NTAAnnouncement[] = [
     id: 'nta-2026-012',
     type: 'GENERAL',
     date: '2025-11-15',
-    title: 'NEET 2026: 13 Languages Available for Exam',
+    title: 'NEET 2027: 13 Languages Available for Exam',
     description:
       'NEET UG 2026 will be conducted in 13 languages including English, Hindi, and regional languages.',
     sourceLink: 'https://neet.nta.nic.in/',

@@ -1126,7 +1126,7 @@ export const neetRepeaters2026: SEOLandingContent = {
       name: 'Ankit Verma',
       achievement: 'AIR 312 | AIIMS Delhi (2026 Repeater)',
       quote:
-        'NEET 2025 was a disaster at 470. Cerebrum 2026 repeater batch rebuilt my biology from chapter 1. Scored 350 in biology and 640 overall in NEET 2027.',
+        'NEET 2025 was a disaster at 470. Cerebrum 2027 repeater batch rebuilt my biology from chapter 1. Scored 350 in biology and 640 overall in NEET 2027.',
       score: '640/720',
     },
     {

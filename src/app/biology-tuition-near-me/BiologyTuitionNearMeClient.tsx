@@ -120,7 +120,7 @@ const features = [
   {
     icon: BookOpen,
     title: 'NCERT Focus',
-    description: 'Complete NCERT-based curriculum for NEET 2026',
+    description: 'Complete NCERT-based curriculum for NEET 2027',
   },
   {
     icon: Navigation,

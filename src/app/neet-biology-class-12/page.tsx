@@ -15,7 +15,7 @@ import { UrgencyBanner, SocialProofNotifications } from '@/components/landing-pa
 export const metadata: Metadata = {
   title: 'NEET Biology for Class 12 | Advanced Preparation Delhi NCR',
   description:
-    'Class 12 NEET Biology coaching in Delhi NCR. Master advanced topics, ace NEET 2026. Book free demo. Call +91-88264-44334',
+    'Class 12 NEET Biology coaching in Delhi NCR. Master advanced topics, ace NEET 2027. Book free demo. Call +91-88264-44334',
   keywords: ['class 12 biology neet', 'neet biology class 12', 'class 12 neet biology coaching'],
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-class-12',
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'NEET Biology for Class 12 | Advanced Preparation Delhi NCR',
     description:
-      'Class 12 NEET Biology coaching in Delhi NCR. Master advanced topics, ace NEET 2026. Book free demo. Call +91-88264-44334',
+      'Class 12 NEET Biology coaching in Delhi NCR. Master advanced topics, ace NEET 2027. Book free demo. Call +91-88264-44334',
   },
 
   openGraph: {
     title: 'NEET Biology for Class 12 | Advanced Preparation Delhi NCR',
     description:
-      'Class 12 NEET Biology coaching in Delhi NCR. Master advanced topics, ace NEET 2026. Book free demo. Call +91-88264-44334',
+      'Class 12 NEET Biology coaching in Delhi NCR. Master advanced topics, ace NEET 2027. Book free demo. Call +91-88264-44334',
     type: 'website',
   },
 }
@@ -101,7 +101,7 @@ export default function NEETBiologyClass12Page() {
     <>
       <LandingHero
         h1="NEET Biology for Class 12 - Score 340+ Strategy"
-        subheadline="Master high-weightage Class 12 topics. Comprehensive preparation for NEET 2026 with expert faculty and proven methods."
+        subheadline="Master high-weightage Class 12 topics. Comprehensive preparation for NEET 2027 with expert faculty and proven methods."
         highlightedBadge="⚡ NEET 2026 - Only 150 Days Left"
         trustBadges={['340+ Score Strategy', 'Mock Tests', '98% Results']}
       />
@@ -142,7 +142,7 @@ export default function NEETBiologyClass12Page() {
 
       <USPsSection
         title="Why Choose Our Class 12 NEET Program"
-        subtitle="Intensive preparation designed for NEET 2026 aspirants"
+        subtitle="Intensive preparation designed for NEET 2027 aspirants"
         usps={usps}
       />
 

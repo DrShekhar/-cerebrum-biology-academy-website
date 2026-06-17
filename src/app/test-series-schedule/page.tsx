@@ -120,7 +120,7 @@ export default function TestSeriesSchedulePage() {
               </Link>
               <div>
                 <h1 className="text-xl font-bold text-gray-900 sm:text-2xl">
-                  NEET 2026 Test Series Schedule
+                  NEET 2027 Test Series Schedule
                 </h1>
                 <p className="text-sm text-gray-500">Premium Biology Test Series</p>
               </div>

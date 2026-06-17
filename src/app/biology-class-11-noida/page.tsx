@@ -182,7 +182,7 @@ export default function BiologyClass11NoidaPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-flex items-center gap-2 bg-yellow-500 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
-              <Star className="w-4 h-4" /> 2026-27 Batch Open
+              <Star className="w-4 h-4" /> 2027 Batch Open
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Class 11 Biology Coaching in Noida

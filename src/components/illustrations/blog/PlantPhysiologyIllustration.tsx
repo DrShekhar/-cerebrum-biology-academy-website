@@ -98,7 +98,7 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
         textAnchor="middle"
         fontFamily="system-ui, sans-serif"
       >
-        NEET 2026 Chapter Guide • 4-6 Questions • Very High Weightage
+        NEET 2027 Chapter Guide • 4-6 Questions • Very High Weightage
       </text>
 
       {/* Overall Equation Banner */}

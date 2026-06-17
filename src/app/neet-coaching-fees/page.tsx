@@ -359,7 +359,7 @@ export default function FeesPage() {
               Starting at Rs 2,500/month
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              NEET Biology Coaching Fees — Transparent Pricing (2026-27)
+              NEET Biology Coaching Fees — Transparent Pricing (2027)
             </h1>
             <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
               No hidden charges. No surprise fees. See exactly what you pay for at Cerebrum Biology

@@ -7,7 +7,7 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 export const metadata: Metadata = {
   title: 'NEET Biology Diagrams 2026 | 150+ Important Diagrams | Free PDF',
   description:
-    'Download 150+ important NEET Biology diagrams. NCERT diagrams with labels, flowcharts, cycles. Must-know diagrams for NEET 2026. By AIIMS faculty.',
+    'Download 150+ important NEET Biology diagrams. NCERT diagrams with labels, flowcharts, cycles. Must-know diagrams for NEET 2027. By AIIMS faculty.',
   keywords: [
     'NEET biology diagrams',
     'important diagrams NEET',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Biology Diagrams 2026 | 150+ Important Diagrams | Free PDF',
     description:
-      'Download 150+ important NEET Biology diagrams. NCERT diagrams with labels, flowcharts, cycles. Must-know diagrams for NEET 2026. By AIIMS faculty.',
+      'Download 150+ important NEET Biology diagrams. NCERT diagrams with labels, flowcharts, cycles. Must-know diagrams for NEET 2027. By AIIMS faculty.',
     url: `${BASE_URL}/free-neet-biology-diagram-collection`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -55,10 +55,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is this updated for NEET 2026?',
+      name: 'Is this updated for NEET 2027?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes! This resource is fully updated for NEET 2026 based on the latest NTA pattern and syllabus.',
+        text: 'Yes! This resource is fully updated for NEET 2027 based on the latest NTA pattern and syllabus.',
       },
     },
   ],

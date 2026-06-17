@@ -43,7 +43,7 @@ export function LocationAwareHero({
       subtitle: fallbackSubtitle,
       locationBadge: null,
       aspirants: null,
-      urgencyMessage: 'Limited seats available for 2026 batch',
+      urgencyMessage: 'Limited seats available for 2027 batch',
       ctaText: 'Start Your NEET Journey',
       showLocationStats: false,
     }

@@ -157,7 +157,7 @@ const faqs = [
       'While there are some local coaching centers in Ambala Cantt, quality varies significantly. Cerebrum Academy offers online coaching that brings Chandigarh-level expertise directly to Ambala Cantt students without commute or relocation.',
   },
   {
-    question: 'How to prepare for NEET 2026 from Ambala?',
+    question: 'How to prepare for NEET 2027 from Ambala?',
     answer:
       'For NEET 2026 preparation from Ambala: 1) Join quality online coaching like Cerebrum Academy, 2) Focus on NCERT for Biology, 3) Practice previous year papers, 4) Take regular mock tests, 5) Clear doubts immediately via WhatsApp support. Start early for best results.',
   },

@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { TopicLandingPage } from '@/components/mcq/TopicLandingPage'
 
 export const metadata: Metadata = {
-  title: 'Biotechnology Principles MCQ for NEET 2026 | Free Practice Questions',
+  title: 'Biotechnology Principles MCQ for NEET 2027 | Free Practice Questions',
   description:
     'Practice 300+ free Biotechnology: Principles and Processes MCQs for NEET. Recombinant DNA, PCR, Restriction Enzymes, Vectors, and Cloning questions. NCERT Class 12 based with detailed explanations.',
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Biotechnology Principles MCQ for NEET 2026 | Free Practice Questions',
+    title: 'Biotechnology Principles MCQ for NEET 2027 | Free Practice Questions',
     description:
       'Practice 300+ free Biotechnology: Principles and Processes MCQs for NEET. Recombinant DNA, PCR, Restriction Enzymes, Vectors, and Cloning questions. NCERT Class 12 based with detailed explanations.',
   },
@@ -60,7 +60,7 @@ export default function BiotechnologyPrinciplesPage() {
       <TopicLandingPage
         topic="Biotechnology: Principles and Processes"
         topicSlug="biotechnology-principles"
-        title="Biotechnology Principles MCQ for NEET 2026"
+        title="Biotechnology Principles MCQ for NEET 2027"
         description="Master Biotechnology: Principles and Processes with 300+ free MCQs covering recombinant DNA technology, PCR, restriction enzymes, vectors, and gene cloning for NEET preparation."
         questionCount={300}
         chapters={[

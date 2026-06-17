@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NEET Biology Coaching | 98% Success Rate',
     description:
-      'Expert NEET Biology coaching by AIIMS alumni. 67+ AIIMS selections. Best preparation for NEET 2026.',
+      'Expert NEET Biology coaching by AIIMS alumni. 67+ AIIMS selections. Best preparation for NEET 2027.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-coaching',

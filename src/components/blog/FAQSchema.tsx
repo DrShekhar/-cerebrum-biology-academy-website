@@ -91,7 +91,7 @@ export function generateTopicFAQs(title: string, category: string, tags: string[
   const faqs: FAQItem[] = []
 
   // Add topic-specific FAQs based on category
-  if (category === 'neet-preparation' || tags.includes('NEET 2025') || tags.includes('NEET 2026')) {
+  if (category === 'neet-preparation' || tags.includes('NEET 2025') || tags.includes('NEET 2027')) {
     faqs.push({
       question: 'How many questions come from Biology in NEET?',
       answer:

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'class 12 biology tuition',
     'best biology tutor for NEET',
     'online NEET coaching',
-    'biology coaching for NEET 2026',
+    'biology coaching for NEET 2027',
     'NEET biology syllabus 2026',
     'human physiology NEET',
     'genetics NEET preparation',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Online Biology Tuition for Class 9-12 | NEET Biology Coaching',
     description:
-      'Expert online Biology tutor for NEET 2026 preparation. Live online Biology classes for Class 9, 10, 11 & 12 students with AIIMS-trained faculty.',
+      'Expert online Biology tutor for NEET 2027 preparation. Live online Biology classes for Class 9, 10, 11 & 12 students with AIIMS-trained faculty.',
     url: 'https://cerebrumbiologyacademy.com/courses/foundation',
     siteName: 'Cerebrum Biology Academy',
     type: 'website',

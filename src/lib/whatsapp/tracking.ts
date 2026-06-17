@@ -265,8 +265,8 @@ export const WHATSAPP_MESSAGES = {
   parentFees: 'Hi! I am a parent. Please share the fee structure and batch timings.',
   parentProgress: "Hi! I am a parent. How can I track my child's progress in the course?",
 
-  // NEET 2026/2027 specific
-  neet2026: 'Hi! I want to enroll for NEET 2026 preparation. What batches are available?',
+  // NEET 2027/2027 specific
+  neet2026: 'Hi! I want to enroll for NEET 2027 preparation. What batches are available?',
   neet2027: 'Hi! I am in Class 11. What courses do you have for NEET 2027?',
   dropper: 'Hi! I am a NEET dropper. Do you have a special batch for repeaters?',
 

@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { TopicLandingPage } from '@/components/mcq/TopicLandingPage'
 
 export const metadata: Metadata = {
-  title: 'Biomolecules MCQ for NEET 2026 | Free Practice Questions',
+  title: 'Biomolecules MCQ for NEET 2027 | Free Practice Questions',
   description:
     'Practice 400+ free Biomolecules MCQs for NEET. Carbohydrates, Proteins, Lipids, Enzymes, and Nucleic Acids questions. NCERT Class 11 based with detailed explanations.',
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Biomolecules MCQ for NEET 2026 | Free Practice Questions',
+    title: 'Biomolecules MCQ for NEET 2027 | Free Practice Questions',
     description:
       'Practice 400+ free Biomolecules MCQs for NEET. Carbohydrates, Proteins, Lipids, Enzymes, and Nucleic Acids questions. NCERT Class 11 based with detailed explanations.',
   },
@@ -59,7 +59,7 @@ export default function BiomoleculesPage() {
       <TopicLandingPage
         topic="Biomolecules"
         topicSlug="biomolecules"
-        title="Biomolecules MCQ for NEET 2026"
+        title="Biomolecules MCQ for NEET 2027"
         description="Master Biomolecules with 400+ free MCQs covering carbohydrates, proteins, lipids, nucleic acids, and enzymes for NEET preparation."
         questionCount={400}
         chapters={['Carbohydrates', 'Proteins', 'Lipids', 'Nucleic Acids', 'Enzymes']}

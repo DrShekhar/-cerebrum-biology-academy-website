@@ -190,9 +190,9 @@ const config: BestVerticalConfig = {
   knowsAbout: [
     'What to Do After NEET Cancellation',
     'NEET 2026 Cancellation Steps',
-    'NEET 2026 Refund',
+    'NEET 2027 Refund',
     'NEET Reconduct Registration',
-    'NEET 2026 Mental Health',
+    'NEET 2027 Mental Health',
     'Tele-MANAS 14416',
     'NEET Parents Support',
     'Post-NEET Cancellation Study Plan',

@@ -2214,7 +2214,7 @@ const neetResultAnalysis: SEOLandingContent = {
 
   cta: {
     title: 'Need to Improve Your Score?',
-    subtitle: 'Join our dropper batch for guaranteed improvement in NEET 2026',
+    subtitle: 'Join our dropper batch for guaranteed improvement in NEET 2027',
     primaryButton: {
       text: 'Join Dropper Batch',
       link: '/courses',
@@ -2451,14 +2451,14 @@ const neetOfficialResources: SEOLandingContent = {
   },
 }
 
-// NEET 2026 Syllabus Page
+// NEET 2027 Syllabus Page
 const neetSyllabus2026: SEOLandingContent = {
   slug: 'neet-syllabus-2026',
   classLevel: 'universal',
 
-  title: 'NEET 2026 Syllabus | Complete Subject-wise Guide',
+  title: 'NEET 2027 Syllabus | Complete Subject-wise Guide',
   metaDescription:
-    'Complete NEET 2026 syllabus - Physics, Chemistry & Biology. Chapter-wise weightage, important topics & NTA updated preparation strategy.',
+    'Complete NEET 2027 syllabus - Physics, Chemistry & Biology. Chapter-wise weightage, important topics & NTA updated preparation strategy.',
   keywords: [
     'neet syllabus 2026',
     'neet 2026 syllabus',
@@ -2471,9 +2471,9 @@ const neetSyllabus2026: SEOLandingContent = {
   ],
 
   hero: {
-    headline: 'NEET 2026 Complete Syllabus Guide',
+    headline: 'NEET 2027 Complete Syllabus Guide',
     subheadline:
-      'Master the entire NEET 2026 syllabus with chapter-wise weightage analysis, important topics, and expert strategies for 700+ scores.',
+      'Master the entire NEET 2027 syllabus with chapter-wise weightage analysis, important topics, and expert strategies for 700+ scores.',
     highlightedText: '2026',
     ctaText: 'Get Syllabus PDF',
     ctaLink: '/resources',
@@ -2481,11 +2481,11 @@ const neetSyllabus2026: SEOLandingContent = {
   },
 
   painPoints: {
-    title: 'Understanding the NEET 2026 Syllabus',
+    title: 'Understanding the NEET 2027 Syllabus',
     points: [
       {
         icon: 'book',
-        question: 'Overwhelmed by the vast NEET 2026 syllabus?',
+        question: 'Overwhelmed by the vast NEET 2027 syllabus?',
         solution:
           'We break down the entire syllabus into high-yield and moderate-yield topics so you know exactly where to focus.',
       },
@@ -2505,14 +2505,14 @@ const neetSyllabus2026: SEOLandingContent = {
   },
 
   benefits: {
-    title: 'NEET 2026 Syllabus Breakdown',
+    title: 'NEET 2027 Syllabus Breakdown',
     subtitle: 'Complete syllabus coverage and strategy',
     items: [
       {
         icon: 'book',
         title: 'Complete Subject-wise Syllabus',
         description:
-          'Detailed NEET 2026 syllabus for Physics (45 questions), Chemistry (45 questions), and Biology (90 questions).',
+          'Detailed NEET 2027 syllabus for Physics (45 questions), Chemistry (45 questions), and Biology (90 questions).',
       },
       {
         icon: 'chart',
@@ -2524,25 +2524,25 @@ const neetSyllabus2026: SEOLandingContent = {
         icon: 'star',
         title: 'High-Yield Topics for 2026',
         description:
-          'Identification of topics that contribute maximum marks and should be prioritized for NEET 2026.',
+          'Identification of topics that contribute maximum marks and should be prioritized for NEET 2027.',
       },
       {
         icon: 'link',
         title: 'NCERT Alignment',
         description:
-          'Clear mapping between NEET 2026 syllabus and NCERT textbook chapters for focused study.',
+          'Clear mapping between NEET 2027 syllabus and NCERT textbook chapters for focused study.',
       },
       {
         icon: 'lightbulb',
         title: 'Preparation Strategy',
         description:
-          'Expert tips on how to approach NEET 2026 syllabus completion based on available time and level.',
+          'Expert tips on how to approach NEET 2027 syllabus completion based on available time and level.',
       },
       {
         icon: 'download',
         title: 'Downloadable Resources',
         description:
-          'NEET 2026 syllabus PDF, chapter checklists, and study planners to track your preparation.',
+          'NEET 2027 syllabus PDF, chapter checklists, and study planners to track your preparation.',
       },
     ],
   },
@@ -2573,9 +2573,9 @@ const neetSyllabus2026: SEOLandingContent = {
 
   faqs: [
     {
-      question: 'What is the NEET 2026 syllabus based on?',
+      question: 'What is the NEET 2027 syllabus based on?',
       answer:
-        'NEET 2026 syllabus is based on Class 11 and 12 NCERT textbooks for Physics, Chemistry, and Biology. NTA follows the NCERT curriculum.',
+        'NEET 2027 syllabus is based on Class 11 and 12 NCERT textbooks for Physics, Chemistry, and Biology. NTA follows the NCERT curriculum.',
     },
     {
       question: 'Has the NEET syllabus changed for 2026?',
@@ -2583,28 +2583,28 @@ const neetSyllabus2026: SEOLandingContent = {
         'NTA announces any syllabus changes in the official notification. We update this page immediately when any changes are announced for NEET 2026.',
     },
     {
-      question: 'Which subject has the highest weightage in NEET 2026?',
+      question: 'Which subject has the highest weightage in NEET 2027?',
       answer:
         'Biology has the highest weightage with 90 questions (360 marks) - 45 from Botany and 45 from Zoology. Physics and Chemistry have 45 questions each.',
     },
     {
-      question: 'How many chapters are there in NEET 2026 syllabus?',
+      question: 'How many chapters are there in NEET 2027 syllabus?',
       answer:
         'The NEET syllabus covers approximately 97 chapters from Class 11 and 12 NCERT: 38 in Biology, 29 in Physics, and 30 in Chemistry.',
     },
     {
-      question: 'What are the most important chapters for NEET 2026 Biology?',
+      question: 'What are the most important chapters for NEET 2027 Biology?',
       answer:
         'High-yield Biology chapters include: Human Physiology, Genetics & Evolution, Cell Biology, Plant Physiology, Ecology, and Biotechnology.',
     },
   ],
 
   courseSummary: {
-    title: 'NEET 2026 Biology Mastery Course',
+    title: 'NEET 2027 Biology Mastery Course',
     duration: '12 months comprehensive',
     batchSize: 'Small batches (10-15 students)',
     features: [
-      'Complete NCERT coverage for NEET 2026',
+      'Complete NCERT coverage for NEET 2027',
       'Chapter-wise test series',
       'Previous year question analysis',
       'High-yield topic focus',
@@ -2619,8 +2619,8 @@ const neetSyllabus2026: SEOLandingContent = {
   },
 
   cta: {
-    title: 'Master the Complete NEET 2026 Syllabus',
-    subtitle: 'Join our comprehensive program designed around the complete NEET 2026 syllabus',
+    title: 'Master the Complete NEET 2027 Syllabus',
+    subtitle: 'Join our comprehensive program designed around the complete NEET 2027 syllabus',
     primaryButton: {
       text: 'Enroll Now',
       link: '/courses',
@@ -2636,7 +2636,7 @@ const neetSyllabus2026: SEOLandingContent = {
   },
 
   relatedPages: [
-    { title: 'NEET 2026 Eligibility', link: '/neet-eligibility-2026' },
+    { title: 'NEET 2027 Eligibility', link: '/neet-eligibility-2026' },
     { title: 'NEET 2026 Exam Date', link: '/neet-exam-date-2026' },
     { title: 'NEET Preparation Guide', link: '/neet-preparation-guide' },
   ],
@@ -2645,24 +2645,24 @@ const neetSyllabus2026: SEOLandingContent = {
 
   schema: {
     '@type': 'Course',
-    courseName: 'NEET 2026 Syllabus Guide',
+    courseName: 'NEET 2027 Syllabus Guide',
     provider: 'Cerebrum Biology Academy',
     description:
-      'Complete NEET 2026 syllabus for Physics, Chemistry, and Biology with chapter-wise weightage and preparation strategies.',
+      'Complete NEET 2027 syllabus for Physics, Chemistry, and Biology with chapter-wise weightage and preparation strategies.',
     duration: '12 months',
     price: 45000,
     priceCurrency: 'INR',
   },
 }
 
-// NEET 2026 Eligibility Page
+// NEET 2027 Eligibility Page
 const neetEligibility2026: SEOLandingContent = {
   slug: 'neet-eligibility-2026',
   classLevel: 'universal',
 
-  title: 'NEET 2026 Eligibility | Age & Qualification Criteria',
+  title: 'NEET 2027 Eligibility | Age & Qualification Criteria',
   metaDescription:
-    'NEET 2026 eligibility criteria - age limit, educational qualification, attempts limit. Check if you qualify for NEET UG 2026.',
+    'NEET 2027 eligibility criteria - age limit, educational qualification, attempts limit. Check if you qualify for NEET UG 2026.',
   keywords: [
     'neet 2026 eligibility',
     'neet eligibility 2026',
@@ -2674,9 +2674,9 @@ const neetEligibility2026: SEOLandingContent = {
   ],
 
   hero: {
-    headline: 'NEET 2026 Eligibility Criteria',
+    headline: 'NEET 2027 Eligibility Criteria',
     subheadline:
-      'Complete guide to NEET 2026 eligibility including age limits, educational qualifications, number of attempts, and category-wise requirements.',
+      'Complete guide to NEET 2027 eligibility including age limits, educational qualifications, number of attempts, and category-wise requirements.',
     highlightedText: '2026',
     ctaText: 'Check Your Eligibility',
     ctaLink: '/book-demo',
@@ -2684,17 +2684,17 @@ const neetEligibility2026: SEOLandingContent = {
   },
 
   painPoints: {
-    title: 'NEET 2026 Eligibility Questions',
+    title: 'NEET 2027 Eligibility Questions',
     points: [
       {
         icon: 'user',
-        question: 'Am I eligible to appear for NEET 2026?',
+        question: 'Am I eligible to appear for NEET 2027?',
         solution:
           'We provide clear, updated eligibility criteria based on NTA guidelines so you know exactly if you qualify.',
       },
       {
         icon: 'calendar',
-        question: 'What is the age limit for NEET 2026?',
+        question: 'What is the age limit for NEET 2027?',
         solution:
           'Get clarity on minimum and maximum age requirements, including relaxations for reserved categories.',
       },
@@ -2702,13 +2702,13 @@ const neetEligibility2026: SEOLandingContent = {
         icon: 'file',
         question: 'Which subjects and marks are required?',
         solution:
-          'Understand the exact educational qualifications and minimum percentage requirements for NEET 2026.',
+          'Understand the exact educational qualifications and minimum percentage requirements for NEET 2027.',
       },
     ],
   },
 
   benefits: {
-    title: 'NEET 2026 Eligibility Information',
+    title: 'NEET 2027 Eligibility Information',
     subtitle: 'Everything you need to know',
     items: [
       {
@@ -2733,7 +2733,7 @@ const neetEligibility2026: SEOLandingContent = {
         icon: 'refresh',
         title: 'Number of Attempts',
         description:
-          'No limit on the number of attempts. You can appear for NEET 2026 as many times as needed.',
+          'No limit on the number of attempts. You can appear for NEET 2027 as many times as needed.',
       },
       {
         icon: 'globe',
@@ -2767,7 +2767,7 @@ const neetEligibility2026: SEOLandingContent = {
     },
     {
       name: 'Parent of Sneha R.',
-      achievement: 'NEET 2026 Aspirant',
+      achievement: 'NEET 2027 Aspirant',
       quote:
         'As parents, we had many questions about eligibility. The clear explanation helped us understand everything.',
     },
@@ -2775,34 +2775,34 @@ const neetEligibility2026: SEOLandingContent = {
 
   faqs: [
     {
-      question: 'What is the minimum age to appear for NEET 2026?',
+      question: 'What is the minimum age to appear for NEET 2027?',
       answer:
-        'Candidates must be at least 17 years old as on December 31, 2026. So for NEET 2026, you must turn 17 by December 31, 2026.',
+        'Candidates must be at least 17 years old as on December 31, 2026. So for NEET 2027, you must turn 17 by December 31, 2026.',
     },
     {
-      question: 'Is there an upper age limit for NEET 2026?',
+      question: 'Is there an upper age limit for NEET 2027?',
       answer:
-        'No, the Supreme Court has removed the upper age limit for NEET. Candidates of any age above 17 can appear for NEET 2026.',
+        'No, the Supreme Court has removed the upper age limit for NEET. Candidates of any age above 17 can appear for NEET 2027.',
     },
     {
-      question: 'How many times can I attempt NEET 2026?',
+      question: 'How many times can I attempt NEET 2027?',
       answer:
-        'There is no limit on the number of attempts for NEET. You can appear for NEET 2026 as many times as you want.',
+        'There is no limit on the number of attempts for NEET. You can appear for NEET 2027 as many times as you want.',
     },
     {
-      question: 'Can Class 12 appearing students give NEET 2026?',
+      question: 'Can Class 12 appearing students give NEET 2027?',
       answer:
         'Yes, students appearing for Class 12 board exams in 2026 are eligible for NEET 2026. Admission is subject to passing with required marks.',
     },
     {
-      question: 'Is Biology mandatory for NEET 2026 eligibility?',
+      question: 'Is Biology mandatory for NEET 2027 eligibility?',
       answer:
         'Yes, Biology/Biotechnology is mandatory. You must have studied Physics, Chemistry, and Biology in Class 11 and 12.',
     },
   ],
 
   courseSummary: {
-    title: 'NEET 2026 Preparation Course',
+    title: 'NEET 2027 Preparation Course',
     duration: 'Flexible (1-2 years)',
     batchSize: 'Small batches',
     features: [
@@ -2821,7 +2821,7 @@ const neetEligibility2026: SEOLandingContent = {
   },
 
   cta: {
-    title: 'Start Your NEET 2026 Preparation',
+    title: 'Start Your NEET 2027 Preparation',
     subtitle: 'Now that you know you are eligible, begin your preparation with expert guidance',
     primaryButton: {
       text: 'Enroll Now',
@@ -2838,7 +2838,7 @@ const neetEligibility2026: SEOLandingContent = {
   },
 
   relatedPages: [
-    { title: 'NEET 2026 Syllabus', link: '/neet-syllabus-2026' },
+    { title: 'NEET 2027 Syllabus', link: '/neet-syllabus-2026' },
     { title: 'NEET 2026 Exam Date', link: '/neet-exam-date-2026' },
     { title: 'NEET Application Form 2026', link: '/neet-application-form-2026' },
   ],
@@ -2847,10 +2847,10 @@ const neetEligibility2026: SEOLandingContent = {
 
   schema: {
     '@type': 'Course',
-    courseName: 'NEET 2026 Eligibility Guide',
+    courseName: 'NEET 2027 Eligibility Guide',
     provider: 'Cerebrum Biology Academy',
     description:
-      'Complete NEET 2026 eligibility criteria including age limit, qualifications, and category requirements.',
+      'Complete NEET 2027 eligibility criteria including age limit, qualifications, and category requirements.',
     duration: 'Reference Guide',
     price: 0,
     priceCurrency: 'INR',
@@ -2886,7 +2886,7 @@ const neetExamDate2026: SEOLandingContent = {
   },
 
   painPoints: {
-    title: 'NEET 2026 Schedule Questions',
+    title: 'NEET 2027 Schedule Questions',
     points: [
       {
         icon: 'calendar',
@@ -2896,7 +2896,7 @@ const neetExamDate2026: SEOLandingContent = {
       },
       {
         icon: 'clock',
-        question: 'When does NEET 2026 application start?',
+        question: 'When does NEET 2027 application start?',
         solution:
           'NEET 2026 application is expected to open in February 2026. Get alerts when registration begins.',
       },
@@ -2983,7 +2983,7 @@ const neetExamDate2026: SEOLandingContent = {
         'NEET 2026 is expected in the first week of May 2026. NTA will announce the official date in the notification, usually released in February.',
     },
     {
-      question: 'When will NEET 2026 application form be released?',
+      question: 'When will NEET 2027 application form be released?',
       answer:
         'NEET 2026 application is expected to be released in February 2026 on the official NTA website neet.nta.nic.in.',
     },
@@ -3005,7 +3005,7 @@ const neetExamDate2026: SEOLandingContent = {
   ],
 
   courseSummary: {
-    title: 'NEET 2026 Preparation Course',
+    title: 'NEET 2027 Preparation Course',
     duration: '12 months to exam',
     batchSize: 'Small batches (10-15 students)',
     features: [
@@ -3024,8 +3024,8 @@ const neetExamDate2026: SEOLandingContent = {
   },
 
   cta: {
-    title: 'Start Your NEET 2026 Preparation Today',
-    subtitle: 'Time is precious. Begin your journey to NEET 2026 success now!',
+    title: 'Start Your NEET 2027 Preparation Today',
+    subtitle: 'Time is precious. Begin your journey to NEET 2027 success now!',
     primaryButton: {
       text: 'Enroll Now',
       link: '/courses',
@@ -3041,7 +3041,7 @@ const neetExamDate2026: SEOLandingContent = {
   },
 
   relatedPages: [
-    { title: 'NEET 2026 Syllabus', link: '/neet-syllabus-2026' },
+    { title: 'NEET 2027 Syllabus', link: '/neet-syllabus-2026' },
     { title: 'NEET Application Form 2026', link: '/neet-application-form-2026' },
     { title: 'NEET 2026 Result', link: '/neet-result-2026' },
   ],
@@ -3050,7 +3050,7 @@ const neetExamDate2026: SEOLandingContent = {
 
   schema: {
     '@type': 'Course',
-    courseName: 'NEET 2026 Schedule Guide',
+    courseName: 'NEET 2027 Schedule Guide',
     provider: 'Cerebrum Biology Academy',
     description:
       'Complete NEET 2026 exam schedule including exam date, application dates, admit card, and result dates.',
@@ -3208,7 +3208,7 @@ const neetResult2026: SEOLandingContent = {
   ],
 
   courseSummary: {
-    title: 'NEET 2026 Preparation Course',
+    title: 'NEET 2027 Preparation Course',
     duration: '12 months comprehensive',
     batchSize: 'Small batches (10-15 students)',
     features: [
@@ -3246,7 +3246,7 @@ const neetResult2026: SEOLandingContent = {
   relatedPages: [
     { title: 'NEET 2026 Exam Date', link: '/neet-exam-date-2026' },
     { title: 'NEET Counselling Guide', link: '/neet-counselling-guide' },
-    { title: 'NEET 2026 Syllabus', link: '/neet-syllabus-2026' },
+    { title: 'NEET 2027 Syllabus', link: '/neet-syllabus-2026' },
   ],
 
   contactButtons: defaultContactButtons,
@@ -3263,7 +3263,7 @@ const neetResult2026: SEOLandingContent = {
   },
 }
 
-// NEET 2026 Application Form Page
+// NEET 2027 Application Form Page
 const neetApplicationForm2026: SEOLandingContent = {
   slug: 'neet-application-form-2026',
   classLevel: 'universal',
@@ -3282,7 +3282,7 @@ const neetApplicationForm2026: SEOLandingContent = {
   ],
 
   hero: {
-    headline: 'NEET 2026 Application Form Guide',
+    headline: 'NEET 2027 Application Form Guide',
     subheadline:
       'Complete guide to NEET 2026 registration - application dates, step-by-step process, documents required, and fees.',
     highlightedText: 'Feb 2026',
@@ -3292,7 +3292,7 @@ const neetApplicationForm2026: SEOLandingContent = {
   },
 
   painPoints: {
-    title: 'NEET 2026 Application Questions',
+    title: 'NEET 2027 Application Questions',
     points: [
       {
         icon: 'calendar',
@@ -3302,13 +3302,13 @@ const neetApplicationForm2026: SEOLandingContent = {
       },
       {
         icon: 'file',
-        question: 'What documents are required for NEET 2026?',
+        question: 'What documents are required for NEET 2027?',
         solution:
           'Complete checklist of documents - photo, signature, ID proof, category certificate, and other requirements.',
       },
       {
         icon: 'target',
-        question: 'How to fill NEET 2026 application correctly?',
+        question: 'How to fill NEET 2027 application correctly?',
         solution:
           'Step-by-step guide to avoid common mistakes and fill the application form correctly first time.',
       },
@@ -3316,7 +3316,7 @@ const neetApplicationForm2026: SEOLandingContent = {
   },
 
   benefits: {
-    title: 'NEET 2026 Application Process',
+    title: 'NEET 2027 Application Process',
     subtitle: 'Step-by-step registration guide',
     items: [
       {
@@ -3381,34 +3381,34 @@ const neetApplicationForm2026: SEOLandingContent = {
 
   faqs: [
     {
-      question: 'When will NEET 2026 application form be released?',
+      question: 'When will NEET 2027 application form be released?',
       answer:
         'NEET 2026 application is expected to be released in February 2026 on the official NTA website neet.nta.nic.in.',
     },
     {
-      question: 'What is NEET 2026 application fee?',
+      question: 'What is NEET 2027 application fee?',
       answer:
         'Expected fees: General category ₹1700, OBC/EWS ₹1600, SC/ST/PwD ₹1000. Payment can be made online via credit/debit card, net banking, or UPI.',
     },
     {
-      question: 'What documents are required for NEET 2026 application?',
+      question: 'What documents are required for NEET 2027 application?',
       answer:
         'Required: Passport size photo, signature, Class 10 certificate for DOB, Class 12 marksheet/certificate, category certificate (if applicable), ID proof.',
     },
     {
-      question: 'Can I edit NEET 2026 application after submission?',
+      question: 'Can I edit NEET 2027 application after submission?',
       answer:
         'Yes, NTA provides a correction window after the application deadline. Some details can be corrected with additional fee, others without fee.',
     },
     {
-      question: 'What is the photo and signature size for NEET 2026?',
+      question: 'What is the photo and signature size for NEET 2027?',
       answer:
         'Photo: 10-200 KB, JPG/JPEG format, 3.5x4.5 cm dimension. Signature: 4-30 KB, JPG/JPEG format, 3.5x1.5 cm dimension.',
     },
   ],
 
   courseSummary: {
-    title: 'NEET 2026 Preparation Course',
+    title: 'NEET 2027 Preparation Course',
     duration: '12 months comprehensive',
     batchSize: 'Small batches (10-15 students)',
     features: [
@@ -3427,7 +3427,7 @@ const neetApplicationForm2026: SEOLandingContent = {
   },
 
   cta: {
-    title: 'Prepare While You Wait for NEET 2026 Application',
+    title: 'Prepare While You Wait for NEET 2027 Application',
     subtitle: 'Start your preparation now and be ready when registration opens',
     primaryButton: {
       text: 'Enroll Now',
@@ -3444,16 +3444,16 @@ const neetApplicationForm2026: SEOLandingContent = {
   },
 
   relatedPages: [
-    { title: 'NEET 2026 Eligibility', link: '/neet-eligibility-2026' },
+    { title: 'NEET 2027 Eligibility', link: '/neet-eligibility-2026' },
     { title: 'NEET 2026 Exam Date', link: '/neet-exam-date-2026' },
-    { title: 'NEET 2026 Syllabus', link: '/neet-syllabus-2026' },
+    { title: 'NEET 2027 Syllabus', link: '/neet-syllabus-2026' },
   ],
 
   contactButtons: defaultContactButtons,
 
   schema: {
     '@type': 'Course',
-    courseName: 'NEET 2026 Application Guide',
+    courseName: 'NEET 2027 Application Guide',
     provider: 'Cerebrum Biology Academy',
     description:
       'Complete guide to NEET 2026 application form including registration dates, documents, and step-by-step process.',
@@ -4042,7 +4042,7 @@ export const neetGuideSEOPages: Record<string, SEOLandingContent> = {
   'neet-registration-guide': neetRegistrationGuide,
   'neet-result-analysis': neetResultAnalysis,
   'neet-official-resources': neetOfficialResources,
-  // NEET 2026 pages
+  // NEET 2027 pages
   'neet-syllabus-2026': neetSyllabus2026,
   'neet-eligibility-2026': neetEligibility2026,
   'neet-exam-date-2026': neetExamDate2026,

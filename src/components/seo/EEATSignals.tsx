@@ -48,7 +48,7 @@ const expertiseSignals = [
   {
     icon: BookOpen,
     label: 'NCERT-Aligned Curriculum',
-    description: 'Updated for NEET 2026 pattern',
+    description: 'Updated for NEET 2027 pattern',
   },
   {
     icon: Award,

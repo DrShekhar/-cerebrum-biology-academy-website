@@ -95,7 +95,7 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
             COMPLETE GUIDE
           </text>
           <text x="300" y="55" fontSize="20" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
-            NEET 2026
+            NEET 2027
           </text>
         </g>
       </g>
@@ -406,7 +406,7 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
             Start Your Journey
           </text>
           <text x="490" y="410" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
-            NEET 2026 🚀
+            NEET 2027 🚀
           </text>
           <text x="490" y="428" fontSize="8" fill="#A7F3D0" textAnchor="middle">
             Complete Guide Inside →

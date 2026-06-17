@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Online Biology Tutor for Class 12 | NEET + Board Exams',
   description:
-    'Best online biology tutor for Class 12. Expert coaching for NEET 2026 & Board exams. Learn from Dr. Shekhar C Singh, AIIMS Alumnus. Book FREE demo today!',
+    'Best online biology tutor for Class 12. Expert coaching for NEET 2027 & Board exams. Learn from Dr. Shekhar C Singh, AIIMS Alumnus. Book FREE demo today!',
   keywords: [
     'online biology tutor class 12',
     'class 12 biology online tutor',

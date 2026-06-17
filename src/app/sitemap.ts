@@ -1182,7 +1182,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.98,
     },
-    // NEET 2026 SEO Pages - HIGH TRAFFIC KEYWORDS
+    // NEET 2027 SEO Pages - HIGH TRAFFIC KEYWORDS
     {
       url: `${baseUrl}/neet-2026-exam-date`,
       lastModified: lastUpdated,

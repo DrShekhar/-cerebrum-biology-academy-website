@@ -256,7 +256,7 @@ export default function Class12BiologyPage() {
               {/* Urgency Badge */}
               <div className="inline-flex items-center bg-yellow-500/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-yellow-500/30">
                 <Sparkles className="w-4 h-4 mr-2 text-yellow-400" />
-                <span className="text-yellow-300">NEET 2026 Batch Open</span>
+                <span className="text-yellow-300">NEET 2027 Batch Open</span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
@@ -679,7 +679,7 @@ export default function Class12BiologyPage() {
           </div>
 
           <div className="bg-yellow-100 border border-yellow-300 rounded-xl p-4 sm:p-6">
-            <p className="text-yellow-800 font-semibold mb-2">🎯 NEET 2026 Special Offer</p>
+            <p className="text-yellow-800 font-semibold mb-2">🎯 NEET 2027 Special Offer</p>
             <p className="text-yellow-700 text-sm sm:text-base">
               Enroll before 31st January and get FREE NEET crash course (worth ₹15,000) + Previous
               15 years question bank!
@@ -763,7 +763,7 @@ export default function Class12BiologyPage() {
           {/* Urgency Badge */}
           <div className="inline-flex items-center bg-yellow-500/20 border border-yellow-500/30 px-4 py-2 rounded-full text-sm font-semibold mb-6">
             <Calendar className="w-4 h-4 mr-2 text-yellow-400" />
-            <span className="text-yellow-300">Limited Seats for NEET 2026 Batch</span>
+            <span className="text-yellow-300">Limited Seats for NEET 2027 Batch</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">

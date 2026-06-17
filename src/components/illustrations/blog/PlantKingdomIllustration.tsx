@@ -93,7 +93,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
         textAnchor="middle"
         fontFamily="system-ui, sans-serif"
       >
-        NEET 2026 Chapter Guide • 4-6 Questions • High Weightage
+        NEET 2027 Chapter Guide • 4-6 Questions • High Weightage
       </text>
 
       {/* Evolution Progression Banner */}

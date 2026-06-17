@@ -29,16 +29,16 @@ export const metadata: Metadata = {
     'NEET UG 2026',
     'NEET 2026 registration',
     'NEET 2026 form filling',
-    'NEET 2026 application',
+    'NEET 2027 application',
     'NEET 2026 exam date',
-    'NEET 2026 eligibility',
-    'NTA NEET 2026',
+    'NEET 2027 eligibility',
+    'NTA NEET 2027',
     'NEET UG 2026 syllabus',
-    'NEET 2026 fee',
-    'NEET 2026 documents',
+    'NEET 2027 fee',
+    'NEET 2027 documents',
     'neet.nta.nic.in',
     'NEET biology crash course',
-    'NEET 2026 preparation',
+    'NEET 2027 preparation',
   ],
   openGraph: {
     title: 'NEET UG 2026 — Complete Registration & Exam Guide',
@@ -170,7 +170,7 @@ const faqs = [
     a: 'General: 50% in PCB aggregate, OBC/SC/ST: 40%, PwBD: 45%. You must have studied Physics, Chemistry, and Biology from a recognised board.',
   },
   {
-    q: 'Is the NEET 2026 syllabus changed?',
+    q: 'Is the NEET 2027 syllabus changed?',
     a: 'No. The syllabus remains unchanged — 79 chapters across Physics, Chemistry, and Biology as confirmed by NMC.',
   },
   {
@@ -582,10 +582,10 @@ export default function NEETUG2026Page() {
               <div className="max-w-3xl">
                 <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
                   <Sparkles className="w-4 h-4" />
-                  NEET 2026 Preparation
+                  NEET 2027 Preparation
                 </div>
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
-                  Need Help with NEET 2026 Preparation?
+                  Need Help with NEET 2027 Preparation?
                 </h2>
                 <p className="text-lg text-gray-300 mb-6">
                   Join Cerebrum Biology Academy&apos;s{' '}

@@ -887,7 +887,7 @@ export default function NEETPreviousYearQuestionsPage() {
               All previous year questions are sourced from officially released NEET papers.
               Solutions and analysis are prepared by Cerebrum Biology Academy faculty.
               <br />
-              Updated for NEET 2026 preparation.
+              Updated for NEET 2027 preparation.
             </p>
           </div>
         </div>

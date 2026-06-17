@@ -42,7 +42,7 @@ export default function NEET2026PreparationPage() {
   const neet2026Highlights = [
     {
       title: 'Updated Syllabus Coverage',
-      description: 'Complete NEET 2026 syllabus with latest NTA patterns and NCERT-based approach',
+      description: 'Complete NEET 2027 syllabus with latest NTA patterns and NCERT-based approach',
       icon: BookOpen,
       color: 'bg-red-500',
     },
@@ -78,7 +78,7 @@ export default function NEET2026PreparationPage() {
   const neet2026Batches = [
     {
       name: 'Crash Course',
-      target: 'NEET 2026',
+      target: 'NEET 2027',
       duration: '3-4 Months',
       features: ['Rapid syllabus revision', 'High-yield topic focus', 'Intensive mock tests'],
       price: '₹45,000',
@@ -88,7 +88,7 @@ export default function NEET2026PreparationPage() {
     },
     {
       name: 'Test Series Course',
-      target: 'NEET 2026',
+      target: 'NEET 2027',
       duration: '6 Months',
       features: [
         '100+ chapter-wise tests',
@@ -102,7 +102,7 @@ export default function NEET2026PreparationPage() {
     },
     {
       name: 'Dropper Course',
-      target: 'NEET 2026',
+      target: 'NEET 2027',
       duration: '10-12 Months',
       features: [
         'Complete syllabus from scratch',
@@ -117,7 +117,7 @@ export default function NEET2026PreparationPage() {
     },
     {
       name: 'Test & Discussion Course',
-      target: 'NEET 2026',
+      target: 'NEET 2027',
       duration: '6-8 Months',
       features: [
         'Weekly tests with live discussion',
@@ -138,17 +138,17 @@ export default function NEET2026PreparationPage() {
         'NEET 2026 is expected to be conducted in May 2026 (tentatively first Sunday of May). NTA will release the official notification around December 2025 or January 2026.',
     },
     {
-      question: 'What is the syllabus for NEET 2026?',
+      question: 'What is the syllabus for NEET 2027?',
       answer:
-        'NEET 2026 syllabus covers Physics, Chemistry, and Biology from Class 11 and 12 NCERT. Biology has 90 questions (360 marks) - highest weightage. The syllabus is expected to remain based on NCERT.',
+        'NEET 2027 syllabus covers Physics, Chemistry, and Biology from Class 11 and 12 NCERT. Biology has 90 questions (360 marks) - highest weightage. The syllabus is expected to remain based on NCERT.',
     },
     {
-      question: 'How to prepare for NEET 2026 Biology?',
+      question: 'How to prepare for NEET 2027 Biology?',
       answer:
         'Focus on NCERT thoroughly, practice MCQs daily, take mock tests regularly, master diagrams, and understand concepts rather than rote learning. Start early with Class 11 concepts for strong foundation.',
     },
     {
-      question: 'Is online coaching effective for NEET 2026?',
+      question: 'Is online coaching effective for NEET 2027?',
       answer:
         'Yes! Online coaching offers flexibility, recorded lectures for revision, AI-powered doubt solving, and personalized learning paths. Our hybrid model combines best of both online and offline learning.',
     },
@@ -158,7 +158,7 @@ export default function NEET2026PreparationPage() {
         'Based on trends, General category may need 620+ for top government medical colleges. Our students typically score 600-680+ with dedicated preparation and our structured approach.',
     },
     {
-      question: 'When should I start preparing for NEET 2026?',
+      question: 'When should I start preparing for NEET 2027?',
       answer:
         'The best time to start is NOW! Starting early in Class 11 gives you 2 full years for comprehensive preparation. Even if you are in Class 12, starting immediately gives you 5-6 months of focused study.',
     },
@@ -199,7 +199,7 @@ export default function NEET2026PreparationPage() {
           onClick={async () => {
             await trackAndOpenWhatsApp({
               source: 'neet-2026-floating',
-              message: "Hi, I'm interested in NEET 2026 preparation",
+              message: "Hi, I'm interested in NEET 2027 preparation",
               campaign: 'neet-2026',
             })
           }}
@@ -228,7 +228,7 @@ export default function NEET2026PreparationPage() {
               </div>
 
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6">
-                NEET 2026 <span className="text-yellow-400">Preparation</span>
+                NEET 2027 <span className="text-yellow-400">Preparation</span>
                 <br />
                 <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#e8ede8]">
                   Your Medical Dream Starts Here
@@ -303,7 +303,7 @@ export default function NEET2026PreparationPage() {
                     FREE Material Worth ₹2,999
                   </div>
                   <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">
-                    Get Your Free NEET 2026 Study Kit
+                    Get Your Free NEET 2027 Study Kit
                   </h3>
                   <p className="text-gray-600 text-xs sm:text-sm">
                     Register now for free demo class + study material
@@ -317,7 +317,7 @@ export default function NEET2026PreparationPage() {
                       trackAndOpenWhatsApp({
                         source: 'neet-2026-page',
                         message:
-                          'Hi! I am interested in NEET 2026 Biology preparation. Please share course details, batch timings, and fee structure.',
+                          'Hi! I am interested in NEET 2027 Biology preparation. Please share course details, batch timings, and fee structure.',
                         campaign: 'neet-2026',
                       })
                     }
@@ -364,7 +364,7 @@ export default function NEET2026PreparationPage() {
         <div className="max-w-7xl mx-auto px-3 sm:px-4">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
-              Why Choose Cerebrum for NEET 2026?
+              Why Choose Cerebrum for NEET 2027?
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
               India's most trusted NEET Biology coaching with proven track record of 67+ AIIMS
@@ -395,12 +395,12 @@ export default function NEET2026PreparationPage() {
         </div>
       </section>
 
-      {/* NEET 2026 Batches */}
+      {/* NEET 2027 Batches */}
       <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-3 sm:px-4">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
-              NEET 2026 Course Options
+              NEET 2027 Course Options
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
               Choose the right batch based on your current class and preparation level.
@@ -475,10 +475,10 @@ export default function NEET2026PreparationPage() {
         <div className="max-w-4xl mx-auto px-3 sm:px-4">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
-              NEET 2026 FAQs
+              NEET 2027 FAQs
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600">
-              Common questions about NEET 2026 preparation answered by experts
+              Common questions about NEET 2027 preparation answered by experts
             </p>
           </div>
 
@@ -512,7 +512,7 @@ export default function NEET2026PreparationPage() {
         <div className="max-w-4xl mx-auto px-3 sm:px-4 text-center">
           <div className="animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 md:mb-6">
-              Start Your NEET 2026 Journey Today
+              Start Your NEET 2027 Journey Today
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 opacity-90">
               Join 15,000+ students who trust Cerebrum with Cerebrum Biology Academy. Expert
@@ -543,7 +543,7 @@ export default function NEET2026PreparationPage() {
             </div>
 
             <p className="text-xs sm:text-sm opacity-80">
-              New batch for NEET 2026 starting soon. Limited seats available!
+              New batch for NEET 2027 starting soon. Limited seats available!
             </p>
           </div>
         </div>

@@ -86,7 +86,7 @@ export default function CrashCourseLayout({ children }: { children: React.ReactN
                 name: 'Who should join NEET Crash Course?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Students who need quick revision before NEET 2026. Covers complete Class 11 + 12 Biology in compressed format.',
+                  text: 'Students who need quick revision before NEET 2027. Covers complete Class 11 + 12 Biology in compressed format.',
                 },
               },
               {

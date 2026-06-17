@@ -161,7 +161,7 @@ export default function NEETBiologyCoachingDelhiNCRPage() {
       <LandingHero
         h1="Premier NEET Biology Coaching in Delhi NCR"
         subheadline="Achieve Your Medical Dream with Expert Faculty, Small Batches, and Proven Results. Join India's Leading NEET Biology Institute."
-        highlightedBadge="🎯 NEET 2026 Admissions Open - Limited Seats"
+        highlightedBadge="🎯 NEET 2027 Admissions Open - Limited Seats"
         trustBadges={['15+ Years Experience', '10,000+ Students', '98% Results']}
       />
 

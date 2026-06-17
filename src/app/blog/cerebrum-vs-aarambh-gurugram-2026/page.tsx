@@ -151,7 +151,7 @@ const faqs = [
       'Aarambh has slightly smaller batches (10-15 students) compared to Cerebrum (15-20 students). However, both are far smaller than large institutes like Aakash (60-120) or Allen (80-150). The practical difference between 15 and 10 students per batch is minimal — both allow genuine personal attention.',
   },
   {
-    question: 'How do I decide between Cerebrum and Aarambh for NEET 2026?',
+    question: 'How do I decide between Cerebrum and Aarambh for NEET 2027?',
     answer:
       'Ask yourself: (1) Is Biology your weakest subject? Choose Cerebrum. (2) Do you need all subjects under one roof? Consider Aarambh. (3) Is budget important? Cerebrum is 20-40% cheaper. (4) Do you value medical-background faculty for Biology? Cerebrum wins. We recommend attending a free demo at both before deciding — call 88264-44334 for a Cerebrum demo.',
   },
@@ -163,7 +163,7 @@ export default function CerebrumVsAarambhPage() {
     '@type': 'Article',
     headline: 'Cerebrum vs Aarambh: Which Gurugram NEET Coaching is Better?',
     description:
-      'Detailed comparison of Cerebrum Biology Academy vs Aarambh Coaching Gurugram for NEET 2026.',
+      'Detailed comparison of Cerebrum Biology Academy vs Aarambh Coaching Gurugram for NEET 2027.',
     author: {
       '@type': 'Organization',
       name: 'Cerebrum Biology Academy',
@@ -279,7 +279,7 @@ export default function CerebrumVsAarambhPage() {
             Cerebrum is a Biology specialist with AIIMS faculty, while Aarambh covers all NEET
             subjects with IIT/NIT-trained teachers. This honest, data-driven comparison covers fees,
             batch size, faculty credentials, success rates, teaching methodology, and student
-            support to help you make the right choice for NEET 2026.
+            support to help you make the right choice for NEET 2027.
           </p>
         </header>
 
@@ -623,7 +623,7 @@ export default function CerebrumVsAarambhPage() {
               className="block p-4 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 transition-colors"
             >
               <div className="font-medium text-gray-900">Our Courses</div>
-              <p className="text-sm text-gray-500 mt-1">Biology courses for NEET 2026</p>
+              <p className="text-sm text-gray-500 mt-1">Biology courses for NEET 2027</p>
             </Link>
             <Link
               href="/book-free-demo"

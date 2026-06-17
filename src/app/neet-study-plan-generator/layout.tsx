@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     'Free NEET Biology Study Plan Generator 2026. Get a personalized week-by-week study schedule based on your time, class, and weak areas. NCERT-focused, AI-optimized for maximum score.',
   keywords: [
     'NEET study plan',
-    'NEET 2026 study plan',
+    'NEET 2027 study plan',
     'NEET Biology study schedule',
     'NEET preparation timetable',
     'personalized NEET study plan',

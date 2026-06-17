@@ -84,7 +84,7 @@ export default function PYQ2024Page() {
             </h1>
             <p className="text-lg text-stone-600 max-w-2xl mx-auto">
               Practice all 90 Biology questions from NEET 2024 exam with detailed solutions. Master
-              the exam pattern and boost your preparation for NEET 2026.
+              the exam pattern and boost your preparation for NEET 2027.
             </p>
           </header>
 

@@ -20,14 +20,14 @@ export const metadata: Metadata = {
   keywords: [
     'NEET 2026 exam date',
     'NEET UG 2026 date',
-    'NEET 2026 schedule',
-    'NTA NEET 2026',
+    'NEET 2027 schedule',
+    'NTA NEET 2027',
     'NEET exam date 2026',
     'NEET 2026 registration date',
     'NEET 2026 admit card date',
     'NEET 2026 result date',
     'NEET 2026 important dates',
-    'NEET 2026 timeline',
+    'NEET 2027 timeline',
   ],
   openGraph: {
     title: 'NEET 2026 Exam Date - Complete Schedule & Important Dates',
@@ -130,12 +130,12 @@ const faqData = [
       'NEET 2026 registration is expected to begin in February 2026. Students should keep checking the official NTA NEET website for the exact dates.',
   },
   {
-    question: 'What is the NEET 2026 exam timing?',
+    question: 'What is the NEET 2027 exam timing?',
     answer:
       'NEET 2026 exam will be conducted from 2:00 PM to 5:20 PM (3 hours 20 minutes). Candidates must report to the exam center by 1:00 PM.',
   },
   {
-    question: 'What is the NEET 2026 syllabus?',
+    question: 'What is the NEET 2027 syllabus?',
     answer:
       'NEET 2026 syllabus includes Physics, Chemistry, and Biology (Botany + Zoology) from Class 11 and Class 12 NCERT. NTA may release updated syllabus with the official notification.',
   },
@@ -145,14 +145,14 @@ const faqData = [
       'NEET is conducted once a year by NTA. There are no multiple attempts in a single year, so students should prepare thoroughly for the one exam opportunity.',
   },
   {
-    question: 'What is the NEET 2026 exam mode?',
+    question: 'What is the NEET 2027 exam mode?',
     answer:
-      'NEET 2026 will be conducted in pen and paper (offline) mode. Students will mark answers on an OMR sheet.',
+      'NEET 2027 will be conducted in pen and paper (offline) mode. Students will mark answers on an OMR sheet.',
   },
   {
-    question: 'What is NEET 2026 marking scheme?',
+    question: 'What is NEET 2027 marking scheme?',
     answer:
-      'NEET 2026 marking scheme: +4 marks for correct answer, -1 mark for wrong answer, 0 marks for unattempted questions. Total marks: 720.',
+      'NEET 2027 marking scheme: +4 marks for correct answer, -1 mark for wrong answer, 0 marks for unattempted questions. Total marks: 720.',
   },
   {
     question: 'When will NEET 2026 admit card be released?',
@@ -417,7 +417,7 @@ export default function NEET2026ExamDatePage() {
         <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
-              NEET 2026 Exam Pattern
+              NEET 2027 Exam Pattern
             </h2>
 
             <div className="mx-auto max-w-3xl">
@@ -474,7 +474,7 @@ export default function NEET2026ExamDatePage() {
               <div className="grid items-center md:grid-cols-2">
                 <div className="p-8 text-white md:p-12">
                   <h2 className="mb-4 text-2xl font-bold md:text-3xl">
-                    Start Your NEET 2026 Preparation Today
+                    Start Your NEET 2027 Preparation Today
                   </h2>
                   <p className="mb-6 text-blue-100">
                     Join Cerebrum Biology Academy for expert-guided NEET preparation. Our
@@ -531,7 +531,7 @@ export default function NEET2026ExamDatePage() {
         <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
-              Frequently Asked Questions - NEET 2026
+              Frequently Asked Questions - NEET 2027
             </h2>
 
             <div className="mx-auto max-w-3xl space-y-4">

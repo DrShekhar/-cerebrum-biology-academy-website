@@ -2,9 +2,9 @@ import { Metadata } from 'next'
 import { FAQSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
-  title: 'NEET 2026 Preparation Roadmap | Month-by-Month Study Plan',
+  title: 'NEET 2027 Preparation Roadmap | Month-by-Month Study Plan',
   description:
-    'Complete NEET 2026 preparation roadmap with month-by-month study plan, chapter-wise timeline, revision strategy, and mock test schedule by Cerebrum Biology Academy.',
+    'Complete NEET 2027 preparation roadmap with month-by-month study plan, chapter-wise timeline, revision strategy, and mock test schedule by Cerebrum Biology Academy.',
   keywords: [
     'neet preparation roadmap',
     'neet 2026 study plan',
@@ -14,17 +14,17 @@ export const metadata: Metadata = {
     'neet study schedule',
   ],
   openGraph: {
-    title: 'NEET 2026 Preparation Roadmap | Month-by-Month Study Plan',
+    title: 'NEET 2027 Preparation Roadmap | Month-by-Month Study Plan',
     description:
-      'Complete NEET 2026 preparation roadmap with month-by-month study plan, chapter-wise timeline, revision strategy, and mock test schedule.',
+      'Complete NEET 2027 preparation roadmap with month-by-month study plan, chapter-wise timeline, revision strategy, and mock test schedule.',
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/neet-preparation-roadmap',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET 2026 Preparation Roadmap | Month-by-Month Study Plan',
+    title: 'NEET 2027 Preparation Roadmap | Month-by-Month Study Plan',
     description:
-      'Complete NEET 2026 preparation roadmap with month-by-month study plan, chapter-wise timeline, revision strategy, and mock test schedule.',
+      'Complete NEET 2027 preparation roadmap with month-by-month study plan, chapter-wise timeline, revision strategy, and mock test schedule.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-preparation-roadmap',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 const faqQuestions = [
   {
-    question: 'When should I start preparing for NEET 2026?',
+    question: 'When should I start preparing for NEET 2027?',
     answer:
       "The ideal time to start NEET preparation is at the beginning of class 11 (February onwards). This gives you 18-24 months to thoroughly cover the NCERT curriculum, practice numericals, and attempt mock tests. If you're starting late, focus on high-weightage chapters first and increase your daily study hours accordingly.",
   },
@@ -203,7 +203,7 @@ export default function NEETPreparationRoadmapPage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                NEET 2026 Preparation Roadmap
+                NEET 2027 Preparation Roadmap
               </h1>
               <p className="text-xl md:text-2xl text-slate-200 mb-8 max-w-3xl mx-auto">
                 Comprehensive Month-by-Month Study Plan with Chapter-wise Timeline, Revision
@@ -672,7 +672,7 @@ export default function NEETPreparationRoadmapPage() {
         <section className="py-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Master Your NEET 2026 Preparation?
+              Ready to Master Your NEET 2027 Preparation?
             </h2>
             <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
               Get personalized guidance from Cerebrum Biology Academy experts. Book your free demo

@@ -2273,7 +2273,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
   'live-online-neet-classes': {
     slug: 'live-online-neet-classes',
     classLevel: 'universal',
-    title: 'Live Online NEET Classes 2026-27 | Interactive Biology Sessions | Cerebrum Academy',
+    title: 'Live Online NEET Classes 2027 | Interactive Biology Sessions | Cerebrum Academy',
     metaDescription:
       'Join live online NEET classes with real-time doubt clearing. Interactive biology sessions by AIIMS faculty. Live online NEET biology coaching with personal attention. Free demo available!',
     keywords: [
@@ -2446,7 +2446,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     relatedPages: [
       { title: 'Online NEET Coaching', link: '/online-neet-coaching' },
       { title: 'Online Test Series', link: '/online-neet-test-series' },
-      { title: 'NEET 2026 Preparation', link: '/neet-2026-preparation' },
+      { title: 'NEET 2027 Preparation', link: '/neet-2026-preparation' },
     ],
     schema: {
       '@type': 'Course',
@@ -2462,7 +2462,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
   'online-neet-test-series': {
     slug: 'online-neet-test-series',
     classLevel: 'universal',
-    title: 'Online NEET Test Series 2026-27 | Mock Tests & Practice | Cerebrum Academy',
+    title: 'Online NEET Test Series 2027 | Mock Tests & Practice | Cerebrum Academy',
     metaDescription:
       'Comprehensive online NEET test series with 200+ mock tests. NEET pattern online tests with detailed analysis, rank prediction & improvement suggestions. Start free trial!',
     keywords: [
@@ -2478,7 +2478,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       'online neet practice papers',
     ],
     hero: {
-      headline: 'Online NEET Test Series 2026-27',
+      headline: 'Online NEET Test Series 2027',
       subheadline:
         '200+ mock tests designed by AIIMS faculty. Real NEET experience with AI-powered analysis.',
       highlightedText: '200+ Tests',
@@ -2630,7 +2630,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     ],
     schema: {
       '@type': 'Course',
-      courseName: 'Online NEET Test Series 2026-27',
+      courseName: 'Online NEET Test Series 2027',
       provider: 'Cerebrum Biology Academy',
       description:
         'Comprehensive online NEET test series with 200+ mock tests and AI-powered analysis',
@@ -2644,7 +2644,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
   'neet-online-classes': {
     slug: 'neet-online-classes',
     classLevel: 'universal',
-    title: 'NEET Online Classes 2026-27 | Live Biology Classes',
+    title: 'NEET Online Classes 2027 | Live Biology Classes',
     metaDescription:
       'Join NEET online classes with AIIMS faculty. Live interactive biology classes, small batches, 24/7 doubt support. 67+ AIIMS selections.',
     keywords: [
@@ -2658,7 +2658,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       'best online classes for neet',
     ],
     hero: {
-      headline: 'NEET Online Classes 2026-27',
+      headline: 'NEET Online Classes 2027',
       subheadline:
         'Live interactive biology classes with AIIMS faculty. Join from anywhere in India and get personal attention in small batches.',
       ctaText: 'Book Free Demo Class',
@@ -2833,7 +2833,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     ],
     schema: {
       '@type': 'Course',
-      courseName: 'NEET Online Classes 2026-27',
+      courseName: 'NEET Online Classes 2027',
       provider: 'Cerebrum Biology Academy',
       description: 'Live interactive NEET biology classes with AIIMS faculty',
       duration: '12 months',

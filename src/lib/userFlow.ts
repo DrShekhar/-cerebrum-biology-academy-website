@@ -21,7 +21,7 @@ export type UserTrack = 'NEET' | 'REGULAR' | 'NOT_SET'
 
 export interface UserProfile {
   track?: UserTrack
-  goal?: string // e.g., "NEET 2026", "Class 11 Regular"
+  goal?: string // e.g., "NEET 2027", "Class 11 Regular"
   targetScore?: number // For NEET users
   class?: string
   city?: string

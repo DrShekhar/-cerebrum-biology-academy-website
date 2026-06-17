@@ -68,7 +68,7 @@ const faqs = [
       'Multiple options: 1) Collect from Sector 51 center, 2) Courier delivery (₹200 extra for Gurugram), 3) Digital download (instant access). Digital material includes the same content in PDF format.',
   },
   {
-    question: 'Is the material updated for NEET 2026?',
+    question: 'Is the material updated for NEET 2027?',
     answer:
       'Yes, our 2026 edition includes all syllabus changes, updated PYQs till 2024, and new pattern questions. We update material every year based on NTA changes and exam trends.',
   },

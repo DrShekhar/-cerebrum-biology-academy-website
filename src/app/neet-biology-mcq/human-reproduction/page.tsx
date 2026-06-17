@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { TopicLandingPage } from '@/components/mcq/TopicLandingPage'
 
 export const metadata: Metadata = {
-  title: 'Human Reproduction MCQ for NEET 2026 | Free Practice Questions',
+  title: 'Human Reproduction MCQ for NEET 2027 | Free Practice Questions',
   description:
     'Practice 400+ free Human Reproduction MCQs for NEET. Gametogenesis, fertilization, embryonic development, menstrual cycle questions. NCERT-based with detailed explanations.',
   keywords: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Human Reproduction MCQ for NEET 2026 | Free Practice Questions',
+    title: 'Human Reproduction MCQ for NEET 2027 | Free Practice Questions',
     description:
       'Practice 400+ free Human Reproduction MCQs for NEET. Gametogenesis, fertilization, embryonic development, menstrual cycle questions. NCERT-based with detailed explanations.',
   },
@@ -61,7 +61,7 @@ export default function HumanReproductionPage() {
       <TopicLandingPage
         topic="Human Reproduction"
         topicSlug="human-reproduction"
-        title="Human Reproduction MCQ for NEET 2026"
+        title="Human Reproduction MCQ for NEET 2027"
         description="Master Human Reproduction with 400+ free MCQs covering male and female reproductive systems, gametogenesis, fertilization, pregnancy, and embryonic development for NEET."
         questionCount={400}
         chapters={[

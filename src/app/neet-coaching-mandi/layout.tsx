@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Top NEET coaching for Mandi & Sundernagar students. 98% success rate. Online classes from AIIMS faculty. Serving Mandi town, Sundernagar, Nerchowk, Pandoh. Prepare for SLBSGMC from home.',
   keywords:
-    'NEET coaching Mandi, best NEET coaching Mandi Himachal, NEET preparation Mandi, NEET classes SLBSGMC Nerchowk, biology coaching Mandi, medical entrance Himachal Pradesh, NEET 2026 Mandi, online NEET coaching Mandi, Sundernagar NEET coaching',
+    'NEET coaching Mandi, best NEET coaching Mandi Himachal, NEET preparation Mandi, NEET classes SLBSGMC Nerchowk, biology coaching Mandi, medical entrance Himachal Pradesh, NEET 2027 Mandi, online NEET coaching Mandi, Sundernagar NEET coaching',
   openGraph: {
     title: 'Best NEET Coaching in Mandi 2026',
     description:

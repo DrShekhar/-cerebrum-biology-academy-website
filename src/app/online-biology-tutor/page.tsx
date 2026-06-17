@@ -86,8 +86,8 @@ const onlineFeatures = [
 ]
 
 const coursesOffered = [
-  { name: 'NEET 2026 Biology Crash Course', duration: '3 Months' },
-  { name: 'NEET 2026 Dropper Course', duration: '1 Year' },
+  { name: 'NEET 2027 Biology Crash Course', duration: '3 Months' },
+  { name: 'NEET 2027 Dropper Course', duration: '1 Year' },
   { name: 'Class 11 Biology (NEET + Boards)', duration: '1 Year' },
   { name: 'Class 12 Biology (NEET + Boards)', duration: '1 Year' },
   { name: 'Class 9-10 Foundation', duration: '1 Year' },

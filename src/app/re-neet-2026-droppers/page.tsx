@@ -188,7 +188,7 @@ const config: BestVerticalConfig = {
     'NEET Dropper Reconduct Crash',
     'NEET Repeater Retest Coaching',
     'Dropper 1:1 Mentoring',
-    'NEET 2026 Second Attempt',
+    'NEET 2027 Second Attempt',
     'Class 11 12 Re-Foundation',
     'NEET Mental Health Dropper',
     'Tele-MANAS Dropper Support',

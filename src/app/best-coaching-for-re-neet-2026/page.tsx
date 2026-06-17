@@ -208,7 +208,7 @@ const config: BestVerticalConfig = {
     'AIIMS-Trained NEET Coaching',
     'Biology-Only NEET Coaching',
     'NEET 2026 Cancellation',
-    'NEET 2026 Phase 2',
+    'NEET 2027 Phase 2',
   ],
   whatsappMessage:
     'Hi! I want to join the best coaching for RE-NEET 2026 (post 12 May cancellation). Please share Cerebrum crash course details and cohort timings.',

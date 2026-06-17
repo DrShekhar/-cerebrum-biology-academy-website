@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { TopicLandingPage } from '@/components/mcq/TopicLandingPage'
 
 export const metadata: Metadata = {
-  title: 'Cell: The Unit of Life MCQ for NEET 2026 | Free Practice Questions',
+  title: 'Cell: The Unit of Life MCQ for NEET 2027 | Free Practice Questions',
   description:
     'Practice 500+ free Cell Biology MCQs for NEET. Cell structure, cell organelles, prokaryotic vs eukaryotic cells questions. NCERT Class 11 based with detailed explanations.',
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Cell: The Unit of Life MCQ for NEET 2026 | Free Practice Questions',
+    title: 'Cell: The Unit of Life MCQ for NEET 2027 | Free Practice Questions',
     description:
       'Practice 500+ free Cell Biology MCQs for NEET. Cell structure, cell organelles, prokaryotic vs eukaryotic cells questions. NCERT Class 11 based with detailed explanations.',
   },
@@ -59,7 +59,7 @@ export default function CellUnitOfLifePage() {
       <TopicLandingPage
         topic="Cell: The Unit of Life"
         topicSlug="cell-unit-of-life"
-        title="Cell: The Unit of Life MCQ for NEET 2026"
+        title="Cell: The Unit of Life MCQ for NEET 2027"
         description="Master Cell Biology with 500+ free MCQs covering cell structure, organelles, prokaryotic and eukaryotic cells for NEET preparation."
         questionCount={500}
         chapters={[

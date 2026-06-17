@@ -66,7 +66,7 @@ export const classTypeLabels: Record<ClassType, string> = {
   USA_NEET_10: 'CST Batch 10th',
   USA_NEET_11: 'CST Batch 11th',
   USA_NEET_12: 'CST Batch 12th',
-  CRASH_COURSE: 'Crash Course NEET 2026',
+  CRASH_COURSE: 'Crash Course NEET 2027',
   IB_BIO: 'IB Biology',
   PINNACLE_NEET_10: 'Pinnacle NEET 10th',
   MENTORSHIP: 'Mentorship',
@@ -398,7 +398,7 @@ const olympiadBatches: Batch[] = [
   },
 ]
 
-// Crash Course NEET 2026 — Mon-Fri 9:30-10:30 AM + Sat/Sun 7:00-8:00 AM
+// Crash Course NEET 2027 — Mon-Fri 9:30-10:30 AM + Sat/Sun 7:00-8:00 AM
 const crashCourseBatches: Batch[] = [
   {
     id: 'crash-b1',

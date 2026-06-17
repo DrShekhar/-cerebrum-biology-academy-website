@@ -103,7 +103,7 @@ export default function Class12BoardBiologyPreparationPage() {
       <LandingHero
         h1="Class 12 Board Biology Preparation - Score 95+"
         subheadline="Specialized coaching for CBSE Class 12 board exams. Master answer writing, scoring strategies, and exam techniques."
-        highlightedBadge="📝 Board Exam 2026 Batch Open"
+        highlightedBadge="📝 Board Exam 2027 Batch Open"
         trustBadges={['Board Exam Experts', '95+ Scores', 'Crash Courses']}
       />
 

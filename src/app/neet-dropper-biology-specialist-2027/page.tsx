@@ -144,7 +144,7 @@ export default function NEETDropperBiologySpecialistPage() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     '@id': `${PAGE_URL}#course`,
-    name: 'NEET Dropper Biology Specialist 2026-27',
+    name: 'NEET Dropper Biology Specialist 2027',
     description:
       'Biology-only specialist coaching for NEET 2027 droppers. Designed as a 6 hour/week layer on top of any existing dropper batch (PW, Allen, Aakash, Motion, Kota chains). AIIMS-trained faculty, max 10–20 students per batch, pattern-engineered test series.',
     url: PAGE_URL,
@@ -248,7 +248,7 @@ export default function NEETDropperBiologySpecialistPage() {
   const waUrl =
     'https://wa.me/918826444334?text=' +
     encodeURIComponent(
-      "Hi — I'm a NEET 2026 dropper looking at biology-specialist coaching for NEET 2027. Can we discuss?"
+      "Hi — I'm a NEET 2027 dropper looking at biology-specialist coaching for NEET 2027. Can we discuss?"
     )
 
   return (

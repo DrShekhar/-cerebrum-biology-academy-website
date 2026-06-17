@@ -1454,7 +1454,7 @@ export const southDelhiAreas: LocalArea[] = [
     description:
       'Premier biology coaching at Ring Road, South Extension 2, Delhi. Expert classes for Class 9, 10, 11, 12, NEET, Board exams & Olympiads. Online, offline & hybrid batches. Metro-connected - 5 min from South Extension Metro.',
     metaTitle:
-      'Biology Coaching Near Me South Extension | NEET 2026-27, Class 9-12 | Cerebrum Academy',
+      'Biology Coaching Near Me South Extension | NEET 2027, Class 9-12 | Cerebrum Academy',
     metaDescription:
       'Best biology coaching near me in South Extension 2, Ring Road Delhi. Expert NEET biology coaching near me for Class 9-12, Droppers & Olympiad. 5 min from metro. Book free demo!',
     keywords: [

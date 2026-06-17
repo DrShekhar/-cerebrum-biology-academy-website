@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     'NEET Biology',
     'NEET Biology coaching',
     'NEET Biology tutor',
-    'NEET 2026',
+    'NEET 2027',
     'NEET-UG Biology',
     'NEET Biology online coaching',
     'NEET dropper batch',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NEET Biology Coaching Hub | Cerebrum Biology Academy',
     description:
-      'AIIMS-trained faculty, 98% qualification rate, 680+ medical college selections. NEET 2026-ready.',
+      'AIIMS-trained faculty, 98% qualification rate, 680+ medical college selections. NEET 2027-ready.',
   },
   alternates: {
     canonical: PAGE_URL,
@@ -364,7 +364,7 @@ export default function NEETHubPage() {
       <CerebrumPersonSchema
         knowsAbout={[
           'NEET-UG Biology',
-          'NEET 2026 Preparation',
+          'NEET 2027 Preparation',
           'Medical College Admissions India',
           'AIIMS Selection',
           'NCERT Biology Class 11',
@@ -870,7 +870,7 @@ export default function NEETHubPage() {
         {/* Final CTA */}
         <section className="bg-gradient-to-r from-green-600 via-teal-600 to-green-700 py-16 text-white sm:py-20">
           <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
-            <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Ready to start NEET 2026 prep?</h2>
+            <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Ready to start NEET 2027 prep?</h2>
             <p className="mb-8 text-lg text-green-100">
               Talk to a Cerebrum counsellor about your NEET goals — Pursuit, Ascent, or Pinnacle.
               We&apos;ll match you to the right tier, batch, and faculty mentor.

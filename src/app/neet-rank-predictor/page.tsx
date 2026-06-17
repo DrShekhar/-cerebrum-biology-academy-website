@@ -246,7 +246,7 @@ export default function NEETRankPredictorPage() {
 
             <h1 className="mb-4 text-3xl font-bold md:text-5xl">NEET Rank Predictor 2026</h1>
             <p className="mb-6 max-w-2xl text-lg text-orange-100 md:text-xl">
-              Free tool to predict your NEET 2026 All India Rank based on your expected marks. Get
+              Free tool to predict your NEET 2027 All India Rank based on your expected marks. Get
               accurate rank prediction and college admission chances.
             </p>
 
@@ -277,7 +277,7 @@ export default function NEETRankPredictorPage() {
                     <Calculator className="h-8 w-8 text-orange-600" />
                   </div>
                   <h2 className="text-2xl font-bold text-gray-900">Enter Your NEET Marks</h2>
-                  <p className="text-gray-600">Get instant rank prediction for NEET 2026</p>
+                  <p className="text-gray-600">Get instant rank prediction for NEET 2027</p>
                 </div>
 
                 {!showResult ? (
@@ -609,7 +609,7 @@ export default function NEETRankPredictorPage() {
                     'We use NEET 2024 official data, historical trends from 2019-2024, and statistical interpolation to provide accurate predictions.',
                 },
                 {
-                  question: 'Can I use this for NEET 2026?',
+                  question: 'Can I use this for NEET 2027?',
                   answer:
                     'Yes, this predictor gives a good estimate for NEET 2026 based on historical patterns. The actual cutoffs may shift slightly based on paper difficulty.',
                 },

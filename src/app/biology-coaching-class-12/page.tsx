@@ -112,7 +112,7 @@ const faqs = [
       'We focus on: 1) Understanding concepts thoroughly, 2) Solving Mendelian problems, 3) Practicing pedigree analysis, 4) Memorizing molecular biology facts. Our genetics workbook has 500+ problems.',
   },
   {
-    question: 'Can I prepare for NEET 2026 in Class 12?',
+    question: 'Can I prepare for NEET 2027 in Class 12?',
     answer:
       'Yes! With focused preparation and our expert guidance, you can crack NEET in one year. We cover complete syllabus with revision and provide extensive practice through test series.',
   },
@@ -148,7 +148,7 @@ export default function BiologyClass12Page() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Master Genetics, Reproduction &amp; Ecology for NEET 2026
+              Master Genetics, Reproduction &amp; Ecology for NEET 2027
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-4xl mx-auto">
@@ -287,7 +287,7 @@ export default function BiologyClass12Page() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Crack NEET 2026 with Class 12 Biology Mastery
+              Crack NEET 2027 with Class 12 Biology Mastery
             </h2>
             <p className="text-xl mb-8 opacity-90">
               54% of NEET is Class 12. Start your preparation today!

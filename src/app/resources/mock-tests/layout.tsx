@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'NEET chapter wise mock test',
     'NEET full length mock test',
     'NEET biology test series',
-    'NEET 2026 mock test',
+    'NEET 2027 mock test',
     'best NEET mock test',
     'NEET biology practice test',
   ].join(', '),

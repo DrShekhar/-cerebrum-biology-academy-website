@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'dropper batch online biology',
     'online biology tuition for neet droppers',
     'best online coaching for neet droppers biology',
-    'neet 2026 dropper online classes',
+    'neet 2027 dropper online classes',
   ],
   openGraph: {
     title: 'Online Biology Tutor for NEET Droppers',

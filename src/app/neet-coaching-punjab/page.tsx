@@ -473,7 +473,7 @@ export default function NEETCoachingPunjabPage() {
               Target These Medical Colleges
             </h2>
             <p className="text-lg text-gray-600">
-              Punjab and nearby medical colleges for NEET 2026
+              Punjab and nearby medical colleges for NEET 2027
             </p>
           </div>
 

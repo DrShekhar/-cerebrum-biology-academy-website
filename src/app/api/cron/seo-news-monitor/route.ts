@@ -29,7 +29,7 @@ const NEWS_SOURCES = [
   {
     name: 'Education News',
     rssUrl: 'https://news.google.com/rss/search?q=NEET+2026+exam&hl=en-IN&gl=IN&ceid=IN:en',
-    keywords: ['NEET 2026', 'NEET UG', 'NTA NEET', 'medical entrance'],
+    keywords: ['NEET 2027', 'NEET UG', 'NTA NEET', 'medical entrance'],
   },
 ]
 

@@ -443,7 +443,7 @@ export default function OneYearDropperCourseContent({ faqs }: { faqs: FAQ[] }) {
               href="/one-year-dropper-course-gurugram"
               className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"
             >
-              <h3 className="font-semibold text-teal-600">Dropper Batch 2026-27</h3>
+              <h3 className="font-semibold text-teal-600">Dropper Batch 2027</h3>
               <p className="text-sm text-gray-600">Upcoming batch</p>
             </Link>
             <Link

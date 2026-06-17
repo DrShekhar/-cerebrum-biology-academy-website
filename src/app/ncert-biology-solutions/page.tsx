@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NCERT Biology Solutions Class 11 & 12 | Free PDF Download',
     description:
-      'Chapter-wise NCERT Biology solutions with detailed explanations for NEET 2026. Free PDF download available.',
+      'Chapter-wise NCERT Biology solutions with detailed explanations for NEET 2027. Free PDF download available.',
     images: [
       '/api/og?title=NCERT+Biology+Solutions&subtitle=Free+Chapter-wise+Solutions+for+Class+11+%26+12',
     ],

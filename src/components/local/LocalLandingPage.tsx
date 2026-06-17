@@ -238,7 +238,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                     Limited Seats! New Batch Starting Soon
                   </span>
                 </div>
-                <span className="text-xs bg-white/20 px-2 py-1 rounded">NEET 2026</span>
+                <span className="text-xs bg-white/20 px-2 py-1 rounded">NEET 2027</span>
               </div>
 
               {/* Primary CTAs */}

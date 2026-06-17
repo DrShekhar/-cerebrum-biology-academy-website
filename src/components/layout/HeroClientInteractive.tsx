@@ -283,7 +283,7 @@ export function HeroClientInteractive() {
           className="inline-flex items-center gap-2 bg-orange-700 hover:bg-orange-800 text-white text-xs xs:text-sm font-bold px-4 py-2.5 min-h-[40px] rounded-full shadow-lg hover:shadow-orange-600/30 transition-all duration-300"
         >
           <GraduationCapIcon className="w-4 h-4" />
-          NEET 2026
+          NEET 2027
         </a>
       </div>
     </>

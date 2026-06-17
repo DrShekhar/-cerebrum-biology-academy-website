@@ -182,7 +182,7 @@ export default function BiologyClass12NoidaPage() {
         <div className="container mx-auto px-4">
           <p className="flex items-center justify-center gap-2 font-semibold">
             <AlertTriangle className="w-5 h-5" />
-            NEET 2026 in 5 months! Class 12 Intensive Batch Starting - Limited Seats
+            NEET 2027 in 5 months! Class 12 Intensive Batch Starting - Limited Seats
           </p>
         </div>
       </div>
@@ -402,7 +402,7 @@ export default function BiologyClass12NoidaPage() {
       {/* Final CTA */}
       <section className="py-16 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Don't Wait - NEET 2026 is Approaching!</h2>
+          <h2 className="text-3xl font-bold mb-4">Don't Wait - NEET 2027 is Approaching!</h2>
           <p className="text-xl text-slate-300 mb-8">
             Join Class 12 Batch now and secure your medical seat
           </p>

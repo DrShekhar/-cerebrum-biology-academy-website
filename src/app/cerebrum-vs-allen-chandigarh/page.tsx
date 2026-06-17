@@ -40,7 +40,7 @@ const faqs = [
       'Allen Chandigarh is located at Sector 34A, Industrial Area Phase 2. Students from Panchkula and Mohali spend 1-2 hours daily commuting to Sector 34. Cerebrum offers live online classes, eliminating commute entirely. Same quality teaching, zero travel time - study from the comfort of your home in any Tricity location.',
   },
   {
-    question: 'What are Allen Chandigarh fees compared to Cerebrum for NEET 2026?',
+    question: 'What are Allen Chandigarh fees compared to Cerebrum for NEET 2027?',
     answer:
       'Allen Chandigarh fees range from Rs 1.5-2.5 Lakhs per year depending on the program. Cerebrum offers NEET Biology coaching at Rs 24,000-68,000 per year. Despite being 60-75% more affordable, Cerebrum provides smaller batches (10-15 vs 60-100+), AIIMS faculty, and dedicated Biology focus. Annual savings of Rs 80,000-1.8 Lakhs!',
   },

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "India's top NEET coaching — Physics, Chemistry & Biology by AIIMS Alumnus Dr. Shekhar C Singh. 98% success, 67+ AIIMS selections, 15,000+ students. 4 centers: South Extension, Rohini, Gurugram, Faridabad + Online. Call 88264-44334. Free Demo!",
   keywords: [
     'NEET coaching',
-    'NEET 2026 coaching',
+    'NEET 2027 coaching',
     'best NEET coaching Delhi',
     'NEET biology coaching',
     'NEET physics coaching',

@@ -852,10 +852,10 @@ export default function BiologyNotesForNEETPage() {
       },
       {
         '@type': 'Question',
-        name: 'Are these biology notes based on the NEET 2026 syllabus?',
+        name: 'Are these biology notes based on the NEET 2027 syllabus?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, all notes are updated for the NEET 2026 syllabus as per NTA guidelines. They cover all 38 chapters from Class 11 and 12 NCERT biology textbooks, including both Botany and Zoology sections.',
+          text: 'Yes, all notes are updated for the NEET 2027 syllabus as per NTA guidelines. They cover all 38 chapters from Class 11 and 12 NCERT biology textbooks, including both Botany and Zoology sections.',
         },
       },
       {
@@ -966,7 +966,7 @@ export default function BiologyNotesForNEETPage() {
             <div className="max-w-3xl">
               <div className="animate-fadeInUp">
                 <span className="inline-block bg-yellow-400/20 text-yellow-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
-                  Updated for NEET 2026 Syllabus
+                  Updated for NEET 2027 Syllabus
                 </span>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
                   Biology Notes for NEET
@@ -1080,7 +1080,7 @@ export default function BiologyNotesForNEETPage() {
         <section className="bg-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-4">
-              NEET 2026 Biology Chapter Weightage
+              NEET 2027 Biology Chapter Weightage
             </h2>
             <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
               Based on analysis of NEET 2019-2025 papers. Total: 90 questions, 360 marks. Focus on

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Top NEET coaching for Solan students. 98% success rate. Online classes from AIIMS faculty. Serving Solan, Kasauli, Baddi, Nalagarh. MMMC Solan has 150 MBBS seats in your city!',
   keywords:
-    'NEET coaching Solan, best NEET coaching Solan Himachal, NEET preparation Solan, NEET classes MMMC Solan, biology coaching Solan, medical entrance Himachal Pradesh, NEET 2026 Solan, online NEET coaching Solan, Kasauli NEET coaching, Baddi NEET classes',
+    'NEET coaching Solan, best NEET coaching Solan Himachal, NEET preparation Solan, NEET classes MMMC Solan, biology coaching Solan, medical entrance Himachal Pradesh, NEET 2027 Solan, online NEET coaching Solan, Kasauli NEET coaching, Baddi NEET classes',
   openGraph: {
     title: 'Best NEET Coaching in Solan 2026',
     description:

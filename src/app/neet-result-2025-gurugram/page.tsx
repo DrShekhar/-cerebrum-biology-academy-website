@@ -404,7 +404,7 @@ export default function NEETResult2025Gurugram() {
 
       <section className="py-16 bg-green-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Join Our NEET 2026 Batch</h2>
+          <h2 className="text-3xl font-bold mb-4">Join Our NEET 2027 Batch</h2>
           <p className="text-xl text-green-100 mb-8">
             Be part of our continued success. Admissions open now!
           </p>

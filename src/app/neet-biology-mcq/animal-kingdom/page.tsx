@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { TopicLandingPage } from '@/components/mcq/TopicLandingPage'
 
 export const metadata: Metadata = {
-  title: 'Animal Kingdom MCQ for NEET 2026 | Free Practice Questions',
+  title: 'Animal Kingdom MCQ for NEET 2027 | Free Practice Questions',
   description:
     'Practice 500+ free Animal Kingdom MCQs for NEET. Phylum, Chordata, Non-Chordata, body symmetry, coelom questions. NCERT-based with detailed explanations.',
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Animal Kingdom MCQ for NEET 2026 | Free Practice Questions',
+    title: 'Animal Kingdom MCQ for NEET 2027 | Free Practice Questions',
     description:
       'Practice 500+ free Animal Kingdom MCQs for NEET. Phylum, Chordata, Non-Chordata, body symmetry, coelom questions. NCERT-based with detailed explanations.',
   },
@@ -59,7 +59,7 @@ export default function AnimalKingdomPage() {
       <TopicLandingPage
         topic="Animal Kingdom"
         topicSlug="animal-kingdom"
-        title="Animal Kingdom MCQ for NEET 2026"
+        title="Animal Kingdom MCQ for NEET 2027"
         description="Master Animal Kingdom with 500+ free MCQs covering basis of classification, phylum characteristics, Chordata, and Non-Chordata for NEET preparation."
         questionCount={500}
         chapters={[

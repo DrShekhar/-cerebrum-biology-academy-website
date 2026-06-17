@@ -25,9 +25,9 @@ const TYPE_TEMPLATES: Record<PageType, { titleTemplate: string; descriptionTempl
       'Premium biology tuition in {locality} for Class 11, 12 & NEET. Experienced teachers, small batches, interactive learning. 15,000+ students trained. Enroll now!',
   },
   'neet-preparation': {
-    titleTemplate: 'NEET 2026 Preparation in {locality} | Expert Coaching | Cerebrum Academy',
+    titleTemplate: 'NEET 2027 Preparation in {locality} | Expert Coaching | Cerebrum Academy',
     descriptionTemplate:
-      'Comprehensive NEET 2026 preparation in {locality}. Complete biology syllabus, mock tests, doubt sessions. Join 15,000+ students who achieved their medical dreams!',
+      'Comprehensive NEET 2027 preparation in {locality}. Complete biology syllabus, mock tests, doubt sessions. Join 15,000+ students who achieved their medical dreams!',
   },
   'online-coaching': {
     titleTemplate: 'Online NEET Biology Coaching from {locality} | Live Classes | Cerebrum',
@@ -129,9 +129,9 @@ function generateKeywords(locality: string, area: string | undefined, type: Page
   }
 
   const typeKeywords: Record<PageType, string[]> = {
-    'neet-coaching': ['best NEET coaching', 'NEET biology expert', 'NEET 2026'],
+    'neet-coaching': ['best NEET coaching', 'NEET biology expert', 'NEET 2027'],
     'biology-tuition': ['class 11 biology', 'class 12 biology', 'CBSE biology'],
-    'neet-preparation': ['NEET 2026 preparation', 'NEET study material', 'NEET test series'],
+    'neet-preparation': ['NEET 2027 preparation', 'NEET study material', 'NEET test series'],
     'online-coaching': ['online NEET classes', 'live biology classes', 'online tutoring'],
   }
 

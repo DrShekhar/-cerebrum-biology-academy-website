@@ -173,7 +173,7 @@ const strategyArticles = [
     description: 'Complete roadmap for NEET Biology preparation from zero to hero',
   },
   {
-    title: 'Revision Strategy for NEET 2026',
+    title: 'Revision Strategy for NEET 2027',
     slug: 'revision-strategy-neet-2026-complete-guide',
     description: 'Effective revision techniques for maximum score improvement',
   },

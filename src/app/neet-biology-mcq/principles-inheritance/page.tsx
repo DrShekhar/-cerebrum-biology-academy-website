@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { TopicLandingPage } from '@/components/mcq/TopicLandingPage'
 
 export const metadata: Metadata = {
-  title: 'Principles of Inheritance MCQ for NEET 2026 | Free Practice Questions',
+  title: 'Principles of Inheritance MCQ for NEET 2027 | Free Practice Questions',
   description:
     'Practice 500+ free Principles of Inheritance and Variation MCQs for NEET. Mendel laws, linkage, sex determination, mutation, chromosomal disorders questions. NCERT-based with explanations.',
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Principles of Inheritance MCQ for NEET 2026 | Free Practice Questions',
+    title: 'Principles of Inheritance MCQ for NEET 2027 | Free Practice Questions',
     description:
       'Practice 500+ free Principles of Inheritance and Variation MCQs for NEET. Mendel laws, linkage, sex determination, mutation, chromosomal disorders questions. NCERT-based with explanations.',
   },
@@ -59,7 +59,7 @@ export default function PrinciplesInheritancePage() {
       <TopicLandingPage
         topic="Principles of Inheritance and Variation"
         topicSlug="principles-inheritance"
-        title="Principles of Inheritance MCQ for NEET 2026"
+        title="Principles of Inheritance MCQ for NEET 2027"
         description="Master Principles of Inheritance and Variation with 500+ free MCQs covering Mendelian genetics, linkage and recombination, sex determination, mutations, and chromosomal disorders for NEET preparation."
         questionCount={500}
         chapters={[

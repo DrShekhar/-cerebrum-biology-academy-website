@@ -22,7 +22,7 @@ const generateSocialProofEvents = (): SocialProofEvent[] => [
     type: 'enrollment',
     studentName: 'Priya Sharma',
     location: 'Delhi',
-    course: 'NEET 2026 Complete',
+    course: 'NEET 2027 Complete',
     timestamp: new Date(Date.now() - 2 * 60 * 1000), // 2 minutes ago
     verified: true,
   },

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Top NEET coaching for Hamirpur students. 98% success rate. Online classes from AIIMS faculty. HP's education hub with 59+ coaching institutes. Prepare for DRGMC Kangra from home.",
   keywords:
-    'NEET coaching Hamirpur, best NEET coaching Hamirpur Himachal, NEET preparation Hamirpur HP, NEET classes Hamirpur, biology coaching Hamirpur, medical entrance Himachal, NEET 2026 Hamirpur, online NEET coaching Hamirpur, DRGMC Kangra preparation',
+    'NEET coaching Hamirpur, best NEET coaching Hamirpur Himachal, NEET preparation Hamirpur HP, NEET classes Hamirpur, biology coaching Hamirpur, medical entrance Himachal, NEET 2027 Hamirpur, online NEET coaching Hamirpur, DRGMC Kangra preparation',
   openGraph: {
     title: 'Best NEET Coaching in Hamirpur 2026',
     description:

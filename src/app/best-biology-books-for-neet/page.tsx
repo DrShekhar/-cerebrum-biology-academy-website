@@ -203,7 +203,7 @@ export default function BestBiologyBooksPage() {
 
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 Best Biology Books
-                <span className="block text-indigo-200">for NEET 2026</span>
+                <span className="block text-indigo-200">for NEET 2027</span>
               </h1>
 
               <p className="text-lg text-white/90 mb-8 max-w-lg">
@@ -268,7 +268,7 @@ export default function BestBiologyBooksPage() {
               Top 6 Biology Books for NEET
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Ranked by importance and usefulness for NEET 2026 preparation
+              Ranked by importance and usefulness for NEET 2027 preparation
             </p>
           </div>
 
@@ -399,7 +399,7 @@ export default function BestBiologyBooksPage() {
               Recommended Study Plan
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              How to use these books effectively for NEET 2026
+              How to use these books effectively for NEET 2027
             </p>
           </div>
 

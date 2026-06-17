@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'Download free NEET Biology chapter-wise weightage analysis for 2026. Know which chapters carry maximum marks. Based on 10-year PYQ analysis by AIIMS faculty.',
   keywords: [
     'NEET biology chapter weightage',
-    'NEET 2026 important chapters',
+    'NEET 2027 important chapters',
     'NEET biology marks distribution',
     'chapter wise weightage NEET biology',
     'NEET high yield chapters',
@@ -55,10 +55,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is this updated for NEET 2026?',
+      name: 'Is this updated for NEET 2027?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes! This resource is fully updated for NEET 2026 based on the latest NTA pattern and syllabus.',
+        text: 'Yes! This resource is fully updated for NEET 2027 based on the latest NTA pattern and syllabus.',
       },
     },
   ],

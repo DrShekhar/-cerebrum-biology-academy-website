@@ -431,7 +431,7 @@ export default function NEETCoachingPage() {
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Physics, Chemistry, and Biology — taught by specialized AIIMS & IITians faculties with
-              subject-specific strategies for NEET 2026.
+              subject-specific strategies for NEET 2027.
             </p>
           </div>
 

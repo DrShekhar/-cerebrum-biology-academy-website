@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     'NEET study plan',
     'NEET preparation tools',
     'free NEET tools',
-    'NEET 2026 preparation',
+    'NEET 2027 preparation',
     'NEET exam countdown',
     'NEET days left',
   ],
@@ -343,7 +343,7 @@ export default function NEETToolsPage() {
             <div className="overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-700">
               <div className="grid items-center md:grid-cols-2">
                 <div className="p-8 text-white md:p-12">
-                  <h2 className="mb-4 text-2xl font-bold md:text-3xl">Ready to Ace NEET 2026?</h2>
+                  <h2 className="mb-4 text-2xl font-bold md:text-3xl">Ready to Ace NEET 2027?</h2>
                   <p className="mb-6 text-indigo-100">
                     Tools can help you plan, but expert guidance makes the difference. Join Cerebrum
                     Biology Academy for personalized NEET preparation.

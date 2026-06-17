@@ -90,7 +90,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'Best NEET Biology Coaching in South Delhi | Cerebrum Biology Academy',
       description:
-        "Top NEET Biology coaching in South Delhi with 650+ average score. Expert faculty, small batches, personalized attention. Join South Delhi's #1 Biology coaching for NEET 2026.",
+        "Top NEET Biology coaching in South Delhi with 650+ average score. Expert faculty, small batches, personalized attention. Join South Delhi's #1 Biology coaching for NEET 2027.",
       keywords: [
         'neet biology coaching south delhi',
         'best biology coaching delhi',
@@ -12157,7 +12157,7 @@ export const localities: Locality[] = [
       heroSubtitle: 'Join 120+ Colaba students excelling in Biology from home',
       valueProposition:
         'Skip the Churchgate commute. Learn from NEET Biology experts through live online classes designed for South Mumbai students.',
-      urgencyMessage: 'Limited seats available! Colaba students enrolling for 2026 batch.',
+      urgencyMessage: 'Limited seats available! Colaba students enrolling for 2027 batch.',
       localChallenge:
         'Colaba students face long commutes to Churchgate coaching hubs. Our online platform provides superior learning without travel fatigue.',
       successMetric: '88% of our Colaba students scored above 330 in NEET 2024 Biology',

@@ -79,7 +79,7 @@ export const localLeadMagnets: LeadMagnet[] = [
   },
   {
     id: 'biology-memory-techniques',
-    title: 'Top 50 Biology Mnemonics for NEET 2026',
+    title: 'Top 50 Biology Mnemonics for NEET 2027',
     description:
       'Master biology with 50 proven mnemonics used by AIIMS toppers. Covers taxonomy, cell biology, genetics, physiology, ecology and reproduction.',
     type: 'pdf',

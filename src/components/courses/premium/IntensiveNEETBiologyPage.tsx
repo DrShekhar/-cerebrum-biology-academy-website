@@ -747,7 +747,7 @@ export function IntensiveNEETBiologyPage() {
             </h2>
 
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Join the elite cohort of 50 students who will dominate NEET 2026. Applications close
+              Join the elite cohort of 50 students who will dominate NEET 2027. Applications close
               when seats are filled.
             </p>
 
@@ -849,7 +849,7 @@ export function IntensiveNEETBiologyPage() {
                   </label>
                   <select className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#3d4d3d] focus:border-transparent">
                     <option value="2025">NEET 2025</option>
-                    <option value="2026">NEET 2026</option>
+                    <option value="2026">NEET 2027</option>
                   </select>
                 </div>
               </div>

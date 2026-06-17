@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Best Biology Teacher for NEET 2026 [67+ AIIMS Selections]',
+  title: 'Best Biology Teacher for NEET 2027 [67+ AIIMS Selections]',
   description:
     'Learn NEET Biology from AIIMS-trained faculty who helped 15,000+ students crack NEET. 98% success rate, proven results. Book your FREE demo class today!',
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'best neet biology coaching',
   ],
   openGraph: {
-    title: 'Best Biology Teacher for NEET 2026 [67+ AIIMS Selections]',
+    title: 'Best Biology Teacher for NEET 2027 [67+ AIIMS Selections]',
     description: 'Learn from AIIMS-trained faculty with 98% success rate. Book FREE demo today!',
     type: 'website',
     locale: 'en_IN',

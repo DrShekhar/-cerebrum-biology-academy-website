@@ -136,19 +136,19 @@ const faqData = [
       'For OBC, SC, and ST categories, the qualifying cutoff is expected to be at 40th percentile, approximately 107-120 marks. However, for actual admission, much higher scores are needed depending on the college and state.',
   },
   {
-    question: 'How many marks are required in NEET 2026 for MBBS?',
+    question: 'How many marks are required in NEET 2027 for MBBS?',
     answer:
-      'For admission to government medical colleges through NEET 2026, General category students typically need 550-650 marks for state quota and 600-680 marks for AIQ quota. Top colleges like AIIMS require 700+ marks.',
+      'For admission to government medical colleges through NEET 2027, General category students typically need 550-650 marks for state quota and 600-680 marks for AIQ quota. Top colleges like AIIMS require 700+ marks.',
   },
   {
-    question: 'Is 500 marks enough for MBBS in NEET 2026?',
+    question: 'Is 500 marks enough for MBBS in NEET 2027?',
     answer:
-      '500 marks in NEET 2026 may be sufficient for private medical college admission in some states, but not for government medical colleges. For government MBBS seats, you typically need 550+ marks in General category.',
+      '500 marks in NEET 2027 may be sufficient for private medical college admission in some states, but not for government medical colleges. For government MBBS seats, you typically need 550+ marks in General category.',
   },
   {
-    question: 'What rank is required for AIIMS Delhi in NEET 2026?',
+    question: 'What rank is required for AIIMS Delhi in NEET 2027?',
     answer:
-      'For AIIMS Delhi MBBS admission through NEET 2026, you typically need an All India Rank within top 50-100. This requires scoring above 710 marks out of 720.',
+      'For AIIMS Delhi MBBS admission through NEET 2027, you typically need an All India Rank within top 50-100. This requires scoring above 710 marks out of 720.',
   },
   {
     question: 'Does NEET cutoff change every year?',

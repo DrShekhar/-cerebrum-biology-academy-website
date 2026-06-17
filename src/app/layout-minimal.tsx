@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description:
     'Top NEET Biology coaching by AIIMS experts. 98% success rate, 15,000+ students mentored. Online & offline classes for Class 11th, 12th & droppers across 50+ countries.',
   keywords:
-    'NEET biology coaching, AIIMS faculty, biology coaching institute, NEET preparation, medical entrance coaching, biology classes, NEET 2026, online biology coaching',
+    'NEET biology coaching, AIIMS faculty, biology coaching institute, NEET preparation, medical entrance coaching, biology classes, NEET 2027, online biology coaching',
   authors: [{ name: 'Cerebrum Biology Academy' }],
   creator: 'Cerebrum Biology Academy',
   publisher: 'Cerebrum Biology Academy',

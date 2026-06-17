@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'NEET Test Series Schedule 2026 | Weekly + Full-Length Mocks | Cerebrum Biology Academy',
   description:
-    'NEET 2026 test series schedule from Cerebrum Biology Academy — weekly chapter-wise biology MCQ tests (Class 11 + 12), monthly full-length 720-mark mocks, NEET-pattern question mix, detailed performance dashboard with rank-band projection. AIIMS-faculty-set papers, free for enrolled students.',
+    'NEET 2027 test series schedule from Cerebrum Biology Academy — weekly chapter-wise biology MCQ tests (Class 11 + 12), monthly full-length 720-mark mocks, NEET-pattern question mix, detailed performance dashboard with rank-band projection. AIIMS-faculty-set papers, free for enrolled students.',
   keywords: [
     'NEET test series 2026',
     'NEET biology test series',

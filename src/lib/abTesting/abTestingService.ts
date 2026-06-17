@@ -97,7 +97,7 @@ class ABTestingService {
           weight: 50,
           isControl: false,
           config: {
-            headline: 'Last 7 Days: NEET 2026 Biology Crash Course',
+            headline: 'Last 7 Days: NEET 2027 Biology Crash Course',
             subtext: 'Limited Seats: 98% Success Rate - Join Before Enrollment Closes',
             ctaText: 'Secure Your Seat Now',
             ctaColor: 'bg-gradient-to-r from-red-500 to-red-700 animate-pulse',

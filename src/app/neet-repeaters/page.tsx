@@ -4,9 +4,9 @@ import { NEETRepeatersResourceSection } from '@/components/resources/NEETRepeate
 export const metadata: Metadata = {
   title: 'NEET Repeaters Program 2026 | Second Attempt Biology Coaching | Cerebrum',
   description:
-    'Specialized NEET 2026 repeater Biology programme — diagnostic gap-fill, rank improvement strategies, weekly 1:1 emotional support. 89% of our repeaters qualify NEET. Start your second-attempt biology journey with AIIMS faculty.',
+    'Specialized NEET 2027 repeater Biology programme — diagnostic gap-fill, rank improvement strategies, weekly 1:1 emotional support. 89% of our repeaters qualify NEET. Start your second-attempt biology journey with AIIMS faculty.',
   keywords:
-    'NEET repeaters, NEET 2026 repeaters, NEET second attempt, failed NEET, NEET dropper, NEET repeater coaching, rank improvement NEET, biology repeater course, NEET retake biology, second chance NEET',
+    'NEET repeaters, NEET 2027 repeaters, NEET second attempt, failed NEET, NEET dropper, NEET repeater coaching, rank improvement NEET, biology repeater course, NEET retake biology, second chance NEET',
   openGraph: {
     locale: 'en_IN',
     title: 'NEET Repeaters 2026 | Biology Second Attempt Coaching',

@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Admissions Open 2026-2027 - NEET Biology Coaching',
   description:
-    'Enroll in Cerebrum Biology Academy for NEET 2026-27. Limited seats available for Class 11, 12 & Dropper batches. 98% success rate, AIIMS-trained faculty. Apply now!',
+    'Enroll in Cerebrum Biology Academy for NEET 2027. Limited seats available for Class 11, 12 & Dropper batches. 98% success rate, AIIMS-trained faculty. Apply now!',
   keywords: [
     'NEET coaching admissions 2026-2027',
     'NEET biology batch enrollment',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Admissions Open 2026-2027 - NEET Biology Coaching',
     description:
-      'Limited seats for NEET 2026-27 batches. 98% success rate, AIIMS faculty. Class 11, 12 & Dropper programs available.',
+      'Limited seats for NEET 2027 batches. 98% success rate, AIIMS faculty. Class 11, 12 & Dropper programs available.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/admissions',

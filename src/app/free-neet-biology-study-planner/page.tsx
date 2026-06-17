@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'Download free NEET Biology 12-month study planner. Day-by-day schedule, chapter allocation, revision cycles. Designed by AIIMS toppers for NEET 2026.',
   keywords: [
     'NEET biology study planner',
-    'NEET 2026 timetable',
+    'NEET 2027 timetable',
     'NEET study schedule',
     'NEET daily routine',
     'NEET preparation plan biology',
@@ -55,10 +55,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is this updated for NEET 2026?',
+      name: 'Is this updated for NEET 2027?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes! This resource is fully updated for NEET 2026 based on the latest NTA pattern and syllabus.',
+        text: 'Yes! This resource is fully updated for NEET 2027 based on the latest NTA pattern and syllabus.',
       },
     },
   ],

@@ -330,7 +330,7 @@ export default function BiologyClass11Page() {
               Start Your Class 11 NEET Biology Journey
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Build a strong foundation for NEET 2026. Book your free demo today!
+              Build a strong foundation for NEET 2027. Book your free demo today!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

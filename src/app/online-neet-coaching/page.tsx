@@ -270,7 +270,7 @@ export default function OnlineNeetCoachingPage() {
           <div className="animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold">Start Your Online NEET Journey</h2>
             <p className="mb-8 text-xl text-blue-100">
-              Join thousands of students preparing for NEET 2026 online!
+              Join thousands of students preparing for NEET 2027 online!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

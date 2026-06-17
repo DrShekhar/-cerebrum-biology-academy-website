@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'NEET target batch',
     'Class 12 NEET coaching',
     'biology coaching',
-    'NEET 2026',
+    'NEET 2027',
     'board exam biology',
     'NEET preparation',
     'competitive biology',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'NEET Biology weekend batch Delhi',
   ],
   openGraph: {
-    title: 'Class 12 Biology NEET Target Batch | Crack NEET 2026',
+    title: 'Class 12 Biology NEET Target Batch | Crack NEET 2027',
     description:
       'Final year intensive NEET Biology coaching. 98% qualification rate, board exam 90+ guarantee, complete syllabus + previous years. Book your seat now!',
     images: ['/og-image.jpg'],

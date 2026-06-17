@@ -42,7 +42,7 @@ export const generalNEETFAQs: FAQ[] = [
     answer:
       'NEET 2026 is expected in May 2026 (exact date announced by NTA). The exam is 3 hours 20 minutes with 200 questions (180 to attempt). Physics: 45, Chemistry: 45, Biology: 90 questions. Total marks: 720. OMR-based offline exam conducted in 13 languages.',
     category: 'General',
-    keywords: ['NEET 2026 date', 'NEET exam pattern', 'NTA NEET'],
+    keywords: ['NEET 2027 date', 'NEET exam pattern', 'NTA NEET'],
   },
   {
     question: 'What is a good NEET score for government medical college?',

@@ -132,7 +132,7 @@ export default function NEETExamCountdownPage() {
               <div className="mb-6 flex flex-wrap items-center justify-center gap-3">
                 <div className="inline-flex items-center gap-2 rounded-full bg-red-50 border border-red-200 px-4 py-2 text-sm font-medium text-gray-800">
                   <Calendar className="h-4 w-4 text-red-500" />
-                  <span>NEET 2026</span>
+                  <span>NEET 2027</span>
                 </div>
                 <div className="inline-flex items-center gap-2 rounded-full bg-green-50 border border-green-200 px-4 py-2">
                   <span className="relative flex h-2 w-2">
@@ -254,7 +254,7 @@ export default function NEETExamCountdownPage() {
         <section className="py-12 px-4 sm:px-6">
           <div className="mx-auto max-w-3xl">
             <div className="rounded-2xl bg-blue-500 p-8 text-center text-white">
-              <h2 className="mb-2 text-2xl font-bold">Start Your NEET 2026 Journey</h2>
+              <h2 className="mb-2 text-2xl font-bold">Start Your NEET 2027 Journey</h2>
               <p className="mb-6 text-blue-100">
                 Every day counts. Begin your preparation with Cerebrum Biology Academy.
               </p>

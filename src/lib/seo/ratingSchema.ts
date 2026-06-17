@@ -105,7 +105,7 @@ export function generateCourseRatingSchema(courseData: {
 // Pre-configured course ratings
 export const courseRatings = {
   crashCourse: {
-    name: 'NEET 2026 Biology Crash Course',
+    name: 'NEET 2027 Biology Crash Course',
     description:
       'Intensive 4-month NEET Biology preparation course with 200+ hours of live classes, complete study material, and 20 mock tests.',
     provider: 'Cerebrum Biology Academy',

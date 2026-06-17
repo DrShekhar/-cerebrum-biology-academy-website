@@ -7,7 +7,7 @@ const benefits = [
   'Chapter-wise marks distribution (2015-2025)',
   'Top 15 high-yield chapters identified',
   'Botany vs Zoology weightage comparison',
-  'Trending topics for NEET 2026',
+  'Trending topics for NEET 2027',
   'Time allocation strategy per chapter',
 ]
 

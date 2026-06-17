@@ -176,7 +176,7 @@ export default function NeetZoologySyllabusPage() {
 
           <article className="prose prose-lg prose-red max-w-none">
             <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
-              High-Yield Zoology Topics for NEET 2026
+              High-Yield Zoology Topics for NEET 2027
             </h3>
             <p className="text-gray-700 leading-relaxed">
               Based on analysis of NEET papers from 2019-2025, the highest-yield zoology topics are:

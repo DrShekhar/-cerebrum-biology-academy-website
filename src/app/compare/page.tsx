@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title:
     'NEET Coaching Comparison | Cerebrum vs Kota, the largest national NEET chain, the 2nd-largest national NEET chain | 2026 Guide',
   description:
-    'Compare Cerebrum Biology Academy with Kota coaching, the largest national NEET chain, the 2nd-largest national NEET chain, and local institutes. See fees, batch sizes, success rates. Make an informed decision for NEET 2026.',
+    'Compare Cerebrum Biology Academy with Kota coaching, the largest national NEET chain, the 2nd-largest national NEET chain, and local institutes. See fees, batch sizes, success rates. Make an informed decision for NEET 2027.',
   keywords: [
     'NEET coaching comparison',
     'Cerebrum vs Kota',

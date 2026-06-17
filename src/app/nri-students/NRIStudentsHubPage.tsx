@@ -274,7 +274,7 @@ const faqs = [
 
 const blogArticles = [
   {
-    title: 'Complete Guide to NEET 2026 for NRI Students',
+    title: 'Complete Guide to NEET 2027 for NRI Students',
     excerpt:
       'Everything you need to know about NEET 2026 - registration, exam centers abroad, NRI quota, and preparation strategy.',
     image: '📚',
@@ -340,7 +340,7 @@ export function NRIStudentsHubPage() {
               </div>
 
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Crack <span className="text-yellow-300">NEET 2026</span> from Anywhere in the World
+                Crack <span className="text-yellow-300">NEET 2027</span> from Anywhere in the World
               </h1>
 
               <p className="text-lg opacity-90 mb-6">
@@ -727,7 +727,7 @@ export function NRIStudentsHubPage() {
           <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-red-100 px-4 py-2 rounded-full text-red-700 text-sm font-medium mb-4">
               <Calendar className="w-4 h-4 mr-2" />
-              NEET 2026 Batches Starting Soon - Limited Seats!
+              NEET 2027 Batches Starting Soon - Limited Seats!
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Courses for NRI Students
@@ -931,7 +931,7 @@ export function NRIStudentsHubPage() {
             {/* Urgency Badge */}
             <div className="inline-flex items-center bg-red-500 px-6 py-2 rounded-full text-sm font-bold mb-6 animate-pulse">
               <Calendar className="w-4 h-4 mr-2" />
-              NEET 2026 Batch Filling Fast - Only 50 Seats Left!
+              NEET 2027 Batch Filling Fast - Only 50 Seats Left!
             </div>
 
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Start Your NEET Journey Today!</h2>

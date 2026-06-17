@@ -60,9 +60,9 @@ export const courses: BasicCourse[] = [
   },
   {
     id: 'class-12th-neet-ascent',
-    title: 'NEET 2026 - Class 12th Ascent',
+    title: 'NEET 2027 - Class 12th Ascent',
     description:
-      'Intensive dual-preparation program for Class 12th students targeting both CBSE Boards and NEET 2026. Comprehensive coverage of Human Reproduction, Genetics and Evolution, Biotechnology, Ecology and Environment, Plant Physiology, and Animal Kingdom classification. Our AIIMS Trained faculty ensure mastery of high-weightage topics like Genetics, Human Physiology, and Ecology through strategic teaching methods and regular NEET pattern assessments.',
+      'Intensive dual-preparation program for Class 12th students targeting both CBSE Boards and NEET 2027. Comprehensive coverage of Human Reproduction, Genetics and Evolution, Biotechnology, Ecology and Environment, Plant Physiology, and Animal Kingdom classification. Our AIIMS Trained faculty ensure mastery of high-weightage topics like Genetics, Human Physiology, and Ecology through strategic teaching methods and regular NEET pattern assessments.',
     duration: '1 Year',
     price: 72000,
     targetClass: '12th',
@@ -79,7 +79,7 @@ export const courses: BasicCourse[] = [
   },
   {
     id: 'neet-dropper-year',
-    title: 'NEET 2026 - Dropper Batch',
+    title: 'NEET 2027 - Dropper Batch',
     description:
       'Specialized intensive course for NEET aspirants seeking score improvement with complete syllabus revision from Class 11 and 12. Focus on high-yield topics including Genetics, Evolution, Human Physiology, Plant Physiology, Ecology, and Biotechnology. Our proven methodology includes weakness identification, targeted practice sessions, extensive previous year question analysis, and strategic time management training to help students achieve their target NEET rank.',
     duration: '1 Year',

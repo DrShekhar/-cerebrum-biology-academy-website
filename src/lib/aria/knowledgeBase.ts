@@ -331,7 +331,7 @@ export const FAQ_DATA = {
       'NEET 2026 will have 200 questions total (180 compulsory). Biology has 90 questions (45 from Class 11, 45 from Class 12). Each correct answer gives +4 marks, incorrect -1 mark. The exam is held once a year (expected May 3, 2026). There is no cap on attempts - candidates aged 17+ can take NEET as many times as needed.',
   },
   neetEligibility: {
-    question: 'What is the eligibility criteria for NEET 2026?',
+    question: 'What is the eligibility criteria for NEET 2027?',
     answer:
       'Candidates must pass 10+2 or equivalent with individual passing grades in Physics, Chemistry, Biology/Biotechnology, and English. Minimum age is 17 years. There is no upper age limit. You can take NEET as many times as you want - there is no cap on attempts.',
   },
@@ -378,7 +378,7 @@ export const FAQ_DATA = {
   coachingNecessary: {
     question: 'Is coaching necessary for NEET?',
     answer:
-      'While self-study is possible, coaching provides structured guidance, expert mentorship, regular testing, and peer learning. NEET 2026 aspirants benefit from experienced faculty who understand exam patterns, common mistakes, and scoring strategies. Our 98% success rate shows the value of expert guidance. We offer a free demo to help you decide.',
+      'While self-study is possible, coaching provides structured guidance, expert mentorship, regular testing, and peer learning. NEET 2027 aspirants benefit from experienced faculty who understand exam patterns, common mistakes, and scoring strategies. Our 98% success rate shows the value of expert guidance. We offer a free demo to help you decide.',
   },
   alreadyInCoaching: {
     question:

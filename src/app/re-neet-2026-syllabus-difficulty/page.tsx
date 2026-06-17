@@ -186,7 +186,7 @@ const config: BestVerticalConfig = {
     'Will RE-NEET Syllabus Change',
     'NEET Reconduct Syllabus',
     'NEET Retest Difficulty',
-    'NEET 2026 Phase 2 Pattern',
+    'NEET 2027 Phase 2 Pattern',
     'NCERT Class 11 12 Biology',
     'NEET Biology High-Weightage Chapters',
     'RE-NEET Revision Strategy',

@@ -341,7 +341,7 @@ export default function NEETToppersNoidaPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Be Our Next Topper!</h2>
             <p className="text-gray-300 mb-8">
-              Join 1,200+ Noida students who are preparing to ace NEET 2026. Book your FREE demo
+              Join 1,200+ Noida students who are preparing to ace NEET 2027. Book your FREE demo
               class today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

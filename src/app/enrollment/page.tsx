@@ -6,9 +6,9 @@ import { EventSchema, EventListSchema } from '@/components/seo/EventSchema'
 export const metadata: Metadata = {
   title: 'Enroll Now | Join Cerebrum Biology Academy | NEET Coaching Admission 2026',
   description:
-    "Enroll in India's top NEET Biology coaching institute. 98% success rate, AIIMS-trained faculty. EMI options available. Limited seats for 2026 batch.",
+    "Enroll in India's top NEET Biology coaching institute. 98% success rate, AIIMS-trained faculty. EMI options available. Limited seats for 2027 batch.",
   keywords:
-    'NEET enrollment, biology coaching admission, NEET 2026 batch, Cerebrum Academy enrollment, NEET coaching fees',
+    'NEET enrollment, biology coaching admission, NEET 2027 batch, Cerebrum Academy enrollment, NEET coaching fees',
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/enrollment',
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 const upcomingBatches = [
   {
-    name: 'NEET 2026 Class 11 Biology Batch — New Session',
+    name: 'NEET 2027 Class 11 Biology Batch — New Session',
     description:
       'Fresh Class 11 NEET Biology batch starting at Cerebrum Academy. AIIMS faculty, 15-student batches across 6 Delhi NCR centers. Online and offline options.',
     startDate: '2026-04-01T09:00:00+05:30',

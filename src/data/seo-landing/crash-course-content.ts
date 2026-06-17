@@ -180,7 +180,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     toolsCTA: crashCourseToolsCTA,
     contactButtons: defaultContactButtons,
     relatedPages: [
-      { title: 'NEET 2026 Preparation', link: '/neet-preparation-guide' },
+      { title: 'NEET 2027 Preparation', link: '/neet-preparation-guide' },
       { title: 'NEET Dropper Course', link: '/neet-dropper-batch-online' },
       { title: 'NEET Biology Notes', link: '/neet-biology-notes-pdf' },
     ],
@@ -200,7 +200,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'NEET Biology 45-Day Course | Starting Now | Exam May 2, 2026',
     metaDescription:
-      'NEET 2026 is May 2. Our 45-day crash course starting now — complete syllabus revision, 15 mock exams, AIIMS faculty, 12-student batches. ₹34,999. Also available: 30-day Sprint (₹14,999).',
+      'NEET 2027 is May 2. Our 45-day crash course starting now — complete syllabus revision, 15 mock exams, AIIMS faculty, 12-student batches. ₹34,999. Also available: 30-day Sprint (₹14,999).',
     keywords: [
       'neet biology 45 day course',
       '45 day neet preparation',
@@ -675,7 +675,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
   'neet-biology-1-year-course': {
     slug: 'neet-biology-1-year-course',
     classLevel: 'universal',
-    title: 'NEET Biology 1 Year Course | Complete Annual Program 2026-27',
+    title: 'NEET Biology 1 Year Course | Complete Annual Program 2027',
     metaDescription:
       'Comprehensive 1-year NEET Biology course for Class 11 & 12 students. Complete preparation with board integration, mock tests, and personal mentorship.',
     keywords: [
@@ -1501,7 +1501,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       },
     ],
     courseSummary: {
-      title: 'NEET 2026 Crash Course — Only 30 & 45 Day Options Left',
+      title: 'NEET 2027 Crash Course — Only 30 & 45 Day Options Left',
       duration: '30 / 45 days',
       batchSize: '12 students max',
       features: [
@@ -1549,7 +1549,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'NEET Crash Course 2026 | 30 & 45-Day Options | Exam May 2',
     metaDescription:
-      'NEET 2026 is May 2 — only 30-day (₹14,999) and 45-day (₹34,999) crash courses available now. AIIMS faculty, 12 students/batch. Enroll today, start immediately.',
+      'NEET 2027 is May 2 — only 30-day (₹14,999) and 45-day (₹34,999) crash courses available now. AIIMS faculty, 12 students/batch. Enroll today, start immediately.',
     keywords: [
       'neet 60 day course',
       'neet 60 day crash course',
@@ -1559,7 +1559,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       '60 day neet crash course online',
     ],
     hero: {
-      headline: 'NEET 2026 Crash Course — 30 & 45 Day Batches Starting Now',
+      headline: 'NEET 2027 Crash Course — 30 & 45 Day Batches Starting Now',
       subheadline:
         'NEET exam is May 2, 2026. With ~42 days left, we now offer 30-day Sprint (₹14,999) and 45-day Intensive (₹14,999) batches. Both starting immediately with AIIMS faculty and 12-student micro-batches.',
       highlightedText: 'Starts Now',
@@ -1850,7 +1850,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       },
     ],
     courseSummary: {
-      title: 'NEET 2026 Crash Course Fees — May 2 Exam',
+      title: 'NEET 2027 Crash Course Fees — May 2 Exam',
       duration: '30 / 45 days',
       batchSize: '12 students max',
       features: [

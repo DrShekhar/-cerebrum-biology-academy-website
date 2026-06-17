@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     'NCERT Biology NEET',
     'NEET Biology important chapters',
     'NEET Biology topics',
-    'NEET 2026 syllabus PDF',
+    'NEET 2027 syllabus PDF',
   ],
   openGraph: {
     title: 'NEET Biology Syllabus 2026 - Complete Chapter-wise Syllabus',
@@ -251,7 +251,7 @@ const faqData = [
       'In NEET Biology, Class 12 has slightly higher weightage (approximately 55-60%) compared to Class 11 (40-45%). Key Class 12 chapters like Genetics, Human Reproduction, and Human Health carry more marks.',
   },
   {
-    question: 'How to prepare Biology for NEET 2026?',
+    question: 'How to prepare Biology for NEET 2027?',
     answer:
       'For NEET Biology 2026: 1) Read NCERT thoroughly (line by line), 2) Make notes with diagrams, 3) Focus on high-weightage chapters first, 4) Solve previous year questions, 5) Take regular mock tests, 6) Revise frequently especially for terminology.',
   },
@@ -347,7 +347,7 @@ export default function NEETBiologySyllabusPage() {
 
             <h1 className="mb-4 text-3xl font-bold md:text-5xl">NEET Biology Syllabus 2026</h1>
             <p className="mb-6 max-w-2xl text-lg text-purple-100 md:text-xl">
-              Complete chapter-wise Biology syllabus for NEET 2026 with topic weightage, important
+              Complete chapter-wise Biology syllabus for NEET 2027 with topic weightage, important
               chapters, and preparation strategy based on NCERT Class 11 & 12.
             </p>
 

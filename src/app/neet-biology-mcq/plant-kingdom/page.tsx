@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { TopicLandingPage } from '@/components/mcq/TopicLandingPage'
 
 export const metadata: Metadata = {
-  title: 'Plant Kingdom MCQ for NEET 2026 | Free Practice Questions',
+  title: 'Plant Kingdom MCQ for NEET 2027 | Free Practice Questions',
   description:
     'Practice 400+ free Plant Kingdom MCQs for NEET. Algae, Bryophytes, Pteridophytes, Gymnosperms, Angiosperms questions. NCERT-based with detailed explanations.',
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Plant Kingdom MCQ for NEET 2026 | Free Practice Questions',
+    title: 'Plant Kingdom MCQ for NEET 2027 | Free Practice Questions',
     description:
       'Practice 400+ free Plant Kingdom MCQs for NEET. Algae, Bryophytes, Pteridophytes, Gymnosperms, Angiosperms questions. NCERT-based with detailed explanations.',
   },
@@ -59,7 +59,7 @@ export default function PlantKingdomPage() {
       <TopicLandingPage
         topic="Plant Kingdom"
         topicSlug="plant-kingdom"
-        title="Plant Kingdom MCQ for NEET 2026"
+        title="Plant Kingdom MCQ for NEET 2027"
         description="Master Plant Kingdom with 400+ free MCQs covering Algae, Bryophytes, Pteridophytes, Gymnosperms, and Angiosperms for NEET preparation."
         questionCount={400}
         chapters={['Algae', 'Bryophytes', 'Pteridophytes', 'Gymnosperms', 'Angiosperms']}

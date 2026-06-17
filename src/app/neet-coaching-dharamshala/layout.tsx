@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Top NEET coaching for Dharamshala & Kangra students. 98% success rate. Online classes from AIIMS faculty. Prepare for RPGMC Tanda from home. Serving McLeodGanj, Palampur, Kangra town.',
   keywords:
-    'NEET coaching Dharamshala, best NEET coaching Kangra, NEET preparation Dharamshala HP, NEET classes McLeodGanj, RPGMC Tanda preparation, biology coaching Kangra, NEET 2026 Dharamshala, online NEET coaching Himachal',
+    'NEET coaching Dharamshala, best NEET coaching Kangra, NEET preparation Dharamshala HP, NEET classes McLeodGanj, RPGMC Tanda preparation, biology coaching Kangra, NEET 2027 Dharamshala, online NEET coaching Himachal',
   openGraph: {
     title: 'Best NEET Coaching in Dharamshala 2026',
     description:

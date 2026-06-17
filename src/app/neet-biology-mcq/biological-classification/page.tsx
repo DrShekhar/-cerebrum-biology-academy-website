@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { TopicLandingPage } from '@/components/mcq/TopicLandingPage'
 
 export const metadata: Metadata = {
-  title: 'Biological Classification MCQ for NEET 2026 | Free Practice Questions',
+  title: 'Biological Classification MCQ for NEET 2027 | Free Practice Questions',
   description:
     'Practice 350+ free Biological Classification MCQs for NEET. Five Kingdom Classification, Monera, Protista, Fungi, Viruses questions. NCERT-based with detailed explanations.',
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Biological Classification MCQ for NEET 2026 | Free Practice Questions',
+    title: 'Biological Classification MCQ for NEET 2027 | Free Practice Questions',
     description:
       'Practice 350+ free Biological Classification MCQs for NEET. Five Kingdom Classification, Monera, Protista, Fungi, Viruses questions. NCERT-based with detailed explanations.',
   },
@@ -59,7 +59,7 @@ export default function BiologicalClassificationPage() {
       <TopicLandingPage
         topic="Biological Classification"
         topicSlug="biological-classification"
-        title="Biological Classification MCQ for NEET 2026"
+        title="Biological Classification MCQ for NEET 2027"
         description="Master Biological Classification with 350+ free MCQs covering Five Kingdom Classification, Monera, Protista, Fungi, and Viruses for NEET preparation."
         questionCount={350}
         chapters={[

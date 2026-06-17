@@ -55,10 +55,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is this updated for NEET 2026?',
+      name: 'Is this updated for NEET 2027?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes! This resource is fully updated for NEET 2026 based on the latest NTA pattern and syllabus.',
+        text: 'Yes! This resource is fully updated for NEET 2027 based on the latest NTA pattern and syllabus.',
       },
     },
   ],

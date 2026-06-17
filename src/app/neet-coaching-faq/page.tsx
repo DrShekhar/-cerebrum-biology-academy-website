@@ -56,7 +56,7 @@ const faqData = {
         '360 out of 360 in NEET Biology requires mastery of all chapters with zero errors. Our method includes: (1) NCERT mastery - Read 5 times, memorize definitions, (2) Concept mapping - Create mind maps for every chapter, (3) Weekly tests - Take 10+ full-length tests, (4) Error analysis - Maintain an error log and revise mistakes 3x, (5) Mock test simulation - Solve exactly 180 questions in 90 minutes under exam conditions. Cerebrum students who follow this discipline achieve 340+.',
     },
     {
-      question: 'What is the ideal study plan for NEET 2026?',
+      question: 'What is the ideal study plan for NEET 2027?',
       answer:
         "If you're starting now (Feb 2026), follow this 10-month plan: Feb-April (3 months): NCERT revision, concept building, 0 mock tests. May-August (4 months): Complete NCERT twice more, start chapter-wise tests, solve 20+ mock tests. September-December (4 months): 80% time on weak chapters, mock tests 3x per week. December onwards: Revision mode, solve 50+ full-length tests. Cerebrum provides this exact structured plan with daily targets and progress tracking.",
     },
@@ -152,14 +152,14 @@ const faqData = {
         'NEET 2026 exam date has not been officially announced by NTA as of February 2026. Historically, NEET is conducted in May-June. Expected timeline: (1) Official notification: January-February, (2) Registration: February-March, (3) Admit card: May (one week before exam), (4) Exam date: May 17, 2026 (expected, subject to official confirmation). You can expect the official date announcement at nta.ac.in within 2-4 weeks. Cerebrum will notify all students immediately and adjust class schedule accordingly if needed.',
     },
     {
-      question: 'What is the NEET 2026 syllabus?',
+      question: 'What is the NEET 2027 syllabus?',
       answer:
-        'NEET 2026 syllabus covers Biology from NCERT Class 11 and Class 12 (no changes from 2024): Class 11 Biology (9 chapters): Cell Biology, Tissues, Morphology of Flowering Plants, Anatomy of Flowering Plants, Photosynthesis, Cellular Respiration, Plant Growth & Development, Digestion & Nutrition, Respiration & Gas Exchange. Class 12 Biology (9 chapters): Reproduction in Organisms, Sexual Reproduction, Male Gametes/Female Gametes, Fertilization & Post-fertilization, Genetics, Evolution, Human Health & Disease, Strategies for Enhancement of Food Production, Organism & Population. Total: 18 chapters, 180 questions (90 Biology questions in NEET). Cerebrum covers 100% syllabus with detailed explanations.',
+        'NEET 2027 syllabus covers Biology from NCERT Class 11 and Class 12 (no changes from 2024): Class 11 Biology (9 chapters): Cell Biology, Tissues, Morphology of Flowering Plants, Anatomy of Flowering Plants, Photosynthesis, Cellular Respiration, Plant Growth & Development, Digestion & Nutrition, Respiration & Gas Exchange. Class 12 Biology (9 chapters): Reproduction in Organisms, Sexual Reproduction, Male Gametes/Female Gametes, Fertilization & Post-fertilization, Genetics, Evolution, Human Health & Disease, Strategies for Enhancement of Food Production, Organism & Population. Total: 18 chapters, 180 questions (90 Biology questions in NEET). Cerebrum covers 100% syllabus with detailed explanations.',
     },
     {
       question: 'What is the NEET exam pattern?',
       answer:
-        'NEET 2026 exam pattern: Format: Multiple Choice Questions (MCQs) with 4 options. Total questions: 200 (50 Physics, 50 Chemistry, 100 Biology). Exam duration: 3 hours 20 minutes (200 minutes). Marking: +4 marks for correct answer, -1 mark for wrong answer, 0 for unattempted. Total marks: 800. Section-wise: (1) Physics: 50 questions (200 marks), (2) Chemistry: 50 questions (200 marks), (3) Biology: 100 questions (400 marks) [Botany 50 + Zoology 50]. Medium: English, Hindi, Tamil, Telugu, Kannada, Marathi, Gujarati, Odia, Bengali, Assamese, Malayalam, Punjabi. Cerebrum tests are based on this exact pattern.',
+        'NEET 2027 exam pattern: Format: Multiple Choice Questions (MCQs) with 4 options. Total questions: 200 (50 Physics, 50 Chemistry, 100 Biology). Exam duration: 3 hours 20 minutes (200 minutes). Marking: +4 marks for correct answer, -1 mark for wrong answer, 0 for unattempted. Total marks: 800. Section-wise: (1) Physics: 50 questions (200 marks), (2) Chemistry: 50 questions (200 marks), (3) Biology: 100 questions (400 marks) [Botany 50 + Zoology 50]. Medium: English, Hindi, Tamil, Telugu, Kannada, Marathi, Gujarati, Odia, Bengali, Assamese, Malayalam, Punjabi. Cerebrum tests are based on this exact pattern.',
     },
     {
       question: 'How many questions in NEET Biology?',

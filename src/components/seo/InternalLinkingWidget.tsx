@@ -166,7 +166,7 @@ const INTERNAL_LINKS = {
       slug: '/blog/best-neet-coaching-delhi-ncr-2026-comparison',
       priority: 9,
     },
-    { title: 'NEET 2026 Biology Strategy', slug: '/blog/neet-2026-biology-strategy', priority: 7 },
+    { title: 'NEET 2027 Biology Strategy', slug: '/blog/neet-2026-biology-strategy', priority: 7 },
     { title: 'Ecology Complete Guide', slug: '/blog/ecology-complete-neet-guide', priority: 5 },
     { title: 'Human Physiology Notes', slug: '/blog/human-physiology-neet-notes', priority: 6 },
     { title: 'Cell Biology Masterclass', slug: '/blog/cell-biology-neet-masterclass', priority: 6 },

@@ -93,7 +93,7 @@ export default function ContentAnalyticsPage() {
       setTopContent([
         {
           id: '1',
-          title: 'NEET 2026 Biology Syllabus Complete Guide',
+          title: 'NEET 2027 Biology Syllabus Complete Guide',
           type: 'BLOG_POST',
           slug: '/blog/neet-2026-biology-syllabus',
           views: 3240,
@@ -149,7 +149,7 @@ export default function ContentAnalyticsPage() {
         },
         {
           id: '5',
-          title: 'NTA Announces NEET 2026 Dates',
+          title: 'NTA Announces NEET 2027 Dates',
           type: 'NEWS_ARTICLE',
           slug: '/news/nta-neet-2026-dates',
           views: 980,

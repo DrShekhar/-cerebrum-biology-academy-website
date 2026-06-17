@@ -255,7 +255,7 @@ async function publishNewsArticle(
       author: frontmatter.author || 'Cerebrum Biology Academy',
       category: frontmatter.category || 'NEET News',
       sourceUrl: frontmatter.sourceUrl,
-      tags: frontmatter.tags || ['NEET 2026', 'News'],
+      tags: frontmatter.tags || ['NEET 2027', 'News'],
       readTime: frontmatter.readTime || calculateReadTime(body),
       published: true,
     },

@@ -265,7 +265,7 @@ export default function NEETCrashCoursePage() {
 
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-orange-100 mb-6 sm:mb-8">
                 Intensive revision program with 200+ live classes, 100+ mock tests, and daily
-                practice. Perfect for final push before NEET 2026.
+                practice. Perfect for final push before NEET 2027.
               </p>
 
               {/* Quick Stats */}

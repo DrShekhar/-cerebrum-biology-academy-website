@@ -193,8 +193,8 @@ export function OrganizationSchema() {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Course',
-            name: 'NEET 2026 - Class 11th Biology',
-            description: 'Comprehensive biology coaching for NEET 2026 aspirants in Class 11th',
+            name: 'NEET 2027 - Class 11th Biology',
+            description: 'Comprehensive biology coaching for NEET 2027 aspirants in Class 11th',
             provider: {
               '@type': 'Organization',
               name: 'Cerebrum Biology Academy',
@@ -207,8 +207,8 @@ export function OrganizationSchema() {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Course',
-            name: 'NEET 2026 - Class 12th Biology',
-            description: 'Intensive biology preparation for NEET 2026 Class 12th students',
+            name: 'NEET 2027 - Class 12th Biology',
+            description: 'Intensive biology preparation for NEET 2027 Class 12th students',
             provider: {
               '@type': 'Organization',
               name: 'Cerebrum Biology Academy',
@@ -440,7 +440,7 @@ export function FAQSchema() {
       },
       {
         '@type': 'Question',
-        name: 'When does NEET 2026 preparation batch start?',
+        name: 'When does NEET 2027 preparation batch start?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'NEET 2026 preparation batches are now open for enrollment. Early batches start from April 2025 for Class 11 students and September 2025 for intensive batches. Book your seat early for best results.',

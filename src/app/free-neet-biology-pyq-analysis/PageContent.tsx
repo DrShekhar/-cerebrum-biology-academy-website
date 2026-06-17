@@ -8,7 +8,7 @@ const benefits = [
   'Most repeated questions identified',
   'Difficulty level trends by year',
   'NCERT line-by-line question mapping',
-  'Prediction for NEET 2026 patterns',
+  'Prediction for NEET 2027 patterns',
 ]
 
 export default function PageContent() {
@@ -29,7 +29,7 @@ export default function PageContent() {
           </p>
           <p className="text-lg text-green-200 max-w-2xl mx-auto mb-8">
             Understand NEET question patterns with our comprehensive 10-year analysis. See which
-            topics are repeated, difficulty trends, and what to expect in NEET 2026.
+            topics are repeated, difficulty trends, and what to expect in NEET 2027.
           </p>
           <Link
             href="https://wa.me/918826444334?text=Hi%20I%20want%20the%20free%20pyq%20analysis"

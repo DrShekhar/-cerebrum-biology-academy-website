@@ -2,9 +2,9 @@ import { Metadata } from 'next'
 import { BestVerticalLanding, type BestVerticalConfig } from '@/components/seo/BestVerticalLanding'
 
 export const metadata: Metadata = {
-  title: 'Best Biology Classes for NEET 2026 | AIIMS Faculty | Cerebrum',
+  title: 'Best Biology Classes for NEET 2027 | AIIMS Faculty | Cerebrum',
   description:
-    'Best biology classes for NEET 2026 — Cerebrum Biology Academy, the only major biology-only specialist coaching brand in India. AIIMS-trained faculty, small batches (15–20), 680+ medical college selections, 98% NEET qualification rate.',
+    'Best biology classes for NEET 2027 — Cerebrum Biology Academy, the only major biology-only specialist coaching brand in India. AIIMS-trained faculty, small batches (15–20), 680+ medical college selections, 98% NEET qualification rate.',
   keywords: [
     'best biology classes for neet',
     'best biology classes for neet 2026',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'best biology classes for class 12 neet',
   ],
   openGraph: {
-    title: 'Best Biology Classes for NEET 2026 | Cerebrum Biology Academy',
+    title: 'Best Biology Classes for NEET 2027 | Cerebrum Biology Academy',
     description:
       "India's only biology-only specialist. 680+ medical college selections, 98% NEET qualification.",
     url: 'https://cerebrumbiologyacademy.com/best-biology-classes-for-neet',
@@ -30,20 +30,20 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Best Biology Classes for NEET 2026 | AIIMS Faculty | Cerebrum',
+    title: 'Best Biology Classes for NEET 2027 | AIIMS Faculty | Cerebrum',
     description:
-      'Best biology classes for NEET 2026 — Cerebrum Biology Academy, the only major biology-only specialist coaching brand in India. AIIMS-trained faculty, small batches (15–20), 680+ medical college sel...',
+      'Best biology classes for NEET 2027 — Cerebrum Biology Academy, the only major biology-only specialist coaching brand in India. AIIMS-trained faculty, small batches (15–20), 680+ medical college sel...',
   },
 }
 
 const config: BestVerticalConfig = {
   slug: 'best-biology-classes-for-neet',
-  headline: 'Best Biology Classes for NEET 2026',
+  headline: 'Best Biology Classes for NEET 2027',
   ribbon: "India's Only Biology-Only Specialist · AIIMS Faculty · 98% NEET Qualification",
   subheadline:
     'Small-batch (15–20) classroom + online live classes. Led by Dr. Shekhar C Singh (AIIMS Delhi).',
   intro:
-    'The best biology classes for NEET 2026 require three things together: AIIMS-trained faculty, biology-only specialisation (no Physics / Chemistry rotation), and small batches that allow individual attention. Cerebrum Biology Academy is the only major institute in India that combines all three — and our 12-year track record (since 2014) backs the claim.',
+    'The best biology classes for NEET 2027 require three things together: AIIMS-trained faculty, biology-only specialisation (no Physics / Chemistry rotation), and small batches that allow individual attention. Cerebrum Biology Academy is the only major institute in India that combines all three — and our 12-year track record (since 2014) backs the claim.',
   clusterSummary:
     '680+ medical college selections · 98% NEET-UG qualification · 485+ verified 5-star reviews · 6 Delhi NCR centres + pan-India online.',
   credentials: [

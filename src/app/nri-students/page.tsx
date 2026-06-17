@@ -79,7 +79,7 @@ const courseSchema = {
   hasCourseInstance: [
     {
       '@type': 'CourseInstance',
-      name: 'NEET 2026 Foundation Batch (Class 11)',
+      name: 'NEET 2027 Foundation Batch (Class 11)',
       courseMode: 'Online',
       courseSchedule: {
         '@type': 'Schedule',
@@ -89,7 +89,7 @@ const courseSchema = {
     },
     {
       '@type': 'CourseInstance',
-      name: 'NEET 2026 Target Batch (Class 12)',
+      name: 'NEET 2027 Target Batch (Class 12)',
       courseMode: 'Online',
       courseSchedule: {
         '@type': 'Schedule',
