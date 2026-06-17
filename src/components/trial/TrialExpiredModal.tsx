@@ -17,6 +17,7 @@ import {
   Lock,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { openWhatsAppWithFormData } from '@/lib/whatsapp/formToWhatsApp'
 import { TrialStatus } from '@/lib/trial/trialManager'
 
 interface TrialExpiredModalProps {
@@ -92,6 +93,13 @@ export function TrialExpiredModal({
       })
 
       if (response.ok) {
+        openWhatsAppWithFormData('Trial Extension Request', {
+          Email: email,
+          Phone: phone,
+          'Request Type': 'extension',
+          'Tests Taken': trialStatus.testsTaken,
+          Message: message,
+        })
         alert('Request submitted! We will contact you soon.')
         setShowContactForm(false)
         onClose?.()

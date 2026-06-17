@@ -24,6 +24,7 @@ import {
   Monitor,
 } from 'lucide-react'
 import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
+import { openWhatsAppWithFormData } from '@/lib/whatsapp/formToWhatsApp'
 
 interface DemoClass {
   id: string
@@ -554,6 +555,16 @@ export default function DemoClassScheduler({
   const handleBookingSubmit = (formData: any) => {
     setBookingData(formData)
     setCurrentStep('confirmed')
+
+    // Open WhatsApp to admin with the demo booking details
+    openWhatsAppWithFormData('Demo Class Scheduler', {
+      'Demo Class': selectedClass?.title,
+      Faculty: selectedClass?.faculty.name,
+      Date: selectedSlot?.date,
+      Time: selectedSlot?.time,
+      Duration: selectedClass ? `${selectedClass.duration} minutes` : undefined,
+      Format: selectedClass?.format,
+    })
   }
 
   const resetScheduler = () => {

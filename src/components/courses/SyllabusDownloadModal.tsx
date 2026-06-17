@@ -7,6 +7,7 @@ import { Card } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
 import { Label } from '@/components/ui/Label'
 import { X, Download, FileText, CheckCircle, User, Mail, Phone } from 'lucide-react'
+import { openWhatsAppWithFormData } from '@/lib/whatsapp/formToWhatsApp'
 
 interface SyllabusDownloadModalProps {
   course: CourseProgram
@@ -39,6 +40,13 @@ export function SyllabusDownloadModal({ course, onClose }: SyllabusDownloadModal
 
     setIsSubmitting(false)
     setIsSuccess(true)
+
+    openWhatsAppWithFormData('Syllabus Download Form', {
+      Name: formData.name,
+      Email: formData.email,
+      Phone: formData.phone,
+      Course: course.name,
+    })
   }
 
   const handleInputChange = (field: string, value: string) => {

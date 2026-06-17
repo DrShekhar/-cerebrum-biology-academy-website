@@ -26,6 +26,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { openWhatsAppWithFormData } from '@/lib/whatsapp/formToWhatsApp'
 
 // WhatsApp contact constants
 const WHATSAPP_PHONE = '918826444334'
@@ -219,13 +220,18 @@ export default function BiologyTutorGurugramPage() {
       const result = await response.json()
 
       if (response.ok && result.success) {
+        // Capture readable submitted data before clearing the form
+        const submitted = { ...formData, phone: cleanPhone }
         setFormSuccess(true)
         setFormData({ name: '', phone: '', email: '', area: '', message: '' })
         setTimeout(() => {
-          window.open(
-            `https://wa.me/918826444334?text=${encodeURIComponent(`Hi! I'm ${formData.name} from Gurugram. I just submitted an enquiry for Biology tuition. My phone: ${cleanPhone}. Please call me back.`)}`,
-            '_blank'
-          )
+          openWhatsAppWithFormData('Biology Tutor Gurugram Enquiry', {
+            Name: submitted.name,
+            Phone: submitted.phone,
+            Email: submitted.email,
+            'Area in Gurugram': submitted.area,
+            Message: submitted.message,
+          })
         }, 500)
       } else {
         setFormError(result.error || 'Failed to submit. Please try again.')

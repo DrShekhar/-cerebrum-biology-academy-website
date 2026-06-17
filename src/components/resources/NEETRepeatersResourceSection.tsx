@@ -55,12 +55,20 @@ export function NEETRepeatersResourceSection() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-              Get Notified When Ready
-            </button>
-            <button className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
-              Contact for Early Access
-            </button>
+            <a
+              href="https://wa.me/918826444334?text=Hi!%20I%20am%20a%20NEET%20repeater%20preparing%20for%20NEET%202027.%20Please%20share%20details%20about%20the%20dropper%2Frepeater%20batch%2C%20fees%2C%20and%20a%20free%20demo."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#25D366] text-white rounded-lg hover:bg-[#20BD5A] transition-colors font-semibold"
+            >
+              WhatsApp Us — NEET 2027 Repeater Batch
+            </a>
+            <a
+              href="tel:+918826444334"
+              className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              Call for Early Access
+            </a>
           </div>
         </div>
       </div>

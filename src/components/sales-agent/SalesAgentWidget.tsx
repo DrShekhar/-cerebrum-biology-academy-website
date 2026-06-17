@@ -22,6 +22,7 @@ import {
   MessageCircle,
 } from 'lucide-react'
 import { openDesktopWhatsAppModal, buildWhatsAppUrl, isMobileDevice } from '@/lib/whatsapp/tracking'
+import { openWhatsAppWithFormData } from '@/lib/whatsapp/formToWhatsApp'
 
 // Types
 interface Message {
@@ -405,6 +406,14 @@ For personalized guidance, our counselor team can help. In the meantime:
 
           // Submit lead to API (fire and forget)
           submitLead({ ...leadData, class: studentClass })
+
+          // Open WhatsApp to admin with captured lead data
+          openWhatsAppWithFormData('ARIA Chat Lead', {
+            Name: leadData.name,
+            Phone: leadData.phone,
+            Email: leadData.email,
+            Class: studentClass,
+          })
 
           // Show WhatsApp connect CTA after a short delay
           setTimeout(() => {
