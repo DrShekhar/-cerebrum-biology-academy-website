@@ -84,7 +84,7 @@ export function DropperBatchBanner() {
           />
           <div className="text-sm leading-snug">
             <span className="font-semibold">
-              NEET 2027 Dropper Batches start {BATCH_DATES}
+              NEET 2027 Dropper Batches begin after RE-NEET 2026 — {BATCH_DATES}
             </span>
             <span className="hidden font-normal text-green-50 sm:inline">
               {' '}

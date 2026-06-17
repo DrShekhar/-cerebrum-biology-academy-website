@@ -324,7 +324,7 @@ export default function DropperBatchTemplate({
           <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <RefreshCw className="w-4 h-4" />
-              NEET 2027 Dropper Batches start 25 Jun · 1 Jul · 10 Jul — Admissions Open
+              NEET 2027 Dropper Batches (after RE-NEET 2026): 25 Jun · 1 Jul · 10 Jul
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
