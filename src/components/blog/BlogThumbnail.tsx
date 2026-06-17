@@ -35,7 +35,7 @@ const illustrationLoaders: Record<string, () => Promise<{ default: IllustrationC
     import('@/components/illustrations/BlogIllustrations').then((m) => ({
       default: m.MistakesToAvoidIllustration,
     })),
-  'last-6-months-neet-2026-preparation-strategy': () =>
+  'last-6-months-neet-2027-preparation-strategy': () =>
     import('@/components/illustrations/BlogIllustrations').then((m) => ({
       default: m.Last6MonthsStrategyIllustration,
     })),

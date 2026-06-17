@@ -131,7 +131,7 @@ function HeroPlaceholder() {
           </span>
         </div>
         <a
-          href="/neet-2026-preparation"
+          href="/neet-2027-preparation"
           className="inline-flex items-center gap-2 bg-orange-700 hover:bg-orange-800 text-white text-xs xs:text-sm font-bold px-4 py-2.5 min-h-[40px] rounded-full shadow-lg"
         >
           <GraduationCap className="w-4 h-4" />

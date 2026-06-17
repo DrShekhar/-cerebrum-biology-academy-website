@@ -4789,9 +4789,13 @@ export const delhiNCRDoorwayConsolidationRedirects = [
   { source: '/demo-booking', destination: '/book-free-demo', permanent: true },
   { source: '/practice', destination: '/neet-biology-mcq', permanent: true },
 
-  // ─── 2025 year-rollover redirects (replacing in-page React redirect()) ─
-  { source: '/neet-2025-biology-coaching', destination: '/neet-2026-preparation', permanent: true },
-  { source: '/neet-2025-preparation', destination: '/neet-2026-preparation', permanent: true },
+  // ─── Year-rollover redirects (replacing in-page React redirect()) ─
+  // 2026→2027: /neet-2026-preparation renamed to /neet-2027-preparation (admissions
+  // now target NEET 2027). Old URL 301s to the new one; the 2025 aliases point
+  // straight at the new slug to avoid a redirect chain.
+  { source: '/neet-2026-preparation', destination: '/neet-2027-preparation', permanent: true },
+  { source: '/neet-2025-biology-coaching', destination: '/neet-2027-preparation', permanent: true },
+  { source: '/neet-2025-preparation', destination: '/neet-2027-preparation', permanent: true },
   {
     source: '/neet-biology-syllabus-2025',
     destination: '/neet-biology-syllabus-2026',

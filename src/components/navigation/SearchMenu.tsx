@@ -446,7 +446,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
         },
         {
           label: `${userGoal} 2025 Pattern Analysis`,
-          href: '/neet-2026-preparation',
+          href: '/neet-2027-preparation',
           description: 'Trending now',
           badge: '🔥 Hot Topic',
         },

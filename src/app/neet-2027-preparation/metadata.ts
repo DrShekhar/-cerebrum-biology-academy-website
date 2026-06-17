@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   description:
     "Start NEET 2027 preparation with India's #1 biology coaching. 98% success rate, 67+ AIIMS selections, AIIMS faculty. Online & offline classes in Delhi NCR. Book FREE demo!",
   keywords:
-    'NEET 2026 preparation, NEET 2026 coaching, NEET 2026 biology, NEET 2026 syllabus, NEET 2026 exam date, best NEET coaching 2026, NEET biology coaching, NEET preparation tips, NEET 2026 strategy, NEET coaching Delhi, NEET online coaching, NEET 2026 batch, when is NEET 2026, NEET 2026 registration',
+    'NEET 2027 preparation, NEET 2027 coaching, NEET 2027 biology, NEET 2027 syllabus, NEET 2027 exam date, best NEET coaching 2027, NEET biology coaching, NEET preparation tips, NEET 2027 strategy, NEET coaching Delhi, NEET online coaching, NEET 2027 batch, when is NEET 2027, NEET 2027 registration',
   openGraph: {
     title: 'NEET 2027 Preparation | #1 Biology Coaching | 98% Success',
     description:
-      "Join India's best NEET Biology coaching for 2026. 67+ AIIMS selections, AIIMS faculty, AI-powered learning. Book FREE demo class today!",
-    url: 'https://cerebrumbiologyacademy.com/neet-2026-preparation',
+      "Join India's best NEET Biology coaching for 2027. 67+ AIIMS selections, AIIMS faculty, AI-powered learning. Book FREE demo class today!",
+    url: 'https://cerebrumbiologyacademy.com/neet-2027-preparation',
     type: 'website',
     images: [
       {
@@ -28,6 +28,6 @@ export const metadata: Metadata = {
       'Start NEET 2027 preparation with expert AIIMS faculty. 67+ AIIMS selections yearly. Book FREE demo!',
   },
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/neet-2026-preparation',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-2027-preparation',
   },
 }

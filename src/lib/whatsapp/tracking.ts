@@ -311,7 +311,7 @@ export const PAGE_MESSAGES: Record<string, string> = {
   '/pricing': WHATSAPP_MESSAGES.pricing,
   '/fees': WHATSAPP_MESSAGES.feeStructure,
   '/scholarship': WHATSAPP_MESSAGES.scholarship,
-  '/neet-2026-preparation': WHATSAPP_MESSAGES.neet2026,
+  '/neet-2027-preparation': WHATSAPP_MESSAGES.neet2026,
   '/neet-2027': WHATSAPP_MESSAGES.neet2027,
   '/dropper-batch': WHATSAPP_MESSAGES.dropper,
   '/demo-booking': WHATSAPP_MESSAGES.demo,

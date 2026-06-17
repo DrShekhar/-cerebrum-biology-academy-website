@@ -139,7 +139,7 @@ export const Footer = memo(function Footer() {
   }
 
   const programLinks = [
-    { name: 'NEET 2027 Preparation', href: '/neet-2026-preparation' },
+    { name: 'NEET 2027 Preparation', href: '/neet-2027-preparation' },
     { name: 'Class 11 Biology', href: '/courses/class-11' },
     { name: 'Class 12 Biology', href: '/courses/class-12' },
     { name: 'NEET Dropper Program', href: '/courses/neet-dropper' },

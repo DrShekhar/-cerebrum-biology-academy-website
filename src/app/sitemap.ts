@@ -1177,7 +1177,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // NEET Year-specific Landing Pages - HIGH PRIORITY
     {
-      url: `${baseUrl}/neet-2026-preparation`,
+      url: `${baseUrl}/neet-2027-preparation`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.98,
@@ -5047,7 +5047,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     // NEET Coaching & Course Pages
-    // neet-2025-biology-coaching → redirects to /neet-2026-preparation
+    // neet-2025-biology-coaching → redirects to /neet-2027-preparation
     {
       url: `${baseUrl}/neet-application-form-2026`,
       lastModified: lastUpdated,

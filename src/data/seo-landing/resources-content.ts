@@ -2446,7 +2446,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     relatedPages: [
       { title: 'Online NEET Coaching', link: '/online-neet-coaching' },
       { title: 'Online Test Series', link: '/online-neet-test-series' },
-      { title: 'NEET 2027 Preparation', link: '/neet-2026-preparation' },
+      { title: 'NEET 2027 Preparation', link: '/neet-2027-preparation' },
     ],
     schema: {
       '@type': 'Course',

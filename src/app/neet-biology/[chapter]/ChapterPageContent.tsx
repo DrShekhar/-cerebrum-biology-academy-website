@@ -217,7 +217,7 @@ export default function ChapterPageContent({
                     All Biology Chapters
                   </Link>
                   <Link
-                    href="/neet-2026-preparation"
+                    href="/neet-2027-preparation"
                     className="block p-3 bg-gray-50 hover:bg-green-50 rounded-lg transition-colors"
                   >
                     NEET 2027 Preparation

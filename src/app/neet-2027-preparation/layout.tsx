@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     'NEET 2027 AIIMS preparation',
     'how to prepare NEET 2027',
   ].join(', '),
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-2026-preparation' },
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-2027-preparation' },
   openGraph: {
     title: 'NEET 2027 Preparation Strategy | Cerebrum Biology Academy',
     description:
       'NCERT-deep biology roadmap from AIIMS faculty. 98% qualification, 680+ medical college selections.',
     type: 'website',
     locale: 'en_IN',
-    url: 'https://cerebrumbiologyacademy.com/neet-2026-preparation',
+    url: 'https://cerebrumbiologyacademy.com/neet-2027-preparation',
   },
   twitter: {
     card: 'summary_large_image' as const,

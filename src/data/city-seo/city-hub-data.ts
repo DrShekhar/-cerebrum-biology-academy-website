@@ -6682,7 +6682,7 @@ export const cityHubData: Record<string, CityHubData> = {
     ],
     relatedCities: [
       { name: 'Best NEET Coaching', url: '/best-neet-coaching-in-gurugram' },
-      { name: 'NEET 2027 Preparation', url: '/neet-2026-preparation-gurugram' },
+      { name: 'NEET 2027 Preparation', url: '/neet-2027-preparation-gurugram' },
       { name: '2 Year NEET Course', url: '/2-year-neet-course-gurugram' },
     ],
     faqs: [

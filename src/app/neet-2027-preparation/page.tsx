@@ -27,9 +27,9 @@ export default function NEET2026PreparationPage() {
   const router = useRouter()
   const handleDemoBooking = () => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'demo_booking_neet2026', {
+      ;(window as any).gtag('event', 'demo_booking_neet2027', {
         event_category: 'conversion',
-        event_label: 'neet_2026_landing_page',
+        event_label: 'neet_2027_landing_page',
         value: 1,
       })
     }
@@ -39,7 +39,7 @@ export default function NEET2026PreparationPage() {
     )
   }
 
-  const neet2026Highlights = [
+  const neet2027Highlights = [
     {
       title: 'Updated Syllabus Coverage',
       description: 'Complete NEET 2027 syllabus with latest NTA patterns and NCERT-based approach',
@@ -66,16 +66,16 @@ export default function NEET2026PreparationPage() {
     },
   ]
 
-  const neet2026Timeline = [
-    { event: 'Start Early Preparation', date: 'Now - Dec 2025', status: 'active' },
-    { event: 'Complete Syllabus', date: 'Jan - Jun 2026', status: 'upcoming' },
-    { event: 'NEET 2026 Registration', date: 'Expected Feb 2026', status: 'upcoming' },
-    { event: 'Revision & Mock Tests', date: 'Mar - Apr 2026', status: 'upcoming' },
-    { event: 'NEET 2026 Exam Date', date: 'Expected May 2026', status: 'exam' },
-    { event: 'Result & Counselling', date: 'Jun - Jul 2026', status: 'upcoming' },
+  const neet2027Timeline = [
+    { event: 'Start Early Preparation', date: 'Now - Dec 2026', status: 'active' },
+    { event: 'Complete Syllabus', date: 'Jun - Dec 2026', status: 'upcoming' },
+    { event: 'NEET 2027 Registration', date: 'Expected Feb 2027', status: 'upcoming' },
+    { event: 'Revision & Mock Tests', date: 'Jan - Apr 2027', status: 'upcoming' },
+    { event: 'NEET 2027 Exam Date', date: 'Expected May 2027', status: 'exam' },
+    { event: 'Result & Counselling', date: 'Jun - Jul 2027', status: 'upcoming' },
   ]
 
-  const neet2026Batches = [
+  const neet2027Batches = [
     {
       name: 'Crash Course',
       target: 'NEET 2027',
@@ -131,11 +131,11 @@ export default function NEET2026PreparationPage() {
     },
   ]
 
-  const neet2026FAQs = [
+  const neet2027FAQs = [
     {
-      question: 'When is NEET 2026 exam date?',
+      question: 'When is NEET 2027 exam date?',
       answer:
-        'NEET 2026 is expected to be conducted in May 2026 (tentatively first Sunday of May). NTA will release the official notification around December 2025 or January 2026.',
+        'NEET 2027 is expected to be conducted in May 2027 (tentatively first Sunday of May). NTA will release the official notification around December 2026 or January 2027.',
     },
     {
       question: 'What is the syllabus for NEET 2027?',
@@ -153,7 +153,7 @@ export default function NEET2026PreparationPage() {
         'Yes! Online coaching offers flexibility, recorded lectures for revision, AI-powered doubt solving, and personalized learning paths. Our hybrid model combines best of both online and offline learning.',
     },
     {
-      question: 'What is the expected cut-off for NEET 2026?',
+      question: 'What is the expected cut-off for NEET 2027?',
       answer:
         'Based on trends, General category may need 620+ for top government medical colleges. Our students typically score 600-680+ with dedicated preparation and our structured approach.',
     },
@@ -198,9 +198,9 @@ export default function NEET2026PreparationPage() {
         <button
           onClick={async () => {
             await trackAndOpenWhatsApp({
-              source: 'neet-2026-floating',
+              source: 'neet-2027-floating',
               message: "Hi, I'm interested in NEET 2027 preparation",
-              campaign: 'neet-2026',
+              campaign: 'neet-2027',
             })
           }}
           className="bg-green-500 hover:bg-green-600 text-white p-3 sm:p-4 rounded-full shadow-lg transition-all hover:scale-110 cursor-pointer"
@@ -224,7 +224,7 @@ export default function NEET2026PreparationPage() {
             <div className="animate-fadeInLeft">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
                 <Target className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-yellow-400" />
-                #1 NEET Biology Coaching for 2026
+                #1 NEET Biology Coaching for 2027
               </div>
 
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6">
@@ -315,10 +315,10 @@ export default function NEET2026PreparationPage() {
                     type="button"
                     onClick={() =>
                       trackAndOpenWhatsApp({
-                        source: 'neet-2026-page',
+                        source: 'neet-2027-page',
                         message:
                           'Hi! I am interested in NEET 2027 Biology preparation. Please share course details, batch timings, and fee structure.',
-                        campaign: 'neet-2026',
+                        campaign: 'neet-2027',
                       })
                     }
                     className="w-full flex items-center justify-center gap-2 py-3 sm:py-4 bg-green-600 hover:bg-green-700 text-white font-bold text-base sm:text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
@@ -373,7 +373,7 @@ export default function NEET2026PreparationPage() {
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-            {neet2026Highlights.map((highlight, index) => (
+            {neet2027Highlights.map((highlight, index) => (
               <div
                 key={highlight.title}
                 className="bg-white rounded-lg sm:rounded-xl shadow-lg p-3 sm:p-4 md:p-6 hover:shadow-xl transition-shadow animate-fadeInUp"
@@ -408,7 +408,7 @@ export default function NEET2026PreparationPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
-            {neet2026Batches.map((batch, index) => (
+            {neet2027Batches.map((batch, index) => (
               <div
                 key={batch.name}
                 className={`relative bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-5 md:p-6 border-2 ${
@@ -483,7 +483,7 @@ export default function NEET2026PreparationPage() {
           </div>
 
           <div className="space-y-3 sm:space-y-4">
-            {neet2026FAQs.map((faq, index) => (
+            {neet2027FAQs.map((faq, index) => (
               <div
                 key={faq.question}
                 className="bg-white rounded-lg sm:rounded-xl shadow-md p-4 sm:p-5 md:p-6 animate-fadeInUp"
@@ -556,7 +556,7 @@ export default function NEET2026PreparationPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
-            mainEntity: neet2026FAQs.map((faq) => ({
+            mainEntity: neet2027FAQs.map((faq) => ({
               '@type': 'Question',
               name: faq.question,
               acceptedAnswer: {

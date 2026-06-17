@@ -78,7 +78,7 @@ export default function FoundationCoursePage() {
       icon: FileText,
       title: 'Free Study Plan',
       description: 'Get a personalized study plan for Class 9-10 Biology',
-      link: '/neet-2026-preparation',
+      link: '/neet-2027-preparation',
       color: 'from-[#5a6d5a] to-[#4a5d4a]',
     },
     {
