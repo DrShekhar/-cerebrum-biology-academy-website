@@ -1839,6 +1839,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/brain-bee-coaching`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/biology-tutor-for-neet`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,

@@ -120,6 +120,13 @@ const VERTICALS = [
     href: '/ibo-preparation',
     flag: '🌐',
   },
+  {
+    name: 'Brain Bee (Neuroscience)',
+    detail:
+      'USA & International Brain Bee — neuroanatomy, patient diagnosis & live-oral coaching for ages 13-19',
+    href: '/brain-bee-coaching',
+    flag: '🧠',
+  },
 ]
 
 const REGIONS = [

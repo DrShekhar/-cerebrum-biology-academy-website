@@ -4,7 +4,7 @@ One-page spec for a new cross-vertical offering: coaching for the **USA & Intern
 
 ## The opportunity (why this fits Cerebrum)
 - Brain Bee is a neuroscience competition for **high-schoolers 13-19**: local chapter → **National Championship** → **IBB World Championship** (200+ chapters, 50+ countries, ~25,000+ competitors/yr; one national champ per country advances).
-- **~70% of the score is what free material does NOT teach.** Verified 2023 USA National weights: human neuroanatomy practical **25%**, live oral elimination **25%**, patient diagnosis **20%**, neurohistology + MRI ID + written ~30% (written exam only **~10%**).
+- **The written exam (~10%) is about all the free material really trains — the other ~90% is practical/clinical/oral.** Verified 2023 USA National weights: human neuroanatomy practical **25%**, live oral elimination **25%**, patient diagnosis **20%**, neurohistology **10%**, MRI ID **10%**, written only **~10%** (the three heaviest alone — neuroanatomy + diagnosis + oral — are **~70%**).
 - Official source is the **free "Brain Facts" book**; the official **IYNA bootcamp is free** (content-focused). The gap = live practical/clinical/oral coaching. Low content-build cost for us — we already teach neurophysiology + clinical correlation for NEET/AP/IB/MCAT. **AIIMS clinical faculty is a real moat for the patient-diagnosis round.**
 
 ## Target audience
@@ -33,7 +33,7 @@ One-page spec for a new cross-vertical offering: coaching for the **USA & Intern
 Align cohorts to the IBB cycle: USA National ~**April-May**, IBB World later in year. → **Dec-March Foundation cohort** + **spring Finals Intensive**.
 
 ## Differentiators (lead with these)
-1. Trains the **70% (practical + clinical + oral)** that free material/IYNA ignore.
+1. Trains the **~90% (practical + clinical + oral)** that free material/IYNA ignore (incl. the three heaviest rounds = ~70%).
 2. **AIIMS clinical depth** for patient diagnosis — generalist tutors can't match.
 3. **Live mock practicals + two-strike oral** drills (self-study can't replicate).
 4. Small-batch, **global time-zone** live online.
@@ -50,6 +50,6 @@ Align cohorts to the IBB cycle: USA National ~**April-May**, IBB World later in 
 
 ## Next steps
 - [ ] Owner sets final pricing per tier.
-- [ ] Link `/brain-bee-coaching` from `/global` vertical cards + add to sitemap.
+- [x] Link `/brain-bee-coaching` from `/global` vertical cards + add to sitemap. (DONE Jun 18)
 - [ ] Build the Dec-March cohort curriculum week-by-week (mirror IYNA's 16-week spine, add live practical/oral).
 - [ ] Optional: focused research pass on pricing + admissions prestige (deferred).
