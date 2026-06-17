@@ -665,6 +665,12 @@ export default function IBOPreparationPage() {
               USABO (USA)
             </Link>
             <Link
+              href="/brain-bee-coaching"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              Brain Bee (Neuroscience)
+            </Link>
+            <Link
               href="/bbo-preparation/"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
             >

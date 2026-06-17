@@ -62,6 +62,16 @@ export const metadata: Metadata = {
     'brain bee mock exam',
     'brain bee coaching for NRI students',
     'AIIMS faculty neuroscience coaching',
+    'brain bee coaching usa',
+    'brain bee coaching new york',
+    'brain bee coaching california',
+    'brain bee coaching bay area',
+    'brain bee tutor near me',
+    'how to prepare for brain bee',
+    'brain bee local chapter preparation',
+    'brain facts book study guide',
+    'is brain bee worth it',
+    'brain bee regional competition prep',
   ],
   alternates: {
     canonical: PAGE_URL,
@@ -237,7 +247,10 @@ export default function BrainBeeCoachingPage() {
     '@id': `${SITE_URL}/#organization`,
     name: 'Cerebrum Biology Academy',
     url: SITE_URL,
-    areaServed: { '@type': 'Place', name: 'Worldwide' },
+    areaServed: [
+      { '@type': 'Country', name: 'United States' },
+      { '@type': 'Place', name: 'Worldwide' },
+    ],
     knowsAbout: [
       'Brain Bee competition',
       'Neuroscience competition coaching',
