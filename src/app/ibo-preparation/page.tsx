@@ -659,6 +659,42 @@ export default function IBOPreparationPage() {
               Campbell Biology (56 Chapters)
             </Link>
             <Link
+              href="/ibo-coaching-usa"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              IBO Team USA
+            </Link>
+            <Link
+              href="/ibo-coaching-uk"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              IBO Team UK
+            </Link>
+            <Link
+              href="/ibo-coaching-canada"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              IBO Team Canada
+            </Link>
+            <Link
+              href="/ibo-coaching-singapore"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              IBO Team Singapore
+            </Link>
+            <Link
+              href="/ibo-coaching-australia"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              IBO Team Australia
+            </Link>
+            <Link
+              href="/ibo-coaching-china"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              IBO Team China
+            </Link>
+            <Link
               href="/usabo-coaching/"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
             >
