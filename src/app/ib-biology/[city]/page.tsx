@@ -491,7 +491,7 @@ export default async function CityPage({ params }: PageProps) {
             <div className="flex flex-wrap justify-center gap-3">
               {citySlugs()
                 .filter((s) => s !== config.slug)
-                .slice(0, 10)
+                .slice(0, 30)
                 .map((s) => (
                   <Link
                     key={s}

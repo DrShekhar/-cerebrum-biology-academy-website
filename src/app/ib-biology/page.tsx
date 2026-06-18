@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { ArrowRight, BookOpen, Globe, Target, Users, Award, MessageCircle } from 'lucide-react'
+import { ibBiologySchools } from '@/data/ib-biology/schools'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/ib-biology'
 
@@ -554,6 +555,30 @@ export default function IBBiologyHubPage() {
                   className="rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-medium text-gray-700 transition-all hover:border-green-300 hover:text-green-700"
                 >
                   {resource.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* IB World School feeder pages (data-driven directory — every school linked) */}
+        <section className="bg-white py-16 sm:py-20">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <div className="mb-10 text-center">
+              <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">IB Biology by School</h2>
+              <p className="mx-auto max-w-2xl text-lg text-gray-600">
+                School-specific IB Biology tutoring — each page maps the school&apos;s DP calendar, IA
+                timeline and mock schedule. {ibBiologySchools.length} IB World Schools covered.
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-2">
+              {ibBiologySchools.map((s) => (
+                <Link
+                  key={s.slug}
+                  href={`/ib-biology-tutor-${s.slug}`}
+                  className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-700 transition-all hover:border-green-300 hover:text-green-700"
+                >
+                  {s.name}
                 </Link>
               ))}
             </div>
