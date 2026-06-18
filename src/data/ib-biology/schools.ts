@@ -355,7 +355,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     collegeContext:
       "Tanglin Trust graduates matriculate strongly to UK universities (Oxbridge, Imperial, UCL, Edinburgh, Durham, Bristol), Singapore (NUS, NTU, SMU), US (Ivy+, top liberal arts, public flagships), and Australia (Melbourne, Sydney, Monash, ANU). For IB Biology HL students, UK medicine is the most common pathway with the standard UCAT/BMAT additional requirements; Singapore NUS Medicine is also a common destination, with the school's university counselling supporting both the UK and Singapore application timelines.",
     paceAlignment:
-      "Tanglin's IB Biology follows the standard two-year DP cycle. Our 1:1 sessions schedule in SGT evenings (7–9 PM) to fit the long Tanglin school day plus extracurricular load, or weekend morning blocks. IA mentorship aligns to Tanglin's February DP2 internal moderation. Mock-exam coaching aligns to the school's November DP2 mocks; final Paper 1/2/3 mocks intensify in March–April leading to the May session.",
+      "Tanglin's IB Biology follows the standard two-year DP cycle. Our 1:1 sessions schedule in SGT evenings (7–9 PM) to fit the long Tanglin school day plus extracurricular load, or weekend morning blocks. IA mentorship aligns to Tanglin's February DP2 internal moderation. Mock-exam coaching aligns to the school's November DP2 mocks; final Paper 1/2 mocks intensify in March–April leading to the May session.",
     faqs: [
       {
         question: 'Does Tanglin Trust offer both IB and A Levels?',
@@ -422,7 +422,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     collegeContext:
       "NIST graduates matriculate to UK (Oxbridge, Russell Group), US (Ivy+, NYU, top liberal arts), Canada (McGill, Toronto, UBC), Australia (Melbourne, Sydney, Monash), and Asian universities (NUS, HKU, the Mahidol International medical pathway for students staying in Thailand). For IB Biology HL students, common pathways include UK medicine, US pre-med, and the Mahidol International College direct-entry medical track — the last of which is a distinctive Thailand-specific option that NIST's university counselling supports.",
     paceAlignment:
-      "NIST's IB Biology follows the standard two-year DP cycle. ICT timezone overlaps cleanly with our Singapore-based live tutoring schedule. Our 1:1 sessions schedule in ICT evenings (7–9 PM) or weekend morning blocks. IA mentorship aligns to NIST's DP1-late / DP2-early submission cycle. Mock-exam coaching aligns to the school's November DP2 mocks; intensive Paper 1/2/3 mocks scale up March–April for the May session.",
+      "NIST's IB Biology follows the standard two-year DP cycle. ICT timezone overlaps cleanly with our Singapore-based live tutoring schedule. Our 1:1 sessions schedule in ICT evenings (7–9 PM) or weekend morning blocks. IA mentorship aligns to NIST's DP1-late / DP2-early submission cycle. Mock-exam coaching aligns to the school's November DP2 mocks; intensive Paper 1/2 mocks scale up March–April for the May session.",
     faqs: [
       {
         question: 'Is NIST a full IB Continuum school?',
@@ -562,7 +562,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     collegeContext:
       'UWC Mahindra graduates have one of the strongest matriculation profiles among Indian-based IB schools — particularly into US (Davis UWC Scholars Program, Ivy+, top liberal arts), UK (Oxbridge, Russell Group), Canada (McGill, Toronto, UBC), and the Davis-supported network of US colleges. The Davis UWC Scholars Program specifically supports UWC graduates entering 100+ partner US colleges. For IB Biology HL students, US pre-med through the Davis Scholar network is a common pathway, alongside UK medicine.',
     paceAlignment:
-      "UWC Mahindra's IB Biology follows the standard two-year DP cycle. The residential and CAS load means students value compact, high-impact tutoring rather than long sessions. Our 1:1 sessions schedule in IST evenings (7–9 PM) or weekend morning blocks, typically 60–90 minutes. IA mentorship aligns to the college's late-DP1 submission cycle. Mock-exam coaching aligns to the November DP2 mocks; final Paper 1/2/3 mocks scale up February–April for the May session.",
+      "UWC Mahindra's IB Biology follows the standard two-year DP cycle. The residential and CAS load means students value compact, high-impact tutoring rather than long sessions. Our 1:1 sessions schedule in IST evenings (7–9 PM) or weekend morning blocks, typically 60–90 minutes. IA mentorship aligns to the college's late-DP1 submission cycle. Mock-exam coaching aligns to the November DP2 mocks; final Paper 1/2 mocks scale up February–April for the May session.",
     faqs: [
       {
         question: "How does UWC Mahindra's academic load affect tutoring scheduling?",
@@ -909,7 +909,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     collegeContext:
       'Stamford American graduates matriculate to UK (Oxbridge, Russell Group, Imperial, UCL, KCL), US (Ivy+, NYU, top liberal arts, public flagships), Singapore (NUS, NTU, SMU), Canada (McGill, Toronto, UBC), and Australia (Melbourne, Sydney, Monash, ANU). For Biology HL students, common pathways include UK medicine (UCAT/BMAT required), US pre-med, NUS Medicine, and Canadian life-sciences direct entry.',
     paceAlignment:
-      "Stamford American's IB Biology follows the standard two-year DP cycle. Our 1:1 sessions schedule in SGT evenings (7–9 PM) to fit the Stamford American school day or weekend morning blocks. IA mentorship aligns to the school's DP1-late submission cycle. Mock-exam coaching aligns to the November DP2 mocks; intensive Paper 1/2/3 mocks scale up March–April for the May session.",
+      "Stamford American's IB Biology follows the standard two-year DP cycle. Our 1:1 sessions schedule in SGT evenings (7–9 PM) to fit the Stamford American school day or weekend morning blocks. IA mentorship aligns to the school's DP1-late submission cycle. Mock-exam coaching aligns to the November DP2 mocks; intensive Paper 1/2 mocks scale up March–April for the May session.",
     faqs: [
       {
         question: "How does Stamford American's IB Biology compare to UWCSEA and Tanglin Trust?",

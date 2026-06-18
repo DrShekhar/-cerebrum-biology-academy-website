@@ -25,20 +25,16 @@ const SITE_URL = 'https://cerebrumbiologyacademy.com'
 // /ap-biology-online-tutor (the price source of truth).
 const PRICE_OFFERS_USD = [
   {
-    name: 'Senior Faculty 1:1 — 12 hours',
-    priceUSD: 1800,
+    name: 'AP Biology — Pursuit (annual)',
+    priceUSD: 2500,
   },
   {
-    name: 'Senior Faculty 1:1 — 48 hours (Elite)',
-    priceUSD: 5760,
+    name: 'AP Biology — Ascent (annual)',
+    priceUSD: 4500,
   },
   {
-    name: 'Junior Faculty 1:1 — 12 hours',
-    priceUSD: 900,
-  },
-  {
-    name: 'Small Batch (4–6 students) — 16 hours',
-    priceUSD: 640,
+    name: 'AP Biology — Pinnacle (annual)',
+    priceUSD: 7000,
   },
 ]
 

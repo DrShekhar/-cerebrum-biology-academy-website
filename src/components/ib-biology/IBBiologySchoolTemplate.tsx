@@ -259,7 +259,7 @@ export default function IBBiologySchoolTemplate({ school }: IBBiologySchoolTempl
             </span>
             <span className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg text-white text-sm">
               <Target className="w-4 h-4 text-yellow-400" />
-              Paper 1 / 2 / 3 mastery
+              Paper 1 / 2 mastery
             </span>
             <span className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg text-white text-sm">
               <Microscope className="w-4 h-4 text-yellow-400" />

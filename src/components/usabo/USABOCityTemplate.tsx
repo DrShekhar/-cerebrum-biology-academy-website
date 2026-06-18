@@ -489,7 +489,7 @@ export default function USABOCityTemplate({
         <div className="max-w-4xl mx-auto px-4 text-center">
           <Trophy className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Start preparing for USABO 2026 from {cityName}
+            Start preparing for USABO 2027 from {cityName}
           </h2>
           <p className="text-xl mb-8 opacity-90">
             Book a free 30-minute counselling call. We&apos;ll review your school, current biology
