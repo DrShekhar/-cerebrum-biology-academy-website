@@ -8,6 +8,24 @@ import { olympiadPricingProducts } from '@/data/olympiads/pricing-matrix'
 import { indiaOlympiadFAQs } from '@/data/olympiads/india-faqs'
 import { LeadCaptureForm } from '@/components/landing/LeadCaptureForm'
 import { FloatingWhatsAppButton } from '@/components/landing/FloatingWhatsAppButton'
+import { IBO_COUNTRIES } from '@/data/ibo/iboCountries'
+
+const USABO_CITY_SLUGS = [
+  'northern-virginia-dc',
+  'bay-area',
+  'new-york',
+  'boston',
+  'houston',
+  'los-angeles',
+  'new-jersey',
+  'chicago',
+  'seattle',
+  'dallas-austin',
+  'atlanta',
+  'philadelphia',
+  'miami',
+  'portland',
+]
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/biology-olympiads'
 const CAMPAIGN = 'biology-olympiads'
@@ -569,6 +587,49 @@ export default function BiologyOlympiadsHubPage() {
                   subheading="Same form, same promise."
                 />
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* GEO directory — surface olympiad country/city pages */}
+        <section className="bg-slate-50 py-14">
+          <div className="mx-auto max-w-6xl px-6">
+            <h2 className="mb-6 text-2xl font-bold text-slate-900">
+              Olympiad coaching by country &amp; city
+            </h2>
+            <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
+              IBO team selection by country
+            </h3>
+            <div className="mb-8 flex flex-wrap gap-2">
+              {[
+                ...IBO_COUNTRIES.map((c) => ({
+                  label: `${c.flag} ${c.country}`,
+                  href: `/ibo-coaching-${c.slug}`,
+                })),
+                { label: '🇨🇳 China', href: '/ibo-coaching-china' },
+              ].map((x) => (
+                <Link
+                  key={x.href}
+                  href={x.href}
+                  className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-blue-700 hover:bg-blue-50"
+                >
+                  {x.label}
+                </Link>
+              ))}
+            </div>
+            <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
+              USABO coaching by US metro
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {USABO_CITY_SLUGS.map((s) => (
+                <Link
+                  key={s}
+                  href={`/usabo-coaching-${s}`}
+                  className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-blue-700 hover:bg-blue-50"
+                >
+                  {s.replace(/-/g, ' ').replace(/\b\w/g, (m) => m.toUpperCase())}
+                </Link>
+              ))}
             </div>
           </div>
         </section>
