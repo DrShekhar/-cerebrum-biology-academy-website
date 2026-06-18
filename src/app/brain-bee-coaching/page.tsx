@@ -37,6 +37,7 @@ import {
   Users,
 } from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { BRAIN_BEE_CITIES } from '@/data/brain-bee/brainBeeCities'
 
 const SITE_URL = 'https://cerebrumbiologyacademy.com'
 const CANONICAL = '/brain-bee-coaching'
@@ -497,6 +498,30 @@ export default function BrainBeeCoachingPage() {
                   <h3 className="mt-3 text-sm font-semibold text-slate-900">{c.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-600">{c.text}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Cities */}
+        <section>
+          <div className="mx-auto max-w-5xl px-4 py-12">
+            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
+              Brain Bee coaching by US metro
+            </h2>
+            <p className="mt-3 max-w-3xl text-slate-600">
+              Live in your time zone, with local context. Don&rsquo;t see your city? We coach
+              students anywhere in the US and worldwide &mdash; just ask.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {BRAIN_BEE_CITIES.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/brain-bee-coaching/${c.slug}`}
+                  className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-blue-700 hover:bg-blue-50"
+                >
+                  {c.cityName}
+                </Link>
               ))}
             </div>
           </div>

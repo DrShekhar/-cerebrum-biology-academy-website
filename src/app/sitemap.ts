@@ -8,6 +8,7 @@ import { aLevelCitySlugs } from '@/data/a-level/cities'
 import { ibBiologySchoolSlugs } from '@/data/ib-biology/schools'
 import { mcatMetroSlugs } from '@/data/mcat/metros'
 import { datMetroSlugs } from '@/data/dat/metros'
+import { BRAIN_BEE_CITIES } from '@/data/brain-bee/brainBeeCities'
 import { gamsatMetroSlugs } from '@/data/gamsat/metros'
 import { usmleMetroSlugs } from '@/data/usmle-step-1/metros'
 import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
@@ -1844,6 +1845,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
+    ...BRAIN_BEE_CITIES.map((c) => ({
+      url: `${baseUrl}/brain-bee-coaching/${c.slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.78,
+    })),
     {
       url: `${baseUrl}/biology-tutor-for-neet`,
       lastModified: lastUpdated,
