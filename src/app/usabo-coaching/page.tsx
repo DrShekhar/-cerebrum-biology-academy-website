@@ -563,6 +563,9 @@ export default function USABOCoachingPage() {
               { slug: 'seattle', label: 'Seattle + Bellevue' },
               { slug: 'dallas-austin', label: 'Dallas + Austin' },
               { slug: 'atlanta', label: 'Atlanta + suburbs' },
+              { slug: 'philadelphia', label: 'Philadelphia' },
+              { slug: 'miami', label: 'Miami' },
+              { slug: 'portland', label: 'Portland' },
             ].map((c) => (
               <a
                 key={c.slug}
