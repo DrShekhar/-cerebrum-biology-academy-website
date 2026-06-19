@@ -5340,6 +5340,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.95,
     },
+    {
+      url: `${baseUrl}/best-biology-tutor-usa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
     // Global brand home — the international front door (/ stays India-NEET)
     {
       url: `${baseUrl}/global`,
