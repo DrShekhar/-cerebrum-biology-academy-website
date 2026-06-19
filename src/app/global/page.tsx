@@ -172,7 +172,7 @@ const FAQS = [
   },
   {
     q: 'Who teaches the classes?',
-    a: 'All programmes are led by AIIMS New Delhi-trained faculty headed by Dr. Shekhar C Singh, who has coached students to medical school admissions, IB 7s, AP 5s, and national biology olympiad teams across multiple countries since 2014.',
+    a: 'All programmes are led by AIIMS New Delhi-trained faculty headed by Dr. Shekhar C Singh. AIIMS New Delhi is India’s apex medical institution — internationally ranked alongside Harvard Medical School, Johns Hopkins and Oxford for selectivity — so the teaching depth translates to any biology exam, regardless of your country. Dr. Shekhar has coached students to medical-school admissions, IB 7s, AP 5s, and national biology olympiad teams across multiple countries since 2014.',
   },
 ]
 
@@ -264,7 +264,7 @@ export default function GlobalHomePage() {
       <section className="bg-[#3d4d3d] py-14 text-white sm:py-20">
         <div className="mx-auto max-w-5xl px-4 text-center sm:px-6">
           <p className="mb-3 text-sm font-medium uppercase tracking-wide text-[#fcd34d]">
-            An AIIMSonian&apos;s initiative · Founded 2014 · New Delhi → the world
+            Founded by an AIIMS New Delhi alumnus · 2014 · New Delhi → the world
           </p>
           <h1 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
             Global Biology Education in 75+ Countries
@@ -276,7 +276,9 @@ export default function GlobalHomePage() {
             Cerebrum Biology Academy teaches one subject — biology — across every major pathway:
             NEET for students abroad, IB and AP Biology, A-Level and GCSE, MCAT, GAMSAT, USMLE, DAT,
             and national biology olympiads up to the IBO. Live online, in your time zone, taught by
-            AIIMS-trained faculty.
+            AIIMS-trained faculty — AIIMS New Delhi ranks among the most selective medical schools in
+            the world, peer to Harvard Medical School, Johns Hopkins and Oxford, so the teaching depth
+            applies to any biology exam, anywhere.
           </p>
 
           {/* Two-pathway fork */}
