@@ -54,6 +54,10 @@ export interface IBBiologySchool {
     | 'KST (Korea)'
     | 'ET (Canada East)'
     | 'PT (Canada West)'
+    | 'AEST (Australia East)'
+    | 'NZST (New Zealand)'
+    | 'BRT (Brazil)'
+    | 'SAST (South Africa)'
   /** IANA timezone string for schema.org */
   timezoneIana: string
   /** ISO-3166 alpha-2 country code */
@@ -73,6 +77,12 @@ export interface IBBiologySchool {
     | 'KR'
     | 'CA'
     | 'GB'
+    | 'AU'
+    | 'NZ'
+    | 'BR'
+    | 'ZA'
+    | 'IT'
+    | 'ES'
   /** BCP-47 language tag for schema.org `inLanguage` */
   inLanguage:
     | 'en-SG'
@@ -90,6 +100,12 @@ export interface IBBiologySchool {
     | 'en-KR'
     | 'en-CA'
     | 'en-GB'
+    | 'en-AU'
+    | 'en-NZ'
+    | 'en-BR'
+    | 'en-ZA'
+    | 'en-IT'
+    | 'en-ES'
   /** School category (drives hero badge copy) */
   schoolType:
     | 'International (IB World School)'
@@ -5377,6 +5393,365 @@ export const ibBiologySchools: IBBiologySchool[] = [
         question: 'When should an NLCS student start?',
         answer:
           "September Lower Sixth. NLCS's exceptional teaching means the coaching focus is almost entirely on exam technique — content depth is rarely the gap.",
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // SCECGS Redlands — Sydney, Australia
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'redlands-sydney',
+    schoolName: 'SCECGS Redlands',
+    shortName: 'Redlands',
+    cityCountry: 'Sydney, Australia',
+    citySlug: 'sydney',
+    timezone: 'AEST (Australia East)',
+    timezoneIana: 'Australia/Sydney',
+    countryCode: 'AU',
+    inLanguage: 'en-AU',
+    schoolType: 'IB Diploma Programme',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      "SCECGS Redlands — Sydney Church of England Co-educational Grammar School, known simply as Redlands — was founded in 1884 and has occupied its Cremorne campus on Sydney's Lower North Shore since 1899. An independent Anglican school, it became fully co-educational in 1978 and today enrols students from more than 30 nationalities from Preschool to Year 12.",
+      'Redlands has offered the IB Diploma Programme since 1988 — longer than any other school in New South Wales. In Years 11 and 12 students choose between the IB Diploma and the NSW Higher School Certificate, and the school runs both pathways in parallel, with the full IB core of Theory of Knowledge, the Extended Essay and CAS.',
+      "Recent results bear out the strength of the IB stream: in 2025 the school's top IB student earned an ATAR equivalent of 99.95, and three students scored 44 out of 45. The school reports that around one in five graduates each year apply to universities in the US, UK, Europe and Asia, with alumni progressing to institutions including Oxford, Cambridge, Stanford and Yale.",
+      "For Redlands families, the value of outside IB Biology coaching is rarely content exposure — the school's teaching is strong. The gap is Paper 1 / Paper 2 mark-scheme calibration and structured IA mentorship through the Diploma's two-year cycle. Our 1:1 sessions run in AEST evenings around the school day and the school's busy co-curricular and outdoor-education programme.",
+    ],
+    reputationBullets: [
+      "Founded 1884; independent Anglican co-educational school on Sydney's Lower North Shore (Cremorne)",
+      'Offers the IB Diploma Programme since 1988 — the longest-running IB school in NSW',
+      'Students choose between the IB Diploma and the NSW HSC in Years 11–12',
+      '2025: top IB result equivalent to an ATAR of 99.95; three students scored 44/45',
+      'Graduates have progressed to Oxford, Cambridge, Stanford and Yale (school-reported)',
+      'Students from 30+ nationalities; DP-only IB school (no PYP/MYP)',
+    ],
+    diplomaContext:
+      "Redlands runs the IB Diploma alongside the NSW HSC. In 2025 its strongest IB result converted to an ATAR of 99.95 and three students scored 44/45. The school publishes ATAR conversions and band achievements rather than a single mean point score.",
+    collegeContext:
+      'Redlands reports that roughly 20% of each cohort apply to universities abroad — in the US, UK, Europe and Asia — alongside the leading Australian universities (Sydney, UNSW, Melbourne, ANU, Monash). Alumni destinations cited by the school include Oxford, Cambridge, Stanford and Yale. For IB Biology HL students the common pathways are Australian and UK medicine and biomedical science, and US pre-med.',
+    paceAlignment:
+      "Redlands IB Biology follows the standard two-year DP cycle, with IA work through Year 11 into early Year 12 and final Paper 1 / Paper 2 preparation across the mock windows toward the IB May session. We schedule live 1:1 sessions in AEST evenings (or weekend mornings in sport-heavy weeks), align IA mentorship to the school's internal deadlines, and keep sessions compact so they fit alongside the IB-or-HSC workload and Redlands' outdoor-education commitments.",
+    faqs: [
+      {
+        question: 'Do Redlands students usually need outside IB Biology tutoring?',
+        answer:
+          "Redlands' Biology teaching is strong, so most students don't need content tutoring. The two gaps that drive families to us are Paper 1 / Paper 2 mark-scheme calibration — converting solid classroom work into the IB's specific rubric — and IA scaffolding through the data-analysis and evaluation phase for students targeting a 6 or 7.",
+      },
+      {
+        question: 'Should my child take IB Biology or the HSC at Redlands?',
+        answer:
+          "That's a personal decision based on university goals and learning style — Redlands runs both. If your child is leaning toward overseas universities or wants the IB's breadth, the IB Diploma suits. We coach IB Biology specifically and don't advise on the HSC pathway.",
+      },
+      {
+        question: 'Do you coach IB Biology HL and SL for Redlands students?',
+        answer:
+          'Yes. HL covers the additional HL-only material and the extra long-response demands; SL focuses on Paper 1 multiple-choice precision and Paper 2 structured-response timing. Both use past-paper data-response drilling aligned to the 2025 IB Biology guide.',
+      },
+      {
+        question: 'What time do sessions run for a Sydney student?',
+        answer:
+          'Live in AEST (Australia/Sydney), scheduled around the school day — typically weekday evenings, with weekend-morning blocks for students with heavy sport or co-curricular loads. Sessions are recorded for revision.',
+      },
+      {
+        question: 'When should a Redlands student start?',
+        answer:
+          'The beginning of the first IB year is ideal — it maximises the IA mentorship window. Exam-focused students can still benefit from starting after the mid-course mocks, with focus on Paper 2 mark-scheme calibration and timed data-response practice for the May session.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // Rangitoto College — Auckland, New Zealand
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'rangitoto-college-auckland',
+    schoolName: 'Rangitoto College',
+    shortName: 'Rangitoto College',
+    cityCountry: 'Auckland, New Zealand',
+    citySlug: 'auckland',
+    timezone: 'NZST (New Zealand)',
+    timezoneIana: 'Pacific/Auckland',
+    countryCode: 'NZ',
+    inLanguage: 'en-NZ',
+    schoolType: 'IB Diploma Programme',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      'Rangitoto College is a state co-educational secondary school in Mairangi Bay on Auckland’s North Shore, opened in 1956. With a roll of more than 4,000 students it is widely described as New Zealand’s largest traditional secondary school, which gives its senior students an unusually broad range of subject and pathway choices.',
+      'An authorised IB World School since 2015, Rangitoto runs a genuine dual pathway: students can take New Zealand’s NCEA or choose the IB Diploma Programme as a two-year course across Years 12 and 13. The Diploma includes the full IB core — Theory of Knowledge, the Extended Essay and CAS — and entry to the IB stream requires strong Merit/Excellence-level results at Year 11.',
+      'IB Biology is offered at both Standard and Higher Level within the school’s Group 4 sciences (alongside Chemistry, Physics and Environmental Systems & Societies). In 2025 the IB cohort averaged 36 points against a global average of 30.5, with two students scoring 44/45 and 26% earning the bilingual diploma.',
+      'Because Rangitoto is one of only around a dozen New Zealand schools authorised for the IB Diploma, its IB students often want specialist Biology support that their NCEA-focused peers don’t need. Our 1:1 coaching aligns to the school’s Year 12–13 DP calendar in NZST and focuses on the IB’s specific Paper 1 / Paper 2 mark schemes and the Internal Assessment.',
+    ],
+    reputationBullets: [
+      'State co-educational secondary in Mairangi Bay, North Shore Auckland; opened 1956',
+      'New Zealand’s largest traditional secondary school (roll over 4,000)',
+      'Authorised IB World School since 2015; dual NCEA + IB Diploma pathway',
+      'IB Biology offered at both HL and SL (Group 4 sciences)',
+      '2025 IB average 36 vs global 30.5; two students at 44/45; 26% bilingual diploma',
+      'One of only ~12 NZ schools authorised for the IB Diploma Programme',
+    ],
+    diplomaContext:
+      'Rangitoto’s 2025 IB cohort averaged 36 points (global average 30.5), with two students at 44/45 and 26% of graduates earning the bilingual diploma. The IB runs as a two-year course in Years 12–13 alongside NCEA.',
+    collegeContext:
+      'Rangitoto IB graduates progress to leading New Zealand universities such as Auckland and Otago, and to universities in Australia, the UK and the US. The IB Diploma is a strong route for North Shore families targeting overseas medicine, biomedical science and life-sciences degrees.',
+    paceAlignment:
+      'IB Biology at Rangitoto follows the two-year DP track across Years 12–13, with IA work through Year 12 and Paper 1 / Paper 2 preparation toward the November IB exam session (the Southern-Hemisphere session). We schedule live 1:1 sessions in NZST around the school day, align IA mentorship to the school’s internal deadlines, and drill the IB Biology mark scheme with past-paper data-response practice.',
+    faqs: [
+      {
+        question: 'Is IB Biology at Rangitoto different from NCEA Biology?',
+        answer:
+          'Yes. IB Biology is assessed through external Papers 1–2 plus the Internal Assessment, on the global IB Biology guide, and is graded 1–7 — quite different from NCEA’s standards-based model. Our coaching is built specifically around the IB assessment structure, not NCEA.',
+      },
+      {
+        question: 'Do you coach IB Biology HL and SL?',
+        answer:
+          'Yes — Rangitoto offers both. HL includes the additional HL-only content and the extra long-response load; SL focuses on Paper 1 precision and Paper 2 timing. Both use past-paper drilling aligned to the 2025 IB Biology guide.',
+      },
+      {
+        question: 'What time do classes run for an Auckland student?',
+        answer:
+          'Live in NZST (Pacific/Auckland), scheduled around the school day — typically weekday evenings or weekend mornings — with sessions recorded for revision.',
+      },
+      {
+        question: 'When should a Rangitoto student start IB Biology tutoring?',
+        answer:
+          'Early in Year 12 is ideal to maximise IA mentorship. For exam-focused support, starting partway through the course still works well, focused on Paper 2 mark-scheme calibration and timed data-response practice ahead of the November session.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // St. Paul's School — São Paulo, Brazil
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'st-pauls-school-sao-paulo',
+    schoolName: "St. Paul's School, São Paulo",
+    shortName: "St. Paul's São Paulo",
+    cityCountry: 'São Paulo, Brazil',
+    citySlug: 'sao-paulo',
+    timezone: 'BRT (Brazil)',
+    timezoneIana: 'America/Sao_Paulo',
+    countryCode: 'BR',
+    inLanguage: 'en-BR',
+    schoolType: 'IB Diploma Programme',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      "St. Paul's School is a British international school in the Jardins district of São Paulo, founded in 1926 and governed by the not-for-profit Fundação Anglo-Brasileira de Educação e Cultura (FABEC). It celebrated its centenary in 2026 and is a member of the Headmasters' & Headmistresses' Conference (HMC) and the Council of British International Schools (COBIS).",
+      'The school is distinctively Anglo-Brazilian, teaching a curriculum that blends the British and Brazilian systems, with Portuguese compulsory throughout. Students take Cambridge IGCSEs in the middle years and then the IB Diploma in the Sixth Form; the school awarded its first IB Diplomas in 1987. In 2012 it became the first British school in Latin America accredited under the UK government’s British Schools Overseas scheme.',
+      'IB Biology is offered among the Sixth-Form sciences (alongside Chemistry, Physics and Environmental Systems & Societies). The 2023–24 IB cohort recorded a 100% pass rate and an average of 35.4 points — about five points above the global average — with 18 students scoring 40 or more out of 45.',
+      "St Paul's families typically use the IB for entry to universities overseas. The two gaps that drive specialist Biology coaching are Paper 1 / Paper 2 mark-scheme calibration and IA mentorship; our 1:1 sessions run in BRT around the school day and align to the school’s IGCSE-to-IB progression.",
+    ],
+    reputationBullets: [
+      'British international school in the Jardins, São Paulo; founded 1926 (centenary 2026)',
+      'Anglo-Brazilian curriculum (FABEC); HMC and COBIS member',
+      'First British school in Latin America accredited under British Schools Overseas (2012)',
+      'Cambridge IGCSE then IB Diploma in Sixth Form; first IB Diplomas awarded 1987',
+      '2023–24 IB: 100% pass rate, average 35.4 (global ~30.3), 18 students scored 40+',
+      'IB Biology offered; ~1,200 pupils from 30+ nationalities',
+    ],
+    diplomaContext:
+      "St Paul's reported a 100% IB pass rate and a 35.4-point average for its 2023–24 cohort — about five points above the global mean — with 18 students scoring 40 or more out of 45.",
+    collegeContext:
+      "St Paul's leavers go predominantly to North American universities (about half) and the UK (around 10%), with the remainder to Brazil and elsewhere. Recent UK destinations include Cambridge, UCL and LSE; US destinations include Harvard, Yale and Columbia. IB Biology supports the school’s strong medicine and life-sciences pathway.",
+    paceAlignment:
+      "St Paul's runs the IB Diploma in the Sixth Form after Cambridge IGCSEs, toward the Northern-Hemisphere IB May exam session. We schedule live 1:1 sessions in BRT around the school day, align IA mentorship to the school’s internal deadlines, and drill the IB Biology Paper 1 / Paper 2 mark schemes with past-paper data-response practice.",
+    faqs: [
+      {
+        question: "How does the IGCSE-to-IB transition work at St Paul's, and where does Biology coaching help?",
+        answer:
+          'Students take Cambridge IGCSEs in Forms 4–5 then the IB Diploma in the Sixth Form. The step up to IB Biology HL — depth, the IA, and the Paper 2 long-response rubric — is where most coaching value sits. We bridge that transition with IB-specific technique work.',
+      },
+      {
+        question: 'Do you coach IB Biology HL and SL?',
+        answer:
+          'Yes. HL covers the additional HL-only material and extra long-response items; SL focuses on Paper 1 precision and Paper 2 timing. Both use past-paper drilling on the 2025 IB Biology guide.',
+      },
+      {
+        question: 'Do you teach in Brazil time?',
+        answer:
+          'Yes — live sessions run in BRT (America/Sao_Paulo), scheduled around the St Paul’s school day, with recordings for revision. The Biology coaching is in English to match the IB exam.',
+      },
+      {
+        question: "When should a St Paul's student start IB Biology tutoring?",
+        answer:
+          'The start of the Lower Sixth is ideal for full IA mentorship. Students needing exam-focused support can start later in the course, concentrating on Paper 2 mark-scheme calibration and timed data-response practice for the May session.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // American International School of Johannesburg (AISJ)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'aisj-johannesburg',
+    schoolName: 'American International School of Johannesburg',
+    shortName: 'AISJ',
+    cityCountry: 'Johannesburg, South Africa',
+    citySlug: 'johannesburg',
+    timezone: 'SAST (South Africa)',
+    timezoneIana: 'Africa/Johannesburg',
+    countryCode: 'ZA',
+    inLanguage: 'en-ZA',
+    schoolType: 'IB Diploma Programme',
+    ibProgrammeOffered: ['PYP', 'DP'],
+    historyParagraphs: [
+      'The American International School of Johannesburg (AISJ) is an American international school founded in 1982, with its main campus in Bryanston near Sandton and a second campus in Pretoria. Accredited by the Middle States Association, it serves an international community drawn from around 80 nationalities, with English as the language of instruction.',
+      "AISJ was authorised for the IB in February 1994 — making it South Africa’s first IB World School. It offers the IB Diploma Programme in Grades 11–12 alongside a US high-school diploma, so students can graduate with both, and it is adding the IB Primary Years Programme as it moves toward becoming a full IB continuum school.",
+      'In the May 2025 session AISJ’s IB Diploma candidates averaged 33 points, above the world average of around 30, and roughly 96% of graduates continue to three- and four-year higher-education institutions — nearly half to the US and Canada, with the remainder largely to the UK and beyond.',
+      'For AISJ families, specialist IB Biology coaching most often supports the Paper 1 / Paper 2 mark scheme and the Internal Assessment — translating strong American-style classroom work into the IB’s specific rubric. Our 1:1 sessions run in SAST around the school day.',
+    ],
+    reputationBullets: [
+      'American international school in Bryanston, Johannesburg; founded 1982 (Middle States accredited)',
+      'South Africa’s first IB World School — IB authorised since 1994',
+      'IB Diploma (Grades 11–12) awarded alongside a US high-school diploma',
+      'Adding the IB Primary Years Programme toward full IB continuum status',
+      '2025 IB Diploma average 33 (above the ~30 world average)',
+      '~96% of graduates progress to higher education; ~half to the US/Canada',
+    ],
+    diplomaContext:
+      'AISJ’s May 2025 IB Diploma cohort averaged 33 points, above the global average of around 30. The school offers the IB Diploma in Grades 11–12 alongside a US high-school diploma.',
+    collegeContext:
+      'About 96% of AISJ graduates continue to higher education, with nearly half going to universities in the US and Canada and the remainder mostly to the UK and other destinations. The IB Diploma broadens access to UK and European universities for the school’s international community.',
+    paceAlignment:
+      'AISJ runs the IB Diploma in Grades 11–12 toward the Northern-Hemisphere May exam session. We schedule live 1:1 sessions in SAST around the school day, align IA mentorship to the school’s internal deadlines, and drill the IB Biology Paper 1 / Paper 2 mark schemes with past-paper data-response practice.',
+    faqs: [
+      {
+        question: 'AISJ offers both a US diploma and the IB — where does Biology coaching fit?',
+        answer:
+          'AISJ students in Grades 11–12 take the IB Diploma alongside the US diploma. IB Biology is assessed by external Papers plus the IA on the global IB guide, graded 1–7 — our coaching is built around that IB structure and the Paper 2 long-response rubric.',
+      },
+      {
+        question: 'Do you coach IB Biology HL and SL?',
+        answer:
+          'Yes. HL covers the additional HL-only content and extra long-response load; SL focuses on Paper 1 precision and Paper 2 timing. Both use past-paper data-response drilling aligned to the 2025 IB Biology guide.',
+      },
+      {
+        question: 'Do you teach in South Africa time?',
+        answer:
+          'Yes — live sessions run in SAST (Africa/Johannesburg), scheduled around the AISJ school day, with recordings for revision.',
+      },
+      {
+        question: 'When should an AISJ student start IB Biology tutoring?',
+        answer:
+          'Early in Grade 11 is ideal for full IA mentorship; exam-focused students can start later, focused on Paper 2 mark-scheme calibration and timed data-response practice for the May session.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // International School of Milan (ISM) — Italy
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'international-school-of-milan',
+    schoolName: 'International School of Milan',
+    shortName: 'ISM Milan',
+    cityCountry: 'Milan, Italy',
+    citySlug: 'milan',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Rome',
+    countryCode: 'IT',
+    inLanguage: 'en-IT',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'The International School of Milan (ISM) is an English-medium international school founded in 1958, today part of the Inspired Education Group and based at a purpose-built campus in Baranzate, northwest of Milan, opened in 2013. Its student body spans around 60 nationalities.',
+      'ISM offers all three IB programmes — PYP, MYP and the IB Diploma — as a continuum for students aged 2 to 19, and describes itself as the longest-established IB school in Italy and the only school in Milan to offer the three programmes as a continuum. Its IB Diploma authorisation dates to 1997.',
+      'In 2025 ISM’s IB Diploma cohort averaged 34 points, with a top score of 44/45 and 69% of students earning the bilingual diploma; named leavers progressed to Imperial College London, the University of Manchester, Columbia University and École Polytechnique de Paris. Science, including Biology, is taught by subject specialists in English.',
+      'For ISM families, specialist IB Biology coaching typically reinforces HL depth and the Paper 1 / Paper 2 mark scheme, plus IA mentorship. Our 1:1 sessions run in CET around the school day and align to the school’s DP calendar.',
+    ],
+    reputationBullets: [
+      'English-medium international school in Baranzate, Milan; founded 1958 (Inspired Education Group)',
+      'Full IB continuum — PYP, MYP and Diploma (ages 2–19); IB Diploma authorised 1997',
+      'Describes itself as the longest-established IB school in Italy (school’s own positioning)',
+      '2025 IB average 34; top score 44/45; 69% earned the bilingual diploma',
+      '2025 leavers to Imperial College London, Manchester, Columbia, École Polytechnique',
+      'Science and Biology taught by subject specialists in English',
+    ],
+    diplomaContext:
+      'ISM’s 2025 IB Diploma cohort averaged 34 points with a top score of 44/45 and 69% of students earning the bilingual diploma.',
+    collegeContext:
+      'ISM reports IB leavers progressing to leading universities including Imperial College London, the University of Manchester, Columbia University and École Polytechnique de Paris. IB Biology supports the school’s strong engineering, medicine and life-sciences pathways.',
+    paceAlignment:
+      'ISM runs the IB Diploma as the capstone of its PYP–MYP–DP continuum, toward the Northern-Hemisphere May exam session. We schedule live 1:1 sessions in CET around the school day, align IA mentorship to the school’s internal deadlines, and drill the IB Biology Paper 1 / Paper 2 mark schemes with past-paper data-response practice.',
+    faqs: [
+      {
+        question: 'Do ISM students need outside IB Biology tutoring?',
+        answer:
+          "ISM’s specialist science teaching is strong, so most students don't need content tutoring. The value is in Paper 1 / Paper 2 mark-scheme calibration and IA scaffolding for students targeting a 6 or 7, especially at HL.",
+      },
+      {
+        question: 'Do you coach IB Biology HL and SL?',
+        answer:
+          'Yes. HL covers the additional HL-only material and extra long-response items; SL focuses on Paper 1 precision and Paper 2 timing. Both use past-paper drilling aligned to the 2025 IB Biology guide.',
+      },
+      {
+        question: 'Do you teach in Italy time?',
+        answer:
+          'Yes — live sessions run in CET (Europe/Rome), scheduled around the ISM school day, with recordings for revision.',
+      },
+      {
+        question: 'When should an ISM student start?',
+        answer:
+          'Early in DP1 is ideal for full IA mentorship; exam-focused students can start later, focused on Paper 2 mark-scheme calibration and timed data-response practice for the May session.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // International College Spain (ICS) — Madrid
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'international-college-spain-madrid',
+    schoolName: 'International College Spain',
+    shortName: 'ICS Madrid',
+    cityCountry: 'Madrid, Spain',
+    citySlug: 'madrid',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Madrid',
+    countryCode: 'ES',
+    inLanguage: 'en-ES',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'International College Spain (ICS) is an English-medium international school in La Moraleja, Alcobendas, in affluent north Madrid, founded in 1980 and part of Nord Anglia Education since 2014. It serves around 1,000 students aged 3 to 18 from more than 70 nationalities.',
+      'ICS runs the full IB continuum — PYP (from 1999), MYP (from 1995) and the IB Diploma (from 1980) — and says it was only the 13th school in the world to offer the IB Diploma, and the only school in Madrid teaching the IB in English from age 3 to 18.',
+      'In 2025 the IB Diploma cohort averaged 35.5 points — about five points above the global average — with 20% scoring 40 or more and one student achieving a perfect 45. DP students choose a subject from the Sciences group, supported by the school’s science laboratories.',
+      'For ICS families, specialist IB Biology coaching reinforces HL depth and the Paper 1 / Paper 2 mark scheme and supports the IA. Our 1:1 sessions run in CET around the school day and align to the school’s DP calendar.',
+    ],
+    reputationBullets: [
+      'English-medium international school in La Moraleja, Madrid; founded 1980 (Nord Anglia since 2014)',
+      'Full IB continuum — Diploma (1980), MYP (1995), PYP (1999)',
+      'Says it was the 13th school in the world to offer the IB Diploma (school’s own claim)',
+      'Only school in Madrid teaching the IB in English from age 3 to 18 (school’s positioning)',
+      '2025 IB average 35.5 (~5 above global); 20% scored 40+; one perfect 45',
+      '~1,000 students from 70+ nationalities',
+    ],
+    diplomaContext:
+      'ICS’s 2025 IB Diploma cohort averaged 35.5 points — about five points above the global average — with 20% scoring 40+ and one student achieving a perfect 45.',
+    collegeContext:
+      'ICS lists graduate placements at universities including Cambridge, Oxford, UCL, King’s College London, Harvard, MIT, Columbia and Johns Hopkins, as well as Spanish universities such as Autónoma, Carlos III and Complutense. IB Biology supports the school’s medicine and life-sciences pathways.',
+    paceAlignment:
+      'ICS runs the IB Diploma as the capstone of its PYP–MYP–DP continuum, toward the Northern-Hemisphere May exam session. We schedule live 1:1 sessions in CET around the school day, align IA mentorship to the school’s internal deadlines, and drill the IB Biology Paper 1 / Paper 2 mark schemes with past-paper data-response practice.',
+    faqs: [
+      {
+        question: 'Do ICS students need outside IB Biology tutoring?',
+        answer:
+          "ICS’s teaching is strong, so most students don't need content tutoring. The value is Paper 1 / Paper 2 mark-scheme calibration and IA scaffolding for students targeting a 6 or 7, especially at HL.",
+      },
+      {
+        question: 'Do you coach IB Biology HL and SL?',
+        answer:
+          'Yes. HL covers the additional HL-only content and extra long-response load; SL focuses on Paper 1 precision and Paper 2 timing. Both use past-paper drilling aligned to the 2025 IB Biology guide.',
+      },
+      {
+        question: 'Do you teach in Spain time?',
+        answer:
+          'Yes — live sessions run in CET (Europe/Madrid), scheduled around the ICS school day, with recordings for revision.',
+      },
+      {
+        question: 'When should an ICS student start?',
+        answer:
+          'Early in DP1 is ideal for full IA mentorship; exam-focused students can start later, focused on Paper 2 mark-scheme calibration and timed data-response practice for the May session.',
       },
     ],
   },
