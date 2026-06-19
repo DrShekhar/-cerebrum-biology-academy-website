@@ -201,7 +201,9 @@ export function LocalitySchema({
       telephone: CONTACT_INFO.phone.primary,
       contactType: 'admissions',
       availableLanguage: ['English', 'Hindi'],
-      areaServed: 'IN',
+      // Match the page's real country (US for Houston, AE for Ajman, IN for
+      // Delhi localities) — was hardcoded 'IN' even on international pages.
+      areaServed: toIsoCountry(country),
     },
   }
 
