@@ -14,6 +14,7 @@
  */
 
 import type { Metadata } from 'next'
+import { GlobalEnquiryForm } from '@/components/seo/GlobalEnquiryForm'
 import Link from 'next/link'
 import {
   Award,
@@ -518,6 +519,13 @@ export default function BestBiologyTutorGlobalPage() {
             </div>
           </div>
         </section>
+
+      {/* Lead form — capture path for non-WhatsApp visitors (any nationality) */}
+      <section className="bg-slate-50 py-14">
+        <div className="mx-auto max-w-xl px-4">
+          <GlobalEnquiryForm source="best-biology-tutor-global" />
+        </div>
+      </section>
 
         {/* CTA */}
         <section className="bg-slate-900 py-14 text-white">

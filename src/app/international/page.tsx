@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { GlobalEnquiryForm } from '@/components/seo/GlobalEnquiryForm'
 import Link from 'next/link'
 import { Globe, GraduationCap, Clock, MessageCircle } from 'lucide-react'
 import { getCountriesByRegion, formatPrice } from '@/lib/international/countries'
@@ -243,6 +244,13 @@ export default function InternationalHubPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Lead form — capture path for non-WhatsApp visitors (any nationality) */}
+      <section className="bg-slate-50 py-14">
+        <div className="mx-auto max-w-xl px-4">
+          <GlobalEnquiryForm source="international-home" />
         </div>
       </section>
 

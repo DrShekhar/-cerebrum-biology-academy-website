@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { GlobalEnquiryForm } from '@/components/seo/GlobalEnquiryForm'
 import {
   Users,
   Trophy,
@@ -225,6 +226,13 @@ export default function InternationalBiologyClassesPage() {
               All Online Classes
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Lead form — capture path for non-WhatsApp visitors (any nationality) */}
+      <section className="bg-slate-50 py-14">
+        <div className="mx-auto max-w-xl px-4">
+          <GlobalEnquiryForm source="online-international" />
         </div>
       </section>
 

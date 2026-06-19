@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { GlobalEnquiryForm } from '@/components/seo/GlobalEnquiryForm'
 import Link from 'next/link'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { GlobalPricingStrip } from '@/components/global/GlobalPricingStrip'
@@ -438,6 +439,13 @@ export default function GlobalHomePage() {
               </details>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Lead form — capture path for non-WhatsApp visitors (any nationality) */}
+      <section className="bg-slate-50 py-14">
+        <div className="mx-auto max-w-xl px-4">
+          <GlobalEnquiryForm source="global-home" />
         </div>
       </section>
 
