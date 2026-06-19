@@ -32,11 +32,12 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Phone is required' }, { status: 400 })
     }
 
-    // Normalize phone
-    const normalizedPhone = phone.replace(/\D/g, '').slice(-10)
-    if (normalizedPhone.length !== 10) {
+    // Normalize phone — accept international (8-15 digits); keep last 10 for dedup.
+    const phoneDigits = phone.replace(/\D/g, '')
+    if (phoneDigits.length < 8 || phoneDigits.length > 15) {
       return NextResponse.json({ error: 'Invalid phone number' }, { status: 400 })
     }
+    const normalizedPhone = phoneDigits.slice(-10)
 
     const leadId = `aria_${Date.now()}_${Math.random().toString(36).substring(7)}`
 

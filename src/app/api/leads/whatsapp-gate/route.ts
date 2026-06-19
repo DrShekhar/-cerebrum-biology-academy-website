@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const { name, phone, page } = body
 
-    if (!phone || !/^\d{10}$/.test(phone.replace(/\D/g, '').slice(-10))) {
+    if (!phone || !/^\d{8,15}$/.test(phone.replace(/\D/g, ''))) {
       return NextResponse.json(
         { success: false, error: 'A valid 10-digit phone number is required' },
         { status: 400 }

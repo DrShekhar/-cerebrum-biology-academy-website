@@ -7,7 +7,7 @@ const blogLeadSchema = z
   .object({
     phone: z
       .string()
-      .regex(/^[6-9]\d{9}$/, 'Please enter a valid 10-digit Indian mobile number')
+      .regex(/^\+?[\d\s\-()]{8,20}$/, 'Please enter a valid phone number with country code')
       .optional()
       .or(z.literal('')),
     email: z.string().email('Please enter a valid email').optional().or(z.literal('')),

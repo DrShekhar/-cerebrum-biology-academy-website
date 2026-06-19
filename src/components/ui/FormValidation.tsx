@@ -22,8 +22,10 @@ export interface ValidationRules {
 // Default validation patterns for Indian context
 export const FormValidation = {
   phone: {
-    pattern: /^[6-9]\d{9}$/,
-    message: 'Enter 10-digit mobile number',
+    // International-friendly: optional +, then 8-20 chars of digits/space/dash/parens.
+    // Accepts +1 / +44 / +91 / +971 etc. — do not restrict to Indian 10-digit.
+    pattern: /^\+?[\d\s\-()]{8,20}$/,
+    message: 'Enter your phone number with country code (e.g. +1, +44, +91)',
     validateOnType: true,
     required: true,
   },
