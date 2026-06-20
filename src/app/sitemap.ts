@@ -10,6 +10,7 @@ import { mcatMetroSlugs } from '@/data/mcat/metros'
 import { datMetroSlugs } from '@/data/dat/metros'
 import { BRAIN_BEE_CITIES } from '@/data/brain-bee/brainBeeCities'
 import { IBO_COUNTRIES } from '@/data/ibo/iboCountries'
+import { A_LEVEL_BOARDS } from '@/data/a-level/boards'
 import { gamsatMetroSlugs } from '@/data/gamsat/metros'
 import { usmleMetroSlugs } from '@/data/usmle-step-1/metros'
 import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
@@ -3297,6 +3298,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.94,
     },
+    // A-Level per-exam-board hubs (AQA / OCR / Edexcel / WJEC-Eduqas / Cambridge International)
+    ...A_LEVEL_BOARDS.map((b) => ({
+      url: `${baseUrl}/${b.routeSlug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    })),
     // A-Level city pages (P2 UK)
     {
       url: `${baseUrl}/a-level-biology-tutor-london`,
@@ -5342,6 +5350,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/best-biology-tutor-usa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/best-biology-tutor-uk`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.95,
