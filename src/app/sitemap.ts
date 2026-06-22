@@ -3422,6 +3422,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/biology-scholarship-test`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
       url: `${baseUrl}/dr-shekhar-singh`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
