@@ -23,6 +23,7 @@ import {
   type ClassPricing,
 } from '@/data/pricing'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { DualCurrencyPrice } from '@/components/ui/DualCurrencyPrice'
 import { MessageCircle } from 'lucide-react'
 
 const getCourseDetailUrl = (classLevel: ClassLevel): string => {
@@ -359,10 +360,10 @@ export default function PricingPage() {
         <div className="p-2 sm:p-3 md:p-4 flex flex-col flex-grow">
           <div className="text-center mb-2 sm:mb-3">
             <div className="text-xl sm:text-2xl font-bold text-gray-900">
-              ₹{price.toLocaleString()}
+              <DualCurrencyPrice inr={price} />
             </div>
             <div className="text-[10px] sm:text-xs text-blue-600 font-medium">
-              ~₹{Math.round(price / 12).toLocaleString()}/mo
+              <DualCurrencyPrice inr={Math.round(price / 12)} suffix="/mo" />
             </div>
           </div>
 
@@ -411,7 +412,7 @@ export default function PricingPage() {
             className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold py-3 rounded-xl transition-all duration-200 hover:shadow-xl mb-3 text-sm flex items-center justify-center gap-2"
           >
             <MessageCircle className="w-4 h-4" />
-            Chat to Enroll — ₹{price.toLocaleString()}
+            Chat to Enroll — <DualCurrencyPrice inr={price} />
           </button>
 
           <Link href={getCourseDetailUrl(classData.class)}>
@@ -1424,7 +1425,7 @@ export default function PricingPage() {
             className="w-full max-w-lg mx-auto bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold py-3.5 rounded-xl text-sm shadow-lg shadow-green-500/25 active:scale-[0.98] transition-transform flex items-center justify-center gap-2"
           >
             <MessageCircle className="w-5 h-5" />
-            Chat to Enroll — Courses from ₹45,000/year
+            Chat to Enroll — Courses from <DualCurrencyPrice inr={45000} suffix="/year" />
           </button>
         </div>
       </div>

@@ -11,6 +11,7 @@ import { datMetroSlugs } from '@/data/dat/metros'
 import { BRAIN_BEE_CITIES } from '@/data/brain-bee/brainBeeCities'
 import { IBO_COUNTRIES } from '@/data/ibo/iboCountries'
 import { A_LEVEL_BOARDS } from '@/data/a-level/boards'
+import { GLOBAL_EXAMS } from '@/data/global-exams/exams'
 import { gamsatMetroSlugs } from '@/data/gamsat/metros'
 import { usmleMetroSlugs } from '@/data/usmle-step-1/metros'
 import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
@@ -5366,6 +5367,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.95,
     },
+    // Global exam hubs (universal, all-nationalities) — AP/MCAT/Olympiad/IB/A-Level/NEET
+    ...GLOBAL_EXAMS.map((e) => ({
+      url: `${baseUrl}/${e.routeSlug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    })),
     // Global brand home — the international front door (/ stays India-NEET)
     {
       url: `${baseUrl}/global`,

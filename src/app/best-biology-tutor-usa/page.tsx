@@ -97,8 +97,7 @@ const EXAMS = [
   {
     icon: Award,
     name: 'IBO — Team USA',
-    detail:
-      'The International Biology Olympiad route for US students, through the USABO ladder.',
+    detail: 'The International Biology Olympiad route for US students, through the USABO ladder.',
     href: '/ibo-coaching-usa',
   },
   {
@@ -111,7 +110,8 @@ const EXAMS = [
   {
     icon: GraduationCap,
     name: 'IB Biology (HL & SL)',
-    detail: 'For US IB World Schools — IA & EE mentorship and Paper 1/2 technique on the 2025 syllabus.',
+    detail:
+      'For US IB World Schools — IA & EE mentorship and Paper 1/2 technique on the 2025 syllabus.',
     href: '/ib-biology-tuition',
   },
   {
@@ -235,7 +235,12 @@ export default function BestBiologyTutorUSAPage() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Global', item: `${SITE_URL}/best-biology-tutor-global` },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Global',
+        item: `${SITE_URL}/best-biology-tutor-global`,
+      },
       { '@type': 'ListItem', position: 3, name: 'USA', item: PAGE_URL },
     ],
   }
@@ -301,12 +306,12 @@ export default function BestBiologyTutorUSAPage() {
             <span className="text-blue-700">AP, USABO, IBO, Brain Bee &amp; IB.</span>
           </h1>
           <p className="mt-5 max-w-4xl text-lg leading-relaxed text-slate-600">
-            One subject, taught by specialists. Cerebrum coaches US students for AP Biology
-            (score-5 + FRQ), the USA Biology Olympiad and IBO Team USA, the Brain Bee, IB Biology
-            HL/SL, and the pre-med layer (MCAT, USMLE, DAT). Faculty are trained at AIIMS New Delhi
-            &mdash; among the most selective medical schools in the world, peer to Harvard Medical
-            School and Oxford &mdash; so the depth applies to every US biology exam. Live online in
-            your time zone.
+            One subject, taught by specialists. Cerebrum coaches US students for AP Biology (score-5
+            + FRQ), the USA Biology Olympiad and IBO Team USA, the Brain Bee, IB Biology HL/SL, and
+            the pre-med layer (MCAT, USMLE, DAT). Faculty are trained at AIIMS New Delhi &mdash;
+            among the most selective medical schools in the world, peer to Harvard Medical School
+            and Oxford &mdash; so the depth applies to every US biology exam. Live online in your
+            time zone.
           </p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <a
@@ -373,6 +378,25 @@ export default function BestBiologyTutorUSAPage() {
               </Link>
               .
             </p>
+            <p className="mt-3 text-sm text-slate-500">
+              Global exam hubs (open to any nationality):{' '}
+              <Link href="/ap-biology-tutor-global" className="text-blue-700 underline">
+                AP Biology
+              </Link>{' '}
+              ·{' '}
+              <Link href="/mcat-biology-tutor-global" className="text-blue-700 underline">
+                MCAT Bio/Biochem
+              </Link>{' '}
+              ·{' '}
+              <Link href="/biology-olympiad-tutor-global" className="text-blue-700 underline">
+                Biology Olympiad
+              </Link>{' '}
+              ·{' '}
+              <Link href="/ib-biology-tutor-global" className="text-blue-700 underline">
+                IB Biology
+              </Link>
+              .
+            </p>
           </div>
         </section>
 
@@ -401,8 +425,8 @@ export default function BestBiologyTutorUSAPage() {
               <MapPin className="h-6 w-6 text-blue-600" /> Coaching by US metro
             </h2>
             <p className="mt-3 max-w-3xl text-slate-600">
-              Local context, your time zone. Don&rsquo;t see your city? We coach students anywhere in
-              the US online &mdash; just ask. (Full AP-by-city directory on the{' '}
+              Local context, your time zone. Don&rsquo;t see your city? We coach students anywhere
+              in the US online &mdash; just ask. (Full AP-by-city directory on the{' '}
               <Link href="/best-ap-biology-tutor-usa" className="text-blue-700 underline">
                 AP Biology USA
               </Link>{' '}

@@ -375,6 +375,21 @@ export default function BestBiologyTutorUKPage() {
                 </Link>
               ))}
             </div>
+            <p className="mt-6 text-sm text-slate-500">
+              Global exam hubs (open to any nationality):{' '}
+              <Link href="/a-level-biology-tutor-global" className="text-blue-700 underline">
+                A-Level Biology
+              </Link>{' '}
+              ·{' '}
+              <Link href="/ib-biology-tutor-global" className="text-blue-700 underline">
+                IB Biology
+              </Link>{' '}
+              ·{' '}
+              <Link href="/biology-olympiad-tutor-global" className="text-blue-700 underline">
+                Biology Olympiad
+              </Link>
+              .
+            </p>
           </div>
         </section>
 
