@@ -375,8 +375,30 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     // Calculate comprehensive analytics
     const analyticsData = await calculateTestAnalytics(testSessionId)
 
+    // The session-create route also writes a parallel test_attempts row (read by
+    // the analytics/Performance Snapshot + learning path). Without this it stayed
+    // IN_PROGRESS/score 0 forever, polluting averages. Complete it with the real
+    // score here so both models stay consistent.
+    const linkedResponse = await prisma.user_question_responses.findFirst({
+      where: { testSessionId },
+      select: { testAttemptId: true },
+    })
+    const linkedAttemptId = linkedResponse?.testAttemptId || null
+
     // Use transaction to update everything atomically
     const result = await prisma.$transaction(async (tx) => {
+      if (linkedAttemptId) {
+        await tx.test_attempts.updateMany({
+          where: { id: linkedAttemptId, status: { not: 'COMPLETED' } },
+          data: {
+            status: 'COMPLETED',
+            score: totalScore,
+            percentage: Math.round(percentage * 100) / 100,
+            timeSpent: validatedData.sessionData?.totalTimeSpent || testSession.timeSpent,
+            submittedAt: submissionTime,
+          },
+        })
+      }
       // Update test session
       const updatedSession = await tx.test_sessions.update({
         where: { id: testSessionId },
