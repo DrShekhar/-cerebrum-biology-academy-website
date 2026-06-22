@@ -441,7 +441,15 @@ export default function StudentDashboard() {
 
             {/* Performance Snapshot — computed from real test attempts */}
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Performance Snapshot</h2>
+              <div className="mb-4 flex items-center justify-between">
+                <h2 className="text-xl font-bold text-gray-900">Performance Snapshot</h2>
+                <Link
+                  href="/student/gradebook"
+                  className="text-sm font-semibold text-blue-600 hover:text-blue-700"
+                >
+                  View full gradebook →
+                </Link>
+              </div>
               <Card>
                 <CardContent className="p-6">
                   {!performance || performance.trend.length === 0 ? (
