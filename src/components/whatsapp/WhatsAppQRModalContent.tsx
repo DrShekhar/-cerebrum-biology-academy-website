@@ -31,6 +31,43 @@ export function WhatsAppQRModalContent({
   onClose,
 }: WhatsAppQRModalContentProps) {
   const [copied, setCopied] = useState(false)
+  const [name, setName] = useState('')
+  const [phone, setPhone] = useState('')
+  const [leadStatus, setLeadStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle')
+
+  // Capture the lead to the CRM + admin email BEFORE any WhatsApp step. This is a
+  // safety net: desktop visitors who don't have WhatsApp on their computer (a large
+  // share of US/UK/international families) can still leave their details and be
+  // reached — the lead is no longer lost if the WhatsApp handoff never completes.
+  // Fire-and-forget; never blocks the existing WhatsApp options below.
+  const handleCapture = useCallback(async () => {
+    if (name.trim().length < 2) {
+      setLeadStatus('error')
+      return
+    }
+    const digits = phone.replace(/\D/g, '')
+    if (digits.length < 8 || digits.length > 15) {
+      setLeadStatus('error')
+      return
+    }
+    setLeadStatus('saving')
+    try {
+      const res = await fetch('/api/enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name.trim(),
+          phone: phone.trim(),
+          message: `Callback request from desktop WhatsApp helper. Context: ${message || 'n/a'}`,
+          source: `desktop-whatsapp-modal:${source}`,
+          pageUrl: typeof window !== 'undefined' ? window.location.href : undefined,
+        }),
+      })
+      setLeadStatus(res.ok ? 'saved' : 'error')
+    } catch {
+      setLeadStatus('error')
+    }
+  }, [name, phone, message, source])
 
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(whatsappUrl)}&bgcolor=ffffff&color=128C7E&margin=10`
 
@@ -90,6 +127,58 @@ export function WhatsAppQRModalContent({
 
       {/* Body */}
       <div className="p-6">
+        {/* Lead-capture safety net — saves the lead to CRM + email before any
+            WhatsApp step, so desktop visitors without WhatsApp are never lost. */}
+        {leadStatus === 'saved' ? (
+          <div className="mb-5 rounded-xl border-2 border-green-200 bg-green-50 p-4 text-center">
+            <Check className="mx-auto h-6 w-6 text-green-600" />
+            <p className="mt-1 text-sm font-semibold text-gray-900">
+              Thanks — we have your details.
+            </p>
+            <p className="text-xs text-gray-600">
+              Our team will reach out on WhatsApp and email shortly. You can also start the chat
+              below.
+            </p>
+          </div>
+        ) : (
+          <div className="mb-5 rounded-xl border border-gray-200 bg-gray-50 p-4">
+            <p className="text-sm font-semibold text-gray-900">
+              No WhatsApp on this device? Leave your details
+            </p>
+            <p className="mb-3 text-xs text-gray-500">
+              We&rsquo;ll reach out on WhatsApp + email — please include your country code.
+            </p>
+            <div className="flex flex-col gap-2 sm:flex-row">
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Your name"
+                className="min-h-[44px] flex-1 rounded-lg border border-gray-300 px-3 text-sm outline-none focus:border-green-500"
+              />
+              <input
+                type="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                placeholder="Phone (with country code)"
+                className="min-h-[44px] flex-1 rounded-lg border border-gray-300 px-3 text-sm outline-none focus:border-green-500"
+              />
+              <button
+                onClick={handleCapture}
+                disabled={leadStatus === 'saving'}
+                className="min-h-[44px] rounded-lg bg-[#075E54] px-4 text-sm font-semibold text-white hover:bg-[#0a6e62] disabled:opacity-60"
+              >
+                {leadStatus === 'saving' ? 'Sending…' : 'Request callback'}
+              </button>
+            </div>
+            {leadStatus === 'error' && (
+              <p className="mt-2 text-xs text-red-600">
+                Please enter your name and a valid phone number (with country code).
+              </p>
+            )}
+          </div>
+        )}
+
         {/* QR Code */}
         <div className="text-center mb-6">
           <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
