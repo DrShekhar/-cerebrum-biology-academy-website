@@ -426,6 +426,7 @@ export async function getVideoForPlayback(
   userId: string
 ): Promise<{
   success: boolean
+  title?: string
   videoUrl?: string
   thumbnail?: string
   duration?: number
@@ -438,11 +439,37 @@ export async function getVideoForPlayback(
     include: {
       video_chapters: { orderBy: { orderIndex: 'asc' } },
       video_progress: { where: { userId }, take: 1 },
+      study_materials: { select: { id: true, courseId: true, accessLevel: true } },
     },
   })
 
   if (!videoLecture) {
     return { success: false, error: 'Video not found' }
+  }
+
+  // Enrollment gate: a lecture flagged requiresEnrollment is only playable by a
+  // student with FREE access, an explicit material_access grant, or an ACTIVE
+  // enrollment in the lecture's course. Prevents URL-guessing past the paywall.
+  if (videoLecture.requiresEnrollment) {
+    const material = videoLecture.study_materials
+    const isFree = material?.accessLevel === 'FREE'
+    let allowed = isFree
+    if (!allowed && material) {
+      const grant = await prisma.material_access.findUnique({
+        where: { materialId_userId: { materialId: material.id, userId } },
+      })
+      allowed = !!grant
+    }
+    if (!allowed && material?.courseId) {
+      const enrollment = await prisma.enrollments.findFirst({
+        where: { userId, courseId: material.courseId, status: 'ACTIVE' },
+        select: { id: true },
+      })
+      allowed = !!enrollment
+    }
+    if (!allowed) {
+      return { success: false, error: 'You need to be enrolled to watch this lecture.' }
+    }
   }
 
   if (videoLecture.uploadStatus !== 'READY') {
@@ -482,6 +509,7 @@ export async function getVideoForPlayback(
 
   return {
     success: true,
+    title: videoLecture.title,
     videoUrl,
     thumbnail: videoLecture.cloudflareThumbUrl || undefined,
     duration: videoLecture.duration,

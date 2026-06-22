@@ -22,6 +22,7 @@ import {
 import {
   PersonalizedLearningEngine,
   type StudentProfile,
+  type WeakArea,
   type LearningPath,
   type StudySession,
 } from '@/lib/learning/PersonalizedLearningEngine'
@@ -38,78 +39,94 @@ export function PersonalizedLearningPath() {
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0])
   const [completedSessions, setCompletedSessions] = useState<string[]>([])
 
-  // Mock student profile - in production, this would come from API
-  const [studentProfile] = useState<StudentProfile>({
-    id: user?.id || 'student_1',
-    name: user?.name || 'NEET Aspirant',
-    email: user?.email || 'student@example.com',
-    currentScore: 485,
-    targetScore: 540,
-    timeToExam: 180, // 6 months
-    studyHoursPerDay: 4,
-    learningStyle: 'visual',
-    preferredDifficulty: 'challenging',
-    strongAreas: ['Cell Biology', 'Ecology', 'Human Physiology'],
-    weakAreas: [
-      {
-        chapter: 'Genetics',
-        topic: 'Molecular Basis of Inheritance',
-        difficulty: 'high',
-        currentScore: 65,
-        targetScore: 85,
-        priorityLevel: 9,
-        estimatedStudyTime: 40,
-        recommendedDailyTime: 90,
-        improvement: -5,
-        lastPracticed: '2025-09-18T10:00:00Z',
-      },
-      {
-        chapter: 'Plant Physiology',
-        topic: 'Photosynthesis',
-        difficulty: 'medium',
-        currentScore: 72,
-        targetScore: 88,
-        priorityLevel: 7,
-        estimatedStudyTime: 25,
-        recommendedDailyTime: 60,
-        improvement: -3,
-        lastPracticed: '2025-09-17T14:00:00Z',
-      },
-      {
-        chapter: 'Evolution',
-        topic: 'Molecular Evolution',
-        difficulty: 'medium',
-        currentScore: 78,
-        targetScore: 90,
-        priorityLevel: 6,
-        estimatedStudyTime: 20,
-        recommendedDailyTime: 45,
-        improvement: -2,
-        lastPracticed: '2025-09-16T16:00:00Z',
-      },
-    ],
-    completedChapters: [
-      'Cell: The Unit of Life',
-      'Biomolecules',
-      'Structural Organisation in Animals',
-      'Transport in Plants',
-      'Body Fluids and Circulation',
-      'Reproduction in Organisms',
-      'Human Reproduction',
-      'Organisms and Populations',
-      'Ecosystem',
-    ],
-    currentStreak: 12,
-    totalStudyTime: 450,
-  })
+  // Real student profile — derived from the student's actual test performance
+  // (/api/analytics/performance). No fabricated scores: until a student has
+  // completed tests we show an onboarding empty state rather than fake data.
+  const [loading, setLoading] = useState(true)
+  const [noData, setNoData] = useState(false)
 
-  // Generate learning path on component mount
   useEffect(() => {
-    if (studentProfile) {
-      const path = learningEngine.generateLearningPath(studentProfile)
-      setCurrentPath(path)
+    let cancelled = false
+    if (!isAuthenticated || !user?.id) {
+      setLoading(false)
+      return
     }
-  }, [studentProfile, learningEngine])
+
+    async function loadProfile() {
+      try {
+        const res = await fetch(`/api/analytics/performance?userId=${user!.id}&period=quarter`)
+        const json = await res.json().catch(() => null)
+        const data = json?.data
+        const topics: Array<{ topic: string; accuracy: number; totalQuestions: number }> =
+          data?.topicPerformance || []
+        const completedTests = data?.completedTests ?? data?.totalTests ?? 0
+
+        // No real performance yet → honest empty state, never fabricated numbers.
+        if (!data || completedTests === 0 || topics.length === 0) {
+          if (!cancelled) {
+            setNoData(true)
+            setLoading(false)
+          }
+          return
+        }
+
+        const avgAccuracy: number = Math.round(data.averageScore ?? 0) // percent
+        // NEET-720 estimate from accuracy — a derived estimate, clearly not a claimed rank.
+        const currentScore = Math.round((avgAccuracy / 100) * 720)
+        const targetScore = Math.min(720, Math.max(currentScore + 60, 600))
+
+        const weakAreas: WeakArea[] = topics
+          .filter((t) => t.accuracy < 60 && t.totalQuestions >= 3)
+          .sort((a, b) => a.accuracy - b.accuracy)
+          .slice(0, 5)
+          .map((t) => ({
+            chapter: t.topic,
+            topic: t.topic,
+            difficulty: t.accuracy < 40 ? 'high' : t.accuracy < 55 ? 'medium' : 'low',
+            currentScore: Math.round(t.accuracy),
+            targetScore: Math.min(90, Math.round(t.accuracy) + 20),
+            priorityLevel: Math.max(1, Math.min(10, Math.round((100 - t.accuracy) / 10))),
+            estimatedStudyTime: 20,
+            recommendedDailyTime: 60,
+            improvement: 0,
+            lastPracticed: new Date().toISOString(),
+          }))
+
+        const profile: StudentProfile = {
+          id: user!.id,
+          name: user!.name || 'Student',
+          email: user!.email || '',
+          currentScore,
+          targetScore,
+          timeToExam: 180,
+          studyHoursPerDay: 4,
+          learningStyle: 'visual',
+          preferredDifficulty: 'mixed',
+          strongAreas: (data.strengths as string[]) || [],
+          weakAreas,
+          completedChapters: [],
+          currentStreak: data.currentStreak ?? 0,
+          totalStudyTime: Math.round((data.totalStudyTime ?? 0) / 60), // seconds → minutes
+        }
+
+        const path = learningEngine.generateLearningPath(profile)
+        if (!cancelled) {
+          setCurrentPath(path)
+          setLoading(false)
+        }
+      } catch {
+        if (!cancelled) {
+          setNoData(true)
+          setLoading(false)
+        }
+      }
+    }
+
+    loadProfile()
+    return () => {
+      cancelled = true
+    }
+  }, [isAuthenticated, user, learningEngine])
 
   // Study timer logic
   useEffect(() => {
@@ -191,20 +208,43 @@ export function PersonalizedLearningPath() {
   const dailySchedule = getDailySchedule()
   const analytics = getProgressAnalytics()
 
-  if (!isAuthenticated || !currentPath) {
+  // No real performance data yet → honest onboarding state (never fabricated scores).
+  if (!isAuthenticated || (!loading && (noData || !currentPath))) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center max-w-md px-4">
+          <Brain className="w-16 h-16 text-blue-500 mx-auto mb-4" />
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            {!isAuthenticated ? 'Sign in to see your learning path' : 'Your learning path is ready to begin'}
+          </h2>
+          <p className="text-gray-600 mb-6">
+            {!isAuthenticated
+              ? 'Log in to generate a study plan personalised to your test performance.'
+              : 'Take your first practice test and we’ll build a personalised study plan from your real results — strong areas, focus areas and a day-by-day schedule.'}
+          </p>
+          <a
+            href={!isAuthenticated ? '/sign-in' : '/neet-biology-mcq-practice'}
+            className="inline-block rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white hover:bg-blue-700"
+          >
+            {!isAuthenticated ? 'Sign in' : 'Take a practice test'}
+          </a>
+        </div>
+      </div>
+    )
+  }
+
+  // Loading real data.
+  if (loading || !currentPath) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <Brain className="w-16 h-16 text-blue-500 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Generating Your Learning Path</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Building your learning path</h2>
           <p className="text-gray-600 mb-6">
-            Please wait while we create your personalized study plan...
+            Analysing your test performance to personalise your plan…
           </p>
           <div className="w-64 bg-gray-200 rounded-full h-2 mx-auto">
-            <div
-              className="bg-blue-600 h-2 rounded-full animate-pulse"
-              style={{ width: '75%' }}
-            ></div>
+            <div className="bg-blue-600 h-2 rounded-full animate-pulse" style={{ width: '75%' }}></div>
           </div>
         </div>
       </div>
