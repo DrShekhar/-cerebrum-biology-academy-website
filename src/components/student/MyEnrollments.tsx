@@ -399,41 +399,6 @@ export function MyEnrollments() {
                         </>
                       )}
                     </div>
-
-                    {/* Next Class */}
-                    <div className="bg-gray-50 rounded-xl p-4">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h5 className="font-medium text-gray-900">Next Class</h5>
-                          <p className="text-sm text-gray-600">
-                            Chapter 5: Cell Structure and Function
-                          </p>
-                        </div>
-                        <div className="text-right">
-                          <div className="text-sm font-medium text-gray-900">Today, 4:00 PM</div>
-                          <div className="text-sm text-gray-600">Join in 2 hours</div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Recent Activity */}
-                    <div>
-                      <h5 className="font-medium text-gray-900 mb-2">Recent Activity</h5>
-                      <div className="space-y-2">
-                        <div className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
-                          Completed: Chapter 4 Quiz - 85% score
-                        </div>
-                        <div className="flex items-center text-sm text-gray-600">
-                          <Download className="w-4 h-4 text-blue-500 mr-2" />
-                          Downloaded: Chapter 5 Study Notes
-                        </div>
-                        <div className="flex items-center text-sm text-gray-600">
-                          <Play className="w-4 h-4 text-purple-500 mr-2" />
-                          Watched: Recorded Class - Photosynthesis
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               )}
@@ -468,7 +433,7 @@ export function MyEnrollments() {
       {/* Quick Stats */}
       <div className="mt-12 bg-white rounded-2xl shadow-lg p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Your Learning Stats</h3>
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <div className="text-center">
             <div className="text-2xl font-bold text-blue-600">{userEnrollments.length}</div>
             <div className="text-sm text-gray-600">Total Courses</div>
@@ -478,14 +443,6 @@ export function MyEnrollments() {
               {userEnrollments.filter((e) => e.paymentStatus === 'paid').length}
             </div>
             <div className="text-sm text-gray-600">Active Enrollments</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-purple-600">15%</div>
-            <div className="text-sm text-gray-600">Avg. Progress</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-orange-600">4.8</div>
-            <div className="text-sm text-gray-600">Quiz Average</div>
           </div>
         </div>
       </div>

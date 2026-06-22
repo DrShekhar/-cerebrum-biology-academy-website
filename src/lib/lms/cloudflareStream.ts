@@ -210,43 +210,65 @@ export async function getVideoDetails(videoId: string): Promise<CloudflareVideoD
  * Using JWT tokens signed with Cloudflare Stream signing key
  */
 export async function generateSignedUrl(options: SignedUrlOptions): Promise<string | null> {
-  const { videoId, expiresIn = 3600, userId, downloadable = false } = options
+  const { videoId, expiresIn = 3600, downloadable = false } = options
 
-  if (!CF_STREAM_SIGNING_KEY_ID || !CF_STREAM_SIGNING_KEY_PEM) {
-    console.error('Cloudflare Stream signing keys not configured')
-    // Fall back to unsigned URL for development
-    const details = await getVideoDetails(videoId)
-    return details?.playback?.hls || null
-  }
-
-  try {
-    // Create JWT payload
-    const now = Math.floor(Date.now() / 1000)
-    const payload = {
-      sub: videoId, // Video ID
-      kid: CF_STREAM_SIGNING_KEY_ID,
-      exp: now + expiresIn,
-      nbf: now - 60, // Valid 1 minute before (clock skew)
-      accessRules: [
-        {
-          type: 'any',
-          action: 'allow',
-        },
-      ],
-      // Custom claims for tracking
-      ...(userId && { userId }),
-      downloadable,
+  // PRIMARY: mint a signed token via Cloudflare's server-side token endpoint.
+  // This uses the account API token we already have (CF_API_TOKEN) — no hand-
+  // rolled RS256 and no signing-key PEM to manage — and is Cloudflare's
+  // recommended approach for server-generated signed URLs. Works for videos
+  // uploaded with requireSignedURLs:true.
+  if (CF_ACCOUNT_ID && CF_API_TOKEN) {
+    try {
+      const now = Math.floor(Date.now() / 1000)
+      const res = await fetch(`${CF_STREAM_API}/${videoId}/token`, {
+        method: 'POST',
+        headers: getHeaders(),
+        body: JSON.stringify({
+          exp: now + expiresIn,
+          nbf: now - 60, // small clock-skew allowance
+          downloadable,
+        }),
+      })
+      if (res.ok) {
+        const data = await res.json()
+        const token = data?.result?.token
+        if (token) {
+          return `https://videodelivery.net/${token}/manifest/video.m3u8`
+        }
+      } else {
+        console.error('Cloudflare token mint failed:', res.status, await res.text().catch(() => ''))
+      }
+    } catch (error) {
+      console.error('Error minting Cloudflare Stream token:', error)
     }
-
-    // Sign JWT with RSA key
-    const jwt = await signJWT(payload, CF_STREAM_SIGNING_KEY_PEM)
-
-    // Return signed URL
-    return `https://customer-${CF_ACCOUNT_ID}.cloudflarestream.com/${videoId}/manifest/video.m3u8?token=${jwt}`
-  } catch (error) {
-    console.error('Error generating signed URL:', error)
-    return null
   }
+
+  // FALLBACK: key-based JWT signing, if explicit signing keys are configured.
+  if (CF_STREAM_SIGNING_KEY_ID && CF_STREAM_SIGNING_KEY_PEM) {
+    try {
+      const now = Math.floor(Date.now() / 1000)
+      const jwt = await signJWT(
+        {
+          sub: videoId,
+          kid: CF_STREAM_SIGNING_KEY_ID,
+          exp: now + expiresIn,
+          nbf: now - 60,
+          accessRules: [{ type: 'any', action: 'allow' }],
+          downloadable,
+        },
+        CF_STREAM_SIGNING_KEY_PEM
+      )
+      return `https://videodelivery.net/${jwt}/manifest/video.m3u8`
+    } catch (error) {
+      console.error('Error generating signed URL (key-based):', error)
+    }
+  }
+
+  // LAST RESORT (dev / no creds): unsigned URL. Will 403 for videos that
+  // require signed URLs — set CLOUDFLARE_ACCOUNT_ID + CLOUDFLARE_API_TOKEN.
+  console.error('Cloudflare Stream signed playback unavailable — returning unsigned URL')
+  const details = await getVideoDetails(videoId)
+  return details?.playback?.hls || null
 }
 
 /**
@@ -267,10 +289,12 @@ async function signJWT(payload: Record<string, unknown>, pemKey: string): Promis
   // Create signature input
   const signatureInput = `${headerB64}.${payloadB64}`
 
-  // Import key and sign
+  // Import key and sign. WebCrypto importKey('pkcs8') needs a PKCS#8 ("BEGIN
+  // PRIVATE KEY") DER. Cloudflare's signing key is delivered PKCS#8; strip
+  // whichever PEM header is present (PKCS#8 or legacy PKCS#1) generically.
   const keyData = pemKey
-    .replace('-----BEGIN RSA PRIVATE KEY-----', '')
-    .replace('-----END RSA PRIVATE KEY-----', '')
+    .replace(/-----BEGIN (RSA )?PRIVATE KEY-----/, '')
+    .replace(/-----END (RSA )?PRIVATE KEY-----/, '')
     .replace(/\s/g, '')
 
   const binaryKey = Uint8Array.from(atob(keyData), (c) => c.charCodeAt(0))

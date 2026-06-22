@@ -308,10 +308,12 @@ export default function StudentDashboard() {
               </p>
             </div>
             <div className="flex items-center gap-3">
-              <Button variant="outline" size="sm" className="hidden sm:flex">
-                <Bell className="w-4 h-4 mr-2" />
-                Notifications
-              </Button>
+              <Link href="/student/notices" className="hidden sm:block">
+                <Button variant="outline" size="sm">
+                  <Bell className="w-4 h-4 mr-2" />
+                  Notifications
+                </Button>
+              </Link>
               {isPaidUser ? (
                 <Link href="/dashboard/student">
                   <Button variant="primary" size="sm">
@@ -412,24 +414,24 @@ export default function StudentDashboard() {
               <div className="space-y-3">
                 <FocusCard
                   icon={<BookOpen className="w-5 h-5 text-blue-600" />}
-                  title="Recommended Study Topic"
-                  description="Cell Structure and Function"
+                  title="Study Materials"
+                  description="Browse your course notes and chapters"
                   action="Start Learning"
                   href="/student/notes"
                   color="bg-blue-50"
                 />
                 <FocusCard
                   icon={<Target className="w-5 h-5 text-green-600" />}
-                  title="Pending Test"
-                  description="Chapter 5 Practice Test"
+                  title="Practice Tests"
+                  description="Take a NEET biology mock test"
                   action="Take Test"
                   href="/mock-tests"
                   color="bg-green-50"
                 />
                 <FocusCard
                   icon={<Brain className="w-5 h-5 text-purple-600" />}
-                  title="Practice Questions"
-                  description="50 new questions available"
+                  title="Question Bank"
+                  description="Practice NEET biology MCQs"
                   action="Practice Now"
                   href="/tests"
                   color="bg-purple-50"

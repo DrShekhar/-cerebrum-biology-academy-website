@@ -29,6 +29,8 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
         id: true,
         isPublished: true,
         title: true,
+        accessLevel: true,
+        courseId: true,
       },
     })
 
@@ -41,6 +43,31 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
         { success: false, error: 'Material is not available for download' },
         { status: 403 }
       )
+    }
+
+    // Entitlement gate (was missing — only isPublished was checked, so any signed-in
+    // user with a material id could track/obtain a non-entitled material). Allow only
+    // FREE materials, an explicit material_access grant, or an ACTIVE enrollment in
+    // the material's course.
+    if (material.accessLevel !== 'FREE') {
+      const grant = await prisma.material_access.findUnique({
+        where: { materialId_userId: { materialId, userId } },
+        select: { id: true },
+      })
+      let allowed = !!grant
+      if (!allowed && material.courseId) {
+        const enrollment = await prisma.enrollments.findFirst({
+          where: { userId, courseId: material.courseId, status: 'ACTIVE' },
+          select: { id: true },
+        })
+        allowed = !!enrollment
+      }
+      if (!allowed) {
+        return NextResponse.json(
+          { success: false, error: 'You need to be enrolled to access this material.' },
+          { status: 403 }
+        )
+      }
     }
 
     // Update material download count
