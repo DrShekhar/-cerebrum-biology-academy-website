@@ -1,23 +1,37 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
 
 function AdminAuthWrapper({ children }: { children: React.ReactNode }) {
   const { isLoading, isAuthenticated, user } = useAuth()
   const router = useRouter()
+  const pathname = usePathname()
   const [isAdmin, setIsAdmin] = useState(false)
   const [isCheckingRole, setIsCheckingRole] = useState(true)
+
+  // The login page lives under /admin but must NOT be guarded — otherwise an
+  // unauthenticated visitor is redirected to /admin/login, which is itself
+  // guarded, redirecting to /admin/login again → infinite "Checking admin
+  // access…" loop. Let the login page render itself.
+  const isLoginRoute = pathname === '/admin/login'
 
   // SECURITY: Auth bypass removed from client-side code
   // Server-side bypass (BYPASS_CRM_AUTH) only works in non-production environments
 
   useEffect(() => {
+    if (isLoginRoute) {
+      setIsCheckingRole(false)
+      return
+    }
     if (isLoading) return
 
     if (!isAuthenticated) {
-      router.push('/admin/login')
+      // Go straight to the real sign-in (the /admin/login page just bounces here
+      // anyway). Clear the spinner first so we never hang on this path.
+      setIsCheckingRole(false)
+      router.replace(`/sign-in?redirect_url=${encodeURIComponent(pathname || '/admin')}`)
       return
     }
 
@@ -29,9 +43,14 @@ function AdminAuthWrapper({ children }: { children: React.ReactNode }) {
     setIsCheckingRole(false)
 
     if (!hasAdminAccess) {
-      router.push('/dashboard?error=admin_required')
+      router.replace('/dashboard?error=admin_required')
     }
-  }, [isLoading, isAuthenticated, user, router])
+  }, [isLoading, isAuthenticated, user, router, pathname, isLoginRoute])
+
+  // The login route renders without the admin gate.
+  if (isLoginRoute) {
+    return <>{children}</>
+  }
 
   if (isLoading || isCheckingRole) {
     return (

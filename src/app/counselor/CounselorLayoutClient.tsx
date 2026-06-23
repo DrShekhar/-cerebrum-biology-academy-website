@@ -44,6 +44,11 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
   const { isOwner, isCheckingOwner } = useOwnerAccess()
   const [isCounselor, setIsCounselor] = useState(false)
   const [isAdmin, setIsAdmin] = useState(false)
+  const [authTimedOut, setAuthTimedOut] = useState(false)
+
+  // The login page lives under /counselor but must NOT be guarded — otherwise it
+  // bounces to /sign-in and can never render. Let it through.
+  const isLoginRoute = pathname === '/counselor/login'
 
   useEffect(() => {
     if (user) {
@@ -55,8 +60,17 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
 
   const hasCounselorAccess = isOwner || isCounselor || isAdmin
 
+  // Safety net: if auth never resolves (stuck loading), don't spin forever —
+  // fall through to the sign-in redirect after 6s.
   useEffect(() => {
-    if (isLoading || isCheckingOwner) return
+    if (isLoginRoute) return
+    const t = setTimeout(() => setAuthTimedOut(true), 6000)
+    return () => clearTimeout(t)
+  }, [isLoginRoute])
+
+  useEffect(() => {
+    if (isLoginRoute) return
+    if ((isLoading || isCheckingOwner) && !authTimedOut) return
     if (!isAuthenticated) {
       router.push(`/sign-in?redirect_url=${encodeURIComponent(pathname)}`)
       return
@@ -65,7 +79,16 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
       router.push('/dashboard?error=counselor_required')
       return
     }
-  }, [isLoading, isAuthenticated, isCheckingOwner, hasCounselorAccess, router, pathname])
+  }, [
+    isLoading,
+    isAuthenticated,
+    isCheckingOwner,
+    hasCounselorAccess,
+    router,
+    pathname,
+    isLoginRoute,
+    authTimedOut,
+  ])
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -124,7 +147,12 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [router])
 
-  if (isLoading || isCheckingOwner) {
+  // The login route renders without the counselor gate.
+  if (isLoginRoute) {
+    return <>{children}</>
+  }
+
+  if ((isLoading || isCheckingOwner) && !authTimedOut) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center">
         <div className="text-center">
