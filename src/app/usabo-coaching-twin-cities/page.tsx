@@ -165,6 +165,7 @@ export default function USABOTwinCitiesPage() {
         heroBlurb={heroBlurb}
         rigourBlurb={rigourBlurb}
         faqs={faqs}
+        apBiologyCitySlug="twin-cities"
       />
     </>
   )

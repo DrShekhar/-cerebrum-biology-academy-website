@@ -165,6 +165,7 @@ export default function USABOResearchTrianglePage() {
         heroBlurb={heroBlurb}
         rigourBlurb={rigourBlurb}
         faqs={faqs}
+        apBiologyCitySlug="research-triangle"
       />
     </>
   )

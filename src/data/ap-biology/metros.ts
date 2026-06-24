@@ -2262,6 +2262,96 @@ export const apBiologyMetros: APBiologyMetro[] = [
       },
     ],
   },
+  {
+    slug: 'twin-cities',
+    pricingTier: 'standard',
+    cityName: 'Minneapolis–St. Paul (Twin Cities)',
+    region: 'Minnesota (Twin Cities metro)',
+    timezone: 'CT (Central)',
+    timezoneIana: 'America/Chicago',
+    addressRegion: 'MN',
+    heroBlurb:
+      'The Twin Cities have a deep bench of academically competitive suburban high schools — Wayzata, Edina, Eden Prairie, Minnetonka, Mounds View — and a strong medical-research base in the University of Minnesota and Mayo Clinic. We coach AP Biology to score-5 depth for any student in the metro, live in Central Time.',
+    positioningBlurb:
+      'We teach Campbell Biology with an FRQ-rubric overlay and bridge strong students to USABO. Central-Time evening sessions fit cleanly around the school day. Open to any student of any nationality in the Twin Cities and across Minnesota.',
+    schools: [
+      'Wayzata High School',
+      'Edina High School',
+      'Eden Prairie High School',
+      'Minnetonka High School',
+      'Mounds View High School',
+      'Maple Grove Senior High',
+      'Eastview High School',
+      'Wayzata / Orono / Chanhassen feeders',
+    ],
+    faqs: [
+      {
+        question: 'Which Twin Cities schools do your students come from?',
+        answer:
+          'Students across Minneapolis–St. Paul and the suburbs — Wayzata, Edina, Eden Prairie, Minnetonka, Mounds View, Maple Grove and Eastview among them — and from any other school in Minnesota. We coach students of any nationality.',
+      },
+      {
+        question: 'Central Time scheduling for Twin Cities students?',
+        answer:
+          'Standard small-batch: 6:30–8:30 PM CT weekday evenings; weekends 9:00–11:00 AM CT. 1:1 available at any CT slot, scheduled around the school day.',
+      },
+      {
+        question: 'University of Minnesota pre-med — does AP Biology help?',
+        answer:
+          'A score of 5 earns biology credit at the University of Minnesota and signals readiness for its competitive pre-health pathways. We coach with the U of M and Mayo pipelines in mind for Minnesota-focused families.',
+      },
+      {
+        question: 'Can you bridge from AP Biology to USABO?',
+        answer:
+          'Yes — AP-5 covers roughly 60–70% of the USABO Open Exam. We bridge the remaining olympiad-only topics (ethology, biosystematics, histology, biostatistics) for students who want to compete.',
+      },
+    ],
+  },
+  {
+    slug: 'research-triangle',
+    pricingTier: 'standard',
+    cityName: 'Research Triangle (Raleigh–Durham)',
+    region: 'North Carolina (Research Triangle)',
+    timezone: 'ET (Eastern)',
+    timezoneIana: 'America/New_York',
+    addressRegion: 'NC',
+    heroBlurb:
+      'The Research Triangle is one of the densest research regions in the US, anchored by Duke, UNC Chapel Hill and NC State — and home to the renowned NC School of Science & Mathematics. With strong magnet and suburban schools (Enloe, Green Hope, Panther Creek), it is a deep AP Biology market. We coach to score-5 depth for any student, live in Eastern Time.',
+    positioningBlurb:
+      'We teach Campbell Biology with an FRQ-rubric overlay and bridge strong students to USABO. Eastern-Time evening sessions fit around the school day. Open to any student of any nationality across Raleigh, Durham, Chapel Hill and Cary.',
+    schools: [
+      'NC School of Science & Mathematics (NCSSM)',
+      'Enloe Magnet High School',
+      'Green Hope High School',
+      'Panther Creek High School',
+      'Cary High School',
+      'Green Level High School',
+      'Apex Friendship High School',
+      'Raleigh Charter High School',
+    ],
+    faqs: [
+      {
+        question: 'Which Triangle schools do your students come from?',
+        answer:
+          'Students across Raleigh, Durham, Chapel Hill and Cary — including NCSSM, Enloe, Green Hope, Panther Creek, Cary, Green Level and Apex Friendship — and from any other school in North Carolina. We coach students of any nationality.',
+      },
+      {
+        question: 'Eastern Time scheduling for Triangle students?',
+        answer:
+          'Standard small-batch: 7:00–9:00 PM ET weekday evenings; weekends 9:00–11:00 AM ET. 1:1 available at any ET slot, scheduled around the school day.',
+      },
+      {
+        question: 'Duke / UNC pre-med — does AP Biology help?',
+        answer:
+          'A score of 5 earns biology credit at many universities and signals readiness for the competitive pre-health tracks at Duke, UNC Chapel Hill and NC State. We coach with those pipelines in mind for Triangle families.',
+      },
+      {
+        question: 'Can you bridge from AP Biology to USABO?',
+        answer:
+          'Yes — AP-5 covers roughly 60–70% of the USABO Open Exam. We bridge the remaining olympiad-only topics for students who want to compete, and the Triangle (with NCSSM) is a strong USABO market.',
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup metro by slug. */

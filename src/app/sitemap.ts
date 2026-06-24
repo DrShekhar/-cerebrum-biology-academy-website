@@ -3120,6 +3120,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/ap-biology-tutor-twin-cities`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-research-triangle`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
     // AP Biology international metros — UAE + India. Targets non-US
     // AP-Biology demand (GEMS DAA, ASB, AES Delhi, Pathways, Oakridge,
     // CHIREC, etc.). Schemas pass en-AE / en-IN inLanguage so Google
