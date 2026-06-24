@@ -31,14 +31,13 @@ import {
   GlobalExitIntent,
   ChatbotWrapper,
   SalesAgentWidget,
-  DynamicDropperBatchBanner,
   DynamicFooter,
   DynamicMobileNavigation,
   DynamicPWAProvider,
-  DynamicReNEETBanner,
   DynamicTrialBanner,
   DynamicWhatsAppDesktopModal,
 } from '@/components/layout/DynamicComponents'
+import { DropperBannerGate } from '@/components/announcement/DropperBannerGate'
 import './globals.css'
 
 const geistSans = Geist({
@@ -220,11 +219,10 @@ export default function RootLayout({
                           </div>
                         </ConditionalHeaderFooter>
                         <ConditionalHeaderFooter>
-                          {/* RE-NEET 2026 reconduct announcement — sits
-                              above the trial banner so the time-sensitive
-                              CTA gets the top-of-page slot. */}
-                          <DynamicReNEETBanner />
-                          <DynamicDropperBatchBanner />
+                          {/* RE-NEET 2026 red banner removed per owner.
+                              Dropper banner now shows only on NEET-related
+                              pages (DropperBannerGate), not site-wide. */}
+                          <DropperBannerGate />
                           <DynamicTrialBanner />
                         </ConditionalHeaderFooter>
                         <main
