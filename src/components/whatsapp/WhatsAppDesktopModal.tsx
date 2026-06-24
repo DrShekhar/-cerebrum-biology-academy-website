@@ -69,6 +69,51 @@ export function WhatsAppDesktopModal() {
     }
   }, [openModal])
 
+  // MOBILE: bare <a href="wa.me/..."> links (e.g. hub-page heroes/CTAs) open
+  // WhatsApp directly and bypass the tracking helper, so the lead/owner-alert
+  // never fired. Beacon the click to the server BEFORE the link navigates away
+  // (sendBeacon survives unload), then let WhatsApp open normally — no UX change.
+  useEffect(() => {
+    if (!isMobileDevice()) return
+
+    const handleMobileWaClick = (e: MouseEvent) => {
+      const anchor = (e.target as Element)?.closest?.('a[href*="wa.me/"]') as HTMLAnchorElement
+      if (!anchor || !anchor.href.includes('wa.me/')) return
+
+      let message = ''
+      try {
+        message = new URL(anchor.href).searchParams.get('text') || ''
+      } catch {
+        const m = anchor.href.match(/[?&]text=([^&]*)/)
+        if (m) message = decodeURIComponent(m[1])
+      }
+
+      try {
+        navigator.sendBeacon?.(
+          '/api/analytics/whatsapp-click',
+          new Blob(
+            [
+              JSON.stringify({
+                source: 'link-interceptor-mobile',
+                page: window.location.pathname,
+                message,
+              }),
+            ],
+            { type: 'application/json' }
+          )
+        )
+      } catch {
+        // ignore — never block the WhatsApp open
+      }
+      // Do NOT preventDefault — let the link open WhatsApp as usual.
+    }
+
+    document.addEventListener('click', handleMobileWaClick, true)
+    return () => {
+      document.removeEventListener('click', handleMobileWaClick, true)
+    }
+  }, [])
+
   // Escape key handler
   useEffect(() => {
     if (!isOpen) return

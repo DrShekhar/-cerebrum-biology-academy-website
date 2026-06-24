@@ -1,8 +1,50 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { headers } from 'next/headers'
+import { emailService } from '@/lib/email/emailService'
 
 const WHATSAPP_NUMBER = '918826444334'
+
+// Owner alert on every WhatsApp click — so a lead is visible even if the visitor
+// never completes the WhatsApp send (desktop QR / abandons / delivery issue).
+// Best-effort, never blocks tracking. Goes to ADMIN_LEAD_EMAIL (default: owner).
+// NOTE: requires RESEND_API_KEY (or SENDGRID_API_KEY) configured in prod, else
+// the email silently no-ops.
+async function sendOwnerWhatsAppAlert(info: {
+  source: string
+  page: string
+  device: string
+  message?: string
+  campaign?: string | null
+}) {
+  const adminEmail = process.env.ADMIN_LEAD_EMAIL || 'bobbyaiims@gmail.com'
+  const when = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+  try {
+    await emailService.send({
+      to: adminEmail,
+      from: 'leads@cerebrumbiologyacademy.com',
+      subject: `📲 WhatsApp lead — ${info.page} (${info.device})`,
+      html:
+        `<h2>Someone is reaching out on WhatsApp</h2>` +
+        `<p>A visitor tapped a WhatsApp button. Even if they don't finish the chat on +91 88264 44334, here is the lead intent:</p>` +
+        `<ul>` +
+        `<li><b>Page:</b> ${info.page}</li>` +
+        `<li><b>Source:</b> ${info.source}</li>` +
+        `<li><b>Device:</b> ${info.device}</li>` +
+        (info.campaign ? `<li><b>Campaign:</b> ${info.campaign}</li>` : '') +
+        (info.message ? `<li><b>Prefilled message:</b> ${info.message}</li>` : '') +
+        `<li><b>Time (IST):</b> ${when}</li>` +
+        `</ul>`,
+      text:
+        `WhatsApp lead intent\nPage: ${info.page}\nSource: ${info.source}\nDevice: ${info.device}\n` +
+        (info.campaign ? `Campaign: ${info.campaign}\n` : '') +
+        (info.message ? `Message: ${info.message}\n` : '') +
+        `Time (IST): ${when}\n`,
+    })
+  } catch (error) {
+    console.error('Owner WhatsApp-intent alert email failed:', error)
+  }
+}
 
 interface WhatsAppClickPayload {
   source: string
@@ -81,6 +123,16 @@ export async function POST(request: NextRequest) {
         country: null,
         city: null,
       },
+    })
+
+    // Fire the owner alert (best-effort; awaited so it completes in the
+    // serverless lifecycle, but never throws into the response).
+    await sendOwnerWhatsAppAlert({
+      source: body.source,
+      page: body.page,
+      device: getDeviceType(userAgent),
+      message: body.message,
+      campaign: body.campaign || utmCampaign,
     })
 
     // Build WhatsApp URL with tracking in message

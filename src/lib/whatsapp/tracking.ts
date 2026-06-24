@@ -170,6 +170,21 @@ function openWhatsAppDirectly(params: WhatsAppTrackingParams): void {
   trackWhatsAppLead(params.source, 50)
 
   if (isMobileDevice()) {
+    // On mobile we navigate straight to WhatsApp, which KILLS any in-flight
+    // fetch — so the lead/owner-alert never fired. sendBeacon is built to
+    // survive page unload, guaranteeing the click reaches the server (which
+    // logs it + emails the owner) before WhatsApp opens.
+    try {
+      const beaconPayload = JSON.stringify({
+        source: params.source,
+        page: typeof window !== 'undefined' ? window.location.pathname : '',
+        message,
+        campaign: params.campaign || params.source,
+      })
+      navigator.sendBeacon?.(API_ENDPOINT, new Blob([beaconPayload], { type: 'application/json' }))
+    } catch {
+      // ignore — fall back to the post-navigation fetch below
+    }
     // Use location.href directly — more reliable than window.open on mobile
     // and avoids popup blockers entirely
     window.location.href = whatsappUrl
@@ -177,7 +192,7 @@ function openWhatsAppDirectly(params: WhatsAppTrackingParams): void {
     openDesktopWhatsAppModal(whatsappUrl, message, params.source)
   }
 
-  // Fire async tracking AFTER navigation starts (fire-and-forget)
+  // Fire async tracking AFTER navigation starts (fire-and-forget; desktop)
   trackWhatsAppClick(params).catch(() => {})
 }
 
