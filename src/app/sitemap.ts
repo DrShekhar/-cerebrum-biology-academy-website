@@ -2652,6 +2652,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.86,
     },
+    {
+      url: `${baseUrl}/usabo-coaching-san-diego`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/usabo-coaching-denver`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/usabo-coaching-phoenix`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/usabo-coaching-twin-cities`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/usabo-coaching-research-triangle`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.86,
+    },
     // ===== USABO content cluster (Apr 2026) =====
     {
       url: `${baseUrl}/ap-biology-vs-usabo`,
