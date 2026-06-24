@@ -219,6 +219,138 @@ export const BRAIN_BEE_CITIES: BrainBeeCity[] = [
       },
     ],
   },
+  {
+    slug: 'seattle',
+    cityName: 'Greater Seattle',
+    region: 'Washington (Puget Sound)',
+    timezone: 'PT (Pacific)',
+    neuroHubs: 'the Allen Institute for Brain Science, University of Washington and Fred Hutch',
+    schools: ['Lakeside', 'Tesla STEM', 'Interlake', 'Newport', 'Bellevue'],
+    heroBlurb:
+      'Seattle is one of the strongest neuroscience cities in the world — home to the Allen Institute for Brain Science. We coach Brain Bee contenders across the Puget Sound on a schedule that fits a demanding STEM-magnet and AP load.',
+    faqs: [
+      {
+        question: 'Which Seattle-area students is this for?',
+        answer:
+          'Students across Greater Seattle and the Eastside — including Lakeside, Tesla STEM, Interlake, Newport and Bellevue — aiming to place at a local Brain Bee chapter and advance toward the USA National Championship.',
+      },
+      {
+        question: 'Do you teach in Pacific Time?',
+        answer:
+          'Yes — all live classes run in PT, scheduled around the school day. With the Allen Institute, UW and Fred Hutch nearby, neuroscience is a natural extension subject for strong Seattle biology students.',
+      },
+    ],
+  },
+  {
+    slug: 'san-diego',
+    cityName: 'San Diego',
+    region: 'Southern California',
+    timezone: 'PT (Pacific)',
+    neuroHubs: 'UC San Diego, the Salk Institute and Scripps Research',
+    schools: ['Canyon Crest Academy', 'Torrey Pines', 'Westview', 'Del Norte', 'La Jolla'],
+    heroBlurb:
+      'San Diego pairs elite public STEM schools with a world-class neuroscience cluster (UCSD, Salk, Scripps). We coach Brain Bee contenders here around a heavy AP and research-extracurricular schedule.',
+    faqs: [
+      {
+        question: 'Which San Diego students is this for?',
+        answer:
+          'Students across San Diego County — including Canyon Crest Academy, Torrey Pines, Westview, Del Norte and La Jolla — aiming to win a local Brain Bee chapter and progress to nationals.',
+      },
+      {
+        question: 'Do you teach in Pacific Time?',
+        answer:
+          'Yes — live classes run in PT around the school day. With UCSD, the Salk Institute and Scripps Research in the metro, neuroscience is a natural fit for strong San Diego biology students.',
+      },
+    ],
+  },
+  {
+    slug: 'denver',
+    cityName: 'Denver & Boulder',
+    region: 'Colorado (Front Range)',
+    timezone: 'MT (Mountain)',
+    neuroHubs: 'the CU Anschutz Medical Campus and CU Boulder',
+    schools: ['Cherry Creek', 'Fairview (Boulder)', 'Peak to Peak', 'DSST', 'Boulder High'],
+    heroBlurb:
+      'The Colorado Front Range fields strong, science-driven students from Denver to Boulder. We coach Brain Bee contenders here in Mountain Time, around a demanding AP and activities load.',
+    faqs: [
+      {
+        question: 'Which Colorado students is this for?',
+        answer:
+          'Students across Denver and Boulder — including Cherry Creek, Fairview, Peak to Peak, DSST and Boulder High — aiming to place at a local Brain Bee chapter and advance toward nationals.',
+      },
+      {
+        question: 'Do you teach in Mountain Time?',
+        answer:
+          'Yes — all live classes run in MT, scheduled around the school day. The CU Anschutz Medical Campus and CU Boulder make neuroscience a natural extension for strong Front Range biology students.',
+      },
+    ],
+  },
+  {
+    slug: 'twin-cities',
+    cityName: 'Minneapolis–St. Paul (Twin Cities)',
+    region: 'Minnesota',
+    timezone: 'CT (Central)',
+    neuroHubs: 'the University of Minnesota and Mayo Clinic',
+    schools: ['Wayzata', 'Edina', 'Eden Prairie', 'Minnetonka', 'Mounds View'],
+    heroBlurb:
+      'The Twin Cities have a deep bench of academically competitive suburban high schools and a strong medical-research base (U of M, Mayo Clinic). We coach Brain Bee contenders here in Central Time.',
+    faqs: [
+      {
+        question: 'Which Twin Cities students is this for?',
+        answer:
+          'Students across Minneapolis–St. Paul — including Wayzata, Edina, Eden Prairie, Minnetonka and Mounds View — aiming to win a local Brain Bee chapter and progress to the national championship.',
+      },
+      {
+        question: 'Do you teach in Central Time?',
+        answer:
+          'Yes — live classes run in CT around the school day. With the University of Minnesota and Mayo Clinic in the region, neuroscience is a natural extension subject for strong Twin Cities biology students.',
+      },
+    ],
+  },
+  {
+    slug: 'research-triangle',
+    cityName: 'Research Triangle (Raleigh–Durham)',
+    region: 'North Carolina',
+    timezone: 'ET (Eastern)',
+    neuroHubs: 'Duke University, UNC Chapel Hill and NC State',
+    schools: ['NC School of Science & Mathematics', 'Enloe', 'Green Hope', 'Panther Creek', 'Cary'],
+    heroBlurb:
+      'The Research Triangle is one of the densest research regions in the US, anchored by Duke, UNC and NC State. We coach Brain Bee contenders here — including NCSSM students — in Eastern Time.',
+    faqs: [
+      {
+        question: 'Which Triangle students is this for?',
+        answer:
+          'Students across Raleigh–Durham–Chapel Hill — including the NC School of Science & Mathematics, Enloe, Green Hope, Panther Creek and Cary — aiming to place at a local Brain Bee chapter and advance to nationals.',
+      },
+      {
+        question: 'Do you teach in Eastern Time?',
+        answer:
+          'Yes — all live classes run in ET around the school day. With Duke, UNC and NC State in the Triangle, neuroscience is a natural extension subject for strong North Carolina biology students.',
+      },
+    ],
+  },
+  {
+    slug: 'phoenix',
+    cityName: 'Phoenix & Scottsdale',
+    region: 'Arizona',
+    timezone: 'MST (Arizona, no DST)',
+    neuroHubs: 'the Barrow Neurological Institute, ASU and Mayo Clinic Arizona',
+    schools: ['BASIS Scottsdale', 'BASIS Chandler', 'Hamilton', 'Chandler', 'Corona del Sol'],
+    heroBlurb:
+      'Phoenix is home to the Barrow Neurological Institute — one of the world’s leading neuroscience centers — and a powerful BASIS charter network. We coach Brain Bee contenders here in Arizona time.',
+    faqs: [
+      {
+        question: 'Which Phoenix-area students is this for?',
+        answer:
+          'Students across Phoenix, Scottsdale and Chandler — including BASIS Scottsdale, BASIS Chandler, Hamilton, Chandler and Corona del Sol — aiming to win a local Brain Bee chapter and progress to nationals.',
+      },
+      {
+        question: 'What time zone are classes in?',
+        answer:
+          'Live classes run in Arizona time (MST, no daylight saving) around the school day. With the Barrow Neurological Institute, ASU and Mayo Clinic Arizona in the metro, neuroscience is a natural fit for strong Phoenix biology students.',
+      },
+    ],
+  },
 ]
 
 export const BRAIN_BEE_CITY_BY_SLUG: Record<string, BrainBeeCity> = Object.fromEntries(
