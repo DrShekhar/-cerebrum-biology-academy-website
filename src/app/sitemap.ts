@@ -5404,6 +5404,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     })),
+    {
+      url: `${baseUrl}/honors-biology-tutor`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
     // Global brand home — the international front door (/ stays India-NEET)
     {
       url: `${baseUrl}/global`,

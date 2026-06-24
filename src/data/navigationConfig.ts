@@ -276,6 +276,14 @@ export const navigationConfig: NavigationSection[] = [
         isPopular: true,
       },
       {
+        id: 'honors-biology',
+        title: 'Honors / High-School Biology',
+        href: '/honors-biology-tutor',
+        description: 'Strong foundations for any high-school student — feeds AP, USABO, IB',
+        keywords: ['honors biology', 'high school biology', 'biology tutor', 'pre-ap biology'],
+        isNew: true,
+      },
+      {
         id: 'nri-programs',
         title: 'NRI Student Programs',
         href: '/online-biology-classes-international',
