@@ -23,7 +23,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  Activity,
   Award,
+  BookOpen,
   Brain,
   ChevronRight,
   ClipboardList,
@@ -221,6 +223,63 @@ const FAQS = [
   },
 ]
 
+// The neuroscience content itself — the syllabus moat. Three pillars mapped to
+// the rounds: the Brain Facts written foundation, the neuroanatomy/imaging
+// students must identify, and the clinical disorders the patient-diagnosis
+// round draws on. Brain Facts chapter topics are from the public Society for
+// Neuroscience book; the disorder set is framed as representative (the exact
+// official list and weights vary year to year), not an authoritative roster.
+const SYLLABUS = [
+  {
+    icon: BookOpen,
+    title: 'The Brain Facts foundation',
+    blurb:
+      'The free Society-for-Neuroscience "Brain Facts" book is the official written-exam source. We teach every chapter for retention, not skimming:',
+    items: [
+      'The neuron — structure, the action potential, synapses & neurotransmitters',
+      'Brain development across the lifespan (and the aging brain)',
+      'The senses — vision, hearing, taste, smell, touch and pain',
+      'Movement — motor cortex, basal ganglia, cerebellum',
+      'Learning, memory, language and the higher cortical functions',
+      'Emotion, stress, the reward system, sleep and the body clock',
+      'Neurological & psychiatric disorders',
+      'New frontiers — neuroethics, brain-computer interfaces, neurotech',
+    ],
+  },
+  {
+    icon: Microscope,
+    title: 'Neuroanatomy & imaging you must identify',
+    blurb:
+      'The highest-weighted rounds are practical — identifying structures on real brains, slides and scans. We drill the full map live:',
+    items: [
+      'Cerebral lobes & key cortical areas; white-matter tracts',
+      'Limbic system — hippocampus, amygdala, cingulate',
+      'Basal ganglia, thalamus and hypothalamus',
+      'Brainstem (midbrain, pons, medulla) and the cerebellum',
+      'Ventricles, meninges and the Circle of Willis (blood supply)',
+      'Spinal cord cross-section and the 12 cranial nerves',
+      'Neurohistology — neuron types, glia, myelin under the microscope',
+      'Structure identification on MRI / CT in standard planes',
+    ],
+  },
+  {
+    icon: Activity,
+    title: 'Clinical neurology for patient diagnosis',
+    blurb:
+      'The patient-diagnosis round tests reasoning over real neurological & psychiatric disorders — where AIIMS clinical training is the edge. We cover the major families:',
+    items: [
+      'Neurodegenerative — Parkinson’s, Alzheimer’s, Huntington’s, ALS',
+      'Demyelinating — multiple sclerosis',
+      'Cerebrovascular — stroke & TIA',
+      'Seizure disorders — the epilepsies',
+      'Movement & tic disorders — Tourette’s, dystonia',
+      'Psychiatric — schizophrenia, depression, bipolar, OCD, PTSD, anxiety',
+      'Neurodevelopmental — autism spectrum, ADHD',
+      'Headache & other — migraine, brain tumours, sleep disorders',
+    ],
+  },
+]
+
 export default function BrainBeeCoachingPage() {
   const waUrl =
     'https://wa.me/918826444334?text=' +
@@ -332,11 +391,10 @@ export default function BrainBeeCoachingPage() {
             The free Brain Facts book prepares the written exam &mdash; but that&rsquo;s only about
             10% of the score. Roughly 90% comes from the practical and clinical rounds &mdash; human
             neuroanatomy, neurohistology and MRI identification, patient diagnosis, and the live
-            two-strike oral elimination (the three heaviest alone &mdash; neuroanatomy, diagnosis and
-            oral &mdash; are ~70%). Cerebrum&rsquo;s AIIMS Delhi-trained faculty coach exactly those
-            rounds &mdash; live,
-            small-batch, mock-exam-heavy, and time-zone-calibrated for US, NRI and international IBB
-            aspirants.
+            two-strike oral elimination (the three heaviest alone &mdash; neuroanatomy, diagnosis
+            and oral &mdash; are ~70%). Cerebrum&rsquo;s AIIMS Delhi-trained faculty coach exactly
+            those rounds &mdash; live, small-batch, mock-exam-heavy, and time-zone-calibrated for
+            US, NRI and international IBB aspirants.
           </p>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -360,8 +418,8 @@ export default function BrainBeeCoachingPage() {
 
           <p className="mt-4 text-xs text-slate-400">
             Independent neuroscience-competition coaching. Not affiliated with or endorsed by the
-            International Brain Bee or the Society for Neuroscience. The official Brain Facts book and
-            IYNA bootcamp are free.
+            International Brain Bee or the Society for Neuroscience. The official Brain Facts book
+            and IYNA bootcamp are free.
           </p>
         </section>
 
@@ -400,7 +458,9 @@ export default function BrainBeeCoachingPage() {
                 <div
                   key={t.name}
                   className={`rounded-2xl p-6 ${
-                    idx === 1 ? 'bg-blue-700 text-white shadow-xl' : 'bg-white ring-1 ring-slate-200'
+                    idx === 1
+                      ? 'bg-blue-700 text-white shadow-xl'
+                      : 'bg-white ring-1 ring-slate-200'
                   }`}
                 >
                   {idx === 1 && (
@@ -419,7 +479,9 @@ export default function BrainBeeCoachingPage() {
                   >
                     {t.students}
                   </p>
-                  <p className={`mt-2 text-2xl font-bold ${idx === 1 ? 'text-white' : 'text-slate-900'}`}>
+                  <p
+                    className={`mt-2 text-2xl font-bold ${idx === 1 ? 'text-white' : 'text-slate-900'}`}
+                  >
                     {t.price}
                     <span
                       className={`ml-1 text-xs font-normal ${idx === 1 ? 'text-blue-200' : 'text-slate-400'}`}
@@ -456,10 +518,10 @@ export default function BrainBeeCoachingPage() {
             </div>
             <p className="mt-6 text-sm text-slate-500">
               Cohorts are timed to the competition calendar (the USA National runs ~April-May; the
-              IBB World Championship later in the year). Prices shown are all-in in USD and sit below
-              comparable Brain Bee programmes &mdash; with more live practical, clinical and oral
-              coaching included. Local-currency billing (GBP / EUR / CAD / AUD / INR) and sibling
-              discounts confirmed at your free assessment.
+              IBB World Championship later in the year). Prices shown are all-in in USD and sit
+              below comparable Brain Bee programmes &mdash; with more live practical, clinical and
+              oral coaching included. Local-currency billing (GBP / EUR / CAD / AUD / INR) and
+              sibling discounts confirmed at your free assessment.
             </p>
           </div>
         </section>
@@ -527,6 +589,38 @@ export default function BrainBeeCoachingPage() {
           </div>
         </section>
 
+        {/* Syllabus — the neuroscience content moat */}
+        <section className="bg-slate-50">
+          <div className="mx-auto max-w-6xl px-4 py-14">
+            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
+              The neuroscience that decides the rounds
+            </h2>
+            <p className="mt-3 max-w-3xl text-slate-600">
+              Three pillars, mapped to how the competition is scored: the Brain Facts written
+              foundation, the neuroanatomy and imaging you must identify by sight, and the clinical
+              disorders behind patient diagnosis. (The exact official topics and weights vary year
+              to year; this is the ground we teach across a season.)
+            </p>
+            <div className="mt-8 grid gap-5 md:grid-cols-3">
+              {SYLLABUS.map((p) => (
+                <div key={p.title} className="rounded-2xl bg-white p-6 ring-1 ring-slate-200">
+                  <p.icon className="h-6 w-6 text-blue-600" />
+                  <h3 className="mt-3 text-lg font-bold text-slate-900">{p.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{p.blurb}</p>
+                  <ul className="mt-4 space-y-2">
+                    {p.items.map((it) => (
+                      <li key={it} className="flex gap-2 text-sm leading-relaxed text-slate-700">
+                        <ChevronRight className="mt-1 h-3.5 w-3.5 shrink-0 text-blue-500" />
+                        <span>{it}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section>
           <div className="mx-auto max-w-4xl px-4 py-16">
@@ -553,7 +647,9 @@ export default function BrainBeeCoachingPage() {
         <section className="bg-slate-900 py-14 text-white">
           <div className="mx-auto max-w-3xl px-4 text-center">
             <Award className="mx-auto h-10 w-10 text-amber-300" />
-            <h2 className="mt-4 text-2xl font-bold md:text-3xl">Book a free Brain Bee assessment</h2>
+            <h2 className="mt-4 text-2xl font-bold md:text-3xl">
+              Book a free Brain Bee assessment
+            </h2>
             <p className="mx-auto mt-3 max-w-2xl text-slate-300">
               A short live session to gauge your child&rsquo;s level, map the right track (chapter,
               national, or IBB), and show how we coach the high-weight rounds. Available across all

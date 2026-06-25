@@ -284,6 +284,21 @@ export const navigationConfig: NavigationSection[] = [
         isNew: true,
       },
       {
+        id: 'college-biology',
+        title: 'College / Intro Biology',
+        href: '/college-biology-tutor',
+        description:
+          'Bio 101 & general biology for university and pre-med students — builds to MCAT',
+        keywords: [
+          'college biology',
+          'general biology',
+          'bio 101',
+          'pre-med biology',
+          'intro biology',
+        ],
+        isNew: true,
+      },
+      {
         id: 'nri-programs',
         title: 'NRI Student Programs',
         href: '/online-biology-classes-international',
