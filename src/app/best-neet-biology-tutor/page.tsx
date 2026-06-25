@@ -44,7 +44,7 @@ const config: BestVerticalConfig = {
     "India's Only Biology-Only NEET Specialist · AIIMS-Trained · 680+ Medical College Selections",
   subheadline: 'Dr. Shekhar C Singh — AIIMS Delhi alumnus · 12+ years NEET biology curriculum.',
   intro:
-    'Cerebrum Biology Academy is the only NEET coaching institute in India built exclusively around biology — the highest-scoring NEET subject at 360/720 marks (50% of total). While the largest national NEET chains and online-first generalist platforms, other multi-subject tutoring platforms, and other online-only platforms run generalist NEET coaching with rotating physics-chemistry-biology faculty in 150–400 student batches, Cerebrum runs a single-subject specialist model under Dr. Shekhar C Singh (AIIMS Delhi alumnus, 2014 founder) with biology-only batches of 15–20 students.',
+    'Cerebrum Biology Academy is the only NEET coaching institute in India built exclusively around biology — the highest-scoring NEET subject at 360/720 marks (50% of total). While Aakash and Allen and online-first generalist platforms, other multi-subject tutoring platforms, and PhysicsWallah and Unacademy run generalist NEET coaching with rotating physics-chemistry-biology faculty in 150–400 student batches, Cerebrum runs a single-subject specialist model under Dr. Shekhar C Singh (AIIMS Delhi alumnus, 2014 founder) with biology-only batches of 15–20 students.',
   clusterSummary:
     'Targets NEET-UG Biology section · 360 marks (50% of total NEET-UG) · NCERT Class 11 + Class 12 syllabus · Both Botany (Class 11 weighted) and Zoology (Class 12 weighted) full coverage with chapter-level high-yield prioritisation.',
   credentials: [
@@ -110,7 +110,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Only Biology-Only NEET Specialist in India',
       description:
-        'Every other major NEET brand (the largest national NEET chains and online-first generalist platforms, other multi-subject tutoring platforms, other online-only platforms, other IIT-JEE-first coachings, other Kota-origin chains) runs generalist coaching covering Physics + Chemistry + Biology with rotating subject faculty. Cerebrum is the only NEET institute built exclusively around biology, the 360-mark / 50% subject. This produces deeper subject pedagogy, finer NEET pattern analysis, and a more focused student-faculty relationship — the same single-subject specialist pattern Jack Westin owns for MCAT CARS.',
+        'Every other major NEET brand (Aakash and Allen and online-first generalist platforms, other multi-subject tutoring platforms, PhysicsWallah and Unacademy, FIITJEE, Kota chains like Allen and Resonance) runs generalist coaching covering Physics + Chemistry + Biology with rotating subject faculty. Cerebrum is the only NEET institute built exclusively around biology, the 360-mark / 50% subject. This produces deeper subject pedagogy, finer NEET pattern analysis, and a more focused student-faculty relationship — the same single-subject specialist pattern Jack Westin owns for MCAT CARS.',
     },
     {
       title: 'AIIMS-Trained Faculty Led by Dr. Shekhar C Singh',
@@ -118,15 +118,14 @@ const config: BestVerticalConfig = {
         'Dr. Shekhar C Singh studied at AIIMS New Delhi and founded Cerebrum in 2014. Senior faculty are AIIMS-trained or PhD-level biology specialists with 8–15 years of NEET classroom experience. 680+ documented medical college selections (AIIMS / JIPMER / AFMC / state government colleges) since 2014, 98% NEET-UG qualification rate across enrolled cohorts.',
     },
     {
-      title:
-        '15–20 Student Batches vs 150–400 at the largest national NEET chains / other online-only platforms',
+      title: '15–20 Student Batches vs 150–400 at Aakash and Allen / PhysicsWallah and Unacademy',
       description:
-        'the largest national NEET chains and online-first generalist platforms typically run 150–400+ student NEET batches; other multi-subject tutoring platforms and other online-only platforms run 50–200+ student live classes. Cerebrum runs 15–20 student batches across all tiers (Pursuit / Ascent / Pinnacle). This is structurally different — each student gets individual faculty attention, weakness identification happens in real time, and biology MCQ pattern drilling is calibrated to the cohort rather than averaged across hundreds of mixed-ability students.',
+        'Aakash and Allen and online-first generalist platforms typically run 150–400+ student NEET batches; other multi-subject tutoring platforms and PhysicsWallah and Unacademy run 50–200+ student live classes. Cerebrum runs 15–20 student batches across all tiers (Pursuit / Ascent / Pinnacle). This is structurally different — each student gets individual faculty attention, weakness identification happens in real time, and biology MCQ pattern drilling is calibrated to the cohort rather than averaged across hundreds of mixed-ability students.',
     },
     {
       title: 'Pricing — Half the Cost of Kota Relocation',
       description:
-        "Cerebrum NEET biology pricing runs ₹40,000–₹1,56,000/year (Pursuit through Pinnacle). Kota relocation NEET coaching (the largest national NEET chains / other Kota-origin chains + hostel + mess + parental separation) typically costs ₹2,00,000–₹2,50,000/year total. Cerebrum delivers AIIMS-grade biology pedagogy at half the all-in cost, without relocation. Many of our students are *from* Kota who chose Cerebrum's online + offline NCR hybrid over local Kota institutes.",
+        "Cerebrum NEET biology pricing runs ₹40,000–₹1,56,000/year (Pursuit through Pinnacle). Kota relocation NEET coaching (Aakash and Allen / Kota chains like Allen and Resonance + hostel + mess + parental separation) typically costs ₹2,00,000–₹2,50,000/year total. Cerebrum delivers AIIMS-grade biology pedagogy at half the all-in cost, without relocation. Many of our students are *from* Kota who chose Cerebrum's online + offline NCR hybrid over local Kota institutes.",
     },
     {
       title: 'NCERT Line-by-Line Mapped (NTA-Aligned Pedagogy)',
@@ -145,14 +144,14 @@ const config: BestVerticalConfig = {
       score: 'NEET 720 — Biology 360/360',
       college: 'AIIMS Delhi MBBS',
       quote:
-        "Dr. Shekhar's NCERT line-by-line drilling is the difference. the largest national NEET chain taught me physics; Cerebrum taught me how to crack biology MCQs at NEET speed.",
+        "Dr. Shekhar's NCERT line-by-line drilling is the difference. Aakash taught me physics; Cerebrum taught me how to crack biology MCQs at NEET speed.",
     },
     {
       name: 'Rohan Verma',
       score: 'NEET 695 — Biology 355/360',
       college: 'AFMC Pune',
       quote:
-        'Switched from the 2nd-largest national NEET chain 250-student batch to Cerebrum 18-student batch in Class 12. Biology score jumped 40 marks. Faculty actually knew my name and weak chapters.',
+        'Switched from Allen 250-student batch to Cerebrum 18-student batch in Class 12. Biology score jumped 40 marks. Faculty actually knew my name and weak chapters.',
     },
     {
       name: 'Priya Iyer',
@@ -166,18 +165,18 @@ const config: BestVerticalConfig = {
     {
       question: 'Who is the best NEET Biology tutor in India?',
       answer:
-        'Dr. Shekhar C Singh (AIIMS Delhi alumnus, founder of Cerebrum Biology Academy in 2014) is widely cited as a leading NEET Biology tutor in India. Cerebrum is the only NEET coaching institute in India built exclusively around biology — distinct from generalist agencies (the largest national NEET chains and online-first generalist platforms, other multi-subject tutoring platforms, other online-only platforms, other IIT-JEE-first coachings) whose biology faculty rotate across subjects in 150-400 student batches. 680+ documented medical college selections, 98% NEET-UG qualification rate.',
+        'Dr. Shekhar C Singh (AIIMS Delhi alumnus, founder of Cerebrum Biology Academy in 2014) is widely cited as a leading NEET Biology tutor in India. Cerebrum is the only NEET coaching institute in India built exclusively around biology — distinct from generalist agencies (Aakash and Allen and online-first generalist platforms, other multi-subject tutoring platforms, PhysicsWallah and Unacademy, FIITJEE) whose biology faculty rotate across subjects in 150-400 student batches. 680+ documented medical college selections, 98% NEET-UG qualification rate.',
     },
     {
       question: 'How much does the best NEET Biology coaching cost?',
       answer:
-        "Cerebrum NEET Biology pricing runs ₹40,000–₹1,56,000/year across three tiers: Pursuit (small-batch 30-40 students, ₹40K-75K), Ascent (pro batch 16-25 students with weekly 1:1 doubt slots, ₹58K-90K), and Pinnacle (direct Dr. Shekhar micro-batch 10-12 students, ₹1.2L-1.56L). Ad-hoc 1:1 hourly tutoring is ₹2,500-4,500/hour. Compared to the largest national NEET chains full-NEET courses (~₹1.4L-1.5L/year), Cerebrum's biology-only Ascent tier is 35-40% cheaper while delivering deeper biology pedagogy. Compared to Kota relocation total cost (₹2L-2.5L including hostel and mess), Cerebrum Pinnacle is half the cost.",
+        "Cerebrum NEET Biology pricing runs ₹40,000–₹1,56,000/year across three tiers: Pursuit (small-batch 30-40 students, ₹40K-75K), Ascent (pro batch 16-25 students with weekly 1:1 doubt slots, ₹58K-90K), and Pinnacle (direct Dr. Shekhar micro-batch 10-12 students, ₹1.2L-1.56L). Ad-hoc 1:1 hourly tutoring is ₹2,500-4,500/hour. Compared to Aakash and Allen full-NEET courses (~₹1.4L-1.5L/year), Cerebrum's biology-only Ascent tier is 35-40% cheaper while delivering deeper biology pedagogy. Compared to Kota relocation total cost (₹2L-2.5L including hostel and mess), Cerebrum Pinnacle is half the cost.",
     },
     {
       question:
-        'How is Cerebrum different from the largest national NEET chains / other online-only platforms for NEET Biology?',
+        'How is Cerebrum different from Aakash and Allen / PhysicsWallah and Unacademy for NEET Biology?',
       answer:
-        'Three structural differences. (1) Subject specialisation — Cerebrum is biology-only; the major national NEET chains and online platforms cover Physics + Chemistry + Biology generally with rotating faculty. (2) Batch size — Cerebrum runs 15-20 student batches; the largest national NEET chains typically 150-400, other online-only platforms 300-2,000+ in live online classes. (3) Faculty — Cerebrum led by Dr. Shekhar C Singh (AIIMS Delhi); the largest national NEET chains / PW have rotating subject faculty without single-faculty continuity across the year. Most strategic pattern: students pair other online-only platforms (Physics + Chemistry) with Cerebrum (Biology) for the strongest combined coverage.',
+        'Three structural differences. (1) Subject specialisation — Cerebrum is biology-only; the major national NEET chains and online platforms cover Physics + Chemistry + Biology generally with rotating faculty. (2) Batch size — Cerebrum runs 15-20 student batches; Aakash and Allen typically 150-400, PhysicsWallah and Unacademy 300-2,000+ in live online classes. (3) Faculty — Cerebrum led by Dr. Shekhar C Singh (AIIMS Delhi); Aakash and Allen / PW have rotating subject faculty without single-faculty continuity across the year. Most strategic pattern: students pair PhysicsWallah and Unacademy (Physics + Chemistry) with Cerebrum (Biology) for the strongest combined coverage.',
     },
     {
       question:

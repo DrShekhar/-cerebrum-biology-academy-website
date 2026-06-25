@@ -243,9 +243,9 @@ const programs: Program[] = [
 ]
 
 const competitionData = [
-  { name: 'the largest national NEET chain', range: 'Rs 1.5 - 3.5 lakh/year' },
-  { name: 'the 2nd-largest national NEET chain', range: 'Rs 1.2 - 2.8 lakh/year' },
-  { name: 'other online-only platforms', range: 'Rs 3,000 - 15,000/year (online)' },
+  { name: 'Aakash', range: 'Rs 1.5 - 3.5 lakh/year' },
+  { name: 'Allen', range: 'Rs 1.2 - 2.8 lakh/year' },
+  { name: 'PhysicsWallah and Unacademy', range: 'Rs 3,000 - 15,000/year (online)' },
   { name: 'Cerebrum', range: 'Rs 24,000 - 98,000/year', highlight: true },
 ]
 
@@ -322,9 +322,9 @@ const faqs = [
       "We offer a 7-day money-back guarantee if you're not satisfied. After that, fees for completed months are non-refundable but can be adjusted toward future months.",
   },
   {
-    question: 'How do fees compare to the largest national NEET chains?',
+    question: 'How do fees compare to Aakash and Allen?',
     answer:
-      'the largest national NEET chain charges Rs 1.5-3.5 lakh/year, the 2nd-largest national NEET chain Rs 1.2-2.8 lakh/year. We offer AIIMS-quality teaching at Rs 24k-98k/year — 3-10x more affordable while maintaining personalized small batches.',
+      'Aakash charges Rs 1.5-3.5 lakh/year, Allen Rs 1.2-2.8 lakh/year. We offer AIIMS-quality teaching at Rs 24k-98k/year — 3-10x more affordable while maintaining personalized small batches.',
   },
 ]
 
@@ -420,7 +420,7 @@ export default function FeesPage() {
               How We Compare
             </h2>
             <p className="text-lg text-slate-600 text-center mb-12 max-w-2xl mx-auto">
-              AIIMS-quality teaching at a fraction of the cost of the largest national NEET chains
+              AIIMS-quality teaching at a fraction of the cost of Aakash and Allen
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">

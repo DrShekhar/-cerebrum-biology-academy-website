@@ -166,9 +166,9 @@ const config: BestVerticalConfig = {
     },
     {
       question:
-        "Can a biology tutor help if I'm already enrolled at the largest national NEET chains / other online-only platforms?",
+        "Can a biology tutor help if I'm already enrolled at Aakash and Allen / PhysicsWallah and Unacademy?",
       answer:
-        'Yes — many serious NEET aspirants take a Cerebrum biology tutor alongside their main coaching at the largest national NEET chain, the 2nd-largest national NEET chain or other online-only platforms. Big chains rotate biology faculty and pack 100+ students per batch; a 1:1 Cerebrum tutor fills gaps in Physiology, Genetics, Plant Biology and Biotechnology. Common pattern: students keep their main coaching for Physics/Chemistry and add Cerebrum for Biology.',
+        'Yes — many serious NEET aspirants take a Cerebrum biology tutor alongside their main coaching at Aakash, Allen or PhysicsWallah and Unacademy. Big chains rotate biology faculty and pack 100+ students per batch; a 1:1 Cerebrum tutor fills gaps in Physiology, Genetics, Plant Biology and Biotechnology. Common pattern: students keep their main coaching for Physics/Chemistry and add Cerebrum for Biology.',
     },
     {
       question: 'Is online biology tutoring as effective as in-person for NEET?',

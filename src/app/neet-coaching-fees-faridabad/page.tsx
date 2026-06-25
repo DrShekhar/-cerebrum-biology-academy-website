@@ -17,7 +17,7 @@ import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 export const metadata: Metadata = {
   title: 'NEET Coaching Fees in Faridabad 2026 | Compare Coaching Fees',
   description:
-    'Compare NEET coaching fees in Faridabad 2026. Fee comparison of the 2nd-largest national NEET chain, a leading national educational institution, other Delhi-origin mid-tier institutes, Velocity, YVS vs Cerebrum Biology Academy. Best value with small batches. Call 88264-44334!',
+    'Compare NEET coaching fees in Faridabad 2026. Fee comparison of Allen, PhysicsWallah (PW), other Delhi-based institutes, Velocity, YVS vs Cerebrum Biology Academy. Best value with small batches. Call 88264-44334!',
   keywords: [
     'neet coaching fees faridabad',
     'neet coaching cost faridabad',
@@ -44,27 +44,27 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Fees in Faridabad 2026 | Compare Coaching Fees',
     description:
-      'Compare NEET coaching fees in Faridabad 2026. Fee comparison of the 2nd-largest national NEET chain, a leading national educational institution, other Delhi-origin mid-tier institutes, Velocity, YV...',
+      'Compare NEET coaching fees in Faridabad 2026. Fee comparison of Allen, PhysicsWallah (PW), other Delhi-based institutes, Velocity, YV...',
   },
 }
 
 const feeComparison = [
   {
-    institute: 'the 2nd-largest national NEET chain (Faridabad)',
+    institute: 'Allen (Faridabad)',
     class11_12: '1.5-3.5 Lakh',
     dropper: '1-2 Lakh',
     batchSize: '100-200',
     highlight: false,
   },
   {
-    institute: 'a leading national educational institution (Faridabad)',
+    institute: 'PhysicsWallah (PW) (Faridabad)',
     class11_12: '1.7-3.5 Lakh',
     dropper: '1.2-2 Lakh',
     batchSize: '80-150',
     highlight: false,
   },
   {
-    institute: 'other Delhi-origin mid-tier institutes (Faridabad)',
+    institute: 'other Delhi-based institutes (Faridabad)',
     class11_12: '1.7-3.5 Lakh',
     dropper: '1-1.8 Lakh',
     batchSize: '60-100',
@@ -150,8 +150,7 @@ const faqs = [
       'We offer merit-based scholarships up to 100% fee waiver. Based on your Class 10/11/12 marks or our scholarship test. Students with 90%+ marks can get 50-75% scholarship.',
   },
   {
-    question:
-      'Why is Cerebrum cheaper than the 2nd-largest national NEET chain/a leading national educational institution?',
+    question: 'Why is Cerebrum cheaper than Allen/PhysicsWallah (PW)?',
     answer:
       'We focus on Biology only (not all 3 subjects), keep batches small (15-20 students), and have minimal overhead. This allows us to offer premium quality at affordable fees. Our results prove that expensive does not mean better.',
   },
@@ -479,7 +478,7 @@ export default function NEETCoachingFeesFaridabadPage() {
             '@type': 'Article',
             headline: 'NEET Coaching Fees in Faridabad 2026 - Complete Comparison',
             description:
-              'Detailed comparison of NEET coaching fees across all major institutes in Faridabad including the 2nd-largest national NEET chain, a leading national educational institution, other Delhi-origin mid-tier institutes, and Cerebrum Biology Academy.',
+              'Detailed comparison of NEET coaching fees across all major institutes in Faridabad including Allen, PhysicsWallah (PW), other Delhi-based institutes, and Cerebrum Biology Academy.',
             author: {
               '@type': 'Organization',
               name: 'Cerebrum Biology Academy',

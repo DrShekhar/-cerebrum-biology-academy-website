@@ -52,12 +52,12 @@ const WHATSAPP_DEMO =
 const differentiators = [
   {
     title: 'Biology-only specialist',
-    body: 'the largest national NEET chains teach all three subjects. Our entire faculty bench is biology-only — every senior teacher has spent a decade-plus going deep into Botany, Zoology, Genetics, or Physiology. For a student where biology is the gap, that depth shows up in mock scores within the first two months.',
+    body: 'Aakash and Allen teach all three subjects. Our entire faculty bench is biology-only — every senior teacher has spent a decade-plus going deep into Botany, Zoology, Genetics, or Physiology. For a student where biology is the gap, that depth shows up in mock scores within the first two months.',
     icon: BookOpen,
   },
   {
     title: 'AIIMS-led teaching',
-    body: 'Dr. Shekhar C Singh is an AIIMS Delhi alumnus and former Academic Head at a leading national educational institution. He still teaches the Pinnacle micro-batch personally. Most coaching institutes route students to part-time faculty after the demo; here, the senior team teaches every day.',
+    body: 'Dr. Shekhar C Singh is an AIIMS Delhi alumnus and former Academic Head at PhysicsWallah (PW). He still teaches the Pinnacle micro-batch personally. Most coaching institutes route students to part-time faculty after the demo; here, the senior team teaches every day.',
     icon: Award,
   },
   {

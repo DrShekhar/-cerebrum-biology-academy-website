@@ -39,7 +39,7 @@ export const COMPETITORS: Record<string, CompetitorData> = {
     bestFor: 'Students who thrive in highly competitive, high-pressure environments',
   },
   'allen-career': {
-    name: 'XYZ Coaching (largest national NEET chain)',
+    name: 'Aakash',
     slug: 'allen-career',
     location: 'Kota & Pan-India',
     type: 'institute',
@@ -52,7 +52,7 @@ export const COMPETITORS: Record<string, CompetitorData> = {
     bestFor: 'All-subject preparation with Physics/Chemistry focus',
   },
   'aakash-institute': {
-    name: 'SKY Coaching (2nd-largest national NEET chain)',
+    name: 'Allen',
     slug: 'aakash-institute',
     location: 'Pan-India (300+ centers)',
     type: 'institute',

@@ -39,7 +39,7 @@ export default function NEETCoachingMumbai() {
     {
       question: 'Which is the best NEET coaching in Mumbai for 2026 preparation?',
       answer:
-        'Cerebrum Biology Academy is the top-rated NEET coaching for Mumbai students. While the largest national NEET chain, the 2nd-largest national NEET chain, and local institutes have physical centers, we offer AIIMS-trained faculty online at a fraction of the cost. Our 98% success rate beats most Mumbai coaching centers. No more wasting 2-3 hours daily in Mumbai traffic - study from home in Andheri, Bandra, Thane, or anywhere!',
+        'Cerebrum Biology Academy is the top-rated NEET coaching for Mumbai students. While Aakash, Allen, and local institutes have physical centers, we offer AIIMS-trained faculty online at a fraction of the cost. Our 98% success rate beats most Mumbai coaching centers. No more wasting 2-3 hours daily in Mumbai traffic - study from home in Andheri, Bandra, Thane, or anywhere!',
     },
     {
       question: 'What medical colleges can Mumbai students target through NEET?',
@@ -57,9 +57,9 @@ export default function NEETCoachingMumbai() {
         "Mumbai's traffic is notorious - students waste 2-4 hours daily commuting to coaching centers in Andheri, Dadar, or South Mumbai. Our online coaching saves this time for actual studying. A Borivali student going to Andheri coaching wastes 500+ hours/year in travel. That's equivalent to completing the entire Biology syllabus twice!",
     },
     {
-      question: 'Are fees lower than the largest national NEET chains Mumbai centers?',
+      question: 'Are fees lower than Aakash and Allen Mumbai centers?',
       answer:
-        'Significantly! the largest national NEET chains Mumbai charge ₹2-3 lakhs for 2-year programs, plus you spend ₹30,000-50,000 on travel annually. Our complete program costs ₹45,000-65,000 with same quality AIIMS faculty. You save ₹2+ lakhs while getting personalized attention impossible in 100+ student Mumbai batches.',
+        'Significantly! Aakash and Allen Mumbai charge ₹2-3 lakhs for 2-year programs, plus you spend ₹30,000-50,000 on travel annually. Our complete program costs ₹45,000-65,000 with same quality AIIMS faculty. You save ₹2+ lakhs while getting personalized attention impossible in 100+ student Mumbai batches.',
     },
     {
       question: 'Do you provide study material for Maharashtra Board students?',
@@ -95,7 +95,7 @@ export default function NEETCoachingMumbai() {
     'Jamnabai Narsee School',
     'Podar International School',
     'R.N. Podar School',
-    'Balmohan other Delhi-origin mid-tier institutes',
+    'Balmohan other Delhi-based institutes',
     'Oberoi International School',
     'Campion School',
     'St. Xaviers High School',
@@ -578,7 +578,7 @@ export default function NEETCoachingMumbai() {
                   <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-6">
                     <h3 className="text-xl font-semibold text-red-400 mb-4 flex items-center gap-2">
                       <IndianRupee className="w-5 h-5" />
-                      the largest national NEET chains Mumbai
+                      Aakash and Allen Mumbai
                     </h3>
                     <ul className="space-y-3 text-slate-300">
                       <li className="flex justify-between">

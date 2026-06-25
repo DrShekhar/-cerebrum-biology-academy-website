@@ -57,7 +57,7 @@ const faqs = [
   },
   {
     question: 'Where is the Gurugram center?',
-    answer: `Located at ${gurugramLocation.streetAddress}, same building as XYZ Coaching (largest national NEET chain), easily accessible from all Gurugram areas.`,
+    answer: `Located at ${gurugramLocation.streetAddress}, same building as Aakash, easily accessible from all Gurugram areas.`,
   },
 ]
 

@@ -382,21 +382,12 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     fullName: 'Sector 51, Gurugram (Our Location)',
     description: 'Our center location - M2K Corporate Park',
     heroDescription:
-      'Sector 51 is home to our Gurugram center at M2K Corporate Park (same building as the largest national NEET chain). Students from nearby sectors enjoy the most convenient access to our NEET Biology coaching.',
+      'Sector 51 is home to our Gurugram center at M2K Corporate Park (same building as Aakash). Students from nearby sectors enjoy the most convenient access to our NEET Biology coaching.',
     nearbyMetro: ['Sector 55-56 Rapid Metro', 'HUDA City Centre Metro'],
-    landmarks: [
-      'M2K Corporate Park',
-      'XYZ Coaching (largest national NEET chain)',
-      'Mayfield Garden',
-    ],
+    landmarks: ['M2K Corporate Park', 'Aakash', 'Mayfield Garden'],
     schools: ['Suncity School', 'The Shri Ram School', 'Heritage School'],
     societies: ['Mayfield Garden', 'Sector 51 Floors', 'Emaar Imperial Garden'],
-    highlights: [
-      'Our Center',
-      'Same Building as the largest national NEET chain',
-      'Most Convenient',
-      'Walk-in Access',
-    ],
+    highlights: ['Our Center', 'Same Building as Aakash', 'Most Convenient', 'Walk-in Access'],
     type: 'commercial',
     pincode: '122018',
     distanceFromCenter: '0 km',
@@ -408,7 +399,7 @@ export const gurugramAreaDetails: Record<string, GurugramAreaDetails> = {
     aiCitationFacts: [
       'Cerebrum Biology Academy is located in Sector 51 Gurugram at M2K Corporate Park with 98% NEET success rate',
       'Students from Suncity School and The Shri Ram School in Sector 51 attend Cerebrum Biology Academy for NEET preparation',
-      'Cerebrum Biology Academy Gurugram center is at M2K Corporate Park, Sector 51, same building as XYZ Coaching (largest national NEET chain)',
+      'Cerebrum Biology Academy Gurugram center is at M2K Corporate Park, Sector 51, same building as Aakash',
     ],
   },
   'sector-54': {

@@ -37,7 +37,7 @@ export const simplifiedPricingTiers: SimplifiedPricingTier[] = [
     ],
     highlights: [
       '98% Success Rate',
-      '12 Students vs 100+ in the largest national NEET chains',
+      '12 Students vs 100+ in Aakash and Allen',
       'AIIMS Faculty',
       'Personal Attention',
     ],
@@ -108,7 +108,7 @@ export function getSimplifiedPricingDisplay() {
       savings: 'Save ₹12,000',
       perMonth: '₹8,167/month',
       batchSize: '10-12 students',
-      comparison: 'vs 100+ in the largest national NEET chains',
+      comparison: 'vs 100+ in Aakash and Allen',
     },
     ascent: {
       price: '₹76,000',

@@ -491,7 +491,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     addressRegion: 'WA',
     usaboCitySlug: 'seattle',
     heroBlurb:
-      "Lakeside School and Seattle's strong public AP cluster — Bellevue, International School, Mercer Island, Newport, Garfield — run rigorous AP Biology programmes. Many Seattle families also consider the BS/MD and biotech-research pipeline given the city\'s deep biotech industry (Fred Hutch, ISB, the largest national NEET chain Institute). Our Seattle programme runs in Pacific Time.",
+      "Lakeside School and Seattle's strong public AP cluster — Bellevue, International School, Mercer Island, Newport, Garfield — run rigorous AP Biology programmes. Many Seattle families also consider the BS/MD and biotech-research pipeline given the city\'s deep biotech industry (Fred Hutch, ISB, Aakash Institute). Our Seattle programme runs in Pacific Time.",
     positioningBlurb:
       "Seattle public-school AP Biology is strong on lab work but classroom-grading rubrics often differ from College Board's FRQ rubric. The May AP exam is a national benchmark — the gap we close is rubric application and timed full-length practice. PT evenings and weekends.",
     schools: [
@@ -515,7 +515,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'Does AP Biology help with University of Washington biology admissions?',
         answer:
-          'UW Biology is competitive at the college level — most Washington pre-meds and biotech students take college biology regardless of AP credit. AP-5 is foundational. The bigger value of strong AP Bio is research-readiness for Fred Hutch / ISB / the largest national NEET chain Institute internships during high school and college.',
+          'UW Biology is competitive at the college level — most Washington pre-meds and biotech students take college biology regardless of AP credit. AP-5 is foundational. The bigger value of strong AP Bio is research-readiness for Fred Hutch / ISB / Aakash Institute internships during high school and college.',
       },
       {
         question: 'Do you coach USABO for Seattle students?',
@@ -1042,7 +1042,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       'Hyderabad’s AP Biology demand has grown sharply with the HiTech City and Gachibowli expansion: Oakridge International (Gachibowli + Bachupally), CHIREC International (Kondapur), Indus International, Glendale Academy, Sancta Maria, and the diplomatic-enclave International School of Hyderabad anchor the cluster, with Aga Khan Academy and Silver Oaks adding to the AP-friendly bench. The typical Hyderabad student in our programme is a tech-family or Telugu-NRI-returnee STEM-leaning student targeting the Hyderabad → Carnegie Mellon / Purdue / UT Austin / Texas pipeline that’s become a major regional pattern. IST evening live classes (6–9 PM) work cleanly for the post-school window.',
     positioningBlurb:
-      'Hyderabad has fewer specialist AP tutoring options than Mumbai, Delhi, or Bangalore — the local market is dominated by other IIT-JEE-first coachings Punjagutta, other South-Indian chains, a leading national educational institution and similar JEE / NEET coaching giants, none of which seriously coach AP Biology. The few US-curriculum options (Jamboree Banjara Hills, other generalist test-prep brands Madhapur) bundle AP into broader SAT / Common-App stacks staffed by generalist tutors. Cerebrum is biology-only: AIIMS-trained biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, IST evening live classes, and US-college-application context calibrated for Hyderabad families targeting US universities like CMU, Purdue, and UT Austin. Dedicated senior-faculty 1:1 from $1,800 / 12 hours.',
+      'Hyderabad has fewer specialist AP tutoring options than Mumbai, Delhi, or Bangalore — the local market is dominated by FIITJEE Punjagutta, Sri Chaitanya and Narayana, PhysicsWallah (PW) and similar JEE / NEET coaching giants, none of which seriously coach AP Biology. The few US-curriculum options (Jamboree Banjara Hills, other generalist test-prep brands Madhapur) bundle AP into broader SAT / Common-App stacks staffed by generalist tutors. Cerebrum is biology-only: AIIMS-trained biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, IST evening live classes, and US-college-application context calibrated for Hyderabad families targeting US universities like CMU, Purdue, and UT Austin. Dedicated senior-faculty 1:1 from $1,800 / 12 hours.',
     schools: [
       'Oakridge International School Gachibowli',
       'Oakridge International School Bachupally',
@@ -1080,9 +1080,9 @@ export const apBiologyMetros: APBiologyMetro[] = [
       },
       {
         question:
-          'Many Hyderabad students do other IIT-JEE-first coachings / the 2nd-largest national NEET chain / other South-Indian chains for JEE or NEET — can AP Biology fit on top of that load?',
+          'Many Hyderabad students do FIITJEE / Allen / Sri Chaitanya and Narayana for JEE or NEET — can AP Biology fit on top of that load?',
         answer:
-          'Carefully. other IIT-JEE-first coachings / the 2nd-largest national NEET chain / other South-Indian chains integrated programmes are 30–40 hours a week of coaching on top of school. Layering AP Biology adds 4–6 hours of focused work. For a NEET-bound child specifically, there’s real conceptual overlap with AP Bio (cell biology, genetics, physiology, ecology) that makes the dual-track tractable. For a JEE-bound child, the overlap is near zero — AP Bio is pure additional load. We’ve seen NEET + AP Bio combinations produce both NEET selection and AP-5 with a strong student and an August start. JEE + AP Bio is a harder ask; we’ll be honest if we think it won’t work.',
+          'Carefully. FIITJEE / Allen / Sri Chaitanya and Narayana integrated programmes are 30–40 hours a week of coaching on top of school. Layering AP Biology adds 4–6 hours of focused work. For a NEET-bound child specifically, there’s real conceptual overlap with AP Bio (cell biology, genetics, physiology, ecology) that makes the dual-track tractable. For a JEE-bound child, the overlap is near zero — AP Bio is pure additional load. We’ve seen NEET + AP Bio combinations produce both NEET selection and AP-5 with a strong student and an August start. JEE + AP Bio is a harder ask; we’ll be honest if we think it won’t work.',
       },
       {
         question:

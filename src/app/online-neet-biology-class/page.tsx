@@ -35,8 +35,8 @@ const faqs = [
     a: 'Online coaching is highly effective when done right. The key difference is batch size. With 5,000 students, you are watching a lecture. With 15 students at Cerebrum, you are in a classroom — teacher calls you by name, clears your doubts live, and tracks your progress weekly. Our online students score on par with offline students.',
   },
   {
-    q: 'How is Cerebrum different from PW, other multi-subject tutoring platforms, or other online-only platforms?',
-    a: 'Batch size. PW has 50,000 students per batch, other multi-subject tutoring platforms 200, other online-only platforms 500. Cerebrum has 15. We enforce camera-on policy, teacher calls students by name, doubts are cleared during class (not via chatbot), and parents get weekly progress reports. It is a classroom experience, not a YouTube video.',
+    q: 'How is Cerebrum different from PW, other multi-subject tutoring platforms, or PhysicsWallah and Unacademy?',
+    a: 'Batch size. PW has 50,000 students per batch, other multi-subject tutoring platforms 200, PhysicsWallah and Unacademy 500. Cerebrum has 15. We enforce camera-on policy, teacher calls students by name, doubts are cleared during class (not via chatbot), and parents get weekly progress reports. It is a classroom experience, not a YouTube video.',
   },
   {
     q: 'What if I miss a class?',
@@ -134,7 +134,7 @@ export default function OnlineNEETBiologyClassPage() {
                 color: 'border-red-200 bg-red-50',
               },
               {
-                name: 'other online-only platforms',
+                name: 'PhysicsWallah and Unacademy',
                 students: '500',
                 color: 'border-red-200 bg-red-50',
               },
@@ -164,7 +164,7 @@ export default function OnlineNEETBiologyClassPage() {
                   <th className="px-4 py-4 text-center">Cerebrum</th>
                   <th className="px-4 py-4 text-center">PW</th>
                   <th className="px-4 py-4 text-center">other multi-subject tutoring platforms</th>
-                  <th className="px-4 py-4 text-center">other online-only platforms</th>
+                  <th className="px-4 py-4 text-center">PhysicsWallah and Unacademy</th>
                 </tr>
               </thead>
               <tbody>

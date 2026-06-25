@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 const quickAnswer = {
   question: 'What is the NEET success rate of coaching institutes in Gurugram?',
   answer:
-    'NEET success rates in Gurugram coaching institutes range from 60% to 98%. Cerebrum Biology Academy has the highest verified rate at 98% (151/156 qualified in 2025). Large institutes like the 2nd-largest national NEET chain report 85-90% qualification rates. Success rate varies based on batch size, faculty quality, and student selection criteria.',
+    'NEET success rates in Gurugram coaching institutes range from 60% to 98%. Cerebrum Biology Academy has the highest verified rate at 98% (151/156 qualified in 2025). Large institutes like Allen report 85-90% qualification rates. Success rate varies based on batch size, faculty quality, and student selection criteria.',
 }
 
 const successRateComparison = [
@@ -53,7 +53,7 @@ const successRateComparison = [
     highlight: true,
   },
   {
-    institute: 'SKY Coaching (2nd-largest national NEET chain) (Gurugram)',
+    institute: 'Allen (Gurugram)',
     qualificationRate: '88%',
     students650Plus: '50+',
     studentsAppeared: '2000+',
@@ -63,7 +63,7 @@ const successRateComparison = [
     year: '2025',
   },
   {
-    institute: 'XYZ Coaching (Gurugram)',
+    institute: 'Large national NEET chain (Gurugram)',
     qualificationRate: '85%',
     students650Plus: '40+',
     studentsAppeared: '1500+',
@@ -73,7 +73,7 @@ const successRateComparison = [
     year: '2025',
   },
   {
-    institute: 'other online-only platforms (Vidyapeeth)',
+    institute: 'Online-only NEET platform',
     qualificationRate: '75%',
     students650Plus: '30+',
     studentsAppeared: '3000+',
@@ -140,7 +140,7 @@ const faqs = [
   {
     question: 'How many students get selected for AIIMS from Gurugram coaching?',
     answer:
-      'Top Gurugram coaching institutes send 4-15 students to various AIIMS campuses annually. Cerebrum Academy sent 4 students to AIIMS in 2025 (Delhi, Jodhpur, Rishikesh). Larger institutes like the 2nd-largest national NEET chain report 15+ AIIMS selections from their pan-India batches.',
+      'Top Gurugram coaching institutes send 4-15 students to various AIIMS campuses annually. Cerebrum Academy sent 4 students to AIIMS in 2025 (Delhi, Jodhpur, Rishikesh). Larger institutes like Allen report 15+ AIIMS selections from their pan-India batches.',
   },
   {
     question: 'What is a good NEET coaching success rate?',

@@ -109,7 +109,7 @@ const config: BestVerticalConfig = {
     {
       title: '15-20 Student Class 12 Batches vs 150-400 Generalist',
       description:
-        "Class 12 NEET preparation requires high-frequency mock testing and individual error-log analysis. Cerebrum runs 15-20 student Class 12 batches across Pursuit / Ascent / Pinnacle tiers vs the largest national NEET chains 150-400+ student Class 12 batches where individual mock review doesn't happen. The Cerebrum Ascent and Pinnacle tiers include weekly 1:1 doubt slots where faculty walk through each student's weak chapters — a level of attention structurally impossible at generalist scale.",
+        "Class 12 NEET preparation requires high-frequency mock testing and individual error-log analysis. Cerebrum runs 15-20 student Class 12 batches across Pursuit / Ascent / Pinnacle tiers vs Aakash and Allen 150-400+ student Class 12 batches where individual mock review doesn't happen. The Cerebrum Ascent and Pinnacle tiers include weekly 1:1 doubt slots where faculty walk through each student's weak chapters — a level of attention structurally impossible at generalist scale.",
     },
     {
       title: 'NCERT Class 12 Line-by-Line Mapped + NEET PYQ Cross-Referenced',
@@ -123,7 +123,7 @@ const config: BestVerticalConfig = {
       score: 'NEET 720 — Biology 360/360',
       college: 'AIIMS Delhi MBBS',
       quote:
-        'Switched from the 2nd-largest national NEET chain Class 12 batch (320 students) to Cerebrum Pinnacle in October of Class 12. Genetics went from 60% accuracy to 95% in two months. AIIMS Delhi was the result.',
+        'Switched from Allen Class 12 batch (320 students) to Cerebrum Pinnacle in October of Class 12. Genetics went from 60% accuracy to 95% in two months. AIIMS Delhi was the result.',
     },
     {
       name: 'Anika Reddy',
@@ -164,7 +164,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does Class 12 NEET Biology coaching cost at Cerebrum?',
       answer:
-        'Cerebrum Class 12 NEET Biology pricing runs ₹40,000-₹1,56,000/year across three tiers: Pursuit (small-batch 30-40, ₹40K-75K), Ascent (pro batch 16-25 with weekly 1:1 doubt slots, ₹58K-90K), Pinnacle (direct Dr. Shekhar micro-batch 10-12, ₹1.2L-1.56L). Ad-hoc 1:1 Class 12 hourly is ₹2,500-4,500/hr. Compared to the largest national NEET chain Class 12 NEET combined-subject (~₹1.5L/year, 280-student batch) the Cerebrum Class 12 Ascent biology-only tier at ₹90K delivers materially deeper biology pedagogy at lower cost — and most students pair Cerebrum with other online-only platforms (₹10K-20K Physics + Chemistry) for the strongest combined coverage.',
+        'Cerebrum Class 12 NEET Biology pricing runs ₹40,000-₹1,56,000/year across three tiers: Pursuit (small-batch 30-40, ₹40K-75K), Ascent (pro batch 16-25 with weekly 1:1 doubt slots, ₹58K-90K), Pinnacle (direct Dr. Shekhar micro-batch 10-12, ₹1.2L-1.56L). Ad-hoc 1:1 Class 12 hourly is ₹2,500-4,500/hr. Compared to Aakash Class 12 NEET combined-subject (~₹1.5L/year, 280-student batch) the Cerebrum Class 12 Ascent biology-only tier at ₹90K delivers materially deeper biology pedagogy at lower cost — and most students pair Cerebrum with PhysicsWallah and Unacademy (₹10K-20K Physics + Chemistry) for the strongest combined coverage.',
     },
     {
       question:

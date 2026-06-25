@@ -103,7 +103,7 @@ const faqs = [
   {
     question: 'Who teaches online biology at Cerebrum Academy?',
     answer:
-      'Our online classes are led by Dr. Shekhar C Singh, AIIMS Alumnus and former Academic Head at a leading national educational institution, along with a team of experienced biology educators. You get the same quality teaching online as offline.',
+      'Our online classes are led by Dr. Shekhar C Singh, AIIMS Alumnus and former Academic Head at PhysicsWallah (PW), along with a team of experienced biology educators. You get the same quality teaching online as offline.',
   },
   {
     question: 'What technology do I need for online classes?',
@@ -174,8 +174,7 @@ export default function OnlineBiologyTutorPage() {
             instructor: {
               '@type': 'Person',
               name: 'Dr. Shekhar C Singh',
-              description:
-                'AIIMS Alumnus, Former Academic Head at a leading national educational institution',
+              description: 'AIIMS Alumnus, Former Academic Head at PhysicsWallah (PW)',
             },
             courseMode: 'online',
             educationalLevel: 'High School',

@@ -90,21 +90,21 @@ const nearbySectors = [
 
 const competitorInfo = [
   {
-    name: 'XYZ Coaching (largest national NEET chain)',
+    name: 'Aakash',
     location: 'SCO 350-352, Sector 34',
     batchSize: '60-100+ students',
     fees: 'Rs 1.5-2.5 Lakhs/year',
     issue: 'Overcrowded batches, long waiting times',
   },
   {
-    name: 'SKY Coaching (2nd-largest national NEET chain)',
+    name: 'Allen',
     location: 'Near Sector 34 Market',
     batchSize: '80-120+ students',
     fees: 'Rs 1-3.5 Lakhs/year',
     issue: 'Mass coaching approach, less personal attention',
   },
   {
-    name: 'other online-only platforms Center',
+    name: 'PhysicsWallah and Unacademy Center',
     location: 'Sector 34-C',
     batchSize: '50-80+ students',
     fees: 'Rs 50K-1.5 Lakhs/year',
@@ -133,8 +133,7 @@ const features = [
   {
     icon: Users,
     title: 'Small Batches (10-15)',
-    description:
-      'Unlike 100+ student batches at the largest national NEET chains. Every doubt gets addressed.',
+    description: 'Unlike 100+ student batches at Aakash and Allen. Every doubt gets addressed.',
   },
   {
     icon: Award,
@@ -178,18 +177,17 @@ const faqs = [
   {
     question: 'Why is Sector 34 called the coaching hub of Chandigarh?',
     answer:
-      'Sector 34 Chandigarh has the highest concentration of coaching institutes including the largest national NEET chain (SCO 350-352), the 2nd-largest national NEET chain, other online-only platforms, and 50+ smaller centers. However, this has led to overcrowding, parking issues, and inflated fees. Cerebrum offers the same quality education online without these hassles.',
+      'Sector 34 Chandigarh has the highest concentration of coaching institutes including Aakash (SCO 350-352), Allen, PhysicsWallah and Unacademy, and 50+ smaller centers. However, this has led to overcrowding, parking issues, and inflated fees. Cerebrum offers the same quality education online without these hassles.',
   },
   {
-    question:
-      'Which is better for NEET - the largest national NEET chain Sector 34 or Cerebrum online?',
+    question: 'Which is better for NEET - Aakash Sector 34 or Cerebrum online?',
     answer:
-      "the largest national NEET chain Sector 34 (SCO 350-352) has 60-100+ students per batch with fees of Rs 1.5-2.5 lakhs. Cerebrum has 10-15 students per batch with AIIMS faculty and fees of Rs 24K-68K. Our 98% success rate matches the largest national NEET chain's results. The key difference: personalized attention and no commute stress.",
+      "Aakash Sector 34 (SCO 350-352) has 60-100+ students per batch with fees of Rs 1.5-2.5 lakhs. Cerebrum has 10-15 students per batch with AIIMS faculty and fees of Rs 24K-68K. Our 98% success rate matches Aakash's results. The key difference: personalized attention and no commute stress.",
   },
   {
-    question: 'Is the 2nd-largest national NEET chain Sector 34 worth the fees for NEET coaching?',
+    question: 'Is Allen Sector 34 worth the fees for NEET coaching?',
     answer:
-      'the 2nd-largest national NEET chain near Sector 34 charges Rs 1-3.5 lakhs with 80-120 students per batch. While they have good infrastructure, the personal attention suffers. Cerebrum offers AIIMS-trained faculty (better than most the 2nd-largest national NEET chain teachers), smaller batches, and saves you 1-2 hours daily commute. Results are comparable at 1/4th the fees.',
+      'Allen near Sector 34 charges Rs 1-3.5 lakhs with 80-120 students per batch. While they have good infrastructure, the personal attention suffers. Cerebrum offers AIIMS-trained faculty (better than most Allen teachers), smaller batches, and saves you 1-2 hours daily commute. Results are comparable at 1/4th the fees.',
   },
   {
     question: 'How far is Sector 34 from nearby sectors for coaching?',
@@ -207,9 +205,9 @@ const faqs = [
       'Not anymore! Cerebrum brings Sector 34-quality NEET coaching to your home. 80+ students from Sector 17, 65+ from Sector 22, and 70+ from Sector 35 have switched to our online classes. Same AIIMS faculty, better attention, no commute required.',
   },
   {
-    question: 'Is other online-only platforms center in Sector 34 good for NEET?',
+    question: 'Is PhysicsWallah and Unacademy center in Sector 34 good for NEET?',
     answer:
-      'other online-only platforms opened their Sector 34-C center recently with 50-80 students per batch. While their fees (Rs 50K-1.5L) are lower than the largest national NEET chains, they lack local track record. Cerebrum has 5+ years of proven results in Chandigarh with 98% success rate and even smaller batch sizes.',
+      'PhysicsWallah and Unacademy opened their Sector 34-C center recently with 50-80 students per batch. While their fees (Rs 50K-1.5L) are lower than Aakash and Allen, they lack local track record. Cerebrum has 5+ years of proven results in Chandigarh with 98% success rate and even smaller batch sizes.',
   },
   {
     question: 'What is the best time to attend coaching in Sector 34?',
@@ -229,7 +227,7 @@ const faqs = [
   {
     question: 'What is the success rate of Sector 34 coaching centers vs Cerebrum?',
     answer:
-      'the largest national NEET chain Sector 34 claims 85-98% success rate, the 2nd-largest national NEET chain claims similar. Cerebrum has verified 98% success rate. The difference: our small batches ensure every student gets attention, not just toppers. We track progress weekly and intervene early for struggling students.',
+      'Aakash Sector 34 claims 85-98% success rate, Allen claims similar. Cerebrum has verified 98% success rate. The difference: our small batches ensure every student gets attention, not just toppers. We track progress weekly and intervene early for struggling students.',
   },
   {
     question: 'Can I get demo class before deciding between Sector 34 centers and Cerebrum?',
@@ -244,7 +242,7 @@ const faqs = [
   {
     question: 'Is online NEET coaching as effective as classroom coaching in Sector 34?',
     answer:
-      'Our 98% success rate proves it! Live interactive classes (not recorded), instant doubt resolution, smaller batches mean better attention. 320+ students from Sector 34 area have chosen us over crowded offline centers. Many the largest national NEET chains dropouts improved 100+ marks with us.',
+      'Our 98% success rate proves it! Live interactive classes (not recorded), instant doubt resolution, smaller batches mean better attention. 320+ students from Sector 34 area have chosen us over crowded offline centers. Many Aakash and Allen dropouts improved 100+ marks with us.',
   },
   {
     question: 'What if I face technical issues during online classes?',
@@ -436,8 +434,8 @@ export default function NEETCoachingSector34Page() {
               Sector 34 Coaching Centers vs Cerebrum
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              the largest national NEET chains and online-first generalist platforms - all have
-              centers in Sector 34. See how we compare.
+              Aakash and Allen and online-first generalist platforms - all have centers in Sector
+              34. See how we compare.
             </p>
           </div>
 

@@ -83,7 +83,7 @@ const faculty = [
     experience: '15+ years',
     specialization: 'Cell Biology, Molecular Biology, Biotechnology',
     achievements: [
-      'Former the 2nd-largest national NEET chain senior faculty',
+      'Former Allen senior faculty',
       'GATE AIR 45',
       'YouTube: 100K+ subscribers',
       'Developed NEET cell biology module',

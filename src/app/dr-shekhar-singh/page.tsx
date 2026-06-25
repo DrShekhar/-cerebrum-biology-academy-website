@@ -621,9 +621,7 @@ export default function DrShekharSinghPage() {
                   <Award className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Academic Leadership</h3>
-                <p className="text-gray-600">
-                  Former Academic Head at a leading national educational institution
-                </p>
+                <p className="text-gray-600">Former Academic Head at PhysicsWallah (PW)</p>
               </div>
 
               <div className="bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 text-center animate-fadeInUp">
@@ -905,7 +903,7 @@ export default function DrShekharSinghPage() {
                 },
                 {
                   year: '2015-2020',
-                  title: 'Academic Head at a leading national educational institution',
+                  title: 'Academic Head at PhysicsWallah (PW)',
                   description:
                     'Led academic programs and mentored faculty across multiple campuses',
                   icon: School,

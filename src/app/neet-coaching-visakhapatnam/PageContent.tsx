@@ -474,7 +474,7 @@ export default function PageContent() {
                 'Bhashyam School',
                 'Oakridge International',
                 'Navy Children School',
-                'other South-Indian chains Techno School',
+                'Sri Chaitanya and Narayana Techno School',
                 'Visakha Valley School',
               ].map((school) => (
                 <div

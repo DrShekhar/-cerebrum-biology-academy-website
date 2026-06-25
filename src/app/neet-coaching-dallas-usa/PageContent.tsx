@@ -200,7 +200,7 @@ export default function NEETCoachingPageContent() {
               Richardson HS &amp; Berkner HS
             </div>
             <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-              the largest national NEET chain HS &amp; McKinney Boyd HS
+              Aakash HS &amp; McKinney Boyd HS
             </div>
           </div>
         </div>

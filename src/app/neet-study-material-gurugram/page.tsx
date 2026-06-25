@@ -78,9 +78,9 @@ const faqs = [
       'Yes! Each chapter has 50-100 MCQs with detailed solutions. We also provide OMR sheets for practice. Online tests with instant scoring are available for digital purchasers.',
   },
   {
-    question: 'How is your material different from the largest national NEET chains modules?',
+    question: 'How is your material different from Aakash and Allen modules?',
     answer:
-      'Our material is focused exclusively on Biology with NCERT line-by-line coverage. the largest national NEET chains modules are good but generic. Ours includes NEET-specific shortcuts, diagram techniques, and assertion-reason mastery - areas where Biology marks are often lost.',
+      'Our material is focused exclusively on Biology with NCERT line-by-line coverage. Aakash and Allen modules are good but generic. Ours includes NEET-specific shortcuts, diagram techniques, and assertion-reason mastery - areas where Biology marks are often lost.',
   },
   {
     question: 'What is the best way to use your study material?',

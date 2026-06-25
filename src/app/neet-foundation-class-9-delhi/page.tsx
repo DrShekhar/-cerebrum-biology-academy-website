@@ -59,9 +59,9 @@ const faqs = [
   },
   {
     question:
-      'How does Cerebrum Delhi compare to other IIT-JEE-first coachings Foundation or the 2nd-largest national NEET chain Scholastics in Delhi?',
+      'How does Cerebrum Delhi compare to FIITJEE Foundation or Allen Scholastics in Delhi?',
     answer:
-      'Three structural differences. (1) Subject focus: Cerebrum is biology-only specialist; other IIT-JEE-first coachings Foundation and the 2nd-largest national NEET chain Scholastics are combined PCB Foundation with generalist faculty. (2) Batch size: Cerebrum 15-20 students per Class 9 batch vs other IIT-JEE-first coachings/the 2nd-largest national NEET chain 150-300 students. (3) Faculty: Cerebrum Delhi has AIIMS-trained biology specialists from day one; generalist Foundation typically uses school-teacher-level instructors for Class 9-10 batches (senior faculty work Class 11-12). For biology pedagogy specifically, Cerebrum Delhi is structurally different.',
+      'Three structural differences. (1) Subject focus: Cerebrum is biology-only specialist; FIITJEE Foundation and Allen Scholastics are combined PCB Foundation with generalist faculty. (2) Batch size: Cerebrum 15-20 students per Class 9 batch vs FIITJEE/Allen 150-300 students. (3) Faculty: Cerebrum Delhi has AIIMS-trained biology specialists from day one; generalist Foundation typically uses school-teacher-level instructors for Class 9-10 batches (senior faculty work Class 11-12). For biology pedagogy specifically, Cerebrum Delhi is structurally different.',
   },
   {
     question: 'What does Class 9 NEET Foundation cost in Delhi?',

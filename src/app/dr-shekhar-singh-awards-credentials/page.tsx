@@ -131,10 +131,10 @@ const professionalRoles = [
   },
   {
     role: 'Academic Head',
-    organization: 'a leading national educational institution',
+    organization: 'PhysicsWallah (PW)',
     period: 'Pre-2014',
     description:
-      'Led curriculum development and faculty training for NEET Biology across multiple a leading national educational institution centres before founding Cerebrum.',
+      'Led curriculum development and faculty training for NEET Biology across multiple PhysicsWallah (PW) centres before founding Cerebrum.',
   },
 ]
 

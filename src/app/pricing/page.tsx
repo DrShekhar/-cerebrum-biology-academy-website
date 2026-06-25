@@ -1259,7 +1259,7 @@ export default function PricingPage() {
                   <tr className="border-b-2 border-gray-200">
                     <th className="text-left py-3 px-4 font-medium text-gray-500">Feature</th>
                     <th className="text-center py-3 px-4 font-medium text-gray-500">
-                      Kota (the largest national NEET chains)
+                      Kota (Aakash and Allen)
                     </th>
                     <th className="text-center py-3 px-4 font-medium text-gray-500">Big EdTech</th>
                     <th className="text-center py-3 px-4 font-bold text-blue-700 bg-blue-50 rounded-t-xl">

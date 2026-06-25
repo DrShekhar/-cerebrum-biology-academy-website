@@ -94,7 +94,7 @@ const config: BestVerticalConfig = {
       tier: 'Biology Ad-hoc 1:1 Hourly',
       price: '₹2,500–₹4,500 / hour',
       description:
-        'Targeted biology gap-fill. Most popular when paired with the 2nd-largest national NEET chain / the largest national NEET chain / PW for Physics + Chemistry. Book by the hour.',
+        'Targeted biology gap-fill. Most popular when paired with Allen / Aakash / PW for Physics + Chemistry. Book by the hour.',
     },
   ],
   whyBest: [
@@ -121,7 +121,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Pair with Any Physics + Chemistry Coaching',
       description:
-        'Many serious RE-NEET aspirants pair Cerebrum (Biology) with the 2nd-largest national NEET chain / the largest national NEET chain / other online-only platforms / other multi-subject tutoring platforms (Physics + Chemistry). This is the winning combination — specialist depth on biology + brand-recall generalists on the other two subjects. Cerebrum is built to integrate cleanly with your existing coaching.',
+        'Many serious RE-NEET aspirants pair Cerebrum (Biology) with Allen / Aakash / PhysicsWallah and Unacademy / other multi-subject tutoring platforms (Physics + Chemistry). This is the winning combination — specialist depth on biology + brand-recall generalists on the other two subjects. Cerebrum is built to integrate cleanly with your existing coaching.',
     },
     {
       title: 'Daily Mocks in Final 2 Weeks (Biology-Specific)',
@@ -142,14 +142,14 @@ const config: BestVerticalConfig = {
       score: 'NEET 689/720 (Bio 344/360)',
       college: 'JIPMER Puducherry',
       quote:
-        'I had the 2nd-largest national NEET chain for Physics + Chemistry and Cerebrum for Biology. Pairing was the winning move. 344 in NEET Biology.',
+        'I had Allen for Physics + Chemistry and Cerebrum for Biology. Pairing was the winning move. 344 in NEET Biology.',
     },
     {
       name: 'Sneha Reddy',
       score: 'NEET 672/720 (Bio 338/360)',
       college: 'KMC Manipal',
       quote:
-        'Hyderabad-based, did other South-Indian chains for P+C, added Cerebrum online for Biology. The biology specialisation was the differentiator.',
+        'Hyderabad-based, did Sri Chaitanya and Narayana for P+C, added Cerebrum online for Biology. The biology specialisation was the differentiator.',
     },
   ],
   faqs: [
@@ -161,7 +161,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Can I take only the biology crash course, not the full programme?',
       answer:
-        "Yes — that's exactly what the biology-only crash is designed for. ₹20K–₹30K standard, ₹40K–₹55K Pinnacle, ₹2,500–₹4,500/hour ad-hoc. Pair with your existing coaching for Physics + Chemistry (the 2nd-largest national NEET chain, the largest national NEET chain, other online-only platforms, other multi-subject tutoring platforms, or your local coaching).",
+        "Yes — that's exactly what the biology-only crash is designed for. ₹20K–₹30K standard, ₹40K–₹55K Pinnacle, ₹2,500–₹4,500/hour ad-hoc. Pair with your existing coaching for Physics + Chemistry (Allen, Aakash, PhysicsWallah and Unacademy, other multi-subject tutoring platforms, or your local coaching).",
     },
     {
       question: 'How is the biology crash structured?',

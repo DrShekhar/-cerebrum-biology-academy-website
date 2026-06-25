@@ -149,7 +149,7 @@ const faqs = [
   {
     question: 'Are biology coaching fees higher than home tutor fees?',
     answer:
-      'Not necessarily. Large coaching institutes (the 2nd-largest national NEET chain, the largest national NEET chain) charge ₹1.5–3 lakh/year for a full NEET program (including physics and chemistry). Biology-specific coaching like Cerebrum costs ₹48,000–65,000/year, which is often less than a good home tutor (₹5,000–8,000/month = ₹60,000–96,000/year) while including test series, study material, and recordings.',
+      'Not necessarily. Large coaching institutes (Allen, Aakash) charge ₹1.5–3 lakh/year for a full NEET program (including physics and chemistry). Biology-specific coaching like Cerebrum costs ₹48,000–65,000/year, which is often less than a good home tutor (₹5,000–8,000/month = ₹60,000–96,000/year) while including test series, study material, and recordings.',
   },
   {
     question: 'Does Cerebrum offer EMI or installment payment plans?',

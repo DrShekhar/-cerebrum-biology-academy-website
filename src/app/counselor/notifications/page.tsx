@@ -620,7 +620,7 @@ function generateDemoNotifications(): Notification[] {
       priority: 'HIGH',
       title: '🚀 New hot lead! Score: 85',
       message:
-        'Kavya Reddy — Class 12, Biology weak, dropper from the 2nd-largest national NEET chain. Demo attended + scholarship test registered. Auto-assigned to you.',
+        'Kavya Reddy — Class 12, Biology weak, dropper from Allen. Demo attended + scholarship test registered. Auto-assigned to you.',
       leadId: 'demo_lead_4',
       leadName: 'Kavya Reddy',
       isRead: false,

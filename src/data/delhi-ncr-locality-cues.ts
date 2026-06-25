@@ -39,9 +39,9 @@ export const delhiNCRLocalityCues: Record<DelhiNCRLocalityKey, LocalityCuesProps
       { name: 'Inderlok (interchange)', line: 'Red + Green Line' },
     ],
     localCompetitors: [
-      { brand: 'SKY Coaching (2nd-largest national NEET chain) Rohini', note: 'Sector 18, 4 km' },
-      { brand: 'XYZ Coaching (largest national NEET chain) Rohini', note: '~6 km' },
-      { brand: 'other IIT-JEE-first coachings Pitampura', note: 'Generalist, 4 km' },
+      { brand: 'Allen Rohini', note: 'Sector 18, 4 km' },
+      { brand: 'Aakash Rohini', note: '~6 km' },
+      { brand: 'FIITJEE Pitampura', note: 'Generalist, 4 km' },
       { brand: 'Career Launcher Rohini', note: 'Multi-subject' },
     ],
   },
@@ -78,15 +78,15 @@ export const delhiNCRLocalityCues: Record<DelhiNCRLocalityKey, LocalityCuesProps
     ],
     localCompetitors: [
       {
-        brand: 'SKY Coaching (2nd-largest national NEET chain) South Delhi',
+        brand: 'Allen South Delhi',
         note: 'Lajpat Nagar / Saket',
       },
       {
-        brand: 'XYZ Coaching (largest national NEET chain)',
+        brand: 'Aakash',
         note: 'Punjabi Bagh + multiple Delhi',
       },
-      { brand: 'other IIT-JEE-first coachings Kalu Sarai', note: '4 km · generalist' },
-      { brand: 'other online-only platforms Vidyapeeth', note: 'Online + select offline' },
+      { brand: 'FIITJEE Kalu Sarai', note: '4 km · generalist' },
+      { brand: 'PhysicsWallah and Unacademy Vidyapeeth', note: 'Online + select offline' },
     ],
   },
 
@@ -122,12 +122,12 @@ export const delhiNCRLocalityCues: Record<DelhiNCRLocalityKey, LocalityCuesProps
     ],
     localCompetitors: [
       {
-        brand: 'SKY Coaching (2nd-largest national NEET chain) Gurugram',
+        brand: 'Allen Gurugram',
         note: 'Sector 14 + Sector 56',
       },
-      { brand: 'XYZ Coaching (largest national NEET chain)', note: 'Sector 27 · large batches' },
-      { brand: 'other IIT-JEE-first coachings Gurugram', note: 'Generalist NEET + JEE' },
-      { brand: 'other Kota-origin chains Gurugram', note: 'Sector 14 area' },
+      { brand: 'Aakash', note: 'Sector 27 · large batches' },
+      { brand: 'FIITJEE Gurugram', note: 'Generalist NEET + JEE' },
+      { brand: 'Kota chains like Allen and Resonance Gurugram', note: 'Sector 14 area' },
     ],
   },
 
@@ -162,12 +162,12 @@ export const delhiNCRLocalityCues: Record<DelhiNCRLocalityKey, LocalityCuesProps
     ],
     localCompetitors: [
       {
-        brand: 'SKY Coaching (2nd-largest national NEET chain) Noida',
+        brand: 'Allen Noida',
         note: 'Sector 50 + Sector 18',
       },
-      { brand: 'XYZ Coaching (largest national NEET chain)', note: 'Sector 18 · large batches' },
-      { brand: 'other IIT-JEE-first coachings Noida', note: 'Sector 62 · generalist' },
-      { brand: 'other online-only platforms Noida', note: 'Multiple sectors' },
+      { brand: 'Aakash', note: 'Sector 18 · large batches' },
+      { brand: 'FIITJEE Noida', note: 'Sector 62 · generalist' },
+      { brand: 'PhysicsWallah and Unacademy Noida', note: 'Multiple sectors' },
     ],
   },
 
@@ -203,11 +203,11 @@ export const delhiNCRLocalityCues: Record<DelhiNCRLocalityKey, LocalityCuesProps
     ],
     localCompetitors: [
       {
-        brand: 'SKY Coaching (2nd-largest national NEET chain) Faridabad',
+        brand: 'Allen Faridabad',
         note: 'Sector 15 · 2 km',
       },
-      { brand: 'XYZ Coaching (largest national NEET chain)', note: 'Sector 16A · generalist' },
-      { brand: 'other IIT-JEE-first coachings Faridabad', note: 'NIT 1 · multi-subject' },
+      { brand: 'Aakash', note: 'Sector 16A · generalist' },
+      { brand: 'FIITJEE Faridabad', note: 'NIT 1 · multi-subject' },
       { brand: 'Career Launcher', note: 'Sector 21' },
     ],
   },

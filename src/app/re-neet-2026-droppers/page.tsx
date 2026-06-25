@@ -175,7 +175,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Can I take ad-hoc 1:1 sessions instead of joining the full crash?',
       answer:
-        'Yes — ad-hoc 1:1 hourly is ₹2,500–₹4,500/hour depending on faculty seniority. Common use case: droppers already enrolled at the 2nd-largest national NEET chain / the largest national NEET chain / PW for Physics + Chemistry adding Cerebrum 1:1 for biology gap-fill. Most effective when used 20–40 hours across the 6–8 week window targeting your specific weak chapters.',
+        'Yes — ad-hoc 1:1 hourly is ₹2,500–₹4,500/hour depending on faculty seniority. Common use case: droppers already enrolled at Allen / Aakash / PW for Physics + Chemistry adding Cerebrum 1:1 for biology gap-fill. Most effective when used 20–40 hours across the 6–8 week window targeting your specific weak chapters.',
     },
     {
       question: "What if I'm a 2x or 3x dropper?",

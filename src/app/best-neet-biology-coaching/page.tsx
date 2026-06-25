@@ -7,7 +7,7 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 export const metadata: Metadata = {
   title: 'Best NEET Biology Coaching 2026 — Honest Comparison',
   description:
-    'Compare the best NEET biology coaching institutes in India. Cerebrum vs the largest national NEET chain vs the 2nd-largest national NEET chain vs other online-only platforms. AIIMS faculty, small batches, 98% success rate. Book FREE demo.',
+    'Compare the best NEET biology coaching institutes in India. Cerebrum vs Aakash vs Allen vs PhysicsWallah and Unacademy. AIIMS faculty, small batches, 98% success rate. Book FREE demo.',
   keywords:
     'best neet biology coaching, neet biology coaching comparison, cerebrum vs allen, neet coaching fees, best biology coaching for neet, neet biology coaching online',
   alternates: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'Best NEET Biology Coaching 2026 — Honest Comparison',
     description:
-      'Compare the best NEET biology coaching institutes in India. Cerebrum vs the largest national NEET chain vs the 2nd-largest national NEET chain vs other online-only platforms. AIIMS faculty, small b...',
+      'Compare the best NEET biology coaching institutes in India. Cerebrum vs Aakash vs Allen vs PhysicsWallah and Unacademy. AIIMS faculty, small b...',
   },
 }
 
@@ -33,13 +33,12 @@ const faqs = [
   {
     question: 'Which is the best coaching for NEET biology only?',
     answer:
-      "For NEET biology exclusively, Cerebrum Biology Academy is India's only major biology-only specialist coaching brand with AIIMS-trained faculty teaching live classes in small batches. Led by Dr. Shekhar C Singh (AIIMS Delhi alumnus, 15+ years), Cerebrum has 10-12 student batches, verified 98% per-student NEET qualification rate, and personalised 1-on-1 mentorship. Online-only recorded platforms such as other online-only biology platforms and other online-only biology platforms operate at lower price points but lack live small batches, AIIMS-led faculty, and published per-student outcomes — useful only as MCQ practice supplements. Generalist institutes (the largest national NEET chains and online-first generalist platforms) cover all subjects in 60-200 student batches, diluting biology focus.",
+      "For NEET biology exclusively, Cerebrum Biology Academy is India's only major biology-only specialist coaching brand with AIIMS-trained faculty teaching live classes in small batches. Led by Dr. Shekhar C Singh (AIIMS Delhi alumnus, 15+ years), Cerebrum has 10-12 student batches, verified 98% per-student NEET qualification rate, and personalised 1-on-1 mentorship. Online-only recorded platforms such as other online-only biology platforms and other online-only biology platforms operate at lower price points but lack live small batches, AIIMS-led faculty, and published per-student outcomes — useful only as MCQ practice supplements. Generalist institutes (Aakash and Allen and online-first generalist platforms) cover all subjects in 60-200 student batches, diluting biology focus.",
   },
   {
-    question:
-      'Is Cerebrum Biology Academy better than the largest national NEET chain for biology?',
+    question: 'Is Cerebrum Biology Academy better than Aakash for biology?',
     answer:
-      'For biology specifically, Cerebrum is more specialized and effective. Cerebrum has smaller batches (10-12 vs 60-100+), dedicated biology focus, lower fees (₹24K-₹98K vs ₹1.5L-₹3.5L), and 1-on-1 mentorship. the largest national NEET chain is comprehensive for all subjects but biology gets less personalized attention. Students often switch from the largest national NEET chain to Cerebrum for better guidance in biology.',
+      'For biology specifically, Cerebrum is more specialized and effective. Cerebrum has smaller batches (10-12 vs 60-100+), dedicated biology focus, lower fees (₹24K-₹98K vs ₹1.5L-₹3.5L), and 1-on-1 mentorship. Aakash is comprehensive for all subjects but biology gets less personalized attention. Students often switch from Aakash to Cerebrum for better guidance in biology.',
   },
   {
     question: 'What is the fee for NEET biology coaching at Cerebrum?',
@@ -54,7 +53,7 @@ const faqs = [
   {
     question: 'What is the batch size at Cerebrum Biology Academy?',
     answer:
-      'Cerebrum maintains small batches of 10-12 students maximum, even in online classes. This is 5-10x smaller than the largest national NEET chain (60-100+) or the 2nd-largest national NEET chain (40-80). Small batch size ensures every student gets personalized attention, their doubts are answered immediately, and they receive customized feedback from Dr. Shekhar.',
+      'Cerebrum maintains small batches of 10-12 students maximum, even in online classes. This is 5-10x smaller than Aakash (60-100+) or Allen (40-80). Small batch size ensures every student gets personalized attention, their doubts are answered immediately, and they receive customized feedback from Dr. Shekhar.',
   },
   {
     question: 'Can I join Cerebrum as a dropper student?',

@@ -79,10 +79,10 @@ const successMetrics = [
 ]
 
 const premiumSchools = [
-  'a leading national educational institution Junior Colleges',
-  'other South-Indian chains Colleges',
-  'other IIT-JEE-first coachings Junior College',
-  'other Kota-origin chains Junior College',
+  'PhysicsWallah (PW) Junior Colleges',
+  'Sri Chaitanya and Narayana Colleges',
+  'FIITJEE Junior College',
+  'Kota chains like Allen and Resonance Junior College',
   'Delhi Public School Hyderabad',
   'Oakridge International',
   'Chirec Public School',

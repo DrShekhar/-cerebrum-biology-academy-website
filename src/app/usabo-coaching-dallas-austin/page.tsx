@@ -3,8 +3,7 @@ import USABOCityTemplate from '@/components/usabo/USABOCityTemplate'
 
 const cityName = 'Dallas + Austin'
 const citySlug = 'usabo-coaching-dallas-austin'
-const region =
-  'North + Central Texas (Plano + Frisco + the largest national NEET chain + Round Rock + Austin)'
+const region = 'North + Central Texas (Plano + Frisco + Aakash + Round Rock + Austin)'
 const timezone = 'CT (Central)'
 const url = 'https://cerebrumbiologyacademy.com/usabo-coaching-dallas-austin'
 
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
     'USABO coaching for Plano West Senior HS students',
     'USABO coaching for Plano East Senior HS students',
     'USABO coaching for Frisco Liberty HS students',
-    'USABO coaching for the largest national NEET chain HS students',
+    'USABO coaching for Aakash HS students',
     'USABO coaching for TAG Magnet (Dallas) students',
     'USABO tutor near me',
     'USABO tutor near me dallas + austin',
@@ -53,14 +52,14 @@ export const metadata: Metadata = {
 }
 
 const heroBlurb =
-  'The Plano / Frisco / the largest national NEET chain corridor in North Texas plus the Westlake / Westwood / LASA cluster in Austin together form a strong Texas USABO presence. Plano West, TAG Magnet, LASA, and Westlake are repeat Semifinalist producers — the Indian-American and East-Asian-American academic communities across both metros drive consistent representation. CT-evening live classes work for both Dallas and Austin time zones.'
+  'The Plano / Frisco / Aakash corridor in North Texas plus the Westlake / Westwood / LASA cluster in Austin together form a strong Texas USABO presence. Plano West, TAG Magnet, LASA, and Westlake are repeat Semifinalist producers — the Indian-American and East-Asian-American academic communities across both metros drive consistent representation. CT-evening live classes work for both Dallas and Austin time zones.'
 const rigourBlurb =
   "Dallas and Austin families come to Cerebrum for biology-specialist olympiad coaching that local Texas tutoring centres don't offer at this depth. AIIMS-trained faculty, max 12 students per batch, weekly written feedback on every past-paper — the Indian small-batch coaching tradition adapted to CT evenings. Plano West, LASA, and Westlake students already have the AP-5 foundation; what we add is olympiad-shaped depth."
 const schools = [
   'Plano West Senior HS',
   'Plano East Senior HS',
   'Frisco Liberty HS',
-  'the largest national NEET chain HS',
+  'Aakash HS',
   'TAG Magnet (Dallas)',
   'Highland Park HS',
   'Westlake HS (Austin)',
@@ -73,12 +72,12 @@ const faqs = [
   {
     question: 'Where in Dallas + Austin do you run classes?',
     answer:
-      'Classes are 100% live online — no in-person centre in North + Central Texas (Plano + Frisco + the largest national NEET chain + Round Rock + Austin). The live format means our AIIMS-trained faculty teach the same students from across the metro, scheduled for CT (Central) evenings (typically 7-9 PM your local time). Recordings are available if a student misses a session.',
+      'Classes are 100% live online — no in-person centre in North + Central Texas (Plano + Frisco + Aakash + Round Rock + Austin). The live format means our AIIMS-trained faculty teach the same students from across the metro, scheduled for CT (Central) evenings (typically 7-9 PM your local time). Recordings are available if a student misses a session.',
   },
   {
     question: 'Which Dallas + Austin schools do your students come from?',
     answer:
-      'We have repeat enrolments from the high-USABO-density schools in North + Central Texas (Plano + Frisco + the largest national NEET chain + Round Rock + Austin) — listed above. We also coach students from any US high school; the schools listed are simply the ones where multiple students from the same school have trained with us.',
+      'We have repeat enrolments from the high-USABO-density schools in North + Central Texas (Plano + Frisco + Aakash + Round Rock + Austin) — listed above. We also coach students from any US high school; the schools listed are simply the ones where multiple students from the same school have trained with us.',
   },
   {
     question: "What's the time commitment for a Dallas + Austin student in 11th or 12th grade?",

@@ -42,7 +42,7 @@ const kotaLocalities = [
     name: 'Rajeev Gandhi Nagar',
     slug: 'rajeev-gandhi-nagar',
     students: '420+',
-    highlight: 'the largest national NEET chain HQ Area',
+    highlight: 'Aakash HQ Area',
     priority: 'high',
   },
   {
@@ -166,7 +166,7 @@ const faqs = [
   {
     question: 'Which areas in Kota do you serve?',
     answer:
-      "We serve students from all Kota localities including Talwandi, Mahaveer Nagar, Rajeev Gandhi Nagar, Kunhari, Vigyan Nagar, Jawahar Nagar, Gumanpura, Borkhera, and all other areas. Whether you're near the largest national NEET chain, other Kota-origin chains, or any other institute, you can join our online classes.",
+      "We serve students from all Kota localities including Talwandi, Mahaveer Nagar, Rajeev Gandhi Nagar, Kunhari, Vigyan Nagar, Jawahar Nagar, Gumanpura, Borkhera, and all other areas. Whether you're near Aakash, Kota chains like Allen and Resonance, or any other institute, you can join our online classes.",
   },
   {
     question: 'What is the fee for Biology coaching in Kota?',
@@ -176,7 +176,7 @@ const faqs = [
   {
     question: 'Can I continue my existing Kota coaching while joining Cerebrum?',
     answer:
-      'Absolutely! Most of our Kota students are already enrolled in the largest national NEET chain, other Kota-origin chains, or other institutes for Physics and Chemistry. Our flexible evening and weekend batches are designed specifically to complement your existing Kota schedule.',
+      'Absolutely! Most of our Kota students are already enrolled in Aakash, Kota chains like Allen and Resonance, or other institutes for Physics and Chemistry. Our flexible evening and weekend batches are designed specifically to complement your existing Kota schedule.',
   },
   {
     question: 'How do you handle the intense Kota competition pressure?',
@@ -235,16 +235,16 @@ const whyKota = [
     icon: Zap,
     title: 'Complement, Not Replace',
     description:
-      'Continue your the largest national NEET chain/other Kota-origin chains coaching for PCM. Add Cerebrum for Biology excellence. Best of both worlds.',
+      'Continue your Aakash/Kota chains like Allen and Resonance coaching for PCM. Add Cerebrum for Biology excellence. Best of both worlds.',
   },
 ]
 
 const topCoachingCenters = [
-  'XYZ Coaching (largest national NEET chain)',
-  'other Kota-origin chains',
+  'Aakash',
+  'Kota chains like Allen and Resonance',
   'Bansal Classes',
   'Motion Education',
-  'other Kota-origin chains',
+  'Kota chains like Allen and Resonance',
   'Vibrant Academy',
   'Nucleus Education',
   'Etoos India',

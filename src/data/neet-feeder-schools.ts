@@ -3,7 +3,7 @@
  *
  * Powers /neet-coaching-{school-slug} pages targeting parents searching
  * "biology coaching for [school name] students" — long-tail school-name
- * intent that the largest national NEET chains dominate via their school-specific
+ * intent that Aakash and Allen dominate via their school-specific
  * landing pages. Cerebrum's gap was zero feeder-school coverage.
  *
  * 15 schools across Delhi (5), Gurugram (4), Noida (3), Faridabad (2),
@@ -159,8 +159,8 @@ function tierBonusFAQs(
         answer: `Yes — Cerebrum has placed 500+ students in AIIMS (Delhi, Jodhpur, Bhopal, Bhubaneswar, Patna, Raipur) across 12 years. Elite-school cohorts typically aim for AIIMS Delhi or MAMC; we coach to that bar with Pinnacle 1:1 mentoring directly from Dr. Shekhar. Recent toppers from ${shortName}-tier feeder schools include NEET 702/720 (AIIMS Delhi) and NEET 688/720 (MAMC Delhi).`,
       },
       {
-        question: `Should ${shortName} students pair Cerebrum with the largest national NEET chain / other IIT-JEE-first coachings for AIIMS prep?`,
-        answer: `Common pattern at elite schools: students keep the largest national NEET chain / other IIT-JEE-first coachings for Physics + Chemistry depth (especially for AIIMS-level integer/numerical questions) and add Cerebrum specifically for Biology. The 360/720 Biology section is structurally where Cerebrum's biology-only specialisation compounds vs generalist Physics + Chemistry coaching.`,
+        question: `Should ${shortName} students pair Cerebrum with Aakash / FIITJEE for AIIMS prep?`,
+        answer: `Common pattern at elite schools: students keep Aakash / FIITJEE for Physics + Chemistry depth (especially for AIIMS-level integer/numerical questions) and add Cerebrum specifically for Biology. The 360/720 Biology section is structurally where Cerebrum's biology-only specialisation compounds vs generalist Physics + Chemistry coaching.`,
       },
     ]
   }
@@ -551,7 +551,7 @@ export function buildNEETFeederSchoolConfig(key: NEETFeederSchoolKey): BestVerti
       },
       {
         title: 'AIIMS-Trained Biology-Only Faculty',
-        description: `Dr. Shekhar C Singh (AIIMS New Delhi alumnus) leads Cerebrum\'s biology-only coaching. ${s.shortName} students get biology depth that generalist tutoring (the largest national NEET chain, the 2nd-largest national NEET chain, other IIT-JEE-first coachings) cannot match — the 360/720 NEET Biology section is where Cerebrum compounds value.`,
+        description: `Dr. Shekhar C Singh (AIIMS New Delhi alumnus) leads Cerebrum\'s biology-only coaching. ${s.shortName} students get biology depth that generalist tutoring (Aakash, Allen, FIITJEE) cannot match — the 360/720 NEET Biology section is where Cerebrum compounds value.`,
       },
       {
         title: `Nearest Centre: ${s.nearestCerebrumCentre}`,
@@ -559,7 +559,7 @@ export function buildNEETFeederSchoolConfig(key: NEETFeederSchoolKey): BestVerti
       },
       {
         title: 'Small Batches (15–20) vs Mass Coaching',
-        description: `${s.shortName} students are academically strong and used to small-class attention at school. Cerebrum\'s 15–20 student batches preserve that environment — vs 150–400 student batches at the largest national NEET chain, the 2nd-largest national NEET chain, other IIT-JEE-first coachings Delhi NCR.`,
+        description: `${s.shortName} students are academically strong and used to small-class attention at school. Cerebrum\'s 15–20 student batches preserve that environment — vs 150–400 student batches at Aakash, Allen, FIITJEE Delhi NCR.`,
       },
       {
         title: 'Weekly 1:1 Doubt Slots + WhatsApp Same-Day',
@@ -575,7 +575,7 @@ export function buildNEETFeederSchoolConfig(key: NEETFeederSchoolKey): BestVerti
       [
         {
           question: `What is the best NEET coaching for ${s.shortName} students?`,
-          answer: `Cerebrum Biology Academy is widely cited as the best NEET biology coaching for ${s.shortName} students. ${s.curriculum} curriculum-aligned pacing, AIIMS-trained Dr. Shekhar C Singh leading biology pedagogy, small batches of 15–20 students, weekly 1:1 doubt slots. the largest national NEET chain, the 2nd-largest national NEET chain, other IIT-JEE-first coachings in ${s.city} are generalist alternatives — many ${s.shortName} students pair Cerebrum (Biology) with their existing Physics + Chemistry coaching.`,
+          answer: `Cerebrum Biology Academy is widely cited as the best NEET biology coaching for ${s.shortName} students. ${s.curriculum} curriculum-aligned pacing, AIIMS-trained Dr. Shekhar C Singh leading biology pedagogy, small batches of 15–20 students, weekly 1:1 doubt slots. Aakash, Allen, FIITJEE in ${s.city} are generalist alternatives — many ${s.shortName} students pair Cerebrum (Biology) with their existing Physics + Chemistry coaching.`,
         },
         {
           question: `Where is the nearest Cerebrum centre from ${s.shortName}?`,
@@ -591,7 +591,7 @@ export function buildNEETFeederSchoolConfig(key: NEETFeederSchoolKey): BestVerti
         },
         {
           question: `Should I switch from my current coaching for NEET biology?`,
-          answer: `Not necessarily. If your current coaching delivers solid biology depth, stay. If biology was a weak section (or you scored < 280/360 in mock biology), add Cerebrum's biology-only crash alongside your existing coaching. Many ${s.shortName} students keep the largest national NEET chains / other IIT-JEE-first coachings for Physics + Chemistry and add Cerebrum specifically for Biology.`,
+          answer: `Not necessarily. If your current coaching delivers solid biology depth, stay. If biology was a weak section (or you scored < 280/360 in mock biology), add Cerebrum's biology-only crash alongside your existing coaching. Many ${s.shortName} students keep Aakash and Allen / FIITJEE for Physics + Chemistry and add Cerebrum specifically for Biology.`,
         },
         {
           question: `Do you provide NRI quota MBBS guidance?`,

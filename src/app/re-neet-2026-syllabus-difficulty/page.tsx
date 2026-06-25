@@ -42,9 +42,9 @@ const config: BestVerticalConfig = {
   ribbon: 'Syllabus Unchanged · Difficulty Expected Slightly Higher · NCERT Strategy Below',
   subheadline: 'What we know — and what it means for your 6–8 week revision arc.',
   intro:
-    "After the 12 May 2026 NEET-UG cancellation, two questions dominate every RE-NEET 2026 aspirant's mind: will the syllabus change, and will the reconduct exam be tougher than the original 3 May paper? This page documents the official NTA position, the analyst consensus from the 2nd-largest national NEET chain + Shiksha + Cerebrum, and the strategy implications for biology aspirants in the 6–8 week window.",
+    "After the 12 May 2026 NEET-UG cancellation, two questions dominate every RE-NEET 2026 aspirant's mind: will the syllabus change, and will the reconduct exam be tougher than the original 3 May paper? This page documents the official NTA position, the analyst consensus from Allen + Shiksha + Cerebrum, and the strategy implications for biology aspirants in the 6–8 week window.",
   clusterSummary:
-    'Source: NTA notification 12 May 2026 + analyst commentary from the 2nd-largest national NEET chain blog (13 May), Shiksha (13 May), Cerebrum biology faculty analysis',
+    'Source: NTA notification 12 May 2026 + analyst commentary from Allen blog (13 May), Shiksha (13 May), Cerebrum biology faculty analysis',
   credentials: [
     { label: 'Syllabus: UNCHANGED' },
     { label: 'Difficulty: SLIGHTLY HIGHER' },
@@ -97,7 +97,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Difficulty: Slightly Higher Per Analyst Consensus',
       description:
-        'the 2nd-largest national NEET chain blog (13 May), Shiksha (13 May), and Cerebrum biology faculty all converge on the same forecast: RE-NEET 2026 will be slightly harder than the cancelled 3 May paper. Two structural reasons: (a) NTA now has time to set newer questions vs the rushed original, (b) the cancellation pressure incentivises NTA to produce a more rigorous paper to deter future leaks.',
+        'Allen blog (13 May), Shiksha (13 May), and Cerebrum biology faculty all converge on the same forecast: RE-NEET 2026 will be slightly harder than the cancelled 3 May paper. Two structural reasons: (a) NTA now has time to set newer questions vs the rushed original, (b) the cancellation pressure incentivises NTA to produce a more rigorous paper to deter future leaks.',
     },
     {
       title: 'Strategy 1: NCERT Line-by-Line, Not Reference Books',
@@ -152,7 +152,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Will the RE-NEET 2026 exam be tougher than the original 3 May paper?',
       answer:
-        'Analyst consensus (the 2nd-largest national NEET chain blog, Shiksha, Cerebrum biology faculty, all 13 May 2026) is that difficulty will be slightly higher. Two structural reasons: (a) NTA has time to set new questions vs the rushed original, (b) cancellation pressure incentivises NTA to produce a more rigorous paper to deter future leaks. Expect a 5–10% difficulty uptick, not a wholesale pattern change.',
+        'Analyst consensus (Allen blog, Shiksha, Cerebrum biology faculty, all 13 May 2026) is that difficulty will be slightly higher. Two structural reasons: (a) NTA has time to set new questions vs the rushed original, (b) cancellation pressure incentivises NTA to produce a more rigorous paper to deter future leaks. Expect a 5–10% difficulty uptick, not a wholesale pattern change.',
     },
     {
       question: 'Should I start new topics in the 6–8 week window?',

@@ -42,8 +42,7 @@ const features = [
   {
     icon: Users,
     title: 'Small Batches (15-20)',
-    description:
-      'Personal attention unlike Kota/the largest national NEET chain batches of 200-400 students.',
+    description: 'Personal attention unlike Kota/Aakash batches of 200-400 students.',
   },
   {
     icon: Award,

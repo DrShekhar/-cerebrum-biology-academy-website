@@ -44,8 +44,8 @@ export const locationDatabase: LocationData[] = [
     competitionLevel: 'very-high',
     localContext: {
       majorCompetitors: [
-        'XYZ Coaching (largest national NEET chain)',
-        'other Kota-origin chains',
+        'Aakash',
+        'Kota chains like Allen and Resonance',
         'Bansal Classes',
         'Motion Education',
       ],
@@ -104,10 +104,10 @@ export const locationDatabase: LocationData[] = [
     competitionLevel: 'very-high',
     localContext: {
       majorCompetitors: [
-        'SKY Coaching (2nd-largest national NEET chain)',
-        'other IIT-JEE-first coachings',
+        'Allen',
+        'FIITJEE',
         'Brilliant Tutorials',
-        'other Kota-origin chains',
+        'Kota chains like Allen and Resonance',
       ],
       avgCoachingFee: 180000,
       successRate: 15,
@@ -169,10 +169,10 @@ export const locationDatabase: LocationData[] = [
     competitionLevel: 'very-high',
     localContext: {
       majorCompetitors: [
-        'other South-Indian chains',
-        'a leading national educational institution',
-        'other Kota-origin chains',
-        'other IIT-JEE-first coachings',
+        'Sri Chaitanya and Narayana',
+        'PhysicsWallah (PW)',
+        'Kota chains like Allen and Resonance',
+        'FIITJEE',
       ],
       avgCoachingFee: 120000,
       successRate: 18,
@@ -230,7 +230,7 @@ export const locationDatabase: LocationData[] = [
     medicalColleges: 18,
     competitionLevel: 'high',
     localContext: {
-      majorCompetitors: ["BYJU'S", 'other online-only platforms', 'BASE', 'Deeksha'],
+      majorCompetitors: ["BYJU'S", 'PhysicsWallah and Unacademy', 'BASE', 'Deeksha'],
       avgCoachingFee: 140000,
       successRate: 20,
       topMedicalColleges: ['BMCRI', "St. John's Medical College", 'MS Ramaiah Medical College'],
@@ -279,12 +279,7 @@ export const locationDatabase: LocationData[] = [
     medicalColleges: 20,
     competitionLevel: 'high',
     localContext: {
-      majorCompetitors: [
-        'IIT Home',
-        'Pace IIT & Medical',
-        'other IIT-JEE-first coachings',
-        'the largest national NEET chain',
-      ],
+      majorCompetitors: ['IIT Home', 'Pace IIT & Medical', 'FIITJEE', 'Aakash'],
       avgCoachingFee: 200000,
       successRate: 16,
       topMedicalColleges: ['KEM Hospital', 'LTMMC', 'GSMC', 'TNMC'],
@@ -337,12 +332,7 @@ export const locationDatabase: LocationData[] = [
     medicalColleges: 15,
     competitionLevel: 'high',
     localContext: {
-      majorCompetitors: [
-        'Pace IIT & Medical',
-        'Career Launcher',
-        'IITians Pace',
-        'the largest national NEET chain',
-      ],
+      majorCompetitors: ['Pace IIT & Medical', 'Career Launcher', 'IITians Pace', 'Aakash'],
       avgCoachingFee: 130000,
       successRate: 22,
       topMedicalColleges: ['AFMC Pune', 'BJ Medical College', 'Dr. D.Y. Patil Medical College'],
@@ -395,12 +385,7 @@ export const locationDatabase: LocationData[] = [
     medicalColleges: 25,
     competitionLevel: 'high',
     localContext: {
-      majorCompetitors: [
-        'TIME',
-        'other South-Indian chains',
-        'a leading national educational institution',
-        'PACE',
-      ],
+      majorCompetitors: ['TIME', 'Sri Chaitanya and Narayana', 'PhysicsWallah (PW)', 'PACE'],
       avgCoachingFee: 110000,
       successRate: 25,
       topMedicalColleges: [
@@ -459,9 +444,9 @@ export const locationDatabase: LocationData[] = [
     competitionLevel: 'high',
     localContext: {
       majorCompetitors: [
-        'other Kota-origin chains',
+        'Kota chains like Allen and Resonance',
         'Bansal Classes',
-        'the largest national NEET chain',
+        'Aakash',
         'Motion',
       ],
       avgCoachingFee: 125000,
@@ -513,8 +498,8 @@ export const locationDatabase: LocationData[] = [
     localContext: {
       majorCompetitors: [
         'Career Launcher',
-        'other Kota-origin chains',
-        'the largest national NEET chain',
+        'Kota chains like Allen and Resonance',
+        'Aakash',
         'Local institutes',
       ],
       avgCoachingFee: 100000,
@@ -569,8 +554,8 @@ export const locationDatabase: LocationData[] = [
     competitionLevel: 'moderate',
     localContext: {
       majorCompetitors: [
-        'other Kota-origin chains',
-        'other IIT-JEE-first coachings',
+        'Kota chains like Allen and Resonance',
+        'FIITJEE',
         'Local coaching centers',
       ],
       avgCoachingFee: 90000,
@@ -626,8 +611,8 @@ export const locationDatabase: LocationData[] = [
     competitionLevel: 'moderate',
     localContext: {
       majorCompetitors: [
-        'a leading national educational institution',
-        'other Kota-origin chains',
+        'PhysicsWallah (PW)',
+        'Kota chains like Allen and Resonance',
         'Local institutes',
       ],
       avgCoachingFee: 75000,
@@ -682,7 +667,7 @@ export const locationDatabase: LocationData[] = [
     medicalColleges: 6,
     competitionLevel: 'moderate',
     localContext: {
-      majorCompetitors: ['other IIT-JEE-first coachings', 'Career Launcher', 'Local coaching'],
+      majorCompetitors: ['FIITJEE', 'Career Launcher', 'Local coaching'],
       avgCoachingFee: 80000,
       successRate: 20,
       topMedicalColleges: ['SCB Medical College', 'MKCG Medical College', 'VIMSAR'],

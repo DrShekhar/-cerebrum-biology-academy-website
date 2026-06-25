@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   description:
     'Compare Cerebrum Biology Academy with other NEET coaching institutes. See why we offer better results, smaller batches, expert faculty at competitive fees. Make informed choice!',
   keywords:
-    'compare NEET coaching, best coaching comparison, NEET institute comparison, coaching fees comparison, the largest national NEET chain vs Cerebrum, other Kota-origin chains vs Cerebrum, coaching comparison',
+    'compare NEET coaching, best coaching comparison, NEET institute comparison, coaching fees comparison, Aakash vs Cerebrum, Kota chains like Allen and Resonance vs Cerebrum, coaching comparison',
   openGraph: {
     title: 'Why Cerebrum Biology Academy | Compare & Choose the Best',
     description:
-      'Detailed comparison: success rates, faculty, batch sizes, fees, support. See why 15,000+ students chose us over the largest national NEET chain, other Kota-origin chains, the 2nd-largest national NEET chain.',
+      'Detailed comparison: success rates, faculty, batch sizes, fees, support. See why 15,000+ students chose us over Aakash, Kota chains like Allen and Resonance, Allen.',
     images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/compare',
     type: 'website',

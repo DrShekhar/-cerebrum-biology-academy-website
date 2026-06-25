@@ -2244,7 +2244,7 @@ export const chapterNotesSEOPages: Record<string, SEOLandingContent> = {
     ],
     testimonials: [
       {
-        name: 'the 2nd-largest national NEET chain Verma',
+        name: 'Allen Verma',
         achievement: 'NEET 2024 - 660/720',
         quote:
           'The modification tables with diagrams for root, stem, and leaf were incredibly helpful!',

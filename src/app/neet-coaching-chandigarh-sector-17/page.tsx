@@ -97,7 +97,7 @@ const faqs = [
   {
     question: 'How much does NEET coaching cost for Sector 17 students?',
     answer:
-      'Cerebrum fees: Foundation Rs 24,000/year, Comprehensive Rs 36,000/year, Dropper Rs 68,000/year. Compare to Sector 34: the largest national NEET chain Rs 1.5-2.5 Lakhs, the 2nd-largest national NEET chain Rs 1-3.5 Lakhs. Save 60-70%!',
+      'Cerebrum fees: Foundation Rs 24,000/year, Comprehensive Rs 36,000/year, Dropper Rs 68,000/year. Compare to Sector 34: Aakash Rs 1.5-2.5 Lakhs, Allen Rs 1-3.5 Lakhs. Save 60-70%!',
   },
   {
     question: 'What are batch timings for Sector 17 students?',

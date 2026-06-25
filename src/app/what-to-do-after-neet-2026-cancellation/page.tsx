@@ -63,8 +63,7 @@ const config: BestVerticalConfig = {
     { title: 'RE-NEET Online Coaching', href: '/re-neet-2026-online-coaching' },
     { title: 'RE-NEET for Droppers', href: '/re-neet-2026-droppers' },
     {
-      title:
-        'Cerebrum vs the 2nd-largest national NEET chain vs other online-only platforms (RE-NEET)',
+      title: 'Cerebrum vs Allen vs PhysicsWallah and Unacademy (RE-NEET)',
       href: '/re-neet-2026-cerebrum-vs-aakash-vs-pw',
     },
     { title: 'RE-NEET Coaching in Kota', href: '/re-neet-2026-kota' },

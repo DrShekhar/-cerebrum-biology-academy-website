@@ -130,8 +130,7 @@ const items = [
     position: 5,
     name: 'CBSE / ICSE Board coaching institutes',
     category: 'CBSE/ICSE Class 11-12 Biology board exam coaching',
-    organization:
-      'School tuition centres, other IIT-JEE-first coachings Board+JEE+NEET tracks, Brilliant Tutorials',
+    organization: 'School tuition centres, FIITJEE Board+JEE+NEET tracks, Brilliant Tutorials',
     organizationUrl: null,
     isCanonical: false,
     credentials:

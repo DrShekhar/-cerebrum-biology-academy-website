@@ -68,10 +68,9 @@ const faqs = [
       'Common Mayur Vihar feeder schools across the Cerebrum cohort: DPS Mayur Vihar (Phase 1), Vasant Public School (Patparganj), Modern Public School (Shalimar Bagh has Mayur Vihar sister campus), Father Agnel School (Noida-adjacent), ASN Senior Secondary School (Mayur Vihar Phase 1), Bal Bhavan Public School (Mayur Vihar), Salwan Public School (Mayur Vihar). Students from these schools join Pursuit (small-batch 30-40, ₹40K-75K), Ascent (pro batch 16-25 with weekly 1:1 doubt slots, ₹58K-90K), or Pinnacle (direct Dr. Shekhar 1:1 micro-batch 10-12, ₹1.2L-1.56L) depending on target NEET rank.',
   },
   {
-    question:
-      'How does Cerebrum compare to the largest national NEET chains / other IIT-JEE-first coachings for Mayur Vihar students?',
+    question: 'How does Cerebrum compare to Aakash and Allen / FIITJEE for Mayur Vihar students?',
     answer:
-      'the largest national NEET chains / other IIT-JEE-first coachings Delhi run combined Physics + Chemistry + Biology batches of 200-400 students with rotating subject faculty (typically ₹1.4L-1.6L/year). Cerebrum is biology-only with 15-20 student batches and continuous AIIMS-trained faculty (₹40K-1.56L/year biology-only). Most strategic Mayur Vihar pattern: Cerebrum biology + other online-only platforms / other multi-subject tutoring platforms / other online-only platforms for PC = total ₹70K-1.1L with materially deeper biology pedagogy than full-the largest national NEET chain at half the all-in cost.',
+      'Aakash and Allen / FIITJEE Delhi run combined Physics + Chemistry + Biology batches of 200-400 students with rotating subject faculty (typically ₹1.4L-1.6L/year). Cerebrum is biology-only with 15-20 student batches and continuous AIIMS-trained faculty (₹40K-1.56L/year biology-only). Most strategic Mayur Vihar pattern: Cerebrum biology + PhysicsWallah and Unacademy / other multi-subject tutoring platforms / PhysicsWallah and Unacademy for PC = total ₹70K-1.1L with materially deeper biology pedagogy than full-Aakash at half the all-in cost.',
   },
   {
     question: 'What does Cerebrum NEET coaching cost in Mayur Vihar?',

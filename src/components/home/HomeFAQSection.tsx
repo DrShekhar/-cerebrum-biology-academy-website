@@ -35,7 +35,7 @@ const homepageFAQs: FAQ[] = [
   {
     question: 'What is the batch size at Cerebrum Biology Academy?',
     answer:
-      "We maintain small batches of 15-20 students per class to ensure personalised attention. This is materially smaller than generalist NEET chains (the largest national NEET chains / other online-only platforms typically run 150-400 students per batch) and lets our AIIMS-trained faculty track each student's chapter-level weaknesses and provide weekly 1:1 doubt slots in the Ascent and Pinnacle tiers.",
+      "We maintain small batches of 15-20 students per class to ensure personalised attention. This is materially smaller than chains like Allen, Aakash and PW (Aakash and Allen / PhysicsWallah and Unacademy typically run 150-400 students per batch) and lets our AIIMS-trained faculty track each student's chapter-level weaknesses and provide weekly 1:1 doubt slots in the Ascent and Pinnacle tiers.",
   },
   {
     question: 'Do you offer NEET Foundation coaching for Class 9 and Class 10 students?',

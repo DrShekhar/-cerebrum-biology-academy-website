@@ -43,12 +43,12 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching institute for Greater Noida students?',
     answer:
-      'For Biology-focused NEET preparation, Cerebrum Biology Academy stands out with AIIMS-trained faculty (Dr. Shekhar C Singh), 98% success rate, small batch sizes (15-20 students), and 15+ years of experience. Greater Noida students attend via online/hybrid or visit our Sector 62 Noida center (accessible via Aqua Line Metro). For Physics-Chemistry focused, students also consider the largest national NEET chains.',
+      'For Biology-focused NEET preparation, Cerebrum Biology Academy stands out with AIIMS-trained faculty (Dr. Shekhar C Singh), 98% success rate, small batch sizes (15-20 students), and 15+ years of experience. Greater Noida students attend via online/hybrid or visit our Sector 62 Noida center (accessible via Aqua Line Metro). For Physics-Chemistry focused, students also consider Aakash and Allen.',
   },
   {
     question: 'What are the fees for NEET coaching for Greater Noida students?',
     answer:
-      'NEET coaching fees range from ₹60,000 to ₹2,00,000+ per year. Budget options like Cerebrum start at ₹60,000/year with AIIMS faculty. Premium institutes like the largest national NEET chains charge ₹1,50,000-2,00,000/year. Online options start at ₹45,000. Greater Noida students often prefer online/hybrid for convenience.',
+      'NEET coaching fees range from ₹60,000 to ₹2,00,000+ per year. Budget options like Cerebrum start at ₹60,000/year with AIIMS faculty. Premium institutes like Aakash and Allen charge ₹1,50,000-2,00,000/year. Online options start at ₹45,000. Greater Noida students often prefer online/hybrid for convenience.',
   },
   {
     question: 'Is it better to join coaching in Noida or Greater Noida?',
@@ -68,7 +68,7 @@ const faqs = [
   {
     question: 'What is the batch size at top NEET coaching centers for Greater Noida?',
     answer:
-      'Batch sizes vary significantly: Large institutes like the 2nd-largest national NEET chain/the largest national NEET chain have 60-100+ students per batch. Cerebrum maintains 15-20 students per batch for personalized attention. Smaller batches allow faculty to track individual progress and provide targeted support.',
+      'Batch sizes vary significantly: Large institutes like Allen/Aakash have 60-100+ students per batch. Cerebrum maintains 15-20 students per batch for personalized attention. Smaller batches allow faculty to track individual progress and provide targeted support.',
   },
   {
     question: 'Can I switch from another coaching to Cerebrum mid-year?',

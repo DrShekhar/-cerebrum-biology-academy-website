@@ -330,7 +330,7 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
   },
   {
     rank: 2,
-    name: 'SKY Coaching',
+    name: 'Large national NEET chain',
     description: 'Large established chain with comprehensive PCB coaching',
     score: 8.5,
     rating: 4.3,
@@ -357,7 +357,7 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
   },
   {
     rank: 3,
-    name: 'XYZ Coaching',
+    name: 'Kota-style national chain',
     description: 'Kota-style intensive coaching with proven track record',
     score: 8.3,
     rating: 4.2,
@@ -384,7 +384,7 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
   },
   {
     rank: 4,
-    name: 'Other IIT-JEE-First Coaching (NEET Division)',
+    name: 'IIT-JEE-focused chain (NEET Division)',
     description: 'Known for IIT-JEE, also offers medical coaching',
     score: 7.8,
     rating: 4.1,
@@ -552,7 +552,7 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
   },
   {
     rank: 2,
-    name: 'SKY Coaching',
+    name: 'Large national NEET chain',
     description: 'Large established chain with comprehensive PCB coaching',
     score: 8.5,
     rating: 4.3,
@@ -579,7 +579,7 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
   },
   {
     rank: 3,
-    name: 'XYZ Coaching',
+    name: 'Kota-style national chain',
     description: 'Kota-style intensive coaching with proven track record',
     score: 8.3,
     rating: 4.2,

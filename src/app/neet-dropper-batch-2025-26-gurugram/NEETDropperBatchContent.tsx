@@ -368,8 +368,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
                 {CONTACT_INFO.location.gurugram.addressLocality}
               </p>
               <p className="text-slate-300 mb-4">
-                <strong className="text-white">Landmark:</strong> Same building as XYZ Coaching
-                (largest national NEET chain)
+                <strong className="text-white">Landmark:</strong> Same building as Aakash
               </p>
               <p className="text-slate-300 mb-6">
                 <strong className="text-white">Metro:</strong> Sector 55-56 Rapid Metro (5 min walk)

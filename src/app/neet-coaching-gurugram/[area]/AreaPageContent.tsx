@@ -300,8 +300,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                   Gurugram - 122018
                 </p>
                 <p className="text-gray-700 mb-4">
-                  <strong>Landmark:</strong> Same building as XYZ Coaching (largest national NEET
-                  chain)
+                  <strong>Landmark:</strong> Same building as Aakash
                 </p>
                 <p className="text-gray-700 mb-4">
                   <strong>Distance from {area.name}:</strong> {area.distanceFromCenter}
@@ -314,7 +313,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                 <h3 className="font-bold text-gray-900">Why Students Love This Location:</h3>
                 <ul className="space-y-2">
                   {[
-                    'Same building as the largest national NEET chain - trusted coaching hub',
+                    'Same building as Aakash - trusted coaching hub',
                     'Rapid Metro connectivity',
                     'Ample parking available',
                     'Safe & secure campus',
@@ -343,7 +342,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
           <div className="grid md:grid-cols-2 gap-4">
             {[
               'Expert AIIMS/JIPMER faculty',
-              'Same building as the largest national NEET chain',
+              'Same building as Aakash',
               'Flexible batch timings',
               'Online + Offline modes',
               'Small batch of 15-20 students',

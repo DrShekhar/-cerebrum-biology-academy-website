@@ -10,7 +10,7 @@ const gurugramLocation = CONTACT_INFO.location.gurugram
 export const metadata: Metadata = {
   title: 'Affordable NEET Coaching in Gurugram | Budget-Friendly Biology Preparation',
   description:
-    'Best affordable NEET coaching in Gurugram (Gurgaon) starting from ₹45,000/year. Quality Biology coaching with AIIMS faculty at 30-40% lower fees than the largest national NEET chain, the 2nd-largest national NEET chain. EMI options available.',
+    'Best affordable NEET coaching in Gurugram (Gurgaon) starting from ₹45,000/year. Quality Biology coaching with AIIMS faculty at 30-40% lower fees than Aakash, Allen. EMI options available.',
   keywords: [
     'affordable neet coaching gurugram',
     'cheap neet coaching gurgaon',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'Affordable NEET Coaching in Gurugram | Budget-Friendly Biology Preparation',
     description:
-      'Best affordable NEET coaching in Gurugram (Gurgaon) starting from ₹45,000/year. Quality Biology coaching with AIIMS faculty at 30-40% lower fees than the largest national NEET chain, the 2nd-larges...',
+      'Best affordable NEET coaching in Gurugram (Gurgaon) starting from ₹45,000/year. Quality Biology coaching with AIIMS faculty at 30-40% lower fees than Aakash, the 2nd-larges...',
   },
 }
 
@@ -53,7 +53,7 @@ const faqs = [
       'Yes! We offer 3, 6, and 12-month EMI options through major banks. 0% interest EMI available for 3-month plans. Contact us for personalized payment plans based on your needs.',
   },
   {
-    question: 'Why is Cerebrum cheaper than the largest national NEET chains?',
+    question: 'Why is Cerebrum cheaper than Aakash and Allen?',
     answer:
       'We focus only on Biology (not all subjects), have lower overhead costs, and prioritize quality over marketing. We pass these savings to students. You get better student-teacher ratio at 30-40% lower fees.',
   },

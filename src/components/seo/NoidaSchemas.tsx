@@ -17,7 +17,7 @@ export const NOIDA_COMPREHENSIVE_FAQS = {
     {
       question: 'Which is the most affordable NEET coaching in Noida?',
       answer:
-        'Cerebrum Biology Academy offers the best value NEET coaching in Noida starting at Rs 48,000/year with AIIMS faculty. Compare this to the largest national NEET chains (Rs 1.5-2 lakh) - we offer 98% success rate at 1/3rd the cost.',
+        'Cerebrum Biology Academy offers the best value NEET coaching in Noida starting at Rs 48,000/year with AIIMS faculty. Compare this to Aakash and Allen (Rs 1.5-2 lakh) - we offer 98% success rate at 1/3rd the cost.',
     },
   ],
   results: [
@@ -72,14 +72,14 @@ export const NOIDA_COMPREHENSIVE_FAQS = {
     {
       question: 'Who is the faculty for NEET Biology in Noida?',
       answer:
-        'Lead faculty Dr. Shekhar C Singh - AIIMS New Delhi alumnus, 15+ years experience, previously served as Academic Head at a leading national educational institution. Has mentored 15,000+ students with 67+ AIIMS/JIPMER selections. All faculty from AIIMS/premier medical colleges.',
+        'Lead faculty Dr. Shekhar C Singh - AIIMS New Delhi alumnus, 15+ years experience, previously served as Academic Head at PhysicsWallah (PW). Has mentored 15,000+ students with 67+ AIIMS/JIPMER selections. All faculty from AIIMS/premier medical colleges.',
     },
   ],
   comparison: [
     {
       question: 'Is Cerebrum better than the major national NEET chains for NEET in Noida?',
       answer:
-        'Cerebrum offers: (1) Smaller batches (10-40 vs 100+ students), (2) AIIMS faculty vs mixed faculty, (3) 98% success rate, (4) 1/3rd fee of the largest national NEET chains, (5) Personal mentorship. 850+ students switched from the major national chains to Cerebrum.',
+        'Cerebrum offers: (1) Smaller batches (10-40 vs 100+ students), (2) AIIMS faculty vs mixed faculty, (3) 98% success rate, (4) 1/3rd fee of Aakash and Allen, (5) Personal mentorship. 850+ students switched from the Allen and Aakash to Cerebrum.',
     },
     {
       question: 'Should I go to Kota or stay in Noida for NEET?',
@@ -341,7 +341,7 @@ export function NoidaFAQSchema({
     // Faculty FAQ
     {
       question: `Who is the faculty for NEET Biology coaching in ${locationName}?`,
-      answer: `Lead faculty Dr. Shekhar C Singh - AIIMS New Delhi alumnus, 15+ years experience, previously served as Academic Head at a leading national educational institution. Has mentored 15,000+ students with 67+ AIIMS/JIPMER selections. All faculty from AIIMS/premier medical colleges.`,
+      answer: `Lead faculty Dr. Shekhar C Singh - AIIMS New Delhi alumnus, 15+ years experience, previously served as Academic Head at PhysicsWallah (PW). Has mentored 15,000+ students with 67+ AIIMS/JIPMER selections. All faculty from AIIMS/premier medical colleges.`,
     },
     // Demo FAQ
     {

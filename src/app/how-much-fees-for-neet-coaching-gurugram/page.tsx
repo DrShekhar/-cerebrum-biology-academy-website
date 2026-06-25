@@ -7,7 +7,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: 'NEET Coaching Fees in Gurugram 2026 | ₹45K-₹3L Comparison',
   description:
-    "NEET coaching fees in Gurugram (Gurgaon) range from ₹45,000 to ₹3,00,000. Compare the 2nd-largest national NEET chain, the largest national NEET chain, Cerebrum fees. What's included, hidden costs, and best value. Call 88264-44334!",
+    "NEET coaching fees in Gurugram (Gurgaon) range from ₹45,000 to ₹3,00,000. Compare Allen, Aakash, Cerebrum fees. What's included, hidden costs, and best value. Call 88264-44334!",
   keywords: [
     'neet coaching fees gurugram',
     'how much fees for neet coaching',
@@ -30,14 +30,13 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Fees in Gurugram 2026 | ₹45K-₹3L Comparison',
     description:
-      'NEET coaching fees in Gurugram (Gurgaon) range from ₹45,000 to ₹3,00,000. Compare the 2nd-largest national NEET chain, the largest national NEET chain, Cerebrum fees. What',
+      'NEET coaching fees in Gurugram (Gurgaon) range from ₹45,000 to ₹3,00,000. Compare Allen, Aakash, Cerebrum fees. What',
   },
 }
 
 const feeComparison = [
   {
-    institute:
-      'Large Coaching (the 2nd-largest national NEET chain/the largest national NEET chain)',
+    institute: 'Large Coaching (Allen/Aakash)',
     fees: '₹1.5L - ₹3L',
     batch: '100-200',
     included: 'Books, Tests',
@@ -58,7 +57,7 @@ const feeComparison = [
     hidden: 'Test series extra',
   },
   {
-    institute: 'Online Only (PW, other online-only platforms)',
+    institute: 'Online Only (PW, PhysicsWallah and Unacademy)',
     fees: '₹15K - ₹45K',
     batch: 'Unlimited',
     included: 'Video lectures, Tests',
@@ -93,7 +92,7 @@ const faqs = [
   {
     question: 'Can I get scholarship for NEET coaching?',
     answer:
-      'Yes! We offer 25-100% scholarship based on merit (10th/11th marks) and need. the 2nd-largest national NEET chain/the largest national NEET chain also have scholarship tests. Apply for iNEET or ACST.',
+      'Yes! We offer 25-100% scholarship based on merit (10th/11th marks) and need. Allen/Aakash also have scholarship tests. Apply for iNEET or ACST.',
   },
   {
     question: 'Is EMI available for NEET coaching fees?',

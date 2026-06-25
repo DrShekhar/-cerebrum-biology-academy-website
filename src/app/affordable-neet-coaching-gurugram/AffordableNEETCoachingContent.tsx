@@ -120,7 +120,7 @@ const scholarships = [
 ]
 
 const valueProps = [
-  { stat: '30-40%', label: 'Lower than the largest national NEET chains fees' },
+  { stat: '30-40%', label: 'Lower than Aakash and Allen fees' },
   { stat: '98%', label: 'Success rate (Biology)' },
   { stat: '10-40', label: 'Students per batch (vs 100+)' },
   { stat: '0%', label: 'EMI interest (3 months)' },
@@ -304,8 +304,8 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
                 <tr>
                   <th className="px-6 py-4 text-left">Feature</th>
                   <th className="px-6 py-4 text-center bg-green-700">Cerebrum</th>
-                  <th className="px-6 py-4 text-center">the largest national NEET chain</th>
-                  <th className="px-6 py-4 text-center">the 2nd-largest national NEET chain</th>
+                  <th className="px-6 py-4 text-center">Aakash</th>
+                  <th className="px-6 py-4 text-center">Allen</th>
                 </tr>
               </thead>
               <tbody>
@@ -533,18 +533,14 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
               href="/allen-alternative-gurugram"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
-              <h3 className="font-semibold text-teal-600">
-                the largest national NEET chain Alternative
-              </h3>
+              <h3 className="font-semibold text-teal-600">Aakash Alternative</h3>
               <p className="text-sm text-gray-600">Lower fees, better ratio</p>
             </Link>
             <Link
               href="/aakash-alternative-gurugram"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
-              <h3 className="font-semibold text-teal-600">
-                the 2nd-largest national NEET chain Alternative
-              </h3>
+              <h3 className="font-semibold text-teal-600">Allen Alternative</h3>
               <p className="text-sm text-gray-600">Quality at lower cost</p>
             </Link>
             <Link href="/courses/foundation" className="bg-gray-50 p-4 rounded-xl hover:shadow-md">

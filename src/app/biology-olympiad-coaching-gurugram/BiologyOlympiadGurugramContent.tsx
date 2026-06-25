@@ -539,8 +539,7 @@ export default function BiologyOlympiadGurugramContent({
                   {CONTACT_INFO.location.gurugram.postalCode}
                 </p>
                 <p className="text-gray-700 mb-4">
-                  <strong>Landmark:</strong> Same building as XYZ Coaching (largest national NEET
-                  chain)
+                  <strong>Landmark:</strong> Same building as Aakash
                 </p>
                 <p className="text-gray-700 mb-4">
                   <strong>Metro Access:</strong> Sector 55-56 Rapid Metro (5 min walk)

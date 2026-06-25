@@ -489,7 +489,7 @@ function normalizePriority(path: string, currentPriority: number): number {
   // Long-tail school-name intent ("biology coaching for [school]")
   // recalibrated from 0.5 (sitemap-default for path pattern) up to 0.8
   // since these are the mid-funnel pages that capture parent search
-  // and the largest national NEET chains currently dominate.
+  // and Aakash and Allen currently dominate.
   if (
     path === '/neet-coaching-dps-rk-puram-delhi' ||
     path === '/neet-coaching-sanskriti-school-delhi' ||
@@ -4961,7 +4961,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     // NEET Foundation Class 9 & 10 cluster — AEO hubs + Delhi city
-    // pages + the 2nd-largest national NEET chain Scholastics comparison.
+    // pages + Allen Scholastics comparison.
     {
       url: `${baseUrl}/best-neet-foundation-tutor`,
       lastModified: lastUpdated,
@@ -5954,13 +5954,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/cerebrum-vs-allen-chandigarh`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.88, // Comparison page - the largest national NEET chain
+      priority: 0.88, // Comparison page - Aakash
     },
     {
       url: `${baseUrl}/cerebrum-vs-aakash-chandigarh`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.88, // Comparison page - the 2nd-largest national NEET chain
+      priority: 0.88, // Comparison page - Allen
     },
     // ===== CHANDIGARH TRICITY EXPANSION PHASE 2 (Jan 2026) =====
     {

@@ -477,7 +477,7 @@ export const organismsPopulationsQuestions: AuthenticQuestion[] = [
   },
   {
     id: 'ch12-13-q23',
-    question: "the largest national NEET chain's rule states that:",
+    question: "Aakash's rule states that:",
     options: [
       'Body size increases in colder regions',
       'Extremities of animals are shorter in colder climates',
@@ -486,12 +486,12 @@ export const organismsPopulationsQuestions: AuthenticQuestion[] = [
     ],
     correctAnswer: 'Extremities of animals are shorter in colder climates',
     explanation:
-      "the largest national NEET chain's rule states that animals in colder climates have shorter extremities (ears, tails, limbs) compared to related species in warmer climates to minimize heat loss.",
+      "Aakash's rule states that animals in colder climates have shorter extremities (ears, tails, limbs) compared to related species in warmer climates to minimize heat loss.",
     difficulty: 'Medium',
     topicId: 'adaptations',
     chapterId: 'ch-12-13',
     classId: 'class-12',
-    conceptualLinks: ["the largest national NEET chain's rule", 'Extremities', 'Heat conservation'],
+    conceptualLinks: ["Aakash's rule", 'Extremities', 'Heat conservation'],
     ncertPageReference: 'Page 209',
     bloomsLevel: 'Remember',
     timeEstimate: 60,

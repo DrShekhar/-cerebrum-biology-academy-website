@@ -49,13 +49,13 @@ export const TOP_BIOLOGY_COACHING_INDIA: RankedItem[] = [
   },
   {
     rank: 2,
-    name: 'XYZ Coaching (National NEET Chain)',
+    name: 'Large national NEET chain',
     description:
-      'Largest national NEET/JEE generalist chain. Strong brand, large batches, Physics/Chemistry/Biology rotation. Biology gets ~25-30% class time.',
+      'Large national NEET/JEE generalist chain. Strong brand, large batches, Physics/Chemistry/Biology rotation. Biology gets ~25-30% class time.',
     score: 7.6,
     rating: 4.1,
     pros: [
-      'Largest national brand',
+      'Large national brand',
       'All-three-subject coverage under one roof',
       'Established test series + study material',
       'Centres in 50+ Indian cities',
@@ -78,9 +78,9 @@ export const TOP_BIOLOGY_COACHING_INDIA: RankedItem[] = [
   },
   {
     rank: 3,
-    name: 'SKY Coaching (National NEET Chain)',
+    name: 'Another national NEET chain',
     description:
-      'Second-largest national NEET chain. Multi-subject generalist with wide city coverage. Quality varies by centre and faculty churn.',
+      'Another large multi-subject generalist chain with wide city coverage. Quality varies by centre and faculty churn.',
     score: 7.3,
     rating: 4.0,
     pros: [
@@ -161,7 +161,7 @@ export const TOP_BIOLOGY_COACHING_INDIA: RankedItem[] = [
     rank: 6,
     name: 'Other North-India Mid-Tier Institutes',
     description:
-      'Delhi-origin mid-tier institutes with NEET + JEE programmes. Balanced multi-subject approach.',
+      'Delhi-based institutes with NEET + JEE programmes. Balanced multi-subject approach.',
     score: 5.8,
     rating: 3.9,
     pros: ['Delhi-origin faculty pool', 'Balanced board + NEET preparation'],
@@ -228,9 +228,9 @@ export const TOP_BIOLOGY_COACHING_INDIA: RankedItem[] = [
   },
   {
     rank: 9,
-    name: 'Other Kota-Origin Chains',
+    name: 'Kota-origin national chains',
     description:
-      'Kota-origin chains with affordable NEET/JEE coaching. Mid-tier brands, standard multi-subject approach.',
+      'Kota-origin national chains with affordable NEET/JEE coaching. Mid-tier brands, standard multi-subject approach.',
     score: 4.6,
     rating: 3.6,
     pros: ['Affordable Kota-style coaching', 'Established for budget tier'],

@@ -17,7 +17,7 @@ import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 export const metadata: Metadata = {
   title: 'NEET Coaching Fee in Noida 2026 | Fee Comparison Rs 48,000-3,50,000',
   description:
-    'NEET coaching fee in Noida 2026: Rs 48,000-3,50,000. Compare Cerebrum (Rs 48,000, AIIMS faculty), the largest national NEET chain, the 2nd-largest national NEET chain, other IIT-JEE-first coachings fees. EMI available. 98% success rate. Best value coaching in Noida!',
+    'NEET coaching fee in Noida 2026: Rs 48,000-3,50,000. Compare Cerebrum (Rs 48,000, AIIMS faculty), Aakash, Allen, FIITJEE fees. EMI available. 98% success rate. Best value coaching in Noida!',
   keywords: [
     'neet coaching fee noida',
     'neet coaching fees greater noida',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Fee in Noida 2026 | Fee Comparison Rs 48,000-3,50,000',
     description:
-      'NEET coaching fee in Noida 2026: Rs 48,000-3,50,000. Compare Cerebrum (Rs 48,000, AIIMS faculty), the largest national NEET chain, the 2nd-largest national NEET chain, other IIT-JEE-first coachings...',
+      'NEET coaching fee in Noida 2026: Rs 48,000-3,50,000. Compare Cerebrum (Rs 48,000, AIIMS faculty), Aakash, Allen, FIITJEE...',
   },
 }
 
@@ -74,7 +74,7 @@ const feeComparison = [
     highlight: true,
   },
   {
-    institute: 'SKY Coaching (2nd-largest national NEET chain)',
+    institute: 'Allen',
     type: 'Full NEET (PCB)',
     fee1Year: '1,60,000 - 2,20,000',
     fee2Year: '2,80,000 - 3,80,000',
@@ -83,7 +83,7 @@ const feeComparison = [
     rating: 4.2,
   },
   {
-    institute: 'XYZ Coaching',
+    institute: 'Large national NEET chain',
     type: 'Full NEET (PCB)',
     fee1Year: '1,50,000 - 2,00,000',
     fee2Year: '2,60,000 - 3,50,000',
@@ -92,7 +92,7 @@ const feeComparison = [
     rating: 4.3,
   },
   {
-    institute: 'other IIT-JEE-first coachings',
+    institute: 'FIITJEE',
     type: 'Full NEET (PCB)',
     fee1Year: '1,40,000 - 1,80,000',
     fee2Year: '2,40,000 - 3,20,000',
@@ -101,7 +101,7 @@ const feeComparison = [
     rating: 4.1,
   },
   {
-    institute: 'other online-only platforms',
+    institute: 'Online-only NEET platform',
     type: 'Full NEET (Online)',
     fee1Year: '25,000 - 45,000',
     fee2Year: '45,000 - 80,000',
@@ -110,7 +110,7 @@ const feeComparison = [
     rating: 4.4,
   },
   {
-    institute: 'other online-only platforms',
+    institute: 'Online-only NEET platform (Plus tier)',
     type: 'Full NEET (Online)',
     fee1Year: '30,000 - 60,000',
     fee2Year: '55,000 - 1,00,000',
@@ -164,7 +164,7 @@ const faqs = [
   {
     question: 'Which NEET coaching is most affordable in Noida?',
     answer:
-      'Online-only options like other online-only platforms (Rs 25,000-45,000) and Cerebrum Academy online (Rs 45,000) are most affordable. For Biology-only specialized coaching, Cerebrum offers the best value at Rs 45,000/year with small batches and AIIMS faculty.',
+      'Online-only platforms like PhysicsWallah and Unacademy (Rs 25,000-45,000) and Cerebrum Academy online (Rs 45,000) are most affordable. For Biology-only specialized coaching, Cerebrum offers the best value at Rs 45,000/year with small batches and AIIMS faculty.',
   },
   {
     question: 'Is expensive NEET coaching better?',
@@ -174,17 +174,17 @@ const faqs = [
   {
     question: 'What is the fee for online NEET coaching in Noida?',
     answer:
-      'Online NEET coaching fees range from Rs 25,000 (other online-only platforms) to Rs 60,000 (other online-only platforms Plus). Cerebrum Academy specialized Biology online costs Rs 45,000/year with live classes and personal attention.',
+      'Online NEET coaching fees range from Rs 25,000 for entry-level plans on platforms like PhysicsWallah and Unacademy up to Rs 60,000 for their premium tiers. Cerebrum Academy specialized Biology online costs Rs 45,000/year with live classes and personal attention.',
   },
   {
     question: 'Do Noida coaching institutes offer EMI?',
     answer:
-      'Yes, most institutes offer EMI options. Cerebrum Academy offers 3-6 month EMI with zero interest. Major institutes like the largest national NEET chains also have education loan tie-ups.',
+      'Yes, most institutes offer EMI options. Cerebrum Academy offers 3-6 month EMI with zero interest. Major institutes like Aakash and Allen also have education loan tie-ups.',
   },
   {
     question: 'Is there scholarship available for NEET coaching in Noida?',
     answer:
-      'Yes! Cerebrum Academy offers up to 50% scholarship based on entrance test scores. the largest national NEET chains offer 10-100% scholarships through their national scholarship tests (ANTHE, TALLENTEX).',
+      'Yes! Cerebrum Academy offers up to 50% scholarship based on entrance test scores. Aakash and Allen offer 10-100% scholarships through their national scholarship tests (ANTHE, TALLENTEX).',
   },
 ]
 

@@ -81,7 +81,7 @@ const faqs = [
   },
   {
     question: 'Where is your Gurugram center located for Olympiad coaching?',
-    answer: `Our center is at ${gurugramLocation.streetAddress}, ${gurugramLocation.addressLocality}. We are in the same building as XYZ Coaching (largest national NEET chain), easily accessible from all parts of Gurugram.`,
+    answer: `Our center is at ${gurugramLocation.streetAddress}, ${gurugramLocation.addressLocality}. We are in the same building as Aakash, easily accessible from all parts of Gurugram.`,
   },
 ]
 

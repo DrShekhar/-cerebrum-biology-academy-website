@@ -368,8 +368,7 @@ export default function WhyCoachingOverHomeTutor() {
                       Home Tutor
                     </th>
                     <th className="px-4 py-3 text-center font-semibold text-gray-700">
-                      Large Coaching (the 2nd-largest national NEET chain/the largest national NEET
-                      chain)
+                      Large Coaching (Allen/the largest national NEET chain)
                     </th>
                     <th className="bg-green-50 px-4 py-3 text-center font-semibold text-green-800">
                       Cerebrum (Small Batch)
@@ -418,8 +417,7 @@ export default function WhyCoachingOverHomeTutor() {
                 <p className="mb-1 font-semibold text-gray-900">Per Month (Equivalent)</p>
                 <p className="text-sm text-gray-600">
                   Less than a home tutor (₹5-8K) and much less than the 2nd-largest national NEET
-                  chain/the largest national NEET chain (₹8-15K). Everything included — no hidden
-                  costs.
+                  chain/Aakash (₹8-15K). Everything included — no hidden costs.
                 </p>
               </div>
               <div className="rounded-xl bg-white p-6 shadow-sm">

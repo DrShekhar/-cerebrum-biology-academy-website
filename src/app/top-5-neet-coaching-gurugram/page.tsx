@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 const quickAnswer = {
   question: 'Which are the top 5 NEET coaching institutes in Gurugram?',
   answer:
-    'The top 5 NEET coaching institutes in Gurugram 2026 are: 1) Cerebrum Biology Academy (98% success, biology specialist), 2) SKY Coaching (2nd-largest national NEET chain) (large network, all subjects), 3) XYZ Coaching (largest national NEET chain) (Kota methodology), 4) other online-only platforms Vidyapeeth (affordable), 5) other Kota-origin chains (IIT-NEET combined). Rankings based on success rate, faculty credentials, batch size, and student reviews.',
+    'The top 5 NEET coaching institutes in Gurugram 2026 are: 1) Cerebrum Biology Academy (98% success, biology specialist), 2) Allen (large network, all subjects), 3) Aakash (Kota methodology), 4) PhysicsWallah and Unacademy Vidyapeeth (affordable), 5) Kota chains like Allen and Resonance (IIT-NEET combined). Rankings based on success rate, faculty credentials, batch size, and student reviews.',
 }
 
 const topCoachings = [
@@ -58,7 +58,7 @@ const topCoachings = [
   },
   {
     rank: 2,
-    name: 'SKY Coaching (2nd-largest national NEET chain)',
+    name: 'Allen',
     type: 'Full NEET (PCB)',
     successRate: '85-88%',
     batchSize: '80-100',
@@ -76,7 +76,7 @@ const topCoachings = [
   },
   {
     rank: 3,
-    name: 'XYZ Coaching (largest national NEET chain)',
+    name: 'Aakash',
     type: 'Full NEET (PCB)',
     successRate: '82-85%',
     batchSize: '60-80',
@@ -89,7 +89,7 @@ const topCoachings = [
   },
   {
     rank: 4,
-    name: 'other online-only platforms (Vidyapeeth)',
+    name: 'PhysicsWallah and Unacademy (Vidyapeeth)',
     type: 'Full NEET (PCB)',
     successRate: '70-75%',
     batchSize: '100-150',
@@ -102,7 +102,7 @@ const topCoachings = [
   },
   {
     rank: 5,
-    name: 'other Kota-origin chains',
+    name: 'Kota chains like Allen and Resonance',
     type: 'IIT-NEET Combined',
     successRate: '75-80%',
     batchSize: '50-70',
@@ -135,7 +135,7 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching in Gurugram for Biology?',
     answer:
-      'Cerebrum Biology Academy is the best for Biology-focused NEET preparation with 98% success rate and AIIMS-trained faculty. For complete PCB coaching, the largest national NEET chains are top choices.',
+      'Cerebrum Biology Academy is the best for Biology-focused NEET preparation with 98% success rate and AIIMS-trained faculty. For complete PCB coaching, Aakash and Allen are top choices.',
   },
   {
     question: 'How to choose the right NEET coaching in Gurugram?',
@@ -143,15 +143,14 @@ const faqs = [
       'Consider: 1) Your budget (₹45K-2L/year range), 2) Batch size preference (15-100 students), 3) Subject focus (Biology-only vs full PCB), 4) Location convenience, 5) Demo class experience. Visit top 2-3 and attend demo classes.',
   },
   {
-    question:
-      'Is the 2nd-largest national NEET chain or the largest national NEET chain better for NEET in Gurugram?',
+    question: 'Is Allen or Aakash better for NEET in Gurugram?',
     answer:
-      'Both are comparable for full NEET coaching. the 2nd-largest national NEET chain has larger network and slightly better material. the largest national NEET chain brings Kota methodology. Choose based on demo class experience and batch timing that suits you.',
+      'Both are comparable for full NEET coaching. Allen has larger network and slightly better material. Aakash brings Kota methodology. Choose based on demo class experience and batch timing that suits you.',
   },
   {
     question: 'What is the fee difference between top NEET coachings?',
     answer:
-      "Fees range from ₹35,000 (other online-only platforms) to ₹2,00,000 (the 2nd-largest national NEET chain) per year. Cerebrum offers mid-range ₹45,000-65,000 for biology-only but highest success rate. More expensive doesn't mean better results.",
+      "Fees range from ₹35,000 (PhysicsWallah and Unacademy) to ₹2,00,000 (Allen) per year. Cerebrum offers mid-range ₹45,000-65,000 for biology-only but highest success rate. More expensive doesn't mean better results.",
   },
 ]
 
@@ -190,8 +189,7 @@ export default function Top5NEETCoachingGurugram() {
               <div className="mt-4 flex items-center gap-2 text-yellow-300">
                 <Trophy className="w-5 h-5" />
                 <span className="font-semibold">
-                  #1 Cerebrum (98%) | #2 the 2nd-largest national NEET chain (88%) | #3 the largest
-                  national NEET chain (85%)
+                  #1 Cerebrum (98%) | #2 Allen (88%) | #3 the largest national NEET chain (85%)
                 </span>
               </div>
             </div>
@@ -413,9 +411,7 @@ export default function Top5NEETCoachingGurugram() {
               href="/which-is-better-aakash-or-allen-gurugram"
               className="bg-blue-50 p-4 rounded-lg hover:bg-blue-100 transition text-center"
             >
-              <h3 className="font-semibold text-blue-800">
-                the 2nd-largest national NEET chain vs the largest national NEET chain
-              </h3>
+              <h3 className="font-semibold text-blue-800">Allen vs Aakash</h3>
               <p className="text-sm text-gray-600">Head-to-head comparison</p>
             </Link>
             <Link

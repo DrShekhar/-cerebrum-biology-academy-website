@@ -45,7 +45,7 @@ const config: BestVerticalConfig = {
   subheadline:
     'Structured curriculum, cohort dynamics, weekly mocks. Led by Dr. Shekhar C Singh (AIIMS Delhi).',
   intro:
-    'Biology classes for NEET differ from 1:1 tutoring — structured curriculum at scale, peer learning, weekly group mocks, mock-test rankings, and cohort accountability. Cerebrum caps batches at 15–20 students (vs 50–100+ at the largest national NEET chains and online-first generalist platforms) — close enough for personal attention, large enough for healthy competition.',
+    'Biology classes for NEET differ from 1:1 tutoring — structured curriculum at scale, peer learning, weekly group mocks, mock-test rankings, and cohort accountability. Cerebrum caps batches at 15–20 students (vs 50–100+ at Aakash and Allen and online-first generalist platforms) — close enough for personal attention, large enough for healthy competition.',
   clusterSummary:
     'Offline at 6 Delhi NCR centres · Online live (not recorded) pan-India · English + Hindi · NCERT-anchored, PYQ-driven.',
   credentials: [
@@ -96,7 +96,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Why Small-Batch Biology Classes Beat 200+ Lecture Halls',
       description:
-        "the largest national NEET chains and online-first generalist platforms typically run batches of 100–400 students per teacher. At those sizes individual attention is impossible — students become invisible. Cerebrum caps batches at 15–20 (Ascent) or 10–12 (Pinnacle). Every student's doubt gets answered every week.",
+        "Aakash and Allen and online-first generalist platforms typically run batches of 100–400 students per teacher. At those sizes individual attention is impossible — students become invisible. Cerebrum caps batches at 15–20 (Ascent) or 10–12 (Pinnacle). Every student's doubt gets answered every week.",
     },
     {
       title: 'Biology-Only Specialisation',
@@ -185,9 +185,9 @@ const config: BestVerticalConfig = {
     },
     {
       question:
-        'How does Cerebrum compare to the largest national NEET chains and online-first generalist platforms?',
+        'How does Cerebrum compare to Aakash and Allen and online-first generalist platforms?',
       answer:
-        'Cerebrum is biology-only (360/720 NEET marks). the largest national NEET chains and online-first generalist platforms teach all three subjects with rotating faculty and 100–400 students per batch. Cerebrum runs 15–20 student batches and the same AIIMS-trained biology faculty for the entire term. Fees are typically 40–60% lower for biology-specific quality. Most students keep their main coaching for Physics/Chemistry and add Cerebrum for Biology.',
+        'Cerebrum is biology-only (360/720 NEET marks). Aakash and Allen and online-first generalist platforms teach all three subjects with rotating faculty and 100–400 students per batch. Cerebrum runs 15–20 student batches and the same AIIMS-trained biology faculty for the entire term. Fees are typically 40–60% lower for biology-specific quality. Most students keep their main coaching for Physics/Chemistry and add Cerebrum for Biology.',
     },
   ],
   knowsAbout: [

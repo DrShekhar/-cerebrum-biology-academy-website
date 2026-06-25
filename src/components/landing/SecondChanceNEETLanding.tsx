@@ -114,7 +114,7 @@ export function SecondChanceNEETLanding({
       isOpen: false,
     },
     {
-      question: 'How are you different from the largest national NEET chains?',
+      question: 'How are you different from Aakash and Allen?',
       answer:
         'We focus exclusively on Biology (50% of NEET marks) with maximum 15 students per batch. Unlike coaching factories, we provide personalized attention and emotional support for repeaters.',
       isOpen: false,

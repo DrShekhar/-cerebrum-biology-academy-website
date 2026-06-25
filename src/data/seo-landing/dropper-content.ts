@@ -500,7 +500,7 @@ export const neetDropperBiologyCoaching: SEOLandingContent = {
   ...dropperBaseContent,
   testimonials: [
     {
-      name: 'the 2nd-largest national NEET chain Dubey',
+      name: 'Allen Dubey',
       achievement: 'AIR 234 | AIIMS Delhi (Dropper)',
       quote:
         'Biology coaching in the dropper year was transformative. Cerebrum retaught every chapter with NEET-specific focus. My biology score jumped from 260 to 348.',
@@ -1495,7 +1495,7 @@ export const neetDropperBatch: SEOLandingContent = {
     {
       question: 'What is the NEET dropper batch fee at Cerebrum Academy?',
       answer:
-        'The NEET dropper batch fee is Rs 80,000 per year (MRP Rs 95,000). This includes 6-day weekly classes, complete study material, 50+ mock tests, mental wellness support, and personal mentorship. EMI option available at Rs 4,500 per month. This is significantly more affordable than the largest national NEET chains (Rs 1.36 lakh+) while offering smaller batches.',
+        'The NEET dropper batch fee is Rs 80,000 per year (MRP Rs 95,000). This includes 6-day weekly classes, complete study material, 50+ mock tests, mental wellness support, and personal mentorship. EMI option available at Rs 4,500 per month. This is significantly more affordable than Aakash and Allen (Rs 1.36 lakh+) while offering smaller batches.',
     },
     {
       question: 'Is the dropper batch available online and offline both?',

@@ -168,7 +168,7 @@ const premiumSchools = [
   'Vidya Mandir',
   'Global Indian School',
   'Srichaitanya School',
-  'a leading national educational institution School',
+  'PhysicsWallah (PW) School',
   'Silver Oaks International',
   'Hiranandani Upscale School',
 ]

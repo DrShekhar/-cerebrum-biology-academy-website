@@ -86,7 +86,7 @@ const faqs = [
   {
     question: 'Why choose online NEET coaching over Chandigarh Sector 34 centers?',
     answer:
-      'Sector 34 coaching centers like the largest national NEET chains have 50-100+ students per batch. Our online classes limit to 10-15 students ensuring personalized attention. Plus, save 1-2 hours daily commute from Panchkula/Mohali. Same 98% success rate, better attention, no traffic stress.',
+      'Sector 34 coaching centers like Aakash and Allen have 50-100+ students per batch. Our online classes limit to 10-15 students ensuring personalized attention. Plus, save 1-2 hours daily commute from Panchkula/Mohali. Same 98% success rate, better attention, no traffic stress.',
   },
   {
     question: 'What areas in Chandigarh Tricity do you serve for NEET coaching?',
@@ -114,14 +114,14 @@ const faqs = [
       'Yes! Most Chandigarh students follow CBSE curriculum which aligns 80% with NEET. We cover both board exam preparation and NEET-specific MCQ training. Students typically score 95+ in boards while preparing for NEET. Integrated approach saves time.',
   },
   {
-    question: 'How is Cerebrum different from the largest national NEET chain Chandigarh?',
+    question: 'How is Cerebrum different from Aakash Chandigarh?',
     answer:
-      "the largest national NEET chain Chandigarh has large batches (50-100+ students) and fees of Rs 1.5-2.5 lakhs. Cerebrum offers small batches (10-15 students), AIIMS-trained faculty (not just MBBS graduates), flexible online format saving commute time, and fees of Rs 24K-68K. Our 98% success rate competes with the largest national NEET chain's results.",
+      "Aakash Chandigarh has large batches (50-100+ students) and fees of Rs 1.5-2.5 lakhs. Cerebrum offers small batches (10-15 students), AIIMS-trained faculty (not just MBBS graduates), flexible online format saving commute time, and fees of Rs 24K-68K. Our 98% success rate competes with Aakash's results.",
   },
   {
-    question: 'How is Cerebrum different from the 2nd-largest national NEET chain Chandigarh?',
+    question: 'How is Cerebrum different from Allen Chandigarh?',
     answer:
-      'the 2nd-largest national NEET chain Chandigarh operates 7 centers with 100+ students per batch and fees of Rs 1-3.5 lakhs. Cerebrum offers personalized attention with 10-15 students per batch, faculty exclusively from AIIMS (not mixed), online format with no commute, and significantly lower fees. Same quality, better attention.',
+      'Allen Chandigarh operates 7 centers with 100+ students per batch and fees of Rs 1-3.5 lakhs. Cerebrum offers personalized attention with 10-15 students per batch, faculty exclusively from AIIMS (not mixed), online format with no commute, and significantly lower fees. Same quality, better attention.',
   },
   {
     question: 'Is online NEET coaching effective for Chandigarh students?',

@@ -123,7 +123,7 @@ const faqs = [
   {
     question: 'Which schools do you serve in Mussoorie?',
     answer:
-      'We serve students from Wynberg the largest national NEET chain, Woodstock, Oak Grove, St. Georges, and all Mussoorie and Dehradun boarding schools.',
+      'We serve students from Wynberg Aakash, Woodstock, Oak Grove, St. Georges, and all Mussoorie and Dehradun boarding schools.',
   },
   { question: 'What is the fee?', answer: 'Rs 24,000 to Rs 48,000 per year with EMI options.' },
   {
@@ -133,7 +133,7 @@ const faqs = [
 ]
 
 const premiumSchools = [
-  'Wynberg the largest national NEET chain School',
+  'Wynberg Aakash School',
   'Woodstock School',
   'Oak Grove School',
   'St. Georges College',

@@ -137,11 +137,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'SKY Coaching (2nd-largest national NEET chain) Hauz Khas',
-        'XYZ Coaching (largest national NEET chain)',
-        'other Kota-origin chains South Delhi',
-      ],
+      majorInstitutes: ['Allen Hauz Khas', 'Aakash', 'Resonance South Delhi'],
       avgFees: 125000,
       ourAdvantage: [
         '15% lower fees',
@@ -212,7 +208,7 @@ export const localities: Locality[] = [
       demandExplanation:
         'South Delhi is one of the most competitive NEET preparation hubs in India, with thousands of aspirants from affluent families targeting top medical colleges. The area has a long tradition of academic excellence, and families invest heavily in specialized coaching for Biology and other NEET subjects.',
       competitionAnalysis:
-        'The coaching market in South Delhi is saturated with large institutes like the 2nd-largest national NEET chain, the largest national NEET chain, and numerous local centers. However, most focus on all-subject packages, leaving a gap for specialized Biology-only coaching that provides personalized attention.',
+        'The coaching market in South Delhi is saturated with large institutes like Allen, Aakash, and numerous local centers. However, most focus on all-subject packages, leaving a gap for specialized Biology-only coaching that provides personalized attention.',
       parentConcerns:
         'Parents in South Delhi worry about their children getting lost in overcrowded coaching batches of 100+ students. They seek premium, individualized coaching that matches the high standards they expect from educational investments.',
       studyCultureTrend:
@@ -282,11 +278,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'other online-only platforms GK',
-        'other online-only platforms Centre',
-        'Local coaching centers',
-      ],
+      majorInstitutes: ['PhysicsWallah (PW) GK', 'Unacademy Centre', 'Local coaching centers'],
       avgFees: 120000,
       ourAdvantage: [
         'Biology-focused curriculum',
@@ -406,12 +398,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'SKY Coaching (2nd-largest national NEET chain) Hauz Khas',
-        'other Kota-origin chains',
-        'other IIT-JEE-first coachings Hauz Khas',
-        'the largest national NEET chain',
-      ],
+      majorInstitutes: ['Allen Hauz Khas', 'Resonance', 'FIITJEE Hauz Khas', 'Aakash'],
       avgFees: 130000,
       ourAdvantage: [
         '20% lower fees',
@@ -652,11 +639,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Dwarka',
-        'other Kota-origin chains Dwarka',
-        'XYZ Coaching (largest national NEET chain)',
-      ],
+      majorInstitutes: ['Allen Dwarka', 'Resonance Dwarka', 'Aakash'],
       avgFees: 110000,
       ourAdvantage: [
         'Better student-teacher ratio',
@@ -770,12 +753,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Rohini',
-        'other Kota-origin chains Rohini',
-        'other IIT-JEE-first coachings',
-        'Motion IIT-JEE',
-      ],
+      majorInstitutes: ['Allen Rohini', 'Resonance Rohini', 'FIITJEE', 'Motion IIT-JEE'],
       avgFees: 115000,
       ourAdvantage: [
         'Biology-focused vs general coaching',
@@ -919,7 +897,7 @@ export const localities: Locality[] = [
     competition: {
       majorInstitutes: [
         'Specialist coaching in Sector 6 (single-trainer model, 30 batch size)',
-        'SKY Coaching (2nd-largest national NEET chain) Sector 10 (₹1.6-3.5L, 50-100 batch size)',
+        'Allen Sector 10 (₹1.6-3.5L, 50-100 batch size)',
         'General NEET coaching centers in Sector 7-8',
       ],
       avgFees: 85000,
@@ -929,7 +907,7 @@ export const localities: Locality[] = [
         'Hybrid mode: Attend offline OR online based on schedule (unique flexibility)',
         'Smaller batches 12-20 students vs 30 at specialist competitor, 50-100 at big brands',
         'Multiple AIIMS-trained faculty vs single-trainer dependency',
-        '75% more affordable - ₹48-98K vs ₹1.6-3.5L at the 2nd-largest national NEET chain',
+        '75% more affordable - ₹48-98K vs ₹1.6-3.5L at Allen',
         'Biology specialization vs general multi-subject coaching',
         '24/7 WhatsApp doubt clearing (not class-hours only)',
         'Physical presence in DC Chowk - no need to travel to Sector 6 or Sector 10',
@@ -997,7 +975,7 @@ export const localities: Locality[] = [
       {
         question: 'What are your fees and what do they include?',
         answer:
-          'Fees: Pursuit Series ₹48K-88K (Class 11-12), Ascent Series ₹58K-76K (most popular, NEET focused), Pinnacle Series ₹98K-1.8L (Dropper intensive). All include study material, tests, doubt sessions, hybrid mode access, 24/7 WhatsApp support. EMI options available. First 15 DC Chowk enrollments get ₹8K discount! 75% cheaper than the 2nd-largest national NEET chain Sector 10.',
+          'Fees: Pursuit Series ₹48K-88K (Class 11-12), Ascent Series ₹58K-76K (most popular, NEET focused), Pinnacle Series ₹98K-1.8L (Dropper intensive). All include study material, tests, doubt sessions, hybrid mode access, 24/7 WhatsApp support. EMI options available. First 15 DC Chowk enrollments get ₹8K discount! 75% cheaper than Allen Sector 10.',
       },
       {
         question: 'Do you have AIIMS-trained faculty?',
@@ -1158,7 +1136,7 @@ export const localities: Locality[] = [
       title:
         'Best NEET Biology Coaching South Extension Part 2 | Pink Line Metro | ₹48K | NCR-Wide',
       description:
-        'Premium NEET Biology coaching in South Extension Part 2. Small batches 12-20, AIIMS-trained faculty, Hybrid mode. Pink Line metro accessible from Noida, Ghaziabad, Faridabad. 65% cheaper than the 2nd-largest national NEET chain. ₹48-98K. Call 88264-44334',
+        'Premium NEET Biology coaching in South Extension Part 2. Small batches 12-20, AIIMS-trained faculty, Hybrid mode. Pink Line metro accessible from Noida, Ghaziabad, Faridabad. 65% cheaper than Allen. ₹48-98K. Call 88264-44334',
       keywords: [
         'biology coaching south extension',
         'NEET coaching south extension part 2',
@@ -1227,7 +1205,7 @@ export const localities: Locality[] = [
       coachingHubs: [
         'South Extension coaching hub',
         'Lajpat Nagar NEET coaching area',
-        'Competition from the 2nd-largest national NEET chain South Extension, the largest national NEET chain Lajpat Nagar',
+        'Competition from Allen South Extension, Aakash Lajpat Nagar',
       ],
       populationType: 'residential',
       economicProfile: 'premium',
@@ -1235,15 +1213,15 @@ export const localities: Locality[] = [
 
     competition: {
       majorInstitutes: [
-        'SKY Coaching (2nd-largest national NEET chain) South Extension (₹1.36-4.28L, 50-100 batch size, multi-subject)',
-        'XYZ Coaching (largest national NEET chain) Lajpat Nagar (₹1.56-2.91L, 1 metro stop away)',
-        'other Kota-origin chains (Preet Vihar, not in South Extension)',
-        'other online-only platforms (₹15K online budget option)',
+        'Allen South Extension (₹1.36-4.28L, 50-100 batch size, multi-subject)',
+        'Aakash Lajpat Nagar (₹1.56-2.91L, 1 metro stop away)',
+        'Resonance (Preet Vihar, not in South Extension)',
+        'PhysicsWallah (PW) (₹15K online budget option)',
       ],
       avgFees: 250000,
       ourAdvantage: [
         'Location: AT South Extension Part 2 vs Lajpat Nagar (save 10-15 min travel)',
-        '65-80% cheaper - ₹48-98K vs ₹1.36-4.28L at the 2nd-largest national NEET chain, ₹1.56-2.91L at the largest national NEET chain',
+        '65-80% cheaper - ₹48-98K vs ₹1.36-4.28L at Allen, ₹1.56-2.91L at Aakash',
         'Small batches 12-20 students vs 50-100 at big brands (5x more attention)',
         'Biology-ONLY specialization vs multi-subject coaching',
         'Hybrid mode: Offline + Online flexibility (perfect for NCR students)',
@@ -1254,7 +1232,7 @@ export const localities: Locality[] = [
         'Premium quality at accessible pricing - no compromise on excellence',
       ],
       marketGap:
-        'South Extension Part 2 has NO premium biology-only coaching at accessible pricing. the 2nd-largest national NEET chain charges ₹1.36-4.28L for mass batches (50-100 students). the largest national NEET chain in Lajpat Nagar requires travel + ₹1.56-2.91L fees. We fill this gap with PREMIUM biology-only coaching, small batches (12-20), at 65-80% lower cost with NCR-wide Pink Line connectivity.',
+        'South Extension Part 2 has NO premium biology-only coaching at accessible pricing. Allen charges ₹1.36-4.28L for mass batches (50-100 students). Aakash in Lajpat Nagar requires travel + ₹1.56-2.91L fees. We fill this gap with PREMIUM biology-only coaching, small batches (12-20), at 65-80% lower cost with NCR-wide Pink Line connectivity.',
     },
 
     socialProof: {
@@ -1263,7 +1241,7 @@ export const localities: Locality[] = [
       testimonialIds: [],
       successStories: [
         'Priya from Shalimar Apartments scored 352/360 in Biology, secured AIIMS Delhi. "Walking distance from home, saved hours vs traveling to Lajpat Nagar. Small 15-student batch gave me confidence big institutes never could."',
-        'Rahul from Noida Sector 62 improved from 245 to 342, now at Maulana Azad Medical College. "40-min metro commute via Pink Line was worth it. Saved ₹2.8L vs the 2nd-largest national NEET chain, got 5x better attention. Best decision ever."',
+        'Rahul from Noida Sector 62 improved from 245 to 342, now at Maulana Azad Medical College. "40-min metro commute via Pink Line was worth it. Saved ₹2.8L vs Allen, got 5x better attention. Best decision ever."',
         'Ananya from Ghaziabad (Dropper batch) - went from 228 to 338, secured UCMS. "Hybrid mode was game-changer. Attended offline 3 days, online 2 days based on metro rush. Couldn\'t afford ₹4L at big institutes, Cerebrum gave premium quality at ₹76K."',
         'Rohan from Defence Colony scored 345/360 while balancing CBSE Boards. "Biology-only focus made all the difference. Teachers at multi-subject centers rushed through topics. Here, pure specialization from AIIMS faculty. Worth every rupee."',
       ],
@@ -1274,11 +1252,11 @@ export const localities: Locality[] = [
       heroSubtitle:
         'AIIMS-trained faculty, Small batches 12-20, Hybrid mode, Pink Line Metro. Accessible from Noida, Ghaziabad, Faridabad',
       valueProposition:
-        'Premium NEET Biology coaching at 65-80% lower cost than the 2nd-largest national NEET chain/the largest national NEET chain. Biology-ONLY specialization in small batches with NCR-wide Pink Line connectivity.',
+        'Premium NEET Biology coaching at 65-80% lower cost than Allen/Aakash. Biology-ONLY specialization in small batches with NCR-wide Pink Line connectivity.',
       urgencyMessage:
         'South Extension Part 2 batch starting soon! Only 18 seats available. First 10 enrollments get ₹10K discount.',
       localChallenge:
-        'South Extension students pay ₹1.36-4.28L at the 2nd-largest national NEET chain for 50-100 student mass batches. NCR students travel to expensive South Delhi centers. We offer premium biology-only coaching at ₹48-98K with small batches (12-20) and hybrid flexibility.',
+        'South Extension students pay ₹1.36-4.28L at Allen for 50-100 student mass batches. NCR students travel to expensive South Delhi centers. We offer premium biology-only coaching at ₹48-98K with small batches (12-20) and hybrid flexibility.',
       successMetric: '92% of South Extension Part 2 students scored 330+ in Biology',
     },
 
@@ -1299,10 +1277,9 @@ export const localities: Locality[] = [
           'Our center is in South Extension Part 2, just 5 min walk from South Extension Metro (Pink Line). 1 metro stop from Lajpat Nagar interchange (Pink + Violet Line). Walking distance from Shalimar Apartments, Alok Homes, RWA South Ex Part 2. Easily accessible from Noida (40 min via Blue Line interchange), Ghaziabad (50 min via metro), Faridabad (Violet Line). Call +91-88264-44334 for exact directions.',
       },
       {
-        question:
-          'How are you different from SKY Coaching (2nd-largest national NEET chain) in South Extension and the largest national NEET chain in Lajpat Nagar?',
+        question: 'How are you different from Allen in South Extension and Aakash in Lajpat Nagar?',
         answer:
-          'Key differences: (1) Price: We charge ₹48-98K vs ₹1.36-4.28L at the 2nd-largest national NEET chain, ₹1.56-2.91L at the largest national NEET chain - 65-80% cheaper! (2) Batch size: 12-20 students vs 50-100 at big institutes (5x more personal attention). (3) Specialization: Biology-ONLY vs multi-subject. (4) Faculty: Dedicated AIIMS-trained Biology specialists vs rotational multi-subject teachers. (5) Mode: Hybrid flexibility (offline + online) perfect for NCR students. (6) Doubt clearing: 24/7 WhatsApp vs class-hours only. (7) Location: AT South Extension (save travel vs Lajpat Nagar for residents).',
+          'Key differences: (1) Price: We charge ₹48-98K vs ₹1.36-4.28L at Allen, ₹1.56-2.91L at Aakash - 65-80% cheaper! (2) Batch size: 12-20 students vs 50-100 at big institutes (5x more personal attention). (3) Specialization: Biology-ONLY vs multi-subject. (4) Faculty: Dedicated AIIMS-trained Biology specialists vs rotational multi-subject teachers. (5) Mode: Hybrid flexibility (offline + online) perfect for NCR students. (6) Doubt clearing: 24/7 WhatsApp vs class-hours only. (7) Location: AT South Extension (save travel vs Lajpat Nagar for residents).',
       },
       {
         question:
@@ -1312,14 +1289,14 @@ export const localities: Locality[] = [
       },
       {
         question:
-          'Why should I choose biology-only coaching over full NEET coaching like the 2nd-largest national NEET chain/the largest national NEET chain?',
+          'Why should I choose biology-only coaching over full NEET coaching like Allen/Aakash?',
         answer:
-          'Biology contributes 360/720 marks in NEET (50% of exam). Biology-only coaching gives 100% focus on highest-scoring section. Multi-subject centers like the 2nd-largest national NEET chain/the largest national NEET chain spread resources thin - same teacher rushes through Botany, Zoology, Physics, Chemistry. Our AIIMS-trained faculty specialize ONLY in Biology with deep expertise. Result: Our students average 330+ in Biology vs 280-300 at multi-subject centers. If you want to ACE Biology specifically, specialist coaching > generalist coaching.',
+          'Biology contributes 360/720 marks in NEET (50% of exam). Biology-only coaching gives 100% focus on highest-scoring section. Multi-subject centers like Allen/Aakash spread resources thin - same teacher rushes through Botany, Zoology, Physics, Chemistry. Our AIIMS-trained faculty specialize ONLY in Biology with deep expertise. Result: Our students average 330+ in Biology vs 280-300 at multi-subject centers. If you want to ACE Biology specifically, specialist coaching > generalist coaching.',
       },
       {
         question: "What's your fee structure? Any EMI options?",
         answer:
-          'Transparent pricing: Pursuit Series ₹48K-88K (Class 11-12 foundation), Ascent Series ₹58K-76K (most popular, NEET focused), Pinnacle Series ₹98K-1.8L (Dropper intensive). All include study material, regular tests, doubt sessions, hybrid mode access, 24/7 WhatsApp support. EMI options available (3/6/9 months). First 10 South Extension enrollments get ₹10K discount! 65-80% cheaper than the 2nd-largest national NEET chain (₹1.36-4.28L) and the largest national NEET chain (₹1.56-2.91L).',
+          'Transparent pricing: Pursuit Series ₹48K-88K (Class 11-12 foundation), Ascent Series ₹58K-76K (most popular, NEET focused), Pinnacle Series ₹98K-1.8L (Dropper intensive). All include study material, regular tests, doubt sessions, hybrid mode access, 24/7 WhatsApp support. EMI options available (3/6/9 months). First 10 South Extension enrollments get ₹10K discount! 65-80% cheaper than Allen (₹1.36-4.28L) and Aakash (₹1.56-2.91L).',
       },
       {
         question: 'Do you offer hybrid mode for students coming from NCR areas?',
@@ -1329,7 +1306,7 @@ export const localities: Locality[] = [
       {
         question: 'How many students in each batch? Why does batch size matter for NEET?',
         answer:
-          'Maximum 12-20 students per batch (vs 50-100 at the 2nd-largest national NEET chain/the largest national NEET chain). Batch size matters critically for NEET Biology: (1) Personal attention from AIIMS faculty. (2) Cannot get "lost in crowd" - every student tracked. (3) Doubts resolved immediately (impossible in 100-student hall). (4) Personalized weak area focus. (5) Regular interaction builds confidence. At 50-100 student centers, you\'re just a number. In our 12-20 batches, faculty knows your name, strengths, weaknesses. That\'s the difference between 280 and 340 in Biology.',
+          'Maximum 12-20 students per batch (vs 50-100 at Allen/Aakash). Batch size matters critically for NEET Biology: (1) Personal attention from AIIMS faculty. (2) Cannot get "lost in crowd" - every student tracked. (3) Doubts resolved immediately (impossible in 100-student hall). (4) Personalized weak area focus. (5) Regular interaction builds confidence. At 50-100 student centers, you\'re just a number. In our 12-20 batches, faculty knows your name, strengths, weaknesses. That\'s the difference between 280 and 340 in Biology.',
       },
       {
         question: 'Which areas of South Delhi, Central Delhi, and NCR do your students come from?',
@@ -1647,7 +1624,7 @@ export const localities: Locality[] = [
       demandExplanation:
         'Pitampura is a major educational hub in North West Delhi with a high concentration of schools and coaching centers. The area generates significant NEET demand from its large middle-class residential population.',
       competitionAnalysis:
-        "Pitampura is one of Delhi's most competitive coaching markets with branches of the largest national NEET chain, the 2nd-largest national NEET chain, and numerous local institutes. Despite the competition, specialized Biology-only coaching is surprisingly rare.",
+        "Pitampura is one of Delhi's most competitive coaching markets with branches of Aakash, Allen, and numerous local institutes. Despite the competition, specialized Biology-only coaching is surprisingly rare.",
       parentConcerns:
         'Parents in Pitampura often feel overwhelmed by the number of coaching options and struggle to identify genuine quality. They value word-of-mouth recommendations and verifiable results from coaching centers.',
       studyCultureTrend:
@@ -2026,13 +2003,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Karol Bagh',
-        'other Kota-origin chains',
-        'other IIT-JEE-first coachings',
-        'the largest national NEET chain',
-        'Motion IIT-JEE',
-      ],
+      majorInstitutes: ['Allen Karol Bagh', 'Resonance', 'FIITJEE', 'Aakash', 'Motion IIT-JEE'],
       avgFees: 120000,
       ourAdvantage: [
         'Specialized Biology focus',
@@ -2591,18 +2562,13 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Laxmi Nagar',
-        'XYZ Coaching (largest national NEET chain)',
-        'other IIT-JEE-first coachings',
-        'other Kota-origin chains',
-      ],
+      majorInstitutes: ['Allen Laxmi Nagar', 'Aakash', 'FIITJEE', 'Resonance'],
       avgFees: 95000,
       ourAdvantage: [
         'Personal attention with 15:1 ratio vs 40:1 at big institutes',
         'AIIMS trained faculty with 15+ years experience',
         'Flexible online classes - save 2-3 hours commute daily',
-        '20% lower fees than the 2nd-largest national NEET chain/the largest national NEET chain',
+        '20% lower fees than Allen/Aakash',
         'Weekly doubt clearing sessions',
       ],
       marketGap:
@@ -2655,7 +2621,7 @@ export const localities: Locality[] = [
       {
         question: 'How much does NEET Biology coaching cost in Laxmi Nagar?',
         answer:
-          'Our complete NEET Biology course is ₹95,000 for the full year - 20% lower than the 2nd-largest national NEET chain or the largest national NEET chain in Laxmi Nagar. We offer EMI options and merit-based scholarships up to 30%.',
+          'Our complete NEET Biology course is ₹95,000 for the full year - 20% lower than Allen or Aakash in Laxmi Nagar. We offer EMI options and merit-based scholarships up to 30%.',
       },
       {
         question: 'Is online coaching effective for Laxmi Nagar students?',
@@ -2736,11 +2702,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Sector 18',
-        'other Kota-origin chains Noida',
-        'XYZ Coaching (largest national NEET chain)',
-      ],
+      majorInstitutes: ['Allen Sector 18', 'Resonance Noida', 'Aakash'],
       avgFees: 118000,
       ourAdvantage: [
         'Biology specialization',
@@ -5727,14 +5689,14 @@ export const localities: Locality[] = [
 
     competition: {
       majorInstitutes: [
-        'SKY Coaching (2nd-largest national NEET chain) (Sector 14 & South City II - 8-10 km away)',
-        'XYZ Coaching (largest national NEET chain) (not in Gurugram)',
+        'Allen (Sector 14 & South City II - 8-10 km away)',
+        'Aakash (not in Gurugram)',
         'Royal Home Tuition (individual tutors at ₹500-646/hr)',
         'Converse E+ (general coaching in Sector 51)',
       ],
       avgFees: 150000,
       ourAdvantage: [
-        '70% more affordable - ₹48K vs ₹1.5-2.4L at the 2nd-largest national NEET chain/the largest national NEET chain',
+        '70% more affordable - ₹48K vs ₹1.5-2.4L at Allen/Aakash',
         'Physical presence in Sector 51 - no travel to Sector 14 (save 2-3 hours daily)',
         'Unique hybrid mode - attend offline OR online based on your schedule',
         'Small batches 12-20 students vs 50-100 at big institutes',
@@ -5794,10 +5756,9 @@ export const localities: Locality[] = [
           'Yes! We offer three modes: (1) Offline classes at our Sector 51 physical center, (2) Online live classes, (3) Hybrid mode where you can switch between offline and online based on your schedule. This flexibility is unique and perfect for Gurugram students.',
       },
       {
-        question:
-          'How are you different from SKY Coaching (2nd-largest national NEET chain) in Sector 14?',
+        question: 'How are you different from Allen in Sector 14?',
         answer:
-          'Key differences: (1) We are in Sector 51, saving you 2-3 hours daily travel to Sector 14. (2) Our fees are ₹48-98K vs the 2nd-largest national NEET chain ₹1.5-2.4L - 70% cheaper! (3) Small batches of 12-20 students vs their 50-100. (4) Biology specialization vs general coaching. (5) Hybrid mode option unavailable at the 2nd-largest national NEET chain. (6) Better individual attention and doubt clearing.',
+          'Key differences: (1) We are in Sector 51, saving you 2-3 hours daily travel to Sector 14. (2) Our fees are ₹48-98K vs Allen ₹1.5-2.4L - 70% cheaper! (3) Small batches of 12-20 students vs their 50-100. (4) Biology specialization vs general coaching. (5) Hybrid mode option unavailable at Allen. (6) Better individual attention and doubt clearing.',
       },
       {
         question: 'What is the fee structure for Sector 51 students?',
@@ -5915,13 +5876,13 @@ export const localities: Locality[] = [
 
     competition: {
       majorInstitutes: [
-        'SKY Coaching (2nd-largest national NEET chain) Sector 14 (10+ km away)',
-        'the largest national NEET chain (not in Gurugram)',
-        'other online-only platforms Sector 16 (8 km)',
+        'Allen Sector 14 (10+ km away)',
+        'Aakash (not in Gurugram)',
+        'PhysicsWallah (PW) Sector 16 (8 km)',
       ],
       avgFees: 180000,
       ourAdvantage: [
-        '60% more affordable than the 2nd-largest national NEET chain/the largest national NEET chain',
+        '60% more affordable than Allen/Aakash',
         'No travel outside gated community needed',
         'Hybrid mode - study from villa or attend online',
         'Small batches 12-15 vs 50-100 at big institutes',
@@ -5965,8 +5926,7 @@ export const localities: Locality[] = [
           "We offer live online classes that you can attend from your Nirvana Country home, plus our Sector 51 center (10 mins away) for hybrid attendance. Many parents prefer online as kids don't need to leave the gated township. We also organize periodic doubt-clearing meetups at Nirvana Country Club.",
       },
       {
-        question:
-          'How is this better than sending my child to the 2nd-largest national NEET chain in Sector 14?',
+        question: 'How is this better than sending my child to Allen in Sector 14?',
         answer:
           'Key advantages: (1) No 1-2 hour daily commute from Nirvana Country to Sector 14. (2) Fees 60% lower - ₹48-98K vs ₹1.5-2.5L. (3) Small batches of 12-15 vs 50-100 students. (4) Biology specialization vs general coaching. (5) AIIMS trained faculty with personalized attention. (6) Your child stays safe in the township.',
       },
@@ -6001,10 +5961,9 @@ export const localities: Locality[] = [
     pincode: ['122018', '122002'],
 
     seo: {
-      title:
-        'NEET Biology Coaching in Sector 49 South City 2 Gurugram | Near the 2nd-largest national NEET chain',
+      title: 'NEET Biology Coaching in Sector 49 South City 2 Gurugram | Near Allen',
       description:
-        'Best NEET Biology coaching in Sector 49 South City 2 Gurugram. Alternative to SKY Coaching (2nd-largest national NEET chain). Expert AIIMS trained faculties, affordable fees. Malibu Town, Sispal Vihar, Uppal Southend. 88264-44334',
+        'Best NEET Biology coaching in Sector 49 South City 2 Gurugram. Alternative to Allen. Expert AIIMS trained faculties, affordable fees. Malibu Town, Sispal Vihar, Uppal Southend. 88264-44334',
       keywords: [
         'neet coaching sector 49 gurugram',
         'biology coaching south city 2',
@@ -6031,7 +5990,7 @@ export const localities: Locality[] = [
     coordinates: { lat: 28.4089, lng: 77.0543 },
     centerAddress: 'Online coaching + Sector 51 center for Sector 49 residents',
     nearbyLandmarks: [
-      'SKY Coaching (2nd-largest national NEET chain) South City (nearby competitor)',
+      'Allen South City (nearby competitor)',
       'Malibu Town',
       'AWHO Sispal Vihar',
       'South City 2 Market',
@@ -6054,45 +6013,40 @@ export const localities: Locality[] = [
         'Scottish High Sector 57',
       ],
       popularColleges: ['GD Goenka University', 'Medanta paramedic training', 'Amity nearby'],
-      coachingHubs: [
-        'SKY Coaching (2nd-largest national NEET chain) South City II is HERE',
-        'Multiple tutors',
-      ],
+      coachingHubs: ['Allen South City II is HERE', 'Multiple tutors'],
       populationType: 'residential',
       economicProfile: 'upper-middle',
     },
 
     competition: {
       majorInstitutes: [
-        'SKY Coaching (2nd-largest national NEET chain) South City II (in Sector 49)',
+        'Allen South City II (in Sector 49)',
         'Various local tutors',
-        'the largest national NEET chain (not in Gurugram)',
+        'Aakash (not in Gurugram)',
       ],
       avgFees: 175000,
       ourAdvantage: [
-        '65% cheaper than the 2nd-largest national NEET chain right in your sector',
-        'Biology specialization vs the 2nd-largest national NEET chain general coaching',
-        'Small batches 12-15 vs the 2nd-largest national NEET chain 50-100 students',
+        '65% cheaper than Allen right in your sector',
+        'Biology specialization vs Allen general coaching',
+        'Small batches 12-15 vs Allen 50-100 students',
         'AIIMS trained faculty exclusively for Biology',
-        'Hybrid mode unavailable at the 2nd-largest national NEET chain',
+        'Hybrid mode unavailable at Allen',
         'Better student-teacher ratio for doubt clearing',
       ],
       marketGap:
-        'the 2nd-largest national NEET chain is in Sector 49 but charges ₹1.8-2.5L with overcrowded batches. Parents want quality + affordability. We provide specialized Biology coaching at 65% lower cost with better attention.',
+        'Allen is in Sector 49 but charges ₹1.8-2.5L with overcrowded batches. Parents want quality + affordability. We provide specialized Biology coaching at 65% lower cost with better attention.',
     },
 
     content: {
-      heroTitle:
-        'NEET Biology Coaching in Sector 49 - the 2nd-largest national NEET chain Alternative',
+      heroTitle: 'NEET Biology Coaching in Sector 49 - Allen Alternative',
       heroSubtitle:
-        'Serving Malibu Town, Sispal Vihar, Uppal Southend, South City 2. Same quality, 65% lower fees than the 2nd-largest national NEET chain next door.',
+        'Serving Malibu Town, Sispal Vihar, Uppal Southend, South City 2. Same quality, 65% lower fees than Allen next door.',
       valueProposition:
-        'Why pay ₹2L+ at the 2nd-largest national NEET chain Sector 49 when you can get better Biology coaching at ₹48-98K? AIIMS trained faculty, small batches, personalized attention. 145+ Sector 49 students already trust us.',
+        'Why pay ₹2L+ at Allen Sector 49 when you can get better Biology coaching at ₹48-98K? AIIMS trained faculty, small batches, personalized attention. 145+ Sector 49 students already trust us.',
       urgencyMessage: 'Sector 49 batch filling fast - Only 8 seats left!',
       localChallenge:
-        'Sector 49 parents know the 2nd-largest national NEET chain is nearby but fees are ₹1.8-2.5L with 50-100 students per batch. Individual attention is impossible. We solve this with specialized Biology coaching, small batches, and affordable pricing.',
-      successMetric:
-        '88% of Sector 49 students scored 335+ in Biology vs 72% at the 2nd-largest national NEET chain',
+        'Sector 49 parents know Allen is nearby but fees are ₹1.8-2.5L with 50-100 students per batch. Individual attention is impossible. We solve this with specialized Biology coaching, small batches, and affordable pricing.',
+      successMetric: '88% of Sector 49 students scored 335+ in Biology vs 72% at Allen',
     },
 
     socialProof: {
@@ -6100,9 +6054,9 @@ export const localities: Locality[] = [
       topScore: 358,
       testimonialIds: ['sec49-001', 'sec49-002', 'sec49-003'],
       successStories: [
-        'Rahul from Malibu Town left the 2nd-largest national NEET chain after 3 months. Scored 355/360 with us. Says: "Best decision ever".',
+        'Rahul from Malibu Town left Allen after 3 months. Scored 355/360 with us. Says: "Best decision ever".',
         'Ananya from AWHO Sispal Vihar improved from 248 to 342 in 10 months. Now at Maulana Azad Medical College.',
-        'Parents from Uppal Southend saved ₹1.2L compared to the 2nd-largest national NEET chain. Their daughter scored 349 in Biology.',
+        'Parents from Uppal Southend saved ₹1.2L compared to Allen. Their daughter scored 349 in Biology.',
         '12 students from Sector 49 qualified NEET 2024 with government medical seats.',
       ],
     },
@@ -6111,10 +6065,9 @@ export const localities: Locality[] = [
 
     faqs: [
       {
-        question:
-          'How are you different from SKY Coaching (2nd-largest national NEET chain) in Sector 49?',
+        question: 'How are you different from Allen in Sector 49?',
         answer:
-          'Key differences: (1) Fees ₹48-98K vs the 2nd-largest national NEET chain ₹1.8-2.5L - save over ₹1 lakh! (2) Small batches 12-15 vs 50-100 students. (3) Biology specialization vs general coaching. (4) AIIMS trained faculty with 15+ years experience. (5) Hybrid mode option. (6) Personal doubt clearing vs mass Q&A sessions. Many the 2nd-largest national NEET chain dropouts now study with us.',
+          'Key differences: (1) Fees ₹48-98K vs Allen ₹1.8-2.5L - save over ₹1 lakh! (2) Small batches 12-15 vs 50-100 students. (3) Biology specialization vs general coaching. (4) AIIMS trained faculty with 15+ years experience. (5) Hybrid mode option. (6) Personal doubt clearing vs mass Q&A sessions. Many Allen dropouts now study with us.',
       },
       {
         question: 'I live in Malibu Town. Is coaching convenient for me?',
@@ -6215,14 +6168,14 @@ export const localities: Locality[] = [
 
     competition: {
       majorInstitutes: [
-        'SKY Coaching (2nd-largest national NEET chain) South City II (5 km)',
-        'the 2nd-largest national NEET chain Sector 14 (10 km)',
-        'the largest national NEET chain (not in Gurugram)',
+        'Allen South City II (5 km)',
+        'Allen Sector 14 (10 km)',
+        'Aakash (not in Gurugram)',
       ],
       avgFees: 175000,
       ourAdvantage: [
         'No travel from Sohna Road societies needed',
-        '60% cheaper than the 2nd-largest national NEET chain/the largest national NEET chain',
+        '60% cheaper than Allen/Aakash',
         'Biology specialization for NEET',
         'Small batches for premium attention',
         'Hybrid mode for flexibility',
@@ -6250,7 +6203,7 @@ export const localities: Locality[] = [
       topScore: 356,
       testimonialIds: ['sohna-001', 'sohna-002'],
       successStories: [
-        'Aditya from Central Park Belgravia scored 356/360. Parents chose us over the 2nd-largest national NEET chain for convenience + quality.',
+        'Aditya from Central Park Belgravia scored 356/360. Parents chose us over Allen for convenience + quality.',
         'Sneha from Vatika City improved from 235 to 348 in 11 months. Now at AIIMS Jodhpur.',
         '7 students from Sohna Road societies got government medical college seats in 2024.',
       ],
@@ -6267,7 +6220,7 @@ export const localities: Locality[] = [
       {
         question: 'What is the fee compared to other coaching centers?',
         answer:
-          'Our fees: ₹48-98K per year. the 2nd-largest national NEET chain charges ₹1.8-2.5L. You save ₹1-1.5 lakh while getting better Biology-focused coaching with small batches. Perfect for Central Park, Vatika families who value quality + value.',
+          'Our fees: ₹48-98K per year. Allen charges ₹1.8-2.5L. You save ₹1-1.5 lakh while getting better Biology-focused coaching with small batches. Perfect for Central Park, Vatika families who value quality + value.',
       },
       {
         question: 'My child goes to GD Goenka School. Can you help with NEET preparation?',
@@ -6300,10 +6253,9 @@ export const localities: Locality[] = [
     pincode: ['122004', '122102'],
 
     seo: {
-      title:
-        'NEET Biology Coaching in Sector 84 Gurugram | Near the 2nd-largest national NEET chain M3M Market',
+      title: 'NEET Biology Coaching in Sector 84 Gurugram | Near Allen M3M Market',
       description:
-        'Best NEET Biology coaching in Sector 84 Gurugram near the 2nd-largest national NEET chain M3M 84 Market. Better alternative with 60% lower fees. AIIMS trained faculties. Dwarka Expressway area. 88264-44334',
+        'Best NEET Biology coaching in Sector 84 Gurugram near Allen M3M 84 Market. Better alternative with 60% lower fees. AIIMS trained faculties. Dwarka Expressway area. 88264-44334',
       keywords: [
         'neet coaching sector 84 gurugram',
         'biology coaching sector 84',
@@ -6327,7 +6279,7 @@ export const localities: Locality[] = [
     coordinates: { lat: 28.4589, lng: 77.0143 },
     centerAddress: 'Online + Hybrid coaching for Sector 84 and nearby New Gurugram',
     nearbyLandmarks: [
-      'SKY Coaching (2nd-largest national NEET chain) M3M 84 Market',
+      'Allen M3M 84 Market',
       'M3M Merlin',
       'Dwarka Expressway',
       'Sector 82-83 residential',
@@ -6347,42 +6299,38 @@ export const localities: Locality[] = [
         'DPS sector 45 (12 km)',
       ],
       popularColleges: ['K.R. Mangalam University', 'Amity Gurugram'],
-      coachingHubs: [
-        'SKY Coaching (2nd-largest national NEET chain) M3M 84 Market is HERE',
-        'New area with limited options',
-      ],
+      coachingHubs: ['Allen M3M 84 Market is HERE', 'New area with limited options'],
       populationType: 'residential',
       economicProfile: 'upper-middle',
     },
 
     competition: {
       majorInstitutes: [
-        'SKY Coaching (2nd-largest national NEET chain) Sector 84 (in M3M 84 Market)',
+        'Allen Sector 84 (in M3M 84 Market)',
         'Limited other options in new Gurugram',
       ],
       avgFees: 180000,
       ourAdvantage: [
-        '60% cheaper than the 2nd-largest national NEET chain in same sector',
+        '60% cheaper than Allen in same sector',
         'Biology specialization vs general coaching',
-        'Small batches vs the 2nd-largest national NEET chain mass batches',
+        'Small batches vs Allen mass batches',
         'AIIMS trained faculty',
         'Hybrid flexibility',
         'Better individual attention',
       ],
       marketGap:
-        'Sector 84 and new Gurugram areas have the 2nd-largest national NEET chain but fees are ₹1.8-2.5L. Young families moving to these affordable sectors want quality coaching at reasonable prices. We fill this gap.',
+        'Sector 84 and new Gurugram areas have Allen but fees are ₹1.8-2.5L. Young families moving to these affordable sectors want quality coaching at reasonable prices. We fill this gap.',
     },
 
     content: {
-      heroTitle:
-        'NEET Biology Coaching in Sector 84 - Better Than the 2nd-largest national NEET chain Next Door',
+      heroTitle: 'NEET Biology Coaching in Sector 84 - Better Than Allen Next Door',
       heroSubtitle:
         'Serving Sector 82, 83, 84, 85 and Dwarka Expressway corridor. Same location, 60% lower fees, better results.',
       valueProposition:
-        'the 2nd-largest national NEET chain is in M3M 84 Market charging ₹2L+. Get superior Biology coaching at ₹48-98K with small batches, AIIMS trained faculty, and personalized attention. 55+ Sector 84 students already chose us.',
+        'Allen is in M3M 84 Market charging ₹2L+. Get superior Biology coaching at ₹48-98K with small batches, AIIMS trained faculty, and personalized attention. 55+ Sector 84 students already chose us.',
       urgencyMessage: 'New Gurugram batch starting - Early bird discount for Sector 84 residents!',
       localChallenge:
-        'Families moved to affordable Sector 84 expecting lower costs everywhere. the 2nd-largest national NEET chain charges Delhi prices (₹2L+) for 50-100 student batches. We offer premium coaching at prices that match new Gurugram affordability.',
+        'Families moved to affordable Sector 84 expecting lower costs everywhere. Allen charges Delhi prices (₹2L+) for 50-100 student batches. We offer premium coaching at prices that match new Gurugram affordability.',
       successMetric: '85% of Sector 84 students scored 330+ in Biology',
     },
 
@@ -6391,8 +6339,8 @@ export const localities: Locality[] = [
       topScore: 348,
       testimonialIds: ['sec84-001', 'sec84-002'],
       successStories: [
-        'Vikram from M3M Merlin compared us with the 2nd-largest national NEET chain in same market - chose us. Scored 345/360.',
-        'Family from Sector 82 saved ₹1.2L vs the 2nd-largest national NEET chain. Daughter scored 342 in Biology.',
+        'Vikram from M3M Merlin compared us with Allen in same market - chose us. Scored 345/360.',
+        'Family from Sector 82 saved ₹1.2L vs Allen. Daughter scored 342 in Biology.',
         '5 students from Dwarka Expressway sectors got medical college admissions in 2024.',
       ],
     },
@@ -6401,9 +6349,9 @@ export const localities: Locality[] = [
 
     faqs: [
       {
-        question: 'How do you compare with the 2nd-largest national NEET chain in M3M 84 Market?',
+        question: 'How do you compare with Allen in M3M 84 Market?',
         answer:
-          'Key advantages: (1) Fees ₹48-98K vs the 2nd-largest national NEET chain ₹1.8-2.5L - save ₹1L+! (2) Small batches 12-15 vs 50-100. (3) Biology specialization vs multi-subject. (4) AIIMS trained faculty. (5) Hybrid mode flexibility. (6) Personal doubt clearing. Many parents visit both and choose us.',
+          'Key advantages: (1) Fees ₹48-98K vs Allen ₹1.8-2.5L - save ₹1L+! (2) Small batches 12-15 vs 50-100. (3) Biology specialization vs multi-subject. (4) AIIMS trained faculty. (5) Hybrid mode flexibility. (6) Personal doubt clearing. Many parents visit both and choose us.',
       },
       {
         question: 'Do you have offline classes near Sector 84?',
@@ -6489,18 +6437,15 @@ export const localities: Locality[] = [
         'Sanskriti School Delhi accessible',
       ],
       popularColleges: ['All Delhi colleges accessible via metro', 'AIIMS Delhi (30 mins metro)'],
-      coachingHubs: [
-        'the largest national NEET chain Sector 14 nearby',
-        'Multiple options in old Gurugram',
-      ],
+      coachingHubs: ['Aakash Sector 14 nearby', 'Multiple options in old Gurugram'],
       populationType: 'residential',
       economicProfile: 'premium',
     },
 
     competition: {
       majorInstitutes: [
-        'the largest national NEET chain Sector 14 (5 km)',
-        'the 2nd-largest national NEET chain Sector 14 (5 km)',
+        'Aakash Sector 14 (5 km)',
+        'Allen Sector 14 (5 km)',
         'Various local tutors',
       ],
       avgFees: 160000,
@@ -6625,17 +6570,13 @@ export const localities: Locality[] = [
         'Heritage Xperiential Learning',
       ],
       popularColleges: ['Delhi colleges via metro', 'AIIMS Delhi accessible'],
-      coachingHubs: ['Sector 14 coaching hub (5 km)', 'the largest national NEET chain nearby'],
+      coachingHubs: ['Sector 14 coaching hub (5 km)', 'Aakash nearby'],
       populationType: 'residential',
       economicProfile: 'premium',
     },
 
     competition: {
-      majorInstitutes: [
-        'the largest national NEET chain Sector 14 (5 km)',
-        'the 2nd-largest national NEET chain Sector 14 (5 km)',
-        'Local tutors',
-      ],
+      majorInstitutes: ['Aakash Sector 14 (5 km)', 'Allen Sector 14 (5 km)', 'Local tutors'],
       avgFees: 170000,
       ourAdvantage: [
         'Designed for Shri Ram School schedule',
@@ -6771,8 +6712,8 @@ export const localities: Locality[] = [
 
     competition: {
       majorInstitutes: [
-        'the largest national NEET chain (none on Golf Course Road)',
-        'the 2nd-largest national NEET chain Sector 14 (7 km)',
+        'Aakash (none on Golf Course Road)',
+        'Allen Sector 14 (7 km)',
         'Premium tutors at ₹2000+/hr',
       ],
       avgFees: 250000,
@@ -6918,9 +6859,9 @@ export const localities: Locality[] = [
     },
     competition: {
       majorInstitutes: [
-        'SKY Coaching (2nd-largest national NEET chain) Sector 14 (5 km)',
-        'XYZ Coaching (not on MG Road)',
-        'other online-only platforms Sector 16',
+        'Allen Sector 14 (5 km)',
+        'Aakash (not on MG Road)',
+        'PhysicsWallah (PW) Sector 16',
       ],
       avgFees: 175000,
       ourAdvantage: [
@@ -6962,7 +6903,7 @@ export const localities: Locality[] = [
           'We offer live online classes from your MG Road home, plus our Sector 51 center for hybrid attendance. Most Beverly Park/Essel Towers parents prefer online due to convenience.',
       },
       {
-        question: 'How is this better than the 2nd-largest national NEET chain in Sector 14?',
+        question: 'How is this better than Allen in Sector 14?',
         answer:
           'Key advantages: (1) No 30-45 min commute to Sector 14. (2) Fees 60% lower - ₹48-98K vs ₹1.5-2.5L. (3) Small batches of 12-15 vs 50-100 students. (4) AIIMS trained faculty with personalized attention.',
       },
@@ -7043,8 +6984,8 @@ export const localities: Locality[] = [
     },
     competition: {
       majorInstitutes: [
-        'SKY Coaching (2nd-largest national NEET chain) Sector 14 (6 km)',
-        'XYZ Coaching (not nearby)',
+        'Allen Sector 14 (6 km)',
+        'Aakash (not nearby)',
         'Private tutors ₹1500-2000/hr',
       ],
       avgFees: 200000,
@@ -7161,9 +7102,9 @@ export const localities: Locality[] = [
     },
     competition: {
       majorInstitutes: [
-        'SKY Coaching (2nd-largest national NEET chain) Sector 14 (8 km)',
-        'XYZ Coaching (not in Gurugram)',
-        'other online-only platforms (7 km)',
+        'Allen Sector 14 (8 km)',
+        'Aakash (not in Gurugram)',
+        'PhysicsWallah (PW) (7 km)',
       ],
       avgFees: 200000,
       ourAdvantage: [
@@ -7276,8 +7217,8 @@ export const localities: Locality[] = [
     },
     competition: {
       majorInstitutes: [
-        'SKY Coaching (2nd-largest national NEET chain) Sector 14 (6 km)',
-        'the largest national NEET chain (not on Golf Course Road)',
+        'Allen Sector 14 (6 km)',
+        'Aakash (not on Golf Course Road)',
         'Premium private tutors',
       ],
       avgFees: 200000,
@@ -7389,10 +7330,7 @@ export const localities: Locality[] = [
       economicProfile: 'premium',
     },
     competition: {
-      majorInstitutes: [
-        'SKY Coaching (2nd-largest national NEET chain) Sector 14 (6 km)',
-        'XYZ Coaching (not nearby)',
-      ],
+      majorInstitutes: ['Allen Sector 14 (6 km)', 'Aakash (not nearby)'],
       avgFees: 220000,
       ourAdvantage: [
         'Only NEET coaching for Ambience Island',
@@ -7504,11 +7442,7 @@ export const localities: Locality[] = [
       economicProfile: 'upper-middle',
     },
     competition: {
-      majorInstitutes: [
-        'SKY Coaching (2nd-largest national NEET chain) Sector 14 (4 km)',
-        'XYZ Coaching (not nearby)',
-        'Various local tuitions',
-      ],
+      majorInstitutes: ['Allen Sector 14 (4 km)', 'Aakash (not nearby)', 'Various local tuitions'],
       avgFees: 160000,
       ourAdvantage: [
         'Proximity to DPS Gurgaon - largest feeder school',
@@ -7611,10 +7545,7 @@ export const localities: Locality[] = [
       economicProfile: 'upper-middle',
     },
     competition: {
-      majorInstitutes: [
-        'SKY Coaching (2nd-largest national NEET chain) Sector 14 (8 km)',
-        'other online-only platforms Sector 16 (7 km)',
-      ],
+      majorInstitutes: ['Allen Sector 14 (8 km)', 'PhysicsWallah (PW) Sector 16 (7 km)'],
       avgFees: 170000,
       ourAdvantage: [
         'Only NEET coaching for Sector 48',
@@ -7725,10 +7656,7 @@ export const localities: Locality[] = [
       economicProfile: 'premium',
     },
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Sector 14 (7 km)',
-        'the largest national NEET chain (not nearby)',
-      ],
+      majorInstitutes: ['Allen Sector 14 (7 km)', 'Aakash (not nearby)'],
       avgFees: 180000,
       ourAdvantage: [
         'Heritage School students feeder - IB/IGCSE compatible',
@@ -7832,10 +7760,7 @@ export const localities: Locality[] = [
       economicProfile: 'premium',
     },
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Sector 14 (8 km)',
-        'the largest national NEET chain (not in Gurugram)',
-      ],
+      majorInstitutes: ['Allen Sector 14 (8 km)', 'Aakash (not in Gurugram)'],
       avgFees: 190000,
       ourAdvantage: [
         'Only NEET coaching for Sector 63',
@@ -7928,7 +7853,7 @@ export const localities: Locality[] = [
       economicProfile: 'upper-middle',
     },
     competition: {
-      majorInstitutes: ['the 2nd-largest national NEET chain Sector 14 (5 km)', 'Local tuitions'],
+      majorInstitutes: ['Allen Sector 14 (5 km)', 'Local tuitions'],
       avgFees: 155000,
       ourAdvantage: [
         'Shikshantar School students feeder',
@@ -8033,11 +7958,7 @@ export const localities: Locality[] = [
       economicProfile: 'upper-middle',
     },
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Sector 14 (15 km)',
-        'the largest national NEET chain (not nearby)',
-        'No local options',
-      ],
+      majorInstitutes: ['Allen Sector 14 (15 km)', 'Aakash (not nearby)', 'No local options'],
       avgFees: 160000,
       ourAdvantage: [
         'Only NEET coaching for Dwarka Expressway',
@@ -8141,10 +8062,7 @@ export const localities: Locality[] = [
       economicProfile: 'premium',
     },
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Sector 14 (15+ km)',
-        'No Dwarka Expressway options',
-      ],
+      majorInstitutes: ['Allen Sector 14 (15+ km)', 'No Dwarka Expressway options'],
       avgFees: 175000,
       ourAdvantage: [
         'Only NEET coaching for Sector 106',
@@ -8247,10 +8165,7 @@ export const localities: Locality[] = [
       economicProfile: 'premium',
     },
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Sector 14 (16 km)',
-        'No options for villas',
-      ],
+      majorInstitutes: ['Allen Sector 14 (16 km)', 'No options for villas'],
       avgFees: 200000,
       ourAdvantage: [
         'Only NEET coaching for Sobha villas',
@@ -8345,10 +8260,7 @@ export const localities: Locality[] = [
       economicProfile: 'premium',
     },
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Sector 14 (15+ km)',
-        'No Dwarka Expressway options',
-      ],
+      majorInstitutes: ['Allen Sector 14 (15+ km)', 'No Dwarka Expressway options'],
       avgFees: 175000,
       ourAdvantage: [
         'Only NEET coaching for M3M Crown',
@@ -8443,10 +8355,7 @@ export const localities: Locality[] = [
       economicProfile: 'upper-middle',
     },
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Sector 14 (16 km)',
-        'No Dwarka Expressway options',
-      ],
+      majorInstitutes: ['Allen Sector 14 (16 km)', 'No Dwarka Expressway options'],
       avgFees: 165000,
       ourAdvantage: [
         'Only NEET coaching for Sector 113',
@@ -11853,11 +11762,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'SKY Coaching (2nd-largest national NEET chain) Marine Lines',
-        'XYZ Coaching (largest national NEET chain) Churchgate',
-        'other Kota-origin chains South Mumbai',
-      ],
+      majorInstitutes: ['Allen Marine Lines', 'Aakash Churchgate', 'Resonance South Mumbai'],
       avgFees: 150000,
       ourAdvantage: [
         '20% lower fees than South Mumbai institutes',
@@ -11994,11 +11899,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Churchgate',
-        'the largest national NEET chain Nariman Point',
-        'other IIT-JEE-first coachings Churchgate',
-      ],
+      majorInstitutes: ['Allen Churchgate', 'Aakash Nariman Point', 'FIITJEE Churchgate'],
       avgFees: 145000,
       ourAdvantage: [
         '25% cost saving vs Nariman Point institutes',
@@ -12136,11 +12037,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Churchgate',
-        'the largest national NEET chain Fort',
-        'other IIT-JEE-first coachings Churchgate',
-      ],
+      majorInstitutes: ['Allen Churchgate', 'Aakash Fort', 'FIITJEE Churchgate'],
       avgFees: 140000,
       ourAdvantage: [
         '20% lower fees than Churchgate institutes',
@@ -12278,12 +12175,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Bandra',
-        'XYZ Coaching Bandra',
-        'other IIT-JEE-first coachings Khar',
-        'other Kota-origin chains Bandra',
-      ],
+      majorInstitutes: ['Allen Bandra', 'Aakash Bandra', 'FIITJEE Khar', 'Resonance Bandra'],
       avgFees: 160000,
       ourAdvantage: [
         'Save ₹1.5L+ on coaching fees + travel costs',
@@ -12412,10 +12304,10 @@ export const localities: Locality[] = [
 
     competition: {
       majorInstitutes: [
-        'the 2nd-largest national NEET chain Vile Parle',
-        'the largest national NEET chain Andheri',
-        'other IIT-JEE-first coachings Andheri',
-        'other South-Indian chains',
+        'Allen Vile Parle',
+        'Aakash Andheri',
+        'FIITJEE Andheri',
+        'Sri Chaitanya and Narayana',
       ],
       avgFees: 155000,
       ourAdvantage: [
@@ -12549,11 +12441,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Andheri',
-        'the largest national NEET chain Lokhandwala',
-        'other IIT-JEE-first coachings Andheri',
-      ],
+      majorInstitutes: ['Allen Andheri', 'Aakash Lokhandwala', 'FIITJEE Andheri'],
       avgFees: 150000,
       ourAdvantage: [
         'Save ₹1L+ on fees and metro/auto costs',
@@ -12687,13 +12575,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Andheri',
-        'XYZ Coaching (largest national NEET chain)',
-        'other IIT-JEE-first coachings Andheri',
-        'other Kota-origin chains',
-        'other South-Indian chains',
-      ],
+      majorInstitutes: ['Allen Andheri', 'Aakash', 'FIITJEE Andheri', 'Resonance', 'Sri Chaitanya'],
       avgFees: 155000,
       ourAdvantage: [
         'Save ₹1.2L+ annually on fees and travel',
@@ -12834,10 +12716,10 @@ export const localities: Locality[] = [
 
     competition: {
       majorInstitutes: [
-        'the 2nd-largest national NEET chain Ghatkopar',
-        'the largest national NEET chain Kanjurmarg',
-        'other IIT-JEE-first coachings Powai',
-        'a leading national educational institution Academy',
+        'Allen Ghatkopar',
+        'Aakash Kanjurmarg',
+        'FIITJEE Powai',
+        'PhysicsWallah (PW) Academy',
       ],
       avgFees: 160000,
       ourAdvantage: [
@@ -12973,11 +12855,11 @@ export const localities: Locality[] = [
 
     competition: {
       majorInstitutes: [
-        'the 2nd-largest national NEET chain Ghatkopar',
-        'XYZ Coaching (largest national NEET chain)',
-        'other IIT-JEE-first coachings Ghatkopar',
-        'other Kota-origin chains',
-        'a leading national educational institution',
+        'Allen Ghatkopar',
+        'Aakash',
+        'FIITJEE Ghatkopar',
+        'Resonance',
+        'PhysicsWallah (PW)',
       ],
       avgFees: 140000,
       ourAdvantage: [
@@ -13116,12 +12998,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Thane',
-        'the largest national NEET chain Ghatkopar',
-        'other IIT-JEE-first coachings Thane',
-        'Local tutorials',
-      ],
+      majorInstitutes: ['Allen Thane', 'Aakash Ghatkopar', 'FIITJEE Thane', 'Local tutorials'],
       avgFees: 135000,
       ourAdvantage: [
         'Save ₹80,000+ on fees and train/auto costs',
@@ -13260,12 +13137,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Vashi',
-        'the largest national NEET chain Panvel',
-        'other IIT-JEE-first coachings Vashi',
-        'other Kota-origin chains Kharghar',
-      ],
+      majorInstitutes: ['Allen Vashi', 'Aakash Panvel', 'FIITJEE Vashi', 'Resonance Kharghar'],
       avgFees: 130000,
       ourAdvantage: [
         'Save ₹75,000+ on fees and harbour line costs',
@@ -13405,11 +13277,11 @@ export const localities: Locality[] = [
 
     competition: {
       majorInstitutes: [
-        'the 2nd-largest national NEET chain Vashi',
-        'XYZ Coaching (largest national NEET chain)',
-        'other IIT-JEE-first coachings Vashi',
-        'other Kota-origin chains',
-        'a leading national educational institution',
+        'Allen Vashi',
+        'Aakash',
+        'FIITJEE Vashi',
+        'Resonance',
+        'PhysicsWallah (PW)',
       ],
       avgFees: 135000,
       ourAdvantage: [
@@ -13543,12 +13415,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Vashi',
-        'the largest national NEET chain Kharghar',
-        'other IIT-JEE-first coachings Vashi',
-        'Local tutorials',
-      ],
+      majorInstitutes: ['Allen Vashi', 'Aakash Kharghar', 'FIITJEE Vashi', 'Local tutorials'],
       avgFees: 130000,
       ourAdvantage: [
         'Save ₹75,000+ on fees and harbour line costs',
@@ -13682,11 +13549,11 @@ export const localities: Locality[] = [
 
     competition: {
       majorInstitutes: [
-        'the 2nd-largest national NEET chain Thane',
-        'XYZ Coaching (largest national NEET chain)',
-        'other IIT-JEE-first coachings Thane',
-        'other Kota-origin chains',
-        'a leading national educational institution',
+        'Allen Thane',
+        'Aakash',
+        'FIITJEE Thane',
+        'Resonance',
+        'PhysicsWallah (PW)',
       ],
       avgFees: 140000,
       ourAdvantage: [
@@ -13814,12 +13681,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'the 2nd-largest national NEET chain Thane',
-        'the largest national NEET chain Thane',
-        'other IIT-JEE-first coachings Thane',
-        'No local options',
-      ],
+      majorInstitutes: ['Allen Thane', 'Aakash Thane', 'FIITJEE Thane', 'No local options'],
       avgFees: 140000,
       ourAdvantage: [
         'Save ₹90,000+ on fees and daily travel to Thane',
@@ -13946,11 +13808,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        "the 2nd-largest national NEET chain Byju's HSR",
-        'XYZ Coaching (largest national NEET chain)',
-        'a leading national educational institution HSR',
-      ],
+      majorInstitutes: ["Allen Byju's HSR", 'Aakash', 'PhysicsWallah (PW) HSR'],
       avgFees: 135000,
       ourAdvantage: [
         'AI-powered personalized learning paths',
@@ -14000,8 +13858,7 @@ export const localities: Locality[] = [
           'Absolutely! 40% of our HSR students are from top international schools. They prefer our tech-forward approach with interactive live classes, instant doubt clearing, and 24/7 access to recorded lectures. Perfect for tech-savvy families.',
       },
       {
-        question:
-          'What makes your teaching better than the 2nd-largest national NEET chain or the largest national NEET chain in HSR?',
+        question: 'What makes your teaching better than Allen or Aakash in HSR?',
         answer:
           'Small batches (15 vs 50), AI-powered personalization, and exclusive Biology focus. Our faculty has 15+ years NEET experience. Most importantly: no commute means more study time and better work-life balance.',
       },
@@ -14079,11 +13936,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'SKY Coaching (2nd-largest national NEET chain) Koramangala',
-        'other South-Indian chains',
-        'other IIT-JEE-first coachings',
-      ],
+      majorInstitutes: ['Allen Koramangala', 'Sri Chaitanya and Narayana', 'FIITJEE'],
       avgFees: 140000,
       ourAdvantage: [
         'AI-driven personalized learning',
@@ -14209,11 +14062,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        "the 2nd-largest national NEET chain Byju's",
-        'XYZ Coaching (largest national NEET chain)',
-        'other Kota-origin chains',
-      ],
+      majorInstitutes: ["Allen Byju's", 'Aakash', 'Resonance'],
       avgFees: 145000,
       ourAdvantage: [
         'Personalized AI-driven learning paths',
@@ -14717,11 +14566,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'other South-Indian chains Jayanagar',
-        'SKY Coaching (2nd-largest national NEET chain)',
-        'a leading national educational institution',
-      ],
+      majorInstitutes: ['Sri Chaitanya and Narayana Jayanagar', 'Allen', 'PhysicsWallah (PW)'],
       avgFees: 120000,
       ourAdvantage: [
         'AI-powered personalized learning',
@@ -14847,11 +14692,7 @@ export const localities: Locality[] = [
     },
 
     competition: {
-      majorInstitutes: [
-        'other South-Indian chains Jayanagar',
-        'the 2nd-largest national NEET chain Jayanagar',
-        'Deeksha',
-      ],
+      majorInstitutes: ['Sri Chaitanya and Narayana Jayanagar', 'Allen Jayanagar', 'Deeksha'],
       avgFees: 125000,
       ourAdvantage: [
         'AI-powered personalized learning vs generic batches',
@@ -15231,7 +15072,7 @@ export const localities: Locality[] = [
     competition: {
       majorInstitutes: [
         'Deeksha Rajajinagar',
-        'other South-Indian chains',
+        'Sri Chaitanya and Narayana',
         'local coaching centers',
       ],
       avgFees: 120000,

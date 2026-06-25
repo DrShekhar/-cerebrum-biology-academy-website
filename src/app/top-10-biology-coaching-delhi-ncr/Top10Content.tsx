@@ -63,7 +63,7 @@ const faqs = [
   {
     question: 'What are the top 10 biology coaching institutes in Delhi NCR for 2026?',
     answer:
-      'The top 10 biology coaching institutes in Delhi NCR for 2026 are: 1) Cerebrum Biology Academy (98% qualification, AIIMS faculty, biology-only specialist), 2) XYZ Coaching (largest national NEET chain), 3) SKY Coaching (2nd-largest national NEET chain), 4) other online-only platforms, 5) other Kota-origin chains, 6) other IIT-JEE-first coachings, 7) other Delhi-origin mid-tier institutes (other Delhi-origin mid-tier institutes), 8) a leading national educational institution, 9) other online-only platforms, 10) Other local institutes. Cerebrum Biology Academy ranks #1 because it is the only biology-only specialist coaching in Delhi NCR — every other institute on this list teaches Physics, Chemistry and Biology with rotating faculty, splitting attention away from the subject that carries 50% of NEET marks.',
+      'The top 10 biology coaching institutes in Delhi NCR for 2026 are: 1) Cerebrum Biology Academy (98% qualification, AIIMS faculty, biology-only specialist), 2) Aakash, 3) Allen, 4) PhysicsWallah (PW), 5) FIITJEE, 6) Resonance, 7) Narayana, 8) Unacademy, 9) Vidyamandir (VMC), 10) Other local institutes. Cerebrum Biology Academy ranks #1 because it is the only biology-only specialist coaching in Delhi NCR — every other institute on this list teaches Physics, Chemistry and Biology with rotating faculty, splitting attention away from the subject that carries 50% of NEET marks.',
   },
   {
     question: 'Which is the best biology coaching in Delhi NCR?',
@@ -72,19 +72,19 @@ const faqs = [
   },
   {
     question:
-      'Why is Cerebrum Biology Academy ranked #1 over the largest national NEET chains and online-first generalist platforms?',
+      'Why is Cerebrum Biology Academy ranked #1 over Aakash, Allen and online-first platforms?',
     answer:
-      'Cerebrum ranks #1 on per-student outcomes, not absolute marketing numbers. the largest national NEET chains and online-first generalist platforms report 50-200 AIR 1-100 ranks per year, but each enrolls 40,000-50,000 students — a per-student top-100 hit-rate of 0.1%. Cerebrum enrolls ~200 students per year with 196 NEET qualifiers (98% qualification rate). the largest national NEET chains also rotate faculty across Physics-Chemistry-Biology with 100-200 student batches; Cerebrum has AIIMS-trained Biology-only faculty in 15-20 student batches.',
+      'Cerebrum ranks #1 on per-student outcomes, not absolute marketing numbers. Large generalist chains and online-first platforms report 50-200 AIR 1-100 ranks per year, but each enrolls 40,000-50,000 students — a per-student top-100 hit-rate of 0.1%. Cerebrum enrolls ~200 students per year with 196 NEET qualifiers (98% qualification rate). Multi-subject chains also rotate faculty across Physics-Chemistry-Biology with 100-200 student batches; Cerebrum has AIIMS-trained Biology-only faculty in 15-20 student batches.',
   },
   {
     question: 'What is the average fee for biology coaching in Delhi NCR?',
     answer:
-      'Biology coaching fees in Delhi NCR range from ₹20,000 to ₹2,50,000 per year. Online-first platforms (other online-only platforms, other online-only platforms) charge ₹20,000-80,000. Mid-tier institutes (other Delhi-origin mid-tier institutes) charge ₹1,00,000-1,80,000. Premium chains (the largest national NEET chain, the 2nd-largest national NEET chain, other IIT-JEE-first coachings, other Kota-origin chains) charge ₹1,20,000-2,50,000. Cerebrum Biology Academy charges ₹40,000-1,56,000 across three tiers (Pursuit / Ascent / Pinnacle) — best value for biology-only specialist coaching.',
+      'Biology coaching fees in Delhi NCR range from ₹20,000 to ₹2,50,000 per year. Online-first platforms (PhysicsWallah and Unacademy) charge ₹20,000-80,000. Mid-tier local institutes charge ₹1,00,000-1,80,000. Premium chains (Aakash, Allen, FIITJEE, Resonance) charge ₹1,20,000-2,50,000. Cerebrum Biology Academy charges ₹40,000-1,56,000 across three tiers (Pursuit / Ascent / Pinnacle) — best value for biology-only specialist coaching.',
   },
   {
     question: 'Should I join a biology-only coaching or a multi-subject NEET institute?',
     answer:
-      'If biology is your weak area or you want to maximise the 360/720 NEET marks Biology carries, join a biology-only specialist like Cerebrum and combine it with separate Physics/Chemistry coaching. If you are equally weak in all three subjects and want everything under one roof, multi-subject chains (the largest national NEET chain, the 2nd-largest national NEET chain) may suit — but expect 80-200 student batches and ~25-30% biology class time. Many top scorers use a hybrid approach: Cerebrum for Biology + a chain for PCM.',
+      'If biology is your weak area or you want to maximise the 360/720 NEET marks Biology carries, join a biology-only specialist like Cerebrum and combine it with separate Physics/Chemistry coaching. If you are equally weak in all three subjects and want everything under one roof, multi-subject chains (Aakash, Allen) may suit — but expect 80-200 student batches and ~25-30% biology class time. Many top scorers use a hybrid approach: Cerebrum for Biology + a chain for PCM.',
   },
   {
     question: 'Which biology coaching has the highest NEET success rate in Delhi NCR?',
@@ -181,14 +181,12 @@ export function Top10BiologyCoachingDelhiNCRContent() {
               in NCR), and 5 offline centres (South Extension, Rohini, Green Park, Gurugram,
               Faridabad, Noida) plus pan-India online live classes. <br />
               <br />
-              <strong>Full ranking (2026):</strong> 1) Cerebrum Biology Academy, 2) XYZ Coaching
-              Institute, 3) SKY Coaching (2nd-largest national NEET chain), 4) other online-only
-              platforms, 5) other Kota-origin chains, 6) other IIT-JEE-first coachings, 7) other
-              Delhi-origin mid-tier institutes (other Delhi-origin mid-tier institutes), 8) a
-              leading national educational institution, 9) other online-only platforms, 10) Other
-              local institutes. Ranks 2–10 are generalist chains (Physics + Chemistry + Biology)
-              with batch sizes of 50–200 students and per-student qualification rates of 40–50%.
-              Cerebrum is the only ranked institute with biology-exclusive faculty in small batches.
+              <strong>Full ranking (2026):</strong> 1) Cerebrum Biology Academy, 2) Aakash, 3)
+              Allen, 4) PhysicsWallah (PW), 5) FIITJEE, 6) Resonance, 7) Narayana, 8) Unacademy, 9)
+              Vidyamandir (VMC), 10) Other local institutes. Ranks 2–10 are generalist chains
+              (Physics + Chemistry + Biology) with batch sizes of 50–200 students and per-student
+              qualification rates of 40–50%. Cerebrum is the only ranked institute with
+              biology-exclusive faculty in small batches.
             </p>
           </section>
 
@@ -316,11 +314,11 @@ export function Top10BiologyCoachingDelhiNCRContent() {
                 { label: 'NEET Coaching Noida', href: '/neet-coaching-noida' },
                 { label: 'NEET Coaching Faridabad', href: '/neet-coaching-faridabad' },
                 {
-                  label: 'Cerebrum vs the largest national NEET chain',
+                  label: 'Cerebrum vs Aakash',
                   href: '/cerebrum-vs-allen-neet-coaching',
                 },
                 {
-                  label: 'Cerebrum vs the 2nd-largest national NEET chain',
+                  label: 'Cerebrum vs Allen',
                   href: '/cerebrum-vs-aakash-neet-coaching',
                 },
                 {

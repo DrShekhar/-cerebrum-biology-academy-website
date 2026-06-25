@@ -68,10 +68,9 @@ const faqs = [
       'Common Dwarka feeder schools across the Cerebrum cohort: DPS Dwarka (Sector 3 + Sector 19), ITL Public School (Sector 9), Mount Carmel School Dwarka, Bhatnagar International School (Sector 12), Indraprastha Public School Dwarka, Maxfort School Dwarka, Sri Venkateshwar International School (Sector 18), Sapphire International School, K.R. Mangalam World School Vikaspuri. Students from these schools join Pursuit (small-batch 30-40, ₹40K-75K), Ascent (pro batch 16-25 with weekly 1:1 doubt slots, ₹58K-90K), or Pinnacle (direct Dr. Shekhar 1:1 micro-batch 10-12, ₹1.2L-1.56L) depending on target NEET rank.',
   },
   {
-    question:
-      'How does Cerebrum compare to the largest national NEET chains / other IIT-JEE-first coachings for Dwarka students?',
+    question: 'How does Cerebrum compare to Aakash and Allen / FIITJEE for Dwarka students?',
     answer:
-      'the largest national NEET chains / other IIT-JEE-first coachings Delhi run combined Physics + Chemistry + Biology batches of 200-400 students with rotating subject faculty (typically ₹1.4L-1.6L/year). Cerebrum is biology-only with 15-20 student batches and continuous AIIMS-trained faculty (₹40K-1.56L/year biology-only). Most strategic Dwarka pattern: Cerebrum biology + other online-only platforms / other multi-subject tutoring platforms / other online-only platforms for PC = total ₹70K-1.1L with materially deeper biology pedagogy than full-the largest national NEET chain at half the all-in cost.',
+      'Aakash and Allen / FIITJEE Delhi run combined Physics + Chemistry + Biology batches of 200-400 students with rotating subject faculty (typically ₹1.4L-1.6L/year). Cerebrum is biology-only with 15-20 student batches and continuous AIIMS-trained faculty (₹40K-1.56L/year biology-only). Most strategic Dwarka pattern: Cerebrum biology + PhysicsWallah and Unacademy / other multi-subject tutoring platforms / PhysicsWallah and Unacademy for PC = total ₹70K-1.1L with materially deeper biology pedagogy than full-Aakash at half the all-in cost.',
   },
   {
     question: 'What does Cerebrum NEET coaching cost in Dwarka?',
@@ -235,13 +234,13 @@ export default function NEETCoachingDwarkaPage() {
             Why Dwarka families choose biology-only coaching over generalist chains
           </h2>
           <p>
-            Dwarka has branches of the major generalist NEET chains — but their Dwarka centres run
-            100-200+ student batches across Physics, Chemistry, and Biology with rotating faculty.
-            The structural problem: Biology is 360/720 NEET marks (50% of total), yet generalist
-            chains allocate it only one-third of teaching time. Dwarka parents — many of whom are
-            AIIMS Delhi staff, IAS/IPS officers, or judiciary professionals — understand this
-            arithmetic. They keep the generalist chain for Physics + Chemistry and add Cerebrum for
-            Biology depth. This "pair-and-specialist" model is the dominant pattern in Dwarka.
+            Dwarka has branches of the Allen, Aakash and PW — but their Dwarka centres run 100-200+
+            student batches across Physics, Chemistry, and Biology with rotating faculty. The
+            structural problem: Biology is 360/720 NEET marks (50% of total), yet generalist chains
+            allocate it only one-third of teaching time. Dwarka parents — many of whom are AIIMS
+            Delhi staff, IAS/IPS officers, or judiciary professionals — understand this arithmetic.
+            They keep the generalist chain for Physics + Chemistry and add Cerebrum for Biology
+            depth. This "pair-and-specialist" model is the dominant pattern in Dwarka.
           </p>
           <p>
             The Dwarka demographic is distinctive: the sub-city was planned for government housing

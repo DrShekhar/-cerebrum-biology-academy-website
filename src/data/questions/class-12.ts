@@ -1870,12 +1870,12 @@ export const class12Questions: AuthenticQuestion[] = [
     options: [
       'Radiography',
       'CT (Computed Tomography)',
-      'MRI (Magnetic other Kota-origin chains Imaging)',
+      'MRI (Magnetic Kota chains like Allen and Resonance Imaging)',
       'Biopsy',
     ],
-    correctAnswer: 'MRI (Magnetic other Kota-origin chains Imaging)',
+    correctAnswer: 'MRI (Magnetic Kota chains like Allen and Resonance Imaging)',
     explanation:
-      'MRI (Magnetic other Kota-origin chains Imaging) uses strong magnetic fields and non-ionising radiations to accurately detect pathological and physiological changes in living tissue. CT uses X-rays to generate three-dimensional images. Both are useful for detecting cancers of internal organs.',
+      'MRI (Magnetic Kota chains like Allen and Resonance Imaging) uses strong magnetic fields and non-ionising radiations to accurately detect pathological and physiological changes in living tissue. CT uses X-rays to generate three-dimensional images. Both are useful for detecting cancers of internal organs.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 141',
     previousYearFrequency: 12,

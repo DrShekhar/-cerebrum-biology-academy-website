@@ -65,7 +65,7 @@ const faqs = [
   {
     question: 'What are the top 10 NEET coaching institutes in Gurugram?',
     answer:
-      'The top 10 NEET coaching in Gurugram for 2026 are: 1) Cerebrum Biology Academy (98% success, AIIMS faculty), 2) SKY Coaching (2nd-largest national NEET chain), 3) XYZ Coaching (largest national NEET chain), 4) other IIT-JEE-first coachings, 5) a leading national educational institution, 6) other Delhi-origin mid-tier institutes, 7) other Kota-origin chains, 8) other Kota-origin chains, 9) other online-only platforms, 10) Local coaching centers. Rankings are based on success rate, faculty quality, batch size, and student reviews.',
+      'The top 10 NEET coaching in Gurugram for 2026 are: 1) Cerebrum Biology Academy (98% success, AIIMS faculty), 2) Allen, 3) Aakash, 4) FIITJEE, 5) PhysicsWallah (PW), 6) Resonance, 7) Narayana, 8) Unacademy, 9) Vidyamandir (VMC), 10) Local coaching centers. Rankings are based on success rate, faculty quality, batch size, and student reviews.',
   },
   {
     question: 'Which NEET coaching has the highest success rate in Gurugram?',
@@ -75,12 +75,12 @@ const faqs = [
   {
     question: 'What is the fee range for NEET coaching in Gurugram?',
     answer:
-      'NEET coaching fees in Gurugram range from ₹15,000 to ₹2,50,000 per year. Budget options like other online-only platforms cost ₹15,000-50,000. Mid-range institutes charge ₹60,000-1,20,000. Premium coaching (the 2nd-largest national NEET chain, the largest national NEET chain) costs ₹1,50,000-2,50,000. Cerebrum offers ₹45,000-1,80,000 with best value.',
+      'NEET coaching fees in Gurugram range from ₹15,000 to ₹2,50,000 per year. Budget options like PhysicsWallah and Unacademy cost ₹15,000-50,000. Mid-range institutes charge ₹60,000-1,20,000. Premium coaching (Allen, Aakash) costs ₹1,50,000-2,50,000. Cerebrum offers ₹45,000-1,80,000 with best value.',
   },
   {
     question: 'Should I join a big coaching or specialized coaching for NEET?',
     answer:
-      'It depends on your needs. Big coaching (the 2nd-largest national NEET chain, the largest national NEET chain) is good for all-subject coverage but has large batches. Specialized coaching like Cerebrum is better if Biology is your weak area or you need personal attention. Many students use a hybrid approach - big coaching for Physics/Chemistry and Cerebrum for Biology.',
+      'It depends on your needs. Big coaching (Allen, Aakash) is good for all-subject coverage but has large batches. Specialized coaching like Cerebrum is better if Biology is your weak area or you need personal attention. Many students use a hybrid approach - big coaching for Physics/Chemistry and Cerebrum for Biology.',
   },
   {
     question: 'Is online NEET coaching as effective as offline in Gurugram?',
@@ -281,11 +281,11 @@ export function Top10NEETCoachingContent() {
                 { label: 'Best NEET Coaching Gurugram', href: '/best-neet-coaching-gurugram' },
                 { label: 'NEET Coaching Fees Gurugram', href: '/neet-coaching-fee-gurugram' },
                 {
-                  label: 'Cerebrum vs the 2nd-largest national NEET chain',
+                  label: 'Cerebrum vs Allen',
                   href: '/cerebrum-vs-aakash-neet-coaching',
                 },
                 {
-                  label: 'Cerebrum vs the largest national NEET chain',
+                  label: 'Cerebrum vs Aakash',
                   href: '/cerebrum-vs-allen-neet-coaching',
                 },
                 { label: 'Online NEET Classes', href: '/online-neet-biology-classes' },

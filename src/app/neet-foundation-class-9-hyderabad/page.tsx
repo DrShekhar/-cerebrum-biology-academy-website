@@ -45,7 +45,7 @@ const faqs = [
   {
     question: 'How is NEET Foundation Class 9 delivered in Hyderabad?',
     answer:
-      "Cerebrum Class 9 NEET Foundation in Hyderabad is delivered online live (not recorded). Hyderabad is uniquely competitive in the local NEET coaching market — other South-Indian chains and a leading national educational institution run integrated school-plus-coaching operations with 300-500 student batches and a hyper-intensive culture that produces strong volume but limited individual attention. Cerebrum's positioning is the structural opposite: 15-20 student online live batches with AIIMS-trained biology faculty leading curriculum directly. Twice-weekly 2-hour slots (Saturday 10 AM IST, Sunday 10 AM IST, weekday 6 PM IST) suit families who want depth over volume — typically Banjara Hills, Jubilee Hills, Gachibowli, HITEC City IT-professional families with both parents working at Microsoft / Amazon / Google / Genpact corridor offices. ~260+ Hyderabad students across Class 9-12 enrolled, with heaviest density in HITEC City-Kondapur (Chirec, Oakridge feeders), Banjara Hills (HPS Begumpet), and Gachibowli (Indus, Sancta Maria).",
+      "Cerebrum Class 9 NEET Foundation in Hyderabad is delivered online live (not recorded). Hyderabad is uniquely competitive in the local NEET coaching market — Sri Chaitanya and Narayana and PhysicsWallah (PW) run integrated school-plus-coaching operations with 300-500 student batches and a hyper-intensive culture that produces strong volume but limited individual attention. Cerebrum's positioning is the structural opposite: 15-20 student online live batches with AIIMS-trained biology faculty leading curriculum directly. Twice-weekly 2-hour slots (Saturday 10 AM IST, Sunday 10 AM IST, weekday 6 PM IST) suit families who want depth over volume — typically Banjara Hills, Jubilee Hills, Gachibowli, HITEC City IT-professional families with both parents working at Microsoft / Amazon / Google / Genpact corridor offices. ~260+ Hyderabad students across Class 9-12 enrolled, with heaviest density in HITEC City-Kondapur (Chirec, Oakridge feeders), Banjara Hills (HPS Begumpet), and Gachibowli (Indus, Sancta Maria).",
   },
   {
     question:
@@ -60,14 +60,14 @@ const faqs = [
   },
   {
     question:
-      'How does Cerebrum compare to the 2nd-largest national NEET chain, other South-Indian chains, or a leading national educational institution NEET Foundation in Hyderabad?',
+      'How does Cerebrum compare to Allen, Sri Chaitanya and Narayana, or PhysicsWallah (PW) NEET Foundation in Hyderabad?',
     answer:
-      'Hyderabad has uniquely competitive NEET coaching infrastructure — other South-Indian chains and a leading national educational institution are Telangana / AP-headquartered chains that dominate the local NEET market with thousands of students per centre. the 2nd-largest national NEET chain Scholastics Hyderabad operates ~6 centres. All three (other South-Indian chains, a leading national educational institution, the 2nd-largest national NEET chain) run combined PCB Foundation with 150-400+ student batches. Cerebrum is biology-only with 15-20 student online live batches and AIIMS-trained biology faculty. The Hyderabad differentiator: other South-Indian chains / a leading national educational institution have strong physics-chemistry depth (they specialise in Telangana/AP intermediate IPE format which is physics-chemistry-heavy); pairing one of them for PC with Cerebrum biology is a popular Hyderabad pattern.',
+      'Hyderabad has uniquely competitive NEET coaching infrastructure — Sri Chaitanya and Narayana and PhysicsWallah (PW) are Telangana / AP-headquartered chains that dominate the local NEET market with thousands of students per centre. Allen Scholastics Hyderabad operates ~6 centres. All three (Sri Chaitanya and Narayana, PhysicsWallah (PW), Allen) run combined PCB Foundation with 150-400+ student batches. Cerebrum is biology-only with 15-20 student online live batches and AIIMS-trained biology faculty. The Hyderabad differentiator: Sri Chaitanya and Narayana / PhysicsWallah (PW) have strong physics-chemistry depth (they specialise in Telangana/AP intermediate IPE format which is physics-chemistry-heavy); pairing one of them for PC with Cerebrum biology is a popular Hyderabad pattern.',
   },
   {
     question: 'What does Class 9 NEET Foundation cost in Hyderabad?',
     answer:
-      'Cerebrum Class 9 Foundation pricing for Hyderabad families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K, Pinnacle ₹75K-90K, ad-hoc 1:1 ₹2,000-3,500/hr. The Hyderabad competitive landscape is the most aggressive in India for NEET Foundation pricing: other South-Indian chains integrated school-plus-Foundation (~₹70K-1L) with 300-400 student batches; a leading national educational institution similar (~₹65K-95K, 350-student); the 2nd-largest national NEET chain Scholastics Hyderabad (~₹85K-1L, 200-student); other IIT-JEE-first coachings Hyderabad (~₹90K-1.1L). Cerebrum biology-only Ascent (₹65K) is mid-tier on price but uniquely small-batch (15-20 vs 300-400) and AIIMS-trained — the structural alternative for families wanting depth rather than the mass-volume other South-Indian chains/a leading national educational institution model that dominates the local market.',
+      'Cerebrum Class 9 Foundation pricing for Hyderabad families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K, Pinnacle ₹75K-90K, ad-hoc 1:1 ₹2,000-3,500/hr. The Hyderabad competitive landscape is the most aggressive in India for NEET Foundation pricing: Sri Chaitanya and Narayana integrated school-plus-Foundation (~₹70K-1L) with 300-400 student batches; PhysicsWallah (PW) similar (~₹65K-95K, 350-student); Allen Scholastics Hyderabad (~₹85K-1L, 200-student); FIITJEE Hyderabad (~₹90K-1.1L). Cerebrum biology-only Ascent (₹65K) is mid-tier on price but uniquely small-batch (15-20 vs 300-400) and AIIMS-trained — the structural alternative for families wanting depth rather than the mass-volume Sri Chaitanya and Narayana/PhysicsWallah (PW) model that dominates the local market.',
   },
 ]
 
@@ -221,14 +221,14 @@ export default function NEETFoundationClass9HyderabadPage() {
             Hyderabad Class 9 NEET Foundation — what we deliver
           </h2>
           <p>
-            Hyderabad has one of India&apos;s most competitive NEET coaching markets — Sri other
-            South-Indian chains, a leading national educational institution, the 2nd-largest
-            national NEET chain, and the largest national NEET chain all run mass-batch coaching
-            operations throughout the city. Cerebrum&apos;s positioning in Hyderabad is structurally
-            different — biology-only specialist with 15-20 student online live batches led by
-            AIIMS-trained faculty (Dr. Shekhar C Singh). ~260+ Hyderabad students across Class 9-12
-            are actively enrolled, particularly families targeting AIIMS / top-100 NEET ranks where
-            pedagogy depth matters more than mass-batch test series.
+            Hyderabad has one of India&apos;s most competitive NEET coaching markets — Sri other Sri
+            Chaitanya and Narayana, PhysicsWallah (PW), the 2nd-largest national NEET chain, and
+            Aakash all run mass-batch coaching operations throughout the city. Cerebrum&apos;s
+            positioning in Hyderabad is structurally different — biology-only specialist with 15-20
+            student online live batches led by AIIMS-trained faculty (Dr. Shekhar C Singh). ~260+
+            Hyderabad students across Class 9-12 are actively enrolled, particularly families
+            targeting AIIMS / top-100 NEET ranks where pedagogy depth matters more than mass-batch
+            test series.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">

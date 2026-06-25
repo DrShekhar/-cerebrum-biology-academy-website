@@ -4,15 +4,14 @@ import { CEREBRUM_DATA, getAllCompetitors } from '@/components/seo/ComparisonSch
 import { ArrowRight, Trophy, IndianRupee, Users, Target, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title:
-    'NEET Coaching Comparison | Cerebrum vs Kota, the largest national NEET chain, the 2nd-largest national NEET chain | 2026 Guide',
+  title: 'NEET Coaching Comparison | Cerebrum vs Kota, Aakash, Allen | 2026 Guide',
   description:
-    'Compare Cerebrum Biology Academy with Kota coaching, the largest national NEET chain, the 2nd-largest national NEET chain, and local institutes. See fees, batch sizes, success rates. Make an informed decision for NEET 2027.',
+    'Compare Cerebrum Biology Academy with Kota coaching, Aakash, Allen, and local institutes. See fees, batch sizes, success rates. Make an informed decision for NEET 2027.',
   keywords: [
     'NEET coaching comparison',
     'Cerebrum vs Kota',
-    'Cerebrum vs the largest national NEET chain',
-    'Cerebrum vs the 2nd-largest national NEET chain',
+    'Cerebrum vs Aakash',
+    'Cerebrum vs Allen',
     'best NEET Biology coaching',
     'NEET coaching fees comparison',
     'Kota coaching alternative',
@@ -29,10 +28,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title:
-      'NEET Coaching Comparison | Cerebrum vs Kota, the largest national NEET chain, the 2nd-largest national NEET chain | 2026 Guide',
+    title: 'NEET Coaching Comparison | Cerebrum vs Kota, Aakash, Allen | 2026 Guide',
     description:
-      'Compare Cerebrum Biology Academy with Kota coaching, the largest national NEET chain, the 2nd-largest national NEET chain, and local institutes. See fees, batch sizes, success rates. Make an inform...',
+      'Compare Cerebrum Biology Academy with Kota coaching, Aakash, Allen, and local institutes. See fees, batch sizes, success rates. Make an inform...',
   },
 }
 

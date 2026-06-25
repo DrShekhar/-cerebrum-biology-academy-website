@@ -59,14 +59,14 @@ const faqs = [
   },
   {
     question:
-      "How does Cerebrum compare to the 2nd-largest national NEET chain Scholastics or BYJU's NEET Foundation in Bangalore for Class 10?",
+      "How does Cerebrum compare to Allen Scholastics or BYJU's NEET Foundation in Bangalore for Class 10?",
     answer:
-      "the 2nd-largest national NEET chain Scholastics Bangalore operates ~8 centres with 150-300 student Class 10 PCB Foundation batches. BYJU's NEET Foundation runs primarily online with recorded content. For Class 10 specifically, Cerebrum runs separate Karnataka SSLC board-format weekly mocks (the 2nd-largest national NEET chain and BYJU's deprioritise SSLC in favour of NEET-only drilling). For families targeting both Karnataka SSLC 90%+ AND NEET-ready foundations, Cerebrum is structurally different. Many Bangalore IT families combine Cerebrum biology (₹55K-75K Ascent) with the 2nd-largest national NEET chain for PC for total ₹1L-1.4L.",
+      "Allen Scholastics Bangalore operates ~8 centres with 150-300 student Class 10 PCB Foundation batches. BYJU's NEET Foundation runs primarily online with recorded content. For Class 10 specifically, Cerebrum runs separate Karnataka SSLC board-format weekly mocks (Allen and BYJU's deprioritise SSLC in favour of NEET-only drilling). For families targeting both Karnataka SSLC 90%+ AND NEET-ready foundations, Cerebrum is structurally different. Many Bangalore IT families combine Cerebrum biology (₹55K-75K Ascent) with Allen for PC for total ₹1L-1.4L.",
   },
   {
     question: 'What does Class 10 NEET Foundation cost in Bangalore?',
     answer:
-      "Cerebrum Class 10 Foundation pricing for Bangalore families (pan-India online): Pursuit ₹35K-55K, Ascent ₹55K-75K, Pinnacle ₹75K-95K, ad-hoc 1:1 ₹2,000-3,500/hr. Bangalore-specific Class 10 comparison: the 2nd-largest national NEET chain Scholastics Bangalore Class 10 PCB (~₹95K-1.2L, 250-student batch); BYJU's NEET Foundation Class 10 (₹50K-75K, recorded-heavy with limited live); the largest national NEET chain Bangalore Class 10 (~₹1.1L-1.3L). The Bangalore IT-family pattern: Cerebrum biology Ascent (₹65K) + other online-only platforms live PC (₹15-20K) = ₹80-85K total with materially deeper biology than the 2nd-largest national NEET chain standalone and meaningful Karnataka SSLC parallel prep (which the mass-batch alternatives deprioritise in favour of NEET-only drilling).",
+      "Cerebrum Class 10 Foundation pricing for Bangalore families (pan-India online): Pursuit ₹35K-55K, Ascent ₹55K-75K, Pinnacle ₹75K-95K, ad-hoc 1:1 ₹2,000-3,500/hr. Bangalore-specific Class 10 comparison: Allen Scholastics Bangalore Class 10 PCB (~₹95K-1.2L, 250-student batch); BYJU's NEET Foundation Class 10 (₹50K-75K, recorded-heavy with limited live); Aakash Bangalore Class 10 (~₹1.1L-1.3L). The Bangalore IT-family pattern: Cerebrum biology Ascent (₹65K) + PhysicsWallah and Unacademy live PC (₹15-20K) = ₹80-85K total with materially deeper biology than Allen standalone and meaningful Karnataka SSLC parallel prep (which the mass-batch alternatives deprioritise in favour of NEET-only drilling).",
   },
 ]
 

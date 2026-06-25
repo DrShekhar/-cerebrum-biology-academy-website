@@ -3,14 +3,14 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Best NEET Biology Coaching 2026 — Honest Comparison',
   description:
-    'Compare the best NEET biology coaching institutes in India. Cerebrum vs the largest national NEET chain vs the 2nd-largest national NEET chain vs other online-only platforms. AIIMS faculty, small batches, 98% success rate. Book FREE demo.',
+    'Compare the best NEET biology coaching institutes in India. Cerebrum vs Aakash vs Allen vs PhysicsWallah and Unacademy. AIIMS faculty, small batches, 98% success rate. Book FREE demo.',
   keywords:
     'best neet biology coaching, neet biology coaching comparison, cerebrum vs allen, neet coaching fees, best biology coaching for neet, neet biology coaching online',
   twitter: {
     card: 'summary_large_image',
     title: 'Best NEET Biology Coaching 2026 — Honest Comparison',
     description:
-      'Compare the best NEET biology coaching institutes in India. Cerebrum vs the largest national NEET chain vs the 2nd-largest national NEET chain vs other online-only platforms.',
+      'Compare the best NEET biology coaching institutes in India. Cerebrum vs Aakash vs Allen vs PhysicsWallah and Unacademy.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/best-neet-biology-coaching',

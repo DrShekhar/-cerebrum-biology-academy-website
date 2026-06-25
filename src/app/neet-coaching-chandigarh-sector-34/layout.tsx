@@ -3,9 +3,9 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Sector 34 Chandigarh | Skip the Crowd',
   description:
-    'Best NEET coaching in Sector 34 Chandigarh - the coaching hub. Better than the largest national NEET chain, the 2nd-largest national NEET chain at SCO 350-52. 98% success rate, AIIMS faculty. Skip traffic & crowd. Online classes. Fee Rs 24,000+. Book free demo!',
+    'Best NEET coaching in Sector 34 Chandigarh - the coaching hub. Better than Aakash, Allen at SCO 350-52. 98% success rate, AIIMS faculty. Skip traffic & crowd. Online classes. Fee Rs 24,000+. Book free demo!',
   keywords:
-    'NEET coaching Sector 34 Chandigarh, best NEET coaching Sector 34, biology coaching Sector 34 Chandigarh, the largest national NEET chain Chandigarh alternative, the 2nd-largest national NEET chain Sector 34 alternative, NEET classes Sector 34, other online-only platforms alternative Chandigarh, online NEET coaching Chandigarh, NEET preparation Sector 34, Sector 17 NEET coaching, Sector 22 NEET coaching, Sector 35 NEET coaching, Manimajra NEET coaching',
+    'NEET coaching Sector 34 Chandigarh, best NEET coaching Sector 34, biology coaching Sector 34 Chandigarh, Aakash Chandigarh alternative, Allen Sector 34 alternative, NEET classes Sector 34, PhysicsWallah and Unacademy alternative Chandigarh, online NEET coaching Chandigarh, NEET preparation Sector 34, Sector 17 NEET coaching, Sector 22 NEET coaching, Sector 35 NEET coaching, Manimajra NEET coaching',
   openGraph: {
     title: 'Best NEET Coaching in Sector 34 Chandigarh | Skip the Crowd',
     description:

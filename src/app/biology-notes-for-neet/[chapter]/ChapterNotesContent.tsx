@@ -2818,8 +2818,8 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               <h4 className="font-semibold text-green-900 mb-3">Ecological Rules</h4>
               <div className="bg-white p-3 rounded border border-green-200 text-sm space-y-2">
                 <p>
-                  <strong>the largest national NEET chain&apos;s Rule:</strong> Animals in colder
-                  climates have shorter limbs and ears to reduce heat loss
+                  <strong>Aakash&apos;s Rule:</strong> Animals in colder climates have shorter limbs
+                  and ears to reduce heat loss
                 </p>
                 <p>
                   <strong>Bergmann&apos;s Rule:</strong> Animals in colder regions are larger to

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Top NEET biology coaching in Kota - India's coaching capital. 98% success rate, AIIMS faculty. Fill the Biology gap in your Kota preparation. Talwandi, Mahaveer Nagar, Rajeev Gandhi Nagar. 15,000+ students. Book free demo!",
   keywords:
-    'NEET coaching Kota, NEET biology coaching Kota, best biology coaching Kota, NEET coaching Talwandi, NEET classes Mahaveer Nagar, biology coaching Rajeev Gandhi Nagar, NEET tuition Kunhari, online NEET coaching Kota, NEET preparation Kota, biology classes Kota, NEET biology Kota, the largest national NEET chain alternative Kota, other Kota-origin chains alternative Kota, biology gap filler Kota, NEET biology specialist Kota',
+    'NEET coaching Kota, NEET biology coaching Kota, best biology coaching Kota, NEET coaching Talwandi, NEET classes Mahaveer Nagar, biology coaching Rajeev Gandhi Nagar, NEET tuition Kunhari, online NEET coaching Kota, NEET preparation Kota, biology classes Kota, NEET biology Kota, Aakash alternative Kota, Kota chains like Allen and Resonance alternative Kota, biology gap filler Kota, NEET biology specialist Kota',
   openGraph: {
     title: "Best NEET Biology Coaching in Kota | India's Coaching Capital",
     description:

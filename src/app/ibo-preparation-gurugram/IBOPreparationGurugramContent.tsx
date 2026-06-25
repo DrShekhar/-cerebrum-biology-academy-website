@@ -260,7 +260,7 @@ export default function IBOPreparationGurugramContent({ faqs }: { faqs: FAQ[] })
               {CONTACT_INFO.location.gurugram.addressLocality}
             </p>
             <p className="text-gray-700 mb-6">
-              <strong>Landmark:</strong> Same building as XYZ Coaching (largest national NEET chain)
+              <strong>Landmark:</strong> Same building as Aakash
             </p>
             <div className="flex gap-4">
               <a href={`tel:${CONTACT_INFO.phone.primary}`}>

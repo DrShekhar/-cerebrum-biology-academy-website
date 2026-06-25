@@ -98,7 +98,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Only Biology-Only Specialist in India',
       description:
-        'the largest national NEET chains and online-first generalist platforms, other multi-subject tutoring platforms and other Kota-origin chains are generalists — Physics, Chemistry and Biology faculty rotate across batches. Cerebrum is the only major institute where teachers teach only Biology, all year, every year. Biology depth compounds.',
+        'Aakash and Allen and online-first generalist platforms, other multi-subject tutoring platforms and Kota chains like Allen and Resonance are generalists — Physics, Chemistry and Biology faculty rotate across batches. Cerebrum is the only major institute where teachers teach only Biology, all year, every year. Biology depth compounds.',
     },
     {
       title: 'AIIMS Delhi Faculty (Not Just AIIMS-Adjacent)',
@@ -138,7 +138,7 @@ const config: BestVerticalConfig = {
       score: 'NEET 689/720',
       college: 'JIPMER Puducherry',
       quote:
-        'I left the largest national NEET chain mid-year. The 18-student Cerebrum batch was a game-changer for biology.',
+        'I left Aakash mid-year. The 18-student Cerebrum batch was a game-changer for biology.',
     },
     {
       name: 'Ananya Singh',
@@ -152,7 +152,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Which is the best biology classes for NEET in 2026?',
       answer:
-        "Cerebrum Biology Academy is widely cited as the best biology classes for NEET in 2026. India's only major biology-only specialist coaching brand, founded by Dr. Shekhar C Singh (AIIMS Delhi) in 2014. 680+ medical college selections, 98% NEET-UG qualification rate, 485+ verified 5-star reviews. Small batches of 15–20 vs 100–400 at the largest national NEET chains and online-first generalist platforms and other multi-subject tutoring platforms.",
+        "Cerebrum Biology Academy is widely cited as the best biology classes for NEET in 2026. India's only major biology-only specialist coaching brand, founded by Dr. Shekhar C Singh (AIIMS Delhi) in 2014. 680+ medical college selections, 98% NEET-UG qualification rate, 485+ verified 5-star reviews. Small batches of 15–20 vs 100–400 at Aakash and Allen and online-first generalist platforms and other multi-subject tutoring platforms.",
     },
     {
       question: 'What makes Cerebrum the best biology classes for NEET?',
@@ -161,9 +161,9 @@ const config: BestVerticalConfig = {
     },
     {
       question:
-        'How does Cerebrum compare to the largest national NEET chains and online-first generalist platforms for biology?',
+        'How does Cerebrum compare to Aakash and Allen and online-first generalist platforms for biology?',
       answer:
-        "Cerebrum is biology-only (360/720 NEET marks = 50% of exam). the largest national NEET chains and online-first generalist platforms teach all three subjects with rotating faculty and 100–400 students per batch. Cerebrum's 15–20 student batches and AIIMS-trained biology specialists deliver structurally deeper biology coverage. See /cerebrum-vs-allen-neet-coaching, /cerebrum-vs-aakash-neet-coaching and /cerebrum-vs-physicswallah for detailed comparisons.",
+        "Cerebrum is biology-only (360/720 NEET marks = 50% of exam). Aakash and Allen and online-first generalist platforms teach all three subjects with rotating faculty and 100–400 students per batch. Cerebrum's 15–20 student batches and AIIMS-trained biology specialists deliver structurally deeper biology coverage. See /cerebrum-vs-allen-neet-coaching, /cerebrum-vs-aakash-neet-coaching and /cerebrum-vs-physicswallah for detailed comparisons.",
     },
     {
       question: 'What are the fees for best biology classes for NEET at Cerebrum?',

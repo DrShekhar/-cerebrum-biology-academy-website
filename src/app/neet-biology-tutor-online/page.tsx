@@ -153,8 +153,7 @@ export default function NEETBiologyTutorOnlinePage() {
             instructor: {
               '@type': 'Person',
               name: 'Dr. Shekhar C Singh',
-              description:
-                'AIIMS Alumnus, Former Academic Head at a leading national educational institution',
+              description: 'AIIMS Alumnus, Former Academic Head at PhysicsWallah (PW)',
             },
             courseMode: 'online',
             educationalLevel: 'NEET UG',

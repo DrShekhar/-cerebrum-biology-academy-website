@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     question: 'Where is the Gurugram center?',
-    answer: `At ${gurugramLocation.streetAddress}, same building as XYZ Coaching (largest national NEET chain).`,
+    answer: `At ${gurugramLocation.streetAddress}, same building as Aakash.`,
   },
 ]
 

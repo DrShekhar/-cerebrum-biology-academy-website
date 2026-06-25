@@ -71,12 +71,12 @@ export const RELATED_LOCATIONS: RelatedLink[] = [
 
 export const RELATED_COMPARISONS: RelatedLink[] = [
   {
-    title: 'Cerebrum vs the 2nd-largest national NEET chain',
+    title: 'Cerebrum vs Allen',
     href: '/cerebrum-vs-aakash-neet-coaching',
     category: 'comparison',
   },
   {
-    title: 'Cerebrum vs the largest national NEET chain',
+    title: 'Cerebrum vs Aakash',
     href: '/cerebrum-vs-allen-neet-coaching',
     category: 'comparison',
   },

@@ -106,7 +106,7 @@ const config: BestVerticalConfig = {
     {
       title: 'AIIMS-Trained Class 10 Faculty (Not School-Teacher Level)',
       description:
-        "the 2nd-largest national NEET chain Scholastics, the largest national NEET chain Foundation, other IIT-JEE-first coachings Foundation typically staff Class 10 Foundation with school-teacher-level instructors (the senior AIIMS-trained faculty at these brands work Class 11-12 batches). Cerebrum's Class 10 Foundation has AIIMS-trained biology faculty from day one — Dr. Shekhar C Singh leads curriculum design directly. Students get medical-school-grade pedagogy quality from age 15 onwards.",
+        "Allen Scholastics, Aakash Foundation, FIITJEE Foundation typically staff Class 10 Foundation with school-teacher-level instructors (the senior AIIMS-trained faculty at these brands work Class 11-12 batches). Cerebrum's Class 10 Foundation has AIIMS-trained biology faculty from day one — Dr. Shekhar C Singh leads curriculum design directly. Students get medical-school-grade pedagogy quality from age 15 onwards.",
     },
     {
       title: '15-20 Student Class 10 Batches',
@@ -166,13 +166,13 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does Class 10 NEET Foundation cost at Cerebrum?',
       answer:
-        'Cerebrum Class 10 Foundation pricing runs ₹35,000-₹95,000/year across three tiers. Pursuit (small-batch 30-40 students): ₹35K-55K. Ascent (pro batch 16-25 with weekly 1:1 doubt slots): ₹55K-75K. Pinnacle (direct Dr. Shekhar micro-batch 10-12): ₹75K-95K. Ad-hoc 1:1 Class 10 hourly: ₹2,000-3,500/hr. Compared to the 2nd-largest national NEET chain Scholastics combined PCB Foundation Class 10 (~₹95K-1.2L/year, 250-student batch), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure at lower price.',
+        'Cerebrum Class 10 Foundation pricing runs ₹35,000-₹95,000/year across three tiers. Pursuit (small-batch 30-40 students): ₹35K-55K. Ascent (pro batch 16-25 with weekly 1:1 doubt slots): ₹55K-75K. Pinnacle (direct Dr. Shekhar micro-batch 10-12): ₹75K-95K. Ad-hoc 1:1 Class 10 hourly: ₹2,000-3,500/hr. Compared to Allen Scholastics combined PCB Foundation Class 10 (~₹95K-1.2L/year, 250-student batch), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure at lower price.',
     },
     {
       question:
         'Can I switch coaching from school tuition / generalist Foundation to Cerebrum mid-Class 10?',
       answer:
-        'Yes. Cerebrum runs rolling-admission Class 10 Foundation batches with quarterly start cohorts (April, July, October, January). The most common mid-Class 10 switch is from school tuition (insufficient NEET alignment) or from large the 2nd-largest national NEET chain Scholastics / other IIT-JEE-first coachings Foundation batches (insufficient individual attention). Switch decisions are best made by October of Class 10 to allow full curriculum re-pacing before boards. Mid-year switches require a 30-minute diagnostic call. WhatsApp +91 88264-44334 to book.',
+        'Yes. Cerebrum runs rolling-admission Class 10 Foundation batches with quarterly start cohorts (April, July, October, January). The most common mid-Class 10 switch is from school tuition (insufficient NEET alignment) or from large Allen Scholastics / FIITJEE Foundation batches (insufficient individual attention). Switch decisions are best made by October of Class 10 to allow full curriculum re-pacing before boards. Mid-year switches require a 30-minute diagnostic call. WhatsApp +91 88264-44334 to book.',
     },
   ],
   knowsAbout: [

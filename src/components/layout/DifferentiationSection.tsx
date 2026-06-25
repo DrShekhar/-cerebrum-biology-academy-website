@@ -254,8 +254,8 @@ export function DifferentiationSection({
                         <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center">
                           <GraduationCap className="w-6 h-6 text-gray-300" />
                         </div>
-                        <span className="font-medium text-gray-300">XYZ Coaching</span>
-                        <span className="text-xs text-gray-400">Largest national chain</span>
+                        <span className="font-medium text-gray-300">Large national NEET chain</span>
+                        <span className="text-xs text-gray-400">National multi-subject chain</span>
                       </div>
                     </th>
                     <th className="text-center py-4 px-6">
@@ -263,8 +263,10 @@ export function DifferentiationSection({
                         <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center">
                           <GraduationCap className="w-6 h-6 text-gray-300" />
                         </div>
-                        <span className="font-medium text-gray-300">SKY Coaching</span>
-                        <span className="text-xs text-gray-400">2nd-largest national chain</span>
+                        <span className="font-medium text-gray-300">
+                          Another national NEET chain
+                        </span>
+                        <span className="text-xs text-gray-400">National multi-subject chain</span>
                       </div>
                     </th>
                     <th className="text-center py-4 px-6">
@@ -408,13 +410,13 @@ export function DifferentiationSection({
                 color: 'navy',
               },
               {
-                name: 'SKY Coaching (2nd-largest national chain)',
+                name: 'Another national NEET chain',
                 ratio: '1:150+',
                 time: '24 sec/student',
                 color: 'amber',
               },
               {
-                name: 'XYZ Coaching (largest national chain)',
+                name: 'Large national NEET chain',
                 ratio: '1:200+',
                 time: '18 sec/student',
                 color: 'amber',

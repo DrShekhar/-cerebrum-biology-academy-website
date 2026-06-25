@@ -53,7 +53,7 @@ const coachingComparison = [
     reviews: 400,
   },
   {
-    name: 'XYZ Coaching (largest national NEET chain)',
+    name: 'Aakash',
     highlight: false,
     location: 'Multiple centers',
     specialty: 'All subjects',
@@ -73,7 +73,7 @@ const coachingComparison = [
     reviews: 2500,
   },
   {
-    name: 'SKY Coaching (2nd-largest national NEET chain)',
+    name: 'Allen',
     highlight: false,
     location: 'Greater Noida (Knowledge Park)',
     specialty: 'All subjects',
@@ -512,12 +512,8 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
               href="/aakash-alternative-greater-noida"
               className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
             >
-              <h3 className="font-semibold text-teal-600">
-                the 2nd-largest national NEET chain Alternative
-              </h3>
-              <p className="text-sm text-gray-600">
-                Better than the 2nd-largest national NEET chain GN
-              </p>
+              <h3 className="font-semibold text-teal-600">Allen Alternative</h3>
+              <p className="text-sm text-gray-600">Better than Allen GN</p>
             </Link>
           </div>
         </div>
