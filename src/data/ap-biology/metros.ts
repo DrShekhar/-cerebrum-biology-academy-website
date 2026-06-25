@@ -90,7 +90,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'What is the best AP Biology tutor in New York City?',
         answer:
-          'Cerebrum offers 1:1 AP Biology tutoring in Eastern Time evenings and weekends with PhD-level faculty, College Board–aligned curriculum, and FRQ rubric mastery. Most NYC students who score 5 do so by drilling past FRQs against the rubric — that is the core of our method. Senior-faculty 1:1 starts at $1,800 for 12 hours.',
+          'Cerebrum offers 1:1 AP Biology tutoring in Eastern Time evenings and weekends with AIIMS-trained biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. Most NYC students who score 5 do so by drilling past FRQs against the rubric — that is the core of our method. Senior-faculty 1:1 starts at $1,800 for 12 hours.',
       },
       {
         question: 'How does AP Bio tutoring fit a Stuyvesant or Bronx Science schedule?',
@@ -110,7 +110,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'Do you offer in-person tutoring in Manhattan or Long Island?',
         answer:
-          'We coach 100% online via live video. This lets us match the best biology specialist to each student regardless of borough. New York families consistently tell us video-1:1 with a senior PhD beats in-person with a generalist.',
+          'We coach 100% online via live video. This lets us match the best biology specialist to each student regardless of borough. New York families consistently tell us video-1:1 with a senior specialist beats in-person with a generalist.',
       },
       {
         question: 'How early should a New York student start AP Bio tutoring?',
@@ -198,7 +198,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       "Boston families have unusually rich AP Biology infrastructure: Boston Latin (the nation's oldest public school), Lexington, Newton North/South, Brookline, plus the boarding cluster at Phillips Exeter Academy and Phillips Academy Andover within an hour. Our Boston programme aligns to those schools' AP calendars and to the New England BS/MD pipeline (Brown PLME, Boston University 7-Year Med, etc.).",
     positioningBlurb:
-      'Boston AP Bio students often combine high school coursework with research at Harvard, MIT, Tufts, or BU labs. We schedule around lab hours, and our faculty are PhD-level so they can engage with technical research questions students bring back from the bench. Campbell + Lehninger emphasis for the strongest cohort.',
+      'Boston AP Bio students often combine high school coursework with research at Harvard, MIT, Tufts, or BU labs. We schedule around lab hours, and our faculty are senior specialists so they can engage with technical research questions students bring back from the bench. Campbell + Lehninger emphasis for the strongest cohort.',
     schools: [
       'Boston Latin School',
       'Lexington High School',
@@ -217,7 +217,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'What is the best AP Biology tutor in the Boston area?',
         answer:
-          'Cerebrum runs 1:1 AP Biology tutoring with PhD biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. We schedule live in Eastern Time evenings and weekends. Our roster includes students from Boston Latin, Lexington, Newton, Brookline, and the boarding cluster (Exeter, Andover).',
+          'Cerebrum runs 1:1 AP Biology tutoring with AIIMS-trained biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. We schedule live in Eastern Time evenings and weekends. Our roster includes students from Boston Latin, Lexington, Newton, Brookline, and the boarding cluster (Exeter, Andover).',
       },
       {
         question: 'Can boarding-school students at Exeter or Andover use online AP Bio tutoring?',
@@ -232,7 +232,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'Do you support research-active high schoolers at Harvard or MIT labs?',
         answer:
-          'Yes. Many of our Boston students are running research with PIs at Harvard, MIT, Tufts, BU, or Mass General. Our PhD faculty engage with the technical content — gel-band reads, plasmid maps, qPCR results — and we adjust AP Bio session pacing around lab hours.',
+          'Yes. Many of our Boston students are running research with PIs at Harvard, MIT, Tufts, BU, or Mass General. Our senior faculty engage with the technical content — gel-band reads, plasmid maps, qPCR results — and we adjust AP Bio session pacing around lab hours.',
       },
       {
         question: 'How does the AP Bio May exam align with the New England school calendar?',
@@ -277,7 +277,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'What is the best AP Biology tutor for TJHSST students?',
         answer:
-          "Cerebrum coaches several TJ students each year. TJ's pace is faster than most public schools, so our pace plan starts earlier (August) and emphasizes USABO Semifinal-level depth alongside the May AP exam. Senior-faculty 1:1 with PhD biology specialists.",
+          "Cerebrum coaches several TJ students each year. TJ's pace is faster than most public schools, so our pace plan starts earlier (August) and emphasizes USABO Semifinal-level depth alongside the May AP exam. Senior-faculty 1:1 with AIIMS-trained biology specialists.",
       },
       {
         question: 'How does the USABO + AP Biology integrated track work for TJ?',
@@ -336,7 +336,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'What is the best AP Biology tutor in Chicago?',
         answer:
-          'Cerebrum offers 1:1 AP Biology tutoring with PhD biology faculty in Central Time, College Board–aligned curriculum, and FRQ rubric mastery. We coach students from Whitney Young, Walter Payton, Northside, IMSA, and the North Shore public schools.',
+          'Cerebrum offers 1:1 AP Biology tutoring with AIIMS-trained biology faculty in Central Time, College Board–aligned curriculum, and FRQ rubric mastery. We coach students from Whitney Young, Walter Payton, Northside, IMSA, and the North Shore public schools.',
       },
       {
         question: 'How does the Chicago selective-enrollment AP Bio schedule work?',
@@ -394,7 +394,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'What is the best AP Biology tutor in Los Angeles?',
         answer:
-          'Cerebrum offers 1:1 AP Biology tutoring with PhD biology faculty in Pacific Time, College Board–aligned curriculum, and FRQ rubric mastery. Our LA roster includes students from Harvard-Westlake, Marlborough, Brentwood, and Canyon Crest Academy.',
+          'Cerebrum offers 1:1 AP Biology tutoring with AIIMS-trained biology faculty in Pacific Time, College Board–aligned curriculum, and FRQ rubric mastery. Our LA roster includes students from Harvard-Westlake, Marlborough, Brentwood, and Canyon Crest Academy.',
       },
       {
         question: 'How does AP Bio tutoring fit a Harvard-Westlake schedule?',
@@ -454,7 +454,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'What is the best AP Biology tutor in Houston?',
         answer:
-          'Cerebrum offers 1:1 AP Biology tutoring with PhD biology faculty in Central Time, College Board–aligned curriculum, and FRQ rubric mastery. Our Houston roster includes students from Bellaire, DeBakey, Carnegie Vanguard, and the Sugar Land / Katy cluster.',
+          'Cerebrum offers 1:1 AP Biology tutoring with AIIMS-trained biology faculty in Central Time, College Board–aligned curriculum, and FRQ rubric mastery. Our Houston roster includes students from Bellaire, DeBakey, Carnegie Vanguard, and the Sugar Land / Katy cluster.',
       },
       {
         question: 'Does AP Biology help with Baylor 8-Year or UT Southwestern BS/MD admissions?',
@@ -510,7 +510,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'What is the best AP Biology tutor in Seattle?',
         answer:
-          'Cerebrum offers 1:1 AP Biology tutoring in Pacific Time with PhD biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. Our Seattle roster includes students from Lakeside, Seattle Prep, International School, and the Bellevue / Mercer Island public cluster.',
+          'Cerebrum offers 1:1 AP Biology tutoring in Pacific Time with AIIMS-trained biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. Our Seattle roster includes students from Lakeside, Seattle Prep, International School, and the Bellevue / Mercer Island public cluster.',
       },
       {
         question: 'Does AP Biology help with University of Washington biology admissions?',
@@ -567,7 +567,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'What is the best AP Biology tutor in Atlanta?',
         answer:
-          'Cerebrum offers 1:1 AP Biology tutoring in Eastern Time with PhD biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. Our Atlanta roster includes students from Walton, Lambert, Northview, Pace Academy, and Westminster.',
+          'Cerebrum offers 1:1 AP Biology tutoring in Eastern Time with AIIMS-trained biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. Our Atlanta roster includes students from Walton, Lambert, Northview, Pace Academy, and Westminster.',
       },
       {
         question: 'Does AP Biology help with Emory or Georgia Tech pre-med admissions?',
@@ -625,7 +625,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'What is the best AP Biology tutor in New Jersey?',
         answer:
-          'Cerebrum offers 1:1 AP Biology tutoring in Eastern Time with PhD biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. Our New Jersey roster includes students from Bergen County Academies, High Tech HS, Edison Academy Magnet, Lawrenceville, and the Princeton-area public schools.',
+          'Cerebrum offers 1:1 AP Biology tutoring in Eastern Time with AIIMS-trained biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. Our New Jersey roster includes students from Bergen County Academies, High Tech HS, Edison Academy Magnet, Lawrenceville, and the Princeton-area public schools.',
       },
       {
         question: 'How do BCA and HTHS pace AP Biology?',
@@ -663,7 +663,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       'Dubai has become one of the strongest AP Biology markets outside North America. GEMS Dubai American Academy, Universal American School, Dubai American Academy, and American School of Dubai run deep AP cohorts, and the British-curriculum cluster (Repton, Nord Anglia, JESS) increasingly offers AP Biology as a Year 12–13 elective for US-college applicants. The South Asian and East Asian expat academic communities here drive serious AP uptake — families expect Singapore-level rigour with US-curriculum fidelity. Our GST evening live classes (6–9 PM Dubai time) slot cleanly into the AP-heavy junior and senior schedules these schools run.',
     positioningBlurb:
-      'Local Dubai tutoring agencies — TutorChase, ++tutors, GoStudent, MyTutor — typically charge AED 220–400 per hour ($60–$110/hr) and rely on a rotating freelance bench, often non-biology specialists working across multiple subjects. Cerebrum is set up differently: AIIMS-trained PhD biology faculty as your dedicated tutor for the full year, weekly written feedback on every FRQ attempt against the College Board rubric, and the Indian small-batch coaching tradition (max 12 per batch) built around retrieval practice and timed mocks. Senior-faculty 1:1 starts at $1,800 for 12 hours — substantially below local hourly rates once you compare like for like.',
+      'Local Dubai tutoring agencies — TutorChase, ++tutors, GoStudent, MyTutor — typically charge AED 220–400 per hour ($60–$110/hr) and rely on a rotating freelance bench, often non-biology specialists working across multiple subjects. Cerebrum is set up differently: AIIMS-trained biology faculty as your dedicated tutor for the full year, weekly written feedback on every FRQ attempt against the College Board rubric, and the Indian small-batch coaching tradition (max 12 per batch) built around retrieval practice and timed mocks. Senior-faculty 1:1 starts at $1,800 for 12 hours — substantially below local hourly rates once you compare like for like.',
     schools: [
       'GEMS Dubai American Academy',
       'Universal American School',
@@ -697,7 +697,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'How is your AP Biology coaching different from local Dubai agencies like TutorChase or ++tutors?',
         answer:
-          'Three structural differences. First, faculty: we use AIIMS-trained PhD biologists as your dedicated tutor for the year, not a rotating bench of generalist tutors hired on freelance terms. Second, methodology: retrieval-heavy small-batch coaching (Indian tradition) with weekly written FRQ feedback against the College Board rubric, not generic platform tutoring. Third, price: senior-faculty 1:1 at $1,800 for 12 hours works out to $150/hr versus AED 220–400/hr ($60–$110/hr) at TutorChase or ++tutors, but with full PhD specialists rather than undergraduate or master’s-level tutors at the lower local price.',
+          'Three structural differences. First, faculty: we use AIIMS-trained biology faculty as your dedicated tutor for the year, not a rotating bench of generalist tutors hired on freelance terms. Second, methodology: retrieval-heavy small-batch coaching (Indian tradition) with weekly written FRQ feedback against the College Board rubric, not generic platform tutoring. Third, price: senior-faculty 1:1 at $1,800 for 12 hours works out to $150/hr versus AED 220–400/hr ($60–$110/hr) at TutorChase or ++tutors, but with full biology specialists rather than undergraduate or master’s-level tutors at the lower local price.',
       },
       {
         question:
@@ -738,7 +738,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       'Abu Dhabi’s AP Biology demand is concentrated around the American cluster on Saadiyat and Khalifa City — GEMS American Academy Abu Dhabi, American Community School (ACS), Canadian International, Cranleigh, and the Aldar Academies network — plus Brighton College and Repton on the British side offering AP as a US-track elective. Strong South Asian, Egyptian, Lebanese, and East Asian expat academic communities drive the AP uptake here, particularly into NYU Abu Dhabi’s admissions pool and US mainland universities. GST evening live classes (6–9 PM Abu Dhabi time) work cleanly for the AP-heavy junior/senior schedules these schools run.',
     positioningBlurb:
-      'Abu Dhabi families often face thinner AP tutoring supply than Dubai — fewer specialist agencies, shorter freelance benches. Local options (TutorChase, GoStudent, individual freelancers) charge AED 250–450 per hour ($70–$120/hr) for non-PhD generalists who often commute from Dubai. Cerebrum delivers AIIMS-trained PhD biology faculty as a dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and the Indian small-batch coaching tradition (max 12 per batch) calibrated to retrieval practice and timed mocks. Senior-faculty 1:1 from $1,800 for a 12-hour package, with no Dubai-commute premium or weekend-only constraint.',
+      'Abu Dhabi families often face thinner AP tutoring supply than Dubai — fewer specialist agencies, shorter freelance benches. Local options (TutorChase, GoStudent, individual freelancers) charge AED 250–450 per hour ($70–$120/hr) for non-specialist generalists who often commute from Dubai. Cerebrum delivers AIIMS-trained biology faculty as a dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and the Indian small-batch coaching tradition (max 12 per batch) calibrated to retrieval practice and timed mocks. Senior-faculty 1:1 from $1,800 for a 12-hour package, with no Dubai-commute premium or weekend-only constraint.',
     schools: [
       'GEMS American Academy Abu Dhabi',
       'American Community School of Abu Dhabi (ACS)',
@@ -758,7 +758,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'Saadiyat and Khalifa City school clusters have very different commute patterns — does that matter for online AP Bio?',
         answer:
-          'For online live classes it doesn’t matter at all — and that’s precisely the point. A Saadiyat family at ACS Abu Dhabi or Cranleigh, and a Khalifa City family at GEMS American Academy or Canadian International, both sit at home for our sessions. The commute pain that AED 250–450/hr freelancers create — travel time charged, schedule rigidity, last-minute cancellations when the tutor is stuck in Dubai-AD traffic — disappears entirely. Same PhD faculty, same Zoom link, no driver-and-Sheikh-Zayed-Road overhead.',
+          'For online live classes it doesn’t matter at all — and that’s precisely the point. A Saadiyat family at ACS Abu Dhabi or Cranleigh, and a Khalifa City family at GEMS American Academy or Canadian International, both sit at home for our sessions. The commute pain that AED 250–450/hr freelancers create — travel time charged, schedule rigidity, last-minute cancellations when the tutor is stuck in Dubai-AD traffic — disappears entirely. Same senior faculty, same Zoom link, no driver-and-Sheikh-Zayed-Road overhead.',
       },
       {
         question:
@@ -794,7 +794,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'How is your coaching different from Cranleigh or Brighton College’s in-house AP support?',
         answer:
-          'Cranleigh and Brighton College have strong general academic support, but AP Biology is a niche specialism inside what’s primarily a British-curriculum school. In-house support typically caters to the small AP cohort with one or two teachers who may not have run the full College Board FRQ rubric calibration year on year. Our 1:1 layer adds PhD-level biology depth, dedicated FRQ feedback every week, and timed full-length mocks — the targeted scaffolding that converts school grades into AP-5 outcomes. We work alongside the school, not against it.',
+          'Cranleigh and Brighton College have strong general academic support, but AP Biology is a niche specialism inside what’s primarily a British-curriculum school. In-house support typically caters to the small AP cohort with one or two teachers who may not have run the full College Board FRQ rubric calibration year on year. Our 1:1 layer adds senior-faculty biology depth, dedicated FRQ feedback every week, and timed full-length mocks — the targeted scaffolding that converts school grades into AP-5 outcomes. We work alongside the school, not against it.',
       },
     ],
   },
@@ -812,7 +812,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       'Mumbai has one of India’s deepest international-school clusters offering AP Biology: American School of Bombay (ASB) in BKC runs a full College Board AP track, Cathedral & John Connon and Bombay International School layer AP onto an IGCSE/IB base, and Dhirubhai Ambani International School and Oberoi International serve IB-Diploma cohorts who increasingly add AP Biology as a US-college signal. The typical Mumbai student in our programme is a CBSE/ICSE/IB-DP student layering AP-5 on top of their base curriculum to strengthen US college applications. IST evening live classes (6–9 PM) slot cleanly into the post-school window.',
     positioningBlurb:
-      'Most India-based AP tutors are generalist test-prep agencies — Jamboree, Karan Gupta, Edu-Mentor, the other generalist test-prep brands franchise — that bundle AP Biology into broader SAT/ACT/Common-App packages. None specialise in biology. Cerebrum is the opposite: biology-only, AIIMS-trained PhD faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and IST-evening live classes that respect Mumbai’s school-to-tuition rhythm. Senior-faculty 1:1 from $1,800 for 12 hours ($150/hr) — substantially below the $150–400/hr that US-based AP tutors charge Mumbai families over Zoom.',
+      'Most India-based AP tutors are generalist test-prep agencies — Jamboree, Karan Gupta, Edu-Mentor, the other generalist test-prep brands franchise — that bundle AP Biology into broader SAT/ACT/Common-App packages. None specialise in biology. Cerebrum is the opposite: biology-only, AIIMS-trained biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and IST-evening live classes that respect Mumbai’s school-to-tuition rhythm. Senior-faculty 1:1 from $1,800 for 12 hours ($150/hr) — substantially below the $150–400/hr that US-based AP tutors charge Mumbai families over Zoom.',
     schools: [
       'American School of Bombay (ASB)',
       'Cathedral & John Connon School',
@@ -864,7 +864,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'BKC traffic and South Mumbai commute is brutal — but you’re online, so that’s solved, right?',
         answer:
-          'Exactly. Most Mumbai AP tutoring options are either in-person in South Mumbai (driver, traffic, two-hour round trip from BKC or Powai) or in-person in Andheri/BKC (same problem reversed from Colaba or Bandra West). Our 100% online live model removes that entirely — your child opens a laptop at home at 6 PM, finishes at 7:30, and has dinner. The PhD specialist they’re working with is the same year-round regardless of where the faculty lives. No driver overhead, no two-hour commute, no Saturday-only-because-of-traffic constraint.',
+          'Exactly. Most Mumbai AP tutoring options are either in-person in South Mumbai (driver, traffic, two-hour round trip from BKC or Powai) or in-person in Andheri/BKC (same problem reversed from Colaba or Bandra West). Our 100% online live model removes that entirely — your child opens a laptop at home at 6 PM, finishes at 7:30, and has dinner. The senior specialist they’re working with is the same year-round regardless of where the faculty lives. No driver overhead, no two-hour commute, no Saturday-only-because-of-traffic constraint.',
       },
       {
         question: 'How do we pay — Indian bank transfer in INR, or do we have to pay in USD?',
@@ -887,7 +887,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       'Delhi NCR’s AP Biology demand clusters around the American Embassy School (AES) in Chanakyapuri, the Pathways network (Aravali, Gurgaon, Noida), Sanskriti School, Vasant Valley, and the GD Goenka / Heritage / Lancers international cohort. The typical NCR student in our programme is either an AES-track US-college applicant, a Pathways IBDP student layering AP for US apps, or a Modern / DPS International / Sanskriti CBSE-12 student dual-applying to Indian universities and US colleges. Cerebrum’s South Extension hub sits 4 km from AIIMS Delhi — our senior faculty roster is drawn from that ecosystem and an occasional in-person consultation is available for NCR families who want it.',
     positioningBlurb:
-      'Delhi NCR is the densest market in India for generalist test-prep agencies — Jamboree, Karan Gupta, The other generalist test-prep brands (Connaught Place + Gurgaon), Manya Education, Edu-Mentor — most of which bundle AP Biology into broader SAT / ACT / IELTS / Common-App packages tutored by non-specialist staff. Cerebrum is biology-only: AIIMS-trained PhD faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, IST evening live classes, and the option of in-person review at our South Extension hub for NCR-based families. Senior-faculty 1:1 begins at $1,800 for 12 hours — well below the $150–400/hr US-based tutors charge over Zoom.',
+      'Delhi NCR is the densest market in India for generalist test-prep agencies — Jamboree, Karan Gupta, The other generalist test-prep brands (Connaught Place + Gurgaon), Manya Education, Edu-Mentor — most of which bundle AP Biology into broader SAT / ACT / IELTS / Common-App packages tutored by non-specialist staff. Cerebrum is biology-only: AIIMS-trained biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, IST evening live classes, and the option of in-person review at our South Extension hub for NCR-based families. Senior-faculty 1:1 begins at $1,800 for 12 hours — well below the $150–400/hr US-based tutors charge over Zoom.',
     schools: [
       'American Embassy School (AES) New Delhi',
       'Pathways World School Aravali',
@@ -966,7 +966,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       'Bangalore’s AP Biology demand is shaped by its international-school cluster across two distinct corridors: the Whitefield-Sarjapur tech-belt (Greenwood High, Indus, Inventure, Oakridge, NPS International) where AP layers cleanly onto a STEM-leaning cohort, and the central / south Bangalore axis (Stonehill, Canadian International, Mallya Aditi, TISB) where AP is more often paired with IB. The typical student in our programme is a tech-family STEM-leaning IB or AP school student pairing AP Biology with coding and accelerated math for MIT / Stanford / Carnegie Mellon applications. Saturday-morning IST batches also work cleanly for the cohort that prefers weekday school focus.',
     positioningBlurb:
-      'Bangalore parents are unusually price-sensitive and methodology-literate — tech-employee households scrutinise tutoring like they scrutinise vendor SLAs. The generalist test-prep agencies (Jamboree, other generalist test-prep brands Indiranagar, Manya, Karan Gupta) bundle AP Biology into SAT / Common-App stacks staffed by rotating non-specialist tutors. Cerebrum is structurally different: biology-only, AIIMS-trained PhD faculty as your dedicated year-long tutor, transparent weekly written FRQ feedback (the SLA you can actually measure), and IST evening or Saturday-morning live classes. Senior-faculty 1:1 from $1,800 for 12 hours ($150/hr) — well below US-based tutors’ $150–400/hr Zoom rates, with deeper subject specialism.',
+      'Bangalore parents are unusually price-sensitive and methodology-literate — tech-employee households scrutinise tutoring like they scrutinise vendor SLAs. The generalist test-prep agencies (Jamboree, other generalist test-prep brands Indiranagar, Manya, Karan Gupta) bundle AP Biology into SAT / Common-App stacks staffed by rotating non-specialist tutors. Cerebrum is structurally different: biology-only, AIIMS-trained biology faculty as your dedicated year-long tutor, transparent weekly written FRQ feedback (the SLA you can actually measure), and IST evening or Saturday-morning live classes. Senior-faculty 1:1 from $1,800 for 12 hours ($150/hr) — well below US-based tutors’ $150–400/hr Zoom rates, with deeper subject specialism.',
     schools: [
       'Inventure Academy',
       'Trio World Academy',
@@ -990,7 +990,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'Inventure / Trio / Stonehill are IB-leaning, but Greenwood / Indus are more AP-friendly — does the school you attend matter for our coaching?',
         answer:
-          'It changes the integration pattern, not the coaching content. For Greenwood / Indus AP-track students, we mirror the school’s unit pacing and add the FRQ rubric layer most school cohorts under-drill. For Stonehill / Inventure / TISB IBDP students adding AP Biology as a US-application supplement, we run AP as a parallel external track — Campbell units 1–8 covered independently of the school’s IB Bio sequence — and align timing to the May AP exam regardless of IB internal deadlines. Same PhD faculty, same FRQ rubric standard; the calibration differs.',
+          'It changes the integration pattern, not the coaching content. For Greenwood / Indus AP-track students, we mirror the school’s unit pacing and add the FRQ rubric layer most school cohorts under-drill. For Stonehill / Inventure / TISB IBDP students adding AP Biology as a US-application supplement, we run AP as a parallel external track — Campbell units 1–8 covered independently of the school’s IB Bio sequence — and align timing to the May AP exam regardless of IB internal deadlines. Same senior faculty, same FRQ rubric standard; the calibration differs.',
       },
       {
         question:
@@ -1042,7 +1042,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       'Hyderabad’s AP Biology demand has grown sharply with the HiTech City and Gachibowli expansion: Oakridge International (Gachibowli + Bachupally), CHIREC International (Kondapur), Indus International, Glendale Academy, Sancta Maria, and the diplomatic-enclave International School of Hyderabad anchor the cluster, with Aga Khan Academy and Silver Oaks adding to the AP-friendly bench. The typical Hyderabad student in our programme is a tech-family or Telugu-NRI-returnee STEM-leaning student targeting the Hyderabad → Carnegie Mellon / Purdue / UT Austin / Texas pipeline that’s become a major regional pattern. IST evening live classes (6–9 PM) work cleanly for the post-school window.',
     positioningBlurb:
-      'Hyderabad has fewer specialist AP tutoring options than Mumbai, Delhi, or Bangalore — the local market is dominated by other IIT-JEE-first coachings Punjagutta, other South-Indian chains, a leading national educational institution and similar JEE / NEET coaching giants, none of which seriously coach AP Biology. The few US-curriculum options (Jamboree Banjara Hills, other generalist test-prep brands Madhapur) bundle AP into broader SAT / Common-App stacks staffed by generalist tutors. Cerebrum is biology-only: AIIMS-trained PhD faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, IST evening live classes, and US-college-application context calibrated for Hyderabad families targeting US universities like CMU, Purdue, and UT Austin. Dedicated senior-faculty 1:1 from $1,800 / 12 hours.',
+      'Hyderabad has fewer specialist AP tutoring options than Mumbai, Delhi, or Bangalore — the local market is dominated by other IIT-JEE-first coachings Punjagutta, other South-Indian chains, a leading national educational institution and similar JEE / NEET coaching giants, none of which seriously coach AP Biology. The few US-curriculum options (Jamboree Banjara Hills, other generalist test-prep brands Madhapur) bundle AP into broader SAT / Common-App stacks staffed by generalist tutors. Cerebrum is biology-only: AIIMS-trained biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, IST evening live classes, and US-college-application context calibrated for Hyderabad families targeting US universities like CMU, Purdue, and UT Austin. Dedicated senior-faculty 1:1 from $1,800 / 12 hours.',
     schools: [
       'Oakridge International School Gachibowli',
       'Oakridge International School Bachupally',
@@ -1088,7 +1088,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'HiTech City vs old Hyderabad — does the school cluster you live near affect tutoring?',
         answer:
-          'For online live classes, no — your child opens a laptop in HiTech City (Oakridge / CHIREC / Indus catchment) or Banjara Hills / Jubilee Hills (HPS / Silver Oaks Banjara Hills / Glendale catchment) and joins the same Zoom room with the same PhD faculty. The only school-cluster difference is in our coaching calibration: HiTech City schools tend to run faster AP pacing (US-aligned, August–May), while older Hyderabad schools sometimes pair AP with state-board Class 12 prep at a slower pace. We adjust the unit timing accordingly. Same standard, different ramps.',
+          'For online live classes, no — your child opens a laptop in HiTech City (Oakridge / CHIREC / Indus catchment) or Banjara Hills / Jubilee Hills (HPS / Silver Oaks Banjara Hills / Glendale catchment) and joins the same Zoom room with the same senior faculty. The only school-cluster difference is in our coaching calibration: HiTech City schools tend to run faster AP pacing (US-aligned, August–May), while older Hyderabad schools sometimes pair AP with state-board Class 12 prep at a slower pace. We adjust the unit timing accordingly. Same standard, different ramps.',
       },
       {
         question:
@@ -1117,7 +1117,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       'British Columbia has been one of the fastest-growing AP markets in Canada — BCCAT reports a 72% jump in AP participation from 2006 to 2016, with steady +3%/year growth since. Vancouver feeder schools like Sir Winston Churchill, Lord Byng, Eric Hamber, University Hill, and the independent cluster (York House, Crofton House, St. George’s, West Point Grey) run serious AP Biology cohorts every year. The Lower Mainland’s deep Indo-Canadian, Chinese, and Korean academic communities — particularly across Richmond, Burnaby, and Surrey — drive heavy AP-5 demand from families dual-applying to UBC, McGill, Waterloo, and US schools like UCLA, Berkeley, and Ivies.',
     positioningBlurb:
-      'The Canadian AP tutoring market is fragmented — Tutorfair, Spires, MyTutor, and a long tail of local Vancouver agencies charge CAD $50–100/hr for mostly undergraduate or recent-graduate tutors with no biology specialism. Cerebrum is operates on a different model: AIIMS-trained PhD biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and the Indian small-batch tradition (max 12) calibrated to retrieval practice. Saturday-morning PT live classes work cleanly with BC school schedules. Senior-faculty 1:1 from USD $1,800 for 12 hours — competitive once you compare like-for-like specialist expertise.',
+      'The Canadian AP tutoring market is fragmented — Tutorfair, Spires, MyTutor, and a long tail of local Vancouver agencies charge CAD $50–100/hr for mostly undergraduate or recent-graduate tutors with no biology specialism. Cerebrum is operates on a different model: AIIMS-trained biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and the Indian small-batch tradition (max 12) calibrated to retrieval practice. Saturday-morning PT live classes work cleanly with BC school schedules. Senior-faculty 1:1 from USD $1,800 for 12 hours — competitive once you compare like-for-like specialist expertise.',
     schools: [
       'Sir Winston Churchill Secondary',
       'Lord Byng Secondary',
@@ -1152,7 +1152,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'Richmond, Burnaby, and Surrey families face long commutes for in-person tutoring — does 100% online actually work as well?',
         answer:
-          'Better, in our experience. A Richmond family at Steveston-London or Richmond Secondary, or a Burnaby family at Burnaby North, would otherwise spend 60–90 minutes round-trip for a 90-minute Vancouver session. With live Zoom 1:1, your child opens a laptop at home, joins the same PhD faculty member they would have driven to see, and uses the saved 90 minutes for school homework or sleep. We have not had a Lower Mainland family who tried online and asked to switch back to in-person.',
+          'Better, in our experience. A Richmond family at Steveston-London or Richmond Secondary, or a Burnaby family at Burnaby North, would otherwise spend 60–90 minutes round-trip for a 90-minute Vancouver session. With live Zoom 1:1, your child opens a laptop at home, joins the same senior faculty member they would have driven to see, and uses the saved 90 minutes for school homework or sleep. We have not had a Lower Mainland family who tried online and asked to switch back to in-person.',
       },
       {
         question:
@@ -1192,7 +1192,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       'The Greater Toronto Area is Canada’s largest AP Biology market and one of its fastest growing — BCCAT and College Board Canada data show AP participation up 72% between 2006 and 2016, with sustained +3%/year growth in Ontario since. The public TDSB AP cluster (Earl Haig, Marc Garneau, William Lyon Mackenzie, North Toronto CI, Don Mills CI, Harbord, A.Y. Jackson) and the independent cluster (UCC, UTS, Branksome Hall, Havergal, Crescent, Bishop Strachan, St. Michael’s) together run some of the deepest AP Bio cohorts outside the US. The GTA’s strong Indo-Canadian, Chinese, and Korean academic communities — especially in Markham, Vaughan, and North York — drive heavy dual UofT/McGill + US Ivy applications.',
     positioningBlurb:
-      'Toronto AP tutoring options run from boutique agencies (Prep Academy, The Tutoring Expert) at CAD $80–120/hr to platform tutors (Tutorfair, Spires) at CAD $50–90/hr — typically undergraduate or master’s-level tutors with no biology specialism. Cerebrum is biology-only: AIIMS-trained PhD faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and the Indian small-batch coaching tradition (max 12). ET-evening live classes (7–9 PM ET) slot cleanly into TDSB and Peel/York Region school rhythms. Senior-faculty 1:1 from USD $1,800 for 12 hours.',
+      'Toronto AP tutoring options run from boutique agencies (Prep Academy, The Tutoring Expert) at CAD $80–120/hr to platform tutors (Tutorfair, Spires) at CAD $50–90/hr — typically undergraduate or master’s-level tutors with no biology specialism. Cerebrum is biology-only: AIIMS-trained biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and the Indian small-batch coaching tradition (max 12). ET-evening live classes (7–9 PM ET) slot cleanly into TDSB and Peel/York Region school rhythms. Senior-faculty 1:1 from USD $1,800 for 12 hours.',
     schools: [
       'Earl Haig Secondary School',
       'North Toronto Collegiate Institute',
@@ -1263,9 +1263,9 @@ export const apBiologyMetros: APBiologyMetro[] = [
     timezoneIana: 'America/Toronto',
     addressRegion: 'ON',
     heroBlurb:
-      'Peel Region — Brampton and Mississauga — is the most heavily Indo-Canadian metro in North America, with Brampton over 50% South Asian and Mississauga a close second. AP Biology demand here has grown sharply alongside the BCCAT-tracked 72% national AP expansion from 2006–2016 and sustained Ontario growth since. Peel feeder schools like Turner Fenton, Mayfield, Lorne Park, John Fraser, Glenforest, and Iona Catholic run committed AP cohorts, and many families are dual-applying to UofT Mississauga, Western, Waterloo, and US universities. For Indo-Canadian families who grew up in Indian academic culture, our AIIMS-trained PhD faculty and small-batch tradition feels structurally familiar — same rigour, calibrated to North American admissions.',
+      'Peel Region — Brampton and Mississauga — is the most heavily Indo-Canadian metro in North America, with Brampton over 50% South Asian and Mississauga a close second. AP Biology demand here has grown sharply alongside the BCCAT-tracked 72% national AP expansion from 2006–2016 and sustained Ontario growth since. Peel feeder schools like Turner Fenton, Mayfield, Lorne Park, John Fraser, Glenforest, and Iona Catholic run committed AP cohorts, and many families are dual-applying to UofT Mississauga, Western, Waterloo, and US universities. For Indo-Canadian families who grew up in Indian academic culture, our AIIMS-trained biology faculty and small-batch tradition feels structurally familiar — same rigour, calibrated to North American admissions.',
     positioningBlurb:
-      'Peel Region AP tutoring is thin: the local Mississauga / Brampton supply leans toward generalist test-prep franchises and individual freelancers at CAD $50–90/hr, with no biology specialism. Indo-Canadian families often feel under-served by the local options. Cerebrum brings the Indian small-batch coaching tradition (max 12, retrieval-heavy) with AIIMS-trained PhD biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and ET-evening live classes (7–9 PM ET). Senior-faculty 1:1 from USD $1,800 for 12 hours — pricing that respects the dual-currency reality many Peel families navigate.',
+      'Peel Region AP tutoring is thin: the local Mississauga / Brampton supply leans toward generalist test-prep franchises and individual freelancers at CAD $50–90/hr, with no biology specialism. Indo-Canadian families often feel under-served by the local options. Cerebrum brings the Indian small-batch coaching tradition (max 12, retrieval-heavy) with AIIMS-trained biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and ET-evening live classes (7–9 PM ET). Senior-faculty 1:1 from USD $1,800 for 12 hours — pricing that respects the dual-currency reality many Peel families navigate.',
     schools: [
       'Lorne Park Secondary School',
       'Erindale Secondary School',
@@ -1288,7 +1288,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'Brampton is the most Indo-Canadian city in North America — does that community context show up in your coaching?',
         answer:
-          'Yes, in two practical ways. First, our AIIMS-trained PhD faculty and Indian small-batch coaching method are culturally legible to most Brampton-Mississauga families — the rigor, the retrieval practice, the daily-discipline expectation are familiar. Second, we calibrate honest expectations for the South Asian academic pressure context: AP-5 is achievable for most committed students, but it is not a substitute for genuine biology depth, and we will say so. The Indo-Canadian families we coach consistently appreciate that we do not over-promise, and that the standard is rigorous without being unkind.',
+          'Yes, in two practical ways. First, our AIIMS-trained biology faculty and Indian small-batch coaching method are culturally legible to most Brampton-Mississauga families — the rigor, the retrieval practice, the daily-discipline expectation are familiar. Second, we calibrate honest expectations for the South Asian academic pressure context: AP-5 is achievable for most committed students, but it is not a substitute for genuine biology depth, and we will say so. The Indo-Canadian families we coach consistently appreciate that we do not over-promise, and that the standard is rigorous without being unkind.',
       },
       {
         question:
@@ -1342,7 +1342,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       'Singapore’s AP Biology market is concentrated around Singapore American School (SAS) in Woodlands — the anchor with one of the deepest AP cohorts in Asia — and Stamford American International School (SAIS), which publicly reports 62% of its AP students scoring 4 or 5. Feeder cohorts come from GEMS World Academy, Hwa Chong International, NPS International, and the IB-primary UWC and ISS clusters where ambitious students add AP Biology for US-college applications. Singapore’s South Asian, East Asian, and Western expat communities drive serious AP-5 demand from families targeting Ivy League, UC system, Johns Hopkins, and Duke. Live SGT evening classes (7–10 PM) fit SAS and SAIS schedules cleanly.',
     positioningBlurb:
-      'Local Singapore AP tutoring runs S$50–150/hr (~US$40–110/hr) through agencies like SmileTutor, Tutor City, ChampionTutor, and a long tail of freelance NUS / NTU undergraduates with no biology specialism. Cerebrum is structurally different: AIIMS-trained PhD biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and the Indian small-batch coaching tradition (max 12) calibrated to retrieval practice and timed full-length mocks. SGT evening live classes (7–10 PM) slot cleanly into SAS, SAIS, and Hwa Chong International schedules. Senior-faculty 1:1 from US$1,800 for 12 hours — competitive once you compare like-for-like specialist depth.',
+      'Local Singapore AP tutoring runs S$50–150/hr (~US$40–110/hr) through agencies like SmileTutor, Tutor City, ChampionTutor, and a long tail of freelance NUS / NTU undergraduates with no biology specialism. Cerebrum is structurally different: AIIMS-trained biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and the Indian small-batch coaching tradition (max 12) calibrated to retrieval practice and timed full-length mocks. SGT evening live classes (7–10 PM) slot cleanly into SAS, SAIS, and Hwa Chong International schedules. Senior-faculty 1:1 from US$1,800 for 12 hours — competitive once you compare like-for-like specialist depth.',
     schools: [
       'Singapore American School (SAS)',
       'Stamford American International School (SAIS)',
@@ -1378,7 +1378,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'How does Cerebrum compare to local Singapore tutoring like SmileTutor, Tutor City, or freelance NUS undergraduates?',
         answer:
-          'Three structural differences. First, faculty: AIIMS-trained PhD biologists as your dedicated tutor for the year, not a rotating bench of NUS or NTU undergraduates with no biology specialism. Second, methodology: retrieval-heavy coaching with weekly written FRQ feedback against the College Board rubric, not generic platform tutoring. Third, value: senior-faculty 1:1 at US$1,800 for 12 hours works out to US$150/hr — comparable to the S$120–150/hr top end of local rates, but with PhD specialists rather than undergraduates at the lower S$50–80/hr tiers.',
+          'Three structural differences. First, faculty: AIIMS-trained biology faculty as your dedicated tutor for the year, not a rotating bench of NUS or NTU undergraduates with no biology specialism. Second, methodology: retrieval-heavy coaching with weekly written FRQ feedback against the College Board rubric, not generic platform tutoring. Third, value: senior-faculty 1:1 at US$1,800 for 12 hours works out to US$150/hr — comparable to the S$120–150/hr top end of local rates, but with senior faculty specialists rather than undergraduates at the lower S$50–80/hr tiers.',
       },
       {
         question:
@@ -1420,7 +1420,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       'Hong Kong International School (HKIS) is the anchor of AP Biology demand in the region — HKIS publicly reports 95% of AP candidates scoring 3 or higher and 82% scoring 4 or 5, making it one of the strongest AP cohorts in Asia. Feeder demand also comes from Canadian International School of Hong Kong (CDNIS) and the IB-primary cluster (CIS, ESF schools, RCHK, ISF Academy) where students add AP Biology for US-college applications. Hong Kong’s deep expat and local academic communities drive serious AP-5 demand from families dual-applying to HKU, CUHK, and US universities — particularly Ivy League, UC system, and Johns Hopkins.',
     positioningBlurb:
-      'Hong Kong AP tutoring agencies — ITS Education Asia, ++tutors, TutorChase, Aegis Advisors, and the long tail of independent tutors — charge HKD 470–1,000+/hr (~US$60–130/hr) for mostly graduate-level tutors with limited biology specialism. Cerebrum is biology-only: AIIMS-trained PhD faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and the Indian small-batch coaching tradition (max 12) calibrated to retrieval practice. HKT evening live classes (7–10 PM) slot cleanly into HKIS, CDNIS, and CIS schedules. Senior-faculty 1:1 from US$1,800 for 12 hours — competitive once you compare like-for-like PhD specialist depth.',
+      'Hong Kong AP tutoring agencies — ITS Education Asia, ++tutors, TutorChase, Aegis Advisors, and the long tail of independent tutors — charge HKD 470–1,000+/hr (~US$60–130/hr) for mostly graduate-level tutors with limited biology specialism. Cerebrum is biology-only: AIIMS-trained biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and the Indian small-batch coaching tradition (max 12) calibrated to retrieval practice. HKT evening live classes (7–10 PM) slot cleanly into HKIS, CDNIS, and CIS schedules. Senior-faculty 1:1 from US$1,800 for 12 hours — competitive once you compare like-for-like specialist depth.',
     schools: [
       'Hong Kong International School (HKIS)',
       'Chinese International School (CIS)',
@@ -1449,7 +1449,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'How does Cerebrum compare to TutorChase, ++tutors, or Aegis Advisors in Hong Kong on price and quality?',
         answer:
-          'Local HK agencies charge HKD 470–1,000+/hr (~US$60–130/hr) for mostly graduate or recent-graduate tutors with no biology specialism. Senior-faculty 1:1 with us is US$1,800 for 12 hours — about US$150/hr — but you are getting AIIMS-trained PhD biologists as your dedicated tutor for the year, weekly written FRQ feedback against the College Board rubric, and continuity across the full AP cycle. At the HKD 800–1,000/hr tier you would be paying for a tutor still building biology depth; at our rate you get a published specialist.',
+          'Local HK agencies charge HKD 470–1,000+/hr (~US$60–130/hr) for mostly graduate or recent-graduate tutors with no biology specialism. Senior-faculty 1:1 with us is US$1,800 for 12 hours — about US$150/hr — but you are getting AIIMS-trained biology faculty as your dedicated tutor for the year, weekly written FRQ feedback against the College Board rubric, and continuity across the full AP cycle. At the HKD 800–1,000/hr tier you would be paying for a tutor still building biology depth; at our rate you get a published specialist.',
       },
       {
         question:
@@ -1497,7 +1497,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       "Shanghai American School (SAS) Pudong and Puxi twin campuses are the anchor of AP Biology demand in mainland China — SAS has been authorised as an AP Capstone school (first in Asia) and runs one of the deepest AP cohorts on the continent. Shanghai High School International Division (SHSID) runs a full AP programme with strong public reporting, and WLSA Shanghai, Concordia International School, Dulwich Shanghai (Pudong + Puxi), Yew Chung International School Shanghai (YCIS), Wellington College Shanghai, Western International School of Shanghai (WISS), and Shanghai Community International School (SCIS) all carry AP tracks for US-bound students. Despite mainland China's curriculum shift toward A-Level and IB, the Hurun 2025 ranking confirms 63% of mainland ranked international schools still offer AP — AP-5 in Biology remains the cleanest US-curriculum signal for Ivy League, UC system, Johns Hopkins, Duke, and Cornell admissions.",
     positioningBlurb:
-      'Shanghai AP tutoring market is fragmented across local Chinese-language agencies (Hanlin International Education 翰林国际教育, TestDaily, 渊学通) and Western-style premium tutoring (other international tutoring agencies, ITS Shanghai, individual SAS / SHSID alumni). Local rates run CNY 500–1,500/hr (US$70–210/hr); Crimson and Western agencies run US$250–500/hr for senior tutors with mixed biology specialism. Cerebrum is structurally different: AIIMS-trained PhD biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, biology-only specialisation, and Indian small-batch coaching tradition (max 12) calibrated to retrieval practice. CST evening live classes (7–10 PM Shanghai time) slot cleanly into SAS, SHSID, and WLSA schedules. Senior-faculty 1:1 from US$1,800 for 12 hours — undercuts Crimson and matches the local CNY 1,000+/hr tier with materially deeper biology pedagogy.',
+      'Shanghai AP tutoring market is fragmented across local Chinese-language agencies (Hanlin International Education 翰林国际教育, TestDaily, 渊学通) and Western-style premium tutoring (other international tutoring agencies, ITS Shanghai, individual SAS / SHSID alumni). Local rates run CNY 500–1,500/hr (US$70–210/hr); Crimson and Western agencies run US$250–500/hr for senior tutors with mixed biology specialism. Cerebrum is structurally different: AIIMS-trained biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, biology-only specialisation, and Indian small-batch coaching tradition (max 12) calibrated to retrieval practice. CST evening live classes (7–10 PM Shanghai time) slot cleanly into SAS, SHSID, and WLSA schedules. Senior-faculty 1:1 from US$1,800 for 12 hours — undercuts Crimson and matches the local CNY 1,000+/hr tier with materially deeper biology pedagogy.',
     schools: [
       'Shanghai American School (SAS) Pudong',
       'Shanghai American School (SAS) Puxi',
@@ -1539,7 +1539,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'How does Cerebrum compare to other international tutoring agencies, Hanlin International Education, TestDaily, or ITS Shanghai on price and quality?',
         answer:
-          'other international tutoring agencies in Shanghai charges US$250–500/hr for senior tutors with broad academic backgrounds but mixed biology specialism. Local Chinese-language agencies (Hanlin 翰林, TestDaily, 渊学通) charge CNY 500–1,500/hr (US$70–210/hr) for tutors fluent in Mandarin and Chinese-Western curriculum bridge but again with mixed biology depth. Western agencies like ITS Shanghai run mid-range US$120–250/hr. Cerebrum is biology-only specialist: AIIMS-trained PhD faculty as your dedicated year-long tutor, weekly FRQ rubric calibration, and continuity across the full AP cycle. Senior-faculty 1:1 at US$1,800 for 12 hours works out to US$150/hr — undercuts Crimson significantly and matches the local CNY 1,000+/hr tier with materially deeper biology pedagogy.',
+          'other international tutoring agencies in Shanghai charges US$250–500/hr for senior tutors with broad academic backgrounds but mixed biology specialism. Local Chinese-language agencies (Hanlin 翰林, TestDaily, 渊学通) charge CNY 500–1,500/hr (US$70–210/hr) for tutors fluent in Mandarin and Chinese-Western curriculum bridge but again with mixed biology depth. Western agencies like ITS Shanghai run mid-range US$120–250/hr. Cerebrum is biology-only specialist: AIIMS-trained biology faculty as your dedicated year-long tutor, weekly FRQ rubric calibration, and continuity across the full AP cycle. Senior-faculty 1:1 at US$1,800 for 12 hours works out to US$150/hr — undercuts Crimson significantly and matches the local CNY 1,000+/hr tier with materially deeper biology pedagogy.',
       },
       {
         question: 'Can we pay in CNY via Alipay / WeChat Pay, or do payments need to be in USD?',
@@ -1574,7 +1574,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       "Beijing's AP Biology demand is anchored in Shunyi district's international school cluster — International School of Beijing (ISB) runs a full IB + AP dual-curriculum senior school, Western Academy of Beijing (WAB) is IB Continuum but a meaningful subset of students add AP Biology for US applications, and Dulwich College Beijing, Yew Chung International School Beijing (YCIS), Keystone Academy, Beijing City International School (BCIS), and Harrow International School Beijing all carry AP tracks. Chaoyang District (CBD) and Haidian district add demand from Chinese-passport students at private bilingual schools applying to US universities. Per the 2025 HSBC Hurun ranking, 63% of mainland China's ranked international schools still offer AP — AP-5 in Biology remains the cleanest US-curriculum signal for Ivy League, Stanford, UC system, Johns Hopkins, and Duke admissions despite the broader market shift toward A-Level and IB.",
     positioningBlurb:
-      'Beijing AP tutoring market is fragmented across local Chinese-language agencies (Hanlin International Education 翰林国际教育, TestDaily, 渊学通, 国际教育优选), Western premium tutoring (other international tutoring agencies, ITS Beijing, individual ISB / WAB alumni), and freelance international-school teachers. Local rates run CNY 500–1,500/hr (US$70–210/hr); Crimson and Western agencies run US$250–500/hr for senior tutors with mixed biology specialism. Cerebrum is structurally different: AIIMS-trained PhD biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, biology-only specialisation, and Indian small-batch coaching tradition (max 12) calibrated to retrieval practice. CST evening live classes (7–10 PM Beijing time) slot cleanly into ISB and WAB schedules. Senior-faculty 1:1 from US$1,800 for 12 hours — undercuts Crimson and matches the local CNY 1,000+/hr tier with materially deeper biology pedagogy.',
+      'Beijing AP tutoring market is fragmented across local Chinese-language agencies (Hanlin International Education 翰林国际教育, TestDaily, 渊学通, 国际教育优选), Western premium tutoring (other international tutoring agencies, ITS Beijing, individual ISB / WAB alumni), and freelance international-school teachers. Local rates run CNY 500–1,500/hr (US$70–210/hr); Crimson and Western agencies run US$250–500/hr for senior tutors with mixed biology specialism. Cerebrum is structurally different: AIIMS-trained biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, biology-only specialisation, and Indian small-batch coaching tradition (max 12) calibrated to retrieval practice. CST evening live classes (7–10 PM Beijing time) slot cleanly into ISB and WAB schedules. Senior-faculty 1:1 from US$1,800 for 12 hours — undercuts Crimson and matches the local CNY 1,000+/hr tier with materially deeper biology pedagogy.',
     schools: [
       'International School of Beijing (ISB)',
       'Western Academy of Beijing (WAB)',
@@ -1614,7 +1614,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'How does Cerebrum compare to other international tutoring agencies, Hanlin International Education, or local ISB / WAB alumni tutors?',
         answer:
-          'other international tutoring agencies in Beijing charges US$250–500/hr for senior tutors with broad academic backgrounds but mixed biology specialism. Local Chinese-language agencies (Hanlin 翰林, TestDaily, 渊学通) charge CNY 500–1,500/hr (US$70–210/hr) for Mandarin-medium tutors with strong Chinese-Western curriculum bridge but mixed biology depth. ISB / WAB alumni tutors charge CNY 300–800/hr with variable expertise. Cerebrum is biology-only specialist: AIIMS-trained PhD faculty as your dedicated year-long tutor, weekly FRQ rubric calibration, and continuity across the full AP cycle. Senior-faculty 1:1 at US$1,800 for 12 hours = US$150/hr — undercuts Crimson and matches the local CNY 1,000+/hr tier with materially deeper biology pedagogy.',
+          'other international tutoring agencies in Beijing charges US$250–500/hr for senior tutors with broad academic backgrounds but mixed biology specialism. Local Chinese-language agencies (Hanlin 翰林, TestDaily, 渊学通) charge CNY 500–1,500/hr (US$70–210/hr) for Mandarin-medium tutors with strong Chinese-Western curriculum bridge but mixed biology depth. ISB / WAB alumni tutors charge CNY 300–800/hr with variable expertise. Cerebrum is biology-only specialist: AIIMS-trained biology faculty as your dedicated year-long tutor, weekly FRQ rubric calibration, and continuity across the full AP cycle. Senior-faculty 1:1 at US$1,800 for 12 hours = US$150/hr — undercuts Crimson and matches the local CNY 1,000+/hr tier with materially deeper biology pedagogy.',
       },
       {
         question: 'Can we pay in CNY via Alipay or WeChat Pay?',
@@ -1648,7 +1648,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       "Ghaziabad's AP Biology demand sits in the Indirapuram-Vaishali-Vasundhara residential belt — the east NCR cluster that draws from professional households commuting to Noida, Anand Vihar, and central Delhi. The international-school cluster (Seth Anandram Jaipuria Vasundhara, Cambridge School Indirapuram, DPS Indirapuram, KR Mangalam Vaishali, Amity Vasundhara, GD Goenka Vasundhara) layers AP Biology onto IBDP or CBSE Class 12 tracks for the US-application subset. The cohort is follows a different architecture from Noida (less tech-corridor) or Gurgaon (less affluent-international); the Ghaziabad family profile leans toward CBSE-rooted dual-application planning with AP as a US-admissions enhancer.",
     positioningBlurb:
-      'Ghaziabad is meaningfully under-served for AP Biology tutoring relative to its growing international-curriculum cohort — most generalist test-prep agencies (Jamboree, The other generalist test-prep brands, Karan Gupta, Manya) operate out of Delhi-side branches and require a 30-60 minute commute through Anand Vihar traffic. Cerebrum is biology-only AIIMS-trained PhD faculty delivering 100% online live video sessions — your child opens a laptop in Indirapuram, Vaishali, or Vasundhara at 6 PM and finishes by 7:30 with no commute. The optional in-person consultations at South Extension are 45-60 minutes via the FNG Expressway or the new Mayur Vihar - Anand Vihar metro corridor. Senior-faculty 1:1 from $1,800 for 12 hours ($150/hr).',
+      'Ghaziabad is meaningfully under-served for AP Biology tutoring relative to its growing international-curriculum cohort — most generalist test-prep agencies (Jamboree, The other generalist test-prep brands, Karan Gupta, Manya) operate out of Delhi-side branches and require a 30-60 minute commute through Anand Vihar traffic. Cerebrum is biology-only AIIMS-trained biology faculty delivering 100% online live video sessions — your child opens a laptop in Indirapuram, Vaishali, or Vasundhara at 6 PM and finishes by 7:30 with no commute. The optional in-person consultations at South Extension are 45-60 minutes via the FNG Expressway or the new Mayur Vihar - Anand Vihar metro corridor. Senior-faculty 1:1 from $1,800 for 12 hours ($150/hr).',
     schools: [
       'Seth Anandram Jaipuria School Vasundhara',
       'Cambridge School Indirapuram',
@@ -1724,7 +1724,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       "Faridabad's AP Biology demand is shaped by its industrial-base demographics — a meaningful share of MNC engineering and management families, multi-generational business households, and the Greater Faridabad / NIT Faridabad professional cohort. The international-school cluster (Manav Rachna International, DPS Faridabad, Shri Ram Faridabad, Apeejay Faridabad, Modern DPS, Ryan International) layers AP Biology onto IBDP or CBSE Class 12 tracks for the US-application subset of families. Faridabad sits closer to South Delhi than to central Gurgaon or Noida, which gives our South Extension hub a useful proximity advantage for the optional in-person consultations.",
     positioningBlurb:
-      'Faridabad is structurally a different AP tutoring market from Gurgaon and Noida — older, more industrial, more price-sensitive than the Gurgaon DLF cluster, less methodology-conscious than the Noida tech cohort. Generalist test-prep agencies (Jamboree, The other generalist test-prep brands, Karan Gupta, Manya, Edu-Mentor — most operating from Delhi-side branches rather than Faridabad itself) bundle AP Biology into SAT / Common-App stacks tutored by rotating non-specialist staff. Cerebrum is structurally different: biology-only AIIMS-trained PhD faculty as your dedicated year-long tutor, written FRQ feedback against the College Board rubric every week, IST evening live classes, and the option of in-person consultations at our South Extension hub (35-45 minutes from Faridabad via the new Faridabad-Noida-Ghaziabad Expressway off-peak). Our senior-faculty 1:1 starts at $1,800 (12 hours) ($150/hr).',
+      'Faridabad is structurally a different AP tutoring market from Gurgaon and Noida — older, more industrial, more price-sensitive than the Gurgaon DLF cluster, less methodology-conscious than the Noida tech cohort. Generalist test-prep agencies (Jamboree, The other generalist test-prep brands, Karan Gupta, Manya, Edu-Mentor — most operating from Delhi-side branches rather than Faridabad itself) bundle AP Biology into SAT / Common-App stacks tutored by rotating non-specialist staff. Cerebrum is structurally different: biology-only AIIMS-trained biology faculty as your dedicated year-long tutor, written FRQ feedback against the College Board rubric every week, IST evening live classes, and the option of in-person consultations at our South Extension hub (35-45 minutes from Faridabad via the new Faridabad-Noida-Ghaziabad Expressway off-peak). Our senior-faculty 1:1 starts at $1,800 (12 hours) ($150/hr).',
     schools: [
       'Manav Rachna International School',
       'Delhi Public School Faridabad',
@@ -1799,7 +1799,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       "Noida's AP Biology demand is shaped by its IT-corridor demographics — tech-employee households at Sector 18 / 62 / 132 / 128, Sector 50 and 93 residential clusters, and the Greater Noida international-school belt (Pathways Noida, Shiv Nadar School, Step by Step, Genesis Global, Lotus Valley, GD Goenka Public, Amity International Sector 44). The typical Noida student in our AP programme is an IBDP or Cambridge IGCSE+A-Level student layering AP Biology for US college applications, or a CBSE Class 12 student dual-applying to Indian universities and US colleges. The IT-family parent profile is unusually methodology-literate — vendor-SLA-style scrutiny is common, and we have built our coaching delivery to match that expectation.",
     positioningBlurb:
-      "Noida is structurally a different AP tutoring market from Gurugram and Delhi — denser tech-employee demographics, more price-sensitive than the Gurgaon Aravali / DLF cohort, more methodology-conscious than the central-Delhi old-money cohort. Generalist test-prep agencies (Jamboree Noida Sec 18, The other generalist test-prep brands Sector 18, Karan Gupta, Manya, Edu-Mentor, Genesis Test Prep) bundle AP Biology into SAT / Common-App stacks tutored by rotating non-specialist staff at ₹2,500–4,500 per hour. Cerebrum is built on a different foundation: biology-only AIIMS-trained PhD faculty as your dedicated year-long tutor, written FRQ feedback against the College Board rubric every week, IST evening live classes (so your child finishes by 7:30 PM regardless of which Noida sector you live in), and the option of in-person consultations at our South Extension hub (about 60 minutes via DND Flyway off-peak, longer at peak hours). Senior-faculty 1:1 from $1,800 for 12 hours ($150/hr) — well below US-based tutors' $150–400/hr Zoom rates.",
+      "Noida is structurally a different AP tutoring market from Gurugram and Delhi — denser tech-employee demographics, more price-sensitive than the Gurgaon Aravali / DLF cohort, more methodology-conscious than the central-Delhi old-money cohort. Generalist test-prep agencies (Jamboree Noida Sec 18, The other generalist test-prep brands Sector 18, Karan Gupta, Manya, Edu-Mentor, Genesis Test Prep) bundle AP Biology into SAT / Common-App stacks tutored by rotating non-specialist staff at ₹2,500–4,500 per hour. Cerebrum is built on a different foundation: biology-only AIIMS-trained biology faculty as your dedicated year-long tutor, written FRQ feedback against the College Board rubric every week, IST evening live classes (so your child finishes by 7:30 PM regardless of which Noida sector you live in), and the option of in-person consultations at our South Extension hub (about 60 minutes via DND Flyway off-peak, longer at peak hours). Senior-faculty 1:1 from $1,800 for 12 hours ($150/hr) — well below US-based tutors' $150–400/hr Zoom rates.",
     schools: [
       'Pathways School Noida',
       'Shiv Nadar School Noida',
@@ -1877,7 +1877,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     heroBlurb:
       'Gurugram has the densest concentration of US-admissions families in India. The Aravali corridor (Pathways Aravali, Shri Ram Aravali, Heritage Xperiential, GD Goenka World, Suncity, KR Mangalam, Lancers, Pathways Gurgaon) runs the IBDP + AP overlay; the DLF / Sushant Lok / Cyber City families on the Golf Course Road axis send children to Pathways Gurgaon, DPS International Sector 45, Scottish High, Vega, Amity, and Bal Bharati. AP Biology coaching here is structurally an "applied to US college admissions" decision — not a curriculum-credit decision — and our Gurugram roster reflects that.',
     positioningBlurb:
-      'Gurugram is the highest-CPC AP tutoring market in India — generalist agencies (Jamboree, The other generalist test-prep brands Cyber City, Karan Gupta, Manya, Edu-Mentor MG Road, ALevel and IGCSE Tutors Sector 49) bundle AP Biology into SAT / Common-App stacks tutored by rotating non-specialist staff at ₹3,000–6,000 per hour. Cerebrum is structurally different: biology-only AIIMS-trained PhD faculty as your dedicated year-long tutor, written FRQ feedback against the College Board rubric every week, IST evening live classes (so your child finishes by 7:30 PM and the Gurgaon-Delhi commute is irrelevant), and an optional in-person consultation at our South Extension hub (40 min via Yellow Line from MG Road) for families who want a face-to-face progress review. 1:1 senior-faculty coaching from $1,800 (12-hour package) ($150/hr) — well below US-based tutors’ $150–400/hr Zoom rates and the local Gurgaon agencies’ generalist-tutor rates.',
+      'Gurugram is the highest-CPC AP tutoring market in India — generalist agencies (Jamboree, The other generalist test-prep brands Cyber City, Karan Gupta, Manya, Edu-Mentor MG Road, ALevel and IGCSE Tutors Sector 49) bundle AP Biology into SAT / Common-App stacks tutored by rotating non-specialist staff at ₹3,000–6,000 per hour. Cerebrum is structurally different: biology-only AIIMS-trained biology faculty as your dedicated year-long tutor, written FRQ feedback against the College Board rubric every week, IST evening live classes (so your child finishes by 7:30 PM and the Gurgaon-Delhi commute is irrelevant), and an optional in-person consultation at our South Extension hub (40 min via Yellow Line from MG Road) for families who want a face-to-face progress review. 1:1 senior-faculty coaching from $1,800 (12-hour package) ($150/hr) — well below US-based tutors’ $150–400/hr Zoom rates and the local Gurgaon agencies’ generalist-tutor rates.',
     schools: [
       'Pathways World School Aravali',
       'Pathways School Gurgaon',
@@ -1991,7 +1991,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'How does Cerebrum compare to South Florida AP tutors?',
         answer:
-          'Miami-area AP Biology tutors typically charge $80–$150/hour. Cerebrum offers PhD-faculty 1:1 at $120–$150/hour with FRQ rubric mastery — the specific exam-technique layer that generic science tutors lack. Our Small-Batch at $40/hour is more accessible for families wanting group instruction.',
+          'Miami-area AP Biology tutors typically charge $80–$150/hour. Cerebrum offers senior-faculty 1:1 at $120–$150/hour with FRQ rubric mastery — the specific exam-technique layer that generic science tutors lack. Our Small-Batch at $40/hour is more accessible for families wanting group instruction.',
       },
       {
         question: 'ET evening sessions for Miami students?',
@@ -2045,7 +2045,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'How does Cerebrum compare to Phoenix-area AP tutors?',
         answer:
-          'Phoenix-area AP Biology tutors charge $60–$120/hour. Cerebrum offers PhD-faculty 1:1 at $120–$150/hour with FRQ rubric mastery. Small-Batch at $40/hour. The FRQ technique layer is our differentiator — generic tutors teach content but rarely drill the rubric systematically.',
+          'Phoenix-area AP Biology tutors charge $60–$120/hour. Cerebrum offers senior-faculty 1:1 at $120–$150/hour with FRQ rubric mastery. Small-Batch at $40/hour. The FRQ technique layer is our differentiator — generic tutors teach content but rarely drill the rubric systematically.',
       },
       {
         question: 'MST evening sessions for Phoenix students?',
@@ -2092,7 +2092,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'How does Cerebrum compare to San Diego AP tutors?',
         answer:
-          'SD-area AP Biology tutors charge $70–$130/hour. Cerebrum offers PhD-faculty 1:1 at $120–$150/hour with FRQ rubric mastery. Small-Batch at $40/hour. The biotech-informed pedagogy is our differentiator for the Sorrento Valley cohort.',
+          'SD-area AP Biology tutors charge $70–$130/hour. Cerebrum offers senior-faculty 1:1 at $120–$150/hour with FRQ rubric mastery. Small-Batch at $40/hour. The biotech-informed pedagogy is our differentiator for the Sorrento Valley cohort.',
       },
       {
         question: 'UCSD pre-med pipeline — does AP Biology help?',
@@ -2149,7 +2149,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'How does Cerebrum compare to Denver-area AP tutors?',
         answer:
-          'Denver-area AP Biology tutors charge $60–$120/hour. Cerebrum offers PhD-faculty 1:1 at $120–$150/hour with FRQ rubric mastery. Small-Batch at $40/hour.',
+          'Denver-area AP Biology tutors charge $60–$120/hour. Cerebrum offers senior-faculty 1:1 at $120–$150/hour with FRQ rubric mastery. Small-Batch at $40/hour.',
       },
       {
         question: 'CU Boulder pre-med pipeline — does AP Biology help?',
@@ -2201,7 +2201,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'How does Cerebrum compare to Austin-area AP tutors?',
         answer:
-          'Austin-area AP Biology tutors charge $60–$120/hour. Cerebrum offers PhD-faculty 1:1 at $120–$150/hour with FRQ rubric mastery. Small-Batch at $40/hour.',
+          'Austin-area AP Biology tutors charge $60–$120/hour. Cerebrum offers senior-faculty 1:1 at $120–$150/hour with FRQ rubric mastery. Small-Batch at $40/hour.',
       },
       {
         question: 'CT evening sessions for Austin students?',
@@ -2253,7 +2253,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'How does Cerebrum compare to Portland-area AP tutors?',
         answer:
-          'Portland-area AP Biology tutors charge $55–$110/hour. Cerebrum offers PhD-faculty 1:1 at $120–$150/hour with FRQ rubric mastery. Small-Batch at $40/hour.',
+          'Portland-area AP Biology tutors charge $55–$110/hour. Cerebrum offers senior-faculty 1:1 at $120–$150/hour with FRQ rubric mastery. Small-Batch at $40/hour.',
       },
       {
         question: 'PT evening sessions for Portland students?',

@@ -22,7 +22,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Bangalore · Inventure + TISB · Cerebrum',
   description:
-    'AP Biology tutoring for Bangalore — Inventure, Trio, Stonehill, Indus, Greenwood, Oakridge, TISB. AIIMS-trained PhD faculty, FRQ mastery, IST live. From $1,800.',
+    'AP Biology tutoring for Bangalore — Inventure, Trio, Stonehill, Indus, Greenwood, Oakridge, TISB. AIIMS-trained biology faculty, FRQ mastery, IST live. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'ap biology tutor bangalore',
     'ap biology coaching bangalore',

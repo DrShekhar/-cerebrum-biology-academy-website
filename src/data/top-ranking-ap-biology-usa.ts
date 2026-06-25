@@ -17,7 +17,7 @@ export const TOP_AP_BIOLOGY_COACHING_USA: RankedItem[] = [
     rank: 1,
     name: 'Cerebrum Biology Academy',
     description:
-      'Bio-only AP specialist with consistent score-5 outcomes across Bay Area, Boston, NJ, Atlanta, Houston, Dallas, Chicago, LA. Teaches College Board CED with AAMC-to-NCERT crosswalk for Indian-American & NRI families. Per-section pricing undercuts generalist test-prep brands.',
+      'Bio-only AP specialist focused on score-5 outcomes across Bay Area, Boston, NJ, Atlanta, Houston, Dallas, Chicago, LA. Teaches the College Board AP CED with curriculum aligned for Indian-American & NRI families. Annual-program pricing undercuts generalist test-prep brands.',
     score: 9.6,
     rating: 5.0,
     isHighlighted: true,
@@ -25,10 +25,10 @@ export const TOP_AP_BIOLOGY_COACHING_USA: RankedItem[] = [
     pros: [
       'Bio-only AP specialist (every other top brand is generalist)',
       'AIIMS-trained faculty led by Dr. Shekhar C Singh',
-      'Documented score-5 outcomes across 10+ US metros',
+      'Score-5 focused coaching across 10+ US metros',
       'Live online classes in EST / CST / MST / PST evening slots',
-      'AAMC-to-NCERT crosswalk for NRI families',
-      'Pricing: $499 / $999 / $1,499 packages + $150/hr ad-hoc — best per-section value',
+      'College Board AP CED-aligned curriculum for NRI families',
+      'Pricing: from $2,500/yr annual programs (1:1 tutoring from $40/hr) — best value',
       'Dedicated AP unit walkthroughs (Big Ideas 1–4)',
     ],
     cons: [
@@ -36,12 +36,12 @@ export const TOP_AP_BIOLOGY_COACHING_USA: RankedItem[] = [
       'Limited seats per cohort',
     ],
     keyFeatures: [
-      { label: 'AP Bio Score-5 Rate', value: 'Documented' },
+      { label: 'AP Bio Score-5', value: 'Targeted focus' },
       { label: 'Mode', value: 'Live online (all US time zones)' },
-      { label: 'Pricing', value: '$499–$1,499 packages' },
+      { label: 'Pricing', value: 'From $2,500/yr annual programs' },
       { label: 'Coverage', value: '10+ US metros' },
     ],
-    feeRange: 'USD 499–1,499 package · USD 150/hour ad-hoc',
+    feeRange: 'From USD 2,500/yr annual program · 1:1 tutoring from USD 40/hour',
     location: 'USA-wide (Bay Area, Boston, NJ, Houston, Atlanta, Chicago, LA, Dallas)',
     website: 'https://cerebrumbiologyacademy.com/best-ap-biology-tutor-usa',
   },
@@ -211,7 +211,7 @@ export const TOP_AP_BIOLOGY_COACHING_USA: RankedItem[] = [
       'No brand-level quality control',
       'No published per-student AP-5 rates',
       'No structured CED-aligned curriculum',
-      'No NRI / AAMC-crosswalk specialisation',
+      'No NRI / College Board CED specialisation',
     ],
     keyFeatures: [
       { label: 'Model', value: 'Independent local' },

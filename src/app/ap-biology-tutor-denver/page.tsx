@@ -11,7 +11,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Denver · Boulder · Cerebrum',
   description:
-    'AP Biology tutoring for Denver students — Cherry Creek, ThunderRidge, Fairview Boulder, Kent Denver. PhD faculty, FRQ rubric mastery, MT live classes. From $1,800.',
+    'AP Biology tutoring for Denver students — Cherry Creek, ThunderRidge, Fairview Boulder, Kent Denver. AIIMS-trained faculty, FRQ rubric mastery, MT live classes. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'AP Biology tutor Denver',
     'AP Biology tutor Boulder',

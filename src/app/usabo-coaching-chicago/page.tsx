@@ -8,8 +8,8 @@ const timezone = 'CT (Central)'
 const url = 'https://cerebrumbiologyacademy.com/usabo-coaching-chicago'
 
 export const metadata: Metadata = {
-  title: `USABO Coaching for ${cityName} Students | AIIMS-Trained Faculty`,
-  description: `USA Biology Olympiad (USABO + IBO) coaching for ${cityName} high school students. Live classes in ${timezone}, AIIMS-trained biology specialist faculty, small batches, USABO Open + Semifinal + Finals pathway.`,
+  title: `USABO Coaching Chicago Suburbs — Naperville & New Trier`,
+  description: `The Midwest's strongest USABO cluster runs through Naperville, Hinsdale, New Trier and the Glenbrook–Stevenson axis. AIIMS-trained biology specialists, live CT evening classes, IBO pathway.`,
   keywords: [
     'USABO coaching chicago suburbs',
     'USABO chicago suburbs',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: url,
-    languages: { en: url, 'en-US': url },
+    languages: { en: url, 'en-US': url, 'x-default': url },
   },
   openGraph: {
     title: `USABO Coaching for ${cityName} Students`,

@@ -1263,41 +1263,13 @@ export interface ReviewSchemaProps {
   datePublished: string
 }
 
-export function ReviewSchema({
-  itemReviewed,
-  author,
-  reviewRating,
-  reviewBody,
-  datePublished,
-}: ReviewSchemaProps) {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Review',
-    itemReviewed: {
-      '@type': itemReviewed.type,
-      name: itemReviewed.name,
-    },
-    author: {
-      '@type': 'Person',
-      name: author.name,
-      ...(author.image && { image: author.image }),
-    },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: reviewRating.ratingValue,
-      bestRating: reviewRating.bestRating || 5,
-      worstRating: reviewRating.worstRating || 1,
-    },
-    reviewBody,
-    datePublished,
-  }
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  )
+// NEUTRALIZED (no-op): self-serving Review markup has been removed sitewide per
+// Google's review-snippet policy — same as the CerebrumAggregateRating strip in
+// commit 4656b470. The export name/signature is preserved so callers don't
+// break, but no JSON-LD is emitted. Real ratings belong on Google Business
+// Profile, not in page schema.
+export function ReviewSchema(_props: ReviewSchemaProps) {
+  return null
 }
 
 /**
@@ -1318,29 +1290,11 @@ export interface ReviewListSchemaProps {
   }
 }
 
-export function ReviewListSchema({
-  reviews,
-  itemReviewed = { type: 'Organization', name: 'Cerebrum Biology Academy' },
-}: ReviewListSchemaProps) {
-  return (
-    <>
-      {reviews.map((review, index) => (
-        <ReviewSchema
-          key={index}
-          itemReviewed={itemReviewed}
-          author={{
-            name: review.author,
-            image: review.authorImage,
-          }}
-          reviewRating={{
-            ratingValue: review.rating,
-          }}
-          reviewBody={review.review}
-          datePublished={review.date}
-        />
-      ))}
-    </>
-  )
+// NEUTRALIZED (no-op): see ReviewSchema above. Self-serving Review markup
+// removed sitewide per Google's review-snippet policy (commit 4656b470).
+// Signature preserved for callers; emits nothing.
+export function ReviewListSchema(_props: ReviewListSchemaProps) {
+  return null
 }
 
 /**

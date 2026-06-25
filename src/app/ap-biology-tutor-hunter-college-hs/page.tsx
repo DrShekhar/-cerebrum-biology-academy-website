@@ -19,7 +19,7 @@ const school = getSchoolBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologySchoolMetadata({
   title: 'AP Biology Tutor for Hunter College HS Students · NYC · Cerebrum',
   description:
-    'AP Biology tutoring for Hunter College HS students (NYC). PhD faculty, FRQ rubric mastery, USABO Semifinal track. ET live classes. From $1,800.',
+    'AP Biology tutoring for Hunter College HS students (NYC). AIIMS-trained faculty, FRQ rubric mastery, USABO Semifinal track. ET live classes. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'AP Biology tutor Hunter',
     'AP Biology tutor Hunter College High School',

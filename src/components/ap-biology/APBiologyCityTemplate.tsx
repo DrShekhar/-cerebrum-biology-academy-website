@@ -220,7 +220,7 @@ export default function APBiologyCityTemplate({ metro }: APBiologyCityTemplatePr
             </span>
             <span className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg text-white text-sm">
               <GraduationCap className="w-4 h-4 text-yellow-400" />
-              PhD biology faculty
+              AIIMS-trained biology faculty
             </span>
             <span className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg text-white text-sm">
               <Target className="w-4 h-4 text-yellow-400" />
@@ -228,7 +228,7 @@ export default function APBiologyCityTemplate({ metro }: APBiologyCityTemplatePr
             </span>
             <span className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg text-white text-sm">
               <TrendingUp className="w-4 h-4 text-yellow-400" />
-              Avg +2 score points / 20 hrs
+              Targeted score improvement
             </span>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">

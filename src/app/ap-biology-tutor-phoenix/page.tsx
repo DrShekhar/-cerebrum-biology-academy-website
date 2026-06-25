@@ -11,7 +11,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Phoenix · Scottsdale · Cerebrum',
   description:
-    'AP Biology tutoring for Phoenix students — Basis Schools, Hamilton, Desert Mountain, Brophy, Xavier. PhD faculty, FRQ rubric mastery, MST live classes. From $1,800.',
+    'AP Biology tutoring for Phoenix students — Basis Schools, Hamilton, Desert Mountain, Brophy, Xavier. AIIMS-trained faculty, FRQ rubric mastery, MST live classes. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'AP Biology tutor Phoenix',
     'AP Biology tutor Scottsdale',

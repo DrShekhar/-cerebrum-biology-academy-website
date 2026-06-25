@@ -24,7 +24,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Toronto · Earl Haig + UTS + UCC · Cerebrum',
   description:
-    'AP Biology tutoring for Toronto GTA — Earl Haig, Marc Garneau, UTS, UCC, Branksome, Havergal. PhD faculty, FRQ mastery, ET live classes. From $1,800.',
+    'AP Biology tutoring for Toronto GTA — Earl Haig, Marc Garneau, UTS, UCC, Branksome, Havergal. AIIMS-trained faculty, FRQ mastery, ET live classes. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'ap biology tutor toronto',
     'ap biology coaching ontario',

@@ -30,7 +30,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Hong Kong · HKIS + CDNIS + CIS · Cerebrum',
   description:
-    'AP Biology tutoring for Hong Kong — HKIS, CDNIS, CIS, ESF, RCHK, ISF Academy, German Swiss. PhD faculty, FRQ mastery, HKT live classes. From $1,800.',
+    'AP Biology tutoring for Hong Kong — HKIS, CDNIS, CIS, ESF, RCHK, ISF Academy, German Swiss. AIIMS-trained faculty, FRQ mastery, HKT live classes. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'ap biology tutor hong kong',
     'ap biology coaching hong kong',

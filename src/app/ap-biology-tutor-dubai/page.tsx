@@ -20,7 +20,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Dubai · GEMS DAA + Universal · Cerebrum',
   description:
-    'AP Biology tutoring for Dubai — GEMS DAA, Universal American, ASD, Repton, Nord Anglia. PhD faculty, FRQ mastery, GST live classes. From $1,800.',
+    'AP Biology tutoring for Dubai — GEMS DAA, Universal American, ASD, Repton, Nord Anglia. AIIMS-trained faculty, FRQ mastery, GST live classes. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'ap biology tutor dubai',
     'ap biology coaching uae',

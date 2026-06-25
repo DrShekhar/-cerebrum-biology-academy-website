@@ -24,7 +24,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Delhi NCR · AES + Pathways · Cerebrum',
   description:
-    'AP Biology tutoring for Delhi NCR — AES, Pathways, Sanskriti, Vasant Valley, Modern, DPS International. AIIMS-trained PhD faculty, FRQ mastery. From $1,800.',
+    'AP Biology tutoring for Delhi NCR — AES, Pathways, Sanskriti, Vasant Valley, Modern, DPS International. AIIMS-trained biology faculty, FRQ mastery. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'ap biology tutor delhi',
     'ap biology coaching delhi ncr',

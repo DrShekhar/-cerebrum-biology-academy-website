@@ -8,7 +8,6 @@ export const metadata: Metadata = {
     'Honest 2026 ranking of the top USABO (USA Biology Olympiad) coaching. Cerebrum #1 with documented Open / Semifinal / National Finals qualifiers and Campbell + CSO + research-paper integration.',
   keywords: [
     'top usabo coaching',
-    'best usabo coach',
     'usabo open semifinal coaching',
     'best usabo prep usa',
     'usabo national finals coach',

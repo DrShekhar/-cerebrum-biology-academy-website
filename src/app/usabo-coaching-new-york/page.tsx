@@ -8,8 +8,8 @@ const timezone = 'ET (Eastern)'
 const url = 'https://cerebrumbiologyacademy.com/usabo-coaching-new-york'
 
 export const metadata: Metadata = {
-  title: `USABO Coaching for ${cityName} Students | AIIMS-Trained Faculty`,
-  description: `USA Biology Olympiad (USABO + IBO) coaching for ${cityName} high school students. Live classes in ${timezone}, AIIMS-trained biology specialist faculty, small batches, USABO Open + Semifinal + Finals pathway.`,
+  title: `USABO Coaching NYC & Long Island | Stuyvesant to Ward Melville`,
+  description: `USABO + IBO coaching for the NYC magnet and Long Island cluster (Stuyvesant, Bronx Science, Jericho, Syosset) that yields 30-40 Semifinalists yearly. AIIMS-trained faculty, live ET evening classes.`,
   keywords: [
     'USABO coaching new york city & long island',
     'USABO new york city & long island',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: url,
-    languages: { en: url, 'en-US': url },
+    languages: { en: url, 'en-US': url, 'x-default': url },
   },
   openGraph: {
     title: `USABO Coaching for ${cityName} Students`,

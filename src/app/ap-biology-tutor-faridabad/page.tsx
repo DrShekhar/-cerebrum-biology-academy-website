@@ -25,7 +25,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Faridabad · Manav Rachna + DPS + Shri Ram · Cerebrum',
   description:
-    'AP Biology tutoring for Faridabad — Manav Rachna International, DPS Faridabad, Shri Ram Faridabad, Apeejay Faridabad, Modern DPS, Ryan International. AIIMS-trained PhD faculty, weekly FRQ feedback. From $1,800.',
+    'AP Biology tutoring for Faridabad — Manav Rachna International, DPS Faridabad, Shri Ram Faridabad, Apeejay Faridabad, Modern DPS, Ryan International. AIIMS-trained biology faculty, weekly FRQ feedback. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'ap biology tutor faridabad',
     'ap biology tutor greater faridabad',

@@ -8,8 +8,8 @@ const timezone = 'PT (Pacific)'
 const url = 'https://cerebrumbiologyacademy.com/usabo-coaching-seattle'
 
 export const metadata: Metadata = {
-  title: `USABO Coaching for ${cityName} Students | AIIMS-Trained Faculty`,
-  description: `USA Biology Olympiad (USABO + IBO) coaching for ${cityName} high school students. Live classes in ${timezone}, AIIMS-trained biology specialist faculty, small batches, USABO Open + Semifinal + Finals pathway.`,
+  title: `Eastside USABO Coaching | Bellevue, Interlake, Skyline`,
+  description: `Eastside USABO coaching for Bellevue, Interlake and Skyline — the strongest Semifinalist cluster outside the Bay Area. AIIMS-trained faculty turn AP-5 into IBO depth in live PT classes.`,
   keywords: [
     'USABO coaching seattle & bellevue',
     'USABO seattle & bellevue',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: url,
-    languages: { en: url, 'en-US': url },
+    languages: { en: url, 'en-US': url, 'x-default': url },
   },
   openGraph: {
     title: `USABO Coaching for ${cityName} Students`,

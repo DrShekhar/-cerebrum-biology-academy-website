@@ -9,8 +9,8 @@ const timezone = 'CT (Central)'
 const url = 'https://cerebrumbiologyacademy.com/usabo-coaching-dallas-austin'
 
 export const metadata: Metadata = {
-  title: `USABO Coaching for ${cityName} Students | AIIMS-Trained Faculty`,
-  description: `USA Biology Olympiad (USABO + IBO) coaching for ${cityName} high school students. Live classes in ${timezone}, AIIMS-trained biology specialist faculty, small batches, USABO Open + Semifinal + Finals pathway.`,
+  title: `USABO Coaching Dallas + Austin — Plano West & LASA`,
+  description: `One Texas program for the Plano–Frisco corridor and the Westlake–LASA Austin cluster. USABO + IBO prep, AIIMS-trained faculty, max 12 per batch, live CT evening classes for both metros.`,
   keywords: [
     'USABO coaching dallas + austin',
     'USABO dallas + austin',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: url,
-    languages: { en: url, 'en-US': url },
+    languages: { en: url, 'en-US': url, 'x-default': url },
   },
   openGraph: {
     title: `USABO Coaching for ${cityName} Students`,

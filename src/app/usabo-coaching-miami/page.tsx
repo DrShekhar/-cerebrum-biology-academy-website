@@ -7,8 +7,8 @@ const region = 'Miami-Dade + Broward + Palm Beach'
 const timezone = 'ET (Eastern)'
 
 export const metadata: Metadata = {
-  title: `USABO Coaching for ${cityName} Students | AIIMS-Trained Faculty`,
-  description: `USA Biology Olympiad (USABO + IBO) coaching for ${cityName} high school students. Live classes in ${timezone}, AIIMS-trained biology specialist faculty, small batches, USABO Open + Semifinal + Finals pathway.`,
+  title: `USABO Coaching Miami & South Florida | Marine Bio Edge`,
+  description: `USABO coaching for South Florida — Ransom Everglades, Gulliver, MAST & Pine Crest. ET-evening live classes, AIIMS-trained faculty, ecology-rich IBO prep drawing on Everglades & marine-science strengths.`,
   keywords: [
     'USABO coaching miami & south florida',
     'USABO miami & south florida',
@@ -23,7 +23,14 @@ export const metadata: Metadata = {
     'USABO coaching for Pine Crest students',
     'USABO tutor near me',
   ],
-  alternates: { canonical: `https://cerebrumbiologyacademy.com/${citySlug}` },
+  alternates: {
+    canonical: `https://cerebrumbiologyacademy.com/${citySlug}`,
+    languages: {
+      en: `https://cerebrumbiologyacademy.com/${citySlug}`,
+      'en-US': `https://cerebrumbiologyacademy.com/${citySlug}`,
+      'x-default': `https://cerebrumbiologyacademy.com/${citySlug}`,
+    },
+  },
   openGraph: {
     title: `USABO Coaching for ${cityName} | Cerebrum Biology Academy`,
     description: `USA Biology Olympiad coaching for ${cityName} — AIIMS-trained faculty, ${timezone} live sessions, Open + Semifinal + Finals pathway.`,

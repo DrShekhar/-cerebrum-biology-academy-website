@@ -20,7 +20,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor New York · NYC + LI · Cerebrum',
   description:
-    'AP Biology tutoring for NYC students — Stuyvesant, Bronx Science, Hunter, Trinity, Horace Mann. PhD faculty, FRQ rubric mastery, ET live classes. From $1,800.',
+    'AP Biology tutoring for NYC students — Stuyvesant, Bronx Science, Hunter, Trinity, Horace Mann. AIIMS-trained faculty, FRQ rubric mastery, ET live classes. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'AP Biology tutor New York',
     'AP Biology tutor NYC',

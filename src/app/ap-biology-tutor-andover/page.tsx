@@ -18,7 +18,7 @@ const school = getSchoolBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologySchoolMetadata({
   title: 'AP Biology Tutor for Andover Students · MA · Cerebrum',
   description:
-    "AP Biology for Phillips Academy Andover students — translates Andover's Biology series into AP rubric mastery. PhD faculty, USABO track, ET live. From $1,800.",
+    "AP Biology for Phillips Academy Andover students — translates Andover's Biology series into AP rubric mastery. AIIMS-trained faculty, USABO track, ET live. From $2,500/yr (1:1 from $40/hr).",
   keywords: [
     'AP Biology tutor Andover',
     'AP Biology tutor Phillips Academy Andover',

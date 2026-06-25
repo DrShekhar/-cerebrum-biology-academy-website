@@ -8,8 +8,8 @@ const timezone = 'CT (Central)'
 const url = 'https://cerebrumbiologyacademy.com/usabo-coaching-houston'
 
 export const metadata: Metadata = {
-  title: `USABO Coaching for ${cityName} Students | AIIMS-Trained Faculty`,
-  description: `USA Biology Olympiad (USABO + IBO) coaching for ${cityName} high school students. Live classes in ${timezone}, AIIMS-trained biology specialist faculty, small batches, USABO Open + Semifinal + Finals pathway.`,
+  title: `USABO Coaching Houston | Clements & BASIS Olympiad Prep`,
+  description: `Houston's strongest USABO concentration — Clements, Memorial, BASIS & Cinco Ranch — trains with Cerebrum. CT-evening live classes, AIIMS-trained biology faculty, USABO Semifinal-to-IBO depth.`,
   keywords: [
     'USABO coaching houston',
     'USABO houston',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: url,
-    languages: { en: url, 'en-US': url },
+    languages: { en: url, 'en-US': url, 'x-default': url },
   },
   openGraph: {
     title: `USABO Coaching for ${cityName} Students`,

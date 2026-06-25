@@ -30,7 +30,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Beijing · ISB + WAB + Dulwich + Keystone · Cerebrum',
   description:
-    'AP Biology tutoring for Beijing — ISB Shunyi, WAB Shunyi, Dulwich Beijing, YCIS, Keystone, BCIS, Harrow Beijing. PhD faculty, FRQ mastery, CST live classes. From $1,800.',
+    'AP Biology tutoring for Beijing — ISB Shunyi, WAB Shunyi, Dulwich Beijing, YCIS, Keystone, BCIS, Harrow Beijing. AIIMS-trained faculty, FRQ mastery, CST live classes. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'ap biology tutor beijing',
     'ap biology coaching beijing',

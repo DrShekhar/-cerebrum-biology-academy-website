@@ -299,26 +299,27 @@ export default function BrainBeeCoachingPage() {
     educationalLevel: 'High school (ages 13-19) — neuroscience competition track',
     about: 'Neuroscience, Brain Bee competition, neuroanatomy, neurophysiology',
     provider: { '@id': `${SITE_URL}/#organization` },
-  }
-
-  const organizationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'EducationalOrganization',
-    '@id': `${SITE_URL}/#organization`,
-    name: 'Cerebrum Biology Academy',
-    url: SITE_URL,
     areaServed: [
       { '@type': 'Country', name: 'United States' },
       { '@type': 'Place', name: 'Worldwide' },
     ],
-    knowsAbout: [
-      'Brain Bee competition',
-      'Neuroscience competition coaching',
-      'Neuroanatomy',
-      'Neurohistology',
-      'Patient diagnosis / clinical neurology',
-      'Brain Facts (Society for Neuroscience)',
-      'International Brain Bee (IBB)',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'details p'],
+    },
+  }
+
+  // The canonical Organization node is emitted site-wide by CerebrumOrgSchema
+  // (root layout); courseSchema.provider references it by @id, so this page no
+  // longer re-declares an EducationalOrganization #organization node.
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Global', item: `${SITE_URL}/global` },
+      { '@type': 'ListItem', position: 3, name: 'Brain Bee Coaching', item: PAGE_URL },
     ],
   }
 
@@ -351,7 +352,7 @@ export default function BrainBeeCoachingPage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"
@@ -415,6 +416,11 @@ export default function BrainBeeCoachingPage() {
               Call +91 88264 44334
             </a>
           </div>
+
+          <p className="mt-3 text-sm font-medium text-slate-600">
+            WhatsApp works free from the US — no international call needed; live classes in ET / CT
+            / MT / PT.
+          </p>
 
           <p className="mt-4 text-xs text-slate-400">
             Independent neuroscience-competition coaching. Not affiliated with or endorsed by the
@@ -673,6 +679,10 @@ export default function BrainBeeCoachingPage() {
                 Call +91 88264 44334
               </a>
             </div>
+            <p className="mt-4 text-sm text-slate-300">
+              WhatsApp works free from the US — no international call needed; live classes in ET /
+              CT / MT / PT.
+            </p>
           </div>
         </section>
       </main>

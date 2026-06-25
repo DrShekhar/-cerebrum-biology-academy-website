@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     'best ap biology tutor for score 5',
     'best ap bio frq tutor',
     'ap biology rubric specialist',
-    'top ap biology tutor',
     'best ap biology tutor 2026',
     'best ap biology tutor india',
     'best ap biology tutor canada',

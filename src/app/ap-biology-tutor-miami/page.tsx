@@ -11,7 +11,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Miami · South Florida · Cerebrum',
   description:
-    'AP Biology tutoring for Miami students — Ransom Everglades, Gulliver, Palmer Trinity, Palmetto, MAST Academy. PhD faculty, FRQ rubric mastery, ET live classes. From $1,800.',
+    'AP Biology tutoring for Miami students — Ransom Everglades, Gulliver, Palmer Trinity, Palmetto, MAST Academy. AIIMS-trained faculty, FRQ rubric mastery, ET live classes. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'AP Biology tutor Miami',
     'AP Biology tutor South Florida',

@@ -35,7 +35,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Shanghai · SAS + SHSID + WLSA + Dulwich · Cerebrum',
   description:
-    'AP Biology tutoring for Shanghai — SAS Pudong/Puxi, SHSID, WLSA, Dulwich, Concordia, YCIS, Wellington, WISS, SCIS. PhD faculty, FRQ mastery, CST live classes. From $1,800.',
+    'AP Biology tutoring for Shanghai — SAS Pudong/Puxi, SHSID, WLSA, Dulwich, Concordia, YCIS, Wellington, WISS, SCIS. AIIMS-trained faculty, FRQ mastery, CST live classes. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'ap biology tutor shanghai',
     'ap biology coaching shanghai',

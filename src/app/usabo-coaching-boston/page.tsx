@@ -8,8 +8,8 @@ const timezone = 'ET (Eastern)'
 const url = 'https://cerebrumbiologyacademy.com/usabo-coaching-boston'
 
 export const metadata: Metadata = {
-  title: `USABO Coaching for ${cityName} Students | AIIMS-Trained Faculty`,
-  description: `USA Biology Olympiad (USABO + IBO) coaching for ${cityName} high school students. Live classes in ${timezone}, AIIMS-trained biology specialist faculty, small batches, USABO Open + Semifinal + Finals pathway.`,
+  title: `USABO Coaching Greater Boston — Lexington & Newton`,
+  description: `Boston's Route 128 belt is among the densest USABO markets per capita — Lexington, Acton-Boxborough, Newton South. AIIMS-trained faculty teach to Semifinal depth, live ET evenings.`,
   keywords: [
     'USABO coaching greater boston',
     'USABO greater boston',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: url,
-    languages: { en: url, 'en-US': url },
+    languages: { en: url, 'en-US': url, 'x-default': url },
   },
   openGraph: {
     title: `USABO Coaching for ${cityName} Students`,

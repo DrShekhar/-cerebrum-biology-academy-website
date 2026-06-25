@@ -9,8 +9,8 @@ const timezone = 'PT (Pacific)'
 const url = 'https://cerebrumbiologyacademy.com/usabo-coaching-san-diego'
 
 export const metadata: Metadata = {
-  title: `USABO Coaching for ${cityName} Students | AIIMS-Trained Faculty`,
-  description: `USA Biology Olympiad (USABO + IBO) coaching for ${cityName} high school students. Live classes in ${timezone}, AIIMS-trained biology specialist faculty, small batches, USABO Open + Semifinal + Finals pathway. Open to any student.`,
+  title: `USABO Coaching San Diego | Canyon Crest to Semifinals`,
+  description: `San Diego USABO coaching near the Salk and Scripps life-sciences cluster — for Canyon Crest, Torrey Pines and Westview students. AIIMS-trained faculty, live PT classes, IBO pathway.`,
   keywords: [
     'USABO coaching san diego',
     'USABO san diego',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'USABO coaching for Westview HS students',
     'biology olympiad tutor near me san diego',
   ],
-  alternates: { canonical: url, languages: { en: url, 'en-US': url } },
+  alternates: { canonical: url, languages: { en: url, 'en-US': url, 'x-default': url } },
   openGraph: {
     title: `USABO Coaching for ${cityName} Students`,
     description: `USABO + IBO preparation for ${cityName} students. AIIMS-trained faculty, live classes in ${timezone}.`,

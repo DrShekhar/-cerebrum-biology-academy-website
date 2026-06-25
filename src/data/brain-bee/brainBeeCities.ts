@@ -210,7 +210,7 @@ export const BRAIN_BEE_CITIES: BrainBeeCity[] = [
     neuroHubs: 'Emory and Georgia State',
     schools: ['Walton', 'Northview', 'Gwinnett School of Mathematics, Science & Technology'],
     heroBlurb:
-      'Atlanta is a live Brain Bee market — the 2025 USA Brain Bee national champion was an Atlanta-area teen. With Emory and Georgia State nearby, the region has real neuroscience depth. We coach contenders here in Eastern Time.',
+      'Atlanta is a live Brain Bee market. With Emory and Georgia State nearby, the region has real neuroscience depth. We coach contenders here in Eastern Time.',
     faqs: [
       {
         question: 'Which Atlanta students is this for?',

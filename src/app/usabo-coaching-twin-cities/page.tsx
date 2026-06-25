@@ -9,8 +9,8 @@ const timezone = 'CT (Central)'
 const url = 'https://cerebrumbiologyacademy.com/usabo-coaching-twin-cities'
 
 export const metadata: Metadata = {
-  title: `USABO Coaching for ${cityName} Students | AIIMS-Trained Faculty`,
-  description: `USA Biology Olympiad (USABO + IBO) coaching for Twin Cities high school students. Live classes in ${timezone}, AIIMS-trained biology specialist faculty, small batches, USABO Open + Semifinal + Finals pathway. Open to any student.`,
+  title: `Twin Cities USABO Coaching | Wayzata & Edina Prep`,
+  description: `Olympiad-shaped USABO coaching for Twin Cities students at Wayzata, Edina and Minnetonka — built near the U of Minnesota and Mayo base. AIIMS-trained faculty, live CT classes, IBO pathway.`,
   keywords: [
     'USABO coaching minneapolis',
     'USABO coaching twin cities',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'USABO coaching for Edina HS students',
     'biology olympiad tutor near me minneapolis',
   ],
-  alternates: { canonical: url, languages: { en: url, 'en-US': url } },
+  alternates: { canonical: url, languages: { en: url, 'en-US': url, 'x-default': url } },
   openGraph: {
     title: `USABO Coaching for ${cityName} Students`,
     description: `USABO + IBO preparation for Twin Cities students. AIIMS-trained faculty, live classes in ${timezone}.`,

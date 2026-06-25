@@ -16,7 +16,6 @@ export const metadata: Metadata = {
     'best biology olympiad coach usa',
     'usabo finalist coach',
     'best usabo prep program',
-    'top usabo coaching',
     'aiims trained usabo coach',
   ],
   openGraph: {

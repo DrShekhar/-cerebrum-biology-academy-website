@@ -8,8 +8,8 @@ const timezone = 'PT (Pacific)'
 const url = 'https://cerebrumbiologyacademy.com/usabo-coaching-bay-area'
 
 export const metadata: Metadata = {
-  title: `USABO Coaching for ${cityName} Students | AIIMS-Trained Faculty`,
-  description: `USA Biology Olympiad (USABO + IBO) coaching for ${cityName} high school students. Live classes in ${timezone}, AIIMS-trained biology specialist faculty, small batches, USABO Open + Semifinal + Finals pathway.`,
+  title: `USABO Coaching Bay Area — Monta Vista & Lynbrook HS`,
+  description: `The West Coast's densest USABO cluster: Monta Vista, Lynbrook, Mission San Jose, Saratoga. Olympiad-depth biology with AIIMS-trained faculty, live PT evening classes, weekly feedback.`,
   keywords: [
     'USABO coaching sf bay area',
     'USABO sf bay area',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: url,
-    languages: { en: url, 'en-US': url },
+    languages: { en: url, 'en-US': url, 'x-default': url },
   },
   openGraph: {
     title: `USABO Coaching for ${cityName} Students`,

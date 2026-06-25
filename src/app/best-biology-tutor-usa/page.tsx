@@ -121,6 +121,20 @@ const EXAMS = [
       'Pre-med biology depth — MCAT Bio/Biochem, USMLE Step 1 foundations, and DAT survey of natural sciences.',
     href: '/best-mcat-biology-tutor',
   },
+  {
+    icon: GraduationCap,
+    name: 'Honors Biology',
+    detail:
+      'High-school honors / Pre-AP biology — concept mastery, lab reasoning, and a runway into AP and olympiad tracks.',
+    href: '/honors-biology-tutor',
+  },
+  {
+    icon: BookOpen,
+    name: 'College Biology',
+    detail:
+      'Undergraduate general & cell/molecular biology, genetics and physiology — exam technique and pre-med GPA support.',
+    href: '/college-biology-tutor',
+  },
 ]
 
 const WHY = [
@@ -190,6 +204,11 @@ const FAQS = [
       'Pricing depends on the exam, tier (1:1 vs small batch) and hours, quoted in US dollars. We don’t publish a flat price sheet because the right plan varies by student — a free trial class comes first, then we share the USD quote. International payment via card / PayPal / Wise / Stripe.',
   },
   {
+    question: 'How much does it cost, and is online as good as in-person?',
+    answer:
+      'Cost depends on the exam, the tier (1:1 vs small batch) and the hours, and is quoted in US dollars after a free trial — typically well below a US in-person specialist tutor because our faculty are based in India and teach live online. Online is the format we recommend, not a compromise: every session is live and interactive (not a video library), recorded for revision, and run in your US time zone, which also gives you access to AIIMS-trained biology specialists you would rarely find in-person locally.',
+  },
+  {
     question: 'How do I start?',
     answer:
       'Book a free trial. Tell us your exam (AP, USABO, Brain Bee, IB, MCAT…), grade and US state, and we match you to the right tutor and time-zone slot. Use the form on this page or WhatsApp +1-friendly via +91 88264 44334.',
@@ -209,6 +228,10 @@ export default function BestBiologyTutorUSAPage() {
     educationalLevel: 'US high school + pre-medical',
     provider: { '@id': `${SITE_URL}/#organization` },
     areaServed: { '@type': 'Country', name: 'United States' },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'details p'],
+    },
   }
   const itemListSchema = {
     '@context': 'https://schema.org',

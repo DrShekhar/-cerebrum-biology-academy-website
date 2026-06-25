@@ -26,7 +26,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Ghaziabad · Jaipuria + Cambridge + DPS Indirapuram · Cerebrum',
   description:
-    'AP Biology tutoring for Ghaziabad — Seth Anandram Jaipuria, Cambridge School Indirapuram, DPS Indirapuram, KR Mangalam Vaishali, Amity Vasundhara, GD Goenka Vasundhara. AIIMS-trained PhD faculty, weekly FRQ feedback. From $1,800.',
+    'AP Biology tutoring for Ghaziabad — Seth Anandram Jaipuria, Cambridge School Indirapuram, DPS Indirapuram, KR Mangalam Vaishali, Amity Vasundhara, GD Goenka Vasundhara. AIIMS-trained biology faculty, weekly FRQ feedback. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'ap biology tutor ghaziabad',
     'ap biology tutor indirapuram',

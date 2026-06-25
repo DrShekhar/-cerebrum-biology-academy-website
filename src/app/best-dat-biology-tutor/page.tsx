@@ -72,8 +72,16 @@ const config: BestVerticalConfig = {
       title: 'DAT Perceptual Ability + Biology',
       href: '/dat-perceptual-ability-biology',
     },
+    { title: 'DAT Biology Tutor New York', href: '/dat-biology-tutor-new-york' },
     { title: 'DAT Biology Tutor New Jersey', href: '/dat-biology-tutor-new-jersey' },
     { title: 'DAT Biology Tutor Bay Area', href: '/dat-biology-tutor-bay-area' },
+    { title: 'DAT Biology Tutor Boston', href: '/dat-biology-tutor-boston' },
+    { title: 'DAT Biology Tutor Chicago', href: '/dat-biology-tutor-chicago' },
+    { title: 'DAT Biology Tutor Dallas', href: '/dat-biology-tutor-dallas' },
+    { title: 'DAT Biology Tutor Houston', href: '/dat-biology-tutor-houston' },
+    { title: 'DAT Biology Tutor Los Angeles', href: '/dat-biology-tutor-los-angeles' },
+    { title: 'DAT Biology Tutor Toronto', href: '/dat-biology-tutor-toronto' },
+    { title: 'DAT Biology Tutor Vancouver', href: '/dat-biology-tutor-vancouver' },
   ],
   pricing: [
     {

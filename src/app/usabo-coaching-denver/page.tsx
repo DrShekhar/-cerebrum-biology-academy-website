@@ -9,8 +9,8 @@ const timezone = 'MT (Mountain)'
 const url = 'https://cerebrumbiologyacademy.com/usabo-coaching-denver'
 
 export const metadata: Metadata = {
-  title: `USABO Coaching for ${cityName} Students | AIIMS-Trained Faculty`,
-  description: `USA Biology Olympiad (USABO + IBO) coaching for ${cityName} high school students. Live classes in ${timezone}, AIIMS-trained biology specialist faculty, small batches, USABO Open + Semifinal + Finals pathway. Open to any student.`,
+  title: `USABO Coaching Denver & Boulder | Front Range Olympiad Prep`,
+  description: `USABO coaching for Denver & Boulder — Cherry Creek, Fairview & DSST students. MT-evening live classes, AIIMS-trained biology faculty, USABO-to-IBO pathway built for AP-heavy Front Range schedules.`,
   keywords: [
     'USABO coaching denver',
     'USABO denver',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'USABO coaching for Fairview HS students',
     'biology olympiad tutor near me denver',
   ],
-  alternates: { canonical: url, languages: { en: url, 'en-US': url } },
+  alternates: { canonical: url, languages: { en: url, 'en-US': url, 'x-default': url } },
   openGraph: {
     title: `USABO Coaching for ${cityName} Students`,
     description: `USABO + IBO preparation for ${cityName} students. AIIMS-trained faculty, live classes in ${timezone}.`,

@@ -5428,6 +5428,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.88,
     },
+    // IBO (Team USA) coaching hub — standalone, not covered by GLOBAL_EXAMS.
+    // (The six *-tutor-global hubs are already emitted by the GLOBAL_EXAMS map
+    // above, so they are intentionally not repeated here.)
+    {
+      url: `${baseUrl}/ibo-coaching-usa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
     // Global brand home — the international front door (/ stays India-NEET)
     {
       url: `${baseUrl}/global`,

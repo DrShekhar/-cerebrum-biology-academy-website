@@ -737,7 +737,7 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
     timezoneShort: 'ET',
     metaTitle: "MCAT Biology Tutor Toronto | U of T, McMaster, Western, Queen's",
     metaDescription:
-      "MCAT Bio/Biochem tutor for Toronto pre-meds — University of Toronto, McMaster, Western, Queen's. Biology specialists, ET evening slots. From $449 USD.",
+      "MCAT Bio/Biochem tutor for Toronto pre-meds — University of Toronto, McMaster, Western, Queen's. Biology specialists, ET evening slots. From $499 USD.",
     keywords: [
       'MCAT Biology tutor Toronto',
       'MCAT Bio tutor University of Toronto',
@@ -750,7 +750,7 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       'online MCAT Biology coaching Toronto',
     ],
     heroSubtitle:
-      "MCAT Bio/Biochem coaching for University of Toronto, McMaster, Western, and Queen's pre-meds — built around the Brampton / Mississauga / Scarborough South Asian corridor. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Eastern Time evening sessions, $449 to $1,349 USD.",
+      "MCAT Bio/Biochem coaching for University of Toronto, McMaster, Western, and Queen's pre-meds — built around the Brampton / Mississauga / Scarborough South Asian corridor. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Eastern Time evening sessions, $499 to $1,499 USD.",
     whySection: {
       heading: "Why Toronto is Canada's largest pre-med market",
       paragraphs: [
@@ -808,7 +808,7 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       {
         question: 'How does Cerebrum compare to Canadian MCAT prep?',
         answer:
-          'Canadian MCAT providers (Prep101, Princeton Review Canada) charge $1,500–$3,000 CAD for all sections. Cerebrum is a biology-section specialist at $449–$1,349 USD (~$600–$1,800 CAD) for Bio/Biochem only. Many Toronto students pair us with a generalist for C/P and CARS.',
+          'Canadian MCAT providers (Prep101, Princeton Review Canada) charge $1,500–$3,000 CAD for all sections. Cerebrum is a biology-section specialist at $499–$1,499 USD (~$680–$2,040 CAD) for Bio/Biochem only. Many Toronto students pair us with a generalist for C/P and CARS.',
       },
     ],
   },
@@ -822,7 +822,7 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
     timezoneShort: 'PT',
     metaTitle: 'MCAT Biology Tutor Vancouver | UBC, SFU, UVic',
     metaDescription:
-      'MCAT Bio/Biochem tutor for Vancouver pre-meds — UBC, SFU, University of Victoria. Biology specialists, PT evening slots. From $449 USD.',
+      'MCAT Bio/Biochem tutor for Vancouver pre-meds — UBC, SFU, University of Victoria. Biology specialists, PT evening slots. From $499 USD.',
     keywords: [
       'MCAT Biology tutor Vancouver',
       'MCAT Bio tutor UBC',
@@ -834,7 +834,7 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       'online MCAT Biology coaching Vancouver',
     ],
     heroSubtitle:
-      'MCAT Bio/Biochem coaching for UBC, SFU, and UVic pre-meds — built around the Surrey / Burnaby / Richmond South Asian corridor. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Pacific Time evening sessions, $449 to $1,349 USD.',
+      'MCAT Bio/Biochem coaching for UBC, SFU, and UVic pre-meds — built around the Surrey / Burnaby / Richmond South Asian corridor. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Pacific Time evening sessions, $499 to $1,499 USD.',
     whySection: {
       heading: "Why Vancouver is Western Canada's pre-med anchor",
       paragraphs: [
@@ -881,7 +881,7 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       {
         question: 'How does Cerebrum compare to Vancouver MCAT prep?',
         answer:
-          'BC MCAT providers charge $1,500–$3,000 CAD for all sections. Cerebrum is a biology-section specialist at $449–$1,349 USD (~$600–$1,800 CAD). Many Vancouver students pair us with a generalist for C/P and CARS.',
+          'BC MCAT providers charge $1,500–$3,000 CAD for all sections. Cerebrum is a biology-section specialist at $499–$1,499 USD (~$680–$2,040 CAD). Many Vancouver students pair us with a generalist for C/P and CARS.',
       },
     ],
   },
@@ -895,7 +895,7 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
     timezoneShort: 'ET',
     metaTitle: 'MCAT Biology Tutor Montreal | McGill, Université de Montréal',
     metaDescription:
-      'MCAT Bio/Biochem tutor for Montreal pre-meds — McGill, Université de Montréal, Université de Sherbrooke. Biology specialists, ET evening slots. From $449 USD.',
+      'MCAT Bio/Biochem tutor for Montreal pre-meds — McGill, Université de Montréal, Université de Sherbrooke. Biology specialists, ET evening slots. From $499 USD.',
     keywords: [
       'MCAT Biology tutor Montreal',
       'MCAT Bio tutor McGill',
@@ -906,7 +906,7 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       'online MCAT Biology coaching Montreal',
     ],
     heroSubtitle:
-      'MCAT Bio/Biochem coaching for McGill, Université de Montréal, and Université de Sherbrooke pre-meds. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Eastern Time evening sessions, $449 to $1,349 USD.',
+      'MCAT Bio/Biochem coaching for McGill, Université de Montréal, and Université de Sherbrooke pre-meds. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Eastern Time evening sessions, $499 to $1,499 USD.',
     whySection: {
       heading: "Why Montreal is Quebec's bilingual pre-med hub",
       paragraphs: [
@@ -954,7 +954,7 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       {
         question: 'How does Cerebrum compare to Montreal MCAT prep?',
         answer:
-          'Quebec MCAT providers charge $1,500–$3,000 CAD for all sections. Cerebrum is a biology-section specialist at $449–$1,349 USD (~$600–$1,800 CAD). Many Montreal students pair us with a generalist for C/P and CARS.',
+          'Quebec MCAT providers charge $1,500–$3,000 CAD for all sections. Cerebrum is a biology-section specialist at $499–$1,499 USD (~$680–$2,040 CAD). Many Montreal students pair us with a generalist for C/P and CARS.',
       },
     ],
   },

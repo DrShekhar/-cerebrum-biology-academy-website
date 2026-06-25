@@ -9,8 +9,8 @@ const timezone = 'ET (Eastern)'
 const url = 'https://cerebrumbiologyacademy.com/usabo-coaching-research-triangle'
 
 export const metadata: Metadata = {
-  title: `USABO Coaching for ${cityName} Students | AIIMS-Trained Faculty`,
-  description: `USA Biology Olympiad (USABO + IBO) coaching for Research Triangle (Raleigh–Durham) high school students. Live classes in ${timezone}, AIIMS-trained biology specialist faculty, small batches, USABO Open + Semifinal + Finals pathway. Open to any student.`,
+  title: `NCSSM-Calibrated USABO Coaching | Raleigh–Durham`,
+  description: `USABO coaching for Research Triangle students from NCSSM, Enloe and Green Hope. Olympiad-depth biology from AIIMS-trained faculty, live ET evening classes, USABO + IBO pathway.`,
   keywords: [
     'USABO coaching raleigh',
     'USABO coaching durham',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'USABO coaching for Enloe HS students',
     'biology olympiad tutor near me raleigh',
   ],
-  alternates: { canonical: url, languages: { en: url, 'en-US': url } },
+  alternates: { canonical: url, languages: { en: url, 'en-US': url, 'x-default': url } },
   openGraph: {
     title: `USABO Coaching for ${cityName} Students`,
     description: `USABO + IBO preparation for Research Triangle students. AIIMS-trained faculty, live classes in ${timezone}.`,

@@ -8,8 +8,8 @@ const timezone = 'ET (Eastern)'
 const url = 'https://cerebrumbiologyacademy.com/usabo-coaching-new-jersey'
 
 export const metadata: Metadata = {
-  title: `USABO Coaching for ${cityName} Students | AIIMS-Trained Faculty`,
-  description: `USA Biology Olympiad (USABO + IBO) coaching for ${cityName} high school students. Live classes in ${timezone}, AIIMS-trained biology specialist faculty, small batches, USABO Open + Semifinal + Finals pathway.`,
+  title: `USABO Coaching New Jersey | WW-P & Princeton Olympiad`,
+  description: `One of the densest USABO markets per capita: WW-P, Princeton, Montgomery & J.P. Stevens train with Cerebrum. ET-evening live classes, AIIMS-trained biology-only faculty, IBO-depth past-paper feedback.`,
   keywords: [
     'USABO coaching new jersey',
     'USABO new jersey',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: url,
-    languages: { en: url, 'en-US': url },
+    languages: { en: url, 'en-US': url, 'x-default': url },
   },
   openGraph: {
     title: `USABO Coaching for ${cityName} Students`,

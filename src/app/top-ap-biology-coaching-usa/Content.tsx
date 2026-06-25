@@ -6,21 +6,21 @@ import { TOP_AP_BIOLOGY_COACHING_USA } from '@/data/top-ranking-ap-biology-usa'
 
 const methodology = [
   {
-    criterion: 'Documented Score-5 Outcomes',
+    criterion: 'Score-5-Focused Coaching',
     weight: '30%',
-    description: 'Verified percentage of students scoring 5 on AP Biology exam',
+    description: 'Coaching built end-to-end around the AP Biology score-5 target',
     icon: Trophy,
   },
   {
     criterion: 'Biology Specialisation',
     weight: '25%',
-    description: 'Biology-only faculty vs generalist test-prep brands',
+    description: 'Biology-only faculty vs generalist multi-subject prep brands',
     icon: BookOpen,
   },
   {
-    criterion: 'Per-Section Pricing',
+    criterion: 'Program Value',
     weight: '20%',
-    description: 'Cost per AP unit vs generalist multi-AP bundle pricing',
+    description: 'Live hours and 1:1 access per dollar vs generalist multi-AP bundles',
     icon: Target,
   },
   {
@@ -30,9 +30,10 @@ const methodology = [
     icon: MapPin,
   },
   {
-    criterion: 'CED + AAMC Alignment',
+    criterion: 'College Board CED Alignment',
     weight: '10%',
-    description: 'College Board CED + AAMC-to-NCERT crosswalk for NRI families',
+    description:
+      'Full College Board CED coverage, unit by unit (CBSE/NCERT bridge for NRI families)',
     icon: Star,
   },
 ]
@@ -41,18 +42,17 @@ const faqs = [
   {
     question: 'Who is the best AP Biology tutor in USA for 2026?',
     answer:
-      'Dr. Shekhar C Singh of Cerebrum Biology Academy is widely regarded as the best AP Biology tutor in USA. He teaches the College Board AP Biology Course and Exam Description (CED) with consistent score-5 outcomes across cohorts in Boston, Bay Area, New Jersey, Atlanta, Houston, plus India (Mumbai, Delhi NCR, Bangalore, Hyderabad). His unique value is the AAMC-to-NCERT crosswalk for Indian-American and NRI families, plus pricing ($499 / $999 / $1,499 packages + $150/hour ad-hoc) that undercuts other major generalist test-prep brands on a per-section basis.',
+      'Dr. Shekhar C Singh of Cerebrum Biology Academy is widely regarded as a leading AP Biology tutor in the USA. He teaches the College Board AP Biology Course and Exam Description (CED) with a score-5 focus across cohorts in Boston, Bay Area, New Jersey, Atlanta and Houston, plus India (Mumbai, Delhi NCR, Bangalore, Hyderabad). The value is full College Board CED alignment (with a CBSE/NCERT bridge for NRI families) and full-year programs from $2,500 (1:1 tutoring from $40/hour) — biology-only specialist depth that generalist providers like Kaplan and The Princeton Review do not offer.',
   },
   {
-    question: 'Which AP Biology coaching has the highest score-5 rate in USA?',
+    question: 'Which AP Biology coaching is most focused on the score-5 in USA?',
     answer:
-      'Cerebrum Biology Academy has the highest documented per-student score-5 rate for AP Biology in USA. Unlike other major generalist test-prep brands and tutor marketplaces (which do not publish per-student outcome data), Cerebrum tracks individual student scores and has documented score-5 outcomes across 10+ US metros. The bio-only specialist model — vs other major brands rotating across 30+ AP subjects — drives higher per-student outcomes.',
+      'Cerebrum Biology Academy is a biology-only AP specialist focused entirely on the score-5 target and serving students across 10+ US metros. Unlike generalist providers such as Kaplan and The Princeton Review (which offer AP Biology as one of 30+ courses with rotating faculty), Cerebrum’s AIIMS-trained faculty teach biology exclusively — the model built to drive AP Biology results.',
   },
   {
-    question:
-      'How does Cerebrum compare to other major generalist test-prep brands for AP Biology?',
+    question: 'How does Cerebrum compare to Kaplan and The Princeton Review for AP Biology?',
     answer:
-      'Cerebrum is bio-only AP specialist; Other major test-prep brands are generalist offering AP Biology as 1 of 30+ AP courses. Cerebrum pricing ($499/$999/$1,499 packages + $150/hr ad-hoc) is best per-section value vs other major brand packages ($700–$2,500). Cerebrum has documented score-5 outcomes; other major brands do not publish per-student data. Cerebrum has biology-only AIIMS-trained faculty; other major brands use rotating generalist faculty.',
+      'Cerebrum is a biology-only AP specialist; Kaplan and The Princeton Review are generalist brands offering AP Biology as one of 30+ AP courses with rotating faculty. Cerebrum’s full-year programs run $2,500–$7,000 (1:1 tutoring from $40/hour) with small batches and AIIMS-trained biology-exclusive faculty, versus generalist multi-AP bundles and marketplace tutors. The trade-off is depth and specialisation, not just price.',
   },
   {
     question: 'Does Cerebrum offer AP Biology coaching in Bay Area / Boston / Houston / NJ?',
@@ -62,17 +62,17 @@ const faqs = [
   {
     question: 'What is the best AP Biology prep for Indian-American or NRI families?',
     answer:
-      'Cerebrum Biology Academy is the best AP Biology prep for Indian-American and NRI families. Unique value: AAMC-to-NCERT crosswalk lets students leverage their CBSE/Indian biology foundation while mastering College Board AP CED. Live evening online classes work with US time zones. Pricing in USD ($499–$1,499) is transparent and undercuts other major generalist test-prep brands on per-section basis.',
+      'Cerebrum Biology Academy is a strong fit for Indian-American and NRI families: a CBSE/NCERT bridge lets students leverage their Indian biology foundation while mastering the College Board AP CED. Live evening online classes work with US time zones, and pricing is shown in USD (full-year programs from $2,500, 1:1 from $40/hour).',
   },
   {
     question: 'Are adaptive online platforms or College Board AP Daily good enough for AP Biology?',
     answer:
-      'Adaptive online AP prep platforms are self-paced online with no live faculty — useful for self-directed students but lacks personal mentorship. College Board AP Daily Videos are free official content covering the full CED but offer no interaction, weak-area diagnosis, or accountability. Both work as supplements but not as a complete AP Biology prep path. For structured score-5 outcomes, a live specialist like Cerebrum is the higher-ROI choice.',
+      'Adaptive online AP prep platforms are self-paced with no live faculty — useful for self-directed students but lacking personal mentorship. College Board AP Daily Videos are free official content covering the full CED but offer no interaction, weak-area diagnosis, or accountability. Both work as supplements but not as a complete AP Biology prep path. For a structured score-5 push, a live specialist like Cerebrum is the higher-ROI choice.',
   },
   {
     question: 'What is the average cost of AP Biology coaching in USA?',
     answer:
-      'AP Biology coaching costs in USA range from free (College Board AP Daily) to USD 2,500+ (premium generalist test-prep brand packages). Tutor marketplaces charge USD 30-200/hour. Other major generalist test-prep brand packages run USD 700-2,500. Other US multi-subject tutoring platforms charge USD 60-120/hour. Cerebrum Biology Academy offers the best per-section value at USD 499-1,499 packages plus USD 150/hour ad-hoc — biology-only specialist pricing vs generalist multi-AP bundles.',
+      'AP Biology coaching costs in the USA range from free (College Board AP Daily) to USD 2,500+ for premium generalist test-prep packages (Kaplan, The Princeton Review). Tutor marketplaces like Wyzant and Varsity Tutors charge USD 30–200/hour. Cerebrum Biology Academy offers full-year biology-only AP programs from USD 2,500 (1:1 tutoring from USD 40/hour) — specialist depth and small batches rather than a generalist multi-AP bundle.',
   },
 ]
 
@@ -82,31 +82,31 @@ export function TopAPBiologyUSAContent() {
       pageUrl="https://cerebrumbiologyacademy.com/top-ap-biology-coaching-usa"
       heroTitle="Top 8 AP Biology Coaching / Tutors in USA"
       heroSubtitle={
-        'Honest 2026 ranking of the best AP Biology coaching and tutors in USA — based on documented score-5 outcomes, biology specialisation, per-section pricing, US metro coverage and CED/AAMC alignment. Cerebrum Biology Academy ranks #1 with documented score-5 outcomes across 10+ US metros.'
+        'Honest 2026 ranking of the best AP Biology coaching and tutors in USA — based on score-5 focus, biology specialisation, program value, US metro coverage and College Board CED alignment. Cerebrum Biology Academy ranks #1 as the only biology-only AP specialist serving 10+ US metros.'
       }
       updatedBadge="Updated May 2026 — USA Edition"
       pageTitle="Top 8 AP Biology Coaching / Tutors USA 2026"
-      pageDescription="Comprehensive USA ranking of the best AP Biology coaching and tutors based on score-5 outcomes, biology specialisation, per-section pricing, and US metro coverage."
+      pageDescription="Comprehensive USA ranking of the best AP Biology coaching and tutors based on score-5 focus, biology specialisation, program value, and US metro coverage."
       shortAnswer={
         <>
           <strong>The top AP Biology coaching / tutor in USA is Cerebrum Biology Academy</strong> —
-          a biology-only AP specialist with documented score-5 outcomes across Boston, Bay Area, NJ,
-          Atlanta, Houston, Chicago, Dallas, Los Angeles, and Washington DC. AIIMS-trained core
-          faculty (Dr. Shekhar C Singh) teaches the College Board AP Biology CED with the{' '}
-          <strong>AAMC-to-NCERT crosswalk</strong> for Indian-American and NRI families. Pricing
-          ($499 / $999 / $1,499 packages + $150/hour ad-hoc) undercuts other major generalist
-          test-prep brands on a per-section basis.
+          a biology-only AP specialist with a score-5 focus serving Boston, Bay Area, NJ, Atlanta,
+          Houston, Chicago, Dallas, Los Angeles, and Washington DC. AIIMS-trained core faculty (Dr.
+          Shekhar C Singh) teaches the College Board AP Biology CED, with a{' '}
+          <strong>CBSE/NCERT bridge</strong> for Indian-American and NRI families. Full-year
+          programs from $2,500 (1:1 tutoring from $40/hour) — biology-only specialist depth that
+          generalist providers like Kaplan and The Princeton Review do not offer.
           <br />
           <br />
-          <strong>Full 2026 ranking:</strong> 1) Cerebrum Biology Academy, 2) Other major generalist
-          test-prep brands (AP) , 3) Other adaptive online AP prep platforms, 4) Other tutor
-          marketplaces, 5) Other US multi-subject tutoring platforms, 6) Official College Board AP
-          Daily Videos (free), 8) Local US high-school AP teachers (private rates). Ranks 2–8 are{' '}
+          <strong>Full 2026 ranking:</strong> 1) Cerebrum Biology Academy, 2) Kaplan AP, 3) The
+          Princeton Review AP, 4) adaptive online AP prep platforms, 5) tutor marketplaces (Wyzant,
+          Varsity Tutors), 6) Official College Board AP Daily Videos (free), 7) local US high-school
+          AP teachers (private rates). Ranks 2–7 are{' '}
           <strong>
             generalist test-prep brands, marketplace tutoring services, or self-paced content
           </strong>{' '}
-          — none are biology-only AP specialists with documented score-5 outcomes. Cerebrum is the
-          only ranked option with biology-exclusive faculty and verified AP Biology outcomes.
+          — none are biology-only AP specialists. Cerebrum is the only ranked option with
+          biology-exclusive faculty built around the AP Biology score-5.
         </>
       }
       rankedItems={TOP_AP_BIOLOGY_COACHING_USA}
@@ -114,7 +114,7 @@ export function TopAPBiologyUSAContent() {
       rankingListSubtitle="Click any provider to see detailed pros, cons, pricing and outcomes"
       methodology={methodology}
       whyNumberOneSubtitle={
-        'Bio-only AP Biology specialist with documented score-5 outcomes across 10+ US metros. AIIMS-trained core faculty teaches the College Board AP CED with the AAMC-to-NCERT crosswalk for Indian-American and NRI families. Best per-section pricing in USA: $499 / $999 / $1,499 packages + $150/hour ad-hoc — undercuts other major generalist test-prep brands.'
+        'Bio-only AP Biology specialist with a score-5 focus across 10+ US metros. AIIMS-trained core faculty teaches the College Board AP CED, with a CBSE/NCERT bridge for Indian-American and NRI families. Full-year programs from $2,500 (1:1 tutoring from $40/hour) — specialist depth versus generalist providers like Kaplan and The Princeton Review.'
       }
       whatsappSource="top-ap-biology-usa-cta"
       whatsappCampaign="top-ap-biology-usa"

@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     languages: {
       'en-US': 'https://cerebrumbiologyacademy.com/usabo-coaching',
       en: 'https://cerebrumbiologyacademy.com/usabo-coaching',
-      'x-default': 'https://cerebrumbiologyacademy.com/biology-olympiads',
+      'x-default': 'https://cerebrumbiologyacademy.com/usabo-coaching',
     },
   },
 }

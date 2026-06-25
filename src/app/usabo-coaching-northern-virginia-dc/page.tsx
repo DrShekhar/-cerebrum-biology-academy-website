@@ -8,8 +8,8 @@ const timezone = 'ET (Eastern)'
 const url = 'https://cerebrumbiologyacademy.com/usabo-coaching-northern-virginia-dc'
 
 export const metadata: Metadata = {
-  title: `USABO Coaching for ${cityName} Students | AIIMS-Trained Faculty`,
-  description: `USA Biology Olympiad (USABO + IBO) coaching for ${cityName} high school students. Live classes in ${timezone}, AIIMS-trained biology specialist faculty, small batches, USABO Open + Semifinal + Finals pathway.`,
+  title: `TJHSST-Grade USABO Coaching | Northern Virginia & DC`,
+  description: `USABO coaching for the DC corridor that sends more Finalists than any US region — TJHSST, McLean, Whitman, Churchill. Olympiad-depth IBO prep from AIIMS-trained faculty, live ET evenings.`,
   keywords: [
     'USABO coaching northern virginia & dc',
     'USABO northern virginia & dc',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: url,
-    languages: { en: url, 'en-US': url },
+    languages: { en: url, 'en-US': url, 'x-default': url },
   },
   openGraph: {
     title: `USABO Coaching for ${cityName} Students`,

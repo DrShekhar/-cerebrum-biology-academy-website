@@ -18,7 +18,7 @@ const school = getSchoolBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologySchoolMetadata({
   title: 'AP Biology Tutor for Bronx Science Students · NYC · Cerebrum',
   description:
-    'AP Biology tutoring for Bronx High School of Science students — PhD faculty, FRQ rubric mastery, USABO Semifinal track. ET live classes. From $1,800.',
+    'AP Biology tutoring for Bronx High School of Science students — AIIMS-trained faculty, FRQ rubric mastery, USABO Semifinal track. ET live classes. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'AP Biology tutor Bronx Science',
     'AP Biology tutor Bronx High School of Science',

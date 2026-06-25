@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   Award,
@@ -12,10 +13,13 @@ import {
 const PHONE = '+91 88264-44334'
 const PHONE_TEL = 'tel:+918826444334'
 const WA_BASE = 'https://wa.me/918826444334?text='
+const SITE_URL = 'https://cerebrumbiologyacademy.com'
 
 export type BestVerticalConfig = {
   /** Canonical URL slug, e.g. 'best-ib-biology-tutor' */
   slug: string
+  /** Country served (GEO), defaults to 'United States' for the best-*-usa hubs */
+  areaServed?: string
   /** H1 lead-in, e.g. 'Best IB Biology Tutor' */
   headline: string
   /** Yellow ribbon text */
@@ -49,8 +53,31 @@ export type BestVerticalConfig = {
   clusterSummary: string
 }
 
+/**
+ * Builds Next.js metadata for a Best Vertical landing page, including
+ * self-referential hreflang (en / en-US / x-default) so all best-*-usa hubs
+ * emit language alternates. Consumer pages can spread this into their
+ * exported `metadata`.
+ */
+export function buildBestVerticalMetadata(config: BestVerticalConfig, base?: Metadata): Metadata {
+  const canonicalUrl = `${SITE_URL}/${config.slug}`
+  return {
+    ...base,
+    alternates: {
+      ...base?.alternates,
+      canonical: canonicalUrl,
+      languages: {
+        en: canonicalUrl,
+        'en-US': canonicalUrl,
+        'x-default': canonicalUrl,
+      },
+    },
+  }
+}
+
 export function BestVerticalLanding({ config }: { config: BestVerticalConfig }) {
-  const canonicalUrl = `https://cerebrumbiologyacademy.com/${config.slug}`
+  const canonicalUrl = `${SITE_URL}/${config.slug}`
+  const areaServedName = config.areaServed ?? 'United States'
 
   const personSchema = {
     '@context': 'https://schema.org',
@@ -123,21 +150,9 @@ export function BestVerticalLanding({ config }: { config: BestVerticalConfig }) 
     ],
   }
 
-  const organizationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'EducationalOrganization',
-    '@id': 'https://cerebrumbiologyacademy.com/#organization',
-    name: 'Cerebrum Biology Academy',
-    url: 'https://cerebrumbiologyacademy.com',
-    logo: 'https://cerebrumbiologyacademy.com/logo.png',
-    founder: {
-      '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
-    },
-    foundingDate: '2014',
-    description:
-      "India's leading biology-only specialist coaching brand — NEET, IB, AP, MCAT and Biology Olympiad (USABO, INBO, IBO, NSEB) under AIIMS-trained faculty Dr. Shekhar C Singh.",
-    // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
-  }
+  // The canonical Organization node is emitted site-wide by CerebrumOrgSchema
+  // (root layout). This page must not re-declare a node with the same @id, so
+  // schemas below reference it by @id only (see courseSchema.provider).
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -185,7 +200,12 @@ export function BestVerticalLanding({ config }: { config: BestVerticalConfig }) 
     description: config.intro,
     url: canonicalUrl,
     provider: {
-      '@id': 'https://cerebrumbiologyacademy.com/#organization',
+      '@id': `${SITE_URL}/#organization`,
+    },
+    areaServed: { '@type': 'Country', name: areaServedName },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'details p'],
     },
     hasCourseInstance: config.pricing
       .map((tier) => {
@@ -240,10 +260,6 @@ export function BestVerticalLanding({ config }: { config: BestVerticalConfig }) 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       <script
         type="application/ld+json"

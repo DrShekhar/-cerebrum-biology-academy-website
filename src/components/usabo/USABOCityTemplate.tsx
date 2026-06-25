@@ -428,6 +428,60 @@ export default function USABOCityTemplate({
         </div>
       </section>
 
+      {/* Pricing — mirrors the USD tiers in courseSchema offers */}
+      <section className="py-12 md:py-16 bg-white border-t border-slate-100">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2 text-center">
+            {cityName} programme pricing
+          </h2>
+          <p className="text-slate-600 mb-8 max-w-3xl mx-auto text-center">
+            Transparent USD pricing. Your exact tier and start date are confirmed at your free
+            assessment call — we match the track to your target stage and current biology level.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
+              <h3 className="font-semibold text-slate-900 mb-1">Pursuit</h3>
+              <p className="text-3xl font-bold text-teal-700 mb-2">$2,500</p>
+              <p className="text-sm text-slate-600">
+                Open-exam focused prep — built to push past the February Open Exam into the
+                Semifinalist range.
+              </p>
+            </div>
+            <div className="bg-slate-50 rounded-xl p-6 border-2 border-yellow-400">
+              <div className="inline-flex items-center gap-1 bg-yellow-500/20 text-yellow-700 px-2.5 py-1 rounded-full text-xs font-semibold mb-2">
+                <Star className="w-3.5 h-3.5" />
+                Most popular
+              </div>
+              <h3 className="font-semibold text-slate-900 mb-1">Ascent</h3>
+              <p className="text-3xl font-bold text-teal-700 mb-2">$4,500</p>
+              <p className="text-sm text-slate-600">
+                Semester-length intensive — Open + Semifinal preparation with weekly written
+                feedback on every past-paper attempt.
+              </p>
+            </div>
+            <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
+              <h3 className="font-semibold text-slate-900 mb-1">Pinnacle</h3>
+              <p className="text-3xl font-bold text-teal-700 mb-2">$6,000</p>
+              <p className="text-sm text-slate-600">
+                Full-year USABO + IBO track — Open → Semifinal → National Finals → IBO continuity
+                with the same faculty throughout.
+              </p>
+            </div>
+          </div>
+          <p className="text-center mt-6">
+            <a
+              href={counsellingHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 text-teal-700 font-semibold hover:text-teal-800"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Programs from $2,500 — full pricing at your free assessment
+            </a>
+          </p>
+        </div>
+      </section>
+
       {/* USABO Pathway */}
       <section className="py-12 md:py-16 bg-slate-50">
         <div className="max-w-5xl mx-auto px-4">

@@ -18,7 +18,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Seattle · Lakeside · Bellevue · Cerebrum',
   description:
-    'AP Biology tutoring for Seattle students — Lakeside, Seattle Prep, Bellevue, Mercer Island, International School. PhD faculty, FRQ mastery, PT live. From $1,800.',
+    'AP Biology tutoring for Seattle students — Lakeside, Seattle Prep, Bellevue, Mercer Island, International School. AIIMS-trained faculty, FRQ mastery, PT live. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'AP Biology tutor Seattle',
     'AP Biology tutor Bellevue',

@@ -25,7 +25,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Brampton-Mississauga · Peel · Cerebrum',
   description:
-    'AP Biology tutoring for Brampton + Mississauga (Peel) — Turner Fenton, Mayfield, Lorne Park, John Fraser. PhD faculty, FRQ mastery, ET classes. From $1,800.',
+    'AP Biology tutoring for Brampton + Mississauga (Peel) — Turner Fenton, Mayfield, Lorne Park, John Fraser. AIIMS-trained faculty, FRQ mastery, ET classes. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'ap biology tutor brampton',
     'ap biology tutor mississauga',

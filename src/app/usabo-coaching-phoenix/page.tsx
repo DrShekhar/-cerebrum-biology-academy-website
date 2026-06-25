@@ -9,8 +9,8 @@ const timezone = 'MST (Arizona, no DST)'
 const url = 'https://cerebrumbiologyacademy.com/usabo-coaching-phoenix'
 
 export const metadata: Metadata = {
-  title: `USABO Coaching for ${cityName} Students | AIIMS-Trained Faculty`,
-  description: `USA Biology Olympiad (USABO + IBO) coaching for ${cityName} high school students. Live classes in ${timezone}, AIIMS-trained biology specialist faculty, small batches, USABO Open + Semifinal + Finals pathway. Open to any student.`,
+  title: `USABO Coaching Phoenix & Scottsdale | BASIS-Calibrated`,
+  description: `USABO + IBO coaching tuned to Phoenix's BASIS charter network plus Hamilton and Chandler — small batches (max 12), AIIMS-trained faculty, live Arizona-time (MST, no DST) classes. Open to any student.`,
   keywords: [
     'USABO coaching phoenix',
     'USABO phoenix',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'USABO coaching for Hamilton HS students',
     'biology olympiad tutor near me phoenix',
   ],
-  alternates: { canonical: url, languages: { en: url, 'en-US': url } },
+  alternates: { canonical: url, languages: { en: url, 'en-US': url, 'x-default': url } },
   openGraph: {
     title: `USABO Coaching for ${cityName} Students`,
     description: `USABO + IBO preparation for ${cityName} students. AIIMS-trained faculty, live classes in ${timezone}.`,

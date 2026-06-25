@@ -22,7 +22,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Vancouver · Lord Byng + UHill · Cerebrum',
   description:
-    'AP Biology tutoring for Vancouver — Lord Byng, Churchill, York House, Crofton House, St. George’s. PhD faculty, FRQ mastery, PT classes. From $1,800.',
+    'AP Biology tutoring for Vancouver — Lord Byng, Churchill, York House, Crofton House, St. George’s. AIIMS-trained faculty, FRQ mastery, PT classes. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'ap biology tutor vancouver',
     'ap biology coaching british columbia',

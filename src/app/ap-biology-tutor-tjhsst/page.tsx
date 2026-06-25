@@ -22,7 +22,7 @@ const school = getSchoolBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologySchoolMetadata({
   title: 'AP Biology Tutor for TJHSST Students · Cerebrum',
   description:
-    "AP Biology tutoring for Thomas Jefferson HSST students — calibrated to TJ's near-college pace. PhD faculty, FRQ mastery, AP-5 + USABO Semifinal track. From $1,800.",
+    "AP Biology tutoring for Thomas Jefferson HSST students — calibrated to TJ's near-college pace. AIIMS-trained faculty, FRQ mastery, AP-5 + USABO Semifinal track. From $2,500/yr (1:1 from $40/hr).",
   keywords: [
     'AP Biology tutor TJHSST',
     'AP Biology tutor Thomas Jefferson HSST',

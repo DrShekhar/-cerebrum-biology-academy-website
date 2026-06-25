@@ -37,8 +37,8 @@ const CANONICAL = `${SITE_URL}/ap-biology-tutor-india-for-us-college-admissions`
 // consistent across the AP cluster.
 const heroStats = [
   { label: 'Indian Students Coached', value: '120+', icon: Users },
-  { label: 'AP-5 Conversion', value: '88%', icon: Trophy },
-  { label: 'PhD / AIIMS Faculty', value: '15+', icon: Award },
+  { label: 'Score-5 Focused', value: 'AP CED', icon: Trophy },
+  { label: 'AIIMS-Trained Faculty', value: '15+ yrs', icon: Award },
   { label: 'IST-Evening Batches', value: '7–10 PM', icon: Clock },
 ]
 
@@ -231,7 +231,7 @@ const faqs = [
   {
     question: 'What is the difference between your Senior and Junior Faculty tiers?',
     answer:
-      'Senior Faculty are PhD-level biology specialists with 8–15 years of AP / international curriculum teaching experience. They handle nuanced FRQ rubric coaching, USABO Semifinal-level depth, and BS/MD-track strategy. Senior Faculty 1:1 starts at $120–$150/hr. Junior Faculty are biology graduates with 2–5 years of teaching experience — strong on content delivery and practice management. Junior Faculty 1:1 is $70–$75/hr. Most families pick Senior Faculty for the AP year, or start with Junior Faculty and upgrade for the final 8-week exam push.',
+      'Senior Faculty are AIIMS-trained biology specialists with 8–15 years of AP / international curriculum teaching experience. They handle nuanced FRQ rubric coaching, USABO Semifinal-level depth, and BS/MD-track strategy. Senior Faculty 1:1 starts at $120–$150/hr. Junior Faculty are biology graduates with 2–5 years of teaching experience — strong on content delivery and practice management. Junior Faculty 1:1 is $70–$75/hr. Most families pick Senior Faculty for the AP year, or start with Junior Faculty and upgrade for the final 8-week exam push.',
   },
   {
     question:
@@ -254,7 +254,7 @@ const courseSchema = {
   '@type': 'Course',
   name: 'AP Biology Coaching for Indian Students Applying to US Colleges',
   description:
-    'AP Biology coaching for Indian students applying to US universities. AIIMS-trained PhD faculty, IST-evening live classes, College Board–aligned curriculum, FRQ rubric mastery, and US admissions strategy.',
+    'AP Biology coaching for Indian students applying to US universities. AIIMS-trained biology faculty, IST-evening live classes, College Board–aligned curriculum, FRQ rubric mastery, and US admissions strategy.',
   url: CANONICAL,
   inLanguage: 'en-IN',
   availableLanguage: ['English', 'Hindi'],
@@ -418,7 +418,7 @@ export default function APBiologyIndiaForUSAdmissionsPage() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4 font-medium">
-              AIIMS-trained PhD faculty · IST-evening live classes · AP-5 strategy + SAT prep
+              AIIMS-trained biology faculty · IST-evening live classes · AP-5 strategy + SAT prep
             </h2>
 
             <p
@@ -639,7 +639,7 @@ export default function APBiologyIndiaForUSAdmissionsPage() {
           {/* Senior Faculty 1:1 */}
           <div className="mb-10">
             <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-              1:1 with Senior Faculty (PhD / AIIMS-trained)
+              1:1 with Senior Faculty (AIIMS-trained)
             </h3>
             <p className="text-sm text-gray-600 mb-6">
               $120–$150 per hour · FRQ rubric coaching · BS/MD-track strategy · 8–15 years AP

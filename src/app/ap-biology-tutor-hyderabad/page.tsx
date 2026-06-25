@@ -22,7 +22,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Hyderabad · Oakridge + CHIREC · Cerebrum',
   description:
-    'AP Biology tutoring for Hyderabad — Oakridge Gachibowli, CHIREC, Indus, Glendale, Sancta Maria, ISH, Aga Khan. AIIMS-trained PhD faculty, IST live. From $1,800.',
+    'AP Biology tutoring for Hyderabad — Oakridge Gachibowli, CHIREC, Indus, Glendale, Sancta Maria, ISH, Aga Khan. AIIMS-trained biology faculty, IST live. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'ap biology tutor hyderabad',
     'ap biology coaching hyderabad',

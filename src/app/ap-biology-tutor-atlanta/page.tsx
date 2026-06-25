@@ -18,7 +18,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Atlanta · North Fulton · Cerebrum',
   description:
-    'AP Biology tutoring for Atlanta students — Walton, Lambert, Northview, Pace Academy, Westminster, Gwinnett STEM. PhD faculty, FRQ mastery, ET live. From $1,800.',
+    'AP Biology tutoring for Atlanta students — Walton, Lambert, Northview, Pace Academy, Westminster, Gwinnett STEM. AIIMS-trained faculty, FRQ mastery, ET live. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'AP Biology tutor Atlanta',
     'AP Biology tutor North Fulton',

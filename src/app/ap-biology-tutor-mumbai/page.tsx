@@ -21,7 +21,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Mumbai · ASB + Cathedral + BIS · Cerebrum',
   description:
-    'AP Biology tutoring for Mumbai — ASB, Cathedral, BIS, Oberoi, Dhirubhai Ambani. AIIMS-trained PhD faculty, FRQ mastery, IST live classes. From $1,800.',
+    'AP Biology tutoring for Mumbai — ASB, Cathedral, BIS, Oberoi, Dhirubhai Ambani. AIIMS-trained biology faculty, FRQ mastery, IST live classes. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'ap biology tutor mumbai',
     'ap biology coaching mumbai',

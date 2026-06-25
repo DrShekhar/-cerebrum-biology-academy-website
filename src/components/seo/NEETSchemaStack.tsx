@@ -44,6 +44,12 @@ interface NEETSchemaStackProps {
   courseName?: string
   /** Optional course description (defaults to a NEET-default string) */
   courseDescription?: string
+  /** Optional BCP-47 language for the Course (defaults to 'en-IN') */
+  inLanguage?: string
+  /** Optional educational level (defaults to 'NEET-UG Aspirant') */
+  educationalLevel?: string
+  /** Optional ISO currency for Course offers (defaults to 'INR') */
+  priceCurrency?: string
 }
 
 const DEFAULT_NEET_KNOWS_ABOUT = [
@@ -90,6 +96,9 @@ export function NEETSchemaStack({
   coursePricing = DEFAULT_NEET_COURSE_TIERS,
   courseName,
   courseDescription,
+  inLanguage = 'en-IN',
+  educationalLevel = 'NEET-UG Aspirant',
+  priceCurrency = 'INR',
 }: NEETSchemaStackProps) {
   const personSchema = {
     '@context': 'https://schema.org',
@@ -137,8 +146,8 @@ export function NEETSchemaStack({
       courseDescription ??
       `Comprehensive NEET-UG Biology coaching led by AIIMS-trained faculty. Covers full NCERT Class 11 + Class 12 syllabus with NEET-pattern MCQ drilling, weekly mock tests, and personalised doubt resolution. 680+ medical college selections, 98% NEET-UG qualification rate.`,
     url: pageUrl,
-    inLanguage: 'en-IN',
-    educationalLevel: 'NEET-UG Aspirant',
+    inLanguage,
+    educationalLevel,
     educationalCredentialAwarded: 'NEET-UG Biology Preparation',
     provider: {
       '@id': 'https://cerebrumbiologyacademy.com/#organization',
@@ -151,11 +160,11 @@ export function NEETSchemaStack({
       offers: {
         '@type': 'Offer' as const,
         price: tier.price,
-        priceCurrency: 'INR',
+        priceCurrency,
         priceSpecification: {
           '@type': 'UnitPriceSpecification' as const,
           price: tier.price,
-          priceCurrency: 'INR',
+          priceCurrency,
           unitText: 'ANN',
         },
         url: pageUrl,

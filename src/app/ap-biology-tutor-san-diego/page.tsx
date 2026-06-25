@@ -11,7 +11,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor San Diego · Torrey Pines · Cerebrum',
   description:
-    "AP Biology tutoring for San Diego students — Torrey Pines, Canyon Crest, La Jolla, Bishop's, Francis Parker. PhD faculty, FRQ rubric mastery, PT live classes. From $1,800.",
+    "AP Biology tutoring for San Diego students — Torrey Pines, Canyon Crest, La Jolla, Bishop's, Francis Parker. AIIMS-trained faculty, FRQ rubric mastery, PT live classes. From $2,500/yr (1:1 from $40/hr).",
   keywords: [
     'AP Biology tutor San Diego',
     'AP Biology tutor Torrey Pines',

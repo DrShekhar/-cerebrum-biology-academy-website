@@ -23,7 +23,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Gurugram · Pathways + Shri Ram + Heritage · Cerebrum',
   description:
-    'AP Biology tutoring for Gurugram — Pathways Aravali, Pathways Gurgaon, Shri Ram Aravali, Heritage Xperiential, GD Goenka, DPS International Sec 45, Suncity. AIIMS-trained PhD faculty, weekly FRQ feedback. From $1,800.',
+    'AP Biology tutoring for Gurugram — Pathways Aravali, Pathways Gurgaon, Shri Ram Aravali, Heritage Xperiential, GD Goenka, DPS International Sec 45, Suncity. AIIMS-trained biology faculty, weekly FRQ feedback. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'ap biology tutor gurugram',
     'ap biology tutor gurgaon',

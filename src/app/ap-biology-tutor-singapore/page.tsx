@@ -22,7 +22,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Singapore · SAS + SAIS + UWC · Cerebrum',
   description:
-    'AP Biology tutoring for Singapore — SAS, Stamford American (SAIS), GEMS, Hwa Chong International, UWC, ISS. PhD faculty, FRQ mastery, SGT live classes.',
+    'AP Biology tutoring for Singapore — SAS, Stamford American (SAIS), GEMS, Hwa Chong International, UWC, ISS. AIIMS-trained faculty, FRQ mastery, SGT live classes.',
   keywords: [
     'ap biology tutor singapore',
     'ap biology coaching singapore',

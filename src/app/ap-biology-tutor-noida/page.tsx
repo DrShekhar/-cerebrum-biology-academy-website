@@ -25,7 +25,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Noida · Pathways + Shiv Nadar + Step by Step · Cerebrum',
   description:
-    'AP Biology tutoring for Noida — Pathways Noida, Shiv Nadar, Step by Step, Genesis Global, Lotus Valley, GD Goenka Public, Amity, DPS Noida. AIIMS-trained PhD faculty, weekly FRQ feedback. From $1,800.',
+    'AP Biology tutoring for Noida — Pathways Noida, Shiv Nadar, Step by Step, Genesis Global, Lotus Valley, GD Goenka Public, Amity, DPS Noida. AIIMS-trained biology faculty, weekly FRQ feedback. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'ap biology tutor noida',
     'ap biology tutor greater noida',

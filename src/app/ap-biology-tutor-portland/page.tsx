@@ -11,7 +11,7 @@ const metro = getMetroBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor Portland · Lake Oswego · Cerebrum',
   description:
-    'AP Biology tutoring for Portland students — Lincoln, Catlin Gabel, Oregon Episcopal, Lake Oswego, Sunset. PhD faculty, FRQ rubric mastery, PT live classes. From $1,800.',
+    'AP Biology tutoring for Portland students — Lincoln, Catlin Gabel, Oregon Episcopal, Lake Oswego, Sunset. AIIMS-trained faculty, FRQ rubric mastery, PT live classes. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'AP Biology tutor Portland',
     'AP Biology tutor Lake Oswego',
