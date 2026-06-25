@@ -134,12 +134,12 @@ const REGIONS = [
   {
     name: 'North America',
     detail: 'AP · MCAT · DAT · USMLE · USABO — EST/CST/MST/PST evening slots',
-    href: '/best-biology-tutor-global',
+    href: '/best-biology-tutor-usa',
   },
   {
     name: 'UK & Europe',
     detail: 'A-Level · GCSE · IB · GAMSAT UK · BBO — GMT/CET slots',
-    href: '/best-biology-tutor-global',
+    href: '/best-biology-tutor-uk',
   },
   {
     name: 'Middle East',
@@ -276,9 +276,9 @@ export default function GlobalHomePage() {
             Cerebrum Biology Academy teaches one subject — biology — across every major pathway:
             NEET for students abroad, IB and AP Biology, A-Level and GCSE, MCAT, GAMSAT, USMLE, DAT,
             and national biology olympiads up to the IBO. Live online, in your time zone, taught by
-            AIIMS-trained faculty — AIIMS New Delhi ranks among the most selective medical schools in
-            the world, peer to Harvard Medical School, Johns Hopkins and Oxford, so the teaching depth
-            applies to any biology exam, anywhere.
+            AIIMS-trained faculty — AIIMS New Delhi ranks among the most selective medical schools
+            in the world, peer to Harvard Medical School, Johns Hopkins and Oxford, so the teaching
+            depth applies to any biology exam, anywhere.
           </p>
 
           {/* Two-pathway fork */}

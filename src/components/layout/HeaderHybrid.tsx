@@ -56,6 +56,42 @@ const MonitorIcon = () => (
   </svg>
 )
 
+const BookOpenIcon = () => (
+  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M12 6.25C10.5 5 8 4.5 5 4.75A1 1 0 004 5.75v12a1 1 0 001.1 1c2.8-.25 5.2.25 6.9 1.5 1.7-1.25 4.1-1.75 6.9-1.5a1 1 0 001.1-1v-12a1 1 0 00-1-1c-3-.25-5.5.25-7 1.5zm0 0v13.5"
+    />
+  </svg>
+)
+
+const ChevronDownIcon = () => (
+  <svg
+    className="w-4 h-4 transition-transform group-open:rotate-180"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+  </svg>
+)
+
+// International / US exam hubs surfaced in the desktop top-bar (the burger menu
+// has the full list). Unlocks the otherwise nav-orphaned US/exam pages.
+const EXAM_NAV_LINKS: { href: string; label: string }[] = [
+  { href: '/best-biology-tutor-usa', label: 'USA — all exams' },
+  { href: '/ap-biology-tutor-global', label: 'AP Biology' },
+  { href: '/usabo-coaching', label: 'USABO / Olympiad' },
+  { href: '/brain-bee-coaching', label: 'Brain Bee (Neuroscience)' },
+  { href: '/mcat-biology', label: 'MCAT Biology' },
+  { href: '/ib-biology-tutor-global', label: 'IB Biology' },
+  { href: '/a-level-biology-tutor', label: 'A-Level Biology' },
+  { href: '/honors-biology-tutor', label: 'Honors / High-School' },
+  { href: '/college-biology-tutor', label: 'College / Intro Biology' },
+]
+
 // Lazy load client-side interactive elements
 // Note: Removed ssr: false to prevent BAILOUT_TO_CLIENT_SIDE_RENDERING error in Next.js 15
 // The components handle mounted state internally for browser-only APIs
@@ -175,6 +211,28 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
               <UsersIcon />
               <span>Faculty</span>
             </Link>
+            {/* By Exam — native <details> disclosure (no client JS, keyboard-accessible) */}
+            <details className="group relative [&_summary::-webkit-details-marker]:hidden">
+              <summary className="flex cursor-pointer list-none items-center gap-2 font-medium px-3 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-200">
+                <BookOpenIcon />
+                <span>By Exam</span>
+                <ChevronDownIcon />
+              </summary>
+              <div className="absolute left-0 top-full z-50 mt-1 w-64 rounded-xl border border-gray-100 bg-white p-2 shadow-xl">
+                <p className="px-3 pt-1 pb-2 text-xs font-semibold uppercase tracking-wide text-gray-400">
+                  International &amp; US exams
+                </p>
+                {EXAM_NAV_LINKS.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-700"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </details>
             <Link
               href="/global"
               className="flex items-center gap-2 font-medium px-3 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-200"

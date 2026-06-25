@@ -152,6 +152,18 @@ export const Footer = memo(function Footer() {
     { name: 'Pricing & Fee Structure', href: '/pricing' },
   ]
 
+  const examLinks = [
+    { name: 'USA — All Biology Exams', href: '/best-biology-tutor-usa' },
+    { name: 'AP Biology Tutor', href: '/ap-biology-tutor-global' },
+    { name: 'USABO / Olympiad Coaching', href: '/usabo-coaching' },
+    { name: 'Brain Bee (Neuroscience)', href: '/brain-bee-coaching' },
+    { name: 'MCAT Biology Tutor', href: '/mcat-biology' },
+    { name: 'IB Biology Tutor', href: '/ib-biology-tutor-global' },
+    { name: 'A-Level Biology Tutor', href: '/a-level-biology-tutor' },
+    { name: 'Honors / High-School Biology', href: '/honors-biology-tutor' },
+    { name: 'College / Intro Biology', href: '/college-biology-tutor' },
+  ]
+
   const centerLinks = [
     { name: 'All Locations', href: '/all-locations' },
     { name: 'NEET Coaching Delhi', href: '/neet-coaching-delhi' },
@@ -275,6 +287,12 @@ export const Footer = memo(function Footer() {
               links={programLinks}
               isOpen={openSection === 'Programs'}
               onToggle={() => toggleSection('Programs')}
+            />
+            <FooterSection
+              title="International & US Exams"
+              links={examLinks}
+              isOpen={openSection === 'Exams'}
+              onToggle={() => toggleSection('Exams')}
             />
             <FooterSection
               title="Centers & Locations"
