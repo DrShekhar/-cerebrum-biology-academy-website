@@ -117,7 +117,7 @@ export default function USABOCoachingLayout({ children }: { children: React.Reac
         products={olympiadPricingProducts}
         heading="USABO coaching — pricing in your currency"
         subheading="USD reference price. Local currency auto-detected from your region."
-        equivalents={['USD', 'INR', 'GBP', 'EUR', 'CAD', 'AUD']}
+        equivalents={['USD', 'GBP', 'EUR', 'CAD', 'AUD']}
         regionalLinks={[
           { region: 'All Olympiads', href: '/biology-olympiads' },
           { region: 'IBO', href: '/ibo-preparation' },

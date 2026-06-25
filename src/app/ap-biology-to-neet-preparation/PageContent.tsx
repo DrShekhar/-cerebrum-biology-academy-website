@@ -126,7 +126,7 @@ const faqData = [
   {
     question: 'What is the cost?',
     answer:
-      'Bridge programs start from Rs 32000. Complete programs up to Rs 75000. All include personalized plans and 24/7 doubt support. EMI options available.',
+      'Bridge programs start from $420 (Complete and Premium programs up to $905). All include personalized plans and 24/7 doubt support. Flexible payment options available.',
   },
 ]
 

@@ -6,7 +6,7 @@ const PAGE_URL = 'https://cerebrumbiologyacademy.com/usmle-step-1-biology-pricin
 export const metadata: Metadata = {
   title: 'USMLE Step 1 Biology Pricing | Foundations Packages | Cerebrum',
   description:
-    'USMLE Step 1 biology-foundations pricing — $699/₹34,999 Self-Paced to $2,249/₹1,09,999 1:1. US medical students + Indian IMGs. First Aid mapped, UWorld integration.',
+    'USMLE Step 1 biology-foundations pricing — $699 Self-Paced to $2,249 1:1. US medical students + Indian IMGs. First Aid mapped, UWorld integration.',
   keywords: [
     'USMLE step 1 biology pricing',
     'USMLE step 1 tutor cost',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'USMLE Step 1 Biology Pricing | Foundations Packages | Cerebrum Biology Academy',
     description:
-      'USMLE Step 1 biology-foundations pricing — $699/₹34,999 Self-Paced to $2,249/₹1,09,999 1:1. US medical students + Indian IMGs. First Aid mapped, UWorld integration.',
+      'USMLE Step 1 biology-foundations pricing — $699 Self-Paced to $2,249 1:1. US medical students + Indian IMGs. First Aid mapped, UWorld integration.',
     url: PAGE_URL,
     type: 'website',
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'USMLE Step 1 Biology Pricing | Foundations Packages | Cerebrum',
     description:
-      'USMLE Step 1 biology-foundations pricing — $699/₹34,999 Self-Paced to $2,249/₹1,09,999 1:1. US medical students + Indian IMGs. First Aid mapped, UWorld integration.',
+      'USMLE Step 1 biology-foundations pricing — $699 Self-Paced to $2,249 1:1. US medical students + Indian IMGs. First Aid mapped, UWorld integration.',
   },
 }
 
@@ -57,8 +57,8 @@ export default function Page() {
             USMLE Step 1 Biology Pricing | Foundations Packages
           </h1>
           <p className="text-xl text-slate-300 mb-6 max-w-3xl">
-            USMLE Step 1 biology-foundations pricing — $699/₹34,999 Self-Paced to $2,249/₹1,09,999
-            1:1. US medical students + Indian IMGs. First Aid mapped, UWorld integration.
+            USMLE Step 1 biology-foundations pricing — $699 Self-Paced to $2,249 1:1. US medical
+            students + Indian IMGs. First Aid mapped, UWorld integration.
           </p>
           <a
             href={wa}
@@ -125,10 +125,8 @@ export default function Page() {
                   </td>
                 </tr>
                 <tr className="border-b border-slate-100">
-                  <td className="py-3 px-4 font-medium text-slate-900">India IMG pricing (INR)</td>
-                  <td className="py-3 px-4 text-green-700 font-bold">
-                    ₹34,999 / ₹69,999 / ₹1,09,999
-                  </td>
+                  <td className="py-3 px-4 font-medium text-slate-900">India IMG pricing</td>
+                  <td className="py-3 px-4 text-green-700 font-bold">$699 / $1,449 / $2,249</td>
                   <td className="py-3 px-4 text-slate-600 text-sm">
                     Same tiers for AIIMS/MAMC/Grant/KEM graduates preparing for ECFMG
                   </td>

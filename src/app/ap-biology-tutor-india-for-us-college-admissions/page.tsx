@@ -632,7 +632,7 @@ export default function APBiologyIndiaForUSAdmissionsPage() {
               Transparent USD pricing (we sell internationally in USD).
               {isIndianIP
                 ? ' INR equivalents shown below at an approximate rate of ₹84 / US$1 and may vary with currency movement.'
-                : ' Indian families: WhatsApp us to receive INR equivalents at the current rate.'}
+                : ''}
             </p>
           </div>
 

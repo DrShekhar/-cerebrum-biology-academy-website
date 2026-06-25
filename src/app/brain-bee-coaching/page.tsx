@@ -156,7 +156,7 @@ const TIERS = [
   {
     name: 'Foundation Cohort',
     students: '12-16 weeks · small-batch live',
-    price: '$900',
+    price: '$4,900',
     angle:
       'Full Brain Facts content + every round, built week-by-week. Live classes, slide/practical drills, and graded mocks. For students starting their first Brain Bee season or building from scratch.',
     includes:
@@ -166,7 +166,7 @@ const TIERS = [
   {
     name: 'Finals & Practical Intensive',
     students: '4-6 weeks · high-weight rounds',
-    price: '$540',
+    price: '$2,900',
     angle:
       'Focused on the high-weight rounds (~90% of the score) — human neuroanatomy practical, neurohistology, MRI ID, patient diagnosis, and timed two-strike oral simulation. For students who have qualified a chapter and are heading to nationals.',
     includes:
@@ -176,7 +176,7 @@ const TIERS = [
   {
     name: '1:1 Mentorship',
     students: '1 student · fully bespoke',
-    price: '$1,620',
+    price: '$6,900',
     angle:
       'Dedicated faculty mentor, custom plan, weekly clinical-reasoning and oral coaching with direct AIIMS-faculty review. For serious national-champion-track and World-Championship aspirants.',
     includes:

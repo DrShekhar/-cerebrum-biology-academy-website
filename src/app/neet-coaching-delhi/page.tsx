@@ -230,15 +230,15 @@ export default function NEETCoachingDelhiPage() {
             Delhi NEET aspirants have several generalist NEET coaching options — the largest
             national NEET chain (Kalu Sarai / Punjabi Bagh), the 2nd-largest national NEET chain
             (multiple centres), other IIT-JEE-first coachings (Punjabi Bagh / South Ex), other
-            online-only platforms (online), other Kota-origin chains, other Kota-origin chains.
-            These chains run combined Physics + Chemistry + Biology batches of 200-400 students with
-            rotating subject faculty. Cerebrum is structurally different: the only NEET coaching
-            institute in India built exclusively around biology — the highest-scoring NEET subject
-            at 360/720 marks (50% of total). 15-20 student batches, AIIMS-trained faculty continuity
-            year-over-year, half the cost of Kota relocation. Most Cerebrum Delhi students pair
-            Cerebrum biology with other online-only platforms or other multi-subject tutoring
-            platforms for Physics + Chemistry — total stack ₹70K-₹1.1L vs the largest national NEET
-            chain full PCB at ₹1.5L+ and Kota relocation at ₹2L-₹2.5L all-in.
+            online-only platforms (online), and Kota-origin coaching chains. These chains run
+            combined Physics + Chemistry + Biology batches of 200-400 students with rotating subject
+            faculty. Cerebrum is structurally different: the only NEET coaching institute in India
+            built exclusively around biology — the highest-scoring NEET subject at 360/720 marks
+            (50% of total). 15-20 student batches, AIIMS-trained faculty continuity year-over-year,
+            half the cost of Kota relocation. Most Cerebrum Delhi students pair Cerebrum biology
+            with other online-only platforms or other multi-subject tutoring platforms for Physics +
+            Chemistry — total stack ₹70K-₹1.1L vs the largest national NEET chain full PCB at ₹1.5L+
+            and Kota relocation at ₹2L-₹2.5L all-in.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">

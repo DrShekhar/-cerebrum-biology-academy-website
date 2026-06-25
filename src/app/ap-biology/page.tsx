@@ -79,7 +79,7 @@ const hubFAQs = [
   {
     question: 'What does AP Biology tutoring cost at Cerebrum?',
     answer:
-      'We offer four tiers. Senior Faculty 1:1 (taught by Dr. Shekhar Singh or equivalent lead faculty): $120-$150 per hour. Junior Faculty 1:1 (vetted associate tutors, fully supervised): $60-$75 per hour. Small-batch group classes (4-8 students, same cohort, fixed schedule): $40 per hour per student. Packaged programs: $499 for an 8-session targeted unit pack, $999 for a full-semester score-5 program, $1,499 for the year-long premium track including FRQ workshops, mock exams, and unlimited WhatsApp support. Pricing is in USD; INR-equivalent pricing is shown automatically for visitors from India.',
+      'We offer four tiers. Senior Faculty 1:1 (taught by Dr. Shekhar Singh or equivalent lead faculty): $120-$150 per hour. Junior Faculty 1:1 (vetted associate tutors, fully supervised): $60-$75 per hour. Small-batch group classes (4-8 students, same cohort, fixed schedule): $40 per hour per student. Packaged programs: $499 for an 8-session targeted unit pack, $999 for a full-semester score-5 program, $1,499 for the year-long premium track including FRQ workshops, mock exams, and unlimited WhatsApp support. All pricing is in USD.',
   },
   {
     question: 'How does Cerebrum approach AP Biology FRQ strategy?',
@@ -542,8 +542,7 @@ export default function APBiologyHubPage() {
                 AP Biology Tutoring — Pricing Matrix
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
-                Four tiers. No hidden fees, no upsell pressure. Pricing in USD; INR-equivalent shown
-                to visitors from India.
+                Four tiers. No hidden fees, no upsell pressure. All pricing in USD.
               </p>
             </div>
 
@@ -784,7 +783,7 @@ export default function APBiologyHubPage() {
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 Indian students using AP Biology for US college applications, and Canadian metros
-                with large South Asian populations. INR / CAD pricing displayed locally.
+                with large South Asian populations. Local-currency pricing displayed by region.
               </p>
             </div>
 

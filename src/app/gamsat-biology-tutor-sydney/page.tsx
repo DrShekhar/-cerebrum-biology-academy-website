@@ -68,10 +68,9 @@ const faqs = [
       'Yes. Approximately 40% of Australian GAMSAT candidates have non-biology undergraduate degrees (Sydney has heavy representation from finance, consulting, engineering, IT, allied health). Cerebrum starts Campbell Biology from chapter 1 — no A-level / HSC biology baseline assumed. Non-biology candidates typically use the 6-month programme and report jumping from Section III baseline 55 to 65+ over the programme.',
   },
   {
-    question:
-      'How does Cerebrum compare to other generalist GAMSAT brands Australia for a Sydney applicant?',
+    question: 'How does Cerebrum compare to Gradready or Griffiths GAMSAT for a Sydney applicant?',
     answer:
-      'other generalist GAMSAT brands and other generalist GAMSAT brands are full GAMSAT generalist programmes covering all three sections (A$3,000+ each). Cerebrum is a Section III biology specialist — we cover the biology component in depth (A$2,399 1:1 full programme, A$215/hour ad-hoc) and most Sydney applicants pair us with other generalist GAMSAT brands for Sections I and II.',
+      'Gradready and Griffiths GAMSAT are full GAMSAT generalist programmes covering all three sections (A$3,000+ each). Cerebrum is a Section III biology specialist — we cover the biology component in depth (A$2,399 1:1 full programme, A$215/hour ad-hoc) and most Sydney applicants pair us with Gradready or Griffiths GAMSAT for Sections I and II.',
   },
 ]
 

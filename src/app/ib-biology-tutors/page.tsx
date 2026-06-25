@@ -2,14 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
-import {
-  tutors,
-  tutorSlugs,
-  tierPricing,
-  usdToInr,
-  indianPricingNote,
-  type TutorTier,
-} from '@/data/ib-biology/tutors'
+import { tutors, tutorSlugs, tierPricing, type TutorTier } from '@/data/ib-biology/tutors'
 import { ArrowRight, MessageCircle, Award, CheckCircle2 } from 'lucide-react'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/ib-biology-tutors'
@@ -171,8 +164,7 @@ export default function TutorsDirectoryPage() {
                     >
                       {tier}
                     </span>
-                    <div className="mb-1 text-2xl font-bold text-gray-900">{meta.range}</div>
-                    <div className="mb-3 text-sm font-medium text-gray-500">{meta.rangeINR}</div>
+                    <div className="mb-3 text-2xl font-bold text-gray-900">{meta.range}</div>
                     <p className="mb-4 text-gray-700">{meta.description}</p>
                     <p className="text-sm italic text-gray-600">
                       <strong>Who for: </strong>
@@ -181,24 +173,6 @@ export default function TutorsDirectoryPage() {
                   </div>
                 )
               })}
-            </div>
-
-            {/* India-specific pricing callout */}
-            <div className="mt-8 rounded-2xl border border-orange-200 bg-orange-50 p-6">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                <div>
-                  <h3 className="mb-2 text-base font-bold text-orange-900">
-                    🇮🇳 {indianPricingNote.headline}
-                  </h3>
-                  <p className="text-sm text-orange-900">{indianPricingNote.body}</p>
-                </div>
-                <Link
-                  href={indianPricingNote.linkHref}
-                  className="whitespace-nowrap self-start rounded-lg bg-orange-600 px-4 py-2 text-sm font-semibold text-white hover:bg-orange-700"
-                >
-                  {indianPricingNote.linkLabel}
-                </Link>
-              </div>
             </div>
           </div>
         </section>
@@ -225,9 +199,6 @@ export default function TutorsDirectoryPage() {
                         <div className="text-right">
                           <div className="text-sm font-semibold text-green-700">
                             ${t.hourlyRateUSD}/hr
-                          </div>
-                          <div className="text-xs text-gray-500">
-                            ~₹{usdToInr(t.hourlyRateUSD).toLocaleString('en-IN')}/hr
                           </div>
                         </div>
                       </div>
