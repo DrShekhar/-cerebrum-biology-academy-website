@@ -1,18 +1,7 @@
 'use client'
 
 import { useState, useCallback } from 'react'
-import {
-  MessageCircle,
-  X,
-  Smartphone,
-  Copy,
-  Check,
-  ExternalLink,
-  Clock,
-  Users,
-  Phone,
-} from 'lucide-react'
-import { trackWhatsAppClick } from '@/lib/whatsapp/tracking'
+import { MessageCircle, X, Smartphone, Copy, Check, Clock, Users, Phone } from 'lucide-react'
 
 const WHATSAPP_NUMBER = '918826444334'
 const DISPLAY_NUMBER = '+91 88264 44334'
@@ -70,23 +59,6 @@ export function WhatsAppQRModalContent({
   }, [name, phone, message, source])
 
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(whatsappUrl)}&bgcolor=ffffff&color=128C7E&margin=10`
-
-  const handleWhatsAppWeb = useCallback(() => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'qr_modal_whatsapp_web', {
-        event_category: 'conversion',
-        event_label: 'whatsapp_web',
-        source: `${source}-web`,
-      })
-    }
-    // Log the click (fire-and-forget) — do NOT call trackAndOpenWhatsApp here:
-    // on desktop that re-dispatches the modal event (re-opening this very modal)
-    // instead of opening WhatsApp Web. Open the wa.me URL directly so the chat
-    // to 918826444334 actually opens with the prefilled message.
-    void trackWhatsAppClick({ source: `${source}-web`, message }).catch(() => {})
-    window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
-    onClose()
-  }, [source, message, whatsappUrl, onClose])
 
   const copyWhatsAppLink = useCallback(() => {
     navigator.clipboard.writeText(whatsappUrl).then(() => {
@@ -204,29 +176,14 @@ export function WhatsAppQRModalContent({
         {/* Divider */}
         <div className="flex items-center gap-4 my-5">
           <div className="flex-1 h-px bg-gray-200"></div>
-          <span className="text-gray-400 text-sm font-medium">or use these options</span>
+          <span className="text-gray-400 text-sm font-medium">or</span>
           <div className="flex-1 h-px bg-gray-200"></div>
         </div>
 
-        {/* Alternative options */}
+        {/* Alternative options — QR is the primary path (scan with phone → chat
+            in the WhatsApp app). No WhatsApp Web (it requires a separate login). */}
         <div className="space-y-3">
-          {/* WhatsApp Web */}
-          <button
-            onClick={handleWhatsAppWeb}
-            className="w-full flex items-center gap-4 p-4 rounded-xl border-2 border-gray-100 hover:border-green-200 hover:bg-green-50 transition-all group"
-          >
-            <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-200 transition-colors">
-              <ExternalLink className="w-5 h-5 text-green-600" />
-            </div>
-            <div className="text-left flex-1">
-              <p className="font-semibold text-gray-900">Open WhatsApp Web</p>
-              <p className="text-sm text-gray-500">
-                Chat from this computer (needs WhatsApp Web login)
-              </p>
-            </div>
-          </button>
-
-          {/* Copy Link */}
+          {/* Copy Link — to share to the phone */}
           <button
             onClick={copyWhatsAppLink}
             className="w-full flex items-center gap-4 p-4 rounded-xl border-2 border-gray-100 hover:border-green-200 hover:bg-green-50 transition-all group"

@@ -7,7 +7,13 @@ const API_ENDPOINT = '/api/analytics/whatsapp-click'
 
 export function isMobileDevice(): boolean {
   if (typeof navigator === 'undefined') return true
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+  // PHONES only. iPad/tablets are intentionally NOT treated as mobile so they
+  // get the desktop QR modal (+ "Open WhatsApp Web") — they rarely have the
+  // WhatsApp phone app, so the direct-app-open path left them with no QR and no
+  // way to message. (Android phones include "Mobile" in the UA; tablets don't.)
+  return /Android.*Mobile|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  )
 }
 
 export interface WhatsAppDesktopModalEvent {
