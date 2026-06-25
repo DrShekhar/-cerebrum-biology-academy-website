@@ -717,6 +717,24 @@ export default function USABOCoachingPage() {
               Best USABO Books
             </Link>
             <Link
+              href="/is-usabo-worth-it"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              Is USABO Worth It?
+            </Link>
+            <Link
+              href="/how-to-make-us-ibo-team"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              How to Make Team USA (IBO)
+            </Link>
+            <Link
+              href="/cerebrum-vs-biolympiads"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              Cerebrum vs Biolympiads
+            </Link>
+            <Link
               href="/campbell-biology"
               className="bg-teal-600 text-white px-6 py-3 rounded-lg shadow hover:shadow-md hover:bg-teal-700 transition"
             >

@@ -637,6 +637,30 @@ export default function BrainBeeCoachingPage() {
           </div>
         </section>
 
+        {/* Free Brain Bee guides */}
+        <section className="bg-slate-50">
+          <div className="mx-auto max-w-6xl px-4 py-12">
+            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">Free Brain Bee guides</h2>
+            <p className="mt-3 max-w-3xl text-slate-600">
+              Start here &mdash; our open study resources for the competition.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {[
+                { name: 'Brain Bee study guide', href: '/brain-bee-study-guide' },
+                { name: 'Neuroanatomy guide', href: '/brain-bee-neuroanatomy-guide' },
+              ].map((g) => (
+                <Link
+                  key={g.href}
+                  href={g.href}
+                  className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-blue-700 hover:bg-blue-50"
+                >
+                  {g.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section>
           <div className="mx-auto max-w-4xl px-4 py-16">
