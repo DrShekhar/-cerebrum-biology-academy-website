@@ -273,23 +273,8 @@ export default function USABOCoachingPage() {
           }),
         }}
       />
-      {/* Organization with AggregateRating — brand authority signal. */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'EducationalOrganization',
-            '@id': 'https://cerebrumbiologyacademy.com/#organization',
-            name: 'Cerebrum Biology Academy',
-            url: 'https://cerebrumbiologyacademy.com',
-            logo: 'https://cerebrumbiologyacademy.com/logo.png',
-            foundingDate: '2014',
-            description:
-              'Biology-only specialist coaching brand under AIIMS-trained Dr. Shekhar C Singh. Full USABO pathway coverage: USABO Open Exam → Semifinal → National Finals → USA IBO team. AP Biology / USABO bridge methodology unique to Cerebrum (most generalist tutoring platforms cover one or the other; we cover both with the same Campbell + Alberts + Lehninger faculty stack).',
-          }),
-        }}
-      />
+      {/* Canonical #organization node is emitted site-wide by CerebrumOrgSchema
+          (root layout). Do not re-declare it here — schema references it by @id. */}
       {/* BreadcrumbList — pathway from home → AEO hub → USABO programme. */}
       <script
         type="application/ld+json"
@@ -713,6 +698,24 @@ export default function USABOCoachingPage() {
             Explore More Programs
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/how-to-qualify-for-usabo"
+              className="bg-[#3d4d3d] text-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
+            >
+              How to Qualify for USABO
+            </Link>
+            <Link
+              href="/usabo-syllabus"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              USABO Syllabus
+            </Link>
+            <Link
+              href="/best-usabo-books"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition border border-[#4a5d4a]/10 hover:border-[#4a5d4a]/30"
+            >
+              Best USABO Books
+            </Link>
             <Link
               href="/campbell-biology"
               className="bg-teal-600 text-white px-6 py-3 rounded-lg shadow hover:shadow-md hover:bg-teal-700 transition"

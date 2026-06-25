@@ -548,6 +548,20 @@ export default function MCATBiologyHubPage() {
               >
                 B/B Passage Strategy Guide
               </Link>
+              . See also our{' '}
+              <Link
+                href="/mcat-biology-score-guide"
+                className="font-semibold text-blue-700 underline hover:text-blue-900"
+              >
+                MCAT B/B score guide
+              </Link>{' '}
+              and{' '}
+              <Link
+                href="/best-mcat-biology-books"
+                className="font-semibold text-blue-700 underline hover:text-blue-900"
+              >
+                best MCAT Biology books
+              </Link>
               .
             </p>
           </div>

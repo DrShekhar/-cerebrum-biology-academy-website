@@ -5428,7 +5428,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.88,
     },
-    // College / intro-biology by-course pages + high-school EOC/NGSS (Jun 2026 expansion)
+    // College / intro-biology by-course pages + high-school EOC/NGSS + USABO/MCAT
+    // cornerstone guides (Jun 2026 USA gap-build, Phases 2-3)
     ...[
       'biology-101-tutor',
       'anatomy-and-physiology-tutor',
@@ -5437,6 +5438,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       'cell-and-molecular-biology-tutor',
       'biology-eoc-exam-prep',
       'ngss-biology-help',
+      'how-to-qualify-for-usabo',
+      'usabo-syllabus',
+      'best-usabo-books',
+      'mcat-biology-score-guide',
+      'best-mcat-biology-books',
     ].map((slug) => ({
       url: `${baseUrl}/${slug}`,
       lastModified: lastUpdated,
