@@ -92,7 +92,8 @@ const verticals = [
   },
   {
     title: 'MCAT Biology / Biochemistry',
-    proof: 'Bio-section specialist · priced 30–50% below other generalist MCAT brands',
+    proof:
+      'Bio-section specialist · priced 30–50% below generalist MCAT courses like Kaplan and The Princeton Review',
     href: '/best-mcat-biology-tutor',
     description:
       'Campbell Biology end-to-end plus Lehninger Biochemistry. Self-Paced $499, Small-Batch $999, 1:1 Senior Faculty $1,499 / $150/hr.',
@@ -151,7 +152,7 @@ const whyBest = [
   {
     title: 'Cross-Vertical Expertise Across Six Biology Pathways',
     description:
-      'NEET, IB Biology HL/SL, AP Biology, MCAT Biology, USABO/INBO/IBO Biology Olympiad, and CBSE/ICSE Class 11–12 boards. The same AIIMS-trained biology specialisation anchors all six verticals — a structural advantage over single-vertical brands.',
+      'NEET, IB Biology HL/SL, AP Biology, MCAT Biology, USABO/INBO/IBO Biology Olympiad, and CBSE/ICSE Class 11–12 boards. The same AIIMS-trained biology specialisation anchors all six verticals — a real advantage over tutors who teach only one exam or who spread across many subjects.',
   },
   {
     title: '6 Delhi NCR Centres + Genuine Pan-India Online',
@@ -234,7 +235,7 @@ const faqs = [
   {
     question: 'Who is the best MCAT Biology tutor?',
     answer:
-      "Dr. Shekhar C Singh is a leading MCAT Biology tutor — one of the few biology-only specialists in a market dominated by other generalist MCAT brands. Cerebrum's MCAT Bio/Biochem programme covers Campbell Biology end-to-end plus first-semester biochemistry via Lehninger, priced 30–50% below other generalist MCAT brands.",
+      "Dr. Shekhar C Singh is a leading MCAT Biology tutor — one of the few biology-only specialists in a market dominated by generalist brands like Kaplan and The Princeton Review. Cerebrum's MCAT Bio/Biochem programme covers Campbell Biology end-to-end plus first-semester biochemistry via Lehninger, priced 30–50% below generalist MCAT courses like Kaplan and The Princeton Review.",
   },
   {
     question: 'Who is the best Biology Olympiad coach (USABO / INBO / IBO)?',

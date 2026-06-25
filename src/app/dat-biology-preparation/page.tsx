@@ -51,10 +51,9 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question:
-      'How is Cerebrum DAT Biology different from other generalist DAT prep platforms or other generalist DAT brands?',
+    question: 'How is Cerebrum DAT Biology different from DAT Bootcamp, DAT Destroyer, or Kaplan?',
     answer:
-      'other generalist DAT prep platforms is a question-bank platform — strong for drill volume but weak for deep biology pedagogy when a student gets stuck. other generalist DAT brands is a generalist programme covering all four sections (Survey of Natural Sciences, Perceptual Ability, Reading Comprehension, Quantitative Reasoning) with rotating faculty. Cerebrum is a biology-only specialist — Dr. Shekhar C Singh (AIIMS Delhi) and senior faculty teach the Biology section in depth, with Campbell end-to-end coverage and ADA outline mapping. Most students pair us with other generalist DAT prep platforms for drill and a generalist for the non-biology sections.',
+      'DAT Bootcamp and DAT Destroyer are question-bank platforms — strong for drill volume but weak for deep biology pedagogy when a student gets stuck. Kaplan is a full-DAT generalist covering all four sections (Survey of Natural Sciences, Perceptual Ability, Reading Comprehension, Quantitative Reasoning) with rotating faculty. Cerebrum is a biology-only specialist — Dr. Shekhar C Singh (AIIMS Delhi) and senior faculty teach the Biology section in depth, with Campbell end-to-end coverage and ADA outline mapping. Most students pair us with DAT Bootcamp for drill and a generalist for the non-biology sections.',
   },
   {
     question: 'How is the DAT Biology section structured?',

@@ -97,9 +97,9 @@ const config: BestVerticalConfig = {
   ],
   whyBest: [
     {
-      title: 'Biology-Only Specialist (Jack Westin Pattern)',
+      title: 'Biology-Only Specialist, Not a Generalist Bundle',
       description:
-        'Most MCAT brands (Kaplan, The Princeton Review) are generalist test-prep agencies whose biology faculty rotate across subjects. Cerebrum follows the same single-section specialist model that Jack Westin owns for CARS — biology-only depth, not breadth.',
+        'Most MCAT brands (Kaplan, The Princeton Review) are generalist test-prep agencies whose biology faculty rotate across subjects. Cerebrum is a biology-only specialist: biology-only depth, not breadth.',
     },
     {
       title: '30–50% Below Kaplan & The Princeton Review Full Course',

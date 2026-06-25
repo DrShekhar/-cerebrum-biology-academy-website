@@ -8,8 +8,9 @@
  * anatomy/physiology, ecology). Same Campbell baseline as MCAT B/B,
  * but with anatomy/physiology weighted higher and biochemistry lower.
  *
- * Pricing wedge: other generalist DAT prep platforms ($595–$795), other generalist DAT prep platforms ($595),
- * other generalist DAT brands ($1,599 self-paced / $2,599 live). Cerebrum competes on
+ * Pricing wedge: DAT Bootcamp and DAT Destroyer are question-bank
+ * platforms (~$295–$795); Kaplan is a full-DAT generalist course
+ * (~$1,599 self-paced / ~$2,599 live). Cerebrum competes on
  * biology-section depth at biology-only price points.
  */
 

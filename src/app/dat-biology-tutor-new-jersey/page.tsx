@@ -64,9 +64,9 @@ const faqs = [
   },
   {
     question:
-      'How does Cerebrum compare to other generalist DAT brands or other generalist DAT prep platforms for an NJ pre-dental?',
+      'How does Cerebrum compare to Kaplan, DAT Bootcamp, or DAT Destroyer for an NJ pre-dental?',
     answer:
-      'other generalist DAT brands is $2,599 — full-DAT generalist covering all four sections with rotating subject faculty. other generalist DAT prep platforms is $295 (basic) to $795 (Pro) — primarily a question-bank platform with video library. Cerebrum is a biology-only specialist — we cover the Biology section in depth ($1,399 1:1 full programme, $135/hr ad-hoc) and most NJ students pair us with other generalist DAT prep platforms for drill volume.',
+      'Kaplan is a full-DAT generalist covering all four sections with rotating subject faculty, with full-course pricing in the ~$2,599 range. DAT Bootcamp and DAT Destroyer are question-bank platforms with video libraries — strong for drill volume. Cerebrum is a biology-only specialist — we cover the Biology section in depth ($1,399 1:1 full programme, $135/hr ad-hoc) and most NJ students pair us with DAT Bootcamp for drill volume.',
   },
   {
     question: 'When should an NJ pre-dental student start DAT Biology prep?',

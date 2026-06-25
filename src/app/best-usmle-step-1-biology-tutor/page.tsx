@@ -106,7 +106,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Biology-Only Specialist (Distinct from Kaplan, UWorld, Becker)',
       description:
-        'UWorld and AMBOSS are question banks — they tell you the answer but the explanation only works if you already understand the underlying biology. Kaplan and Becker are generalist agencies with rotating faculty across all Step 1 disciplines. Cerebrum follows the same single-section specialist pattern that Jack Westin owns for MCAT CARS — biology-foundations depth from medical-school-trained faculty, not breadth from rotating instructors.',
+        'UWorld and AMBOSS are question banks — they tell you the answer but the explanation only works if you already understand the underlying biology. Kaplan and Becker are generalist agencies with rotating faculty across all Step 1 disciplines. Cerebrum is a biology-foundations specialist — depth from medical-school-trained faculty, not breadth from rotating instructors.',
     },
     {
       title: 'Foundational Sciences Are ~55% of Step 1 Content',

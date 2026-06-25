@@ -65,9 +65,9 @@ const faqs = [
   },
   {
     question:
-      'How does Cerebrum compare to other generalist DAT brands or other generalist DAT prep platforms for a Bay Area pre-dental?',
+      'How does Cerebrum compare to Kaplan, DAT Bootcamp, or DAT Destroyer for a Bay Area pre-dental?',
     answer:
-      'other generalist DAT brands is $2,599 — full-DAT generalist with rotating faculty. other generalist DAT prep platforms is $795 — primarily a question-bank platform. Cerebrum is a biology-only specialist — we cover the Biology section deeply ($1,399 1:1, $135/hr ad-hoc) and most Bay Area students pair us with other generalist DAT prep platforms for drill volume. For UCSF aspirants targeting 24+ Bio, 1:1 with senior faculty is the standard recommendation.',
+      'Kaplan is a full-DAT generalist covering all four sections with rotating faculty, with full-course pricing in the ~$2,599 range. DAT Bootcamp and DAT Destroyer are question-bank platforms — strong for drill volume. Cerebrum is a biology-only specialist — we cover the Biology section deeply ($1,399 1:1, $135/hr ad-hoc) and most Bay Area students pair us with DAT Bootcamp for drill volume. For UCSF aspirants targeting 24+ Bio, 1:1 with senior faculty is the standard recommendation.',
   },
   {
     question: 'When should a Bay Area pre-dental student start DAT Biology prep?',

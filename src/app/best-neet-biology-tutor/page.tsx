@@ -110,7 +110,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Only Biology-Only NEET Specialist in India',
       description:
-        'Every other major NEET brand (Aakash and Allen and online-first generalist platforms, other multi-subject tutoring platforms, PhysicsWallah and Unacademy, FIITJEE, Kota chains like Allen and Resonance) runs generalist coaching covering Physics + Chemistry + Biology with rotating subject faculty. Cerebrum is the only NEET institute built exclusively around biology, the 360-mark / 50% subject. This produces deeper subject pedagogy, finer NEET pattern analysis, and a more focused student-faculty relationship — the same single-subject specialist pattern Jack Westin owns for MCAT CARS.',
+        'Every other major NEET brand (Aakash, Allen, PhysicsWallah, Unacademy, FIITJEE, Resonance and other multi-subject chains) runs generalist coaching covering Physics + Chemistry + Biology with rotating subject faculty. Cerebrum is the only NEET institute built exclusively around biology, the highest-scoring subject. This produces deeper subject pedagogy, finer NEET pattern analysis, and a more focused student-faculty relationship.',
     },
     {
       title: 'AIIMS-Trained Faculty Led by Dr. Shekhar C Singh',
