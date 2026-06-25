@@ -469,6 +469,40 @@ export default function BestBiologyTutorUSAPage() {
           </div>
         </section>
 
+        {/* By state + pathway/competition hubs */}
+        <section>
+          <div className="mx-auto max-w-6xl px-4 py-14">
+            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
+              Explore by state &amp; pathway
+            </h2>
+            <p className="mt-3 max-w-3xl text-slate-600">
+              State-by-state coverage, the full biology pathway, and the US competition track.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {[
+                { label: 'The US biology pathway', href: '/us-biology-pathway' },
+                { label: 'US biology competitions', href: '/us-biology-competitions-hub' },
+                { label: 'California', href: '/biology-tutor-california' },
+                { label: 'Texas', href: '/biology-tutor-texas' },
+                { label: 'New York', href: '/biology-tutor-new-york' },
+                { label: 'New Jersey', href: '/biology-tutor-new-jersey' },
+                { label: 'Massachusetts', href: '/biology-tutor-massachusetts' },
+                { label: 'Virginia', href: '/biology-tutor-virginia' },
+                { label: 'Illinois', href: '/biology-tutor-illinois' },
+                { label: 'Florida', href: '/biology-tutor-florida' },
+              ].map((s) => (
+                <Link
+                  key={s.href}
+                  href={s.href}
+                  className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-blue-700 hover:bg-blue-50"
+                >
+                  {s.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Enquiry form */}
         <section id="enquiry">
           <div className="mx-auto max-w-xl px-4 py-14">

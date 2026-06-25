@@ -550,6 +550,13 @@ export default function APBiologyTutorPage() {
               </div>
             ))}
           </div>
+          <p className="mt-10 text-center text-gray-600">
+            Want a deeper dive?{' '}
+            <Link href="/ap-biology-units" className="font-semibold text-blue-700 underline">
+              See our unit-by-unit AP Biology study guides
+            </Link>{' '}
+            — one detailed page per CED unit.
+          </p>
         </div>
       </section>
 
