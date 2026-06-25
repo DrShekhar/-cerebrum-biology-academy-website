@@ -3035,6 +3035,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
+    // AP metro expansion (Jun 2026, Phase 5) — MCAT metros auto-include via mcatMetroSlugs
+    ...[
+      'ap-biology-tutor-philadelphia',
+      'ap-biology-tutor-long-island',
+      'ap-biology-tutor-connecticut',
+      'ap-biology-tutor-columbus',
+      'ap-biology-tutor-ann-arbor',
+      'ap-biology-tutor-nashville',
+    ].map((slug) => ({
+      url: `${baseUrl}/${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })),
     {
       url: `${baseUrl}/ap-biology-tutor-boston`,
       lastModified: lastUpdated,

@@ -727,6 +727,552 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       },
     ],
   },
+  'san-diego': {
+    slug: 'san-diego',
+    city: 'San Diego',
+    stateOrRegion: 'San Diego Metro',
+    stateCode: 'CA',
+    timezone: 'Pacific Time',
+    timezoneShort: 'PT',
+    metaTitle: 'MCAT Biology Tutor San Diego | UC San Diego, USD, SDSU',
+    metaDescription:
+      'MCAT Bio/Biochem tutor for San Diego pre-meds — UC San Diego, University of San Diego, SDSU, UCSD School of Medicine. Biology specialists, PT evening slots. From $499.',
+    keywords: [
+      'MCAT Biology tutor San Diego',
+      'MCAT Bio tutor UC San Diego',
+      'MCAT Biology tutor UCSD',
+      'MCAT Biology tutor USD',
+      'MCAT Biology tutor SDSU',
+      'MCAT tutor Mira Mesa',
+      'MCAT tutor La Jolla',
+      'MCAT Bio/Biochem tutor San Diego',
+      'Indian American MCAT tutor San Diego',
+      'online MCAT Biology coaching San Diego',
+    ],
+    heroSubtitle:
+      'MCAT Bio/Biochem coaching for UC San Diego, University of San Diego, and SDSU pre-meds, with the UCSD School of Medicine research corridor in La Jolla as the anchor — built around the Mira Mesa / Scripps Ranch / Rancho Peñasquitos South Asian community. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Pacific Time evening sessions, $499 to $1,499.',
+    whySection: {
+      heading: 'Why San Diego is a top-tier biomedical research pre-med market',
+      paragraphs: [
+        'San Diego pairs a strong undergraduate pipeline with one of the densest life-sciences research clusters in the US. UC San Diego sits at the center, with the UC San Diego School of Medicine and the surrounding La Jolla Mesa institutions (Salk Institute, Scripps Research, Sanford Burnham Prebys) giving undergraduates unusually deep access to wet-lab and clinical-research experience.',
+        'Beyond UCSD, the University of San Diego and San Diego State University add a substantial pre-med undergraduate base. The South Asian community concentrates in Mira Mesa, Scripps Ranch, and Rancho Peñasquitos, where pre-med culture is well established and MCAT planning typically begins during sophomore year of college.',
+      ],
+    },
+    universities: [
+      {
+        name: 'UC San Diego',
+        programmes:
+          'Molecular & Cell Biology, Human Biology, Biochemistry/Cell Biology, Neurobiology',
+      },
+      {
+        name: 'UC San Diego School of Medicine',
+        programmes: 'MD programme, undergraduate summer research, La Jolla Mesa clinical rotations',
+      },
+      {
+        name: 'University of San Diego (USD)',
+        programmes: 'Biology, Biochemistry, Behavioral Neuroscience (pre-health advising)',
+      },
+      {
+        name: 'San Diego State University (SDSU)',
+        programmes: 'Biology, Cell & Molecular Biology, Microbiology',
+      },
+      {
+        name: 'Point Loma Nazarene University',
+        programmes: 'Biology, Biochemistry, Pre-medical track',
+      },
+    ],
+    timezoneSection:
+      'All live sessions are in Pacific Time. Standard San Diego small-batch slot is 7:00 PM to 9:00 PM PT on weekday evenings, with 9:00 AM to 11:00 AM PT Saturday and Sunday options. This works around the typical UC San Diego afternoon lab schedule on the La Jolla campus. Senior Faculty 1:1 can be scheduled at any PT slot.',
+    demographicSection: {
+      heading: 'Mira Mesa / Scripps Ranch / Rancho Peñasquitos — the family planning conversation',
+      paragraphs: [
+        'The Mira Mesa / Scripps Ranch / Rancho Peñasquitos corridor (often grouped as the I-15 north corridor) has the highest South Asian household density in San Diego County, driven by the biotech and defense-tech employers in Sorrento Valley and the UTC area. Pre-med families here plan MCAT preparation 12 to 18 months ahead.',
+        'What we hear from San Diego parents: (1) UC San Diego is the primary in-state target and the La Jolla research access shapes the timeline — students with active Salk or Scripps Research lab roles cannot run a normal in-semester study schedule; (2) UC medical schools across California (UCSD, UCLA, UCSF, UCI) require a competitive band for in-state admission; (3) many families weigh DO programmes as a parallel track. We structure the consultation around the student’s research calendar and target school tier.',
+      ],
+    },
+    faqs: [
+      {
+        question:
+          'UC San Diego undergrad with Salk or Scripps Research lab work — how do we fit MCAT prep?',
+        answer:
+          'UCSD Molecular & Cell Biology and Human Biology students with active research on the La Jolla Mesa (Salk Institute, Scripps Research, Sanford Burnham Prebys, or UCSD School of Medicine labs) often carry 15 to 20 hours per week of bench time. We split the timeline: Self-Paced async content during the quarter, then a concentrated Small-Batch + 1:1 block during summer or a gap year. UCSD’s quarter system means study blocks are more compressed than at semester schools, so we calibrate the load accordingly.',
+      },
+      {
+        question: 'USD or SDSU pre-meds — how is the prep different from UC San Diego?',
+        answer:
+          'University of San Diego and SDSU pre-meds typically have lighter research loads and more in-semester study time than UCSD students, so we can often run a full Small-Batch programme during the school year, starting January for a summer test date. Both have solid biology departments, so the content baseline is strong — most of the work is AAMC passage strategy and biochemistry precision.',
+      },
+      {
+        question: 'My family is in Mira Mesa / Scripps Ranch — what is the planning conversation?',
+        answer:
+          'The consultation covers: (a) which undergrad (UC San Diego, USD, SDSU, or an out-of-area UC), which determines course-load timing; (b) target school tier across the California UC medical schools versus DO options; (c) gap year or summer-after-junior-year timeline. For high school students in the I-15 corridor targeting BS/MD tracks, planning starts junior year.',
+      },
+      {
+        question: 'DO schools as a parallel track from San Diego — do you coach for that?',
+        answer:
+          'Yes. The MCAT is the same exam for MD and DO applications. Our Bio/Biochem coaching targets the 510 to 520 range, which covers the competitive California UC MD band and DO programmes. We help families think through the parallel-track strategy during the planning consultation.',
+      },
+      {
+        question: 'How does Cerebrum compare to San Diego-area MCAT prep providers?',
+        answer:
+          'San Diego has the standard full-MCAT generalists ($2,500–$3,000 for all four sections) plus La Jolla and UTC boutique tutors at $150–$250/hour. Cerebrum is a biology-section specialist — Bio/Biochem only, AIIMS-trained faculty. Our Small-Batch is $999 vs generalist $2,700; ad-hoc 1:1 is $150/hour. Many San Diego students pair us with a generalist for C/P and CARS.',
+      },
+    ],
+  },
+
+  baltimore: {
+    slug: 'baltimore',
+    city: 'Baltimore',
+    stateOrRegion: 'Baltimore Metro',
+    stateCode: 'MD',
+    timezone: 'Eastern Time',
+    timezoneShort: 'ET',
+    metaTitle: 'MCAT Biology Tutor Baltimore | Johns Hopkins, UMBC, Maryland, Towson',
+    metaDescription:
+      'MCAT Bio/Biochem tutor for Baltimore pre-meds — Johns Hopkins, UMBC, University of Maryland, Towson, Johns Hopkins School of Medicine. Biology specialists, ET evening slots. From $499.',
+    keywords: [
+      'MCAT Biology tutor Baltimore',
+      'MCAT Bio tutor Johns Hopkins',
+      'MCAT Biology tutor UMBC',
+      'MCAT Biology tutor University of Maryland',
+      'MCAT Biology tutor Towson',
+      'MCAT tutor Howard County',
+      'MCAT tutor Columbia MD',
+      'MCAT Bio/Biochem tutor Maryland',
+      'Indian American MCAT tutor Baltimore',
+      'online MCAT Biology coaching Baltimore',
+    ],
+    heroSubtitle:
+      'MCAT Bio/Biochem coaching for Johns Hopkins, UMBC, University of Maryland, and Towson pre-meds, anchored by the Johns Hopkins School of Medicine research corridor in East Baltimore — built around the Howard County / Columbia / Ellicott City South Asian community. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Eastern Time evening sessions, $499 to $1,499.',
+    whySection: {
+      heading: 'Why Baltimore is a research-heavy pre-med corridor',
+      paragraphs: [
+        'Baltimore is built around Johns Hopkins, one of the most research-intensive universities in the world. Johns Hopkins undergraduates and the Johns Hopkins School of Medicine in East Baltimore create an exceptional clinical and bench-research ecosystem, and the metro sits within easy reach of the NIH in Bethesda for summer and post-bac research.',
+        'Beyond Hopkins, the University of Maryland, Baltimore County (UMBC) — known nationally for its Meyerhoff Scholars pipeline into the sciences — plus the University of Maryland (College Park, just southwest) and Towson University add a deep pre-med undergraduate base. The South Asian community concentrates in Howard County (Columbia, Ellicott City), one of the highest-density South Asian areas in the mid-Atlantic, where MCAT planning typically begins during sophomore year.',
+      ],
+    },
+    universities: [
+      {
+        name: 'Johns Hopkins University',
+        programmes:
+          'Molecular & Cellular Biology, Biophysics, Neuroscience, Biomedical Engineering',
+      },
+      {
+        name: 'Johns Hopkins School of Medicine',
+        programmes:
+          'MD programme, East Baltimore research rotations, undergraduate summer research',
+      },
+      {
+        name: 'University of Maryland, Baltimore County (UMBC)',
+        programmes: 'Biological Sciences, Biochemistry & Molecular Biology, Meyerhoff Scholars',
+      },
+      {
+        name: 'University of Maryland (College Park)',
+        programmes: 'Biology, Biochemistry, Neuroscience, Cell Biology',
+      },
+      {
+        name: 'Towson University',
+        programmes:
+          'Biology, Molecular Biology / Biochemistry / Bioinformatics, pre-health advising',
+      },
+    ],
+    timezoneSection:
+      'All live sessions are in Eastern Time. Standard Baltimore small-batch slot is 7:30 PM to 9:30 PM ET on weekday evenings, with 9:00 AM to 11:00 AM ET Saturday and Sunday options. This works around the typical Johns Hopkins late-afternoon lab and the NIH-style 8 AM to 5 PM research schedule. Senior Faculty 1:1 can be scheduled at any ET slot.',
+    demographicSection: {
+      heading: 'Howard County / Columbia / Ellicott City — the family planning conversation',
+      paragraphs: [
+        'Howard County — Columbia and Ellicott City in particular — has one of the highest South Asian household densities in the mid-Atlantic, sitting between Baltimore and the DC/NIH corridor. Many families have biotech, federal-lab, or healthcare connections that shape how they read the medical-school application process.',
+        'What we hear from Baltimore parents: (1) Johns Hopkins is the aspirational target and is among the most competitive medical schools in the country, so Bio/Biochem section precision matters; (2) UMBC (and its Meyerhoff pipeline) and the University of Maryland are strong in-state options; (3) NIH summer or post-bac research is often part of the plan and the MCAT timeline must fit around it. We structure the consultation around the research calendar and target school tier.',
+      ],
+    },
+    faqs: [
+      {
+        question: 'Johns Hopkins undergrad with active research — how do we fit MCAT prep?',
+        answer:
+          'Johns Hopkins MCB, Biophysics, and Neuroscience concentrators frequently carry 15 to 25 hours per week of research at Homewood or the East Baltimore medical campus. We split the timeline: Self-Paced async content review during the semester, then a concentrated Small-Batch + 1:1 block in the summer or during a gap year. Many Hopkins pre-meds take a gap year and sit the MCAT post-graduation, so the bulk of prep happens then.',
+      },
+      {
+        question: 'UMBC pre-meds, including Meyerhoff Scholars — how is the prep different?',
+        answer:
+          'UMBC pre-meds, including those in the Meyerhoff Scholars Program, typically have strong science foundations and structured research mentoring. We can run a full Small-Batch programme during the school year for students with more in-semester study time, focusing on AAMC passage strategy and biochemistry precision rather than ground-up content review.',
+      },
+      {
+        question: 'My family is in Columbia / Ellicott City — what is the planning conversation?',
+        answer:
+          'The consultation covers: (a) which undergrad (Johns Hopkins, UMBC, University of Maryland, Towson), which sets the course-load timing; (b) target school tier from Johns Hopkins School of Medicine through the in-state Maryland options; (c) whether an NIH summer or post-bac research slot is part of the timeline. For Howard County high school students targeting BS/MD tracks, planning starts junior year.',
+      },
+      {
+        question: 'University of Maryland or Towson pre-meds — can they join Baltimore sessions?',
+        answer:
+          'Yes — all sessions are online. University of Maryland (College Park) and Towson students join the same Eastern Time cohorts as Hopkins and UMBC pre-meds. The only practical difference is testing-center logistics, which we check during the diagnostic.',
+      },
+      {
+        question: 'How does Cerebrum compare to Baltimore-area MCAT prep providers?',
+        answer:
+          'Baltimore has the standard full-MCAT generalists ($2,500–$3,000 for all four sections) plus boutique tutors around Homewood and Charles Village at $150–$250/hour. Cerebrum is a biology-section specialist — Bio/Biochem only, AIIMS-trained faculty. Our Small-Batch is $999 vs generalist $2,700; ad-hoc 1:1 is $150/hour. Many Baltimore students pair us with a generalist for C/P and CARS.',
+      },
+    ],
+  },
+
+  cleveland: {
+    slug: 'cleveland',
+    city: 'Cleveland',
+    stateOrRegion: 'Cleveland Metro',
+    stateCode: 'OH',
+    timezone: 'Eastern Time',
+    timezoneShort: 'ET',
+    metaTitle: 'MCAT Biology Tutor Cleveland | Case Western, Cleveland State, Cleveland Clinic',
+    metaDescription:
+      'MCAT Bio/Biochem tutor for Cleveland pre-meds — Case Western Reserve, Cleveland State, Cleveland Clinic Lerner College of Medicine, CWRU School of Medicine. Biology specialists, ET evening slots. From $499.',
+    keywords: [
+      'MCAT Biology tutor Cleveland',
+      'MCAT Bio tutor Case Western',
+      'MCAT Biology tutor CWRU',
+      'MCAT Biology tutor Cleveland State',
+      'MCAT Biology tutor Cleveland Clinic Lerner',
+      'MCAT tutor Solon Ohio',
+      'MCAT tutor Westlake Ohio',
+      'MCAT Bio/Biochem tutor Cleveland',
+      'Indian American MCAT tutor Cleveland',
+      'online MCAT Biology coaching Cleveland',
+    ],
+    heroSubtitle:
+      'MCAT Bio/Biochem coaching for Case Western Reserve and Cleveland State pre-meds, anchored by the University Circle medical corridor — the CWRU School of Medicine and the Cleveland Clinic Lerner College of Medicine — and built around the Solon / Westlake / Strongsville South Asian community. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Eastern Time evening sessions, $499 to $1,499.',
+    whySection: {
+      heading: 'Why Cleveland is a clinical-research pre-med anchor',
+      paragraphs: [
+        'Cleveland’s pre-med ecosystem centers on University Circle, where Case Western Reserve University, the CWRU School of Medicine, the Cleveland Clinic Lerner College of Medicine, and University Hospitals cluster within walking distance. The Cleveland Clinic and University Hospitals give undergraduates unusually direct access to clinical research and shadowing.',
+        'Case Western Reserve is the dominant undergraduate feeder, with Cleveland State University adding a strong public pre-med base. The South Asian community concentrates in the eastern and western suburbs — Solon, Beachwood, Westlake, and Strongsville — where pre-med culture is well established and MCAT planning typically begins during sophomore year.',
+      ],
+    },
+    universities: [
+      {
+        name: 'Case Western Reserve University',
+        programmes: 'Biology, Biochemistry, Neuroscience, Systems Biology',
+      },
+      {
+        name: 'CWRU School of Medicine',
+        programmes: 'MD programme, University Circle research rotations, undergraduate research',
+      },
+      {
+        name: 'Cleveland Clinic Lerner College of Medicine',
+        programmes: 'Research-focused MD programme (CWRU), clinical research training',
+      },
+      {
+        name: 'Cleveland State University',
+        programmes: 'Biology, Molecular Biology, pre-medical track',
+      },
+      {
+        name: 'John Carroll University',
+        programmes: 'Biology, Biochemistry, pre-health professions advising',
+      },
+    ],
+    timezoneSection:
+      'All live sessions are in Eastern Time. Standard Cleveland small-batch slot is 7:30 PM to 9:30 PM ET on weekday evenings, with 9:00 AM to 11:00 AM ET Saturday and Sunday options. This works around the typical Case Western Reserve late-afternoon lab and University Circle clinical-research schedule. Senior Faculty 1:1 can be scheduled at any ET slot.',
+    demographicSection: {
+      heading: 'Solon / Beachwood / Westlake — the family planning conversation',
+      paragraphs: [
+        'The eastern suburbs (Solon, Beachwood, Pepper Pike) and the western suburbs (Westlake, Strongsville) have the highest South Asian household densities in Greater Cleveland, supported by the Cleveland Clinic, University Hospitals, and the regional healthcare and manufacturing economy. Pre-med families here plan MCAT preparation 12 to 18 months ahead.',
+        'What we hear from Cleveland parents: (1) Case Western Reserve and its University Circle medical institutions are the primary local targets, and the Cleveland Clinic Lerner research-MD track has a distinctive profile; (2) the proximity of the Cleveland Clinic and University Hospitals makes clinical and research experience easy to obtain, so the MCAT timeline often has to fit around active research; (3) families weigh in-state Ohio options alongside national programmes. We structure the consultation around the student’s research calendar and target school tier.',
+      ],
+    },
+    faqs: [
+      {
+        question:
+          'Case Western Reserve undergrad with University Circle research — how do we fit MCAT prep?',
+        answer:
+          'CWRU Biology, Biochemistry, and Neuroscience concentrators with active research at the CWRU School of Medicine, the Cleveland Clinic, or University Hospitals often carry 15 to 20 hours per week of lab or clinical-research time. We split the timeline: Self-Paced async content during the semester, then a concentrated Small-Batch + 1:1 block during summer or a gap year, with the bulk of prep in the lighter-load window.',
+      },
+      {
+        question:
+          'Cleveland Clinic Lerner College of Medicine — does the research-MD track change the prep?',
+        answer:
+          'The Lerner College of Medicine is a research-focused MD programme run with Case Western Reserve, and it still requires a competitive MCAT score. The Bio/Biochem coaching itself is the same; what differs is the application strategy and the way research experience is framed. We coach the section and let families handle the research-narrative side with their pre-med advising office.',
+      },
+      {
+        question: 'My family is in Solon / Westlake — what is the planning conversation?',
+        answer:
+          'The consultation covers: (a) which undergrad (Case Western Reserve, Cleveland State, John Carroll, or an out-of-area school), which sets the course-load timing; (b) target school tier from the CWRU and Lerner programmes through in-state Ohio options; (c) gap year or summer-after-junior-year timeline. For suburban high school students targeting BS/MD tracks, planning starts junior year.',
+      },
+      {
+        question: 'Cleveland State pre-meds — how is the prep different from Case Western Reserve?',
+        answer:
+          'Cleveland State pre-meds typically have lighter research loads and more in-semester study time than Case Western Reserve students, so we can often run a full Small-Batch programme during the school year. Cleveland State has a solid biology department, so the work is mostly AAMC passage strategy and biochemistry precision rather than ground-up content review.',
+      },
+      {
+        question: 'How does Cerebrum compare to Cleveland-area MCAT prep providers?',
+        answer:
+          'Cleveland has the standard full-MCAT generalists ($2,500–$3,000 for all four sections) plus University Circle and east-side boutique tutors at $150–$225/hour. Cerebrum is a biology-section specialist — Bio/Biochem only, AIIMS-trained faculty. Our Small-Batch is $999 vs generalist $2,700; ad-hoc 1:1 is $150/hour. Many Cleveland students pair us with a generalist for C/P and CARS.',
+      },
+    ],
+  },
+
+  'ann-arbor': {
+    slug: 'ann-arbor',
+    city: 'Ann Arbor',
+    stateOrRegion: 'Ann Arbor / Southeast Michigan',
+    stateCode: 'MI',
+    timezone: 'Eastern Time',
+    timezoneShort: 'ET',
+    metaTitle: 'MCAT Biology Tutor Ann Arbor | University of Michigan, Michigan Medicine',
+    metaDescription:
+      'MCAT Bio/Biochem tutor for Ann Arbor pre-meds — University of Michigan, Michigan Medicine, with nearby Wayne State. Biology specialists, ET evening slots. From $499.',
+    keywords: [
+      'MCAT Biology tutor Ann Arbor',
+      'MCAT Bio tutor University of Michigan',
+      'MCAT Biology tutor U of M',
+      'MCAT Biology tutor Michigan Medicine',
+      'MCAT Biology tutor Wayne State',
+      'MCAT tutor Novi Michigan',
+      'MCAT tutor Canton Michigan',
+      'MCAT Bio/Biochem tutor Michigan',
+      'Indian American MCAT tutor Ann Arbor',
+      'online MCAT Biology coaching Ann Arbor',
+    ],
+    heroSubtitle:
+      'MCAT Bio/Biochem coaching for University of Michigan pre-meds, anchored by Michigan Medicine in Ann Arbor, with nearby Wayne State University in the picture for Southeast Michigan families — built around the Novi / Canton / Northville South Asian community. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Eastern Time evening sessions, $499 to $1,499.',
+    whySection: {
+      heading: 'Why Ann Arbor is a flagship-university pre-med market',
+      paragraphs: [
+        'Ann Arbor is defined by the University of Michigan, one of the largest research universities in the country, and by Michigan Medicine — the university’s academic medical center and the University of Michigan Medical School. The concentration of research labs and the U-M Medical School in a single college town gives undergraduates exceptional access to bench and clinical research.',
+        'The University of Michigan is the dominant pre-med feeder, and nearby Wayne State University in Detroit adds a large urban pre-med base for Southeast Michigan students. The South Asian community concentrates in the western Wayne and Oakland County suburbs — Novi, Canton, Northville, and Troy — where pre-med culture is well established and MCAT planning typically begins during sophomore year.',
+      ],
+    },
+    universities: [
+      {
+        name: 'University of Michigan',
+        programmes:
+          'Molecular, Cellular & Developmental Biology; Biochemistry; Neuroscience; Cellular & Molecular Biomedical Science',
+      },
+      {
+        name: 'Michigan Medicine (U-M Medical School)',
+        programmes: 'MD programme, undergraduate research, academic medical center rotations',
+      },
+      {
+        name: 'Wayne State University (Detroit)',
+        programmes: 'Biological Sciences, Biochemistry, Wayne State School of Medicine pathway',
+      },
+      {
+        name: 'Eastern Michigan University',
+        programmes: 'Biology, Biochemistry, pre-medical advising',
+      },
+    ],
+    timezoneSection:
+      'All live sessions are in Eastern Time. Standard Ann Arbor small-batch slot is 7:30 PM to 9:30 PM ET on weekday evenings, with 9:00 AM to 11:00 AM ET Saturday and Sunday options. This works around the typical University of Michigan late-afternoon lab and Michigan Medicine research schedule. Senior Faculty 1:1 can be scheduled at any ET slot.',
+    demographicSection: {
+      heading: 'Novi / Canton / Northville — the family planning conversation',
+      paragraphs: [
+        'The western Wayne and Oakland County suburbs — Novi, Canton, Northville, and Troy — have the highest South Asian household densities in Southeast Michigan, supported by the automotive engineering and tech economy. These communities sit within a short drive of both Ann Arbor and Detroit, so families often weigh the University of Michigan against Wayne State. Pre-med planning typically starts 12 to 18 months ahead.',
+        'What we hear from Ann Arbor and Southeast Michigan parents: (1) the University of Michigan is the flagship in-state target and Michigan Medicine research is a common part of the profile, which compresses in-semester study time; (2) Wayne State is a strong urban-medicine option for Detroit-area families; (3) the MCAT timeline has to fit around active U-M research. We structure the consultation around the research calendar and target school tier.',
+      ],
+    },
+    faqs: [
+      {
+        question:
+          'University of Michigan undergrad with Michigan Medicine research — how do we fit MCAT prep?',
+        answer:
+          'U-M MCDB, Biochemistry, and Neuroscience concentrators with active research in Michigan Medicine or LSA labs often carry 15 to 25 hours per week of bench time on top of a full course load. We split the timeline: Self-Paced async content during the semester, then a concentrated Small-Batch + 1:1 block during summer or a gap year. Many U-M pre-meds take a gap year and sit the MCAT post-graduation.',
+      },
+      {
+        question: 'Wayne State pre-meds in Detroit — can they join Ann Arbor sessions?',
+        answer:
+          'Yes — all sessions are online, so Wayne State students join the same Eastern Time cohorts as University of Michigan pre-meds. Wayne State pre-meds often target the Wayne State School of Medicine and have strong urban clinical exposure; the Bio/Biochem coaching is the same, and we coordinate Detroit-area testing-center logistics during the diagnostic.',
+      },
+      {
+        question: 'My family is in Novi / Canton / Northville — what is the planning conversation?',
+        answer:
+          'The consultation covers: (a) which undergrad (University of Michigan, Wayne State, Eastern Michigan, or out-of-state), which sets the course-load timing; (b) target school tier from Michigan Medicine through Wayne State and other options; (c) gap year or summer-after-junior-year timeline. For suburban high school students targeting BS/MD tracks, planning starts junior year.',
+      },
+      {
+        question: 'How is the prep different for a U-M student versus a Wayne State student?',
+        answer:
+          'University of Michigan pre-meds usually start from a high content baseline after the MCDB and biochemistry sequences but have heavy research loads, so the work is passage strategy and scheduling around the lab. Wayne State pre-meds often have more in-semester study time, so a full Small-Batch programme during the school year is more feasible. We calibrate to the student’s course load and research commitments.',
+      },
+      {
+        question: 'How does Cerebrum compare to Ann Arbor-area MCAT prep providers?',
+        answer:
+          'Ann Arbor and Southeast Michigan have the standard full-MCAT generalists ($2,500–$3,000 for all four sections) plus campus-area boutique tutors at $150–$225/hour. Cerebrum is a biology-section specialist — Bio/Biochem only, AIIMS-trained faculty. Our Small-Batch is $999 vs generalist $2,700; ad-hoc 1:1 is $150/hour. Many Michigan students pair us with a generalist for C/P and CARS.',
+      },
+    ],
+  },
+
+  columbus: {
+    slug: 'columbus',
+    city: 'Columbus',
+    stateOrRegion: 'Columbus Metro',
+    stateCode: 'OH',
+    timezone: 'Eastern Time',
+    timezoneShort: 'ET',
+    metaTitle: 'MCAT Biology Tutor Columbus | Ohio State University, OSU College of Medicine',
+    metaDescription:
+      'MCAT Bio/Biochem tutor for Columbus pre-meds — Ohio State University and the OSU College of Medicine. Biology specialists, ET evening slots. From $499.',
+    keywords: [
+      'MCAT Biology tutor Columbus',
+      'MCAT Bio tutor Ohio State',
+      'MCAT Biology tutor OSU',
+      'MCAT Biology tutor Ohio State University',
+      'MCAT Biology tutor OSU College of Medicine',
+      'MCAT tutor Dublin Ohio',
+      'MCAT tutor Powell Ohio',
+      'MCAT Bio/Biochem tutor Columbus',
+      'Indian American MCAT tutor Columbus',
+      'online MCAT Biology coaching Columbus',
+    ],
+    heroSubtitle:
+      'MCAT Bio/Biochem coaching for Ohio State University pre-meds, anchored by the OSU College of Medicine and Wexner Medical Center — built around the Dublin / Powell / New Albany South Asian community. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Eastern Time evening sessions, $499 to $1,499.',
+    whySection: {
+      heading: 'Why Columbus is a major flagship-university pre-med market',
+      paragraphs: [
+        'Columbus is built around Ohio State University, one of the largest universities in the US, with a very large pre-med undergraduate population. The OSU College of Medicine and the Wexner Medical Center sit on the same campus, giving undergraduates direct access to research labs, clinical shadowing, and a major academic medical center.',
+        'Ohio State is the dominant pre-med feeder for the metro, producing a high volume of MCAT candidates each year. The South Asian community concentrates in the northern and northwestern suburbs — Dublin, Powell, New Albany, and Hilliard — where pre-med culture is well established and MCAT planning typically begins during sophomore year.',
+      ],
+    },
+    universities: [
+      {
+        name: 'Ohio State University',
+        programmes: 'Biology, Biochemistry, Neuroscience, Molecular Genetics, Microbiology',
+      },
+      {
+        name: 'OSU College of Medicine',
+        programmes:
+          'MD programme, Wexner Medical Center research rotations, undergraduate research',
+      },
+      {
+        name: 'Capital University',
+        programmes: 'Biology, Biochemistry, pre-medical advising',
+      },
+      {
+        name: 'Otterbein University',
+        programmes: 'Biology, Biochemistry & Molecular Biology, pre-health professions',
+      },
+    ],
+    timezoneSection:
+      'All live sessions are in Eastern Time. Standard Columbus small-batch slot is 7:30 PM to 9:30 PM ET on weekday evenings, with 9:00 AM to 11:00 AM ET Saturday and Sunday options. This works around the typical Ohio State late-afternoon lab and Wexner Medical Center research schedule. Senior Faculty 1:1 can be scheduled at any ET slot.',
+    demographicSection: {
+      heading: 'Dublin / Powell / New Albany — the family planning conversation',
+      paragraphs: [
+        'The northern and northwestern suburbs — Dublin, Powell, New Albany, and Hilliard — have the highest South Asian household densities in the Columbus metro, supported by the healthcare, insurance, and tech employers in the region. Pre-med culture is strong in the Dublin and Olentangy school systems. Pre-med families here plan MCAT preparation 12 to 18 months ahead.',
+        'What we hear from Columbus parents: (1) Ohio State is the primary target — in-state tuition and the OSU College of Medicine pipeline make it the clear first choice for many Ohio residents; (2) the Wexner Medical Center makes clinical and research experience accessible, so the MCAT timeline often has to fit around active research; (3) families weigh OSU against out-of-state national programmes. We structure the consultation around the student’s research calendar and target school tier.',
+      ],
+    },
+    faqs: [
+      {
+        question:
+          'Ohio State undergrad with Wexner Medical Center research — how do we fit MCAT prep?',
+        answer:
+          'Ohio State Biology, Biochemistry, and Neuroscience concentrators with active research in OSU College of Medicine or Wexner Medical Center labs often carry 12 to 20 hours per week of research time on top of a full course load. We split the timeline: Self-Paced async content during the semester, then a concentrated Small-Batch + 1:1 block during summer or a gap year, with the bulk of prep in the lighter-load window.',
+      },
+      {
+        question: 'OSU College of Medicine target — how should an Ohio State student plan?',
+        answer:
+          'The OSU College of Medicine is a competitive in-state target, and many Ohio State undergraduates aim to stay in the OSU system. Our coaching focuses on Bio/Biochem section optimization. Many Columbus students pair Cerebrum (Bio/Biochem specialist) with a generalist for C/P and CARS to build a competitive composite.',
+      },
+      {
+        question: 'My family is in Dublin / Powell — what is the planning conversation?',
+        answer:
+          'The consultation covers: (a) which undergrad (Ohio State, Capital, Otterbein, or out-of-state), which sets the course-load timing; (b) target school tier from the OSU College of Medicine through out-of-state options; (c) gap year or summer-after-junior-year timeline. For Dublin and Olentangy high school students targeting BS/MD tracks, planning starts junior year.',
+      },
+      {
+        question: 'Capital or Otterbein pre-meds — how is the prep different from Ohio State?',
+        answer:
+          'Capital and Otterbein pre-meds typically have smaller class sizes and lighter research loads than Ohio State students, so we can often run a full Small-Batch programme during the school year. Both have solid biology departments; the work is mostly AAMC passage strategy and biochemistry precision. We help smaller-college students supplement with OSU or Wexner research access where helpful.',
+      },
+      {
+        question: 'How does Cerebrum compare to Columbus-area MCAT prep providers?',
+        answer:
+          'Columbus has the standard full-MCAT generalists ($2,500–$3,000 for all four sections) plus campus-area boutique tutors at $150–$200/hour. Cerebrum is a biology-section specialist — Bio/Biochem only, AIIMS-trained faculty. Our Small-Batch is $999 vs generalist $2,700; ad-hoc 1:1 is $150/hour. Many Columbus students pair us with a generalist for C/P and CARS.',
+      },
+    ],
+  },
+
+  'st-louis': {
+    slug: 'st-louis',
+    city: 'St. Louis',
+    stateOrRegion: 'St. Louis Metro',
+    stateCode: 'MO',
+    timezone: 'Central Time',
+    timezoneShort: 'CT',
+    metaTitle: 'MCAT Biology Tutor St. Louis | WashU, Saint Louis University, WashU SOM',
+    metaDescription:
+      'MCAT Bio/Biochem tutor for St. Louis pre-meds — Washington University in St. Louis, Saint Louis University, WashU School of Medicine. Biology specialists, CT evening slots. From $499.',
+    keywords: [
+      'MCAT Biology tutor St. Louis',
+      'MCAT Bio tutor WashU',
+      'MCAT Biology tutor Washington University in St. Louis',
+      'MCAT Biology tutor Saint Louis University',
+      'MCAT Biology tutor SLU',
+      'MCAT tutor Chesterfield MO',
+      'MCAT tutor Ballwin MO',
+      'MCAT Bio/Biochem tutor St. Louis',
+      'Indian American MCAT tutor St. Louis',
+      'online MCAT Biology coaching St. Louis',
+    ],
+    heroSubtitle:
+      'MCAT Bio/Biochem coaching for Washington University in St. Louis and Saint Louis University pre-meds, anchored by the WashU School of Medicine in the Central West End medical corridor — built around the Chesterfield / Ballwin / West County South Asian community. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Central Time evening sessions, $499 to $1,499.',
+    whySection: {
+      heading: 'Why St. Louis is a research-intensive pre-med market',
+      paragraphs: [
+        'St. Louis pairs two strong pre-med universities with a major academic medical corridor. Washington University in St. Louis is one of the most research-intensive private universities in the country, and the WashU School of Medicine, with Barnes-Jewish Hospital and St. Louis Children’s Hospital in the Central West End, gives undergraduates exceptional bench and clinical-research access.',
+        'Saint Louis University, a Jesuit institution with its own School of Medicine, adds a substantial pre-med undergraduate base. The South Asian community concentrates in West County — Chesterfield, Ballwin, Wildwood, and Town and Country — where pre-med culture is well established and MCAT planning typically begins during sophomore year.',
+      ],
+    },
+    universities: [
+      {
+        name: 'Washington University in St. Louis',
+        programmes: 'Biology, Biochemistry, Neuroscience, Biomedical Engineering',
+      },
+      {
+        name: 'WashU School of Medicine',
+        programmes: 'MD programme, Central West End research rotations, undergraduate research',
+      },
+      {
+        name: 'Saint Louis University (SLU)',
+        programmes: 'Biology, Biochemistry, Neuroscience (SLU School of Medicine pathway)',
+      },
+      {
+        name: 'University of Missouri–St. Louis (UMSL)',
+        programmes: 'Biology, Biochemistry & Biotechnology, pre-medical advising',
+      },
+    ],
+    timezoneSection:
+      'All live sessions are in Central Time. Standard St. Louis small-batch slot is 7:00 PM to 9:00 PM CT on weekday evenings, with 9:00 AM to 11:00 AM CT Saturday and Sunday options. This works around the typical Washington University late-afternoon lab and Central West End clinical-research schedule. Senior Faculty 1:1 can be scheduled at any CT slot.',
+    demographicSection: {
+      heading: 'Chesterfield / Ballwin / West County — the family planning conversation',
+      paragraphs: [
+        'West County — Chesterfield, Ballwin, Wildwood, and Town and Country — has the highest South Asian household density in the St. Louis metro, supported by the healthcare, biotech, and engineering employers in the region. Pre-med culture is strong in the Rockwood and Parkway school systems. Pre-med families here plan MCAT preparation 12 to 18 months ahead.',
+        'What we hear from St. Louis parents: (1) Washington University in St. Louis is the aspirational target and is among the most research-intensive and competitive programmes in the country, so Bio/Biochem precision matters; (2) Saint Louis University is a strong option with its own School of Medicine pathway; (3) the WashU School of Medicine and the Central West End hospitals make research experience accessible, so the MCAT timeline often has to fit around active research. We structure the consultation around the research calendar and target school tier.',
+      ],
+    },
+    faqs: [
+      {
+        question:
+          'Washington University in St. Louis undergrad with research — how do we fit MCAT prep?',
+        answer:
+          'WashU Biology, Biochemistry, and Neuroscience concentrators with active research at the WashU School of Medicine or Central West End hospitals often carry 15 to 25 hours per week of bench time on top of a full course load. We split the timeline: Self-Paced async content during the semester, then a concentrated Small-Batch + 1:1 block during summer or a gap year. Many WashU pre-meds take a gap year and sit the MCAT post-graduation.',
+      },
+      {
+        question: 'Saint Louis University pre-meds — how is the prep different from WashU?',
+        answer:
+          'Saint Louis University pre-meds typically have more in-semester study time than WashU students and a clear in-system pathway toward the SLU School of Medicine. We can often run a full Small-Batch programme during the school year for SLU students. SLU has a strong biology department, so the work is mostly AAMC passage strategy and biochemistry precision.',
+      },
+      {
+        question: 'My family is in Chesterfield / Ballwin — what is the planning conversation?',
+        answer:
+          'The consultation covers: (a) which undergrad (Washington University in St. Louis, Saint Louis University, UMSL, or out-of-state), which sets the course-load timing; (b) target school tier from the WashU and SLU programmes through out-of-state options; (c) gap year or summer-after-junior-year timeline. For Rockwood and Parkway high school students targeting BS/MD tracks, planning starts junior year.',
+      },
+      {
+        question: 'UMSL pre-meds — can they join St. Louis sessions?',
+        answer:
+          'Yes — all sessions are online, so University of Missouri–St. Louis students join the same Central Time cohorts as WashU and SLU pre-meds. UMSL pre-meds typically have more in-semester study time, so a full Small-Batch programme during the school year is feasible. We coordinate testing-center logistics during the diagnostic.',
+      },
+      {
+        question: 'How does Cerebrum compare to St. Louis-area MCAT prep providers?',
+        answer:
+          'St. Louis has the standard full-MCAT generalists ($2,500–$3,000 for all four sections) plus Central West End and West County boutique tutors at $150–$225/hour. Cerebrum is a biology-section specialist — Bio/Biochem only, AIIMS-trained faculty. Our Small-Batch is $999 vs generalist $2,700; ad-hoc 1:1 is $150/hour. Many St. Louis students pair us with a generalist for C/P and CARS.',
+      },
+    ],
+  },
+
   // ─── CANADA ─────────────────────────────────────────────────────────────────
   toronto: {
     slug: 'toronto',

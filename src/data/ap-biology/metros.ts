@@ -2352,6 +2352,389 @@ export const apBiologyMetros: APBiologyMetro[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // PHILADELPHIA
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'philadelphia',
+    cityName: 'Philadelphia',
+    region: 'Philadelphia + Main Line + Magnet High Schools',
+    timezone: 'ET (Eastern)',
+    timezoneIana: 'America/New_York',
+    addressRegion: 'PA',
+    heroBlurb:
+      'Philadelphia splits its strongest AP Biology talent between the suburban Main Line and the city magnet schools. Out along the R5, Lower Merion, Harriton, Radnor, and Conestoga (in Tredyffrin) run demanding AP Bio tracks; inside the city, Julia R. Masterman, Central High School, and the Girard Academic Music Program (GAMP) pull selective-admission students from every neighborhood. Our Philadelphia tutors keep students on the AP-5 path while leaving runway for the local pre-med pipelines at Penn, Drexel, and Jefferson.',
+    positioningBlurb:
+      'Main Line students typically carry a heavy AP load and need FRQ feedback their school sections rarely have time for; Masterman and Central students move fast but commute long hours across the city and value evening flexibility. We schedule 1:1 sessions in ET evenings and weekends, coach Campbell Biology end-to-end, and overlay the College Board FRQ rubric — the pattern that turns a strong school grade into a 5.',
+    schools: [
+      'Lower Merion High School',
+      'Harriton High School',
+      'Radnor High School',
+      'Conestoga High School',
+      'Julia R. Masterman School',
+      'Central High School',
+      'Girard Academy Music Program (GAMP)',
+      'Friends Central School',
+      'The Haverford School',
+      'The Episcopal Academy',
+      'The Baldwin School',
+      'Germantown Friends School',
+      'Council Rock High School South',
+      'Unionville High School',
+    ],
+    faqs: [
+      {
+        question: 'What is the best AP Biology tutor in Philadelphia?',
+        answer:
+          'Cerebrum offers 1:1 AP Biology tutoring in Eastern Time evenings and weekends with AIIMS-trained biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. Our Philadelphia roster spans the Main Line (Lower Merion, Harriton, Radnor, Conestoga) and the city magnets (Masterman, Central, GAMP). AP annual programmes start at $2,500/yr; 1:1 from $40/hr.',
+      },
+      {
+        question: 'How does AP Bio tutoring fit a Masterman or Central High School schedule?',
+        answer:
+          'Magnet-school students often commute long distances across Philadelphia and have packed weekdays. We schedule 90-minute sessions twice a week in ET evenings (7–9 PM) or weekend mornings, and we calibrate pace to your school’s AP Bio teacher so we reinforce rather than duplicate what is taught in class.',
+      },
+      {
+        question: 'Do Main Line students at Lower Merion or Conestoga really need a tutor?',
+        answer:
+          'Lower Merion, Harriton, Radnor, and Conestoga all run strong, competitive AP Biology sections. A high school grade does not guarantee a 5 — the AP exam tests time-pressured MCQ and FRQ rubric skills that classroom assessments often under-drill. That FRQ gap is exactly what our 1:1 sessions close.',
+      },
+      {
+        question: 'Does AP Biology help with Penn, Drexel, or Jefferson pre-med plans?',
+        answer:
+          'A 5 in AP Biology is a strong signal of biology readiness for the competitive pre-health tracks at Penn, Drexel, and Thomas Jefferson University. AP Bio credit is rarely accepted by medical schools as a prerequisite — students still take college biology — so we frame AP-5 as the foundation, not the substitute, for the pre-med pipeline.',
+      },
+      {
+        question: 'Do you offer in-person tutoring on the Main Line or in Center City?',
+        answer:
+          'We coach 100% online via live video. This lets us match the best biology specialist to each student regardless of whether they are in Bryn Mawr, Wayne, or Center City. Families consistently tell us video 1:1 with a senior specialist beats in-person with a generalist.',
+      },
+      {
+        question: 'How early should a Philadelphia student start AP Bio tutoring?',
+        answer:
+          'For a May exam, the ideal start is August or September of the academic year. Crash plans (8–12 weeks pre-exam) are possible but limit FRQ depth. Students aiming for USABO as well benefit from an October start to leave runway for the February Open.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // LONG ISLAND
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'long-island',
+    cityName: 'Long Island',
+    region: 'Nassau + Western Suffolk Counties',
+    timezone: 'ET (Eastern)',
+    timezoneIana: 'America/New_York',
+    addressRegion: 'NY',
+    heroBlurb:
+      'Long Island is one of the most AP-intensive suburban markets in the country. The Nassau North Shore — Jericho, Syosset, Great Neck North and South, Roslyn, Manhasset — and Suffolk’s Half Hollow Hills consistently field deep AP Biology cohorts, and the region’s research culture (Intel/Regeneron Science Talent Search roots, Cold Spring Harbor’s DNA Learning Center) raises the bar on biology depth. Our Long Island tutors keep students on the AP-5 path while supporting the science-research electives many of these districts run.',
+    positioningBlurb:
+      'Long Island students often pair AP Biology with a multi-year science-research sequence, so they need a tutor who can engage with real lab questions, not just the textbook. Our senior faculty do both. We schedule 1:1 sessions in ET evenings and weekends around research and SAT commitments, coach Campbell Biology end-to-end, and drill the College Board FRQ rubric that separates a 4 from a 5.',
+    schools: [
+      'Jericho Senior High School',
+      'Syosset High School',
+      'Great Neck North High School',
+      'Great Neck South High School',
+      'Roslyn High School',
+      'Manhasset Secondary School',
+      'Half Hollow Hills High School East',
+      'Half Hollow Hills High School West',
+      'Herricks High School',
+      'Paul D. Schreiber High School (Port Washington)',
+      'Cold Spring Harbor High School',
+      'Commack High School',
+      'Ward Melville High School',
+      'Friends Academy',
+    ],
+    faqs: [
+      {
+        question: 'What is the best AP Biology tutor on Long Island?',
+        answer:
+          'Cerebrum offers 1:1 AP Biology tutoring in Eastern Time evenings and weekends with AIIMS-trained biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. Our Long Island roster spans the Nassau North Shore (Jericho, Syosset, Great Neck, Roslyn, Manhasset) and Suffolk (Half Hollow Hills, Ward Melville). AP annual programmes start at $2,500/yr; 1:1 from $40/hr.',
+      },
+      {
+        question: 'How does AP Bio tutoring fit a Jericho or Syosset schedule?',
+        answer:
+          'Students in high-AP districts like Jericho, Syosset, and Great Neck often carry a heavy AP load plus a science-research sequence. We schedule 90-minute sessions twice a week in ET evenings (7–9 PM) or weekend mornings, and we calibrate pace to your school’s AP Bio teacher so we reinforce rather than duplicate classwork.',
+      },
+      {
+        question:
+          'Can you support a science-research student at Half Hollow Hills or Cold Spring Harbor?',
+        answer:
+          'Yes. Many Long Island students run a multi-year research sequence alongside AP Biology. Our senior faculty engage with the technical content — gel reads, primer design, qPCR data — and we adjust AP Bio pacing around lab and competition deadlines (Regeneron STS, JSHS).',
+      },
+      {
+        question:
+          'Is AP Biology worth it if my child already has high grades at Roslyn or Manhasset?',
+        answer:
+          'A strong school grade does not guarantee a 5 — the AP exam tests time-pressured MCQ and FRQ rubric skills that classroom assessments often under-drill. We regularly see students with school As score a 3 or 4 because they did not drill FRQ. That is the gap our 1:1 sessions close.',
+      },
+      {
+        question: 'Do you offer in-person tutoring in Nassau or Suffolk?',
+        answer:
+          'We coach 100% online via live video. This lets us match the best biology specialist to each student regardless of which town they are in. Families consistently tell us video 1:1 with a senior specialist beats in-person with a generalist.',
+      },
+      {
+        question: 'How early should a Long Island student start AP Bio tutoring?',
+        answer:
+          'For a May exam, the ideal start is August or September of the academic year. Students balancing a research sequence benefit from an even earlier start so AP review does not collide with competition season. Crash plans (8–12 weeks) are possible but limit FRQ depth.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // CONNECTICUT (FAIRFIELD COUNTY)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'connecticut',
+    cityName: 'Connecticut',
+    region: 'Fairfield County + Gold Coast',
+    timezone: 'ET (Eastern)',
+    timezoneIana: 'America/New_York',
+    addressRegion: 'CT',
+    heroBlurb:
+      'Fairfield County — Connecticut’s Gold Coast — runs some of the best-resourced public high schools in the Northeast. Greenwich High School, Staples (Westport), Darien, New Canaan, Wilton, and Ridgefield all field strong AP Biology sections, and the corridor’s proximity to NYC means many families also weigh USABO and BS/MD pathways. Our Connecticut tutors keep students on the AP-5 path while supporting the heavy multi-AP loads typical of these districts.',
+    positioningBlurb:
+      'Fairfield County students often take 8+ APs across junior and senior year and need FRQ feedback their crowded school sections cannot always provide. We schedule 1:1 sessions in ET evenings and weekends around the demanding athletics and activities calendars common in Greenwich, Darien, and New Canaan, coach Campbell Biology end-to-end, and drill the College Board FRQ rubric that produces 5-scorers.',
+    schools: [
+      'Greenwich High School',
+      'Staples High School (Westport)',
+      'Darien High School',
+      'New Canaan High School',
+      'Wilton High School',
+      'Ridgefield High School',
+      'Weston High School',
+      'Fairfield Warde High School',
+      'Fairfield Ludlowe High School',
+      'Brunswick School',
+      'Greenwich Academy',
+      'King School (Stamford)',
+      'St. Luke’s School (New Canaan)',
+      'Choate Rosemary Hall',
+    ],
+    faqs: [
+      {
+        question: 'What is the best AP Biology tutor in Fairfield County, Connecticut?',
+        answer:
+          'Cerebrum offers 1:1 AP Biology tutoring in Eastern Time evenings and weekends with AIIMS-trained biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. Our Connecticut roster spans Greenwich, Staples (Westport), Darien, New Canaan, Wilton, and Ridgefield. AP annual programmes start at $2,500/yr; 1:1 from $40/hr.',
+      },
+      {
+        question: 'How does AP Bio tutoring fit a Greenwich or Staples schedule?',
+        answer:
+          'Students in Greenwich, Westport, Darien, and New Canaan typically carry a heavy AP load plus demanding athletics and activities. We schedule 90-minute sessions twice a week in ET evenings (7–9 PM) or weekend mornings, and we calibrate pace to your school’s AP Bio teacher so we reinforce rather than duplicate classwork.',
+      },
+      {
+        question: 'Do New Canaan or Darien students really need an AP Bio tutor?',
+        answer:
+          'Darien, New Canaan, Wilton, and Ridgefield all run competitive AP Biology sections. A strong school grade does not guarantee a 5 — the AP exam tests time-pressured MCQ and FRQ rubric skills that classroom assessments often under-drill. That FRQ gap is exactly what our 1:1 sessions close.',
+      },
+      {
+        question:
+          'Does AP Biology help with Yale or competitive pre-med admissions from Connecticut?',
+        answer:
+          'A 5 in AP Biology is a strong signal of biology readiness for competitive pre-health tracks. AP Bio credit is rarely accepted by medical schools as a prerequisite — students still take college biology — so we frame AP-5 as the foundation, not the substitute, for the pre-med pipeline. For students who also want USABO, we run an integrated track.',
+      },
+      {
+        question: 'Do you offer in-person tutoring in Greenwich or Westport?',
+        answer:
+          'We coach 100% online via live video. This lets us match the best biology specialist to each student regardless of which Fairfield County town they are in. Families consistently tell us video 1:1 with a senior specialist beats in-person with a generalist.',
+      },
+      {
+        question: 'How early should a Connecticut student start AP Bio tutoring?',
+        answer:
+          'For a May exam, the ideal start is August or September of the academic year. Crash plans (8–12 weeks pre-exam) are possible but limit FRQ depth. Students also targeting USABO benefit from an October start to leave runway for the February Open.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // COLUMBUS (OH)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'columbus',
+    cityName: 'Columbus',
+    region: 'Central Ohio + Northern Suburbs',
+    timezone: 'ET (Eastern)',
+    timezoneIana: 'America/New_York',
+    addressRegion: 'OH',
+    pricingTier: 'standard',
+    heroBlurb:
+      'Central Ohio’s strongest AP Biology talent clusters in the northern suburbs of Columbus. Upper Arlington, Dublin Coffman and Dublin Jerome, Olentangy Liberty, Thomas Worthington, and New Albany all run rigorous AP Bio sections, and the gravity of Ohio State’s medical and research campus shapes how local families think about pre-med. Our Columbus tutors keep students on the AP-5 path while aligning to those districts’ AP calendars.',
+    positioningBlurb:
+      'Columbus-area AP Bio students often have strong classroom instruction but limited 1:1 FRQ feedback. We add that layer: Campbell Biology coached end-to-end plus the College Board FRQ rubric drilled against past exams. Sessions run in ET evenings and weekends — the same time zone as the school day — so there is no awkward scheduling around the East Coast.',
+    schools: [
+      'Upper Arlington High School',
+      'Dublin Coffman High School',
+      'Dublin Jerome High School',
+      'Olentangy Liberty High School',
+      'Thomas Worthington High School',
+      'Worthington Kilbourne High School',
+      'New Albany High School',
+      'Hilliard Davidson High School',
+      'Bexley High School',
+      'Columbus Academy',
+      'Wellington School',
+      'Columbus School for Girls',
+    ],
+    faqs: [
+      {
+        question: 'What is the best AP Biology tutor in Columbus, Ohio?',
+        answer:
+          'Cerebrum offers 1:1 AP Biology tutoring in Eastern Time evenings and weekends with AIIMS-trained biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. Our Columbus roster spans the northern suburbs — Upper Arlington, Dublin, Olentangy, Worthington, and New Albany. AP annual programmes start at $2,500/yr; 1:1 from $40/hr.',
+      },
+      {
+        question: 'How does AP Bio tutoring fit a Dublin or Upper Arlington schedule?',
+        answer:
+          'Students in Dublin Coffman, Dublin Jerome, Upper Arlington, and Olentangy Liberty often carry a heavy AP load alongside activities. We schedule 90-minute sessions twice a week in ET evenings (7–9 PM) or weekend mornings, and we calibrate pace to your school’s AP Bio teacher so we reinforce rather than duplicate classwork.',
+      },
+      {
+        question: 'Do strong students at New Albany or Thomas Worthington need a tutor?',
+        answer:
+          'New Albany, Thomas Worthington, and the Dublin schools all run competitive AP Biology sections. A strong school grade does not guarantee a 5 — the AP exam tests time-pressured MCQ and FRQ rubric skills that classroom assessments often under-drill. That FRQ gap is exactly what our 1:1 sessions close.',
+      },
+      {
+        question: 'Does AP Biology help with Ohio State pre-med or BS/MD plans?',
+        answer:
+          'A 5 in AP Biology is a strong signal of biology readiness for competitive pre-health tracks, including Ohio State’s. AP Bio credit is rarely accepted by medical schools as a prerequisite — students still take college biology — so we frame AP-5 as the foundation, not the substitute, for the pre-med pipeline.',
+      },
+      {
+        question: 'Do you offer in-person tutoring in Columbus?',
+        answer:
+          'We coach 100% online via live video. This lets us match the best biology specialist to each student regardless of which suburb they are in. Families consistently tell us video 1:1 with a senior specialist beats in-person with a generalist.',
+      },
+      {
+        question: 'How early should a Columbus student start AP Bio tutoring?',
+        answer:
+          'For a May exam, the ideal start is August or September of the academic year. Crash plans (8–12 weeks pre-exam) are possible but limit FRQ depth.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // ANN ARBOR (MI)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'ann-arbor',
+    cityName: 'Ann Arbor',
+    region: 'Ann Arbor + Washtenaw County',
+    timezone: 'ET (Eastern)',
+    timezoneIana: 'America/Detroit',
+    addressRegion: 'MI',
+    pricingTier: 'standard',
+    heroBlurb:
+      'Ann Arbor is a university town with an unusually research-literate high school population. Pioneer, Huron, and Skyline (the three Ann Arbor public highs), the independent Greenhills School, and the project-based Community High School all run strong AP Biology pathways, and the gravity of the University of Michigan’s medical and research campus shapes how local families approach biology. Our Ann Arbor tutors keep students on the AP-5 path while engaging with the lab questions many of these students bring back from U-M.',
+    positioningBlurb:
+      'Many Ann Arbor AP Bio students are connected to University of Michigan research through parents or summer programmes, so they need a tutor who can engage with real lab content, not just the textbook. Our senior faculty do both. We schedule 1:1 sessions in ET evenings and weekends around school and research, coach Campbell Biology end-to-end, and drill the College Board FRQ rubric.',
+    schools: [
+      'Pioneer High School',
+      'Huron High School',
+      'Skyline High School',
+      'Greenhills School',
+      'Community High School',
+      'Father Gabriel Richard High School',
+      'Saline High School',
+      'Dexter High School',
+      'Pinckney Community High School',
+      'Washtenaw International High School',
+    ],
+    faqs: [
+      {
+        question: 'What is the best AP Biology tutor in Ann Arbor?',
+        answer:
+          'Cerebrum offers 1:1 AP Biology tutoring in Eastern Time evenings and weekends with AIIMS-trained biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. Our Ann Arbor roster spans Pioneer, Huron, Skyline, Greenhills, and Community High School. AP annual programmes start at $2,500/yr; 1:1 from $40/hr.',
+      },
+      {
+        question: 'How does AP Bio tutoring fit a Pioneer or Huron schedule?',
+        answer:
+          'Pioneer, Huron, and Skyline students often carry a heavy AP load plus activities and, frequently, University of Michigan research connections. We schedule 90-minute sessions twice a week in ET evenings (7–9 PM) or weekend mornings, and we calibrate pace to your school’s AP Bio teacher so we reinforce rather than duplicate classwork.',
+      },
+      {
+        question:
+          'Can you support a research-active student connected to the University of Michigan?',
+        answer:
+          'Yes. Many Ann Arbor students work in or around U-M labs. Our senior faculty engage with the technical content — gel reads, plasmid maps, qPCR data — and adjust AP Bio pacing around lab hours, while keeping the May exam on track.',
+      },
+      {
+        question: 'Is AP Biology worth it for a strong Greenhills or Community High student?',
+        answer:
+          'A strong school grade does not guarantee a 5 — the AP exam tests time-pressured MCQ and FRQ rubric skills that classroom assessments often under-drill. Project-based programmes like Community High build excellent conceptual depth but lighter timed-exam practice; that is exactly the gap our 1:1 sessions close.',
+      },
+      {
+        question: 'Do you offer in-person tutoring in Ann Arbor?',
+        answer:
+          'We coach 100% online via live video. This lets us match the best biology specialist to each student regardless of location. Families consistently tell us video 1:1 with a senior specialist beats in-person with a generalist.',
+      },
+      {
+        question: 'How early should an Ann Arbor student start AP Bio tutoring?',
+        answer:
+          'For a May exam, the ideal start is August or September of the academic year. Students balancing a research commitment benefit from an even earlier start. Crash plans (8–12 weeks) are possible but limit FRQ depth.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // NASHVILLE (TN)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'nashville',
+    cityName: 'Nashville',
+    region: 'Nashville + Williamson County',
+    timezone: 'CT (Central)',
+    timezoneIana: 'America/Chicago',
+    addressRegion: 'TN',
+    pricingTier: 'standard',
+    heroBlurb:
+      'Nashville pairs selective public magnets with strong independent and suburban schools. Hume-Fogg Academic Magnet and Martin Luther King Jr. Magnet (Pearl-Cohn) draw the city’s top academic students, the University School of Nashville anchors the independent side, and Ravenwood in Williamson County leads the fast-growing southern suburbs. With Vanderbilt’s medical campus in the city, pre-med ambition runs high. Our Nashville tutors keep students on the AP-5 path while aligning to those schools’ AP calendars.',
+    positioningBlurb:
+      'Nashville’s magnet students (Hume-Fogg, MLK) move fast but commute across the city and value evening flexibility, while Williamson County families at Ravenwood often pair AP Bio with a heavy activities load. We schedule 1:1 sessions in Central Time evenings and weekends, coach Campbell Biology end-to-end, and drill the College Board FRQ rubric that turns a strong school grade into a 5.',
+    schools: [
+      'Hume-Fogg Academic Magnet High School',
+      'Martin Luther King Jr. Magnet School',
+      'University School of Nashville',
+      'Ravenwood High School',
+      'Montgomery Bell Academy',
+      'Harpeth Hall School',
+      'Brentwood High School',
+      'Franklin High School',
+      'John Overton High School',
+      'Father Ryan High School',
+      'Battle Ground Academy',
+      'Independence High School',
+    ],
+    faqs: [
+      {
+        question: 'What is the best AP Biology tutor in Nashville?',
+        answer:
+          'Cerebrum offers 1:1 AP Biology tutoring in Central Time evenings and weekends with AIIMS-trained biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. Our Nashville roster spans the magnets (Hume-Fogg, MLK), University School of Nashville, and Williamson County (Ravenwood, Brentwood, Franklin). AP annual programmes start at $2,500/yr; 1:1 from $40/hr.',
+      },
+      {
+        question: 'How does AP Bio tutoring fit a Hume-Fogg or MLK Magnet schedule?',
+        answer:
+          'Magnet-school students often commute across Nashville and have packed weekdays. We schedule 90-minute sessions twice a week in Central Time evenings (7–9 PM) or weekend mornings, and we calibrate pace to your school’s AP Bio teacher so we reinforce rather than duplicate classwork.',
+      },
+      {
+        question: 'Do Ravenwood or Brentwood students in Williamson County need a tutor?',
+        answer:
+          'Ravenwood, Brentwood, and Franklin all run competitive AP Biology sections in fast-growing Williamson County. A strong school grade does not guarantee a 5 — the AP exam tests time-pressured MCQ and FRQ rubric skills that classroom assessments often under-drill. That FRQ gap is exactly what our 1:1 sessions close.',
+      },
+      {
+        question: 'Does AP Biology help with Vanderbilt or competitive pre-med plans?',
+        answer:
+          'A 5 in AP Biology is a strong signal of biology readiness for competitive pre-health tracks, including Vanderbilt’s. AP Bio credit is rarely accepted by medical schools as a prerequisite — students still take college biology — so we frame AP-5 as the foundation, not the substitute, for the pre-med pipeline.',
+      },
+      {
+        question: 'Do you offer in-person tutoring in Nashville or Franklin?',
+        answer:
+          'We coach 100% online via live video. This lets us match the best biology specialist to each student regardless of whether they are in Nashville proper or Williamson County. Families consistently tell us video 1:1 with a senior specialist beats in-person with a generalist.',
+      },
+      {
+        question: 'How early should a Nashville student start AP Bio tutoring?',
+        answer:
+          'For a May exam, the ideal start is August or September of the academic year. Crash plans (8–12 weeks pre-exam) are possible but limit FRQ depth.',
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup metro by slug. */
