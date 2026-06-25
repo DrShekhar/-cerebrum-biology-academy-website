@@ -12,7 +12,7 @@ import {
   Users,
   Phone,
 } from 'lucide-react'
-import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { trackWhatsAppClick } from '@/lib/whatsapp/tracking'
 
 const WHATSAPP_NUMBER = '918826444334'
 const DISPLAY_NUMBER = '+91 88264 44334'
@@ -71,7 +71,7 @@ export function WhatsAppQRModalContent({
 
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(whatsappUrl)}&bgcolor=ffffff&color=128C7E&margin=10`
 
-  const handleWhatsAppWeb = useCallback(async () => {
+  const handleWhatsAppWeb = useCallback(() => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       ;(window as any).gtag('event', 'qr_modal_whatsapp_web', {
         event_category: 'conversion',
@@ -79,13 +79,14 @@ export function WhatsAppQRModalContent({
         source: `${source}-web`,
       })
     }
-    await trackAndOpenWhatsApp({
-      source: `${source}-web`,
-      message,
-      campaign: `${source}-web`,
-    })
+    // Log the click (fire-and-forget) — do NOT call trackAndOpenWhatsApp here:
+    // on desktop that re-dispatches the modal event (re-opening this very modal)
+    // instead of opening WhatsApp Web. Open the wa.me URL directly so the chat
+    // to 918826444334 actually opens with the prefilled message.
+    void trackWhatsAppClick({ source: `${source}-web`, message }).catch(() => {})
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
     onClose()
-  }, [source, message, onClose])
+  }, [source, message, whatsappUrl, onClose])
 
   const copyWhatsAppLink = useCallback(() => {
     navigator.clipboard.writeText(whatsappUrl).then(() => {
