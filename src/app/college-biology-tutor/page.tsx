@@ -164,6 +164,21 @@ const FAQS = [
       'Live online, scheduled around your lectures and labs in your own time zone (ET/CT/MT/PT, GMT/BST, IST or anywhere), with every session recorded. 1:1 and small-batch options.',
   },
   {
+    question: 'How do I pass college intro biology / Bio 101?',
+    answer:
+      'Passing — and beating — Bio 101 is about converting a fast 300-person lecture into genuine understanding, then keeping pace with the syllabus. Our method: a biology specialist re-teaches each topic clearly (cells, molecular biology, metabolism, genetics, physiology), we sync a week-by-week plan to your course and textbook, drill your professor’s problem-set and exam style, and review every midterm against an error log. The goal is not just a pass but the deep understanding the MCAT later assumes. Live online in your time zone, free trial first.',
+  },
+  {
+    question: 'Can you tutor Anatomy & Physiology and Genetics too?',
+    answer:
+      'Yes. Beyond General/Intro Biology we coach Anatomy & Physiology (A&P), Genetics, Cell & Molecular Biology and Biochemistry — the core pre-med biology sequence — to your specific course and textbook. The same AIIMS-trained faculty teach all of them, so the understanding compounds across courses instead of restarting each term.',
+  },
+  {
+    question: 'Why is my pre-med GPA dropping in intro bio, and how do you fix it?',
+    answer:
+      'Introductory biology is often deliberately built as a weed-out course — large classes, fast pacing, and exams that punish surface memorisation — so even strong students can see their science (BCPM) GPA slip. We fix it by closing the conceptual gaps a lecture hall can’t, syncing a clear plan to your syllabus, drilling your exact exam and problem-set style, and teaching for the lasting understanding that protects the GPA now and makes the MCAT far easier later. Live online in your time zone, free trial first.',
+  },
+  {
     question: 'How do I start?',
     answer:
       'Book a free trial. Tell us your course, university and country, and we match you to the right tutor and time-zone slot — for students of any nationality.',
@@ -182,7 +197,7 @@ export default function CollegeBiologyTutorPage() {
     inLanguage: 'en',
     educationalLevel: 'Undergraduate (introductory / general biology, pre-med prerequisite)',
     provider: { '@id': `${SITE_URL}/#organization` },
-    areaServed: 'Worldwide',
+    areaServed: ['United States', 'Worldwide'],
     hasCourseInstance: { '@type': 'CourseInstance', courseMode: 'online' },
   }
   const faqSchema = {
@@ -338,6 +353,33 @@ export default function CollegeBiologyTutorPage() {
                   <e.icon className="h-6 w-6 text-blue-600" />
                   <h3 className="mt-3 text-base font-bold text-slate-900">{e.name}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-700">{e.detail}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Tutoring by course */}
+        <section>
+          <div className="mx-auto max-w-6xl px-4 py-14">
+            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">Tutoring by course</h2>
+            <p className="mt-3 max-w-3xl text-slate-600">
+              Taking a specific course? We coach each one to your syllabus and exams.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {[
+                { name: 'Biology 101 / Intro Biology', href: '/biology-101-tutor' },
+                { name: 'Anatomy & Physiology (A&P I/II)', href: '/anatomy-and-physiology-tutor' },
+                { name: 'Genetics', href: '/genetics-tutor' },
+                { name: 'Microbiology', href: '/microbiology-tutor' },
+                { name: 'Cell & Molecular Biology', href: '/cell-and-molecular-biology-tutor' },
+              ].map((c) => (
+                <Link
+                  key={c.href}
+                  href={c.href}
+                  className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-blue-700 hover:bg-blue-50"
+                >
+                  {c.name}
                 </Link>
               ))}
             </div>

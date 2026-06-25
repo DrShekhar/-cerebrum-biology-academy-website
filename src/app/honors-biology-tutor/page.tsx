@@ -164,6 +164,21 @@ const FAQS = [
       'Live online, scheduled around your school day in your own time zone (ET/CT/MT/PT, GMT/BST, IST or anywhere), with every session recorded. 1:1 and small-batch options.',
   },
   {
+    question: 'How do I get an A in Honors Biology?',
+    answer:
+      'An A in Honors Biology comes from understanding the core systems — cells, genetics, physiology, ecology — rather than memorising for each test, then applying that understanding to your school’s exact assessments. Our method: teach each topic for genuine understanding with an AIIMS-trained biology specialist, drill your school’s test and free-response style, practise data analysis and experimental-design questions, and revise against an error log. Live online in your time zone, free trial first.',
+  },
+  {
+    question: 'Honors Biology vs AP Biology — which is harder?',
+    answer:
+      'AP Biology is harder: it goes deeper than Honors and adds College Board exam pressure with rubric-graded free-response questions, where Honors (or high-school) biology builds the underlying foundation. The two are a sequence, not rivals — a strong Honors year is the single best predictor of an AP-5, which is exactly why we teach Honors so that AP later becomes straightforward.',
+  },
+  {
+    question: 'How much does an online Honors Biology tutor cost?',
+    answer:
+      'Honors / high-school biology is priced per programme depending on whether you choose 1:1 or a small live batch and how many sessions you need. Contact us for a quote and start with a free trial — tell us your grade, school and country and we’ll match you to the right tutor, time-zone slot and a clear price.',
+  },
+  {
     question: 'How do I start?',
     answer:
       'Book a free trial. Tell us your grade, school and country, and we match you to the right tutor and time-zone slot — for students of any nationality.',
@@ -182,7 +197,7 @@ export default function HonorsBiologyTutorPage() {
     inLanguage: 'en',
     educationalLevel: 'High school (Honors / pre-AP)',
     provider: { '@id': `${SITE_URL}/#organization` },
-    areaServed: 'Worldwide',
+    areaServed: ['United States', 'Worldwide'],
     hasCourseInstance: { '@type': 'CourseInstance', courseMode: 'online' },
   }
   const faqSchema = {
@@ -333,6 +348,33 @@ export default function HonorsBiologyTutorPage() {
                   <e.icon className="h-6 w-6 text-blue-600" />
                   <h3 className="mt-3 text-base font-bold text-slate-900">{e.name}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-700">{e.detail}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Also for high-school students */}
+        <section>
+          <div className="mx-auto max-w-6xl px-4 py-14">
+            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
+              Also for high-school biology students
+            </h2>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {[
+                {
+                  name: 'Biology EOC / state exam prep (FL, TX, GA…)',
+                  href: '/biology-eoc-exam-prep',
+                },
+                { name: 'NGSS biology help', href: '/ngss-biology-help' },
+                { name: 'College / intro biology', href: '/college-biology-tutor' },
+              ].map((c) => (
+                <Link
+                  key={c.href}
+                  href={c.href}
+                  className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-blue-700 hover:bg-blue-50"
+                >
+                  {c.name}
                 </Link>
               ))}
             </div>

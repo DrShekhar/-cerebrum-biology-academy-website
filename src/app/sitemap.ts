@@ -5428,6 +5428,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.88,
     },
+    // College / intro-biology by-course pages + high-school EOC/NGSS (Jun 2026 expansion)
+    ...[
+      'biology-101-tutor',
+      'anatomy-and-physiology-tutor',
+      'genetics-tutor',
+      'microbiology-tutor',
+      'cell-and-molecular-biology-tutor',
+      'biology-eoc-exam-prep',
+      'ngss-biology-help',
+    ].map((slug) => ({
+      url: `${baseUrl}/${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    })),
     // IBO (Team USA) coaching hub — standalone, not covered by GLOBAL_EXAMS.
     // (The six *-tutor-global hubs are already emitted by the GLOBAL_EXAMS map
     // above, so they are intentionally not repeated here.)
