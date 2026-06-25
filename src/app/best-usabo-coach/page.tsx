@@ -175,6 +175,16 @@ const config: BestVerticalConfig = {
         'Stage 1: USABO Open Exam (early February, school-administered). Stage 2: USABO Semifinal (March, top scorers from Open). Stage 3: USABO National Finals (June, top ~20 students). Top 4 represent the USA at the International Biology Olympiad (IBO).',
     },
     {
+      question: 'How do I qualify for the USABO Semifinal?',
+      answer:
+        'You reach the Semifinal by being among the top scorers on the USABO Open Exam — roughly the top ~10% advance. The Open rewards end-to-end Campbell Biology mastery plus strong timed-MCQ technique; the Semifinal then jumps to undergraduate-level molecular biology (Alberts) and biochemistry (Lehninger). Cerebrum coaches both layers, so students clear the Open and arrive at the Semifinal already prepared for its depth.',
+    },
+    {
+      question: 'How long does USABO prep take?',
+      answer:
+        'Plan for a full season rather than a few weeks of cramming. Most serious candidates start in the autumn (around September-October) for the February Open Exam, then continue into the spring for the Semifinal and Finals — realistically several months to a full year of consistent work. Pairing AP Biology with USABO compresses the timeline because the Campbell content overlaps. Cerebrum runs a structured prep plan across this window.',
+    },
+    {
       question: 'Does Cerebrum coach USABO online for all US timezones?',
       answer:
         'Yes. Live sessions run in US-friendly evening timezones (ET, CT, PT). Recorded sessions for revision. 11 US city cohort pages with localised cohort timing.',

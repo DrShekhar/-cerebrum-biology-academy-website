@@ -144,6 +144,7 @@ export default function USABOCityusabocoachingseattlePage() {
         '@type': 'AdministrativeArea',
         name: region,
         containedInPlace: { '@type': 'Country', name: 'United States' },
+        address: { '@type': 'PostalAddress', addressRegion: 'WA', addressCountry: 'US' },
       },
     },
     audience: {

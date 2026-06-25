@@ -763,6 +763,7 @@ export default function MCATBiologyPage() {
             },
             coursePrerequisites: 'Undergraduate Biology coursework',
             educationalLevel: 'Pre-Medical',
+            areaServed: { '@type': 'Country', name: 'United States' },
           }),
         }}
       />

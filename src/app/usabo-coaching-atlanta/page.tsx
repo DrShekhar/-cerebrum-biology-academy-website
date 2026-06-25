@@ -144,6 +144,7 @@ export default function USABOCityusabocoachingatlantaPage() {
         '@type': 'AdministrativeArea',
         name: region,
         containedInPlace: { '@type': 'Country', name: 'United States' },
+        address: { '@type': 'PostalAddress', addressRegion: 'GA', addressCountry: 'US' },
       },
     },
     audience: {

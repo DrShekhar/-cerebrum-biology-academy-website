@@ -144,6 +144,7 @@ export default function USABOCityusabocoachingdallasaustinPage() {
         '@type': 'AdministrativeArea',
         name: region,
         containedInPlace: { '@type': 'Country', name: 'United States' },
+        address: { '@type': 'PostalAddress', addressRegion: 'TX', addressCountry: 'US' },
       },
     },
     audience: {

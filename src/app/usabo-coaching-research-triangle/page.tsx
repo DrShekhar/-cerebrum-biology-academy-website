@@ -124,6 +124,7 @@ export default function USABOResearchTrianglePage() {
         '@type': 'AdministrativeArea',
         name: region,
         containedInPlace: { '@type': 'Country', name: 'United States' },
+        address: { '@type': 'PostalAddress', addressRegion: 'NC', addressCountry: 'US' },
       },
     },
     hasCourseInstance: {

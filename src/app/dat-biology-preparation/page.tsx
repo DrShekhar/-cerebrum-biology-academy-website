@@ -98,6 +98,7 @@ const courseSchema = {
   availableLanguage: ['English'],
   educationalLevel: 'Pre-Dental',
   educationalCredentialAwarded: 'DAT Biology Section Preparation',
+  areaServed: { '@type': 'Country', name: 'United States' },
   provider: {
     '@type': 'EducationalOrganization',
     '@id': 'https://cerebrumbiologyacademy.com/#organization',

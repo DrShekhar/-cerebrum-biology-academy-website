@@ -144,6 +144,7 @@ export default function USABOCityusabocoachingnewjerseyPage() {
         '@type': 'AdministrativeArea',
         name: region,
         containedInPlace: { '@type': 'Country', name: 'United States' },
+        address: { '@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US' },
       },
     },
     audience: {

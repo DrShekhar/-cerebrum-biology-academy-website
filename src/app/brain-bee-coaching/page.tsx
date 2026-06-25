@@ -217,6 +217,16 @@ const FAQS = [
       'No. Cerebrum Biology Academy provides independent neuroscience-competition coaching. We are not affiliated with, authorised by, or endorsed by the International Brain Bee, the USA Brain Bee, or the Society for Neuroscience. "Brain Bee" is used here only to describe the competition our coaching prepares students for. The official bootcamp (IYNA) is free; our paid coaching is a separate, optional supplement.',
   },
   {
+    question: 'Is the Brain Bee worth it for college applications?',
+    answer:
+      'Yes for a student genuinely interested in neuroscience or medicine. Placing at the local, national (USA Brain Bee) or International Brain Bee (IBB) tier is a distinctive, well-recognised enrichment signal, and the neuroanatomy, clinical-reasoning and patient-diagnosis skills transfer directly into pre-med and biology coursework. Because only one national champion per country advances to the World Championship, a strong result genuinely stands out. It is a stretch goal, so it is worth committing to when the student enjoys neuroscience beyond the school syllabus.',
+  },
+  {
+    question: 'How do I win or place at the Brain Bee?',
+    answer:
+      'The written exam is only about 10% of the score — roughly 90% comes from the human neuroanatomy practical, the live two-strike oral elimination, and patient diagnosis over the official neurological disorders, plus neurohistology and MRI identification. So the free "Brain Facts" book is necessary but not sufficient: you place by drilling the practical, clinical and oral rounds live, with expert feedback and mock championships. Cerebrum’s AIIMS-trained faculty coach exactly those high-leverage rounds.',
+  },
+  {
     question: 'How do I start?',
     answer:
       'Book a free assessment. We gauge your child’s current level and target tier (chapter, national, or IBB), then recommend the right cohort or 1:1 track and share the schedule and fees in your local currency. WhatsApp +91 88264 44334 or use the buttons on this page.',

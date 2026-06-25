@@ -125,6 +125,7 @@ export default function USABODenverPage() {
         '@type': 'AdministrativeArea',
         name: region,
         containedInPlace: { '@type': 'Country', name: 'United States' },
+        address: { '@type': 'PostalAddress', addressRegion: 'CO', addressCountry: 'US' },
       },
     },
     hasCourseInstance: {

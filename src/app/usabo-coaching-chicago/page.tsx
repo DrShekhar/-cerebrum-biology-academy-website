@@ -144,6 +144,7 @@ export default function USABOCityusabocoachingchicagoPage() {
         '@type': 'AdministrativeArea',
         name: region,
         containedInPlace: { '@type': 'Country', name: 'United States' },
+        address: { '@type': 'PostalAddress', addressRegion: 'IL', addressCountry: 'US' },
       },
     },
     audience: {

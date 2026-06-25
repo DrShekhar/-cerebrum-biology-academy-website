@@ -334,6 +334,7 @@ export default function APBiologyTutorPage() {
             inLanguage: 'en-US',
             educationalLevel: 'Advanced Placement',
             educationalCredentialAwarded: 'AP Biology Score 5 Preparation',
+            areaServed: { '@type': 'Country', name: 'United States' },
             provider: {
               '@id': 'https://cerebrumbiologyacademy.com/#organization',
             },

@@ -143,6 +143,7 @@ export default function USABOCityusabocoachingnorthernvirginiadcPage() {
         '@type': 'AdministrativeArea',
         name: region,
         containedInPlace: { '@type': 'Country', name: 'United States' },
+        address: { '@type': 'PostalAddress', addressRegion: 'VA', addressCountry: 'US' },
       },
     },
     audience: {

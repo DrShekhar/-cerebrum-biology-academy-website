@@ -144,6 +144,7 @@ export default function USABOCityusabocoachinglosangelesPage() {
         '@type': 'AdministrativeArea',
         name: region,
         containedInPlace: { '@type': 'Country', name: 'United States' },
+        address: { '@type': 'PostalAddress', addressRegion: 'CA', addressCountry: 'US' },
       },
     },
     audience: {

@@ -146,6 +146,7 @@ export default function USABOCityusabocoachingnewyorkPage() {
         '@type': 'AdministrativeArea',
         name: region,
         containedInPlace: { '@type': 'Country', name: 'United States' },
+        address: { '@type': 'PostalAddress', addressRegion: 'NY', addressCountry: 'US' },
       },
     },
     audience: {
