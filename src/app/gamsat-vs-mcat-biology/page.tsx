@@ -8,7 +8,7 @@ const URL = 'https://cerebrumbiologyacademy.com/gamsat-vs-mcat-biology'
 export const metadata: Metadata = {
   title: 'GAMSAT vs MCAT Biology 2026 — Section III vs B/B, Scoring & Which to Take',
   description:
-    'Compare GAMSAT Section III (75 MCQ, reasoning-heavy) with MCAT Biological and Biochemical Foundations (59 passages+MCQ). Scoring, countries, content overlap, difficulty, and dual-prep strategy.',
+    'Compare GAMSAT Section III (biological & physical sciences reasoning) with MCAT Biological and Biochemical Foundations (59 passages+MCQ). Scoring, countries, content overlap, difficulty, and dual-prep strategy.',
   keywords: [
     'GAMSAT vs MCAT Biology',
     'MCAT vs GAMSAT',
@@ -48,13 +48,13 @@ const comparisonRows = [
   {
     dimension: 'Biology-relevant section',
     gamsat:
-      'Section III: Reasoning in Biological and Physical Sciences. 75 MCQ in 150 minutes (2 min/question). Biology accounts for approximately 40% of Section III (roughly 30 questions).',
+      'Section III: Reasoning in Biological and Physical Sciences, covering biological and physical sciences reasoning. The GAMSAT format has been updated for recent sittings (2024 onward) — confirm current question counts and timing with ACER. Biology remains a substantial share of Section III.',
     mcat: 'Biological and Biochemical Foundations of Living Systems (B/B). 59 questions in 95 minutes (passage-based MCQ + discrete MCQ). Nearly 100% biology and biochemistry content.',
   },
   {
     dimension: 'Other sections',
     gamsat:
-      'Section I: Reasoning in Humanities and Social Sciences (75 MCQ, 100 min). Section II: Written Communication (2 essays, 60 min).',
+      'Section I: Reasoning in Humanities and Social Sciences. Section II: Written Communication (essay-based). Exact question counts and timings were revised for recent sittings — confirm with ACER.',
     mcat: 'Chemical and Physical Foundations (C/P, 59Q), Psychological/Social/Biological Foundations (P/S, 59Q), Critical Analysis and Reasoning Skills (CARS, 53Q).',
   },
   {

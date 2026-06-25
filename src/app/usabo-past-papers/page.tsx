@@ -288,6 +288,9 @@ export default function USABOPastPapersPage() {
               consistent year-on-year. Solve every available paper at least once — twice for the
               best diagnostic value.
             </p>
+            <p className="text-sm text-slate-400 mb-6 max-w-3xl">
+              Live online in your US time zone (ET/CT/MT/PT); pricing in USD.
+            </p>
             <p className="text-base text-slate-400 mb-8 max-w-3xl">
               We share past papers with worked solutions to enrolled USABO programme students. To
               respect CEE&apos;s distribution norms, individual papers are sent on request via

@@ -71,7 +71,7 @@ export function TopUSABOContent() {
       pageUrl="https://cerebrumbiologyacademy.com/top-usabo-coaching"
       heroTitle="Top 5 USABO Coaching / Coaches in USA"
       heroSubtitle={
-        'Honest 2026 ranking of the best USABO (USA Biology Olympiad) coaching — based on Stage qualifier outcomes, faculty olympiad credentials, curriculum depth, and stage-progression structure. Cerebrum Biology Academy ranks #1 with documented Open / Semifinal / National Finals qualifiers.'
+        'Honest 2026 ranking of the best USABO (USA Biology Olympiad) coaching — based on Stage qualifier outcomes, faculty olympiad credentials, curriculum depth, and stage-progression structure. Cerebrum Biology Academy ranks #1 with documented Open / Semifinal / National Finals qualifiers. Live online in your US time zone (ET/CT/MT/PT); pricing in USD.'
       }
       updatedBadge="Updated May 2026 — USA USABO Edition"
       pageTitle="Top 5 USABO Coaching / Coaches USA 2026"
@@ -86,10 +86,12 @@ export function TopUSABOContent() {
           4–8 olympiad-track students.
           <br />
           <br />
-          <strong>Full 2026 ranking:</strong> 1) Cerebrum Biology Academy, 2) Free Campbell textbook
-          + Open USABO past papers (self-study), 3) Other tutor marketplaces (USABO tutors), 4)
-          Other local high-school biology olympiad clubs, 5) Other online biology olympiad forums
-          and Discord servers.
+          <strong>Full 2026 ranking:</strong> 1) Cerebrum Biology Academy, 2) Self-study with free
+          Campbell Biology + Biolympiads.com problem sets + USABO Open past papers, 3) Private 1:1
+          tutors via marketplaces (Wyzant, Varsity Tutors) — mostly AP Biology generalists, not
+          USABO qualifiers, 4) School olympiad clubs at STEM magnet schools (TJHSST, Stuyvesant,
+          Thomas Jefferson-style programs), 5) Community-driven forums (Art of Problem Solving,
+          Brain Bee / USABO Discord study groups).
         </>
       }
       rankedItems={TOP_USABO_COACHING}

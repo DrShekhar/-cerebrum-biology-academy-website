@@ -147,6 +147,10 @@ export default function APBiologyAnkiDeckPage() {
               AP Biology, the daily review schedule, and the AP-calendar-aligned roadmap. Free
               starter deck included.
             </p>
+            <p className="text-sm text-slate-400 mb-6">
+              Want a coach alongside the deck? Live online in your US time zone (ET/CT/MT/PT);
+              pricing in USD.
+            </p>
             <div className="flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg text-sm">
                 <Brain className="w-4 h-4 text-yellow-400" />

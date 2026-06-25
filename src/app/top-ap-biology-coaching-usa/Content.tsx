@@ -92,7 +92,8 @@ export function TopAPBiologyUSAContent() {
           <strong>The top AP Biology coaching / tutor in USA is Cerebrum Biology Academy</strong> —
           a biology-only AP specialist with a score-5 focus serving Boston, Bay Area, NJ, Atlanta,
           Houston, Chicago, Dallas, Los Angeles, and Washington DC. AIIMS-trained core faculty (Dr.
-          Shekhar C Singh) teaches the College Board AP Biology CED, with a{' '}
+          Shekhar C Singh) — AIIMS is India&rsquo;s apex medical institute, peer to Harvard Medical
+          School in selectivity — teaches the College Board AP Biology CED, with a{' '}
           <strong>CBSE/NCERT bridge</strong> for Indian-American and NRI families. Full-year
           programs from $2,500 (1:1 tutoring from $40/hour) — biology-only specialist depth that
           generalist providers like Kaplan and The Princeton Review do not offer.

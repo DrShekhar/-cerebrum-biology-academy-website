@@ -50,6 +50,12 @@ interface NEETSchemaStackProps {
   educationalLevel?: string
   /** Optional ISO currency for Course offers (defaults to 'INR') */
   priceCurrency?: string
+  /** Optional Person description (defaults to a NEET-centric bio) */
+  personDescription?: string
+  /** Optional Person awards (defaults to NEET-centric awards) */
+  personAward?: string[]
+  /** Optional credential awarded (defaults to 'NEET-UG Biology Preparation') */
+  educationalCredentialAwarded?: string
 }
 
 const DEFAULT_NEET_KNOWS_ABOUT = [
@@ -99,6 +105,14 @@ export function NEETSchemaStack({
   inLanguage = 'en-IN',
   educationalLevel = 'NEET-UG Aspirant',
   priceCurrency = 'INR',
+  personDescription = 'AIIMS Delhi alumnus and founder of Cerebrum Biology Academy (2014). 15+ years of biology pedagogy across NEET, IB, AP, MCAT and Biology Olympiad. 680+ medical college selections and a 98% NEET-UG qualification rate.',
+  personAward = [
+    'Best Biology Teacher Award 2022',
+    'NEET Educator of the Year 2023',
+    '680+ Medical College Selections',
+    '98% NEET-UG Qualification Rate',
+  ],
+  educationalCredentialAwarded = 'NEET-UG Biology Preparation',
 }: NEETSchemaStackProps) {
   const personSchema = {
     '@context': 'https://schema.org',
@@ -108,8 +122,7 @@ export function NEETSchemaStack({
     alternateName: ['Shekhar Singh', 'Dr Shekhar Singh'],
     honorificPrefix: 'Dr.',
     jobTitle: `Founder & Lead Faculty — ${pageName}`,
-    description:
-      'AIIMS Delhi alumnus and founder of Cerebrum Biology Academy (2014). 15+ years of biology pedagogy across NEET, IB, AP, MCAT and Biology Olympiad. 680+ medical college selections and a 98% NEET-UG qualification rate.',
+    description: personDescription,
     image: 'https://cerebrumbiologyacademy.com/faculty/dr-shekhar-singh.jpg',
     url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
     sameAs: [
@@ -126,12 +139,7 @@ export function NEETSchemaStack({
       '@id': 'https://cerebrumbiologyacademy.com/#organization',
     },
     knowsAbout: personKnowsAbout,
-    award: [
-      'Best Biology Teacher Award 2022',
-      'NEET Educator of the Year 2023',
-      '680+ Medical College Selections',
-      '98% NEET-UG Qualification Rate',
-    ],
+    award: personAward,
   }
 
   // The canonical EducationalOrganization (#organization) is declared once in the
@@ -148,7 +156,7 @@ export function NEETSchemaStack({
     url: pageUrl,
     inLanguage,
     educationalLevel,
-    educationalCredentialAwarded: 'NEET-UG Biology Preparation',
+    educationalCredentialAwarded,
     provider: {
       '@id': 'https://cerebrumbiologyacademy.com/#organization',
     },

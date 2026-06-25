@@ -256,9 +256,13 @@ export default function BBOvsUSABOPage() {
               Biology is the core text for both — but differ in format, selection structure, and
               what they emphasise.
             </p>
-            <p className="text-base text-slate-400 mb-8 max-w-3xl">
+            <p className="text-base text-slate-400 mb-4 max-w-3xl">
               This guide compares exam format, difficulty at each stage, the IBO selection pathway,
               and how much preparation overlaps between the two olympiads.
+            </p>
+            <p className="text-sm text-slate-400 mb-8 max-w-3xl">
+              We coach both routes live online — in your US time zone (ET/CT/MT/PT) or UK time
+              (GMT/BST); pricing in USD or GBP.
             </p>
           </div>
         </section>

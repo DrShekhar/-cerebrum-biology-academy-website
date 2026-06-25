@@ -117,6 +117,9 @@ export default function DATPATBiologyPage() {
             chambers, cranial nerve foramina, skeletal articulation) as the visualisation substrate.
             Included free in Small-Batch and 1:1 Senior Faculty Biology tiers.
           </p>
+          <p className="text-base text-slate-400 mb-6 max-w-3xl">
+            Live online in your US time zone (ET/CT/MT/PT); pricing in USD.
+          </p>
           <a
             href={wa}
             className="inline-flex bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold"

@@ -198,7 +198,8 @@ export default function APBiologyVsIBBiologyPage() {
             <p className="text-base text-slate-400 mb-8 max-w-3xl">
               This guide compares curriculum structure, exam format, scoring, difficulty, and
               college credit policies — with enough detail for a genuine decision, not just a
-              surface-level summary.
+              surface-level summary. Either way, Cerebrum coaches both live online in your US time
+              zone (ET/CT/MT/PT), with pricing in USD.
             </p>
           </div>
         </section>

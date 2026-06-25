@@ -234,6 +234,10 @@ export default function APBiologyFRQRubricMasteryPage() {
               answers side-by-side, and gives you the 6-week practice schedule top scorers actually
               use.
             </p>
+            <p className="text-sm text-slate-400 mb-6">
+              Prefer a coach to grade your FRQs? Live online in your US time zone (ET/CT/MT/PT);
+              pricing in USD.
+            </p>
             <div className="flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg text-sm">
                 <Clock className="w-4 h-4 text-yellow-400" />

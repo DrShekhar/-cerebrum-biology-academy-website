@@ -160,9 +160,13 @@ export default function USMLEStep1PhysiologyPrepPage() {
             ~25% of Step 1 content when blended across organ-system sections. Cerebrum's
             biology-pedagogy approach bridges physiology to pathophysiology mechanism — the
             application layer required for Step 1 vignettes and the foundation for Step 2 CK
-            success. AIIMS-trained biology specialists, BRS Physiology + Costanzo + First Aid
+            success. AIIMS-trained (AIIMS — India's apex medical institute, peer to Harvard Medical
+            School in selectivity) biology specialists, BRS Physiology + Costanzo + First Aid
             mapped, UWorld physiology blocks walked through live. 5-week block within full Step 1
             programme; $175/hour ad-hoc for organ-system gap-fill.
+          </p>
+          <p className="text-base text-slate-400 mb-6 max-w-3xl">
+            Live online in your US time zone (ET/CT/MT/PT); pricing in USD.
           </p>
           <a
             href={wa}

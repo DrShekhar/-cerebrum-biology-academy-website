@@ -159,10 +159,14 @@ export default function USMLEStep1MicroImmunoPage() {
           <p className="text-xl text-slate-300 mb-6 max-w-3xl">
             Microbiology (~10%) and immunology (~6%) — combined ~16% of Step 1, plus heavy
             integration with infectious-disease pathology and antimicrobial / immunosuppressant
-            pharmacology. AIIMS-trained biology faculty layer mechanism pedagogy on top of Sketchy
-            visual mnemonics — the missing application layer that Sketchy alone doesn't provide.
-            3-week microbiology block + 3-week immunology block within the full Step 1 programme;
-            $175/hour ad-hoc for targeted gap-fill.
+            pharmacology. AIIMS-trained (AIIMS — India's apex medical institute, peer to Harvard
+            Medical School in selectivity) biology faculty layer mechanism pedagogy on top of
+            Sketchy visual mnemonics — the missing application layer that Sketchy alone doesn't
+            provide. 3-week microbiology block + 3-week immunology block within the full Step 1
+            programme; $175/hour ad-hoc for targeted gap-fill.
+          </p>
+          <p className="text-base text-slate-400 mb-6 max-w-3xl">
+            Live online in your US time zone (ET/CT/MT/PT); pricing in USD.
           </p>
           <a
             href={wa}

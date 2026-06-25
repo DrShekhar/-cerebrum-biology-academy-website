@@ -53,7 +53,7 @@ const faqs = [
     question:
       'How is Cerebrum USMLE Step 1 coaching different from Kaplan, Becker, and question banks?',
     answer:
-      'UWorld and AMBOSS are question banks — they tell you the right answer but assume you already understand the underlying biology. Kaplan and Becker are generalist agencies covering all Step 1 disciplines (biochemistry through pharmacology) with rotating faculty. Cerebrum is a biology-foundations specialist — Dr. Shekhar C Singh (AIIMS Delhi) and senior faculty teach the ~55% of Step 1 that is biology-driven (biochemistry, microbiology, immunology, physiology, biology-driven pathology mechanisms) in depth. Most students pair us with UWorld for question volume and use us instead of Kaplan and Becker for the foundational sciences component.',
+      "UWorld and AMBOSS are question banks — they tell you the right answer but assume you already understand the underlying biology. Kaplan and Becker are generalist agencies covering all Step 1 disciplines (biochemistry through pharmacology) with rotating faculty. Cerebrum is a biology-foundations specialist — Dr. Shekhar C Singh (AIIMS Delhi — India's apex medical institute, peer to Harvard Medical School in selectivity) and senior faculty teach the ~55% of Step 1 that is biology-driven (biochemistry, microbiology, immunology, physiology, biology-driven pathology mechanisms) in depth. Most students pair us with UWorld for question volume and use us instead of Kaplan and Becker for the foundational sciences component.",
   },
   {
     question: 'Step 1 went Pass/Fail in 2022 — does foundational biology still matter?',
@@ -73,7 +73,7 @@ const faqs = [
   {
     question: 'Does Cerebrum work with US M1/M2 students or only IMGs?',
     answer:
-      "Both — but our positioning is strongest for IMGs. IMG (International Medical Graduate) students are the dominant Cerebrum target because (a) AIIMS-trained pedagogy resonates structurally with IMGs who trained in AIIMS-pattern medical education and (b) IMGs typically pay in USD from international locations where Kaplan and Becker physical campuses aren't accessible. US M1/M2 students who choose Cerebrum typically do so for the biology-foundations specialist depth (Pathoma alone isn't enough for biochemistry) and the 30–40% cost saving vs Kaplan and Becker.",
+      "Both — and US M1/M2 students are a core audience. US M1/M2 students choose Cerebrum for the biology-foundations specialist depth (Pathoma alone isn't enough for biochemistry), live small-batch and 1:1 teaching in their own US time zone, and a 30–40% cost saving vs Kaplan and Becker. IMG (International Medical Graduate) students are a parallel audience: AIIMS-trained pedagogy resonates structurally with IMGs who trained in AIIMS-pattern medical education, and IMGs in international locations value access to senior faculty where Kaplan and Becker physical campuses aren't available. The same biology-foundations programme serves both.",
   },
   {
     question: 'Is First Aid for the USMLE Step 1 sufficient on its own?',
@@ -173,9 +173,12 @@ export default function USMLEStep1BiologyPreparationPage() {
             molecular biology, microbiology, immunology, physiology, plus the biology-driven
             mechanisms underpinning pathology — roughly 55% of Step 1 content. First Aid mapped
             chapter-by-chapter, UWorld block walkthroughs, NBME self-assessment debriefs. Built for
-            IMG (International Medical Graduate) students preparing for ECFMG certification and US
-            M1/M2 students targeting strong residency match signals. $799 self-paced through $2,499
-            senior 1:1, with $175/hour ad-hoc tutoring.
+            US M1/M2 students targeting strong residency match signals, with IMG (International
+            Medical Graduate) students preparing for ECFMG certification as a parallel audience.
+            $799 self-paced through $2,499 senior 1:1, with $175/hour ad-hoc tutoring.
+          </p>
+          <p className="text-base text-slate-400 mb-6 max-w-3xl">
+            Live online in your US time zone (ET/CT/MT/PT); pricing in USD.
           </p>
           <div className="flex flex-wrap gap-4">
             <a

@@ -40,7 +40,8 @@ const config: BestVerticalConfig = {
   slug: 'best-usabo-coach',
   headline: 'Best USABO Coach (USA Biology Olympiad)',
   ribbon: 'Open Exam → Semifinal → National Finals · 11 US City Cohorts',
-  subheadline: 'AIIMS-trained biology specialist. Led by Dr. Shekhar C Singh.',
+  subheadline:
+    'AIIMS-trained faculty (AIIMS — India’s apex medical institute, peer to Harvard Medical School in selectivity). Led by Dr. Shekhar C Singh.',
   intro:
     "Cerebrum operates a dedicated USABO coaching programme covering the full pathway — USABO Open Exam (February), Semifinal (March) and National Finals — under Dr. Shekhar C Singh's curriculum direction. Coaching draws on Campbell Biology (canonical), Alberts' Molecular Biology of the Cell (Semifinal-level depth) and Lehninger Biochemistry.",
   clusterSummary:

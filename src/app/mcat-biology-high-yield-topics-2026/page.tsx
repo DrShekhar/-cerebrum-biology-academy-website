@@ -423,6 +423,9 @@ export default function MCATBiologyHighYield2026Page() {
               official content outline. The list reflects AAMC content-outline weighting plus
               crowdsourced student reports across 2023-2025 administrations.
             </p>
+            <p className="text-base text-slate-400 mb-8 max-w-3xl">
+              Live online in your US time zone (ET/CT/MT/PT); pricing in USD.
+            </p>
             <div className="flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg text-sm">
                 <Target className="w-4 h-4 text-yellow-400" />
@@ -631,7 +634,8 @@ export default function MCATBiologyHighYield2026Page() {
             </h2>
             <p className="text-slate-700 leading-relaxed mb-4">
               Cerebrum Biology Academy runs MCAT Bio/Biochem programmes 100% online. All pricing in
-              USD. Founder Dr. Shekhar C Singh (AIIMS Delhi) leads the senior-faculty tier.
+              USD. Founder Dr. Shekhar C Singh (AIIMS Delhi — India's apex medical institute, peer
+              to Harvard Medical School in selectivity) leads the senior-faculty tier.
             </p>
             <ul className="space-y-3 text-sm text-slate-700 leading-relaxed">
               <li>

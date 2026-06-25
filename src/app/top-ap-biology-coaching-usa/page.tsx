@@ -118,6 +118,9 @@ export default function TopAPBiologyCoachingUSAPage() {
         inLanguage="en-US"
         educationalLevel="High school (AP Biology, grades 11-12)"
         priceCurrency="USD"
+        personDescription="AIIMS Delhi alumnus and founder of Cerebrum Biology Academy (2014). 15+ years of biology teaching across AP Biology (College Board CED), IB, MCAT and Biology Olympiad — score-5-focused coaching for US students."
+        personAward={['AIIMS New Delhi Alumnus', 'Best Biology Teacher Award 2022']}
+        educationalCredentialAwarded="AP Biology (College Board CED) Preparation"
         faqs={schemaFaqs}
       />
       <TopAPBiologyUSAContent />

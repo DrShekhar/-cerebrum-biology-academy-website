@@ -12,7 +12,7 @@ const CAMPAIGN = 'ap-biology-class-11'
 export const metadata: Metadata = {
   title: 'AP Biology for Class 11 / Grade 11 Students | Cerebrum Biology Academy',
   description:
-    'AP Biology coaching for Class 11 and Grade 11 students worldwide. 8-unit curriculum coverage, FRQ practice, AP exam preparation, and optional bridge to NEET Biology for US-returning students.',
+    'AP Biology coaching for Grade 11 / Class 11 students worldwide. Full College Board CED coverage across all 8 units, weekly FRQ practice, and a 9-month plan built for a score of 4 or 5 on the May AP exam.',
   keywords: [
     'AP Biology Class 11',
     'AP Biology Grade 11',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AP Biology for Class 11 / Grade 11 Students',
     description:
-      'Complete AP Biology coverage for Class 11 / Grade 11 students. 8 CollegeBoard units, FRQ practice, and optional NEET bridge.',
+      'Complete AP Biology coverage for Class 11 / Grade 11 students. All 8 College Board CED units, weekly FRQ practice, and a 9-month plan for a score of 4 or 5.',
     type: 'article',
     url: PAGE_URL,
     siteName: 'Cerebrum Biology Academy',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AP Biology for Class 11 / Grade 11 Students',
     description:
-      'Complete AP Biology coverage with 8-unit curriculum, FRQ practice, and optional NEET bridge for returning students.',
+      'Complete AP Biology coverage with all 8 College Board CED units, weekly FRQ practice, and a 9-month score-5 plan.',
   },
   robots: {
     index: true,
@@ -160,34 +160,29 @@ const faqs = [
       'Two sections. Section I is 60 multiple-choice questions in 90 minutes (50% of score). Section II is 6 free-response questions in 90 minutes (50% of score) — 2 long-form (one asks students to design or interpret an experiment) plus 4 short-answer. Total exam: 3 hours. Calculator permitted throughout. Total score reported 1-5; most US colleges accept 4+ for credit.',
   },
   {
-    question: 'Is AP Biology harder than NEET Biology?',
+    question: 'How hard is AP Biology and what makes it challenging?',
     answer:
-      'They test different skills. AP emphasises experimental design, data interpretation, and concept application via FRQs; NEET emphasises rapid pattern recognition across 90 MCQs in 45 minutes with negative marking. In absolute depth, AP and NEET overlap 70% on content (both at Campbell Biology level) but AP goes deeper on biostatistics, experimental design, and phylogenetics; NEET goes deeper on plant and animal physiology recall. Most Class 11 AP students find the NEET Biology transition requires 2-3 months of focused recall + speed practice.',
-  },
-  {
-    question: 'Can I prepare for AP Biology alongside CBSE Class 11?',
-    answer:
-      'Yes. Overlap between AP Biology and CBSE Class 11 Biology is approximately 65%. CBSE covers all 8 AP units but at different depths — AP goes deeper on Units 3, 6, and 7 (Energetics, Gene Regulation, Natural Selection); CBSE goes deeper on Unit 8 Ecology. Running both in parallel adds roughly 3-5 hours/week to a Class 11 schedule. Many Indian students use AP Biology as depth training for NEET.',
+      'AP Biology is built to mirror a two-semester college introductory biology course, so the difficulty comes less from memorisation and more from application. The exam rewards experimental design, data interpretation, and reasoning from the Big Ideas — most students who already know the content still lose points on free-response questions because they write what they know rather than what the rubric asks for. The two highest-weight, highest-difficulty units are Unit 3 (Cellular Energetics) and Unit 7 (Natural Selection, the single largest unit). Our coaching front-loads these and drills FRQs from week 2.',
   },
   {
     question: 'When should I take AP Biology — Grade 11 or Grade 12?',
     answer:
-      'Both are common. Taking it in Grade 11 gives you the score in hand for college applications due in October-November of Grade 12 — this is the more strategic choice. Grade 12 timing works if you prefer concentrating AP and SAT Subject Tests together, though SAT Subject Tests have been discontinued by College Board. Most US college admissions officers see AP Biology in Grade 11 as evidence of rigour.',
+      'Both are common. Taking it in Grade 11 gives you the score in hand for college applications due in October-November of Grade 12 — this is the more strategic choice. Grade 12 timing works if you prefer spreading your AP load across years. Most US college admissions officers see AP Biology in Grade 11 as strong evidence of academic rigour, and a 4 or 5 can earn college credit, placing you out of introductory biology.',
   },
   {
-    question: 'How do you structure AP Biology coaching for international students?',
+    question: 'How do you structure online AP Biology coaching?',
     answer:
-      'Our AP Biology coaching is fully online, scheduled to fit US timezones (6-9 PM ET evening batches, plus Saturday 10 AM ET intensive). Curriculum follows College Board CED with unit-wise teaching, FRQ practice weekly, and two full-length practice exams before May. We also offer 1:1 tutoring at a premium tier and a bridge programme for returning Indian students transitioning from AP Biology to NEET.',
+      'Our AP Biology coaching is fully online and scheduled to fit US time zones (6-9 PM ET evening batches, plus a Saturday 10 AM ET intensive). The curriculum follows the College Board Course & Exam Description with unit-by-unit teaching, weekly FRQ practice with rubric-style feedback, and two full-length practice exams before the May exam. We offer 1:1 premium mentoring and small-batch cohorts.',
   },
   {
     question: 'What does AP Biology coaching cost?',
     answer:
-      'Our Complete AP Biology Year programme (Aug-May, covers the full curriculum + practice exams): $1,800 flat. 1:1 Elite Mentoring: $90 per hour. Small-Batch AP cohort (4-6 students): $50 per hour. Pricing is USD-referenced; the AP bridge-to-NEET programme (for Indian students returning after AP) is separate — see /ap-biology-to-neet-preparation for that pathway.',
+      'Our Complete AP Biology Year programme (Aug-May, covering the full curriculum + practice exams) is $1,800 flat. 1:1 Elite Mentoring is $90 per hour. The Small-Batch AP cohort (4-6 students) is $50 per hour. All pricing is in USD, and classes run live in your US time zone.',
   },
   {
-    question: 'Can AP Biology students use their score for Indian universities like AIIMS?',
+    question: 'Are AP scores accepted for Indian medical admissions (NEET)?',
     answer:
-      'No. Indian medical admissions (AIIMS, JIPMER, MAMC) require NEET-UG score; AP scores are not accepted. AP Biology + SAT Biology is accepted at international universities (Harvard, Stanford, Oxford, Singapore medical schools). If you plan to return to India for medical admission, use our AP-to-NEET bridge programme which retools AP knowledge for NEET pattern in 6-8 months.',
+      'No — Indian medical admissions (AIIMS, JIPMER, and others) require a NEET-UG score; AP scores are not accepted. AP Biology is built for US and international college admissions. If you plan to return to India for medical school, see our dedicated AP-to-NEET bridge programme at /ap-biology-to-neet-preparation, which retools AP knowledge for the NEET pattern.',
   },
 ]
 
@@ -338,8 +333,8 @@ export default function APBiologyClass11Page() {
 
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300">
                   Complete 9-month programme covering all 8 College Board units, weekly FRQ
-                  practice, two full-length mock exams, and optional bridge to NEET Biology for
-                  students returning to India after Grade 12.
+                  practice, and two full-length mock exams — built around the College Board Course
+                  &amp; Exam Description to put a score of 4 or 5 within reach.
                 </p>
 
                 <dl className="mt-10 grid max-w-xl grid-cols-3 gap-6 border-t border-white/10 pt-8">
@@ -483,8 +478,8 @@ export default function APBiologyClass11Page() {
                 },
                 {
                   icon: GraduationCap,
-                  title: 'Bridge to NEET option',
-                  body: 'Indian students returning after Grade 12 can transition to NEET Biology via our AP-to-NEET bridge (6-8 months). Same faculty, same core curriculum, different exam pattern.',
+                  title: 'Built for college credit',
+                  body: 'A 4 or 5 places most students out of introductory college biology, saving a semester of tuition. We teach to the College Board CED and the exact FRQ rubric so the score reflects real mastery, not test tricks.',
                 },
               ].map((item) => (
                 <div key={item.title} className="rounded-2xl border border-slate-200 bg-white p-6">

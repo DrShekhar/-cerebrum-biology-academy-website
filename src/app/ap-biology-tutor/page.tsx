@@ -201,7 +201,7 @@ const faqs = [
   {
     question: 'How is the AP Biology exam scored?',
     answer:
-      'The AP Biology exam is scored on a scale of 1-5. Your composite score combines Section I (60 multiple choice, 50%) and Section II (6 free response, 50%). The scoring rubric: 5 (Extremely Well Qualified) - top 15% of students, typically 104-150 points; 4 (Well Qualified) - next 25%, typically 85-103 points; 3 (Qualified) - next 30%. Most colleges grant credit for scores of 4-5, and some accept 3.',
+      'The AP Biology exam is scored on a scale of 1-5. Your composite score combines Section I (60 multiple choice, 50%) and Section II (6 free response, 50%). The raw composite is then converted to the 1-5 scale, with the cut-offs set each year through the College Board standard-setting process — there are no fixed percentile bands or published raw-point thresholds, so they shift from year to year. A 5 is Extremely Well Qualified, a 4 is Well Qualified, and a 3 is Qualified. Most colleges grant credit for scores of 4-5, and some accept a 3.',
   },
   {
     question: 'How long should I prepare for the AP Biology exam?',
@@ -268,7 +268,7 @@ export default function APBiologyTutorPage() {
             name: 'Dr. Shekhar C Singh',
             jobTitle: 'Founder & Lead AP Biology Faculty',
             description:
-              'AIIMS Delhi alumnus and founder of Cerebrum Biology Academy (2014). Lead curriculum architect for the AP Biology programme, with 680+ medical college selections, 98% NEET-UG qualification rate, and a focus on AP-5 conversion via FRQ rubric mastery.',
+              'AIIMS Delhi alumnus and founder of Cerebrum Biology Academy (2014). Lead curriculum architect for the AP Biology programme, an AP Biology specialist focused on AP-5 conversion through College Board FRQ rubric mastery, the 13 required labs, and Anki-based active recall.',
             alumniOf: {
               '@type': 'CollegeOrUniversity',
               name: 'All India Institute of Medical Sciences (AIIMS Delhi)',
@@ -455,9 +455,10 @@ export default function APBiologyTutorPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Achieve your target AP Biology score with expert tutoring. Our proven curriculum
-              covers all College Board units, FRQ strategies, and lab investigations. Join 300+
-              students who scored 4-5!
+              Achieve your target AP Biology score with expert tutoring from AIIMS-trained faculty
+              (AIIMS — India&apos;s apex medical institute, peer to Harvard Medical School in
+              selectivity). Our proven curriculum covers all College Board units, FRQ strategies,
+              and lab investigations. Join 300+ students who scored 4-5!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

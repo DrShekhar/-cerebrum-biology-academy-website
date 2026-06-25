@@ -224,6 +224,9 @@ export default function MCATBBPassageStrategyGuidePage() {
               question types, lays out the per-question time budget, and gives you the drill
               protocol top scorers actually use.
             </p>
+            <p className="text-base text-slate-400 mb-8 max-w-3xl">
+              Live online in your US time zone (ET/CT/MT/PT); pricing in USD.
+            </p>
             <div className="flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg text-sm">
                 <Target className="w-4 h-4 text-yellow-400" />3 worked passages
@@ -730,7 +733,8 @@ export default function MCATBBPassageStrategyGuidePage() {
             </h2>
             <p className="text-slate-700 leading-relaxed mb-4">
               Cerebrum Biology Academy runs MCAT B/B programmes 100% online. All pricing in USD.
-              Founder Dr. Shekhar C Singh (AIIMS Delhi) leads the senior-faculty tier.
+              Founder Dr. Shekhar C Singh (AIIMS Delhi — India's apex medical institute, peer to
+              Harvard Medical School in selectivity) leads the senior-faculty tier.
             </p>
             <ul className="space-y-3 text-sm text-slate-700 leading-relaxed">
               <li>

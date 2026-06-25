@@ -21,7 +21,7 @@ const PAGE_URL = 'https://cerebrumbiologyacademy.com/ap-biology'
 export const metadata: Metadata = {
   title: 'AP Biology Tutoring Hub | Score-5 Coaching, FRQ Mastery | Cerebrum',
   description:
-    'Biology-only specialist AP Biology tutors — beat Kaplan/The Princeton Review on per-section depth. Score-5 study guide, FRQ rubric mastery, CBSE/NCERT bridge, US metros + APAC + UAE + India coverage.',
+    'Biology-only specialist AP Biology tutors — beat Kaplan/The Princeton Review on per-section depth. Score-5 study guide, FRQ rubric mastery, College Board CED-aligned, US metros + APAC + UAE + India coverage.',
   keywords: [
     'AP Biology',
     'AP Biology tutor',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AP Biology Tutoring Hub | Score-5 Coaching, FRQ Mastery',
     description:
-      'Biology-only specialist AP Biology tutors. Score-5 study guide, FRQ rubric mastery, CBSE/NCERT bridge. US + APAC + UAE + India coverage.',
+      'Biology-only specialist AP Biology tutors. Score-5 study guide, FRQ rubric mastery, College Board CED-aligned. US + APAC + UAE + India coverage.',
     type: 'website',
     url: PAGE_URL,
     siteName: 'Cerebrum Biology Academy',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AP Biology Tutoring Hub | Cerebrum',
     description:
-      'Biology-only specialist AP Biology tutors. Score-5 coaching, FRQ mastery, CBSE/NCERT bridge.',
+      'Biology-only specialist AP Biology tutors. Score-5 coaching, FRQ mastery, College Board CED-aligned.',
   },
   alternates: {
     canonical: PAGE_URL,
@@ -84,7 +84,7 @@ const hubFAQs = [
   {
     question: 'How does Cerebrum approach AP Biology FRQ strategy?',
     answer:
-      'Free-response questions are where most 4s drop to 3s. We train students against the official College Board rubric — every released FRQ from 2013 to 2024, scored line by line. Our FRQ method is: (1) deconstruct the prompt verbs (justify, predict, calculate, identify, describe) — each demands a different answer structure; (2) write to the rubric point, not to general "biology knowledge" — graders reward specific Big-Idea language; (3) use the experimental-design template (independent variable, dependent variable, control, replication, prediction with reasoning) for any data-analysis FRQ; (4) practice timed FRQs weekly with red-pen feedback from a senior tutor. Students typically gain 1-2 rubric points per FRQ after 6-8 weeks.',
+      'Free-response questions are where most 4s drop to 3s. We train students against the official College Board rubric — every released FRQ from 2013 to 2025, scored line by line. Our FRQ method is: (1) deconstruct the prompt verbs (justify, predict, calculate, identify, describe) — each demands a different answer structure; (2) write to the rubric point, not to general "biology knowledge" — graders reward specific Big-Idea language; (3) use the experimental-design template (independent variable, dependent variable, control, replication, prediction with reasoning) for any data-analysis FRQ; (4) practice timed FRQs weekly with red-pen feedback from a senior tutor. Students typically gain 1-2 rubric points per FRQ after 6-8 weeks.',
   },
   {
     question: 'How does the CBSE/NCERT bridge help Indian-American or NRI students?',
@@ -99,7 +99,7 @@ const hubFAQs = [
   {
     question: 'When should an AP Biology student start with a tutor?',
     answer:
-      'Three windows work best. (1) Summer before AP Biology — pre-read Units 1-3 and build the foundational chemistry-of-life vocabulary; this is the highest-leverage window and we run intensive summer bootcamps. (2) During the school year, weekly 1.5-2 hour sessions tracking the school syllabus — best for students aiming to go from a B/3 to an A/5. (3) The 8-12 week pre-exam crash window (Feb-May) — focused on FRQ mastery, full-length mocks, and unit-weakness repair. Students who start in summer and continue weekly through the year hit score-5 at the highest rate (~78% in our 2024-25 cohort).',
+      'Three windows work best. (1) Summer before AP Biology — pre-read Units 1-3 and build the foundational chemistry-of-life vocabulary; this is the highest-leverage window and we run intensive summer bootcamps. (2) During the school year, weekly 1.5-2 hour sessions tracking the school syllabus — best for students aiming to go from a B/3 to an A/5. (3) The 8-12 week pre-exam crash window (Feb-May) — focused on FRQ mastery, full-length mocks, and unit-weakness repair. Students who start in summer and continue weekly through the year hit score-5 at the highest rate (~78% in our 2025-26 cohort).',
   },
   {
     question: 'How do I book a free demo with an AP Biology tutor?',
@@ -154,7 +154,7 @@ const topicalResources = [
     title: 'FRQ Rubric Mastery',
     href: '/ap-biology-frq-rubric-mastery',
     description:
-      'Deconstruct every College Board FRQ scoring rubric from 2013 to 2024. Verb-by-verb breakdown of justify, predict, calculate, identify, describe.',
+      'Deconstruct every College Board FRQ scoring rubric from 2013 to 2025. Verb-by-verb breakdown of justify, predict, calculate, identify, describe.',
   },
   {
     title: 'AP Biology Anki Deck',
@@ -386,8 +386,8 @@ export default function APBiologyHubPage() {
 
             <p className="mb-8 max-w-3xl text-lg text-gray-300 sm:text-xl">
               Biology-only specialist tutors beat generalist test-prep on every metric that matters
-              — FRQ rubric depth, misconception repair, and a CBSE/NCERT bridge for Indian-American
-              and NRI students. Live online classes across US, APAC, UAE, India, and Canada.
+              — College Board CED coverage, FRQ rubric depth, and misconception repair. Live online
+              classes across US, APAC, UAE, India, and Canada.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
@@ -633,56 +633,39 @@ export default function APBiologyHubPage() {
           </div>
         </section>
 
-        {/* CBSE/NCERT bridge */}
-        <section className="bg-gradient-to-br from-orange-50 via-white to-blue-50 py-16 sm:py-20">
+        {/* CBSE/NCERT bridge — demoted to a single linked card so the
+            flagship AP hub stays US-AP-first. Full crosswalk lives on the
+            dedicated Class 11 and AP-to-NEET pages. */}
+        <section className="py-12 sm:py-16">
           <div className="mx-auto max-w-4xl px-4 sm:px-6">
-            <h2 className="mb-6 text-3xl font-bold text-gray-900 sm:text-4xl">
-              CBSE/NCERT ↔ AP Biology Bridge — For Indian-American and NRI Students
-            </h2>
-            <div className="prose prose-lg max-w-none text-gray-700">
-              <p>
-                Roughly one-in-three of our AP Biology students grew up partly in India or attend
-                Indian-curriculum schools abroad. They arrive at AP Biology already familiar with{' '}
-                <strong>NCERT Class 11 and Class 12 biology</strong> — but the topic order, depth,
-                and naming conventions differ. We align both against the College Board CED so the
-                same concept maps cleanly across curricula.
+            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 sm:p-8">
+              <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-800">
+                For Indian-American &amp; NRI families
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-gray-900">
+                Coming from CBSE/NCERT? We have a crosswalk.
+              </h3>
+              <p className="mb-4 text-sm leading-relaxed text-gray-600">
+                Students arriving from NCERT Class 11-12 biology get a side-by-side map against the
+                College Board CED — matching chapters, depth-deltas, and the topics AP adds — so the
+                overlap saves study time instead of causing confusion.
               </p>
-              <p>For every AP CED unit, our crosswalk shows:</p>
-              <ul>
-                <li>The matching NCERT chapter — saving 30–40% of study time</li>
-                <li>The matching College Board CED topic — for students planning MCAT next</li>
-                <li>
-                  The depth-delta — what AP adds vs NCERT (e.g., AP adds population-genetics
-                  modeling in Unit 7 that NCERT only mentions in passing)
-                </li>
-                <li>
-                  The reverse depth-delta — where NCERT goes deeper than AP (e.g., NCERT plant
-                  reproduction depth is well above AP Unit 4)
-                </li>
-              </ul>
-              <p>
-                This serves the roughly 15% of our students who plan a Biology track that goes from
-                CBSE Class 11–12 → AP Biology in junior year → MCAT B/B for US medical school
-                applications. The crosswalk turns three overlapping curricula into a single
-                connected study plan.
-              </p>
-            </div>
-
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/ap-biology-class-11"
-                className="inline-flex items-center gap-2 rounded-xl bg-orange-500 px-6 py-3 text-base font-semibold text-white shadow hover:bg-orange-600"
-              >
-                AP Biology + CBSE Class 11 Playbook
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link
-                href="/ap-biology-vs-college-bio-mcat-bridge"
-                className="inline-flex items-center gap-2 rounded-xl border-2 border-orange-400 px-6 py-3 text-base font-semibold text-orange-700 hover:bg-orange-50"
-              >
-                AP → College Bio → MCAT 515+ Bridge
-                <ArrowRight className="h-4 w-4" />
-              </Link>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/ap-biology-class-11"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-orange-700 hover:text-orange-800"
+                >
+                  AP Biology + CBSE Class 11 playbook
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="/ap-biology-to-neet-preparation"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-blue-700 hover:text-blue-800"
+                >
+                  Returning to India for NEET?
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
             </div>
           </div>
         </section>

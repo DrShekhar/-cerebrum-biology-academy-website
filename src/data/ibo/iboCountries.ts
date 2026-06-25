@@ -47,12 +47,32 @@ export const IBO_COUNTRIES: IBOCountry[] = [
     ],
     timezone: 'ET / PT',
     heroBlurb:
-      'In the USA, the road to the IBO runs through USABO. We coach the full ladder — Open, Semifinal and National Finals — live in your US time zone, with AIIMS-trained biology faculty and a past-paper-saturation method.',
+      'In the USA, the road to the IBO runs through USABO. We coach the full ladder — Open, Semifinal and National Finals — live in your US time zone, with AIIMS-trained biology faculty (AIIMS — India’s apex medical institute, peer to Harvard Medical School in selectivity) and a past-paper-saturation method.',
     faqs: [
       {
         question: 'How does a US student make the IBO team?',
         answer:
           'Through USABO: the Open exam in February, the Semifinal in March (top ~10% of Open advance), then National Finals in late May. The top 4 finalists represent the USA at the International Biology Olympiad. We coach every stage.',
+      },
+      {
+        question: 'Who is eligible for the USABO Open Exam and how do I register?',
+        answer:
+          'Any student enrolled in a US high school is eligible — there is no age or grade restriction, and homeschool students can usually participate through a registered school. Registration is handled by your school, not the individual: a teacher signs the school up with the Center for Excellence in Education (CEE), which administers USABO. If your school is not yet registered, ask your AP Biology teacher to enroll it — the process is inexpensive and open to any US high school. We help you confirm registration windows (schools typically register in the autumn) so you do not miss the February Open.',
+      },
+      {
+        question: 'What is the USABO Semifinal cutoff?',
+        answer:
+          'Roughly the top 10% of Open Exam takers advance to the Semifinal — CEE sets the exact cutoff each year from the actual score distribution, so there is no fixed number. Historically the Open cutoff has sat around the high-50s percentage of marks. The Semifinal is a longer, harder paper with free-response questions, which is where undergraduate-level depth (Alberts, Lehninger) starts to matter. We coach to clear the cutoff comfortably rather than scrape it.',
+      },
+      {
+        question: 'How are the USABO National Finals run and how is Team USA selected for the IBO?',
+        answer:
+          'The top ~20 Semifinal scorers nationally are invited to the National Finals — a multi-day residential training camp at a host university with theory and hands-on lab practical rounds. Performance across that camp determines the final ranking, and the top 4 students are selected as Team USA for the International Biology Olympiad. So the funnel is Open Exam → Semifinal → National Finals (top ~20) → top 4 to the IBO. We prepare candidates specifically for the camp’s lab-practical and free-response demands, not just the written rounds.',
+      },
+      {
+        question: 'What is the USABO timeline through the year?',
+        answer:
+          'Schools register in the autumn; the Open Exam is held in early-to-mid February; the Semifinal follows in March; National Finals are held as a late-May / early-June camp; and the IBO itself takes place in July. We map your preparation backward from the February Open so foundational reading is done before the new year and the winter is spent on past-paper saturation.',
       },
     ],
   },

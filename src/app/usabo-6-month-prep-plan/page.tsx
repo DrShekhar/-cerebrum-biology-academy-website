@@ -334,6 +334,9 @@ export default function USABO6MonthPrepPlanPage() {
               Exam in February. Includes monthly goals, reading lists, weekly hour expectations, and
               the specific pitfalls that derail most first-time candidates.
             </p>
+            <p className="text-sm text-slate-400 mb-6 max-w-3xl">
+              Live online in your US time zone (ET/CT/MT/PT); pricing in USD.
+            </p>
             <p className="text-base text-slate-400 mb-8 max-w-3xl">
               Designed for students with a strong honors-biology background. AP-5 students can
               compress the first three months — see our{' '}

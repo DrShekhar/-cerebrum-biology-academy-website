@@ -56,25 +56,25 @@ export const metadata: Metadata = {
 const expectedDates = [
   {
     stage: 'USABO Open Exam',
-    expectedWindow: 'First or second week of February 2026',
+    expectedWindow: 'First or second week of February',
     format: '50 MCQ, 50 minutes, school-administered, single sitting',
     nextStep: 'Top performers (~10% of registrants) advance to the Semifinal',
   },
   {
     stage: 'USABO Semifinal',
-    expectedWindow: 'Mid-March 2026',
+    expectedWindow: 'Mid-March',
     format: 'Theory + free-response, 3 hours, individually proctored',
     nextStep: 'Top ~20 students nationally are designated USABO Finalists',
   },
   {
     stage: 'USABO National Finals',
-    expectedWindow: 'Late May / early June 2026',
+    expectedWindow: 'Late May / early June',
     format: 'Multi-day camp at a host university — theory, lab, and ethics rounds',
-    nextStep: 'Top 4 form the US team for IBO 2026',
+    nextStep: 'Top 4 form the US team for the IBO',
   },
   {
-    stage: 'IBO 2026',
-    expectedWindow: 'July 2026',
+    stage: 'IBO',
+    expectedWindow: 'July',
     format: "Hosted by the year's designated country — 80+ nations compete",
     nextStep: 'Medals (Gold ~10%, Silver ~20%, Bronze ~30%)',
   },
@@ -104,34 +104,39 @@ const historicalCutoffs = [
 
 const liveTracker = [
   {
-    label: 'Registration window',
+    label: 'Registration window (2026 cycle)',
     statusKey: 'window-2026',
-    statusText: 'Schools register through CEE — opens September; closes January',
+    statusText: 'Closed — schools registered through CEE between September and January',
   },
   {
-    label: 'Open Exam date — confirmed',
+    label: 'Open Exam (2026 cycle)',
     statusKey: 'open-date',
-    statusText: 'Will be confirmed by CEE in late autumn 2025',
+    statusText: 'Completed — held in February; CEE published results to member schools',
   },
   {
-    label: 'Open Exam cutoff (this year)',
+    label: 'Open Exam cutoff (2026 cycle)',
     statusKey: 'open-cutoff',
-    statusText: 'Will be published once the Open is graded — expected early March 2026',
+    statusText: 'Published by CEE after grading; exact figures released to schools per cycle',
   },
   {
-    label: 'Semifinalist list',
+    label: 'Semifinalist list (2026 cycle)',
     statusKey: 'semifinalist',
-    statusText: 'Released by CEE in early/mid March',
+    statusText: 'Released by CEE in early/mid March, after the Open was graded',
   },
   {
-    label: 'Finalist list (Top 20)',
+    label: 'Finalist list — Top 20 (2026 cycle)',
     statusKey: 'finalist',
-    statusText: 'Released by CEE in late March / early April',
+    statusText: 'Released by CEE in late March / early April following the Semifinal',
   },
   {
     label: 'IBO 2026 team (Top 4)',
     statusKey: 'team',
-    statusText: 'Announced after the National Finals camp in late May / early June',
+    statusText: 'Selected at the National Finals camp; Team USA confirmed for IBO 2026 in July',
+  },
+  {
+    label: 'Next cycle — USABO 2027 registration',
+    statusKey: 'window-2027',
+    statusText: 'Opens with CEE in September 2026; Open Exam follows in February 2027',
   },
 ]
 
@@ -228,9 +233,10 @@ export default function USABO2026ResultsPage() {
               <span className="block text-yellow-400 mt-2">Cutoffs & Dates</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 mb-6 max-w-3xl">
-              Everything we know about the 2026 cycle — Open Exam window (early February), Semifinal
-              date (mid-March), expected cutoff ranges based on 2022–2024 history, and a live
-              tracker for cutoffs and Finalist announcements once CEE publishes them.
+              Where the 2026 cycle stands — the Open Exam (February) and Semifinal (March) are
+              complete, the National Finals camp runs in late May / early June, and Team USA heads
+              to the IBO in July. Below: the recurring USABO calendar, cutoff ranges based on
+              2022–2024 history, and a tracker that also looks ahead to the 2027 cycle.
             </p>
             <p className="text-base text-slate-400 mb-8 max-w-3xl">
               All exam dates and cutoffs are confirmed by the Center for Excellence in Education
@@ -276,12 +282,13 @@ export default function USABO2026ResultsPage() {
             <div className="flex items-center gap-3 mb-2">
               <Calendar className="w-7 h-7 text-teal-600" />
               <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-                USABO 2026 expected dates
+                The USABO annual calendar
               </h2>
             </div>
             <p className="text-slate-600 mb-8 max-w-3xl">
-              Stage-by-stage windows based on the historical USABO calendar. CEE confirms specific
-              dates each autumn.
+              Stage-by-stage windows that repeat each cycle. The 2026 Open and Semifinal have
+              already run on this calendar; the same windows apply to the 2027 cycle. CEE confirms
+              exact dates each autumn.
             </p>
             <div className="space-y-4">
               {expectedDates.map((d, i) => (
@@ -423,8 +430,9 @@ export default function USABO2026ResultsPage() {
               Get the cutoff alert via WhatsApp
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              We&apos;ll notify you within 24 hours of CEE&apos;s Open cutoff and Semifinalist list
-              releases, plus next-steps guidance for either outcome.
+              We&apos;ll notify you within 24 hours of each CEE release — including the next
+              cycle&apos;s Open cutoff and Semifinalist list — plus next-steps guidance for either
+              outcome.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <ContextualWhatsAppLink className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition">

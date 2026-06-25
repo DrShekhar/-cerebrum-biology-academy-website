@@ -170,11 +170,12 @@ export default function DATBiologyPreparationPage() {
             DAT Biology Preparation
           </h1>
           <p className="text-xl text-slate-300 mb-6 max-w-3xl">
-            Biology-only DAT coaching from AIIMS-trained specialists. 40-question section depth via
-            Campbell Biology end-to-end with ADA outline weighting for vertebrate anatomy/physiology
-            — the section weighted heaviest on DAT and lightest in most generalist prep. Online live
-            in US-friendly ET evening slots. $449 self-paced through $1,399 senior 1:1, with
-            $135/hour ad-hoc tutoring.
+            Biology-only DAT coaching from AIIMS-trained (AIIMS — India's apex medical institute,
+            peer to Harvard Medical School in selectivity) specialists. 40-question section depth
+            via Campbell Biology end-to-end with ADA outline weighting for vertebrate
+            anatomy/physiology — the section weighted heaviest on DAT and lightest in most
+            generalist prep. Online live in US-friendly ET evening slots. $449 self-paced through
+            $1,399 senior 1:1, with $135/hour ad-hoc tutoring.
           </p>
           <div className="flex flex-wrap gap-4">
             <a

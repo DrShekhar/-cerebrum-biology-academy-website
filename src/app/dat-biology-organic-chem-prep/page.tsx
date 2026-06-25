@@ -44,7 +44,7 @@ const faqs = [
   {
     question: 'Why combine DAT Biology and Organic Chemistry coaching?',
     answer:
-      'The DAT Survey of Natural Sciences combines Biology (40 Q), General Chemistry (30 Q), and Organic Chemistry (30 Q) into a single 90-minute (Bio) + 90-minute (Chem combined) testing block. Biology and Orgo share content at the biochemistry interface — amino acid chemistry, carbohydrate reactions, lipid metabolism — and reading-comprehension-style passage questions blur the lines. Cerebrum students who combine the two report 1–2 point AA gain over students who silo-prep.',
+      'The DAT Survey of Natural Sciences is a single 100-question, 90-minute section combining Biology (40 Q), General Chemistry (30 Q), and Organic Chemistry (30 Q). Biology and Orgo share content at the biochemistry interface — amino acid chemistry, carbohydrate reactions, lipid metabolism — and reading-comprehension-style passage questions blur the lines. Cerebrum students who combine the two report 1–2 point AA gain over students who silo-prep.',
   },
   {
     question: 'Is Organic Chemistry harder than Biology on the DAT?',
@@ -146,9 +146,11 @@ export default function DATBiologyOrganicChemPage() {
           </h1>
           <p className="text-xl text-slate-300 mb-6 max-w-3xl">
             70 of the 100 Survey of Natural Sciences questions — Biology (40) and Organic Chemistry
-            (30) — coached together, with the biology specialist as lead. Bridge content (amino acid
-            chemistry, enzyme kinetics, lipid metabolism, carbohydrate chemistry) is taught in both
-            voices so it sticks. Most popular bundle: Small-Batch combined at $1,499.
+            (30) — coached together, with an AIIMS-trained (AIIMS — India's apex medical institute,
+            peer to Harvard Medical School in selectivity) biology specialist as lead. Bridge
+            content (amino acid chemistry, enzyme kinetics, lipid metabolism, carbohydrate
+            chemistry) is taught in both voices so it sticks. Most popular bundle: Small-Batch
+            combined at $1,499.
           </p>
           <a
             href={wa}

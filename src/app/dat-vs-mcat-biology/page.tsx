@@ -221,6 +221,9 @@ export default function DATvsMCATBiologyPage() {
               About 60% of the biology content overlaps. This guide maps every difference so you can
               decide which to prepare for — or whether dual-prep makes sense.
             </p>
+            <p className="text-base text-slate-400 mb-8 max-w-3xl">
+              Live online in your US time zone (ET/CT/MT/PT); pricing in USD.
+            </p>
           </div>
         </section>
 

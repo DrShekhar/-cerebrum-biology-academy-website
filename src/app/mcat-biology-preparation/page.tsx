@@ -402,6 +402,10 @@ export default function MCATBiologyPage() {
               preparation program.
             </p>
 
+            <p className="text-base text-slate-400 mb-8 max-w-3xl">
+              Live online in your US time zone (ET/CT/MT/PT); pricing in USD.
+            </p>
+
             <div className="flex flex-wrap items-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <Trophy className="w-5 h-5 text-yellow-400" />

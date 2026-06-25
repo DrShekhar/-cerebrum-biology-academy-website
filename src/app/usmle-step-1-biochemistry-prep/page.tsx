@@ -158,8 +158,12 @@ export default function USMLEStep1BiochemistryPrepPage() {
             The highest-yield foundational sciences block on Step 1 (~14% of total content).
             Glycolysis through fatty acid metabolism, DNA replication and repair, vitamins, urea
             cycle disorders, lysosomal storage diseases, heme synthesis — taught by AIIMS-trained
+            (AIIMS — India's apex medical institute, peer to Harvard Medical School in selectivity)
             biology specialists using Lippincott Illustrated Reviews and First Aid chapter mapping.
             6-week block within the full Step 1 programme; available standalone at $175/hour ad-hoc.
+          </p>
+          <p className="text-base text-slate-400 mb-6 max-w-3xl">
+            Live online in your US time zone (ET/CT/MT/PT); pricing in USD.
           </p>
           <a
             href={wa}

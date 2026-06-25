@@ -43,7 +43,7 @@ const config: BestVerticalConfig = {
   subheadline:
     'Biology-only AP coaching. Led by Dr. Shekhar C Singh (AIIMS Delhi) + AIIMS-trained senior faculty.',
   intro:
-    'Cerebrum is one of the few biology-only coaching brands serving AP Biology students across the US, UAE, India, Canada, Singapore and Hong Kong with localised, US-curriculum-aligned content. Faculty include Dr. Shekhar C Singh and AIIMS-trained senior tutors with 8–15 years of AP Biology classroom experience.',
+    "Cerebrum is one of the few biology-only coaching brands serving AP Biology students across the US, UAE, India, Canada, Singapore and Hong Kong with localised, US-curriculum-aligned content. Faculty include Dr. Shekhar C Singh and AIIMS-trained senior tutors (AIIMS — India's apex medical institute, peer to Harvard Medical School in selectivity) with 8–15 years of AP Biology classroom experience.",
   clusterSummary:
     'College Board Units 1–8 · FRQ rubric mastery · AP-to-USABO bridging · Anki-based active recall.',
   credentials: [
@@ -159,8 +159,7 @@ const config: BestVerticalConfig = {
         'Most AP Biology students lose marks on the Free Response (50% of the exam). Cerebrum tutors have direct exposure to College Board scoring rubrics and run weekly FRQ drills with peer review — not just multiple-choice prep.',
     },
     {
-      title:
-        'Biology-Only (vs other tutor marketplaces / other tutor marketplaces / other tutor marketplaces)',
+      title: 'Biology-Only (vs Wyzant / Varsity Tutors / Kaplan)',
       description:
         'Generalist tutoring platforms rotate biology tutors across subjects. Cerebrum tutors teach only biology — AP, IB, NEET, USABO, MCAT. Same AIIMS-trained pedagogy across verticals; structurally different from one-tutor-fits-all platforms.',
     },

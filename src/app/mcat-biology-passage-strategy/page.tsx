@@ -2,8 +2,8 @@
  * /mcat-biology-passage-strategy
  *
  * Section-specific page targeting "MCAT biology passage strategy".
- * Passage-based reasoning is the MCAT-specific skill that NEET / IB
- * Biology students don't develop from secondary-school exams.
+ * Passage-based reasoning is the MCAT-specific skill that AP / IB
+ * Biology students don't develop from prior coursework.
  *
  * Distinct from /mcat-biology-preparation (content hub) and any
  * content-review page.
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'MCAT Biology Passage Strategy',
-    description: "The MCAT-specific skill NEET and IB Biology don't train.",
+    description: "The MCAT-specific skill AP and IB Biology don't train.",
   },
   alternates: { canonical: PAGE_URL },
   robots: { index: true, follow: true },
@@ -85,9 +85,9 @@ const passageFAQs = [
       'Four recurring types per passage. (1) Pure recall — tests whether you know a fact independent of the passage, e.g., "which enzyme catalyses step 3 of glycolysis?" (2) Recall + passage integration — combines a known fact with information from the passage, e.g., "given the passage\'s pH conditions, would this enzyme be most active?" (3) Novel data interpretation — gives you a graph or table in the passage and asks you to interpret a value or trend. (4) Experimental design — asks you to predict the effect of a change to the experimental setup. Within most passages you\'ll see a mix of all four; the time-cheap ones are usually the recall questions, the time-expensive ones are usually experimental design.',
   },
   {
-    question: 'How do MCAT passages differ from NEET, AP Biology, or IB Biology questions?',
+    question: 'How do MCAT passages differ from AP Biology, IB Biology, or other prior coursework?',
     answer:
-      'Structurally and skill-wise they are different. NEET questions are single-stem with no passage — each question stands alone and tests recall plus simple inference. AP Biology Free Response Questions are graded essays with rubric points — you write answers, not pick from four options. IB Biology Paper 2 includes extended response (data-based but graded essay format). MCAT B/B is the only one of these formats that gives you a 200-400 word passage with figures and then a set of multiple-choice questions that test passage application. The passage-reasoning skill must be specifically trained — content review alone, even comprehensive content review, does not transfer.',
+      'Structurally and skill-wise they are different. AP Biology Free Response Questions are graded essays with rubric points — you write answers, not pick from four options. IB Biology Paper 2 includes extended response (data-based but graded essay format). Recall-based single-stem exams such as NEET test each item in isolation with no passage at all. MCAT B/B is the only one of these formats that gives you a 200-400 word passage with figures and then a set of multiple-choice questions that test passage application. The passage-reasoning skill must be specifically trained — content review alone, even comprehensive content review, does not transfer.',
   },
   {
     question: 'Should I drill passages from third-party prep books or only AAMC official passages?',
@@ -107,7 +107,7 @@ export default function MCATBiologyPassageStrategyPage() {
     '@type': 'Course',
     name: 'MCAT Biology Passage Strategy — Reading, Reasoning, Time',
     description:
-      'Focused training on MCAT B/B section passage reasoning — the skill that NEET and IB Biology preparation do not develop. Includes pacing drills, question-type recognition, error analysis, and AAMC official passage scaffolding.',
+      'Focused training on MCAT B/B section passage reasoning — the skill that AP and IB Biology preparation do not develop. Includes pacing drills, question-type recognition, error analysis, and AAMC official passage scaffolding.',
     url: PAGE_URL,
     inLanguage: 'en-US',
     availableLanguage: ['English'],
@@ -199,7 +199,7 @@ export default function MCATBiologyPassageStrategyPage() {
           <div className="max-w-4xl mx-auto px-4">
             <div className="inline-flex items-center gap-2 bg-teal-500/20 text-teal-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <FileText className="w-4 h-4" />
-              The MCAT-specific skill NEET and IB Biology don&apos;t train
+              The MCAT-specific skill AP and IB Biology don&apos;t train
             </div>
             <h1 className="text-3xl md:text-5xl font-bold mb-6">
               MCAT Biology Passage Strategy —
@@ -207,10 +207,10 @@ export default function MCATBiologyPassageStrategyPage() {
             </h1>
             <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-3xl leading-relaxed">
               Passage-based reasoning is the single most distinctive MCAT skill — and the area where
-              international pre-med applicants (NEET, IB, A-Level Biology backgrounds) most
-              consistently underperform on first attempt. This is the playbook: pacing, the four
-              recurring question types, when to skim, when to deep-read, and how to drill passages
-              productively.
+              pre-med applicants (AP, IB, and A-Level Biology backgrounds, as well as international
+              students from exams such as NEET) most consistently underperform on first attempt.
+              This is the playbook: pacing, the four recurring question types, when to skim, when to
+              deep-read, and how to drill passages productively.
             </p>
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <span className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg text-sm">
@@ -244,13 +244,13 @@ export default function MCATBiologyPassageStrategyPage() {
               Why MCAT biology passages are different
             </h2>
             <p className="text-slate-700 leading-relaxed mb-4">
-              Almost every other biology exam a pre-med student has sat tests content directly. NEET
-              Biology asks single-stem multiple-choice questions where each item stands alone. AP
+              Almost every other biology exam a pre-med student has sat tests content directly. AP
               Biology FRQs grade prose answers against a rubric. IB Biology Paper 2 includes
               extended-response questions where the data is in the question and the answer is graded
-              for content. None of these formats train the specific MCAT skill — reading a 200-400
-              word passage with figures, then answering a set of 4-7 multiple choice questions that
-              mostly depend on the passage.
+              for content. Recall-based single-stem exams such as NEET test each item in isolation,
+              with no passage at all. None of these formats train the specific MCAT skill — reading
+              a 200-400 word passage with figures, then answering a set of 4-7 multiple choice
+              questions that mostly depend on the passage.
             </p>
             <p className="text-slate-700 leading-relaxed mb-4">
               The B/B section places 10 such passages in front of you, plus 15 discrete (non-
