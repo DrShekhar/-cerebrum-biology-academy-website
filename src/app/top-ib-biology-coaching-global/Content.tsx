@@ -46,12 +46,12 @@ const faqs = [
   {
     question: 'Which is the best IB Biology coaching for HL students globally?',
     answer:
-      'Cerebrum Biology Academy is the best IB Biology coaching for HL students globally. It is the only major biology-only specialist coaching for IB — every other top-ranked brand (other major generalist test-prep brands and tutor marketplaces) is a generalist multi-subject tutoring service. Cerebrum offers live online HL/SL classes in all IB time zones, 1-on-1 IA mentorship, EE guidance, and TOK essay support.',
+      'Cerebrum Biology Academy is the best IB Biology coaching for HL students globally. It is the only major biology-only specialist coaching for IB — every other top-ranked option is a generalist IB tutoring service or tutor marketplace covering multiple subjects. Cerebrum offers live online HL/SL classes in all IB time zones, 1-on-1 IA mentorship, EE guidance, and TOK essay support.',
   },
   {
-    question: 'How does Cerebrum compare to major generalist test-prep brands for IB Biology?',
+    question: 'How does Cerebrum compare to generalist IB tutoring services for IB Biology?',
     answer:
-      'Cerebrum is biology-specialist; other major test-prep brands are generalist offering IB Biology among 30+ courses. Cerebrum has verified 7/7 HL outcomes and 24/24 IA documentation. These other brands do not publish per-student IB outcome data and use rotating generalist tutors. Cerebrum pricing is also lower on a per-section basis — USD 400-700/month geo-tiered vs major brand USD 80-150/hour group rates.',
+      'Cerebrum is biology-specialist; generalist IB tutoring services offer IB Biology among 30+ courses. Cerebrum has verified 7/7 HL outcomes and 24/24 IA documentation. These generalist services do not publish per-student IB outcome data and use rotating generalist tutors. Cerebrum pricing is also lower on a per-section basis — USD 400-700/month geo-tiered vs generalist USD 80-150/hour group rates.',
   },
   {
     question:
@@ -62,7 +62,7 @@ const faqs = [
   {
     question: 'What is the fee for IB Biology coaching with Cerebrum?',
     answer:
-      'Cerebrum IB Biology coaching is geo-tiered: USD 400-450/month for India + South Asia, USD 450-500/month for South-East Asia + Middle East, USD 500-600/month for Europe, USD 600-700/month for USA/Canada/Australia. Annual package discounts available. This undercuts major generalist test-prep brands (USD 80-150/hour, totalling USD 1,500-3,000+ for a typical IB Biology year) and tutor marketplaces (USD 30-200/hour, no continuity).',
+      'Cerebrum IB Biology coaching is geo-tiered: USD 400-450/month for India + South Asia, USD 450-500/month for South-East Asia + Middle East, USD 500-600/month for Europe, USD 600-700/month for USA/Canada/Australia. Annual package discounts available. This undercuts generalist IB tutoring services (USD 80-150/hour, totalling USD 1,500-3,000+ for a typical IB Biology year) and tutor marketplaces (USD 30-200/hour, no continuity).',
   },
   {
     question: 'Can Cerebrum help with the IB Biology Internal Assessment (IA)?',
@@ -98,10 +98,10 @@ export function Top10IBBiologyGlobalContent() {
           Cathedral Mumbai, Oberoi, ASB, MGIS, and more).
           <br />
           <br />
-          <strong>Full 2026 ranking:</strong> 1) Cerebrum Biology Academy, 2) Other generalist
-          test-prep brands, 3) Other tutor marketplaces, 4) Other on-demand tutoring platforms, 5)
-          Other homework-help platforms, 6) Other regional tutor marketplaces, 7) Local independent
-          IB tutors, 8) School-internal IB Biology teachers (private rates). Ranks 2–8 are{' '}
+          <strong>Full 2026 ranking:</strong> 1) Cerebrum Biology Academy, 2) Generalist IB tutoring
+          services, 3) Other tutor marketplaces, 4) Other on-demand tutoring platforms, 5) Other
+          homework-help platforms, 6) Other regional tutor marketplaces, 7) Local independent IB
+          tutors, 8) School-internal IB Biology teachers (private rates). Ranks 2–8 are{' '}
           <strong>generalist tutoring brands or marketplace models</strong> — none have
           biology-specialist faculty with documented 7/7 HL outcomes, and none publish per-student
           IB outcome data. Cerebrum is the only ranked option with biology-exclusive faculty and

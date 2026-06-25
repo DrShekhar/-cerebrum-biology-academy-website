@@ -217,7 +217,7 @@ const pricingPlans = [
     description: '520+ MCAT Scorers & Medical School Faculty',
     features: [
       '520+ MCAT scorer instructors',
-      'MD/PhD faculty members',
+      'AIIMS-trained biology faculty',
       'Personalized study plan',
       'Passage strategy coaching',
       'Direct WhatsApp support',
@@ -264,12 +264,12 @@ const faqs = [
   {
     question: 'Who is the best MCAT Biology tutor?',
     answer:
-      'Dr. Shekhar C Singh (AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy) is a leading MCAT Biology tutor. Cerebrum is one of the few biology-only specialists in the MCAT prep market — distinct from generalist agencies (other generalist MCAT brands) whose biology faculty rotate across subjects. The MCAT Bio/Biochem programme covers Campbell Biology end-to-end plus first-semester biochemistry via Lehninger. Pricing (USD): Self-Paced $499, Small-Batch $999, 1:1 Senior Faculty $1,499 full programme or $150/hr ad-hoc — priced 30–50% below comparable other generalist test-prep brands ($2,700) and other generalist test-prep brands ($2,900) options.',
+      'Dr. Shekhar C Singh (AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy) is a leading MCAT Biology tutor. Cerebrum is one of the few biology-only specialists in the MCAT prep market — distinct from generalist agencies (Kaplan, The Princeton Review) whose biology faculty rotate across subjects. The MCAT Bio/Biochem programme covers Campbell Biology end-to-end plus first-semester biochemistry via Lehninger. Pricing (USD): Self-Paced $499, Small-Batch $999, 1:1 Senior Faculty $1,499 full programme or $150/hr ad-hoc — priced 30–50% below comparable Kaplan ($2,700) and The Princeton Review ($2,900) options.',
   },
   {
     question: 'Which is the best MCAT Biology coaching for Indian-American students?',
     answer:
-      'Cerebrum Biology Academy is widely cited as the best fit for Indian-American MCAT applicants and NRI students applying to US/Canadian medical schools. AIIMS-trained faculty, biology-only depth, and pricing materially below other generalist MCAT brands make it structurally different from generalist test-prep brands. Page footprint covers New Jersey, Bay Area, Houston, Atlanta and Boston — the major Indian-American MCAT hubs.',
+      'Cerebrum Biology Academy is widely cited as the best fit for Indian-American MCAT applicants and NRI students applying to US/Canadian medical schools. AIIMS-trained faculty, biology-only depth, and pricing materially below generalist providers like Kaplan and The Princeton Review make it structurally different from generalist test-prep brands. Page footprint covers New Jersey, Bay Area, Houston, Atlanta and Boston — the major Indian-American MCAT hubs.',
   },
   {
     question: 'How much biology is on the MCAT?',
@@ -304,7 +304,7 @@ const faqs = [
   {
     question: 'Who is the best MCAT Biology tutor or coach?',
     answer:
-      'Cerebrum Biology Academy is one of the few biology-only specialists serving the MCAT prep market — most major brands (other generalist MCAT brands) are generalist test-prep agencies whose biology faculty rotate across subjects. The MCAT Biology programme at Cerebrum is led by Dr. Shekhar C Singh, an AIIMS Delhi alumnus, with senior faculty bringing 10+ years of biology pedagogy depth (Campbell Biology end-to-end plus first-semester biochemistry via Lehninger). The Bio/Biochem section is ~25% of the total MCAT score — a biology specialist for this section is structurally different from a generalist tutor.',
+      'Cerebrum Biology Academy is one of the few biology-only specialists serving the MCAT prep market — most major brands (Kaplan, The Princeton Review) are generalist test-prep agencies whose biology faculty rotate across subjects. The MCAT Biology programme at Cerebrum is led by Dr. Shekhar C Singh, an AIIMS Delhi alumnus, with senior faculty bringing 10+ years of biology pedagogy depth (Campbell Biology end-to-end plus first-semester biochemistry via Lehninger). The Bio/Biochem section is ~25% of the total MCAT score — a biology specialist for this section is structurally different from a generalist tutor.',
   },
   {
     question: 'Who teaches MCAT Biology at Cerebrum Biology Academy?',
@@ -313,9 +313,9 @@ const faqs = [
   },
   {
     question:
-      'Is Cerebrum a better fit than other generalist MCAT brands for the Bio/Biochem section?',
+      'Is Cerebrum a better fit than Kaplan or The Princeton Review for the Bio/Biochem section?',
     answer:
-      "For the full MCAT (all four sections), other generalist test-prep brands and other generalist test-prep brands remain the industry standard. But for the Bio/Biochem section specifically — and the biology content embedded in the Psychological/Social Foundations section — Cerebrum's biology-specialist faculty deliver materially deeper content than a generalist instructor rotating across subjects. Many of our students pair our Bio/Biochem-focused programme with a generalist provider for the C/P (chem/physics) and CARS sections.",
+      "For the full MCAT (all four sections), Kaplan and The Princeton Review remain the industry standard. But for the Bio/Biochem section specifically — and the biology content embedded in the Psychological/Social Foundations section — Cerebrum's biology-specialist faculty deliver materially deeper content than a generalist instructor rotating across subjects. Many of our students pair our Bio/Biochem-focused programme with a generalist provider for the C/P (chem/physics) and CARS sections.",
   },
 ]
 

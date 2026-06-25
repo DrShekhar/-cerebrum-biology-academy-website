@@ -68,10 +68,9 @@ const faqs = [
       'Yes. A meaningful share of our London cohort are NHS staff (FY1/FY2 doctors, dentists, nurses, pharmacists) retraining or upskilling for graduate medical entry or specialty transitions. Sessions are recorded for shift-work flexibility, and senior faculty office hours are accessible asynchronously. WhatsApp doubt support is responsive to shift-pattern hours.',
   },
   {
-    question:
-      'How does Cerebrum compare to other generalist GAMSAT brands or Griffiths for a London applicant?',
+    question: 'How does Cerebrum compare to Gradready or Griffiths GAMSAT for a London applicant?',
     answer:
-      'other generalist GAMSAT brands is £1,995+ — full GAMSAT generalist covering all three sections with rotating faculty. other generalist GAMSAT brands is similar in scope and price. Cerebrum is a Section III biology specialist — we cover the biology component in depth (£1,249 1:1 full programme, £110/hr ad-hoc) and most London applicants pair us with other generalist GAMSAT brands for Sections I and II.',
+      'Gradready is £1,995+ — full GAMSAT generalist covering all three sections with rotating faculty. Griffiths GAMSAT is similar in scope and price. Cerebrum is a Section III biology specialist — we cover the biology component in depth (£1,249 1:1 full programme, £110/hr ad-hoc) and most London applicants pair us with Gradready and Griffiths GAMSAT for Sections I and II.',
   },
 ]
 

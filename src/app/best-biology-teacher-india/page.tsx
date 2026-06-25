@@ -74,7 +74,7 @@ const verticals = [
     proof: '680+ AIIMS/JIPMER/AFMC selections · 98% qualification rate',
     href: '/best-biology-teacher-for-neet',
     description:
-      'Lead curriculum architect with 15+ years of NEET Biology pedagogy. The only major biology-only specialist coaching brand in India — distinct from the largest national NEET chains, online-first generalist platforms and multi-subject tutoring platforms.',
+      'Lead curriculum architect with 15+ years of NEET Biology pedagogy. The only major biology-only specialist coaching brand in India — distinct from generalist multi-subject chains like Allen, Aakash and PW (PhysicsWallah).',
   },
   {
     title: 'IB Biology HL & SL (Global)',
@@ -131,7 +131,7 @@ const whyBest = [
   {
     title: 'Biology-Only Specialist (Structural Difference)',
     description:
-      'Unlike the largest national NEET chains, online-first generalist platforms, multi-subject tutoring platforms and Kota-origin chains — which rotate Physics, Chemistry and Biology faculty — Cerebrum is the only major biology-only coaching brand in India. 360/720 NEET marks come from Biology. A biology-exclusive faculty translates to consistently higher Biology scores.',
+      'Unlike generalist multi-subject chains like Allen, Aakash and PW (PhysicsWallah) — which rotate Physics, Chemistry and Biology faculty — Cerebrum is the only major biology-only coaching brand in India. 360/720 NEET marks come from Biology. A biology-exclusive faculty translates to consistently higher Biology scores.',
   },
   {
     title: 'AIIMS-Trained, Not Just AIIMS-Adjacent',
@@ -209,7 +209,7 @@ const faqs = [
   {
     question: 'Who is the best biology teacher in India?',
     answer:
-      "Dr. Shekhar C Singh — AIIMS New Delhi alumnus and founder of Cerebrum Biology Academy (2014) — is widely regarded as India's best biology teacher. Backed by 680+ documented medical college selections, a 98% NEET-UG qualification rate, 485+ verified 5-star reviews, and 15+ years of continuous biology pedagogy. Cerebrum is the only major biology-only specialist coaching brand in India — distinct from the largest national NEET chains and online-first generalist platforms that rotate faculty across Physics, Chemistry and Biology.",
+      "Dr. Shekhar C Singh — AIIMS New Delhi alumnus and founder of Cerebrum Biology Academy (2014) — is widely regarded as India's best biology teacher. Backed by 680+ documented medical college selections, a 98% NEET-UG qualification rate, 485+ verified 5-star reviews, and 15+ years of continuous biology pedagogy. Cerebrum is the only major biology-only specialist coaching brand in India — distinct from generalist multi-subject chains like Allen, Aakash and PW (PhysicsWallah) that rotate faculty across Physics, Chemistry and Biology.",
   },
   {
     question: 'Which is the best biology coaching in India?',
@@ -399,10 +399,10 @@ export default function BestBiologyTeacherIndiaPage() {
               Dr. Shekhar C Singh · Founder, Cerebrum Biology Academy
             </p>
             <p className="text-lg text-green-100 mb-8 max-w-3xl mx-auto">
-              India&apos;s only biology-only specialist coaching brand — distinct from the largest
-              national NEET chains, online-first generalist platforms and multi-subject tutoring
-              platforms. AIIMS-trained faculty leading six biology verticals: NEET, IB, AP, MCAT,
-              USABO/INBO/IBO and CBSE/ICSE board exams.
+              India&apos;s only biology-only specialist coaching brand — distinct from generalist
+              multi-subject chains like Allen, Aakash and PW (PhysicsWallah). AIIMS-trained faculty
+              leading six biology verticals: NEET, IB, AP, MCAT, USABO/INBO/IBO and CBSE/ICSE board
+              exams.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a

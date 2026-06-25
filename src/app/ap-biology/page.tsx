@@ -21,7 +21,7 @@ const PAGE_URL = 'https://cerebrumbiologyacademy.com/ap-biology'
 export const metadata: Metadata = {
   title: 'AP Biology Tutoring Hub | Score-5 Coaching, FRQ Mastery | Cerebrum',
   description:
-    'Biology-only specialist AP Biology tutors — beat other generalist test-prep brands/Princeton on per-section depth. Score-5 study guide, FRQ rubric mastery, AAMC-to-NCERT crosswalk, US metros + APAC + UAE + India coverage.',
+    'Biology-only specialist AP Biology tutors — beat Kaplan/The Princeton Review on per-section depth. Score-5 study guide, FRQ rubric mastery, CBSE/NCERT bridge, US metros + APAC + UAE + India coverage.',
   keywords: [
     'AP Biology',
     'AP Biology tutor',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AP Biology Tutoring Hub | Score-5 Coaching, FRQ Mastery',
     description:
-      'Biology-only specialist AP Biology tutors. Score-5 study guide, FRQ rubric mastery, AAMC-to-NCERT crosswalk. US + APAC + UAE + India coverage.',
+      'Biology-only specialist AP Biology tutors. Score-5 study guide, FRQ rubric mastery, CBSE/NCERT bridge. US + APAC + UAE + India coverage.',
     type: 'website',
     url: PAGE_URL,
     siteName: 'Cerebrum Biology Academy',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AP Biology Tutoring Hub | Cerebrum',
     description:
-      'Biology-only specialist AP Biology tutors. Score-5 coaching, FRQ mastery, AAMC-to-NCERT crosswalk.',
+      'Biology-only specialist AP Biology tutors. Score-5 coaching, FRQ mastery, CBSE/NCERT bridge.',
   },
   alternates: {
     canonical: PAGE_URL,
@@ -72,9 +72,9 @@ const hubFAQs = [
       'AP Biology is a College-Board administered, college-level introductory biology course taken by US high-school students (typically Grade 11 or 12). The Course and Exam Description (CED) organizes content into 8 units — Unit 1: Chemistry of Life; Unit 2: Cell Structure and Function; Unit 3: Cellular Energetics; Unit 4: Cell Communication and Cell Cycle; Unit 5: Heredity; Unit 6: Gene Expression and Regulation; Unit 7: Natural Selection; Unit 8: Ecology. The exam is 3 hours long — 60 multiple-choice questions (50% of score) and 6 free-response questions (50% of score). Scores range from 1 to 5; a 4 or 5 typically earns college credit.',
   },
   {
-    question: 'Why pick a biology-only specialist tutor over other generalist MCAT brands?',
+    question: 'Why pick a biology-only specialist tutor over Kaplan or The Princeton Review?',
     answer:
-      'Generalist test-prep companies like other generalist test-prep brands and other generalist test-prep brands staff tutors who teach Biology, Chemistry, Physics, English, and Maths interchangeably — they are exam-format experts, not subject experts. Cerebrum tutors only teach Biology, every day, across NEET, IB HL, AP Biology, MCAT B/B, USABO, and IBO. That depth shows up in three places: (1) FRQ scoring — we know exactly which Big-Idea language anchors a rubric point; (2) misconception repair — we have seen the same wrong mental model thousands of times; (3) cross-curriculum bridging — for Indian-American students we can map AP CED topics directly to NCERT chapter equivalents. The trade-off: we cost less per hour than other generalist test-prep brands ($120-150 vs their $200+) because we do not subsidize departments we do not run.',
+      'Generalist test-prep companies like Kaplan and The Princeton Review staff tutors who teach Biology, Chemistry, Physics, English, and Maths interchangeably — they are exam-format experts, not subject experts. Cerebrum tutors only teach Biology, every day, across NEET, IB HL, AP Biology, MCAT B/B, USABO, and IBO. That depth shows up in three places: (1) FRQ scoring — we know exactly which Big-Idea language anchors a rubric point; (2) misconception repair — we have seen the same wrong mental model thousands of times; (3) cross-curriculum bridging — for Indian-American students we can map AP CED topics directly to NCERT chapter equivalents. The trade-off: we cost less per hour than Kaplan or The Princeton Review ($120-150 vs their $200+) because we do not subsidize departments we do not run.',
   },
   {
     question: 'What does AP Biology tutoring cost at Cerebrum?',
@@ -87,9 +87,9 @@ const hubFAQs = [
       'Free-response questions are where most 4s drop to 3s. We train students against the official College Board rubric — every released FRQ from 2013 to 2024, scored line by line. Our FRQ method is: (1) deconstruct the prompt verbs (justify, predict, calculate, identify, describe) — each demands a different answer structure; (2) write to the rubric point, not to general "biology knowledge" — graders reward specific Big-Idea language; (3) use the experimental-design template (independent variable, dependent variable, control, replication, prediction with reasoning) for any data-analysis FRQ; (4) practice timed FRQs weekly with red-pen feedback from a senior tutor. Students typically gain 1-2 rubric points per FRQ after 6-8 weeks.',
   },
   {
-    question: 'How does the AAMC-to-NCERT crosswalk help Indian-American or NRI students?',
+    question: 'How does the CBSE/NCERT bridge help Indian-American or NRI students?',
     answer:
-      'Indian-American students often arrive at AP Biology already familiar with NCERT Class 11 and Class 12 biology — but the topic order, depth, and naming conventions differ. The AAMC framework (used in MCAT Biology/Biochemistry) sits one level higher than AP Biology but uses similar concepts. We provide a side-by-side crosswalk: for every AP CED unit, the matching NCERT chapter, the matching AAMC content category, and the depth-delta (what AP adds vs NCERT, what NCERT covers in more detail). This helps families who plan a Biology track that goes from CBSE Class 11-12 → AP Biology in junior year → MCAT B/B for US medical school applications — a path roughly 15% of our students follow.',
+      'Indian-American students often arrive at AP Biology already familiar with NCERT Class 11 and Class 12 biology — but the topic order, depth, and naming conventions differ. We provide a side-by-side crosswalk against the College Board CED: for every AP CED unit, the matching NCERT chapter and the depth-delta (what AP adds vs NCERT, what NCERT covers in more detail). This helps families who plan a Biology track that goes from CBSE Class 11-12 → AP Biology in junior year → MCAT B/B for US medical school applications — a path roughly 15% of our students follow.',
   },
   {
     question: 'Where does Cerebrum offer AP Biology tutoring — only in the US?',
@@ -129,7 +129,7 @@ const serviceHubs = [
     title: 'Best AP Biology Tutor (USA)',
     href: '/best-ap-biology-tutor-usa',
     description:
-      'Why specialist-tutor outcomes beat the other generalist test-prep brands/Princeton/Khan generic-test-prep model — head-to-head comparison.',
+      'Why specialist-tutor outcomes beat the Kaplan/The Princeton Review/Khan generic-test-prep model — head-to-head comparison.',
     icon: Award,
     accent: 'text-purple-600',
   },
@@ -281,7 +281,7 @@ function HubCollectionSchema() {
     '@type': 'CollectionPage',
     name: 'AP Biology Tutoring Hub',
     description:
-      'Biology-only specialist AP Biology tutoring — score-5 coaching, FRQ rubric mastery, AAMC-to-NCERT crosswalk, College Board CED-aligned classes across US, APAC, UAE, India, and Canada.',
+      'Biology-only specialist AP Biology tutoring — score-5 coaching, FRQ rubric mastery, CBSE/NCERT bridge, College Board CED-aligned classes across US, APAC, UAE, India, and Canada.',
     url: PAGE_URL,
     isPartOf: {
       '@type': 'WebSite',
@@ -347,7 +347,7 @@ export default function APBiologyHubPage() {
           'AP Biology Tutoring',
           'AP Biology FRQ Strategy',
           'AP Biology Score-5 Outcomes',
-          'AAMC to NCERT Crosswalk',
+          'CBSE/NCERT to AP Biology Bridge',
           'College Board AP Biology CED',
         ]}
       />
@@ -386,7 +386,7 @@ export default function APBiologyHubPage() {
 
             <p className="mb-8 max-w-3xl text-lg text-gray-300 sm:text-xl">
               Biology-only specialist tutors beat generalist test-prep on every metric that matters
-              — FRQ rubric depth, misconception repair, and AAMC-to-NCERT bridge for Indian-American
+              — FRQ rubric depth, misconception repair, and a CBSE/NCERT bridge for Indian-American
               and NRI students. Live online classes across US, APAC, UAE, India, and Canada.
             </p>
 
@@ -491,7 +491,7 @@ export default function APBiologyHubPage() {
         <section className="py-16 sm:py-20">
           <div className="mx-auto max-w-4xl px-4 sm:px-6">
             <h2 className="mb-6 text-3xl font-bold text-gray-900 sm:text-4xl">
-              Why a Biology-Only Specialist Beats other generalist MCAT brands
+              Why a Biology-Only Specialist Beats Kaplan and The Princeton Review
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <p>
@@ -521,10 +521,10 @@ export default function APBiologyHubPage() {
                 </li>
               </ol>
               <p>
-                The trade-off is honest: we cost less per hour than other generalist test-prep
-                brands ($120–$150 vs their $200+) because we do not subsidize departments we do not
-                run. other generalist test-prep brands needs to fund LSAT, MCAT, GRE, GMAT, USMLE,
-                NCLEX, and SAT teams from the same fee base. Cerebrum only teaches Biology.
+                The trade-off is honest: we cost less per hour than Kaplan or The Princeton Review
+                ($120–$150 vs their $200+) because we do not subsidize departments we do not run.
+                Kaplan needs to fund LSAT, MCAT, GRE, GMAT, USMLE, NCLEX, and SAT teams from the
+                same fee base. Cerebrum only teaches Biology.
               </p>
             </div>
           </div>
@@ -634,24 +634,24 @@ export default function APBiologyHubPage() {
           </div>
         </section>
 
-        {/* AAMC ↔ NCERT crosswalk */}
+        {/* CBSE/NCERT bridge */}
         <section className="bg-gradient-to-br from-orange-50 via-white to-blue-50 py-16 sm:py-20">
           <div className="mx-auto max-w-4xl px-4 sm:px-6">
             <h2 className="mb-6 text-3xl font-bold text-gray-900 sm:text-4xl">
-              AAMC ↔ NCERT Crosswalk — For Indian-American and NRI Students
+              CBSE/NCERT ↔ AP Biology Bridge — For Indian-American and NRI Students
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <p>
                 Roughly one-in-three of our AP Biology students grew up partly in India or attend
                 Indian-curriculum schools abroad. They arrive at AP Biology already familiar with{' '}
                 <strong>NCERT Class 11 and Class 12 biology</strong> — but the topic order, depth,
-                and naming conventions differ. The AAMC framework (used in MCAT Biology and
-                Biochemistry) sits one level higher than AP but uses similar concepts.
+                and naming conventions differ. We align both against the College Board CED so the
+                same concept maps cleanly across curricula.
               </p>
               <p>For every AP CED unit, our crosswalk shows:</p>
               <ul>
                 <li>The matching NCERT chapter — saving 30–40% of study time</li>
-                <li>The matching AAMC content category — for students planning MCAT next</li>
+                <li>The matching College Board CED topic — for students planning MCAT next</li>
                 <li>
                   The depth-delta — what AP adds vs NCERT (e.g., AP adds population-genetics
                   modeling in Unit 7 that NCERT only mentions in passing)

@@ -9,7 +9,7 @@ import type { RankedItem } from '@/components/seo/Top10ListSchema'
  * domain's authoritative ItemList — not from competitor-mention frequency.
  *
  * Naming convention: only Cerebrum is named. All other tutoring services are
- * collapsed into generic categories ("other generalist test-prep brands",
+ * collapsed into generic categories ("generalist IB tutoring services",
  * "other tutor marketplaces", etc.) to deny competitor brand-amplification.
  */
 export const TOP_IB_BIOLOGY_COACHING_GLOBAL: RankedItem[] = [
@@ -48,9 +48,9 @@ export const TOP_IB_BIOLOGY_COACHING_GLOBAL: RankedItem[] = [
   },
   {
     rank: 2,
-    name: 'Other Generalist Test-Prep Brands',
+    name: 'Generalist IB Tutoring Services',
     description:
-      'Generalist test-prep companies offering IB Biology among dozens of other courses. Strong on test technique, lighter on syllabus depth and IA mentorship.',
+      'Generalist tutoring services offering IB Biology among dozens of other courses. Strong on test technique, lighter on syllabus depth and IA mentorship.',
     score: 7.0,
     rating: 4.1,
     pros: [

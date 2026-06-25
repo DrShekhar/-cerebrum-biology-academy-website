@@ -392,7 +392,7 @@ const NEETCompletePage = () => {
     {
       icon: Users,
       title: 'Expert Faculty Mentorship',
-      description: 'PhD-qualified faculty with active research backgrounds and proven NEET success',
+      description: 'AIIMS-trained faculty with active research backgrounds and proven NEET success',
     },
   ]
 
@@ -407,7 +407,7 @@ const NEETCompletePage = () => {
             '@type': 'Course',
             name: 'NEET Complete Biology Course',
             description:
-              'Comprehensive 2-year NEET Biology program covering both Class 11 and Class 12 with Harvard-level academic rigor, research-backed curriculum, and PhD-qualified faculty.',
+              'Comprehensive 2-year NEET Biology program covering both Class 11 and Class 12 with Harvard-level academic rigor, research-backed curriculum, and AIIMS-trained faculty.',
             provider: {
               '@type': 'Organization',
               name: 'Cerebrum Biology Academy',
@@ -465,7 +465,7 @@ const NEETCompletePage = () => {
               </h1>
 
               <p className="text-xl mb-8 leading-relaxed">
-                Master Biology with research-backed curriculum, PhD-qualified faculty, and proven
+                Master Biology with research-backed curriculum, AIIMS-trained faculty, and proven
                 track record of 350+ average scores in NEET Biology.
               </p>
 
@@ -484,7 +484,7 @@ const NEETCompletePage = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-yellow-400">15+</div>
-                  <div className="text-sm text-blue-200">PhD Faculty</div>
+                  <div className="text-sm text-blue-200">AIIMS-Trained Faculty</div>
                 </div>
               </div>
 
@@ -749,7 +749,7 @@ const NEETCompletePage = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">World-Class Faculty</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Learn from PhD-qualified researchers and educators with proven NEET success records
+                Learn from AIIMS-trained researchers and educators with proven NEET success records
               </p>
             </div>
 
@@ -864,7 +864,7 @@ const NEETCompletePage = () => {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-600">Faculty Access</span>
-                      <span className="font-medium">PhD mentorship</span>
+                      <span className="font-medium">AIIMS-trained mentorship</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-600">Success Guarantee</span>
@@ -914,7 +914,7 @@ const NEETCompletePage = () => {
                   <h4 className="font-bold mb-4 text-center">What's Included</h4>
                   <ul className="space-y-3">
                     {[
-                      'Live interactive classes with PhD faculty',
+                      'Live interactive classes with AIIMS-trained faculty',
                       'Recording access for lifetime revision',
                       'Research-backed study materials',
                       '3D molecular visualization tools',

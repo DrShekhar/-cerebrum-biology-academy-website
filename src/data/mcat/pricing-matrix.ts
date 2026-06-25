@@ -7,9 +7,9 @@
  *
  * Positioning: Cerebrum is a biology-section specialist — not a full
  * MCAT generalist. Pricing reflects per-section coaching, which is
- * structurally cheaper than full-course other generalist test-prep brands ($2,700) / Princeton
+ * structurally cheaper than full-course Kaplan ($2,700) / Princeton
  * Review ($2,900) and lets us compete on per-hour rate against
- * other generalist MCAT brands ($175/hr) and Princeton tutoring ($183/hr).
+ * Kaplan ($175/hr) and Princeton tutoring ($183/hr).
  *
  * Three product tiers — same model as the olympiad + IB Biology
  * matrices for consistency. USD-only because the audience is
@@ -98,7 +98,7 @@ export const mcatPricingProducts: MCATPricingProduct[] = [
 ]
 
 /** Hourly tutoring rate for ad-hoc / gap-fill sessions outside the
- *  packaged programmes. Compared to other generalist MCAT brands $175/hr and Princeton
+ *  packaged programmes. Compared to Kaplan $175/hr and Princeton
  *  Review $183/hr, this is Cerebrum's per-hour wedge. */
 export const MCAT_ADHOC_TUTORING_USD_PER_HOUR = 135
 

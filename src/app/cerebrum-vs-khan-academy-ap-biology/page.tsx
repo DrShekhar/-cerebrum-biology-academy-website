@@ -41,7 +41,7 @@ const config: CompetitorComparisonConfig = {
   ribbon: 'Live Specialist Coaching vs Free Video Library',
   subheadline: 'FRQ rubric mastery and 1:1 faculty vs self-paced video review.',
   intro:
-    'Khan Academy offers free AP Biology video lectures and practice questions — an excellent baseline resource used by millions. Cerebrum is a paid, live-coaching specialist with PhD-faculty 1:1 sessions, FRQ rubric mastery, and USABO bridge. The question is whether free content is sufficient for your score-5 target, or whether live coaching provides the marginal lift. For most students scoring 3–4, the answer is live coaching moves the needle; Khan Academy alone keeps them at 3–4.',
+    'Khan Academy offers free AP Biology video lectures and practice questions — an excellent baseline resource used by millions. Cerebrum is a paid, live-coaching specialist with AIIMS-trained-faculty 1:1 sessions, FRQ rubric mastery, and USABO bridge. The question is whether free content is sufficient for your score-5 target, or whether live coaching provides the marginal lift. For most students scoring 3–4, the answer is live coaching moves the needle; Khan Academy alone keeps them at 3–4.',
   table: [
     {
       criterion: 'Cost',
@@ -51,7 +51,7 @@ const config: CompetitorComparisonConfig = {
     },
     {
       criterion: 'Teaching Mode',
-      cerebrum: 'Live 1:1 or small-batch with PhD faculty',
+      cerebrum: 'Live 1:1 or small-batch with AIIMS-trained faculty',
       competitor: 'Pre-recorded video + practice questions',
       cerebrumWins: true,
     },
@@ -75,7 +75,7 @@ const config: CompetitorComparisonConfig = {
     },
     {
       criterion: 'Practice Questions',
-      cerebrum: 'Curated AP-style + AAMC-aligned',
+      cerebrum: 'Curated AP-style + College Board CED-aligned',
       competitor: 'Extensive free question bank',
       cerebrumWins: false,
     },
@@ -101,7 +101,7 @@ const config: CompetitorComparisonConfig = {
     {
       title: 'Live Faculty Feedback',
       description:
-        "PhD faculty who read your FRQ answers and give real-time feedback. Khan Academy's platform cannot assess written FRQ responses — you're grading yourself against answer keys.",
+        "AIIMS-trained faculty who read your FRQ answers and give real-time feedback. Khan Academy's platform cannot assess written FRQ responses — you're grading yourself against answer keys.",
     },
     {
       title: 'USABO Bridge',

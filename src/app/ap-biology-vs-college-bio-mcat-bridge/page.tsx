@@ -172,9 +172,9 @@ export default function APBiologyVsCollegeBioMCATBridgePage() {
                 college biology anyway, because medical schools nearly universally require{' '}
                 <em>two semesters of college-level biology with lab</em> as a prerequisite. AP
                 credit is typically not accepted toward this prerequisite by medical schools —
-                including all of the top 30 by USNWR, per Other generalist MCAT brands&apos;
-                prerequisite reference. So even if your university accepts AP-5 for credit,
-                you&apos;ll likely retake college biology to satisfy med school admissions.
+                including all of the top 30 by USNWR, per Kaplan&apos;s med-school prerequisite
+                reference. So even if your university accepts AP-5 for credit, you&apos;ll likely
+                retake college biology to satisfy med school admissions.
               </li>
               <li>
                 <strong>&ldquo;AP Biology is sufficient prep for the MCAT.&rdquo;</strong> No. The
@@ -257,7 +257,7 @@ export default function APBiologyVsCollegeBioMCATBridgePage() {
             </div>
             <p className="text-xs text-slate-500 mt-4">
               Sources: AP Biology Course and Exam Description (College Board, 2024–25); AAMC MCAT
-              content outline; other generalist MCAT brands Prerequisites reference.
+              content outline; Kaplan med-school prerequisites reference.
             </p>
           </div>
         </section>
@@ -365,9 +365,9 @@ export default function APBiologyVsCollegeBioMCATBridgePage() {
                 actually expect.
               </li>
               <li>
-                <strong>other generalist MCAT brands Prerequisites.</strong> Synthesised reference
-                on whether AP credit satisfies med-school biology / chemistry / physics requirements
-                at top programmes (overwhelmingly: it does not).
+                <strong>Kaplan med-school prerequisites guide.</strong> Synthesised reference on
+                whether AP credit satisfies med-school biology / chemistry / physics requirements at
+                top programmes (overwhelmingly: it does not).
               </li>
               <li>
                 <strong>College Board AP Biology CED.</strong> Defines exactly what AP Bio tests;

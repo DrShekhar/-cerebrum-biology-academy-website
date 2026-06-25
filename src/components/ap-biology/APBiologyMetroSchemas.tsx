@@ -92,7 +92,7 @@ export function APBiologyMetroSchemas({
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: `AP Biology Tutoring for ${metro.cityName} Students`,
-    description: `AP Biology 1:1 tutoring for ${metro.cityName} students with PhD biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. Live in ${metro.timezone}.`,
+    description: `AP Biology 1:1 tutoring for ${metro.cityName} students with AIIMS-trained biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. Live in ${metro.timezone}.`,
     url: canonical,
     inLanguage,
     availableLanguage,
@@ -186,7 +186,7 @@ export function APBiologyMetroSchemas({
     name: 'Dr. Shekhar C Singh',
     alternateName: ['Dr. Shekhar Singh', 'Dr. SC Singh'],
     jobTitle: 'Founder & Lead Biology Faculty',
-    description: `AIIMS-trained AP Biology educator with PhD-level faculty for ${metro.cityName} students. FRQ rubric mastery, College Board Units 1-8, AP-to-USABO bridge.`,
+    description: `AIIMS-trained AP Biology educator with AIIMS-trained faculty for ${metro.cityName} students. FRQ rubric mastery, College Board Units 1-8, AP-to-USABO bridge.`,
     url: `${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`,
     image: `${SITE_URL}/images/dr-shekhar-singh.webp`,
     affiliation: {

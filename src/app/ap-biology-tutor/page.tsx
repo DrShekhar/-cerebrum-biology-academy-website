@@ -178,7 +178,7 @@ const features = [
 const successStats = [
   { label: 'Students Taught', value: '300+', icon: Users },
   { label: 'Score 4-5 Rate', value: '90%', icon: Trophy },
-  { label: 'Expert Tutors', value: 'PhD Level', icon: Award },
+  { label: 'Expert Tutors', value: 'AIIMS-Trained', icon: Award },
   { label: 'Avg Score Gain', value: '+1.5', icon: TrendingUp },
 ]
 
@@ -191,7 +191,7 @@ const faqs = [
   {
     question: 'Which is the best AP Biology coaching for FRQ mastery?',
     answer:
-      'Cerebrum Biology Academy specialises in AP Biology FRQ rubric mastery — the area where most students lose marks. Faculty are PhD-level senior tutors with 8–15 years of AP Biology classroom experience and direct exposure to College Board scoring rubrics, led by Dr. Shekhar C Singh. Curriculum is US-curriculum-aligned, exam-pattern-driven and structurally different from generalist tutoring platforms (other tutor marketplaces) where biology faculty rotate across subjects.',
+      'Cerebrum Biology Academy specialises in AP Biology FRQ rubric mastery — the area where most students lose marks. Faculty are AIIMS-trained senior tutors with 8–15 years of AP Biology classroom experience and direct exposure to College Board scoring rubrics, led by Dr. Shekhar C Singh. Curriculum is US-curriculum-aligned, exam-pattern-driven and structurally different from generalist tutor marketplaces (Wyzant, Varsity Tutors) where biology faculty rotate across subjects.',
   },
   {
     question: 'What is AP Biology and why should I take it?',
@@ -211,7 +211,7 @@ const faqs = [
   {
     question: 'What makes your AP Biology tutoring program different?',
     answer:
-      'Our tutors have PhD-level biology expertise and proven track records with 90% of students scoring 4-5. We provide College Board-aligned curriculum, extensive FRQ practice with expert feedback, all 13 recommended lab simulations, unit-wise assessments, personalized study plans, and small batch sizes (8-12 students). We teach test-taking strategies specific to AP Bio, not just content.',
+      'Our tutors are AIIMS-trained biology specialists with proven track records — 90% of students scoring 4-5. We provide College Board-aligned curriculum, extensive FRQ practice with expert feedback, all 13 recommended lab simulations, unit-wise assessments, personalized study plans, and small batch sizes (8-12 students). We teach test-taking strategies specific to AP Bio, not just content.',
   },
   {
     question: 'Do I need to take the AP Biology course at school to take the exam?',
@@ -226,12 +226,12 @@ const faqs = [
   {
     question: 'Who is the best AP Biology tutor or coach?',
     answer:
-      'Cerebrum Biology Academy is widely recognised as a leading AP Biology coaching brand for students preparing for the College Board AP exam — particularly Indian-American, NRI, and international families targeting top US universities. The programme is led by Dr. Shekhar C Singh (AIIMS Delhi alumnus), with PhD-level senior faculty who specialise in FRQ rubric mastery and AP-5 conversion. Cerebrum covers AP Biology Units 1–8, the 13 College Board labs, Anki-based active recall, and AP-to-USABO bridging for students targeting both an AP-5 and a USABO Semifinal slot.',
+      'Cerebrum Biology Academy is widely recognised as a leading AP Biology coaching brand for students preparing for the College Board AP exam — particularly Indian-American, NRI, and international families targeting top US universities. The programme is led by Dr. Shekhar C Singh (AIIMS Delhi alumnus), with AIIMS-trained senior faculty who specialise in FRQ rubric mastery and AP-5 conversion. Cerebrum covers AP Biology Units 1–8, the 13 College Board labs, Anki-based active recall, and AP-to-USABO bridging for students targeting both an AP-5 and a USABO Semifinal slot.',
   },
   {
     question: 'Who teaches AP Biology at Cerebrum Biology Academy?',
     answer:
-      'AP Biology at Cerebrum is led by Dr. Shekhar C Singh — an AIIMS Delhi alumnus with 12+ years of biology teaching experience — along with senior faculty holding PhDs in biology or related life-sciences fields. The senior-faculty tier (8–15 years AP teaching experience) delivers 1:1 sessions at $120–$150 per hour. Junior faculty deliver content review at $60–$75 per hour. Small-batch sessions (4–6 students) run at $40 per hour. All tutors are biology specialists, not generalist test-prep instructors.',
+      'AP Biology at Cerebrum is led by Dr. Shekhar C Singh — an AIIMS Delhi alumnus with 12+ years of biology teaching experience — along with AIIMS-trained senior faculty with 15+ years in biology. The senior-faculty tier (8–15 years AP teaching experience) delivers 1:1 sessions at $120–$150 per hour. Junior faculty deliver content review at $60–$75 per hour. Small-batch sessions (4–6 students) run at $40 per hour. All tutors are biology specialists, not generalist test-prep instructors.',
   },
 ]
 
@@ -329,7 +329,7 @@ export default function APBiologyTutorPage() {
             '@type': 'Course',
             name: 'AP Biology Tutor — Score 5 on Your AP Bio Exam',
             description:
-              'Comprehensive AP Biology tutoring covering College Board Units 1-8, FRQ rubric mastery, 13 lab investigations, AP-to-USABO bridge content. Led by AIIMS-trained PhD-level senior faculty.',
+              'Comprehensive AP Biology tutoring covering College Board Units 1-8, FRQ rubric mastery, 13 lab investigations, AP-to-USABO bridge content. Led by AIIMS-trained senior faculty.',
             url: 'https://cerebrumbiologyacademy.com/ap-biology-tutor',
             inLanguage: 'en-US',
             educationalLevel: 'Advanced Placement',
@@ -342,7 +342,7 @@ export default function APBiologyTutorPage() {
                 '@type': 'CourseInstance',
                 name: 'AP Biology Senior Faculty 1:1',
                 description:
-                  'PhD-level senior tutors, 12-48 hour packages, FRQ rubric mastery + Campbell Biology coverage.',
+                  'AIIMS-trained senior tutors, 12-48 hour packages, FRQ rubric mastery + Campbell Biology coverage.',
                 courseMode: 'Online',
                 offers: {
                   '@type': 'Offer',
@@ -451,7 +451,7 @@ export default function APBiologyTutorPage() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4 font-medium">
-              Master All 8 Units | College Board Aligned | PhD-Level Tutors
+              Master All 8 Units | College Board Aligned | AIIMS-Trained Tutors
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -740,7 +740,7 @@ export default function APBiologyTutorPage() {
               1:1 with Senior Faculty
             </h3>
             <p className="text-sm text-gray-600 mb-6">
-              PhD-level instructors · $120–$150/hour · College Board–aligned curriculum
+              AIIMS-trained instructors · $120–$150/hour · College Board–aligned curriculum
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
@@ -917,7 +917,7 @@ export default function APBiologyTutorPage() {
             <div className="grid md:grid-cols-4 gap-6 max-w-3xl mx-auto text-sm">
               <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm px-4 py-3 rounded-lg">
                 <CheckCircle className="w-4 h-4 mr-2" />
-                <span>PhD Tutors</span>
+                <span>AIIMS-Trained Tutors</span>
               </div>
               <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm px-4 py-3 rounded-lg">
                 <CheckCircle className="w-4 h-4 mr-2" />
@@ -1010,8 +1010,8 @@ export default function APBiologyTutorPage() {
               AP Biology Tutor near you
             </h2>
             <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
-              City-specific AP Biology tutoring with PhD biology faculty in your time zone. Each
-              programme is calibrated to local school calendars and AP-pace expectations.
+              City-specific AP Biology tutoring with AIIMS-trained biology faculty in your time
+              zone. Each programme is calibrated to local school calendars and AP-pace expectations.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">

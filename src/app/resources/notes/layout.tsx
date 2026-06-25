@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'NEET Biology Chapter Notes | NCERT Class 11 + 12 | Cerebrum',
   description:
-    'NEET Biology chapter notes for all 38 NCERT chapters — Class 11 (22 chapters across 5 units) + Class 12 (16 chapters across 5 units). Line-by-line NCERT explanations, key diagrams, NEET-aligned MCQ examples, high-weightage flags. Authored by AIIMS-trained Dr. Shekhar C Singh and PhD faculty.',
+    'NEET Biology chapter notes for all 38 NCERT chapters — Class 11 (22 chapters across 5 units) + Class 12 (16 chapters across 5 units). Line-by-line NCERT explanations, key diagrams, NEET-aligned MCQ examples, high-weightage flags. Authored by AIIMS-trained Dr. Shekhar C Singh and AIIMS-trained faculty.',
   keywords: [
     'NEET biology chapter notes',
     'NEET biology NCERT notes',

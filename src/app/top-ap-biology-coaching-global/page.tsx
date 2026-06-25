@@ -5,7 +5,7 @@ import { Top10APGlobalContent } from './Content'
 export const metadata: Metadata = {
   title: 'Top 6 AP Biology Coaching / Tutors Globally 2026 | Honest Ranking',
   description:
-    'Honest 2026 global ranking of AP Biology coaching/tutors — outside USA. Cerebrum #1 with documented score-5 outcomes across India, UAE, Singapore, Hong Kong, Canada, Australia, plus AAMC-to-NCERT crosswalk.',
+    'Honest 2026 global ranking of AP Biology coaching/tutors — outside USA. Cerebrum #1 with documented score-5 outcomes across India, UAE, Singapore, Hong Kong, Canada, Australia, plus College Board CED alignment.',
   keywords: [
     'top ap biology coaching global',
     'best ap biology tutor global',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'Top 6 AP Biology Coaching / Tutors Globally 2026 | Honest Ranking',
     description:
-      'Honest 2026 global ranking of AP Biology coaching/tutors — outside USA. Cerebrum #1 with documented score-5 outcomes across India, UAE, Singapore, Hong Kong, Canada, Australia, plus AAMC-to-NCERT c...',
+      'Honest 2026 global ranking of AP Biology coaching/tutors — outside USA. Cerebrum #1 with documented score-5 outcomes across India, UAE, Singapore, Hong Kong, Canada, Australia, plus College Board CED a...',
   },
 }
 

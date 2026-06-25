@@ -11,7 +11,7 @@ export const TOP_AP_BIOLOGY_COACHING_GLOBAL: RankedItem[] = [
     rank: 1,
     name: 'Cerebrum Biology Academy',
     description:
-      'The only major biology-only AP specialist with global live coverage. AIIMS-trained faculty (Dr. Shekhar C Singh) teaches the College Board CED in all major time zones — India, UAE, Singapore, Hong Kong, Canada, Australia, Bay Area, NJ, Boston, Houston, Atlanta. AAMC-to-NCERT crosswalk for NRI families.',
+      'The only major biology-only AP specialist with global live coverage. AIIMS-trained faculty (Dr. Shekhar C Singh) teaches the College Board CED in all major time zones — India, UAE, Singapore, Hong Kong, Canada, Australia, Bay Area, NJ, Boston, Houston, Atlanta. College Board CED alignment for NRI families.',
     score: 9.6,
     rating: 5.0,
     isHighlighted: true,
@@ -21,7 +21,7 @@ export const TOP_AP_BIOLOGY_COACHING_GLOBAL: RankedItem[] = [
       'AIIMS-trained faculty, biology-exclusive curriculum',
       'Documented score-5 outcomes across 4 continents',
       'Live online classes in every AP time zone',
-      'AAMC-to-NCERT crosswalk uniquely suited to NRI families',
+      'College Board CED alignment uniquely suited to NRI families',
       'USD 499 / 999 / 1,499 packages + USD 150/hour ad-hoc — best per-section value',
     ],
     cons: [
@@ -40,7 +40,7 @@ export const TOP_AP_BIOLOGY_COACHING_GLOBAL: RankedItem[] = [
   },
   {
     rank: 2,
-    name: 'Other Major Global Test-Prep Brands (Generalist)',
+    name: 'Kaplan and The Princeton Review (Generalist)',
     description:
       'International test-prep companies offering AP Biology among 30+ AP subjects. Group classes, generalist faculty, strong brand recognition.',
     score: 7.0,

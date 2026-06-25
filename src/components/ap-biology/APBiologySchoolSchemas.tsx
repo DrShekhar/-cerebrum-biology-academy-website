@@ -42,7 +42,7 @@ export function APBiologySchoolSchemas({ school }: APBiologySchoolSchemasProps) 
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: `AP Biology Tutoring for ${school.shortName} Students`,
-    description: `AP Biology 1:1 tutoring tailored to ${school.shortName}'s pace and curriculum, with PhD biology faculty, College Board–aligned methodology, and FRQ rubric mastery. Live in ${school.timezone}.`,
+    description: `AP Biology 1:1 tutoring tailored to ${school.shortName}'s pace and curriculum, with AIIMS-trained biology faculty, College Board–aligned methodology, and FRQ rubric mastery. Live in ${school.timezone}.`,
     url: canonical,
     inLanguage: 'en-US',
     educationalLevel: 'High School',

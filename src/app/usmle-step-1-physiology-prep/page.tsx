@@ -54,7 +54,7 @@ const faqs = [
   {
     question: 'What reference texts does Cerebrum use for Step 1 physiology?',
     answer:
-      'BRS Physiology (Linda Costanzo) is the canonical Step 1 physiology text and is used as primary reference. The full Costanzo Physiology textbook is used for depth on weak topics. First Aid Step 1 physiology sections are mapped chapter-by-chapter throughout. We do not use other generalist test-prep brands Lecture Notes Physiology (too dense for high-yield Step 1) or Guyton (too encyclopedic for Step 1 timeline). UWorld physiology blocks are walked through live for application drilling.',
+      'BRS Physiology (Linda Costanzo) is the canonical Step 1 physiology text and is used as primary reference. The full Costanzo Physiology textbook is used for depth on weak topics. First Aid Step 1 physiology sections are mapped chapter-by-chapter throughout. We do not use Kaplan Lecture Notes Physiology (too dense for high-yield Step 1) or Guyton (too encyclopedic for Step 1 timeline). UWorld physiology blocks are walked through live for application drilling.',
   },
   {
     question: 'Which physiology topics are highest yield for Step 1?',

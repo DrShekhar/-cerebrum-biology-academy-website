@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'IGCSE Biology Tutor | Cambridge 0610 + Edexcel | Cerebrum Biology Academy',
   description:
-    'IGCSE Biology tutor — Cambridge IGCSE Biology (0610) and Edexcel IGCSE Biology specialists. AIIMS-trained Dr. Shekhar C Singh and PhD-level faculty deliver paper-pattern coaching, practical skills (Paper 6 / ATP) preparation, mark-scheme calibration. Bridge module for IB Biology / A-Level Biology / NEET transition.',
+    'IGCSE Biology tutor — Cambridge IGCSE Biology (0610) and Edexcel IGCSE Biology specialists. AIIMS-trained Dr. Shekhar C Singh and AIIMS-trained faculty deliver paper-pattern coaching, practical skills (Paper 6 / ATP) preparation, mark-scheme calibration. Bridge module for IB Biology / A-Level Biology / NEET transition.',
   keywords: [
     'IGCSE Biology tutor',
     'Cambridge IGCSE Biology 0610 tutor',

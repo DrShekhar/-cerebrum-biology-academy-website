@@ -51,9 +51,9 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question:
-      'How is Cerebrum USMLE Step 1 coaching different from other USMLE generalist brands and question banks?',
+      'How is Cerebrum USMLE Step 1 coaching different from Kaplan, Becker, and question banks?',
     answer:
-      'UWorld and AMBOSS are question banks — they tell you the right answer but assume you already understand the underlying biology. other USMLE generalist brands and other USMLE generalist brands are generalist agencies covering all Step 1 disciplines (biochemistry through pharmacology) with rotating faculty. Cerebrum is a biology-foundations specialist — Dr. Shekhar C Singh (AIIMS Delhi) and senior faculty teach the ~55% of Step 1 that is biology-driven (biochemistry, microbiology, immunology, physiology, biology-driven pathology mechanisms) in depth. Most students pair us with UWorld for question volume and use us instead of other USMLE generalist brands for the foundational sciences component.',
+      'UWorld and AMBOSS are question banks — they tell you the right answer but assume you already understand the underlying biology. Kaplan and Becker are generalist agencies covering all Step 1 disciplines (biochemistry through pharmacology) with rotating faculty. Cerebrum is a biology-foundations specialist — Dr. Shekhar C Singh (AIIMS Delhi) and senior faculty teach the ~55% of Step 1 that is biology-driven (biochemistry, microbiology, immunology, physiology, biology-driven pathology mechanisms) in depth. Most students pair us with UWorld for question volume and use us instead of Kaplan and Becker for the foundational sciences component.',
   },
   {
     question: 'Step 1 went Pass/Fail in 2022 — does foundational biology still matter?',
@@ -73,7 +73,7 @@ const faqs = [
   {
     question: 'Does Cerebrum work with US M1/M2 students or only IMGs?',
     answer:
-      "Both — but our positioning is strongest for IMGs. IMG (International Medical Graduate) students are the dominant Cerebrum target because (a) AIIMS-trained pedagogy resonates structurally with IMGs who trained in AIIMS-pattern medical education and (b) IMGs typically pay in USD from international locations where other generalist test-prep brands / other USMLE generalist brands physical campuses aren't accessible. US M1/M2 students who choose Cerebrum typically do so for the biology-foundations specialist depth (Pathoma alone isn't enough for biochemistry) and the 30–40% cost saving vs other generalist test-prep brands.",
+      "Both — but our positioning is strongest for IMGs. IMG (International Medical Graduate) students are the dominant Cerebrum target because (a) AIIMS-trained pedagogy resonates structurally with IMGs who trained in AIIMS-pattern medical education and (b) IMGs typically pay in USD from international locations where Kaplan and Becker physical campuses aren't accessible. US M1/M2 students who choose Cerebrum typically do so for the biology-foundations specialist depth (Pathoma alone isn't enough for biochemistry) and the 30–40% cost saving vs Kaplan and Becker.",
   },
   {
     question: 'Is First Aid for the USMLE Step 1 sufficient on its own?',
@@ -234,8 +234,8 @@ export default function USMLEStep1BiologyPreparationPage() {
             </li>
             <li>
               <strong>Ad-hoc 1:1 tutoring — $175/hour</strong>. For students who already have a
-              generalist other USMLE generalist brands track and need biology-specialist gap-fill,
-              or for NBME remediation. No minimum commitment.
+              generalist Kaplan or Becker track and need biology-specialist gap-fill, or for NBME
+              remediation. No minimum commitment.
             </li>
           </ul>
 

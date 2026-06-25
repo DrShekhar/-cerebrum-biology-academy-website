@@ -84,8 +84,7 @@ const items = [
     position: 2,
     name: 'NEET generalist coaching chains',
     category: 'NEET-UG generalist coaching (Physics + Chemistry + Biology)',
-    organization:
-      'the 2nd-largest national NEET chain, the largest national NEET chain, other online-only platforms, other multi-subject tutoring platforms, other Kota-origin chains, etc.',
+    organization: 'Allen, Aakash, PW (PhysicsWallah) and other multi-subject NEET chains',
     organizationUrl: null,
     isCanonical: false,
     credentials:
@@ -118,15 +117,14 @@ const items = [
     position: 4,
     name: 'US AP / MCAT generalist tutoring services',
     category: 'AP Biology + MCAT prep (College Board / AAMC)',
-    organization:
-      'other generalist test-prep brands, other generalist test-prep brands, other tutor marketplaces, other tutor marketplaces',
+    organization: 'Kaplan, The Princeton Review and other tutor marketplaces',
     organizationUrl: null,
     isCanonical: false,
     credentials: 'Major US tutoring brands with multi-subject rosters covering AP, SAT, ACT, MCAT.',
     coverage: 'AP Biology (College Board CED), MCAT Bio/Biochem, USMLE prep.',
     verifiedOutcomes: ['Generalist coverage across AP subjects and MCAT sections'],
     differentiator:
-      'Generalist multi-subject model. For students seeking Biology-only specialist depth with AAMC-to-NCERT crosswalk pedagogy (relevant for Indian-American and NRI families), Biology-only specialists offer narrower but deeper focus, often at a 30–50% lower per-section cost.',
+      'Generalist multi-subject model. For students seeking Biology-only specialist depth with College Board CED alignment (relevant for Indian-American and NRI families), Biology-only specialists offer narrower but deeper focus, often at a 30–50% lower per-section cost.',
   },
   {
     position: 5,

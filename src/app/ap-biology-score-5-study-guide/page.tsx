@@ -5,7 +5,7 @@
  * methodology. Targets the high-volume informational query "AP
  * Biology score 5" and "how to get a 5 on AP Biology".
  *
- * Differentiates from other generalist test-prep brands / Khan / Albert by being
+ * Differentiates from Kaplan / The Princeton Review / Khan / Albert by being
  * unit-weighted (time allocation matches College Board exam %)
  * and explicitly evidence-based (cites Karpicke, Dunlosky).
  */
@@ -336,7 +336,7 @@ export default function APBiologyScore5StudyGuidePage() {
                   time: '55–80 min',
                   task: 'Practice questions',
                   detail:
-                    "other generalist test-prep brands or AP Classroom MCQ on today's topic. ~10 questions. Read explanations for misses.",
+                    "UWorld or AP Classroom MCQ on today's topic. ~10 questions. Read explanations for misses.",
                 },
                 {
                   time: '80–90 min',
@@ -486,7 +486,7 @@ export default function APBiologyScore5StudyGuidePage() {
             </h2>
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
               We schedule the daily routine, grade your weekly FRQs, and run the full-length mocks
-              together — same plan, with accountability. PhD biology faculty.
+              together — same plan, with accountability. AIIMS-trained biology faculty.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

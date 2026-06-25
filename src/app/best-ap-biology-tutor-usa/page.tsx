@@ -41,13 +41,13 @@ const config: BestVerticalConfig = {
   headline: 'Best AP Biology Tutor (USA & Global)',
   ribbon: '44 Pages · 5 Countries · FRQ Rubric Specialist',
   subheadline:
-    'Biology-only AP coaching. Led by Dr. Shekhar C Singh (AIIMS Delhi) + PhD senior faculty.',
+    'Biology-only AP coaching. Led by Dr. Shekhar C Singh (AIIMS Delhi) + AIIMS-trained senior faculty.',
   intro:
-    'Cerebrum is one of the few biology-only coaching brands serving AP Biology students across the US, UAE, India, Canada, Singapore and Hong Kong with localised, US-curriculum-aligned content. Faculty include Dr. Shekhar C Singh and PhD-level senior tutors with 8–15 years of AP Biology classroom experience.',
+    'Cerebrum is one of the few biology-only coaching brands serving AP Biology students across the US, UAE, India, Canada, Singapore and Hong Kong with localised, US-curriculum-aligned content. Faculty include Dr. Shekhar C Singh and AIIMS-trained senior tutors with 8–15 years of AP Biology classroom experience.',
   clusterSummary:
     'College Board Units 1–8 · FRQ rubric mastery · AP-to-USABO bridging · Anki-based active recall.',
   credentials: [
-    { label: 'AIIMS + PhD Faculty' },
+    { label: 'AIIMS-Trained Faculty' },
     { label: 'FRQ Rubric Mastery' },
     { label: 'College Board Aligned' },
     { label: 'Units 1–8 Coverage' },
@@ -137,7 +137,7 @@ const config: BestVerticalConfig = {
       tier: 'Senior Faculty 1:1',
       price: '$120 – $150 / hr',
       description:
-        '12–48 hour packages from $1,800 to $5,760. PhD-level senior tutors. For students targeting AP-5 or USABO Semifinal.',
+        '12–48 hour packages from $1,800 to $5,760. AIIMS-trained senior tutors. For students targeting AP-5 or USABO Semifinal.',
     },
     {
       tier: 'Junior Faculty 1:1',
@@ -182,7 +182,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Pricing Transparent and Competitive',
       description:
-        '1:1 Senior Faculty at $120–$150/hour is priced below comparable other generalist test-prep brands ($183/hr) and other generalist MCAT brands ($175/hr) tutoring, with materially deeper biology pedagogy.',
+        '1:1 Senior Faculty at $120–$150/hour is priced below comparable Kaplan ($183/hr) and The Princeton Review ($175/hr) tutoring, with materially deeper biology pedagogy.',
     },
   ],
   testimonials: [
@@ -222,7 +222,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does the best AP Biology tutoring cost?',
       answer:
-        "Cerebrum's pricing: Senior Faculty 1:1 $120–$150/hr (12–48 hour packages from $1,800 to $5,760), Junior Faculty 1:1 $60–$75/hr, Small Batch (4–6 students) $40/hr. Comparable other generalist MCAT brands tutoring is $183/hr and other generalist MCAT brands is $175/hr — Cerebrum is priced below with materially deeper biology depth.",
+        "Cerebrum's pricing: Senior Faculty 1:1 $120–$150/hr (12–48 hour packages from $1,800 to $5,760), Junior Faculty 1:1 $60–$75/hr, Small Batch (4–6 students) $40/hr. Comparable Kaplan tutoring is $183/hr and The Princeton Review is $175/hr — Cerebrum is priced below with materially deeper biology depth.",
     },
     {
       question: 'Does Cerebrum prepare students for both AP Biology and USABO?',

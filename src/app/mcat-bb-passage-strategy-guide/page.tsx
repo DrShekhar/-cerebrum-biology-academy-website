@@ -93,7 +93,7 @@ const faqs = [
   {
     question: 'Are AAMC passages and third-party passages equally useful for drilling?',
     answer:
-      'No. AAMC official-practice passages (Section Banks, Question Packs, FL1-FL5) are written by the same item writers who write the real MCAT. The reasoning patterns, distractor logic, and figure styles match the exam. Third-party passages (other generalist test-prep brands and question banks) are useful for volume and content reinforcement but their question style is consistently shallower than the real exam. Rule of thumb: 60% AAMC, 40% third-party in your passage practice mix.',
+      'No. AAMC official-practice passages (Section Banks, Question Packs, FL1-FL5) are written by the same item writers who write the real MCAT. The reasoning patterns, distractor logic, and figure styles match the exam. Third-party passages (Kaplan and other question banks) are useful for volume and content reinforcement but their question style is consistently shallower than the real exam. Rule of thumb: 60% AAMC, 40% third-party in your passage practice mix.',
   },
   {
     question: 'How does the timing change between Bio/Biochem and Chem/Phys passages?',
@@ -243,11 +243,10 @@ export default function MCATBBPassageStrategyGuidePage() {
             </h2>
             <p className="text-slate-700 leading-relaxed mb-4">
               Most MCAT Bio/Biochem prep falls into two buckets: content review (Campbell,
-              Lehninger, other generalist test-prep brands) and topic drilling (UWorld, Anki, AAMC
-              Question Packs). What students typically under-invest in is the meta-layer between
-              content and questions: how to read a passage, how to recognise which of four question
-              types is being asked, when to spend 60 seconds on a question vs when to flag and
-              return.
+              Lehninger, Kaplan) and topic drilling (UWorld, Anki, AAMC Question Packs). What
+              students typically under-invest in is the meta-layer between content and questions:
+              how to read a passage, how to recognise which of four question types is being asked,
+              when to spend 60 seconds on a question vs when to flag and return.
             </p>
             <p className="text-slate-700 leading-relaxed mb-4">
               Passage strategy is the single highest-leverage skill on B/B because the section is
@@ -705,10 +704,9 @@ export default function MCATBBPassageStrategyGuidePage() {
                 types or one or two specific topics dominate your error log.
               </li>
               <li>
-                <strong>Third-party passages for volume.</strong> UWorld, other generalist test-prep
-                brands, Blueprint — useful for content reinforcement and to keep AAMC official
-                material fresh for full-length practice. Aim for 60% AAMC, 40% third-party in your
-                overall passage mix.
+                <strong>Third-party passages for volume.</strong> UWorld, Kaplan, Blueprint — useful
+                for content reinforcement and to keep AAMC official material fresh for full-length
+                practice. Aim for 60% AAMC, 40% third-party in your overall passage mix.
               </li>
               <li>
                 <strong>Weekly full-length B/B section.</strong> Once you have completed at least 40

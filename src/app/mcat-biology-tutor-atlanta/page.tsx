@@ -83,7 +83,7 @@ const faqs = [
   {
     question: 'How does Cerebrum compare to Atlanta-based in-person prep?',
     answer:
-      'Atlanta has the standard generalist in-person providers (other generalist test-prep brands Atlanta, other generalist test-prep brands Atlanta) plus a few smaller boutique tutors. The generalists are $2,500–$3,000 for the full-MCAT course covering all four sections with rotating subject faculty. Cerebrum is a biology-section specialist — Bio/Biochem and the biology content in Psych/Soc, with biology-only faculty. Our Small-Batch is $899 vs other generalist MCAT brands in-person around $2,700. Many Atlanta students pair Cerebrum with a generalist provider for the chemistry/physics and CARS sections.',
+      'Atlanta has the standard generalist in-person providers (Kaplan Atlanta, The Princeton Review Atlanta) plus a few smaller boutique tutors. The generalists are $2,500–$3,000 for the full-MCAT course covering all four sections with rotating subject faculty. Cerebrum is a biology-section specialist — Bio/Biochem and the biology content in Psych/Soc, with biology-only faculty. Our Small-Batch is $899 vs Kaplan in-person around $2,700. Many Atlanta students pair Cerebrum with a generalist provider for the chemistry/physics and CARS sections.',
   },
   {
     question: 'Will Hindi or Telugu parent consultations be available?',
@@ -370,8 +370,8 @@ export default function MCATBiologyTutorAtlantaPage() {
             </li>
             <li>
               <strong>Ad-hoc 1:1 tutoring — $135/hour</strong> outside the packaged programme. For
-              students using other generalist MCAT brands as the generalist provider and wanting
-              biology-specialist gap-fill.
+              students using Kaplan as the generalist provider and wanting biology-specialist
+              gap-fill.
             </li>
           </ul>
         </div>

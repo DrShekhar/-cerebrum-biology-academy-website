@@ -8,7 +8,7 @@ import { buildAPBiologyMetroMetadata } from '@/lib/seo/metadata'
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Tutor in India for US College Admissions | Cerebrum',
   description:
-    'AP Biology coaching for Indian students applying to US colleges. AIIMS-trained PhD faculty, IST-aligned classes, AP-5 strategy + SAT II Biology. From $1,800.',
+    'AP Biology coaching for Indian students applying to US colleges. AIIMS-trained biology faculty, IST-aligned classes, AP-5 strategy + SAT II Biology. From $1,800.',
   keywords: [
     'ap biology tutor india',
     'ap biology coaching india',

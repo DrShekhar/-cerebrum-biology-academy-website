@@ -53,7 +53,7 @@ const pricingTiers = [
     name: 'Senior Faculty 1:1',
     price: '$1,800 – $5,760',
     perHour: '$120–$150/hr',
-    detail: '12 / 24 / 36 / 48-hour packages with PhD biology specialists',
+    detail: '12 / 24 / 36 / 48-hour packages with AIIMS-trained biology specialists',
   },
   {
     name: 'Junior Faculty 1:1',
@@ -200,7 +200,7 @@ export default function APBiologySchoolTemplate({ school }: APBiologySchoolTempl
             </span>
             <span className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg text-white text-sm">
               <GraduationCap className="w-4 h-4 text-yellow-400" />
-              PhD biology faculty
+              AIIMS-trained biology faculty
             </span>
             <span className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg text-white text-sm">
               <Target className="w-4 h-4 text-yellow-400" />
