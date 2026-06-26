@@ -23,6 +23,7 @@ import {
   Target,
   TrendingUp,
 } from 'lucide-react'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const CANONICAL = '/mcat-biology-bb-section-prep'
 const SITE_URL = 'https://cerebrumbiologyacademy.com'
@@ -166,6 +167,15 @@ export default function MCATBBSectionPrepPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'MCAT Biology',
+          'MCAT Biochemistry',
+          'MCAT B/B Section',
+          'Biological and Biochemical Foundations of Living Systems',
+        ]}
+        jobTitle="Founder & Lead MCAT Biology Faculty"
+      />
 
       <main className="min-h-screen bg-white">
         {/* Breadcrumb */}
@@ -195,7 +205,7 @@ export default function MCATBBSectionPrepPage() {
         </nav>
 
         {/* Hero */}
-        <section className="relative py-16 md:py-20 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white">
+        <section className="relative py-16 md:py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
           <div className="max-w-4xl mx-auto px-4">
             <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Microscope className="w-4 h-4" />
@@ -534,7 +544,7 @@ export default function MCATBBSectionPrepPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white">
+        <section className="py-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
           <div className="max-w-3xl mx-auto px-4 text-center">
             <BookOpen className="w-12 h-12 text-blue-300 mx-auto mb-4" />
             <h2 className="text-3xl font-bold mb-4">Ready to target 125+ on the B/B section?</h2>

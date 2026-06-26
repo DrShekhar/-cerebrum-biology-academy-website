@@ -37,9 +37,112 @@ const wa =
     'Hi — I want to discuss DAT Biology pricing and which tier fits my goals. Please share programme details.'
   )
 
+const pricingFaqs = [
+  {
+    question: 'How much does DAT Biology tutoring cost at Cerebrum?',
+    answer:
+      'DAT Biology section tutoring is $399 for Self-Paced (Pursuit), $799 for Small-Batch (Ascent), and $1,249 for 1:1 Senior Faculty (Pinnacle). Ad-hoc 1:1 tutoring outside a package is $109/hour.',
+  },
+  {
+    question: 'Why is Cerebrum priced differently from DAT Bootcamp or Kaplan DAT?',
+    answer:
+      'Cerebrum is a biology-section specialist ($399–$1,249) covering the Biology section only, while DAT Bootcamp (~$595) and Kaplan DAT ($1,599–$2,599) are generalist providers covering all DAT sections. Many students pair Cerebrum with a generalist for PAT and Reading Comprehension.',
+  },
+  {
+    question: 'What is included in the DAT Biology Self-Paced package?',
+    answer:
+      'The $399 Pursuit tier includes 3–5 months of async content, Campbell Biology mapped to the ADA outline, 200+ practice questions, and WhatsApp doubt support.',
+  },
+]
+
+const courseSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Course',
+  name: 'DAT Biology Section Tutoring',
+  description:
+    'DAT Biology section tutoring packages — Self-Paced $399, Small-Batch $799, 1:1 Senior Faculty $1,249. Biology-only specialist with Campbell Biology curriculum mapped to the ADA outline.',
+  url: PAGE_URL,
+  inLanguage: 'en-US',
+  provider: {
+    '@type': 'EducationalOrganization',
+    '@id': 'https://cerebrumbiologyacademy.com/#organization',
+    name: 'Cerebrum Biology Academy',
+    url: 'https://cerebrumbiologyacademy.com',
+  },
+  areaServed: { '@type': 'Country', name: 'United States' },
+  hasCourseInstance: {
+    '@type': 'CourseInstance',
+    courseMode: 'Online',
+    location: { '@type': 'VirtualLocation', url: PAGE_URL },
+    offers: [
+      {
+        '@type': 'Offer',
+        name: 'DAT Biology — Pursuit (Self-Paced)',
+        price: '399',
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+        url: PAGE_URL,
+      },
+      {
+        '@type': 'Offer',
+        name: 'DAT Biology — Ascent (Small-Batch)',
+        price: '799',
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+        url: PAGE_URL,
+      },
+      {
+        '@type': 'Offer',
+        name: 'DAT Biology — Pinnacle (1:1 Senior Faculty)',
+        price: '1249',
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+        url: PAGE_URL,
+      },
+    ],
+  },
+}
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: pricingFaqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'DAT Biology',
+      item: 'https://cerebrumbiologyacademy.com/dat-biology-preparation',
+    },
+    { '@type': 'ListItem', position: 3, name: 'Pricing', item: PAGE_URL },
+  ],
+}
+
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4">
           <nav className="text-sm text-slate-400 mb-6" aria-label="Breadcrumb">

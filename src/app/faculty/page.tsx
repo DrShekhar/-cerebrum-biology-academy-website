@@ -141,7 +141,7 @@ export default function FacultyPage() {
       </div>
 
       {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-900 py-16 sm:py-20 md:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 py-16 sm:py-20 md:py-24">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent" />
         <div className="relative mx-auto max-w-5xl px-4 sm:px-6">
           <div className="text-center">
@@ -480,7 +480,7 @@ export default function FacultyPage() {
       </section>
 
       {/* ===== FINAL CTA ===== */}
-      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-900 py-16 text-white sm:py-20">
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 text-white sm:py-20">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
           <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
             Faculty matter most when biology is the gap.

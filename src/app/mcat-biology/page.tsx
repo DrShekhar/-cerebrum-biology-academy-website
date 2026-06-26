@@ -159,6 +159,14 @@ const pricingTiers = [
 
 const serviceHubs = [
   {
+    title: 'MCAT Bio/Biochem Curriculum & Study Plan',
+    href: '/mcat-biology-preparation',
+    description:
+      'The full Bio/Biochem programme — Campbell + Lehninger curriculum sequence, week-by-week study plan, exam-format breakdown, and the three-tier pricing path. Start here to map your prep.',
+    icon: BookOpen,
+    accent: 'text-blue-600',
+  },
+  {
     title: 'Best MCAT Biology Tutor',
     href: '/best-mcat-biology-tutor',
     description:
@@ -272,6 +280,7 @@ function HubCollectionSchema() {
     description:
       'Central resource hub for MCAT Biology preparation — bio-only specialist tutoring, AAMC-to-Campbell mapping, B/B passage strategy, biochem mastery, and US-metro coverage.',
     url: PAGE_URL,
+    areaServed: { '@type': 'Country', name: 'United States' },
     isPartOf: {
       '@type': 'WebSite',
       name: 'Cerebrum Biology Academy',

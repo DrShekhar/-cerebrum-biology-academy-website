@@ -243,6 +243,9 @@ export default function MCATBiologyTutorHoustonPage() {
               MCAT Biology Overview
             </Link>
           </div>
+          <p className="mt-3 text-sm font-medium text-slate-300">
+            WhatsApp is free from the US — no international call needed.
+          </p>
         </div>
       </section>
 
@@ -412,6 +415,9 @@ export default function MCATBiologyTutorHoustonPage() {
           >
             WhatsApp +91 88264-44334
           </a>
+          <p className="mt-3 text-sm font-medium text-blue-100">
+            WhatsApp is free from the US — no international call needed.
+          </p>
         </div>
       </section>
     </main>

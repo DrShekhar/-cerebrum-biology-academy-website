@@ -160,6 +160,20 @@ const config: CompetitorComparisonConfig = {
   ],
   whatsappMessage:
     "Hi — I'm comparing Cerebrum and Khan Academy for AP Biology. My child is currently scoring [X] on practice exams and targeting score 5. Please share programme details.",
+  subheadContext: 'AP Biology (score-5 / FRQ prep)',
+  proofStat:
+    'AIIMS-trained (India’s top medical institute) biology specialists · AP Biology FRQ-rubric and score-5 focus · live small-batch coaching',
+  cerebrumDescription:
+    'Live, paid biology-only coaching for AP Biology with AIIMS-trained faculty — FRQ rubric mastery, Campbell depth, and a USABO bridge.',
+  relatedFooterLink: { href: '/best-ap-biology-tutor-usa', label: 'Best AP Biology Tutor (USA)' },
+  courseName: 'Cerebrum AP Biology Coaching',
+  personKnowsAbout: [
+    'AP Biology',
+    'AP Biology Free Response Questions',
+    'College Board AP Biology CED',
+    'USABO Preparation',
+    'Campbell Biology',
+  ],
 }
 
 export default function Page() {

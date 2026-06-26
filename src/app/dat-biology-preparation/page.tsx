@@ -9,6 +9,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { datPricingAsCourseOffers } from '@/data/dat/pricing-matrix'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/dat-biology-preparation'
@@ -162,6 +163,10 @@ export default function DATBiologyPreparationPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <CerebrumPersonSchema
+        knowsAbout={['DAT Biology', 'ADA Biology Content Outline', 'Pre-Dental Biology Tutoring']}
+        jobTitle="Founder & Lead DAT Biology Faculty"
       />
 
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 md:py-24">

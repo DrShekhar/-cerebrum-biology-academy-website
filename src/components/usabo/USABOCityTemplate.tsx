@@ -361,6 +361,9 @@ export default function USABOCityTemplate({
               WhatsApp +91-88264-44334
             </button>
           </div>
+          <p className="mt-3 text-sm font-medium text-white/80">
+            WhatsApp is free from the US — no international call needed.
+          </p>
         </div>
       </section>
 

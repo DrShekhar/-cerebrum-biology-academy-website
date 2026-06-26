@@ -339,6 +339,7 @@ const articleSchema = {
     '@type': 'SpeakableSpecification',
     cssSelector: ['h1', 'details p'],
   },
+  areaServed: { '@type': 'Country', name: 'United States' },
 }
 
 export default function BrainBeeStudyGuidePage() {

@@ -197,7 +197,10 @@ export default function HonorsBiologyTutorPage() {
     inLanguage: 'en',
     educationalLevel: 'High school (Honors / pre-AP)',
     provider: { '@id': `${SITE_URL}/#organization` },
-    areaServed: ['United States', 'Worldwide'],
+    areaServed: [
+      { '@type': 'Country', name: 'United States' },
+      { '@type': 'Place', name: 'Worldwide' },
+    ],
     hasCourseInstance: { '@type': 'CourseInstance', courseMode: 'online' },
   }
   const faqSchema = {

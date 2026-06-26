@@ -437,7 +437,7 @@ export default function PricingPage() {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-x-hidden">
         {/* Hero Section with enhanced gradient */}
-        <div className="relative bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-900 text-white py-8 sm:py-10 lg:py-12 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-slate-900 to-slate-800 text-white py-8 sm:py-10 lg:py-12 overflow-hidden">
           {/* Background decoration */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
@@ -1346,7 +1346,7 @@ export default function PricingPage() {
           </div>
 
           <div className="mt-12 sm:mt-16 pb-24 md:pb-8">
-            <div className="relative bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-900 rounded-3xl p-8 sm:p-12 lg:p-16 overflow-hidden">
+            <div className="relative bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 sm:p-12 lg:p-16 overflow-hidden">
               {/* Background decoration */}
               <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/10 rounded-full blur-3xl hidden sm:block" />

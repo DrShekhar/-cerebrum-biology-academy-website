@@ -54,7 +54,7 @@ export function CourseHeroSection({ course }: CourseHeroSectionProps) {
   const primaryTier = course.tiers[defaultTier as CourseSeries]
 
   return (
-    <section className="relative bg-gradient-to-r from-slate-900 via-blue-950 to-indigo-900 text-white">
+    <section className="relative bg-gradient-to-r from-slate-900 to-slate-800 text-white">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black bg-opacity-20">
         <div className="absolute inset-0 bg-[url('/images/patterns/grid.svg')] opacity-10"></div>

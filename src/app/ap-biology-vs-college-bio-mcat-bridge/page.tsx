@@ -134,7 +134,7 @@ export default function APBiologyVsCollegeBioMCATBridgePage() {
           </div>
         </nav>
 
-        <section className="relative py-16 md:py-20 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white">
+        <section className="relative py-16 md:py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
           <div className="max-w-4xl mx-auto px-4">
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Stethoscope className="w-4 h-4" /> Honest framing · cited sources · no medical-school
@@ -394,7 +394,7 @@ export default function APBiologyVsCollegeBioMCATBridgePage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white">
+        <section className="py-16 md:py-20 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <Microscope className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-bold mb-6">

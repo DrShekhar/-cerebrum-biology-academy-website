@@ -150,6 +150,19 @@ const config: CompetitorComparisonConfig = {
   ],
   whatsappMessage:
     "Hi — I'm comparing Cerebrum and Blueprint MCAT for Bio/Biochem. Please share programme details and how pairing with Blueprint works.",
+  subheadContext: 'MCAT Bio/Biochem (B/B section)',
+  proofStat:
+    'AIIMS-trained (India’s top medical institute) biology specialists · live human MCAT Bio/Biochem coaching · small batches',
+  cerebrumDescription:
+    'Live, human-taught biology-only coaching for the MCAT Bio/Biochem (B/B) section with AIIMS-trained faculty — passage-strategy depth over algorithmic review.',
+  relatedFooterLink: { href: '/best-mcat-biology-tutor', label: 'Best MCAT Biology Tutor' },
+  courseName: 'Cerebrum MCAT Bio/Biochem Coaching',
+  personKnowsAbout: [
+    'MCAT Biological and Biochemical Foundations',
+    'MCAT Biochemistry',
+    'Campbell Biology',
+    'Lehninger Biochemistry',
+  ],
 }
 
 export default function Page() {

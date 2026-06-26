@@ -29,7 +29,7 @@ function buildSchemas(metro: MCATMetroConfig) {
       address: {
         '@type': 'PostalAddress',
         addressRegion: metro.stateCode,
-        addressCountry: 'US',
+        addressCountry: metro.countryCode ?? 'US',
       },
     },
     hasCourseInstance: {
@@ -142,6 +142,15 @@ export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroCon
       `Hi — I'm a ${metro.city} pre-med (or parent) preparing for the MCAT. I'd like Bio/Biochem programme details, ${metro.timezoneShort} slot availability, and pricing. Please share.`
     )
 
+  // Map a metro's stateCode to one of the live state-hub pages (only link if the hub exists).
+  const STATE_HUBS: Record<string, { slug: string; name: string }> = {
+    CA: { slug: 'california', name: 'California' },
+    TX: { slug: 'texas', name: 'Texas' },
+    NY: { slug: 'new-york', name: 'New York' },
+    IL: { slug: 'illinois', name: 'Illinois' },
+  }
+  const stateHub = STATE_HUBS[metro.stateCode]
+
   return (
     <main className="min-h-screen bg-white">
       <script
@@ -200,6 +209,9 @@ export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroCon
               MCAT Biology Overview
             </Link>
           </div>
+          <p className="mt-3 text-sm font-medium text-slate-300">
+            WhatsApp is free from the US — no international call needed.
+          </p>
         </div>
       </section>
 
@@ -325,6 +337,15 @@ export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroCon
               <p className="font-semibold text-slate-900">Cerebrum vs Kaplan MCAT</p>
               <p className="text-sm text-slate-500">Specialist vs generalist</p>
             </Link>
+            {stateHub && (
+              <Link
+                href={`/biology-tutor-${stateHub.slug}`}
+                className="block p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow transition"
+              >
+                <p className="font-semibold text-slate-900">Biology Tutor {stateHub.name}</p>
+                <p className="text-sm text-slate-500">Statewide biology tutoring hub</p>
+              </Link>
+            )}
           </div>
         </div>
       </section>
@@ -345,6 +366,9 @@ export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroCon
           >
             WhatsApp +91 88264-44334
           </a>
+          <p className="mt-3 text-sm font-medium text-blue-100">
+            WhatsApp is free from the US — no international call needed.
+          </p>
         </div>
       </section>
 

@@ -37,9 +37,112 @@ const wa =
     'Hi — I want to discuss USMLE Biology pricing and which tier fits my goals. Please share programme details.'
   )
 
+const pricingFaqs = [
+  {
+    question: 'How much does USMLE Step 1 biology tutoring cost at Cerebrum?',
+    answer:
+      'USMLE Step 1 biology-foundations tutoring is $699 for Self-Paced (Pursuit), $1,449 for Small-Batch (Ascent), and $2,249 for 1:1 Senior Faculty (Pinnacle). Ad-hoc 1:1 tutoring is $159/hour. Indian IMGs preparing for ECFMG pay the same tiers.',
+  },
+  {
+    question: 'Why is Cerebrum priced differently from Kaplan Step 1?',
+    answer:
+      'Cerebrum is a biology-foundations specialist ($699–$2,249) covering the biology disciplines only, while Kaplan Step 1 (~$3,499) is a generalist provider covering all disciplines. UWorld ($499–$699) is a question bank with no teaching. Many students pair Cerebrum with UWorld and a generalist for non-biology content.',
+  },
+  {
+    question: 'Do Indian IMGs pay the same USMLE biology pricing as US medical students?',
+    answer:
+      'Yes. AIIMS, MAMC, Grant, and KEM graduates preparing for ECFMG access the same $699 / $1,449 / $2,249 tiers as US M1/M2 students.',
+  },
+]
+
+const courseSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Course',
+  name: 'USMLE Step 1 Biology Foundations Tutoring',
+  description:
+    'USMLE Step 1 biology-foundations tutoring packages — Self-Paced $699, Small-Batch $1,449, 1:1 Senior Faculty $2,249. First Aid-mapped, UWorld integration, for US medical students and Indian IMGs.',
+  url: PAGE_URL,
+  inLanguage: 'en-US',
+  provider: {
+    '@type': 'EducationalOrganization',
+    '@id': 'https://cerebrumbiologyacademy.com/#organization',
+    name: 'Cerebrum Biology Academy',
+    url: 'https://cerebrumbiologyacademy.com',
+  },
+  areaServed: { '@type': 'Country', name: 'United States' },
+  hasCourseInstance: {
+    '@type': 'CourseInstance',
+    courseMode: 'Online',
+    location: { '@type': 'VirtualLocation', url: PAGE_URL },
+    offers: [
+      {
+        '@type': 'Offer',
+        name: 'Step 1 Biology — Pursuit (Self-Paced)',
+        price: '699',
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+        url: PAGE_URL,
+      },
+      {
+        '@type': 'Offer',
+        name: 'Step 1 Biology — Ascent (Small-Batch)',
+        price: '1449',
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+        url: PAGE_URL,
+      },
+      {
+        '@type': 'Offer',
+        name: 'Step 1 Biology — Pinnacle (1:1 Senior Faculty)',
+        price: '2249',
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+        url: PAGE_URL,
+      },
+    ],
+  },
+}
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: pricingFaqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'USMLE Biology',
+      item: 'https://cerebrumbiologyacademy.com/usmle-step-1-biology-preparation',
+    },
+    { '@type': 'ListItem', position: 3, name: 'Pricing', item: PAGE_URL },
+  ],
+}
+
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4">
           <nav className="text-sm text-slate-400 mb-6" aria-label="Breadcrumb">

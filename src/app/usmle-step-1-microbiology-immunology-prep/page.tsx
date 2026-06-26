@@ -9,6 +9,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/usmle-step-1-microbiology-immunology-prep'
 
@@ -149,6 +150,15 @@ export default function USMLEStep1MicroImmunoPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'USMLE Step 1 Microbiology',
+          'USMLE Step 1 Immunology',
+          'USMLE Step 1 Biology',
+          'First Aid for the USMLE Step 1',
+        ]}
+        jobTitle="Founder & Lead USMLE Step 1 Biology Faculty"
       />
 
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16">

@@ -9,6 +9,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/dat-perceptual-ability-biology'
 
@@ -103,6 +104,15 @@ export default function DATPATBiologyPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'DAT Biology',
+          'DAT Perceptual Ability Test',
+          'Vertebrate Anatomy Visualisation',
+          'Pre-Dental Biology Tutoring',
+        ]}
+        jobTitle="Founder & Lead DAT Biology Faculty"
       />
 
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16">

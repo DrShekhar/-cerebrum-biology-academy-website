@@ -648,6 +648,10 @@ export default function BrainBeeCoachingPage() {
               {[
                 { name: 'Brain Bee study guide', href: '/brain-bee-study-guide' },
                 { name: 'Neuroanatomy guide', href: '/brain-bee-neuroanatomy-guide' },
+                {
+                  name: 'US Biology Competitions hub',
+                  href: '/us-biology-competitions-hub',
+                },
               ].map((g) => (
                 <Link
                   key={g.href}

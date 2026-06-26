@@ -116,6 +116,7 @@ export default function MCATBiochemistryPrepPage() {
       url: SITE_URL,
       sameAs: SITE_URL,
     },
+    areaServed: { '@type': 'Country', name: 'United States' },
   }
 
   const faqSchema = {

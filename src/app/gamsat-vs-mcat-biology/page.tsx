@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ChevronRight } from 'lucide-react'
+import { ChevronRight, MessageCircle } from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const URL = 'https://cerebrumbiologyacademy.com/gamsat-vs-mcat-biology'
@@ -439,6 +439,42 @@ export default function GAMSATvsMCATBiologyPage() {
                 </details>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* WhatsApp CTA */}
+        <section className="py-12 md:py-16 bg-teal-50 border-y border-teal-100">
+          <div className="max-w-3xl mx-auto px-4 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
+              GAMSAT or MCAT? Ask us on WhatsApp
+            </h2>
+            <p className="text-slate-700 leading-relaxed mb-6 max-w-2xl mx-auto">
+              Tell us which countries you are applying to and your science background, and we will
+              reply with which exam fits and how we would prep you. We coach both. No commitment.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href={`https://wa.me/918826444334?text=${encodeURIComponent(
+                  'Hi Cerebrum, I am deciding between GAMSAT and MCAT biology and have a question.'
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition"
+              >
+                <MessageCircle className="w-5 h-5" />
+                Chat with us on WhatsApp
+              </a>
+              <Link
+                href="/best-gamsat-biology-tutor"
+                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-teal-700 px-8 py-4 rounded-xl font-medium text-lg border border-teal-200 transition"
+              >
+                Book a free trial lesson
+              </Link>
+            </div>
+            <p className="text-sm text-slate-500 mt-4 max-w-2xl mx-auto">
+              WhatsApp is free from the US — no international call needed. Live online classes in
+              your US time zone (ET/CT/MT/PT).
+            </p>
           </div>
         </section>
 

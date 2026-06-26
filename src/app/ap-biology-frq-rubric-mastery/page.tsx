@@ -214,7 +214,7 @@ export default function APBiologyFRQRubricMasteryPage() {
         </nav>
 
         {/* Hero */}
-        <section className="relative py-16 md:py-20 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white">
+        <section className="relative py-16 md:py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
           <div className="max-w-4xl mx-auto px-4">
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <FileText className="w-4 h-4" />
@@ -535,7 +535,7 @@ export default function APBiologyFRQRubricMasteryPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 md:py-20 bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white">
+        <section className="py-16 md:py-20 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <BookOpen className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -561,6 +561,42 @@ export default function APBiologyFRQRubricMasteryPage() {
                 See pricing
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* WhatsApp CTA */}
+        <section className="py-12 md:py-16 bg-blue-50 border-y border-blue-100">
+          <div className="max-w-3xl mx-auto px-4 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
+              Want your FRQ graded? Ask us on WhatsApp
+            </h2>
+            <p className="text-slate-700 leading-relaxed mb-6 max-w-2xl mx-auto">
+              Send us an FRQ you have written and we will reply with where it would lose rubric
+              points and how to fix it. No commitment.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href={`https://wa.me/918826444334?text=${encodeURIComponent(
+                  'Hi Cerebrum, I have a question about AP Biology FRQ rubric scoring.'
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition"
+              >
+                <MessageCircle className="w-5 h-5" />
+                Chat with us on WhatsApp
+              </a>
+              <Link
+                href="/ap-biology-tutor"
+                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-blue-700 px-8 py-4 rounded-xl font-medium text-lg border border-blue-200 transition"
+              >
+                Book a free trial lesson
+              </Link>
+            </div>
+            <p className="text-sm text-slate-500 mt-4 max-w-2xl mx-auto">
+              WhatsApp is free from the US — no international call needed. Live online classes in
+              your US time zone (ET/CT/MT/PT).
+            </p>
           </div>
         </section>
 

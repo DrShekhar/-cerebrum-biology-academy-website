@@ -23,6 +23,7 @@ import {
   Target,
   TrendingUp,
 } from 'lucide-react'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const CANONICAL = '/mcat-biology-passage-strategy'
 const SITE_URL = 'https://cerebrumbiologyacademy.com'
@@ -165,6 +166,15 @@ export default function MCATBiologyPassageStrategyPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'MCAT Biology',
+          'MCAT B/B Passage Strategy',
+          'MCAT Passage-Based Reasoning',
+          'AAMC Content Outline',
+        ]}
+        jobTitle="Founder & Lead MCAT Biology Faculty"
       />
 
       <main className="min-h-screen bg-white">

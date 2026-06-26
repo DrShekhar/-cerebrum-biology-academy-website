@@ -18,6 +18,7 @@ export interface DATMetroConfig {
   city: string
   stateOrRegion: string
   stateCode: string
+  countryCode?: string
   timezone: string
   timezoneShort: string
   metaTitle: string
@@ -528,6 +529,7 @@ export const datMetros: Record<string, DATMetroConfig> = {
     city: 'Toronto',
     stateOrRegion: 'Ontario',
     stateCode: 'ON',
+    countryCode: 'CA',
     timezone: 'Eastern Time',
     timezoneShort: 'ET',
     metaTitle: 'DAT Biology Tutor Toronto | U of T, Western, McGill Dentistry',
@@ -619,6 +621,7 @@ export const datMetros: Record<string, DATMetroConfig> = {
     city: 'Vancouver',
     stateOrRegion: 'British Columbia',
     stateCode: 'BC',
+    countryCode: 'CA',
     timezone: 'Pacific Time',
     timezoneShort: 'PT',
     metaTitle: 'DAT Biology Tutor Vancouver | UBC Faculty of Dentistry',

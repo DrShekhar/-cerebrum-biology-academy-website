@@ -227,7 +227,7 @@ export default function IBBiologySchoolTemplate({ school }: IBBiologySchoolTempl
       </nav>
 
       {/* Hero */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 overflow-hidden">
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-slate-900 to-slate-800 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full blur-3xl" />
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-yellow-500 rounded-full blur-3xl" />
@@ -452,7 +452,7 @@ export default function IBBiologySchoolTemplate({ school }: IBBiologySchoolTempl
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white">
+      <section className="py-16 md:py-20 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <BookOpen className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
           <h2 className="text-3xl md:text-4xl font-bold mb-6">

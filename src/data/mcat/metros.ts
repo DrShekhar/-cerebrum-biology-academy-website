@@ -25,6 +25,7 @@ export interface MCATMetroConfig {
   city: string
   stateOrRegion: string
   stateCode: string
+  countryCode?: string
   timezone: string
   timezoneShort: string
   metaTitle: string
@@ -1279,6 +1280,7 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
     city: 'Toronto',
     stateOrRegion: 'Greater Toronto Area',
     stateCode: 'ON',
+    countryCode: 'CA',
     timezone: 'Eastern Time',
     timezoneShort: 'ET',
     metaTitle: "MCAT Biology Tutor Toronto | U of T, McMaster, Western, Queen's",
@@ -1364,6 +1366,7 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
     city: 'Vancouver',
     stateOrRegion: 'Greater Vancouver',
     stateCode: 'BC',
+    countryCode: 'CA',
     timezone: 'Pacific Time',
     timezoneShort: 'PT',
     metaTitle: 'MCAT Biology Tutor Vancouver | UBC, SFU, UVic',
@@ -1437,6 +1440,7 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
     city: 'Montreal',
     stateOrRegion: 'Greater Montreal',
     stateCode: 'QC',
+    countryCode: 'CA',
     timezone: 'Eastern Time',
     timezoneShort: 'ET',
     metaTitle: 'MCAT Biology Tutor Montreal | McGill, Université de Montréal',

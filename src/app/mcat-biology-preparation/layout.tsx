@@ -1,31 +1,32 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'MCAT Biology Preparation | Online MCAT Biology Tutoring',
+  title: 'MCAT Bio/Biochem Curriculum & Study Plan | Campbell + Lehninger',
   description:
-    'Expert MCAT Biology preparation with Campbell Biology-based curriculum. Comprehensive coverage of Biological and Biochemical Foundations. Score 520+ with our proven tutoring.',
+    'The week-by-week MCAT Bio/Biochem curriculum and study plan — Campbell Biology foundation, Lehninger biochemistry, AAMC content-outline mapping. Part of the MCAT Biology hub.',
   keywords: [
-    'MCAT biology preparation',
-    'MCAT biology tutor',
-    'MCAT biology coaching',
-    'MCAT bio/biochem section',
-    'MCAT biology online classes',
-    'MCAT preparation online',
-    'medical school admissions test',
-    'MCAT 520+ preparation',
+    'MCAT biology curriculum',
+    'MCAT biology study plan',
+    'MCAT bio/biochem syllabus',
+    'MCAT Campbell biology plan',
+    'MCAT Lehninger biochemistry',
+    'AAMC content outline mapping',
+    'MCAT B/B study schedule',
+    'MCAT biology preparation plan',
   ],
   twitter: {
     card: 'summary_large_image',
-    title: 'MCAT Biology Preparation | Online MCAT Biology Tutoring',
-    description: 'Expert MCAT Biology preparation with Campbell Biology-based curriculum.',
+    title: 'MCAT Bio/Biochem Curriculum & Study Plan | Campbell + Lehninger',
+    description:
+      'Week-by-week MCAT Bio/Biochem curriculum and study plan — Campbell + Lehninger, AAMC-outline mapped.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/mcat-biology-preparation',
   },
   openGraph: {
-    title: 'MCAT Biology Preparation | Online MCAT Biology Tutoring',
+    title: 'MCAT Bio/Biochem Curriculum & Study Plan | Campbell + Lehninger',
     description:
-      'Expert MCAT Biology preparation with Campbell Biology-based curriculum. Score 520+ with our proven tutoring methods.',
+      'The week-by-week MCAT Bio/Biochem curriculum and study plan — Campbell foundation, Lehninger biochemistry, AAMC-outline mapped. Part of the MCAT Biology hub.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Cerebrum Biology Academy',

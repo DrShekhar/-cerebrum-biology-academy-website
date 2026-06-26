@@ -197,7 +197,10 @@ export default function CollegeBiologyTutorPage() {
     inLanguage: 'en',
     educationalLevel: 'Undergraduate (introductory / general biology, pre-med prerequisite)',
     provider: { '@id': `${SITE_URL}/#organization` },
-    areaServed: ['United States', 'Worldwide'],
+    areaServed: [
+      { '@type': 'Country', name: 'United States' },
+      { '@type': 'Place', name: 'Worldwide' },
+    ],
     hasCourseInstance: { '@type': 'CourseInstance', courseMode: 'online' },
   }
   const faqSchema = {

@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Award, CheckCircle, X, Phone, ArrowRight, Star, MessageCircle } from 'lucide-react'
+import { Award, CheckCircle, X, ArrowRight, Star, MessageCircle } from 'lucide-react'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const PHONE = '+91 88264-44334'
 const PHONE_TEL = 'tel:+918826444334'
@@ -22,16 +23,44 @@ export type CompetitorComparisonConfig = {
   testimonials: { name: string; score: string; college: string; quote: string }[]
   faqs: { question: string; answer: string }[]
   whatsappMessage: string
+  /** Short exam/section context shown in the comparison subhead and the
+   *  "Why students switch" copy (e.g., "MCAT Bio/Biochem", "AP Biology").
+   *  Defaults to the generic "biology". */
+  subheadContext?: string
+  /** Honest proof line (no fabricated numbers) shown under CTAs in place of
+   *  India-NEET stats. e.g., "AIIMS-trained biology specialists; MCAT
+   *  Bio/Biochem focus". */
+  proofStat?: string
+  /** One-line description used in the comparison and Course schema. */
+  cerebrumDescription?: string
+  /** A related footer link relevant to this page's audience. */
+  relatedFooterLink?: { href: string; label: string }
+  /** Topics for the Person schema knowsAbout array (entity authority). */
+  personKnowsAbout?: string[]
+  /** Course schema name + audience hints. */
+  courseName?: string
 }
 
 export function CompetitorComparisonLanding({ config }: { config: CompetitorComparisonConfig }) {
   const canonicalUrl = `https://cerebrumbiologyacademy.com/${config.slug}`
 
+  const subheadContext = config.subheadContext ?? 'biology'
+  const proofStat =
+    config.proofStat ?? 'AIIMS-trained biology specialists · small-batch, biology-only coaching'
+  const cerebrumDescription =
+    config.cerebrumDescription ??
+    `Biology-only specialist coaching with AIIMS-trained faculty and small batches, focused on ${subheadContext}.`
+  const relatedFooterLink = config.relatedFooterLink ?? {
+    href: '/best-biology-tutor-global',
+    label: 'Best Biology Tutor',
+  }
+  const courseName = config.courseName ?? `Cerebrum ${subheadContext} Coaching`
+
   const comparisonSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: `Cerebrum vs ${config.competitorName} NEET Coaching Comparison`,
-    description: `Side-by-side comparison of Cerebrum Biology Academy and ${config.competitorName} for NEET preparation`,
+    name: `Cerebrum vs ${config.competitorName} — ${subheadContext} Comparison`,
+    description: `Side-by-side comparison of Cerebrum Biology Academy and ${config.competitorName} for ${subheadContext}`,
     url: canonicalUrl,
     mainEntity: {
       '@type': 'ItemList',
@@ -40,8 +69,7 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
           '@type': 'EducationalOrganization',
           position: 1,
           name: 'Cerebrum Biology Academy',
-          description:
-            "India's only biology-only specialist NEET coaching. AIIMS-trained faculty, small batches (15–20), 680+ medical college selections, 98% NEET-UG qualification rate.",
+          description: cerebrumDescription,
           url: 'https://cerebrumbiologyacademy.com',
         },
         {
@@ -50,6 +78,20 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
           name: config.competitorName,
         },
       ],
+    },
+  }
+
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: courseName,
+    description: cerebrumDescription,
+    url: canonicalUrl,
+    provider: {
+      '@type': 'EducationalOrganization',
+      '@id': 'https://cerebrumbiologyacademy.com/#organization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
     },
   }
 
@@ -105,9 +147,14 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <CerebrumPersonSchema knowsAbout={config.personKnowsAbout ?? []} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
       />
       <script
         type="application/ld+json"
@@ -133,21 +180,14 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
             <p className="text-2xl text-green-50 mb-3">{config.subheadline}</p>
             <p className="text-lg text-green-100 mb-8 max-w-3xl mx-auto">{config.intro}</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href={PHONE_TEL}
-                className="inline-flex items-center gap-2 bg-yellow-500 text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
-              >
-                <Phone className="w-5 h-5" />
-                Book Free Demo Class
-              </a>
               <Link
                 href={waLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition"
+                className="inline-flex items-center gap-2 bg-green-500 text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 transition"
               >
                 <MessageCircle className="w-5 h-5" />
-                WhatsApp Us
+                Message Us on WhatsApp
               </Link>
               <a
                 href="#comparison"
@@ -157,12 +197,16 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
                 <ArrowRight className="w-5 h-5" />
               </a>
             </div>
-            <p className="text-sm text-green-100 mt-6">
-              Or call directly:{' '}
-              <a href={PHONE_TEL} className="font-semibold text-yellow-300 hover:underline">
+            <p className="text-sm text-green-100 mt-4">
+              WhatsApp is free from the US — no international call needed. Reply in your time zone
+              (ET/CT/PT).
+            </p>
+            <p className="text-xs text-green-200/80 mt-3">
+              {proofStat} · Free consult, no obligation · Prefer to call?{' '}
+              <a href={PHONE_TEL} className="font-medium text-green-100 hover:underline">
                 {PHONE}
               </a>{' '}
-              · Free demo, no obligation · 680+ medical college admissions
+              (India)
             </p>
           </div>
         </div>
@@ -176,7 +220,7 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
             </h2>
             <p className="text-lg text-slate-600 mb-10 text-center">
               Cerebrum Biology Academy vs {config.competitorName} — across the criteria that
-              actually matter for NEET Biology.
+              actually matter for {subheadContext}.
             </p>
             {/* Desktop / tablet: full table */}
             <div className="hidden md:block overflow-x-auto">
@@ -261,20 +305,13 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
             <div className="mt-10 bg-gradient-to-r from-green-700 to-blue-700 text-white rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
               <div>
                 <h3 className="text-xl md:text-2xl font-bold mb-1">
-                  Like what you see? Book a free demo.
+                  Like what you see? Let&apos;s talk.
                 </h3>
                 <p className="text-green-50">
                   Experience Cerebrum&apos;s small-batch biology coaching before you decide.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-                <a
-                  href={PHONE_TEL}
-                  className="inline-flex items-center justify-center gap-2 bg-yellow-500 text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition whitespace-nowrap"
-                >
-                  <Phone className="w-4 h-4" />
-                  Call {PHONE}
-                </a>
                 <Link
                   href={waLink}
                   target="_blank"
@@ -282,7 +319,7 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
                   className="inline-flex items-center justify-center gap-2 bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition whitespace-nowrap"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  WhatsApp Now
+                  Message Us on WhatsApp
                 </Link>
               </div>
             </div>
@@ -297,8 +334,8 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
               Why Students Switch to Cerebrum (for Biology)
             </h2>
             <p className="text-lg text-slate-600">
-              The structural reasons a biology-only AIIMS-trained specialist outperforms a
-              generalist coaching brand for the 360/720 NEET Biology section.
+              The structural reasons a biology-only AIIMS-trained (India&apos;s top medical
+              institute) specialist outperforms a generalist provider for {subheadContext}.
             </p>
           </div>
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
@@ -401,45 +438,34 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
 
       <section className="py-16 bg-slate-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Book Your Free Demo Class</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Talk to a Biology Specialist</h2>
           <p className="text-xl text-slate-300 mb-2 max-w-2xl mx-auto">
             No obligation, no commitment — experience biology-only specialisation for yourself.
           </p>
-          <p className="text-sm text-slate-400 mb-8">
-            680+ medical college selections · 98% NEET-UG qualification rate · 5.0/5 from 38
-            verified Google reviews
-          </p>
+          <p className="text-sm text-slate-400 mb-8">{proofStat}</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href={PHONE_TEL}
-              className="inline-flex items-center gap-2 bg-yellow-500 text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
-            >
-              <Phone className="w-5 h-5" />
-              Call {PHONE}
-            </a>
             <Link
               href={waLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition"
+              className="inline-flex items-center gap-2 bg-green-500 text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 transition"
             >
               <MessageCircle className="w-5 h-5" />
-              WhatsApp Demo Booking
+              Message Us on WhatsApp
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
+          <p className="text-xs text-slate-400 mt-4">
+            WhatsApp is free from the US — no international call needed. Prefer to call?{' '}
+            <a href={PHONE_TEL} className="font-medium text-slate-200 hover:underline">
+              {PHONE}
+            </a>{' '}
+            (India)
+          </p>
           <p className="text-sm text-slate-400 mt-6">
             See also:{' '}
-            <Link href="/cerebrum-vs-allen-neet-coaching" className="underline">
-              Cerebrum vs Aakash
-            </Link>{' '}
-            ·{' '}
-            <Link href="/cerebrum-vs-aakash-neet-coaching" className="underline">
-              Cerebrum vs Allen
-            </Link>{' '}
-            ·{' '}
-            <Link href="/best-neet-biology-coaching-india" className="underline">
-              Best NEET Biology Coaching India
+            <Link href={relatedFooterLink.href} className="underline">
+              {relatedFooterLink.label}
             </Link>
           </p>
         </div>
@@ -449,14 +475,7 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
       <div className="h-20 md:hidden" aria-hidden="true" />
 
       {/* Sticky mobile CTA bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-slate-200 shadow-lg grid grid-cols-2 gap-2 p-3">
-        <a
-          href={PHONE_TEL}
-          className="flex items-center justify-center gap-2 bg-yellow-500 text-slate-900 py-3 rounded-lg font-semibold"
-        >
-          <Phone className="w-4 h-4" />
-          Call
-        </a>
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-slate-200 shadow-lg p-3">
         <Link
           href={waLink}
           target="_blank"
@@ -464,7 +483,7 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
           className="flex items-center justify-center gap-2 bg-green-600 text-white py-3 rounded-lg font-semibold"
         >
           <MessageCircle className="w-4 h-4" />
-          WhatsApp
+          Message Us on WhatsApp (free from the US)
         </Link>
       </div>
     </div>

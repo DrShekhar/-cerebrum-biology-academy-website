@@ -244,7 +244,7 @@ export default function ResultsPage() {
 
       <div className="min-h-screen bg-white">
         {/* SECTION 1: Hero — Emotional Impact */}
-        <section className="relative bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white py-16 sm:py-20 md:py-28 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-slate-900 to-slate-800 text-white py-16 sm:py-20 md:py-28 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-yellow-500/10 via-transparent to-transparent" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="text-center">
@@ -717,7 +717,7 @@ export default function ResultsPage() {
         </section>
 
         {/* SECTION 10: CTA — Start Your Success Story */}
-        <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 py-16 sm:py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 sm:py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-green-500/10 via-transparent to-transparent" />
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">

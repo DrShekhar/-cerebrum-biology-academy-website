@@ -158,6 +158,19 @@ const config: CompetitorComparisonConfig = {
   ],
   whatsappMessage:
     "Hi — I'm comparing Cerebrum and Kaplan for MCAT Bio/Biochem prep. Please share programme details, pricing, and how pairing with Kaplan works.",
+  subheadContext: 'MCAT Bio/Biochem (B/B section)',
+  proofStat:
+    'AIIMS-trained (India’s top medical institute) biology specialists · MCAT Bio/Biochem focus · small 4–6 student batches',
+  cerebrumDescription:
+    'Biology-only specialist coaching for the MCAT Bio/Biochem (B/B) section with AIIMS-trained faculty, small batches, and Campbell + Lehninger depth.',
+  relatedFooterLink: { href: '/best-mcat-biology-tutor', label: 'Best MCAT Biology Tutor' },
+  courseName: 'Cerebrum MCAT Bio/Biochem Coaching',
+  personKnowsAbout: [
+    'MCAT Biological and Biochemical Foundations',
+    'MCAT Biochemistry',
+    'Campbell Biology',
+    'Lehninger Biochemistry',
+  ],
 }
 
 export default function Page() {

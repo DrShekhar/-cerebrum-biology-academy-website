@@ -150,6 +150,19 @@ const config: CompetitorComparisonConfig = {
   ],
   whatsappMessage:
     "Hi — I'm comparing Cerebrum and Princeton Review for MCAT Bio/Biochem. Please share programme details and how combining both providers works.",
+  subheadContext: 'MCAT Bio/Biochem (B/B section)',
+  proofStat:
+    'AIIMS-trained (India’s top medical institute) biology specialists · MCAT Bio/Biochem focus · 4–6 student batches',
+  cerebrumDescription:
+    'Biology-only specialist coaching for the MCAT Bio/Biochem (B/B) section with AIIMS-trained faculty and Campbell + Lehninger end-to-end depth.',
+  relatedFooterLink: { href: '/best-mcat-biology-tutor', label: 'Best MCAT Biology Tutor' },
+  courseName: 'Cerebrum MCAT Bio/Biochem Coaching',
+  personKnowsAbout: [
+    'MCAT Biological and Biochemical Foundations',
+    'MCAT Biochemistry',
+    'Campbell Biology',
+    'Lehninger Biochemistry',
+  ],
 }
 
 export default function Page() {

@@ -391,15 +391,35 @@ export default function MCATBiologyPage() {
               Pre-Medical Preparation
             </div>
 
+            <p className="text-sm text-slate-300 mb-4">
+              Part of the{' '}
+              <Link
+                href="/mcat-biology"
+                className="font-semibold text-blue-300 hover:text-blue-200"
+              >
+                MCAT Biology hub
+              </Link>{' '}
+              — this page is the curriculum &amp; study-plan track.
+            </p>
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              MCAT Biology Preparation
-              <span className="block text-blue-400 mt-2">Master Biology for Medical School</span>
+              MCAT Bio/Biochem Curriculum &amp; Study Plan
+              <span className="block text-blue-400 mt-2">
+                Campbell + Lehninger Path to a 125+ B/B Score
+              </span>
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Expert MCAT biology coaching using Campbell Biology as your foundation. Score higher
-              on the Biological and Biochemical Foundations sections with our comprehensive
-              preparation program.
+              The week-by-week MCAT Bio/Biochem curriculum and study plan — Campbell Biology as your
+              foundation, Lehninger biochemistry layered in, mapped to the AAMC content outline.
+              Looking for the full tutoring overview? Start at the{' '}
+              <Link
+                href="/mcat-biology"
+                className="font-semibold text-blue-300 hover:text-blue-200"
+              >
+                MCAT Biology hub
+              </Link>
+              .
             </p>
 
             <p className="text-base text-slate-400 mb-8 max-w-3xl">

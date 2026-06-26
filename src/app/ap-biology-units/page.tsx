@@ -248,7 +248,7 @@ export default function APBiologyUnitsHubPage() {
           </div>
         </nav>
 
-        <section className="relative py-16 md:py-20 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white">
+        <section className="relative py-16 md:py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
           <div className="max-w-4xl mx-auto px-4">
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <BookOpen className="w-4 h-4" /> All 8 College Board CED units, one place
@@ -367,7 +367,7 @@ export default function APBiologyUnitsHubPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white">
+        <section className="py-16 md:py-20 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <GraduationCap className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -379,6 +379,17 @@ export default function APBiologyUnitsHubPage() {
               of Medical Sciences, India&apos;s top medical school).
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href={`https://wa.me/918826444334?text=${encodeURIComponent(
+                  'Hi Cerebrum, I have a question about the AP Biology units and your coaching.'
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition"
+              >
+                <MessageCircle className="w-5 h-5" />
+                Chat with us on WhatsApp
+              </a>
               <Link
                 href="/ap-biology-tutor"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition"
@@ -389,10 +400,13 @@ export default function APBiologyUnitsHubPage() {
                 href="/ap-biology-score-5-study-guide"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-medium text-lg border border-white/30 transition"
               >
-                <MessageCircle className="w-5 h-5" />
                 Score-5 study guide
               </Link>
             </div>
+            <p className="text-sm text-slate-400 mt-6 max-w-2xl mx-auto">
+              WhatsApp is free from the US — no international call needed. Live online classes in
+              your US time zone (ET/CT/MT/PT).
+            </p>
           </div>
         </section>
       </main>

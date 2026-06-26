@@ -25,7 +25,11 @@ function buildSchemas(metro: DATMetroConfig) {
     areaServed: {
       '@type': 'AdministrativeArea',
       name: `${metro.city} Metro (${metro.stateOrRegion})`,
-      address: { '@type': 'PostalAddress', addressRegion: metro.stateCode, addressCountry: 'US' },
+      address: {
+        '@type': 'PostalAddress',
+        addressRegion: metro.stateCode,
+        addressCountry: metro.countryCode ?? 'US',
+      },
     },
     hasCourseInstance: {
       '@type': 'CourseInstance',
